@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtCore/qsystemsemaphore.h
 // dst-file: /src/core/qsystemsemaphore.rs
 //
@@ -26,10 +26,10 @@ use super::qstring::QString; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QSystemSemaphore_Class_Size() -> c_int;
   // proto:  QString QSystemSemaphore::key();
   fn _ZNK16QSystemSemaphore3keyEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  bool QSystemSemaphore::release(int n);
@@ -37,6 +37,7 @@ extern {
   // proto:  QString QSystemSemaphore::errorString();
   fn _ZNK16QSystemSemaphore11errorStringEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QSystemSemaphore::QSystemSemaphore(const QSystemSemaphore & );
+  fn dector_ZN16QSystemSemaphoreC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN16QSystemSemaphoreC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QSystemSemaphore::acquire();
   fn _ZN16QSystemSemaphore7acquireEv(qthis: *mut c_void) -> c_char;
@@ -144,10 +145,13 @@ pub trait QSystemSemaphore_New {
   // proto:  void QSystemSemaphore::QSystemSemaphore(const QSystemSemaphore & );
 impl<'a> /*trait*/ QSystemSemaphore_New for (&'a QSystemSemaphore) {
   fn New(self) -> QSystemSemaphore {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QSystemSemaphoreC1ERKS_()};
+    let ctysz: c_int = unsafe{QSystemSemaphore_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN16QSystemSemaphoreC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN16QSystemSemaphoreC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN16QSystemSemaphoreC1ERKS_(arg0)};
     let rsthis = QSystemSemaphore{qclsinst: qthis};
     return rsthis;
     // return 1;

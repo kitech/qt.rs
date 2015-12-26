@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtCore/qxmlstream.h
 // dst-file: /src/core/qxmlstream.rs
 //
@@ -19,8 +19,8 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qstring::QString; // 773
 // use super::qxmlstream::QXmlStreamEntityResolver; // 773
+use super::qstring::QString; // 773
 // use super::qxmlstream::QXmlStreamAttributes; // 773
 // use super::qxmlstream::QXmlStreamNamespaceDeclaration; // 773
 use super::qbytearray::QByteArray; // 773
@@ -34,32 +34,17 @@ use super::qtextcodec::QTextCodec; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
-  // proto:  int QXmlStreamStringRef::size();
-  fn _ZNK19QXmlStreamStringRef4sizeEv(qthis: *mut c_void) -> c_int;
-  // proto:  void QXmlStreamStringRef::clear();
-  fn _ZN19QXmlStreamStringRef5clearEv(qthis: *mut c_void);
-  // proto:  const QString * QXmlStreamStringRef::string();
-  fn _ZNK19QXmlStreamStringRef6stringEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QXmlStreamStringRef::QXmlStreamStringRef(const QString & aString);
-  fn _ZN19QXmlStreamStringRefC1ERK7QString(qthis: *mut c_void, arg0: *mut c_void);
-  // proto:  void QXmlStreamStringRef::~QXmlStreamStringRef();
-  fn _ZN19QXmlStreamStringRefD0Ev(qthis: *mut c_void);
-  // proto:  void QXmlStreamStringRef::QXmlStreamStringRef();
-  fn _ZN19QXmlStreamStringRefC1Ev(qthis: *mut c_void);
-  // proto:  int QXmlStreamStringRef::position();
-  fn _ZNK19QXmlStreamStringRef8positionEv(qthis: *mut c_void) -> c_int;
+  fn QXmlStreamStringRef_Class_Size() -> c_int;
+  fn QXmlStreamReader_Class_Size() -> c_int;
   // proto:  QStringRef QXmlStreamReader::name();
   fn _ZNK16QXmlStreamReader4nameEv(qthis: *mut c_void);
   // proto:  QXmlStreamEntityResolver * QXmlStreamReader::entityResolver();
   fn _ZNK16QXmlStreamReader14entityResolverEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  bool QXmlStreamReader::namespaceProcessing();
   fn _ZNK16QXmlStreamReader19namespaceProcessingEv(qthis: *mut c_void) -> c_char;
-  // proto:  bool QXmlStreamReader::isStartElement();
-  fn _ZNK16QXmlStreamReader14isStartElementEv(qthis: *mut c_void) -> c_char;
   // proto:  bool QXmlStreamReader::isStandaloneDocument();
   fn _ZNK16QXmlStreamReader20isStandaloneDocumentEv(qthis: *mut c_void) -> c_char;
   // proto:  qint64 QXmlStreamReader::lineNumber();
@@ -74,8 +59,8 @@ extern {
   fn _ZNK16QXmlStreamReader11dtdPublicIdEv(qthis: *mut c_void);
   // proto:  QStringRef QXmlStreamReader::documentEncoding();
   fn _ZNK16QXmlStreamReader16documentEncodingEv(qthis: *mut c_void);
-  // proto:  qint64 QXmlStreamReader::characterOffset();
-  fn _ZNK16QXmlStreamReader15characterOffsetEv(qthis: *mut c_void) -> c_longlong;
+  // proto:  void QXmlStreamReader::setEntityResolver(QXmlStreamEntityResolver * resolver);
+  fn _ZN16QXmlStreamReader17setEntityResolverEP24QXmlStreamEntityResolver(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QXmlStreamAttributes QXmlStreamReader::attributes();
   fn _ZNK16QXmlStreamReader10attributesEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QString QXmlStreamReader::tokenString();
@@ -83,6 +68,7 @@ extern {
   // proto:  void QXmlStreamReader::addExtraNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & extraNamespaceDeclaraction);
   fn _ZN16QXmlStreamReader28addExtraNamespaceDeclarationERK30QXmlStreamNamespaceDeclaration(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QXmlStreamReader::QXmlStreamReader(const QByteArray & data);
+  fn dector_ZN16QXmlStreamReaderC1ERK10QByteArray(arg0: *mut c_void) -> *mut c_void;
   fn _ZN16QXmlStreamReaderC1ERK10QByteArray(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QStringRef QXmlStreamReader::qualifiedName();
   fn _ZNK16QXmlStreamReader13qualifiedNameEv(qthis: *mut c_void);
@@ -95,35 +81,27 @@ extern {
   // proto:  void QXmlStreamReader::setDevice(QIODevice * device);
   fn _ZN16QXmlStreamReader9setDeviceEP9QIODevice(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QXmlStreamReader::QXmlStreamReader(QIODevice * device);
+  fn dector_ZN16QXmlStreamReaderC1EP9QIODevice(arg0: *mut c_void) -> *mut c_void;
   fn _ZN16QXmlStreamReaderC1EP9QIODevice(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QStringRef QXmlStreamReader::documentVersion();
   fn _ZNK16QXmlStreamReader15documentVersionEv(qthis: *mut c_void);
-  // proto:  bool QXmlStreamReader::isDTD();
-  fn _ZNK16QXmlStreamReader5isDTDEv(qthis: *mut c_void) -> c_char;
-  // proto:  bool QXmlStreamReader::isStartDocument();
-  fn _ZNK16QXmlStreamReader15isStartDocumentEv(qthis: *mut c_void) -> c_char;
   // proto:  QString QXmlStreamReader::errorString();
   fn _ZNK16QXmlStreamReader11errorStringEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  bool QXmlStreamReader::isProcessingInstruction();
-  fn _ZNK16QXmlStreamReader23isProcessingInstructionEv(qthis: *mut c_void) -> c_char;
-  // proto:  void QXmlStreamReader::setEntityResolver(QXmlStreamEntityResolver * resolver);
-  fn _ZN16QXmlStreamReader17setEntityResolverEP24QXmlStreamEntityResolver(qthis: *mut c_void, arg0: *mut c_void);
-  // proto:  bool QXmlStreamReader::isCharacters();
-  fn _ZNK16QXmlStreamReader12isCharactersEv(qthis: *mut c_void) -> c_char;
   // proto:  void QXmlStreamReader::QXmlStreamReader();
+  fn dector_ZN16QXmlStreamReaderC1Ev() -> *mut c_void;
   fn _ZN16QXmlStreamReaderC1Ev(qthis: *mut c_void);
   // proto:  void QXmlStreamReader::QXmlStreamReader(const QString & data);
+  fn dector_ZN16QXmlStreamReaderC1ERK7QString(arg0: *mut c_void) -> *mut c_void;
   fn _ZN16QXmlStreamReaderC1ERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QXmlStreamEntityDeclarations QXmlStreamReader::entityDeclarations();
   fn _ZNK16QXmlStreamReader18entityDeclarationsEv(qthis: *mut c_void);
   // proto:  bool QXmlStreamReader::isWhitespace();
   fn _ZNK16QXmlStreamReader12isWhitespaceEv(qthis: *mut c_void) -> c_char;
   // proto:  void QXmlStreamReader::QXmlStreamReader(const QXmlStreamReader & );
+  fn dector_ZN16QXmlStreamReaderC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN16QXmlStreamReaderC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  qint64 QXmlStreamReader::columnNumber();
   fn _ZNK16QXmlStreamReader12columnNumberEv(qthis: *mut c_void) -> c_longlong;
-  // proto:  bool QXmlStreamReader::hasError();
-  fn _ZNK16QXmlStreamReader8hasErrorEv(qthis: *mut c_void) -> c_char;
   // proto:  bool QXmlStreamReader::isCDATA();
   fn _ZNK16QXmlStreamReader7isCDATAEv(qthis: *mut c_void) -> c_char;
   // proto:  void QXmlStreamReader::~QXmlStreamReader();
@@ -136,8 +114,6 @@ extern {
   fn _ZNK16QXmlStreamReader11dtdSystemIdEv(qthis: *mut c_void);
   // proto:  QStringRef QXmlStreamReader::prefix();
   fn _ZNK16QXmlStreamReader6prefixEv(qthis: *mut c_void);
-  // proto:  bool QXmlStreamReader::isEndElement();
-  fn _ZNK16QXmlStreamReader12isEndElementEv(qthis: *mut c_void) -> c_char;
   // proto:  QXmlStreamNotationDeclarations QXmlStreamReader::notationDeclarations();
   fn _ZNK16QXmlStreamReader20notationDeclarationsEv(qthis: *mut c_void);
   // proto:  QXmlStreamNamespaceDeclarations QXmlStreamReader::namespaceDeclarations();
@@ -148,73 +124,61 @@ extern {
   fn _ZN16QXmlStreamReader10raiseErrorERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QStringRef QXmlStreamReader::dtdName();
   fn _ZNK16QXmlStreamReader7dtdNameEv(qthis: *mut c_void);
-  // proto:  bool QXmlStreamReader::isEndDocument();
-  fn _ZNK16QXmlStreamReader13isEndDocumentEv(qthis: *mut c_void) -> c_char;
   // proto:  bool QXmlStreamReader::readNextStartElement();
   fn _ZN16QXmlStreamReader20readNextStartElementEv(qthis: *mut c_void) -> c_char;
-  // proto:  bool QXmlStreamReader::isComment();
-  fn _ZNK16QXmlStreamReader9isCommentEv(qthis: *mut c_void) -> c_char;
   // proto:  void QXmlStreamReader::QXmlStreamReader(const char * data);
+  fn dector_ZN16QXmlStreamReaderC1EPKc(arg0: *mut c_char) -> *mut c_void;
   fn _ZN16QXmlStreamReaderC1EPKc(qthis: *mut c_void, arg0: *mut c_char);
   // proto:  void QXmlStreamReader::skipCurrentElement();
   fn _ZN16QXmlStreamReader18skipCurrentElementEv(qthis: *mut c_void);
-  // proto:  bool QXmlStreamReader::isEntityReference();
-  fn _ZNK16QXmlStreamReader17isEntityReferenceEv(qthis: *mut c_void) -> c_char;
+  // proto:  qint64 QXmlStreamReader::characterOffset();
+  fn _ZNK16QXmlStreamReader15characterOffsetEv(qthis: *mut c_void) -> c_longlong;
   // proto:  void QXmlStreamReader::addData(const QByteArray & data);
   fn _ZN16QXmlStreamReader7addDataERK10QByteArray(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QXmlStreamReader::atEnd();
   fn _ZNK16QXmlStreamReader5atEndEv(qthis: *mut c_void) -> c_char;
+  fn QXmlStreamEntityResolver_Class_Size() -> c_int;
   // proto:  QString QXmlStreamEntityResolver::resolveEntity(const QString & publicId, const QString & systemId);
   fn _ZN24QXmlStreamEntityResolver13resolveEntityERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  QString QXmlStreamEntityResolver::resolveUndeclaredEntity(const QString & name);
   fn _ZN24QXmlStreamEntityResolver23resolveUndeclaredEntityERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QXmlStreamEntityResolver::~QXmlStreamEntityResolver();
   fn _ZN24QXmlStreamEntityResolverD0Ev(qthis: *mut c_void);
-  // proto:  QStringRef QXmlStreamNamespaceDeclaration::namespaceUri();
-  fn _ZNK30QXmlStreamNamespaceDeclaration12namespaceUriEv(qthis: *mut c_void);
-  // proto:  void QXmlStreamNamespaceDeclaration::QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & );
-  fn _ZN30QXmlStreamNamespaceDeclarationC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
-  // proto:  void QXmlStreamNamespaceDeclaration::QXmlStreamNamespaceDeclaration();
-  fn _ZN30QXmlStreamNamespaceDeclarationC1Ev(qthis: *mut c_void);
-  // proto:  QStringRef QXmlStreamNamespaceDeclaration::prefix();
-  fn _ZNK30QXmlStreamNamespaceDeclaration6prefixEv(qthis: *mut c_void);
-  // proto:  void QXmlStreamNamespaceDeclaration::QXmlStreamNamespaceDeclaration(const QString & prefix, const QString & namespaceUri);
-  fn _ZN30QXmlStreamNamespaceDeclarationC1ERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn QXmlStreamNamespaceDeclaration_Class_Size() -> c_int;
   // proto:  void QXmlStreamNamespaceDeclaration::~QXmlStreamNamespaceDeclaration();
   fn _ZN30QXmlStreamNamespaceDeclarationD0Ev(qthis: *mut c_void);
+  // proto:  void QXmlStreamNamespaceDeclaration::QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & );
+  fn dector_ZN30QXmlStreamNamespaceDeclarationC1ERKS_(arg0: *mut c_void) -> *mut c_void;
+  fn _ZN30QXmlStreamNamespaceDeclarationC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QXmlStreamNamespaceDeclaration::QXmlStreamNamespaceDeclaration(const QString & prefix, const QString & namespaceUri);
+  fn dector_ZN30QXmlStreamNamespaceDeclarationC1ERK7QStringS2_(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
+  fn _ZN30QXmlStreamNamespaceDeclarationC1ERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  // proto:  void QXmlStreamNamespaceDeclaration::QXmlStreamNamespaceDeclaration();
+  fn dector_ZN30QXmlStreamNamespaceDeclarationC1Ev() -> *mut c_void;
+  fn _ZN30QXmlStreamNamespaceDeclarationC1Ev(qthis: *mut c_void);
+  fn QXmlStreamEntityDeclaration_Class_Size() -> c_int;
   // proto:  void QXmlStreamEntityDeclaration::~QXmlStreamEntityDeclaration();
   fn _ZN27QXmlStreamEntityDeclarationD0Ev(qthis: *mut c_void);
-  // proto:  QStringRef QXmlStreamEntityDeclaration::publicId();
-  fn _ZNK27QXmlStreamEntityDeclaration8publicIdEv(qthis: *mut c_void);
-  // proto:  QStringRef QXmlStreamEntityDeclaration::name();
-  fn _ZNK27QXmlStreamEntityDeclaration4nameEv(qthis: *mut c_void);
-  // proto:  void QXmlStreamEntityDeclaration::QXmlStreamEntityDeclaration();
-  fn _ZN27QXmlStreamEntityDeclarationC1Ev(qthis: *mut c_void);
-  // proto:  QStringRef QXmlStreamEntityDeclaration::value();
-  fn _ZNK27QXmlStreamEntityDeclaration5valueEv(qthis: *mut c_void);
-  // proto:  QStringRef QXmlStreamEntityDeclaration::notationName();
-  fn _ZNK27QXmlStreamEntityDeclaration12notationNameEv(qthis: *mut c_void);
   // proto:  void QXmlStreamEntityDeclaration::QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration & );
+  fn dector_ZN27QXmlStreamEntityDeclarationC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN27QXmlStreamEntityDeclarationC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
-  // proto:  QStringRef QXmlStreamEntityDeclaration::systemId();
-  fn _ZNK27QXmlStreamEntityDeclaration8systemIdEv(qthis: *mut c_void);
+  // proto:  void QXmlStreamEntityDeclaration::QXmlStreamEntityDeclaration();
+  fn dector_ZN27QXmlStreamEntityDeclarationC1Ev() -> *mut c_void;
+  fn _ZN27QXmlStreamEntityDeclarationC1Ev(qthis: *mut c_void);
+  fn QXmlStreamAttributes_Class_Size() -> c_int;
   // proto:  QStringRef QXmlStreamAttributes::value(const QString & qualifiedName);
   fn _ZNK20QXmlStreamAttributes5valueERK7QString(qthis: *mut c_void, arg0: *mut c_void);
-  // proto:  void QXmlStreamAttributes::QXmlStreamAttributes();
-  fn _ZN20QXmlStreamAttributesC1Ev(qthis: *mut c_void);
-  // proto:  bool QXmlStreamAttributes::hasAttribute(const QString & qualifiedName);
-  fn _ZNK20QXmlStreamAttributes12hasAttributeERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
-  // proto:  bool QXmlStreamAttributes::hasAttribute(const QString & namespaceUri, const QString & name);
-  fn _ZNK20QXmlStreamAttributes12hasAttributeERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> c_char;
   // proto:  void QXmlStreamAttributes::append(const QString & namespaceUri, const QString & name, const QString & value);
   fn _ZN20QXmlStreamAttributes6appendERK7QStringS2_S2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  void QXmlStreamAttributes::append(const QString & qualifiedName, const QString & value);
   fn _ZN20QXmlStreamAttributes6appendERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  QStringRef QXmlStreamAttributes::value(const QString & namespaceUri, const QString & name);
   fn _ZNK20QXmlStreamAttributes5valueERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn QXmlStreamWriter_Class_Size() -> c_int;
   // proto:  void QXmlStreamWriter::writeEndElement();
   fn _ZN16QXmlStreamWriter15writeEndElementEv(qthis: *mut c_void);
   // proto:  void QXmlStreamWriter::QXmlStreamWriter();
+  fn dector_ZN16QXmlStreamWriterC1Ev() -> *mut c_void;
   fn _ZN16QXmlStreamWriterC1Ev(qthis: *mut c_void);
   // proto:  void QXmlStreamWriter::writeEndDocument();
   fn _ZN16QXmlStreamWriter16writeEndDocumentEv(qthis: *mut c_void);
@@ -247,6 +211,7 @@ extern {
   // proto:  void QXmlStreamWriter::writeStartElement(const QString & namespaceUri, const QString & name);
   fn _ZN16QXmlStreamWriter17writeStartElementERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QXmlStreamWriter::QXmlStreamWriter(QString * string);
+  fn dector_ZN16QXmlStreamWriterC1EP7QString(arg0: *mut c_void) -> *mut c_void;
   fn _ZN16QXmlStreamWriterC1EP7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QXmlStreamWriter::writeComment(const QString & text);
   fn _ZN16QXmlStreamWriter12writeCommentERK7QString(qthis: *mut c_void, arg0: *mut c_void);
@@ -257,6 +222,7 @@ extern {
   // proto:  void QXmlStreamWriter::writeNamespace(const QString & namespaceUri, const QString & prefix);
   fn _ZN16QXmlStreamWriter14writeNamespaceERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QXmlStreamWriter::QXmlStreamWriter(const QXmlStreamWriter & );
+  fn dector_ZN16QXmlStreamWriterC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN16QXmlStreamWriterC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QXmlStreamWriter::hasError();
   fn _ZNK16QXmlStreamWriter8hasErrorEv(qthis: *mut c_void) -> c_char;
@@ -283,49 +249,41 @@ extern {
   // proto:  void QXmlStreamWriter::writeCurrentToken(const QXmlStreamReader & reader);
   fn _ZN16QXmlStreamWriter17writeCurrentTokenERK16QXmlStreamReader(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QXmlStreamWriter::QXmlStreamWriter(QByteArray * array);
+  fn dector_ZN16QXmlStreamWriterC1EP10QByteArray(arg0: *mut c_void) -> *mut c_void;
   fn _ZN16QXmlStreamWriterC1EP10QByteArray(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QXmlStreamWriter::writeTextElement(const QString & qualifiedName, const QString & text);
   fn _ZN16QXmlStreamWriter16writeTextElementERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QXmlStreamWriter::writeEmptyElement(const QString & namespaceUri, const QString & name);
   fn _ZN16QXmlStreamWriter17writeEmptyElementERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QXmlStreamWriter::QXmlStreamWriter(QIODevice * device);
+  fn dector_ZN16QXmlStreamWriterC1EP9QIODevice(arg0: *mut c_void) -> *mut c_void;
   fn _ZN16QXmlStreamWriterC1EP9QIODevice(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QXmlStreamWriter::writeStartElement(const QString & qualifiedName);
   fn _ZN16QXmlStreamWriter17writeStartElementERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn QXmlStreamNotationDeclaration_Class_Size() -> c_int;
   // proto:  void QXmlStreamNotationDeclaration::QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration & );
+  fn dector_ZN29QXmlStreamNotationDeclarationC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN29QXmlStreamNotationDeclarationC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
-  // proto:  QStringRef QXmlStreamNotationDeclaration::publicId();
-  fn _ZNK29QXmlStreamNotationDeclaration8publicIdEv(qthis: *mut c_void);
-  // proto:  QStringRef QXmlStreamNotationDeclaration::name();
-  fn _ZNK29QXmlStreamNotationDeclaration4nameEv(qthis: *mut c_void);
+  // proto:  void QXmlStreamNotationDeclaration::QXmlStreamNotationDeclaration();
+  fn dector_ZN29QXmlStreamNotationDeclarationC1Ev() -> *mut c_void;
+  fn _ZN29QXmlStreamNotationDeclarationC1Ev(qthis: *mut c_void);
   // proto:  void QXmlStreamNotationDeclaration::~QXmlStreamNotationDeclaration();
   fn _ZN29QXmlStreamNotationDeclarationD0Ev(qthis: *mut c_void);
-  // proto:  QStringRef QXmlStreamNotationDeclaration::systemId();
-  fn _ZNK29QXmlStreamNotationDeclaration8systemIdEv(qthis: *mut c_void);
-  // proto:  void QXmlStreamNotationDeclaration::QXmlStreamNotationDeclaration();
-  fn _ZN29QXmlStreamNotationDeclarationC1Ev(qthis: *mut c_void);
+  fn QXmlStreamAttribute_Class_Size() -> c_int;
   // proto:  void QXmlStreamAttribute::QXmlStreamAttribute(const QString & qualifiedName, const QString & value);
+  fn dector_ZN19QXmlStreamAttributeC1ERK7QStringS2_(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   fn _ZN19QXmlStreamAttributeC1ERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
-  // proto:  QStringRef QXmlStreamAttribute::qualifiedName();
-  fn _ZNK19QXmlStreamAttribute13qualifiedNameEv(qthis: *mut c_void);
   // proto:  void QXmlStreamAttribute::~QXmlStreamAttribute();
   fn _ZN19QXmlStreamAttributeD0Ev(qthis: *mut c_void);
-  // proto:  QStringRef QXmlStreamAttribute::value();
-  fn _ZNK19QXmlStreamAttribute5valueEv(qthis: *mut c_void);
-  // proto:  QStringRef QXmlStreamAttribute::namespaceUri();
-  fn _ZNK19QXmlStreamAttribute12namespaceUriEv(qthis: *mut c_void);
   // proto:  void QXmlStreamAttribute::QXmlStreamAttribute();
+  fn dector_ZN19QXmlStreamAttributeC1Ev() -> *mut c_void;
   fn _ZN19QXmlStreamAttributeC1Ev(qthis: *mut c_void);
   // proto:  void QXmlStreamAttribute::QXmlStreamAttribute(const QXmlStreamAttribute & );
+  fn dector_ZN19QXmlStreamAttributeC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN19QXmlStreamAttributeC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QXmlStreamAttribute::QXmlStreamAttribute(const QString & namespaceUri, const QString & name, const QString & value);
+  fn dector_ZN19QXmlStreamAttributeC1ERK7QStringS2_S2_(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> *mut c_void;
   fn _ZN19QXmlStreamAttributeC1ERK7QStringS2_S2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
-  // proto:  bool QXmlStreamAttribute::isDefault();
-  fn _ZNK19QXmlStreamAttribute9isDefaultEv(qthis: *mut c_void) -> c_char;
-  // proto:  QStringRef QXmlStreamAttribute::prefix();
-  fn _ZNK19QXmlStreamAttribute6prefixEv(qthis: *mut c_void);
-  // proto:  QStringRef QXmlStreamAttribute::name();
-  fn _ZNK19QXmlStreamAttribute4nameEv(qthis: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -388,158 +346,6 @@ impl /*struct*/ QXmlStreamStringRef {
     return QXmlStreamStringRef{qclsinst: qthis};
   }
 }
-  // proto:  int QXmlStreamStringRef::size();
-impl /*struct*/ QXmlStreamStringRef {
-  pub fn size<RetType, T: QXmlStreamStringRef_size<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.size(self);
-    // return 1;
-  }
-}
-
-pub trait QXmlStreamStringRef_size<RetType> {
-  fn size(self , rsthis: & QXmlStreamStringRef) -> RetType;
-}
-
-  // proto:  int QXmlStreamStringRef::size();
-impl<'a> /*trait*/ QXmlStreamStringRef_size<i32> for () {
-  fn size(self , rsthis: & QXmlStreamStringRef) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK19QXmlStreamStringRef4sizeEv()};
-    let mut ret = unsafe {_ZNK19QXmlStreamStringRef4sizeEv(rsthis.qclsinst)};
-    return ret as i32;
-    // return 1;
-  }
-}
-
-  // proto:  void QXmlStreamStringRef::clear();
-impl /*struct*/ QXmlStreamStringRef {
-  pub fn clear<RetType, T: QXmlStreamStringRef_clear<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.clear(self);
-    // return 1;
-  }
-}
-
-pub trait QXmlStreamStringRef_clear<RetType> {
-  fn clear(self , rsthis: & QXmlStreamStringRef) -> RetType;
-}
-
-  // proto:  void QXmlStreamStringRef::clear();
-impl<'a> /*trait*/ QXmlStreamStringRef_clear<()> for () {
-  fn clear(self , rsthis: & QXmlStreamStringRef) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QXmlStreamStringRef5clearEv()};
-     unsafe {_ZN19QXmlStreamStringRef5clearEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  const QString * QXmlStreamStringRef::string();
-impl /*struct*/ QXmlStreamStringRef {
-  pub fn string<RetType, T: QXmlStreamStringRef_string<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.string(self);
-    // return 1;
-  }
-}
-
-pub trait QXmlStreamStringRef_string<RetType> {
-  fn string(self , rsthis: & QXmlStreamStringRef) -> RetType;
-}
-
-  // proto:  const QString * QXmlStreamStringRef::string();
-impl<'a> /*trait*/ QXmlStreamStringRef_string<QString> for () {
-  fn string(self , rsthis: & QXmlStreamStringRef) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK19QXmlStreamStringRef6stringEv()};
-    let mut ret = unsafe {_ZNK19QXmlStreamStringRef6stringEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QXmlStreamStringRef::QXmlStreamStringRef(const QString & aString);
-impl /*struct*/ QXmlStreamStringRef {
-  pub fn New<T: QXmlStreamStringRef_New>(value: T) -> QXmlStreamStringRef {
-    let rsthis = value.New();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QXmlStreamStringRef_New {
-  fn New(self) -> QXmlStreamStringRef;
-}
-
-  // proto:  void QXmlStreamStringRef::QXmlStreamStringRef(const QString & aString);
-impl<'a> /*trait*/ QXmlStreamStringRef_New for (&'a QString) {
-  fn New(self) -> QXmlStreamStringRef {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QXmlStreamStringRefC1ERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN19QXmlStreamStringRefC1ERK7QString(qthis, arg0)};
-    let rsthis = QXmlStreamStringRef{qclsinst: qthis};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  void QXmlStreamStringRef::~QXmlStreamStringRef();
-impl /*struct*/ QXmlStreamStringRef {
-  pub fn Free<RetType, T: QXmlStreamStringRef_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
-    // return 1;
-  }
-}
-
-pub trait QXmlStreamStringRef_Free<RetType> {
-  fn Free(self , rsthis: & QXmlStreamStringRef) -> RetType;
-}
-
-  // proto:  void QXmlStreamStringRef::~QXmlStreamStringRef();
-impl<'a> /*trait*/ QXmlStreamStringRef_Free<()> for () {
-  fn Free(self , rsthis: & QXmlStreamStringRef) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QXmlStreamStringRefD0Ev()};
-     unsafe {_ZN19QXmlStreamStringRefD0Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QXmlStreamStringRef::QXmlStreamStringRef();
-impl<'a> /*trait*/ QXmlStreamStringRef_New for () {
-  fn New(self) -> QXmlStreamStringRef {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QXmlStreamStringRefC1Ev()};
-    unsafe {_ZN19QXmlStreamStringRefC1Ev(qthis)};
-    let rsthis = QXmlStreamStringRef{qclsinst: qthis};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  int QXmlStreamStringRef::position();
-impl /*struct*/ QXmlStreamStringRef {
-  pub fn position<RetType, T: QXmlStreamStringRef_position<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.position(self);
-    // return 1;
-  }
-}
-
-pub trait QXmlStreamStringRef_position<RetType> {
-  fn position(self , rsthis: & QXmlStreamStringRef) -> RetType;
-}
-
-  // proto:  int QXmlStreamStringRef::position();
-impl<'a> /*trait*/ QXmlStreamStringRef_position<i32> for () {
-  fn position(self , rsthis: & QXmlStreamStringRef) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK19QXmlStreamStringRef8positionEv()};
-    let mut ret = unsafe {_ZNK19QXmlStreamStringRef8positionEv(rsthis.qclsinst)};
-    return ret as i32;
-    // return 1;
-  }
-}
-
 impl /*struct*/ QXmlStreamReader {
   pub fn inheritFrom(qthis: *mut c_void) -> QXmlStreamReader {
     return QXmlStreamReader{qclsinst: qthis};
@@ -609,29 +415,6 @@ impl<'a> /*trait*/ QXmlStreamReader_namespaceProcessing<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QXmlStreamReader19namespaceProcessingEv()};
     let mut ret = unsafe {_ZNK16QXmlStreamReader19namespaceProcessingEv(rsthis.qclsinst)};
-    return ret as i8;
-    // return 1;
-  }
-}
-
-  // proto:  bool QXmlStreamReader::isStartElement();
-impl /*struct*/ QXmlStreamReader {
-  pub fn isStartElement<RetType, T: QXmlStreamReader_isStartElement<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isStartElement(self);
-    // return 1;
-  }
-}
-
-pub trait QXmlStreamReader_isStartElement<RetType> {
-  fn isStartElement(self , rsthis: & QXmlStreamReader) -> RetType;
-}
-
-  // proto:  bool QXmlStreamReader::isStartElement();
-impl<'a> /*trait*/ QXmlStreamReader_isStartElement<i8> for () {
-  fn isStartElement(self , rsthis: & QXmlStreamReader) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK16QXmlStreamReader14isStartElementEv()};
-    let mut ret = unsafe {_ZNK16QXmlStreamReader14isStartElementEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -794,25 +577,25 @@ impl<'a> /*trait*/ QXmlStreamReader_documentEncoding<()> for () {
   }
 }
 
-  // proto:  qint64 QXmlStreamReader::characterOffset();
+  // proto:  void QXmlStreamReader::setEntityResolver(QXmlStreamEntityResolver * resolver);
 impl /*struct*/ QXmlStreamReader {
-  pub fn characterOffset<RetType, T: QXmlStreamReader_characterOffset<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.characterOffset(self);
+  pub fn setEntityResolver<RetType, T: QXmlStreamReader_setEntityResolver<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.setEntityResolver(self);
     // return 1;
   }
 }
 
-pub trait QXmlStreamReader_characterOffset<RetType> {
-  fn characterOffset(self , rsthis: & QXmlStreamReader) -> RetType;
+pub trait QXmlStreamReader_setEntityResolver<RetType> {
+  fn setEntityResolver(self , rsthis: & QXmlStreamReader) -> RetType;
 }
 
-  // proto:  qint64 QXmlStreamReader::characterOffset();
-impl<'a> /*trait*/ QXmlStreamReader_characterOffset<i64> for () {
-  fn characterOffset(self , rsthis: & QXmlStreamReader) -> i64 {
+  // proto:  void QXmlStreamReader::setEntityResolver(QXmlStreamEntityResolver * resolver);
+impl<'a> /*trait*/ QXmlStreamReader_setEntityResolver<()> for (&'a QXmlStreamEntityResolver) {
+  fn setEntityResolver(self , rsthis: & QXmlStreamReader) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK16QXmlStreamReader15characterOffsetEv()};
-    let mut ret = unsafe {_ZNK16QXmlStreamReader15characterOffsetEv(rsthis.qclsinst)};
-    return ret as i64;
+    // unsafe{_ZN16QXmlStreamReader17setEntityResolverEP24QXmlStreamEntityResolver()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN16QXmlStreamReader17setEntityResolverEP24QXmlStreamEntityResolver(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -904,10 +687,13 @@ pub trait QXmlStreamReader_New {
   // proto:  void QXmlStreamReader::QXmlStreamReader(const QByteArray & data);
 impl<'a> /*trait*/ QXmlStreamReader_New for (&'a QByteArray) {
   fn New(self) -> QXmlStreamReader {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamReaderC1ERK10QByteArray()};
+    let ctysz: c_int = unsafe{QXmlStreamReader_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN16QXmlStreamReaderC1ERK10QByteArray(qthis, arg0)};
+    // unsafe {_ZN16QXmlStreamReaderC1ERK10QByteArray(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN16QXmlStreamReaderC1ERK10QByteArray(arg0)};
     let rsthis = QXmlStreamReader{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -1030,10 +816,13 @@ impl<'a> /*trait*/ QXmlStreamReader_setDevice<()> for (&'a QIODevice) {
   // proto:  void QXmlStreamReader::QXmlStreamReader(QIODevice * device);
 impl<'a> /*trait*/ QXmlStreamReader_New for (&'a QIODevice) {
   fn New(self) -> QXmlStreamReader {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamReaderC1EP9QIODevice()};
+    let ctysz: c_int = unsafe{QXmlStreamReader_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN16QXmlStreamReaderC1EP9QIODevice(qthis, arg0)};
+    // unsafe {_ZN16QXmlStreamReaderC1EP9QIODevice(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN16QXmlStreamReaderC1EP9QIODevice(arg0)};
     let rsthis = QXmlStreamReader{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -1062,52 +851,6 @@ impl<'a> /*trait*/ QXmlStreamReader_documentVersion<()> for () {
   }
 }
 
-  // proto:  bool QXmlStreamReader::isDTD();
-impl /*struct*/ QXmlStreamReader {
-  pub fn isDTD<RetType, T: QXmlStreamReader_isDTD<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isDTD(self);
-    // return 1;
-  }
-}
-
-pub trait QXmlStreamReader_isDTD<RetType> {
-  fn isDTD(self , rsthis: & QXmlStreamReader) -> RetType;
-}
-
-  // proto:  bool QXmlStreamReader::isDTD();
-impl<'a> /*trait*/ QXmlStreamReader_isDTD<i8> for () {
-  fn isDTD(self , rsthis: & QXmlStreamReader) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK16QXmlStreamReader5isDTDEv()};
-    let mut ret = unsafe {_ZNK16QXmlStreamReader5isDTDEv(rsthis.qclsinst)};
-    return ret as i8;
-    // return 1;
-  }
-}
-
-  // proto:  bool QXmlStreamReader::isStartDocument();
-impl /*struct*/ QXmlStreamReader {
-  pub fn isStartDocument<RetType, T: QXmlStreamReader_isStartDocument<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isStartDocument(self);
-    // return 1;
-  }
-}
-
-pub trait QXmlStreamReader_isStartDocument<RetType> {
-  fn isStartDocument(self , rsthis: & QXmlStreamReader) -> RetType;
-}
-
-  // proto:  bool QXmlStreamReader::isStartDocument();
-impl<'a> /*trait*/ QXmlStreamReader_isStartDocument<i8> for () {
-  fn isStartDocument(self , rsthis: & QXmlStreamReader) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK16QXmlStreamReader15isStartDocumentEv()};
-    let mut ret = unsafe {_ZNK16QXmlStreamReader15isStartDocumentEv(rsthis.qclsinst)};
-    return ret as i8;
-    // return 1;
-  }
-}
-
   // proto:  QString QXmlStreamReader::errorString();
 impl /*struct*/ QXmlStreamReader {
   pub fn errorString<RetType, T: QXmlStreamReader_errorString<RetType>>(& self,  overload_args: T) -> RetType {
@@ -1132,81 +875,15 @@ impl<'a> /*trait*/ QXmlStreamReader_errorString<QString> for () {
   }
 }
 
-  // proto:  bool QXmlStreamReader::isProcessingInstruction();
-impl /*struct*/ QXmlStreamReader {
-  pub fn isProcessingInstruction<RetType, T: QXmlStreamReader_isProcessingInstruction<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isProcessingInstruction(self);
-    // return 1;
-  }
-}
-
-pub trait QXmlStreamReader_isProcessingInstruction<RetType> {
-  fn isProcessingInstruction(self , rsthis: & QXmlStreamReader) -> RetType;
-}
-
-  // proto:  bool QXmlStreamReader::isProcessingInstruction();
-impl<'a> /*trait*/ QXmlStreamReader_isProcessingInstruction<i8> for () {
-  fn isProcessingInstruction(self , rsthis: & QXmlStreamReader) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK16QXmlStreamReader23isProcessingInstructionEv()};
-    let mut ret = unsafe {_ZNK16QXmlStreamReader23isProcessingInstructionEv(rsthis.qclsinst)};
-    return ret as i8;
-    // return 1;
-  }
-}
-
-  // proto:  void QXmlStreamReader::setEntityResolver(QXmlStreamEntityResolver * resolver);
-impl /*struct*/ QXmlStreamReader {
-  pub fn setEntityResolver<RetType, T: QXmlStreamReader_setEntityResolver<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setEntityResolver(self);
-    // return 1;
-  }
-}
-
-pub trait QXmlStreamReader_setEntityResolver<RetType> {
-  fn setEntityResolver(self , rsthis: & QXmlStreamReader) -> RetType;
-}
-
-  // proto:  void QXmlStreamReader::setEntityResolver(QXmlStreamEntityResolver * resolver);
-impl<'a> /*trait*/ QXmlStreamReader_setEntityResolver<()> for (&'a QXmlStreamEntityResolver) {
-  fn setEntityResolver(self , rsthis: & QXmlStreamReader) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QXmlStreamReader17setEntityResolverEP24QXmlStreamEntityResolver()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN16QXmlStreamReader17setEntityResolverEP24QXmlStreamEntityResolver(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  bool QXmlStreamReader::isCharacters();
-impl /*struct*/ QXmlStreamReader {
-  pub fn isCharacters<RetType, T: QXmlStreamReader_isCharacters<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isCharacters(self);
-    // return 1;
-  }
-}
-
-pub trait QXmlStreamReader_isCharacters<RetType> {
-  fn isCharacters(self , rsthis: & QXmlStreamReader) -> RetType;
-}
-
-  // proto:  bool QXmlStreamReader::isCharacters();
-impl<'a> /*trait*/ QXmlStreamReader_isCharacters<i8> for () {
-  fn isCharacters(self , rsthis: & QXmlStreamReader) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK16QXmlStreamReader12isCharactersEv()};
-    let mut ret = unsafe {_ZNK16QXmlStreamReader12isCharactersEv(rsthis.qclsinst)};
-    return ret as i8;
-    // return 1;
-  }
-}
-
   // proto:  void QXmlStreamReader::QXmlStreamReader();
 impl<'a> /*trait*/ QXmlStreamReader_New for () {
   fn New(self) -> QXmlStreamReader {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamReaderC1Ev()};
-    unsafe {_ZN16QXmlStreamReaderC1Ev(qthis)};
+    let ctysz: c_int = unsafe{QXmlStreamReader_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN16QXmlStreamReaderC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN16QXmlStreamReaderC1Ev()};
     let rsthis = QXmlStreamReader{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -1216,10 +893,13 @@ impl<'a> /*trait*/ QXmlStreamReader_New for () {
   // proto:  void QXmlStreamReader::QXmlStreamReader(const QString & data);
 impl<'a> /*trait*/ QXmlStreamReader_New for (&'a QString) {
   fn New(self) -> QXmlStreamReader {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamReaderC1ERK7QString()};
+    let ctysz: c_int = unsafe{QXmlStreamReader_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN16QXmlStreamReaderC1ERK7QString(qthis, arg0)};
+    // unsafe {_ZN16QXmlStreamReaderC1ERK7QString(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN16QXmlStreamReaderC1ERK7QString(arg0)};
     let rsthis = QXmlStreamReader{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -1274,10 +954,13 @@ impl<'a> /*trait*/ QXmlStreamReader_isWhitespace<i8> for () {
   // proto:  void QXmlStreamReader::QXmlStreamReader(const QXmlStreamReader & );
 impl<'a> /*trait*/ QXmlStreamReader_New for (&'a QXmlStreamReader) {
   fn New(self) -> QXmlStreamReader {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamReaderC1ERKS_()};
+    let ctysz: c_int = unsafe{QXmlStreamReader_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN16QXmlStreamReaderC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN16QXmlStreamReaderC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN16QXmlStreamReaderC1ERKS_(arg0)};
     let rsthis = QXmlStreamReader{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -1303,29 +986,6 @@ impl<'a> /*trait*/ QXmlStreamReader_columnNumber<i64> for () {
     // unsafe{_ZNK16QXmlStreamReader12columnNumberEv()};
     let mut ret = unsafe {_ZNK16QXmlStreamReader12columnNumberEv(rsthis.qclsinst)};
     return ret as i64;
-    // return 1;
-  }
-}
-
-  // proto:  bool QXmlStreamReader::hasError();
-impl /*struct*/ QXmlStreamReader {
-  pub fn hasError<RetType, T: QXmlStreamReader_hasError<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.hasError(self);
-    // return 1;
-  }
-}
-
-pub trait QXmlStreamReader_hasError<RetType> {
-  fn hasError(self , rsthis: & QXmlStreamReader) -> RetType;
-}
-
-  // proto:  bool QXmlStreamReader::hasError();
-impl<'a> /*trait*/ QXmlStreamReader_hasError<i8> for () {
-  fn hasError(self , rsthis: & QXmlStreamReader) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK16QXmlStreamReader8hasErrorEv()};
-    let mut ret = unsafe {_ZNK16QXmlStreamReader8hasErrorEv(rsthis.qclsinst)};
-    return ret as i8;
     // return 1;
   }
 }
@@ -1452,29 +1112,6 @@ impl<'a> /*trait*/ QXmlStreamReader_prefix<()> for () {
   }
 }
 
-  // proto:  bool QXmlStreamReader::isEndElement();
-impl /*struct*/ QXmlStreamReader {
-  pub fn isEndElement<RetType, T: QXmlStreamReader_isEndElement<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isEndElement(self);
-    // return 1;
-  }
-}
-
-pub trait QXmlStreamReader_isEndElement<RetType> {
-  fn isEndElement(self , rsthis: & QXmlStreamReader) -> RetType;
-}
-
-  // proto:  bool QXmlStreamReader::isEndElement();
-impl<'a> /*trait*/ QXmlStreamReader_isEndElement<i8> for () {
-  fn isEndElement(self , rsthis: & QXmlStreamReader) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK16QXmlStreamReader12isEndElementEv()};
-    let mut ret = unsafe {_ZNK16QXmlStreamReader12isEndElementEv(rsthis.qclsinst)};
-    return ret as i8;
-    // return 1;
-  }
-}
-
   // proto:  QXmlStreamNotationDeclarations QXmlStreamReader::notationDeclarations();
 impl /*struct*/ QXmlStreamReader {
   pub fn notationDeclarations<RetType, T: QXmlStreamReader_notationDeclarations<RetType>>(& self,  overload_args: T) -> RetType {
@@ -1587,29 +1224,6 @@ impl<'a> /*trait*/ QXmlStreamReader_dtdName<()> for () {
   }
 }
 
-  // proto:  bool QXmlStreamReader::isEndDocument();
-impl /*struct*/ QXmlStreamReader {
-  pub fn isEndDocument<RetType, T: QXmlStreamReader_isEndDocument<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isEndDocument(self);
-    // return 1;
-  }
-}
-
-pub trait QXmlStreamReader_isEndDocument<RetType> {
-  fn isEndDocument(self , rsthis: & QXmlStreamReader) -> RetType;
-}
-
-  // proto:  bool QXmlStreamReader::isEndDocument();
-impl<'a> /*trait*/ QXmlStreamReader_isEndDocument<i8> for () {
-  fn isEndDocument(self , rsthis: & QXmlStreamReader) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK16QXmlStreamReader13isEndDocumentEv()};
-    let mut ret = unsafe {_ZNK16QXmlStreamReader13isEndDocumentEv(rsthis.qclsinst)};
-    return ret as i8;
-    // return 1;
-  }
-}
-
   // proto:  bool QXmlStreamReader::readNextStartElement();
 impl /*struct*/ QXmlStreamReader {
   pub fn readNextStartElement<RetType, T: QXmlStreamReader_readNextStartElement<RetType>>(& self,  overload_args: T) -> RetType {
@@ -1633,36 +1247,16 @@ impl<'a> /*trait*/ QXmlStreamReader_readNextStartElement<i8> for () {
   }
 }
 
-  // proto:  bool QXmlStreamReader::isComment();
-impl /*struct*/ QXmlStreamReader {
-  pub fn isComment<RetType, T: QXmlStreamReader_isComment<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isComment(self);
-    // return 1;
-  }
-}
-
-pub trait QXmlStreamReader_isComment<RetType> {
-  fn isComment(self , rsthis: & QXmlStreamReader) -> RetType;
-}
-
-  // proto:  bool QXmlStreamReader::isComment();
-impl<'a> /*trait*/ QXmlStreamReader_isComment<i8> for () {
-  fn isComment(self , rsthis: & QXmlStreamReader) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK16QXmlStreamReader9isCommentEv()};
-    let mut ret = unsafe {_ZNK16QXmlStreamReader9isCommentEv(rsthis.qclsinst)};
-    return ret as i8;
-    // return 1;
-  }
-}
-
   // proto:  void QXmlStreamReader::QXmlStreamReader(const char * data);
 impl<'a> /*trait*/ QXmlStreamReader_New for (&'a  String) {
   fn New(self) -> QXmlStreamReader {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamReaderC1EPKc()};
+    let ctysz: c_int = unsafe{QXmlStreamReader_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.as_ptr()  as *mut c_char;
-    unsafe {_ZN16QXmlStreamReaderC1EPKc(qthis, arg0)};
+    // unsafe {_ZN16QXmlStreamReaderC1EPKc(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN16QXmlStreamReaderC1EPKc(arg0)};
     let rsthis = QXmlStreamReader{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -1691,25 +1285,25 @@ impl<'a> /*trait*/ QXmlStreamReader_skipCurrentElement<()> for () {
   }
 }
 
-  // proto:  bool QXmlStreamReader::isEntityReference();
+  // proto:  qint64 QXmlStreamReader::characterOffset();
 impl /*struct*/ QXmlStreamReader {
-  pub fn isEntityReference<RetType, T: QXmlStreamReader_isEntityReference<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isEntityReference(self);
+  pub fn characterOffset<RetType, T: QXmlStreamReader_characterOffset<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.characterOffset(self);
     // return 1;
   }
 }
 
-pub trait QXmlStreamReader_isEntityReference<RetType> {
-  fn isEntityReference(self , rsthis: & QXmlStreamReader) -> RetType;
+pub trait QXmlStreamReader_characterOffset<RetType> {
+  fn characterOffset(self , rsthis: & QXmlStreamReader) -> RetType;
 }
 
-  // proto:  bool QXmlStreamReader::isEntityReference();
-impl<'a> /*trait*/ QXmlStreamReader_isEntityReference<i8> for () {
-  fn isEntityReference(self , rsthis: & QXmlStreamReader) -> i8 {
+  // proto:  qint64 QXmlStreamReader::characterOffset();
+impl<'a> /*trait*/ QXmlStreamReader_characterOffset<i64> for () {
+  fn characterOffset(self , rsthis: & QXmlStreamReader) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK16QXmlStreamReader17isEntityReferenceEv()};
-    let mut ret = unsafe {_ZNK16QXmlStreamReader17isEntityReferenceEv(rsthis.qclsinst)};
-    return ret as i8;
+    // unsafe{_ZNK16QXmlStreamReader15characterOffsetEv()};
+    let mut ret = unsafe {_ZNK16QXmlStreamReader15characterOffsetEv(rsthis.qclsinst)};
+    return ret as i64;
     // return 1;
   }
 }
@@ -1831,24 +1425,24 @@ impl /*struct*/ QXmlStreamNamespaceDeclaration {
     return QXmlStreamNamespaceDeclaration{qclsinst: qthis};
   }
 }
-  // proto:  QStringRef QXmlStreamNamespaceDeclaration::namespaceUri();
+  // proto:  void QXmlStreamNamespaceDeclaration::~QXmlStreamNamespaceDeclaration();
 impl /*struct*/ QXmlStreamNamespaceDeclaration {
-  pub fn namespaceUri<RetType, T: QXmlStreamNamespaceDeclaration_namespaceUri<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.namespaceUri(self);
+  pub fn Free<RetType, T: QXmlStreamNamespaceDeclaration_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QXmlStreamNamespaceDeclaration_namespaceUri<RetType> {
-  fn namespaceUri(self , rsthis: & QXmlStreamNamespaceDeclaration) -> RetType;
+pub trait QXmlStreamNamespaceDeclaration_Free<RetType> {
+  fn Free(self , rsthis: & QXmlStreamNamespaceDeclaration) -> RetType;
 }
 
-  // proto:  QStringRef QXmlStreamNamespaceDeclaration::namespaceUri();
-impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_namespaceUri<()> for () {
-  fn namespaceUri(self , rsthis: & QXmlStreamNamespaceDeclaration) -> () {
+  // proto:  void QXmlStreamNamespaceDeclaration::~QXmlStreamNamespaceDeclaration();
+impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_Free<()> for () {
+  fn Free(self , rsthis: & QXmlStreamNamespaceDeclaration) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
-    // unsafe{_ZNK30QXmlStreamNamespaceDeclaration12namespaceUriEv()};
-     unsafe {_ZNK30QXmlStreamNamespaceDeclaration12namespaceUriEv(rsthis.qclsinst)};
+    // unsafe{_ZN30QXmlStreamNamespaceDeclarationD0Ev()};
+     unsafe {_ZN30QXmlStreamNamespaceDeclarationD0Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1869,10 +1463,30 @@ pub trait QXmlStreamNamespaceDeclaration_New {
   // proto:  void QXmlStreamNamespaceDeclaration::QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & );
 impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_New for (&'a QXmlStreamNamespaceDeclaration) {
   fn New(self) -> QXmlStreamNamespaceDeclaration {
-    let qthis: *mut c_void = unsafe{calloc(1, 40)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZN30QXmlStreamNamespaceDeclarationC1ERKS_()};
+    let ctysz: c_int = unsafe{QXmlStreamNamespaceDeclaration_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN30QXmlStreamNamespaceDeclarationC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN30QXmlStreamNamespaceDeclarationC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN30QXmlStreamNamespaceDeclarationC1ERKS_(arg0)};
+    let rsthis = QXmlStreamNamespaceDeclaration{qclsinst: qthis};
+    return rsthis;
+    // return 1;
+  }
+}
+
+  // proto:  void QXmlStreamNamespaceDeclaration::QXmlStreamNamespaceDeclaration(const QString & prefix, const QString & namespaceUri);
+impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_New for (&'a QString, &'a QString) {
+  fn New(self) -> QXmlStreamNamespaceDeclaration {
+    // let qthis: *mut c_void = unsafe{calloc(1, 40)};
+    // unsafe{_ZN30QXmlStreamNamespaceDeclarationC1ERK7QStringS2_()};
+    let ctysz: c_int = unsafe{QXmlStreamNamespaceDeclaration_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let arg0 = self.0.qclsinst  as *mut c_void;
+    let arg1 = self.1.qclsinst  as *mut c_void;
+    // unsafe {_ZN30QXmlStreamNamespaceDeclarationC1ERK7QStringS2_(qthis, arg0, arg1)};
+    let qthis: *mut c_void = unsafe {dector_ZN30QXmlStreamNamespaceDeclarationC1ERK7QStringS2_(arg0, arg1)};
     let rsthis = QXmlStreamNamespaceDeclaration{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -1882,69 +1496,14 @@ impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_New for (&'a QXmlStreamNamespa
   // proto:  void QXmlStreamNamespaceDeclaration::QXmlStreamNamespaceDeclaration();
 impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_New for () {
   fn New(self) -> QXmlStreamNamespaceDeclaration {
-    let qthis: *mut c_void = unsafe{calloc(1, 40)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZN30QXmlStreamNamespaceDeclarationC1Ev()};
-    unsafe {_ZN30QXmlStreamNamespaceDeclarationC1Ev(qthis)};
+    let ctysz: c_int = unsafe{QXmlStreamNamespaceDeclaration_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN30QXmlStreamNamespaceDeclarationC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN30QXmlStreamNamespaceDeclarationC1Ev()};
     let rsthis = QXmlStreamNamespaceDeclaration{qclsinst: qthis};
     return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  QStringRef QXmlStreamNamespaceDeclaration::prefix();
-impl /*struct*/ QXmlStreamNamespaceDeclaration {
-  pub fn prefix<RetType, T: QXmlStreamNamespaceDeclaration_prefix<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.prefix(self);
-    // return 1;
-  }
-}
-
-pub trait QXmlStreamNamespaceDeclaration_prefix<RetType> {
-  fn prefix(self , rsthis: & QXmlStreamNamespaceDeclaration) -> RetType;
-}
-
-  // proto:  QStringRef QXmlStreamNamespaceDeclaration::prefix();
-impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_prefix<()> for () {
-  fn prefix(self , rsthis: & QXmlStreamNamespaceDeclaration) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 40)};
-    // unsafe{_ZNK30QXmlStreamNamespaceDeclaration6prefixEv()};
-     unsafe {_ZNK30QXmlStreamNamespaceDeclaration6prefixEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QXmlStreamNamespaceDeclaration::QXmlStreamNamespaceDeclaration(const QString & prefix, const QString & namespaceUri);
-impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_New for (&'a QString, &'a QString) {
-  fn New(self) -> QXmlStreamNamespaceDeclaration {
-    let qthis: *mut c_void = unsafe{calloc(1, 40)};
-    // unsafe{_ZN30QXmlStreamNamespaceDeclarationC1ERK7QStringS2_()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    unsafe {_ZN30QXmlStreamNamespaceDeclarationC1ERK7QStringS2_(qthis, arg0, arg1)};
-    let rsthis = QXmlStreamNamespaceDeclaration{qclsinst: qthis};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  void QXmlStreamNamespaceDeclaration::~QXmlStreamNamespaceDeclaration();
-impl /*struct*/ QXmlStreamNamespaceDeclaration {
-  pub fn Free<RetType, T: QXmlStreamNamespaceDeclaration_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
-    // return 1;
-  }
-}
-
-pub trait QXmlStreamNamespaceDeclaration_Free<RetType> {
-  fn Free(self , rsthis: & QXmlStreamNamespaceDeclaration) -> RetType;
-}
-
-  // proto:  void QXmlStreamNamespaceDeclaration::~QXmlStreamNamespaceDeclaration();
-impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_Free<()> for () {
-  fn Free(self , rsthis: & QXmlStreamNamespaceDeclaration) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 40)};
-    // unsafe{_ZN30QXmlStreamNamespaceDeclarationD0Ev()};
-     unsafe {_ZN30QXmlStreamNamespaceDeclarationD0Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1976,51 +1535,7 @@ impl<'a> /*trait*/ QXmlStreamEntityDeclaration_Free<()> for () {
   }
 }
 
-  // proto:  QStringRef QXmlStreamEntityDeclaration::publicId();
-impl /*struct*/ QXmlStreamEntityDeclaration {
-  pub fn publicId<RetType, T: QXmlStreamEntityDeclaration_publicId<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.publicId(self);
-    // return 1;
-  }
-}
-
-pub trait QXmlStreamEntityDeclaration_publicId<RetType> {
-  fn publicId(self , rsthis: & QXmlStreamEntityDeclaration) -> RetType;
-}
-
-  // proto:  QStringRef QXmlStreamEntityDeclaration::publicId();
-impl<'a> /*trait*/ QXmlStreamEntityDeclaration_publicId<()> for () {
-  fn publicId(self , rsthis: & QXmlStreamEntityDeclaration) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 88)};
-    // unsafe{_ZNK27QXmlStreamEntityDeclaration8publicIdEv()};
-     unsafe {_ZNK27QXmlStreamEntityDeclaration8publicIdEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  QStringRef QXmlStreamEntityDeclaration::name();
-impl /*struct*/ QXmlStreamEntityDeclaration {
-  pub fn name<RetType, T: QXmlStreamEntityDeclaration_name<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.name(self);
-    // return 1;
-  }
-}
-
-pub trait QXmlStreamEntityDeclaration_name<RetType> {
-  fn name(self , rsthis: & QXmlStreamEntityDeclaration) -> RetType;
-}
-
-  // proto:  QStringRef QXmlStreamEntityDeclaration::name();
-impl<'a> /*trait*/ QXmlStreamEntityDeclaration_name<()> for () {
-  fn name(self , rsthis: & QXmlStreamEntityDeclaration) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 88)};
-    // unsafe{_ZNK27QXmlStreamEntityDeclaration4nameEv()};
-     unsafe {_ZNK27QXmlStreamEntityDeclaration4nameEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QXmlStreamEntityDeclaration::QXmlStreamEntityDeclaration();
+  // proto:  void QXmlStreamEntityDeclaration::QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration & );
 impl /*struct*/ QXmlStreamEntityDeclaration {
   pub fn New<T: QXmlStreamEntityDeclaration_New>(value: T) -> QXmlStreamEntityDeclaration {
     let rsthis = value.New();
@@ -2033,93 +1548,33 @@ pub trait QXmlStreamEntityDeclaration_New {
   fn New(self) -> QXmlStreamEntityDeclaration;
 }
 
-  // proto:  void QXmlStreamEntityDeclaration::QXmlStreamEntityDeclaration();
-impl<'a> /*trait*/ QXmlStreamEntityDeclaration_New for () {
-  fn New(self) -> QXmlStreamEntityDeclaration {
-    let qthis: *mut c_void = unsafe{calloc(1, 88)};
-    // unsafe{_ZN27QXmlStreamEntityDeclarationC1Ev()};
-    unsafe {_ZN27QXmlStreamEntityDeclarationC1Ev(qthis)};
-    let rsthis = QXmlStreamEntityDeclaration{qclsinst: qthis};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  QStringRef QXmlStreamEntityDeclaration::value();
-impl /*struct*/ QXmlStreamEntityDeclaration {
-  pub fn value<RetType, T: QXmlStreamEntityDeclaration_value<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.value(self);
-    // return 1;
-  }
-}
-
-pub trait QXmlStreamEntityDeclaration_value<RetType> {
-  fn value(self , rsthis: & QXmlStreamEntityDeclaration) -> RetType;
-}
-
-  // proto:  QStringRef QXmlStreamEntityDeclaration::value();
-impl<'a> /*trait*/ QXmlStreamEntityDeclaration_value<()> for () {
-  fn value(self , rsthis: & QXmlStreamEntityDeclaration) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 88)};
-    // unsafe{_ZNK27QXmlStreamEntityDeclaration5valueEv()};
-     unsafe {_ZNK27QXmlStreamEntityDeclaration5valueEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  QStringRef QXmlStreamEntityDeclaration::notationName();
-impl /*struct*/ QXmlStreamEntityDeclaration {
-  pub fn notationName<RetType, T: QXmlStreamEntityDeclaration_notationName<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.notationName(self);
-    // return 1;
-  }
-}
-
-pub trait QXmlStreamEntityDeclaration_notationName<RetType> {
-  fn notationName(self , rsthis: & QXmlStreamEntityDeclaration) -> RetType;
-}
-
-  // proto:  QStringRef QXmlStreamEntityDeclaration::notationName();
-impl<'a> /*trait*/ QXmlStreamEntityDeclaration_notationName<()> for () {
-  fn notationName(self , rsthis: & QXmlStreamEntityDeclaration) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 88)};
-    // unsafe{_ZNK27QXmlStreamEntityDeclaration12notationNameEv()};
-     unsafe {_ZNK27QXmlStreamEntityDeclaration12notationNameEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto:  void QXmlStreamEntityDeclaration::QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration & );
 impl<'a> /*trait*/ QXmlStreamEntityDeclaration_New for (&'a QXmlStreamEntityDeclaration) {
   fn New(self) -> QXmlStreamEntityDeclaration {
-    let qthis: *mut c_void = unsafe{calloc(1, 88)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZN27QXmlStreamEntityDeclarationC1ERKS_()};
+    let ctysz: c_int = unsafe{QXmlStreamEntityDeclaration_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN27QXmlStreamEntityDeclarationC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN27QXmlStreamEntityDeclarationC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN27QXmlStreamEntityDeclarationC1ERKS_(arg0)};
     let rsthis = QXmlStreamEntityDeclaration{qclsinst: qthis};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  QStringRef QXmlStreamEntityDeclaration::systemId();
-impl /*struct*/ QXmlStreamEntityDeclaration {
-  pub fn systemId<RetType, T: QXmlStreamEntityDeclaration_systemId<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.systemId(self);
-    // return 1;
-  }
-}
-
-pub trait QXmlStreamEntityDeclaration_systemId<RetType> {
-  fn systemId(self , rsthis: & QXmlStreamEntityDeclaration) -> RetType;
-}
-
-  // proto:  QStringRef QXmlStreamEntityDeclaration::systemId();
-impl<'a> /*trait*/ QXmlStreamEntityDeclaration_systemId<()> for () {
-  fn systemId(self , rsthis: & QXmlStreamEntityDeclaration) -> () {
+  // proto:  void QXmlStreamEntityDeclaration::QXmlStreamEntityDeclaration();
+impl<'a> /*trait*/ QXmlStreamEntityDeclaration_New for () {
+  fn New(self) -> QXmlStreamEntityDeclaration {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
-    // unsafe{_ZNK27QXmlStreamEntityDeclaration8systemIdEv()};
-     unsafe {_ZNK27QXmlStreamEntityDeclaration8systemIdEv(rsthis.qclsinst)};
+    // unsafe{_ZN27QXmlStreamEntityDeclarationC1Ev()};
+    let ctysz: c_int = unsafe{QXmlStreamEntityDeclaration_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN27QXmlStreamEntityDeclarationC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN27QXmlStreamEntityDeclarationC1Ev()};
+    let rsthis = QXmlStreamEntityDeclaration{qclsinst: qthis};
+    return rsthis;
     // return 1;
   }
 }
@@ -2148,68 +1603,6 @@ impl<'a> /*trait*/ QXmlStreamAttributes_value<()> for (&'a QString) {
     // unsafe{_ZNK20QXmlStreamAttributes5valueERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
      unsafe {_ZNK20QXmlStreamAttributes5valueERK7QString(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QXmlStreamAttributes::QXmlStreamAttributes();
-impl /*struct*/ QXmlStreamAttributes {
-  pub fn New<T: QXmlStreamAttributes_New>(value: T) -> QXmlStreamAttributes {
-    let rsthis = value.New();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QXmlStreamAttributes_New {
-  fn New(self) -> QXmlStreamAttributes;
-}
-
-  // proto:  void QXmlStreamAttributes::QXmlStreamAttributes();
-impl<'a> /*trait*/ QXmlStreamAttributes_New for () {
-  fn New(self) -> QXmlStreamAttributes {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN20QXmlStreamAttributesC1Ev()};
-    unsafe {_ZN20QXmlStreamAttributesC1Ev(qthis)};
-    let rsthis = QXmlStreamAttributes{qclsinst: qthis};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  bool QXmlStreamAttributes::hasAttribute(const QString & qualifiedName);
-impl /*struct*/ QXmlStreamAttributes {
-  pub fn hasAttribute<RetType, T: QXmlStreamAttributes_hasAttribute<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.hasAttribute(self);
-    // return 1;
-  }
-}
-
-pub trait QXmlStreamAttributes_hasAttribute<RetType> {
-  fn hasAttribute(self , rsthis: & QXmlStreamAttributes) -> RetType;
-}
-
-  // proto:  bool QXmlStreamAttributes::hasAttribute(const QString & qualifiedName);
-impl<'a> /*trait*/ QXmlStreamAttributes_hasAttribute<i8> for (&'a QString) {
-  fn hasAttribute(self , rsthis: & QXmlStreamAttributes) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK20QXmlStreamAttributes12hasAttributeERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK20QXmlStreamAttributes12hasAttributeERK7QString(rsthis.qclsinst, arg0)};
-    return ret as i8;
-    // return 1;
-  }
-}
-
-  // proto:  bool QXmlStreamAttributes::hasAttribute(const QString & namespaceUri, const QString & name);
-impl<'a> /*trait*/ QXmlStreamAttributes_hasAttribute<i8> for (&'a QString, &'a QString) {
-  fn hasAttribute(self , rsthis: & QXmlStreamAttributes) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK20QXmlStreamAttributes12hasAttributeERK7QStringS2_()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK20QXmlStreamAttributes12hasAttributeERK7QStringS2_(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8;
     // return 1;
   }
 }
@@ -2306,9 +1699,12 @@ pub trait QXmlStreamWriter_New {
   // proto:  void QXmlStreamWriter::QXmlStreamWriter();
 impl<'a> /*trait*/ QXmlStreamWriter_New for () {
   fn New(self) -> QXmlStreamWriter {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriterC1Ev()};
-    unsafe {_ZN16QXmlStreamWriterC1Ev(qthis)};
+    let ctysz: c_int = unsafe{QXmlStreamWriter_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN16QXmlStreamWriterC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN16QXmlStreamWriterC1Ev()};
     let rsthis = QXmlStreamWriter{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -2644,10 +2040,13 @@ impl<'a> /*trait*/ QXmlStreamWriter_writeStartElement<()> for (&'a QString, &'a 
   // proto:  void QXmlStreamWriter::QXmlStreamWriter(QString * string);
 impl<'a> /*trait*/ QXmlStreamWriter_New for (&'a QString) {
   fn New(self) -> QXmlStreamWriter {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriterC1EP7QString()};
+    let ctysz: c_int = unsafe{QXmlStreamWriter_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN16QXmlStreamWriterC1EP7QString(qthis, arg0)};
+    // unsafe {_ZN16QXmlStreamWriterC1EP7QString(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN16QXmlStreamWriterC1EP7QString(arg0)};
     let rsthis = QXmlStreamWriter{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -2741,10 +2140,13 @@ impl<'a> /*trait*/ QXmlStreamWriter_writeNamespace<()> for (&'a QString, &'a QSt
   // proto:  void QXmlStreamWriter::QXmlStreamWriter(const QXmlStreamWriter & );
 impl<'a> /*trait*/ QXmlStreamWriter_New for (&'a QXmlStreamWriter) {
   fn New(self) -> QXmlStreamWriter {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriterC1ERKS_()};
+    let ctysz: c_int = unsafe{QXmlStreamWriter_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN16QXmlStreamWriterC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN16QXmlStreamWriterC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN16QXmlStreamWriterC1ERKS_(arg0)};
     let rsthis = QXmlStreamWriter{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -3005,10 +2407,13 @@ impl<'a> /*trait*/ QXmlStreamWriter_writeCurrentToken<()> for (&'a QXmlStreamRea
   // proto:  void QXmlStreamWriter::QXmlStreamWriter(QByteArray * array);
 impl<'a> /*trait*/ QXmlStreamWriter_New for (&'a QByteArray) {
   fn New(self) -> QXmlStreamWriter {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriterC1EP10QByteArray()};
+    let ctysz: c_int = unsafe{QXmlStreamWriter_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN16QXmlStreamWriterC1EP10QByteArray(qthis, arg0)};
+    // unsafe {_ZN16QXmlStreamWriterC1EP10QByteArray(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN16QXmlStreamWriterC1EP10QByteArray(arg0)};
     let rsthis = QXmlStreamWriter{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -3042,10 +2447,13 @@ impl<'a> /*trait*/ QXmlStreamWriter_writeEmptyElement<()> for (&'a QString, &'a 
   // proto:  void QXmlStreamWriter::QXmlStreamWriter(QIODevice * device);
 impl<'a> /*trait*/ QXmlStreamWriter_New for (&'a QIODevice) {
   fn New(self) -> QXmlStreamWriter {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriterC1EP9QIODevice()};
+    let ctysz: c_int = unsafe{QXmlStreamWriter_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN16QXmlStreamWriterC1EP9QIODevice(qthis, arg0)};
+    // unsafe {_ZN16QXmlStreamWriterC1EP9QIODevice(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN16QXmlStreamWriterC1EP9QIODevice(arg0)};
     let rsthis = QXmlStreamWriter{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -3084,56 +2492,30 @@ pub trait QXmlStreamNotationDeclaration_New {
   // proto:  void QXmlStreamNotationDeclaration::QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration & );
 impl<'a> /*trait*/ QXmlStreamNotationDeclaration_New for (&'a QXmlStreamNotationDeclaration) {
   fn New(self) -> QXmlStreamNotationDeclaration {
-    let qthis: *mut c_void = unsafe{calloc(1, 56)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 56)};
     // unsafe{_ZN29QXmlStreamNotationDeclarationC1ERKS_()};
+    let ctysz: c_int = unsafe{QXmlStreamNotationDeclaration_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN29QXmlStreamNotationDeclarationC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN29QXmlStreamNotationDeclarationC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN29QXmlStreamNotationDeclarationC1ERKS_(arg0)};
     let rsthis = QXmlStreamNotationDeclaration{qclsinst: qthis};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  QStringRef QXmlStreamNotationDeclaration::publicId();
-impl /*struct*/ QXmlStreamNotationDeclaration {
-  pub fn publicId<RetType, T: QXmlStreamNotationDeclaration_publicId<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.publicId(self);
-    // return 1;
-  }
-}
-
-pub trait QXmlStreamNotationDeclaration_publicId<RetType> {
-  fn publicId(self , rsthis: & QXmlStreamNotationDeclaration) -> RetType;
-}
-
-  // proto:  QStringRef QXmlStreamNotationDeclaration::publicId();
-impl<'a> /*trait*/ QXmlStreamNotationDeclaration_publicId<()> for () {
-  fn publicId(self , rsthis: & QXmlStreamNotationDeclaration) -> () {
+  // proto:  void QXmlStreamNotationDeclaration::QXmlStreamNotationDeclaration();
+impl<'a> /*trait*/ QXmlStreamNotationDeclaration_New for () {
+  fn New(self) -> QXmlStreamNotationDeclaration {
     // let qthis: *mut c_void = unsafe{calloc(1, 56)};
-    // unsafe{_ZNK29QXmlStreamNotationDeclaration8publicIdEv()};
-     unsafe {_ZNK29QXmlStreamNotationDeclaration8publicIdEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  QStringRef QXmlStreamNotationDeclaration::name();
-impl /*struct*/ QXmlStreamNotationDeclaration {
-  pub fn name<RetType, T: QXmlStreamNotationDeclaration_name<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.name(self);
-    // return 1;
-  }
-}
-
-pub trait QXmlStreamNotationDeclaration_name<RetType> {
-  fn name(self , rsthis: & QXmlStreamNotationDeclaration) -> RetType;
-}
-
-  // proto:  QStringRef QXmlStreamNotationDeclaration::name();
-impl<'a> /*trait*/ QXmlStreamNotationDeclaration_name<()> for () {
-  fn name(self , rsthis: & QXmlStreamNotationDeclaration) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 56)};
-    // unsafe{_ZNK29QXmlStreamNotationDeclaration4nameEv()};
-     unsafe {_ZNK29QXmlStreamNotationDeclaration4nameEv(rsthis.qclsinst)};
+    // unsafe{_ZN29QXmlStreamNotationDeclarationC1Ev()};
+    let ctysz: c_int = unsafe{QXmlStreamNotationDeclaration_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN29QXmlStreamNotationDeclarationC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN29QXmlStreamNotationDeclarationC1Ev()};
+    let rsthis = QXmlStreamNotationDeclaration{qclsinst: qthis};
+    return rsthis;
     // return 1;
   }
 }
@@ -3160,40 +2542,6 @@ impl<'a> /*trait*/ QXmlStreamNotationDeclaration_Free<()> for () {
   }
 }
 
-  // proto:  QStringRef QXmlStreamNotationDeclaration::systemId();
-impl /*struct*/ QXmlStreamNotationDeclaration {
-  pub fn systemId<RetType, T: QXmlStreamNotationDeclaration_systemId<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.systemId(self);
-    // return 1;
-  }
-}
-
-pub trait QXmlStreamNotationDeclaration_systemId<RetType> {
-  fn systemId(self , rsthis: & QXmlStreamNotationDeclaration) -> RetType;
-}
-
-  // proto:  QStringRef QXmlStreamNotationDeclaration::systemId();
-impl<'a> /*trait*/ QXmlStreamNotationDeclaration_systemId<()> for () {
-  fn systemId(self , rsthis: & QXmlStreamNotationDeclaration) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 56)};
-    // unsafe{_ZNK29QXmlStreamNotationDeclaration8systemIdEv()};
-     unsafe {_ZNK29QXmlStreamNotationDeclaration8systemIdEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QXmlStreamNotationDeclaration::QXmlStreamNotationDeclaration();
-impl<'a> /*trait*/ QXmlStreamNotationDeclaration_New for () {
-  fn New(self) -> QXmlStreamNotationDeclaration {
-    let qthis: *mut c_void = unsafe{calloc(1, 56)};
-    // unsafe{_ZN29QXmlStreamNotationDeclarationC1Ev()};
-    unsafe {_ZN29QXmlStreamNotationDeclarationC1Ev(qthis)};
-    let rsthis = QXmlStreamNotationDeclaration{qclsinst: qthis};
-    return rsthis;
-    // return 1;
-  }
-}
-
 impl /*struct*/ QXmlStreamAttribute {
   pub fn inheritFrom(qthis: *mut c_void) -> QXmlStreamAttribute {
     return QXmlStreamAttribute{qclsinst: qthis};
@@ -3215,35 +2563,16 @@ pub trait QXmlStreamAttribute_New {
   // proto:  void QXmlStreamAttribute::QXmlStreamAttribute(const QString & qualifiedName, const QString & value);
 impl<'a> /*trait*/ QXmlStreamAttribute_New for (&'a QString, &'a QString) {
   fn New(self) -> QXmlStreamAttribute {
-    let qthis: *mut c_void = unsafe{calloc(1, 80)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZN19QXmlStreamAttributeC1ERK7QStringS2_()};
+    let ctysz: c_int = unsafe{QXmlStreamAttribute_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    unsafe {_ZN19QXmlStreamAttributeC1ERK7QStringS2_(qthis, arg0, arg1)};
+    // unsafe {_ZN19QXmlStreamAttributeC1ERK7QStringS2_(qthis, arg0, arg1)};
+    let qthis: *mut c_void = unsafe {dector_ZN19QXmlStreamAttributeC1ERK7QStringS2_(arg0, arg1)};
     let rsthis = QXmlStreamAttribute{qclsinst: qthis};
     return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  QStringRef QXmlStreamAttribute::qualifiedName();
-impl /*struct*/ QXmlStreamAttribute {
-  pub fn qualifiedName<RetType, T: QXmlStreamAttribute_qualifiedName<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.qualifiedName(self);
-    // return 1;
-  }
-}
-
-pub trait QXmlStreamAttribute_qualifiedName<RetType> {
-  fn qualifiedName(self , rsthis: & QXmlStreamAttribute) -> RetType;
-}
-
-  // proto:  QStringRef QXmlStreamAttribute::qualifiedName();
-impl<'a> /*trait*/ QXmlStreamAttribute_qualifiedName<()> for () {
-  fn qualifiedName(self , rsthis: & QXmlStreamAttribute) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 80)};
-    // unsafe{_ZNK19QXmlStreamAttribute13qualifiedNameEv()};
-     unsafe {_ZNK19QXmlStreamAttribute13qualifiedNameEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -3270,56 +2599,15 @@ impl<'a> /*trait*/ QXmlStreamAttribute_Free<()> for () {
   }
 }
 
-  // proto:  QStringRef QXmlStreamAttribute::value();
-impl /*struct*/ QXmlStreamAttribute {
-  pub fn value<RetType, T: QXmlStreamAttribute_value<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.value(self);
-    // return 1;
-  }
-}
-
-pub trait QXmlStreamAttribute_value<RetType> {
-  fn value(self , rsthis: & QXmlStreamAttribute) -> RetType;
-}
-
-  // proto:  QStringRef QXmlStreamAttribute::value();
-impl<'a> /*trait*/ QXmlStreamAttribute_value<()> for () {
-  fn value(self , rsthis: & QXmlStreamAttribute) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 80)};
-    // unsafe{_ZNK19QXmlStreamAttribute5valueEv()};
-     unsafe {_ZNK19QXmlStreamAttribute5valueEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  QStringRef QXmlStreamAttribute::namespaceUri();
-impl /*struct*/ QXmlStreamAttribute {
-  pub fn namespaceUri<RetType, T: QXmlStreamAttribute_namespaceUri<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.namespaceUri(self);
-    // return 1;
-  }
-}
-
-pub trait QXmlStreamAttribute_namespaceUri<RetType> {
-  fn namespaceUri(self , rsthis: & QXmlStreamAttribute) -> RetType;
-}
-
-  // proto:  QStringRef QXmlStreamAttribute::namespaceUri();
-impl<'a> /*trait*/ QXmlStreamAttribute_namespaceUri<()> for () {
-  fn namespaceUri(self , rsthis: & QXmlStreamAttribute) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 80)};
-    // unsafe{_ZNK19QXmlStreamAttribute12namespaceUriEv()};
-     unsafe {_ZNK19QXmlStreamAttribute12namespaceUriEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto:  void QXmlStreamAttribute::QXmlStreamAttribute();
 impl<'a> /*trait*/ QXmlStreamAttribute_New for () {
   fn New(self) -> QXmlStreamAttribute {
-    let qthis: *mut c_void = unsafe{calloc(1, 80)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZN19QXmlStreamAttributeC1Ev()};
-    unsafe {_ZN19QXmlStreamAttributeC1Ev(qthis)};
+    let ctysz: c_int = unsafe{QXmlStreamAttribute_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN19QXmlStreamAttributeC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN19QXmlStreamAttributeC1Ev()};
     let rsthis = QXmlStreamAttribute{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -3329,10 +2617,13 @@ impl<'a> /*trait*/ QXmlStreamAttribute_New for () {
   // proto:  void QXmlStreamAttribute::QXmlStreamAttribute(const QXmlStreamAttribute & );
 impl<'a> /*trait*/ QXmlStreamAttribute_New for (&'a QXmlStreamAttribute) {
   fn New(self) -> QXmlStreamAttribute {
-    let qthis: *mut c_void = unsafe{calloc(1, 80)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZN19QXmlStreamAttributeC1ERKS_()};
+    let ctysz: c_int = unsafe{QXmlStreamAttribute_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN19QXmlStreamAttributeC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN19QXmlStreamAttributeC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN19QXmlStreamAttributeC1ERKS_(arg0)};
     let rsthis = QXmlStreamAttribute{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -3342,81 +2633,17 @@ impl<'a> /*trait*/ QXmlStreamAttribute_New for (&'a QXmlStreamAttribute) {
   // proto:  void QXmlStreamAttribute::QXmlStreamAttribute(const QString & namespaceUri, const QString & name, const QString & value);
 impl<'a> /*trait*/ QXmlStreamAttribute_New for (&'a QString, &'a QString, &'a QString) {
   fn New(self) -> QXmlStreamAttribute {
-    let qthis: *mut c_void = unsafe{calloc(1, 80)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZN19QXmlStreamAttributeC1ERK7QStringS2_S2_()};
+    let ctysz: c_int = unsafe{QXmlStreamAttribute_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
-    unsafe {_ZN19QXmlStreamAttributeC1ERK7QStringS2_S2_(qthis, arg0, arg1, arg2)};
+    // unsafe {_ZN19QXmlStreamAttributeC1ERK7QStringS2_S2_(qthis, arg0, arg1, arg2)};
+    let qthis: *mut c_void = unsafe {dector_ZN19QXmlStreamAttributeC1ERK7QStringS2_S2_(arg0, arg1, arg2)};
     let rsthis = QXmlStreamAttribute{qclsinst: qthis};
     return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  bool QXmlStreamAttribute::isDefault();
-impl /*struct*/ QXmlStreamAttribute {
-  pub fn isDefault<RetType, T: QXmlStreamAttribute_isDefault<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isDefault(self);
-    // return 1;
-  }
-}
-
-pub trait QXmlStreamAttribute_isDefault<RetType> {
-  fn isDefault(self , rsthis: & QXmlStreamAttribute) -> RetType;
-}
-
-  // proto:  bool QXmlStreamAttribute::isDefault();
-impl<'a> /*trait*/ QXmlStreamAttribute_isDefault<i8> for () {
-  fn isDefault(self , rsthis: & QXmlStreamAttribute) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 80)};
-    // unsafe{_ZNK19QXmlStreamAttribute9isDefaultEv()};
-    let mut ret = unsafe {_ZNK19QXmlStreamAttribute9isDefaultEv(rsthis.qclsinst)};
-    return ret as i8;
-    // return 1;
-  }
-}
-
-  // proto:  QStringRef QXmlStreamAttribute::prefix();
-impl /*struct*/ QXmlStreamAttribute {
-  pub fn prefix<RetType, T: QXmlStreamAttribute_prefix<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.prefix(self);
-    // return 1;
-  }
-}
-
-pub trait QXmlStreamAttribute_prefix<RetType> {
-  fn prefix(self , rsthis: & QXmlStreamAttribute) -> RetType;
-}
-
-  // proto:  QStringRef QXmlStreamAttribute::prefix();
-impl<'a> /*trait*/ QXmlStreamAttribute_prefix<()> for () {
-  fn prefix(self , rsthis: & QXmlStreamAttribute) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 80)};
-    // unsafe{_ZNK19QXmlStreamAttribute6prefixEv()};
-     unsafe {_ZNK19QXmlStreamAttribute6prefixEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  QStringRef QXmlStreamAttribute::name();
-impl /*struct*/ QXmlStreamAttribute {
-  pub fn name<RetType, T: QXmlStreamAttribute_name<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.name(self);
-    // return 1;
-  }
-}
-
-pub trait QXmlStreamAttribute_name<RetType> {
-  fn name(self , rsthis: & QXmlStreamAttribute) -> RetType;
-}
-
-  // proto:  QStringRef QXmlStreamAttribute::name();
-impl<'a> /*trait*/ QXmlStreamAttribute_name<()> for () {
-  fn name(self , rsthis: & QXmlStreamAttribute) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 80)};
-    // unsafe{_ZNK19QXmlStreamAttribute4nameEv()};
-     unsafe {_ZNK19QXmlStreamAttribute4nameEv(rsthis.qclsinst)};
     // return 1;
   }
 }

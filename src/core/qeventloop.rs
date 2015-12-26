@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtCore/qeventloop.h
 // dst-file: /src/core/qeventloop.rs
 //
@@ -29,15 +29,16 @@ use super::qthread::QThread; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QEventLoop_Class_Size() -> c_int;
   // proto:  void QEventLoop::exit(int returnCode);
   fn _ZN10QEventLoop4exitEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QEventLoop::quit();
   fn _ZN10QEventLoop4quitEv(qthis: *mut c_void);
   // proto:  void QEventLoop::QEventLoop(QObject * parent);
+  fn dector_ZN10QEventLoopC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
   fn _ZN10QEventLoopC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QEventLoop::isRunning();
   fn _ZNK10QEventLoop9isRunningEv(qthis: *mut c_void) -> c_char;
@@ -49,13 +50,18 @@ extern {
   fn _ZN10QEventLoopD0Ev(qthis: *mut c_void);
   // proto:  bool QEventLoop::event(QEvent * event);
   fn _ZN10QEventLoop5eventEP6QEvent(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn QEventLoopLocker_Class_Size() -> c_int;
   // proto:  void QEventLoopLocker::QEventLoopLocker(QThread * thread);
+  fn dector_ZN16QEventLoopLockerC1EP7QThread(arg0: *mut c_void) -> *mut c_void;
   fn _ZN16QEventLoopLockerC1EP7QThread(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QEventLoopLocker::QEventLoopLocker(QEventLoop * loop);
+  fn dector_ZN16QEventLoopLockerC1EP10QEventLoop(arg0: *mut c_void) -> *mut c_void;
   fn _ZN16QEventLoopLockerC1EP10QEventLoop(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QEventLoopLocker::QEventLoopLocker();
+  fn dector_ZN16QEventLoopLockerC1Ev() -> *mut c_void;
   fn _ZN16QEventLoopLockerC1Ev(qthis: *mut c_void);
   // proto:  void QEventLoopLocker::QEventLoopLocker(const QEventLoopLocker & );
+  fn dector_ZN16QEventLoopLockerC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN16QEventLoopLockerC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QEventLoopLocker::~QEventLoopLocker();
   fn _ZN16QEventLoopLockerD0Ev(qthis: *mut c_void);
@@ -152,10 +158,13 @@ pub trait QEventLoop_New {
   // proto:  void QEventLoop::QEventLoop(QObject * parent);
 impl<'a> /*trait*/ QEventLoop_New for (&'a QObject) {
   fn New(self) -> QEventLoop {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QEventLoopC1EP7QObject()};
+    let ctysz: c_int = unsafe{QEventLoop_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN10QEventLoopC1EP7QObject(qthis, arg0)};
+    // unsafe {_ZN10QEventLoopC1EP7QObject(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN10QEventLoopC1EP7QObject(arg0)};
     let rsthis = QEventLoop{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -296,10 +305,13 @@ pub trait QEventLoopLocker_New {
   // proto:  void QEventLoopLocker::QEventLoopLocker(QThread * thread);
 impl<'a> /*trait*/ QEventLoopLocker_New for (&'a QThread) {
   fn New(self) -> QEventLoopLocker {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QEventLoopLockerC1EP7QThread()};
+    let ctysz: c_int = unsafe{QEventLoopLocker_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN16QEventLoopLockerC1EP7QThread(qthis, arg0)};
+    // unsafe {_ZN16QEventLoopLockerC1EP7QThread(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN16QEventLoopLockerC1EP7QThread(arg0)};
     let rsthis = QEventLoopLocker{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -309,10 +321,13 @@ impl<'a> /*trait*/ QEventLoopLocker_New for (&'a QThread) {
   // proto:  void QEventLoopLocker::QEventLoopLocker(QEventLoop * loop);
 impl<'a> /*trait*/ QEventLoopLocker_New for (&'a QEventLoop) {
   fn New(self) -> QEventLoopLocker {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QEventLoopLockerC1EP10QEventLoop()};
+    let ctysz: c_int = unsafe{QEventLoopLocker_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN16QEventLoopLockerC1EP10QEventLoop(qthis, arg0)};
+    // unsafe {_ZN16QEventLoopLockerC1EP10QEventLoop(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN16QEventLoopLockerC1EP10QEventLoop(arg0)};
     let rsthis = QEventLoopLocker{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -322,9 +337,12 @@ impl<'a> /*trait*/ QEventLoopLocker_New for (&'a QEventLoop) {
   // proto:  void QEventLoopLocker::QEventLoopLocker();
 impl<'a> /*trait*/ QEventLoopLocker_New for () {
   fn New(self) -> QEventLoopLocker {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QEventLoopLockerC1Ev()};
-    unsafe {_ZN16QEventLoopLockerC1Ev(qthis)};
+    let ctysz: c_int = unsafe{QEventLoopLocker_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN16QEventLoopLockerC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN16QEventLoopLockerC1Ev()};
     let rsthis = QEventLoopLocker{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -334,10 +352,13 @@ impl<'a> /*trait*/ QEventLoopLocker_New for () {
   // proto:  void QEventLoopLocker::QEventLoopLocker(const QEventLoopLocker & );
 impl<'a> /*trait*/ QEventLoopLocker_New for (&'a QEventLoopLocker) {
   fn New(self) -> QEventLoopLocker {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QEventLoopLockerC1ERKS_()};
+    let ctysz: c_int = unsafe{QEventLoopLocker_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN16QEventLoopLockerC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN16QEventLoopLockerC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN16QEventLoopLockerC1ERKS_(arg0)};
     let rsthis = QEventLoopLocker{qclsinst: qthis};
     return rsthis;
     // return 1;

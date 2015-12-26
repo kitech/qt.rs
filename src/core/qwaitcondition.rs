@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtCore/qwaitcondition.h
 // dst-file: /src/core/qwaitcondition.rs
 //
@@ -27,10 +27,10 @@ use super::qmutex::QMutex; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QWaitCondition_Class_Size() -> c_int;
   // proto:  bool QWaitCondition::wait(QReadWriteLock * lockedReadWriteLock, unsigned long time);
   fn _ZN14QWaitCondition4waitEP14QReadWriteLockm(qthis: *mut c_void, arg0: *mut c_void, arg1: c_ulong) -> c_char;
   // proto:  bool QWaitCondition::wait(QMutex * lockedMutex, unsigned long time);
@@ -40,10 +40,12 @@ extern {
   // proto:  void QWaitCondition::wakeOne();
   fn _ZN14QWaitCondition7wakeOneEv(qthis: *mut c_void);
   // proto:  void QWaitCondition::QWaitCondition(const QWaitCondition & );
+  fn dector_ZN14QWaitConditionC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN14QWaitConditionC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QWaitCondition::~QWaitCondition();
   fn _ZN14QWaitConditionD0Ev(qthis: *mut c_void);
   // proto:  void QWaitCondition::QWaitCondition();
+  fn dector_ZN14QWaitConditionC1Ev() -> *mut c_void;
   fn _ZN14QWaitConditionC1Ev(qthis: *mut c_void);
 } // <= ext block end
 
@@ -157,10 +159,13 @@ pub trait QWaitCondition_New {
   // proto:  void QWaitCondition::QWaitCondition(const QWaitCondition & );
 impl<'a> /*trait*/ QWaitCondition_New for (&'a QWaitCondition) {
   fn New(self) -> QWaitCondition {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QWaitConditionC1ERKS_()};
+    let ctysz: c_int = unsafe{QWaitCondition_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN14QWaitConditionC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN14QWaitConditionC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN14QWaitConditionC1ERKS_(arg0)};
     let rsthis = QWaitCondition{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -192,9 +197,12 @@ impl<'a> /*trait*/ QWaitCondition_Free<()> for () {
   // proto:  void QWaitCondition::QWaitCondition();
 impl<'a> /*trait*/ QWaitCondition_New for () {
   fn New(self) -> QWaitCondition {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QWaitConditionC1Ev()};
-    unsafe {_ZN14QWaitConditionC1Ev(qthis)};
+    let ctysz: c_int = unsafe{QWaitCondition_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN14QWaitConditionC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN14QWaitConditionC1Ev()};
     let rsthis = QWaitCondition{qclsinst: qthis};
     return rsthis;
     // return 1;

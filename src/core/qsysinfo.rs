@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtCore/qsysinfo.h
 // dst-file: /src/core/qsysinfo.rs
 //
@@ -26,10 +26,10 @@ use super::qstring::QString; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QSysInfo_Class_Size() -> c_int;
   // proto: static QString QSysInfo::kernelType();
   fn _ZN8QSysInfo10kernelTypeEv() -> *mut c_void;
   // proto: static QString QSysInfo::productType();

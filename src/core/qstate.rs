@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtCore/qstate.h
 // dst-file: /src/core/qstate.rs
 //
@@ -28,10 +28,10 @@ use super::qvariant::QVariant; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QState_Class_Size() -> c_int;
   // proto:  QAbstractState * QState::errorState();
   fn _ZNK6QState10errorStateEv(qthis: *mut c_void);
   // proto:  QAbstractState * QState::initialState();
@@ -41,8 +41,10 @@ extern {
   // proto:  void QState::assignProperty(QObject * object, const char * name, const QVariant & value);
   fn _ZN6QState14assignPropertyEP7QObjectPKcRK8QVariant(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_char, arg2: *mut c_void);
   // proto:  void QState::QState(const QState & );
+  fn dector_ZN6QStateC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN6QStateC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QState::QState(QState * parent);
+  fn dector_ZN6QStateC1EPS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN6QStateC1EPS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  const QMetaObject * QState::metaObject();
   fn _ZNK6QState10metaObjectEv(qthis: *mut c_void);
@@ -181,10 +183,13 @@ pub trait QState_New {
   // proto:  void QState::QState(const QState & );
 impl<'a> /*trait*/ QState_New for (&'a QState) {
   fn New(self) -> QState {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QStateC1ERKS_()};
+    let ctysz: c_int = unsafe{QState_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN6QStateC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN6QStateC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN6QStateC1ERKS_(arg0)};
     let rsthis = QState{/**/qbase: QAbstractState::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtCore/qmimedata.h
 // dst-file: /src/core/qmimedata.rs
 //
@@ -29,10 +29,10 @@ use super::qvariant::QVariant; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QMimeData_Class_Size() -> c_int;
   // proto:  void QMimeData::setData(const QString & mimetype, const QByteArray & data);
   fn _ZN9QMimeData7setDataERK7QStringRK10QByteArray(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  QVariant QMimeData::colorData();
@@ -42,6 +42,7 @@ extern {
   // proto:  bool QMimeData::hasHtml();
   fn _ZNK9QMimeData7hasHtmlEv(qthis: *mut c_void) -> c_char;
   // proto:  void QMimeData::QMimeData(const QMimeData & );
+  fn dector_ZN9QMimeDataC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN9QMimeDataC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QVariant QMimeData::imageData();
   fn _ZNK9QMimeData9imageDataEv(qthis: *mut c_void) -> *mut c_void;
@@ -66,6 +67,7 @@ extern {
   // proto:  QString QMimeData::html();
   fn _ZNK9QMimeData4htmlEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QMimeData::QMimeData();
+  fn dector_ZN9QMimeDataC1Ev() -> *mut c_void;
   fn _ZN9QMimeDataC1Ev(qthis: *mut c_void);
   // proto:  QList<QUrl> QMimeData::urls();
   fn _ZNK9QMimeData4urlsEv(qthis: *mut c_void);
@@ -216,10 +218,13 @@ pub trait QMimeData_New {
   // proto:  void QMimeData::QMimeData(const QMimeData & );
 impl<'a> /*trait*/ QMimeData_New for (&'a QMimeData) {
   fn New(self) -> QMimeData {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QMimeDataC1ERKS_()};
+    let ctysz: c_int = unsafe{QMimeData_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN9QMimeDataC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN9QMimeDataC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN9QMimeDataC1ERKS_(arg0)};
     let rsthis = QMimeData{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -485,9 +490,12 @@ impl<'a> /*trait*/ QMimeData_html<QString> for () {
   // proto:  void QMimeData::QMimeData();
 impl<'a> /*trait*/ QMimeData_New for () {
   fn New(self) -> QMimeData {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QMimeDataC1Ev()};
-    unsafe {_ZN9QMimeDataC1Ev(qthis)};
+    let ctysz: c_int = unsafe{QMimeData_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN9QMimeDataC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN9QMimeDataC1Ev()};
     let rsthis = QMimeData{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

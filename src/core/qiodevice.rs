@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtCore/qiodevice.h
 // dst-file: /src/core/qiodevice.rs
 //
@@ -20,24 +20,20 @@ use self::libc::*;
 // use block begin =>
 use super::qobject::QObject; // 773
 use std::ops::Deref;
-use super::qstring::QString; // 773
 use super::qbytearray::QByteArray; // 773
+use super::qstring::QString; // 773
 // <= use block end
 
 // ext block begin =>
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QIODevice_Class_Size() -> c_int;
   // proto:  void QIODevice::ungetChar(char c);
   fn _ZN9QIODevice9ungetCharEc(qthis: *mut c_void, arg0: c_char);
-  // proto:  QString QIODevice::errorString();
-  fn _ZNK9QIODevice11errorStringEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  qint64 QIODevice::write(const QByteArray & data);
-  fn _ZN9QIODevice5writeERK10QByteArray(qthis: *mut c_void, arg0: *mut c_void) -> c_longlong;
   // proto:  qint64 QIODevice::write(const char * data);
   fn _ZN9QIODevice5writeEPKc(qthis: *mut c_void, arg0: *mut c_char) -> c_longlong;
   // proto:  bool QIODevice::isReadable();
@@ -75,6 +71,7 @@ extern {
   // proto:  bool QIODevice::seek(qint64 pos);
   fn _ZN9QIODevice4seekEx(qthis: *mut c_void, arg0: c_longlong) -> c_char;
   // proto:  void QIODevice::QIODevice(const QIODevice & );
+  fn dector_ZN9QIODeviceC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN9QIODeviceC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  qint64 QIODevice::pos();
   fn _ZNK9QIODevice3posEv(qthis: *mut c_void) -> c_longlong;
@@ -96,15 +93,19 @@ extern {
   fn _ZN9QIODevice5resetEv(qthis: *mut c_void) -> c_char;
   // proto:  bool QIODevice::isWritable();
   fn _ZNK9QIODevice10isWritableEv(qthis: *mut c_void) -> c_char;
+  // proto:  QString QIODevice::errorString();
+  fn _ZNK9QIODevice11errorStringEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QByteArray QIODevice::peek(qint64 maxlen);
   fn _ZN9QIODevice4peekEx(qthis: *mut c_void, arg0: c_longlong) -> *mut c_void;
   // proto:  void QIODevice::QIODevice(QObject * parent);
+  fn dector_ZN9QIODeviceC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
   fn _ZN9QIODeviceC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  const QMetaObject * QIODevice::metaObject();
   fn _ZNK9QIODevice10metaObjectEv(qthis: *mut c_void);
   // proto:  void QIODevice::setTextModeEnabled(bool enabled);
   fn _ZN9QIODevice18setTextModeEnabledEb(qthis: *mut c_void, arg0: c_char);
   // proto:  void QIODevice::QIODevice();
+  fn dector_ZN9QIODeviceC1Ev() -> *mut c_void;
   fn _ZN9QIODeviceC1Ev(qthis: *mut c_void);
   // proto:  bool QIODevice::isOpen();
   fn _ZNK9QIODevice6isOpenEv(qthis: *mut c_void) -> c_char;
@@ -161,31 +162,7 @@ impl<'a> /*trait*/ QIODevice_ungetChar<()> for (i8) {
   }
 }
 
-  // proto:  QString QIODevice::errorString();
-impl /*struct*/ QIODevice {
-  pub fn errorString<RetType, T: QIODevice_errorString<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.errorString(self);
-    // return 1;
-  }
-}
-
-pub trait QIODevice_errorString<RetType> {
-  fn errorString(self , rsthis: & QIODevice) -> RetType;
-}
-
-  // proto:  QString QIODevice::errorString();
-impl<'a> /*trait*/ QIODevice_errorString<QString> for () {
-  fn errorString(self , rsthis: & QIODevice) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QIODevice11errorStringEv()};
-    let mut ret = unsafe {_ZNK9QIODevice11errorStringEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  qint64 QIODevice::write(const QByteArray & data);
+  // proto:  qint64 QIODevice::write(const char * data);
 impl /*struct*/ QIODevice {
   pub fn write<RetType, T: QIODevice_write<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.write(self);
@@ -195,18 +172,6 @@ impl /*struct*/ QIODevice {
 
 pub trait QIODevice_write<RetType> {
   fn write(self , rsthis: & QIODevice) -> RetType;
-}
-
-  // proto:  qint64 QIODevice::write(const QByteArray & data);
-impl<'a> /*trait*/ QIODevice_write<i64> for (&'a QByteArray) {
-  fn write(self , rsthis: & QIODevice) -> i64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QIODevice5writeERK10QByteArray()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN9QIODevice5writeERK10QByteArray(rsthis.qclsinst, arg0)};
-    return ret as i64;
-    // return 1;
-  }
 }
 
   // proto:  qint64 QIODevice::write(const char * data);
@@ -612,10 +577,13 @@ pub trait QIODevice_New {
   // proto:  void QIODevice::QIODevice(const QIODevice & );
 impl<'a> /*trait*/ QIODevice_New for (&'a QIODevice) {
   fn New(self) -> QIODevice {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QIODeviceC1ERKS_()};
+    let ctysz: c_int = unsafe{QIODevice_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN9QIODeviceC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN9QIODeviceC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN9QIODeviceC1ERKS_(arg0)};
     let rsthis = QIODevice{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -846,6 +814,30 @@ impl<'a> /*trait*/ QIODevice_isWritable<i8> for () {
   }
 }
 
+  // proto:  QString QIODevice::errorString();
+impl /*struct*/ QIODevice {
+  pub fn errorString<RetType, T: QIODevice_errorString<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.errorString(self);
+    // return 1;
+  }
+}
+
+pub trait QIODevice_errorString<RetType> {
+  fn errorString(self , rsthis: & QIODevice) -> RetType;
+}
+
+  // proto:  QString QIODevice::errorString();
+impl<'a> /*trait*/ QIODevice_errorString<QString> for () {
+  fn errorString(self , rsthis: & QIODevice) -> QString {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK9QIODevice11errorStringEv()};
+    let mut ret = unsafe {_ZNK9QIODevice11errorStringEv(rsthis.qclsinst)};
+    let mut ret1 = QString::inheritFrom(ret);
+    return ret1;
+    // return 1;
+  }
+}
+
   // proto:  QByteArray QIODevice::peek(qint64 maxlen);
 impl<'a> /*trait*/ QIODevice_peek<QByteArray> for (i64) {
   fn peek(self , rsthis: & QIODevice) -> QByteArray {
@@ -862,10 +854,13 @@ impl<'a> /*trait*/ QIODevice_peek<QByteArray> for (i64) {
   // proto:  void QIODevice::QIODevice(QObject * parent);
 impl<'a> /*trait*/ QIODevice_New for (&'a QObject) {
   fn New(self) -> QIODevice {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QIODeviceC1EP7QObject()};
+    let ctysz: c_int = unsafe{QIODevice_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN9QIODeviceC1EP7QObject(qthis, arg0)};
+    // unsafe {_ZN9QIODeviceC1EP7QObject(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN9QIODeviceC1EP7QObject(arg0)};
     let rsthis = QIODevice{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -920,9 +915,12 @@ impl<'a> /*trait*/ QIODevice_setTextModeEnabled<()> for (i8) {
   // proto:  void QIODevice::QIODevice();
 impl<'a> /*trait*/ QIODevice_New for () {
   fn New(self) -> QIODevice {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QIODeviceC1Ev()};
-    unsafe {_ZN9QIODeviceC1Ev(qthis)};
+    let ctysz: c_int = unsafe{QIODevice_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN9QIODeviceC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN9QIODeviceC1Ev()};
     let rsthis = QIODevice{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

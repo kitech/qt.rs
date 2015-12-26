@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtCore/qshareddata.h
 // dst-file: /src/core/qshareddata.rs
 //
@@ -25,14 +25,10 @@ use std::ops::Deref;
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
-  // proto:  void QSharedData::QSharedData();
-  fn _ZN11QSharedDataC1Ev(qthis: *mut c_void);
-  // proto:  void QSharedData::QSharedData(const QSharedData & );
-  fn _ZN11QSharedDataC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn QSharedData_Class_Size() -> c_int;
 } // <= ext block end
 
 // body block begin =>
@@ -47,43 +43,5 @@ impl /*struct*/ QSharedData {
     return QSharedData{qclsinst: qthis};
   }
 }
-  // proto:  void QSharedData::QSharedData();
-impl /*struct*/ QSharedData {
-  pub fn New<T: QSharedData_New>(value: T) -> QSharedData {
-    let rsthis = value.New();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QSharedData_New {
-  fn New(self) -> QSharedData;
-}
-
-  // proto:  void QSharedData::QSharedData();
-impl<'a> /*trait*/ QSharedData_New for () {
-  fn New(self) -> QSharedData {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QSharedDataC1Ev()};
-    unsafe {_ZN11QSharedDataC1Ev(qthis)};
-    let rsthis = QSharedData{qclsinst: qthis};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  void QSharedData::QSharedData(const QSharedData & );
-impl<'a> /*trait*/ QSharedData_New for (&'a QSharedData) {
-  fn New(self) -> QSharedData {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QSharedDataC1ERKS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QSharedDataC1ERKS_(qthis, arg0)};
-    let rsthis = QSharedData{qclsinst: qthis};
-    return rsthis;
-    // return 1;
-  }
-}
-
 // <= body block end
 

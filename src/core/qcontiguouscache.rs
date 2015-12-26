@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtCore/qcontiguouscache.h
 // dst-file: /src/core/qcontiguouscache.rs
 //
@@ -25,10 +25,10 @@ use std::ops::Deref;
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QContiguousCacheData_Class_Size() -> c_int;
   // proto: static QContiguousCacheData * QContiguousCacheData::allocateData(int size, int alignment);
   fn _ZN20QContiguousCacheData12allocateDataEii(arg0: c_int, arg1: c_int) -> *mut c_void;
   // proto: static void QContiguousCacheData::freeData(QContiguousCacheData * data);

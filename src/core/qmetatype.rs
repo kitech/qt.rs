@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtCore/qmetatype.h
 // dst-file: /src/core/qmetatype.rs
 //
@@ -30,10 +30,10 @@ use super::qdebug::QDebug; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QMetaType_Class_Size() -> c_int;
   // proto: static void QMetaType::destroy(int type, void * data);
   fn _ZN9QMetaType7destroyEiPv(arg0: c_int, arg1: *mut c_void);
   // proto: static bool QMetaType::hasRegisteredConverterFunction(int fromTypeId, int toTypeId);
@@ -63,6 +63,7 @@ extern {
   // proto: static bool QMetaType::unregisterType(int type);
   fn _ZN9QMetaType14unregisterTypeEi(arg0: c_int) -> c_char;
   // proto:  void QMetaType::QMetaType(const QMetaType & other);
+  fn dector_ZN9QMetaTypeC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN9QMetaTypeC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto: static const QMetaObject * QMetaType::metaObjectForType(int type);
   fn _ZN9QMetaType17metaObjectForTypeEi(arg0: c_int);
@@ -93,6 +94,7 @@ extern {
   // proto: static bool QMetaType::convert(const void * from, int fromTypeId, void * to, int toTypeId);
   fn _ZN9QMetaType7convertEPKviPvi(arg0: *mut c_void, arg1: c_int, arg2: *mut c_void, arg3: c_int) -> c_char;
   // proto:  void QMetaType::QMetaType(const int type);
+  fn dector_ZN9QMetaTypeC1Ei(arg0: c_int) -> *mut c_void;
   fn _ZN9QMetaTypeC1Ei(qthis: *mut c_void, arg0: c_int);
   // proto: static int QMetaType::registerNormalizedTypedef(const ::QByteArray & normalizedTypeName, int aliasId);
   fn _ZN9QMetaType25registerNormalizedTypedefERK10QByteArrayi(arg0: *mut c_void, arg1: c_int) -> c_int;
@@ -471,10 +473,13 @@ pub trait QMetaType_New {
   // proto:  void QMetaType::QMetaType(const QMetaType & other);
 impl<'a> /*trait*/ QMetaType_New for (&'a QMetaType) {
   fn New(self) -> QMetaType {
-    let qthis: *mut c_void = unsafe{calloc(1, 80)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZN9QMetaTypeC1ERKS_()};
+    let ctysz: c_int = unsafe{QMetaType_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN9QMetaTypeC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN9QMetaTypeC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN9QMetaTypeC1ERKS_(arg0)};
     let rsthis = QMetaType{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -813,10 +818,13 @@ impl<'a> /*trait*/ QMetaType_convert_s<i8> for (*mut c_void, i32, *mut c_void, i
   // proto:  void QMetaType::QMetaType(const int type);
 impl<'a> /*trait*/ QMetaType_New for (i32) {
   fn New(self) -> QMetaType {
-    let qthis: *mut c_void = unsafe{calloc(1, 80)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZN9QMetaTypeC1Ei()};
+    let ctysz: c_int = unsafe{QMetaType_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self  as c_int;
-    unsafe {_ZN9QMetaTypeC1Ei(qthis, arg0)};
+    // unsafe {_ZN9QMetaTypeC1Ei(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN9QMetaTypeC1Ei(arg0)};
     let rsthis = QMetaType{qclsinst: qthis};
     return rsthis;
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtCore/qsize.h
 // dst-file: /src/core/qsize.rs
 //
@@ -26,10 +26,10 @@ use std::ops::Deref;
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QSize_Class_Size() -> c_int;
   // proto:  QSize QSize::boundedTo(const QSize & );
   fn _ZNK5QSize9boundedToERKS_(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  bool QSize::isValid();
@@ -37,6 +37,7 @@ extern {
   // proto:  bool QSize::isNull();
   fn _ZNK5QSize6isNullEv(qthis: *mut c_void) -> c_char;
   // proto:  void QSize::QSize();
+  fn dector_ZN5QSizeC1Ev() -> *mut c_void;
   fn _ZN5QSizeC1Ev(qthis: *mut c_void);
   // proto:  QSize QSize::expandedTo(const QSize & );
   fn _ZNK5QSize10expandedToERKS_(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
@@ -45,6 +46,7 @@ extern {
   // proto:  int & QSize::rheight();
   fn _ZN5QSize7rheightEv(qthis: *mut c_void);
   // proto:  void QSize::QSize(int w, int h);
+  fn dector_ZN5QSizeC1Eii(arg0: c_int, arg1: c_int) -> *mut c_void;
   fn _ZN5QSizeC1Eii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
   // proto:  int QSize::width();
   fn _ZNK5QSize5widthEv(qthis: *mut c_void) -> c_int;
@@ -60,6 +62,7 @@ extern {
   fn _ZN5QSize8setWidthEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QSize::transpose();
   fn _ZN5QSize9transposeEv(qthis: *mut c_void);
+  fn QSizeF_Class_Size() -> c_int;
   // proto:  qreal & QSizeF::rheight();
   fn _ZN6QSizeF7rheightEv(qthis: *mut c_void);
   // proto:  qreal & QSizeF::rwidth();
@@ -71,6 +74,7 @@ extern {
   // proto:  void QSizeF::setHeight(qreal h);
   fn _ZN6QSizeF9setHeightEd(qthis: *mut c_void, arg0: c_double);
   // proto:  void QSizeF::QSizeF();
+  fn dector_ZN6QSizeFC1Ev() -> *mut c_void;
   fn _ZN6QSizeFC1Ev(qthis: *mut c_void);
   // proto:  qreal QSizeF::width();
   fn _ZNK6QSizeF5widthEv(qthis: *mut c_void) -> c_double;
@@ -83,6 +87,7 @@ extern {
   // proto:  void QSizeF::transpose();
   fn _ZN6QSizeF9transposeEv(qthis: *mut c_void);
   // proto:  void QSizeF::QSizeF(const QSize & sz);
+  fn dector_ZN6QSizeFC1ERK5QSize(arg0: *mut c_void) -> *mut c_void;
   fn _ZN6QSizeFC1ERK5QSize(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QSizeF QSizeF::expandedTo(const QSizeF & );
   fn _ZNK6QSizeF10expandedToERKS_(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
@@ -93,6 +98,7 @@ extern {
   // proto:  QSize QSizeF::toSize();
   fn _ZNK6QSizeF6toSizeEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QSizeF::QSizeF(qreal w, qreal h);
+  fn dector_ZN6QSizeFC1Edd(arg0: c_double, arg1: c_double) -> *mut c_void;
   fn _ZN6QSizeFC1Edd(qthis: *mut c_void, arg0: c_double, arg1: c_double);
 } // <= ext block end
 
@@ -201,9 +207,12 @@ pub trait QSize_New {
   // proto:  void QSize::QSize();
 impl<'a> /*trait*/ QSize_New for () {
   fn New(self) -> QSize {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QSizeC1Ev()};
-    unsafe {_ZN5QSizeC1Ev(qthis)};
+    let ctysz: c_int = unsafe{QSize_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN5QSizeC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN5QSizeC1Ev()};
     let rsthis = QSize{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -283,11 +292,14 @@ impl<'a> /*trait*/ QSize_rheight<()> for () {
   // proto:  void QSize::QSize(int w, int h);
 impl<'a> /*trait*/ QSize_New for (i32, i32) {
   fn New(self) -> QSize {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QSizeC1Eii()};
+    let ctysz: c_int = unsafe{QSize_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-    unsafe {_ZN5QSizeC1Eii(qthis, arg0, arg1)};
+    // unsafe {_ZN5QSizeC1Eii(qthis, arg0, arg1)};
+    let qthis: *mut c_void = unsafe {dector_ZN5QSizeC1Eii(arg0, arg1)};
     let rsthis = QSize{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -589,9 +601,12 @@ pub trait QSizeF_New {
   // proto:  void QSizeF::QSizeF();
 impl<'a> /*trait*/ QSizeF_New for () {
   fn New(self) -> QSizeF {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QSizeFC1Ev()};
-    unsafe {_ZN6QSizeFC1Ev(qthis)};
+    let ctysz: c_int = unsafe{QSizeF_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN6QSizeFC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN6QSizeFC1Ev()};
     let rsthis = QSizeF{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -717,10 +732,13 @@ impl<'a> /*trait*/ QSizeF_transpose<()> for () {
   // proto:  void QSizeF::QSizeF(const QSize & sz);
 impl<'a> /*trait*/ QSizeF_New for (&'a QSize) {
   fn New(self) -> QSizeF {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QSizeFC1ERK5QSize()};
+    let ctysz: c_int = unsafe{QSizeF_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN6QSizeFC1ERK5QSize(qthis, arg0)};
+    // unsafe {_ZN6QSizeFC1ERK5QSize(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN6QSizeFC1ERK5QSize(arg0)};
     let rsthis = QSizeF{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -825,11 +843,14 @@ impl<'a> /*trait*/ QSizeF_toSize<QSize> for () {
   // proto:  void QSizeF::QSizeF(qreal w, qreal h);
 impl<'a> /*trait*/ QSizeF_New for (f64, f64) {
   fn New(self) -> QSizeF {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QSizeFC1Edd()};
+    let ctysz: c_int = unsafe{QSizeF_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
-    unsafe {_ZN6QSizeFC1Edd(qthis, arg0, arg1)};
+    // unsafe {_ZN6QSizeFC1Edd(qthis, arg0, arg1)};
+    let qthis: *mut c_void = unsafe {dector_ZN6QSizeFC1Edd(arg0, arg1)};
     let rsthis = QSizeF{qclsinst: qthis};
     return rsthis;
     // return 1;

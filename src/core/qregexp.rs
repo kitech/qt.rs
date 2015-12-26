@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtCore/qregexp.h
 // dst-file: /src/core/qregexp.rs
 //
@@ -26,11 +26,12 @@ use super::qstring::QString; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QRegExp_Class_Size() -> c_int;
   // proto:  void QRegExp::QRegExp(const QRegExp & rx);
+  fn dector_ZN7QRegExpC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN7QRegExpC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QStringList QRegExp::capturedTexts();
   fn _ZN7QRegExp13capturedTextsEv(qthis: *mut c_void);
@@ -54,11 +55,10 @@ extern {
   fn _ZN7QRegExpD0Ev(qthis: *mut c_void);
   // proto:  bool QRegExp::exactMatch(const QString & str);
   fn _ZNK7QRegExp10exactMatchERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
-  // proto:  void QRegExp::swap(QRegExp & other);
-  fn _ZN7QRegExp4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QRegExp::pos(int nth);
   fn _ZN7QRegExp3posEi(qthis: *mut c_void, arg0: c_int) -> c_int;
   // proto:  void QRegExp::QRegExp();
+  fn dector_ZN7QRegExpC1Ev() -> *mut c_void;
   fn _ZN7QRegExpC1Ev(qthis: *mut c_void);
   // proto:  QString QRegExp::cap(int nth);
   fn _ZN7QRegExp3capEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
@@ -96,10 +96,13 @@ pub trait QRegExp_New {
   // proto:  void QRegExp::QRegExp(const QRegExp & rx);
 impl<'a> /*trait*/ QRegExp_New for (&'a QRegExp) {
   fn New(self) -> QRegExp {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QRegExpC1ERKS_()};
+    let ctysz: c_int = unsafe{QRegExp_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN7QRegExpC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN7QRegExpC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN7QRegExpC1ERKS_(arg0)};
     let rsthis = QRegExp{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -361,29 +364,6 @@ impl<'a> /*trait*/ QRegExp_exactMatch<i8> for (&'a QString) {
   }
 }
 
-  // proto:  void QRegExp::swap(QRegExp & other);
-impl /*struct*/ QRegExp {
-  pub fn swap<RetType, T: QRegExp_swap<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.swap(self);
-    // return 1;
-  }
-}
-
-pub trait QRegExp_swap<RetType> {
-  fn swap(self , rsthis: & QRegExp) -> RetType;
-}
-
-  // proto:  void QRegExp::swap(QRegExp & other);
-impl<'a> /*trait*/ QRegExp_swap<()> for (&'a QRegExp) {
-  fn swap(self , rsthis: & QRegExp) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QRegExp4swapERS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN7QRegExp4swapERS_(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  int QRegExp::pos(int nth);
 impl /*struct*/ QRegExp {
   pub fn pos<RetType, T: QRegExp_pos<RetType>>(& self,  overload_args: T) -> RetType {
@@ -411,9 +391,12 @@ impl<'a> /*trait*/ QRegExp_pos<i32> for (i32) {
   // proto:  void QRegExp::QRegExp();
 impl<'a> /*trait*/ QRegExp_New for () {
   fn New(self) -> QRegExp {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QRegExpC1Ev()};
-    unsafe {_ZN7QRegExpC1Ev(qthis)};
+    let ctysz: c_int = unsafe{QRegExp_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN7QRegExpC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN7QRegExpC1Ev()};
     let rsthis = QRegExp{qclsinst: qthis};
     return rsthis;
     // return 1;

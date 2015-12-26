@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtCore/qobjectcleanuphandler.h
 // dst-file: /src/core/qobjectcleanuphandler.rs
 //
@@ -26,10 +26,10 @@ use std::ops::Deref;
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QObjectCleanupHandler_Class_Size() -> c_int;
   // proto:  void QObjectCleanupHandler::clear();
   fn _ZN21QObjectCleanupHandler5clearEv(qthis: *mut c_void);
   // proto:  bool QObjectCleanupHandler::isEmpty();
@@ -43,6 +43,7 @@ extern {
   // proto:  QObject * QObjectCleanupHandler::add(QObject * object);
   fn _ZN21QObjectCleanupHandler3addEP7QObject(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QObjectCleanupHandler::QObjectCleanupHandler();
+  fn dector_ZN21QObjectCleanupHandlerC1Ev() -> *mut c_void;
   fn _ZN21QObjectCleanupHandlerC1Ev(qthis: *mut c_void);
 } // <= ext block end
 
@@ -223,9 +224,12 @@ pub trait QObjectCleanupHandler_New {
   // proto:  void QObjectCleanupHandler::QObjectCleanupHandler();
 impl<'a> /*trait*/ QObjectCleanupHandler_New for () {
   fn New(self) -> QObjectCleanupHandler {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QObjectCleanupHandlerC1Ev()};
-    unsafe {_ZN21QObjectCleanupHandlerC1Ev(qthis)};
+    let ctysz: c_int = unsafe{QObjectCleanupHandler_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN21QObjectCleanupHandlerC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN21QObjectCleanupHandlerC1Ev()};
     let rsthis = QObjectCleanupHandler{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtCore/qdatastream.h
 // dst-file: /src/core/qdatastream.rs
 //
@@ -27,17 +27,19 @@ use super::qbytearray::QByteArray; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QDataStream_Class_Size() -> c_int;
   // proto:  QDataStream & QDataStream::readBytes(char *& , uint & len);
   fn _ZN11QDataStream9readBytesERPcRj(qthis: *mut c_void, arg0: *mut c_char, arg1: *mut c_uint) -> *mut c_void;
   // proto:  void QDataStream::unsetDevice();
   fn _ZN11QDataStream11unsetDeviceEv(qthis: *mut c_void);
   // proto:  void QDataStream::QDataStream(const QDataStream & );
+  fn dector_ZN11QDataStreamC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN11QDataStreamC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QDataStream::QDataStream(QIODevice * );
+  fn dector_ZN11QDataStreamC1EP9QIODevice(arg0: *mut c_void) -> *mut c_void;
   fn _ZN11QDataStreamC1EP9QIODevice(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QDataStream::~QDataStream();
   fn _ZN11QDataStreamD0Ev(qthis: *mut c_void);
@@ -46,10 +48,12 @@ extern {
   // proto:  QDataStream & QDataStream::writeBytes(const char * , uint len);
   fn _ZN11QDataStream10writeBytesEPKcj(qthis: *mut c_void, arg0: *mut c_char, arg1: c_uint) -> *mut c_void;
   // proto:  void QDataStream::QDataStream();
+  fn dector_ZN11QDataStreamC1Ev() -> *mut c_void;
   fn _ZN11QDataStreamC1Ev(qthis: *mut c_void);
   // proto:  void QDataStream::resetStatus();
   fn _ZN11QDataStream11resetStatusEv(qthis: *mut c_void);
   // proto:  void QDataStream::QDataStream(const QByteArray & );
+  fn dector_ZN11QDataStreamC1ERK10QByteArray(arg0: *mut c_void) -> *mut c_void;
   fn _ZN11QDataStreamC1ERK10QByteArray(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QDataStream::version();
   fn _ZNK11QDataStream7versionEv(qthis: *mut c_void) -> c_int;
@@ -143,10 +147,13 @@ pub trait QDataStream_New {
   // proto:  void QDataStream::QDataStream(const QDataStream & );
 impl<'a> /*trait*/ QDataStream_New for (&'a QDataStream) {
   fn New(self) -> QDataStream {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QDataStreamC1ERKS_()};
+    let ctysz: c_int = unsafe{QDataStream_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QDataStreamC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN11QDataStreamC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN11QDataStreamC1ERKS_(arg0)};
     let rsthis = QDataStream{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -156,10 +163,13 @@ impl<'a> /*trait*/ QDataStream_New for (&'a QDataStream) {
   // proto:  void QDataStream::QDataStream(QIODevice * );
 impl<'a> /*trait*/ QDataStream_New for (&'a QIODevice) {
   fn New(self) -> QDataStream {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QDataStreamC1EP9QIODevice()};
+    let ctysz: c_int = unsafe{QDataStream_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QDataStreamC1EP9QIODevice(qthis, arg0)};
+    // unsafe {_ZN11QDataStreamC1EP9QIODevice(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN11QDataStreamC1EP9QIODevice(arg0)};
     let rsthis = QDataStream{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -241,9 +251,12 @@ impl<'a> /*trait*/ QDataStream_writeBytes<QDataStream> for (&'a  String, u32) {
   // proto:  void QDataStream::QDataStream();
 impl<'a> /*trait*/ QDataStream_New for () {
   fn New(self) -> QDataStream {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QDataStreamC1Ev()};
-    unsafe {_ZN11QDataStreamC1Ev(qthis)};
+    let ctysz: c_int = unsafe{QDataStream_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN11QDataStreamC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN11QDataStreamC1Ev()};
     let rsthis = QDataStream{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -275,10 +288,13 @@ impl<'a> /*trait*/ QDataStream_resetStatus<()> for () {
   // proto:  void QDataStream::QDataStream(const QByteArray & );
 impl<'a> /*trait*/ QDataStream_New for (&'a QByteArray) {
   fn New(self) -> QDataStream {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QDataStreamC1ERK10QByteArray()};
+    let ctysz: c_int = unsafe{QDataStream_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QDataStreamC1ERK10QByteArray(qthis, arg0)};
+    // unsafe {_ZN11QDataStreamC1ERK10QByteArray(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN11QDataStreamC1ERK10QByteArray(arg0)};
     let rsthis = QDataStream{qclsinst: qthis};
     return rsthis;
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtCore/qdiriterator.h
 // dst-file: /src/core/qdiriterator.rs
 //
@@ -29,15 +29,16 @@ use super::qfileinfo::QFileInfo; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QDirIterator_Class_Size() -> c_int;
   // proto:  QString QDirIterator::fileName();
   fn _ZNK12QDirIterator8fileNameEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QString QDirIterator::path();
   fn _ZNK12QDirIterator4pathEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QDirIterator::QDirIterator(const QDirIterator & );
+  fn dector_ZN12QDirIteratorC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN12QDirIteratorC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QString QDirIterator::next();
   fn _ZN12QDirIterator4nextEv(qthis: *mut c_void) -> *mut c_void;
@@ -127,10 +128,13 @@ pub trait QDirIterator_New {
   // proto:  void QDirIterator::QDirIterator(const QDirIterator & );
 impl<'a> /*trait*/ QDirIterator_New for (&'a QDirIterator) {
   fn New(self) -> QDirIterator {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QDirIteratorC1ERKS_()};
+    let ctysz: c_int = unsafe{QDirIterator_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN12QDirIteratorC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN12QDirIteratorC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN12QDirIteratorC1ERKS_(arg0)};
     let rsthis = QDirIterator{qclsinst: qthis};
     return rsthis;
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtCore/qsemaphore.h
 // dst-file: /src/core/qsemaphore.rs
 //
@@ -25,10 +25,10 @@ use std::ops::Deref;
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QSemaphore_Class_Size() -> c_int;
   // proto:  void QSemaphore::acquire(int n);
   fn _ZN10QSemaphore7acquireEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QSemaphore::release(int n);
@@ -38,10 +38,12 @@ extern {
   // proto:  bool QSemaphore::tryAcquire(int n, int timeout);
   fn _ZN10QSemaphore10tryAcquireEii(qthis: *mut c_void, arg0: c_int, arg1: c_int) -> c_char;
   // proto:  void QSemaphore::QSemaphore(const QSemaphore & );
+  fn dector_ZN10QSemaphoreC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN10QSemaphoreC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QSemaphore::tryAcquire(int n);
   fn _ZN10QSemaphore10tryAcquireEi(qthis: *mut c_void, arg0: c_int) -> c_char;
   // proto:  void QSemaphore::QSemaphore(int n);
+  fn dector_ZN10QSemaphoreC1Ei(arg0: c_int) -> *mut c_void;
   fn _ZN10QSemaphoreC1Ei(qthis: *mut c_void, arg0: c_int);
   // proto:  void QSemaphore::~QSemaphore();
   fn _ZN10QSemaphoreD0Ev(qthis: *mut c_void);
@@ -169,10 +171,13 @@ pub trait QSemaphore_New {
   // proto:  void QSemaphore::QSemaphore(const QSemaphore & );
 impl<'a> /*trait*/ QSemaphore_New for (&'a QSemaphore) {
   fn New(self) -> QSemaphore {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QSemaphoreC1ERKS_()};
+    let ctysz: c_int = unsafe{QSemaphore_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN10QSemaphoreC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN10QSemaphoreC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN10QSemaphoreC1ERKS_(arg0)};
     let rsthis = QSemaphore{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -194,10 +199,13 @@ impl<'a> /*trait*/ QSemaphore_tryAcquire<i8> for (i32) {
   // proto:  void QSemaphore::QSemaphore(int n);
 impl<'a> /*trait*/ QSemaphore_New for (i32) {
   fn New(self) -> QSemaphore {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QSemaphoreC1Ei()};
+    let ctysz: c_int = unsafe{QSemaphore_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self  as c_int;
-    unsafe {_ZN10QSemaphoreC1Ei(qthis, arg0)};
+    // unsafe {_ZN10QSemaphoreC1Ei(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN10QSemaphoreC1Ei(arg0)};
     let rsthis = QSemaphore{qclsinst: qthis};
     return rsthis;
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtCore/qfutureinterface.h
 // dst-file: /src/core/qfutureinterface.rs
 //
@@ -29,10 +29,10 @@ use super::qthreadpool::QThreadPool; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QFutureInterfaceBase_Class_Size() -> c_int;
   // proto:  int QFutureInterfaceBase::progressMinimum();
   fn _ZNK20QFutureInterfaceBase15progressMinimumEv(qthis: *mut c_void) -> c_int;
   // proto:  bool QFutureInterfaceBase::isStarted();
@@ -72,6 +72,7 @@ extern {
   // proto:  int QFutureInterfaceBase::resultCount();
   fn _ZNK20QFutureInterfaceBase11resultCountEv(qthis: *mut c_void) -> c_int;
   // proto:  void QFutureInterfaceBase::QFutureInterfaceBase(const QFutureInterfaceBase & other);
+  fn dector_ZN20QFutureInterfaceBaseC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN20QFutureInterfaceBaseC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QFutureInterfaceBase::progressValue();
   fn _ZNK20QFutureInterfaceBase13progressValueEv(qthis: *mut c_void) -> c_int;
@@ -571,10 +572,13 @@ pub trait QFutureInterfaceBase_New {
   // proto:  void QFutureInterfaceBase::QFutureInterfaceBase(const QFutureInterfaceBase & other);
 impl<'a> /*trait*/ QFutureInterfaceBase_New for (&'a QFutureInterfaceBase) {
   fn New(self) -> QFutureInterfaceBase {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QFutureInterfaceBaseC1ERKS_()};
+    let ctysz: c_int = unsafe{QFutureInterfaceBase_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN20QFutureInterfaceBaseC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN20QFutureInterfaceBaseC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN20QFutureInterfaceBaseC1ERKS_(arg0)};
     let rsthis = QFutureInterfaceBase{qclsinst: qthis};
     return rsthis;
     // return 1;

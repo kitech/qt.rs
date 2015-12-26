@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtCore/qhash.h
 // dst-file: /src/core/qhash.rs
 //
@@ -25,10 +25,11 @@ use std::ops::Deref;
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QHashDummyValue_Class_Size() -> c_int;
+  fn QHashData_Class_Size() -> c_int;
   // proto:  void QHashData::hasShrunk();
   fn _ZN9QHashData9hasShrunkEv(qthis: *mut c_void);
   // proto:  void * QHashData::allocateNode(int nodeAlign);

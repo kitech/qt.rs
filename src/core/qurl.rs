@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtCore/qurl.h
 // dst-file: /src/core/qurl.rs
 //
@@ -29,10 +29,10 @@ use super::qstringlist::QStringList; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QUrl_Class_Size() -> c_int;
   // proto:  bool QUrl::isLocalFile();
   fn _ZNK4QUrl11isLocalFileEv(qthis: *mut c_void) -> c_char;
   // proto:  bool QUrl::isEmpty();
@@ -54,6 +54,7 @@ extern {
   // proto:  void QUrl::setPort(int port);
   fn _ZN4QUrl7setPortEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QUrl::QUrl(const QUrl & copy);
+  fn dector_ZN4QUrlC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN4QUrlC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto: static QString QUrl::fromAce(const QByteArray & );
   fn _ZN4QUrl7fromAceERK10QByteArray(arg0: *mut c_void) -> *mut c_void;
@@ -74,6 +75,7 @@ extern {
   // proto:  bool QUrl::isValid();
   fn _ZNK4QUrl7isValidEv(qthis: *mut c_void) -> c_char;
   // proto:  void QUrl::QUrl();
+  fn dector_ZN4QUrlC1Ev() -> *mut c_void;
   fn _ZN4QUrlC1Ev(qthis: *mut c_void);
   // proto:  bool QUrl::isDetached();
   fn _ZNK4QUrl10isDetachedEv(qthis: *mut c_void) -> c_char;
@@ -85,8 +87,6 @@ extern {
   fn _ZN4QUrl17toPercentEncodingERK7QStringRK10QByteArrayS5_(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> *mut c_void;
   // proto: static void QUrl::setIdnWhitelist(const QStringList & );
   fn _ZN4QUrl15setIdnWhitelistERK11QStringList(arg0: *mut c_void);
-  // proto:  void QUrl::swap(QUrl & other);
-  fn _ZN4QUrl4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto: static QString QUrl::fromPercentEncoding(const QByteArray & );
   fn _ZN4QUrl19fromPercentEncodingERK10QByteArray(arg0: *mut c_void) -> *mut c_void;
   // proto: static QUrl QUrl::fromUserInput(const QString & userInput);
@@ -354,10 +354,13 @@ pub trait QUrl_New {
   // proto:  void QUrl::QUrl(const QUrl & copy);
 impl<'a> /*trait*/ QUrl_New for (&'a QUrl) {
   fn New(self) -> QUrl {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QUrlC1ERKS_()};
+    let ctysz: c_int = unsafe{QUrl_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN4QUrlC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN4QUrlC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN4QUrlC1ERKS_(arg0)};
     let rsthis = QUrl{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -582,9 +585,12 @@ impl<'a> /*trait*/ QUrl_isValid<i8> for () {
   // proto:  void QUrl::QUrl();
 impl<'a> /*trait*/ QUrl_New for () {
   fn New(self) -> QUrl {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QUrlC1Ev()};
-    unsafe {_ZN4QUrlC1Ev(qthis)};
+    let ctysz: c_int = unsafe{QUrl_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN4QUrlC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN4QUrlC1Ev()};
     let rsthis = QUrl{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -707,29 +713,6 @@ impl<'a> /*trait*/ QUrl_setIdnWhitelist_s<()> for (&'a QStringList) {
     // unsafe{_ZN4QUrl15setIdnWhitelistERK11QStringList()};
     let arg0 = self.qclsinst  as *mut c_void;
      unsafe {_ZN4QUrl15setIdnWhitelistERK11QStringList(arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QUrl::swap(QUrl & other);
-impl /*struct*/ QUrl {
-  pub fn swap<RetType, T: QUrl_swap<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.swap(self);
-    // return 1;
-  }
-}
-
-pub trait QUrl_swap<RetType> {
-  fn swap(self , rsthis: & QUrl) -> RetType;
-}
-
-  // proto:  void QUrl::swap(QUrl & other);
-impl<'a> /*trait*/ QUrl_swap<()> for (&'a QUrl) {
-  fn swap(self , rsthis: & QUrl) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN4QUrl4swapERS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN4QUrl4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

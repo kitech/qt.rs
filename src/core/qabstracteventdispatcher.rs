@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtCore/qabstracteventdispatcher.h
 // dst-file: /src/core/qabstracteventdispatcher.rs
 //
@@ -29,13 +29,14 @@ use super::qsocketnotifier::QSocketNotifier; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QAbstractEventDispatcher_Class_Size() -> c_int;
   // proto:  bool QAbstractEventDispatcher::hasPendingEvents();
   fn _ZN24QAbstractEventDispatcher16hasPendingEventsEv(qthis: *mut c_void) -> c_char;
   // proto:  void QAbstractEventDispatcher::QAbstractEventDispatcher(QObject * parent);
+  fn dector_ZN24QAbstractEventDispatcherC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
   fn _ZN24QAbstractEventDispatcherC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto: static QAbstractEventDispatcher * QAbstractEventDispatcher::instance(QThread * thread);
   fn _ZN24QAbstractEventDispatcher8instanceEP7QThread(arg0: *mut c_void);
@@ -134,10 +135,13 @@ pub trait QAbstractEventDispatcher_New {
   // proto:  void QAbstractEventDispatcher::QAbstractEventDispatcher(QObject * parent);
 impl<'a> /*trait*/ QAbstractEventDispatcher_New for (&'a QObject) {
   fn New(self) -> QAbstractEventDispatcher {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QAbstractEventDispatcherC1EP7QObject()};
+    let ctysz: c_int = unsafe{QAbstractEventDispatcher_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN24QAbstractEventDispatcherC1EP7QObject(qthis, arg0)};
+    // unsafe {_ZN24QAbstractEventDispatcherC1EP7QObject(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN24QAbstractEventDispatcherC1EP7QObject(arg0)};
     let rsthis = QAbstractEventDispatcher{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

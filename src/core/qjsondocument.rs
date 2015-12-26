@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtCore/qjsondocument.h
 // dst-file: /src/core/qjsondocument.rs
 //
@@ -28,10 +28,10 @@ use super::qstring::QString; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QJsonDocument_Class_Size() -> c_int;
   // proto:  QJsonObject QJsonDocument::object();
   fn _ZNK13QJsonDocument6objectEv(qthis: *mut c_void);
   // proto: static QJsonDocument QJsonDocument::fromVariant(const QVariant & variant);
@@ -43,6 +43,7 @@ extern {
   // proto:  bool QJsonDocument::isNull();
   fn _ZNK13QJsonDocument6isNullEv(qthis: *mut c_void) -> c_char;
   // proto:  void QJsonDocument::QJsonDocument();
+  fn dector_ZN13QJsonDocumentC1Ev() -> *mut c_void;
   fn _ZN13QJsonDocumentC1Ev(qthis: *mut c_void);
   // proto:  QVariant QJsonDocument::toVariant();
   fn _ZNK13QJsonDocument9toVariantEv(qthis: *mut c_void) -> *mut c_void;
@@ -58,6 +59,7 @@ extern {
   fn _ZNK13QJsonDocument7isArrayEv(qthis: *mut c_void) -> c_char;
   // proto:  QByteArray QJsonDocument::toBinaryData();
   fn _ZNK13QJsonDocument12toBinaryDataEv(qthis: *mut c_void) -> *mut c_void;
+  fn QJsonParseError_Class_Size() -> c_int;
   // proto:  QString QJsonParseError::errorString();
   fn _ZNK15QJsonParseError11errorStringEv(qthis: *mut c_void) -> *mut c_void;
 } // <= ext block end
@@ -210,9 +212,12 @@ pub trait QJsonDocument_New {
   // proto:  void QJsonDocument::QJsonDocument();
 impl<'a> /*trait*/ QJsonDocument_New for () {
   fn New(self) -> QJsonDocument {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QJsonDocumentC1Ev()};
-    unsafe {_ZN13QJsonDocumentC1Ev(qthis)};
+    let ctysz: c_int = unsafe{QJsonDocument_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN13QJsonDocumentC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN13QJsonDocumentC1Ev()};
     let rsthis = QJsonDocument{qclsinst: qthis};
     return rsthis;
     // return 1;

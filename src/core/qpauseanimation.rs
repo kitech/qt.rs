@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtCore/qpauseanimation.h
 // dst-file: /src/core/qpauseanimation.rs
 //
@@ -27,17 +27,20 @@ use super::qobject::QObject; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QPauseAnimation_Class_Size() -> c_int;
   // proto:  void QPauseAnimation::QPauseAnimation(const QPauseAnimation & );
+  fn dector_ZN15QPauseAnimationC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN15QPauseAnimationC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QPauseAnimation::setDuration(int msecs);
   fn _ZN15QPauseAnimation11setDurationEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QPauseAnimation::QPauseAnimation(QObject * parent);
+  fn dector_ZN15QPauseAnimationC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
   fn _ZN15QPauseAnimationC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QPauseAnimation::QPauseAnimation(int msecs, QObject * parent);
+  fn dector_ZN15QPauseAnimationC1EiP7QObject(arg0: c_int, arg1: *mut c_void) -> *mut c_void;
   fn _ZN15QPauseAnimationC1EiP7QObject(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void);
   // proto:  int QPauseAnimation::duration();
   fn _ZNK15QPauseAnimation8durationEv(qthis: *mut c_void) -> c_int;
@@ -87,10 +90,13 @@ pub trait QPauseAnimation_New {
   // proto:  void QPauseAnimation::QPauseAnimation(const QPauseAnimation & );
 impl<'a> /*trait*/ QPauseAnimation_New for (&'a QPauseAnimation) {
   fn New(self) -> QPauseAnimation {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QPauseAnimationC1ERKS_()};
+    let ctysz: c_int = unsafe{QPauseAnimation_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN15QPauseAnimationC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN15QPauseAnimationC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN15QPauseAnimationC1ERKS_(arg0)};
     let rsthis = QPauseAnimation{/**/qbase: QAbstractAnimation::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -123,10 +129,13 @@ impl<'a> /*trait*/ QPauseAnimation_setDuration<()> for (i32) {
   // proto:  void QPauseAnimation::QPauseAnimation(QObject * parent);
 impl<'a> /*trait*/ QPauseAnimation_New for (&'a QObject) {
   fn New(self) -> QPauseAnimation {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QPauseAnimationC1EP7QObject()};
+    let ctysz: c_int = unsafe{QPauseAnimation_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN15QPauseAnimationC1EP7QObject(qthis, arg0)};
+    // unsafe {_ZN15QPauseAnimationC1EP7QObject(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN15QPauseAnimationC1EP7QObject(arg0)};
     let rsthis = QPauseAnimation{/**/qbase: QAbstractAnimation::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -136,11 +145,14 @@ impl<'a> /*trait*/ QPauseAnimation_New for (&'a QObject) {
   // proto:  void QPauseAnimation::QPauseAnimation(int msecs, QObject * parent);
 impl<'a> /*trait*/ QPauseAnimation_New for (i32, &'a QObject) {
   fn New(self) -> QPauseAnimation {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QPauseAnimationC1EiP7QObject()};
+    let ctysz: c_int = unsafe{QPauseAnimation_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    unsafe {_ZN15QPauseAnimationC1EiP7QObject(qthis, arg0, arg1)};
+    // unsafe {_ZN15QPauseAnimationC1EiP7QObject(qthis, arg0, arg1)};
+    let qthis: *mut c_void = unsafe {dector_ZN15QPauseAnimationC1EiP7QObject(arg0, arg1)};
     let rsthis = QPauseAnimation{/**/qbase: QAbstractAnimation::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

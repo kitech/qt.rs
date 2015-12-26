@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtCore/qmessageauthenticationcode.h
 // dst-file: /src/core/qmessageauthenticationcode.rs
 //
@@ -27,15 +27,16 @@ use super::qiodevice::QIODevice; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QMessageAuthenticationCode_Class_Size() -> c_int;
   // proto:  QByteArray QMessageAuthenticationCode::result();
   fn _ZNK26QMessageAuthenticationCode6resultEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QMessageAuthenticationCode::addData(const QByteArray & data);
   fn _ZN26QMessageAuthenticationCode7addDataERK10QByteArray(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QMessageAuthenticationCode::QMessageAuthenticationCode(const QMessageAuthenticationCode & );
+  fn dector_ZN26QMessageAuthenticationCodeC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN26QMessageAuthenticationCodeC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QMessageAuthenticationCode::addData(const char * data, int length);
   fn _ZN26QMessageAuthenticationCode7addDataEPKci(qthis: *mut c_void, arg0: *mut c_char, arg1: c_int);
@@ -124,10 +125,13 @@ pub trait QMessageAuthenticationCode_New {
   // proto:  void QMessageAuthenticationCode::QMessageAuthenticationCode(const QMessageAuthenticationCode & );
 impl<'a> /*trait*/ QMessageAuthenticationCode_New for (&'a QMessageAuthenticationCode) {
   fn New(self) -> QMessageAuthenticationCode {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QMessageAuthenticationCodeC1ERKS_()};
+    let ctysz: c_int = unsafe{QMessageAuthenticationCode_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN26QMessageAuthenticationCodeC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN26QMessageAuthenticationCodeC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN26QMessageAuthenticationCodeC1ERKS_(arg0)};
     let rsthis = QMessageAuthenticationCode{qclsinst: qthis};
     return rsthis;
     // return 1;

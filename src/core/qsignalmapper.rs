@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtCore/qsignalmapper.h
 // dst-file: /src/core/qsignalmapper.rs
 //
@@ -28,10 +28,10 @@ use super::super::widgets::qwidget::QWidget; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QSignalMapper_Class_Size() -> c_int;
   // proto:  void QSignalMapper::removeMappings(QObject * sender);
   fn _ZN13QSignalMapper14removeMappingsEP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QSignalMapper::map(QObject * sender);
@@ -39,16 +39,18 @@ extern {
   // proto:  void QSignalMapper::mapped(int );
   fn _ZN13QSignalMapper6mappedEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QSignalMapper::QSignalMapper(const QSignalMapper & );
+  fn dector_ZN13QSignalMapperC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN13QSignalMapperC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  const QMetaObject * QSignalMapper::metaObject();
   fn _ZNK13QSignalMapper10metaObjectEv(qthis: *mut c_void);
-  // proto:  void QSignalMapper::setMapping(QObject * sender, QObject * object);
-  fn _ZN13QSignalMapper10setMappingEP7QObjectS1_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QSignalMapper::mapped(QObject * );
   fn _ZN13QSignalMapper6mappedEP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QSignalMapper::setMapping(QObject * sender, QObject * object);
+  fn _ZN13QSignalMapper10setMappingEP7QObjectS1_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  QObject * QSignalMapper::mapping(int id);
   fn _ZNK13QSignalMapper7mappingEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
   // proto:  void QSignalMapper::QSignalMapper(QObject * parent);
+  fn dector_ZN13QSignalMapperC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
   fn _ZN13QSignalMapperC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QSignalMapper::~QSignalMapper();
   fn _ZN13QSignalMapperD0Ev(qthis: *mut c_void);
@@ -181,10 +183,13 @@ pub trait QSignalMapper_New {
   // proto:  void QSignalMapper::QSignalMapper(const QSignalMapper & );
 impl<'a> /*trait*/ QSignalMapper_New for (&'a QSignalMapper) {
   fn New(self) -> QSignalMapper {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QSignalMapperC1ERKS_()};
+    let ctysz: c_int = unsafe{QSignalMapper_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN13QSignalMapperC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN13QSignalMapperC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN13QSignalMapperC1ERKS_(arg0)};
     let rsthis = QSignalMapper{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -213,6 +218,17 @@ impl<'a> /*trait*/ QSignalMapper_metaObject<()> for () {
   }
 }
 
+  // proto:  void QSignalMapper::mapped(QObject * );
+impl<'a> /*trait*/ QSignalMapper_mapped<()> for (&'a QObject) {
+  fn mapped(self , rsthis: & QSignalMapper) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN13QSignalMapper6mappedEP7QObject()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN13QSignalMapper6mappedEP7QObject(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
   // proto:  void QSignalMapper::setMapping(QObject * sender, QObject * object);
 impl /*struct*/ QSignalMapper {
   pub fn setMapping<RetType, T: QSignalMapper_setMapping<RetType>>(& self,  overload_args: T) -> RetType {
@@ -233,17 +249,6 @@ impl<'a> /*trait*/ QSignalMapper_setMapping<()> for (&'a QObject, &'a QObject) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
      unsafe {_ZN13QSignalMapper10setMappingEP7QObjectS1_(rsthis.qclsinst, arg0, arg1)};
-    // return 1;
-  }
-}
-
-  // proto:  void QSignalMapper::mapped(QObject * );
-impl<'a> /*trait*/ QSignalMapper_mapped<()> for (&'a QObject) {
-  fn mapped(self , rsthis: & QSignalMapper) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QSignalMapper6mappedEP7QObject()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN13QSignalMapper6mappedEP7QObject(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -276,10 +281,13 @@ impl<'a> /*trait*/ QSignalMapper_mapping<QObject> for (i32) {
   // proto:  void QSignalMapper::QSignalMapper(QObject * parent);
 impl<'a> /*trait*/ QSignalMapper_New for (&'a QObject) {
   fn New(self) -> QSignalMapper {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QSignalMapperC1EP7QObject()};
+    let ctysz: c_int = unsafe{QSignalMapper_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN13QSignalMapperC1EP7QObject(qthis, arg0)};
+    // unsafe {_ZN13QSignalMapperC1EP7QObject(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN13QSignalMapperC1EP7QObject(arg0)};
     let rsthis = QSignalMapper{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

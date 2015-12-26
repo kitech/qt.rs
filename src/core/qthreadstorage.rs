@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtCore/qthreadstorage.h
 // dst-file: /src/core/qthreadstorage.rs
 //
@@ -25,10 +25,10 @@ use std::ops::Deref;
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QThreadStorageData_Class_Size() -> c_int;
   // proto:  void ** QThreadStorageData::set(void * p);
   fn _ZN18QThreadStorageData3setEPv(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void ** QThreadStorageData::get();

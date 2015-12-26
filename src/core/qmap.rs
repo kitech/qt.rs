@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtCore/qmap.h
 // dst-file: /src/core/qmap.rs
 //
@@ -26,10 +26,10 @@ use std::ops::Deref;
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QMapDataBase_Class_Size() -> c_int;
   // proto:  void QMapDataBase::rebalance(QMapNodeBase * x);
   fn _ZN12QMapDataBase9rebalanceEP12QMapNodeBase(qthis: *mut c_void, arg0: *mut c_void);
   // proto: static QMapDataBase * QMapDataBase::createData();
@@ -48,14 +48,11 @@ extern {
   fn _ZN12QMapDataBase10createNodeEiiP12QMapNodeBaseb(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_void, arg3: c_char) -> *mut c_void;
   // proto:  void QMapDataBase::freeNodeAndRebalance(QMapNodeBase * z);
   fn _ZN12QMapDataBase20freeNodeAndRebalanceEP12QMapNodeBase(qthis: *mut c_void, arg0: *mut c_void);
-  // proto:  void QMapNodeBase::setParent(QMapNodeBase * pp);
-  fn _ZN12QMapNodeBase9setParentEPS_(qthis: *mut c_void, arg0: *mut c_void);
-  // proto:  QMapNodeBase * QMapNodeBase::previousNode();
-  fn _ZN12QMapNodeBase12previousNodeEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  QMapNodeBase * QMapNodeBase::nextNode();
-  fn _ZN12QMapNodeBase8nextNodeEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  QMapNodeBase * QMapNodeBase::parent();
-  fn _ZNK12QMapNodeBase6parentEv(qthis: *mut c_void) -> *mut c_void;
+  fn QMapNodeBase_Class_Size() -> c_int;
+  // proto:  const QMapNodeBase * QMapNodeBase::previousNode();
+  fn _ZNK12QMapNodeBase12previousNodeEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  const QMapNodeBase * QMapNodeBase::nextNode();
+  fn _ZNK12QMapNodeBase8nextNodeEv(qthis: *mut c_void) -> *mut c_void;
 } // <= ext block end
 
 // body block begin =>
@@ -294,30 +291,7 @@ impl /*struct*/ QMapNodeBase {
     return QMapNodeBase{qclsinst: qthis};
   }
 }
-  // proto:  void QMapNodeBase::setParent(QMapNodeBase * pp);
-impl /*struct*/ QMapNodeBase {
-  pub fn setParent<RetType, T: QMapNodeBase_setParent<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setParent(self);
-    // return 1;
-  }
-}
-
-pub trait QMapNodeBase_setParent<RetType> {
-  fn setParent(self , rsthis: & QMapNodeBase) -> RetType;
-}
-
-  // proto:  void QMapNodeBase::setParent(QMapNodeBase * pp);
-impl<'a> /*trait*/ QMapNodeBase_setParent<()> for (&'a QMapNodeBase) {
-  fn setParent(self , rsthis: & QMapNodeBase) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QMapNodeBase9setParentEPS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN12QMapNodeBase9setParentEPS_(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  QMapNodeBase * QMapNodeBase::previousNode();
+  // proto:  const QMapNodeBase * QMapNodeBase::previousNode();
 impl /*struct*/ QMapNodeBase {
   pub fn previousNode<RetType, T: QMapNodeBase_previousNode<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.previousNode(self);
@@ -329,19 +303,19 @@ pub trait QMapNodeBase_previousNode<RetType> {
   fn previousNode(self , rsthis: & QMapNodeBase) -> RetType;
 }
 
-  // proto:  QMapNodeBase * QMapNodeBase::previousNode();
+  // proto:  const QMapNodeBase * QMapNodeBase::previousNode();
 impl<'a> /*trait*/ QMapNodeBase_previousNode<QMapNodeBase> for () {
   fn previousNode(self , rsthis: & QMapNodeBase) -> QMapNodeBase {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QMapNodeBase12previousNodeEv()};
-    let mut ret = unsafe {_ZN12QMapNodeBase12previousNodeEv(rsthis.qclsinst)};
+    // unsafe{_ZNK12QMapNodeBase12previousNodeEv()};
+    let mut ret = unsafe {_ZNK12QMapNodeBase12previousNodeEv(rsthis.qclsinst)};
     let mut ret1 = QMapNodeBase::inheritFrom(ret);
     return ret1;
     // return 1;
   }
 }
 
-  // proto:  QMapNodeBase * QMapNodeBase::nextNode();
+  // proto:  const QMapNodeBase * QMapNodeBase::nextNode();
 impl /*struct*/ QMapNodeBase {
   pub fn nextNode<RetType, T: QMapNodeBase_nextNode<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.nextNode(self);
@@ -353,36 +327,12 @@ pub trait QMapNodeBase_nextNode<RetType> {
   fn nextNode(self , rsthis: & QMapNodeBase) -> RetType;
 }
 
-  // proto:  QMapNodeBase * QMapNodeBase::nextNode();
+  // proto:  const QMapNodeBase * QMapNodeBase::nextNode();
 impl<'a> /*trait*/ QMapNodeBase_nextNode<QMapNodeBase> for () {
   fn nextNode(self , rsthis: & QMapNodeBase) -> QMapNodeBase {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QMapNodeBase8nextNodeEv()};
-    let mut ret = unsafe {_ZN12QMapNodeBase8nextNodeEv(rsthis.qclsinst)};
-    let mut ret1 = QMapNodeBase::inheritFrom(ret);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QMapNodeBase * QMapNodeBase::parent();
-impl /*struct*/ QMapNodeBase {
-  pub fn parent<RetType, T: QMapNodeBase_parent<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.parent(self);
-    // return 1;
-  }
-}
-
-pub trait QMapNodeBase_parent<RetType> {
-  fn parent(self , rsthis: & QMapNodeBase) -> RetType;
-}
-
-  // proto:  QMapNodeBase * QMapNodeBase::parent();
-impl<'a> /*trait*/ QMapNodeBase_parent<QMapNodeBase> for () {
-  fn parent(self , rsthis: & QMapNodeBase) -> QMapNodeBase {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK12QMapNodeBase6parentEv()};
-    let mut ret = unsafe {_ZNK12QMapNodeBase6parentEv(rsthis.qclsinst)};
+    // unsafe{_ZNK12QMapNodeBase8nextNodeEv()};
+    let mut ret = unsafe {_ZNK12QMapNodeBase8nextNodeEv(rsthis.qclsinst)};
     let mut ret1 = QMapNodeBase::inheritFrom(ret);
     return ret1;
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtCore/qtranslator.h
 // dst-file: /src/core/qtranslator.rs
 //
@@ -28,17 +28,17 @@ use super::qlocale::QLocale; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QTranslator_Class_Size() -> c_int;
   // proto:  const QMetaObject * QTranslator::metaObject();
   fn _ZNK11QTranslator10metaObjectEv(qthis: *mut c_void);
   // proto:  void QTranslator::QTranslator(QObject * parent);
+  fn dector_ZN11QTranslatorC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
   fn _ZN11QTranslatorC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
-  // proto:  bool QTranslator::isEmpty();
-  fn _ZNK11QTranslator7isEmptyEv(qthis: *mut c_void) -> c_char;
   // proto:  void QTranslator::QTranslator(const QTranslator & );
+  fn dector_ZN11QTranslatorC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN11QTranslatorC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QTranslator::~QTranslator();
   fn _ZN11QTranslatorD0Ev(qthis: *mut c_void);
@@ -50,6 +50,8 @@ extern {
   fn _ZN11QTranslator4loadEPKhiRK7QString(qthis: *mut c_void, arg0: *mut c_uchar, arg1: c_int, arg2: *mut c_void) -> c_char;
   // proto:  bool QTranslator::load(const QLocale & locale, const QString & filename, const QString & prefix, const QString & directory, const QString & suffix);
   fn _ZN11QTranslator4loadERK7QLocaleRK7QStringS5_S5_S5_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void, arg4: *mut c_void) -> c_char;
+  // proto:  bool QTranslator::isEmpty();
+  fn _ZNK11QTranslator7isEmptyEv(qthis: *mut c_void) -> c_char;
 } // <= ext block end
 
 // body block begin =>
@@ -114,35 +116,15 @@ pub trait QTranslator_New {
   // proto:  void QTranslator::QTranslator(QObject * parent);
 impl<'a> /*trait*/ QTranslator_New for (&'a QObject) {
   fn New(self) -> QTranslator {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTranslatorC1EP7QObject()};
+    let ctysz: c_int = unsafe{QTranslator_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QTranslatorC1EP7QObject(qthis, arg0)};
+    // unsafe {_ZN11QTranslatorC1EP7QObject(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN11QTranslatorC1EP7QObject(arg0)};
     let rsthis = QTranslator{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  bool QTranslator::isEmpty();
-impl /*struct*/ QTranslator {
-  pub fn isEmpty<RetType, T: QTranslator_isEmpty<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isEmpty(self);
-    // return 1;
-  }
-}
-
-pub trait QTranslator_isEmpty<RetType> {
-  fn isEmpty(self , rsthis: & QTranslator) -> RetType;
-}
-
-  // proto:  bool QTranslator::isEmpty();
-impl<'a> /*trait*/ QTranslator_isEmpty<i8> for () {
-  fn isEmpty(self , rsthis: & QTranslator) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK11QTranslator7isEmptyEv()};
-    let mut ret = unsafe {_ZNK11QTranslator7isEmptyEv(rsthis.qclsinst)};
-    return ret as i8;
     // return 1;
   }
 }
@@ -150,10 +132,13 @@ impl<'a> /*trait*/ QTranslator_isEmpty<i8> for () {
   // proto:  void QTranslator::QTranslator(const QTranslator & );
 impl<'a> /*trait*/ QTranslator_New for (&'a QTranslator) {
   fn New(self) -> QTranslator {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTranslatorC1ERKS_()};
+    let ctysz: c_int = unsafe{QTranslator_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QTranslatorC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN11QTranslatorC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN11QTranslatorC1ERKS_(arg0)};
     let rsthis = QTranslator{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -262,6 +247,29 @@ impl<'a> /*trait*/ QTranslator_load<i8> for (&'a QLocale, &'a QString, &'a QStri
     let arg3 = self.3.qclsinst  as *mut c_void;
     let arg4 = self.4.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN11QTranslator4loadERK7QLocaleRK7QStringS5_S5_S5_(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4)};
+    return ret as i8;
+    // return 1;
+  }
+}
+
+  // proto:  bool QTranslator::isEmpty();
+impl /*struct*/ QTranslator {
+  pub fn isEmpty<RetType, T: QTranslator_isEmpty<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.isEmpty(self);
+    // return 1;
+  }
+}
+
+pub trait QTranslator_isEmpty<RetType> {
+  fn isEmpty(self , rsthis: & QTranslator) -> RetType;
+}
+
+  // proto:  bool QTranslator::isEmpty();
+impl<'a> /*trait*/ QTranslator_isEmpty<i8> for () {
+  fn isEmpty(self , rsthis: & QTranslator) -> i8 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK11QTranslator7isEmptyEv()};
+    let mut ret = unsafe {_ZNK11QTranslator7isEmptyEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }

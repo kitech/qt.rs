@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtCore/qfuturewatcher.h
 // dst-file: /src/core/qfuturewatcher.rs
 //
@@ -20,24 +20,26 @@ use self::libc::*;
 // use block begin =>
 use super::qobject::QObject; // 773
 use std::ops::Deref;
-use super::qcoreevent::QEvent; // 773
 use super::qstring::QString; // 773
+use super::qcoreevent::QEvent; // 773
 // <= use block end
 
 // ext block begin =>
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QFutureWatcherBase_Class_Size() -> c_int;
   // proto:  void QFutureWatcherBase::finished();
   fn _ZN18QFutureWatcherBase8finishedEv(qthis: *mut c_void);
   // proto:  bool QFutureWatcherBase::isRunning();
   fn _ZNK18QFutureWatcherBase9isRunningEv(qthis: *mut c_void) -> c_char;
   // proto:  void QFutureWatcherBase::setPaused(bool paused);
   fn _ZN18QFutureWatcherBase9setPausedEb(qthis: *mut c_void, arg0: c_char);
+  // proto:  int QFutureWatcherBase::progressValue();
+  fn _ZNK18QFutureWatcherBase13progressValueEv(qthis: *mut c_void) -> c_int;
   // proto:  int QFutureWatcherBase::progressMinimum();
   fn _ZNK18QFutureWatcherBase15progressMinimumEv(qthis: *mut c_void) -> c_int;
   // proto:  void QFutureWatcherBase::resume();
@@ -52,16 +54,14 @@ extern {
   fn _ZN18QFutureWatcherBase20progressValueChangedEi(qthis: *mut c_void, arg0: c_int);
   // proto:  int QFutureWatcherBase::progressMaximum();
   fn _ZNK18QFutureWatcherBase15progressMaximumEv(qthis: *mut c_void) -> c_int;
-  // proto:  bool QFutureWatcherBase::event(QEvent * event);
-  fn _ZN18QFutureWatcherBase5eventEP6QEvent(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  void QFutureWatcherBase::progressTextChanged(const QString & progressText);
   fn _ZN18QFutureWatcherBase19progressTextChangedERK7QString(qthis: *mut c_void, arg0: *mut c_void);
-  // proto:  bool QFutureWatcherBase::isCanceled();
-  fn _ZNK18QFutureWatcherBase10isCanceledEv(qthis: *mut c_void) -> c_char;
   // proto:  void QFutureWatcherBase::resultReadyAt(int resultIndex);
   fn _ZN18QFutureWatcherBase13resultReadyAtEi(qthis: *mut c_void, arg0: c_int);
-  // proto:  int QFutureWatcherBase::progressValue();
-  fn _ZNK18QFutureWatcherBase13progressValueEv(qthis: *mut c_void) -> c_int;
+  // proto:  void QFutureWatcherBase::cancel();
+  fn _ZN18QFutureWatcherBase6cancelEv(qthis: *mut c_void);
+  // proto:  bool QFutureWatcherBase::event(QEvent * event);
+  fn _ZN18QFutureWatcherBase5eventEP6QEvent(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  bool QFutureWatcherBase::isStarted();
   fn _ZNK18QFutureWatcherBase9isStartedEv(qthis: *mut c_void) -> c_char;
   // proto:  void QFutureWatcherBase::paused();
@@ -72,8 +72,6 @@ extern {
   fn _ZN18QFutureWatcherBase22setPendingResultsLimitEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QFutureWatcherBase::resumed();
   fn _ZN18QFutureWatcherBase7resumedEv(qthis: *mut c_void);
-  // proto:  void QFutureWatcherBase::cancel();
-  fn _ZN18QFutureWatcherBase6cancelEv(qthis: *mut c_void);
   // proto:  void QFutureWatcherBase::progressRangeChanged(int minimum, int maximum);
   fn _ZN18QFutureWatcherBase20progressRangeChangedEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
   // proto:  void QFutureWatcherBase::canceled();
@@ -85,9 +83,12 @@ extern {
   // proto:  QString QFutureWatcherBase::progressText();
   fn _ZNK18QFutureWatcherBase12progressTextEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QFutureWatcherBase::QFutureWatcherBase(QObject * parent);
+  fn dector_ZN18QFutureWatcherBaseC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
   fn _ZN18QFutureWatcherBaseC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QFutureWatcherBase::togglePaused();
   fn _ZN18QFutureWatcherBase12togglePausedEv(qthis: *mut c_void);
+  // proto:  bool QFutureWatcherBase::isCanceled();
+  fn _ZNK18QFutureWatcherBase10isCanceledEv(qthis: *mut c_void) -> c_char;
   // proto:  void QFutureWatcherBase::waitForFinished();
   fn _ZN18QFutureWatcherBase15waitForFinishedEv(qthis: *mut c_void);
 } // <= ext block end
@@ -180,6 +181,29 @@ impl<'a> /*trait*/ QFutureWatcherBase_setPaused<()> for (i8) {
     // unsafe{_ZN18QFutureWatcherBase9setPausedEb()};
     let arg0 = self  as c_char;
      unsafe {_ZN18QFutureWatcherBase9setPausedEb(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
+  // proto:  int QFutureWatcherBase::progressValue();
+impl /*struct*/ QFutureWatcherBase {
+  pub fn progressValue<RetType, T: QFutureWatcherBase_progressValue<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.progressValue(self);
+    // return 1;
+  }
+}
+
+pub trait QFutureWatcherBase_progressValue<RetType> {
+  fn progressValue(self , rsthis: & QFutureWatcherBase) -> RetType;
+}
+
+  // proto:  int QFutureWatcherBase::progressValue();
+impl<'a> /*trait*/ QFutureWatcherBase_progressValue<i32> for () {
+  fn progressValue(self , rsthis: & QFutureWatcherBase) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK18QFutureWatcherBase13progressValueEv()};
+    let mut ret = unsafe {_ZNK18QFutureWatcherBase13progressValueEv(rsthis.qclsinst)};
+    return ret as i32;
     // return 1;
   }
 }
@@ -344,30 +368,6 @@ impl<'a> /*trait*/ QFutureWatcherBase_progressMaximum<i32> for () {
   }
 }
 
-  // proto:  bool QFutureWatcherBase::event(QEvent * event);
-impl /*struct*/ QFutureWatcherBase {
-  pub fn event<RetType, T: QFutureWatcherBase_event<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.event(self);
-    // return 1;
-  }
-}
-
-pub trait QFutureWatcherBase_event<RetType> {
-  fn event(self , rsthis: & QFutureWatcherBase) -> RetType;
-}
-
-  // proto:  bool QFutureWatcherBase::event(QEvent * event);
-impl<'a> /*trait*/ QFutureWatcherBase_event<i8> for (&'a QEvent) {
-  fn event(self , rsthis: & QFutureWatcherBase) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QFutureWatcherBase5eventEP6QEvent()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN18QFutureWatcherBase5eventEP6QEvent(rsthis.qclsinst, arg0)};
-    return ret as i8;
-    // return 1;
-  }
-}
-
   // proto:  void QFutureWatcherBase::progressTextChanged(const QString & progressText);
 impl /*struct*/ QFutureWatcherBase {
   pub fn progressTextChanged<RetType, T: QFutureWatcherBase_progressTextChanged<RetType>>(& self,  overload_args: T) -> RetType {
@@ -387,29 +387,6 @@ impl<'a> /*trait*/ QFutureWatcherBase_progressTextChanged<()> for (&'a QString) 
     // unsafe{_ZN18QFutureWatcherBase19progressTextChangedERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
      unsafe {_ZN18QFutureWatcherBase19progressTextChangedERK7QString(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  bool QFutureWatcherBase::isCanceled();
-impl /*struct*/ QFutureWatcherBase {
-  pub fn isCanceled<RetType, T: QFutureWatcherBase_isCanceled<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isCanceled(self);
-    // return 1;
-  }
-}
-
-pub trait QFutureWatcherBase_isCanceled<RetType> {
-  fn isCanceled(self , rsthis: & QFutureWatcherBase) -> RetType;
-}
-
-  // proto:  bool QFutureWatcherBase::isCanceled();
-impl<'a> /*trait*/ QFutureWatcherBase_isCanceled<i8> for () {
-  fn isCanceled(self , rsthis: & QFutureWatcherBase) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK18QFutureWatcherBase10isCanceledEv()};
-    let mut ret = unsafe {_ZNK18QFutureWatcherBase10isCanceledEv(rsthis.qclsinst)};
-    return ret as i8;
     // return 1;
   }
 }
@@ -437,25 +414,48 @@ impl<'a> /*trait*/ QFutureWatcherBase_resultReadyAt<()> for (i32) {
   }
 }
 
-  // proto:  int QFutureWatcherBase::progressValue();
+  // proto:  void QFutureWatcherBase::cancel();
 impl /*struct*/ QFutureWatcherBase {
-  pub fn progressValue<RetType, T: QFutureWatcherBase_progressValue<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.progressValue(self);
+  pub fn cancel<RetType, T: QFutureWatcherBase_cancel<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.cancel(self);
     // return 1;
   }
 }
 
-pub trait QFutureWatcherBase_progressValue<RetType> {
-  fn progressValue(self , rsthis: & QFutureWatcherBase) -> RetType;
+pub trait QFutureWatcherBase_cancel<RetType> {
+  fn cancel(self , rsthis: & QFutureWatcherBase) -> RetType;
 }
 
-  // proto:  int QFutureWatcherBase::progressValue();
-impl<'a> /*trait*/ QFutureWatcherBase_progressValue<i32> for () {
-  fn progressValue(self , rsthis: & QFutureWatcherBase) -> i32 {
+  // proto:  void QFutureWatcherBase::cancel();
+impl<'a> /*trait*/ QFutureWatcherBase_cancel<()> for () {
+  fn cancel(self , rsthis: & QFutureWatcherBase) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK18QFutureWatcherBase13progressValueEv()};
-    let mut ret = unsafe {_ZNK18QFutureWatcherBase13progressValueEv(rsthis.qclsinst)};
-    return ret as i32;
+    // unsafe{_ZN18QFutureWatcherBase6cancelEv()};
+     unsafe {_ZN18QFutureWatcherBase6cancelEv(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
+  // proto:  bool QFutureWatcherBase::event(QEvent * event);
+impl /*struct*/ QFutureWatcherBase {
+  pub fn event<RetType, T: QFutureWatcherBase_event<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.event(self);
+    // return 1;
+  }
+}
+
+pub trait QFutureWatcherBase_event<RetType> {
+  fn event(self , rsthis: & QFutureWatcherBase) -> RetType;
+}
+
+  // proto:  bool QFutureWatcherBase::event(QEvent * event);
+impl<'a> /*trait*/ QFutureWatcherBase_event<i8> for (&'a QEvent) {
+  fn event(self , rsthis: & QFutureWatcherBase) -> i8 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN18QFutureWatcherBase5eventEP6QEvent()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZN18QFutureWatcherBase5eventEP6QEvent(rsthis.qclsinst, arg0)};
+    return ret as i8;
     // return 1;
   }
 }
@@ -568,28 +568,6 @@ impl<'a> /*trait*/ QFutureWatcherBase_resumed<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QFutureWatcherBase7resumedEv()};
      unsafe {_ZN18QFutureWatcherBase7resumedEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QFutureWatcherBase::cancel();
-impl /*struct*/ QFutureWatcherBase {
-  pub fn cancel<RetType, T: QFutureWatcherBase_cancel<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.cancel(self);
-    // return 1;
-  }
-}
-
-pub trait QFutureWatcherBase_cancel<RetType> {
-  fn cancel(self , rsthis: & QFutureWatcherBase) -> RetType;
-}
-
-  // proto:  void QFutureWatcherBase::cancel();
-impl<'a> /*trait*/ QFutureWatcherBase_cancel<()> for () {
-  fn cancel(self , rsthis: & QFutureWatcherBase) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QFutureWatcherBase6cancelEv()};
-     unsafe {_ZN18QFutureWatcherBase6cancelEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -725,10 +703,13 @@ pub trait QFutureWatcherBase_New {
   // proto:  void QFutureWatcherBase::QFutureWatcherBase(QObject * parent);
 impl<'a> /*trait*/ QFutureWatcherBase_New for (&'a QObject) {
   fn New(self) -> QFutureWatcherBase {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QFutureWatcherBaseC1EP7QObject()};
+    let ctysz: c_int = unsafe{QFutureWatcherBase_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN18QFutureWatcherBaseC1EP7QObject(qthis, arg0)};
+    // unsafe {_ZN18QFutureWatcherBaseC1EP7QObject(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN18QFutureWatcherBaseC1EP7QObject(arg0)};
     let rsthis = QFutureWatcherBase{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -753,6 +734,29 @@ impl<'a> /*trait*/ QFutureWatcherBase_togglePaused<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QFutureWatcherBase12togglePausedEv()};
      unsafe {_ZN18QFutureWatcherBase12togglePausedEv(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
+  // proto:  bool QFutureWatcherBase::isCanceled();
+impl /*struct*/ QFutureWatcherBase {
+  pub fn isCanceled<RetType, T: QFutureWatcherBase_isCanceled<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.isCanceled(self);
+    // return 1;
+  }
+}
+
+pub trait QFutureWatcherBase_isCanceled<RetType> {
+  fn isCanceled(self , rsthis: & QFutureWatcherBase) -> RetType;
+}
+
+  // proto:  bool QFutureWatcherBase::isCanceled();
+impl<'a> /*trait*/ QFutureWatcherBase_isCanceled<i8> for () {
+  fn isCanceled(self , rsthis: & QFutureWatcherBase) -> i8 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK18QFutureWatcherBase10isCanceledEv()};
+    let mut ret = unsafe {_ZNK18QFutureWatcherBase10isCanceledEv(rsthis.qclsinst)};
+    return ret as i8;
     // return 1;
   }
 }

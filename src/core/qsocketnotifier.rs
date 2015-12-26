@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtCore/qsocketnotifier.h
 // dst-file: /src/core/qsocketnotifier.rs
 //
@@ -26,11 +26,12 @@ use std::ops::Deref;
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QSocketNotifier_Class_Size() -> c_int;
   // proto:  void QSocketNotifier::QSocketNotifier(const QSocketNotifier & );
+  fn dector_ZN15QSocketNotifierC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN15QSocketNotifierC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  qintptr QSocketNotifier::socket();
   fn _ZNK15QSocketNotifier6socketEv(qthis: *mut c_void) -> c_int;
@@ -84,10 +85,13 @@ pub trait QSocketNotifier_New {
   // proto:  void QSocketNotifier::QSocketNotifier(const QSocketNotifier & );
 impl<'a> /*trait*/ QSocketNotifier_New for (&'a QSocketNotifier) {
   fn New(self) -> QSocketNotifier {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSocketNotifierC1ERKS_()};
+    let ctysz: c_int = unsafe{QSocketNotifier_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN15QSocketNotifierC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN15QSocketNotifierC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN15QSocketNotifierC1ERKS_(arg0)};
     let rsthis = QSocketNotifier{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

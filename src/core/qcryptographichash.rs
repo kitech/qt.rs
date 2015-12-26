@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtCore/qcryptographichash.h
 // dst-file: /src/core/qcryptographichash.rs
 //
@@ -27,10 +27,10 @@ use super::qbytearray::QByteArray; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QCryptographicHash_Class_Size() -> c_int;
   // proto:  bool QCryptographicHash::addData(QIODevice * device);
   fn _ZN18QCryptographicHash7addDataEP9QIODevice(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  void QCryptographicHash::~QCryptographicHash();
@@ -44,6 +44,7 @@ extern {
   // proto:  void QCryptographicHash::addData(const QByteArray & data);
   fn _ZN18QCryptographicHash7addDataERK10QByteArray(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QCryptographicHash::QCryptographicHash(const QCryptographicHash & );
+  fn dector_ZN18QCryptographicHashC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN18QCryptographicHashC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
 } // <= ext block end
 
@@ -190,10 +191,13 @@ pub trait QCryptographicHash_New {
   // proto:  void QCryptographicHash::QCryptographicHash(const QCryptographicHash & );
 impl<'a> /*trait*/ QCryptographicHash_New for (&'a QCryptographicHash) {
   fn New(self) -> QCryptographicHash {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCryptographicHashC1ERKS_()};
+    let ctysz: c_int = unsafe{QCryptographicHash_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN18QCryptographicHashC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN18QCryptographicHashC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN18QCryptographicHashC1ERKS_(arg0)};
     let rsthis = QCryptographicHash{qclsinst: qthis};
     return rsthis;
     // return 1;

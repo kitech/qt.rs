@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtCore/qelapsedtimer.h
 // dst-file: /src/core/qelapsedtimer.rs
 //
@@ -25,10 +25,10 @@ use std::ops::Deref;
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QElapsedTimer_Class_Size() -> c_int;
   // proto:  void QElapsedTimer::start();
   fn _ZN13QElapsedTimer5startEv(qthis: *mut c_void);
   // proto:  qint64 QElapsedTimer::nsecsElapsed();
@@ -37,8 +37,6 @@ extern {
   fn _ZN13QElapsedTimer10invalidateEv(qthis: *mut c_void);
   // proto: static bool QElapsedTimer::isMonotonic();
   fn _ZN13QElapsedTimer11isMonotonicEv() -> c_char;
-  // proto:  void QElapsedTimer::QElapsedTimer();
-  fn _ZN13QElapsedTimerC1Ev(qthis: *mut c_void);
   // proto:  qint64 QElapsedTimer::msecsTo(const QElapsedTimer & other);
   fn _ZNK13QElapsedTimer7msecsToERKS_(qthis: *mut c_void, arg0: *mut c_void) -> c_longlong;
   // proto:  qint64 QElapsedTimer::msecsSinceReference();
@@ -153,31 +151,6 @@ impl<'a> /*trait*/ QElapsedTimer_isMonotonic_s<i8> for () {
     // unsafe{_ZN13QElapsedTimer11isMonotonicEv()};
     let mut ret = unsafe {_ZN13QElapsedTimer11isMonotonicEv()};
     return ret as i8;
-    // return 1;
-  }
-}
-
-  // proto:  void QElapsedTimer::QElapsedTimer();
-impl /*struct*/ QElapsedTimer {
-  pub fn New<T: QElapsedTimer_New>(value: T) -> QElapsedTimer {
-    let rsthis = value.New();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QElapsedTimer_New {
-  fn New(self) -> QElapsedTimer;
-}
-
-  // proto:  void QElapsedTimer::QElapsedTimer();
-impl<'a> /*trait*/ QElapsedTimer_New for () {
-  fn New(self) -> QElapsedTimer {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QElapsedTimerC1Ev()};
-    unsafe {_ZN13QElapsedTimerC1Ev(qthis)};
-    let rsthis = QElapsedTimer{qclsinst: qthis};
-    return rsthis;
     // return 1;
   }
 }

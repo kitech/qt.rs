@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtCore/qstringlistmodel.h
 // dst-file: /src/core/qstringlistmodel.rs
 //
@@ -30,11 +30,12 @@ use super::qvariant::QVariant; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QStringListModel_Class_Size() -> c_int;
   // proto:  void QStringListModel::QStringListModel(const QStringList & strings, QObject * parent);
+  fn dector_ZN16QStringListModelC1ERK11QStringListP7QObject(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   fn _ZN16QStringListModelC1ERK11QStringListP7QObject(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  bool QStringListModel::insertRows(int row, int count, const QModelIndex & parent);
   fn _ZN16QStringListModel10insertRowsEiiRK11QModelIndex(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_void) -> c_char;
@@ -47,8 +48,10 @@ extern {
   // proto:  bool QStringListModel::removeRows(int row, int count, const QModelIndex & parent);
   fn _ZN16QStringListModel10removeRowsEiiRK11QModelIndex(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_void) -> c_char;
   // proto:  void QStringListModel::QStringListModel(QObject * parent);
+  fn dector_ZN16QStringListModelC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
   fn _ZN16QStringListModelC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QStringListModel::QStringListModel(const QStringListModel & );
+  fn dector_ZN16QStringListModelC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN16QStringListModelC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QStringListModel::setData(const QModelIndex & index, const QVariant & value, int role);
   fn _ZN16QStringListModel7setDataERK11QModelIndexRK8QVarianti(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: c_int) -> c_char;
@@ -100,11 +103,14 @@ pub trait QStringListModel_New {
   // proto:  void QStringListModel::QStringListModel(const QStringList & strings, QObject * parent);
 impl<'a> /*trait*/ QStringListModel_New for (&'a QStringList, &'a QObject) {
   fn New(self) -> QStringListModel {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QStringListModelC1ERK11QStringListP7QObject()};
+    let ctysz: c_int = unsafe{QStringListModel_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    unsafe {_ZN16QStringListModelC1ERK11QStringListP7QObject(qthis, arg0, arg1)};
+    // unsafe {_ZN16QStringListModelC1ERK11QStringListP7QObject(qthis, arg0, arg1)};
+    let qthis: *mut c_void = unsafe {dector_ZN16QStringListModelC1ERK11QStringListP7QObject(arg0, arg1)};
     let rsthis = QStringListModel{/**/qbase: QAbstractListModel::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -236,10 +242,13 @@ impl<'a> /*trait*/ QStringListModel_removeRows<i8> for (i32, i32, &'a QModelInde
   // proto:  void QStringListModel::QStringListModel(QObject * parent);
 impl<'a> /*trait*/ QStringListModel_New for (&'a QObject) {
   fn New(self) -> QStringListModel {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QStringListModelC1EP7QObject()};
+    let ctysz: c_int = unsafe{QStringListModel_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN16QStringListModelC1EP7QObject(qthis, arg0)};
+    // unsafe {_ZN16QStringListModelC1EP7QObject(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN16QStringListModelC1EP7QObject(arg0)};
     let rsthis = QStringListModel{/**/qbase: QAbstractListModel::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -249,10 +258,13 @@ impl<'a> /*trait*/ QStringListModel_New for (&'a QObject) {
   // proto:  void QStringListModel::QStringListModel(const QStringListModel & );
 impl<'a> /*trait*/ QStringListModel_New for (&'a QStringListModel) {
   fn New(self) -> QStringListModel {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QStringListModelC1ERKS_()};
+    let ctysz: c_int = unsafe{QStringListModel_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN16QStringListModelC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN16QStringListModelC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN16QStringListModelC1ERKS_(arg0)};
     let rsthis = QStringListModel{/**/qbase: QAbstractListModel::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

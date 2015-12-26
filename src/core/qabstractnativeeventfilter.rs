@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtCore/qabstractnativeeventfilter.h
 // dst-file: /src/core/qabstractnativeeventfilter.rs
 //
@@ -26,13 +26,14 @@ use super::qbytearray::QByteArray; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QAbstractNativeEventFilter_Class_Size() -> c_int;
   // proto:  bool QAbstractNativeEventFilter::nativeEventFilter(const QByteArray & eventType, void * message, long * result);
   fn _ZN26QAbstractNativeEventFilter17nativeEventFilterERK10QByteArrayPvPl(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_long) -> c_char;
   // proto:  void QAbstractNativeEventFilter::QAbstractNativeEventFilter();
+  fn dector_ZN26QAbstractNativeEventFilterC1Ev() -> *mut c_void;
   fn _ZN26QAbstractNativeEventFilterC1Ev(qthis: *mut c_void);
   // proto:  void QAbstractNativeEventFilter::~QAbstractNativeEventFilter();
   fn _ZN26QAbstractNativeEventFilterD0Ev(qthis: *mut c_void);
@@ -92,9 +93,12 @@ pub trait QAbstractNativeEventFilter_New {
   // proto:  void QAbstractNativeEventFilter::QAbstractNativeEventFilter();
 impl<'a> /*trait*/ QAbstractNativeEventFilter_New for () {
   fn New(self) -> QAbstractNativeEventFilter {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QAbstractNativeEventFilterC1Ev()};
-    unsafe {_ZN26QAbstractNativeEventFilterC1Ev(qthis)};
+    let ctysz: c_int = unsafe{QAbstractNativeEventFilter_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN26QAbstractNativeEventFilterC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN26QAbstractNativeEventFilterC1Ev()};
     let rsthis = QAbstractNativeEventFilter{qclsinst: qthis};
     return rsthis;
     // return 1;

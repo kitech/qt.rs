@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtCore/qstorageinfo.h
 // dst-file: /src/core/qstorageinfo.rs
 //
@@ -28,13 +28,14 @@ use super::qdir::QDir; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QStorageInfo_Class_Size() -> c_int;
   // proto:  qint64 QStorageInfo::bytesFree();
   fn _ZNK12QStorageInfo9bytesFreeEv(qthis: *mut c_void) -> c_longlong;
   // proto:  void QStorageInfo::QStorageInfo(const QStorageInfo & other);
+  fn dector_ZN12QStorageInfoC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN12QStorageInfoC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QStorageInfo::isRoot();
   fn _ZNK12QStorageInfo6isRootEv(qthis: *mut c_void) -> c_char;
@@ -63,19 +64,20 @@ extern {
   // proto:  qint64 QStorageInfo::bytesAvailable();
   fn _ZNK12QStorageInfo14bytesAvailableEv(qthis: *mut c_void) -> c_longlong;
   // proto:  void QStorageInfo::QStorageInfo();
+  fn dector_ZN12QStorageInfoC1Ev() -> *mut c_void;
   fn _ZN12QStorageInfoC1Ev(qthis: *mut c_void);
   // proto:  void QStorageInfo::QStorageInfo(const QDir & dir);
+  fn dector_ZN12QStorageInfoC1ERK4QDir(arg0: *mut c_void) -> *mut c_void;
   fn _ZN12QStorageInfoC1ERK4QDir(qthis: *mut c_void, arg0: *mut c_void);
   // proto: static QStorageInfo QStorageInfo::root();
   fn _ZN12QStorageInfo4rootEv() -> *mut c_void;
   // proto:  void QStorageInfo::QStorageInfo(const QString & path);
+  fn dector_ZN12QStorageInfoC1ERK7QString(arg0: *mut c_void) -> *mut c_void;
   fn _ZN12QStorageInfoC1ERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QByteArray QStorageInfo::device();
   fn _ZNK12QStorageInfo6deviceEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QString QStorageInfo::displayName();
   fn _ZNK12QStorageInfo11displayNameEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QStorageInfo::swap(QStorageInfo & other);
-  fn _ZN12QStorageInfo4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -129,10 +131,13 @@ pub trait QStorageInfo_New {
   // proto:  void QStorageInfo::QStorageInfo(const QStorageInfo & other);
 impl<'a> /*trait*/ QStorageInfo_New for (&'a QStorageInfo) {
   fn New(self) -> QStorageInfo {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QStorageInfoC1ERKS_()};
+    let ctysz: c_int = unsafe{QStorageInfo_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN12QStorageInfoC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN12QStorageInfoC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN12QStorageInfoC1ERKS_(arg0)};
     let rsthis = QStorageInfo{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -441,9 +446,12 @@ impl<'a> /*trait*/ QStorageInfo_bytesAvailable<i64> for () {
   // proto:  void QStorageInfo::QStorageInfo();
 impl<'a> /*trait*/ QStorageInfo_New for () {
   fn New(self) -> QStorageInfo {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QStorageInfoC1Ev()};
-    unsafe {_ZN12QStorageInfoC1Ev(qthis)};
+    let ctysz: c_int = unsafe{QStorageInfo_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN12QStorageInfoC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN12QStorageInfoC1Ev()};
     let rsthis = QStorageInfo{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -453,10 +461,13 @@ impl<'a> /*trait*/ QStorageInfo_New for () {
   // proto:  void QStorageInfo::QStorageInfo(const QDir & dir);
 impl<'a> /*trait*/ QStorageInfo_New for (&'a QDir) {
   fn New(self) -> QStorageInfo {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QStorageInfoC1ERK4QDir()};
+    let ctysz: c_int = unsafe{QStorageInfo_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN12QStorageInfoC1ERK4QDir(qthis, arg0)};
+    // unsafe {_ZN12QStorageInfoC1ERK4QDir(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN12QStorageInfoC1ERK4QDir(arg0)};
     let rsthis = QStorageInfo{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -490,10 +501,13 @@ impl<'a> /*trait*/ QStorageInfo_root_s<QStorageInfo> for () {
   // proto:  void QStorageInfo::QStorageInfo(const QString & path);
 impl<'a> /*trait*/ QStorageInfo_New for (&'a QString) {
   fn New(self) -> QStorageInfo {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QStorageInfoC1ERK7QString()};
+    let ctysz: c_int = unsafe{QStorageInfo_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN12QStorageInfoC1ERK7QString(qthis, arg0)};
+    // unsafe {_ZN12QStorageInfoC1ERK7QString(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN12QStorageInfoC1ERK7QString(arg0)};
     let rsthis = QStorageInfo{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -544,29 +558,6 @@ impl<'a> /*trait*/ QStorageInfo_displayName<QString> for () {
     let mut ret = unsafe {_ZNK12QStorageInfo11displayNameEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QStorageInfo::swap(QStorageInfo & other);
-impl /*struct*/ QStorageInfo {
-  pub fn swap<RetType, T: QStorageInfo_swap<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.swap(self);
-    // return 1;
-  }
-}
-
-pub trait QStorageInfo_swap<RetType> {
-  fn swap(self , rsthis: & QStorageInfo) -> RetType;
-}
-
-  // proto:  void QStorageInfo::swap(QStorageInfo & other);
-impl<'a> /*trait*/ QStorageInfo_swap<()> for (&'a QStorageInfo) {
-  fn swap(self , rsthis: & QStorageInfo) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QStorageInfo4swapERS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN12QStorageInfo4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
