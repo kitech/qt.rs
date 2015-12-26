@@ -8,6 +8,8 @@
 #![allow(unused_mut)]
 #![allow(unused_attributes)]
 #![allow(unused_imports)]
+#![allow(unused_variables)]
+#![allow(dead_code)]
 
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
