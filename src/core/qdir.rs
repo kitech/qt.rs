@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtCore/qdir.h
 // dst-file: /src/core/qdir.rs
 //
@@ -34,6 +34,8 @@ extern {
   fn QDir_Class_Size() -> c_int;
   // proto: static void QDir::addResourceSearchPath(const QString & path);
   fn _ZN4QDir21addResourceSearchPathERK7QString(arg0: *mut c_void);
+  // proto: static bool QDir::isAbsolutePath(const QString & path);
+  fn _ZN4QDir14isAbsolutePathERK7QString(arg0: *mut c_void) -> c_char;
   // proto:  QString QDir::relativeFilePath(const QString & fileName);
   fn _ZNK4QDir16relativeFilePathERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto: static QString QDir::tempPath();
@@ -69,6 +71,8 @@ extern {
   fn _ZNK4QDir5mkdirERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  uint QDir::count();
   fn _ZNK4QDir5countEv(qthis: *mut c_void) -> c_uint;
+  // proto: static QDir QDir::root();
+  fn _ZN4QDir4rootEv() -> *mut c_void;
   // proto: static QStringList QDir::nameFiltersFromString(const QString & nameFilter);
   fn _ZN4QDir21nameFiltersFromStringERK7QString(arg0: *mut c_void);
   // proto:  QString QDir::filePath(const QString & fileName);
@@ -89,14 +93,22 @@ extern {
   fn _ZN4QDirD0Ev(qthis: *mut c_void);
   // proto: static QString QDir::rootPath();
   fn _ZN4QDir8rootPathEv() -> *mut c_void;
+  // proto: static QDir QDir::current();
+  fn _ZN4QDir7currentEv() -> *mut c_void;
   // proto: static bool QDir::match(const QStringList & filters, const QString & fileName);
   fn _ZN4QDir5matchERK11QStringListRK7QString(arg0: *mut c_void, arg1: *mut c_void) -> c_char;
   // proto: static QString QDir::fromNativeSeparators(const QString & pathName);
   fn _ZN4QDir20fromNativeSeparatorsERK7QString(arg0: *mut c_void) -> *mut c_void;
+  // proto: static QDir QDir::home();
+  fn _ZN4QDir4homeEv() -> *mut c_void;
   // proto:  void QDir::setNameFilters(const QStringList & nameFilters);
   fn _ZN4QDir14setNameFiltersERK11QStringList(qthis: *mut c_void, arg0: *mut c_void);
   // proto: static QChar QDir::separator();
   fn _ZN4QDir9separatorEv() -> *mut c_void;
+  // proto:  void QDir::swap(QDir & other);
+  fn _ZN4QDir4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
+  // proto: static QDir QDir::temp();
+  fn _ZN4QDir4tempEv() -> *mut c_void;
   // proto:  bool QDir::exists(const QString & name);
   fn _ZNK4QDir6existsERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  bool QDir::mkpath(const QString & dirPath);
@@ -121,6 +133,8 @@ extern {
   fn _ZNK4QDir6isRootEv(qthis: *mut c_void) -> c_char;
   // proto:  bool QDir::removeRecursively();
   fn _ZN4QDir17removeRecursivelyEv(qthis: *mut c_void) -> c_char;
+  // proto:  bool QDir::isAbsolute();
+  fn _ZNK4QDir10isAbsoluteEv(qthis: *mut c_void) -> c_char;
   // proto: static QString QDir::homePath();
   fn _ZN4QDir8homePathEv() -> *mut c_void;
   // proto:  void QDir::QDir(const QDir & );
@@ -163,6 +177,30 @@ impl<'a> /*trait*/ QDir_addResourceSearchPath_s<()> for (&'a QString) {
     // unsafe{_ZN4QDir21addResourceSearchPathERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
      unsafe {_ZN4QDir21addResourceSearchPathERK7QString(arg0)};
+    // return 1;
+  }
+}
+
+  // proto: static bool QDir::isAbsolutePath(const QString & path);
+impl /*struct*/ QDir {
+  pub fn isAbsolutePath_s<RetType, T: QDir_isAbsolutePath_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.isAbsolutePath_s();
+    // return 1;
+  }
+}
+
+pub trait QDir_isAbsolutePath_s<RetType> {
+  fn isAbsolutePath_s(self ) -> RetType;
+}
+
+  // proto: static bool QDir::isAbsolutePath(const QString & path);
+impl<'a> /*trait*/ QDir_isAbsolutePath_s<i8> for (&'a QString) {
+  fn isAbsolutePath_s(self ) -> i8 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN4QDir14isAbsolutePathERK7QString()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZN4QDir14isAbsolutePathERK7QString(arg0)};
+    return ret as i8;
     // return 1;
   }
 }
@@ -576,6 +614,30 @@ impl<'a> /*trait*/ QDir_count<u32> for () {
   }
 }
 
+  // proto: static QDir QDir::root();
+impl /*struct*/ QDir {
+  pub fn root_s<RetType, T: QDir_root_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.root_s();
+    // return 1;
+  }
+}
+
+pub trait QDir_root_s<RetType> {
+  fn root_s(self ) -> RetType;
+}
+
+  // proto: static QDir QDir::root();
+impl<'a> /*trait*/ QDir_root_s<QDir> for () {
+  fn root_s(self ) -> QDir {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN4QDir4rootEv()};
+    let mut ret = unsafe {_ZN4QDir4rootEv()};
+    let mut ret1 = QDir::inheritFrom(ret);
+    return ret1;
+    // return 1;
+  }
+}
+
   // proto: static QStringList QDir::nameFiltersFromString(const QString & nameFilter);
 impl /*struct*/ QDir {
   pub fn nameFiltersFromString_s<RetType, T: QDir_nameFiltersFromString_s<RetType>>( overload_args: T) -> RetType {
@@ -815,6 +877,30 @@ impl<'a> /*trait*/ QDir_rootPath_s<QString> for () {
   }
 }
 
+  // proto: static QDir QDir::current();
+impl /*struct*/ QDir {
+  pub fn current_s<RetType, T: QDir_current_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.current_s();
+    // return 1;
+  }
+}
+
+pub trait QDir_current_s<RetType> {
+  fn current_s(self ) -> RetType;
+}
+
+  // proto: static QDir QDir::current();
+impl<'a> /*trait*/ QDir_current_s<QDir> for () {
+  fn current_s(self ) -> QDir {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN4QDir7currentEv()};
+    let mut ret = unsafe {_ZN4QDir7currentEv()};
+    let mut ret1 = QDir::inheritFrom(ret);
+    return ret1;
+    // return 1;
+  }
+}
+
   // proto: static bool QDir::match(const QStringList & filters, const QString & fileName);
 impl<'a> /*trait*/ QDir_match_s<i8> for (&'a QStringList, &'a QString) {
   fn match_s(self ) -> i8 {
@@ -848,6 +934,30 @@ impl<'a> /*trait*/ QDir_fromNativeSeparators_s<QString> for (&'a QString) {
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN4QDir20fromNativeSeparatorsERK7QString(arg0)};
     let mut ret1 = QString::inheritFrom(ret);
+    return ret1;
+    // return 1;
+  }
+}
+
+  // proto: static QDir QDir::home();
+impl /*struct*/ QDir {
+  pub fn home_s<RetType, T: QDir_home_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.home_s();
+    // return 1;
+  }
+}
+
+pub trait QDir_home_s<RetType> {
+  fn home_s(self ) -> RetType;
+}
+
+  // proto: static QDir QDir::home();
+impl<'a> /*trait*/ QDir_home_s<QDir> for () {
+  fn home_s(self ) -> QDir {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN4QDir4homeEv()};
+    let mut ret = unsafe {_ZN4QDir4homeEv()};
+    let mut ret1 = QDir::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -895,6 +1005,53 @@ impl<'a> /*trait*/ QDir_separator_s<QChar> for () {
     // unsafe{_ZN4QDir9separatorEv()};
     let mut ret = unsafe {_ZN4QDir9separatorEv()};
     let mut ret1 = QChar::inheritFrom(ret);
+    return ret1;
+    // return 1;
+  }
+}
+
+  // proto:  void QDir::swap(QDir & other);
+impl /*struct*/ QDir {
+  pub fn swap<RetType, T: QDir_swap<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.swap(self);
+    // return 1;
+  }
+}
+
+pub trait QDir_swap<RetType> {
+  fn swap(self , rsthis: & QDir) -> RetType;
+}
+
+  // proto:  void QDir::swap(QDir & other);
+impl<'a> /*trait*/ QDir_swap<()> for (&'a QDir) {
+  fn swap(self , rsthis: & QDir) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN4QDir4swapERS_()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN4QDir4swapERS_(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
+  // proto: static QDir QDir::temp();
+impl /*struct*/ QDir {
+  pub fn temp_s<RetType, T: QDir_temp_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.temp_s();
+    // return 1;
+  }
+}
+
+pub trait QDir_temp_s<RetType> {
+  fn temp_s(self ) -> RetType;
+}
+
+  // proto: static QDir QDir::temp();
+impl<'a> /*trait*/ QDir_temp_s<QDir> for () {
+  fn temp_s(self ) -> QDir {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN4QDir4tempEv()};
+    let mut ret = unsafe {_ZN4QDir4tempEv()};
+    let mut ret1 = QDir::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1165,6 +1322,29 @@ impl<'a> /*trait*/ QDir_removeRecursively<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QDir17removeRecursivelyEv()};
     let mut ret = unsafe {_ZN4QDir17removeRecursivelyEv(rsthis.qclsinst)};
+    return ret as i8;
+    // return 1;
+  }
+}
+
+  // proto:  bool QDir::isAbsolute();
+impl /*struct*/ QDir {
+  pub fn isAbsolute<RetType, T: QDir_isAbsolute<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.isAbsolute(self);
+    // return 1;
+  }
+}
+
+pub trait QDir_isAbsolute<RetType> {
+  fn isAbsolute(self , rsthis: & QDir) -> RetType;
+}
+
+  // proto:  bool QDir::isAbsolute();
+impl<'a> /*trait*/ QDir_isAbsolute<i8> for () {
+  fn isAbsolute(self , rsthis: & QDir) -> i8 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK4QDir10isAbsoluteEv()};
+    let mut ret = unsafe {_ZNK4QDir10isAbsoluteEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }

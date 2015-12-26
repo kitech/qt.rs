@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtCore/qregexp.h
 // dst-file: /src/core/qregexp.rs
 //
@@ -55,6 +55,8 @@ extern {
   fn _ZN7QRegExpD0Ev(qthis: *mut c_void);
   // proto:  bool QRegExp::exactMatch(const QString & str);
   fn _ZNK7QRegExp10exactMatchERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  // proto:  void QRegExp::swap(QRegExp & other);
+  fn _ZN7QRegExp4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QRegExp::pos(int nth);
   fn _ZN7QRegExp3posEi(qthis: *mut c_void, arg0: c_int) -> c_int;
   // proto:  void QRegExp::QRegExp();
@@ -360,6 +362,29 @@ impl<'a> /*trait*/ QRegExp_exactMatch<i8> for (&'a QString) {
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QRegExp10exactMatchERK7QString(rsthis.qclsinst, arg0)};
     return ret as i8;
+    // return 1;
+  }
+}
+
+  // proto:  void QRegExp::swap(QRegExp & other);
+impl /*struct*/ QRegExp {
+  pub fn swap<RetType, T: QRegExp_swap<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.swap(self);
+    // return 1;
+  }
+}
+
+pub trait QRegExp_swap<RetType> {
+  fn swap(self , rsthis: & QRegExp) -> RetType;
+}
+
+  // proto:  void QRegExp::swap(QRegExp & other);
+impl<'a> /*trait*/ QRegExp_swap<()> for (&'a QRegExp) {
+  fn swap(self , rsthis: & QRegExp) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN7QRegExp4swapERS_()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN7QRegExp4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

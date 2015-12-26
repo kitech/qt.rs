@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtCore/qiodevice.h
 // dst-file: /src/core/qiodevice.rs
 //
@@ -20,8 +20,8 @@ use self::libc::*;
 // use block begin =>
 use super::qobject::QObject; // 773
 use std::ops::Deref;
-use super::qbytearray::QByteArray; // 773
 use super::qstring::QString; // 773
+use super::qbytearray::QByteArray; // 773
 // <= use block end
 
 // ext block begin =>
@@ -34,6 +34,10 @@ extern {
   fn QIODevice_Class_Size() -> c_int;
   // proto:  void QIODevice::ungetChar(char c);
   fn _ZN9QIODevice9ungetCharEc(qthis: *mut c_void, arg0: c_char);
+  // proto:  QString QIODevice::errorString();
+  fn _ZNK9QIODevice11errorStringEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  qint64 QIODevice::write(const QByteArray & data);
+  fn _ZN9QIODevice5writeERK10QByteArray(qthis: *mut c_void, arg0: *mut c_void) -> c_longlong;
   // proto:  qint64 QIODevice::write(const char * data);
   fn _ZN9QIODevice5writeEPKc(qthis: *mut c_void, arg0: *mut c_char) -> c_longlong;
   // proto:  bool QIODevice::isReadable();
@@ -93,8 +97,6 @@ extern {
   fn _ZN9QIODevice5resetEv(qthis: *mut c_void) -> c_char;
   // proto:  bool QIODevice::isWritable();
   fn _ZNK9QIODevice10isWritableEv(qthis: *mut c_void) -> c_char;
-  // proto:  QString QIODevice::errorString();
-  fn _ZNK9QIODevice11errorStringEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QByteArray QIODevice::peek(qint64 maxlen);
   fn _ZN9QIODevice4peekEx(qthis: *mut c_void, arg0: c_longlong) -> *mut c_void;
   // proto:  void QIODevice::QIODevice(QObject * parent);
@@ -162,7 +164,31 @@ impl<'a> /*trait*/ QIODevice_ungetChar<()> for (i8) {
   }
 }
 
-  // proto:  qint64 QIODevice::write(const char * data);
+  // proto:  QString QIODevice::errorString();
+impl /*struct*/ QIODevice {
+  pub fn errorString<RetType, T: QIODevice_errorString<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.errorString(self);
+    // return 1;
+  }
+}
+
+pub trait QIODevice_errorString<RetType> {
+  fn errorString(self , rsthis: & QIODevice) -> RetType;
+}
+
+  // proto:  QString QIODevice::errorString();
+impl<'a> /*trait*/ QIODevice_errorString<QString> for () {
+  fn errorString(self , rsthis: & QIODevice) -> QString {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK9QIODevice11errorStringEv()};
+    let mut ret = unsafe {_ZNK9QIODevice11errorStringEv(rsthis.qclsinst)};
+    let mut ret1 = QString::inheritFrom(ret);
+    return ret1;
+    // return 1;
+  }
+}
+
+  // proto:  qint64 QIODevice::write(const QByteArray & data);
 impl /*struct*/ QIODevice {
   pub fn write<RetType, T: QIODevice_write<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.write(self);
@@ -172,6 +198,18 @@ impl /*struct*/ QIODevice {
 
 pub trait QIODevice_write<RetType> {
   fn write(self , rsthis: & QIODevice) -> RetType;
+}
+
+  // proto:  qint64 QIODevice::write(const QByteArray & data);
+impl<'a> /*trait*/ QIODevice_write<i64> for (&'a QByteArray) {
+  fn write(self , rsthis: & QIODevice) -> i64 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN9QIODevice5writeERK10QByteArray()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZN9QIODevice5writeERK10QByteArray(rsthis.qclsinst, arg0)};
+    return ret as i64;
+    // return 1;
+  }
 }
 
   // proto:  qint64 QIODevice::write(const char * data);
@@ -810,30 +848,6 @@ impl<'a> /*trait*/ QIODevice_isWritable<i8> for () {
     // unsafe{_ZNK9QIODevice10isWritableEv()};
     let mut ret = unsafe {_ZNK9QIODevice10isWritableEv(rsthis.qclsinst)};
     return ret as i8;
-    // return 1;
-  }
-}
-
-  // proto:  QString QIODevice::errorString();
-impl /*struct*/ QIODevice {
-  pub fn errorString<RetType, T: QIODevice_errorString<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.errorString(self);
-    // return 1;
-  }
-}
-
-pub trait QIODevice_errorString<RetType> {
-  fn errorString(self , rsthis: & QIODevice) -> RetType;
-}
-
-  // proto:  QString QIODevice::errorString();
-impl<'a> /*trait*/ QIODevice_errorString<QString> for () {
-  fn errorString(self , rsthis: & QIODevice) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QIODevice11errorStringEv()};
-    let mut ret = unsafe {_ZNK9QIODevice11errorStringEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
-    return ret1;
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtCore/qlocale.h
 // dst-file: /src/core/qlocale.rs
 //
@@ -49,6 +49,8 @@ extern {
   fn _ZNK7QLocale16toCurrencyStringExRK7QString(qthis: *mut c_void, arg0: c_longlong, arg1: *mut c_void) -> *mut c_void;
   // proto:  float QLocale::toFloat(const QString & s, bool * ok);
   fn _ZNK7QLocale7toFloatERK7QStringPb(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_char) -> c_float;
+  // proto: static QLocale QLocale::c();
+  fn _ZN7QLocale1cEv() -> *mut c_void;
   // proto:  QString QLocale::toCurrencyString(uint , const QString & symbol);
   fn _ZNK7QLocale16toCurrencyStringEjRK7QString(qthis: *mut c_void, arg0: c_uint, arg1: *mut c_void) -> *mut c_void;
   // proto:  QString QLocale::createSeparatedList(const QStringList & strl);
@@ -326,6 +328,30 @@ impl<'a> /*trait*/ QLocale_toFloat<f32> for (&'a QString, &'a mut Vec<i8>) {
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZNK7QLocale7toFloatERK7QStringPb(rsthis.qclsinst, arg0, arg1)};
     return ret as f32;
+    // return 1;
+  }
+}
+
+  // proto: static QLocale QLocale::c();
+impl /*struct*/ QLocale {
+  pub fn c_s<RetType, T: QLocale_c_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.c_s();
+    // return 1;
+  }
+}
+
+pub trait QLocale_c_s<RetType> {
+  fn c_s(self ) -> RetType;
+}
+
+  // proto: static QLocale QLocale::c();
+impl<'a> /*trait*/ QLocale_c_s<QLocale> for () {
+  fn c_s(self ) -> QLocale {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN7QLocale1cEv()};
+    let mut ret = unsafe {_ZN7QLocale1cEv()};
+    let mut ret1 = QLocale::inheritFrom(ret);
+    return ret1;
     // return 1;
   }
 }

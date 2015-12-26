@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtCore/qstorageinfo.h
 // dst-file: /src/core/qstorageinfo.rs
 //
@@ -78,6 +78,8 @@ extern {
   fn _ZNK12QStorageInfo6deviceEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QString QStorageInfo::displayName();
   fn _ZNK12QStorageInfo11displayNameEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  void QStorageInfo::swap(QStorageInfo & other);
+  fn _ZN12QStorageInfo4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -558,6 +560,29 @@ impl<'a> /*trait*/ QStorageInfo_displayName<QString> for () {
     let mut ret = unsafe {_ZNK12QStorageInfo11displayNameEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret);
     return ret1;
+    // return 1;
+  }
+}
+
+  // proto:  void QStorageInfo::swap(QStorageInfo & other);
+impl /*struct*/ QStorageInfo {
+  pub fn swap<RetType, T: QStorageInfo_swap<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.swap(self);
+    // return 1;
+  }
+}
+
+pub trait QStorageInfo_swap<RetType> {
+  fn swap(self , rsthis: & QStorageInfo) -> RetType;
+}
+
+  // proto:  void QStorageInfo::swap(QStorageInfo & other);
+impl<'a> /*trait*/ QStorageInfo_swap<()> for (&'a QStorageInfo) {
+  fn swap(self , rsthis: & QStorageInfo) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN12QStorageInfo4swapERS_()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN12QStorageInfo4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

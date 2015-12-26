@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtCore/qprocess.h
 // dst-file: /src/core/qprocess.rs
 //
@@ -79,14 +79,14 @@ extern {
   fn _ZN8QProcessC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QString QProcess::program();
   fn _ZNK8QProcess7programEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  qint64 QProcess::processId();
+  fn _ZNK8QProcess9processIdEv(qthis: *mut c_void) -> c_longlong;
   // proto:  QStringList QProcess::arguments();
   fn _ZNK8QProcess9argumentsEv(qthis: *mut c_void);
   // proto:  bool QProcess::isSequential();
   fn _ZNK8QProcess12isSequentialEv(qthis: *mut c_void) -> c_char;
   // proto:  bool QProcess::waitForReadyRead(int msecs);
   fn _ZN8QProcess16waitForReadyReadEi(qthis: *mut c_void, arg0: c_int) -> c_char;
-  // proto:  qint64 QProcess::processId();
-  fn _ZNK8QProcess9processIdEv(qthis: *mut c_void) -> c_longlong;
   // proto:  void QProcess::setWorkingDirectory(const QString & dir);
   fn _ZN8QProcess19setWorkingDirectoryERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QProcess::terminate();
@@ -136,6 +136,8 @@ extern {
   fn _ZNK19QProcessEnvironment7isEmptyEv(qthis: *mut c_void) -> c_char;
   // proto:  void QProcessEnvironment::~QProcessEnvironment();
   fn _ZN19QProcessEnvironmentD0Ev(qthis: *mut c_void);
+  // proto:  void QProcessEnvironment::swap(QProcessEnvironment & other);
+  fn _ZN19QProcessEnvironment4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QProcessEnvironment::QProcessEnvironment(const QProcessEnvironment & other);
   fn dector_ZN19QProcessEnvironmentC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN19QProcessEnvironmentC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
@@ -639,6 +641,29 @@ impl<'a> /*trait*/ QProcess_program<QString> for () {
   }
 }
 
+  // proto:  qint64 QProcess::processId();
+impl /*struct*/ QProcess {
+  pub fn processId<RetType, T: QProcess_processId<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.processId(self);
+    // return 1;
+  }
+}
+
+pub trait QProcess_processId<RetType> {
+  fn processId(self , rsthis: & QProcess) -> RetType;
+}
+
+  // proto:  qint64 QProcess::processId();
+impl<'a> /*trait*/ QProcess_processId<i64> for () {
+  fn processId(self , rsthis: & QProcess) -> i64 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK8QProcess9processIdEv()};
+    let mut ret = unsafe {_ZNK8QProcess9processIdEv(rsthis.qclsinst)};
+    return ret as i64;
+    // return 1;
+  }
+}
+
   // proto:  QStringList QProcess::arguments();
 impl /*struct*/ QProcess {
   pub fn arguments<RetType, T: QProcess_arguments<RetType>>(& self,  overload_args: T) -> RetType {
@@ -704,29 +729,6 @@ impl<'a> /*trait*/ QProcess_waitForReadyRead<i8> for (i32) {
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZN8QProcess16waitForReadyReadEi(rsthis.qclsinst, arg0)};
     return ret as i8;
-    // return 1;
-  }
-}
-
-  // proto:  qint64 QProcess::processId();
-impl /*struct*/ QProcess {
-  pub fn processId<RetType, T: QProcess_processId<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.processId(self);
-    // return 1;
-  }
-}
-
-pub trait QProcess_processId<RetType> {
-  fn processId(self , rsthis: & QProcess) -> RetType;
-}
-
-  // proto:  qint64 QProcess::processId();
-impl<'a> /*trait*/ QProcess_processId<i64> for () {
-  fn processId(self , rsthis: & QProcess) -> i64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QProcess9processIdEv()};
-    let mut ret = unsafe {_ZNK8QProcess9processIdEv(rsthis.qclsinst)};
-    return ret as i64;
     // return 1;
   }
 }
@@ -1285,6 +1287,29 @@ impl<'a> /*trait*/ QProcessEnvironment_Free<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QProcessEnvironmentD0Ev()};
      unsafe {_ZN19QProcessEnvironmentD0Ev(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
+  // proto:  void QProcessEnvironment::swap(QProcessEnvironment & other);
+impl /*struct*/ QProcessEnvironment {
+  pub fn swap<RetType, T: QProcessEnvironment_swap<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.swap(self);
+    // return 1;
+  }
+}
+
+pub trait QProcessEnvironment_swap<RetType> {
+  fn swap(self , rsthis: & QProcessEnvironment) -> RetType;
+}
+
+  // proto:  void QProcessEnvironment::swap(QProcessEnvironment & other);
+impl<'a> /*trait*/ QProcessEnvironment_swap<()> for (&'a QProcessEnvironment) {
+  fn swap(self , rsthis: & QProcessEnvironment) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN19QProcessEnvironment4swapERS_()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN19QProcessEnvironment4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

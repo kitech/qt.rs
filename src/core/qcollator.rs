@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtCore/qcollator.h
 // dst-file: /src/core/qcollator.rs
 //
@@ -50,18 +50,22 @@ extern {
   fn _ZNK9QCollator7compareERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> c_int;
   // proto:  void QCollator::~QCollator();
   fn _ZN9QCollatorD0Ev(qthis: *mut c_void);
+  // proto:  bool QCollator::ignorePunctuation();
+  fn _ZNK9QCollator17ignorePunctuationEv(qthis: *mut c_void) -> c_char;
   // proto:  void QCollator::QCollator(const QCollator & );
   fn dector_ZN9QCollatorC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN9QCollatorC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QLocale QCollator::locale();
   fn _ZNK9QCollator6localeEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  void QCollator::swap(QCollator & other);
+  fn _ZN9QCollator4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QCollator::setIgnorePunctuation(bool on);
   fn _ZN9QCollator20setIgnorePunctuationEb(qthis: *mut c_void, arg0: c_char);
-  // proto:  bool QCollator::ignorePunctuation();
-  fn _ZNK9QCollator17ignorePunctuationEv(qthis: *mut c_void) -> c_char;
   fn QCollatorSortKey_Class_Size() -> c_int;
   // proto:  void QCollatorSortKey::~QCollatorSortKey();
   fn _ZN16QCollatorSortKeyD0Ev(qthis: *mut c_void);
+  // proto:  void QCollatorSortKey::swap(QCollatorSortKey & other);
+  fn _ZN16QCollatorSortKey4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QCollatorSortKey::compare(const QCollatorSortKey & key);
   fn _ZNK16QCollatorSortKey7compareERKS_(qthis: *mut c_void, arg0: *mut c_void) -> c_int;
   // proto:  void QCollatorSortKey::QCollatorSortKey(const QCollatorSortKey & other);
@@ -275,6 +279,29 @@ impl<'a> /*trait*/ QCollator_Free<()> for () {
   }
 }
 
+  // proto:  bool QCollator::ignorePunctuation();
+impl /*struct*/ QCollator {
+  pub fn ignorePunctuation<RetType, T: QCollator_ignorePunctuation<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.ignorePunctuation(self);
+    // return 1;
+  }
+}
+
+pub trait QCollator_ignorePunctuation<RetType> {
+  fn ignorePunctuation(self , rsthis: & QCollator) -> RetType;
+}
+
+  // proto:  bool QCollator::ignorePunctuation();
+impl<'a> /*trait*/ QCollator_ignorePunctuation<i8> for () {
+  fn ignorePunctuation(self , rsthis: & QCollator) -> i8 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK9QCollator17ignorePunctuationEv()};
+    let mut ret = unsafe {_ZNK9QCollator17ignorePunctuationEv(rsthis.qclsinst)};
+    return ret as i8;
+    // return 1;
+  }
+}
+
   // proto:  void QCollator::QCollator(const QCollator & );
 impl<'a> /*trait*/ QCollator_New for (&'a QCollator) {
   fn New(self) -> QCollator {
@@ -315,6 +342,29 @@ impl<'a> /*trait*/ QCollator_locale<QLocale> for () {
   }
 }
 
+  // proto:  void QCollator::swap(QCollator & other);
+impl /*struct*/ QCollator {
+  pub fn swap<RetType, T: QCollator_swap<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.swap(self);
+    // return 1;
+  }
+}
+
+pub trait QCollator_swap<RetType> {
+  fn swap(self , rsthis: & QCollator) -> RetType;
+}
+
+  // proto:  void QCollator::swap(QCollator & other);
+impl<'a> /*trait*/ QCollator_swap<()> for (&'a QCollator) {
+  fn swap(self , rsthis: & QCollator) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN9QCollator4swapERS_()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN9QCollator4swapERS_(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
   // proto:  void QCollator::setIgnorePunctuation(bool on);
 impl /*struct*/ QCollator {
   pub fn setIgnorePunctuation<RetType, T: QCollator_setIgnorePunctuation<RetType>>(& self,  overload_args: T) -> RetType {
@@ -334,29 +384,6 @@ impl<'a> /*trait*/ QCollator_setIgnorePunctuation<()> for (i8) {
     // unsafe{_ZN9QCollator20setIgnorePunctuationEb()};
     let arg0 = self  as c_char;
      unsafe {_ZN9QCollator20setIgnorePunctuationEb(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  bool QCollator::ignorePunctuation();
-impl /*struct*/ QCollator {
-  pub fn ignorePunctuation<RetType, T: QCollator_ignorePunctuation<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.ignorePunctuation(self);
-    // return 1;
-  }
-}
-
-pub trait QCollator_ignorePunctuation<RetType> {
-  fn ignorePunctuation(self , rsthis: & QCollator) -> RetType;
-}
-
-  // proto:  bool QCollator::ignorePunctuation();
-impl<'a> /*trait*/ QCollator_ignorePunctuation<i8> for () {
-  fn ignorePunctuation(self , rsthis: & QCollator) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QCollator17ignorePunctuationEv()};
-    let mut ret = unsafe {_ZNK9QCollator17ignorePunctuationEv(rsthis.qclsinst)};
-    return ret as i8;
     // return 1;
   }
 }
@@ -384,6 +411,29 @@ impl<'a> /*trait*/ QCollatorSortKey_Free<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QCollatorSortKeyD0Ev()};
      unsafe {_ZN16QCollatorSortKeyD0Ev(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
+  // proto:  void QCollatorSortKey::swap(QCollatorSortKey & other);
+impl /*struct*/ QCollatorSortKey {
+  pub fn swap<RetType, T: QCollatorSortKey_swap<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.swap(self);
+    // return 1;
+  }
+}
+
+pub trait QCollatorSortKey_swap<RetType> {
+  fn swap(self , rsthis: & QCollatorSortKey) -> RetType;
+}
+
+  // proto:  void QCollatorSortKey::swap(QCollatorSortKey & other);
+impl<'a> /*trait*/ QCollatorSortKey_swap<()> for (&'a QCollatorSortKey) {
+  fn swap(self , rsthis: & QCollatorSortKey) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN16QCollatorSortKey4swapERS_()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN16QCollatorSortKey4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

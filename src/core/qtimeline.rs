@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtCore/qtimeline.h
 // dst-file: /src/core/qtimeline.rs
 //
@@ -59,8 +59,6 @@ extern {
   fn _ZN9QTimeLineC1EiP7QObject(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void);
   // proto:  void QTimeLine::resume();
   fn _ZN9QTimeLine6resumeEv(qthis: *mut c_void);
-  // proto:  void QTimeLine::toggleDirection();
-  fn _ZN9QTimeLine15toggleDirectionEv(qthis: *mut c_void);
   // proto:  void QTimeLine::setEasingCurve(const QEasingCurve & curve);
   fn _ZN9QTimeLine14setEasingCurveERK12QEasingCurve(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QTimeLine::startFrame();
@@ -77,6 +75,8 @@ extern {
   fn _ZNK9QTimeLine11currentTimeEv(qthis: *mut c_void) -> c_int;
   // proto:  void QTimeLine::setDuration(int duration);
   fn _ZN9QTimeLine11setDurationEi(qthis: *mut c_void, arg0: c_int);
+  // proto:  void QTimeLine::toggleDirection();
+  fn _ZN9QTimeLine15toggleDirectionEv(qthis: *mut c_void);
   // proto:  int QTimeLine::endFrame();
   fn _ZNK9QTimeLine8endFrameEv(qthis: *mut c_void) -> c_int;
   // proto:  void QTimeLine::setPaused(bool paused);
@@ -410,28 +410,6 @@ impl<'a> /*trait*/ QTimeLine_resume<()> for () {
   }
 }
 
-  // proto:  void QTimeLine::toggleDirection();
-impl /*struct*/ QTimeLine {
-  pub fn toggleDirection<RetType, T: QTimeLine_toggleDirection<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toggleDirection(self);
-    // return 1;
-  }
-}
-
-pub trait QTimeLine_toggleDirection<RetType> {
-  fn toggleDirection(self , rsthis: & QTimeLine) -> RetType;
-}
-
-  // proto:  void QTimeLine::toggleDirection();
-impl<'a> /*trait*/ QTimeLine_toggleDirection<()> for () {
-  fn toggleDirection(self , rsthis: & QTimeLine) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QTimeLine15toggleDirectionEv()};
-     unsafe {_ZN9QTimeLine15toggleDirectionEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto:  void QTimeLine::setEasingCurve(const QEasingCurve & curve);
 impl /*struct*/ QTimeLine {
   pub fn setEasingCurve<RetType, T: QTimeLine_setEasingCurve<RetType>>(& self,  overload_args: T) -> RetType {
@@ -612,6 +590,28 @@ impl<'a> /*trait*/ QTimeLine_setDuration<()> for (i32) {
     // unsafe{_ZN9QTimeLine11setDurationEi()};
     let arg0 = self  as c_int;
      unsafe {_ZN9QTimeLine11setDurationEi(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
+  // proto:  void QTimeLine::toggleDirection();
+impl /*struct*/ QTimeLine {
+  pub fn toggleDirection<RetType, T: QTimeLine_toggleDirection<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.toggleDirection(self);
+    // return 1;
+  }
+}
+
+pub trait QTimeLine_toggleDirection<RetType> {
+  fn toggleDirection(self , rsthis: & QTimeLine) -> RetType;
+}
+
+  // proto:  void QTimeLine::toggleDirection();
+impl<'a> /*trait*/ QTimeLine_toggleDirection<()> for () {
+  fn toggleDirection(self , rsthis: & QTimeLine) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN9QTimeLine15toggleDirectionEv()};
+     unsafe {_ZN9QTimeLine15toggleDirectionEv(rsthis.qclsinst)};
     // return 1;
   }
 }

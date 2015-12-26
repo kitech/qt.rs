@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtCore/qsettings.h
 // dst-file: /src/core/qsettings.rs
 //
@@ -59,10 +59,10 @@ extern {
   fn _ZN9QSettings11setIniCodecEPKc(qthis: *mut c_void, arg0: *mut c_char);
   // proto:  int QSettings::beginReadArray(const QString & prefix);
   fn _ZN9QSettings14beginReadArrayERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> c_int;
-  // proto:  void QSettings::~QSettings();
-  fn _ZN9QSettingsD0Ev(qthis: *mut c_void);
   // proto:  void QSettings::clear();
   fn _ZN9QSettings5clearEv(qthis: *mut c_void);
+  // proto:  void QSettings::~QSettings();
+  fn _ZN9QSettingsD0Ev(qthis: *mut c_void);
   // proto:  QTextCodec * QSettings::iniCodec();
   fn _ZNK9QSettings8iniCodecEv(qthis: *mut c_void) -> *mut c_void;
   // proto: static void QSettings::setUserIniPath(const QString & dir);
@@ -394,28 +394,6 @@ impl<'a> /*trait*/ QSettings_beginReadArray<i32> for (&'a QString) {
   }
 }
 
-  // proto:  void QSettings::~QSettings();
-impl /*struct*/ QSettings {
-  pub fn Free<RetType, T: QSettings_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
-    // return 1;
-  }
-}
-
-pub trait QSettings_Free<RetType> {
-  fn Free(self , rsthis: & QSettings) -> RetType;
-}
-
-  // proto:  void QSettings::~QSettings();
-impl<'a> /*trait*/ QSettings_Free<()> for () {
-  fn Free(self , rsthis: & QSettings) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QSettingsD0Ev()};
-     unsafe {_ZN9QSettingsD0Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto:  void QSettings::clear();
 impl /*struct*/ QSettings {
   pub fn clear<RetType, T: QSettings_clear<RetType>>(& self,  overload_args: T) -> RetType {
@@ -434,6 +412,28 @@ impl<'a> /*trait*/ QSettings_clear<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QSettings5clearEv()};
      unsafe {_ZN9QSettings5clearEv(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
+  // proto:  void QSettings::~QSettings();
+impl /*struct*/ QSettings {
+  pub fn Free<RetType, T: QSettings_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
+    // return 1;
+  }
+}
+
+pub trait QSettings_Free<RetType> {
+  fn Free(self , rsthis: & QSettings) -> RetType;
+}
+
+  // proto:  void QSettings::~QSettings();
+impl<'a> /*trait*/ QSettings_Free<()> for () {
+  fn Free(self , rsthis: & QSettings) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN9QSettingsD0Ev()};
+     unsafe {_ZN9QSettingsD0Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtCore/qflags.h
 // dst-file: /src/core/qflags.rs
 //
@@ -33,6 +33,18 @@ extern {
   fn dector_ZN17QIncompatibleFlagC1Ei(arg0: c_int) -> *mut c_void;
   fn _ZN17QIncompatibleFlagC1Ei(qthis: *mut c_void, arg0: c_int);
   fn QFlag_Class_Size() -> c_int;
+  // proto:  void QFlag::QFlag(ushort ai);
+  fn dector_ZN5QFlagC1Et(arg0: c_ushort) -> *mut c_void;
+  fn _ZN5QFlagC1Et(qthis: *mut c_void, arg0: c_ushort);
+  // proto:  void QFlag::QFlag(int ai);
+  fn dector_ZN5QFlagC1Ei(arg0: c_int) -> *mut c_void;
+  fn _ZN5QFlagC1Ei(qthis: *mut c_void, arg0: c_int);
+  // proto:  void QFlag::QFlag(short ai);
+  fn dector_ZN5QFlagC1Es(arg0: c_short) -> *mut c_void;
+  fn _ZN5QFlagC1Es(qthis: *mut c_void, arg0: c_short);
+  // proto:  void QFlag::QFlag(uint ai);
+  fn dector_ZN5QFlagC1Ej(arg0: c_uint) -> *mut c_void;
+  fn _ZN5QFlagC1Ej(qthis: *mut c_void, arg0: c_uint);
 } // <= ext block end
 
 // body block begin =>
@@ -87,5 +99,82 @@ impl /*struct*/ QFlag {
     return QFlag{qclsinst: qthis};
   }
 }
+  // proto:  void QFlag::QFlag(ushort ai);
+impl /*struct*/ QFlag {
+  pub fn New<T: QFlag_New>(value: T) -> QFlag {
+    let rsthis = value.New();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QFlag_New {
+  fn New(self) -> QFlag;
+}
+
+  // proto:  void QFlag::QFlag(ushort ai);
+impl<'a> /*trait*/ QFlag_New for (u16) {
+  fn New(self) -> QFlag {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN5QFlagC1Et()};
+    let ctysz: c_int = unsafe{QFlag_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let arg0 = self  as c_ushort;
+    // unsafe {_ZN5QFlagC1Et(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN5QFlagC1Et(arg0)};
+    let rsthis = QFlag{qclsinst: qthis};
+    return rsthis;
+    // return 1;
+  }
+}
+
+  // proto:  void QFlag::QFlag(int ai);
+impl<'a> /*trait*/ QFlag_New for (i32) {
+  fn New(self) -> QFlag {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN5QFlagC1Ei()};
+    let ctysz: c_int = unsafe{QFlag_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let arg0 = self  as c_int;
+    // unsafe {_ZN5QFlagC1Ei(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN5QFlagC1Ei(arg0)};
+    let rsthis = QFlag{qclsinst: qthis};
+    return rsthis;
+    // return 1;
+  }
+}
+
+  // proto:  void QFlag::QFlag(short ai);
+impl<'a> /*trait*/ QFlag_New for (i16) {
+  fn New(self) -> QFlag {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN5QFlagC1Es()};
+    let ctysz: c_int = unsafe{QFlag_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let arg0 = self  as c_short;
+    // unsafe {_ZN5QFlagC1Es(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN5QFlagC1Es(arg0)};
+    let rsthis = QFlag{qclsinst: qthis};
+    return rsthis;
+    // return 1;
+  }
+}
+
+  // proto:  void QFlag::QFlag(uint ai);
+impl<'a> /*trait*/ QFlag_New for (u32) {
+  fn New(self) -> QFlag {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN5QFlagC1Ej()};
+    let ctysz: c_int = unsafe{QFlag_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let arg0 = self  as c_uint;
+    // unsafe {_ZN5QFlagC1Ej(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN5QFlagC1Ej(arg0)};
+    let rsthis = QFlag{qclsinst: qthis};
+    return rsthis;
+    // return 1;
+  }
+}
+
 // <= body block end
 

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtCore/qfactoryinterface.h
 // dst-file: /src/core/qfactoryinterface.rs
 //
@@ -29,6 +29,8 @@ use std::ops::Deref;
 
 extern {
   fn QFactoryInterface_Class_Size() -> c_int;
+  // proto:  void QFactoryInterface::~QFactoryInterface();
+  fn _ZN17QFactoryInterfaceD0Ev(qthis: *mut c_void);
   // proto:  QStringList QFactoryInterface::keys();
   fn _ZNK17QFactoryInterface4keysEv(qthis: *mut c_void);
 } // <= ext block end
@@ -45,6 +47,28 @@ impl /*struct*/ QFactoryInterface {
     return QFactoryInterface{qclsinst: qthis};
   }
 }
+  // proto:  void QFactoryInterface::~QFactoryInterface();
+impl /*struct*/ QFactoryInterface {
+  pub fn Free<RetType, T: QFactoryInterface_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
+    // return 1;
+  }
+}
+
+pub trait QFactoryInterface_Free<RetType> {
+  fn Free(self , rsthis: & QFactoryInterface) -> RetType;
+}
+
+  // proto:  void QFactoryInterface::~QFactoryInterface();
+impl<'a> /*trait*/ QFactoryInterface_Free<()> for () {
+  fn Free(self , rsthis: & QFactoryInterface) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN17QFactoryInterfaceD0Ev()};
+     unsafe {_ZN17QFactoryInterfaceD0Ev(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
   // proto:  QStringList QFactoryInterface::keys();
 impl /*struct*/ QFactoryInterface {
   pub fn keys<RetType, T: QFactoryInterface_keys<RetType>>(& self,  overload_args: T) -> RetType {

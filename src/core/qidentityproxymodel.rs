@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtCore/qidentityproxymodel.h
 // dst-file: /src/core/qidentityproxymodel.rs
 //
@@ -22,9 +22,9 @@ use super::qabstractproxymodel::QAbstractProxyModel; // 773
 use std::ops::Deref;
 use super::qabstractitemmodel::QModelIndex; // 773
 use super::qitemselectionmodel::QItemSelection; // 773
+use super::qobject::QObject; // 773
 use super::qvariant::QVariant; // 773
 use super::qmimedata::QMimeData; // 773
-use super::qobject::QObject; // 773
 // <= use block end
 
 // ext block begin =>
@@ -43,12 +43,8 @@ extern {
   fn _ZNK19QIdentityProxyModel22mapSelectionFromSourceERK14QItemSelection(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  QModelIndex QIdentityProxyModel::index(int row, int column, const QModelIndex & parent);
   fn _ZNK19QIdentityProxyModel5indexEiiRK11QModelIndex(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
-  // proto:  int QIdentityProxyModel::rowCount(const QModelIndex & parent);
-  fn _ZNK19QIdentityProxyModel8rowCountERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void) -> c_int;
   // proto:  bool QIdentityProxyModel::insertRows(int row, int count, const QModelIndex & parent);
   fn _ZN19QIdentityProxyModel10insertRowsEiiRK11QModelIndex(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_void) -> c_char;
-  // proto:  int QIdentityProxyModel::columnCount(const QModelIndex & parent);
-  fn _ZNK19QIdentityProxyModel11columnCountERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void) -> c_int;
   // proto:  bool QIdentityProxyModel::insertColumns(int column, int count, const QModelIndex & parent);
   fn _ZN19QIdentityProxyModel13insertColumnsEiiRK11QModelIndex(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_void) -> c_char;
   // proto:  QModelIndex QIdentityProxyModel::sibling(int row, int column, const QModelIndex & idx);
@@ -66,11 +62,15 @@ extern {
   // proto:  void QIdentityProxyModel::QIdentityProxyModel(QObject * parent);
   fn dector_ZN19QIdentityProxyModelC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
   fn _ZN19QIdentityProxyModelC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  int QIdentityProxyModel::columnCount(const QModelIndex & parent);
+  fn _ZNK19QIdentityProxyModel11columnCountERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void) -> c_int;
   // proto:  void QIdentityProxyModel::QIdentityProxyModel(const QIdentityProxyModel & );
   fn dector_ZN19QIdentityProxyModelC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN19QIdentityProxyModelC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QItemSelection QIdentityProxyModel::mapSelectionToSource(const QItemSelection & selection);
   fn _ZNK19QIdentityProxyModel20mapSelectionToSourceERK14QItemSelection(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  // proto:  int QIdentityProxyModel::rowCount(const QModelIndex & parent);
+  fn _ZNK19QIdentityProxyModel8rowCountERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void) -> c_int;
 } // <= ext block end
 
 // body block begin =>
@@ -201,30 +201,6 @@ impl<'a> /*trait*/ QIdentityProxyModel_index<QModelIndex> for (i32, i32, &'a QMo
   }
 }
 
-  // proto:  int QIdentityProxyModel::rowCount(const QModelIndex & parent);
-impl /*struct*/ QIdentityProxyModel {
-  pub fn rowCount<RetType, T: QIdentityProxyModel_rowCount<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.rowCount(self);
-    // return 1;
-  }
-}
-
-pub trait QIdentityProxyModel_rowCount<RetType> {
-  fn rowCount(self , rsthis: & QIdentityProxyModel) -> RetType;
-}
-
-  // proto:  int QIdentityProxyModel::rowCount(const QModelIndex & parent);
-impl<'a> /*trait*/ QIdentityProxyModel_rowCount<i32> for (&'a QModelIndex) {
-  fn rowCount(self , rsthis: & QIdentityProxyModel) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK19QIdentityProxyModel8rowCountERK11QModelIndex()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK19QIdentityProxyModel8rowCountERK11QModelIndex(rsthis.qclsinst, arg0)};
-    return ret as i32;
-    // return 1;
-  }
-}
-
   // proto:  bool QIdentityProxyModel::insertRows(int row, int count, const QModelIndex & parent);
 impl /*struct*/ QIdentityProxyModel {
   pub fn insertRows<RetType, T: QIdentityProxyModel_insertRows<RetType>>(& self,  overload_args: T) -> RetType {
@@ -247,30 +223,6 @@ impl<'a> /*trait*/ QIdentityProxyModel_insertRows<i8> for (i32, i32, &'a QModelI
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN19QIdentityProxyModel10insertRowsEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
     return ret as i8;
-    // return 1;
-  }
-}
-
-  // proto:  int QIdentityProxyModel::columnCount(const QModelIndex & parent);
-impl /*struct*/ QIdentityProxyModel {
-  pub fn columnCount<RetType, T: QIdentityProxyModel_columnCount<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.columnCount(self);
-    // return 1;
-  }
-}
-
-pub trait QIdentityProxyModel_columnCount<RetType> {
-  fn columnCount(self , rsthis: & QIdentityProxyModel) -> RetType;
-}
-
-  // proto:  int QIdentityProxyModel::columnCount(const QModelIndex & parent);
-impl<'a> /*trait*/ QIdentityProxyModel_columnCount<i32> for (&'a QModelIndex) {
-  fn columnCount(self , rsthis: & QIdentityProxyModel) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK19QIdentityProxyModel11columnCountERK11QModelIndex()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK19QIdentityProxyModel11columnCountERK11QModelIndex(rsthis.qclsinst, arg0)};
-    return ret as i32;
     // return 1;
   }
 }
@@ -476,6 +428,30 @@ impl<'a> /*trait*/ QIdentityProxyModel_New for (&'a QObject) {
   }
 }
 
+  // proto:  int QIdentityProxyModel::columnCount(const QModelIndex & parent);
+impl /*struct*/ QIdentityProxyModel {
+  pub fn columnCount<RetType, T: QIdentityProxyModel_columnCount<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.columnCount(self);
+    // return 1;
+  }
+}
+
+pub trait QIdentityProxyModel_columnCount<RetType> {
+  fn columnCount(self , rsthis: & QIdentityProxyModel) -> RetType;
+}
+
+  // proto:  int QIdentityProxyModel::columnCount(const QModelIndex & parent);
+impl<'a> /*trait*/ QIdentityProxyModel_columnCount<i32> for (&'a QModelIndex) {
+  fn columnCount(self , rsthis: & QIdentityProxyModel) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK19QIdentityProxyModel11columnCountERK11QModelIndex()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK19QIdentityProxyModel11columnCountERK11QModelIndex(rsthis.qclsinst, arg0)};
+    return ret as i32;
+    // return 1;
+  }
+}
+
   // proto:  void QIdentityProxyModel::QIdentityProxyModel(const QIdentityProxyModel & );
 impl<'a> /*trait*/ QIdentityProxyModel_New for (&'a QIdentityProxyModel) {
   fn New(self) -> QIdentityProxyModel {
@@ -513,6 +489,30 @@ impl<'a> /*trait*/ QIdentityProxyModel_mapSelectionToSource<QItemSelection> for 
     let mut ret = unsafe {_ZNK19QIdentityProxyModel20mapSelectionToSourceERK14QItemSelection(rsthis.qclsinst, arg0)};
     let mut ret1 = QItemSelection::inheritFrom(ret);
     return ret1;
+    // return 1;
+  }
+}
+
+  // proto:  int QIdentityProxyModel::rowCount(const QModelIndex & parent);
+impl /*struct*/ QIdentityProxyModel {
+  pub fn rowCount<RetType, T: QIdentityProxyModel_rowCount<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.rowCount(self);
+    // return 1;
+  }
+}
+
+pub trait QIdentityProxyModel_rowCount<RetType> {
+  fn rowCount(self , rsthis: & QIdentityProxyModel) -> RetType;
+}
+
+  // proto:  int QIdentityProxyModel::rowCount(const QModelIndex & parent);
+impl<'a> /*trait*/ QIdentityProxyModel_rowCount<i32> for (&'a QModelIndex) {
+  fn rowCount(self , rsthis: & QIdentityProxyModel) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK19QIdentityProxyModel8rowCountERK11QModelIndex()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK19QIdentityProxyModel8rowCountERK11QModelIndex(rsthis.qclsinst, arg0)};
+    return ret as i32;
     // return 1;
   }
 }

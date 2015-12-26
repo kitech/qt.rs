@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtCore/qjsonarray.h
 // dst-file: /src/core/qjsonarray.rs
 //
@@ -30,27 +30,39 @@ use super::qstringlist::QStringList; // 773
 
 extern {
   fn QJsonArray_Class_Size() -> c_int;
-  // proto:  bool QJsonArray::isEmpty();
-  fn _ZNK10QJsonArray7isEmptyEv(qthis: *mut c_void) -> c_char;
   // proto:  QJsonValue QJsonArray::first();
   fn _ZNK10QJsonArray5firstEv(qthis: *mut c_void);
+  // proto:  bool QJsonArray::empty();
+  fn _ZNK10QJsonArray5emptyEv(qthis: *mut c_void) -> c_char;
   // proto:  QJsonValue QJsonArray::takeAt(int i);
   fn _ZN10QJsonArray6takeAtEi(qthis: *mut c_void, arg0: c_int);
+  // proto:  void QJsonArray::removeLast();
+  fn _ZN10QJsonArray10removeLastEv(qthis: *mut c_void);
+  // proto:  void QJsonArray::pop_front();
+  fn _ZN10QJsonArray9pop_frontEv(qthis: *mut c_void);
   // proto:  QVariantList QJsonArray::toVariantList();
   fn _ZNK10QJsonArray13toVariantListEv(qthis: *mut c_void);
   // proto:  void QJsonArray::~QJsonArray();
   fn _ZN10QJsonArrayD0Ev(qthis: *mut c_void);
   // proto:  int QJsonArray::size();
   fn _ZNK10QJsonArray4sizeEv(qthis: *mut c_void) -> c_int;
+  // proto:  int QJsonArray::count();
+  fn _ZNK10QJsonArray5countEv(qthis: *mut c_void) -> c_int;
   // proto:  void QJsonArray::QJsonArray();
   fn dector_ZN10QJsonArrayC1Ev() -> *mut c_void;
   fn _ZN10QJsonArrayC1Ev(qthis: *mut c_void);
   // proto:  QJsonValue QJsonArray::at(int i);
   fn _ZNK10QJsonArray2atEi(qthis: *mut c_void, arg0: c_int);
+  // proto:  void QJsonArray::pop_back();
+  fn _ZN10QJsonArray8pop_backEv(qthis: *mut c_void);
+  // proto:  bool QJsonArray::isEmpty();
+  fn _ZNK10QJsonArray7isEmptyEv(qthis: *mut c_void) -> c_char;
   // proto: static QJsonArray QJsonArray::fromStringList(const QStringList & list);
   fn _ZN10QJsonArray14fromStringListERK11QStringList(arg0: *mut c_void);
   // proto:  QJsonValue QJsonArray::last();
   fn _ZNK10QJsonArray4lastEv(qthis: *mut c_void);
+  // proto:  void QJsonArray::removeFirst();
+  fn _ZN10QJsonArray11removeFirstEv(qthis: *mut c_void);
   // proto:  void QJsonArray::removeAt(int i);
   fn _ZN10QJsonArray8removeAtEi(qthis: *mut c_void, arg0: c_int);
 } // <= ext block end
@@ -67,29 +79,6 @@ impl /*struct*/ QJsonArray {
     return QJsonArray{qclsinst: qthis};
   }
 }
-  // proto:  bool QJsonArray::isEmpty();
-impl /*struct*/ QJsonArray {
-  pub fn isEmpty<RetType, T: QJsonArray_isEmpty<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isEmpty(self);
-    // return 1;
-  }
-}
-
-pub trait QJsonArray_isEmpty<RetType> {
-  fn isEmpty(self , rsthis: & QJsonArray) -> RetType;
-}
-
-  // proto:  bool QJsonArray::isEmpty();
-impl<'a> /*trait*/ QJsonArray_isEmpty<i8> for () {
-  fn isEmpty(self , rsthis: & QJsonArray) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK10QJsonArray7isEmptyEv()};
-    let mut ret = unsafe {_ZNK10QJsonArray7isEmptyEv(rsthis.qclsinst)};
-    return ret as i8;
-    // return 1;
-  }
-}
-
   // proto:  QJsonValue QJsonArray::first();
 impl /*struct*/ QJsonArray {
   pub fn first<RetType, T: QJsonArray_first<RetType>>(& self,  overload_args: T) -> RetType {
@@ -108,6 +97,29 @@ impl<'a> /*trait*/ QJsonArray_first<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QJsonArray5firstEv()};
      unsafe {_ZNK10QJsonArray5firstEv(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
+  // proto:  bool QJsonArray::empty();
+impl /*struct*/ QJsonArray {
+  pub fn empty<RetType, T: QJsonArray_empty<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.empty(self);
+    // return 1;
+  }
+}
+
+pub trait QJsonArray_empty<RetType> {
+  fn empty(self , rsthis: & QJsonArray) -> RetType;
+}
+
+  // proto:  bool QJsonArray::empty();
+impl<'a> /*trait*/ QJsonArray_empty<i8> for () {
+  fn empty(self , rsthis: & QJsonArray) -> i8 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK10QJsonArray5emptyEv()};
+    let mut ret = unsafe {_ZNK10QJsonArray5emptyEv(rsthis.qclsinst)};
+    return ret as i8;
     // return 1;
   }
 }
@@ -131,6 +143,50 @@ impl<'a> /*trait*/ QJsonArray_takeAt<()> for (i32) {
     // unsafe{_ZN10QJsonArray6takeAtEi()};
     let arg0 = self  as c_int;
      unsafe {_ZN10QJsonArray6takeAtEi(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
+  // proto:  void QJsonArray::removeLast();
+impl /*struct*/ QJsonArray {
+  pub fn removeLast<RetType, T: QJsonArray_removeLast<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.removeLast(self);
+    // return 1;
+  }
+}
+
+pub trait QJsonArray_removeLast<RetType> {
+  fn removeLast(self , rsthis: & QJsonArray) -> RetType;
+}
+
+  // proto:  void QJsonArray::removeLast();
+impl<'a> /*trait*/ QJsonArray_removeLast<()> for () {
+  fn removeLast(self , rsthis: & QJsonArray) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN10QJsonArray10removeLastEv()};
+     unsafe {_ZN10QJsonArray10removeLastEv(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
+  // proto:  void QJsonArray::pop_front();
+impl /*struct*/ QJsonArray {
+  pub fn pop_front<RetType, T: QJsonArray_pop_front<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.pop_front(self);
+    // return 1;
+  }
+}
+
+pub trait QJsonArray_pop_front<RetType> {
+  fn pop_front(self , rsthis: & QJsonArray) -> RetType;
+}
+
+  // proto:  void QJsonArray::pop_front();
+impl<'a> /*trait*/ QJsonArray_pop_front<()> for () {
+  fn pop_front(self , rsthis: & QJsonArray) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN10QJsonArray9pop_frontEv()};
+     unsafe {_ZN10QJsonArray9pop_frontEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -202,6 +258,29 @@ impl<'a> /*trait*/ QJsonArray_size<i32> for () {
   }
 }
 
+  // proto:  int QJsonArray::count();
+impl /*struct*/ QJsonArray {
+  pub fn count<RetType, T: QJsonArray_count<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.count(self);
+    // return 1;
+  }
+}
+
+pub trait QJsonArray_count<RetType> {
+  fn count(self , rsthis: & QJsonArray) -> RetType;
+}
+
+  // proto:  int QJsonArray::count();
+impl<'a> /*trait*/ QJsonArray_count<i32> for () {
+  fn count(self , rsthis: & QJsonArray) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK10QJsonArray5countEv()};
+    let mut ret = unsafe {_ZNK10QJsonArray5countEv(rsthis.qclsinst)};
+    return ret as i32;
+    // return 1;
+  }
+}
+
   // proto:  void QJsonArray::QJsonArray();
 impl /*struct*/ QJsonArray {
   pub fn New<T: QJsonArray_New>(value: T) -> QJsonArray {
@@ -253,6 +332,51 @@ impl<'a> /*trait*/ QJsonArray_at<()> for (i32) {
   }
 }
 
+  // proto:  void QJsonArray::pop_back();
+impl /*struct*/ QJsonArray {
+  pub fn pop_back<RetType, T: QJsonArray_pop_back<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.pop_back(self);
+    // return 1;
+  }
+}
+
+pub trait QJsonArray_pop_back<RetType> {
+  fn pop_back(self , rsthis: & QJsonArray) -> RetType;
+}
+
+  // proto:  void QJsonArray::pop_back();
+impl<'a> /*trait*/ QJsonArray_pop_back<()> for () {
+  fn pop_back(self , rsthis: & QJsonArray) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN10QJsonArray8pop_backEv()};
+     unsafe {_ZN10QJsonArray8pop_backEv(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
+  // proto:  bool QJsonArray::isEmpty();
+impl /*struct*/ QJsonArray {
+  pub fn isEmpty<RetType, T: QJsonArray_isEmpty<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.isEmpty(self);
+    // return 1;
+  }
+}
+
+pub trait QJsonArray_isEmpty<RetType> {
+  fn isEmpty(self , rsthis: & QJsonArray) -> RetType;
+}
+
+  // proto:  bool QJsonArray::isEmpty();
+impl<'a> /*trait*/ QJsonArray_isEmpty<i8> for () {
+  fn isEmpty(self , rsthis: & QJsonArray) -> i8 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK10QJsonArray7isEmptyEv()};
+    let mut ret = unsafe {_ZNK10QJsonArray7isEmptyEv(rsthis.qclsinst)};
+    return ret as i8;
+    // return 1;
+  }
+}
+
   // proto: static QJsonArray QJsonArray::fromStringList(const QStringList & list);
 impl /*struct*/ QJsonArray {
   pub fn fromStringList_s<RetType, T: QJsonArray_fromStringList_s<RetType>>( overload_args: T) -> RetType {
@@ -294,6 +418,28 @@ impl<'a> /*trait*/ QJsonArray_last<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QJsonArray4lastEv()};
      unsafe {_ZNK10QJsonArray4lastEv(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
+  // proto:  void QJsonArray::removeFirst();
+impl /*struct*/ QJsonArray {
+  pub fn removeFirst<RetType, T: QJsonArray_removeFirst<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.removeFirst(self);
+    // return 1;
+  }
+}
+
+pub trait QJsonArray_removeFirst<RetType> {
+  fn removeFirst(self , rsthis: & QJsonArray) -> RetType;
+}
+
+  // proto:  void QJsonArray::removeFirst();
+impl<'a> /*trait*/ QJsonArray_removeFirst<()> for () {
+  fn removeFirst(self , rsthis: & QJsonArray) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN10QJsonArray11removeFirstEv()};
+     unsafe {_ZN10QJsonArray11removeFirstEv(rsthis.qclsinst)};
     // return 1;
   }
 }

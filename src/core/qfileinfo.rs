@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtCore/qfileinfo.h
 // dst-file: /src/core/qfileinfo.rs
 //
@@ -55,6 +55,8 @@ extern {
   // proto:  void QFileInfo::QFileInfo(const QString & file);
   fn dector_ZN9QFileInfoC1ERK7QString(arg0: *mut c_void) -> *mut c_void;
   fn _ZN9QFileInfoC1ERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  QString QFileInfo::symLinkTarget();
+  fn _ZNK9QFileInfo13symLinkTargetEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QFileInfo::setFile(const QString & file);
   fn _ZN9QFileInfo7setFileERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QFileInfo::isFile();
@@ -92,6 +94,8 @@ extern {
   fn _ZN9QFileInfo7setFileERK4QDirRK7QString(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  bool QFileInfo::isRelative();
   fn _ZNK9QFileInfo10isRelativeEv(qthis: *mut c_void) -> c_char;
+  // proto:  void QFileInfo::setCaching(bool on);
+  fn _ZN9QFileInfo10setCachingEb(qthis: *mut c_void, arg0: c_char);
   // proto:  QDateTime QFileInfo::created();
   fn _ZNK9QFileInfo7createdEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  bool QFileInfo::caching();
@@ -118,18 +122,20 @@ extern {
   fn _ZNK9QFileInfo6suffixEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QString QFileInfo::group();
   fn _ZNK9QFileInfo5groupEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QFileInfo::setCaching(bool on);
-  fn _ZN9QFileInfo10setCachingEb(qthis: *mut c_void, arg0: c_char);
+  // proto:  bool QFileInfo::isAbsolute();
+  fn _ZNK9QFileInfo10isAbsoluteEv(qthis: *mut c_void) -> c_char;
   // proto:  bool QFileInfo::isNativePath();
   fn _ZNK9QFileInfo12isNativePathEv(qthis: *mut c_void) -> c_char;
+  // proto:  bool QFileInfo::isWritable();
+  fn _ZNK9QFileInfo10isWritableEv(qthis: *mut c_void) -> c_char;
   // proto:  QString QFileInfo::owner();
   fn _ZNK9QFileInfo5ownerEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  bool QFileInfo::isReadable();
   fn _ZNK9QFileInfo10isReadableEv(qthis: *mut c_void) -> c_char;
   // proto:  QDir QFileInfo::dir();
   fn _ZNK9QFileInfo3dirEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  bool QFileInfo::isWritable();
-  fn _ZNK9QFileInfo10isWritableEv(qthis: *mut c_void) -> c_char;
+  // proto:  void QFileInfo::swap(QFileInfo & other);
+  fn _ZN9QFileInfo4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QFileInfo::exists();
   fn _ZNK9QFileInfo6existsEv(qthis: *mut c_void) -> c_char;
   // proto:  QDateTime QFileInfo::lastModified();
@@ -378,6 +384,30 @@ impl<'a> /*trait*/ QFileInfo_New for (&'a QString) {
     let qthis: *mut c_void = unsafe {dector_ZN9QFileInfoC1ERK7QString(arg0)};
     let rsthis = QFileInfo{qclsinst: qthis};
     return rsthis;
+    // return 1;
+  }
+}
+
+  // proto:  QString QFileInfo::symLinkTarget();
+impl /*struct*/ QFileInfo {
+  pub fn symLinkTarget<RetType, T: QFileInfo_symLinkTarget<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.symLinkTarget(self);
+    // return 1;
+  }
+}
+
+pub trait QFileInfo_symLinkTarget<RetType> {
+  fn symLinkTarget(self , rsthis: & QFileInfo) -> RetType;
+}
+
+  // proto:  QString QFileInfo::symLinkTarget();
+impl<'a> /*trait*/ QFileInfo_symLinkTarget<QString> for () {
+  fn symLinkTarget(self , rsthis: & QFileInfo) -> QString {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK9QFileInfo13symLinkTargetEv()};
+    let mut ret = unsafe {_ZNK9QFileInfo13symLinkTargetEv(rsthis.qclsinst)};
+    let mut ret1 = QString::inheritFrom(ret);
+    return ret1;
     // return 1;
   }
 }
@@ -734,6 +764,29 @@ impl<'a> /*trait*/ QFileInfo_isRelative<i8> for () {
   }
 }
 
+  // proto:  void QFileInfo::setCaching(bool on);
+impl /*struct*/ QFileInfo {
+  pub fn setCaching<RetType, T: QFileInfo_setCaching<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.setCaching(self);
+    // return 1;
+  }
+}
+
+pub trait QFileInfo_setCaching<RetType> {
+  fn setCaching(self , rsthis: & QFileInfo) -> RetType;
+}
+
+  // proto:  void QFileInfo::setCaching(bool on);
+impl<'a> /*trait*/ QFileInfo_setCaching<()> for (i8) {
+  fn setCaching(self , rsthis: & QFileInfo) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN9QFileInfo10setCachingEb()};
+    let arg0 = self  as c_char;
+     unsafe {_ZN9QFileInfo10setCachingEb(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
   // proto:  QDateTime QFileInfo::created();
 impl /*struct*/ QFileInfo {
   pub fn created<RetType, T: QFileInfo_created<RetType>>(& self,  overload_args: T) -> RetType {
@@ -1040,25 +1093,25 @@ impl<'a> /*trait*/ QFileInfo_group<QString> for () {
   }
 }
 
-  // proto:  void QFileInfo::setCaching(bool on);
+  // proto:  bool QFileInfo::isAbsolute();
 impl /*struct*/ QFileInfo {
-  pub fn setCaching<RetType, T: QFileInfo_setCaching<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setCaching(self);
+  pub fn isAbsolute<RetType, T: QFileInfo_isAbsolute<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.isAbsolute(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_setCaching<RetType> {
-  fn setCaching(self , rsthis: & QFileInfo) -> RetType;
+pub trait QFileInfo_isAbsolute<RetType> {
+  fn isAbsolute(self , rsthis: & QFileInfo) -> RetType;
 }
 
-  // proto:  void QFileInfo::setCaching(bool on);
-impl<'a> /*trait*/ QFileInfo_setCaching<()> for (i8) {
-  fn setCaching(self , rsthis: & QFileInfo) -> () {
+  // proto:  bool QFileInfo::isAbsolute();
+impl<'a> /*trait*/ QFileInfo_isAbsolute<i8> for () {
+  fn isAbsolute(self , rsthis: & QFileInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QFileInfo10setCachingEb()};
-    let arg0 = self  as c_char;
-     unsafe {_ZN9QFileInfo10setCachingEb(rsthis.qclsinst, arg0)};
+    // unsafe{_ZNK9QFileInfo10isAbsoluteEv()};
+    let mut ret = unsafe {_ZNK9QFileInfo10isAbsoluteEv(rsthis.qclsinst)};
+    return ret as i8;
     // return 1;
   }
 }
@@ -1081,6 +1134,29 @@ impl<'a> /*trait*/ QFileInfo_isNativePath<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo12isNativePathEv()};
     let mut ret = unsafe {_ZNK9QFileInfo12isNativePathEv(rsthis.qclsinst)};
+    return ret as i8;
+    // return 1;
+  }
+}
+
+  // proto:  bool QFileInfo::isWritable();
+impl /*struct*/ QFileInfo {
+  pub fn isWritable<RetType, T: QFileInfo_isWritable<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.isWritable(self);
+    // return 1;
+  }
+}
+
+pub trait QFileInfo_isWritable<RetType> {
+  fn isWritable(self , rsthis: & QFileInfo) -> RetType;
+}
+
+  // proto:  bool QFileInfo::isWritable();
+impl<'a> /*trait*/ QFileInfo_isWritable<i8> for () {
+  fn isWritable(self , rsthis: & QFileInfo) -> i8 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK9QFileInfo10isWritableEv()};
+    let mut ret = unsafe {_ZNK9QFileInfo10isWritableEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -1157,25 +1233,25 @@ impl<'a> /*trait*/ QFileInfo_dir<QDir> for () {
   }
 }
 
-  // proto:  bool QFileInfo::isWritable();
+  // proto:  void QFileInfo::swap(QFileInfo & other);
 impl /*struct*/ QFileInfo {
-  pub fn isWritable<RetType, T: QFileInfo_isWritable<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isWritable(self);
+  pub fn swap<RetType, T: QFileInfo_swap<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.swap(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_isWritable<RetType> {
-  fn isWritable(self , rsthis: & QFileInfo) -> RetType;
+pub trait QFileInfo_swap<RetType> {
+  fn swap(self , rsthis: & QFileInfo) -> RetType;
 }
 
-  // proto:  bool QFileInfo::isWritable();
-impl<'a> /*trait*/ QFileInfo_isWritable<i8> for () {
-  fn isWritable(self , rsthis: & QFileInfo) -> i8 {
+  // proto:  void QFileInfo::swap(QFileInfo & other);
+impl<'a> /*trait*/ QFileInfo_swap<()> for (&'a QFileInfo) {
+  fn swap(self , rsthis: & QFileInfo) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QFileInfo10isWritableEv()};
-    let mut ret = unsafe {_ZNK9QFileInfo10isWritableEv(rsthis.qclsinst)};
-    return ret as i8;
+    // unsafe{_ZN9QFileInfo4swapERS_()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN9QFileInfo4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

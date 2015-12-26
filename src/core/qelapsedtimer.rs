@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtCore/qelapsedtimer.h
 // dst-file: /src/core/qelapsedtimer.rs
 //
@@ -37,6 +37,9 @@ extern {
   fn _ZN13QElapsedTimer10invalidateEv(qthis: *mut c_void);
   // proto: static bool QElapsedTimer::isMonotonic();
   fn _ZN13QElapsedTimer11isMonotonicEv() -> c_char;
+  // proto:  void QElapsedTimer::QElapsedTimer();
+  fn dector_ZN13QElapsedTimerC1Ev() -> *mut c_void;
+  fn _ZN13QElapsedTimerC1Ev(qthis: *mut c_void);
   // proto:  qint64 QElapsedTimer::msecsTo(const QElapsedTimer & other);
   fn _ZNK13QElapsedTimer7msecsToERKS_(qthis: *mut c_void, arg0: *mut c_void) -> c_longlong;
   // proto:  qint64 QElapsedTimer::msecsSinceReference();
@@ -151,6 +154,34 @@ impl<'a> /*trait*/ QElapsedTimer_isMonotonic_s<i8> for () {
     // unsafe{_ZN13QElapsedTimer11isMonotonicEv()};
     let mut ret = unsafe {_ZN13QElapsedTimer11isMonotonicEv()};
     return ret as i8;
+    // return 1;
+  }
+}
+
+  // proto:  void QElapsedTimer::QElapsedTimer();
+impl /*struct*/ QElapsedTimer {
+  pub fn New<T: QElapsedTimer_New>(value: T) -> QElapsedTimer {
+    let rsthis = value.New();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QElapsedTimer_New {
+  fn New(self) -> QElapsedTimer;
+}
+
+  // proto:  void QElapsedTimer::QElapsedTimer();
+impl<'a> /*trait*/ QElapsedTimer_New for () {
+  fn New(self) -> QElapsedTimer {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN13QElapsedTimerC1Ev()};
+    let ctysz: c_int = unsafe{QElapsedTimer_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN13QElapsedTimerC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN13QElapsedTimerC1Ev()};
+    let rsthis = QElapsedTimer{qclsinst: qthis};
+    return rsthis;
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtCore/qtextcodec.h
 // dst-file: /src/core/qtextcodec.rs
 //
@@ -39,6 +39,9 @@ extern {
   fn _ZN12QTextEncoder11fromUnicodeERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  bool QTextEncoder::hasFailure();
   fn _ZNK12QTextEncoder10hasFailureEv(qthis: *mut c_void) -> c_char;
+  // proto:  void QTextEncoder::QTextEncoder(const QTextCodec * codec);
+  fn dector_ZN12QTextEncoderC1EPK10QTextCodec(arg0: *mut c_void) -> *mut c_void;
+  fn _ZN12QTextEncoderC1EPK10QTextCodec(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QTextEncoder::QTextEncoder(const QTextEncoder & );
   fn dector_ZN12QTextEncoderC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN12QTextEncoderC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
@@ -68,6 +71,8 @@ extern {
   fn _ZNK10QTextCodec9toUnicodeEPKc(qthis: *mut c_void, arg0: *mut c_char) -> *mut c_void;
   // proto:  int QTextCodec::mibEnum();
   fn _ZNK10QTextCodec7mibEnumEv(qthis: *mut c_void) -> c_int;
+  // proto: static QTextCodec * QTextCodec::codecForName(const char * name);
+  fn _ZN10QTextCodec12codecForNameEPKc(arg0: *mut c_char) -> *mut c_void;
   // proto:  bool QTextCodec::canEncode(const QString & );
   fn _ZNK10QTextCodec9canEncodeERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  QList<QByteArray> QTextCodec::aliases();
@@ -92,6 +97,9 @@ extern {
   fn QTextDecoder_Class_Size() -> c_int;
   // proto:  QString QTextDecoder::toUnicode(const char * chars, int len);
   fn _ZN12QTextDecoder9toUnicodeEPKci(qthis: *mut c_void, arg0: *mut c_char, arg1: c_int) -> *mut c_void;
+  // proto:  void QTextDecoder::QTextDecoder(const QTextCodec * codec);
+  fn dector_ZN12QTextDecoderC1EPK10QTextCodec(arg0: *mut c_void) -> *mut c_void;
+  fn _ZN12QTextDecoderC1EPK10QTextCodec(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QTextDecoder::hasFailure();
   fn _ZNK12QTextDecoder10hasFailureEv(qthis: *mut c_void) -> c_char;
   // proto:  void QTextDecoder::~QTextDecoder();
@@ -199,7 +207,7 @@ impl<'a> /*trait*/ QTextEncoder_hasFailure<i8> for () {
   }
 }
 
-  // proto:  void QTextEncoder::QTextEncoder(const QTextEncoder & );
+  // proto:  void QTextEncoder::QTextEncoder(const QTextCodec * codec);
 impl /*struct*/ QTextEncoder {
   pub fn New<T: QTextEncoder_New>(value: T) -> QTextEncoder {
     let rsthis = value.New();
@@ -210,6 +218,22 @@ impl /*struct*/ QTextEncoder {
 
 pub trait QTextEncoder_New {
   fn New(self) -> QTextEncoder;
+}
+
+  // proto:  void QTextEncoder::QTextEncoder(const QTextCodec * codec);
+impl<'a> /*trait*/ QTextEncoder_New for (&'a QTextCodec) {
+  fn New(self) -> QTextEncoder {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN12QTextEncoderC1EPK10QTextCodec()};
+    let ctysz: c_int = unsafe{QTextEncoder_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let arg0 = self.qclsinst  as *mut c_void;
+    // unsafe {_ZN12QTextEncoderC1EPK10QTextCodec(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN12QTextEncoderC1EPK10QTextCodec(arg0)};
+    let rsthis = QTextEncoder{qclsinst: qthis};
+    return rsthis;
+    // return 1;
+  }
 }
 
   // proto:  void QTextEncoder::QTextEncoder(const QTextEncoder & );
@@ -505,6 +529,31 @@ impl<'a> /*trait*/ QTextCodec_mibEnum<i32> for () {
   }
 }
 
+  // proto: static QTextCodec * QTextCodec::codecForName(const char * name);
+impl /*struct*/ QTextCodec {
+  pub fn codecForName_s<RetType, T: QTextCodec_codecForName_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.codecForName_s();
+    // return 1;
+  }
+}
+
+pub trait QTextCodec_codecForName_s<RetType> {
+  fn codecForName_s(self ) -> RetType;
+}
+
+  // proto: static QTextCodec * QTextCodec::codecForName(const char * name);
+impl<'a> /*trait*/ QTextCodec_codecForName_s<QTextCodec> for (&'a  String) {
+  fn codecForName_s(self ) -> QTextCodec {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN10QTextCodec12codecForNameEPKc()};
+    let arg0 = self.as_ptr()  as *mut c_char;
+    let mut ret = unsafe {_ZN10QTextCodec12codecForNameEPKc(arg0)};
+    let mut ret1 = QTextCodec::inheritFrom(ret);
+    return ret1;
+    // return 1;
+  }
+}
+
   // proto:  bool QTextCodec::canEncode(const QString & );
 impl /*struct*/ QTextCodec {
   pub fn canEncode<RetType, T: QTextCodec_canEncode<RetType>>(& self,  overload_args: T) -> RetType {
@@ -549,18 +598,6 @@ impl<'a> /*trait*/ QTextCodec_aliases<()> for () {
      unsafe {_ZNK10QTextCodec7aliasesEv(rsthis.qclsinst)};
     // return 1;
   }
-}
-
-  // proto: static QTextCodec * QTextCodec::codecForName(const QByteArray & name);
-impl /*struct*/ QTextCodec {
-  pub fn codecForName_s<RetType, T: QTextCodec_codecForName_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.codecForName_s();
-    // return 1;
-  }
-}
-
-pub trait QTextCodec_codecForName_s<RetType> {
-  fn codecForName_s(self ) -> RetType;
 }
 
   // proto: static QTextCodec * QTextCodec::codecForName(const QByteArray & name);
@@ -731,6 +768,35 @@ impl<'a> /*trait*/ QTextDecoder_toUnicode<QString> for (&'a  String, i32) {
   }
 }
 
+  // proto:  void QTextDecoder::QTextDecoder(const QTextCodec * codec);
+impl /*struct*/ QTextDecoder {
+  pub fn New<T: QTextDecoder_New>(value: T) -> QTextDecoder {
+    let rsthis = value.New();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QTextDecoder_New {
+  fn New(self) -> QTextDecoder;
+}
+
+  // proto:  void QTextDecoder::QTextDecoder(const QTextCodec * codec);
+impl<'a> /*trait*/ QTextDecoder_New for (&'a QTextCodec) {
+  fn New(self) -> QTextDecoder {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN12QTextDecoderC1EPK10QTextCodec()};
+    let ctysz: c_int = unsafe{QTextDecoder_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let arg0 = self.qclsinst  as *mut c_void;
+    // unsafe {_ZN12QTextDecoderC1EPK10QTextCodec(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN12QTextDecoderC1EPK10QTextCodec(arg0)};
+    let rsthis = QTextDecoder{qclsinst: qthis};
+    return rsthis;
+    // return 1;
+  }
+}
+
   // proto:  bool QTextDecoder::hasFailure();
 impl /*struct*/ QTextDecoder {
   pub fn hasFailure<RetType, T: QTextDecoder_hasFailure<RetType>>(& self,  overload_args: T) -> RetType {
@@ -787,19 +853,6 @@ impl<'a> /*trait*/ QTextDecoder_toUnicode<QString> for (&'a QByteArray) {
     return ret1;
     // return 1;
   }
-}
-
-  // proto:  void QTextDecoder::QTextDecoder(const QTextDecoder & );
-impl /*struct*/ QTextDecoder {
-  pub fn New<T: QTextDecoder_New>(value: T) -> QTextDecoder {
-    let rsthis = value.New();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QTextDecoder_New {
-  fn New(self) -> QTextDecoder;
 }
 
   // proto:  void QTextDecoder::QTextDecoder(const QTextDecoder & );

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtCore/qsortfilterproxymodel.h
 // dst-file: /src/core/qsortfilterproxymodel.rs
 //
@@ -76,9 +76,8 @@ extern {
   fn _ZN21QSortFilterProxyModel9fetchMoreERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QItemSelection QSortFilterProxyModel::mapSelectionFromSource(const QItemSelection & sourceSelection);
   fn _ZNK21QSortFilterProxyModel22mapSelectionFromSourceERK14QItemSelection(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
-  // proto:  void QSortFilterProxyModel::QSortFilterProxyModel(const QSortFilterProxyModel & );
-  fn dector_ZN21QSortFilterProxyModelC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN21QSortFilterProxyModelC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  QItemSelection QSortFilterProxyModel::mapSelectionToSource(const QItemSelection & proxySelection);
+  fn _ZNK21QSortFilterProxyModel20mapSelectionToSourceERK14QItemSelection(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  QStringList QSortFilterProxyModel::mimeTypes();
   fn _ZNK21QSortFilterProxyModel9mimeTypesEv(qthis: *mut c_void);
   // proto:  QModelIndex QSortFilterProxyModel::buddy(const QModelIndex & index);
@@ -97,8 +96,9 @@ extern {
   fn _ZN21QSortFilterProxyModel18setSortLocaleAwareEb(qthis: *mut c_void, arg0: c_char);
   // proto:  QModelIndex QSortFilterProxyModel::mapToSource(const QModelIndex & proxyIndex);
   fn _ZNK21QSortFilterProxyModel11mapToSourceERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
-  // proto:  QItemSelection QSortFilterProxyModel::mapSelectionToSource(const QItemSelection & proxySelection);
-  fn _ZNK21QSortFilterProxyModel20mapSelectionToSourceERK14QItemSelection(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  // proto:  void QSortFilterProxyModel::QSortFilterProxyModel(const QSortFilterProxyModel & );
+  fn dector_ZN21QSortFilterProxyModelC1ERKS_(arg0: *mut c_void) -> *mut c_void;
+  fn _ZN21QSortFilterProxyModelC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QSortFilterProxyModel::removeColumns(int column, int count, const QModelIndex & parent);
   fn _ZN21QSortFilterProxyModel13removeColumnsEiiRK11QModelIndex(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_void) -> c_char;
   // proto:  void QSortFilterProxyModel::~QSortFilterProxyModel();
@@ -610,31 +610,27 @@ impl<'a> /*trait*/ QSortFilterProxyModel_mapSelectionFromSource<QItemSelection> 
   }
 }
 
-  // proto:  void QSortFilterProxyModel::QSortFilterProxyModel(const QSortFilterProxyModel & );
+  // proto:  QItemSelection QSortFilterProxyModel::mapSelectionToSource(const QItemSelection & proxySelection);
 impl /*struct*/ QSortFilterProxyModel {
-  pub fn New<T: QSortFilterProxyModel_New>(value: T) -> QSortFilterProxyModel {
-    let rsthis = value.New();
-    return rsthis;
+  pub fn mapSelectionToSource<RetType, T: QSortFilterProxyModel_mapSelectionToSource<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.mapSelectionToSource(self);
     // return 1;
   }
 }
 
-pub trait QSortFilterProxyModel_New {
-  fn New(self) -> QSortFilterProxyModel;
+pub trait QSortFilterProxyModel_mapSelectionToSource<RetType> {
+  fn mapSelectionToSource(self , rsthis: & QSortFilterProxyModel) -> RetType;
 }
 
-  // proto:  void QSortFilterProxyModel::QSortFilterProxyModel(const QSortFilterProxyModel & );
-impl<'a> /*trait*/ QSortFilterProxyModel_New for (&'a QSortFilterProxyModel) {
-  fn New(self) -> QSortFilterProxyModel {
+  // proto:  QItemSelection QSortFilterProxyModel::mapSelectionToSource(const QItemSelection & proxySelection);
+impl<'a> /*trait*/ QSortFilterProxyModel_mapSelectionToSource<QItemSelection> for (&'a QItemSelection) {
+  fn mapSelectionToSource(self , rsthis: & QSortFilterProxyModel) -> QItemSelection {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN21QSortFilterProxyModelC1ERKS_()};
-    let ctysz: c_int = unsafe{QSortFilterProxyModel_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe{_ZNK21QSortFilterProxyModel20mapSelectionToSourceERK14QItemSelection()};
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN21QSortFilterProxyModelC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN21QSortFilterProxyModelC1ERKS_(arg0)};
-    let rsthis = QSortFilterProxyModel{/**/qbase: QAbstractProxyModel::inheritFrom(qthis), /**/qclsinst: qthis};
-    return rsthis;
+    let mut ret = unsafe {_ZNK21QSortFilterProxyModel20mapSelectionToSourceERK14QItemSelection(rsthis.qclsinst, arg0)};
+    let mut ret1 = QItemSelection::inheritFrom(ret);
+    return ret1;
     // return 1;
   }
 }
@@ -847,27 +843,31 @@ impl<'a> /*trait*/ QSortFilterProxyModel_mapToSource<QModelIndex> for (&'a QMode
   }
 }
 
-  // proto:  QItemSelection QSortFilterProxyModel::mapSelectionToSource(const QItemSelection & proxySelection);
+  // proto:  void QSortFilterProxyModel::QSortFilterProxyModel(const QSortFilterProxyModel & );
 impl /*struct*/ QSortFilterProxyModel {
-  pub fn mapSelectionToSource<RetType, T: QSortFilterProxyModel_mapSelectionToSource<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.mapSelectionToSource(self);
+  pub fn New<T: QSortFilterProxyModel_New>(value: T) -> QSortFilterProxyModel {
+    let rsthis = value.New();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QSortFilterProxyModel_mapSelectionToSource<RetType> {
-  fn mapSelectionToSource(self , rsthis: & QSortFilterProxyModel) -> RetType;
+pub trait QSortFilterProxyModel_New {
+  fn New(self) -> QSortFilterProxyModel;
 }
 
-  // proto:  QItemSelection QSortFilterProxyModel::mapSelectionToSource(const QItemSelection & proxySelection);
-impl<'a> /*trait*/ QSortFilterProxyModel_mapSelectionToSource<QItemSelection> for (&'a QItemSelection) {
-  fn mapSelectionToSource(self , rsthis: & QSortFilterProxyModel) -> QItemSelection {
+  // proto:  void QSortFilterProxyModel::QSortFilterProxyModel(const QSortFilterProxyModel & );
+impl<'a> /*trait*/ QSortFilterProxyModel_New for (&'a QSortFilterProxyModel) {
+  fn New(self) -> QSortFilterProxyModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK21QSortFilterProxyModel20mapSelectionToSourceERK14QItemSelection()};
+    // unsafe{_ZN21QSortFilterProxyModelC1ERKS_()};
+    let ctysz: c_int = unsafe{QSortFilterProxyModel_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK21QSortFilterProxyModel20mapSelectionToSourceERK14QItemSelection(rsthis.qclsinst, arg0)};
-    let mut ret1 = QItemSelection::inheritFrom(ret);
-    return ret1;
+    // unsafe {_ZN21QSortFilterProxyModelC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN21QSortFilterProxyModelC1ERKS_(arg0)};
+    let rsthis = QSortFilterProxyModel{/**/qbase: QAbstractProxyModel::inheritFrom(qthis), /**/qclsinst: qthis};
+    return rsthis;
     // return 1;
   }
 }

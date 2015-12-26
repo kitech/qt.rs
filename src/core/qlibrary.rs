@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtCore/qlibrary.h
 // dst-file: /src/core/qlibrary.rs
 //
@@ -36,9 +36,8 @@ extern {
   // proto:  void QLibrary::QLibrary(const QString & fileName, const QString & version, QObject * parent);
   fn dector_ZN8QLibraryC1ERK7QStringS2_P7QObject(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> *mut c_void;
   fn _ZN8QLibraryC1ERK7QStringS2_P7QObject(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
-  // proto:  void QLibrary::QLibrary(const QString & fileName, int verNum, QObject * parent);
-  fn dector_ZN8QLibraryC1ERK7QStringiP7QObject(arg0: *mut c_void, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
-  fn _ZN8QLibraryC1ERK7QStringiP7QObject(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void);
+  // proto:  const QMetaObject * QLibrary::metaObject();
+  fn _ZNK8QLibrary10metaObjectEv(qthis: *mut c_void);
   // proto: static QFunctionPointer QLibrary::resolve(const QString & fileName, const char * symbol);
   fn _ZN8QLibrary7resolveERK7QStringPKc(arg0: *mut c_void, arg1: *mut c_char);
   // proto:  void QLibrary::QLibrary(QObject * parent);
@@ -68,8 +67,9 @@ extern {
   fn _ZN8QLibrary21setFileNameAndVersionERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QLibrary::setFileNameAndVersion(const QString & fileName, int verNum);
   fn _ZN8QLibrary21setFileNameAndVersionERK7QStringi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int);
-  // proto:  const QMetaObject * QLibrary::metaObject();
-  fn _ZNK8QLibrary10metaObjectEv(qthis: *mut c_void);
+  // proto:  void QLibrary::QLibrary(const QString & fileName, int verNum, QObject * parent);
+  fn dector_ZN8QLibraryC1ERK7QStringiP7QObject(arg0: *mut c_void, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
+  fn _ZN8QLibraryC1ERK7QStringiP7QObject(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void);
   // proto:  void QLibrary::~QLibrary();
   fn _ZN8QLibraryD0Ev(qthis: *mut c_void);
   // proto:  QString QLibrary::errorString();
@@ -158,20 +158,24 @@ impl<'a> /*trait*/ QLibrary_New for (&'a QString, &'a QString, &'a QObject) {
   }
 }
 
-  // proto:  void QLibrary::QLibrary(const QString & fileName, int verNum, QObject * parent);
-impl<'a> /*trait*/ QLibrary_New for (&'a QString, i32, &'a QObject) {
-  fn New(self) -> QLibrary {
+  // proto:  const QMetaObject * QLibrary::metaObject();
+impl /*struct*/ QLibrary {
+  pub fn metaObject<RetType, T: QLibrary_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
+    // return 1;
+  }
+}
+
+pub trait QLibrary_metaObject<RetType> {
+  fn metaObject(self , rsthis: & QLibrary) -> RetType;
+}
+
+  // proto:  const QMetaObject * QLibrary::metaObject();
+impl<'a> /*trait*/ QLibrary_metaObject<()> for () {
+  fn metaObject(self , rsthis: & QLibrary) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QLibraryC1ERK7QStringiP7QObject()};
-    let ctysz: c_int = unsafe{QLibrary_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
-    let arg2 = self.2.qclsinst  as *mut c_void;
-    // unsafe {_ZN8QLibraryC1ERK7QStringiP7QObject(qthis, arg0, arg1, arg2)};
-    let qthis: *mut c_void = unsafe {dector_ZN8QLibraryC1ERK7QStringiP7QObject(arg0, arg1, arg2)};
-    let rsthis = QLibrary{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
-    return rsthis;
+    // unsafe{_ZNK8QLibrary10metaObjectEv()};
+     unsafe {_ZNK8QLibrary10metaObjectEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -436,24 +440,20 @@ impl<'a> /*trait*/ QLibrary_setFileNameAndVersion<()> for (&'a QString, i32) {
   }
 }
 
-  // proto:  const QMetaObject * QLibrary::metaObject();
-impl /*struct*/ QLibrary {
-  pub fn metaObject<RetType, T: QLibrary_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.metaObject(self);
-    // return 1;
-  }
-}
-
-pub trait QLibrary_metaObject<RetType> {
-  fn metaObject(self , rsthis: & QLibrary) -> RetType;
-}
-
-  // proto:  const QMetaObject * QLibrary::metaObject();
-impl<'a> /*trait*/ QLibrary_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QLibrary) -> () {
+  // proto:  void QLibrary::QLibrary(const QString & fileName, int verNum, QObject * parent);
+impl<'a> /*trait*/ QLibrary_New for (&'a QString, i32, &'a QObject) {
+  fn New(self) -> QLibrary {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QLibrary10metaObjectEv()};
-     unsafe {_ZNK8QLibrary10metaObjectEv(rsthis.qclsinst)};
+    // unsafe{_ZN8QLibraryC1ERK7QStringiP7QObject()};
+    let ctysz: c_int = unsafe{QLibrary_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let arg0 = self.0.qclsinst  as *mut c_void;
+    let arg1 = self.1  as c_int;
+    let arg2 = self.2.qclsinst  as *mut c_void;
+    // unsafe {_ZN8QLibraryC1ERK7QStringiP7QObject(qthis, arg0, arg1, arg2)};
+    let qthis: *mut c_void = unsafe {dector_ZN8QLibraryC1ERK7QStringiP7QObject(arg0, arg1, arg2)};
+    let rsthis = QLibrary{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    return rsthis;
     // return 1;
   }
 }

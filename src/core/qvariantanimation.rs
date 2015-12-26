@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtCore/qvariantanimation.h
 // dst-file: /src/core/qvariantanimation.rs
 //
@@ -35,8 +35,6 @@ extern {
   fn QVariantAnimation_Class_Size() -> c_int;
   // proto:  void QVariantAnimation::setDuration(int msecs);
   fn _ZN17QVariantAnimation11setDurationEi(qthis: *mut c_void, arg0: c_int);
-  // proto:  const QMetaObject * QVariantAnimation::metaObject();
-  fn _ZNK17QVariantAnimation10metaObjectEv(qthis: *mut c_void);
   // proto:  void QVariantAnimation::setKeyValueAt(qreal step, const QVariant & value);
   fn _ZN17QVariantAnimation13setKeyValueAtEdRK8QVariant(qthis: *mut c_void, arg0: c_double, arg1: *mut c_void);
   // proto:  void QVariantAnimation::valueChanged(const QVariant & value);
@@ -57,6 +55,8 @@ extern {
   fn _ZN17QVariantAnimation13setStartValueERK8QVariant(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QVariant QVariantAnimation::startValue();
   fn _ZNK17QVariantAnimation10startValueEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  const QMetaObject * QVariantAnimation::metaObject();
+  fn _ZNK17QVariantAnimation10metaObjectEv(qthis: *mut c_void);
   // proto:  void QVariantAnimation::setEndValue(const QVariant & value);
   fn _ZN17QVariantAnimation11setEndValueERK8QVariant(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QEasingCurve QVariantAnimation::easingCurve();
@@ -114,28 +114,6 @@ impl<'a> /*trait*/ QVariantAnimation_setDuration<()> for (i32) {
     // unsafe{_ZN17QVariantAnimation11setDurationEi()};
     let arg0 = self  as c_int;
      unsafe {_ZN17QVariantAnimation11setDurationEi(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  const QMetaObject * QVariantAnimation::metaObject();
-impl /*struct*/ QVariantAnimation {
-  pub fn metaObject<RetType, T: QVariantAnimation_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.metaObject(self);
-    // return 1;
-  }
-}
-
-pub trait QVariantAnimation_metaObject<RetType> {
-  fn metaObject(self , rsthis: & QVariantAnimation) -> RetType;
-}
-
-  // proto:  const QMetaObject * QVariantAnimation::metaObject();
-impl<'a> /*trait*/ QVariantAnimation_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QVariantAnimation) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK17QVariantAnimation10metaObjectEv()};
-     unsafe {_ZNK17QVariantAnimation10metaObjectEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -370,6 +348,28 @@ impl<'a> /*trait*/ QVariantAnimation_startValue<QVariant> for () {
     let mut ret = unsafe {_ZNK17QVariantAnimation10startValueEv(rsthis.qclsinst)};
     let mut ret1 = QVariant::inheritFrom(ret);
     return ret1;
+    // return 1;
+  }
+}
+
+  // proto:  const QMetaObject * QVariantAnimation::metaObject();
+impl /*struct*/ QVariantAnimation {
+  pub fn metaObject<RetType, T: QVariantAnimation_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
+    // return 1;
+  }
+}
+
+pub trait QVariantAnimation_metaObject<RetType> {
+  fn metaObject(self , rsthis: & QVariantAnimation) -> RetType;
+}
+
+  // proto:  const QMetaObject * QVariantAnimation::metaObject();
+impl<'a> /*trait*/ QVariantAnimation_metaObject<()> for () {
+  fn metaObject(self , rsthis: & QVariantAnimation) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK17QVariantAnimation10metaObjectEv()};
+     unsafe {_ZNK17QVariantAnimation10metaObjectEv(rsthis.qclsinst)};
     // return 1;
   }
 }
