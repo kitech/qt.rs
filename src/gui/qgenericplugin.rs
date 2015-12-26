@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtGui/qgenericplugin.h
 // dst-file: /src/gui/qgenericplugin.rs
 //
@@ -27,11 +27,12 @@ use super::super::core::qstring::QString; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QGenericPlugin_Class_Size() -> c_int;
   // proto:  void QGenericPlugin::QGenericPlugin(QObject * parent);
+  fn dector_ZN14QGenericPluginC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
   fn _ZN14QGenericPluginC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QObject * QGenericPlugin::create(const QString & name, const QString & spec);
   fn _ZN14QGenericPlugin6createERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
@@ -81,10 +82,13 @@ pub trait QGenericPlugin_New {
   // proto:  void QGenericPlugin::QGenericPlugin(QObject * parent);
 impl<'a> /*trait*/ QGenericPlugin_New for (&'a QObject) {
   fn New(self) -> QGenericPlugin {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGenericPluginC1EP7QObject()};
+    let ctysz: c_int = unsafe{QGenericPlugin_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN14QGenericPluginC1EP7QObject(qthis, arg0)};
+    // unsafe {_ZN14QGenericPluginC1EP7QObject(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN14QGenericPluginC1EP7QObject(arg0)};
     let rsthis = QGenericPlugin{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

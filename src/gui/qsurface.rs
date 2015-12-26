@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtGui/qsurface.h
 // dst-file: /src/gui/qsurface.rs
 //
@@ -27,10 +27,10 @@ use super::super::core::qsize::QSize; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QSurface_Class_Size() -> c_int;
   // proto:  bool QSurface::supportsOpenGL();
   fn _ZNK8QSurface14supportsOpenGLEv(qthis: *mut c_void) -> c_char;
   // proto:  QSurfaceFormat QSurface::format();

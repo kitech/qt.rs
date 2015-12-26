@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtGui/qpixmapcache.h
 // dst-file: /src/gui/qpixmapcache.rs
 //
@@ -27,10 +27,10 @@ use super::qpixmap::QPixmap; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QPixmapCache_Class_Size() -> c_int;
   // proto: static int QPixmapCache::cacheLimit();
   fn _ZN12QPixmapCache10cacheLimitEv() -> c_int;
   // proto: static void QPixmapCache::clear();

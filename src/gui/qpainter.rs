@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtGui/qpainter.h
 // dst-file: /src/gui/qpainter.rs
 //
@@ -53,10 +53,10 @@ use super::qfontinfo::QFontInfo; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QPainter_Class_Size() -> c_int;
   // proto:  QRectF QPainter::boundingRect(const QRectF & rect, const QString & text, const QTextOption & o);
   fn _ZN8QPainter12boundingRectERK6QRectFRK7QStringRK11QTextOption(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> *mut c_void;
   // proto:  void QPainter::drawPicture(const QPointF & p, const QPicture & picture);
@@ -166,6 +166,7 @@ extern {
   // proto:  void QPainter::setWorldMatrixEnabled(bool enabled);
   fn _ZN8QPainter21setWorldMatrixEnabledEb(qthis: *mut c_void, arg0: c_char);
   // proto:  void QPainter::QPainter(const QPainter & );
+  fn dector_ZN8QPainterC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN8QPainterC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QPainter::drawPoints(const QPolygon & points);
   fn _ZN8QPainter10drawPointsERK8QPolygon(qthis: *mut c_void, arg0: *mut c_void);
@@ -202,6 +203,7 @@ extern {
   // proto:  void QPainter::drawTextItem(int x, int y, const QTextItem & ti);
   fn _ZN8QPainter12drawTextItemEiiRK9QTextItem(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_void);
   // proto:  void QPainter::QPainter(QPaintDevice * );
+  fn dector_ZN8QPainterC1EP12QPaintDevice(arg0: *mut c_void) -> *mut c_void;
   fn _ZN8QPainterC1EP12QPaintDevice(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QPainter::drawPixmap(int x, int y, int w, int h, const QPixmap & pm, int sx, int sy, int sw, int sh);
   fn _ZN8QPainter10drawPixmapEiiiiRK7QPixmapiiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: *mut c_void, arg5: c_int, arg6: c_int, arg7: c_int, arg8: c_int);
@@ -372,6 +374,7 @@ extern {
   // proto:  void QPainter::fillRect(const QRectF & , const QColor & color);
   fn _ZN8QPainter8fillRectERK6QRectFRK6QColor(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QPainter::QPainter();
+  fn dector_ZN8QPainterC1Ev() -> *mut c_void;
   fn _ZN8QPainterC1Ev(qthis: *mut c_void);
   // proto:  void QPainter::translate(const QPointF & offset);
   fn _ZN8QPainter9translateERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
@@ -1560,10 +1563,13 @@ pub trait QPainter_New {
   // proto:  void QPainter::QPainter(const QPainter & );
 impl<'a> /*trait*/ QPainter_New for (&'a QPainter) {
   fn New(self) -> QPainter {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPainterC1ERKS_()};
+    let ctysz: c_int = unsafe{QPainter_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN8QPainterC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN8QPainterC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN8QPainterC1ERKS_(arg0)};
     let rsthis = QPainter{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -1865,10 +1871,13 @@ impl<'a> /*trait*/ QPainter_drawTextItem<()> for (i32, i32, &'a QTextItem) {
   // proto:  void QPainter::QPainter(QPaintDevice * );
 impl<'a> /*trait*/ QPainter_New for (&'a QPaintDevice) {
   fn New(self) -> QPainter {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPainterC1EP12QPaintDevice()};
+    let ctysz: c_int = unsafe{QPainter_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN8QPainterC1EP12QPaintDevice(qthis, arg0)};
+    // unsafe {_ZN8QPainterC1EP12QPaintDevice(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN8QPainterC1EP12QPaintDevice(arg0)};
     let rsthis = QPainter{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -3368,9 +3377,12 @@ impl<'a> /*trait*/ QPainter_fillRect<()> for (&'a QRectF, &'a QColor) {
   // proto:  void QPainter::QPainter();
 impl<'a> /*trait*/ QPainter_New for () {
   fn New(self) -> QPainter {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPainterC1Ev()};
-    unsafe {_ZN8QPainterC1Ev(qthis)};
+    let ctysz: c_int = unsafe{QPainter_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN8QPainterC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN8QPainterC1Ev()};
     let rsthis = QPainter{qclsinst: qthis};
     return rsthis;
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtGui/qclipboard.h
 // dst-file: /src/gui/qclipboard.rs
 //
@@ -30,15 +30,17 @@ use super::qimage::QImage; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QClipboard_Class_Size() -> c_int;
   // proto:  void QClipboard::~QClipboard();
   fn _ZN10QClipboardD0Ev(qthis: *mut c_void);
   // proto:  void QClipboard::QClipboard(QObject * parent);
+  fn dector_ZN10QClipboardC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
   fn _ZN10QClipboardC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QClipboard::QClipboard(const QClipboard & );
+  fn dector_ZN10QClipboardC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN10QClipboardC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QClipboard::supportsFindBuffer();
   fn _ZNK10QClipboard18supportsFindBufferEv(qthis: *mut c_void) -> c_char;
@@ -122,10 +124,13 @@ pub trait QClipboard_New {
   // proto:  void QClipboard::QClipboard(QObject * parent);
 impl<'a> /*trait*/ QClipboard_New for (&'a QObject) {
   fn New(self) -> QClipboard {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QClipboardC1EP7QObject()};
+    let ctysz: c_int = unsafe{QClipboard_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN10QClipboardC1EP7QObject(qthis, arg0)};
+    // unsafe {_ZN10QClipboardC1EP7QObject(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN10QClipboardC1EP7QObject(arg0)};
     let rsthis = QClipboard{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -135,10 +140,13 @@ impl<'a> /*trait*/ QClipboard_New for (&'a QObject) {
   // proto:  void QClipboard::QClipboard(const QClipboard & );
 impl<'a> /*trait*/ QClipboard_New for (&'a QClipboard) {
   fn New(self) -> QClipboard {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QClipboardC1ERKS_()};
+    let ctysz: c_int = unsafe{QClipboard_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN10QClipboardC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN10QClipboardC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN10QClipboardC1ERKS_(arg0)};
     let rsthis = QClipboard{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

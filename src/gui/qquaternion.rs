@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtGui/qquaternion.h
 // dst-file: /src/gui/qquaternion.rs
 //
@@ -27,10 +27,10 @@ use super::qvector4d::QVector4D; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QQuaternion_Class_Size() -> c_int;
   // proto:  void QQuaternion::getAxisAndAngle(float * x, float * y, float * z, float * angle);
   fn _ZNK11QQuaternion15getAxisAndAngleEPfS0_S0_S0_(qthis: *mut c_void, arg0: *mut c_float, arg1: *mut c_float, arg2: *mut c_float, arg3: *mut c_float);
   // proto:  float QQuaternion::scalar();
@@ -40,6 +40,7 @@ extern {
   // proto:  void QQuaternion::setVector(const QVector3D & vector);
   fn _ZN11QQuaternion9setVectorERK9QVector3D(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QQuaternion::QQuaternion(const QVector4D & vector);
+  fn dector_ZN11QQuaternionC1ERK9QVector4D(arg0: *mut c_void) -> *mut c_void;
   fn _ZN11QQuaternionC1ERK9QVector4D(qthis: *mut c_void, arg0: *mut c_void);
   // proto: static QQuaternion QQuaternion::rotationTo(const QVector3D & from, const QVector3D & to);
   fn _ZN11QQuaternion10rotationToERK9QVector3DS2_(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
@@ -66,6 +67,7 @@ extern {
   // proto: static QQuaternion QQuaternion::fromDirection(const QVector3D & direction, const QVector3D & up);
   fn _ZN11QQuaternion13fromDirectionERK9QVector3DS2_(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  void QQuaternion::QQuaternion();
+  fn dector_ZN11QQuaternionC1Ev() -> *mut c_void;
   fn _ZN11QQuaternionC1Ev(qthis: *mut c_void);
   // proto:  QQuaternion QQuaternion::normalized();
   fn _ZNK11QQuaternion10normalizedEv(qthis: *mut c_void) -> *mut c_void;
@@ -83,8 +85,6 @@ extern {
   fn _ZNK11QQuaternion16toRotationMatrixEv(qthis: *mut c_void);
   // proto: static QQuaternion QQuaternion::fromEulerAngles(const QVector3D & eulerAngles);
   fn _ZN11QQuaternion15fromEulerAnglesERK9QVector3D(arg0: *mut c_void) -> *mut c_void;
-  // proto:  QVector3D QQuaternion::rotatedVector(const QVector3D & vector);
-  fn _ZNK11QQuaternion13rotatedVectorERK9QVector3D(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  float QQuaternion::lengthSquared();
   fn _ZNK11QQuaternion13lengthSquaredEv(qthis: *mut c_void) -> c_float;
   // proto:  void QQuaternion::setScalar(float scalar);
@@ -98,10 +98,12 @@ extern {
   // proto:  void QQuaternion::setVector(float x, float y, float z);
   fn _ZN11QQuaternion9setVectorEfff(qthis: *mut c_void, arg0: c_float, arg1: c_float, arg2: c_float);
   // proto:  void QQuaternion::QQuaternion(float scalar, float xpos, float ypos, float zpos);
+  fn dector_ZN11QQuaternionC1Effff(arg0: c_float, arg1: c_float, arg2: c_float, arg3: c_float) -> *mut c_void;
   fn _ZN11QQuaternionC1Effff(qthis: *mut c_void, arg0: c_float, arg1: c_float, arg2: c_float, arg3: c_float);
   // proto: static QQuaternion QQuaternion::fromAxisAndAngle(const QVector3D & axis, float angle);
   fn _ZN11QQuaternion16fromAxisAndAngleERK9QVector3Df(arg0: *mut c_void, arg1: c_float) -> *mut c_void;
   // proto:  void QQuaternion::QQuaternion(float scalar, const QVector3D & vector);
+  fn dector_ZN11QQuaternionC1EfRK9QVector3D(arg0: c_float, arg1: *mut c_void) -> *mut c_void;
   fn _ZN11QQuaternionC1EfRK9QVector3D(qthis: *mut c_void, arg0: c_float, arg1: *mut c_void);
   // proto:  float QQuaternion::length();
   fn _ZNK11QQuaternion6lengthEv(qthis: *mut c_void) -> c_float;
@@ -111,6 +113,8 @@ extern {
   fn _ZNK11QQuaternion10conjugatedEv(qthis: *mut c_void) -> *mut c_void;
   // proto: static QQuaternion QQuaternion::fromAxisAndAngle(float x, float y, float z, float angle);
   fn _ZN11QQuaternion16fromAxisAndAngleEffff(arg0: c_float, arg1: c_float, arg2: c_float, arg3: c_float) -> *mut c_void;
+  // proto:  QVector3D QQuaternion::rotatedVector(const QVector3D & vector);
+  fn _ZNK11QQuaternion13rotatedVectorERK9QVector3D(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  float QQuaternion::x();
   fn _ZNK11QQuaternion1xEv(qthis: *mut c_void);
   // proto:  float QQuaternion::z();
@@ -240,10 +244,13 @@ pub trait QQuaternion_New {
   // proto:  void QQuaternion::QQuaternion(const QVector4D & vector);
 impl<'a> /*trait*/ QQuaternion_New for (&'a QVector4D) {
   fn New(self) -> QQuaternion {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QQuaternionC1ERK9QVector4D()};
+    let ctysz: c_int = unsafe{QQuaternion_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QQuaternionC1ERK9QVector4D(qthis, arg0)};
+    // unsafe {_ZN11QQuaternionC1ERK9QVector4D(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN11QQuaternionC1ERK9QVector4D(arg0)};
     let rsthis = QQuaternion{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -553,9 +560,12 @@ impl<'a> /*trait*/ QQuaternion_fromDirection_s<QQuaternion> for (&'a QVector3D, 
   // proto:  void QQuaternion::QQuaternion();
 impl<'a> /*trait*/ QQuaternion_New for () {
   fn New(self) -> QQuaternion {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QQuaternionC1Ev()};
-    unsafe {_ZN11QQuaternionC1Ev(qthis)};
+    let ctysz: c_int = unsafe{QQuaternion_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN11QQuaternionC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN11QQuaternionC1Ev()};
     let rsthis = QQuaternion{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -731,31 +741,6 @@ impl<'a> /*trait*/ QQuaternion_fromEulerAngles_s<QQuaternion> for (&'a QVector3D
   }
 }
 
-  // proto:  QVector3D QQuaternion::rotatedVector(const QVector3D & vector);
-impl /*struct*/ QQuaternion {
-  pub fn rotatedVector<RetType, T: QQuaternion_rotatedVector<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.rotatedVector(self);
-    // return 1;
-  }
-}
-
-pub trait QQuaternion_rotatedVector<RetType> {
-  fn rotatedVector(self , rsthis: & QQuaternion) -> RetType;
-}
-
-  // proto:  QVector3D QQuaternion::rotatedVector(const QVector3D & vector);
-impl<'a> /*trait*/ QQuaternion_rotatedVector<QVector3D> for (&'a QVector3D) {
-  fn rotatedVector(self , rsthis: & QQuaternion) -> QVector3D {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK11QQuaternion13rotatedVectorERK9QVector3D()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK11QQuaternion13rotatedVectorERK9QVector3D(rsthis.qclsinst, arg0)};
-    let mut ret1 = QVector3D::inheritFrom(ret);
-    return ret1;
-    // return 1;
-  }
-}
-
   // proto:  float QQuaternion::lengthSquared();
 impl /*struct*/ QQuaternion {
   pub fn lengthSquared<RetType, T: QQuaternion_lengthSquared<RetType>>(& self,  overload_args: T) -> RetType {
@@ -889,13 +874,16 @@ impl<'a> /*trait*/ QQuaternion_setVector<()> for (f32, f32, f32) {
   // proto:  void QQuaternion::QQuaternion(float scalar, float xpos, float ypos, float zpos);
 impl<'a> /*trait*/ QQuaternion_New for (f32, f32, f32, f32) {
   fn New(self) -> QQuaternion {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QQuaternionC1Effff()};
+    let ctysz: c_int = unsafe{QQuaternion_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.0  as c_float;
     let arg1 = self.1  as c_float;
     let arg2 = self.2  as c_float;
     let arg3 = self.3  as c_float;
-    unsafe {_ZN11QQuaternionC1Effff(qthis, arg0, arg1, arg2, arg3)};
+    // unsafe {_ZN11QQuaternionC1Effff(qthis, arg0, arg1, arg2, arg3)};
+    let qthis: *mut c_void = unsafe {dector_ZN11QQuaternionC1Effff(arg0, arg1, arg2, arg3)};
     let rsthis = QQuaternion{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -931,11 +919,14 @@ impl<'a> /*trait*/ QQuaternion_fromAxisAndAngle_s<QQuaternion> for (&'a QVector3
   // proto:  void QQuaternion::QQuaternion(float scalar, const QVector3D & vector);
 impl<'a> /*trait*/ QQuaternion_New for (f32, &'a QVector3D) {
   fn New(self) -> QQuaternion {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QQuaternionC1EfRK9QVector3D()};
+    let ctysz: c_int = unsafe{QQuaternion_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.0  as c_float;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    unsafe {_ZN11QQuaternionC1EfRK9QVector3D(qthis, arg0, arg1)};
+    // unsafe {_ZN11QQuaternionC1EfRK9QVector3D(qthis, arg0, arg1)};
+    let qthis: *mut c_void = unsafe {dector_ZN11QQuaternionC1EfRK9QVector3D(arg0, arg1)};
     let rsthis = QQuaternion{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -1022,6 +1013,31 @@ impl<'a> /*trait*/ QQuaternion_fromAxisAndAngle_s<QQuaternion> for (f32, f32, f3
     let arg3 = self.3  as c_float;
     let mut ret = unsafe {_ZN11QQuaternion16fromAxisAndAngleEffff(arg0, arg1, arg2, arg3)};
     let mut ret1 = QQuaternion::inheritFrom(ret);
+    return ret1;
+    // return 1;
+  }
+}
+
+  // proto:  QVector3D QQuaternion::rotatedVector(const QVector3D & vector);
+impl /*struct*/ QQuaternion {
+  pub fn rotatedVector<RetType, T: QQuaternion_rotatedVector<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.rotatedVector(self);
+    // return 1;
+  }
+}
+
+pub trait QQuaternion_rotatedVector<RetType> {
+  fn rotatedVector(self , rsthis: & QQuaternion) -> RetType;
+}
+
+  // proto:  QVector3D QQuaternion::rotatedVector(const QVector3D & vector);
+impl<'a> /*trait*/ QQuaternion_rotatedVector<QVector3D> for (&'a QVector3D) {
+  fn rotatedVector(self , rsthis: & QQuaternion) -> QVector3D {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK11QQuaternion13rotatedVectorERK9QVector3D()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK11QQuaternion13rotatedVectorERK9QVector3D(rsthis.qclsinst, arg0)};
+    let mut ret1 = QVector3D::inheritFrom(ret);
     return ret1;
     // return 1;
   }

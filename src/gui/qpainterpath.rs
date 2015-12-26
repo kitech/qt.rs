@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtGui/qpainterpath.h
 // dst-file: /src/gui/qpainterpath.rs
 //
@@ -35,10 +35,10 @@ use super::qpen::QPen; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QPainterPath_Class_Size() -> c_int;
   // proto:  void QPainterPath::setElementPositionAt(int i, qreal x, qreal y);
   fn _ZN12QPainterPath20setElementPositionAtEidd(qthis: *mut c_void, arg0: c_int, arg1: c_double, arg2: c_double);
   // proto:  QPolygonF QPainterPath::toFillPolygon(const QMatrix & matrix);
@@ -85,11 +85,10 @@ extern {
   fn _ZNK12QPainterPath14slopeAtPercentEd(qthis: *mut c_void, arg0: c_double) -> c_double;
   // proto:  void QPainterPath::addEllipse(qreal x, qreal y, qreal w, qreal h);
   fn _ZN12QPainterPath10addEllipseEdddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
-  // proto:  bool QPainterPath::intersects(const QPainterPath & p);
-  fn _ZNK12QPainterPath10intersectsERKS_(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  void QPainterPath::addRoundRect(qreal x, qreal y, qreal w, qreal h, int roundness);
   fn _ZN12QPainterPath12addRoundRectEddddi(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_int);
   // proto:  void QPainterPath::QPainterPath(const QPointF & startPoint);
+  fn dector_ZN12QPainterPathC1ERK7QPointF(arg0: *mut c_void) -> *mut c_void;
   fn _ZN12QPainterPathC1ERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QPainterPath QPainterPath::intersected(const QPainterPath & r);
   fn _ZNK12QPainterPath11intersectedERKS_(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
@@ -125,8 +124,6 @@ extern {
   fn _ZN12QPainterPath12addRoundRectEddddii(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_int, arg5: c_int);
   // proto:  QRectF QPainterPath::boundingRect();
   fn _ZNK12QPainterPath12boundingRectEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QPainterPath::swap(QPainterPath & other);
-  fn _ZN12QPainterPath4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QPainterPath::contains(const QPainterPath & p);
   fn _ZNK12QPainterPath8containsERKS_(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  void QPainterPath::moveTo(qreal x, qreal y);
@@ -134,10 +131,12 @@ extern {
   // proto:  QPainterPath QPainterPath::subtracted(const QPainterPath & r);
   fn _ZNK12QPainterPath10subtractedERKS_(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QPainterPath::QPainterPath();
+  fn dector_ZN12QPainterPathC1Ev() -> *mut c_void;
   fn _ZN12QPainterPathC1Ev(qthis: *mut c_void);
   // proto:  void QPainterPath::addText(const QPointF & point, const QFont & f, const QString & text);
   fn _ZN12QPainterPath7addTextERK7QPointFRK5QFontRK7QString(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  void QPainterPath::QPainterPath(const QPainterPath & other);
+  fn dector_ZN12QPainterPathC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN12QPainterPathC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QPointF QPainterPath::pointAtPercent(qreal t);
   fn _ZNK12QPainterPath14pointAtPercentEd(qthis: *mut c_void, arg0: c_double) -> *mut c_void;
@@ -149,6 +148,8 @@ extern {
   fn _ZN12QPainterPath6lineToERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QPainterPath QPainterPath::subtractedInverted(const QPainterPath & r);
   fn _ZNK12QPainterPath18subtractedInvertedERKS_(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  // proto:  bool QPainterPath::intersects(const QPainterPath & p);
+  fn _ZNK12QPainterPath10intersectsERKS_(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  void QPainterPath::arcMoveTo(qreal x, qreal y, qreal w, qreal h, qreal angle);
   fn _ZN12QPainterPath9arcMoveToEddddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double);
   // proto:  bool QPainterPath::isEmpty();
@@ -169,34 +170,38 @@ extern {
   fn _ZNK12QPainterPath14angleAtPercentEd(qthis: *mut c_void, arg0: c_double) -> c_double;
   // proto:  void QPainterPath::closeSubpath();
   fn _ZN12QPainterPath12closeSubpathEv(qthis: *mut c_void);
+  fn QPainterPathStroker_Class_Size() -> c_int;
   // proto:  qreal QPainterPathStroker::curveThreshold();
   fn _ZNK19QPainterPathStroker14curveThresholdEv(qthis: *mut c_void) -> c_double;
+  // proto:  void QPainterPathStroker::QPainterPathStroker();
+  fn dector_ZN19QPainterPathStrokerC1Ev() -> *mut c_void;
+  fn _ZN19QPainterPathStrokerC1Ev(qthis: *mut c_void);
+  // proto:  void QPainterPathStroker::setDashOffset(qreal offset);
+  fn _ZN19QPainterPathStroker13setDashOffsetEd(qthis: *mut c_void, arg0: c_double);
+  // proto:  void QPainterPathStroker::QPainterPathStroker(const QPen & pen);
+  fn dector_ZN19QPainterPathStrokerC1ERK4QPen(arg0: *mut c_void) -> *mut c_void;
+  fn _ZN19QPainterPathStrokerC1ERK4QPen(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QPainterPathStroker::setCurveThreshold(qreal threshold);
+  fn _ZN19QPainterPathStroker17setCurveThresholdEd(qthis: *mut c_void, arg0: c_double);
+  // proto:  qreal QPainterPathStroker::dashOffset();
+  fn _ZNK19QPainterPathStroker10dashOffsetEv(qthis: *mut c_void) -> c_double;
   // proto:  void QPainterPathStroker::setWidth(qreal width);
   fn _ZN19QPainterPathStroker8setWidthEd(qthis: *mut c_void, arg0: c_double);
   // proto:  void QPainterPathStroker::~QPainterPathStroker();
   fn _ZN19QPainterPathStrokerD0Ev(qthis: *mut c_void);
-  // proto:  void QPainterPathStroker::setMiterLimit(qreal length);
-  fn _ZN19QPainterPathStroker13setMiterLimitEd(qthis: *mut c_void, arg0: c_double);
-  // proto:  void QPainterPathStroker::QPainterPathStroker(const QPen & pen);
-  fn _ZN19QPainterPathStrokerC1ERK4QPen(qthis: *mut c_void, arg0: *mut c_void);
-  // proto:  void QPainterPathStroker::setCurveThreshold(qreal threshold);
-  fn _ZN19QPainterPathStroker17setCurveThresholdEd(qthis: *mut c_void, arg0: c_double);
-  // proto:  QVector<qreal> QPainterPathStroker::dashPattern();
-  fn _ZNK19QPainterPathStroker11dashPatternEv(qthis: *mut c_void);
-  // proto:  qreal QPainterPathStroker::dashOffset();
-  fn _ZNK19QPainterPathStroker10dashOffsetEv(qthis: *mut c_void) -> c_double;
-  // proto:  void QPainterPathStroker::QPainterPathStroker();
-  fn _ZN19QPainterPathStrokerC1Ev(qthis: *mut c_void);
-  // proto:  QPainterPath QPainterPathStroker::createStroke(const QPainterPath & path);
-  fn _ZNK19QPainterPathStroker12createStrokeERK12QPainterPath(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
-  // proto:  void QPainterPathStroker::setDashOffset(qreal offset);
-  fn _ZN19QPainterPathStroker13setDashOffsetEd(qthis: *mut c_void, arg0: c_double);
   // proto:  qreal QPainterPathStroker::width();
   fn _ZNK19QPainterPathStroker5widthEv(qthis: *mut c_void) -> c_double;
   // proto:  void QPainterPathStroker::QPainterPathStroker(const QPainterPathStroker & );
+  fn dector_ZN19QPainterPathStrokerC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN19QPainterPathStrokerC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  qreal QPainterPathStroker::miterLimit();
   fn _ZNK19QPainterPathStroker10miterLimitEv(qthis: *mut c_void) -> c_double;
+  // proto:  QVector<qreal> QPainterPathStroker::dashPattern();
+  fn _ZNK19QPainterPathStroker11dashPatternEv(qthis: *mut c_void);
+  // proto:  QPainterPath QPainterPathStroker::createStroke(const QPainterPath & path);
+  fn _ZNK19QPainterPathStroker12createStrokeERK12QPainterPath(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  // proto:  void QPainterPathStroker::setMiterLimit(qreal length);
+  fn _ZN19QPainterPathStroker13setMiterLimitEd(qthis: *mut c_void, arg0: c_double);
 } // <= ext block end
 
 // body block begin =>
@@ -720,18 +725,6 @@ impl<'a> /*trait*/ QPainterPath_addEllipse<()> for (f64, f64, f64, f64) {
   }
 }
 
-  // proto:  bool QPainterPath::intersects(const QPainterPath & p);
-impl<'a> /*trait*/ QPainterPath_intersects<i8> for (&'a QPainterPath) {
-  fn intersects(self , rsthis: & QPainterPath) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK12QPainterPath10intersectsERKS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK12QPainterPath10intersectsERKS_(rsthis.qclsinst, arg0)};
-    return ret as i8;
-    // return 1;
-  }
-}
-
   // proto:  void QPainterPath::addRoundRect(qreal x, qreal y, qreal w, qreal h, int roundness);
 impl<'a> /*trait*/ QPainterPath_addRoundRect<()> for (f64, f64, f64, f64, i32) {
   fn addRoundRect(self , rsthis: & QPainterPath) -> () {
@@ -763,10 +756,13 @@ pub trait QPainterPath_New {
   // proto:  void QPainterPath::QPainterPath(const QPointF & startPoint);
 impl<'a> /*trait*/ QPainterPath_New for (&'a QPointF) {
   fn New(self) -> QPainterPath {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPainterPathC1ERK7QPointF()};
+    let ctysz: c_int = unsafe{QPainterPath_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN12QPainterPathC1ERK7QPointF(qthis, arg0)};
+    // unsafe {_ZN12QPainterPathC1ERK7QPointF(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN12QPainterPathC1ERK7QPointF(arg0)};
     let rsthis = QPainterPath{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -1122,29 +1118,6 @@ impl<'a> /*trait*/ QPainterPath_boundingRect<QRectF> for () {
   }
 }
 
-  // proto:  void QPainterPath::swap(QPainterPath & other);
-impl /*struct*/ QPainterPath {
-  pub fn swap<RetType, T: QPainterPath_swap<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.swap(self);
-    // return 1;
-  }
-}
-
-pub trait QPainterPath_swap<RetType> {
-  fn swap(self , rsthis: & QPainterPath) -> RetType;
-}
-
-  // proto:  void QPainterPath::swap(QPainterPath & other);
-impl<'a> /*trait*/ QPainterPath_swap<()> for (&'a QPainterPath) {
-  fn swap(self , rsthis: & QPainterPath) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QPainterPath4swapERS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN12QPainterPath4swapERS_(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  bool QPainterPath::contains(const QPainterPath & p);
 impl<'a> /*trait*/ QPainterPath_contains<i8> for (&'a QPainterPath) {
   fn contains(self , rsthis: & QPainterPath) -> i8 {
@@ -1209,9 +1182,12 @@ impl<'a> /*trait*/ QPainterPath_subtracted<QPainterPath> for (&'a QPainterPath) 
   // proto:  void QPainterPath::QPainterPath();
 impl<'a> /*trait*/ QPainterPath_New for () {
   fn New(self) -> QPainterPath {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPainterPathC1Ev()};
-    unsafe {_ZN12QPainterPathC1Ev(qthis)};
+    let ctysz: c_int = unsafe{QPainterPath_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN12QPainterPathC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN12QPainterPathC1Ev()};
     let rsthis = QPainterPath{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -1234,10 +1210,13 @@ impl<'a> /*trait*/ QPainterPath_addText<()> for (&'a QPointF, &'a QFont, &'a QSt
   // proto:  void QPainterPath::QPainterPath(const QPainterPath & other);
 impl<'a> /*trait*/ QPainterPath_New for (&'a QPainterPath) {
   fn New(self) -> QPainterPath {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPainterPathC1ERKS_()};
+    let ctysz: c_int = unsafe{QPainterPath_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN12QPainterPathC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN12QPainterPathC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN12QPainterPathC1ERKS_(arg0)};
     let rsthis = QPainterPath{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -1341,6 +1320,18 @@ impl<'a> /*trait*/ QPainterPath_subtractedInverted<QPainterPath> for (&'a QPaint
     let mut ret = unsafe {_ZNK12QPainterPath18subtractedInvertedERKS_(rsthis.qclsinst, arg0)};
     let mut ret1 = QPainterPath::inheritFrom(ret);
     return ret1;
+    // return 1;
+  }
+}
+
+  // proto:  bool QPainterPath::intersects(const QPainterPath & p);
+impl<'a> /*trait*/ QPainterPath_intersects<i8> for (&'a QPainterPath) {
+  fn intersects(self , rsthis: & QPainterPath) -> i8 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK12QPainterPath10intersectsERKS_()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK12QPainterPath10intersectsERKS_(rsthis.qclsinst, arg0)};
+    return ret as i8;
     // return 1;
   }
 }
@@ -1553,6 +1544,119 @@ impl<'a> /*trait*/ QPainterPathStroker_curveThreshold<f64> for () {
   }
 }
 
+  // proto:  void QPainterPathStroker::QPainterPathStroker();
+impl /*struct*/ QPainterPathStroker {
+  pub fn New<T: QPainterPathStroker_New>(value: T) -> QPainterPathStroker {
+    let rsthis = value.New();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QPainterPathStroker_New {
+  fn New(self) -> QPainterPathStroker;
+}
+
+  // proto:  void QPainterPathStroker::QPainterPathStroker();
+impl<'a> /*trait*/ QPainterPathStroker_New for () {
+  fn New(self) -> QPainterPathStroker {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN19QPainterPathStrokerC1Ev()};
+    let ctysz: c_int = unsafe{QPainterPathStroker_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN19QPainterPathStrokerC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN19QPainterPathStrokerC1Ev()};
+    let rsthis = QPainterPathStroker{qclsinst: qthis};
+    return rsthis;
+    // return 1;
+  }
+}
+
+  // proto:  void QPainterPathStroker::setDashOffset(qreal offset);
+impl /*struct*/ QPainterPathStroker {
+  pub fn setDashOffset<RetType, T: QPainterPathStroker_setDashOffset<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.setDashOffset(self);
+    // return 1;
+  }
+}
+
+pub trait QPainterPathStroker_setDashOffset<RetType> {
+  fn setDashOffset(self , rsthis: & QPainterPathStroker) -> RetType;
+}
+
+  // proto:  void QPainterPathStroker::setDashOffset(qreal offset);
+impl<'a> /*trait*/ QPainterPathStroker_setDashOffset<()> for (f64) {
+  fn setDashOffset(self , rsthis: & QPainterPathStroker) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN19QPainterPathStroker13setDashOffsetEd()};
+    let arg0 = self  as c_double;
+     unsafe {_ZN19QPainterPathStroker13setDashOffsetEd(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
+  // proto:  void QPainterPathStroker::QPainterPathStroker(const QPen & pen);
+impl<'a> /*trait*/ QPainterPathStroker_New for (&'a QPen) {
+  fn New(self) -> QPainterPathStroker {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN19QPainterPathStrokerC1ERK4QPen()};
+    let ctysz: c_int = unsafe{QPainterPathStroker_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let arg0 = self.qclsinst  as *mut c_void;
+    // unsafe {_ZN19QPainterPathStrokerC1ERK4QPen(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN19QPainterPathStrokerC1ERK4QPen(arg0)};
+    let rsthis = QPainterPathStroker{qclsinst: qthis};
+    return rsthis;
+    // return 1;
+  }
+}
+
+  // proto:  void QPainterPathStroker::setCurveThreshold(qreal threshold);
+impl /*struct*/ QPainterPathStroker {
+  pub fn setCurveThreshold<RetType, T: QPainterPathStroker_setCurveThreshold<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.setCurveThreshold(self);
+    // return 1;
+  }
+}
+
+pub trait QPainterPathStroker_setCurveThreshold<RetType> {
+  fn setCurveThreshold(self , rsthis: & QPainterPathStroker) -> RetType;
+}
+
+  // proto:  void QPainterPathStroker::setCurveThreshold(qreal threshold);
+impl<'a> /*trait*/ QPainterPathStroker_setCurveThreshold<()> for (f64) {
+  fn setCurveThreshold(self , rsthis: & QPainterPathStroker) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN19QPainterPathStroker17setCurveThresholdEd()};
+    let arg0 = self  as c_double;
+     unsafe {_ZN19QPainterPathStroker17setCurveThresholdEd(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
+  // proto:  qreal QPainterPathStroker::dashOffset();
+impl /*struct*/ QPainterPathStroker {
+  pub fn dashOffset<RetType, T: QPainterPathStroker_dashOffset<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.dashOffset(self);
+    // return 1;
+  }
+}
+
+pub trait QPainterPathStroker_dashOffset<RetType> {
+  fn dashOffset(self , rsthis: & QPainterPathStroker) -> RetType;
+}
+
+  // proto:  qreal QPainterPathStroker::dashOffset();
+impl<'a> /*trait*/ QPainterPathStroker_dashOffset<f64> for () {
+  fn dashOffset(self , rsthis: & QPainterPathStroker) -> f64 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK19QPainterPathStroker10dashOffsetEv()};
+    let mut ret = unsafe {_ZNK19QPainterPathStroker10dashOffsetEv(rsthis.qclsinst)};
+    return ret as f64;
+    // return 1;
+  }
+}
+
   // proto:  void QPainterPathStroker::setWidth(qreal width);
 impl /*struct*/ QPainterPathStroker {
   pub fn setWidth<RetType, T: QPainterPathStroker_setWidth<RetType>>(& self,  overload_args: T) -> RetType {
@@ -1598,74 +1702,64 @@ impl<'a> /*trait*/ QPainterPathStroker_Free<()> for () {
   }
 }
 
-  // proto:  void QPainterPathStroker::setMiterLimit(qreal length);
+  // proto:  qreal QPainterPathStroker::width();
 impl /*struct*/ QPainterPathStroker {
-  pub fn setMiterLimit<RetType, T: QPainterPathStroker_setMiterLimit<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setMiterLimit(self);
+  pub fn width<RetType, T: QPainterPathStroker_width<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.width(self);
     // return 1;
   }
 }
 
-pub trait QPainterPathStroker_setMiterLimit<RetType> {
-  fn setMiterLimit(self , rsthis: & QPainterPathStroker) -> RetType;
+pub trait QPainterPathStroker_width<RetType> {
+  fn width(self , rsthis: & QPainterPathStroker) -> RetType;
 }
 
-  // proto:  void QPainterPathStroker::setMiterLimit(qreal length);
-impl<'a> /*trait*/ QPainterPathStroker_setMiterLimit<()> for (f64) {
-  fn setMiterLimit(self , rsthis: & QPainterPathStroker) -> () {
+  // proto:  qreal QPainterPathStroker::width();
+impl<'a> /*trait*/ QPainterPathStroker_width<f64> for () {
+  fn width(self , rsthis: & QPainterPathStroker) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QPainterPathStroker13setMiterLimitEd()};
-    let arg0 = self  as c_double;
-     unsafe {_ZN19QPainterPathStroker13setMiterLimitEd(rsthis.qclsinst, arg0)};
+    // unsafe{_ZNK19QPainterPathStroker5widthEv()};
+    let mut ret = unsafe {_ZNK19QPainterPathStroker5widthEv(rsthis.qclsinst)};
+    return ret as f64;
     // return 1;
   }
 }
 
-  // proto:  void QPainterPathStroker::QPainterPathStroker(const QPen & pen);
-impl /*struct*/ QPainterPathStroker {
-  pub fn New<T: QPainterPathStroker_New>(value: T) -> QPainterPathStroker {
-    let rsthis = value.New();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QPainterPathStroker_New {
-  fn New(self) -> QPainterPathStroker;
-}
-
-  // proto:  void QPainterPathStroker::QPainterPathStroker(const QPen & pen);
-impl<'a> /*trait*/ QPainterPathStroker_New for (&'a QPen) {
+  // proto:  void QPainterPathStroker::QPainterPathStroker(const QPainterPathStroker & );
+impl<'a> /*trait*/ QPainterPathStroker_New for (&'a QPainterPathStroker) {
   fn New(self) -> QPainterPathStroker {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QPainterPathStrokerC1ERK4QPen()};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN19QPainterPathStrokerC1ERKS_()};
+    let ctysz: c_int = unsafe{QPainterPathStroker_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN19QPainterPathStrokerC1ERK4QPen(qthis, arg0)};
+    // unsafe {_ZN19QPainterPathStrokerC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN19QPainterPathStrokerC1ERKS_(arg0)};
     let rsthis = QPainterPathStroker{qclsinst: qthis};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  void QPainterPathStroker::setCurveThreshold(qreal threshold);
+  // proto:  qreal QPainterPathStroker::miterLimit();
 impl /*struct*/ QPainterPathStroker {
-  pub fn setCurveThreshold<RetType, T: QPainterPathStroker_setCurveThreshold<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setCurveThreshold(self);
+  pub fn miterLimit<RetType, T: QPainterPathStroker_miterLimit<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.miterLimit(self);
     // return 1;
   }
 }
 
-pub trait QPainterPathStroker_setCurveThreshold<RetType> {
-  fn setCurveThreshold(self , rsthis: & QPainterPathStroker) -> RetType;
+pub trait QPainterPathStroker_miterLimit<RetType> {
+  fn miterLimit(self , rsthis: & QPainterPathStroker) -> RetType;
 }
 
-  // proto:  void QPainterPathStroker::setCurveThreshold(qreal threshold);
-impl<'a> /*trait*/ QPainterPathStroker_setCurveThreshold<()> for (f64) {
-  fn setCurveThreshold(self , rsthis: & QPainterPathStroker) -> () {
+  // proto:  qreal QPainterPathStroker::miterLimit();
+impl<'a> /*trait*/ QPainterPathStroker_miterLimit<f64> for () {
+  fn miterLimit(self , rsthis: & QPainterPathStroker) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QPainterPathStroker17setCurveThresholdEd()};
-    let arg0 = self  as c_double;
-     unsafe {_ZN19QPainterPathStroker17setCurveThresholdEd(rsthis.qclsinst, arg0)};
+    // unsafe{_ZNK19QPainterPathStroker10miterLimitEv()};
+    let mut ret = unsafe {_ZNK19QPainterPathStroker10miterLimitEv(rsthis.qclsinst)};
+    return ret as f64;
     // return 1;
   }
 }
@@ -1688,41 +1782,6 @@ impl<'a> /*trait*/ QPainterPathStroker_dashPattern<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QPainterPathStroker11dashPatternEv()};
      unsafe {_ZNK19QPainterPathStroker11dashPatternEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  qreal QPainterPathStroker::dashOffset();
-impl /*struct*/ QPainterPathStroker {
-  pub fn dashOffset<RetType, T: QPainterPathStroker_dashOffset<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.dashOffset(self);
-    // return 1;
-  }
-}
-
-pub trait QPainterPathStroker_dashOffset<RetType> {
-  fn dashOffset(self , rsthis: & QPainterPathStroker) -> RetType;
-}
-
-  // proto:  qreal QPainterPathStroker::dashOffset();
-impl<'a> /*trait*/ QPainterPathStroker_dashOffset<f64> for () {
-  fn dashOffset(self , rsthis: & QPainterPathStroker) -> f64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK19QPainterPathStroker10dashOffsetEv()};
-    let mut ret = unsafe {_ZNK19QPainterPathStroker10dashOffsetEv(rsthis.qclsinst)};
-    return ret as f64;
-    // return 1;
-  }
-}
-
-  // proto:  void QPainterPathStroker::QPainterPathStroker();
-impl<'a> /*trait*/ QPainterPathStroker_New for () {
-  fn New(self) -> QPainterPathStroker {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QPainterPathStrokerC1Ev()};
-    unsafe {_ZN19QPainterPathStrokerC1Ev(qthis)};
-    let rsthis = QPainterPathStroker{qclsinst: qthis};
-    return rsthis;
     // return 1;
   }
 }
@@ -1752,84 +1811,25 @@ impl<'a> /*trait*/ QPainterPathStroker_createStroke<QPainterPath> for (&'a QPain
   }
 }
 
-  // proto:  void QPainterPathStroker::setDashOffset(qreal offset);
+  // proto:  void QPainterPathStroker::setMiterLimit(qreal length);
 impl /*struct*/ QPainterPathStroker {
-  pub fn setDashOffset<RetType, T: QPainterPathStroker_setDashOffset<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setDashOffset(self);
+  pub fn setMiterLimit<RetType, T: QPainterPathStroker_setMiterLimit<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.setMiterLimit(self);
     // return 1;
   }
 }
 
-pub trait QPainterPathStroker_setDashOffset<RetType> {
-  fn setDashOffset(self , rsthis: & QPainterPathStroker) -> RetType;
+pub trait QPainterPathStroker_setMiterLimit<RetType> {
+  fn setMiterLimit(self , rsthis: & QPainterPathStroker) -> RetType;
 }
 
-  // proto:  void QPainterPathStroker::setDashOffset(qreal offset);
-impl<'a> /*trait*/ QPainterPathStroker_setDashOffset<()> for (f64) {
-  fn setDashOffset(self , rsthis: & QPainterPathStroker) -> () {
+  // proto:  void QPainterPathStroker::setMiterLimit(qreal length);
+impl<'a> /*trait*/ QPainterPathStroker_setMiterLimit<()> for (f64) {
+  fn setMiterLimit(self , rsthis: & QPainterPathStroker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QPainterPathStroker13setDashOffsetEd()};
+    // unsafe{_ZN19QPainterPathStroker13setMiterLimitEd()};
     let arg0 = self  as c_double;
-     unsafe {_ZN19QPainterPathStroker13setDashOffsetEd(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  qreal QPainterPathStroker::width();
-impl /*struct*/ QPainterPathStroker {
-  pub fn width<RetType, T: QPainterPathStroker_width<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.width(self);
-    // return 1;
-  }
-}
-
-pub trait QPainterPathStroker_width<RetType> {
-  fn width(self , rsthis: & QPainterPathStroker) -> RetType;
-}
-
-  // proto:  qreal QPainterPathStroker::width();
-impl<'a> /*trait*/ QPainterPathStroker_width<f64> for () {
-  fn width(self , rsthis: & QPainterPathStroker) -> f64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK19QPainterPathStroker5widthEv()};
-    let mut ret = unsafe {_ZNK19QPainterPathStroker5widthEv(rsthis.qclsinst)};
-    return ret as f64;
-    // return 1;
-  }
-}
-
-  // proto:  void QPainterPathStroker::QPainterPathStroker(const QPainterPathStroker & );
-impl<'a> /*trait*/ QPainterPathStroker_New for (&'a QPainterPathStroker) {
-  fn New(self) -> QPainterPathStroker {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QPainterPathStrokerC1ERKS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN19QPainterPathStrokerC1ERKS_(qthis, arg0)};
-    let rsthis = QPainterPathStroker{qclsinst: qthis};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  qreal QPainterPathStroker::miterLimit();
-impl /*struct*/ QPainterPathStroker {
-  pub fn miterLimit<RetType, T: QPainterPathStroker_miterLimit<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.miterLimit(self);
-    // return 1;
-  }
-}
-
-pub trait QPainterPathStroker_miterLimit<RetType> {
-  fn miterLimit(self , rsthis: & QPainterPathStroker) -> RetType;
-}
-
-  // proto:  qreal QPainterPathStroker::miterLimit();
-impl<'a> /*trait*/ QPainterPathStroker_miterLimit<f64> for () {
-  fn miterLimit(self , rsthis: & QPainterPathStroker) -> f64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK19QPainterPathStroker10miterLimitEv()};
-    let mut ret = unsafe {_ZNK19QPainterPathStroker10miterLimitEv(rsthis.qclsinst)};
-    return ret as f64;
+     unsafe {_ZN19QPainterPathStroker13setMiterLimitEd(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

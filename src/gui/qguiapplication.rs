@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtGui/qguiapplication.h
 // dst-file: /src/gui/qguiapplication.rs
 //
@@ -41,10 +41,10 @@ use super::super::core::qbytearray::QByteArray; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QGuiApplication_Class_Size() -> c_int;
   // proto:  void QGuiApplication::~QGuiApplication();
   fn _ZN15QGuiApplicationD0Ev(qthis: *mut c_void);
   // proto: static void QGuiApplication::setFont(const QFont & );
@@ -58,6 +58,7 @@ extern {
   // proto: static QInputMethod * QGuiApplication::inputMethod();
   fn _ZN15QGuiApplication11inputMethodEv() -> *mut c_void;
   // proto:  void QGuiApplication::QGuiApplication(const QGuiApplication & );
+  fn dector_ZN15QGuiApplicationC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN15QGuiApplicationC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QGuiApplication::isSavingSession();
   fn _ZNK15QGuiApplication15isSavingSessionEv(qthis: *mut c_void) -> c_char;
@@ -71,8 +72,8 @@ extern {
   fn _ZNK15QGuiApplication17isSessionRestoredEv(qthis: *mut c_void) -> c_char;
   // proto:  QString QGuiApplication::sessionKey();
   fn _ZNK15QGuiApplication10sessionKeyEv(qthis: *mut c_void) -> *mut c_void;
-  // proto: static bool QGuiApplication::desktopSettingsAware();
-  fn _ZN15QGuiApplication20desktopSettingsAwareEv() -> c_char;
+  // proto:  void QGuiApplication::lastWindowClosed();
+  fn _ZN15QGuiApplication16lastWindowClosedEv(qthis: *mut c_void);
   // proto: static void QGuiApplication::sync();
   fn _ZN15QGuiApplication4syncEv();
   // proto: static void QGuiApplication::setQuitOnLastWindowClosed(bool quit);
@@ -93,8 +94,6 @@ extern {
   fn _ZN15QGuiApplication6notifyEP7QObjectP6QEvent(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> c_char;
   // proto: static QWindowList QGuiApplication::topLevelWindows();
   fn _ZN15QGuiApplication15topLevelWindowsEv();
-  // proto: static bool QGuiApplication::isRightToLeft();
-  fn _ZN15QGuiApplication13isRightToLeftEv() -> c_char;
   // proto:  void QGuiApplication::focusObjectChanged(QObject * focusObject);
   fn _ZN15QGuiApplication18focusObjectChangedEP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QGuiApplication::fontDatabaseChanged();
@@ -115,11 +114,12 @@ extern {
   fn _ZN15QGuiApplication18focusWindowChangedEP7QWindow(qthis: *mut c_void, arg0: *mut c_void);
   // proto: static void QGuiApplication::setApplicationDisplayName(const QString & name);
   fn _ZN15QGuiApplication25setApplicationDisplayNameERK7QString(arg0: *mut c_void);
-  // proto: static bool QGuiApplication::isLeftToRight();
-  fn _ZN15QGuiApplication13isLeftToRightEv() -> c_char;
+  // proto: static bool QGuiApplication::desktopSettingsAware();
+  fn _ZN15QGuiApplication20desktopSettingsAwareEv() -> c_char;
   // proto: static QWindow * QGuiApplication::topLevelAt(const QPoint & pos);
   fn _ZN15QGuiApplication10topLevelAtERK6QPoint(arg0: *mut c_void) -> *mut c_void;
   // proto:  void QGuiApplication::QGuiApplication(int & argc, char ** argv, int );
+  fn dector_ZN15QGuiApplicationC1ERiPPci(arg0: *mut c_int, arg1: *mut c_char, arg2: c_int) -> *mut c_void;
   fn _ZN15QGuiApplicationC1ERiPPci(qthis: *mut c_void, arg0: *mut c_int, arg1: *mut c_char, arg2: c_int);
   // proto: static void QGuiApplication::setDesktopSettingsAware(bool on);
   fn _ZN15QGuiApplication23setDesktopSettingsAwareEb(arg0: c_char);
@@ -131,8 +131,6 @@ extern {
   fn _ZN15QGuiApplication4execEv() -> c_int;
   // proto: static bool QGuiApplication::quitOnLastWindowClosed();
   fn _ZN15QGuiApplication22quitOnLastWindowClosedEv() -> c_char;
-  // proto:  void QGuiApplication::lastWindowClosed();
-  fn _ZN15QGuiApplication16lastWindowClosedEv(qthis: *mut c_void);
   // proto: static void QGuiApplication::restoreOverrideCursor();
   fn _ZN15QGuiApplication21restoreOverrideCursorEv();
   // proto: static QPlatformNativeInterface * QGuiApplication::platformNativeInterface();
@@ -331,10 +329,13 @@ pub trait QGuiApplication_New {
   // proto:  void QGuiApplication::QGuiApplication(const QGuiApplication & );
 impl<'a> /*trait*/ QGuiApplication_New for (&'a QGuiApplication) {
   fn New(self) -> QGuiApplication {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplicationC1ERKS_()};
+    let ctysz: c_int = unsafe{QGuiApplication_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN15QGuiApplicationC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN15QGuiApplicationC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN15QGuiApplicationC1ERKS_(arg0)};
     let rsthis = QGuiApplication{/**/qbase: QCoreApplication::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -481,25 +482,24 @@ impl<'a> /*trait*/ QGuiApplication_sessionKey<QString> for () {
   }
 }
 
-  // proto: static bool QGuiApplication::desktopSettingsAware();
+  // proto:  void QGuiApplication::lastWindowClosed();
 impl /*struct*/ QGuiApplication {
-  pub fn desktopSettingsAware_s<RetType, T: QGuiApplication_desktopSettingsAware_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.desktopSettingsAware_s();
+  pub fn lastWindowClosed<RetType, T: QGuiApplication_lastWindowClosed<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.lastWindowClosed(self);
     // return 1;
   }
 }
 
-pub trait QGuiApplication_desktopSettingsAware_s<RetType> {
-  fn desktopSettingsAware_s(self ) -> RetType;
+pub trait QGuiApplication_lastWindowClosed<RetType> {
+  fn lastWindowClosed(self , rsthis: & QGuiApplication) -> RetType;
 }
 
-  // proto: static bool QGuiApplication::desktopSettingsAware();
-impl<'a> /*trait*/ QGuiApplication_desktopSettingsAware_s<i8> for () {
-  fn desktopSettingsAware_s(self ) -> i8 {
+  // proto:  void QGuiApplication::lastWindowClosed();
+impl<'a> /*trait*/ QGuiApplication_lastWindowClosed<()> for () {
+  fn lastWindowClosed(self , rsthis: & QGuiApplication) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QGuiApplication20desktopSettingsAwareEv()};
-    let mut ret = unsafe {_ZN15QGuiApplication20desktopSettingsAwareEv()};
-    return ret as i8;
+    // unsafe{_ZN15QGuiApplication16lastWindowClosedEv()};
+     unsafe {_ZN15QGuiApplication16lastWindowClosedEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -740,29 +740,6 @@ impl<'a> /*trait*/ QGuiApplication_topLevelWindows_s<()> for () {
   }
 }
 
-  // proto: static bool QGuiApplication::isRightToLeft();
-impl /*struct*/ QGuiApplication {
-  pub fn isRightToLeft_s<RetType, T: QGuiApplication_isRightToLeft_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.isRightToLeft_s();
-    // return 1;
-  }
-}
-
-pub trait QGuiApplication_isRightToLeft_s<RetType> {
-  fn isRightToLeft_s(self ) -> RetType;
-}
-
-  // proto: static bool QGuiApplication::isRightToLeft();
-impl<'a> /*trait*/ QGuiApplication_isRightToLeft_s<i8> for () {
-  fn isRightToLeft_s(self ) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QGuiApplication13isRightToLeftEv()};
-    let mut ret = unsafe {_ZN15QGuiApplication13isRightToLeftEv()};
-    return ret as i8;
-    // return 1;
-  }
-}
-
   // proto:  void QGuiApplication::focusObjectChanged(QObject * focusObject);
 impl /*struct*/ QGuiApplication {
   pub fn focusObjectChanged<RetType, T: QGuiApplication_focusObjectChanged<RetType>>(& self,  overload_args: T) -> RetType {
@@ -992,24 +969,24 @@ impl<'a> /*trait*/ QGuiApplication_setApplicationDisplayName_s<()> for (&'a QStr
   }
 }
 
-  // proto: static bool QGuiApplication::isLeftToRight();
+  // proto: static bool QGuiApplication::desktopSettingsAware();
 impl /*struct*/ QGuiApplication {
-  pub fn isLeftToRight_s<RetType, T: QGuiApplication_isLeftToRight_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.isLeftToRight_s();
+  pub fn desktopSettingsAware_s<RetType, T: QGuiApplication_desktopSettingsAware_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.desktopSettingsAware_s();
     // return 1;
   }
 }
 
-pub trait QGuiApplication_isLeftToRight_s<RetType> {
-  fn isLeftToRight_s(self ) -> RetType;
+pub trait QGuiApplication_desktopSettingsAware_s<RetType> {
+  fn desktopSettingsAware_s(self ) -> RetType;
 }
 
-  // proto: static bool QGuiApplication::isLeftToRight();
-impl<'a> /*trait*/ QGuiApplication_isLeftToRight_s<i8> for () {
-  fn isLeftToRight_s(self ) -> i8 {
+  // proto: static bool QGuiApplication::desktopSettingsAware();
+impl<'a> /*trait*/ QGuiApplication_desktopSettingsAware_s<i8> for () {
+  fn desktopSettingsAware_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QGuiApplication13isLeftToRightEv()};
-    let mut ret = unsafe {_ZN15QGuiApplication13isLeftToRightEv()};
+    // unsafe{_ZN15QGuiApplication20desktopSettingsAwareEv()};
+    let mut ret = unsafe {_ZN15QGuiApplication20desktopSettingsAwareEv()};
     return ret as i8;
     // return 1;
   }
@@ -1043,12 +1020,15 @@ impl<'a> /*trait*/ QGuiApplication_topLevelAt_s<QWindow> for (&'a QPoint) {
   // proto:  void QGuiApplication::QGuiApplication(int & argc, char ** argv, int );
 impl<'a> /*trait*/ QGuiApplication_New for (&'a mut i32, &'a mut String, i32) {
   fn New(self) -> QGuiApplication {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplicationC1ERiPPci()};
+    let ctysz: c_int = unsafe{QGuiApplication_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.0  as *mut c_int;
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let arg2 = self.2  as c_int;
-    unsafe {_ZN15QGuiApplicationC1ERiPPci(qthis, arg0, arg1, arg2)};
+    // unsafe {_ZN15QGuiApplicationC1ERiPPci(qthis, arg0, arg1, arg2)};
+    let qthis: *mut c_void = unsafe {dector_ZN15QGuiApplicationC1ERiPPci(arg0, arg1, arg2)};
     let rsthis = QGuiApplication{/**/qbase: QCoreApplication::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -1168,28 +1148,6 @@ impl<'a> /*trait*/ QGuiApplication_quitOnLastWindowClosed_s<i8> for () {
     // unsafe{_ZN15QGuiApplication22quitOnLastWindowClosedEv()};
     let mut ret = unsafe {_ZN15QGuiApplication22quitOnLastWindowClosedEv()};
     return ret as i8;
-    // return 1;
-  }
-}
-
-  // proto:  void QGuiApplication::lastWindowClosed();
-impl /*struct*/ QGuiApplication {
-  pub fn lastWindowClosed<RetType, T: QGuiApplication_lastWindowClosed<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.lastWindowClosed(self);
-    // return 1;
-  }
-}
-
-pub trait QGuiApplication_lastWindowClosed<RetType> {
-  fn lastWindowClosed(self , rsthis: & QGuiApplication) -> RetType;
-}
-
-  // proto:  void QGuiApplication::lastWindowClosed();
-impl<'a> /*trait*/ QGuiApplication_lastWindowClosed<()> for () {
-  fn lastWindowClosed(self , rsthis: & QGuiApplication) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QGuiApplication16lastWindowClosedEv()};
-     unsafe {_ZN15QGuiApplication16lastWindowClosedEv(rsthis.qclsinst)};
     // return 1;
   }
 }

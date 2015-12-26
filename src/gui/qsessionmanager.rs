@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtGui/qsessionmanager.h
 // dst-file: /src/gui/qsessionmanager.rs
 //
@@ -29,10 +29,10 @@ use super::qguiapplication::QGuiApplication; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QSessionManager_Class_Size() -> c_int;
   // proto:  QString QSessionManager::sessionId();
   fn _ZNK15QSessionManager9sessionIdEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QString QSessionManager::sessionKey();
@@ -47,8 +47,8 @@ extern {
   fn _ZN15QSessionManagerD0Ev(qthis: *mut c_void);
   // proto:  QStringList QSessionManager::restartCommand();
   fn _ZNK15QSessionManager14restartCommandEv(qthis: *mut c_void);
-  // proto:  void QSessionManager::requestPhase2();
-  fn _ZN15QSessionManager13requestPhase2Ev(qthis: *mut c_void);
+  // proto:  bool QSessionManager::allowsInteraction();
+  fn _ZN15QSessionManager17allowsInteractionEv(qthis: *mut c_void) -> c_char;
   // proto:  bool QSessionManager::isPhase2();
   fn _ZNK15QSessionManager8isPhase2Ev(qthis: *mut c_void) -> c_char;
   // proto:  void QSessionManager::release();
@@ -60,13 +60,14 @@ extern {
   // proto:  QStringList QSessionManager::discardCommand();
   fn _ZNK15QSessionManager14discardCommandEv(qthis: *mut c_void);
   // proto:  void QSessionManager::QSessionManager(QGuiApplication * app, QString & id, QString & key);
+  fn dector_ZN15QSessionManagerC1EP15QGuiApplicationR7QStringS3_(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> *mut c_void;
   fn _ZN15QSessionManagerC1EP15QGuiApplicationR7QStringS3_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  void QSessionManager::cancel();
   fn _ZN15QSessionManager6cancelEv(qthis: *mut c_void);
   // proto:  void QSessionManager::setDiscardCommand(const QStringList & );
   fn _ZN15QSessionManager17setDiscardCommandERK11QStringList(qthis: *mut c_void, arg0: *mut c_void);
-  // proto:  bool QSessionManager::allowsInteraction();
-  fn _ZN15QSessionManager17allowsInteractionEv(qthis: *mut c_void) -> c_char;
+  // proto:  void QSessionManager::requestPhase2();
+  fn _ZN15QSessionManager13requestPhase2Ev(qthis: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -253,24 +254,25 @@ impl<'a> /*trait*/ QSessionManager_restartCommand<()> for () {
   }
 }
 
-  // proto:  void QSessionManager::requestPhase2();
+  // proto:  bool QSessionManager::allowsInteraction();
 impl /*struct*/ QSessionManager {
-  pub fn requestPhase2<RetType, T: QSessionManager_requestPhase2<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.requestPhase2(self);
+  pub fn allowsInteraction<RetType, T: QSessionManager_allowsInteraction<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.allowsInteraction(self);
     // return 1;
   }
 }
 
-pub trait QSessionManager_requestPhase2<RetType> {
-  fn requestPhase2(self , rsthis: & QSessionManager) -> RetType;
+pub trait QSessionManager_allowsInteraction<RetType> {
+  fn allowsInteraction(self , rsthis: & QSessionManager) -> RetType;
 }
 
-  // proto:  void QSessionManager::requestPhase2();
-impl<'a> /*trait*/ QSessionManager_requestPhase2<()> for () {
-  fn requestPhase2(self , rsthis: & QSessionManager) -> () {
+  // proto:  bool QSessionManager::allowsInteraction();
+impl<'a> /*trait*/ QSessionManager_allowsInteraction<i8> for () {
+  fn allowsInteraction(self , rsthis: & QSessionManager) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QSessionManager13requestPhase2Ev()};
-     unsafe {_ZN15QSessionManager13requestPhase2Ev(rsthis.qclsinst)};
+    // unsafe{_ZN15QSessionManager17allowsInteractionEv()};
+    let mut ret = unsafe {_ZN15QSessionManager17allowsInteractionEv(rsthis.qclsinst)};
+    return ret as i8;
     // return 1;
   }
 }
@@ -394,12 +396,15 @@ pub trait QSessionManager_New {
   // proto:  void QSessionManager::QSessionManager(QGuiApplication * app, QString & id, QString & key);
 impl<'a> /*trait*/ QSessionManager_New for (&'a QGuiApplication, &'a QString, &'a QString) {
   fn New(self) -> QSessionManager {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSessionManagerC1EP15QGuiApplicationR7QStringS3_()};
+    let ctysz: c_int = unsafe{QSessionManager_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
-    unsafe {_ZN15QSessionManagerC1EP15QGuiApplicationR7QStringS3_(qthis, arg0, arg1, arg2)};
+    // unsafe {_ZN15QSessionManagerC1EP15QGuiApplicationR7QStringS3_(qthis, arg0, arg1, arg2)};
+    let qthis: *mut c_void = unsafe {dector_ZN15QSessionManagerC1EP15QGuiApplicationR7QStringS3_(arg0, arg1, arg2)};
     let rsthis = QSessionManager{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -451,25 +456,24 @@ impl<'a> /*trait*/ QSessionManager_setDiscardCommand<()> for (&'a QStringList) {
   }
 }
 
-  // proto:  bool QSessionManager::allowsInteraction();
+  // proto:  void QSessionManager::requestPhase2();
 impl /*struct*/ QSessionManager {
-  pub fn allowsInteraction<RetType, T: QSessionManager_allowsInteraction<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.allowsInteraction(self);
+  pub fn requestPhase2<RetType, T: QSessionManager_requestPhase2<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.requestPhase2(self);
     // return 1;
   }
 }
 
-pub trait QSessionManager_allowsInteraction<RetType> {
-  fn allowsInteraction(self , rsthis: & QSessionManager) -> RetType;
+pub trait QSessionManager_requestPhase2<RetType> {
+  fn requestPhase2(self , rsthis: & QSessionManager) -> RetType;
 }
 
-  // proto:  bool QSessionManager::allowsInteraction();
-impl<'a> /*trait*/ QSessionManager_allowsInteraction<i8> for () {
-  fn allowsInteraction(self , rsthis: & QSessionManager) -> i8 {
+  // proto:  void QSessionManager::requestPhase2();
+impl<'a> /*trait*/ QSessionManager_requestPhase2<()> for () {
+  fn requestPhase2(self , rsthis: & QSessionManager) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QSessionManager17allowsInteractionEv()};
-    let mut ret = unsafe {_ZN15QSessionManager17allowsInteractionEv(rsthis.qclsinst)};
-    return ret as i8;
+    // unsafe{_ZN15QSessionManager13requestPhase2Ev()};
+     unsafe {_ZN15QSessionManager13requestPhase2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

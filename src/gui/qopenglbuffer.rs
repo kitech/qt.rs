@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtGui/qopenglbuffer.h
 // dst-file: /src/gui/qopenglbuffer.rs
 //
@@ -25,21 +25,20 @@ use std::ops::Deref;
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QOpenGLBuffer_Class_Size() -> c_int;
   // proto:  bool QOpenGLBuffer::read(int offset, void * data, int count);
   fn _ZN13QOpenGLBuffer4readEiPvi(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void, arg2: c_int) -> c_char;
   // proto:  bool QOpenGLBuffer::bind();
   fn _ZN13QOpenGLBuffer4bindEv(qthis: *mut c_void) -> c_char;
   // proto:  void QOpenGLBuffer::destroy();
   fn _ZN13QOpenGLBuffer7destroyEv(qthis: *mut c_void);
-  // proto:  void QOpenGLBuffer::allocate(int count);
-  fn _ZN13QOpenGLBuffer8allocateEi(qthis: *mut c_void, arg0: c_int);
   // proto:  bool QOpenGLBuffer::unmap();
   fn _ZN13QOpenGLBuffer5unmapEv(qthis: *mut c_void) -> c_char;
   // proto:  void QOpenGLBuffer::QOpenGLBuffer(const QOpenGLBuffer & other);
+  fn dector_ZN13QOpenGLBufferC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN13QOpenGLBufferC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QOpenGLBuffer::size();
   fn _ZNK13QOpenGLBuffer4sizeEv(qthis: *mut c_void) -> c_int;
@@ -48,6 +47,7 @@ extern {
   // proto:  GLuint QOpenGLBuffer::bufferId();
   fn _ZNK13QOpenGLBuffer8bufferIdEv(qthis: *mut c_void);
   // proto:  void QOpenGLBuffer::QOpenGLBuffer();
+  fn dector_ZN13QOpenGLBufferC1Ev() -> *mut c_void;
   fn _ZN13QOpenGLBufferC1Ev(qthis: *mut c_void);
   // proto:  bool QOpenGLBuffer::create();
   fn _ZN13QOpenGLBuffer6createEv(qthis: *mut c_void) -> c_char;
@@ -144,29 +144,6 @@ impl<'a> /*trait*/ QOpenGLBuffer_destroy<()> for () {
   }
 }
 
-  // proto:  void QOpenGLBuffer::allocate(int count);
-impl /*struct*/ QOpenGLBuffer {
-  pub fn allocate<RetType, T: QOpenGLBuffer_allocate<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.allocate(self);
-    // return 1;
-  }
-}
-
-pub trait QOpenGLBuffer_allocate<RetType> {
-  fn allocate(self , rsthis: & QOpenGLBuffer) -> RetType;
-}
-
-  // proto:  void QOpenGLBuffer::allocate(int count);
-impl<'a> /*trait*/ QOpenGLBuffer_allocate<()> for (i32) {
-  fn allocate(self , rsthis: & QOpenGLBuffer) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QOpenGLBuffer8allocateEi()};
-    let arg0 = self  as c_int;
-     unsafe {_ZN13QOpenGLBuffer8allocateEi(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  bool QOpenGLBuffer::unmap();
 impl /*struct*/ QOpenGLBuffer {
   pub fn unmap<RetType, T: QOpenGLBuffer_unmap<RetType>>(& self,  overload_args: T) -> RetType {
@@ -206,10 +183,13 @@ pub trait QOpenGLBuffer_New {
   // proto:  void QOpenGLBuffer::QOpenGLBuffer(const QOpenGLBuffer & other);
 impl<'a> /*trait*/ QOpenGLBuffer_New for (&'a QOpenGLBuffer) {
   fn New(self) -> QOpenGLBuffer {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLBufferC1ERKS_()};
+    let ctysz: c_int = unsafe{QOpenGLBuffer_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN13QOpenGLBufferC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN13QOpenGLBufferC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN13QOpenGLBufferC1ERKS_(arg0)};
     let rsthis = QOpenGLBuffer{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -237,6 +217,18 @@ impl<'a> /*trait*/ QOpenGLBuffer_size<i32> for () {
     return ret as i32;
     // return 1;
   }
+}
+
+  // proto:  void QOpenGLBuffer::allocate(const void * data, int count);
+impl /*struct*/ QOpenGLBuffer {
+  pub fn allocate<RetType, T: QOpenGLBuffer_allocate<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.allocate(self);
+    // return 1;
+  }
+}
+
+pub trait QOpenGLBuffer_allocate<RetType> {
+  fn allocate(self , rsthis: & QOpenGLBuffer) -> RetType;
 }
 
   // proto:  void QOpenGLBuffer::allocate(const void * data, int count);
@@ -276,9 +268,12 @@ impl<'a> /*trait*/ QOpenGLBuffer_bufferId<()> for () {
   // proto:  void QOpenGLBuffer::QOpenGLBuffer();
 impl<'a> /*trait*/ QOpenGLBuffer_New for () {
   fn New(self) -> QOpenGLBuffer {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLBufferC1Ev()};
-    unsafe {_ZN13QOpenGLBufferC1Ev(qthis)};
+    let ctysz: c_int = unsafe{QOpenGLBuffer_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN13QOpenGLBufferC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN13QOpenGLBufferC1Ev()};
     let rsthis = QOpenGLBuffer{qclsinst: qthis};
     return rsthis;
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtGui/qstylehints.h
 // dst-file: /src/gui/qstylehints.rs
 //
@@ -27,10 +27,10 @@ use super::super::core::qchar::QChar; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QStyleHints_Class_Size() -> c_int;
   // proto:  void QStyleHints::setMouseDoubleClickInterval(int mouseDoubleClickInterval);
   fn _ZN11QStyleHints27setMouseDoubleClickIntervalEi(qthis: *mut c_void, arg0: c_int);
   // proto:  int QStyleHints::mousePressAndHoldInterval();
@@ -42,6 +42,7 @@ extern {
   // proto:  void QStyleHints::setKeyboardInputInterval(int keyboardInputInterval);
   fn _ZN11QStyleHints24setKeyboardInputIntervalEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QStyleHints::QStyleHints();
+  fn dector_ZN11QStyleHintsC1Ev() -> *mut c_void;
   fn _ZN11QStyleHintsC1Ev(qthis: *mut c_void);
   // proto:  void QStyleHints::startDragDistanceChanged(int startDragDistance);
   fn _ZN11QStyleHints24startDragDistanceChangedEi(qthis: *mut c_void, arg0: c_int);
@@ -241,9 +242,12 @@ pub trait QStyleHints_New {
   // proto:  void QStyleHints::QStyleHints();
 impl<'a> /*trait*/ QStyleHints_New for () {
   fn New(self) -> QStyleHints {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QStyleHintsC1Ev()};
-    unsafe {_ZN11QStyleHintsC1Ev(qthis)};
+    let ctysz: c_int = unsafe{QStyleHints_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN11QStyleHintsC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN11QStyleHintsC1Ev()};
     let rsthis = QStyleHints{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtGui/qdesktopservices.h
 // dst-file: /src/gui/qdesktopservices.rs
 //
@@ -28,10 +28,10 @@ use super::super::core::qobject::QObject; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QDesktopServices_Class_Size() -> c_int;
   // proto: static void QDesktopServices::unsetUrlHandler(const QString & scheme);
   fn _ZN16QDesktopServices15unsetUrlHandlerERK7QString(arg0: *mut c_void);
   // proto: static bool QDesktopServices::openUrl(const QUrl & url);

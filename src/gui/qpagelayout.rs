@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtGui/qpagelayout.h
 // dst-file: /src/gui/qpagelayout.rs
 //
@@ -30,14 +30,12 @@ use super::qpagesize::QPageSize; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QPageLayout_Class_Size() -> c_int;
   // proto:  bool QPageLayout::setRightMargin(qreal rightMargin);
   fn _ZN11QPageLayout14setRightMarginEd(qthis: *mut c_void, arg0: c_double) -> c_char;
-  // proto:  void QPageLayout::swap(QPageLayout & other);
-  fn _ZN11QPageLayout4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QMargins QPageLayout::marginsPoints();
   fn _ZNK11QPageLayout13marginsPointsEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QMargins QPageLayout::marginsPixels(int resolution);
@@ -63,8 +61,10 @@ extern {
   // proto:  bool QPageLayout::setTopMargin(qreal topMargin);
   fn _ZN11QPageLayout12setTopMarginEd(qthis: *mut c_void, arg0: c_double) -> c_char;
   // proto:  void QPageLayout::QPageLayout();
+  fn dector_ZN11QPageLayoutC1Ev() -> *mut c_void;
   fn _ZN11QPageLayoutC1Ev(qthis: *mut c_void);
   // proto:  void QPageLayout::QPageLayout(const QPageLayout & other);
+  fn dector_ZN11QPageLayoutC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN11QPageLayoutC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QPageLayout::~QPageLayout();
   fn _ZN11QPageLayoutD0Ev(qthis: *mut c_void);
@@ -118,29 +118,6 @@ impl<'a> /*trait*/ QPageLayout_setRightMargin<i8> for (f64) {
     let arg0 = self  as c_double;
     let mut ret = unsafe {_ZN11QPageLayout14setRightMarginEd(rsthis.qclsinst, arg0)};
     return ret as i8;
-    // return 1;
-  }
-}
-
-  // proto:  void QPageLayout::swap(QPageLayout & other);
-impl /*struct*/ QPageLayout {
-  pub fn swap<RetType, T: QPageLayout_swap<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.swap(self);
-    // return 1;
-  }
-}
-
-pub trait QPageLayout_swap<RetType> {
-  fn swap(self , rsthis: & QPageLayout) -> RetType;
-}
-
-  // proto:  void QPageLayout::swap(QPageLayout & other);
-impl<'a> /*trait*/ QPageLayout_swap<()> for (&'a QPageLayout) {
-  fn swap(self , rsthis: & QPageLayout) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QPageLayout4swapERS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QPageLayout4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -448,9 +425,12 @@ pub trait QPageLayout_New {
   // proto:  void QPageLayout::QPageLayout();
 impl<'a> /*trait*/ QPageLayout_New for () {
   fn New(self) -> QPageLayout {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPageLayoutC1Ev()};
-    unsafe {_ZN11QPageLayoutC1Ev(qthis)};
+    let ctysz: c_int = unsafe{QPageLayout_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN11QPageLayoutC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN11QPageLayoutC1Ev()};
     let rsthis = QPageLayout{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -460,10 +440,13 @@ impl<'a> /*trait*/ QPageLayout_New for () {
   // proto:  void QPageLayout::QPageLayout(const QPageLayout & other);
 impl<'a> /*trait*/ QPageLayout_New for (&'a QPageLayout) {
   fn New(self) -> QPageLayout {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPageLayoutC1ERKS_()};
+    let ctysz: c_int = unsafe{QPageLayout_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QPageLayoutC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN11QPageLayoutC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN11QPageLayoutC1ERKS_(arg0)};
     let rsthis = QPageLayout{qclsinst: qthis};
     return rsthis;
     // return 1;

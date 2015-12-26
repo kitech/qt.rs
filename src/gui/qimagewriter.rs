@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtGui/qimagewriter.h
 // dst-file: /src/gui/qimagewriter.rs
 //
@@ -29,10 +29,10 @@ use super::qimage::QImage; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QImageWriter_Class_Size() -> c_int;
   // proto:  void QImageWriter::setText(const QString & key, const QString & text);
   fn _ZN12QImageWriter7setTextERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QImageWriter::setGamma(float gamma);
@@ -70,10 +70,12 @@ extern {
   // proto:  QString QImageWriter::description();
   fn _ZNK12QImageWriter11descriptionEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QImageWriter::QImageWriter();
+  fn dector_ZN12QImageWriterC1Ev() -> *mut c_void;
   fn _ZN12QImageWriterC1Ev(qthis: *mut c_void);
   // proto:  void QImageWriter::setFormat(const QByteArray & format);
   fn _ZN12QImageWriter9setFormatERK10QByteArray(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QImageWriter::QImageWriter(const QString & fileName, const QByteArray & format);
+  fn dector_ZN12QImageWriterC1ERK7QStringRK10QByteArray(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   fn _ZN12QImageWriterC1ERK7QStringRK10QByteArray(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QImageWriter::setDevice(QIODevice * device);
   fn _ZN12QImageWriter9setDeviceEP9QIODevice(qthis: *mut c_void, arg0: *mut c_void);
@@ -88,6 +90,7 @@ extern {
   // proto:  bool QImageWriter::canWrite();
   fn _ZNK12QImageWriter8canWriteEv(qthis: *mut c_void) -> c_char;
   // proto:  void QImageWriter::QImageWriter(QIODevice * device, const QByteArray & format);
+  fn dector_ZN12QImageWriterC1EP9QIODeviceRK10QByteArray(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   fn _ZN12QImageWriterC1EP9QIODeviceRK10QByteArray(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  int QImageWriter::compression();
   fn _ZNK12QImageWriter11compressionEv(qthis: *mut c_void) -> c_int;
@@ -96,6 +99,7 @@ extern {
   // proto:  void QImageWriter::setDescription(const QString & description);
   fn _ZN12QImageWriter14setDescriptionERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QImageWriter::QImageWriter(const QImageWriter & );
+  fn dector_ZN12QImageWriterC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN12QImageWriterC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
 } // <= ext block end
 
@@ -545,9 +549,12 @@ pub trait QImageWriter_New {
   // proto:  void QImageWriter::QImageWriter();
 impl<'a> /*trait*/ QImageWriter_New for () {
   fn New(self) -> QImageWriter {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageWriterC1Ev()};
-    unsafe {_ZN12QImageWriterC1Ev(qthis)};
+    let ctysz: c_int = unsafe{QImageWriter_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN12QImageWriterC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN12QImageWriterC1Ev()};
     let rsthis = QImageWriter{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -580,11 +587,14 @@ impl<'a> /*trait*/ QImageWriter_setFormat<()> for (&'a QByteArray) {
   // proto:  void QImageWriter::QImageWriter(const QString & fileName, const QByteArray & format);
 impl<'a> /*trait*/ QImageWriter_New for (&'a QString, &'a QByteArray) {
   fn New(self) -> QImageWriter {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageWriterC1ERK7QStringRK10QByteArray()};
+    let ctysz: c_int = unsafe{QImageWriter_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    unsafe {_ZN12QImageWriterC1ERK7QStringRK10QByteArray(qthis, arg0, arg1)};
+    // unsafe {_ZN12QImageWriterC1ERK7QStringRK10QByteArray(qthis, arg0, arg1)};
+    let qthis: *mut c_void = unsafe {dector_ZN12QImageWriterC1ERK7QStringRK10QByteArray(arg0, arg1)};
     let rsthis = QImageWriter{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -732,11 +742,14 @@ impl<'a> /*trait*/ QImageWriter_canWrite<i8> for () {
   // proto:  void QImageWriter::QImageWriter(QIODevice * device, const QByteArray & format);
 impl<'a> /*trait*/ QImageWriter_New for (&'a QIODevice, &'a QByteArray) {
   fn New(self) -> QImageWriter {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageWriterC1EP9QIODeviceRK10QByteArray()};
+    let ctysz: c_int = unsafe{QImageWriter_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    unsafe {_ZN12QImageWriterC1EP9QIODeviceRK10QByteArray(qthis, arg0, arg1)};
+    // unsafe {_ZN12QImageWriterC1EP9QIODeviceRK10QByteArray(qthis, arg0, arg1)};
+    let qthis: *mut c_void = unsafe {dector_ZN12QImageWriterC1EP9QIODeviceRK10QByteArray(arg0, arg1)};
     let rsthis = QImageWriter{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -815,10 +828,13 @@ impl<'a> /*trait*/ QImageWriter_setDescription<()> for (&'a QString) {
   // proto:  void QImageWriter::QImageWriter(const QImageWriter & );
 impl<'a> /*trait*/ QImageWriter_New for (&'a QImageWriter) {
   fn New(self) -> QImageWriter {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageWriterC1ERKS_()};
+    let ctysz: c_int = unsafe{QImageWriter_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN12QImageWriterC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN12QImageWriterC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN12QImageWriterC1ERKS_(arg0)};
     let rsthis = QImageWriter{qclsinst: qthis};
     return rsthis;
     // return 1;

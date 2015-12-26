@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtGui/qopenglwindow.h
 // dst-file: /src/gui/qopenglwindow.rs
 //
@@ -29,15 +29,16 @@ use super::qopenglcontext::QOpenGLContext; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QOpenGLWindow_Class_Size() -> c_int;
   // proto:  bool QOpenGLWindow::isValid();
   fn _ZNK13QOpenGLWindow7isValidEv(qthis: *mut c_void) -> c_char;
   // proto:  QImage QOpenGLWindow::grabFramebuffer();
   fn _ZN13QOpenGLWindow15grabFramebufferEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QOpenGLWindow::QOpenGLWindow(const QOpenGLWindow & );
+  fn dector_ZN13QOpenGLWindowC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN13QOpenGLWindowC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QOpenGLWindow::frameSwapped();
   fn _ZN13QOpenGLWindow12frameSwappedEv(qthis: *mut c_void);
@@ -144,10 +145,13 @@ pub trait QOpenGLWindow_New {
   // proto:  void QOpenGLWindow::QOpenGLWindow(const QOpenGLWindow & );
 impl<'a> /*trait*/ QOpenGLWindow_New for (&'a QOpenGLWindow) {
   fn New(self) -> QOpenGLWindow {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLWindowC1ERKS_()};
+    let ctysz: c_int = unsafe{QOpenGLWindow_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN13QOpenGLWindowC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN13QOpenGLWindowC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN13QOpenGLWindowC1ERKS_(arg0)};
     let rsthis = QOpenGLWindow{/**/qbase: QPaintDeviceWindow::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

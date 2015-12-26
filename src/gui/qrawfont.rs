@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtGui/qrawfont.h
 // dst-file: /src/gui/qrawfont.rs
 //
@@ -33,10 +33,10 @@ use super::qfont::QFont; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QRawFont_Class_Size() -> c_int;
   // proto:  qreal QRawFont::averageCharWidth();
   fn _ZNK8QRawFont16averageCharWidthEv(qthis: *mut c_void) -> c_double;
   // proto:  qreal QRawFont::ascent();
@@ -51,11 +51,10 @@ extern {
   fn _ZNK8QRawFont12boundingRectEj(qthis: *mut c_void, arg0: c_uint) -> *mut c_void;
   // proto:  bool QRawFont::supportsCharacter(uint ucs4);
   fn _ZNK8QRawFont17supportsCharacterEj(qthis: *mut c_void, arg0: c_uint) -> c_char;
-  // proto:  void QRawFont::swap(QRawFont & other);
-  fn _ZN8QRawFont4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  qreal QRawFont::descent();
   fn _ZNK8QRawFont7descentEv(qthis: *mut c_void) -> c_double;
   // proto:  void QRawFont::QRawFont();
+  fn dector_ZN8QRawFontC1Ev() -> *mut c_void;
   fn _ZN8QRawFontC1Ev(qthis: *mut c_void);
   // proto:  void QRawFont::setPixelSize(qreal pixelSize);
   fn _ZN8QRawFont12setPixelSizeEd(qthis: *mut c_void, arg0: c_double);
@@ -78,6 +77,7 @@ extern {
   // proto:  int QRawFont::weight();
   fn _ZNK8QRawFont6weightEv(qthis: *mut c_void) -> c_int;
   // proto:  void QRawFont::QRawFont(const QRawFont & other);
+  fn dector_ZN8QRawFontC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN8QRawFontC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  qreal QRawFont::xHeight();
   fn _ZNK8QRawFont7xHeightEv(qthis: *mut c_void) -> c_double;
@@ -269,29 +269,6 @@ impl<'a> /*trait*/ QRawFont_supportsCharacter<i8> for (u32) {
   }
 }
 
-  // proto:  void QRawFont::swap(QRawFont & other);
-impl /*struct*/ QRawFont {
-  pub fn swap<RetType, T: QRawFont_swap<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.swap(self);
-    // return 1;
-  }
-}
-
-pub trait QRawFont_swap<RetType> {
-  fn swap(self , rsthis: & QRawFont) -> RetType;
-}
-
-  // proto:  void QRawFont::swap(QRawFont & other);
-impl<'a> /*trait*/ QRawFont_swap<()> for (&'a QRawFont) {
-  fn swap(self , rsthis: & QRawFont) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QRawFont4swapERS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN8QRawFont4swapERS_(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  qreal QRawFont::descent();
 impl /*struct*/ QRawFont {
   pub fn descent<RetType, T: QRawFont_descent<RetType>>(& self,  overload_args: T) -> RetType {
@@ -331,9 +308,12 @@ pub trait QRawFont_New {
   // proto:  void QRawFont::QRawFont();
 impl<'a> /*trait*/ QRawFont_New for () {
   fn New(self) -> QRawFont {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QRawFontC1Ev()};
-    unsafe {_ZN8QRawFontC1Ev(qthis)};
+    let ctysz: c_int = unsafe{QRawFont_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN8QRawFontC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN8QRawFontC1Ev()};
     let rsthis = QRawFont{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -571,10 +551,13 @@ impl<'a> /*trait*/ QRawFont_weight<i32> for () {
   // proto:  void QRawFont::QRawFont(const QRawFont & other);
 impl<'a> /*trait*/ QRawFont_New for (&'a QRawFont) {
   fn New(self) -> QRawFont {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QRawFontC1ERKS_()};
+    let ctysz: c_int = unsafe{QRawFont_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN8QRawFontC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN8QRawFontC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN8QRawFontC1ERKS_(arg0)};
     let rsthis = QRawFont{qclsinst: qthis};
     return rsthis;
     // return 1;

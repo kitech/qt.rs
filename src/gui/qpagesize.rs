@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtGui/qpagesize.h
 // dst-file: /src/gui/qpagesize.rs
 //
@@ -29,14 +29,18 @@ use super::super::core::qrect::QRect; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QPageSize_Class_Size() -> c_int;
   // proto:  void QPageSize::QPageSize();
+  fn dector_ZN9QPageSizeC1Ev() -> *mut c_void;
   fn _ZN9QPageSizeC1Ev(qthis: *mut c_void);
   // proto:  void QPageSize::QPageSize(const QString & key, const QSize & pointSize, const QString & name);
+  fn dector_ZN9QPageSizeC1ERK7QStringRK5QSizeS2_(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> *mut c_void;
   fn _ZN9QPageSizeC1ERK7QStringRK5QSizeS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
+  // proto:  int QPageSize::windowsId();
+  fn _ZNK9QPageSize9windowsIdEv(qthis: *mut c_void) -> c_int;
   // proto:  void QPageSize::~QPageSize();
   fn _ZN9QPageSizeD0Ev(qthis: *mut c_void);
   // proto:  QString QPageSize::key();
@@ -45,13 +49,10 @@ extern {
   fn _ZNK9QPageSize4nameEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QSizeF QPageSize::definitionSize();
   fn _ZNK9QPageSize14definitionSizeEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QPageSize::swap(QPageSize & other);
-  fn _ZN9QPageSize4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
-  // proto:  int QPageSize::windowsId();
-  fn _ZNK9QPageSize9windowsIdEv(qthis: *mut c_void) -> c_int;
   // proto:  QSize QPageSize::sizePixels(int resolution);
   fn _ZNK9QPageSize10sizePixelsEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
   // proto:  void QPageSize::QPageSize(const QPageSize & other);
+  fn dector_ZN9QPageSizeC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN9QPageSizeC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QPageSize::isValid();
   fn _ZNK9QPageSize7isValidEv(qthis: *mut c_void) -> c_char;
@@ -60,6 +61,7 @@ extern {
   // proto:  QRect QPageSize::rectPoints();
   fn _ZNK9QPageSize10rectPointsEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QPageSize::QPageSize(int windowsId, const QSize & pointSize, const QString & name);
+  fn dector_ZN9QPageSizeC1EiRK5QSizeRK7QString(arg0: c_int, arg1: *mut c_void, arg2: *mut c_void) -> *mut c_void;
   fn _ZN9QPageSizeC1EiRK5QSizeRK7QString(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  bool QPageSize::isEquivalentTo(const QPageSize & other);
   fn _ZNK9QPageSize14isEquivalentToERKS_(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
@@ -95,9 +97,12 @@ pub trait QPageSize_New {
   // proto:  void QPageSize::QPageSize();
 impl<'a> /*trait*/ QPageSize_New for () {
   fn New(self) -> QPageSize {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QPageSizeC1Ev()};
-    unsafe {_ZN9QPageSizeC1Ev(qthis)};
+    let ctysz: c_int = unsafe{QPageSize_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN9QPageSizeC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN9QPageSizeC1Ev()};
     let rsthis = QPageSize{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -107,14 +112,40 @@ impl<'a> /*trait*/ QPageSize_New for () {
   // proto:  void QPageSize::QPageSize(const QString & key, const QSize & pointSize, const QString & name);
 impl<'a> /*trait*/ QPageSize_New for (&'a QString, &'a QSize, &'a QString) {
   fn New(self) -> QPageSize {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QPageSizeC1ERK7QStringRK5QSizeS2_()};
+    let ctysz: c_int = unsafe{QPageSize_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
-    unsafe {_ZN9QPageSizeC1ERK7QStringRK5QSizeS2_(qthis, arg0, arg1, arg2)};
+    // unsafe {_ZN9QPageSizeC1ERK7QStringRK5QSizeS2_(qthis, arg0, arg1, arg2)};
+    let qthis: *mut c_void = unsafe {dector_ZN9QPageSizeC1ERK7QStringRK5QSizeS2_(arg0, arg1, arg2)};
     let rsthis = QPageSize{qclsinst: qthis};
     return rsthis;
+    // return 1;
+  }
+}
+
+  // proto:  int QPageSize::windowsId();
+impl /*struct*/ QPageSize {
+  pub fn windowsId<RetType, T: QPageSize_windowsId<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.windowsId(self);
+    // return 1;
+  }
+}
+
+pub trait QPageSize_windowsId<RetType> {
+  fn windowsId(self , rsthis: & QPageSize) -> RetType;
+}
+
+  // proto:  int QPageSize::windowsId();
+impl<'a> /*trait*/ QPageSize_windowsId<i32> for () {
+  fn windowsId(self , rsthis: & QPageSize) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK9QPageSize9windowsIdEv()};
+    let mut ret = unsafe {_ZNK9QPageSize9windowsIdEv(rsthis.qclsinst)};
+    return ret as i32;
     // return 1;
   }
 }
@@ -213,52 +244,6 @@ impl<'a> /*trait*/ QPageSize_definitionSize<QSizeF> for () {
   }
 }
 
-  // proto:  void QPageSize::swap(QPageSize & other);
-impl /*struct*/ QPageSize {
-  pub fn swap<RetType, T: QPageSize_swap<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.swap(self);
-    // return 1;
-  }
-}
-
-pub trait QPageSize_swap<RetType> {
-  fn swap(self , rsthis: & QPageSize) -> RetType;
-}
-
-  // proto:  void QPageSize::swap(QPageSize & other);
-impl<'a> /*trait*/ QPageSize_swap<()> for (&'a QPageSize) {
-  fn swap(self , rsthis: & QPageSize) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QPageSize4swapERS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN9QPageSize4swapERS_(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  int QPageSize::windowsId();
-impl /*struct*/ QPageSize {
-  pub fn windowsId<RetType, T: QPageSize_windowsId<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.windowsId(self);
-    // return 1;
-  }
-}
-
-pub trait QPageSize_windowsId<RetType> {
-  fn windowsId(self , rsthis: & QPageSize) -> RetType;
-}
-
-  // proto:  int QPageSize::windowsId();
-impl<'a> /*trait*/ QPageSize_windowsId<i32> for () {
-  fn windowsId(self , rsthis: & QPageSize) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QPageSize9windowsIdEv()};
-    let mut ret = unsafe {_ZNK9QPageSize9windowsIdEv(rsthis.qclsinst)};
-    return ret as i32;
-    // return 1;
-  }
-}
-
   // proto:  QSize QPageSize::sizePixels(int resolution);
 impl /*struct*/ QPageSize {
   pub fn sizePixels<RetType, T: QPageSize_sizePixels<RetType>>(& self,  overload_args: T) -> RetType {
@@ -287,10 +272,13 @@ impl<'a> /*trait*/ QPageSize_sizePixels<QSize> for (i32) {
   // proto:  void QPageSize::QPageSize(const QPageSize & other);
 impl<'a> /*trait*/ QPageSize_New for (&'a QPageSize) {
   fn New(self) -> QPageSize {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QPageSizeC1ERKS_()};
+    let ctysz: c_int = unsafe{QPageSize_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN9QPageSizeC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN9QPageSizeC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN9QPageSizeC1ERKS_(arg0)};
     let rsthis = QPageSize{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -372,12 +360,15 @@ impl<'a> /*trait*/ QPageSize_rectPoints<QRect> for () {
   // proto:  void QPageSize::QPageSize(int windowsId, const QSize & pointSize, const QString & name);
 impl<'a> /*trait*/ QPageSize_New for (i32, &'a QSize, &'a QString) {
   fn New(self) -> QPageSize {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QPageSizeC1EiRK5QSizeRK7QString()};
+    let ctysz: c_int = unsafe{QPageSize_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
-    unsafe {_ZN9QPageSizeC1EiRK5QSizeRK7QString(qthis, arg0, arg1, arg2)};
+    // unsafe {_ZN9QPageSizeC1EiRK5QSizeRK7QString(qthis, arg0, arg1, arg2)};
+    let qthis: *mut c_void = unsafe {dector_ZN9QPageSizeC1EiRK5QSizeRK7QString(arg0, arg1, arg2)};
     let rsthis = QPageSize{qclsinst: qthis};
     return rsthis;
     // return 1;

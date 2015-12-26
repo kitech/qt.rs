@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtGui/qtextdocument.h
 // dst-file: /src/gui/qtextdocument.rs
 //
@@ -25,13 +25,13 @@ use super::super::core::qstring::QString; // 771
 use super::super::core::qsize::QSizeF; // 771
 use super::qpagedpaintdevice::QPagedPaintDevice; // 773
 use super::super::core::qbytearray::QByteArray; // 771
+use super::super::core::qregularexpression::QRegularExpression; // 771
 use super::super::core::qurl::QUrl; // 771
 use super::super::core::qvariant::QVariant; // 771
 use super::qtextobject::QTextObject; // 773
 use super::qtextobject::QTextFrame; // 773
 use super::qtextobject::QTextBlock; // 773
 use super::super::core::qregexp::QRegExp; // 771
-use super::super::core::qregularexpression::QRegularExpression; // 771
 use super::qtextoption::QTextOption; // 773
 use super::qfont::QFont; // 773
 use super::qpainter::QPainter; // 773
@@ -44,10 +44,10 @@ use super::qtextformat::QTextFormat; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QTextDocument_Class_Size() -> c_int;
   // proto:  void QTextDocument::cursorPositionChanged(const QTextCursor & cursor);
   fn _ZN13QTextDocument21cursorPositionChangedERK11QTextCursor(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QTextDocument::setDefaultStyleSheet(const QString & sheet);
@@ -72,8 +72,6 @@ extern {
   fn _ZNK13QTextDocument6toHtmlERK10QByteArray(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  int QTextDocument::availableUndoSteps();
   fn _ZNK13QTextDocument18availableUndoStepsEv(qthis: *mut c_void) -> c_int;
-  // proto:  void QTextDocument::undoAvailable(bool );
-  fn _ZN13QTextDocument13undoAvailableEb(qthis: *mut c_void, arg0: c_char);
   // proto:  void QTextDocument::setUndoRedoEnabled(bool enable);
   fn _ZN13QTextDocument18setUndoRedoEnabledEb(qthis: *mut c_void, arg0: c_char);
   // proto:  void QTextDocument::undo(QTextCursor * cursor);
@@ -91,6 +89,7 @@ extern {
   // proto:  void QTextDocument::markContentsDirty(int from, int length);
   fn _ZN13QTextDocument17markContentsDirtyEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
   // proto:  void QTextDocument::QTextDocument(QObject * parent);
+  fn dector_ZN13QTextDocumentC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
   fn _ZN13QTextDocumentC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QTextDocument::modificationChanged(bool m);
   fn _ZN13QTextDocument19modificationChangedEb(qthis: *mut c_void, arg0: c_char);
@@ -117,6 +116,7 @@ extern {
   // proto:  QTextBlock QTextDocument::lastBlock();
   fn _ZNK13QTextDocument9lastBlockEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QTextDocument::QTextDocument(const QString & text, QObject * parent);
+  fn dector_ZN13QTextDocumentC1ERK7QStringP7QObject(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   fn _ZN13QTextDocumentC1ERK7QStringP7QObject(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  bool QTextDocument::useDesignMetrics();
   fn _ZNK13QTextDocument16useDesignMetricsEv(qthis: *mut c_void) -> c_char;
@@ -145,6 +145,7 @@ extern {
   // proto:  QTextFrame * QTextDocument::frameAt(int pos);
   fn _ZNK13QTextDocument7frameAtEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
   // proto:  void QTextDocument::QTextDocument(const QTextDocument & );
+  fn dector_ZN13QTextDocumentC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN13QTextDocumentC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QTextDocument::setDefaultTextOption(const QTextOption & option);
   fn _ZN13QTextDocument20setDefaultTextOptionERK11QTextOption(qthis: *mut c_void, arg0: *mut c_void);
@@ -196,6 +197,8 @@ extern {
   fn _ZN13QTextDocument11setPageSizeERK6QSizeF(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QTextDocument::setHtml(const QString & html);
   fn _ZN13QTextDocument7setHtmlERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QTextDocument::undoAvailable(bool );
+  fn _ZN13QTextDocument13undoAvailableEb(qthis: *mut c_void, arg0: c_char);
   // proto:  QTextBlock QTextDocument::end();
   fn _ZNK13QTextDocument3endEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  int QTextDocument::maximumBlockCount();
@@ -212,6 +215,7 @@ extern {
   fn _ZN13QTextDocument20setMaximumBlockCountEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QTextDocument::setModified(bool m);
   fn _ZN13QTextDocument11setModifiedEb(qthis: *mut c_void, arg0: c_char);
+  fn QAbstractUndoItem_Class_Size() -> c_int;
   // proto:  void QAbstractUndoItem::undo();
   fn _ZN17QAbstractUndoItem4undoEv(qthis: *mut c_void);
   // proto:  void QAbstractUndoItem::redo();
@@ -527,29 +531,6 @@ impl<'a> /*trait*/ QTextDocument_availableUndoSteps<i32> for () {
   }
 }
 
-  // proto:  void QTextDocument::undoAvailable(bool );
-impl /*struct*/ QTextDocument {
-  pub fn undoAvailable<RetType, T: QTextDocument_undoAvailable<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.undoAvailable(self);
-    // return 1;
-  }
-}
-
-pub trait QTextDocument_undoAvailable<RetType> {
-  fn undoAvailable(self , rsthis: & QTextDocument) -> RetType;
-}
-
-  // proto:  void QTextDocument::undoAvailable(bool );
-impl<'a> /*trait*/ QTextDocument_undoAvailable<()> for (i8) {
-  fn undoAvailable(self , rsthis: & QTextDocument) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QTextDocument13undoAvailableEb()};
-    let arg0 = self  as c_char;
-     unsafe {_ZN13QTextDocument13undoAvailableEb(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  void QTextDocument::setUndoRedoEnabled(bool enable);
 impl /*struct*/ QTextDocument {
   pub fn setUndoRedoEnabled<RetType, T: QTextDocument_setUndoRedoEnabled<RetType>>(& self,  overload_args: T) -> RetType {
@@ -759,10 +740,13 @@ pub trait QTextDocument_New {
   // proto:  void QTextDocument::QTextDocument(QObject * parent);
 impl<'a> /*trait*/ QTextDocument_New for (&'a QObject) {
   fn New(self) -> QTextDocument {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocumentC1EP7QObject()};
+    let ctysz: c_int = unsafe{QTextDocument_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN13QTextDocumentC1EP7QObject(qthis, arg0)};
+    // unsafe {_ZN13QTextDocumentC1EP7QObject(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN13QTextDocumentC1EP7QObject(arg0)};
     let rsthis = QTextDocument{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -1050,11 +1034,14 @@ impl<'a> /*trait*/ QTextDocument_lastBlock<QTextBlock> for () {
   // proto:  void QTextDocument::QTextDocument(const QString & text, QObject * parent);
 impl<'a> /*trait*/ QTextDocument_New for (&'a QString, &'a QObject) {
   fn New(self) -> QTextDocument {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocumentC1ERK7QStringP7QObject()};
+    let ctysz: c_int = unsafe{QTextDocument_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    unsafe {_ZN13QTextDocumentC1ERK7QStringP7QObject(qthis, arg0, arg1)};
+    // unsafe {_ZN13QTextDocumentC1ERK7QStringP7QObject(qthis, arg0, arg1)};
+    let qthis: *mut c_void = unsafe {dector_ZN13QTextDocumentC1ERK7QStringP7QObject(arg0, arg1)};
     let rsthis = QTextDocument{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -1364,10 +1351,13 @@ impl<'a> /*trait*/ QTextDocument_frameAt<QTextFrame> for (i32) {
   // proto:  void QTextDocument::QTextDocument(const QTextDocument & );
 impl<'a> /*trait*/ QTextDocument_New for (&'a QTextDocument) {
   fn New(self) -> QTextDocument {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocumentC1ERKS_()};
+    let ctysz: c_int = unsafe{QTextDocument_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN13QTextDocumentC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN13QTextDocumentC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN13QTextDocumentC1ERKS_(arg0)};
     let rsthis = QTextDocument{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -1931,6 +1921,29 @@ impl<'a> /*trait*/ QTextDocument_setHtml<()> for (&'a QString) {
     // unsafe{_ZN13QTextDocument7setHtmlERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
      unsafe {_ZN13QTextDocument7setHtmlERK7QString(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
+  // proto:  void QTextDocument::undoAvailable(bool );
+impl /*struct*/ QTextDocument {
+  pub fn undoAvailable<RetType, T: QTextDocument_undoAvailable<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.undoAvailable(self);
+    // return 1;
+  }
+}
+
+pub trait QTextDocument_undoAvailable<RetType> {
+  fn undoAvailable(self , rsthis: & QTextDocument) -> RetType;
+}
+
+  // proto:  void QTextDocument::undoAvailable(bool );
+impl<'a> /*trait*/ QTextDocument_undoAvailable<()> for (i8) {
+  fn undoAvailable(self , rsthis: & QTextDocument) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN13QTextDocument13undoAvailableEb()};
+    let arg0 = self  as c_char;
+     unsafe {_ZN13QTextDocument13undoAvailableEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtGui/qiconengine.h
 // dst-file: /src/gui/qiconengine.rs
 //
@@ -31,10 +31,10 @@ use super::qpixmap::QPixmap; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QIconEngine_Class_Size() -> c_int;
   // proto:  bool QIconEngine::read(QDataStream & in);
   fn _ZN11QIconEngine4readER11QDataStream(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  QString QIconEngine::iconName();

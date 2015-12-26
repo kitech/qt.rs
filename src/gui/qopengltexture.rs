@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtGui/qopengltexture.h
 // dst-file: /src/gui/qopengltexture.rs
 //
@@ -28,10 +28,10 @@ use super::qcolor::QColor; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QOpenGLTexture_Class_Size() -> c_int;
   // proto:  void QOpenGLTexture::bind();
   fn _ZN14QOpenGLTexture4bindEv(qthis: *mut c_void);
   // proto:  void QOpenGLTexture::setFixedSamplePositions(bool fixed);
@@ -149,6 +149,7 @@ extern {
   // proto:  QColor QOpenGLTexture::borderColor();
   fn _ZNK14QOpenGLTexture11borderColorEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QOpenGLTexture::QOpenGLTexture(const QOpenGLTexture & );
+  fn dector_ZN14QOpenGLTextureC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN14QOpenGLTextureC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QOpenGLTexture::setCompressedData(int mipLevel, int layer, int dataSize, void * data, const QOpenGLPixelTransferOptions *const options);
   fn _ZN14QOpenGLTexture17setCompressedDataEiiiPvPK27QOpenGLPixelTransferOptions(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: *mut c_void, arg4: *mut c_void);
@@ -1391,10 +1392,13 @@ pub trait QOpenGLTexture_New {
   // proto:  void QOpenGLTexture::QOpenGLTexture(const QOpenGLTexture & );
 impl<'a> /*trait*/ QOpenGLTexture_New for (&'a QOpenGLTexture) {
   fn New(self) -> QOpenGLTexture {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QOpenGLTextureC1ERKS_()};
+    let ctysz: c_int = unsafe{QOpenGLTexture_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN14QOpenGLTextureC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN14QOpenGLTextureC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN14QOpenGLTextureC1ERKS_(arg0)};
     let rsthis = QOpenGLTexture{qclsinst: qthis};
     return rsthis;
     // return 1;

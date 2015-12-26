@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtGui/qaccessibleobject.h
 // dst-file: /src/gui/qaccessibleobject.rs
 //
@@ -31,11 +31,12 @@ use super::super::core::qrect::QRect; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QAccessibleApplication_Class_Size() -> c_int;
   // proto:  void QAccessibleApplication::QAccessibleApplication();
+  fn dector_ZN22QAccessibleApplicationC1Ev() -> *mut c_void;
   fn _ZN22QAccessibleApplicationC1Ev(qthis: *mut c_void);
   // proto:  QWindow * QAccessibleApplication::window();
   fn _ZNK22QAccessibleApplication6windowEv(qthis: *mut c_void) -> *mut c_void;
@@ -49,7 +50,9 @@ extern {
   fn _ZNK22QAccessibleApplication10focusChildEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  int QAccessibleApplication::indexOfChild(const QAccessibleInterface * );
   fn _ZNK22QAccessibleApplication12indexOfChildEPK20QAccessibleInterface(qthis: *mut c_void, arg0: *mut c_void) -> c_int;
+  fn QAccessibleObject_Class_Size() -> c_int;
   // proto:  void QAccessibleObject::QAccessibleObject(QObject * object);
+  fn dector_ZN17QAccessibleObjectC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
   fn _ZN17QAccessibleObjectC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QObject * QAccessibleObject::object();
   fn _ZNK17QAccessibleObject6objectEv(qthis: *mut c_void) -> *mut c_void;
@@ -58,6 +61,7 @@ extern {
   // proto:  QAccessibleInterface * QAccessibleObject::childAt(int x, int y);
   fn _ZNK17QAccessibleObject7childAtEii(qthis: *mut c_void, arg0: c_int, arg1: c_int) -> *mut c_void;
   // proto:  void QAccessibleObject::QAccessibleObject(const QAccessibleObject & );
+  fn dector_ZN17QAccessibleObjectC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN17QAccessibleObjectC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QAccessibleObject::isValid();
   fn _ZNK17QAccessibleObject7isValidEv(qthis: *mut c_void) -> c_char;
@@ -111,9 +115,12 @@ pub trait QAccessibleApplication_New {
   // proto:  void QAccessibleApplication::QAccessibleApplication();
 impl<'a> /*trait*/ QAccessibleApplication_New for () {
   fn New(self) -> QAccessibleApplication {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN22QAccessibleApplicationC1Ev()};
-    unsafe {_ZN22QAccessibleApplicationC1Ev(qthis)};
+    let ctysz: c_int = unsafe{QAccessibleApplication_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN22QAccessibleApplicationC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN22QAccessibleApplicationC1Ev()};
     let rsthis = QAccessibleApplication{/**/qbase: QAccessibleObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -297,10 +304,13 @@ pub trait QAccessibleObject_New {
   // proto:  void QAccessibleObject::QAccessibleObject(QObject * object);
 impl<'a> /*trait*/ QAccessibleObject_New for (&'a QObject) {
   fn New(self) -> QAccessibleObject {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAccessibleObjectC1EP7QObject()};
+    let ctysz: c_int = unsafe{QAccessibleObject_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN17QAccessibleObjectC1EP7QObject(qthis, arg0)};
+    // unsafe {_ZN17QAccessibleObjectC1EP7QObject(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN17QAccessibleObjectC1EP7QObject(arg0)};
     let rsthis = QAccessibleObject{/**/qbase: QAccessibleInterface::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -384,10 +394,13 @@ impl<'a> /*trait*/ QAccessibleObject_childAt<QAccessibleInterface> for (i32, i32
   // proto:  void QAccessibleObject::QAccessibleObject(const QAccessibleObject & );
 impl<'a> /*trait*/ QAccessibleObject_New for (&'a QAccessibleObject) {
   fn New(self) -> QAccessibleObject {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAccessibleObjectC1ERKS_()};
+    let ctysz: c_int = unsafe{QAccessibleObject_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN17QAccessibleObjectC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN17QAccessibleObjectC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN17QAccessibleObjectC1ERKS_(arg0)};
     let rsthis = QAccessibleObject{/**/qbase: QAccessibleInterface::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

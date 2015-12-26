@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtGui/qrasterwindow.h
 // dst-file: /src/gui/qrasterwindow.rs
 //
@@ -27,15 +27,17 @@ use super::qwindow::QWindow; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QRasterWindow_Class_Size() -> c_int;
   // proto:  void QRasterWindow::QRasterWindow(QWindow * parent);
+  fn dector_ZN13QRasterWindowC1EP7QWindow(arg0: *mut c_void) -> *mut c_void;
   fn _ZN13QRasterWindowC1EP7QWindow(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  const QMetaObject * QRasterWindow::metaObject();
   fn _ZNK13QRasterWindow10metaObjectEv(qthis: *mut c_void);
   // proto:  void QRasterWindow::QRasterWindow(const QRasterWindow & );
+  fn dector_ZN13QRasterWindowC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN13QRasterWindowC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
 } // <= ext block end
 
@@ -79,10 +81,13 @@ pub trait QRasterWindow_New {
   // proto:  void QRasterWindow::QRasterWindow(QWindow * parent);
 impl<'a> /*trait*/ QRasterWindow_New for (&'a QWindow) {
   fn New(self) -> QRasterWindow {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QRasterWindowC1EP7QWindow()};
+    let ctysz: c_int = unsafe{QRasterWindow_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN13QRasterWindowC1EP7QWindow(qthis, arg0)};
+    // unsafe {_ZN13QRasterWindowC1EP7QWindow(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN13QRasterWindowC1EP7QWindow(arg0)};
     let rsthis = QRasterWindow{/**/qbase: QPaintDeviceWindow::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -114,10 +119,13 @@ impl<'a> /*trait*/ QRasterWindow_metaObject<()> for () {
   // proto:  void QRasterWindow::QRasterWindow(const QRasterWindow & );
 impl<'a> /*trait*/ QRasterWindow_New for (&'a QRasterWindow) {
   fn New(self) -> QRasterWindow {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QRasterWindowC1ERKS_()};
+    let ctysz: c_int = unsafe{QRasterWindow_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN13QRasterWindowC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN13QRasterWindowC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN13QRasterWindowC1ERKS_(arg0)};
     let rsthis = QRasterWindow{/**/qbase: QPaintDeviceWindow::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

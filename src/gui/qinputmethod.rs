@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtGui/qinputmethod.h
 // dst-file: /src/gui/qinputmethod.rs
 //
@@ -30,10 +30,10 @@ use super::super::core::qlocale::QLocale; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QInputMethod_Class_Size() -> c_int;
   // proto:  QRectF QInputMethod::inputItemRectangle();
   fn _ZNK12QInputMethod18inputItemRectangleEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  const QMetaObject * QInputMethod::metaObject();
@@ -42,38 +42,39 @@ extern {
   fn _ZNK12QInputMethod18inputItemTransformEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QInputMethod::visibleChanged();
   fn _ZN12QInputMethod14visibleChangedEv(qthis: *mut c_void);
+  // proto:  void QInputMethod::~QInputMethod();
+  fn _ZN12QInputMethodD0Ev(qthis: *mut c_void);
   // proto:  void QInputMethod::hide();
   fn _ZN12QInputMethod4hideEv(qthis: *mut c_void);
   // proto:  QRectF QInputMethod::keyboardRectangle();
   fn _ZNK12QInputMethod17keyboardRectangleEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QInputMethod::keyboardRectangleChanged();
   fn _ZN12QInputMethod24keyboardRectangleChangedEv(qthis: *mut c_void);
-  // proto:  void QInputMethod::show();
-  fn _ZN12QInputMethod4showEv(qthis: *mut c_void);
   // proto:  void QInputMethod::QInputMethod();
+  fn dector_ZN12QInputMethodC1Ev() -> *mut c_void;
   fn _ZN12QInputMethodC1Ev(qthis: *mut c_void);
   // proto:  bool QInputMethod::isAnimating();
   fn _ZNK12QInputMethod11isAnimatingEv(qthis: *mut c_void) -> c_char;
   // proto:  void QInputMethod::animatingChanged();
   fn _ZN12QInputMethod16animatingChangedEv(qthis: *mut c_void);
+  // proto:  void QInputMethod::show();
+  fn _ZN12QInputMethod4showEv(qthis: *mut c_void);
   // proto:  void QInputMethod::setVisible(bool visible);
   fn _ZN12QInputMethod10setVisibleEb(qthis: *mut c_void, arg0: c_char);
   // proto:  void QInputMethod::setInputItemRectangle(const QRectF & rect);
   fn _ZN12QInputMethod21setInputItemRectangleERK6QRectF(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QInputMethod::localeChanged();
   fn _ZN12QInputMethod13localeChangedEv(qthis: *mut c_void);
-  // proto:  void QInputMethod::commit();
-  fn _ZN12QInputMethod6commitEv(qthis: *mut c_void);
   // proto:  void QInputMethod::setInputItemTransform(const QTransform & transform);
   fn _ZN12QInputMethod21setInputItemTransformERK10QTransform(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QInputMethod::commit();
+  fn _ZN12QInputMethod6commitEv(qthis: *mut c_void);
   // proto:  QRectF QInputMethod::cursorRectangle();
   fn _ZNK12QInputMethod15cursorRectangleEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  bool QInputMethod::isVisible();
   fn _ZNK12QInputMethod9isVisibleEv(qthis: *mut c_void) -> c_char;
   // proto:  void QInputMethod::cursorRectangleChanged();
   fn _ZN12QInputMethod22cursorRectangleChangedEv(qthis: *mut c_void);
-  // proto:  void QInputMethod::~QInputMethod();
-  fn _ZN12QInputMethodD0Ev(qthis: *mut c_void);
   // proto:  QLocale QInputMethod::locale();
   fn _ZNK12QInputMethod6localeEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QInputMethod::reset();
@@ -196,6 +197,28 @@ impl<'a> /*trait*/ QInputMethod_visibleChanged<()> for () {
   }
 }
 
+  // proto:  void QInputMethod::~QInputMethod();
+impl /*struct*/ QInputMethod {
+  pub fn Free<RetType, T: QInputMethod_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
+    // return 1;
+  }
+}
+
+pub trait QInputMethod_Free<RetType> {
+  fn Free(self , rsthis: & QInputMethod) -> RetType;
+}
+
+  // proto:  void QInputMethod::~QInputMethod();
+impl<'a> /*trait*/ QInputMethod_Free<()> for () {
+  fn Free(self , rsthis: & QInputMethod) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN12QInputMethodD0Ev()};
+     unsafe {_ZN12QInputMethodD0Ev(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
   // proto:  void QInputMethod::hide();
 impl /*struct*/ QInputMethod {
   pub fn hide<RetType, T: QInputMethod_hide<RetType>>(& self,  overload_args: T) -> RetType {
@@ -264,28 +287,6 @@ impl<'a> /*trait*/ QInputMethod_keyboardRectangleChanged<()> for () {
   }
 }
 
-  // proto:  void QInputMethod::show();
-impl /*struct*/ QInputMethod {
-  pub fn show<RetType, T: QInputMethod_show<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.show(self);
-    // return 1;
-  }
-}
-
-pub trait QInputMethod_show<RetType> {
-  fn show(self , rsthis: & QInputMethod) -> RetType;
-}
-
-  // proto:  void QInputMethod::show();
-impl<'a> /*trait*/ QInputMethod_show<()> for () {
-  fn show(self , rsthis: & QInputMethod) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QInputMethod4showEv()};
-     unsafe {_ZN12QInputMethod4showEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto:  void QInputMethod::QInputMethod();
 impl /*struct*/ QInputMethod {
   pub fn New<T: QInputMethod_New>(value: T) -> QInputMethod {
@@ -302,9 +303,12 @@ pub trait QInputMethod_New {
   // proto:  void QInputMethod::QInputMethod();
 impl<'a> /*trait*/ QInputMethod_New for () {
   fn New(self) -> QInputMethod {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QInputMethodC1Ev()};
-    unsafe {_ZN12QInputMethodC1Ev(qthis)};
+    let ctysz: c_int = unsafe{QInputMethod_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN12QInputMethodC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN12QInputMethodC1Ev()};
     let rsthis = QInputMethod{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -352,6 +356,28 @@ impl<'a> /*trait*/ QInputMethod_animatingChanged<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QInputMethod16animatingChangedEv()};
      unsafe {_ZN12QInputMethod16animatingChangedEv(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
+  // proto:  void QInputMethod::show();
+impl /*struct*/ QInputMethod {
+  pub fn show<RetType, T: QInputMethod_show<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.show(self);
+    // return 1;
+  }
+}
+
+pub trait QInputMethod_show<RetType> {
+  fn show(self , rsthis: & QInputMethod) -> RetType;
+}
+
+  // proto:  void QInputMethod::show();
+impl<'a> /*trait*/ QInputMethod_show<()> for () {
+  fn show(self , rsthis: & QInputMethod) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN12QInputMethod4showEv()};
+     unsafe {_ZN12QInputMethod4showEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -424,28 +450,6 @@ impl<'a> /*trait*/ QInputMethod_localeChanged<()> for () {
   }
 }
 
-  // proto:  void QInputMethod::commit();
-impl /*struct*/ QInputMethod {
-  pub fn commit<RetType, T: QInputMethod_commit<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.commit(self);
-    // return 1;
-  }
-}
-
-pub trait QInputMethod_commit<RetType> {
-  fn commit(self , rsthis: & QInputMethod) -> RetType;
-}
-
-  // proto:  void QInputMethod::commit();
-impl<'a> /*trait*/ QInputMethod_commit<()> for () {
-  fn commit(self , rsthis: & QInputMethod) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QInputMethod6commitEv()};
-     unsafe {_ZN12QInputMethod6commitEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto:  void QInputMethod::setInputItemTransform(const QTransform & transform);
 impl /*struct*/ QInputMethod {
   pub fn setInputItemTransform<RetType, T: QInputMethod_setInputItemTransform<RetType>>(& self,  overload_args: T) -> RetType {
@@ -465,6 +469,28 @@ impl<'a> /*trait*/ QInputMethod_setInputItemTransform<()> for (&'a QTransform) {
     // unsafe{_ZN12QInputMethod21setInputItemTransformERK10QTransform()};
     let arg0 = self.qclsinst  as *mut c_void;
      unsafe {_ZN12QInputMethod21setInputItemTransformERK10QTransform(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
+  // proto:  void QInputMethod::commit();
+impl /*struct*/ QInputMethod {
+  pub fn commit<RetType, T: QInputMethod_commit<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.commit(self);
+    // return 1;
+  }
+}
+
+pub trait QInputMethod_commit<RetType> {
+  fn commit(self , rsthis: & QInputMethod) -> RetType;
+}
+
+  // proto:  void QInputMethod::commit();
+impl<'a> /*trait*/ QInputMethod_commit<()> for () {
+  fn commit(self , rsthis: & QInputMethod) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN12QInputMethod6commitEv()};
+     unsafe {_ZN12QInputMethod6commitEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -534,28 +560,6 @@ impl<'a> /*trait*/ QInputMethod_cursorRectangleChanged<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QInputMethod22cursorRectangleChangedEv()};
      unsafe {_ZN12QInputMethod22cursorRectangleChangedEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QInputMethod::~QInputMethod();
-impl /*struct*/ QInputMethod {
-  pub fn Free<RetType, T: QInputMethod_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
-    // return 1;
-  }
-}
-
-pub trait QInputMethod_Free<RetType> {
-  fn Free(self , rsthis: & QInputMethod) -> RetType;
-}
-
-  // proto:  void QInputMethod::~QInputMethod();
-impl<'a> /*trait*/ QInputMethod_Free<()> for () {
-  fn Free(self , rsthis: & QInputMethod) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QInputMethodD0Ev()};
-     unsafe {_ZN12QInputMethodD0Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

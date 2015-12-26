@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtGui/qiconengineplugin.h
 // dst-file: /src/gui/qiconengineplugin.rs
 //
@@ -28,13 +28,14 @@ use super::qiconengine::QIconEngine; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QIconEnginePlugin_Class_Size() -> c_int;
   // proto:  const QMetaObject * QIconEnginePlugin::metaObject();
   fn _ZNK17QIconEnginePlugin10metaObjectEv(qthis: *mut c_void);
   // proto:  void QIconEnginePlugin::QIconEnginePlugin(QObject * parent);
+  fn dector_ZN17QIconEnginePluginC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
   fn _ZN17QIconEnginePluginC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QIconEngine * QIconEnginePlugin::create(const QString & filename);
   fn _ZN17QIconEnginePlugin6createERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
@@ -104,10 +105,13 @@ pub trait QIconEnginePlugin_New {
   // proto:  void QIconEnginePlugin::QIconEnginePlugin(QObject * parent);
 impl<'a> /*trait*/ QIconEnginePlugin_New for (&'a QObject) {
   fn New(self) -> QIconEnginePlugin {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QIconEnginePluginC1EP7QObject()};
+    let ctysz: c_int = unsafe{QIconEnginePlugin_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN17QIconEnginePluginC1EP7QObject(qthis, arg0)};
+    // unsafe {_ZN17QIconEnginePluginC1EP7QObject(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN17QIconEnginePluginC1EP7QObject(arg0)};
     let rsthis = QIconEnginePlugin{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

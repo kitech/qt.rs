@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtGui/qtouchdevice.h
 // dst-file: /src/gui/qtouchdevice.rs
 //
@@ -26,10 +26,10 @@ use super::super::core::qstring::QString; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QTouchDevice_Class_Size() -> c_int;
   // proto:  void QTouchDevice::setName(const QString & name);
   fn _ZN12QTouchDevice7setNameERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QString QTouchDevice::name();
@@ -39,6 +39,7 @@ extern {
   // proto: static QList<const QTouchDevice *> QTouchDevice::devices();
   fn _ZN12QTouchDevice7devicesEv();
   // proto:  void QTouchDevice::QTouchDevice();
+  fn dector_ZN12QTouchDeviceC1Ev() -> *mut c_void;
   fn _ZN12QTouchDeviceC1Ev(qthis: *mut c_void);
   // proto:  void QTouchDevice::~QTouchDevice();
   fn _ZN12QTouchDeviceD0Ev(qthis: *mut c_void);
@@ -166,9 +167,12 @@ pub trait QTouchDevice_New {
   // proto:  void QTouchDevice::QTouchDevice();
 impl<'a> /*trait*/ QTouchDevice_New for () {
   fn New(self) -> QTouchDevice {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTouchDeviceC1Ev()};
-    unsafe {_ZN12QTouchDeviceC1Ev(qthis)};
+    let ctysz: c_int = unsafe{QTouchDevice_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN12QTouchDeviceC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN12QTouchDeviceC1Ev()};
     let rsthis = QTouchDevice{qclsinst: qthis};
     return rsthis;
     // return 1;

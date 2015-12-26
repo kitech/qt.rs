@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtGui/qicon.h
 // dst-file: /src/gui/qicon.rs
 //
@@ -33,14 +33,17 @@ use super::qiconengine::QIconEngine; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QIcon_Class_Size() -> c_int;
   // proto:  void QIcon::QIcon(const QIcon & other);
+  fn dector_ZN5QIconC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN5QIconC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto: static QStringList QIcon::themeSearchPaths();
   fn _ZN5QIcon16themeSearchPathsEv();
+  // proto: static QString QIcon::themeName();
+  fn _ZN5QIcon9themeNameEv() -> *mut c_void;
   // proto:  void QIcon::detach();
   fn _ZN5QIcon6detachEv(qthis: *mut c_void);
   // proto:  bool QIcon::isNull();
@@ -50,27 +53,27 @@ extern {
   // proto: static bool QIcon::hasThemeIcon(const QString & name);
   fn _ZN5QIcon12hasThemeIconERK7QString(arg0: *mut c_void) -> c_char;
   // proto:  void QIcon::QIcon(const QPixmap & pixmap);
+  fn dector_ZN5QIconC1ERK7QPixmap(arg0: *mut c_void) -> *mut c_void;
   fn _ZN5QIconC1ERK7QPixmap(qthis: *mut c_void, arg0: *mut c_void);
   // proto: static QIcon QIcon::fromTheme(const QString & name, const QIcon & fallback);
   fn _ZN5QIcon9fromThemeERK7QStringRKS_(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  // proto: static QString QIcon::themeName();
-  fn _ZN5QIcon9themeNameEv() -> *mut c_void;
+  // proto:  void QIcon::QIcon(QIconEngine * engine);
+  fn dector_ZN5QIconC1EP11QIconEngine(arg0: *mut c_void) -> *mut c_void;
+  fn _ZN5QIconC1EP11QIconEngine(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QString QIcon::name();
   fn _ZNK5QIcon4nameEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QIcon::QIcon();
+  fn dector_ZN5QIconC1Ev() -> *mut c_void;
   fn _ZN5QIconC1Ev(qthis: *mut c_void);
-  // proto:  void QIcon::QIcon(QIconEngine * engine);
-  fn _ZN5QIconC1EP11QIconEngine(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QIcon::~QIcon();
   fn _ZN5QIconD0Ev(qthis: *mut c_void);
   // proto:  bool QIcon::isDetached();
   fn _ZNK5QIcon10isDetachedEv(qthis: *mut c_void) -> c_char;
   // proto:  void QIcon::QIcon(const QString & fileName);
+  fn dector_ZN5QIconC1ERK7QString(arg0: *mut c_void) -> *mut c_void;
   fn _ZN5QIconC1ERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  qint64 QIcon::cacheKey();
   fn _ZNK5QIcon8cacheKeyEv(qthis: *mut c_void) -> c_longlong;
-  // proto:  void QIcon::swap(QIcon & other);
-  fn _ZN5QIcon4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto: static void QIcon::setThemeName(const QString & path);
   fn _ZN5QIcon12setThemeNameERK7QString(arg0: *mut c_void);
 } // <= ext block end
@@ -103,10 +106,13 @@ pub trait QIcon_New {
   // proto:  void QIcon::QIcon(const QIcon & other);
 impl<'a> /*trait*/ QIcon_New for (&'a QIcon) {
   fn New(self) -> QIcon {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QIconC1ERKS_()};
+    let ctysz: c_int = unsafe{QIcon_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN5QIconC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN5QIconC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN5QIconC1ERKS_(arg0)};
     let rsthis = QIcon{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -131,6 +137,30 @@ impl<'a> /*trait*/ QIcon_themeSearchPaths_s<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QIcon16themeSearchPathsEv()};
      unsafe {_ZN5QIcon16themeSearchPathsEv()};
+    // return 1;
+  }
+}
+
+  // proto: static QString QIcon::themeName();
+impl /*struct*/ QIcon {
+  pub fn themeName_s<RetType, T: QIcon_themeName_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.themeName_s();
+    // return 1;
+  }
+}
+
+pub trait QIcon_themeName_s<RetType> {
+  fn themeName_s(self ) -> RetType;
+}
+
+  // proto: static QString QIcon::themeName();
+impl<'a> /*trait*/ QIcon_themeName_s<QString> for () {
+  fn themeName_s(self ) -> QString {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN5QIcon9themeNameEv()};
+    let mut ret = unsafe {_ZN5QIcon9themeNameEv()};
+    let mut ret1 = QString::inheritFrom(ret);
+    return ret1;
     // return 1;
   }
 }
@@ -230,10 +260,13 @@ impl<'a> /*trait*/ QIcon_hasThemeIcon_s<i8> for (&'a QString) {
   // proto:  void QIcon::QIcon(const QPixmap & pixmap);
 impl<'a> /*trait*/ QIcon_New for (&'a QPixmap) {
   fn New(self) -> QIcon {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QIconC1ERK7QPixmap()};
+    let ctysz: c_int = unsafe{QIcon_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN5QIconC1ERK7QPixmap(qthis, arg0)};
+    // unsafe {_ZN5QIconC1ERK7QPixmap(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN5QIconC1ERK7QPixmap(arg0)};
     let rsthis = QIcon{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -266,26 +299,18 @@ impl<'a> /*trait*/ QIcon_fromTheme_s<QIcon> for (&'a QString, &'a QIcon) {
   }
 }
 
-  // proto: static QString QIcon::themeName();
-impl /*struct*/ QIcon {
-  pub fn themeName_s<RetType, T: QIcon_themeName_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.themeName_s();
-    // return 1;
-  }
-}
-
-pub trait QIcon_themeName_s<RetType> {
-  fn themeName_s(self ) -> RetType;
-}
-
-  // proto: static QString QIcon::themeName();
-impl<'a> /*trait*/ QIcon_themeName_s<QString> for () {
-  fn themeName_s(self ) -> QString {
+  // proto:  void QIcon::QIcon(QIconEngine * engine);
+impl<'a> /*trait*/ QIcon_New for (&'a QIconEngine) {
+  fn New(self) -> QIcon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QIcon9themeNameEv()};
-    let mut ret = unsafe {_ZN5QIcon9themeNameEv()};
-    let mut ret1 = QString::inheritFrom(ret);
-    return ret1;
+    // unsafe{_ZN5QIconC1EP11QIconEngine()};
+    let ctysz: c_int = unsafe{QIcon_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let arg0 = self.qclsinst  as *mut c_void;
+    // unsafe {_ZN5QIconC1EP11QIconEngine(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN5QIconC1EP11QIconEngine(arg0)};
+    let rsthis = QIcon{qclsinst: qthis};
+    return rsthis;
     // return 1;
   }
 }
@@ -317,22 +342,12 @@ impl<'a> /*trait*/ QIcon_name<QString> for () {
   // proto:  void QIcon::QIcon();
 impl<'a> /*trait*/ QIcon_New for () {
   fn New(self) -> QIcon {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QIconC1Ev()};
-    unsafe {_ZN5QIconC1Ev(qthis)};
-    let rsthis = QIcon{qclsinst: qthis};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  void QIcon::QIcon(QIconEngine * engine);
-impl<'a> /*trait*/ QIcon_New for (&'a QIconEngine) {
-  fn New(self) -> QIcon {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QIconC1EP11QIconEngine()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN5QIconC1EP11QIconEngine(qthis, arg0)};
+    let ctysz: c_int = unsafe{QIcon_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN5QIconC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN5QIconC1Ev()};
     let rsthis = QIcon{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -387,10 +402,13 @@ impl<'a> /*trait*/ QIcon_isDetached<i8> for () {
   // proto:  void QIcon::QIcon(const QString & fileName);
 impl<'a> /*trait*/ QIcon_New for (&'a QString) {
   fn New(self) -> QIcon {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QIconC1ERK7QString()};
+    let ctysz: c_int = unsafe{QIcon_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN5QIconC1ERK7QString(qthis, arg0)};
+    // unsafe {_ZN5QIconC1ERK7QString(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN5QIconC1ERK7QString(arg0)};
     let rsthis = QIcon{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -416,29 +434,6 @@ impl<'a> /*trait*/ QIcon_cacheKey<i64> for () {
     // unsafe{_ZNK5QIcon8cacheKeyEv()};
     let mut ret = unsafe {_ZNK5QIcon8cacheKeyEv(rsthis.qclsinst)};
     return ret as i64;
-    // return 1;
-  }
-}
-
-  // proto:  void QIcon::swap(QIcon & other);
-impl /*struct*/ QIcon {
-  pub fn swap<RetType, T: QIcon_swap<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.swap(self);
-    // return 1;
-  }
-}
-
-pub trait QIcon_swap<RetType> {
-  fn swap(self , rsthis: & QIcon) -> RetType;
-}
-
-  // proto:  void QIcon::swap(QIcon & other);
-impl<'a> /*trait*/ QIcon_swap<()> for (&'a QIcon) {
-  fn swap(self , rsthis: & QIcon) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QIcon4swapERS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN5QIcon4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

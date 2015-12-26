@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtGui/qabstracttextdocumentlayout.h
 // dst-file: /src/gui/qabstracttextdocumentlayout.rs
 //
@@ -25,9 +25,9 @@ use super::super::core::qsize::QSizeF; // 771
 use super::qpainter::QPainter; // 773
 use super::super::core::qrect::QRectF; // 771
 use super::super::core::qobject::QObject; // 771
+use super::qtextobject::QTextBlock; // 773
 use super::super::core::qpoint::QPointF; // 771
 use super::qpaintdevice::QPaintDevice; // 773
-use super::qtextobject::QTextBlock; // 773
 use super::super::core::qstring::QString; // 771
 // use super::qabstracttextdocumentlayout::QTextObjectInterface; // 773
 use super::qtextobject::QTextFrame; // 773
@@ -37,16 +37,15 @@ use super::qtextobject::QTextFrame; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
-  // proto:  void QTextObjectInterface::~QTextObjectInterface();
-  fn _ZN20QTextObjectInterfaceD0Ev(qthis: *mut c_void);
+  fn QTextObjectInterface_Class_Size() -> c_int;
   // proto:  QSizeF QTextObjectInterface::intrinsicSize(QTextDocument * doc, int posInDocument, const QTextFormat & format);
   fn _ZN20QTextObjectInterface13intrinsicSizeEP13QTextDocumentiRK11QTextFormat(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
   // proto:  void QTextObjectInterface::drawObject(QPainter * painter, const QRectF & rect, QTextDocument * doc, int posInDocument, const QTextFormat & format);
   fn _ZN20QTextObjectInterface10drawObjectEP8QPainterRK6QRectFP13QTextDocumentiRK11QTextFormat(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: c_int, arg4: *mut c_void);
+  fn QAbstractTextDocumentLayout_Class_Size() -> c_int;
   // proto:  const QMetaObject * QAbstractTextDocumentLayout::metaObject();
   fn _ZNK27QAbstractTextDocumentLayout10metaObjectEv(qthis: *mut c_void);
   // proto:  void QAbstractTextDocumentLayout::registerHandler(int objectType, QObject * component);
@@ -55,19 +54,20 @@ extern {
   fn _ZNK27QAbstractTextDocumentLayout9pageCountEv(qthis: *mut c_void) -> c_int;
   // proto:  void QAbstractTextDocumentLayout::~QAbstractTextDocumentLayout();
   fn _ZN27QAbstractTextDocumentLayoutD0Ev(qthis: *mut c_void);
+  // proto:  QRectF QAbstractTextDocumentLayout::blockBoundingRect(const QTextBlock & block);
+  fn _ZNK27QAbstractTextDocumentLayout17blockBoundingRectERK10QTextBlock(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QAbstractTextDocumentLayout::setPaintDevice(QPaintDevice * device);
   fn _ZN27QAbstractTextDocumentLayout14setPaintDeviceEP12QPaintDevice(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QAbstractTextDocumentLayout::pageCountChanged(int newPages);
   fn _ZN27QAbstractTextDocumentLayout16pageCountChangedEi(qthis: *mut c_void, arg0: c_int);
   // proto:  QTextDocument * QAbstractTextDocumentLayout::document();
   fn _ZNK27QAbstractTextDocumentLayout8documentEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QAbstractTextDocumentLayout::update(const QRectF & );
-  fn _ZN27QAbstractTextDocumentLayout6updateERK6QRectF(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QAbstractTextDocumentLayout::updateBlock(const QTextBlock & block);
   fn _ZN27QAbstractTextDocumentLayout11updateBlockERK10QTextBlock(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QAbstractTextDocumentLayout::unregisterHandler(int objectType, QObject * component);
   fn _ZN27QAbstractTextDocumentLayout17unregisterHandlerEiP7QObject(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void);
   // proto:  void QAbstractTextDocumentLayout::QAbstractTextDocumentLayout(QTextDocument * doc);
+  fn dector_ZN27QAbstractTextDocumentLayoutC1EP13QTextDocument(arg0: *mut c_void) -> *mut c_void;
   fn _ZN27QAbstractTextDocumentLayoutC1EP13QTextDocument(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QSizeF QAbstractTextDocumentLayout::documentSize();
   fn _ZNK27QAbstractTextDocumentLayout12documentSizeEv(qthis: *mut c_void) -> *mut c_void;
@@ -81,8 +81,8 @@ extern {
   fn _ZNK27QAbstractTextDocumentLayout17frameBoundingRectEP10QTextFrame(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QAbstractTextDocumentLayout::documentSizeChanged(const QSizeF & newSize);
   fn _ZN27QAbstractTextDocumentLayout19documentSizeChangedERK6QSizeF(qthis: *mut c_void, arg0: *mut c_void);
-  // proto:  QRectF QAbstractTextDocumentLayout::blockBoundingRect(const QTextBlock & block);
-  fn _ZNK27QAbstractTextDocumentLayout17blockBoundingRectERK10QTextBlock(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  // proto:  void QAbstractTextDocumentLayout::update(const QRectF & );
+  fn _ZN27QAbstractTextDocumentLayout6updateERK6QRectF(qthis: *mut c_void, arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -103,28 +103,6 @@ impl /*struct*/ QTextObjectInterface {
     return QTextObjectInterface{qclsinst: qthis};
   }
 }
-  // proto:  void QTextObjectInterface::~QTextObjectInterface();
-impl /*struct*/ QTextObjectInterface {
-  pub fn Free<RetType, T: QTextObjectInterface_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
-    // return 1;
-  }
-}
-
-pub trait QTextObjectInterface_Free<RetType> {
-  fn Free(self , rsthis: & QTextObjectInterface) -> RetType;
-}
-
-  // proto:  void QTextObjectInterface::~QTextObjectInterface();
-impl<'a> /*trait*/ QTextObjectInterface_Free<()> for () {
-  fn Free(self , rsthis: & QTextObjectInterface) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN20QTextObjectInterfaceD0Ev()};
-     unsafe {_ZN20QTextObjectInterfaceD0Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto:  QSizeF QTextObjectInterface::intrinsicSize(QTextDocument * doc, int posInDocument, const QTextFormat & format);
 impl /*struct*/ QTextObjectInterface {
   pub fn intrinsicSize<RetType, T: QTextObjectInterface_intrinsicSize<RetType>>(& self,  overload_args: T) -> RetType {
@@ -287,6 +265,31 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_Free<()> for () {
   }
 }
 
+  // proto:  QRectF QAbstractTextDocumentLayout::blockBoundingRect(const QTextBlock & block);
+impl /*struct*/ QAbstractTextDocumentLayout {
+  pub fn blockBoundingRect<RetType, T: QAbstractTextDocumentLayout_blockBoundingRect<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.blockBoundingRect(self);
+    // return 1;
+  }
+}
+
+pub trait QAbstractTextDocumentLayout_blockBoundingRect<RetType> {
+  fn blockBoundingRect(self , rsthis: & QAbstractTextDocumentLayout) -> RetType;
+}
+
+  // proto:  QRectF QAbstractTextDocumentLayout::blockBoundingRect(const QTextBlock & block);
+impl<'a> /*trait*/ QAbstractTextDocumentLayout_blockBoundingRect<QRectF> for (&'a QTextBlock) {
+  fn blockBoundingRect(self , rsthis: & QAbstractTextDocumentLayout) -> QRectF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK27QAbstractTextDocumentLayout17blockBoundingRectERK10QTextBlock()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK27QAbstractTextDocumentLayout17blockBoundingRectERK10QTextBlock(rsthis.qclsinst, arg0)};
+    let mut ret1 = QRectF::inheritFrom(ret);
+    return ret1;
+    // return 1;
+  }
+}
+
   // proto:  void QAbstractTextDocumentLayout::setPaintDevice(QPaintDevice * device);
 impl /*struct*/ QAbstractTextDocumentLayout {
   pub fn setPaintDevice<RetType, T: QAbstractTextDocumentLayout_setPaintDevice<RetType>>(& self,  overload_args: T) -> RetType {
@@ -357,29 +360,6 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_document<QTextDocument> for () {
   }
 }
 
-  // proto:  void QAbstractTextDocumentLayout::update(const QRectF & );
-impl /*struct*/ QAbstractTextDocumentLayout {
-  pub fn update<RetType, T: QAbstractTextDocumentLayout_update<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.update(self);
-    // return 1;
-  }
-}
-
-pub trait QAbstractTextDocumentLayout_update<RetType> {
-  fn update(self , rsthis: & QAbstractTextDocumentLayout) -> RetType;
-}
-
-  // proto:  void QAbstractTextDocumentLayout::update(const QRectF & );
-impl<'a> /*trait*/ QAbstractTextDocumentLayout_update<()> for (&'a QRectF) {
-  fn update(self , rsthis: & QAbstractTextDocumentLayout) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN27QAbstractTextDocumentLayout6updateERK6QRectF()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN27QAbstractTextDocumentLayout6updateERK6QRectF(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  void QAbstractTextDocumentLayout::updateBlock(const QTextBlock & block);
 impl /*struct*/ QAbstractTextDocumentLayout {
   pub fn updateBlock<RetType, T: QAbstractTextDocumentLayout_updateBlock<RetType>>(& self,  overload_args: T) -> RetType {
@@ -443,10 +423,13 @@ pub trait QAbstractTextDocumentLayout_New {
   // proto:  void QAbstractTextDocumentLayout::QAbstractTextDocumentLayout(QTextDocument * doc);
 impl<'a> /*trait*/ QAbstractTextDocumentLayout_New for (&'a QTextDocument) {
   fn New(self) -> QAbstractTextDocumentLayout {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QAbstractTextDocumentLayoutC1EP13QTextDocument()};
+    let ctysz: c_int = unsafe{QAbstractTextDocumentLayout_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN27QAbstractTextDocumentLayoutC1EP13QTextDocument(qthis, arg0)};
+    // unsafe {_ZN27QAbstractTextDocumentLayoutC1EP13QTextDocument(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN27QAbstractTextDocumentLayoutC1EP13QTextDocument(arg0)};
     let rsthis = QAbstractTextDocumentLayout{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -599,27 +582,25 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_documentSizeChanged<()> for (&'a 
   }
 }
 
-  // proto:  QRectF QAbstractTextDocumentLayout::blockBoundingRect(const QTextBlock & block);
+  // proto:  void QAbstractTextDocumentLayout::update(const QRectF & );
 impl /*struct*/ QAbstractTextDocumentLayout {
-  pub fn blockBoundingRect<RetType, T: QAbstractTextDocumentLayout_blockBoundingRect<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.blockBoundingRect(self);
+  pub fn update<RetType, T: QAbstractTextDocumentLayout_update<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.update(self);
     // return 1;
   }
 }
 
-pub trait QAbstractTextDocumentLayout_blockBoundingRect<RetType> {
-  fn blockBoundingRect(self , rsthis: & QAbstractTextDocumentLayout) -> RetType;
+pub trait QAbstractTextDocumentLayout_update<RetType> {
+  fn update(self , rsthis: & QAbstractTextDocumentLayout) -> RetType;
 }
 
-  // proto:  QRectF QAbstractTextDocumentLayout::blockBoundingRect(const QTextBlock & block);
-impl<'a> /*trait*/ QAbstractTextDocumentLayout_blockBoundingRect<QRectF> for (&'a QTextBlock) {
-  fn blockBoundingRect(self , rsthis: & QAbstractTextDocumentLayout) -> QRectF {
+  // proto:  void QAbstractTextDocumentLayout::update(const QRectF & );
+impl<'a> /*trait*/ QAbstractTextDocumentLayout_update<()> for (&'a QRectF) {
+  fn update(self , rsthis: & QAbstractTextDocumentLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK27QAbstractTextDocumentLayout17blockBoundingRectERK10QTextBlock()};
+    // unsafe{_ZN27QAbstractTextDocumentLayout6updateERK6QRectF()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK27QAbstractTextDocumentLayout17blockBoundingRectERK10QTextBlock(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRectF::inheritFrom(ret);
-    return ret1;
+     unsafe {_ZN27QAbstractTextDocumentLayout6updateERK6QRectF(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

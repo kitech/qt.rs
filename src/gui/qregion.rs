@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtGui/qregion.h
 // dst-file: /src/gui/qregion.rs
 //
@@ -20,24 +20,25 @@ use self::libc::*;
 // use block begin =>
 use std::ops::Deref;
 use super::super::core::qrect::QRect; // 771
-use super::super::core::qpoint::QPoint; // 771
 use super::qbitmap::QBitmap; // 773
 use super::qpolygon::QPolygon; // 773
+use super::super::core::qpoint::QPoint; // 771
 // <= use block end
 
 // ext block begin =>
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QRegion_Class_Size() -> c_int;
   // proto:  bool QRegion::isNull();
   fn _ZNK7QRegion6isNullEv(qthis: *mut c_void) -> c_char;
   // proto:  QRect QRegion::boundingRect();
   fn _ZNK7QRegion12boundingRectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QRegion::QRegion(const QRegion & region);
+  fn dector_ZN7QRegionC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN7QRegionC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QRegion::rectCount();
   fn _ZNK7QRegion9rectCountEv(qthis: *mut c_void) -> c_int;
@@ -45,17 +46,13 @@ extern {
   fn _ZN7QRegion9translateEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
   // proto:  QRegion QRegion::united(const QRegion & r);
   fn _ZNK7QRegion6unitedERKS_(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
-  // proto:  QRegion QRegion::translated(const QPoint & p);
-  fn _ZNK7QRegion10translatedERK6QPoint(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
-  // proto:  void QRegion::swap(QRegion & other);
-  fn _ZN7QRegion4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QRegion::QRegion(const QBitmap & bitmap);
+  fn dector_ZN7QRegionC1ERK7QBitmap(arg0: *mut c_void) -> *mut c_void;
   fn _ZN7QRegionC1ERK7QBitmap(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QRegion::~QRegion();
   fn _ZN7QRegionD0Ev(qthis: *mut c_void);
-  // proto:  void QRegion::translate(const QPoint & p);
-  fn _ZN7QRegion9translateERK6QPoint(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QRegion::QRegion();
+  fn dector_ZN7QRegionC1Ev() -> *mut c_void;
   fn _ZN7QRegionC1Ev(qthis: *mut c_void);
   // proto:  bool QRegion::contains(const QRect & r);
   fn _ZNK7QRegion8containsERK5QRect(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
@@ -160,10 +157,13 @@ pub trait QRegion_New {
   // proto:  void QRegion::QRegion(const QRegion & region);
 impl<'a> /*trait*/ QRegion_New for (&'a QRegion) {
   fn New(self) -> QRegion {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QRegionC1ERKS_()};
+    let ctysz: c_int = unsafe{QRegion_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN7QRegionC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN7QRegionC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN7QRegionC1ERKS_(arg0)};
     let rsthis = QRegion{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -242,61 +242,16 @@ impl<'a> /*trait*/ QRegion_united<QRegion> for (&'a QRegion) {
   }
 }
 
-  // proto:  QRegion QRegion::translated(const QPoint & p);
-impl /*struct*/ QRegion {
-  pub fn translated<RetType, T: QRegion_translated<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.translated(self);
-    // return 1;
-  }
-}
-
-pub trait QRegion_translated<RetType> {
-  fn translated(self , rsthis: & QRegion) -> RetType;
-}
-
-  // proto:  QRegion QRegion::translated(const QPoint & p);
-impl<'a> /*trait*/ QRegion_translated<QRegion> for (&'a QPoint) {
-  fn translated(self , rsthis: & QRegion) -> QRegion {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QRegion10translatedERK6QPoint()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK7QRegion10translatedERK6QPoint(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRegion::inheritFrom(ret);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QRegion::swap(QRegion & other);
-impl /*struct*/ QRegion {
-  pub fn swap<RetType, T: QRegion_swap<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.swap(self);
-    // return 1;
-  }
-}
-
-pub trait QRegion_swap<RetType> {
-  fn swap(self , rsthis: & QRegion) -> RetType;
-}
-
-  // proto:  void QRegion::swap(QRegion & other);
-impl<'a> /*trait*/ QRegion_swap<()> for (&'a QRegion) {
-  fn swap(self , rsthis: & QRegion) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QRegion4swapERS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN7QRegion4swapERS_(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  void QRegion::QRegion(const QBitmap & bitmap);
 impl<'a> /*trait*/ QRegion_New for (&'a QBitmap) {
   fn New(self) -> QRegion {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QRegionC1ERK7QBitmap()};
+    let ctysz: c_int = unsafe{QRegion_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN7QRegionC1ERK7QBitmap(qthis, arg0)};
+    // unsafe {_ZN7QRegionC1ERK7QBitmap(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN7QRegionC1ERK7QBitmap(arg0)};
     let rsthis = QRegion{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -325,23 +280,15 @@ impl<'a> /*trait*/ QRegion_Free<()> for () {
   }
 }
 
-  // proto:  void QRegion::translate(const QPoint & p);
-impl<'a> /*trait*/ QRegion_translate<()> for (&'a QPoint) {
-  fn translate(self , rsthis: & QRegion) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QRegion9translateERK6QPoint()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN7QRegion9translateERK6QPoint(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  void QRegion::QRegion();
 impl<'a> /*trait*/ QRegion_New for () {
   fn New(self) -> QRegion {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QRegionC1Ev()};
-    unsafe {_ZN7QRegionC1Ev(qthis)};
+    let ctysz: c_int = unsafe{QRegion_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN7QRegionC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN7QRegionC1Ev()};
     let rsthis = QRegion{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -513,6 +460,18 @@ impl<'a> /*trait*/ QRegion_intersects<i8> for (&'a QRect) {
     return ret as i8;
     // return 1;
   }
+}
+
+  // proto:  QRegion QRegion::translated(int dx, int dy);
+impl /*struct*/ QRegion {
+  pub fn translated<RetType, T: QRegion_translated<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.translated(self);
+    // return 1;
+  }
+}
+
+pub trait QRegion_translated<RetType> {
+  fn translated(self , rsthis: & QRegion) -> RetType;
 }
 
   // proto:  QRegion QRegion::translated(int dx, int dy);

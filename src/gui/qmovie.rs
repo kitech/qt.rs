@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtGui/qmovie.h
 // dst-file: /src/gui/qmovie.rs
 //
@@ -34,11 +34,12 @@ use super::qpixmap::QPixmap; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QMovie_Class_Size() -> c_int;
   // proto:  void QMovie::QMovie(QObject * parent);
+  fn dector_ZN6QMovieC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
   fn _ZN6QMovieC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QMovie::speed();
   fn _ZNK6QMovie5speedEv(qthis: *mut c_void) -> c_int;
@@ -59,6 +60,7 @@ extern {
   // proto:  void QMovie::started();
   fn _ZN6QMovie7startedEv(qthis: *mut c_void);
   // proto:  void QMovie::QMovie(const QString & fileName, const QByteArray & format, QObject * parent);
+  fn dector_ZN6QMovieC1ERK7QStringRK10QByteArrayP7QObject(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> *mut c_void;
   fn _ZN6QMovieC1ERK7QStringRK10QByteArrayP7QObject(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  void QMovie::finished();
   fn _ZN6QMovie8finishedEv(qthis: *mut c_void);
@@ -71,6 +73,7 @@ extern {
   // proto:  int QMovie::loopCount();
   fn _ZNK6QMovie9loopCountEv(qthis: *mut c_void) -> c_int;
   // proto:  void QMovie::QMovie(QIODevice * device, const QByteArray & format, QObject * parent);
+  fn dector_ZN6QMovieC1EP9QIODeviceRK10QByteArrayP7QObject(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> *mut c_void;
   fn _ZN6QMovieC1EP9QIODeviceRK10QByteArrayP7QObject(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  void QMovie::setFormat(const QByteArray & format);
   fn _ZN6QMovie9setFormatERK10QByteArray(qthis: *mut c_void, arg0: *mut c_void);
@@ -93,6 +96,7 @@ extern {
   // proto:  void QMovie::setSpeed(int percentSpeed);
   fn _ZN6QMovie8setSpeedEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QMovie::QMovie(const QMovie & );
+  fn dector_ZN6QMovieC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN6QMovieC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QMovie::stop();
   fn _ZN6QMovie4stopEv(qthis: *mut c_void);
@@ -154,10 +158,13 @@ pub trait QMovie_New {
   // proto:  void QMovie::QMovie(QObject * parent);
 impl<'a> /*trait*/ QMovie_New for (&'a QObject) {
   fn New(self) -> QMovie {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMovieC1EP7QObject()};
+    let ctysz: c_int = unsafe{QMovie_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN6QMovieC1EP7QObject(qthis, arg0)};
+    // unsafe {_ZN6QMovieC1EP7QObject(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN6QMovieC1EP7QObject(arg0)};
     let rsthis = QMovie{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -375,12 +382,15 @@ impl<'a> /*trait*/ QMovie_started<()> for () {
   // proto:  void QMovie::QMovie(const QString & fileName, const QByteArray & format, QObject * parent);
 impl<'a> /*trait*/ QMovie_New for (&'a QString, &'a QByteArray, &'a QObject) {
   fn New(self) -> QMovie {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMovieC1ERK7QStringRK10QByteArrayP7QObject()};
+    let ctysz: c_int = unsafe{QMovie_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
-    unsafe {_ZN6QMovieC1ERK7QStringRK10QByteArrayP7QObject(qthis, arg0, arg1, arg2)};
+    // unsafe {_ZN6QMovieC1ERK7QStringRK10QByteArrayP7QObject(qthis, arg0, arg1, arg2)};
+    let qthis: *mut c_void = unsafe {dector_ZN6QMovieC1ERK7QStringRK10QByteArrayP7QObject(arg0, arg1, arg2)};
     let rsthis = QMovie{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -501,12 +511,15 @@ impl<'a> /*trait*/ QMovie_loopCount<i32> for () {
   // proto:  void QMovie::QMovie(QIODevice * device, const QByteArray & format, QObject * parent);
 impl<'a> /*trait*/ QMovie_New for (&'a QIODevice, &'a QByteArray, &'a QObject) {
   fn New(self) -> QMovie {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMovieC1EP9QIODeviceRK10QByteArrayP7QObject()};
+    let ctysz: c_int = unsafe{QMovie_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
-    unsafe {_ZN6QMovieC1EP9QIODeviceRK10QByteArrayP7QObject(qthis, arg0, arg1, arg2)};
+    // unsafe {_ZN6QMovieC1EP9QIODeviceRK10QByteArrayP7QObject(qthis, arg0, arg1, arg2)};
+    let qthis: *mut c_void = unsafe {dector_ZN6QMovieC1EP9QIODeviceRK10QByteArrayP7QObject(arg0, arg1, arg2)};
     let rsthis = QMovie{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -748,10 +761,13 @@ impl<'a> /*trait*/ QMovie_setSpeed<()> for (i32) {
   // proto:  void QMovie::QMovie(const QMovie & );
 impl<'a> /*trait*/ QMovie_New for (&'a QMovie) {
   fn New(self) -> QMovie {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMovieC1ERKS_()};
+    let ctysz: c_int = unsafe{QMovie_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN6QMovieC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN6QMovieC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN6QMovieC1ERKS_(arg0)};
     let rsthis = QMovie{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
