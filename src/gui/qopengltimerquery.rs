@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtGui/qopengltimerquery.h
 // dst-file: /src/gui/qopengltimerquery.rs
 //
@@ -32,85 +32,87 @@ extern {
   fn QOpenGLTimerQuery_Class_Size() -> c_int;
   // proto:  void QOpenGLTimerQuery::QOpenGLTimerQuery(const QOpenGLTimerQuery & );
   fn dector_ZN17QOpenGLTimerQueryC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN17QOpenGLTimerQueryC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN17QOpenGLTimerQueryC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QOpenGLTimerQuery::create();
-  fn _ZN17QOpenGLTimerQuery6createEv(qthis: *mut c_void) -> c_char;
+  fn _ZN17QOpenGLTimerQuery6createEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QOpenGLTimerQuery::isCreated();
-  fn _ZNK17QOpenGLTimerQuery9isCreatedEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK17QOpenGLTimerQuery9isCreatedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QOpenGLTimerQuery::end();
-  fn _ZN17QOpenGLTimerQuery3endEv(qthis: *mut c_void);
+  fn _ZN17QOpenGLTimerQuery3endEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QOpenGLTimerQuery::~QOpenGLTimerQuery();
-  fn _ZN17QOpenGLTimerQueryD0Ev(qthis: *mut c_void);
+  fn _ZN17QOpenGLTimerQueryD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QOpenGLTimerQuery::begin();
-  fn _ZN17QOpenGLTimerQuery5beginEv(qthis: *mut c_void);
+  fn _ZN17QOpenGLTimerQuery5beginEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QOpenGLTimerQuery::QOpenGLTimerQuery(QObject * parent);
   fn dector_ZN17QOpenGLTimerQueryC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN17QOpenGLTimerQueryC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN17QOpenGLTimerQueryC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QOpenGLTimerQuery::destroy();
-  fn _ZN17QOpenGLTimerQuery7destroyEv(qthis: *mut c_void);
+  fn _ZN17QOpenGLTimerQuery7destroyEv(qthis: u64 /* *mut c_void*/);
   // proto:  GLuint64 QOpenGLTimerQuery::waitForResult();
-  fn _ZNK17QOpenGLTimerQuery13waitForResultEv(qthis: *mut c_void) -> c_ulong;
+  fn _ZNK17QOpenGLTimerQuery13waitForResultEv(qthis: u64 /* *mut c_void*/) -> c_ulong;
   // proto:  GLuint QOpenGLTimerQuery::objectId();
-  fn _ZNK17QOpenGLTimerQuery8objectIdEv(qthis: *mut c_void) -> c_uint;
+  fn _ZNK17QOpenGLTimerQuery8objectIdEv(qthis: u64 /* *mut c_void*/) -> c_uint;
   // proto:  GLuint64 QOpenGLTimerQuery::waitForTimestamp();
-  fn _ZNK17QOpenGLTimerQuery16waitForTimestampEv(qthis: *mut c_void) -> c_ulong;
+  fn _ZNK17QOpenGLTimerQuery16waitForTimestampEv(qthis: u64 /* *mut c_void*/) -> c_ulong;
   // proto:  const QMetaObject * QOpenGLTimerQuery::metaObject();
-  fn _ZNK17QOpenGLTimerQuery10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK17QOpenGLTimerQuery10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QOpenGLTimerQuery::recordTimestamp();
-  fn _ZN17QOpenGLTimerQuery15recordTimestampEv(qthis: *mut c_void);
+  fn _ZN17QOpenGLTimerQuery15recordTimestampEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QOpenGLTimerQuery::isResultAvailable();
-  fn _ZNK17QOpenGLTimerQuery17isResultAvailableEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK17QOpenGLTimerQuery17isResultAvailableEv(qthis: u64 /* *mut c_void*/) -> c_char;
   fn QOpenGLTimeMonitor_Class_Size() -> c_int;
   // proto:  void QOpenGLTimeMonitor::setSampleCount(int sampleCount);
-  fn _ZN18QOpenGLTimeMonitor14setSampleCountEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN18QOpenGLTimeMonitor14setSampleCountEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QOpenGLTimeMonitor::sampleCount();
-  fn _ZNK18QOpenGLTimeMonitor11sampleCountEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK18QOpenGLTimeMonitor11sampleCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QOpenGLTimeMonitor::destroy();
-  fn _ZN18QOpenGLTimeMonitor7destroyEv(qthis: *mut c_void);
+  fn _ZN18QOpenGLTimeMonitor7destroyEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QOpenGLTimeMonitor::QOpenGLTimeMonitor(const QOpenGLTimeMonitor & );
   fn dector_ZN18QOpenGLTimeMonitorC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN18QOpenGLTimeMonitorC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN18QOpenGLTimeMonitorC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QOpenGLTimeMonitor::create();
-  fn _ZN18QOpenGLTimeMonitor6createEv(qthis: *mut c_void) -> c_char;
+  fn _ZN18QOpenGLTimeMonitor6createEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QOpenGLTimeMonitor::~QOpenGLTimeMonitor();
-  fn _ZN18QOpenGLTimeMonitorD0Ev(qthis: *mut c_void);
+  fn _ZN18QOpenGLTimeMonitorD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QOpenGLTimeMonitor::isResultAvailable();
-  fn _ZNK18QOpenGLTimeMonitor17isResultAvailableEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK18QOpenGLTimeMonitor17isResultAvailableEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QVector<GLuint64> QOpenGLTimeMonitor::waitForIntervals();
-  fn _ZNK18QOpenGLTimeMonitor16waitForIntervalsEv(qthis: *mut c_void);
+  fn _ZNK18QOpenGLTimeMonitor16waitForIntervalsEv(qthis: u64 /* *mut c_void*/);
   // proto:  QVector<GLuint> QOpenGLTimeMonitor::objectIds();
-  fn _ZNK18QOpenGLTimeMonitor9objectIdsEv(qthis: *mut c_void);
+  fn _ZNK18QOpenGLTimeMonitor9objectIdsEv(qthis: u64 /* *mut c_void*/);
   // proto:  int QOpenGLTimeMonitor::recordSample();
-  fn _ZN18QOpenGLTimeMonitor12recordSampleEv(qthis: *mut c_void) -> c_int;
+  fn _ZN18QOpenGLTimeMonitor12recordSampleEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QOpenGLTimeMonitor::reset();
-  fn _ZN18QOpenGLTimeMonitor5resetEv(qthis: *mut c_void);
+  fn _ZN18QOpenGLTimeMonitor5resetEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QOpenGLTimeMonitor::QOpenGLTimeMonitor(QObject * parent);
   fn dector_ZN18QOpenGLTimeMonitorC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN18QOpenGLTimeMonitorC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN18QOpenGLTimeMonitorC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QVector<GLuint64> QOpenGLTimeMonitor::waitForSamples();
-  fn _ZNK18QOpenGLTimeMonitor14waitForSamplesEv(qthis: *mut c_void);
+  fn _ZNK18QOpenGLTimeMonitor14waitForSamplesEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QOpenGLTimeMonitor::isCreated();
-  fn _ZNK18QOpenGLTimeMonitor9isCreatedEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK18QOpenGLTimeMonitor9isCreatedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  const QMetaObject * QOpenGLTimeMonitor::metaObject();
-  fn _ZNK18QOpenGLTimeMonitor10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK18QOpenGLTimeMonitor10metaObjectEv(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QOpenGLTimerQuery)=1
+#[derive(Default)]
 pub struct QOpenGLTimerQuery {
   qbase: QObject,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 // class sizeof(QOpenGLTimeMonitor)=1
+#[derive(Default)]
 pub struct QOpenGLTimeMonitor {
   qbase: QObject,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QOpenGLTimerQuery {
-  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLTimerQuery {
-    return QOpenGLTimerQuery{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QOpenGLTimerQuery {
+    return QOpenGLTimerQuery{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QOpenGLTimerQuery {
@@ -144,11 +146,11 @@ impl<'a> /*trait*/ QOpenGLTimerQuery_New for (&'a QOpenGLTimerQuery) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QOpenGLTimerQueryC1ERKS_()};
     let ctysz: c_int = unsafe{QOpenGLTimerQuery_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN17QOpenGLTimerQueryC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN17QOpenGLTimerQueryC1ERKS_(arg0)};
-    let rsthis = QOpenGLTimerQuery{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN17QOpenGLTimerQueryC1ERKS_(arg0)} as u64;
+    let rsthis = QOpenGLTimerQuery{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -272,11 +274,11 @@ impl<'a> /*trait*/ QOpenGLTimerQuery_New for (&'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QOpenGLTimerQueryC1EP7QObject()};
     let ctysz: c_int = unsafe{QOpenGLTimerQuery_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN17QOpenGLTimerQueryC1EP7QObject(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN17QOpenGLTimerQueryC1EP7QObject(arg0)};
-    let rsthis = QOpenGLTimerQuery{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN17QOpenGLTimerQueryC1EP7QObject(arg0)} as u64;
+    let rsthis = QOpenGLTimerQuery{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -441,8 +443,8 @@ impl<'a> /*trait*/ QOpenGLTimerQuery_isResultAvailable<i8> for () {
 }
 
 impl /*struct*/ QOpenGLTimeMonitor {
-  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLTimeMonitor {
-    return QOpenGLTimeMonitor{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QOpenGLTimeMonitor {
+    return QOpenGLTimeMonitor{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QOpenGLTimeMonitor {
@@ -544,11 +546,11 @@ impl<'a> /*trait*/ QOpenGLTimeMonitor_New for (&'a QOpenGLTimeMonitor) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QOpenGLTimeMonitorC1ERKS_()};
     let ctysz: c_int = unsafe{QOpenGLTimeMonitor_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN18QOpenGLTimeMonitorC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN18QOpenGLTimeMonitorC1ERKS_(arg0)};
-    let rsthis = QOpenGLTimeMonitor{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN18QOpenGLTimeMonitorC1ERKS_(arg0)} as u64;
+    let rsthis = QOpenGLTimeMonitor{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -717,11 +719,11 @@ impl<'a> /*trait*/ QOpenGLTimeMonitor_New for (&'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QOpenGLTimeMonitorC1EP7QObject()};
     let ctysz: c_int = unsafe{QOpenGLTimeMonitor_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN18QOpenGLTimeMonitorC1EP7QObject(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN18QOpenGLTimeMonitorC1EP7QObject(arg0)};
-    let rsthis = QOpenGLTimeMonitor{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN18QOpenGLTimeMonitorC1EP7QObject(arg0)} as u64;
+    let rsthis = QOpenGLTimeMonitor{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }

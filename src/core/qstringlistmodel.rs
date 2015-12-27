@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qstringlistmodel.h
 // dst-file: /src/core/qstringlistmodel.rs
 //
@@ -36,43 +36,44 @@ extern {
   fn QStringListModel_Class_Size() -> c_int;
   // proto:  void QStringListModel::QStringListModel(const QStringList & strings, QObject * parent);
   fn dector_ZN16QStringListModelC1ERK11QStringListP7QObject(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN16QStringListModelC1ERK11QStringListP7QObject(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN16QStringListModelC1ERK11QStringListP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  bool QStringListModel::insertRows(int row, int count, const QModelIndex & parent);
-  fn _ZN16QStringListModel10insertRowsEiiRK11QModelIndex(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_void) -> c_char;
+  fn _ZN16QStringListModel10insertRowsEiiRK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: *mut c_void) -> c_char;
   // proto:  QVariant QStringListModel::data(const QModelIndex & index, int role);
-  fn _ZNK16QStringListModel4dataERK11QModelIndexi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) -> *mut c_void;
+  fn _ZNK16QStringListModel4dataERK11QModelIndexi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> *mut c_void;
   // proto:  QStringList QStringListModel::stringList();
-  fn _ZNK16QStringListModel10stringListEv(qthis: *mut c_void);
+  fn _ZNK16QStringListModel10stringListEv(qthis: u64 /* *mut c_void*/);
   // proto:  const QMetaObject * QStringListModel::metaObject();
-  fn _ZNK16QStringListModel10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK16QStringListModel10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QStringListModel::removeRows(int row, int count, const QModelIndex & parent);
-  fn _ZN16QStringListModel10removeRowsEiiRK11QModelIndex(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_void) -> c_char;
+  fn _ZN16QStringListModel10removeRowsEiiRK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: *mut c_void) -> c_char;
   // proto:  void QStringListModel::QStringListModel(QObject * parent);
   fn dector_ZN16QStringListModelC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN16QStringListModelC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN16QStringListModelC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QStringListModel::QStringListModel(const QStringListModel & );
   fn dector_ZN16QStringListModelC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN16QStringListModelC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN16QStringListModelC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QStringListModel::setData(const QModelIndex & index, const QVariant & value, int role);
-  fn _ZN16QStringListModel7setDataERK11QModelIndexRK8QVarianti(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: c_int) -> c_char;
+  fn _ZN16QStringListModel7setDataERK11QModelIndexRK8QVarianti(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: c_int) -> c_char;
   // proto:  int QStringListModel::rowCount(const QModelIndex & parent);
-  fn _ZNK16QStringListModel8rowCountERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void) -> c_int;
+  fn _ZNK16QStringListModel8rowCountERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
   // proto:  QModelIndex QStringListModel::sibling(int row, int column, const QModelIndex & idx);
-  fn _ZNK16QStringListModel7siblingEiiRK11QModelIndex(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
+  fn _ZNK16QStringListModel7siblingEiiRK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
   // proto:  void QStringListModel::setStringList(const QStringList & strings);
-  fn _ZN16QStringListModel13setStringListERK11QStringList(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN16QStringListModel13setStringListERK11QStringList(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QStringListModel)=1
+#[derive(Default)]
 pub struct QStringListModel {
   qbase: QAbstractListModel,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QStringListModel {
-  pub fn inheritFrom(qthis: *mut c_void) -> QStringListModel {
-    return QStringListModel{qbase: QAbstractListModel::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QStringListModel {
+    return QStringListModel{qbase: QAbstractListModel::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QStringListModel {
@@ -106,12 +107,12 @@ impl<'a> /*trait*/ QStringListModel_New for (&'a QStringList, &'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QStringListModelC1ERK11QStringListP7QObject()};
     let ctysz: c_int = unsafe{QStringListModel_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     // unsafe {_ZN16QStringListModelC1ERK11QStringListP7QObject(qthis, arg0, arg1)};
-    let qthis: *mut c_void = unsafe {dector_ZN16QStringListModelC1ERK11QStringListP7QObject(arg0, arg1)};
-    let rsthis = QStringListModel{/**/qbase: QAbstractListModel::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN16QStringListModelC1ERK11QStringListP7QObject(arg0, arg1)} as u64;
+    let rsthis = QStringListModel{qbase: QAbstractListModel::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -163,7 +164,7 @@ impl<'a> /*trait*/ QStringListModel_data<QVariant> for (&'a QModelIndex, i32) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZNK16QStringListModel4dataERK11QModelIndexi(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QVariant::inheritFrom(ret);
+    let mut ret1 = QVariant::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -245,11 +246,11 @@ impl<'a> /*trait*/ QStringListModel_New for (&'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QStringListModelC1EP7QObject()};
     let ctysz: c_int = unsafe{QStringListModel_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN16QStringListModelC1EP7QObject(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN16QStringListModelC1EP7QObject(arg0)};
-    let rsthis = QStringListModel{/**/qbase: QAbstractListModel::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN16QStringListModelC1EP7QObject(arg0)} as u64;
+    let rsthis = QStringListModel{qbase: QAbstractListModel::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -261,11 +262,11 @@ impl<'a> /*trait*/ QStringListModel_New for (&'a QStringListModel) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QStringListModelC1ERKS_()};
     let ctysz: c_int = unsafe{QStringListModel_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN16QStringListModelC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN16QStringListModelC1ERKS_(arg0)};
-    let rsthis = QStringListModel{/**/qbase: QAbstractListModel::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN16QStringListModelC1ERKS_(arg0)} as u64;
+    let rsthis = QStringListModel{qbase: QAbstractListModel::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -342,7 +343,7 @@ impl<'a> /*trait*/ QStringListModel_sibling<QModelIndex> for (i32, i32, &'a QMod
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK16QStringListModel7siblingEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QModelIndex::inheritFrom(ret);
+    let mut ret1 = QModelIndex::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }

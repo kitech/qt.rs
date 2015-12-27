@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtGui/qmovie.h
 // dst-file: /src/gui/qmovie.rs
 //
@@ -40,94 +40,109 @@ extern {
   fn QMovie_Class_Size() -> c_int;
   // proto:  void QMovie::QMovie(QObject * parent);
   fn dector_ZN6QMovieC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN6QMovieC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN6QMovieC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QMovie::speed();
-  fn _ZNK6QMovie5speedEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK6QMovie5speedEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QMovie::jumpToNextFrame();
-  fn _ZN6QMovie15jumpToNextFrameEv(qthis: *mut c_void) -> c_char;
+  fn _ZN6QMovie15jumpToNextFrameEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QMovie::frameChanged(int frameNumber);
-  fn _ZN6QMovie12frameChangedEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN6QMovie12frameChangedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QMovie::frameCount();
-  fn _ZNK6QMovie10frameCountEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK6QMovie10frameCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QMovie::setScaledSize(const QSize & size);
-  fn _ZN6QMovie13setScaledSizeERK5QSize(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN6QMovie13setScaledSizeERK5QSize(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMovie::setDevice(QIODevice * device);
-  fn _ZN6QMovie9setDeviceEP9QIODevice(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN6QMovie9setDeviceEP9QIODevice(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QImage QMovie::currentImage();
-  fn _ZNK6QMovie12currentImageEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK6QMovie12currentImageEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QMovie::jumpToFrame(int frameNumber);
-  fn _ZN6QMovie11jumpToFrameEi(qthis: *mut c_void, arg0: c_int) -> c_char;
+  fn _ZN6QMovie11jumpToFrameEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
   // proto:  void QMovie::started();
-  fn _ZN6QMovie7startedEv(qthis: *mut c_void);
+  fn _ZN6QMovie7startedEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QMovie::QMovie(const QString & fileName, const QByteArray & format, QObject * parent);
   fn dector_ZN6QMovieC1ERK7QStringRK10QByteArrayP7QObject(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> *mut c_void;
-  fn _ZN6QMovieC1ERK7QStringRK10QByteArrayP7QObject(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
+  fn _ZN6QMovieC1ERK7QStringRK10QByteArrayP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  void QMovie::finished();
-  fn _ZN6QMovie8finishedEv(qthis: *mut c_void);
+  fn _ZN6QMovie8finishedEv(qthis: u64 /* *mut c_void*/);
   // proto:  const QMetaObject * QMovie::metaObject();
-  fn _ZNK6QMovie10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK6QMovie10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QMovie::~QMovie();
-  fn _ZN6QMovieD0Ev(qthis: *mut c_void);
+  fn _ZN6QMovieD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QMovie::start();
-  fn _ZN6QMovie5startEv(qthis: *mut c_void);
+  fn _ZN6QMovie5startEv(qthis: u64 /* *mut c_void*/);
   // proto:  int QMovie::loopCount();
-  fn _ZNK6QMovie9loopCountEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK6QMovie9loopCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QMovie::QMovie(QIODevice * device, const QByteArray & format, QObject * parent);
   fn dector_ZN6QMovieC1EP9QIODeviceRK10QByteArrayP7QObject(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> *mut c_void;
-  fn _ZN6QMovieC1EP9QIODeviceRK10QByteArrayP7QObject(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
+  fn _ZN6QMovieC1EP9QIODeviceRK10QByteArrayP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  void QMovie::setFormat(const QByteArray & format);
-  fn _ZN6QMovie9setFormatERK10QByteArray(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN6QMovie9setFormatERK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMovie::resized(const QSize & size);
-  fn _ZN6QMovie7resizedERK5QSize(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN6QMovie7resizedERK5QSize(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static QList<QByteArray> QMovie::supportedFormats();
   fn _ZN6QMovie16supportedFormatsEv();
   // proto:  QRect QMovie::frameRect();
-  fn _ZNK6QMovie9frameRectEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK6QMovie9frameRectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QMovie::setPaused(bool paused);
-  fn _ZN6QMovie9setPausedEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN6QMovie9setPausedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QSize QMovie::scaledSize();
-  fn _ZN6QMovie10scaledSizeEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZN6QMovie10scaledSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QIODevice * QMovie::device();
-  fn _ZNK6QMovie6deviceEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK6QMovie6deviceEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QMovie::setBackgroundColor(const QColor & color);
-  fn _ZN6QMovie18setBackgroundColorERK6QColor(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN6QMovie18setBackgroundColorERK6QColor(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QMovie::isValid();
-  fn _ZNK6QMovie7isValidEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK6QMovie7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QMovie::setSpeed(int percentSpeed);
-  fn _ZN6QMovie8setSpeedEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN6QMovie8setSpeedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QMovie::QMovie(const QMovie & );
   fn dector_ZN6QMovieC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN6QMovieC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN6QMovieC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMovie::stop();
-  fn _ZN6QMovie4stopEv(qthis: *mut c_void);
+  fn _ZN6QMovie4stopEv(qthis: u64 /* *mut c_void*/);
   // proto:  int QMovie::currentFrameNumber();
-  fn _ZNK6QMovie18currentFrameNumberEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK6QMovie18currentFrameNumberEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QMovie::nextFrameDelay();
-  fn _ZNK6QMovie14nextFrameDelayEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK6QMovie14nextFrameDelayEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  QPixmap QMovie::currentPixmap();
-  fn _ZNK6QMovie13currentPixmapEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK6QMovie13currentPixmapEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QByteArray QMovie::format();
-  fn _ZNK6QMovie6formatEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK6QMovie6formatEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QMovie::fileName();
-  fn _ZNK6QMovie8fileNameEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK6QMovie8fileNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QMovie::updated(const QRect & rect);
-  fn _ZN6QMovie7updatedERK5QRect(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN6QMovie7updatedERK5QRect(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QColor QMovie::backgroundColor();
-  fn _ZNK6QMovie15backgroundColorEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK6QMovie15backgroundColorEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QMovie::setFileName(const QString & fileName);
-  fn _ZN6QMovie11setFileNameERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN6QMovie11setFileNameERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn QMovie_SlotProxy_connect__ZN6QMovie12stateChangedENS_10MovieStateE(qthis: *mut c_void, fptr: *mut c_void);
+  fn QMovie_SlotProxy_connect__ZN6QMovie7resizedERK5QSize(qthis: *mut c_void, fptr: *mut c_void);
+  fn QMovie_SlotProxy_connect__ZN6QMovie12frameChangedEi(qthis: *mut c_void, fptr: *mut c_void);
+  fn QMovie_SlotProxy_connect__ZN6QMovie8finishedEv(qthis: *mut c_void, fptr: *mut c_void);
+  fn QMovie_SlotProxy_connect__ZN6QMovie5errorEN12QImageReader16ImageReaderErrorE(qthis: *mut c_void, fptr: *mut c_void);
+  fn QMovie_SlotProxy_connect__ZN6QMovie7startedEv(qthis: *mut c_void, fptr: *mut c_void);
+  fn QMovie_SlotProxy_connect__ZN6QMovie7updatedERK5QRect(qthis: *mut c_void, fptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QMovie)=1
+#[derive(Default)]
 pub struct QMovie {
   qbase: QObject,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _updated_1: QMovie_updated_signal,
+  pub _stateChanged_1: QMovie_stateChanged_signal,
+  pub _started_1: QMovie_started_signal,
+  pub _resized_1: QMovie_resized_signal,
+  pub _finished_1: QMovie_finished_signal,
+  pub _error_1: QMovie_error_signal,
+  pub _frameChanged_1: QMovie_frameChanged_signal,
 }
 
 impl /*struct*/ QMovie {
-  pub fn inheritFrom(qthis: *mut c_void) -> QMovie {
-    return QMovie{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QMovie {
+    return QMovie{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QMovie {
@@ -161,11 +176,11 @@ impl<'a> /*trait*/ QMovie_New for (&'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMovieC1EP7QObject()};
     let ctysz: c_int = unsafe{QMovie_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN6QMovieC1EP7QObject(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN6QMovieC1EP7QObject(arg0)};
-    let rsthis = QMovie{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN6QMovieC1EP7QObject(arg0)} as u64;
+    let rsthis = QMovie{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -327,7 +342,7 @@ impl<'a> /*trait*/ QMovie_currentImage<QImage> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QMovie12currentImageEv()};
     let mut ret = unsafe {_ZNK6QMovie12currentImageEv(rsthis.qclsinst)};
-    let mut ret1 = QImage::inheritFrom(ret);
+    let mut ret1 = QImage::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -385,13 +400,13 @@ impl<'a> /*trait*/ QMovie_New for (&'a QString, &'a QByteArray, &'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMovieC1ERK7QStringRK10QByteArrayP7QObject()};
     let ctysz: c_int = unsafe{QMovie_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     // unsafe {_ZN6QMovieC1ERK7QStringRK10QByteArrayP7QObject(qthis, arg0, arg1, arg2)};
-    let qthis: *mut c_void = unsafe {dector_ZN6QMovieC1ERK7QStringRK10QByteArrayP7QObject(arg0, arg1, arg2)};
-    let rsthis = QMovie{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN6QMovieC1ERK7QStringRK10QByteArrayP7QObject(arg0, arg1, arg2)} as u64;
+    let rsthis = QMovie{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -514,13 +529,13 @@ impl<'a> /*trait*/ QMovie_New for (&'a QIODevice, &'a QByteArray, &'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMovieC1EP9QIODeviceRK10QByteArrayP7QObject()};
     let ctysz: c_int = unsafe{QMovie_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     // unsafe {_ZN6QMovieC1EP9QIODeviceRK10QByteArrayP7QObject(qthis, arg0, arg1, arg2)};
-    let qthis: *mut c_void = unsafe {dector_ZN6QMovieC1EP9QIODeviceRK10QByteArrayP7QObject(arg0, arg1, arg2)};
-    let rsthis = QMovie{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN6QMovieC1EP9QIODeviceRK10QByteArrayP7QObject(arg0, arg1, arg2)} as u64;
+    let rsthis = QMovie{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -612,7 +627,7 @@ impl<'a> /*trait*/ QMovie_frameRect<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QMovie9frameRectEv()};
     let mut ret = unsafe {_ZNK6QMovie9frameRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRect::inheritFrom(ret);
+    let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -659,7 +674,7 @@ impl<'a> /*trait*/ QMovie_scaledSize<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMovie10scaledSizeEv()};
     let mut ret = unsafe {_ZN6QMovie10scaledSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize::inheritFrom(ret);
+    let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -683,7 +698,7 @@ impl<'a> /*trait*/ QMovie_device<QIODevice> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QMovie6deviceEv()};
     let mut ret = unsafe {_ZNK6QMovie6deviceEv(rsthis.qclsinst)};
-    let mut ret1 = QIODevice::inheritFrom(ret);
+    let mut ret1 = QIODevice::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -764,11 +779,11 @@ impl<'a> /*trait*/ QMovie_New for (&'a QMovie) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMovieC1ERKS_()};
     let ctysz: c_int = unsafe{QMovie_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN6QMovieC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN6QMovieC1ERKS_(arg0)};
-    let rsthis = QMovie{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN6QMovieC1ERKS_(arg0)} as u64;
+    let rsthis = QMovie{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -860,7 +875,7 @@ impl<'a> /*trait*/ QMovie_currentPixmap<QPixmap> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QMovie13currentPixmapEv()};
     let mut ret = unsafe {_ZNK6QMovie13currentPixmapEv(rsthis.qclsinst)};
-    let mut ret1 = QPixmap::inheritFrom(ret);
+    let mut ret1 = QPixmap::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -884,7 +899,7 @@ impl<'a> /*trait*/ QMovie_format<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QMovie6formatEv()};
     let mut ret = unsafe {_ZNK6QMovie6formatEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -908,7 +923,7 @@ impl<'a> /*trait*/ QMovie_fileName<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QMovie8fileNameEv()};
     let mut ret = unsafe {_ZNK6QMovie8fileNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -955,7 +970,7 @@ impl<'a> /*trait*/ QMovie_backgroundColor<QColor> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QMovie15backgroundColorEv()};
     let mut ret = unsafe {_ZNK6QMovie15backgroundColorEv(rsthis.qclsinst)};
-    let mut ret1 = QColor::inheritFrom(ret);
+    let mut ret1 = QColor::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -984,5 +999,187 @@ impl<'a> /*trait*/ QMovie_setFileName<()> for (&'a QString) {
   }
 }
 
+#[derive(Default)] // for QMovie_updated
+pub struct QMovie_updated_signal{poi:u64}
+impl /* struct */ QMovie {
+  pub fn updated_1(self) -> QMovie_updated_signal {
+     return QMovie_updated_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QMovie_updated_signal {
+  pub fn connect<T: QMovie_updated_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QMovie_updated_signal_connect {
+  fn connect(self, sigthis: QMovie_updated_signal);
+}
+
+#[derive(Default)] // for QMovie_stateChanged
+pub struct QMovie_stateChanged_signal{poi:u64}
+impl /* struct */ QMovie {
+  pub fn stateChanged_1(self) -> QMovie_stateChanged_signal {
+     return QMovie_stateChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QMovie_stateChanged_signal {
+  pub fn connect<T: QMovie_stateChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QMovie_stateChanged_signal_connect {
+  fn connect(self, sigthis: QMovie_stateChanged_signal);
+}
+
+#[derive(Default)] // for QMovie_started
+pub struct QMovie_started_signal{poi:u64}
+impl /* struct */ QMovie {
+  pub fn started_1(self) -> QMovie_started_signal {
+     return QMovie_started_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QMovie_started_signal {
+  pub fn connect<T: QMovie_started_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QMovie_started_signal_connect {
+  fn connect(self, sigthis: QMovie_started_signal);
+}
+
+#[derive(Default)] // for QMovie_resized
+pub struct QMovie_resized_signal{poi:u64}
+impl /* struct */ QMovie {
+  pub fn resized_1(self) -> QMovie_resized_signal {
+     return QMovie_resized_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QMovie_resized_signal {
+  pub fn connect<T: QMovie_resized_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QMovie_resized_signal_connect {
+  fn connect(self, sigthis: QMovie_resized_signal);
+}
+
+#[derive(Default)] // for QMovie_finished
+pub struct QMovie_finished_signal{poi:u64}
+impl /* struct */ QMovie {
+  pub fn finished_1(self) -> QMovie_finished_signal {
+     return QMovie_finished_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QMovie_finished_signal {
+  pub fn connect<T: QMovie_finished_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QMovie_finished_signal_connect {
+  fn connect(self, sigthis: QMovie_finished_signal);
+}
+
+#[derive(Default)] // for QMovie_error
+pub struct QMovie_error_signal{poi:u64}
+impl /* struct */ QMovie {
+  pub fn error_1(self) -> QMovie_error_signal {
+     return QMovie_error_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QMovie_error_signal {
+  pub fn connect<T: QMovie_error_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QMovie_error_signal_connect {
+  fn connect(self, sigthis: QMovie_error_signal);
+}
+
+#[derive(Default)] // for QMovie_frameChanged
+pub struct QMovie_frameChanged_signal{poi:u64}
+impl /* struct */ QMovie {
+  pub fn frameChanged_1(self) -> QMovie_frameChanged_signal {
+     return QMovie_frameChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QMovie_frameChanged_signal {
+  pub fn connect<T: QMovie_frameChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QMovie_frameChanged_signal_connect {
+  fn connect(self, sigthis: QMovie_frameChanged_signal);
+}
+
+// stateChanged(class QMovie::MovieState)
+extern fn QMovie_stateChanged_signal_connect_cb_0(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QMovie_stateChanged_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QMovie_stateChanged_signal) {
+    // do smth...
+    unsafe {QMovie_SlotProxy_connect__ZN6QMovie12stateChangedENS_10MovieStateE(sigthis.poi as *mut c_void, QMovie_stateChanged_signal_connect_cb_0 as *mut c_void)};
+  }
+}
+// resized(const class QSize &)
+extern fn QMovie_resized_signal_connect_cb_1(arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QMovie_resized_signal_connect for (extern fn(QSize)) {
+  fn connect(self, sigthis: QMovie_resized_signal) {
+    // do smth...
+    unsafe {QMovie_SlotProxy_connect__ZN6QMovie7resizedERK5QSize(sigthis.poi as *mut c_void, QMovie_resized_signal_connect_cb_1 as *mut c_void)};
+  }
+}
+// frameChanged(int)
+extern fn QMovie_frameChanged_signal_connect_cb_2(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QMovie_frameChanged_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QMovie_frameChanged_signal) {
+    // do smth...
+    unsafe {QMovie_SlotProxy_connect__ZN6QMovie12frameChangedEi(sigthis.poi as *mut c_void, QMovie_frameChanged_signal_connect_cb_2 as *mut c_void)};
+  }
+}
+// finished()
+extern fn QMovie_finished_signal_connect_cb_3() {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QMovie_finished_signal_connect for (extern fn()) {
+  fn connect(self, sigthis: QMovie_finished_signal) {
+    // do smth...
+    unsafe {QMovie_SlotProxy_connect__ZN6QMovie8finishedEv(sigthis.poi as *mut c_void, QMovie_finished_signal_connect_cb_3 as *mut c_void)};
+  }
+}
+// error(class QImageReader::ImageReaderError)
+extern fn QMovie_error_signal_connect_cb_4(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QMovie_error_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QMovie_error_signal) {
+    // do smth...
+    unsafe {QMovie_SlotProxy_connect__ZN6QMovie5errorEN12QImageReader16ImageReaderErrorE(sigthis.poi as *mut c_void, QMovie_error_signal_connect_cb_4 as *mut c_void)};
+  }
+}
+// started()
+extern fn QMovie_started_signal_connect_cb_5() {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QMovie_started_signal_connect for (extern fn()) {
+  fn connect(self, sigthis: QMovie_started_signal) {
+    // do smth...
+    unsafe {QMovie_SlotProxy_connect__ZN6QMovie7startedEv(sigthis.poi as *mut c_void, QMovie_started_signal_connect_cb_5 as *mut c_void)};
+  }
+}
+// updated(const class QRect &)
+extern fn QMovie_updated_signal_connect_cb_6(arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QMovie_updated_signal_connect for (extern fn(QRect)) {
+  fn connect(self, sigthis: QMovie_updated_signal) {
+    // do smth...
+    unsafe {QMovie_SlotProxy_connect__ZN6QMovie7updatedERK5QRect(sigthis.poi as *mut c_void, QMovie_updated_signal_connect_cb_6 as *mut c_void)};
+  }
+}
 // <= body block end
 

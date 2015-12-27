@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtGui/qpixmapcache.h
 // dst-file: /src/gui/qpixmapcache.rs
 //
@@ -51,14 +51,15 @@ extern {
 
 // body block begin =>
 // class sizeof(QPixmapCache)=1
+#[derive(Default)]
 pub struct QPixmapCache {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QPixmapCache {
-  pub fn inheritFrom(qthis: *mut c_void) -> QPixmapCache {
-    return QPixmapCache{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QPixmapCache {
+    return QPixmapCache{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto: static int QPixmapCache::cacheLimit();
@@ -163,7 +164,7 @@ impl<'a> /*trait*/ QPixmapCache_find_s<QPixmap> for (&'a QString) {
     // unsafe{_ZN12QPixmapCache4findERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN12QPixmapCache4findERK7QString(arg0)};
-    let mut ret1 = QPixmap::inheritFrom(ret);
+    let mut ret1 = QPixmap::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }

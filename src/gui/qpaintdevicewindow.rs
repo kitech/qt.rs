@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtGui/qpaintdevicewindow.h
 // dst-file: /src/gui/qpaintdevicewindow.rs
 //
@@ -33,28 +33,29 @@ use super::super::core::qrect::QRect; // 771
 extern {
   fn QPaintDeviceWindow_Class_Size() -> c_int;
   // proto:  void QPaintDeviceWindow::update(const QRegion & region);
-  fn _ZN18QPaintDeviceWindow6updateERK7QRegion(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN18QPaintDeviceWindow6updateERK7QRegion(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPaintDeviceWindow::update();
-  fn _ZN18QPaintDeviceWindow6updateEv(qthis: *mut c_void);
+  fn _ZN18QPaintDeviceWindow6updateEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QPaintDeviceWindow::QPaintDeviceWindow(const QPaintDeviceWindow & );
   fn dector_ZN18QPaintDeviceWindowC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN18QPaintDeviceWindowC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN18QPaintDeviceWindowC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QPaintDeviceWindow::metaObject();
-  fn _ZNK18QPaintDeviceWindow10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK18QPaintDeviceWindow10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QPaintDeviceWindow::update(const QRect & rect);
-  fn _ZN18QPaintDeviceWindow6updateERK5QRect(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN18QPaintDeviceWindow6updateERK5QRect(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QPaintDeviceWindow)=1
+#[derive(Default)]
 pub struct QPaintDeviceWindow {
   qbase: QWindow,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QPaintDeviceWindow {
-  pub fn inheritFrom(qthis: *mut c_void) -> QPaintDeviceWindow {
-    return QPaintDeviceWindow{qbase: QWindow::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QPaintDeviceWindow {
+    return QPaintDeviceWindow{qbase: QWindow::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QPaintDeviceWindow {
@@ -121,11 +122,11 @@ impl<'a> /*trait*/ QPaintDeviceWindow_New for (&'a QPaintDeviceWindow) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QPaintDeviceWindowC1ERKS_()};
     let ctysz: c_int = unsafe{QPaintDeviceWindow_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN18QPaintDeviceWindowC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN18QPaintDeviceWindowC1ERKS_(arg0)};
-    let rsthis = QPaintDeviceWindow{/**/qbase: QWindow::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN18QPaintDeviceWindowC1ERKS_(arg0)} as u64;
+    let rsthis = QPaintDeviceWindow{qbase: QWindow::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qtranslator.h
 // dst-file: /src/core/qtranslator.rs
 //
@@ -33,37 +33,38 @@ use super::qlocale::QLocale; // 773
 extern {
   fn QTranslator_Class_Size() -> c_int;
   // proto:  const QMetaObject * QTranslator::metaObject();
-  fn _ZNK11QTranslator10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK11QTranslator10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QTranslator::QTranslator(QObject * parent);
   fn dector_ZN11QTranslatorC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QTranslatorC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QTranslatorC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QTranslator::isEmpty();
-  fn _ZNK11QTranslator7isEmptyEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK11QTranslator7isEmptyEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QTranslator::QTranslator(const QTranslator & );
   fn dector_ZN11QTranslatorC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QTranslatorC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QTranslatorC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTranslator::~QTranslator();
-  fn _ZN11QTranslatorD0Ev(qthis: *mut c_void);
+  fn _ZN11QTranslatorD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QTranslator::load(const QString & filename, const QString & directory, const QString & search_delimiters, const QString & suffix);
-  fn _ZN11QTranslator4loadERK7QStringS2_S2_S2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void) -> c_char;
+  fn _ZN11QTranslator4loadERK7QStringS2_S2_S2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void) -> c_char;
   // proto:  QString QTranslator::translate(const char * context, const char * sourceText, const char * disambiguation, int n);
-  fn _ZNK11QTranslator9translateEPKcS1_S1_i(qthis: *mut c_void, arg0: *mut c_char, arg1: *mut c_char, arg2: *mut c_char, arg3: c_int) -> *mut c_void;
+  fn _ZNK11QTranslator9translateEPKcS1_S1_i(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: *mut c_char, arg2: *mut c_char, arg3: c_int) -> *mut c_void;
   // proto:  bool QTranslator::load(const uchar * data, int len, const QString & directory);
-  fn _ZN11QTranslator4loadEPKhiRK7QString(qthis: *mut c_void, arg0: *mut c_uchar, arg1: c_int, arg2: *mut c_void) -> c_char;
+  fn _ZN11QTranslator4loadEPKhiRK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_uchar, arg1: c_int, arg2: *mut c_void) -> c_char;
   // proto:  bool QTranslator::load(const QLocale & locale, const QString & filename, const QString & prefix, const QString & directory, const QString & suffix);
-  fn _ZN11QTranslator4loadERK7QLocaleRK7QStringS5_S5_S5_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void, arg4: *mut c_void) -> c_char;
+  fn _ZN11QTranslator4loadERK7QLocaleRK7QStringS5_S5_S5_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void, arg4: *mut c_void) -> c_char;
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QTranslator)=1
+#[derive(Default)]
 pub struct QTranslator {
   qbase: QObject,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QTranslator {
-  pub fn inheritFrom(qthis: *mut c_void) -> QTranslator {
-    return QTranslator{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QTranslator {
+    return QTranslator{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QTranslator {
@@ -119,11 +120,11 @@ impl<'a> /*trait*/ QTranslator_New for (&'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTranslatorC1EP7QObject()};
     let ctysz: c_int = unsafe{QTranslator_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN11QTranslatorC1EP7QObject(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN11QTranslatorC1EP7QObject(arg0)};
-    let rsthis = QTranslator{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN11QTranslatorC1EP7QObject(arg0)} as u64;
+    let rsthis = QTranslator{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -158,11 +159,11 @@ impl<'a> /*trait*/ QTranslator_New for (&'a QTranslator) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTranslatorC1ERKS_()};
     let ctysz: c_int = unsafe{QTranslator_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN11QTranslatorC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN11QTranslatorC1ERKS_(arg0)};
-    let rsthis = QTranslator{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN11QTranslatorC1ERKS_(arg0)} as u64;
+    let rsthis = QTranslator{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -239,7 +240,7 @@ impl<'a> /*trait*/ QTranslator_translate<QString> for (&'a  String, &'a  String,
     let arg2 = self.2.as_ptr()  as *mut c_char;
     let arg3 = self.3  as c_int;
     let mut ret = unsafe {_ZNK11QTranslator9translateEPKcS1_S1_i(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }

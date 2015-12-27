@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtWidgets/qgraphicstransform.h
 // dst-file: /src/widgets/qgraphicstransform.rs
 //
@@ -34,102 +34,121 @@ use super::super::gui::qmatrix4x4::QMatrix4x4; // 771
 extern {
   fn QGraphicsRotation_Class_Size() -> c_int;
   // proto:  void QGraphicsRotation::angleChanged();
-  fn _ZN17QGraphicsRotation12angleChangedEv(qthis: *mut c_void);
+  fn _ZN17QGraphicsRotation12angleChangedEv(qthis: u64 /* *mut c_void*/);
   // proto:  QVector3D QGraphicsRotation::origin();
-  fn _ZNK17QGraphicsRotation6originEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK17QGraphicsRotation6originEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QGraphicsRotation::setAngle(qreal );
-  fn _ZN17QGraphicsRotation8setAngleEd(qthis: *mut c_void, arg0: c_double);
+  fn _ZN17QGraphicsRotation8setAngleEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QGraphicsRotation::QGraphicsRotation(QObject * parent);
   fn dector_ZN17QGraphicsRotationC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN17QGraphicsRotationC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN17QGraphicsRotationC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QGraphicsRotation::metaObject();
-  fn _ZNK17QGraphicsRotation10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK17QGraphicsRotation10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QGraphicsRotation::~QGraphicsRotation();
-  fn _ZN17QGraphicsRotationD0Ev(qthis: *mut c_void);
+  fn _ZN17QGraphicsRotationD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QGraphicsRotation::setOrigin(const QVector3D & point);
-  fn _ZN17QGraphicsRotation9setOriginERK9QVector3D(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN17QGraphicsRotation9setOriginERK9QVector3D(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QVector3D QGraphicsRotation::axis();
-  fn _ZNK17QGraphicsRotation4axisEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK17QGraphicsRotation4axisEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QGraphicsRotation::applyTo(QMatrix4x4 * matrix);
-  fn _ZNK17QGraphicsRotation7applyToEP10QMatrix4x4(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZNK17QGraphicsRotation7applyToEP10QMatrix4x4(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsRotation::setAxis(const QVector3D & axis);
-  fn _ZN17QGraphicsRotation7setAxisERK9QVector3D(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN17QGraphicsRotation7setAxisERK9QVector3D(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  qreal QGraphicsRotation::angle();
-  fn _ZNK17QGraphicsRotation5angleEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK17QGraphicsRotation5angleEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QGraphicsRotation::originChanged();
-  fn _ZN17QGraphicsRotation13originChangedEv(qthis: *mut c_void);
+  fn _ZN17QGraphicsRotation13originChangedEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QGraphicsRotation::axisChanged();
-  fn _ZN17QGraphicsRotation11axisChangedEv(qthis: *mut c_void);
+  fn _ZN17QGraphicsRotation11axisChangedEv(qthis: u64 /* *mut c_void*/);
   fn QGraphicsScale_Class_Size() -> c_int;
   // proto:  void QGraphicsScale::applyTo(QMatrix4x4 * matrix);
-  fn _ZNK14QGraphicsScale7applyToEP10QMatrix4x4(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZNK14QGraphicsScale7applyToEP10QMatrix4x4(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  qreal QGraphicsScale::zScale();
-  fn _ZNK14QGraphicsScale6zScaleEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK14QGraphicsScale6zScaleEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QGraphicsScale::yScaleChanged();
-  fn _ZN14QGraphicsScale13yScaleChangedEv(qthis: *mut c_void);
+  fn _ZN14QGraphicsScale13yScaleChangedEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QGraphicsScale::originChanged();
-  fn _ZN14QGraphicsScale13originChangedEv(qthis: *mut c_void);
+  fn _ZN14QGraphicsScale13originChangedEv(qthis: u64 /* *mut c_void*/);
   // proto:  qreal QGraphicsScale::xScale();
-  fn _ZNK14QGraphicsScale6xScaleEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK14QGraphicsScale6xScaleEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  qreal QGraphicsScale::yScale();
-  fn _ZNK14QGraphicsScale6yScaleEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK14QGraphicsScale6yScaleEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QGraphicsScale::setOrigin(const QVector3D & point);
-  fn _ZN14QGraphicsScale9setOriginERK9QVector3D(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN14QGraphicsScale9setOriginERK9QVector3D(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsScale::setYScale(qreal );
-  fn _ZN14QGraphicsScale9setYScaleEd(qthis: *mut c_void, arg0: c_double);
+  fn _ZN14QGraphicsScale9setYScaleEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  QVector3D QGraphicsScale::origin();
-  fn _ZNK14QGraphicsScale6originEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK14QGraphicsScale6originEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QGraphicsScale::scaleChanged();
-  fn _ZN14QGraphicsScale12scaleChangedEv(qthis: *mut c_void);
+  fn _ZN14QGraphicsScale12scaleChangedEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QGraphicsScale::setZScale(qreal );
-  fn _ZN14QGraphicsScale9setZScaleEd(qthis: *mut c_void, arg0: c_double);
+  fn _ZN14QGraphicsScale9setZScaleEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QGraphicsScale::setXScale(qreal );
-  fn _ZN14QGraphicsScale9setXScaleEd(qthis: *mut c_void, arg0: c_double);
+  fn _ZN14QGraphicsScale9setXScaleEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QGraphicsScale::xScaleChanged();
-  fn _ZN14QGraphicsScale13xScaleChangedEv(qthis: *mut c_void);
+  fn _ZN14QGraphicsScale13xScaleChangedEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QGraphicsScale::zScaleChanged();
-  fn _ZN14QGraphicsScale13zScaleChangedEv(qthis: *mut c_void);
+  fn _ZN14QGraphicsScale13zScaleChangedEv(qthis: u64 /* *mut c_void*/);
   // proto:  const QMetaObject * QGraphicsScale::metaObject();
-  fn _ZNK14QGraphicsScale10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK14QGraphicsScale10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QGraphicsScale::QGraphicsScale(QObject * parent);
   fn dector_ZN14QGraphicsScaleC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN14QGraphicsScaleC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN14QGraphicsScaleC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsScale::~QGraphicsScale();
-  fn _ZN14QGraphicsScaleD0Ev(qthis: *mut c_void);
+  fn _ZN14QGraphicsScaleD0Ev(qthis: u64 /* *mut c_void*/);
   fn QGraphicsTransform_Class_Size() -> c_int;
   // proto:  void QGraphicsTransform::applyTo(QMatrix4x4 * matrix);
-  fn _ZNK18QGraphicsTransform7applyToEP10QMatrix4x4(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZNK18QGraphicsTransform7applyToEP10QMatrix4x4(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsTransform::~QGraphicsTransform();
-  fn _ZN18QGraphicsTransformD0Ev(qthis: *mut c_void);
+  fn _ZN18QGraphicsTransformD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QGraphicsTransform::QGraphicsTransform(QObject * parent);
   fn dector_ZN18QGraphicsTransformC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN18QGraphicsTransformC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN18QGraphicsTransformC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QGraphicsTransform::metaObject();
-  fn _ZNK18QGraphicsTransform10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK18QGraphicsTransform10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn QGraphicsRotation_SlotProxy_connect__ZN17QGraphicsRotation12angleChangedEv(qthis: *mut c_void, fptr: *mut c_void);
+  fn QGraphicsRotation_SlotProxy_connect__ZN17QGraphicsRotation11axisChangedEv(qthis: *mut c_void, fptr: *mut c_void);
+  fn QGraphicsRotation_SlotProxy_connect__ZN17QGraphicsRotation13originChangedEv(qthis: *mut c_void, fptr: *mut c_void);
+  fn QGraphicsScale_SlotProxy_connect__ZN14QGraphicsScale12scaleChangedEv(qthis: *mut c_void, fptr: *mut c_void);
+  fn QGraphicsScale_SlotProxy_connect__ZN14QGraphicsScale13originChangedEv(qthis: *mut c_void, fptr: *mut c_void);
+  fn QGraphicsScale_SlotProxy_connect__ZN14QGraphicsScale13zScaleChangedEv(qthis: *mut c_void, fptr: *mut c_void);
+  fn QGraphicsScale_SlotProxy_connect__ZN14QGraphicsScale13yScaleChangedEv(qthis: *mut c_void, fptr: *mut c_void);
+  fn QGraphicsScale_SlotProxy_connect__ZN14QGraphicsScale13xScaleChangedEv(qthis: *mut c_void, fptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QGraphicsRotation)=1
+#[derive(Default)]
 pub struct QGraphicsRotation {
   qbase: QGraphicsTransform,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _originChanged_1: QGraphicsRotation_originChanged_signal,
+  pub _axisChanged_1: QGraphicsRotation_axisChanged_signal,
+  pub _angleChanged_1: QGraphicsRotation_angleChanged_signal,
 }
 
 // class sizeof(QGraphicsScale)=1
+#[derive(Default)]
 pub struct QGraphicsScale {
   qbase: QGraphicsTransform,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _yScaleChanged_1: QGraphicsScale_yScaleChanged_signal,
+  pub _xScaleChanged_1: QGraphicsScale_xScaleChanged_signal,
+  pub _zScaleChanged_1: QGraphicsScale_zScaleChanged_signal,
+  pub _scaleChanged_1: QGraphicsScale_scaleChanged_signal,
+  pub _originChanged_1: QGraphicsScale_originChanged_signal,
 }
 
 // class sizeof(QGraphicsTransform)=1
+#[derive(Default)]
 pub struct QGraphicsTransform {
   qbase: QObject,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QGraphicsRotation {
-  pub fn inheritFrom(qthis: *mut c_void) -> QGraphicsRotation {
-    return QGraphicsRotation{qbase: QGraphicsTransform::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QGraphicsRotation {
+    return QGraphicsRotation{qbase: QGraphicsTransform::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QGraphicsRotation {
@@ -184,7 +203,7 @@ impl<'a> /*trait*/ QGraphicsRotation_origin<QVector3D> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsRotation6originEv()};
     let mut ret = unsafe {_ZNK17QGraphicsRotation6originEv(rsthis.qclsinst)};
-    let mut ret1 = QVector3D::inheritFrom(ret);
+    let mut ret1 = QVector3D::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -232,11 +251,11 @@ impl<'a> /*trait*/ QGraphicsRotation_New for (&'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsRotationC1EP7QObject()};
     let ctysz: c_int = unsafe{QGraphicsRotation_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN17QGraphicsRotationC1EP7QObject(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN17QGraphicsRotationC1EP7QObject(arg0)};
-    let rsthis = QGraphicsRotation{/**/qbase: QGraphicsTransform::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN17QGraphicsRotationC1EP7QObject(arg0)} as u64;
+    let rsthis = QGraphicsRotation{qbase: QGraphicsTransform::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -327,7 +346,7 @@ impl<'a> /*trait*/ QGraphicsRotation_axis<QVector3D> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsRotation4axisEv()};
     let mut ret = unsafe {_ZNK17QGraphicsRotation4axisEv(rsthis.qclsinst)};
-    let mut ret1 = QVector3D::inheritFrom(ret);
+    let mut ret1 = QVector3D::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -447,8 +466,8 @@ impl<'a> /*trait*/ QGraphicsRotation_axisChanged<()> for () {
 }
 
 impl /*struct*/ QGraphicsScale {
-  pub fn inheritFrom(qthis: *mut c_void) -> QGraphicsScale {
-    return QGraphicsScale{qbase: QGraphicsTransform::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QGraphicsScale {
+    return QGraphicsScale{qbase: QGraphicsTransform::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QGraphicsScale {
@@ -663,7 +682,7 @@ impl<'a> /*trait*/ QGraphicsScale_origin<QVector3D> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScale6originEv()};
     let mut ret = unsafe {_ZNK14QGraphicsScale6originEv(rsthis.qclsinst)};
-    let mut ret1 = QVector3D::inheritFrom(ret);
+    let mut ret1 = QVector3D::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -822,11 +841,11 @@ impl<'a> /*trait*/ QGraphicsScale_New for (&'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScaleC1EP7QObject()};
     let ctysz: c_int = unsafe{QGraphicsScale_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN14QGraphicsScaleC1EP7QObject(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN14QGraphicsScaleC1EP7QObject(arg0)};
-    let rsthis = QGraphicsScale{/**/qbase: QGraphicsTransform::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN14QGraphicsScaleC1EP7QObject(arg0)} as u64;
+    let rsthis = QGraphicsScale{qbase: QGraphicsTransform::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -855,8 +874,8 @@ impl<'a> /*trait*/ QGraphicsScale_Free<()> for () {
 }
 
 impl /*struct*/ QGraphicsTransform {
-  pub fn inheritFrom(qthis: *mut c_void) -> QGraphicsTransform {
-    return QGraphicsTransform{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QGraphicsTransform {
+    return QGraphicsTransform{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QGraphicsTransform {
@@ -935,11 +954,11 @@ impl<'a> /*trait*/ QGraphicsTransform_New for (&'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QGraphicsTransformC1EP7QObject()};
     let ctysz: c_int = unsafe{QGraphicsTransform_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN18QGraphicsTransformC1EP7QObject(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN18QGraphicsTransformC1EP7QObject(arg0)};
-    let rsthis = QGraphicsTransform{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN18QGraphicsTransformC1EP7QObject(arg0)} as u64;
+    let rsthis = QGraphicsTransform{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -967,5 +986,213 @@ impl<'a> /*trait*/ QGraphicsTransform_metaObject<()> for () {
   }
 }
 
+#[derive(Default)] // for QGraphicsRotation_originChanged
+pub struct QGraphicsRotation_originChanged_signal{poi:u64}
+impl /* struct */ QGraphicsRotation {
+  pub fn originChanged_1(self) -> QGraphicsRotation_originChanged_signal {
+     return QGraphicsRotation_originChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QGraphicsRotation_originChanged_signal {
+  pub fn connect<T: QGraphicsRotation_originChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QGraphicsRotation_originChanged_signal_connect {
+  fn connect(self, sigthis: QGraphicsRotation_originChanged_signal);
+}
+
+#[derive(Default)] // for QGraphicsRotation_axisChanged
+pub struct QGraphicsRotation_axisChanged_signal{poi:u64}
+impl /* struct */ QGraphicsRotation {
+  pub fn axisChanged_1(self) -> QGraphicsRotation_axisChanged_signal {
+     return QGraphicsRotation_axisChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QGraphicsRotation_axisChanged_signal {
+  pub fn connect<T: QGraphicsRotation_axisChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QGraphicsRotation_axisChanged_signal_connect {
+  fn connect(self, sigthis: QGraphicsRotation_axisChanged_signal);
+}
+
+#[derive(Default)] // for QGraphicsRotation_angleChanged
+pub struct QGraphicsRotation_angleChanged_signal{poi:u64}
+impl /* struct */ QGraphicsRotation {
+  pub fn angleChanged_1(self) -> QGraphicsRotation_angleChanged_signal {
+     return QGraphicsRotation_angleChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QGraphicsRotation_angleChanged_signal {
+  pub fn connect<T: QGraphicsRotation_angleChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QGraphicsRotation_angleChanged_signal_connect {
+  fn connect(self, sigthis: QGraphicsRotation_angleChanged_signal);
+}
+
+// angleChanged()
+extern fn QGraphicsRotation_angleChanged_signal_connect_cb_0() {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QGraphicsRotation_angleChanged_signal_connect for (extern fn()) {
+  fn connect(self, sigthis: QGraphicsRotation_angleChanged_signal) {
+    // do smth...
+    unsafe {QGraphicsRotation_SlotProxy_connect__ZN17QGraphicsRotation12angleChangedEv(sigthis.poi as *mut c_void, QGraphicsRotation_angleChanged_signal_connect_cb_0 as *mut c_void)};
+  }
+}
+// axisChanged()
+extern fn QGraphicsRotation_axisChanged_signal_connect_cb_1() {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QGraphicsRotation_axisChanged_signal_connect for (extern fn()) {
+  fn connect(self, sigthis: QGraphicsRotation_axisChanged_signal) {
+    // do smth...
+    unsafe {QGraphicsRotation_SlotProxy_connect__ZN17QGraphicsRotation11axisChangedEv(sigthis.poi as *mut c_void, QGraphicsRotation_axisChanged_signal_connect_cb_1 as *mut c_void)};
+  }
+}
+// originChanged()
+extern fn QGraphicsRotation_originChanged_signal_connect_cb_2() {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QGraphicsRotation_originChanged_signal_connect for (extern fn()) {
+  fn connect(self, sigthis: QGraphicsRotation_originChanged_signal) {
+    // do smth...
+    unsafe {QGraphicsRotation_SlotProxy_connect__ZN17QGraphicsRotation13originChangedEv(sigthis.poi as *mut c_void, QGraphicsRotation_originChanged_signal_connect_cb_2 as *mut c_void)};
+  }
+}
+#[derive(Default)] // for QGraphicsScale_yScaleChanged
+pub struct QGraphicsScale_yScaleChanged_signal{poi:u64}
+impl /* struct */ QGraphicsScale {
+  pub fn yScaleChanged_1(self) -> QGraphicsScale_yScaleChanged_signal {
+     return QGraphicsScale_yScaleChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QGraphicsScale_yScaleChanged_signal {
+  pub fn connect<T: QGraphicsScale_yScaleChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QGraphicsScale_yScaleChanged_signal_connect {
+  fn connect(self, sigthis: QGraphicsScale_yScaleChanged_signal);
+}
+
+#[derive(Default)] // for QGraphicsScale_xScaleChanged
+pub struct QGraphicsScale_xScaleChanged_signal{poi:u64}
+impl /* struct */ QGraphicsScale {
+  pub fn xScaleChanged_1(self) -> QGraphicsScale_xScaleChanged_signal {
+     return QGraphicsScale_xScaleChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QGraphicsScale_xScaleChanged_signal {
+  pub fn connect<T: QGraphicsScale_xScaleChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QGraphicsScale_xScaleChanged_signal_connect {
+  fn connect(self, sigthis: QGraphicsScale_xScaleChanged_signal);
+}
+
+#[derive(Default)] // for QGraphicsScale_zScaleChanged
+pub struct QGraphicsScale_zScaleChanged_signal{poi:u64}
+impl /* struct */ QGraphicsScale {
+  pub fn zScaleChanged_1(self) -> QGraphicsScale_zScaleChanged_signal {
+     return QGraphicsScale_zScaleChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QGraphicsScale_zScaleChanged_signal {
+  pub fn connect<T: QGraphicsScale_zScaleChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QGraphicsScale_zScaleChanged_signal_connect {
+  fn connect(self, sigthis: QGraphicsScale_zScaleChanged_signal);
+}
+
+#[derive(Default)] // for QGraphicsScale_scaleChanged
+pub struct QGraphicsScale_scaleChanged_signal{poi:u64}
+impl /* struct */ QGraphicsScale {
+  pub fn scaleChanged_1(self) -> QGraphicsScale_scaleChanged_signal {
+     return QGraphicsScale_scaleChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QGraphicsScale_scaleChanged_signal {
+  pub fn connect<T: QGraphicsScale_scaleChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QGraphicsScale_scaleChanged_signal_connect {
+  fn connect(self, sigthis: QGraphicsScale_scaleChanged_signal);
+}
+
+#[derive(Default)] // for QGraphicsScale_originChanged
+pub struct QGraphicsScale_originChanged_signal{poi:u64}
+impl /* struct */ QGraphicsScale {
+  pub fn originChanged_1(self) -> QGraphicsScale_originChanged_signal {
+     return QGraphicsScale_originChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QGraphicsScale_originChanged_signal {
+  pub fn connect<T: QGraphicsScale_originChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QGraphicsScale_originChanged_signal_connect {
+  fn connect(self, sigthis: QGraphicsScale_originChanged_signal);
+}
+
+// scaleChanged()
+extern fn QGraphicsScale_scaleChanged_signal_connect_cb_0() {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QGraphicsScale_scaleChanged_signal_connect for (extern fn()) {
+  fn connect(self, sigthis: QGraphicsScale_scaleChanged_signal) {
+    // do smth...
+    unsafe {QGraphicsScale_SlotProxy_connect__ZN14QGraphicsScale12scaleChangedEv(sigthis.poi as *mut c_void, QGraphicsScale_scaleChanged_signal_connect_cb_0 as *mut c_void)};
+  }
+}
+// originChanged()
+extern fn QGraphicsScale_originChanged_signal_connect_cb_1() {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QGraphicsScale_originChanged_signal_connect for (extern fn()) {
+  fn connect(self, sigthis: QGraphicsScale_originChanged_signal) {
+    // do smth...
+    unsafe {QGraphicsScale_SlotProxy_connect__ZN14QGraphicsScale13originChangedEv(sigthis.poi as *mut c_void, QGraphicsScale_originChanged_signal_connect_cb_1 as *mut c_void)};
+  }
+}
+// zScaleChanged()
+extern fn QGraphicsScale_zScaleChanged_signal_connect_cb_2() {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QGraphicsScale_zScaleChanged_signal_connect for (extern fn()) {
+  fn connect(self, sigthis: QGraphicsScale_zScaleChanged_signal) {
+    // do smth...
+    unsafe {QGraphicsScale_SlotProxy_connect__ZN14QGraphicsScale13zScaleChangedEv(sigthis.poi as *mut c_void, QGraphicsScale_zScaleChanged_signal_connect_cb_2 as *mut c_void)};
+  }
+}
+// yScaleChanged()
+extern fn QGraphicsScale_yScaleChanged_signal_connect_cb_3() {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QGraphicsScale_yScaleChanged_signal_connect for (extern fn()) {
+  fn connect(self, sigthis: QGraphicsScale_yScaleChanged_signal) {
+    // do smth...
+    unsafe {QGraphicsScale_SlotProxy_connect__ZN14QGraphicsScale13yScaleChangedEv(sigthis.poi as *mut c_void, QGraphicsScale_yScaleChanged_signal_connect_cb_3 as *mut c_void)};
+  }
+}
+// xScaleChanged()
+extern fn QGraphicsScale_xScaleChanged_signal_connect_cb_4() {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QGraphicsScale_xScaleChanged_signal_connect for (extern fn()) {
+  fn connect(self, sigthis: QGraphicsScale_xScaleChanged_signal) {
+    // do smth...
+    unsafe {QGraphicsScale_SlotProxy_connect__ZN14QGraphicsScale13xScaleChangedEv(sigthis.poi as *mut c_void, QGraphicsScale_xScaleChanged_signal_connect_cb_4 as *mut c_void)};
+  }
+}
 // <= body block end
 

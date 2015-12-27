@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtWidgets/qheaderview.h
 // dst-file: /src/widgets/qheaderview.rs
 //
@@ -24,6 +24,7 @@ use super::super::core::qsize::QSize; // 771
 use super::super::core::qbytearray::QByteArray; // 771
 use super::super::core::qpoint::QPoint; // 771
 use super::qwidget::QWidget; // 773
+use super::super::core::qabstractitemmodel::QAbstractItemModel; // 771
 // <= use block end
 
 // ext block begin =>
@@ -35,152 +36,175 @@ use super::qwidget::QWidget; // 773
 extern {
   fn QHeaderView_Class_Size() -> c_int;
   // proto:  int QHeaderView::maximumSectionSize();
-  fn _ZNK11QHeaderView18maximumSectionSizeEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK11QHeaderView18maximumSectionSizeEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  QSize QHeaderView::sizeHint();
-  fn _ZNK11QHeaderView8sizeHintEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK11QHeaderView8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QHeaderView::sectionPosition(int logicalIndex);
-  fn _ZNK11QHeaderView15sectionPositionEi(qthis: *mut c_void, arg0: c_int) -> c_int;
+  fn _ZNK11QHeaderView15sectionPositionEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
   // proto:  void QHeaderView::sectionResized(int logicalIndex, int oldSize, int newSize);
-  fn _ZN11QHeaderView14sectionResizedEiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int);
+  fn _ZN11QHeaderView14sectionResizedEiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int);
   // proto:  int QHeaderView::sectionSize(int logicalIndex);
-  fn _ZNK11QHeaderView11sectionSizeEi(qthis: *mut c_void, arg0: c_int) -> c_int;
+  fn _ZNK11QHeaderView11sectionSizeEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
   // proto:  void QHeaderView::QHeaderView(const QHeaderView & );
   fn dector_ZN11QHeaderViewC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QHeaderViewC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QHeaderViewC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QHeaderView::setStretchLastSection(bool stretch);
-  fn _ZN11QHeaderView21setStretchLastSectionEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN11QHeaderView21setStretchLastSectionEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QHeaderView::reset();
-  fn _ZN11QHeaderView5resetEv(qthis: *mut c_void);
+  fn _ZN11QHeaderView5resetEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QHeaderView::geometriesChanged();
-  fn _ZN11QHeaderView17geometriesChangedEv(qthis: *mut c_void);
+  fn _ZN11QHeaderView17geometriesChangedEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QHeaderView::resetDefaultSectionSize();
-  fn _ZN11QHeaderView23resetDefaultSectionSizeEv(qthis: *mut c_void);
+  fn _ZN11QHeaderView23resetDefaultSectionSizeEv(qthis: u64 /* *mut c_void*/);
   // proto:  QByteArray QHeaderView::saveState();
-  fn _ZNK11QHeaderView9saveStateEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK11QHeaderView9saveStateEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QHeaderView::sectionsClickable();
-  fn _ZNK11QHeaderView17sectionsClickableEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK11QHeaderView17sectionsClickableEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  int QHeaderView::resizeContentsPrecision();
-  fn _ZNK11QHeaderView23resizeContentsPrecisionEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK11QHeaderView23resizeContentsPrecisionEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QHeaderView::setOffsetToSectionPosition(int visualIndex);
-  fn _ZN11QHeaderView26setOffsetToSectionPositionEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN11QHeaderView26setOffsetToSectionPositionEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QHeaderView::length();
-  fn _ZNK11QHeaderView6lengthEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK11QHeaderView6lengthEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QHeaderView::hideSection(int logicalIndex);
-  fn demth_ZN11QHeaderView11hideSectionEi(qthis: *mut c_void, arg0: c_int);
+  fn demth_ZN11QHeaderView11hideSectionEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QHeaderView::sortIndicatorSection();
-  fn _ZNK11QHeaderView20sortIndicatorSectionEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK11QHeaderView20sortIndicatorSectionEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QHeaderView::cascadingSectionResizes();
-  fn _ZNK11QHeaderView23cascadingSectionResizesEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK11QHeaderView23cascadingSectionResizesEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QHeaderView::setMinimumSectionSize(int size);
-  fn _ZN11QHeaderView21setMinimumSectionSizeEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN11QHeaderView21setMinimumSectionSizeEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QHeaderView::visualIndexAt(int position);
-  fn _ZNK11QHeaderView13visualIndexAtEi(qthis: *mut c_void, arg0: c_int) -> c_int;
+  fn _ZNK11QHeaderView13visualIndexAtEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
   // proto:  void QHeaderView::setOffset(int offset);
-  fn _ZN11QHeaderView9setOffsetEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN11QHeaderView9setOffsetEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QHeaderView::logicalIndexAt(const QPoint & pos);
-  fn demth_ZNK11QHeaderView14logicalIndexAtERK6QPoint(qthis: *mut c_void, arg0: *mut c_void) -> c_int;
+  fn demth_ZNK11QHeaderView14logicalIndexAtERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
   // proto:  void QHeaderView::~QHeaderView();
-  fn _ZN11QHeaderViewD0Ev(qthis: *mut c_void);
+  fn _ZN11QHeaderViewD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  int QHeaderView::sectionViewportPosition(int logicalIndex);
-  fn _ZNK11QHeaderView23sectionViewportPositionEi(qthis: *mut c_void, arg0: c_int) -> c_int;
+  fn _ZNK11QHeaderView23sectionViewportPositionEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
   // proto:  bool QHeaderView::highlightSections();
-  fn _ZNK11QHeaderView17highlightSectionsEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK11QHeaderView17highlightSectionsEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  int QHeaderView::offset();
-  fn _ZNK11QHeaderView6offsetEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK11QHeaderView6offsetEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QHeaderView::setSortIndicatorShown(bool show);
-  fn _ZN11QHeaderView21setSortIndicatorShownEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN11QHeaderView21setSortIndicatorShownEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  const QMetaObject * QHeaderView::metaObject();
-  fn _ZNK11QHeaderView10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK11QHeaderView10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QHeaderView::showSection(int logicalIndex);
-  fn demth_ZN11QHeaderView11showSectionEi(qthis: *mut c_void, arg0: c_int);
+  fn demth_ZN11QHeaderView11showSectionEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QHeaderView::setVisible(bool v);
-  fn _ZN11QHeaderView10setVisibleEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN11QHeaderView10setVisibleEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  int QHeaderView::hiddenSectionCount();
-  fn _ZNK11QHeaderView18hiddenSectionCountEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK11QHeaderView18hiddenSectionCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QHeaderView::sectionMoved(int logicalIndex, int oldVisualIndex, int newVisualIndex);
-  fn _ZN11QHeaderView12sectionMovedEiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int);
+  fn _ZN11QHeaderView12sectionMovedEiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int);
   // proto:  void QHeaderView::sectionHandleDoubleClicked(int logicalIndex);
-  fn _ZN11QHeaderView26sectionHandleDoubleClickedEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN11QHeaderView26sectionHandleDoubleClickedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QHeaderView::setSectionsClickable(bool clickable);
-  fn _ZN11QHeaderView20setSectionsClickableEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN11QHeaderView20setSectionsClickableEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QHeaderView::sectionPressed(int logicalIndex);
-  fn _ZN11QHeaderView14sectionPressedEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN11QHeaderView14sectionPressedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QHeaderView::setResizeContentsPrecision(int precision);
-  fn _ZN11QHeaderView26setResizeContentsPrecisionEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN11QHeaderView26setResizeContentsPrecisionEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QHeaderView::defaultSectionSize();
-  fn _ZNK11QHeaderView18defaultSectionSizeEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK11QHeaderView18defaultSectionSizeEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QHeaderView::setOffsetToLastSection();
-  fn _ZN11QHeaderView22setOffsetToLastSectionEv(qthis: *mut c_void);
+  fn _ZN11QHeaderView22setOffsetToLastSectionEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QHeaderView::swapSections(int first, int second);
-  fn _ZN11QHeaderView12swapSectionsEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
+  fn _ZN11QHeaderView12swapSectionsEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  int QHeaderView::count();
-  fn _ZNK11QHeaderView5countEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK11QHeaderView5countEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QHeaderView::visualIndex(int logicalIndex);
-  fn _ZNK11QHeaderView11visualIndexEi(qthis: *mut c_void, arg0: c_int) -> c_int;
+  fn _ZNK11QHeaderView11visualIndexEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
   // proto:  void QHeaderView::sectionClicked(int logicalIndex);
-  fn _ZN11QHeaderView14sectionClickedEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN11QHeaderView14sectionClickedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  bool QHeaderView::sectionsMoved();
-  fn _ZNK11QHeaderView13sectionsMovedEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK11QHeaderView13sectionsMovedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  int QHeaderView::stretchSectionCount();
-  fn _ZNK11QHeaderView19stretchSectionCountEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK11QHeaderView19stretchSectionCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QHeaderView::doItemsLayout();
-  fn _ZN11QHeaderView13doItemsLayoutEv(qthis: *mut c_void);
+  fn _ZN11QHeaderView13doItemsLayoutEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QHeaderView::setSectionsMovable(bool movable);
-  fn _ZN11QHeaderView18setSectionsMovableEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN11QHeaderView18setSectionsMovableEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  bool QHeaderView::sectionsHidden();
-  fn _ZNK11QHeaderView14sectionsHiddenEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK11QHeaderView14sectionsHiddenEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  int QHeaderView::minimumSectionSize();
-  fn _ZNK11QHeaderView18minimumSectionSizeEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK11QHeaderView18minimumSectionSizeEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QHeaderView::setCascadingSectionResizes(bool enable);
-  fn _ZN11QHeaderView26setCascadingSectionResizesEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN11QHeaderView26setCascadingSectionResizesEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QHeaderView::setDefaultSectionSize(int size);
-  fn _ZN11QHeaderView21setDefaultSectionSizeEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN11QHeaderView21setDefaultSectionSizeEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QHeaderView::sectionEntered(int logicalIndex);
-  fn _ZN11QHeaderView14sectionEnteredEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN11QHeaderView14sectionEnteredEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QHeaderView::moveSection(int from, int to);
-  fn _ZN11QHeaderView11moveSectionEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
+  fn _ZN11QHeaderView11moveSectionEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  bool QHeaderView::stretchLastSection();
-  fn _ZNK11QHeaderView18stretchLastSectionEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK11QHeaderView18stretchLastSectionEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  int QHeaderView::sectionSizeHint(int logicalIndex);
-  fn _ZNK11QHeaderView15sectionSizeHintEi(qthis: *mut c_void, arg0: c_int) -> c_int;
+  fn _ZNK11QHeaderView15sectionSizeHintEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
   // proto:  bool QHeaderView::sectionsMovable();
-  fn _ZNK11QHeaderView15sectionsMovableEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK11QHeaderView15sectionsMovableEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QHeaderView::isSectionHidden(int logicalIndex);
-  fn _ZNK11QHeaderView15isSectionHiddenEi(qthis: *mut c_void, arg0: c_int) -> c_char;
+  fn _ZNK11QHeaderView15isSectionHiddenEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
   // proto:  int QHeaderView::logicalIndexAt(int x, int y);
-  fn demth_ZNK11QHeaderView14logicalIndexAtEii(qthis: *mut c_void, arg0: c_int, arg1: c_int) -> c_int;
+  fn demth_ZNK11QHeaderView14logicalIndexAtEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> c_int;
   // proto:  int QHeaderView::logicalIndexAt(int position);
-  fn _ZNK11QHeaderView14logicalIndexAtEi(qthis: *mut c_void, arg0: c_int) -> c_int;
+  fn _ZNK11QHeaderView14logicalIndexAtEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
   // proto:  int QHeaderView::logicalIndex(int visualIndex);
-  fn _ZNK11QHeaderView12logicalIndexEi(qthis: *mut c_void, arg0: c_int) -> c_int;
+  fn _ZNK11QHeaderView12logicalIndexEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
   // proto:  void QHeaderView::setMaximumSectionSize(int size);
-  fn _ZN11QHeaderView21setMaximumSectionSizeEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN11QHeaderView21setMaximumSectionSizeEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QHeaderView::setHighlightSections(bool highlight);
-  fn _ZN11QHeaderView20setHighlightSectionsEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN11QHeaderView20setHighlightSectionsEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QHeaderView::setSectionHidden(int logicalIndex, bool hide);
-  fn _ZN11QHeaderView16setSectionHiddenEib(qthis: *mut c_void, arg0: c_int, arg1: c_char);
+  fn _ZN11QHeaderView16setSectionHiddenEib(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_char);
   // proto:  void QHeaderView::resizeSection(int logicalIndex, int size);
-  fn _ZN11QHeaderView13resizeSectionEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
+  fn _ZN11QHeaderView13resizeSectionEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  bool QHeaderView::restoreState(const QByteArray & state);
-  fn _ZN11QHeaderView12restoreStateERK10QByteArray(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn _ZN11QHeaderView12restoreStateERK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  void QHeaderView::sectionDoubleClicked(int logicalIndex);
-  fn _ZN11QHeaderView20sectionDoubleClickedEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN11QHeaderView20sectionDoubleClickedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QHeaderView::sectionCountChanged(int oldCount, int newCount);
-  fn _ZN11QHeaderView19sectionCountChangedEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
+  fn _ZN11QHeaderView19sectionCountChangedEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
+  // proto:  void QHeaderView::setModel(QAbstractItemModel * model);
+  fn _ZN11QHeaderView8setModelEP18QAbstractItemModel(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QHeaderView::isSortIndicatorShown();
-  fn _ZNK11QHeaderView20isSortIndicatorShownEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK11QHeaderView20isSortIndicatorShownEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn QHeaderView_SlotProxy_connect__ZN11QHeaderView14sectionEnteredEi(qthis: *mut c_void, fptr: *mut c_void);
+  fn QHeaderView_SlotProxy_connect__ZN11QHeaderView17geometriesChangedEv(qthis: *mut c_void, fptr: *mut c_void);
+  fn QHeaderView_SlotProxy_connect__ZN11QHeaderView14sectionClickedEi(qthis: *mut c_void, fptr: *mut c_void);
+  fn QHeaderView_SlotProxy_connect__ZN11QHeaderView12sectionMovedEiii(qthis: *mut c_void, fptr: *mut c_void);
+  fn QHeaderView_SlotProxy_connect__ZN11QHeaderView14sectionPressedEi(qthis: *mut c_void, fptr: *mut c_void);
+  fn QHeaderView_SlotProxy_connect__ZN11QHeaderView20sectionDoubleClickedEi(qthis: *mut c_void, fptr: *mut c_void);
+  fn QHeaderView_SlotProxy_connect__ZN11QHeaderView26sectionHandleDoubleClickedEi(qthis: *mut c_void, fptr: *mut c_void);
+  fn QHeaderView_SlotProxy_connect__ZN11QHeaderView14sectionResizedEiii(qthis: *mut c_void, fptr: *mut c_void);
+  fn QHeaderView_SlotProxy_connect__ZN11QHeaderView19sectionCountChangedEii(qthis: *mut c_void, fptr: *mut c_void);
+  fn QHeaderView_SlotProxy_connect__ZN11QHeaderView20sortIndicatorChangedEiN2Qt9SortOrderE(qthis: *mut c_void, fptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QHeaderView)=1
+#[derive(Default)]
 pub struct QHeaderView {
   qbase: QAbstractItemView,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _sectionHandleDoubleClicked_1: QHeaderView_sectionHandleDoubleClicked_signal,
+  pub _sectionEntered_1: QHeaderView_sectionEntered_signal,
+  pub _sortIndicatorChanged_1: QHeaderView_sortIndicatorChanged_signal,
+  pub _sectionClicked_1: QHeaderView_sectionClicked_signal,
+  pub _sectionCountChanged_1: QHeaderView_sectionCountChanged_signal,
+  pub _geometriesChanged_1: QHeaderView_geometriesChanged_signal,
+  pub _sectionMoved_1: QHeaderView_sectionMoved_signal,
+  pub _sectionPressed_1: QHeaderView_sectionPressed_signal,
+  pub _sectionDoubleClicked_1: QHeaderView_sectionDoubleClicked_signal,
+  pub _sectionResized_1: QHeaderView_sectionResized_signal,
 }
 
 impl /*struct*/ QHeaderView {
-  pub fn inheritFrom(qthis: *mut c_void) -> QHeaderView {
-    return QHeaderView{qbase: QAbstractItemView::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QHeaderView {
+    return QHeaderView{qbase: QAbstractItemView::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QHeaderView {
@@ -236,7 +260,7 @@ impl<'a> /*trait*/ QHeaderView_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView8sizeHintEv()};
     let mut ret = unsafe {_ZNK11QHeaderView8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize::inheritFrom(ret);
+    let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -334,11 +358,11 @@ impl<'a> /*trait*/ QHeaderView_New for (&'a QHeaderView) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderViewC1ERKS_()};
     let ctysz: c_int = unsafe{QHeaderView_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN11QHeaderViewC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN11QHeaderViewC1ERKS_(arg0)};
-    let rsthis = QHeaderView{/**/qbase: QAbstractItemView::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN11QHeaderViewC1ERKS_(arg0)} as u64;
+    let rsthis = QHeaderView{qbase: QAbstractItemView::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -451,7 +475,7 @@ impl<'a> /*trait*/ QHeaderView_saveState<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView9saveStateEv()};
     let mut ret = unsafe {_ZNK11QHeaderView9saveStateEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1712,6 +1736,29 @@ impl<'a> /*trait*/ QHeaderView_sectionCountChanged<()> for (i32, i32) {
   }
 }
 
+  // proto:  void QHeaderView::setModel(QAbstractItemModel * model);
+impl /*struct*/ QHeaderView {
+  pub fn setModel<RetType, T: QHeaderView_setModel<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.setModel(self);
+    // return 1;
+  }
+}
+
+pub trait QHeaderView_setModel<RetType> {
+  fn setModel(self , rsthis: & QHeaderView) -> RetType;
+}
+
+  // proto:  void QHeaderView::setModel(QAbstractItemModel * model);
+impl<'a> /*trait*/ QHeaderView_setModel<()> for (&'a QAbstractItemModel) {
+  fn setModel(self , rsthis: & QHeaderView) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN11QHeaderView8setModelEP18QAbstractItemModel()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN11QHeaderView8setModelEP18QAbstractItemModel(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
   // proto:  bool QHeaderView::isSortIndicatorShown();
 impl /*struct*/ QHeaderView {
   pub fn isSortIndicatorShown<RetType, T: QHeaderView_isSortIndicatorShown<RetType>>(& self,  overload_args: T) -> RetType {
@@ -1735,5 +1782,265 @@ impl<'a> /*trait*/ QHeaderView_isSortIndicatorShown<i8> for () {
   }
 }
 
+#[derive(Default)] // for QHeaderView_sectionHandleDoubleClicked
+pub struct QHeaderView_sectionHandleDoubleClicked_signal{poi:u64}
+impl /* struct */ QHeaderView {
+  pub fn sectionHandleDoubleClicked_1(self) -> QHeaderView_sectionHandleDoubleClicked_signal {
+     return QHeaderView_sectionHandleDoubleClicked_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QHeaderView_sectionHandleDoubleClicked_signal {
+  pub fn connect<T: QHeaderView_sectionHandleDoubleClicked_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QHeaderView_sectionHandleDoubleClicked_signal_connect {
+  fn connect(self, sigthis: QHeaderView_sectionHandleDoubleClicked_signal);
+}
+
+#[derive(Default)] // for QHeaderView_sectionEntered
+pub struct QHeaderView_sectionEntered_signal{poi:u64}
+impl /* struct */ QHeaderView {
+  pub fn sectionEntered_1(self) -> QHeaderView_sectionEntered_signal {
+     return QHeaderView_sectionEntered_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QHeaderView_sectionEntered_signal {
+  pub fn connect<T: QHeaderView_sectionEntered_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QHeaderView_sectionEntered_signal_connect {
+  fn connect(self, sigthis: QHeaderView_sectionEntered_signal);
+}
+
+#[derive(Default)] // for QHeaderView_sortIndicatorChanged
+pub struct QHeaderView_sortIndicatorChanged_signal{poi:u64}
+impl /* struct */ QHeaderView {
+  pub fn sortIndicatorChanged_1(self) -> QHeaderView_sortIndicatorChanged_signal {
+     return QHeaderView_sortIndicatorChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QHeaderView_sortIndicatorChanged_signal {
+  pub fn connect<T: QHeaderView_sortIndicatorChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QHeaderView_sortIndicatorChanged_signal_connect {
+  fn connect(self, sigthis: QHeaderView_sortIndicatorChanged_signal);
+}
+
+#[derive(Default)] // for QHeaderView_sectionClicked
+pub struct QHeaderView_sectionClicked_signal{poi:u64}
+impl /* struct */ QHeaderView {
+  pub fn sectionClicked_1(self) -> QHeaderView_sectionClicked_signal {
+     return QHeaderView_sectionClicked_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QHeaderView_sectionClicked_signal {
+  pub fn connect<T: QHeaderView_sectionClicked_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QHeaderView_sectionClicked_signal_connect {
+  fn connect(self, sigthis: QHeaderView_sectionClicked_signal);
+}
+
+#[derive(Default)] // for QHeaderView_sectionCountChanged
+pub struct QHeaderView_sectionCountChanged_signal{poi:u64}
+impl /* struct */ QHeaderView {
+  pub fn sectionCountChanged_1(self) -> QHeaderView_sectionCountChanged_signal {
+     return QHeaderView_sectionCountChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QHeaderView_sectionCountChanged_signal {
+  pub fn connect<T: QHeaderView_sectionCountChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QHeaderView_sectionCountChanged_signal_connect {
+  fn connect(self, sigthis: QHeaderView_sectionCountChanged_signal);
+}
+
+#[derive(Default)] // for QHeaderView_geometriesChanged
+pub struct QHeaderView_geometriesChanged_signal{poi:u64}
+impl /* struct */ QHeaderView {
+  pub fn geometriesChanged_1(self) -> QHeaderView_geometriesChanged_signal {
+     return QHeaderView_geometriesChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QHeaderView_geometriesChanged_signal {
+  pub fn connect<T: QHeaderView_geometriesChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QHeaderView_geometriesChanged_signal_connect {
+  fn connect(self, sigthis: QHeaderView_geometriesChanged_signal);
+}
+
+#[derive(Default)] // for QHeaderView_sectionMoved
+pub struct QHeaderView_sectionMoved_signal{poi:u64}
+impl /* struct */ QHeaderView {
+  pub fn sectionMoved_1(self) -> QHeaderView_sectionMoved_signal {
+     return QHeaderView_sectionMoved_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QHeaderView_sectionMoved_signal {
+  pub fn connect<T: QHeaderView_sectionMoved_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QHeaderView_sectionMoved_signal_connect {
+  fn connect(self, sigthis: QHeaderView_sectionMoved_signal);
+}
+
+#[derive(Default)] // for QHeaderView_sectionPressed
+pub struct QHeaderView_sectionPressed_signal{poi:u64}
+impl /* struct */ QHeaderView {
+  pub fn sectionPressed_1(self) -> QHeaderView_sectionPressed_signal {
+     return QHeaderView_sectionPressed_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QHeaderView_sectionPressed_signal {
+  pub fn connect<T: QHeaderView_sectionPressed_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QHeaderView_sectionPressed_signal_connect {
+  fn connect(self, sigthis: QHeaderView_sectionPressed_signal);
+}
+
+#[derive(Default)] // for QHeaderView_sectionDoubleClicked
+pub struct QHeaderView_sectionDoubleClicked_signal{poi:u64}
+impl /* struct */ QHeaderView {
+  pub fn sectionDoubleClicked_1(self) -> QHeaderView_sectionDoubleClicked_signal {
+     return QHeaderView_sectionDoubleClicked_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QHeaderView_sectionDoubleClicked_signal {
+  pub fn connect<T: QHeaderView_sectionDoubleClicked_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QHeaderView_sectionDoubleClicked_signal_connect {
+  fn connect(self, sigthis: QHeaderView_sectionDoubleClicked_signal);
+}
+
+#[derive(Default)] // for QHeaderView_sectionResized
+pub struct QHeaderView_sectionResized_signal{poi:u64}
+impl /* struct */ QHeaderView {
+  pub fn sectionResized_1(self) -> QHeaderView_sectionResized_signal {
+     return QHeaderView_sectionResized_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QHeaderView_sectionResized_signal {
+  pub fn connect<T: QHeaderView_sectionResized_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QHeaderView_sectionResized_signal_connect {
+  fn connect(self, sigthis: QHeaderView_sectionResized_signal);
+}
+
+// sectionEntered(int)
+extern fn QHeaderView_sectionEntered_signal_connect_cb_0(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QHeaderView_sectionEntered_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QHeaderView_sectionEntered_signal) {
+    // do smth...
+    unsafe {QHeaderView_SlotProxy_connect__ZN11QHeaderView14sectionEnteredEi(sigthis.poi as *mut c_void, QHeaderView_sectionEntered_signal_connect_cb_0 as *mut c_void)};
+  }
+}
+// geometriesChanged()
+extern fn QHeaderView_geometriesChanged_signal_connect_cb_1() {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QHeaderView_geometriesChanged_signal_connect for (extern fn()) {
+  fn connect(self, sigthis: QHeaderView_geometriesChanged_signal) {
+    // do smth...
+    unsafe {QHeaderView_SlotProxy_connect__ZN11QHeaderView17geometriesChangedEv(sigthis.poi as *mut c_void, QHeaderView_geometriesChanged_signal_connect_cb_1 as *mut c_void)};
+  }
+}
+// sectionClicked(int)
+extern fn QHeaderView_sectionClicked_signal_connect_cb_2(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QHeaderView_sectionClicked_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QHeaderView_sectionClicked_signal) {
+    // do smth...
+    unsafe {QHeaderView_SlotProxy_connect__ZN11QHeaderView14sectionClickedEi(sigthis.poi as *mut c_void, QHeaderView_sectionClicked_signal_connect_cb_2 as *mut c_void)};
+  }
+}
+// sectionMoved(int, int, int)
+extern fn QHeaderView_sectionMoved_signal_connect_cb_3(arg0: c_int, arg1: c_int, arg2: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QHeaderView_sectionMoved_signal_connect for (extern fn(i32, i32, i32)) {
+  fn connect(self, sigthis: QHeaderView_sectionMoved_signal) {
+    // do smth...
+    unsafe {QHeaderView_SlotProxy_connect__ZN11QHeaderView12sectionMovedEiii(sigthis.poi as *mut c_void, QHeaderView_sectionMoved_signal_connect_cb_3 as *mut c_void)};
+  }
+}
+// sectionPressed(int)
+extern fn QHeaderView_sectionPressed_signal_connect_cb_4(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QHeaderView_sectionPressed_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QHeaderView_sectionPressed_signal) {
+    // do smth...
+    unsafe {QHeaderView_SlotProxy_connect__ZN11QHeaderView14sectionPressedEi(sigthis.poi as *mut c_void, QHeaderView_sectionPressed_signal_connect_cb_4 as *mut c_void)};
+  }
+}
+// sectionDoubleClicked(int)
+extern fn QHeaderView_sectionDoubleClicked_signal_connect_cb_5(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QHeaderView_sectionDoubleClicked_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QHeaderView_sectionDoubleClicked_signal) {
+    // do smth...
+    unsafe {QHeaderView_SlotProxy_connect__ZN11QHeaderView20sectionDoubleClickedEi(sigthis.poi as *mut c_void, QHeaderView_sectionDoubleClicked_signal_connect_cb_5 as *mut c_void)};
+  }
+}
+// sectionHandleDoubleClicked(int)
+extern fn QHeaderView_sectionHandleDoubleClicked_signal_connect_cb_6(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QHeaderView_sectionHandleDoubleClicked_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QHeaderView_sectionHandleDoubleClicked_signal) {
+    // do smth...
+    unsafe {QHeaderView_SlotProxy_connect__ZN11QHeaderView26sectionHandleDoubleClickedEi(sigthis.poi as *mut c_void, QHeaderView_sectionHandleDoubleClicked_signal_connect_cb_6 as *mut c_void)};
+  }
+}
+// sectionResized(int, int, int)
+extern fn QHeaderView_sectionResized_signal_connect_cb_7(arg0: c_int, arg1: c_int, arg2: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QHeaderView_sectionResized_signal_connect for (extern fn(i32, i32, i32)) {
+  fn connect(self, sigthis: QHeaderView_sectionResized_signal) {
+    // do smth...
+    unsafe {QHeaderView_SlotProxy_connect__ZN11QHeaderView14sectionResizedEiii(sigthis.poi as *mut c_void, QHeaderView_sectionResized_signal_connect_cb_7 as *mut c_void)};
+  }
+}
+// sectionCountChanged(int, int)
+extern fn QHeaderView_sectionCountChanged_signal_connect_cb_8(arg0: c_int, arg1: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QHeaderView_sectionCountChanged_signal_connect for (extern fn(i32, i32)) {
+  fn connect(self, sigthis: QHeaderView_sectionCountChanged_signal) {
+    // do smth...
+    unsafe {QHeaderView_SlotProxy_connect__ZN11QHeaderView19sectionCountChangedEii(sigthis.poi as *mut c_void, QHeaderView_sectionCountChanged_signal_connect_cb_8 as *mut c_void)};
+  }
+}
+// sortIndicatorChanged(int, Qt::SortOrder)
+extern fn QHeaderView_sortIndicatorChanged_signal_connect_cb_9(arg0: c_int, arg1: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QHeaderView_sortIndicatorChanged_signal_connect for (extern fn(i32, i32)) {
+  fn connect(self, sigthis: QHeaderView_sortIndicatorChanged_signal) {
+    // do smth...
+    unsafe {QHeaderView_SlotProxy_connect__ZN11QHeaderView20sortIndicatorChangedEiN2Qt9SortOrderE(sigthis.poi as *mut c_void, QHeaderView_sortIndicatorChanged_signal_connect_cb_9 as *mut c_void)};
+  }
+}
 // <= body block end
 

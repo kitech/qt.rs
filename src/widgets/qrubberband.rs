@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtWidgets/qrubberband.h
 // dst-file: /src/widgets/qrubberband.rs
 //
@@ -34,33 +34,34 @@ use super::super::core::qrect::QRect; // 771
 extern {
   fn QRubberBand_Class_Size() -> c_int;
   // proto:  void QRubberBand::resize(const QSize & s);
-  fn demth_ZN11QRubberBand6resizeERK5QSize(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN11QRubberBand6resizeERK5QSize(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QRubberBand::setGeometry(int x, int y, int w, int h);
-  fn demth_ZN11QRubberBand11setGeometryEiiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
+  fn demth_ZN11QRubberBand11setGeometryEiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
   // proto:  void QRubberBand::move(const QPoint & p);
-  fn demth_ZN11QRubberBand4moveERK6QPoint(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN11QRubberBand4moveERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QRubberBand::~QRubberBand();
-  fn _ZN11QRubberBandD0Ev(qthis: *mut c_void);
+  fn _ZN11QRubberBandD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QRubberBand::move(int x, int y);
-  fn demth_ZN11QRubberBand4moveEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
+  fn demth_ZN11QRubberBand4moveEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  const QMetaObject * QRubberBand::metaObject();
-  fn _ZNK11QRubberBand10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK11QRubberBand10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QRubberBand::setGeometry(const QRect & r);
-  fn _ZN11QRubberBand11setGeometryERK5QRect(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QRubberBand11setGeometryERK5QRect(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QRubberBand::resize(int w, int h);
-  fn demth_ZN11QRubberBand6resizeEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
+  fn demth_ZN11QRubberBand6resizeEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QRubberBand)=1
+#[derive(Default)]
 pub struct QRubberBand {
   qbase: QWidget,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QRubberBand {
-  pub fn inheritFrom(qthis: *mut c_void) -> QRubberBand {
-    return QRubberBand{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QRubberBand {
+    return QRubberBand{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QRubberBand {

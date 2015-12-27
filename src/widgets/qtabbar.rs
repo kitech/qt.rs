@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:03 2015
 // src-file: /QtWidgets/qtabbar.h
 // dst-file: /src/widgets/qtabbar.rs
 //
@@ -38,127 +38,138 @@ use super::super::gui::qcolor::QColor; // 771
 extern {
   fn QTabBar_Class_Size() -> c_int;
   // proto:  bool QTabBar::usesScrollButtons();
-  fn _ZNK7QTabBar17usesScrollButtonsEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK7QTabBar17usesScrollButtonsEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QTabBar::autoHide();
-  fn _ZNK7QTabBar8autoHideEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK7QTabBar8autoHideEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QString QTabBar::tabToolTip(int index);
-  fn _ZNK7QTabBar10tabToolTipEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
+  fn _ZNK7QTabBar10tabToolTipEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  bool QTabBar::expanding();
-  fn _ZNK7QTabBar9expandingEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK7QTabBar9expandingEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QTabBar::setDocumentMode(bool set);
-  fn _ZN7QTabBar15setDocumentModeEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN7QTabBar15setDocumentModeEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  int QTabBar::count();
-  fn _ZNK7QTabBar5countEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK7QTabBar5countEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QTabBar::setChangeCurrentOnDrag(bool change);
-  fn _ZN7QTabBar22setChangeCurrentOnDragEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN7QTabBar22setChangeCurrentOnDragEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QIcon QTabBar::tabIcon(int index);
-  fn _ZNK7QTabBar7tabIconEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
+  fn _ZNK7QTabBar7tabIconEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  void QTabBar::tabBarClicked(int index);
-  fn _ZN7QTabBar13tabBarClickedEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN7QTabBar13tabBarClickedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  QSize QTabBar::minimumSizeHint();
-  fn _ZNK7QTabBar15minimumSizeHintEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK7QTabBar15minimumSizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QTabBar::setTabsClosable(bool closable);
-  fn _ZN7QTabBar15setTabsClosableEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN7QTabBar15setTabsClosableEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  bool QTabBar::changeCurrentOnDrag();
-  fn _ZNK7QTabBar19changeCurrentOnDragEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK7QTabBar19changeCurrentOnDragEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QTabBar::setTabWhatsThis(int index, const QString & text);
-  fn _ZN7QTabBar15setTabWhatsThisEiRK7QString(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void);
+  fn _ZN7QTabBar15setTabWhatsThisEiRK7QString(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  const QMetaObject * QTabBar::metaObject();
-  fn _ZNK7QTabBar10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK7QTabBar10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QTabBar::QTabBar(const QTabBar & );
   fn dector_ZN7QTabBarC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN7QTabBarC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN7QTabBarC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QTabBar::insertTab(int index, const QIcon & icon, const QString & text);
-  fn _ZN7QTabBar9insertTabEiRK5QIconRK7QString(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void, arg2: *mut c_void) -> c_int;
+  fn _ZN7QTabBar9insertTabEiRK5QIconRK7QString(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void, arg2: *mut c_void) -> c_int;
   // proto:  void QTabBar::setTabIcon(int index, const QIcon & icon);
-  fn _ZN7QTabBar10setTabIconEiRK5QIcon(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void);
+  fn _ZN7QTabBar10setTabIconEiRK5QIcon(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  bool QTabBar::isMovable();
-  fn _ZNK7QTabBar9isMovableEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK7QTabBar9isMovableEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QTabBar::setExpanding(bool enabled);
-  fn _ZN7QTabBar12setExpandingEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN7QTabBar12setExpandingEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QTabBar::removeTab(int index);
-  fn _ZN7QTabBar9removeTabEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN7QTabBar9removeTabEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QTabBar::setTabEnabled(int index, bool );
-  fn _ZN7QTabBar13setTabEnabledEib(qthis: *mut c_void, arg0: c_int, arg1: c_char);
+  fn _ZN7QTabBar13setTabEnabledEib(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_char);
   // proto:  bool QTabBar::isTabEnabled(int index);
-  fn _ZNK7QTabBar12isTabEnabledEi(qthis: *mut c_void, arg0: c_int) -> c_char;
+  fn _ZNK7QTabBar12isTabEnabledEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
   // proto:  void QTabBar::setCurrentIndex(int index);
-  fn _ZN7QTabBar15setCurrentIndexEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN7QTabBar15setCurrentIndexEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  QRect QTabBar::tabRect(int index);
-  fn _ZNK7QTabBar7tabRectEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
+  fn _ZNK7QTabBar7tabRectEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  bool QTabBar::tabsClosable();
-  fn _ZNK7QTabBar12tabsClosableEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK7QTabBar12tabsClosableEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QTabBar::tabCloseRequested(int index);
-  fn _ZN7QTabBar17tabCloseRequestedEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN7QTabBar17tabCloseRequestedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QTabBar::setMovable(bool movable);
-  fn _ZN7QTabBar10setMovableEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN7QTabBar10setMovableEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QTabBar::setAutoHide(bool hide);
-  fn _ZN7QTabBar11setAutoHideEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN7QTabBar11setAutoHideEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QSize QTabBar::iconSize();
-  fn _ZNK7QTabBar8iconSizeEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK7QTabBar8iconSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QTabBar::tabText(int index);
-  fn _ZNK7QTabBar7tabTextEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
+  fn _ZNK7QTabBar7tabTextEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  QString QTabBar::tabWhatsThis(int index);
-  fn _ZNK7QTabBar12tabWhatsThisEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
+  fn _ZNK7QTabBar12tabWhatsThisEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  bool QTabBar::documentMode();
-  fn _ZNK7QTabBar12documentModeEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK7QTabBar12documentModeEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  int QTabBar::tabAt(const QPoint & pos);
-  fn _ZNK7QTabBar5tabAtERK6QPoint(qthis: *mut c_void, arg0: *mut c_void) -> c_int;
+  fn _ZNK7QTabBar5tabAtERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
   // proto:  void QTabBar::setTabData(int index, const QVariant & data);
-  fn _ZN7QTabBar10setTabDataEiRK8QVariant(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void);
+  fn _ZN7QTabBar10setTabDataEiRK8QVariant(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  void QTabBar::QTabBar(QWidget * parent);
   fn dector_ZN7QTabBarC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN7QTabBarC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN7QTabBarC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QColor QTabBar::tabTextColor(int index);
-  fn _ZNK7QTabBar12tabTextColorEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
+  fn _ZNK7QTabBar12tabTextColorEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  void QTabBar::~QTabBar();
-  fn _ZN7QTabBarD0Ev(qthis: *mut c_void);
+  fn _ZN7QTabBarD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  int QTabBar::insertTab(int index, const QString & text);
-  fn _ZN7QTabBar9insertTabEiRK7QString(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void) -> c_int;
+  fn _ZN7QTabBar9insertTabEiRK7QString(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void) -> c_int;
   // proto:  void QTabBar::tabBarDoubleClicked(int index);
-  fn _ZN7QTabBar19tabBarDoubleClickedEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN7QTabBar19tabBarDoubleClickedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QTabBar::addTab(const QString & text);
-  fn _ZN7QTabBar6addTabERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> c_int;
+  fn _ZN7QTabBar6addTabERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
   // proto:  int QTabBar::addTab(const QIcon & icon, const QString & text);
-  fn _ZN7QTabBar6addTabERK5QIconRK7QString(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> c_int;
+  fn _ZN7QTabBar6addTabERK5QIconRK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> c_int;
   // proto:  void QTabBar::setTabToolTip(int index, const QString & tip);
-  fn _ZN7QTabBar13setTabToolTipEiRK7QString(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void);
+  fn _ZN7QTabBar13setTabToolTipEiRK7QString(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  void QTabBar::currentChanged(int index);
-  fn _ZN7QTabBar14currentChangedEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN7QTabBar14currentChangedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QTabBar::setTabTextColor(int index, const QColor & color);
-  fn _ZN7QTabBar15setTabTextColorEiRK6QColor(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void);
+  fn _ZN7QTabBar15setTabTextColorEiRK6QColor(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  void QTabBar::moveTab(int from, int to);
-  fn _ZN7QTabBar7moveTabEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
+  fn _ZN7QTabBar7moveTabEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  QVariant QTabBar::tabData(int index);
-  fn _ZNK7QTabBar7tabDataEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
+  fn _ZNK7QTabBar7tabDataEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  bool QTabBar::drawBase();
-  fn _ZNK7QTabBar8drawBaseEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK7QTabBar8drawBaseEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  int QTabBar::currentIndex();
-  fn _ZNK7QTabBar12currentIndexEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK7QTabBar12currentIndexEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QTabBar::setDrawBase(bool drawTheBase);
-  fn _ZN7QTabBar11setDrawBaseEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN7QTabBar11setDrawBaseEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QTabBar::setUsesScrollButtons(bool useButtons);
-  fn _ZN7QTabBar20setUsesScrollButtonsEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN7QTabBar20setUsesScrollButtonsEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QSize QTabBar::sizeHint();
-  fn _ZNK7QTabBar8sizeHintEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK7QTabBar8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QTabBar::setIconSize(const QSize & size);
-  fn _ZN7QTabBar11setIconSizeERK5QSize(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN7QTabBar11setIconSizeERK5QSize(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTabBar::setTabText(int index, const QString & text);
-  fn _ZN7QTabBar10setTabTextEiRK7QString(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void);
+  fn _ZN7QTabBar10setTabTextEiRK7QString(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  void QTabBar::tabMoved(int from, int to);
-  fn _ZN7QTabBar8tabMovedEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
+  fn _ZN7QTabBar8tabMovedEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
+  fn QTabBar_SlotProxy_connect__ZN7QTabBar13tabBarClickedEi(qthis: *mut c_void, fptr: *mut c_void);
+  fn QTabBar_SlotProxy_connect__ZN7QTabBar19tabBarDoubleClickedEi(qthis: *mut c_void, fptr: *mut c_void);
+  fn QTabBar_SlotProxy_connect__ZN7QTabBar17tabCloseRequestedEi(qthis: *mut c_void, fptr: *mut c_void);
+  fn QTabBar_SlotProxy_connect__ZN7QTabBar8tabMovedEii(qthis: *mut c_void, fptr: *mut c_void);
+  fn QTabBar_SlotProxy_connect__ZN7QTabBar14currentChangedEi(qthis: *mut c_void, fptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QTabBar)=1
+#[derive(Default)]
 pub struct QTabBar {
   qbase: QWidget,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _tabCloseRequested_1: QTabBar_tabCloseRequested_signal,
+  pub _tabBarDoubleClicked_1: QTabBar_tabBarDoubleClicked_signal,
+  pub _tabMoved_1: QTabBar_tabMoved_signal,
+  pub _tabBarClicked_1: QTabBar_tabBarClicked_signal,
+  pub _currentChanged_1: QTabBar_currentChanged_signal,
 }
 
 impl /*struct*/ QTabBar {
-  pub fn inheritFrom(qthis: *mut c_void) -> QTabBar {
-    return QTabBar{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QTabBar {
+    return QTabBar{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QTabBar {
@@ -238,7 +249,7 @@ impl<'a> /*trait*/ QTabBar_tabToolTip<QString> for (i32) {
     // unsafe{_ZNK7QTabBar10tabToolTipEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK7QTabBar10tabToolTipEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -355,7 +366,7 @@ impl<'a> /*trait*/ QTabBar_tabIcon<QIcon> for (i32) {
     // unsafe{_ZNK7QTabBar7tabIconEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK7QTabBar7tabIconEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QIcon::inheritFrom(ret);
+    let mut ret1 = QIcon::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -402,7 +413,7 @@ impl<'a> /*trait*/ QTabBar_minimumSizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QTabBar15minimumSizeHintEv()};
     let mut ret = unsafe {_ZNK7QTabBar15minimumSizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize::inheritFrom(ret);
+    let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -519,11 +530,11 @@ impl<'a> /*trait*/ QTabBar_New for (&'a QTabBar) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QTabBarC1ERKS_()};
     let ctysz: c_int = unsafe{QTabBar_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN7QTabBarC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN7QTabBarC1ERKS_(arg0)};
-    let rsthis = QTabBar{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN7QTabBarC1ERKS_(arg0)} as u64;
+    let rsthis = QTabBar{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -738,7 +749,7 @@ impl<'a> /*trait*/ QTabBar_tabRect<QRect> for (i32) {
     // unsafe{_ZNK7QTabBar7tabRectEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK7QTabBar7tabRectEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRect::inheritFrom(ret);
+    let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -854,7 +865,7 @@ impl<'a> /*trait*/ QTabBar_iconSize<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QTabBar8iconSizeEv()};
     let mut ret = unsafe {_ZNK7QTabBar8iconSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize::inheritFrom(ret);
+    let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -879,7 +890,7 @@ impl<'a> /*trait*/ QTabBar_tabText<QString> for (i32) {
     // unsafe{_ZNK7QTabBar7tabTextEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK7QTabBar7tabTextEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -904,7 +915,7 @@ impl<'a> /*trait*/ QTabBar_tabWhatsThis<QString> for (i32) {
     // unsafe{_ZNK7QTabBar12tabWhatsThisEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK7QTabBar12tabWhatsThisEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -987,11 +998,11 @@ impl<'a> /*trait*/ QTabBar_New for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QTabBarC1EP7QWidget()};
     let ctysz: c_int = unsafe{QTabBar_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN7QTabBarC1EP7QWidget(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN7QTabBarC1EP7QWidget(arg0)};
-    let rsthis = QTabBar{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN7QTabBarC1EP7QWidget(arg0)} as u64;
+    let rsthis = QTabBar{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1016,7 +1027,7 @@ impl<'a> /*trait*/ QTabBar_tabTextColor<QColor> for (i32) {
     // unsafe{_ZNK7QTabBar12tabTextColorEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK7QTabBar12tabTextColorEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QColor::inheritFrom(ret);
+    let mut ret1 = QColor::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1231,7 +1242,7 @@ impl<'a> /*trait*/ QTabBar_tabData<QVariant> for (i32) {
     // unsafe{_ZNK7QTabBar7tabDataEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK7QTabBar7tabDataEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QVariant::inheritFrom(ret);
+    let mut ret1 = QVariant::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1347,7 +1358,7 @@ impl<'a> /*trait*/ QTabBar_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QTabBar8sizeHintEv()};
     let mut ret = unsafe {_ZNK7QTabBar8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize::inheritFrom(ret);
+    let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1424,5 +1435,135 @@ impl<'a> /*trait*/ QTabBar_tabMoved<()> for (i32, i32) {
   }
 }
 
+#[derive(Default)] // for QTabBar_tabCloseRequested
+pub struct QTabBar_tabCloseRequested_signal{poi:u64}
+impl /* struct */ QTabBar {
+  pub fn tabCloseRequested_1(self) -> QTabBar_tabCloseRequested_signal {
+     return QTabBar_tabCloseRequested_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QTabBar_tabCloseRequested_signal {
+  pub fn connect<T: QTabBar_tabCloseRequested_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QTabBar_tabCloseRequested_signal_connect {
+  fn connect(self, sigthis: QTabBar_tabCloseRequested_signal);
+}
+
+#[derive(Default)] // for QTabBar_tabBarDoubleClicked
+pub struct QTabBar_tabBarDoubleClicked_signal{poi:u64}
+impl /* struct */ QTabBar {
+  pub fn tabBarDoubleClicked_1(self) -> QTabBar_tabBarDoubleClicked_signal {
+     return QTabBar_tabBarDoubleClicked_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QTabBar_tabBarDoubleClicked_signal {
+  pub fn connect<T: QTabBar_tabBarDoubleClicked_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QTabBar_tabBarDoubleClicked_signal_connect {
+  fn connect(self, sigthis: QTabBar_tabBarDoubleClicked_signal);
+}
+
+#[derive(Default)] // for QTabBar_tabMoved
+pub struct QTabBar_tabMoved_signal{poi:u64}
+impl /* struct */ QTabBar {
+  pub fn tabMoved_1(self) -> QTabBar_tabMoved_signal {
+     return QTabBar_tabMoved_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QTabBar_tabMoved_signal {
+  pub fn connect<T: QTabBar_tabMoved_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QTabBar_tabMoved_signal_connect {
+  fn connect(self, sigthis: QTabBar_tabMoved_signal);
+}
+
+#[derive(Default)] // for QTabBar_tabBarClicked
+pub struct QTabBar_tabBarClicked_signal{poi:u64}
+impl /* struct */ QTabBar {
+  pub fn tabBarClicked_1(self) -> QTabBar_tabBarClicked_signal {
+     return QTabBar_tabBarClicked_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QTabBar_tabBarClicked_signal {
+  pub fn connect<T: QTabBar_tabBarClicked_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QTabBar_tabBarClicked_signal_connect {
+  fn connect(self, sigthis: QTabBar_tabBarClicked_signal);
+}
+
+#[derive(Default)] // for QTabBar_currentChanged
+pub struct QTabBar_currentChanged_signal{poi:u64}
+impl /* struct */ QTabBar {
+  pub fn currentChanged_1(self) -> QTabBar_currentChanged_signal {
+     return QTabBar_currentChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QTabBar_currentChanged_signal {
+  pub fn connect<T: QTabBar_currentChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QTabBar_currentChanged_signal_connect {
+  fn connect(self, sigthis: QTabBar_currentChanged_signal);
+}
+
+// tabBarClicked(int)
+extern fn QTabBar_tabBarClicked_signal_connect_cb_0(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QTabBar_tabBarClicked_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QTabBar_tabBarClicked_signal) {
+    // do smth...
+    unsafe {QTabBar_SlotProxy_connect__ZN7QTabBar13tabBarClickedEi(sigthis.poi as *mut c_void, QTabBar_tabBarClicked_signal_connect_cb_0 as *mut c_void)};
+  }
+}
+// tabBarDoubleClicked(int)
+extern fn QTabBar_tabBarDoubleClicked_signal_connect_cb_1(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QTabBar_tabBarDoubleClicked_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QTabBar_tabBarDoubleClicked_signal) {
+    // do smth...
+    unsafe {QTabBar_SlotProxy_connect__ZN7QTabBar19tabBarDoubleClickedEi(sigthis.poi as *mut c_void, QTabBar_tabBarDoubleClicked_signal_connect_cb_1 as *mut c_void)};
+  }
+}
+// tabCloseRequested(int)
+extern fn QTabBar_tabCloseRequested_signal_connect_cb_2(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QTabBar_tabCloseRequested_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QTabBar_tabCloseRequested_signal) {
+    // do smth...
+    unsafe {QTabBar_SlotProxy_connect__ZN7QTabBar17tabCloseRequestedEi(sigthis.poi as *mut c_void, QTabBar_tabCloseRequested_signal_connect_cb_2 as *mut c_void)};
+  }
+}
+// tabMoved(int, int)
+extern fn QTabBar_tabMoved_signal_connect_cb_3(arg0: c_int, arg1: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QTabBar_tabMoved_signal_connect for (extern fn(i32, i32)) {
+  fn connect(self, sigthis: QTabBar_tabMoved_signal) {
+    // do smth...
+    unsafe {QTabBar_SlotProxy_connect__ZN7QTabBar8tabMovedEii(sigthis.poi as *mut c_void, QTabBar_tabMoved_signal_connect_cb_3 as *mut c_void)};
+  }
+}
+// currentChanged(int)
+extern fn QTabBar_currentChanged_signal_connect_cb_4(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QTabBar_currentChanged_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QTabBar_currentChanged_signal) {
+    // do smth...
+    unsafe {QTabBar_SlotProxy_connect__ZN7QTabBar14currentChangedEi(sigthis.poi as *mut c_void, QTabBar_currentChanged_signal_connect_cb_4 as *mut c_void)};
+  }
+}
 // <= body block end
 

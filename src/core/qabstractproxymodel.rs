@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:03 2015
 // src-file: /QtCore/qabstractproxymodel.h
 // dst-file: /src/core/qabstractproxymodel.rs
 //
@@ -37,58 +37,65 @@ use super::qobject::QObject; // 773
 extern {
   fn QAbstractProxyModel_Class_Size() -> c_int;
   // proto:  QStringList QAbstractProxyModel::mimeTypes();
-  fn _ZNK19QAbstractProxyModel9mimeTypesEv(qthis: *mut c_void);
+  fn _ZNK19QAbstractProxyModel9mimeTypesEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractProxyModel::revert();
-  fn _ZN19QAbstractProxyModel6revertEv(qthis: *mut c_void);
+  fn _ZN19QAbstractProxyModel6revertEv(qthis: u64 /* *mut c_void*/);
   // proto:  QItemSelection QAbstractProxyModel::mapSelectionToSource(const QItemSelection & selection);
-  fn _ZNK19QAbstractProxyModel20mapSelectionToSourceERK14QItemSelection(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK19QAbstractProxyModel20mapSelectionToSourceERK14QItemSelection(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QItemSelection QAbstractProxyModel::mapSelectionFromSource(const QItemSelection & selection);
-  fn _ZNK19QAbstractProxyModel22mapSelectionFromSourceERK14QItemSelection(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK19QAbstractProxyModel22mapSelectionFromSourceERK14QItemSelection(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QVariant QAbstractProxyModel::data(const QModelIndex & proxyIndex, int role);
-  fn _ZNK19QAbstractProxyModel4dataERK11QModelIndexi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) -> *mut c_void;
+  fn _ZNK19QAbstractProxyModel4dataERK11QModelIndexi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> *mut c_void;
   // proto:  bool QAbstractProxyModel::submit();
-  fn _ZN19QAbstractProxyModel6submitEv(qthis: *mut c_void) -> c_char;
+  fn _ZN19QAbstractProxyModel6submitEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QSize QAbstractProxyModel::span(const QModelIndex & index);
-  fn _ZNK19QAbstractProxyModel4spanERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK19QAbstractProxyModel4spanERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  bool QAbstractProxyModel::canFetchMore(const QModelIndex & parent);
-  fn _ZNK19QAbstractProxyModel12canFetchMoreERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn _ZNK19QAbstractProxyModel12canFetchMoreERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  const QMetaObject * QAbstractProxyModel::metaObject();
-  fn _ZNK19QAbstractProxyModel10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK19QAbstractProxyModel10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  // proto:  void QAbstractProxyModel::QAbstractProxyModel(const QAbstractProxyModel & );
+  fn dector_ZN19QAbstractProxyModelC1ERKS_(arg0: *mut c_void) -> *mut c_void;
+  fn _ZN19QAbstractProxyModelC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QModelIndex QAbstractProxyModel::mapToSource(const QModelIndex & proxyIndex);
-  fn _ZNK19QAbstractProxyModel11mapToSourceERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK19QAbstractProxyModel11mapToSourceERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QModelIndex QAbstractProxyModel::mapFromSource(const QModelIndex & sourceIndex);
-  fn _ZNK19QAbstractProxyModel13mapFromSourceERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK19QAbstractProxyModel13mapFromSourceERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QMap<int, QVariant> QAbstractProxyModel::itemData(const QModelIndex & index);
-  fn _ZNK19QAbstractProxyModel8itemDataERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZNK19QAbstractProxyModel8itemDataERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QModelIndex QAbstractProxyModel::buddy(const QModelIndex & index);
-  fn _ZNK19QAbstractProxyModel5buddyERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK19QAbstractProxyModel5buddyERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  // proto:  void QAbstractProxyModel::setSourceModel(QAbstractItemModel * sourceModel);
+  fn _ZN19QAbstractProxyModel14setSourceModelEP18QAbstractItemModel(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QModelIndex QAbstractProxyModel::sibling(int row, int column, const QModelIndex & idx);
-  fn _ZNK19QAbstractProxyModel7siblingEiiRK11QModelIndex(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
+  fn _ZNK19QAbstractProxyModel7siblingEiiRK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
   // proto:  bool QAbstractProxyModel::setData(const QModelIndex & index, const QVariant & value, int role);
-  fn _ZN19QAbstractProxyModel7setDataERK11QModelIndexRK8QVarianti(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: c_int) -> c_char;
+  fn _ZN19QAbstractProxyModel7setDataERK11QModelIndexRK8QVarianti(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: c_int) -> c_char;
   // proto:  void QAbstractProxyModel::fetchMore(const QModelIndex & parent);
-  fn _ZN19QAbstractProxyModel9fetchMoreERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN19QAbstractProxyModel9fetchMoreERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAbstractProxyModel::~QAbstractProxyModel();
-  fn _ZN19QAbstractProxyModelD0Ev(qthis: *mut c_void);
+  fn _ZN19QAbstractProxyModelD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractProxyModel::QAbstractProxyModel(QObject * parent);
   fn dector_ZN19QAbstractProxyModelC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN19QAbstractProxyModelC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN19QAbstractProxyModelC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QAbstractProxyModel::hasChildren(const QModelIndex & parent);
-  fn _ZNK19QAbstractProxyModel11hasChildrenERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn _ZNK19QAbstractProxyModel11hasChildrenERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  QAbstractItemModel * QAbstractProxyModel::sourceModel();
-  fn _ZNK19QAbstractProxyModel11sourceModelEv(qthis: *mut c_void);
+  fn _ZNK19QAbstractProxyModel11sourceModelEv(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QAbstractProxyModel)=1
+#[derive(Default)]
 pub struct QAbstractProxyModel {
   qbase: QAbstractItemModel,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _sourceModelChanged_1: QAbstractProxyModel_sourceModelChanged_signal,
 }
 
 impl /*struct*/ QAbstractProxyModel {
-  pub fn inheritFrom(qthis: *mut c_void) -> QAbstractProxyModel {
-    return QAbstractProxyModel{qbase: QAbstractItemModel::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QAbstractProxyModel {
+    return QAbstractProxyModel{qbase: QAbstractItemModel::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QAbstractProxyModel {
@@ -166,7 +173,7 @@ impl<'a> /*trait*/ QAbstractProxyModel_mapSelectionToSource<QItemSelection> for 
     // unsafe{_ZNK19QAbstractProxyModel20mapSelectionToSourceERK14QItemSelection()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK19QAbstractProxyModel20mapSelectionToSourceERK14QItemSelection(rsthis.qclsinst, arg0)};
-    let mut ret1 = QItemSelection::inheritFrom(ret);
+    let mut ret1 = QItemSelection::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -191,7 +198,7 @@ impl<'a> /*trait*/ QAbstractProxyModel_mapSelectionFromSource<QItemSelection> fo
     // unsafe{_ZNK19QAbstractProxyModel22mapSelectionFromSourceERK14QItemSelection()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK19QAbstractProxyModel22mapSelectionFromSourceERK14QItemSelection(rsthis.qclsinst, arg0)};
-    let mut ret1 = QItemSelection::inheritFrom(ret);
+    let mut ret1 = QItemSelection::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -217,7 +224,7 @@ impl<'a> /*trait*/ QAbstractProxyModel_data<QVariant> for (&'a QModelIndex, i32)
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZNK19QAbstractProxyModel4dataERK11QModelIndexi(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QVariant::inheritFrom(ret);
+    let mut ret1 = QVariant::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -265,7 +272,7 @@ impl<'a> /*trait*/ QAbstractProxyModel_span<QSize> for (&'a QModelIndex) {
     // unsafe{_ZNK19QAbstractProxyModel4spanERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK19QAbstractProxyModel4spanERK11QModelIndex(rsthis.qclsinst, arg0)};
-    let mut ret1 = QSize::inheritFrom(ret);
+    let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -317,6 +324,35 @@ impl<'a> /*trait*/ QAbstractProxyModel_metaObject<()> for () {
   }
 }
 
+  // proto:  void QAbstractProxyModel::QAbstractProxyModel(const QAbstractProxyModel & );
+impl /*struct*/ QAbstractProxyModel {
+  pub fn New<T: QAbstractProxyModel_New>(value: T) -> QAbstractProxyModel {
+    let rsthis = value.New();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QAbstractProxyModel_New {
+  fn New(self) -> QAbstractProxyModel;
+}
+
+  // proto:  void QAbstractProxyModel::QAbstractProxyModel(const QAbstractProxyModel & );
+impl<'a> /*trait*/ QAbstractProxyModel_New for (&'a QAbstractProxyModel) {
+  fn New(self) -> QAbstractProxyModel {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN19QAbstractProxyModelC1ERKS_()};
+    let ctysz: c_int = unsafe{QAbstractProxyModel_Class_Size()};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
+    let arg0 = self.qclsinst  as *mut c_void;
+    // unsafe {_ZN19QAbstractProxyModelC1ERKS_(qthis, arg0)};
+    let qthis: u64 = unsafe {dector_ZN19QAbstractProxyModelC1ERKS_(arg0)} as u64;
+    let rsthis = QAbstractProxyModel{qbase: QAbstractItemModel::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+    return rsthis;
+    // return 1;
+  }
+}
+
   // proto:  QModelIndex QAbstractProxyModel::mapToSource(const QModelIndex & proxyIndex);
 impl /*struct*/ QAbstractProxyModel {
   pub fn mapToSource<RetType, T: QAbstractProxyModel_mapToSource<RetType>>(& self,  overload_args: T) -> RetType {
@@ -336,7 +372,7 @@ impl<'a> /*trait*/ QAbstractProxyModel_mapToSource<QModelIndex> for (&'a QModelI
     // unsafe{_ZNK19QAbstractProxyModel11mapToSourceERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK19QAbstractProxyModel11mapToSourceERK11QModelIndex(rsthis.qclsinst, arg0)};
-    let mut ret1 = QModelIndex::inheritFrom(ret);
+    let mut ret1 = QModelIndex::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -361,7 +397,7 @@ impl<'a> /*trait*/ QAbstractProxyModel_mapFromSource<QModelIndex> for (&'a QMode
     // unsafe{_ZNK19QAbstractProxyModel13mapFromSourceERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK19QAbstractProxyModel13mapFromSourceERK11QModelIndex(rsthis.qclsinst, arg0)};
-    let mut ret1 = QModelIndex::inheritFrom(ret);
+    let mut ret1 = QModelIndex::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -409,8 +445,31 @@ impl<'a> /*trait*/ QAbstractProxyModel_buddy<QModelIndex> for (&'a QModelIndex) 
     // unsafe{_ZNK19QAbstractProxyModel5buddyERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK19QAbstractProxyModel5buddyERK11QModelIndex(rsthis.qclsinst, arg0)};
-    let mut ret1 = QModelIndex::inheritFrom(ret);
+    let mut ret1 = QModelIndex::inheritFrom(ret as u64);
     return ret1;
+    // return 1;
+  }
+}
+
+  // proto:  void QAbstractProxyModel::setSourceModel(QAbstractItemModel * sourceModel);
+impl /*struct*/ QAbstractProxyModel {
+  pub fn setSourceModel<RetType, T: QAbstractProxyModel_setSourceModel<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.setSourceModel(self);
+    // return 1;
+  }
+}
+
+pub trait QAbstractProxyModel_setSourceModel<RetType> {
+  fn setSourceModel(self , rsthis: & QAbstractProxyModel) -> RetType;
+}
+
+  // proto:  void QAbstractProxyModel::setSourceModel(QAbstractItemModel * sourceModel);
+impl<'a> /*trait*/ QAbstractProxyModel_setSourceModel<()> for (&'a QAbstractItemModel) {
+  fn setSourceModel(self , rsthis: & QAbstractProxyModel) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN19QAbstractProxyModel14setSourceModelEP18QAbstractItemModel()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN19QAbstractProxyModel14setSourceModelEP18QAbstractItemModel(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -436,7 +495,7 @@ impl<'a> /*trait*/ QAbstractProxyModel_sibling<QModelIndex> for (i32, i32, &'a Q
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK19QAbstractProxyModel7siblingEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QModelIndex::inheritFrom(ret);
+    let mut ret1 = QModelIndex::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -514,29 +573,16 @@ impl<'a> /*trait*/ QAbstractProxyModel_Free<()> for () {
 }
 
   // proto:  void QAbstractProxyModel::QAbstractProxyModel(QObject * parent);
-impl /*struct*/ QAbstractProxyModel {
-  pub fn New<T: QAbstractProxyModel_New>(value: T) -> QAbstractProxyModel {
-    let rsthis = value.New();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QAbstractProxyModel_New {
-  fn New(self) -> QAbstractProxyModel;
-}
-
-  // proto:  void QAbstractProxyModel::QAbstractProxyModel(QObject * parent);
 impl<'a> /*trait*/ QAbstractProxyModel_New for (&'a QObject) {
   fn New(self) -> QAbstractProxyModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QAbstractProxyModelC1EP7QObject()};
     let ctysz: c_int = unsafe{QAbstractProxyModel_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN19QAbstractProxyModelC1EP7QObject(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN19QAbstractProxyModelC1EP7QObject(arg0)};
-    let rsthis = QAbstractProxyModel{/**/qbase: QAbstractItemModel::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN19QAbstractProxyModelC1EP7QObject(arg0)} as u64;
+    let rsthis = QAbstractProxyModel{qbase: QAbstractItemModel::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -586,6 +632,22 @@ impl<'a> /*trait*/ QAbstractProxyModel_sourceModel<()> for () {
      unsafe {_ZNK19QAbstractProxyModel11sourceModelEv(rsthis.qclsinst)};
     // return 1;
   }
+}
+
+#[derive(Default)] // for QAbstractProxyModel_sourceModelChanged
+pub struct QAbstractProxyModel_sourceModelChanged_signal{poi:u64}
+impl /* struct */ QAbstractProxyModel {
+  pub fn sourceModelChanged_1(self) -> QAbstractProxyModel_sourceModelChanged_signal {
+     return QAbstractProxyModel_sourceModelChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QAbstractProxyModel_sourceModelChanged_signal {
+  pub fn connect<T: QAbstractProxyModel_sourceModelChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QAbstractProxyModel_sourceModelChanged_signal_connect {
+  fn connect(self, sigthis: QAbstractProxyModel_sourceModelChanged_signal);
 }
 
 // <= body block end

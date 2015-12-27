@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtGui/qpainter.h
 // dst-file: /src/gui/qpainter.rs
 //
@@ -58,358 +58,359 @@ use super::qfontinfo::QFontInfo; // 773
 extern {
   fn QPainter_Class_Size() -> c_int;
   // proto:  QRectF QPainter::boundingRect(const QRectF & rect, const QString & text, const QTextOption & o);
-  fn _ZN8QPainter12boundingRectERK6QRectFRK7QStringRK11QTextOption(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> *mut c_void;
+  fn _ZN8QPainter12boundingRectERK6QRectFRK7QStringRK11QTextOption(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> *mut c_void;
   // proto:  void QPainter::drawPicture(const QPointF & p, const QPicture & picture);
-  fn _ZN8QPainter11drawPictureERK7QPointFRK8QPicture(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN8QPainter11drawPictureERK7QPointFRK8QPicture(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  const QMatrix & QPainter::worldMatrix();
-  fn _ZNK8QPainter11worldMatrixEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK8QPainter11worldMatrixEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QPainter::drawText(const QPointF & p, const QString & str, int tf, int justificationPadding);
-  fn _ZN8QPainter8drawTextERK7QPointFRK7QStringii(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: c_int, arg3: c_int);
+  fn _ZN8QPainter8drawTextERK7QPointFRK7QStringii(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: c_int, arg3: c_int);
   // proto:  void QPainter::fillRect(int x, int y, int w, int h, const QColor & color);
-  fn demth_ZN8QPainter8fillRectEiiiiRK6QColor(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: *mut c_void);
+  fn demth_ZN8QPainter8fillRectEiiiiRK6QColor(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: *mut c_void);
   // proto:  const QMatrix & QPainter::matrix();
-  fn _ZNK8QPainter6matrixEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK8QPainter6matrixEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  qreal QPainter::opacity();
-  fn _ZNK8QPainter7opacityEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK8QPainter7opacityEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QPainter::drawText(int x, int y, const QString & s);
-  fn demth_ZN8QPainter8drawTextEiiRK7QString(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_void);
+  fn demth_ZN8QPainter8drawTextEiiRK7QString(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: *mut c_void);
   // proto:  void QPainter::drawTiledPixmap(const QRectF & rect, const QPixmap & pm, const QPointF & offset);
-  fn _ZN8QPainter15drawTiledPixmapERK6QRectFRK7QPixmapRK7QPointF(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
+  fn _ZN8QPainter15drawTiledPixmapERK6QRectFRK7QPixmapRK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  void QPainter::setBackground(const QBrush & bg);
-  fn _ZN8QPainter13setBackgroundERK6QBrush(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN8QPainter13setBackgroundERK6QBrush(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QRect QPainter::boundingRect(const QRect & rect, int flags, const QString & text);
-  fn _ZN8QPainter12boundingRectERK5QRectiRK7QString(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
+  fn _ZN8QPainter12boundingRectERK5QRectiRK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
   // proto:  void QPainter::drawChord(const QRectF & rect, int a, int alen);
-  fn _ZN8QPainter9drawChordERK6QRectFii(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: c_int);
+  fn _ZN8QPainter9drawChordERK6QRectFii(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int, arg2: c_int);
   // proto:  void QPainter::drawImage(const QRectF & r, const QImage & image);
-  fn demth_ZN8QPainter9drawImageERK6QRectFRK6QImage(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn demth_ZN8QPainter9drawImageERK6QRectFRK6QImage(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QPainter::setClipping(bool enable);
-  fn _ZN8QPainter11setClippingEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN8QPainter11setClippingEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QPainter::setBrush(const QBrush & brush);
-  fn _ZN8QPainter8setBrushERK6QBrush(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN8QPainter8setBrushERK6QBrush(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPainter::setMatrix(const QMatrix & matrix, bool combine);
-  fn _ZN8QPainter9setMatrixERK7QMatrixb(qthis: *mut c_void, arg0: *mut c_void, arg1: c_char);
+  fn _ZN8QPainter9setMatrixERK7QMatrixb(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_char);
   // proto:  void QPainter::drawChord(const QRect & , int a, int alen);
-  fn demth_ZN8QPainter9drawChordERK5QRectii(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: c_int);
+  fn demth_ZN8QPainter9drawChordERK5QRectii(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int, arg2: c_int);
   // proto:  void QPainter::eraseRect(const QRectF & );
-  fn _ZN8QPainter9eraseRectERK6QRectF(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN8QPainter9eraseRectERK6QRectF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPainter::translate(const QPoint & offset);
-  fn demth_ZN8QPainter9translateERK6QPoint(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN8QPainter9translateERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QPainter::viewTransformEnabled();
-  fn _ZNK8QPainter20viewTransformEnabledEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK8QPainter20viewTransformEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QPainter::setPen(const QPen & pen);
-  fn _ZN8QPainter6setPenERK4QPen(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN8QPainter6setPenERK4QPen(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPainter::drawLines(const QLineF * lines, int lineCount);
-  fn _ZN8QPainter9drawLinesEPK6QLineFi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int);
+  fn _ZN8QPainter9drawLinesEPK6QLineFi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
   // proto:  void QPainter::setBrushOrigin(int x, int y);
-  fn demth_ZN8QPainter14setBrushOriginEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
+  fn demth_ZN8QPainter14setBrushOriginEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  const QTransform & QPainter::worldTransform();
-  fn _ZNK8QPainter14worldTransformEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK8QPainter14worldTransformEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QPainter::drawRects(const QRect * rects, int rectCount);
-  fn _ZN8QPainter9drawRectsEPK5QRecti(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int);
+  fn _ZN8QPainter9drawRectsEPK5QRecti(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
   // proto:  void QPainter::drawEllipse(const QPoint & center, int rx, int ry);
-  fn demth_ZN8QPainter11drawEllipseERK6QPointii(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: c_int);
+  fn demth_ZN8QPainter11drawEllipseERK6QPointii(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int, arg2: c_int);
   // proto:  void QPainter::drawArc(int x, int y, int w, int h, int a, int alen);
-  fn demth_ZN8QPainter7drawArcEiiiiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_int, arg5: c_int);
+  fn demth_ZN8QPainter7drawArcEiiiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_int, arg5: c_int);
   // proto:  void QPainter::drawPolyline(const QPolygonF & polyline);
-  fn demth_ZN8QPainter12drawPolylineERK9QPolygonF(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN8QPainter12drawPolylineERK9QPolygonF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QPainter::hasClipping();
-  fn _ZNK8QPainter11hasClippingEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK8QPainter11hasClippingEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QPainter::drawPixmap(const QRectF & targetRect, const QPixmap & pixmap, const QRectF & sourceRect);
-  fn _ZN8QPainter10drawPixmapERK6QRectFRK7QPixmapS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
+  fn _ZN8QPainter10drawPixmapERK6QRectFRK7QPixmapS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  void QPainter::drawStaticText(int left, int top, const QStaticText & staticText);
-  fn demth_ZN8QPainter14drawStaticTextEiiRK11QStaticText(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_void);
+  fn demth_ZN8QPainter14drawStaticTextEiiRK11QStaticText(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: *mut c_void);
   // proto:  void QPainter::strokePath(const QPainterPath & path, const QPen & pen);
-  fn _ZN8QPainter10strokePathERK12QPainterPathRK4QPen(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN8QPainter10strokePathERK12QPainterPathRK4QPen(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QPainter::drawPixmap(int x, int y, const QPixmap & pm, int sx, int sy, int sw, int sh);
-  fn demth_ZN8QPainter10drawPixmapEiiRK7QPixmapiiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_void, arg3: c_int, arg4: c_int, arg5: c_int, arg6: c_int);
+  fn demth_ZN8QPainter10drawPixmapEiiRK7QPixmapiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: *mut c_void, arg3: c_int, arg4: c_int, arg5: c_int, arg6: c_int);
   // proto:  void QPainter::drawRects(const QRectF * rects, int rectCount);
-  fn _ZN8QPainter9drawRectsEPK6QRectFi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int);
+  fn _ZN8QPainter9drawRectsEPK6QRectFi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
   // proto:  void QPainter::drawConvexPolygon(const QPoint * points, int pointCount);
-  fn _ZN8QPainter17drawConvexPolygonEPK6QPointi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int);
+  fn _ZN8QPainter17drawConvexPolygonEPK6QPointi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
   // proto:  void QPainter::drawPath(const QPainterPath & path);
-  fn _ZN8QPainter8drawPathERK12QPainterPath(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN8QPainter8drawPathERK12QPainterPath(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPainter::drawPixmap(int x, int y, const QPixmap & pm);
-  fn demth_ZN8QPainter10drawPixmapEiiRK7QPixmap(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_void);
+  fn demth_ZN8QPainter10drawPixmapEiiRK7QPixmap(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: *mut c_void);
   // proto:  QMatrix QPainter::combinedMatrix();
-  fn _ZNK8QPainter14combinedMatrixEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK8QPainter14combinedMatrixEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QPainter::setMatrixEnabled(bool enabled);
-  fn _ZN8QPainter16setMatrixEnabledEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN8QPainter16setMatrixEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QPainter::drawPolyline(const QPolygon & polygon);
-  fn demth_ZN8QPainter12drawPolylineERK8QPolygon(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN8QPainter12drawPolylineERK8QPolygon(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPainter::drawTiledPixmap(const QRect & , const QPixmap & , const QPoint & );
-  fn demth_ZN8QPainter15drawTiledPixmapERK5QRectRK7QPixmapRK6QPoint(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
+  fn demth_ZN8QPainter15drawTiledPixmapERK5QRectRK7QPixmapRK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  void QPainter::setFont(const QFont & f);
-  fn _ZN8QPainter7setFontERK5QFont(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN8QPainter7setFontERK5QFont(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPainter::drawChord(int x, int y, int w, int h, int a, int alen);
-  fn demth_ZN8QPainter9drawChordEiiiiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_int, arg5: c_int);
+  fn demth_ZN8QPainter9drawChordEiiiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_int, arg5: c_int);
   // proto:  void QPainter::drawPixmap(int x, int y, int w, int h, const QPixmap & pm);
-  fn demth_ZN8QPainter10drawPixmapEiiiiRK7QPixmap(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: *mut c_void);
+  fn demth_ZN8QPainter10drawPixmapEiiiiRK7QPixmap(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: *mut c_void);
   // proto:  void QPainter::setWindow(const QRect & window);
-  fn _ZN8QPainter9setWindowERK5QRect(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN8QPainter9setWindowERK5QRect(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMatrix & QPainter::deviceMatrix();
-  fn _ZNK8QPainter12deviceMatrixEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK8QPainter12deviceMatrixEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QPainter::drawLines(const QPointF * pointPairs, int lineCount);
-  fn _ZN8QPainter9drawLinesEPK7QPointFi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int);
+  fn _ZN8QPainter9drawLinesEPK7QPointFi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
   // proto:  void QPainter::drawPixmap(const QPointF & p, const QPixmap & pm);
-  fn _ZN8QPainter10drawPixmapERK7QPointFRK7QPixmap(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN8QPainter10drawPixmapERK7QPointFRK7QPixmap(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  QRect QPainter::boundingRect(int x, int y, int w, int h, int flags, const QString & text);
-  fn demth_ZN8QPainter12boundingRectEiiiiiRK7QString(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_int, arg5: *mut c_void) -> *mut c_void;
+  fn demth_ZN8QPainter12boundingRectEiiiiiRK7QString(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_int, arg5: *mut c_void) -> *mut c_void;
   // proto:  void QPainter::drawLines(const QLine * lines, int lineCount);
-  fn _ZN8QPainter9drawLinesEPK5QLinei(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int);
+  fn _ZN8QPainter9drawLinesEPK5QLinei(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
   // proto:  void QPainter::drawPie(int x, int y, int w, int h, int a, int alen);
-  fn demth_ZN8QPainter7drawPieEiiiiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_int, arg5: c_int);
+  fn demth_ZN8QPainter7drawPieEiiiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_int, arg5: c_int);
   // proto:  void QPainter::drawPixmap(const QPoint & p, const QPixmap & pm, const QRect & sr);
-  fn demth_ZN8QPainter10drawPixmapERK6QPointRK7QPixmapRK5QRect(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
+  fn demth_ZN8QPainter10drawPixmapERK6QPointRK7QPixmapRK5QRect(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  void QPainter::drawStaticText(const QPointF & topLeftPosition, const QStaticText & staticText);
-  fn _ZN8QPainter14drawStaticTextERK7QPointFRK11QStaticText(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN8QPainter14drawStaticTextERK7QPointFRK11QStaticText(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QPainter::setWorldMatrixEnabled(bool enabled);
-  fn _ZN8QPainter21setWorldMatrixEnabledEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN8QPainter21setWorldMatrixEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QPainter::QPainter(const QPainter & );
   fn dector_ZN8QPainterC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN8QPainterC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN8QPainterC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPainter::drawPoints(const QPolygon & points);
-  fn demth_ZN8QPainter10drawPointsERK8QPolygon(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN8QPainter10drawPointsERK8QPolygon(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPainter::drawPicture(const QPoint & p, const QPicture & picture);
-  fn demth_ZN8QPainter11drawPictureERK6QPointRK8QPicture(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn demth_ZN8QPainter11drawPictureERK6QPointRK8QPicture(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QPainter::drawRect(int x1, int y1, int w, int h);
-  fn demth_ZN8QPainter8drawRectEiiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
+  fn demth_ZN8QPainter8drawRectEiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
   // proto:  void QPainter::drawEllipse(const QRectF & r);
-  fn _ZN8QPainter11drawEllipseERK6QRectF(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN8QPainter11drawEllipseERK6QRectF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPainter::drawRect(const QRectF & rect);
-  fn demth_ZN8QPainter8drawRectERK6QRectF(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN8QPainter8drawRectERK6QRectF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPainter::drawPoints(const QPointF * points, int pointCount);
-  fn _ZN8QPainter10drawPointsEPK7QPointFi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int);
+  fn _ZN8QPainter10drawPointsEPK7QPointFi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
   // proto:  QRegion QPainter::clipRegion();
-  fn _ZNK8QPainter10clipRegionEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK8QPainter10clipRegionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QPainter::drawText(const QRectF & r, int flags, const QString & text, QRectF * br);
-  fn _ZN8QPainter8drawTextERK6QRectFiRK7QStringPS0_(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void, arg3: *mut c_void);
+  fn _ZN8QPainter8drawTextERK6QRectFiRK7QStringPS0_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void, arg3: *mut c_void);
   // proto:  void QPainter::drawLine(const QLineF & line);
-  fn demth_ZN8QPainter8drawLineERK6QLineF(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN8QPainter8drawLineERK6QLineF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPainter::drawLine(const QPointF & p1, const QPointF & p2);
-  fn demth_ZN8QPainter8drawLineERK7QPointFS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn demth_ZN8QPainter8drawLineERK7QPointFS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QPainter::drawPixmap(const QRect & r, const QPixmap & pm);
-  fn demth_ZN8QPainter10drawPixmapERK5QRectRK7QPixmap(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn demth_ZN8QPainter10drawPixmapERK5QRectRK7QPixmap(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QPainter::drawTiledPixmap(int x, int y, int w, int h, const QPixmap & , int sx, int sy);
-  fn demth_ZN8QPainter15drawTiledPixmapEiiiiRK7QPixmapii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: *mut c_void, arg5: c_int, arg6: c_int);
+  fn demth_ZN8QPainter15drawTiledPixmapEiiiiRK7QPixmapii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: *mut c_void, arg5: c_int, arg6: c_int);
   // proto:  QPaintDevice * QPainter::device();
-  fn _ZNK8QPainter6deviceEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK8QPainter6deviceEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QPainter::setViewport(const QRect & viewport);
-  fn _ZN8QPainter11setViewportERK5QRect(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN8QPainter11setViewportERK5QRect(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPainter::fillRect(const QRect & , const QColor & color);
-  fn _ZN8QPainter8fillRectERK5QRectRK6QColor(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN8QPainter8fillRectERK5QRectRK6QColor(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QPainter::setBrushOrigin(const QPointF & );
-  fn _ZN8QPainter14setBrushOriginERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN8QPainter14setBrushOriginERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPainter::drawTextItem(int x, int y, const QTextItem & ti);
-  fn demth_ZN8QPainter12drawTextItemEiiRK9QTextItem(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_void);
+  fn demth_ZN8QPainter12drawTextItemEiiRK9QTextItem(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: *mut c_void);
   // proto:  void QPainter::QPainter(QPaintDevice * );
   fn dector_ZN8QPainterC1EP12QPaintDevice(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN8QPainterC1EP12QPaintDevice(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN8QPainterC1EP12QPaintDevice(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPainter::drawPixmap(int x, int y, int w, int h, const QPixmap & pm, int sx, int sy, int sw, int sh);
-  fn demth_ZN8QPainter10drawPixmapEiiiiRK7QPixmapiiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: *mut c_void, arg5: c_int, arg6: c_int, arg7: c_int, arg8: c_int);
+  fn demth_ZN8QPainter10drawPixmapEiiiiRK7QPixmapiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: *mut c_void, arg5: c_int, arg6: c_int, arg7: c_int, arg8: c_int);
   // proto:  void QPainter::drawImage(const QPoint & p, const QImage & image);
-  fn demth_ZN8QPainter9drawImageERK6QPointRK6QImage(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn demth_ZN8QPainter9drawImageERK6QPointRK6QImage(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QPainter::drawPie(const QRect & , int a, int alen);
-  fn demth_ZN8QPainter7drawPieERK5QRectii(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: c_int);
+  fn demth_ZN8QPainter7drawPieERK5QRectii(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int, arg2: c_int);
   // proto:  void QPainter::drawTextItem(const QPoint & p, const QTextItem & ti);
-  fn demth_ZN8QPainter12drawTextItemERK6QPointRK9QTextItem(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn demth_ZN8QPainter12drawTextItemERK6QPointRK9QTextItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QPainter::drawLines(const QPoint * pointPairs, int lineCount);
-  fn _ZN8QPainter9drawLinesEPK6QPointi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int);
+  fn _ZN8QPainter9drawLinesEPK6QPointi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
   // proto:  void QPainter::drawPicture(int x, int y, const QPicture & picture);
-  fn demth_ZN8QPainter11drawPictureEiiRK8QPicture(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_void);
+  fn demth_ZN8QPainter11drawPictureEiiRK8QPicture(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: *mut c_void);
   // proto:  void QPainter::save();
-  fn _ZN8QPainter4saveEv(qthis: *mut c_void);
+  fn _ZN8QPainter4saveEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QPainter::translate(qreal dx, qreal dy);
-  fn demth_ZN8QPainter9translateEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double);
+  fn demth_ZN8QPainter9translateEdd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double);
   // proto:  QTransform QPainter::combinedTransform();
-  fn _ZNK8QPainter17combinedTransformEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK8QPainter17combinedTransformEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QPainter::end();
-  fn _ZN8QPainter3endEv(qthis: *mut c_void) -> c_char;
+  fn _ZN8QPainter3endEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QPainter::setViewport(int x, int y, int w, int h);
-  fn demth_ZN8QPainter11setViewportEiiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
+  fn demth_ZN8QPainter11setViewportEiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
   // proto:  void QPainter::drawRoundRect(const QRect & r, int xround, int yround);
-  fn demth_ZN8QPainter13drawRoundRectERK5QRectii(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: c_int);
+  fn demth_ZN8QPainter13drawRoundRectERK5QRectii(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int, arg2: c_int);
   // proto:  void QPainter::setWorldTransform(const QTransform & matrix, bool combine);
-  fn _ZN8QPainter17setWorldTransformERK10QTransformb(qthis: *mut c_void, arg0: *mut c_void, arg1: c_char);
+  fn _ZN8QPainter17setWorldTransformERK10QTransformb(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_char);
   // proto:  void QPainter::drawPoints(const QPolygonF & points);
-  fn demth_ZN8QPainter10drawPointsERK9QPolygonF(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN8QPainter10drawPointsERK9QPolygonF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPainter::restore();
-  fn _ZN8QPainter7restoreEv(qthis: *mut c_void);
+  fn _ZN8QPainter7restoreEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QPainter::drawStaticText(const QPoint & topLeftPosition, const QStaticText & staticText);
-  fn demth_ZN8QPainter14drawStaticTextERK6QPointRK11QStaticText(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn demth_ZN8QPainter14drawStaticTextERK6QPointRK11QStaticText(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  QRectF QPainter::boundingRect(const QRectF & rect, int flags, const QString & text);
-  fn _ZN8QPainter12boundingRectERK6QRectFiRK7QString(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
+  fn _ZN8QPainter12boundingRectERK6QRectFiRK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
   // proto:  void QPainter::fillRect(int x, int y, int w, int h, const QBrush & );
-  fn demth_ZN8QPainter8fillRectEiiiiRK6QBrush(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: *mut c_void);
+  fn demth_ZN8QPainter8fillRectEiiiiRK6QBrush(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: *mut c_void);
   // proto:  void QPainter::drawRoundRect(const QRectF & r, int xround, int yround);
-  fn _ZN8QPainter13drawRoundRectERK6QRectFii(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: c_int);
+  fn _ZN8QPainter13drawRoundRectERK6QRectFii(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int, arg2: c_int);
   // proto:  void QPainter::drawPoint(const QPoint & p);
-  fn demth_ZN8QPainter9drawPointERK6QPoint(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN8QPainter9drawPointERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static QPaintDevice * QPainter::redirected(const QPaintDevice * device, QPoint * offset);
   fn _ZN8QPainter10redirectedEPK12QPaintDeviceP6QPoint(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  void QPainter::shear(qreal sh, qreal sv);
-  fn _ZN8QPainter5shearEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double);
+  fn _ZN8QPainter5shearEdd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double);
   // proto:  void QPainter::drawText(const QRect & r, int flags, const QString & text, QRect * br);
-  fn _ZN8QPainter8drawTextERK5QRectiRK7QStringPS0_(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void, arg3: *mut c_void);
+  fn _ZN8QPainter8drawTextERK5QRectiRK7QStringPS0_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void, arg3: *mut c_void);
   // proto:  const QFont & QPainter::font();
-  fn _ZNK8QPainter4fontEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK8QPainter4fontEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  const QTransform & QPainter::deviceTransform();
-  fn _ZNK8QPainter15deviceTransformEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK8QPainter15deviceTransformEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QPainter::eraseRect(int x, int y, int w, int h);
-  fn demth_ZN8QPainter9eraseRectEiiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
+  fn demth_ZN8QPainter9eraseRectEiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
   // proto:  void QPainter::resetMatrix();
-  fn _ZN8QPainter11resetMatrixEv(qthis: *mut c_void);
+  fn _ZN8QPainter11resetMatrixEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QPainter::drawPolyline(const QPoint * points, int pointCount);
-  fn _ZN8QPainter12drawPolylineEPK6QPointi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int);
+  fn _ZN8QPainter12drawPolylineEPK6QPointi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
   // proto:  QPaintEngine * QPainter::paintEngine();
-  fn _ZNK8QPainter11paintEngineEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK8QPainter11paintEngineEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QPainter::drawEllipse(const QRect & r);
-  fn _ZN8QPainter11drawEllipseERK5QRect(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN8QPainter11drawEllipseERK5QRect(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPainter::drawLine(const QLine & line);
-  fn demth_ZN8QPainter8drawLineERK5QLine(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN8QPainter8drawLineERK5QLine(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QPainter::isActive();
-  fn _ZNK8QPainter8isActiveEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK8QPainter8isActiveEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QPainter::drawArc(const QRectF & rect, int a, int alen);
-  fn _ZN8QPainter7drawArcERK6QRectFii(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: c_int);
+  fn _ZN8QPainter7drawArcERK6QRectFii(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int, arg2: c_int);
   // proto: static void QPainter::restoreRedirected(const QPaintDevice * device);
   fn _ZN8QPainter17restoreRedirectedEPK12QPaintDevice(arg0: *mut c_void);
   // proto:  void QPainter::drawPixmap(const QPointF & p, const QPixmap & pm, const QRectF & sr);
-  fn demth_ZN8QPainter10drawPixmapERK7QPointFRK7QPixmapRK6QRectF(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
+  fn demth_ZN8QPainter10drawPixmapERK7QPointFRK7QPixmapRK6QRectF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  void QPainter::drawEllipse(const QPointF & center, qreal rx, qreal ry);
-  fn demth_ZN8QPainter11drawEllipseERK7QPointFdd(qthis: *mut c_void, arg0: *mut c_void, arg1: c_double, arg2: c_double);
+  fn demth_ZN8QPainter11drawEllipseERK7QPointFdd(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_double, arg2: c_double);
   // proto:  void QPainter::drawConvexPolygon(const QPointF * points, int pointCount);
-  fn _ZN8QPainter17drawConvexPolygonEPK7QPointFi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int);
+  fn _ZN8QPainter17drawConvexPolygonEPK7QPointFi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
   // proto:  void QPainter::setBrushOrigin(const QPoint & );
-  fn demth_ZN8QPainter14setBrushOriginERK6QPoint(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN8QPainter14setBrushOriginERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPainter::drawText(const QRectF & r, const QString & text, const QTextOption & o);
-  fn _ZN8QPainter8drawTextERK6QRectFRK7QStringRK11QTextOption(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
+  fn _ZN8QPainter8drawTextERK6QRectFRK7QStringRK11QTextOption(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  bool QPainter::worldMatrixEnabled();
-  fn _ZNK8QPainter18worldMatrixEnabledEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK8QPainter18worldMatrixEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QPainter::drawPixmap(const QPoint & p, const QPixmap & pm);
-  fn demth_ZN8QPainter10drawPixmapERK6QPointRK7QPixmap(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn demth_ZN8QPainter10drawPixmapERK6QPointRK7QPixmap(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QPainter::drawLine(int x1, int y1, int x2, int y2);
-  fn demth_ZN8QPainter8drawLineEiiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
+  fn demth_ZN8QPainter8drawLineEiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
   // proto:  void QPainter::drawPoint(int x, int y);
-  fn demth_ZN8QPainter9drawPointEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
+  fn demth_ZN8QPainter9drawPointEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  const QTransform & QPainter::transform();
-  fn _ZNK8QPainter9transformEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK8QPainter9transformEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto: static void QPainter::setRedirected(const QPaintDevice * device, QPaintDevice * replacement, const QPoint & offset);
   fn _ZN8QPainter13setRedirectedEPK12QPaintDevicePS0_RK6QPoint(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  void QPainter::drawPixmap(const QRect & targetRect, const QPixmap & pixmap, const QRect & sourceRect);
-  fn demth_ZN8QPainter10drawPixmapERK5QRectRK7QPixmapS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
+  fn demth_ZN8QPainter10drawPixmapERK5QRectRK7QPixmapS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  QFontMetrics QPainter::fontMetrics();
-  fn _ZNK8QPainter11fontMetricsEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK8QPainter11fontMetricsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QPainter::drawGlyphRun(const QPointF & position, const QGlyphRun & glyphRun);
-  fn _ZN8QPainter12drawGlyphRunERK7QPointFRK9QGlyphRun(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN8QPainter12drawGlyphRunERK7QPointFRK9QGlyphRun(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QPainter::fillRect(const QRectF & , const QBrush & );
-  fn _ZN8QPainter8fillRectERK6QRectFRK6QBrush(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN8QPainter8fillRectERK6QRectFRK6QBrush(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QPainter::resetTransform();
-  fn _ZN8QPainter14resetTransformEv(qthis: *mut c_void);
+  fn _ZN8QPainter14resetTransformEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QPainter::fillRect(const QRect & , const QBrush & );
-  fn _ZN8QPainter8fillRectERK5QRectRK6QBrush(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN8QPainter8fillRectERK5QRectRK6QBrush(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  const QBrush & QPainter::brush();
-  fn _ZNK8QPainter5brushEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK8QPainter5brushEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QPainter::~QPainter();
-  fn _ZN8QPainterD0Ev(qthis: *mut c_void);
+  fn _ZN8QPainterD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QPainter::begin(QPaintDevice * );
-  fn _ZN8QPainter5beginEP12QPaintDevice(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn _ZN8QPainter5beginEP12QPaintDevice(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  void QPainter::drawRect(const QRect & rect);
-  fn demth_ZN8QPainter8drawRectERK5QRect(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN8QPainter8drawRectERK5QRect(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPainter::drawTextItem(const QPointF & p, const QTextItem & ti);
-  fn _ZN8QPainter12drawTextItemERK7QPointFRK9QTextItem(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN8QPainter12drawTextItemERK7QPointFRK9QTextItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QPainter::scale(qreal sx, qreal sy);
-  fn _ZN8QPainter5scaleEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double);
+  fn _ZN8QPainter5scaleEdd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double);
   // proto:  void QPainter::setWorldMatrix(const QMatrix & matrix, bool combine);
-  fn _ZN8QPainter14setWorldMatrixERK7QMatrixb(qthis: *mut c_void, arg0: *mut c_void, arg1: c_char);
+  fn _ZN8QPainter14setWorldMatrixERK7QMatrixb(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_char);
   // proto:  QPainterPath QPainter::clipPath();
-  fn _ZNK8QPainter8clipPathEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK8QPainter8clipPathEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QPoint QPainter::brushOrigin();
-  fn _ZNK8QPainter11brushOriginEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK8QPainter11brushOriginEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QPainter::drawConvexPolygon(const QPolygonF & polygon);
-  fn demth_ZN8QPainter17drawConvexPolygonERK9QPolygonF(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN8QPainter17drawConvexPolygonERK9QPolygonF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPainter::drawEllipse(int x, int y, int w, int h);
-  fn demth_ZN8QPainter11drawEllipseEiiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
+  fn demth_ZN8QPainter11drawEllipseEiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
   // proto:  void QPainter::drawConvexPolygon(const QPolygon & polygon);
-  fn demth_ZN8QPainter17drawConvexPolygonERK8QPolygon(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN8QPainter17drawConvexPolygonERK8QPolygon(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPainter::drawPoints(const QPoint * points, int pointCount);
-  fn _ZN8QPainter10drawPointsEPK6QPointi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int);
+  fn _ZN8QPainter10drawPointsEPK6QPointi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
   // proto:  const QBrush & QPainter::background();
-  fn _ZNK8QPainter10backgroundEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK8QPainter10backgroundEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QPainter::drawRoundRect(int x, int y, int w, int h, int , int );
-  fn demth_ZN8QPainter13drawRoundRectEiiiiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_int, arg5: c_int);
+  fn demth_ZN8QPainter13drawRoundRectEiiiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_int, arg5: c_int);
   // proto:  QRect QPainter::viewport();
-  fn _ZNK8QPainter8viewportEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK8QPainter8viewportEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QPainter::drawArc(const QRect & , int a, int alen);
-  fn demth_ZN8QPainter7drawArcERK5QRectii(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: c_int);
+  fn demth_ZN8QPainter7drawArcERK5QRectii(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int, arg2: c_int);
   // proto:  void QPainter::fillPath(const QPainterPath & path, const QBrush & brush);
-  fn _ZN8QPainter8fillPathERK12QPainterPathRK6QBrush(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN8QPainter8fillPathERK12QPainterPathRK6QBrush(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QPainter::drawText(int x, int y, int w, int h, int flags, const QString & text, QRect * br);
-  fn demth_ZN8QPainter8drawTextEiiiiiRK7QStringP5QRect(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_int, arg5: *mut c_void, arg6: *mut c_void);
+  fn demth_ZN8QPainter8drawTextEiiiiiRK7QStringP5QRect(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_int, arg5: *mut c_void, arg6: *mut c_void);
   // proto:  bool QPainter::matrixEnabled();
-  fn _ZNK8QPainter13matrixEnabledEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK8QPainter13matrixEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QPainter::drawPolyline(const QPointF * points, int pointCount);
-  fn _ZN8QPainter12drawPolylineEPK7QPointFi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int);
+  fn _ZN8QPainter12drawPolylineEPK7QPointFi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
   // proto:  void QPainter::setTransform(const QTransform & transform, bool combine);
-  fn _ZN8QPainter12setTransformERK10QTransformb(qthis: *mut c_void, arg0: *mut c_void, arg1: c_char);
+  fn _ZN8QPainter12setTransformERK10QTransformb(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_char);
   // proto:  void QPainter::setPen(const QColor & color);
-  fn _ZN8QPainter6setPenERK6QColor(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN8QPainter6setPenERK6QColor(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPainter::eraseRect(const QRect & );
-  fn demth_ZN8QPainter9eraseRectERK5QRect(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN8QPainter9eraseRectERK5QRect(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QRect QPainter::window();
-  fn _ZNK8QPainter6windowEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK8QPainter6windowEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QPainter::drawImage(const QRect & r, const QImage & image);
-  fn demth_ZN8QPainter9drawImageERK5QRectRK6QImage(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn demth_ZN8QPainter9drawImageERK5QRectRK6QImage(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QPainter::initFrom(const QPaintDevice * device);
-  fn _ZN8QPainter8initFromEPK12QPaintDevice(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN8QPainter8initFromEPK12QPaintDevice(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QFontInfo QPainter::fontInfo();
-  fn _ZNK8QPainter8fontInfoEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK8QPainter8fontInfoEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QPainter::endNativePainting();
-  fn _ZN8QPainter17endNativePaintingEv(qthis: *mut c_void);
+  fn _ZN8QPainter17endNativePaintingEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QPainter::setViewTransformEnabled(bool enable);
-  fn _ZN8QPainter23setViewTransformEnabledEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN8QPainter23setViewTransformEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QPainter::drawPoint(const QPointF & pt);
-  fn demth_ZN8QPainter9drawPointERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN8QPainter9drawPointERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPainter::setOpacity(qreal opacity);
-  fn _ZN8QPainter10setOpacityEd(qthis: *mut c_void, arg0: c_double);
+  fn _ZN8QPainter10setOpacityEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QPainter::fillRect(const QRectF & , const QColor & color);
-  fn _ZN8QPainter8fillRectERK6QRectFRK6QColor(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN8QPainter8fillRectERK6QRectFRK6QColor(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QPainter::QPainter();
   fn dector_ZN8QPainterC1Ev() -> *mut c_void;
-  fn _ZN8QPainterC1Ev(qthis: *mut c_void);
+  fn _ZN8QPainterC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QPainter::translate(const QPointF & offset);
-  fn _ZN8QPainter9translateERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN8QPainter9translateERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPainter::drawText(const QPointF & p, const QString & s);
-  fn _ZN8QPainter8drawTextERK7QPointFRK7QString(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN8QPainter8drawTextERK7QPointFRK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QPainter::drawImage(const QPointF & p, const QImage & image);
-  fn _ZN8QPainter9drawImageERK7QPointFRK6QImage(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN8QPainter9drawImageERK7QPointFRK6QImage(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  const QPen & QPainter::pen();
-  fn _ZNK8QPainter3penEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK8QPainter3penEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QPainter::rotate(qreal a);
-  fn _ZN8QPainter6rotateEd(qthis: *mut c_void, arg0: c_double);
+  fn _ZN8QPainter6rotateEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  QRectF QPainter::clipBoundingRect();
-  fn _ZNK8QPainter16clipBoundingRectEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK8QPainter16clipBoundingRectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QPainter::drawLine(const QPoint & p1, const QPoint & p2);
-  fn demth_ZN8QPainter8drawLineERK6QPointS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn demth_ZN8QPainter8drawLineERK6QPointS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QPainter::drawPie(const QRectF & rect, int a, int alen);
-  fn _ZN8QPainter7drawPieERK6QRectFii(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: c_int);
+  fn _ZN8QPainter7drawPieERK6QRectFii(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int, arg2: c_int);
   // proto:  void QPainter::drawText(const QPoint & p, const QString & s);
-  fn demth_ZN8QPainter8drawTextERK6QPointRK7QString(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn demth_ZN8QPainter8drawTextERK6QPointRK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QPainter::setWindow(int x, int y, int w, int h);
-  fn demth_ZN8QPainter9setWindowEiiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
+  fn demth_ZN8QPainter9setWindowEiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
   // proto:  void QPainter::beginNativePainting();
-  fn _ZN8QPainter19beginNativePaintingEv(qthis: *mut c_void);
+  fn _ZN8QPainter19beginNativePaintingEv(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QPainter)=1
+#[derive(Default)]
 pub struct QPainter {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QPainter {
-  pub fn inheritFrom(qthis: *mut c_void) -> QPainter {
-    return QPainter{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QPainter {
+    return QPainter{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  QRectF QPainter::boundingRect(const QRectF & rect, const QString & text, const QTextOption & o);
@@ -433,7 +434,7 @@ impl<'a> /*trait*/ QPainter_boundingRect<QRectF> for (&'a QRectF, &'a QString, &
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN8QPainter12boundingRectERK6QRectFRK7QStringRK11QTextOption(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QRectF::inheritFrom(ret);
+    let mut ret1 = QRectF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -481,7 +482,7 @@ impl<'a> /*trait*/ QPainter_worldMatrix<QMatrix> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPainter11worldMatrixEv()};
     let mut ret = unsafe {_ZNK8QPainter11worldMatrixEv(rsthis.qclsinst)};
-    let mut ret1 = QMatrix::inheritFrom(ret);
+    let mut ret1 = QMatrix::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -558,7 +559,7 @@ impl<'a> /*trait*/ QPainter_matrix<QMatrix> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPainter6matrixEv()};
     let mut ret = unsafe {_ZNK8QPainter6matrixEv(rsthis.qclsinst)};
-    let mut ret1 = QMatrix::inheritFrom(ret);
+    let mut ret1 = QMatrix::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -657,7 +658,7 @@ impl<'a> /*trait*/ QPainter_boundingRect<QRect> for (&'a QRect, i32, &'a QString
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN8QPainter12boundingRectERK5QRectiRK7QString(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QRect::inheritFrom(ret);
+    let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -953,7 +954,7 @@ impl<'a> /*trait*/ QPainter_worldTransform<QTransform> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPainter14worldTransformEv()};
     let mut ret = unsafe {_ZNK8QPainter14worldTransformEv(rsthis.qclsinst)};
-    let mut ret1 = QTransform::inheritFrom(ret);
+    let mut ret1 = QTransform::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1263,7 +1264,7 @@ impl<'a> /*trait*/ QPainter_combinedMatrix<QMatrix> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPainter14combinedMatrixEv()};
     let mut ret = unsafe {_ZNK8QPainter14combinedMatrixEv(rsthis.qclsinst)};
-    let mut ret1 = QMatrix::inheritFrom(ret);
+    let mut ret1 = QMatrix::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1411,7 +1412,7 @@ impl<'a> /*trait*/ QPainter_deviceMatrix<QMatrix> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPainter12deviceMatrixEv()};
     let mut ret = unsafe {_ZNK8QPainter12deviceMatrixEv(rsthis.qclsinst)};
-    let mut ret1 = QMatrix::inheritFrom(ret);
+    let mut ret1 = QMatrix::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1453,7 +1454,7 @@ impl<'a> /*trait*/ QPainter_boundingRect<QRect> for (i32, i32, i32, i32, i32, &'
     let arg4 = self.4  as c_int;
     let arg5 = self.5.qclsinst  as *mut c_void;
     let mut ret = unsafe {demth_ZN8QPainter12boundingRectEiiiiiRK7QString(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)};
-    let mut ret1 = QRect::inheritFrom(ret);
+    let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1566,11 +1567,11 @@ impl<'a> /*trait*/ QPainter_New for (&'a QPainter) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPainterC1ERKS_()};
     let ctysz: c_int = unsafe{QPainter_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN8QPainterC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN8QPainterC1ERKS_(arg0)};
-    let rsthis = QPainter{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN8QPainterC1ERKS_(arg0)} as u64;
+    let rsthis = QPainter{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1689,7 +1690,7 @@ impl<'a> /*trait*/ QPainter_clipRegion<QRegion> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPainter10clipRegionEv()};
     let mut ret = unsafe {_ZNK8QPainter10clipRegionEv(rsthis.qclsinst)};
-    let mut ret1 = QRegion::inheritFrom(ret);
+    let mut ret1 = QRegion::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1791,7 +1792,7 @@ impl<'a> /*trait*/ QPainter_device<QPaintDevice> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPainter6deviceEv()};
     let mut ret = unsafe {_ZNK8QPainter6deviceEv(rsthis.qclsinst)};
-    let mut ret1 = QPaintDevice::inheritFrom(ret);
+    let mut ret1 = QPaintDevice::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1874,11 +1875,11 @@ impl<'a> /*trait*/ QPainter_New for (&'a QPaintDevice) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPainterC1EP12QPaintDevice()};
     let ctysz: c_int = unsafe{QPainter_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN8QPainterC1EP12QPaintDevice(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN8QPainterC1EP12QPaintDevice(arg0)};
-    let rsthis = QPainter{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN8QPainterC1EP12QPaintDevice(arg0)} as u64;
+    let rsthis = QPainter{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -2017,7 +2018,7 @@ impl<'a> /*trait*/ QPainter_combinedTransform<QTransform> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPainter17combinedTransformEv()};
     let mut ret = unsafe {_ZNK8QPainter17combinedTransformEv(rsthis.qclsinst)};
-    let mut ret1 = QTransform::inheritFrom(ret);
+    let mut ret1 = QTransform::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2163,7 +2164,7 @@ impl<'a> /*trait*/ QPainter_boundingRect<QRectF> for (&'a QRectF, i32, &'a QStri
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN8QPainter12boundingRectERK6QRectFiRK7QString(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QRectF::inheritFrom(ret);
+    let mut ret1 = QRectF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2240,7 +2241,7 @@ impl<'a> /*trait*/ QPainter_redirected_s<QPaintDevice> for (&'a QPaintDevice, &'
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN8QPainter10redirectedEPK12QPaintDeviceP6QPoint(arg0, arg1)};
-    let mut ret1 = QPaintDevice::inheritFrom(ret);
+    let mut ret1 = QPaintDevice::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2302,7 +2303,7 @@ impl<'a> /*trait*/ QPainter_font<QFont> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPainter4fontEv()};
     let mut ret = unsafe {_ZNK8QPainter4fontEv(rsthis.qclsinst)};
-    let mut ret1 = QFont::inheritFrom(ret);
+    let mut ret1 = QFont::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2326,7 +2327,7 @@ impl<'a> /*trait*/ QPainter_deviceTransform<QTransform> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPainter15deviceTransformEv()};
     let mut ret = unsafe {_ZNK8QPainter15deviceTransformEv(rsthis.qclsinst)};
-    let mut ret1 = QTransform::inheritFrom(ret);
+    let mut ret1 = QTransform::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2398,7 +2399,7 @@ impl<'a> /*trait*/ QPainter_paintEngine<QPaintEngine> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPainter11paintEngineEv()};
     let mut ret = unsafe {_ZNK8QPainter11paintEngineEv(rsthis.qclsinst)};
-    let mut ret1 = QPaintEngine::inheritFrom(ret);
+    let mut ret1 = QPaintEngine::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2626,7 +2627,7 @@ impl<'a> /*trait*/ QPainter_transform<QTransform> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPainter9transformEv()};
     let mut ret = unsafe {_ZNK8QPainter9transformEv(rsthis.qclsinst)};
-    let mut ret1 = QTransform::inheritFrom(ret);
+    let mut ret1 = QTransform::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2688,7 +2689,7 @@ impl<'a> /*trait*/ QPainter_fontMetrics<QFontMetrics> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPainter11fontMetricsEv()};
     let mut ret = unsafe {_ZNK8QPainter11fontMetricsEv(rsthis.qclsinst)};
-    let mut ret1 = QFontMetrics::inheritFrom(ret);
+    let mut ret1 = QFontMetrics::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2782,7 +2783,7 @@ impl<'a> /*trait*/ QPainter_brush<QBrush> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPainter5brushEv()};
     let mut ret = unsafe {_ZNK8QPainter5brushEv(rsthis.qclsinst)};
-    let mut ret1 = QBrush::inheritFrom(ret);
+    let mut ret1 = QBrush::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2923,7 +2924,7 @@ impl<'a> /*trait*/ QPainter_clipPath<QPainterPath> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPainter8clipPathEv()};
     let mut ret = unsafe {_ZNK8QPainter8clipPathEv(rsthis.qclsinst)};
-    let mut ret1 = QPainterPath::inheritFrom(ret);
+    let mut ret1 = QPainterPath::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2947,7 +2948,7 @@ impl<'a> /*trait*/ QPainter_brushOrigin<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPainter11brushOriginEv()};
     let mut ret = unsafe {_ZNK8QPainter11brushOriginEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint::inheritFrom(ret);
+    let mut ret1 = QPoint::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -3019,7 +3020,7 @@ impl<'a> /*trait*/ QPainter_background<QBrush> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPainter10backgroundEv()};
     let mut ret = unsafe {_ZNK8QPainter10backgroundEv(rsthis.qclsinst)};
-    let mut ret1 = QBrush::inheritFrom(ret);
+    let mut ret1 = QBrush::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -3059,7 +3060,7 @@ impl<'a> /*trait*/ QPainter_viewport<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPainter8viewportEv()};
     let mut ret = unsafe {_ZNK8QPainter8viewportEv(rsthis.qclsinst)};
-    let mut ret1 = QRect::inheritFrom(ret);
+    let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -3218,7 +3219,7 @@ impl<'a> /*trait*/ QPainter_window<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPainter6windowEv()};
     let mut ret = unsafe {_ZNK8QPainter6windowEv(rsthis.qclsinst)};
-    let mut ret1 = QRect::inheritFrom(ret);
+    let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -3277,7 +3278,7 @@ impl<'a> /*trait*/ QPainter_fontInfo<QFontInfo> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPainter8fontInfoEv()};
     let mut ret = unsafe {_ZNK8QPainter8fontInfoEv(rsthis.qclsinst)};
-    let mut ret1 = QFontInfo::inheritFrom(ret);
+    let mut ret1 = QFontInfo::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -3380,10 +3381,10 @@ impl<'a> /*trait*/ QPainter_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPainterC1Ev()};
     let ctysz: c_int = unsafe{QPainter_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN8QPainterC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN8QPainterC1Ev()};
-    let rsthis = QPainter{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN8QPainterC1Ev()} as u64;
+    let rsthis = QPainter{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -3442,7 +3443,7 @@ impl<'a> /*trait*/ QPainter_pen<QPen> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPainter3penEv()};
     let mut ret = unsafe {_ZNK8QPainter3penEv(rsthis.qclsinst)};
-    let mut ret1 = QPen::inheritFrom(ret);
+    let mut ret1 = QPen::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -3489,7 +3490,7 @@ impl<'a> /*trait*/ QPainter_clipBoundingRect<QRectF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPainter16clipBoundingRectEv()};
     let mut ret = unsafe {_ZNK8QPainter16clipBoundingRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRectF::inheritFrom(ret);
+    let mut ret1 = QRectF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }

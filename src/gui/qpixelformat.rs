@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtGui/qpixelformat.h
 // dst-file: /src/gui/qpixelformat.rs
 //
@@ -30,50 +30,51 @@ use std::ops::Deref;
 extern {
   fn QPixelFormat_Class_Size() -> c_int;
   // proto:  uchar QPixelFormat::blackSize();
-  fn _ZNK12QPixelFormat9blackSizeEv(qthis: *mut c_void) -> c_uchar;
+  fn _ZNK12QPixelFormat9blackSizeEv(qthis: u64 /* *mut c_void*/) -> c_uchar;
   // proto:  void QPixelFormat::QPixelFormat();
   fn dector_ZN12QPixelFormatC1Ev() -> *mut c_void;
-  fn _ZN12QPixelFormatC1Ev(qthis: *mut c_void);
+  fn _ZN12QPixelFormatC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  uchar QPixelFormat::subEnum();
-  fn _ZNK12QPixelFormat7subEnumEv(qthis: *mut c_void) -> c_uchar;
+  fn _ZNK12QPixelFormat7subEnumEv(qthis: u64 /* *mut c_void*/) -> c_uchar;
   // proto:  uchar QPixelFormat::greenSize();
-  fn _ZNK12QPixelFormat9greenSizeEv(qthis: *mut c_void) -> c_uchar;
+  fn _ZNK12QPixelFormat9greenSizeEv(qthis: u64 /* *mut c_void*/) -> c_uchar;
   // proto:  uchar QPixelFormat::lightnessSize();
-  fn _ZNK12QPixelFormat13lightnessSizeEv(qthis: *mut c_void) -> c_uchar;
+  fn _ZNK12QPixelFormat13lightnessSizeEv(qthis: u64 /* *mut c_void*/) -> c_uchar;
   // proto:  uchar QPixelFormat::bitsPerPixel();
-  fn _ZNK12QPixelFormat12bitsPerPixelEv(qthis: *mut c_void) -> c_uchar;
+  fn _ZNK12QPixelFormat12bitsPerPixelEv(qthis: u64 /* *mut c_void*/) -> c_uchar;
   // proto:  uchar QPixelFormat::alphaSize();
-  fn _ZNK12QPixelFormat9alphaSizeEv(qthis: *mut c_void) -> c_uchar;
+  fn _ZNK12QPixelFormat9alphaSizeEv(qthis: u64 /* *mut c_void*/) -> c_uchar;
   // proto:  uchar QPixelFormat::magentaSize();
-  fn _ZNK12QPixelFormat11magentaSizeEv(qthis: *mut c_void) -> c_uchar;
+  fn _ZNK12QPixelFormat11magentaSizeEv(qthis: u64 /* *mut c_void*/) -> c_uchar;
   // proto:  uchar QPixelFormat::hueSize();
-  fn _ZNK12QPixelFormat7hueSizeEv(qthis: *mut c_void) -> c_uchar;
+  fn _ZNK12QPixelFormat7hueSizeEv(qthis: u64 /* *mut c_void*/) -> c_uchar;
   // proto:  uchar QPixelFormat::saturationSize();
-  fn _ZNK12QPixelFormat14saturationSizeEv(qthis: *mut c_void) -> c_uchar;
+  fn _ZNK12QPixelFormat14saturationSizeEv(qthis: u64 /* *mut c_void*/) -> c_uchar;
   // proto:  uchar QPixelFormat::brightnessSize();
-  fn _ZNK12QPixelFormat14brightnessSizeEv(qthis: *mut c_void) -> c_uchar;
+  fn _ZNK12QPixelFormat14brightnessSizeEv(qthis: u64 /* *mut c_void*/) -> c_uchar;
   // proto:  uchar QPixelFormat::yellowSize();
-  fn _ZNK12QPixelFormat10yellowSizeEv(qthis: *mut c_void) -> c_uchar;
+  fn _ZNK12QPixelFormat10yellowSizeEv(qthis: u64 /* *mut c_void*/) -> c_uchar;
   // proto:  uchar QPixelFormat::redSize();
-  fn _ZNK12QPixelFormat7redSizeEv(qthis: *mut c_void) -> c_uchar;
+  fn _ZNK12QPixelFormat7redSizeEv(qthis: u64 /* *mut c_void*/) -> c_uchar;
   // proto:  uchar QPixelFormat::blueSize();
-  fn _ZNK12QPixelFormat8blueSizeEv(qthis: *mut c_void) -> c_uchar;
+  fn _ZNK12QPixelFormat8blueSizeEv(qthis: u64 /* *mut c_void*/) -> c_uchar;
   // proto:  uchar QPixelFormat::cyanSize();
-  fn _ZNK12QPixelFormat8cyanSizeEv(qthis: *mut c_void) -> c_uchar;
+  fn _ZNK12QPixelFormat8cyanSizeEv(qthis: u64 /* *mut c_void*/) -> c_uchar;
   // proto:  uchar QPixelFormat::channelCount();
-  fn _ZNK12QPixelFormat12channelCountEv(qthis: *mut c_void) -> c_uchar;
+  fn _ZNK12QPixelFormat12channelCountEv(qthis: u64 /* *mut c_void*/) -> c_uchar;
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QPixelFormat)=8
+#[derive(Default)]
 pub struct QPixelFormat {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QPixelFormat {
-  pub fn inheritFrom(qthis: *mut c_void) -> QPixelFormat {
-    return QPixelFormat{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QPixelFormat {
+    return QPixelFormat{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  uchar QPixelFormat::blackSize();
@@ -118,10 +119,10 @@ impl<'a> /*trait*/ QPixelFormat_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPixelFormatC1Ev()};
     let ctysz: c_int = unsafe{QPixelFormat_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN12QPixelFormatC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN12QPixelFormatC1Ev()};
-    let rsthis = QPixelFormat{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN12QPixelFormatC1Ev()} as u64;
+    let rsthis = QPixelFormat{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }

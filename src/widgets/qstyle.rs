@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:03 2015
 // src-file: /QtWidgets/qstyle.h
 // dst-file: /src/widgets/qstyle.rs
 //
@@ -45,50 +45,51 @@ extern {
   fn QStyle_Class_Size() -> c_int;
   // proto:  void QStyle::QStyle(const QStyle & );
   fn dector_ZN6QStyleC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN6QStyleC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN6QStyleC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QStyle::unpolish(QWidget * );
-  fn _ZN6QStyle8unpolishEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN6QStyle8unpolishEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QStyle::~QStyle();
-  fn _ZN6QStyleD0Ev(qthis: *mut c_void);
+  fn _ZN6QStyleD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QStyle::polish(QPalette & );
-  fn _ZN6QStyle6polishER8QPalette(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN6QStyle6polishER8QPalette(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QStyle::QStyle();
   fn dector_ZN6QStyleC1Ev() -> *mut c_void;
-  fn _ZN6QStyleC1Ev(qthis: *mut c_void);
+  fn _ZN6QStyleC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QRect QStyle::itemPixmapRect(const QRect & r, int flags, const QPixmap & pixmap);
-  fn _ZNK6QStyle14itemPixmapRectERK5QRectiRK7QPixmap(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
+  fn _ZNK6QStyle14itemPixmapRectERK5QRectiRK7QPixmap(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
   // proto:  QRect QStyle::itemTextRect(const QFontMetrics & fm, const QRect & r, int flags, bool enabled, const QString & text);
-  fn _ZNK6QStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: c_int, arg3: c_char, arg4: *mut c_void) -> *mut c_void;
+  fn _ZNK6QStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: c_int, arg3: c_char, arg4: *mut c_void) -> *mut c_void;
   // proto:  const QStyle * QStyle::proxy();
-  fn _ZNK6QStyle5proxyEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK6QStyle5proxyEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QPalette QStyle::standardPalette();
-  fn _ZNK6QStyle15standardPaletteEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK6QStyle15standardPaletteEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  const QMetaObject * QStyle::metaObject();
-  fn _ZNK6QStyle10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK6QStyle10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QStyle::polish(QApplication * );
-  fn _ZN6QStyle6polishEP12QApplication(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN6QStyle6polishEP12QApplication(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QStyle::drawItemPixmap(QPainter * painter, const QRect & rect, int alignment, const QPixmap & pixmap);
-  fn _ZNK6QStyle14drawItemPixmapEP8QPainterRK5QRectiRK7QPixmap(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: c_int, arg3: *mut c_void);
+  fn _ZNK6QStyle14drawItemPixmapEP8QPainterRK5QRectiRK7QPixmap(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: c_int, arg3: *mut c_void);
   // proto:  void QStyle::polish(QWidget * );
-  fn _ZN6QStyle6polishEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN6QStyle6polishEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static int QStyle::sliderPositionFromValue(int min, int max, int val, int space, bool upsideDown);
   fn _ZN6QStyle23sliderPositionFromValueEiiiib(arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_char) -> c_int;
   // proto: static int QStyle::sliderValueFromPosition(int min, int max, int pos, int space, bool upsideDown);
   fn _ZN6QStyle23sliderValueFromPositionEiiiib(arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_char) -> c_int;
   // proto:  void QStyle::unpolish(QApplication * );
-  fn _ZN6QStyle8unpolishEP12QApplication(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN6QStyle8unpolishEP12QApplication(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QStyle)=1
+#[derive(Default)]
 pub struct QStyle {
   qbase: QObject,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QStyle {
-  pub fn inheritFrom(qthis: *mut c_void) -> QStyle {
-    return QStyle{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QStyle {
+    return QStyle{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QStyle {
@@ -122,11 +123,11 @@ impl<'a> /*trait*/ QStyle_New for (&'a QStyle) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QStyleC1ERKS_()};
     let ctysz: c_int = unsafe{QStyle_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN6QStyleC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN6QStyleC1ERKS_(arg0)};
-    let rsthis = QStyle{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN6QStyleC1ERKS_(arg0)} as u64;
+    let rsthis = QStyle{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -206,10 +207,10 @@ impl<'a> /*trait*/ QStyle_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QStyleC1Ev()};
     let ctysz: c_int = unsafe{QStyle_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN6QStyleC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN6QStyleC1Ev()};
-    let rsthis = QStyle{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN6QStyleC1Ev()} as u64;
+    let rsthis = QStyle{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -236,7 +237,7 @@ impl<'a> /*trait*/ QStyle_itemPixmapRect<QRect> for (&'a QRect, i32, &'a QPixmap
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK6QStyle14itemPixmapRectERK5QRectiRK7QPixmap(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QRect::inheritFrom(ret);
+    let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -265,7 +266,7 @@ impl<'a> /*trait*/ QStyle_itemTextRect<QRect> for (&'a QFontMetrics, &'a QRect, 
     let arg3 = self.3  as c_char;
     let arg4 = self.4.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK6QStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4)};
-    let mut ret1 = QRect::inheritFrom(ret);
+    let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -289,7 +290,7 @@ impl<'a> /*trait*/ QStyle_proxy<QStyle> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QStyle5proxyEv()};
     let mut ret = unsafe {_ZNK6QStyle5proxyEv(rsthis.qclsinst)};
-    let mut ret1 = QStyle::inheritFrom(ret);
+    let mut ret1 = QStyle::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -313,7 +314,7 @@ impl<'a> /*trait*/ QStyle_standardPalette<QPalette> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QStyle15standardPaletteEv()};
     let mut ret = unsafe {_ZNK6QStyle15standardPaletteEv(rsthis.qclsinst)};
-    let mut ret1 = QPalette::inheritFrom(ret);
+    let mut ret1 = QPalette::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }

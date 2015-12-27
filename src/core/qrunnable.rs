@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qrunnable.h
 // dst-file: /src/core/qrunnable.rs
 //
@@ -30,28 +30,29 @@ use std::ops::Deref;
 extern {
   fn QRunnable_Class_Size() -> c_int;
   // proto:  void QRunnable::~QRunnable();
-  fn _ZN9QRunnableD0Ev(qthis: *mut c_void);
+  fn _ZN9QRunnableD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QRunnable::setAutoDelete(bool _autoDelete);
-  fn _ZN9QRunnable13setAutoDeleteEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN9QRunnable13setAutoDeleteEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QRunnable::QRunnable();
   fn dector_ZN9QRunnableC1Ev() -> *mut c_void;
-  fn _ZN9QRunnableC1Ev(qthis: *mut c_void);
+  fn _ZN9QRunnableC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QRunnable::run();
-  fn _ZN9QRunnable3runEv(qthis: *mut c_void);
+  fn _ZN9QRunnable3runEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QRunnable::autoDelete();
-  fn _ZNK9QRunnable10autoDeleteEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK9QRunnable10autoDeleteEv(qthis: u64 /* *mut c_void*/) -> c_char;
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QRunnable)=16
+#[derive(Default)]
 pub struct QRunnable {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QRunnable {
-  pub fn inheritFrom(qthis: *mut c_void) -> QRunnable {
-    return QRunnable{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QRunnable {
+    return QRunnable{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  void QRunnable::~QRunnable();
@@ -118,10 +119,10 @@ impl<'a> /*trait*/ QRunnable_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QRunnableC1Ev()};
     let ctysz: c_int = unsafe{QRunnable_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN9QRunnableC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN9QRunnableC1Ev()};
-    let rsthis = QRunnable{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN9QRunnableC1Ev()} as u64;
+    let rsthis = QRunnable{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }

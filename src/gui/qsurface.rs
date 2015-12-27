@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtGui/qsurface.h
 // dst-file: /src/gui/qsurface.rs
 //
@@ -32,27 +32,28 @@ use super::super::core::qsize::QSize; // 771
 extern {
   fn QSurface_Class_Size() -> c_int;
   // proto:  bool QSurface::supportsOpenGL();
-  fn _ZNK8QSurface14supportsOpenGLEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK8QSurface14supportsOpenGLEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QSurfaceFormat QSurface::format();
-  fn _ZNK8QSurface6formatEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK8QSurface6formatEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QPlatformSurface * QSurface::surfaceHandle();
-  fn _ZNK8QSurface13surfaceHandleEv(qthis: *mut c_void);
+  fn _ZNK8QSurface13surfaceHandleEv(qthis: u64 /* *mut c_void*/);
   // proto:  QSize QSurface::size();
-  fn _ZNK8QSurface4sizeEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK8QSurface4sizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QSurface::~QSurface();
-  fn _ZN8QSurfaceD0Ev(qthis: *mut c_void);
+  fn _ZN8QSurfaceD0Ev(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QSurface)=24
+#[derive(Default)]
 pub struct QSurface {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QSurface {
-  pub fn inheritFrom(qthis: *mut c_void) -> QSurface {
-    return QSurface{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QSurface {
+    return QSurface{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  bool QSurface::supportsOpenGL();
@@ -96,7 +97,7 @@ impl<'a> /*trait*/ QSurface_format<QSurfaceFormat> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QSurface6formatEv()};
     let mut ret = unsafe {_ZNK8QSurface6formatEv(rsthis.qclsinst)};
-    let mut ret1 = QSurfaceFormat::inheritFrom(ret);
+    let mut ret1 = QSurfaceFormat::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -142,7 +143,7 @@ impl<'a> /*trait*/ QSurface_size<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QSurface4sizeEv()};
     let mut ret = unsafe {_ZNK8QSurface4sizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize::inheritFrom(ret);
+    let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }

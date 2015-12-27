@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:03 2015
 // src-file: /QtWidgets/qstatusbar.h
 // dst-file: /src/widgets/qstatusbar.rs
 //
@@ -32,49 +32,52 @@ use super::super::core::qstring::QString; // 771
 extern {
   fn QStatusBar_Class_Size() -> c_int;
   // proto:  void QStatusBar::~QStatusBar();
-  fn _ZN10QStatusBarD0Ev(qthis: *mut c_void);
+  fn _ZN10QStatusBarD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  int QStatusBar::insertPermanentWidget(int index, QWidget * widget, int stretch);
-  fn _ZN10QStatusBar21insertPermanentWidgetEiP7QWidgeti(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void, arg2: c_int) -> c_int;
+  fn _ZN10QStatusBar21insertPermanentWidgetEiP7QWidgeti(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void, arg2: c_int) -> c_int;
   // proto:  void QStatusBar::removeWidget(QWidget * widget);
-  fn _ZN10QStatusBar12removeWidgetEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN10QStatusBar12removeWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QStatusBar::QStatusBar(const QStatusBar & );
   fn dector_ZN10QStatusBarC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN10QStatusBarC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN10QStatusBarC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QStatusBar::setSizeGripEnabled(bool );
-  fn _ZN10QStatusBar18setSizeGripEnabledEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN10QStatusBar18setSizeGripEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QStatusBar::addPermanentWidget(QWidget * widget, int stretch);
-  fn _ZN10QStatusBar18addPermanentWidgetEP7QWidgeti(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int);
+  fn _ZN10QStatusBar18addPermanentWidgetEP7QWidgeti(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
   // proto:  bool QStatusBar::isSizeGripEnabled();
-  fn _ZNK10QStatusBar17isSizeGripEnabledEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK10QStatusBar17isSizeGripEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QStatusBar::clearMessage();
-  fn _ZN10QStatusBar12clearMessageEv(qthis: *mut c_void);
+  fn _ZN10QStatusBar12clearMessageEv(qthis: u64 /* *mut c_void*/);
   // proto:  QString QStatusBar::currentMessage();
-  fn _ZNK10QStatusBar14currentMessageEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK10QStatusBar14currentMessageEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  const QMetaObject * QStatusBar::metaObject();
-  fn _ZNK10QStatusBar10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK10QStatusBar10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QStatusBar::messageChanged(const QString & text);
-  fn _ZN10QStatusBar14messageChangedERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN10QStatusBar14messageChangedERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QStatusBar::showMessage(const QString & text, int timeout);
-  fn _ZN10QStatusBar11showMessageERK7QStringi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int);
+  fn _ZN10QStatusBar11showMessageERK7QStringi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
   // proto:  int QStatusBar::insertWidget(int index, QWidget * widget, int stretch);
-  fn _ZN10QStatusBar12insertWidgetEiP7QWidgeti(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void, arg2: c_int) -> c_int;
+  fn _ZN10QStatusBar12insertWidgetEiP7QWidgeti(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void, arg2: c_int) -> c_int;
   // proto:  void QStatusBar::addWidget(QWidget * widget, int stretch);
-  fn _ZN10QStatusBar9addWidgetEP7QWidgeti(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int);
+  fn _ZN10QStatusBar9addWidgetEP7QWidgeti(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
   // proto:  void QStatusBar::QStatusBar(QWidget * parent);
   fn dector_ZN10QStatusBarC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN10QStatusBarC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN10QStatusBarC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn QStatusBar_SlotProxy_connect__ZN10QStatusBar14messageChangedERK7QString(qthis: *mut c_void, fptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QStatusBar)=1
+#[derive(Default)]
 pub struct QStatusBar {
   qbase: QWidget,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _messageChanged_1: QStatusBar_messageChanged_signal,
 }
 
 impl /*struct*/ QStatusBar {
-  pub fn inheritFrom(qthis: *mut c_void) -> QStatusBar {
-    return QStatusBar{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QStatusBar {
+    return QStatusBar{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QStatusBar {
@@ -179,11 +182,11 @@ impl<'a> /*trait*/ QStatusBar_New for (&'a QStatusBar) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QStatusBarC1ERKS_()};
     let ctysz: c_int = unsafe{QStatusBar_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN10QStatusBarC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN10QStatusBarC1ERKS_(arg0)};
-    let rsthis = QStatusBar{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN10QStatusBarC1ERKS_(arg0)} as u64;
+    let rsthis = QStatusBar{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -299,7 +302,7 @@ impl<'a> /*trait*/ QStatusBar_currentMessage<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QStatusBar14currentMessageEv()};
     let mut ret = unsafe {_ZNK10QStatusBar14currentMessageEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -430,15 +433,41 @@ impl<'a> /*trait*/ QStatusBar_New for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QStatusBarC1EP7QWidget()};
     let ctysz: c_int = unsafe{QStatusBar_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN10QStatusBarC1EP7QWidget(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN10QStatusBarC1EP7QWidget(arg0)};
-    let rsthis = QStatusBar{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN10QStatusBarC1EP7QWidget(arg0)} as u64;
+    let rsthis = QStatusBar{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
+#[derive(Default)] // for QStatusBar_messageChanged
+pub struct QStatusBar_messageChanged_signal{poi:u64}
+impl /* struct */ QStatusBar {
+  pub fn messageChanged_1(self) -> QStatusBar_messageChanged_signal {
+     return QStatusBar_messageChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QStatusBar_messageChanged_signal {
+  pub fn connect<T: QStatusBar_messageChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QStatusBar_messageChanged_signal_connect {
+  fn connect(self, sigthis: QStatusBar_messageChanged_signal);
+}
+
+// messageChanged(const class QString &)
+extern fn QStatusBar_messageChanged_signal_connect_cb_0(arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QStatusBar_messageChanged_signal_connect for (extern fn(QString)) {
+  fn connect(self, sigthis: QStatusBar_messageChanged_signal) {
+    // do smth...
+    unsafe {QStatusBar_SlotProxy_connect__ZN10QStatusBar14messageChangedERK7QString(sigthis.poi as *mut c_void, QStatusBar_messageChanged_signal_connect_cb_0 as *mut c_void)};
+  }
+}
 // <= body block end
 

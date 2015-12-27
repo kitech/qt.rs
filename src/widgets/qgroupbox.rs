@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtWidgets/qgroupbox.h
 // dst-file: /src/widgets/qgroupbox.rs
 //
@@ -33,54 +33,59 @@ use super::super::core::qstring::QString; // 771
 extern {
   fn QGroupBox_Class_Size() -> c_int;
   // proto:  bool QGroupBox::isCheckable();
-  fn _ZNK9QGroupBox11isCheckableEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK9QGroupBox11isCheckableEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QGroupBox::setCheckable(bool checkable);
-  fn _ZN9QGroupBox12setCheckableEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN9QGroupBox12setCheckableEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  const QMetaObject * QGroupBox::metaObject();
-  fn _ZNK9QGroupBox10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK9QGroupBox10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QGroupBox::isFlat();
-  fn _ZNK9QGroupBox6isFlatEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK9QGroupBox6isFlatEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QSize QGroupBox::minimumSizeHint();
-  fn _ZNK9QGroupBox15minimumSizeHintEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QGroupBox15minimumSizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QGroupBox::setFlat(bool flat);
-  fn _ZN9QGroupBox7setFlatEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN9QGroupBox7setFlatEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QGroupBox::~QGroupBox();
-  fn _ZN9QGroupBoxD0Ev(qthis: *mut c_void);
+  fn _ZN9QGroupBoxD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QGroupBox::QGroupBox(QWidget * parent);
   fn dector_ZN9QGroupBoxC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QGroupBoxC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN9QGroupBoxC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGroupBox::toggled(bool );
-  fn _ZN9QGroupBox7toggledEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN9QGroupBox7toggledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  bool QGroupBox::isChecked();
-  fn _ZNK9QGroupBox9isCheckedEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK9QGroupBox9isCheckedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QGroupBox::setChecked(bool checked);
-  fn _ZN9QGroupBox10setCheckedEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN9QGroupBox10setCheckedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QGroupBox::QGroupBox(const QGroupBox & );
   fn dector_ZN9QGroupBoxC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QGroupBoxC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN9QGroupBoxC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QString QGroupBox::title();
-  fn _ZNK9QGroupBox5titleEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QGroupBox5titleEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QGroupBox::setAlignment(int alignment);
-  fn _ZN9QGroupBox12setAlignmentEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN9QGroupBox12setAlignmentEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QGroupBox::setTitle(const QString & title);
-  fn _ZN9QGroupBox8setTitleERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN9QGroupBox8setTitleERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGroupBox::QGroupBox(const QString & title, QWidget * parent);
   fn dector_ZN9QGroupBoxC1ERK7QStringP7QWidget(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN9QGroupBoxC1ERK7QStringP7QWidget(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN9QGroupBoxC1ERK7QStringP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QGroupBox::clicked(bool checked);
-  fn _ZN9QGroupBox7clickedEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN9QGroupBox7clickedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn QGroupBox_SlotProxy_connect__ZN9QGroupBox7clickedEb(qthis: *mut c_void, fptr: *mut c_void);
+  fn QGroupBox_SlotProxy_connect__ZN9QGroupBox7toggledEb(qthis: *mut c_void, fptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QGroupBox)=1
+#[derive(Default)]
 pub struct QGroupBox {
   qbase: QWidget,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _clicked_1: QGroupBox_clicked_signal,
+  pub _toggled_1: QGroupBox_toggled_signal,
 }
 
 impl /*struct*/ QGroupBox {
-  pub fn inheritFrom(qthis: *mut c_void) -> QGroupBox {
-    return QGroupBox{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QGroupBox {
+    return QGroupBox{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QGroupBox {
@@ -204,7 +209,7 @@ impl<'a> /*trait*/ QGroupBox_minimumSizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QGroupBox15minimumSizeHintEv()};
     let mut ret = unsafe {_ZNK9QGroupBox15minimumSizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize::inheritFrom(ret);
+    let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -274,11 +279,11 @@ impl<'a> /*trait*/ QGroupBox_New for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QGroupBoxC1EP7QWidget()};
     let ctysz: c_int = unsafe{QGroupBox_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN9QGroupBoxC1EP7QWidget(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN9QGroupBoxC1EP7QWidget(arg0)};
-    let rsthis = QGroupBox{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN9QGroupBoxC1EP7QWidget(arg0)} as u64;
+    let rsthis = QGroupBox{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -359,11 +364,11 @@ impl<'a> /*trait*/ QGroupBox_New for (&'a QGroupBox) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QGroupBoxC1ERKS_()};
     let ctysz: c_int = unsafe{QGroupBox_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN9QGroupBoxC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN9QGroupBoxC1ERKS_(arg0)};
-    let rsthis = QGroupBox{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN9QGroupBoxC1ERKS_(arg0)} as u64;
+    let rsthis = QGroupBox{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -387,7 +392,7 @@ impl<'a> /*trait*/ QGroupBox_title<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QGroupBox5titleEv()};
     let mut ret = unsafe {_ZNK9QGroupBox5titleEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -445,12 +450,12 @@ impl<'a> /*trait*/ QGroupBox_New for (&'a QString, &'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QGroupBoxC1ERK7QStringP7QWidget()};
     let ctysz: c_int = unsafe{QGroupBox_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     // unsafe {_ZN9QGroupBoxC1ERK7QStringP7QWidget(qthis, arg0, arg1)};
-    let qthis: *mut c_void = unsafe {dector_ZN9QGroupBoxC1ERK7QStringP7QWidget(arg0, arg1)};
-    let rsthis = QGroupBox{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN9QGroupBoxC1ERK7QStringP7QWidget(arg0, arg1)} as u64;
+    let rsthis = QGroupBox{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -479,5 +484,57 @@ impl<'a> /*trait*/ QGroupBox_clicked<()> for (i8) {
   }
 }
 
+#[derive(Default)] // for QGroupBox_clicked
+pub struct QGroupBox_clicked_signal{poi:u64}
+impl /* struct */ QGroupBox {
+  pub fn clicked_1(self) -> QGroupBox_clicked_signal {
+     return QGroupBox_clicked_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QGroupBox_clicked_signal {
+  pub fn connect<T: QGroupBox_clicked_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QGroupBox_clicked_signal_connect {
+  fn connect(self, sigthis: QGroupBox_clicked_signal);
+}
+
+#[derive(Default)] // for QGroupBox_toggled
+pub struct QGroupBox_toggled_signal{poi:u64}
+impl /* struct */ QGroupBox {
+  pub fn toggled_1(self) -> QGroupBox_toggled_signal {
+     return QGroupBox_toggled_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QGroupBox_toggled_signal {
+  pub fn connect<T: QGroupBox_toggled_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QGroupBox_toggled_signal_connect {
+  fn connect(self, sigthis: QGroupBox_toggled_signal);
+}
+
+// clicked(_Bool)
+extern fn QGroupBox_clicked_signal_connect_cb_0(arg0: c_char) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QGroupBox_clicked_signal_connect for (extern fn(i8)) {
+  fn connect(self, sigthis: QGroupBox_clicked_signal) {
+    // do smth...
+    unsafe {QGroupBox_SlotProxy_connect__ZN9QGroupBox7clickedEb(sigthis.poi as *mut c_void, QGroupBox_clicked_signal_connect_cb_0 as *mut c_void)};
+  }
+}
+// toggled(_Bool)
+extern fn QGroupBox_toggled_signal_connect_cb_1(arg0: c_char) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QGroupBox_toggled_signal_connect for (extern fn(i8)) {
+  fn connect(self, sigthis: QGroupBox_toggled_signal) {
+    // do smth...
+    unsafe {QGroupBox_SlotProxy_connect__ZN9QGroupBox7toggledEb(sigthis.poi as *mut c_void, QGroupBox_toggled_signal_connect_cb_1 as *mut c_void)};
+  }
+}
 // <= body block end
 

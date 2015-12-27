@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtWidgets/qstackedwidget.h
 // dst-file: /src/widgets/qstackedwidget.rs
 //
@@ -32,51 +32,56 @@ use super::qwidget::QWidget; // 773
 extern {
   fn QStackedWidget_Class_Size() -> c_int;
   // proto:  void QStackedWidget::setCurrentIndex(int index);
-  fn _ZN14QStackedWidget15setCurrentIndexEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN14QStackedWidget15setCurrentIndexEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QStackedWidget::QStackedWidget(QWidget * parent);
   fn dector_ZN14QStackedWidgetC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN14QStackedWidgetC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN14QStackedWidgetC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QWidget * QStackedWidget::currentWidget();
-  fn _ZNK14QStackedWidget13currentWidgetEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK14QStackedWidget13currentWidgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QStackedWidget::widgetRemoved(int index);
-  fn _ZN14QStackedWidget13widgetRemovedEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN14QStackedWidget13widgetRemovedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QStackedWidget::insertWidget(int index, QWidget * w);
-  fn _ZN14QStackedWidget12insertWidgetEiP7QWidget(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void) -> c_int;
+  fn _ZN14QStackedWidget12insertWidgetEiP7QWidget(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void) -> c_int;
   // proto:  int QStackedWidget::indexOf(QWidget * );
-  fn _ZNK14QStackedWidget7indexOfEP7QWidget(qthis: *mut c_void, arg0: *mut c_void) -> c_int;
+  fn _ZNK14QStackedWidget7indexOfEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
   // proto:  void QStackedWidget::removeWidget(QWidget * w);
-  fn _ZN14QStackedWidget12removeWidgetEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN14QStackedWidget12removeWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QWidget * QStackedWidget::widget(int );
-  fn _ZNK14QStackedWidget6widgetEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
+  fn _ZNK14QStackedWidget6widgetEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  void QStackedWidget::currentChanged(int );
-  fn _ZN14QStackedWidget14currentChangedEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN14QStackedWidget14currentChangedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QStackedWidget::addWidget(QWidget * w);
-  fn _ZN14QStackedWidget9addWidgetEP7QWidget(qthis: *mut c_void, arg0: *mut c_void) -> c_int;
+  fn _ZN14QStackedWidget9addWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
   // proto:  int QStackedWidget::currentIndex();
-  fn _ZNK14QStackedWidget12currentIndexEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK14QStackedWidget12currentIndexEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QStackedWidget::count();
-  fn _ZNK14QStackedWidget5countEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK14QStackedWidget5countEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QStackedWidget::setCurrentWidget(QWidget * w);
-  fn _ZN14QStackedWidget16setCurrentWidgetEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN14QStackedWidget16setCurrentWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QStackedWidget::~QStackedWidget();
-  fn _ZN14QStackedWidgetD0Ev(qthis: *mut c_void);
+  fn _ZN14QStackedWidgetD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QStackedWidget::QStackedWidget(const QStackedWidget & );
   fn dector_ZN14QStackedWidgetC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN14QStackedWidgetC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN14QStackedWidgetC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QStackedWidget::metaObject();
-  fn _ZNK14QStackedWidget10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK14QStackedWidget10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn QStackedWidget_SlotProxy_connect__ZN14QStackedWidget14currentChangedEi(qthis: *mut c_void, fptr: *mut c_void);
+  fn QStackedWidget_SlotProxy_connect__ZN14QStackedWidget13widgetRemovedEi(qthis: *mut c_void, fptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QStackedWidget)=1
+#[derive(Default)]
 pub struct QStackedWidget {
   qbase: QFrame,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _widgetRemoved_1: QStackedWidget_widgetRemoved_signal,
+  pub _currentChanged_1: QStackedWidget_currentChanged_signal,
 }
 
 impl /*struct*/ QStackedWidget {
-  pub fn inheritFrom(qthis: *mut c_void) -> QStackedWidget {
-    return QStackedWidget{qbase: QFrame::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QStackedWidget {
+    return QStackedWidget{qbase: QFrame::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QStackedWidget {
@@ -133,11 +138,11 @@ impl<'a> /*trait*/ QStackedWidget_New for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QStackedWidgetC1EP7QWidget()};
     let ctysz: c_int = unsafe{QStackedWidget_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN14QStackedWidgetC1EP7QWidget(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN14QStackedWidgetC1EP7QWidget(arg0)};
-    let rsthis = QStackedWidget{/**/qbase: QFrame::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN14QStackedWidgetC1EP7QWidget(arg0)} as u64;
+    let rsthis = QStackedWidget{qbase: QFrame::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -161,7 +166,7 @@ impl<'a> /*trait*/ QStackedWidget_currentWidget<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QStackedWidget13currentWidgetEv()};
     let mut ret = unsafe {_ZNK14QStackedWidget13currentWidgetEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget::inheritFrom(ret);
+    let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -281,7 +286,7 @@ impl<'a> /*trait*/ QStackedWidget_widget<QWidget> for (i32) {
     // unsafe{_ZNK14QStackedWidget6widgetEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK14QStackedWidget6widgetEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QWidget::inheritFrom(ret);
+    let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -431,11 +436,11 @@ impl<'a> /*trait*/ QStackedWidget_New for (&'a QStackedWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QStackedWidgetC1ERKS_()};
     let ctysz: c_int = unsafe{QStackedWidget_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN14QStackedWidgetC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN14QStackedWidgetC1ERKS_(arg0)};
-    let rsthis = QStackedWidget{/**/qbase: QFrame::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN14QStackedWidgetC1ERKS_(arg0)} as u64;
+    let rsthis = QStackedWidget{qbase: QFrame::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -463,5 +468,57 @@ impl<'a> /*trait*/ QStackedWidget_metaObject<()> for () {
   }
 }
 
+#[derive(Default)] // for QStackedWidget_widgetRemoved
+pub struct QStackedWidget_widgetRemoved_signal{poi:u64}
+impl /* struct */ QStackedWidget {
+  pub fn widgetRemoved_1(self) -> QStackedWidget_widgetRemoved_signal {
+     return QStackedWidget_widgetRemoved_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QStackedWidget_widgetRemoved_signal {
+  pub fn connect<T: QStackedWidget_widgetRemoved_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QStackedWidget_widgetRemoved_signal_connect {
+  fn connect(self, sigthis: QStackedWidget_widgetRemoved_signal);
+}
+
+#[derive(Default)] // for QStackedWidget_currentChanged
+pub struct QStackedWidget_currentChanged_signal{poi:u64}
+impl /* struct */ QStackedWidget {
+  pub fn currentChanged_1(self) -> QStackedWidget_currentChanged_signal {
+     return QStackedWidget_currentChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QStackedWidget_currentChanged_signal {
+  pub fn connect<T: QStackedWidget_currentChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QStackedWidget_currentChanged_signal_connect {
+  fn connect(self, sigthis: QStackedWidget_currentChanged_signal);
+}
+
+// currentChanged(int)
+extern fn QStackedWidget_currentChanged_signal_connect_cb_0(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QStackedWidget_currentChanged_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QStackedWidget_currentChanged_signal) {
+    // do smth...
+    unsafe {QStackedWidget_SlotProxy_connect__ZN14QStackedWidget14currentChangedEi(sigthis.poi as *mut c_void, QStackedWidget_currentChanged_signal_connect_cb_0 as *mut c_void)};
+  }
+}
+// widgetRemoved(int)
+extern fn QStackedWidget_widgetRemoved_signal_connect_cb_1(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QStackedWidget_widgetRemoved_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QStackedWidget_widgetRemoved_signal) {
+    // do smth...
+    unsafe {QStackedWidget_SlotProxy_connect__ZN14QStackedWidget13widgetRemovedEi(sigthis.poi as *mut c_void, QStackedWidget_widgetRemoved_signal_connect_cb_1 as *mut c_void)};
+  }
+}
 // <= body block end
 

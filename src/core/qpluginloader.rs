@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qpluginloader.h
 // dst-file: /src/core/qpluginloader.rs
 //
@@ -32,50 +32,51 @@ use super::qstring::QString; // 773
 extern {
   fn QPluginLoader_Class_Size() -> c_int;
   // proto:  bool QPluginLoader::isLoaded();
-  fn _ZNK13QPluginLoader8isLoadedEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK13QPluginLoader8isLoadedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QPluginLoader::unload();
-  fn _ZN13QPluginLoader6unloadEv(qthis: *mut c_void) -> c_char;
+  fn _ZN13QPluginLoader6unloadEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QPluginLoader::QPluginLoader(const QString & fileName, QObject * parent);
   fn dector_ZN13QPluginLoaderC1ERK7QStringP7QObject(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN13QPluginLoaderC1ERK7QStringP7QObject(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN13QPluginLoaderC1ERK7QStringP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  bool QPluginLoader::load();
-  fn _ZN13QPluginLoader4loadEv(qthis: *mut c_void) -> c_char;
+  fn _ZN13QPluginLoader4loadEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  const QMetaObject * QPluginLoader::metaObject();
-  fn _ZNK13QPluginLoader10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK13QPluginLoader10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  QObject * QPluginLoader::instance();
-  fn _ZN13QPluginLoader8instanceEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZN13QPluginLoader8instanceEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto: static QVector<QStaticPlugin> QPluginLoader::staticPlugins();
   fn _ZN13QPluginLoader13staticPluginsEv();
   // proto: static QObjectList QPluginLoader::staticInstances();
   fn _ZN13QPluginLoader15staticInstancesEv();
   // proto:  QJsonObject QPluginLoader::metaData();
-  fn _ZNK13QPluginLoader8metaDataEv(qthis: *mut c_void);
+  fn _ZNK13QPluginLoader8metaDataEv(qthis: u64 /* *mut c_void*/);
   // proto:  QString QPluginLoader::errorString();
-  fn _ZNK13QPluginLoader11errorStringEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK13QPluginLoader11errorStringEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QPluginLoader::QPluginLoader(const QPluginLoader & );
   fn dector_ZN13QPluginLoaderC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN13QPluginLoaderC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN13QPluginLoaderC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QString QPluginLoader::fileName();
-  fn _ZNK13QPluginLoader8fileNameEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK13QPluginLoader8fileNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QPluginLoader::setFileName(const QString & fileName);
-  fn _ZN13QPluginLoader11setFileNameERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN13QPluginLoader11setFileNameERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPluginLoader::QPluginLoader(QObject * parent);
   fn dector_ZN13QPluginLoaderC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN13QPluginLoaderC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN13QPluginLoaderC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPluginLoader::~QPluginLoader();
-  fn _ZN13QPluginLoaderD0Ev(qthis: *mut c_void);
+  fn _ZN13QPluginLoaderD0Ev(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QPluginLoader)=1
+#[derive(Default)]
 pub struct QPluginLoader {
   qbase: QObject,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QPluginLoader {
-  pub fn inheritFrom(qthis: *mut c_void) -> QPluginLoader {
-    return QPluginLoader{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QPluginLoader {
+    return QPluginLoader{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QPluginLoader {
@@ -155,12 +156,12 @@ impl<'a> /*trait*/ QPluginLoader_New for (&'a QString, &'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QPluginLoaderC1ERK7QStringP7QObject()};
     let ctysz: c_int = unsafe{QPluginLoader_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     // unsafe {_ZN13QPluginLoaderC1ERK7QStringP7QObject(qthis, arg0, arg1)};
-    let qthis: *mut c_void = unsafe {dector_ZN13QPluginLoaderC1ERK7QStringP7QObject(arg0, arg1)};
-    let rsthis = QPluginLoader{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN13QPluginLoaderC1ERK7QStringP7QObject(arg0, arg1)} as u64;
+    let rsthis = QPluginLoader{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -229,7 +230,7 @@ impl<'a> /*trait*/ QPluginLoader_instance<QObject> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QPluginLoader8instanceEv()};
     let mut ret = unsafe {_ZN13QPluginLoader8instanceEv(rsthis.qclsinst)};
-    let mut ret1 = QObject::inheritFrom(ret);
+    let mut ret1 = QObject::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -319,7 +320,7 @@ impl<'a> /*trait*/ QPluginLoader_errorString<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QPluginLoader11errorStringEv()};
     let mut ret = unsafe {_ZNK13QPluginLoader11errorStringEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -331,11 +332,11 @@ impl<'a> /*trait*/ QPluginLoader_New for (&'a QPluginLoader) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QPluginLoaderC1ERKS_()};
     let ctysz: c_int = unsafe{QPluginLoader_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN13QPluginLoaderC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN13QPluginLoaderC1ERKS_(arg0)};
-    let rsthis = QPluginLoader{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN13QPluginLoaderC1ERKS_(arg0)} as u64;
+    let rsthis = QPluginLoader{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -359,7 +360,7 @@ impl<'a> /*trait*/ QPluginLoader_fileName<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QPluginLoader8fileNameEv()};
     let mut ret = unsafe {_ZNK13QPluginLoader8fileNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -394,11 +395,11 @@ impl<'a> /*trait*/ QPluginLoader_New for (&'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QPluginLoaderC1EP7QObject()};
     let ctysz: c_int = unsafe{QPluginLoader_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN13QPluginLoaderC1EP7QObject(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN13QPluginLoaderC1EP7QObject(arg0)};
-    let rsthis = QPluginLoader{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN13QPluginLoaderC1EP7QObject(arg0)} as u64;
+    let rsthis = QPluginLoader{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }

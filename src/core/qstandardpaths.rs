@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qstandardpaths.h
 // dst-file: /src/core/qstandardpaths.rs
 //
@@ -33,9 +33,9 @@ extern {
   fn QStandardPaths_Class_Size() -> c_int;
   // proto:  void QStandardPaths::QStandardPaths();
   fn dector_ZN14QStandardPathsC1Ev() -> *mut c_void;
-  fn _ZN14QStandardPathsC1Ev(qthis: *mut c_void);
+  fn _ZN14QStandardPathsC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QStandardPaths::~QStandardPaths();
-  fn _ZN14QStandardPathsD0Ev(qthis: *mut c_void);
+  fn _ZN14QStandardPathsD0Ev(qthis: u64 /* *mut c_void*/);
   // proto: static void QStandardPaths::setTestModeEnabled(bool testMode);
   fn _ZN14QStandardPaths18setTestModeEnabledEb(arg0: c_char);
   // proto: static QString QStandardPaths::findExecutable(const QString & executableName, const QStringList & paths);
@@ -48,14 +48,15 @@ extern {
 
 // body block begin =>
 // class sizeof(QStandardPaths)=1
+#[derive(Default)]
 pub struct QStandardPaths {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QStandardPaths {
-  pub fn inheritFrom(qthis: *mut c_void) -> QStandardPaths {
-    return QStandardPaths{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QStandardPaths {
+    return QStandardPaths{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  void QStandardPaths::QStandardPaths();
@@ -77,10 +78,10 @@ impl<'a> /*trait*/ QStandardPaths_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QStandardPathsC1Ev()};
     let ctysz: c_int = unsafe{QStandardPaths_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN14QStandardPathsC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN14QStandardPathsC1Ev()};
-    let rsthis = QStandardPaths{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN14QStandardPathsC1Ev()} as u64;
+    let rsthis = QStandardPaths{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -151,7 +152,7 @@ impl<'a> /*trait*/ QStandardPaths_findExecutable_s<QString> for (&'a QString, &'
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN14QStandardPaths14findExecutableERK7QStringRK11QStringList(arg0, arg1)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }

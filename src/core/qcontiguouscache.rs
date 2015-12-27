@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qcontiguouscache.h
 // dst-file: /src/core/qcontiguouscache.rs
 //
@@ -37,14 +37,15 @@ extern {
 
 // body block begin =>
 // class sizeof(QContiguousCacheData)=1
+#[derive(Default)]
 pub struct QContiguousCacheData {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QContiguousCacheData {
-  pub fn inheritFrom(qthis: *mut c_void) -> QContiguousCacheData {
-    return QContiguousCacheData{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QContiguousCacheData {
+    return QContiguousCacheData{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto: static QContiguousCacheData * QContiguousCacheData::allocateData(int size, int alignment);
@@ -67,7 +68,7 @@ impl<'a> /*trait*/ QContiguousCacheData_allocateData_s<QContiguousCacheData> for
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN20QContiguousCacheData12allocateDataEii(arg0, arg1)};
-    let mut ret1 = QContiguousCacheData::inheritFrom(ret);
+    let mut ret1 = QContiguousCacheData::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }

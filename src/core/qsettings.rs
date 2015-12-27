@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qsettings.h
 // dst-file: /src/core/qsettings.rs
 //
@@ -35,83 +35,84 @@ extern {
   fn QSettings_Class_Size() -> c_int;
   // proto:  void QSettings::QSettings(QObject * parent);
   fn dector_ZN9QSettingsC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QSettingsC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN9QSettingsC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QSettings::isWritable();
-  fn _ZNK9QSettings10isWritableEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK9QSettings10isWritableEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QString QSettings::fileName();
-  fn _ZNK9QSettings8fileNameEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QSettings8fileNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QSettings::fallbacksEnabled();
-  fn _ZNK9QSettings16fallbacksEnabledEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK9QSettings16fallbacksEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QString QSettings::applicationName();
-  fn _ZNK9QSettings15applicationNameEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QSettings15applicationNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QSettings::sync();
-  fn _ZN9QSettings4syncEv(qthis: *mut c_void);
+  fn _ZN9QSettings4syncEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QSettings::setValue(const QString & key, const QVariant & value);
-  fn _ZN9QSettings8setValueERK7QStringRK8QVariant(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN9QSettings8setValueERK7QStringRK8QVariant(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QSettings::setArrayIndex(int i);
-  fn _ZN9QSettings13setArrayIndexEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN9QSettings13setArrayIndexEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QSettings::QSettings(const QString & organization, const QString & application, QObject * parent);
   fn dector_ZN9QSettingsC1ERK7QStringS2_P7QObject(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> *mut c_void;
-  fn _ZN9QSettingsC1ERK7QStringS2_P7QObject(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
+  fn _ZN9QSettingsC1ERK7QStringS2_P7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  void QSettings::setIniCodec(QTextCodec * codec);
-  fn _ZN9QSettings11setIniCodecEP10QTextCodec(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN9QSettings11setIniCodecEP10QTextCodec(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QSettings::setIniCodec(const char * codecName);
-  fn _ZN9QSettings11setIniCodecEPKc(qthis: *mut c_void, arg0: *mut c_char);
+  fn _ZN9QSettings11setIniCodecEPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_char);
   // proto:  int QSettings::beginReadArray(const QString & prefix);
-  fn _ZN9QSettings14beginReadArrayERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> c_int;
+  fn _ZN9QSettings14beginReadArrayERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
   // proto:  void QSettings::clear();
-  fn _ZN9QSettings5clearEv(qthis: *mut c_void);
+  fn _ZN9QSettings5clearEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QSettings::~QSettings();
-  fn _ZN9QSettingsD0Ev(qthis: *mut c_void);
+  fn _ZN9QSettingsD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QTextCodec * QSettings::iniCodec();
-  fn _ZNK9QSettings8iniCodecEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QSettings8iniCodecEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto: static void QSettings::setUserIniPath(const QString & dir);
   fn _ZN9QSettings14setUserIniPathERK7QString(arg0: *mut c_void);
   // proto:  QStringList QSettings::childGroups();
-  fn _ZNK9QSettings11childGroupsEv(qthis: *mut c_void);
+  fn _ZNK9QSettings11childGroupsEv(qthis: u64 /* *mut c_void*/);
   // proto:  QVariant QSettings::value(const QString & key, const QVariant & defaultValue);
-  fn _ZNK9QSettings5valueERK7QStringRK8QVariant(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
+  fn _ZNK9QSettings5valueERK7QStringRK8QVariant(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  QString QSettings::organizationName();
-  fn _ZNK9QSettings16organizationNameEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QSettings16organizationNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  const QMetaObject * QSettings::metaObject();
-  fn _ZNK9QSettings10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK9QSettings10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QSettings::setFallbacksEnabled(bool b);
-  fn _ZN9QSettings19setFallbacksEnabledEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN9QSettings19setFallbacksEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  bool QSettings::contains(const QString & key);
-  fn _ZNK9QSettings8containsERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn _ZNK9QSettings8containsERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  void QSettings::remove(const QString & key);
-  fn _ZN9QSettings6removeERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN9QSettings6removeERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QSettings::endGroup();
-  fn _ZN9QSettings8endGroupEv(qthis: *mut c_void);
+  fn _ZN9QSettings8endGroupEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QSettings::beginWriteArray(const QString & prefix, int size);
-  fn _ZN9QSettings15beginWriteArrayERK7QStringi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int);
+  fn _ZN9QSettings15beginWriteArrayERK7QStringi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
   // proto:  void QSettings::beginGroup(const QString & prefix);
-  fn _ZN9QSettings10beginGroupERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN9QSettings10beginGroupERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QStringList QSettings::childKeys();
-  fn _ZNK9QSettings9childKeysEv(qthis: *mut c_void);
+  fn _ZNK9QSettings9childKeysEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QSettings::QSettings(const QSettings & );
   fn dector_ZN9QSettingsC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QSettingsC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN9QSettingsC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QSettings::endArray();
-  fn _ZN9QSettings8endArrayEv(qthis: *mut c_void);
+  fn _ZN9QSettings8endArrayEv(qthis: u64 /* *mut c_void*/);
   // proto: static void QSettings::setSystemIniPath(const QString & dir);
   fn _ZN9QSettings16setSystemIniPathERK7QString(arg0: *mut c_void);
   // proto:  QStringList QSettings::allKeys();
-  fn _ZNK9QSettings7allKeysEv(qthis: *mut c_void);
+  fn _ZNK9QSettings7allKeysEv(qthis: u64 /* *mut c_void*/);
   // proto:  QString QSettings::group();
-  fn _ZNK9QSettings5groupEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QSettings5groupEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QSettings)=1
+#[derive(Default)]
 pub struct QSettings {
   qbase: QObject,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QSettings {
-  pub fn inheritFrom(qthis: *mut c_void) -> QSettings {
-    return QSettings{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QSettings {
+    return QSettings{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QSettings {
@@ -145,11 +146,11 @@ impl<'a> /*trait*/ QSettings_New for (&'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QSettingsC1EP7QObject()};
     let ctysz: c_int = unsafe{QSettings_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN9QSettingsC1EP7QObject(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN9QSettingsC1EP7QObject(arg0)};
-    let rsthis = QSettings{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN9QSettingsC1EP7QObject(arg0)} as u64;
+    let rsthis = QSettings{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -196,7 +197,7 @@ impl<'a> /*trait*/ QSettings_fileName<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QSettings8fileNameEv()};
     let mut ret = unsafe {_ZNK9QSettings8fileNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -243,7 +244,7 @@ impl<'a> /*trait*/ QSettings_applicationName<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QSettings15applicationNameEv()};
     let mut ret = unsafe {_ZNK9QSettings15applicationNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -324,13 +325,13 @@ impl<'a> /*trait*/ QSettings_New for (&'a QString, &'a QString, &'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QSettingsC1ERK7QStringS2_P7QObject()};
     let ctysz: c_int = unsafe{QSettings_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     // unsafe {_ZN9QSettingsC1ERK7QStringS2_P7QObject(qthis, arg0, arg1, arg2)};
-    let qthis: *mut c_void = unsafe {dector_ZN9QSettingsC1ERK7QStringS2_P7QObject(arg0, arg1, arg2)};
-    let rsthis = QSettings{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN9QSettingsC1ERK7QStringS2_P7QObject(arg0, arg1, arg2)} as u64;
+    let rsthis = QSettings{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -456,7 +457,7 @@ impl<'a> /*trait*/ QSettings_iniCodec<QTextCodec> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QSettings8iniCodecEv()};
     let mut ret = unsafe {_ZNK9QSettings8iniCodecEv(rsthis.qclsinst)};
-    let mut ret1 = QTextCodec::inheritFrom(ret);
+    let mut ret1 = QTextCodec::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -527,7 +528,7 @@ impl<'a> /*trait*/ QSettings_value<QVariant> for (&'a QString, &'a QVariant) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK9QSettings5valueERK7QStringRK8QVariant(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QVariant::inheritFrom(ret);
+    let mut ret1 = QVariant::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -551,7 +552,7 @@ impl<'a> /*trait*/ QSettings_organizationName<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QSettings16organizationNameEv()};
     let mut ret = unsafe {_ZNK9QSettings16organizationNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -746,11 +747,11 @@ impl<'a> /*trait*/ QSettings_New for (&'a QSettings) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QSettingsC1ERKS_()};
     let ctysz: c_int = unsafe{QSettings_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN9QSettingsC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN9QSettingsC1ERKS_(arg0)};
-    let rsthis = QSettings{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN9QSettingsC1ERKS_(arg0)} as u64;
+    let rsthis = QSettings{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -841,7 +842,7 @@ impl<'a> /*trait*/ QSettings_group<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QSettings5groupEv()};
     let mut ret = unsafe {_ZNK9QSettings5groupEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtWidgets/qtableview.h
 // dst-file: /src/widgets/qtableview.rs
 //
@@ -26,6 +26,7 @@ use super::super::core::qitemselectionmodel::QItemSelectionModel; // 771
 use super::qwidget::QWidget; // 773
 use super::super::core::qrect::QRect; // 771
 use super::super::core::qpoint::QPoint; // 771
+use super::super::core::qabstractitemmodel::QAbstractItemModel; // 771
 // <= use block end
 
 // ext block begin =>
@@ -37,115 +38,118 @@ use super::super::core::qpoint::QPoint; // 771
 extern {
   fn QTableView_Class_Size() -> c_int;
   // proto:  void QTableView::resizeRowsToContents();
-  fn _ZN10QTableView20resizeRowsToContentsEv(qthis: *mut c_void);
+  fn _ZN10QTableView20resizeRowsToContentsEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QTableView::setRowHeight(int row, int height);
-  fn _ZN10QTableView12setRowHeightEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
+  fn _ZN10QTableView12setRowHeightEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  QHeaderView * QTableView::verticalHeader();
-  fn _ZNK10QTableView14verticalHeaderEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK10QTableView14verticalHeaderEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QTableView::setSpan(int row, int column, int rowSpan, int columnSpan);
-  fn _ZN10QTableView7setSpanEiiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
+  fn _ZN10QTableView7setSpanEiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
   // proto:  void QTableView::setSortingEnabled(bool enable);
-  fn _ZN10QTableView17setSortingEnabledEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN10QTableView17setSortingEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QTableView::setColumnWidth(int column, int width);
-  fn _ZN10QTableView14setColumnWidthEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
+  fn _ZN10QTableView14setColumnWidthEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  void QTableView::setWordWrap(bool on);
-  fn _ZN10QTableView11setWordWrapEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN10QTableView11setWordWrapEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QTableView::doItemsLayout();
-  fn _ZN10QTableView13doItemsLayoutEv(qthis: *mut c_void);
+  fn _ZN10QTableView13doItemsLayoutEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QTableView::setSelectionModel(QItemSelectionModel * selectionModel);
-  fn _ZN10QTableView17setSelectionModelEP19QItemSelectionModel(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN10QTableView17setSelectionModelEP19QItemSelectionModel(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTableView::setHorizontalHeader(QHeaderView * header);
-  fn _ZN10QTableView19setHorizontalHeaderEP11QHeaderView(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN10QTableView19setHorizontalHeaderEP11QHeaderView(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTableView::setRowHidden(int row, bool hide);
-  fn _ZN10QTableView12setRowHiddenEib(qthis: *mut c_void, arg0: c_int, arg1: c_char);
+  fn _ZN10QTableView12setRowHiddenEib(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_char);
   // proto:  int QTableView::rowViewportPosition(int row);
-  fn _ZNK10QTableView19rowViewportPositionEi(qthis: *mut c_void, arg0: c_int) -> c_int;
+  fn _ZNK10QTableView19rowViewportPositionEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
   // proto:  int QTableView::columnAt(int x);
-  fn _ZNK10QTableView8columnAtEi(qthis: *mut c_void, arg0: c_int) -> c_int;
+  fn _ZNK10QTableView8columnAtEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
   // proto:  bool QTableView::isRowHidden(int row);
-  fn _ZNK10QTableView11isRowHiddenEi(qthis: *mut c_void, arg0: c_int) -> c_char;
+  fn _ZNK10QTableView11isRowHiddenEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
   // proto:  void QTableView::showColumn(int column);
-  fn _ZN10QTableView10showColumnEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN10QTableView10showColumnEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QTableView::resizeRowToContents(int row);
-  fn _ZN10QTableView19resizeRowToContentsEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN10QTableView19resizeRowToContentsEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QTableView::setRootIndex(const QModelIndex & index);
-  fn _ZN10QTableView12setRootIndexERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN10QTableView12setRootIndexERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTableView::setColumnHidden(int column, bool hide);
-  fn _ZN10QTableView15setColumnHiddenEib(qthis: *mut c_void, arg0: c_int, arg1: c_char);
+  fn _ZN10QTableView15setColumnHiddenEib(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_char);
   // proto:  void QTableView::hideRow(int row);
-  fn _ZN10QTableView7hideRowEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN10QTableView7hideRowEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QTableView::resizeColumnsToContents();
-  fn _ZN10QTableView23resizeColumnsToContentsEv(qthis: *mut c_void);
+  fn _ZN10QTableView23resizeColumnsToContentsEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QTableView::wordWrap();
-  fn _ZNK10QTableView8wordWrapEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK10QTableView8wordWrapEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QTableView::setShowGrid(bool show);
-  fn _ZN10QTableView11setShowGridEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN10QTableView11setShowGridEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  bool QTableView::isColumnHidden(int column);
-  fn _ZNK10QTableView14isColumnHiddenEi(qthis: *mut c_void, arg0: c_int) -> c_char;
+  fn _ZNK10QTableView14isColumnHiddenEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
   // proto:  void QTableView::selectRow(int row);
-  fn _ZN10QTableView9selectRowEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN10QTableView9selectRowEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  const QMetaObject * QTableView::metaObject();
-  fn _ZNK10QTableView10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK10QTableView10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QTableView::isCornerButtonEnabled();
-  fn _ZNK10QTableView21isCornerButtonEnabledEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK10QTableView21isCornerButtonEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QTableView::selectColumn(int column);
-  fn _ZN10QTableView12selectColumnEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN10QTableView12selectColumnEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QTableView::~QTableView();
-  fn _ZN10QTableViewD0Ev(qthis: *mut c_void);
+  fn _ZN10QTableViewD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QTableView::resizeColumnToContents(int column);
-  fn _ZN10QTableView22resizeColumnToContentsEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN10QTableView22resizeColumnToContentsEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QTableView::QTableView(QWidget * parent);
   fn dector_ZN10QTableViewC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN10QTableViewC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN10QTableViewC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTableView::sortByColumn(int column);
-  fn _ZN10QTableView12sortByColumnEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN10QTableView12sortByColumnEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QTableView::columnSpan(int row, int column);
-  fn _ZNK10QTableView10columnSpanEii(qthis: *mut c_void, arg0: c_int, arg1: c_int) -> c_int;
+  fn _ZNK10QTableView10columnSpanEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> c_int;
   // proto:  int QTableView::columnWidth(int column);
-  fn _ZNK10QTableView11columnWidthEi(qthis: *mut c_void, arg0: c_int) -> c_int;
+  fn _ZNK10QTableView11columnWidthEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
   // proto:  int QTableView::columnViewportPosition(int column);
-  fn _ZNK10QTableView22columnViewportPositionEi(qthis: *mut c_void, arg0: c_int) -> c_int;
+  fn _ZNK10QTableView22columnViewportPositionEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
   // proto:  int QTableView::rowHeight(int row);
-  fn _ZNK10QTableView9rowHeightEi(qthis: *mut c_void, arg0: c_int) -> c_int;
+  fn _ZNK10QTableView9rowHeightEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
   // proto:  void QTableView::QTableView(const QTableView & );
   fn dector_ZN10QTableViewC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN10QTableViewC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN10QTableViewC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QTableView::rowAt(int y);
-  fn _ZNK10QTableView5rowAtEi(qthis: *mut c_void, arg0: c_int) -> c_int;
+  fn _ZNK10QTableView5rowAtEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
   // proto:  int QTableView::rowSpan(int row, int column);
-  fn _ZNK10QTableView7rowSpanEii(qthis: *mut c_void, arg0: c_int, arg1: c_int) -> c_int;
+  fn _ZNK10QTableView7rowSpanEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> c_int;
   // proto:  void QTableView::setCornerButtonEnabled(bool enable);
-  fn _ZN10QTableView22setCornerButtonEnabledEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN10QTableView22setCornerButtonEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QRect QTableView::visualRect(const QModelIndex & index);
-  fn _ZNK10QTableView10visualRectERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK10QTableView10visualRectERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QModelIndex QTableView::indexAt(const QPoint & p);
-  fn _ZNK10QTableView7indexAtERK6QPoint(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK10QTableView7indexAtERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QHeaderView * QTableView::horizontalHeader();
-  fn _ZNK10QTableView16horizontalHeaderEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK10QTableView16horizontalHeaderEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  // proto:  void QTableView::setModel(QAbstractItemModel * model);
+  fn _ZN10QTableView8setModelEP18QAbstractItemModel(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QTableView::isSortingEnabled();
-  fn _ZNK10QTableView16isSortingEnabledEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK10QTableView16isSortingEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QTableView::clearSpans();
-  fn _ZN10QTableView10clearSpansEv(qthis: *mut c_void);
+  fn _ZN10QTableView10clearSpansEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QTableView::setVerticalHeader(QHeaderView * header);
-  fn _ZN10QTableView17setVerticalHeaderEP11QHeaderView(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN10QTableView17setVerticalHeaderEP11QHeaderView(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QTableView::showGrid();
-  fn _ZNK10QTableView8showGridEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK10QTableView8showGridEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QTableView::showRow(int row);
-  fn _ZN10QTableView7showRowEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN10QTableView7showRowEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QTableView::hideColumn(int column);
-  fn _ZN10QTableView10hideColumnEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN10QTableView10hideColumnEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QTableView)=1
+#[derive(Default)]
 pub struct QTableView {
   qbase: QAbstractItemView,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QTableView {
-  pub fn inheritFrom(qthis: *mut c_void) -> QTableView {
-    return QTableView{qbase: QAbstractItemView::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QTableView {
+    return QTableView{qbase: QAbstractItemView::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QTableView {
@@ -224,7 +228,7 @@ impl<'a> /*trait*/ QTableView_verticalHeader<QHeaderView> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTableView14verticalHeaderEv()};
     let mut ret = unsafe {_ZNK10QTableView14verticalHeaderEv(rsthis.qclsinst)};
-    let mut ret1 = QHeaderView::inheritFrom(ret);
+    let mut ret1 = QHeaderView::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -853,11 +857,11 @@ impl<'a> /*trait*/ QTableView_New for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTableViewC1EP7QWidget()};
     let ctysz: c_int = unsafe{QTableView_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN10QTableViewC1EP7QWidget(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN10QTableViewC1EP7QWidget(arg0)};
-    let rsthis = QTableView{/**/qbase: QAbstractItemView::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN10QTableViewC1EP7QWidget(arg0)} as u64;
+    let rsthis = QTableView{qbase: QAbstractItemView::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -989,11 +993,11 @@ impl<'a> /*trait*/ QTableView_New for (&'a QTableView) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTableViewC1ERKS_()};
     let ctysz: c_int = unsafe{QTableView_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN10QTableViewC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN10QTableViewC1ERKS_(arg0)};
-    let rsthis = QTableView{/**/qbase: QAbstractItemView::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN10QTableViewC1ERKS_(arg0)} as u64;
+    let rsthis = QTableView{qbase: QAbstractItemView::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1090,7 +1094,7 @@ impl<'a> /*trait*/ QTableView_visualRect<QRect> for (&'a QModelIndex) {
     // unsafe{_ZNK10QTableView10visualRectERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK10QTableView10visualRectERK11QModelIndex(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRect::inheritFrom(ret);
+    let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1115,7 +1119,7 @@ impl<'a> /*trait*/ QTableView_indexAt<QModelIndex> for (&'a QPoint) {
     // unsafe{_ZNK10QTableView7indexAtERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK10QTableView7indexAtERK6QPoint(rsthis.qclsinst, arg0)};
-    let mut ret1 = QModelIndex::inheritFrom(ret);
+    let mut ret1 = QModelIndex::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1139,8 +1143,31 @@ impl<'a> /*trait*/ QTableView_horizontalHeader<QHeaderView> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTableView16horizontalHeaderEv()};
     let mut ret = unsafe {_ZNK10QTableView16horizontalHeaderEv(rsthis.qclsinst)};
-    let mut ret1 = QHeaderView::inheritFrom(ret);
+    let mut ret1 = QHeaderView::inheritFrom(ret as u64);
     return ret1;
+    // return 1;
+  }
+}
+
+  // proto:  void QTableView::setModel(QAbstractItemModel * model);
+impl /*struct*/ QTableView {
+  pub fn setModel<RetType, T: QTableView_setModel<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.setModel(self);
+    // return 1;
+  }
+}
+
+pub trait QTableView_setModel<RetType> {
+  fn setModel(self , rsthis: & QTableView) -> RetType;
+}
+
+  // proto:  void QTableView::setModel(QAbstractItemModel * model);
+impl<'a> /*trait*/ QTableView_setModel<()> for (&'a QAbstractItemModel) {
+  fn setModel(self , rsthis: & QTableView) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN10QTableView8setModelEP18QAbstractItemModel()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN10QTableView8setModelEP18QAbstractItemModel(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

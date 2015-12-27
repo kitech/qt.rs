@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qhash.h
 // dst-file: /src/core/qhash.rs
 //
@@ -31,38 +31,40 @@ extern {
   fn QHashDummyValue_Class_Size() -> c_int;
   fn QHashData_Class_Size() -> c_int;
   // proto:  void QHashData::hasShrunk();
-  fn _ZN9QHashData9hasShrunkEv(qthis: *mut c_void);
+  fn _ZN9QHashData9hasShrunkEv(qthis: u64 /* *mut c_void*/);
   // proto:  void * QHashData::allocateNode(int nodeAlign);
-  fn _ZN9QHashData12allocateNodeEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
+  fn _ZN9QHashData12allocateNodeEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  bool QHashData::willGrow();
-  fn _ZN9QHashData8willGrowEv(qthis: *mut c_void) -> c_char;
+  fn _ZN9QHashData8willGrowEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QHashData::rehash(int hint);
-  fn _ZN9QHashData6rehashEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN9QHashData6rehashEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QHashData::freeNode(void * node);
-  fn _ZN9QHashData8freeNodeEPv(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN9QHashData8freeNodeEPv(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QHashDummyValue)=1
+#[derive(Default)]
 pub struct QHashDummyValue {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 // class sizeof(QHashData)=1
+#[derive(Default)]
 pub struct QHashData {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QHashDummyValue {
-  pub fn inheritFrom(qthis: *mut c_void) -> QHashDummyValue {
-    return QHashDummyValue{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QHashDummyValue {
+    return QHashDummyValue{qclsinst: qthis, ..Default::default()};
   }
 }
 impl /*struct*/ QHashData {
-  pub fn inheritFrom(qthis: *mut c_void) -> QHashData {
-    return QHashData{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QHashData {
+    return QHashData{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  void QHashData::hasShrunk();

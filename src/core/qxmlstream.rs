@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qxmlstream.h
 // dst-file: /src/core/qxmlstream.rs
 //
@@ -39,386 +39,395 @@ use super::qtextcodec::QTextCodec; // 773
 extern {
   fn QXmlStreamStringRef_Class_Size() -> c_int;
   // proto:  int QXmlStreamStringRef::size();
-  fn demth_ZNK19QXmlStreamStringRef4sizeEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK19QXmlStreamStringRef4sizeEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QXmlStreamStringRef::clear();
-  fn demth_ZN19QXmlStreamStringRef5clearEv(qthis: *mut c_void);
+  fn demth_ZN19QXmlStreamStringRef5clearEv(qthis: u64 /* *mut c_void*/);
   // proto:  const QString * QXmlStreamStringRef::string();
-  fn demth_ZNK19QXmlStreamStringRef6stringEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK19QXmlStreamStringRef6stringEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QXmlStreamStringRef::QXmlStreamStringRef(const QString & aString);
   fn dector_ZN19QXmlStreamStringRefC1ERK7QString(arg0: *mut c_void) -> *mut c_void;
-  fn demth_ZN19QXmlStreamStringRefC1ERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN19QXmlStreamStringRefC1ERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QXmlStreamStringRef::~QXmlStreamStringRef();
-  fn demth_ZN19QXmlStreamStringRefD0Ev(qthis: *mut c_void);
+  fn demth_ZN19QXmlStreamStringRefD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QXmlStreamStringRef::QXmlStreamStringRef();
   fn dector_ZN19QXmlStreamStringRefC1Ev() -> *mut c_void;
-  fn demth_ZN19QXmlStreamStringRefC1Ev(qthis: *mut c_void);
+  fn demth_ZN19QXmlStreamStringRefC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  int QXmlStreamStringRef::position();
-  fn demth_ZNK19QXmlStreamStringRef8positionEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK19QXmlStreamStringRef8positionEv(qthis: u64 /* *mut c_void*/) -> c_int;
   fn QXmlStreamReader_Class_Size() -> c_int;
   // proto:  QStringRef QXmlStreamReader::name();
-  fn _ZNK16QXmlStreamReader4nameEv(qthis: *mut c_void);
+  fn _ZNK16QXmlStreamReader4nameEv(qthis: u64 /* *mut c_void*/);
   // proto:  QXmlStreamEntityResolver * QXmlStreamReader::entityResolver();
-  fn _ZNK16QXmlStreamReader14entityResolverEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK16QXmlStreamReader14entityResolverEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QXmlStreamReader::namespaceProcessing();
-  fn _ZNK16QXmlStreamReader19namespaceProcessingEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK16QXmlStreamReader19namespaceProcessingEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QXmlStreamReader::isStartElement();
-  fn demth_ZNK16QXmlStreamReader14isStartElementEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK16QXmlStreamReader14isStartElementEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QXmlStreamReader::isStandaloneDocument();
-  fn _ZNK16QXmlStreamReader20isStandaloneDocumentEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK16QXmlStreamReader20isStandaloneDocumentEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  qint64 QXmlStreamReader::lineNumber();
-  fn _ZNK16QXmlStreamReader10lineNumberEv(qthis: *mut c_void) -> c_longlong;
+  fn _ZNK16QXmlStreamReader10lineNumberEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
   // proto:  void QXmlStreamReader::clear();
-  fn _ZN16QXmlStreamReader5clearEv(qthis: *mut c_void);
+  fn _ZN16QXmlStreamReader5clearEv(qthis: u64 /* *mut c_void*/);
   // proto:  QStringRef QXmlStreamReader::processingInstructionData();
-  fn _ZNK16QXmlStreamReader25processingInstructionDataEv(qthis: *mut c_void);
+  fn _ZNK16QXmlStreamReader25processingInstructionDataEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QXmlStreamReader::addData(const QString & data);
-  fn _ZN16QXmlStreamReader7addDataERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN16QXmlStreamReader7addDataERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QStringRef QXmlStreamReader::dtdPublicId();
-  fn _ZNK16QXmlStreamReader11dtdPublicIdEv(qthis: *mut c_void);
+  fn _ZNK16QXmlStreamReader11dtdPublicIdEv(qthis: u64 /* *mut c_void*/);
   // proto:  QStringRef QXmlStreamReader::documentEncoding();
-  fn _ZNK16QXmlStreamReader16documentEncodingEv(qthis: *mut c_void);
+  fn _ZNK16QXmlStreamReader16documentEncodingEv(qthis: u64 /* *mut c_void*/);
   // proto:  qint64 QXmlStreamReader::characterOffset();
-  fn _ZNK16QXmlStreamReader15characterOffsetEv(qthis: *mut c_void) -> c_longlong;
+  fn _ZNK16QXmlStreamReader15characterOffsetEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
   // proto:  QXmlStreamAttributes QXmlStreamReader::attributes();
-  fn _ZNK16QXmlStreamReader10attributesEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK16QXmlStreamReader10attributesEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QXmlStreamReader::tokenString();
-  fn _ZNK16QXmlStreamReader11tokenStringEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK16QXmlStreamReader11tokenStringEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QXmlStreamReader::addExtraNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & extraNamespaceDeclaraction);
-  fn _ZN16QXmlStreamReader28addExtraNamespaceDeclarationERK30QXmlStreamNamespaceDeclaration(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN16QXmlStreamReader28addExtraNamespaceDeclarationERK30QXmlStreamNamespaceDeclaration(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QXmlStreamReader::QXmlStreamReader(const QByteArray & data);
   fn dector_ZN16QXmlStreamReaderC1ERK10QByteArray(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN16QXmlStreamReaderC1ERK10QByteArray(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN16QXmlStreamReaderC1ERK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QStringRef QXmlStreamReader::qualifiedName();
-  fn _ZNK16QXmlStreamReader13qualifiedNameEv(qthis: *mut c_void);
+  fn _ZNK16QXmlStreamReader13qualifiedNameEv(qthis: u64 /* *mut c_void*/);
   // proto:  QIODevice * QXmlStreamReader::device();
-  fn _ZNK16QXmlStreamReader6deviceEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK16QXmlStreamReader6deviceEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QStringRef QXmlStreamReader::namespaceUri();
-  fn _ZNK16QXmlStreamReader12namespaceUriEv(qthis: *mut c_void);
+  fn _ZNK16QXmlStreamReader12namespaceUriEv(qthis: u64 /* *mut c_void*/);
   // proto:  QStringRef QXmlStreamReader::text();
-  fn _ZNK16QXmlStreamReader4textEv(qthis: *mut c_void);
+  fn _ZNK16QXmlStreamReader4textEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QXmlStreamReader::setDevice(QIODevice * device);
-  fn _ZN16QXmlStreamReader9setDeviceEP9QIODevice(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN16QXmlStreamReader9setDeviceEP9QIODevice(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QXmlStreamReader::QXmlStreamReader(QIODevice * device);
   fn dector_ZN16QXmlStreamReaderC1EP9QIODevice(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN16QXmlStreamReaderC1EP9QIODevice(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN16QXmlStreamReaderC1EP9QIODevice(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QStringRef QXmlStreamReader::documentVersion();
-  fn _ZNK16QXmlStreamReader15documentVersionEv(qthis: *mut c_void);
+  fn _ZNK16QXmlStreamReader15documentVersionEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QXmlStreamReader::isDTD();
-  fn demth_ZNK16QXmlStreamReader5isDTDEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK16QXmlStreamReader5isDTDEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QXmlStreamReader::isStartDocument();
-  fn demth_ZNK16QXmlStreamReader15isStartDocumentEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK16QXmlStreamReader15isStartDocumentEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QString QXmlStreamReader::errorString();
-  fn _ZNK16QXmlStreamReader11errorStringEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK16QXmlStreamReader11errorStringEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QXmlStreamReader::isProcessingInstruction();
-  fn demth_ZNK16QXmlStreamReader23isProcessingInstructionEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK16QXmlStreamReader23isProcessingInstructionEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QXmlStreamReader::setEntityResolver(QXmlStreamEntityResolver * resolver);
-  fn _ZN16QXmlStreamReader17setEntityResolverEP24QXmlStreamEntityResolver(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN16QXmlStreamReader17setEntityResolverEP24QXmlStreamEntityResolver(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QXmlStreamReader::isCharacters();
-  fn demth_ZNK16QXmlStreamReader12isCharactersEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK16QXmlStreamReader12isCharactersEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QXmlStreamReader::QXmlStreamReader();
   fn dector_ZN16QXmlStreamReaderC1Ev() -> *mut c_void;
-  fn _ZN16QXmlStreamReaderC1Ev(qthis: *mut c_void);
+  fn _ZN16QXmlStreamReaderC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QXmlStreamReader::QXmlStreamReader(const QString & data);
   fn dector_ZN16QXmlStreamReaderC1ERK7QString(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN16QXmlStreamReaderC1ERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN16QXmlStreamReaderC1ERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QXmlStreamEntityDeclarations QXmlStreamReader::entityDeclarations();
-  fn _ZNK16QXmlStreamReader18entityDeclarationsEv(qthis: *mut c_void);
+  fn _ZNK16QXmlStreamReader18entityDeclarationsEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QXmlStreamReader::isWhitespace();
-  fn _ZNK16QXmlStreamReader12isWhitespaceEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK16QXmlStreamReader12isWhitespaceEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QXmlStreamReader::QXmlStreamReader(const QXmlStreamReader & );
   fn dector_ZN16QXmlStreamReaderC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN16QXmlStreamReaderC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN16QXmlStreamReaderC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  qint64 QXmlStreamReader::columnNumber();
-  fn _ZNK16QXmlStreamReader12columnNumberEv(qthis: *mut c_void) -> c_longlong;
+  fn _ZNK16QXmlStreamReader12columnNumberEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
   // proto:  bool QXmlStreamReader::hasError();
-  fn demth_ZNK16QXmlStreamReader8hasErrorEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK16QXmlStreamReader8hasErrorEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QXmlStreamReader::isCDATA();
-  fn _ZNK16QXmlStreamReader7isCDATAEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK16QXmlStreamReader7isCDATAEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QXmlStreamReader::~QXmlStreamReader();
-  fn _ZN16QXmlStreamReaderD0Ev(qthis: *mut c_void);
+  fn _ZN16QXmlStreamReaderD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QStringRef QXmlStreamReader::processingInstructionTarget();
-  fn _ZNK16QXmlStreamReader27processingInstructionTargetEv(qthis: *mut c_void);
+  fn _ZNK16QXmlStreamReader27processingInstructionTargetEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QXmlStreamReader::addData(const char * data);
-  fn _ZN16QXmlStreamReader7addDataEPKc(qthis: *mut c_void, arg0: *mut c_char);
+  fn _ZN16QXmlStreamReader7addDataEPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_char);
   // proto:  QStringRef QXmlStreamReader::dtdSystemId();
-  fn _ZNK16QXmlStreamReader11dtdSystemIdEv(qthis: *mut c_void);
+  fn _ZNK16QXmlStreamReader11dtdSystemIdEv(qthis: u64 /* *mut c_void*/);
   // proto:  QStringRef QXmlStreamReader::prefix();
-  fn _ZNK16QXmlStreamReader6prefixEv(qthis: *mut c_void);
+  fn _ZNK16QXmlStreamReader6prefixEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QXmlStreamReader::isEndElement();
-  fn demth_ZNK16QXmlStreamReader12isEndElementEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK16QXmlStreamReader12isEndElementEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QXmlStreamNotationDeclarations QXmlStreamReader::notationDeclarations();
-  fn _ZNK16QXmlStreamReader20notationDeclarationsEv(qthis: *mut c_void);
+  fn _ZNK16QXmlStreamReader20notationDeclarationsEv(qthis: u64 /* *mut c_void*/);
   // proto:  QXmlStreamNamespaceDeclarations QXmlStreamReader::namespaceDeclarations();
-  fn _ZNK16QXmlStreamReader21namespaceDeclarationsEv(qthis: *mut c_void);
+  fn _ZNK16QXmlStreamReader21namespaceDeclarationsEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QXmlStreamReader::setNamespaceProcessing(bool );
-  fn _ZN16QXmlStreamReader22setNamespaceProcessingEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN16QXmlStreamReader22setNamespaceProcessingEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QXmlStreamReader::raiseError(const QString & message);
-  fn _ZN16QXmlStreamReader10raiseErrorERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN16QXmlStreamReader10raiseErrorERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QStringRef QXmlStreamReader::dtdName();
-  fn _ZNK16QXmlStreamReader7dtdNameEv(qthis: *mut c_void);
+  fn _ZNK16QXmlStreamReader7dtdNameEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QXmlStreamReader::isEndDocument();
-  fn demth_ZNK16QXmlStreamReader13isEndDocumentEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK16QXmlStreamReader13isEndDocumentEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QXmlStreamReader::readNextStartElement();
-  fn _ZN16QXmlStreamReader20readNextStartElementEv(qthis: *mut c_void) -> c_char;
+  fn _ZN16QXmlStreamReader20readNextStartElementEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QXmlStreamReader::isComment();
-  fn demth_ZNK16QXmlStreamReader9isCommentEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK16QXmlStreamReader9isCommentEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QXmlStreamReader::QXmlStreamReader(const char * data);
   fn dector_ZN16QXmlStreamReaderC1EPKc(arg0: *mut c_char) -> *mut c_void;
-  fn _ZN16QXmlStreamReaderC1EPKc(qthis: *mut c_void, arg0: *mut c_char);
+  fn _ZN16QXmlStreamReaderC1EPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_char);
   // proto:  void QXmlStreamReader::skipCurrentElement();
-  fn _ZN16QXmlStreamReader18skipCurrentElementEv(qthis: *mut c_void);
+  fn _ZN16QXmlStreamReader18skipCurrentElementEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QXmlStreamReader::isEntityReference();
-  fn demth_ZNK16QXmlStreamReader17isEntityReferenceEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK16QXmlStreamReader17isEntityReferenceEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QXmlStreamReader::addData(const QByteArray & data);
-  fn _ZN16QXmlStreamReader7addDataERK10QByteArray(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN16QXmlStreamReader7addDataERK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QXmlStreamReader::atEnd();
-  fn _ZNK16QXmlStreamReader5atEndEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK16QXmlStreamReader5atEndEv(qthis: u64 /* *mut c_void*/) -> c_char;
   fn QXmlStreamEntityResolver_Class_Size() -> c_int;
   // proto:  QString QXmlStreamEntityResolver::resolveEntity(const QString & publicId, const QString & systemId);
-  fn _ZN24QXmlStreamEntityResolver13resolveEntityERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
+  fn _ZN24QXmlStreamEntityResolver13resolveEntityERK7QStringS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  QString QXmlStreamEntityResolver::resolveUndeclaredEntity(const QString & name);
-  fn _ZN24QXmlStreamEntityResolver23resolveUndeclaredEntityERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZN24QXmlStreamEntityResolver23resolveUndeclaredEntityERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QXmlStreamEntityResolver::~QXmlStreamEntityResolver();
-  fn _ZN24QXmlStreamEntityResolverD0Ev(qthis: *mut c_void);
+  fn _ZN24QXmlStreamEntityResolverD0Ev(qthis: u64 /* *mut c_void*/);
   fn QXmlStreamNamespaceDeclaration_Class_Size() -> c_int;
   // proto:  QStringRef QXmlStreamNamespaceDeclaration::namespaceUri();
-  fn demth_ZNK30QXmlStreamNamespaceDeclaration12namespaceUriEv(qthis: *mut c_void);
+  fn demth_ZNK30QXmlStreamNamespaceDeclaration12namespaceUriEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QXmlStreamNamespaceDeclaration::QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & );
   fn dector_ZN30QXmlStreamNamespaceDeclarationC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN30QXmlStreamNamespaceDeclarationC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN30QXmlStreamNamespaceDeclarationC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QXmlStreamNamespaceDeclaration::QXmlStreamNamespaceDeclaration();
   fn dector_ZN30QXmlStreamNamespaceDeclarationC1Ev() -> *mut c_void;
-  fn _ZN30QXmlStreamNamespaceDeclarationC1Ev(qthis: *mut c_void);
+  fn _ZN30QXmlStreamNamespaceDeclarationC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QStringRef QXmlStreamNamespaceDeclaration::prefix();
-  fn demth_ZNK30QXmlStreamNamespaceDeclaration6prefixEv(qthis: *mut c_void);
+  fn demth_ZNK30QXmlStreamNamespaceDeclaration6prefixEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QXmlStreamNamespaceDeclaration::QXmlStreamNamespaceDeclaration(const QString & prefix, const QString & namespaceUri);
   fn dector_ZN30QXmlStreamNamespaceDeclarationC1ERK7QStringS2_(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN30QXmlStreamNamespaceDeclarationC1ERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN30QXmlStreamNamespaceDeclarationC1ERK7QStringS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QXmlStreamNamespaceDeclaration::~QXmlStreamNamespaceDeclaration();
-  fn _ZN30QXmlStreamNamespaceDeclarationD0Ev(qthis: *mut c_void);
+  fn _ZN30QXmlStreamNamespaceDeclarationD0Ev(qthis: u64 /* *mut c_void*/);
   fn QXmlStreamEntityDeclaration_Class_Size() -> c_int;
   // proto:  void QXmlStreamEntityDeclaration::~QXmlStreamEntityDeclaration();
-  fn _ZN27QXmlStreamEntityDeclarationD0Ev(qthis: *mut c_void);
+  fn _ZN27QXmlStreamEntityDeclarationD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QStringRef QXmlStreamEntityDeclaration::publicId();
-  fn demth_ZNK27QXmlStreamEntityDeclaration8publicIdEv(qthis: *mut c_void);
+  fn demth_ZNK27QXmlStreamEntityDeclaration8publicIdEv(qthis: u64 /* *mut c_void*/);
   // proto:  QStringRef QXmlStreamEntityDeclaration::name();
-  fn demth_ZNK27QXmlStreamEntityDeclaration4nameEv(qthis: *mut c_void);
+  fn demth_ZNK27QXmlStreamEntityDeclaration4nameEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QXmlStreamEntityDeclaration::QXmlStreamEntityDeclaration();
   fn dector_ZN27QXmlStreamEntityDeclarationC1Ev() -> *mut c_void;
-  fn _ZN27QXmlStreamEntityDeclarationC1Ev(qthis: *mut c_void);
+  fn _ZN27QXmlStreamEntityDeclarationC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QStringRef QXmlStreamEntityDeclaration::value();
-  fn demth_ZNK27QXmlStreamEntityDeclaration5valueEv(qthis: *mut c_void);
+  fn demth_ZNK27QXmlStreamEntityDeclaration5valueEv(qthis: u64 /* *mut c_void*/);
   // proto:  QStringRef QXmlStreamEntityDeclaration::notationName();
-  fn demth_ZNK27QXmlStreamEntityDeclaration12notationNameEv(qthis: *mut c_void);
+  fn demth_ZNK27QXmlStreamEntityDeclaration12notationNameEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QXmlStreamEntityDeclaration::QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration & );
   fn dector_ZN27QXmlStreamEntityDeclarationC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN27QXmlStreamEntityDeclarationC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN27QXmlStreamEntityDeclarationC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QStringRef QXmlStreamEntityDeclaration::systemId();
-  fn demth_ZNK27QXmlStreamEntityDeclaration8systemIdEv(qthis: *mut c_void);
+  fn demth_ZNK27QXmlStreamEntityDeclaration8systemIdEv(qthis: u64 /* *mut c_void*/);
   fn QXmlStreamAttributes_Class_Size() -> c_int;
   // proto:  QStringRef QXmlStreamAttributes::value(const QString & qualifiedName);
-  fn _ZNK20QXmlStreamAttributes5valueERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZNK20QXmlStreamAttributes5valueERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QXmlStreamAttributes::QXmlStreamAttributes();
   fn dector_ZN20QXmlStreamAttributesC1Ev() -> *mut c_void;
-  fn demth_ZN20QXmlStreamAttributesC1Ev(qthis: *mut c_void);
+  fn demth_ZN20QXmlStreamAttributesC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QXmlStreamAttributes::hasAttribute(const QString & qualifiedName);
-  fn demth_ZNK20QXmlStreamAttributes12hasAttributeERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn demth_ZNK20QXmlStreamAttributes12hasAttributeERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  bool QXmlStreamAttributes::hasAttribute(const QString & namespaceUri, const QString & name);
-  fn demth_ZNK20QXmlStreamAttributes12hasAttributeERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> c_char;
+  fn demth_ZNK20QXmlStreamAttributes12hasAttributeERK7QStringS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> c_char;
   // proto:  void QXmlStreamAttributes::append(const QString & namespaceUri, const QString & name, const QString & value);
-  fn _ZN20QXmlStreamAttributes6appendERK7QStringS2_S2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
+  fn _ZN20QXmlStreamAttributes6appendERK7QStringS2_S2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  void QXmlStreamAttributes::append(const QString & qualifiedName, const QString & value);
-  fn _ZN20QXmlStreamAttributes6appendERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN20QXmlStreamAttributes6appendERK7QStringS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  QStringRef QXmlStreamAttributes::value(const QString & namespaceUri, const QString & name);
-  fn _ZNK20QXmlStreamAttributes5valueERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZNK20QXmlStreamAttributes5valueERK7QStringS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   fn QXmlStreamWriter_Class_Size() -> c_int;
   // proto:  void QXmlStreamWriter::writeEndElement();
-  fn _ZN16QXmlStreamWriter15writeEndElementEv(qthis: *mut c_void);
+  fn _ZN16QXmlStreamWriter15writeEndElementEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QXmlStreamWriter::QXmlStreamWriter();
   fn dector_ZN16QXmlStreamWriterC1Ev() -> *mut c_void;
-  fn _ZN16QXmlStreamWriterC1Ev(qthis: *mut c_void);
+  fn _ZN16QXmlStreamWriterC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QXmlStreamWriter::writeEndDocument();
-  fn _ZN16QXmlStreamWriter16writeEndDocumentEv(qthis: *mut c_void);
+  fn _ZN16QXmlStreamWriter16writeEndDocumentEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QXmlStreamWriter::autoFormatting();
-  fn _ZNK16QXmlStreamWriter14autoFormattingEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK16QXmlStreamWriter14autoFormattingEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QXmlStreamWriter::writeStartDocument(const QString & version, bool standalone);
-  fn _ZN16QXmlStreamWriter18writeStartDocumentERK7QStringb(qthis: *mut c_void, arg0: *mut c_void, arg1: c_char);
+  fn _ZN16QXmlStreamWriter18writeStartDocumentERK7QStringb(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_char);
   // proto:  void QXmlStreamWriter::setCodec(QTextCodec * codec);
-  fn _ZN16QXmlStreamWriter8setCodecEP10QTextCodec(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN16QXmlStreamWriter8setCodecEP10QTextCodec(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QXmlStreamWriter::writeProcessingInstruction(const QString & target, const QString & data);
-  fn _ZN16QXmlStreamWriter26writeProcessingInstructionERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN16QXmlStreamWriter26writeProcessingInstructionERK7QStringS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QXmlStreamWriter::writeCharacters(const QString & text);
-  fn _ZN16QXmlStreamWriter15writeCharactersERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN16QXmlStreamWriter15writeCharactersERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QXmlStreamWriter::setDevice(QIODevice * device);
-  fn _ZN16QXmlStreamWriter9setDeviceEP9QIODevice(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN16QXmlStreamWriter9setDeviceEP9QIODevice(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QXmlStreamWriter::writeStartDocument(const QString & version);
-  fn _ZN16QXmlStreamWriter18writeStartDocumentERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN16QXmlStreamWriter18writeStartDocumentERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QXmlStreamWriter::writeTextElement(const QString & namespaceUri, const QString & name, const QString & text);
-  fn _ZN16QXmlStreamWriter16writeTextElementERK7QStringS2_S2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
+  fn _ZN16QXmlStreamWriter16writeTextElementERK7QStringS2_S2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  void QXmlStreamWriter::writeAttribute(const QString & qualifiedName, const QString & value);
-  fn _ZN16QXmlStreamWriter14writeAttributeERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN16QXmlStreamWriter14writeAttributeERK7QStringS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QXmlStreamWriter::writeEmptyElement(const QString & qualifiedName);
-  fn _ZN16QXmlStreamWriter17writeEmptyElementERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN16QXmlStreamWriter17writeEmptyElementERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QXmlStreamWriter::writeDTD(const QString & dtd);
-  fn _ZN16QXmlStreamWriter8writeDTDERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN16QXmlStreamWriter8writeDTDERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QXmlStreamWriter::setAutoFormattingIndent(int spacesOrTabs);
-  fn _ZN16QXmlStreamWriter23setAutoFormattingIndentEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN16QXmlStreamWriter23setAutoFormattingIndentEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QXmlStreamWriter::writeAttribute(const QXmlStreamAttribute & attribute);
-  fn _ZN16QXmlStreamWriter14writeAttributeERK19QXmlStreamAttribute(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN16QXmlStreamWriter14writeAttributeERK19QXmlStreamAttribute(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QXmlStreamWriter::writeStartElement(const QString & namespaceUri, const QString & name);
-  fn _ZN16QXmlStreamWriter17writeStartElementERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN16QXmlStreamWriter17writeStartElementERK7QStringS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QXmlStreamWriter::QXmlStreamWriter(QString * string);
   fn dector_ZN16QXmlStreamWriterC1EP7QString(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN16QXmlStreamWriterC1EP7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN16QXmlStreamWriterC1EP7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QXmlStreamWriter::writeComment(const QString & text);
-  fn _ZN16QXmlStreamWriter12writeCommentERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN16QXmlStreamWriter12writeCommentERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QTextCodec * QXmlStreamWriter::codec();
-  fn _ZNK16QXmlStreamWriter5codecEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK16QXmlStreamWriter5codecEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QXmlStreamWriter::writeAttribute(const QString & namespaceUri, const QString & name, const QString & value);
-  fn _ZN16QXmlStreamWriter14writeAttributeERK7QStringS2_S2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
+  fn _ZN16QXmlStreamWriter14writeAttributeERK7QStringS2_S2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  void QXmlStreamWriter::writeNamespace(const QString & namespaceUri, const QString & prefix);
-  fn _ZN16QXmlStreamWriter14writeNamespaceERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN16QXmlStreamWriter14writeNamespaceERK7QStringS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QXmlStreamWriter::QXmlStreamWriter(const QXmlStreamWriter & );
   fn dector_ZN16QXmlStreamWriterC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN16QXmlStreamWriterC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN16QXmlStreamWriterC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QXmlStreamWriter::hasError();
-  fn _ZNK16QXmlStreamWriter8hasErrorEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK16QXmlStreamWriter8hasErrorEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QXmlStreamWriter::writeCDATA(const QString & text);
-  fn _ZN16QXmlStreamWriter10writeCDATAERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN16QXmlStreamWriter10writeCDATAERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QXmlStreamWriter::writeStartDocument();
-  fn _ZN16QXmlStreamWriter18writeStartDocumentEv(qthis: *mut c_void);
+  fn _ZN16QXmlStreamWriter18writeStartDocumentEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QXmlStreamWriter::writeEntityReference(const QString & name);
-  fn _ZN16QXmlStreamWriter20writeEntityReferenceERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN16QXmlStreamWriter20writeEntityReferenceERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QXmlStreamWriter::setAutoFormatting(bool );
-  fn _ZN16QXmlStreamWriter17setAutoFormattingEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN16QXmlStreamWriter17setAutoFormattingEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QXmlStreamWriter::setCodec(const char * codecName);
-  fn _ZN16QXmlStreamWriter8setCodecEPKc(qthis: *mut c_void, arg0: *mut c_char);
+  fn _ZN16QXmlStreamWriter8setCodecEPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_char);
   // proto:  int QXmlStreamWriter::autoFormattingIndent();
-  fn _ZNK16QXmlStreamWriter20autoFormattingIndentEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK16QXmlStreamWriter20autoFormattingIndentEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QXmlStreamWriter::~QXmlStreamWriter();
-  fn _ZN16QXmlStreamWriterD0Ev(qthis: *mut c_void);
+  fn _ZN16QXmlStreamWriterD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QXmlStreamWriter::writeAttributes(const QXmlStreamAttributes & attributes);
-  fn _ZN16QXmlStreamWriter15writeAttributesERK20QXmlStreamAttributes(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN16QXmlStreamWriter15writeAttributesERK20QXmlStreamAttributes(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QXmlStreamWriter::writeDefaultNamespace(const QString & namespaceUri);
-  fn _ZN16QXmlStreamWriter21writeDefaultNamespaceERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN16QXmlStreamWriter21writeDefaultNamespaceERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QIODevice * QXmlStreamWriter::device();
-  fn _ZNK16QXmlStreamWriter6deviceEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK16QXmlStreamWriter6deviceEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QXmlStreamWriter::writeCurrentToken(const QXmlStreamReader & reader);
-  fn _ZN16QXmlStreamWriter17writeCurrentTokenERK16QXmlStreamReader(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN16QXmlStreamWriter17writeCurrentTokenERK16QXmlStreamReader(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QXmlStreamWriter::QXmlStreamWriter(QByteArray * array);
   fn dector_ZN16QXmlStreamWriterC1EP10QByteArray(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN16QXmlStreamWriterC1EP10QByteArray(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN16QXmlStreamWriterC1EP10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QXmlStreamWriter::writeTextElement(const QString & qualifiedName, const QString & text);
-  fn _ZN16QXmlStreamWriter16writeTextElementERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN16QXmlStreamWriter16writeTextElementERK7QStringS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QXmlStreamWriter::writeEmptyElement(const QString & namespaceUri, const QString & name);
-  fn _ZN16QXmlStreamWriter17writeEmptyElementERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN16QXmlStreamWriter17writeEmptyElementERK7QStringS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QXmlStreamWriter::QXmlStreamWriter(QIODevice * device);
   fn dector_ZN16QXmlStreamWriterC1EP9QIODevice(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN16QXmlStreamWriterC1EP9QIODevice(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN16QXmlStreamWriterC1EP9QIODevice(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QXmlStreamWriter::writeStartElement(const QString & qualifiedName);
-  fn _ZN16QXmlStreamWriter17writeStartElementERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN16QXmlStreamWriter17writeStartElementERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QXmlStreamNotationDeclaration_Class_Size() -> c_int;
   // proto:  void QXmlStreamNotationDeclaration::QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration & );
   fn dector_ZN29QXmlStreamNotationDeclarationC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN29QXmlStreamNotationDeclarationC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN29QXmlStreamNotationDeclarationC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QStringRef QXmlStreamNotationDeclaration::publicId();
-  fn demth_ZNK29QXmlStreamNotationDeclaration8publicIdEv(qthis: *mut c_void);
+  fn demth_ZNK29QXmlStreamNotationDeclaration8publicIdEv(qthis: u64 /* *mut c_void*/);
   // proto:  QStringRef QXmlStreamNotationDeclaration::name();
-  fn demth_ZNK29QXmlStreamNotationDeclaration4nameEv(qthis: *mut c_void);
+  fn demth_ZNK29QXmlStreamNotationDeclaration4nameEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QXmlStreamNotationDeclaration::~QXmlStreamNotationDeclaration();
-  fn _ZN29QXmlStreamNotationDeclarationD0Ev(qthis: *mut c_void);
+  fn _ZN29QXmlStreamNotationDeclarationD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QStringRef QXmlStreamNotationDeclaration::systemId();
-  fn demth_ZNK29QXmlStreamNotationDeclaration8systemIdEv(qthis: *mut c_void);
+  fn demth_ZNK29QXmlStreamNotationDeclaration8systemIdEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QXmlStreamNotationDeclaration::QXmlStreamNotationDeclaration();
   fn dector_ZN29QXmlStreamNotationDeclarationC1Ev() -> *mut c_void;
-  fn _ZN29QXmlStreamNotationDeclarationC1Ev(qthis: *mut c_void);
+  fn _ZN29QXmlStreamNotationDeclarationC1Ev(qthis: u64 /* *mut c_void*/);
   fn QXmlStreamAttribute_Class_Size() -> c_int;
   // proto:  void QXmlStreamAttribute::QXmlStreamAttribute(const QString & qualifiedName, const QString & value);
   fn dector_ZN19QXmlStreamAttributeC1ERK7QStringS2_(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN19QXmlStreamAttributeC1ERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN19QXmlStreamAttributeC1ERK7QStringS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  QStringRef QXmlStreamAttribute::qualifiedName();
-  fn demth_ZNK19QXmlStreamAttribute13qualifiedNameEv(qthis: *mut c_void);
+  fn demth_ZNK19QXmlStreamAttribute13qualifiedNameEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QXmlStreamAttribute::~QXmlStreamAttribute();
-  fn _ZN19QXmlStreamAttributeD0Ev(qthis: *mut c_void);
+  fn _ZN19QXmlStreamAttributeD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QStringRef QXmlStreamAttribute::value();
-  fn demth_ZNK19QXmlStreamAttribute5valueEv(qthis: *mut c_void);
+  fn demth_ZNK19QXmlStreamAttribute5valueEv(qthis: u64 /* *mut c_void*/);
   // proto:  QStringRef QXmlStreamAttribute::namespaceUri();
-  fn demth_ZNK19QXmlStreamAttribute12namespaceUriEv(qthis: *mut c_void);
+  fn demth_ZNK19QXmlStreamAttribute12namespaceUriEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QXmlStreamAttribute::QXmlStreamAttribute();
   fn dector_ZN19QXmlStreamAttributeC1Ev() -> *mut c_void;
-  fn _ZN19QXmlStreamAttributeC1Ev(qthis: *mut c_void);
+  fn _ZN19QXmlStreamAttributeC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QXmlStreamAttribute::QXmlStreamAttribute(const QXmlStreamAttribute & );
   fn dector_ZN19QXmlStreamAttributeC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN19QXmlStreamAttributeC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN19QXmlStreamAttributeC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QXmlStreamAttribute::QXmlStreamAttribute(const QString & namespaceUri, const QString & name, const QString & value);
   fn dector_ZN19QXmlStreamAttributeC1ERK7QStringS2_S2_(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> *mut c_void;
-  fn _ZN19QXmlStreamAttributeC1ERK7QStringS2_S2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
+  fn _ZN19QXmlStreamAttributeC1ERK7QStringS2_S2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  bool QXmlStreamAttribute::isDefault();
-  fn demth_ZNK19QXmlStreamAttribute9isDefaultEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK19QXmlStreamAttribute9isDefaultEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QStringRef QXmlStreamAttribute::prefix();
-  fn demth_ZNK19QXmlStreamAttribute6prefixEv(qthis: *mut c_void);
+  fn demth_ZNK19QXmlStreamAttribute6prefixEv(qthis: u64 /* *mut c_void*/);
   // proto:  QStringRef QXmlStreamAttribute::name();
-  fn demth_ZNK19QXmlStreamAttribute4nameEv(qthis: *mut c_void);
+  fn demth_ZNK19QXmlStreamAttribute4nameEv(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QXmlStreamStringRef)=16
+#[derive(Default)]
 pub struct QXmlStreamStringRef {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 // class sizeof(QXmlStreamReader)=1
+#[derive(Default)]
 pub struct QXmlStreamReader {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 // class sizeof(QXmlStreamEntityResolver)=8
+#[derive(Default)]
 pub struct QXmlStreamEntityResolver {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 // class sizeof(QXmlStreamNamespaceDeclaration)=40
+#[derive(Default)]
 pub struct QXmlStreamNamespaceDeclaration {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 // class sizeof(QXmlStreamEntityDeclaration)=88
+#[derive(Default)]
 pub struct QXmlStreamEntityDeclaration {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 // class sizeof(QXmlStreamAttributes)=1
+#[derive(Default)]
 pub struct QXmlStreamAttributes {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 // class sizeof(QXmlStreamWriter)=1
+#[derive(Default)]
 pub struct QXmlStreamWriter {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 // class sizeof(QXmlStreamNotationDeclaration)=56
+#[derive(Default)]
 pub struct QXmlStreamNotationDeclaration {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 // class sizeof(QXmlStreamAttribute)=80
+#[derive(Default)]
 pub struct QXmlStreamAttribute {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QXmlStreamStringRef {
-  pub fn inheritFrom(qthis: *mut c_void) -> QXmlStreamStringRef {
-    return QXmlStreamStringRef{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QXmlStreamStringRef {
+    return QXmlStreamStringRef{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  int QXmlStreamStringRef::size();
@@ -484,7 +493,7 @@ impl<'a> /*trait*/ QXmlStreamStringRef_string<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QXmlStreamStringRef6stringEv()};
     let mut ret = unsafe {demth_ZNK19QXmlStreamStringRef6stringEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -509,11 +518,11 @@ impl<'a> /*trait*/ QXmlStreamStringRef_New for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QXmlStreamStringRefC1ERK7QString()};
     let ctysz: c_int = unsafe{QXmlStreamStringRef_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN19QXmlStreamStringRefC1ERK7QString(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN19QXmlStreamStringRefC1ERK7QString(arg0)};
-    let rsthis = QXmlStreamStringRef{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN19QXmlStreamStringRefC1ERK7QString(arg0)} as u64;
+    let rsthis = QXmlStreamStringRef{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -547,10 +556,10 @@ impl<'a> /*trait*/ QXmlStreamStringRef_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QXmlStreamStringRefC1Ev()};
     let ctysz: c_int = unsafe{QXmlStreamStringRef_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN19QXmlStreamStringRefC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN19QXmlStreamStringRefC1Ev()};
-    let rsthis = QXmlStreamStringRef{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN19QXmlStreamStringRefC1Ev()} as u64;
+    let rsthis = QXmlStreamStringRef{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -580,8 +589,8 @@ impl<'a> /*trait*/ QXmlStreamStringRef_position<i32> for () {
 }
 
 impl /*struct*/ QXmlStreamReader {
-  pub fn inheritFrom(qthis: *mut c_void) -> QXmlStreamReader {
-    return QXmlStreamReader{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QXmlStreamReader {
+    return QXmlStreamReader{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  QStringRef QXmlStreamReader::name();
@@ -624,7 +633,7 @@ impl<'a> /*trait*/ QXmlStreamReader_entityResolver<QXmlStreamEntityResolver> for
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QXmlStreamReader14entityResolverEv()};
     let mut ret = unsafe {_ZNK16QXmlStreamReader14entityResolverEv(rsthis.qclsinst)};
-    let mut ret1 = QXmlStreamEntityResolver::inheritFrom(ret);
+    let mut ret1 = QXmlStreamEntityResolver::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -874,7 +883,7 @@ impl<'a> /*trait*/ QXmlStreamReader_attributes<QXmlStreamAttributes> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QXmlStreamReader10attributesEv()};
     let mut ret = unsafe {_ZNK16QXmlStreamReader10attributesEv(rsthis.qclsinst)};
-    let mut ret1 = QXmlStreamAttributes::inheritFrom(ret);
+    let mut ret1 = QXmlStreamAttributes::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -898,7 +907,7 @@ impl<'a> /*trait*/ QXmlStreamReader_tokenString<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QXmlStreamReader11tokenStringEv()};
     let mut ret = unsafe {_ZNK16QXmlStreamReader11tokenStringEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -946,11 +955,11 @@ impl<'a> /*trait*/ QXmlStreamReader_New for (&'a QByteArray) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamReaderC1ERK10QByteArray()};
     let ctysz: c_int = unsafe{QXmlStreamReader_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN16QXmlStreamReaderC1ERK10QByteArray(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN16QXmlStreamReaderC1ERK10QByteArray(arg0)};
-    let rsthis = QXmlStreamReader{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN16QXmlStreamReaderC1ERK10QByteArray(arg0)} as u64;
+    let rsthis = QXmlStreamReader{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -996,7 +1005,7 @@ impl<'a> /*trait*/ QXmlStreamReader_device<QIODevice> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QXmlStreamReader6deviceEv()};
     let mut ret = unsafe {_ZNK16QXmlStreamReader6deviceEv(rsthis.qclsinst)};
-    let mut ret1 = QIODevice::inheritFrom(ret);
+    let mut ret1 = QIODevice::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1075,11 +1084,11 @@ impl<'a> /*trait*/ QXmlStreamReader_New for (&'a QIODevice) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamReaderC1EP9QIODevice()};
     let ctysz: c_int = unsafe{QXmlStreamReader_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN16QXmlStreamReaderC1EP9QIODevice(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN16QXmlStreamReaderC1EP9QIODevice(arg0)};
-    let rsthis = QXmlStreamReader{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN16QXmlStreamReaderC1EP9QIODevice(arg0)} as u64;
+    let rsthis = QXmlStreamReader{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1171,7 +1180,7 @@ impl<'a> /*trait*/ QXmlStreamReader_errorString<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QXmlStreamReader11errorStringEv()};
     let mut ret = unsafe {_ZNK16QXmlStreamReader11errorStringEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1252,10 +1261,10 @@ impl<'a> /*trait*/ QXmlStreamReader_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamReaderC1Ev()};
     let ctysz: c_int = unsafe{QXmlStreamReader_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN16QXmlStreamReaderC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN16QXmlStreamReaderC1Ev()};
-    let rsthis = QXmlStreamReader{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN16QXmlStreamReaderC1Ev()} as u64;
+    let rsthis = QXmlStreamReader{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1267,11 +1276,11 @@ impl<'a> /*trait*/ QXmlStreamReader_New for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamReaderC1ERK7QString()};
     let ctysz: c_int = unsafe{QXmlStreamReader_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN16QXmlStreamReaderC1ERK7QString(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN16QXmlStreamReaderC1ERK7QString(arg0)};
-    let rsthis = QXmlStreamReader{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN16QXmlStreamReaderC1ERK7QString(arg0)} as u64;
+    let rsthis = QXmlStreamReader{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1328,11 +1337,11 @@ impl<'a> /*trait*/ QXmlStreamReader_New for (&'a QXmlStreamReader) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamReaderC1ERKS_()};
     let ctysz: c_int = unsafe{QXmlStreamReader_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN16QXmlStreamReaderC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN16QXmlStreamReaderC1ERKS_(arg0)};
-    let rsthis = QXmlStreamReader{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN16QXmlStreamReaderC1ERKS_(arg0)} as u64;
+    let rsthis = QXmlStreamReader{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1716,11 +1725,11 @@ impl<'a> /*trait*/ QXmlStreamReader_New for (&'a  String) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamReaderC1EPKc()};
     let ctysz: c_int = unsafe{QXmlStreamReader_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.as_ptr()  as *mut c_char;
     // unsafe {_ZN16QXmlStreamReaderC1EPKc(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN16QXmlStreamReaderC1EPKc(arg0)};
-    let rsthis = QXmlStreamReader{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN16QXmlStreamReaderC1EPKc(arg0)} as u64;
+    let rsthis = QXmlStreamReader{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1806,8 +1815,8 @@ impl<'a> /*trait*/ QXmlStreamReader_atEnd<i8> for () {
 }
 
 impl /*struct*/ QXmlStreamEntityResolver {
-  pub fn inheritFrom(qthis: *mut c_void) -> QXmlStreamEntityResolver {
-    return QXmlStreamEntityResolver{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QXmlStreamEntityResolver {
+    return QXmlStreamEntityResolver{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  QString QXmlStreamEntityResolver::resolveEntity(const QString & publicId, const QString & systemId);
@@ -1830,7 +1839,7 @@ impl<'a> /*trait*/ QXmlStreamEntityResolver_resolveEntity<QString> for (&'a QStr
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN24QXmlStreamEntityResolver13resolveEntityERK7QStringS2_(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1855,7 +1864,7 @@ impl<'a> /*trait*/ QXmlStreamEntityResolver_resolveUndeclaredEntity<QString> for
     // unsafe{_ZN24QXmlStreamEntityResolver23resolveUndeclaredEntityERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN24QXmlStreamEntityResolver23resolveUndeclaredEntityERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1884,8 +1893,8 @@ impl<'a> /*trait*/ QXmlStreamEntityResolver_Free<()> for () {
 }
 
 impl /*struct*/ QXmlStreamNamespaceDeclaration {
-  pub fn inheritFrom(qthis: *mut c_void) -> QXmlStreamNamespaceDeclaration {
-    return QXmlStreamNamespaceDeclaration{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QXmlStreamNamespaceDeclaration {
+    return QXmlStreamNamespaceDeclaration{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  QStringRef QXmlStreamNamespaceDeclaration::namespaceUri();
@@ -1929,11 +1938,11 @@ impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_New for (&'a QXmlStreamNamespa
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZN30QXmlStreamNamespaceDeclarationC1ERKS_()};
     let ctysz: c_int = unsafe{QXmlStreamNamespaceDeclaration_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN30QXmlStreamNamespaceDeclarationC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN30QXmlStreamNamespaceDeclarationC1ERKS_(arg0)};
-    let rsthis = QXmlStreamNamespaceDeclaration{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN30QXmlStreamNamespaceDeclarationC1ERKS_(arg0)} as u64;
+    let rsthis = QXmlStreamNamespaceDeclaration{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1945,10 +1954,10 @@ impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZN30QXmlStreamNamespaceDeclarationC1Ev()};
     let ctysz: c_int = unsafe{QXmlStreamNamespaceDeclaration_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN30QXmlStreamNamespaceDeclarationC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN30QXmlStreamNamespaceDeclarationC1Ev()};
-    let rsthis = QXmlStreamNamespaceDeclaration{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN30QXmlStreamNamespaceDeclarationC1Ev()} as u64;
+    let rsthis = QXmlStreamNamespaceDeclaration{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1982,12 +1991,12 @@ impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_New for (&'a QString, &'a QStr
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZN30QXmlStreamNamespaceDeclarationC1ERK7QStringS2_()};
     let ctysz: c_int = unsafe{QXmlStreamNamespaceDeclaration_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     // unsafe {_ZN30QXmlStreamNamespaceDeclarationC1ERK7QStringS2_(qthis, arg0, arg1)};
-    let qthis: *mut c_void = unsafe {dector_ZN30QXmlStreamNamespaceDeclarationC1ERK7QStringS2_(arg0, arg1)};
-    let rsthis = QXmlStreamNamespaceDeclaration{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN30QXmlStreamNamespaceDeclarationC1ERK7QStringS2_(arg0, arg1)} as u64;
+    let rsthis = QXmlStreamNamespaceDeclaration{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -2016,8 +2025,8 @@ impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_Free<()> for () {
 }
 
 impl /*struct*/ QXmlStreamEntityDeclaration {
-  pub fn inheritFrom(qthis: *mut c_void) -> QXmlStreamEntityDeclaration {
-    return QXmlStreamEntityDeclaration{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QXmlStreamEntityDeclaration {
+    return QXmlStreamEntityDeclaration{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  void QXmlStreamEntityDeclaration::~QXmlStreamEntityDeclaration();
@@ -2105,10 +2114,10 @@ impl<'a> /*trait*/ QXmlStreamEntityDeclaration_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZN27QXmlStreamEntityDeclarationC1Ev()};
     let ctysz: c_int = unsafe{QXmlStreamEntityDeclaration_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN27QXmlStreamEntityDeclarationC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN27QXmlStreamEntityDeclarationC1Ev()};
-    let rsthis = QXmlStreamEntityDeclaration{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN27QXmlStreamEntityDeclarationC1Ev()} as u64;
+    let rsthis = QXmlStreamEntityDeclaration{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -2164,11 +2173,11 @@ impl<'a> /*trait*/ QXmlStreamEntityDeclaration_New for (&'a QXmlStreamEntityDecl
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZN27QXmlStreamEntityDeclarationC1ERKS_()};
     let ctysz: c_int = unsafe{QXmlStreamEntityDeclaration_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN27QXmlStreamEntityDeclarationC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN27QXmlStreamEntityDeclarationC1ERKS_(arg0)};
-    let rsthis = QXmlStreamEntityDeclaration{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN27QXmlStreamEntityDeclarationC1ERKS_(arg0)} as u64;
+    let rsthis = QXmlStreamEntityDeclaration{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -2197,8 +2206,8 @@ impl<'a> /*trait*/ QXmlStreamEntityDeclaration_systemId<()> for () {
 }
 
 impl /*struct*/ QXmlStreamAttributes {
-  pub fn inheritFrom(qthis: *mut c_void) -> QXmlStreamAttributes {
-    return QXmlStreamAttributes{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QXmlStreamAttributes {
+    return QXmlStreamAttributes{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  QStringRef QXmlStreamAttributes::value(const QString & qualifiedName);
@@ -2243,10 +2252,10 @@ impl<'a> /*trait*/ QXmlStreamAttributes_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QXmlStreamAttributesC1Ev()};
     let ctysz: c_int = unsafe{QXmlStreamAttributes_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN20QXmlStreamAttributesC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN20QXmlStreamAttributesC1Ev()};
-    let rsthis = QXmlStreamAttributes{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN20QXmlStreamAttributesC1Ev()} as u64;
+    let rsthis = QXmlStreamAttributes{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -2339,8 +2348,8 @@ impl<'a> /*trait*/ QXmlStreamAttributes_value<()> for (&'a QString, &'a QString)
 }
 
 impl /*struct*/ QXmlStreamWriter {
-  pub fn inheritFrom(qthis: *mut c_void) -> QXmlStreamWriter {
-    return QXmlStreamWriter{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QXmlStreamWriter {
+    return QXmlStreamWriter{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  void QXmlStreamWriter::writeEndElement();
@@ -2384,10 +2393,10 @@ impl<'a> /*trait*/ QXmlStreamWriter_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriterC1Ev()};
     let ctysz: c_int = unsafe{QXmlStreamWriter_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN16QXmlStreamWriterC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN16QXmlStreamWriterC1Ev()};
-    let rsthis = QXmlStreamWriter{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN16QXmlStreamWriterC1Ev()} as u64;
+    let rsthis = QXmlStreamWriter{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -2725,11 +2734,11 @@ impl<'a> /*trait*/ QXmlStreamWriter_New for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriterC1EP7QString()};
     let ctysz: c_int = unsafe{QXmlStreamWriter_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN16QXmlStreamWriterC1EP7QString(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN16QXmlStreamWriterC1EP7QString(arg0)};
-    let rsthis = QXmlStreamWriter{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN16QXmlStreamWriterC1EP7QString(arg0)} as u64;
+    let rsthis = QXmlStreamWriter{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -2776,7 +2785,7 @@ impl<'a> /*trait*/ QXmlStreamWriter_codec<QTextCodec> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QXmlStreamWriter5codecEv()};
     let mut ret = unsafe {_ZNK16QXmlStreamWriter5codecEv(rsthis.qclsinst)};
-    let mut ret1 = QTextCodec::inheritFrom(ret);
+    let mut ret1 = QTextCodec::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2825,11 +2834,11 @@ impl<'a> /*trait*/ QXmlStreamWriter_New for (&'a QXmlStreamWriter) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriterC1ERKS_()};
     let ctysz: c_int = unsafe{QXmlStreamWriter_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN16QXmlStreamWriterC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN16QXmlStreamWriterC1ERKS_(arg0)};
-    let rsthis = QXmlStreamWriter{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN16QXmlStreamWriterC1ERKS_(arg0)} as u64;
+    let rsthis = QXmlStreamWriter{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -3057,7 +3066,7 @@ impl<'a> /*trait*/ QXmlStreamWriter_device<QIODevice> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QXmlStreamWriter6deviceEv()};
     let mut ret = unsafe {_ZNK16QXmlStreamWriter6deviceEv(rsthis.qclsinst)};
-    let mut ret1 = QIODevice::inheritFrom(ret);
+    let mut ret1 = QIODevice::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -3092,11 +3101,11 @@ impl<'a> /*trait*/ QXmlStreamWriter_New for (&'a QByteArray) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriterC1EP10QByteArray()};
     let ctysz: c_int = unsafe{QXmlStreamWriter_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN16QXmlStreamWriterC1EP10QByteArray(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN16QXmlStreamWriterC1EP10QByteArray(arg0)};
-    let rsthis = QXmlStreamWriter{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN16QXmlStreamWriterC1EP10QByteArray(arg0)} as u64;
+    let rsthis = QXmlStreamWriter{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -3132,11 +3141,11 @@ impl<'a> /*trait*/ QXmlStreamWriter_New for (&'a QIODevice) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriterC1EP9QIODevice()};
     let ctysz: c_int = unsafe{QXmlStreamWriter_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN16QXmlStreamWriterC1EP9QIODevice(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN16QXmlStreamWriterC1EP9QIODevice(arg0)};
-    let rsthis = QXmlStreamWriter{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN16QXmlStreamWriterC1EP9QIODevice(arg0)} as u64;
+    let rsthis = QXmlStreamWriter{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -3154,8 +3163,8 @@ impl<'a> /*trait*/ QXmlStreamWriter_writeStartElement<()> for (&'a QString) {
 }
 
 impl /*struct*/ QXmlStreamNotationDeclaration {
-  pub fn inheritFrom(qthis: *mut c_void) -> QXmlStreamNotationDeclaration {
-    return QXmlStreamNotationDeclaration{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QXmlStreamNotationDeclaration {
+    return QXmlStreamNotationDeclaration{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  void QXmlStreamNotationDeclaration::QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration & );
@@ -3177,11 +3186,11 @@ impl<'a> /*trait*/ QXmlStreamNotationDeclaration_New for (&'a QXmlStreamNotation
     // let qthis: *mut c_void = unsafe{calloc(1, 56)};
     // unsafe{_ZN29QXmlStreamNotationDeclarationC1ERKS_()};
     let ctysz: c_int = unsafe{QXmlStreamNotationDeclaration_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN29QXmlStreamNotationDeclarationC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN29QXmlStreamNotationDeclarationC1ERKS_(arg0)};
-    let rsthis = QXmlStreamNotationDeclaration{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN29QXmlStreamNotationDeclarationC1ERKS_(arg0)} as u64;
+    let rsthis = QXmlStreamNotationDeclaration{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -3281,18 +3290,18 @@ impl<'a> /*trait*/ QXmlStreamNotationDeclaration_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 56)};
     // unsafe{_ZN29QXmlStreamNotationDeclarationC1Ev()};
     let ctysz: c_int = unsafe{QXmlStreamNotationDeclaration_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN29QXmlStreamNotationDeclarationC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN29QXmlStreamNotationDeclarationC1Ev()};
-    let rsthis = QXmlStreamNotationDeclaration{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN29QXmlStreamNotationDeclarationC1Ev()} as u64;
+    let rsthis = QXmlStreamNotationDeclaration{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
 impl /*struct*/ QXmlStreamAttribute {
-  pub fn inheritFrom(qthis: *mut c_void) -> QXmlStreamAttribute {
-    return QXmlStreamAttribute{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QXmlStreamAttribute {
+    return QXmlStreamAttribute{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  void QXmlStreamAttribute::QXmlStreamAttribute(const QString & qualifiedName, const QString & value);
@@ -3314,12 +3323,12 @@ impl<'a> /*trait*/ QXmlStreamAttribute_New for (&'a QString, &'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZN19QXmlStreamAttributeC1ERK7QStringS2_()};
     let ctysz: c_int = unsafe{QXmlStreamAttribute_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     // unsafe {_ZN19QXmlStreamAttributeC1ERK7QStringS2_(qthis, arg0, arg1)};
-    let qthis: *mut c_void = unsafe {dector_ZN19QXmlStreamAttributeC1ERK7QStringS2_(arg0, arg1)};
-    let rsthis = QXmlStreamAttribute{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN19QXmlStreamAttributeC1ERK7QStringS2_(arg0, arg1)} as u64;
+    let rsthis = QXmlStreamAttribute{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -3419,10 +3428,10 @@ impl<'a> /*trait*/ QXmlStreamAttribute_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZN19QXmlStreamAttributeC1Ev()};
     let ctysz: c_int = unsafe{QXmlStreamAttribute_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN19QXmlStreamAttributeC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN19QXmlStreamAttributeC1Ev()};
-    let rsthis = QXmlStreamAttribute{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN19QXmlStreamAttributeC1Ev()} as u64;
+    let rsthis = QXmlStreamAttribute{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -3434,11 +3443,11 @@ impl<'a> /*trait*/ QXmlStreamAttribute_New for (&'a QXmlStreamAttribute) {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZN19QXmlStreamAttributeC1ERKS_()};
     let ctysz: c_int = unsafe{QXmlStreamAttribute_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN19QXmlStreamAttributeC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN19QXmlStreamAttributeC1ERKS_(arg0)};
-    let rsthis = QXmlStreamAttribute{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN19QXmlStreamAttributeC1ERKS_(arg0)} as u64;
+    let rsthis = QXmlStreamAttribute{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -3450,13 +3459,13 @@ impl<'a> /*trait*/ QXmlStreamAttribute_New for (&'a QString, &'a QString, &'a QS
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZN19QXmlStreamAttributeC1ERK7QStringS2_S2_()};
     let ctysz: c_int = unsafe{QXmlStreamAttribute_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     // unsafe {_ZN19QXmlStreamAttributeC1ERK7QStringS2_S2_(qthis, arg0, arg1, arg2)};
-    let qthis: *mut c_void = unsafe {dector_ZN19QXmlStreamAttributeC1ERK7QStringS2_S2_(arg0, arg1, arg2)};
-    let rsthis = QXmlStreamAttribute{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN19QXmlStreamAttributeC1ERK7QStringS2_S2_(arg0, arg1, arg2)} as u64;
+    let rsthis = QXmlStreamAttribute{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }

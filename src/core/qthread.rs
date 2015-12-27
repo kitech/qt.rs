@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qthread.h
 // dst-file: /src/core/qthread.rs
 //
@@ -20,6 +20,7 @@ use self::libc::*;
 // use block begin =>
 use super::qobject::QObject; // 773
 use std::ops::Deref;
+use super::qabstracteventdispatcher::QAbstractEventDispatcher; // 773
 use super::qcoreevent::QEvent; // 773
 // <= use block end
 
@@ -33,29 +34,31 @@ extern {
   fn QThread_Class_Size() -> c_int;
   // proto:  void QThread::QThread(QObject * parent);
   fn dector_ZN7QThreadC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN7QThreadC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN7QThreadC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  // proto:  void QThread::setEventDispatcher(QAbstractEventDispatcher * eventDispatcher);
+  fn _ZN7QThread18setEventDispatcherEP24QAbstractEventDispatcher(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QThread::metaObject();
-  fn _ZNK7QThread10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK7QThread10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto: static void QThread::yieldCurrentThread();
   fn _ZN7QThread18yieldCurrentThreadEv();
   // proto:  bool QThread::isInterruptionRequested();
-  fn _ZNK7QThread23isInterruptionRequestedEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK7QThread23isInterruptionRequestedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto: static void QThread::msleep(unsigned long );
   fn _ZN7QThread6msleepEm(arg0: c_ulong);
   // proto:  void QThread::requestInterruption();
-  fn _ZN7QThread19requestInterruptionEv(qthis: *mut c_void);
+  fn _ZN7QThread19requestInterruptionEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QThread::exit(int retcode);
-  fn _ZN7QThread4exitEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN7QThread4exitEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  bool QThread::event(QEvent * event);
-  fn _ZN7QThread5eventEP6QEvent(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn _ZN7QThread5eventEP6QEvent(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  uint QThread::stackSize();
-  fn _ZNK7QThread9stackSizeEv(qthis: *mut c_void) -> c_uint;
+  fn _ZNK7QThread9stackSizeEv(qthis: u64 /* *mut c_void*/) -> c_uint;
   // proto:  QAbstractEventDispatcher * QThread::eventDispatcher();
-  fn _ZNK7QThread15eventDispatcherEv(qthis: *mut c_void);
+  fn _ZNK7QThread15eventDispatcherEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QThread::setStackSize(uint stackSize);
-  fn _ZN7QThread12setStackSizeEj(qthis: *mut c_void, arg0: c_uint);
+  fn _ZN7QThread12setStackSizeEj(qthis: u64 /* *mut c_void*/, arg0: c_uint);
   // proto:  bool QThread::isFinished();
-  fn _ZNK7QThread10isFinishedEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK7QThread10isFinishedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto: static void QThread::sleep(unsigned long );
   fn _ZN7QThread5sleepEm(arg0: c_ulong);
   // proto: static void QThread::usleep(unsigned long );
@@ -63,31 +66,34 @@ extern {
   // proto: static int QThread::idealThreadCount();
   fn _ZN7QThread16idealThreadCountEv() -> c_int;
   // proto:  bool QThread::wait(unsigned long time);
-  fn _ZN7QThread4waitEm(qthis: *mut c_void, arg0: c_ulong) -> c_char;
+  fn _ZN7QThread4waitEm(qthis: u64 /* *mut c_void*/, arg0: c_ulong) -> c_char;
   // proto: static QThread * QThread::currentThread();
   fn _ZN7QThread13currentThreadEv() -> *mut c_void;
   // proto:  bool QThread::isRunning();
-  fn _ZNK7QThread9isRunningEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK7QThread9isRunningEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QThread::terminate();
-  fn _ZN7QThread9terminateEv(qthis: *mut c_void);
+  fn _ZN7QThread9terminateEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QThread::~QThread();
-  fn _ZN7QThreadD0Ev(qthis: *mut c_void);
+  fn _ZN7QThreadD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QThread::quit();
-  fn _ZN7QThread4quitEv(qthis: *mut c_void);
+  fn _ZN7QThread4quitEv(qthis: u64 /* *mut c_void*/);
   // proto:  int QThread::loopLevel();
-  fn _ZNK7QThread9loopLevelEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK7QThread9loopLevelEv(qthis: u64 /* *mut c_void*/) -> c_int;
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QThread)=1
+#[derive(Default)]
 pub struct QThread {
   qbase: QObject,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _started_1: QThread_started_signal,
+  pub _finished_1: QThread_finished_signal,
 }
 
 impl /*struct*/ QThread {
-  pub fn inheritFrom(qthis: *mut c_void) -> QThread {
-    return QThread{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QThread {
+    return QThread{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QThread {
@@ -121,12 +127,35 @@ impl<'a> /*trait*/ QThread_New for (&'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QThreadC1EP7QObject()};
     let ctysz: c_int = unsafe{QThread_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN7QThreadC1EP7QObject(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN7QThreadC1EP7QObject(arg0)};
-    let rsthis = QThread{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN7QThreadC1EP7QObject(arg0)} as u64;
+    let rsthis = QThread{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
+    // return 1;
+  }
+}
+
+  // proto:  void QThread::setEventDispatcher(QAbstractEventDispatcher * eventDispatcher);
+impl /*struct*/ QThread {
+  pub fn setEventDispatcher<RetType, T: QThread_setEventDispatcher<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.setEventDispatcher(self);
+    // return 1;
+  }
+}
+
+pub trait QThread_setEventDispatcher<RetType> {
+  fn setEventDispatcher(self , rsthis: & QThread) -> RetType;
+}
+
+  // proto:  void QThread::setEventDispatcher(QAbstractEventDispatcher * eventDispatcher);
+impl<'a> /*trait*/ QThread_setEventDispatcher<()> for (&'a QAbstractEventDispatcher) {
+  fn setEventDispatcher(self , rsthis: & QThread) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN7QThread18setEventDispatcherEP24QAbstractEventDispatcher()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN7QThread18setEventDispatcherEP24QAbstractEventDispatcher(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -492,7 +521,7 @@ impl<'a> /*trait*/ QThread_currentThread_s<QThread> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QThread13currentThreadEv()};
     let mut ret = unsafe {_ZN7QThread13currentThreadEv()};
-    let mut ret1 = QThread::inheritFrom(ret);
+    let mut ret1 = QThread::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -608,6 +637,38 @@ impl<'a> /*trait*/ QThread_loopLevel<i32> for () {
     return ret as i32;
     // return 1;
   }
+}
+
+#[derive(Default)] // for QThread_started
+pub struct QThread_started_signal{poi:u64}
+impl /* struct */ QThread {
+  pub fn started_1(self) -> QThread_started_signal {
+     return QThread_started_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QThread_started_signal {
+  pub fn connect<T: QThread_started_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QThread_started_signal_connect {
+  fn connect(self, sigthis: QThread_started_signal);
+}
+
+#[derive(Default)] // for QThread_finished
+pub struct QThread_finished_signal{poi:u64}
+impl /* struct */ QThread {
+  pub fn finished_1(self) -> QThread_finished_signal {
+     return QThread_finished_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QThread_finished_signal {
+  pub fn connect<T: QThread_finished_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QThread_finished_signal_connect {
+  fn connect(self, sigthis: QThread_finished_signal);
 }
 
 // <= body block end

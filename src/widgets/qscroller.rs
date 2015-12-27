@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtWidgets/qscroller.h
 // dst-file: /src/widgets/qscroller.rs
 //
@@ -34,67 +34,72 @@ use super::super::core::qrect::QRectF; // 771
 extern {
   fn QScroller_Class_Size() -> c_int;
   // proto:  void QScroller::~QScroller();
-  fn _ZN9QScrollerD0Ev(qthis: *mut c_void);
+  fn _ZN9QScrollerD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QScroller::setSnapPositionsY(qreal first, qreal interval);
-  fn _ZN9QScroller17setSnapPositionsYEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double);
+  fn _ZN9QScroller17setSnapPositionsYEdd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double);
   // proto:  QPointF QScroller::finalPosition();
-  fn _ZNK9QScroller13finalPositionEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QScroller13finalPositionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto: static QList<QScroller *> QScroller::activeScrollers();
   fn _ZN9QScroller15activeScrollersEv();
   // proto:  void QScroller::setScrollerProperties(const QScrollerProperties & prop);
-  fn _ZN9QScroller21setScrollerPropertiesERK19QScrollerProperties(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN9QScroller21setScrollerPropertiesERK19QScrollerProperties(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QScroller::metaObject();
-  fn _ZNK9QScroller10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK9QScroller10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  QPointF QScroller::velocity();
-  fn _ZNK9QScroller8velocityEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QScroller8velocityEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QScroller::resendPrepareEvent();
-  fn _ZN9QScroller18resendPrepareEventEv(qthis: *mut c_void);
+  fn _ZN9QScroller18resendPrepareEventEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QScroller::ensureVisible(const QRectF & rect, qreal xmargin, qreal ymargin);
-  fn _ZN9QScroller13ensureVisibleERK6QRectFdd(qthis: *mut c_void, arg0: *mut c_void, arg1: c_double, arg2: c_double);
+  fn _ZN9QScroller13ensureVisibleERK6QRectFdd(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_double, arg2: c_double);
   // proto:  void QScroller::setSnapPositionsX(qreal first, qreal interval);
-  fn _ZN9QScroller17setSnapPositionsXEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double);
+  fn _ZN9QScroller17setSnapPositionsXEdd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double);
   // proto: static bool QScroller::hasScroller(QObject * target);
   fn _ZN9QScroller11hasScrollerEP7QObject(arg0: *mut c_void) -> c_char;
   // proto:  void QScroller::QScroller(const QScroller & );
   fn dector_ZN9QScrollerC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QScrollerC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN9QScrollerC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QScroller::scrollTo(const QPointF & pos, int scrollTime);
-  fn _ZN9QScroller8scrollToERK7QPointFi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int);
+  fn _ZN9QScroller8scrollToERK7QPointFi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
   // proto:  void QScroller::stop();
-  fn _ZN9QScroller4stopEv(qthis: *mut c_void);
+  fn _ZN9QScroller4stopEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QScroller::ensureVisible(const QRectF & rect, qreal xmargin, qreal ymargin, int scrollTime);
-  fn _ZN9QScroller13ensureVisibleERK6QRectFddi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_double, arg2: c_double, arg3: c_int);
+  fn _ZN9QScroller13ensureVisibleERK6QRectFddi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_double, arg2: c_double, arg3: c_int);
   // proto:  void QScroller::QScroller(QObject * target);
   fn dector_ZN9QScrollerC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QScrollerC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN9QScrollerC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static void QScroller::ungrabGesture(QObject * target);
   fn _ZN9QScroller13ungrabGestureEP7QObject(arg0: *mut c_void);
   // proto:  void QScroller::scrollerPropertiesChanged(const QScrollerProperties & );
-  fn _ZN9QScroller25scrollerPropertiesChangedERK19QScrollerProperties(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN9QScroller25scrollerPropertiesChangedERK19QScrollerProperties(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QScrollerProperties QScroller::scrollerProperties();
-  fn _ZNK9QScroller18scrollerPropertiesEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QScroller18scrollerPropertiesEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto: static QScroller * QScroller::scroller(QObject * target);
   fn _ZN9QScroller8scrollerEP7QObject(arg0: *mut c_void) -> *mut c_void;
   // proto: static const QScroller * QScroller::scroller(const QObject * target);
   fn _ZN9QScroller8scrollerEPK7QObject(arg0: *mut c_void) -> *mut c_void;
   // proto:  void QScroller::scrollTo(const QPointF & pos);
-  fn _ZN9QScroller8scrollToERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN9QScroller8scrollToERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QObject * QScroller::target();
-  fn _ZNK9QScroller6targetEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QScroller6targetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QPointF QScroller::pixelPerMeter();
-  fn _ZNK9QScroller13pixelPerMeterEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QScroller13pixelPerMeterEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn QScroller_SlotProxy_connect__ZN9QScroller25scrollerPropertiesChangedERK19QScrollerProperties(qthis: *mut c_void, fptr: *mut c_void);
+  fn QScroller_SlotProxy_connect__ZN9QScroller12stateChangedENS_5StateE(qthis: *mut c_void, fptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QScroller)=1
+#[derive(Default)]
 pub struct QScroller {
   qbase: QObject,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _stateChanged_1: QScroller_stateChanged_signal,
+  pub _scrollerPropertiesChanged_1: QScroller_scrollerPropertiesChanged_signal,
 }
 
 impl /*struct*/ QScroller {
-  pub fn inheritFrom(qthis: *mut c_void) -> QScroller {
-    return QScroller{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QScroller {
+    return QScroller{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QScroller {
@@ -173,7 +178,7 @@ impl<'a> /*trait*/ QScroller_finalPosition<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QScroller13finalPositionEv()};
     let mut ret = unsafe {_ZNK9QScroller13finalPositionEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF::inheritFrom(ret);
+    let mut ret1 = QPointF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -264,7 +269,7 @@ impl<'a> /*trait*/ QScroller_velocity<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QScroller8velocityEv()};
     let mut ret = unsafe {_ZNK9QScroller8velocityEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF::inheritFrom(ret);
+    let mut ret1 = QPointF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -384,11 +389,11 @@ impl<'a> /*trait*/ QScroller_New for (&'a QScroller) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QScrollerC1ERKS_()};
     let ctysz: c_int = unsafe{QScroller_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN9QScrollerC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN9QScrollerC1ERKS_(arg0)};
-    let rsthis = QScroller{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN9QScrollerC1ERKS_(arg0)} as u64;
+    let rsthis = QScroller{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -460,11 +465,11 @@ impl<'a> /*trait*/ QScroller_New for (&'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QScrollerC1EP7QObject()};
     let ctysz: c_int = unsafe{QScroller_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN9QScrollerC1EP7QObject(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN9QScrollerC1EP7QObject(arg0)};
-    let rsthis = QScroller{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN9QScrollerC1EP7QObject(arg0)} as u64;
+    let rsthis = QScroller{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -534,7 +539,7 @@ impl<'a> /*trait*/ QScroller_scrollerProperties<QScrollerProperties> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QScroller18scrollerPropertiesEv()};
     let mut ret = unsafe {_ZNK9QScroller18scrollerPropertiesEv(rsthis.qclsinst)};
-    let mut ret1 = QScrollerProperties::inheritFrom(ret);
+    let mut ret1 = QScrollerProperties::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -559,7 +564,7 @@ impl<'a> /*trait*/ QScroller_scroller_s<QScroller> for (&'a QObject) {
     // unsafe{_ZN9QScroller8scrollerEP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN9QScroller8scrollerEP7QObject(arg0)};
-    let mut ret1 = QScroller::inheritFrom(ret);
+    let mut ret1 = QScroller::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -594,7 +599,7 @@ impl<'a> /*trait*/ QScroller_target<QObject> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QScroller6targetEv()};
     let mut ret = unsafe {_ZNK9QScroller6targetEv(rsthis.qclsinst)};
-    let mut ret1 = QObject::inheritFrom(ret);
+    let mut ret1 = QObject::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -618,11 +623,63 @@ impl<'a> /*trait*/ QScroller_pixelPerMeter<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QScroller13pixelPerMeterEv()};
     let mut ret = unsafe {_ZNK9QScroller13pixelPerMeterEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF::inheritFrom(ret);
+    let mut ret1 = QPointF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
 }
 
+#[derive(Default)] // for QScroller_stateChanged
+pub struct QScroller_stateChanged_signal{poi:u64}
+impl /* struct */ QScroller {
+  pub fn stateChanged_1(self) -> QScroller_stateChanged_signal {
+     return QScroller_stateChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QScroller_stateChanged_signal {
+  pub fn connect<T: QScroller_stateChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QScroller_stateChanged_signal_connect {
+  fn connect(self, sigthis: QScroller_stateChanged_signal);
+}
+
+#[derive(Default)] // for QScroller_scrollerPropertiesChanged
+pub struct QScroller_scrollerPropertiesChanged_signal{poi:u64}
+impl /* struct */ QScroller {
+  pub fn scrollerPropertiesChanged_1(self) -> QScroller_scrollerPropertiesChanged_signal {
+     return QScroller_scrollerPropertiesChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QScroller_scrollerPropertiesChanged_signal {
+  pub fn connect<T: QScroller_scrollerPropertiesChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QScroller_scrollerPropertiesChanged_signal_connect {
+  fn connect(self, sigthis: QScroller_scrollerPropertiesChanged_signal);
+}
+
+// scrollerPropertiesChanged(const class QScrollerProperties &)
+extern fn QScroller_scrollerPropertiesChanged_signal_connect_cb_0(arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QScroller_scrollerPropertiesChanged_signal_connect for (extern fn(QScrollerProperties)) {
+  fn connect(self, sigthis: QScroller_scrollerPropertiesChanged_signal) {
+    // do smth...
+    unsafe {QScroller_SlotProxy_connect__ZN9QScroller25scrollerPropertiesChangedERK19QScrollerProperties(sigthis.poi as *mut c_void, QScroller_scrollerPropertiesChanged_signal_connect_cb_0 as *mut c_void)};
+  }
+}
+// stateChanged(class QScroller::State)
+extern fn QScroller_stateChanged_signal_connect_cb_1(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QScroller_stateChanged_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QScroller_stateChanged_signal) {
+    // do smth...
+    unsafe {QScroller_SlotProxy_connect__ZN9QScroller12stateChangedENS_5StateE(sigthis.poi as *mut c_void, QScroller_stateChanged_signal_connect_cb_1 as *mut c_void)};
+  }
+}
 // <= body block end
 

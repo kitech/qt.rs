@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtWidgets/qcolumnview.h
 // dst-file: /src/widgets/qcolumnview.rs
 //
@@ -24,6 +24,7 @@ use super::qwidget::QWidget; // 773
 use super::super::core::qpoint::QPoint; // 771
 use super::super::core::qabstractitemmodel::QModelIndex; // 771
 use super::super::core::qsize::QSize; // 771
+use super::super::core::qabstractitemmodel::QAbstractItemModel; // 771
 use super::super::core::qitemselectionmodel::QItemSelectionModel; // 771
 use super::super::core::qrect::QRect; // 771
 // <= use block end
@@ -38,50 +39,55 @@ extern {
   fn QColumnView_Class_Size() -> c_int;
   // proto:  void QColumnView::QColumnView(QWidget * parent);
   fn dector_ZN11QColumnViewC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QColumnViewC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QColumnViewC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QColumnView::selectAll();
-  fn _ZN11QColumnView9selectAllEv(qthis: *mut c_void);
+  fn _ZN11QColumnView9selectAllEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QColumnView::setPreviewWidget(QWidget * widget);
-  fn _ZN11QColumnView16setPreviewWidgetEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QColumnView16setPreviewWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QModelIndex QColumnView::indexAt(const QPoint & point);
-  fn _ZNK11QColumnView7indexAtERK6QPoint(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK11QColumnView7indexAtERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  const QMetaObject * QColumnView::metaObject();
-  fn _ZNK11QColumnView10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK11QColumnView10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  QSize QColumnView::sizeHint();
-  fn _ZNK11QColumnView8sizeHintEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK11QColumnView8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QList<int> QColumnView::columnWidths();
-  fn _ZNK11QColumnView12columnWidthsEv(qthis: *mut c_void);
+  fn _ZNK11QColumnView12columnWidthsEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QColumnView::setResizeGripsVisible(bool visible);
-  fn _ZN11QColumnView21setResizeGripsVisibleEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN11QColumnView21setResizeGripsVisibleEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  bool QColumnView::resizeGripsVisible();
-  fn _ZNK11QColumnView18resizeGripsVisibleEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK11QColumnView18resizeGripsVisibleEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QColumnView::QColumnView(const QColumnView & );
   fn dector_ZN11QColumnViewC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QColumnViewC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QColumnViewC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  // proto:  void QColumnView::setModel(QAbstractItemModel * model);
+  fn _ZN11QColumnView8setModelEP18QAbstractItemModel(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QColumnView::updatePreviewWidget(const QModelIndex & index);
-  fn _ZN11QColumnView19updatePreviewWidgetERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QColumnView19updatePreviewWidgetERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QColumnView::setRootIndex(const QModelIndex & index);
-  fn _ZN11QColumnView12setRootIndexERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QColumnView12setRootIndexERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QWidget * QColumnView::previewWidget();
-  fn _ZNK11QColumnView13previewWidgetEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK11QColumnView13previewWidgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QColumnView::setSelectionModel(QItemSelectionModel * selectionModel);
-  fn _ZN11QColumnView17setSelectionModelEP19QItemSelectionModel(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QColumnView17setSelectionModelEP19QItemSelectionModel(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QRect QColumnView::visualRect(const QModelIndex & index);
-  fn _ZNK11QColumnView10visualRectERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK11QColumnView10visualRectERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QColumnView::~QColumnView();
-  fn _ZN11QColumnViewD0Ev(qthis: *mut c_void);
+  fn _ZN11QColumnViewD0Ev(qthis: u64 /* *mut c_void*/);
+  fn QColumnView_SlotProxy_connect__ZN11QColumnView19updatePreviewWidgetERK11QModelIndex(qthis: *mut c_void, fptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QColumnView)=1
+#[derive(Default)]
 pub struct QColumnView {
   qbase: QAbstractItemView,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _updatePreviewWidget_1: QColumnView_updatePreviewWidget_signal,
 }
 
 impl /*struct*/ QColumnView {
-  pub fn inheritFrom(qthis: *mut c_void) -> QColumnView {
-    return QColumnView{qbase: QAbstractItemView::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QColumnView {
+    return QColumnView{qbase: QAbstractItemView::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QColumnView {
@@ -115,11 +121,11 @@ impl<'a> /*trait*/ QColumnView_New for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QColumnViewC1EP7QWidget()};
     let ctysz: c_int = unsafe{QColumnView_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN11QColumnViewC1EP7QWidget(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN11QColumnViewC1EP7QWidget(arg0)};
-    let rsthis = QColumnView{/**/qbase: QAbstractItemView::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN11QColumnViewC1EP7QWidget(arg0)} as u64;
+    let rsthis = QColumnView{qbase: QAbstractItemView::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -189,7 +195,7 @@ impl<'a> /*trait*/ QColumnView_indexAt<QModelIndex> for (&'a QPoint) {
     // unsafe{_ZNK11QColumnView7indexAtERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK11QColumnView7indexAtERK6QPoint(rsthis.qclsinst, arg0)};
-    let mut ret1 = QModelIndex::inheritFrom(ret);
+    let mut ret1 = QModelIndex::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -235,7 +241,7 @@ impl<'a> /*trait*/ QColumnView_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QColumnView8sizeHintEv()};
     let mut ret = unsafe {_ZNK11QColumnView8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize::inheritFrom(ret);
+    let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -315,12 +321,35 @@ impl<'a> /*trait*/ QColumnView_New for (&'a QColumnView) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QColumnViewC1ERKS_()};
     let ctysz: c_int = unsafe{QColumnView_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN11QColumnViewC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN11QColumnViewC1ERKS_(arg0)};
-    let rsthis = QColumnView{/**/qbase: QAbstractItemView::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN11QColumnViewC1ERKS_(arg0)} as u64;
+    let rsthis = QColumnView{qbase: QAbstractItemView::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
+    // return 1;
+  }
+}
+
+  // proto:  void QColumnView::setModel(QAbstractItemModel * model);
+impl /*struct*/ QColumnView {
+  pub fn setModel<RetType, T: QColumnView_setModel<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.setModel(self);
+    // return 1;
+  }
+}
+
+pub trait QColumnView_setModel<RetType> {
+  fn setModel(self , rsthis: & QColumnView) -> RetType;
+}
+
+  // proto:  void QColumnView::setModel(QAbstractItemModel * model);
+impl<'a> /*trait*/ QColumnView_setModel<()> for (&'a QAbstractItemModel) {
+  fn setModel(self , rsthis: & QColumnView) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN11QColumnView8setModelEP18QAbstractItemModel()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN11QColumnView8setModelEP18QAbstractItemModel(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -389,7 +418,7 @@ impl<'a> /*trait*/ QColumnView_previewWidget<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QColumnView13previewWidgetEv()};
     let mut ret = unsafe {_ZNK11QColumnView13previewWidgetEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget::inheritFrom(ret);
+    let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -437,7 +466,7 @@ impl<'a> /*trait*/ QColumnView_visualRect<QRect> for (&'a QModelIndex) {
     // unsafe{_ZNK11QColumnView10visualRectERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK11QColumnView10visualRectERK11QModelIndex(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRect::inheritFrom(ret);
+    let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -465,5 +494,31 @@ impl<'a> /*trait*/ QColumnView_Free<()> for () {
   }
 }
 
+#[derive(Default)] // for QColumnView_updatePreviewWidget
+pub struct QColumnView_updatePreviewWidget_signal{poi:u64}
+impl /* struct */ QColumnView {
+  pub fn updatePreviewWidget_1(self) -> QColumnView_updatePreviewWidget_signal {
+     return QColumnView_updatePreviewWidget_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QColumnView_updatePreviewWidget_signal {
+  pub fn connect<T: QColumnView_updatePreviewWidget_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QColumnView_updatePreviewWidget_signal_connect {
+  fn connect(self, sigthis: QColumnView_updatePreviewWidget_signal);
+}
+
+// updatePreviewWidget(const class QModelIndex &)
+extern fn QColumnView_updatePreviewWidget_signal_connect_cb_0(arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QColumnView_updatePreviewWidget_signal_connect for (extern fn(QModelIndex)) {
+  fn connect(self, sigthis: QColumnView_updatePreviewWidget_signal) {
+    // do smth...
+    unsafe {QColumnView_SlotProxy_connect__ZN11QColumnView19updatePreviewWidgetERK11QModelIndex(sigthis.poi as *mut c_void, QColumnView_updatePreviewWidget_signal_connect_cb_0 as *mut c_void)};
+  }
+}
 // <= body block end
 

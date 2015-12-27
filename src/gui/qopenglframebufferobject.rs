@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtGui/qopenglframebufferobject.h
 // dst-file: /src/gui/qopenglframebufferobject.rs
 //
@@ -34,101 +34,103 @@ use super::super::core::qrect::QRect; // 771
 extern {
   fn QOpenGLFramebufferObjectFormat_Class_Size() -> c_int;
   // proto:  void QOpenGLFramebufferObjectFormat::~QOpenGLFramebufferObjectFormat();
-  fn _ZN30QOpenGLFramebufferObjectFormatD0Ev(qthis: *mut c_void);
+  fn _ZN30QOpenGLFramebufferObjectFormatD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QOpenGLFramebufferObjectFormat::setTextureTarget(GLenum target);
-  fn _ZN30QOpenGLFramebufferObjectFormat16setTextureTargetEj(qthis: *mut c_void, arg0: c_uint);
+  fn _ZN30QOpenGLFramebufferObjectFormat16setTextureTargetEj(qthis: u64 /* *mut c_void*/, arg0: c_uint);
   // proto:  void QOpenGLFramebufferObjectFormat::setInternalTextureFormat(GLenum internalTextureFormat);
-  fn _ZN30QOpenGLFramebufferObjectFormat24setInternalTextureFormatEj(qthis: *mut c_void, arg0: c_uint);
+  fn _ZN30QOpenGLFramebufferObjectFormat24setInternalTextureFormatEj(qthis: u64 /* *mut c_void*/, arg0: c_uint);
   // proto:  void QOpenGLFramebufferObjectFormat::QOpenGLFramebufferObjectFormat(const QOpenGLFramebufferObjectFormat & other);
   fn dector_ZN30QOpenGLFramebufferObjectFormatC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN30QOpenGLFramebufferObjectFormatC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN30QOpenGLFramebufferObjectFormatC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QOpenGLFramebufferObjectFormat::mipmap();
-  fn _ZNK30QOpenGLFramebufferObjectFormat6mipmapEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK30QOpenGLFramebufferObjectFormat6mipmapEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  GLenum QOpenGLFramebufferObjectFormat::textureTarget();
-  fn _ZNK30QOpenGLFramebufferObjectFormat13textureTargetEv(qthis: *mut c_void) -> c_uint;
+  fn _ZNK30QOpenGLFramebufferObjectFormat13textureTargetEv(qthis: u64 /* *mut c_void*/) -> c_uint;
   // proto:  void QOpenGLFramebufferObjectFormat::setSamples(int samples);
-  fn _ZN30QOpenGLFramebufferObjectFormat10setSamplesEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN30QOpenGLFramebufferObjectFormat10setSamplesEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QOpenGLFramebufferObjectFormat::QOpenGLFramebufferObjectFormat();
   fn dector_ZN30QOpenGLFramebufferObjectFormatC1Ev() -> *mut c_void;
-  fn _ZN30QOpenGLFramebufferObjectFormatC1Ev(qthis: *mut c_void);
+  fn _ZN30QOpenGLFramebufferObjectFormatC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QOpenGLFramebufferObjectFormat::setMipmap(bool enabled);
-  fn _ZN30QOpenGLFramebufferObjectFormat9setMipmapEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN30QOpenGLFramebufferObjectFormat9setMipmapEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  GLenum QOpenGLFramebufferObjectFormat::internalTextureFormat();
-  fn _ZNK30QOpenGLFramebufferObjectFormat21internalTextureFormatEv(qthis: *mut c_void) -> c_uint;
+  fn _ZNK30QOpenGLFramebufferObjectFormat21internalTextureFormatEv(qthis: u64 /* *mut c_void*/) -> c_uint;
   // proto:  int QOpenGLFramebufferObjectFormat::samples();
-  fn _ZNK30QOpenGLFramebufferObjectFormat7samplesEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK30QOpenGLFramebufferObjectFormat7samplesEv(qthis: u64 /* *mut c_void*/) -> c_int;
   fn QOpenGLFramebufferObject_Class_Size() -> c_int;
   // proto:  bool QOpenGLFramebufferObject::isValid();
-  fn _ZNK24QOpenGLFramebufferObject7isValidEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK24QOpenGLFramebufferObject7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  GLuint QOpenGLFramebufferObject::takeTexture();
-  fn _ZN24QOpenGLFramebufferObject11takeTextureEv(qthis: *mut c_void) -> c_uint;
+  fn _ZN24QOpenGLFramebufferObject11takeTextureEv(qthis: u64 /* *mut c_void*/) -> c_uint;
   // proto:  void QOpenGLFramebufferObject::QOpenGLFramebufferObject(const QSize & size, const QOpenGLFramebufferObjectFormat & format);
   fn dector_ZN24QOpenGLFramebufferObjectC1ERK5QSizeRK30QOpenGLFramebufferObjectFormat(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN24QOpenGLFramebufferObjectC1ERK5QSizeRK30QOpenGLFramebufferObjectFormat(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN24QOpenGLFramebufferObjectC1ERK5QSizeRK30QOpenGLFramebufferObjectFormat(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto: static bool QOpenGLFramebufferObject::bindDefault();
   fn _ZN24QOpenGLFramebufferObject11bindDefaultEv() -> c_char;
   // proto: static bool QOpenGLFramebufferObject::hasOpenGLFramebufferBlit();
   fn _ZN24QOpenGLFramebufferObject24hasOpenGLFramebufferBlitEv() -> c_char;
   // proto:  GLuint QOpenGLFramebufferObject::texture();
-  fn _ZNK24QOpenGLFramebufferObject7textureEv(qthis: *mut c_void) -> c_uint;
+  fn _ZNK24QOpenGLFramebufferObject7textureEv(qthis: u64 /* *mut c_void*/) -> c_uint;
   // proto:  void QOpenGLFramebufferObject::QOpenGLFramebufferObject(const QSize & size, GLenum target);
   fn dector_ZN24QOpenGLFramebufferObjectC1ERK5QSizej(arg0: *mut c_void, arg1: c_uint) -> *mut c_void;
-  fn _ZN24QOpenGLFramebufferObjectC1ERK5QSizej(qthis: *mut c_void, arg0: *mut c_void, arg1: c_uint);
+  fn _ZN24QOpenGLFramebufferObjectC1ERK5QSizej(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_uint);
   // proto:  bool QOpenGLFramebufferObject::release();
-  fn _ZN24QOpenGLFramebufferObject7releaseEv(qthis: *mut c_void) -> c_char;
+  fn _ZN24QOpenGLFramebufferObject7releaseEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto: static bool QOpenGLFramebufferObject::hasOpenGLFramebufferObjects();
   fn _ZN24QOpenGLFramebufferObject27hasOpenGLFramebufferObjectsEv() -> c_char;
   // proto:  QImage QOpenGLFramebufferObject::toImage(bool flipped);
-  fn _ZNK24QOpenGLFramebufferObject7toImageEb(qthis: *mut c_void, arg0: c_char) -> *mut c_void;
+  fn _ZNK24QOpenGLFramebufferObject7toImageEb(qthis: u64 /* *mut c_void*/, arg0: c_char) -> *mut c_void;
   // proto:  GLuint QOpenGLFramebufferObject::handle();
-  fn _ZNK24QOpenGLFramebufferObject6handleEv(qthis: *mut c_void) -> c_uint;
+  fn _ZNK24QOpenGLFramebufferObject6handleEv(qthis: u64 /* *mut c_void*/) -> c_uint;
   // proto:  int QOpenGLFramebufferObject::height();
-  fn _ZNK24QOpenGLFramebufferObject6heightEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK24QOpenGLFramebufferObject6heightEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto: static void QOpenGLFramebufferObject::blitFramebuffer(QOpenGLFramebufferObject * target, QOpenGLFramebufferObject * source, GLbitfield buffers, GLenum filter);
   fn _ZN24QOpenGLFramebufferObject15blitFramebufferEPS_S0_jj(arg0: *mut c_void, arg1: *mut c_void, arg2: c_uint, arg3: c_uint);
   // proto:  void QOpenGLFramebufferObject::QOpenGLFramebufferObject(int width, int height, const QOpenGLFramebufferObjectFormat & format);
   fn dector_ZN24QOpenGLFramebufferObjectC1EiiRK30QOpenGLFramebufferObjectFormat(arg0: c_int, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
-  fn _ZN24QOpenGLFramebufferObjectC1EiiRK30QOpenGLFramebufferObjectFormat(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_void);
+  fn _ZN24QOpenGLFramebufferObjectC1EiiRK30QOpenGLFramebufferObjectFormat(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: *mut c_void);
   // proto: static void QOpenGLFramebufferObject::blitFramebuffer(QOpenGLFramebufferObject * target, const QRect & targetRect, QOpenGLFramebufferObject * source, const QRect & sourceRect, GLbitfield buffers, GLenum filter);
   fn _ZN24QOpenGLFramebufferObject15blitFramebufferEPS_RK5QRectS0_S3_jj(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void, arg4: c_uint, arg5: c_uint);
   // proto:  QImage QOpenGLFramebufferObject::toImage();
-  fn _ZNK24QOpenGLFramebufferObject7toImageEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK24QOpenGLFramebufferObject7toImageEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QSize QOpenGLFramebufferObject::size();
-  fn _ZNK24QOpenGLFramebufferObject4sizeEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK24QOpenGLFramebufferObject4sizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QOpenGLFramebufferObject::QOpenGLFramebufferObject(const QOpenGLFramebufferObject & );
   fn dector_ZN24QOpenGLFramebufferObjectC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN24QOpenGLFramebufferObjectC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN24QOpenGLFramebufferObjectC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QOpenGLFramebufferObject::~QOpenGLFramebufferObject();
-  fn _ZN24QOpenGLFramebufferObjectD0Ev(qthis: *mut c_void);
+  fn _ZN24QOpenGLFramebufferObjectD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QOpenGLFramebufferObjectFormat QOpenGLFramebufferObject::format();
-  fn _ZNK24QOpenGLFramebufferObject6formatEv(qthis: *mut c_void);
+  fn _ZNK24QOpenGLFramebufferObject6formatEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QOpenGLFramebufferObject::bind();
-  fn _ZN24QOpenGLFramebufferObject4bindEv(qthis: *mut c_void) -> c_char;
+  fn _ZN24QOpenGLFramebufferObject4bindEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QOpenGLFramebufferObject::isBound();
-  fn _ZNK24QOpenGLFramebufferObject7isBoundEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK24QOpenGLFramebufferObject7isBoundEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  int QOpenGLFramebufferObject::width();
-  fn _ZNK24QOpenGLFramebufferObject5widthEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK24QOpenGLFramebufferObject5widthEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QOpenGLFramebufferObject::QOpenGLFramebufferObject(int width, int height, GLenum target);
   fn dector_ZN24QOpenGLFramebufferObjectC1Eiij(arg0: c_int, arg1: c_int, arg2: c_uint) -> *mut c_void;
-  fn _ZN24QOpenGLFramebufferObjectC1Eiij(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_uint);
+  fn _ZN24QOpenGLFramebufferObjectC1Eiij(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_uint);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QOpenGLFramebufferObjectFormat)=8
+#[derive(Default)]
 pub struct QOpenGLFramebufferObjectFormat {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 // class sizeof(QOpenGLFramebufferObject)=1
+#[derive(Default)]
 pub struct QOpenGLFramebufferObject {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QOpenGLFramebufferObjectFormat {
-  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLFramebufferObjectFormat {
-    return QOpenGLFramebufferObjectFormat{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QOpenGLFramebufferObjectFormat {
+    return QOpenGLFramebufferObjectFormat{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  void QOpenGLFramebufferObjectFormat::~QOpenGLFramebufferObjectFormat();
@@ -218,11 +220,11 @@ impl<'a> /*trait*/ QOpenGLFramebufferObjectFormat_New for (&'a QOpenGLFramebuffe
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN30QOpenGLFramebufferObjectFormatC1ERKS_()};
     let ctysz: c_int = unsafe{QOpenGLFramebufferObjectFormat_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN30QOpenGLFramebufferObjectFormatC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN30QOpenGLFramebufferObjectFormatC1ERKS_(arg0)};
-    let rsthis = QOpenGLFramebufferObjectFormat{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN30QOpenGLFramebufferObjectFormatC1ERKS_(arg0)} as u64;
+    let rsthis = QOpenGLFramebufferObjectFormat{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -303,10 +305,10 @@ impl<'a> /*trait*/ QOpenGLFramebufferObjectFormat_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN30QOpenGLFramebufferObjectFormatC1Ev()};
     let ctysz: c_int = unsafe{QOpenGLFramebufferObjectFormat_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN30QOpenGLFramebufferObjectFormatC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN30QOpenGLFramebufferObjectFormatC1Ev()};
-    let rsthis = QOpenGLFramebufferObjectFormat{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN30QOpenGLFramebufferObjectFormatC1Ev()} as u64;
+    let rsthis = QOpenGLFramebufferObjectFormat{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -382,8 +384,8 @@ impl<'a> /*trait*/ QOpenGLFramebufferObjectFormat_samples<i32> for () {
 }
 
 impl /*struct*/ QOpenGLFramebufferObject {
-  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLFramebufferObject {
-    return QOpenGLFramebufferObject{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QOpenGLFramebufferObject {
+    return QOpenGLFramebufferObject{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  bool QOpenGLFramebufferObject::isValid();
@@ -451,12 +453,12 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_New for (&'a QSize, &'a QOpenGLFrame
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QOpenGLFramebufferObjectC1ERK5QSizeRK30QOpenGLFramebufferObjectFormat()};
     let ctysz: c_int = unsafe{QOpenGLFramebufferObject_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     // unsafe {_ZN24QOpenGLFramebufferObjectC1ERK5QSizeRK30QOpenGLFramebufferObjectFormat(qthis, arg0, arg1)};
-    let qthis: *mut c_void = unsafe {dector_ZN24QOpenGLFramebufferObjectC1ERK5QSizeRK30QOpenGLFramebufferObjectFormat(arg0, arg1)};
-    let rsthis = QOpenGLFramebufferObject{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN24QOpenGLFramebufferObjectC1ERK5QSizeRK30QOpenGLFramebufferObjectFormat(arg0, arg1)} as u64;
+    let rsthis = QOpenGLFramebufferObject{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -537,12 +539,12 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_New for (&'a QSize, u32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QOpenGLFramebufferObjectC1ERK5QSizej()};
     let ctysz: c_int = unsafe{QOpenGLFramebufferObject_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_uint;
     // unsafe {_ZN24QOpenGLFramebufferObjectC1ERK5QSizej(qthis, arg0, arg1)};
-    let qthis: *mut c_void = unsafe {dector_ZN24QOpenGLFramebufferObjectC1ERK5QSizej(arg0, arg1)};
-    let rsthis = QOpenGLFramebufferObject{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN24QOpenGLFramebufferObjectC1ERK5QSizej(arg0, arg1)} as u64;
+    let rsthis = QOpenGLFramebufferObject{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -613,7 +615,7 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_toImage<QImage> for (i8) {
     // unsafe{_ZNK24QOpenGLFramebufferObject7toImageEb()};
     let arg0 = self  as c_char;
     let mut ret = unsafe {_ZNK24QOpenGLFramebufferObject7toImageEb(rsthis.qclsinst, arg0)};
-    let mut ret1 = QImage::inheritFrom(ret);
+    let mut ret1 = QImage::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -697,13 +699,13 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_New for (i32, i32, &'a QOpenGLFrameb
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QOpenGLFramebufferObjectC1EiiRK30QOpenGLFramebufferObjectFormat()};
     let ctysz: c_int = unsafe{QOpenGLFramebufferObject_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     // unsafe {_ZN24QOpenGLFramebufferObjectC1EiiRK30QOpenGLFramebufferObjectFormat(qthis, arg0, arg1, arg2)};
-    let qthis: *mut c_void = unsafe {dector_ZN24QOpenGLFramebufferObjectC1EiiRK30QOpenGLFramebufferObjectFormat(arg0, arg1, arg2)};
-    let rsthis = QOpenGLFramebufferObject{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN24QOpenGLFramebufferObjectC1EiiRK30QOpenGLFramebufferObjectFormat(arg0, arg1, arg2)} as u64;
+    let rsthis = QOpenGLFramebufferObject{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -731,7 +733,7 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_toImage<QImage> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QOpenGLFramebufferObject7toImageEv()};
     let mut ret = unsafe {_ZNK24QOpenGLFramebufferObject7toImageEv(rsthis.qclsinst)};
-    let mut ret1 = QImage::inheritFrom(ret);
+    let mut ret1 = QImage::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -755,7 +757,7 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_size<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QOpenGLFramebufferObject4sizeEv()};
     let mut ret = unsafe {_ZNK24QOpenGLFramebufferObject4sizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize::inheritFrom(ret);
+    let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -767,11 +769,11 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_New for (&'a QOpenGLFramebufferObjec
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QOpenGLFramebufferObjectC1ERKS_()};
     let ctysz: c_int = unsafe{QOpenGLFramebufferObject_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN24QOpenGLFramebufferObjectC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN24QOpenGLFramebufferObjectC1ERKS_(arg0)};
-    let rsthis = QOpenGLFramebufferObject{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN24QOpenGLFramebufferObjectC1ERKS_(arg0)} as u64;
+    let rsthis = QOpenGLFramebufferObject{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -896,13 +898,13 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_New for (i32, i32, u32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QOpenGLFramebufferObjectC1Eiij()};
     let ctysz: c_int = unsafe{QOpenGLFramebufferObject_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as c_uint;
     // unsafe {_ZN24QOpenGLFramebufferObjectC1Eiij(qthis, arg0, arg1, arg2)};
-    let qthis: *mut c_void = unsafe {dector_ZN24QOpenGLFramebufferObjectC1Eiij(arg0, arg1, arg2)};
-    let rsthis = QOpenGLFramebufferObject{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN24QOpenGLFramebufferObjectC1Eiij(arg0, arg1, arg2)} as u64;
+    let rsthis = QOpenGLFramebufferObject{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }

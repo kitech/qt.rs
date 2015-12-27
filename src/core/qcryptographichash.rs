@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qcryptographichash.h
 // dst-file: /src/core/qcryptographichash.rs
 //
@@ -32,32 +32,33 @@ use super::qbytearray::QByteArray; // 773
 extern {
   fn QCryptographicHash_Class_Size() -> c_int;
   // proto:  bool QCryptographicHash::addData(QIODevice * device);
-  fn _ZN18QCryptographicHash7addDataEP9QIODevice(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn _ZN18QCryptographicHash7addDataEP9QIODevice(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  void QCryptographicHash::~QCryptographicHash();
-  fn _ZN18QCryptographicHashD0Ev(qthis: *mut c_void);
+  fn _ZN18QCryptographicHashD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QCryptographicHash::reset();
-  fn _ZN18QCryptographicHash5resetEv(qthis: *mut c_void);
+  fn _ZN18QCryptographicHash5resetEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QCryptographicHash::addData(const char * data, int length);
-  fn _ZN18QCryptographicHash7addDataEPKci(qthis: *mut c_void, arg0: *mut c_char, arg1: c_int);
+  fn _ZN18QCryptographicHash7addDataEPKci(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int);
   // proto:  QByteArray QCryptographicHash::result();
-  fn _ZNK18QCryptographicHash6resultEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK18QCryptographicHash6resultEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QCryptographicHash::addData(const QByteArray & data);
-  fn _ZN18QCryptographicHash7addDataERK10QByteArray(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN18QCryptographicHash7addDataERK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QCryptographicHash::QCryptographicHash(const QCryptographicHash & );
   fn dector_ZN18QCryptographicHashC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN18QCryptographicHashC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN18QCryptographicHashC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QCryptographicHash)=8
+#[derive(Default)]
 pub struct QCryptographicHash {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QCryptographicHash {
-  pub fn inheritFrom(qthis: *mut c_void) -> QCryptographicHash {
-    return QCryptographicHash{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QCryptographicHash {
+    return QCryptographicHash{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  bool QCryptographicHash::addData(QIODevice * device);
@@ -158,7 +159,7 @@ impl<'a> /*trait*/ QCryptographicHash_result<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QCryptographicHash6resultEv()};
     let mut ret = unsafe {_ZNK18QCryptographicHash6resultEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -194,11 +195,11 @@ impl<'a> /*trait*/ QCryptographicHash_New for (&'a QCryptographicHash) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCryptographicHashC1ERKS_()};
     let ctysz: c_int = unsafe{QCryptographicHash_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN18QCryptographicHashC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN18QCryptographicHashC1ERKS_(arg0)};
-    let rsthis = QCryptographicHash{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN18QCryptographicHashC1ERKS_(arg0)} as u64;
+    let rsthis = QCryptographicHash{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }

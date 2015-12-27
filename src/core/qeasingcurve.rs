@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qeasingcurve.h
 // dst-file: /src/core/qeasingcurve.rs
 //
@@ -32,45 +32,46 @@ extern {
   fn QEasingCurve_Class_Size() -> c_int;
   // proto:  void QEasingCurve::QEasingCurve(const QEasingCurve & other);
   fn dector_ZN12QEasingCurveC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN12QEasingCurveC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN12QEasingCurveC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QEasingCurve::~QEasingCurve();
-  fn _ZN12QEasingCurveD0Ev(qthis: *mut c_void);
+  fn _ZN12QEasingCurveD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  EasingFunction QEasingCurve::customType();
-  fn _ZNK12QEasingCurve10customTypeEv(qthis: *mut c_void);
+  fn _ZNK12QEasingCurve10customTypeEv(qthis: u64 /* *mut c_void*/);
   // proto:  qreal QEasingCurve::overshoot();
-  fn _ZNK12QEasingCurve9overshootEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK12QEasingCurve9overshootEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QEasingCurve::setPeriod(qreal period);
-  fn _ZN12QEasingCurve9setPeriodEd(qthis: *mut c_void, arg0: c_double);
+  fn _ZN12QEasingCurve9setPeriodEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QEasingCurve::addTCBSegment(const QPointF & nextPoint, qreal t, qreal c, qreal b);
-  fn _ZN12QEasingCurve13addTCBSegmentERK7QPointFddd(qthis: *mut c_void, arg0: *mut c_void, arg1: c_double, arg2: c_double, arg3: c_double);
+  fn _ZN12QEasingCurve13addTCBSegmentERK7QPointFddd(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_double, arg2: c_double, arg3: c_double);
   // proto:  void QEasingCurve::addCubicBezierSegment(const QPointF & c1, const QPointF & c2, const QPointF & endPoint);
-  fn _ZN12QEasingCurve21addCubicBezierSegmentERK7QPointFS2_S2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
+  fn _ZN12QEasingCurve21addCubicBezierSegmentERK7QPointFS2_S2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  qreal QEasingCurve::period();
-  fn _ZNK12QEasingCurve6periodEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK12QEasingCurve6periodEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  qreal QEasingCurve::valueForProgress(qreal progress);
-  fn _ZNK12QEasingCurve16valueForProgressEd(qthis: *mut c_void, arg0: c_double) -> c_double;
+  fn _ZNK12QEasingCurve16valueForProgressEd(qthis: u64 /* *mut c_void*/, arg0: c_double) -> c_double;
   // proto:  void QEasingCurve::setAmplitude(qreal amplitude);
-  fn _ZN12QEasingCurve12setAmplitudeEd(qthis: *mut c_void, arg0: c_double);
+  fn _ZN12QEasingCurve12setAmplitudeEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QEasingCurve::swap(QEasingCurve & other);
-  fn demth_ZN12QEasingCurve4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN12QEasingCurve4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QEasingCurve::setOvershoot(qreal overshoot);
-  fn _ZN12QEasingCurve12setOvershootEd(qthis: *mut c_void, arg0: c_double);
+  fn _ZN12QEasingCurve12setOvershootEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  QVector<QPointF> QEasingCurve::toCubicSpline();
-  fn _ZNK12QEasingCurve13toCubicSplineEv(qthis: *mut c_void);
+  fn _ZNK12QEasingCurve13toCubicSplineEv(qthis: u64 /* *mut c_void*/);
   // proto:  qreal QEasingCurve::amplitude();
-  fn _ZNK12QEasingCurve9amplitudeEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK12QEasingCurve9amplitudeEv(qthis: u64 /* *mut c_void*/) -> c_double;
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QEasingCurve)=8
+#[derive(Default)]
 pub struct QEasingCurve {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QEasingCurve {
-  pub fn inheritFrom(qthis: *mut c_void) -> QEasingCurve {
-    return QEasingCurve{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QEasingCurve {
+    return QEasingCurve{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  void QEasingCurve::QEasingCurve(const QEasingCurve & other);
@@ -92,11 +93,11 @@ impl<'a> /*trait*/ QEasingCurve_New for (&'a QEasingCurve) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QEasingCurveC1ERKS_()};
     let ctysz: c_int = unsafe{QEasingCurve_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN12QEasingCurveC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN12QEasingCurveC1ERKS_(arg0)};
-    let rsthis = QEasingCurve{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN12QEasingCurveC1ERKS_(arg0)} as u64;
+    let rsthis = QEasingCurve{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }

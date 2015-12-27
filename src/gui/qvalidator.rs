@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtGui/qvalidator.h
 // dst-file: /src/gui/qvalidator.rs
 //
@@ -36,163 +36,186 @@ use super::super::core::qregexp::QRegExp; // 771
 extern {
   fn QRegularExpressionValidator_Class_Size() -> c_int;
   // proto:  QRegularExpression QRegularExpressionValidator::regularExpression();
-  fn _ZNK27QRegularExpressionValidator17regularExpressionEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK27QRegularExpressionValidator17regularExpressionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QRegularExpressionValidator::~QRegularExpressionValidator();
-  fn _ZN27QRegularExpressionValidatorD0Ev(qthis: *mut c_void);
+  fn _ZN27QRegularExpressionValidatorD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QRegularExpressionValidator::QRegularExpressionValidator(const QRegularExpression & re, QObject * parent);
   fn dector_ZN27QRegularExpressionValidatorC1ERK18QRegularExpressionP7QObject(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN27QRegularExpressionValidatorC1ERK18QRegularExpressionP7QObject(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN27QRegularExpressionValidatorC1ERK18QRegularExpressionP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  const QMetaObject * QRegularExpressionValidator::metaObject();
-  fn _ZNK27QRegularExpressionValidator10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK27QRegularExpressionValidator10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QRegularExpressionValidator::QRegularExpressionValidator(const QRegularExpressionValidator & );
   fn dector_ZN27QRegularExpressionValidatorC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN27QRegularExpressionValidatorC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN27QRegularExpressionValidatorC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QRegularExpressionValidator::QRegularExpressionValidator(QObject * parent);
   fn dector_ZN27QRegularExpressionValidatorC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN27QRegularExpressionValidatorC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN27QRegularExpressionValidatorC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QRegularExpressionValidator::setRegularExpression(const QRegularExpression & re);
-  fn _ZN27QRegularExpressionValidator20setRegularExpressionERK18QRegularExpression(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN27QRegularExpressionValidator20setRegularExpressionERK18QRegularExpression(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QRegularExpressionValidator::regularExpressionChanged(const QRegularExpression & re);
-  fn _ZN27QRegularExpressionValidator24regularExpressionChangedERK18QRegularExpression(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN27QRegularExpressionValidator24regularExpressionChangedERK18QRegularExpression(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QDoubleValidator_Class_Size() -> c_int;
   // proto:  int QDoubleValidator::decimals();
-  fn _ZNK16QDoubleValidator8decimalsEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK16QDoubleValidator8decimalsEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QDoubleValidator::decimalsChanged(int decimals);
-  fn _ZN16QDoubleValidator15decimalsChangedEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN16QDoubleValidator15decimalsChangedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QDoubleValidator::~QDoubleValidator();
-  fn _ZN16QDoubleValidatorD0Ev(qthis: *mut c_void);
+  fn _ZN16QDoubleValidatorD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  double QDoubleValidator::top();
-  fn _ZNK16QDoubleValidator3topEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK16QDoubleValidator3topEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QDoubleValidator::bottomChanged(double bottom);
-  fn _ZN16QDoubleValidator13bottomChangedEd(qthis: *mut c_void, arg0: c_double);
+  fn _ZN16QDoubleValidator13bottomChangedEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  double QDoubleValidator::bottom();
-  fn _ZNK16QDoubleValidator6bottomEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK16QDoubleValidator6bottomEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QDoubleValidator::setDecimals(int );
-  fn _ZN16QDoubleValidator11setDecimalsEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN16QDoubleValidator11setDecimalsEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QDoubleValidator::QDoubleValidator(const QDoubleValidator & );
   fn dector_ZN16QDoubleValidatorC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN16QDoubleValidatorC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN16QDoubleValidatorC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QDoubleValidator::setBottom(double );
-  fn _ZN16QDoubleValidator9setBottomEd(qthis: *mut c_void, arg0: c_double);
+  fn _ZN16QDoubleValidator9setBottomEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QDoubleValidator::setRange(double bottom, double top, int decimals);
-  fn _ZN16QDoubleValidator8setRangeEddi(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_int);
+  fn _ZN16QDoubleValidator8setRangeEddi(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_int);
   // proto:  void QDoubleValidator::QDoubleValidator(QObject * parent);
   fn dector_ZN16QDoubleValidatorC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN16QDoubleValidatorC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN16QDoubleValidatorC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QDoubleValidator::QDoubleValidator(double bottom, double top, int decimals, QObject * parent);
   fn dector_ZN16QDoubleValidatorC1EddiP7QObject(arg0: c_double, arg1: c_double, arg2: c_int, arg3: *mut c_void) -> *mut c_void;
-  fn _ZN16QDoubleValidatorC1EddiP7QObject(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_int, arg3: *mut c_void);
+  fn _ZN16QDoubleValidatorC1EddiP7QObject(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_int, arg3: *mut c_void);
   // proto:  void QDoubleValidator::topChanged(double top);
-  fn _ZN16QDoubleValidator10topChangedEd(qthis: *mut c_void, arg0: c_double);
+  fn _ZN16QDoubleValidator10topChangedEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  const QMetaObject * QDoubleValidator::metaObject();
-  fn _ZNK16QDoubleValidator10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK16QDoubleValidator10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QDoubleValidator::setTop(double );
-  fn _ZN16QDoubleValidator6setTopEd(qthis: *mut c_void, arg0: c_double);
+  fn _ZN16QDoubleValidator6setTopEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   fn QIntValidator_Class_Size() -> c_int;
   // proto:  void QIntValidator::QIntValidator(QObject * parent);
   fn dector_ZN13QIntValidatorC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN13QIntValidatorC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN13QIntValidatorC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QIntValidator::setBottom(int );
-  fn _ZN13QIntValidator9setBottomEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN13QIntValidator9setBottomEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QIntValidator::setRange(int bottom, int top);
-  fn _ZN13QIntValidator8setRangeEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
+  fn _ZN13QIntValidator8setRangeEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  const QMetaObject * QIntValidator::metaObject();
-  fn _ZNK13QIntValidator10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK13QIntValidator10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QIntValidator::QIntValidator(const QIntValidator & );
   fn dector_ZN13QIntValidatorC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN13QIntValidatorC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN13QIntValidatorC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QIntValidator::top();
-  fn _ZNK13QIntValidator3topEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK13QIntValidator3topEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QIntValidator::fixup(QString & input);
-  fn _ZNK13QIntValidator5fixupER7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZNK13QIntValidator5fixupER7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QIntValidator::~QIntValidator();
-  fn _ZN13QIntValidatorD0Ev(qthis: *mut c_void);
+  fn _ZN13QIntValidatorD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QIntValidator::bottomChanged(int bottom);
-  fn _ZN13QIntValidator13bottomChangedEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN13QIntValidator13bottomChangedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QIntValidator::topChanged(int top);
-  fn _ZN13QIntValidator10topChangedEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN13QIntValidator10topChangedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QIntValidator::setTop(int );
-  fn _ZN13QIntValidator6setTopEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN13QIntValidator6setTopEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QIntValidator::bottom();
-  fn _ZNK13QIntValidator6bottomEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK13QIntValidator6bottomEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QIntValidator::QIntValidator(int bottom, int top, QObject * parent);
   fn dector_ZN13QIntValidatorC1EiiP7QObject(arg0: c_int, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
-  fn _ZN13QIntValidatorC1EiiP7QObject(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_void);
+  fn _ZN13QIntValidatorC1EiiP7QObject(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: *mut c_void);
   fn QValidator_Class_Size() -> c_int;
   // proto:  const QMetaObject * QValidator::metaObject();
-  fn _ZNK10QValidator10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK10QValidator10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QValidator::QValidator(const QValidator & );
   fn dector_ZN10QValidatorC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN10QValidatorC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN10QValidatorC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QValidator::setLocale(const QLocale & locale);
-  fn _ZN10QValidator9setLocaleERK7QLocale(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN10QValidator9setLocaleERK7QLocale(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QValidator::fixup(QString & );
-  fn _ZNK10QValidator5fixupER7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZNK10QValidator5fixupER7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QValidator::~QValidator();
-  fn _ZN10QValidatorD0Ev(qthis: *mut c_void);
+  fn _ZN10QValidatorD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QValidator::QValidator(QObject * parent);
   fn dector_ZN10QValidatorC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN10QValidatorC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN10QValidatorC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QLocale QValidator::locale();
-  fn _ZNK10QValidator6localeEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK10QValidator6localeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QValidator::changed();
-  fn _ZN10QValidator7changedEv(qthis: *mut c_void);
+  fn _ZN10QValidator7changedEv(qthis: u64 /* *mut c_void*/);
   fn QRegExpValidator_Class_Size() -> c_int;
   // proto:  void QRegExpValidator::~QRegExpValidator();
-  fn _ZN16QRegExpValidatorD0Ev(qthis: *mut c_void);
+  fn _ZN16QRegExpValidatorD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  const QRegExp & QRegExpValidator::regExp();
-  fn _ZNK16QRegExpValidator6regExpEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK16QRegExpValidator6regExpEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  const QMetaObject * QRegExpValidator::metaObject();
-  fn _ZNK16QRegExpValidator10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK16QRegExpValidator10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QRegExpValidator::QRegExpValidator(const QRegExp & rx, QObject * parent);
   fn dector_ZN16QRegExpValidatorC1ERK7QRegExpP7QObject(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN16QRegExpValidatorC1ERK7QRegExpP7QObject(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN16QRegExpValidatorC1ERK7QRegExpP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QRegExpValidator::setRegExp(const QRegExp & rx);
-  fn _ZN16QRegExpValidator9setRegExpERK7QRegExp(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN16QRegExpValidator9setRegExpERK7QRegExp(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QRegExpValidator::QRegExpValidator(const QRegExpValidator & );
   fn dector_ZN16QRegExpValidatorC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN16QRegExpValidatorC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN16QRegExpValidatorC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QRegExpValidator::QRegExpValidator(QObject * parent);
   fn dector_ZN16QRegExpValidatorC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN16QRegExpValidatorC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN16QRegExpValidatorC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QRegExpValidator::regExpChanged(const QRegExp & regExp);
-  fn _ZN16QRegExpValidator13regExpChangedERK7QRegExp(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN16QRegExpValidator13regExpChangedERK7QRegExp(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn QRegularExpressionValidator_SlotProxy_connect__ZN27QRegularExpressionValidator24regularExpressionChangedERK18QRegularExpression(qthis: *mut c_void, fptr: *mut c_void);
+  fn QDoubleValidator_SlotProxy_connect__ZN16QDoubleValidator13bottomChangedEd(qthis: *mut c_void, fptr: *mut c_void);
+  fn QDoubleValidator_SlotProxy_connect__ZN16QDoubleValidator15decimalsChangedEi(qthis: *mut c_void, fptr: *mut c_void);
+  fn QDoubleValidator_SlotProxy_connect__ZN16QDoubleValidator15notationChangedENS_8NotationE(qthis: *mut c_void, fptr: *mut c_void);
+  fn QDoubleValidator_SlotProxy_connect__ZN16QDoubleValidator10topChangedEd(qthis: *mut c_void, fptr: *mut c_void);
+  fn QIntValidator_SlotProxy_connect__ZN13QIntValidator10topChangedEi(qthis: *mut c_void, fptr: *mut c_void);
+  fn QIntValidator_SlotProxy_connect__ZN13QIntValidator13bottomChangedEi(qthis: *mut c_void, fptr: *mut c_void);
+  fn QValidator_SlotProxy_connect__ZN10QValidator7changedEv(qthis: *mut c_void, fptr: *mut c_void);
+  fn QRegExpValidator_SlotProxy_connect__ZN16QRegExpValidator13regExpChangedERK7QRegExp(qthis: *mut c_void, fptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QRegularExpressionValidator)=1
+#[derive(Default)]
 pub struct QRegularExpressionValidator {
   qbase: QValidator,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _regularExpressionChanged_1: QRegularExpressionValidator_regularExpressionChanged_signal,
 }
 
 // class sizeof(QDoubleValidator)=1
+#[derive(Default)]
 pub struct QDoubleValidator {
   qbase: QValidator,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _topChanged_1: QDoubleValidator_topChanged_signal,
+  pub _notationChanged_1: QDoubleValidator_notationChanged_signal,
+  pub _bottomChanged_1: QDoubleValidator_bottomChanged_signal,
+  pub _decimalsChanged_1: QDoubleValidator_decimalsChanged_signal,
 }
 
 // class sizeof(QIntValidator)=1
+#[derive(Default)]
 pub struct QIntValidator {
   qbase: QValidator,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _topChanged_1: QIntValidator_topChanged_signal,
+  pub _bottomChanged_1: QIntValidator_bottomChanged_signal,
 }
 
 // class sizeof(QValidator)=1
+#[derive(Default)]
 pub struct QValidator {
   qbase: QObject,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _changed_1: QValidator_changed_signal,
 }
 
 // class sizeof(QRegExpValidator)=1
+#[derive(Default)]
 pub struct QRegExpValidator {
   qbase: QValidator,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _regExpChanged_1: QRegExpValidator_regExpChanged_signal,
 }
 
 impl /*struct*/ QRegularExpressionValidator {
-  pub fn inheritFrom(qthis: *mut c_void) -> QRegularExpressionValidator {
-    return QRegularExpressionValidator{qbase: QValidator::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QRegularExpressionValidator {
+    return QRegularExpressionValidator{qbase: QValidator::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QRegularExpressionValidator {
@@ -225,7 +248,7 @@ impl<'a> /*trait*/ QRegularExpressionValidator_regularExpression<QRegularExpress
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QRegularExpressionValidator17regularExpressionEv()};
     let mut ret = unsafe {_ZNK27QRegularExpressionValidator17regularExpressionEv(rsthis.qclsinst)};
-    let mut ret1 = QRegularExpression::inheritFrom(ret);
+    let mut ret1 = QRegularExpression::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -272,12 +295,12 @@ impl<'a> /*trait*/ QRegularExpressionValidator_New for (&'a QRegularExpression, 
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QRegularExpressionValidatorC1ERK18QRegularExpressionP7QObject()};
     let ctysz: c_int = unsafe{QRegularExpressionValidator_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     // unsafe {_ZN27QRegularExpressionValidatorC1ERK18QRegularExpressionP7QObject(qthis, arg0, arg1)};
-    let qthis: *mut c_void = unsafe {dector_ZN27QRegularExpressionValidatorC1ERK18QRegularExpressionP7QObject(arg0, arg1)};
-    let rsthis = QRegularExpressionValidator{/**/qbase: QValidator::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN27QRegularExpressionValidatorC1ERK18QRegularExpressionP7QObject(arg0, arg1)} as u64;
+    let rsthis = QRegularExpressionValidator{qbase: QValidator::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -311,11 +334,11 @@ impl<'a> /*trait*/ QRegularExpressionValidator_New for (&'a QRegularExpressionVa
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QRegularExpressionValidatorC1ERKS_()};
     let ctysz: c_int = unsafe{QRegularExpressionValidator_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN27QRegularExpressionValidatorC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN27QRegularExpressionValidatorC1ERKS_(arg0)};
-    let rsthis = QRegularExpressionValidator{/**/qbase: QValidator::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN27QRegularExpressionValidatorC1ERKS_(arg0)} as u64;
+    let rsthis = QRegularExpressionValidator{qbase: QValidator::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -327,11 +350,11 @@ impl<'a> /*trait*/ QRegularExpressionValidator_New for (&'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QRegularExpressionValidatorC1EP7QObject()};
     let ctysz: c_int = unsafe{QRegularExpressionValidator_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN27QRegularExpressionValidatorC1EP7QObject(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN27QRegularExpressionValidatorC1EP7QObject(arg0)};
-    let rsthis = QRegularExpressionValidator{/**/qbase: QValidator::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN27QRegularExpressionValidatorC1EP7QObject(arg0)} as u64;
+    let rsthis = QRegularExpressionValidator{qbase: QValidator::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -384,8 +407,8 @@ impl<'a> /*trait*/ QRegularExpressionValidator_regularExpressionChanged<()> for 
 }
 
 impl /*struct*/ QDoubleValidator {
-  pub fn inheritFrom(qthis: *mut c_void) -> QDoubleValidator {
-    return QDoubleValidator{qbase: QValidator::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QDoubleValidator {
+    return QDoubleValidator{qbase: QValidator::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QDoubleValidator {
@@ -579,11 +602,11 @@ impl<'a> /*trait*/ QDoubleValidator_New for (&'a QDoubleValidator) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QDoubleValidatorC1ERKS_()};
     let ctysz: c_int = unsafe{QDoubleValidator_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN16QDoubleValidatorC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN16QDoubleValidatorC1ERKS_(arg0)};
-    let rsthis = QDoubleValidator{/**/qbase: QValidator::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN16QDoubleValidatorC1ERKS_(arg0)} as u64;
+    let rsthis = QDoubleValidator{qbase: QValidator::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -643,11 +666,11 @@ impl<'a> /*trait*/ QDoubleValidator_New for (&'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QDoubleValidatorC1EP7QObject()};
     let ctysz: c_int = unsafe{QDoubleValidator_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN16QDoubleValidatorC1EP7QObject(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN16QDoubleValidatorC1EP7QObject(arg0)};
-    let rsthis = QDoubleValidator{/**/qbase: QValidator::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN16QDoubleValidatorC1EP7QObject(arg0)} as u64;
+    let rsthis = QDoubleValidator{qbase: QValidator::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -659,14 +682,14 @@ impl<'a> /*trait*/ QDoubleValidator_New for (f64, f64, i32, &'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QDoubleValidatorC1EddiP7QObject()};
     let ctysz: c_int = unsafe{QDoubleValidator_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
     let arg2 = self.2  as c_int;
     let arg3 = self.3.qclsinst  as *mut c_void;
     // unsafe {_ZN16QDoubleValidatorC1EddiP7QObject(qthis, arg0, arg1, arg2, arg3)};
-    let qthis: *mut c_void = unsafe {dector_ZN16QDoubleValidatorC1EddiP7QObject(arg0, arg1, arg2, arg3)};
-    let rsthis = QDoubleValidator{/**/qbase: QValidator::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN16QDoubleValidatorC1EddiP7QObject(arg0, arg1, arg2, arg3)} as u64;
+    let rsthis = QDoubleValidator{qbase: QValidator::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -741,8 +764,8 @@ impl<'a> /*trait*/ QDoubleValidator_setTop<()> for (f64) {
 }
 
 impl /*struct*/ QIntValidator {
-  pub fn inheritFrom(qthis: *mut c_void) -> QIntValidator {
-    return QIntValidator{qbase: QValidator::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QIntValidator {
+    return QIntValidator{qbase: QValidator::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QIntValidator {
@@ -776,11 +799,11 @@ impl<'a> /*trait*/ QIntValidator_New for (&'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QIntValidatorC1EP7QObject()};
     let ctysz: c_int = unsafe{QIntValidator_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN13QIntValidatorC1EP7QObject(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN13QIntValidatorC1EP7QObject(arg0)};
-    let rsthis = QIntValidator{/**/qbase: QValidator::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN13QIntValidatorC1EP7QObject(arg0)} as u64;
+    let rsthis = QIntValidator{qbase: QValidator::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -861,11 +884,11 @@ impl<'a> /*trait*/ QIntValidator_New for (&'a QIntValidator) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QIntValidatorC1ERKS_()};
     let ctysz: c_int = unsafe{QIntValidator_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN13QIntValidatorC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN13QIntValidatorC1ERKS_(arg0)};
-    let rsthis = QIntValidator{/**/qbase: QValidator::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN13QIntValidatorC1ERKS_(arg0)} as u64;
+    let rsthis = QIntValidator{qbase: QValidator::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1037,21 +1060,21 @@ impl<'a> /*trait*/ QIntValidator_New for (i32, i32, &'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QIntValidatorC1EiiP7QObject()};
     let ctysz: c_int = unsafe{QIntValidator_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     // unsafe {_ZN13QIntValidatorC1EiiP7QObject(qthis, arg0, arg1, arg2)};
-    let qthis: *mut c_void = unsafe {dector_ZN13QIntValidatorC1EiiP7QObject(arg0, arg1, arg2)};
-    let rsthis = QIntValidator{/**/qbase: QValidator::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN13QIntValidatorC1EiiP7QObject(arg0, arg1, arg2)} as u64;
+    let rsthis = QIntValidator{qbase: QValidator::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
 impl /*struct*/ QValidator {
-  pub fn inheritFrom(qthis: *mut c_void) -> QValidator {
-    return QValidator{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QValidator {
+    return QValidator{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QValidator {
@@ -1107,11 +1130,11 @@ impl<'a> /*trait*/ QValidator_New for (&'a QValidator) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QValidatorC1ERKS_()};
     let ctysz: c_int = unsafe{QValidator_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN10QValidatorC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN10QValidatorC1ERKS_(arg0)};
-    let rsthis = QValidator{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN10QValidatorC1ERKS_(arg0)} as u64;
+    let rsthis = QValidator{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1191,11 +1214,11 @@ impl<'a> /*trait*/ QValidator_New for (&'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QValidatorC1EP7QObject()};
     let ctysz: c_int = unsafe{QValidator_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN10QValidatorC1EP7QObject(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN10QValidatorC1EP7QObject(arg0)};
-    let rsthis = QValidator{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN10QValidatorC1EP7QObject(arg0)} as u64;
+    let rsthis = QValidator{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1219,7 +1242,7 @@ impl<'a> /*trait*/ QValidator_locale<QLocale> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QValidator6localeEv()};
     let mut ret = unsafe {_ZNK10QValidator6localeEv(rsthis.qclsinst)};
-    let mut ret1 = QLocale::inheritFrom(ret);
+    let mut ret1 = QLocale::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1248,8 +1271,8 @@ impl<'a> /*trait*/ QValidator_changed<()> for () {
 }
 
 impl /*struct*/ QRegExpValidator {
-  pub fn inheritFrom(qthis: *mut c_void) -> QRegExpValidator {
-    return QRegExpValidator{qbase: QValidator::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QRegExpValidator {
+    return QRegExpValidator{qbase: QValidator::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QRegExpValidator {
@@ -1304,7 +1327,7 @@ impl<'a> /*trait*/ QRegExpValidator_regExp<QRegExp> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QRegExpValidator6regExpEv()};
     let mut ret = unsafe {_ZNK16QRegExpValidator6regExpEv(rsthis.qclsinst)};
-    let mut ret1 = QRegExp::inheritFrom(ret);
+    let mut ret1 = QRegExp::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1351,12 +1374,12 @@ impl<'a> /*trait*/ QRegExpValidator_New for (&'a QRegExp, &'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QRegExpValidatorC1ERK7QRegExpP7QObject()};
     let ctysz: c_int = unsafe{QRegExpValidator_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     // unsafe {_ZN16QRegExpValidatorC1ERK7QRegExpP7QObject(qthis, arg0, arg1)};
-    let qthis: *mut c_void = unsafe {dector_ZN16QRegExpValidatorC1ERK7QRegExpP7QObject(arg0, arg1)};
-    let rsthis = QRegExpValidator{/**/qbase: QValidator::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN16QRegExpValidatorC1ERK7QRegExpP7QObject(arg0, arg1)} as u64;
+    let rsthis = QRegExpValidator{qbase: QValidator::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1391,11 +1414,11 @@ impl<'a> /*trait*/ QRegExpValidator_New for (&'a QRegExpValidator) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QRegExpValidatorC1ERKS_()};
     let ctysz: c_int = unsafe{QRegExpValidator_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN16QRegExpValidatorC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN16QRegExpValidatorC1ERKS_(arg0)};
-    let rsthis = QRegExpValidator{/**/qbase: QValidator::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN16QRegExpValidatorC1ERKS_(arg0)} as u64;
+    let rsthis = QRegExpValidator{qbase: QValidator::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1407,11 +1430,11 @@ impl<'a> /*trait*/ QRegExpValidator_New for (&'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QRegExpValidatorC1EP7QObject()};
     let ctysz: c_int = unsafe{QRegExpValidator_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN16QRegExpValidatorC1EP7QObject(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN16QRegExpValidatorC1EP7QObject(arg0)};
-    let rsthis = QRegExpValidator{/**/qbase: QValidator::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN16QRegExpValidatorC1EP7QObject(arg0)} as u64;
+    let rsthis = QRegExpValidator{qbase: QValidator::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1440,5 +1463,239 @@ impl<'a> /*trait*/ QRegExpValidator_regExpChanged<()> for (&'a QRegExp) {
   }
 }
 
+#[derive(Default)] // for QRegularExpressionValidator_regularExpressionChanged
+pub struct QRegularExpressionValidator_regularExpressionChanged_signal{poi:u64}
+impl /* struct */ QRegularExpressionValidator {
+  pub fn regularExpressionChanged_1(self) -> QRegularExpressionValidator_regularExpressionChanged_signal {
+     return QRegularExpressionValidator_regularExpressionChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QRegularExpressionValidator_regularExpressionChanged_signal {
+  pub fn connect<T: QRegularExpressionValidator_regularExpressionChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QRegularExpressionValidator_regularExpressionChanged_signal_connect {
+  fn connect(self, sigthis: QRegularExpressionValidator_regularExpressionChanged_signal);
+}
+
+// regularExpressionChanged(const class QRegularExpression &)
+extern fn QRegularExpressionValidator_regularExpressionChanged_signal_connect_cb_0(arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QRegularExpressionValidator_regularExpressionChanged_signal_connect for (extern fn(QRegularExpression)) {
+  fn connect(self, sigthis: QRegularExpressionValidator_regularExpressionChanged_signal) {
+    // do smth...
+    unsafe {QRegularExpressionValidator_SlotProxy_connect__ZN27QRegularExpressionValidator24regularExpressionChangedERK18QRegularExpression(sigthis.poi as *mut c_void, QRegularExpressionValidator_regularExpressionChanged_signal_connect_cb_0 as *mut c_void)};
+  }
+}
+#[derive(Default)] // for QDoubleValidator_topChanged
+pub struct QDoubleValidator_topChanged_signal{poi:u64}
+impl /* struct */ QDoubleValidator {
+  pub fn topChanged_1(self) -> QDoubleValidator_topChanged_signal {
+     return QDoubleValidator_topChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QDoubleValidator_topChanged_signal {
+  pub fn connect<T: QDoubleValidator_topChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QDoubleValidator_topChanged_signal_connect {
+  fn connect(self, sigthis: QDoubleValidator_topChanged_signal);
+}
+
+#[derive(Default)] // for QDoubleValidator_notationChanged
+pub struct QDoubleValidator_notationChanged_signal{poi:u64}
+impl /* struct */ QDoubleValidator {
+  pub fn notationChanged_1(self) -> QDoubleValidator_notationChanged_signal {
+     return QDoubleValidator_notationChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QDoubleValidator_notationChanged_signal {
+  pub fn connect<T: QDoubleValidator_notationChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QDoubleValidator_notationChanged_signal_connect {
+  fn connect(self, sigthis: QDoubleValidator_notationChanged_signal);
+}
+
+#[derive(Default)] // for QDoubleValidator_bottomChanged
+pub struct QDoubleValidator_bottomChanged_signal{poi:u64}
+impl /* struct */ QDoubleValidator {
+  pub fn bottomChanged_1(self) -> QDoubleValidator_bottomChanged_signal {
+     return QDoubleValidator_bottomChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QDoubleValidator_bottomChanged_signal {
+  pub fn connect<T: QDoubleValidator_bottomChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QDoubleValidator_bottomChanged_signal_connect {
+  fn connect(self, sigthis: QDoubleValidator_bottomChanged_signal);
+}
+
+#[derive(Default)] // for QDoubleValidator_decimalsChanged
+pub struct QDoubleValidator_decimalsChanged_signal{poi:u64}
+impl /* struct */ QDoubleValidator {
+  pub fn decimalsChanged_1(self) -> QDoubleValidator_decimalsChanged_signal {
+     return QDoubleValidator_decimalsChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QDoubleValidator_decimalsChanged_signal {
+  pub fn connect<T: QDoubleValidator_decimalsChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QDoubleValidator_decimalsChanged_signal_connect {
+  fn connect(self, sigthis: QDoubleValidator_decimalsChanged_signal);
+}
+
+// bottomChanged(double)
+extern fn QDoubleValidator_bottomChanged_signal_connect_cb_0(arg0: c_double) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QDoubleValidator_bottomChanged_signal_connect for (extern fn(f64)) {
+  fn connect(self, sigthis: QDoubleValidator_bottomChanged_signal) {
+    // do smth...
+    unsafe {QDoubleValidator_SlotProxy_connect__ZN16QDoubleValidator13bottomChangedEd(sigthis.poi as *mut c_void, QDoubleValidator_bottomChanged_signal_connect_cb_0 as *mut c_void)};
+  }
+}
+// decimalsChanged(int)
+extern fn QDoubleValidator_decimalsChanged_signal_connect_cb_1(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QDoubleValidator_decimalsChanged_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QDoubleValidator_decimalsChanged_signal) {
+    // do smth...
+    unsafe {QDoubleValidator_SlotProxy_connect__ZN16QDoubleValidator15decimalsChangedEi(sigthis.poi as *mut c_void, QDoubleValidator_decimalsChanged_signal_connect_cb_1 as *mut c_void)};
+  }
+}
+// notationChanged(class QDoubleValidator::Notation)
+extern fn QDoubleValidator_notationChanged_signal_connect_cb_2(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QDoubleValidator_notationChanged_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QDoubleValidator_notationChanged_signal) {
+    // do smth...
+    unsafe {QDoubleValidator_SlotProxy_connect__ZN16QDoubleValidator15notationChangedENS_8NotationE(sigthis.poi as *mut c_void, QDoubleValidator_notationChanged_signal_connect_cb_2 as *mut c_void)};
+  }
+}
+// topChanged(double)
+extern fn QDoubleValidator_topChanged_signal_connect_cb_3(arg0: c_double) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QDoubleValidator_topChanged_signal_connect for (extern fn(f64)) {
+  fn connect(self, sigthis: QDoubleValidator_topChanged_signal) {
+    // do smth...
+    unsafe {QDoubleValidator_SlotProxy_connect__ZN16QDoubleValidator10topChangedEd(sigthis.poi as *mut c_void, QDoubleValidator_topChanged_signal_connect_cb_3 as *mut c_void)};
+  }
+}
+#[derive(Default)] // for QIntValidator_topChanged
+pub struct QIntValidator_topChanged_signal{poi:u64}
+impl /* struct */ QIntValidator {
+  pub fn topChanged_1(self) -> QIntValidator_topChanged_signal {
+     return QIntValidator_topChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QIntValidator_topChanged_signal {
+  pub fn connect<T: QIntValidator_topChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QIntValidator_topChanged_signal_connect {
+  fn connect(self, sigthis: QIntValidator_topChanged_signal);
+}
+
+#[derive(Default)] // for QIntValidator_bottomChanged
+pub struct QIntValidator_bottomChanged_signal{poi:u64}
+impl /* struct */ QIntValidator {
+  pub fn bottomChanged_1(self) -> QIntValidator_bottomChanged_signal {
+     return QIntValidator_bottomChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QIntValidator_bottomChanged_signal {
+  pub fn connect<T: QIntValidator_bottomChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QIntValidator_bottomChanged_signal_connect {
+  fn connect(self, sigthis: QIntValidator_bottomChanged_signal);
+}
+
+// topChanged(int)
+extern fn QIntValidator_topChanged_signal_connect_cb_0(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QIntValidator_topChanged_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QIntValidator_topChanged_signal) {
+    // do smth...
+    unsafe {QIntValidator_SlotProxy_connect__ZN13QIntValidator10topChangedEi(sigthis.poi as *mut c_void, QIntValidator_topChanged_signal_connect_cb_0 as *mut c_void)};
+  }
+}
+// bottomChanged(int)
+extern fn QIntValidator_bottomChanged_signal_connect_cb_1(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QIntValidator_bottomChanged_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QIntValidator_bottomChanged_signal) {
+    // do smth...
+    unsafe {QIntValidator_SlotProxy_connect__ZN13QIntValidator13bottomChangedEi(sigthis.poi as *mut c_void, QIntValidator_bottomChanged_signal_connect_cb_1 as *mut c_void)};
+  }
+}
+#[derive(Default)] // for QValidator_changed
+pub struct QValidator_changed_signal{poi:u64}
+impl /* struct */ QValidator {
+  pub fn changed_1(self) -> QValidator_changed_signal {
+     return QValidator_changed_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QValidator_changed_signal {
+  pub fn connect<T: QValidator_changed_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QValidator_changed_signal_connect {
+  fn connect(self, sigthis: QValidator_changed_signal);
+}
+
+// changed()
+extern fn QValidator_changed_signal_connect_cb_0() {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QValidator_changed_signal_connect for (extern fn()) {
+  fn connect(self, sigthis: QValidator_changed_signal) {
+    // do smth...
+    unsafe {QValidator_SlotProxy_connect__ZN10QValidator7changedEv(sigthis.poi as *mut c_void, QValidator_changed_signal_connect_cb_0 as *mut c_void)};
+  }
+}
+#[derive(Default)] // for QRegExpValidator_regExpChanged
+pub struct QRegExpValidator_regExpChanged_signal{poi:u64}
+impl /* struct */ QRegExpValidator {
+  pub fn regExpChanged_1(self) -> QRegExpValidator_regExpChanged_signal {
+     return QRegExpValidator_regExpChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QRegExpValidator_regExpChanged_signal {
+  pub fn connect<T: QRegExpValidator_regExpChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QRegExpValidator_regExpChanged_signal_connect {
+  fn connect(self, sigthis: QRegExpValidator_regExpChanged_signal);
+}
+
+// regExpChanged(const class QRegExp &)
+extern fn QRegExpValidator_regExpChanged_signal_connect_cb_0(arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QRegExpValidator_regExpChanged_signal_connect for (extern fn(QRegExp)) {
+  fn connect(self, sigthis: QRegExpValidator_regExpChanged_signal) {
+    // do smth...
+    unsafe {QRegExpValidator_SlotProxy_connect__ZN16QRegExpValidator13regExpChangedERK7QRegExp(sigthis.poi as *mut c_void, QRegExpValidator_regExpChanged_signal_connect_cb_0 as *mut c_void)};
+  }
+}
 // <= body block end
 

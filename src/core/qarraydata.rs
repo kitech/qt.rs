@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qarraydata.h
 // dst-file: /src/core/qarraydata.rs
 //
@@ -32,25 +32,26 @@ extern {
   // proto: static QArrayData * QArrayData::sharedNull();
   fn _ZN10QArrayData10sharedNullEv() -> *mut c_void;
   // proto:  void * QArrayData::data();
-  fn _ZN10QArrayData4dataEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZN10QArrayData4dataEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto: static void QArrayData::deallocate(QArrayData * data, int objectSize, int alignment);
   fn _ZN10QArrayData10deallocateEPS_ii(arg0: *mut c_void, arg1: c_int, arg2: c_int);
   // proto:  bool QArrayData::isMutable();
-  fn _ZNK10QArrayData9isMutableEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK10QArrayData9isMutableEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  int QArrayData::detachCapacity(int newSize);
-  fn _ZNK10QArrayData14detachCapacityEi(qthis: *mut c_void, arg0: c_int) -> c_int;
+  fn _ZNK10QArrayData14detachCapacityEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QArrayData)=1
+#[derive(Default)]
 pub struct QArrayData {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QArrayData {
-  pub fn inheritFrom(qthis: *mut c_void) -> QArrayData {
-    return QArrayData{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QArrayData {
+    return QArrayData{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto: static QArrayData * QArrayData::sharedNull();
@@ -71,7 +72,7 @@ impl<'a> /*trait*/ QArrayData_sharedNull_s<QArrayData> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QArrayData10sharedNullEv()};
     let mut ret = unsafe {_ZN10QArrayData10sharedNullEv()};
-    let mut ret1 = QArrayData::inheritFrom(ret);
+    let mut ret1 = QArrayData::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }

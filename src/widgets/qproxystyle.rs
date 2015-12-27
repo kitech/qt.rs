@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtWidgets/qproxystyle.h
 // dst-file: /src/widgets/qproxystyle.rs
 //
@@ -45,52 +45,53 @@ use super::super::gui::qfontmetrics::QFontMetrics; // 771
 extern {
   fn QProxyStyle_Class_Size() -> c_int;
   // proto:  void QProxyStyle::unpolish(QWidget * widget);
-  fn _ZN11QProxyStyle8unpolishEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QProxyStyle8unpolishEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QProxyStyle::QProxyStyle(const QString & key);
   fn dector_ZN11QProxyStyleC1ERK7QString(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QProxyStyleC1ERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QProxyStyleC1ERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QProxyStyle::unpolish(QApplication * app);
-  fn _ZN11QProxyStyle8unpolishEP12QApplication(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QProxyStyle8unpolishEP12QApplication(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QPalette QProxyStyle::standardPalette();
-  fn _ZNK11QProxyStyle15standardPaletteEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK11QProxyStyle15standardPaletteEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QProxyStyle::setBaseStyle(QStyle * style);
-  fn _ZN11QProxyStyle12setBaseStyleEP6QStyle(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QProxyStyle12setBaseStyleEP6QStyle(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QProxyStyle::polish(QPalette & pal);
-  fn _ZN11QProxyStyle6polishER8QPalette(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QProxyStyle6polishER8QPalette(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QProxyStyle::drawItemPixmap(QPainter * painter, const QRect & rect, int alignment, const QPixmap & pixmap);
-  fn _ZNK11QProxyStyle14drawItemPixmapEP8QPainterRK5QRectiRK7QPixmap(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: c_int, arg3: *mut c_void);
+  fn _ZNK11QProxyStyle14drawItemPixmapEP8QPainterRK5QRectiRK7QPixmap(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: c_int, arg3: *mut c_void);
   // proto:  void QProxyStyle::~QProxyStyle();
-  fn _ZN11QProxyStyleD0Ev(qthis: *mut c_void);
+  fn _ZN11QProxyStyleD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QStyle * QProxyStyle::baseStyle();
-  fn _ZNK11QProxyStyle9baseStyleEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK11QProxyStyle9baseStyleEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QProxyStyle::QProxyStyle(const QProxyStyle & );
   fn dector_ZN11QProxyStyleC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QProxyStyleC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QProxyStyleC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QProxyStyle::polish(QApplication * app);
-  fn _ZN11QProxyStyle6polishEP12QApplication(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QProxyStyle6polishEP12QApplication(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QProxyStyle::polish(QWidget * widget);
-  fn _ZN11QProxyStyle6polishEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QProxyStyle6polishEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QRect QProxyStyle::itemTextRect(const QFontMetrics & fm, const QRect & r, int flags, bool enabled, const QString & text);
-  fn _ZNK11QProxyStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: c_int, arg3: c_char, arg4: *mut c_void) -> *mut c_void;
+  fn _ZNK11QProxyStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: c_int, arg3: c_char, arg4: *mut c_void) -> *mut c_void;
   // proto:  QRect QProxyStyle::itemPixmapRect(const QRect & r, int flags, const QPixmap & pixmap);
-  fn _ZNK11QProxyStyle14itemPixmapRectERK5QRectiRK7QPixmap(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
+  fn _ZNK11QProxyStyle14itemPixmapRectERK5QRectiRK7QPixmap(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
   // proto:  const QMetaObject * QProxyStyle::metaObject();
-  fn _ZNK11QProxyStyle10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK11QProxyStyle10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QProxyStyle::QProxyStyle(QStyle * style);
   fn dector_ZN11QProxyStyleC1EP6QStyle(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QProxyStyleC1EP6QStyle(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QProxyStyleC1EP6QStyle(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QProxyStyle)=1
+#[derive(Default)]
 pub struct QProxyStyle {
   qbase: QCommonStyle,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QProxyStyle {
-  pub fn inheritFrom(qthis: *mut c_void) -> QProxyStyle {
-    return QProxyStyle{qbase: QCommonStyle::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QProxyStyle {
+    return QProxyStyle{qbase: QCommonStyle::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QProxyStyle {
@@ -147,11 +148,11 @@ impl<'a> /*trait*/ QProxyStyle_New for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QProxyStyleC1ERK7QString()};
     let ctysz: c_int = unsafe{QProxyStyle_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN11QProxyStyleC1ERK7QString(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN11QProxyStyleC1ERK7QString(arg0)};
-    let rsthis = QProxyStyle{/**/qbase: QCommonStyle::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN11QProxyStyleC1ERK7QString(arg0)} as u64;
+    let rsthis = QProxyStyle{qbase: QCommonStyle::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -186,7 +187,7 @@ impl<'a> /*trait*/ QProxyStyle_standardPalette<QPalette> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QProxyStyle15standardPaletteEv()};
     let mut ret = unsafe {_ZNK11QProxyStyle15standardPaletteEv(rsthis.qclsinst)};
-    let mut ret1 = QPalette::inheritFrom(ret);
+    let mut ret1 = QPalette::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -304,7 +305,7 @@ impl<'a> /*trait*/ QProxyStyle_baseStyle<QStyle> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QProxyStyle9baseStyleEv()};
     let mut ret = unsafe {_ZNK11QProxyStyle9baseStyleEv(rsthis.qclsinst)};
-    let mut ret1 = QStyle::inheritFrom(ret);
+    let mut ret1 = QStyle::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -316,11 +317,11 @@ impl<'a> /*trait*/ QProxyStyle_New for (&'a QProxyStyle) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QProxyStyleC1ERKS_()};
     let ctysz: c_int = unsafe{QProxyStyle_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN11QProxyStyleC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN11QProxyStyleC1ERKS_(arg0)};
-    let rsthis = QProxyStyle{/**/qbase: QCommonStyle::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN11QProxyStyleC1ERKS_(arg0)} as u64;
+    let rsthis = QProxyStyle{qbase: QCommonStyle::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -371,7 +372,7 @@ impl<'a> /*trait*/ QProxyStyle_itemTextRect<QRect> for (&'a QFontMetrics, &'a QR
     let arg3 = self.3  as c_char;
     let arg4 = self.4.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK11QProxyStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4)};
-    let mut ret1 = QRect::inheritFrom(ret);
+    let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -398,7 +399,7 @@ impl<'a> /*trait*/ QProxyStyle_itemPixmapRect<QRect> for (&'a QRect, i32, &'a QP
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK11QProxyStyle14itemPixmapRectERK5QRectiRK7QPixmap(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QRect::inheritFrom(ret);
+    let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -432,11 +433,11 @@ impl<'a> /*trait*/ QProxyStyle_New for (&'a QStyle) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QProxyStyleC1EP6QStyle()};
     let ctysz: c_int = unsafe{QProxyStyle_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN11QProxyStyleC1EP6QStyle(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN11QProxyStyleC1EP6QStyle(arg0)};
-    let rsthis = QProxyStyle{/**/qbase: QCommonStyle::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN11QProxyStyleC1EP6QStyle(arg0)} as u64;
+    let rsthis = QProxyStyle{qbase: QCommonStyle::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }

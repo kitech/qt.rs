@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtGui/qbackingstore.h
 // dst-file: /src/gui/qbackingstore.rs
 //
@@ -35,46 +35,47 @@ use super::super::core::qpoint::QPoint; // 771
 extern {
   fn QBackingStore_Class_Size() -> c_int;
   // proto:  QPaintDevice * QBackingStore::paintDevice();
-  fn _ZN13QBackingStore11paintDeviceEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZN13QBackingStore11paintDeviceEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QWindow * QBackingStore::window();
-  fn _ZNK13QBackingStore6windowEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK13QBackingStore6windowEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QSize QBackingStore::size();
-  fn _ZNK13QBackingStore4sizeEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK13QBackingStore4sizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QRegion QBackingStore::staticContents();
-  fn _ZNK13QBackingStore14staticContentsEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK13QBackingStore14staticContentsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QBackingStore::~QBackingStore();
-  fn _ZN13QBackingStoreD0Ev(qthis: *mut c_void);
+  fn _ZN13QBackingStoreD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QBackingStore::setStaticContents(const QRegion & region);
-  fn _ZN13QBackingStore17setStaticContentsERK7QRegion(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN13QBackingStore17setStaticContentsERK7QRegion(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QBackingStore::resize(const QSize & size);
-  fn _ZN13QBackingStore6resizeERK5QSize(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN13QBackingStore6resizeERK5QSize(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QBackingStore::flush(const QRegion & region, QWindow * window, const QPoint & offset);
-  fn _ZN13QBackingStore5flushERK7QRegionP7QWindowRK6QPoint(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
+  fn _ZN13QBackingStore5flushERK7QRegionP7QWindowRK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  void QBackingStore::beginPaint(const QRegion & );
-  fn _ZN13QBackingStore10beginPaintERK7QRegion(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN13QBackingStore10beginPaintERK7QRegion(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QBackingStore::hasStaticContents();
-  fn _ZNK13QBackingStore17hasStaticContentsEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK13QBackingStore17hasStaticContentsEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QBackingStore::endPaint();
-  fn _ZN13QBackingStore8endPaintEv(qthis: *mut c_void);
+  fn _ZN13QBackingStore8endPaintEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QBackingStore::scroll(const QRegion & area, int dx, int dy);
-  fn _ZN13QBackingStore6scrollERK7QRegionii(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: c_int) -> c_char;
+  fn _ZN13QBackingStore6scrollERK7QRegionii(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int, arg2: c_int) -> c_char;
   // proto:  QPlatformBackingStore * QBackingStore::handle();
-  fn _ZNK13QBackingStore6handleEv(qthis: *mut c_void);
+  fn _ZNK13QBackingStore6handleEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QBackingStore::QBackingStore(QWindow * window);
   fn dector_ZN13QBackingStoreC1EP7QWindow(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN13QBackingStoreC1EP7QWindow(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN13QBackingStoreC1EP7QWindow(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QBackingStore)=1
+#[derive(Default)]
 pub struct QBackingStore {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QBackingStore {
-  pub fn inheritFrom(qthis: *mut c_void) -> QBackingStore {
-    return QBackingStore{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QBackingStore {
+    return QBackingStore{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  QPaintDevice * QBackingStore::paintDevice();
@@ -95,7 +96,7 @@ impl<'a> /*trait*/ QBackingStore_paintDevice<QPaintDevice> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QBackingStore11paintDeviceEv()};
     let mut ret = unsafe {_ZN13QBackingStore11paintDeviceEv(rsthis.qclsinst)};
-    let mut ret1 = QPaintDevice::inheritFrom(ret);
+    let mut ret1 = QPaintDevice::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -119,7 +120,7 @@ impl<'a> /*trait*/ QBackingStore_window<QWindow> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QBackingStore6windowEv()};
     let mut ret = unsafe {_ZNK13QBackingStore6windowEv(rsthis.qclsinst)};
-    let mut ret1 = QWindow::inheritFrom(ret);
+    let mut ret1 = QWindow::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -143,7 +144,7 @@ impl<'a> /*trait*/ QBackingStore_size<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QBackingStore4sizeEv()};
     let mut ret = unsafe {_ZNK13QBackingStore4sizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize::inheritFrom(ret);
+    let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -167,7 +168,7 @@ impl<'a> /*trait*/ QBackingStore_staticContents<QRegion> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QBackingStore14staticContentsEv()};
     let mut ret = unsafe {_ZNK13QBackingStore14staticContentsEv(rsthis.qclsinst)};
-    let mut ret1 = QRegion::inheritFrom(ret);
+    let mut ret1 = QRegion::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -401,11 +402,11 @@ impl<'a> /*trait*/ QBackingStore_New for (&'a QWindow) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QBackingStoreC1EP7QWindow()};
     let ctysz: c_int = unsafe{QBackingStore_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN13QBackingStoreC1EP7QWindow(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN13QBackingStoreC1EP7QWindow(arg0)};
-    let rsthis = QBackingStore{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN13QBackingStoreC1EP7QWindow(arg0)} as u64;
+    let rsthis = QBackingStore{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }

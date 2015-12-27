@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:03 2015
 // src-file: /QtWidgets/qwhatsthis.h
 // dst-file: /src/widgets/qwhatsthis.rs
 //
@@ -44,7 +44,7 @@ extern {
   fn _ZN10QWhatsThis18leaveWhatsThisModeEv();
   // proto:  void QWhatsThis::QWhatsThis();
   fn dector_ZN10QWhatsThisC1Ev() -> *mut c_void;
-  fn _ZN10QWhatsThisC1Ev(qthis: *mut c_void);
+  fn _ZN10QWhatsThisC1Ev(qthis: u64 /* *mut c_void*/);
   // proto: static void QWhatsThis::showText(const QPoint & pos, const QString & text, QWidget * w);
   fn _ZN10QWhatsThis8showTextERK6QPointRK7QStringP7QWidget(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto: static QAction * QWhatsThis::createAction(QObject * parent);
@@ -53,14 +53,15 @@ extern {
 
 // body block begin =>
 // class sizeof(QWhatsThis)=1
+#[derive(Default)]
 pub struct QWhatsThis {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QWhatsThis {
-  pub fn inheritFrom(qthis: *mut c_void) -> QWhatsThis {
-    return QWhatsThis{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QWhatsThis {
+    return QWhatsThis{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto: static void QWhatsThis::hideText();
@@ -171,10 +172,10 @@ impl<'a> /*trait*/ QWhatsThis_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QWhatsThisC1Ev()};
     let ctysz: c_int = unsafe{QWhatsThis_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN10QWhatsThisC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN10QWhatsThisC1Ev()};
-    let rsthis = QWhatsThis{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN10QWhatsThisC1Ev()} as u64;
+    let rsthis = QWhatsThis{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -224,7 +225,7 @@ impl<'a> /*trait*/ QWhatsThis_createAction_s<QAction> for (&'a QObject) {
     // unsafe{_ZN10QWhatsThis12createActionEP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN10QWhatsThis12createActionEP7QObject(arg0)};
-    let mut ret1 = QAction::inheritFrom(ret);
+    let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }

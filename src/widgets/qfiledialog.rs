@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtWidgets/qfiledialog.h
 // dst-file: /src/widgets/qfiledialog.rs
 //
@@ -24,6 +24,8 @@ use super::super::core::qurl::QUrl; // 771
 use super::qwidget::QWidget; // 773
 use super::super::core::qstring::QString; // 771
 use super::super::core::qstringlist::QStringList; // 771
+use super::qabstractitemdelegate::QAbstractItemDelegate; // 773
+use super::super::core::qabstractproxymodel::QAbstractProxyModel; // 771
 use super::super::core::qbytearray::QByteArray; // 771
 use super::super::core::qobject::QObject; // 771
 use super::super::core::qdir::QDir; // 771
@@ -39,119 +41,141 @@ use super::qfileiconprovider::QFileIconProvider; // 773
 extern {
   fn QFileDialog_Class_Size() -> c_int;
   // proto:  const QMetaObject * QFileDialog::metaObject();
-  fn _ZNK11QFileDialog10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK11QFileDialog10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QFileDialog::setDirectoryUrl(const QUrl & directory);
-  fn _ZN11QFileDialog15setDirectoryUrlERK4QUrl(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QFileDialog15setDirectoryUrlERK4QUrl(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QFileDialog::directoryUrlEntered(const QUrl & directory);
-  fn _ZN11QFileDialog19directoryUrlEnteredERK4QUrl(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QFileDialog19directoryUrlEnteredERK4QUrl(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QFileDialog::currentChanged(const QString & path);
-  fn _ZN11QFileDialog14currentChangedERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QFileDialog14currentChangedERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QStringList QFileDialog::nameFilters();
-  fn _ZNK11QFileDialog11nameFiltersEv(qthis: *mut c_void);
+  fn _ZNK11QFileDialog11nameFiltersEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QFileDialog::setConfirmOverwrite(bool enabled);
-  fn _ZN11QFileDialog19setConfirmOverwriteEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN11QFileDialog19setConfirmOverwriteEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QFileDialog::setDefaultSuffix(const QString & suffix);
-  fn _ZN11QFileDialog16setDefaultSuffixERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QFileDialog16setDefaultSuffixERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QFileDialog::filterSelected(const QString & filter);
-  fn _ZN11QFileDialog14filterSelectedERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QFileDialog14filterSelectedERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  // proto:  void QFileDialog::setItemDelegate(QAbstractItemDelegate * delegate);
+  fn _ZN11QFileDialog15setItemDelegateEP21QAbstractItemDelegate(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QList<QUrl> QFileDialog::sidebarUrls();
-  fn _ZNK11QFileDialog11sidebarUrlsEv(qthis: *mut c_void);
+  fn _ZNK11QFileDialog11sidebarUrlsEv(qthis: u64 /* *mut c_void*/);
   // proto:  QString QFileDialog::defaultSuffix();
-  fn _ZNK11QFileDialog13defaultSuffixEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK11QFileDialog13defaultSuffixEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  // proto:  void QFileDialog::setProxyModel(QAbstractProxyModel * model);
+  fn _ZN11QFileDialog13setProxyModelEP19QAbstractProxyModel(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QFileDialog::selectFile(const QString & filename);
-  fn _ZN11QFileDialog10selectFileERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QFileDialog10selectFileERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QFileDialog::resolveSymlinks();
-  fn _ZNK11QFileDialog15resolveSymlinksEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK11QFileDialog15resolveSymlinksEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QFileDialog::setDirectory(const QString & directory);
-  fn _ZN11QFileDialog12setDirectoryERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QFileDialog12setDirectoryERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QFileDialog::selectUrl(const QUrl & url);
-  fn _ZN11QFileDialog9selectUrlERK4QUrl(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QFileDialog9selectUrlERK4QUrl(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QString QFileDialog::selectedNameFilter();
-  fn _ZNK11QFileDialog18selectedNameFilterEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK11QFileDialog18selectedNameFilterEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QUrl QFileDialog::directoryUrl();
-  fn _ZNK11QFileDialog12directoryUrlEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK11QFileDialog12directoryUrlEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QFileDialog::isReadOnly();
-  fn _ZNK11QFileDialog10isReadOnlyEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK11QFileDialog10isReadOnlyEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QFileDialog::directoryEntered(const QString & directory);
-  fn _ZN11QFileDialog16directoryEnteredERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QFileDialog16directoryEnteredERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QFileDialog::fileSelected(const QString & file);
-  fn _ZN11QFileDialog12fileSelectedERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QFileDialog12fileSelectedERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QByteArray QFileDialog::saveState();
-  fn _ZNK11QFileDialog9saveStateEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK11QFileDialog9saveStateEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QFileDialog::currentUrlChanged(const QUrl & url);
-  fn _ZN11QFileDialog17currentUrlChangedERK4QUrl(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QFileDialog17currentUrlChangedERK4QUrl(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QFileDialog::open(QObject * receiver, const char * member);
-  fn _ZN11QFileDialog4openEP7QObjectPKc(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_char);
+  fn _ZN11QFileDialog4openEP7QObjectPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_char);
   // proto:  QDir QFileDialog::directory();
-  fn _ZNK11QFileDialog9directoryEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK11QFileDialog9directoryEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QFileDialog::urlSelected(const QUrl & url);
-  fn _ZN11QFileDialog11urlSelectedERK4QUrl(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QFileDialog11urlSelectedERK4QUrl(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QFileDialog::setDirectory(const QDir & directory);
-  fn demth_ZN11QFileDialog12setDirectoryERK4QDir(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN11QFileDialog12setDirectoryERK4QDir(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QFileDialog::setVisible(bool visible);
-  fn _ZN11QFileDialog10setVisibleEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN11QFileDialog10setVisibleEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QFileDialog::setIconProvider(QFileIconProvider * provider);
-  fn _ZN11QFileDialog15setIconProviderEP17QFileIconProvider(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QFileDialog15setIconProviderEP17QFileIconProvider(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QFileDialog::selectMimeTypeFilter(const QString & filter);
-  fn _ZN11QFileDialog20selectMimeTypeFilterERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QFileDialog20selectMimeTypeFilterERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QStringList QFileDialog::mimeTypeFilters();
-  fn _ZNK11QFileDialog15mimeTypeFiltersEv(qthis: *mut c_void);
+  fn _ZNK11QFileDialog15mimeTypeFiltersEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QFileDialog::setMimeTypeFilters(const QStringList & filters);
-  fn _ZN11QFileDialog18setMimeTypeFiltersERK11QStringList(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QFileDialog18setMimeTypeFiltersERK11QStringList(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QFileDialog::setResolveSymlinks(bool enabled);
-  fn _ZN11QFileDialog18setResolveSymlinksEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN11QFileDialog18setResolveSymlinksEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QFileDialog::setReadOnly(bool enabled);
-  fn _ZN11QFileDialog11setReadOnlyEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN11QFileDialog11setReadOnlyEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QFileDialog::filesSelected(const QStringList & files);
-  fn _ZN11QFileDialog13filesSelectedERK11QStringList(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QFileDialog13filesSelectedERK11QStringList(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QFileDialog::setNameFilterDetailsVisible(bool enabled);
-  fn _ZN11QFileDialog27setNameFilterDetailsVisibleEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN11QFileDialog27setNameFilterDetailsVisibleEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QFileDialog::selectNameFilter(const QString & filter);
-  fn _ZN11QFileDialog16selectNameFilterERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QFileDialog16selectNameFilterERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QFileDialog::restoreState(const QByteArray & state);
-  fn _ZN11QFileDialog12restoreStateERK10QByteArray(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn _ZN11QFileDialog12restoreStateERK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  QFileIconProvider * QFileDialog::iconProvider();
-  fn _ZNK11QFileDialog12iconProviderEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK11QFileDialog12iconProviderEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QStringList QFileDialog::selectedFiles();
-  fn _ZNK11QFileDialog13selectedFilesEv(qthis: *mut c_void);
+  fn _ZNK11QFileDialog13selectedFilesEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QFileDialog::~QFileDialog();
-  fn _ZN11QFileDialogD0Ev(qthis: *mut c_void);
+  fn _ZN11QFileDialogD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QAbstractItemDelegate * QFileDialog::itemDelegate();
-  fn _ZNK11QFileDialog12itemDelegateEv(qthis: *mut c_void);
+  fn _ZNK11QFileDialog12itemDelegateEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QFileDialog::confirmOverwrite();
-  fn _ZNK11QFileDialog16confirmOverwriteEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK11QFileDialog16confirmOverwriteEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QFileDialog::setHistory(const QStringList & paths);
-  fn _ZN11QFileDialog10setHistoryERK11QStringList(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QFileDialog10setHistoryERK11QStringList(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QFileDialog::setNameFilter(const QString & filter);
-  fn _ZN11QFileDialog13setNameFilterERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QFileDialog13setNameFilterERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QAbstractProxyModel * QFileDialog::proxyModel();
-  fn _ZNK11QFileDialog10proxyModelEv(qthis: *mut c_void);
+  fn _ZNK11QFileDialog10proxyModelEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QFileDialog::setNameFilters(const QStringList & filters);
-  fn _ZN11QFileDialog14setNameFiltersERK11QStringList(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QFileDialog14setNameFiltersERK11QStringList(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QList<QUrl> QFileDialog::selectedUrls();
-  fn _ZNK11QFileDialog12selectedUrlsEv(qthis: *mut c_void);
+  fn _ZNK11QFileDialog12selectedUrlsEv(qthis: u64 /* *mut c_void*/);
   // proto:  QStringList QFileDialog::history();
-  fn _ZNK11QFileDialog7historyEv(qthis: *mut c_void);
+  fn _ZNK11QFileDialog7historyEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QFileDialog::isNameFilterDetailsVisible();
-  fn _ZNK11QFileDialog26isNameFilterDetailsVisibleEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK11QFileDialog26isNameFilterDetailsVisibleEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QFileDialog::QFileDialog(const QFileDialog & );
   fn dector_ZN11QFileDialogC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QFileDialogC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QFileDialogC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QFileDialog::QFileDialog(QWidget * parent, const QString & caption, const QString & directory, const QString & filter);
   fn dector_ZN11QFileDialogC1EP7QWidgetRK7QStringS4_S4_(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void) -> *mut c_void;
-  fn _ZN11QFileDialogC1EP7QWidgetRK7QStringS4_S4_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void);
+  fn _ZN11QFileDialogC1EP7QWidgetRK7QStringS4_S4_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void);
+  fn QFileDialog_SlotProxy_connect__ZN11QFileDialog19directoryUrlEnteredERK4QUrl(qthis: *mut c_void, fptr: *mut c_void);
+  fn QFileDialog_SlotProxy_connect__ZN11QFileDialog12fileSelectedERK7QString(qthis: *mut c_void, fptr: *mut c_void);
+  fn QFileDialog_SlotProxy_connect__ZN11QFileDialog11urlSelectedERK4QUrl(qthis: *mut c_void, fptr: *mut c_void);
+  fn QFileDialog_SlotProxy_connect__ZN11QFileDialog16directoryEnteredERK7QString(qthis: *mut c_void, fptr: *mut c_void);
+  fn QFileDialog_SlotProxy_connect__ZN11QFileDialog17currentUrlChangedERK4QUrl(qthis: *mut c_void, fptr: *mut c_void);
+  fn QFileDialog_SlotProxy_connect__ZN11QFileDialog13filesSelectedERK11QStringList(qthis: *mut c_void, fptr: *mut c_void);
+  fn QFileDialog_SlotProxy_connect__ZN11QFileDialog14currentChangedERK7QString(qthis: *mut c_void, fptr: *mut c_void);
+  fn QFileDialog_SlotProxy_connect__ZN11QFileDialog14filterSelectedERK7QString(qthis: *mut c_void, fptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QFileDialog)=1
+#[derive(Default)]
 pub struct QFileDialog {
   qbase: QDialog,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _filesSelected_1: QFileDialog_filesSelected_signal,
+  pub _fileSelected_1: QFileDialog_fileSelected_signal,
+  pub _currentChanged_1: QFileDialog_currentChanged_signal,
+  pub _directoryEntered_1: QFileDialog_directoryEntered_signal,
+  pub _currentUrlChanged_1: QFileDialog_currentUrlChanged_signal,
+  pub _directoryUrlEntered_1: QFileDialog_directoryUrlEntered_signal,
+  pub _filterSelected_1: QFileDialog_filterSelected_signal,
+  pub _urlsSelected_1: QFileDialog_urlsSelected_signal,
+  pub _urlSelected_1: QFileDialog_urlSelected_signal,
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn inheritFrom(qthis: *mut c_void) -> QFileDialog {
-    return QFileDialog{qbase: QDialog::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QFileDialog {
+    return QFileDialog{qbase: QDialog::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QFileDialog {
@@ -348,6 +372,29 @@ impl<'a> /*trait*/ QFileDialog_filterSelected<()> for (&'a QString) {
   }
 }
 
+  // proto:  void QFileDialog::setItemDelegate(QAbstractItemDelegate * delegate);
+impl /*struct*/ QFileDialog {
+  pub fn setItemDelegate<RetType, T: QFileDialog_setItemDelegate<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.setItemDelegate(self);
+    // return 1;
+  }
+}
+
+pub trait QFileDialog_setItemDelegate<RetType> {
+  fn setItemDelegate(self , rsthis: & QFileDialog) -> RetType;
+}
+
+  // proto:  void QFileDialog::setItemDelegate(QAbstractItemDelegate * delegate);
+impl<'a> /*trait*/ QFileDialog_setItemDelegate<()> for (&'a QAbstractItemDelegate) {
+  fn setItemDelegate(self , rsthis: & QFileDialog) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN11QFileDialog15setItemDelegateEP21QAbstractItemDelegate()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN11QFileDialog15setItemDelegateEP21QAbstractItemDelegate(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
   // proto:  QList<QUrl> QFileDialog::sidebarUrls();
 impl /*struct*/ QFileDialog {
   pub fn sidebarUrls<RetType, T: QFileDialog_sidebarUrls<RetType>>(& self,  overload_args: T) -> RetType {
@@ -388,8 +435,31 @@ impl<'a> /*trait*/ QFileDialog_defaultSuffix<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDialog13defaultSuffixEv()};
     let mut ret = unsafe {_ZNK11QFileDialog13defaultSuffixEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
+    // return 1;
+  }
+}
+
+  // proto:  void QFileDialog::setProxyModel(QAbstractProxyModel * model);
+impl /*struct*/ QFileDialog {
+  pub fn setProxyModel<RetType, T: QFileDialog_setProxyModel<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.setProxyModel(self);
+    // return 1;
+  }
+}
+
+pub trait QFileDialog_setProxyModel<RetType> {
+  fn setProxyModel(self , rsthis: & QFileDialog) -> RetType;
+}
+
+  // proto:  void QFileDialog::setProxyModel(QAbstractProxyModel * model);
+impl<'a> /*trait*/ QFileDialog_setProxyModel<()> for (&'a QAbstractProxyModel) {
+  fn setProxyModel(self , rsthis: & QFileDialog) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN11QFileDialog13setProxyModelEP19QAbstractProxyModel()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN11QFileDialog13setProxyModelEP19QAbstractProxyModel(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -504,7 +574,7 @@ impl<'a> /*trait*/ QFileDialog_selectedNameFilter<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDialog18selectedNameFilterEv()};
     let mut ret = unsafe {_ZNK11QFileDialog18selectedNameFilterEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -528,7 +598,7 @@ impl<'a> /*trait*/ QFileDialog_directoryUrl<QUrl> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDialog12directoryUrlEv()};
     let mut ret = unsafe {_ZNK11QFileDialog12directoryUrlEv(rsthis.qclsinst)};
-    let mut ret1 = QUrl::inheritFrom(ret);
+    let mut ret1 = QUrl::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -621,7 +691,7 @@ impl<'a> /*trait*/ QFileDialog_saveState<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDialog9saveStateEv()};
     let mut ret = unsafe {_ZNK11QFileDialog9saveStateEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -692,7 +762,7 @@ impl<'a> /*trait*/ QFileDialog_directory<QDir> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDialog9directoryEv()};
     let mut ret = unsafe {_ZNK11QFileDialog9directoryEv(rsthis.qclsinst)};
-    let mut ret1 = QDir::inheritFrom(ret);
+    let mut ret1 = QDir::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1003,7 +1073,7 @@ impl<'a> /*trait*/ QFileDialog_iconProvider<QFileIconProvider> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDialog12iconProviderEv()};
     let mut ret = unsafe {_ZNK11QFileDialog12iconProviderEv(rsthis.qclsinst)};
-    let mut ret1 = QFileIconProvider::inheritFrom(ret);
+    let mut ret1 = QFileIconProvider::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1275,11 +1345,11 @@ impl<'a> /*trait*/ QFileDialog_New for (&'a QFileDialog) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDialogC1ERKS_()};
     let ctysz: c_int = unsafe{QFileDialog_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN11QFileDialogC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN11QFileDialogC1ERKS_(arg0)};
-    let rsthis = QFileDialog{/**/qbase: QDialog::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN11QFileDialogC1ERKS_(arg0)} as u64;
+    let rsthis = QFileDialog{qbase: QDialog::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1291,18 +1361,242 @@ impl<'a> /*trait*/ QFileDialog_New for (&'a QWidget, &'a QString, &'a QString, &
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDialogC1EP7QWidgetRK7QStringS4_S4_()};
     let ctysz: c_int = unsafe{QFileDialog_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let arg3 = self.3.qclsinst  as *mut c_void;
     // unsafe {_ZN11QFileDialogC1EP7QWidgetRK7QStringS4_S4_(qthis, arg0, arg1, arg2, arg3)};
-    let qthis: *mut c_void = unsafe {dector_ZN11QFileDialogC1EP7QWidgetRK7QStringS4_S4_(arg0, arg1, arg2, arg3)};
-    let rsthis = QFileDialog{/**/qbase: QDialog::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN11QFileDialogC1EP7QWidgetRK7QStringS4_S4_(arg0, arg1, arg2, arg3)} as u64;
+    let rsthis = QFileDialog{qbase: QDialog::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
+#[derive(Default)] // for QFileDialog_filesSelected
+pub struct QFileDialog_filesSelected_signal{poi:u64}
+impl /* struct */ QFileDialog {
+  pub fn filesSelected_1(self) -> QFileDialog_filesSelected_signal {
+     return QFileDialog_filesSelected_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QFileDialog_filesSelected_signal {
+  pub fn connect<T: QFileDialog_filesSelected_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QFileDialog_filesSelected_signal_connect {
+  fn connect(self, sigthis: QFileDialog_filesSelected_signal);
+}
+
+#[derive(Default)] // for QFileDialog_fileSelected
+pub struct QFileDialog_fileSelected_signal{poi:u64}
+impl /* struct */ QFileDialog {
+  pub fn fileSelected_1(self) -> QFileDialog_fileSelected_signal {
+     return QFileDialog_fileSelected_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QFileDialog_fileSelected_signal {
+  pub fn connect<T: QFileDialog_fileSelected_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QFileDialog_fileSelected_signal_connect {
+  fn connect(self, sigthis: QFileDialog_fileSelected_signal);
+}
+
+#[derive(Default)] // for QFileDialog_currentChanged
+pub struct QFileDialog_currentChanged_signal{poi:u64}
+impl /* struct */ QFileDialog {
+  pub fn currentChanged_1(self) -> QFileDialog_currentChanged_signal {
+     return QFileDialog_currentChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QFileDialog_currentChanged_signal {
+  pub fn connect<T: QFileDialog_currentChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QFileDialog_currentChanged_signal_connect {
+  fn connect(self, sigthis: QFileDialog_currentChanged_signal);
+}
+
+#[derive(Default)] // for QFileDialog_directoryEntered
+pub struct QFileDialog_directoryEntered_signal{poi:u64}
+impl /* struct */ QFileDialog {
+  pub fn directoryEntered_1(self) -> QFileDialog_directoryEntered_signal {
+     return QFileDialog_directoryEntered_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QFileDialog_directoryEntered_signal {
+  pub fn connect<T: QFileDialog_directoryEntered_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QFileDialog_directoryEntered_signal_connect {
+  fn connect(self, sigthis: QFileDialog_directoryEntered_signal);
+}
+
+#[derive(Default)] // for QFileDialog_currentUrlChanged
+pub struct QFileDialog_currentUrlChanged_signal{poi:u64}
+impl /* struct */ QFileDialog {
+  pub fn currentUrlChanged_1(self) -> QFileDialog_currentUrlChanged_signal {
+     return QFileDialog_currentUrlChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QFileDialog_currentUrlChanged_signal {
+  pub fn connect<T: QFileDialog_currentUrlChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QFileDialog_currentUrlChanged_signal_connect {
+  fn connect(self, sigthis: QFileDialog_currentUrlChanged_signal);
+}
+
+#[derive(Default)] // for QFileDialog_directoryUrlEntered
+pub struct QFileDialog_directoryUrlEntered_signal{poi:u64}
+impl /* struct */ QFileDialog {
+  pub fn directoryUrlEntered_1(self) -> QFileDialog_directoryUrlEntered_signal {
+     return QFileDialog_directoryUrlEntered_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QFileDialog_directoryUrlEntered_signal {
+  pub fn connect<T: QFileDialog_directoryUrlEntered_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QFileDialog_directoryUrlEntered_signal_connect {
+  fn connect(self, sigthis: QFileDialog_directoryUrlEntered_signal);
+}
+
+#[derive(Default)] // for QFileDialog_filterSelected
+pub struct QFileDialog_filterSelected_signal{poi:u64}
+impl /* struct */ QFileDialog {
+  pub fn filterSelected_1(self) -> QFileDialog_filterSelected_signal {
+     return QFileDialog_filterSelected_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QFileDialog_filterSelected_signal {
+  pub fn connect<T: QFileDialog_filterSelected_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QFileDialog_filterSelected_signal_connect {
+  fn connect(self, sigthis: QFileDialog_filterSelected_signal);
+}
+
+#[derive(Default)] // for QFileDialog_urlsSelected
+pub struct QFileDialog_urlsSelected_signal{poi:u64}
+impl /* struct */ QFileDialog {
+  pub fn urlsSelected_1(self) -> QFileDialog_urlsSelected_signal {
+     return QFileDialog_urlsSelected_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QFileDialog_urlsSelected_signal {
+  pub fn connect<T: QFileDialog_urlsSelected_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QFileDialog_urlsSelected_signal_connect {
+  fn connect(self, sigthis: QFileDialog_urlsSelected_signal);
+}
+
+#[derive(Default)] // for QFileDialog_urlSelected
+pub struct QFileDialog_urlSelected_signal{poi:u64}
+impl /* struct */ QFileDialog {
+  pub fn urlSelected_1(self) -> QFileDialog_urlSelected_signal {
+     return QFileDialog_urlSelected_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QFileDialog_urlSelected_signal {
+  pub fn connect<T: QFileDialog_urlSelected_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QFileDialog_urlSelected_signal_connect {
+  fn connect(self, sigthis: QFileDialog_urlSelected_signal);
+}
+
+// directoryUrlEntered(const class QUrl &)
+extern fn QFileDialog_directoryUrlEntered_signal_connect_cb_0(arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QFileDialog_directoryUrlEntered_signal_connect for (extern fn(QUrl)) {
+  fn connect(self, sigthis: QFileDialog_directoryUrlEntered_signal) {
+    // do smth...
+    unsafe {QFileDialog_SlotProxy_connect__ZN11QFileDialog19directoryUrlEnteredERK4QUrl(sigthis.poi as *mut c_void, QFileDialog_directoryUrlEntered_signal_connect_cb_0 as *mut c_void)};
+  }
+}
+// fileSelected(const class QString &)
+extern fn QFileDialog_fileSelected_signal_connect_cb_1(arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QFileDialog_fileSelected_signal_connect for (extern fn(QString)) {
+  fn connect(self, sigthis: QFileDialog_fileSelected_signal) {
+    // do smth...
+    unsafe {QFileDialog_SlotProxy_connect__ZN11QFileDialog12fileSelectedERK7QString(sigthis.poi as *mut c_void, QFileDialog_fileSelected_signal_connect_cb_1 as *mut c_void)};
+  }
+}
+// urlSelected(const class QUrl &)
+extern fn QFileDialog_urlSelected_signal_connect_cb_2(arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QFileDialog_urlSelected_signal_connect for (extern fn(QUrl)) {
+  fn connect(self, sigthis: QFileDialog_urlSelected_signal) {
+    // do smth...
+    unsafe {QFileDialog_SlotProxy_connect__ZN11QFileDialog11urlSelectedERK4QUrl(sigthis.poi as *mut c_void, QFileDialog_urlSelected_signal_connect_cb_2 as *mut c_void)};
+  }
+}
+// directoryEntered(const class QString &)
+extern fn QFileDialog_directoryEntered_signal_connect_cb_3(arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QFileDialog_directoryEntered_signal_connect for (extern fn(QString)) {
+  fn connect(self, sigthis: QFileDialog_directoryEntered_signal) {
+    // do smth...
+    unsafe {QFileDialog_SlotProxy_connect__ZN11QFileDialog16directoryEnteredERK7QString(sigthis.poi as *mut c_void, QFileDialog_directoryEntered_signal_connect_cb_3 as *mut c_void)};
+  }
+}
+// currentUrlChanged(const class QUrl &)
+extern fn QFileDialog_currentUrlChanged_signal_connect_cb_4(arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QFileDialog_currentUrlChanged_signal_connect for (extern fn(QUrl)) {
+  fn connect(self, sigthis: QFileDialog_currentUrlChanged_signal) {
+    // do smth...
+    unsafe {QFileDialog_SlotProxy_connect__ZN11QFileDialog17currentUrlChangedERK4QUrl(sigthis.poi as *mut c_void, QFileDialog_currentUrlChanged_signal_connect_cb_4 as *mut c_void)};
+  }
+}
+// filesSelected(const class QStringList &)
+extern fn QFileDialog_filesSelected_signal_connect_cb_5(arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QFileDialog_filesSelected_signal_connect for (extern fn(QStringList)) {
+  fn connect(self, sigthis: QFileDialog_filesSelected_signal) {
+    // do smth...
+    unsafe {QFileDialog_SlotProxy_connect__ZN11QFileDialog13filesSelectedERK11QStringList(sigthis.poi as *mut c_void, QFileDialog_filesSelected_signal_connect_cb_5 as *mut c_void)};
+  }
+}
+// currentChanged(const class QString &)
+extern fn QFileDialog_currentChanged_signal_connect_cb_6(arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QFileDialog_currentChanged_signal_connect for (extern fn(QString)) {
+  fn connect(self, sigthis: QFileDialog_currentChanged_signal) {
+    // do smth...
+    unsafe {QFileDialog_SlotProxy_connect__ZN11QFileDialog14currentChangedERK7QString(sigthis.poi as *mut c_void, QFileDialog_currentChanged_signal_connect_cb_6 as *mut c_void)};
+  }
+}
+// filterSelected(const class QString &)
+extern fn QFileDialog_filterSelected_signal_connect_cb_7(arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QFileDialog_filterSelected_signal_connect for (extern fn(QString)) {
+  fn connect(self, sigthis: QFileDialog_filterSelected_signal) {
+    // do smth...
+    unsafe {QFileDialog_SlotProxy_connect__ZN11QFileDialog14filterSelectedERK7QString(sigthis.poi as *mut c_void, QFileDialog_filterSelected_signal_connect_cb_7 as *mut c_void)};
+  }
+}
 // <= body block end
 

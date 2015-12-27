@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:03 2015
 // src-file: /QtCore/qrect.h
 // dst-file: /src/core/qrect.rs
 //
@@ -37,297 +37,299 @@ use super::qmargins::QMarginsF; // 773
 extern {
   fn QRect_Class_Size() -> c_int;
   // proto:  int QRect::right();
-  fn _ZNK5QRect5rightEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK5QRect5rightEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QRect::moveTo(const QPoint & p);
-  fn demth_ZN5QRect6moveToERK6QPoint(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN5QRect6moveToERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QRect::moveTopLeft(const QPoint & p);
-  fn demth_ZN5QRect11moveTopLeftERK6QPoint(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN5QRect11moveTopLeftERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QRect::moveRight(int pos);
-  fn demth_ZN5QRect9moveRightEi(qthis: *mut c_void, arg0: c_int);
+  fn demth_ZN5QRect9moveRightEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QRect::QRect(const QPoint & topleft, const QPoint & bottomright);
   fn dector_ZN5QRectC1ERK6QPointS2_(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN5QRectC1ERK6QPointS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN5QRectC1ERK6QPointS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  QRect QRect::translated(int dx, int dy);
-  fn _ZNK5QRect10translatedEii(qthis: *mut c_void, arg0: c_int, arg1: c_int) -> *mut c_void;
+  fn _ZNK5QRect10translatedEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> *mut c_void;
   // proto:  QPoint QRect::center();
-  fn _ZNK5QRect6centerEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK5QRect6centerEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QRect::moveTopRight(const QPoint & p);
-  fn demth_ZN5QRect12moveTopRightERK6QPoint(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN5QRect12moveTopRightERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QRect::setLeft(int pos);
-  fn demth_ZN5QRect7setLeftEi(qthis: *mut c_void, arg0: c_int);
+  fn demth_ZN5QRect7setLeftEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QRect::left();
-  fn _ZNK5QRect4leftEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK5QRect4leftEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  QRect QRect::intersected(const QRect & other);
-  fn demth_ZNK5QRect11intersectedERKS_(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn demth_ZNK5QRect11intersectedERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  bool QRect::contains(int x, int y, bool proper);
-  fn demth_ZNK5QRect8containsEiib(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_char) -> c_char;
+  fn demth_ZNK5QRect8containsEiib(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_char) -> c_char;
   // proto:  QPoint QRect::bottomRight();
-  fn _ZNK5QRect11bottomRightEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK5QRect11bottomRightEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QRect::isValid();
-  fn _ZNK5QRect7isValidEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK5QRect7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QSize QRect::size();
-  fn _ZNK5QRect4sizeEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK5QRect4sizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QRect QRect::united(const QRect & other);
-  fn demth_ZNK5QRect6unitedERKS_(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn demth_ZNK5QRect6unitedERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QRect::adjust(int x1, int y1, int x2, int y2);
-  fn demth_ZN5QRect6adjustEiiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
+  fn demth_ZN5QRect6adjustEiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
   // proto:  bool QRect::isNull();
-  fn _ZNK5QRect6isNullEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK5QRect6isNullEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QRect::setBottom(int pos);
-  fn demth_ZN5QRect9setBottomEi(qthis: *mut c_void, arg0: c_int);
+  fn demth_ZN5QRect9setBottomEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QRect::setSize(const QSize & s);
-  fn demth_ZN5QRect7setSizeERK5QSize(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN5QRect7setSizeERK5QSize(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QRect::y();
-  fn _ZNK5QRect1yEv(qthis: *mut c_void);
+  fn _ZNK5QRect1yEv(qthis: u64 /* *mut c_void*/);
   // proto:  int QRect::x();
-  fn _ZNK5QRect1xEv(qthis: *mut c_void);
+  fn _ZNK5QRect1xEv(qthis: u64 /* *mut c_void*/);
   // proto:  QRect QRect::adjusted(int x1, int y1, int x2, int y2);
-  fn _ZNK5QRect8adjustedEiiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int) -> *mut c_void;
+  fn _ZNK5QRect8adjustedEiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int) -> *mut c_void;
   // proto:  void QRect::QRect(const QPoint & topleft, const QSize & size);
   fn dector_ZN5QRectC1ERK6QPointRK5QSize(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN5QRectC1ERK6QPointRK5QSize(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN5QRectC1ERK6QPointRK5QSize(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  int QRect::height();
-  fn _ZNK5QRect6heightEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK5QRect6heightEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QRect::QRect(int left, int top, int width, int height);
   fn dector_ZN5QRectC1Eiiii(arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int) -> *mut c_void;
-  fn _ZN5QRectC1Eiiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
+  fn _ZN5QRectC1Eiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
   // proto:  void QRect::moveBottomLeft(const QPoint & p);
-  fn demth_ZN5QRect14moveBottomLeftERK6QPoint(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN5QRect14moveBottomLeftERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QRect::top();
-  fn _ZNK5QRect3topEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK5QRect3topEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QRect::moveTo(int x, int t);
-  fn demth_ZN5QRect6moveToEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
+  fn demth_ZN5QRect6moveToEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  void QRect::getRect(int * x, int * y, int * w, int * h);
-  fn demth_ZNK5QRect7getRectEPiS0_S0_S0_(qthis: *mut c_void, arg0: *mut c_int, arg1: *mut c_int, arg2: *mut c_int, arg3: *mut c_int);
+  fn demth_ZNK5QRect7getRectEPiS0_S0_S0_(qthis: u64 /* *mut c_void*/, arg0: *mut c_int, arg1: *mut c_int, arg2: *mut c_int, arg3: *mut c_int);
   // proto:  bool QRect::contains(const QRect & r, bool proper);
-  fn _ZNK5QRect8containsERKS_b(qthis: *mut c_void, arg0: *mut c_void, arg1: c_char) -> c_char;
+  fn _ZNK5QRect8containsERKS_b(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_char) -> c_char;
   // proto:  QRect QRect::marginsRemoved(const QMargins & margins);
-  fn _ZNK5QRect14marginsRemovedERK8QMargins(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK5QRect14marginsRemovedERK8QMargins(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QRect::translate(int dx, int dy);
-  fn demth_ZN5QRect9translateEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
+  fn demth_ZN5QRect9translateEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  QPoint QRect::topLeft();
-  fn _ZNK5QRect7topLeftEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK5QRect7topLeftEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QRect::contains(const QPoint & p, bool proper);
-  fn _ZNK5QRect8containsERK6QPointb(qthis: *mut c_void, arg0: *mut c_void, arg1: c_char) -> c_char;
+  fn _ZNK5QRect8containsERK6QPointb(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_char) -> c_char;
   // proto:  int QRect::width();
-  fn _ZNK5QRect5widthEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK5QRect5widthEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QRect::setRect(int x, int y, int w, int h);
-  fn demth_ZN5QRect7setRectEiiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
+  fn demth_ZN5QRect7setRectEiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
   // proto:  void QRect::moveCenter(const QPoint & p);
-  fn demth_ZN5QRect10moveCenterERK6QPoint(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN5QRect10moveCenterERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QRect::intersects(const QRect & r);
-  fn _ZNK5QRect10intersectsERKS_(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn _ZNK5QRect10intersectsERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  void QRect::setTopRight(const QPoint & p);
-  fn demth_ZN5QRect11setTopRightERK6QPoint(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN5QRect11setTopRightERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QRect::setCoords(int x1, int y1, int x2, int y2);
-  fn demth_ZN5QRect9setCoordsEiiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
+  fn demth_ZN5QRect9setCoordsEiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
   // proto:  void QRect::translate(const QPoint & p);
-  fn demth_ZN5QRect9translateERK6QPoint(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN5QRect9translateERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QRect::moveBottom(int pos);
-  fn demth_ZN5QRect10moveBottomEi(qthis: *mut c_void, arg0: c_int);
+  fn demth_ZN5QRect10moveBottomEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QRect::setBottomLeft(const QPoint & p);
-  fn demth_ZN5QRect13setBottomLeftERK6QPoint(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN5QRect13setBottomLeftERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QRect::getCoords(int * x1, int * y1, int * x2, int * y2);
-  fn demth_ZNK5QRect9getCoordsEPiS0_S0_S0_(qthis: *mut c_void, arg0: *mut c_int, arg1: *mut c_int, arg2: *mut c_int, arg3: *mut c_int);
+  fn demth_ZNK5QRect9getCoordsEPiS0_S0_S0_(qthis: u64 /* *mut c_void*/, arg0: *mut c_int, arg1: *mut c_int, arg2: *mut c_int, arg3: *mut c_int);
   // proto:  QPoint QRect::topRight();
-  fn _ZNK5QRect8topRightEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK5QRect8topRightEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QRect::setBottomRight(const QPoint & p);
-  fn demth_ZN5QRect14setBottomRightERK6QPoint(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN5QRect14setBottomRightERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QRect::setHeight(int h);
-  fn demth_ZN5QRect9setHeightEi(qthis: *mut c_void, arg0: c_int);
+  fn demth_ZN5QRect9setHeightEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  bool QRect::isEmpty();
-  fn _ZNK5QRect7isEmptyEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK5QRect7isEmptyEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QRect::contains(int x, int y);
-  fn demth_ZNK5QRect8containsEii(qthis: *mut c_void, arg0: c_int, arg1: c_int) -> c_char;
+  fn demth_ZNK5QRect8containsEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> c_char;
   // proto:  void QRect::moveBottomRight(const QPoint & p);
-  fn demth_ZN5QRect15moveBottomRightERK6QPoint(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN5QRect15moveBottomRightERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QPoint QRect::bottomLeft();
-  fn _ZNK5QRect10bottomLeftEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK5QRect10bottomLeftEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QRect::setTop(int pos);
-  fn demth_ZN5QRect6setTopEi(qthis: *mut c_void, arg0: c_int);
+  fn demth_ZN5QRect6setTopEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QRect::bottom();
-  fn _ZNK5QRect6bottomEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK5QRect6bottomEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QRect::QRect();
   fn dector_ZN5QRectC1Ev() -> *mut c_void;
-  fn _ZN5QRectC1Ev(qthis: *mut c_void);
+  fn _ZN5QRectC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QRect QRect::marginsAdded(const QMargins & margins);
-  fn _ZNK5QRect12marginsAddedERK8QMargins(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK5QRect12marginsAddedERK8QMargins(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QRect QRect::normalized();
-  fn _ZNK5QRect10normalizedEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK5QRect10normalizedEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QRect::setWidth(int w);
-  fn demth_ZN5QRect8setWidthEi(qthis: *mut c_void, arg0: c_int);
+  fn demth_ZN5QRect8setWidthEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QRect::setY(int y);
-  fn demth_ZN5QRect4setYEi(qthis: *mut c_void, arg0: c_int);
+  fn demth_ZN5QRect4setYEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QRect::moveTop(int pos);
-  fn demth_ZN5QRect7moveTopEi(qthis: *mut c_void, arg0: c_int);
+  fn demth_ZN5QRect7moveTopEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QRect::setX(int x);
-  fn demth_ZN5QRect4setXEi(qthis: *mut c_void, arg0: c_int);
+  fn demth_ZN5QRect4setXEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QRect::setRight(int pos);
-  fn demth_ZN5QRect8setRightEi(qthis: *mut c_void, arg0: c_int);
+  fn demth_ZN5QRect8setRightEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QRect::setTopLeft(const QPoint & p);
-  fn demth_ZN5QRect10setTopLeftERK6QPoint(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN5QRect10setTopLeftERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QRect::moveLeft(int pos);
-  fn demth_ZN5QRect8moveLeftEi(qthis: *mut c_void, arg0: c_int);
+  fn demth_ZN5QRect8moveLeftEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  QRect QRect::translated(const QPoint & p);
-  fn _ZNK5QRect10translatedERK6QPoint(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK5QRect10translatedERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   fn QRectF_Class_Size() -> c_int;
   // proto:  void QRectF::QRectF();
   fn dector_ZN6QRectFC1Ev() -> *mut c_void;
-  fn _ZN6QRectFC1Ev(qthis: *mut c_void);
+  fn _ZN6QRectFC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QRectF::moveBottomRight(const QPointF & p);
-  fn demth_ZN6QRectF15moveBottomRightERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN6QRectF15moveBottomRightERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QRectF::moveTo(qreal x, qreal y);
-  fn demth_ZN6QRectF6moveToEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double);
+  fn demth_ZN6QRectF6moveToEdd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double);
   // proto:  qreal QRectF::top();
-  fn _ZNK6QRectF3topEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK6QRectF3topEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  QPointF QRectF::bottomLeft();
-  fn _ZNK6QRectF10bottomLeftEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK6QRectF10bottomLeftEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QRectF::setHeight(qreal h);
-  fn demth_ZN6QRectF9setHeightEd(qthis: *mut c_void, arg0: c_double);
+  fn demth_ZN6QRectF9setHeightEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QRectF::setSize(const QSizeF & s);
-  fn demth_ZN6QRectF7setSizeERK6QSizeF(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN6QRectF7setSizeERK6QSizeF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QRectF::QRectF(const QPointF & topleft, const QPointF & bottomRight);
   fn dector_ZN6QRectFC1ERK7QPointFS2_(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN6QRectFC1ERK7QPointFS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN6QRectFC1ERK7QPointFS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QRectF::moveTo(const QPointF & p);
-  fn demth_ZN6QRectF6moveToERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN6QRectF6moveToERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QRect QRectF::toAlignedRect();
-  fn _ZNK6QRectF13toAlignedRectEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK6QRectF13toAlignedRectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QRectF::setRight(qreal pos);
-  fn demth_ZN6QRectF8setRightEd(qthis: *mut c_void, arg0: c_double);
+  fn demth_ZN6QRectF8setRightEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QRectF::setBottomLeft(const QPointF & p);
-  fn demth_ZN6QRectF13setBottomLeftERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN6QRectF13setBottomLeftERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QPointF QRectF::topRight();
-  fn _ZNK6QRectF8topRightEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK6QRectF8topRightEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QSizeF QRectF::size();
-  fn _ZNK6QRectF4sizeEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK6QRectF4sizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QRectF::adjust(qreal x1, qreal y1, qreal x2, qreal y2);
-  fn demth_ZN6QRectF6adjustEdddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
+  fn demth_ZN6QRectF6adjustEdddd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
   // proto:  void QRectF::moveRight(qreal pos);
-  fn demth_ZN6QRectF9moveRightEd(qthis: *mut c_void, arg0: c_double);
+  fn demth_ZN6QRectF9moveRightEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  qreal QRectF::y();
-  fn _ZNK6QRectF1yEv(qthis: *mut c_void);
+  fn _ZNK6QRectF1yEv(qthis: u64 /* *mut c_void*/);
   // proto:  QPointF QRectF::bottomRight();
-  fn _ZNK6QRectF11bottomRightEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK6QRectF11bottomRightEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QRectF::setBottom(qreal pos);
-  fn demth_ZN6QRectF9setBottomEd(qthis: *mut c_void, arg0: c_double);
+  fn demth_ZN6QRectF9setBottomEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QRectF::moveBottomLeft(const QPointF & p);
-  fn demth_ZN6QRectF14moveBottomLeftERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN6QRectF14moveBottomLeftERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QRectF::moveBottom(qreal pos);
-  fn demth_ZN6QRectF10moveBottomEd(qthis: *mut c_void, arg0: c_double);
+  fn demth_ZN6QRectF10moveBottomEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QRectF::getRect(qreal * x, qreal * y, qreal * w, qreal * h);
-  fn demth_ZNK6QRectF7getRectEPdS0_S0_S0_(qthis: *mut c_void, arg0: *mut c_double, arg1: *mut c_double, arg2: *mut c_double, arg3: *mut c_double);
+  fn demth_ZNK6QRectF7getRectEPdS0_S0_S0_(qthis: u64 /* *mut c_void*/, arg0: *mut c_double, arg1: *mut c_double, arg2: *mut c_double, arg3: *mut c_double);
   // proto:  qreal QRectF::x();
-  fn _ZNK6QRectF1xEv(qthis: *mut c_void);
+  fn _ZNK6QRectF1xEv(qthis: u64 /* *mut c_void*/);
   // proto:  qreal QRectF::bottom();
-  fn _ZNK6QRectF6bottomEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK6QRectF6bottomEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  bool QRectF::isNull();
-  fn _ZNK6QRectF6isNullEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK6QRectF6isNullEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QRectF::QRectF(const QPointF & topleft, const QSizeF & size);
   fn dector_ZN6QRectFC1ERK7QPointFRK6QSizeF(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN6QRectFC1ERK7QPointFRK6QSizeF(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN6QRectFC1ERK7QPointFRK6QSizeF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QRectF::setWidth(qreal w);
-  fn demth_ZN6QRectF8setWidthEd(qthis: *mut c_void, arg0: c_double);
+  fn demth_ZN6QRectF8setWidthEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  qreal QRectF::height();
-  fn _ZNK6QRectF6heightEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK6QRectF6heightEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QRectF::translate(const QPointF & p);
-  fn demth_ZN6QRectF9translateERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN6QRectF9translateERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QRectF::moveCenter(const QPointF & p);
-  fn demth_ZN6QRectF10moveCenterERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN6QRectF10moveCenterERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QRectF::contains(const QRectF & r);
-  fn _ZNK6QRectF8containsERKS_(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn _ZNK6QRectF8containsERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  QRectF QRectF::marginsRemoved(const QMarginsF & margins);
-  fn _ZNK6QRectF14marginsRemovedERK9QMarginsF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK6QRectF14marginsRemovedERK9QMarginsF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  bool QRectF::contains(qreal x, qreal y);
-  fn demth_ZNK6QRectF8containsEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double) -> c_char;
+  fn demth_ZNK6QRectF8containsEdd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double) -> c_char;
   // proto:  void QRectF::setX(qreal pos);
-  fn demth_ZN6QRectF4setXEd(qthis: *mut c_void, arg0: c_double);
+  fn demth_ZN6QRectF4setXEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QRectF::setRect(qreal x, qreal y, qreal w, qreal h);
-  fn demth_ZN6QRectF7setRectEdddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
+  fn demth_ZN6QRectF7setRectEdddd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
   // proto:  QPointF QRectF::center();
-  fn _ZNK6QRectF6centerEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK6QRectF6centerEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QRectF::setLeft(qreal pos);
-  fn demth_ZN6QRectF7setLeftEd(qthis: *mut c_void, arg0: c_double);
+  fn demth_ZN6QRectF7setLeftEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  QRectF QRectF::intersected(const QRectF & other);
-  fn demth_ZNK6QRectF11intersectedERKS_(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn demth_ZNK6QRectF11intersectedERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QPointF QRectF::topLeft();
-  fn _ZNK6QRectF7topLeftEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK6QRectF7topLeftEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  qreal QRectF::left();
-  fn _ZNK6QRectF4leftEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK6QRectF4leftEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QRectF::setY(qreal pos);
-  fn demth_ZN6QRectF4setYEd(qthis: *mut c_void, arg0: c_double);
+  fn demth_ZN6QRectF4setYEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QRectF::moveTopLeft(const QPointF & p);
-  fn demth_ZN6QRectF11moveTopLeftERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN6QRectF11moveTopLeftERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  qreal QRectF::width();
-  fn _ZNK6QRectF5widthEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK6QRectF5widthEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QRectF::setTop(qreal pos);
-  fn demth_ZN6QRectF6setTopEd(qthis: *mut c_void, arg0: c_double);
+  fn demth_ZN6QRectF6setTopEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  bool QRectF::isValid();
-  fn _ZNK6QRectF7isValidEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK6QRectF7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QRectF::translate(qreal dx, qreal dy);
-  fn demth_ZN6QRectF9translateEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double);
+  fn demth_ZN6QRectF9translateEdd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double);
   // proto:  void QRectF::QRectF(qreal left, qreal top, qreal width, qreal height);
   fn dector_ZN6QRectFC1Edddd(arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double) -> *mut c_void;
-  fn _ZN6QRectFC1Edddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
+  fn _ZN6QRectFC1Edddd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
   // proto:  QRect QRectF::toRect();
-  fn _ZNK6QRectF6toRectEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK6QRectF6toRectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QRectF::moveLeft(qreal pos);
-  fn demth_ZN6QRectF8moveLeftEd(qthis: *mut c_void, arg0: c_double);
+  fn demth_ZN6QRectF8moveLeftEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QRectF::setTopLeft(const QPointF & p);
-  fn demth_ZN6QRectF10setTopLeftERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN6QRectF10setTopLeftERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QRectF::setBottomRight(const QPointF & p);
-  fn demth_ZN6QRectF14setBottomRightERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN6QRectF14setBottomRightERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QRectF QRectF::marginsAdded(const QMarginsF & margins);
-  fn _ZNK6QRectF12marginsAddedERK9QMarginsF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK6QRectF12marginsAddedERK9QMarginsF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QRectF QRectF::translated(const QPointF & p);
-  fn _ZNK6QRectF10translatedERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK6QRectF10translatedERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QRectF QRectF::normalized();
-  fn _ZNK6QRectF10normalizedEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK6QRectF10normalizedEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QRectF::getCoords(qreal * x1, qreal * y1, qreal * x2, qreal * y2);
-  fn demth_ZNK6QRectF9getCoordsEPdS0_S0_S0_(qthis: *mut c_void, arg0: *mut c_double, arg1: *mut c_double, arg2: *mut c_double, arg3: *mut c_double);
+  fn demth_ZNK6QRectF9getCoordsEPdS0_S0_S0_(qthis: u64 /* *mut c_void*/, arg0: *mut c_double, arg1: *mut c_double, arg2: *mut c_double, arg3: *mut c_double);
   // proto:  void QRectF::setTopRight(const QPointF & p);
-  fn demth_ZN6QRectF11setTopRightERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN6QRectF11setTopRightERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QRectF::contains(const QPointF & p);
-  fn _ZNK6QRectF8containsERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn _ZNK6QRectF8containsERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  bool QRectF::intersects(const QRectF & r);
-  fn _ZNK6QRectF10intersectsERKS_(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn _ZNK6QRectF10intersectsERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  void QRectF::moveTop(qreal pos);
-  fn demth_ZN6QRectF7moveTopEd(qthis: *mut c_void, arg0: c_double);
+  fn demth_ZN6QRectF7moveTopEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QRectF::setCoords(qreal x1, qreal y1, qreal x2, qreal y2);
-  fn demth_ZN6QRectF9setCoordsEdddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
+  fn demth_ZN6QRectF9setCoordsEdddd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
   // proto:  QRectF QRectF::translated(qreal dx, qreal dy);
-  fn _ZNK6QRectF10translatedEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double) -> *mut c_void;
+  fn _ZNK6QRectF10translatedEdd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double) -> *mut c_void;
   // proto:  bool QRectF::isEmpty();
-  fn _ZNK6QRectF7isEmptyEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK6QRectF7isEmptyEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QRectF::moveTopRight(const QPointF & p);
-  fn demth_ZN6QRectF12moveTopRightERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN6QRectF12moveTopRightERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QRectF QRectF::united(const QRectF & other);
-  fn demth_ZNK6QRectF6unitedERKS_(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn demth_ZNK6QRectF6unitedERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  qreal QRectF::right();
-  fn _ZNK6QRectF5rightEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK6QRectF5rightEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QRectF::QRectF(const QRect & rect);
   fn dector_ZN6QRectFC1ERK5QRect(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN6QRectFC1ERK5QRect(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN6QRectFC1ERK5QRect(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QRectF QRectF::adjusted(qreal x1, qreal y1, qreal x2, qreal y2);
-  fn _ZNK6QRectF8adjustedEdddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double) -> *mut c_void;
+  fn _ZNK6QRectF8adjustedEdddd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double) -> *mut c_void;
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QRect)=16
+#[derive(Default)]
 pub struct QRect {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 // class sizeof(QRectF)=32
+#[derive(Default)]
 pub struct QRectF {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QRect {
-  pub fn inheritFrom(qthis: *mut c_void) -> QRect {
-    return QRect{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QRect {
+    return QRect{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  int QRect::right();
@@ -441,12 +443,12 @@ impl<'a> /*trait*/ QRect_New for (&'a QPoint, &'a QPoint) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QRectC1ERK6QPointS2_()};
     let ctysz: c_int = unsafe{QRect_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     // unsafe {_ZN5QRectC1ERK6QPointS2_(qthis, arg0, arg1)};
-    let qthis: *mut c_void = unsafe {dector_ZN5QRectC1ERK6QPointS2_(arg0, arg1)};
-    let rsthis = QRect{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN5QRectC1ERK6QPointS2_(arg0, arg1)} as u64;
+    let rsthis = QRect{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -472,7 +474,7 @@ impl<'a> /*trait*/ QRect_translated<QRect> for (i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZNK5QRect10translatedEii(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QRect::inheritFrom(ret);
+    let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -496,7 +498,7 @@ impl<'a> /*trait*/ QRect_center<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect6centerEv()};
     let mut ret = unsafe {_ZNK5QRect6centerEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint::inheritFrom(ret);
+    let mut ret1 = QPoint::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -590,7 +592,7 @@ impl<'a> /*trait*/ QRect_intersected<QRect> for (&'a QRect) {
     // unsafe{_ZNK5QRect11intersectedERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {demth_ZNK5QRect11intersectedERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRect::inheritFrom(ret);
+    let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -640,7 +642,7 @@ impl<'a> /*trait*/ QRect_bottomRight<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect11bottomRightEv()};
     let mut ret = unsafe {_ZNK5QRect11bottomRightEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint::inheritFrom(ret);
+    let mut ret1 = QPoint::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -687,7 +689,7 @@ impl<'a> /*trait*/ QRect_size<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect4sizeEv()};
     let mut ret = unsafe {_ZNK5QRect4sizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize::inheritFrom(ret);
+    let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -712,7 +714,7 @@ impl<'a> /*trait*/ QRect_united<QRect> for (&'a QRect) {
     // unsafe{_ZNK5QRect6unitedERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {demth_ZNK5QRect6unitedERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRect::inheritFrom(ret);
+    let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -879,7 +881,7 @@ impl<'a> /*trait*/ QRect_adjusted<QRect> for (i32, i32, i32, i32) {
     let arg2 = self.2  as c_int;
     let arg3 = self.3  as c_int;
     let mut ret = unsafe {_ZNK5QRect8adjustedEiiii(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
-    let mut ret1 = QRect::inheritFrom(ret);
+    let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -891,12 +893,12 @@ impl<'a> /*trait*/ QRect_New for (&'a QPoint, &'a QSize) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QRectC1ERK6QPointRK5QSize()};
     let ctysz: c_int = unsafe{QRect_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     // unsafe {_ZN5QRectC1ERK6QPointRK5QSize(qthis, arg0, arg1)};
-    let qthis: *mut c_void = unsafe {dector_ZN5QRectC1ERK6QPointRK5QSize(arg0, arg1)};
-    let rsthis = QRect{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN5QRectC1ERK6QPointRK5QSize(arg0, arg1)} as u64;
+    let rsthis = QRect{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -931,14 +933,14 @@ impl<'a> /*trait*/ QRect_New for (i32, i32, i32, i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QRectC1Eiiii()};
     let ctysz: c_int = unsafe{QRect_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as c_int;
     let arg3 = self.3  as c_int;
     // unsafe {_ZN5QRectC1Eiiii(qthis, arg0, arg1, arg2, arg3)};
-    let qthis: *mut c_void = unsafe {dector_ZN5QRectC1Eiiii(arg0, arg1, arg2, arg3)};
-    let rsthis = QRect{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN5QRectC1Eiiii(arg0, arg1, arg2, arg3)} as u64;
+    let rsthis = QRect{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1060,7 +1062,7 @@ impl<'a> /*trait*/ QRect_marginsRemoved<QRect> for (&'a QMargins) {
     // unsafe{_ZNK5QRect14marginsRemovedERK8QMargins()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK5QRect14marginsRemovedERK8QMargins(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRect::inheritFrom(ret);
+    let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1108,7 +1110,7 @@ impl<'a> /*trait*/ QRect_topLeft<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect7topLeftEv()};
     let mut ret = unsafe {_ZNK5QRect7topLeftEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint::inheritFrom(ret);
+    let mut ret1 = QPoint::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1373,7 +1375,7 @@ impl<'a> /*trait*/ QRect_topRight<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect8topRightEv()};
     let mut ret = unsafe {_ZNK5QRect8topRightEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint::inheritFrom(ret);
+    let mut ret1 = QPoint::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1502,7 +1504,7 @@ impl<'a> /*trait*/ QRect_bottomLeft<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect10bottomLeftEv()};
     let mut ret = unsafe {_ZNK5QRect10bottomLeftEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint::inheritFrom(ret);
+    let mut ret1 = QPoint::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1560,10 +1562,10 @@ impl<'a> /*trait*/ QRect_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QRectC1Ev()};
     let ctysz: c_int = unsafe{QRect_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN5QRectC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN5QRectC1Ev()};
-    let rsthis = QRect{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN5QRectC1Ev()} as u64;
+    let rsthis = QRect{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1588,7 +1590,7 @@ impl<'a> /*trait*/ QRect_marginsAdded<QRect> for (&'a QMargins) {
     // unsafe{_ZNK5QRect12marginsAddedERK8QMargins()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK5QRect12marginsAddedERK8QMargins(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRect::inheritFrom(ret);
+    let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1612,7 +1614,7 @@ impl<'a> /*trait*/ QRect_normalized<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect10normalizedEv()};
     let mut ret = unsafe {_ZNK5QRect10normalizedEv(rsthis.qclsinst)};
-    let mut ret1 = QRect::inheritFrom(ret);
+    let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1786,15 +1788,15 @@ impl<'a> /*trait*/ QRect_translated<QRect> for (&'a QPoint) {
     // unsafe{_ZNK5QRect10translatedERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK5QRect10translatedERK6QPoint(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRect::inheritFrom(ret);
+    let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
 }
 
 impl /*struct*/ QRectF {
-  pub fn inheritFrom(qthis: *mut c_void) -> QRectF {
-    return QRectF{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QRectF {
+    return QRectF{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  void QRectF::QRectF();
@@ -1816,10 +1818,10 @@ impl<'a> /*trait*/ QRectF_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QRectFC1Ev()};
     let ctysz: c_int = unsafe{QRectF_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN6QRectFC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN6QRectFC1Ev()};
-    let rsthis = QRectF{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN6QRectFC1Ev()} as u64;
+    let rsthis = QRectF{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1913,7 +1915,7 @@ impl<'a> /*trait*/ QRectF_bottomLeft<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QRectF10bottomLeftEv()};
     let mut ret = unsafe {_ZNK6QRectF10bottomLeftEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF::inheritFrom(ret);
+    let mut ret1 = QPointF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1971,12 +1973,12 @@ impl<'a> /*trait*/ QRectF_New for (&'a QPointF, &'a QPointF) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QRectFC1ERK7QPointFS2_()};
     let ctysz: c_int = unsafe{QRectF_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     // unsafe {_ZN6QRectFC1ERK7QPointFS2_(qthis, arg0, arg1)};
-    let qthis: *mut c_void = unsafe {dector_ZN6QRectFC1ERK7QPointFS2_(arg0, arg1)};
-    let rsthis = QRectF{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN6QRectFC1ERK7QPointFS2_(arg0, arg1)} as u64;
+    let rsthis = QRectF{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -2011,7 +2013,7 @@ impl<'a> /*trait*/ QRectF_toAlignedRect<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QRectF13toAlignedRectEv()};
     let mut ret = unsafe {_ZNK6QRectF13toAlignedRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRect::inheritFrom(ret);
+    let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2081,7 +2083,7 @@ impl<'a> /*trait*/ QRectF_topRight<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QRectF8topRightEv()};
     let mut ret = unsafe {_ZNK6QRectF8topRightEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF::inheritFrom(ret);
+    let mut ret1 = QPointF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2105,7 +2107,7 @@ impl<'a> /*trait*/ QRectF_size<QSizeF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QRectF4sizeEv()};
     let mut ret = unsafe {_ZNK6QRectF4sizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSizeF::inheritFrom(ret);
+    let mut ret1 = QSizeF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2200,7 +2202,7 @@ impl<'a> /*trait*/ QRectF_bottomRight<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QRectF11bottomRightEv()};
     let mut ret = unsafe {_ZNK6QRectF11bottomRightEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF::inheritFrom(ret);
+    let mut ret1 = QPointF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2375,12 +2377,12 @@ impl<'a> /*trait*/ QRectF_New for (&'a QPointF, &'a QSizeF) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QRectFC1ERK7QPointFRK6QSizeF()};
     let ctysz: c_int = unsafe{QRectF_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     // unsafe {_ZN6QRectFC1ERK7QPointFRK6QSizeF(qthis, arg0, arg1)};
-    let qthis: *mut c_void = unsafe {dector_ZN6QRectFC1ERK7QPointFRK6QSizeF(arg0, arg1)};
-    let rsthis = QRectF{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN6QRectFC1ERK7QPointFRK6QSizeF(arg0, arg1)} as u64;
+    let rsthis = QRectF{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -2521,7 +2523,7 @@ impl<'a> /*trait*/ QRectF_marginsRemoved<QRectF> for (&'a QMarginsF) {
     // unsafe{_ZNK6QRectF14marginsRemovedERK9QMarginsF()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK6QRectF14marginsRemovedERK9QMarginsF(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRectF::inheritFrom(ret);
+    let mut ret1 = QRectF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2607,7 +2609,7 @@ impl<'a> /*trait*/ QRectF_center<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QRectF6centerEv()};
     let mut ret = unsafe {_ZNK6QRectF6centerEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF::inheritFrom(ret);
+    let mut ret1 = QPointF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2655,7 +2657,7 @@ impl<'a> /*trait*/ QRectF_intersected<QRectF> for (&'a QRectF) {
     // unsafe{_ZNK6QRectF11intersectedERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {demth_ZNK6QRectF11intersectedERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRectF::inheritFrom(ret);
+    let mut ret1 = QRectF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2679,7 +2681,7 @@ impl<'a> /*trait*/ QRectF_topLeft<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QRectF7topLeftEv()};
     let mut ret = unsafe {_ZNK6QRectF7topLeftEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF::inheritFrom(ret);
+    let mut ret1 = QPointF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2841,14 +2843,14 @@ impl<'a> /*trait*/ QRectF_New for (f64, f64, f64, f64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QRectFC1Edddd()};
     let ctysz: c_int = unsafe{QRectF_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
     let arg2 = self.2  as c_double;
     let arg3 = self.3  as c_double;
     // unsafe {_ZN6QRectFC1Edddd(qthis, arg0, arg1, arg2, arg3)};
-    let qthis: *mut c_void = unsafe {dector_ZN6QRectFC1Edddd(arg0, arg1, arg2, arg3)};
-    let rsthis = QRectF{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN6QRectFC1Edddd(arg0, arg1, arg2, arg3)} as u64;
+    let rsthis = QRectF{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -2872,7 +2874,7 @@ impl<'a> /*trait*/ QRectF_toRect<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QRectF6toRectEv()};
     let mut ret = unsafe {_ZNK6QRectF6toRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRect::inheritFrom(ret);
+    let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2966,7 +2968,7 @@ impl<'a> /*trait*/ QRectF_marginsAdded<QRectF> for (&'a QMarginsF) {
     // unsafe{_ZNK6QRectF12marginsAddedERK9QMarginsF()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK6QRectF12marginsAddedERK9QMarginsF(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRectF::inheritFrom(ret);
+    let mut ret1 = QRectF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2991,7 +2993,7 @@ impl<'a> /*trait*/ QRectF_translated<QRectF> for (&'a QPointF) {
     // unsafe{_ZNK6QRectF10translatedERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK6QRectF10translatedERK7QPointF(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRectF::inheritFrom(ret);
+    let mut ret1 = QRectF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -3015,7 +3017,7 @@ impl<'a> /*trait*/ QRectF_normalized<QRectF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QRectF10normalizedEv()};
     let mut ret = unsafe {_ZNK6QRectF10normalizedEv(rsthis.qclsinst)};
-    let mut ret1 = QRectF::inheritFrom(ret);
+    let mut ret1 = QRectF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -3163,7 +3165,7 @@ impl<'a> /*trait*/ QRectF_translated<QRectF> for (f64, f64) {
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
     let mut ret = unsafe {_ZNK6QRectF10translatedEdd(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QRectF::inheritFrom(ret);
+    let mut ret1 = QRectF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -3234,7 +3236,7 @@ impl<'a> /*trait*/ QRectF_united<QRectF> for (&'a QRectF) {
     // unsafe{_ZNK6QRectF6unitedERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {demth_ZNK6QRectF6unitedERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRectF::inheritFrom(ret);
+    let mut ret1 = QRectF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -3269,11 +3271,11 @@ impl<'a> /*trait*/ QRectF_New for (&'a QRect) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QRectFC1ERK5QRect()};
     let ctysz: c_int = unsafe{QRectF_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN6QRectFC1ERK5QRect(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN6QRectFC1ERK5QRect(arg0)};
-    let rsthis = QRectF{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN6QRectFC1ERK5QRect(arg0)} as u64;
+    let rsthis = QRectF{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -3301,7 +3303,7 @@ impl<'a> /*trait*/ QRectF_adjusted<QRectF> for (f64, f64, f64, f64) {
     let arg2 = self.2  as c_double;
     let arg3 = self.3  as c_double;
     let mut ret = unsafe {_ZNK6QRectF8adjustedEdddd(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
-    let mut ret1 = QRectF::inheritFrom(ret);
+    let mut ret1 = QRectF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtGui/qtextcursor.h
 // dst-file: /src/gui/qtextcursor.rs
 //
@@ -44,156 +44,157 @@ use super::qtextformat::QTextTableFormat; // 773
 extern {
   fn QTextCursor_Class_Size() -> c_int;
   // proto:  int QTextCursor::columnNumber();
-  fn _ZNK11QTextCursor12columnNumberEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK11QTextCursor12columnNumberEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QTextCursor::swap(QTextCursor & other);
-  fn _ZN11QTextCursor4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QTextCursor4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTextCursor::mergeCharFormat(const QTextCharFormat & modifier);
-  fn _ZN11QTextCursor15mergeCharFormatERK15QTextCharFormat(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QTextCursor15mergeCharFormatERK15QTextCharFormat(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QTextDocumentFragment QTextCursor::selection();
-  fn _ZNK11QTextCursor9selectionEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK11QTextCursor9selectionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QTextCursor::hasComplexSelection();
-  fn _ZNK11QTextCursor19hasComplexSelectionEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK11QTextCursor19hasComplexSelectionEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QTextBlock QTextCursor::block();
-  fn _ZNK11QTextCursor5blockEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK11QTextCursor5blockEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QTextCursor::insertFragment(const QTextDocumentFragment & fragment);
-  fn _ZN11QTextCursor14insertFragmentERK21QTextDocumentFragment(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QTextCursor14insertFragmentERK21QTextDocumentFragment(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QTextList * QTextCursor::insertList(const QTextListFormat & format);
-  fn _ZN11QTextCursor10insertListERK15QTextListFormat(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZN11QTextCursor10insertListERK15QTextListFormat(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QTextCursor::insertImage(const QTextImageFormat & format);
-  fn _ZN11QTextCursor11insertImageERK16QTextImageFormat(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QTextCursor11insertImageERK16QTextImageFormat(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QTextCursor::keepPositionOnInsert();
-  fn _ZNK11QTextCursor20keepPositionOnInsertEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK11QTextCursor20keepPositionOnInsertEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  int QTextCursor::position();
-  fn _ZNK11QTextCursor8positionEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK11QTextCursor8positionEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QTextCursor::isNull();
-  fn _ZNK11QTextCursor6isNullEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK11QTextCursor6isNullEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QTextCursor::removeSelectedText();
-  fn _ZN11QTextCursor18removeSelectedTextEv(qthis: *mut c_void);
+  fn _ZN11QTextCursor18removeSelectedTextEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QTextCursor::insertHtml(const QString & html);
-  fn _ZN11QTextCursor10insertHtmlERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QTextCursor10insertHtmlERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QTextCursor::isCopyOf(const QTextCursor & other);
-  fn _ZNK11QTextCursor8isCopyOfERKS_(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn _ZNK11QTextCursor8isCopyOfERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  QTextFrame * QTextCursor::insertFrame(const QTextFrameFormat & format);
-  fn _ZN11QTextCursor11insertFrameERK16QTextFrameFormat(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZN11QTextCursor11insertFrameERK16QTextFrameFormat(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QTextCursor::QTextCursor(const QTextCursor & cursor);
   fn dector_ZN11QTextCursorC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QTextCursorC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QTextCursorC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTextCursor::deleteChar();
-  fn _ZN11QTextCursor10deleteCharEv(qthis: *mut c_void);
+  fn _ZN11QTextCursor10deleteCharEv(qthis: u64 /* *mut c_void*/);
   // proto:  QTextFrame * QTextCursor::currentFrame();
-  fn _ZNK11QTextCursor12currentFrameEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK11QTextCursor12currentFrameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QTextCursor::insertBlock();
-  fn _ZN11QTextCursor11insertBlockEv(qthis: *mut c_void);
+  fn _ZN11QTextCursor11insertBlockEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QTextCursor::QTextCursor(const QTextBlock & block);
   fn dector_ZN11QTextCursorC1ERK10QTextBlock(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QTextCursorC1ERK10QTextBlock(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QTextCursorC1ERK10QTextBlock(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QTextTable * QTextCursor::insertTable(int rows, int cols);
-  fn _ZN11QTextCursor11insertTableEii(qthis: *mut c_void, arg0: c_int, arg1: c_int) -> *mut c_void;
+  fn _ZN11QTextCursor11insertTableEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> *mut c_void;
   // proto:  void QTextCursor::QTextCursor();
   fn dector_ZN11QTextCursorC1Ev() -> *mut c_void;
-  fn _ZN11QTextCursorC1Ev(qthis: *mut c_void);
+  fn _ZN11QTextCursorC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QTextCursor::atStart();
-  fn _ZNK11QTextCursor7atStartEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK11QTextCursor7atStartEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  int QTextCursor::selectionStart();
-  fn _ZNK11QTextCursor14selectionStartEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK11QTextCursor14selectionStartEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QTextCursor::selectedTableCells(int * firstRow, int * numRows, int * firstColumn, int * numColumns);
-  fn _ZNK11QTextCursor18selectedTableCellsEPiS0_S0_S0_(qthis: *mut c_void, arg0: *mut c_int, arg1: *mut c_int, arg2: *mut c_int, arg3: *mut c_int);
+  fn _ZNK11QTextCursor18selectedTableCellsEPiS0_S0_S0_(qthis: u64 /* *mut c_void*/, arg0: *mut c_int, arg1: *mut c_int, arg2: *mut c_int, arg3: *mut c_int);
   // proto:  void QTextCursor::endEditBlock();
-  fn _ZN11QTextCursor12endEditBlockEv(qthis: *mut c_void);
+  fn _ZN11QTextCursor12endEditBlockEv(qthis: u64 /* *mut c_void*/);
   // proto:  QString QTextCursor::selectedText();
-  fn _ZNK11QTextCursor12selectedTextEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK11QTextCursor12selectedTextEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QTextCursor::positionInBlock();
-  fn _ZNK11QTextCursor15positionInBlockEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK11QTextCursor15positionInBlockEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QTextCursor::hasSelection();
-  fn _ZNK11QTextCursor12hasSelectionEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK11QTextCursor12hasSelectionEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QTextCursor::atEnd();
-  fn _ZNK11QTextCursor5atEndEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK11QTextCursor5atEndEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QTextCursor::insertImage(const QString & name);
-  fn _ZN11QTextCursor11insertImageERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QTextCursor11insertImageERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QTextCursor::atBlockStart();
-  fn _ZNK11QTextCursor12atBlockStartEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK11QTextCursor12atBlockStartEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QTextCursor::insertText(const QString & text);
-  fn _ZN11QTextCursor10insertTextERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QTextCursor10insertTextERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QTextCursor::visualNavigation();
-  fn _ZNK11QTextCursor16visualNavigationEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK11QTextCursor16visualNavigationEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QTextCursor::atBlockEnd();
-  fn _ZNK11QTextCursor10atBlockEndEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK11QTextCursor10atBlockEndEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QTextCursor::insertBlock(const QTextBlockFormat & format);
-  fn _ZN11QTextCursor11insertBlockERK16QTextBlockFormat(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QTextCursor11insertBlockERK16QTextBlockFormat(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QTextList * QTextCursor::currentList();
-  fn _ZNK11QTextCursor11currentListEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK11QTextCursor11currentListEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QTextCursor::insertBlock(const QTextBlockFormat & format, const QTextCharFormat & charFormat);
-  fn _ZN11QTextCursor11insertBlockERK16QTextBlockFormatRK15QTextCharFormat(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN11QTextCursor11insertBlockERK16QTextBlockFormatRK15QTextCharFormat(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QTextCursor::mergeBlockCharFormat(const QTextCharFormat & modifier);
-  fn _ZN11QTextCursor20mergeBlockCharFormatERK15QTextCharFormat(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QTextCursor20mergeBlockCharFormatERK15QTextCharFormat(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTextCursor::setCharFormat(const QTextCharFormat & format);
-  fn _ZN11QTextCursor13setCharFormatERK15QTextCharFormat(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QTextCursor13setCharFormatERK15QTextCharFormat(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QTextCursor::verticalMovementX();
-  fn _ZNK11QTextCursor17verticalMovementXEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK11QTextCursor17verticalMovementXEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QTextCursor::blockNumber();
-  fn _ZNK11QTextCursor11blockNumberEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK11QTextCursor11blockNumberEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QTextCursor::joinPreviousEditBlock();
-  fn _ZN11QTextCursor21joinPreviousEditBlockEv(qthis: *mut c_void);
+  fn _ZN11QTextCursor21joinPreviousEditBlockEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QTextCursor::QTextCursor(QTextDocument * document);
   fn dector_ZN11QTextCursorC1EP13QTextDocument(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QTextCursorC1EP13QTextDocument(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QTextCursorC1EP13QTextDocument(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTextCursor::insertText(const QString & text, const QTextCharFormat & format);
-  fn _ZN11QTextCursor10insertTextERK7QStringRK15QTextCharFormat(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN11QTextCursor10insertTextERK7QStringRK15QTextCharFormat(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QTextCursor::mergeBlockFormat(const QTextBlockFormat & modifier);
-  fn _ZN11QTextCursor16mergeBlockFormatERK16QTextBlockFormat(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QTextCursor16mergeBlockFormatERK16QTextBlockFormat(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QTextBlockFormat QTextCursor::blockFormat();
-  fn _ZNK11QTextCursor11blockFormatEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK11QTextCursor11blockFormatEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QTextCursor::insertImage(const QImage & image, const QString & name);
-  fn _ZN11QTextCursor11insertImageERK6QImageRK7QString(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN11QTextCursor11insertImageERK6QImageRK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QTextCursor::beginEditBlock();
-  fn _ZN11QTextCursor14beginEditBlockEv(qthis: *mut c_void);
+  fn _ZN11QTextCursor14beginEditBlockEv(qthis: u64 /* *mut c_void*/);
   // proto:  int QTextCursor::anchor();
-  fn _ZNK11QTextCursor6anchorEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK11QTextCursor6anchorEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  QTextCharFormat QTextCursor::charFormat();
-  fn _ZNK11QTextCursor10charFormatEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK11QTextCursor10charFormatEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QTextCursor::deletePreviousChar();
-  fn _ZN11QTextCursor18deletePreviousCharEv(qthis: *mut c_void);
+  fn _ZN11QTextCursor18deletePreviousCharEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QTextCursor::~QTextCursor();
-  fn _ZN11QTextCursorD0Ev(qthis: *mut c_void);
+  fn _ZN11QTextCursorD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QTextCursor::clearSelection();
-  fn _ZN11QTextCursor14clearSelectionEv(qthis: *mut c_void);
+  fn _ZN11QTextCursor14clearSelectionEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QTextCursor::setVisualNavigation(bool b);
-  fn _ZN11QTextCursor19setVisualNavigationEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN11QTextCursor19setVisualNavigationEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QTextCursor::setBlockCharFormat(const QTextCharFormat & format);
-  fn _ZN11QTextCursor18setBlockCharFormatERK15QTextCharFormat(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QTextCursor18setBlockCharFormatERK15QTextCharFormat(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QTextTable * QTextCursor::currentTable();
-  fn _ZNK11QTextCursor12currentTableEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK11QTextCursor12currentTableEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QTextCursor::setKeepPositionOnInsert(bool b);
-  fn _ZN11QTextCursor23setKeepPositionOnInsertEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN11QTextCursor23setKeepPositionOnInsertEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QTextCursor::setVerticalMovementX(int x);
-  fn _ZN11QTextCursor20setVerticalMovementXEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN11QTextCursor20setVerticalMovementXEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  QTextDocument * QTextCursor::document();
-  fn _ZNK11QTextCursor8documentEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK11QTextCursor8documentEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QTextTable * QTextCursor::insertTable(int rows, int cols, const QTextTableFormat & format);
-  fn _ZN11QTextCursor11insertTableEiiRK16QTextTableFormat(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
+  fn _ZN11QTextCursor11insertTableEiiRK16QTextTableFormat(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
   // proto:  void QTextCursor::QTextCursor(QTextFrame * frame);
   fn dector_ZN11QTextCursorC1EP10QTextFrame(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QTextCursorC1EP10QTextFrame(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QTextCursorC1EP10QTextFrame(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QTextCursor::selectionEnd();
-  fn _ZNK11QTextCursor12selectionEndEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK11QTextCursor12selectionEndEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QTextCursor::setBlockFormat(const QTextBlockFormat & format);
-  fn _ZN11QTextCursor14setBlockFormatERK16QTextBlockFormat(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QTextCursor14setBlockFormatERK16QTextBlockFormat(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QTextList * QTextCursor::createList(const QTextListFormat & format);
-  fn _ZN11QTextCursor10createListERK15QTextListFormat(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZN11QTextCursor10createListERK15QTextListFormat(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QTextCharFormat QTextCursor::blockCharFormat();
-  fn _ZNK11QTextCursor15blockCharFormatEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK11QTextCursor15blockCharFormatEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QTextCursor)=1
+#[derive(Default)]
 pub struct QTextCursor {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn inheritFrom(qthis: *mut c_void) -> QTextCursor {
-    return QTextCursor{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QTextCursor {
+    return QTextCursor{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  int QTextCursor::columnNumber();
@@ -283,7 +284,7 @@ impl<'a> /*trait*/ QTextCursor_selection<QTextDocumentFragment> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor9selectionEv()};
     let mut ret = unsafe {_ZNK11QTextCursor9selectionEv(rsthis.qclsinst)};
-    let mut ret1 = QTextDocumentFragment::inheritFrom(ret);
+    let mut ret1 = QTextDocumentFragment::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -330,7 +331,7 @@ impl<'a> /*trait*/ QTextCursor_block<QTextBlock> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor5blockEv()};
     let mut ret = unsafe {_ZNK11QTextCursor5blockEv(rsthis.qclsinst)};
-    let mut ret1 = QTextBlock::inheritFrom(ret);
+    let mut ret1 = QTextBlock::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -378,7 +379,7 @@ impl<'a> /*trait*/ QTextCursor_insertList<QTextList> for (&'a QTextListFormat) {
     // unsafe{_ZN11QTextCursor10insertListERK15QTextListFormat()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN11QTextCursor10insertListERK15QTextListFormat(rsthis.qclsinst, arg0)};
-    let mut ret1 = QTextList::inheritFrom(ret);
+    let mut ret1 = QTextList::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -564,7 +565,7 @@ impl<'a> /*trait*/ QTextCursor_insertFrame<QTextFrame> for (&'a QTextFrameFormat
     // unsafe{_ZN11QTextCursor11insertFrameERK16QTextFrameFormat()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN11QTextCursor11insertFrameERK16QTextFrameFormat(rsthis.qclsinst, arg0)};
-    let mut ret1 = QTextFrame::inheritFrom(ret);
+    let mut ret1 = QTextFrame::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -589,11 +590,11 @@ impl<'a> /*trait*/ QTextCursor_New for (&'a QTextCursor) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursorC1ERKS_()};
     let ctysz: c_int = unsafe{QTextCursor_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN11QTextCursorC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN11QTextCursorC1ERKS_(arg0)};
-    let rsthis = QTextCursor{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN11QTextCursorC1ERKS_(arg0)} as u64;
+    let rsthis = QTextCursor{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -639,7 +640,7 @@ impl<'a> /*trait*/ QTextCursor_currentFrame<QTextFrame> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor12currentFrameEv()};
     let mut ret = unsafe {_ZNK11QTextCursor12currentFrameEv(rsthis.qclsinst)};
-    let mut ret1 = QTextFrame::inheritFrom(ret);
+    let mut ret1 = QTextFrame::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -673,11 +674,11 @@ impl<'a> /*trait*/ QTextCursor_New for (&'a QTextBlock) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursorC1ERK10QTextBlock()};
     let ctysz: c_int = unsafe{QTextCursor_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN11QTextCursorC1ERK10QTextBlock(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN11QTextCursorC1ERK10QTextBlock(arg0)};
-    let rsthis = QTextCursor{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN11QTextCursorC1ERK10QTextBlock(arg0)} as u64;
+    let rsthis = QTextCursor{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -703,7 +704,7 @@ impl<'a> /*trait*/ QTextCursor_insertTable<QTextTable> for (i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN11QTextCursor11insertTableEii(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QTextTable::inheritFrom(ret);
+    let mut ret1 = QTextTable::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -715,10 +716,10 @@ impl<'a> /*trait*/ QTextCursor_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursorC1Ev()};
     let ctysz: c_int = unsafe{QTextCursor_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN11QTextCursorC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN11QTextCursorC1Ev()};
-    let rsthis = QTextCursor{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN11QTextCursorC1Ev()} as u64;
+    let rsthis = QTextCursor{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -836,7 +837,7 @@ impl<'a> /*trait*/ QTextCursor_selectedText<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor12selectedTextEv()};
     let mut ret = unsafe {_ZNK11QTextCursor12selectedTextEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1043,7 +1044,7 @@ impl<'a> /*trait*/ QTextCursor_currentList<QTextList> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor11currentListEv()};
     let mut ret = unsafe {_ZNK11QTextCursor11currentListEv(rsthis.qclsinst)};
-    let mut ret1 = QTextList::inheritFrom(ret);
+    let mut ret1 = QTextList::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1181,11 +1182,11 @@ impl<'a> /*trait*/ QTextCursor_New for (&'a QTextDocument) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursorC1EP13QTextDocument()};
     let ctysz: c_int = unsafe{QTextCursor_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN11QTextCursorC1EP13QTextDocument(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN11QTextCursorC1EP13QTextDocument(arg0)};
-    let rsthis = QTextCursor{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN11QTextCursorC1EP13QTextDocument(arg0)} as u64;
+    let rsthis = QTextCursor{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1244,7 +1245,7 @@ impl<'a> /*trait*/ QTextCursor_blockFormat<QTextBlockFormat> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor11blockFormatEv()};
     let mut ret = unsafe {_ZNK11QTextCursor11blockFormatEv(rsthis.qclsinst)};
-    let mut ret1 = QTextBlockFormat::inheritFrom(ret);
+    let mut ret1 = QTextBlockFormat::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1325,7 +1326,7 @@ impl<'a> /*trait*/ QTextCursor_charFormat<QTextCharFormat> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor10charFormatEv()};
     let mut ret = unsafe {_ZNK11QTextCursor10charFormatEv(rsthis.qclsinst)};
-    let mut ret1 = QTextCharFormat::inheritFrom(ret);
+    let mut ret1 = QTextCharFormat::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1461,7 +1462,7 @@ impl<'a> /*trait*/ QTextCursor_currentTable<QTextTable> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor12currentTableEv()};
     let mut ret = unsafe {_ZNK11QTextCursor12currentTableEv(rsthis.qclsinst)};
-    let mut ret1 = QTextTable::inheritFrom(ret);
+    let mut ret1 = QTextTable::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1531,7 +1532,7 @@ impl<'a> /*trait*/ QTextCursor_document<QTextDocument> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor8documentEv()};
     let mut ret = unsafe {_ZNK11QTextCursor8documentEv(rsthis.qclsinst)};
-    let mut ret1 = QTextDocument::inheritFrom(ret);
+    let mut ret1 = QTextDocument::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1546,7 +1547,7 @@ impl<'a> /*trait*/ QTextCursor_insertTable<QTextTable> for (i32, i32, &'a QTextT
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN11QTextCursor11insertTableEiiRK16QTextTableFormat(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QTextTable::inheritFrom(ret);
+    let mut ret1 = QTextTable::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1558,11 +1559,11 @@ impl<'a> /*trait*/ QTextCursor_New for (&'a QTextFrame) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursorC1EP10QTextFrame()};
     let ctysz: c_int = unsafe{QTextCursor_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN11QTextCursorC1EP10QTextFrame(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN11QTextCursorC1EP10QTextFrame(arg0)};
-    let rsthis = QTextCursor{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN11QTextCursorC1EP10QTextFrame(arg0)} as u64;
+    let rsthis = QTextCursor{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1633,7 +1634,7 @@ impl<'a> /*trait*/ QTextCursor_createList<QTextList> for (&'a QTextListFormat) {
     // unsafe{_ZN11QTextCursor10createListERK15QTextListFormat()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN11QTextCursor10createListERK15QTextListFormat(rsthis.qclsinst, arg0)};
-    let mut ret1 = QTextList::inheritFrom(ret);
+    let mut ret1 = QTextList::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1657,7 +1658,7 @@ impl<'a> /*trait*/ QTextCursor_blockCharFormat<QTextCharFormat> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor15blockCharFormatEv()};
     let mut ret = unsafe {_ZNK11QTextCursor15blockCharFormatEv(rsthis.qclsinst)};
-    let mut ret1 = QTextCharFormat::inheritFrom(ret);
+    let mut ret1 = QTextCharFormat::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }

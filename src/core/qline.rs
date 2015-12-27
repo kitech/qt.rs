@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qline.h
 // dst-file: /src/core/qline.rs
 //
@@ -33,135 +33,137 @@ use super::qpoint::QPointF; // 773
 extern {
   fn QLine_Class_Size() -> c_int;
   // proto:  bool QLine::isNull();
-  fn _ZNK5QLine6isNullEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK5QLine6isNullEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QLine QLine::translated(const QPoint & p);
-  fn _ZNK5QLine10translatedERK6QPoint(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK5QLine10translatedERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QLine::setP2(const QPoint & p2);
-  fn demth_ZN5QLine5setP2ERK6QPoint(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN5QLine5setP2ERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QLine::x2();
-  fn _ZNK5QLine2x2Ev(qthis: *mut c_void) -> c_int;
+  fn _ZNK5QLine2x2Ev(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QLine::QLine(const QPoint & pt1, const QPoint & pt2);
   fn dector_ZN5QLineC1ERK6QPointS2_(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN5QLineC1ERK6QPointS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN5QLineC1ERK6QPointS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QLine::setP1(const QPoint & p1);
-  fn demth_ZN5QLine5setP1ERK6QPoint(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN5QLine5setP1ERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QLine::translate(const QPoint & p);
-  fn demth_ZN5QLine9translateERK6QPoint(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN5QLine9translateERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QLine::dx();
-  fn _ZNK5QLine2dxEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK5QLine2dxEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QLine::y2();
-  fn _ZNK5QLine2y2Ev(qthis: *mut c_void) -> c_int;
+  fn _ZNK5QLine2y2Ev(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QLine::dy();
-  fn _ZNK5QLine2dyEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK5QLine2dyEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QLine::y1();
-  fn _ZNK5QLine2y1Ev(qthis: *mut c_void) -> c_int;
+  fn _ZNK5QLine2y1Ev(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  QPoint QLine::p1();
-  fn _ZNK5QLine2p1Ev(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK5QLine2p1Ev(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QPoint QLine::p2();
-  fn _ZNK5QLine2p2Ev(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK5QLine2p2Ev(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QLine::QLine(int x1, int y1, int x2, int y2);
   fn dector_ZN5QLineC1Eiiii(arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int) -> *mut c_void;
-  fn _ZN5QLineC1Eiiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
+  fn _ZN5QLineC1Eiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
   // proto:  void QLine::translate(int dx, int dy);
-  fn demth_ZN5QLine9translateEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
+  fn demth_ZN5QLine9translateEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  QLine QLine::translated(int dx, int dy);
-  fn _ZNK5QLine10translatedEii(qthis: *mut c_void, arg0: c_int, arg1: c_int) -> *mut c_void;
+  fn _ZNK5QLine10translatedEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> *mut c_void;
   // proto:  void QLine::setPoints(const QPoint & p1, const QPoint & p2);
-  fn demth_ZN5QLine9setPointsERK6QPointS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn demth_ZN5QLine9setPointsERK6QPointS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QLine::setLine(int x1, int y1, int x2, int y2);
-  fn demth_ZN5QLine7setLineEiiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
+  fn demth_ZN5QLine7setLineEiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
   // proto:  int QLine::x1();
-  fn _ZNK5QLine2x1Ev(qthis: *mut c_void) -> c_int;
+  fn _ZNK5QLine2x1Ev(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QLine::QLine();
   fn dector_ZN5QLineC1Ev() -> *mut c_void;
-  fn _ZN5QLineC1Ev(qthis: *mut c_void);
+  fn _ZN5QLineC1Ev(qthis: u64 /* *mut c_void*/);
   fn QLineF_Class_Size() -> c_int;
   // proto:  void QLineF::translate(qreal dx, qreal dy);
-  fn demth_ZN6QLineF9translateEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double);
+  fn demth_ZN6QLineF9translateEdd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double);
   // proto:  void QLineF::setPoints(const QPointF & p1, const QPointF & p2);
-  fn demth_ZN6QLineF9setPointsERK7QPointFS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn demth_ZN6QLineF9setPointsERK7QPointFS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QLineF::setP2(const QPointF & p2);
-  fn demth_ZN6QLineF5setP2ERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN6QLineF5setP2ERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QLineF QLineF::translated(qreal dx, qreal dy);
-  fn _ZNK6QLineF10translatedEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double) -> *mut c_void;
+  fn _ZNK6QLineF10translatedEdd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double) -> *mut c_void;
   // proto:  void QLineF::setLength(qreal len);
-  fn _ZN6QLineF9setLengthEd(qthis: *mut c_void, arg0: c_double);
+  fn _ZN6QLineF9setLengthEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  qreal QLineF::x1();
-  fn _ZNK6QLineF2x1Ev(qthis: *mut c_void) -> c_double;
+  fn _ZNK6QLineF2x1Ev(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  qreal QLineF::angle();
-  fn _ZNK6QLineF5angleEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK6QLineF5angleEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QLineF::QLineF(const QPointF & pt1, const QPointF & pt2);
   fn dector_ZN6QLineFC1ERK7QPointFS2_(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN6QLineFC1ERK7QPointFS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN6QLineFC1ERK7QPointFS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  qreal QLineF::length();
-  fn _ZNK6QLineF6lengthEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK6QLineF6lengthEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QLineF::QLineF(const QLine & line);
   fn dector_ZN6QLineFC1ERK5QLine(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN6QLineFC1ERK5QLine(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN6QLineFC1ERK5QLine(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QLineF::setAngle(qreal angle);
-  fn _ZN6QLineF8setAngleEd(qthis: *mut c_void, arg0: c_double);
+  fn _ZN6QLineF8setAngleEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  qreal QLineF::x2();
-  fn _ZNK6QLineF2x2Ev(qthis: *mut c_void) -> c_double;
+  fn _ZNK6QLineF2x2Ev(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QLineF::translate(const QPointF & p);
-  fn demth_ZN6QLineF9translateERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN6QLineF9translateERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  qreal QLineF::dx();
-  fn _ZNK6QLineF2dxEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK6QLineF2dxEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QLineF::QLineF();
   fn dector_ZN6QLineFC1Ev() -> *mut c_void;
-  fn _ZN6QLineFC1Ev(qthis: *mut c_void);
+  fn _ZN6QLineFC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QPointF QLineF::p1();
-  fn _ZNK6QLineF2p1Ev(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK6QLineF2p1Ev(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QLineF QLineF::normalVector();
-  fn _ZNK6QLineF12normalVectorEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK6QLineF12normalVectorEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QLine QLineF::toLine();
-  fn _ZNK6QLineF6toLineEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK6QLineF6toLineEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QPointF QLineF::pointAt(qreal t);
-  fn _ZNK6QLineF7pointAtEd(qthis: *mut c_void, arg0: c_double) -> *mut c_void;
+  fn _ZNK6QLineF7pointAtEd(qthis: u64 /* *mut c_void*/, arg0: c_double) -> *mut c_void;
   // proto:  QPointF QLineF::p2();
-  fn _ZNK6QLineF2p2Ev(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK6QLineF2p2Ev(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  qreal QLineF::y2();
-  fn _ZNK6QLineF2y2Ev(qthis: *mut c_void) -> c_double;
+  fn _ZNK6QLineF2y2Ev(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QLineF::QLineF(qreal x1, qreal y1, qreal x2, qreal y2);
   fn dector_ZN6QLineFC1Edddd(arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double) -> *mut c_void;
-  fn _ZN6QLineFC1Edddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
+  fn _ZN6QLineFC1Edddd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
   // proto:  qreal QLineF::dy();
-  fn _ZNK6QLineF2dyEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK6QLineF2dyEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  QLineF QLineF::unitVector();
-  fn _ZNK6QLineF10unitVectorEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK6QLineF10unitVectorEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QLineF::isNull();
-  fn _ZNK6QLineF6isNullEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK6QLineF6isNullEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  qreal QLineF::y1();
-  fn _ZNK6QLineF2y1Ev(qthis: *mut c_void) -> c_double;
+  fn _ZNK6QLineF2y1Ev(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  qreal QLineF::angleTo(const QLineF & l);
-  fn _ZNK6QLineF7angleToERKS_(qthis: *mut c_void, arg0: *mut c_void) -> c_double;
+  fn _ZNK6QLineF7angleToERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_double;
   // proto:  QLineF QLineF::translated(const QPointF & p);
-  fn _ZNK6QLineF10translatedERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK6QLineF10translatedERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QLineF::setLine(qreal x1, qreal y1, qreal x2, qreal y2);
-  fn demth_ZN6QLineF7setLineEdddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
+  fn demth_ZN6QLineF7setLineEdddd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
   // proto: static QLineF QLineF::fromPolar(qreal length, qreal angle);
   fn _ZN6QLineF9fromPolarEdd(arg0: c_double, arg1: c_double) -> *mut c_void;
   // proto:  void QLineF::setP1(const QPointF & p1);
-  fn demth_ZN6QLineF5setP1ERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN6QLineF5setP1ERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  qreal QLineF::angle(const QLineF & l);
-  fn _ZNK6QLineF5angleERKS_(qthis: *mut c_void, arg0: *mut c_void) -> c_double;
+  fn _ZNK6QLineF5angleERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_double;
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QLine)=16
+#[derive(Default)]
 pub struct QLine {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 // class sizeof(QLineF)=32
+#[derive(Default)]
 pub struct QLineF {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QLine {
-  pub fn inheritFrom(qthis: *mut c_void) -> QLine {
-    return QLine{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QLine {
+    return QLine{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  bool QLine::isNull();
@@ -206,7 +208,7 @@ impl<'a> /*trait*/ QLine_translated<QLine> for (&'a QPoint) {
     // unsafe{_ZNK5QLine10translatedERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK5QLine10translatedERK6QPoint(rsthis.qclsinst, arg0)};
-    let mut ret1 = QLine::inheritFrom(ret);
+    let mut ret1 = QLine::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -277,12 +279,12 @@ impl<'a> /*trait*/ QLine_New for (&'a QPoint, &'a QPoint) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QLineC1ERK6QPointS2_()};
     let ctysz: c_int = unsafe{QLine_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     // unsafe {_ZN5QLineC1ERK6QPointS2_(qthis, arg0, arg1)};
-    let qthis: *mut c_void = unsafe {dector_ZN5QLineC1ERK6QPointS2_(arg0, arg1)};
-    let rsthis = QLine{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN5QLineC1ERK6QPointS2_(arg0, arg1)} as u64;
+    let rsthis = QLine{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -444,7 +446,7 @@ impl<'a> /*trait*/ QLine_p1<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QLine2p1Ev()};
     let mut ret = unsafe {_ZNK5QLine2p1Ev(rsthis.qclsinst)};
-    let mut ret1 = QPoint::inheritFrom(ret);
+    let mut ret1 = QPoint::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -468,7 +470,7 @@ impl<'a> /*trait*/ QLine_p2<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QLine2p2Ev()};
     let mut ret = unsafe {_ZNK5QLine2p2Ev(rsthis.qclsinst)};
-    let mut ret1 = QPoint::inheritFrom(ret);
+    let mut ret1 = QPoint::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -480,14 +482,14 @@ impl<'a> /*trait*/ QLine_New for (i32, i32, i32, i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QLineC1Eiiii()};
     let ctysz: c_int = unsafe{QLine_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as c_int;
     let arg3 = self.3  as c_int;
     // unsafe {_ZN5QLineC1Eiiii(qthis, arg0, arg1, arg2, arg3)};
-    let qthis: *mut c_void = unsafe {dector_ZN5QLineC1Eiiii(arg0, arg1, arg2, arg3)};
-    let rsthis = QLine{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN5QLineC1Eiiii(arg0, arg1, arg2, arg3)} as u64;
+    let rsthis = QLine{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -513,7 +515,7 @@ impl<'a> /*trait*/ QLine_translated<QLine> for (i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZNK5QLine10translatedEii(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QLine::inheritFrom(ret);
+    let mut ret1 = QLine::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -598,18 +600,18 @@ impl<'a> /*trait*/ QLine_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QLineC1Ev()};
     let ctysz: c_int = unsafe{QLine_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN5QLineC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN5QLineC1Ev()};
-    let rsthis = QLine{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN5QLineC1Ev()} as u64;
+    let rsthis = QLine{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
 impl /*struct*/ QLineF {
-  pub fn inheritFrom(qthis: *mut c_void) -> QLineF {
-    return QLineF{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QLineF {
+    return QLineF{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  void QLineF::translate(qreal dx, qreal dy);
@@ -703,7 +705,7 @@ impl<'a> /*trait*/ QLineF_translated<QLineF> for (f64, f64) {
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
     let mut ret = unsafe {_ZNK6QLineF10translatedEdd(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QLineF::inheritFrom(ret);
+    let mut ret1 = QLineF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -797,12 +799,12 @@ impl<'a> /*trait*/ QLineF_New for (&'a QPointF, &'a QPointF) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QLineFC1ERK7QPointFS2_()};
     let ctysz: c_int = unsafe{QLineF_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     // unsafe {_ZN6QLineFC1ERK7QPointFS2_(qthis, arg0, arg1)};
-    let qthis: *mut c_void = unsafe {dector_ZN6QLineFC1ERK7QPointFS2_(arg0, arg1)};
-    let rsthis = QLineF{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN6QLineFC1ERK7QPointFS2_(arg0, arg1)} as u64;
+    let rsthis = QLineF{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -837,11 +839,11 @@ impl<'a> /*trait*/ QLineF_New for (&'a QLine) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QLineFC1ERK5QLine()};
     let ctysz: c_int = unsafe{QLineF_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN6QLineFC1ERK5QLine(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN6QLineFC1ERK5QLine(arg0)};
-    let rsthis = QLineF{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN6QLineFC1ERK5QLine(arg0)} as u64;
+    let rsthis = QLineF{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -933,10 +935,10 @@ impl<'a> /*trait*/ QLineF_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QLineFC1Ev()};
     let ctysz: c_int = unsafe{QLineF_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN6QLineFC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN6QLineFC1Ev()};
-    let rsthis = QLineF{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN6QLineFC1Ev()} as u64;
+    let rsthis = QLineF{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -960,7 +962,7 @@ impl<'a> /*trait*/ QLineF_p1<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLineF2p1Ev()};
     let mut ret = unsafe {_ZNK6QLineF2p1Ev(rsthis.qclsinst)};
-    let mut ret1 = QPointF::inheritFrom(ret);
+    let mut ret1 = QPointF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -984,7 +986,7 @@ impl<'a> /*trait*/ QLineF_normalVector<QLineF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLineF12normalVectorEv()};
     let mut ret = unsafe {_ZNK6QLineF12normalVectorEv(rsthis.qclsinst)};
-    let mut ret1 = QLineF::inheritFrom(ret);
+    let mut ret1 = QLineF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1008,7 +1010,7 @@ impl<'a> /*trait*/ QLineF_toLine<QLine> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLineF6toLineEv()};
     let mut ret = unsafe {_ZNK6QLineF6toLineEv(rsthis.qclsinst)};
-    let mut ret1 = QLine::inheritFrom(ret);
+    let mut ret1 = QLine::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1033,7 +1035,7 @@ impl<'a> /*trait*/ QLineF_pointAt<QPointF> for (f64) {
     // unsafe{_ZNK6QLineF7pointAtEd()};
     let arg0 = self  as c_double;
     let mut ret = unsafe {_ZNK6QLineF7pointAtEd(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPointF::inheritFrom(ret);
+    let mut ret1 = QPointF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1057,7 +1059,7 @@ impl<'a> /*trait*/ QLineF_p2<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLineF2p2Ev()};
     let mut ret = unsafe {_ZNK6QLineF2p2Ev(rsthis.qclsinst)};
-    let mut ret1 = QPointF::inheritFrom(ret);
+    let mut ret1 = QPointF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1092,14 +1094,14 @@ impl<'a> /*trait*/ QLineF_New for (f64, f64, f64, f64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QLineFC1Edddd()};
     let ctysz: c_int = unsafe{QLineF_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
     let arg2 = self.2  as c_double;
     let arg3 = self.3  as c_double;
     // unsafe {_ZN6QLineFC1Edddd(qthis, arg0, arg1, arg2, arg3)};
-    let qthis: *mut c_void = unsafe {dector_ZN6QLineFC1Edddd(arg0, arg1, arg2, arg3)};
-    let rsthis = QLineF{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN6QLineFC1Edddd(arg0, arg1, arg2, arg3)} as u64;
+    let rsthis = QLineF{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1146,7 +1148,7 @@ impl<'a> /*trait*/ QLineF_unitVector<QLineF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLineF10unitVectorEv()};
     let mut ret = unsafe {_ZNK6QLineF10unitVectorEv(rsthis.qclsinst)};
-    let mut ret1 = QLineF::inheritFrom(ret);
+    let mut ret1 = QLineF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1229,7 +1231,7 @@ impl<'a> /*trait*/ QLineF_translated<QLineF> for (&'a QPointF) {
     // unsafe{_ZNK6QLineF10translatedERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK6QLineF10translatedERK7QPointF(rsthis.qclsinst, arg0)};
-    let mut ret1 = QLineF::inheritFrom(ret);
+    let mut ret1 = QLineF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1281,7 +1283,7 @@ impl<'a> /*trait*/ QLineF_fromPolar_s<QLineF> for (f64, f64) {
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
     let mut ret = unsafe {_ZN6QLineF9fromPolarEdd(arg0, arg1)};
-    let mut ret1 = QLineF::inheritFrom(ret);
+    let mut ret1 = QLineF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }

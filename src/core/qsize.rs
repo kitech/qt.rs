@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qsize.h
 // dst-file: /src/core/qsize.rs
 //
@@ -31,93 +31,95 @@ use std::ops::Deref;
 extern {
   fn QSize_Class_Size() -> c_int;
   // proto:  QSize QSize::boundedTo(const QSize & );
-  fn _ZNK5QSize9boundedToERKS_(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK5QSize9boundedToERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  bool QSize::isValid();
-  fn _ZNK5QSize7isValidEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK5QSize7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QSize::isNull();
-  fn _ZNK5QSize6isNullEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK5QSize6isNullEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QSize::QSize();
   fn dector_ZN5QSizeC1Ev() -> *mut c_void;
-  fn _ZN5QSizeC1Ev(qthis: *mut c_void);
+  fn _ZN5QSizeC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QSize QSize::expandedTo(const QSize & );
-  fn _ZNK5QSize10expandedToERKS_(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK5QSize10expandedToERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  int QSize::height();
-  fn _ZNK5QSize6heightEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK5QSize6heightEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int & QSize::rheight();
-  fn demth_ZN5QSize7rheightEv(qthis: *mut c_void);
+  fn demth_ZN5QSize7rheightEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QSize::QSize(int w, int h);
   fn dector_ZN5QSizeC1Eii(arg0: c_int, arg1: c_int) -> *mut c_void;
-  fn _ZN5QSizeC1Eii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
+  fn _ZN5QSizeC1Eii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  int QSize::width();
-  fn _ZNK5QSize5widthEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK5QSize5widthEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  QSize QSize::transposed();
-  fn _ZNK5QSize10transposedEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK5QSize10transposedEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int & QSize::rwidth();
-  fn demth_ZN5QSize6rwidthEv(qthis: *mut c_void);
+  fn demth_ZN5QSize6rwidthEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QSize::setHeight(int h);
-  fn demth_ZN5QSize9setHeightEi(qthis: *mut c_void, arg0: c_int);
+  fn demth_ZN5QSize9setHeightEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  bool QSize::isEmpty();
-  fn _ZNK5QSize7isEmptyEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK5QSize7isEmptyEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QSize::setWidth(int w);
-  fn demth_ZN5QSize8setWidthEi(qthis: *mut c_void, arg0: c_int);
+  fn demth_ZN5QSize8setWidthEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QSize::transpose();
-  fn _ZN5QSize9transposeEv(qthis: *mut c_void);
+  fn _ZN5QSize9transposeEv(qthis: u64 /* *mut c_void*/);
   fn QSizeF_Class_Size() -> c_int;
   // proto:  qreal & QSizeF::rheight();
-  fn demth_ZN6QSizeF7rheightEv(qthis: *mut c_void);
+  fn demth_ZN6QSizeF7rheightEv(qthis: u64 /* *mut c_void*/);
   // proto:  qreal & QSizeF::rwidth();
-  fn demth_ZN6QSizeF6rwidthEv(qthis: *mut c_void);
+  fn demth_ZN6QSizeF6rwidthEv(qthis: u64 /* *mut c_void*/);
   // proto:  QSizeF QSizeF::transposed();
-  fn _ZNK6QSizeF10transposedEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK6QSizeF10transposedEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QSizeF::isValid();
-  fn _ZNK6QSizeF7isValidEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK6QSizeF7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QSizeF::setHeight(qreal h);
-  fn demth_ZN6QSizeF9setHeightEd(qthis: *mut c_void, arg0: c_double);
+  fn demth_ZN6QSizeF9setHeightEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QSizeF::QSizeF();
   fn dector_ZN6QSizeFC1Ev() -> *mut c_void;
-  fn _ZN6QSizeFC1Ev(qthis: *mut c_void);
+  fn _ZN6QSizeFC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  qreal QSizeF::width();
-  fn _ZNK6QSizeF5widthEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK6QSizeF5widthEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  bool QSizeF::isNull();
-  fn demth_ZNK6QSizeF6isNullEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK6QSizeF6isNullEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QSizeF QSizeF::boundedTo(const QSizeF & );
-  fn _ZNK6QSizeF9boundedToERKS_(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK6QSizeF9boundedToERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  qreal QSizeF::height();
-  fn _ZNK6QSizeF6heightEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK6QSizeF6heightEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QSizeF::transpose();
-  fn _ZN6QSizeF9transposeEv(qthis: *mut c_void);
+  fn _ZN6QSizeF9transposeEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QSizeF::QSizeF(const QSize & sz);
   fn dector_ZN6QSizeFC1ERK5QSize(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN6QSizeFC1ERK5QSize(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN6QSizeFC1ERK5QSize(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QSizeF QSizeF::expandedTo(const QSizeF & );
-  fn _ZNK6QSizeF10expandedToERKS_(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK6QSizeF10expandedToERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  bool QSizeF::isEmpty();
-  fn _ZNK6QSizeF7isEmptyEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK6QSizeF7isEmptyEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QSizeF::setWidth(qreal w);
-  fn demth_ZN6QSizeF8setWidthEd(qthis: *mut c_void, arg0: c_double);
+  fn demth_ZN6QSizeF8setWidthEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  QSize QSizeF::toSize();
-  fn _ZNK6QSizeF6toSizeEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK6QSizeF6toSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QSizeF::QSizeF(qreal w, qreal h);
   fn dector_ZN6QSizeFC1Edd(arg0: c_double, arg1: c_double) -> *mut c_void;
-  fn _ZN6QSizeFC1Edd(qthis: *mut c_void, arg0: c_double, arg1: c_double);
+  fn _ZN6QSizeFC1Edd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QSize)=8
+#[derive(Default)]
 pub struct QSize {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 // class sizeof(QSizeF)=16
+#[derive(Default)]
 pub struct QSizeF {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QSize {
-  pub fn inheritFrom(qthis: *mut c_void) -> QSize {
-    return QSize{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QSize {
+    return QSize{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  QSize QSize::boundedTo(const QSize & );
@@ -139,7 +141,7 @@ impl<'a> /*trait*/ QSize_boundedTo<QSize> for (&'a QSize) {
     // unsafe{_ZNK5QSize9boundedToERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK5QSize9boundedToERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QSize::inheritFrom(ret);
+    let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -210,10 +212,10 @@ impl<'a> /*trait*/ QSize_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QSizeC1Ev()};
     let ctysz: c_int = unsafe{QSize_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN5QSizeC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN5QSizeC1Ev()};
-    let rsthis = QSize{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN5QSizeC1Ev()} as u64;
+    let rsthis = QSize{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -238,7 +240,7 @@ impl<'a> /*trait*/ QSize_expandedTo<QSize> for (&'a QSize) {
     // unsafe{_ZNK5QSize10expandedToERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK5QSize10expandedToERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QSize::inheritFrom(ret);
+    let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -295,12 +297,12 @@ impl<'a> /*trait*/ QSize_New for (i32, i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QSizeC1Eii()};
     let ctysz: c_int = unsafe{QSize_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     // unsafe {_ZN5QSizeC1Eii(qthis, arg0, arg1)};
-    let qthis: *mut c_void = unsafe {dector_ZN5QSizeC1Eii(arg0, arg1)};
-    let rsthis = QSize{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN5QSizeC1Eii(arg0, arg1)} as u64;
+    let rsthis = QSize{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -347,7 +349,7 @@ impl<'a> /*trait*/ QSize_transposed<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QSize10transposedEv()};
     let mut ret = unsafe {_ZNK5QSize10transposedEv(rsthis.qclsinst)};
-    let mut ret1 = QSize::inheritFrom(ret);
+    let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -467,8 +469,8 @@ impl<'a> /*trait*/ QSize_transpose<()> for () {
 }
 
 impl /*struct*/ QSizeF {
-  pub fn inheritFrom(qthis: *mut c_void) -> QSizeF {
-    return QSizeF{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QSizeF {
+    return QSizeF{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  qreal & QSizeF::rheight();
@@ -533,7 +535,7 @@ impl<'a> /*trait*/ QSizeF_transposed<QSizeF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QSizeF10transposedEv()};
     let mut ret = unsafe {_ZNK6QSizeF10transposedEv(rsthis.qclsinst)};
-    let mut ret1 = QSizeF::inheritFrom(ret);
+    let mut ret1 = QSizeF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -604,10 +606,10 @@ impl<'a> /*trait*/ QSizeF_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QSizeFC1Ev()};
     let ctysz: c_int = unsafe{QSizeF_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN6QSizeFC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN6QSizeFC1Ev()};
-    let rsthis = QSizeF{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN6QSizeFC1Ev()} as u64;
+    let rsthis = QSizeF{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -678,7 +680,7 @@ impl<'a> /*trait*/ QSizeF_boundedTo<QSizeF> for (&'a QSizeF) {
     // unsafe{_ZNK6QSizeF9boundedToERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK6QSizeF9boundedToERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QSizeF::inheritFrom(ret);
+    let mut ret1 = QSizeF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -735,11 +737,11 @@ impl<'a> /*trait*/ QSizeF_New for (&'a QSize) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QSizeFC1ERK5QSize()};
     let ctysz: c_int = unsafe{QSizeF_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN6QSizeFC1ERK5QSize(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN6QSizeFC1ERK5QSize(arg0)};
-    let rsthis = QSizeF{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN6QSizeFC1ERK5QSize(arg0)} as u64;
+    let rsthis = QSizeF{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -764,7 +766,7 @@ impl<'a> /*trait*/ QSizeF_expandedTo<QSizeF> for (&'a QSizeF) {
     // unsafe{_ZNK6QSizeF10expandedToERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK6QSizeF10expandedToERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QSizeF::inheritFrom(ret);
+    let mut ret1 = QSizeF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -834,7 +836,7 @@ impl<'a> /*trait*/ QSizeF_toSize<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QSizeF6toSizeEv()};
     let mut ret = unsafe {_ZNK6QSizeF6toSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize::inheritFrom(ret);
+    let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -846,12 +848,12 @@ impl<'a> /*trait*/ QSizeF_New for (f64, f64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QSizeFC1Edd()};
     let ctysz: c_int = unsafe{QSizeF_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
     // unsafe {_ZN6QSizeFC1Edd(qthis, arg0, arg1)};
-    let qthis: *mut c_void = unsafe {dector_ZN6QSizeFC1Edd(arg0, arg1)};
-    let rsthis = QSizeF{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN6QSizeFC1Edd(arg0, arg1)} as u64;
+    let rsthis = QSizeF{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }

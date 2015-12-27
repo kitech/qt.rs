@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtWidgets/qshortcut.h
 // dst-file: /src/widgets/qshortcut.rs
 //
@@ -34,48 +34,53 @@ use super::super::core::qstring::QString; // 771
 extern {
   fn QShortcut_Class_Size() -> c_int;
   // proto:  void QShortcut::setKey(const QKeySequence & key);
-  fn _ZN9QShortcut6setKeyERK12QKeySequence(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN9QShortcut6setKeyERK12QKeySequence(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QShortcut::activated();
-  fn _ZN9QShortcut9activatedEv(qthis: *mut c_void);
+  fn _ZN9QShortcut9activatedEv(qthis: u64 /* *mut c_void*/);
   // proto:  const QMetaObject * QShortcut::metaObject();
-  fn _ZNK9QShortcut10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK9QShortcut10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  QWidget * QShortcut::parentWidget();
-  fn demth_ZNK9QShortcut12parentWidgetEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK9QShortcut12parentWidgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QShortcut::setAutoRepeat(bool on);
-  fn _ZN9QShortcut13setAutoRepeatEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN9QShortcut13setAutoRepeatEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  bool QShortcut::isEnabled();
-  fn _ZNK9QShortcut9isEnabledEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK9QShortcut9isEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QKeySequence QShortcut::key();
-  fn _ZNK9QShortcut3keyEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QShortcut3keyEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QShortcut::~QShortcut();
-  fn _ZN9QShortcutD0Ev(qthis: *mut c_void);
+  fn _ZN9QShortcutD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QShortcut::setWhatsThis(const QString & text);
-  fn _ZN9QShortcut12setWhatsThisERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN9QShortcut12setWhatsThisERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QShortcut::setEnabled(bool enable);
-  fn _ZN9QShortcut10setEnabledEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN9QShortcut10setEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  int QShortcut::id();
-  fn _ZNK9QShortcut2idEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK9QShortcut2idEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  QString QShortcut::whatsThis();
-  fn _ZNK9QShortcut9whatsThisEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QShortcut9whatsThisEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QShortcut::QShortcut(QWidget * parent);
   fn dector_ZN9QShortcutC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QShortcutC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN9QShortcutC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QShortcut::activatedAmbiguously();
-  fn _ZN9QShortcut20activatedAmbiguouslyEv(qthis: *mut c_void);
+  fn _ZN9QShortcut20activatedAmbiguouslyEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QShortcut::autoRepeat();
-  fn _ZNK9QShortcut10autoRepeatEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK9QShortcut10autoRepeatEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn QShortcut_SlotProxy_connect__ZN9QShortcut9activatedEv(qthis: *mut c_void, fptr: *mut c_void);
+  fn QShortcut_SlotProxy_connect__ZN9QShortcut20activatedAmbiguouslyEv(qthis: *mut c_void, fptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QShortcut)=1
+#[derive(Default)]
 pub struct QShortcut {
   qbase: QObject,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _activated_1: QShortcut_activated_signal,
+  pub _activatedAmbiguously_1: QShortcut_activatedAmbiguously_signal,
 }
 
 impl /*struct*/ QShortcut {
-  pub fn inheritFrom(qthis: *mut c_void) -> QShortcut {
-    return QShortcut{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QShortcut {
+    return QShortcut{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QShortcut {
@@ -175,7 +180,7 @@ impl<'a> /*trait*/ QShortcut_parentWidget<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QShortcut12parentWidgetEv()};
     let mut ret = unsafe {demth_ZNK9QShortcut12parentWidgetEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget::inheritFrom(ret);
+    let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -245,7 +250,7 @@ impl<'a> /*trait*/ QShortcut_key<QKeySequence> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QShortcut3keyEv()};
     let mut ret = unsafe {_ZNK9QShortcut3keyEv(rsthis.qclsinst)};
-    let mut ret1 = QKeySequence::inheritFrom(ret);
+    let mut ret1 = QKeySequence::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -360,7 +365,7 @@ impl<'a> /*trait*/ QShortcut_whatsThis<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QShortcut9whatsThisEv()};
     let mut ret = unsafe {_ZNK9QShortcut9whatsThisEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -385,11 +390,11 @@ impl<'a> /*trait*/ QShortcut_New for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QShortcutC1EP7QWidget()};
     let ctysz: c_int = unsafe{QShortcut_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN9QShortcutC1EP7QWidget(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN9QShortcutC1EP7QWidget(arg0)};
-    let rsthis = QShortcut{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN9QShortcutC1EP7QWidget(arg0)} as u64;
+    let rsthis = QShortcut{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -440,5 +445,57 @@ impl<'a> /*trait*/ QShortcut_autoRepeat<i8> for () {
   }
 }
 
+#[derive(Default)] // for QShortcut_activated
+pub struct QShortcut_activated_signal{poi:u64}
+impl /* struct */ QShortcut {
+  pub fn activated_1(self) -> QShortcut_activated_signal {
+     return QShortcut_activated_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QShortcut_activated_signal {
+  pub fn connect<T: QShortcut_activated_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QShortcut_activated_signal_connect {
+  fn connect(self, sigthis: QShortcut_activated_signal);
+}
+
+#[derive(Default)] // for QShortcut_activatedAmbiguously
+pub struct QShortcut_activatedAmbiguously_signal{poi:u64}
+impl /* struct */ QShortcut {
+  pub fn activatedAmbiguously_1(self) -> QShortcut_activatedAmbiguously_signal {
+     return QShortcut_activatedAmbiguously_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QShortcut_activatedAmbiguously_signal {
+  pub fn connect<T: QShortcut_activatedAmbiguously_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QShortcut_activatedAmbiguously_signal_connect {
+  fn connect(self, sigthis: QShortcut_activatedAmbiguously_signal);
+}
+
+// activated()
+extern fn QShortcut_activated_signal_connect_cb_0() {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QShortcut_activated_signal_connect for (extern fn()) {
+  fn connect(self, sigthis: QShortcut_activated_signal) {
+    // do smth...
+    unsafe {QShortcut_SlotProxy_connect__ZN9QShortcut9activatedEv(sigthis.poi as *mut c_void, QShortcut_activated_signal_connect_cb_0 as *mut c_void)};
+  }
+}
+// activatedAmbiguously()
+extern fn QShortcut_activatedAmbiguously_signal_connect_cb_1() {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QShortcut_activatedAmbiguously_signal_connect for (extern fn()) {
+  fn connect(self, sigthis: QShortcut_activatedAmbiguously_signal) {
+    // do smth...
+    unsafe {QShortcut_SlotProxy_connect__ZN9QShortcut20activatedAmbiguouslyEv(sigthis.poi as *mut c_void, QShortcut_activatedAmbiguously_signal_connect_cb_1 as *mut c_void)};
+  }
+}
 // <= body block end
 

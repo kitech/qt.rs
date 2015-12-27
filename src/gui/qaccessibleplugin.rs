@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtGui/qaccessibleplugin.h
 // dst-file: /src/gui/qaccessibleplugin.rs
 //
@@ -34,25 +34,26 @@ extern {
   fn QAccessiblePlugin_Class_Size() -> c_int;
   // proto:  void QAccessiblePlugin::QAccessiblePlugin(QObject * parent);
   fn dector_ZN17QAccessiblePluginC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN17QAccessiblePluginC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN17QAccessiblePluginC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QAccessiblePlugin::metaObject();
-  fn _ZNK17QAccessiblePlugin10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK17QAccessiblePlugin10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QAccessiblePlugin::~QAccessiblePlugin();
-  fn _ZN17QAccessiblePluginD0Ev(qthis: *mut c_void);
+  fn _ZN17QAccessiblePluginD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QAccessibleInterface * QAccessiblePlugin::create(const QString & key, QObject * object);
-  fn _ZN17QAccessiblePlugin6createERK7QStringP7QObject(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
+  fn _ZN17QAccessiblePlugin6createERK7QStringP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QAccessiblePlugin)=1
+#[derive(Default)]
 pub struct QAccessiblePlugin {
   qbase: QObject,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QAccessiblePlugin {
-  pub fn inheritFrom(qthis: *mut c_void) -> QAccessiblePlugin {
-    return QAccessiblePlugin{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QAccessiblePlugin {
+    return QAccessiblePlugin{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QAccessiblePlugin {
@@ -86,11 +87,11 @@ impl<'a> /*trait*/ QAccessiblePlugin_New for (&'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAccessiblePluginC1EP7QObject()};
     let ctysz: c_int = unsafe{QAccessiblePlugin_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN17QAccessiblePluginC1EP7QObject(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN17QAccessiblePluginC1EP7QObject(arg0)};
-    let rsthis = QAccessiblePlugin{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN17QAccessiblePluginC1EP7QObject(arg0)} as u64;
+    let rsthis = QAccessiblePlugin{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -160,7 +161,7 @@ impl<'a> /*trait*/ QAccessiblePlugin_create<QAccessibleInterface> for (&'a QStri
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN17QAccessiblePlugin6createERK7QStringP7QObject(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QAccessibleInterface::inheritFrom(ret);
+    let mut ret1 = QAccessibleInterface::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }

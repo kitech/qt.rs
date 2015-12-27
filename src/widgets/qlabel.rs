@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtWidgets/qlabel.h
 // dst-file: /src/widgets/qlabel.rs
 //
@@ -37,88 +37,93 @@ use super::super::gui::qmovie::QMovie; // 771
 extern {
   fn QLabel_Class_Size() -> c_int;
   // proto:  const QPicture * QLabel::picture();
-  fn _ZNK6QLabel7pictureEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK6QLabel7pictureEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QLabel::setNum(double );
-  fn _ZN6QLabel6setNumEd(qthis: *mut c_void, arg0: c_double);
+  fn _ZN6QLabel6setNumEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QLabel::setPicture(const QPicture & );
-  fn _ZN6QLabel10setPictureERK8QPicture(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN6QLabel10setPictureERK8QPicture(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QLabel::setText(const QString & );
-  fn _ZN6QLabel7setTextERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN6QLabel7setTextERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QPixmap * QLabel::pixmap();
-  fn _ZNK6QLabel6pixmapEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK6QLabel6pixmapEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QLabel::setIndent(int );
-  fn _ZN6QLabel9setIndentEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN6QLabel9setIndentEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  const QMetaObject * QLabel::metaObject();
-  fn _ZNK6QLabel10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK6QLabel10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QLabel::~QLabel();
-  fn _ZN6QLabelD0Ev(qthis: *mut c_void);
+  fn _ZN6QLabelD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QLabel::setSelection(int , int );
-  fn _ZN6QLabel12setSelectionEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
+  fn _ZN6QLabel12setSelectionEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  bool QLabel::hasScaledContents();
-  fn _ZNK6QLabel17hasScaledContentsEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK6QLabel17hasScaledContentsEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QString QLabel::text();
-  fn _ZNK6QLabel4textEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK6QLabel4textEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QLabel::heightForWidth(int );
-  fn _ZNK6QLabel14heightForWidthEi(qthis: *mut c_void, arg0: c_int) -> c_int;
+  fn _ZNK6QLabel14heightForWidthEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
   // proto:  bool QLabel::openExternalLinks();
-  fn _ZNK6QLabel17openExternalLinksEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK6QLabel17openExternalLinksEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QLabel::setNum(int );
-  fn _ZN6QLabel6setNumEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN6QLabel6setNumEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QLabel::setPixmap(const QPixmap & );
-  fn _ZN6QLabel9setPixmapERK7QPixmap(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN6QLabel9setPixmapERK7QPixmap(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QLabel::setOpenExternalLinks(bool open);
-  fn _ZN6QLabel20setOpenExternalLinksEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN6QLabel20setOpenExternalLinksEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QWidget * QLabel::buddy();
-  fn _ZNK6QLabel5buddyEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK6QLabel5buddyEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QLabel::wordWrap();
-  fn _ZNK6QLabel8wordWrapEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK6QLabel8wordWrapEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QLabel::setWordWrap(bool on);
-  fn _ZN6QLabel11setWordWrapEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN6QLabel11setWordWrapEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QLabel::clear();
-  fn _ZN6QLabel5clearEv(qthis: *mut c_void);
+  fn _ZN6QLabel5clearEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QLabel::setMargin(int );
-  fn _ZN6QLabel9setMarginEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN6QLabel9setMarginEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  QSize QLabel::minimumSizeHint();
-  fn _ZNK6QLabel15minimumSizeHintEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK6QLabel15minimumSizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QLabel::selectionStart();
-  fn _ZNK6QLabel14selectionStartEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK6QLabel14selectionStartEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QLabel::hasSelectedText();
-  fn _ZNK6QLabel15hasSelectedTextEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK6QLabel15hasSelectedTextEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QLabel::linkActivated(const QString & link);
-  fn _ZN6QLabel13linkActivatedERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN6QLabel13linkActivatedERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QLabel::setBuddy(QWidget * );
-  fn _ZN6QLabel8setBuddyEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN6QLabel8setBuddyEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QLabel::QLabel(const QLabel & );
   fn dector_ZN6QLabelC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN6QLabelC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN6QLabelC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QLabel::indent();
-  fn _ZNK6QLabel6indentEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK6QLabel6indentEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  QSize QLabel::sizeHint();
-  fn _ZNK6QLabel8sizeHintEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK6QLabel8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QLabel::margin();
-  fn _ZNK6QLabel6marginEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK6QLabel6marginEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  QMovie * QLabel::movie();
-  fn _ZNK6QLabel5movieEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK6QLabel5movieEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QLabel::setScaledContents(bool );
-  fn _ZN6QLabel17setScaledContentsEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN6QLabel17setScaledContentsEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QLabel::setMovie(QMovie * movie);
-  fn _ZN6QLabel8setMovieEP6QMovie(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN6QLabel8setMovieEP6QMovie(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QString QLabel::selectedText();
-  fn _ZNK6QLabel12selectedTextEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK6QLabel12selectedTextEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QLabel::linkHovered(const QString & link);
-  fn _ZN6QLabel11linkHoveredERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN6QLabel11linkHoveredERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn QLabel_SlotProxy_connect__ZN6QLabel13linkActivatedERK7QString(qthis: *mut c_void, fptr: *mut c_void);
+  fn QLabel_SlotProxy_connect__ZN6QLabel11linkHoveredERK7QString(qthis: *mut c_void, fptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QLabel)=1
+#[derive(Default)]
 pub struct QLabel {
   qbase: QFrame,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _linkActivated_1: QLabel_linkActivated_signal,
+  pub _linkHovered_1: QLabel_linkHovered_signal,
 }
 
 impl /*struct*/ QLabel {
-  pub fn inheritFrom(qthis: *mut c_void) -> QLabel {
-    return QLabel{qbase: QFrame::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QLabel {
+    return QLabel{qbase: QFrame::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QLabel {
@@ -151,7 +156,7 @@ impl<'a> /*trait*/ QLabel_picture<QPicture> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel7pictureEv()};
     let mut ret = unsafe {_ZNK6QLabel7pictureEv(rsthis.qclsinst)};
-    let mut ret1 = QPicture::inheritFrom(ret);
+    let mut ret1 = QPicture::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -244,7 +249,7 @@ impl<'a> /*trait*/ QLabel_pixmap<QPixmap> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel6pixmapEv()};
     let mut ret = unsafe {_ZNK6QLabel6pixmapEv(rsthis.qclsinst)};
-    let mut ret1 = QPixmap::inheritFrom(ret);
+    let mut ret1 = QPixmap::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -382,7 +387,7 @@ impl<'a> /*trait*/ QLabel_text<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel4textEv()};
     let mut ret = unsafe {_ZNK6QLabel4textEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -510,7 +515,7 @@ impl<'a> /*trait*/ QLabel_buddy<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel5buddyEv()};
     let mut ret = unsafe {_ZNK6QLabel5buddyEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget::inheritFrom(ret);
+    let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -625,7 +630,7 @@ impl<'a> /*trait*/ QLabel_minimumSizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel15minimumSizeHintEv()};
     let mut ret = unsafe {_ZNK6QLabel15minimumSizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize::inheritFrom(ret);
+    let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -742,11 +747,11 @@ impl<'a> /*trait*/ QLabel_New for (&'a QLabel) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QLabelC1ERKS_()};
     let ctysz: c_int = unsafe{QLabel_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN6QLabelC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN6QLabelC1ERKS_(arg0)};
-    let rsthis = QLabel{/**/qbase: QFrame::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN6QLabelC1ERKS_(arg0)} as u64;
+    let rsthis = QLabel{qbase: QFrame::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -793,7 +798,7 @@ impl<'a> /*trait*/ QLabel_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel8sizeHintEv()};
     let mut ret = unsafe {_ZNK6QLabel8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize::inheritFrom(ret);
+    let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -840,7 +845,7 @@ impl<'a> /*trait*/ QLabel_movie<QMovie> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel5movieEv()};
     let mut ret = unsafe {_ZNK6QLabel5movieEv(rsthis.qclsinst)};
-    let mut ret1 = QMovie::inheritFrom(ret);
+    let mut ret1 = QMovie::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -910,7 +915,7 @@ impl<'a> /*trait*/ QLabel_selectedText<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel12selectedTextEv()};
     let mut ret = unsafe {_ZNK6QLabel12selectedTextEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -939,5 +944,57 @@ impl<'a> /*trait*/ QLabel_linkHovered<()> for (&'a QString) {
   }
 }
 
+#[derive(Default)] // for QLabel_linkActivated
+pub struct QLabel_linkActivated_signal{poi:u64}
+impl /* struct */ QLabel {
+  pub fn linkActivated_1(self) -> QLabel_linkActivated_signal {
+     return QLabel_linkActivated_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QLabel_linkActivated_signal {
+  pub fn connect<T: QLabel_linkActivated_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QLabel_linkActivated_signal_connect {
+  fn connect(self, sigthis: QLabel_linkActivated_signal);
+}
+
+#[derive(Default)] // for QLabel_linkHovered
+pub struct QLabel_linkHovered_signal{poi:u64}
+impl /* struct */ QLabel {
+  pub fn linkHovered_1(self) -> QLabel_linkHovered_signal {
+     return QLabel_linkHovered_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QLabel_linkHovered_signal {
+  pub fn connect<T: QLabel_linkHovered_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QLabel_linkHovered_signal_connect {
+  fn connect(self, sigthis: QLabel_linkHovered_signal);
+}
+
+// linkActivated(const class QString &)
+extern fn QLabel_linkActivated_signal_connect_cb_0(arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QLabel_linkActivated_signal_connect for (extern fn(QString)) {
+  fn connect(self, sigthis: QLabel_linkActivated_signal) {
+    // do smth...
+    unsafe {QLabel_SlotProxy_connect__ZN6QLabel13linkActivatedERK7QString(sigthis.poi as *mut c_void, QLabel_linkActivated_signal_connect_cb_0 as *mut c_void)};
+  }
+}
+// linkHovered(const class QString &)
+extern fn QLabel_linkHovered_signal_connect_cb_1(arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QLabel_linkHovered_signal_connect for (extern fn(QString)) {
+  fn connect(self, sigthis: QLabel_linkHovered_signal) {
+    // do smth...
+    unsafe {QLabel_SlotProxy_connect__ZN6QLabel11linkHoveredERK7QString(sigthis.poi as *mut c_void, QLabel_linkHovered_signal_connect_cb_1 as *mut c_void)};
+  }
+}
 // <= body block end
 

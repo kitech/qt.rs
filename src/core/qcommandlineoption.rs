@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qcommandlineoption.h
 // dst-file: /src/core/qcommandlineoption.rs
 //
@@ -32,52 +32,53 @@ use super::qstringlist::QStringList; // 773
 extern {
   fn QCommandLineOption_Class_Size() -> c_int;
   // proto:  void QCommandLineOption::setValueName(const QString & name);
-  fn _ZN18QCommandLineOption12setValueNameERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN18QCommandLineOption12setValueNameERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QStringList QCommandLineOption::names();
-  fn _ZNK18QCommandLineOption5namesEv(qthis: *mut c_void);
+  fn _ZNK18QCommandLineOption5namesEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QCommandLineOption::QCommandLineOption(const QCommandLineOption & other);
   fn dector_ZN18QCommandLineOptionC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN18QCommandLineOptionC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN18QCommandLineOptionC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QCommandLineOption::setDescription(const QString & description);
-  fn _ZN18QCommandLineOption14setDescriptionERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN18QCommandLineOption14setDescriptionERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QCommandLineOption::QCommandLineOption(const QString & name, const QString & description, const QString & valueName, const QString & defaultValue);
   fn dector_ZN18QCommandLineOptionC1ERK7QStringS2_S2_S2_(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void) -> *mut c_void;
-  fn _ZN18QCommandLineOptionC1ERK7QStringS2_S2_S2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void);
+  fn _ZN18QCommandLineOptionC1ERK7QStringS2_S2_S2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void);
   // proto:  QString QCommandLineOption::valueName();
-  fn _ZNK18QCommandLineOption9valueNameEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK18QCommandLineOption9valueNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QCommandLineOption::QCommandLineOption(const QStringList & names, const QString & description, const QString & valueName, const QString & defaultValue);
   fn dector_ZN18QCommandLineOptionC1ERK11QStringListRK7QStringS5_S5_(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void) -> *mut c_void;
-  fn _ZN18QCommandLineOptionC1ERK11QStringListRK7QStringS5_S5_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void);
+  fn _ZN18QCommandLineOptionC1ERK11QStringListRK7QStringS5_S5_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void);
   // proto:  void QCommandLineOption::swap(QCommandLineOption & other);
-  fn demth_ZN18QCommandLineOption4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN18QCommandLineOption4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QString QCommandLineOption::description();
-  fn _ZNK18QCommandLineOption11descriptionEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK18QCommandLineOption11descriptionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QCommandLineOption::~QCommandLineOption();
-  fn _ZN18QCommandLineOptionD0Ev(qthis: *mut c_void);
+  fn _ZN18QCommandLineOptionD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QCommandLineOption::QCommandLineOption(const QStringList & names);
   fn dector_ZN18QCommandLineOptionC1ERK11QStringList(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN18QCommandLineOptionC1ERK11QStringList(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN18QCommandLineOptionC1ERK11QStringList(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QCommandLineOption::setDefaultValue(const QString & defaultValue);
-  fn _ZN18QCommandLineOption15setDefaultValueERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN18QCommandLineOption15setDefaultValueERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QCommandLineOption::setDefaultValues(const QStringList & defaultValues);
-  fn _ZN18QCommandLineOption16setDefaultValuesERK11QStringList(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN18QCommandLineOption16setDefaultValuesERK11QStringList(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QCommandLineOption::QCommandLineOption(const QString & name);
   fn dector_ZN18QCommandLineOptionC1ERK7QString(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN18QCommandLineOptionC1ERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN18QCommandLineOptionC1ERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QStringList QCommandLineOption::defaultValues();
-  fn _ZNK18QCommandLineOption13defaultValuesEv(qthis: *mut c_void);
+  fn _ZNK18QCommandLineOption13defaultValuesEv(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QCommandLineOption)=1
+#[derive(Default)]
 pub struct QCommandLineOption {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QCommandLineOption {
-  pub fn inheritFrom(qthis: *mut c_void) -> QCommandLineOption {
-    return QCommandLineOption{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QCommandLineOption {
+    return QCommandLineOption{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  void QCommandLineOption::setValueName(const QString & name);
@@ -144,11 +145,11 @@ impl<'a> /*trait*/ QCommandLineOption_New for (&'a QCommandLineOption) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLineOptionC1ERKS_()};
     let ctysz: c_int = unsafe{QCommandLineOption_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN18QCommandLineOptionC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN18QCommandLineOptionC1ERKS_(arg0)};
-    let rsthis = QCommandLineOption{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN18QCommandLineOptionC1ERKS_(arg0)} as u64;
+    let rsthis = QCommandLineOption{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -183,14 +184,14 @@ impl<'a> /*trait*/ QCommandLineOption_New for (&'a QString, &'a QString, &'a QSt
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLineOptionC1ERK7QStringS2_S2_S2_()};
     let ctysz: c_int = unsafe{QCommandLineOption_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let arg3 = self.3.qclsinst  as *mut c_void;
     // unsafe {_ZN18QCommandLineOptionC1ERK7QStringS2_S2_S2_(qthis, arg0, arg1, arg2, arg3)};
-    let qthis: *mut c_void = unsafe {dector_ZN18QCommandLineOptionC1ERK7QStringS2_S2_S2_(arg0, arg1, arg2, arg3)};
-    let rsthis = QCommandLineOption{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN18QCommandLineOptionC1ERK7QStringS2_S2_S2_(arg0, arg1, arg2, arg3)} as u64;
+    let rsthis = QCommandLineOption{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -214,7 +215,7 @@ impl<'a> /*trait*/ QCommandLineOption_valueName<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QCommandLineOption9valueNameEv()};
     let mut ret = unsafe {_ZNK18QCommandLineOption9valueNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -226,14 +227,14 @@ impl<'a> /*trait*/ QCommandLineOption_New for (&'a QStringList, &'a QString, &'a
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLineOptionC1ERK11QStringListRK7QStringS5_S5_()};
     let ctysz: c_int = unsafe{QCommandLineOption_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let arg3 = self.3.qclsinst  as *mut c_void;
     // unsafe {_ZN18QCommandLineOptionC1ERK11QStringListRK7QStringS5_S5_(qthis, arg0, arg1, arg2, arg3)};
-    let qthis: *mut c_void = unsafe {dector_ZN18QCommandLineOptionC1ERK11QStringListRK7QStringS5_S5_(arg0, arg1, arg2, arg3)};
-    let rsthis = QCommandLineOption{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN18QCommandLineOptionC1ERK11QStringListRK7QStringS5_S5_(arg0, arg1, arg2, arg3)} as u64;
+    let rsthis = QCommandLineOption{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -280,7 +281,7 @@ impl<'a> /*trait*/ QCommandLineOption_description<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QCommandLineOption11descriptionEv()};
     let mut ret = unsafe {_ZNK18QCommandLineOption11descriptionEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -314,11 +315,11 @@ impl<'a> /*trait*/ QCommandLineOption_New for (&'a QStringList) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLineOptionC1ERK11QStringList()};
     let ctysz: c_int = unsafe{QCommandLineOption_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN18QCommandLineOptionC1ERK11QStringList(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN18QCommandLineOptionC1ERK11QStringList(arg0)};
-    let rsthis = QCommandLineOption{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN18QCommandLineOptionC1ERK11QStringList(arg0)} as u64;
+    let rsthis = QCommandLineOption{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -376,11 +377,11 @@ impl<'a> /*trait*/ QCommandLineOption_New for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLineOptionC1ERK7QString()};
     let ctysz: c_int = unsafe{QCommandLineOption_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN18QCommandLineOptionC1ERK7QString(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN18QCommandLineOptionC1ERK7QString(arg0)};
-    let rsthis = QCommandLineOption{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN18QCommandLineOptionC1ERK7QString(arg0)} as u64;
+    let rsthis = QCommandLineOption{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }

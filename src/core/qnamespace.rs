@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qnamespace.h
 // dst-file: /src/core/qnamespace.rs
 //
@@ -33,14 +33,15 @@ extern {
 
 // body block begin =>
 // class sizeof(QInternal)=1
+#[derive(Default)]
 pub struct QInternal {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QInternal {
-  pub fn inheritFrom(qthis: *mut c_void) -> QInternal {
-    return QInternal{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QInternal {
+    return QInternal{qclsinst: qthis, ..Default::default()};
   }
 }
 // <= body block end

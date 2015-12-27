@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtGui/qfontdatabase.h
 // dst-file: /src/gui/qfontdatabase.rs
 //
@@ -34,28 +34,28 @@ use super::qfontinfo::QFontInfo; // 773
 extern {
   fn QFontDatabase_Class_Size() -> c_int;
   // proto:  QList<int> QFontDatabase::pointSizes(const QString & family, const QString & style);
-  fn _ZN13QFontDatabase10pointSizesERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN13QFontDatabase10pointSizesERK7QStringS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  QString QFontDatabase::styleString(const QFont & font);
-  fn _ZN13QFontDatabase11styleStringERK5QFont(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZN13QFontDatabase11styleStringERK5QFont(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QList<int> QFontDatabase::smoothSizes(const QString & family, const QString & style);
-  fn _ZN13QFontDatabase11smoothSizesERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN13QFontDatabase11smoothSizesERK7QStringS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  QStringList QFontDatabase::styles(const QString & family);
-  fn _ZNK13QFontDatabase6stylesERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZNK13QFontDatabase6stylesERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QFontDatabase::italic(const QString & family, const QString & style);
-  fn _ZNK13QFontDatabase6italicERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> c_char;
+  fn _ZNK13QFontDatabase6italicERK7QStringS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> c_char;
   // proto:  void QFontDatabase::QFontDatabase();
   fn dector_ZN13QFontDatabaseC1Ev() -> *mut c_void;
-  fn _ZN13QFontDatabaseC1Ev(qthis: *mut c_void);
+  fn _ZN13QFontDatabaseC1Ev(qthis: u64 /* *mut c_void*/);
   // proto: static QStringList QFontDatabase::applicationFontFamilies(int id);
   fn _ZN13QFontDatabase23applicationFontFamiliesEi(arg0: c_int);
   // proto:  bool QFontDatabase::hasFamily(const QString & family);
-  fn _ZNK13QFontDatabase9hasFamilyERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn _ZNK13QFontDatabase9hasFamilyERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  bool QFontDatabase::isFixedPitch(const QString & family, const QString & style);
-  fn _ZNK13QFontDatabase12isFixedPitchERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> c_char;
+  fn _ZNK13QFontDatabase12isFixedPitchERK7QStringS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> c_char;
   // proto:  QFont QFontDatabase::font(const QString & family, const QString & style, int pointSize);
-  fn _ZNK13QFontDatabase4fontERK7QStringS2_i(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: c_int) -> *mut c_void;
+  fn _ZNK13QFontDatabase4fontERK7QStringS2_i(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: c_int) -> *mut c_void;
   // proto:  int QFontDatabase::weight(const QString & family, const QString & style);
-  fn _ZNK13QFontDatabase6weightERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> c_int;
+  fn _ZNK13QFontDatabase6weightERK7QStringS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> c_int;
   // proto: static bool QFontDatabase::removeAllApplicationFonts();
   fn _ZN13QFontDatabase25removeAllApplicationFontsEv() -> c_char;
   // proto: static int QFontDatabase::addApplicationFontFromData(const QByteArray & fontData);
@@ -63,19 +63,19 @@ extern {
   // proto: static bool QFontDatabase::supportsThreadedFontRendering();
   fn _ZN13QFontDatabase29supportsThreadedFontRenderingEv() -> c_char;
   // proto:  bool QFontDatabase::isPrivateFamily(const QString & family);
-  fn _ZNK13QFontDatabase15isPrivateFamilyERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn _ZNK13QFontDatabase15isPrivateFamilyERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  bool QFontDatabase::isScalable(const QString & family, const QString & style);
-  fn _ZNK13QFontDatabase10isScalableERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> c_char;
+  fn _ZNK13QFontDatabase10isScalableERK7QStringS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> c_char;
   // proto: static bool QFontDatabase::removeApplicationFont(int id);
   fn _ZN13QFontDatabase21removeApplicationFontEi(arg0: c_int) -> c_char;
   // proto:  QString QFontDatabase::styleString(const QFontInfo & fontInfo);
-  fn _ZN13QFontDatabase11styleStringERK9QFontInfo(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZN13QFontDatabase11styleStringERK9QFontInfo(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  bool QFontDatabase::isBitmapScalable(const QString & family, const QString & style);
-  fn _ZNK13QFontDatabase16isBitmapScalableERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> c_char;
+  fn _ZNK13QFontDatabase16isBitmapScalableERK7QStringS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> c_char;
   // proto:  bool QFontDatabase::isSmoothlyScalable(const QString & family, const QString & style);
-  fn _ZNK13QFontDatabase18isSmoothlyScalableERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> c_char;
+  fn _ZNK13QFontDatabase18isSmoothlyScalableERK7QStringS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> c_char;
   // proto:  bool QFontDatabase::bold(const QString & family, const QString & style);
-  fn _ZNK13QFontDatabase4boldERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> c_char;
+  fn _ZNK13QFontDatabase4boldERK7QStringS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> c_char;
   // proto: static int QFontDatabase::addApplicationFont(const QString & fileName);
   fn _ZN13QFontDatabase18addApplicationFontERK7QString(arg0: *mut c_void) -> c_int;
   // proto: static QList<int> QFontDatabase::standardSizes();
@@ -84,14 +84,15 @@ extern {
 
 // body block begin =>
 // class sizeof(QFontDatabase)=8
+#[derive(Default)]
 pub struct QFontDatabase {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QFontDatabase {
-  pub fn inheritFrom(qthis: *mut c_void) -> QFontDatabase {
-    return QFontDatabase{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QFontDatabase {
+    return QFontDatabase{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  QList<int> QFontDatabase::pointSizes(const QString & family, const QString & style);
@@ -137,7 +138,7 @@ impl<'a> /*trait*/ QFontDatabase_styleString<QString> for (&'a QFont) {
     // unsafe{_ZN13QFontDatabase11styleStringERK5QFont()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN13QFontDatabase11styleStringERK5QFont(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -234,10 +235,10 @@ impl<'a> /*trait*/ QFontDatabase_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QFontDatabaseC1Ev()};
     let ctysz: c_int = unsafe{QFontDatabase_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN13QFontDatabaseC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN13QFontDatabaseC1Ev()};
-    let rsthis = QFontDatabase{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN13QFontDatabaseC1Ev()} as u64;
+    let rsthis = QFontDatabase{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -336,7 +337,7 @@ impl<'a> /*trait*/ QFontDatabase_font<QFont> for (&'a QString, &'a QString, i32)
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2  as c_int;
     let mut ret = unsafe {_ZNK13QFontDatabase4fontERK7QStringS2_i(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QFont::inheritFrom(ret);
+    let mut ret1 = QFont::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -517,7 +518,7 @@ impl<'a> /*trait*/ QFontDatabase_styleString<QString> for (&'a QFontInfo) {
     // unsafe{_ZN13QFontDatabase11styleStringERK9QFontInfo()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN13QFontDatabase11styleStringERK9QFontInfo(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }

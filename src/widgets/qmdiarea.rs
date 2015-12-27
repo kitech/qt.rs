@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtWidgets/qmdiarea.h
 // dst-file: /src/widgets/qmdiarea.rs
 //
@@ -35,69 +35,72 @@ use super::super::core::qsize::QSize; // 771
 extern {
   fn QMdiArea_Class_Size() -> c_int;
   // proto:  void QMdiArea::activateNextSubWindow();
-  fn _ZN8QMdiArea21activateNextSubWindowEv(qthis: *mut c_void);
+  fn _ZN8QMdiArea21activateNextSubWindowEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QMdiArea::setBackground(const QBrush & background);
-  fn _ZN8QMdiArea13setBackgroundERK6QBrush(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN8QMdiArea13setBackgroundERK6QBrush(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMdiArea::~QMdiArea();
-  fn _ZN8QMdiAreaD0Ev(qthis: *mut c_void);
+  fn _ZN8QMdiAreaD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QMdiArea::removeSubWindow(QWidget * widget);
-  fn _ZN8QMdiArea15removeSubWindowEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN8QMdiArea15removeSubWindowEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMdiArea::setTabsClosable(bool closable);
-  fn _ZN8QMdiArea15setTabsClosableEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN8QMdiArea15setTabsClosableEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QMdiSubWindow * QMdiArea::currentSubWindow();
-  fn _ZNK8QMdiArea16currentSubWindowEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK8QMdiArea16currentSubWindowEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QMdiArea::tabsMovable();
-  fn _ZNK8QMdiArea11tabsMovableEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK8QMdiArea11tabsMovableEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QMdiArea::activatePreviousSubWindow();
-  fn _ZN8QMdiArea25activatePreviousSubWindowEv(qthis: *mut c_void);
+  fn _ZN8QMdiArea25activatePreviousSubWindowEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QMdiArea::setDocumentMode(bool enabled);
-  fn _ZN8QMdiArea15setDocumentModeEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN8QMdiArea15setDocumentModeEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  bool QMdiArea::documentMode();
-  fn _ZNK8QMdiArea12documentModeEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK8QMdiArea12documentModeEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QMdiArea::setActiveSubWindow(QMdiSubWindow * window);
-  fn _ZN8QMdiArea18setActiveSubWindowEP13QMdiSubWindow(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN8QMdiArea18setActiveSubWindowEP13QMdiSubWindow(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QMdiSubWindow * QMdiArea::activeSubWindow();
-  fn _ZNK8QMdiArea15activeSubWindowEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK8QMdiArea15activeSubWindowEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QMdiArea::setTabsMovable(bool movable);
-  fn _ZN8QMdiArea14setTabsMovableEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN8QMdiArea14setTabsMovableEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  const QMetaObject * QMdiArea::metaObject();
-  fn _ZNK8QMdiArea10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK8QMdiArea10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QMdiArea::QMdiArea(QWidget * parent);
   fn dector_ZN8QMdiAreaC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN8QMdiAreaC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN8QMdiAreaC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QSize QMdiArea::sizeHint();
-  fn _ZNK8QMdiArea8sizeHintEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK8QMdiArea8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QMdiArea::closeAllSubWindows();
-  fn _ZN8QMdiArea18closeAllSubWindowsEv(qthis: *mut c_void);
+  fn _ZN8QMdiArea18closeAllSubWindowsEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QMdiArea::QMdiArea(const QMdiArea & );
   fn dector_ZN8QMdiAreaC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN8QMdiAreaC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN8QMdiAreaC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMdiArea::subWindowActivated(QMdiSubWindow * );
-  fn _ZN8QMdiArea18subWindowActivatedEP13QMdiSubWindow(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN8QMdiArea18subWindowActivatedEP13QMdiSubWindow(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMdiArea::cascadeSubWindows();
-  fn _ZN8QMdiArea17cascadeSubWindowsEv(qthis: *mut c_void);
+  fn _ZN8QMdiArea17cascadeSubWindowsEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QMdiArea::closeActiveSubWindow();
-  fn _ZN8QMdiArea20closeActiveSubWindowEv(qthis: *mut c_void);
+  fn _ZN8QMdiArea20closeActiveSubWindowEv(qthis: u64 /* *mut c_void*/);
   // proto:  QBrush QMdiArea::background();
-  fn _ZNK8QMdiArea10backgroundEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK8QMdiArea10backgroundEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QMdiArea::tileSubWindows();
-  fn _ZN8QMdiArea14tileSubWindowsEv(qthis: *mut c_void);
+  fn _ZN8QMdiArea14tileSubWindowsEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QMdiArea::tabsClosable();
-  fn _ZNK8QMdiArea12tabsClosableEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK8QMdiArea12tabsClosableEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QSize QMdiArea::minimumSizeHint();
-  fn _ZNK8QMdiArea15minimumSizeHintEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK8QMdiArea15minimumSizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn QMdiArea_SlotProxy_connect__ZN8QMdiArea18subWindowActivatedEP13QMdiSubWindow(qthis: *mut c_void, fptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QMdiArea)=1
+#[derive(Default)]
 pub struct QMdiArea {
   qbase: QAbstractScrollArea,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _subWindowActivated_1: QMdiArea_subWindowActivated_signal,
 }
 
 impl /*struct*/ QMdiArea {
-  pub fn inheritFrom(qthis: *mut c_void) -> QMdiArea {
-    return QMdiArea{qbase: QAbstractScrollArea::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QMdiArea {
+    return QMdiArea{qbase: QAbstractScrollArea::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QMdiArea {
@@ -243,7 +246,7 @@ impl<'a> /*trait*/ QMdiArea_currentSubWindow<QMdiSubWindow> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMdiArea16currentSubWindowEv()};
     let mut ret = unsafe {_ZNK8QMdiArea16currentSubWindowEv(rsthis.qclsinst)};
-    let mut ret1 = QMdiSubWindow::inheritFrom(ret);
+    let mut ret1 = QMdiSubWindow::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -381,7 +384,7 @@ impl<'a> /*trait*/ QMdiArea_activeSubWindow<QMdiSubWindow> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMdiArea15activeSubWindowEv()};
     let mut ret = unsafe {_ZNK8QMdiArea15activeSubWindowEv(rsthis.qclsinst)};
-    let mut ret1 = QMdiSubWindow::inheritFrom(ret);
+    let mut ret1 = QMdiSubWindow::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -451,11 +454,11 @@ impl<'a> /*trait*/ QMdiArea_New for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMdiAreaC1EP7QWidget()};
     let ctysz: c_int = unsafe{QMdiArea_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN8QMdiAreaC1EP7QWidget(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN8QMdiAreaC1EP7QWidget(arg0)};
-    let rsthis = QMdiArea{/**/qbase: QAbstractScrollArea::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN8QMdiAreaC1EP7QWidget(arg0)} as u64;
+    let rsthis = QMdiArea{qbase: QAbstractScrollArea::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -479,7 +482,7 @@ impl<'a> /*trait*/ QMdiArea_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMdiArea8sizeHintEv()};
     let mut ret = unsafe {_ZNK8QMdiArea8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize::inheritFrom(ret);
+    let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -513,11 +516,11 @@ impl<'a> /*trait*/ QMdiArea_New for (&'a QMdiArea) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMdiAreaC1ERKS_()};
     let ctysz: c_int = unsafe{QMdiArea_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN8QMdiAreaC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN8QMdiAreaC1ERKS_(arg0)};
-    let rsthis = QMdiArea{/**/qbase: QAbstractScrollArea::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN8QMdiAreaC1ERKS_(arg0)} as u64;
+    let rsthis = QMdiArea{qbase: QAbstractScrollArea::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -608,7 +611,7 @@ impl<'a> /*trait*/ QMdiArea_background<QBrush> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMdiArea10backgroundEv()};
     let mut ret = unsafe {_ZNK8QMdiArea10backgroundEv(rsthis.qclsinst)};
-    let mut ret1 = QBrush::inheritFrom(ret);
+    let mut ret1 = QBrush::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -677,11 +680,37 @@ impl<'a> /*trait*/ QMdiArea_minimumSizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMdiArea15minimumSizeHintEv()};
     let mut ret = unsafe {_ZNK8QMdiArea15minimumSizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize::inheritFrom(ret);
+    let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
 }
 
+#[derive(Default)] // for QMdiArea_subWindowActivated
+pub struct QMdiArea_subWindowActivated_signal{poi:u64}
+impl /* struct */ QMdiArea {
+  pub fn subWindowActivated_1(self) -> QMdiArea_subWindowActivated_signal {
+     return QMdiArea_subWindowActivated_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QMdiArea_subWindowActivated_signal {
+  pub fn connect<T: QMdiArea_subWindowActivated_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QMdiArea_subWindowActivated_signal_connect {
+  fn connect(self, sigthis: QMdiArea_subWindowActivated_signal);
+}
+
+// subWindowActivated(class QMdiSubWindow *)
+extern fn QMdiArea_subWindowActivated_signal_connect_cb_0(arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QMdiArea_subWindowActivated_signal_connect for (extern fn(QMdiSubWindow)) {
+  fn connect(self, sigthis: QMdiArea_subWindowActivated_signal) {
+    // do smth...
+    unsafe {QMdiArea_SlotProxy_connect__ZN8QMdiArea18subWindowActivatedEP13QMdiSubWindow(sigthis.poi as *mut c_void, QMdiArea_subWindowActivated_signal_connect_cb_0 as *mut c_void)};
+  }
+}
 // <= body block end
 

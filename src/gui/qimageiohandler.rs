@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtGui/qimageiohandler.h
 // dst-file: /src/gui/qimageiohandler.rs
 //
@@ -38,70 +38,72 @@ extern {
   fn QImageIOHandler_Class_Size() -> c_int;
   // proto:  void QImageIOHandler::QImageIOHandler(const QImageIOHandler & );
   fn dector_ZN15QImageIOHandlerC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN15QImageIOHandlerC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN15QImageIOHandlerC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QImageIOHandler::imageCount();
-  fn _ZNK15QImageIOHandler10imageCountEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK15QImageIOHandler10imageCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  QRect QImageIOHandler::currentImageRect();
-  fn _ZNK15QImageIOHandler16currentImageRectEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK15QImageIOHandler16currentImageRectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QImageIOHandler::jumpToImage(int imageNumber);
-  fn _ZN15QImageIOHandler11jumpToImageEi(qthis: *mut c_void, arg0: c_int) -> c_char;
+  fn _ZN15QImageIOHandler11jumpToImageEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
   // proto:  int QImageIOHandler::currentImageNumber();
-  fn _ZNK15QImageIOHandler18currentImageNumberEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK15QImageIOHandler18currentImageNumberEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QImageIOHandler::setFormat(const QByteArray & format);
-  fn _ZN15QImageIOHandler9setFormatERK10QByteArray(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN15QImageIOHandler9setFormatERK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QImageIOHandler::jumpToNextImage();
-  fn _ZN15QImageIOHandler15jumpToNextImageEv(qthis: *mut c_void) -> c_char;
+  fn _ZN15QImageIOHandler15jumpToNextImageEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QImageIOHandler::~QImageIOHandler();
-  fn _ZN15QImageIOHandlerD0Ev(qthis: *mut c_void);
+  fn _ZN15QImageIOHandlerD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  int QImageIOHandler::loopCount();
-  fn _ZNK15QImageIOHandler9loopCountEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK15QImageIOHandler9loopCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QImageIOHandler::QImageIOHandler();
   fn dector_ZN15QImageIOHandlerC1Ev() -> *mut c_void;
-  fn _ZN15QImageIOHandlerC1Ev(qthis: *mut c_void);
+  fn _ZN15QImageIOHandlerC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QImageIOHandler::read(QImage * image);
-  fn _ZN15QImageIOHandler4readEP6QImage(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn _ZN15QImageIOHandler4readEP6QImage(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  QByteArray QImageIOHandler::name();
-  fn _ZNK15QImageIOHandler4nameEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK15QImageIOHandler4nameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QByteArray QImageIOHandler::format();
-  fn _ZNK15QImageIOHandler6formatEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK15QImageIOHandler6formatEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QImageIOHandler::nextImageDelay();
-  fn _ZNK15QImageIOHandler14nextImageDelayEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK15QImageIOHandler14nextImageDelayEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QImageIOHandler::setDevice(QIODevice * device);
-  fn _ZN15QImageIOHandler9setDeviceEP9QIODevice(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN15QImageIOHandler9setDeviceEP9QIODevice(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QImageIOHandler::canRead();
-  fn _ZNK15QImageIOHandler7canReadEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK15QImageIOHandler7canReadEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QIODevice * QImageIOHandler::device();
-  fn _ZNK15QImageIOHandler6deviceEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK15QImageIOHandler6deviceEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QImageIOHandler::write(const QImage & image);
-  fn _ZN15QImageIOHandler5writeERK6QImage(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn _ZN15QImageIOHandler5writeERK6QImage(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   fn QImageIOPlugin_Class_Size() -> c_int;
   // proto:  const QMetaObject * QImageIOPlugin::metaObject();
-  fn _ZNK14QImageIOPlugin10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK14QImageIOPlugin10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QImageIOPlugin::~QImageIOPlugin();
-  fn _ZN14QImageIOPluginD0Ev(qthis: *mut c_void);
+  fn _ZN14QImageIOPluginD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QImageIOHandler * QImageIOPlugin::create(QIODevice * device, const QByteArray & format);
-  fn _ZNK14QImageIOPlugin6createEP9QIODeviceRK10QByteArray(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
+  fn _ZNK14QImageIOPlugin6createEP9QIODeviceRK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  void QImageIOPlugin::QImageIOPlugin(QObject * parent);
   fn dector_ZN14QImageIOPluginC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN14QImageIOPluginC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN14QImageIOPluginC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QImageIOHandler)=1
+#[derive(Default)]
 pub struct QImageIOHandler {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 // class sizeof(QImageIOPlugin)=1
+#[derive(Default)]
 pub struct QImageIOPlugin {
   qbase: QObject,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QImageIOHandler {
-  pub fn inheritFrom(qthis: *mut c_void) -> QImageIOHandler {
-    return QImageIOHandler{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QImageIOHandler {
+    return QImageIOHandler{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  void QImageIOHandler::QImageIOHandler(const QImageIOHandler & );
@@ -123,11 +125,11 @@ impl<'a> /*trait*/ QImageIOHandler_New for (&'a QImageIOHandler) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QImageIOHandlerC1ERKS_()};
     let ctysz: c_int = unsafe{QImageIOHandler_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN15QImageIOHandlerC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN15QImageIOHandlerC1ERKS_(arg0)};
-    let rsthis = QImageIOHandler{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN15QImageIOHandlerC1ERKS_(arg0)} as u64;
+    let rsthis = QImageIOHandler{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -174,7 +176,7 @@ impl<'a> /*trait*/ QImageIOHandler_currentImageRect<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QImageIOHandler16currentImageRectEv()};
     let mut ret = unsafe {_ZNK15QImageIOHandler16currentImageRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRect::inheritFrom(ret);
+    let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -324,10 +326,10 @@ impl<'a> /*trait*/ QImageIOHandler_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QImageIOHandlerC1Ev()};
     let ctysz: c_int = unsafe{QImageIOHandler_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN15QImageIOHandlerC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN15QImageIOHandlerC1Ev()};
-    let rsthis = QImageIOHandler{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN15QImageIOHandlerC1Ev()} as u64;
+    let rsthis = QImageIOHandler{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -375,7 +377,7 @@ impl<'a> /*trait*/ QImageIOHandler_name<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QImageIOHandler4nameEv()};
     let mut ret = unsafe {_ZNK15QImageIOHandler4nameEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -399,7 +401,7 @@ impl<'a> /*trait*/ QImageIOHandler_format<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QImageIOHandler6formatEv()};
     let mut ret = unsafe {_ZNK15QImageIOHandler6formatEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -492,7 +494,7 @@ impl<'a> /*trait*/ QImageIOHandler_device<QIODevice> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QImageIOHandler6deviceEv()};
     let mut ret = unsafe {_ZNK15QImageIOHandler6deviceEv(rsthis.qclsinst)};
-    let mut ret1 = QIODevice::inheritFrom(ret);
+    let mut ret1 = QIODevice::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -523,8 +525,8 @@ impl<'a> /*trait*/ QImageIOHandler_write<i8> for (&'a QImage) {
 }
 
 impl /*struct*/ QImageIOPlugin {
-  pub fn inheritFrom(qthis: *mut c_void) -> QImageIOPlugin {
-    return QImageIOPlugin{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QImageIOPlugin {
+    return QImageIOPlugin{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QImageIOPlugin {
@@ -603,7 +605,7 @@ impl<'a> /*trait*/ QImageIOPlugin_create<QImageIOHandler> for (&'a QIODevice, &'
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK14QImageIOPlugin6createEP9QIODeviceRK10QByteArray(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QImageIOHandler::inheritFrom(ret);
+    let mut ret1 = QImageIOHandler::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -628,11 +630,11 @@ impl<'a> /*trait*/ QImageIOPlugin_New for (&'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QImageIOPluginC1EP7QObject()};
     let ctysz: c_int = unsafe{QImageIOPlugin_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN14QImageIOPluginC1EP7QObject(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN14QImageIOPluginC1EP7QObject(arg0)};
-    let rsthis = QImageIOPlugin{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN14QImageIOPluginC1EP7QObject(arg0)} as u64;
+    let rsthis = QImageIOPlugin{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }

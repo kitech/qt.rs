@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qchar.h
 // dst-file: /src/core/qchar.rs
 //
@@ -31,63 +31,63 @@ use super::qstring::QString; // 773
 extern {
   fn QLatin1Char_Class_Size() -> c_int;
   // proto:  ushort QLatin1Char::unicode();
-  fn _ZNK11QLatin1Char7unicodeEv(qthis: *mut c_void) -> c_ushort;
+  fn _ZNK11QLatin1Char7unicodeEv(qthis: u64 /* *mut c_void*/) -> c_ushort;
   // proto:  void QLatin1Char::QLatin1Char(char c);
   fn dector_ZN11QLatin1CharC1Ec(arg0: c_char) -> *mut c_void;
-  fn _ZN11QLatin1CharC1Ec(qthis: *mut c_void, arg0: c_char);
+  fn _ZN11QLatin1CharC1Ec(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  char QLatin1Char::toLatin1();
-  fn _ZNK11QLatin1Char8toLatin1Ev(qthis: *mut c_void) -> c_char;
+  fn _ZNK11QLatin1Char8toLatin1Ev(qthis: u64 /* *mut c_void*/) -> c_char;
   fn QChar_Class_Size() -> c_int;
   // proto: static uint QChar::toUpper(uint ucs4);
   fn _ZN5QChar7toUpperEj(arg0: c_uint) -> c_uint;
   // proto:  bool QChar::hasMirrored();
-  fn demth_ZNK5QChar11hasMirroredEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK5QChar11hasMirroredEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto: static ushort QChar::lowSurrogate(uint ucs4);
   fn demth_ZN5QChar12lowSurrogateEj(arg0: c_uint) -> c_ushort;
   // proto: static bool QChar::isSymbol(uint ucs4);
   fn _ZN5QChar8isSymbolEj(arg0: c_uint) -> c_char;
   // proto:  uchar QChar::cell();
-  fn _ZNK5QChar4cellEv(qthis: *mut c_void) -> c_uchar;
+  fn _ZNK5QChar4cellEv(qthis: u64 /* *mut c_void*/) -> c_uchar;
   // proto: static uint QChar::surrogateToUcs4(QChar high, QChar low);
   fn demth_ZN5QChar15surrogateToUcs4ES_S_(arg0: *mut c_void, arg1: *mut c_void) -> c_uint;
   // proto: static bool QChar::isTitleCase(uint ucs4);
   fn demth_ZN5QChar11isTitleCaseEj(arg0: c_uint) -> c_char;
   // proto:  bool QChar::isNull();
-  fn _ZNK5QChar6isNullEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK5QChar6isNullEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  int QChar::digitValue();
-  fn demth_ZNK5QChar10digitValueEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK5QChar10digitValueEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  QChar QChar::toTitleCase();
-  fn demth_ZNK5QChar11toTitleCaseEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK5QChar11toTitleCaseEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto: static bool QChar::isLower(uint ucs4);
   fn demth_ZN5QChar7isLowerEj(arg0: c_uint) -> c_char;
   // proto:  bool QChar::isLowSurrogate();
-  fn _ZNK5QChar14isLowSurrogateEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK5QChar14isLowSurrogateEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto: static bool QChar::isPrint(uint ucs4);
   fn _ZN5QChar7isPrintEj(arg0: c_uint) -> c_char;
   // proto:  bool QChar::isSymbol();
-  fn demth_ZNK5QChar8isSymbolEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK5QChar8isSymbolEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QChar::isLower();
-  fn _ZNK5QChar7isLowerEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK5QChar7isLowerEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QChar QChar::mirroredChar();
-  fn demth_ZNK5QChar12mirroredCharEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK5QChar12mirroredCharEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  uchar QChar::row();
-  fn _ZNK5QChar3rowEv(qthis: *mut c_void) -> c_uchar;
+  fn _ZNK5QChar3rowEv(qthis: u64 /* *mut c_void*/) -> c_uchar;
   // proto:  bool QChar::isDigit();
-  fn _ZNK5QChar7isDigitEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK5QChar7isDigitEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto: static uint QChar::toTitleCase(uint ucs4);
   fn _ZN5QChar11toTitleCaseEj(arg0: c_uint) -> c_uint;
   // proto:  bool QChar::isSurrogate();
-  fn _ZNK5QChar11isSurrogateEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK5QChar11isSurrogateEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto: static bool QChar::hasMirrored(uint ucs4);
   fn _ZN5QChar11hasMirroredEj(arg0: c_uint) -> c_char;
   // proto:  bool QChar::isNumber();
-  fn _ZNK5QChar8isNumberEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK5QChar8isNumberEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto: static bool QChar::isHighSurrogate(uint ucs4);
   fn demth_ZN5QChar15isHighSurrogateEj(arg0: c_uint) -> c_char;
   // proto: static uint QChar::toCaseFolded(uint ucs4);
   fn _ZN5QChar12toCaseFoldedEj(arg0: c_uint) -> c_uint;
   // proto:  bool QChar::isMark();
-  fn demth_ZNK5QChar6isMarkEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK5QChar6isMarkEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto: static uint QChar::surrogateToUcs4(ushort high, ushort low);
   fn demth_ZN5QChar15surrogateToUcs4Ett(arg0: c_ushort, arg1: c_ushort) -> c_uint;
   // proto: static uint QChar::toLower(uint ucs4);
@@ -95,52 +95,52 @@ extern {
   // proto: static uint QChar::mirroredChar(uint ucs4);
   fn _ZN5QChar12mirroredCharEj(arg0: c_uint) -> c_uint;
   // proto:  void QChar::setRow(uchar row);
-  fn demth_ZN5QChar6setRowEh(qthis: *mut c_void, arg0: c_uchar);
+  fn demth_ZN5QChar6setRowEh(qthis: u64 /* *mut c_void*/, arg0: c_uchar);
   // proto: static QString QChar::decomposition(uint ucs4);
   fn _ZN5QChar13decompositionEj(arg0: c_uint) -> *mut c_void;
   // proto: static int QChar::digitValue(uint ucs4);
   fn _ZN5QChar10digitValueEj(arg0: c_uint) -> c_int;
   // proto:  void QChar::setCell(uchar cell);
-  fn demth_ZN5QChar7setCellEh(qthis: *mut c_void, arg0: c_uchar);
+  fn demth_ZN5QChar7setCellEh(qthis: u64 /* *mut c_void*/, arg0: c_uchar);
   // proto: static bool QChar::isUpper(uint ucs4);
   fn demth_ZN5QChar7isUpperEj(arg0: c_uint) -> c_char;
   // proto:  void QChar::QChar(uchar c, uchar r);
   fn dector_ZN5QCharC1Ehh(arg0: c_uchar, arg1: c_uchar) -> *mut c_void;
-  fn _ZN5QCharC1Ehh(qthis: *mut c_void, arg0: c_uchar, arg1: c_uchar);
+  fn _ZN5QCharC1Ehh(qthis: u64 /* *mut c_void*/, arg0: c_uchar, arg1: c_uchar);
   // proto:  QChar QChar::toCaseFolded();
-  fn demth_ZNK5QChar12toCaseFoldedEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK5QChar12toCaseFoldedEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QChar::isPrint();
-  fn demth_ZNK5QChar7isPrintEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK5QChar7isPrintEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QChar::QChar(char c);
   fn dector_ZN5QCharC1Ec(arg0: c_char) -> *mut c_void;
-  fn _ZN5QCharC1Ec(qthis: *mut c_void, arg0: c_char);
+  fn _ZN5QCharC1Ec(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  bool QChar::isPunct();
-  fn demth_ZNK5QChar7isPunctEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK5QChar7isPunctEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QString QChar::decomposition();
-  fn _ZNK5QChar13decompositionEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK5QChar13decompositionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QChar::QChar(uint rc);
   fn dector_ZN5QCharC1Ej(arg0: c_uint) -> *mut c_void;
-  fn _ZN5QCharC1Ej(qthis: *mut c_void, arg0: c_uint);
+  fn _ZN5QCharC1Ej(qthis: u64 /* *mut c_void*/, arg0: c_uint);
   // proto:  void QChar::QChar(int rc);
   fn dector_ZN5QCharC1Ei(arg0: c_int) -> *mut c_void;
-  fn _ZN5QCharC1Ei(qthis: *mut c_void, arg0: c_int);
+  fn _ZN5QCharC1Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  bool QChar::isSpace();
-  fn _ZNK5QChar7isSpaceEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK5QChar7isSpaceEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QChar::QChar(short rc);
   fn dector_ZN5QCharC1Es(arg0: c_short) -> *mut c_void;
-  fn _ZN5QCharC1Es(qthis: *mut c_void, arg0: c_short);
+  fn _ZN5QCharC1Es(qthis: u64 /* *mut c_void*/, arg0: c_short);
   // proto:  void QChar::QChar();
   fn dector_ZN5QCharC1Ev() -> *mut c_void;
-  fn _ZN5QCharC1Ev(qthis: *mut c_void);
+  fn _ZN5QCharC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QChar::QChar(ushort rc);
   fn dector_ZN5QCharC1Et(arg0: c_ushort) -> *mut c_void;
-  fn _ZN5QCharC1Et(qthis: *mut c_void, arg0: c_ushort);
+  fn _ZN5QCharC1Et(qthis: u64 /* *mut c_void*/, arg0: c_ushort);
   // proto:  bool QChar::isUpper();
-  fn _ZNK5QChar7isUpperEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK5QChar7isUpperEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto: static unsigned char QChar::combiningClass(uint ucs4);
   fn _ZN5QChar14combiningClassEj(arg0: c_uint) -> c_uchar;
   // proto:  bool QChar::isNonCharacter();
-  fn _ZNK5QChar14isNonCharacterEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK5QChar14isNonCharacterEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto: static bool QChar::isLetterOrNumber(uint ucs4);
   fn demth_ZN5QChar16isLetterOrNumberEj(arg0: c_uint) -> c_char;
   // proto: static bool QChar::isDigit(uint ucs4);
@@ -148,34 +148,34 @@ extern {
   // proto: static bool QChar::isPunct(uint ucs4);
   fn _ZN5QChar7isPunctEj(arg0: c_uint) -> c_char;
   // proto:  bool QChar::isTitleCase();
-  fn _ZNK5QChar11isTitleCaseEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK5QChar11isTitleCaseEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QChar::isLetter();
-  fn _ZNK5QChar8isLetterEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK5QChar8isLetterEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  unsigned char QChar::combiningClass();
-  fn demth_ZNK5QChar14combiningClassEv(qthis: *mut c_void) -> c_uchar;
+  fn demth_ZNK5QChar14combiningClassEv(qthis: u64 /* *mut c_void*/) -> c_uchar;
   // proto:  bool QChar::isHighSurrogate();
-  fn _ZNK5QChar15isHighSurrogateEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK5QChar15isHighSurrogateEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto: static ushort QChar::highSurrogate(uint ucs4);
   fn demth_ZN5QChar13highSurrogateEj(arg0: c_uint) -> c_ushort;
   // proto: static bool QChar::requiresSurrogates(uint ucs4);
   fn demth_ZN5QChar18requiresSurrogatesEj(arg0: c_uint) -> c_char;
   // proto:  bool QChar::isLetterOrNumber();
-  fn _ZNK5QChar16isLetterOrNumberEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK5QChar16isLetterOrNumberEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  ushort & QChar::unicode();
-  fn demth_ZN5QChar7unicodeEv(qthis: *mut c_void);
+  fn demth_ZN5QChar7unicodeEv(qthis: u64 /* *mut c_void*/);
   // proto: static bool QChar::isLowSurrogate(uint ucs4);
   fn demth_ZN5QChar14isLowSurrogateEj(arg0: c_uint) -> c_char;
   // proto: static bool QChar::isNumber(uint ucs4);
   fn demth_ZN5QChar8isNumberEj(arg0: c_uint) -> c_char;
   // proto:  QChar QChar::toLower();
-  fn demth_ZNK5QChar7toLowerEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK5QChar7toLowerEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QChar::QChar(uchar c);
   fn dector_ZN5QCharC1Eh(arg0: c_uchar) -> *mut c_void;
-  fn _ZN5QCharC1Eh(qthis: *mut c_void, arg0: c_uchar);
+  fn _ZN5QCharC1Eh(qthis: u64 /* *mut c_void*/, arg0: c_uchar);
   // proto: static bool QChar::isLetter(uint ucs4);
   fn demth_ZN5QChar8isLetterEj(arg0: c_uint) -> c_char;
   // proto:  QChar QChar::toUpper();
-  fn demth_ZNK5QChar7toUpperEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK5QChar7toUpperEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto: static bool QChar::isSpace(uint ucs4);
   fn demth_ZN5QChar7isSpaceEj(arg0: c_uint) -> c_char;
   // proto: static QChar QChar::fromLatin1(char c);
@@ -187,25 +187,27 @@ extern {
   // proto: static bool QChar::isNonCharacter(uint ucs4);
   fn demth_ZN5QChar14isNonCharacterEj(arg0: c_uint) -> c_char;
   // proto:  char QChar::toLatin1();
-  fn _ZNK5QChar8toLatin1Ev(qthis: *mut c_void) -> c_char;
+  fn _ZNK5QChar8toLatin1Ev(qthis: u64 /* *mut c_void*/) -> c_char;
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QLatin1Char)=1
+#[derive(Default)]
 pub struct QLatin1Char {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 // class sizeof(QChar)=2
+#[derive(Default)]
 pub struct QChar {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QLatin1Char {
-  pub fn inheritFrom(qthis: *mut c_void) -> QLatin1Char {
-    return QLatin1Char{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QLatin1Char {
+    return QLatin1Char{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  ushort QLatin1Char::unicode();
@@ -250,11 +252,11 @@ impl<'a> /*trait*/ QLatin1Char_New for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QLatin1CharC1Ec()};
     let ctysz: c_int = unsafe{QLatin1Char_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_char;
     // unsafe {_ZN11QLatin1CharC1Ec(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN11QLatin1CharC1Ec(arg0)};
-    let rsthis = QLatin1Char{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN11QLatin1CharC1Ec(arg0)} as u64;
+    let rsthis = QLatin1Char{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -284,8 +286,8 @@ impl<'a> /*trait*/ QLatin1Char_toLatin1<i8> for () {
 }
 
 impl /*struct*/ QChar {
-  pub fn inheritFrom(qthis: *mut c_void) -> QChar {
-    return QChar{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QChar {
+    return QChar{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto: static uint QChar::toUpper(uint ucs4);
@@ -519,7 +521,7 @@ impl<'a> /*trait*/ QChar_toTitleCase<QChar> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar11toTitleCaseEv()};
     let mut ret = unsafe {demth_ZNK5QChar11toTitleCaseEv(rsthis.qclsinst)};
-    let mut ret1 = QChar::inheritFrom(ret);
+    let mut ret1 = QChar::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -660,7 +662,7 @@ impl<'a> /*trait*/ QChar_mirroredChar<QChar> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar12mirroredCharEv()};
     let mut ret = unsafe {demth_ZNK5QChar12mirroredCharEv(rsthis.qclsinst)};
-    let mut ret1 = QChar::inheritFrom(ret);
+    let mut ret1 = QChar::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -980,7 +982,7 @@ impl<'a> /*trait*/ QChar_decomposition_s<QString> for (u32) {
     // unsafe{_ZN5QChar13decompositionEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {_ZN5QChar13decompositionEj(arg0)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1076,12 +1078,12 @@ impl<'a> /*trait*/ QChar_New for (u8, u8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QCharC1Ehh()};
     let ctysz: c_int = unsafe{QChar_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_uchar;
     let arg1 = self.1  as c_uchar;
     // unsafe {_ZN5QCharC1Ehh(qthis, arg0, arg1)};
-    let qthis: *mut c_void = unsafe {dector_ZN5QCharC1Ehh(arg0, arg1)};
-    let rsthis = QChar{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN5QCharC1Ehh(arg0, arg1)} as u64;
+    let rsthis = QChar{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1105,7 +1107,7 @@ impl<'a> /*trait*/ QChar_toCaseFolded<QChar> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar12toCaseFoldedEv()};
     let mut ret = unsafe {demth_ZNK5QChar12toCaseFoldedEv(rsthis.qclsinst)};
-    let mut ret1 = QChar::inheritFrom(ret);
+    let mut ret1 = QChar::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1140,11 +1142,11 @@ impl<'a> /*trait*/ QChar_New for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QCharC1Ec()};
     let ctysz: c_int = unsafe{QChar_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_char;
     // unsafe {_ZN5QCharC1Ec(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN5QCharC1Ec(arg0)};
-    let rsthis = QChar{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN5QCharC1Ec(arg0)} as u64;
+    let rsthis = QChar{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1191,7 +1193,7 @@ impl<'a> /*trait*/ QChar_decomposition<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar13decompositionEv()};
     let mut ret = unsafe {_ZNK5QChar13decompositionEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1203,11 +1205,11 @@ impl<'a> /*trait*/ QChar_New for (u32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QCharC1Ej()};
     let ctysz: c_int = unsafe{QChar_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_uint;
     // unsafe {_ZN5QCharC1Ej(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN5QCharC1Ej(arg0)};
-    let rsthis = QChar{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN5QCharC1Ej(arg0)} as u64;
+    let rsthis = QChar{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1219,11 +1221,11 @@ impl<'a> /*trait*/ QChar_New for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QCharC1Ei()};
     let ctysz: c_int = unsafe{QChar_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
     // unsafe {_ZN5QCharC1Ei(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN5QCharC1Ei(arg0)};
-    let rsthis = QChar{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN5QCharC1Ei(arg0)} as u64;
+    let rsthis = QChar{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1258,11 +1260,11 @@ impl<'a> /*trait*/ QChar_New for (i16) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QCharC1Es()};
     let ctysz: c_int = unsafe{QChar_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_short;
     // unsafe {_ZN5QCharC1Es(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN5QCharC1Es(arg0)};
-    let rsthis = QChar{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN5QCharC1Es(arg0)} as u64;
+    let rsthis = QChar{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1274,10 +1276,10 @@ impl<'a> /*trait*/ QChar_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QCharC1Ev()};
     let ctysz: c_int = unsafe{QChar_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN5QCharC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN5QCharC1Ev()};
-    let rsthis = QChar{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN5QCharC1Ev()} as u64;
+    let rsthis = QChar{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1289,11 +1291,11 @@ impl<'a> /*trait*/ QChar_New for (u16) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QCharC1Et()};
     let ctysz: c_int = unsafe{QChar_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_ushort;
     // unsafe {_ZN5QCharC1Et(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN5QCharC1Et(arg0)};
-    let rsthis = QChar{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN5QCharC1Et(arg0)} as u64;
+    let rsthis = QChar{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1692,7 +1694,7 @@ impl<'a> /*trait*/ QChar_toLower<QChar> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar7toLowerEv()};
     let mut ret = unsafe {demth_ZNK5QChar7toLowerEv(rsthis.qclsinst)};
-    let mut ret1 = QChar::inheritFrom(ret);
+    let mut ret1 = QChar::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1704,11 +1706,11 @@ impl<'a> /*trait*/ QChar_New for (u8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QCharC1Eh()};
     let ctysz: c_int = unsafe{QChar_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_uchar;
     // unsafe {_ZN5QCharC1Eh(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN5QCharC1Eh(arg0)};
-    let rsthis = QChar{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN5QCharC1Eh(arg0)} as u64;
+    let rsthis = QChar{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1756,7 +1758,7 @@ impl<'a> /*trait*/ QChar_toUpper<QChar> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar7toUpperEv()};
     let mut ret = unsafe {demth_ZNK5QChar7toUpperEv(rsthis.qclsinst)};
-    let mut ret1 = QChar::inheritFrom(ret);
+    let mut ret1 = QChar::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1805,7 +1807,7 @@ impl<'a> /*trait*/ QChar_fromLatin1_s<QChar> for (i8) {
     // unsafe{_ZN5QChar10fromLatin1Ec()};
     let arg0 = self  as c_char;
     let mut ret = unsafe {_ZN5QChar10fromLatin1Ec(arg0)};
-    let mut ret1 = QChar::inheritFrom(ret);
+    let mut ret1 = QChar::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtGui/qdrag.h
 // dst-file: /src/gui/qdrag.rs
 //
@@ -34,45 +34,50 @@ use super::super::core::qpoint::QPoint; // 771
 extern {
   fn QDrag_Class_Size() -> c_int;
   // proto:  QObject * QDrag::target();
-  fn _ZNK5QDrag6targetEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK5QDrag6targetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QMimeData * QDrag::mimeData();
-  fn _ZNK5QDrag8mimeDataEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK5QDrag8mimeDataEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QDrag::QDrag(QObject * dragSource);
   fn dector_ZN5QDragC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN5QDragC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN5QDragC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QDrag::~QDrag();
-  fn _ZN5QDragD0Ev(qthis: *mut c_void);
+  fn _ZN5QDragD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QDrag::QDrag(const QDrag & );
   fn dector_ZN5QDragC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN5QDragC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN5QDragC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QDrag::setHotSpot(const QPoint & hotspot);
-  fn _ZN5QDrag10setHotSpotERK6QPoint(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN5QDrag10setHotSpotERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QDrag::metaObject();
-  fn _ZNK5QDrag10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK5QDrag10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QDrag::setMimeData(QMimeData * data);
-  fn _ZN5QDrag11setMimeDataEP9QMimeData(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN5QDrag11setMimeDataEP9QMimeData(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QPixmap QDrag::pixmap();
-  fn _ZNK5QDrag6pixmapEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK5QDrag6pixmapEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QPoint QDrag::hotSpot();
-  fn _ZNK5QDrag7hotSpotEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK5QDrag7hotSpotEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QDrag::setPixmap(const QPixmap & );
-  fn _ZN5QDrag9setPixmapERK7QPixmap(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN5QDrag9setPixmapERK7QPixmap(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QObject * QDrag::source();
-  fn _ZNK5QDrag6sourceEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK5QDrag6sourceEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QDrag::targetChanged(QObject * newTarget);
-  fn _ZN5QDrag13targetChangedEP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN5QDrag13targetChangedEP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn QDrag_SlotProxy_connect__ZN5QDrag13targetChangedEP7QObject(qthis: *mut c_void, fptr: *mut c_void);
+  fn QDrag_SlotProxy_connect__ZN5QDrag13actionChangedEN2Qt10DropActionE(qthis: *mut c_void, fptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QDrag)=1
+#[derive(Default)]
 pub struct QDrag {
   qbase: QObject,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _targetChanged_1: QDrag_targetChanged_signal,
+  pub _actionChanged_1: QDrag_actionChanged_signal,
 }
 
 impl /*struct*/ QDrag {
-  pub fn inheritFrom(qthis: *mut c_void) -> QDrag {
-    return QDrag{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QDrag {
+    return QDrag{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QDrag {
@@ -105,7 +110,7 @@ impl<'a> /*trait*/ QDrag_target<QObject> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDrag6targetEv()};
     let mut ret = unsafe {_ZNK5QDrag6targetEv(rsthis.qclsinst)};
-    let mut ret1 = QObject::inheritFrom(ret);
+    let mut ret1 = QObject::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -129,7 +134,7 @@ impl<'a> /*trait*/ QDrag_mimeData<QMimeData> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDrag8mimeDataEv()};
     let mut ret = unsafe {_ZNK5QDrag8mimeDataEv(rsthis.qclsinst)};
-    let mut ret1 = QMimeData::inheritFrom(ret);
+    let mut ret1 = QMimeData::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -154,11 +159,11 @@ impl<'a> /*trait*/ QDrag_New for (&'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QDragC1EP7QObject()};
     let ctysz: c_int = unsafe{QDrag_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN5QDragC1EP7QObject(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN5QDragC1EP7QObject(arg0)};
-    let rsthis = QDrag{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN5QDragC1EP7QObject(arg0)} as u64;
+    let rsthis = QDrag{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -192,11 +197,11 @@ impl<'a> /*trait*/ QDrag_New for (&'a QDrag) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QDragC1ERKS_()};
     let ctysz: c_int = unsafe{QDrag_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN5QDragC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN5QDragC1ERKS_(arg0)};
-    let rsthis = QDrag{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN5QDragC1ERKS_(arg0)} as u64;
+    let rsthis = QDrag{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -288,7 +293,7 @@ impl<'a> /*trait*/ QDrag_pixmap<QPixmap> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDrag6pixmapEv()};
     let mut ret = unsafe {_ZNK5QDrag6pixmapEv(rsthis.qclsinst)};
-    let mut ret1 = QPixmap::inheritFrom(ret);
+    let mut ret1 = QPixmap::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -312,7 +317,7 @@ impl<'a> /*trait*/ QDrag_hotSpot<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDrag7hotSpotEv()};
     let mut ret = unsafe {_ZNK5QDrag7hotSpotEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint::inheritFrom(ret);
+    let mut ret1 = QPoint::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -359,7 +364,7 @@ impl<'a> /*trait*/ QDrag_source<QObject> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDrag6sourceEv()};
     let mut ret = unsafe {_ZNK5QDrag6sourceEv(rsthis.qclsinst)};
-    let mut ret1 = QObject::inheritFrom(ret);
+    let mut ret1 = QObject::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -388,5 +393,57 @@ impl<'a> /*trait*/ QDrag_targetChanged<()> for (&'a QObject) {
   }
 }
 
+#[derive(Default)] // for QDrag_targetChanged
+pub struct QDrag_targetChanged_signal{poi:u64}
+impl /* struct */ QDrag {
+  pub fn targetChanged_1(self) -> QDrag_targetChanged_signal {
+     return QDrag_targetChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QDrag_targetChanged_signal {
+  pub fn connect<T: QDrag_targetChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QDrag_targetChanged_signal_connect {
+  fn connect(self, sigthis: QDrag_targetChanged_signal);
+}
+
+#[derive(Default)] // for QDrag_actionChanged
+pub struct QDrag_actionChanged_signal{poi:u64}
+impl /* struct */ QDrag {
+  pub fn actionChanged_1(self) -> QDrag_actionChanged_signal {
+     return QDrag_actionChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QDrag_actionChanged_signal {
+  pub fn connect<T: QDrag_actionChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QDrag_actionChanged_signal_connect {
+  fn connect(self, sigthis: QDrag_actionChanged_signal);
+}
+
+// targetChanged(class QObject *)
+extern fn QDrag_targetChanged_signal_connect_cb_0(arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QDrag_targetChanged_signal_connect for (extern fn(QObject)) {
+  fn connect(self, sigthis: QDrag_targetChanged_signal) {
+    // do smth...
+    unsafe {QDrag_SlotProxy_connect__ZN5QDrag13targetChangedEP7QObject(sigthis.poi as *mut c_void, QDrag_targetChanged_signal_connect_cb_0 as *mut c_void)};
+  }
+}
+// actionChanged(Qt::DropAction)
+extern fn QDrag_actionChanged_signal_connect_cb_1(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QDrag_actionChanged_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QDrag_actionChanged_signal) {
+    // do smth...
+    unsafe {QDrag_SlotProxy_connect__ZN5QDrag13actionChangedEN2Qt10DropActionE(sigthis.poi as *mut c_void, QDrag_actionChanged_signal_connect_cb_1 as *mut c_void)};
+  }
+}
 // <= body block end
 

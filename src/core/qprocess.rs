@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qprocess.h
 // dst-file: /src/core/qprocess.rs
 //
@@ -36,140 +36,151 @@ use super::qobject::QObject; // 773
 extern {
   fn QProcess_Class_Size() -> c_int;
   // proto:  void QProcess::close();
-  fn _ZN8QProcess5closeEv(qthis: *mut c_void);
+  fn _ZN8QProcess5closeEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QProcess::setEnvironment(const QStringList & environment);
-  fn _ZN8QProcess14setEnvironmentERK11QStringList(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN8QProcess14setEnvironmentERK11QStringList(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static bool QProcess::startDetached(const QString & program, const QStringList & arguments);
   fn _ZN8QProcess13startDetachedERK7QStringRK11QStringList(arg0: *mut c_void, arg1: *mut c_void) -> c_char;
   // proto: static bool QProcess::startDetached(const QString & command);
   fn _ZN8QProcess13startDetachedERK7QString(arg0: *mut c_void) -> c_char;
   // proto:  bool QProcess::atEnd();
-  fn _ZNK8QProcess5atEndEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK8QProcess5atEndEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto: static QStringList QProcess::systemEnvironment();
   fn _ZN8QProcess17systemEnvironmentEv();
   // proto:  void QProcess::setProcessEnvironment(const QProcessEnvironment & environment);
-  fn _ZN8QProcess21setProcessEnvironmentERK19QProcessEnvironment(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN8QProcess21setProcessEnvironmentERK19QProcessEnvironment(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QProcess::QProcess(const QProcess & );
   fn dector_ZN8QProcessC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN8QProcessC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN8QProcessC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  Q_PID QProcess::pid();
-  fn _ZNK8QProcess3pidEv(qthis: *mut c_void) -> c_longlong;
+  fn _ZNK8QProcess3pidEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
   // proto:  void QProcess::setArguments(const QStringList & arguments);
-  fn _ZN8QProcess12setArgumentsERK11QStringList(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN8QProcess12setArgumentsERK11QStringList(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QProcess::~QProcess();
-  fn _ZN8QProcessD0Ev(qthis: *mut c_void);
+  fn _ZN8QProcessD0Ev(qthis: u64 /* *mut c_void*/);
   // proto: static int QProcess::execute(const QString & command);
   fn _ZN8QProcess7executeERK7QString(arg0: *mut c_void) -> c_int;
   // proto:  void QProcess::closeWriteChannel();
-  fn _ZN8QProcess17closeWriteChannelEv(qthis: *mut c_void);
+  fn _ZN8QProcess17closeWriteChannelEv(qthis: u64 /* *mut c_void*/);
   // proto: static bool QProcess::startDetached(const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid);
   fn _ZN8QProcess13startDetachedERK7QStringRK11QStringListS2_Px(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_longlong) -> c_char;
   // proto:  QProcessEnvironment QProcess::processEnvironment();
-  fn _ZNK8QProcess18processEnvironmentEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK8QProcess18processEnvironmentEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QByteArray QProcess::readAllStandardOutput();
-  fn _ZN8QProcess21readAllStandardOutputEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZN8QProcess21readAllStandardOutputEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto: static QString QProcess::nullDevice();
   fn _ZN8QProcess10nullDeviceEv() -> *mut c_void;
   // proto: static int QProcess::execute(const QString & program, const QStringList & arguments);
   fn _ZN8QProcess7executeERK7QStringRK11QStringList(arg0: *mut c_void, arg1: *mut c_void) -> c_int;
   // proto:  bool QProcess::waitForBytesWritten(int msecs);
-  fn _ZN8QProcess19waitForBytesWrittenEi(qthis: *mut c_void, arg0: c_int) -> c_char;
+  fn _ZN8QProcess19waitForBytesWrittenEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
   // proto:  void QProcess::QProcess(QObject * parent);
   fn dector_ZN8QProcessC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN8QProcessC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN8QProcessC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QString QProcess::program();
-  fn _ZNK8QProcess7programEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK8QProcess7programEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  qint64 QProcess::processId();
-  fn _ZNK8QProcess9processIdEv(qthis: *mut c_void) -> c_longlong;
+  fn _ZNK8QProcess9processIdEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
   // proto:  QStringList QProcess::arguments();
-  fn _ZNK8QProcess9argumentsEv(qthis: *mut c_void);
+  fn _ZNK8QProcess9argumentsEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QProcess::isSequential();
-  fn _ZNK8QProcess12isSequentialEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK8QProcess12isSequentialEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QProcess::waitForReadyRead(int msecs);
-  fn _ZN8QProcess16waitForReadyReadEi(qthis: *mut c_void, arg0: c_int) -> c_char;
+  fn _ZN8QProcess16waitForReadyReadEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
   // proto:  void QProcess::setWorkingDirectory(const QString & dir);
-  fn _ZN8QProcess19setWorkingDirectoryERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN8QProcess19setWorkingDirectoryERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QProcess::terminate();
-  fn _ZN8QProcess9terminateEv(qthis: *mut c_void);
+  fn _ZN8QProcess9terminateEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QProcess::kill();
-  fn _ZN8QProcess4killEv(qthis: *mut c_void);
+  fn _ZN8QProcess4killEv(qthis: u64 /* *mut c_void*/);
   // proto:  qint64 QProcess::bytesAvailable();
-  fn _ZNK8QProcess14bytesAvailableEv(qthis: *mut c_void) -> c_longlong;
+  fn _ZNK8QProcess14bytesAvailableEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
   // proto:  const QMetaObject * QProcess::metaObject();
-  fn _ZNK8QProcess10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK8QProcess10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QProcess::waitForStarted(int msecs);
-  fn _ZN8QProcess14waitForStartedEi(qthis: *mut c_void, arg0: c_int) -> c_char;
+  fn _ZN8QProcess14waitForStartedEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
   // proto:  QByteArray QProcess::readAllStandardError();
-  fn _ZN8QProcess20readAllStandardErrorEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZN8QProcess20readAllStandardErrorEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QProcess::exitCode();
-  fn _ZNK8QProcess8exitCodeEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK8QProcess8exitCodeEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QProcess::finished(int exitCode);
-  fn _ZN8QProcess8finishedEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN8QProcess8finishedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  QStringList QProcess::environment();
-  fn _ZNK8QProcess11environmentEv(qthis: *mut c_void);
+  fn _ZNK8QProcess11environmentEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QProcess::canReadLine();
-  fn _ZNK8QProcess11canReadLineEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK8QProcess11canReadLineEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QProcess::setStandardOutputProcess(QProcess * destination);
-  fn _ZN8QProcess24setStandardOutputProcessEPS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN8QProcess24setStandardOutputProcessEPS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QProcess::waitForFinished(int msecs);
-  fn _ZN8QProcess15waitForFinishedEi(qthis: *mut c_void, arg0: c_int) -> c_char;
+  fn _ZN8QProcess15waitForFinishedEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
   // proto:  qint64 QProcess::bytesToWrite();
-  fn _ZNK8QProcess12bytesToWriteEv(qthis: *mut c_void) -> c_longlong;
+  fn _ZNK8QProcess12bytesToWriteEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
   // proto:  QString QProcess::workingDirectory();
-  fn _ZNK8QProcess16workingDirectoryEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK8QProcess16workingDirectoryEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QProcess::setProgram(const QString & program);
-  fn _ZN8QProcess10setProgramERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN8QProcess10setProgramERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QProcess::setStandardInputFile(const QString & fileName);
-  fn _ZN8QProcess20setStandardInputFileERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN8QProcess20setStandardInputFileERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QProcessEnvironment_Class_Size() -> c_int;
   // proto:  bool QProcessEnvironment::contains(const QString & name);
-  fn _ZNK19QProcessEnvironment8containsERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn _ZNK19QProcessEnvironment8containsERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  QStringList QProcessEnvironment::keys();
-  fn _ZNK19QProcessEnvironment4keysEv(qthis: *mut c_void);
+  fn _ZNK19QProcessEnvironment4keysEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QProcessEnvironment::remove(const QString & name);
-  fn _ZN19QProcessEnvironment6removeERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN19QProcessEnvironment6removeERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QProcessEnvironment::clear();
-  fn _ZN19QProcessEnvironment5clearEv(qthis: *mut c_void);
+  fn _ZN19QProcessEnvironment5clearEv(qthis: u64 /* *mut c_void*/);
   // proto:  QString QProcessEnvironment::value(const QString & name, const QString & defaultValue);
-  fn _ZNK19QProcessEnvironment5valueERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
+  fn _ZNK19QProcessEnvironment5valueERK7QStringS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  bool QProcessEnvironment::isEmpty();
-  fn _ZNK19QProcessEnvironment7isEmptyEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK19QProcessEnvironment7isEmptyEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QProcessEnvironment::~QProcessEnvironment();
-  fn _ZN19QProcessEnvironmentD0Ev(qthis: *mut c_void);
+  fn _ZN19QProcessEnvironmentD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QProcessEnvironment::swap(QProcessEnvironment & other);
-  fn demth_ZN19QProcessEnvironment4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN19QProcessEnvironment4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QProcessEnvironment::QProcessEnvironment(const QProcessEnvironment & other);
   fn dector_ZN19QProcessEnvironmentC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN19QProcessEnvironmentC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN19QProcessEnvironmentC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static QProcessEnvironment QProcessEnvironment::systemEnvironment();
   fn _ZN19QProcessEnvironment17systemEnvironmentEv() -> *mut c_void;
   // proto:  void QProcessEnvironment::insert(const QString & name, const QString & value);
-  fn _ZN19QProcessEnvironment6insertERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN19QProcessEnvironment6insertERK7QStringS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  QStringList QProcessEnvironment::toStringList();
-  fn _ZNK19QProcessEnvironment12toStringListEv(qthis: *mut c_void);
+  fn _ZNK19QProcessEnvironment12toStringListEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QProcessEnvironment::QProcessEnvironment();
   fn dector_ZN19QProcessEnvironmentC1Ev() -> *mut c_void;
-  fn _ZN19QProcessEnvironmentC1Ev(qthis: *mut c_void);
+  fn _ZN19QProcessEnvironmentC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QProcessEnvironment::insert(const QProcessEnvironment & e);
-  fn _ZN19QProcessEnvironment6insertERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN19QProcessEnvironment6insertERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn QProcess_SlotProxy_connect__ZN8QProcess5errorENS_12ProcessErrorE(qthis: *mut c_void, fptr: *mut c_void);
+  fn QProcess_SlotProxy_connect__ZN8QProcess8finishedEiNS_10ExitStatusE(qthis: *mut c_void, fptr: *mut c_void);
+  fn QProcess_SlotProxy_connect__ZN8QProcess8finishedEi(qthis: *mut c_void, fptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QProcess)=1
+#[derive(Default)]
 pub struct QProcess {
   qbase: QIODevice,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _stateChanged_1: QProcess_stateChanged_signal,
+  pub _started_1: QProcess_started_signal,
+  pub _finished_1: QProcess_finished_signal,
+  pub _readyReadStandardError_1: QProcess_readyReadStandardError_signal,
+  pub _error_1: QProcess_error_signal,
+  pub _readyReadStandardOutput_1: QProcess_readyReadStandardOutput_signal,
 }
 
 // class sizeof(QProcessEnvironment)=1
+#[derive(Default)]
 pub struct QProcessEnvironment {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QProcess {
-  pub fn inheritFrom(qthis: *mut c_void) -> QProcess {
-    return QProcess{qbase: QIODevice::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QProcess {
+    return QProcess{qbase: QIODevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QProcess {
@@ -353,11 +364,11 @@ impl<'a> /*trait*/ QProcess_New for (&'a QProcess) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcessC1ERKS_()};
     let ctysz: c_int = unsafe{QProcess_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN8QProcessC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN8QProcessC1ERKS_(arg0)};
-    let rsthis = QProcess{/**/qbase: QIODevice::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN8QProcessC1ERKS_(arg0)} as u64;
+    let rsthis = QProcess{qbase: QIODevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -510,7 +521,7 @@ impl<'a> /*trait*/ QProcess_processEnvironment<QProcessEnvironment> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QProcess18processEnvironmentEv()};
     let mut ret = unsafe {_ZNK8QProcess18processEnvironmentEv(rsthis.qclsinst)};
-    let mut ret1 = QProcessEnvironment::inheritFrom(ret);
+    let mut ret1 = QProcessEnvironment::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -534,7 +545,7 @@ impl<'a> /*trait*/ QProcess_readAllStandardOutput<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcess21readAllStandardOutputEv()};
     let mut ret = unsafe {_ZN8QProcess21readAllStandardOutputEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -558,7 +569,7 @@ impl<'a> /*trait*/ QProcess_nullDevice_s<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcess10nullDeviceEv()};
     let mut ret = unsafe {_ZN8QProcess10nullDeviceEv()};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -607,11 +618,11 @@ impl<'a> /*trait*/ QProcess_New for (&'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcessC1EP7QObject()};
     let ctysz: c_int = unsafe{QProcess_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN8QProcessC1EP7QObject(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN8QProcessC1EP7QObject(arg0)};
-    let rsthis = QProcess{/**/qbase: QIODevice::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN8QProcessC1EP7QObject(arg0)} as u64;
+    let rsthis = QProcess{qbase: QIODevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -635,7 +646,7 @@ impl<'a> /*trait*/ QProcess_program<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QProcess7programEv()};
     let mut ret = unsafe {_ZNK8QProcess7programEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -887,7 +898,7 @@ impl<'a> /*trait*/ QProcess_readAllStandardError<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcess20readAllStandardErrorEv()};
     let mut ret = unsafe {_ZN8QProcess20readAllStandardErrorEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1072,7 +1083,7 @@ impl<'a> /*trait*/ QProcess_workingDirectory<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QProcess16workingDirectoryEv()};
     let mut ret = unsafe {_ZNK8QProcess16workingDirectoryEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1125,8 +1136,8 @@ impl<'a> /*trait*/ QProcess_setStandardInputFile<()> for (&'a QString) {
 }
 
 impl /*struct*/ QProcessEnvironment {
-  pub fn inheritFrom(qthis: *mut c_void) -> QProcessEnvironment {
-    return QProcessEnvironment{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QProcessEnvironment {
+    return QProcessEnvironment{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  bool QProcessEnvironment::contains(const QString & name);
@@ -1240,7 +1251,7 @@ impl<'a> /*trait*/ QProcessEnvironment_value<QString> for (&'a QString, &'a QStr
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK19QProcessEnvironment5valueERK7QStringS2_(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1333,11 +1344,11 @@ impl<'a> /*trait*/ QProcessEnvironment_New for (&'a QProcessEnvironment) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QProcessEnvironmentC1ERKS_()};
     let ctysz: c_int = unsafe{QProcessEnvironment_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN19QProcessEnvironmentC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN19QProcessEnvironmentC1ERKS_(arg0)};
-    let rsthis = QProcessEnvironment{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN19QProcessEnvironmentC1ERKS_(arg0)} as u64;
+    let rsthis = QProcessEnvironment{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1361,7 +1372,7 @@ impl<'a> /*trait*/ QProcessEnvironment_systemEnvironment_s<QProcessEnvironment> 
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QProcessEnvironment17systemEnvironmentEv()};
     let mut ret = unsafe {_ZN19QProcessEnvironment17systemEnvironmentEv()};
-    let mut ret1 = QProcessEnvironment::inheritFrom(ret);
+    let mut ret1 = QProcessEnvironment::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1419,10 +1430,10 @@ impl<'a> /*trait*/ QProcessEnvironment_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QProcessEnvironmentC1Ev()};
     let ctysz: c_int = unsafe{QProcessEnvironment_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN19QProcessEnvironmentC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN19QProcessEnvironmentC1Ev()};
-    let rsthis = QProcessEnvironment{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN19QProcessEnvironmentC1Ev()} as u64;
+    let rsthis = QProcessEnvironment{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1439,5 +1450,131 @@ impl<'a> /*trait*/ QProcessEnvironment_insert<()> for (&'a QProcessEnvironment) 
   }
 }
 
+#[derive(Default)] // for QProcess_stateChanged
+pub struct QProcess_stateChanged_signal{poi:u64}
+impl /* struct */ QProcess {
+  pub fn stateChanged_1(self) -> QProcess_stateChanged_signal {
+     return QProcess_stateChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QProcess_stateChanged_signal {
+  pub fn connect<T: QProcess_stateChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QProcess_stateChanged_signal_connect {
+  fn connect(self, sigthis: QProcess_stateChanged_signal);
+}
+
+#[derive(Default)] // for QProcess_started
+pub struct QProcess_started_signal{poi:u64}
+impl /* struct */ QProcess {
+  pub fn started_1(self) -> QProcess_started_signal {
+     return QProcess_started_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QProcess_started_signal {
+  pub fn connect<T: QProcess_started_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QProcess_started_signal_connect {
+  fn connect(self, sigthis: QProcess_started_signal);
+}
+
+#[derive(Default)] // for QProcess_finished
+pub struct QProcess_finished_signal{poi:u64}
+impl /* struct */ QProcess {
+  pub fn finished_1(self) -> QProcess_finished_signal {
+     return QProcess_finished_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QProcess_finished_signal {
+  pub fn connect<T: QProcess_finished_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QProcess_finished_signal_connect {
+  fn connect(self, sigthis: QProcess_finished_signal);
+}
+
+#[derive(Default)] // for QProcess_readyReadStandardError
+pub struct QProcess_readyReadStandardError_signal{poi:u64}
+impl /* struct */ QProcess {
+  pub fn readyReadStandardError_1(self) -> QProcess_readyReadStandardError_signal {
+     return QProcess_readyReadStandardError_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QProcess_readyReadStandardError_signal {
+  pub fn connect<T: QProcess_readyReadStandardError_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QProcess_readyReadStandardError_signal_connect {
+  fn connect(self, sigthis: QProcess_readyReadStandardError_signal);
+}
+
+#[derive(Default)] // for QProcess_error
+pub struct QProcess_error_signal{poi:u64}
+impl /* struct */ QProcess {
+  pub fn error_1(self) -> QProcess_error_signal {
+     return QProcess_error_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QProcess_error_signal {
+  pub fn connect<T: QProcess_error_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QProcess_error_signal_connect {
+  fn connect(self, sigthis: QProcess_error_signal);
+}
+
+#[derive(Default)] // for QProcess_readyReadStandardOutput
+pub struct QProcess_readyReadStandardOutput_signal{poi:u64}
+impl /* struct */ QProcess {
+  pub fn readyReadStandardOutput_1(self) -> QProcess_readyReadStandardOutput_signal {
+     return QProcess_readyReadStandardOutput_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QProcess_readyReadStandardOutput_signal {
+  pub fn connect<T: QProcess_readyReadStandardOutput_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QProcess_readyReadStandardOutput_signal_connect {
+  fn connect(self, sigthis: QProcess_readyReadStandardOutput_signal);
+}
+
+// error(class QProcess::ProcessError)
+extern fn QProcess_error_signal_connect_cb_0(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QProcess_error_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QProcess_error_signal) {
+    // do smth...
+    unsafe {QProcess_SlotProxy_connect__ZN8QProcess5errorENS_12ProcessErrorE(sigthis.poi as *mut c_void, QProcess_error_signal_connect_cb_0 as *mut c_void)};
+  }
+}
+// finished(int, class QProcess::ExitStatus)
+extern fn QProcess_finished_signal_connect_cb_1(arg0: c_int, arg1: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QProcess_finished_signal_connect for (extern fn(i32, i32)) {
+  fn connect(self, sigthis: QProcess_finished_signal) {
+    // do smth...
+    unsafe {QProcess_SlotProxy_connect__ZN8QProcess8finishedEiNS_10ExitStatusE(sigthis.poi as *mut c_void, QProcess_finished_signal_connect_cb_1 as *mut c_void)};
+  }
+}
+// finished(int)
+extern fn QProcess_finished_signal_connect_cb_2(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QProcess_finished_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QProcess_finished_signal) {
+    // do smth...
+    unsafe {QProcess_SlotProxy_connect__ZN8QProcess8finishedEi(sigthis.poi as *mut c_void, QProcess_finished_signal_connect_cb_2 as *mut c_void)};
+  }
+}
 // <= body block end
 

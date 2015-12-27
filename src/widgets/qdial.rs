@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtWidgets/qdial.h
 // dst-file: /src/widgets/qdial.rs
 //
@@ -33,45 +33,46 @@ use super::qwidget::QWidget; // 773
 extern {
   fn QDial_Class_Size() -> c_int;
   // proto:  bool QDial::wrapping();
-  fn _ZNK5QDial8wrappingEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK5QDial8wrappingEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QDial::~QDial();
-  fn _ZN5QDialD0Ev(qthis: *mut c_void);
+  fn _ZN5QDialD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  const QMetaObject * QDial::metaObject();
-  fn _ZNK5QDial10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK5QDial10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QDial::notchesVisible();
-  fn _ZNK5QDial14notchesVisibleEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK5QDial14notchesVisibleEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QDial::setNotchTarget(double target);
-  fn _ZN5QDial14setNotchTargetEd(qthis: *mut c_void, arg0: c_double);
+  fn _ZN5QDial14setNotchTargetEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QDial::setWrapping(bool on);
-  fn _ZN5QDial11setWrappingEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN5QDial11setWrappingEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  int QDial::notchSize();
-  fn _ZNK5QDial9notchSizeEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK5QDial9notchSizeEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QDial::setNotchesVisible(bool visible);
-  fn _ZN5QDial17setNotchesVisibleEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN5QDial17setNotchesVisibleEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QSize QDial::minimumSizeHint();
-  fn _ZNK5QDial15minimumSizeHintEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK5QDial15minimumSizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QDial::QDial(const QDial & );
   fn dector_ZN5QDialC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN5QDialC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN5QDialC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  qreal QDial::notchTarget();
-  fn _ZNK5QDial11notchTargetEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK5QDial11notchTargetEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  QSize QDial::sizeHint();
-  fn _ZNK5QDial8sizeHintEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK5QDial8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QDial::QDial(QWidget * parent);
   fn dector_ZN5QDialC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN5QDialC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN5QDialC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QDial)=1
+#[derive(Default)]
 pub struct QDial {
   qbase: QAbstractSlider,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QDial {
-  pub fn inheritFrom(qthis: *mut c_void) -> QDial {
-    return QDial{qbase: QAbstractSlider::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QDial {
+    return QDial{qbase: QAbstractSlider::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QDial {
@@ -286,7 +287,7 @@ impl<'a> /*trait*/ QDial_minimumSizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDial15minimumSizeHintEv()};
     let mut ret = unsafe {_ZNK5QDial15minimumSizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize::inheritFrom(ret);
+    let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -311,11 +312,11 @@ impl<'a> /*trait*/ QDial_New for (&'a QDial) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QDialC1ERKS_()};
     let ctysz: c_int = unsafe{QDial_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN5QDialC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN5QDialC1ERKS_(arg0)};
-    let rsthis = QDial{/**/qbase: QAbstractSlider::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN5QDialC1ERKS_(arg0)} as u64;
+    let rsthis = QDial{qbase: QAbstractSlider::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -362,7 +363,7 @@ impl<'a> /*trait*/ QDial_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDial8sizeHintEv()};
     let mut ret = unsafe {_ZNK5QDial8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize::inheritFrom(ret);
+    let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -374,11 +375,11 @@ impl<'a> /*trait*/ QDial_New for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QDialC1EP7QWidget()};
     let ctysz: c_int = unsafe{QDial_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN5QDialC1EP7QWidget(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN5QDialC1EP7QWidget(arg0)};
-    let rsthis = QDial{/**/qbase: QAbstractSlider::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN5QDialC1EP7QWidget(arg0)} as u64;
+    let rsthis = QDial{qbase: QAbstractSlider::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }

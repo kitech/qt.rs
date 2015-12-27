@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtGui/qopengldebug.h
 // dst-file: /src/gui/qopengldebug.rs
 //
@@ -34,63 +34,67 @@ extern {
   fn QOpenGLDebugMessage_Class_Size() -> c_int;
   // proto:  void QOpenGLDebugMessage::QOpenGLDebugMessage();
   fn dector_ZN19QOpenGLDebugMessageC1Ev() -> *mut c_void;
-  fn _ZN19QOpenGLDebugMessageC1Ev(qthis: *mut c_void);
+  fn _ZN19QOpenGLDebugMessageC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QOpenGLDebugMessage::~QOpenGLDebugMessage();
-  fn _ZN19QOpenGLDebugMessageD0Ev(qthis: *mut c_void);
+  fn _ZN19QOpenGLDebugMessageD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  GLuint QOpenGLDebugMessage::id();
-  fn _ZNK19QOpenGLDebugMessage2idEv(qthis: *mut c_void) -> c_uint;
+  fn _ZNK19QOpenGLDebugMessage2idEv(qthis: u64 /* *mut c_void*/) -> c_uint;
   // proto:  void QOpenGLDebugMessage::QOpenGLDebugMessage(const QOpenGLDebugMessage & debugMessage);
   fn dector_ZN19QOpenGLDebugMessageC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN19QOpenGLDebugMessageC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN19QOpenGLDebugMessageC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QString QOpenGLDebugMessage::message();
-  fn _ZNK19QOpenGLDebugMessage7messageEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK19QOpenGLDebugMessage7messageEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QOpenGLDebugMessage::swap(QOpenGLDebugMessage & debugMessage);
-  fn demth_ZN19QOpenGLDebugMessage4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN19QOpenGLDebugMessage4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QOpenGLDebugLogger_Class_Size() -> c_int;
   // proto:  void QOpenGLDebugLogger::~QOpenGLDebugLogger();
-  fn _ZN18QOpenGLDebugLoggerD0Ev(qthis: *mut c_void);
+  fn _ZN18QOpenGLDebugLoggerD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  qint64 QOpenGLDebugLogger::maximumMessageLength();
-  fn _ZNK18QOpenGLDebugLogger20maximumMessageLengthEv(qthis: *mut c_void) -> c_longlong;
+  fn _ZNK18QOpenGLDebugLogger20maximumMessageLengthEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
   // proto:  bool QOpenGLDebugLogger::isLogging();
-  fn _ZNK18QOpenGLDebugLogger9isLoggingEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK18QOpenGLDebugLogger9isLoggingEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QOpenGLDebugLogger::stopLogging();
-  fn _ZN18QOpenGLDebugLogger11stopLoggingEv(qthis: *mut c_void);
+  fn _ZN18QOpenGLDebugLogger11stopLoggingEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QOpenGLDebugLogger::logMessage(const QOpenGLDebugMessage & debugMessage);
-  fn _ZN18QOpenGLDebugLogger10logMessageERK19QOpenGLDebugMessage(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN18QOpenGLDebugLogger10logMessageERK19QOpenGLDebugMessage(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QOpenGLDebugLogger::QOpenGLDebugLogger(const QOpenGLDebugLogger & );
   fn dector_ZN18QOpenGLDebugLoggerC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN18QOpenGLDebugLoggerC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN18QOpenGLDebugLoggerC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QOpenGLDebugLogger::messageLogged(const QOpenGLDebugMessage & debugMessage);
-  fn _ZN18QOpenGLDebugLogger13messageLoggedERK19QOpenGLDebugMessage(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN18QOpenGLDebugLogger13messageLoggedERK19QOpenGLDebugMessage(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QOpenGLDebugLogger::QOpenGLDebugLogger(QObject * parent);
   fn dector_ZN18QOpenGLDebugLoggerC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN18QOpenGLDebugLoggerC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN18QOpenGLDebugLoggerC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QOpenGLDebugLogger::metaObject();
-  fn _ZNK18QOpenGLDebugLogger10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK18QOpenGLDebugLogger10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  QList<QOpenGLDebugMessage> QOpenGLDebugLogger::loggedMessages();
-  fn _ZNK18QOpenGLDebugLogger14loggedMessagesEv(qthis: *mut c_void);
+  fn _ZNK18QOpenGLDebugLogger14loggedMessagesEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QOpenGLDebugLogger::popGroup();
-  fn _ZN18QOpenGLDebugLogger8popGroupEv(qthis: *mut c_void);
+  fn _ZN18QOpenGLDebugLogger8popGroupEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QOpenGLDebugLogger::initialize();
-  fn _ZN18QOpenGLDebugLogger10initializeEv(qthis: *mut c_void) -> c_char;
+  fn _ZN18QOpenGLDebugLogger10initializeEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn QOpenGLDebugLogger_SlotProxy_connect__ZN18QOpenGLDebugLogger13messageLoggedERK19QOpenGLDebugMessage(qthis: *mut c_void, fptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QOpenGLDebugMessage)=1
+#[derive(Default)]
 pub struct QOpenGLDebugMessage {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 // class sizeof(QOpenGLDebugLogger)=1
+#[derive(Default)]
 pub struct QOpenGLDebugLogger {
   qbase: QObject,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _messageLogged_1: QOpenGLDebugLogger_messageLogged_signal,
 }
 
 impl /*struct*/ QOpenGLDebugMessage {
-  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLDebugMessage {
-    return QOpenGLDebugMessage{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QOpenGLDebugMessage {
+    return QOpenGLDebugMessage{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  void QOpenGLDebugMessage::QOpenGLDebugMessage();
@@ -112,10 +116,10 @@ impl<'a> /*trait*/ QOpenGLDebugMessage_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QOpenGLDebugMessageC1Ev()};
     let ctysz: c_int = unsafe{QOpenGLDebugMessage_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN19QOpenGLDebugMessageC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN19QOpenGLDebugMessageC1Ev()};
-    let rsthis = QOpenGLDebugMessage{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN19QOpenGLDebugMessageC1Ev()} as u64;
+    let rsthis = QOpenGLDebugMessage{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -172,11 +176,11 @@ impl<'a> /*trait*/ QOpenGLDebugMessage_New for (&'a QOpenGLDebugMessage) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QOpenGLDebugMessageC1ERKS_()};
     let ctysz: c_int = unsafe{QOpenGLDebugMessage_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN19QOpenGLDebugMessageC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN19QOpenGLDebugMessageC1ERKS_(arg0)};
-    let rsthis = QOpenGLDebugMessage{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN19QOpenGLDebugMessageC1ERKS_(arg0)} as u64;
+    let rsthis = QOpenGLDebugMessage{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -200,7 +204,7 @@ impl<'a> /*trait*/ QOpenGLDebugMessage_message<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QOpenGLDebugMessage7messageEv()};
     let mut ret = unsafe {_ZNK19QOpenGLDebugMessage7messageEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -230,8 +234,8 @@ impl<'a> /*trait*/ QOpenGLDebugMessage_swap<()> for (&'a QOpenGLDebugMessage) {
 }
 
 impl /*struct*/ QOpenGLDebugLogger {
-  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLDebugLogger {
-    return QOpenGLDebugLogger{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QOpenGLDebugLogger {
+    return QOpenGLDebugLogger{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QOpenGLDebugLogger {
@@ -378,11 +382,11 @@ impl<'a> /*trait*/ QOpenGLDebugLogger_New for (&'a QOpenGLDebugLogger) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QOpenGLDebugLoggerC1ERKS_()};
     let ctysz: c_int = unsafe{QOpenGLDebugLogger_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN18QOpenGLDebugLoggerC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN18QOpenGLDebugLoggerC1ERKS_(arg0)};
-    let rsthis = QOpenGLDebugLogger{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN18QOpenGLDebugLoggerC1ERKS_(arg0)} as u64;
+    let rsthis = QOpenGLDebugLogger{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -417,11 +421,11 @@ impl<'a> /*trait*/ QOpenGLDebugLogger_New for (&'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QOpenGLDebugLoggerC1EP7QObject()};
     let ctysz: c_int = unsafe{QOpenGLDebugLogger_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN18QOpenGLDebugLoggerC1EP7QObject(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN18QOpenGLDebugLoggerC1EP7QObject(arg0)};
-    let rsthis = QOpenGLDebugLogger{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN18QOpenGLDebugLoggerC1EP7QObject(arg0)} as u64;
+    let rsthis = QOpenGLDebugLogger{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -516,5 +520,31 @@ impl<'a> /*trait*/ QOpenGLDebugLogger_initialize<i8> for () {
   }
 }
 
+#[derive(Default)] // for QOpenGLDebugLogger_messageLogged
+pub struct QOpenGLDebugLogger_messageLogged_signal{poi:u64}
+impl /* struct */ QOpenGLDebugLogger {
+  pub fn messageLogged_1(self) -> QOpenGLDebugLogger_messageLogged_signal {
+     return QOpenGLDebugLogger_messageLogged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QOpenGLDebugLogger_messageLogged_signal {
+  pub fn connect<T: QOpenGLDebugLogger_messageLogged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QOpenGLDebugLogger_messageLogged_signal_connect {
+  fn connect(self, sigthis: QOpenGLDebugLogger_messageLogged_signal);
+}
+
+// messageLogged(const class QOpenGLDebugMessage &)
+extern fn QOpenGLDebugLogger_messageLogged_signal_connect_cb_0(arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QOpenGLDebugLogger_messageLogged_signal_connect for (extern fn(QOpenGLDebugMessage)) {
+  fn connect(self, sigthis: QOpenGLDebugLogger_messageLogged_signal) {
+    // do smth...
+    unsafe {QOpenGLDebugLogger_SlotProxy_connect__ZN18QOpenGLDebugLogger13messageLoggedERK19QOpenGLDebugMessage(sigthis.poi as *mut c_void, QOpenGLDebugLogger_messageLogged_signal_connect_cb_0 as *mut c_void)};
+  }
+}
 // <= body block end
 

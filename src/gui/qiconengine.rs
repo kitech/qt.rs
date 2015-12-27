@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtGui/qiconengine.h
 // dst-file: /src/gui/qiconengine.rs
 //
@@ -36,31 +36,32 @@ use super::qpixmap::QPixmap; // 773
 extern {
   fn QIconEngine_Class_Size() -> c_int;
   // proto:  bool QIconEngine::read(QDataStream & in);
-  fn _ZN11QIconEngine4readER11QDataStream(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn _ZN11QIconEngine4readER11QDataStream(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  QString QIconEngine::iconName();
-  fn _ZNK11QIconEngine8iconNameEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK11QIconEngine8iconNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QIconEngine::write(QDataStream & out);
-  fn _ZNK11QIconEngine5writeER11QDataStream(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn _ZNK11QIconEngine5writeER11QDataStream(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  void QIconEngine::virtual_hook(int id, void * data);
-  fn _ZN11QIconEngine12virtual_hookEiPv(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void);
+  fn _ZN11QIconEngine12virtual_hookEiPv(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  QIconEngine * QIconEngine::clone();
-  fn _ZNK11QIconEngine5cloneEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK11QIconEngine5cloneEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QIconEngine::key();
-  fn _ZNK11QIconEngine3keyEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK11QIconEngine3keyEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QIconEngine::~QIconEngine();
-  fn _ZN11QIconEngineD0Ev(qthis: *mut c_void);
+  fn _ZN11QIconEngineD0Ev(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QIconEngine)=8
+#[derive(Default)]
 pub struct QIconEngine {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QIconEngine {
-  pub fn inheritFrom(qthis: *mut c_void) -> QIconEngine {
-    return QIconEngine{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QIconEngine {
+    return QIconEngine{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  bool QIconEngine::read(QDataStream & in);
@@ -105,7 +106,7 @@ impl<'a> /*trait*/ QIconEngine_iconName<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QIconEngine8iconNameEv()};
     let mut ret = unsafe {_ZNK11QIconEngine8iconNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -177,7 +178,7 @@ impl<'a> /*trait*/ QIconEngine_clone<QIconEngine> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QIconEngine5cloneEv()};
     let mut ret = unsafe {_ZNK11QIconEngine5cloneEv(rsthis.qclsinst)};
-    let mut ret1 = QIconEngine::inheritFrom(ret);
+    let mut ret1 = QIconEngine::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -201,7 +202,7 @@ impl<'a> /*trait*/ QIconEngine_key<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QIconEngine3keyEv()};
     let mut ret = unsafe {_ZNK11QIconEngine3keyEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }

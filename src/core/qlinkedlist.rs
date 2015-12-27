@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qlinkedlist.h
 // dst-file: /src/core/qlinkedlist.rs
 //
@@ -33,14 +33,15 @@ extern {
 
 // body block begin =>
 // class sizeof(QLinkedListData)=1
+#[derive(Default)]
 pub struct QLinkedListData {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QLinkedListData {
-  pub fn inheritFrom(qthis: *mut c_void) -> QLinkedListData {
-    return QLinkedListData{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QLinkedListData {
+    return QLinkedListData{qclsinst: qthis, ..Default::default()};
   }
 }
 // <= body block end

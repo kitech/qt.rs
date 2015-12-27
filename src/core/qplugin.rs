@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qplugin.h
 // dst-file: /src/core/qplugin.rs
 //
@@ -30,19 +30,20 @@ use std::ops::Deref;
 extern {
   fn QStaticPlugin_Class_Size() -> c_int;
   // proto:  QJsonObject QStaticPlugin::metaData();
-  fn _ZNK13QStaticPlugin8metaDataEv(qthis: *mut c_void);
+  fn _ZNK13QStaticPlugin8metaDataEv(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QStaticPlugin)=16
+#[derive(Default)]
 pub struct QStaticPlugin {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QStaticPlugin {
-  pub fn inheritFrom(qthis: *mut c_void) -> QStaticPlugin {
-    return QStaticPlugin{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QStaticPlugin {
+    return QStaticPlugin{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  QJsonObject QStaticPlugin::metaData();

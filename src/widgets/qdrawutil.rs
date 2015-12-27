@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtWidgets/qdrawutil.h
 // dst-file: /src/widgets/qdrawutil.rs
 //
@@ -33,14 +33,15 @@ extern {
 
 // body block begin =>
 // class sizeof(QTileRules)=8
+#[derive(Default)]
 pub struct QTileRules {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QTileRules {
-  pub fn inheritFrom(qthis: *mut c_void) -> QTileRules {
-    return QTileRules{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QTileRules {
+    return QTileRules{qclsinst: qthis, ..Default::default()};
   }
 }
 // <= body block end

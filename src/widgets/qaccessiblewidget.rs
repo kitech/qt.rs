@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:03 2015
 // src-file: /QtWidgets/qaccessiblewidget.h
 // dst-file: /src/widgets/qaccessiblewidget.rs
 //
@@ -37,48 +37,49 @@ use super::super::gui::qcolor::QColor; // 771
 extern {
   fn QAccessibleWidget_Class_Size() -> c_int;
   // proto:  int QAccessibleWidget::childCount();
-  fn _ZNK17QAccessibleWidget10childCountEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK17QAccessibleWidget10childCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  QAccessibleInterface * QAccessibleWidget::child(int index);
-  fn _ZNK17QAccessibleWidget5childEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
+  fn _ZNK17QAccessibleWidget5childEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  QWindow * QAccessibleWidget::window();
-  fn _ZNK17QAccessibleWidget6windowEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK17QAccessibleWidget6windowEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QRect QAccessibleWidget::rect();
-  fn _ZNK17QAccessibleWidget4rectEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK17QAccessibleWidget4rectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QColor QAccessibleWidget::foregroundColor();
-  fn _ZNK17QAccessibleWidget15foregroundColorEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK17QAccessibleWidget15foregroundColorEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QAccessibleWidget::isValid();
-  fn _ZNK17QAccessibleWidget7isValidEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK17QAccessibleWidget7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QAccessibleInterface * QAccessibleWidget::focusChild();
-  fn _ZNK17QAccessibleWidget10focusChildEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK17QAccessibleWidget10focusChildEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAccessibleWidget::QAccessibleWidget(const QAccessibleWidget & );
   fn dector_ZN17QAccessibleWidgetC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN17QAccessibleWidgetC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN17QAccessibleWidgetC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QColor QAccessibleWidget::backgroundColor();
-  fn _ZNK17QAccessibleWidget15backgroundColorEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK17QAccessibleWidget15backgroundColorEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAccessibleWidget::~QAccessibleWidget();
-  fn _ZN17QAccessibleWidgetD0Ev(qthis: *mut c_void);
+  fn _ZN17QAccessibleWidgetD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QStringList QAccessibleWidget::actionNames();
-  fn _ZNK17QAccessibleWidget11actionNamesEv(qthis: *mut c_void);
+  fn _ZNK17QAccessibleWidget11actionNamesEv(qthis: u64 /* *mut c_void*/);
   // proto:  QAccessibleInterface * QAccessibleWidget::parent();
-  fn _ZNK17QAccessibleWidget6parentEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK17QAccessibleWidget6parentEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAccessibleWidget::doAction(const QString & actionName);
-  fn _ZN17QAccessibleWidget8doActionERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN17QAccessibleWidget8doActionERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QStringList QAccessibleWidget::keyBindingsForAction(const QString & actionName);
-  fn _ZNK17QAccessibleWidget20keyBindingsForActionERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZNK17QAccessibleWidget20keyBindingsForActionERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QAccessibleWidget::indexOfChild(const QAccessibleInterface * child);
-  fn _ZNK17QAccessibleWidget12indexOfChildEPK20QAccessibleInterface(qthis: *mut c_void, arg0: *mut c_void) -> c_int;
+  fn _ZNK17QAccessibleWidget12indexOfChildEPK20QAccessibleInterface(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QAccessibleWidget)=32
+#[derive(Default)]
 pub struct QAccessibleWidget {
   qbase: QAccessibleObject,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QAccessibleWidget {
-  pub fn inheritFrom(qthis: *mut c_void) -> QAccessibleWidget {
-    return QAccessibleWidget{qbase: QAccessibleObject::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QAccessibleWidget {
+    return QAccessibleWidget{qbase: QAccessibleObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QAccessibleWidget {
@@ -135,7 +136,7 @@ impl<'a> /*trait*/ QAccessibleWidget_child<QAccessibleInterface> for (i32) {
     // unsafe{_ZNK17QAccessibleWidget5childEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK17QAccessibleWidget5childEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QAccessibleInterface::inheritFrom(ret);
+    let mut ret1 = QAccessibleInterface::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -159,7 +160,7 @@ impl<'a> /*trait*/ QAccessibleWidget_window<QWindow> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAccessibleWidget6windowEv()};
     let mut ret = unsafe {_ZNK17QAccessibleWidget6windowEv(rsthis.qclsinst)};
-    let mut ret1 = QWindow::inheritFrom(ret);
+    let mut ret1 = QWindow::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -183,7 +184,7 @@ impl<'a> /*trait*/ QAccessibleWidget_rect<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAccessibleWidget4rectEv()};
     let mut ret = unsafe {_ZNK17QAccessibleWidget4rectEv(rsthis.qclsinst)};
-    let mut ret1 = QRect::inheritFrom(ret);
+    let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -207,7 +208,7 @@ impl<'a> /*trait*/ QAccessibleWidget_foregroundColor<QColor> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAccessibleWidget15foregroundColorEv()};
     let mut ret = unsafe {_ZNK17QAccessibleWidget15foregroundColorEv(rsthis.qclsinst)};
-    let mut ret1 = QColor::inheritFrom(ret);
+    let mut ret1 = QColor::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -254,7 +255,7 @@ impl<'a> /*trait*/ QAccessibleWidget_focusChild<QAccessibleInterface> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAccessibleWidget10focusChildEv()};
     let mut ret = unsafe {_ZNK17QAccessibleWidget10focusChildEv(rsthis.qclsinst)};
-    let mut ret1 = QAccessibleInterface::inheritFrom(ret);
+    let mut ret1 = QAccessibleInterface::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -279,11 +280,11 @@ impl<'a> /*trait*/ QAccessibleWidget_New for (&'a QAccessibleWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAccessibleWidgetC1ERKS_()};
     let ctysz: c_int = unsafe{QAccessibleWidget_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN17QAccessibleWidgetC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN17QAccessibleWidgetC1ERKS_(arg0)};
-    let rsthis = QAccessibleWidget{/**/qbase: QAccessibleObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN17QAccessibleWidgetC1ERKS_(arg0)} as u64;
+    let rsthis = QAccessibleWidget{qbase: QAccessibleObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -307,7 +308,7 @@ impl<'a> /*trait*/ QAccessibleWidget_backgroundColor<QColor> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAccessibleWidget15backgroundColorEv()};
     let mut ret = unsafe {_ZNK17QAccessibleWidget15backgroundColorEv(rsthis.qclsinst)};
-    let mut ret1 = QColor::inheritFrom(ret);
+    let mut ret1 = QColor::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -375,7 +376,7 @@ impl<'a> /*trait*/ QAccessibleWidget_parent<QAccessibleInterface> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAccessibleWidget6parentEv()};
     let mut ret = unsafe {_ZNK17QAccessibleWidget6parentEv(rsthis.qclsinst)};
-    let mut ret1 = QAccessibleInterface::inheritFrom(ret);
+    let mut ret1 = QAccessibleInterface::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }

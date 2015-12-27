@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtWidgets/qplaintextedit.h
 // dst-file: /src/widgets/qplaintextedit.rs
 //
@@ -50,188 +50,208 @@ use super::super::core::qregexp::QRegExp; // 771
 extern {
   fn QPlainTextDocumentLayout_Class_Size() -> c_int;
   // proto:  void QPlainTextDocumentLayout::requestUpdate();
-  fn _ZN24QPlainTextDocumentLayout13requestUpdateEv(qthis: *mut c_void);
+  fn _ZN24QPlainTextDocumentLayout13requestUpdateEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QPlainTextDocumentLayout::setCursorWidth(int width);
-  fn _ZN24QPlainTextDocumentLayout14setCursorWidthEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN24QPlainTextDocumentLayout14setCursorWidthEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  QRectF QPlainTextDocumentLayout::frameBoundingRect(QTextFrame * );
-  fn _ZNK24QPlainTextDocumentLayout17frameBoundingRectEP10QTextFrame(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK24QPlainTextDocumentLayout17frameBoundingRectEP10QTextFrame(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  int QPlainTextDocumentLayout::pageCount();
-  fn _ZNK24QPlainTextDocumentLayout9pageCountEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK24QPlainTextDocumentLayout9pageCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  const QMetaObject * QPlainTextDocumentLayout::metaObject();
-  fn _ZNK24QPlainTextDocumentLayout10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK24QPlainTextDocumentLayout10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QPlainTextDocumentLayout::ensureBlockLayout(const QTextBlock & block);
-  fn _ZNK24QPlainTextDocumentLayout17ensureBlockLayoutERK10QTextBlock(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZNK24QPlainTextDocumentLayout17ensureBlockLayoutERK10QTextBlock(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPlainTextDocumentLayout::~QPlainTextDocumentLayout();
-  fn _ZN24QPlainTextDocumentLayoutD0Ev(qthis: *mut c_void);
+  fn _ZN24QPlainTextDocumentLayoutD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QRectF QPlainTextDocumentLayout::blockBoundingRect(const QTextBlock & block);
-  fn _ZNK24QPlainTextDocumentLayout17blockBoundingRectERK10QTextBlock(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK24QPlainTextDocumentLayout17blockBoundingRectERK10QTextBlock(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  int QPlainTextDocumentLayout::cursorWidth();
-  fn _ZNK24QPlainTextDocumentLayout11cursorWidthEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK24QPlainTextDocumentLayout11cursorWidthEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QPlainTextDocumentLayout::QPlainTextDocumentLayout(QTextDocument * document);
   fn dector_ZN24QPlainTextDocumentLayoutC1EP13QTextDocument(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN24QPlainTextDocumentLayoutC1EP13QTextDocument(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN24QPlainTextDocumentLayoutC1EP13QTextDocument(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QSizeF QPlainTextDocumentLayout::documentSize();
-  fn _ZNK24QPlainTextDocumentLayout12documentSizeEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK24QPlainTextDocumentLayout12documentSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   fn QPlainTextEdit_Class_Size() -> c_int;
   // proto:  QMenu * QPlainTextEdit::createStandardContextMenu(const QPoint & position);
-  fn _ZN14QPlainTextEdit25createStandardContextMenuERK6QPoint(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZN14QPlainTextEdit25createStandardContextMenuERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QPlainTextEdit::ensureCursorVisible();
-  fn _ZN14QPlainTextEdit19ensureCursorVisibleEv(qthis: *mut c_void);
+  fn _ZN14QPlainTextEdit19ensureCursorVisibleEv(qthis: u64 /* *mut c_void*/);
   // proto:  QTextDocument * QPlainTextEdit::document();
-  fn _ZNK14QPlainTextEdit8documentEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK14QPlainTextEdit8documentEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QRect QPlainTextEdit::cursorRect();
-  fn _ZNK14QPlainTextEdit10cursorRectEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK14QPlainTextEdit10cursorRectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QPlainTextEdit::setTabChangesFocus(bool b);
-  fn _ZN14QPlainTextEdit18setTabChangesFocusEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN14QPlainTextEdit18setTabChangesFocusEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QString QPlainTextEdit::toPlainText();
-  fn demth_ZNK14QPlainTextEdit11toPlainTextEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK14QPlainTextEdit11toPlainTextEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QVariant QPlainTextEdit::loadResource(int type, const QUrl & name);
-  fn _ZN14QPlainTextEdit12loadResourceEiRK4QUrl(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void) -> *mut c_void;
+  fn _ZN14QPlainTextEdit12loadResourceEiRK4QUrl(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void) -> *mut c_void;
   // proto:  int QPlainTextEdit::tabStopWidth();
-  fn _ZNK14QPlainTextEdit12tabStopWidthEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK14QPlainTextEdit12tabStopWidthEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QPlainTextEdit::isReadOnly();
-  fn _ZNK14QPlainTextEdit10isReadOnlyEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK14QPlainTextEdit10isReadOnlyEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QPlainTextEdit::setReadOnly(bool ro);
-  fn _ZN14QPlainTextEdit11setReadOnlyEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN14QPlainTextEdit11setReadOnlyEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QTextCursor QPlainTextEdit::textCursor();
-  fn _ZNK14QPlainTextEdit10textCursorEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK14QPlainTextEdit10textCursorEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QPlainTextEdit::setCenterOnScroll(bool enabled);
-  fn _ZN14QPlainTextEdit17setCenterOnScrollEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN14QPlainTextEdit17setCenterOnScrollEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QString QPlainTextEdit::placeholderText();
-  fn _ZNK14QPlainTextEdit15placeholderTextEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK14QPlainTextEdit15placeholderTextEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QPlainTextEdit::blockCount();
-  fn _ZNK14QPlainTextEdit10blockCountEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK14QPlainTextEdit10blockCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QPlainTextEdit::setCurrentCharFormat(const QTextCharFormat & format);
-  fn _ZN14QPlainTextEdit20setCurrentCharFormatERK15QTextCharFormat(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN14QPlainTextEdit20setCurrentCharFormatERK15QTextCharFormat(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPlainTextEdit::redoAvailable(bool b);
-  fn _ZN14QPlainTextEdit13redoAvailableEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN14QPlainTextEdit13redoAvailableEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QPlainTextEdit::setDocument(QTextDocument * document);
-  fn _ZN14QPlainTextEdit11setDocumentEP13QTextDocument(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN14QPlainTextEdit11setDocumentEP13QTextDocument(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPlainTextEdit::print(QPagedPaintDevice * printer);
-  fn _ZNK14QPlainTextEdit5printEP17QPagedPaintDevice(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZNK14QPlainTextEdit5printEP17QPagedPaintDevice(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPlainTextEdit::setTabStopWidth(int width);
-  fn _ZN14QPlainTextEdit15setTabStopWidthEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN14QPlainTextEdit15setTabStopWidthEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  bool QPlainTextEdit::backgroundVisible();
-  fn _ZNK14QPlainTextEdit17backgroundVisibleEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK14QPlainTextEdit17backgroundVisibleEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QPlainTextEdit::redo();
-  fn _ZN14QPlainTextEdit4redoEv(qthis: *mut c_void);
+  fn _ZN14QPlainTextEdit4redoEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QPlainTextEdit::QPlainTextEdit(const QString & text, QWidget * parent);
   fn dector_ZN14QPlainTextEditC1ERK7QStringP7QWidget(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN14QPlainTextEditC1ERK7QStringP7QWidget(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN14QPlainTextEditC1ERK7QStringP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QPlainTextEdit::setOverwriteMode(bool overwrite);
-  fn _ZN14QPlainTextEdit16setOverwriteModeEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN14QPlainTextEdit16setOverwriteModeEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QPlainTextEdit::undoAvailable(bool b);
-  fn _ZN14QPlainTextEdit13undoAvailableEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN14QPlainTextEdit13undoAvailableEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  bool QPlainTextEdit::tabChangesFocus();
-  fn _ZNK14QPlainTextEdit15tabChangesFocusEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK14QPlainTextEdit15tabChangesFocusEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QPlainTextEdit::copy();
-  fn _ZN14QPlainTextEdit4copyEv(qthis: *mut c_void);
+  fn _ZN14QPlainTextEdit4copyEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QPlainTextEdit::mergeCurrentCharFormat(const QTextCharFormat & modifier);
-  fn _ZN14QPlainTextEdit22mergeCurrentCharFormatERK15QTextCharFormat(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN14QPlainTextEdit22mergeCurrentCharFormatERK15QTextCharFormat(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QPlainTextEdit::maximumBlockCount();
-  fn demth_ZNK14QPlainTextEdit17maximumBlockCountEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK14QPlainTextEdit17maximumBlockCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QPlainTextEdit::insertPlainText(const QString & text);
-  fn _ZN14QPlainTextEdit15insertPlainTextERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN14QPlainTextEdit15insertPlainTextERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPlainTextEdit::setTextCursor(const QTextCursor & cursor);
-  fn _ZN14QPlainTextEdit13setTextCursorERK11QTextCursor(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN14QPlainTextEdit13setTextCursorERK11QTextCursor(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPlainTextEdit::paste();
-  fn _ZN14QPlainTextEdit5pasteEv(qthis: *mut c_void);
+  fn _ZN14QPlainTextEdit5pasteEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QPlainTextEdit::zoomIn(int range);
-  fn _ZN14QPlainTextEdit6zoomInEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN14QPlainTextEdit6zoomInEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QPlainTextEdit::setMaximumBlockCount(int maximum);
-  fn demth_ZN14QPlainTextEdit20setMaximumBlockCountEi(qthis: *mut c_void, arg0: c_int);
+  fn demth_ZN14QPlainTextEdit20setMaximumBlockCountEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  QTextCharFormat QPlainTextEdit::currentCharFormat();
-  fn _ZNK14QPlainTextEdit17currentCharFormatEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK14QPlainTextEdit17currentCharFormatEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QPlainTextEdit::selectionChanged();
-  fn _ZN14QPlainTextEdit16selectionChangedEv(qthis: *mut c_void);
+  fn _ZN14QPlainTextEdit16selectionChangedEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QPlainTextEdit::setCursorWidth(int width);
-  fn _ZN14QPlainTextEdit14setCursorWidthEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN14QPlainTextEdit14setCursorWidthEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  QString QPlainTextEdit::documentTitle();
-  fn demth_ZNK14QPlainTextEdit13documentTitleEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK14QPlainTextEdit13documentTitleEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QPlainTextEdit::selectAll();
-  fn _ZN14QPlainTextEdit9selectAllEv(qthis: *mut c_void);
+  fn _ZN14QPlainTextEdit9selectAllEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QPlainTextEdit::cursorPositionChanged();
-  fn _ZN14QPlainTextEdit21cursorPositionChangedEv(qthis: *mut c_void);
+  fn _ZN14QPlainTextEdit21cursorPositionChangedEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QPlainTextEdit::QPlainTextEdit(const QPlainTextEdit & );
   fn dector_ZN14QPlainTextEditC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN14QPlainTextEditC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN14QPlainTextEditC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPlainTextEdit::setPlainText(const QString & text);
-  fn _ZN14QPlainTextEdit12setPlainTextERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN14QPlainTextEdit12setPlainTextERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPlainTextEdit::setBackgroundVisible(bool visible);
-  fn _ZN14QPlainTextEdit20setBackgroundVisibleEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN14QPlainTextEdit20setBackgroundVisibleEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QPlainTextEdit::blockCountChanged(int newBlockCount);
-  fn _ZN14QPlainTextEdit17blockCountChangedEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN14QPlainTextEdit17blockCountChangedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QPlainTextEdit::setUndoRedoEnabled(bool enable);
-  fn demth_ZN14QPlainTextEdit18setUndoRedoEnabledEb(qthis: *mut c_void, arg0: c_char);
+  fn demth_ZN14QPlainTextEdit18setUndoRedoEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  bool QPlainTextEdit::overwriteMode();
-  fn _ZNK14QPlainTextEdit13overwriteModeEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK14QPlainTextEdit13overwriteModeEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QPlainTextEdit::centerCursor();
-  fn _ZN14QPlainTextEdit12centerCursorEv(qthis: *mut c_void);
+  fn _ZN14QPlainTextEdit12centerCursorEv(qthis: u64 /* *mut c_void*/);
   // proto:  const QMetaObject * QPlainTextEdit::metaObject();
-  fn _ZNK14QPlainTextEdit10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK14QPlainTextEdit10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QPlainTextEdit::textChanged();
-  fn _ZN14QPlainTextEdit11textChangedEv(qthis: *mut c_void);
+  fn _ZN14QPlainTextEdit11textChangedEv(qthis: u64 /* *mut c_void*/);
   // proto:  QMenu * QPlainTextEdit::createStandardContextMenu();
-  fn _ZN14QPlainTextEdit25createStandardContextMenuEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZN14QPlainTextEdit25createStandardContextMenuEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QPlainTextEdit::setDocumentTitle(const QString & title);
-  fn demth_ZN14QPlainTextEdit16setDocumentTitleERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN14QPlainTextEdit16setDocumentTitleERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPlainTextEdit::~QPlainTextEdit();
-  fn _ZN14QPlainTextEditD0Ev(qthis: *mut c_void);
+  fn _ZN14QPlainTextEditD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QPlainTextEdit::clear();
-  fn _ZN14QPlainTextEdit5clearEv(qthis: *mut c_void);
+  fn _ZN14QPlainTextEdit5clearEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QPlainTextEdit::updateRequest(const QRect & rect, int dy);
-  fn _ZN14QPlainTextEdit13updateRequestERK5QRecti(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int);
+  fn _ZN14QPlainTextEdit13updateRequestERK5QRecti(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
   // proto:  QString QPlainTextEdit::anchorAt(const QPoint & pos);
-  fn _ZNK14QPlainTextEdit8anchorAtERK6QPoint(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK14QPlainTextEdit8anchorAtERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  bool QPlainTextEdit::canPaste();
-  fn _ZNK14QPlainTextEdit8canPasteEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK14QPlainTextEdit8canPasteEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QPlainTextEdit::QPlainTextEdit(QWidget * parent);
   fn dector_ZN14QPlainTextEditC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN14QPlainTextEditC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN14QPlainTextEditC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPlainTextEdit::cut();
-  fn _ZN14QPlainTextEdit3cutEv(qthis: *mut c_void);
+  fn _ZN14QPlainTextEdit3cutEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QPlainTextEdit::appendHtml(const QString & html);
-  fn _ZN14QPlainTextEdit10appendHtmlERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN14QPlainTextEdit10appendHtmlERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QPlainTextEdit::isUndoRedoEnabled();
-  fn demth_ZNK14QPlainTextEdit17isUndoRedoEnabledEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK14QPlainTextEdit17isUndoRedoEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QPlainTextEdit::zoomOut(int range);
-  fn _ZN14QPlainTextEdit7zoomOutEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN14QPlainTextEdit7zoomOutEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QPlainTextEdit::setPlaceholderText(const QString & placeholderText);
-  fn _ZN14QPlainTextEdit18setPlaceholderTextERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN14QPlainTextEdit18setPlaceholderTextERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPlainTextEdit::undo();
-  fn _ZN14QPlainTextEdit4undoEv(qthis: *mut c_void);
+  fn _ZN14QPlainTextEdit4undoEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QPlainTextEdit::modificationChanged(bool );
-  fn _ZN14QPlainTextEdit19modificationChangedEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN14QPlainTextEdit19modificationChangedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QTextCursor QPlainTextEdit::cursorForPosition(const QPoint & pos);
-  fn _ZNK14QPlainTextEdit17cursorForPositionERK6QPoint(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK14QPlainTextEdit17cursorForPositionERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  bool QPlainTextEdit::centerOnScroll();
-  fn _ZNK14QPlainTextEdit14centerOnScrollEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK14QPlainTextEdit14centerOnScrollEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QPlainTextEdit::appendPlainText(const QString & text);
-  fn _ZN14QPlainTextEdit15appendPlainTextERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN14QPlainTextEdit15appendPlainTextERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QPlainTextEdit::cursorWidth();
-  fn _ZNK14QPlainTextEdit11cursorWidthEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK14QPlainTextEdit11cursorWidthEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  QRect QPlainTextEdit::cursorRect(const QTextCursor & cursor);
-  fn _ZNK14QPlainTextEdit10cursorRectERK11QTextCursor(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK14QPlainTextEdit10cursorRectERK11QTextCursor(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QPlainTextEdit::copyAvailable(bool b);
-  fn _ZN14QPlainTextEdit13copyAvailableEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN14QPlainTextEdit13copyAvailableEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn QPlainTextEdit_SlotProxy_connect__ZN14QPlainTextEdit17blockCountChangedEi(qthis: *mut c_void, fptr: *mut c_void);
+  fn QPlainTextEdit_SlotProxy_connect__ZN14QPlainTextEdit13undoAvailableEb(qthis: *mut c_void, fptr: *mut c_void);
+  fn QPlainTextEdit_SlotProxy_connect__ZN14QPlainTextEdit16selectionChangedEv(qthis: *mut c_void, fptr: *mut c_void);
+  fn QPlainTextEdit_SlotProxy_connect__ZN14QPlainTextEdit13redoAvailableEb(qthis: *mut c_void, fptr: *mut c_void);
+  fn QPlainTextEdit_SlotProxy_connect__ZN14QPlainTextEdit19modificationChangedEb(qthis: *mut c_void, fptr: *mut c_void);
+  fn QPlainTextEdit_SlotProxy_connect__ZN14QPlainTextEdit13updateRequestERK5QRecti(qthis: *mut c_void, fptr: *mut c_void);
+  fn QPlainTextEdit_SlotProxy_connect__ZN14QPlainTextEdit11textChangedEv(qthis: *mut c_void, fptr: *mut c_void);
+  fn QPlainTextEdit_SlotProxy_connect__ZN14QPlainTextEdit21cursorPositionChangedEv(qthis: *mut c_void, fptr: *mut c_void);
+  fn QPlainTextEdit_SlotProxy_connect__ZN14QPlainTextEdit13copyAvailableEb(qthis: *mut c_void, fptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QPlainTextDocumentLayout)=1
+#[derive(Default)]
 pub struct QPlainTextDocumentLayout {
   qbase: QAbstractTextDocumentLayout,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 // class sizeof(QPlainTextEdit)=1
+#[derive(Default)]
 pub struct QPlainTextEdit {
   qbase: QAbstractScrollArea,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _cursorPositionChanged_1: QPlainTextEdit_cursorPositionChanged_signal,
+  pub _modificationChanged_1: QPlainTextEdit_modificationChanged_signal,
+  pub _redoAvailable_1: QPlainTextEdit_redoAvailable_signal,
+  pub _selectionChanged_1: QPlainTextEdit_selectionChanged_signal,
+  pub _updateRequest_1: QPlainTextEdit_updateRequest_signal,
+  pub _blockCountChanged_1: QPlainTextEdit_blockCountChanged_signal,
+  pub _undoAvailable_1: QPlainTextEdit_undoAvailable_signal,
+  pub _textChanged_1: QPlainTextEdit_textChanged_signal,
+  pub _copyAvailable_1: QPlainTextEdit_copyAvailable_signal,
 }
 
 impl /*struct*/ QPlainTextDocumentLayout {
-  pub fn inheritFrom(qthis: *mut c_void) -> QPlainTextDocumentLayout {
-    return QPlainTextDocumentLayout{qbase: QAbstractTextDocumentLayout::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QPlainTextDocumentLayout {
+    return QPlainTextDocumentLayout{qbase: QAbstractTextDocumentLayout::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QPlainTextDocumentLayout {
@@ -310,7 +330,7 @@ impl<'a> /*trait*/ QPlainTextDocumentLayout_frameBoundingRect<QRectF> for (&'a Q
     // unsafe{_ZNK24QPlainTextDocumentLayout17frameBoundingRectEP10QTextFrame()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK24QPlainTextDocumentLayout17frameBoundingRectEP10QTextFrame(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRectF::inheritFrom(ret);
+    let mut ret1 = QRectF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -425,7 +445,7 @@ impl<'a> /*trait*/ QPlainTextDocumentLayout_blockBoundingRect<QRectF> for (&'a Q
     // unsafe{_ZNK24QPlainTextDocumentLayout17blockBoundingRectERK10QTextBlock()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK24QPlainTextDocumentLayout17blockBoundingRectERK10QTextBlock(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRectF::inheritFrom(ret);
+    let mut ret1 = QRectF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -473,11 +493,11 @@ impl<'a> /*trait*/ QPlainTextDocumentLayout_New for (&'a QTextDocument) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QPlainTextDocumentLayoutC1EP13QTextDocument()};
     let ctysz: c_int = unsafe{QPlainTextDocumentLayout_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN24QPlainTextDocumentLayoutC1EP13QTextDocument(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN24QPlainTextDocumentLayoutC1EP13QTextDocument(arg0)};
-    let rsthis = QPlainTextDocumentLayout{/**/qbase: QAbstractTextDocumentLayout::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN24QPlainTextDocumentLayoutC1EP13QTextDocument(arg0)} as u64;
+    let rsthis = QPlainTextDocumentLayout{qbase: QAbstractTextDocumentLayout::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -501,15 +521,15 @@ impl<'a> /*trait*/ QPlainTextDocumentLayout_documentSize<QSizeF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QPlainTextDocumentLayout12documentSizeEv()};
     let mut ret = unsafe {_ZNK24QPlainTextDocumentLayout12documentSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSizeF::inheritFrom(ret);
+    let mut ret1 = QSizeF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
 }
 
 impl /*struct*/ QPlainTextEdit {
-  pub fn inheritFrom(qthis: *mut c_void) -> QPlainTextEdit {
-    return QPlainTextEdit{qbase: QAbstractScrollArea::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QPlainTextEdit {
+    return QPlainTextEdit{qbase: QAbstractScrollArea::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QPlainTextEdit {
@@ -543,7 +563,7 @@ impl<'a> /*trait*/ QPlainTextEdit_createStandardContextMenu<QMenu> for (&'a QPoi
     // unsafe{_ZN14QPlainTextEdit25createStandardContextMenuERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN14QPlainTextEdit25createStandardContextMenuERK6QPoint(rsthis.qclsinst, arg0)};
-    let mut ret1 = QMenu::inheritFrom(ret);
+    let mut ret1 = QMenu::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -589,7 +609,7 @@ impl<'a> /*trait*/ QPlainTextEdit_document<QTextDocument> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QPlainTextEdit8documentEv()};
     let mut ret = unsafe {_ZNK14QPlainTextEdit8documentEv(rsthis.qclsinst)};
-    let mut ret1 = QTextDocument::inheritFrom(ret);
+    let mut ret1 = QTextDocument::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -613,7 +633,7 @@ impl<'a> /*trait*/ QPlainTextEdit_cursorRect<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QPlainTextEdit10cursorRectEv()};
     let mut ret = unsafe {_ZNK14QPlainTextEdit10cursorRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRect::inheritFrom(ret);
+    let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -660,7 +680,7 @@ impl<'a> /*trait*/ QPlainTextEdit_toPlainText<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QPlainTextEdit11toPlainTextEv()};
     let mut ret = unsafe {demth_ZNK14QPlainTextEdit11toPlainTextEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -686,7 +706,7 @@ impl<'a> /*trait*/ QPlainTextEdit_loadResource<QVariant> for (i32, &'a QUrl) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN14QPlainTextEdit12loadResourceEiRK4QUrl(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QVariant::inheritFrom(ret);
+    let mut ret1 = QVariant::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -779,7 +799,7 @@ impl<'a> /*trait*/ QPlainTextEdit_textCursor<QTextCursor> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QPlainTextEdit10textCursorEv()};
     let mut ret = unsafe {_ZNK14QPlainTextEdit10textCursorEv(rsthis.qclsinst)};
-    let mut ret1 = QTextCursor::inheritFrom(ret);
+    let mut ret1 = QTextCursor::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -826,7 +846,7 @@ impl<'a> /*trait*/ QPlainTextEdit_placeholderText<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QPlainTextEdit15placeholderTextEv()};
     let mut ret = unsafe {_ZNK14QPlainTextEdit15placeholderTextEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1034,12 +1054,12 @@ impl<'a> /*trait*/ QPlainTextEdit_New for (&'a QString, &'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QPlainTextEditC1ERK7QStringP7QWidget()};
     let ctysz: c_int = unsafe{QPlainTextEdit_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     // unsafe {_ZN14QPlainTextEditC1ERK7QStringP7QWidget(qthis, arg0, arg1)};
-    let qthis: *mut c_void = unsafe {dector_ZN14QPlainTextEditC1ERK7QStringP7QWidget(arg0, arg1)};
-    let rsthis = QPlainTextEdit{/**/qbase: QAbstractScrollArea::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN14QPlainTextEditC1ERK7QStringP7QWidget(arg0, arg1)} as u64;
+    let rsthis = QPlainTextEdit{qbase: QAbstractScrollArea::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1314,7 +1334,7 @@ impl<'a> /*trait*/ QPlainTextEdit_currentCharFormat<QTextCharFormat> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QPlainTextEdit17currentCharFormatEv()};
     let mut ret = unsafe {_ZNK14QPlainTextEdit17currentCharFormatEv(rsthis.qclsinst)};
-    let mut ret1 = QTextCharFormat::inheritFrom(ret);
+    let mut ret1 = QTextCharFormat::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1383,7 +1403,7 @@ impl<'a> /*trait*/ QPlainTextEdit_documentTitle<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QPlainTextEdit13documentTitleEv()};
     let mut ret = unsafe {demth_ZNK14QPlainTextEdit13documentTitleEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1439,11 +1459,11 @@ impl<'a> /*trait*/ QPlainTextEdit_New for (&'a QPlainTextEdit) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QPlainTextEditC1ERKS_()};
     let ctysz: c_int = unsafe{QPlainTextEdit_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN14QPlainTextEditC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN14QPlainTextEditC1ERKS_(arg0)};
-    let rsthis = QPlainTextEdit{/**/qbase: QAbstractScrollArea::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN14QPlainTextEditC1ERKS_(arg0)} as u64;
+    let rsthis = QPlainTextEdit{qbase: QAbstractScrollArea::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1636,7 +1656,7 @@ impl<'a> /*trait*/ QPlainTextEdit_createStandardContextMenu<QMenu> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QPlainTextEdit25createStandardContextMenuEv()};
     let mut ret = unsafe {_ZN14QPlainTextEdit25createStandardContextMenuEv(rsthis.qclsinst)};
-    let mut ret1 = QMenu::inheritFrom(ret);
+    let mut ret1 = QMenu::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1752,7 +1772,7 @@ impl<'a> /*trait*/ QPlainTextEdit_anchorAt<QString> for (&'a QPoint) {
     // unsafe{_ZNK14QPlainTextEdit8anchorAtERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK14QPlainTextEdit8anchorAtERK6QPoint(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1787,11 +1807,11 @@ impl<'a> /*trait*/ QPlainTextEdit_New for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QPlainTextEditC1EP7QWidget()};
     let ctysz: c_int = unsafe{QPlainTextEdit_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN14QPlainTextEditC1EP7QWidget(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN14QPlainTextEditC1EP7QWidget(arg0)};
-    let rsthis = QPlainTextEdit{/**/qbase: QAbstractScrollArea::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN14QPlainTextEditC1EP7QWidget(arg0)} as u64;
+    let rsthis = QPlainTextEdit{qbase: QAbstractScrollArea::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1975,7 +1995,7 @@ impl<'a> /*trait*/ QPlainTextEdit_cursorForPosition<QTextCursor> for (&'a QPoint
     // unsafe{_ZNK14QPlainTextEdit17cursorForPositionERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK14QPlainTextEdit17cursorForPositionERK6QPoint(rsthis.qclsinst, arg0)};
-    let mut ret1 = QTextCursor::inheritFrom(ret);
+    let mut ret1 = QTextCursor::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2057,7 +2077,7 @@ impl<'a> /*trait*/ QPlainTextEdit_cursorRect<QRect> for (&'a QTextCursor) {
     // unsafe{_ZNK14QPlainTextEdit10cursorRectERK11QTextCursor()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK14QPlainTextEdit10cursorRectERK11QTextCursor(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRect::inheritFrom(ret);
+    let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2086,5 +2106,239 @@ impl<'a> /*trait*/ QPlainTextEdit_copyAvailable<()> for (i8) {
   }
 }
 
+#[derive(Default)] // for QPlainTextEdit_cursorPositionChanged
+pub struct QPlainTextEdit_cursorPositionChanged_signal{poi:u64}
+impl /* struct */ QPlainTextEdit {
+  pub fn cursorPositionChanged_1(self) -> QPlainTextEdit_cursorPositionChanged_signal {
+     return QPlainTextEdit_cursorPositionChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QPlainTextEdit_cursorPositionChanged_signal {
+  pub fn connect<T: QPlainTextEdit_cursorPositionChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QPlainTextEdit_cursorPositionChanged_signal_connect {
+  fn connect(self, sigthis: QPlainTextEdit_cursorPositionChanged_signal);
+}
+
+#[derive(Default)] // for QPlainTextEdit_modificationChanged
+pub struct QPlainTextEdit_modificationChanged_signal{poi:u64}
+impl /* struct */ QPlainTextEdit {
+  pub fn modificationChanged_1(self) -> QPlainTextEdit_modificationChanged_signal {
+     return QPlainTextEdit_modificationChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QPlainTextEdit_modificationChanged_signal {
+  pub fn connect<T: QPlainTextEdit_modificationChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QPlainTextEdit_modificationChanged_signal_connect {
+  fn connect(self, sigthis: QPlainTextEdit_modificationChanged_signal);
+}
+
+#[derive(Default)] // for QPlainTextEdit_redoAvailable
+pub struct QPlainTextEdit_redoAvailable_signal{poi:u64}
+impl /* struct */ QPlainTextEdit {
+  pub fn redoAvailable_1(self) -> QPlainTextEdit_redoAvailable_signal {
+     return QPlainTextEdit_redoAvailable_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QPlainTextEdit_redoAvailable_signal {
+  pub fn connect<T: QPlainTextEdit_redoAvailable_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QPlainTextEdit_redoAvailable_signal_connect {
+  fn connect(self, sigthis: QPlainTextEdit_redoAvailable_signal);
+}
+
+#[derive(Default)] // for QPlainTextEdit_selectionChanged
+pub struct QPlainTextEdit_selectionChanged_signal{poi:u64}
+impl /* struct */ QPlainTextEdit {
+  pub fn selectionChanged_1(self) -> QPlainTextEdit_selectionChanged_signal {
+     return QPlainTextEdit_selectionChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QPlainTextEdit_selectionChanged_signal {
+  pub fn connect<T: QPlainTextEdit_selectionChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QPlainTextEdit_selectionChanged_signal_connect {
+  fn connect(self, sigthis: QPlainTextEdit_selectionChanged_signal);
+}
+
+#[derive(Default)] // for QPlainTextEdit_updateRequest
+pub struct QPlainTextEdit_updateRequest_signal{poi:u64}
+impl /* struct */ QPlainTextEdit {
+  pub fn updateRequest_1(self) -> QPlainTextEdit_updateRequest_signal {
+     return QPlainTextEdit_updateRequest_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QPlainTextEdit_updateRequest_signal {
+  pub fn connect<T: QPlainTextEdit_updateRequest_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QPlainTextEdit_updateRequest_signal_connect {
+  fn connect(self, sigthis: QPlainTextEdit_updateRequest_signal);
+}
+
+#[derive(Default)] // for QPlainTextEdit_blockCountChanged
+pub struct QPlainTextEdit_blockCountChanged_signal{poi:u64}
+impl /* struct */ QPlainTextEdit {
+  pub fn blockCountChanged_1(self) -> QPlainTextEdit_blockCountChanged_signal {
+     return QPlainTextEdit_blockCountChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QPlainTextEdit_blockCountChanged_signal {
+  pub fn connect<T: QPlainTextEdit_blockCountChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QPlainTextEdit_blockCountChanged_signal_connect {
+  fn connect(self, sigthis: QPlainTextEdit_blockCountChanged_signal);
+}
+
+#[derive(Default)] // for QPlainTextEdit_undoAvailable
+pub struct QPlainTextEdit_undoAvailable_signal{poi:u64}
+impl /* struct */ QPlainTextEdit {
+  pub fn undoAvailable_1(self) -> QPlainTextEdit_undoAvailable_signal {
+     return QPlainTextEdit_undoAvailable_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QPlainTextEdit_undoAvailable_signal {
+  pub fn connect<T: QPlainTextEdit_undoAvailable_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QPlainTextEdit_undoAvailable_signal_connect {
+  fn connect(self, sigthis: QPlainTextEdit_undoAvailable_signal);
+}
+
+#[derive(Default)] // for QPlainTextEdit_textChanged
+pub struct QPlainTextEdit_textChanged_signal{poi:u64}
+impl /* struct */ QPlainTextEdit {
+  pub fn textChanged_1(self) -> QPlainTextEdit_textChanged_signal {
+     return QPlainTextEdit_textChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QPlainTextEdit_textChanged_signal {
+  pub fn connect<T: QPlainTextEdit_textChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QPlainTextEdit_textChanged_signal_connect {
+  fn connect(self, sigthis: QPlainTextEdit_textChanged_signal);
+}
+
+#[derive(Default)] // for QPlainTextEdit_copyAvailable
+pub struct QPlainTextEdit_copyAvailable_signal{poi:u64}
+impl /* struct */ QPlainTextEdit {
+  pub fn copyAvailable_1(self) -> QPlainTextEdit_copyAvailable_signal {
+     return QPlainTextEdit_copyAvailable_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QPlainTextEdit_copyAvailable_signal {
+  pub fn connect<T: QPlainTextEdit_copyAvailable_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QPlainTextEdit_copyAvailable_signal_connect {
+  fn connect(self, sigthis: QPlainTextEdit_copyAvailable_signal);
+}
+
+// blockCountChanged(int)
+extern fn QPlainTextEdit_blockCountChanged_signal_connect_cb_0(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QPlainTextEdit_blockCountChanged_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QPlainTextEdit_blockCountChanged_signal) {
+    // do smth...
+    unsafe {QPlainTextEdit_SlotProxy_connect__ZN14QPlainTextEdit17blockCountChangedEi(sigthis.poi as *mut c_void, QPlainTextEdit_blockCountChanged_signal_connect_cb_0 as *mut c_void)};
+  }
+}
+// undoAvailable(_Bool)
+extern fn QPlainTextEdit_undoAvailable_signal_connect_cb_1(arg0: c_char) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QPlainTextEdit_undoAvailable_signal_connect for (extern fn(i8)) {
+  fn connect(self, sigthis: QPlainTextEdit_undoAvailable_signal) {
+    // do smth...
+    unsafe {QPlainTextEdit_SlotProxy_connect__ZN14QPlainTextEdit13undoAvailableEb(sigthis.poi as *mut c_void, QPlainTextEdit_undoAvailable_signal_connect_cb_1 as *mut c_void)};
+  }
+}
+// selectionChanged()
+extern fn QPlainTextEdit_selectionChanged_signal_connect_cb_2() {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QPlainTextEdit_selectionChanged_signal_connect for (extern fn()) {
+  fn connect(self, sigthis: QPlainTextEdit_selectionChanged_signal) {
+    // do smth...
+    unsafe {QPlainTextEdit_SlotProxy_connect__ZN14QPlainTextEdit16selectionChangedEv(sigthis.poi as *mut c_void, QPlainTextEdit_selectionChanged_signal_connect_cb_2 as *mut c_void)};
+  }
+}
+// redoAvailable(_Bool)
+extern fn QPlainTextEdit_redoAvailable_signal_connect_cb_3(arg0: c_char) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QPlainTextEdit_redoAvailable_signal_connect for (extern fn(i8)) {
+  fn connect(self, sigthis: QPlainTextEdit_redoAvailable_signal) {
+    // do smth...
+    unsafe {QPlainTextEdit_SlotProxy_connect__ZN14QPlainTextEdit13redoAvailableEb(sigthis.poi as *mut c_void, QPlainTextEdit_redoAvailable_signal_connect_cb_3 as *mut c_void)};
+  }
+}
+// modificationChanged(_Bool)
+extern fn QPlainTextEdit_modificationChanged_signal_connect_cb_4(arg0: c_char) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QPlainTextEdit_modificationChanged_signal_connect for (extern fn(i8)) {
+  fn connect(self, sigthis: QPlainTextEdit_modificationChanged_signal) {
+    // do smth...
+    unsafe {QPlainTextEdit_SlotProxy_connect__ZN14QPlainTextEdit19modificationChangedEb(sigthis.poi as *mut c_void, QPlainTextEdit_modificationChanged_signal_connect_cb_4 as *mut c_void)};
+  }
+}
+// updateRequest(const class QRect &, int)
+extern fn QPlainTextEdit_updateRequest_signal_connect_cb_5(arg0: *mut c_void, arg1: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QPlainTextEdit_updateRequest_signal_connect for (extern fn(QRect, i32)) {
+  fn connect(self, sigthis: QPlainTextEdit_updateRequest_signal) {
+    // do smth...
+    unsafe {QPlainTextEdit_SlotProxy_connect__ZN14QPlainTextEdit13updateRequestERK5QRecti(sigthis.poi as *mut c_void, QPlainTextEdit_updateRequest_signal_connect_cb_5 as *mut c_void)};
+  }
+}
+// textChanged()
+extern fn QPlainTextEdit_textChanged_signal_connect_cb_6() {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QPlainTextEdit_textChanged_signal_connect for (extern fn()) {
+  fn connect(self, sigthis: QPlainTextEdit_textChanged_signal) {
+    // do smth...
+    unsafe {QPlainTextEdit_SlotProxy_connect__ZN14QPlainTextEdit11textChangedEv(sigthis.poi as *mut c_void, QPlainTextEdit_textChanged_signal_connect_cb_6 as *mut c_void)};
+  }
+}
+// cursorPositionChanged()
+extern fn QPlainTextEdit_cursorPositionChanged_signal_connect_cb_7() {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QPlainTextEdit_cursorPositionChanged_signal_connect for (extern fn()) {
+  fn connect(self, sigthis: QPlainTextEdit_cursorPositionChanged_signal) {
+    // do smth...
+    unsafe {QPlainTextEdit_SlotProxy_connect__ZN14QPlainTextEdit21cursorPositionChangedEv(sigthis.poi as *mut c_void, QPlainTextEdit_cursorPositionChanged_signal_connect_cb_7 as *mut c_void)};
+  }
+}
+// copyAvailable(_Bool)
+extern fn QPlainTextEdit_copyAvailable_signal_connect_cb_8(arg0: c_char) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QPlainTextEdit_copyAvailable_signal_connect for (extern fn(i8)) {
+  fn connect(self, sigthis: QPlainTextEdit_copyAvailable_signal) {
+    // do smth...
+    unsafe {QPlainTextEdit_SlotProxy_connect__ZN14QPlainTextEdit13copyAvailableEb(sigthis.poi as *mut c_void, QPlainTextEdit_copyAvailable_signal_connect_cb_8 as *mut c_void)};
+  }
+}
 // <= body block end
 

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qsysinfo.h
 // dst-file: /src/core/qsysinfo.rs
 //
@@ -50,14 +50,15 @@ extern {
 
 // body block begin =>
 // class sizeof(QSysInfo)=1
+#[derive(Default)]
 pub struct QSysInfo {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QSysInfo {
-  pub fn inheritFrom(qthis: *mut c_void) -> QSysInfo {
-    return QSysInfo{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QSysInfo {
+    return QSysInfo{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto: static QString QSysInfo::kernelType();
@@ -78,7 +79,7 @@ impl<'a> /*trait*/ QSysInfo_kernelType_s<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSysInfo10kernelTypeEv()};
     let mut ret = unsafe {_ZN8QSysInfo10kernelTypeEv()};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -102,7 +103,7 @@ impl<'a> /*trait*/ QSysInfo_productType_s<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSysInfo11productTypeEv()};
     let mut ret = unsafe {_ZN8QSysInfo11productTypeEv()};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -126,7 +127,7 @@ impl<'a> /*trait*/ QSysInfo_prettyProductName_s<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSysInfo17prettyProductNameEv()};
     let mut ret = unsafe {_ZN8QSysInfo17prettyProductNameEv()};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -150,7 +151,7 @@ impl<'a> /*trait*/ QSysInfo_currentCpuArchitecture_s<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSysInfo22currentCpuArchitectureEv()};
     let mut ret = unsafe {_ZN8QSysInfo22currentCpuArchitectureEv()};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -174,7 +175,7 @@ impl<'a> /*trait*/ QSysInfo_buildCpuArchitecture_s<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSysInfo20buildCpuArchitectureEv()};
     let mut ret = unsafe {_ZN8QSysInfo20buildCpuArchitectureEv()};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -198,7 +199,7 @@ impl<'a> /*trait*/ QSysInfo_kernelVersion_s<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSysInfo13kernelVersionEv()};
     let mut ret = unsafe {_ZN8QSysInfo13kernelVersionEv()};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -222,7 +223,7 @@ impl<'a> /*trait*/ QSysInfo_productVersion_s<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSysInfo14productVersionEv()};
     let mut ret = unsafe {_ZN8QSysInfo14productVersionEv()};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -246,7 +247,7 @@ impl<'a> /*trait*/ QSysInfo_buildAbi_s<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSysInfo8buildAbiEv()};
     let mut ret = unsafe {_ZN8QSysInfo8buildAbiEv()};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }

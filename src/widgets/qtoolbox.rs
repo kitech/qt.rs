@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtWidgets/qtoolbox.h
 // dst-file: /src/widgets/qtoolbox.rs
 //
@@ -34,66 +34,69 @@ use super::super::gui::qicon::QIcon; // 771
 extern {
   fn QToolBox_Class_Size() -> c_int;
   // proto:  void QToolBox::removeItem(int index);
-  fn _ZN8QToolBox10removeItemEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN8QToolBox10removeItemEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QToolBox::insertItem(int index, QWidget * widget, const QString & text);
-  fn _ZN8QToolBox10insertItemEiP7QWidgetRK7QString(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void, arg2: *mut c_void) -> c_int;
+  fn _ZN8QToolBox10insertItemEiP7QWidgetRK7QString(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void, arg2: *mut c_void) -> c_int;
   // proto:  QString QToolBox::itemText(int index);
-  fn _ZNK8QToolBox8itemTextEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
+  fn _ZNK8QToolBox8itemTextEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  int QToolBox::indexOf(QWidget * widget);
-  fn _ZNK8QToolBox7indexOfEP7QWidget(qthis: *mut c_void, arg0: *mut c_void) -> c_int;
+  fn _ZNK8QToolBox7indexOfEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
   // proto:  QString QToolBox::itemToolTip(int index);
-  fn _ZNK8QToolBox11itemToolTipEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
+  fn _ZNK8QToolBox11itemToolTipEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  void QToolBox::QToolBox(const QToolBox & );
   fn dector_ZN8QToolBoxC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN8QToolBoxC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN8QToolBoxC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QToolBox::setCurrentWidget(QWidget * widget);
-  fn _ZN8QToolBox16setCurrentWidgetEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN8QToolBox16setCurrentWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QToolBox::setCurrentIndex(int index);
-  fn _ZN8QToolBox15setCurrentIndexEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN8QToolBox15setCurrentIndexEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QToolBox::setItemIcon(int index, const QIcon & icon);
-  fn _ZN8QToolBox11setItemIconEiRK5QIcon(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void);
+  fn _ZN8QToolBox11setItemIconEiRK5QIcon(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  void QToolBox::setItemText(int index, const QString & text);
-  fn _ZN8QToolBox11setItemTextEiRK7QString(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void);
+  fn _ZN8QToolBox11setItemTextEiRK7QString(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  int QToolBox::count();
-  fn _ZNK8QToolBox5countEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK8QToolBox5countEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  const QMetaObject * QToolBox::metaObject();
-  fn _ZNK8QToolBox10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK8QToolBox10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  QWidget * QToolBox::widget(int index);
-  fn _ZNK8QToolBox6widgetEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
+  fn _ZNK8QToolBox6widgetEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  void QToolBox::setItemToolTip(int index, const QString & toolTip);
-  fn _ZN8QToolBox14setItemToolTipEiRK7QString(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void);
+  fn _ZN8QToolBox14setItemToolTipEiRK7QString(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  int QToolBox::currentIndex();
-  fn _ZNK8QToolBox12currentIndexEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK8QToolBox12currentIndexEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  QWidget * QToolBox::currentWidget();
-  fn _ZNK8QToolBox13currentWidgetEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK8QToolBox13currentWidgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QToolBox::addItem(QWidget * widget, const QString & text);
-  fn _ZN8QToolBox7addItemEP7QWidgetRK7QString(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> c_int;
+  fn _ZN8QToolBox7addItemEP7QWidgetRK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> c_int;
   // proto:  bool QToolBox::isItemEnabled(int index);
-  fn _ZNK8QToolBox13isItemEnabledEi(qthis: *mut c_void, arg0: c_int) -> c_char;
+  fn _ZNK8QToolBox13isItemEnabledEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
   // proto:  void QToolBox::setItemEnabled(int index, bool enabled);
-  fn _ZN8QToolBox14setItemEnabledEib(qthis: *mut c_void, arg0: c_int, arg1: c_char);
+  fn _ZN8QToolBox14setItemEnabledEib(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_char);
   // proto:  void QToolBox::currentChanged(int index);
-  fn _ZN8QToolBox14currentChangedEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN8QToolBox14currentChangedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  QIcon QToolBox::itemIcon(int index);
-  fn _ZNK8QToolBox8itemIconEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
+  fn _ZNK8QToolBox8itemIconEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  void QToolBox::~QToolBox();
-  fn _ZN8QToolBoxD0Ev(qthis: *mut c_void);
+  fn _ZN8QToolBoxD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  int QToolBox::addItem(QWidget * widget, const QIcon & icon, const QString & text);
-  fn _ZN8QToolBox7addItemEP7QWidgetRK5QIconRK7QString(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> c_int;
+  fn _ZN8QToolBox7addItemEP7QWidgetRK5QIconRK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> c_int;
   // proto:  int QToolBox::insertItem(int index, QWidget * widget, const QIcon & icon, const QString & text);
-  fn _ZN8QToolBox10insertItemEiP7QWidgetRK5QIconRK7QString(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void) -> c_int;
+  fn _ZN8QToolBox10insertItemEiP7QWidgetRK5QIconRK7QString(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void) -> c_int;
+  fn QToolBox_SlotProxy_connect__ZN8QToolBox14currentChangedEi(qthis: *mut c_void, fptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QToolBox)=1
+#[derive(Default)]
 pub struct QToolBox {
   qbase: QFrame,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _currentChanged_1: QToolBox_currentChanged_signal,
 }
 
 impl /*struct*/ QToolBox {
-  pub fn inheritFrom(qthis: *mut c_void) -> QToolBox {
-    return QToolBox{qbase: QFrame::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QToolBox {
+    return QToolBox{qbase: QFrame::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QToolBox {
@@ -176,7 +179,7 @@ impl<'a> /*trait*/ QToolBox_itemText<QString> for (i32) {
     // unsafe{_ZNK8QToolBox8itemTextEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK8QToolBox8itemTextEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -225,7 +228,7 @@ impl<'a> /*trait*/ QToolBox_itemToolTip<QString> for (i32) {
     // unsafe{_ZNK8QToolBox11itemToolTipEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK8QToolBox11itemToolTipEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -250,11 +253,11 @@ impl<'a> /*trait*/ QToolBox_New for (&'a QToolBox) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBoxC1ERKS_()};
     let ctysz: c_int = unsafe{QToolBox_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN8QToolBoxC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN8QToolBoxC1ERKS_(arg0)};
-    let rsthis = QToolBox{/**/qbase: QFrame::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN8QToolBoxC1ERKS_(arg0)} as u64;
+    let rsthis = QToolBox{qbase: QFrame::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -418,7 +421,7 @@ impl<'a> /*trait*/ QToolBox_widget<QWidget> for (i32) {
     // unsafe{_ZNK8QToolBox6widgetEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK8QToolBox6widgetEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QWidget::inheritFrom(ret);
+    let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -489,7 +492,7 @@ impl<'a> /*trait*/ QToolBox_currentWidget<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QToolBox13currentWidgetEv()};
     let mut ret = unsafe {_ZNK8QToolBox13currentWidgetEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget::inheritFrom(ret);
+    let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -610,7 +613,7 @@ impl<'a> /*trait*/ QToolBox_itemIcon<QIcon> for (i32) {
     // unsafe{_ZNK8QToolBox8itemIconEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK8QToolBox8itemIconEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QIcon::inheritFrom(ret);
+    let mut ret1 = QIcon::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -667,5 +670,31 @@ impl<'a> /*trait*/ QToolBox_insertItem<i32> for (i32, &'a QWidget, &'a QIcon, &'
   }
 }
 
+#[derive(Default)] // for QToolBox_currentChanged
+pub struct QToolBox_currentChanged_signal{poi:u64}
+impl /* struct */ QToolBox {
+  pub fn currentChanged_1(self) -> QToolBox_currentChanged_signal {
+     return QToolBox_currentChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QToolBox_currentChanged_signal {
+  pub fn connect<T: QToolBox_currentChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QToolBox_currentChanged_signal_connect {
+  fn connect(self, sigthis: QToolBox_currentChanged_signal);
+}
+
+// currentChanged(int)
+extern fn QToolBox_currentChanged_signal_connect_cb_0(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QToolBox_currentChanged_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QToolBox_currentChanged_signal) {
+    // do smth...
+    unsafe {QToolBox_SlotProxy_connect__ZN8QToolBox14currentChangedEi(sigthis.poi as *mut c_void, QToolBox_currentChanged_signal_connect_cb_0 as *mut c_void)};
+  }
+}
 // <= body block end
 

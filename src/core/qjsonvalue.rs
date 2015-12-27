@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qjsonvalue.h
 // dst-file: /src/core/qjsonvalue.rs
 //
@@ -34,135 +34,139 @@ extern {
   fn QJsonValuePtr_Class_Size() -> c_int;
   fn QJsonValue_Class_Size() -> c_int;
   // proto:  QJsonObject QJsonValue::toObject();
-  fn _ZNK10QJsonValue8toObjectEv(qthis: *mut c_void);
+  fn _ZNK10QJsonValue8toObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QJsonValue::isDouble();
-  fn demth_ZNK10QJsonValue8isDoubleEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK10QJsonValue8isDoubleEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QJsonValue::QJsonValue(const QString & s);
   fn dector_ZN10QJsonValueC1ERK7QString(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN10QJsonValueC1ERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN10QJsonValueC1ERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QJsonValue::toInt(int defaultValue);
-  fn _ZNK10QJsonValue5toIntEi(qthis: *mut c_void, arg0: c_int) -> c_int;
+  fn _ZNK10QJsonValue5toIntEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
   // proto:  void QJsonValue::QJsonValue(const void * );
   fn dector_ZN10QJsonValueC1EPKv(arg0: *mut c_void) -> *mut c_void;
-  fn demth_ZN10QJsonValueC1EPKv(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN10QJsonValueC1EPKv(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QJsonArray QJsonValue::toArray();
-  fn _ZNK10QJsonValue7toArrayEv(qthis: *mut c_void);
+  fn _ZNK10QJsonValue7toArrayEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QJsonValue::isArray();
-  fn demth_ZNK10QJsonValue7isArrayEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK10QJsonValue7isArrayEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QJsonValue::QJsonValue(const char * s);
   fn dector_ZN10QJsonValueC1EPKc(arg0: *mut c_char) -> *mut c_void;
-  fn demth_ZN10QJsonValueC1EPKc(qthis: *mut c_void, arg0: *mut c_char);
+  fn demth_ZN10QJsonValueC1EPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_char);
   // proto:  QString QJsonValue::toString(const QString & defaultValue);
-  fn _ZNK10QJsonValue8toStringERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK10QJsonValue8toStringERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  double QJsonValue::toDouble(double defaultValue);
-  fn _ZNK10QJsonValue8toDoubleEd(qthis: *mut c_void, arg0: c_double) -> c_double;
+  fn _ZNK10QJsonValue8toDoubleEd(qthis: u64 /* *mut c_void*/, arg0: c_double) -> c_double;
   // proto:  void QJsonValue::~QJsonValue();
-  fn _ZN10QJsonValueD0Ev(qthis: *mut c_void);
+  fn _ZN10QJsonValueD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QVariant QJsonValue::toVariant();
-  fn _ZNK10QJsonValue9toVariantEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK10QJsonValue9toVariantEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QJsonValue::isObject();
-  fn demth_ZNK10QJsonValue8isObjectEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK10QJsonValue8isObjectEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto: static QJsonValue QJsonValue::fromVariant(const QVariant & variant);
   fn _ZN10QJsonValue11fromVariantERK8QVariant(arg0: *mut c_void);
   // proto:  bool QJsonValue::toBool(bool defaultValue);
-  fn _ZNK10QJsonValue6toBoolEb(qthis: *mut c_void, arg0: c_char) -> c_char;
+  fn _ZNK10QJsonValue6toBoolEb(qthis: u64 /* *mut c_void*/, arg0: c_char) -> c_char;
   // proto:  void QJsonValue::QJsonValue(double n);
   fn dector_ZN10QJsonValueC1Ed(arg0: c_double) -> *mut c_void;
-  fn _ZN10QJsonValueC1Ed(qthis: *mut c_void, arg0: c_double);
+  fn _ZN10QJsonValueC1Ed(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  bool QJsonValue::isBool();
-  fn demth_ZNK10QJsonValue6isBoolEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK10QJsonValue6isBoolEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QJsonValue::QJsonValue(bool b);
   fn dector_ZN10QJsonValueC1Eb(arg0: c_char) -> *mut c_void;
-  fn _ZN10QJsonValueC1Eb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN10QJsonValueC1Eb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  bool QJsonValue::isUndefined();
-  fn demth_ZNK10QJsonValue11isUndefinedEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK10QJsonValue11isUndefinedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QJsonValue::isNull();
-  fn demth_ZNK10QJsonValue6isNullEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK10QJsonValue6isNullEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QJsonValue::isString();
-  fn demth_ZNK10QJsonValue8isStringEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK10QJsonValue8isStringEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QJsonValue::QJsonValue(int n);
   fn dector_ZN10QJsonValueC1Ei(arg0: c_int) -> *mut c_void;
-  fn _ZN10QJsonValueC1Ei(qthis: *mut c_void, arg0: c_int);
+  fn _ZN10QJsonValueC1Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QJsonValue::QJsonValue(qint64 n);
   fn dector_ZN10QJsonValueC1Ex(arg0: c_longlong) -> *mut c_void;
-  fn _ZN10QJsonValueC1Ex(qthis: *mut c_void, arg0: c_longlong);
+  fn _ZN10QJsonValueC1Ex(qthis: u64 /* *mut c_void*/, arg0: c_longlong);
   fn QJsonValueRef_Class_Size() -> c_int;
   // proto:  QJsonArray QJsonValueRef::toArray();
-  fn _ZNK13QJsonValueRef7toArrayEv(qthis: *mut c_void);
+  fn _ZNK13QJsonValueRef7toArrayEv(qthis: u64 /* *mut c_void*/);
   // proto:  QJsonObject QJsonValueRef::toObject();
-  fn _ZNK13QJsonValueRef8toObjectEv(qthis: *mut c_void);
+  fn _ZNK13QJsonValueRef8toObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QJsonValueRef::isBool();
-  fn demth_ZNK13QJsonValueRef6isBoolEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK13QJsonValueRef6isBoolEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QJsonValueRef::isDouble();
-  fn demth_ZNK13QJsonValueRef8isDoubleEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK13QJsonValueRef8isDoubleEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  double QJsonValueRef::toDouble();
-  fn demth_ZNK13QJsonValueRef8toDoubleEv(qthis: *mut c_void) -> c_double;
+  fn demth_ZNK13QJsonValueRef8toDoubleEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  bool QJsonValueRef::toBool(bool defaultValue);
-  fn demth_ZNK13QJsonValueRef6toBoolEb(qthis: *mut c_void, arg0: c_char) -> c_char;
+  fn demth_ZNK13QJsonValueRef6toBoolEb(qthis: u64 /* *mut c_void*/, arg0: c_char) -> c_char;
   // proto:  double QJsonValueRef::toDouble(double defaultValue);
-  fn demth_ZNK13QJsonValueRef8toDoubleEd(qthis: *mut c_void, arg0: c_double) -> c_double;
+  fn demth_ZNK13QJsonValueRef8toDoubleEd(qthis: u64 /* *mut c_void*/, arg0: c_double) -> c_double;
   // proto:  bool QJsonValueRef::toBool();
-  fn demth_ZNK13QJsonValueRef6toBoolEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK13QJsonValueRef6toBoolEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QVariant QJsonValueRef::toVariant();
-  fn _ZNK13QJsonValueRef9toVariantEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK13QJsonValueRef9toVariantEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QJsonValueRef::toString(const QString & defaultValue);
-  fn demth_ZNK13QJsonValueRef8toStringERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn demth_ZNK13QJsonValueRef8toStringERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  bool QJsonValueRef::isObject();
-  fn demth_ZNK13QJsonValueRef8isObjectEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK13QJsonValueRef8isObjectEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QJsonValueRef::isString();
-  fn demth_ZNK13QJsonValueRef8isStringEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK13QJsonValueRef8isStringEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QString QJsonValueRef::toString();
-  fn demth_ZNK13QJsonValueRef8toStringEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK13QJsonValueRef8toStringEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QJsonValueRef::toInt(int defaultValue);
-  fn demth_ZNK13QJsonValueRef5toIntEi(qthis: *mut c_void, arg0: c_int) -> c_int;
+  fn demth_ZNK13QJsonValueRef5toIntEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
   // proto:  bool QJsonValueRef::isArray();
-  fn demth_ZNK13QJsonValueRef7isArrayEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK13QJsonValueRef7isArrayEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QJsonValueRef::isNull();
-  fn demth_ZNK13QJsonValueRef6isNullEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK13QJsonValueRef6isNullEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  int QJsonValueRef::toInt();
-  fn demth_ZNK13QJsonValueRef5toIntEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK13QJsonValueRef5toIntEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QJsonValueRef::isUndefined();
-  fn demth_ZNK13QJsonValueRef11isUndefinedEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK13QJsonValueRef11isUndefinedEv(qthis: u64 /* *mut c_void*/) -> c_char;
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QJsonValueRefPtr)=16
+#[derive(Default)]
 pub struct QJsonValueRefPtr {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 // class sizeof(QJsonValuePtr)=24
+#[derive(Default)]
 pub struct QJsonValuePtr {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 // class sizeof(QJsonValue)=24
+#[derive(Default)]
 pub struct QJsonValue {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 // class sizeof(QJsonValueRef)=16
+#[derive(Default)]
 pub struct QJsonValueRef {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QJsonValueRefPtr {
-  pub fn inheritFrom(qthis: *mut c_void) -> QJsonValueRefPtr {
-    return QJsonValueRefPtr{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QJsonValueRefPtr {
+    return QJsonValueRefPtr{qclsinst: qthis, ..Default::default()};
   }
 }
 impl /*struct*/ QJsonValuePtr {
-  pub fn inheritFrom(qthis: *mut c_void) -> QJsonValuePtr {
-    return QJsonValuePtr{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QJsonValuePtr {
+    return QJsonValuePtr{qclsinst: qthis, ..Default::default()};
   }
 }
 impl /*struct*/ QJsonValue {
-  pub fn inheritFrom(qthis: *mut c_void) -> QJsonValue {
-    return QJsonValue{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QJsonValue {
+    return QJsonValue{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  QJsonObject QJsonValue::toObject();
@@ -229,11 +233,11 @@ impl<'a> /*trait*/ QJsonValue_New for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QJsonValueC1ERK7QString()};
     let ctysz: c_int = unsafe{QJsonValue_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN10QJsonValueC1ERK7QString(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN10QJsonValueC1ERK7QString(arg0)};
-    let rsthis = QJsonValue{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN10QJsonValueC1ERK7QString(arg0)} as u64;
+    let rsthis = QJsonValue{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -269,11 +273,11 @@ impl<'a> /*trait*/ QJsonValue_New for (*mut c_void) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QJsonValueC1EPKv()};
     let ctysz: c_int = unsafe{QJsonValue_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as *mut c_void;
     // unsafe {_ZN10QJsonValueC1EPKv(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN10QJsonValueC1EPKv(arg0)};
-    let rsthis = QJsonValue{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN10QJsonValueC1EPKv(arg0)} as u64;
+    let rsthis = QJsonValue{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -330,11 +334,11 @@ impl<'a> /*trait*/ QJsonValue_New for (&'a  String) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QJsonValueC1EPKc()};
     let ctysz: c_int = unsafe{QJsonValue_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.as_ptr()  as *mut c_char;
     // unsafe {_ZN10QJsonValueC1EPKc(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN10QJsonValueC1EPKc(arg0)};
-    let rsthis = QJsonValue{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN10QJsonValueC1EPKc(arg0)} as u64;
+    let rsthis = QJsonValue{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -359,7 +363,7 @@ impl<'a> /*trait*/ QJsonValue_toString<QString> for (&'a QString) {
     // unsafe{_ZNK10QJsonValue8toStringERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK10QJsonValue8toStringERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -429,7 +433,7 @@ impl<'a> /*trait*/ QJsonValue_toVariant<QVariant> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QJsonValue9toVariantEv()};
     let mut ret = unsafe {_ZNK10QJsonValue9toVariantEv(rsthis.qclsinst)};
-    let mut ret1 = QVariant::inheritFrom(ret);
+    let mut ret1 = QVariant::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -511,11 +515,11 @@ impl<'a> /*trait*/ QJsonValue_New for (f64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QJsonValueC1Ed()};
     let ctysz: c_int = unsafe{QJsonValue_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_double;
     // unsafe {_ZN10QJsonValueC1Ed(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN10QJsonValueC1Ed(arg0)};
-    let rsthis = QJsonValue{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN10QJsonValueC1Ed(arg0)} as u64;
+    let rsthis = QJsonValue{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -550,11 +554,11 @@ impl<'a> /*trait*/ QJsonValue_New for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QJsonValueC1Eb()};
     let ctysz: c_int = unsafe{QJsonValue_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_char;
     // unsafe {_ZN10QJsonValueC1Eb(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN10QJsonValueC1Eb(arg0)};
-    let rsthis = QJsonValue{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN10QJsonValueC1Eb(arg0)} as u64;
+    let rsthis = QJsonValue{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -635,11 +639,11 @@ impl<'a> /*trait*/ QJsonValue_New for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QJsonValueC1Ei()};
     let ctysz: c_int = unsafe{QJsonValue_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
     // unsafe {_ZN10QJsonValueC1Ei(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN10QJsonValueC1Ei(arg0)};
-    let rsthis = QJsonValue{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN10QJsonValueC1Ei(arg0)} as u64;
+    let rsthis = QJsonValue{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -651,19 +655,19 @@ impl<'a> /*trait*/ QJsonValue_New for (i64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QJsonValueC1Ex()};
     let ctysz: c_int = unsafe{QJsonValue_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_longlong;
     // unsafe {_ZN10QJsonValueC1Ex(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN10QJsonValueC1Ex(arg0)};
-    let rsthis = QJsonValue{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN10QJsonValueC1Ex(arg0)} as u64;
+    let rsthis = QJsonValue{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
 impl /*struct*/ QJsonValueRef {
-  pub fn inheritFrom(qthis: *mut c_void) -> QJsonValueRef {
-    return QJsonValueRef{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QJsonValueRef {
+    return QJsonValueRef{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  QJsonArray QJsonValueRef::toArray();
@@ -844,7 +848,7 @@ impl<'a> /*trait*/ QJsonValueRef_toVariant<QVariant> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QJsonValueRef9toVariantEv()};
     let mut ret = unsafe {_ZNK13QJsonValueRef9toVariantEv(rsthis.qclsinst)};
-    let mut ret1 = QVariant::inheritFrom(ret);
+    let mut ret1 = QVariant::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -869,7 +873,7 @@ impl<'a> /*trait*/ QJsonValueRef_toString<QString> for (&'a QString) {
     // unsafe{_ZNK13QJsonValueRef8toStringERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {demth_ZNK13QJsonValueRef8toStringERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -927,7 +931,7 @@ impl<'a> /*trait*/ QJsonValueRef_toString<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QJsonValueRef8toStringEv()};
     let mut ret = unsafe {demth_ZNK13QJsonValueRef8toStringEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }

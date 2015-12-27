@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtWidgets/qgraphicsanchorlayout.h
 // dst-file: /src/widgets/qgraphicsanchorlayout.rs
 //
@@ -36,64 +36,66 @@ extern {
   fn QGraphicsAnchorLayout_Class_Size() -> c_int;
   // proto:  void QGraphicsAnchorLayout::QGraphicsAnchorLayout(QGraphicsLayoutItem * parent);
   fn dector_ZN21QGraphicsAnchorLayoutC1EP19QGraphicsLayoutItem(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN21QGraphicsAnchorLayoutC1EP19QGraphicsLayoutItem(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN21QGraphicsAnchorLayoutC1EP19QGraphicsLayoutItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsAnchorLayout::QGraphicsAnchorLayout(const QGraphicsAnchorLayout & );
   fn dector_ZN21QGraphicsAnchorLayoutC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN21QGraphicsAnchorLayoutC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN21QGraphicsAnchorLayoutC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  qreal QGraphicsAnchorLayout::verticalSpacing();
-  fn _ZNK21QGraphicsAnchorLayout15verticalSpacingEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK21QGraphicsAnchorLayout15verticalSpacingEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QGraphicsAnchorLayout::setSpacing(qreal spacing);
-  fn _ZN21QGraphicsAnchorLayout10setSpacingEd(qthis: *mut c_void, arg0: c_double);
+  fn _ZN21QGraphicsAnchorLayout10setSpacingEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  int QGraphicsAnchorLayout::count();
-  fn _ZNK21QGraphicsAnchorLayout5countEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK21QGraphicsAnchorLayout5countEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  qreal QGraphicsAnchorLayout::horizontalSpacing();
-  fn _ZNK21QGraphicsAnchorLayout17horizontalSpacingEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK21QGraphicsAnchorLayout17horizontalSpacingEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QGraphicsAnchorLayout::invalidate();
-  fn _ZN21QGraphicsAnchorLayout10invalidateEv(qthis: *mut c_void);
+  fn _ZN21QGraphicsAnchorLayout10invalidateEv(qthis: u64 /* *mut c_void*/);
   // proto:  QGraphicsLayoutItem * QGraphicsAnchorLayout::itemAt(int index);
-  fn _ZNK21QGraphicsAnchorLayout6itemAtEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZNK21QGraphicsAnchorLayout6itemAtEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QGraphicsAnchorLayout::setVerticalSpacing(qreal spacing);
-  fn _ZN21QGraphicsAnchorLayout18setVerticalSpacingEd(qthis: *mut c_void, arg0: c_double);
+  fn _ZN21QGraphicsAnchorLayout18setVerticalSpacingEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QGraphicsAnchorLayout::setGeometry(const QRectF & rect);
-  fn _ZN21QGraphicsAnchorLayout11setGeometryERK6QRectF(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN21QGraphicsAnchorLayout11setGeometryERK6QRectF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsAnchorLayout::setHorizontalSpacing(qreal spacing);
-  fn _ZN21QGraphicsAnchorLayout20setHorizontalSpacingEd(qthis: *mut c_void, arg0: c_double);
+  fn _ZN21QGraphicsAnchorLayout20setHorizontalSpacingEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QGraphicsAnchorLayout::~QGraphicsAnchorLayout();
-  fn _ZN21QGraphicsAnchorLayoutD0Ev(qthis: *mut c_void);
+  fn _ZN21QGraphicsAnchorLayoutD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QGraphicsAnchorLayout::removeAt(int index);
-  fn _ZN21QGraphicsAnchorLayout8removeAtEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN21QGraphicsAnchorLayout8removeAtEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   fn QGraphicsAnchor_Class_Size() -> c_int;
   // proto:  void QGraphicsAnchor::~QGraphicsAnchor();
-  fn _ZN15QGraphicsAnchorD0Ev(qthis: *mut c_void);
+  fn _ZN15QGraphicsAnchorD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QGraphicsAnchor::unsetSpacing();
-  fn _ZN15QGraphicsAnchor12unsetSpacingEv(qthis: *mut c_void);
+  fn _ZN15QGraphicsAnchor12unsetSpacingEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QGraphicsAnchor::setSpacing(qreal spacing);
-  fn _ZN15QGraphicsAnchor10setSpacingEd(qthis: *mut c_void, arg0: c_double);
+  fn _ZN15QGraphicsAnchor10setSpacingEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QGraphicsAnchor::QGraphicsAnchor(QGraphicsAnchorLayout * parent);
   fn dector_ZN15QGraphicsAnchorC1EP21QGraphicsAnchorLayout(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN15QGraphicsAnchorC1EP21QGraphicsAnchorLayout(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN15QGraphicsAnchorC1EP21QGraphicsAnchorLayout(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QGraphicsAnchor::metaObject();
-  fn _ZNK15QGraphicsAnchor10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK15QGraphicsAnchor10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  qreal QGraphicsAnchor::spacing();
-  fn _ZNK15QGraphicsAnchor7spacingEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK15QGraphicsAnchor7spacingEv(qthis: u64 /* *mut c_void*/) -> c_double;
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QGraphicsAnchorLayout)=1
+#[derive(Default)]
 pub struct QGraphicsAnchorLayout {
   qbase: QGraphicsLayout,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 // class sizeof(QGraphicsAnchor)=1
+#[derive(Default)]
 pub struct QGraphicsAnchor {
   qbase: QObject,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QGraphicsAnchorLayout {
-  pub fn inheritFrom(qthis: *mut c_void) -> QGraphicsAnchorLayout {
-    return QGraphicsAnchorLayout{qbase: QGraphicsLayout::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QGraphicsAnchorLayout {
+    return QGraphicsAnchorLayout{qbase: QGraphicsLayout::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QGraphicsAnchorLayout {
@@ -127,11 +129,11 @@ impl<'a> /*trait*/ QGraphicsAnchorLayout_New for (&'a QGraphicsLayoutItem) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QGraphicsAnchorLayoutC1EP19QGraphicsLayoutItem()};
     let ctysz: c_int = unsafe{QGraphicsAnchorLayout_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN21QGraphicsAnchorLayoutC1EP19QGraphicsLayoutItem(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN21QGraphicsAnchorLayoutC1EP19QGraphicsLayoutItem(arg0)};
-    let rsthis = QGraphicsAnchorLayout{/**/qbase: QGraphicsLayout::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN21QGraphicsAnchorLayoutC1EP19QGraphicsLayoutItem(arg0)} as u64;
+    let rsthis = QGraphicsAnchorLayout{qbase: QGraphicsLayout::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -143,11 +145,11 @@ impl<'a> /*trait*/ QGraphicsAnchorLayout_New for (&'a QGraphicsAnchorLayout) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QGraphicsAnchorLayoutC1ERKS_()};
     let ctysz: c_int = unsafe{QGraphicsAnchorLayout_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN21QGraphicsAnchorLayoutC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN21QGraphicsAnchorLayoutC1ERKS_(arg0)};
-    let rsthis = QGraphicsAnchorLayout{/**/qbase: QGraphicsLayout::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN21QGraphicsAnchorLayoutC1ERKS_(arg0)} as u64;
+    let rsthis = QGraphicsAnchorLayout{qbase: QGraphicsLayout::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -405,8 +407,8 @@ impl<'a> /*trait*/ QGraphicsAnchorLayout_removeAt<()> for (i32) {
 }
 
 impl /*struct*/ QGraphicsAnchor {
-  pub fn inheritFrom(qthis: *mut c_void) -> QGraphicsAnchor {
-    return QGraphicsAnchor{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QGraphicsAnchor {
+    return QGraphicsAnchor{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QGraphicsAnchor {
@@ -507,11 +509,11 @@ impl<'a> /*trait*/ QGraphicsAnchor_New for (&'a QGraphicsAnchorLayout) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsAnchorC1EP21QGraphicsAnchorLayout()};
     let ctysz: c_int = unsafe{QGraphicsAnchor_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN15QGraphicsAnchorC1EP21QGraphicsAnchorLayout(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN15QGraphicsAnchorC1EP21QGraphicsAnchorLayout(arg0)};
-    let rsthis = QGraphicsAnchor{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN15QGraphicsAnchorC1EP21QGraphicsAnchorLayout(arg0)} as u64;
+    let rsthis = QGraphicsAnchor{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }

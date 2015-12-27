@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtWidgets/qgraphicslayoutitem.h
 // dst-file: /src/widgets/qgraphicslayoutitem.rs
 //
@@ -33,88 +33,89 @@ use super::super::core::qrect::QRectF; // 771
 extern {
   fn QGraphicsLayoutItem_Class_Size() -> c_int;
   // proto:  void QGraphicsLayoutItem::setSizePolicy(const QSizePolicy & policy);
-  fn _ZN19QGraphicsLayoutItem13setSizePolicyERK11QSizePolicy(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN19QGraphicsLayoutItem13setSizePolicyERK11QSizePolicy(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QGraphicsLayoutItem * QGraphicsLayoutItem::parentLayoutItem();
-  fn _ZNK19QGraphicsLayoutItem16parentLayoutItemEv(qthis: *mut c_void);
+  fn _ZNK19QGraphicsLayoutItem16parentLayoutItemEv(qthis: u64 /* *mut c_void*/);
   // proto:  qreal QGraphicsLayoutItem::minimumWidth();
-  fn demth_ZNK19QGraphicsLayoutItem12minimumWidthEv(qthis: *mut c_void) -> c_double;
+  fn demth_ZNK19QGraphicsLayoutItem12minimumWidthEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  QGraphicsItem * QGraphicsLayoutItem::graphicsItem();
-  fn _ZNK19QGraphicsLayoutItem12graphicsItemEv(qthis: *mut c_void);
+  fn _ZNK19QGraphicsLayoutItem12graphicsItemEv(qthis: u64 /* *mut c_void*/);
   // proto:  qreal QGraphicsLayoutItem::preferredWidth();
-  fn demth_ZNK19QGraphicsLayoutItem14preferredWidthEv(qthis: *mut c_void) -> c_double;
+  fn demth_ZNK19QGraphicsLayoutItem14preferredWidthEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  bool QGraphicsLayoutItem::ownedByLayout();
-  fn _ZNK19QGraphicsLayoutItem13ownedByLayoutEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK19QGraphicsLayoutItem13ownedByLayoutEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QSizeF QGraphicsLayoutItem::preferredSize();
-  fn _ZNK19QGraphicsLayoutItem13preferredSizeEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK19QGraphicsLayoutItem13preferredSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QRectF QGraphicsLayoutItem::geometry();
-  fn _ZNK19QGraphicsLayoutItem8geometryEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK19QGraphicsLayoutItem8geometryEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QGraphicsLayoutItem::QGraphicsLayoutItem(QGraphicsLayoutItem * parent, bool isLayout);
   fn dector_ZN19QGraphicsLayoutItemC1EPS_b(arg0: *mut c_void, arg1: c_char) -> *mut c_void;
-  fn _ZN19QGraphicsLayoutItemC1EPS_b(qthis: *mut c_void, arg0: *mut c_void, arg1: c_char);
+  fn _ZN19QGraphicsLayoutItemC1EPS_b(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_char);
   // proto:  qreal QGraphicsLayoutItem::minimumHeight();
-  fn demth_ZNK19QGraphicsLayoutItem13minimumHeightEv(qthis: *mut c_void) -> c_double;
+  fn demth_ZNK19QGraphicsLayoutItem13minimumHeightEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  qreal QGraphicsLayoutItem::preferredHeight();
-  fn demth_ZNK19QGraphicsLayoutItem15preferredHeightEv(qthis: *mut c_void) -> c_double;
+  fn demth_ZNK19QGraphicsLayoutItem15preferredHeightEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  QSizeF QGraphicsLayoutItem::maximumSize();
-  fn _ZNK19QGraphicsLayoutItem11maximumSizeEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK19QGraphicsLayoutItem11maximumSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QSizePolicy QGraphicsLayoutItem::sizePolicy();
-  fn _ZNK19QGraphicsLayoutItem10sizePolicyEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK19QGraphicsLayoutItem10sizePolicyEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  qreal QGraphicsLayoutItem::maximumHeight();
-  fn demth_ZNK19QGraphicsLayoutItem13maximumHeightEv(qthis: *mut c_void) -> c_double;
+  fn demth_ZNK19QGraphicsLayoutItem13maximumHeightEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QGraphicsLayoutItem::setGeometry(const QRectF & rect);
-  fn _ZN19QGraphicsLayoutItem11setGeometryERK6QRectF(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN19QGraphicsLayoutItem11setGeometryERK6QRectF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsLayoutItem::setPreferredWidth(qreal width);
-  fn _ZN19QGraphicsLayoutItem17setPreferredWidthEd(qthis: *mut c_void, arg0: c_double);
+  fn _ZN19QGraphicsLayoutItem17setPreferredWidthEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QGraphicsLayoutItem::setMaximumSize(const QSizeF & size);
-  fn _ZN19QGraphicsLayoutItem14setMaximumSizeERK6QSizeF(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN19QGraphicsLayoutItem14setMaximumSizeERK6QSizeF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  qreal QGraphicsLayoutItem::maximumWidth();
-  fn demth_ZNK19QGraphicsLayoutItem12maximumWidthEv(qthis: *mut c_void) -> c_double;
+  fn demth_ZNK19QGraphicsLayoutItem12maximumWidthEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QGraphicsLayoutItem::setMinimumSize(qreal w, qreal h);
-  fn demth_ZN19QGraphicsLayoutItem14setMinimumSizeEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double);
+  fn demth_ZN19QGraphicsLayoutItem14setMinimumSizeEdd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double);
   // proto:  void QGraphicsLayoutItem::setMaximumHeight(qreal height);
-  fn _ZN19QGraphicsLayoutItem16setMaximumHeightEd(qthis: *mut c_void, arg0: c_double);
+  fn _ZN19QGraphicsLayoutItem16setMaximumHeightEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QGraphicsLayoutItem::setMinimumSize(const QSizeF & size);
-  fn _ZN19QGraphicsLayoutItem14setMinimumSizeERK6QSizeF(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN19QGraphicsLayoutItem14setMinimumSizeERK6QSizeF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsLayoutItem::setPreferredSize(const QSizeF & size);
-  fn _ZN19QGraphicsLayoutItem16setPreferredSizeERK6QSizeF(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN19QGraphicsLayoutItem16setPreferredSizeERK6QSizeF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsLayoutItem::getContentsMargins(qreal * left, qreal * top, qreal * right, qreal * bottom);
-  fn _ZNK19QGraphicsLayoutItem18getContentsMarginsEPdS0_S0_S0_(qthis: *mut c_void, arg0: *mut c_double, arg1: *mut c_double, arg2: *mut c_double, arg3: *mut c_double);
+  fn _ZNK19QGraphicsLayoutItem18getContentsMarginsEPdS0_S0_S0_(qthis: u64 /* *mut c_void*/, arg0: *mut c_double, arg1: *mut c_double, arg2: *mut c_double, arg3: *mut c_double);
   // proto:  void QGraphicsLayoutItem::setParentLayoutItem(QGraphicsLayoutItem * parent);
-  fn _ZN19QGraphicsLayoutItem19setParentLayoutItemEPS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN19QGraphicsLayoutItem19setParentLayoutItemEPS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsLayoutItem::setMinimumWidth(qreal width);
-  fn _ZN19QGraphicsLayoutItem15setMinimumWidthEd(qthis: *mut c_void, arg0: c_double);
+  fn _ZN19QGraphicsLayoutItem15setMinimumWidthEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QGraphicsLayoutItem::setMaximumWidth(qreal width);
-  fn _ZN19QGraphicsLayoutItem15setMaximumWidthEd(qthis: *mut c_void, arg0: c_double);
+  fn _ZN19QGraphicsLayoutItem15setMaximumWidthEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QGraphicsLayoutItem::updateGeometry();
-  fn _ZN19QGraphicsLayoutItem14updateGeometryEv(qthis: *mut c_void);
+  fn _ZN19QGraphicsLayoutItem14updateGeometryEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QGraphicsLayoutItem::setPreferredHeight(qreal height);
-  fn _ZN19QGraphicsLayoutItem18setPreferredHeightEd(qthis: *mut c_void, arg0: c_double);
+  fn _ZN19QGraphicsLayoutItem18setPreferredHeightEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  QSizeF QGraphicsLayoutItem::minimumSize();
-  fn _ZNK19QGraphicsLayoutItem11minimumSizeEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK19QGraphicsLayoutItem11minimumSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QRectF QGraphicsLayoutItem::contentsRect();
-  fn _ZNK19QGraphicsLayoutItem12contentsRectEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK19QGraphicsLayoutItem12contentsRectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QGraphicsLayoutItem::isLayout();
-  fn _ZNK19QGraphicsLayoutItem8isLayoutEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK19QGraphicsLayoutItem8isLayoutEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QGraphicsLayoutItem::setPreferredSize(qreal w, qreal h);
-  fn demth_ZN19QGraphicsLayoutItem16setPreferredSizeEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double);
+  fn demth_ZN19QGraphicsLayoutItem16setPreferredSizeEdd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double);
   // proto:  void QGraphicsLayoutItem::~QGraphicsLayoutItem();
-  fn _ZN19QGraphicsLayoutItemD0Ev(qthis: *mut c_void);
+  fn _ZN19QGraphicsLayoutItemD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QGraphicsLayoutItem::setMinimumHeight(qreal height);
-  fn _ZN19QGraphicsLayoutItem16setMinimumHeightEd(qthis: *mut c_void, arg0: c_double);
+  fn _ZN19QGraphicsLayoutItem16setMinimumHeightEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QGraphicsLayoutItem::setMaximumSize(qreal w, qreal h);
-  fn demth_ZN19QGraphicsLayoutItem14setMaximumSizeEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double);
+  fn demth_ZN19QGraphicsLayoutItem14setMaximumSizeEdd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QGraphicsLayoutItem)=1
+#[derive(Default)]
 pub struct QGraphicsLayoutItem {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QGraphicsLayoutItem {
-  pub fn inheritFrom(qthis: *mut c_void) -> QGraphicsLayoutItem {
-    return QGraphicsLayoutItem{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QGraphicsLayoutItem {
+    return QGraphicsLayoutItem{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  void QGraphicsLayoutItem::setSizePolicy(const QSizePolicy & policy);
@@ -271,7 +272,7 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_preferredSize<QSizeF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QGraphicsLayoutItem13preferredSizeEv()};
     let mut ret = unsafe {_ZNK19QGraphicsLayoutItem13preferredSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSizeF::inheritFrom(ret);
+    let mut ret1 = QSizeF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -295,7 +296,7 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_geometry<QRectF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QGraphicsLayoutItem8geometryEv()};
     let mut ret = unsafe {_ZNK19QGraphicsLayoutItem8geometryEv(rsthis.qclsinst)};
-    let mut ret1 = QRectF::inheritFrom(ret);
+    let mut ret1 = QRectF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -320,12 +321,12 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_New for (&'a QGraphicsLayoutItem, i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsLayoutItemC1EPS_b()};
     let ctysz: c_int = unsafe{QGraphicsLayoutItem_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_char;
     // unsafe {_ZN19QGraphicsLayoutItemC1EPS_b(qthis, arg0, arg1)};
-    let qthis: *mut c_void = unsafe {dector_ZN19QGraphicsLayoutItemC1EPS_b(arg0, arg1)};
-    let rsthis = QGraphicsLayoutItem{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN19QGraphicsLayoutItemC1EPS_b(arg0, arg1)} as u64;
+    let rsthis = QGraphicsLayoutItem{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -395,7 +396,7 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_maximumSize<QSizeF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QGraphicsLayoutItem11maximumSizeEv()};
     let mut ret = unsafe {_ZNK19QGraphicsLayoutItem11maximumSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSizeF::inheritFrom(ret);
+    let mut ret1 = QSizeF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -419,7 +420,7 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_sizePolicy<QSizePolicy> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QGraphicsLayoutItem10sizePolicyEv()};
     let mut ret = unsafe {_ZNK19QGraphicsLayoutItem10sizePolicyEv(rsthis.qclsinst)};
-    let mut ret1 = QSizePolicy::inheritFrom(ret);
+    let mut ret1 = QSizePolicy::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -779,7 +780,7 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_minimumSize<QSizeF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QGraphicsLayoutItem11minimumSizeEv()};
     let mut ret = unsafe {_ZNK19QGraphicsLayoutItem11minimumSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSizeF::inheritFrom(ret);
+    let mut ret1 = QSizeF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -803,7 +804,7 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_contentsRect<QRectF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QGraphicsLayoutItem12contentsRectEv()};
     let mut ret = unsafe {_ZNK19QGraphicsLayoutItem12contentsRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRectF::inheritFrom(ret);
+    let mut ret1 = QRectF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }

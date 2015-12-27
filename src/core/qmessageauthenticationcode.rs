@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qmessageauthenticationcode.h
 // dst-file: /src/core/qmessageauthenticationcode.rs
 //
@@ -32,34 +32,35 @@ use super::qiodevice::QIODevice; // 773
 extern {
   fn QMessageAuthenticationCode_Class_Size() -> c_int;
   // proto:  QByteArray QMessageAuthenticationCode::result();
-  fn _ZNK26QMessageAuthenticationCode6resultEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK26QMessageAuthenticationCode6resultEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QMessageAuthenticationCode::addData(const QByteArray & data);
-  fn _ZN26QMessageAuthenticationCode7addDataERK10QByteArray(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN26QMessageAuthenticationCode7addDataERK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMessageAuthenticationCode::QMessageAuthenticationCode(const QMessageAuthenticationCode & );
   fn dector_ZN26QMessageAuthenticationCodeC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN26QMessageAuthenticationCodeC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN26QMessageAuthenticationCodeC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMessageAuthenticationCode::addData(const char * data, int length);
-  fn _ZN26QMessageAuthenticationCode7addDataEPKci(qthis: *mut c_void, arg0: *mut c_char, arg1: c_int);
+  fn _ZN26QMessageAuthenticationCode7addDataEPKci(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int);
   // proto:  void QMessageAuthenticationCode::~QMessageAuthenticationCode();
-  fn _ZN26QMessageAuthenticationCodeD0Ev(qthis: *mut c_void);
+  fn _ZN26QMessageAuthenticationCodeD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QMessageAuthenticationCode::reset();
-  fn _ZN26QMessageAuthenticationCode5resetEv(qthis: *mut c_void);
+  fn _ZN26QMessageAuthenticationCode5resetEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QMessageAuthenticationCode::addData(QIODevice * device);
-  fn _ZN26QMessageAuthenticationCode7addDataEP9QIODevice(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn _ZN26QMessageAuthenticationCode7addDataEP9QIODevice(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  void QMessageAuthenticationCode::setKey(const QByteArray & key);
-  fn _ZN26QMessageAuthenticationCode6setKeyERK10QByteArray(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN26QMessageAuthenticationCode6setKeyERK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QMessageAuthenticationCode)=8
+#[derive(Default)]
 pub struct QMessageAuthenticationCode {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QMessageAuthenticationCode {
-  pub fn inheritFrom(qthis: *mut c_void) -> QMessageAuthenticationCode {
-    return QMessageAuthenticationCode{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QMessageAuthenticationCode {
+    return QMessageAuthenticationCode{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  QByteArray QMessageAuthenticationCode::result();
@@ -80,7 +81,7 @@ impl<'a> /*trait*/ QMessageAuthenticationCode_result<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK26QMessageAuthenticationCode6resultEv()};
     let mut ret = unsafe {_ZNK26QMessageAuthenticationCode6resultEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -128,11 +129,11 @@ impl<'a> /*trait*/ QMessageAuthenticationCode_New for (&'a QMessageAuthenticatio
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QMessageAuthenticationCodeC1ERKS_()};
     let ctysz: c_int = unsafe{QMessageAuthenticationCode_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN26QMessageAuthenticationCodeC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN26QMessageAuthenticationCodeC1ERKS_(arg0)};
-    let rsthis = QMessageAuthenticationCode{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN26QMessageAuthenticationCodeC1ERKS_(arg0)} as u64;
+    let rsthis = QMessageAuthenticationCode{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtWidgets/qlayout.h
 // dst-file: /src/widgets/qlayout.rs
 //
@@ -36,102 +36,103 @@ use super::super::core::qmargins::QMargins; // 771
 extern {
   fn QLayout_Class_Size() -> c_int;
   // proto:  void QLayout::setContentsMargins(int left, int top, int right, int bottom);
-  fn _ZN7QLayout18setContentsMarginsEiiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
+  fn _ZN7QLayout18setContentsMarginsEiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
   // proto:  int QLayout::spacing();
-  fn _ZNK7QLayout7spacingEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK7QLayout7spacingEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QLayout::QLayout();
   fn dector_ZN7QLayoutC1Ev() -> *mut c_void;
-  fn _ZN7QLayoutC1Ev(qthis: *mut c_void);
+  fn _ZN7QLayoutC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QRect QLayout::geometry();
-  fn _ZNK7QLayout8geometryEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK7QLayout8geometryEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QLayout::count();
-  fn _ZNK7QLayout5countEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK7QLayout5countEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  QSize QLayout::maximumSize();
-  fn _ZNK7QLayout11maximumSizeEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK7QLayout11maximumSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QLayout::setMenuBar(QWidget * w);
-  fn _ZN7QLayout10setMenuBarEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN7QLayout10setMenuBarEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QLayout::indexOf(QWidget * );
-  fn _ZNK7QLayout7indexOfEP7QWidget(qthis: *mut c_void, arg0: *mut c_void) -> c_int;
+  fn _ZNK7QLayout7indexOfEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
   // proto:  void QLayout::setEnabled(bool );
-  fn _ZN7QLayout10setEnabledEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN7QLayout10setEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QSize QLayout::minimumSize();
-  fn _ZNK7QLayout11minimumSizeEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK7QLayout11minimumSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QLayoutItem * QLayout::takeAt(int index);
-  fn _ZN7QLayout6takeAtEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
+  fn _ZN7QLayout6takeAtEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  QSize QLayout::totalMaximumSize();
-  fn _ZNK7QLayout16totalMaximumSizeEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK7QLayout16totalMaximumSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QLayout::invalidate();
-  fn _ZN7QLayout10invalidateEv(qthis: *mut c_void);
+  fn _ZN7QLayout10invalidateEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QLayout::update();
-  fn _ZN7QLayout6updateEv(qthis: *mut c_void);
+  fn _ZN7QLayout6updateEv(qthis: u64 /* *mut c_void*/);
   // proto:  QRect QLayout::contentsRect();
-  fn _ZNK7QLayout12contentsRectEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK7QLayout12contentsRectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QSize QLayout::totalSizeHint();
-  fn _ZNK7QLayout13totalSizeHintEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK7QLayout13totalSizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QLayout::QLayout(QWidget * parent);
   fn dector_ZN7QLayoutC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN7QLayoutC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN7QLayoutC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QLayout::addItem(QLayoutItem * );
-  fn _ZN7QLayout7addItemEP11QLayoutItem(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN7QLayout7addItemEP11QLayoutItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QLayout::totalHeightForWidth(int w);
-  fn _ZNK7QLayout19totalHeightForWidthEi(qthis: *mut c_void, arg0: c_int) -> c_int;
+  fn _ZNK7QLayout19totalHeightForWidthEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
   // proto:  void QLayout::setMargin(int );
-  fn _ZN7QLayout9setMarginEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN7QLayout9setMarginEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  bool QLayout::isEmpty();
-  fn _ZNK7QLayout7isEmptyEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK7QLayout7isEmptyEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QLayout::addWidget(QWidget * w);
-  fn _ZN7QLayout9addWidgetEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN7QLayout9addWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QLayout::getContentsMargins(int * left, int * top, int * right, int * bottom);
-  fn _ZNK7QLayout18getContentsMarginsEPiS0_S0_S0_(qthis: *mut c_void, arg0: *mut c_int, arg1: *mut c_int, arg2: *mut c_int, arg3: *mut c_int);
+  fn _ZNK7QLayout18getContentsMarginsEPiS0_S0_S0_(qthis: u64 /* *mut c_void*/, arg0: *mut c_int, arg1: *mut c_int, arg2: *mut c_int, arg3: *mut c_int);
   // proto:  QLayout * QLayout::layout();
-  fn _ZN7QLayout6layoutEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZN7QLayout6layoutEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QLayout::activate();
-  fn _ZN7QLayout8activateEv(qthis: *mut c_void) -> c_char;
+  fn _ZN7QLayout8activateEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QLayout::isEnabled();
-  fn _ZNK7QLayout9isEnabledEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK7QLayout9isEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QLayout::~QLayout();
-  fn _ZN7QLayoutD0Ev(qthis: *mut c_void);
+  fn _ZN7QLayoutD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  int QLayout::margin();
-  fn _ZNK7QLayout6marginEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK7QLayout6marginEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QLayout::setSpacing(int );
-  fn _ZN7QLayout10setSpacingEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN7QLayout10setSpacingEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  QWidget * QLayout::menuBar();
-  fn _ZNK7QLayout7menuBarEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK7QLayout7menuBarEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QLayout::QLayout(const QLayout & );
   fn dector_ZN7QLayoutC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN7QLayoutC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN7QLayoutC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QLayout::metaObject();
-  fn _ZNK7QLayout10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK7QLayout10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  QLayoutItem * QLayout::itemAt(int index);
-  fn _ZNK7QLayout6itemAtEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
+  fn _ZNK7QLayout6itemAtEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  QWidget * QLayout::parentWidget();
-  fn _ZNK7QLayout12parentWidgetEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK7QLayout12parentWidgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QLayout::removeWidget(QWidget * w);
-  fn _ZN7QLayout12removeWidgetEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN7QLayout12removeWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QLayout::removeItem(QLayoutItem * );
-  fn _ZN7QLayout10removeItemEP11QLayoutItem(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN7QLayout10removeItemEP11QLayoutItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QMargins QLayout::contentsMargins();
-  fn _ZNK7QLayout15contentsMarginsEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK7QLayout15contentsMarginsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QSize QLayout::totalMinimumSize();
-  fn _ZNK7QLayout16totalMinimumSizeEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK7QLayout16totalMinimumSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QLayout::setGeometry(const QRect & );
-  fn _ZN7QLayout11setGeometryERK5QRect(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN7QLayout11setGeometryERK5QRect(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static QSize QLayout::closestAcceptableSize(const QWidget * w, const QSize & s);
   fn _ZN7QLayout21closestAcceptableSizeEPK7QWidgetRK5QSize(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  void QLayout::setContentsMargins(const QMargins & margins);
-  fn _ZN7QLayout18setContentsMarginsERK8QMargins(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN7QLayout18setContentsMarginsERK8QMargins(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QLayout)=1
+#[derive(Default)]
 pub struct QLayout {
   qbase: QObject,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QLayout {
-  pub fn inheritFrom(qthis: *mut c_void) -> QLayout {
-    return QLayout{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QLayout {
+    return QLayout{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QLayout {
@@ -214,10 +215,10 @@ impl<'a> /*trait*/ QLayout_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QLayoutC1Ev()};
     let ctysz: c_int = unsafe{QLayout_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN7QLayoutC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN7QLayoutC1Ev()};
-    let rsthis = QLayout{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN7QLayoutC1Ev()} as u64;
+    let rsthis = QLayout{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -241,7 +242,7 @@ impl<'a> /*trait*/ QLayout_geometry<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QLayout8geometryEv()};
     let mut ret = unsafe {_ZNK7QLayout8geometryEv(rsthis.qclsinst)};
-    let mut ret1 = QRect::inheritFrom(ret);
+    let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -288,7 +289,7 @@ impl<'a> /*trait*/ QLayout_maximumSize<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QLayout11maximumSizeEv()};
     let mut ret = unsafe {_ZNK7QLayout11maximumSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize::inheritFrom(ret);
+    let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -382,7 +383,7 @@ impl<'a> /*trait*/ QLayout_minimumSize<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QLayout11minimumSizeEv()};
     let mut ret = unsafe {_ZNK7QLayout11minimumSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize::inheritFrom(ret);
+    let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -407,7 +408,7 @@ impl<'a> /*trait*/ QLayout_takeAt<QLayoutItem> for (i32) {
     // unsafe{_ZN7QLayout6takeAtEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZN7QLayout6takeAtEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QLayoutItem::inheritFrom(ret);
+    let mut ret1 = QLayoutItem::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -431,7 +432,7 @@ impl<'a> /*trait*/ QLayout_totalMaximumSize<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QLayout16totalMaximumSizeEv()};
     let mut ret = unsafe {_ZNK7QLayout16totalMaximumSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize::inheritFrom(ret);
+    let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -499,7 +500,7 @@ impl<'a> /*trait*/ QLayout_contentsRect<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QLayout12contentsRectEv()};
     let mut ret = unsafe {_ZNK7QLayout12contentsRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRect::inheritFrom(ret);
+    let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -523,7 +524,7 @@ impl<'a> /*trait*/ QLayout_totalSizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QLayout13totalSizeHintEv()};
     let mut ret = unsafe {_ZNK7QLayout13totalSizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize::inheritFrom(ret);
+    let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -535,11 +536,11 @@ impl<'a> /*trait*/ QLayout_New for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QLayoutC1EP7QWidget()};
     let ctysz: c_int = unsafe{QLayout_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN7QLayoutC1EP7QWidget(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN7QLayoutC1EP7QWidget(arg0)};
-    let rsthis = QLayout{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN7QLayoutC1EP7QWidget(arg0)} as u64;
+    let rsthis = QLayout{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -705,7 +706,7 @@ impl<'a> /*trait*/ QLayout_layout<QLayout> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QLayout6layoutEv()};
     let mut ret = unsafe {_ZN7QLayout6layoutEv(rsthis.qclsinst)};
-    let mut ret1 = QLayout::inheritFrom(ret);
+    let mut ret1 = QLayout::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -843,7 +844,7 @@ impl<'a> /*trait*/ QLayout_menuBar<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QLayout7menuBarEv()};
     let mut ret = unsafe {_ZNK7QLayout7menuBarEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget::inheritFrom(ret);
+    let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -855,11 +856,11 @@ impl<'a> /*trait*/ QLayout_New for (&'a QLayout) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QLayoutC1ERKS_()};
     let ctysz: c_int = unsafe{QLayout_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN7QLayoutC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN7QLayoutC1ERKS_(arg0)};
-    let rsthis = QLayout{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN7QLayoutC1ERKS_(arg0)} as u64;
+    let rsthis = QLayout{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -906,7 +907,7 @@ impl<'a> /*trait*/ QLayout_itemAt<QLayoutItem> for (i32) {
     // unsafe{_ZNK7QLayout6itemAtEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK7QLayout6itemAtEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QLayoutItem::inheritFrom(ret);
+    let mut ret1 = QLayoutItem::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -930,7 +931,7 @@ impl<'a> /*trait*/ QLayout_parentWidget<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QLayout12parentWidgetEv()};
     let mut ret = unsafe {_ZNK7QLayout12parentWidgetEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget::inheritFrom(ret);
+    let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1000,7 +1001,7 @@ impl<'a> /*trait*/ QLayout_contentsMargins<QMargins> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QLayout15contentsMarginsEv()};
     let mut ret = unsafe {_ZNK7QLayout15contentsMarginsEv(rsthis.qclsinst)};
-    let mut ret1 = QMargins::inheritFrom(ret);
+    let mut ret1 = QMargins::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1024,7 +1025,7 @@ impl<'a> /*trait*/ QLayout_totalMinimumSize<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QLayout16totalMinimumSizeEv()};
     let mut ret = unsafe {_ZNK7QLayout16totalMinimumSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize::inheritFrom(ret);
+    let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1073,7 +1074,7 @@ impl<'a> /*trait*/ QLayout_closestAcceptableSize_s<QSize> for (&'a QWidget, &'a 
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN7QLayout21closestAcceptableSizeEPK7QWidgetRK5QSize(arg0, arg1)};
-    let mut ret1 = QSize::inheritFrom(ret);
+    let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }

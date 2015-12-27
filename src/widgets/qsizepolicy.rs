@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtWidgets/qsizepolicy.h
 // dst-file: /src/widgets/qsizepolicy.rs
 //
@@ -30,45 +30,46 @@ use std::ops::Deref;
 extern {
   fn QSizePolicy_Class_Size() -> c_int;
   // proto:  bool QSizePolicy::hasHeightForWidth();
-  fn _ZNK11QSizePolicy17hasHeightForWidthEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK11QSizePolicy17hasHeightForWidthEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QSizePolicy::retainSizeWhenHidden();
-  fn _ZNK11QSizePolicy20retainSizeWhenHiddenEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK11QSizePolicy20retainSizeWhenHiddenEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QSizePolicy::hasWidthForHeight();
-  fn _ZNK11QSizePolicy17hasWidthForHeightEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK11QSizePolicy17hasWidthForHeightEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QSizePolicy::transpose();
-  fn _ZN11QSizePolicy9transposeEv(qthis: *mut c_void);
+  fn _ZN11QSizePolicy9transposeEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QSizePolicy::setWidthForHeight(bool b);
-  fn _ZN11QSizePolicy17setWidthForHeightEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN11QSizePolicy17setWidthForHeightEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QSizePolicy::setVerticalStretch(int stretchFactor);
-  fn _ZN11QSizePolicy18setVerticalStretchEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN11QSizePolicy18setVerticalStretchEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QSizePolicy::setHeightForWidth(bool b);
-  fn _ZN11QSizePolicy17setHeightForWidthEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN11QSizePolicy17setHeightForWidthEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QSizePolicy::setRetainSizeWhenHidden(bool retainSize);
-  fn _ZN11QSizePolicy23setRetainSizeWhenHiddenEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN11QSizePolicy23setRetainSizeWhenHiddenEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  int QSizePolicy::horizontalStretch();
-  fn _ZNK11QSizePolicy17horizontalStretchEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK11QSizePolicy17horizontalStretchEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QSizePolicy::setHorizontalStretch(int stretchFactor);
-  fn _ZN11QSizePolicy20setHorizontalStretchEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN11QSizePolicy20setHorizontalStretchEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QSizePolicy::QSizePolicy(int i);
   fn dector_ZN11QSizePolicyC1Ei(arg0: c_int) -> *mut c_void;
-  fn _ZN11QSizePolicyC1Ei(qthis: *mut c_void, arg0: c_int);
+  fn _ZN11QSizePolicyC1Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QSizePolicy::QSizePolicy();
   fn dector_ZN11QSizePolicyC1Ev() -> *mut c_void;
-  fn _ZN11QSizePolicyC1Ev(qthis: *mut c_void);
+  fn _ZN11QSizePolicyC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  int QSizePolicy::verticalStretch();
-  fn _ZNK11QSizePolicy15verticalStretchEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK11QSizePolicy15verticalStretchEv(qthis: u64 /* *mut c_void*/) -> c_int;
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QSizePolicy)=4
+#[derive(Default)]
 pub struct QSizePolicy {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QSizePolicy {
-  pub fn inheritFrom(qthis: *mut c_void) -> QSizePolicy {
-    return QSizePolicy{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QSizePolicy {
+    return QSizePolicy{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  bool QSizePolicy::hasHeightForWidth();
@@ -319,11 +320,11 @@ impl<'a> /*trait*/ QSizePolicy_New for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QSizePolicyC1Ei()};
     let ctysz: c_int = unsafe{QSizePolicy_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
     // unsafe {_ZN11QSizePolicyC1Ei(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN11QSizePolicyC1Ei(arg0)};
-    let rsthis = QSizePolicy{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN11QSizePolicyC1Ei(arg0)} as u64;
+    let rsthis = QSizePolicy{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -335,10 +336,10 @@ impl<'a> /*trait*/ QSizePolicy_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QSizePolicyC1Ev()};
     let ctysz: c_int = unsafe{QSizePolicy_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN11QSizePolicyC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN11QSizePolicyC1Ev()};
-    let rsthis = QSizePolicy{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN11QSizePolicyC1Ev()} as u64;
+    let rsthis = QSizePolicy{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }

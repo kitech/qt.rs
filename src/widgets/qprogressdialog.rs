@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtWidgets/qprogressdialog.h
 // dst-file: /src/widgets/qprogressdialog.rs
 //
@@ -38,74 +38,77 @@ use super::qpushbutton::QPushButton; // 773
 extern {
   fn QProgressDialog_Class_Size() -> c_int;
   // proto:  void QProgressDialog::setAutoClose(bool close);
-  fn _ZN15QProgressDialog12setAutoCloseEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN15QProgressDialog12setAutoCloseEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QProgressDialog::open(QObject * receiver, const char * member);
-  fn _ZN15QProgressDialog4openEP7QObjectPKc(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_char);
+  fn _ZN15QProgressDialog4openEP7QObjectPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_char);
   // proto:  void QProgressDialog::setMaximum(int maximum);
-  fn _ZN15QProgressDialog10setMaximumEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN15QProgressDialog10setMaximumEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QProgressDialog::setMinimum(int minimum);
-  fn _ZN15QProgressDialog10setMinimumEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN15QProgressDialog10setMinimumEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QProgressDialog::setLabelText(const QString & text);
-  fn _ZN15QProgressDialog12setLabelTextERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN15QProgressDialog12setLabelTextERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QProgressDialog::wasCanceled();
-  fn _ZNK15QProgressDialog11wasCanceledEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK15QProgressDialog11wasCanceledEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QProgressDialog::~QProgressDialog();
-  fn _ZN15QProgressDialogD0Ev(qthis: *mut c_void);
+  fn _ZN15QProgressDialogD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  int QProgressDialog::minimumDuration();
-  fn _ZNK15QProgressDialog15minimumDurationEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK15QProgressDialog15minimumDurationEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QProgressDialog::setMinimumDuration(int ms);
-  fn _ZN15QProgressDialog18setMinimumDurationEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN15QProgressDialog18setMinimumDurationEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QProgressDialog::maximum();
-  fn _ZNK15QProgressDialog7maximumEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK15QProgressDialog7maximumEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QProgressDialog::setBar(QProgressBar * bar);
-  fn _ZN15QProgressDialog6setBarEP12QProgressBar(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN15QProgressDialog6setBarEP12QProgressBar(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QProgressDialog::cancel();
-  fn _ZN15QProgressDialog6cancelEv(qthis: *mut c_void);
+  fn _ZN15QProgressDialog6cancelEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QProgressDialog::autoClose();
-  fn _ZNK15QProgressDialog9autoCloseEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK15QProgressDialog9autoCloseEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  int QProgressDialog::minimum();
-  fn _ZNK15QProgressDialog7minimumEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK15QProgressDialog7minimumEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QProgressDialog::autoReset();
-  fn _ZNK15QProgressDialog9autoResetEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK15QProgressDialog9autoResetEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QProgressDialog::reset();
-  fn _ZN15QProgressDialog5resetEv(qthis: *mut c_void);
+  fn _ZN15QProgressDialog5resetEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QProgressDialog::QProgressDialog(const QProgressDialog & );
   fn dector_ZN15QProgressDialogC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN15QProgressDialogC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN15QProgressDialogC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QProgressDialog::setRange(int minimum, int maximum);
-  fn _ZN15QProgressDialog8setRangeEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
+  fn _ZN15QProgressDialog8setRangeEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  void QProgressDialog::canceled();
-  fn _ZN15QProgressDialog8canceledEv(qthis: *mut c_void);
+  fn _ZN15QProgressDialog8canceledEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QProgressDialog::setCancelButtonText(const QString & text);
-  fn _ZN15QProgressDialog19setCancelButtonTextERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN15QProgressDialog19setCancelButtonTextERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QSize QProgressDialog::sizeHint();
-  fn _ZNK15QProgressDialog8sizeHintEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK15QProgressDialog8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QProgressDialog::labelText();
-  fn _ZNK15QProgressDialog9labelTextEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK15QProgressDialog9labelTextEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QProgressDialog::setLabel(QLabel * label);
-  fn _ZN15QProgressDialog8setLabelEP6QLabel(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN15QProgressDialog8setLabelEP6QLabel(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QProgressDialog::metaObject();
-  fn _ZNK15QProgressDialog10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK15QProgressDialog10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QProgressDialog::setAutoReset(bool reset);
-  fn _ZN15QProgressDialog12setAutoResetEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN15QProgressDialog12setAutoResetEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  int QProgressDialog::value();
-  fn _ZNK15QProgressDialog5valueEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK15QProgressDialog5valueEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QProgressDialog::setCancelButton(QPushButton * button);
-  fn _ZN15QProgressDialog15setCancelButtonEP11QPushButton(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN15QProgressDialog15setCancelButtonEP11QPushButton(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QProgressDialog::setValue(int progress);
-  fn _ZN15QProgressDialog8setValueEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN15QProgressDialog8setValueEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn QProgressDialog_SlotProxy_connect__ZN15QProgressDialog8canceledEv(qthis: *mut c_void, fptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QProgressDialog)=1
+#[derive(Default)]
 pub struct QProgressDialog {
   qbase: QDialog,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _canceled_1: QProgressDialog_canceled_signal,
 }
 
 impl /*struct*/ QProgressDialog {
-  pub fn inheritFrom(qthis: *mut c_void) -> QProgressDialog {
-    return QProgressDialog{qbase: QDialog::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QProgressDialog {
+    return QProgressDialog{qbase: QDialog::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QProgressDialog {
@@ -505,11 +508,11 @@ impl<'a> /*trait*/ QProgressDialog_New for (&'a QProgressDialog) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QProgressDialogC1ERKS_()};
     let ctysz: c_int = unsafe{QProgressDialog_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN15QProgressDialogC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN15QProgressDialogC1ERKS_(arg0)};
-    let rsthis = QProgressDialog{/**/qbase: QDialog::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN15QProgressDialogC1ERKS_(arg0)} as u64;
+    let rsthis = QProgressDialog{qbase: QDialog::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -602,7 +605,7 @@ impl<'a> /*trait*/ QProgressDialog_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QProgressDialog8sizeHintEv()};
     let mut ret = unsafe {_ZNK15QProgressDialog8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize::inheritFrom(ret);
+    let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -626,7 +629,7 @@ impl<'a> /*trait*/ QProgressDialog_labelText<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QProgressDialog9labelTextEv()};
     let mut ret = unsafe {_ZNK15QProgressDialog9labelTextEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -769,5 +772,31 @@ impl<'a> /*trait*/ QProgressDialog_setValue<()> for (i32) {
   }
 }
 
+#[derive(Default)] // for QProgressDialog_canceled
+pub struct QProgressDialog_canceled_signal{poi:u64}
+impl /* struct */ QProgressDialog {
+  pub fn canceled_1(self) -> QProgressDialog_canceled_signal {
+     return QProgressDialog_canceled_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QProgressDialog_canceled_signal {
+  pub fn connect<T: QProgressDialog_canceled_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QProgressDialog_canceled_signal_connect {
+  fn connect(self, sigthis: QProgressDialog_canceled_signal);
+}
+
+// canceled()
+extern fn QProgressDialog_canceled_signal_connect_cb_0() {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QProgressDialog_canceled_signal_connect for (extern fn()) {
+  fn connect(self, sigthis: QProgressDialog_canceled_signal) {
+    // do smth...
+    unsafe {QProgressDialog_SlotProxy_connect__ZN15QProgressDialog8canceledEv(sigthis.poi as *mut c_void, QProgressDialog_canceled_signal_connect_cb_0 as *mut c_void)};
+  }
+}
 // <= body block end
 

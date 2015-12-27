@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:03 2015
 // src-file: /QtGui/qkeysequence.h
 // dst-file: /src/gui/qkeysequence.rs
 //
@@ -31,38 +31,39 @@ use super::super::core::qstring::QString; // 771
 extern {
   fn QKeySequence_Class_Size() -> c_int;
   // proto:  bool QKeySequence::isDetached();
-  fn _ZNK12QKeySequence10isDetachedEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK12QKeySequence10isDetachedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QKeySequence::isEmpty();
-  fn _ZNK12QKeySequence7isEmptyEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK12QKeySequence7isEmptyEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QKeySequence::QKeySequence(const QKeySequence & ks);
   fn dector_ZN12QKeySequenceC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN12QKeySequenceC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN12QKeySequenceC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QKeySequence::QKeySequence(int k1, int k2, int k3, int k4);
   fn dector_ZN12QKeySequenceC1Eiiii(arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int) -> *mut c_void;
-  fn _ZN12QKeySequenceC1Eiiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
+  fn _ZN12QKeySequenceC1Eiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
   // proto:  int QKeySequence::count();
-  fn _ZNK12QKeySequence5countEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK12QKeySequence5countEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto: static QKeySequence QKeySequence::mnemonic(const QString & text);
   fn _ZN12QKeySequence8mnemonicERK7QString(arg0: *mut c_void) -> *mut c_void;
   // proto:  void QKeySequence::QKeySequence();
   fn dector_ZN12QKeySequenceC1Ev() -> *mut c_void;
-  fn _ZN12QKeySequenceC1Ev(qthis: *mut c_void);
+  fn _ZN12QKeySequenceC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QKeySequence::~QKeySequence();
-  fn _ZN12QKeySequenceD0Ev(qthis: *mut c_void);
+  fn _ZN12QKeySequenceD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QKeySequence::swap(QKeySequence & other);
-  fn demth_ZN12QKeySequence4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN12QKeySequence4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QKeySequence)=8
+#[derive(Default)]
 pub struct QKeySequence {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QKeySequence {
-  pub fn inheritFrom(qthis: *mut c_void) -> QKeySequence {
-    return QKeySequence{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QKeySequence {
+    return QKeySequence{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  bool QKeySequence::isDetached();
@@ -130,11 +131,11 @@ impl<'a> /*trait*/ QKeySequence_New for (&'a QKeySequence) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QKeySequenceC1ERKS_()};
     let ctysz: c_int = unsafe{QKeySequence_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN12QKeySequenceC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN12QKeySequenceC1ERKS_(arg0)};
-    let rsthis = QKeySequence{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN12QKeySequenceC1ERKS_(arg0)} as u64;
+    let rsthis = QKeySequence{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -146,14 +147,14 @@ impl<'a> /*trait*/ QKeySequence_New for (i32, i32, i32, i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QKeySequenceC1Eiiii()};
     let ctysz: c_int = unsafe{QKeySequence_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as c_int;
     let arg3 = self.3  as c_int;
     // unsafe {_ZN12QKeySequenceC1Eiiii(qthis, arg0, arg1, arg2, arg3)};
-    let qthis: *mut c_void = unsafe {dector_ZN12QKeySequenceC1Eiiii(arg0, arg1, arg2, arg3)};
-    let rsthis = QKeySequence{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN12QKeySequenceC1Eiiii(arg0, arg1, arg2, arg3)} as u64;
+    let rsthis = QKeySequence{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -201,7 +202,7 @@ impl<'a> /*trait*/ QKeySequence_mnemonic_s<QKeySequence> for (&'a QString) {
     // unsafe{_ZN12QKeySequence8mnemonicERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN12QKeySequence8mnemonicERK7QString(arg0)};
-    let mut ret1 = QKeySequence::inheritFrom(ret);
+    let mut ret1 = QKeySequence::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -213,10 +214,10 @@ impl<'a> /*trait*/ QKeySequence_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QKeySequenceC1Ev()};
     let ctysz: c_int = unsafe{QKeySequence_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN12QKeySequenceC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN12QKeySequenceC1Ev()};
-    let rsthis = QKeySequence{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN12QKeySequenceC1Ev()} as u64;
+    let rsthis = QKeySequence{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }

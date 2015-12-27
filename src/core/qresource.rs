@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qresource.h
 // dst-file: /src/core/qresource.rs
 //
@@ -33,21 +33,21 @@ extern {
   fn QResource_Class_Size() -> c_int;
   // proto:  void QResource::QResource(const QString & file, const QLocale & locale);
   fn dector_ZN9QResourceC1ERK7QStringRK7QLocale(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN9QResourceC1ERK7QStringRK7QLocale(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN9QResourceC1ERK7QStringRK7QLocale(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  QLocale QResource::locale();
-  fn _ZNK9QResource6localeEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QResource6localeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QResource::setLocale(const QLocale & locale);
-  fn _ZN9QResource9setLocaleERK7QLocale(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN9QResource9setLocaleERK7QLocale(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static bool QResource::registerResource(const uchar * rccData, const QString & resourceRoot);
   fn _ZN9QResource16registerResourceEPKhRK7QString(arg0: *mut c_uchar, arg1: *mut c_void) -> c_char;
   // proto:  const uchar * QResource::data();
-  fn _ZNK9QResource4dataEv(qthis: *mut c_void) -> *mut c_uchar;
+  fn _ZNK9QResource4dataEv(qthis: u64 /* *mut c_void*/) -> *mut c_uchar;
   // proto: static QStringList QResource::searchPaths();
   fn _ZN9QResource11searchPathsEv();
   // proto:  QString QResource::fileName();
-  fn _ZNK9QResource8fileNameEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QResource8fileNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QResource::absoluteFilePath();
-  fn _ZNK9QResource16absoluteFilePathEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QResource16absoluteFilePathEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto: static bool QResource::unregisterResource(const uchar * rccData, const QString & resourceRoot);
   fn _ZN9QResource18unregisterResourceEPKhRK7QString(arg0: *mut c_uchar, arg1: *mut c_void) -> c_char;
   // proto: static bool QResource::registerResource(const QString & rccFilename, const QString & resourceRoot);
@@ -55,29 +55,30 @@ extern {
   // proto: static void QResource::addSearchPath(const QString & path);
   fn _ZN9QResource13addSearchPathERK7QString(arg0: *mut c_void);
   // proto:  qint64 QResource::size();
-  fn _ZNK9QResource4sizeEv(qthis: *mut c_void) -> c_longlong;
+  fn _ZNK9QResource4sizeEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
   // proto:  void QResource::~QResource();
-  fn _ZN9QResourceD0Ev(qthis: *mut c_void);
+  fn _ZN9QResourceD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QResource::isValid();
-  fn _ZNK9QResource7isValidEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK9QResource7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QResource::setFileName(const QString & file);
-  fn _ZN9QResource11setFileNameERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN9QResource11setFileNameERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static bool QResource::unregisterResource(const QString & rccFilename, const QString & resourceRoot);
   fn _ZN9QResource18unregisterResourceERK7QStringS2_(arg0: *mut c_void, arg1: *mut c_void) -> c_char;
   // proto:  bool QResource::isCompressed();
-  fn _ZNK9QResource12isCompressedEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK9QResource12isCompressedEv(qthis: u64 /* *mut c_void*/) -> c_char;
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QResource)=1
+#[derive(Default)]
 pub struct QResource {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QResource {
-  pub fn inheritFrom(qthis: *mut c_void) -> QResource {
-    return QResource{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QResource {
+    return QResource{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  void QResource::QResource(const QString & file, const QLocale & locale);
@@ -99,12 +100,12 @@ impl<'a> /*trait*/ QResource_New for (&'a QString, &'a QLocale) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QResourceC1ERK7QStringRK7QLocale()};
     let ctysz: c_int = unsafe{QResource_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     // unsafe {_ZN9QResourceC1ERK7QStringRK7QLocale(qthis, arg0, arg1)};
-    let qthis: *mut c_void = unsafe {dector_ZN9QResourceC1ERK7QStringRK7QLocale(arg0, arg1)};
-    let rsthis = QResource{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN9QResourceC1ERK7QStringRK7QLocale(arg0, arg1)} as u64;
+    let rsthis = QResource{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -128,7 +129,7 @@ impl<'a> /*trait*/ QResource_locale<QLocale> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QResource6localeEv()};
     let mut ret = unsafe {_ZNK9QResource6localeEv(rsthis.qclsinst)};
-    let mut ret1 = QLocale::inheritFrom(ret);
+    let mut ret1 = QLocale::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -246,7 +247,7 @@ impl<'a> /*trait*/ QResource_fileName<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QResource8fileNameEv()};
     let mut ret = unsafe {_ZNK9QResource8fileNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -270,7 +271,7 @@ impl<'a> /*trait*/ QResource_absoluteFilePath<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QResource16absoluteFilePathEv()};
     let mut ret = unsafe {_ZNK9QResource16absoluteFilePathEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }

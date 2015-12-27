@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qcommandlineparser.h
 // dst-file: /src/core/qcommandlineparser.rs
 //
@@ -34,71 +34,72 @@ use super::qcoreapplication::QCoreApplication; // 773
 extern {
   fn QCommandLineParser_Class_Size() -> c_int;
   // proto:  void QCommandLineParser::process(const QStringList & arguments);
-  fn _ZN18QCommandLineParser7processERK11QStringList(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN18QCommandLineParser7processERK11QStringList(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QString QCommandLineParser::value(const QString & name);
-  fn _ZNK18QCommandLineParser5valueERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK18QCommandLineParser5valueERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QString QCommandLineParser::errorText();
-  fn _ZNK18QCommandLineParser9errorTextEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK18QCommandLineParser9errorTextEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QCommandLineParser::clearPositionalArguments();
-  fn _ZN18QCommandLineParser24clearPositionalArgumentsEv(qthis: *mut c_void);
+  fn _ZN18QCommandLineParser24clearPositionalArgumentsEv(qthis: u64 /* *mut c_void*/);
   // proto:  QStringList QCommandLineParser::values(const QCommandLineOption & option);
-  fn _ZNK18QCommandLineParser6valuesERK18QCommandLineOption(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZNK18QCommandLineParser6valuesERK18QCommandLineOption(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QCommandLineParser::isSet(const QString & name);
-  fn _ZNK18QCommandLineParser5isSetERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn _ZNK18QCommandLineParser5isSetERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  void QCommandLineParser::showHelp(int exitCode);
-  fn _ZN18QCommandLineParser8showHelpEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN18QCommandLineParser8showHelpEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  bool QCommandLineParser::addOption(const QCommandLineOption & commandLineOption);
-  fn _ZN18QCommandLineParser9addOptionERK18QCommandLineOption(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn _ZN18QCommandLineParser9addOptionERK18QCommandLineOption(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  void QCommandLineParser::showVersion();
-  fn _ZN18QCommandLineParser11showVersionEv(qthis: *mut c_void);
+  fn _ZN18QCommandLineParser11showVersionEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QCommandLineParser::QCommandLineParser(const QCommandLineParser & );
   fn dector_ZN18QCommandLineParserC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN18QCommandLineParserC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN18QCommandLineParserC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QCommandLineOption QCommandLineParser::addHelpOption();
-  fn _ZN18QCommandLineParser13addHelpOptionEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZN18QCommandLineParser13addHelpOptionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QStringList QCommandLineParser::optionNames();
-  fn _ZNK18QCommandLineParser11optionNamesEv(qthis: *mut c_void);
+  fn _ZNK18QCommandLineParser11optionNamesEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QCommandLineParser::isSet(const QCommandLineOption & option);
-  fn _ZNK18QCommandLineParser5isSetERK18QCommandLineOption(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn _ZNK18QCommandLineParser5isSetERK18QCommandLineOption(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  void QCommandLineParser::addPositionalArgument(const QString & name, const QString & description, const QString & syntax);
-  fn _ZN18QCommandLineParser21addPositionalArgumentERK7QStringS2_S2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
+  fn _ZN18QCommandLineParser21addPositionalArgumentERK7QStringS2_S2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  void QCommandLineParser::~QCommandLineParser();
-  fn _ZN18QCommandLineParserD0Ev(qthis: *mut c_void);
+  fn _ZN18QCommandLineParserD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QCommandLineParser::process(const QCoreApplication & app);
-  fn _ZN18QCommandLineParser7processERK16QCoreApplication(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN18QCommandLineParser7processERK16QCoreApplication(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QString QCommandLineParser::helpText();
-  fn _ZNK18QCommandLineParser8helpTextEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK18QCommandLineParser8helpTextEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QStringList QCommandLineParser::values(const QString & name);
-  fn _ZNK18QCommandLineParser6valuesERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZNK18QCommandLineParser6valuesERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QString QCommandLineParser::applicationDescription();
-  fn _ZNK18QCommandLineParser22applicationDescriptionEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK18QCommandLineParser22applicationDescriptionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QCommandLineParser::value(const QCommandLineOption & option);
-  fn _ZNK18QCommandLineParser5valueERK18QCommandLineOption(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK18QCommandLineParser5valueERK18QCommandLineOption(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QCommandLineOption QCommandLineParser::addVersionOption();
-  fn _ZN18QCommandLineParser16addVersionOptionEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZN18QCommandLineParser16addVersionOptionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QStringList QCommandLineParser::positionalArguments();
-  fn _ZNK18QCommandLineParser19positionalArgumentsEv(qthis: *mut c_void);
+  fn _ZNK18QCommandLineParser19positionalArgumentsEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QCommandLineParser::setApplicationDescription(const QString & description);
-  fn _ZN18QCommandLineParser25setApplicationDescriptionERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN18QCommandLineParser25setApplicationDescriptionERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QCommandLineParser::QCommandLineParser();
   fn dector_ZN18QCommandLineParserC1Ev() -> *mut c_void;
-  fn _ZN18QCommandLineParserC1Ev(qthis: *mut c_void);
+  fn _ZN18QCommandLineParserC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QCommandLineParser::parse(const QStringList & arguments);
-  fn _ZN18QCommandLineParser5parseERK11QStringList(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn _ZN18QCommandLineParser5parseERK11QStringList(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  QStringList QCommandLineParser::unknownOptionNames();
-  fn _ZNK18QCommandLineParser18unknownOptionNamesEv(qthis: *mut c_void);
+  fn _ZNK18QCommandLineParser18unknownOptionNamesEv(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QCommandLineParser)=8
+#[derive(Default)]
 pub struct QCommandLineParser {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QCommandLineParser {
-  pub fn inheritFrom(qthis: *mut c_void) -> QCommandLineParser {
-    return QCommandLineParser{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QCommandLineParser {
+    return QCommandLineParser{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  void QCommandLineParser::process(const QStringList & arguments);
@@ -143,7 +144,7 @@ impl<'a> /*trait*/ QCommandLineParser_value<QString> for (&'a QString) {
     // unsafe{_ZNK18QCommandLineParser5valueERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK18QCommandLineParser5valueERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -167,7 +168,7 @@ impl<'a> /*trait*/ QCommandLineParser_errorText<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QCommandLineParser9errorTextEv()};
     let mut ret = unsafe {_ZNK18QCommandLineParser9errorTextEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -330,11 +331,11 @@ impl<'a> /*trait*/ QCommandLineParser_New for (&'a QCommandLineParser) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLineParserC1ERKS_()};
     let ctysz: c_int = unsafe{QCommandLineParser_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN18QCommandLineParserC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN18QCommandLineParserC1ERKS_(arg0)};
-    let rsthis = QCommandLineParser{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN18QCommandLineParserC1ERKS_(arg0)} as u64;
+    let rsthis = QCommandLineParser{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -358,7 +359,7 @@ impl<'a> /*trait*/ QCommandLineParser_addHelpOption<QCommandLineOption> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLineParser13addHelpOptionEv()};
     let mut ret = unsafe {_ZN18QCommandLineParser13addHelpOptionEv(rsthis.qclsinst)};
-    let mut ret1 = QCommandLineOption::inheritFrom(ret);
+    let mut ret1 = QCommandLineOption::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -474,7 +475,7 @@ impl<'a> /*trait*/ QCommandLineParser_helpText<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QCommandLineParser8helpTextEv()};
     let mut ret = unsafe {_ZNK18QCommandLineParser8helpTextEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -509,7 +510,7 @@ impl<'a> /*trait*/ QCommandLineParser_applicationDescription<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QCommandLineParser22applicationDescriptionEv()};
     let mut ret = unsafe {_ZNK18QCommandLineParser22applicationDescriptionEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -522,7 +523,7 @@ impl<'a> /*trait*/ QCommandLineParser_value<QString> for (&'a QCommandLineOption
     // unsafe{_ZNK18QCommandLineParser5valueERK18QCommandLineOption()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK18QCommandLineParser5valueERK18QCommandLineOption(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -546,7 +547,7 @@ impl<'a> /*trait*/ QCommandLineParser_addVersionOption<QCommandLineOption> for (
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLineParser16addVersionOptionEv()};
     let mut ret = unsafe {_ZN18QCommandLineParser16addVersionOptionEv(rsthis.qclsinst)};
-    let mut ret1 = QCommandLineOption::inheritFrom(ret);
+    let mut ret1 = QCommandLineOption::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -603,10 +604,10 @@ impl<'a> /*trait*/ QCommandLineParser_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLineParserC1Ev()};
     let ctysz: c_int = unsafe{QCommandLineParser_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN18QCommandLineParserC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN18QCommandLineParserC1Ev()};
-    let rsthis = QCommandLineParser{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN18QCommandLineParserC1Ev()} as u64;
+    let rsthis = QCommandLineParser{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }

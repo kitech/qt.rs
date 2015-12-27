@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qfileselector.h
 // dst-file: /src/core/qfileselector.rs
 //
@@ -34,34 +34,35 @@ use super::qstring::QString; // 773
 extern {
   fn QFileSelector_Class_Size() -> c_int;
   // proto:  QStringList QFileSelector::allSelectors();
-  fn _ZNK13QFileSelector12allSelectorsEv(qthis: *mut c_void);
+  fn _ZNK13QFileSelector12allSelectorsEv(qthis: u64 /* *mut c_void*/);
   // proto:  const QMetaObject * QFileSelector::metaObject();
-  fn _ZNK13QFileSelector10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK13QFileSelector10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  QUrl QFileSelector::select(const QUrl & filePath);
-  fn _ZNK13QFileSelector6selectERK4QUrl(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK13QFileSelector6selectERK4QUrl(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QFileSelector::QFileSelector(QObject * parent);
   fn dector_ZN13QFileSelectorC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN13QFileSelectorC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN13QFileSelectorC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QFileSelector::setExtraSelectors(const QStringList & list);
-  fn _ZN13QFileSelector17setExtraSelectorsERK11QStringList(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN13QFileSelector17setExtraSelectorsERK11QStringList(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QString QFileSelector::select(const QString & filePath);
-  fn _ZNK13QFileSelector6selectERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK13QFileSelector6selectERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QFileSelector::~QFileSelector();
-  fn _ZN13QFileSelectorD0Ev(qthis: *mut c_void);
+  fn _ZN13QFileSelectorD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QStringList QFileSelector::extraSelectors();
-  fn _ZNK13QFileSelector14extraSelectorsEv(qthis: *mut c_void);
+  fn _ZNK13QFileSelector14extraSelectorsEv(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QFileSelector)=1
+#[derive(Default)]
 pub struct QFileSelector {
   qbase: QObject,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QFileSelector {
-  pub fn inheritFrom(qthis: *mut c_void) -> QFileSelector {
-    return QFileSelector{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QFileSelector {
+    return QFileSelector{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QFileSelector {
@@ -139,7 +140,7 @@ impl<'a> /*trait*/ QFileSelector_select<QUrl> for (&'a QUrl) {
     // unsafe{_ZNK13QFileSelector6selectERK4QUrl()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK13QFileSelector6selectERK4QUrl(rsthis.qclsinst, arg0)};
-    let mut ret1 = QUrl::inheritFrom(ret);
+    let mut ret1 = QUrl::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -164,11 +165,11 @@ impl<'a> /*trait*/ QFileSelector_New for (&'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QFileSelectorC1EP7QObject()};
     let ctysz: c_int = unsafe{QFileSelector_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN13QFileSelectorC1EP7QObject(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN13QFileSelectorC1EP7QObject(arg0)};
-    let rsthis = QFileSelector{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN13QFileSelectorC1EP7QObject(arg0)} as u64;
+    let rsthis = QFileSelector{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -204,7 +205,7 @@ impl<'a> /*trait*/ QFileSelector_select<QString> for (&'a QString) {
     // unsafe{_ZNK13QFileSelector6selectERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK13QFileSelector6selectERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }

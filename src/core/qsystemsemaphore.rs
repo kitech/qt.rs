@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qsystemsemaphore.h
 // dst-file: /src/core/qsystemsemaphore.rs
 //
@@ -31,30 +31,31 @@ use super::qstring::QString; // 773
 extern {
   fn QSystemSemaphore_Class_Size() -> c_int;
   // proto:  QString QSystemSemaphore::key();
-  fn _ZNK16QSystemSemaphore3keyEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK16QSystemSemaphore3keyEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QSystemSemaphore::release(int n);
-  fn _ZN16QSystemSemaphore7releaseEi(qthis: *mut c_void, arg0: c_int) -> c_char;
+  fn _ZN16QSystemSemaphore7releaseEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
   // proto:  QString QSystemSemaphore::errorString();
-  fn _ZNK16QSystemSemaphore11errorStringEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK16QSystemSemaphore11errorStringEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QSystemSemaphore::QSystemSemaphore(const QSystemSemaphore & );
   fn dector_ZN16QSystemSemaphoreC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN16QSystemSemaphoreC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN16QSystemSemaphoreC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QSystemSemaphore::acquire();
-  fn _ZN16QSystemSemaphore7acquireEv(qthis: *mut c_void) -> c_char;
+  fn _ZN16QSystemSemaphore7acquireEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QSystemSemaphore::~QSystemSemaphore();
-  fn _ZN16QSystemSemaphoreD0Ev(qthis: *mut c_void);
+  fn _ZN16QSystemSemaphoreD0Ev(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QSystemSemaphore)=1
+#[derive(Default)]
 pub struct QSystemSemaphore {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QSystemSemaphore {
-  pub fn inheritFrom(qthis: *mut c_void) -> QSystemSemaphore {
-    return QSystemSemaphore{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QSystemSemaphore {
+    return QSystemSemaphore{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  QString QSystemSemaphore::key();
@@ -75,7 +76,7 @@ impl<'a> /*trait*/ QSystemSemaphore_key<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QSystemSemaphore3keyEv()};
     let mut ret = unsafe {_ZNK16QSystemSemaphore3keyEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -123,7 +124,7 @@ impl<'a> /*trait*/ QSystemSemaphore_errorString<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QSystemSemaphore11errorStringEv()};
     let mut ret = unsafe {_ZNK16QSystemSemaphore11errorStringEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -148,11 +149,11 @@ impl<'a> /*trait*/ QSystemSemaphore_New for (&'a QSystemSemaphore) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QSystemSemaphoreC1ERKS_()};
     let ctysz: c_int = unsafe{QSystemSemaphore_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN16QSystemSemaphoreC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN16QSystemSemaphoreC1ERKS_(arg0)};
-    let rsthis = QSystemSemaphore{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN16QSystemSemaphoreC1ERKS_(arg0)} as u64;
+    let rsthis = QSystemSemaphore{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }

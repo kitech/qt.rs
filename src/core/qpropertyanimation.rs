@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qpropertyanimation.h
 // dst-file: /src/core/qpropertyanimation.rs
 //
@@ -33,38 +33,39 @@ use super::qobject::QObject; // 773
 extern {
   fn QPropertyAnimation_Class_Size() -> c_int;
   // proto:  QByteArray QPropertyAnimation::propertyName();
-  fn _ZNK18QPropertyAnimation12propertyNameEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK18QPropertyAnimation12propertyNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QPropertyAnimation::setTargetObject(QObject * target);
-  fn _ZN18QPropertyAnimation15setTargetObjectEP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN18QPropertyAnimation15setTargetObjectEP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPropertyAnimation::QPropertyAnimation(QObject * parent);
   fn dector_ZN18QPropertyAnimationC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN18QPropertyAnimationC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN18QPropertyAnimationC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPropertyAnimation::~QPropertyAnimation();
-  fn _ZN18QPropertyAnimationD0Ev(qthis: *mut c_void);
+  fn _ZN18QPropertyAnimationD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QObject * QPropertyAnimation::targetObject();
-  fn _ZNK18QPropertyAnimation12targetObjectEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK18QPropertyAnimation12targetObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  const QMetaObject * QPropertyAnimation::metaObject();
-  fn _ZNK18QPropertyAnimation10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK18QPropertyAnimation10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QPropertyAnimation::QPropertyAnimation(const QPropertyAnimation & );
   fn dector_ZN18QPropertyAnimationC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN18QPropertyAnimationC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN18QPropertyAnimationC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPropertyAnimation::QPropertyAnimation(QObject * target, const QByteArray & propertyName, QObject * parent);
   fn dector_ZN18QPropertyAnimationC1EP7QObjectRK10QByteArrayS1_(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> *mut c_void;
-  fn _ZN18QPropertyAnimationC1EP7QObjectRK10QByteArrayS1_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
+  fn _ZN18QPropertyAnimationC1EP7QObjectRK10QByteArrayS1_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  void QPropertyAnimation::setPropertyName(const QByteArray & propertyName);
-  fn _ZN18QPropertyAnimation15setPropertyNameERK10QByteArray(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN18QPropertyAnimation15setPropertyNameERK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QPropertyAnimation)=1
+#[derive(Default)]
 pub struct QPropertyAnimation {
   qbase: QVariantAnimation,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QPropertyAnimation {
-  pub fn inheritFrom(qthis: *mut c_void) -> QPropertyAnimation {
-    return QPropertyAnimation{qbase: QVariantAnimation::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QPropertyAnimation {
+    return QPropertyAnimation{qbase: QVariantAnimation::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QPropertyAnimation {
@@ -97,7 +98,7 @@ impl<'a> /*trait*/ QPropertyAnimation_propertyName<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QPropertyAnimation12propertyNameEv()};
     let mut ret = unsafe {_ZNK18QPropertyAnimation12propertyNameEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -145,11 +146,11 @@ impl<'a> /*trait*/ QPropertyAnimation_New for (&'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QPropertyAnimationC1EP7QObject()};
     let ctysz: c_int = unsafe{QPropertyAnimation_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN18QPropertyAnimationC1EP7QObject(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN18QPropertyAnimationC1EP7QObject(arg0)};
-    let rsthis = QPropertyAnimation{/**/qbase: QVariantAnimation::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN18QPropertyAnimationC1EP7QObject(arg0)} as u64;
+    let rsthis = QPropertyAnimation{qbase: QVariantAnimation::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -195,7 +196,7 @@ impl<'a> /*trait*/ QPropertyAnimation_targetObject<QObject> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QPropertyAnimation12targetObjectEv()};
     let mut ret = unsafe {_ZNK18QPropertyAnimation12targetObjectEv(rsthis.qclsinst)};
-    let mut ret1 = QObject::inheritFrom(ret);
+    let mut ret1 = QObject::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -229,11 +230,11 @@ impl<'a> /*trait*/ QPropertyAnimation_New for (&'a QPropertyAnimation) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QPropertyAnimationC1ERKS_()};
     let ctysz: c_int = unsafe{QPropertyAnimation_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN18QPropertyAnimationC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN18QPropertyAnimationC1ERKS_(arg0)};
-    let rsthis = QPropertyAnimation{/**/qbase: QVariantAnimation::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN18QPropertyAnimationC1ERKS_(arg0)} as u64;
+    let rsthis = QPropertyAnimation{qbase: QVariantAnimation::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -245,13 +246,13 @@ impl<'a> /*trait*/ QPropertyAnimation_New for (&'a QObject, &'a QByteArray, &'a 
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QPropertyAnimationC1EP7QObjectRK10QByteArrayS1_()};
     let ctysz: c_int = unsafe{QPropertyAnimation_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     // unsafe {_ZN18QPropertyAnimationC1EP7QObjectRK10QByteArrayS1_(qthis, arg0, arg1, arg2)};
-    let qthis: *mut c_void = unsafe {dector_ZN18QPropertyAnimationC1EP7QObjectRK10QByteArrayS1_(arg0, arg1, arg2)};
-    let rsthis = QPropertyAnimation{/**/qbase: QVariantAnimation::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN18QPropertyAnimationC1EP7QObjectRK10QByteArrayS1_(arg0, arg1, arg2)} as u64;
+    let rsthis = QPropertyAnimation{qbase: QVariantAnimation::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }

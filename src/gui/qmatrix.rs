@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:03 2015
 // src-file: /QtGui/qmatrix.h
 // dst-file: /src/gui/qmatrix.rs
 //
@@ -40,90 +40,91 @@ use super::super::core::qrect::QRectF; // 771
 extern {
   fn QMatrix_Class_Size() -> c_int;
   // proto:  qreal QMatrix::dx();
-  fn _ZNK7QMatrix2dxEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK7QMatrix2dxEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QMatrix::QMatrix(bool );
   fn dector_ZN7QMatrixC1Eb(arg0: c_char) -> *mut c_void;
-  fn demth_ZN7QMatrixC1Eb(qthis: *mut c_void, arg0: c_char);
+  fn demth_ZN7QMatrixC1Eb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  qreal QMatrix::dy();
-  fn _ZNK7QMatrix2dyEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK7QMatrix2dyEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  QMatrix & QMatrix::scale(qreal sx, qreal sy);
-  fn _ZN7QMatrix5scaleEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double) -> *mut c_void;
+  fn _ZN7QMatrix5scaleEdd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double) -> *mut c_void;
   // proto:  QMatrix & QMatrix::translate(qreal dx, qreal dy);
-  fn _ZN7QMatrix9translateEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double) -> *mut c_void;
+  fn _ZN7QMatrix9translateEdd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double) -> *mut c_void;
   // proto:  qreal QMatrix::determinant();
-  fn _ZNK7QMatrix11determinantEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK7QMatrix11determinantEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  QMatrix & QMatrix::shear(qreal sh, qreal sv);
-  fn _ZN7QMatrix5shearEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double) -> *mut c_void;
+  fn _ZN7QMatrix5shearEdd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double) -> *mut c_void;
   // proto:  void QMatrix::QMatrix();
   fn dector_ZN7QMatrixC1Ev() -> *mut c_void;
-  fn _ZN7QMatrixC1Ev(qthis: *mut c_void);
+  fn _ZN7QMatrixC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  qreal QMatrix::m21();
-  fn _ZNK7QMatrix3m21Ev(qthis: *mut c_void) -> c_double;
+  fn _ZNK7QMatrix3m21Ev(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  QPointF QMatrix::map(const QPointF & p);
-  fn _ZNK7QMatrix3mapERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK7QMatrix3mapERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QPolygonF QMatrix::map(const QPolygonF & a);
-  fn _ZNK7QMatrix3mapERK9QPolygonF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK7QMatrix3mapERK9QPolygonF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QMatrix::map(qreal x, qreal y, qreal * tx, qreal * ty);
-  fn _ZNK7QMatrix3mapEddPdS0_(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: *mut c_double, arg3: *mut c_double);
+  fn _ZNK7QMatrix3mapEddPdS0_(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: *mut c_double, arg3: *mut c_double);
   // proto:  QMatrix & QMatrix::rotate(qreal a);
-  fn _ZN7QMatrix6rotateEd(qthis: *mut c_void, arg0: c_double) -> *mut c_void;
+  fn _ZN7QMatrix6rotateEd(qthis: u64 /* *mut c_void*/, arg0: c_double) -> *mut c_void;
   // proto:  QRegion QMatrix::map(const QRegion & r);
-  fn _ZNK7QMatrix3mapERK7QRegion(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK7QMatrix3mapERK7QRegion(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QMatrix::setMatrix(qreal m11, qreal m12, qreal m21, qreal m22, qreal dx, qreal dy);
-  fn _ZN7QMatrix9setMatrixEdddddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double, arg5: c_double);
+  fn _ZN7QMatrix9setMatrixEdddddd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double, arg5: c_double);
   // proto:  void QMatrix::QMatrix(const QMatrix & matrix);
   fn dector_ZN7QMatrixC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN7QMatrixC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN7QMatrixC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMatrix::reset();
-  fn _ZN7QMatrix5resetEv(qthis: *mut c_void);
+  fn _ZN7QMatrix5resetEv(qthis: u64 /* *mut c_void*/);
   // proto:  QLineF QMatrix::map(const QLineF & l);
-  fn _ZNK7QMatrix3mapERK6QLineF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK7QMatrix3mapERK6QLineF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QPainterPath QMatrix::map(const QPainterPath & p);
-  fn _ZNK7QMatrix3mapERK12QPainterPath(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK7QMatrix3mapERK12QPainterPath(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  qreal QMatrix::m11();
-  fn _ZNK7QMatrix3m11Ev(qthis: *mut c_void) -> c_double;
+  fn _ZNK7QMatrix3m11Ev(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  QPolygon QMatrix::mapToPolygon(const QRect & r);
-  fn _ZNK7QMatrix12mapToPolygonERK5QRect(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK7QMatrix12mapToPolygonERK5QRect(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QMatrix QMatrix::inverted(bool * invertible);
-  fn _ZNK7QMatrix8invertedEPb(qthis: *mut c_void, arg0: *mut c_char) -> *mut c_void;
+  fn _ZNK7QMatrix8invertedEPb(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> *mut c_void;
   // proto:  QPoint QMatrix::map(const QPoint & p);
-  fn _ZNK7QMatrix3mapERK6QPoint(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK7QMatrix3mapERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QMatrix::map(int x, int y, int * tx, int * ty);
-  fn _ZNK7QMatrix3mapEiiPiS0_(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_int, arg3: *mut c_int);
+  fn _ZNK7QMatrix3mapEiiPiS0_(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: *mut c_int, arg3: *mut c_int);
   // proto:  QLine QMatrix::map(const QLine & l);
-  fn _ZNK7QMatrix3mapERK5QLine(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK7QMatrix3mapERK5QLine(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QRectF QMatrix::mapRect(const QRectF & );
-  fn _ZNK7QMatrix7mapRectERK6QRectF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK7QMatrix7mapRectERK6QRectF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  bool QMatrix::isIdentity();
-  fn demth_ZNK7QMatrix10isIdentityEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK7QMatrix10isIdentityEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QMatrix::QMatrix(qreal am11, qreal am12, qreal am21, qreal am22, qreal adx, qreal ady, bool );
   fn dector_ZN7QMatrixC1Eddddddb(arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double, arg5: c_double, arg6: c_char) -> *mut c_void;
-  fn demth_ZN7QMatrixC1Eddddddb(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double, arg5: c_double, arg6: c_char);
+  fn demth_ZN7QMatrixC1Eddddddb(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double, arg5: c_double, arg6: c_char);
   // proto:  qreal QMatrix::m12();
-  fn _ZNK7QMatrix3m12Ev(qthis: *mut c_void) -> c_double;
+  fn _ZNK7QMatrix3m12Ev(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  bool QMatrix::isInvertible();
-  fn _ZNK7QMatrix12isInvertibleEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK7QMatrix12isInvertibleEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QRect QMatrix::mapRect(const QRect & );
-  fn _ZNK7QMatrix7mapRectERK5QRect(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK7QMatrix7mapRectERK5QRect(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QMatrix::QMatrix(qreal m11, qreal m12, qreal m21, qreal m22, qreal dx, qreal dy);
   fn dector_ZN7QMatrixC1Edddddd(arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double, arg5: c_double) -> *mut c_void;
-  fn _ZN7QMatrixC1Edddddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double, arg5: c_double);
+  fn _ZN7QMatrixC1Edddddd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double, arg5: c_double);
   // proto:  qreal QMatrix::m22();
-  fn _ZNK7QMatrix3m22Ev(qthis: *mut c_void) -> c_double;
+  fn _ZNK7QMatrix3m22Ev(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  QPolygon QMatrix::map(const QPolygon & a);
-  fn _ZNK7QMatrix3mapERK8QPolygon(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK7QMatrix3mapERK8QPolygon(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QMatrix)=48
+#[derive(Default)]
 pub struct QMatrix {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QMatrix {
-  pub fn inheritFrom(qthis: *mut c_void) -> QMatrix {
-    return QMatrix{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QMatrix {
+    return QMatrix{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  qreal QMatrix::dx();
@@ -168,11 +169,11 @@ impl<'a> /*trait*/ QMatrix_New for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZN7QMatrixC1Eb()};
     let ctysz: c_int = unsafe{QMatrix_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_char;
     // unsafe {_ZN7QMatrixC1Eb(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN7QMatrixC1Eb(arg0)};
-    let rsthis = QMatrix{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN7QMatrixC1Eb(arg0)} as u64;
+    let rsthis = QMatrix{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -221,7 +222,7 @@ impl<'a> /*trait*/ QMatrix_scale<QMatrix> for (f64, f64) {
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
     let mut ret = unsafe {_ZN7QMatrix5scaleEdd(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QMatrix::inheritFrom(ret);
+    let mut ret1 = QMatrix::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -247,7 +248,7 @@ impl<'a> /*trait*/ QMatrix_translate<QMatrix> for (f64, f64) {
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
     let mut ret = unsafe {_ZN7QMatrix9translateEdd(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QMatrix::inheritFrom(ret);
+    let mut ret1 = QMatrix::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -296,7 +297,7 @@ impl<'a> /*trait*/ QMatrix_shear<QMatrix> for (f64, f64) {
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
     let mut ret = unsafe {_ZN7QMatrix5shearEdd(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QMatrix::inheritFrom(ret);
+    let mut ret1 = QMatrix::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -308,10 +309,10 @@ impl<'a> /*trait*/ QMatrix_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZN7QMatrixC1Ev()};
     let ctysz: c_int = unsafe{QMatrix_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN7QMatrixC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN7QMatrixC1Ev()};
-    let rsthis = QMatrix{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN7QMatrixC1Ev()} as u64;
+    let rsthis = QMatrix{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -359,7 +360,7 @@ impl<'a> /*trait*/ QMatrix_map<QPointF> for (&'a QPointF) {
     // unsafe{_ZNK7QMatrix3mapERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QMatrix3mapERK7QPointF(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPointF::inheritFrom(ret);
+    let mut ret1 = QPointF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -372,7 +373,7 @@ impl<'a> /*trait*/ QMatrix_map<QPolygonF> for (&'a QPolygonF) {
     // unsafe{_ZNK7QMatrix3mapERK9QPolygonF()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QMatrix3mapERK9QPolygonF(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPolygonF::inheritFrom(ret);
+    let mut ret1 = QPolygonF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -411,7 +412,7 @@ impl<'a> /*trait*/ QMatrix_rotate<QMatrix> for (f64) {
     // unsafe{_ZN7QMatrix6rotateEd()};
     let arg0 = self  as c_double;
     let mut ret = unsafe {_ZN7QMatrix6rotateEd(rsthis.qclsinst, arg0)};
-    let mut ret1 = QMatrix::inheritFrom(ret);
+    let mut ret1 = QMatrix::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -424,7 +425,7 @@ impl<'a> /*trait*/ QMatrix_map<QRegion> for (&'a QRegion) {
     // unsafe{_ZNK7QMatrix3mapERK7QRegion()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QMatrix3mapERK7QRegion(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRegion::inheritFrom(ret);
+    let mut ret1 = QRegion::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -464,11 +465,11 @@ impl<'a> /*trait*/ QMatrix_New for (&'a QMatrix) {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZN7QMatrixC1ERKS_()};
     let ctysz: c_int = unsafe{QMatrix_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN7QMatrixC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN7QMatrixC1ERKS_(arg0)};
-    let rsthis = QMatrix{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN7QMatrixC1ERKS_(arg0)} as u64;
+    let rsthis = QMatrix{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -503,7 +504,7 @@ impl<'a> /*trait*/ QMatrix_map<QLineF> for (&'a QLineF) {
     // unsafe{_ZNK7QMatrix3mapERK6QLineF()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QMatrix3mapERK6QLineF(rsthis.qclsinst, arg0)};
-    let mut ret1 = QLineF::inheritFrom(ret);
+    let mut ret1 = QLineF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -516,7 +517,7 @@ impl<'a> /*trait*/ QMatrix_map<QPainterPath> for (&'a QPainterPath) {
     // unsafe{_ZNK7QMatrix3mapERK12QPainterPath()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QMatrix3mapERK12QPainterPath(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPainterPath::inheritFrom(ret);
+    let mut ret1 = QPainterPath::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -564,7 +565,7 @@ impl<'a> /*trait*/ QMatrix_mapToPolygon<QPolygon> for (&'a QRect) {
     // unsafe{_ZNK7QMatrix12mapToPolygonERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QMatrix12mapToPolygonERK5QRect(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPolygon::inheritFrom(ret);
+    let mut ret1 = QPolygon::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -589,7 +590,7 @@ impl<'a> /*trait*/ QMatrix_inverted<QMatrix> for (&'a mut Vec<i8>) {
     // unsafe{_ZNK7QMatrix8invertedEPb()};
     let arg0 = self.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZNK7QMatrix8invertedEPb(rsthis.qclsinst, arg0)};
-    let mut ret1 = QMatrix::inheritFrom(ret);
+    let mut ret1 = QMatrix::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -602,7 +603,7 @@ impl<'a> /*trait*/ QMatrix_map<QPoint> for (&'a QPoint) {
     // unsafe{_ZNK7QMatrix3mapERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QMatrix3mapERK6QPoint(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPoint::inheritFrom(ret);
+    let mut ret1 = QPoint::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -629,7 +630,7 @@ impl<'a> /*trait*/ QMatrix_map<QLine> for (&'a QLine) {
     // unsafe{_ZNK7QMatrix3mapERK5QLine()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QMatrix3mapERK5QLine(rsthis.qclsinst, arg0)};
-    let mut ret1 = QLine::inheritFrom(ret);
+    let mut ret1 = QLine::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -654,7 +655,7 @@ impl<'a> /*trait*/ QMatrix_mapRect<QRectF> for (&'a QRectF) {
     // unsafe{_ZNK7QMatrix7mapRectERK6QRectF()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QMatrix7mapRectERK6QRectF(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRectF::inheritFrom(ret);
+    let mut ret1 = QRectF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -689,7 +690,7 @@ impl<'a> /*trait*/ QMatrix_New for (f64, f64, f64, f64, f64, f64, i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZN7QMatrixC1Eddddddb()};
     let ctysz: c_int = unsafe{QMatrix_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
     let arg2 = self.2  as c_double;
@@ -698,8 +699,8 @@ impl<'a> /*trait*/ QMatrix_New for (f64, f64, f64, f64, f64, f64, i8) {
     let arg5 = self.5  as c_double;
     let arg6 = self.6  as c_char;
     // unsafe {_ZN7QMatrixC1Eddddddb(qthis, arg0, arg1, arg2, arg3, arg4, arg5, arg6)};
-    let qthis: *mut c_void = unsafe {dector_ZN7QMatrixC1Eddddddb(arg0, arg1, arg2, arg3, arg4, arg5, arg6)};
-    let rsthis = QMatrix{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN7QMatrixC1Eddddddb(arg0, arg1, arg2, arg3, arg4, arg5, arg6)} as u64;
+    let rsthis = QMatrix{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -758,7 +759,7 @@ impl<'a> /*trait*/ QMatrix_mapRect<QRect> for (&'a QRect) {
     // unsafe{_ZNK7QMatrix7mapRectERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QMatrix7mapRectERK5QRect(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRect::inheritFrom(ret);
+    let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -770,7 +771,7 @@ impl<'a> /*trait*/ QMatrix_New for (f64, f64, f64, f64, f64, f64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZN7QMatrixC1Edddddd()};
     let ctysz: c_int = unsafe{QMatrix_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
     let arg2 = self.2  as c_double;
@@ -778,8 +779,8 @@ impl<'a> /*trait*/ QMatrix_New for (f64, f64, f64, f64, f64, f64) {
     let arg4 = self.4  as c_double;
     let arg5 = self.5  as c_double;
     // unsafe {_ZN7QMatrixC1Edddddd(qthis, arg0, arg1, arg2, arg3, arg4, arg5)};
-    let qthis: *mut c_void = unsafe {dector_ZN7QMatrixC1Edddddd(arg0, arg1, arg2, arg3, arg4, arg5)};
-    let rsthis = QMatrix{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN7QMatrixC1Edddddd(arg0, arg1, arg2, arg3, arg4, arg5)} as u64;
+    let rsthis = QMatrix{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -815,7 +816,7 @@ impl<'a> /*trait*/ QMatrix_map<QPolygon> for (&'a QPolygon) {
     // unsafe{_ZNK7QMatrix3mapERK8QPolygon()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QMatrix3mapERK8QPolygon(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPolygon::inheritFrom(ret);
+    let mut ret1 = QPolygon::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }

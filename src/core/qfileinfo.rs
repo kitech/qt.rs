@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:03 2015
 // src-file: /QtCore/qfileinfo.h
 // dst-file: /src/core/qfileinfo.rs
 //
@@ -34,126 +34,127 @@ use super::qdir::QDir; // 773
 extern {
   fn QFileInfo_Class_Size() -> c_int;
   // proto:  bool QFileInfo::isHidden();
-  fn _ZNK9QFileInfo8isHiddenEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK9QFileInfo8isHiddenEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QFileInfo::QFileInfo();
   fn dector_ZN9QFileInfoC1Ev() -> *mut c_void;
-  fn _ZN9QFileInfoC1Ev(qthis: *mut c_void);
+  fn _ZN9QFileInfoC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QString QFileInfo::completeSuffix();
-  fn _ZNK9QFileInfo14completeSuffixEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QFileInfo14completeSuffixEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QFileInfo::canonicalPath();
-  fn _ZNK9QFileInfo13canonicalPathEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QFileInfo13canonicalPathEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto: static bool QFileInfo::exists(const QString & file);
   fn _ZN9QFileInfo6existsERK7QString(arg0: *mut c_void) -> c_char;
   // proto:  bool QFileInfo::makeAbsolute();
-  fn _ZN9QFileInfo12makeAbsoluteEv(qthis: *mut c_void) -> c_char;
+  fn _ZN9QFileInfo12makeAbsoluteEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QFileInfo::isRoot();
-  fn _ZNK9QFileInfo6isRootEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK9QFileInfo6isRootEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QString QFileInfo::canonicalFilePath();
-  fn _ZNK9QFileInfo17canonicalFilePathEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QFileInfo17canonicalFilePathEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QFileInfo::isDir();
-  fn _ZNK9QFileInfo5isDirEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK9QFileInfo5isDirEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QFileInfo::QFileInfo(const QString & file);
   fn dector_ZN9QFileInfoC1ERK7QString(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QFileInfoC1ERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN9QFileInfoC1ERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QString QFileInfo::symLinkTarget();
-  fn demth_ZNK9QFileInfo13symLinkTargetEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK9QFileInfo13symLinkTargetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QFileInfo::setFile(const QString & file);
-  fn _ZN9QFileInfo7setFileERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN9QFileInfo7setFileERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QFileInfo::isFile();
-  fn _ZNK9QFileInfo6isFileEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK9QFileInfo6isFileEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QFileInfo::QFileInfo(const QFile & file);
   fn dector_ZN9QFileInfoC1ERK5QFile(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QFileInfoC1ERK5QFile(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN9QFileInfoC1ERK5QFile(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QFileInfo::setFile(const QFile & file);
-  fn _ZN9QFileInfo7setFileERK5QFile(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN9QFileInfo7setFileERK5QFile(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  uint QFileInfo::ownerId();
-  fn _ZNK9QFileInfo7ownerIdEv(qthis: *mut c_void) -> c_uint;
+  fn _ZNK9QFileInfo7ownerIdEv(qthis: u64 /* *mut c_void*/) -> c_uint;
   // proto:  QString QFileInfo::readLink();
-  fn _ZNK9QFileInfo8readLinkEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QFileInfo8readLinkEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QFileInfo::filePath();
-  fn _ZNK9QFileInfo8filePathEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QFileInfo8filePathEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QFileInfo::QFileInfo(const QFileInfo & fileinfo);
   fn dector_ZN9QFileInfoC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QFileInfoC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN9QFileInfoC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QFileInfo::isSymLink();
-  fn _ZNK9QFileInfo9isSymLinkEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK9QFileInfo9isSymLinkEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QDateTime QFileInfo::lastRead();
-  fn _ZNK9QFileInfo8lastReadEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QFileInfo8lastReadEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QFileInfo::refresh();
-  fn _ZN9QFileInfo7refreshEv(qthis: *mut c_void);
+  fn _ZN9QFileInfo7refreshEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QFileInfo::QFileInfo(const QDir & dir, const QString & file);
   fn dector_ZN9QFileInfoC1ERK4QDirRK7QString(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN9QFileInfoC1ERK4QDirRK7QString(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN9QFileInfoC1ERK4QDirRK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  QString QFileInfo::path();
-  fn _ZNK9QFileInfo4pathEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QFileInfo4pathEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QDir QFileInfo::absoluteDir();
-  fn _ZNK9QFileInfo11absoluteDirEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QFileInfo11absoluteDirEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QFileInfo::isBundle();
-  fn _ZNK9QFileInfo8isBundleEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK9QFileInfo8isBundleEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QFileInfo::setFile(const QDir & dir, const QString & file);
-  fn _ZN9QFileInfo7setFileERK4QDirRK7QString(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN9QFileInfo7setFileERK4QDirRK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  bool QFileInfo::isRelative();
-  fn _ZNK9QFileInfo10isRelativeEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK9QFileInfo10isRelativeEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QFileInfo::setCaching(bool on);
-  fn _ZN9QFileInfo10setCachingEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN9QFileInfo10setCachingEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QDateTime QFileInfo::created();
-  fn _ZNK9QFileInfo7createdEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QFileInfo7createdEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QFileInfo::caching();
-  fn _ZNK9QFileInfo7cachingEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK9QFileInfo7cachingEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QFileInfo::~QFileInfo();
-  fn _ZN9QFileInfoD0Ev(qthis: *mut c_void);
+  fn _ZN9QFileInfoD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QString QFileInfo::completeBaseName();
-  fn _ZNK9QFileInfo16completeBaseNameEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QFileInfo16completeBaseNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QFileInfo::baseName();
-  fn _ZNK9QFileInfo8baseNameEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QFileInfo8baseNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QFileInfo::isExecutable();
-  fn _ZNK9QFileInfo12isExecutableEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK9QFileInfo12isExecutableEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QString QFileInfo::bundleName();
-  fn _ZNK9QFileInfo10bundleNameEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QFileInfo10bundleNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  uint QFileInfo::groupId();
-  fn _ZNK9QFileInfo7groupIdEv(qthis: *mut c_void) -> c_uint;
+  fn _ZNK9QFileInfo7groupIdEv(qthis: u64 /* *mut c_void*/) -> c_uint;
   // proto:  QString QFileInfo::fileName();
-  fn _ZNK9QFileInfo8fileNameEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QFileInfo8fileNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  qint64 QFileInfo::size();
-  fn _ZNK9QFileInfo4sizeEv(qthis: *mut c_void) -> c_longlong;
+  fn _ZNK9QFileInfo4sizeEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
   // proto:  QString QFileInfo::absoluteFilePath();
-  fn _ZNK9QFileInfo16absoluteFilePathEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QFileInfo16absoluteFilePathEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QFileInfo::suffix();
-  fn _ZNK9QFileInfo6suffixEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QFileInfo6suffixEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QFileInfo::group();
-  fn _ZNK9QFileInfo5groupEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QFileInfo5groupEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QFileInfo::isAbsolute();
-  fn demth_ZNK9QFileInfo10isAbsoluteEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK9QFileInfo10isAbsoluteEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QFileInfo::isNativePath();
-  fn _ZNK9QFileInfo12isNativePathEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK9QFileInfo12isNativePathEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QFileInfo::isWritable();
-  fn _ZNK9QFileInfo10isWritableEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK9QFileInfo10isWritableEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QString QFileInfo::owner();
-  fn _ZNK9QFileInfo5ownerEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QFileInfo5ownerEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QFileInfo::isReadable();
-  fn _ZNK9QFileInfo10isReadableEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK9QFileInfo10isReadableEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QDir QFileInfo::dir();
-  fn _ZNK9QFileInfo3dirEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QFileInfo3dirEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QFileInfo::swap(QFileInfo & other);
-  fn demth_ZN9QFileInfo4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN9QFileInfo4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QFileInfo::exists();
-  fn _ZNK9QFileInfo6existsEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK9QFileInfo6existsEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QDateTime QFileInfo::lastModified();
-  fn _ZNK9QFileInfo12lastModifiedEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QFileInfo12lastModifiedEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QFileInfo::absolutePath();
-  fn _ZNK9QFileInfo12absolutePathEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QFileInfo12absolutePathEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QFileInfo)=1
+#[derive(Default)]
 pub struct QFileInfo {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn inheritFrom(qthis: *mut c_void) -> QFileInfo {
-    return QFileInfo{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QFileInfo {
+    return QFileInfo{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  bool QFileInfo::isHidden();
@@ -198,10 +199,10 @@ impl<'a> /*trait*/ QFileInfo_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QFileInfoC1Ev()};
     let ctysz: c_int = unsafe{QFileInfo_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN9QFileInfoC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN9QFileInfoC1Ev()};
-    let rsthis = QFileInfo{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN9QFileInfoC1Ev()} as u64;
+    let rsthis = QFileInfo{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -225,7 +226,7 @@ impl<'a> /*trait*/ QFileInfo_completeSuffix<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo14completeSuffixEv()};
     let mut ret = unsafe {_ZNK9QFileInfo14completeSuffixEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -249,7 +250,7 @@ impl<'a> /*trait*/ QFileInfo_canonicalPath<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo13canonicalPathEv()};
     let mut ret = unsafe {_ZNK9QFileInfo13canonicalPathEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -343,7 +344,7 @@ impl<'a> /*trait*/ QFileInfo_canonicalFilePath<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo17canonicalFilePathEv()};
     let mut ret = unsafe {_ZNK9QFileInfo17canonicalFilePathEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -378,11 +379,11 @@ impl<'a> /*trait*/ QFileInfo_New for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QFileInfoC1ERK7QString()};
     let ctysz: c_int = unsafe{QFileInfo_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN9QFileInfoC1ERK7QString(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN9QFileInfoC1ERK7QString(arg0)};
-    let rsthis = QFileInfo{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN9QFileInfoC1ERK7QString(arg0)} as u64;
+    let rsthis = QFileInfo{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -406,7 +407,7 @@ impl<'a> /*trait*/ QFileInfo_symLinkTarget<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo13symLinkTargetEv()};
     let mut ret = unsafe {demth_ZNK9QFileInfo13symLinkTargetEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -464,11 +465,11 @@ impl<'a> /*trait*/ QFileInfo_New for (&'a QFile) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QFileInfoC1ERK5QFile()};
     let ctysz: c_int = unsafe{QFileInfo_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN9QFileInfoC1ERK5QFile(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN9QFileInfoC1ERK5QFile(arg0)};
-    let rsthis = QFileInfo{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN9QFileInfoC1ERK5QFile(arg0)} as u64;
+    let rsthis = QFileInfo{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -526,7 +527,7 @@ impl<'a> /*trait*/ QFileInfo_readLink<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo8readLinkEv()};
     let mut ret = unsafe {_ZNK9QFileInfo8readLinkEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -550,7 +551,7 @@ impl<'a> /*trait*/ QFileInfo_filePath<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo8filePathEv()};
     let mut ret = unsafe {_ZNK9QFileInfo8filePathEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -562,11 +563,11 @@ impl<'a> /*trait*/ QFileInfo_New for (&'a QFileInfo) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QFileInfoC1ERKS_()};
     let ctysz: c_int = unsafe{QFileInfo_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN9QFileInfoC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN9QFileInfoC1ERKS_(arg0)};
-    let rsthis = QFileInfo{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN9QFileInfoC1ERKS_(arg0)} as u64;
+    let rsthis = QFileInfo{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -613,7 +614,7 @@ impl<'a> /*trait*/ QFileInfo_lastRead<QDateTime> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo8lastReadEv()};
     let mut ret = unsafe {_ZNK9QFileInfo8lastReadEv(rsthis.qclsinst)};
-    let mut ret1 = QDateTime::inheritFrom(ret);
+    let mut ret1 = QDateTime::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -647,12 +648,12 @@ impl<'a> /*trait*/ QFileInfo_New for (&'a QDir, &'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QFileInfoC1ERK4QDirRK7QString()};
     let ctysz: c_int = unsafe{QFileInfo_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     // unsafe {_ZN9QFileInfoC1ERK4QDirRK7QString(qthis, arg0, arg1)};
-    let qthis: *mut c_void = unsafe {dector_ZN9QFileInfoC1ERK4QDirRK7QString(arg0, arg1)};
-    let rsthis = QFileInfo{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN9QFileInfoC1ERK4QDirRK7QString(arg0, arg1)} as u64;
+    let rsthis = QFileInfo{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -676,7 +677,7 @@ impl<'a> /*trait*/ QFileInfo_path<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo4pathEv()};
     let mut ret = unsafe {_ZNK9QFileInfo4pathEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -700,7 +701,7 @@ impl<'a> /*trait*/ QFileInfo_absoluteDir<QDir> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo11absoluteDirEv()};
     let mut ret = unsafe {_ZNK9QFileInfo11absoluteDirEv(rsthis.qclsinst)};
-    let mut ret1 = QDir::inheritFrom(ret);
+    let mut ret1 = QDir::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -805,7 +806,7 @@ impl<'a> /*trait*/ QFileInfo_created<QDateTime> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo7createdEv()};
     let mut ret = unsafe {_ZNK9QFileInfo7createdEv(rsthis.qclsinst)};
-    let mut ret1 = QDateTime::inheritFrom(ret);
+    let mut ret1 = QDateTime::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -874,7 +875,7 @@ impl<'a> /*trait*/ QFileInfo_completeBaseName<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo16completeBaseNameEv()};
     let mut ret = unsafe {_ZNK9QFileInfo16completeBaseNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -898,7 +899,7 @@ impl<'a> /*trait*/ QFileInfo_baseName<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo8baseNameEv()};
     let mut ret = unsafe {_ZNK9QFileInfo8baseNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -945,7 +946,7 @@ impl<'a> /*trait*/ QFileInfo_bundleName<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo10bundleNameEv()};
     let mut ret = unsafe {_ZNK9QFileInfo10bundleNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -992,7 +993,7 @@ impl<'a> /*trait*/ QFileInfo_fileName<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo8fileNameEv()};
     let mut ret = unsafe {_ZNK9QFileInfo8fileNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1039,7 +1040,7 @@ impl<'a> /*trait*/ QFileInfo_absoluteFilePath<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo16absoluteFilePathEv()};
     let mut ret = unsafe {_ZNK9QFileInfo16absoluteFilePathEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1063,7 +1064,7 @@ impl<'a> /*trait*/ QFileInfo_suffix<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo6suffixEv()};
     let mut ret = unsafe {_ZNK9QFileInfo6suffixEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1087,7 +1088,7 @@ impl<'a> /*trait*/ QFileInfo_group<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo5groupEv()};
     let mut ret = unsafe {_ZNK9QFileInfo5groupEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1180,7 +1181,7 @@ impl<'a> /*trait*/ QFileInfo_owner<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo5ownerEv()};
     let mut ret = unsafe {_ZNK9QFileInfo5ownerEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1227,7 +1228,7 @@ impl<'a> /*trait*/ QFileInfo_dir<QDir> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo3dirEv()};
     let mut ret = unsafe {_ZNK9QFileInfo3dirEv(rsthis.qclsinst)};
-    let mut ret1 = QDir::inheritFrom(ret);
+    let mut ret1 = QDir::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1297,7 +1298,7 @@ impl<'a> /*trait*/ QFileInfo_lastModified<QDateTime> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo12lastModifiedEv()};
     let mut ret = unsafe {_ZNK9QFileInfo12lastModifiedEv(rsthis.qclsinst)};
-    let mut ret1 = QDateTime::inheritFrom(ret);
+    let mut ret1 = QDateTime::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1321,7 +1322,7 @@ impl<'a> /*trait*/ QFileInfo_absolutePath<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo12absolutePathEv()};
     let mut ret = unsafe {_ZNK9QFileInfo12absolutePathEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }

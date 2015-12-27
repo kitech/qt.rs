@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtWidgets/qmenubar.h
 // dst-file: /src/widgets/qmenubar.rs
 //
@@ -39,75 +39,80 @@ use super::super::core::qobject::QObject; // 771
 extern {
   fn QMenuBar_Class_Size() -> c_int;
   // proto:  QAction * QMenuBar::addAction(const QString & text);
-  fn _ZN8QMenuBar9addActionERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZN8QMenuBar9addActionERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QPlatformMenuBar * QMenuBar::platformMenuBar();
-  fn _ZN8QMenuBar15platformMenuBarEv(qthis: *mut c_void);
+  fn _ZN8QMenuBar15platformMenuBarEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QMenuBar::setNativeMenuBar(bool nativeMenuBar);
-  fn _ZN8QMenuBar16setNativeMenuBarEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN8QMenuBar16setNativeMenuBarEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QMenuBar::~QMenuBar();
-  fn _ZN8QMenuBarD0Ev(qthis: *mut c_void);
+  fn _ZN8QMenuBarD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QAction * QMenuBar::addMenu(QMenu * menu);
-  fn _ZN8QMenuBar7addMenuEP5QMenu(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZN8QMenuBar7addMenuEP5QMenu(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QMenuBar::triggered(QAction * action);
-  fn _ZN8QMenuBar9triggeredEP7QAction(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN8QMenuBar9triggeredEP7QAction(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QSize QMenuBar::sizeHint();
-  fn _ZNK8QMenuBar8sizeHintEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK8QMenuBar8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QAction * QMenuBar::actionAt(const QPoint & );
-  fn _ZNK8QMenuBar8actionAtERK6QPoint(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK8QMenuBar8actionAtERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QMenuBar::hovered(QAction * action);
-  fn _ZN8QMenuBar7hoveredEP7QAction(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN8QMenuBar7hoveredEP7QAction(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QMenuBar::metaObject();
-  fn _ZNK8QMenuBar10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK8QMenuBar10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QMenuBar::isNativeMenuBar();
-  fn _ZNK8QMenuBar15isNativeMenuBarEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK8QMenuBar15isNativeMenuBarEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QAction * QMenuBar::insertSeparator(QAction * before);
-  fn _ZN8QMenuBar15insertSeparatorEP7QAction(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZN8QMenuBar15insertSeparatorEP7QAction(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QAction * QMenuBar::addSeparator();
-  fn _ZN8QMenuBar12addSeparatorEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZN8QMenuBar12addSeparatorEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QSize QMenuBar::minimumSizeHint();
-  fn _ZNK8QMenuBar15minimumSizeHintEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK8QMenuBar15minimumSizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QMenuBar::isDefaultUp();
-  fn _ZNK8QMenuBar11isDefaultUpEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK8QMenuBar11isDefaultUpEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QMenuBar::QMenuBar(const QMenuBar & );
   fn dector_ZN8QMenuBarC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN8QMenuBarC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN8QMenuBarC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMenuBar::QMenuBar(QWidget * parent);
   fn dector_ZN8QMenuBarC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN8QMenuBarC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN8QMenuBarC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMenuBar::setActiveAction(QAction * action);
-  fn _ZN8QMenuBar15setActiveActionEP7QAction(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN8QMenuBar15setActiveActionEP7QAction(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMenuBar::clear();
-  fn _ZN8QMenuBar5clearEv(qthis: *mut c_void);
+  fn _ZN8QMenuBar5clearEv(qthis: u64 /* *mut c_void*/);
   // proto:  QAction * QMenuBar::activeAction();
-  fn _ZNK8QMenuBar12activeActionEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK8QMenuBar12activeActionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QMenu * QMenuBar::addMenu(const QIcon & icon, const QString & title);
-  fn _ZN8QMenuBar7addMenuERK5QIconRK7QString(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
+  fn _ZN8QMenuBar7addMenuERK5QIconRK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  QMenu * QMenuBar::addMenu(const QString & title);
-  fn _ZN8QMenuBar7addMenuERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZN8QMenuBar7addMenuERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QRect QMenuBar::actionGeometry(QAction * );
-  fn _ZNK8QMenuBar14actionGeometryEP7QAction(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK8QMenuBar14actionGeometryEP7QAction(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QAction * QMenuBar::insertMenu(QAction * before, QMenu * menu);
-  fn _ZN8QMenuBar10insertMenuEP7QActionP5QMenu(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
+  fn _ZN8QMenuBar10insertMenuEP7QActionP5QMenu(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  void QMenuBar::setDefaultUp(bool );
-  fn _ZN8QMenuBar12setDefaultUpEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN8QMenuBar12setDefaultUpEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QMenuBar::setVisible(bool visible);
-  fn _ZN8QMenuBar10setVisibleEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN8QMenuBar10setVisibleEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QAction * QMenuBar::addAction(const QString & text, const QObject * receiver, const char * member);
-  fn _ZN8QMenuBar9addActionERK7QStringPK7QObjectPKc(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_char) -> *mut c_void;
+  fn _ZN8QMenuBar9addActionERK7QStringPK7QObjectPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_char) -> *mut c_void;
   // proto:  int QMenuBar::heightForWidth(int );
-  fn _ZNK8QMenuBar14heightForWidthEi(qthis: *mut c_void, arg0: c_int) -> c_int;
+  fn _ZNK8QMenuBar14heightForWidthEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
+  fn QMenuBar_SlotProxy_connect__ZN8QMenuBar9triggeredEP7QAction(qthis: *mut c_void, fptr: *mut c_void);
+  fn QMenuBar_SlotProxy_connect__ZN8QMenuBar7hoveredEP7QAction(qthis: *mut c_void, fptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QMenuBar)=1
+#[derive(Default)]
 pub struct QMenuBar {
   qbase: QWidget,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _hovered_1: QMenuBar_hovered_signal,
+  pub _triggered_1: QMenuBar_triggered_signal,
 }
 
 impl /*struct*/ QMenuBar {
-  pub fn inheritFrom(qthis: *mut c_void) -> QMenuBar {
-    return QMenuBar{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QMenuBar {
+    return QMenuBar{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QMenuBar {
@@ -141,7 +146,7 @@ impl<'a> /*trait*/ QMenuBar_addAction<QAction> for (&'a QString) {
     // unsafe{_ZN8QMenuBar9addActionERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN8QMenuBar9addActionERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QAction::inheritFrom(ret);
+    let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -233,7 +238,7 @@ impl<'a> /*trait*/ QMenuBar_addMenu<QAction> for (&'a QMenu) {
     // unsafe{_ZN8QMenuBar7addMenuEP5QMenu()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN8QMenuBar7addMenuEP5QMenu(rsthis.qclsinst, arg0)};
-    let mut ret1 = QAction::inheritFrom(ret);
+    let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -280,7 +285,7 @@ impl<'a> /*trait*/ QMenuBar_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMenuBar8sizeHintEv()};
     let mut ret = unsafe {_ZNK8QMenuBar8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize::inheritFrom(ret);
+    let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -305,7 +310,7 @@ impl<'a> /*trait*/ QMenuBar_actionAt<QAction> for (&'a QPoint) {
     // unsafe{_ZNK8QMenuBar8actionAtERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK8QMenuBar8actionAtERK6QPoint(rsthis.qclsinst, arg0)};
-    let mut ret1 = QAction::inheritFrom(ret);
+    let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -398,7 +403,7 @@ impl<'a> /*trait*/ QMenuBar_insertSeparator<QAction> for (&'a QAction) {
     // unsafe{_ZN8QMenuBar15insertSeparatorEP7QAction()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN8QMenuBar15insertSeparatorEP7QAction(rsthis.qclsinst, arg0)};
-    let mut ret1 = QAction::inheritFrom(ret);
+    let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -422,7 +427,7 @@ impl<'a> /*trait*/ QMenuBar_addSeparator<QAction> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMenuBar12addSeparatorEv()};
     let mut ret = unsafe {_ZN8QMenuBar12addSeparatorEv(rsthis.qclsinst)};
-    let mut ret1 = QAction::inheritFrom(ret);
+    let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -446,7 +451,7 @@ impl<'a> /*trait*/ QMenuBar_minimumSizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMenuBar15minimumSizeHintEv()};
     let mut ret = unsafe {_ZNK8QMenuBar15minimumSizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize::inheritFrom(ret);
+    let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -494,11 +499,11 @@ impl<'a> /*trait*/ QMenuBar_New for (&'a QMenuBar) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMenuBarC1ERKS_()};
     let ctysz: c_int = unsafe{QMenuBar_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN8QMenuBarC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN8QMenuBarC1ERKS_(arg0)};
-    let rsthis = QMenuBar{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN8QMenuBarC1ERKS_(arg0)} as u64;
+    let rsthis = QMenuBar{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -510,11 +515,11 @@ impl<'a> /*trait*/ QMenuBar_New for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMenuBarC1EP7QWidget()};
     let ctysz: c_int = unsafe{QMenuBar_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN8QMenuBarC1EP7QWidget(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN8QMenuBarC1EP7QWidget(arg0)};
-    let rsthis = QMenuBar{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN8QMenuBarC1EP7QWidget(arg0)} as u64;
+    let rsthis = QMenuBar{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -583,7 +588,7 @@ impl<'a> /*trait*/ QMenuBar_activeAction<QAction> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMenuBar12activeActionEv()};
     let mut ret = unsafe {_ZNK8QMenuBar12activeActionEv(rsthis.qclsinst)};
-    let mut ret1 = QAction::inheritFrom(ret);
+    let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -597,7 +602,7 @@ impl<'a> /*trait*/ QMenuBar_addMenu<QMenu> for (&'a QIcon, &'a QString) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN8QMenuBar7addMenuERK5QIconRK7QString(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QMenu::inheritFrom(ret);
+    let mut ret1 = QMenu::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -610,7 +615,7 @@ impl<'a> /*trait*/ QMenuBar_addMenu<QMenu> for (&'a QString) {
     // unsafe{_ZN8QMenuBar7addMenuERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN8QMenuBar7addMenuERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QMenu::inheritFrom(ret);
+    let mut ret1 = QMenu::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -635,7 +640,7 @@ impl<'a> /*trait*/ QMenuBar_actionGeometry<QRect> for (&'a QAction) {
     // unsafe{_ZNK8QMenuBar14actionGeometryEP7QAction()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK8QMenuBar14actionGeometryEP7QAction(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRect::inheritFrom(ret);
+    let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -661,7 +666,7 @@ impl<'a> /*trait*/ QMenuBar_insertMenu<QAction> for (&'a QAction, &'a QMenu) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN8QMenuBar10insertMenuEP7QActionP5QMenu(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QAction::inheritFrom(ret);
+    let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -722,7 +727,7 @@ impl<'a> /*trait*/ QMenuBar_addAction<QAction> for (&'a QString, &'a QObject, &'
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZN8QMenuBar9addActionERK7QStringPK7QObjectPKc(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QAction::inheritFrom(ret);
+    let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -752,5 +757,57 @@ impl<'a> /*trait*/ QMenuBar_heightForWidth<i32> for (i32) {
   }
 }
 
+#[derive(Default)] // for QMenuBar_hovered
+pub struct QMenuBar_hovered_signal{poi:u64}
+impl /* struct */ QMenuBar {
+  pub fn hovered_1(self) -> QMenuBar_hovered_signal {
+     return QMenuBar_hovered_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QMenuBar_hovered_signal {
+  pub fn connect<T: QMenuBar_hovered_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QMenuBar_hovered_signal_connect {
+  fn connect(self, sigthis: QMenuBar_hovered_signal);
+}
+
+#[derive(Default)] // for QMenuBar_triggered
+pub struct QMenuBar_triggered_signal{poi:u64}
+impl /* struct */ QMenuBar {
+  pub fn triggered_1(self) -> QMenuBar_triggered_signal {
+     return QMenuBar_triggered_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QMenuBar_triggered_signal {
+  pub fn connect<T: QMenuBar_triggered_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QMenuBar_triggered_signal_connect {
+  fn connect(self, sigthis: QMenuBar_triggered_signal);
+}
+
+// triggered(class QAction *)
+extern fn QMenuBar_triggered_signal_connect_cb_0(arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QMenuBar_triggered_signal_connect for (extern fn(QAction)) {
+  fn connect(self, sigthis: QMenuBar_triggered_signal) {
+    // do smth...
+    unsafe {QMenuBar_SlotProxy_connect__ZN8QMenuBar9triggeredEP7QAction(sigthis.poi as *mut c_void, QMenuBar_triggered_signal_connect_cb_0 as *mut c_void)};
+  }
+}
+// hovered(class QAction *)
+extern fn QMenuBar_hovered_signal_connect_cb_1(arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QMenuBar_hovered_signal_connect for (extern fn(QAction)) {
+  fn connect(self, sigthis: QMenuBar_hovered_signal) {
+    // do smth...
+    unsafe {QMenuBar_SlotProxy_connect__ZN8QMenuBar7hoveredEP7QAction(sigthis.poi as *mut c_void, QMenuBar_hovered_signal_connect_cb_1 as *mut c_void)};
+  }
+}
 // <= body block end
 

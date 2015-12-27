@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qscopedpointer.h
 // dst-file: /src/core/qscopedpointer.rs
 //
@@ -35,14 +35,15 @@ extern {
 
 // body block begin =>
 // class sizeof(QScopedPointerPodDeleter)=1
+#[derive(Default)]
 pub struct QScopedPointerPodDeleter {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QScopedPointerPodDeleter {
-  pub fn inheritFrom(qthis: *mut c_void) -> QScopedPointerPodDeleter {
-    return QScopedPointerPodDeleter{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QScopedPointerPodDeleter {
+    return QScopedPointerPodDeleter{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto: static void QScopedPointerPodDeleter::cleanup(void * pointer);

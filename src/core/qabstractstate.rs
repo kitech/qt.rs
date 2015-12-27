@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qabstractstate.h
 // dst-file: /src/core/qabstractstate.rs
 //
@@ -33,32 +33,40 @@ use super::qstatemachine::QStateMachine; // 773
 extern {
   fn QAbstractState_Class_Size() -> c_int;
   // proto:  void QAbstractState::~QAbstractState();
-  fn _ZN14QAbstractStateD0Ev(qthis: *mut c_void);
+  fn _ZN14QAbstractStateD0Ev(qthis: u64 /* *mut c_void*/);
+  // proto:  void QAbstractState::QAbstractState(const QAbstractState & );
+  fn dector_ZN14QAbstractStateC1ERKS_(arg0: *mut c_void) -> *mut c_void;
+  fn _ZN14QAbstractStateC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAbstractState::QAbstractState(QState * parent);
   fn dector_ZN14QAbstractStateC1EP6QState(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN14QAbstractStateC1EP6QState(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN14QAbstractStateC1EP6QState(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QAbstractState::metaObject();
-  fn _ZNK14QAbstractState10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK14QAbstractState10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  QState * QAbstractState::parentState();
-  fn _ZNK14QAbstractState11parentStateEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK14QAbstractState11parentStateEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QStateMachine * QAbstractState::machine();
-  fn _ZNK14QAbstractState7machineEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK14QAbstractState7machineEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAbstractState::activeChanged(bool active);
-  fn _ZN14QAbstractState13activeChangedEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN14QAbstractState13activeChangedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  bool QAbstractState::active();
-  fn _ZNK14QAbstractState6activeEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK14QAbstractState6activeEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn QAbstractState_SlotProxy_connect__ZN14QAbstractState13activeChangedEb(qthis: *mut c_void, fptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QAbstractState)=1
+#[derive(Default)]
 pub struct QAbstractState {
   qbase: QObject,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _entered_1: QAbstractState_entered_signal,
+  pub _exited_1: QAbstractState_exited_signal,
+  pub _activeChanged_1: QAbstractState_activeChanged_signal,
 }
 
 impl /*struct*/ QAbstractState {
-  pub fn inheritFrom(qthis: *mut c_void) -> QAbstractState {
-    return QAbstractState{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QAbstractState {
+    return QAbstractState{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QAbstractState {
@@ -95,7 +103,7 @@ impl<'a> /*trait*/ QAbstractState_Free<()> for () {
   }
 }
 
-  // proto:  void QAbstractState::QAbstractState(QState * parent);
+  // proto:  void QAbstractState::QAbstractState(const QAbstractState & );
 impl /*struct*/ QAbstractState {
   pub fn New<T: QAbstractState_New>(value: T) -> QAbstractState {
     let rsthis = value.New();
@@ -108,17 +116,33 @@ pub trait QAbstractState_New {
   fn New(self) -> QAbstractState;
 }
 
+  // proto:  void QAbstractState::QAbstractState(const QAbstractState & );
+impl<'a> /*trait*/ QAbstractState_New for (&'a QAbstractState) {
+  fn New(self) -> QAbstractState {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN14QAbstractStateC1ERKS_()};
+    let ctysz: c_int = unsafe{QAbstractState_Class_Size()};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
+    let arg0 = self.qclsinst  as *mut c_void;
+    // unsafe {_ZN14QAbstractStateC1ERKS_(qthis, arg0)};
+    let qthis: u64 = unsafe {dector_ZN14QAbstractStateC1ERKS_(arg0)} as u64;
+    let rsthis = QAbstractState{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+    return rsthis;
+    // return 1;
+  }
+}
+
   // proto:  void QAbstractState::QAbstractState(QState * parent);
 impl<'a> /*trait*/ QAbstractState_New for (&'a QState) {
   fn New(self) -> QAbstractState {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QAbstractStateC1EP6QState()};
     let ctysz: c_int = unsafe{QAbstractState_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN14QAbstractStateC1EP6QState(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN14QAbstractStateC1EP6QState(arg0)};
-    let rsthis = QAbstractState{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN14QAbstractStateC1EP6QState(arg0)} as u64;
+    let rsthis = QAbstractState{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -164,7 +188,7 @@ impl<'a> /*trait*/ QAbstractState_parentState<QState> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QAbstractState11parentStateEv()};
     let mut ret = unsafe {_ZNK14QAbstractState11parentStateEv(rsthis.qclsinst)};
-    let mut ret1 = QState::inheritFrom(ret);
+    let mut ret1 = QState::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -188,7 +212,7 @@ impl<'a> /*trait*/ QAbstractState_machine<QStateMachine> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QAbstractState7machineEv()};
     let mut ret = unsafe {_ZNK14QAbstractState7machineEv(rsthis.qclsinst)};
-    let mut ret1 = QStateMachine::inheritFrom(ret);
+    let mut ret1 = QStateMachine::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -240,5 +264,63 @@ impl<'a> /*trait*/ QAbstractState_active<i8> for () {
   }
 }
 
+#[derive(Default)] // for QAbstractState_entered
+pub struct QAbstractState_entered_signal{poi:u64}
+impl /* struct */ QAbstractState {
+  pub fn entered_1(self) -> QAbstractState_entered_signal {
+     return QAbstractState_entered_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QAbstractState_entered_signal {
+  pub fn connect<T: QAbstractState_entered_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QAbstractState_entered_signal_connect {
+  fn connect(self, sigthis: QAbstractState_entered_signal);
+}
+
+#[derive(Default)] // for QAbstractState_exited
+pub struct QAbstractState_exited_signal{poi:u64}
+impl /* struct */ QAbstractState {
+  pub fn exited_1(self) -> QAbstractState_exited_signal {
+     return QAbstractState_exited_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QAbstractState_exited_signal {
+  pub fn connect<T: QAbstractState_exited_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QAbstractState_exited_signal_connect {
+  fn connect(self, sigthis: QAbstractState_exited_signal);
+}
+
+#[derive(Default)] // for QAbstractState_activeChanged
+pub struct QAbstractState_activeChanged_signal{poi:u64}
+impl /* struct */ QAbstractState {
+  pub fn activeChanged_1(self) -> QAbstractState_activeChanged_signal {
+     return QAbstractState_activeChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QAbstractState_activeChanged_signal {
+  pub fn connect<T: QAbstractState_activeChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QAbstractState_activeChanged_signal_connect {
+  fn connect(self, sigthis: QAbstractState_activeChanged_signal);
+}
+
+// activeChanged(_Bool)
+extern fn QAbstractState_activeChanged_signal_connect_cb_0(arg0: c_char) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QAbstractState_activeChanged_signal_connect for (extern fn(i8)) {
+  fn connect(self, sigthis: QAbstractState_activeChanged_signal) {
+    // do smth...
+    unsafe {QAbstractState_SlotProxy_connect__ZN14QAbstractState13activeChangedEb(sigthis.poi as *mut c_void, QAbstractState_activeChanged_signal_connect_cb_0 as *mut c_void)};
+  }
+}
 // <= body block end
 

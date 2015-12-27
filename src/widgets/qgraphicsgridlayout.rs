@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtWidgets/qgraphicsgridlayout.h
 // dst-file: /src/widgets/qgraphicsgridlayout.rs
 //
@@ -34,97 +34,98 @@ use super::super::core::qsize::QSizeF; // 771
 extern {
   fn QGraphicsGridLayout_Class_Size() -> c_int;
   // proto:  void QGraphicsGridLayout::setRowPreferredHeight(int row, qreal height);
-  fn _ZN19QGraphicsGridLayout21setRowPreferredHeightEid(qthis: *mut c_void, arg0: c_int, arg1: c_double);
+  fn _ZN19QGraphicsGridLayout21setRowPreferredHeightEid(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_double);
   // proto:  int QGraphicsGridLayout::columnCount();
-  fn _ZNK19QGraphicsGridLayout11columnCountEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK19QGraphicsGridLayout11columnCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  QGraphicsLayoutItem * QGraphicsGridLayout::itemAt(int index);
-  fn _ZNK19QGraphicsGridLayout6itemAtEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZNK19QGraphicsGridLayout6itemAtEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QGraphicsGridLayout::count();
-  fn _ZNK19QGraphicsGridLayout5countEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK19QGraphicsGridLayout5countEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QGraphicsGridLayout::setColumnFixedWidth(int column, qreal width);
-  fn _ZN19QGraphicsGridLayout19setColumnFixedWidthEid(qthis: *mut c_void, arg0: c_int, arg1: c_double);
+  fn _ZN19QGraphicsGridLayout19setColumnFixedWidthEid(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_double);
   // proto:  void QGraphicsGridLayout::setColumnMaximumWidth(int column, qreal width);
-  fn _ZN19QGraphicsGridLayout21setColumnMaximumWidthEid(qthis: *mut c_void, arg0: c_int, arg1: c_double);
+  fn _ZN19QGraphicsGridLayout21setColumnMaximumWidthEid(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_double);
   // proto:  int QGraphicsGridLayout::rowStretchFactor(int row);
-  fn _ZNK19QGraphicsGridLayout16rowStretchFactorEi(qthis: *mut c_void, arg0: c_int) -> c_int;
+  fn _ZNK19QGraphicsGridLayout16rowStretchFactorEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
   // proto:  qreal QGraphicsGridLayout::verticalSpacing();
-  fn _ZNK19QGraphicsGridLayout15verticalSpacingEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK19QGraphicsGridLayout15verticalSpacingEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  int QGraphicsGridLayout::columnStretchFactor(int column);
-  fn _ZNK19QGraphicsGridLayout19columnStretchFactorEi(qthis: *mut c_void, arg0: c_int) -> c_int;
+  fn _ZNK19QGraphicsGridLayout19columnStretchFactorEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
   // proto:  void QGraphicsGridLayout::setRowMaximumHeight(int row, qreal height);
-  fn _ZN19QGraphicsGridLayout19setRowMaximumHeightEid(qthis: *mut c_void, arg0: c_int, arg1: c_double);
+  fn _ZN19QGraphicsGridLayout19setRowMaximumHeightEid(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_double);
   // proto:  void QGraphicsGridLayout::removeItem(QGraphicsLayoutItem * item);
-  fn _ZN19QGraphicsGridLayout10removeItemEP19QGraphicsLayoutItem(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN19QGraphicsGridLayout10removeItemEP19QGraphicsLayoutItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsGridLayout::~QGraphicsGridLayout();
-  fn _ZN19QGraphicsGridLayoutD0Ev(qthis: *mut c_void);
+  fn _ZN19QGraphicsGridLayoutD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  qreal QGraphicsGridLayout::rowMinimumHeight(int row);
-  fn _ZNK19QGraphicsGridLayout16rowMinimumHeightEi(qthis: *mut c_void, arg0: c_int) -> c_double;
+  fn _ZNK19QGraphicsGridLayout16rowMinimumHeightEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_double;
   // proto:  qreal QGraphicsGridLayout::rowMaximumHeight(int row);
-  fn _ZNK19QGraphicsGridLayout16rowMaximumHeightEi(qthis: *mut c_void, arg0: c_int) -> c_double;
+  fn _ZNK19QGraphicsGridLayout16rowMaximumHeightEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_double;
   // proto:  void QGraphicsGridLayout::QGraphicsGridLayout(QGraphicsLayoutItem * parent);
   fn dector_ZN19QGraphicsGridLayoutC1EP19QGraphicsLayoutItem(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN19QGraphicsGridLayoutC1EP19QGraphicsLayoutItem(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN19QGraphicsGridLayoutC1EP19QGraphicsLayoutItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsGridLayout::setColumnSpacing(int column, qreal spacing);
-  fn _ZN19QGraphicsGridLayout16setColumnSpacingEid(qthis: *mut c_void, arg0: c_int, arg1: c_double);
+  fn _ZN19QGraphicsGridLayout16setColumnSpacingEid(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_double);
   // proto:  qreal QGraphicsGridLayout::rowSpacing(int row);
-  fn _ZNK19QGraphicsGridLayout10rowSpacingEi(qthis: *mut c_void, arg0: c_int) -> c_double;
+  fn _ZNK19QGraphicsGridLayout10rowSpacingEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_double;
   // proto:  qreal QGraphicsGridLayout::columnMaximumWidth(int column);
-  fn _ZNK19QGraphicsGridLayout18columnMaximumWidthEi(qthis: *mut c_void, arg0: c_int) -> c_double;
+  fn _ZNK19QGraphicsGridLayout18columnMaximumWidthEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_double;
   // proto:  void QGraphicsGridLayout::setRowFixedHeight(int row, qreal height);
-  fn _ZN19QGraphicsGridLayout17setRowFixedHeightEid(qthis: *mut c_void, arg0: c_int, arg1: c_double);
+  fn _ZN19QGraphicsGridLayout17setRowFixedHeightEid(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_double);
   // proto:  qreal QGraphicsGridLayout::rowPreferredHeight(int row);
-  fn _ZNK19QGraphicsGridLayout18rowPreferredHeightEi(qthis: *mut c_void, arg0: c_int) -> c_double;
+  fn _ZNK19QGraphicsGridLayout18rowPreferredHeightEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_double;
   // proto:  QGraphicsLayoutItem * QGraphicsGridLayout::itemAt(int row, int column);
-  fn _ZNK19QGraphicsGridLayout6itemAtEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
+  fn _ZNK19QGraphicsGridLayout6itemAtEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  void QGraphicsGridLayout::setVerticalSpacing(qreal spacing);
-  fn _ZN19QGraphicsGridLayout18setVerticalSpacingEd(qthis: *mut c_void, arg0: c_double);
+  fn _ZN19QGraphicsGridLayout18setVerticalSpacingEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QGraphicsGridLayout::setGeometry(const QRectF & rect);
-  fn _ZN19QGraphicsGridLayout11setGeometryERK6QRectF(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN19QGraphicsGridLayout11setGeometryERK6QRectF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QGraphicsGridLayout::rowCount();
-  fn _ZNK19QGraphicsGridLayout8rowCountEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK19QGraphicsGridLayout8rowCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QGraphicsGridLayout::setSpacing(qreal spacing);
-  fn _ZN19QGraphicsGridLayout10setSpacingEd(qthis: *mut c_void, arg0: c_double);
+  fn _ZN19QGraphicsGridLayout10setSpacingEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QGraphicsGridLayout::setRowStretchFactor(int row, int stretch);
-  fn _ZN19QGraphicsGridLayout19setRowStretchFactorEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
+  fn _ZN19QGraphicsGridLayout19setRowStretchFactorEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  qreal QGraphicsGridLayout::columnMinimumWidth(int column);
-  fn _ZNK19QGraphicsGridLayout18columnMinimumWidthEi(qthis: *mut c_void, arg0: c_int) -> c_double;
+  fn _ZNK19QGraphicsGridLayout18columnMinimumWidthEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_double;
   // proto:  void QGraphicsGridLayout::setColumnMinimumWidth(int column, qreal width);
-  fn _ZN19QGraphicsGridLayout21setColumnMinimumWidthEid(qthis: *mut c_void, arg0: c_int, arg1: c_double);
+  fn _ZN19QGraphicsGridLayout21setColumnMinimumWidthEid(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_double);
   // proto:  void QGraphicsGridLayout::setRowMinimumHeight(int row, qreal height);
-  fn _ZN19QGraphicsGridLayout19setRowMinimumHeightEid(qthis: *mut c_void, arg0: c_int, arg1: c_double);
+  fn _ZN19QGraphicsGridLayout19setRowMinimumHeightEid(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_double);
   // proto:  void QGraphicsGridLayout::setHorizontalSpacing(qreal spacing);
-  fn _ZN19QGraphicsGridLayout20setHorizontalSpacingEd(qthis: *mut c_void, arg0: c_double);
+  fn _ZN19QGraphicsGridLayout20setHorizontalSpacingEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  qreal QGraphicsGridLayout::horizontalSpacing();
-  fn _ZNK19QGraphicsGridLayout17horizontalSpacingEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK19QGraphicsGridLayout17horizontalSpacingEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QGraphicsGridLayout::setColumnStretchFactor(int column, int stretch);
-  fn _ZN19QGraphicsGridLayout22setColumnStretchFactorEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
+  fn _ZN19QGraphicsGridLayout22setColumnStretchFactorEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  void QGraphicsGridLayout::invalidate();
-  fn _ZN19QGraphicsGridLayout10invalidateEv(qthis: *mut c_void);
+  fn _ZN19QGraphicsGridLayout10invalidateEv(qthis: u64 /* *mut c_void*/);
   // proto:  qreal QGraphicsGridLayout::columnPreferredWidth(int column);
-  fn _ZNK19QGraphicsGridLayout20columnPreferredWidthEi(qthis: *mut c_void, arg0: c_int) -> c_double;
+  fn _ZNK19QGraphicsGridLayout20columnPreferredWidthEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_double;
   // proto:  void QGraphicsGridLayout::setColumnPreferredWidth(int column, qreal width);
-  fn _ZN19QGraphicsGridLayout23setColumnPreferredWidthEid(qthis: *mut c_void, arg0: c_int, arg1: c_double);
+  fn _ZN19QGraphicsGridLayout23setColumnPreferredWidthEid(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_double);
   // proto:  qreal QGraphicsGridLayout::columnSpacing(int column);
-  fn _ZNK19QGraphicsGridLayout13columnSpacingEi(qthis: *mut c_void, arg0: c_int) -> c_double;
+  fn _ZNK19QGraphicsGridLayout13columnSpacingEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_double;
   // proto:  void QGraphicsGridLayout::QGraphicsGridLayout(const QGraphicsGridLayout & );
   fn dector_ZN19QGraphicsGridLayoutC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN19QGraphicsGridLayoutC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN19QGraphicsGridLayoutC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsGridLayout::setRowSpacing(int row, qreal spacing);
-  fn _ZN19QGraphicsGridLayout13setRowSpacingEid(qthis: *mut c_void, arg0: c_int, arg1: c_double);
+  fn _ZN19QGraphicsGridLayout13setRowSpacingEid(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_double);
   // proto:  void QGraphicsGridLayout::removeAt(int index);
-  fn _ZN19QGraphicsGridLayout8removeAtEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN19QGraphicsGridLayout8removeAtEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QGraphicsGridLayout)=1
+#[derive(Default)]
 pub struct QGraphicsGridLayout {
   qbase: QGraphicsLayout,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QGraphicsGridLayout {
-  pub fn inheritFrom(qthis: *mut c_void) -> QGraphicsGridLayout {
-    return QGraphicsGridLayout{qbase: QGraphicsLayout::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QGraphicsGridLayout {
+    return QGraphicsGridLayout{qbase: QGraphicsLayout::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QGraphicsGridLayout {
@@ -487,11 +488,11 @@ impl<'a> /*trait*/ QGraphicsGridLayout_New for (&'a QGraphicsLayoutItem) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsGridLayoutC1EP19QGraphicsLayoutItem()};
     let ctysz: c_int = unsafe{QGraphicsGridLayout_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN19QGraphicsGridLayoutC1EP19QGraphicsLayoutItem(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN19QGraphicsGridLayoutC1EP19QGraphicsLayoutItem(arg0)};
-    let rsthis = QGraphicsGridLayout{/**/qbase: QGraphicsLayout::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN19QGraphicsGridLayoutC1EP19QGraphicsLayoutItem(arg0)} as u64;
+    let rsthis = QGraphicsGridLayout{qbase: QGraphicsLayout::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -987,11 +988,11 @@ impl<'a> /*trait*/ QGraphicsGridLayout_New for (&'a QGraphicsGridLayout) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsGridLayoutC1ERKS_()};
     let ctysz: c_int = unsafe{QGraphicsGridLayout_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN19QGraphicsGridLayoutC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN19QGraphicsGridLayoutC1ERKS_(arg0)};
-    let rsthis = QGraphicsGridLayout{/**/qbase: QGraphicsLayout::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN19QGraphicsGridLayoutC1ERKS_(arg0)} as u64;
+    let rsthis = QGraphicsGridLayout{qbase: QGraphicsLayout::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }

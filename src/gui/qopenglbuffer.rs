@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtGui/qopenglbuffer.h
 // dst-file: /src/gui/qopenglbuffer.rs
 //
@@ -30,49 +30,50 @@ use std::ops::Deref;
 extern {
   fn QOpenGLBuffer_Class_Size() -> c_int;
   // proto:  bool QOpenGLBuffer::read(int offset, void * data, int count);
-  fn _ZN13QOpenGLBuffer4readEiPvi(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void, arg2: c_int) -> c_char;
+  fn _ZN13QOpenGLBuffer4readEiPvi(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void, arg2: c_int) -> c_char;
   // proto:  bool QOpenGLBuffer::bind();
-  fn _ZN13QOpenGLBuffer4bindEv(qthis: *mut c_void) -> c_char;
+  fn _ZN13QOpenGLBuffer4bindEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QOpenGLBuffer::destroy();
-  fn _ZN13QOpenGLBuffer7destroyEv(qthis: *mut c_void);
+  fn _ZN13QOpenGLBuffer7destroyEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QOpenGLBuffer::allocate(int count);
-  fn demth_ZN13QOpenGLBuffer8allocateEi(qthis: *mut c_void, arg0: c_int);
+  fn demth_ZN13QOpenGLBuffer8allocateEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  bool QOpenGLBuffer::unmap();
-  fn _ZN13QOpenGLBuffer5unmapEv(qthis: *mut c_void) -> c_char;
+  fn _ZN13QOpenGLBuffer5unmapEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QOpenGLBuffer::QOpenGLBuffer(const QOpenGLBuffer & other);
   fn dector_ZN13QOpenGLBufferC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN13QOpenGLBufferC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN13QOpenGLBufferC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QOpenGLBuffer::size();
-  fn _ZNK13QOpenGLBuffer4sizeEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK13QOpenGLBuffer4sizeEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QOpenGLBuffer::allocate(const void * data, int count);
-  fn _ZN13QOpenGLBuffer8allocateEPKvi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int);
+  fn _ZN13QOpenGLBuffer8allocateEPKvi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
   // proto:  GLuint QOpenGLBuffer::bufferId();
-  fn _ZNK13QOpenGLBuffer8bufferIdEv(qthis: *mut c_void) -> c_uint;
+  fn _ZNK13QOpenGLBuffer8bufferIdEv(qthis: u64 /* *mut c_void*/) -> c_uint;
   // proto:  void QOpenGLBuffer::QOpenGLBuffer();
   fn dector_ZN13QOpenGLBufferC1Ev() -> *mut c_void;
-  fn _ZN13QOpenGLBufferC1Ev(qthis: *mut c_void);
+  fn _ZN13QOpenGLBufferC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QOpenGLBuffer::create();
-  fn _ZN13QOpenGLBuffer6createEv(qthis: *mut c_void) -> c_char;
+  fn _ZN13QOpenGLBuffer6createEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QOpenGLBuffer::~QOpenGLBuffer();
-  fn _ZN13QOpenGLBufferD0Ev(qthis: *mut c_void);
+  fn _ZN13QOpenGLBufferD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QOpenGLBuffer::release();
-  fn _ZN13QOpenGLBuffer7releaseEv(qthis: *mut c_void);
+  fn _ZN13QOpenGLBuffer7releaseEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QOpenGLBuffer::isCreated();
-  fn _ZNK13QOpenGLBuffer9isCreatedEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK13QOpenGLBuffer9isCreatedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QOpenGLBuffer::write(int offset, const void * data, int count);
-  fn _ZN13QOpenGLBuffer5writeEiPKvi(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void, arg2: c_int);
+  fn _ZN13QOpenGLBuffer5writeEiPKvi(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void, arg2: c_int);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QOpenGLBuffer)=8
+#[derive(Default)]
 pub struct QOpenGLBuffer {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QOpenGLBuffer {
-  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLBuffer {
-    return QOpenGLBuffer{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QOpenGLBuffer {
+    return QOpenGLBuffer{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  bool QOpenGLBuffer::read(int offset, void * data, int count);
@@ -211,11 +212,11 @@ impl<'a> /*trait*/ QOpenGLBuffer_New for (&'a QOpenGLBuffer) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLBufferC1ERKS_()};
     let ctysz: c_int = unsafe{QOpenGLBuffer_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN13QOpenGLBufferC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN13QOpenGLBufferC1ERKS_(arg0)};
-    let rsthis = QOpenGLBuffer{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN13QOpenGLBufferC1ERKS_(arg0)} as u64;
+    let rsthis = QOpenGLBuffer{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -285,10 +286,10 @@ impl<'a> /*trait*/ QOpenGLBuffer_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLBufferC1Ev()};
     let ctysz: c_int = unsafe{QOpenGLBuffer_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN13QOpenGLBufferC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN13QOpenGLBufferC1Ev()};
-    let rsthis = QOpenGLBuffer{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN13QOpenGLBufferC1Ev()} as u64;
+    let rsthis = QOpenGLBuffer{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }

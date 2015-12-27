@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qtextcodec.h
 // dst-file: /src/core/qtextcodec.rs
 //
@@ -34,26 +34,26 @@ use super::qchar::QChar; // 773
 extern {
   fn QTextEncoder_Class_Size() -> c_int;
   // proto:  void QTextEncoder::~QTextEncoder();
-  fn _ZN12QTextEncoderD0Ev(qthis: *mut c_void);
+  fn _ZN12QTextEncoderD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QByteArray QTextEncoder::fromUnicode(const QString & str);
-  fn _ZN12QTextEncoder11fromUnicodeERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZN12QTextEncoder11fromUnicodeERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  bool QTextEncoder::hasFailure();
-  fn _ZNK12QTextEncoder10hasFailureEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK12QTextEncoder10hasFailureEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QTextEncoder::QTextEncoder(const QTextCodec * codec);
   fn dector_ZN12QTextEncoderC1EPK10QTextCodec(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN12QTextEncoderC1EPK10QTextCodec(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN12QTextEncoderC1EPK10QTextCodec(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTextEncoder::QTextEncoder(const QTextEncoder & );
   fn dector_ZN12QTextEncoderC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN12QTextEncoderC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN12QTextEncoderC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QByteArray QTextEncoder::fromUnicode(const QChar * uc, int len);
-  fn _ZN12QTextEncoder11fromUnicodeEPK5QChari(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) -> *mut c_void;
+  fn _ZN12QTextEncoder11fromUnicodeEPK5QChari(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> *mut c_void;
   fn QTextCodec_Class_Size() -> c_int;
   // proto:  QByteArray QTextCodec::name();
-  fn _ZNK10QTextCodec4nameEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK10QTextCodec4nameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QTextCodec::toUnicode(const QByteArray & );
-  fn _ZNK10QTextCodec9toUnicodeERK10QByteArray(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK10QTextCodec9toUnicodeERK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QByteArray QTextCodec::fromUnicode(const QString & uc);
-  fn _ZNK10QTextCodec11fromUnicodeERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK10QTextCodec11fromUnicodeERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto: static QTextCodec * QTextCodec::codecForLocale();
   fn _ZN10QTextCodec14codecForLocaleEv() -> *mut c_void;
   // proto: static QList<int> QTextCodec::availableMibs();
@@ -62,21 +62,21 @@ extern {
   fn _ZN10QTextCodec12codecForHtmlERK10QByteArray(arg0: *mut c_void) -> *mut c_void;
   // proto:  void QTextCodec::QTextCodec(const QTextCodec & );
   fn dector_ZN10QTextCodecC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN10QTextCodecC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN10QTextCodecC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static void QTextCodec::setCodecForLocale(QTextCodec * c);
   fn _ZN10QTextCodec17setCodecForLocaleEPS_(arg0: *mut c_void);
   // proto: static QTextCodec * QTextCodec::codecForUtfText(const QByteArray & ba);
   fn _ZN10QTextCodec15codecForUtfTextERK10QByteArray(arg0: *mut c_void) -> *mut c_void;
   // proto:  QString QTextCodec::toUnicode(const char * chars);
-  fn _ZNK10QTextCodec9toUnicodeEPKc(qthis: *mut c_void, arg0: *mut c_char) -> *mut c_void;
+  fn _ZNK10QTextCodec9toUnicodeEPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> *mut c_void;
   // proto:  int QTextCodec::mibEnum();
-  fn _ZNK10QTextCodec7mibEnumEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK10QTextCodec7mibEnumEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto: static QTextCodec * QTextCodec::codecForName(const char * name);
   fn _ZN10QTextCodec12codecForNameEPKc(arg0: *mut c_char) -> *mut c_void;
   // proto:  bool QTextCodec::canEncode(const QString & );
-  fn _ZNK10QTextCodec9canEncodeERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn _ZNK10QTextCodec9canEncodeERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  QList<QByteArray> QTextCodec::aliases();
-  fn _ZNK10QTextCodec7aliasesEv(qthis: *mut c_void);
+  fn _ZNK10QTextCodec7aliasesEv(qthis: u64 /* *mut c_void*/);
   // proto: static QTextCodec * QTextCodec::codecForName(const QByteArray & name);
   fn _ZN10QTextCodec12codecForNameERK10QByteArray(arg0: *mut c_void) -> *mut c_void;
   // proto: static QList<QByteArray> QTextCodec::availableCodecs();
@@ -84,57 +84,60 @@ extern {
   // proto: static QTextCodec * QTextCodec::codecForHtml(const QByteArray & ba, QTextCodec * defaultCodec);
   fn _ZN10QTextCodec12codecForHtmlERK10QByteArrayPS_(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  void QTextCodec::~QTextCodec();
-  fn _ZN10QTextCodecD0Ev(qthis: *mut c_void);
+  fn _ZN10QTextCodecD0Ev(qthis: u64 /* *mut c_void*/);
   // proto: static QTextCodec * QTextCodec::codecForMib(int mib);
   fn _ZN10QTextCodec11codecForMibEi(arg0: c_int) -> *mut c_void;
   // proto:  void QTextCodec::QTextCodec();
   fn dector_ZN10QTextCodecC1Ev() -> *mut c_void;
-  fn _ZN10QTextCodecC1Ev(qthis: *mut c_void);
+  fn _ZN10QTextCodecC1Ev(qthis: u64 /* *mut c_void*/);
   // proto: static QTextCodec * QTextCodec::codecForUtfText(const QByteArray & ba, QTextCodec * defaultCodec);
   fn _ZN10QTextCodec15codecForUtfTextERK10QByteArrayPS_(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  bool QTextCodec::canEncode(QChar );
-  fn _ZNK10QTextCodec9canEncodeE5QChar(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn _ZNK10QTextCodec9canEncodeE5QChar(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   fn QTextDecoder_Class_Size() -> c_int;
   // proto:  QString QTextDecoder::toUnicode(const char * chars, int len);
-  fn _ZN12QTextDecoder9toUnicodeEPKci(qthis: *mut c_void, arg0: *mut c_char, arg1: c_int) -> *mut c_void;
+  fn _ZN12QTextDecoder9toUnicodeEPKci(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int) -> *mut c_void;
   // proto:  void QTextDecoder::QTextDecoder(const QTextCodec * codec);
   fn dector_ZN12QTextDecoderC1EPK10QTextCodec(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN12QTextDecoderC1EPK10QTextCodec(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN12QTextDecoderC1EPK10QTextCodec(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QTextDecoder::hasFailure();
-  fn _ZNK12QTextDecoder10hasFailureEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK12QTextDecoder10hasFailureEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QTextDecoder::~QTextDecoder();
-  fn _ZN12QTextDecoderD0Ev(qthis: *mut c_void);
+  fn _ZN12QTextDecoderD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QString QTextDecoder::toUnicode(const QByteArray & ba);
-  fn _ZN12QTextDecoder9toUnicodeERK10QByteArray(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZN12QTextDecoder9toUnicodeERK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QTextDecoder::QTextDecoder(const QTextDecoder & );
   fn dector_ZN12QTextDecoderC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN12QTextDecoderC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN12QTextDecoderC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTextDecoder::toUnicode(QString * target, const char * chars, int len);
-  fn _ZN12QTextDecoder9toUnicodeEP7QStringPKci(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_char, arg2: c_int);
+  fn _ZN12QTextDecoder9toUnicodeEP7QStringPKci(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_char, arg2: c_int);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QTextEncoder)=1
+#[derive(Default)]
 pub struct QTextEncoder {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 // class sizeof(QTextCodec)=8
+#[derive(Default)]
 pub struct QTextCodec {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 // class sizeof(QTextDecoder)=1
+#[derive(Default)]
 pub struct QTextDecoder {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QTextEncoder {
-  pub fn inheritFrom(qthis: *mut c_void) -> QTextEncoder {
-    return QTextEncoder{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QTextEncoder {
+    return QTextEncoder{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  void QTextEncoder::~QTextEncoder();
@@ -178,7 +181,7 @@ impl<'a> /*trait*/ QTextEncoder_fromUnicode<QByteArray> for (&'a QString) {
     // unsafe{_ZN12QTextEncoder11fromUnicodeERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN12QTextEncoder11fromUnicodeERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -226,11 +229,11 @@ impl<'a> /*trait*/ QTextEncoder_New for (&'a QTextCodec) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTextEncoderC1EPK10QTextCodec()};
     let ctysz: c_int = unsafe{QTextEncoder_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN12QTextEncoderC1EPK10QTextCodec(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN12QTextEncoderC1EPK10QTextCodec(arg0)};
-    let rsthis = QTextEncoder{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN12QTextEncoderC1EPK10QTextCodec(arg0)} as u64;
+    let rsthis = QTextEncoder{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -242,11 +245,11 @@ impl<'a> /*trait*/ QTextEncoder_New for (&'a QTextEncoder) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTextEncoderC1ERKS_()};
     let ctysz: c_int = unsafe{QTextEncoder_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN12QTextEncoderC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN12QTextEncoderC1ERKS_(arg0)};
-    let rsthis = QTextEncoder{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN12QTextEncoderC1ERKS_(arg0)} as u64;
+    let rsthis = QTextEncoder{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -260,15 +263,15 @@ impl<'a> /*trait*/ QTextEncoder_fromUnicode<QByteArray> for (&'a QChar, i32) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN12QTextEncoder11fromUnicodeEPK5QChari(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
 }
 
 impl /*struct*/ QTextCodec {
-  pub fn inheritFrom(qthis: *mut c_void) -> QTextCodec {
-    return QTextCodec{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QTextCodec {
+    return QTextCodec{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  QByteArray QTextCodec::name();
@@ -289,7 +292,7 @@ impl<'a> /*trait*/ QTextCodec_name<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextCodec4nameEv()};
     let mut ret = unsafe {_ZNK10QTextCodec4nameEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -314,7 +317,7 @@ impl<'a> /*trait*/ QTextCodec_toUnicode<QString> for (&'a QByteArray) {
     // unsafe{_ZNK10QTextCodec9toUnicodeERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK10QTextCodec9toUnicodeERK10QByteArray(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -339,7 +342,7 @@ impl<'a> /*trait*/ QTextCodec_fromUnicode<QByteArray> for (&'a QString) {
     // unsafe{_ZNK10QTextCodec11fromUnicodeERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK10QTextCodec11fromUnicodeERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -363,7 +366,7 @@ impl<'a> /*trait*/ QTextCodec_codecForLocale_s<QTextCodec> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextCodec14codecForLocaleEv()};
     let mut ret = unsafe {_ZN10QTextCodec14codecForLocaleEv()};
-    let mut ret1 = QTextCodec::inheritFrom(ret);
+    let mut ret1 = QTextCodec::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -410,7 +413,7 @@ impl<'a> /*trait*/ QTextCodec_codecForHtml_s<QTextCodec> for (&'a QByteArray) {
     // unsafe{_ZN10QTextCodec12codecForHtmlERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN10QTextCodec12codecForHtmlERK10QByteArray(arg0)};
-    let mut ret1 = QTextCodec::inheritFrom(ret);
+    let mut ret1 = QTextCodec::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -435,11 +438,11 @@ impl<'a> /*trait*/ QTextCodec_New for (&'a QTextCodec) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextCodecC1ERKS_()};
     let ctysz: c_int = unsafe{QTextCodec_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN10QTextCodecC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN10QTextCodecC1ERKS_(arg0)};
-    let rsthis = QTextCodec{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN10QTextCodecC1ERKS_(arg0)} as u64;
+    let rsthis = QTextCodec{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -487,7 +490,7 @@ impl<'a> /*trait*/ QTextCodec_codecForUtfText_s<QTextCodec> for (&'a QByteArray)
     // unsafe{_ZN10QTextCodec15codecForUtfTextERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN10QTextCodec15codecForUtfTextERK10QByteArray(arg0)};
-    let mut ret1 = QTextCodec::inheritFrom(ret);
+    let mut ret1 = QTextCodec::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -500,7 +503,7 @@ impl<'a> /*trait*/ QTextCodec_toUnicode<QString> for (&'a  String) {
     // unsafe{_ZNK10QTextCodec9toUnicodeEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZNK10QTextCodec9toUnicodeEPKc(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -548,7 +551,7 @@ impl<'a> /*trait*/ QTextCodec_codecForName_s<QTextCodec> for (&'a  String) {
     // unsafe{_ZN10QTextCodec12codecForNameEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZN10QTextCodec12codecForNameEPKc(arg0)};
-    let mut ret1 = QTextCodec::inheritFrom(ret);
+    let mut ret1 = QTextCodec::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -607,7 +610,7 @@ impl<'a> /*trait*/ QTextCodec_codecForName_s<QTextCodec> for (&'a QByteArray) {
     // unsafe{_ZN10QTextCodec12codecForNameERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN10QTextCodec12codecForNameERK10QByteArray(arg0)};
-    let mut ret1 = QTextCodec::inheritFrom(ret);
+    let mut ret1 = QTextCodec::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -643,7 +646,7 @@ impl<'a> /*trait*/ QTextCodec_codecForHtml_s<QTextCodec> for (&'a QByteArray, &'
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN10QTextCodec12codecForHtmlERK10QByteArrayPS_(arg0, arg1)};
-    let mut ret1 = QTextCodec::inheritFrom(ret);
+    let mut ret1 = QTextCodec::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -690,7 +693,7 @@ impl<'a> /*trait*/ QTextCodec_codecForMib_s<QTextCodec> for (i32) {
     // unsafe{_ZN10QTextCodec11codecForMibEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZN10QTextCodec11codecForMibEi(arg0)};
-    let mut ret1 = QTextCodec::inheritFrom(ret);
+    let mut ret1 = QTextCodec::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -702,10 +705,10 @@ impl<'a> /*trait*/ QTextCodec_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextCodecC1Ev()};
     let ctysz: c_int = unsafe{QTextCodec_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN10QTextCodecC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN10QTextCodecC1Ev()};
-    let rsthis = QTextCodec{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN10QTextCodecC1Ev()} as u64;
+    let rsthis = QTextCodec{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -719,7 +722,7 @@ impl<'a> /*trait*/ QTextCodec_codecForUtfText_s<QTextCodec> for (&'a QByteArray,
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN10QTextCodec15codecForUtfTextERK10QByteArrayPS_(arg0, arg1)};
-    let mut ret1 = QTextCodec::inheritFrom(ret);
+    let mut ret1 = QTextCodec::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -738,8 +741,8 @@ impl<'a> /*trait*/ QTextCodec_canEncode<i8> for (QChar) {
 }
 
 impl /*struct*/ QTextDecoder {
-  pub fn inheritFrom(qthis: *mut c_void) -> QTextDecoder {
-    return QTextDecoder{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QTextDecoder {
+    return QTextDecoder{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  QString QTextDecoder::toUnicode(const char * chars, int len);
@@ -762,7 +765,7 @@ impl<'a> /*trait*/ QTextDecoder_toUnicode<QString> for (&'a  String, i32) {
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN12QTextDecoder9toUnicodeEPKci(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -787,11 +790,11 @@ impl<'a> /*trait*/ QTextDecoder_New for (&'a QTextCodec) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTextDecoderC1EPK10QTextCodec()};
     let ctysz: c_int = unsafe{QTextDecoder_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN12QTextDecoderC1EPK10QTextCodec(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN12QTextDecoderC1EPK10QTextCodec(arg0)};
-    let rsthis = QTextDecoder{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN12QTextDecoderC1EPK10QTextCodec(arg0)} as u64;
+    let rsthis = QTextDecoder{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -849,7 +852,7 @@ impl<'a> /*trait*/ QTextDecoder_toUnicode<QString> for (&'a QByteArray) {
     // unsafe{_ZN12QTextDecoder9toUnicodeERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN12QTextDecoder9toUnicodeERK10QByteArray(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -861,11 +864,11 @@ impl<'a> /*trait*/ QTextDecoder_New for (&'a QTextDecoder) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTextDecoderC1ERKS_()};
     let ctysz: c_int = unsafe{QTextDecoder_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN12QTextDecoderC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN12QTextDecoderC1ERKS_(arg0)};
-    let rsthis = QTextDecoder{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN12QTextDecoderC1ERKS_(arg0)} as u64;
+    let rsthis = QTextDecoder{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }

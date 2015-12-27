@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qtimeline.h
 // dst-file: /src/core/qtimeline.rs
 //
@@ -32,75 +32,80 @@ use super::qeasingcurve::QEasingCurve; // 773
 extern {
   fn QTimeLine_Class_Size() -> c_int;
   // proto:  void QTimeLine::start();
-  fn _ZN9QTimeLine5startEv(qthis: *mut c_void);
+  fn _ZN9QTimeLine5startEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QTimeLine::QTimeLine(const QTimeLine & );
   fn dector_ZN9QTimeLineC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QTimeLineC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN9QTimeLineC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QTimeLine::duration();
-  fn _ZNK9QTimeLine8durationEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK9QTimeLine8durationEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QTimeLine::currentFrame();
-  fn _ZNK9QTimeLine12currentFrameEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK9QTimeLine12currentFrameEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  const QMetaObject * QTimeLine::metaObject();
-  fn _ZNK9QTimeLine10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK9QTimeLine10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QTimeLine::stop();
-  fn _ZN9QTimeLine4stopEv(qthis: *mut c_void);
+  fn _ZN9QTimeLine4stopEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QTimeLine::~QTimeLine();
-  fn _ZN9QTimeLineD0Ev(qthis: *mut c_void);
+  fn _ZN9QTimeLineD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QTimeLine::setUpdateInterval(int interval);
-  fn _ZN9QTimeLine17setUpdateIntervalEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN9QTimeLine17setUpdateIntervalEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  QEasingCurve QTimeLine::easingCurve();
-  fn _ZNK9QTimeLine11easingCurveEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QTimeLine11easingCurveEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QTimeLine::loopCount();
-  fn _ZNK9QTimeLine9loopCountEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK9QTimeLine9loopCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QTimeLine::setStartFrame(int frame);
-  fn _ZN9QTimeLine13setStartFrameEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN9QTimeLine13setStartFrameEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QTimeLine::QTimeLine(int duration, QObject * parent);
   fn dector_ZN9QTimeLineC1EiP7QObject(arg0: c_int, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN9QTimeLineC1EiP7QObject(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void);
+  fn _ZN9QTimeLineC1EiP7QObject(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  void QTimeLine::resume();
-  fn _ZN9QTimeLine6resumeEv(qthis: *mut c_void);
+  fn _ZN9QTimeLine6resumeEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QTimeLine::setEasingCurve(const QEasingCurve & curve);
-  fn _ZN9QTimeLine14setEasingCurveERK12QEasingCurve(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN9QTimeLine14setEasingCurveERK12QEasingCurve(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QTimeLine::startFrame();
-  fn _ZNK9QTimeLine10startFrameEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK9QTimeLine10startFrameEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QTimeLine::setEndFrame(int frame);
-  fn _ZN9QTimeLine11setEndFrameEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN9QTimeLine11setEndFrameEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QTimeLine::updateInterval();
-  fn _ZNK9QTimeLine14updateIntervalEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK9QTimeLine14updateIntervalEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QTimeLine::setLoopCount(int count);
-  fn _ZN9QTimeLine12setLoopCountEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN9QTimeLine12setLoopCountEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QTimeLine::setCurrentTime(int msec);
-  fn _ZN9QTimeLine14setCurrentTimeEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN9QTimeLine14setCurrentTimeEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QTimeLine::currentTime();
-  fn _ZNK9QTimeLine11currentTimeEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK9QTimeLine11currentTimeEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QTimeLine::setDuration(int duration);
-  fn _ZN9QTimeLine11setDurationEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN9QTimeLine11setDurationEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QTimeLine::toggleDirection();
-  fn _ZN9QTimeLine15toggleDirectionEv(qthis: *mut c_void);
+  fn _ZN9QTimeLine15toggleDirectionEv(qthis: u64 /* *mut c_void*/);
   // proto:  int QTimeLine::endFrame();
-  fn _ZNK9QTimeLine8endFrameEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK9QTimeLine8endFrameEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QTimeLine::setPaused(bool paused);
-  fn _ZN9QTimeLine9setPausedEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN9QTimeLine9setPausedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  int QTimeLine::frameForTime(int msec);
-  fn _ZNK9QTimeLine12frameForTimeEi(qthis: *mut c_void, arg0: c_int) -> c_int;
+  fn _ZNK9QTimeLine12frameForTimeEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
   // proto:  void QTimeLine::setFrameRange(int startFrame, int endFrame);
-  fn _ZN9QTimeLine13setFrameRangeEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
+  fn _ZN9QTimeLine13setFrameRangeEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  qreal QTimeLine::valueForTime(int msec);
-  fn _ZNK9QTimeLine12valueForTimeEi(qthis: *mut c_void, arg0: c_int) -> c_double;
+  fn _ZNK9QTimeLine12valueForTimeEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_double;
   // proto:  qreal QTimeLine::currentValue();
-  fn _ZNK9QTimeLine12currentValueEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK9QTimeLine12currentValueEv(qthis: u64 /* *mut c_void*/) -> c_double;
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QTimeLine)=1
+#[derive(Default)]
 pub struct QTimeLine {
   qbase: QObject,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _valueChanged_1: QTimeLine_valueChanged_signal,
+  pub _finished_1: QTimeLine_finished_signal,
+  pub _frameChanged_1: QTimeLine_frameChanged_signal,
+  pub _stateChanged_1: QTimeLine_stateChanged_signal,
 }
 
 impl /*struct*/ QTimeLine {
-  pub fn inheritFrom(qthis: *mut c_void) -> QTimeLine {
-    return QTimeLine{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QTimeLine {
+    return QTimeLine{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QTimeLine {
@@ -156,11 +161,11 @@ impl<'a> /*trait*/ QTimeLine_New for (&'a QTimeLine) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeLineC1ERKS_()};
     let ctysz: c_int = unsafe{QTimeLine_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN9QTimeLineC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN9QTimeLineC1ERKS_(arg0)};
-    let rsthis = QTimeLine{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN9QTimeLineC1ERKS_(arg0)} as u64;
+    let rsthis = QTimeLine{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -319,7 +324,7 @@ impl<'a> /*trait*/ QTimeLine_easingCurve<QEasingCurve> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTimeLine11easingCurveEv()};
     let mut ret = unsafe {_ZNK9QTimeLine11easingCurveEv(rsthis.qclsinst)};
-    let mut ret1 = QEasingCurve::inheritFrom(ret);
+    let mut ret1 = QEasingCurve::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -377,12 +382,12 @@ impl<'a> /*trait*/ QTimeLine_New for (i32, &'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeLineC1EiP7QObject()};
     let ctysz: c_int = unsafe{QTimeLine_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
     // unsafe {_ZN9QTimeLineC1EiP7QObject(qthis, arg0, arg1)};
-    let qthis: *mut c_void = unsafe {dector_ZN9QTimeLineC1EiP7QObject(arg0, arg1)};
-    let rsthis = QTimeLine{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN9QTimeLineC1EiP7QObject(arg0, arg1)} as u64;
+    let rsthis = QTimeLine{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -755,6 +760,70 @@ impl<'a> /*trait*/ QTimeLine_currentValue<f64> for () {
     return ret as f64;
     // return 1;
   }
+}
+
+#[derive(Default)] // for QTimeLine_valueChanged
+pub struct QTimeLine_valueChanged_signal{poi:u64}
+impl /* struct */ QTimeLine {
+  pub fn valueChanged_1(self) -> QTimeLine_valueChanged_signal {
+     return QTimeLine_valueChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QTimeLine_valueChanged_signal {
+  pub fn connect<T: QTimeLine_valueChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QTimeLine_valueChanged_signal_connect {
+  fn connect(self, sigthis: QTimeLine_valueChanged_signal);
+}
+
+#[derive(Default)] // for QTimeLine_finished
+pub struct QTimeLine_finished_signal{poi:u64}
+impl /* struct */ QTimeLine {
+  pub fn finished_1(self) -> QTimeLine_finished_signal {
+     return QTimeLine_finished_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QTimeLine_finished_signal {
+  pub fn connect<T: QTimeLine_finished_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QTimeLine_finished_signal_connect {
+  fn connect(self, sigthis: QTimeLine_finished_signal);
+}
+
+#[derive(Default)] // for QTimeLine_frameChanged
+pub struct QTimeLine_frameChanged_signal{poi:u64}
+impl /* struct */ QTimeLine {
+  pub fn frameChanged_1(self) -> QTimeLine_frameChanged_signal {
+     return QTimeLine_frameChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QTimeLine_frameChanged_signal {
+  pub fn connect<T: QTimeLine_frameChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QTimeLine_frameChanged_signal_connect {
+  fn connect(self, sigthis: QTimeLine_frameChanged_signal);
+}
+
+#[derive(Default)] // for QTimeLine_stateChanged
+pub struct QTimeLine_stateChanged_signal{poi:u64}
+impl /* struct */ QTimeLine {
+  pub fn stateChanged_1(self) -> QTimeLine_stateChanged_signal {
+     return QTimeLine_stateChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QTimeLine_stateChanged_signal {
+  pub fn connect<T: QTimeLine_stateChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QTimeLine_stateChanged_signal_connect {
+  fn connect(self, sigthis: QTimeLine_stateChanged_signal);
 }
 
 // <= body block end

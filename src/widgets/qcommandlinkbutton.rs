@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtWidgets/qcommandlinkbutton.h
 // dst-file: /src/widgets/qcommandlinkbutton.rs
 //
@@ -34,36 +34,37 @@ extern {
   fn QCommandLinkButton_Class_Size() -> c_int;
   // proto:  void QCommandLinkButton::QCommandLinkButton(const QString & text, const QString & description, QWidget * parent);
   fn dector_ZN18QCommandLinkButtonC1ERK7QStringS2_P7QWidget(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> *mut c_void;
-  fn _ZN18QCommandLinkButtonC1ERK7QStringS2_P7QWidget(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
+  fn _ZN18QCommandLinkButtonC1ERK7QStringS2_P7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  const QMetaObject * QCommandLinkButton::metaObject();
-  fn _ZNK18QCommandLinkButton10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK18QCommandLinkButton10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QCommandLinkButton::~QCommandLinkButton();
-  fn _ZN18QCommandLinkButtonD0Ev(qthis: *mut c_void);
+  fn _ZN18QCommandLinkButtonD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QCommandLinkButton::QCommandLinkButton(const QCommandLinkButton & );
   fn dector_ZN18QCommandLinkButtonC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN18QCommandLinkButtonC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN18QCommandLinkButtonC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QCommandLinkButton::QCommandLinkButton(QWidget * parent);
   fn dector_ZN18QCommandLinkButtonC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN18QCommandLinkButtonC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN18QCommandLinkButtonC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QString QCommandLinkButton::description();
-  fn _ZNK18QCommandLinkButton11descriptionEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK18QCommandLinkButton11descriptionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QCommandLinkButton::QCommandLinkButton(const QString & text, QWidget * parent);
   fn dector_ZN18QCommandLinkButtonC1ERK7QStringP7QWidget(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN18QCommandLinkButtonC1ERK7QStringP7QWidget(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN18QCommandLinkButtonC1ERK7QStringP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QCommandLinkButton::setDescription(const QString & description);
-  fn _ZN18QCommandLinkButton14setDescriptionERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN18QCommandLinkButton14setDescriptionERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QCommandLinkButton)=1
+#[derive(Default)]
 pub struct QCommandLinkButton {
   qbase: QPushButton,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QCommandLinkButton {
-  pub fn inheritFrom(qthis: *mut c_void) -> QCommandLinkButton {
-    return QCommandLinkButton{qbase: QPushButton::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QCommandLinkButton {
+    return QCommandLinkButton{qbase: QPushButton::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QCommandLinkButton {
@@ -97,13 +98,13 @@ impl<'a> /*trait*/ QCommandLinkButton_New for (&'a QString, &'a QString, &'a QWi
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLinkButtonC1ERK7QStringS2_P7QWidget()};
     let ctysz: c_int = unsafe{QCommandLinkButton_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     // unsafe {_ZN18QCommandLinkButtonC1ERK7QStringS2_P7QWidget(qthis, arg0, arg1, arg2)};
-    let qthis: *mut c_void = unsafe {dector_ZN18QCommandLinkButtonC1ERK7QStringS2_P7QWidget(arg0, arg1, arg2)};
-    let rsthis = QCommandLinkButton{/**/qbase: QPushButton::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN18QCommandLinkButtonC1ERK7QStringS2_P7QWidget(arg0, arg1, arg2)} as u64;
+    let rsthis = QCommandLinkButton{qbase: QPushButton::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -159,11 +160,11 @@ impl<'a> /*trait*/ QCommandLinkButton_New for (&'a QCommandLinkButton) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLinkButtonC1ERKS_()};
     let ctysz: c_int = unsafe{QCommandLinkButton_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN18QCommandLinkButtonC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN18QCommandLinkButtonC1ERKS_(arg0)};
-    let rsthis = QCommandLinkButton{/**/qbase: QPushButton::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN18QCommandLinkButtonC1ERKS_(arg0)} as u64;
+    let rsthis = QCommandLinkButton{qbase: QPushButton::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -175,11 +176,11 @@ impl<'a> /*trait*/ QCommandLinkButton_New for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLinkButtonC1EP7QWidget()};
     let ctysz: c_int = unsafe{QCommandLinkButton_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN18QCommandLinkButtonC1EP7QWidget(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN18QCommandLinkButtonC1EP7QWidget(arg0)};
-    let rsthis = QCommandLinkButton{/**/qbase: QPushButton::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN18QCommandLinkButtonC1EP7QWidget(arg0)} as u64;
+    let rsthis = QCommandLinkButton{qbase: QPushButton::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -203,7 +204,7 @@ impl<'a> /*trait*/ QCommandLinkButton_description<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QCommandLinkButton11descriptionEv()};
     let mut ret = unsafe {_ZNK18QCommandLinkButton11descriptionEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -215,12 +216,12 @@ impl<'a> /*trait*/ QCommandLinkButton_New for (&'a QString, &'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLinkButtonC1ERK7QStringP7QWidget()};
     let ctysz: c_int = unsafe{QCommandLinkButton_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     // unsafe {_ZN18QCommandLinkButtonC1ERK7QStringP7QWidget(qthis, arg0, arg1)};
-    let qthis: *mut c_void = unsafe {dector_ZN18QCommandLinkButtonC1ERK7QStringP7QWidget(arg0, arg1)};
-    let rsthis = QCommandLinkButton{/**/qbase: QPushButton::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN18QCommandLinkButtonC1ERK7QStringP7QWidget(arg0, arg1)} as u64;
+    let rsthis = QCommandLinkButton{qbase: QPushButton::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtGui/qstylehints.h
 // dst-file: /src/gui/qstylehints.rs
 //
@@ -32,72 +32,83 @@ use super::super::core::qchar::QChar; // 771
 extern {
   fn QStyleHints_Class_Size() -> c_int;
   // proto:  void QStyleHints::setMouseDoubleClickInterval(int mouseDoubleClickInterval);
-  fn _ZN11QStyleHints27setMouseDoubleClickIntervalEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN11QStyleHints27setMouseDoubleClickIntervalEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QStyleHints::mousePressAndHoldInterval();
-  fn _ZNK11QStyleHints25mousePressAndHoldIntervalEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK11QStyleHints25mousePressAndHoldIntervalEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QStyleHints::passwordMaskDelay();
-  fn _ZNK11QStyleHints17passwordMaskDelayEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK11QStyleHints17passwordMaskDelayEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  const QMetaObject * QStyleHints::metaObject();
-  fn _ZNK11QStyleHints10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK11QStyleHints10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QStyleHints::setKeyboardInputInterval(int keyboardInputInterval);
-  fn _ZN11QStyleHints24setKeyboardInputIntervalEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN11QStyleHints24setKeyboardInputIntervalEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QStyleHints::QStyleHints();
   fn dector_ZN11QStyleHintsC1Ev() -> *mut c_void;
-  fn _ZN11QStyleHintsC1Ev(qthis: *mut c_void);
+  fn _ZN11QStyleHintsC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QStyleHints::startDragDistanceChanged(int startDragDistance);
-  fn _ZN11QStyleHints24startDragDistanceChangedEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN11QStyleHints24startDragDistanceChangedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  bool QStyleHints::showIsFullScreen();
-  fn _ZNK11QStyleHints16showIsFullScreenEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK11QStyleHints16showIsFullScreenEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QStyleHints::useRtlExtensions();
-  fn _ZNK11QStyleHints16useRtlExtensionsEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK11QStyleHints16useRtlExtensionsEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QStyleHints::mouseDoubleClickIntervalChanged(int mouseDoubleClickInterval);
-  fn _ZN11QStyleHints31mouseDoubleClickIntervalChangedEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN11QStyleHints31mouseDoubleClickIntervalChangedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QStyleHints::setStartDragDistance(int startDragDistance);
-  fn _ZN11QStyleHints20setStartDragDistanceEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN11QStyleHints20setStartDragDistanceEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  bool QStyleHints::setFocusOnTouchRelease();
-  fn _ZNK11QStyleHints22setFocusOnTouchReleaseEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK11QStyleHints22setFocusOnTouchReleaseEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  int QStyleHints::startDragVelocity();
-  fn _ZNK11QStyleHints17startDragVelocityEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK11QStyleHints17startDragVelocityEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QStyleHints::startDragTime();
-  fn _ZNK11QStyleHints13startDragTimeEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK11QStyleHints13startDragTimeEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QStyleHints::keyboardInputInterval();
-  fn _ZNK11QStyleHints21keyboardInputIntervalEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK11QStyleHints21keyboardInputIntervalEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QStyleHints::keyboardInputIntervalChanged(int keyboardInputInterval);
-  fn _ZN11QStyleHints28keyboardInputIntervalChangedEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN11QStyleHints28keyboardInputIntervalChangedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QStyleHints::setStartDragTime(int startDragTime);
-  fn _ZN11QStyleHints16setStartDragTimeEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN11QStyleHints16setStartDragTimeEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QStyleHints::setCursorFlashTime(int cursorFlashTime);
-  fn _ZN11QStyleHints18setCursorFlashTimeEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN11QStyleHints18setCursorFlashTimeEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QStyleHints::cursorFlashTime();
-  fn _ZNK11QStyleHints15cursorFlashTimeEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK11QStyleHints15cursorFlashTimeEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QStyleHints::cursorFlashTimeChanged(int cursorFlashTime);
-  fn _ZN11QStyleHints22cursorFlashTimeChangedEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN11QStyleHints22cursorFlashTimeChangedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  QChar QStyleHints::passwordMaskCharacter();
-  fn _ZNK11QStyleHints21passwordMaskCharacterEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK11QStyleHints21passwordMaskCharacterEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QStyleHints::keyboardAutoRepeatRate();
-  fn _ZNK11QStyleHints22keyboardAutoRepeatRateEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK11QStyleHints22keyboardAutoRepeatRateEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QStyleHints::startDragDistance();
-  fn _ZNK11QStyleHints17startDragDistanceEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK11QStyleHints17startDragDistanceEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  qreal QStyleHints::fontSmoothingGamma();
-  fn _ZNK11QStyleHints18fontSmoothingGammaEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK11QStyleHints18fontSmoothingGammaEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  bool QStyleHints::singleClickActivation();
-  fn _ZNK11QStyleHints21singleClickActivationEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK11QStyleHints21singleClickActivationEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  int QStyleHints::mouseDoubleClickInterval();
-  fn _ZNK11QStyleHints24mouseDoubleClickIntervalEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK11QStyleHints24mouseDoubleClickIntervalEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QStyleHints::startDragTimeChanged(int startDragTime);
-  fn _ZN11QStyleHints20startDragTimeChangedEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN11QStyleHints20startDragTimeChangedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn QStyleHints_SlotProxy_connect__ZN11QStyleHints31mouseDoubleClickIntervalChangedEi(qthis: *mut c_void, fptr: *mut c_void);
+  fn QStyleHints_SlotProxy_connect__ZN11QStyleHints20startDragTimeChangedEi(qthis: *mut c_void, fptr: *mut c_void);
+  fn QStyleHints_SlotProxy_connect__ZN11QStyleHints28keyboardInputIntervalChangedEi(qthis: *mut c_void, fptr: *mut c_void);
+  fn QStyleHints_SlotProxy_connect__ZN11QStyleHints22cursorFlashTimeChangedEi(qthis: *mut c_void, fptr: *mut c_void);
+  fn QStyleHints_SlotProxy_connect__ZN11QStyleHints24startDragDistanceChangedEi(qthis: *mut c_void, fptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QStyleHints)=1
+#[derive(Default)]
 pub struct QStyleHints {
   qbase: QObject,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _startDragDistanceChanged_1: QStyleHints_startDragDistanceChanged_signal,
+  pub _startDragTimeChanged_1: QStyleHints_startDragTimeChanged_signal,
+  pub _mouseDoubleClickIntervalChanged_1: QStyleHints_mouseDoubleClickIntervalChanged_signal,
+  pub _cursorFlashTimeChanged_1: QStyleHints_cursorFlashTimeChanged_signal,
+  pub _keyboardInputIntervalChanged_1: QStyleHints_keyboardInputIntervalChanged_signal,
 }
 
 impl /*struct*/ QStyleHints {
-  pub fn inheritFrom(qthis: *mut c_void) -> QStyleHints {
-    return QStyleHints{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QStyleHints {
+    return QStyleHints{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QStyleHints {
@@ -245,10 +256,10 @@ impl<'a> /*trait*/ QStyleHints_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QStyleHintsC1Ev()};
     let ctysz: c_int = unsafe{QStyleHints_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN11QStyleHintsC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN11QStyleHintsC1Ev()};
-    let rsthis = QStyleHints{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN11QStyleHintsC1Ev()} as u64;
+    let rsthis = QStyleHints{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -594,7 +605,7 @@ impl<'a> /*trait*/ QStyleHints_passwordMaskCharacter<QChar> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QStyleHints21passwordMaskCharacterEv()};
     let mut ret = unsafe {_ZNK11QStyleHints21passwordMaskCharacterEv(rsthis.qclsinst)};
-    let mut ret1 = QChar::inheritFrom(ret);
+    let mut ret1 = QChar::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -738,5 +749,135 @@ impl<'a> /*trait*/ QStyleHints_startDragTimeChanged<()> for (i32) {
   }
 }
 
+#[derive(Default)] // for QStyleHints_startDragDistanceChanged
+pub struct QStyleHints_startDragDistanceChanged_signal{poi:u64}
+impl /* struct */ QStyleHints {
+  pub fn startDragDistanceChanged_1(self) -> QStyleHints_startDragDistanceChanged_signal {
+     return QStyleHints_startDragDistanceChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QStyleHints_startDragDistanceChanged_signal {
+  pub fn connect<T: QStyleHints_startDragDistanceChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QStyleHints_startDragDistanceChanged_signal_connect {
+  fn connect(self, sigthis: QStyleHints_startDragDistanceChanged_signal);
+}
+
+#[derive(Default)] // for QStyleHints_startDragTimeChanged
+pub struct QStyleHints_startDragTimeChanged_signal{poi:u64}
+impl /* struct */ QStyleHints {
+  pub fn startDragTimeChanged_1(self) -> QStyleHints_startDragTimeChanged_signal {
+     return QStyleHints_startDragTimeChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QStyleHints_startDragTimeChanged_signal {
+  pub fn connect<T: QStyleHints_startDragTimeChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QStyleHints_startDragTimeChanged_signal_connect {
+  fn connect(self, sigthis: QStyleHints_startDragTimeChanged_signal);
+}
+
+#[derive(Default)] // for QStyleHints_mouseDoubleClickIntervalChanged
+pub struct QStyleHints_mouseDoubleClickIntervalChanged_signal{poi:u64}
+impl /* struct */ QStyleHints {
+  pub fn mouseDoubleClickIntervalChanged_1(self) -> QStyleHints_mouseDoubleClickIntervalChanged_signal {
+     return QStyleHints_mouseDoubleClickIntervalChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QStyleHints_mouseDoubleClickIntervalChanged_signal {
+  pub fn connect<T: QStyleHints_mouseDoubleClickIntervalChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QStyleHints_mouseDoubleClickIntervalChanged_signal_connect {
+  fn connect(self, sigthis: QStyleHints_mouseDoubleClickIntervalChanged_signal);
+}
+
+#[derive(Default)] // for QStyleHints_cursorFlashTimeChanged
+pub struct QStyleHints_cursorFlashTimeChanged_signal{poi:u64}
+impl /* struct */ QStyleHints {
+  pub fn cursorFlashTimeChanged_1(self) -> QStyleHints_cursorFlashTimeChanged_signal {
+     return QStyleHints_cursorFlashTimeChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QStyleHints_cursorFlashTimeChanged_signal {
+  pub fn connect<T: QStyleHints_cursorFlashTimeChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QStyleHints_cursorFlashTimeChanged_signal_connect {
+  fn connect(self, sigthis: QStyleHints_cursorFlashTimeChanged_signal);
+}
+
+#[derive(Default)] // for QStyleHints_keyboardInputIntervalChanged
+pub struct QStyleHints_keyboardInputIntervalChanged_signal{poi:u64}
+impl /* struct */ QStyleHints {
+  pub fn keyboardInputIntervalChanged_1(self) -> QStyleHints_keyboardInputIntervalChanged_signal {
+     return QStyleHints_keyboardInputIntervalChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QStyleHints_keyboardInputIntervalChanged_signal {
+  pub fn connect<T: QStyleHints_keyboardInputIntervalChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QStyleHints_keyboardInputIntervalChanged_signal_connect {
+  fn connect(self, sigthis: QStyleHints_keyboardInputIntervalChanged_signal);
+}
+
+// mouseDoubleClickIntervalChanged(int)
+extern fn QStyleHints_mouseDoubleClickIntervalChanged_signal_connect_cb_0(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QStyleHints_mouseDoubleClickIntervalChanged_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QStyleHints_mouseDoubleClickIntervalChanged_signal) {
+    // do smth...
+    unsafe {QStyleHints_SlotProxy_connect__ZN11QStyleHints31mouseDoubleClickIntervalChangedEi(sigthis.poi as *mut c_void, QStyleHints_mouseDoubleClickIntervalChanged_signal_connect_cb_0 as *mut c_void)};
+  }
+}
+// startDragTimeChanged(int)
+extern fn QStyleHints_startDragTimeChanged_signal_connect_cb_1(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QStyleHints_startDragTimeChanged_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QStyleHints_startDragTimeChanged_signal) {
+    // do smth...
+    unsafe {QStyleHints_SlotProxy_connect__ZN11QStyleHints20startDragTimeChangedEi(sigthis.poi as *mut c_void, QStyleHints_startDragTimeChanged_signal_connect_cb_1 as *mut c_void)};
+  }
+}
+// keyboardInputIntervalChanged(int)
+extern fn QStyleHints_keyboardInputIntervalChanged_signal_connect_cb_2(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QStyleHints_keyboardInputIntervalChanged_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QStyleHints_keyboardInputIntervalChanged_signal) {
+    // do smth...
+    unsafe {QStyleHints_SlotProxy_connect__ZN11QStyleHints28keyboardInputIntervalChangedEi(sigthis.poi as *mut c_void, QStyleHints_keyboardInputIntervalChanged_signal_connect_cb_2 as *mut c_void)};
+  }
+}
+// cursorFlashTimeChanged(int)
+extern fn QStyleHints_cursorFlashTimeChanged_signal_connect_cb_3(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QStyleHints_cursorFlashTimeChanged_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QStyleHints_cursorFlashTimeChanged_signal) {
+    // do smth...
+    unsafe {QStyleHints_SlotProxy_connect__ZN11QStyleHints22cursorFlashTimeChangedEi(sigthis.poi as *mut c_void, QStyleHints_cursorFlashTimeChanged_signal_connect_cb_3 as *mut c_void)};
+  }
+}
+// startDragDistanceChanged(int)
+extern fn QStyleHints_startDragDistanceChanged_signal_connect_cb_4(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QStyleHints_startDragDistanceChanged_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QStyleHints_startDragDistanceChanged_signal) {
+    // do smth...
+    unsafe {QStyleHints_SlotProxy_connect__ZN11QStyleHints24startDragDistanceChangedEi(sigthis.poi as *mut c_void, QStyleHints_startDragDistanceChanged_signal_connect_cb_4 as *mut c_void)};
+  }
+}
 // <= body block end
 

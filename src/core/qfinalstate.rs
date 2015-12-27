@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qfinalstate.h
 // dst-file: /src/core/qfinalstate.rs
 //
@@ -33,26 +33,27 @@ extern {
   fn QFinalState_Class_Size() -> c_int;
   // proto:  void QFinalState::QFinalState(QState * parent);
   fn dector_ZN11QFinalStateC1EP6QState(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QFinalStateC1EP6QState(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QFinalStateC1EP6QState(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QFinalState::QFinalState(const QFinalState & );
   fn dector_ZN11QFinalStateC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QFinalStateC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QFinalStateC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QFinalState::~QFinalState();
-  fn _ZN11QFinalStateD0Ev(qthis: *mut c_void);
+  fn _ZN11QFinalStateD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  const QMetaObject * QFinalState::metaObject();
-  fn _ZNK11QFinalState10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK11QFinalState10metaObjectEv(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QFinalState)=1
+#[derive(Default)]
 pub struct QFinalState {
   qbase: QAbstractState,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QFinalState {
-  pub fn inheritFrom(qthis: *mut c_void) -> QFinalState {
-    return QFinalState{qbase: QAbstractState::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QFinalState {
+    return QFinalState{qbase: QAbstractState::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QFinalState {
@@ -86,11 +87,11 @@ impl<'a> /*trait*/ QFinalState_New for (&'a QState) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFinalStateC1EP6QState()};
     let ctysz: c_int = unsafe{QFinalState_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN11QFinalStateC1EP6QState(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN11QFinalStateC1EP6QState(arg0)};
-    let rsthis = QFinalState{/**/qbase: QAbstractState::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN11QFinalStateC1EP6QState(arg0)} as u64;
+    let rsthis = QFinalState{qbase: QAbstractState::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -102,11 +103,11 @@ impl<'a> /*trait*/ QFinalState_New for (&'a QFinalState) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFinalStateC1ERKS_()};
     let ctysz: c_int = unsafe{QFinalState_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN11QFinalStateC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN11QFinalStateC1ERKS_(arg0)};
-    let rsthis = QFinalState{/**/qbase: QAbstractState::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN11QFinalStateC1ERKS_(arg0)} as u64;
+    let rsthis = QFinalState{qbase: QAbstractState::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }

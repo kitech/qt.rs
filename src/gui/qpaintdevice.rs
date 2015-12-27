@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:03 2015
 // src-file: /QtGui/qpaintdevice.h
 // dst-file: /src/gui/qpaintdevice.rs
 //
@@ -31,53 +31,54 @@ use super::qpaintengine::QPaintEngine; // 773
 extern {
   fn QPaintDevice_Class_Size() -> c_int;
   // proto:  int QPaintDevice::physicalDpiY();
-  fn _ZNK12QPaintDevice12physicalDpiYEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK12QPaintDevice12physicalDpiYEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QPaintDevice::heightMM();
-  fn _ZNK12QPaintDevice8heightMMEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK12QPaintDevice8heightMMEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QPaintDevice::colorCount();
-  fn _ZNK12QPaintDevice10colorCountEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK12QPaintDevice10colorCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QPaintDevice::physicalDpiX();
-  fn _ZNK12QPaintDevice12physicalDpiXEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK12QPaintDevice12physicalDpiXEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QPaintDevice::widthMM();
-  fn _ZNK12QPaintDevice7widthMMEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK12QPaintDevice7widthMMEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QPaintDevice::devType();
-  fn _ZNK12QPaintDevice7devTypeEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK12QPaintDevice7devTypeEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QPaintDevice::paintingActive();
-  fn _ZNK12QPaintDevice14paintingActiveEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK12QPaintDevice14paintingActiveEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  int QPaintDevice::width();
-  fn _ZNK12QPaintDevice5widthEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK12QPaintDevice5widthEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QPaintDevice::QPaintDevice(const QPaintDevice & );
   fn dector_ZN12QPaintDeviceC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN12QPaintDeviceC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN12QPaintDeviceC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPaintDevice::QPaintDevice();
   fn dector_ZN12QPaintDeviceC1Ev() -> *mut c_void;
-  fn _ZN12QPaintDeviceC1Ev(qthis: *mut c_void);
+  fn _ZN12QPaintDeviceC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  int QPaintDevice::devicePixelRatio();
-  fn _ZNK12QPaintDevice16devicePixelRatioEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK12QPaintDevice16devicePixelRatioEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QPaintDevice::height();
-  fn _ZNK12QPaintDevice6heightEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK12QPaintDevice6heightEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QPaintDevice::depth();
-  fn _ZNK12QPaintDevice5depthEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK12QPaintDevice5depthEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  QPaintEngine * QPaintDevice::paintEngine();
-  fn _ZNK12QPaintDevice11paintEngineEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK12QPaintDevice11paintEngineEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QPaintDevice::logicalDpiY();
-  fn _ZNK12QPaintDevice11logicalDpiYEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK12QPaintDevice11logicalDpiYEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QPaintDevice::~QPaintDevice();
-  fn _ZN12QPaintDeviceD0Ev(qthis: *mut c_void);
+  fn _ZN12QPaintDeviceD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  int QPaintDevice::logicalDpiX();
-  fn _ZNK12QPaintDevice11logicalDpiXEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK12QPaintDevice11logicalDpiXEv(qthis: u64 /* *mut c_void*/) -> c_int;
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QPaintDevice)=24
+#[derive(Default)]
 pub struct QPaintDevice {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QPaintDevice {
-  pub fn inheritFrom(qthis: *mut c_void) -> QPaintDevice {
-    return QPaintDevice{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QPaintDevice {
+    return QPaintDevice{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  int QPaintDevice::physicalDpiY();
@@ -283,11 +284,11 @@ impl<'a> /*trait*/ QPaintDevice_New for (&'a QPaintDevice) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPaintDeviceC1ERKS_()};
     let ctysz: c_int = unsafe{QPaintDevice_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN12QPaintDeviceC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN12QPaintDeviceC1ERKS_(arg0)};
-    let rsthis = QPaintDevice{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN12QPaintDeviceC1ERKS_(arg0)} as u64;
+    let rsthis = QPaintDevice{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -299,10 +300,10 @@ impl<'a> /*trait*/ QPaintDevice_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPaintDeviceC1Ev()};
     let ctysz: c_int = unsafe{QPaintDevice_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN12QPaintDeviceC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN12QPaintDeviceC1Ev()};
-    let rsthis = QPaintDevice{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN12QPaintDeviceC1Ev()} as u64;
+    let rsthis = QPaintDevice{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -395,7 +396,7 @@ impl<'a> /*trait*/ QPaintDevice_paintEngine<QPaintEngine> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintDevice11paintEngineEv()};
     let mut ret = unsafe {_ZNK12QPaintDevice11paintEngineEv(rsthis.qclsinst)};
-    let mut ret1 = QPaintEngine::inheritFrom(ret);
+    let mut ret1 = QPaintEngine::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }

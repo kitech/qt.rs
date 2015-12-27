@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtWidgets/qcommonstyle.h
 // dst-file: /src/widgets/qcommonstyle.rs
 //
@@ -41,37 +41,38 @@ use super::super::core::qpoint::QPoint; // 771
 extern {
   fn QCommonStyle_Class_Size() -> c_int;
   // proto:  void QCommonStyle::polish(QWidget * widget);
-  fn _ZN12QCommonStyle6polishEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN12QCommonStyle6polishEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QCommonStyle::polish(QPalette & );
-  fn _ZN12QCommonStyle6polishER8QPalette(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN12QCommonStyle6polishER8QPalette(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QCommonStyle::QCommonStyle(const QCommonStyle & );
   fn dector_ZN12QCommonStyleC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN12QCommonStyleC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN12QCommonStyleC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QCommonStyle::unpolish(QWidget * widget);
-  fn _ZN12QCommonStyle8unpolishEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN12QCommonStyle8unpolishEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QCommonStyle::unpolish(QApplication * application);
-  fn _ZN12QCommonStyle8unpolishEP12QApplication(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN12QCommonStyle8unpolishEP12QApplication(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QCommonStyle::polish(QApplication * app);
-  fn _ZN12QCommonStyle6polishEP12QApplication(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN12QCommonStyle6polishEP12QApplication(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QCommonStyle::QCommonStyle();
   fn dector_ZN12QCommonStyleC1Ev() -> *mut c_void;
-  fn _ZN12QCommonStyleC1Ev(qthis: *mut c_void);
+  fn _ZN12QCommonStyleC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  const QMetaObject * QCommonStyle::metaObject();
-  fn _ZNK12QCommonStyle10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK12QCommonStyle10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QCommonStyle::~QCommonStyle();
-  fn _ZN12QCommonStyleD0Ev(qthis: *mut c_void);
+  fn _ZN12QCommonStyleD0Ev(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QCommonStyle)=1
+#[derive(Default)]
 pub struct QCommonStyle {
   qbase: QStyle,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QCommonStyle {
-  pub fn inheritFrom(qthis: *mut c_void) -> QCommonStyle {
-    return QCommonStyle{qbase: QStyle::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QCommonStyle {
+    return QCommonStyle{qbase: QStyle::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QCommonStyle {
@@ -139,11 +140,11 @@ impl<'a> /*trait*/ QCommonStyle_New for (&'a QCommonStyle) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QCommonStyleC1ERKS_()};
     let ctysz: c_int = unsafe{QCommonStyle_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN12QCommonStyleC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN12QCommonStyleC1ERKS_(arg0)};
-    let rsthis = QCommonStyle{/**/qbase: QStyle::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN12QCommonStyleC1ERKS_(arg0)} as u64;
+    let rsthis = QCommonStyle{qbase: QStyle::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -200,10 +201,10 @@ impl<'a> /*trait*/ QCommonStyle_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QCommonStyleC1Ev()};
     let ctysz: c_int = unsafe{QCommonStyle_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN12QCommonStyleC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN12QCommonStyleC1Ev()};
-    let rsthis = QCommonStyle{/**/qbase: QStyle::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN12QCommonStyleC1Ev()} as u64;
+    let rsthis = QCommonStyle{qbase: QStyle::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }

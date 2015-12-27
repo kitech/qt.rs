@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:03 2015
 // src-file: /QtCore/qfactoryinterface.h
 // dst-file: /src/core/qfactoryinterface.rs
 //
@@ -30,21 +30,22 @@ use std::ops::Deref;
 extern {
   fn QFactoryInterface_Class_Size() -> c_int;
   // proto:  void QFactoryInterface::~QFactoryInterface();
-  fn _ZN17QFactoryInterfaceD0Ev(qthis: *mut c_void);
+  fn _ZN17QFactoryInterfaceD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QStringList QFactoryInterface::keys();
-  fn _ZNK17QFactoryInterface4keysEv(qthis: *mut c_void);
+  fn _ZNK17QFactoryInterface4keysEv(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QFactoryInterface)=8
+#[derive(Default)]
 pub struct QFactoryInterface {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QFactoryInterface {
-  pub fn inheritFrom(qthis: *mut c_void) -> QFactoryInterface {
-    return QFactoryInterface{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QFactoryInterface {
+    return QFactoryInterface{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  void QFactoryInterface::~QFactoryInterface();

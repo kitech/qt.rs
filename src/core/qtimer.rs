@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qtimer.h
 // dst-file: /src/core/qtimer.rs
 //
@@ -31,49 +31,51 @@ use std::ops::Deref;
 extern {
   fn QTimer_Class_Size() -> c_int;
   // proto:  void QTimer::~QTimer();
-  fn _ZN6QTimerD0Ev(qthis: *mut c_void);
+  fn _ZN6QTimerD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QTimer::stop();
-  fn _ZN6QTimer4stopEv(qthis: *mut c_void);
+  fn _ZN6QTimer4stopEv(qthis: u64 /* *mut c_void*/);
   // proto:  int QTimer::timerId();
-  fn _ZNK6QTimer7timerIdEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK6QTimer7timerIdEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QTimer::setSingleShot(bool singleShot);
-  fn demth_ZN6QTimer13setSingleShotEb(qthis: *mut c_void, arg0: c_char);
+  fn demth_ZN6QTimer13setSingleShotEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto: static void QTimer::singleShot(int msec, const QObject * receiver, const char * member);
   fn _ZN6QTimer10singleShotEiPK7QObjectPKc(arg0: c_int, arg1: *mut c_void, arg2: *mut c_char);
   // proto:  void QTimer::start();
-  fn _ZN6QTimer5startEv(qthis: *mut c_void);
+  fn _ZN6QTimer5startEv(qthis: u64 /* *mut c_void*/);
   // proto:  int QTimer::interval();
-  fn _ZNK6QTimer8intervalEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK6QTimer8intervalEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QTimer::setInterval(int msec);
-  fn _ZN6QTimer11setIntervalEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN6QTimer11setIntervalEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QTimer::start(int msec);
-  fn _ZN6QTimer5startEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN6QTimer5startEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QTimer::QTimer(const QTimer & );
   fn dector_ZN6QTimerC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn demth_ZN6QTimerC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN6QTimerC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QTimer::remainingTime();
-  fn _ZNK6QTimer13remainingTimeEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK6QTimer13remainingTimeEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QTimer::isSingleShot();
-  fn demth_ZNK6QTimer12isSingleShotEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK6QTimer12isSingleShotEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QTimer::isActive();
-  fn demth_ZNK6QTimer8isActiveEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK6QTimer8isActiveEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  const QMetaObject * QTimer::metaObject();
-  fn _ZNK6QTimer10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK6QTimer10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QTimer::QTimer(QObject * parent);
   fn dector_ZN6QTimerC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN6QTimerC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN6QTimerC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QTimer)=1
+#[derive(Default)]
 pub struct QTimer {
   qbase: QObject,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _timeout_1: QTimer_timeout_signal,
 }
 
 impl /*struct*/ QTimer {
-  pub fn inheritFrom(qthis: *mut c_void) -> QTimer {
-    return QTimer{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QTimer {
+    return QTimer{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QTimer {
@@ -301,11 +303,11 @@ impl<'a> /*trait*/ QTimer_New for (&'a QTimer) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QTimerC1ERKS_()};
     let ctysz: c_int = unsafe{QTimer_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN6QTimerC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN6QTimerC1ERKS_(arg0)};
-    let rsthis = QTimer{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN6QTimerC1ERKS_(arg0)} as u64;
+    let rsthis = QTimer{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -408,14 +410,30 @@ impl<'a> /*trait*/ QTimer_New for (&'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QTimerC1EP7QObject()};
     let ctysz: c_int = unsafe{QTimer_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN6QTimerC1EP7QObject(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN6QTimerC1EP7QObject(arg0)};
-    let rsthis = QTimer{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN6QTimerC1EP7QObject(arg0)} as u64;
+    let rsthis = QTimer{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
+}
+
+#[derive(Default)] // for QTimer_timeout
+pub struct QTimer_timeout_signal{poi:u64}
+impl /* struct */ QTimer {
+  pub fn timeout_1(self) -> QTimer_timeout_signal {
+     return QTimer_timeout_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QTimer_timeout_signal {
+  pub fn connect<T: QTimer_timeout_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QTimer_timeout_signal_connect {
+  fn connect(self, sigthis: QTimer_timeout_signal);
 }
 
 // <= body block end

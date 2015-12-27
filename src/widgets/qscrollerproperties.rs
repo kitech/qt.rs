@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtWidgets/qscrollerproperties.h
 // dst-file: /src/widgets/qscrollerproperties.rs
 //
@@ -32,28 +32,29 @@ extern {
   fn QScrollerProperties_Class_Size() -> c_int;
   // proto:  void QScrollerProperties::QScrollerProperties(const QScrollerProperties & sp);
   fn dector_ZN19QScrollerPropertiesC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN19QScrollerPropertiesC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN19QScrollerPropertiesC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static void QScrollerProperties::setDefaultScrollerProperties(const QScrollerProperties & sp);
   fn _ZN19QScrollerProperties28setDefaultScrollerPropertiesERKS_(arg0: *mut c_void);
   // proto:  void QScrollerProperties::~QScrollerProperties();
-  fn _ZN19QScrollerPropertiesD0Ev(qthis: *mut c_void);
+  fn _ZN19QScrollerPropertiesD0Ev(qthis: u64 /* *mut c_void*/);
   // proto: static void QScrollerProperties::unsetDefaultScrollerProperties();
   fn _ZN19QScrollerProperties30unsetDefaultScrollerPropertiesEv();
   // proto:  void QScrollerProperties::QScrollerProperties();
   fn dector_ZN19QScrollerPropertiesC1Ev() -> *mut c_void;
-  fn _ZN19QScrollerPropertiesC1Ev(qthis: *mut c_void);
+  fn _ZN19QScrollerPropertiesC1Ev(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QScrollerProperties)=1
+#[derive(Default)]
 pub struct QScrollerProperties {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QScrollerProperties {
-  pub fn inheritFrom(qthis: *mut c_void) -> QScrollerProperties {
-    return QScrollerProperties{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QScrollerProperties {
+    return QScrollerProperties{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  void QScrollerProperties::QScrollerProperties(const QScrollerProperties & sp);
@@ -75,11 +76,11 @@ impl<'a> /*trait*/ QScrollerProperties_New for (&'a QScrollerProperties) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QScrollerPropertiesC1ERKS_()};
     let ctysz: c_int = unsafe{QScrollerProperties_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN19QScrollerPropertiesC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN19QScrollerPropertiesC1ERKS_(arg0)};
-    let rsthis = QScrollerProperties{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN19QScrollerPropertiesC1ERKS_(arg0)} as u64;
+    let rsthis = QScrollerProperties{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -158,10 +159,10 @@ impl<'a> /*trait*/ QScrollerProperties_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QScrollerPropertiesC1Ev()};
     let ctysz: c_int = unsafe{QScrollerProperties_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN19QScrollerPropertiesC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN19QScrollerPropertiesC1Ev()};
-    let rsthis = QScrollerProperties{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN19QScrollerPropertiesC1Ev()} as u64;
+    let rsthis = QScrollerProperties{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qsequentialanimationgroup.h
 // dst-file: /src/core/qsequentialanimationgroup.rs
 //
@@ -21,6 +21,7 @@ use self::libc::*;
 use super::qanimationgroup::QAnimationGroup; // 773
 use std::ops::Deref;
 use super::qpauseanimation::QPauseAnimation; // 773
+use super::qabstractanimation::QAbstractAnimation; // 773
 use super::qobject::QObject; // 773
 // <= use block end
 
@@ -33,35 +34,40 @@ use super::qobject::QObject; // 773
 extern {
   fn QSequentialAnimationGroup_Class_Size() -> c_int;
   // proto:  QPauseAnimation * QSequentialAnimationGroup::insertPause(int index, int msecs);
-  fn _ZN25QSequentialAnimationGroup11insertPauseEii(qthis: *mut c_void, arg0: c_int, arg1: c_int) -> *mut c_void;
+  fn _ZN25QSequentialAnimationGroup11insertPauseEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> *mut c_void;
+  // proto:  void QSequentialAnimationGroup::currentAnimationChanged(QAbstractAnimation * current);
+  fn _ZN25QSequentialAnimationGroup23currentAnimationChangedEP18QAbstractAnimation(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QSequentialAnimationGroup::QSequentialAnimationGroup(QObject * parent);
   fn dector_ZN25QSequentialAnimationGroupC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN25QSequentialAnimationGroupC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN25QSequentialAnimationGroupC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QPauseAnimation * QSequentialAnimationGroup::addPause(int msecs);
-  fn _ZN25QSequentialAnimationGroup8addPauseEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
+  fn _ZN25QSequentialAnimationGroup8addPauseEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  void QSequentialAnimationGroup::~QSequentialAnimationGroup();
-  fn _ZN25QSequentialAnimationGroupD0Ev(qthis: *mut c_void);
+  fn _ZN25QSequentialAnimationGroupD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QSequentialAnimationGroup::QSequentialAnimationGroup(const QSequentialAnimationGroup & );
   fn dector_ZN25QSequentialAnimationGroupC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN25QSequentialAnimationGroupC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN25QSequentialAnimationGroupC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QSequentialAnimationGroup::metaObject();
-  fn _ZNK25QSequentialAnimationGroup10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK25QSequentialAnimationGroup10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  QAbstractAnimation * QSequentialAnimationGroup::currentAnimation();
-  fn _ZNK25QSequentialAnimationGroup16currentAnimationEv(qthis: *mut c_void);
+  fn _ZNK25QSequentialAnimationGroup16currentAnimationEv(qthis: u64 /* *mut c_void*/);
   // proto:  int QSequentialAnimationGroup::duration();
-  fn _ZNK25QSequentialAnimationGroup8durationEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK25QSequentialAnimationGroup8durationEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn QSequentialAnimationGroup_SlotProxy_connect__ZN25QSequentialAnimationGroup23currentAnimationChangedEP18QAbstractAnimation(qthis: *mut c_void, fptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QSequentialAnimationGroup)=1
+#[derive(Default)]
 pub struct QSequentialAnimationGroup {
   qbase: QAnimationGroup,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _currentAnimationChanged_1: QSequentialAnimationGroup_currentAnimationChanged_signal,
 }
 
 impl /*struct*/ QSequentialAnimationGroup {
-  pub fn inheritFrom(qthis: *mut c_void) -> QSequentialAnimationGroup {
-    return QSequentialAnimationGroup{qbase: QAnimationGroup::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QSequentialAnimationGroup {
+    return QSequentialAnimationGroup{qbase: QAnimationGroup::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QSequentialAnimationGroup {
@@ -96,8 +102,31 @@ impl<'a> /*trait*/ QSequentialAnimationGroup_insertPause<QPauseAnimation> for (i
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN25QSequentialAnimationGroup11insertPauseEii(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QPauseAnimation::inheritFrom(ret);
+    let mut ret1 = QPauseAnimation::inheritFrom(ret as u64);
     return ret1;
+    // return 1;
+  }
+}
+
+  // proto:  void QSequentialAnimationGroup::currentAnimationChanged(QAbstractAnimation * current);
+impl /*struct*/ QSequentialAnimationGroup {
+  pub fn currentAnimationChanged<RetType, T: QSequentialAnimationGroup_currentAnimationChanged<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.currentAnimationChanged(self);
+    // return 1;
+  }
+}
+
+pub trait QSequentialAnimationGroup_currentAnimationChanged<RetType> {
+  fn currentAnimationChanged(self , rsthis: & QSequentialAnimationGroup) -> RetType;
+}
+
+  // proto:  void QSequentialAnimationGroup::currentAnimationChanged(QAbstractAnimation * current);
+impl<'a> /*trait*/ QSequentialAnimationGroup_currentAnimationChanged<()> for (&'a QAbstractAnimation) {
+  fn currentAnimationChanged(self , rsthis: & QSequentialAnimationGroup) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN25QSequentialAnimationGroup23currentAnimationChangedEP18QAbstractAnimation()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN25QSequentialAnimationGroup23currentAnimationChangedEP18QAbstractAnimation(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -121,11 +150,11 @@ impl<'a> /*trait*/ QSequentialAnimationGroup_New for (&'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN25QSequentialAnimationGroupC1EP7QObject()};
     let ctysz: c_int = unsafe{QSequentialAnimationGroup_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN25QSequentialAnimationGroupC1EP7QObject(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN25QSequentialAnimationGroupC1EP7QObject(arg0)};
-    let rsthis = QSequentialAnimationGroup{/**/qbase: QAnimationGroup::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN25QSequentialAnimationGroupC1EP7QObject(arg0)} as u64;
+    let rsthis = QSequentialAnimationGroup{qbase: QAnimationGroup::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -150,7 +179,7 @@ impl<'a> /*trait*/ QSequentialAnimationGroup_addPause<QPauseAnimation> for (i32)
     // unsafe{_ZN25QSequentialAnimationGroup8addPauseEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZN25QSequentialAnimationGroup8addPauseEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPauseAnimation::inheritFrom(ret);
+    let mut ret1 = QPauseAnimation::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -184,11 +213,11 @@ impl<'a> /*trait*/ QSequentialAnimationGroup_New for (&'a QSequentialAnimationGr
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN25QSequentialAnimationGroupC1ERKS_()};
     let ctysz: c_int = unsafe{QSequentialAnimationGroup_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN25QSequentialAnimationGroupC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN25QSequentialAnimationGroupC1ERKS_(arg0)};
-    let rsthis = QSequentialAnimationGroup{/**/qbase: QAnimationGroup::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN25QSequentialAnimationGroupC1ERKS_(arg0)} as u64;
+    let rsthis = QSequentialAnimationGroup{qbase: QAnimationGroup::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -261,5 +290,31 @@ impl<'a> /*trait*/ QSequentialAnimationGroup_duration<i32> for () {
   }
 }
 
+#[derive(Default)] // for QSequentialAnimationGroup_currentAnimationChanged
+pub struct QSequentialAnimationGroup_currentAnimationChanged_signal{poi:u64}
+impl /* struct */ QSequentialAnimationGroup {
+  pub fn currentAnimationChanged_1(self) -> QSequentialAnimationGroup_currentAnimationChanged_signal {
+     return QSequentialAnimationGroup_currentAnimationChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QSequentialAnimationGroup_currentAnimationChanged_signal {
+  pub fn connect<T: QSequentialAnimationGroup_currentAnimationChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QSequentialAnimationGroup_currentAnimationChanged_signal_connect {
+  fn connect(self, sigthis: QSequentialAnimationGroup_currentAnimationChanged_signal);
+}
+
+// currentAnimationChanged(class QAbstractAnimation *)
+extern fn QSequentialAnimationGroup_currentAnimationChanged_signal_connect_cb_0(arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QSequentialAnimationGroup_currentAnimationChanged_signal_connect for (extern fn(QAbstractAnimation)) {
+  fn connect(self, sigthis: QSequentialAnimationGroup_currentAnimationChanged_signal) {
+    // do smth...
+    unsafe {QSequentialAnimationGroup_SlotProxy_connect__ZN25QSequentialAnimationGroup23currentAnimationChangedEP18QAbstractAnimation(sigthis.poi as *mut c_void, QSequentialAnimationGroup_currentAnimationChanged_signal_connect_cb_0 as *mut c_void)};
+  }
+}
 // <= body block end
 

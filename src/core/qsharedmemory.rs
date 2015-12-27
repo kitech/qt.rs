@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qsharedmemory.h
 // dst-file: /src/core/qsharedmemory.rs
 //
@@ -32,54 +32,55 @@ use super::qstring::QString; // 773
 extern {
   fn QSharedMemory_Class_Size() -> c_int;
   // proto:  int QSharedMemory::size();
-  fn _ZNK13QSharedMemory4sizeEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK13QSharedMemory4sizeEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QSharedMemory::setNativeKey(const QString & key);
-  fn _ZN13QSharedMemory12setNativeKeyERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN13QSharedMemory12setNativeKeyERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QSharedMemory::QSharedMemory(const QString & key, QObject * parent);
   fn dector_ZN13QSharedMemoryC1ERK7QStringP7QObject(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN13QSharedMemoryC1ERK7QStringP7QObject(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN13QSharedMemoryC1ERK7QStringP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  QString QSharedMemory::errorString();
-  fn _ZNK13QSharedMemory11errorStringEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK13QSharedMemory11errorStringEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QSharedMemory::setKey(const QString & key);
-  fn _ZN13QSharedMemory6setKeyERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN13QSharedMemory6setKeyERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QString QSharedMemory::key();
-  fn _ZNK13QSharedMemory3keyEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK13QSharedMemory3keyEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  const void * QSharedMemory::constData();
-  fn _ZNK13QSharedMemory9constDataEv(qthis: *mut c_void);
+  fn _ZNK13QSharedMemory9constDataEv(qthis: u64 /* *mut c_void*/);
   // proto:  void * QSharedMemory::data();
-  fn _ZN13QSharedMemory4dataEv(qthis: *mut c_void);
+  fn _ZN13QSharedMemory4dataEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QSharedMemory::QSharedMemory(const QSharedMemory & );
   fn dector_ZN13QSharedMemoryC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN13QSharedMemoryC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN13QSharedMemoryC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QSharedMemory::isAttached();
-  fn _ZNK13QSharedMemory10isAttachedEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK13QSharedMemory10isAttachedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QSharedMemory::lock();
-  fn _ZN13QSharedMemory4lockEv(qthis: *mut c_void) -> c_char;
+  fn _ZN13QSharedMemory4lockEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QSharedMemory::~QSharedMemory();
-  fn _ZN13QSharedMemoryD0Ev(qthis: *mut c_void);
+  fn _ZN13QSharedMemoryD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QSharedMemory::unlock();
-  fn _ZN13QSharedMemory6unlockEv(qthis: *mut c_void) -> c_char;
+  fn _ZN13QSharedMemory6unlockEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QSharedMemory::detach();
-  fn _ZN13QSharedMemory6detachEv(qthis: *mut c_void) -> c_char;
+  fn _ZN13QSharedMemory6detachEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QString QSharedMemory::nativeKey();
-  fn _ZNK13QSharedMemory9nativeKeyEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK13QSharedMemory9nativeKeyEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  const QMetaObject * QSharedMemory::metaObject();
-  fn _ZNK13QSharedMemory10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK13QSharedMemory10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QSharedMemory::QSharedMemory(QObject * parent);
   fn dector_ZN13QSharedMemoryC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN13QSharedMemoryC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN13QSharedMemoryC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QSharedMemory)=1
+#[derive(Default)]
 pub struct QSharedMemory {
   qbase: QObject,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QSharedMemory {
-  pub fn inheritFrom(qthis: *mut c_void) -> QSharedMemory {
-    return QSharedMemory{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QSharedMemory {
+    return QSharedMemory{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QSharedMemory {
@@ -159,12 +160,12 @@ impl<'a> /*trait*/ QSharedMemory_New for (&'a QString, &'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QSharedMemoryC1ERK7QStringP7QObject()};
     let ctysz: c_int = unsafe{QSharedMemory_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     // unsafe {_ZN13QSharedMemoryC1ERK7QStringP7QObject(qthis, arg0, arg1)};
-    let qthis: *mut c_void = unsafe {dector_ZN13QSharedMemoryC1ERK7QStringP7QObject(arg0, arg1)};
-    let rsthis = QSharedMemory{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN13QSharedMemoryC1ERK7QStringP7QObject(arg0, arg1)} as u64;
+    let rsthis = QSharedMemory{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -188,7 +189,7 @@ impl<'a> /*trait*/ QSharedMemory_errorString<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QSharedMemory11errorStringEv()};
     let mut ret = unsafe {_ZNK13QSharedMemory11errorStringEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -235,7 +236,7 @@ impl<'a> /*trait*/ QSharedMemory_key<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QSharedMemory3keyEv()};
     let mut ret = unsafe {_ZNK13QSharedMemory3keyEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -291,11 +292,11 @@ impl<'a> /*trait*/ QSharedMemory_New for (&'a QSharedMemory) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QSharedMemoryC1ERKS_()};
     let ctysz: c_int = unsafe{QSharedMemory_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN13QSharedMemoryC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN13QSharedMemoryC1ERKS_(arg0)};
-    let rsthis = QSharedMemory{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN13QSharedMemoryC1ERKS_(arg0)} as u64;
+    let rsthis = QSharedMemory{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -433,7 +434,7 @@ impl<'a> /*trait*/ QSharedMemory_nativeKey<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QSharedMemory9nativeKeyEv()};
     let mut ret = unsafe {_ZNK13QSharedMemory9nativeKeyEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -467,11 +468,11 @@ impl<'a> /*trait*/ QSharedMemory_New for (&'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QSharedMemoryC1EP7QObject()};
     let ctysz: c_int = unsafe{QSharedMemory_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN13QSharedMemoryC1EP7QObject(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN13QSharedMemoryC1EP7QObject(arg0)};
-    let rsthis = QSharedMemory{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN13QSharedMemoryC1EP7QObject(arg0)} as u64;
+    let rsthis = QSharedMemory{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }

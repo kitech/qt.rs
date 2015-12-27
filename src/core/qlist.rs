@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qlist.h
 // dst-file: /src/core/qlist.rs
 //
@@ -30,49 +30,50 @@ use std::ops::Deref;
 extern {
   fn QListData_Class_Size() -> c_int;
   // proto:  void ** QListData::prepend();
-  fn _ZN9QListData7prependEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZN9QListData7prependEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QListData::realloc(int alloc);
-  fn _ZN9QListData7reallocEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN9QListData7reallocEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void ** QListData::end();
-  fn demth_ZNK9QListData3endEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK9QListData3endEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QListData::remove(int i, int n);
-  fn _ZN9QListData6removeEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
+  fn _ZN9QListData6removeEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  void ** QListData::append(const QListData & l);
-  fn _ZN9QListData6appendERKS_(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZN9QListData6appendERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QListData::remove(int i);
-  fn _ZN9QListData6removeEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN9QListData6removeEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void ** QListData::append();
-  fn _ZN9QListData6appendEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZN9QListData6appendEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QListData::dispose();
-  fn demth_ZN9QListData7disposeEv(qthis: *mut c_void);
+  fn demth_ZN9QListData7disposeEv(qthis: u64 /* *mut c_void*/);
   // proto:  int QListData::size();
-  fn demth_ZNK9QListData4sizeEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK9QListData4sizeEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QListData::isEmpty();
-  fn demth_ZNK9QListData7isEmptyEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK9QListData7isEmptyEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void ** QListData::at(int i);
-  fn demth_ZNK9QListData2atEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
+  fn demth_ZNK9QListData2atEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  void ** QListData::erase(void ** xi);
-  fn _ZN9QListData5eraseEPPv(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZN9QListData5eraseEPPv(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void ** QListData::append(int n);
-  fn _ZN9QListData6appendEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
+  fn _ZN9QListData6appendEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  void QListData::move(int from, int to);
-  fn _ZN9QListData4moveEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
+  fn _ZN9QListData4moveEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  void ** QListData::begin();
-  fn demth_ZNK9QListData5beginEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK9QListData5beginEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void ** QListData::insert(int i);
-  fn _ZN9QListData6insertEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
+  fn _ZN9QListData6insertEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QListData)=8
+#[derive(Default)]
 pub struct QListData {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QListData {
-  pub fn inheritFrom(qthis: *mut c_void) -> QListData {
-    return QListData{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QListData {
+    return QListData{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  void ** QListData::prepend();

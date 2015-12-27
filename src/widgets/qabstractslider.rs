@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtWidgets/qabstractslider.h
 // dst-file: /src/widgets/qabstractslider.rs
 //
@@ -31,78 +31,94 @@ use std::ops::Deref;
 extern {
   fn QAbstractSlider_Class_Size() -> c_int;
   // proto:  void QAbstractSlider::setSliderPosition(int );
-  fn _ZN15QAbstractSlider17setSliderPositionEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN15QAbstractSlider17setSliderPositionEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QAbstractSlider::sliderPressed();
-  fn _ZN15QAbstractSlider13sliderPressedEv(qthis: *mut c_void);
+  fn _ZN15QAbstractSlider13sliderPressedEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QAbstractSlider::isSliderDown();
-  fn _ZNK15QAbstractSlider12isSliderDownEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK15QAbstractSlider12isSliderDownEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  int QAbstractSlider::value();
-  fn _ZNK15QAbstractSlider5valueEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK15QAbstractSlider5valueEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QAbstractSlider::setInvertedControls(bool );
-  fn _ZN15QAbstractSlider19setInvertedControlsEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN15QAbstractSlider19setInvertedControlsEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  // proto:  void QAbstractSlider::QAbstractSlider(const QAbstractSlider & );
+  fn dector_ZN15QAbstractSliderC1ERKS_(arg0: *mut c_void) -> *mut c_void;
+  fn _ZN15QAbstractSliderC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QAbstractSlider::minimum();
-  fn _ZNK15QAbstractSlider7minimumEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK15QAbstractSlider7minimumEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QAbstractSlider::singleStep();
-  fn _ZNK15QAbstractSlider10singleStepEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK15QAbstractSlider10singleStepEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QAbstractSlider::pageStep();
-  fn _ZNK15QAbstractSlider8pageStepEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK15QAbstractSlider8pageStepEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QAbstractSlider::setMaximum(int );
-  fn _ZN15QAbstractSlider10setMaximumEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN15QAbstractSlider10setMaximumEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  bool QAbstractSlider::invertedControls();
-  fn _ZNK15QAbstractSlider16invertedControlsEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK15QAbstractSlider16invertedControlsEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QAbstractSlider::setValue(int );
-  fn _ZN15QAbstractSlider8setValueEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN15QAbstractSlider8setValueEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QAbstractSlider::valueChanged(int value);
-  fn _ZN15QAbstractSlider12valueChangedEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN15QAbstractSlider12valueChangedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QAbstractSlider::~QAbstractSlider();
-  fn _ZN15QAbstractSliderD0Ev(qthis: *mut c_void);
+  fn _ZN15QAbstractSliderD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractSlider::setPageStep(int );
-  fn _ZN15QAbstractSlider11setPageStepEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN15QAbstractSlider11setPageStepEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QAbstractSlider::setSliderDown(bool );
-  fn _ZN15QAbstractSlider13setSliderDownEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN15QAbstractSlider13setSliderDownEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  int QAbstractSlider::maximum();
-  fn _ZNK15QAbstractSlider7maximumEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK15QAbstractSlider7maximumEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  const QMetaObject * QAbstractSlider::metaObject();
-  fn _ZNK15QAbstractSlider10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK15QAbstractSlider10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractSlider::actionTriggered(int action);
-  fn _ZN15QAbstractSlider15actionTriggeredEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN15QAbstractSlider15actionTriggeredEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QAbstractSlider::setSingleStep(int );
-  fn _ZN15QAbstractSlider13setSingleStepEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN15QAbstractSlider13setSingleStepEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QAbstractSlider::sliderMoved(int position);
-  fn _ZN15QAbstractSlider11sliderMovedEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN15QAbstractSlider11sliderMovedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QAbstractSlider::setInvertedAppearance(bool );
-  fn _ZN15QAbstractSlider21setInvertedAppearanceEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN15QAbstractSlider21setInvertedAppearanceEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QAbstractSlider::rangeChanged(int min, int max);
-  fn _ZN15QAbstractSlider12rangeChangedEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
+  fn _ZN15QAbstractSlider12rangeChangedEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  bool QAbstractSlider::hasTracking();
-  fn _ZNK15QAbstractSlider11hasTrackingEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK15QAbstractSlider11hasTrackingEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QAbstractSlider::sliderReleased();
-  fn _ZN15QAbstractSlider14sliderReleasedEv(qthis: *mut c_void);
+  fn _ZN15QAbstractSlider14sliderReleasedEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QAbstractSlider::invertedAppearance();
-  fn _ZNK15QAbstractSlider18invertedAppearanceEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK15QAbstractSlider18invertedAppearanceEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  int QAbstractSlider::sliderPosition();
-  fn _ZNK15QAbstractSlider14sliderPositionEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK15QAbstractSlider14sliderPositionEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QAbstractSlider::setTracking(bool enable);
-  fn _ZN15QAbstractSlider11setTrackingEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN15QAbstractSlider11setTrackingEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QAbstractSlider::QAbstractSlider(QWidget * parent);
   fn dector_ZN15QAbstractSliderC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN15QAbstractSliderC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN15QAbstractSliderC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAbstractSlider::setRange(int min, int max);
-  fn _ZN15QAbstractSlider8setRangeEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
+  fn _ZN15QAbstractSlider8setRangeEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  void QAbstractSlider::setMinimum(int );
-  fn _ZN15QAbstractSlider10setMinimumEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN15QAbstractSlider10setMinimumEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn QAbstractSlider_SlotProxy_connect__ZN15QAbstractSlider13sliderPressedEv(qthis: *mut c_void, fptr: *mut c_void);
+  fn QAbstractSlider_SlotProxy_connect__ZN15QAbstractSlider15actionTriggeredEi(qthis: *mut c_void, fptr: *mut c_void);
+  fn QAbstractSlider_SlotProxy_connect__ZN15QAbstractSlider11sliderMovedEi(qthis: *mut c_void, fptr: *mut c_void);
+  fn QAbstractSlider_SlotProxy_connect__ZN15QAbstractSlider12rangeChangedEii(qthis: *mut c_void, fptr: *mut c_void);
+  fn QAbstractSlider_SlotProxy_connect__ZN15QAbstractSlider12valueChangedEi(qthis: *mut c_void, fptr: *mut c_void);
+  fn QAbstractSlider_SlotProxy_connect__ZN15QAbstractSlider14sliderReleasedEv(qthis: *mut c_void, fptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QAbstractSlider)=1
+#[derive(Default)]
 pub struct QAbstractSlider {
   qbase: QWidget,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _sliderReleased_1: QAbstractSlider_sliderReleased_signal,
+  pub _rangeChanged_1: QAbstractSlider_rangeChanged_signal,
+  pub _sliderPressed_1: QAbstractSlider_sliderPressed_signal,
+  pub _actionTriggered_1: QAbstractSlider_actionTriggered_signal,
+  pub _valueChanged_1: QAbstractSlider_valueChanged_signal,
+  pub _sliderMoved_1: QAbstractSlider_sliderMoved_signal,
 }
 
 impl /*struct*/ QAbstractSlider {
-  pub fn inheritFrom(qthis: *mut c_void) -> QAbstractSlider {
-    return QAbstractSlider{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QAbstractSlider {
+    return QAbstractSlider{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QAbstractSlider {
@@ -227,6 +243,35 @@ impl<'a> /*trait*/ QAbstractSlider_setInvertedControls<()> for (i8) {
     // unsafe{_ZN15QAbstractSlider19setInvertedControlsEb()};
     let arg0 = self  as c_char;
      unsafe {_ZN15QAbstractSlider19setInvertedControlsEb(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
+  // proto:  void QAbstractSlider::QAbstractSlider(const QAbstractSlider & );
+impl /*struct*/ QAbstractSlider {
+  pub fn New<T: QAbstractSlider_New>(value: T) -> QAbstractSlider {
+    let rsthis = value.New();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QAbstractSlider_New {
+  fn New(self) -> QAbstractSlider;
+}
+
+  // proto:  void QAbstractSlider::QAbstractSlider(const QAbstractSlider & );
+impl<'a> /*trait*/ QAbstractSlider_New for (&'a QAbstractSlider) {
+  fn New(self) -> QAbstractSlider {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN15QAbstractSliderC1ERKS_()};
+    let ctysz: c_int = unsafe{QAbstractSlider_Class_Size()};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
+    let arg0 = self.qclsinst  as *mut c_void;
+    // unsafe {_ZN15QAbstractSliderC1ERKS_(qthis, arg0)};
+    let qthis: u64 = unsafe {dector_ZN15QAbstractSliderC1ERKS_(arg0)} as u64;
+    let rsthis = QAbstractSlider{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+    return rsthis;
     // return 1;
   }
 }
@@ -736,29 +781,16 @@ impl<'a> /*trait*/ QAbstractSlider_setTracking<()> for (i8) {
 }
 
   // proto:  void QAbstractSlider::QAbstractSlider(QWidget * parent);
-impl /*struct*/ QAbstractSlider {
-  pub fn New<T: QAbstractSlider_New>(value: T) -> QAbstractSlider {
-    let rsthis = value.New();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QAbstractSlider_New {
-  fn New(self) -> QAbstractSlider;
-}
-
-  // proto:  void QAbstractSlider::QAbstractSlider(QWidget * parent);
 impl<'a> /*trait*/ QAbstractSlider_New for (&'a QWidget) {
   fn New(self) -> QAbstractSlider {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QAbstractSliderC1EP7QWidget()};
     let ctysz: c_int = unsafe{QAbstractSlider_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN15QAbstractSliderC1EP7QWidget(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN15QAbstractSliderC1EP7QWidget(arg0)};
-    let rsthis = QAbstractSlider{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN15QAbstractSliderC1EP7QWidget(arg0)} as u64;
+    let rsthis = QAbstractSlider{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -811,5 +843,161 @@ impl<'a> /*trait*/ QAbstractSlider_setMinimum<()> for (i32) {
   }
 }
 
+#[derive(Default)] // for QAbstractSlider_sliderReleased
+pub struct QAbstractSlider_sliderReleased_signal{poi:u64}
+impl /* struct */ QAbstractSlider {
+  pub fn sliderReleased_1(self) -> QAbstractSlider_sliderReleased_signal {
+     return QAbstractSlider_sliderReleased_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QAbstractSlider_sliderReleased_signal {
+  pub fn connect<T: QAbstractSlider_sliderReleased_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QAbstractSlider_sliderReleased_signal_connect {
+  fn connect(self, sigthis: QAbstractSlider_sliderReleased_signal);
+}
+
+#[derive(Default)] // for QAbstractSlider_rangeChanged
+pub struct QAbstractSlider_rangeChanged_signal{poi:u64}
+impl /* struct */ QAbstractSlider {
+  pub fn rangeChanged_1(self) -> QAbstractSlider_rangeChanged_signal {
+     return QAbstractSlider_rangeChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QAbstractSlider_rangeChanged_signal {
+  pub fn connect<T: QAbstractSlider_rangeChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QAbstractSlider_rangeChanged_signal_connect {
+  fn connect(self, sigthis: QAbstractSlider_rangeChanged_signal);
+}
+
+#[derive(Default)] // for QAbstractSlider_sliderPressed
+pub struct QAbstractSlider_sliderPressed_signal{poi:u64}
+impl /* struct */ QAbstractSlider {
+  pub fn sliderPressed_1(self) -> QAbstractSlider_sliderPressed_signal {
+     return QAbstractSlider_sliderPressed_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QAbstractSlider_sliderPressed_signal {
+  pub fn connect<T: QAbstractSlider_sliderPressed_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QAbstractSlider_sliderPressed_signal_connect {
+  fn connect(self, sigthis: QAbstractSlider_sliderPressed_signal);
+}
+
+#[derive(Default)] // for QAbstractSlider_actionTriggered
+pub struct QAbstractSlider_actionTriggered_signal{poi:u64}
+impl /* struct */ QAbstractSlider {
+  pub fn actionTriggered_1(self) -> QAbstractSlider_actionTriggered_signal {
+     return QAbstractSlider_actionTriggered_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QAbstractSlider_actionTriggered_signal {
+  pub fn connect<T: QAbstractSlider_actionTriggered_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QAbstractSlider_actionTriggered_signal_connect {
+  fn connect(self, sigthis: QAbstractSlider_actionTriggered_signal);
+}
+
+#[derive(Default)] // for QAbstractSlider_valueChanged
+pub struct QAbstractSlider_valueChanged_signal{poi:u64}
+impl /* struct */ QAbstractSlider {
+  pub fn valueChanged_1(self) -> QAbstractSlider_valueChanged_signal {
+     return QAbstractSlider_valueChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QAbstractSlider_valueChanged_signal {
+  pub fn connect<T: QAbstractSlider_valueChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QAbstractSlider_valueChanged_signal_connect {
+  fn connect(self, sigthis: QAbstractSlider_valueChanged_signal);
+}
+
+#[derive(Default)] // for QAbstractSlider_sliderMoved
+pub struct QAbstractSlider_sliderMoved_signal{poi:u64}
+impl /* struct */ QAbstractSlider {
+  pub fn sliderMoved_1(self) -> QAbstractSlider_sliderMoved_signal {
+     return QAbstractSlider_sliderMoved_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QAbstractSlider_sliderMoved_signal {
+  pub fn connect<T: QAbstractSlider_sliderMoved_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QAbstractSlider_sliderMoved_signal_connect {
+  fn connect(self, sigthis: QAbstractSlider_sliderMoved_signal);
+}
+
+// sliderPressed()
+extern fn QAbstractSlider_sliderPressed_signal_connect_cb_0() {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QAbstractSlider_sliderPressed_signal_connect for (extern fn()) {
+  fn connect(self, sigthis: QAbstractSlider_sliderPressed_signal) {
+    // do smth...
+    unsafe {QAbstractSlider_SlotProxy_connect__ZN15QAbstractSlider13sliderPressedEv(sigthis.poi as *mut c_void, QAbstractSlider_sliderPressed_signal_connect_cb_0 as *mut c_void)};
+  }
+}
+// actionTriggered(int)
+extern fn QAbstractSlider_actionTriggered_signal_connect_cb_1(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QAbstractSlider_actionTriggered_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QAbstractSlider_actionTriggered_signal) {
+    // do smth...
+    unsafe {QAbstractSlider_SlotProxy_connect__ZN15QAbstractSlider15actionTriggeredEi(sigthis.poi as *mut c_void, QAbstractSlider_actionTriggered_signal_connect_cb_1 as *mut c_void)};
+  }
+}
+// sliderMoved(int)
+extern fn QAbstractSlider_sliderMoved_signal_connect_cb_2(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QAbstractSlider_sliderMoved_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QAbstractSlider_sliderMoved_signal) {
+    // do smth...
+    unsafe {QAbstractSlider_SlotProxy_connect__ZN15QAbstractSlider11sliderMovedEi(sigthis.poi as *mut c_void, QAbstractSlider_sliderMoved_signal_connect_cb_2 as *mut c_void)};
+  }
+}
+// rangeChanged(int, int)
+extern fn QAbstractSlider_rangeChanged_signal_connect_cb_3(arg0: c_int, arg1: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QAbstractSlider_rangeChanged_signal_connect for (extern fn(i32, i32)) {
+  fn connect(self, sigthis: QAbstractSlider_rangeChanged_signal) {
+    // do smth...
+    unsafe {QAbstractSlider_SlotProxy_connect__ZN15QAbstractSlider12rangeChangedEii(sigthis.poi as *mut c_void, QAbstractSlider_rangeChanged_signal_connect_cb_3 as *mut c_void)};
+  }
+}
+// valueChanged(int)
+extern fn QAbstractSlider_valueChanged_signal_connect_cb_4(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QAbstractSlider_valueChanged_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QAbstractSlider_valueChanged_signal) {
+    // do smth...
+    unsafe {QAbstractSlider_SlotProxy_connect__ZN15QAbstractSlider12valueChangedEi(sigthis.poi as *mut c_void, QAbstractSlider_valueChanged_signal_connect_cb_4 as *mut c_void)};
+  }
+}
+// sliderReleased()
+extern fn QAbstractSlider_sliderReleased_signal_connect_cb_5() {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QAbstractSlider_sliderReleased_signal_connect for (extern fn()) {
+  fn connect(self, sigthis: QAbstractSlider_sliderReleased_signal) {
+    // do smth...
+    unsafe {QAbstractSlider_SlotProxy_connect__ZN15QAbstractSlider14sliderReleasedEv(sigthis.poi as *mut c_void, QAbstractSlider_sliderReleased_signal_connect_cb_5 as *mut c_void)};
+  }
+}
 // <= body block end
 

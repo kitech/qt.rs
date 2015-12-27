@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtGui/qcolor.h
 // dst-file: /src/gui/qcolor.rs
 //
@@ -31,201 +31,202 @@ use super::super::core::qstring::QString; // 771
 extern {
   fn QColor_Class_Size() -> c_int;
   // proto:  void QColor::getHsvF(qreal * h, qreal * s, qreal * v, qreal * a);
-  fn _ZNK6QColor7getHsvFEPdS0_S0_S0_(qthis: *mut c_void, arg0: *mut c_double, arg1: *mut c_double, arg2: *mut c_double, arg3: *mut c_double);
+  fn _ZNK6QColor7getHsvFEPdS0_S0_S0_(qthis: u64 /* *mut c_void*/, arg0: *mut c_double, arg1: *mut c_double, arg2: *mut c_double, arg3: *mut c_double);
   // proto:  int QColor::alpha();
-  fn _ZNK6QColor5alphaEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK6QColor5alphaEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  qreal QColor::hslSaturationF();
-  fn _ZNK6QColor14hslSaturationFEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK6QColor14hslSaturationFEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QColor::setAlphaF(qreal alpha);
-  fn _ZN6QColor9setAlphaFEd(qthis: *mut c_void, arg0: c_double);
+  fn _ZN6QColor9setAlphaFEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QColor::getRgb(int * r, int * g, int * b, int * a);
-  fn _ZNK6QColor6getRgbEPiS0_S0_S0_(qthis: *mut c_void, arg0: *mut c_int, arg1: *mut c_int, arg2: *mut c_int, arg3: *mut c_int);
+  fn _ZNK6QColor6getRgbEPiS0_S0_S0_(qthis: u64 /* *mut c_void*/, arg0: *mut c_int, arg1: *mut c_int, arg2: *mut c_int, arg3: *mut c_int);
   // proto:  int QColor::hslHue();
-  fn _ZNK6QColor6hslHueEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK6QColor6hslHueEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QColor::lightness();
-  fn _ZNK6QColor9lightnessEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK6QColor9lightnessEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QColor::setAlpha(int alpha);
-  fn _ZN6QColor8setAlphaEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN6QColor8setAlphaEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto: static QColor QColor::fromHslF(qreal h, qreal s, qreal l, qreal a);
   fn _ZN6QColor8fromHslFEdddd(arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double) -> *mut c_void;
   // proto:  void QColor::getCmyk(int * c, int * m, int * y, int * k, int * a);
-  fn _ZN6QColor7getCmykEPiS0_S0_S0_S0_(qthis: *mut c_void, arg0: *mut c_int, arg1: *mut c_int, arg2: *mut c_int, arg3: *mut c_int, arg4: *mut c_int);
+  fn _ZN6QColor7getCmykEPiS0_S0_S0_S0_(qthis: u64 /* *mut c_void*/, arg0: *mut c_int, arg1: *mut c_int, arg2: *mut c_int, arg3: *mut c_int, arg4: *mut c_int);
   // proto:  int QColor::green();
-  fn _ZNK6QColor5greenEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK6QColor5greenEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QColor::hsvSaturation();
-  fn _ZNK6QColor13hsvSaturationEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK6QColor13hsvSaturationEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  QColor QColor::toHsl();
-  fn _ZNK6QColor5toHslEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK6QColor5toHslEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QColor::QColor();
   fn dector_ZN6QColorC1Ev() -> *mut c_void;
-  fn _ZN6QColorC1Ev(qthis: *mut c_void);
+  fn _ZN6QColorC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QColor::QColor(const char * name);
   fn dector_ZN6QColorC1EPKc(arg0: *mut c_char) -> *mut c_void;
-  fn _ZN6QColorC1EPKc(qthis: *mut c_void, arg0: *mut c_char);
+  fn _ZN6QColorC1EPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_char);
   // proto:  void QColor::setBlue(int blue);
-  fn _ZN6QColor7setBlueEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN6QColor7setBlueEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QColor::cyan();
-  fn _ZNK6QColor4cyanEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK6QColor4cyanEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QColor::setCmykF(qreal c, qreal m, qreal y, qreal k, qreal a);
-  fn _ZN6QColor8setCmykFEddddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double);
+  fn _ZN6QColor8setCmykFEddddd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double);
   // proto: static QColor QColor::fromCmykF(qreal c, qreal m, qreal y, qreal k, qreal a);
   fn _ZN6QColor9fromCmykFEddddd(arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double) -> *mut c_void;
   // proto:  QColor QColor::light(int f);
-  fn _ZNK6QColor5lightEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
+  fn _ZNK6QColor5lightEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  void QColor::getHslF(qreal * h, qreal * s, qreal * l, qreal * a);
-  fn _ZNK6QColor7getHslFEPdS0_S0_S0_(qthis: *mut c_void, arg0: *mut c_double, arg1: *mut c_double, arg2: *mut c_double, arg3: *mut c_double);
+  fn _ZNK6QColor7getHslFEPdS0_S0_S0_(qthis: u64 /* *mut c_void*/, arg0: *mut c_double, arg1: *mut c_double, arg2: *mut c_double, arg3: *mut c_double);
   // proto: static QColor QColor::fromRgb(QRgb rgb);
   fn _ZN6QColor7fromRgbEj(arg0: c_uint) -> *mut c_void;
   // proto:  int QColor::yellow();
-  fn _ZNK6QColor6yellowEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK6QColor6yellowEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QColor::getRgbF(qreal * r, qreal * g, qreal * b, qreal * a);
-  fn _ZNK6QColor7getRgbFEPdS0_S0_S0_(qthis: *mut c_void, arg0: *mut c_double, arg1: *mut c_double, arg2: *mut c_double, arg3: *mut c_double);
+  fn _ZNK6QColor7getRgbFEPdS0_S0_S0_(qthis: u64 /* *mut c_void*/, arg0: *mut c_double, arg1: *mut c_double, arg2: *mut c_double, arg3: *mut c_double);
   // proto:  void QColor::setRgb(int r, int g, int b, int a);
-  fn _ZN6QColor6setRgbEiiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
+  fn _ZN6QColor6setRgbEiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
   // proto:  QString QColor::name();
-  fn _ZNK6QColor4nameEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK6QColor4nameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  qreal QColor::redF();
-  fn _ZNK6QColor4redFEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK6QColor4redFEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  qreal QColor::blackF();
-  fn _ZNK6QColor6blackFEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK6QColor6blackFEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QColor::setHsvF(qreal h, qreal s, qreal v, qreal a);
-  fn _ZN6QColor7setHsvFEdddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
+  fn _ZN6QColor7setHsvFEdddd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
   // proto:  void QColor::setRgb(QRgb rgb);
-  fn _ZN6QColor6setRgbEj(qthis: *mut c_void, arg0: c_uint);
+  fn _ZN6QColor6setRgbEj(qthis: u64 /* *mut c_void*/, arg0: c_uint);
   // proto: static QColor QColor::fromRgb(int r, int g, int b, int a);
   fn _ZN6QColor7fromRgbEiiii(arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int) -> *mut c_void;
   // proto:  qreal QColor::hsvHueF();
-  fn _ZNK6QColor7hsvHueFEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK6QColor7hsvHueFEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  qreal QColor::hsvSaturationF();
-  fn _ZNK6QColor14hsvSaturationFEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK6QColor14hsvSaturationFEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  qreal QColor::yellowF();
-  fn _ZNK6QColor7yellowFEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK6QColor7yellowFEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  int QColor::black();
-  fn _ZNK6QColor5blackEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK6QColor5blackEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QColor::setGreenF(qreal green);
-  fn _ZN6QColor9setGreenFEd(qthis: *mut c_void, arg0: c_double);
+  fn _ZN6QColor9setGreenFEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  QRgb QColor::rgba();
-  fn _ZNK6QColor4rgbaEv(qthis: *mut c_void) -> c_uint;
+  fn _ZNK6QColor4rgbaEv(qthis: u64 /* *mut c_void*/) -> c_uint;
   // proto:  QColor QColor::toCmyk();
-  fn _ZNK6QColor6toCmykEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK6QColor6toCmykEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  qreal QColor::greenF();
-  fn _ZNK6QColor6greenFEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK6QColor6greenFEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  int QColor::red();
-  fn _ZNK6QColor3redEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK6QColor3redEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QColor::setRgbF(qreal r, qreal g, qreal b, qreal a);
-  fn _ZN6QColor7setRgbFEdddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
+  fn _ZN6QColor7setRgbFEdddd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
   // proto:  qreal QColor::lightnessF();
-  fn _ZNK6QColor10lightnessFEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK6QColor10lightnessFEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  QColor QColor::toHsv();
-  fn _ZNK6QColor5toHsvEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK6QColor5toHsvEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QColor::QColor(const QColor & color);
   fn dector_ZN6QColorC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN6QColorC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN6QColorC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static QColor QColor::fromHsv(int h, int s, int v, int a);
   fn _ZN6QColor7fromHsvEiiii(arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int) -> *mut c_void;
   // proto:  qreal QColor::hueF();
-  fn _ZNK6QColor4hueFEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK6QColor4hueFEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QColor::setBlueF(qreal blue);
-  fn _ZN6QColor8setBlueFEd(qthis: *mut c_void, arg0: c_double);
+  fn _ZN6QColor8setBlueFEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  qreal QColor::saturationF();
-  fn _ZNK6QColor11saturationFEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK6QColor11saturationFEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  bool QColor::isValid();
-  fn _ZNK6QColor7isValidEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK6QColor7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QColor QColor::darker(int f);
-  fn _ZNK6QColor6darkerEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
+  fn _ZNK6QColor6darkerEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  qreal QColor::blueF();
-  fn _ZNK6QColor5blueFEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK6QColor5blueFEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  int QColor::hue();
-  fn _ZNK6QColor3hueEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK6QColor3hueEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QColor::setRgba(QRgb rgba);
-  fn _ZN6QColor7setRgbaEj(qthis: *mut c_void, arg0: c_uint);
+  fn _ZN6QColor7setRgbaEj(qthis: u64 /* *mut c_void*/, arg0: c_uint);
   // proto:  void QColor::setNamedColor(const QString & name);
-  fn _ZN6QColor13setNamedColorERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN6QColor13setNamedColorERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QColor::magenta();
-  fn _ZNK6QColor7magentaEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK6QColor7magentaEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  QColor QColor::lighter(int f);
-  fn _ZNK6QColor7lighterEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
+  fn _ZNK6QColor7lighterEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  QColor QColor::toRgb();
-  fn _ZNK6QColor5toRgbEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK6QColor5toRgbEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  qreal QColor::magentaF();
-  fn _ZNK6QColor8magentaFEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK6QColor8magentaFEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  qreal QColor::hslHueF();
-  fn _ZNK6QColor7hslHueFEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK6QColor7hslHueFEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto: static QColor QColor::fromCmyk(int c, int m, int y, int k, int a);
   fn _ZN6QColor8fromCmykEiiiii(arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_int) -> *mut c_void;
   // proto:  void QColor::setCmyk(int c, int m, int y, int k, int a);
-  fn _ZN6QColor7setCmykEiiiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_int);
+  fn _ZN6QColor7setCmykEiiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_int);
   // proto: static QStringList QColor::colorNames();
   fn _ZN6QColor10colorNamesEv();
   // proto:  void QColor::getHsv(int * h, int * s, int * v, int * a);
-  fn _ZNK6QColor6getHsvEPiS0_S0_S0_(qthis: *mut c_void, arg0: *mut c_int, arg1: *mut c_int, arg2: *mut c_int, arg3: *mut c_int);
+  fn _ZNK6QColor6getHsvEPiS0_S0_S0_(qthis: u64 /* *mut c_void*/, arg0: *mut c_int, arg1: *mut c_int, arg2: *mut c_int, arg3: *mut c_int);
   // proto:  void QColor::getCmykF(qreal * c, qreal * m, qreal * y, qreal * k, qreal * a);
-  fn _ZN6QColor8getCmykFEPdS0_S0_S0_S0_(qthis: *mut c_void, arg0: *mut c_double, arg1: *mut c_double, arg2: *mut c_double, arg3: *mut c_double, arg4: *mut c_double);
+  fn _ZN6QColor8getCmykFEPdS0_S0_S0_S0_(qthis: u64 /* *mut c_void*/, arg0: *mut c_double, arg1: *mut c_double, arg2: *mut c_double, arg3: *mut c_double, arg4: *mut c_double);
   // proto:  void QColor::setRed(int red);
-  fn _ZN6QColor6setRedEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN6QColor6setRedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QColor::QColor(const QString & name);
   fn dector_ZN6QColorC1ERK7QString(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN6QColorC1ERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN6QColorC1ERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static QColor QColor::fromRgba(QRgb rgba);
   fn _ZN6QColor8fromRgbaEj(arg0: c_uint) -> *mut c_void;
   // proto:  void QColor::setHsv(int h, int s, int v, int a);
-  fn _ZN6QColor6setHsvEiiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
+  fn _ZN6QColor6setHsvEiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
   // proto:  QRgb QColor::rgb();
-  fn _ZNK6QColor3rgbEv(qthis: *mut c_void) -> c_uint;
+  fn _ZNK6QColor3rgbEv(qthis: u64 /* *mut c_void*/) -> c_uint;
   // proto:  void QColor::setHslF(qreal h, qreal s, qreal l, qreal a);
-  fn _ZN6QColor7setHslFEdddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
+  fn _ZN6QColor7setHslFEdddd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
   // proto:  int QColor::saturation();
-  fn _ZNK6QColor10saturationEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK6QColor10saturationEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QColor::QColor(int r, int g, int b, int a);
   fn dector_ZN6QColorC1Eiiii(arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int) -> *mut c_void;
-  fn _ZN6QColorC1Eiiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
+  fn _ZN6QColorC1Eiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
   // proto:  qreal QColor::alphaF();
-  fn _ZNK6QColor6alphaFEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK6QColor6alphaFEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  int QColor::value();
-  fn _ZNK6QColor5valueEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK6QColor5valueEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto: static QColor QColor::fromHsvF(qreal h, qreal s, qreal v, qreal a);
   fn _ZN6QColor8fromHsvFEdddd(arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double) -> *mut c_void;
   // proto:  QColor QColor::dark(int f);
-  fn _ZNK6QColor4darkEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
+  fn _ZNK6QColor4darkEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  void QColor::setRedF(qreal red);
-  fn _ZN6QColor7setRedFEd(qthis: *mut c_void, arg0: c_double);
+  fn _ZN6QColor7setRedFEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto: static QColor QColor::fromHsl(int h, int s, int l, int a);
   fn _ZN6QColor7fromHslEiiii(arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int) -> *mut c_void;
   // proto:  void QColor::setHsl(int h, int s, int l, int a);
-  fn _ZN6QColor6setHslEiiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
+  fn _ZN6QColor6setHslEiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
   // proto:  void QColor::QColor(QRgb rgb);
   fn dector_ZN6QColorC1Ej(arg0: c_uint) -> *mut c_void;
-  fn _ZN6QColorC1Ej(qthis: *mut c_void, arg0: c_uint);
+  fn _ZN6QColorC1Ej(qthis: u64 /* *mut c_void*/, arg0: c_uint);
   // proto:  void QColor::setGreen(int green);
-  fn _ZN6QColor8setGreenEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN6QColor8setGreenEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QColor::getHsl(int * h, int * s, int * l, int * a);
-  fn _ZNK6QColor6getHslEPiS0_S0_S0_(qthis: *mut c_void, arg0: *mut c_int, arg1: *mut c_int, arg2: *mut c_int, arg3: *mut c_int);
+  fn _ZNK6QColor6getHslEPiS0_S0_S0_(qthis: u64 /* *mut c_void*/, arg0: *mut c_int, arg1: *mut c_int, arg2: *mut c_int, arg3: *mut c_int);
   // proto: static bool QColor::isValidColor(const QString & name);
   fn _ZN6QColor12isValidColorERK7QString(arg0: *mut c_void) -> c_char;
   // proto:  int QColor::hslSaturation();
-  fn _ZNK6QColor13hslSaturationEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK6QColor13hslSaturationEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto: static QColor QColor::fromRgbF(qreal r, qreal g, qreal b, qreal a);
   fn _ZN6QColor8fromRgbFEdddd(arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double) -> *mut c_void;
   // proto:  int QColor::blue();
-  fn _ZNK6QColor4blueEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK6QColor4blueEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QColor::hsvHue();
-  fn _ZNK6QColor6hsvHueEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK6QColor6hsvHueEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  qreal QColor::valueF();
-  fn _ZNK6QColor6valueFEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK6QColor6valueFEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  qreal QColor::cyanF();
-  fn _ZNK6QColor5cyanFEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK6QColor5cyanFEv(qthis: u64 /* *mut c_void*/) -> c_double;
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QColor)=16
+#[derive(Default)]
 pub struct QColor {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QColor {
-  pub fn inheritFrom(qthis: *mut c_void) -> QColor {
-    return QColor{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QColor {
+    return QColor{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  void QColor::getHsvF(qreal * h, qreal * s, qreal * v, qreal * a);
@@ -440,7 +441,7 @@ impl<'a> /*trait*/ QColor_fromHslF_s<QColor> for (f64, f64, f64, f64) {
     let arg2 = self.2  as c_double;
     let arg3 = self.3  as c_double;
     let mut ret = unsafe {_ZN6QColor8fromHslFEdddd(arg0, arg1, arg2, arg3)};
-    let mut ret1 = QColor::inheritFrom(ret);
+    let mut ret1 = QColor::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -537,7 +538,7 @@ impl<'a> /*trait*/ QColor_toHsl<QColor> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QColor5toHslEv()};
     let mut ret = unsafe {_ZNK6QColor5toHslEv(rsthis.qclsinst)};
-    let mut ret1 = QColor::inheritFrom(ret);
+    let mut ret1 = QColor::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -562,10 +563,10 @@ impl<'a> /*trait*/ QColor_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QColorC1Ev()};
     let ctysz: c_int = unsafe{QColor_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN6QColorC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN6QColorC1Ev()};
-    let rsthis = QColor{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN6QColorC1Ev()} as u64;
+    let rsthis = QColor{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -577,11 +578,11 @@ impl<'a> /*trait*/ QColor_New for (&'a  String) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QColorC1EPKc()};
     let ctysz: c_int = unsafe{QColor_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.as_ptr()  as *mut c_char;
     // unsafe {_ZN6QColorC1EPKc(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN6QColorC1EPKc(arg0)};
-    let rsthis = QColor{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN6QColorC1EPKc(arg0)} as u64;
+    let rsthis = QColor{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -683,7 +684,7 @@ impl<'a> /*trait*/ QColor_fromCmykF_s<QColor> for (f64, f64, f64, f64, f64) {
     let arg3 = self.3  as c_double;
     let arg4 = self.4  as c_double;
     let mut ret = unsafe {_ZN6QColor9fromCmykFEddddd(arg0, arg1, arg2, arg3, arg4)};
-    let mut ret1 = QColor::inheritFrom(ret);
+    let mut ret1 = QColor::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -708,7 +709,7 @@ impl<'a> /*trait*/ QColor_light<QColor> for (i32) {
     // unsafe{_ZNK6QColor5lightEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK6QColor5lightEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QColor::inheritFrom(ret);
+    let mut ret1 = QColor::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -759,7 +760,7 @@ impl<'a> /*trait*/ QColor_fromRgb_s<QColor> for (u32) {
     // unsafe{_ZN6QColor7fromRgbEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {_ZN6QColor7fromRgbEj(arg0)};
-    let mut ret1 = QColor::inheritFrom(ret);
+    let mut ret1 = QColor::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -858,7 +859,7 @@ impl<'a> /*trait*/ QColor_name<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QColor4nameEv()};
     let mut ret = unsafe {_ZNK6QColor4nameEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -957,7 +958,7 @@ impl<'a> /*trait*/ QColor_fromRgb_s<QColor> for (i32, i32, i32, i32) {
     let arg2 = self.2  as c_int;
     let arg3 = self.3  as c_int;
     let mut ret = unsafe {_ZN6QColor7fromRgbEiiii(arg0, arg1, arg2, arg3)};
-    let mut ret1 = QColor::inheritFrom(ret);
+    let mut ret1 = QColor::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1119,7 +1120,7 @@ impl<'a> /*trait*/ QColor_toCmyk<QColor> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QColor6toCmykEv()};
     let mut ret = unsafe {_ZNK6QColor6toCmykEv(rsthis.qclsinst)};
-    let mut ret1 = QColor::inheritFrom(ret);
+    let mut ret1 = QColor::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1238,7 +1239,7 @@ impl<'a> /*trait*/ QColor_toHsv<QColor> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QColor5toHsvEv()};
     let mut ret = unsafe {_ZNK6QColor5toHsvEv(rsthis.qclsinst)};
-    let mut ret1 = QColor::inheritFrom(ret);
+    let mut ret1 = QColor::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1250,11 +1251,11 @@ impl<'a> /*trait*/ QColor_New for (&'a QColor) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QColorC1ERKS_()};
     let ctysz: c_int = unsafe{QColor_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN6QColorC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN6QColorC1ERKS_(arg0)};
-    let rsthis = QColor{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN6QColorC1ERKS_(arg0)} as u64;
+    let rsthis = QColor{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1282,7 +1283,7 @@ impl<'a> /*trait*/ QColor_fromHsv_s<QColor> for (i32, i32, i32, i32) {
     let arg2 = self.2  as c_int;
     let arg3 = self.3  as c_int;
     let mut ret = unsafe {_ZN6QColor7fromHsvEiiii(arg0, arg1, arg2, arg3)};
-    let mut ret1 = QColor::inheritFrom(ret);
+    let mut ret1 = QColor::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1399,7 +1400,7 @@ impl<'a> /*trait*/ QColor_darker<QColor> for (i32) {
     // unsafe{_ZNK6QColor6darkerEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK6QColor6darkerEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QColor::inheritFrom(ret);
+    let mut ret1 = QColor::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1539,7 +1540,7 @@ impl<'a> /*trait*/ QColor_lighter<QColor> for (i32) {
     // unsafe{_ZNK6QColor7lighterEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK6QColor7lighterEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QColor::inheritFrom(ret);
+    let mut ret1 = QColor::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1563,7 +1564,7 @@ impl<'a> /*trait*/ QColor_toRgb<QColor> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QColor5toRgbEv()};
     let mut ret = unsafe {_ZNK6QColor5toRgbEv(rsthis.qclsinst)};
-    let mut ret1 = QColor::inheritFrom(ret);
+    let mut ret1 = QColor::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1638,7 +1639,7 @@ impl<'a> /*trait*/ QColor_fromCmyk_s<QColor> for (i32, i32, i32, i32, i32) {
     let arg3 = self.3  as c_int;
     let arg4 = self.4  as c_int;
     let mut ret = unsafe {_ZN6QColor8fromCmykEiiiii(arg0, arg1, arg2, arg3, arg4)};
-    let mut ret1 = QColor::inheritFrom(ret);
+    let mut ret1 = QColor::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1775,11 +1776,11 @@ impl<'a> /*trait*/ QColor_New for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QColorC1ERK7QString()};
     let ctysz: c_int = unsafe{QColor_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN6QColorC1ERK7QString(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN6QColorC1ERK7QString(arg0)};
-    let rsthis = QColor{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN6QColorC1ERK7QString(arg0)} as u64;
+    let rsthis = QColor{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1804,7 +1805,7 @@ impl<'a> /*trait*/ QColor_fromRgba_s<QColor> for (u32) {
     // unsafe{_ZN6QColor8fromRgbaEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {_ZN6QColor8fromRgbaEj(arg0)};
-    let mut ret1 = QColor::inheritFrom(ret);
+    let mut ret1 = QColor::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1914,14 +1915,14 @@ impl<'a> /*trait*/ QColor_New for (i32, i32, i32, i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QColorC1Eiiii()};
     let ctysz: c_int = unsafe{QColor_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as c_int;
     let arg3 = self.3  as c_int;
     // unsafe {_ZN6QColorC1Eiiii(qthis, arg0, arg1, arg2, arg3)};
-    let qthis: *mut c_void = unsafe {dector_ZN6QColorC1Eiiii(arg0, arg1, arg2, arg3)};
-    let rsthis = QColor{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN6QColorC1Eiiii(arg0, arg1, arg2, arg3)} as u64;
+    let rsthis = QColor{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1995,7 +1996,7 @@ impl<'a> /*trait*/ QColor_fromHsvF_s<QColor> for (f64, f64, f64, f64) {
     let arg2 = self.2  as c_double;
     let arg3 = self.3  as c_double;
     let mut ret = unsafe {_ZN6QColor8fromHsvFEdddd(arg0, arg1, arg2, arg3)};
-    let mut ret1 = QColor::inheritFrom(ret);
+    let mut ret1 = QColor::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2020,7 +2021,7 @@ impl<'a> /*trait*/ QColor_dark<QColor> for (i32) {
     // unsafe{_ZNK6QColor4darkEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK6QColor4darkEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QColor::inheritFrom(ret);
+    let mut ret1 = QColor::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2071,7 +2072,7 @@ impl<'a> /*trait*/ QColor_fromHsl_s<QColor> for (i32, i32, i32, i32) {
     let arg2 = self.2  as c_int;
     let arg3 = self.3  as c_int;
     let mut ret = unsafe {_ZN6QColor7fromHslEiiii(arg0, arg1, arg2, arg3)};
-    let mut ret1 = QColor::inheritFrom(ret);
+    let mut ret1 = QColor::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2109,11 +2110,11 @@ impl<'a> /*trait*/ QColor_New for (u32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QColorC1Ej()};
     let ctysz: c_int = unsafe{QColor_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_uint;
     // unsafe {_ZN6QColorC1Ej(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN6QColorC1Ej(arg0)};
-    let rsthis = QColor{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN6QColorC1Ej(arg0)} as u64;
+    let rsthis = QColor{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -2237,7 +2238,7 @@ impl<'a> /*trait*/ QColor_fromRgbF_s<QColor> for (f64, f64, f64, f64) {
     let arg2 = self.2  as c_double;
     let arg3 = self.3  as c_double;
     let mut ret = unsafe {_ZN6QColor8fromRgbFEdddd(arg0, arg1, arg2, arg3)};
-    let mut ret1 = QColor::inheritFrom(ret);
+    let mut ret1 = QColor::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }

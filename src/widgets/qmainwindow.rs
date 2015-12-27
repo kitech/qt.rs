@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtWidgets/qmainwindow.h
 // dst-file: /src/widgets/qmainwindow.rs
 //
@@ -40,94 +40,99 @@ use super::super::core::qpoint::QPoint; // 771
 extern {
   fn QMainWindow_Class_Size() -> c_int;
   // proto:  QStatusBar * QMainWindow::statusBar();
-  fn _ZNK11QMainWindow9statusBarEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK11QMainWindow9statusBarEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QMainWindow::setAnimated(bool enabled);
-  fn _ZN11QMainWindow11setAnimatedEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN11QMainWindow11setAnimatedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QMainWindow::setDockNestingEnabled(bool enabled);
-  fn _ZN11QMainWindow21setDockNestingEnabledEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN11QMainWindow21setDockNestingEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QMainWindow::iconSizeChanged(const QSize & iconSize);
-  fn _ZN11QMainWindow15iconSizeChangedERK5QSize(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QMainWindow15iconSizeChangedERK5QSize(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QMainWindow::unifiedTitleAndToolBarOnMac();
-  fn _ZNK11QMainWindow27unifiedTitleAndToolBarOnMacEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK11QMainWindow27unifiedTitleAndToolBarOnMacEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QWidget * QMainWindow::menuWidget();
-  fn _ZNK11QMainWindow10menuWidgetEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK11QMainWindow10menuWidgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QMainWindow::tabifyDockWidget(QDockWidget * first, QDockWidget * second);
-  fn _ZN11QMainWindow16tabifyDockWidgetEP11QDockWidgetS1_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN11QMainWindow16tabifyDockWidgetEP11QDockWidgetS1_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QMainWindow::setDocumentMode(bool enabled);
-  fn _ZN11QMainWindow15setDocumentModeEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN11QMainWindow15setDocumentModeEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QWidget * QMainWindow::centralWidget();
-  fn _ZNK11QMainWindow13centralWidgetEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK11QMainWindow13centralWidgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QMainWindow::removeDockWidget(QDockWidget * dockwidget);
-  fn _ZN11QMainWindow16removeDockWidgetEP11QDockWidget(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QMainWindow16removeDockWidgetEP11QDockWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMainWindow::QMainWindow(const QMainWindow & );
   fn dector_ZN11QMainWindowC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QMainWindowC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QMainWindowC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QMainWindow::isAnimated();
-  fn _ZNK11QMainWindow10isAnimatedEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK11QMainWindow10isAnimatedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QToolBar * QMainWindow::addToolBar(const QString & title);
-  fn _ZN11QMainWindow10addToolBarERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZN11QMainWindow10addToolBarERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QMainWindow::setIconSize(const QSize & iconSize);
-  fn _ZN11QMainWindow11setIconSizeERK5QSize(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QMainWindow11setIconSizeERK5QSize(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QByteArray QMainWindow::saveState(int version);
-  fn _ZNK11QMainWindow9saveStateEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
+  fn _ZNK11QMainWindow9saveStateEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  bool QMainWindow::restoreState(const QByteArray & state, int version);
-  fn _ZN11QMainWindow12restoreStateERK10QByteArrayi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) -> c_char;
+  fn _ZN11QMainWindow12restoreStateERK10QByteArrayi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> c_char;
   // proto:  void QMainWindow::insertToolBar(QToolBar * before, QToolBar * toolbar);
-  fn _ZN11QMainWindow13insertToolBarEP8QToolBarS1_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN11QMainWindow13insertToolBarEP8QToolBarS1_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  QMenu * QMainWindow::createPopupMenu();
-  fn _ZN11QMainWindow15createPopupMenuEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZN11QMainWindow15createPopupMenuEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QMainWindow::setUnifiedTitleAndToolBarOnMac(bool set);
-  fn _ZN11QMainWindow30setUnifiedTitleAndToolBarOnMacEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN11QMainWindow30setUnifiedTitleAndToolBarOnMacEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QMainWindow::addToolBar(QToolBar * toolbar);
-  fn _ZN11QMainWindow10addToolBarEP8QToolBar(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QMainWindow10addToolBarEP8QToolBar(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMainWindow::removeToolBarBreak(QToolBar * before);
-  fn _ZN11QMainWindow18removeToolBarBreakEP8QToolBar(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QMainWindow18removeToolBarBreakEP8QToolBar(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QMainWindow::toolBarBreak(QToolBar * toolbar);
-  fn _ZNK11QMainWindow12toolBarBreakEP8QToolBar(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn _ZNK11QMainWindow12toolBarBreakEP8QToolBar(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  bool QMainWindow::restoreDockWidget(QDockWidget * dockwidget);
-  fn _ZN11QMainWindow17restoreDockWidgetEP11QDockWidget(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn _ZN11QMainWindow17restoreDockWidgetEP11QDockWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  QMenuBar * QMainWindow::menuBar();
-  fn _ZNK11QMainWindow7menuBarEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK11QMainWindow7menuBarEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QMainWindow::setStatusBar(QStatusBar * statusbar);
-  fn _ZN11QMainWindow12setStatusBarEP10QStatusBar(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QMainWindow12setStatusBarEP10QStatusBar(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMainWindow::~QMainWindow();
-  fn _ZN11QMainWindowD0Ev(qthis: *mut c_void);
+  fn _ZN11QMainWindowD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QMainWindow::isSeparator(const QPoint & pos);
-  fn _ZNK11QMainWindow11isSeparatorERK6QPoint(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn _ZNK11QMainWindow11isSeparatorERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  QSize QMainWindow::iconSize();
-  fn _ZNK11QMainWindow8iconSizeEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK11QMainWindow8iconSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  const QMetaObject * QMainWindow::metaObject();
-  fn _ZNK11QMainWindow10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK11QMainWindow10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QMainWindow::insertToolBarBreak(QToolBar * before);
-  fn _ZN11QMainWindow18insertToolBarBreakEP8QToolBar(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QMainWindow18insertToolBarBreakEP8QToolBar(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QWidget * QMainWindow::takeCentralWidget();
-  fn _ZN11QMainWindow17takeCentralWidgetEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZN11QMainWindow17takeCentralWidgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QMainWindow::isDockNestingEnabled();
-  fn _ZNK11QMainWindow20isDockNestingEnabledEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK11QMainWindow20isDockNestingEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QMainWindow::documentMode();
-  fn _ZNK11QMainWindow12documentModeEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK11QMainWindow12documentModeEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QMainWindow::setMenuWidget(QWidget * menubar);
-  fn _ZN11QMainWindow13setMenuWidgetEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QMainWindow13setMenuWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMainWindow::removeToolBar(QToolBar * toolbar);
-  fn _ZN11QMainWindow13removeToolBarEP8QToolBar(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QMainWindow13removeToolBarEP8QToolBar(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMainWindow::setCentralWidget(QWidget * widget);
-  fn _ZN11QMainWindow16setCentralWidgetEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QMainWindow16setCentralWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMainWindow::setMenuBar(QMenuBar * menubar);
-  fn _ZN11QMainWindow10setMenuBarEP8QMenuBar(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QMainWindow10setMenuBarEP8QMenuBar(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QList<QDockWidget *> QMainWindow::tabifiedDockWidgets(QDockWidget * dockwidget);
-  fn _ZNK11QMainWindow19tabifiedDockWidgetsEP11QDockWidget(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZNK11QMainWindow19tabifiedDockWidgetsEP11QDockWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn QMainWindow_SlotProxy_connect__ZN11QMainWindow22toolButtonStyleChangedEN2Qt15ToolButtonStyleE(qthis: *mut c_void, fptr: *mut c_void);
+  fn QMainWindow_SlotProxy_connect__ZN11QMainWindow15iconSizeChangedERK5QSize(qthis: *mut c_void, fptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QMainWindow)=1
+#[derive(Default)]
 pub struct QMainWindow {
   qbase: QWidget,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _toolButtonStyleChanged_1: QMainWindow_toolButtonStyleChanged_signal,
+  pub _iconSizeChanged_1: QMainWindow_iconSizeChanged_signal,
 }
 
 impl /*struct*/ QMainWindow {
-  pub fn inheritFrom(qthis: *mut c_void) -> QMainWindow {
-    return QMainWindow{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QMainWindow {
+    return QMainWindow{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QMainWindow {
@@ -160,7 +165,7 @@ impl<'a> /*trait*/ QMainWindow_statusBar<QStatusBar> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMainWindow9statusBarEv()};
     let mut ret = unsafe {_ZNK11QMainWindow9statusBarEv(rsthis.qclsinst)};
-    let mut ret1 = QStatusBar::inheritFrom(ret);
+    let mut ret1 = QStatusBar::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -276,7 +281,7 @@ impl<'a> /*trait*/ QMainWindow_menuWidget<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMainWindow10menuWidgetEv()};
     let mut ret = unsafe {_ZNK11QMainWindow10menuWidgetEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget::inheritFrom(ret);
+    let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -347,7 +352,7 @@ impl<'a> /*trait*/ QMainWindow_centralWidget<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMainWindow13centralWidgetEv()};
     let mut ret = unsafe {_ZNK11QMainWindow13centralWidgetEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget::inheritFrom(ret);
+    let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -395,11 +400,11 @@ impl<'a> /*trait*/ QMainWindow_New for (&'a QMainWindow) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMainWindowC1ERKS_()};
     let ctysz: c_int = unsafe{QMainWindow_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN11QMainWindowC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN11QMainWindowC1ERKS_(arg0)};
-    let rsthis = QMainWindow{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN11QMainWindowC1ERKS_(arg0)} as u64;
+    let rsthis = QMainWindow{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -447,7 +452,7 @@ impl<'a> /*trait*/ QMainWindow_addToolBar<QToolBar> for (&'a QString) {
     // unsafe{_ZN11QMainWindow10addToolBarERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN11QMainWindow10addToolBarERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QToolBar::inheritFrom(ret);
+    let mut ret1 = QToolBar::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -495,7 +500,7 @@ impl<'a> /*trait*/ QMainWindow_saveState<QByteArray> for (i32) {
     // unsafe{_ZNK11QMainWindow9saveStateEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK11QMainWindow9saveStateEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -568,7 +573,7 @@ impl<'a> /*trait*/ QMainWindow_createPopupMenu<QMenu> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMainWindow15createPopupMenuEv()};
     let mut ret = unsafe {_ZN11QMainWindow15createPopupMenuEv(rsthis.qclsinst)};
-    let mut ret1 = QMenu::inheritFrom(ret);
+    let mut ret1 = QMenu::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -697,7 +702,7 @@ impl<'a> /*trait*/ QMainWindow_menuBar<QMenuBar> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMainWindow7menuBarEv()};
     let mut ret = unsafe {_ZNK11QMainWindow7menuBarEv(rsthis.qclsinst)};
-    let mut ret1 = QMenuBar::inheritFrom(ret);
+    let mut ret1 = QMenuBar::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -790,7 +795,7 @@ impl<'a> /*trait*/ QMainWindow_iconSize<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMainWindow8iconSizeEv()};
     let mut ret = unsafe {_ZNK11QMainWindow8iconSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize::inheritFrom(ret);
+    let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -859,7 +864,7 @@ impl<'a> /*trait*/ QMainWindow_takeCentralWidget<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMainWindow17takeCentralWidgetEv()};
     let mut ret = unsafe {_ZN11QMainWindow17takeCentralWidgetEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget::inheritFrom(ret);
+    let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1026,5 +1031,57 @@ impl<'a> /*trait*/ QMainWindow_tabifiedDockWidgets<()> for (&'a QDockWidget) {
   }
 }
 
+#[derive(Default)] // for QMainWindow_toolButtonStyleChanged
+pub struct QMainWindow_toolButtonStyleChanged_signal{poi:u64}
+impl /* struct */ QMainWindow {
+  pub fn toolButtonStyleChanged_1(self) -> QMainWindow_toolButtonStyleChanged_signal {
+     return QMainWindow_toolButtonStyleChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QMainWindow_toolButtonStyleChanged_signal {
+  pub fn connect<T: QMainWindow_toolButtonStyleChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QMainWindow_toolButtonStyleChanged_signal_connect {
+  fn connect(self, sigthis: QMainWindow_toolButtonStyleChanged_signal);
+}
+
+#[derive(Default)] // for QMainWindow_iconSizeChanged
+pub struct QMainWindow_iconSizeChanged_signal{poi:u64}
+impl /* struct */ QMainWindow {
+  pub fn iconSizeChanged_1(self) -> QMainWindow_iconSizeChanged_signal {
+     return QMainWindow_iconSizeChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QMainWindow_iconSizeChanged_signal {
+  pub fn connect<T: QMainWindow_iconSizeChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QMainWindow_iconSizeChanged_signal_connect {
+  fn connect(self, sigthis: QMainWindow_iconSizeChanged_signal);
+}
+
+// toolButtonStyleChanged(Qt::ToolButtonStyle)
+extern fn QMainWindow_toolButtonStyleChanged_signal_connect_cb_0(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QMainWindow_toolButtonStyleChanged_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QMainWindow_toolButtonStyleChanged_signal) {
+    // do smth...
+    unsafe {QMainWindow_SlotProxy_connect__ZN11QMainWindow22toolButtonStyleChangedEN2Qt15ToolButtonStyleE(sigthis.poi as *mut c_void, QMainWindow_toolButtonStyleChanged_signal_connect_cb_0 as *mut c_void)};
+  }
+}
+// iconSizeChanged(const class QSize &)
+extern fn QMainWindow_iconSizeChanged_signal_connect_cb_1(arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QMainWindow_iconSizeChanged_signal_connect for (extern fn(QSize)) {
+  fn connect(self, sigthis: QMainWindow_iconSizeChanged_signal) {
+    // do smth...
+    unsafe {QMainWindow_SlotProxy_connect__ZN11QMainWindow15iconSizeChangedERK5QSize(sigthis.poi as *mut c_void, QMainWindow_iconSizeChanged_signal_connect_cb_1 as *mut c_void)};
+  }
+}
 // <= body block end
 

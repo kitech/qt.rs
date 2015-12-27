@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qfuturewatcher.h
 // dst-file: /src/core/qfuturewatcher.rs
 //
@@ -33,76 +33,97 @@ use super::qstring::QString; // 773
 extern {
   fn QFutureWatcherBase_Class_Size() -> c_int;
   // proto:  void QFutureWatcherBase::finished();
-  fn _ZN18QFutureWatcherBase8finishedEv(qthis: *mut c_void);
+  fn _ZN18QFutureWatcherBase8finishedEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QFutureWatcherBase::isRunning();
-  fn _ZNK18QFutureWatcherBase9isRunningEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK18QFutureWatcherBase9isRunningEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QFutureWatcherBase::setPaused(bool paused);
-  fn _ZN18QFutureWatcherBase9setPausedEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN18QFutureWatcherBase9setPausedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  int QFutureWatcherBase::progressMinimum();
-  fn _ZNK18QFutureWatcherBase15progressMinimumEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK18QFutureWatcherBase15progressMinimumEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QFutureWatcherBase::resume();
-  fn _ZN18QFutureWatcherBase6resumeEv(qthis: *mut c_void);
+  fn _ZN18QFutureWatcherBase6resumeEv(qthis: u64 /* *mut c_void*/);
   // proto:  const QMetaObject * QFutureWatcherBase::metaObject();
-  fn _ZNK18QFutureWatcherBase10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK18QFutureWatcherBase10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QFutureWatcherBase::resultsReadyAt(int beginIndex, int endIndex);
-  fn _ZN18QFutureWatcherBase14resultsReadyAtEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
+  fn _ZN18QFutureWatcherBase14resultsReadyAtEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  bool QFutureWatcherBase::isFinished();
-  fn _ZNK18QFutureWatcherBase10isFinishedEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK18QFutureWatcherBase10isFinishedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QFutureWatcherBase::progressValueChanged(int progressValue);
-  fn _ZN18QFutureWatcherBase20progressValueChangedEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN18QFutureWatcherBase20progressValueChangedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QFutureWatcherBase::progressMaximum();
-  fn _ZNK18QFutureWatcherBase15progressMaximumEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK18QFutureWatcherBase15progressMaximumEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QFutureWatcherBase::event(QEvent * event);
-  fn _ZN18QFutureWatcherBase5eventEP6QEvent(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn _ZN18QFutureWatcherBase5eventEP6QEvent(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  void QFutureWatcherBase::progressTextChanged(const QString & progressText);
-  fn _ZN18QFutureWatcherBase19progressTextChangedERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN18QFutureWatcherBase19progressTextChangedERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QFutureWatcherBase::isCanceled();
-  fn _ZNK18QFutureWatcherBase10isCanceledEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK18QFutureWatcherBase10isCanceledEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QFutureWatcherBase::resultReadyAt(int resultIndex);
-  fn _ZN18QFutureWatcherBase13resultReadyAtEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN18QFutureWatcherBase13resultReadyAtEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QFutureWatcherBase::progressValue();
-  fn _ZNK18QFutureWatcherBase13progressValueEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK18QFutureWatcherBase13progressValueEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QFutureWatcherBase::isStarted();
-  fn _ZNK18QFutureWatcherBase9isStartedEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK18QFutureWatcherBase9isStartedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QFutureWatcherBase::paused();
-  fn _ZN18QFutureWatcherBase6pausedEv(qthis: *mut c_void);
+  fn _ZN18QFutureWatcherBase6pausedEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QFutureWatcherBase::started();
-  fn _ZN18QFutureWatcherBase7startedEv(qthis: *mut c_void);
+  fn _ZN18QFutureWatcherBase7startedEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QFutureWatcherBase::setPendingResultsLimit(int limit);
-  fn _ZN18QFutureWatcherBase22setPendingResultsLimitEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN18QFutureWatcherBase22setPendingResultsLimitEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QFutureWatcherBase::resumed();
-  fn _ZN18QFutureWatcherBase7resumedEv(qthis: *mut c_void);
+  fn _ZN18QFutureWatcherBase7resumedEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QFutureWatcherBase::cancel();
-  fn _ZN18QFutureWatcherBase6cancelEv(qthis: *mut c_void);
+  fn _ZN18QFutureWatcherBase6cancelEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QFutureWatcherBase::progressRangeChanged(int minimum, int maximum);
-  fn _ZN18QFutureWatcherBase20progressRangeChangedEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
+  fn _ZN18QFutureWatcherBase20progressRangeChangedEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  void QFutureWatcherBase::canceled();
-  fn _ZN18QFutureWatcherBase8canceledEv(qthis: *mut c_void);
+  fn _ZN18QFutureWatcherBase8canceledEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QFutureWatcherBase::isPaused();
-  fn _ZNK18QFutureWatcherBase8isPausedEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK18QFutureWatcherBase8isPausedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QFutureWatcherBase::pause();
-  fn _ZN18QFutureWatcherBase5pauseEv(qthis: *mut c_void);
+  fn _ZN18QFutureWatcherBase5pauseEv(qthis: u64 /* *mut c_void*/);
   // proto:  QString QFutureWatcherBase::progressText();
-  fn _ZNK18QFutureWatcherBase12progressTextEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK18QFutureWatcherBase12progressTextEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QFutureWatcherBase::QFutureWatcherBase(QObject * parent);
   fn dector_ZN18QFutureWatcherBaseC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN18QFutureWatcherBaseC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN18QFutureWatcherBaseC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QFutureWatcherBase::togglePaused();
-  fn _ZN18QFutureWatcherBase12togglePausedEv(qthis: *mut c_void);
+  fn _ZN18QFutureWatcherBase12togglePausedEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QFutureWatcherBase::waitForFinished();
-  fn _ZN18QFutureWatcherBase15waitForFinishedEv(qthis: *mut c_void);
+  fn _ZN18QFutureWatcherBase15waitForFinishedEv(qthis: u64 /* *mut c_void*/);
+  fn QFutureWatcherBase_SlotProxy_connect__ZN18QFutureWatcherBase8finishedEv(qthis: *mut c_void, fptr: *mut c_void);
+  fn QFutureWatcherBase_SlotProxy_connect__ZN18QFutureWatcherBase19progressTextChangedERK7QString(qthis: *mut c_void, fptr: *mut c_void);
+  fn QFutureWatcherBase_SlotProxy_connect__ZN18QFutureWatcherBase6pausedEv(qthis: *mut c_void, fptr: *mut c_void);
+  fn QFutureWatcherBase_SlotProxy_connect__ZN18QFutureWatcherBase7startedEv(qthis: *mut c_void, fptr: *mut c_void);
+  fn QFutureWatcherBase_SlotProxy_connect__ZN18QFutureWatcherBase7resumedEv(qthis: *mut c_void, fptr: *mut c_void);
+  fn QFutureWatcherBase_SlotProxy_connect__ZN18QFutureWatcherBase20progressRangeChangedEii(qthis: *mut c_void, fptr: *mut c_void);
+  fn QFutureWatcherBase_SlotProxy_connect__ZN18QFutureWatcherBase8canceledEv(qthis: *mut c_void, fptr: *mut c_void);
+  fn QFutureWatcherBase_SlotProxy_connect__ZN18QFutureWatcherBase20progressValueChangedEi(qthis: *mut c_void, fptr: *mut c_void);
+  fn QFutureWatcherBase_SlotProxy_connect__ZN18QFutureWatcherBase13resultReadyAtEi(qthis: *mut c_void, fptr: *mut c_void);
+  fn QFutureWatcherBase_SlotProxy_connect__ZN18QFutureWatcherBase14resultsReadyAtEii(qthis: *mut c_void, fptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QFutureWatcherBase)=1
+#[derive(Default)]
 pub struct QFutureWatcherBase {
   qbase: QObject,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _progressRangeChanged_1: QFutureWatcherBase_progressRangeChanged_signal,
+  pub _resumed_1: QFutureWatcherBase_resumed_signal,
+  pub _progressValueChanged_1: QFutureWatcherBase_progressValueChanged_signal,
+  pub _started_1: QFutureWatcherBase_started_signal,
+  pub _resultReadyAt_1: QFutureWatcherBase_resultReadyAt_signal,
+  pub _resultsReadyAt_1: QFutureWatcherBase_resultsReadyAt_signal,
+  pub _paused_1: QFutureWatcherBase_paused_signal,
+  pub _canceled_1: QFutureWatcherBase_canceled_signal,
+  pub _finished_1: QFutureWatcherBase_finished_signal,
+  pub _progressTextChanged_1: QFutureWatcherBase_progressTextChanged_signal,
 }
 
 impl /*struct*/ QFutureWatcherBase {
-  pub fn inheritFrom(qthis: *mut c_void) -> QFutureWatcherBase {
-    return QFutureWatcherBase{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QFutureWatcherBase {
+    return QFutureWatcherBase{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QFutureWatcherBase {
@@ -704,7 +725,7 @@ impl<'a> /*trait*/ QFutureWatcherBase_progressText<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QFutureWatcherBase12progressTextEv()};
     let mut ret = unsafe {_ZNK18QFutureWatcherBase12progressTextEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -729,11 +750,11 @@ impl<'a> /*trait*/ QFutureWatcherBase_New for (&'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QFutureWatcherBaseC1EP7QObject()};
     let ctysz: c_int = unsafe{QFutureWatcherBase_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN18QFutureWatcherBaseC1EP7QObject(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN18QFutureWatcherBaseC1EP7QObject(arg0)};
-    let rsthis = QFutureWatcherBase{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN18QFutureWatcherBaseC1EP7QObject(arg0)} as u64;
+    let rsthis = QFutureWatcherBase{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -783,5 +804,265 @@ impl<'a> /*trait*/ QFutureWatcherBase_waitForFinished<()> for () {
   }
 }
 
+#[derive(Default)] // for QFutureWatcherBase_progressRangeChanged
+pub struct QFutureWatcherBase_progressRangeChanged_signal{poi:u64}
+impl /* struct */ QFutureWatcherBase {
+  pub fn progressRangeChanged_1(self) -> QFutureWatcherBase_progressRangeChanged_signal {
+     return QFutureWatcherBase_progressRangeChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QFutureWatcherBase_progressRangeChanged_signal {
+  pub fn connect<T: QFutureWatcherBase_progressRangeChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QFutureWatcherBase_progressRangeChanged_signal_connect {
+  fn connect(self, sigthis: QFutureWatcherBase_progressRangeChanged_signal);
+}
+
+#[derive(Default)] // for QFutureWatcherBase_resumed
+pub struct QFutureWatcherBase_resumed_signal{poi:u64}
+impl /* struct */ QFutureWatcherBase {
+  pub fn resumed_1(self) -> QFutureWatcherBase_resumed_signal {
+     return QFutureWatcherBase_resumed_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QFutureWatcherBase_resumed_signal {
+  pub fn connect<T: QFutureWatcherBase_resumed_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QFutureWatcherBase_resumed_signal_connect {
+  fn connect(self, sigthis: QFutureWatcherBase_resumed_signal);
+}
+
+#[derive(Default)] // for QFutureWatcherBase_progressValueChanged
+pub struct QFutureWatcherBase_progressValueChanged_signal{poi:u64}
+impl /* struct */ QFutureWatcherBase {
+  pub fn progressValueChanged_1(self) -> QFutureWatcherBase_progressValueChanged_signal {
+     return QFutureWatcherBase_progressValueChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QFutureWatcherBase_progressValueChanged_signal {
+  pub fn connect<T: QFutureWatcherBase_progressValueChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QFutureWatcherBase_progressValueChanged_signal_connect {
+  fn connect(self, sigthis: QFutureWatcherBase_progressValueChanged_signal);
+}
+
+#[derive(Default)] // for QFutureWatcherBase_started
+pub struct QFutureWatcherBase_started_signal{poi:u64}
+impl /* struct */ QFutureWatcherBase {
+  pub fn started_1(self) -> QFutureWatcherBase_started_signal {
+     return QFutureWatcherBase_started_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QFutureWatcherBase_started_signal {
+  pub fn connect<T: QFutureWatcherBase_started_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QFutureWatcherBase_started_signal_connect {
+  fn connect(self, sigthis: QFutureWatcherBase_started_signal);
+}
+
+#[derive(Default)] // for QFutureWatcherBase_resultReadyAt
+pub struct QFutureWatcherBase_resultReadyAt_signal{poi:u64}
+impl /* struct */ QFutureWatcherBase {
+  pub fn resultReadyAt_1(self) -> QFutureWatcherBase_resultReadyAt_signal {
+     return QFutureWatcherBase_resultReadyAt_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QFutureWatcherBase_resultReadyAt_signal {
+  pub fn connect<T: QFutureWatcherBase_resultReadyAt_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QFutureWatcherBase_resultReadyAt_signal_connect {
+  fn connect(self, sigthis: QFutureWatcherBase_resultReadyAt_signal);
+}
+
+#[derive(Default)] // for QFutureWatcherBase_resultsReadyAt
+pub struct QFutureWatcherBase_resultsReadyAt_signal{poi:u64}
+impl /* struct */ QFutureWatcherBase {
+  pub fn resultsReadyAt_1(self) -> QFutureWatcherBase_resultsReadyAt_signal {
+     return QFutureWatcherBase_resultsReadyAt_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QFutureWatcherBase_resultsReadyAt_signal {
+  pub fn connect<T: QFutureWatcherBase_resultsReadyAt_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QFutureWatcherBase_resultsReadyAt_signal_connect {
+  fn connect(self, sigthis: QFutureWatcherBase_resultsReadyAt_signal);
+}
+
+#[derive(Default)] // for QFutureWatcherBase_paused
+pub struct QFutureWatcherBase_paused_signal{poi:u64}
+impl /* struct */ QFutureWatcherBase {
+  pub fn paused_1(self) -> QFutureWatcherBase_paused_signal {
+     return QFutureWatcherBase_paused_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QFutureWatcherBase_paused_signal {
+  pub fn connect<T: QFutureWatcherBase_paused_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QFutureWatcherBase_paused_signal_connect {
+  fn connect(self, sigthis: QFutureWatcherBase_paused_signal);
+}
+
+#[derive(Default)] // for QFutureWatcherBase_canceled
+pub struct QFutureWatcherBase_canceled_signal{poi:u64}
+impl /* struct */ QFutureWatcherBase {
+  pub fn canceled_1(self) -> QFutureWatcherBase_canceled_signal {
+     return QFutureWatcherBase_canceled_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QFutureWatcherBase_canceled_signal {
+  pub fn connect<T: QFutureWatcherBase_canceled_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QFutureWatcherBase_canceled_signal_connect {
+  fn connect(self, sigthis: QFutureWatcherBase_canceled_signal);
+}
+
+#[derive(Default)] // for QFutureWatcherBase_finished
+pub struct QFutureWatcherBase_finished_signal{poi:u64}
+impl /* struct */ QFutureWatcherBase {
+  pub fn finished_1(self) -> QFutureWatcherBase_finished_signal {
+     return QFutureWatcherBase_finished_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QFutureWatcherBase_finished_signal {
+  pub fn connect<T: QFutureWatcherBase_finished_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QFutureWatcherBase_finished_signal_connect {
+  fn connect(self, sigthis: QFutureWatcherBase_finished_signal);
+}
+
+#[derive(Default)] // for QFutureWatcherBase_progressTextChanged
+pub struct QFutureWatcherBase_progressTextChanged_signal{poi:u64}
+impl /* struct */ QFutureWatcherBase {
+  pub fn progressTextChanged_1(self) -> QFutureWatcherBase_progressTextChanged_signal {
+     return QFutureWatcherBase_progressTextChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QFutureWatcherBase_progressTextChanged_signal {
+  pub fn connect<T: QFutureWatcherBase_progressTextChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QFutureWatcherBase_progressTextChanged_signal_connect {
+  fn connect(self, sigthis: QFutureWatcherBase_progressTextChanged_signal);
+}
+
+// finished()
+extern fn QFutureWatcherBase_finished_signal_connect_cb_0() {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QFutureWatcherBase_finished_signal_connect for (extern fn()) {
+  fn connect(self, sigthis: QFutureWatcherBase_finished_signal) {
+    // do smth...
+    unsafe {QFutureWatcherBase_SlotProxy_connect__ZN18QFutureWatcherBase8finishedEv(sigthis.poi as *mut c_void, QFutureWatcherBase_finished_signal_connect_cb_0 as *mut c_void)};
+  }
+}
+// progressTextChanged(const class QString &)
+extern fn QFutureWatcherBase_progressTextChanged_signal_connect_cb_1(arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QFutureWatcherBase_progressTextChanged_signal_connect for (extern fn(QString)) {
+  fn connect(self, sigthis: QFutureWatcherBase_progressTextChanged_signal) {
+    // do smth...
+    unsafe {QFutureWatcherBase_SlotProxy_connect__ZN18QFutureWatcherBase19progressTextChangedERK7QString(sigthis.poi as *mut c_void, QFutureWatcherBase_progressTextChanged_signal_connect_cb_1 as *mut c_void)};
+  }
+}
+// paused()
+extern fn QFutureWatcherBase_paused_signal_connect_cb_2() {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QFutureWatcherBase_paused_signal_connect for (extern fn()) {
+  fn connect(self, sigthis: QFutureWatcherBase_paused_signal) {
+    // do smth...
+    unsafe {QFutureWatcherBase_SlotProxy_connect__ZN18QFutureWatcherBase6pausedEv(sigthis.poi as *mut c_void, QFutureWatcherBase_paused_signal_connect_cb_2 as *mut c_void)};
+  }
+}
+// started()
+extern fn QFutureWatcherBase_started_signal_connect_cb_3() {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QFutureWatcherBase_started_signal_connect for (extern fn()) {
+  fn connect(self, sigthis: QFutureWatcherBase_started_signal) {
+    // do smth...
+    unsafe {QFutureWatcherBase_SlotProxy_connect__ZN18QFutureWatcherBase7startedEv(sigthis.poi as *mut c_void, QFutureWatcherBase_started_signal_connect_cb_3 as *mut c_void)};
+  }
+}
+// resumed()
+extern fn QFutureWatcherBase_resumed_signal_connect_cb_4() {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QFutureWatcherBase_resumed_signal_connect for (extern fn()) {
+  fn connect(self, sigthis: QFutureWatcherBase_resumed_signal) {
+    // do smth...
+    unsafe {QFutureWatcherBase_SlotProxy_connect__ZN18QFutureWatcherBase7resumedEv(sigthis.poi as *mut c_void, QFutureWatcherBase_resumed_signal_connect_cb_4 as *mut c_void)};
+  }
+}
+// progressRangeChanged(int, int)
+extern fn QFutureWatcherBase_progressRangeChanged_signal_connect_cb_5(arg0: c_int, arg1: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QFutureWatcherBase_progressRangeChanged_signal_connect for (extern fn(i32, i32)) {
+  fn connect(self, sigthis: QFutureWatcherBase_progressRangeChanged_signal) {
+    // do smth...
+    unsafe {QFutureWatcherBase_SlotProxy_connect__ZN18QFutureWatcherBase20progressRangeChangedEii(sigthis.poi as *mut c_void, QFutureWatcherBase_progressRangeChanged_signal_connect_cb_5 as *mut c_void)};
+  }
+}
+// canceled()
+extern fn QFutureWatcherBase_canceled_signal_connect_cb_6() {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QFutureWatcherBase_canceled_signal_connect for (extern fn()) {
+  fn connect(self, sigthis: QFutureWatcherBase_canceled_signal) {
+    // do smth...
+    unsafe {QFutureWatcherBase_SlotProxy_connect__ZN18QFutureWatcherBase8canceledEv(sigthis.poi as *mut c_void, QFutureWatcherBase_canceled_signal_connect_cb_6 as *mut c_void)};
+  }
+}
+// progressValueChanged(int)
+extern fn QFutureWatcherBase_progressValueChanged_signal_connect_cb_7(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QFutureWatcherBase_progressValueChanged_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QFutureWatcherBase_progressValueChanged_signal) {
+    // do smth...
+    unsafe {QFutureWatcherBase_SlotProxy_connect__ZN18QFutureWatcherBase20progressValueChangedEi(sigthis.poi as *mut c_void, QFutureWatcherBase_progressValueChanged_signal_connect_cb_7 as *mut c_void)};
+  }
+}
+// resultReadyAt(int)
+extern fn QFutureWatcherBase_resultReadyAt_signal_connect_cb_8(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QFutureWatcherBase_resultReadyAt_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QFutureWatcherBase_resultReadyAt_signal) {
+    // do smth...
+    unsafe {QFutureWatcherBase_SlotProxy_connect__ZN18QFutureWatcherBase13resultReadyAtEi(sigthis.poi as *mut c_void, QFutureWatcherBase_resultReadyAt_signal_connect_cb_8 as *mut c_void)};
+  }
+}
+// resultsReadyAt(int, int)
+extern fn QFutureWatcherBase_resultsReadyAt_signal_connect_cb_9(arg0: c_int, arg1: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QFutureWatcherBase_resultsReadyAt_signal_connect for (extern fn(i32, i32)) {
+  fn connect(self, sigthis: QFutureWatcherBase_resultsReadyAt_signal) {
+    // do smth...
+    unsafe {QFutureWatcherBase_SlotProxy_connect__ZN18QFutureWatcherBase14resultsReadyAtEii(sigthis.poi as *mut c_void, QFutureWatcherBase_resultsReadyAt_signal_connect_cb_9 as *mut c_void)};
+  }
+}
 // <= body block end
 

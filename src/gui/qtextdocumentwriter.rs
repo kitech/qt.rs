@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtGui/qtextdocumentwriter.h
 // dst-file: /src/gui/qtextdocumentwriter.rs
 //
@@ -36,53 +36,54 @@ use super::qtextdocumentfragment::QTextDocumentFragment; // 773
 extern {
   fn QTextDocumentWriter_Class_Size() -> c_int;
   // proto:  void QTextDocumentWriter::setCodec(QTextCodec * codec);
-  fn _ZN19QTextDocumentWriter8setCodecEP10QTextCodec(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN19QTextDocumentWriter8setCodecEP10QTextCodec(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTextDocumentWriter::QTextDocumentWriter(QIODevice * device, const QByteArray & format);
   fn dector_ZN19QTextDocumentWriterC1EP9QIODeviceRK10QByteArray(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN19QTextDocumentWriterC1EP9QIODeviceRK10QByteArray(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN19QTextDocumentWriterC1EP9QIODeviceRK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QTextDocumentWriter::setFileName(const QString & fileName);
-  fn _ZN19QTextDocumentWriter11setFileNameERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN19QTextDocumentWriter11setFileNameERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QByteArray QTextDocumentWriter::format();
-  fn _ZNK19QTextDocumentWriter6formatEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK19QTextDocumentWriter6formatEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QTextDocumentWriter::setDevice(QIODevice * device);
-  fn _ZN19QTextDocumentWriter9setDeviceEP9QIODevice(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN19QTextDocumentWriter9setDeviceEP9QIODevice(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTextDocumentWriter::QTextDocumentWriter(const QString & fileName, const QByteArray & format);
   fn dector_ZN19QTextDocumentWriterC1ERK7QStringRK10QByteArray(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN19QTextDocumentWriterC1ERK7QStringRK10QByteArray(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN19QTextDocumentWriterC1ERK7QStringRK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QTextDocumentWriter::setFormat(const QByteArray & format);
-  fn _ZN19QTextDocumentWriter9setFormatERK10QByteArray(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN19QTextDocumentWriter9setFormatERK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QTextDocumentWriter::write(const QTextDocument * document);
-  fn _ZN19QTextDocumentWriter5writeEPK13QTextDocument(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn _ZN19QTextDocumentWriter5writeEPK13QTextDocument(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  bool QTextDocumentWriter::write(const QTextDocumentFragment & fragment);
-  fn _ZN19QTextDocumentWriter5writeERK21QTextDocumentFragment(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn _ZN19QTextDocumentWriter5writeERK21QTextDocumentFragment(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  void QTextDocumentWriter::QTextDocumentWriter();
   fn dector_ZN19QTextDocumentWriterC1Ev() -> *mut c_void;
-  fn _ZN19QTextDocumentWriterC1Ev(qthis: *mut c_void);
+  fn _ZN19QTextDocumentWriterC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QTextCodec * QTextDocumentWriter::codec();
-  fn _ZNK19QTextDocumentWriter5codecEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK19QTextDocumentWriter5codecEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QTextDocumentWriter::fileName();
-  fn _ZNK19QTextDocumentWriter8fileNameEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK19QTextDocumentWriter8fileNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto: static QList<QByteArray> QTextDocumentWriter::supportedDocumentFormats();
   fn _ZN19QTextDocumentWriter24supportedDocumentFormatsEv();
   // proto:  QIODevice * QTextDocumentWriter::device();
-  fn _ZNK19QTextDocumentWriter6deviceEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK19QTextDocumentWriter6deviceEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QTextDocumentWriter::~QTextDocumentWriter();
-  fn _ZN19QTextDocumentWriterD0Ev(qthis: *mut c_void);
+  fn _ZN19QTextDocumentWriterD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QTextDocumentWriter::QTextDocumentWriter(const QTextDocumentWriter & );
   fn dector_ZN19QTextDocumentWriterC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN19QTextDocumentWriterC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN19QTextDocumentWriterC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QTextDocumentWriter)=8
+#[derive(Default)]
 pub struct QTextDocumentWriter {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QTextDocumentWriter {
-  pub fn inheritFrom(qthis: *mut c_void) -> QTextDocumentWriter {
-    return QTextDocumentWriter{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QTextDocumentWriter {
+    return QTextDocumentWriter{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  void QTextDocumentWriter::setCodec(QTextCodec * codec);
@@ -127,12 +128,12 @@ impl<'a> /*trait*/ QTextDocumentWriter_New for (&'a QIODevice, &'a QByteArray) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QTextDocumentWriterC1EP9QIODeviceRK10QByteArray()};
     let ctysz: c_int = unsafe{QTextDocumentWriter_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     // unsafe {_ZN19QTextDocumentWriterC1EP9QIODeviceRK10QByteArray(qthis, arg0, arg1)};
-    let qthis: *mut c_void = unsafe {dector_ZN19QTextDocumentWriterC1EP9QIODeviceRK10QByteArray(arg0, arg1)};
-    let rsthis = QTextDocumentWriter{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN19QTextDocumentWriterC1EP9QIODeviceRK10QByteArray(arg0, arg1)} as u64;
+    let rsthis = QTextDocumentWriter{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -179,7 +180,7 @@ impl<'a> /*trait*/ QTextDocumentWriter_format<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QTextDocumentWriter6formatEv()};
     let mut ret = unsafe {_ZNK19QTextDocumentWriter6formatEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -214,12 +215,12 @@ impl<'a> /*trait*/ QTextDocumentWriter_New for (&'a QString, &'a QByteArray) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QTextDocumentWriterC1ERK7QStringRK10QByteArray()};
     let ctysz: c_int = unsafe{QTextDocumentWriter_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     // unsafe {_ZN19QTextDocumentWriterC1ERK7QStringRK10QByteArray(qthis, arg0, arg1)};
-    let qthis: *mut c_void = unsafe {dector_ZN19QTextDocumentWriterC1ERK7QStringRK10QByteArray(arg0, arg1)};
-    let rsthis = QTextDocumentWriter{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN19QTextDocumentWriterC1ERK7QStringRK10QByteArray(arg0, arg1)} as u64;
+    let rsthis = QTextDocumentWriter{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -290,10 +291,10 @@ impl<'a> /*trait*/ QTextDocumentWriter_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QTextDocumentWriterC1Ev()};
     let ctysz: c_int = unsafe{QTextDocumentWriter_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN19QTextDocumentWriterC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN19QTextDocumentWriterC1Ev()};
-    let rsthis = QTextDocumentWriter{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN19QTextDocumentWriterC1Ev()} as u64;
+    let rsthis = QTextDocumentWriter{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -317,7 +318,7 @@ impl<'a> /*trait*/ QTextDocumentWriter_codec<QTextCodec> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QTextDocumentWriter5codecEv()};
     let mut ret = unsafe {_ZNK19QTextDocumentWriter5codecEv(rsthis.qclsinst)};
-    let mut ret1 = QTextCodec::inheritFrom(ret);
+    let mut ret1 = QTextCodec::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -341,7 +342,7 @@ impl<'a> /*trait*/ QTextDocumentWriter_fileName<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QTextDocumentWriter8fileNameEv()};
     let mut ret = unsafe {_ZNK19QTextDocumentWriter8fileNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -387,7 +388,7 @@ impl<'a> /*trait*/ QTextDocumentWriter_device<QIODevice> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QTextDocumentWriter6deviceEv()};
     let mut ret = unsafe {_ZNK19QTextDocumentWriter6deviceEv(rsthis.qclsinst)};
-    let mut ret1 = QIODevice::inheritFrom(ret);
+    let mut ret1 = QIODevice::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -421,11 +422,11 @@ impl<'a> /*trait*/ QTextDocumentWriter_New for (&'a QTextDocumentWriter) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QTextDocumentWriterC1ERKS_()};
     let ctysz: c_int = unsafe{QTextDocumentWriter_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN19QTextDocumentWriterC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN19QTextDocumentWriterC1ERKS_(arg0)};
-    let rsthis = QTextDocumentWriter{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN19QTextDocumentWriterC1ERKS_(arg0)} as u64;
+    let rsthis = QTextDocumentWriter{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }

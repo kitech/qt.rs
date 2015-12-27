@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qfilesystemwatcher.h
 // dst-file: /src/core/qfilesystemwatcher.rs
 //
@@ -33,39 +33,42 @@ use super::qstringlist::QStringList; // 773
 extern {
   fn QFileSystemWatcher_Class_Size() -> c_int;
   // proto:  void QFileSystemWatcher::~QFileSystemWatcher();
-  fn _ZN18QFileSystemWatcherD0Ev(qthis: *mut c_void);
+  fn _ZN18QFileSystemWatcherD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QFileSystemWatcher::removePath(const QString & file);
-  fn _ZN18QFileSystemWatcher10removePathERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn _ZN18QFileSystemWatcher10removePathERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  QStringList QFileSystemWatcher::directories();
-  fn _ZNK18QFileSystemWatcher11directoriesEv(qthis: *mut c_void);
+  fn _ZNK18QFileSystemWatcher11directoriesEv(qthis: u64 /* *mut c_void*/);
   // proto:  QStringList QFileSystemWatcher::files();
-  fn _ZNK18QFileSystemWatcher5filesEv(qthis: *mut c_void);
+  fn _ZNK18QFileSystemWatcher5filesEv(qthis: u64 /* *mut c_void*/);
   // proto:  QStringList QFileSystemWatcher::addPaths(const QStringList & files);
-  fn _ZN18QFileSystemWatcher8addPathsERK11QStringList(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN18QFileSystemWatcher8addPathsERK11QStringList(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QStringList QFileSystemWatcher::removePaths(const QStringList & files);
-  fn _ZN18QFileSystemWatcher11removePathsERK11QStringList(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN18QFileSystemWatcher11removePathsERK11QStringList(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QFileSystemWatcher::QFileSystemWatcher(QObject * parent);
   fn dector_ZN18QFileSystemWatcherC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN18QFileSystemWatcherC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN18QFileSystemWatcherC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QFileSystemWatcher::addPath(const QString & file);
-  fn _ZN18QFileSystemWatcher7addPathERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn _ZN18QFileSystemWatcher7addPathERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  const QMetaObject * QFileSystemWatcher::metaObject();
-  fn _ZNK18QFileSystemWatcher10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK18QFileSystemWatcher10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QFileSystemWatcher::QFileSystemWatcher(const QStringList & paths, QObject * parent);
   fn dector_ZN18QFileSystemWatcherC1ERK11QStringListP7QObject(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN18QFileSystemWatcherC1ERK11QStringListP7QObject(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN18QFileSystemWatcherC1ERK11QStringListP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QFileSystemWatcher)=1
+#[derive(Default)]
 pub struct QFileSystemWatcher {
   qbase: QObject,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _directoryChanged_1: QFileSystemWatcher_directoryChanged_signal,
+  pub _fileChanged_1: QFileSystemWatcher_fileChanged_signal,
 }
 
 impl /*struct*/ QFileSystemWatcher {
-  pub fn inheritFrom(qthis: *mut c_void) -> QFileSystemWatcher {
-    return QFileSystemWatcher{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QFileSystemWatcher {
+    return QFileSystemWatcher{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QFileSystemWatcher {
@@ -235,11 +238,11 @@ impl<'a> /*trait*/ QFileSystemWatcher_New for (&'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QFileSystemWatcherC1EP7QObject()};
     let ctysz: c_int = unsafe{QFileSystemWatcher_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN18QFileSystemWatcherC1EP7QObject(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN18QFileSystemWatcherC1EP7QObject(arg0)};
-    let rsthis = QFileSystemWatcher{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN18QFileSystemWatcherC1EP7QObject(arg0)} as u64;
+    let rsthis = QFileSystemWatcher{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -297,15 +300,47 @@ impl<'a> /*trait*/ QFileSystemWatcher_New for (&'a QStringList, &'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QFileSystemWatcherC1ERK11QStringListP7QObject()};
     let ctysz: c_int = unsafe{QFileSystemWatcher_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     // unsafe {_ZN18QFileSystemWatcherC1ERK11QStringListP7QObject(qthis, arg0, arg1)};
-    let qthis: *mut c_void = unsafe {dector_ZN18QFileSystemWatcherC1ERK11QStringListP7QObject(arg0, arg1)};
-    let rsthis = QFileSystemWatcher{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN18QFileSystemWatcherC1ERK11QStringListP7QObject(arg0, arg1)} as u64;
+    let rsthis = QFileSystemWatcher{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
+}
+
+#[derive(Default)] // for QFileSystemWatcher_directoryChanged
+pub struct QFileSystemWatcher_directoryChanged_signal{poi:u64}
+impl /* struct */ QFileSystemWatcher {
+  pub fn directoryChanged_1(self) -> QFileSystemWatcher_directoryChanged_signal {
+     return QFileSystemWatcher_directoryChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QFileSystemWatcher_directoryChanged_signal {
+  pub fn connect<T: QFileSystemWatcher_directoryChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QFileSystemWatcher_directoryChanged_signal_connect {
+  fn connect(self, sigthis: QFileSystemWatcher_directoryChanged_signal);
+}
+
+#[derive(Default)] // for QFileSystemWatcher_fileChanged
+pub struct QFileSystemWatcher_fileChanged_signal{poi:u64}
+impl /* struct */ QFileSystemWatcher {
+  pub fn fileChanged_1(self) -> QFileSystemWatcher_fileChanged_signal {
+     return QFileSystemWatcher_fileChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QFileSystemWatcher_fileChanged_signal {
+  pub fn connect<T: QFileSystemWatcher_fileChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QFileSystemWatcher_fileChanged_signal_connect {
+  fn connect(self, sigthis: QFileSystemWatcher_fileChanged_signal);
 }
 
 // <= body block end

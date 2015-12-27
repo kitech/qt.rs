@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:03 2015
 // src-file: /QtGui/qscreen.h
 // dst-file: /src/gui/qscreen.rs
 //
@@ -36,82 +36,101 @@ use super::super::core::qstring::QString; // 771
 extern {
   fn QScreen_Class_Size() -> c_int;
   // proto:  qreal QScreen::logicalDotsPerInchY();
-  fn _ZNK7QScreen19logicalDotsPerInchYEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK7QScreen19logicalDotsPerInchYEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  QRect QScreen::geometry();
-  fn _ZNK7QScreen8geometryEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK7QScreen8geometryEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QPixmap QScreen::grabWindow(WId window, int x, int y, int w, int h);
-  fn _ZN7QScreen10grabWindowEiiiii(qthis: *mut c_void, arg0: *mut c_uint, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_int) -> *mut c_void;
+  fn _ZN7QScreen10grabWindowEiiiii(qthis: u64 /* *mut c_void*/, arg0: *mut c_uint, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_int) -> *mut c_void;
   // proto:  QSize QScreen::size();
-  fn _ZNK7QScreen4sizeEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK7QScreen4sizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QSizeF QScreen::physicalSize();
-  fn _ZNK7QScreen12physicalSizeEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK7QScreen12physicalSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QPlatformScreen * QScreen::handle();
-  fn _ZNK7QScreen6handleEv(qthis: *mut c_void);
+  fn _ZNK7QScreen6handleEv(qthis: u64 /* *mut c_void*/);
   // proto:  QRect QScreen::availableVirtualGeometry();
-  fn _ZNK7QScreen24availableVirtualGeometryEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK7QScreen24availableVirtualGeometryEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QScreen::~QScreen();
-  fn _ZN7QScreenD0Ev(qthis: *mut c_void);
+  fn _ZN7QScreenD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QSize QScreen::virtualSize();
-  fn _ZNK7QScreen11virtualSizeEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK7QScreen11virtualSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  qreal QScreen::devicePixelRatio();
-  fn _ZNK7QScreen16devicePixelRatioEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK7QScreen16devicePixelRatioEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  QList<QScreen *> QScreen::virtualSiblings();
-  fn _ZNK7QScreen15virtualSiblingsEv(qthis: *mut c_void);
+  fn _ZNK7QScreen15virtualSiblingsEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QScreen::QScreen(const QScreen & );
   fn dector_ZN7QScreenC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN7QScreenC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN7QScreenC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QScreen::logicalDotsPerInchChanged(qreal dpi);
-  fn _ZN7QScreen25logicalDotsPerInchChangedEd(qthis: *mut c_void, arg0: c_double);
+  fn _ZN7QScreen25logicalDotsPerInchChangedEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QScreen::availableGeometryChanged(const QRect & geometry);
-  fn _ZN7QScreen24availableGeometryChangedERK5QRect(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN7QScreen24availableGeometryChangedERK5QRect(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QScreen::geometryChanged(const QRect & geometry);
-  fn _ZN7QScreen15geometryChangedERK5QRect(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN7QScreen15geometryChangedERK5QRect(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QRect QScreen::virtualGeometry();
-  fn _ZNK7QScreen15virtualGeometryEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK7QScreen15virtualGeometryEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  qreal QScreen::logicalDotsPerInch();
-  fn _ZNK7QScreen18logicalDotsPerInchEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK7QScreen18logicalDotsPerInchEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  qreal QScreen::physicalDotsPerInch();
-  fn _ZNK7QScreen19physicalDotsPerInchEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK7QScreen19physicalDotsPerInchEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QScreen::physicalDotsPerInchChanged(qreal dpi);
-  fn _ZN7QScreen26physicalDotsPerInchChangedEd(qthis: *mut c_void, arg0: c_double);
+  fn _ZN7QScreen26physicalDotsPerInchChangedEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  qreal QScreen::refreshRate();
-  fn _ZNK7QScreen11refreshRateEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK7QScreen11refreshRateEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  const QMetaObject * QScreen::metaObject();
-  fn _ZNK7QScreen10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK7QScreen10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QScreen::refreshRateChanged(qreal refreshRate);
-  fn _ZN7QScreen18refreshRateChangedEd(qthis: *mut c_void, arg0: c_double);
+  fn _ZN7QScreen18refreshRateChangedEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  QSize QScreen::availableSize();
-  fn _ZNK7QScreen13availableSizeEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK7QScreen13availableSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QScreen::name();
-  fn _ZNK7QScreen4nameEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK7QScreen4nameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QSize QScreen::availableVirtualSize();
-  fn _ZNK7QScreen20availableVirtualSizeEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK7QScreen20availableVirtualSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  qreal QScreen::logicalDotsPerInchX();
-  fn _ZNK7QScreen19logicalDotsPerInchXEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK7QScreen19logicalDotsPerInchXEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QScreen::virtualGeometryChanged(const QRect & rect);
-  fn _ZN7QScreen22virtualGeometryChangedERK5QRect(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN7QScreen22virtualGeometryChangedERK5QRect(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QRect QScreen::availableGeometry();
-  fn _ZNK7QScreen17availableGeometryEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK7QScreen17availableGeometryEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  qreal QScreen::physicalDotsPerInchX();
-  fn _ZNK7QScreen20physicalDotsPerInchXEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK7QScreen20physicalDotsPerInchXEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QScreen::physicalSizeChanged(const QSizeF & size);
-  fn _ZN7QScreen19physicalSizeChangedERK6QSizeF(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN7QScreen19physicalSizeChangedERK6QSizeF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  qreal QScreen::physicalDotsPerInchY();
-  fn _ZNK7QScreen20physicalDotsPerInchYEv(qthis: *mut c_void) -> c_double;
+  fn _ZNK7QScreen20physicalDotsPerInchYEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  int QScreen::depth();
-  fn _ZNK7QScreen5depthEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK7QScreen5depthEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn QScreen_SlotProxy_connect__ZN7QScreen25primaryOrientationChangedEN2Qt17ScreenOrientationE(qthis: *mut c_void, fptr: *mut c_void);
+  fn QScreen_SlotProxy_connect__ZN7QScreen18orientationChangedEN2Qt17ScreenOrientationE(qthis: *mut c_void, fptr: *mut c_void);
+  fn QScreen_SlotProxy_connect__ZN7QScreen25logicalDotsPerInchChangedEd(qthis: *mut c_void, fptr: *mut c_void);
+  fn QScreen_SlotProxy_connect__ZN7QScreen24availableGeometryChangedERK5QRect(qthis: *mut c_void, fptr: *mut c_void);
+  fn QScreen_SlotProxy_connect__ZN7QScreen15geometryChangedERK5QRect(qthis: *mut c_void, fptr: *mut c_void);
+  fn QScreen_SlotProxy_connect__ZN7QScreen26physicalDotsPerInchChangedEd(qthis: *mut c_void, fptr: *mut c_void);
+  fn QScreen_SlotProxy_connect__ZN7QScreen22virtualGeometryChangedERK5QRect(qthis: *mut c_void, fptr: *mut c_void);
+  fn QScreen_SlotProxy_connect__ZN7QScreen18refreshRateChangedEd(qthis: *mut c_void, fptr: *mut c_void);
+  fn QScreen_SlotProxy_connect__ZN7QScreen19physicalSizeChangedERK6QSizeF(qthis: *mut c_void, fptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QScreen)=1
+#[derive(Default)]
 pub struct QScreen {
   qbase: QObject,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _geometryChanged_1: QScreen_geometryChanged_signal,
+  pub _virtualGeometryChanged_1: QScreen_virtualGeometryChanged_signal,
+  pub _refreshRateChanged_1: QScreen_refreshRateChanged_signal,
+  pub _availableGeometryChanged_1: QScreen_availableGeometryChanged_signal,
+  pub _physicalSizeChanged_1: QScreen_physicalSizeChanged_signal,
+  pub _physicalDotsPerInchChanged_1: QScreen_physicalDotsPerInchChanged_signal,
+  pub _logicalDotsPerInchChanged_1: QScreen_logicalDotsPerInchChanged_signal,
+  pub _primaryOrientationChanged_1: QScreen_primaryOrientationChanged_signal,
+  pub _orientationChanged_1: QScreen_orientationChanged_signal,
 }
 
 impl /*struct*/ QScreen {
-  pub fn inheritFrom(qthis: *mut c_void) -> QScreen {
-    return QScreen{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QScreen {
+    return QScreen{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QScreen {
@@ -167,7 +186,7 @@ impl<'a> /*trait*/ QScreen_geometry<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen8geometryEv()};
     let mut ret = unsafe {_ZNK7QScreen8geometryEv(rsthis.qclsinst)};
-    let mut ret1 = QRect::inheritFrom(ret);
+    let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -196,7 +215,7 @@ impl<'a> /*trait*/ QScreen_grabWindow<QPixmap> for (*mut i32, i32, i32, i32, i32
     let arg3 = self.3  as c_int;
     let arg4 = self.4  as c_int;
     let mut ret = unsafe {_ZN7QScreen10grabWindowEiiiii(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4)};
-    let mut ret1 = QPixmap::inheritFrom(ret);
+    let mut ret1 = QPixmap::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -220,7 +239,7 @@ impl<'a> /*trait*/ QScreen_size<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen4sizeEv()};
     let mut ret = unsafe {_ZNK7QScreen4sizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize::inheritFrom(ret);
+    let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -244,7 +263,7 @@ impl<'a> /*trait*/ QScreen_physicalSize<QSizeF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen12physicalSizeEv()};
     let mut ret = unsafe {_ZNK7QScreen12physicalSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSizeF::inheritFrom(ret);
+    let mut ret1 = QSizeF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -290,7 +309,7 @@ impl<'a> /*trait*/ QScreen_availableVirtualGeometry<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen24availableVirtualGeometryEv()};
     let mut ret = unsafe {_ZNK7QScreen24availableVirtualGeometryEv(rsthis.qclsinst)};
-    let mut ret1 = QRect::inheritFrom(ret);
+    let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -336,7 +355,7 @@ impl<'a> /*trait*/ QScreen_virtualSize<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen11virtualSizeEv()};
     let mut ret = unsafe {_ZNK7QScreen11virtualSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize::inheritFrom(ret);
+    let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -406,11 +425,11 @@ impl<'a> /*trait*/ QScreen_New for (&'a QScreen) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QScreenC1ERKS_()};
     let ctysz: c_int = unsafe{QScreen_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN7QScreenC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN7QScreenC1ERKS_(arg0)};
-    let rsthis = QScreen{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN7QScreenC1ERKS_(arg0)} as u64;
+    let rsthis = QScreen{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -503,7 +522,7 @@ impl<'a> /*trait*/ QScreen_virtualGeometry<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen15virtualGeometryEv()};
     let mut ret = unsafe {_ZNK7QScreen15virtualGeometryEv(rsthis.qclsinst)};
-    let mut ret1 = QRect::inheritFrom(ret);
+    let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -664,7 +683,7 @@ impl<'a> /*trait*/ QScreen_availableSize<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen13availableSizeEv()};
     let mut ret = unsafe {_ZNK7QScreen13availableSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize::inheritFrom(ret);
+    let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -688,7 +707,7 @@ impl<'a> /*trait*/ QScreen_name<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen4nameEv()};
     let mut ret = unsafe {_ZNK7QScreen4nameEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -712,7 +731,7 @@ impl<'a> /*trait*/ QScreen_availableVirtualSize<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen20availableVirtualSizeEv()};
     let mut ret = unsafe {_ZNK7QScreen20availableVirtualSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize::inheritFrom(ret);
+    let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -782,7 +801,7 @@ impl<'a> /*trait*/ QScreen_availableGeometry<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen17availableGeometryEv()};
     let mut ret = unsafe {_ZNK7QScreen17availableGeometryEv(rsthis.qclsinst)};
-    let mut ret1 = QRect::inheritFrom(ret);
+    let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -880,5 +899,239 @@ impl<'a> /*trait*/ QScreen_depth<i32> for () {
   }
 }
 
+#[derive(Default)] // for QScreen_geometryChanged
+pub struct QScreen_geometryChanged_signal{poi:u64}
+impl /* struct */ QScreen {
+  pub fn geometryChanged_1(self) -> QScreen_geometryChanged_signal {
+     return QScreen_geometryChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QScreen_geometryChanged_signal {
+  pub fn connect<T: QScreen_geometryChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QScreen_geometryChanged_signal_connect {
+  fn connect(self, sigthis: QScreen_geometryChanged_signal);
+}
+
+#[derive(Default)] // for QScreen_virtualGeometryChanged
+pub struct QScreen_virtualGeometryChanged_signal{poi:u64}
+impl /* struct */ QScreen {
+  pub fn virtualGeometryChanged_1(self) -> QScreen_virtualGeometryChanged_signal {
+     return QScreen_virtualGeometryChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QScreen_virtualGeometryChanged_signal {
+  pub fn connect<T: QScreen_virtualGeometryChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QScreen_virtualGeometryChanged_signal_connect {
+  fn connect(self, sigthis: QScreen_virtualGeometryChanged_signal);
+}
+
+#[derive(Default)] // for QScreen_refreshRateChanged
+pub struct QScreen_refreshRateChanged_signal{poi:u64}
+impl /* struct */ QScreen {
+  pub fn refreshRateChanged_1(self) -> QScreen_refreshRateChanged_signal {
+     return QScreen_refreshRateChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QScreen_refreshRateChanged_signal {
+  pub fn connect<T: QScreen_refreshRateChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QScreen_refreshRateChanged_signal_connect {
+  fn connect(self, sigthis: QScreen_refreshRateChanged_signal);
+}
+
+#[derive(Default)] // for QScreen_availableGeometryChanged
+pub struct QScreen_availableGeometryChanged_signal{poi:u64}
+impl /* struct */ QScreen {
+  pub fn availableGeometryChanged_1(self) -> QScreen_availableGeometryChanged_signal {
+     return QScreen_availableGeometryChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QScreen_availableGeometryChanged_signal {
+  pub fn connect<T: QScreen_availableGeometryChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QScreen_availableGeometryChanged_signal_connect {
+  fn connect(self, sigthis: QScreen_availableGeometryChanged_signal);
+}
+
+#[derive(Default)] // for QScreen_physicalSizeChanged
+pub struct QScreen_physicalSizeChanged_signal{poi:u64}
+impl /* struct */ QScreen {
+  pub fn physicalSizeChanged_1(self) -> QScreen_physicalSizeChanged_signal {
+     return QScreen_physicalSizeChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QScreen_physicalSizeChanged_signal {
+  pub fn connect<T: QScreen_physicalSizeChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QScreen_physicalSizeChanged_signal_connect {
+  fn connect(self, sigthis: QScreen_physicalSizeChanged_signal);
+}
+
+#[derive(Default)] // for QScreen_physicalDotsPerInchChanged
+pub struct QScreen_physicalDotsPerInchChanged_signal{poi:u64}
+impl /* struct */ QScreen {
+  pub fn physicalDotsPerInchChanged_1(self) -> QScreen_physicalDotsPerInchChanged_signal {
+     return QScreen_physicalDotsPerInchChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QScreen_physicalDotsPerInchChanged_signal {
+  pub fn connect<T: QScreen_physicalDotsPerInchChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QScreen_physicalDotsPerInchChanged_signal_connect {
+  fn connect(self, sigthis: QScreen_physicalDotsPerInchChanged_signal);
+}
+
+#[derive(Default)] // for QScreen_logicalDotsPerInchChanged
+pub struct QScreen_logicalDotsPerInchChanged_signal{poi:u64}
+impl /* struct */ QScreen {
+  pub fn logicalDotsPerInchChanged_1(self) -> QScreen_logicalDotsPerInchChanged_signal {
+     return QScreen_logicalDotsPerInchChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QScreen_logicalDotsPerInchChanged_signal {
+  pub fn connect<T: QScreen_logicalDotsPerInchChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QScreen_logicalDotsPerInchChanged_signal_connect {
+  fn connect(self, sigthis: QScreen_logicalDotsPerInchChanged_signal);
+}
+
+#[derive(Default)] // for QScreen_primaryOrientationChanged
+pub struct QScreen_primaryOrientationChanged_signal{poi:u64}
+impl /* struct */ QScreen {
+  pub fn primaryOrientationChanged_1(self) -> QScreen_primaryOrientationChanged_signal {
+     return QScreen_primaryOrientationChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QScreen_primaryOrientationChanged_signal {
+  pub fn connect<T: QScreen_primaryOrientationChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QScreen_primaryOrientationChanged_signal_connect {
+  fn connect(self, sigthis: QScreen_primaryOrientationChanged_signal);
+}
+
+#[derive(Default)] // for QScreen_orientationChanged
+pub struct QScreen_orientationChanged_signal{poi:u64}
+impl /* struct */ QScreen {
+  pub fn orientationChanged_1(self) -> QScreen_orientationChanged_signal {
+     return QScreen_orientationChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QScreen_orientationChanged_signal {
+  pub fn connect<T: QScreen_orientationChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QScreen_orientationChanged_signal_connect {
+  fn connect(self, sigthis: QScreen_orientationChanged_signal);
+}
+
+// primaryOrientationChanged(Qt::ScreenOrientation)
+extern fn QScreen_primaryOrientationChanged_signal_connect_cb_0(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QScreen_primaryOrientationChanged_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QScreen_primaryOrientationChanged_signal) {
+    // do smth...
+    unsafe {QScreen_SlotProxy_connect__ZN7QScreen25primaryOrientationChangedEN2Qt17ScreenOrientationE(sigthis.poi as *mut c_void, QScreen_primaryOrientationChanged_signal_connect_cb_0 as *mut c_void)};
+  }
+}
+// orientationChanged(Qt::ScreenOrientation)
+extern fn QScreen_orientationChanged_signal_connect_cb_1(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QScreen_orientationChanged_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QScreen_orientationChanged_signal) {
+    // do smth...
+    unsafe {QScreen_SlotProxy_connect__ZN7QScreen18orientationChangedEN2Qt17ScreenOrientationE(sigthis.poi as *mut c_void, QScreen_orientationChanged_signal_connect_cb_1 as *mut c_void)};
+  }
+}
+// logicalDotsPerInchChanged(qreal)
+extern fn QScreen_logicalDotsPerInchChanged_signal_connect_cb_2(arg0: c_double) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QScreen_logicalDotsPerInchChanged_signal_connect for (extern fn(f64)) {
+  fn connect(self, sigthis: QScreen_logicalDotsPerInchChanged_signal) {
+    // do smth...
+    unsafe {QScreen_SlotProxy_connect__ZN7QScreen25logicalDotsPerInchChangedEd(sigthis.poi as *mut c_void, QScreen_logicalDotsPerInchChanged_signal_connect_cb_2 as *mut c_void)};
+  }
+}
+// availableGeometryChanged(const class QRect &)
+extern fn QScreen_availableGeometryChanged_signal_connect_cb_3(arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QScreen_availableGeometryChanged_signal_connect for (extern fn(QRect)) {
+  fn connect(self, sigthis: QScreen_availableGeometryChanged_signal) {
+    // do smth...
+    unsafe {QScreen_SlotProxy_connect__ZN7QScreen24availableGeometryChangedERK5QRect(sigthis.poi as *mut c_void, QScreen_availableGeometryChanged_signal_connect_cb_3 as *mut c_void)};
+  }
+}
+// geometryChanged(const class QRect &)
+extern fn QScreen_geometryChanged_signal_connect_cb_4(arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QScreen_geometryChanged_signal_connect for (extern fn(QRect)) {
+  fn connect(self, sigthis: QScreen_geometryChanged_signal) {
+    // do smth...
+    unsafe {QScreen_SlotProxy_connect__ZN7QScreen15geometryChangedERK5QRect(sigthis.poi as *mut c_void, QScreen_geometryChanged_signal_connect_cb_4 as *mut c_void)};
+  }
+}
+// physicalDotsPerInchChanged(qreal)
+extern fn QScreen_physicalDotsPerInchChanged_signal_connect_cb_5(arg0: c_double) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QScreen_physicalDotsPerInchChanged_signal_connect for (extern fn(f64)) {
+  fn connect(self, sigthis: QScreen_physicalDotsPerInchChanged_signal) {
+    // do smth...
+    unsafe {QScreen_SlotProxy_connect__ZN7QScreen26physicalDotsPerInchChangedEd(sigthis.poi as *mut c_void, QScreen_physicalDotsPerInchChanged_signal_connect_cb_5 as *mut c_void)};
+  }
+}
+// virtualGeometryChanged(const class QRect &)
+extern fn QScreen_virtualGeometryChanged_signal_connect_cb_6(arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QScreen_virtualGeometryChanged_signal_connect for (extern fn(QRect)) {
+  fn connect(self, sigthis: QScreen_virtualGeometryChanged_signal) {
+    // do smth...
+    unsafe {QScreen_SlotProxy_connect__ZN7QScreen22virtualGeometryChangedERK5QRect(sigthis.poi as *mut c_void, QScreen_virtualGeometryChanged_signal_connect_cb_6 as *mut c_void)};
+  }
+}
+// refreshRateChanged(qreal)
+extern fn QScreen_refreshRateChanged_signal_connect_cb_7(arg0: c_double) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QScreen_refreshRateChanged_signal_connect for (extern fn(f64)) {
+  fn connect(self, sigthis: QScreen_refreshRateChanged_signal) {
+    // do smth...
+    unsafe {QScreen_SlotProxy_connect__ZN7QScreen18refreshRateChangedEd(sigthis.poi as *mut c_void, QScreen_refreshRateChanged_signal_connect_cb_7 as *mut c_void)};
+  }
+}
+// physicalSizeChanged(const class QSizeF &)
+extern fn QScreen_physicalSizeChanged_signal_connect_cb_8(arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QScreen_physicalSizeChanged_signal_connect for (extern fn(QSizeF)) {
+  fn connect(self, sigthis: QScreen_physicalSizeChanged_signal) {
+    // do smth...
+    unsafe {QScreen_SlotProxy_connect__ZN7QScreen19physicalSizeChangedERK6QSizeF(sigthis.poi as *mut c_void, QScreen_physicalSizeChanged_signal_connect_cb_8 as *mut c_void)};
+  }
+}
 // <= body block end
 

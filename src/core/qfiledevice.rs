@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qfiledevice.h
 // dst-file: /src/core/qfiledevice.rs
 //
@@ -33,54 +33,55 @@ use super::qobject::QObject; // 773
 extern {
   fn QFileDevice_Class_Size() -> c_int;
   // proto:  qint64 QFileDevice::size();
-  fn _ZNK11QFileDevice4sizeEv(qthis: *mut c_void) -> c_longlong;
+  fn _ZNK11QFileDevice4sizeEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
   // proto:  bool QFileDevice::seek(qint64 offset);
-  fn _ZN11QFileDevice4seekEx(qthis: *mut c_void, arg0: c_longlong) -> c_char;
+  fn _ZN11QFileDevice4seekEx(qthis: u64 /* *mut c_void*/, arg0: c_longlong) -> c_char;
   // proto:  bool QFileDevice::unmap(uchar * address);
-  fn _ZN11QFileDevice5unmapEPh(qthis: *mut c_void, arg0: *mut c_uchar) -> c_char;
+  fn _ZN11QFileDevice5unmapEPh(qthis: u64 /* *mut c_void*/, arg0: *mut c_uchar) -> c_char;
   // proto:  void QFileDevice::close();
-  fn _ZN11QFileDevice5closeEv(qthis: *mut c_void);
+  fn _ZN11QFileDevice5closeEv(qthis: u64 /* *mut c_void*/);
   // proto:  qint64 QFileDevice::pos();
-  fn _ZNK11QFileDevice3posEv(qthis: *mut c_void) -> c_longlong;
+  fn _ZNK11QFileDevice3posEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
   // proto:  int QFileDevice::handle();
-  fn _ZNK11QFileDevice6handleEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK11QFileDevice6handleEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  QString QFileDevice::fileName();
-  fn _ZNK11QFileDevice8fileNameEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK11QFileDevice8fileNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QFileDevice::QFileDevice(QObject * parent);
   fn dector_ZN11QFileDeviceC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QFileDeviceC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QFileDeviceC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QFileDevice::~QFileDevice();
-  fn _ZN11QFileDeviceD0Ev(qthis: *mut c_void);
+  fn _ZN11QFileDeviceD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QFileDevice::atEnd();
-  fn _ZNK11QFileDevice5atEndEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK11QFileDevice5atEndEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QFileDevice::isSequential();
-  fn _ZNK11QFileDevice12isSequentialEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK11QFileDevice12isSequentialEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QFileDevice::flush();
-  fn _ZN11QFileDevice5flushEv(qthis: *mut c_void) -> c_char;
+  fn _ZN11QFileDevice5flushEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QFileDevice::QFileDevice();
   fn dector_ZN11QFileDeviceC1Ev() -> *mut c_void;
-  fn _ZN11QFileDeviceC1Ev(qthis: *mut c_void);
+  fn _ZN11QFileDeviceC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QFileDevice::unsetError();
-  fn _ZN11QFileDevice10unsetErrorEv(qthis: *mut c_void);
+  fn _ZN11QFileDevice10unsetErrorEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QFileDevice::QFileDevice(const QFileDevice & );
   fn dector_ZN11QFileDeviceC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QFileDeviceC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN11QFileDeviceC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QFileDevice::metaObject();
-  fn _ZNK11QFileDevice10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK11QFileDevice10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QFileDevice::resize(qint64 sz);
-  fn _ZN11QFileDevice6resizeEx(qthis: *mut c_void, arg0: c_longlong) -> c_char;
+  fn _ZN11QFileDevice6resizeEx(qthis: u64 /* *mut c_void*/, arg0: c_longlong) -> c_char;
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QFileDevice)=1
+#[derive(Default)]
 pub struct QFileDevice {
   qbase: QIODevice,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QFileDevice {
-  pub fn inheritFrom(qthis: *mut c_void) -> QFileDevice {
-    return QFileDevice{qbase: QIODevice::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QFileDevice {
+    return QFileDevice{qbase: QIODevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QFileDevice {
@@ -252,7 +253,7 @@ impl<'a> /*trait*/ QFileDevice_fileName<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDevice8fileNameEv()};
     let mut ret = unsafe {_ZNK11QFileDevice8fileNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -277,11 +278,11 @@ impl<'a> /*trait*/ QFileDevice_New for (&'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDeviceC1EP7QObject()};
     let ctysz: c_int = unsafe{QFileDevice_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN11QFileDeviceC1EP7QObject(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN11QFileDeviceC1EP7QObject(arg0)};
-    let rsthis = QFileDevice{/**/qbase: QIODevice::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN11QFileDeviceC1EP7QObject(arg0)} as u64;
+    let rsthis = QFileDevice{qbase: QIODevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -384,10 +385,10 @@ impl<'a> /*trait*/ QFileDevice_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDeviceC1Ev()};
     let ctysz: c_int = unsafe{QFileDevice_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN11QFileDeviceC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN11QFileDeviceC1Ev()};
-    let rsthis = QFileDevice{/**/qbase: QIODevice::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN11QFileDeviceC1Ev()} as u64;
+    let rsthis = QFileDevice{qbase: QIODevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -421,11 +422,11 @@ impl<'a> /*trait*/ QFileDevice_New for (&'a QFileDevice) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDeviceC1ERKS_()};
     let ctysz: c_int = unsafe{QFileDevice_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN11QFileDeviceC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN11QFileDeviceC1ERKS_(arg0)};
-    let rsthis = QFileDevice{/**/qbase: QIODevice::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN11QFileDeviceC1ERKS_(arg0)} as u64;
+    let rsthis = QFileDevice{qbase: QIODevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }

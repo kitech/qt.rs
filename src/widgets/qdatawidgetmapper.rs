@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtWidgets/qdatawidgetmapper.h
 // dst-file: /src/widgets/qdatawidgetmapper.rs
 //
@@ -23,6 +23,8 @@ use std::ops::Deref;
 use super::qwidget::QWidget; // 773
 use super::super::core::qbytearray::QByteArray; // 771
 use super::super::core::qabstractitemmodel::QModelIndex; // 771
+use super::super::core::qabstractitemmodel::QAbstractItemModel; // 771
+use super::qabstractitemdelegate::QAbstractItemDelegate; // 773
 // <= use block end
 
 // ext block begin =>
@@ -35,68 +37,75 @@ extern {
   fn QDataWidgetMapper_Class_Size() -> c_int;
   // proto:  void QDataWidgetMapper::QDataWidgetMapper(const QDataWidgetMapper & );
   fn dector_ZN17QDataWidgetMapperC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN17QDataWidgetMapperC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN17QDataWidgetMapperC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QDataWidgetMapper::currentIndex();
-  fn _ZNK17QDataWidgetMapper12currentIndexEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK17QDataWidgetMapper12currentIndexEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QDataWidgetMapper::addMapping(QWidget * widget, int section, const QByteArray & propertyName);
-  fn _ZN17QDataWidgetMapper10addMappingEP7QWidgetiRK10QByteArray(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void);
+  fn _ZN17QDataWidgetMapper10addMappingEP7QWidgetiRK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void);
   // proto:  QModelIndex QDataWidgetMapper::rootIndex();
-  fn _ZNK17QDataWidgetMapper9rootIndexEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK17QDataWidgetMapper9rootIndexEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QDataWidgetMapper::setCurrentIndex(int index);
-  fn _ZN17QDataWidgetMapper15setCurrentIndexEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN17QDataWidgetMapper15setCurrentIndexEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  // proto:  void QDataWidgetMapper::setModel(QAbstractItemModel * model);
+  fn _ZN17QDataWidgetMapper8setModelEP18QAbstractItemModel(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QWidget * QDataWidgetMapper::mappedWidgetAt(int section);
-  fn _ZNK17QDataWidgetMapper14mappedWidgetAtEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
+  fn _ZNK17QDataWidgetMapper14mappedWidgetAtEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  void QDataWidgetMapper::removeMapping(QWidget * widget);
-  fn _ZN17QDataWidgetMapper13removeMappingEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN17QDataWidgetMapper13removeMappingEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QDataWidgetMapper::toFirst();
-  fn _ZN17QDataWidgetMapper7toFirstEv(qthis: *mut c_void);
+  fn _ZN17QDataWidgetMapper7toFirstEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QDataWidgetMapper::currentIndexChanged(int index);
-  fn _ZN17QDataWidgetMapper19currentIndexChangedEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN17QDataWidgetMapper19currentIndexChangedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QDataWidgetMapper::toPrevious();
-  fn _ZN17QDataWidgetMapper10toPreviousEv(qthis: *mut c_void);
+  fn _ZN17QDataWidgetMapper10toPreviousEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QDataWidgetMapper::setRootIndex(const QModelIndex & index);
-  fn _ZN17QDataWidgetMapper12setRootIndexERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN17QDataWidgetMapper12setRootIndexERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QDataWidgetMapper::revert();
-  fn _ZN17QDataWidgetMapper6revertEv(qthis: *mut c_void);
+  fn _ZN17QDataWidgetMapper6revertEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QDataWidgetMapper::clearMapping();
-  fn _ZN17QDataWidgetMapper12clearMappingEv(qthis: *mut c_void);
+  fn _ZN17QDataWidgetMapper12clearMappingEv(qthis: u64 /* *mut c_void*/);
   // proto:  int QDataWidgetMapper::mappedSection(QWidget * widget);
-  fn _ZNK17QDataWidgetMapper13mappedSectionEP7QWidget(qthis: *mut c_void, arg0: *mut c_void) -> c_int;
+  fn _ZNK17QDataWidgetMapper13mappedSectionEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
   // proto:  QByteArray QDataWidgetMapper::mappedPropertyName(QWidget * widget);
-  fn _ZNK17QDataWidgetMapper18mappedPropertyNameEP7QWidget(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK17QDataWidgetMapper18mappedPropertyNameEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  // proto:  void QDataWidgetMapper::setItemDelegate(QAbstractItemDelegate * delegate);
+  fn _ZN17QDataWidgetMapper15setItemDelegateEP21QAbstractItemDelegate(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QDataWidgetMapper::setCurrentModelIndex(const QModelIndex & index);
-  fn _ZN17QDataWidgetMapper20setCurrentModelIndexERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN17QDataWidgetMapper20setCurrentModelIndexERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QDataWidgetMapper::~QDataWidgetMapper();
-  fn _ZN17QDataWidgetMapperD0Ev(qthis: *mut c_void);
+  fn _ZN17QDataWidgetMapperD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QDataWidgetMapper::addMapping(QWidget * widget, int section);
-  fn _ZN17QDataWidgetMapper10addMappingEP7QWidgeti(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int);
+  fn _ZN17QDataWidgetMapper10addMappingEP7QWidgeti(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
   // proto:  void QDataWidgetMapper::QDataWidgetMapper(QObject * parent);
   fn dector_ZN17QDataWidgetMapperC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN17QDataWidgetMapperC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN17QDataWidgetMapperC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QDataWidgetMapper::metaObject();
-  fn _ZNK17QDataWidgetMapper10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK17QDataWidgetMapper10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QDataWidgetMapper::toLast();
-  fn _ZN17QDataWidgetMapper6toLastEv(qthis: *mut c_void);
+  fn _ZN17QDataWidgetMapper6toLastEv(qthis: u64 /* *mut c_void*/);
   // proto:  QAbstractItemModel * QDataWidgetMapper::model();
-  fn _ZNK17QDataWidgetMapper5modelEv(qthis: *mut c_void);
+  fn _ZNK17QDataWidgetMapper5modelEv(qthis: u64 /* *mut c_void*/);
   // proto:  QAbstractItemDelegate * QDataWidgetMapper::itemDelegate();
-  fn _ZNK17QDataWidgetMapper12itemDelegateEv(qthis: *mut c_void);
+  fn _ZNK17QDataWidgetMapper12itemDelegateEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QDataWidgetMapper::submit();
-  fn _ZN17QDataWidgetMapper6submitEv(qthis: *mut c_void) -> c_char;
+  fn _ZN17QDataWidgetMapper6submitEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QDataWidgetMapper::toNext();
-  fn _ZN17QDataWidgetMapper6toNextEv(qthis: *mut c_void);
+  fn _ZN17QDataWidgetMapper6toNextEv(qthis: u64 /* *mut c_void*/);
+  fn QDataWidgetMapper_SlotProxy_connect__ZN17QDataWidgetMapper19currentIndexChangedEi(qthis: *mut c_void, fptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QDataWidgetMapper)=1
+#[derive(Default)]
 pub struct QDataWidgetMapper {
   qbase: QObject,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _currentIndexChanged_1: QDataWidgetMapper_currentIndexChanged_signal,
 }
 
 impl /*struct*/ QDataWidgetMapper {
-  pub fn inheritFrom(qthis: *mut c_void) -> QDataWidgetMapper {
-    return QDataWidgetMapper{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QDataWidgetMapper {
+    return QDataWidgetMapper{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QDataWidgetMapper {
@@ -130,11 +139,11 @@ impl<'a> /*trait*/ QDataWidgetMapper_New for (&'a QDataWidgetMapper) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QDataWidgetMapperC1ERKS_()};
     let ctysz: c_int = unsafe{QDataWidgetMapper_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN17QDataWidgetMapperC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN17QDataWidgetMapperC1ERKS_(arg0)};
-    let rsthis = QDataWidgetMapper{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN17QDataWidgetMapperC1ERKS_(arg0)} as u64;
+    let rsthis = QDataWidgetMapper{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -206,7 +215,7 @@ impl<'a> /*trait*/ QDataWidgetMapper_rootIndex<QModelIndex> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QDataWidgetMapper9rootIndexEv()};
     let mut ret = unsafe {_ZNK17QDataWidgetMapper9rootIndexEv(rsthis.qclsinst)};
-    let mut ret1 = QModelIndex::inheritFrom(ret);
+    let mut ret1 = QModelIndex::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -235,6 +244,29 @@ impl<'a> /*trait*/ QDataWidgetMapper_setCurrentIndex<()> for (i32) {
   }
 }
 
+  // proto:  void QDataWidgetMapper::setModel(QAbstractItemModel * model);
+impl /*struct*/ QDataWidgetMapper {
+  pub fn setModel<RetType, T: QDataWidgetMapper_setModel<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.setModel(self);
+    // return 1;
+  }
+}
+
+pub trait QDataWidgetMapper_setModel<RetType> {
+  fn setModel(self , rsthis: & QDataWidgetMapper) -> RetType;
+}
+
+  // proto:  void QDataWidgetMapper::setModel(QAbstractItemModel * model);
+impl<'a> /*trait*/ QDataWidgetMapper_setModel<()> for (&'a QAbstractItemModel) {
+  fn setModel(self , rsthis: & QDataWidgetMapper) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN17QDataWidgetMapper8setModelEP18QAbstractItemModel()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN17QDataWidgetMapper8setModelEP18QAbstractItemModel(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
   // proto:  QWidget * QDataWidgetMapper::mappedWidgetAt(int section);
 impl /*struct*/ QDataWidgetMapper {
   pub fn mappedWidgetAt<RetType, T: QDataWidgetMapper_mappedWidgetAt<RetType>>(& self,  overload_args: T) -> RetType {
@@ -254,7 +286,7 @@ impl<'a> /*trait*/ QDataWidgetMapper_mappedWidgetAt<QWidget> for (i32) {
     // unsafe{_ZNK17QDataWidgetMapper14mappedWidgetAtEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK17QDataWidgetMapper14mappedWidgetAtEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QWidget::inheritFrom(ret);
+    let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -460,8 +492,31 @@ impl<'a> /*trait*/ QDataWidgetMapper_mappedPropertyName<QByteArray> for (&'a QWi
     // unsafe{_ZNK17QDataWidgetMapper18mappedPropertyNameEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK17QDataWidgetMapper18mappedPropertyNameEP7QWidget(rsthis.qclsinst, arg0)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
+    // return 1;
+  }
+}
+
+  // proto:  void QDataWidgetMapper::setItemDelegate(QAbstractItemDelegate * delegate);
+impl /*struct*/ QDataWidgetMapper {
+  pub fn setItemDelegate<RetType, T: QDataWidgetMapper_setItemDelegate<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.setItemDelegate(self);
+    // return 1;
+  }
+}
+
+pub trait QDataWidgetMapper_setItemDelegate<RetType> {
+  fn setItemDelegate(self , rsthis: & QDataWidgetMapper) -> RetType;
+}
+
+  // proto:  void QDataWidgetMapper::setItemDelegate(QAbstractItemDelegate * delegate);
+impl<'a> /*trait*/ QDataWidgetMapper_setItemDelegate<()> for (&'a QAbstractItemDelegate) {
+  fn setItemDelegate(self , rsthis: & QDataWidgetMapper) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN17QDataWidgetMapper15setItemDelegateEP21QAbstractItemDelegate()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN17QDataWidgetMapper15setItemDelegateEP21QAbstractItemDelegate(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -529,11 +584,11 @@ impl<'a> /*trait*/ QDataWidgetMapper_New for (&'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QDataWidgetMapperC1EP7QObject()};
     let ctysz: c_int = unsafe{QDataWidgetMapper_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN17QDataWidgetMapperC1EP7QObject(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN17QDataWidgetMapperC1EP7QObject(arg0)};
-    let rsthis = QDataWidgetMapper{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN17QDataWidgetMapperC1EP7QObject(arg0)} as u64;
+    let rsthis = QDataWidgetMapper{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -672,5 +727,31 @@ impl<'a> /*trait*/ QDataWidgetMapper_toNext<()> for () {
   }
 }
 
+#[derive(Default)] // for QDataWidgetMapper_currentIndexChanged
+pub struct QDataWidgetMapper_currentIndexChanged_signal{poi:u64}
+impl /* struct */ QDataWidgetMapper {
+  pub fn currentIndexChanged_1(self) -> QDataWidgetMapper_currentIndexChanged_signal {
+     return QDataWidgetMapper_currentIndexChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QDataWidgetMapper_currentIndexChanged_signal {
+  pub fn connect<T: QDataWidgetMapper_currentIndexChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QDataWidgetMapper_currentIndexChanged_signal_connect {
+  fn connect(self, sigthis: QDataWidgetMapper_currentIndexChanged_signal);
+}
+
+// currentIndexChanged(int)
+extern fn QDataWidgetMapper_currentIndexChanged_signal_connect_cb_0(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QDataWidgetMapper_currentIndexChanged_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QDataWidgetMapper_currentIndexChanged_signal) {
+    // do smth...
+    unsafe {QDataWidgetMapper_SlotProxy_connect__ZN17QDataWidgetMapper19currentIndexChangedEi(sigthis.poi as *mut c_void, QDataWidgetMapper_currentIndexChanged_signal_connect_cb_0 as *mut c_void)};
+  }
+}
 // <= body block end
 

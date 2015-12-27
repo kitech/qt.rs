@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qabstractanimation.h
 // dst-file: /src/core/qabstractanimation.rs
 //
@@ -32,86 +32,103 @@ use super::qanimationgroup::QAnimationGroup; // 773
 extern {
   fn QAbstractAnimation_Class_Size() -> c_int;
   // proto:  void QAbstractAnimation::currentLoopChanged(int currentLoop);
-  fn _ZN18QAbstractAnimation18currentLoopChangedEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN18QAbstractAnimation18currentLoopChangedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QAbstractAnimation::resume();
-  fn _ZN18QAbstractAnimation6resumeEv(qthis: *mut c_void);
+  fn _ZN18QAbstractAnimation6resumeEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractAnimation::QAbstractAnimation(QObject * parent);
   fn dector_ZN18QAbstractAnimationC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN18QAbstractAnimationC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN18QAbstractAnimationC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAbstractAnimation::stop();
-  fn _ZN18QAbstractAnimation4stopEv(qthis: *mut c_void);
+  fn _ZN18QAbstractAnimation4stopEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractAnimation::pause();
-  fn _ZN18QAbstractAnimation5pauseEv(qthis: *mut c_void);
+  fn _ZN18QAbstractAnimation5pauseEv(qthis: u64 /* *mut c_void*/);
+  // proto:  void QAbstractAnimation::QAbstractAnimation(const QAbstractAnimation & );
+  fn dector_ZN18QAbstractAnimationC1ERKS_(arg0: *mut c_void) -> *mut c_void;
+  fn _ZN18QAbstractAnimationC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAbstractAnimation::setLoopCount(int loopCount);
-  fn _ZN18QAbstractAnimation12setLoopCountEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN18QAbstractAnimation12setLoopCountEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QAbstractAnimation::currentLoop();
-  fn _ZNK18QAbstractAnimation11currentLoopEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK18QAbstractAnimation11currentLoopEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  QAnimationGroup * QAbstractAnimation::group();
-  fn _ZNK18QAbstractAnimation5groupEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK18QAbstractAnimation5groupEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAbstractAnimation::setPaused(bool );
-  fn _ZN18QAbstractAnimation9setPausedEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN18QAbstractAnimation9setPausedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  int QAbstractAnimation::totalDuration();
-  fn _ZNK18QAbstractAnimation13totalDurationEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK18QAbstractAnimation13totalDurationEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QAbstractAnimation::duration();
-  fn _ZNK18QAbstractAnimation8durationEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK18QAbstractAnimation8durationEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  const QMetaObject * QAbstractAnimation::metaObject();
-  fn _ZNK18QAbstractAnimation10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK18QAbstractAnimation10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  int QAbstractAnimation::currentLoopTime();
-  fn _ZNK18QAbstractAnimation15currentLoopTimeEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK18QAbstractAnimation15currentLoopTimeEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QAbstractAnimation::currentTime();
-  fn _ZNK18QAbstractAnimation11currentTimeEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK18QAbstractAnimation11currentTimeEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QAbstractAnimation::setCurrentTime(int msecs);
-  fn _ZN18QAbstractAnimation14setCurrentTimeEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN18QAbstractAnimation14setCurrentTimeEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QAbstractAnimation::finished();
-  fn _ZN18QAbstractAnimation8finishedEv(qthis: *mut c_void);
+  fn _ZN18QAbstractAnimation8finishedEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractAnimation::~QAbstractAnimation();
-  fn _ZN18QAbstractAnimationD0Ev(qthis: *mut c_void);
+  fn _ZN18QAbstractAnimationD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  int QAbstractAnimation::loopCount();
-  fn _ZNK18QAbstractAnimation9loopCountEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK18QAbstractAnimation9loopCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   fn QAnimationDriver_Class_Size() -> c_int;
   // proto:  void QAnimationDriver::advance();
-  fn _ZN16QAnimationDriver7advanceEv(qthis: *mut c_void);
+  fn _ZN16QAnimationDriver7advanceEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QAnimationDriver::~QAnimationDriver();
-  fn _ZN16QAnimationDriverD0Ev(qthis: *mut c_void);
+  fn _ZN16QAnimationDriverD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QAnimationDriver::QAnimationDriver(QObject * parent);
   fn dector_ZN16QAnimationDriverC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN16QAnimationDriverC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN16QAnimationDriverC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  qint64 QAnimationDriver::elapsed();
-  fn _ZNK16QAnimationDriver7elapsedEv(qthis: *mut c_void) -> c_longlong;
+  fn _ZNK16QAnimationDriver7elapsedEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
   // proto:  void QAnimationDriver::install();
-  fn _ZN16QAnimationDriver7installEv(qthis: *mut c_void);
+  fn _ZN16QAnimationDriver7installEv(qthis: u64 /* *mut c_void*/);
   // proto:  const QMetaObject * QAnimationDriver::metaObject();
-  fn _ZNK16QAnimationDriver10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK16QAnimationDriver10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QAnimationDriver::uninstall();
-  fn _ZN16QAnimationDriver9uninstallEv(qthis: *mut c_void);
+  fn _ZN16QAnimationDriver9uninstallEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QAnimationDriver::stopped();
-  fn _ZN16QAnimationDriver7stoppedEv(qthis: *mut c_void);
+  fn _ZN16QAnimationDriver7stoppedEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QAnimationDriver::isRunning();
-  fn _ZNK16QAnimationDriver9isRunningEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK16QAnimationDriver9isRunningEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QAnimationDriver::started();
-  fn _ZN16QAnimationDriver7startedEv(qthis: *mut c_void);
+  fn _ZN16QAnimationDriver7startedEv(qthis: u64 /* *mut c_void*/);
   // proto:  qint64 QAnimationDriver::startTime();
-  fn _ZNK16QAnimationDriver9startTimeEv(qthis: *mut c_void) -> c_longlong;
+  fn _ZNK16QAnimationDriver9startTimeEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
   // proto:  void QAnimationDriver::setStartTime(qint64 startTime);
-  fn _ZN16QAnimationDriver12setStartTimeEx(qthis: *mut c_void, arg0: c_longlong);
+  fn _ZN16QAnimationDriver12setStartTimeEx(qthis: u64 /* *mut c_void*/, arg0: c_longlong);
+  fn QAbstractAnimation_SlotProxy_connect__ZN18QAbstractAnimation12stateChangedENS_5StateES0_(qthis: *mut c_void, fptr: *mut c_void);
+  fn QAbstractAnimation_SlotProxy_connect__ZN18QAbstractAnimation18currentLoopChangedEi(qthis: *mut c_void, fptr: *mut c_void);
+  fn QAbstractAnimation_SlotProxy_connect__ZN18QAbstractAnimation8finishedEv(qthis: *mut c_void, fptr: *mut c_void);
+  fn QAbstractAnimation_SlotProxy_connect__ZN18QAbstractAnimation16directionChangedENS_9DirectionE(qthis: *mut c_void, fptr: *mut c_void);
+  fn QAnimationDriver_SlotProxy_connect__ZN16QAnimationDriver7stoppedEv(qthis: *mut c_void, fptr: *mut c_void);
+  fn QAnimationDriver_SlotProxy_connect__ZN16QAnimationDriver7startedEv(qthis: *mut c_void, fptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QAbstractAnimation)=1
+#[derive(Default)]
 pub struct QAbstractAnimation {
   qbase: QObject,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _currentLoopChanged_1: QAbstractAnimation_currentLoopChanged_signal,
+  pub _finished_1: QAbstractAnimation_finished_signal,
+  pub _stateChanged_1: QAbstractAnimation_stateChanged_signal,
+  pub _directionChanged_1: QAbstractAnimation_directionChanged_signal,
 }
 
 // class sizeof(QAnimationDriver)=1
+#[derive(Default)]
 pub struct QAnimationDriver {
   qbase: QObject,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _started_1: QAnimationDriver_started_signal,
+  pub _stopped_1: QAnimationDriver_stopped_signal,
 }
 
 impl /*struct*/ QAbstractAnimation {
-  pub fn inheritFrom(qthis: *mut c_void) -> QAbstractAnimation {
-    return QAbstractAnimation{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QAbstractAnimation {
+    return QAbstractAnimation{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QAbstractAnimation {
@@ -190,11 +207,11 @@ impl<'a> /*trait*/ QAbstractAnimation_New for (&'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QAbstractAnimationC1EP7QObject()};
     let ctysz: c_int = unsafe{QAbstractAnimation_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN18QAbstractAnimationC1EP7QObject(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN18QAbstractAnimationC1EP7QObject(arg0)};
-    let rsthis = QAbstractAnimation{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN18QAbstractAnimationC1EP7QObject(arg0)} as u64;
+    let rsthis = QAbstractAnimation{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -240,6 +257,22 @@ impl<'a> /*trait*/ QAbstractAnimation_pause<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QAbstractAnimation5pauseEv()};
      unsafe {_ZN18QAbstractAnimation5pauseEv(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
+  // proto:  void QAbstractAnimation::QAbstractAnimation(const QAbstractAnimation & );
+impl<'a> /*trait*/ QAbstractAnimation_New for (&'a QAbstractAnimation) {
+  fn New(self) -> QAbstractAnimation {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN18QAbstractAnimationC1ERKS_()};
+    let ctysz: c_int = unsafe{QAbstractAnimation_Class_Size()};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
+    let arg0 = self.qclsinst  as *mut c_void;
+    // unsafe {_ZN18QAbstractAnimationC1ERKS_(qthis, arg0)};
+    let qthis: u64 = unsafe {dector_ZN18QAbstractAnimationC1ERKS_(arg0)} as u64;
+    let rsthis = QAbstractAnimation{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+    return rsthis;
     // return 1;
   }
 }
@@ -308,7 +341,7 @@ impl<'a> /*trait*/ QAbstractAnimation_group<QAnimationGroup> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QAbstractAnimation5groupEv()};
     let mut ret = unsafe {_ZNK18QAbstractAnimation5groupEv(rsthis.qclsinst)};
-    let mut ret1 = QAnimationGroup::inheritFrom(ret);
+    let mut ret1 = QAnimationGroup::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -542,8 +575,8 @@ impl<'a> /*trait*/ QAbstractAnimation_loopCount<i32> for () {
 }
 
 impl /*struct*/ QAnimationDriver {
-  pub fn inheritFrom(qthis: *mut c_void) -> QAnimationDriver {
-    return QAnimationDriver{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QAnimationDriver {
+    return QAnimationDriver{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QAnimationDriver {
@@ -621,11 +654,11 @@ impl<'a> /*trait*/ QAnimationDriver_New for (&'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAnimationDriverC1EP7QObject()};
     let ctysz: c_int = unsafe{QAnimationDriver_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN16QAnimationDriverC1EP7QObject(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN16QAnimationDriverC1EP7QObject(arg0)};
-    let rsthis = QAnimationDriver{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN16QAnimationDriverC1EP7QObject(arg0)} as u64;
+    let rsthis = QAnimationDriver{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -833,5 +866,161 @@ impl<'a> /*trait*/ QAnimationDriver_setStartTime<()> for (i64) {
   }
 }
 
+#[derive(Default)] // for QAbstractAnimation_currentLoopChanged
+pub struct QAbstractAnimation_currentLoopChanged_signal{poi:u64}
+impl /* struct */ QAbstractAnimation {
+  pub fn currentLoopChanged_1(self) -> QAbstractAnimation_currentLoopChanged_signal {
+     return QAbstractAnimation_currentLoopChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QAbstractAnimation_currentLoopChanged_signal {
+  pub fn connect<T: QAbstractAnimation_currentLoopChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QAbstractAnimation_currentLoopChanged_signal_connect {
+  fn connect(self, sigthis: QAbstractAnimation_currentLoopChanged_signal);
+}
+
+#[derive(Default)] // for QAbstractAnimation_finished
+pub struct QAbstractAnimation_finished_signal{poi:u64}
+impl /* struct */ QAbstractAnimation {
+  pub fn finished_1(self) -> QAbstractAnimation_finished_signal {
+     return QAbstractAnimation_finished_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QAbstractAnimation_finished_signal {
+  pub fn connect<T: QAbstractAnimation_finished_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QAbstractAnimation_finished_signal_connect {
+  fn connect(self, sigthis: QAbstractAnimation_finished_signal);
+}
+
+#[derive(Default)] // for QAbstractAnimation_stateChanged
+pub struct QAbstractAnimation_stateChanged_signal{poi:u64}
+impl /* struct */ QAbstractAnimation {
+  pub fn stateChanged_1(self) -> QAbstractAnimation_stateChanged_signal {
+     return QAbstractAnimation_stateChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QAbstractAnimation_stateChanged_signal {
+  pub fn connect<T: QAbstractAnimation_stateChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QAbstractAnimation_stateChanged_signal_connect {
+  fn connect(self, sigthis: QAbstractAnimation_stateChanged_signal);
+}
+
+#[derive(Default)] // for QAbstractAnimation_directionChanged
+pub struct QAbstractAnimation_directionChanged_signal{poi:u64}
+impl /* struct */ QAbstractAnimation {
+  pub fn directionChanged_1(self) -> QAbstractAnimation_directionChanged_signal {
+     return QAbstractAnimation_directionChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QAbstractAnimation_directionChanged_signal {
+  pub fn connect<T: QAbstractAnimation_directionChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QAbstractAnimation_directionChanged_signal_connect {
+  fn connect(self, sigthis: QAbstractAnimation_directionChanged_signal);
+}
+
+// stateChanged(class QAbstractAnimation::State, class QAbstractAnimation::State)
+extern fn QAbstractAnimation_stateChanged_signal_connect_cb_0(arg0: c_int, arg1: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QAbstractAnimation_stateChanged_signal_connect for (extern fn(i32, i32)) {
+  fn connect(self, sigthis: QAbstractAnimation_stateChanged_signal) {
+    // do smth...
+    unsafe {QAbstractAnimation_SlotProxy_connect__ZN18QAbstractAnimation12stateChangedENS_5StateES0_(sigthis.poi as *mut c_void, QAbstractAnimation_stateChanged_signal_connect_cb_0 as *mut c_void)};
+  }
+}
+// currentLoopChanged(int)
+extern fn QAbstractAnimation_currentLoopChanged_signal_connect_cb_1(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QAbstractAnimation_currentLoopChanged_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QAbstractAnimation_currentLoopChanged_signal) {
+    // do smth...
+    unsafe {QAbstractAnimation_SlotProxy_connect__ZN18QAbstractAnimation18currentLoopChangedEi(sigthis.poi as *mut c_void, QAbstractAnimation_currentLoopChanged_signal_connect_cb_1 as *mut c_void)};
+  }
+}
+// finished()
+extern fn QAbstractAnimation_finished_signal_connect_cb_2() {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QAbstractAnimation_finished_signal_connect for (extern fn()) {
+  fn connect(self, sigthis: QAbstractAnimation_finished_signal) {
+    // do smth...
+    unsafe {QAbstractAnimation_SlotProxy_connect__ZN18QAbstractAnimation8finishedEv(sigthis.poi as *mut c_void, QAbstractAnimation_finished_signal_connect_cb_2 as *mut c_void)};
+  }
+}
+// directionChanged(class QAbstractAnimation::Direction)
+extern fn QAbstractAnimation_directionChanged_signal_connect_cb_3(arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QAbstractAnimation_directionChanged_signal_connect for (extern fn(i32)) {
+  fn connect(self, sigthis: QAbstractAnimation_directionChanged_signal) {
+    // do smth...
+    unsafe {QAbstractAnimation_SlotProxy_connect__ZN18QAbstractAnimation16directionChangedENS_9DirectionE(sigthis.poi as *mut c_void, QAbstractAnimation_directionChanged_signal_connect_cb_3 as *mut c_void)};
+  }
+}
+#[derive(Default)] // for QAnimationDriver_started
+pub struct QAnimationDriver_started_signal{poi:u64}
+impl /* struct */ QAnimationDriver {
+  pub fn started_1(self) -> QAnimationDriver_started_signal {
+     return QAnimationDriver_started_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QAnimationDriver_started_signal {
+  pub fn connect<T: QAnimationDriver_started_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QAnimationDriver_started_signal_connect {
+  fn connect(self, sigthis: QAnimationDriver_started_signal);
+}
+
+#[derive(Default)] // for QAnimationDriver_stopped
+pub struct QAnimationDriver_stopped_signal{poi:u64}
+impl /* struct */ QAnimationDriver {
+  pub fn stopped_1(self) -> QAnimationDriver_stopped_signal {
+     return QAnimationDriver_stopped_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QAnimationDriver_stopped_signal {
+  pub fn connect<T: QAnimationDriver_stopped_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QAnimationDriver_stopped_signal_connect {
+  fn connect(self, sigthis: QAnimationDriver_stopped_signal);
+}
+
+// stopped()
+extern fn QAnimationDriver_stopped_signal_connect_cb_0() {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QAnimationDriver_stopped_signal_connect for (extern fn()) {
+  fn connect(self, sigthis: QAnimationDriver_stopped_signal) {
+    // do smth...
+    unsafe {QAnimationDriver_SlotProxy_connect__ZN16QAnimationDriver7stoppedEv(sigthis.poi as *mut c_void, QAnimationDriver_stopped_signal_connect_cb_0 as *mut c_void)};
+  }
+}
+// started()
+extern fn QAnimationDriver_started_signal_connect_cb_1() {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QAnimationDriver_started_signal_connect for (extern fn()) {
+  fn connect(self, sigthis: QAnimationDriver_started_signal) {
+    // do smth...
+    unsafe {QAnimationDriver_SlotProxy_connect__ZN16QAnimationDriver7startedEv(sigthis.poi as *mut c_void, QAnimationDriver_started_signal_connect_cb_1 as *mut c_void)};
+  }
+}
 // <= body block end
 

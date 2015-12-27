@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qfutureinterface.h
 // dst-file: /src/core/qfutureinterface.rs
 //
@@ -34,90 +34,91 @@ use super::qthreadpool::QThreadPool; // 773
 extern {
   fn QFutureInterfaceBase_Class_Size() -> c_int;
   // proto:  int QFutureInterfaceBase::progressMinimum();
-  fn _ZNK20QFutureInterfaceBase15progressMinimumEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK20QFutureInterfaceBase15progressMinimumEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QFutureInterfaceBase::isStarted();
-  fn _ZNK20QFutureInterfaceBase9isStartedEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK20QFutureInterfaceBase9isStartedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QMutex * QFutureInterfaceBase::mutex();
-  fn _ZNK20QFutureInterfaceBase5mutexEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK20QFutureInterfaceBase5mutexEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QFutureInterfaceBase::isResultReadyAt(int index);
-  fn _ZNK20QFutureInterfaceBase15isResultReadyAtEi(qthis: *mut c_void, arg0: c_int) -> c_char;
+  fn _ZNK20QFutureInterfaceBase15isResultReadyAtEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
   // proto:  void QFutureInterfaceBase::setPaused(bool paused);
-  fn _ZN20QFutureInterfaceBase9setPausedEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN20QFutureInterfaceBase9setPausedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  int QFutureInterfaceBase::expectedResultCount();
-  fn _ZN20QFutureInterfaceBase19expectedResultCountEv(qthis: *mut c_void) -> c_int;
+  fn _ZN20QFutureInterfaceBase19expectedResultCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QFutureInterfaceBase::waitForFinished();
-  fn _ZN20QFutureInterfaceBase15waitForFinishedEv(qthis: *mut c_void);
+  fn _ZN20QFutureInterfaceBase15waitForFinishedEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QFutureInterfaceBase::isRunning();
-  fn _ZNK20QFutureInterfaceBase9isRunningEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK20QFutureInterfaceBase9isRunningEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QFutureInterfaceBase::~QFutureInterfaceBase();
-  fn _ZN20QFutureInterfaceBaseD0Ev(qthis: *mut c_void);
+  fn _ZN20QFutureInterfaceBaseD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QFutureInterfaceBase::cancel();
-  fn _ZN20QFutureInterfaceBase6cancelEv(qthis: *mut c_void);
+  fn _ZN20QFutureInterfaceBase6cancelEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QFutureInterfaceBase::reportStarted();
-  fn _ZN20QFutureInterfaceBase13reportStartedEv(qthis: *mut c_void);
+  fn _ZN20QFutureInterfaceBase13reportStartedEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QFutureInterfaceBase::setRunnable(QRunnable * runnable);
-  fn _ZN20QFutureInterfaceBase11setRunnableEP9QRunnable(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN20QFutureInterfaceBase11setRunnableEP9QRunnable(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QFutureInterfaceBase::isCanceled();
-  fn _ZNK20QFutureInterfaceBase10isCanceledEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK20QFutureInterfaceBase10isCanceledEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QString QFutureInterfaceBase::progressText();
-  fn _ZNK20QFutureInterfaceBase12progressTextEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK20QFutureInterfaceBase12progressTextEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QFutureInterfaceBase::isProgressUpdateNeeded();
-  fn _ZNK20QFutureInterfaceBase22isProgressUpdateNeededEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK20QFutureInterfaceBase22isProgressUpdateNeededEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QFutureInterfaceBase::setExpectedResultCount(int resultCount);
-  fn _ZN20QFutureInterfaceBase22setExpectedResultCountEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN20QFutureInterfaceBase22setExpectedResultCountEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QFutureInterfaceBase::reportResultsReady(int beginIndex, int endIndex);
-  fn _ZN20QFutureInterfaceBase18reportResultsReadyEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
+  fn _ZN20QFutureInterfaceBase18reportResultsReadyEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  void QFutureInterfaceBase::reportCanceled();
-  fn _ZN20QFutureInterfaceBase14reportCanceledEv(qthis: *mut c_void);
+  fn _ZN20QFutureInterfaceBase14reportCanceledEv(qthis: u64 /* *mut c_void*/);
   // proto:  int QFutureInterfaceBase::resultCount();
-  fn _ZNK20QFutureInterfaceBase11resultCountEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK20QFutureInterfaceBase11resultCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QFutureInterfaceBase::QFutureInterfaceBase(const QFutureInterfaceBase & other);
   fn dector_ZN20QFutureInterfaceBaseC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN20QFutureInterfaceBaseC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN20QFutureInterfaceBaseC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QFutureInterfaceBase::progressValue();
-  fn _ZNK20QFutureInterfaceBase13progressValueEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK20QFutureInterfaceBase13progressValueEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QFutureInterfaceBase::isThrottled();
-  fn _ZNK20QFutureInterfaceBase11isThrottledEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK20QFutureInterfaceBase11isThrottledEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QFutureInterfaceBase::setProgressRange(int minimum, int maximum);
-  fn _ZN20QFutureInterfaceBase16setProgressRangeEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
+  fn _ZN20QFutureInterfaceBase16setProgressRangeEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  void QFutureInterfaceBase::setThrottled(bool enable);
-  fn _ZN20QFutureInterfaceBase12setThrottledEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN20QFutureInterfaceBase12setThrottledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QFutureInterfaceBase::setProgressValueAndText(int progressValue, const QString & progressText);
-  fn _ZN20QFutureInterfaceBase23setProgressValueAndTextEiRK7QString(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void);
+  fn _ZN20QFutureInterfaceBase23setProgressValueAndTextEiRK7QString(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  void QFutureInterfaceBase::togglePaused();
-  fn _ZN20QFutureInterfaceBase12togglePausedEv(qthis: *mut c_void);
+  fn _ZN20QFutureInterfaceBase12togglePausedEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QFutureInterfaceBase::waitForResult(int resultIndex);
-  fn _ZN20QFutureInterfaceBase13waitForResultEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN20QFutureInterfaceBase13waitForResultEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  bool QFutureInterfaceBase::isPaused();
-  fn _ZNK20QFutureInterfaceBase8isPausedEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK20QFutureInterfaceBase8isPausedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QFutureInterfaceBase::waitForNextResult();
-  fn _ZN20QFutureInterfaceBase17waitForNextResultEv(qthis: *mut c_void) -> c_char;
+  fn _ZN20QFutureInterfaceBase17waitForNextResultEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QFutureInterfaceBase::reportFinished();
-  fn _ZN20QFutureInterfaceBase14reportFinishedEv(qthis: *mut c_void);
+  fn _ZN20QFutureInterfaceBase14reportFinishedEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QFutureInterfaceBase::setFilterMode(bool enable);
-  fn _ZN20QFutureInterfaceBase13setFilterModeEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN20QFutureInterfaceBase13setFilterModeEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  int QFutureInterfaceBase::progressMaximum();
-  fn _ZNK20QFutureInterfaceBase15progressMaximumEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK20QFutureInterfaceBase15progressMaximumEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QFutureInterfaceBase::setThreadPool(QThreadPool * pool);
-  fn _ZN20QFutureInterfaceBase13setThreadPoolEP11QThreadPool(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN20QFutureInterfaceBase13setThreadPoolEP11QThreadPool(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QFutureInterfaceBase::waitForResume();
-  fn _ZN20QFutureInterfaceBase13waitForResumeEv(qthis: *mut c_void);
+  fn _ZN20QFutureInterfaceBase13waitForResumeEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QFutureInterfaceBase::setProgressValue(int progressValue);
-  fn _ZN20QFutureInterfaceBase16setProgressValueEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN20QFutureInterfaceBase16setProgressValueEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  bool QFutureInterfaceBase::isFinished();
-  fn _ZNK20QFutureInterfaceBase10isFinishedEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK20QFutureInterfaceBase10isFinishedEv(qthis: u64 /* *mut c_void*/) -> c_char;
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QFutureInterfaceBase)=16
+#[derive(Default)]
 pub struct QFutureInterfaceBase {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QFutureInterfaceBase {
-  pub fn inheritFrom(qthis: *mut c_void) -> QFutureInterfaceBase {
-    return QFutureInterfaceBase{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QFutureInterfaceBase {
+    return QFutureInterfaceBase{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  int QFutureInterfaceBase::progressMinimum();
@@ -184,7 +185,7 @@ impl<'a> /*trait*/ QFutureInterfaceBase_mutex<QMutex> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QFutureInterfaceBase5mutexEv()};
     let mut ret = unsafe {_ZNK20QFutureInterfaceBase5mutexEv(rsthis.qclsinst)};
-    let mut ret1 = QMutex::inheritFrom(ret);
+    let mut ret1 = QMutex::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -435,7 +436,7 @@ impl<'a> /*trait*/ QFutureInterfaceBase_progressText<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QFutureInterfaceBase12progressTextEv()};
     let mut ret = unsafe {_ZNK20QFutureInterfaceBase12progressTextEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -575,11 +576,11 @@ impl<'a> /*trait*/ QFutureInterfaceBase_New for (&'a QFutureInterfaceBase) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QFutureInterfaceBaseC1ERKS_()};
     let ctysz: c_int = unsafe{QFutureInterfaceBase_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN20QFutureInterfaceBaseC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN20QFutureInterfaceBaseC1ERKS_(arg0)};
-    let rsthis = QFutureInterfaceBase{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN20QFutureInterfaceBaseC1ERKS_(arg0)} as u64;
+    let rsthis = QFutureInterfaceBase{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }

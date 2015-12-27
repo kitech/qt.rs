@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtGui/qsessionmanager.h
 // dst-file: /src/gui/qsessionmanager.rs
 //
@@ -34,52 +34,53 @@ use super::qguiapplication::QGuiApplication; // 773
 extern {
   fn QSessionManager_Class_Size() -> c_int;
   // proto:  QString QSessionManager::sessionId();
-  fn _ZNK15QSessionManager9sessionIdEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK15QSessionManager9sessionIdEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QSessionManager::sessionKey();
-  fn _ZNK15QSessionManager10sessionKeyEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK15QSessionManager10sessionKeyEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QSessionManager::setRestartCommand(const QStringList & );
-  fn _ZN15QSessionManager17setRestartCommandERK11QStringList(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN15QSessionManager17setRestartCommandERK11QStringList(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QSessionManager::metaObject();
-  fn _ZNK15QSessionManager10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK15QSessionManager10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QSessionManager::allowsErrorInteraction();
-  fn _ZN15QSessionManager22allowsErrorInteractionEv(qthis: *mut c_void) -> c_char;
+  fn _ZN15QSessionManager22allowsErrorInteractionEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QSessionManager::~QSessionManager();
-  fn _ZN15QSessionManagerD0Ev(qthis: *mut c_void);
+  fn _ZN15QSessionManagerD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QStringList QSessionManager::restartCommand();
-  fn _ZNK15QSessionManager14restartCommandEv(qthis: *mut c_void);
+  fn _ZNK15QSessionManager14restartCommandEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QSessionManager::requestPhase2();
-  fn _ZN15QSessionManager13requestPhase2Ev(qthis: *mut c_void);
+  fn _ZN15QSessionManager13requestPhase2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QSessionManager::isPhase2();
-  fn _ZNK15QSessionManager8isPhase2Ev(qthis: *mut c_void) -> c_char;
+  fn _ZNK15QSessionManager8isPhase2Ev(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QSessionManager::release();
-  fn _ZN15QSessionManager7releaseEv(qthis: *mut c_void);
+  fn _ZN15QSessionManager7releaseEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QSessionManager::setManagerProperty(const QString & name, const QString & value);
-  fn _ZN15QSessionManager18setManagerPropertyERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN15QSessionManager18setManagerPropertyERK7QStringS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QSessionManager::setManagerProperty(const QString & name, const QStringList & value);
-  fn _ZN15QSessionManager18setManagerPropertyERK7QStringRK11QStringList(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN15QSessionManager18setManagerPropertyERK7QStringRK11QStringList(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  QStringList QSessionManager::discardCommand();
-  fn _ZNK15QSessionManager14discardCommandEv(qthis: *mut c_void);
+  fn _ZNK15QSessionManager14discardCommandEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QSessionManager::QSessionManager(QGuiApplication * app, QString & id, QString & key);
   fn dector_ZN15QSessionManagerC1EP15QGuiApplicationR7QStringS3_(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> *mut c_void;
-  fn _ZN15QSessionManagerC1EP15QGuiApplicationR7QStringS3_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
+  fn _ZN15QSessionManagerC1EP15QGuiApplicationR7QStringS3_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  void QSessionManager::cancel();
-  fn _ZN15QSessionManager6cancelEv(qthis: *mut c_void);
+  fn _ZN15QSessionManager6cancelEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QSessionManager::setDiscardCommand(const QStringList & );
-  fn _ZN15QSessionManager17setDiscardCommandERK11QStringList(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN15QSessionManager17setDiscardCommandERK11QStringList(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QSessionManager::allowsInteraction();
-  fn _ZN15QSessionManager17allowsInteractionEv(qthis: *mut c_void) -> c_char;
+  fn _ZN15QSessionManager17allowsInteractionEv(qthis: u64 /* *mut c_void*/) -> c_char;
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QSessionManager)=1
+#[derive(Default)]
 pub struct QSessionManager {
   qbase: QObject,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QSessionManager {
-  pub fn inheritFrom(qthis: *mut c_void) -> QSessionManager {
-    return QSessionManager{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QSessionManager {
+    return QSessionManager{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QSessionManager {
@@ -112,7 +113,7 @@ impl<'a> /*trait*/ QSessionManager_sessionId<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSessionManager9sessionIdEv()};
     let mut ret = unsafe {_ZNK15QSessionManager9sessionIdEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -136,7 +137,7 @@ impl<'a> /*trait*/ QSessionManager_sessionKey<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSessionManager10sessionKeyEv()};
     let mut ret = unsafe {_ZNK15QSessionManager10sessionKeyEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -398,13 +399,13 @@ impl<'a> /*trait*/ QSessionManager_New for (&'a QGuiApplication, &'a QString, &'
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSessionManagerC1EP15QGuiApplicationR7QStringS3_()};
     let ctysz: c_int = unsafe{QSessionManager_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     // unsafe {_ZN15QSessionManagerC1EP15QGuiApplicationR7QStringS3_(qthis, arg0, arg1, arg2)};
-    let qthis: *mut c_void = unsafe {dector_ZN15QSessionManagerC1EP15QGuiApplicationR7QStringS3_(arg0, arg1, arg2)};
-    let rsthis = QSessionManager{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN15QSessionManagerC1EP15QGuiApplicationR7QStringS3_(arg0, arg1, arg2)} as u64;
+    let rsthis = QSessionManager{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }

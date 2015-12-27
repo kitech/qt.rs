@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtWidgets/qtextbrowser.h
 // dst-file: /src/widgets/qtextbrowser.rs
 //
@@ -36,81 +36,95 @@ use super::super::core::qvariant::QVariant; // 771
 extern {
   fn QTextBrowser_Class_Size() -> c_int;
   // proto:  bool QTextBrowser::isBackwardAvailable();
-  fn _ZNK12QTextBrowser19isBackwardAvailableEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK12QTextBrowser19isBackwardAvailableEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QTextBrowser::reload();
-  fn _ZN12QTextBrowser6reloadEv(qthis: *mut c_void);
+  fn _ZN12QTextBrowser6reloadEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QTextBrowser::openLinks();
-  fn _ZNK12QTextBrowser9openLinksEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK12QTextBrowser9openLinksEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QTextBrowser::clearHistory();
-  fn _ZN12QTextBrowser12clearHistoryEv(qthis: *mut c_void);
+  fn _ZN12QTextBrowser12clearHistoryEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QTextBrowser::highlighted(const QUrl & );
-  fn _ZN12QTextBrowser11highlightedERK4QUrl(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN12QTextBrowser11highlightedERK4QUrl(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QTextBrowser::metaObject();
-  fn _ZNK12QTextBrowser10metaObjectEv(qthis: *mut c_void);
+  fn _ZNK12QTextBrowser10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  QUrl QTextBrowser::historyUrl(int );
-  fn _ZNK12QTextBrowser10historyUrlEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
+  fn _ZNK12QTextBrowser10historyUrlEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  void QTextBrowser::sourceChanged(const QUrl & );
-  fn _ZN12QTextBrowser13sourceChangedERK4QUrl(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN12QTextBrowser13sourceChangedERK4QUrl(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QTextBrowser::isForwardAvailable();
-  fn _ZNK12QTextBrowser18isForwardAvailableEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK12QTextBrowser18isForwardAvailableEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QTextBrowser::openExternalLinks();
-  fn _ZNK12QTextBrowser17openExternalLinksEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK12QTextBrowser17openExternalLinksEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QTextBrowser::QTextBrowser(QWidget * parent);
   fn dector_ZN12QTextBrowserC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN12QTextBrowserC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN12QTextBrowserC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QTextBrowser::backwardHistoryCount();
-  fn _ZNK12QTextBrowser20backwardHistoryCountEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK12QTextBrowser20backwardHistoryCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QTextBrowser::home();
-  fn _ZN12QTextBrowser4homeEv(qthis: *mut c_void);
+  fn _ZN12QTextBrowser4homeEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QTextBrowser::~QTextBrowser();
-  fn _ZN12QTextBrowserD0Ev(qthis: *mut c_void);
+  fn _ZN12QTextBrowserD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QTextBrowser::QTextBrowser(const QTextBrowser & );
   fn dector_ZN12QTextBrowserC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN12QTextBrowserC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN12QTextBrowserC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTextBrowser::setOpenLinks(bool open);
-  fn _ZN12QTextBrowser12setOpenLinksEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN12QTextBrowser12setOpenLinksEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QTextBrowser::forward();
-  fn _ZN12QTextBrowser7forwardEv(qthis: *mut c_void);
+  fn _ZN12QTextBrowser7forwardEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QTextBrowser::highlighted(const QString & );
-  fn _ZN12QTextBrowser11highlightedERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN12QTextBrowser11highlightedERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QString QTextBrowser::historyTitle(int );
-  fn _ZNK12QTextBrowser12historyTitleEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
+  fn _ZNK12QTextBrowser12historyTitleEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  void QTextBrowser::forwardAvailable(bool );
-  fn _ZN12QTextBrowser16forwardAvailableEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN12QTextBrowser16forwardAvailableEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QTextBrowser::setSearchPaths(const QStringList & paths);
-  fn _ZN12QTextBrowser14setSearchPathsERK11QStringList(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN12QTextBrowser14setSearchPathsERK11QStringList(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QVariant QTextBrowser::loadResource(int type, const QUrl & name);
-  fn _ZN12QTextBrowser12loadResourceEiRK4QUrl(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void) -> *mut c_void;
+  fn _ZN12QTextBrowser12loadResourceEiRK4QUrl(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void) -> *mut c_void;
   // proto:  QUrl QTextBrowser::source();
-  fn _ZNK12QTextBrowser6sourceEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK12QTextBrowser6sourceEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QTextBrowser::historyChanged();
-  fn _ZN12QTextBrowser14historyChangedEv(qthis: *mut c_void);
+  fn _ZN12QTextBrowser14historyChangedEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QTextBrowser::setOpenExternalLinks(bool open);
-  fn _ZN12QTextBrowser20setOpenExternalLinksEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN12QTextBrowser20setOpenExternalLinksEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QTextBrowser::setSource(const QUrl & name);
-  fn _ZN12QTextBrowser9setSourceERK4QUrl(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN12QTextBrowser9setSourceERK4QUrl(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QStringList QTextBrowser::searchPaths();
-  fn _ZNK12QTextBrowser11searchPathsEv(qthis: *mut c_void);
+  fn _ZNK12QTextBrowser11searchPathsEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QTextBrowser::backward();
-  fn _ZN12QTextBrowser8backwardEv(qthis: *mut c_void);
+  fn _ZN12QTextBrowser8backwardEv(qthis: u64 /* *mut c_void*/);
   // proto:  int QTextBrowser::forwardHistoryCount();
-  fn _ZNK12QTextBrowser19forwardHistoryCountEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK12QTextBrowser19forwardHistoryCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QTextBrowser::anchorClicked(const QUrl & );
-  fn _ZN12QTextBrowser13anchorClickedERK4QUrl(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN12QTextBrowser13anchorClickedERK4QUrl(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTextBrowser::backwardAvailable(bool );
-  fn _ZN12QTextBrowser17backwardAvailableEb(qthis: *mut c_void, arg0: c_char);
+  fn _ZN12QTextBrowser17backwardAvailableEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn QTextBrowser_SlotProxy_connect__ZN12QTextBrowser14historyChangedEv(qthis: *mut c_void, fptr: *mut c_void);
+  fn QTextBrowser_SlotProxy_connect__ZN12QTextBrowser11highlightedERK7QString(qthis: *mut c_void, fptr: *mut c_void);
+  fn QTextBrowser_SlotProxy_connect__ZN12QTextBrowser13sourceChangedERK4QUrl(qthis: *mut c_void, fptr: *mut c_void);
+  fn QTextBrowser_SlotProxy_connect__ZN12QTextBrowser11highlightedERK4QUrl(qthis: *mut c_void, fptr: *mut c_void);
+  fn QTextBrowser_SlotProxy_connect__ZN12QTextBrowser16forwardAvailableEb(qthis: *mut c_void, fptr: *mut c_void);
+  fn QTextBrowser_SlotProxy_connect__ZN12QTextBrowser13anchorClickedERK4QUrl(qthis: *mut c_void, fptr: *mut c_void);
+  fn QTextBrowser_SlotProxy_connect__ZN12QTextBrowser17backwardAvailableEb(qthis: *mut c_void, fptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QTextBrowser)=1
+#[derive(Default)]
 pub struct QTextBrowser {
   qbase: QTextEdit,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
+  pub _forwardAvailable_1: QTextBrowser_forwardAvailable_signal,
+  pub _sourceChanged_1: QTextBrowser_sourceChanged_signal,
+  pub _highlighted_1: QTextBrowser_highlighted_signal,
+  pub _anchorClicked_1: QTextBrowser_anchorClicked_signal,
+  pub _historyChanged_1: QTextBrowser_historyChanged_signal,
+  pub _backwardAvailable_1: QTextBrowser_backwardAvailable_signal,
 }
 
 impl /*struct*/ QTextBrowser {
-  pub fn inheritFrom(qthis: *mut c_void) -> QTextBrowser {
-    return QTextBrowser{qbase: QTextEdit::inheritFrom(qthis), qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QTextBrowser {
+    return QTextBrowser{qbase: QTextEdit::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
 impl Deref for QTextBrowser {
@@ -279,7 +293,7 @@ impl<'a> /*trait*/ QTextBrowser_historyUrl<QUrl> for (i32) {
     // unsafe{_ZNK12QTextBrowser10historyUrlEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK12QTextBrowser10historyUrlEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QUrl::inheritFrom(ret);
+    let mut ret1 = QUrl::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -373,11 +387,11 @@ impl<'a> /*trait*/ QTextBrowser_New for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTextBrowserC1EP7QWidget()};
     let ctysz: c_int = unsafe{QTextBrowser_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN12QTextBrowserC1EP7QWidget(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN12QTextBrowserC1EP7QWidget(arg0)};
-    let rsthis = QTextBrowser{/**/qbase: QTextEdit::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN12QTextBrowserC1EP7QWidget(arg0)} as u64;
+    let rsthis = QTextBrowser{qbase: QTextEdit::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -456,11 +470,11 @@ impl<'a> /*trait*/ QTextBrowser_New for (&'a QTextBrowser) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTextBrowserC1ERKS_()};
     let ctysz: c_int = unsafe{QTextBrowser_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN12QTextBrowserC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN12QTextBrowserC1ERKS_(arg0)};
-    let rsthis = QTextBrowser{/**/qbase: QTextEdit::inheritFrom(qthis), /**/qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN12QTextBrowserC1ERKS_(arg0)} as u64;
+    let rsthis = QTextBrowser{qbase: QTextEdit::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -541,7 +555,7 @@ impl<'a> /*trait*/ QTextBrowser_historyTitle<QString> for (i32) {
     // unsafe{_ZNK12QTextBrowser12historyTitleEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK12QTextBrowser12historyTitleEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -613,7 +627,7 @@ impl<'a> /*trait*/ QTextBrowser_loadResource<QVariant> for (i32, &'a QUrl) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN12QTextBrowser12loadResourceEiRK4QUrl(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QVariant::inheritFrom(ret);
+    let mut ret1 = QVariant::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -637,7 +651,7 @@ impl<'a> /*trait*/ QTextBrowser_source<QUrl> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTextBrowser6sourceEv()};
     let mut ret = unsafe {_ZNK12QTextBrowser6sourceEv(rsthis.qclsinst)};
-    let mut ret1 = QUrl::inheritFrom(ret);
+    let mut ret1 = QUrl::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -824,5 +838,171 @@ impl<'a> /*trait*/ QTextBrowser_backwardAvailable<()> for (i8) {
   }
 }
 
+#[derive(Default)] // for QTextBrowser_forwardAvailable
+pub struct QTextBrowser_forwardAvailable_signal{poi:u64}
+impl /* struct */ QTextBrowser {
+  pub fn forwardAvailable_1(self) -> QTextBrowser_forwardAvailable_signal {
+     return QTextBrowser_forwardAvailable_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QTextBrowser_forwardAvailable_signal {
+  pub fn connect<T: QTextBrowser_forwardAvailable_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QTextBrowser_forwardAvailable_signal_connect {
+  fn connect(self, sigthis: QTextBrowser_forwardAvailable_signal);
+}
+
+#[derive(Default)] // for QTextBrowser_sourceChanged
+pub struct QTextBrowser_sourceChanged_signal{poi:u64}
+impl /* struct */ QTextBrowser {
+  pub fn sourceChanged_1(self) -> QTextBrowser_sourceChanged_signal {
+     return QTextBrowser_sourceChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QTextBrowser_sourceChanged_signal {
+  pub fn connect<T: QTextBrowser_sourceChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QTextBrowser_sourceChanged_signal_connect {
+  fn connect(self, sigthis: QTextBrowser_sourceChanged_signal);
+}
+
+#[derive(Default)] // for QTextBrowser_highlighted
+pub struct QTextBrowser_highlighted_signal{poi:u64}
+impl /* struct */ QTextBrowser {
+  pub fn highlighted_1(self) -> QTextBrowser_highlighted_signal {
+     return QTextBrowser_highlighted_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QTextBrowser_highlighted_signal {
+  pub fn connect<T: QTextBrowser_highlighted_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QTextBrowser_highlighted_signal_connect {
+  fn connect(self, sigthis: QTextBrowser_highlighted_signal);
+}
+
+#[derive(Default)] // for QTextBrowser_anchorClicked
+pub struct QTextBrowser_anchorClicked_signal{poi:u64}
+impl /* struct */ QTextBrowser {
+  pub fn anchorClicked_1(self) -> QTextBrowser_anchorClicked_signal {
+     return QTextBrowser_anchorClicked_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QTextBrowser_anchorClicked_signal {
+  pub fn connect<T: QTextBrowser_anchorClicked_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QTextBrowser_anchorClicked_signal_connect {
+  fn connect(self, sigthis: QTextBrowser_anchorClicked_signal);
+}
+
+#[derive(Default)] // for QTextBrowser_historyChanged
+pub struct QTextBrowser_historyChanged_signal{poi:u64}
+impl /* struct */ QTextBrowser {
+  pub fn historyChanged_1(self) -> QTextBrowser_historyChanged_signal {
+     return QTextBrowser_historyChanged_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QTextBrowser_historyChanged_signal {
+  pub fn connect<T: QTextBrowser_historyChanged_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QTextBrowser_historyChanged_signal_connect {
+  fn connect(self, sigthis: QTextBrowser_historyChanged_signal);
+}
+
+#[derive(Default)] // for QTextBrowser_backwardAvailable
+pub struct QTextBrowser_backwardAvailable_signal{poi:u64}
+impl /* struct */ QTextBrowser {
+  pub fn backwardAvailable_1(self) -> QTextBrowser_backwardAvailable_signal {
+     return QTextBrowser_backwardAvailable_signal{poi:self.qclsinst};
+  }
+}
+impl /* struct */ QTextBrowser_backwardAvailable_signal {
+  pub fn connect<T: QTextBrowser_backwardAvailable_signal_connect>(self, overload_args: T) {
+    overload_args.connect(self);
+  }
+}
+pub trait QTextBrowser_backwardAvailable_signal_connect {
+  fn connect(self, sigthis: QTextBrowser_backwardAvailable_signal);
+}
+
+// historyChanged()
+extern fn QTextBrowser_historyChanged_signal_connect_cb_0() {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QTextBrowser_historyChanged_signal_connect for (extern fn()) {
+  fn connect(self, sigthis: QTextBrowser_historyChanged_signal) {
+    // do smth...
+    unsafe {QTextBrowser_SlotProxy_connect__ZN12QTextBrowser14historyChangedEv(sigthis.poi as *mut c_void, QTextBrowser_historyChanged_signal_connect_cb_0 as *mut c_void)};
+  }
+}
+// highlighted(const class QString &)
+extern fn QTextBrowser_highlighted_signal_connect_cb_1(arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QTextBrowser_highlighted_signal_connect for (extern fn(QString)) {
+  fn connect(self, sigthis: QTextBrowser_highlighted_signal) {
+    // do smth...
+    unsafe {QTextBrowser_SlotProxy_connect__ZN12QTextBrowser11highlightedERK7QString(sigthis.poi as *mut c_void, QTextBrowser_highlighted_signal_connect_cb_1 as *mut c_void)};
+  }
+}
+// sourceChanged(const class QUrl &)
+extern fn QTextBrowser_sourceChanged_signal_connect_cb_2(arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QTextBrowser_sourceChanged_signal_connect for (extern fn(QUrl)) {
+  fn connect(self, sigthis: QTextBrowser_sourceChanged_signal) {
+    // do smth...
+    unsafe {QTextBrowser_SlotProxy_connect__ZN12QTextBrowser13sourceChangedERK4QUrl(sigthis.poi as *mut c_void, QTextBrowser_sourceChanged_signal_connect_cb_2 as *mut c_void)};
+  }
+}
+// highlighted(const class QUrl &)
+extern fn QTextBrowser_highlighted_signal_connect_cb_3(arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QTextBrowser_highlighted_signal_connect for (extern fn(QUrl)) {
+  fn connect(self, sigthis: QTextBrowser_highlighted_signal) {
+    // do smth...
+    unsafe {QTextBrowser_SlotProxy_connect__ZN12QTextBrowser11highlightedERK4QUrl(sigthis.poi as *mut c_void, QTextBrowser_highlighted_signal_connect_cb_3 as *mut c_void)};
+  }
+}
+// forwardAvailable(_Bool)
+extern fn QTextBrowser_forwardAvailable_signal_connect_cb_4(arg0: c_char) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QTextBrowser_forwardAvailable_signal_connect for (extern fn(i8)) {
+  fn connect(self, sigthis: QTextBrowser_forwardAvailable_signal) {
+    // do smth...
+    unsafe {QTextBrowser_SlotProxy_connect__ZN12QTextBrowser16forwardAvailableEb(sigthis.poi as *mut c_void, QTextBrowser_forwardAvailable_signal_connect_cb_4 as *mut c_void)};
+  }
+}
+// anchorClicked(const class QUrl &)
+extern fn QTextBrowser_anchorClicked_signal_connect_cb_5(arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QTextBrowser_anchorClicked_signal_connect for (extern fn(QUrl)) {
+  fn connect(self, sigthis: QTextBrowser_anchorClicked_signal) {
+    // do smth...
+    unsafe {QTextBrowser_SlotProxy_connect__ZN12QTextBrowser13anchorClickedERK4QUrl(sigthis.poi as *mut c_void, QTextBrowser_anchorClicked_signal_connect_cb_5 as *mut c_void)};
+  }
+}
+// backwardAvailable(_Bool)
+extern fn QTextBrowser_backwardAvailable_signal_connect_cb_6(arg0: c_char) {
+  println!("{}:{}", file!(), line!());
+}
+impl /* trait */ QTextBrowser_backwardAvailable_signal_connect for (extern fn(i8)) {
+  fn connect(self, sigthis: QTextBrowser_backwardAvailable_signal) {
+    // do smth...
+    unsafe {QTextBrowser_SlotProxy_connect__ZN12QTextBrowser17backwardAvailableEb(sigthis.poi as *mut c_void, QTextBrowser_backwardAvailable_signal_connect_cb_6 as *mut c_void)};
+  }
+}
 // <= body block end
 

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:03 2015
 // src-file: /QtGui/qgenericpluginfactory.h
 // dst-file: /src/gui/qgenericpluginfactory.rs
 //
@@ -39,14 +39,15 @@ extern {
 
 // body block begin =>
 // class sizeof(QGenericPluginFactory)=1
+#[derive(Default)]
 pub struct QGenericPluginFactory {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QGenericPluginFactory {
-  pub fn inheritFrom(qthis: *mut c_void) -> QGenericPluginFactory {
-    return QGenericPluginFactory{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QGenericPluginFactory {
+    return QGenericPluginFactory{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto: static QObject * QGenericPluginFactory::create(const QString & , const QString & );
@@ -69,7 +70,7 @@ impl<'a> /*trait*/ QGenericPluginFactory_create_s<QObject> for (&'a QString, &'a
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN21QGenericPluginFactory6createERK7QStringS2_(arg0, arg1)};
-    let mut ret1 = QObject::inheritFrom(ret);
+    let mut ret1 = QObject::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }

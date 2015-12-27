@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtGui/qdesktopservices.h
 // dst-file: /src/gui/qdesktopservices.rs
 //
@@ -42,14 +42,15 @@ extern {
 
 // body block begin =>
 // class sizeof(QDesktopServices)=1
+#[derive(Default)]
 pub struct QDesktopServices {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QDesktopServices {
-  pub fn inheritFrom(qthis: *mut c_void) -> QDesktopServices {
-    return QDesktopServices{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QDesktopServices {
+    return QDesktopServices{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto: static void QDesktopServices::unsetUrlHandler(const QString & scheme);

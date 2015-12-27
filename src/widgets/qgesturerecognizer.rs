@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtWidgets/qgesturerecognizer.h
 // dst-file: /src/widgets/qgesturerecognizer.rs
 //
@@ -33,26 +33,27 @@ use super::super::core::qcoreevent::QEvent; // 771
 extern {
   fn QGestureRecognizer_Class_Size() -> c_int;
   // proto:  void QGestureRecognizer::~QGestureRecognizer();
-  fn _ZN18QGestureRecognizerD0Ev(qthis: *mut c_void);
+  fn _ZN18QGestureRecognizerD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QGestureRecognizer::QGestureRecognizer();
   fn dector_ZN18QGestureRecognizerC1Ev() -> *mut c_void;
-  fn _ZN18QGestureRecognizerC1Ev(qthis: *mut c_void);
+  fn _ZN18QGestureRecognizerC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QGestureRecognizer::reset(QGesture * state);
-  fn _ZN18QGestureRecognizer5resetEP8QGesture(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN18QGestureRecognizer5resetEP8QGesture(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QGesture * QGestureRecognizer::create(QObject * target);
-  fn _ZN18QGestureRecognizer6createEP7QObject(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZN18QGestureRecognizer6createEP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QGestureRecognizer)=8
+#[derive(Default)]
 pub struct QGestureRecognizer {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QGestureRecognizer {
-  pub fn inheritFrom(qthis: *mut c_void) -> QGestureRecognizer {
-    return QGestureRecognizer{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QGestureRecognizer {
+    return QGestureRecognizer{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  void QGestureRecognizer::~QGestureRecognizer();
@@ -96,10 +97,10 @@ impl<'a> /*trait*/ QGestureRecognizer_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QGestureRecognizerC1Ev()};
     let ctysz: c_int = unsafe{QGestureRecognizer_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN18QGestureRecognizerC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN18QGestureRecognizerC1Ev()};
-    let rsthis = QGestureRecognizer{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN18QGestureRecognizerC1Ev()} as u64;
+    let rsthis = QGestureRecognizer{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -147,7 +148,7 @@ impl<'a> /*trait*/ QGestureRecognizer_create<QGesture> for (&'a QObject) {
     // unsafe{_ZN18QGestureRecognizer6createEP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN18QGestureRecognizer6createEP7QObject(rsthis.qclsinst, arg0)};
-    let mut ret1 = QGesture::inheritFrom(ret);
+    let mut ret1 = QGesture::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }

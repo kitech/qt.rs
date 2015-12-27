@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtWidgets/qtooltip.h
 // dst-file: /src/widgets/qtooltip.rs
 //
@@ -45,7 +45,7 @@ extern {
   fn _ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRect(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void);
   // proto:  void QToolTip::QToolTip();
   fn dector_ZN8QToolTipC1Ev() -> *mut c_void;
-  fn _ZN8QToolTipC1Ev(qthis: *mut c_void);
+  fn _ZN8QToolTipC1Ev(qthis: u64 /* *mut c_void*/);
   // proto: static void QToolTip::showText(const QPoint & pos, const QString & text, QWidget * w, const QRect & rect, int msecShowTime);
   fn _ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRecti(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void, arg4: c_int);
   // proto: static QString QToolTip::text();
@@ -62,14 +62,15 @@ extern {
 
 // body block begin =>
 // class sizeof(QToolTip)=1
+#[derive(Default)]
 pub struct QToolTip {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QToolTip {
-  pub fn inheritFrom(qthis: *mut c_void) -> QToolTip {
-    return QToolTip{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QToolTip {
+    return QToolTip{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto: static void QToolTip::setFont(const QFont & );
@@ -113,7 +114,7 @@ impl<'a> /*trait*/ QToolTip_palette_s<QPalette> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolTip7paletteEv()};
     let mut ret = unsafe {_ZN8QToolTip7paletteEv()};
-    let mut ret1 = QPalette::inheritFrom(ret);
+    let mut ret1 = QPalette::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -186,10 +187,10 @@ impl<'a> /*trait*/ QToolTip_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolTipC1Ev()};
     let ctysz: c_int = unsafe{QToolTip_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN8QToolTipC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN8QToolTipC1Ev()};
-    let rsthis = QToolTip{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN8QToolTipC1Ev()} as u64;
+    let rsthis = QToolTip{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -228,7 +229,7 @@ impl<'a> /*trait*/ QToolTip_text_s<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolTip4textEv()};
     let mut ret = unsafe {_ZN8QToolTip4textEv()};
-    let mut ret1 = QString::inheritFrom(ret);
+    let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -252,7 +253,7 @@ impl<'a> /*trait*/ QToolTip_font_s<QFont> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolTip4fontEv()};
     let mut ret = unsafe {_ZN8QToolTip4fontEv()};
-    let mut ret1 = QFont::inheritFrom(ret);
+    let mut ret1 = QFont::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }

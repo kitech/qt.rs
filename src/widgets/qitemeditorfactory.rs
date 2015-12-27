@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtWidgets/qitemeditorfactory.h
 // dst-file: /src/widgets/qitemeditorfactory.rs
 //
@@ -33,45 +33,47 @@ use super::qwidget::QWidget; // 773
 extern {
   fn QItemEditorCreatorBase_Class_Size() -> c_int;
   // proto:  QByteArray QItemEditorCreatorBase::valuePropertyName();
-  fn _ZNK22QItemEditorCreatorBase17valuePropertyNameEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK22QItemEditorCreatorBase17valuePropertyNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QWidget * QItemEditorCreatorBase::createWidget(QWidget * parent);
-  fn _ZNK22QItemEditorCreatorBase12createWidgetEP7QWidget(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK22QItemEditorCreatorBase12createWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QItemEditorCreatorBase::~QItemEditorCreatorBase();
-  fn _ZN22QItemEditorCreatorBaseD0Ev(qthis: *mut c_void);
+  fn _ZN22QItemEditorCreatorBaseD0Ev(qthis: u64 /* *mut c_void*/);
   fn QItemEditorFactory_Class_Size() -> c_int;
   // proto:  void QItemEditorFactory::QItemEditorFactory();
   fn dector_ZN18QItemEditorFactoryC1Ev() -> *mut c_void;
-  fn demth_ZN18QItemEditorFactoryC1Ev(qthis: *mut c_void);
+  fn demth_ZN18QItemEditorFactoryC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QByteArray QItemEditorFactory::valuePropertyName(int userType);
-  fn _ZNK18QItemEditorFactory17valuePropertyNameEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
+  fn _ZNK18QItemEditorFactory17valuePropertyNameEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto: static const QItemEditorFactory * QItemEditorFactory::defaultFactory();
   fn _ZN18QItemEditorFactory14defaultFactoryEv() -> *mut c_void;
   // proto:  void QItemEditorFactory::~QItemEditorFactory();
-  fn _ZN18QItemEditorFactoryD0Ev(qthis: *mut c_void);
+  fn _ZN18QItemEditorFactoryD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QItemEditorFactory::registerEditor(int userType, QItemEditorCreatorBase * creator);
-  fn _ZN18QItemEditorFactory14registerEditorEiP22QItemEditorCreatorBase(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void);
+  fn _ZN18QItemEditorFactory14registerEditorEiP22QItemEditorCreatorBase(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto: static void QItemEditorFactory::setDefaultFactory(QItemEditorFactory * factory);
   fn _ZN18QItemEditorFactory17setDefaultFactoryEPS_(arg0: *mut c_void);
   // proto:  QWidget * QItemEditorFactory::createEditor(int userType, QWidget * parent);
-  fn _ZNK18QItemEditorFactory12createEditorEiP7QWidget(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void) -> *mut c_void;
+  fn _ZNK18QItemEditorFactory12createEditorEiP7QWidget(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void) -> *mut c_void;
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QItemEditorCreatorBase)=8
+#[derive(Default)]
 pub struct QItemEditorCreatorBase {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 // class sizeof(QItemEditorFactory)=1
+#[derive(Default)]
 pub struct QItemEditorFactory {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QItemEditorCreatorBase {
-  pub fn inheritFrom(qthis: *mut c_void) -> QItemEditorCreatorBase {
-    return QItemEditorCreatorBase{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QItemEditorCreatorBase {
+    return QItemEditorCreatorBase{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  QByteArray QItemEditorCreatorBase::valuePropertyName();
@@ -92,7 +94,7 @@ impl<'a> /*trait*/ QItemEditorCreatorBase_valuePropertyName<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QItemEditorCreatorBase17valuePropertyNameEv()};
     let mut ret = unsafe {_ZNK22QItemEditorCreatorBase17valuePropertyNameEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -117,7 +119,7 @@ impl<'a> /*trait*/ QItemEditorCreatorBase_createWidget<QWidget> for (&'a QWidget
     // unsafe{_ZNK22QItemEditorCreatorBase12createWidgetEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK22QItemEditorCreatorBase12createWidgetEP7QWidget(rsthis.qclsinst, arg0)};
-    let mut ret1 = QWidget::inheritFrom(ret);
+    let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -146,8 +148,8 @@ impl<'a> /*trait*/ QItemEditorCreatorBase_Free<()> for () {
 }
 
 impl /*struct*/ QItemEditorFactory {
-  pub fn inheritFrom(qthis: *mut c_void) -> QItemEditorFactory {
-    return QItemEditorFactory{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QItemEditorFactory {
+    return QItemEditorFactory{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  void QItemEditorFactory::QItemEditorFactory();
@@ -169,10 +171,10 @@ impl<'a> /*trait*/ QItemEditorFactory_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QItemEditorFactoryC1Ev()};
     let ctysz: c_int = unsafe{QItemEditorFactory_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN18QItemEditorFactoryC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN18QItemEditorFactoryC1Ev()};
-    let rsthis = QItemEditorFactory{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN18QItemEditorFactoryC1Ev()} as u64;
+    let rsthis = QItemEditorFactory{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -197,7 +199,7 @@ impl<'a> /*trait*/ QItemEditorFactory_valuePropertyName<QByteArray> for (i32) {
     // unsafe{_ZNK18QItemEditorFactory17valuePropertyNameEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK18QItemEditorFactory17valuePropertyNameEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -221,7 +223,7 @@ impl<'a> /*trait*/ QItemEditorFactory_defaultFactory_s<QItemEditorFactory> for (
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QItemEditorFactory14defaultFactoryEv()};
     let mut ret = unsafe {_ZN18QItemEditorFactory14defaultFactoryEv()};
-    let mut ret1 = QItemEditorFactory::inheritFrom(ret);
+    let mut ret1 = QItemEditorFactory::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -316,7 +318,7 @@ impl<'a> /*trait*/ QItemEditorFactory_createEditor<QWidget> for (i32, &'a QWidge
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK18QItemEditorFactory12createEditorEiP7QWidget(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QWidget::inheritFrom(ret);
+    let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }

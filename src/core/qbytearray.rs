@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qbytearray.h
 // dst-file: /src/core/qbytearray.rs
 //
@@ -33,287 +33,290 @@ extern {
   fn QByteRef_Class_Size() -> c_int;
   // proto:  void QByteRef::QByteRef(QByteArray & array, int idx);
   fn dector_ZN8QByteRefC1ER10QByteArrayi(arg0: *mut c_void, arg1: c_int) -> *mut c_void;
-  fn demth_ZN8QByteRefC1ER10QByteArrayi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int);
+  fn demth_ZN8QByteRefC1ER10QByteArrayi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
   fn QByteArray_Class_Size() -> c_int;
   // proto:  QByteArray & QByteArray::insert(int i, char c);
-  fn _ZN10QByteArray6insertEic(qthis: *mut c_void, arg0: c_int, arg1: c_char) -> *mut c_void;
+  fn _ZN10QByteArray6insertEic(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_char) -> *mut c_void;
   // proto:  const_iterator QByteArray::cend();
-  fn _ZNK10QByteArray4cendEv(qthis: *mut c_void) -> *mut c_char;
+  fn _ZNK10QByteArray4cendEv(qthis: u64 /* *mut c_void*/) -> *mut c_char;
   // proto:  int QByteArray::lastIndexOf(const QByteArray & a, int from);
-  fn _ZNK10QByteArray11lastIndexOfERKS_i(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) -> c_int;
+  fn _ZNK10QByteArray11lastIndexOfERKS_i(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> c_int;
   // proto:  void QByteArray::push_front(const QByteArray & a);
-  fn _ZN10QByteArray10push_frontERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN10QByteArray10push_frontERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  ulong QByteArray::toULong(bool * ok, int base);
-  fn _ZNK10QByteArray7toULongEPbi(qthis: *mut c_void, arg0: *mut c_char, arg1: c_int) -> c_ulong;
+  fn _ZNK10QByteArray7toULongEPbi(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int) -> c_ulong;
   // proto:  QByteArray & QByteArray::replace(const char * before, const char * after);
-  fn _ZN10QByteArray7replaceEPKcS1_(qthis: *mut c_void, arg0: *mut c_char, arg1: *mut c_char) -> *mut c_void;
+  fn _ZN10QByteArray7replaceEPKcS1_(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: *mut c_char) -> *mut c_void;
   // proto:  QByteArray & QByteArray::replace(const QByteArray & before, const QByteArray & after);
-  fn _ZN10QByteArray7replaceERKS_S1_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
+  fn _ZN10QByteArray7replaceERKS_S1_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto: static QByteArray QByteArray::fromHex(const QByteArray & hexEncoded);
   fn _ZN10QByteArray7fromHexERKS_(arg0: *mut c_void) -> *mut c_void;
   // proto:  QByteArray & QByteArray::prepend(const char * s);
-  fn _ZN10QByteArray7prependEPKc(qthis: *mut c_void, arg0: *mut c_char) -> *mut c_void;
+  fn _ZN10QByteArray7prependEPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> *mut c_void;
   // proto:  int QByteArray::count(const QByteArray & a);
-  fn _ZNK10QByteArray5countERKS_(qthis: *mut c_void, arg0: *mut c_void) -> c_int;
+  fn _ZNK10QByteArray5countERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
   // proto:  void QByteArray::~QByteArray();
-  fn demth_ZN10QByteArrayD0Ev(qthis: *mut c_void);
+  fn demth_ZN10QByteArrayD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  iterator QByteArray::end();
-  fn _ZN10QByteArray3endEv(qthis: *mut c_void) -> *mut c_char;
+  fn _ZN10QByteArray3endEv(qthis: u64 /* *mut c_void*/) -> *mut c_char;
   // proto:  void QByteArray::QByteArray();
   fn dector_ZN10QByteArrayC1Ev() -> *mut c_void;
-  fn demth_ZN10QByteArrayC1Ev(qthis: *mut c_void);
+  fn demth_ZN10QByteArrayC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QByteArray & QByteArray::replace(const char * before, const QByteArray & after);
-  fn _ZN10QByteArray7replaceEPKcRKS_(qthis: *mut c_void, arg0: *mut c_char, arg1: *mut c_void) -> *mut c_void;
+  fn _ZN10QByteArray7replaceEPKcRKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: *mut c_void) -> *mut c_void;
   // proto:  float QByteArray::toFloat(bool * ok);
-  fn _ZNK10QByteArray7toFloatEPb(qthis: *mut c_void, arg0: *mut c_char) -> c_float;
+  fn _ZNK10QByteArray7toFloatEPb(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> c_float;
   // proto:  void QByteArray::truncate(int pos);
-  fn _ZN10QByteArray8truncateEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN10QByteArray8truncateEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  QByteArray QByteArray::toBase64();
-  fn _ZNK10QByteArray8toBase64Ev(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK10QByteArray8toBase64Ev(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QByteArray::isEmpty();
-  fn _ZNK10QByteArray7isEmptyEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK10QByteArray7isEmptyEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QByteArray & QByteArray::insert(int i, const char * s, int len);
-  fn _ZN10QByteArray6insertEiPKci(qthis: *mut c_void, arg0: c_int, arg1: *mut c_char, arg2: c_int) -> *mut c_void;
+  fn _ZN10QByteArray6insertEiPKci(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_char, arg2: c_int) -> *mut c_void;
   // proto:  QByteArray & QByteArray::insert(int i, const QString & s);
-  fn _ZN10QByteArray6insertEiRK7QString(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void) -> *mut c_void;
+  fn _ZN10QByteArray6insertEiRK7QString(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void) -> *mut c_void;
   // proto:  void QByteArray::resize(int size);
-  fn _ZN10QByteArray6resizeEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN10QByteArray6resizeEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  QByteArray & QByteArray::replace(int index, int len, const char * s, int alen);
-  fn _ZN10QByteArray7replaceEiiPKci(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_char, arg3: c_int) -> *mut c_void;
+  fn _ZN10QByteArray7replaceEiiPKci(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: *mut c_char, arg3: c_int) -> *mut c_void;
   // proto:  int QByteArray::lastIndexOf(const QString & s, int from);
-  fn _ZNK10QByteArray11lastIndexOfERK7QStringi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) -> c_int;
+  fn _ZNK10QByteArray11lastIndexOfERK7QStringi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> c_int;
   // proto:  QByteArray QByteArray::toHex();
-  fn _ZNK10QByteArray5toHexEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK10QByteArray5toHexEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QByteArray::indexOf(const char * c, int from);
-  fn _ZNK10QByteArray7indexOfEPKci(qthis: *mut c_void, arg0: *mut c_char, arg1: c_int) -> c_int;
+  fn _ZNK10QByteArray7indexOfEPKci(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int) -> c_int;
   // proto:  QByteArray & QByteArray::replace(char before, const QByteArray & after);
-  fn _ZN10QByteArray7replaceEcRKS_(qthis: *mut c_void, arg0: c_char, arg1: *mut c_void) -> *mut c_void;
+  fn _ZN10QByteArray7replaceEcRKS_(qthis: u64 /* *mut c_void*/, arg0: c_char, arg1: *mut c_void) -> *mut c_void;
   // proto:  uint QByteArray::toUInt(bool * ok, int base);
-  fn _ZNK10QByteArray6toUIntEPbi(qthis: *mut c_void, arg0: *mut c_char, arg1: c_int) -> c_uint;
+  fn _ZNK10QByteArray6toUIntEPbi(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int) -> c_uint;
   // proto: static QByteArray QByteArray::fromStdString(const std::string & s);
   fn demth_ZN10QByteArray13fromStdStringERKi(arg0: *mut c_int) -> *mut c_void;
   // proto:  bool QByteArray::isNull();
-  fn _ZNK10QByteArray6isNullEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK10QByteArray6isNullEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QByteArray::reserve(int size);
-  fn _ZN10QByteArray7reserveEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN10QByteArray7reserveEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  const_iterator QByteArray::cbegin();
-  fn _ZNK10QByteArray6cbeginEv(qthis: *mut c_void) -> *mut c_char;
+  fn _ZNK10QByteArray6cbeginEv(qthis: u64 /* *mut c_void*/) -> *mut c_char;
   // proto: static QByteArray QByteArray::fromRawData(const char * , int size);
   fn _ZN10QByteArray11fromRawDataEPKci(arg0: *mut c_char, arg1: c_int) -> *mut c_void;
   // proto:  bool QByteArray::contains(char c);
-  fn _ZNK10QByteArray8containsEc(qthis: *mut c_void, arg0: c_char) -> c_char;
+  fn _ZNK10QByteArray8containsEc(qthis: u64 /* *mut c_void*/, arg0: c_char) -> c_char;
   // proto:  void QByteArray::QByteArray(int size, char c);
   fn dector_ZN10QByteArrayC1Eic(arg0: c_int, arg1: c_char) -> *mut c_void;
-  fn _ZN10QByteArrayC1Eic(qthis: *mut c_void, arg0: c_int, arg1: c_char);
+  fn _ZN10QByteArrayC1Eic(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_char);
   // proto:  int QByteArray::indexOf(const QByteArray & a, int from);
-  fn _ZNK10QByteArray7indexOfERKS_i(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) -> c_int;
+  fn _ZNK10QByteArray7indexOfERKS_i(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> c_int;
   // proto:  long QByteArray::toLong(bool * ok, int base);
-  fn _ZNK10QByteArray6toLongEPbi(qthis: *mut c_void, arg0: *mut c_char, arg1: c_int) -> c_long;
+  fn _ZNK10QByteArray6toLongEPbi(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int) -> c_long;
   // proto:  int QByteArray::indexOf(char c, int from);
-  fn _ZNK10QByteArray7indexOfEci(qthis: *mut c_void, arg0: c_char, arg1: c_int) -> c_int;
+  fn _ZNK10QByteArray7indexOfEci(qthis: u64 /* *mut c_void*/, arg0: c_char, arg1: c_int) -> c_int;
   // proto:  char * QByteArray::data();
-  fn _ZN10QByteArray4dataEv(qthis: *mut c_void) -> *mut c_char;
+  fn _ZN10QByteArray4dataEv(qthis: u64 /* *mut c_void*/) -> *mut c_char;
   // proto: static QByteArray QByteArray::number(double , char f, int prec);
   fn _ZN10QByteArray6numberEdci(arg0: c_double, arg1: c_char, arg2: c_int) -> *mut c_void;
   // proto:  int QByteArray::capacity();
-  fn _ZNK10QByteArray8capacityEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK10QByteArray8capacityEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QByteArray::count();
-  fn demth_ZNK10QByteArray5countEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK10QByteArray5countEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto: static QByteArray QByteArray::fromBase64(const QByteArray & base64);
   fn _ZN10QByteArray10fromBase64ERKS_(arg0: *mut c_void) -> *mut c_void;
   // proto:  QByteArray QByteArray::left(int len);
-  fn _ZNK10QByteArray4leftEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
+  fn _ZNK10QByteArray4leftEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  QByteArray & QByteArray::replace(char before, char after);
-  fn _ZN10QByteArray7replaceEcc(qthis: *mut c_void, arg0: c_char, arg1: c_char) -> *mut c_void;
+  fn _ZN10QByteArray7replaceEcc(qthis: u64 /* *mut c_void*/, arg0: c_char, arg1: c_char) -> *mut c_void;
   // proto:  QByteArray & QByteArray::append(char c);
-  fn _ZN10QByteArray6appendEc(qthis: *mut c_void, arg0: c_char) -> *mut c_void;
+  fn _ZN10QByteArray6appendEc(qthis: u64 /* *mut c_void*/, arg0: c_char) -> *mut c_void;
   // proto:  bool QByteArray::startsWith(const char * c);
-  fn _ZNK10QByteArray10startsWithEPKc(qthis: *mut c_void, arg0: *mut c_char) -> c_char;
+  fn _ZNK10QByteArray10startsWithEPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> c_char;
   // proto:  QByteArray & QByteArray::remove(int index, int len);
-  fn _ZN10QByteArray6removeEii(qthis: *mut c_void, arg0: c_int, arg1: c_int) -> *mut c_void;
+  fn _ZN10QByteArray6removeEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> *mut c_void;
   // proto:  int QByteArray::lastIndexOf(char c, int from);
-  fn _ZNK10QByteArray11lastIndexOfEci(qthis: *mut c_void, arg0: c_char, arg1: c_int) -> c_int;
+  fn _ZNK10QByteArray11lastIndexOfEci(qthis: u64 /* *mut c_void*/, arg0: c_char, arg1: c_int) -> c_int;
   // proto:  bool QByteArray::startsWith(const QByteArray & a);
-  fn _ZNK10QByteArray10startsWithERKS_(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn _ZNK10QByteArray10startsWithERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  bool QByteArray::contains(const char * a);
-  fn _ZNK10QByteArray8containsEPKc(qthis: *mut c_void, arg0: *mut c_char) -> c_char;
+  fn _ZNK10QByteArray8containsEPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> c_char;
   // proto:  bool QByteArray::endsWith(const char * c);
-  fn _ZNK10QByteArray8endsWithEPKc(qthis: *mut c_void, arg0: *mut c_char) -> c_char;
+  fn _ZNK10QByteArray8endsWithEPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> c_char;
   // proto:  void QByteArray::squeeze();
-  fn _ZN10QByteArray7squeezeEv(qthis: *mut c_void);
+  fn _ZN10QByteArray7squeezeEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QByteArray::QByteArray(const char * , int size);
   fn dector_ZN10QByteArrayC1EPKci(arg0: *mut c_char, arg1: c_int) -> *mut c_void;
-  fn _ZN10QByteArrayC1EPKci(qthis: *mut c_void, arg0: *mut c_char, arg1: c_int);
+  fn _ZN10QByteArrayC1EPKci(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int);
   // proto:  int QByteArray::indexOf(const QString & s, int from);
-  fn _ZNK10QByteArray7indexOfERK7QStringi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) -> c_int;
+  fn _ZNK10QByteArray7indexOfERK7QStringi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> c_int;
   // proto:  void QByteArray::detach();
-  fn demth_ZN10QByteArray6detachEv(qthis: *mut c_void);
+  fn demth_ZN10QByteArray6detachEv(qthis: u64 /* *mut c_void*/);
   // proto:  QByteArray QByteArray::repeated(int times);
-  fn _ZNK10QByteArray8repeatedEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
+  fn _ZNK10QByteArray8repeatedEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  QByteArray & QByteArray::setNum(float , char f, int prec);
-  fn _ZN10QByteArray6setNumEfci(qthis: *mut c_void, arg0: c_float, arg1: c_char, arg2: c_int) -> *mut c_void;
+  fn _ZN10QByteArray6setNumEfci(qthis: u64 /* *mut c_void*/, arg0: c_float, arg1: c_char, arg2: c_int) -> *mut c_void;
   // proto:  short QByteArray::toShort(bool * ok, int base);
-  fn _ZNK10QByteArray7toShortEPbi(qthis: *mut c_void, arg0: *mut c_char, arg1: c_int) -> c_short;
+  fn _ZNK10QByteArray7toShortEPbi(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int) -> c_short;
   // proto:  QByteArray & QByteArray::prepend(char c);
-  fn _ZN10QByteArray7prependEc(qthis: *mut c_void, arg0: c_char) -> *mut c_void;
+  fn _ZN10QByteArray7prependEc(qthis: u64 /* *mut c_void*/, arg0: c_char) -> *mut c_void;
   // proto:  int QByteArray::toInt(bool * ok, int base);
-  fn _ZNK10QByteArray5toIntEPbi(qthis: *mut c_void, arg0: *mut c_char, arg1: c_int) -> c_int;
+  fn _ZNK10QByteArray5toIntEPbi(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int) -> c_int;
   // proto:  const_iterator QByteArray::constBegin();
-  fn _ZNK10QByteArray10constBeginEv(qthis: *mut c_void) -> *mut c_char;
+  fn _ZNK10QByteArray10constBeginEv(qthis: u64 /* *mut c_void*/) -> *mut c_char;
   // proto:  void QByteArray::push_back(char c);
-  fn _ZN10QByteArray9push_backEc(qthis: *mut c_void, arg0: c_char);
+  fn _ZN10QByteArray9push_backEc(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  bool QByteArray::isSharedWith(const QByteArray & other);
-  fn demth_ZNK10QByteArray12isSharedWithERKS_(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn demth_ZNK10QByteArray12isSharedWithERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  int QByteArray::size();
-  fn demth_ZNK10QByteArray4sizeEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK10QByteArray4sizeEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QByteArray::endsWith(char c);
-  fn _ZNK10QByteArray8endsWithEc(qthis: *mut c_void, arg0: c_char) -> c_char;
+  fn _ZNK10QByteArray8endsWithEc(qthis: u64 /* *mut c_void*/, arg0: c_char) -> c_char;
   // proto: static QByteArray QByteArray::number(uint , int base);
   fn _ZN10QByteArray6numberEji(arg0: c_uint, arg1: c_int) -> *mut c_void;
   // proto:  void QByteArray::push_front(char c);
-  fn _ZN10QByteArray10push_frontEc(qthis: *mut c_void, arg0: c_char);
+  fn _ZN10QByteArray10push_frontEc(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QByteArray QByteArray::leftJustified(int width, char fill, bool truncate);
-  fn _ZNK10QByteArray13leftJustifiedEicb(qthis: *mut c_void, arg0: c_int, arg1: c_char, arg2: c_char) -> *mut c_void;
+  fn _ZNK10QByteArray13leftJustifiedEicb(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_char, arg2: c_char) -> *mut c_void;
   // proto:  iterator QByteArray::begin();
-  fn _ZN10QByteArray5beginEv(qthis: *mut c_void) -> *mut c_char;
+  fn _ZN10QByteArray5beginEv(qthis: u64 /* *mut c_void*/) -> *mut c_char;
   // proto: static QByteArray QByteArray::number(qulonglong , int base);
   fn _ZN10QByteArray6numberEyi(arg0: c_ulonglong, arg1: c_int) -> *mut c_void;
   // proto:  int QByteArray::count(char c);
-  fn _ZNK10QByteArray5countEc(qthis: *mut c_void, arg0: c_char) -> c_int;
+  fn _ZNK10QByteArray5countEc(qthis: u64 /* *mut c_void*/, arg0: c_char) -> c_int;
   // proto:  double QByteArray::toDouble(bool * ok);
-  fn _ZNK10QByteArray8toDoubleEPb(qthis: *mut c_void, arg0: *mut c_char) -> c_double;
+  fn _ZNK10QByteArray8toDoubleEPb(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> c_double;
   // proto:  QByteArray & QByteArray::replace(int index, int len, const QByteArray & s);
-  fn _ZN10QByteArray7replaceEiiRKS_(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
+  fn _ZN10QByteArray7replaceEiiRKS_(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
   // proto:  QByteArray & QByteArray::setNum(short , int base);
-  fn _ZN10QByteArray6setNumEsi(qthis: *mut c_void, arg0: c_short, arg1: c_int) -> *mut c_void;
+  fn _ZN10QByteArray6setNumEsi(qthis: u64 /* *mut c_void*/, arg0: c_short, arg1: c_int) -> *mut c_void;
   // proto:  QByteArray & QByteArray::prepend(const QByteArray & a);
-  fn _ZN10QByteArray7prependERKS_(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZN10QByteArray7prependERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  qulonglong QByteArray::toULongLong(bool * ok, int base);
-  fn _ZNK10QByteArray11toULongLongEPbi(qthis: *mut c_void, arg0: *mut c_char, arg1: c_int) -> c_ulonglong;
+  fn _ZNK10QByteArray11toULongLongEPbi(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int) -> c_ulonglong;
   // proto:  QByteArray & QByteArray::replace(char c, const QString & after);
-  fn _ZN10QByteArray7replaceEcRK7QString(qthis: *mut c_void, arg0: c_char, arg1: *mut c_void) -> *mut c_void;
+  fn _ZN10QByteArray7replaceEcRK7QString(qthis: u64 /* *mut c_void*/, arg0: c_char, arg1: *mut c_void) -> *mut c_void;
   // proto: static QByteArray QByteArray::fromPercentEncoding(const QByteArray & pctEncoded, char percent);
   fn _ZN10QByteArray19fromPercentEncodingERKS_c(arg0: *mut c_void, arg1: c_char) -> *mut c_void;
   // proto:  void QByteArray::push_front(const char * c);
-  fn _ZN10QByteArray10push_frontEPKc(qthis: *mut c_void, arg0: *mut c_char);
+  fn _ZN10QByteArray10push_frontEPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_char);
   // proto:  void QByteArray::clear();
-  fn _ZN10QByteArray5clearEv(qthis: *mut c_void);
+  fn _ZN10QByteArray5clearEv(qthis: u64 /* *mut c_void*/);
   // proto:  qlonglong QByteArray::toLongLong(bool * ok, int base);
-  fn _ZNK10QByteArray10toLongLongEPbi(qthis: *mut c_void, arg0: *mut c_char, arg1: c_int) -> c_longlong;
+  fn _ZNK10QByteArray10toLongLongEPbi(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int) -> c_longlong;
   // proto:  QByteArray & QByteArray::prepend(const char * s, int len);
-  fn _ZN10QByteArray7prependEPKci(qthis: *mut c_void, arg0: *mut c_char, arg1: c_int) -> *mut c_void;
+  fn _ZN10QByteArray7prependEPKci(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int) -> *mut c_void;
   // proto:  const char * QByteArray::constData();
-  fn demth_ZNK10QByteArray9constDataEv(qthis: *mut c_void) -> *mut c_char;
+  fn demth_ZNK10QByteArray9constDataEv(qthis: u64 /* *mut c_void*/) -> *mut c_char;
   // proto:  void QByteArray::QByteArray(const QByteArray & );
   fn dector_ZN10QByteArrayC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn demth_ZN10QByteArrayC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN10QByteArrayC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QByteArray::length();
-  fn _ZNK10QByteArray6lengthEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK10QByteArray6lengthEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto: static QByteArray QByteArray::number(int , int base);
   fn _ZN10QByteArray6numberEii(arg0: c_int, arg1: c_int) -> *mut c_void;
   // proto:  bool QByteArray::startsWith(char c);
-  fn _ZNK10QByteArray10startsWithEc(qthis: *mut c_void, arg0: c_char) -> c_char;
+  fn _ZNK10QByteArray10startsWithEc(qthis: u64 /* *mut c_void*/, arg0: c_char) -> c_char;
   // proto:  QByteArray & QByteArray::setNum(double , char f, int prec);
-  fn _ZN10QByteArray6setNumEdci(qthis: *mut c_void, arg0: c_double, arg1: c_char, arg2: c_int) -> *mut c_void;
+  fn _ZN10QByteArray6setNumEdci(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_char, arg2: c_int) -> *mut c_void;
   // proto: static QByteArray QByteArray::number(qlonglong , int base);
   fn _ZN10QByteArray6numberExi(arg0: c_longlong, arg1: c_int) -> *mut c_void;
   // proto:  char QByteArray::at(int i);
-  fn _ZNK10QByteArray2atEi(qthis: *mut c_void, arg0: c_int) -> c_char;
+  fn _ZNK10QByteArray2atEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
   // proto:  QByteArray & QByteArray::setNum(ushort , int base);
-  fn _ZN10QByteArray6setNumEti(qthis: *mut c_void, arg0: c_ushort, arg1: c_int) -> *mut c_void;
+  fn _ZN10QByteArray6setNumEti(qthis: u64 /* *mut c_void*/, arg0: c_ushort, arg1: c_int) -> *mut c_void;
   // proto:  void QByteArray::swap(QByteArray & other);
-  fn demth_ZN10QByteArray4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN10QByteArray4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QByteArray & QByteArray::replace(const QString & before, const char * after);
-  fn _ZN10QByteArray7replaceERK7QStringPKc(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_char) -> *mut c_void;
+  fn _ZN10QByteArray7replaceERK7QStringPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_char) -> *mut c_void;
   // proto:  QByteArray & QByteArray::append(const QByteArray & a);
-  fn _ZN10QByteArray6appendERKS_(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZN10QByteArray6appendERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  bool QByteArray::endsWith(const QByteArray & a);
-  fn _ZNK10QByteArray8endsWithERKS_(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn _ZNK10QByteArray8endsWithERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  int QByteArray::count(const char * a);
-  fn _ZNK10QByteArray5countEPKc(qthis: *mut c_void, arg0: *mut c_char) -> c_int;
+  fn _ZNK10QByteArray5countEPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> c_int;
   // proto:  QByteArray & QByteArray::replace(const char * before, int bsize, const char * after, int asize);
-  fn _ZN10QByteArray7replaceEPKciS1_i(qthis: *mut c_void, arg0: *mut c_char, arg1: c_int, arg2: *mut c_char, arg3: c_int) -> *mut c_void;
+  fn _ZN10QByteArray7replaceEPKciS1_i(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int, arg2: *mut c_char, arg3: c_int) -> *mut c_void;
   // proto:  QList<QByteArray> QByteArray::split(char sep);
-  fn _ZNK10QByteArray5splitEc(qthis: *mut c_void, arg0: c_char);
+  fn _ZNK10QByteArray5splitEc(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QByteArray & QByteArray::setNum(qlonglong , int base);
-  fn _ZN10QByteArray6setNumExi(qthis: *mut c_void, arg0: c_longlong, arg1: c_int) -> *mut c_void;
+  fn _ZN10QByteArray6setNumExi(qthis: u64 /* *mut c_void*/, arg0: c_longlong, arg1: c_int) -> *mut c_void;
   // proto:  QByteArray & QByteArray::replace(char before, const char * after);
-  fn _ZN10QByteArray7replaceEcPKc(qthis: *mut c_void, arg0: c_char, arg1: *mut c_char) -> *mut c_void;
+  fn _ZN10QByteArray7replaceEcPKc(qthis: u64 /* *mut c_void*/, arg0: c_char, arg1: *mut c_char) -> *mut c_void;
   // proto:  QByteArray & QByteArray::append(const char * s);
-  fn _ZN10QByteArray6appendEPKc(qthis: *mut c_void, arg0: *mut c_char) -> *mut c_void;
+  fn _ZN10QByteArray6appendEPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> *mut c_void;
   // proto:  QByteArray QByteArray::right(int len);
-  fn _ZNK10QByteArray5rightEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
+  fn _ZNK10QByteArray5rightEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  QByteArray & QByteArray::append(const QString & s);
-  fn _ZN10QByteArray6appendERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZN10QByteArray6appendERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QByteArray::chop(int n);
-  fn _ZN10QByteArray4chopEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN10QByteArray4chopEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QByteArray::lastIndexOf(const char * c, int from);
-  fn _ZNK10QByteArray11lastIndexOfEPKci(qthis: *mut c_void, arg0: *mut c_char, arg1: c_int) -> c_int;
+  fn _ZNK10QByteArray11lastIndexOfEPKci(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int) -> c_int;
   // proto:  QByteArray & QByteArray::replace(int index, int len, const char * s);
-  fn _ZN10QByteArray7replaceEiiPKc(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_char) -> *mut c_void;
+  fn _ZN10QByteArray7replaceEiiPKc(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: *mut c_char) -> *mut c_void;
   // proto:  void QByteArray::push_back(const QByteArray & a);
-  fn _ZN10QByteArray9push_backERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN10QByteArray9push_backERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QByteArray QByteArray::toPercentEncoding(const QByteArray & exclude, const QByteArray & include, char percent);
-  fn _ZNK10QByteArray17toPercentEncodingERKS_S1_c(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: c_char) -> *mut c_void;
+  fn _ZNK10QByteArray17toPercentEncodingERKS_S1_c(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: c_char) -> *mut c_void;
   // proto:  bool QByteArray::isDetached();
-  fn _ZNK10QByteArray10isDetachedEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK10QByteArray10isDetachedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QByteArray & QByteArray::append(const char * s, int len);
-  fn _ZN10QByteArray6appendEPKci(qthis: *mut c_void, arg0: *mut c_char, arg1: c_int) -> *mut c_void;
+  fn _ZN10QByteArray6appendEPKci(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int) -> *mut c_void;
   // proto:  const_iterator QByteArray::constEnd();
-  fn _ZNK10QByteArray8constEndEv(qthis: *mut c_void) -> *mut c_char;
+  fn _ZNK10QByteArray8constEndEv(qthis: u64 /* *mut c_void*/) -> *mut c_char;
   // proto:  QByteArray & QByteArray::replace(const QByteArray & before, const char * after);
-  fn _ZN10QByteArray7replaceERKS_PKc(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_char) -> *mut c_void;
+  fn _ZN10QByteArray7replaceERKS_PKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_char) -> *mut c_void;
   // proto:  QByteArray & QByteArray::setNum(qulonglong , int base);
-  fn _ZN10QByteArray6setNumEyi(qthis: *mut c_void, arg0: c_ulonglong, arg1: c_int) -> *mut c_void;
+  fn _ZN10QByteArray6setNumEyi(qthis: u64 /* *mut c_void*/, arg0: c_ulonglong, arg1: c_int) -> *mut c_void;
   // proto:  QByteArray & QByteArray::setRawData(const char * a, uint n);
-  fn _ZN10QByteArray10setRawDataEPKcj(qthis: *mut c_void, arg0: *mut c_char, arg1: c_uint) -> *mut c_void;
+  fn _ZN10QByteArray10setRawDataEPKcj(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_uint) -> *mut c_void;
   // proto:  QByteArray & QByteArray::replace(const QString & before, const QByteArray & after);
-  fn _ZN10QByteArray7replaceERK7QStringRKS_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
+  fn _ZN10QByteArray7replaceERK7QStringRKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  QByteArray & QByteArray::setNum(uint , int base);
-  fn _ZN10QByteArray6setNumEji(qthis: *mut c_void, arg0: c_uint, arg1: c_int) -> *mut c_void;
+  fn _ZN10QByteArray6setNumEji(qthis: u64 /* *mut c_void*/, arg0: c_uint, arg1: c_int) -> *mut c_void;
   // proto:  QByteArray QByteArray::mid(int index, int len);
-  fn _ZNK10QByteArray3midEii(qthis: *mut c_void, arg0: c_int, arg1: c_int) -> *mut c_void;
+  fn _ZNK10QByteArray3midEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> *mut c_void;
   // proto:  QByteArray & QByteArray::setNum(int , int base);
-  fn _ZN10QByteArray6setNumEii(qthis: *mut c_void, arg0: c_int, arg1: c_int) -> *mut c_void;
+  fn _ZN10QByteArray6setNumEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> *mut c_void;
   // proto:  QByteArray & QByteArray::insert(int i, const QByteArray & a);
-  fn _ZN10QByteArray6insertEiRKS_(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void) -> *mut c_void;
+  fn _ZN10QByteArray6insertEiRKS_(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void) -> *mut c_void;
   // proto:  QByteArray & QByteArray::insert(int i, const char * s);
-  fn _ZN10QByteArray6insertEiPKc(qthis: *mut c_void, arg0: c_int, arg1: *mut c_char) -> *mut c_void;
+  fn _ZN10QByteArray6insertEiPKc(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_char) -> *mut c_void;
   // proto:  QByteArray & QByteArray::fill(char c, int size);
-  fn _ZN10QByteArray4fillEci(qthis: *mut c_void, arg0: c_char, arg1: c_int) -> *mut c_void;
+  fn _ZN10QByteArray4fillEci(qthis: u64 /* *mut c_void*/, arg0: c_char, arg1: c_int) -> *mut c_void;
   // proto:  ushort QByteArray::toUShort(bool * ok, int base);
-  fn _ZNK10QByteArray8toUShortEPbi(qthis: *mut c_void, arg0: *mut c_char, arg1: c_int) -> c_ushort;
+  fn _ZNK10QByteArray8toUShortEPbi(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int) -> c_ushort;
   // proto:  void QByteArray::push_back(const char * c);
-  fn _ZN10QByteArray9push_backEPKc(qthis: *mut c_void, arg0: *mut c_char);
+  fn _ZN10QByteArray9push_backEPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_char);
   // proto:  QByteArray QByteArray::rightJustified(int width, char fill, bool truncate);
-  fn _ZNK10QByteArray14rightJustifiedEicb(qthis: *mut c_void, arg0: c_int, arg1: c_char, arg2: c_char) -> *mut c_void;
+  fn _ZNK10QByteArray14rightJustifiedEicb(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_char, arg2: c_char) -> *mut c_void;
   // proto:  bool QByteArray::contains(const QByteArray & a);
-  fn _ZNK10QByteArray8containsERKS_(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn _ZNK10QByteArray8containsERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   fn QByteArrayDataPtr_Class_Size() -> c_int;
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QByteRef)=16
+#[derive(Default)]
 pub struct QByteRef {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 // class sizeof(QByteArray)=8
+#[derive(Default)]
 pub struct QByteArray {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 // class sizeof(QByteArrayDataPtr)=8
+#[derive(Default)]
 pub struct QByteArrayDataPtr {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QByteRef {
-  pub fn inheritFrom(qthis: *mut c_void) -> QByteRef {
-    return QByteRef{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QByteRef {
+    return QByteRef{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  void QByteRef::QByteRef(QByteArray & array, int idx);
@@ -335,20 +338,20 @@ impl<'a> /*trait*/ QByteRef_New for (&'a QByteArray, i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QByteRefC1ER10QByteArrayi()};
     let ctysz: c_int = unsafe{QByteRef_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     // unsafe {_ZN8QByteRefC1ER10QByteArrayi(qthis, arg0, arg1)};
-    let qthis: *mut c_void = unsafe {dector_ZN8QByteRefC1ER10QByteArrayi(arg0, arg1)};
-    let rsthis = QByteRef{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN8QByteRefC1ER10QByteArrayi(arg0, arg1)} as u64;
+    let rsthis = QByteRef{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
 impl /*struct*/ QByteArray {
-  pub fn inheritFrom(qthis: *mut c_void) -> QByteArray {
-    return QByteArray{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QByteArray {
+    return QByteArray{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  QByteArray & QByteArray::insert(int i, char c);
@@ -371,7 +374,7 @@ impl<'a> /*trait*/ QByteArray_insert<QByteArray> for (i32, i8) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_char;
     let mut ret = unsafe {_ZN10QByteArray6insertEic(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -494,7 +497,7 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (&'a  String, &'a  String)
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZN10QByteArray7replaceEPKcS1_(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -508,7 +511,7 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (&'a QByteArray, &'a QByte
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN10QByteArray7replaceERKS_S1_(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -533,7 +536,7 @@ impl<'a> /*trait*/ QByteArray_fromHex_s<QByteArray> for (&'a QByteArray) {
     // unsafe{_ZN10QByteArray7fromHexERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN10QByteArray7fromHexERKS_(arg0)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -558,7 +561,7 @@ impl<'a> /*trait*/ QByteArray_prepend<QByteArray> for (&'a  String) {
     // unsafe{_ZN10QByteArray7prependEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZN10QByteArray7prependEPKc(rsthis.qclsinst, arg0)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -653,10 +656,10 @@ impl<'a> /*trait*/ QByteArray_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArrayC1Ev()};
     let ctysz: c_int = unsafe{QByteArray_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN10QByteArrayC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN10QByteArrayC1Ev()};
-    let rsthis = QByteArray{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN10QByteArrayC1Ev()} as u64;
+    let rsthis = QByteArray{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -670,7 +673,7 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (&'a  String, &'a QByteArr
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN10QByteArray7replaceEPKcRKS_(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -741,7 +744,7 @@ impl<'a> /*trait*/ QByteArray_toBase64<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray8toBase64Ev()};
     let mut ret = unsafe {_ZNK10QByteArray8toBase64Ev(rsthis.qclsinst)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -779,7 +782,7 @@ impl<'a> /*trait*/ QByteArray_insert<QByteArray> for (i32, &'a  String, i32) {
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let arg2 = self.2  as c_int;
     let mut ret = unsafe {_ZN10QByteArray6insertEiPKci(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -793,7 +796,7 @@ impl<'a> /*trait*/ QByteArray_insert<QByteArray> for (i32, &'a QString) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN10QByteArray6insertEiRK7QString(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -832,7 +835,7 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (i32, i32, &'a  String, i3
     let arg2 = self.2.as_ptr()  as *mut c_char;
     let arg3 = self.3  as c_int;
     let mut ret = unsafe {_ZN10QByteArray7replaceEiiPKci(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -869,7 +872,7 @@ impl<'a> /*trait*/ QByteArray_toHex<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray5toHexEv()};
     let mut ret = unsafe {_ZNK10QByteArray5toHexEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -908,7 +911,7 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (i8, &'a QByteArray) {
     let arg0 = self.0  as c_char;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN10QByteArray7replaceEcRKS_(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -958,7 +961,7 @@ impl<'a> /*trait*/ QByteArray_fromStdString_s<QByteArray> for (&'a  String) {
     // unsafe{_ZN10QByteArray13fromStdStringERKi()};
     let arg0 = self.as_ptr()  as *mut c_int;
     let mut ret = unsafe {demth_ZN10QByteArray13fromStdStringERKi(arg0)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1054,7 +1057,7 @@ impl<'a> /*trait*/ QByteArray_fromRawData_s<QByteArray> for (&'a  String, i32) {
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN10QByteArray11fromRawDataEPKci(arg0, arg1)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1090,12 +1093,12 @@ impl<'a> /*trait*/ QByteArray_New for (i32, i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArrayC1Eic()};
     let ctysz: c_int = unsafe{QByteArray_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_char;
     // unsafe {_ZN10QByteArrayC1Eic(qthis, arg0, arg1)};
-    let qthis: *mut c_void = unsafe {dector_ZN10QByteArrayC1Eic(arg0, arg1)};
-    let rsthis = QByteArray{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN10QByteArrayC1Eic(arg0, arg1)} as u64;
+    let rsthis = QByteArray{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1197,7 +1200,7 @@ impl<'a> /*trait*/ QByteArray_number_s<QByteArray> for (f64, i8, i32) {
     let arg1 = self.1  as c_char;
     let arg2 = self.2  as c_int;
     let mut ret = unsafe {_ZN10QByteArray6numberEdci(arg0, arg1, arg2)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1256,7 +1259,7 @@ impl<'a> /*trait*/ QByteArray_fromBase64_s<QByteArray> for (&'a QByteArray) {
     // unsafe{_ZN10QByteArray10fromBase64ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN10QByteArray10fromBase64ERKS_(arg0)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1281,7 +1284,7 @@ impl<'a> /*trait*/ QByteArray_left<QByteArray> for (i32) {
     // unsafe{_ZNK10QByteArray4leftEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK10QByteArray4leftEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1295,7 +1298,7 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (i8, i8) {
     let arg0 = self.0  as c_char;
     let arg1 = self.1  as c_char;
     let mut ret = unsafe {_ZN10QByteArray7replaceEcc(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1320,7 +1323,7 @@ impl<'a> /*trait*/ QByteArray_append<QByteArray> for (i8) {
     // unsafe{_ZN10QByteArray6appendEc()};
     let arg0 = self  as c_char;
     let mut ret = unsafe {_ZN10QByteArray6appendEc(rsthis.qclsinst, arg0)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1370,7 +1373,7 @@ impl<'a> /*trait*/ QByteArray_remove<QByteArray> for (i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN10QByteArray6removeEii(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1465,12 +1468,12 @@ impl<'a> /*trait*/ QByteArray_New for (&'a  String, i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArrayC1EPKci()};
     let ctysz: c_int = unsafe{QByteArray_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as c_int;
     // unsafe {_ZN10QByteArrayC1EPKci(qthis, arg0, arg1)};
-    let qthis: *mut c_void = unsafe {dector_ZN10QByteArrayC1EPKci(arg0, arg1)};
-    let rsthis = QByteArray{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN10QByteArrayC1EPKci(arg0, arg1)} as u64;
+    let rsthis = QByteArray{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -1530,7 +1533,7 @@ impl<'a> /*trait*/ QByteArray_repeated<QByteArray> for (i32) {
     // unsafe{_ZNK10QByteArray8repeatedEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK10QByteArray8repeatedEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1557,7 +1560,7 @@ impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (f32, i8, i32) {
     let arg1 = self.1  as c_char;
     let arg2 = self.2  as c_int;
     let mut ret = unsafe {_ZN10QByteArray6setNumEfci(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1595,7 +1598,7 @@ impl<'a> /*trait*/ QByteArray_prepend<QByteArray> for (i8) {
     // unsafe{_ZN10QByteArray7prependEc()};
     let arg0 = self  as c_char;
     let mut ret = unsafe {_ZN10QByteArray7prependEc(rsthis.qclsinst, arg0)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1740,7 +1743,7 @@ impl<'a> /*trait*/ QByteArray_number_s<QByteArray> for (u32, i32) {
     let arg0 = self.0  as c_uint;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN10QByteArray6numberEji(arg0, arg1)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1778,7 +1781,7 @@ impl<'a> /*trait*/ QByteArray_leftJustified<QByteArray> for (i32, i8, i8) {
     let arg1 = self.1  as c_char;
     let arg2 = self.2  as c_char;
     let mut ret = unsafe {_ZNK10QByteArray13leftJustifiedEicb(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1816,7 +1819,7 @@ impl<'a> /*trait*/ QByteArray_number_s<QByteArray> for (u64, i32) {
     let arg0 = self.0  as c_ulonglong;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN10QByteArray6numberEyi(arg0, arg1)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1867,7 +1870,7 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (i32, i32, &'a QByteArray)
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN10QByteArray7replaceEiiRKS_(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1881,7 +1884,7 @@ impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (i16, i32) {
     let arg0 = self.0  as c_short;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN10QByteArray6setNumEsi(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1894,7 +1897,7 @@ impl<'a> /*trait*/ QByteArray_prepend<QByteArray> for (&'a QByteArray) {
     // unsafe{_ZN10QByteArray7prependERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN10QByteArray7prependERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1933,7 +1936,7 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (i8, &'a QString) {
     let arg0 = self.0  as c_char;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN10QByteArray7replaceEcRK7QString(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -1959,7 +1962,7 @@ impl<'a> /*trait*/ QByteArray_fromPercentEncoding_s<QByteArray> for (&'a QByteAr
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_char;
     let mut ret = unsafe {_ZN10QByteArray19fromPercentEncodingERKS_c(arg0, arg1)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2031,7 +2034,7 @@ impl<'a> /*trait*/ QByteArray_prepend<QByteArray> for (&'a  String, i32) {
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN10QByteArray7prependEPKci(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2067,11 +2070,11 @@ impl<'a> /*trait*/ QByteArray_New for (&'a QByteArray) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArrayC1ERKS_()};
     let ctysz: c_int = unsafe{QByteArray_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN10QByteArrayC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN10QByteArrayC1ERKS_(arg0)};
-    let rsthis = QByteArray{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN10QByteArrayC1ERKS_(arg0)} as u64;
+    let rsthis = QByteArray{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -2108,7 +2111,7 @@ impl<'a> /*trait*/ QByteArray_number_s<QByteArray> for (i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN10QByteArray6numberEii(arg0, arg1)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2135,7 +2138,7 @@ impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (f64, i8, i32) {
     let arg1 = self.1  as c_char;
     let arg2 = self.2  as c_int;
     let mut ret = unsafe {_ZN10QByteArray6setNumEdci(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2149,7 +2152,7 @@ impl<'a> /*trait*/ QByteArray_number_s<QByteArray> for (i64, i32) {
     let arg0 = self.0  as c_longlong;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN10QByteArray6numberExi(arg0, arg1)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2187,7 +2190,7 @@ impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (u16, i32) {
     let arg0 = self.0  as c_ushort;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN10QByteArray6setNumEti(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2224,7 +2227,7 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (&'a QString, &'a  String)
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZN10QByteArray7replaceERK7QStringPKc(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2237,7 +2240,7 @@ impl<'a> /*trait*/ QByteArray_append<QByteArray> for (&'a QByteArray) {
     // unsafe{_ZN10QByteArray6appendERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN10QByteArray6appendERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2277,7 +2280,7 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (&'a  String, i32, &'a  St
     let arg2 = self.2.as_ptr()  as *mut c_char;
     let arg3 = self.3  as c_int;
     let mut ret = unsafe {_ZN10QByteArray7replaceEPKciS1_i(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2314,7 +2317,7 @@ impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (i64, i32) {
     let arg0 = self.0  as c_longlong;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN10QByteArray6setNumExi(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2328,7 +2331,7 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (i8, &'a  String) {
     let arg0 = self.0  as c_char;
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZN10QByteArray7replaceEcPKc(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2341,7 +2344,7 @@ impl<'a> /*trait*/ QByteArray_append<QByteArray> for (&'a  String) {
     // unsafe{_ZN10QByteArray6appendEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZN10QByteArray6appendEPKc(rsthis.qclsinst, arg0)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2366,7 +2369,7 @@ impl<'a> /*trait*/ QByteArray_right<QByteArray> for (i32) {
     // unsafe{_ZNK10QByteArray5rightEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK10QByteArray5rightEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2379,7 +2382,7 @@ impl<'a> /*trait*/ QByteArray_append<QByteArray> for (&'a QString) {
     // unsafe{_ZN10QByteArray6appendERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN10QByteArray6appendERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2430,7 +2433,7 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (i32, i32, &'a  String) {
     let arg1 = self.1  as c_int;
     let arg2 = self.2.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZN10QByteArray7replaceEiiPKc(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2468,7 +2471,7 @@ impl<'a> /*trait*/ QByteArray_toPercentEncoding<QByteArray> for (&'a QByteArray,
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2  as c_char;
     let mut ret = unsafe {_ZNK10QByteArray17toPercentEncodingERKS_S1_c(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2505,7 +2508,7 @@ impl<'a> /*trait*/ QByteArray_append<QByteArray> for (&'a  String, i32) {
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN10QByteArray6appendEPKci(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2543,7 +2546,7 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (&'a QByteArray, &'a  Stri
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZN10QByteArray7replaceERKS_PKc(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2557,7 +2560,7 @@ impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (u64, i32) {
     let arg0 = self.0  as c_ulonglong;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN10QByteArray6setNumEyi(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2583,7 +2586,7 @@ impl<'a> /*trait*/ QByteArray_setRawData<QByteArray> for (&'a  String, u32) {
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as c_uint;
     let mut ret = unsafe {_ZN10QByteArray10setRawDataEPKcj(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2597,7 +2600,7 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (&'a QString, &'a QByteArr
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN10QByteArray7replaceERK7QStringRKS_(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2611,7 +2614,7 @@ impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (u32, i32) {
     let arg0 = self.0  as c_uint;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN10QByteArray6setNumEji(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2637,7 +2640,7 @@ impl<'a> /*trait*/ QByteArray_mid<QByteArray> for (i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZNK10QByteArray3midEii(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2651,7 +2654,7 @@ impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN10QByteArray6setNumEii(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2665,7 +2668,7 @@ impl<'a> /*trait*/ QByteArray_insert<QByteArray> for (i32, &'a QByteArray) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN10QByteArray6insertEiRKS_(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2679,7 +2682,7 @@ impl<'a> /*trait*/ QByteArray_insert<QByteArray> for (i32, &'a  String) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZN10QByteArray6insertEiPKc(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2705,7 +2708,7 @@ impl<'a> /*trait*/ QByteArray_fill<QByteArray> for (i8, i32) {
     let arg0 = self.0  as c_char;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN10QByteArray4fillEci(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2768,7 +2771,7 @@ impl<'a> /*trait*/ QByteArray_rightJustified<QByteArray> for (i32, i8, i8) {
     let arg1 = self.1  as c_char;
     let arg2 = self.2  as c_char;
     let mut ret = unsafe {_ZNK10QByteArray14rightJustifiedEicb(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QByteArray::inheritFrom(ret);
+    let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
@@ -2787,8 +2790,8 @@ impl<'a> /*trait*/ QByteArray_contains<i8> for (&'a QByteArray) {
 }
 
 impl /*struct*/ QByteArrayDataPtr {
-  pub fn inheritFrom(qthis: *mut c_void) -> QByteArrayDataPtr {
-    return QByteArrayDataPtr{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QByteArrayDataPtr {
+    return QByteArrayDataPtr{qclsinst: qthis, ..Default::default()};
   }
 }
 // <= body block end

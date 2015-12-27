@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qelapsedtimer.h
 // dst-file: /src/core/qelapsedtimer.rs
 //
@@ -30,42 +30,43 @@ use std::ops::Deref;
 extern {
   fn QElapsedTimer_Class_Size() -> c_int;
   // proto:  void QElapsedTimer::start();
-  fn _ZN13QElapsedTimer5startEv(qthis: *mut c_void);
+  fn _ZN13QElapsedTimer5startEv(qthis: u64 /* *mut c_void*/);
   // proto:  qint64 QElapsedTimer::nsecsElapsed();
-  fn _ZNK13QElapsedTimer12nsecsElapsedEv(qthis: *mut c_void) -> c_longlong;
+  fn _ZNK13QElapsedTimer12nsecsElapsedEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
   // proto:  void QElapsedTimer::invalidate();
-  fn _ZN13QElapsedTimer10invalidateEv(qthis: *mut c_void);
+  fn _ZN13QElapsedTimer10invalidateEv(qthis: u64 /* *mut c_void*/);
   // proto: static bool QElapsedTimer::isMonotonic();
   fn _ZN13QElapsedTimer11isMonotonicEv() -> c_char;
   // proto:  void QElapsedTimer::QElapsedTimer();
   fn dector_ZN13QElapsedTimerC1Ev() -> *mut c_void;
-  fn _ZN13QElapsedTimerC1Ev(qthis: *mut c_void);
+  fn _ZN13QElapsedTimerC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  qint64 QElapsedTimer::msecsTo(const QElapsedTimer & other);
-  fn _ZNK13QElapsedTimer7msecsToERKS_(qthis: *mut c_void, arg0: *mut c_void) -> c_longlong;
+  fn _ZNK13QElapsedTimer7msecsToERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_longlong;
   // proto:  qint64 QElapsedTimer::msecsSinceReference();
-  fn _ZNK13QElapsedTimer19msecsSinceReferenceEv(qthis: *mut c_void) -> c_longlong;
+  fn _ZNK13QElapsedTimer19msecsSinceReferenceEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
   // proto:  bool QElapsedTimer::hasExpired(qint64 timeout);
-  fn _ZNK13QElapsedTimer10hasExpiredEx(qthis: *mut c_void, arg0: c_longlong) -> c_char;
+  fn _ZNK13QElapsedTimer10hasExpiredEx(qthis: u64 /* *mut c_void*/, arg0: c_longlong) -> c_char;
   // proto:  qint64 QElapsedTimer::restart();
-  fn _ZN13QElapsedTimer7restartEv(qthis: *mut c_void) -> c_longlong;
+  fn _ZN13QElapsedTimer7restartEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
   // proto:  bool QElapsedTimer::isValid();
-  fn _ZNK13QElapsedTimer7isValidEv(qthis: *mut c_void) -> c_char;
+  fn _ZNK13QElapsedTimer7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  qint64 QElapsedTimer::secsTo(const QElapsedTimer & other);
-  fn _ZNK13QElapsedTimer6secsToERKS_(qthis: *mut c_void, arg0: *mut c_void) -> c_longlong;
+  fn _ZNK13QElapsedTimer6secsToERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_longlong;
   // proto:  qint64 QElapsedTimer::elapsed();
-  fn _ZNK13QElapsedTimer7elapsedEv(qthis: *mut c_void) -> c_longlong;
+  fn _ZNK13QElapsedTimer7elapsedEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QElapsedTimer)=16
+#[derive(Default)]
 pub struct QElapsedTimer {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QElapsedTimer {
-  pub fn inheritFrom(qthis: *mut c_void) -> QElapsedTimer {
-    return QElapsedTimer{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QElapsedTimer {
+    return QElapsedTimer{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  void QElapsedTimer::start();
@@ -177,10 +178,10 @@ impl<'a> /*trait*/ QElapsedTimer_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QElapsedTimerC1Ev()};
     let ctysz: c_int = unsafe{QElapsedTimer_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN13QElapsedTimerC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN13QElapsedTimerC1Ev()};
-    let rsthis = QElapsedTimer{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN13QElapsedTimerC1Ev()} as u64;
+    let rsthis = QElapsedTimer{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }

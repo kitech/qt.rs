@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:03 2015
 // src-file: /QtWidgets/qtreewidgetitemiterator.h
 // dst-file: /src/widgets/qtreewidgetitemiterator.rs
 //
@@ -32,22 +32,23 @@ use super::qtreewidget::QTreeWidgetItem; // 773
 extern {
   fn QTreeWidgetItemIterator_Class_Size() -> c_int;
   // proto:  void QTreeWidgetItemIterator::~QTreeWidgetItemIterator();
-  fn _ZN23QTreeWidgetItemIteratorD0Ev(qthis: *mut c_void);
+  fn _ZN23QTreeWidgetItemIteratorD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QTreeWidgetItemIterator::QTreeWidgetItemIterator(const QTreeWidgetItemIterator & it);
   fn dector_ZN23QTreeWidgetItemIteratorC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN23QTreeWidgetItemIteratorC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn _ZN23QTreeWidgetItemIteratorC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QTreeWidgetItemIterator)=1
+#[derive(Default)]
 pub struct QTreeWidgetItemIterator {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QTreeWidgetItemIterator {
-  pub fn inheritFrom(qthis: *mut c_void) -> QTreeWidgetItemIterator {
-    return QTreeWidgetItemIterator{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QTreeWidgetItemIterator {
+    return QTreeWidgetItemIterator{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  void QTreeWidgetItemIterator::~QTreeWidgetItemIterator();
@@ -91,11 +92,11 @@ impl<'a> /*trait*/ QTreeWidgetItemIterator_New for (&'a QTreeWidgetItemIterator)
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QTreeWidgetItemIteratorC1ERKS_()};
     let ctysz: c_int = unsafe{QTreeWidgetItemIterator_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN23QTreeWidgetItemIteratorC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN23QTreeWidgetItemIteratorC1ERKS_(arg0)};
-    let rsthis = QTreeWidgetItemIterator{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN23QTreeWidgetItemIteratorC1ERKS_(arg0)} as u64;
+    let rsthis = QTreeWidgetItemIterator{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }

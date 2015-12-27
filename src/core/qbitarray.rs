@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 12:15:38 2015
+// created: Sun Dec 27 22:52:02 2015
 // src-file: /QtCore/qbitarray.h
 // dst-file: /src/core/qbitarray.rs
 //
@@ -32,73 +32,75 @@ extern {
   fn QBitRef_Class_Size() -> c_int;
   // proto:  void QBitRef::QBitRef(QBitArray & array, int idx);
   fn dector_ZN7QBitRefC1ER9QBitArrayi(arg0: *mut c_void, arg1: c_int) -> *mut c_void;
-  fn demth_ZN7QBitRefC1ER9QBitArrayi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int);
+  fn demth_ZN7QBitRefC1ER9QBitArrayi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
   fn QBitArray_Class_Size() -> c_int;
   // proto:  void QBitArray::QBitArray(int size, bool val);
   fn dector_ZN9QBitArrayC1Eib(arg0: c_int, arg1: c_char) -> *mut c_void;
-  fn _ZN9QBitArrayC1Eib(qthis: *mut c_void, arg0: c_int, arg1: c_char);
+  fn _ZN9QBitArrayC1Eib(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_char);
   // proto:  bool QBitArray::isEmpty();
-  fn demth_ZNK9QBitArray7isEmptyEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK9QBitArray7isEmptyEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QBitArray::setBit(int i);
-  fn _ZN9QBitArray6setBitEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN9QBitArray6setBitEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QBitArray::size();
-  fn demth_ZNK9QBitArray4sizeEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK9QBitArray4sizeEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QBitArray::swap(QBitArray & other);
-  fn demth_ZN9QBitArray4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN9QBitArray4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QBitArray::count();
-  fn demth_ZNK9QBitArray5countEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK9QBitArray5countEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QBitArray::count(bool on);
-  fn _ZNK9QBitArray5countEb(qthis: *mut c_void, arg0: c_char) -> c_int;
+  fn _ZNK9QBitArray5countEb(qthis: u64 /* *mut c_void*/, arg0: c_char) -> c_int;
   // proto:  void QBitArray::detach();
-  fn demth_ZN9QBitArray6detachEv(qthis: *mut c_void);
+  fn demth_ZN9QBitArray6detachEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QBitArray::QBitArray();
   fn dector_ZN9QBitArrayC1Ev() -> *mut c_void;
-  fn demth_ZN9QBitArrayC1Ev(qthis: *mut c_void);
+  fn demth_ZN9QBitArrayC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QBitArray::at(int i);
-  fn _ZNK9QBitArray2atEi(qthis: *mut c_void, arg0: c_int) -> c_char;
+  fn _ZNK9QBitArray2atEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
   // proto:  void QBitArray::clear();
-  fn demth_ZN9QBitArray5clearEv(qthis: *mut c_void);
+  fn demth_ZN9QBitArray5clearEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QBitArray::clearBit(int i);
-  fn _ZN9QBitArray8clearBitEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN9QBitArray8clearBitEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  bool QBitArray::testBit(int i);
-  fn _ZNK9QBitArray7testBitEi(qthis: *mut c_void, arg0: c_int) -> c_char;
+  fn _ZNK9QBitArray7testBitEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
   // proto:  void QBitArray::truncate(int pos);
-  fn demth_ZN9QBitArray8truncateEi(qthis: *mut c_void, arg0: c_int);
+  fn demth_ZN9QBitArray8truncateEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  bool QBitArray::toggleBit(int i);
-  fn _ZN9QBitArray9toggleBitEi(qthis: *mut c_void, arg0: c_int) -> c_char;
+  fn _ZN9QBitArray9toggleBitEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
   // proto:  void QBitArray::QBitArray(const QBitArray & other);
   fn dector_ZN9QBitArrayC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn demth_ZN9QBitArrayC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN9QBitArrayC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QBitArray::fill(bool val, int first, int last);
-  fn _ZN9QBitArray4fillEbii(qthis: *mut c_void, arg0: c_char, arg1: c_int, arg2: c_int);
+  fn _ZN9QBitArray4fillEbii(qthis: u64 /* *mut c_void*/, arg0: c_char, arg1: c_int, arg2: c_int);
   // proto:  bool QBitArray::isNull();
-  fn demth_ZNK9QBitArray6isNullEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK9QBitArray6isNullEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QBitArray::setBit(int i, bool val);
-  fn _ZN9QBitArray6setBitEib(qthis: *mut c_void, arg0: c_int, arg1: c_char);
+  fn _ZN9QBitArray6setBitEib(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_char);
   // proto:  void QBitArray::resize(int size);
-  fn _ZN9QBitArray6resizeEi(qthis: *mut c_void, arg0: c_int);
+  fn _ZN9QBitArray6resizeEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  bool QBitArray::isDetached();
-  fn demth_ZNK9QBitArray10isDetachedEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK9QBitArray10isDetachedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QBitArray::fill(bool val, int size);
-  fn demth_ZN9QBitArray4fillEbi(qthis: *mut c_void, arg0: c_char, arg1: c_int) -> c_char;
+  fn demth_ZN9QBitArray4fillEbi(qthis: u64 /* *mut c_void*/, arg0: c_char, arg1: c_int) -> c_char;
 } // <= ext block end
 
 // body block begin =>
 // class sizeof(QBitRef)=16
+#[derive(Default)]
 pub struct QBitRef {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 // class sizeof(QBitArray)=8
+#[derive(Default)]
 pub struct QBitArray {
   // qbase: None,
-  pub qclsinst: *mut c_void,
+  pub qclsinst: u64 /* *mut c_void*/,
 }
 
 impl /*struct*/ QBitRef {
-  pub fn inheritFrom(qthis: *mut c_void) -> QBitRef {
-    return QBitRef{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QBitRef {
+    return QBitRef{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  void QBitRef::QBitRef(QBitArray & array, int idx);
@@ -120,20 +122,20 @@ impl<'a> /*trait*/ QBitRef_New for (&'a QBitArray, i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QBitRefC1ER9QBitArrayi()};
     let ctysz: c_int = unsafe{QBitRef_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     // unsafe {_ZN7QBitRefC1ER9QBitArrayi(qthis, arg0, arg1)};
-    let qthis: *mut c_void = unsafe {dector_ZN7QBitRefC1ER9QBitArrayi(arg0, arg1)};
-    let rsthis = QBitRef{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN7QBitRefC1ER9QBitArrayi(arg0, arg1)} as u64;
+    let rsthis = QBitRef{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
 impl /*struct*/ QBitArray {
-  pub fn inheritFrom(qthis: *mut c_void) -> QBitArray {
-    return QBitArray{qclsinst: qthis};
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QBitArray {
+    return QBitArray{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  void QBitArray::QBitArray(int size, bool val);
@@ -155,12 +157,12 @@ impl<'a> /*trait*/ QBitArray_New for (i32, i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QBitArrayC1Eib()};
     let ctysz: c_int = unsafe{QBitArray_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_char;
     // unsafe {_ZN9QBitArrayC1Eib(qthis, arg0, arg1)};
-    let qthis: *mut c_void = unsafe {dector_ZN9QBitArrayC1Eib(arg0, arg1)};
-    let rsthis = QBitArray{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN9QBitArrayC1Eib(arg0, arg1)} as u64;
+    let rsthis = QBitArray{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -321,10 +323,10 @@ impl<'a> /*trait*/ QBitArray_New for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QBitArrayC1Ev()};
     let ctysz: c_int = unsafe{QBitArray_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     // unsafe {_ZN9QBitArrayC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN9QBitArrayC1Ev()};
-    let rsthis = QBitArray{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN9QBitArrayC1Ev()} as u64;
+    let rsthis = QBitArray{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -476,11 +478,11 @@ impl<'a> /*trait*/ QBitArray_New for (&'a QBitArray) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QBitArrayC1ERKS_()};
     let ctysz: c_int = unsafe{QBitArray_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN9QBitArrayC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN9QBitArrayC1ERKS_(arg0)};
-    let rsthis = QBitArray{qclsinst: qthis};
+    let qthis: u64 = unsafe {dector_ZN9QBitArrayC1ERKS_(arg0)} as u64;
+    let rsthis = QBitArray{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
