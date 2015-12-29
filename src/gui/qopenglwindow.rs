@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtGui/qopenglwindow.h
 // dst-file: /src/gui/qopenglwindow.rs
 //
@@ -56,7 +56,8 @@ extern {
   fn _ZN13QOpenGLWindowD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  const QMetaObject * QOpenGLWindow::metaObject();
   fn _ZNK13QOpenGLWindow10metaObjectEv(qthis: u64 /* *mut c_void*/);
-  fn QOpenGLWindow_SlotProxy_connect__ZN13QOpenGLWindow12frameSwappedEv(qthis: *mut c_void, fptr: *mut c_void);
+  fn QOpenGLWindow_SlotProxy_connect__ZN13QOpenGLWindow12frameSwappedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QOpenGLWindow_SlotProxy_connect_box__ZN13QOpenGLWindow12frameSwappedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -341,7 +342,7 @@ impl<'a> /*trait*/ QOpenGLWindow_metaObject<()> for () {
 #[derive(Default)] // for QOpenGLWindow_frameSwapped
 pub struct QOpenGLWindow_frameSwapped_signal{poi:u64}
 impl /* struct */ QOpenGLWindow {
-  pub fn frameSwapped_1(self) -> QOpenGLWindow_frameSwapped_signal {
+  pub fn frameSwapped_1(&self) -> QOpenGLWindow_frameSwapped_signal {
      return QOpenGLWindow_frameSwapped_signal{poi:self.qclsinst};
   }
 }
@@ -355,13 +356,33 @@ pub trait QOpenGLWindow_frameSwapped_signal_connect {
 }
 
 // frameSwapped()
-extern fn QOpenGLWindow_frameSwapped_signal_connect_cb_0() {
+extern fn QOpenGLWindow_frameSwapped_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QOpenGLWindow_frameSwapped_signal_connect for (extern fn()) {
+extern fn QOpenGLWindow_frameSwapped_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, ) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QOpenGLWindow_frameSwapped_signal_connect for fn() {
   fn connect(self, sigthis: QOpenGLWindow_frameSwapped_signal) {
     // do smth...
-    unsafe {QOpenGLWindow_SlotProxy_connect__ZN13QOpenGLWindow12frameSwappedEv(sigthis.poi as *mut c_void, QOpenGLWindow_frameSwapped_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QOpenGLWindow_frameSwapped_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QOpenGLWindow_SlotProxy_connect__ZN13QOpenGLWindow12frameSwappedEv(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QOpenGLWindow_frameSwapped_signal_connect for Box<fn()> {
+  fn connect(self, sigthis: QOpenGLWindow_frameSwapped_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QOpenGLWindow_frameSwapped_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QOpenGLWindow_SlotProxy_connect__ZN13QOpenGLWindow12frameSwappedEv(arg0, arg1, arg2)};
   }
 }
 // <= body block end

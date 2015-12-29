@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtCore/qobject.h
 // dst-file: /src/core/qobject.rs
 //
@@ -132,7 +132,8 @@ extern {
   fn _ZN7QObject14dumpObjectInfoEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QObject::killTimer(int id);
   fn _ZN7QObject9killTimerEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
-  fn QObject_SlotProxy_connect__ZN7QObject9destroyedEPS_(qthis: *mut c_void, fptr: *mut c_void);
+  fn QObject_SlotProxy_connect__ZN7QObject9destroyedEPS_(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QObject_SlotProxy_connect_box__ZN7QObject9destroyedEPS_(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -1151,7 +1152,7 @@ impl<'a> /*trait*/ QObject_killTimer<()> for (i32) {
 #[derive(Default)] // for QObject_destroyed
 pub struct QObject_destroyed_signal{poi:u64}
 impl /* struct */ QObject {
-  pub fn destroyed_1(self) -> QObject_destroyed_signal {
+  pub fn destroyed_1(&self) -> QObject_destroyed_signal {
      return QObject_destroyed_signal{poi:self.qclsinst};
   }
 }
@@ -1167,7 +1168,7 @@ pub trait QObject_destroyed_signal_connect {
 #[derive(Default)] // for QObject_objectNameChanged
 pub struct QObject_objectNameChanged_signal{poi:u64}
 impl /* struct */ QObject {
-  pub fn objectNameChanged_1(self) -> QObject_objectNameChanged_signal {
+  pub fn objectNameChanged_1(&self) -> QObject_objectNameChanged_signal {
      return QObject_objectNameChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1181,13 +1182,33 @@ pub trait QObject_objectNameChanged_signal_connect {
 }
 
 // destroyed(class QObject *)
-extern fn QObject_destroyed_signal_connect_cb_0(arg0: *mut c_void) {
+extern fn QObject_destroyed_signal_connect_cb_0(rsfptr:fn(QObject), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QObject_destroyed_signal_connect for (extern fn(QObject)) {
+extern fn QObject_destroyed_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QObject_destroyed_signal_connect for fn(QObject) {
   fn connect(self, sigthis: QObject_destroyed_signal) {
     // do smth...
-    unsafe {QObject_SlotProxy_connect__ZN7QObject9destroyedEPS_(sigthis.poi as *mut c_void, QObject_destroyed_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QObject_destroyed_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QObject_SlotProxy_connect__ZN7QObject9destroyedEPS_(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QObject_destroyed_signal_connect for Box<fn(QObject)> {
+  fn connect(self, sigthis: QObject_destroyed_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QObject_destroyed_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QObject_SlotProxy_connect__ZN7QObject9destroyedEPS_(arg0, arg1, arg2)};
   }
 }
 // <= body block end

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtCore/qfilesystemwatcher.h
 // dst-file: /src/core/qfilesystemwatcher.rs
 //
@@ -314,7 +314,7 @@ impl<'a> /*trait*/ QFileSystemWatcher_New for (&'a QStringList, &'a QObject) {
 #[derive(Default)] // for QFileSystemWatcher_directoryChanged
 pub struct QFileSystemWatcher_directoryChanged_signal{poi:u64}
 impl /* struct */ QFileSystemWatcher {
-  pub fn directoryChanged_1(self) -> QFileSystemWatcher_directoryChanged_signal {
+  pub fn directoryChanged_1(&self) -> QFileSystemWatcher_directoryChanged_signal {
      return QFileSystemWatcher_directoryChanged_signal{poi:self.qclsinst};
   }
 }
@@ -330,7 +330,7 @@ pub trait QFileSystemWatcher_directoryChanged_signal_connect {
 #[derive(Default)] // for QFileSystemWatcher_fileChanged
 pub struct QFileSystemWatcher_fileChanged_signal{poi:u64}
 impl /* struct */ QFileSystemWatcher {
-  pub fn fileChanged_1(self) -> QFileSystemWatcher_fileChanged_signal {
+  pub fn fileChanged_1(&self) -> QFileSystemWatcher_fileChanged_signal {
      return QFileSystemWatcher_fileChanged_signal{poi:self.qclsinst};
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtWidgets/qtoolbox.h
 // dst-file: /src/widgets/qtoolbox.rs
 //
@@ -82,7 +82,8 @@ extern {
   fn _ZN8QToolBox7addItemEP7QWidgetRK5QIconRK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> c_int;
   // proto:  int QToolBox::insertItem(int index, QWidget * widget, const QIcon & icon, const QString & text);
   fn _ZN8QToolBox10insertItemEiP7QWidgetRK5QIconRK7QString(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void) -> c_int;
-  fn QToolBox_SlotProxy_connect__ZN8QToolBox14currentChangedEi(qthis: *mut c_void, fptr: *mut c_void);
+  fn QToolBox_SlotProxy_connect__ZN8QToolBox14currentChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QToolBox_SlotProxy_connect_box__ZN8QToolBox14currentChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -673,7 +674,7 @@ impl<'a> /*trait*/ QToolBox_insertItem<i32> for (i32, &'a QWidget, &'a QIcon, &'
 #[derive(Default)] // for QToolBox_currentChanged
 pub struct QToolBox_currentChanged_signal{poi:u64}
 impl /* struct */ QToolBox {
-  pub fn currentChanged_1(self) -> QToolBox_currentChanged_signal {
+  pub fn currentChanged_1(&self) -> QToolBox_currentChanged_signal {
      return QToolBox_currentChanged_signal{poi:self.qclsinst};
   }
 }
@@ -687,13 +688,33 @@ pub trait QToolBox_currentChanged_signal_connect {
 }
 
 // currentChanged(int)
-extern fn QToolBox_currentChanged_signal_connect_cb_0(arg0: c_int) {
+extern fn QToolBox_currentChanged_signal_connect_cb_0(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QToolBox_currentChanged_signal_connect for (extern fn(i32)) {
+extern fn QToolBox_currentChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QToolBox_currentChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QToolBox_currentChanged_signal) {
     // do smth...
-    unsafe {QToolBox_SlotProxy_connect__ZN8QToolBox14currentChangedEi(sigthis.poi as *mut c_void, QToolBox_currentChanged_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QToolBox_currentChanged_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QToolBox_SlotProxy_connect__ZN8QToolBox14currentChangedEi(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QToolBox_currentChanged_signal_connect for Box<fn(i32)> {
+  fn connect(self, sigthis: QToolBox_currentChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QToolBox_currentChanged_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QToolBox_SlotProxy_connect__ZN8QToolBox14currentChangedEi(arg0, arg1, arg2)};
   }
 }
 // <= body block end

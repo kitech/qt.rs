@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtCore/qstate.h
 // dst-file: /src/core/qstate.rs
 //
@@ -381,7 +381,7 @@ impl<'a> /*trait*/ QState_setInitialState<()> for (&'a QAbstractState) {
 #[derive(Default)] // for QState_childModeChanged
 pub struct QState_childModeChanged_signal{poi:u64}
 impl /* struct */ QState {
-  pub fn childModeChanged_1(self) -> QState_childModeChanged_signal {
+  pub fn childModeChanged_1(&self) -> QState_childModeChanged_signal {
      return QState_childModeChanged_signal{poi:self.qclsinst};
   }
 }
@@ -397,7 +397,7 @@ pub trait QState_childModeChanged_signal_connect {
 #[derive(Default)] // for QState_errorStateChanged
 pub struct QState_errorStateChanged_signal{poi:u64}
 impl /* struct */ QState {
-  pub fn errorStateChanged_1(self) -> QState_errorStateChanged_signal {
+  pub fn errorStateChanged_1(&self) -> QState_errorStateChanged_signal {
      return QState_errorStateChanged_signal{poi:self.qclsinst};
   }
 }
@@ -413,7 +413,7 @@ pub trait QState_errorStateChanged_signal_connect {
 #[derive(Default)] // for QState_finished
 pub struct QState_finished_signal{poi:u64}
 impl /* struct */ QState {
-  pub fn finished_1(self) -> QState_finished_signal {
+  pub fn finished_1(&self) -> QState_finished_signal {
      return QState_finished_signal{poi:self.qclsinst};
   }
 }
@@ -429,7 +429,7 @@ pub trait QState_finished_signal_connect {
 #[derive(Default)] // for QState_propertiesAssigned
 pub struct QState_propertiesAssigned_signal{poi:u64}
 impl /* struct */ QState {
-  pub fn propertiesAssigned_1(self) -> QState_propertiesAssigned_signal {
+  pub fn propertiesAssigned_1(&self) -> QState_propertiesAssigned_signal {
      return QState_propertiesAssigned_signal{poi:self.qclsinst};
   }
 }
@@ -445,7 +445,7 @@ pub trait QState_propertiesAssigned_signal_connect {
 #[derive(Default)] // for QState_initialStateChanged
 pub struct QState_initialStateChanged_signal{poi:u64}
 impl /* struct */ QState {
-  pub fn initialStateChanged_1(self) -> QState_initialStateChanged_signal {
+  pub fn initialStateChanged_1(&self) -> QState_initialStateChanged_signal {
      return QState_initialStateChanged_signal{poi:self.qclsinst};
   }
 }

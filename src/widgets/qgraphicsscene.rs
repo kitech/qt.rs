@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:03 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtWidgets/qgraphicsscene.h
 // dst-file: /src/widgets/qgraphicsscene.rs
 //
@@ -187,9 +187,12 @@ extern {
   fn _ZN14QGraphicsScene7addPathERK12QPainterPathRK4QPenRK6QBrush(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  bool QGraphicsScene::stickyFocus();
   fn _ZNK14QGraphicsScene11stickyFocusEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  fn QGraphicsScene_SlotProxy_connect__ZN14QGraphicsScene16selectionChangedEv(qthis: *mut c_void, fptr: *mut c_void);
-  fn QGraphicsScene_SlotProxy_connect__ZN14QGraphicsScene16focusItemChangedEP13QGraphicsItemS1_N2Qt11FocusReasonE(qthis: *mut c_void, fptr: *mut c_void);
-  fn QGraphicsScene_SlotProxy_connect__ZN14QGraphicsScene16sceneRectChangedERK6QRectF(qthis: *mut c_void, fptr: *mut c_void);
+  fn QGraphicsScene_SlotProxy_connect__ZN14QGraphicsScene16selectionChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QGraphicsScene_SlotProxy_connect_box__ZN14QGraphicsScene16selectionChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QGraphicsScene_SlotProxy_connect__ZN14QGraphicsScene16focusItemChangedEP13QGraphicsItemS1_N2Qt11FocusReasonE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QGraphicsScene_SlotProxy_connect_box__ZN14QGraphicsScene16focusItemChangedEP13QGraphicsItemS1_N2Qt11FocusReasonE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QGraphicsScene_SlotProxy_connect__ZN14QGraphicsScene16sceneRectChangedERK6QRectF(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QGraphicsScene_SlotProxy_connect_box__ZN14QGraphicsScene16sceneRectChangedERK6QRectF(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -1715,7 +1718,7 @@ impl<'a> /*trait*/ QGraphicsScene_stickyFocus<i8> for () {
 #[derive(Default)] // for QGraphicsScene_changed
 pub struct QGraphicsScene_changed_signal{poi:u64}
 impl /* struct */ QGraphicsScene {
-  pub fn changed_1(self) -> QGraphicsScene_changed_signal {
+  pub fn changed_1(&self) -> QGraphicsScene_changed_signal {
      return QGraphicsScene_changed_signal{poi:self.qclsinst};
   }
 }
@@ -1731,7 +1734,7 @@ pub trait QGraphicsScene_changed_signal_connect {
 #[derive(Default)] // for QGraphicsScene_sceneRectChanged
 pub struct QGraphicsScene_sceneRectChanged_signal{poi:u64}
 impl /* struct */ QGraphicsScene {
-  pub fn sceneRectChanged_1(self) -> QGraphicsScene_sceneRectChanged_signal {
+  pub fn sceneRectChanged_1(&self) -> QGraphicsScene_sceneRectChanged_signal {
      return QGraphicsScene_sceneRectChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1747,7 +1750,7 @@ pub trait QGraphicsScene_sceneRectChanged_signal_connect {
 #[derive(Default)] // for QGraphicsScene_selectionChanged
 pub struct QGraphicsScene_selectionChanged_signal{poi:u64}
 impl /* struct */ QGraphicsScene {
-  pub fn selectionChanged_1(self) -> QGraphicsScene_selectionChanged_signal {
+  pub fn selectionChanged_1(&self) -> QGraphicsScene_selectionChanged_signal {
      return QGraphicsScene_selectionChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1763,7 +1766,7 @@ pub trait QGraphicsScene_selectionChanged_signal_connect {
 #[derive(Default)] // for QGraphicsScene_focusItemChanged
 pub struct QGraphicsScene_focusItemChanged_signal{poi:u64}
 impl /* struct */ QGraphicsScene {
-  pub fn focusItemChanged_1(self) -> QGraphicsScene_focusItemChanged_signal {
+  pub fn focusItemChanged_1(&self) -> QGraphicsScene_focusItemChanged_signal {
      return QGraphicsScene_focusItemChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1777,33 +1780,93 @@ pub trait QGraphicsScene_focusItemChanged_signal_connect {
 }
 
 // selectionChanged()
-extern fn QGraphicsScene_selectionChanged_signal_connect_cb_0() {
+extern fn QGraphicsScene_selectionChanged_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QGraphicsScene_selectionChanged_signal_connect for (extern fn()) {
+extern fn QGraphicsScene_selectionChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, ) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QGraphicsScene_selectionChanged_signal_connect for fn() {
   fn connect(self, sigthis: QGraphicsScene_selectionChanged_signal) {
     // do smth...
-    unsafe {QGraphicsScene_SlotProxy_connect__ZN14QGraphicsScene16selectionChangedEv(sigthis.poi as *mut c_void, QGraphicsScene_selectionChanged_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QGraphicsScene_selectionChanged_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QGraphicsScene_SlotProxy_connect__ZN14QGraphicsScene16selectionChangedEv(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QGraphicsScene_selectionChanged_signal_connect for Box<fn()> {
+  fn connect(self, sigthis: QGraphicsScene_selectionChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QGraphicsScene_selectionChanged_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QGraphicsScene_SlotProxy_connect__ZN14QGraphicsScene16selectionChangedEv(arg0, arg1, arg2)};
   }
 }
 // focusItemChanged(class QGraphicsItem *, class QGraphicsItem *, Qt::FocusReason)
-extern fn QGraphicsScene_focusItemChanged_signal_connect_cb_1(arg0: *mut c_void, arg1: *mut c_void, arg2: c_int) {
+extern fn QGraphicsScene_focusItemChanged_signal_connect_cb_1(rsfptr:fn(QGraphicsItem, QGraphicsItem, i32), arg0: *mut c_void, arg1: *mut c_void, arg2: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QGraphicsScene_focusItemChanged_signal_connect for (extern fn(QGraphicsItem, QGraphicsItem, i32)) {
+extern fn QGraphicsScene_focusItemChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QGraphicsScene_focusItemChanged_signal_connect for fn(QGraphicsItem, QGraphicsItem, i32) {
   fn connect(self, sigthis: QGraphicsScene_focusItemChanged_signal) {
     // do smth...
-    unsafe {QGraphicsScene_SlotProxy_connect__ZN14QGraphicsScene16focusItemChangedEP13QGraphicsItemS1_N2Qt11FocusReasonE(sigthis.poi as *mut c_void, QGraphicsScene_focusItemChanged_signal_connect_cb_1 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QGraphicsScene_focusItemChanged_signal_connect_cb_1 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QGraphicsScene_SlotProxy_connect__ZN14QGraphicsScene16focusItemChangedEP13QGraphicsItemS1_N2Qt11FocusReasonE(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QGraphicsScene_focusItemChanged_signal_connect for Box<fn(QGraphicsItem, QGraphicsItem, i32)> {
+  fn connect(self, sigthis: QGraphicsScene_focusItemChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QGraphicsScene_focusItemChanged_signal_connect_cb_box_1 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QGraphicsScene_SlotProxy_connect__ZN14QGraphicsScene16focusItemChangedEP13QGraphicsItemS1_N2Qt11FocusReasonE(arg0, arg1, arg2)};
   }
 }
 // sceneRectChanged(const class QRectF &)
-extern fn QGraphicsScene_sceneRectChanged_signal_connect_cb_2(arg0: *mut c_void) {
+extern fn QGraphicsScene_sceneRectChanged_signal_connect_cb_2(rsfptr:fn(QRectF), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QGraphicsScene_sceneRectChanged_signal_connect for (extern fn(QRectF)) {
+extern fn QGraphicsScene_sceneRectChanged_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QGraphicsScene_sceneRectChanged_signal_connect for fn(QRectF) {
   fn connect(self, sigthis: QGraphicsScene_sceneRectChanged_signal) {
     // do smth...
-    unsafe {QGraphicsScene_SlotProxy_connect__ZN14QGraphicsScene16sceneRectChangedERK6QRectF(sigthis.poi as *mut c_void, QGraphicsScene_sceneRectChanged_signal_connect_cb_2 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QGraphicsScene_sceneRectChanged_signal_connect_cb_2 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QGraphicsScene_SlotProxy_connect__ZN14QGraphicsScene16sceneRectChangedERK6QRectF(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QGraphicsScene_sceneRectChanged_signal_connect for Box<fn(QRectF)> {
+  fn connect(self, sigthis: QGraphicsScene_sceneRectChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QGraphicsScene_sceneRectChanged_signal_connect_cb_box_2 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QGraphicsScene_SlotProxy_connect__ZN14QGraphicsScene16sceneRectChangedERK6QRectF(arg0, arg1, arg2)};
   }
 }
 // <= body block end

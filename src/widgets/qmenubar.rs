@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtWidgets/qmenubar.h
 // dst-file: /src/widgets/qmenubar.rs
 //
@@ -96,8 +96,10 @@ extern {
   fn _ZN8QMenuBar9addActionERK7QStringPK7QObjectPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_char) -> *mut c_void;
   // proto:  int QMenuBar::heightForWidth(int );
   fn _ZNK8QMenuBar14heightForWidthEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
-  fn QMenuBar_SlotProxy_connect__ZN8QMenuBar9triggeredEP7QAction(qthis: *mut c_void, fptr: *mut c_void);
-  fn QMenuBar_SlotProxy_connect__ZN8QMenuBar7hoveredEP7QAction(qthis: *mut c_void, fptr: *mut c_void);
+  fn QMenuBar_SlotProxy_connect__ZN8QMenuBar9triggeredEP7QAction(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QMenuBar_SlotProxy_connect_box__ZN8QMenuBar9triggeredEP7QAction(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QMenuBar_SlotProxy_connect__ZN8QMenuBar7hoveredEP7QAction(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QMenuBar_SlotProxy_connect_box__ZN8QMenuBar7hoveredEP7QAction(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -760,7 +762,7 @@ impl<'a> /*trait*/ QMenuBar_heightForWidth<i32> for (i32) {
 #[derive(Default)] // for QMenuBar_hovered
 pub struct QMenuBar_hovered_signal{poi:u64}
 impl /* struct */ QMenuBar {
-  pub fn hovered_1(self) -> QMenuBar_hovered_signal {
+  pub fn hovered_1(&self) -> QMenuBar_hovered_signal {
      return QMenuBar_hovered_signal{poi:self.qclsinst};
   }
 }
@@ -776,7 +778,7 @@ pub trait QMenuBar_hovered_signal_connect {
 #[derive(Default)] // for QMenuBar_triggered
 pub struct QMenuBar_triggered_signal{poi:u64}
 impl /* struct */ QMenuBar {
-  pub fn triggered_1(self) -> QMenuBar_triggered_signal {
+  pub fn triggered_1(&self) -> QMenuBar_triggered_signal {
      return QMenuBar_triggered_signal{poi:self.qclsinst};
   }
 }
@@ -790,23 +792,63 @@ pub trait QMenuBar_triggered_signal_connect {
 }
 
 // triggered(class QAction *)
-extern fn QMenuBar_triggered_signal_connect_cb_0(arg0: *mut c_void) {
+extern fn QMenuBar_triggered_signal_connect_cb_0(rsfptr:fn(QAction), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QMenuBar_triggered_signal_connect for (extern fn(QAction)) {
+extern fn QMenuBar_triggered_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QMenuBar_triggered_signal_connect for fn(QAction) {
   fn connect(self, sigthis: QMenuBar_triggered_signal) {
     // do smth...
-    unsafe {QMenuBar_SlotProxy_connect__ZN8QMenuBar9triggeredEP7QAction(sigthis.poi as *mut c_void, QMenuBar_triggered_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QMenuBar_triggered_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QMenuBar_SlotProxy_connect__ZN8QMenuBar9triggeredEP7QAction(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QMenuBar_triggered_signal_connect for Box<fn(QAction)> {
+  fn connect(self, sigthis: QMenuBar_triggered_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QMenuBar_triggered_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QMenuBar_SlotProxy_connect__ZN8QMenuBar9triggeredEP7QAction(arg0, arg1, arg2)};
   }
 }
 // hovered(class QAction *)
-extern fn QMenuBar_hovered_signal_connect_cb_1(arg0: *mut c_void) {
+extern fn QMenuBar_hovered_signal_connect_cb_1(rsfptr:fn(QAction), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QMenuBar_hovered_signal_connect for (extern fn(QAction)) {
+extern fn QMenuBar_hovered_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QMenuBar_hovered_signal_connect for fn(QAction) {
   fn connect(self, sigthis: QMenuBar_hovered_signal) {
     // do smth...
-    unsafe {QMenuBar_SlotProxy_connect__ZN8QMenuBar7hoveredEP7QAction(sigthis.poi as *mut c_void, QMenuBar_hovered_signal_connect_cb_1 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QMenuBar_hovered_signal_connect_cb_1 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QMenuBar_SlotProxy_connect__ZN8QMenuBar7hoveredEP7QAction(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QMenuBar_hovered_signal_connect for Box<fn(QAction)> {
+  fn connect(self, sigthis: QMenuBar_hovered_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QMenuBar_hovered_signal_connect_cb_box_1 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QMenuBar_SlotProxy_connect__ZN8QMenuBar7hoveredEP7QAction(arg0, arg1, arg2)};
   }
 }
 // <= body block end

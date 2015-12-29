@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtWidgets/qcolumnview.h
 // dst-file: /src/widgets/qcolumnview.rs
 //
@@ -73,7 +73,8 @@ extern {
   fn _ZNK11QColumnView10visualRectERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QColumnView::~QColumnView();
   fn _ZN11QColumnViewD0Ev(qthis: u64 /* *mut c_void*/);
-  fn QColumnView_SlotProxy_connect__ZN11QColumnView19updatePreviewWidgetERK11QModelIndex(qthis: *mut c_void, fptr: *mut c_void);
+  fn QColumnView_SlotProxy_connect__ZN11QColumnView19updatePreviewWidgetERK11QModelIndex(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QColumnView_SlotProxy_connect_box__ZN11QColumnView19updatePreviewWidgetERK11QModelIndex(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -497,7 +498,7 @@ impl<'a> /*trait*/ QColumnView_Free<()> for () {
 #[derive(Default)] // for QColumnView_updatePreviewWidget
 pub struct QColumnView_updatePreviewWidget_signal{poi:u64}
 impl /* struct */ QColumnView {
-  pub fn updatePreviewWidget_1(self) -> QColumnView_updatePreviewWidget_signal {
+  pub fn updatePreviewWidget_1(&self) -> QColumnView_updatePreviewWidget_signal {
      return QColumnView_updatePreviewWidget_signal{poi:self.qclsinst};
   }
 }
@@ -511,13 +512,33 @@ pub trait QColumnView_updatePreviewWidget_signal_connect {
 }
 
 // updatePreviewWidget(const class QModelIndex &)
-extern fn QColumnView_updatePreviewWidget_signal_connect_cb_0(arg0: *mut c_void) {
+extern fn QColumnView_updatePreviewWidget_signal_connect_cb_0(rsfptr:fn(QModelIndex), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QColumnView_updatePreviewWidget_signal_connect for (extern fn(QModelIndex)) {
+extern fn QColumnView_updatePreviewWidget_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QColumnView_updatePreviewWidget_signal_connect for fn(QModelIndex) {
   fn connect(self, sigthis: QColumnView_updatePreviewWidget_signal) {
     // do smth...
-    unsafe {QColumnView_SlotProxy_connect__ZN11QColumnView19updatePreviewWidgetERK11QModelIndex(sigthis.poi as *mut c_void, QColumnView_updatePreviewWidget_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QColumnView_updatePreviewWidget_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QColumnView_SlotProxy_connect__ZN11QColumnView19updatePreviewWidgetERK11QModelIndex(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QColumnView_updatePreviewWidget_signal_connect for Box<fn(QModelIndex)> {
+  fn connect(self, sigthis: QColumnView_updatePreviewWidget_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QColumnView_updatePreviewWidget_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QColumnView_SlotProxy_connect__ZN11QColumnView19updatePreviewWidgetERK11QModelIndex(arg0, arg1, arg2)};
   }
 }
 // <= body block end

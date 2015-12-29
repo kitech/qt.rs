@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtWidgets/qdialog.h
 // dst-file: /src/widgets/qdialog.rs
 //
@@ -76,9 +76,12 @@ extern {
   fn _ZN7QDialog8rejectedEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QDialog::setModal(bool modal);
   fn _ZN7QDialog8setModalEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
-  fn QDialog_SlotProxy_connect__ZN7QDialog8rejectedEv(qthis: *mut c_void, fptr: *mut c_void);
-  fn QDialog_SlotProxy_connect__ZN7QDialog8finishedEi(qthis: *mut c_void, fptr: *mut c_void);
-  fn QDialog_SlotProxy_connect__ZN7QDialog8acceptedEv(qthis: *mut c_void, fptr: *mut c_void);
+  fn QDialog_SlotProxy_connect__ZN7QDialog8rejectedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QDialog_SlotProxy_connect_box__ZN7QDialog8rejectedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QDialog_SlotProxy_connect__ZN7QDialog8finishedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QDialog_SlotProxy_connect_box__ZN7QDialog8finishedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QDialog_SlotProxy_connect__ZN7QDialog8acceptedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QDialog_SlotProxy_connect_box__ZN7QDialog8acceptedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -620,7 +623,7 @@ impl<'a> /*trait*/ QDialog_setModal<()> for (i8) {
 #[derive(Default)] // for QDialog_finished
 pub struct QDialog_finished_signal{poi:u64}
 impl /* struct */ QDialog {
-  pub fn finished_1(self) -> QDialog_finished_signal {
+  pub fn finished_1(&self) -> QDialog_finished_signal {
      return QDialog_finished_signal{poi:self.qclsinst};
   }
 }
@@ -636,7 +639,7 @@ pub trait QDialog_finished_signal_connect {
 #[derive(Default)] // for QDialog_accepted
 pub struct QDialog_accepted_signal{poi:u64}
 impl /* struct */ QDialog {
-  pub fn accepted_1(self) -> QDialog_accepted_signal {
+  pub fn accepted_1(&self) -> QDialog_accepted_signal {
      return QDialog_accepted_signal{poi:self.qclsinst};
   }
 }
@@ -652,7 +655,7 @@ pub trait QDialog_accepted_signal_connect {
 #[derive(Default)] // for QDialog_rejected
 pub struct QDialog_rejected_signal{poi:u64}
 impl /* struct */ QDialog {
-  pub fn rejected_1(self) -> QDialog_rejected_signal {
+  pub fn rejected_1(&self) -> QDialog_rejected_signal {
      return QDialog_rejected_signal{poi:self.qclsinst};
   }
 }
@@ -666,33 +669,93 @@ pub trait QDialog_rejected_signal_connect {
 }
 
 // rejected()
-extern fn QDialog_rejected_signal_connect_cb_0() {
+extern fn QDialog_rejected_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QDialog_rejected_signal_connect for (extern fn()) {
+extern fn QDialog_rejected_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, ) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QDialog_rejected_signal_connect for fn() {
   fn connect(self, sigthis: QDialog_rejected_signal) {
     // do smth...
-    unsafe {QDialog_SlotProxy_connect__ZN7QDialog8rejectedEv(sigthis.poi as *mut c_void, QDialog_rejected_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDialog_rejected_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QDialog_SlotProxy_connect__ZN7QDialog8rejectedEv(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QDialog_rejected_signal_connect for Box<fn()> {
+  fn connect(self, sigthis: QDialog_rejected_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDialog_rejected_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QDialog_SlotProxy_connect__ZN7QDialog8rejectedEv(arg0, arg1, arg2)};
   }
 }
 // finished(int)
-extern fn QDialog_finished_signal_connect_cb_1(arg0: c_int) {
+extern fn QDialog_finished_signal_connect_cb_1(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QDialog_finished_signal_connect for (extern fn(i32)) {
+extern fn QDialog_finished_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QDialog_finished_signal_connect for fn(i32) {
   fn connect(self, sigthis: QDialog_finished_signal) {
     // do smth...
-    unsafe {QDialog_SlotProxy_connect__ZN7QDialog8finishedEi(sigthis.poi as *mut c_void, QDialog_finished_signal_connect_cb_1 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDialog_finished_signal_connect_cb_1 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QDialog_SlotProxy_connect__ZN7QDialog8finishedEi(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QDialog_finished_signal_connect for Box<fn(i32)> {
+  fn connect(self, sigthis: QDialog_finished_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDialog_finished_signal_connect_cb_box_1 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QDialog_SlotProxy_connect__ZN7QDialog8finishedEi(arg0, arg1, arg2)};
   }
 }
 // accepted()
-extern fn QDialog_accepted_signal_connect_cb_2() {
+extern fn QDialog_accepted_signal_connect_cb_2(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QDialog_accepted_signal_connect for (extern fn()) {
+extern fn QDialog_accepted_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, ) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QDialog_accepted_signal_connect for fn() {
   fn connect(self, sigthis: QDialog_accepted_signal) {
     // do smth...
-    unsafe {QDialog_SlotProxy_connect__ZN7QDialog8acceptedEv(sigthis.poi as *mut c_void, QDialog_accepted_signal_connect_cb_2 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDialog_accepted_signal_connect_cb_2 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QDialog_SlotProxy_connect__ZN7QDialog8acceptedEv(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QDialog_accepted_signal_connect for Box<fn()> {
+  fn connect(self, sigthis: QDialog_accepted_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDialog_accepted_signal_connect_cb_box_2 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QDialog_SlotProxy_connect__ZN7QDialog8acceptedEv(arg0, arg1, arg2)};
   }
 }
 // <= body block end

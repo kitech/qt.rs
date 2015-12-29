@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtCore/qstatemachine.h
 // dst-file: /src/core/qstatemachine.rs
 //
@@ -81,7 +81,8 @@ extern {
   // proto:  void QStateMachine::QStateMachine(const QStateMachine & );
   fn dector_ZN13QStateMachineC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN13QStateMachineC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  fn QStateMachine_SlotProxy_connect__ZN13QStateMachine14runningChangedEb(qthis: *mut c_void, fptr: *mut c_void);
+  fn QStateMachine_SlotProxy_connect__ZN13QStateMachine14runningChangedEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QStateMachine_SlotProxy_connect_box__ZN13QStateMachine14runningChangedEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -619,7 +620,7 @@ impl<'a> /*trait*/ QStateMachine_New for (&'a QStateMachine) {
 #[derive(Default)] // for QStateMachine_started
 pub struct QStateMachine_started_signal{poi:u64}
 impl /* struct */ QStateMachine {
-  pub fn started_1(self) -> QStateMachine_started_signal {
+  pub fn started_1(&self) -> QStateMachine_started_signal {
      return QStateMachine_started_signal{poi:self.qclsinst};
   }
 }
@@ -635,7 +636,7 @@ pub trait QStateMachine_started_signal_connect {
 #[derive(Default)] // for QStateMachine_runningChanged
 pub struct QStateMachine_runningChanged_signal{poi:u64}
 impl /* struct */ QStateMachine {
-  pub fn runningChanged_1(self) -> QStateMachine_runningChanged_signal {
+  pub fn runningChanged_1(&self) -> QStateMachine_runningChanged_signal {
      return QStateMachine_runningChanged_signal{poi:self.qclsinst};
   }
 }
@@ -651,7 +652,7 @@ pub trait QStateMachine_runningChanged_signal_connect {
 #[derive(Default)] // for QStateMachine_stopped
 pub struct QStateMachine_stopped_signal{poi:u64}
 impl /* struct */ QStateMachine {
-  pub fn stopped_1(self) -> QStateMachine_stopped_signal {
+  pub fn stopped_1(&self) -> QStateMachine_stopped_signal {
      return QStateMachine_stopped_signal{poi:self.qclsinst};
   }
 }
@@ -665,13 +666,33 @@ pub trait QStateMachine_stopped_signal_connect {
 }
 
 // runningChanged(_Bool)
-extern fn QStateMachine_runningChanged_signal_connect_cb_0(arg0: c_char) {
+extern fn QStateMachine_runningChanged_signal_connect_cb_0(rsfptr:fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QStateMachine_runningChanged_signal_connect for (extern fn(i8)) {
+extern fn QStateMachine_runningChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_char) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QStateMachine_runningChanged_signal_connect for fn(i8) {
   fn connect(self, sigthis: QStateMachine_runningChanged_signal) {
     // do smth...
-    unsafe {QStateMachine_SlotProxy_connect__ZN13QStateMachine14runningChangedEb(sigthis.poi as *mut c_void, QStateMachine_runningChanged_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QStateMachine_runningChanged_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QStateMachine_SlotProxy_connect__ZN13QStateMachine14runningChangedEb(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QStateMachine_runningChanged_signal_connect for Box<fn(i8)> {
+  fn connect(self, sigthis: QStateMachine_runningChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QStateMachine_runningChanged_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QStateMachine_SlotProxy_connect__ZN13QStateMachine14runningChangedEb(arg0, arg1, arg2)};
   }
 }
 // <= body block end

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtWidgets/qsplashscreen.h
 // dst-file: /src/widgets/qsplashscreen.rs
 //
@@ -56,7 +56,8 @@ extern {
   fn _ZN13QSplashScreen7repaintEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QSplashScreen::finish(QWidget * w);
   fn _ZN13QSplashScreen6finishEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  fn QSplashScreen_SlotProxy_connect__ZN13QSplashScreen14messageChangedERK7QString(qthis: *mut c_void, fptr: *mut c_void);
+  fn QSplashScreen_SlotProxy_connect__ZN13QSplashScreen14messageChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QSplashScreen_SlotProxy_connect_box__ZN13QSplashScreen14messageChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -347,7 +348,7 @@ impl<'a> /*trait*/ QSplashScreen_finish<()> for (&'a QWidget) {
 #[derive(Default)] // for QSplashScreen_messageChanged
 pub struct QSplashScreen_messageChanged_signal{poi:u64}
 impl /* struct */ QSplashScreen {
-  pub fn messageChanged_1(self) -> QSplashScreen_messageChanged_signal {
+  pub fn messageChanged_1(&self) -> QSplashScreen_messageChanged_signal {
      return QSplashScreen_messageChanged_signal{poi:self.qclsinst};
   }
 }
@@ -361,13 +362,33 @@ pub trait QSplashScreen_messageChanged_signal_connect {
 }
 
 // messageChanged(const class QString &)
-extern fn QSplashScreen_messageChanged_signal_connect_cb_0(arg0: *mut c_void) {
+extern fn QSplashScreen_messageChanged_signal_connect_cb_0(rsfptr:fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QSplashScreen_messageChanged_signal_connect for (extern fn(QString)) {
+extern fn QSplashScreen_messageChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QSplashScreen_messageChanged_signal_connect for fn(QString) {
   fn connect(self, sigthis: QSplashScreen_messageChanged_signal) {
     // do smth...
-    unsafe {QSplashScreen_SlotProxy_connect__ZN13QSplashScreen14messageChangedERK7QString(sigthis.poi as *mut c_void, QSplashScreen_messageChanged_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QSplashScreen_messageChanged_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QSplashScreen_SlotProxy_connect__ZN13QSplashScreen14messageChangedERK7QString(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QSplashScreen_messageChanged_signal_connect for Box<fn(QString)> {
+  fn connect(self, sigthis: QSplashScreen_messageChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QSplashScreen_messageChanged_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QSplashScreen_SlotProxy_connect__ZN13QSplashScreen14messageChangedERK7QString(arg0, arg1, arg2)};
   }
 }
 // <= body block end

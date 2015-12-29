@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:03 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtWidgets/qstatusbar.h
 // dst-file: /src/widgets/qstatusbar.rs
 //
@@ -63,7 +63,8 @@ extern {
   // proto:  void QStatusBar::QStatusBar(QWidget * parent);
   fn dector_ZN10QStatusBarC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
   fn _ZN10QStatusBarC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  fn QStatusBar_SlotProxy_connect__ZN10QStatusBar14messageChangedERK7QString(qthis: *mut c_void, fptr: *mut c_void);
+  fn QStatusBar_SlotProxy_connect__ZN10QStatusBar14messageChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QStatusBar_SlotProxy_connect_box__ZN10QStatusBar14messageChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -446,7 +447,7 @@ impl<'a> /*trait*/ QStatusBar_New for (&'a QWidget) {
 #[derive(Default)] // for QStatusBar_messageChanged
 pub struct QStatusBar_messageChanged_signal{poi:u64}
 impl /* struct */ QStatusBar {
-  pub fn messageChanged_1(self) -> QStatusBar_messageChanged_signal {
+  pub fn messageChanged_1(&self) -> QStatusBar_messageChanged_signal {
      return QStatusBar_messageChanged_signal{poi:self.qclsinst};
   }
 }
@@ -460,13 +461,33 @@ pub trait QStatusBar_messageChanged_signal_connect {
 }
 
 // messageChanged(const class QString &)
-extern fn QStatusBar_messageChanged_signal_connect_cb_0(arg0: *mut c_void) {
+extern fn QStatusBar_messageChanged_signal_connect_cb_0(rsfptr:fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QStatusBar_messageChanged_signal_connect for (extern fn(QString)) {
+extern fn QStatusBar_messageChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QStatusBar_messageChanged_signal_connect for fn(QString) {
   fn connect(self, sigthis: QStatusBar_messageChanged_signal) {
     // do smth...
-    unsafe {QStatusBar_SlotProxy_connect__ZN10QStatusBar14messageChangedERK7QString(sigthis.poi as *mut c_void, QStatusBar_messageChanged_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QStatusBar_messageChanged_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QStatusBar_SlotProxy_connect__ZN10QStatusBar14messageChangedERK7QString(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QStatusBar_messageChanged_signal_connect for Box<fn(QString)> {
+  fn connect(self, sigthis: QStatusBar_messageChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QStatusBar_messageChanged_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QStatusBar_SlotProxy_connect__ZN10QStatusBar14messageChangedERK7QString(arg0, arg1, arg2)};
   }
 }
 // <= body block end

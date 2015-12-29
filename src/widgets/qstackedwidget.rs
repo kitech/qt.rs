@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtWidgets/qstackedwidget.h
 // dst-file: /src/widgets/qstackedwidget.rs
 //
@@ -65,8 +65,10 @@ extern {
   fn _ZN14QStackedWidgetC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QStackedWidget::metaObject();
   fn _ZNK14QStackedWidget10metaObjectEv(qthis: u64 /* *mut c_void*/);
-  fn QStackedWidget_SlotProxy_connect__ZN14QStackedWidget14currentChangedEi(qthis: *mut c_void, fptr: *mut c_void);
-  fn QStackedWidget_SlotProxy_connect__ZN14QStackedWidget13widgetRemovedEi(qthis: *mut c_void, fptr: *mut c_void);
+  fn QStackedWidget_SlotProxy_connect__ZN14QStackedWidget14currentChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QStackedWidget_SlotProxy_connect_box__ZN14QStackedWidget14currentChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QStackedWidget_SlotProxy_connect__ZN14QStackedWidget13widgetRemovedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QStackedWidget_SlotProxy_connect_box__ZN14QStackedWidget13widgetRemovedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -471,7 +473,7 @@ impl<'a> /*trait*/ QStackedWidget_metaObject<()> for () {
 #[derive(Default)] // for QStackedWidget_widgetRemoved
 pub struct QStackedWidget_widgetRemoved_signal{poi:u64}
 impl /* struct */ QStackedWidget {
-  pub fn widgetRemoved_1(self) -> QStackedWidget_widgetRemoved_signal {
+  pub fn widgetRemoved_1(&self) -> QStackedWidget_widgetRemoved_signal {
      return QStackedWidget_widgetRemoved_signal{poi:self.qclsinst};
   }
 }
@@ -487,7 +489,7 @@ pub trait QStackedWidget_widgetRemoved_signal_connect {
 #[derive(Default)] // for QStackedWidget_currentChanged
 pub struct QStackedWidget_currentChanged_signal{poi:u64}
 impl /* struct */ QStackedWidget {
-  pub fn currentChanged_1(self) -> QStackedWidget_currentChanged_signal {
+  pub fn currentChanged_1(&self) -> QStackedWidget_currentChanged_signal {
      return QStackedWidget_currentChanged_signal{poi:self.qclsinst};
   }
 }
@@ -501,23 +503,63 @@ pub trait QStackedWidget_currentChanged_signal_connect {
 }
 
 // currentChanged(int)
-extern fn QStackedWidget_currentChanged_signal_connect_cb_0(arg0: c_int) {
+extern fn QStackedWidget_currentChanged_signal_connect_cb_0(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QStackedWidget_currentChanged_signal_connect for (extern fn(i32)) {
+extern fn QStackedWidget_currentChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QStackedWidget_currentChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QStackedWidget_currentChanged_signal) {
     // do smth...
-    unsafe {QStackedWidget_SlotProxy_connect__ZN14QStackedWidget14currentChangedEi(sigthis.poi as *mut c_void, QStackedWidget_currentChanged_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QStackedWidget_currentChanged_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QStackedWidget_SlotProxy_connect__ZN14QStackedWidget14currentChangedEi(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QStackedWidget_currentChanged_signal_connect for Box<fn(i32)> {
+  fn connect(self, sigthis: QStackedWidget_currentChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QStackedWidget_currentChanged_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QStackedWidget_SlotProxy_connect__ZN14QStackedWidget14currentChangedEi(arg0, arg1, arg2)};
   }
 }
 // widgetRemoved(int)
-extern fn QStackedWidget_widgetRemoved_signal_connect_cb_1(arg0: c_int) {
+extern fn QStackedWidget_widgetRemoved_signal_connect_cb_1(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QStackedWidget_widgetRemoved_signal_connect for (extern fn(i32)) {
+extern fn QStackedWidget_widgetRemoved_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QStackedWidget_widgetRemoved_signal_connect for fn(i32) {
   fn connect(self, sigthis: QStackedWidget_widgetRemoved_signal) {
     // do smth...
-    unsafe {QStackedWidget_SlotProxy_connect__ZN14QStackedWidget13widgetRemovedEi(sigthis.poi as *mut c_void, QStackedWidget_widgetRemoved_signal_connect_cb_1 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QStackedWidget_widgetRemoved_signal_connect_cb_1 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QStackedWidget_SlotProxy_connect__ZN14QStackedWidget13widgetRemovedEi(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QStackedWidget_widgetRemoved_signal_connect for Box<fn(i32)> {
+  fn connect(self, sigthis: QStackedWidget_widgetRemoved_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QStackedWidget_widgetRemoved_signal_connect_cb_box_1 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QStackedWidget_SlotProxy_connect__ZN14QStackedWidget13widgetRemovedEi(arg0, arg1, arg2)};
   }
 }
 // <= body block end

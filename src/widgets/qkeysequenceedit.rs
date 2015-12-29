@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:03 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtWidgets/qkeysequenceedit.h
 // dst-file: /src/widgets/qkeysequenceedit.rs
 //
@@ -54,8 +54,10 @@ extern {
   fn _ZN16QKeySequenceEditC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QKeySequenceEdit::metaObject();
   fn _ZNK16QKeySequenceEdit10metaObjectEv(qthis: u64 /* *mut c_void*/);
-  fn QKeySequenceEdit_SlotProxy_connect__ZN16QKeySequenceEdit18keySequenceChangedERK12QKeySequence(qthis: *mut c_void, fptr: *mut c_void);
-  fn QKeySequenceEdit_SlotProxy_connect__ZN16QKeySequenceEdit15editingFinishedEv(qthis: *mut c_void, fptr: *mut c_void);
+  fn QKeySequenceEdit_SlotProxy_connect__ZN16QKeySequenceEdit18keySequenceChangedERK12QKeySequence(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QKeySequenceEdit_SlotProxy_connect_box__ZN16QKeySequenceEdit18keySequenceChangedERK12QKeySequence(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QKeySequenceEdit_SlotProxy_connect__ZN16QKeySequenceEdit15editingFinishedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QKeySequenceEdit_SlotProxy_connect_box__ZN16QKeySequenceEdit15editingFinishedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -308,7 +310,7 @@ impl<'a> /*trait*/ QKeySequenceEdit_metaObject<()> for () {
 #[derive(Default)] // for QKeySequenceEdit_editingFinished
 pub struct QKeySequenceEdit_editingFinished_signal{poi:u64}
 impl /* struct */ QKeySequenceEdit {
-  pub fn editingFinished_1(self) -> QKeySequenceEdit_editingFinished_signal {
+  pub fn editingFinished_1(&self) -> QKeySequenceEdit_editingFinished_signal {
      return QKeySequenceEdit_editingFinished_signal{poi:self.qclsinst};
   }
 }
@@ -324,7 +326,7 @@ pub trait QKeySequenceEdit_editingFinished_signal_connect {
 #[derive(Default)] // for QKeySequenceEdit_keySequenceChanged
 pub struct QKeySequenceEdit_keySequenceChanged_signal{poi:u64}
 impl /* struct */ QKeySequenceEdit {
-  pub fn keySequenceChanged_1(self) -> QKeySequenceEdit_keySequenceChanged_signal {
+  pub fn keySequenceChanged_1(&self) -> QKeySequenceEdit_keySequenceChanged_signal {
      return QKeySequenceEdit_keySequenceChanged_signal{poi:self.qclsinst};
   }
 }
@@ -338,23 +340,63 @@ pub trait QKeySequenceEdit_keySequenceChanged_signal_connect {
 }
 
 // keySequenceChanged(const class QKeySequence &)
-extern fn QKeySequenceEdit_keySequenceChanged_signal_connect_cb_0(arg0: *mut c_void) {
+extern fn QKeySequenceEdit_keySequenceChanged_signal_connect_cb_0(rsfptr:fn(QKeySequence), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QKeySequenceEdit_keySequenceChanged_signal_connect for (extern fn(QKeySequence)) {
+extern fn QKeySequenceEdit_keySequenceChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QKeySequenceEdit_keySequenceChanged_signal_connect for fn(QKeySequence) {
   fn connect(self, sigthis: QKeySequenceEdit_keySequenceChanged_signal) {
     // do smth...
-    unsafe {QKeySequenceEdit_SlotProxy_connect__ZN16QKeySequenceEdit18keySequenceChangedERK12QKeySequence(sigthis.poi as *mut c_void, QKeySequenceEdit_keySequenceChanged_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QKeySequenceEdit_keySequenceChanged_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QKeySequenceEdit_SlotProxy_connect__ZN16QKeySequenceEdit18keySequenceChangedERK12QKeySequence(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QKeySequenceEdit_keySequenceChanged_signal_connect for Box<fn(QKeySequence)> {
+  fn connect(self, sigthis: QKeySequenceEdit_keySequenceChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QKeySequenceEdit_keySequenceChanged_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QKeySequenceEdit_SlotProxy_connect__ZN16QKeySequenceEdit18keySequenceChangedERK12QKeySequence(arg0, arg1, arg2)};
   }
 }
 // editingFinished()
-extern fn QKeySequenceEdit_editingFinished_signal_connect_cb_1() {
+extern fn QKeySequenceEdit_editingFinished_signal_connect_cb_1(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QKeySequenceEdit_editingFinished_signal_connect for (extern fn()) {
+extern fn QKeySequenceEdit_editingFinished_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, ) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QKeySequenceEdit_editingFinished_signal_connect for fn() {
   fn connect(self, sigthis: QKeySequenceEdit_editingFinished_signal) {
     // do smth...
-    unsafe {QKeySequenceEdit_SlotProxy_connect__ZN16QKeySequenceEdit15editingFinishedEv(sigthis.poi as *mut c_void, QKeySequenceEdit_editingFinished_signal_connect_cb_1 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QKeySequenceEdit_editingFinished_signal_connect_cb_1 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QKeySequenceEdit_SlotProxy_connect__ZN16QKeySequenceEdit15editingFinishedEv(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QKeySequenceEdit_editingFinished_signal_connect for Box<fn()> {
+  fn connect(self, sigthis: QKeySequenceEdit_editingFinished_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QKeySequenceEdit_editingFinished_signal_connect_cb_box_1 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QKeySequenceEdit_SlotProxy_connect__ZN16QKeySequenceEdit15editingFinishedEv(arg0, arg1, arg2)};
   }
 }
 // <= body block end

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtWidgets/qabstractitemdelegate.h
 // dst-file: /src/widgets/qabstractitemdelegate.rs
 //
@@ -75,9 +75,12 @@ extern {
   fn _ZNK21QAbstractItemDelegate12setModelDataEP7QWidgetP18QAbstractItemModelRK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  void QAbstractItemDelegate::destroyEditor(QWidget * editor, const QModelIndex & index);
   fn _ZNK21QAbstractItemDelegate13destroyEditorEP7QWidgetRK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
-  fn QAbstractItemDelegate_SlotProxy_connect__ZN21QAbstractItemDelegate11closeEditorEP7QWidgetNS_11EndEditHintE(qthis: *mut c_void, fptr: *mut c_void);
-  fn QAbstractItemDelegate_SlotProxy_connect__ZN21QAbstractItemDelegate15sizeHintChangedERK11QModelIndex(qthis: *mut c_void, fptr: *mut c_void);
-  fn QAbstractItemDelegate_SlotProxy_connect__ZN21QAbstractItemDelegate10commitDataEP7QWidget(qthis: *mut c_void, fptr: *mut c_void);
+  fn QAbstractItemDelegate_SlotProxy_connect__ZN21QAbstractItemDelegate11closeEditorEP7QWidgetNS_11EndEditHintE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QAbstractItemDelegate_SlotProxy_connect_box__ZN21QAbstractItemDelegate11closeEditorEP7QWidgetNS_11EndEditHintE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QAbstractItemDelegate_SlotProxy_connect__ZN21QAbstractItemDelegate15sizeHintChangedERK11QModelIndex(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QAbstractItemDelegate_SlotProxy_connect_box__ZN21QAbstractItemDelegate15sizeHintChangedERK11QModelIndex(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QAbstractItemDelegate_SlotProxy_connect__ZN21QAbstractItemDelegate10commitDataEP7QWidget(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QAbstractItemDelegate_SlotProxy_connect_box__ZN21QAbstractItemDelegate10commitDataEP7QWidget(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -498,7 +501,7 @@ impl<'a> /*trait*/ QAbstractItemDelegate_destroyEditor<()> for (&'a QWidget, &'a
 #[derive(Default)] // for QAbstractItemDelegate_closeEditor
 pub struct QAbstractItemDelegate_closeEditor_signal{poi:u64}
 impl /* struct */ QAbstractItemDelegate {
-  pub fn closeEditor_1(self) -> QAbstractItemDelegate_closeEditor_signal {
+  pub fn closeEditor_1(&self) -> QAbstractItemDelegate_closeEditor_signal {
      return QAbstractItemDelegate_closeEditor_signal{poi:self.qclsinst};
   }
 }
@@ -514,7 +517,7 @@ pub trait QAbstractItemDelegate_closeEditor_signal_connect {
 #[derive(Default)] // for QAbstractItemDelegate_commitData
 pub struct QAbstractItemDelegate_commitData_signal{poi:u64}
 impl /* struct */ QAbstractItemDelegate {
-  pub fn commitData_1(self) -> QAbstractItemDelegate_commitData_signal {
+  pub fn commitData_1(&self) -> QAbstractItemDelegate_commitData_signal {
      return QAbstractItemDelegate_commitData_signal{poi:self.qclsinst};
   }
 }
@@ -530,7 +533,7 @@ pub trait QAbstractItemDelegate_commitData_signal_connect {
 #[derive(Default)] // for QAbstractItemDelegate_sizeHintChanged
 pub struct QAbstractItemDelegate_sizeHintChanged_signal{poi:u64}
 impl /* struct */ QAbstractItemDelegate {
-  pub fn sizeHintChanged_1(self) -> QAbstractItemDelegate_sizeHintChanged_signal {
+  pub fn sizeHintChanged_1(&self) -> QAbstractItemDelegate_sizeHintChanged_signal {
      return QAbstractItemDelegate_sizeHintChanged_signal{poi:self.qclsinst};
   }
 }
@@ -544,33 +547,93 @@ pub trait QAbstractItemDelegate_sizeHintChanged_signal_connect {
 }
 
 // closeEditor(class QWidget *, class QAbstractItemDelegate::EndEditHint)
-extern fn QAbstractItemDelegate_closeEditor_signal_connect_cb_0(arg0: *mut c_void, arg1: c_int) {
+extern fn QAbstractItemDelegate_closeEditor_signal_connect_cb_0(rsfptr:fn(QWidget, i32), arg0: *mut c_void, arg1: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QAbstractItemDelegate_closeEditor_signal_connect for (extern fn(QWidget, i32)) {
+extern fn QAbstractItemDelegate_closeEditor_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void, arg1: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QAbstractItemDelegate_closeEditor_signal_connect for fn(QWidget, i32) {
   fn connect(self, sigthis: QAbstractItemDelegate_closeEditor_signal) {
     // do smth...
-    unsafe {QAbstractItemDelegate_SlotProxy_connect__ZN21QAbstractItemDelegate11closeEditorEP7QWidgetNS_11EndEditHintE(sigthis.poi as *mut c_void, QAbstractItemDelegate_closeEditor_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QAbstractItemDelegate_closeEditor_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QAbstractItemDelegate_SlotProxy_connect__ZN21QAbstractItemDelegate11closeEditorEP7QWidgetNS_11EndEditHintE(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QAbstractItemDelegate_closeEditor_signal_connect for Box<fn(QWidget, i32)> {
+  fn connect(self, sigthis: QAbstractItemDelegate_closeEditor_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QAbstractItemDelegate_closeEditor_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QAbstractItemDelegate_SlotProxy_connect__ZN21QAbstractItemDelegate11closeEditorEP7QWidgetNS_11EndEditHintE(arg0, arg1, arg2)};
   }
 }
 // sizeHintChanged(const class QModelIndex &)
-extern fn QAbstractItemDelegate_sizeHintChanged_signal_connect_cb_1(arg0: *mut c_void) {
+extern fn QAbstractItemDelegate_sizeHintChanged_signal_connect_cb_1(rsfptr:fn(QModelIndex), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QAbstractItemDelegate_sizeHintChanged_signal_connect for (extern fn(QModelIndex)) {
+extern fn QAbstractItemDelegate_sizeHintChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QAbstractItemDelegate_sizeHintChanged_signal_connect for fn(QModelIndex) {
   fn connect(self, sigthis: QAbstractItemDelegate_sizeHintChanged_signal) {
     // do smth...
-    unsafe {QAbstractItemDelegate_SlotProxy_connect__ZN21QAbstractItemDelegate15sizeHintChangedERK11QModelIndex(sigthis.poi as *mut c_void, QAbstractItemDelegate_sizeHintChanged_signal_connect_cb_1 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QAbstractItemDelegate_sizeHintChanged_signal_connect_cb_1 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QAbstractItemDelegate_SlotProxy_connect__ZN21QAbstractItemDelegate15sizeHintChangedERK11QModelIndex(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QAbstractItemDelegate_sizeHintChanged_signal_connect for Box<fn(QModelIndex)> {
+  fn connect(self, sigthis: QAbstractItemDelegate_sizeHintChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QAbstractItemDelegate_sizeHintChanged_signal_connect_cb_box_1 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QAbstractItemDelegate_SlotProxy_connect__ZN21QAbstractItemDelegate15sizeHintChangedERK11QModelIndex(arg0, arg1, arg2)};
   }
 }
 // commitData(class QWidget *)
-extern fn QAbstractItemDelegate_commitData_signal_connect_cb_2(arg0: *mut c_void) {
+extern fn QAbstractItemDelegate_commitData_signal_connect_cb_2(rsfptr:fn(QWidget), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QAbstractItemDelegate_commitData_signal_connect for (extern fn(QWidget)) {
+extern fn QAbstractItemDelegate_commitData_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QAbstractItemDelegate_commitData_signal_connect for fn(QWidget) {
   fn connect(self, sigthis: QAbstractItemDelegate_commitData_signal) {
     // do smth...
-    unsafe {QAbstractItemDelegate_SlotProxy_connect__ZN21QAbstractItemDelegate10commitDataEP7QWidget(sigthis.poi as *mut c_void, QAbstractItemDelegate_commitData_signal_connect_cb_2 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QAbstractItemDelegate_commitData_signal_connect_cb_2 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QAbstractItemDelegate_SlotProxy_connect__ZN21QAbstractItemDelegate10commitDataEP7QWidget(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QAbstractItemDelegate_commitData_signal_connect for Box<fn(QWidget)> {
+  fn connect(self, sigthis: QAbstractItemDelegate_commitData_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QAbstractItemDelegate_commitData_signal_connect_cb_box_2 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QAbstractItemDelegate_SlotProxy_connect__ZN21QAbstractItemDelegate10commitDataEP7QWidget(arg0, arg1, arg2)};
   }
 }
 // <= body block end

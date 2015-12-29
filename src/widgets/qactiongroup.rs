@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:03 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtWidgets/qactiongroup.h
 // dst-file: /src/widgets/qactiongroup.rs
 //
@@ -73,8 +73,10 @@ extern {
   fn _ZN12QActionGroupC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QActionGroup::hovered(QAction * );
   fn _ZN12QActionGroup7hoveredEP7QAction(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  fn QActionGroup_SlotProxy_connect__ZN12QActionGroup7hoveredEP7QAction(qthis: *mut c_void, fptr: *mut c_void);
-  fn QActionGroup_SlotProxy_connect__ZN12QActionGroup9triggeredEP7QAction(qthis: *mut c_void, fptr: *mut c_void);
+  fn QActionGroup_SlotProxy_connect__ZN12QActionGroup7hoveredEP7QAction(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QActionGroup_SlotProxy_connect_box__ZN12QActionGroup7hoveredEP7QAction(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QActionGroup_SlotProxy_connect__ZN12QActionGroup9triggeredEP7QAction(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QActionGroup_SlotProxy_connect_box__ZN12QActionGroup9triggeredEP7QAction(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -524,7 +526,7 @@ impl<'a> /*trait*/ QActionGroup_hovered<()> for (&'a QAction) {
 #[derive(Default)] // for QActionGroup_triggered
 pub struct QActionGroup_triggered_signal{poi:u64}
 impl /* struct */ QActionGroup {
-  pub fn triggered_1(self) -> QActionGroup_triggered_signal {
+  pub fn triggered_1(&self) -> QActionGroup_triggered_signal {
      return QActionGroup_triggered_signal{poi:self.qclsinst};
   }
 }
@@ -540,7 +542,7 @@ pub trait QActionGroup_triggered_signal_connect {
 #[derive(Default)] // for QActionGroup_hovered
 pub struct QActionGroup_hovered_signal{poi:u64}
 impl /* struct */ QActionGroup {
-  pub fn hovered_1(self) -> QActionGroup_hovered_signal {
+  pub fn hovered_1(&self) -> QActionGroup_hovered_signal {
      return QActionGroup_hovered_signal{poi:self.qclsinst};
   }
 }
@@ -554,23 +556,63 @@ pub trait QActionGroup_hovered_signal_connect {
 }
 
 // hovered(class QAction *)
-extern fn QActionGroup_hovered_signal_connect_cb_0(arg0: *mut c_void) {
+extern fn QActionGroup_hovered_signal_connect_cb_0(rsfptr:fn(QAction), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QActionGroup_hovered_signal_connect for (extern fn(QAction)) {
+extern fn QActionGroup_hovered_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QActionGroup_hovered_signal_connect for fn(QAction) {
   fn connect(self, sigthis: QActionGroup_hovered_signal) {
     // do smth...
-    unsafe {QActionGroup_SlotProxy_connect__ZN12QActionGroup7hoveredEP7QAction(sigthis.poi as *mut c_void, QActionGroup_hovered_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QActionGroup_hovered_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QActionGroup_SlotProxy_connect__ZN12QActionGroup7hoveredEP7QAction(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QActionGroup_hovered_signal_connect for Box<fn(QAction)> {
+  fn connect(self, sigthis: QActionGroup_hovered_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QActionGroup_hovered_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QActionGroup_SlotProxy_connect__ZN12QActionGroup7hoveredEP7QAction(arg0, arg1, arg2)};
   }
 }
 // triggered(class QAction *)
-extern fn QActionGroup_triggered_signal_connect_cb_1(arg0: *mut c_void) {
+extern fn QActionGroup_triggered_signal_connect_cb_1(rsfptr:fn(QAction), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QActionGroup_triggered_signal_connect for (extern fn(QAction)) {
+extern fn QActionGroup_triggered_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QActionGroup_triggered_signal_connect for fn(QAction) {
   fn connect(self, sigthis: QActionGroup_triggered_signal) {
     // do smth...
-    unsafe {QActionGroup_SlotProxy_connect__ZN12QActionGroup9triggeredEP7QAction(sigthis.poi as *mut c_void, QActionGroup_triggered_signal_connect_cb_1 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QActionGroup_triggered_signal_connect_cb_1 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QActionGroup_SlotProxy_connect__ZN12QActionGroup9triggeredEP7QAction(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QActionGroup_triggered_signal_connect for Box<fn(QAction)> {
+  fn connect(self, sigthis: QActionGroup_triggered_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QActionGroup_triggered_signal_connect_cb_box_1 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QActionGroup_SlotProxy_connect__ZN12QActionGroup9triggeredEP7QAction(arg0, arg1, arg2)};
   }
 }
 // <= body block end

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtWidgets/qwidget.h
 // dst-file: /src/widgets/qwidget.rs
 //
@@ -483,10 +483,14 @@ extern {
   // proto:  void QWidget::unsetCursor();
   fn _ZN7QWidget11unsetCursorEv(qthis: u64 /* *mut c_void*/);
   fn QWidgetData_Class_Size() -> c_int;
-  fn QWidget_SlotProxy_connect__ZN7QWidget26customContextMenuRequestedERK6QPoint(qthis: *mut c_void, fptr: *mut c_void);
-  fn QWidget_SlotProxy_connect__ZN7QWidget17windowIconChangedERK5QIcon(qthis: *mut c_void, fptr: *mut c_void);
-  fn QWidget_SlotProxy_connect__ZN7QWidget21windowIconTextChangedERK7QString(qthis: *mut c_void, fptr: *mut c_void);
-  fn QWidget_SlotProxy_connect__ZN7QWidget18windowTitleChangedERK7QString(qthis: *mut c_void, fptr: *mut c_void);
+  fn QWidget_SlotProxy_connect__ZN7QWidget26customContextMenuRequestedERK6QPoint(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QWidget_SlotProxy_connect_box__ZN7QWidget26customContextMenuRequestedERK6QPoint(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QWidget_SlotProxy_connect__ZN7QWidget17windowIconChangedERK5QIcon(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QWidget_SlotProxy_connect_box__ZN7QWidget17windowIconChangedERK5QIcon(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QWidget_SlotProxy_connect__ZN7QWidget21windowIconTextChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QWidget_SlotProxy_connect_box__ZN7QWidget21windowIconTextChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QWidget_SlotProxy_connect__ZN7QWidget18windowTitleChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QWidget_SlotProxy_connect_box__ZN7QWidget18windowTitleChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -5265,7 +5269,7 @@ impl /*struct*/ QWidgetData {
 #[derive(Default)] // for QWidget_windowIconChanged
 pub struct QWidget_windowIconChanged_signal{poi:u64}
 impl /* struct */ QWidget {
-  pub fn windowIconChanged_1(self) -> QWidget_windowIconChanged_signal {
+  pub fn windowIconChanged_1(&self) -> QWidget_windowIconChanged_signal {
      return QWidget_windowIconChanged_signal{poi:self.qclsinst};
   }
 }
@@ -5281,7 +5285,7 @@ pub trait QWidget_windowIconChanged_signal_connect {
 #[derive(Default)] // for QWidget_windowTitleChanged
 pub struct QWidget_windowTitleChanged_signal{poi:u64}
 impl /* struct */ QWidget {
-  pub fn windowTitleChanged_1(self) -> QWidget_windowTitleChanged_signal {
+  pub fn windowTitleChanged_1(&self) -> QWidget_windowTitleChanged_signal {
      return QWidget_windowTitleChanged_signal{poi:self.qclsinst};
   }
 }
@@ -5297,7 +5301,7 @@ pub trait QWidget_windowTitleChanged_signal_connect {
 #[derive(Default)] // for QWidget_customContextMenuRequested
 pub struct QWidget_customContextMenuRequested_signal{poi:u64}
 impl /* struct */ QWidget {
-  pub fn customContextMenuRequested_1(self) -> QWidget_customContextMenuRequested_signal {
+  pub fn customContextMenuRequested_1(&self) -> QWidget_customContextMenuRequested_signal {
      return QWidget_customContextMenuRequested_signal{poi:self.qclsinst};
   }
 }
@@ -5313,7 +5317,7 @@ pub trait QWidget_customContextMenuRequested_signal_connect {
 #[derive(Default)] // for QWidget_windowIconTextChanged
 pub struct QWidget_windowIconTextChanged_signal{poi:u64}
 impl /* struct */ QWidget {
-  pub fn windowIconTextChanged_1(self) -> QWidget_windowIconTextChanged_signal {
+  pub fn windowIconTextChanged_1(&self) -> QWidget_windowIconTextChanged_signal {
      return QWidget_windowIconTextChanged_signal{poi:self.qclsinst};
   }
 }
@@ -5327,43 +5331,123 @@ pub trait QWidget_windowIconTextChanged_signal_connect {
 }
 
 // customContextMenuRequested(const class QPoint &)
-extern fn QWidget_customContextMenuRequested_signal_connect_cb_0(arg0: *mut c_void) {
+extern fn QWidget_customContextMenuRequested_signal_connect_cb_0(rsfptr:fn(QPoint), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QWidget_customContextMenuRequested_signal_connect for (extern fn(QPoint)) {
+extern fn QWidget_customContextMenuRequested_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QWidget_customContextMenuRequested_signal_connect for fn(QPoint) {
   fn connect(self, sigthis: QWidget_customContextMenuRequested_signal) {
     // do smth...
-    unsafe {QWidget_SlotProxy_connect__ZN7QWidget26customContextMenuRequestedERK6QPoint(sigthis.poi as *mut c_void, QWidget_customContextMenuRequested_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QWidget_customContextMenuRequested_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QWidget_SlotProxy_connect__ZN7QWidget26customContextMenuRequestedERK6QPoint(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QWidget_customContextMenuRequested_signal_connect for Box<fn(QPoint)> {
+  fn connect(self, sigthis: QWidget_customContextMenuRequested_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QWidget_customContextMenuRequested_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QWidget_SlotProxy_connect__ZN7QWidget26customContextMenuRequestedERK6QPoint(arg0, arg1, arg2)};
   }
 }
 // windowIconChanged(const class QIcon &)
-extern fn QWidget_windowIconChanged_signal_connect_cb_1(arg0: *mut c_void) {
+extern fn QWidget_windowIconChanged_signal_connect_cb_1(rsfptr:fn(QIcon), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QWidget_windowIconChanged_signal_connect for (extern fn(QIcon)) {
+extern fn QWidget_windowIconChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QWidget_windowIconChanged_signal_connect for fn(QIcon) {
   fn connect(self, sigthis: QWidget_windowIconChanged_signal) {
     // do smth...
-    unsafe {QWidget_SlotProxy_connect__ZN7QWidget17windowIconChangedERK5QIcon(sigthis.poi as *mut c_void, QWidget_windowIconChanged_signal_connect_cb_1 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QWidget_windowIconChanged_signal_connect_cb_1 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QWidget_SlotProxy_connect__ZN7QWidget17windowIconChangedERK5QIcon(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QWidget_windowIconChanged_signal_connect for Box<fn(QIcon)> {
+  fn connect(self, sigthis: QWidget_windowIconChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QWidget_windowIconChanged_signal_connect_cb_box_1 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QWidget_SlotProxy_connect__ZN7QWidget17windowIconChangedERK5QIcon(arg0, arg1, arg2)};
   }
 }
 // windowIconTextChanged(const class QString &)
-extern fn QWidget_windowIconTextChanged_signal_connect_cb_2(arg0: *mut c_void) {
+extern fn QWidget_windowIconTextChanged_signal_connect_cb_2(rsfptr:fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QWidget_windowIconTextChanged_signal_connect for (extern fn(QString)) {
+extern fn QWidget_windowIconTextChanged_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QWidget_windowIconTextChanged_signal_connect for fn(QString) {
   fn connect(self, sigthis: QWidget_windowIconTextChanged_signal) {
     // do smth...
-    unsafe {QWidget_SlotProxy_connect__ZN7QWidget21windowIconTextChangedERK7QString(sigthis.poi as *mut c_void, QWidget_windowIconTextChanged_signal_connect_cb_2 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QWidget_windowIconTextChanged_signal_connect_cb_2 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QWidget_SlotProxy_connect__ZN7QWidget21windowIconTextChangedERK7QString(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QWidget_windowIconTextChanged_signal_connect for Box<fn(QString)> {
+  fn connect(self, sigthis: QWidget_windowIconTextChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QWidget_windowIconTextChanged_signal_connect_cb_box_2 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QWidget_SlotProxy_connect__ZN7QWidget21windowIconTextChangedERK7QString(arg0, arg1, arg2)};
   }
 }
 // windowTitleChanged(const class QString &)
-extern fn QWidget_windowTitleChanged_signal_connect_cb_3(arg0: *mut c_void) {
+extern fn QWidget_windowTitleChanged_signal_connect_cb_3(rsfptr:fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QWidget_windowTitleChanged_signal_connect for (extern fn(QString)) {
+extern fn QWidget_windowTitleChanged_signal_connect_cb_box_3(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QWidget_windowTitleChanged_signal_connect for fn(QString) {
   fn connect(self, sigthis: QWidget_windowTitleChanged_signal) {
     // do smth...
-    unsafe {QWidget_SlotProxy_connect__ZN7QWidget18windowTitleChangedERK7QString(sigthis.poi as *mut c_void, QWidget_windowTitleChanged_signal_connect_cb_3 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QWidget_windowTitleChanged_signal_connect_cb_3 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QWidget_SlotProxy_connect__ZN7QWidget18windowTitleChangedERK7QString(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QWidget_windowTitleChanged_signal_connect for Box<fn(QString)> {
+  fn connect(self, sigthis: QWidget_windowTitleChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QWidget_windowTitleChanged_signal_connect_cb_box_3 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QWidget_SlotProxy_connect__ZN7QWidget18windowTitleChangedERK7QString(arg0, arg1, arg2)};
   }
 }
 // <= body block end

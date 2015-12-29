@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtWidgets/qapplication.h
 // dst-file: /src/widgets/qapplication.rs
 //
@@ -156,7 +156,8 @@ extern {
   fn _ZN12QApplication19doubleClickIntervalEv() -> c_int;
   // proto: static QIcon QApplication::windowIcon();
   fn _ZN12QApplication10windowIconEv() -> *mut c_void;
-  fn QApplication_SlotProxy_connect__ZN12QApplication12focusChangedEP7QWidgetS1_(qthis: *mut c_void, fptr: *mut c_void);
+  fn QApplication_SlotProxy_connect__ZN12QApplication12focusChangedEP7QWidgetS1_(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QApplication_SlotProxy_connect_box__ZN12QApplication12focusChangedEP7QWidgetS1_(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -1435,7 +1436,7 @@ impl<'a> /*trait*/ QApplication_windowIcon_s<QIcon> for () {
 #[derive(Default)] // for QApplication_focusChanged
 pub struct QApplication_focusChanged_signal{poi:u64}
 impl /* struct */ QApplication {
-  pub fn focusChanged_1(self) -> QApplication_focusChanged_signal {
+  pub fn focusChanged_1(&self) -> QApplication_focusChanged_signal {
      return QApplication_focusChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1449,13 +1450,33 @@ pub trait QApplication_focusChanged_signal_connect {
 }
 
 // focusChanged(class QWidget *, class QWidget *)
-extern fn QApplication_focusChanged_signal_connect_cb_0(arg0: *mut c_void, arg1: *mut c_void) {
+extern fn QApplication_focusChanged_signal_connect_cb_0(rsfptr:fn(QWidget, QWidget), arg0: *mut c_void, arg1: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QApplication_focusChanged_signal_connect for (extern fn(QWidget, QWidget)) {
+extern fn QApplication_focusChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void, arg1: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QApplication_focusChanged_signal_connect for fn(QWidget, QWidget) {
   fn connect(self, sigthis: QApplication_focusChanged_signal) {
     // do smth...
-    unsafe {QApplication_SlotProxy_connect__ZN12QApplication12focusChangedEP7QWidgetS1_(sigthis.poi as *mut c_void, QApplication_focusChanged_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QApplication_focusChanged_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QApplication_SlotProxy_connect__ZN12QApplication12focusChangedEP7QWidgetS1_(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QApplication_focusChanged_signal_connect for Box<fn(QWidget, QWidget)> {
+  fn connect(self, sigthis: QApplication_focusChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QApplication_focusChanged_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QApplication_SlotProxy_connect__ZN12QApplication12focusChangedEP7QWidgetS1_(arg0, arg1, arg2)};
   }
 }
 // <= body block end

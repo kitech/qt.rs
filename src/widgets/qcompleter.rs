@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:03 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtWidgets/qcompleter.h
 // dst-file: /src/widgets/qcompleter.rs
 //
@@ -111,10 +111,14 @@ extern {
   fn _ZNK10QCompleter16completionPrefixEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QCompleter::setWidget(QWidget * widget);
   fn _ZN10QCompleter9setWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  fn QCompleter_SlotProxy_connect__ZN10QCompleter11highlightedERK11QModelIndex(qthis: *mut c_void, fptr: *mut c_void);
-  fn QCompleter_SlotProxy_connect__ZN10QCompleter9activatedERK7QString(qthis: *mut c_void, fptr: *mut c_void);
-  fn QCompleter_SlotProxy_connect__ZN10QCompleter9activatedERK11QModelIndex(qthis: *mut c_void, fptr: *mut c_void);
-  fn QCompleter_SlotProxy_connect__ZN10QCompleter11highlightedERK7QString(qthis: *mut c_void, fptr: *mut c_void);
+  fn QCompleter_SlotProxy_connect__ZN10QCompleter11highlightedERK11QModelIndex(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QCompleter_SlotProxy_connect_box__ZN10QCompleter11highlightedERK11QModelIndex(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QCompleter_SlotProxy_connect__ZN10QCompleter9activatedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QCompleter_SlotProxy_connect_box__ZN10QCompleter9activatedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QCompleter_SlotProxy_connect__ZN10QCompleter9activatedERK11QModelIndex(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QCompleter_SlotProxy_connect_box__ZN10QCompleter9activatedERK11QModelIndex(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QCompleter_SlotProxy_connect__ZN10QCompleter11highlightedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QCompleter_SlotProxy_connect_box__ZN10QCompleter11highlightedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -917,7 +921,7 @@ impl<'a> /*trait*/ QCompleter_setWidget<()> for (&'a QWidget) {
 #[derive(Default)] // for QCompleter_highlighted
 pub struct QCompleter_highlighted_signal{poi:u64}
 impl /* struct */ QCompleter {
-  pub fn highlighted_1(self) -> QCompleter_highlighted_signal {
+  pub fn highlighted_1(&self) -> QCompleter_highlighted_signal {
      return QCompleter_highlighted_signal{poi:self.qclsinst};
   }
 }
@@ -933,7 +937,7 @@ pub trait QCompleter_highlighted_signal_connect {
 #[derive(Default)] // for QCompleter_activated
 pub struct QCompleter_activated_signal{poi:u64}
 impl /* struct */ QCompleter {
-  pub fn activated_1(self) -> QCompleter_activated_signal {
+  pub fn activated_1(&self) -> QCompleter_activated_signal {
      return QCompleter_activated_signal{poi:self.qclsinst};
   }
 }
@@ -947,43 +951,123 @@ pub trait QCompleter_activated_signal_connect {
 }
 
 // highlighted(const class QModelIndex &)
-extern fn QCompleter_highlighted_signal_connect_cb_0(arg0: *mut c_void) {
+extern fn QCompleter_highlighted_signal_connect_cb_0(rsfptr:fn(QModelIndex), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QCompleter_highlighted_signal_connect for (extern fn(QModelIndex)) {
+extern fn QCompleter_highlighted_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QCompleter_highlighted_signal_connect for fn(QModelIndex) {
   fn connect(self, sigthis: QCompleter_highlighted_signal) {
     // do smth...
-    unsafe {QCompleter_SlotProxy_connect__ZN10QCompleter11highlightedERK11QModelIndex(sigthis.poi as *mut c_void, QCompleter_highlighted_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QCompleter_highlighted_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QCompleter_SlotProxy_connect__ZN10QCompleter11highlightedERK11QModelIndex(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QCompleter_highlighted_signal_connect for Box<fn(QModelIndex)> {
+  fn connect(self, sigthis: QCompleter_highlighted_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QCompleter_highlighted_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QCompleter_SlotProxy_connect__ZN10QCompleter11highlightedERK11QModelIndex(arg0, arg1, arg2)};
   }
 }
 // activated(const class QString &)
-extern fn QCompleter_activated_signal_connect_cb_1(arg0: *mut c_void) {
+extern fn QCompleter_activated_signal_connect_cb_1(rsfptr:fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QCompleter_activated_signal_connect for (extern fn(QString)) {
+extern fn QCompleter_activated_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QCompleter_activated_signal_connect for fn(QString) {
   fn connect(self, sigthis: QCompleter_activated_signal) {
     // do smth...
-    unsafe {QCompleter_SlotProxy_connect__ZN10QCompleter9activatedERK7QString(sigthis.poi as *mut c_void, QCompleter_activated_signal_connect_cb_1 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QCompleter_activated_signal_connect_cb_1 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QCompleter_SlotProxy_connect__ZN10QCompleter9activatedERK7QString(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QCompleter_activated_signal_connect for Box<fn(QString)> {
+  fn connect(self, sigthis: QCompleter_activated_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QCompleter_activated_signal_connect_cb_box_1 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QCompleter_SlotProxy_connect__ZN10QCompleter9activatedERK7QString(arg0, arg1, arg2)};
   }
 }
 // activated(const class QModelIndex &)
-extern fn QCompleter_activated_signal_connect_cb_2(arg0: *mut c_void) {
+extern fn QCompleter_activated_signal_connect_cb_2(rsfptr:fn(QModelIndex), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QCompleter_activated_signal_connect for (extern fn(QModelIndex)) {
+extern fn QCompleter_activated_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QCompleter_activated_signal_connect for fn(QModelIndex) {
   fn connect(self, sigthis: QCompleter_activated_signal) {
     // do smth...
-    unsafe {QCompleter_SlotProxy_connect__ZN10QCompleter9activatedERK11QModelIndex(sigthis.poi as *mut c_void, QCompleter_activated_signal_connect_cb_2 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QCompleter_activated_signal_connect_cb_2 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QCompleter_SlotProxy_connect__ZN10QCompleter9activatedERK11QModelIndex(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QCompleter_activated_signal_connect for Box<fn(QModelIndex)> {
+  fn connect(self, sigthis: QCompleter_activated_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QCompleter_activated_signal_connect_cb_box_2 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QCompleter_SlotProxy_connect__ZN10QCompleter9activatedERK11QModelIndex(arg0, arg1, arg2)};
   }
 }
 // highlighted(const class QString &)
-extern fn QCompleter_highlighted_signal_connect_cb_3(arg0: *mut c_void) {
+extern fn QCompleter_highlighted_signal_connect_cb_3(rsfptr:fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QCompleter_highlighted_signal_connect for (extern fn(QString)) {
+extern fn QCompleter_highlighted_signal_connect_cb_box_3(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QCompleter_highlighted_signal_connect for fn(QString) {
   fn connect(self, sigthis: QCompleter_highlighted_signal) {
     // do smth...
-    unsafe {QCompleter_SlotProxy_connect__ZN10QCompleter11highlightedERK7QString(sigthis.poi as *mut c_void, QCompleter_highlighted_signal_connect_cb_3 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QCompleter_highlighted_signal_connect_cb_3 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QCompleter_SlotProxy_connect__ZN10QCompleter11highlightedERK7QString(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QCompleter_highlighted_signal_connect for Box<fn(QString)> {
+  fn connect(self, sigthis: QCompleter_highlighted_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QCompleter_highlighted_signal_connect_cb_box_3 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QCompleter_SlotProxy_connect__ZN10QCompleter11highlightedERK7QString(arg0, arg1, arg2)};
   }
 }
 // <= body block end

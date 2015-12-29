@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:03 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtWidgets/qfilesystemmodel.h
 // dst-file: /src/widgets/qfilesystemmodel.rs
 //
@@ -129,9 +129,12 @@ extern {
   fn _ZN16QFileSystemModel5rmdirERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  void QFileSystemModel::setIconProvider(QFileIconProvider * provider);
   fn _ZN16QFileSystemModel15setIconProviderEP17QFileIconProvider(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  fn QFileSystemModel_SlotProxy_connect__ZN16QFileSystemModel15directoryLoadedERK7QString(qthis: *mut c_void, fptr: *mut c_void);
-  fn QFileSystemModel_SlotProxy_connect__ZN16QFileSystemModel15rootPathChangedERK7QString(qthis: *mut c_void, fptr: *mut c_void);
-  fn QFileSystemModel_SlotProxy_connect__ZN16QFileSystemModel11fileRenamedERK7QStringS2_S2_(qthis: *mut c_void, fptr: *mut c_void);
+  fn QFileSystemModel_SlotProxy_connect__ZN16QFileSystemModel15directoryLoadedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QFileSystemModel_SlotProxy_connect_box__ZN16QFileSystemModel15directoryLoadedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QFileSystemModel_SlotProxy_connect__ZN16QFileSystemModel15rootPathChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QFileSystemModel_SlotProxy_connect_box__ZN16QFileSystemModel15rootPathChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QFileSystemModel_SlotProxy_connect__ZN16QFileSystemModel11fileRenamedERK7QStringS2_S2_(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QFileSystemModel_SlotProxy_connect_box__ZN16QFileSystemModel11fileRenamedERK7QStringS2_S2_(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -1184,7 +1187,7 @@ impl<'a> /*trait*/ QFileSystemModel_setIconProvider<()> for (&'a QFileIconProvid
 #[derive(Default)] // for QFileSystemModel_rootPathChanged
 pub struct QFileSystemModel_rootPathChanged_signal{poi:u64}
 impl /* struct */ QFileSystemModel {
-  pub fn rootPathChanged_1(self) -> QFileSystemModel_rootPathChanged_signal {
+  pub fn rootPathChanged_1(&self) -> QFileSystemModel_rootPathChanged_signal {
      return QFileSystemModel_rootPathChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1200,7 +1203,7 @@ pub trait QFileSystemModel_rootPathChanged_signal_connect {
 #[derive(Default)] // for QFileSystemModel_directoryLoaded
 pub struct QFileSystemModel_directoryLoaded_signal{poi:u64}
 impl /* struct */ QFileSystemModel {
-  pub fn directoryLoaded_1(self) -> QFileSystemModel_directoryLoaded_signal {
+  pub fn directoryLoaded_1(&self) -> QFileSystemModel_directoryLoaded_signal {
      return QFileSystemModel_directoryLoaded_signal{poi:self.qclsinst};
   }
 }
@@ -1216,7 +1219,7 @@ pub trait QFileSystemModel_directoryLoaded_signal_connect {
 #[derive(Default)] // for QFileSystemModel_fileRenamed
 pub struct QFileSystemModel_fileRenamed_signal{poi:u64}
 impl /* struct */ QFileSystemModel {
-  pub fn fileRenamed_1(self) -> QFileSystemModel_fileRenamed_signal {
+  pub fn fileRenamed_1(&self) -> QFileSystemModel_fileRenamed_signal {
      return QFileSystemModel_fileRenamed_signal{poi:self.qclsinst};
   }
 }
@@ -1230,33 +1233,93 @@ pub trait QFileSystemModel_fileRenamed_signal_connect {
 }
 
 // directoryLoaded(const class QString &)
-extern fn QFileSystemModel_directoryLoaded_signal_connect_cb_0(arg0: *mut c_void) {
+extern fn QFileSystemModel_directoryLoaded_signal_connect_cb_0(rsfptr:fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QFileSystemModel_directoryLoaded_signal_connect for (extern fn(QString)) {
+extern fn QFileSystemModel_directoryLoaded_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QFileSystemModel_directoryLoaded_signal_connect for fn(QString) {
   fn connect(self, sigthis: QFileSystemModel_directoryLoaded_signal) {
     // do smth...
-    unsafe {QFileSystemModel_SlotProxy_connect__ZN16QFileSystemModel15directoryLoadedERK7QString(sigthis.poi as *mut c_void, QFileSystemModel_directoryLoaded_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QFileSystemModel_directoryLoaded_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QFileSystemModel_SlotProxy_connect__ZN16QFileSystemModel15directoryLoadedERK7QString(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QFileSystemModel_directoryLoaded_signal_connect for Box<fn(QString)> {
+  fn connect(self, sigthis: QFileSystemModel_directoryLoaded_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QFileSystemModel_directoryLoaded_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QFileSystemModel_SlotProxy_connect__ZN16QFileSystemModel15directoryLoadedERK7QString(arg0, arg1, arg2)};
   }
 }
 // rootPathChanged(const class QString &)
-extern fn QFileSystemModel_rootPathChanged_signal_connect_cb_1(arg0: *mut c_void) {
+extern fn QFileSystemModel_rootPathChanged_signal_connect_cb_1(rsfptr:fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QFileSystemModel_rootPathChanged_signal_connect for (extern fn(QString)) {
+extern fn QFileSystemModel_rootPathChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QFileSystemModel_rootPathChanged_signal_connect for fn(QString) {
   fn connect(self, sigthis: QFileSystemModel_rootPathChanged_signal) {
     // do smth...
-    unsafe {QFileSystemModel_SlotProxy_connect__ZN16QFileSystemModel15rootPathChangedERK7QString(sigthis.poi as *mut c_void, QFileSystemModel_rootPathChanged_signal_connect_cb_1 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QFileSystemModel_rootPathChanged_signal_connect_cb_1 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QFileSystemModel_SlotProxy_connect__ZN16QFileSystemModel15rootPathChangedERK7QString(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QFileSystemModel_rootPathChanged_signal_connect for Box<fn(QString)> {
+  fn connect(self, sigthis: QFileSystemModel_rootPathChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QFileSystemModel_rootPathChanged_signal_connect_cb_box_1 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QFileSystemModel_SlotProxy_connect__ZN16QFileSystemModel15rootPathChangedERK7QString(arg0, arg1, arg2)};
   }
 }
 // fileRenamed(const class QString &, const class QString &, const class QString &)
-extern fn QFileSystemModel_fileRenamed_signal_connect_cb_2(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) {
+extern fn QFileSystemModel_fileRenamed_signal_connect_cb_2(rsfptr:fn(QString, QString, QString), arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QFileSystemModel_fileRenamed_signal_connect for (extern fn(QString, QString, QString)) {
+extern fn QFileSystemModel_fileRenamed_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QFileSystemModel_fileRenamed_signal_connect for fn(QString, QString, QString) {
   fn connect(self, sigthis: QFileSystemModel_fileRenamed_signal) {
     // do smth...
-    unsafe {QFileSystemModel_SlotProxy_connect__ZN16QFileSystemModel11fileRenamedERK7QStringS2_S2_(sigthis.poi as *mut c_void, QFileSystemModel_fileRenamed_signal_connect_cb_2 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QFileSystemModel_fileRenamed_signal_connect_cb_2 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QFileSystemModel_SlotProxy_connect__ZN16QFileSystemModel11fileRenamedERK7QStringS2_S2_(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QFileSystemModel_fileRenamed_signal_connect for Box<fn(QString, QString, QString)> {
+  fn connect(self, sigthis: QFileSystemModel_fileRenamed_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QFileSystemModel_fileRenamed_signal_connect_cb_box_2 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QFileSystemModel_SlotProxy_connect__ZN16QFileSystemModel11fileRenamedERK7QStringS2_S2_(arg0, arg1, arg2)};
   }
 }
 // <= body block end

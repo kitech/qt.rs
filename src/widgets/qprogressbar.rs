@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtWidgets/qprogressbar.h
 // dst-file: /src/widgets/qprogressbar.rs
 //
@@ -80,7 +80,8 @@ extern {
   fn _ZN12QProgressBarD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QProgressBar::setMaximum(int maximum);
   fn _ZN12QProgressBar10setMaximumEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
-  fn QProgressBar_SlotProxy_connect__ZN12QProgressBar12valueChangedEi(qthis: *mut c_void, fptr: *mut c_void);
+  fn QProgressBar_SlotProxy_connect__ZN12QProgressBar12valueChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QProgressBar_SlotProxy_connect_box__ZN12QProgressBar12valueChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -641,7 +642,7 @@ impl<'a> /*trait*/ QProgressBar_setMaximum<()> for (i32) {
 #[derive(Default)] // for QProgressBar_valueChanged
 pub struct QProgressBar_valueChanged_signal{poi:u64}
 impl /* struct */ QProgressBar {
-  pub fn valueChanged_1(self) -> QProgressBar_valueChanged_signal {
+  pub fn valueChanged_1(&self) -> QProgressBar_valueChanged_signal {
      return QProgressBar_valueChanged_signal{poi:self.qclsinst};
   }
 }
@@ -655,13 +656,33 @@ pub trait QProgressBar_valueChanged_signal_connect {
 }
 
 // valueChanged(int)
-extern fn QProgressBar_valueChanged_signal_connect_cb_0(arg0: c_int) {
+extern fn QProgressBar_valueChanged_signal_connect_cb_0(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QProgressBar_valueChanged_signal_connect for (extern fn(i32)) {
+extern fn QProgressBar_valueChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QProgressBar_valueChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QProgressBar_valueChanged_signal) {
     // do smth...
-    unsafe {QProgressBar_SlotProxy_connect__ZN12QProgressBar12valueChangedEi(sigthis.poi as *mut c_void, QProgressBar_valueChanged_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QProgressBar_valueChanged_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QProgressBar_SlotProxy_connect__ZN12QProgressBar12valueChangedEi(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QProgressBar_valueChanged_signal_connect for Box<fn(i32)> {
+  fn connect(self, sigthis: QProgressBar_valueChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QProgressBar_valueChanged_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QProgressBar_SlotProxy_connect__ZN12QProgressBar12valueChangedEi(arg0, arg1, arg2)};
   }
 }
 // <= body block end

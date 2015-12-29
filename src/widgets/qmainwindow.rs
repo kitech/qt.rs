@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtWidgets/qmainwindow.h
 // dst-file: /src/widgets/qmainwindow.rs
 //
@@ -116,8 +116,10 @@ extern {
   fn _ZN11QMainWindow10setMenuBarEP8QMenuBar(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QList<QDockWidget *> QMainWindow::tabifiedDockWidgets(QDockWidget * dockwidget);
   fn _ZNK11QMainWindow19tabifiedDockWidgetsEP11QDockWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  fn QMainWindow_SlotProxy_connect__ZN11QMainWindow22toolButtonStyleChangedEN2Qt15ToolButtonStyleE(qthis: *mut c_void, fptr: *mut c_void);
-  fn QMainWindow_SlotProxy_connect__ZN11QMainWindow15iconSizeChangedERK5QSize(qthis: *mut c_void, fptr: *mut c_void);
+  fn QMainWindow_SlotProxy_connect__ZN11QMainWindow22toolButtonStyleChangedEN2Qt15ToolButtonStyleE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QMainWindow_SlotProxy_connect_box__ZN11QMainWindow22toolButtonStyleChangedEN2Qt15ToolButtonStyleE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QMainWindow_SlotProxy_connect__ZN11QMainWindow15iconSizeChangedERK5QSize(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QMainWindow_SlotProxy_connect_box__ZN11QMainWindow15iconSizeChangedERK5QSize(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -1034,7 +1036,7 @@ impl<'a> /*trait*/ QMainWindow_tabifiedDockWidgets<()> for (&'a QDockWidget) {
 #[derive(Default)] // for QMainWindow_toolButtonStyleChanged
 pub struct QMainWindow_toolButtonStyleChanged_signal{poi:u64}
 impl /* struct */ QMainWindow {
-  pub fn toolButtonStyleChanged_1(self) -> QMainWindow_toolButtonStyleChanged_signal {
+  pub fn toolButtonStyleChanged_1(&self) -> QMainWindow_toolButtonStyleChanged_signal {
      return QMainWindow_toolButtonStyleChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1050,7 +1052,7 @@ pub trait QMainWindow_toolButtonStyleChanged_signal_connect {
 #[derive(Default)] // for QMainWindow_iconSizeChanged
 pub struct QMainWindow_iconSizeChanged_signal{poi:u64}
 impl /* struct */ QMainWindow {
-  pub fn iconSizeChanged_1(self) -> QMainWindow_iconSizeChanged_signal {
+  pub fn iconSizeChanged_1(&self) -> QMainWindow_iconSizeChanged_signal {
      return QMainWindow_iconSizeChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1064,23 +1066,63 @@ pub trait QMainWindow_iconSizeChanged_signal_connect {
 }
 
 // toolButtonStyleChanged(Qt::ToolButtonStyle)
-extern fn QMainWindow_toolButtonStyleChanged_signal_connect_cb_0(arg0: c_int) {
+extern fn QMainWindow_toolButtonStyleChanged_signal_connect_cb_0(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QMainWindow_toolButtonStyleChanged_signal_connect for (extern fn(i32)) {
+extern fn QMainWindow_toolButtonStyleChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QMainWindow_toolButtonStyleChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QMainWindow_toolButtonStyleChanged_signal) {
     // do smth...
-    unsafe {QMainWindow_SlotProxy_connect__ZN11QMainWindow22toolButtonStyleChangedEN2Qt15ToolButtonStyleE(sigthis.poi as *mut c_void, QMainWindow_toolButtonStyleChanged_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QMainWindow_toolButtonStyleChanged_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QMainWindow_SlotProxy_connect__ZN11QMainWindow22toolButtonStyleChangedEN2Qt15ToolButtonStyleE(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QMainWindow_toolButtonStyleChanged_signal_connect for Box<fn(i32)> {
+  fn connect(self, sigthis: QMainWindow_toolButtonStyleChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QMainWindow_toolButtonStyleChanged_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QMainWindow_SlotProxy_connect__ZN11QMainWindow22toolButtonStyleChangedEN2Qt15ToolButtonStyleE(arg0, arg1, arg2)};
   }
 }
 // iconSizeChanged(const class QSize &)
-extern fn QMainWindow_iconSizeChanged_signal_connect_cb_1(arg0: *mut c_void) {
+extern fn QMainWindow_iconSizeChanged_signal_connect_cb_1(rsfptr:fn(QSize), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QMainWindow_iconSizeChanged_signal_connect for (extern fn(QSize)) {
+extern fn QMainWindow_iconSizeChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QMainWindow_iconSizeChanged_signal_connect for fn(QSize) {
   fn connect(self, sigthis: QMainWindow_iconSizeChanged_signal) {
     // do smth...
-    unsafe {QMainWindow_SlotProxy_connect__ZN11QMainWindow15iconSizeChangedERK5QSize(sigthis.poi as *mut c_void, QMainWindow_iconSizeChanged_signal_connect_cb_1 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QMainWindow_iconSizeChanged_signal_connect_cb_1 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QMainWindow_SlotProxy_connect__ZN11QMainWindow15iconSizeChangedERK5QSize(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QMainWindow_iconSizeChanged_signal_connect for Box<fn(QSize)> {
+  fn connect(self, sigthis: QMainWindow_iconSizeChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QMainWindow_iconSizeChanged_signal_connect_cb_box_1 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QMainWindow_SlotProxy_connect__ZN11QMainWindow15iconSizeChangedERK5QSize(arg0, arg1, arg2)};
   }
 }
 // <= body block end

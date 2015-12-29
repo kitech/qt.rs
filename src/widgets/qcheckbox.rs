@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtWidgets/qcheckbox.h
 // dst-file: /src/widgets/qcheckbox.rs
 //
@@ -56,7 +56,8 @@ extern {
   // proto:  void QCheckBox::QCheckBox(const QString & text, QWidget * parent);
   fn dector_ZN9QCheckBoxC1ERK7QStringP7QWidget(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   fn _ZN9QCheckBoxC1ERK7QStringP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
-  fn QCheckBox_SlotProxy_connect__ZN9QCheckBox12stateChangedEi(qthis: *mut c_void, fptr: *mut c_void);
+  fn QCheckBox_SlotProxy_connect__ZN9QCheckBox12stateChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QCheckBox_SlotProxy_connect_box__ZN9QCheckBox12stateChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -311,7 +312,7 @@ impl<'a> /*trait*/ QCheckBox_New for (&'a QString, &'a QWidget) {
 #[derive(Default)] // for QCheckBox_stateChanged
 pub struct QCheckBox_stateChanged_signal{poi:u64}
 impl /* struct */ QCheckBox {
-  pub fn stateChanged_1(self) -> QCheckBox_stateChanged_signal {
+  pub fn stateChanged_1(&self) -> QCheckBox_stateChanged_signal {
      return QCheckBox_stateChanged_signal{poi:self.qclsinst};
   }
 }
@@ -325,13 +326,33 @@ pub trait QCheckBox_stateChanged_signal_connect {
 }
 
 // stateChanged(int)
-extern fn QCheckBox_stateChanged_signal_connect_cb_0(arg0: c_int) {
+extern fn QCheckBox_stateChanged_signal_connect_cb_0(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QCheckBox_stateChanged_signal_connect for (extern fn(i32)) {
+extern fn QCheckBox_stateChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QCheckBox_stateChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QCheckBox_stateChanged_signal) {
     // do smth...
-    unsafe {QCheckBox_SlotProxy_connect__ZN9QCheckBox12stateChangedEi(sigthis.poi as *mut c_void, QCheckBox_stateChanged_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QCheckBox_stateChanged_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QCheckBox_SlotProxy_connect__ZN9QCheckBox12stateChangedEi(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QCheckBox_stateChanged_signal_connect for Box<fn(i32)> {
+  fn connect(self, sigthis: QCheckBox_stateChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QCheckBox_stateChanged_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QCheckBox_SlotProxy_connect__ZN9QCheckBox12stateChangedEi(arg0, arg1, arg2)};
   }
 }
 // <= body block end

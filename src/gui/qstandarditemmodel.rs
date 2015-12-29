@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtGui/qstandarditemmodel.h
 // dst-file: /src/gui/qstandarditemmodel.rs
 //
@@ -292,7 +292,8 @@ extern {
   fn demth_ZNK13QStandardItem21accessibleDescriptionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QStandardItem::setTristate(bool tristate);
   fn _ZN13QStandardItem11setTristateEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
-  fn QStandardItemModel_SlotProxy_connect__ZN18QStandardItemModel11itemChangedEP13QStandardItem(qthis: *mut c_void, fptr: *mut c_void);
+  fn QStandardItemModel_SlotProxy_connect__ZN18QStandardItemModel11itemChangedEP13QStandardItem(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QStandardItemModel_SlotProxy_connect_box__ZN18QStandardItemModel11itemChangedEP13QStandardItem(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -3121,7 +3122,7 @@ impl<'a> /*trait*/ QStandardItem_setTristate<()> for (i8) {
 #[derive(Default)] // for QStandardItemModel_itemChanged
 pub struct QStandardItemModel_itemChanged_signal{poi:u64}
 impl /* struct */ QStandardItemModel {
-  pub fn itemChanged_1(self) -> QStandardItemModel_itemChanged_signal {
+  pub fn itemChanged_1(&self) -> QStandardItemModel_itemChanged_signal {
      return QStandardItemModel_itemChanged_signal{poi:self.qclsinst};
   }
 }
@@ -3135,13 +3136,33 @@ pub trait QStandardItemModel_itemChanged_signal_connect {
 }
 
 // itemChanged(class QStandardItem *)
-extern fn QStandardItemModel_itemChanged_signal_connect_cb_0(arg0: *mut c_void) {
+extern fn QStandardItemModel_itemChanged_signal_connect_cb_0(rsfptr:fn(QStandardItem), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QStandardItemModel_itemChanged_signal_connect for (extern fn(QStandardItem)) {
+extern fn QStandardItemModel_itemChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QStandardItemModel_itemChanged_signal_connect for fn(QStandardItem) {
   fn connect(self, sigthis: QStandardItemModel_itemChanged_signal) {
     // do smth...
-    unsafe {QStandardItemModel_SlotProxy_connect__ZN18QStandardItemModel11itemChangedEP13QStandardItem(sigthis.poi as *mut c_void, QStandardItemModel_itemChanged_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QStandardItemModel_itemChanged_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QStandardItemModel_SlotProxy_connect__ZN18QStandardItemModel11itemChangedEP13QStandardItem(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QStandardItemModel_itemChanged_signal_connect for Box<fn(QStandardItem)> {
+  fn connect(self, sigthis: QStandardItemModel_itemChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QStandardItemModel_itemChanged_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QStandardItemModel_SlotProxy_connect__ZN18QStandardItemModel11itemChangedEP13QStandardItem(arg0, arg1, arg2)};
   }
 }
 // <= body block end

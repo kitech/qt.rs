@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtWidgets/qmdiarea.h
 // dst-file: /src/widgets/qmdiarea.rs
 //
@@ -86,7 +86,8 @@ extern {
   fn _ZNK8QMdiArea12tabsClosableEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QSize QMdiArea::minimumSizeHint();
   fn _ZNK8QMdiArea15minimumSizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  fn QMdiArea_SlotProxy_connect__ZN8QMdiArea18subWindowActivatedEP13QMdiSubWindow(qthis: *mut c_void, fptr: *mut c_void);
+  fn QMdiArea_SlotProxy_connect__ZN8QMdiArea18subWindowActivatedEP13QMdiSubWindow(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QMdiArea_SlotProxy_connect_box__ZN8QMdiArea18subWindowActivatedEP13QMdiSubWindow(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -689,7 +690,7 @@ impl<'a> /*trait*/ QMdiArea_minimumSizeHint<QSize> for () {
 #[derive(Default)] // for QMdiArea_subWindowActivated
 pub struct QMdiArea_subWindowActivated_signal{poi:u64}
 impl /* struct */ QMdiArea {
-  pub fn subWindowActivated_1(self) -> QMdiArea_subWindowActivated_signal {
+  pub fn subWindowActivated_1(&self) -> QMdiArea_subWindowActivated_signal {
      return QMdiArea_subWindowActivated_signal{poi:self.qclsinst};
   }
 }
@@ -703,13 +704,33 @@ pub trait QMdiArea_subWindowActivated_signal_connect {
 }
 
 // subWindowActivated(class QMdiSubWindow *)
-extern fn QMdiArea_subWindowActivated_signal_connect_cb_0(arg0: *mut c_void) {
+extern fn QMdiArea_subWindowActivated_signal_connect_cb_0(rsfptr:fn(QMdiSubWindow), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QMdiArea_subWindowActivated_signal_connect for (extern fn(QMdiSubWindow)) {
+extern fn QMdiArea_subWindowActivated_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QMdiArea_subWindowActivated_signal_connect for fn(QMdiSubWindow) {
   fn connect(self, sigthis: QMdiArea_subWindowActivated_signal) {
     // do smth...
-    unsafe {QMdiArea_SlotProxy_connect__ZN8QMdiArea18subWindowActivatedEP13QMdiSubWindow(sigthis.poi as *mut c_void, QMdiArea_subWindowActivated_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QMdiArea_subWindowActivated_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QMdiArea_SlotProxy_connect__ZN8QMdiArea18subWindowActivatedEP13QMdiSubWindow(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QMdiArea_subWindowActivated_signal_connect for Box<fn(QMdiSubWindow)> {
+  fn connect(self, sigthis: QMdiArea_subWindowActivated_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QMdiArea_subWindowActivated_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QMdiArea_SlotProxy_connect__ZN8QMdiArea18subWindowActivatedEP13QMdiSubWindow(arg0, arg1, arg2)};
   }
 }
 // <= body block end

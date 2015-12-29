@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtWidgets/qlistview.h
 // dst-file: /src/widgets/qlistview.rs
 //
@@ -769,7 +769,7 @@ impl<'a> /*trait*/ QListView_setUniformItemSizes<()> for (i8) {
 #[derive(Default)] // for QListView_indexesMoved
 pub struct QListView_indexesMoved_signal{poi:u64}
 impl /* struct */ QListView {
-  pub fn indexesMoved_1(self) -> QListView_indexesMoved_signal {
+  pub fn indexesMoved_1(&self) -> QListView_indexesMoved_signal {
      return QListView_indexesMoved_signal{poi:self.qclsinst};
   }
 }

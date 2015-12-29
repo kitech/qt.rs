@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:03 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtWidgets/qtabbar.h
 // dst-file: /src/widgets/qtabbar.rs
 //
@@ -147,11 +147,16 @@ extern {
   fn _ZN7QTabBar10setTabTextEiRK7QString(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  void QTabBar::tabMoved(int from, int to);
   fn _ZN7QTabBar8tabMovedEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
-  fn QTabBar_SlotProxy_connect__ZN7QTabBar13tabBarClickedEi(qthis: *mut c_void, fptr: *mut c_void);
-  fn QTabBar_SlotProxy_connect__ZN7QTabBar19tabBarDoubleClickedEi(qthis: *mut c_void, fptr: *mut c_void);
-  fn QTabBar_SlotProxy_connect__ZN7QTabBar17tabCloseRequestedEi(qthis: *mut c_void, fptr: *mut c_void);
-  fn QTabBar_SlotProxy_connect__ZN7QTabBar8tabMovedEii(qthis: *mut c_void, fptr: *mut c_void);
-  fn QTabBar_SlotProxy_connect__ZN7QTabBar14currentChangedEi(qthis: *mut c_void, fptr: *mut c_void);
+  fn QTabBar_SlotProxy_connect__ZN7QTabBar13tabBarClickedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTabBar_SlotProxy_connect_box__ZN7QTabBar13tabBarClickedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTabBar_SlotProxy_connect__ZN7QTabBar19tabBarDoubleClickedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTabBar_SlotProxy_connect_box__ZN7QTabBar19tabBarDoubleClickedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTabBar_SlotProxy_connect__ZN7QTabBar17tabCloseRequestedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTabBar_SlotProxy_connect_box__ZN7QTabBar17tabCloseRequestedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTabBar_SlotProxy_connect__ZN7QTabBar8tabMovedEii(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTabBar_SlotProxy_connect_box__ZN7QTabBar8tabMovedEii(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTabBar_SlotProxy_connect__ZN7QTabBar14currentChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTabBar_SlotProxy_connect_box__ZN7QTabBar14currentChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -1438,7 +1443,7 @@ impl<'a> /*trait*/ QTabBar_tabMoved<()> for (i32, i32) {
 #[derive(Default)] // for QTabBar_tabCloseRequested
 pub struct QTabBar_tabCloseRequested_signal{poi:u64}
 impl /* struct */ QTabBar {
-  pub fn tabCloseRequested_1(self) -> QTabBar_tabCloseRequested_signal {
+  pub fn tabCloseRequested_1(&self) -> QTabBar_tabCloseRequested_signal {
      return QTabBar_tabCloseRequested_signal{poi:self.qclsinst};
   }
 }
@@ -1454,7 +1459,7 @@ pub trait QTabBar_tabCloseRequested_signal_connect {
 #[derive(Default)] // for QTabBar_tabBarDoubleClicked
 pub struct QTabBar_tabBarDoubleClicked_signal{poi:u64}
 impl /* struct */ QTabBar {
-  pub fn tabBarDoubleClicked_1(self) -> QTabBar_tabBarDoubleClicked_signal {
+  pub fn tabBarDoubleClicked_1(&self) -> QTabBar_tabBarDoubleClicked_signal {
      return QTabBar_tabBarDoubleClicked_signal{poi:self.qclsinst};
   }
 }
@@ -1470,7 +1475,7 @@ pub trait QTabBar_tabBarDoubleClicked_signal_connect {
 #[derive(Default)] // for QTabBar_tabMoved
 pub struct QTabBar_tabMoved_signal{poi:u64}
 impl /* struct */ QTabBar {
-  pub fn tabMoved_1(self) -> QTabBar_tabMoved_signal {
+  pub fn tabMoved_1(&self) -> QTabBar_tabMoved_signal {
      return QTabBar_tabMoved_signal{poi:self.qclsinst};
   }
 }
@@ -1486,7 +1491,7 @@ pub trait QTabBar_tabMoved_signal_connect {
 #[derive(Default)] // for QTabBar_tabBarClicked
 pub struct QTabBar_tabBarClicked_signal{poi:u64}
 impl /* struct */ QTabBar {
-  pub fn tabBarClicked_1(self) -> QTabBar_tabBarClicked_signal {
+  pub fn tabBarClicked_1(&self) -> QTabBar_tabBarClicked_signal {
      return QTabBar_tabBarClicked_signal{poi:self.qclsinst};
   }
 }
@@ -1502,7 +1507,7 @@ pub trait QTabBar_tabBarClicked_signal_connect {
 #[derive(Default)] // for QTabBar_currentChanged
 pub struct QTabBar_currentChanged_signal{poi:u64}
 impl /* struct */ QTabBar {
-  pub fn currentChanged_1(self) -> QTabBar_currentChanged_signal {
+  pub fn currentChanged_1(&self) -> QTabBar_currentChanged_signal {
      return QTabBar_currentChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1516,53 +1521,153 @@ pub trait QTabBar_currentChanged_signal_connect {
 }
 
 // tabBarClicked(int)
-extern fn QTabBar_tabBarClicked_signal_connect_cb_0(arg0: c_int) {
+extern fn QTabBar_tabBarClicked_signal_connect_cb_0(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QTabBar_tabBarClicked_signal_connect for (extern fn(i32)) {
+extern fn QTabBar_tabBarClicked_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QTabBar_tabBarClicked_signal_connect for fn(i32) {
   fn connect(self, sigthis: QTabBar_tabBarClicked_signal) {
     // do smth...
-    unsafe {QTabBar_SlotProxy_connect__ZN7QTabBar13tabBarClickedEi(sigthis.poi as *mut c_void, QTabBar_tabBarClicked_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTabBar_tabBarClicked_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QTabBar_SlotProxy_connect__ZN7QTabBar13tabBarClickedEi(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QTabBar_tabBarClicked_signal_connect for Box<fn(i32)> {
+  fn connect(self, sigthis: QTabBar_tabBarClicked_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTabBar_tabBarClicked_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QTabBar_SlotProxy_connect__ZN7QTabBar13tabBarClickedEi(arg0, arg1, arg2)};
   }
 }
 // tabBarDoubleClicked(int)
-extern fn QTabBar_tabBarDoubleClicked_signal_connect_cb_1(arg0: c_int) {
+extern fn QTabBar_tabBarDoubleClicked_signal_connect_cb_1(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QTabBar_tabBarDoubleClicked_signal_connect for (extern fn(i32)) {
+extern fn QTabBar_tabBarDoubleClicked_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QTabBar_tabBarDoubleClicked_signal_connect for fn(i32) {
   fn connect(self, sigthis: QTabBar_tabBarDoubleClicked_signal) {
     // do smth...
-    unsafe {QTabBar_SlotProxy_connect__ZN7QTabBar19tabBarDoubleClickedEi(sigthis.poi as *mut c_void, QTabBar_tabBarDoubleClicked_signal_connect_cb_1 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTabBar_tabBarDoubleClicked_signal_connect_cb_1 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QTabBar_SlotProxy_connect__ZN7QTabBar19tabBarDoubleClickedEi(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QTabBar_tabBarDoubleClicked_signal_connect for Box<fn(i32)> {
+  fn connect(self, sigthis: QTabBar_tabBarDoubleClicked_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTabBar_tabBarDoubleClicked_signal_connect_cb_box_1 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QTabBar_SlotProxy_connect__ZN7QTabBar19tabBarDoubleClickedEi(arg0, arg1, arg2)};
   }
 }
 // tabCloseRequested(int)
-extern fn QTabBar_tabCloseRequested_signal_connect_cb_2(arg0: c_int) {
+extern fn QTabBar_tabCloseRequested_signal_connect_cb_2(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QTabBar_tabCloseRequested_signal_connect for (extern fn(i32)) {
+extern fn QTabBar_tabCloseRequested_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QTabBar_tabCloseRequested_signal_connect for fn(i32) {
   fn connect(self, sigthis: QTabBar_tabCloseRequested_signal) {
     // do smth...
-    unsafe {QTabBar_SlotProxy_connect__ZN7QTabBar17tabCloseRequestedEi(sigthis.poi as *mut c_void, QTabBar_tabCloseRequested_signal_connect_cb_2 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTabBar_tabCloseRequested_signal_connect_cb_2 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QTabBar_SlotProxy_connect__ZN7QTabBar17tabCloseRequestedEi(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QTabBar_tabCloseRequested_signal_connect for Box<fn(i32)> {
+  fn connect(self, sigthis: QTabBar_tabCloseRequested_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTabBar_tabCloseRequested_signal_connect_cb_box_2 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QTabBar_SlotProxy_connect__ZN7QTabBar17tabCloseRequestedEi(arg0, arg1, arg2)};
   }
 }
 // tabMoved(int, int)
-extern fn QTabBar_tabMoved_signal_connect_cb_3(arg0: c_int, arg1: c_int) {
+extern fn QTabBar_tabMoved_signal_connect_cb_3(rsfptr:fn(i32, i32), arg0: c_int, arg1: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QTabBar_tabMoved_signal_connect for (extern fn(i32, i32)) {
+extern fn QTabBar_tabMoved_signal_connect_cb_box_3(rsfptr_raw:*mut c_void, arg0: c_int, arg1: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QTabBar_tabMoved_signal_connect for fn(i32, i32) {
   fn connect(self, sigthis: QTabBar_tabMoved_signal) {
     // do smth...
-    unsafe {QTabBar_SlotProxy_connect__ZN7QTabBar8tabMovedEii(sigthis.poi as *mut c_void, QTabBar_tabMoved_signal_connect_cb_3 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTabBar_tabMoved_signal_connect_cb_3 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QTabBar_SlotProxy_connect__ZN7QTabBar8tabMovedEii(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QTabBar_tabMoved_signal_connect for Box<fn(i32, i32)> {
+  fn connect(self, sigthis: QTabBar_tabMoved_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTabBar_tabMoved_signal_connect_cb_box_3 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QTabBar_SlotProxy_connect__ZN7QTabBar8tabMovedEii(arg0, arg1, arg2)};
   }
 }
 // currentChanged(int)
-extern fn QTabBar_currentChanged_signal_connect_cb_4(arg0: c_int) {
+extern fn QTabBar_currentChanged_signal_connect_cb_4(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QTabBar_currentChanged_signal_connect for (extern fn(i32)) {
+extern fn QTabBar_currentChanged_signal_connect_cb_box_4(rsfptr_raw:*mut c_void, arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QTabBar_currentChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QTabBar_currentChanged_signal) {
     // do smth...
-    unsafe {QTabBar_SlotProxy_connect__ZN7QTabBar14currentChangedEi(sigthis.poi as *mut c_void, QTabBar_currentChanged_signal_connect_cb_4 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTabBar_currentChanged_signal_connect_cb_4 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QTabBar_SlotProxy_connect__ZN7QTabBar14currentChangedEi(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QTabBar_currentChanged_signal_connect for Box<fn(i32)> {
+  fn connect(self, sigthis: QTabBar_currentChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTabBar_currentChanged_signal_connect_cb_box_4 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QTabBar_SlotProxy_connect__ZN7QTabBar14currentChangedEi(arg0, arg1, arg2)};
   }
 }
 // <= body block end

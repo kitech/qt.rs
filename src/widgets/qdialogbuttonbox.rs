@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtWidgets/qdialogbuttonbox.h
 // dst-file: /src/widgets/qdialogbuttonbox.rs
 //
@@ -60,10 +60,14 @@ extern {
   fn _ZN16QDialogButtonBox8rejectedEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QDialogButtonBox::helpRequested();
   fn _ZN16QDialogButtonBox13helpRequestedEv(qthis: u64 /* *mut c_void*/);
-  fn QDialogButtonBox_SlotProxy_connect__ZN16QDialogButtonBox8acceptedEv(qthis: *mut c_void, fptr: *mut c_void);
-  fn QDialogButtonBox_SlotProxy_connect__ZN16QDialogButtonBox13helpRequestedEv(qthis: *mut c_void, fptr: *mut c_void);
-  fn QDialogButtonBox_SlotProxy_connect__ZN16QDialogButtonBox7clickedEP15QAbstractButton(qthis: *mut c_void, fptr: *mut c_void);
-  fn QDialogButtonBox_SlotProxy_connect__ZN16QDialogButtonBox8rejectedEv(qthis: *mut c_void, fptr: *mut c_void);
+  fn QDialogButtonBox_SlotProxy_connect__ZN16QDialogButtonBox8acceptedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QDialogButtonBox_SlotProxy_connect_box__ZN16QDialogButtonBox8acceptedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QDialogButtonBox_SlotProxy_connect__ZN16QDialogButtonBox13helpRequestedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QDialogButtonBox_SlotProxy_connect_box__ZN16QDialogButtonBox13helpRequestedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QDialogButtonBox_SlotProxy_connect__ZN16QDialogButtonBox7clickedEP15QAbstractButton(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QDialogButtonBox_SlotProxy_connect_box__ZN16QDialogButtonBox7clickedEP15QAbstractButton(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QDialogButtonBox_SlotProxy_connect__ZN16QDialogButtonBox8rejectedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QDialogButtonBox_SlotProxy_connect_box__ZN16QDialogButtonBox8rejectedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -389,7 +393,7 @@ impl<'a> /*trait*/ QDialogButtonBox_helpRequested<()> for () {
 #[derive(Default)] // for QDialogButtonBox_helpRequested
 pub struct QDialogButtonBox_helpRequested_signal{poi:u64}
 impl /* struct */ QDialogButtonBox {
-  pub fn helpRequested_1(self) -> QDialogButtonBox_helpRequested_signal {
+  pub fn helpRequested_1(&self) -> QDialogButtonBox_helpRequested_signal {
      return QDialogButtonBox_helpRequested_signal{poi:self.qclsinst};
   }
 }
@@ -405,7 +409,7 @@ pub trait QDialogButtonBox_helpRequested_signal_connect {
 #[derive(Default)] // for QDialogButtonBox_accepted
 pub struct QDialogButtonBox_accepted_signal{poi:u64}
 impl /* struct */ QDialogButtonBox {
-  pub fn accepted_1(self) -> QDialogButtonBox_accepted_signal {
+  pub fn accepted_1(&self) -> QDialogButtonBox_accepted_signal {
      return QDialogButtonBox_accepted_signal{poi:self.qclsinst};
   }
 }
@@ -421,7 +425,7 @@ pub trait QDialogButtonBox_accepted_signal_connect {
 #[derive(Default)] // for QDialogButtonBox_clicked
 pub struct QDialogButtonBox_clicked_signal{poi:u64}
 impl /* struct */ QDialogButtonBox {
-  pub fn clicked_1(self) -> QDialogButtonBox_clicked_signal {
+  pub fn clicked_1(&self) -> QDialogButtonBox_clicked_signal {
      return QDialogButtonBox_clicked_signal{poi:self.qclsinst};
   }
 }
@@ -437,7 +441,7 @@ pub trait QDialogButtonBox_clicked_signal_connect {
 #[derive(Default)] // for QDialogButtonBox_rejected
 pub struct QDialogButtonBox_rejected_signal{poi:u64}
 impl /* struct */ QDialogButtonBox {
-  pub fn rejected_1(self) -> QDialogButtonBox_rejected_signal {
+  pub fn rejected_1(&self) -> QDialogButtonBox_rejected_signal {
      return QDialogButtonBox_rejected_signal{poi:self.qclsinst};
   }
 }
@@ -451,43 +455,123 @@ pub trait QDialogButtonBox_rejected_signal_connect {
 }
 
 // accepted()
-extern fn QDialogButtonBox_accepted_signal_connect_cb_0() {
+extern fn QDialogButtonBox_accepted_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QDialogButtonBox_accepted_signal_connect for (extern fn()) {
+extern fn QDialogButtonBox_accepted_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, ) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QDialogButtonBox_accepted_signal_connect for fn() {
   fn connect(self, sigthis: QDialogButtonBox_accepted_signal) {
     // do smth...
-    unsafe {QDialogButtonBox_SlotProxy_connect__ZN16QDialogButtonBox8acceptedEv(sigthis.poi as *mut c_void, QDialogButtonBox_accepted_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDialogButtonBox_accepted_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QDialogButtonBox_SlotProxy_connect__ZN16QDialogButtonBox8acceptedEv(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QDialogButtonBox_accepted_signal_connect for Box<fn()> {
+  fn connect(self, sigthis: QDialogButtonBox_accepted_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDialogButtonBox_accepted_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QDialogButtonBox_SlotProxy_connect__ZN16QDialogButtonBox8acceptedEv(arg0, arg1, arg2)};
   }
 }
 // helpRequested()
-extern fn QDialogButtonBox_helpRequested_signal_connect_cb_1() {
+extern fn QDialogButtonBox_helpRequested_signal_connect_cb_1(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QDialogButtonBox_helpRequested_signal_connect for (extern fn()) {
+extern fn QDialogButtonBox_helpRequested_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, ) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QDialogButtonBox_helpRequested_signal_connect for fn() {
   fn connect(self, sigthis: QDialogButtonBox_helpRequested_signal) {
     // do smth...
-    unsafe {QDialogButtonBox_SlotProxy_connect__ZN16QDialogButtonBox13helpRequestedEv(sigthis.poi as *mut c_void, QDialogButtonBox_helpRequested_signal_connect_cb_1 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDialogButtonBox_helpRequested_signal_connect_cb_1 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QDialogButtonBox_SlotProxy_connect__ZN16QDialogButtonBox13helpRequestedEv(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QDialogButtonBox_helpRequested_signal_connect for Box<fn()> {
+  fn connect(self, sigthis: QDialogButtonBox_helpRequested_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDialogButtonBox_helpRequested_signal_connect_cb_box_1 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QDialogButtonBox_SlotProxy_connect__ZN16QDialogButtonBox13helpRequestedEv(arg0, arg1, arg2)};
   }
 }
 // clicked(class QAbstractButton *)
-extern fn QDialogButtonBox_clicked_signal_connect_cb_2(arg0: *mut c_void) {
+extern fn QDialogButtonBox_clicked_signal_connect_cb_2(rsfptr:fn(QAbstractButton), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QDialogButtonBox_clicked_signal_connect for (extern fn(QAbstractButton)) {
+extern fn QDialogButtonBox_clicked_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QDialogButtonBox_clicked_signal_connect for fn(QAbstractButton) {
   fn connect(self, sigthis: QDialogButtonBox_clicked_signal) {
     // do smth...
-    unsafe {QDialogButtonBox_SlotProxy_connect__ZN16QDialogButtonBox7clickedEP15QAbstractButton(sigthis.poi as *mut c_void, QDialogButtonBox_clicked_signal_connect_cb_2 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDialogButtonBox_clicked_signal_connect_cb_2 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QDialogButtonBox_SlotProxy_connect__ZN16QDialogButtonBox7clickedEP15QAbstractButton(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QDialogButtonBox_clicked_signal_connect for Box<fn(QAbstractButton)> {
+  fn connect(self, sigthis: QDialogButtonBox_clicked_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDialogButtonBox_clicked_signal_connect_cb_box_2 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QDialogButtonBox_SlotProxy_connect__ZN16QDialogButtonBox7clickedEP15QAbstractButton(arg0, arg1, arg2)};
   }
 }
 // rejected()
-extern fn QDialogButtonBox_rejected_signal_connect_cb_3() {
+extern fn QDialogButtonBox_rejected_signal_connect_cb_3(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QDialogButtonBox_rejected_signal_connect for (extern fn()) {
+extern fn QDialogButtonBox_rejected_signal_connect_cb_box_3(rsfptr_raw:*mut c_void, ) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QDialogButtonBox_rejected_signal_connect for fn() {
   fn connect(self, sigthis: QDialogButtonBox_rejected_signal) {
     // do smth...
-    unsafe {QDialogButtonBox_SlotProxy_connect__ZN16QDialogButtonBox8rejectedEv(sigthis.poi as *mut c_void, QDialogButtonBox_rejected_signal_connect_cb_3 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDialogButtonBox_rejected_signal_connect_cb_3 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QDialogButtonBox_SlotProxy_connect__ZN16QDialogButtonBox8rejectedEv(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QDialogButtonBox_rejected_signal_connect for Box<fn()> {
+  fn connect(self, sigthis: QDialogButtonBox_rejected_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDialogButtonBox_rejected_signal_connect_cb_box_3 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QDialogButtonBox_SlotProxy_connect__ZN16QDialogButtonBox8rejectedEv(arg0, arg1, arg2)};
   }
 }
 // <= body block end

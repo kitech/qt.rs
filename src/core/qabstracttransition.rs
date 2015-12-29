@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtCore/qabstracttransition.h
 // dst-file: /src/core/qabstracttransition.rs
 //
@@ -365,7 +365,7 @@ impl<'a> /*trait*/ QAbstractTransition_machine<QStateMachine> for () {
 #[derive(Default)] // for QAbstractTransition_targetStateChanged
 pub struct QAbstractTransition_targetStateChanged_signal{poi:u64}
 impl /* struct */ QAbstractTransition {
-  pub fn targetStateChanged_1(self) -> QAbstractTransition_targetStateChanged_signal {
+  pub fn targetStateChanged_1(&self) -> QAbstractTransition_targetStateChanged_signal {
      return QAbstractTransition_targetStateChanged_signal{poi:self.qclsinst};
   }
 }
@@ -381,7 +381,7 @@ pub trait QAbstractTransition_targetStateChanged_signal_connect {
 #[derive(Default)] // for QAbstractTransition_targetStatesChanged
 pub struct QAbstractTransition_targetStatesChanged_signal{poi:u64}
 impl /* struct */ QAbstractTransition {
-  pub fn targetStatesChanged_1(self) -> QAbstractTransition_targetStatesChanged_signal {
+  pub fn targetStatesChanged_1(&self) -> QAbstractTransition_targetStatesChanged_signal {
      return QAbstractTransition_targetStatesChanged_signal{poi:self.qclsinst};
   }
 }
@@ -397,7 +397,7 @@ pub trait QAbstractTransition_targetStatesChanged_signal_connect {
 #[derive(Default)] // for QAbstractTransition_triggered
 pub struct QAbstractTransition_triggered_signal{poi:u64}
 impl /* struct */ QAbstractTransition {
-  pub fn triggered_1(self) -> QAbstractTransition_triggered_signal {
+  pub fn triggered_1(&self) -> QAbstractTransition_triggered_signal {
      return QAbstractTransition_triggered_signal{poi:self.qclsinst};
   }
 }

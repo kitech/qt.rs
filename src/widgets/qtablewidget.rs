@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtWidgets/qtablewidget.h
 // dst-file: /src/widgets/qtablewidget.rs
 //
@@ -293,21 +293,36 @@ extern {
   fn demth_ZNK16QTableWidgetItem9whatsThisEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QTableWidgetItem::setToolTip(const QString & toolTip);
   fn demth_ZN16QTableWidgetItem10setToolTipERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  fn QTableWidget_SlotProxy_connect__ZN12QTableWidget13itemActivatedEP16QTableWidgetItem(qthis: *mut c_void, fptr: *mut c_void);
-  fn QTableWidget_SlotProxy_connect__ZN12QTableWidget20itemSelectionChangedEv(qthis: *mut c_void, fptr: *mut c_void);
-  fn QTableWidget_SlotProxy_connect__ZN12QTableWidget11itemChangedEP16QTableWidgetItem(qthis: *mut c_void, fptr: *mut c_void);
-  fn QTableWidget_SlotProxy_connect__ZN12QTableWidget11itemPressedEP16QTableWidgetItem(qthis: *mut c_void, fptr: *mut c_void);
-  fn QTableWidget_SlotProxy_connect__ZN12QTableWidget18currentItemChangedEP16QTableWidgetItemS1_(qthis: *mut c_void, fptr: *mut c_void);
-  fn QTableWidget_SlotProxy_connect__ZN12QTableWidget18currentCellChangedEiiii(qthis: *mut c_void, fptr: *mut c_void);
-  fn QTableWidget_SlotProxy_connect__ZN12QTableWidget11itemEnteredEP16QTableWidgetItem(qthis: *mut c_void, fptr: *mut c_void);
-  fn QTableWidget_SlotProxy_connect__ZN12QTableWidget11cellEnteredEii(qthis: *mut c_void, fptr: *mut c_void);
-  fn QTableWidget_SlotProxy_connect__ZN12QTableWidget13cellActivatedEii(qthis: *mut c_void, fptr: *mut c_void);
-  fn QTableWidget_SlotProxy_connect__ZN12QTableWidget11itemClickedEP16QTableWidgetItem(qthis: *mut c_void, fptr: *mut c_void);
-  fn QTableWidget_SlotProxy_connect__ZN12QTableWidget11cellClickedEii(qthis: *mut c_void, fptr: *mut c_void);
-  fn QTableWidget_SlotProxy_connect__ZN12QTableWidget17itemDoubleClickedEP16QTableWidgetItem(qthis: *mut c_void, fptr: *mut c_void);
-  fn QTableWidget_SlotProxy_connect__ZN12QTableWidget17cellDoubleClickedEii(qthis: *mut c_void, fptr: *mut c_void);
-  fn QTableWidget_SlotProxy_connect__ZN12QTableWidget11cellChangedEii(qthis: *mut c_void, fptr: *mut c_void);
-  fn QTableWidget_SlotProxy_connect__ZN12QTableWidget11cellPressedEii(qthis: *mut c_void, fptr: *mut c_void);
+  fn QTableWidget_SlotProxy_connect__ZN12QTableWidget13itemActivatedEP16QTableWidgetItem(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTableWidget_SlotProxy_connect_box__ZN12QTableWidget13itemActivatedEP16QTableWidgetItem(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTableWidget_SlotProxy_connect__ZN12QTableWidget20itemSelectionChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTableWidget_SlotProxy_connect_box__ZN12QTableWidget20itemSelectionChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTableWidget_SlotProxy_connect__ZN12QTableWidget11itemChangedEP16QTableWidgetItem(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTableWidget_SlotProxy_connect_box__ZN12QTableWidget11itemChangedEP16QTableWidgetItem(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTableWidget_SlotProxy_connect__ZN12QTableWidget11itemPressedEP16QTableWidgetItem(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTableWidget_SlotProxy_connect_box__ZN12QTableWidget11itemPressedEP16QTableWidgetItem(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTableWidget_SlotProxy_connect__ZN12QTableWidget18currentItemChangedEP16QTableWidgetItemS1_(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTableWidget_SlotProxy_connect_box__ZN12QTableWidget18currentItemChangedEP16QTableWidgetItemS1_(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTableWidget_SlotProxy_connect__ZN12QTableWidget18currentCellChangedEiiii(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTableWidget_SlotProxy_connect_box__ZN12QTableWidget18currentCellChangedEiiii(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTableWidget_SlotProxy_connect__ZN12QTableWidget11itemEnteredEP16QTableWidgetItem(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTableWidget_SlotProxy_connect_box__ZN12QTableWidget11itemEnteredEP16QTableWidgetItem(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTableWidget_SlotProxy_connect__ZN12QTableWidget11cellEnteredEii(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTableWidget_SlotProxy_connect_box__ZN12QTableWidget11cellEnteredEii(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTableWidget_SlotProxy_connect__ZN12QTableWidget13cellActivatedEii(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTableWidget_SlotProxy_connect_box__ZN12QTableWidget13cellActivatedEii(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTableWidget_SlotProxy_connect__ZN12QTableWidget11itemClickedEP16QTableWidgetItem(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTableWidget_SlotProxy_connect_box__ZN12QTableWidget11itemClickedEP16QTableWidgetItem(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTableWidget_SlotProxy_connect__ZN12QTableWidget11cellClickedEii(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTableWidget_SlotProxy_connect_box__ZN12QTableWidget11cellClickedEii(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTableWidget_SlotProxy_connect__ZN12QTableWidget17itemDoubleClickedEP16QTableWidgetItem(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTableWidget_SlotProxy_connect_box__ZN12QTableWidget17itemDoubleClickedEP16QTableWidgetItem(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTableWidget_SlotProxy_connect__ZN12QTableWidget17cellDoubleClickedEii(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTableWidget_SlotProxy_connect_box__ZN12QTableWidget17cellDoubleClickedEii(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTableWidget_SlotProxy_connect__ZN12QTableWidget11cellChangedEii(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTableWidget_SlotProxy_connect_box__ZN12QTableWidget11cellChangedEii(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTableWidget_SlotProxy_connect__ZN12QTableWidget11cellPressedEii(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTableWidget_SlotProxy_connect_box__ZN12QTableWidget11cellPressedEii(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -3113,7 +3128,7 @@ impl<'a> /*trait*/ QTableWidgetItem_setToolTip<()> for (&'a QString) {
 #[derive(Default)] // for QTableWidget_itemDoubleClicked
 pub struct QTableWidget_itemDoubleClicked_signal{poi:u64}
 impl /* struct */ QTableWidget {
-  pub fn itemDoubleClicked_1(self) -> QTableWidget_itemDoubleClicked_signal {
+  pub fn itemDoubleClicked_1(&self) -> QTableWidget_itemDoubleClicked_signal {
      return QTableWidget_itemDoubleClicked_signal{poi:self.qclsinst};
   }
 }
@@ -3129,7 +3144,7 @@ pub trait QTableWidget_itemDoubleClicked_signal_connect {
 #[derive(Default)] // for QTableWidget_cellEntered
 pub struct QTableWidget_cellEntered_signal{poi:u64}
 impl /* struct */ QTableWidget {
-  pub fn cellEntered_1(self) -> QTableWidget_cellEntered_signal {
+  pub fn cellEntered_1(&self) -> QTableWidget_cellEntered_signal {
      return QTableWidget_cellEntered_signal{poi:self.qclsinst};
   }
 }
@@ -3145,7 +3160,7 @@ pub trait QTableWidget_cellEntered_signal_connect {
 #[derive(Default)] // for QTableWidget_itemClicked
 pub struct QTableWidget_itemClicked_signal{poi:u64}
 impl /* struct */ QTableWidget {
-  pub fn itemClicked_1(self) -> QTableWidget_itemClicked_signal {
+  pub fn itemClicked_1(&self) -> QTableWidget_itemClicked_signal {
      return QTableWidget_itemClicked_signal{poi:self.qclsinst};
   }
 }
@@ -3161,7 +3176,7 @@ pub trait QTableWidget_itemClicked_signal_connect {
 #[derive(Default)] // for QTableWidget_currentItemChanged
 pub struct QTableWidget_currentItemChanged_signal{poi:u64}
 impl /* struct */ QTableWidget {
-  pub fn currentItemChanged_1(self) -> QTableWidget_currentItemChanged_signal {
+  pub fn currentItemChanged_1(&self) -> QTableWidget_currentItemChanged_signal {
      return QTableWidget_currentItemChanged_signal{poi:self.qclsinst};
   }
 }
@@ -3177,7 +3192,7 @@ pub trait QTableWidget_currentItemChanged_signal_connect {
 #[derive(Default)] // for QTableWidget_itemEntered
 pub struct QTableWidget_itemEntered_signal{poi:u64}
 impl /* struct */ QTableWidget {
-  pub fn itemEntered_1(self) -> QTableWidget_itemEntered_signal {
+  pub fn itemEntered_1(&self) -> QTableWidget_itemEntered_signal {
      return QTableWidget_itemEntered_signal{poi:self.qclsinst};
   }
 }
@@ -3193,7 +3208,7 @@ pub trait QTableWidget_itemEntered_signal_connect {
 #[derive(Default)] // for QTableWidget_itemPressed
 pub struct QTableWidget_itemPressed_signal{poi:u64}
 impl /* struct */ QTableWidget {
-  pub fn itemPressed_1(self) -> QTableWidget_itemPressed_signal {
+  pub fn itemPressed_1(&self) -> QTableWidget_itemPressed_signal {
      return QTableWidget_itemPressed_signal{poi:self.qclsinst};
   }
 }
@@ -3209,7 +3224,7 @@ pub trait QTableWidget_itemPressed_signal_connect {
 #[derive(Default)] // for QTableWidget_cellClicked
 pub struct QTableWidget_cellClicked_signal{poi:u64}
 impl /* struct */ QTableWidget {
-  pub fn cellClicked_1(self) -> QTableWidget_cellClicked_signal {
+  pub fn cellClicked_1(&self) -> QTableWidget_cellClicked_signal {
      return QTableWidget_cellClicked_signal{poi:self.qclsinst};
   }
 }
@@ -3225,7 +3240,7 @@ pub trait QTableWidget_cellClicked_signal_connect {
 #[derive(Default)] // for QTableWidget_itemSelectionChanged
 pub struct QTableWidget_itemSelectionChanged_signal{poi:u64}
 impl /* struct */ QTableWidget {
-  pub fn itemSelectionChanged_1(self) -> QTableWidget_itemSelectionChanged_signal {
+  pub fn itemSelectionChanged_1(&self) -> QTableWidget_itemSelectionChanged_signal {
      return QTableWidget_itemSelectionChanged_signal{poi:self.qclsinst};
   }
 }
@@ -3241,7 +3256,7 @@ pub trait QTableWidget_itemSelectionChanged_signal_connect {
 #[derive(Default)] // for QTableWidget_cellChanged
 pub struct QTableWidget_cellChanged_signal{poi:u64}
 impl /* struct */ QTableWidget {
-  pub fn cellChanged_1(self) -> QTableWidget_cellChanged_signal {
+  pub fn cellChanged_1(&self) -> QTableWidget_cellChanged_signal {
      return QTableWidget_cellChanged_signal{poi:self.qclsinst};
   }
 }
@@ -3257,7 +3272,7 @@ pub trait QTableWidget_cellChanged_signal_connect {
 #[derive(Default)] // for QTableWidget_itemActivated
 pub struct QTableWidget_itemActivated_signal{poi:u64}
 impl /* struct */ QTableWidget {
-  pub fn itemActivated_1(self) -> QTableWidget_itemActivated_signal {
+  pub fn itemActivated_1(&self) -> QTableWidget_itemActivated_signal {
      return QTableWidget_itemActivated_signal{poi:self.qclsinst};
   }
 }
@@ -3273,7 +3288,7 @@ pub trait QTableWidget_itemActivated_signal_connect {
 #[derive(Default)] // for QTableWidget_cellActivated
 pub struct QTableWidget_cellActivated_signal{poi:u64}
 impl /* struct */ QTableWidget {
-  pub fn cellActivated_1(self) -> QTableWidget_cellActivated_signal {
+  pub fn cellActivated_1(&self) -> QTableWidget_cellActivated_signal {
      return QTableWidget_cellActivated_signal{poi:self.qclsinst};
   }
 }
@@ -3289,7 +3304,7 @@ pub trait QTableWidget_cellActivated_signal_connect {
 #[derive(Default)] // for QTableWidget_itemChanged
 pub struct QTableWidget_itemChanged_signal{poi:u64}
 impl /* struct */ QTableWidget {
-  pub fn itemChanged_1(self) -> QTableWidget_itemChanged_signal {
+  pub fn itemChanged_1(&self) -> QTableWidget_itemChanged_signal {
      return QTableWidget_itemChanged_signal{poi:self.qclsinst};
   }
 }
@@ -3305,7 +3320,7 @@ pub trait QTableWidget_itemChanged_signal_connect {
 #[derive(Default)] // for QTableWidget_currentCellChanged
 pub struct QTableWidget_currentCellChanged_signal{poi:u64}
 impl /* struct */ QTableWidget {
-  pub fn currentCellChanged_1(self) -> QTableWidget_currentCellChanged_signal {
+  pub fn currentCellChanged_1(&self) -> QTableWidget_currentCellChanged_signal {
      return QTableWidget_currentCellChanged_signal{poi:self.qclsinst};
   }
 }
@@ -3321,7 +3336,7 @@ pub trait QTableWidget_currentCellChanged_signal_connect {
 #[derive(Default)] // for QTableWidget_cellDoubleClicked
 pub struct QTableWidget_cellDoubleClicked_signal{poi:u64}
 impl /* struct */ QTableWidget {
-  pub fn cellDoubleClicked_1(self) -> QTableWidget_cellDoubleClicked_signal {
+  pub fn cellDoubleClicked_1(&self) -> QTableWidget_cellDoubleClicked_signal {
      return QTableWidget_cellDoubleClicked_signal{poi:self.qclsinst};
   }
 }
@@ -3337,7 +3352,7 @@ pub trait QTableWidget_cellDoubleClicked_signal_connect {
 #[derive(Default)] // for QTableWidget_cellPressed
 pub struct QTableWidget_cellPressed_signal{poi:u64}
 impl /* struct */ QTableWidget {
-  pub fn cellPressed_1(self) -> QTableWidget_cellPressed_signal {
+  pub fn cellPressed_1(&self) -> QTableWidget_cellPressed_signal {
      return QTableWidget_cellPressed_signal{poi:self.qclsinst};
   }
 }
@@ -3351,153 +3366,453 @@ pub trait QTableWidget_cellPressed_signal_connect {
 }
 
 // itemActivated(class QTableWidgetItem *)
-extern fn QTableWidget_itemActivated_signal_connect_cb_0(arg0: *mut c_void) {
+extern fn QTableWidget_itemActivated_signal_connect_cb_0(rsfptr:fn(QTableWidgetItem), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QTableWidget_itemActivated_signal_connect for (extern fn(QTableWidgetItem)) {
+extern fn QTableWidget_itemActivated_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QTableWidget_itemActivated_signal_connect for fn(QTableWidgetItem) {
   fn connect(self, sigthis: QTableWidget_itemActivated_signal) {
     // do smth...
-    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget13itemActivatedEP16QTableWidgetItem(sigthis.poi as *mut c_void, QTableWidget_itemActivated_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTableWidget_itemActivated_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget13itemActivatedEP16QTableWidgetItem(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QTableWidget_itemActivated_signal_connect for Box<fn(QTableWidgetItem)> {
+  fn connect(self, sigthis: QTableWidget_itemActivated_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTableWidget_itemActivated_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget13itemActivatedEP16QTableWidgetItem(arg0, arg1, arg2)};
   }
 }
 // itemSelectionChanged()
-extern fn QTableWidget_itemSelectionChanged_signal_connect_cb_1() {
+extern fn QTableWidget_itemSelectionChanged_signal_connect_cb_1(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QTableWidget_itemSelectionChanged_signal_connect for (extern fn()) {
+extern fn QTableWidget_itemSelectionChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, ) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QTableWidget_itemSelectionChanged_signal_connect for fn() {
   fn connect(self, sigthis: QTableWidget_itemSelectionChanged_signal) {
     // do smth...
-    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget20itemSelectionChangedEv(sigthis.poi as *mut c_void, QTableWidget_itemSelectionChanged_signal_connect_cb_1 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTableWidget_itemSelectionChanged_signal_connect_cb_1 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget20itemSelectionChangedEv(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QTableWidget_itemSelectionChanged_signal_connect for Box<fn()> {
+  fn connect(self, sigthis: QTableWidget_itemSelectionChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTableWidget_itemSelectionChanged_signal_connect_cb_box_1 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget20itemSelectionChangedEv(arg0, arg1, arg2)};
   }
 }
 // itemChanged(class QTableWidgetItem *)
-extern fn QTableWidget_itemChanged_signal_connect_cb_2(arg0: *mut c_void) {
+extern fn QTableWidget_itemChanged_signal_connect_cb_2(rsfptr:fn(QTableWidgetItem), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QTableWidget_itemChanged_signal_connect for (extern fn(QTableWidgetItem)) {
+extern fn QTableWidget_itemChanged_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QTableWidget_itemChanged_signal_connect for fn(QTableWidgetItem) {
   fn connect(self, sigthis: QTableWidget_itemChanged_signal) {
     // do smth...
-    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget11itemChangedEP16QTableWidgetItem(sigthis.poi as *mut c_void, QTableWidget_itemChanged_signal_connect_cb_2 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTableWidget_itemChanged_signal_connect_cb_2 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget11itemChangedEP16QTableWidgetItem(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QTableWidget_itemChanged_signal_connect for Box<fn(QTableWidgetItem)> {
+  fn connect(self, sigthis: QTableWidget_itemChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTableWidget_itemChanged_signal_connect_cb_box_2 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget11itemChangedEP16QTableWidgetItem(arg0, arg1, arg2)};
   }
 }
 // itemPressed(class QTableWidgetItem *)
-extern fn QTableWidget_itemPressed_signal_connect_cb_3(arg0: *mut c_void) {
+extern fn QTableWidget_itemPressed_signal_connect_cb_3(rsfptr:fn(QTableWidgetItem), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QTableWidget_itemPressed_signal_connect for (extern fn(QTableWidgetItem)) {
+extern fn QTableWidget_itemPressed_signal_connect_cb_box_3(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QTableWidget_itemPressed_signal_connect for fn(QTableWidgetItem) {
   fn connect(self, sigthis: QTableWidget_itemPressed_signal) {
     // do smth...
-    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget11itemPressedEP16QTableWidgetItem(sigthis.poi as *mut c_void, QTableWidget_itemPressed_signal_connect_cb_3 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTableWidget_itemPressed_signal_connect_cb_3 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget11itemPressedEP16QTableWidgetItem(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QTableWidget_itemPressed_signal_connect for Box<fn(QTableWidgetItem)> {
+  fn connect(self, sigthis: QTableWidget_itemPressed_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTableWidget_itemPressed_signal_connect_cb_box_3 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget11itemPressedEP16QTableWidgetItem(arg0, arg1, arg2)};
   }
 }
 // currentItemChanged(class QTableWidgetItem *, class QTableWidgetItem *)
-extern fn QTableWidget_currentItemChanged_signal_connect_cb_4(arg0: *mut c_void, arg1: *mut c_void) {
+extern fn QTableWidget_currentItemChanged_signal_connect_cb_4(rsfptr:fn(QTableWidgetItem, QTableWidgetItem), arg0: *mut c_void, arg1: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QTableWidget_currentItemChanged_signal_connect for (extern fn(QTableWidgetItem, QTableWidgetItem)) {
+extern fn QTableWidget_currentItemChanged_signal_connect_cb_box_4(rsfptr_raw:*mut c_void, arg0: *mut c_void, arg1: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QTableWidget_currentItemChanged_signal_connect for fn(QTableWidgetItem, QTableWidgetItem) {
   fn connect(self, sigthis: QTableWidget_currentItemChanged_signal) {
     // do smth...
-    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget18currentItemChangedEP16QTableWidgetItemS1_(sigthis.poi as *mut c_void, QTableWidget_currentItemChanged_signal_connect_cb_4 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTableWidget_currentItemChanged_signal_connect_cb_4 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget18currentItemChangedEP16QTableWidgetItemS1_(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QTableWidget_currentItemChanged_signal_connect for Box<fn(QTableWidgetItem, QTableWidgetItem)> {
+  fn connect(self, sigthis: QTableWidget_currentItemChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTableWidget_currentItemChanged_signal_connect_cb_box_4 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget18currentItemChangedEP16QTableWidgetItemS1_(arg0, arg1, arg2)};
   }
 }
 // currentCellChanged(int, int, int, int)
-extern fn QTableWidget_currentCellChanged_signal_connect_cb_5(arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int) {
+extern fn QTableWidget_currentCellChanged_signal_connect_cb_5(rsfptr:fn(i32, i32, i32, i32), arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QTableWidget_currentCellChanged_signal_connect for (extern fn(i32, i32, i32, i32)) {
+extern fn QTableWidget_currentCellChanged_signal_connect_cb_box_5(rsfptr_raw:*mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QTableWidget_currentCellChanged_signal_connect for fn(i32, i32, i32, i32) {
   fn connect(self, sigthis: QTableWidget_currentCellChanged_signal) {
     // do smth...
-    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget18currentCellChangedEiiii(sigthis.poi as *mut c_void, QTableWidget_currentCellChanged_signal_connect_cb_5 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTableWidget_currentCellChanged_signal_connect_cb_5 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget18currentCellChangedEiiii(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QTableWidget_currentCellChanged_signal_connect for Box<fn(i32, i32, i32, i32)> {
+  fn connect(self, sigthis: QTableWidget_currentCellChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTableWidget_currentCellChanged_signal_connect_cb_box_5 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget18currentCellChangedEiiii(arg0, arg1, arg2)};
   }
 }
 // itemEntered(class QTableWidgetItem *)
-extern fn QTableWidget_itemEntered_signal_connect_cb_6(arg0: *mut c_void) {
+extern fn QTableWidget_itemEntered_signal_connect_cb_6(rsfptr:fn(QTableWidgetItem), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QTableWidget_itemEntered_signal_connect for (extern fn(QTableWidgetItem)) {
+extern fn QTableWidget_itemEntered_signal_connect_cb_box_6(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QTableWidget_itemEntered_signal_connect for fn(QTableWidgetItem) {
   fn connect(self, sigthis: QTableWidget_itemEntered_signal) {
     // do smth...
-    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget11itemEnteredEP16QTableWidgetItem(sigthis.poi as *mut c_void, QTableWidget_itemEntered_signal_connect_cb_6 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTableWidget_itemEntered_signal_connect_cb_6 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget11itemEnteredEP16QTableWidgetItem(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QTableWidget_itemEntered_signal_connect for Box<fn(QTableWidgetItem)> {
+  fn connect(self, sigthis: QTableWidget_itemEntered_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTableWidget_itemEntered_signal_connect_cb_box_6 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget11itemEnteredEP16QTableWidgetItem(arg0, arg1, arg2)};
   }
 }
 // cellEntered(int, int)
-extern fn QTableWidget_cellEntered_signal_connect_cb_7(arg0: c_int, arg1: c_int) {
+extern fn QTableWidget_cellEntered_signal_connect_cb_7(rsfptr:fn(i32, i32), arg0: c_int, arg1: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QTableWidget_cellEntered_signal_connect for (extern fn(i32, i32)) {
+extern fn QTableWidget_cellEntered_signal_connect_cb_box_7(rsfptr_raw:*mut c_void, arg0: c_int, arg1: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QTableWidget_cellEntered_signal_connect for fn(i32, i32) {
   fn connect(self, sigthis: QTableWidget_cellEntered_signal) {
     // do smth...
-    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget11cellEnteredEii(sigthis.poi as *mut c_void, QTableWidget_cellEntered_signal_connect_cb_7 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTableWidget_cellEntered_signal_connect_cb_7 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget11cellEnteredEii(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QTableWidget_cellEntered_signal_connect for Box<fn(i32, i32)> {
+  fn connect(self, sigthis: QTableWidget_cellEntered_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTableWidget_cellEntered_signal_connect_cb_box_7 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget11cellEnteredEii(arg0, arg1, arg2)};
   }
 }
 // cellActivated(int, int)
-extern fn QTableWidget_cellActivated_signal_connect_cb_8(arg0: c_int, arg1: c_int) {
+extern fn QTableWidget_cellActivated_signal_connect_cb_8(rsfptr:fn(i32, i32), arg0: c_int, arg1: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QTableWidget_cellActivated_signal_connect for (extern fn(i32, i32)) {
+extern fn QTableWidget_cellActivated_signal_connect_cb_box_8(rsfptr_raw:*mut c_void, arg0: c_int, arg1: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QTableWidget_cellActivated_signal_connect for fn(i32, i32) {
   fn connect(self, sigthis: QTableWidget_cellActivated_signal) {
     // do smth...
-    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget13cellActivatedEii(sigthis.poi as *mut c_void, QTableWidget_cellActivated_signal_connect_cb_8 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTableWidget_cellActivated_signal_connect_cb_8 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget13cellActivatedEii(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QTableWidget_cellActivated_signal_connect for Box<fn(i32, i32)> {
+  fn connect(self, sigthis: QTableWidget_cellActivated_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTableWidget_cellActivated_signal_connect_cb_box_8 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget13cellActivatedEii(arg0, arg1, arg2)};
   }
 }
 // itemClicked(class QTableWidgetItem *)
-extern fn QTableWidget_itemClicked_signal_connect_cb_9(arg0: *mut c_void) {
+extern fn QTableWidget_itemClicked_signal_connect_cb_9(rsfptr:fn(QTableWidgetItem), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QTableWidget_itemClicked_signal_connect for (extern fn(QTableWidgetItem)) {
+extern fn QTableWidget_itemClicked_signal_connect_cb_box_9(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QTableWidget_itemClicked_signal_connect for fn(QTableWidgetItem) {
   fn connect(self, sigthis: QTableWidget_itemClicked_signal) {
     // do smth...
-    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget11itemClickedEP16QTableWidgetItem(sigthis.poi as *mut c_void, QTableWidget_itemClicked_signal_connect_cb_9 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTableWidget_itemClicked_signal_connect_cb_9 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget11itemClickedEP16QTableWidgetItem(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QTableWidget_itemClicked_signal_connect for Box<fn(QTableWidgetItem)> {
+  fn connect(self, sigthis: QTableWidget_itemClicked_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTableWidget_itemClicked_signal_connect_cb_box_9 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget11itemClickedEP16QTableWidgetItem(arg0, arg1, arg2)};
   }
 }
 // cellClicked(int, int)
-extern fn QTableWidget_cellClicked_signal_connect_cb_10(arg0: c_int, arg1: c_int) {
+extern fn QTableWidget_cellClicked_signal_connect_cb_10(rsfptr:fn(i32, i32), arg0: c_int, arg1: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QTableWidget_cellClicked_signal_connect for (extern fn(i32, i32)) {
+extern fn QTableWidget_cellClicked_signal_connect_cb_box_10(rsfptr_raw:*mut c_void, arg0: c_int, arg1: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QTableWidget_cellClicked_signal_connect for fn(i32, i32) {
   fn connect(self, sigthis: QTableWidget_cellClicked_signal) {
     // do smth...
-    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget11cellClickedEii(sigthis.poi as *mut c_void, QTableWidget_cellClicked_signal_connect_cb_10 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTableWidget_cellClicked_signal_connect_cb_10 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget11cellClickedEii(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QTableWidget_cellClicked_signal_connect for Box<fn(i32, i32)> {
+  fn connect(self, sigthis: QTableWidget_cellClicked_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTableWidget_cellClicked_signal_connect_cb_box_10 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget11cellClickedEii(arg0, arg1, arg2)};
   }
 }
 // itemDoubleClicked(class QTableWidgetItem *)
-extern fn QTableWidget_itemDoubleClicked_signal_connect_cb_11(arg0: *mut c_void) {
+extern fn QTableWidget_itemDoubleClicked_signal_connect_cb_11(rsfptr:fn(QTableWidgetItem), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QTableWidget_itemDoubleClicked_signal_connect for (extern fn(QTableWidgetItem)) {
+extern fn QTableWidget_itemDoubleClicked_signal_connect_cb_box_11(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QTableWidget_itemDoubleClicked_signal_connect for fn(QTableWidgetItem) {
   fn connect(self, sigthis: QTableWidget_itemDoubleClicked_signal) {
     // do smth...
-    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget17itemDoubleClickedEP16QTableWidgetItem(sigthis.poi as *mut c_void, QTableWidget_itemDoubleClicked_signal_connect_cb_11 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTableWidget_itemDoubleClicked_signal_connect_cb_11 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget17itemDoubleClickedEP16QTableWidgetItem(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QTableWidget_itemDoubleClicked_signal_connect for Box<fn(QTableWidgetItem)> {
+  fn connect(self, sigthis: QTableWidget_itemDoubleClicked_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTableWidget_itemDoubleClicked_signal_connect_cb_box_11 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget17itemDoubleClickedEP16QTableWidgetItem(arg0, arg1, arg2)};
   }
 }
 // cellDoubleClicked(int, int)
-extern fn QTableWidget_cellDoubleClicked_signal_connect_cb_12(arg0: c_int, arg1: c_int) {
+extern fn QTableWidget_cellDoubleClicked_signal_connect_cb_12(rsfptr:fn(i32, i32), arg0: c_int, arg1: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QTableWidget_cellDoubleClicked_signal_connect for (extern fn(i32, i32)) {
+extern fn QTableWidget_cellDoubleClicked_signal_connect_cb_box_12(rsfptr_raw:*mut c_void, arg0: c_int, arg1: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QTableWidget_cellDoubleClicked_signal_connect for fn(i32, i32) {
   fn connect(self, sigthis: QTableWidget_cellDoubleClicked_signal) {
     // do smth...
-    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget17cellDoubleClickedEii(sigthis.poi as *mut c_void, QTableWidget_cellDoubleClicked_signal_connect_cb_12 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTableWidget_cellDoubleClicked_signal_connect_cb_12 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget17cellDoubleClickedEii(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QTableWidget_cellDoubleClicked_signal_connect for Box<fn(i32, i32)> {
+  fn connect(self, sigthis: QTableWidget_cellDoubleClicked_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTableWidget_cellDoubleClicked_signal_connect_cb_box_12 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget17cellDoubleClickedEii(arg0, arg1, arg2)};
   }
 }
 // cellChanged(int, int)
-extern fn QTableWidget_cellChanged_signal_connect_cb_13(arg0: c_int, arg1: c_int) {
+extern fn QTableWidget_cellChanged_signal_connect_cb_13(rsfptr:fn(i32, i32), arg0: c_int, arg1: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QTableWidget_cellChanged_signal_connect for (extern fn(i32, i32)) {
+extern fn QTableWidget_cellChanged_signal_connect_cb_box_13(rsfptr_raw:*mut c_void, arg0: c_int, arg1: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QTableWidget_cellChanged_signal_connect for fn(i32, i32) {
   fn connect(self, sigthis: QTableWidget_cellChanged_signal) {
     // do smth...
-    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget11cellChangedEii(sigthis.poi as *mut c_void, QTableWidget_cellChanged_signal_connect_cb_13 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTableWidget_cellChanged_signal_connect_cb_13 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget11cellChangedEii(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QTableWidget_cellChanged_signal_connect for Box<fn(i32, i32)> {
+  fn connect(self, sigthis: QTableWidget_cellChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTableWidget_cellChanged_signal_connect_cb_box_13 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget11cellChangedEii(arg0, arg1, arg2)};
   }
 }
 // cellPressed(int, int)
-extern fn QTableWidget_cellPressed_signal_connect_cb_14(arg0: c_int, arg1: c_int) {
+extern fn QTableWidget_cellPressed_signal_connect_cb_14(rsfptr:fn(i32, i32), arg0: c_int, arg1: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QTableWidget_cellPressed_signal_connect for (extern fn(i32, i32)) {
+extern fn QTableWidget_cellPressed_signal_connect_cb_box_14(rsfptr_raw:*mut c_void, arg0: c_int, arg1: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QTableWidget_cellPressed_signal_connect for fn(i32, i32) {
   fn connect(self, sigthis: QTableWidget_cellPressed_signal) {
     // do smth...
-    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget11cellPressedEii(sigthis.poi as *mut c_void, QTableWidget_cellPressed_signal_connect_cb_14 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTableWidget_cellPressed_signal_connect_cb_14 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget11cellPressedEii(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QTableWidget_cellPressed_signal_connect for Box<fn(i32, i32)> {
+  fn connect(self, sigthis: QTableWidget_cellPressed_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTableWidget_cellPressed_signal_connect_cb_box_14 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QTableWidget_SlotProxy_connect__ZN12QTableWidget11cellPressedEii(arg0, arg1, arg2)};
   }
 }
 // <= body block end

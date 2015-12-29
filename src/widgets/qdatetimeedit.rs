@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:03 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtWidgets/qdatetimeedit.h
 // dst-file: /src/widgets/qdatetimeedit.rs
 //
@@ -171,11 +171,16 @@ extern {
   fn _ZNK13QDateTimeEdit11minimumDateEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QDate QDateTimeEdit::maximumDate();
   fn _ZNK13QDateTimeEdit11maximumDateEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  fn QTimeEdit_SlotProxy_connect__ZN9QTimeEdit15userTimeChangedERK5QTime(qthis: *mut c_void, fptr: *mut c_void);
-  fn QDateEdit_SlotProxy_connect__ZN9QDateEdit15userDateChangedERK5QDate(qthis: *mut c_void, fptr: *mut c_void);
-  fn QDateTimeEdit_SlotProxy_connect__ZN13QDateTimeEdit15dateTimeChangedERK9QDateTime(qthis: *mut c_void, fptr: *mut c_void);
-  fn QDateTimeEdit_SlotProxy_connect__ZN13QDateTimeEdit11dateChangedERK5QDate(qthis: *mut c_void, fptr: *mut c_void);
-  fn QDateTimeEdit_SlotProxy_connect__ZN13QDateTimeEdit11timeChangedERK5QTime(qthis: *mut c_void, fptr: *mut c_void);
+  fn QTimeEdit_SlotProxy_connect__ZN9QTimeEdit15userTimeChangedERK5QTime(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTimeEdit_SlotProxy_connect_box__ZN9QTimeEdit15userTimeChangedERK5QTime(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QDateEdit_SlotProxy_connect__ZN9QDateEdit15userDateChangedERK5QDate(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QDateEdit_SlotProxy_connect_box__ZN9QDateEdit15userDateChangedERK5QDate(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QDateTimeEdit_SlotProxy_connect__ZN13QDateTimeEdit15dateTimeChangedERK9QDateTime(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QDateTimeEdit_SlotProxy_connect_box__ZN13QDateTimeEdit15dateTimeChangedERK9QDateTime(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QDateTimeEdit_SlotProxy_connect__ZN13QDateTimeEdit11dateChangedERK5QDate(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QDateTimeEdit_SlotProxy_connect_box__ZN13QDateTimeEdit11dateChangedERK5QDate(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QDateTimeEdit_SlotProxy_connect__ZN13QDateTimeEdit11timeChangedERK5QTime(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QDateTimeEdit_SlotProxy_connect_box__ZN13QDateTimeEdit11timeChangedERK5QTime(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -1623,7 +1628,7 @@ impl<'a> /*trait*/ QDateTimeEdit_maximumDate<QDate> for () {
 #[derive(Default)] // for QTimeEdit_userTimeChanged
 pub struct QTimeEdit_userTimeChanged_signal{poi:u64}
 impl /* struct */ QTimeEdit {
-  pub fn userTimeChanged_1(self) -> QTimeEdit_userTimeChanged_signal {
+  pub fn userTimeChanged_1(&self) -> QTimeEdit_userTimeChanged_signal {
      return QTimeEdit_userTimeChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1637,19 +1642,39 @@ pub trait QTimeEdit_userTimeChanged_signal_connect {
 }
 
 // userTimeChanged(const class QTime &)
-extern fn QTimeEdit_userTimeChanged_signal_connect_cb_0(arg0: *mut c_void) {
+extern fn QTimeEdit_userTimeChanged_signal_connect_cb_0(rsfptr:fn(QTime), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QTimeEdit_userTimeChanged_signal_connect for (extern fn(QTime)) {
+extern fn QTimeEdit_userTimeChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QTimeEdit_userTimeChanged_signal_connect for fn(QTime) {
   fn connect(self, sigthis: QTimeEdit_userTimeChanged_signal) {
     // do smth...
-    unsafe {QTimeEdit_SlotProxy_connect__ZN9QTimeEdit15userTimeChangedERK5QTime(sigthis.poi as *mut c_void, QTimeEdit_userTimeChanged_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTimeEdit_userTimeChanged_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QTimeEdit_SlotProxy_connect__ZN9QTimeEdit15userTimeChangedERK5QTime(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QTimeEdit_userTimeChanged_signal_connect for Box<fn(QTime)> {
+  fn connect(self, sigthis: QTimeEdit_userTimeChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTimeEdit_userTimeChanged_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QTimeEdit_SlotProxy_connect__ZN9QTimeEdit15userTimeChangedERK5QTime(arg0, arg1, arg2)};
   }
 }
 #[derive(Default)] // for QDateEdit_userDateChanged
 pub struct QDateEdit_userDateChanged_signal{poi:u64}
 impl /* struct */ QDateEdit {
-  pub fn userDateChanged_1(self) -> QDateEdit_userDateChanged_signal {
+  pub fn userDateChanged_1(&self) -> QDateEdit_userDateChanged_signal {
      return QDateEdit_userDateChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1663,19 +1688,39 @@ pub trait QDateEdit_userDateChanged_signal_connect {
 }
 
 // userDateChanged(const class QDate &)
-extern fn QDateEdit_userDateChanged_signal_connect_cb_0(arg0: *mut c_void) {
+extern fn QDateEdit_userDateChanged_signal_connect_cb_0(rsfptr:fn(QDate), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QDateEdit_userDateChanged_signal_connect for (extern fn(QDate)) {
+extern fn QDateEdit_userDateChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QDateEdit_userDateChanged_signal_connect for fn(QDate) {
   fn connect(self, sigthis: QDateEdit_userDateChanged_signal) {
     // do smth...
-    unsafe {QDateEdit_SlotProxy_connect__ZN9QDateEdit15userDateChangedERK5QDate(sigthis.poi as *mut c_void, QDateEdit_userDateChanged_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDateEdit_userDateChanged_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QDateEdit_SlotProxy_connect__ZN9QDateEdit15userDateChangedERK5QDate(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QDateEdit_userDateChanged_signal_connect for Box<fn(QDate)> {
+  fn connect(self, sigthis: QDateEdit_userDateChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDateEdit_userDateChanged_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QDateEdit_SlotProxy_connect__ZN9QDateEdit15userDateChangedERK5QDate(arg0, arg1, arg2)};
   }
 }
 #[derive(Default)] // for QDateTimeEdit_dateChanged
 pub struct QDateTimeEdit_dateChanged_signal{poi:u64}
 impl /* struct */ QDateTimeEdit {
-  pub fn dateChanged_1(self) -> QDateTimeEdit_dateChanged_signal {
+  pub fn dateChanged_1(&self) -> QDateTimeEdit_dateChanged_signal {
      return QDateTimeEdit_dateChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1691,7 +1736,7 @@ pub trait QDateTimeEdit_dateChanged_signal_connect {
 #[derive(Default)] // for QDateTimeEdit_timeChanged
 pub struct QDateTimeEdit_timeChanged_signal{poi:u64}
 impl /* struct */ QDateTimeEdit {
-  pub fn timeChanged_1(self) -> QDateTimeEdit_timeChanged_signal {
+  pub fn timeChanged_1(&self) -> QDateTimeEdit_timeChanged_signal {
      return QDateTimeEdit_timeChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1707,7 +1752,7 @@ pub trait QDateTimeEdit_timeChanged_signal_connect {
 #[derive(Default)] // for QDateTimeEdit_dateTimeChanged
 pub struct QDateTimeEdit_dateTimeChanged_signal{poi:u64}
 impl /* struct */ QDateTimeEdit {
-  pub fn dateTimeChanged_1(self) -> QDateTimeEdit_dateTimeChanged_signal {
+  pub fn dateTimeChanged_1(&self) -> QDateTimeEdit_dateTimeChanged_signal {
      return QDateTimeEdit_dateTimeChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1721,33 +1766,93 @@ pub trait QDateTimeEdit_dateTimeChanged_signal_connect {
 }
 
 // dateTimeChanged(const class QDateTime &)
-extern fn QDateTimeEdit_dateTimeChanged_signal_connect_cb_0(arg0: *mut c_void) {
+extern fn QDateTimeEdit_dateTimeChanged_signal_connect_cb_0(rsfptr:fn(QDateTime), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QDateTimeEdit_dateTimeChanged_signal_connect for (extern fn(QDateTime)) {
+extern fn QDateTimeEdit_dateTimeChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QDateTimeEdit_dateTimeChanged_signal_connect for fn(QDateTime) {
   fn connect(self, sigthis: QDateTimeEdit_dateTimeChanged_signal) {
     // do smth...
-    unsafe {QDateTimeEdit_SlotProxy_connect__ZN13QDateTimeEdit15dateTimeChangedERK9QDateTime(sigthis.poi as *mut c_void, QDateTimeEdit_dateTimeChanged_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDateTimeEdit_dateTimeChanged_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QDateTimeEdit_SlotProxy_connect__ZN13QDateTimeEdit15dateTimeChangedERK9QDateTime(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QDateTimeEdit_dateTimeChanged_signal_connect for Box<fn(QDateTime)> {
+  fn connect(self, sigthis: QDateTimeEdit_dateTimeChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDateTimeEdit_dateTimeChanged_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QDateTimeEdit_SlotProxy_connect__ZN13QDateTimeEdit15dateTimeChangedERK9QDateTime(arg0, arg1, arg2)};
   }
 }
 // dateChanged(const class QDate &)
-extern fn QDateTimeEdit_dateChanged_signal_connect_cb_1(arg0: *mut c_void) {
+extern fn QDateTimeEdit_dateChanged_signal_connect_cb_1(rsfptr:fn(QDate), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QDateTimeEdit_dateChanged_signal_connect for (extern fn(QDate)) {
+extern fn QDateTimeEdit_dateChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QDateTimeEdit_dateChanged_signal_connect for fn(QDate) {
   fn connect(self, sigthis: QDateTimeEdit_dateChanged_signal) {
     // do smth...
-    unsafe {QDateTimeEdit_SlotProxy_connect__ZN13QDateTimeEdit11dateChangedERK5QDate(sigthis.poi as *mut c_void, QDateTimeEdit_dateChanged_signal_connect_cb_1 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDateTimeEdit_dateChanged_signal_connect_cb_1 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QDateTimeEdit_SlotProxy_connect__ZN13QDateTimeEdit11dateChangedERK5QDate(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QDateTimeEdit_dateChanged_signal_connect for Box<fn(QDate)> {
+  fn connect(self, sigthis: QDateTimeEdit_dateChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDateTimeEdit_dateChanged_signal_connect_cb_box_1 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QDateTimeEdit_SlotProxy_connect__ZN13QDateTimeEdit11dateChangedERK5QDate(arg0, arg1, arg2)};
   }
 }
 // timeChanged(const class QTime &)
-extern fn QDateTimeEdit_timeChanged_signal_connect_cb_2(arg0: *mut c_void) {
+extern fn QDateTimeEdit_timeChanged_signal_connect_cb_2(rsfptr:fn(QTime), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QDateTimeEdit_timeChanged_signal_connect for (extern fn(QTime)) {
+extern fn QDateTimeEdit_timeChanged_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QDateTimeEdit_timeChanged_signal_connect for fn(QTime) {
   fn connect(self, sigthis: QDateTimeEdit_timeChanged_signal) {
     // do smth...
-    unsafe {QDateTimeEdit_SlotProxy_connect__ZN13QDateTimeEdit11timeChangedERK5QTime(sigthis.poi as *mut c_void, QDateTimeEdit_timeChanged_signal_connect_cb_2 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDateTimeEdit_timeChanged_signal_connect_cb_2 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QDateTimeEdit_SlotProxy_connect__ZN13QDateTimeEdit11timeChangedERK5QTime(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QDateTimeEdit_timeChanged_signal_connect for Box<fn(QTime)> {
+  fn connect(self, sigthis: QDateTimeEdit_timeChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDateTimeEdit_timeChanged_signal_connect_cb_box_2 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QDateTimeEdit_SlotProxy_connect__ZN13QDateTimeEdit11timeChangedERK5QTime(arg0, arg1, arg2)};
   }
 }
 // <= body block end

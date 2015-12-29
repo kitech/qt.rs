@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtWidgets/qsystemtrayicon.h
 // dst-file: /src/widgets/qsystemtrayicon.rs
 //
@@ -75,8 +75,10 @@ extern {
   fn _ZNK15QSystemTrayIcon11contextMenuEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto: static bool QSystemTrayIcon::isSystemTrayAvailable();
   fn _ZN15QSystemTrayIcon21isSystemTrayAvailableEv() -> c_char;
-  fn QSystemTrayIcon_SlotProxy_connect__ZN15QSystemTrayIcon14messageClickedEv(qthis: *mut c_void, fptr: *mut c_void);
-  fn QSystemTrayIcon_SlotProxy_connect__ZN15QSystemTrayIcon9activatedENS_16ActivationReasonE(qthis: *mut c_void, fptr: *mut c_void);
+  fn QSystemTrayIcon_SlotProxy_connect__ZN15QSystemTrayIcon14messageClickedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QSystemTrayIcon_SlotProxy_connect_box__ZN15QSystemTrayIcon14messageClickedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QSystemTrayIcon_SlotProxy_connect__ZN15QSystemTrayIcon9activatedENS_16ActivationReasonE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QSystemTrayIcon_SlotProxy_connect_box__ZN15QSystemTrayIcon9activatedENS_16ActivationReasonE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -538,7 +540,7 @@ impl<'a> /*trait*/ QSystemTrayIcon_isSystemTrayAvailable_s<i8> for () {
 #[derive(Default)] // for QSystemTrayIcon_activated
 pub struct QSystemTrayIcon_activated_signal{poi:u64}
 impl /* struct */ QSystemTrayIcon {
-  pub fn activated_1(self) -> QSystemTrayIcon_activated_signal {
+  pub fn activated_1(&self) -> QSystemTrayIcon_activated_signal {
      return QSystemTrayIcon_activated_signal{poi:self.qclsinst};
   }
 }
@@ -554,7 +556,7 @@ pub trait QSystemTrayIcon_activated_signal_connect {
 #[derive(Default)] // for QSystemTrayIcon_messageClicked
 pub struct QSystemTrayIcon_messageClicked_signal{poi:u64}
 impl /* struct */ QSystemTrayIcon {
-  pub fn messageClicked_1(self) -> QSystemTrayIcon_messageClicked_signal {
+  pub fn messageClicked_1(&self) -> QSystemTrayIcon_messageClicked_signal {
      return QSystemTrayIcon_messageClicked_signal{poi:self.qclsinst};
   }
 }
@@ -568,23 +570,63 @@ pub trait QSystemTrayIcon_messageClicked_signal_connect {
 }
 
 // messageClicked()
-extern fn QSystemTrayIcon_messageClicked_signal_connect_cb_0() {
+extern fn QSystemTrayIcon_messageClicked_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QSystemTrayIcon_messageClicked_signal_connect for (extern fn()) {
+extern fn QSystemTrayIcon_messageClicked_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, ) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QSystemTrayIcon_messageClicked_signal_connect for fn() {
   fn connect(self, sigthis: QSystemTrayIcon_messageClicked_signal) {
     // do smth...
-    unsafe {QSystemTrayIcon_SlotProxy_connect__ZN15QSystemTrayIcon14messageClickedEv(sigthis.poi as *mut c_void, QSystemTrayIcon_messageClicked_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QSystemTrayIcon_messageClicked_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QSystemTrayIcon_SlotProxy_connect__ZN15QSystemTrayIcon14messageClickedEv(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QSystemTrayIcon_messageClicked_signal_connect for Box<fn()> {
+  fn connect(self, sigthis: QSystemTrayIcon_messageClicked_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QSystemTrayIcon_messageClicked_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QSystemTrayIcon_SlotProxy_connect__ZN15QSystemTrayIcon14messageClickedEv(arg0, arg1, arg2)};
   }
 }
 // activated(class QSystemTrayIcon::ActivationReason)
-extern fn QSystemTrayIcon_activated_signal_connect_cb_1(arg0: c_int) {
+extern fn QSystemTrayIcon_activated_signal_connect_cb_1(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QSystemTrayIcon_activated_signal_connect for (extern fn(i32)) {
+extern fn QSystemTrayIcon_activated_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QSystemTrayIcon_activated_signal_connect for fn(i32) {
   fn connect(self, sigthis: QSystemTrayIcon_activated_signal) {
     // do smth...
-    unsafe {QSystemTrayIcon_SlotProxy_connect__ZN15QSystemTrayIcon9activatedENS_16ActivationReasonE(sigthis.poi as *mut c_void, QSystemTrayIcon_activated_signal_connect_cb_1 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QSystemTrayIcon_activated_signal_connect_cb_1 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QSystemTrayIcon_SlotProxy_connect__ZN15QSystemTrayIcon9activatedENS_16ActivationReasonE(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QSystemTrayIcon_activated_signal_connect for Box<fn(i32)> {
+  fn connect(self, sigthis: QSystemTrayIcon_activated_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QSystemTrayIcon_activated_signal_connect_cb_box_1 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QSystemTrayIcon_SlotProxy_connect__ZN15QSystemTrayIcon9activatedENS_16ActivationReasonE(arg0, arg1, arg2)};
   }
 }
 // <= body block end

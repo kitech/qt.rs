@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtCore/qsequentialanimationgroup.h
 // dst-file: /src/core/qsequentialanimationgroup.rs
 //
@@ -53,7 +53,8 @@ extern {
   fn _ZNK25QSequentialAnimationGroup16currentAnimationEv(qthis: u64 /* *mut c_void*/);
   // proto:  int QSequentialAnimationGroup::duration();
   fn _ZNK25QSequentialAnimationGroup8durationEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  fn QSequentialAnimationGroup_SlotProxy_connect__ZN25QSequentialAnimationGroup23currentAnimationChangedEP18QAbstractAnimation(qthis: *mut c_void, fptr: *mut c_void);
+  fn QSequentialAnimationGroup_SlotProxy_connect__ZN25QSequentialAnimationGroup23currentAnimationChangedEP18QAbstractAnimation(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QSequentialAnimationGroup_SlotProxy_connect_box__ZN25QSequentialAnimationGroup23currentAnimationChangedEP18QAbstractAnimation(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -293,7 +294,7 @@ impl<'a> /*trait*/ QSequentialAnimationGroup_duration<i32> for () {
 #[derive(Default)] // for QSequentialAnimationGroup_currentAnimationChanged
 pub struct QSequentialAnimationGroup_currentAnimationChanged_signal{poi:u64}
 impl /* struct */ QSequentialAnimationGroup {
-  pub fn currentAnimationChanged_1(self) -> QSequentialAnimationGroup_currentAnimationChanged_signal {
+  pub fn currentAnimationChanged_1(&self) -> QSequentialAnimationGroup_currentAnimationChanged_signal {
      return QSequentialAnimationGroup_currentAnimationChanged_signal{poi:self.qclsinst};
   }
 }
@@ -307,13 +308,33 @@ pub trait QSequentialAnimationGroup_currentAnimationChanged_signal_connect {
 }
 
 // currentAnimationChanged(class QAbstractAnimation *)
-extern fn QSequentialAnimationGroup_currentAnimationChanged_signal_connect_cb_0(arg0: *mut c_void) {
+extern fn QSequentialAnimationGroup_currentAnimationChanged_signal_connect_cb_0(rsfptr:fn(QAbstractAnimation), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QSequentialAnimationGroup_currentAnimationChanged_signal_connect for (extern fn(QAbstractAnimation)) {
+extern fn QSequentialAnimationGroup_currentAnimationChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QSequentialAnimationGroup_currentAnimationChanged_signal_connect for fn(QAbstractAnimation) {
   fn connect(self, sigthis: QSequentialAnimationGroup_currentAnimationChanged_signal) {
     // do smth...
-    unsafe {QSequentialAnimationGroup_SlotProxy_connect__ZN25QSequentialAnimationGroup23currentAnimationChangedEP18QAbstractAnimation(sigthis.poi as *mut c_void, QSequentialAnimationGroup_currentAnimationChanged_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QSequentialAnimationGroup_currentAnimationChanged_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QSequentialAnimationGroup_SlotProxy_connect__ZN25QSequentialAnimationGroup23currentAnimationChangedEP18QAbstractAnimation(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QSequentialAnimationGroup_currentAnimationChanged_signal_connect for Box<fn(QAbstractAnimation)> {
+  fn connect(self, sigthis: QSequentialAnimationGroup_currentAnimationChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QSequentialAnimationGroup_currentAnimationChanged_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QSequentialAnimationGroup_SlotProxy_connect__ZN25QSequentialAnimationGroup23currentAnimationChangedEP18QAbstractAnimation(arg0, arg1, arg2)};
   }
 }
 // <= body block end

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtWidgets/qlcdnumber.h
 // dst-file: /src/widgets/qlcdnumber.rs
 //
@@ -80,7 +80,8 @@ extern {
   fn _ZN10QLCDNumber10setOctModeEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QLCDNumber::overflow();
   fn _ZN10QLCDNumber8overflowEv(qthis: u64 /* *mut c_void*/);
-  fn QLCDNumber_SlotProxy_connect__ZN10QLCDNumber8overflowEv(qthis: *mut c_void, fptr: *mut c_void);
+  fn QLCDNumber_SlotProxy_connect__ZN10QLCDNumber8overflowEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QLCDNumber_SlotProxy_connect_box__ZN10QLCDNumber8overflowEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -571,7 +572,7 @@ impl<'a> /*trait*/ QLCDNumber_overflow<()> for () {
 #[derive(Default)] // for QLCDNumber_overflow
 pub struct QLCDNumber_overflow_signal{poi:u64}
 impl /* struct */ QLCDNumber {
-  pub fn overflow_1(self) -> QLCDNumber_overflow_signal {
+  pub fn overflow_1(&self) -> QLCDNumber_overflow_signal {
      return QLCDNumber_overflow_signal{poi:self.qclsinst};
   }
 }
@@ -585,13 +586,33 @@ pub trait QLCDNumber_overflow_signal_connect {
 }
 
 // overflow()
-extern fn QLCDNumber_overflow_signal_connect_cb_0() {
+extern fn QLCDNumber_overflow_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QLCDNumber_overflow_signal_connect for (extern fn()) {
+extern fn QLCDNumber_overflow_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, ) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QLCDNumber_overflow_signal_connect for fn() {
   fn connect(self, sigthis: QLCDNumber_overflow_signal) {
     // do smth...
-    unsafe {QLCDNumber_SlotProxy_connect__ZN10QLCDNumber8overflowEv(sigthis.poi as *mut c_void, QLCDNumber_overflow_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QLCDNumber_overflow_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QLCDNumber_SlotProxy_connect__ZN10QLCDNumber8overflowEv(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QLCDNumber_overflow_signal_connect for Box<fn()> {
+  fn connect(self, sigthis: QLCDNumber_overflow_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QLCDNumber_overflow_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QLCDNumber_SlotProxy_connect__ZN10QLCDNumber8overflowEv(arg0, arg1, arg2)};
   }
 }
 // <= body block end

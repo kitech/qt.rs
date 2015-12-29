@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:03 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtGui/qoffscreensurface.h
 // dst-file: /src/gui/qoffscreensurface.rs
 //
@@ -65,7 +65,8 @@ extern {
   fn _ZNK17QOffscreenSurface4sizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QOffscreenSurface::create();
   fn _ZN17QOffscreenSurface6createEv(qthis: u64 /* *mut c_void*/);
-  fn QOffscreenSurface_SlotProxy_connect__ZN17QOffscreenSurface13screenChangedEP7QScreen(qthis: *mut c_void, fptr: *mut c_void);
+  fn QOffscreenSurface_SlotProxy_connect__ZN17QOffscreenSurface13screenChangedEP7QScreen(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QOffscreenSurface_SlotProxy_connect_box__ZN17QOffscreenSurface13screenChangedEP7QScreen(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -440,7 +441,7 @@ impl<'a> /*trait*/ QOffscreenSurface_create<()> for () {
 #[derive(Default)] // for QOffscreenSurface_screenChanged
 pub struct QOffscreenSurface_screenChanged_signal{poi:u64}
 impl /* struct */ QOffscreenSurface {
-  pub fn screenChanged_1(self) -> QOffscreenSurface_screenChanged_signal {
+  pub fn screenChanged_1(&self) -> QOffscreenSurface_screenChanged_signal {
      return QOffscreenSurface_screenChanged_signal{poi:self.qclsinst};
   }
 }
@@ -454,13 +455,33 @@ pub trait QOffscreenSurface_screenChanged_signal_connect {
 }
 
 // screenChanged(class QScreen *)
-extern fn QOffscreenSurface_screenChanged_signal_connect_cb_0(arg0: *mut c_void) {
+extern fn QOffscreenSurface_screenChanged_signal_connect_cb_0(rsfptr:fn(QScreen), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QOffscreenSurface_screenChanged_signal_connect for (extern fn(QScreen)) {
+extern fn QOffscreenSurface_screenChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QOffscreenSurface_screenChanged_signal_connect for fn(QScreen) {
   fn connect(self, sigthis: QOffscreenSurface_screenChanged_signal) {
     // do smth...
-    unsafe {QOffscreenSurface_SlotProxy_connect__ZN17QOffscreenSurface13screenChangedEP7QScreen(sigthis.poi as *mut c_void, QOffscreenSurface_screenChanged_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QOffscreenSurface_screenChanged_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QOffscreenSurface_SlotProxy_connect__ZN17QOffscreenSurface13screenChangedEP7QScreen(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QOffscreenSurface_screenChanged_signal_connect for Box<fn(QScreen)> {
+  fn connect(self, sigthis: QOffscreenSurface_screenChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QOffscreenSurface_screenChanged_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QOffscreenSurface_SlotProxy_connect__ZN17QOffscreenSurface13screenChangedEP7QScreen(arg0, arg1, arg2)};
   }
 }
 // <= body block end

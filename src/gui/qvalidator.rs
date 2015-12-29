@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtGui/qvalidator.h
 // dst-file: /src/gui/qvalidator.rs
 //
@@ -157,15 +157,24 @@ extern {
   fn _ZN16QRegExpValidatorC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QRegExpValidator::regExpChanged(const QRegExp & regExp);
   fn _ZN16QRegExpValidator13regExpChangedERK7QRegExp(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  fn QRegularExpressionValidator_SlotProxy_connect__ZN27QRegularExpressionValidator24regularExpressionChangedERK18QRegularExpression(qthis: *mut c_void, fptr: *mut c_void);
-  fn QDoubleValidator_SlotProxy_connect__ZN16QDoubleValidator13bottomChangedEd(qthis: *mut c_void, fptr: *mut c_void);
-  fn QDoubleValidator_SlotProxy_connect__ZN16QDoubleValidator15decimalsChangedEi(qthis: *mut c_void, fptr: *mut c_void);
-  fn QDoubleValidator_SlotProxy_connect__ZN16QDoubleValidator15notationChangedENS_8NotationE(qthis: *mut c_void, fptr: *mut c_void);
-  fn QDoubleValidator_SlotProxy_connect__ZN16QDoubleValidator10topChangedEd(qthis: *mut c_void, fptr: *mut c_void);
-  fn QIntValidator_SlotProxy_connect__ZN13QIntValidator10topChangedEi(qthis: *mut c_void, fptr: *mut c_void);
-  fn QIntValidator_SlotProxy_connect__ZN13QIntValidator13bottomChangedEi(qthis: *mut c_void, fptr: *mut c_void);
-  fn QValidator_SlotProxy_connect__ZN10QValidator7changedEv(qthis: *mut c_void, fptr: *mut c_void);
-  fn QRegExpValidator_SlotProxy_connect__ZN16QRegExpValidator13regExpChangedERK7QRegExp(qthis: *mut c_void, fptr: *mut c_void);
+  fn QRegularExpressionValidator_SlotProxy_connect__ZN27QRegularExpressionValidator24regularExpressionChangedERK18QRegularExpression(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QRegularExpressionValidator_SlotProxy_connect_box__ZN27QRegularExpressionValidator24regularExpressionChangedERK18QRegularExpression(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QDoubleValidator_SlotProxy_connect__ZN16QDoubleValidator13bottomChangedEd(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QDoubleValidator_SlotProxy_connect_box__ZN16QDoubleValidator13bottomChangedEd(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QDoubleValidator_SlotProxy_connect__ZN16QDoubleValidator15decimalsChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QDoubleValidator_SlotProxy_connect_box__ZN16QDoubleValidator15decimalsChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QDoubleValidator_SlotProxy_connect__ZN16QDoubleValidator15notationChangedENS_8NotationE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QDoubleValidator_SlotProxy_connect_box__ZN16QDoubleValidator15notationChangedENS_8NotationE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QDoubleValidator_SlotProxy_connect__ZN16QDoubleValidator10topChangedEd(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QDoubleValidator_SlotProxy_connect_box__ZN16QDoubleValidator10topChangedEd(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QIntValidator_SlotProxy_connect__ZN13QIntValidator10topChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QIntValidator_SlotProxy_connect_box__ZN13QIntValidator10topChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QIntValidator_SlotProxy_connect__ZN13QIntValidator13bottomChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QIntValidator_SlotProxy_connect_box__ZN13QIntValidator13bottomChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QValidator_SlotProxy_connect__ZN10QValidator7changedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QValidator_SlotProxy_connect_box__ZN10QValidator7changedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QRegExpValidator_SlotProxy_connect__ZN16QRegExpValidator13regExpChangedERK7QRegExp(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QRegExpValidator_SlotProxy_connect_box__ZN16QRegExpValidator13regExpChangedERK7QRegExp(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -1466,7 +1475,7 @@ impl<'a> /*trait*/ QRegExpValidator_regExpChanged<()> for (&'a QRegExp) {
 #[derive(Default)] // for QRegularExpressionValidator_regularExpressionChanged
 pub struct QRegularExpressionValidator_regularExpressionChanged_signal{poi:u64}
 impl /* struct */ QRegularExpressionValidator {
-  pub fn regularExpressionChanged_1(self) -> QRegularExpressionValidator_regularExpressionChanged_signal {
+  pub fn regularExpressionChanged_1(&self) -> QRegularExpressionValidator_regularExpressionChanged_signal {
      return QRegularExpressionValidator_regularExpressionChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1480,19 +1489,39 @@ pub trait QRegularExpressionValidator_regularExpressionChanged_signal_connect {
 }
 
 // regularExpressionChanged(const class QRegularExpression &)
-extern fn QRegularExpressionValidator_regularExpressionChanged_signal_connect_cb_0(arg0: *mut c_void) {
+extern fn QRegularExpressionValidator_regularExpressionChanged_signal_connect_cb_0(rsfptr:fn(QRegularExpression), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QRegularExpressionValidator_regularExpressionChanged_signal_connect for (extern fn(QRegularExpression)) {
+extern fn QRegularExpressionValidator_regularExpressionChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QRegularExpressionValidator_regularExpressionChanged_signal_connect for fn(QRegularExpression) {
   fn connect(self, sigthis: QRegularExpressionValidator_regularExpressionChanged_signal) {
     // do smth...
-    unsafe {QRegularExpressionValidator_SlotProxy_connect__ZN27QRegularExpressionValidator24regularExpressionChangedERK18QRegularExpression(sigthis.poi as *mut c_void, QRegularExpressionValidator_regularExpressionChanged_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QRegularExpressionValidator_regularExpressionChanged_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QRegularExpressionValidator_SlotProxy_connect__ZN27QRegularExpressionValidator24regularExpressionChangedERK18QRegularExpression(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QRegularExpressionValidator_regularExpressionChanged_signal_connect for Box<fn(QRegularExpression)> {
+  fn connect(self, sigthis: QRegularExpressionValidator_regularExpressionChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QRegularExpressionValidator_regularExpressionChanged_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QRegularExpressionValidator_SlotProxy_connect__ZN27QRegularExpressionValidator24regularExpressionChangedERK18QRegularExpression(arg0, arg1, arg2)};
   }
 }
 #[derive(Default)] // for QDoubleValidator_topChanged
 pub struct QDoubleValidator_topChanged_signal{poi:u64}
 impl /* struct */ QDoubleValidator {
-  pub fn topChanged_1(self) -> QDoubleValidator_topChanged_signal {
+  pub fn topChanged_1(&self) -> QDoubleValidator_topChanged_signal {
      return QDoubleValidator_topChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1508,7 +1537,7 @@ pub trait QDoubleValidator_topChanged_signal_connect {
 #[derive(Default)] // for QDoubleValidator_notationChanged
 pub struct QDoubleValidator_notationChanged_signal{poi:u64}
 impl /* struct */ QDoubleValidator {
-  pub fn notationChanged_1(self) -> QDoubleValidator_notationChanged_signal {
+  pub fn notationChanged_1(&self) -> QDoubleValidator_notationChanged_signal {
      return QDoubleValidator_notationChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1524,7 +1553,7 @@ pub trait QDoubleValidator_notationChanged_signal_connect {
 #[derive(Default)] // for QDoubleValidator_bottomChanged
 pub struct QDoubleValidator_bottomChanged_signal{poi:u64}
 impl /* struct */ QDoubleValidator {
-  pub fn bottomChanged_1(self) -> QDoubleValidator_bottomChanged_signal {
+  pub fn bottomChanged_1(&self) -> QDoubleValidator_bottomChanged_signal {
      return QDoubleValidator_bottomChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1540,7 +1569,7 @@ pub trait QDoubleValidator_bottomChanged_signal_connect {
 #[derive(Default)] // for QDoubleValidator_decimalsChanged
 pub struct QDoubleValidator_decimalsChanged_signal{poi:u64}
 impl /* struct */ QDoubleValidator {
-  pub fn decimalsChanged_1(self) -> QDoubleValidator_decimalsChanged_signal {
+  pub fn decimalsChanged_1(&self) -> QDoubleValidator_decimalsChanged_signal {
      return QDoubleValidator_decimalsChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1554,49 +1583,129 @@ pub trait QDoubleValidator_decimalsChanged_signal_connect {
 }
 
 // bottomChanged(double)
-extern fn QDoubleValidator_bottomChanged_signal_connect_cb_0(arg0: c_double) {
+extern fn QDoubleValidator_bottomChanged_signal_connect_cb_0(rsfptr:fn(f64), arg0: c_double) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QDoubleValidator_bottomChanged_signal_connect for (extern fn(f64)) {
+extern fn QDoubleValidator_bottomChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_double) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QDoubleValidator_bottomChanged_signal_connect for fn(f64) {
   fn connect(self, sigthis: QDoubleValidator_bottomChanged_signal) {
     // do smth...
-    unsafe {QDoubleValidator_SlotProxy_connect__ZN16QDoubleValidator13bottomChangedEd(sigthis.poi as *mut c_void, QDoubleValidator_bottomChanged_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDoubleValidator_bottomChanged_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QDoubleValidator_SlotProxy_connect__ZN16QDoubleValidator13bottomChangedEd(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QDoubleValidator_bottomChanged_signal_connect for Box<fn(f64)> {
+  fn connect(self, sigthis: QDoubleValidator_bottomChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDoubleValidator_bottomChanged_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QDoubleValidator_SlotProxy_connect__ZN16QDoubleValidator13bottomChangedEd(arg0, arg1, arg2)};
   }
 }
 // decimalsChanged(int)
-extern fn QDoubleValidator_decimalsChanged_signal_connect_cb_1(arg0: c_int) {
+extern fn QDoubleValidator_decimalsChanged_signal_connect_cb_1(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QDoubleValidator_decimalsChanged_signal_connect for (extern fn(i32)) {
+extern fn QDoubleValidator_decimalsChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QDoubleValidator_decimalsChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QDoubleValidator_decimalsChanged_signal) {
     // do smth...
-    unsafe {QDoubleValidator_SlotProxy_connect__ZN16QDoubleValidator15decimalsChangedEi(sigthis.poi as *mut c_void, QDoubleValidator_decimalsChanged_signal_connect_cb_1 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDoubleValidator_decimalsChanged_signal_connect_cb_1 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QDoubleValidator_SlotProxy_connect__ZN16QDoubleValidator15decimalsChangedEi(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QDoubleValidator_decimalsChanged_signal_connect for Box<fn(i32)> {
+  fn connect(self, sigthis: QDoubleValidator_decimalsChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDoubleValidator_decimalsChanged_signal_connect_cb_box_1 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QDoubleValidator_SlotProxy_connect__ZN16QDoubleValidator15decimalsChangedEi(arg0, arg1, arg2)};
   }
 }
 // notationChanged(class QDoubleValidator::Notation)
-extern fn QDoubleValidator_notationChanged_signal_connect_cb_2(arg0: c_int) {
+extern fn QDoubleValidator_notationChanged_signal_connect_cb_2(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QDoubleValidator_notationChanged_signal_connect for (extern fn(i32)) {
+extern fn QDoubleValidator_notationChanged_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QDoubleValidator_notationChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QDoubleValidator_notationChanged_signal) {
     // do smth...
-    unsafe {QDoubleValidator_SlotProxy_connect__ZN16QDoubleValidator15notationChangedENS_8NotationE(sigthis.poi as *mut c_void, QDoubleValidator_notationChanged_signal_connect_cb_2 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDoubleValidator_notationChanged_signal_connect_cb_2 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QDoubleValidator_SlotProxy_connect__ZN16QDoubleValidator15notationChangedENS_8NotationE(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QDoubleValidator_notationChanged_signal_connect for Box<fn(i32)> {
+  fn connect(self, sigthis: QDoubleValidator_notationChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDoubleValidator_notationChanged_signal_connect_cb_box_2 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QDoubleValidator_SlotProxy_connect__ZN16QDoubleValidator15notationChangedENS_8NotationE(arg0, arg1, arg2)};
   }
 }
 // topChanged(double)
-extern fn QDoubleValidator_topChanged_signal_connect_cb_3(arg0: c_double) {
+extern fn QDoubleValidator_topChanged_signal_connect_cb_3(rsfptr:fn(f64), arg0: c_double) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QDoubleValidator_topChanged_signal_connect for (extern fn(f64)) {
+extern fn QDoubleValidator_topChanged_signal_connect_cb_box_3(rsfptr_raw:*mut c_void, arg0: c_double) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QDoubleValidator_topChanged_signal_connect for fn(f64) {
   fn connect(self, sigthis: QDoubleValidator_topChanged_signal) {
     // do smth...
-    unsafe {QDoubleValidator_SlotProxy_connect__ZN16QDoubleValidator10topChangedEd(sigthis.poi as *mut c_void, QDoubleValidator_topChanged_signal_connect_cb_3 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDoubleValidator_topChanged_signal_connect_cb_3 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QDoubleValidator_SlotProxy_connect__ZN16QDoubleValidator10topChangedEd(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QDoubleValidator_topChanged_signal_connect for Box<fn(f64)> {
+  fn connect(self, sigthis: QDoubleValidator_topChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDoubleValidator_topChanged_signal_connect_cb_box_3 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QDoubleValidator_SlotProxy_connect__ZN16QDoubleValidator10topChangedEd(arg0, arg1, arg2)};
   }
 }
 #[derive(Default)] // for QIntValidator_topChanged
 pub struct QIntValidator_topChanged_signal{poi:u64}
 impl /* struct */ QIntValidator {
-  pub fn topChanged_1(self) -> QIntValidator_topChanged_signal {
+  pub fn topChanged_1(&self) -> QIntValidator_topChanged_signal {
      return QIntValidator_topChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1612,7 +1721,7 @@ pub trait QIntValidator_topChanged_signal_connect {
 #[derive(Default)] // for QIntValidator_bottomChanged
 pub struct QIntValidator_bottomChanged_signal{poi:u64}
 impl /* struct */ QIntValidator {
-  pub fn bottomChanged_1(self) -> QIntValidator_bottomChanged_signal {
+  pub fn bottomChanged_1(&self) -> QIntValidator_bottomChanged_signal {
      return QIntValidator_bottomChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1626,29 +1735,69 @@ pub trait QIntValidator_bottomChanged_signal_connect {
 }
 
 // topChanged(int)
-extern fn QIntValidator_topChanged_signal_connect_cb_0(arg0: c_int) {
+extern fn QIntValidator_topChanged_signal_connect_cb_0(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QIntValidator_topChanged_signal_connect for (extern fn(i32)) {
+extern fn QIntValidator_topChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QIntValidator_topChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QIntValidator_topChanged_signal) {
     // do smth...
-    unsafe {QIntValidator_SlotProxy_connect__ZN13QIntValidator10topChangedEi(sigthis.poi as *mut c_void, QIntValidator_topChanged_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QIntValidator_topChanged_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QIntValidator_SlotProxy_connect__ZN13QIntValidator10topChangedEi(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QIntValidator_topChanged_signal_connect for Box<fn(i32)> {
+  fn connect(self, sigthis: QIntValidator_topChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QIntValidator_topChanged_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QIntValidator_SlotProxy_connect__ZN13QIntValidator10topChangedEi(arg0, arg1, arg2)};
   }
 }
 // bottomChanged(int)
-extern fn QIntValidator_bottomChanged_signal_connect_cb_1(arg0: c_int) {
+extern fn QIntValidator_bottomChanged_signal_connect_cb_1(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QIntValidator_bottomChanged_signal_connect for (extern fn(i32)) {
+extern fn QIntValidator_bottomChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QIntValidator_bottomChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QIntValidator_bottomChanged_signal) {
     // do smth...
-    unsafe {QIntValidator_SlotProxy_connect__ZN13QIntValidator13bottomChangedEi(sigthis.poi as *mut c_void, QIntValidator_bottomChanged_signal_connect_cb_1 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QIntValidator_bottomChanged_signal_connect_cb_1 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QIntValidator_SlotProxy_connect__ZN13QIntValidator13bottomChangedEi(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QIntValidator_bottomChanged_signal_connect for Box<fn(i32)> {
+  fn connect(self, sigthis: QIntValidator_bottomChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QIntValidator_bottomChanged_signal_connect_cb_box_1 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QIntValidator_SlotProxy_connect__ZN13QIntValidator13bottomChangedEi(arg0, arg1, arg2)};
   }
 }
 #[derive(Default)] // for QValidator_changed
 pub struct QValidator_changed_signal{poi:u64}
 impl /* struct */ QValidator {
-  pub fn changed_1(self) -> QValidator_changed_signal {
+  pub fn changed_1(&self) -> QValidator_changed_signal {
      return QValidator_changed_signal{poi:self.qclsinst};
   }
 }
@@ -1662,19 +1811,39 @@ pub trait QValidator_changed_signal_connect {
 }
 
 // changed()
-extern fn QValidator_changed_signal_connect_cb_0() {
+extern fn QValidator_changed_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QValidator_changed_signal_connect for (extern fn()) {
+extern fn QValidator_changed_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, ) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QValidator_changed_signal_connect for fn() {
   fn connect(self, sigthis: QValidator_changed_signal) {
     // do smth...
-    unsafe {QValidator_SlotProxy_connect__ZN10QValidator7changedEv(sigthis.poi as *mut c_void, QValidator_changed_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QValidator_changed_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QValidator_SlotProxy_connect__ZN10QValidator7changedEv(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QValidator_changed_signal_connect for Box<fn()> {
+  fn connect(self, sigthis: QValidator_changed_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QValidator_changed_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QValidator_SlotProxy_connect__ZN10QValidator7changedEv(arg0, arg1, arg2)};
   }
 }
 #[derive(Default)] // for QRegExpValidator_regExpChanged
 pub struct QRegExpValidator_regExpChanged_signal{poi:u64}
 impl /* struct */ QRegExpValidator {
-  pub fn regExpChanged_1(self) -> QRegExpValidator_regExpChanged_signal {
+  pub fn regExpChanged_1(&self) -> QRegExpValidator_regExpChanged_signal {
      return QRegExpValidator_regExpChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1688,13 +1857,33 @@ pub trait QRegExpValidator_regExpChanged_signal_connect {
 }
 
 // regExpChanged(const class QRegExp &)
-extern fn QRegExpValidator_regExpChanged_signal_connect_cb_0(arg0: *mut c_void) {
+extern fn QRegExpValidator_regExpChanged_signal_connect_cb_0(rsfptr:fn(QRegExp), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QRegExpValidator_regExpChanged_signal_connect for (extern fn(QRegExp)) {
+extern fn QRegExpValidator_regExpChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QRegExpValidator_regExpChanged_signal_connect for fn(QRegExp) {
   fn connect(self, sigthis: QRegExpValidator_regExpChanged_signal) {
     // do smth...
-    unsafe {QRegExpValidator_SlotProxy_connect__ZN16QRegExpValidator13regExpChangedERK7QRegExp(sigthis.poi as *mut c_void, QRegExpValidator_regExpChanged_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QRegExpValidator_regExpChanged_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QRegExpValidator_SlotProxy_connect__ZN16QRegExpValidator13regExpChangedERK7QRegExp(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QRegExpValidator_regExpChanged_signal_connect for Box<fn(QRegExp)> {
+  fn connect(self, sigthis: QRegExpValidator_regExpChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QRegExpValidator_regExpChanged_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QRegExpValidator_SlotProxy_connect__ZN16QRegExpValidator13regExpChangedERK7QRegExp(arg0, arg1, arg2)};
   }
 }
 // <= body block end

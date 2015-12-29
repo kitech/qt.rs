@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtCore/qabstractstate.h
 // dst-file: /src/core/qabstractstate.rs
 //
@@ -50,7 +50,8 @@ extern {
   fn _ZN14QAbstractState13activeChangedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  bool QAbstractState::active();
   fn _ZNK14QAbstractState6activeEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  fn QAbstractState_SlotProxy_connect__ZN14QAbstractState13activeChangedEb(qthis: *mut c_void, fptr: *mut c_void);
+  fn QAbstractState_SlotProxy_connect__ZN14QAbstractState13activeChangedEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QAbstractState_SlotProxy_connect_box__ZN14QAbstractState13activeChangedEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -267,7 +268,7 @@ impl<'a> /*trait*/ QAbstractState_active<i8> for () {
 #[derive(Default)] // for QAbstractState_entered
 pub struct QAbstractState_entered_signal{poi:u64}
 impl /* struct */ QAbstractState {
-  pub fn entered_1(self) -> QAbstractState_entered_signal {
+  pub fn entered_1(&self) -> QAbstractState_entered_signal {
      return QAbstractState_entered_signal{poi:self.qclsinst};
   }
 }
@@ -283,7 +284,7 @@ pub trait QAbstractState_entered_signal_connect {
 #[derive(Default)] // for QAbstractState_exited
 pub struct QAbstractState_exited_signal{poi:u64}
 impl /* struct */ QAbstractState {
-  pub fn exited_1(self) -> QAbstractState_exited_signal {
+  pub fn exited_1(&self) -> QAbstractState_exited_signal {
      return QAbstractState_exited_signal{poi:self.qclsinst};
   }
 }
@@ -299,7 +300,7 @@ pub trait QAbstractState_exited_signal_connect {
 #[derive(Default)] // for QAbstractState_activeChanged
 pub struct QAbstractState_activeChanged_signal{poi:u64}
 impl /* struct */ QAbstractState {
-  pub fn activeChanged_1(self) -> QAbstractState_activeChanged_signal {
+  pub fn activeChanged_1(&self) -> QAbstractState_activeChanged_signal {
      return QAbstractState_activeChanged_signal{poi:self.qclsinst};
   }
 }
@@ -313,13 +314,33 @@ pub trait QAbstractState_activeChanged_signal_connect {
 }
 
 // activeChanged(_Bool)
-extern fn QAbstractState_activeChanged_signal_connect_cb_0(arg0: c_char) {
+extern fn QAbstractState_activeChanged_signal_connect_cb_0(rsfptr:fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QAbstractState_activeChanged_signal_connect for (extern fn(i8)) {
+extern fn QAbstractState_activeChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_char) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QAbstractState_activeChanged_signal_connect for fn(i8) {
   fn connect(self, sigthis: QAbstractState_activeChanged_signal) {
     // do smth...
-    unsafe {QAbstractState_SlotProxy_connect__ZN14QAbstractState13activeChangedEb(sigthis.poi as *mut c_void, QAbstractState_activeChanged_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QAbstractState_activeChanged_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QAbstractState_SlotProxy_connect__ZN14QAbstractState13activeChangedEb(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QAbstractState_activeChanged_signal_connect for Box<fn(i8)> {
+  fn connect(self, sigthis: QAbstractState_activeChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QAbstractState_activeChanged_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QAbstractState_SlotProxy_connect__ZN14QAbstractState13activeChangedEb(arg0, arg1, arg2)};
   }
 }
 // <= body block end

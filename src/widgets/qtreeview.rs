@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtWidgets/qtreeview.h
 // dst-file: /src/widgets/qtreeview.rs
 //
@@ -170,8 +170,10 @@ extern {
   fn _ZNK9QTreeView7indexAtERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QTreeView::setColumnWidth(int column, int width);
   fn _ZN9QTreeView14setColumnWidthEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
-  fn QTreeView_SlotProxy_connect__ZN9QTreeView9collapsedERK11QModelIndex(qthis: *mut c_void, fptr: *mut c_void);
-  fn QTreeView_SlotProxy_connect__ZN9QTreeView8expandedERK11QModelIndex(qthis: *mut c_void, fptr: *mut c_void);
+  fn QTreeView_SlotProxy_connect__ZN9QTreeView9collapsedERK11QModelIndex(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTreeView_SlotProxy_connect_box__ZN9QTreeView9collapsedERK11QModelIndex(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTreeView_SlotProxy_connect__ZN9QTreeView8expandedERK11QModelIndex(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTreeView_SlotProxy_connect_box__ZN9QTreeView8expandedERK11QModelIndex(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -1715,7 +1717,7 @@ impl<'a> /*trait*/ QTreeView_setColumnWidth<()> for (i32, i32) {
 #[derive(Default)] // for QTreeView_collapsed
 pub struct QTreeView_collapsed_signal{poi:u64}
 impl /* struct */ QTreeView {
-  pub fn collapsed_1(self) -> QTreeView_collapsed_signal {
+  pub fn collapsed_1(&self) -> QTreeView_collapsed_signal {
      return QTreeView_collapsed_signal{poi:self.qclsinst};
   }
 }
@@ -1731,7 +1733,7 @@ pub trait QTreeView_collapsed_signal_connect {
 #[derive(Default)] // for QTreeView_expanded
 pub struct QTreeView_expanded_signal{poi:u64}
 impl /* struct */ QTreeView {
-  pub fn expanded_1(self) -> QTreeView_expanded_signal {
+  pub fn expanded_1(&self) -> QTreeView_expanded_signal {
      return QTreeView_expanded_signal{poi:self.qclsinst};
   }
 }
@@ -1745,23 +1747,63 @@ pub trait QTreeView_expanded_signal_connect {
 }
 
 // collapsed(const class QModelIndex &)
-extern fn QTreeView_collapsed_signal_connect_cb_0(arg0: *mut c_void) {
+extern fn QTreeView_collapsed_signal_connect_cb_0(rsfptr:fn(QModelIndex), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QTreeView_collapsed_signal_connect for (extern fn(QModelIndex)) {
+extern fn QTreeView_collapsed_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QTreeView_collapsed_signal_connect for fn(QModelIndex) {
   fn connect(self, sigthis: QTreeView_collapsed_signal) {
     // do smth...
-    unsafe {QTreeView_SlotProxy_connect__ZN9QTreeView9collapsedERK11QModelIndex(sigthis.poi as *mut c_void, QTreeView_collapsed_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTreeView_collapsed_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QTreeView_SlotProxy_connect__ZN9QTreeView9collapsedERK11QModelIndex(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QTreeView_collapsed_signal_connect for Box<fn(QModelIndex)> {
+  fn connect(self, sigthis: QTreeView_collapsed_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTreeView_collapsed_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QTreeView_SlotProxy_connect__ZN9QTreeView9collapsedERK11QModelIndex(arg0, arg1, arg2)};
   }
 }
 // expanded(const class QModelIndex &)
-extern fn QTreeView_expanded_signal_connect_cb_1(arg0: *mut c_void) {
+extern fn QTreeView_expanded_signal_connect_cb_1(rsfptr:fn(QModelIndex), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QTreeView_expanded_signal_connect for (extern fn(QModelIndex)) {
+extern fn QTreeView_expanded_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QTreeView_expanded_signal_connect for fn(QModelIndex) {
   fn connect(self, sigthis: QTreeView_expanded_signal) {
     // do smth...
-    unsafe {QTreeView_SlotProxy_connect__ZN9QTreeView8expandedERK11QModelIndex(sigthis.poi as *mut c_void, QTreeView_expanded_signal_connect_cb_1 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTreeView_expanded_signal_connect_cb_1 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QTreeView_SlotProxy_connect__ZN9QTreeView8expandedERK11QModelIndex(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QTreeView_expanded_signal_connect for Box<fn(QModelIndex)> {
+  fn connect(self, sigthis: QTreeView_expanded_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTreeView_expanded_signal_connect_cb_box_1 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QTreeView_SlotProxy_connect__ZN9QTreeView8expandedERK11QModelIndex(arg0, arg1, arg2)};
   }
 }
 // <= body block end

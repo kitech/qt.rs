@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtWidgets/qdatawidgetmapper.h
 // dst-file: /src/widgets/qdatawidgetmapper.rs
 //
@@ -91,7 +91,8 @@ extern {
   fn _ZN17QDataWidgetMapper6submitEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QDataWidgetMapper::toNext();
   fn _ZN17QDataWidgetMapper6toNextEv(qthis: u64 /* *mut c_void*/);
-  fn QDataWidgetMapper_SlotProxy_connect__ZN17QDataWidgetMapper19currentIndexChangedEi(qthis: *mut c_void, fptr: *mut c_void);
+  fn QDataWidgetMapper_SlotProxy_connect__ZN17QDataWidgetMapper19currentIndexChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QDataWidgetMapper_SlotProxy_connect_box__ZN17QDataWidgetMapper19currentIndexChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -730,7 +731,7 @@ impl<'a> /*trait*/ QDataWidgetMapper_toNext<()> for () {
 #[derive(Default)] // for QDataWidgetMapper_currentIndexChanged
 pub struct QDataWidgetMapper_currentIndexChanged_signal{poi:u64}
 impl /* struct */ QDataWidgetMapper {
-  pub fn currentIndexChanged_1(self) -> QDataWidgetMapper_currentIndexChanged_signal {
+  pub fn currentIndexChanged_1(&self) -> QDataWidgetMapper_currentIndexChanged_signal {
      return QDataWidgetMapper_currentIndexChanged_signal{poi:self.qclsinst};
   }
 }
@@ -744,13 +745,33 @@ pub trait QDataWidgetMapper_currentIndexChanged_signal_connect {
 }
 
 // currentIndexChanged(int)
-extern fn QDataWidgetMapper_currentIndexChanged_signal_connect_cb_0(arg0: c_int) {
+extern fn QDataWidgetMapper_currentIndexChanged_signal_connect_cb_0(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QDataWidgetMapper_currentIndexChanged_signal_connect for (extern fn(i32)) {
+extern fn QDataWidgetMapper_currentIndexChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QDataWidgetMapper_currentIndexChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QDataWidgetMapper_currentIndexChanged_signal) {
     // do smth...
-    unsafe {QDataWidgetMapper_SlotProxy_connect__ZN17QDataWidgetMapper19currentIndexChangedEi(sigthis.poi as *mut c_void, QDataWidgetMapper_currentIndexChanged_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDataWidgetMapper_currentIndexChanged_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QDataWidgetMapper_SlotProxy_connect__ZN17QDataWidgetMapper19currentIndexChangedEi(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QDataWidgetMapper_currentIndexChanged_signal_connect for Box<fn(i32)> {
+  fn connect(self, sigthis: QDataWidgetMapper_currentIndexChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDataWidgetMapper_currentIndexChanged_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QDataWidgetMapper_SlotProxy_connect__ZN17QDataWidgetMapper19currentIndexChangedEi(arg0, arg1, arg2)};
   }
 }
 // <= body block end

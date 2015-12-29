@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtWidgets/qgraphicsview.h
 // dst-file: /src/widgets/qgraphicsview.rs
 //
@@ -160,7 +160,8 @@ extern {
   fn _ZNK13QGraphicsView10mapToSceneERK12QPainterPath(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsView::setScene(QGraphicsScene * scene);
   fn _ZN13QGraphicsView8setSceneEP14QGraphicsScene(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  fn QGraphicsView_SlotProxy_connect__ZN13QGraphicsView17rubberBandChangedE5QRect7QPointFS1_(qthis: *mut c_void, fptr: *mut c_void);
+  fn QGraphicsView_SlotProxy_connect__ZN13QGraphicsView17rubberBandChangedE5QRect7QPointFS1_(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QGraphicsView_SlotProxy_connect_box__ZN13QGraphicsView17rubberBandChangedE5QRect7QPointFS1_(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -1312,7 +1313,7 @@ impl<'a> /*trait*/ QGraphicsView_setScene<()> for (&'a QGraphicsScene) {
 #[derive(Default)] // for QGraphicsView_rubberBandChanged
 pub struct QGraphicsView_rubberBandChanged_signal{poi:u64}
 impl /* struct */ QGraphicsView {
-  pub fn rubberBandChanged_1(self) -> QGraphicsView_rubberBandChanged_signal {
+  pub fn rubberBandChanged_1(&self) -> QGraphicsView_rubberBandChanged_signal {
      return QGraphicsView_rubberBandChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1326,13 +1327,33 @@ pub trait QGraphicsView_rubberBandChanged_signal_connect {
 }
 
 // rubberBandChanged(class QRect, class QPointF, class QPointF)
-extern fn QGraphicsView_rubberBandChanged_signal_connect_cb_0(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) {
+extern fn QGraphicsView_rubberBandChanged_signal_connect_cb_0(rsfptr:fn(QRect, QPointF, QPointF), arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QGraphicsView_rubberBandChanged_signal_connect for (extern fn(QRect, QPointF, QPointF)) {
+extern fn QGraphicsView_rubberBandChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QGraphicsView_rubberBandChanged_signal_connect for fn(QRect, QPointF, QPointF) {
   fn connect(self, sigthis: QGraphicsView_rubberBandChanged_signal) {
     // do smth...
-    unsafe {QGraphicsView_SlotProxy_connect__ZN13QGraphicsView17rubberBandChangedE5QRect7QPointFS1_(sigthis.poi as *mut c_void, QGraphicsView_rubberBandChanged_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QGraphicsView_rubberBandChanged_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QGraphicsView_SlotProxy_connect__ZN13QGraphicsView17rubberBandChangedE5QRect7QPointFS1_(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QGraphicsView_rubberBandChanged_signal_connect for Box<fn(QRect, QPointF, QPointF)> {
+  fn connect(self, sigthis: QGraphicsView_rubberBandChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QGraphicsView_rubberBandChanged_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QGraphicsView_SlotProxy_connect__ZN13QGraphicsView17rubberBandChangedE5QRect7QPointFS1_(arg0, arg1, arg2)};
   }
 }
 // <= body block end

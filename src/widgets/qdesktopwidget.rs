@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtWidgets/qdesktopwidget.h
 // dst-file: /src/widgets/qdesktopwidget.rs
 //
@@ -74,9 +74,12 @@ extern {
   fn _ZNK14QDesktopWidget10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QDesktopWidget::workAreaResized(int );
   fn _ZN14QDesktopWidget15workAreaResizedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
-  fn QDesktopWidget_SlotProxy_connect__ZN14QDesktopWidget18screenCountChangedEi(qthis: *mut c_void, fptr: *mut c_void);
-  fn QDesktopWidget_SlotProxy_connect__ZN14QDesktopWidget7resizedEi(qthis: *mut c_void, fptr: *mut c_void);
-  fn QDesktopWidget_SlotProxy_connect__ZN14QDesktopWidget15workAreaResizedEi(qthis: *mut c_void, fptr: *mut c_void);
+  fn QDesktopWidget_SlotProxy_connect__ZN14QDesktopWidget18screenCountChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QDesktopWidget_SlotProxy_connect_box__ZN14QDesktopWidget18screenCountChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QDesktopWidget_SlotProxy_connect__ZN14QDesktopWidget7resizedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QDesktopWidget_SlotProxy_connect_box__ZN14QDesktopWidget7resizedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QDesktopWidget_SlotProxy_connect__ZN14QDesktopWidget15workAreaResizedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QDesktopWidget_SlotProxy_connect_box__ZN14QDesktopWidget15workAreaResizedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -522,7 +525,7 @@ impl<'a> /*trait*/ QDesktopWidget_workAreaResized<()> for (i32) {
 #[derive(Default)] // for QDesktopWidget_screenCountChanged
 pub struct QDesktopWidget_screenCountChanged_signal{poi:u64}
 impl /* struct */ QDesktopWidget {
-  pub fn screenCountChanged_1(self) -> QDesktopWidget_screenCountChanged_signal {
+  pub fn screenCountChanged_1(&self) -> QDesktopWidget_screenCountChanged_signal {
      return QDesktopWidget_screenCountChanged_signal{poi:self.qclsinst};
   }
 }
@@ -538,7 +541,7 @@ pub trait QDesktopWidget_screenCountChanged_signal_connect {
 #[derive(Default)] // for QDesktopWidget_resized
 pub struct QDesktopWidget_resized_signal{poi:u64}
 impl /* struct */ QDesktopWidget {
-  pub fn resized_1(self) -> QDesktopWidget_resized_signal {
+  pub fn resized_1(&self) -> QDesktopWidget_resized_signal {
      return QDesktopWidget_resized_signal{poi:self.qclsinst};
   }
 }
@@ -554,7 +557,7 @@ pub trait QDesktopWidget_resized_signal_connect {
 #[derive(Default)] // for QDesktopWidget_workAreaResized
 pub struct QDesktopWidget_workAreaResized_signal{poi:u64}
 impl /* struct */ QDesktopWidget {
-  pub fn workAreaResized_1(self) -> QDesktopWidget_workAreaResized_signal {
+  pub fn workAreaResized_1(&self) -> QDesktopWidget_workAreaResized_signal {
      return QDesktopWidget_workAreaResized_signal{poi:self.qclsinst};
   }
 }
@@ -568,33 +571,93 @@ pub trait QDesktopWidget_workAreaResized_signal_connect {
 }
 
 // screenCountChanged(int)
-extern fn QDesktopWidget_screenCountChanged_signal_connect_cb_0(arg0: c_int) {
+extern fn QDesktopWidget_screenCountChanged_signal_connect_cb_0(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QDesktopWidget_screenCountChanged_signal_connect for (extern fn(i32)) {
+extern fn QDesktopWidget_screenCountChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QDesktopWidget_screenCountChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QDesktopWidget_screenCountChanged_signal) {
     // do smth...
-    unsafe {QDesktopWidget_SlotProxy_connect__ZN14QDesktopWidget18screenCountChangedEi(sigthis.poi as *mut c_void, QDesktopWidget_screenCountChanged_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDesktopWidget_screenCountChanged_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QDesktopWidget_SlotProxy_connect__ZN14QDesktopWidget18screenCountChangedEi(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QDesktopWidget_screenCountChanged_signal_connect for Box<fn(i32)> {
+  fn connect(self, sigthis: QDesktopWidget_screenCountChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDesktopWidget_screenCountChanged_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QDesktopWidget_SlotProxy_connect__ZN14QDesktopWidget18screenCountChangedEi(arg0, arg1, arg2)};
   }
 }
 // resized(int)
-extern fn QDesktopWidget_resized_signal_connect_cb_1(arg0: c_int) {
+extern fn QDesktopWidget_resized_signal_connect_cb_1(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QDesktopWidget_resized_signal_connect for (extern fn(i32)) {
+extern fn QDesktopWidget_resized_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QDesktopWidget_resized_signal_connect for fn(i32) {
   fn connect(self, sigthis: QDesktopWidget_resized_signal) {
     // do smth...
-    unsafe {QDesktopWidget_SlotProxy_connect__ZN14QDesktopWidget7resizedEi(sigthis.poi as *mut c_void, QDesktopWidget_resized_signal_connect_cb_1 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDesktopWidget_resized_signal_connect_cb_1 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QDesktopWidget_SlotProxy_connect__ZN14QDesktopWidget7resizedEi(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QDesktopWidget_resized_signal_connect for Box<fn(i32)> {
+  fn connect(self, sigthis: QDesktopWidget_resized_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDesktopWidget_resized_signal_connect_cb_box_1 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QDesktopWidget_SlotProxy_connect__ZN14QDesktopWidget7resizedEi(arg0, arg1, arg2)};
   }
 }
 // workAreaResized(int)
-extern fn QDesktopWidget_workAreaResized_signal_connect_cb_2(arg0: c_int) {
+extern fn QDesktopWidget_workAreaResized_signal_connect_cb_2(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QDesktopWidget_workAreaResized_signal_connect for (extern fn(i32)) {
+extern fn QDesktopWidget_workAreaResized_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QDesktopWidget_workAreaResized_signal_connect for fn(i32) {
   fn connect(self, sigthis: QDesktopWidget_workAreaResized_signal) {
     // do smth...
-    unsafe {QDesktopWidget_SlotProxy_connect__ZN14QDesktopWidget15workAreaResizedEi(sigthis.poi as *mut c_void, QDesktopWidget_workAreaResized_signal_connect_cb_2 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDesktopWidget_workAreaResized_signal_connect_cb_2 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QDesktopWidget_SlotProxy_connect__ZN14QDesktopWidget15workAreaResizedEi(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QDesktopWidget_workAreaResized_signal_connect for Box<fn(i32)> {
+  fn connect(self, sigthis: QDesktopWidget_workAreaResized_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDesktopWidget_workAreaResized_signal_connect_cb_box_2 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QDesktopWidget_SlotProxy_connect__ZN14QDesktopWidget15workAreaResizedEi(arg0, arg1, arg2)};
   }
 }
 // <= body block end

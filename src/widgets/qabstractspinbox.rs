@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtWidgets/qabstractspinbox.h
 // dst-file: /src/widgets/qabstractspinbox.rs
 //
@@ -97,7 +97,8 @@ extern {
   fn _ZNK16QAbstractSpinBox21isGroupSeparatorShownEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QAbstractSpinBox::hasFrame();
   fn _ZNK16QAbstractSpinBox8hasFrameEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  fn QAbstractSpinBox_SlotProxy_connect__ZN16QAbstractSpinBox15editingFinishedEv(qthis: *mut c_void, fptr: *mut c_void);
+  fn QAbstractSpinBox_SlotProxy_connect__ZN16QAbstractSpinBox15editingFinishedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QAbstractSpinBox_SlotProxy_connect_box__ZN16QAbstractSpinBox15editingFinishedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -838,7 +839,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_hasFrame<i8> for () {
 #[derive(Default)] // for QAbstractSpinBox_editingFinished
 pub struct QAbstractSpinBox_editingFinished_signal{poi:u64}
 impl /* struct */ QAbstractSpinBox {
-  pub fn editingFinished_1(self) -> QAbstractSpinBox_editingFinished_signal {
+  pub fn editingFinished_1(&self) -> QAbstractSpinBox_editingFinished_signal {
      return QAbstractSpinBox_editingFinished_signal{poi:self.qclsinst};
   }
 }
@@ -852,13 +853,33 @@ pub trait QAbstractSpinBox_editingFinished_signal_connect {
 }
 
 // editingFinished()
-extern fn QAbstractSpinBox_editingFinished_signal_connect_cb_0() {
+extern fn QAbstractSpinBox_editingFinished_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QAbstractSpinBox_editingFinished_signal_connect for (extern fn()) {
+extern fn QAbstractSpinBox_editingFinished_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, ) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QAbstractSpinBox_editingFinished_signal_connect for fn() {
   fn connect(self, sigthis: QAbstractSpinBox_editingFinished_signal) {
     // do smth...
-    unsafe {QAbstractSpinBox_SlotProxy_connect__ZN16QAbstractSpinBox15editingFinishedEv(sigthis.poi as *mut c_void, QAbstractSpinBox_editingFinished_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QAbstractSpinBox_editingFinished_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QAbstractSpinBox_SlotProxy_connect__ZN16QAbstractSpinBox15editingFinishedEv(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QAbstractSpinBox_editingFinished_signal_connect for Box<fn()> {
+  fn connect(self, sigthis: QAbstractSpinBox_editingFinished_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QAbstractSpinBox_editingFinished_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QAbstractSpinBox_SlotProxy_connect__ZN16QAbstractSpinBox15editingFinishedEv(arg0, arg1, arg2)};
   }
 }
 // <= body block end

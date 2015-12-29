@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtWidgets/qprogressdialog.h
 // dst-file: /src/widgets/qprogressdialog.rs
 //
@@ -94,7 +94,8 @@ extern {
   fn _ZN15QProgressDialog15setCancelButtonEP11QPushButton(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QProgressDialog::setValue(int progress);
   fn _ZN15QProgressDialog8setValueEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
-  fn QProgressDialog_SlotProxy_connect__ZN15QProgressDialog8canceledEv(qthis: *mut c_void, fptr: *mut c_void);
+  fn QProgressDialog_SlotProxy_connect__ZN15QProgressDialog8canceledEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QProgressDialog_SlotProxy_connect_box__ZN15QProgressDialog8canceledEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -775,7 +776,7 @@ impl<'a> /*trait*/ QProgressDialog_setValue<()> for (i32) {
 #[derive(Default)] // for QProgressDialog_canceled
 pub struct QProgressDialog_canceled_signal{poi:u64}
 impl /* struct */ QProgressDialog {
-  pub fn canceled_1(self) -> QProgressDialog_canceled_signal {
+  pub fn canceled_1(&self) -> QProgressDialog_canceled_signal {
      return QProgressDialog_canceled_signal{poi:self.qclsinst};
   }
 }
@@ -789,13 +790,33 @@ pub trait QProgressDialog_canceled_signal_connect {
 }
 
 // canceled()
-extern fn QProgressDialog_canceled_signal_connect_cb_0() {
+extern fn QProgressDialog_canceled_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QProgressDialog_canceled_signal_connect for (extern fn()) {
+extern fn QProgressDialog_canceled_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, ) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QProgressDialog_canceled_signal_connect for fn() {
   fn connect(self, sigthis: QProgressDialog_canceled_signal) {
     // do smth...
-    unsafe {QProgressDialog_SlotProxy_connect__ZN15QProgressDialog8canceledEv(sigthis.poi as *mut c_void, QProgressDialog_canceled_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QProgressDialog_canceled_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QProgressDialog_SlotProxy_connect__ZN15QProgressDialog8canceledEv(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QProgressDialog_canceled_signal_connect for Box<fn()> {
+  fn connect(self, sigthis: QProgressDialog_canceled_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QProgressDialog_canceled_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QProgressDialog_SlotProxy_connect__ZN15QProgressDialog8canceledEv(arg0, arg1, arg2)};
   }
 }
 // <= body block end

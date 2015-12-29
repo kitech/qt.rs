@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtWidgets/qtreewidget.h
 // dst-file: /src/widgets/qtreewidget.rs
 //
@@ -291,16 +291,26 @@ extern {
   fn demth_ZN15QTreeWidgetItem13setForegroundEiRK6QBrush(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  bool QTreeWidgetItem::isSelected();
   fn demth_ZNK15QTreeWidgetItem10isSelectedEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  fn QTreeWidget_SlotProxy_connect__ZN11QTreeWidget11itemPressedEP15QTreeWidgetItemi(qthis: *mut c_void, fptr: *mut c_void);
-  fn QTreeWidget_SlotProxy_connect__ZN11QTreeWidget17itemDoubleClickedEP15QTreeWidgetItemi(qthis: *mut c_void, fptr: *mut c_void);
-  fn QTreeWidget_SlotProxy_connect__ZN11QTreeWidget11itemEnteredEP15QTreeWidgetItemi(qthis: *mut c_void, fptr: *mut c_void);
-  fn QTreeWidget_SlotProxy_connect__ZN11QTreeWidget12itemExpandedEP15QTreeWidgetItem(qthis: *mut c_void, fptr: *mut c_void);
-  fn QTreeWidget_SlotProxy_connect__ZN11QTreeWidget13itemCollapsedEP15QTreeWidgetItem(qthis: *mut c_void, fptr: *mut c_void);
-  fn QTreeWidget_SlotProxy_connect__ZN11QTreeWidget18currentItemChangedEP15QTreeWidgetItemS1_(qthis: *mut c_void, fptr: *mut c_void);
-  fn QTreeWidget_SlotProxy_connect__ZN11QTreeWidget20itemSelectionChangedEv(qthis: *mut c_void, fptr: *mut c_void);
-  fn QTreeWidget_SlotProxy_connect__ZN11QTreeWidget11itemClickedEP15QTreeWidgetItemi(qthis: *mut c_void, fptr: *mut c_void);
-  fn QTreeWidget_SlotProxy_connect__ZN11QTreeWidget11itemChangedEP15QTreeWidgetItemi(qthis: *mut c_void, fptr: *mut c_void);
-  fn QTreeWidget_SlotProxy_connect__ZN11QTreeWidget13itemActivatedEP15QTreeWidgetItemi(qthis: *mut c_void, fptr: *mut c_void);
+  fn QTreeWidget_SlotProxy_connect__ZN11QTreeWidget11itemPressedEP15QTreeWidgetItemi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTreeWidget_SlotProxy_connect_box__ZN11QTreeWidget11itemPressedEP15QTreeWidgetItemi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTreeWidget_SlotProxy_connect__ZN11QTreeWidget17itemDoubleClickedEP15QTreeWidgetItemi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTreeWidget_SlotProxy_connect_box__ZN11QTreeWidget17itemDoubleClickedEP15QTreeWidgetItemi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTreeWidget_SlotProxy_connect__ZN11QTreeWidget11itemEnteredEP15QTreeWidgetItemi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTreeWidget_SlotProxy_connect_box__ZN11QTreeWidget11itemEnteredEP15QTreeWidgetItemi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTreeWidget_SlotProxy_connect__ZN11QTreeWidget12itemExpandedEP15QTreeWidgetItem(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTreeWidget_SlotProxy_connect_box__ZN11QTreeWidget12itemExpandedEP15QTreeWidgetItem(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTreeWidget_SlotProxy_connect__ZN11QTreeWidget13itemCollapsedEP15QTreeWidgetItem(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTreeWidget_SlotProxy_connect_box__ZN11QTreeWidget13itemCollapsedEP15QTreeWidgetItem(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTreeWidget_SlotProxy_connect__ZN11QTreeWidget18currentItemChangedEP15QTreeWidgetItemS1_(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTreeWidget_SlotProxy_connect_box__ZN11QTreeWidget18currentItemChangedEP15QTreeWidgetItemS1_(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTreeWidget_SlotProxy_connect__ZN11QTreeWidget20itemSelectionChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTreeWidget_SlotProxy_connect_box__ZN11QTreeWidget20itemSelectionChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTreeWidget_SlotProxy_connect__ZN11QTreeWidget11itemClickedEP15QTreeWidgetItemi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTreeWidget_SlotProxy_connect_box__ZN11QTreeWidget11itemClickedEP15QTreeWidgetItemi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTreeWidget_SlotProxy_connect__ZN11QTreeWidget11itemChangedEP15QTreeWidgetItemi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTreeWidget_SlotProxy_connect_box__ZN11QTreeWidget11itemChangedEP15QTreeWidgetItemi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTreeWidget_SlotProxy_connect__ZN11QTreeWidget13itemActivatedEP15QTreeWidgetItemi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QTreeWidget_SlotProxy_connect_box__ZN11QTreeWidget13itemActivatedEP15QTreeWidgetItemi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -3067,7 +3077,7 @@ impl<'a> /*trait*/ QTreeWidgetItem_isSelected<i8> for () {
 #[derive(Default)] // for QTreeWidget_itemDoubleClicked
 pub struct QTreeWidget_itemDoubleClicked_signal{poi:u64}
 impl /* struct */ QTreeWidget {
-  pub fn itemDoubleClicked_1(self) -> QTreeWidget_itemDoubleClicked_signal {
+  pub fn itemDoubleClicked_1(&self) -> QTreeWidget_itemDoubleClicked_signal {
      return QTreeWidget_itemDoubleClicked_signal{poi:self.qclsinst};
   }
 }
@@ -3083,7 +3093,7 @@ pub trait QTreeWidget_itemDoubleClicked_signal_connect {
 #[derive(Default)] // for QTreeWidget_itemClicked
 pub struct QTreeWidget_itemClicked_signal{poi:u64}
 impl /* struct */ QTreeWidget {
-  pub fn itemClicked_1(self) -> QTreeWidget_itemClicked_signal {
+  pub fn itemClicked_1(&self) -> QTreeWidget_itemClicked_signal {
      return QTreeWidget_itemClicked_signal{poi:self.qclsinst};
   }
 }
@@ -3099,7 +3109,7 @@ pub trait QTreeWidget_itemClicked_signal_connect {
 #[derive(Default)] // for QTreeWidget_currentItemChanged
 pub struct QTreeWidget_currentItemChanged_signal{poi:u64}
 impl /* struct */ QTreeWidget {
-  pub fn currentItemChanged_1(self) -> QTreeWidget_currentItemChanged_signal {
+  pub fn currentItemChanged_1(&self) -> QTreeWidget_currentItemChanged_signal {
      return QTreeWidget_currentItemChanged_signal{poi:self.qclsinst};
   }
 }
@@ -3115,7 +3125,7 @@ pub trait QTreeWidget_currentItemChanged_signal_connect {
 #[derive(Default)] // for QTreeWidget_itemEntered
 pub struct QTreeWidget_itemEntered_signal{poi:u64}
 impl /* struct */ QTreeWidget {
-  pub fn itemEntered_1(self) -> QTreeWidget_itemEntered_signal {
+  pub fn itemEntered_1(&self) -> QTreeWidget_itemEntered_signal {
      return QTreeWidget_itemEntered_signal{poi:self.qclsinst};
   }
 }
@@ -3131,7 +3141,7 @@ pub trait QTreeWidget_itemEntered_signal_connect {
 #[derive(Default)] // for QTreeWidget_itemPressed
 pub struct QTreeWidget_itemPressed_signal{poi:u64}
 impl /* struct */ QTreeWidget {
-  pub fn itemPressed_1(self) -> QTreeWidget_itemPressed_signal {
+  pub fn itemPressed_1(&self) -> QTreeWidget_itemPressed_signal {
      return QTreeWidget_itemPressed_signal{poi:self.qclsinst};
   }
 }
@@ -3147,7 +3157,7 @@ pub trait QTreeWidget_itemPressed_signal_connect {
 #[derive(Default)] // for QTreeWidget_itemSelectionChanged
 pub struct QTreeWidget_itemSelectionChanged_signal{poi:u64}
 impl /* struct */ QTreeWidget {
-  pub fn itemSelectionChanged_1(self) -> QTreeWidget_itemSelectionChanged_signal {
+  pub fn itemSelectionChanged_1(&self) -> QTreeWidget_itemSelectionChanged_signal {
      return QTreeWidget_itemSelectionChanged_signal{poi:self.qclsinst};
   }
 }
@@ -3163,7 +3173,7 @@ pub trait QTreeWidget_itemSelectionChanged_signal_connect {
 #[derive(Default)] // for QTreeWidget_itemActivated
 pub struct QTreeWidget_itemActivated_signal{poi:u64}
 impl /* struct */ QTreeWidget {
-  pub fn itemActivated_1(self) -> QTreeWidget_itemActivated_signal {
+  pub fn itemActivated_1(&self) -> QTreeWidget_itemActivated_signal {
      return QTreeWidget_itemActivated_signal{poi:self.qclsinst};
   }
 }
@@ -3179,7 +3189,7 @@ pub trait QTreeWidget_itemActivated_signal_connect {
 #[derive(Default)] // for QTreeWidget_itemExpanded
 pub struct QTreeWidget_itemExpanded_signal{poi:u64}
 impl /* struct */ QTreeWidget {
-  pub fn itemExpanded_1(self) -> QTreeWidget_itemExpanded_signal {
+  pub fn itemExpanded_1(&self) -> QTreeWidget_itemExpanded_signal {
      return QTreeWidget_itemExpanded_signal{poi:self.qclsinst};
   }
 }
@@ -3195,7 +3205,7 @@ pub trait QTreeWidget_itemExpanded_signal_connect {
 #[derive(Default)] // for QTreeWidget_itemChanged
 pub struct QTreeWidget_itemChanged_signal{poi:u64}
 impl /* struct */ QTreeWidget {
-  pub fn itemChanged_1(self) -> QTreeWidget_itemChanged_signal {
+  pub fn itemChanged_1(&self) -> QTreeWidget_itemChanged_signal {
      return QTreeWidget_itemChanged_signal{poi:self.qclsinst};
   }
 }
@@ -3211,7 +3221,7 @@ pub trait QTreeWidget_itemChanged_signal_connect {
 #[derive(Default)] // for QTreeWidget_itemCollapsed
 pub struct QTreeWidget_itemCollapsed_signal{poi:u64}
 impl /* struct */ QTreeWidget {
-  pub fn itemCollapsed_1(self) -> QTreeWidget_itemCollapsed_signal {
+  pub fn itemCollapsed_1(&self) -> QTreeWidget_itemCollapsed_signal {
      return QTreeWidget_itemCollapsed_signal{poi:self.qclsinst};
   }
 }
@@ -3225,103 +3235,303 @@ pub trait QTreeWidget_itemCollapsed_signal_connect {
 }
 
 // itemPressed(class QTreeWidgetItem *, int)
-extern fn QTreeWidget_itemPressed_signal_connect_cb_0(arg0: *mut c_void, arg1: c_int) {
+extern fn QTreeWidget_itemPressed_signal_connect_cb_0(rsfptr:fn(QTreeWidgetItem, i32), arg0: *mut c_void, arg1: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QTreeWidget_itemPressed_signal_connect for (extern fn(QTreeWidgetItem, i32)) {
+extern fn QTreeWidget_itemPressed_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void, arg1: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QTreeWidget_itemPressed_signal_connect for fn(QTreeWidgetItem, i32) {
   fn connect(self, sigthis: QTreeWidget_itemPressed_signal) {
     // do smth...
-    unsafe {QTreeWidget_SlotProxy_connect__ZN11QTreeWidget11itemPressedEP15QTreeWidgetItemi(sigthis.poi as *mut c_void, QTreeWidget_itemPressed_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTreeWidget_itemPressed_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QTreeWidget_SlotProxy_connect__ZN11QTreeWidget11itemPressedEP15QTreeWidgetItemi(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QTreeWidget_itemPressed_signal_connect for Box<fn(QTreeWidgetItem, i32)> {
+  fn connect(self, sigthis: QTreeWidget_itemPressed_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTreeWidget_itemPressed_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QTreeWidget_SlotProxy_connect__ZN11QTreeWidget11itemPressedEP15QTreeWidgetItemi(arg0, arg1, arg2)};
   }
 }
 // itemDoubleClicked(class QTreeWidgetItem *, int)
-extern fn QTreeWidget_itemDoubleClicked_signal_connect_cb_1(arg0: *mut c_void, arg1: c_int) {
+extern fn QTreeWidget_itemDoubleClicked_signal_connect_cb_1(rsfptr:fn(QTreeWidgetItem, i32), arg0: *mut c_void, arg1: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QTreeWidget_itemDoubleClicked_signal_connect for (extern fn(QTreeWidgetItem, i32)) {
+extern fn QTreeWidget_itemDoubleClicked_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: *mut c_void, arg1: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QTreeWidget_itemDoubleClicked_signal_connect for fn(QTreeWidgetItem, i32) {
   fn connect(self, sigthis: QTreeWidget_itemDoubleClicked_signal) {
     // do smth...
-    unsafe {QTreeWidget_SlotProxy_connect__ZN11QTreeWidget17itemDoubleClickedEP15QTreeWidgetItemi(sigthis.poi as *mut c_void, QTreeWidget_itemDoubleClicked_signal_connect_cb_1 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTreeWidget_itemDoubleClicked_signal_connect_cb_1 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QTreeWidget_SlotProxy_connect__ZN11QTreeWidget17itemDoubleClickedEP15QTreeWidgetItemi(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QTreeWidget_itemDoubleClicked_signal_connect for Box<fn(QTreeWidgetItem, i32)> {
+  fn connect(self, sigthis: QTreeWidget_itemDoubleClicked_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTreeWidget_itemDoubleClicked_signal_connect_cb_box_1 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QTreeWidget_SlotProxy_connect__ZN11QTreeWidget17itemDoubleClickedEP15QTreeWidgetItemi(arg0, arg1, arg2)};
   }
 }
 // itemEntered(class QTreeWidgetItem *, int)
-extern fn QTreeWidget_itemEntered_signal_connect_cb_2(arg0: *mut c_void, arg1: c_int) {
+extern fn QTreeWidget_itemEntered_signal_connect_cb_2(rsfptr:fn(QTreeWidgetItem, i32), arg0: *mut c_void, arg1: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QTreeWidget_itemEntered_signal_connect for (extern fn(QTreeWidgetItem, i32)) {
+extern fn QTreeWidget_itemEntered_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, arg0: *mut c_void, arg1: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QTreeWidget_itemEntered_signal_connect for fn(QTreeWidgetItem, i32) {
   fn connect(self, sigthis: QTreeWidget_itemEntered_signal) {
     // do smth...
-    unsafe {QTreeWidget_SlotProxy_connect__ZN11QTreeWidget11itemEnteredEP15QTreeWidgetItemi(sigthis.poi as *mut c_void, QTreeWidget_itemEntered_signal_connect_cb_2 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTreeWidget_itemEntered_signal_connect_cb_2 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QTreeWidget_SlotProxy_connect__ZN11QTreeWidget11itemEnteredEP15QTreeWidgetItemi(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QTreeWidget_itemEntered_signal_connect for Box<fn(QTreeWidgetItem, i32)> {
+  fn connect(self, sigthis: QTreeWidget_itemEntered_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTreeWidget_itemEntered_signal_connect_cb_box_2 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QTreeWidget_SlotProxy_connect__ZN11QTreeWidget11itemEnteredEP15QTreeWidgetItemi(arg0, arg1, arg2)};
   }
 }
 // itemExpanded(class QTreeWidgetItem *)
-extern fn QTreeWidget_itemExpanded_signal_connect_cb_3(arg0: *mut c_void) {
+extern fn QTreeWidget_itemExpanded_signal_connect_cb_3(rsfptr:fn(QTreeWidgetItem), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QTreeWidget_itemExpanded_signal_connect for (extern fn(QTreeWidgetItem)) {
+extern fn QTreeWidget_itemExpanded_signal_connect_cb_box_3(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QTreeWidget_itemExpanded_signal_connect for fn(QTreeWidgetItem) {
   fn connect(self, sigthis: QTreeWidget_itemExpanded_signal) {
     // do smth...
-    unsafe {QTreeWidget_SlotProxy_connect__ZN11QTreeWidget12itemExpandedEP15QTreeWidgetItem(sigthis.poi as *mut c_void, QTreeWidget_itemExpanded_signal_connect_cb_3 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTreeWidget_itemExpanded_signal_connect_cb_3 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QTreeWidget_SlotProxy_connect__ZN11QTreeWidget12itemExpandedEP15QTreeWidgetItem(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QTreeWidget_itemExpanded_signal_connect for Box<fn(QTreeWidgetItem)> {
+  fn connect(self, sigthis: QTreeWidget_itemExpanded_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTreeWidget_itemExpanded_signal_connect_cb_box_3 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QTreeWidget_SlotProxy_connect__ZN11QTreeWidget12itemExpandedEP15QTreeWidgetItem(arg0, arg1, arg2)};
   }
 }
 // itemCollapsed(class QTreeWidgetItem *)
-extern fn QTreeWidget_itemCollapsed_signal_connect_cb_4(arg0: *mut c_void) {
+extern fn QTreeWidget_itemCollapsed_signal_connect_cb_4(rsfptr:fn(QTreeWidgetItem), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QTreeWidget_itemCollapsed_signal_connect for (extern fn(QTreeWidgetItem)) {
+extern fn QTreeWidget_itemCollapsed_signal_connect_cb_box_4(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QTreeWidget_itemCollapsed_signal_connect for fn(QTreeWidgetItem) {
   fn connect(self, sigthis: QTreeWidget_itemCollapsed_signal) {
     // do smth...
-    unsafe {QTreeWidget_SlotProxy_connect__ZN11QTreeWidget13itemCollapsedEP15QTreeWidgetItem(sigthis.poi as *mut c_void, QTreeWidget_itemCollapsed_signal_connect_cb_4 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTreeWidget_itemCollapsed_signal_connect_cb_4 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QTreeWidget_SlotProxy_connect__ZN11QTreeWidget13itemCollapsedEP15QTreeWidgetItem(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QTreeWidget_itemCollapsed_signal_connect for Box<fn(QTreeWidgetItem)> {
+  fn connect(self, sigthis: QTreeWidget_itemCollapsed_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTreeWidget_itemCollapsed_signal_connect_cb_box_4 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QTreeWidget_SlotProxy_connect__ZN11QTreeWidget13itemCollapsedEP15QTreeWidgetItem(arg0, arg1, arg2)};
   }
 }
 // currentItemChanged(class QTreeWidgetItem *, class QTreeWidgetItem *)
-extern fn QTreeWidget_currentItemChanged_signal_connect_cb_5(arg0: *mut c_void, arg1: *mut c_void) {
+extern fn QTreeWidget_currentItemChanged_signal_connect_cb_5(rsfptr:fn(QTreeWidgetItem, QTreeWidgetItem), arg0: *mut c_void, arg1: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QTreeWidget_currentItemChanged_signal_connect for (extern fn(QTreeWidgetItem, QTreeWidgetItem)) {
+extern fn QTreeWidget_currentItemChanged_signal_connect_cb_box_5(rsfptr_raw:*mut c_void, arg0: *mut c_void, arg1: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QTreeWidget_currentItemChanged_signal_connect for fn(QTreeWidgetItem, QTreeWidgetItem) {
   fn connect(self, sigthis: QTreeWidget_currentItemChanged_signal) {
     // do smth...
-    unsafe {QTreeWidget_SlotProxy_connect__ZN11QTreeWidget18currentItemChangedEP15QTreeWidgetItemS1_(sigthis.poi as *mut c_void, QTreeWidget_currentItemChanged_signal_connect_cb_5 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTreeWidget_currentItemChanged_signal_connect_cb_5 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QTreeWidget_SlotProxy_connect__ZN11QTreeWidget18currentItemChangedEP15QTreeWidgetItemS1_(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QTreeWidget_currentItemChanged_signal_connect for Box<fn(QTreeWidgetItem, QTreeWidgetItem)> {
+  fn connect(self, sigthis: QTreeWidget_currentItemChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTreeWidget_currentItemChanged_signal_connect_cb_box_5 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QTreeWidget_SlotProxy_connect__ZN11QTreeWidget18currentItemChangedEP15QTreeWidgetItemS1_(arg0, arg1, arg2)};
   }
 }
 // itemSelectionChanged()
-extern fn QTreeWidget_itemSelectionChanged_signal_connect_cb_6() {
+extern fn QTreeWidget_itemSelectionChanged_signal_connect_cb_6(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QTreeWidget_itemSelectionChanged_signal_connect for (extern fn()) {
+extern fn QTreeWidget_itemSelectionChanged_signal_connect_cb_box_6(rsfptr_raw:*mut c_void, ) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QTreeWidget_itemSelectionChanged_signal_connect for fn() {
   fn connect(self, sigthis: QTreeWidget_itemSelectionChanged_signal) {
     // do smth...
-    unsafe {QTreeWidget_SlotProxy_connect__ZN11QTreeWidget20itemSelectionChangedEv(sigthis.poi as *mut c_void, QTreeWidget_itemSelectionChanged_signal_connect_cb_6 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTreeWidget_itemSelectionChanged_signal_connect_cb_6 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QTreeWidget_SlotProxy_connect__ZN11QTreeWidget20itemSelectionChangedEv(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QTreeWidget_itemSelectionChanged_signal_connect for Box<fn()> {
+  fn connect(self, sigthis: QTreeWidget_itemSelectionChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTreeWidget_itemSelectionChanged_signal_connect_cb_box_6 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QTreeWidget_SlotProxy_connect__ZN11QTreeWidget20itemSelectionChangedEv(arg0, arg1, arg2)};
   }
 }
 // itemClicked(class QTreeWidgetItem *, int)
-extern fn QTreeWidget_itemClicked_signal_connect_cb_7(arg0: *mut c_void, arg1: c_int) {
+extern fn QTreeWidget_itemClicked_signal_connect_cb_7(rsfptr:fn(QTreeWidgetItem, i32), arg0: *mut c_void, arg1: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QTreeWidget_itemClicked_signal_connect for (extern fn(QTreeWidgetItem, i32)) {
+extern fn QTreeWidget_itemClicked_signal_connect_cb_box_7(rsfptr_raw:*mut c_void, arg0: *mut c_void, arg1: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QTreeWidget_itemClicked_signal_connect for fn(QTreeWidgetItem, i32) {
   fn connect(self, sigthis: QTreeWidget_itemClicked_signal) {
     // do smth...
-    unsafe {QTreeWidget_SlotProxy_connect__ZN11QTreeWidget11itemClickedEP15QTreeWidgetItemi(sigthis.poi as *mut c_void, QTreeWidget_itemClicked_signal_connect_cb_7 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTreeWidget_itemClicked_signal_connect_cb_7 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QTreeWidget_SlotProxy_connect__ZN11QTreeWidget11itemClickedEP15QTreeWidgetItemi(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QTreeWidget_itemClicked_signal_connect for Box<fn(QTreeWidgetItem, i32)> {
+  fn connect(self, sigthis: QTreeWidget_itemClicked_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTreeWidget_itemClicked_signal_connect_cb_box_7 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QTreeWidget_SlotProxy_connect__ZN11QTreeWidget11itemClickedEP15QTreeWidgetItemi(arg0, arg1, arg2)};
   }
 }
 // itemChanged(class QTreeWidgetItem *, int)
-extern fn QTreeWidget_itemChanged_signal_connect_cb_8(arg0: *mut c_void, arg1: c_int) {
+extern fn QTreeWidget_itemChanged_signal_connect_cb_8(rsfptr:fn(QTreeWidgetItem, i32), arg0: *mut c_void, arg1: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QTreeWidget_itemChanged_signal_connect for (extern fn(QTreeWidgetItem, i32)) {
+extern fn QTreeWidget_itemChanged_signal_connect_cb_box_8(rsfptr_raw:*mut c_void, arg0: *mut c_void, arg1: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QTreeWidget_itemChanged_signal_connect for fn(QTreeWidgetItem, i32) {
   fn connect(self, sigthis: QTreeWidget_itemChanged_signal) {
     // do smth...
-    unsafe {QTreeWidget_SlotProxy_connect__ZN11QTreeWidget11itemChangedEP15QTreeWidgetItemi(sigthis.poi as *mut c_void, QTreeWidget_itemChanged_signal_connect_cb_8 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTreeWidget_itemChanged_signal_connect_cb_8 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QTreeWidget_SlotProxy_connect__ZN11QTreeWidget11itemChangedEP15QTreeWidgetItemi(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QTreeWidget_itemChanged_signal_connect for Box<fn(QTreeWidgetItem, i32)> {
+  fn connect(self, sigthis: QTreeWidget_itemChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTreeWidget_itemChanged_signal_connect_cb_box_8 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QTreeWidget_SlotProxy_connect__ZN11QTreeWidget11itemChangedEP15QTreeWidgetItemi(arg0, arg1, arg2)};
   }
 }
 // itemActivated(class QTreeWidgetItem *, int)
-extern fn QTreeWidget_itemActivated_signal_connect_cb_9(arg0: *mut c_void, arg1: c_int) {
+extern fn QTreeWidget_itemActivated_signal_connect_cb_9(rsfptr:fn(QTreeWidgetItem, i32), arg0: *mut c_void, arg1: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QTreeWidget_itemActivated_signal_connect for (extern fn(QTreeWidgetItem, i32)) {
+extern fn QTreeWidget_itemActivated_signal_connect_cb_box_9(rsfptr_raw:*mut c_void, arg0: *mut c_void, arg1: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QTreeWidget_itemActivated_signal_connect for fn(QTreeWidgetItem, i32) {
   fn connect(self, sigthis: QTreeWidget_itemActivated_signal) {
     // do smth...
-    unsafe {QTreeWidget_SlotProxy_connect__ZN11QTreeWidget13itemActivatedEP15QTreeWidgetItemi(sigthis.poi as *mut c_void, QTreeWidget_itemActivated_signal_connect_cb_9 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTreeWidget_itemActivated_signal_connect_cb_9 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QTreeWidget_SlotProxy_connect__ZN11QTreeWidget13itemActivatedEP15QTreeWidgetItemi(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QTreeWidget_itemActivated_signal_connect for Box<fn(QTreeWidgetItem, i32)> {
+  fn connect(self, sigthis: QTreeWidget_itemActivated_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QTreeWidget_itemActivated_signal_connect_cb_box_9 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QTreeWidget_SlotProxy_connect__ZN11QTreeWidget13itemActivatedEP15QTreeWidgetItemi(arg0, arg1, arg2)};
   }
 }
 // <= body block end

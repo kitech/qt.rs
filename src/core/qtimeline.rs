@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtCore/qtimeline.h
 // dst-file: /src/core/qtimeline.rs
 //
@@ -765,7 +765,7 @@ impl<'a> /*trait*/ QTimeLine_currentValue<f64> for () {
 #[derive(Default)] // for QTimeLine_valueChanged
 pub struct QTimeLine_valueChanged_signal{poi:u64}
 impl /* struct */ QTimeLine {
-  pub fn valueChanged_1(self) -> QTimeLine_valueChanged_signal {
+  pub fn valueChanged_1(&self) -> QTimeLine_valueChanged_signal {
      return QTimeLine_valueChanged_signal{poi:self.qclsinst};
   }
 }
@@ -781,7 +781,7 @@ pub trait QTimeLine_valueChanged_signal_connect {
 #[derive(Default)] // for QTimeLine_finished
 pub struct QTimeLine_finished_signal{poi:u64}
 impl /* struct */ QTimeLine {
-  pub fn finished_1(self) -> QTimeLine_finished_signal {
+  pub fn finished_1(&self) -> QTimeLine_finished_signal {
      return QTimeLine_finished_signal{poi:self.qclsinst};
   }
 }
@@ -797,7 +797,7 @@ pub trait QTimeLine_finished_signal_connect {
 #[derive(Default)] // for QTimeLine_frameChanged
 pub struct QTimeLine_frameChanged_signal{poi:u64}
 impl /* struct */ QTimeLine {
-  pub fn frameChanged_1(self) -> QTimeLine_frameChanged_signal {
+  pub fn frameChanged_1(&self) -> QTimeLine_frameChanged_signal {
      return QTimeLine_frameChanged_signal{poi:self.qclsinst};
   }
 }
@@ -813,7 +813,7 @@ pub trait QTimeLine_frameChanged_signal_connect {
 #[derive(Default)] // for QTimeLine_stateChanged
 pub struct QTimeLine_stateChanged_signal{poi:u64}
 impl /* struct */ QTimeLine {
-  pub fn stateChanged_1(self) -> QTimeLine_stateChanged_signal {
+  pub fn stateChanged_1(&self) -> QTimeLine_stateChanged_signal {
      return QTimeLine_stateChanged_signal{poi:self.qclsinst};
   }
 }

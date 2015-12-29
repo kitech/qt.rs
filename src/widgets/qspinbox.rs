@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:03 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtWidgets/qspinbox.h
 // dst-file: /src/widgets/qspinbox.rs
 //
@@ -131,10 +131,14 @@ extern {
   fn _ZNK14QDoubleSpinBox7maximumEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  QString QDoubleSpinBox::suffix();
   fn _ZNK14QDoubleSpinBox6suffixEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  fn QSpinBox_SlotProxy_connect__ZN8QSpinBox12valueChangedERK7QString(qthis: *mut c_void, fptr: *mut c_void);
-  fn QSpinBox_SlotProxy_connect__ZN8QSpinBox12valueChangedEi(qthis: *mut c_void, fptr: *mut c_void);
-  fn QDoubleSpinBox_SlotProxy_connect__ZN14QDoubleSpinBox12valueChangedEd(qthis: *mut c_void, fptr: *mut c_void);
-  fn QDoubleSpinBox_SlotProxy_connect__ZN14QDoubleSpinBox12valueChangedERK7QString(qthis: *mut c_void, fptr: *mut c_void);
+  fn QSpinBox_SlotProxy_connect__ZN8QSpinBox12valueChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QSpinBox_SlotProxy_connect_box__ZN8QSpinBox12valueChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QSpinBox_SlotProxy_connect__ZN8QSpinBox12valueChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QSpinBox_SlotProxy_connect_box__ZN8QSpinBox12valueChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QDoubleSpinBox_SlotProxy_connect__ZN14QDoubleSpinBox12valueChangedEd(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QDoubleSpinBox_SlotProxy_connect_box__ZN14QDoubleSpinBox12valueChangedEd(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QDoubleSpinBox_SlotProxy_connect__ZN14QDoubleSpinBox12valueChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QDoubleSpinBox_SlotProxy_connect_box__ZN14QDoubleSpinBox12valueChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -1253,7 +1257,7 @@ impl<'a> /*trait*/ QDoubleSpinBox_suffix<QString> for () {
 #[derive(Default)] // for QSpinBox_valueChanged
 pub struct QSpinBox_valueChanged_signal{poi:u64}
 impl /* struct */ QSpinBox {
-  pub fn valueChanged_1(self) -> QSpinBox_valueChanged_signal {
+  pub fn valueChanged_1(&self) -> QSpinBox_valueChanged_signal {
      return QSpinBox_valueChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1267,29 +1271,69 @@ pub trait QSpinBox_valueChanged_signal_connect {
 }
 
 // valueChanged(const class QString &)
-extern fn QSpinBox_valueChanged_signal_connect_cb_0(arg0: *mut c_void) {
+extern fn QSpinBox_valueChanged_signal_connect_cb_0(rsfptr:fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QSpinBox_valueChanged_signal_connect for (extern fn(QString)) {
+extern fn QSpinBox_valueChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QSpinBox_valueChanged_signal_connect for fn(QString) {
   fn connect(self, sigthis: QSpinBox_valueChanged_signal) {
     // do smth...
-    unsafe {QSpinBox_SlotProxy_connect__ZN8QSpinBox12valueChangedERK7QString(sigthis.poi as *mut c_void, QSpinBox_valueChanged_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QSpinBox_valueChanged_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QSpinBox_SlotProxy_connect__ZN8QSpinBox12valueChangedERK7QString(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QSpinBox_valueChanged_signal_connect for Box<fn(QString)> {
+  fn connect(self, sigthis: QSpinBox_valueChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QSpinBox_valueChanged_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QSpinBox_SlotProxy_connect__ZN8QSpinBox12valueChangedERK7QString(arg0, arg1, arg2)};
   }
 }
 // valueChanged(int)
-extern fn QSpinBox_valueChanged_signal_connect_cb_1(arg0: c_int) {
+extern fn QSpinBox_valueChanged_signal_connect_cb_1(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QSpinBox_valueChanged_signal_connect for (extern fn(i32)) {
+extern fn QSpinBox_valueChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QSpinBox_valueChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QSpinBox_valueChanged_signal) {
     // do smth...
-    unsafe {QSpinBox_SlotProxy_connect__ZN8QSpinBox12valueChangedEi(sigthis.poi as *mut c_void, QSpinBox_valueChanged_signal_connect_cb_1 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QSpinBox_valueChanged_signal_connect_cb_1 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QSpinBox_SlotProxy_connect__ZN8QSpinBox12valueChangedEi(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QSpinBox_valueChanged_signal_connect for Box<fn(i32)> {
+  fn connect(self, sigthis: QSpinBox_valueChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QSpinBox_valueChanged_signal_connect_cb_box_1 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QSpinBox_SlotProxy_connect__ZN8QSpinBox12valueChangedEi(arg0, arg1, arg2)};
   }
 }
 #[derive(Default)] // for QDoubleSpinBox_valueChanged
 pub struct QDoubleSpinBox_valueChanged_signal{poi:u64}
 impl /* struct */ QDoubleSpinBox {
-  pub fn valueChanged_1(self) -> QDoubleSpinBox_valueChanged_signal {
+  pub fn valueChanged_1(&self) -> QDoubleSpinBox_valueChanged_signal {
      return QDoubleSpinBox_valueChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1303,23 +1347,63 @@ pub trait QDoubleSpinBox_valueChanged_signal_connect {
 }
 
 // valueChanged(double)
-extern fn QDoubleSpinBox_valueChanged_signal_connect_cb_0(arg0: c_double) {
+extern fn QDoubleSpinBox_valueChanged_signal_connect_cb_0(rsfptr:fn(f64), arg0: c_double) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QDoubleSpinBox_valueChanged_signal_connect for (extern fn(f64)) {
+extern fn QDoubleSpinBox_valueChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_double) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QDoubleSpinBox_valueChanged_signal_connect for fn(f64) {
   fn connect(self, sigthis: QDoubleSpinBox_valueChanged_signal) {
     // do smth...
-    unsafe {QDoubleSpinBox_SlotProxy_connect__ZN14QDoubleSpinBox12valueChangedEd(sigthis.poi as *mut c_void, QDoubleSpinBox_valueChanged_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDoubleSpinBox_valueChanged_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QDoubleSpinBox_SlotProxy_connect__ZN14QDoubleSpinBox12valueChangedEd(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QDoubleSpinBox_valueChanged_signal_connect for Box<fn(f64)> {
+  fn connect(self, sigthis: QDoubleSpinBox_valueChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDoubleSpinBox_valueChanged_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QDoubleSpinBox_SlotProxy_connect__ZN14QDoubleSpinBox12valueChangedEd(arg0, arg1, arg2)};
   }
 }
 // valueChanged(const class QString &)
-extern fn QDoubleSpinBox_valueChanged_signal_connect_cb_1(arg0: *mut c_void) {
+extern fn QDoubleSpinBox_valueChanged_signal_connect_cb_1(rsfptr:fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QDoubleSpinBox_valueChanged_signal_connect for (extern fn(QString)) {
+extern fn QDoubleSpinBox_valueChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QDoubleSpinBox_valueChanged_signal_connect for fn(QString) {
   fn connect(self, sigthis: QDoubleSpinBox_valueChanged_signal) {
     // do smth...
-    unsafe {QDoubleSpinBox_SlotProxy_connect__ZN14QDoubleSpinBox12valueChangedERK7QString(sigthis.poi as *mut c_void, QDoubleSpinBox_valueChanged_signal_connect_cb_1 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDoubleSpinBox_valueChanged_signal_connect_cb_1 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QDoubleSpinBox_SlotProxy_connect__ZN14QDoubleSpinBox12valueChangedERK7QString(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QDoubleSpinBox_valueChanged_signal_connect for Box<fn(QString)> {
+  fn connect(self, sigthis: QDoubleSpinBox_valueChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QDoubleSpinBox_valueChanged_signal_connect_cb_box_1 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QDoubleSpinBox_SlotProxy_connect__ZN14QDoubleSpinBox12valueChangedERK7QString(arg0, arg1, arg2)};
   }
 }
 // <= body block end

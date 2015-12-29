@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtCore/qthread.h
 // dst-file: /src/core/qthread.rs
 //
@@ -642,7 +642,7 @@ impl<'a> /*trait*/ QThread_loopLevel<i32> for () {
 #[derive(Default)] // for QThread_started
 pub struct QThread_started_signal{poi:u64}
 impl /* struct */ QThread {
-  pub fn started_1(self) -> QThread_started_signal {
+  pub fn started_1(&self) -> QThread_started_signal {
      return QThread_started_signal{poi:self.qclsinst};
   }
 }
@@ -658,7 +658,7 @@ pub trait QThread_started_signal_connect {
 #[derive(Default)] // for QThread_finished
 pub struct QThread_finished_signal{poi:u64}
 impl /* struct */ QThread {
-  pub fn finished_1(self) -> QThread_finished_signal {
+  pub fn finished_1(&self) -> QThread_finished_signal {
      return QThread_finished_signal{poi:self.qclsinst};
   }
 }

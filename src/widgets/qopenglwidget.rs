@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtWidgets/qopenglwidget.h
 // dst-file: /src/widgets/qopenglwidget.rs
 //
@@ -63,10 +63,14 @@ extern {
   fn _ZN13QOpenGLWidget9setFormatERK14QSurfaceFormat(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QSurfaceFormat QOpenGLWidget::format();
   fn _ZNK13QOpenGLWidget6formatEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  fn QOpenGLWidget_SlotProxy_connect__ZN13QOpenGLWidget13aboutToResizeEv(qthis: *mut c_void, fptr: *mut c_void);
-  fn QOpenGLWidget_SlotProxy_connect__ZN13QOpenGLWidget12frameSwappedEv(qthis: *mut c_void, fptr: *mut c_void);
-  fn QOpenGLWidget_SlotProxy_connect__ZN13QOpenGLWidget7resizedEv(qthis: *mut c_void, fptr: *mut c_void);
-  fn QOpenGLWidget_SlotProxy_connect__ZN13QOpenGLWidget14aboutToComposeEv(qthis: *mut c_void, fptr: *mut c_void);
+  fn QOpenGLWidget_SlotProxy_connect__ZN13QOpenGLWidget13aboutToResizeEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QOpenGLWidget_SlotProxy_connect_box__ZN13QOpenGLWidget13aboutToResizeEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QOpenGLWidget_SlotProxy_connect__ZN13QOpenGLWidget12frameSwappedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QOpenGLWidget_SlotProxy_connect_box__ZN13QOpenGLWidget12frameSwappedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QOpenGLWidget_SlotProxy_connect__ZN13QOpenGLWidget7resizedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QOpenGLWidget_SlotProxy_connect_box__ZN13QOpenGLWidget7resizedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QOpenGLWidget_SlotProxy_connect__ZN13QOpenGLWidget14aboutToComposeEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QOpenGLWidget_SlotProxy_connect_box__ZN13QOpenGLWidget14aboutToComposeEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -445,7 +449,7 @@ impl<'a> /*trait*/ QOpenGLWidget_format<QSurfaceFormat> for () {
 #[derive(Default)] // for QOpenGLWidget_aboutToResize
 pub struct QOpenGLWidget_aboutToResize_signal{poi:u64}
 impl /* struct */ QOpenGLWidget {
-  pub fn aboutToResize_1(self) -> QOpenGLWidget_aboutToResize_signal {
+  pub fn aboutToResize_1(&self) -> QOpenGLWidget_aboutToResize_signal {
      return QOpenGLWidget_aboutToResize_signal{poi:self.qclsinst};
   }
 }
@@ -461,7 +465,7 @@ pub trait QOpenGLWidget_aboutToResize_signal_connect {
 #[derive(Default)] // for QOpenGLWidget_resized
 pub struct QOpenGLWidget_resized_signal{poi:u64}
 impl /* struct */ QOpenGLWidget {
-  pub fn resized_1(self) -> QOpenGLWidget_resized_signal {
+  pub fn resized_1(&self) -> QOpenGLWidget_resized_signal {
      return QOpenGLWidget_resized_signal{poi:self.qclsinst};
   }
 }
@@ -477,7 +481,7 @@ pub trait QOpenGLWidget_resized_signal_connect {
 #[derive(Default)] // for QOpenGLWidget_frameSwapped
 pub struct QOpenGLWidget_frameSwapped_signal{poi:u64}
 impl /* struct */ QOpenGLWidget {
-  pub fn frameSwapped_1(self) -> QOpenGLWidget_frameSwapped_signal {
+  pub fn frameSwapped_1(&self) -> QOpenGLWidget_frameSwapped_signal {
      return QOpenGLWidget_frameSwapped_signal{poi:self.qclsinst};
   }
 }
@@ -493,7 +497,7 @@ pub trait QOpenGLWidget_frameSwapped_signal_connect {
 #[derive(Default)] // for QOpenGLWidget_aboutToCompose
 pub struct QOpenGLWidget_aboutToCompose_signal{poi:u64}
 impl /* struct */ QOpenGLWidget {
-  pub fn aboutToCompose_1(self) -> QOpenGLWidget_aboutToCompose_signal {
+  pub fn aboutToCompose_1(&self) -> QOpenGLWidget_aboutToCompose_signal {
      return QOpenGLWidget_aboutToCompose_signal{poi:self.qclsinst};
   }
 }
@@ -507,43 +511,123 @@ pub trait QOpenGLWidget_aboutToCompose_signal_connect {
 }
 
 // aboutToResize()
-extern fn QOpenGLWidget_aboutToResize_signal_connect_cb_0() {
+extern fn QOpenGLWidget_aboutToResize_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QOpenGLWidget_aboutToResize_signal_connect for (extern fn()) {
+extern fn QOpenGLWidget_aboutToResize_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, ) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QOpenGLWidget_aboutToResize_signal_connect for fn() {
   fn connect(self, sigthis: QOpenGLWidget_aboutToResize_signal) {
     // do smth...
-    unsafe {QOpenGLWidget_SlotProxy_connect__ZN13QOpenGLWidget13aboutToResizeEv(sigthis.poi as *mut c_void, QOpenGLWidget_aboutToResize_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QOpenGLWidget_aboutToResize_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QOpenGLWidget_SlotProxy_connect__ZN13QOpenGLWidget13aboutToResizeEv(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QOpenGLWidget_aboutToResize_signal_connect for Box<fn()> {
+  fn connect(self, sigthis: QOpenGLWidget_aboutToResize_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QOpenGLWidget_aboutToResize_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QOpenGLWidget_SlotProxy_connect__ZN13QOpenGLWidget13aboutToResizeEv(arg0, arg1, arg2)};
   }
 }
 // frameSwapped()
-extern fn QOpenGLWidget_frameSwapped_signal_connect_cb_1() {
+extern fn QOpenGLWidget_frameSwapped_signal_connect_cb_1(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QOpenGLWidget_frameSwapped_signal_connect for (extern fn()) {
+extern fn QOpenGLWidget_frameSwapped_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, ) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QOpenGLWidget_frameSwapped_signal_connect for fn() {
   fn connect(self, sigthis: QOpenGLWidget_frameSwapped_signal) {
     // do smth...
-    unsafe {QOpenGLWidget_SlotProxy_connect__ZN13QOpenGLWidget12frameSwappedEv(sigthis.poi as *mut c_void, QOpenGLWidget_frameSwapped_signal_connect_cb_1 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QOpenGLWidget_frameSwapped_signal_connect_cb_1 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QOpenGLWidget_SlotProxy_connect__ZN13QOpenGLWidget12frameSwappedEv(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QOpenGLWidget_frameSwapped_signal_connect for Box<fn()> {
+  fn connect(self, sigthis: QOpenGLWidget_frameSwapped_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QOpenGLWidget_frameSwapped_signal_connect_cb_box_1 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QOpenGLWidget_SlotProxy_connect__ZN13QOpenGLWidget12frameSwappedEv(arg0, arg1, arg2)};
   }
 }
 // resized()
-extern fn QOpenGLWidget_resized_signal_connect_cb_2() {
+extern fn QOpenGLWidget_resized_signal_connect_cb_2(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QOpenGLWidget_resized_signal_connect for (extern fn()) {
+extern fn QOpenGLWidget_resized_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, ) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QOpenGLWidget_resized_signal_connect for fn() {
   fn connect(self, sigthis: QOpenGLWidget_resized_signal) {
     // do smth...
-    unsafe {QOpenGLWidget_SlotProxy_connect__ZN13QOpenGLWidget7resizedEv(sigthis.poi as *mut c_void, QOpenGLWidget_resized_signal_connect_cb_2 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QOpenGLWidget_resized_signal_connect_cb_2 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QOpenGLWidget_SlotProxy_connect__ZN13QOpenGLWidget7resizedEv(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QOpenGLWidget_resized_signal_connect for Box<fn()> {
+  fn connect(self, sigthis: QOpenGLWidget_resized_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QOpenGLWidget_resized_signal_connect_cb_box_2 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QOpenGLWidget_SlotProxy_connect__ZN13QOpenGLWidget7resizedEv(arg0, arg1, arg2)};
   }
 }
 // aboutToCompose()
-extern fn QOpenGLWidget_aboutToCompose_signal_connect_cb_3() {
+extern fn QOpenGLWidget_aboutToCompose_signal_connect_cb_3(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QOpenGLWidget_aboutToCompose_signal_connect for (extern fn()) {
+extern fn QOpenGLWidget_aboutToCompose_signal_connect_cb_box_3(rsfptr_raw:*mut c_void, ) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QOpenGLWidget_aboutToCompose_signal_connect for fn() {
   fn connect(self, sigthis: QOpenGLWidget_aboutToCompose_signal) {
     // do smth...
-    unsafe {QOpenGLWidget_SlotProxy_connect__ZN13QOpenGLWidget14aboutToComposeEv(sigthis.poi as *mut c_void, QOpenGLWidget_aboutToCompose_signal_connect_cb_3 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QOpenGLWidget_aboutToCompose_signal_connect_cb_3 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QOpenGLWidget_SlotProxy_connect__ZN13QOpenGLWidget14aboutToComposeEv(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QOpenGLWidget_aboutToCompose_signal_connect for Box<fn()> {
+  fn connect(self, sigthis: QOpenGLWidget_aboutToCompose_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QOpenGLWidget_aboutToCompose_signal_connect_cb_box_3 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QOpenGLWidget_SlotProxy_connect__ZN13QOpenGLWidget14aboutToComposeEv(arg0, arg1, arg2)};
   }
 }
 // <= body block end

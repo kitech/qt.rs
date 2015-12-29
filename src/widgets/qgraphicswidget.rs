@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtWidgets/qgraphicswidget.h
 // dst-file: /src/widgets/qgraphicswidget.rs
 //
@@ -141,8 +141,10 @@ extern {
   fn _ZNK15QGraphicsWidget14isActiveWindowEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QGraphicsWidget::setGeometry(qreal x, qreal y, qreal w, qreal h);
   fn demth_ZN15QGraphicsWidget11setGeometryEdddd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
-  fn QGraphicsWidget_SlotProxy_connect__ZN15QGraphicsWidget13layoutChangedEv(qthis: *mut c_void, fptr: *mut c_void);
-  fn QGraphicsWidget_SlotProxy_connect__ZN15QGraphicsWidget15geometryChangedEv(qthis: *mut c_void, fptr: *mut c_void);
+  fn QGraphicsWidget_SlotProxy_connect__ZN15QGraphicsWidget13layoutChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QGraphicsWidget_SlotProxy_connect_box__ZN15QGraphicsWidget13layoutChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QGraphicsWidget_SlotProxy_connect__ZN15QGraphicsWidget15geometryChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QGraphicsWidget_SlotProxy_connect_box__ZN15QGraphicsWidget15geometryChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -1285,7 +1287,7 @@ impl<'a> /*trait*/ QGraphicsWidget_setGeometry<()> for (f64, f64, f64, f64) {
 #[derive(Default)] // for QGraphicsWidget_layoutChanged
 pub struct QGraphicsWidget_layoutChanged_signal{poi:u64}
 impl /* struct */ QGraphicsWidget {
-  pub fn layoutChanged_1(self) -> QGraphicsWidget_layoutChanged_signal {
+  pub fn layoutChanged_1(&self) -> QGraphicsWidget_layoutChanged_signal {
      return QGraphicsWidget_layoutChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1301,7 +1303,7 @@ pub trait QGraphicsWidget_layoutChanged_signal_connect {
 #[derive(Default)] // for QGraphicsWidget_geometryChanged
 pub struct QGraphicsWidget_geometryChanged_signal{poi:u64}
 impl /* struct */ QGraphicsWidget {
-  pub fn geometryChanged_1(self) -> QGraphicsWidget_geometryChanged_signal {
+  pub fn geometryChanged_1(&self) -> QGraphicsWidget_geometryChanged_signal {
      return QGraphicsWidget_geometryChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1315,23 +1317,63 @@ pub trait QGraphicsWidget_geometryChanged_signal_connect {
 }
 
 // layoutChanged()
-extern fn QGraphicsWidget_layoutChanged_signal_connect_cb_0() {
+extern fn QGraphicsWidget_layoutChanged_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QGraphicsWidget_layoutChanged_signal_connect for (extern fn()) {
+extern fn QGraphicsWidget_layoutChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, ) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QGraphicsWidget_layoutChanged_signal_connect for fn() {
   fn connect(self, sigthis: QGraphicsWidget_layoutChanged_signal) {
     // do smth...
-    unsafe {QGraphicsWidget_SlotProxy_connect__ZN15QGraphicsWidget13layoutChangedEv(sigthis.poi as *mut c_void, QGraphicsWidget_layoutChanged_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QGraphicsWidget_layoutChanged_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QGraphicsWidget_SlotProxy_connect__ZN15QGraphicsWidget13layoutChangedEv(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QGraphicsWidget_layoutChanged_signal_connect for Box<fn()> {
+  fn connect(self, sigthis: QGraphicsWidget_layoutChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QGraphicsWidget_layoutChanged_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QGraphicsWidget_SlotProxy_connect__ZN15QGraphicsWidget13layoutChangedEv(arg0, arg1, arg2)};
   }
 }
 // geometryChanged()
-extern fn QGraphicsWidget_geometryChanged_signal_connect_cb_1() {
+extern fn QGraphicsWidget_geometryChanged_signal_connect_cb_1(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QGraphicsWidget_geometryChanged_signal_connect for (extern fn()) {
+extern fn QGraphicsWidget_geometryChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, ) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QGraphicsWidget_geometryChanged_signal_connect for fn() {
   fn connect(self, sigthis: QGraphicsWidget_geometryChanged_signal) {
     // do smth...
-    unsafe {QGraphicsWidget_SlotProxy_connect__ZN15QGraphicsWidget15geometryChangedEv(sigthis.poi as *mut c_void, QGraphicsWidget_geometryChanged_signal_connect_cb_1 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QGraphicsWidget_geometryChanged_signal_connect_cb_1 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QGraphicsWidget_SlotProxy_connect__ZN15QGraphicsWidget15geometryChangedEv(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QGraphicsWidget_geometryChanged_signal_connect for Box<fn()> {
+  fn connect(self, sigthis: QGraphicsWidget_geometryChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QGraphicsWidget_geometryChanged_signal_connect_cb_box_1 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QGraphicsWidget_SlotProxy_connect__ZN15QGraphicsWidget15geometryChangedEv(arg0, arg1, arg2)};
   }
 }
 // <= body block end

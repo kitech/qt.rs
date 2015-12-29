@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtWidgets/qshortcut.h
 // dst-file: /src/widgets/qshortcut.rs
 //
@@ -64,8 +64,10 @@ extern {
   fn _ZN9QShortcut20activatedAmbiguouslyEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QShortcut::autoRepeat();
   fn _ZNK9QShortcut10autoRepeatEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  fn QShortcut_SlotProxy_connect__ZN9QShortcut9activatedEv(qthis: *mut c_void, fptr: *mut c_void);
-  fn QShortcut_SlotProxy_connect__ZN9QShortcut20activatedAmbiguouslyEv(qthis: *mut c_void, fptr: *mut c_void);
+  fn QShortcut_SlotProxy_connect__ZN9QShortcut9activatedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QShortcut_SlotProxy_connect_box__ZN9QShortcut9activatedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QShortcut_SlotProxy_connect__ZN9QShortcut20activatedAmbiguouslyEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QShortcut_SlotProxy_connect_box__ZN9QShortcut20activatedAmbiguouslyEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -448,7 +450,7 @@ impl<'a> /*trait*/ QShortcut_autoRepeat<i8> for () {
 #[derive(Default)] // for QShortcut_activated
 pub struct QShortcut_activated_signal{poi:u64}
 impl /* struct */ QShortcut {
-  pub fn activated_1(self) -> QShortcut_activated_signal {
+  pub fn activated_1(&self) -> QShortcut_activated_signal {
      return QShortcut_activated_signal{poi:self.qclsinst};
   }
 }
@@ -464,7 +466,7 @@ pub trait QShortcut_activated_signal_connect {
 #[derive(Default)] // for QShortcut_activatedAmbiguously
 pub struct QShortcut_activatedAmbiguously_signal{poi:u64}
 impl /* struct */ QShortcut {
-  pub fn activatedAmbiguously_1(self) -> QShortcut_activatedAmbiguously_signal {
+  pub fn activatedAmbiguously_1(&self) -> QShortcut_activatedAmbiguously_signal {
      return QShortcut_activatedAmbiguously_signal{poi:self.qclsinst};
   }
 }
@@ -478,23 +480,63 @@ pub trait QShortcut_activatedAmbiguously_signal_connect {
 }
 
 // activated()
-extern fn QShortcut_activated_signal_connect_cb_0() {
+extern fn QShortcut_activated_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QShortcut_activated_signal_connect for (extern fn()) {
+extern fn QShortcut_activated_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, ) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QShortcut_activated_signal_connect for fn() {
   fn connect(self, sigthis: QShortcut_activated_signal) {
     // do smth...
-    unsafe {QShortcut_SlotProxy_connect__ZN9QShortcut9activatedEv(sigthis.poi as *mut c_void, QShortcut_activated_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QShortcut_activated_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QShortcut_SlotProxy_connect__ZN9QShortcut9activatedEv(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QShortcut_activated_signal_connect for Box<fn()> {
+  fn connect(self, sigthis: QShortcut_activated_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QShortcut_activated_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QShortcut_SlotProxy_connect__ZN9QShortcut9activatedEv(arg0, arg1, arg2)};
   }
 }
 // activatedAmbiguously()
-extern fn QShortcut_activatedAmbiguously_signal_connect_cb_1() {
+extern fn QShortcut_activatedAmbiguously_signal_connect_cb_1(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QShortcut_activatedAmbiguously_signal_connect for (extern fn()) {
+extern fn QShortcut_activatedAmbiguously_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, ) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QShortcut_activatedAmbiguously_signal_connect for fn() {
   fn connect(self, sigthis: QShortcut_activatedAmbiguously_signal) {
     // do smth...
-    unsafe {QShortcut_SlotProxy_connect__ZN9QShortcut20activatedAmbiguouslyEv(sigthis.poi as *mut c_void, QShortcut_activatedAmbiguously_signal_connect_cb_1 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QShortcut_activatedAmbiguously_signal_connect_cb_1 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QShortcut_SlotProxy_connect__ZN9QShortcut20activatedAmbiguouslyEv(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QShortcut_activatedAmbiguously_signal_connect for Box<fn()> {
+  fn connect(self, sigthis: QShortcut_activatedAmbiguously_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QShortcut_activatedAmbiguously_signal_connect_cb_box_1 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QShortcut_SlotProxy_connect__ZN9QShortcut20activatedAmbiguouslyEv(arg0, arg1, arg2)};
   }
 }
 // <= body block end

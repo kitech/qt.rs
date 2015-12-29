@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtGui/qopenglcontext.h
 // dst-file: /src/gui/qopenglcontext.rs
 //
@@ -137,7 +137,8 @@ extern {
   fn _ZN19QOpenGLContextGroupC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QList<QOpenGLContext *> QOpenGLContextGroup::shares();
   fn _ZNK19QOpenGLContextGroup6sharesEv(qthis: u64 /* *mut c_void*/);
-  fn QOpenGLContext_SlotProxy_connect__ZN14QOpenGLContext18aboutToBeDestroyedEv(qthis: *mut c_void, fptr: *mut c_void);
+  fn QOpenGLContext_SlotProxy_connect__ZN14QOpenGLContext18aboutToBeDestroyedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QOpenGLContext_SlotProxy_connect_box__ZN14QOpenGLContext18aboutToBeDestroyedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -1279,7 +1280,7 @@ impl<'a> /*trait*/ QOpenGLContextGroup_shares<()> for () {
 #[derive(Default)] // for QOpenGLContext_aboutToBeDestroyed
 pub struct QOpenGLContext_aboutToBeDestroyed_signal{poi:u64}
 impl /* struct */ QOpenGLContext {
-  pub fn aboutToBeDestroyed_1(self) -> QOpenGLContext_aboutToBeDestroyed_signal {
+  pub fn aboutToBeDestroyed_1(&self) -> QOpenGLContext_aboutToBeDestroyed_signal {
      return QOpenGLContext_aboutToBeDestroyed_signal{poi:self.qclsinst};
   }
 }
@@ -1293,13 +1294,33 @@ pub trait QOpenGLContext_aboutToBeDestroyed_signal_connect {
 }
 
 // aboutToBeDestroyed()
-extern fn QOpenGLContext_aboutToBeDestroyed_signal_connect_cb_0() {
+extern fn QOpenGLContext_aboutToBeDestroyed_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QOpenGLContext_aboutToBeDestroyed_signal_connect for (extern fn()) {
+extern fn QOpenGLContext_aboutToBeDestroyed_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, ) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QOpenGLContext_aboutToBeDestroyed_signal_connect for fn() {
   fn connect(self, sigthis: QOpenGLContext_aboutToBeDestroyed_signal) {
     // do smth...
-    unsafe {QOpenGLContext_SlotProxy_connect__ZN14QOpenGLContext18aboutToBeDestroyedEv(sigthis.poi as *mut c_void, QOpenGLContext_aboutToBeDestroyed_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QOpenGLContext_aboutToBeDestroyed_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QOpenGLContext_SlotProxy_connect__ZN14QOpenGLContext18aboutToBeDestroyedEv(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QOpenGLContext_aboutToBeDestroyed_signal_connect for Box<fn()> {
+  fn connect(self, sigthis: QOpenGLContext_aboutToBeDestroyed_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QOpenGLContext_aboutToBeDestroyed_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QOpenGLContext_SlotProxy_connect__ZN14QOpenGLContext18aboutToBeDestroyedEv(arg0, arg1, arg2)};
   }
 }
 // <= body block end

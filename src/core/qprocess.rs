@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtCore/qprocess.h
 // dst-file: /src/core/qprocess.rs
 //
@@ -152,9 +152,12 @@ extern {
   fn _ZN19QProcessEnvironmentC1Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QProcessEnvironment::insert(const QProcessEnvironment & e);
   fn _ZN19QProcessEnvironment6insertERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  fn QProcess_SlotProxy_connect__ZN8QProcess5errorENS_12ProcessErrorE(qthis: *mut c_void, fptr: *mut c_void);
-  fn QProcess_SlotProxy_connect__ZN8QProcess8finishedEiNS_10ExitStatusE(qthis: *mut c_void, fptr: *mut c_void);
-  fn QProcess_SlotProxy_connect__ZN8QProcess8finishedEi(qthis: *mut c_void, fptr: *mut c_void);
+  fn QProcess_SlotProxy_connect__ZN8QProcess5errorENS_12ProcessErrorE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QProcess_SlotProxy_connect_box__ZN8QProcess5errorENS_12ProcessErrorE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QProcess_SlotProxy_connect__ZN8QProcess8finishedEiNS_10ExitStatusE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QProcess_SlotProxy_connect_box__ZN8QProcess8finishedEiNS_10ExitStatusE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QProcess_SlotProxy_connect__ZN8QProcess8finishedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QProcess_SlotProxy_connect_box__ZN8QProcess8finishedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -1453,7 +1456,7 @@ impl<'a> /*trait*/ QProcessEnvironment_insert<()> for (&'a QProcessEnvironment) 
 #[derive(Default)] // for QProcess_stateChanged
 pub struct QProcess_stateChanged_signal{poi:u64}
 impl /* struct */ QProcess {
-  pub fn stateChanged_1(self) -> QProcess_stateChanged_signal {
+  pub fn stateChanged_1(&self) -> QProcess_stateChanged_signal {
      return QProcess_stateChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1469,7 +1472,7 @@ pub trait QProcess_stateChanged_signal_connect {
 #[derive(Default)] // for QProcess_started
 pub struct QProcess_started_signal{poi:u64}
 impl /* struct */ QProcess {
-  pub fn started_1(self) -> QProcess_started_signal {
+  pub fn started_1(&self) -> QProcess_started_signal {
      return QProcess_started_signal{poi:self.qclsinst};
   }
 }
@@ -1485,7 +1488,7 @@ pub trait QProcess_started_signal_connect {
 #[derive(Default)] // for QProcess_finished
 pub struct QProcess_finished_signal{poi:u64}
 impl /* struct */ QProcess {
-  pub fn finished_1(self) -> QProcess_finished_signal {
+  pub fn finished_1(&self) -> QProcess_finished_signal {
      return QProcess_finished_signal{poi:self.qclsinst};
   }
 }
@@ -1501,7 +1504,7 @@ pub trait QProcess_finished_signal_connect {
 #[derive(Default)] // for QProcess_readyReadStandardError
 pub struct QProcess_readyReadStandardError_signal{poi:u64}
 impl /* struct */ QProcess {
-  pub fn readyReadStandardError_1(self) -> QProcess_readyReadStandardError_signal {
+  pub fn readyReadStandardError_1(&self) -> QProcess_readyReadStandardError_signal {
      return QProcess_readyReadStandardError_signal{poi:self.qclsinst};
   }
 }
@@ -1517,7 +1520,7 @@ pub trait QProcess_readyReadStandardError_signal_connect {
 #[derive(Default)] // for QProcess_error
 pub struct QProcess_error_signal{poi:u64}
 impl /* struct */ QProcess {
-  pub fn error_1(self) -> QProcess_error_signal {
+  pub fn error_1(&self) -> QProcess_error_signal {
      return QProcess_error_signal{poi:self.qclsinst};
   }
 }
@@ -1533,7 +1536,7 @@ pub trait QProcess_error_signal_connect {
 #[derive(Default)] // for QProcess_readyReadStandardOutput
 pub struct QProcess_readyReadStandardOutput_signal{poi:u64}
 impl /* struct */ QProcess {
-  pub fn readyReadStandardOutput_1(self) -> QProcess_readyReadStandardOutput_signal {
+  pub fn readyReadStandardOutput_1(&self) -> QProcess_readyReadStandardOutput_signal {
      return QProcess_readyReadStandardOutput_signal{poi:self.qclsinst};
   }
 }
@@ -1547,33 +1550,93 @@ pub trait QProcess_readyReadStandardOutput_signal_connect {
 }
 
 // error(class QProcess::ProcessError)
-extern fn QProcess_error_signal_connect_cb_0(arg0: c_int) {
+extern fn QProcess_error_signal_connect_cb_0(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QProcess_error_signal_connect for (extern fn(i32)) {
+extern fn QProcess_error_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QProcess_error_signal_connect for fn(i32) {
   fn connect(self, sigthis: QProcess_error_signal) {
     // do smth...
-    unsafe {QProcess_SlotProxy_connect__ZN8QProcess5errorENS_12ProcessErrorE(sigthis.poi as *mut c_void, QProcess_error_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QProcess_error_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QProcess_SlotProxy_connect__ZN8QProcess5errorENS_12ProcessErrorE(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QProcess_error_signal_connect for Box<fn(i32)> {
+  fn connect(self, sigthis: QProcess_error_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QProcess_error_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QProcess_SlotProxy_connect__ZN8QProcess5errorENS_12ProcessErrorE(arg0, arg1, arg2)};
   }
 }
 // finished(int, class QProcess::ExitStatus)
-extern fn QProcess_finished_signal_connect_cb_1(arg0: c_int, arg1: c_int) {
+extern fn QProcess_finished_signal_connect_cb_1(rsfptr:fn(i32, i32), arg0: c_int, arg1: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QProcess_finished_signal_connect for (extern fn(i32, i32)) {
+extern fn QProcess_finished_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: c_int, arg1: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QProcess_finished_signal_connect for fn(i32, i32) {
   fn connect(self, sigthis: QProcess_finished_signal) {
     // do smth...
-    unsafe {QProcess_SlotProxy_connect__ZN8QProcess8finishedEiNS_10ExitStatusE(sigthis.poi as *mut c_void, QProcess_finished_signal_connect_cb_1 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QProcess_finished_signal_connect_cb_1 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QProcess_SlotProxy_connect__ZN8QProcess8finishedEiNS_10ExitStatusE(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QProcess_finished_signal_connect for Box<fn(i32, i32)> {
+  fn connect(self, sigthis: QProcess_finished_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QProcess_finished_signal_connect_cb_box_1 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QProcess_SlotProxy_connect__ZN8QProcess8finishedEiNS_10ExitStatusE(arg0, arg1, arg2)};
   }
 }
 // finished(int)
-extern fn QProcess_finished_signal_connect_cb_2(arg0: c_int) {
+extern fn QProcess_finished_signal_connect_cb_2(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QProcess_finished_signal_connect for (extern fn(i32)) {
+extern fn QProcess_finished_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, arg0: c_int) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QProcess_finished_signal_connect for fn(i32) {
   fn connect(self, sigthis: QProcess_finished_signal) {
     // do smth...
-    unsafe {QProcess_SlotProxy_connect__ZN8QProcess8finishedEi(sigthis.poi as *mut c_void, QProcess_finished_signal_connect_cb_2 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QProcess_finished_signal_connect_cb_2 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QProcess_SlotProxy_connect__ZN8QProcess8finishedEi(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QProcess_finished_signal_connect for Box<fn(i32)> {
+  fn connect(self, sigthis: QProcess_finished_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QProcess_finished_signal_connect_cb_box_2 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QProcess_SlotProxy_connect__ZN8QProcess8finishedEi(arg0, arg1, arg2)};
   }
 }
 // <= body block end

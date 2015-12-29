@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtWidgets/qtoolbutton.h
 // dst-file: /src/widgets/qtoolbutton.rs
 //
@@ -64,7 +64,8 @@ extern {
   fn _ZN11QToolButtonC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QToolButton::setDefaultAction(QAction * );
   fn _ZN11QToolButton16setDefaultActionEP7QAction(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  fn QToolButton_SlotProxy_connect__ZN11QToolButton9triggeredEP7QAction(qthis: *mut c_void, fptr: *mut c_void);
+  fn QToolButton_SlotProxy_connect__ZN11QToolButton9triggeredEP7QAction(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QToolButton_SlotProxy_connect_box__ZN11QToolButton9triggeredEP7QAction(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -418,7 +419,7 @@ impl<'a> /*trait*/ QToolButton_setDefaultAction<()> for (&'a QAction) {
 #[derive(Default)] // for QToolButton_triggered
 pub struct QToolButton_triggered_signal{poi:u64}
 impl /* struct */ QToolButton {
-  pub fn triggered_1(self) -> QToolButton_triggered_signal {
+  pub fn triggered_1(&self) -> QToolButton_triggered_signal {
      return QToolButton_triggered_signal{poi:self.qclsinst};
   }
 }
@@ -432,13 +433,33 @@ pub trait QToolButton_triggered_signal_connect {
 }
 
 // triggered(class QAction *)
-extern fn QToolButton_triggered_signal_connect_cb_0(arg0: *mut c_void) {
+extern fn QToolButton_triggered_signal_connect_cb_0(rsfptr:fn(QAction), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QToolButton_triggered_signal_connect for (extern fn(QAction)) {
+extern fn QToolButton_triggered_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QToolButton_triggered_signal_connect for fn(QAction) {
   fn connect(self, sigthis: QToolButton_triggered_signal) {
     // do smth...
-    unsafe {QToolButton_SlotProxy_connect__ZN11QToolButton9triggeredEP7QAction(sigthis.poi as *mut c_void, QToolButton_triggered_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QToolButton_triggered_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QToolButton_SlotProxy_connect__ZN11QToolButton9triggeredEP7QAction(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QToolButton_triggered_signal_connect for Box<fn(QAction)> {
+  fn connect(self, sigthis: QToolButton_triggered_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QToolButton_triggered_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QToolButton_SlotProxy_connect__ZN11QToolButton9triggeredEP7QAction(arg0, arg1, arg2)};
   }
 }
 // <= body block end

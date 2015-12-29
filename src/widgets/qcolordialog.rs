@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Dec 27 22:52:02 2015
+// created: Tue Dec 29 22:57:40 2015
 // src-file: /QtWidgets/qcolordialog.h
 // dst-file: /src/widgets/qcolordialog.rs
 //
@@ -73,8 +73,10 @@ extern {
   fn _ZN12QColorDialogC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static int QColorDialog::customCount();
   fn _ZN12QColorDialog11customCountEv() -> c_int;
-  fn QColorDialog_SlotProxy_connect__ZN12QColorDialog19currentColorChangedERK6QColor(qthis: *mut c_void, fptr: *mut c_void);
-  fn QColorDialog_SlotProxy_connect__ZN12QColorDialog13colorSelectedERK6QColor(qthis: *mut c_void, fptr: *mut c_void);
+  fn QColorDialog_SlotProxy_connect__ZN12QColorDialog19currentColorChangedERK6QColor(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QColorDialog_SlotProxy_connect_box__ZN12QColorDialog19currentColorChangedERK6QColor(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QColorDialog_SlotProxy_connect__ZN12QColorDialog13colorSelectedERK6QColor(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn QColorDialog_SlotProxy_connect_box__ZN12QColorDialog13colorSelectedERK6QColor(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -524,7 +526,7 @@ impl<'a> /*trait*/ QColorDialog_customCount_s<i32> for () {
 #[derive(Default)] // for QColorDialog_colorSelected
 pub struct QColorDialog_colorSelected_signal{poi:u64}
 impl /* struct */ QColorDialog {
-  pub fn colorSelected_1(self) -> QColorDialog_colorSelected_signal {
+  pub fn colorSelected_1(&self) -> QColorDialog_colorSelected_signal {
      return QColorDialog_colorSelected_signal{poi:self.qclsinst};
   }
 }
@@ -540,7 +542,7 @@ pub trait QColorDialog_colorSelected_signal_connect {
 #[derive(Default)] // for QColorDialog_currentColorChanged
 pub struct QColorDialog_currentColorChanged_signal{poi:u64}
 impl /* struct */ QColorDialog {
-  pub fn currentColorChanged_1(self) -> QColorDialog_currentColorChanged_signal {
+  pub fn currentColorChanged_1(&self) -> QColorDialog_currentColorChanged_signal {
      return QColorDialog_currentColorChanged_signal{poi:self.qclsinst};
   }
 }
@@ -554,23 +556,63 @@ pub trait QColorDialog_currentColorChanged_signal_connect {
 }
 
 // currentColorChanged(const class QColor &)
-extern fn QColorDialog_currentColorChanged_signal_connect_cb_0(arg0: *mut c_void) {
+extern fn QColorDialog_currentColorChanged_signal_connect_cb_0(rsfptr:fn(QColor), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QColorDialog_currentColorChanged_signal_connect for (extern fn(QColor)) {
+extern fn QColorDialog_currentColorChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QColorDialog_currentColorChanged_signal_connect for fn(QColor) {
   fn connect(self, sigthis: QColorDialog_currentColorChanged_signal) {
     // do smth...
-    unsafe {QColorDialog_SlotProxy_connect__ZN12QColorDialog19currentColorChangedERK6QColor(sigthis.poi as *mut c_void, QColorDialog_currentColorChanged_signal_connect_cb_0 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QColorDialog_currentColorChanged_signal_connect_cb_0 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QColorDialog_SlotProxy_connect__ZN12QColorDialog19currentColorChangedERK6QColor(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QColorDialog_currentColorChanged_signal_connect for Box<fn(QColor)> {
+  fn connect(self, sigthis: QColorDialog_currentColorChanged_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QColorDialog_currentColorChanged_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QColorDialog_SlotProxy_connect__ZN12QColorDialog19currentColorChangedERK6QColor(arg0, arg1, arg2)};
   }
 }
 // colorSelected(const class QColor &)
-extern fn QColorDialog_colorSelected_signal_connect_cb_1(arg0: *mut c_void) {
+extern fn QColorDialog_colorSelected_signal_connect_cb_1(rsfptr:fn(QColor), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
 }
-impl /* trait */ QColorDialog_colorSelected_signal_connect for (extern fn(QColor)) {
+extern fn QColorDialog_colorSelected_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+  println!("{}:{}", file!(), line!());
+  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+}
+impl /* trait */ QColorDialog_colorSelected_signal_connect for fn(QColor) {
   fn connect(self, sigthis: QColorDialog_colorSelected_signal) {
     // do smth...
-    unsafe {QColorDialog_SlotProxy_connect__ZN12QColorDialog13colorSelectedERK6QColor(sigthis.poi as *mut c_void, QColorDialog_colorSelected_signal_connect_cb_1 as *mut c_void)};
+    self as u64;
+    self as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QColorDialog_colorSelected_signal_connect_cb_1 as *mut c_void;
+    let arg2 = self as *mut c_void;
+    unsafe {QColorDialog_SlotProxy_connect__ZN12QColorDialog13colorSelectedERK6QColor(arg0, arg1, arg2)};
+  }
+}
+impl /* trait */ QColorDialog_colorSelected_signal_connect for Box<fn(QColor)> {
+  fn connect(self, sigthis: QColorDialog_colorSelected_signal) {
+    // do smth...
+    // Box::into_raw(self) as u64;
+    // Box::into_raw(self) as *mut c_void;
+    let arg0 = sigthis.poi as *mut c_void;
+    let arg1 = QColorDialog_colorSelected_signal_connect_cb_box_1 as *mut c_void;
+    let arg2 = Box::into_raw(self) as *mut c_void;
+    unsafe {QColorDialog_SlotProxy_connect__ZN12QColorDialog13colorSelectedERK6QColor(arg0, arg1, arg2)};
   }
 }
 // <= body block end
