@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtWidgets/qundogroup.h
 // dst-file: /src/widgets/qundogroup.rs
 //
@@ -86,19 +86,12 @@ extern {
   // proto:  void QUndoGroup::removeStack(QUndoStack * stack);
   fn _ZN10QUndoGroup11removeStackEP10QUndoStack(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QUndoGroup_SlotProxy_connect__ZN10QUndoGroup14canRedoChangedEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QUndoGroup_SlotProxy_connect_box__ZN10QUndoGroup14canRedoChangedEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QUndoGroup_SlotProxy_connect__ZN10QUndoGroup18activeStackChangedEP10QUndoStack(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QUndoGroup_SlotProxy_connect_box__ZN10QUndoGroup18activeStackChangedEP10QUndoStack(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QUndoGroup_SlotProxy_connect__ZN10QUndoGroup12cleanChangedEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QUndoGroup_SlotProxy_connect_box__ZN10QUndoGroup12cleanChangedEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QUndoGroup_SlotProxy_connect__ZN10QUndoGroup15undoTextChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QUndoGroup_SlotProxy_connect_box__ZN10QUndoGroup15undoTextChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QUndoGroup_SlotProxy_connect__ZN10QUndoGroup14canUndoChangedEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QUndoGroup_SlotProxy_connect_box__ZN10QUndoGroup14canUndoChangedEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QUndoGroup_SlotProxy_connect__ZN10QUndoGroup12indexChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QUndoGroup_SlotProxy_connect_box__ZN10QUndoGroup12indexChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QUndoGroup_SlotProxy_connect__ZN10QUndoGroup15redoTextChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QUndoGroup_SlotProxy_connect_box__ZN10QUndoGroup15redoTextChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -826,10 +819,14 @@ pub trait QUndoGroup_undoTextChanged_signal_connect {
 // canRedoChanged(_Bool)
 extern fn QUndoGroup_canRedoChanged_signal_connect_cb_0(rsfptr:fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i8;
+  rsfptr(rsarg0);
 }
-extern fn QUndoGroup_canRedoChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_char) {
+extern fn QUndoGroup_canRedoChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i8;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QUndoGroup_canRedoChanged_signal_connect for fn(i8) {
   fn connect(self, sigthis: QUndoGroup_canRedoChanged_signal) {
@@ -856,10 +853,14 @@ impl /* trait */ QUndoGroup_canRedoChanged_signal_connect for Box<fn(i8)> {
 // activeStackChanged(class QUndoStack *)
 extern fn QUndoGroup_activeStackChanged_signal_connect_cb_1(rsfptr:fn(QUndoStack), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QUndoStack::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QUndoGroup_activeStackChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QUndoGroup_activeStackChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(QUndoStack), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QUndoStack::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QUndoGroup_activeStackChanged_signal_connect for fn(QUndoStack) {
   fn connect(self, sigthis: QUndoGroup_activeStackChanged_signal) {
@@ -886,10 +887,14 @@ impl /* trait */ QUndoGroup_activeStackChanged_signal_connect for Box<fn(QUndoSt
 // cleanChanged(_Bool)
 extern fn QUndoGroup_cleanChanged_signal_connect_cb_2(rsfptr:fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i8;
+  rsfptr(rsarg0);
 }
-extern fn QUndoGroup_cleanChanged_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, arg0: c_char) {
+extern fn QUndoGroup_cleanChanged_signal_connect_cb_box_2(rsfptr_raw:*mut fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i8;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QUndoGroup_cleanChanged_signal_connect for fn(i8) {
   fn connect(self, sigthis: QUndoGroup_cleanChanged_signal) {
@@ -916,10 +921,14 @@ impl /* trait */ QUndoGroup_cleanChanged_signal_connect for Box<fn(i8)> {
 // undoTextChanged(const class QString &)
 extern fn QUndoGroup_undoTextChanged_signal_connect_cb_3(rsfptr:fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QUndoGroup_undoTextChanged_signal_connect_cb_box_3(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QUndoGroup_undoTextChanged_signal_connect_cb_box_3(rsfptr_raw:*mut fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QUndoGroup_undoTextChanged_signal_connect for fn(QString) {
   fn connect(self, sigthis: QUndoGroup_undoTextChanged_signal) {
@@ -946,10 +955,14 @@ impl /* trait */ QUndoGroup_undoTextChanged_signal_connect for Box<fn(QString)> 
 // canUndoChanged(_Bool)
 extern fn QUndoGroup_canUndoChanged_signal_connect_cb_4(rsfptr:fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i8;
+  rsfptr(rsarg0);
 }
-extern fn QUndoGroup_canUndoChanged_signal_connect_cb_box_4(rsfptr_raw:*mut c_void, arg0: c_char) {
+extern fn QUndoGroup_canUndoChanged_signal_connect_cb_box_4(rsfptr_raw:*mut fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i8;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QUndoGroup_canUndoChanged_signal_connect for fn(i8) {
   fn connect(self, sigthis: QUndoGroup_canUndoChanged_signal) {
@@ -976,10 +989,14 @@ impl /* trait */ QUndoGroup_canUndoChanged_signal_connect for Box<fn(i8)> {
 // indexChanged(int)
 extern fn QUndoGroup_indexChanged_signal_connect_cb_5(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QUndoGroup_indexChanged_signal_connect_cb_box_5(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QUndoGroup_indexChanged_signal_connect_cb_box_5(rsfptr_raw:*mut fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QUndoGroup_indexChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QUndoGroup_indexChanged_signal) {
@@ -1006,10 +1023,14 @@ impl /* trait */ QUndoGroup_indexChanged_signal_connect for Box<fn(i32)> {
 // redoTextChanged(const class QString &)
 extern fn QUndoGroup_redoTextChanged_signal_connect_cb_6(rsfptr:fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QUndoGroup_redoTextChanged_signal_connect_cb_box_6(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QUndoGroup_redoTextChanged_signal_connect_cb_box_6(rsfptr_raw:*mut fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QUndoGroup_redoTextChanged_signal_connect for fn(QString) {
   fn connect(self, sigthis: QUndoGroup_redoTextChanged_signal) {

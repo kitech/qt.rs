@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtWidgets/qwizard.h
 // dst-file: /src/widgets/qwizard.rs
 //
@@ -140,17 +140,11 @@ extern {
   // proto:  QWidget * QWizard::sideWidget();
   fn _ZNK7QWizard10sideWidgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   fn QWizardPage_SlotProxy_connect__ZN11QWizardPage15completeChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QWizardPage_SlotProxy_connect_box__ZN11QWizardPage15completeChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QWizard_SlotProxy_connect__ZN7QWizard13helpRequestedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QWizard_SlotProxy_connect_box__ZN7QWizard13helpRequestedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QWizard_SlotProxy_connect__ZN7QWizard16currentIdChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QWizard_SlotProxy_connect_box__ZN7QWizard16currentIdChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QWizard_SlotProxy_connect__ZN7QWizard11pageRemovedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QWizard_SlotProxy_connect_box__ZN7QWizard11pageRemovedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QWizard_SlotProxy_connect__ZN7QWizard19customButtonClickedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QWizard_SlotProxy_connect_box__ZN7QWizard19customButtonClickedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QWizard_SlotProxy_connect__ZN7QWizard9pageAddedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QWizard_SlotProxy_connect_box__ZN7QWizard9pageAddedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -1361,10 +1355,12 @@ pub trait QWizardPage_completeChanged_signal_connect {
 // completeChanged()
 extern fn QWizardPage_completeChanged_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QWizardPage_completeChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, ) {
+extern fn QWizardPage_completeChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QWizardPage_completeChanged_signal_connect for fn() {
   fn connect(self, sigthis: QWizardPage_completeChanged_signal) {
@@ -1471,10 +1467,12 @@ pub trait QWizard_customButtonClicked_signal_connect {
 // helpRequested()
 extern fn QWizard_helpRequested_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QWizard_helpRequested_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, ) {
+extern fn QWizard_helpRequested_signal_connect_cb_box_0(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QWizard_helpRequested_signal_connect for fn() {
   fn connect(self, sigthis: QWizard_helpRequested_signal) {
@@ -1501,10 +1499,14 @@ impl /* trait */ QWizard_helpRequested_signal_connect for Box<fn()> {
 // currentIdChanged(int)
 extern fn QWizard_currentIdChanged_signal_connect_cb_1(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QWizard_currentIdChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QWizard_currentIdChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QWizard_currentIdChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QWizard_currentIdChanged_signal) {
@@ -1531,10 +1533,14 @@ impl /* trait */ QWizard_currentIdChanged_signal_connect for Box<fn(i32)> {
 // pageRemoved(int)
 extern fn QWizard_pageRemoved_signal_connect_cb_2(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QWizard_pageRemoved_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QWizard_pageRemoved_signal_connect_cb_box_2(rsfptr_raw:*mut fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QWizard_pageRemoved_signal_connect for fn(i32) {
   fn connect(self, sigthis: QWizard_pageRemoved_signal) {
@@ -1561,10 +1567,14 @@ impl /* trait */ QWizard_pageRemoved_signal_connect for Box<fn(i32)> {
 // customButtonClicked(int)
 extern fn QWizard_customButtonClicked_signal_connect_cb_3(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QWizard_customButtonClicked_signal_connect_cb_box_3(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QWizard_customButtonClicked_signal_connect_cb_box_3(rsfptr_raw:*mut fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QWizard_customButtonClicked_signal_connect for fn(i32) {
   fn connect(self, sigthis: QWizard_customButtonClicked_signal) {
@@ -1591,10 +1601,14 @@ impl /* trait */ QWizard_customButtonClicked_signal_connect for Box<fn(i32)> {
 // pageAdded(int)
 extern fn QWizard_pageAdded_signal_connect_cb_4(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QWizard_pageAdded_signal_connect_cb_box_4(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QWizard_pageAdded_signal_connect_cb_box_4(rsfptr_raw:*mut fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QWizard_pageAdded_signal_connect for fn(i32) {
   fn connect(self, sigthis: QWizard_pageAdded_signal) {

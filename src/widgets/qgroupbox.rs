@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtWidgets/qgroupbox.h
 // dst-file: /src/widgets/qgroupbox.rs
 //
@@ -70,9 +70,7 @@ extern {
   // proto:  void QGroupBox::clicked(bool checked);
   fn _ZN9QGroupBox7clickedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   fn QGroupBox_SlotProxy_connect__ZN9QGroupBox7clickedEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGroupBox_SlotProxy_connect_box__ZN9QGroupBox7clickedEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QGroupBox_SlotProxy_connect__ZN9QGroupBox7toggledEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGroupBox_SlotProxy_connect_box__ZN9QGroupBox7toggledEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -521,10 +519,14 @@ pub trait QGroupBox_toggled_signal_connect {
 // clicked(_Bool)
 extern fn QGroupBox_clicked_signal_connect_cb_0(rsfptr:fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i8;
+  rsfptr(rsarg0);
 }
-extern fn QGroupBox_clicked_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_char) {
+extern fn QGroupBox_clicked_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i8;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QGroupBox_clicked_signal_connect for fn(i8) {
   fn connect(self, sigthis: QGroupBox_clicked_signal) {
@@ -551,10 +553,14 @@ impl /* trait */ QGroupBox_clicked_signal_connect for Box<fn(i8)> {
 // toggled(_Bool)
 extern fn QGroupBox_toggled_signal_connect_cb_1(rsfptr:fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i8;
+  rsfptr(rsarg0);
 }
-extern fn QGroupBox_toggled_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: c_char) {
+extern fn QGroupBox_toggled_signal_connect_cb_box_1(rsfptr_raw:*mut fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i8;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QGroupBox_toggled_signal_connect for fn(i8) {
   fn connect(self, sigthis: QGroupBox_toggled_signal) {

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtWidgets/qactiongroup.h
 // dst-file: /src/widgets/qactiongroup.rs
 //
@@ -74,9 +74,7 @@ extern {
   // proto:  void QActionGroup::hovered(QAction * );
   fn _ZN12QActionGroup7hoveredEP7QAction(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QActionGroup_SlotProxy_connect__ZN12QActionGroup7hoveredEP7QAction(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QActionGroup_SlotProxy_connect_box__ZN12QActionGroup7hoveredEP7QAction(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QActionGroup_SlotProxy_connect__ZN12QActionGroup9triggeredEP7QAction(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QActionGroup_SlotProxy_connect_box__ZN12QActionGroup9triggeredEP7QAction(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -558,10 +556,14 @@ pub trait QActionGroup_hovered_signal_connect {
 // hovered(class QAction *)
 extern fn QActionGroup_hovered_signal_connect_cb_0(rsfptr:fn(QAction), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QAction::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QActionGroup_hovered_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QActionGroup_hovered_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QAction), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QAction::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QActionGroup_hovered_signal_connect for fn(QAction) {
   fn connect(self, sigthis: QActionGroup_hovered_signal) {
@@ -588,10 +590,14 @@ impl /* trait */ QActionGroup_hovered_signal_connect for Box<fn(QAction)> {
 // triggered(class QAction *)
 extern fn QActionGroup_triggered_signal_connect_cb_1(rsfptr:fn(QAction), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QAction::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QActionGroup_triggered_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QActionGroup_triggered_signal_connect_cb_box_1(rsfptr_raw:*mut fn(QAction), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QAction::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QActionGroup_triggered_signal_connect for fn(QAction) {
   fn connect(self, sigthis: QActionGroup_triggered_signal) {

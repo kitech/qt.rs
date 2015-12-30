@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtWidgets/qlabel.h
 // dst-file: /src/widgets/qlabel.rs
 //
@@ -108,9 +108,7 @@ extern {
   // proto:  void QLabel::linkHovered(const QString & link);
   fn _ZN6QLabel11linkHoveredERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QLabel_SlotProxy_connect__ZN6QLabel13linkActivatedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QLabel_SlotProxy_connect_box__ZN6QLabel13linkActivatedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QLabel_SlotProxy_connect__ZN6QLabel11linkHoveredERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QLabel_SlotProxy_connect_box__ZN6QLabel11linkHoveredERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -981,10 +979,14 @@ pub trait QLabel_linkHovered_signal_connect {
 // linkActivated(const class QString &)
 extern fn QLabel_linkActivated_signal_connect_cb_0(rsfptr:fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QLabel_linkActivated_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QLabel_linkActivated_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QLabel_linkActivated_signal_connect for fn(QString) {
   fn connect(self, sigthis: QLabel_linkActivated_signal) {
@@ -1011,10 +1013,14 @@ impl /* trait */ QLabel_linkActivated_signal_connect for Box<fn(QString)> {
 // linkHovered(const class QString &)
 extern fn QLabel_linkHovered_signal_connect_cb_1(rsfptr:fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QLabel_linkHovered_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QLabel_linkHovered_signal_connect_cb_box_1(rsfptr_raw:*mut fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QLabel_linkHovered_signal_connect for fn(QString) {
   fn connect(self, sigthis: QLabel_linkHovered_signal) {

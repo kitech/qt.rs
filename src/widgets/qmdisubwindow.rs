@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtWidgets/qmdisubwindow.h
 // dst-file: /src/widgets/qmdisubwindow.rs
 //
@@ -75,9 +75,7 @@ extern {
   // proto:  void QMdiSubWindow::setKeyboardPageStep(int step);
   fn _ZN13QMdiSubWindow19setKeyboardPageStepEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   fn QMdiSubWindow_SlotProxy_connect__ZN13QMdiSubWindow18windowStateChangedE6QFlagsIN2Qt11WindowStateEES3_(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QMdiSubWindow_SlotProxy_connect_box__ZN13QMdiSubWindow18windowStateChangedE6QFlagsIN2Qt11WindowStateEES3_(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QMdiSubWindow_SlotProxy_connect__ZN13QMdiSubWindow15aboutToActivateEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QMdiSubWindow_SlotProxy_connect_box__ZN13QMdiSubWindow15aboutToActivateEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -610,10 +608,16 @@ pub trait QMdiSubWindow_windowStateChanged_signal_connect {
 // windowStateChanged(Qt::WindowStates, Qt::WindowStates)
 extern fn QMdiSubWindow_windowStateChanged_signal_connect_cb_0(rsfptr:fn(i32, i32), arg0: c_int, arg1: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  let rsarg1 = arg1 as i32;
+  rsfptr(rsarg0,rsarg1);
 }
-extern fn QMdiSubWindow_windowStateChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_int, arg1: c_int) {
+extern fn QMdiSubWindow_windowStateChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i32, i32), arg0: c_int, arg1: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  let rsarg1 = arg1 as i32;
+  rsfptr(rsarg0,rsarg1);
 }
 impl /* trait */ QMdiSubWindow_windowStateChanged_signal_connect for fn(i32, i32) {
   fn connect(self, sigthis: QMdiSubWindow_windowStateChanged_signal) {
@@ -640,10 +644,12 @@ impl /* trait */ QMdiSubWindow_windowStateChanged_signal_connect for Box<fn(i32,
 // aboutToActivate()
 extern fn QMdiSubWindow_aboutToActivate_signal_connect_cb_1(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QMdiSubWindow_aboutToActivate_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, ) {
+extern fn QMdiSubWindow_aboutToActivate_signal_connect_cb_box_1(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QMdiSubWindow_aboutToActivate_signal_connect for fn() {
   fn connect(self, sigthis: QMdiSubWindow_aboutToActivate_signal) {

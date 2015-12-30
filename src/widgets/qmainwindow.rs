@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtWidgets/qmainwindow.h
 // dst-file: /src/widgets/qmainwindow.rs
 //
@@ -117,9 +117,7 @@ extern {
   // proto:  QList<QDockWidget *> QMainWindow::tabifiedDockWidgets(QDockWidget * dockwidget);
   fn _ZNK11QMainWindow19tabifiedDockWidgetsEP11QDockWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QMainWindow_SlotProxy_connect__ZN11QMainWindow22toolButtonStyleChangedEN2Qt15ToolButtonStyleE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QMainWindow_SlotProxy_connect_box__ZN11QMainWindow22toolButtonStyleChangedEN2Qt15ToolButtonStyleE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QMainWindow_SlotProxy_connect__ZN11QMainWindow15iconSizeChangedERK5QSize(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QMainWindow_SlotProxy_connect_box__ZN11QMainWindow15iconSizeChangedERK5QSize(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -1068,10 +1066,14 @@ pub trait QMainWindow_iconSizeChanged_signal_connect {
 // toolButtonStyleChanged(Qt::ToolButtonStyle)
 extern fn QMainWindow_toolButtonStyleChanged_signal_connect_cb_0(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QMainWindow_toolButtonStyleChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QMainWindow_toolButtonStyleChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QMainWindow_toolButtonStyleChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QMainWindow_toolButtonStyleChanged_signal) {
@@ -1098,10 +1100,14 @@ impl /* trait */ QMainWindow_toolButtonStyleChanged_signal_connect for Box<fn(i3
 // iconSizeChanged(const class QSize &)
 extern fn QMainWindow_iconSizeChanged_signal_connect_cb_1(rsfptr:fn(QSize), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QSize::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QMainWindow_iconSizeChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QMainWindow_iconSizeChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(QSize), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QSize::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QMainWindow_iconSizeChanged_signal_connect for fn(QSize) {
   fn connect(self, sigthis: QMainWindow_iconSizeChanged_signal) {

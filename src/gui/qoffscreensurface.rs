@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtGui/qoffscreensurface.h
 // dst-file: /src/gui/qoffscreensurface.rs
 //
@@ -66,7 +66,6 @@ extern {
   // proto:  void QOffscreenSurface::create();
   fn _ZN17QOffscreenSurface6createEv(qthis: u64 /* *mut c_void*/);
   fn QOffscreenSurface_SlotProxy_connect__ZN17QOffscreenSurface13screenChangedEP7QScreen(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QOffscreenSurface_SlotProxy_connect_box__ZN17QOffscreenSurface13screenChangedEP7QScreen(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -457,10 +456,14 @@ pub trait QOffscreenSurface_screenChanged_signal_connect {
 // screenChanged(class QScreen *)
 extern fn QOffscreenSurface_screenChanged_signal_connect_cb_0(rsfptr:fn(QScreen), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QScreen::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QOffscreenSurface_screenChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QOffscreenSurface_screenChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QScreen), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QScreen::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QOffscreenSurface_screenChanged_signal_connect for fn(QScreen) {
   fn connect(self, sigthis: QOffscreenSurface_screenChanged_signal) {

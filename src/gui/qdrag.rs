@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtGui/qdrag.h
 // dst-file: /src/gui/qdrag.rs
 //
@@ -62,9 +62,7 @@ extern {
   // proto:  void QDrag::targetChanged(QObject * newTarget);
   fn _ZN5QDrag13targetChangedEP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QDrag_SlotProxy_connect__ZN5QDrag13targetChangedEP7QObject(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QDrag_SlotProxy_connect_box__ZN5QDrag13targetChangedEP7QObject(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QDrag_SlotProxy_connect__ZN5QDrag13actionChangedEN2Qt10DropActionE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QDrag_SlotProxy_connect_box__ZN5QDrag13actionChangedEN2Qt10DropActionE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -430,10 +428,14 @@ pub trait QDrag_actionChanged_signal_connect {
 // targetChanged(class QObject *)
 extern fn QDrag_targetChanged_signal_connect_cb_0(rsfptr:fn(QObject), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QObject::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QDrag_targetChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QDrag_targetChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QObject), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QObject::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QDrag_targetChanged_signal_connect for fn(QObject) {
   fn connect(self, sigthis: QDrag_targetChanged_signal) {
@@ -460,10 +462,14 @@ impl /* trait */ QDrag_targetChanged_signal_connect for Box<fn(QObject)> {
 // actionChanged(Qt::DropAction)
 extern fn QDrag_actionChanged_signal_connect_cb_1(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QDrag_actionChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QDrag_actionChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QDrag_actionChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QDrag_actionChanged_signal) {

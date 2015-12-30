@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtCore/qabstractitemmodel.h
 // dst-file: /src/core/qabstractitemmodel.rs
 //
@@ -200,7 +200,6 @@ extern {
   // proto:  void QAbstractListModel::~QAbstractListModel();
   fn _ZN18QAbstractListModelD0Ev(qthis: u64 /* *mut c_void*/);
   fn QAbstractItemModel_SlotProxy_connect__ZN18QAbstractItemModel17headerDataChangedEN2Qt11OrientationEii(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QAbstractItemModel_SlotProxy_connect_box__ZN18QAbstractItemModel17headerDataChangedEN2Qt11OrientationEii(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -2381,10 +2380,18 @@ pub trait QAbstractItemModel_dataChanged_signal_connect {
 // headerDataChanged(Qt::Orientation, int, int)
 extern fn QAbstractItemModel_headerDataChanged_signal_connect_cb_0(rsfptr:fn(i32, i32, i32), arg0: c_int, arg1: c_int, arg2: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  let rsarg1 = arg1 as i32;
+  let rsarg2 = arg2 as i32;
+  rsfptr(rsarg0,rsarg1,rsarg2);
 }
-extern fn QAbstractItemModel_headerDataChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_int, arg1: c_int, arg2: c_int) {
+extern fn QAbstractItemModel_headerDataChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i32, i32, i32), arg0: c_int, arg1: c_int, arg2: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  let rsarg1 = arg1 as i32;
+  let rsarg2 = arg2 as i32;
+  rsfptr(rsarg0,rsarg1,rsarg2);
 }
 impl /* trait */ QAbstractItemModel_headerDataChanged_signal_connect for fn(i32, i32, i32) {
   fn connect(self, sigthis: QAbstractItemModel_headerDataChanged_signal) {

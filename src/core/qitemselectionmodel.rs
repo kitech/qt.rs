@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtCore/qitemselectionmodel.h
 // dst-file: /src/core/qitemselectionmodel.rs
 //
@@ -155,15 +155,10 @@ extern {
   // proto:  QModelIndexList QItemSelectionModel::selectedRows(int column);
   fn _ZNK19QItemSelectionModel12selectedRowsEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   fn QItemSelectionModel_SlotProxy_connect__ZN19QItemSelectionModel16selectionChangedERK14QItemSelectionS2_(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QItemSelectionModel_SlotProxy_connect_box__ZN19QItemSelectionModel16selectionChangedERK14QItemSelectionS2_(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QItemSelectionModel_SlotProxy_connect__ZN19QItemSelectionModel17currentRowChangedERK11QModelIndexS2_(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QItemSelectionModel_SlotProxy_connect_box__ZN19QItemSelectionModel17currentRowChangedERK11QModelIndexS2_(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QItemSelectionModel_SlotProxy_connect__ZN19QItemSelectionModel20currentColumnChangedERK11QModelIndexS2_(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QItemSelectionModel_SlotProxy_connect_box__ZN19QItemSelectionModel20currentColumnChangedERK11QModelIndexS2_(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QItemSelectionModel_SlotProxy_connect__ZN19QItemSelectionModel14currentChangedERK11QModelIndexS2_(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QItemSelectionModel_SlotProxy_connect_box__ZN19QItemSelectionModel14currentChangedERK11QModelIndexS2_(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QItemSelectionModel_SlotProxy_connect__ZN19QItemSelectionModel12modelChangedEP18QAbstractItemModel(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QItemSelectionModel_SlotProxy_connect_box__ZN19QItemSelectionModel12modelChangedEP18QAbstractItemModel(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -1528,10 +1523,16 @@ pub trait QItemSelectionModel_currentChanged_signal_connect {
 // selectionChanged(const class QItemSelection &, const class QItemSelection &)
 extern fn QItemSelectionModel_selectionChanged_signal_connect_cb_0(rsfptr:fn(QItemSelection, QItemSelection), arg0: *mut c_void, arg1: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QItemSelection::inheritFrom(arg0 as u64);
+  let rsarg1 = QItemSelection::inheritFrom(arg1 as u64);
+  rsfptr(rsarg0,rsarg1);
 }
-extern fn QItemSelectionModel_selectionChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void, arg1: *mut c_void) {
+extern fn QItemSelectionModel_selectionChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QItemSelection, QItemSelection), arg0: *mut c_void, arg1: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QItemSelection::inheritFrom(arg0 as u64);
+  let rsarg1 = QItemSelection::inheritFrom(arg1 as u64);
+  rsfptr(rsarg0,rsarg1);
 }
 impl /* trait */ QItemSelectionModel_selectionChanged_signal_connect for fn(QItemSelection, QItemSelection) {
   fn connect(self, sigthis: QItemSelectionModel_selectionChanged_signal) {
@@ -1558,10 +1559,16 @@ impl /* trait */ QItemSelectionModel_selectionChanged_signal_connect for Box<fn(
 // currentRowChanged(const class QModelIndex &, const class QModelIndex &)
 extern fn QItemSelectionModel_currentRowChanged_signal_connect_cb_1(rsfptr:fn(QModelIndex, QModelIndex), arg0: *mut c_void, arg1: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QModelIndex::inheritFrom(arg0 as u64);
+  let rsarg1 = QModelIndex::inheritFrom(arg1 as u64);
+  rsfptr(rsarg0,rsarg1);
 }
-extern fn QItemSelectionModel_currentRowChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: *mut c_void, arg1: *mut c_void) {
+extern fn QItemSelectionModel_currentRowChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(QModelIndex, QModelIndex), arg0: *mut c_void, arg1: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QModelIndex::inheritFrom(arg0 as u64);
+  let rsarg1 = QModelIndex::inheritFrom(arg1 as u64);
+  rsfptr(rsarg0,rsarg1);
 }
 impl /* trait */ QItemSelectionModel_currentRowChanged_signal_connect for fn(QModelIndex, QModelIndex) {
   fn connect(self, sigthis: QItemSelectionModel_currentRowChanged_signal) {
@@ -1588,10 +1595,16 @@ impl /* trait */ QItemSelectionModel_currentRowChanged_signal_connect for Box<fn
 // currentColumnChanged(const class QModelIndex &, const class QModelIndex &)
 extern fn QItemSelectionModel_currentColumnChanged_signal_connect_cb_2(rsfptr:fn(QModelIndex, QModelIndex), arg0: *mut c_void, arg1: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QModelIndex::inheritFrom(arg0 as u64);
+  let rsarg1 = QModelIndex::inheritFrom(arg1 as u64);
+  rsfptr(rsarg0,rsarg1);
 }
-extern fn QItemSelectionModel_currentColumnChanged_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, arg0: *mut c_void, arg1: *mut c_void) {
+extern fn QItemSelectionModel_currentColumnChanged_signal_connect_cb_box_2(rsfptr_raw:*mut fn(QModelIndex, QModelIndex), arg0: *mut c_void, arg1: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QModelIndex::inheritFrom(arg0 as u64);
+  let rsarg1 = QModelIndex::inheritFrom(arg1 as u64);
+  rsfptr(rsarg0,rsarg1);
 }
 impl /* trait */ QItemSelectionModel_currentColumnChanged_signal_connect for fn(QModelIndex, QModelIndex) {
   fn connect(self, sigthis: QItemSelectionModel_currentColumnChanged_signal) {
@@ -1618,10 +1631,16 @@ impl /* trait */ QItemSelectionModel_currentColumnChanged_signal_connect for Box
 // currentChanged(const class QModelIndex &, const class QModelIndex &)
 extern fn QItemSelectionModel_currentChanged_signal_connect_cb_3(rsfptr:fn(QModelIndex, QModelIndex), arg0: *mut c_void, arg1: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QModelIndex::inheritFrom(arg0 as u64);
+  let rsarg1 = QModelIndex::inheritFrom(arg1 as u64);
+  rsfptr(rsarg0,rsarg1);
 }
-extern fn QItemSelectionModel_currentChanged_signal_connect_cb_box_3(rsfptr_raw:*mut c_void, arg0: *mut c_void, arg1: *mut c_void) {
+extern fn QItemSelectionModel_currentChanged_signal_connect_cb_box_3(rsfptr_raw:*mut fn(QModelIndex, QModelIndex), arg0: *mut c_void, arg1: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QModelIndex::inheritFrom(arg0 as u64);
+  let rsarg1 = QModelIndex::inheritFrom(arg1 as u64);
+  rsfptr(rsarg0,rsarg1);
 }
 impl /* trait */ QItemSelectionModel_currentChanged_signal_connect for fn(QModelIndex, QModelIndex) {
   fn connect(self, sigthis: QItemSelectionModel_currentChanged_signal) {
@@ -1648,10 +1667,14 @@ impl /* trait */ QItemSelectionModel_currentChanged_signal_connect for Box<fn(QM
 // modelChanged(class QAbstractItemModel *)
 extern fn QItemSelectionModel_modelChanged_signal_connect_cb_4(rsfptr:fn(QAbstractItemModel), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QAbstractItemModel::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QItemSelectionModel_modelChanged_signal_connect_cb_box_4(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QItemSelectionModel_modelChanged_signal_connect_cb_box_4(rsfptr_raw:*mut fn(QAbstractItemModel), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QAbstractItemModel::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QItemSelectionModel_modelChanged_signal_connect for fn(QAbstractItemModel) {
   fn connect(self, sigthis: QItemSelectionModel_modelChanged_signal) {

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtWidgets/qgraphicsitem.h
 // dst-file: /src/widgets/qgraphicsitem.rs
 //
@@ -791,33 +791,19 @@ extern {
   // proto:  bool QGraphicsSimpleTextItem::contains(const QPointF & point);
   fn _ZNK23QGraphicsSimpleTextItem8containsERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   fn QGraphicsTextItem_SlotProxy_connect__ZN17QGraphicsTextItem11linkHoveredERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGraphicsTextItem_SlotProxy_connect_box__ZN17QGraphicsTextItem11linkHoveredERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QGraphicsTextItem_SlotProxy_connect__ZN17QGraphicsTextItem13linkActivatedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGraphicsTextItem_SlotProxy_connect_box__ZN17QGraphicsTextItem13linkActivatedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QGraphicsObject_SlotProxy_connect__ZN15QGraphicsObject8yChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGraphicsObject_SlotProxy_connect_box__ZN15QGraphicsObject8yChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QGraphicsObject_SlotProxy_connect__ZN15QGraphicsObject14opacityChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGraphicsObject_SlotProxy_connect_box__ZN15QGraphicsObject14opacityChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QGraphicsObject_SlotProxy_connect__ZN15QGraphicsObject14visibleChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGraphicsObject_SlotProxy_connect_box__ZN15QGraphicsObject14visibleChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QGraphicsObject_SlotProxy_connect__ZN15QGraphicsObject15childrenChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGraphicsObject_SlotProxy_connect_box__ZN15QGraphicsObject15childrenChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QGraphicsObject_SlotProxy_connect__ZN15QGraphicsObject8zChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGraphicsObject_SlotProxy_connect_box__ZN15QGraphicsObject8zChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QGraphicsObject_SlotProxy_connect__ZN15QGraphicsObject12widthChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGraphicsObject_SlotProxy_connect_box__ZN15QGraphicsObject12widthChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QGraphicsObject_SlotProxy_connect__ZN15QGraphicsObject15rotationChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGraphicsObject_SlotProxy_connect_box__ZN15QGraphicsObject15rotationChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QGraphicsObject_SlotProxy_connect__ZN15QGraphicsObject14enabledChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGraphicsObject_SlotProxy_connect_box__ZN15QGraphicsObject14enabledChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QGraphicsObject_SlotProxy_connect__ZN15QGraphicsObject12scaleChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGraphicsObject_SlotProxy_connect_box__ZN15QGraphicsObject12scaleChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QGraphicsObject_SlotProxy_connect__ZN15QGraphicsObject13heightChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGraphicsObject_SlotProxy_connect_box__ZN15QGraphicsObject13heightChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QGraphicsObject_SlotProxy_connect__ZN15QGraphicsObject13parentChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGraphicsObject_SlotProxy_connect_box__ZN15QGraphicsObject13parentChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QGraphicsObject_SlotProxy_connect__ZN15QGraphicsObject8xChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGraphicsObject_SlotProxy_connect_box__ZN15QGraphicsObject8xChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -8684,10 +8670,14 @@ pub trait QGraphicsTextItem_linkHovered_signal_connect {
 // linkHovered(const class QString &)
 extern fn QGraphicsTextItem_linkHovered_signal_connect_cb_0(rsfptr:fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QGraphicsTextItem_linkHovered_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QGraphicsTextItem_linkHovered_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QGraphicsTextItem_linkHovered_signal_connect for fn(QString) {
   fn connect(self, sigthis: QGraphicsTextItem_linkHovered_signal) {
@@ -8714,10 +8704,14 @@ impl /* trait */ QGraphicsTextItem_linkHovered_signal_connect for Box<fn(QString
 // linkActivated(const class QString &)
 extern fn QGraphicsTextItem_linkActivated_signal_connect_cb_1(rsfptr:fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QGraphicsTextItem_linkActivated_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QGraphicsTextItem_linkActivated_signal_connect_cb_box_1(rsfptr_raw:*mut fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QGraphicsTextItem_linkActivated_signal_connect for fn(QString) {
   fn connect(self, sigthis: QGraphicsTextItem_linkActivated_signal) {
@@ -8936,10 +8930,12 @@ pub trait QGraphicsObject_scaleChanged_signal_connect {
 // yChanged()
 extern fn QGraphicsObject_yChanged_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QGraphicsObject_yChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, ) {
+extern fn QGraphicsObject_yChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QGraphicsObject_yChanged_signal_connect for fn() {
   fn connect(self, sigthis: QGraphicsObject_yChanged_signal) {
@@ -8966,10 +8962,12 @@ impl /* trait */ QGraphicsObject_yChanged_signal_connect for Box<fn()> {
 // opacityChanged()
 extern fn QGraphicsObject_opacityChanged_signal_connect_cb_1(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QGraphicsObject_opacityChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, ) {
+extern fn QGraphicsObject_opacityChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QGraphicsObject_opacityChanged_signal_connect for fn() {
   fn connect(self, sigthis: QGraphicsObject_opacityChanged_signal) {
@@ -8996,10 +8994,12 @@ impl /* trait */ QGraphicsObject_opacityChanged_signal_connect for Box<fn()> {
 // visibleChanged()
 extern fn QGraphicsObject_visibleChanged_signal_connect_cb_2(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QGraphicsObject_visibleChanged_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, ) {
+extern fn QGraphicsObject_visibleChanged_signal_connect_cb_box_2(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QGraphicsObject_visibleChanged_signal_connect for fn() {
   fn connect(self, sigthis: QGraphicsObject_visibleChanged_signal) {
@@ -9026,10 +9026,12 @@ impl /* trait */ QGraphicsObject_visibleChanged_signal_connect for Box<fn()> {
 // childrenChanged()
 extern fn QGraphicsObject_childrenChanged_signal_connect_cb_3(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QGraphicsObject_childrenChanged_signal_connect_cb_box_3(rsfptr_raw:*mut c_void, ) {
+extern fn QGraphicsObject_childrenChanged_signal_connect_cb_box_3(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QGraphicsObject_childrenChanged_signal_connect for fn() {
   fn connect(self, sigthis: QGraphicsObject_childrenChanged_signal) {
@@ -9056,10 +9058,12 @@ impl /* trait */ QGraphicsObject_childrenChanged_signal_connect for Box<fn()> {
 // zChanged()
 extern fn QGraphicsObject_zChanged_signal_connect_cb_4(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QGraphicsObject_zChanged_signal_connect_cb_box_4(rsfptr_raw:*mut c_void, ) {
+extern fn QGraphicsObject_zChanged_signal_connect_cb_box_4(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QGraphicsObject_zChanged_signal_connect for fn() {
   fn connect(self, sigthis: QGraphicsObject_zChanged_signal) {
@@ -9086,10 +9090,12 @@ impl /* trait */ QGraphicsObject_zChanged_signal_connect for Box<fn()> {
 // widthChanged()
 extern fn QGraphicsObject_widthChanged_signal_connect_cb_5(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QGraphicsObject_widthChanged_signal_connect_cb_box_5(rsfptr_raw:*mut c_void, ) {
+extern fn QGraphicsObject_widthChanged_signal_connect_cb_box_5(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QGraphicsObject_widthChanged_signal_connect for fn() {
   fn connect(self, sigthis: QGraphicsObject_widthChanged_signal) {
@@ -9116,10 +9122,12 @@ impl /* trait */ QGraphicsObject_widthChanged_signal_connect for Box<fn()> {
 // rotationChanged()
 extern fn QGraphicsObject_rotationChanged_signal_connect_cb_6(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QGraphicsObject_rotationChanged_signal_connect_cb_box_6(rsfptr_raw:*mut c_void, ) {
+extern fn QGraphicsObject_rotationChanged_signal_connect_cb_box_6(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QGraphicsObject_rotationChanged_signal_connect for fn() {
   fn connect(self, sigthis: QGraphicsObject_rotationChanged_signal) {
@@ -9146,10 +9154,12 @@ impl /* trait */ QGraphicsObject_rotationChanged_signal_connect for Box<fn()> {
 // enabledChanged()
 extern fn QGraphicsObject_enabledChanged_signal_connect_cb_7(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QGraphicsObject_enabledChanged_signal_connect_cb_box_7(rsfptr_raw:*mut c_void, ) {
+extern fn QGraphicsObject_enabledChanged_signal_connect_cb_box_7(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QGraphicsObject_enabledChanged_signal_connect for fn() {
   fn connect(self, sigthis: QGraphicsObject_enabledChanged_signal) {
@@ -9176,10 +9186,12 @@ impl /* trait */ QGraphicsObject_enabledChanged_signal_connect for Box<fn()> {
 // scaleChanged()
 extern fn QGraphicsObject_scaleChanged_signal_connect_cb_8(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QGraphicsObject_scaleChanged_signal_connect_cb_box_8(rsfptr_raw:*mut c_void, ) {
+extern fn QGraphicsObject_scaleChanged_signal_connect_cb_box_8(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QGraphicsObject_scaleChanged_signal_connect for fn() {
   fn connect(self, sigthis: QGraphicsObject_scaleChanged_signal) {
@@ -9206,10 +9218,12 @@ impl /* trait */ QGraphicsObject_scaleChanged_signal_connect for Box<fn()> {
 // heightChanged()
 extern fn QGraphicsObject_heightChanged_signal_connect_cb_9(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QGraphicsObject_heightChanged_signal_connect_cb_box_9(rsfptr_raw:*mut c_void, ) {
+extern fn QGraphicsObject_heightChanged_signal_connect_cb_box_9(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QGraphicsObject_heightChanged_signal_connect for fn() {
   fn connect(self, sigthis: QGraphicsObject_heightChanged_signal) {
@@ -9236,10 +9250,12 @@ impl /* trait */ QGraphicsObject_heightChanged_signal_connect for Box<fn()> {
 // parentChanged()
 extern fn QGraphicsObject_parentChanged_signal_connect_cb_10(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QGraphicsObject_parentChanged_signal_connect_cb_box_10(rsfptr_raw:*mut c_void, ) {
+extern fn QGraphicsObject_parentChanged_signal_connect_cb_box_10(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QGraphicsObject_parentChanged_signal_connect for fn() {
   fn connect(self, sigthis: QGraphicsObject_parentChanged_signal) {
@@ -9266,10 +9282,12 @@ impl /* trait */ QGraphicsObject_parentChanged_signal_connect for Box<fn()> {
 // xChanged()
 extern fn QGraphicsObject_xChanged_signal_connect_cb_11(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QGraphicsObject_xChanged_signal_connect_cb_box_11(rsfptr_raw:*mut c_void, ) {
+extern fn QGraphicsObject_xChanged_signal_connect_cb_box_11(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QGraphicsObject_xChanged_signal_connect for fn() {
   fn connect(self, sigthis: QGraphicsObject_xChanged_signal) {

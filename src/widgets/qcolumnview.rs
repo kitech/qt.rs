@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtWidgets/qcolumnview.h
 // dst-file: /src/widgets/qcolumnview.rs
 //
@@ -74,7 +74,6 @@ extern {
   // proto:  void QColumnView::~QColumnView();
   fn _ZN11QColumnViewD0Ev(qthis: u64 /* *mut c_void*/);
   fn QColumnView_SlotProxy_connect__ZN11QColumnView19updatePreviewWidgetERK11QModelIndex(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QColumnView_SlotProxy_connect_box__ZN11QColumnView19updatePreviewWidgetERK11QModelIndex(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -514,10 +513,14 @@ pub trait QColumnView_updatePreviewWidget_signal_connect {
 // updatePreviewWidget(const class QModelIndex &)
 extern fn QColumnView_updatePreviewWidget_signal_connect_cb_0(rsfptr:fn(QModelIndex), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QModelIndex::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QColumnView_updatePreviewWidget_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QColumnView_updatePreviewWidget_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QModelIndex), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QModelIndex::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QColumnView_updatePreviewWidget_signal_connect for fn(QModelIndex) {
   fn connect(self, sigthis: QColumnView_updatePreviewWidget_signal) {

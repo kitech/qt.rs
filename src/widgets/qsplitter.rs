@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtWidgets/qsplitter.h
 // dst-file: /src/widgets/qsplitter.rs
 //
@@ -106,7 +106,6 @@ extern {
   // proto:  const QMetaObject * QSplitterHandle::metaObject();
   fn _ZNK15QSplitterHandle10metaObjectEv(qthis: u64 /* *mut c_void*/);
   fn QSplitter_SlotProxy_connect__ZN9QSplitter13splitterMovedEii(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QSplitter_SlotProxy_connect_box__ZN9QSplitter13splitterMovedEii(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -954,10 +953,16 @@ pub trait QSplitter_splitterMoved_signal_connect {
 // splitterMoved(int, int)
 extern fn QSplitter_splitterMoved_signal_connect_cb_0(rsfptr:fn(i32, i32), arg0: c_int, arg1: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  let rsarg1 = arg1 as i32;
+  rsfptr(rsarg0,rsarg1);
 }
-extern fn QSplitter_splitterMoved_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_int, arg1: c_int) {
+extern fn QSplitter_splitterMoved_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i32, i32), arg0: c_int, arg1: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  let rsarg1 = arg1 as i32;
+  rsfptr(rsarg0,rsarg1);
 }
 impl /* trait */ QSplitter_splitterMoved_signal_connect for fn(i32, i32) {
   fn connect(self, sigthis: QSplitter_splitterMoved_signal) {

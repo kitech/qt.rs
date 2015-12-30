@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtWidgets/qmessagebox.h
 // dst-file: /src/widgets/qmessagebox.rs
 //
@@ -112,7 +112,6 @@ extern {
   // proto: static int QMessageBox::information(QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text, const QString & button2Text, int defaultButtonNumber, int escapeButtonNumber);
   fn _ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void, arg4: *mut c_void, arg5: *mut c_void, arg6: c_int, arg7: c_int) -> c_int;
   fn QMessageBox_SlotProxy_connect__ZN11QMessageBox13buttonClickedEP15QAbstractButton(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QMessageBox_SlotProxy_connect_box__ZN11QMessageBox13buttonClickedEP15QAbstractButton(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -1003,10 +1002,14 @@ pub trait QMessageBox_buttonClicked_signal_connect {
 // buttonClicked(class QAbstractButton *)
 extern fn QMessageBox_buttonClicked_signal_connect_cb_0(rsfptr:fn(QAbstractButton), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QAbstractButton::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QMessageBox_buttonClicked_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QMessageBox_buttonClicked_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QAbstractButton), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QAbstractButton::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QMessageBox_buttonClicked_signal_connect for fn(QAbstractButton) {
   fn connect(self, sigthis: QMessageBox_buttonClicked_signal) {

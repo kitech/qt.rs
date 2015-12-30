@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtWidgets/qkeysequenceedit.h
 // dst-file: /src/widgets/qkeysequenceedit.rs
 //
@@ -55,9 +55,7 @@ extern {
   // proto:  const QMetaObject * QKeySequenceEdit::metaObject();
   fn _ZNK16QKeySequenceEdit10metaObjectEv(qthis: u64 /* *mut c_void*/);
   fn QKeySequenceEdit_SlotProxy_connect__ZN16QKeySequenceEdit18keySequenceChangedERK12QKeySequence(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QKeySequenceEdit_SlotProxy_connect_box__ZN16QKeySequenceEdit18keySequenceChangedERK12QKeySequence(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QKeySequenceEdit_SlotProxy_connect__ZN16QKeySequenceEdit15editingFinishedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QKeySequenceEdit_SlotProxy_connect_box__ZN16QKeySequenceEdit15editingFinishedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -342,10 +340,14 @@ pub trait QKeySequenceEdit_keySequenceChanged_signal_connect {
 // keySequenceChanged(const class QKeySequence &)
 extern fn QKeySequenceEdit_keySequenceChanged_signal_connect_cb_0(rsfptr:fn(QKeySequence), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QKeySequence::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QKeySequenceEdit_keySequenceChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QKeySequenceEdit_keySequenceChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QKeySequence), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QKeySequence::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QKeySequenceEdit_keySequenceChanged_signal_connect for fn(QKeySequence) {
   fn connect(self, sigthis: QKeySequenceEdit_keySequenceChanged_signal) {
@@ -372,10 +374,12 @@ impl /* trait */ QKeySequenceEdit_keySequenceChanged_signal_connect for Box<fn(Q
 // editingFinished()
 extern fn QKeySequenceEdit_editingFinished_signal_connect_cb_1(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QKeySequenceEdit_editingFinished_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, ) {
+extern fn QKeySequenceEdit_editingFinished_signal_connect_cb_box_1(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QKeySequenceEdit_editingFinished_signal_connect for fn() {
   fn connect(self, sigthis: QKeySequenceEdit_editingFinished_signal) {

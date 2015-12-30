@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtGui/qtextdocument.h
 // dst-file: /src/gui/qtextdocument.rs
 //
@@ -229,25 +229,15 @@ extern {
   // proto:  void QAbstractUndoItem::~QAbstractUndoItem();
   fn _ZN17QAbstractUndoItemD0Ev(qthis: u64 /* *mut c_void*/);
   fn QTextDocument_SlotProxy_connect__ZN13QTextDocument21cursorPositionChangedERK11QTextCursor(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QTextDocument_SlotProxy_connect_box__ZN13QTextDocument21cursorPositionChangedERK11QTextCursor(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QTextDocument_SlotProxy_connect__ZN13QTextDocument19modificationChangedEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QTextDocument_SlotProxy_connect_box__ZN13QTextDocument19modificationChangedEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QTextDocument_SlotProxy_connect__ZN13QTextDocument13undoAvailableEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QTextDocument_SlotProxy_connect_box__ZN13QTextDocument13undoAvailableEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QTextDocument_SlotProxy_connect__ZN13QTextDocument15contentsChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QTextDocument_SlotProxy_connect_box__ZN13QTextDocument15contentsChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QTextDocument_SlotProxy_connect__ZN13QTextDocument14baseUrlChangedERK4QUrl(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QTextDocument_SlotProxy_connect_box__ZN13QTextDocument14baseUrlChangedERK4QUrl(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QTextDocument_SlotProxy_connect__ZN13QTextDocument17blockCountChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QTextDocument_SlotProxy_connect_box__ZN13QTextDocument17blockCountChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QTextDocument_SlotProxy_connect__ZN13QTextDocument21documentLayoutChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QTextDocument_SlotProxy_connect_box__ZN13QTextDocument21documentLayoutChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QTextDocument_SlotProxy_connect__ZN13QTextDocument16undoCommandAddedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QTextDocument_SlotProxy_connect_box__ZN13QTextDocument16undoCommandAddedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QTextDocument_SlotProxy_connect__ZN13QTextDocument13redoAvailableEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QTextDocument_SlotProxy_connect_box__ZN13QTextDocument13redoAvailableEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QTextDocument_SlotProxy_connect__ZN13QTextDocument14contentsChangeEiii(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QTextDocument_SlotProxy_connect_box__ZN13QTextDocument14contentsChangeEiii(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -2454,10 +2444,14 @@ pub trait QTextDocument_contentsChange_signal_connect {
 // cursorPositionChanged(const class QTextCursor &)
 extern fn QTextDocument_cursorPositionChanged_signal_connect_cb_0(rsfptr:fn(QTextCursor), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QTextCursor::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QTextDocument_cursorPositionChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QTextDocument_cursorPositionChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QTextCursor), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QTextCursor::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QTextDocument_cursorPositionChanged_signal_connect for fn(QTextCursor) {
   fn connect(self, sigthis: QTextDocument_cursorPositionChanged_signal) {
@@ -2484,10 +2478,14 @@ impl /* trait */ QTextDocument_cursorPositionChanged_signal_connect for Box<fn(Q
 // modificationChanged(_Bool)
 extern fn QTextDocument_modificationChanged_signal_connect_cb_1(rsfptr:fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i8;
+  rsfptr(rsarg0);
 }
-extern fn QTextDocument_modificationChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: c_char) {
+extern fn QTextDocument_modificationChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i8;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QTextDocument_modificationChanged_signal_connect for fn(i8) {
   fn connect(self, sigthis: QTextDocument_modificationChanged_signal) {
@@ -2514,10 +2512,14 @@ impl /* trait */ QTextDocument_modificationChanged_signal_connect for Box<fn(i8)
 // undoAvailable(_Bool)
 extern fn QTextDocument_undoAvailable_signal_connect_cb_2(rsfptr:fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i8;
+  rsfptr(rsarg0);
 }
-extern fn QTextDocument_undoAvailable_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, arg0: c_char) {
+extern fn QTextDocument_undoAvailable_signal_connect_cb_box_2(rsfptr_raw:*mut fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i8;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QTextDocument_undoAvailable_signal_connect for fn(i8) {
   fn connect(self, sigthis: QTextDocument_undoAvailable_signal) {
@@ -2544,10 +2546,12 @@ impl /* trait */ QTextDocument_undoAvailable_signal_connect for Box<fn(i8)> {
 // contentsChanged()
 extern fn QTextDocument_contentsChanged_signal_connect_cb_3(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QTextDocument_contentsChanged_signal_connect_cb_box_3(rsfptr_raw:*mut c_void, ) {
+extern fn QTextDocument_contentsChanged_signal_connect_cb_box_3(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QTextDocument_contentsChanged_signal_connect for fn() {
   fn connect(self, sigthis: QTextDocument_contentsChanged_signal) {
@@ -2574,10 +2578,14 @@ impl /* trait */ QTextDocument_contentsChanged_signal_connect for Box<fn()> {
 // baseUrlChanged(const class QUrl &)
 extern fn QTextDocument_baseUrlChanged_signal_connect_cb_4(rsfptr:fn(QUrl), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QUrl::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QTextDocument_baseUrlChanged_signal_connect_cb_box_4(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QTextDocument_baseUrlChanged_signal_connect_cb_box_4(rsfptr_raw:*mut fn(QUrl), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QUrl::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QTextDocument_baseUrlChanged_signal_connect for fn(QUrl) {
   fn connect(self, sigthis: QTextDocument_baseUrlChanged_signal) {
@@ -2604,10 +2612,14 @@ impl /* trait */ QTextDocument_baseUrlChanged_signal_connect for Box<fn(QUrl)> {
 // blockCountChanged(int)
 extern fn QTextDocument_blockCountChanged_signal_connect_cb_5(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QTextDocument_blockCountChanged_signal_connect_cb_box_5(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QTextDocument_blockCountChanged_signal_connect_cb_box_5(rsfptr_raw:*mut fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QTextDocument_blockCountChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QTextDocument_blockCountChanged_signal) {
@@ -2634,10 +2646,12 @@ impl /* trait */ QTextDocument_blockCountChanged_signal_connect for Box<fn(i32)>
 // documentLayoutChanged()
 extern fn QTextDocument_documentLayoutChanged_signal_connect_cb_6(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QTextDocument_documentLayoutChanged_signal_connect_cb_box_6(rsfptr_raw:*mut c_void, ) {
+extern fn QTextDocument_documentLayoutChanged_signal_connect_cb_box_6(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QTextDocument_documentLayoutChanged_signal_connect for fn() {
   fn connect(self, sigthis: QTextDocument_documentLayoutChanged_signal) {
@@ -2664,10 +2678,12 @@ impl /* trait */ QTextDocument_documentLayoutChanged_signal_connect for Box<fn()
 // undoCommandAdded()
 extern fn QTextDocument_undoCommandAdded_signal_connect_cb_7(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QTextDocument_undoCommandAdded_signal_connect_cb_box_7(rsfptr_raw:*mut c_void, ) {
+extern fn QTextDocument_undoCommandAdded_signal_connect_cb_box_7(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QTextDocument_undoCommandAdded_signal_connect for fn() {
   fn connect(self, sigthis: QTextDocument_undoCommandAdded_signal) {
@@ -2694,10 +2710,14 @@ impl /* trait */ QTextDocument_undoCommandAdded_signal_connect for Box<fn()> {
 // redoAvailable(_Bool)
 extern fn QTextDocument_redoAvailable_signal_connect_cb_8(rsfptr:fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i8;
+  rsfptr(rsarg0);
 }
-extern fn QTextDocument_redoAvailable_signal_connect_cb_box_8(rsfptr_raw:*mut c_void, arg0: c_char) {
+extern fn QTextDocument_redoAvailable_signal_connect_cb_box_8(rsfptr_raw:*mut fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i8;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QTextDocument_redoAvailable_signal_connect for fn(i8) {
   fn connect(self, sigthis: QTextDocument_redoAvailable_signal) {
@@ -2724,10 +2744,18 @@ impl /* trait */ QTextDocument_redoAvailable_signal_connect for Box<fn(i8)> {
 // contentsChange(int, int, int)
 extern fn QTextDocument_contentsChange_signal_connect_cb_9(rsfptr:fn(i32, i32, i32), arg0: c_int, arg1: c_int, arg2: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  let rsarg1 = arg1 as i32;
+  let rsarg2 = arg2 as i32;
+  rsfptr(rsarg0,rsarg1,rsarg2);
 }
-extern fn QTextDocument_contentsChange_signal_connect_cb_box_9(rsfptr_raw:*mut c_void, arg0: c_int, arg1: c_int, arg2: c_int) {
+extern fn QTextDocument_contentsChange_signal_connect_cb_box_9(rsfptr_raw:*mut fn(i32, i32, i32), arg0: c_int, arg1: c_int, arg2: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  let rsarg1 = arg1 as i32;
+  let rsarg2 = arg2 as i32;
+  rsfptr(rsarg0,rsarg1,rsarg2);
 }
 impl /* trait */ QTextDocument_contentsChange_signal_connect for fn(i32, i32, i32) {
   fn connect(self, sigthis: QTextDocument_contentsChange_signal) {

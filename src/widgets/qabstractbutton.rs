@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtWidgets/qabstractbutton.h
 // dst-file: /src/widgets/qabstractbutton.rs
 //
@@ -106,13 +106,9 @@ extern {
   // proto:  void QAbstractButton::pressed();
   fn _ZN15QAbstractButton7pressedEv(qthis: u64 /* *mut c_void*/);
   fn QAbstractButton_SlotProxy_connect__ZN15QAbstractButton7clickedEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QAbstractButton_SlotProxy_connect_box__ZN15QAbstractButton7clickedEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QAbstractButton_SlotProxy_connect__ZN15QAbstractButton7toggledEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QAbstractButton_SlotProxy_connect_box__ZN15QAbstractButton7toggledEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QAbstractButton_SlotProxy_connect__ZN15QAbstractButton7pressedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QAbstractButton_SlotProxy_connect_box__ZN15QAbstractButton7pressedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QAbstractButton_SlotProxy_connect__ZN15QAbstractButton8releasedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QAbstractButton_SlotProxy_connect_box__ZN15QAbstractButton8releasedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -991,10 +987,14 @@ pub trait QAbstractButton_toggled_signal_connect {
 // clicked(_Bool)
 extern fn QAbstractButton_clicked_signal_connect_cb_0(rsfptr:fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i8;
+  rsfptr(rsarg0);
 }
-extern fn QAbstractButton_clicked_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_char) {
+extern fn QAbstractButton_clicked_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i8;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QAbstractButton_clicked_signal_connect for fn(i8) {
   fn connect(self, sigthis: QAbstractButton_clicked_signal) {
@@ -1021,10 +1021,14 @@ impl /* trait */ QAbstractButton_clicked_signal_connect for Box<fn(i8)> {
 // toggled(_Bool)
 extern fn QAbstractButton_toggled_signal_connect_cb_1(rsfptr:fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i8;
+  rsfptr(rsarg0);
 }
-extern fn QAbstractButton_toggled_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: c_char) {
+extern fn QAbstractButton_toggled_signal_connect_cb_box_1(rsfptr_raw:*mut fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i8;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QAbstractButton_toggled_signal_connect for fn(i8) {
   fn connect(self, sigthis: QAbstractButton_toggled_signal) {
@@ -1051,10 +1055,12 @@ impl /* trait */ QAbstractButton_toggled_signal_connect for Box<fn(i8)> {
 // pressed()
 extern fn QAbstractButton_pressed_signal_connect_cb_2(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QAbstractButton_pressed_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, ) {
+extern fn QAbstractButton_pressed_signal_connect_cb_box_2(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QAbstractButton_pressed_signal_connect for fn() {
   fn connect(self, sigthis: QAbstractButton_pressed_signal) {
@@ -1081,10 +1087,12 @@ impl /* trait */ QAbstractButton_pressed_signal_connect for Box<fn()> {
 // released()
 extern fn QAbstractButton_released_signal_connect_cb_3(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QAbstractButton_released_signal_connect_cb_box_3(rsfptr_raw:*mut c_void, ) {
+extern fn QAbstractButton_released_signal_connect_cb_box_3(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QAbstractButton_released_signal_connect for fn() {
   fn connect(self, sigthis: QAbstractButton_released_signal) {

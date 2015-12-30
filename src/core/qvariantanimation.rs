@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtCore/qvariantanimation.h
 // dst-file: /src/core/qvariantanimation.rs
 //
@@ -70,7 +70,6 @@ extern {
   // proto:  void QVariantAnimation::setEasingCurve(const QEasingCurve & easing);
   fn _ZN17QVariantAnimation14setEasingCurveERK12QEasingCurve(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QVariantAnimation_SlotProxy_connect__ZN17QVariantAnimation12valueChangedERK8QVariant(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QVariantAnimation_SlotProxy_connect_box__ZN17QVariantAnimation12valueChangedERK8QVariant(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -512,10 +511,14 @@ pub trait QVariantAnimation_valueChanged_signal_connect {
 // valueChanged(const class QVariant &)
 extern fn QVariantAnimation_valueChanged_signal_connect_cb_0(rsfptr:fn(QVariant), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QVariant::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QVariantAnimation_valueChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QVariantAnimation_valueChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QVariant), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QVariant::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QVariantAnimation_valueChanged_signal_connect for fn(QVariant) {
   fn connect(self, sigthis: QVariantAnimation_valueChanged_signal) {

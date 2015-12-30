@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtWidgets/qgraphicstransform.h
 // dst-file: /src/widgets/qgraphicstransform.rs
 //
@@ -107,21 +107,13 @@ extern {
   // proto:  const QMetaObject * QGraphicsTransform::metaObject();
   fn _ZNK18QGraphicsTransform10metaObjectEv(qthis: u64 /* *mut c_void*/);
   fn QGraphicsRotation_SlotProxy_connect__ZN17QGraphicsRotation12angleChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGraphicsRotation_SlotProxy_connect_box__ZN17QGraphicsRotation12angleChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QGraphicsRotation_SlotProxy_connect__ZN17QGraphicsRotation11axisChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGraphicsRotation_SlotProxy_connect_box__ZN17QGraphicsRotation11axisChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QGraphicsRotation_SlotProxy_connect__ZN17QGraphicsRotation13originChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGraphicsRotation_SlotProxy_connect_box__ZN17QGraphicsRotation13originChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QGraphicsScale_SlotProxy_connect__ZN14QGraphicsScale12scaleChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGraphicsScale_SlotProxy_connect_box__ZN14QGraphicsScale12scaleChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QGraphicsScale_SlotProxy_connect__ZN14QGraphicsScale13originChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGraphicsScale_SlotProxy_connect_box__ZN14QGraphicsScale13originChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QGraphicsScale_SlotProxy_connect__ZN14QGraphicsScale13zScaleChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGraphicsScale_SlotProxy_connect_box__ZN14QGraphicsScale13zScaleChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QGraphicsScale_SlotProxy_connect__ZN14QGraphicsScale13yScaleChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGraphicsScale_SlotProxy_connect_box__ZN14QGraphicsScale13yScaleChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QGraphicsScale_SlotProxy_connect__ZN14QGraphicsScale13xScaleChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGraphicsScale_SlotProxy_connect_box__ZN14QGraphicsScale13xScaleChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -1045,10 +1037,12 @@ pub trait QGraphicsRotation_angleChanged_signal_connect {
 // angleChanged()
 extern fn QGraphicsRotation_angleChanged_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QGraphicsRotation_angleChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, ) {
+extern fn QGraphicsRotation_angleChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QGraphicsRotation_angleChanged_signal_connect for fn() {
   fn connect(self, sigthis: QGraphicsRotation_angleChanged_signal) {
@@ -1075,10 +1069,12 @@ impl /* trait */ QGraphicsRotation_angleChanged_signal_connect for Box<fn()> {
 // axisChanged()
 extern fn QGraphicsRotation_axisChanged_signal_connect_cb_1(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QGraphicsRotation_axisChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, ) {
+extern fn QGraphicsRotation_axisChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QGraphicsRotation_axisChanged_signal_connect for fn() {
   fn connect(self, sigthis: QGraphicsRotation_axisChanged_signal) {
@@ -1105,10 +1101,12 @@ impl /* trait */ QGraphicsRotation_axisChanged_signal_connect for Box<fn()> {
 // originChanged()
 extern fn QGraphicsRotation_originChanged_signal_connect_cb_2(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QGraphicsRotation_originChanged_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, ) {
+extern fn QGraphicsRotation_originChanged_signal_connect_cb_box_2(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QGraphicsRotation_originChanged_signal_connect for fn() {
   fn connect(self, sigthis: QGraphicsRotation_originChanged_signal) {
@@ -1215,10 +1213,12 @@ pub trait QGraphicsScale_originChanged_signal_connect {
 // scaleChanged()
 extern fn QGraphicsScale_scaleChanged_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QGraphicsScale_scaleChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, ) {
+extern fn QGraphicsScale_scaleChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QGraphicsScale_scaleChanged_signal_connect for fn() {
   fn connect(self, sigthis: QGraphicsScale_scaleChanged_signal) {
@@ -1245,10 +1245,12 @@ impl /* trait */ QGraphicsScale_scaleChanged_signal_connect for Box<fn()> {
 // originChanged()
 extern fn QGraphicsScale_originChanged_signal_connect_cb_1(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QGraphicsScale_originChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, ) {
+extern fn QGraphicsScale_originChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QGraphicsScale_originChanged_signal_connect for fn() {
   fn connect(self, sigthis: QGraphicsScale_originChanged_signal) {
@@ -1275,10 +1277,12 @@ impl /* trait */ QGraphicsScale_originChanged_signal_connect for Box<fn()> {
 // zScaleChanged()
 extern fn QGraphicsScale_zScaleChanged_signal_connect_cb_2(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QGraphicsScale_zScaleChanged_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, ) {
+extern fn QGraphicsScale_zScaleChanged_signal_connect_cb_box_2(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QGraphicsScale_zScaleChanged_signal_connect for fn() {
   fn connect(self, sigthis: QGraphicsScale_zScaleChanged_signal) {
@@ -1305,10 +1309,12 @@ impl /* trait */ QGraphicsScale_zScaleChanged_signal_connect for Box<fn()> {
 // yScaleChanged()
 extern fn QGraphicsScale_yScaleChanged_signal_connect_cb_3(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QGraphicsScale_yScaleChanged_signal_connect_cb_box_3(rsfptr_raw:*mut c_void, ) {
+extern fn QGraphicsScale_yScaleChanged_signal_connect_cb_box_3(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QGraphicsScale_yScaleChanged_signal_connect for fn() {
   fn connect(self, sigthis: QGraphicsScale_yScaleChanged_signal) {
@@ -1335,10 +1341,12 @@ impl /* trait */ QGraphicsScale_yScaleChanged_signal_connect for Box<fn()> {
 // xScaleChanged()
 extern fn QGraphicsScale_xScaleChanged_signal_connect_cb_4(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QGraphicsScale_xScaleChanged_signal_connect_cb_box_4(rsfptr_raw:*mut c_void, ) {
+extern fn QGraphicsScale_xScaleChanged_signal_connect_cb_box_4(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QGraphicsScale_xScaleChanged_signal_connect for fn() {
   fn connect(self, sigthis: QGraphicsScale_xScaleChanged_signal) {

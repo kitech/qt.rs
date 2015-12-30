@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtWidgets/qwidget.h
 // dst-file: /src/widgets/qwidget.rs
 //
@@ -484,13 +484,9 @@ extern {
   fn _ZN7QWidget11unsetCursorEv(qthis: u64 /* *mut c_void*/);
   fn QWidgetData_Class_Size() -> c_int;
   fn QWidget_SlotProxy_connect__ZN7QWidget26customContextMenuRequestedERK6QPoint(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QWidget_SlotProxy_connect_box__ZN7QWidget26customContextMenuRequestedERK6QPoint(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QWidget_SlotProxy_connect__ZN7QWidget17windowIconChangedERK5QIcon(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QWidget_SlotProxy_connect_box__ZN7QWidget17windowIconChangedERK5QIcon(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QWidget_SlotProxy_connect__ZN7QWidget21windowIconTextChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QWidget_SlotProxy_connect_box__ZN7QWidget21windowIconTextChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QWidget_SlotProxy_connect__ZN7QWidget18windowTitleChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QWidget_SlotProxy_connect_box__ZN7QWidget18windowTitleChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -5333,10 +5329,14 @@ pub trait QWidget_windowIconTextChanged_signal_connect {
 // customContextMenuRequested(const class QPoint &)
 extern fn QWidget_customContextMenuRequested_signal_connect_cb_0(rsfptr:fn(QPoint), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QPoint::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QWidget_customContextMenuRequested_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QWidget_customContextMenuRequested_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QPoint), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QPoint::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QWidget_customContextMenuRequested_signal_connect for fn(QPoint) {
   fn connect(self, sigthis: QWidget_customContextMenuRequested_signal) {
@@ -5363,10 +5363,14 @@ impl /* trait */ QWidget_customContextMenuRequested_signal_connect for Box<fn(QP
 // windowIconChanged(const class QIcon &)
 extern fn QWidget_windowIconChanged_signal_connect_cb_1(rsfptr:fn(QIcon), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QIcon::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QWidget_windowIconChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QWidget_windowIconChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(QIcon), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QIcon::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QWidget_windowIconChanged_signal_connect for fn(QIcon) {
   fn connect(self, sigthis: QWidget_windowIconChanged_signal) {
@@ -5393,10 +5397,14 @@ impl /* trait */ QWidget_windowIconChanged_signal_connect for Box<fn(QIcon)> {
 // windowIconTextChanged(const class QString &)
 extern fn QWidget_windowIconTextChanged_signal_connect_cb_2(rsfptr:fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QWidget_windowIconTextChanged_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QWidget_windowIconTextChanged_signal_connect_cb_box_2(rsfptr_raw:*mut fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QWidget_windowIconTextChanged_signal_connect for fn(QString) {
   fn connect(self, sigthis: QWidget_windowIconTextChanged_signal) {
@@ -5423,10 +5431,14 @@ impl /* trait */ QWidget_windowIconTextChanged_signal_connect for Box<fn(QString
 // windowTitleChanged(const class QString &)
 extern fn QWidget_windowTitleChanged_signal_connect_cb_3(rsfptr:fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QWidget_windowTitleChanged_signal_connect_cb_box_3(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QWidget_windowTitleChanged_signal_connect_cb_box_3(rsfptr_raw:*mut fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QWidget_windowTitleChanged_signal_connect for fn(QString) {
   fn connect(self, sigthis: QWidget_windowTitleChanged_signal) {

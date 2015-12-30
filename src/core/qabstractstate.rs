@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtCore/qabstractstate.h
 // dst-file: /src/core/qabstractstate.rs
 //
@@ -51,7 +51,6 @@ extern {
   // proto:  bool QAbstractState::active();
   fn _ZNK14QAbstractState6activeEv(qthis: u64 /* *mut c_void*/) -> c_char;
   fn QAbstractState_SlotProxy_connect__ZN14QAbstractState13activeChangedEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QAbstractState_SlotProxy_connect_box__ZN14QAbstractState13activeChangedEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -316,10 +315,14 @@ pub trait QAbstractState_activeChanged_signal_connect {
 // activeChanged(_Bool)
 extern fn QAbstractState_activeChanged_signal_connect_cb_0(rsfptr:fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i8;
+  rsfptr(rsarg0);
 }
-extern fn QAbstractState_activeChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_char) {
+extern fn QAbstractState_activeChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i8;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QAbstractState_activeChanged_signal_connect for fn(i8) {
   fn connect(self, sigthis: QAbstractState_activeChanged_signal) {

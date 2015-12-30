@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtWidgets/qtabbar.h
 // dst-file: /src/widgets/qtabbar.rs
 //
@@ -148,15 +148,10 @@ extern {
   // proto:  void QTabBar::tabMoved(int from, int to);
   fn _ZN7QTabBar8tabMovedEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   fn QTabBar_SlotProxy_connect__ZN7QTabBar13tabBarClickedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QTabBar_SlotProxy_connect_box__ZN7QTabBar13tabBarClickedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QTabBar_SlotProxy_connect__ZN7QTabBar19tabBarDoubleClickedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QTabBar_SlotProxy_connect_box__ZN7QTabBar19tabBarDoubleClickedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QTabBar_SlotProxy_connect__ZN7QTabBar17tabCloseRequestedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QTabBar_SlotProxy_connect_box__ZN7QTabBar17tabCloseRequestedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QTabBar_SlotProxy_connect__ZN7QTabBar8tabMovedEii(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QTabBar_SlotProxy_connect_box__ZN7QTabBar8tabMovedEii(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QTabBar_SlotProxy_connect__ZN7QTabBar14currentChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QTabBar_SlotProxy_connect_box__ZN7QTabBar14currentChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -1523,10 +1518,14 @@ pub trait QTabBar_currentChanged_signal_connect {
 // tabBarClicked(int)
 extern fn QTabBar_tabBarClicked_signal_connect_cb_0(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QTabBar_tabBarClicked_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QTabBar_tabBarClicked_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QTabBar_tabBarClicked_signal_connect for fn(i32) {
   fn connect(self, sigthis: QTabBar_tabBarClicked_signal) {
@@ -1553,10 +1552,14 @@ impl /* trait */ QTabBar_tabBarClicked_signal_connect for Box<fn(i32)> {
 // tabBarDoubleClicked(int)
 extern fn QTabBar_tabBarDoubleClicked_signal_connect_cb_1(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QTabBar_tabBarDoubleClicked_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QTabBar_tabBarDoubleClicked_signal_connect_cb_box_1(rsfptr_raw:*mut fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QTabBar_tabBarDoubleClicked_signal_connect for fn(i32) {
   fn connect(self, sigthis: QTabBar_tabBarDoubleClicked_signal) {
@@ -1583,10 +1586,14 @@ impl /* trait */ QTabBar_tabBarDoubleClicked_signal_connect for Box<fn(i32)> {
 // tabCloseRequested(int)
 extern fn QTabBar_tabCloseRequested_signal_connect_cb_2(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QTabBar_tabCloseRequested_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QTabBar_tabCloseRequested_signal_connect_cb_box_2(rsfptr_raw:*mut fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QTabBar_tabCloseRequested_signal_connect for fn(i32) {
   fn connect(self, sigthis: QTabBar_tabCloseRequested_signal) {
@@ -1613,10 +1620,16 @@ impl /* trait */ QTabBar_tabCloseRequested_signal_connect for Box<fn(i32)> {
 // tabMoved(int, int)
 extern fn QTabBar_tabMoved_signal_connect_cb_3(rsfptr:fn(i32, i32), arg0: c_int, arg1: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  let rsarg1 = arg1 as i32;
+  rsfptr(rsarg0,rsarg1);
 }
-extern fn QTabBar_tabMoved_signal_connect_cb_box_3(rsfptr_raw:*mut c_void, arg0: c_int, arg1: c_int) {
+extern fn QTabBar_tabMoved_signal_connect_cb_box_3(rsfptr_raw:*mut fn(i32, i32), arg0: c_int, arg1: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  let rsarg1 = arg1 as i32;
+  rsfptr(rsarg0,rsarg1);
 }
 impl /* trait */ QTabBar_tabMoved_signal_connect for fn(i32, i32) {
   fn connect(self, sigthis: QTabBar_tabMoved_signal) {
@@ -1643,10 +1656,14 @@ impl /* trait */ QTabBar_tabMoved_signal_connect for Box<fn(i32, i32)> {
 // currentChanged(int)
 extern fn QTabBar_currentChanged_signal_connect_cb_4(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QTabBar_currentChanged_signal_connect_cb_box_4(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QTabBar_currentChanged_signal_connect_cb_box_4(rsfptr_raw:*mut fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QTabBar_currentChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QTabBar_currentChanged_signal) {

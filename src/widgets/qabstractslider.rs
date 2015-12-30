@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtWidgets/qabstractslider.h
 // dst-file: /src/widgets/qabstractslider.rs
 //
@@ -95,17 +95,11 @@ extern {
   // proto:  void QAbstractSlider::setMinimum(int );
   fn _ZN15QAbstractSlider10setMinimumEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   fn QAbstractSlider_SlotProxy_connect__ZN15QAbstractSlider13sliderPressedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QAbstractSlider_SlotProxy_connect_box__ZN15QAbstractSlider13sliderPressedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QAbstractSlider_SlotProxy_connect__ZN15QAbstractSlider15actionTriggeredEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QAbstractSlider_SlotProxy_connect_box__ZN15QAbstractSlider15actionTriggeredEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QAbstractSlider_SlotProxy_connect__ZN15QAbstractSlider11sliderMovedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QAbstractSlider_SlotProxy_connect_box__ZN15QAbstractSlider11sliderMovedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QAbstractSlider_SlotProxy_connect__ZN15QAbstractSlider12rangeChangedEii(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QAbstractSlider_SlotProxy_connect_box__ZN15QAbstractSlider12rangeChangedEii(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QAbstractSlider_SlotProxy_connect__ZN15QAbstractSlider12valueChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QAbstractSlider_SlotProxy_connect_box__ZN15QAbstractSlider12valueChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QAbstractSlider_SlotProxy_connect__ZN15QAbstractSlider14sliderReleasedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QAbstractSlider_SlotProxy_connect_box__ZN15QAbstractSlider14sliderReleasedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -948,10 +942,12 @@ pub trait QAbstractSlider_sliderMoved_signal_connect {
 // sliderPressed()
 extern fn QAbstractSlider_sliderPressed_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QAbstractSlider_sliderPressed_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, ) {
+extern fn QAbstractSlider_sliderPressed_signal_connect_cb_box_0(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QAbstractSlider_sliderPressed_signal_connect for fn() {
   fn connect(self, sigthis: QAbstractSlider_sliderPressed_signal) {
@@ -978,10 +974,14 @@ impl /* trait */ QAbstractSlider_sliderPressed_signal_connect for Box<fn()> {
 // actionTriggered(int)
 extern fn QAbstractSlider_actionTriggered_signal_connect_cb_1(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QAbstractSlider_actionTriggered_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QAbstractSlider_actionTriggered_signal_connect_cb_box_1(rsfptr_raw:*mut fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QAbstractSlider_actionTriggered_signal_connect for fn(i32) {
   fn connect(self, sigthis: QAbstractSlider_actionTriggered_signal) {
@@ -1008,10 +1008,14 @@ impl /* trait */ QAbstractSlider_actionTriggered_signal_connect for Box<fn(i32)>
 // sliderMoved(int)
 extern fn QAbstractSlider_sliderMoved_signal_connect_cb_2(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QAbstractSlider_sliderMoved_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QAbstractSlider_sliderMoved_signal_connect_cb_box_2(rsfptr_raw:*mut fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QAbstractSlider_sliderMoved_signal_connect for fn(i32) {
   fn connect(self, sigthis: QAbstractSlider_sliderMoved_signal) {
@@ -1038,10 +1042,16 @@ impl /* trait */ QAbstractSlider_sliderMoved_signal_connect for Box<fn(i32)> {
 // rangeChanged(int, int)
 extern fn QAbstractSlider_rangeChanged_signal_connect_cb_3(rsfptr:fn(i32, i32), arg0: c_int, arg1: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  let rsarg1 = arg1 as i32;
+  rsfptr(rsarg0,rsarg1);
 }
-extern fn QAbstractSlider_rangeChanged_signal_connect_cb_box_3(rsfptr_raw:*mut c_void, arg0: c_int, arg1: c_int) {
+extern fn QAbstractSlider_rangeChanged_signal_connect_cb_box_3(rsfptr_raw:*mut fn(i32, i32), arg0: c_int, arg1: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  let rsarg1 = arg1 as i32;
+  rsfptr(rsarg0,rsarg1);
 }
 impl /* trait */ QAbstractSlider_rangeChanged_signal_connect for fn(i32, i32) {
   fn connect(self, sigthis: QAbstractSlider_rangeChanged_signal) {
@@ -1068,10 +1078,14 @@ impl /* trait */ QAbstractSlider_rangeChanged_signal_connect for Box<fn(i32, i32
 // valueChanged(int)
 extern fn QAbstractSlider_valueChanged_signal_connect_cb_4(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QAbstractSlider_valueChanged_signal_connect_cb_box_4(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QAbstractSlider_valueChanged_signal_connect_cb_box_4(rsfptr_raw:*mut fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QAbstractSlider_valueChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QAbstractSlider_valueChanged_signal) {
@@ -1098,10 +1112,12 @@ impl /* trait */ QAbstractSlider_valueChanged_signal_connect for Box<fn(i32)> {
 // sliderReleased()
 extern fn QAbstractSlider_sliderReleased_signal_connect_cb_5(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QAbstractSlider_sliderReleased_signal_connect_cb_box_5(rsfptr_raw:*mut c_void, ) {
+extern fn QAbstractSlider_sliderReleased_signal_connect_cb_box_5(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QAbstractSlider_sliderReleased_signal_connect for fn() {
   fn connect(self, sigthis: QAbstractSlider_sliderReleased_signal) {

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtGui/qclipboard.h
 // dst-file: /src/gui/qclipboard.rs
 //
@@ -61,13 +61,9 @@ extern {
   // proto:  void QClipboard::findBufferChanged();
   fn _ZN10QClipboard17findBufferChangedEv(qthis: u64 /* *mut c_void*/);
   fn QClipboard_SlotProxy_connect__ZN10QClipboard7changedENS_4ModeE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QClipboard_SlotProxy_connect_box__ZN10QClipboard7changedENS_4ModeE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QClipboard_SlotProxy_connect__ZN10QClipboard16selectionChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QClipboard_SlotProxy_connect_box__ZN10QClipboard16selectionChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QClipboard_SlotProxy_connect__ZN10QClipboard11dataChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QClipboard_SlotProxy_connect_box__ZN10QClipboard11dataChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QClipboard_SlotProxy_connect__ZN10QClipboard17findBufferChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QClipboard_SlotProxy_connect_box__ZN10QClipboard17findBufferChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -436,10 +432,14 @@ pub trait QClipboard_dataChanged_signal_connect {
 // changed(class QClipboard::Mode)
 extern fn QClipboard_changed_signal_connect_cb_0(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QClipboard_changed_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QClipboard_changed_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QClipboard_changed_signal_connect for fn(i32) {
   fn connect(self, sigthis: QClipboard_changed_signal) {
@@ -466,10 +466,12 @@ impl /* trait */ QClipboard_changed_signal_connect for Box<fn(i32)> {
 // selectionChanged()
 extern fn QClipboard_selectionChanged_signal_connect_cb_1(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QClipboard_selectionChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, ) {
+extern fn QClipboard_selectionChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QClipboard_selectionChanged_signal_connect for fn() {
   fn connect(self, sigthis: QClipboard_selectionChanged_signal) {
@@ -496,10 +498,12 @@ impl /* trait */ QClipboard_selectionChanged_signal_connect for Box<fn()> {
 // dataChanged()
 extern fn QClipboard_dataChanged_signal_connect_cb_2(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QClipboard_dataChanged_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, ) {
+extern fn QClipboard_dataChanged_signal_connect_cb_box_2(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QClipboard_dataChanged_signal_connect for fn() {
   fn connect(self, sigthis: QClipboard_dataChanged_signal) {
@@ -526,10 +530,12 @@ impl /* trait */ QClipboard_dataChanged_signal_connect for Box<fn()> {
 // findBufferChanged()
 extern fn QClipboard_findBufferChanged_signal_connect_cb_3(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QClipboard_findBufferChanged_signal_connect_cb_box_3(rsfptr_raw:*mut c_void, ) {
+extern fn QClipboard_findBufferChanged_signal_connect_cb_box_3(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QClipboard_findBufferChanged_signal_connect for fn() {
   fn connect(self, sigthis: QClipboard_findBufferChanged_signal) {

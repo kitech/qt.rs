@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtGui/qstylehints.h
 // dst-file: /src/gui/qstylehints.rs
 //
@@ -87,15 +87,10 @@ extern {
   // proto:  void QStyleHints::startDragTimeChanged(int startDragTime);
   fn _ZN11QStyleHints20startDragTimeChangedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   fn QStyleHints_SlotProxy_connect__ZN11QStyleHints31mouseDoubleClickIntervalChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QStyleHints_SlotProxy_connect_box__ZN11QStyleHints31mouseDoubleClickIntervalChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QStyleHints_SlotProxy_connect__ZN11QStyleHints20startDragTimeChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QStyleHints_SlotProxy_connect_box__ZN11QStyleHints20startDragTimeChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QStyleHints_SlotProxy_connect__ZN11QStyleHints28keyboardInputIntervalChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QStyleHints_SlotProxy_connect_box__ZN11QStyleHints28keyboardInputIntervalChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QStyleHints_SlotProxy_connect__ZN11QStyleHints22cursorFlashTimeChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QStyleHints_SlotProxy_connect_box__ZN11QStyleHints22cursorFlashTimeChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QStyleHints_SlotProxy_connect__ZN11QStyleHints24startDragDistanceChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QStyleHints_SlotProxy_connect_box__ZN11QStyleHints24startDragDistanceChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -837,10 +832,14 @@ pub trait QStyleHints_keyboardInputIntervalChanged_signal_connect {
 // mouseDoubleClickIntervalChanged(int)
 extern fn QStyleHints_mouseDoubleClickIntervalChanged_signal_connect_cb_0(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QStyleHints_mouseDoubleClickIntervalChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QStyleHints_mouseDoubleClickIntervalChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QStyleHints_mouseDoubleClickIntervalChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QStyleHints_mouseDoubleClickIntervalChanged_signal) {
@@ -867,10 +866,14 @@ impl /* trait */ QStyleHints_mouseDoubleClickIntervalChanged_signal_connect for 
 // startDragTimeChanged(int)
 extern fn QStyleHints_startDragTimeChanged_signal_connect_cb_1(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QStyleHints_startDragTimeChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QStyleHints_startDragTimeChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QStyleHints_startDragTimeChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QStyleHints_startDragTimeChanged_signal) {
@@ -897,10 +900,14 @@ impl /* trait */ QStyleHints_startDragTimeChanged_signal_connect for Box<fn(i32)
 // keyboardInputIntervalChanged(int)
 extern fn QStyleHints_keyboardInputIntervalChanged_signal_connect_cb_2(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QStyleHints_keyboardInputIntervalChanged_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QStyleHints_keyboardInputIntervalChanged_signal_connect_cb_box_2(rsfptr_raw:*mut fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QStyleHints_keyboardInputIntervalChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QStyleHints_keyboardInputIntervalChanged_signal) {
@@ -927,10 +934,14 @@ impl /* trait */ QStyleHints_keyboardInputIntervalChanged_signal_connect for Box
 // cursorFlashTimeChanged(int)
 extern fn QStyleHints_cursorFlashTimeChanged_signal_connect_cb_3(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QStyleHints_cursorFlashTimeChanged_signal_connect_cb_box_3(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QStyleHints_cursorFlashTimeChanged_signal_connect_cb_box_3(rsfptr_raw:*mut fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QStyleHints_cursorFlashTimeChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QStyleHints_cursorFlashTimeChanged_signal) {
@@ -957,10 +968,14 @@ impl /* trait */ QStyleHints_cursorFlashTimeChanged_signal_connect for Box<fn(i3
 // startDragDistanceChanged(int)
 extern fn QStyleHints_startDragDistanceChanged_signal_connect_cb_4(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QStyleHints_startDragDistanceChanged_signal_connect_cb_box_4(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QStyleHints_startDragDistanceChanged_signal_connect_cb_box_4(rsfptr_raw:*mut fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QStyleHints_startDragDistanceChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QStyleHints_startDragDistanceChanged_signal) {

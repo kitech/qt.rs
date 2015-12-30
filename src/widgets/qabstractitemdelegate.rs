@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtWidgets/qabstractitemdelegate.h
 // dst-file: /src/widgets/qabstractitemdelegate.rs
 //
@@ -76,11 +76,8 @@ extern {
   // proto:  void QAbstractItemDelegate::destroyEditor(QWidget * editor, const QModelIndex & index);
   fn _ZNK21QAbstractItemDelegate13destroyEditorEP7QWidgetRK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   fn QAbstractItemDelegate_SlotProxy_connect__ZN21QAbstractItemDelegate11closeEditorEP7QWidgetNS_11EndEditHintE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QAbstractItemDelegate_SlotProxy_connect_box__ZN21QAbstractItemDelegate11closeEditorEP7QWidgetNS_11EndEditHintE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QAbstractItemDelegate_SlotProxy_connect__ZN21QAbstractItemDelegate15sizeHintChangedERK11QModelIndex(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QAbstractItemDelegate_SlotProxy_connect_box__ZN21QAbstractItemDelegate15sizeHintChangedERK11QModelIndex(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QAbstractItemDelegate_SlotProxy_connect__ZN21QAbstractItemDelegate10commitDataEP7QWidget(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QAbstractItemDelegate_SlotProxy_connect_box__ZN21QAbstractItemDelegate10commitDataEP7QWidget(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -549,10 +546,16 @@ pub trait QAbstractItemDelegate_sizeHintChanged_signal_connect {
 // closeEditor(class QWidget *, class QAbstractItemDelegate::EndEditHint)
 extern fn QAbstractItemDelegate_closeEditor_signal_connect_cb_0(rsfptr:fn(QWidget, i32), arg0: *mut c_void, arg1: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QWidget::inheritFrom(arg0 as u64);
+  let rsarg1 = arg1 as i32;
+  rsfptr(rsarg0,rsarg1);
 }
-extern fn QAbstractItemDelegate_closeEditor_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void, arg1: c_int) {
+extern fn QAbstractItemDelegate_closeEditor_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QWidget, i32), arg0: *mut c_void, arg1: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QWidget::inheritFrom(arg0 as u64);
+  let rsarg1 = arg1 as i32;
+  rsfptr(rsarg0,rsarg1);
 }
 impl /* trait */ QAbstractItemDelegate_closeEditor_signal_connect for fn(QWidget, i32) {
   fn connect(self, sigthis: QAbstractItemDelegate_closeEditor_signal) {
@@ -579,10 +582,14 @@ impl /* trait */ QAbstractItemDelegate_closeEditor_signal_connect for Box<fn(QWi
 // sizeHintChanged(const class QModelIndex &)
 extern fn QAbstractItemDelegate_sizeHintChanged_signal_connect_cb_1(rsfptr:fn(QModelIndex), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QModelIndex::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QAbstractItemDelegate_sizeHintChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QAbstractItemDelegate_sizeHintChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(QModelIndex), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QModelIndex::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QAbstractItemDelegate_sizeHintChanged_signal_connect for fn(QModelIndex) {
   fn connect(self, sigthis: QAbstractItemDelegate_sizeHintChanged_signal) {
@@ -609,10 +616,14 @@ impl /* trait */ QAbstractItemDelegate_sizeHintChanged_signal_connect for Box<fn
 // commitData(class QWidget *)
 extern fn QAbstractItemDelegate_commitData_signal_connect_cb_2(rsfptr:fn(QWidget), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QWidget::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QAbstractItemDelegate_commitData_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QAbstractItemDelegate_commitData_signal_connect_cb_box_2(rsfptr_raw:*mut fn(QWidget), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QWidget::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QAbstractItemDelegate_commitData_signal_connect for fn(QWidget) {
   fn connect(self, sigthis: QAbstractItemDelegate_commitData_signal) {

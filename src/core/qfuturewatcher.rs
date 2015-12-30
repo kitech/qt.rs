@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtCore/qfuturewatcher.h
 // dst-file: /src/core/qfuturewatcher.rs
 //
@@ -92,25 +92,15 @@ extern {
   // proto:  void QFutureWatcherBase::waitForFinished();
   fn _ZN18QFutureWatcherBase15waitForFinishedEv(qthis: u64 /* *mut c_void*/);
   fn QFutureWatcherBase_SlotProxy_connect__ZN18QFutureWatcherBase8finishedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QFutureWatcherBase_SlotProxy_connect_box__ZN18QFutureWatcherBase8finishedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QFutureWatcherBase_SlotProxy_connect__ZN18QFutureWatcherBase19progressTextChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QFutureWatcherBase_SlotProxy_connect_box__ZN18QFutureWatcherBase19progressTextChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QFutureWatcherBase_SlotProxy_connect__ZN18QFutureWatcherBase6pausedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QFutureWatcherBase_SlotProxy_connect_box__ZN18QFutureWatcherBase6pausedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QFutureWatcherBase_SlotProxy_connect__ZN18QFutureWatcherBase7startedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QFutureWatcherBase_SlotProxy_connect_box__ZN18QFutureWatcherBase7startedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QFutureWatcherBase_SlotProxy_connect__ZN18QFutureWatcherBase7resumedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QFutureWatcherBase_SlotProxy_connect_box__ZN18QFutureWatcherBase7resumedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QFutureWatcherBase_SlotProxy_connect__ZN18QFutureWatcherBase20progressRangeChangedEii(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QFutureWatcherBase_SlotProxy_connect_box__ZN18QFutureWatcherBase20progressRangeChangedEii(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QFutureWatcherBase_SlotProxy_connect__ZN18QFutureWatcherBase8canceledEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QFutureWatcherBase_SlotProxy_connect_box__ZN18QFutureWatcherBase8canceledEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QFutureWatcherBase_SlotProxy_connect__ZN18QFutureWatcherBase20progressValueChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QFutureWatcherBase_SlotProxy_connect_box__ZN18QFutureWatcherBase20progressValueChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QFutureWatcherBase_SlotProxy_connect__ZN18QFutureWatcherBase13resultReadyAtEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QFutureWatcherBase_SlotProxy_connect_box__ZN18QFutureWatcherBase13resultReadyAtEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QFutureWatcherBase_SlotProxy_connect__ZN18QFutureWatcherBase14resultsReadyAtEii(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QFutureWatcherBase_SlotProxy_connect_box__ZN18QFutureWatcherBase14resultsReadyAtEii(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -977,10 +967,12 @@ pub trait QFutureWatcherBase_progressTextChanged_signal_connect {
 // finished()
 extern fn QFutureWatcherBase_finished_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QFutureWatcherBase_finished_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, ) {
+extern fn QFutureWatcherBase_finished_signal_connect_cb_box_0(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QFutureWatcherBase_finished_signal_connect for fn() {
   fn connect(self, sigthis: QFutureWatcherBase_finished_signal) {
@@ -1007,10 +999,14 @@ impl /* trait */ QFutureWatcherBase_finished_signal_connect for Box<fn()> {
 // progressTextChanged(const class QString &)
 extern fn QFutureWatcherBase_progressTextChanged_signal_connect_cb_1(rsfptr:fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QFutureWatcherBase_progressTextChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QFutureWatcherBase_progressTextChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QFutureWatcherBase_progressTextChanged_signal_connect for fn(QString) {
   fn connect(self, sigthis: QFutureWatcherBase_progressTextChanged_signal) {
@@ -1037,10 +1033,12 @@ impl /* trait */ QFutureWatcherBase_progressTextChanged_signal_connect for Box<f
 // paused()
 extern fn QFutureWatcherBase_paused_signal_connect_cb_2(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QFutureWatcherBase_paused_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, ) {
+extern fn QFutureWatcherBase_paused_signal_connect_cb_box_2(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QFutureWatcherBase_paused_signal_connect for fn() {
   fn connect(self, sigthis: QFutureWatcherBase_paused_signal) {
@@ -1067,10 +1065,12 @@ impl /* trait */ QFutureWatcherBase_paused_signal_connect for Box<fn()> {
 // started()
 extern fn QFutureWatcherBase_started_signal_connect_cb_3(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QFutureWatcherBase_started_signal_connect_cb_box_3(rsfptr_raw:*mut c_void, ) {
+extern fn QFutureWatcherBase_started_signal_connect_cb_box_3(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QFutureWatcherBase_started_signal_connect for fn() {
   fn connect(self, sigthis: QFutureWatcherBase_started_signal) {
@@ -1097,10 +1097,12 @@ impl /* trait */ QFutureWatcherBase_started_signal_connect for Box<fn()> {
 // resumed()
 extern fn QFutureWatcherBase_resumed_signal_connect_cb_4(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QFutureWatcherBase_resumed_signal_connect_cb_box_4(rsfptr_raw:*mut c_void, ) {
+extern fn QFutureWatcherBase_resumed_signal_connect_cb_box_4(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QFutureWatcherBase_resumed_signal_connect for fn() {
   fn connect(self, sigthis: QFutureWatcherBase_resumed_signal) {
@@ -1127,10 +1129,16 @@ impl /* trait */ QFutureWatcherBase_resumed_signal_connect for Box<fn()> {
 // progressRangeChanged(int, int)
 extern fn QFutureWatcherBase_progressRangeChanged_signal_connect_cb_5(rsfptr:fn(i32, i32), arg0: c_int, arg1: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  let rsarg1 = arg1 as i32;
+  rsfptr(rsarg0,rsarg1);
 }
-extern fn QFutureWatcherBase_progressRangeChanged_signal_connect_cb_box_5(rsfptr_raw:*mut c_void, arg0: c_int, arg1: c_int) {
+extern fn QFutureWatcherBase_progressRangeChanged_signal_connect_cb_box_5(rsfptr_raw:*mut fn(i32, i32), arg0: c_int, arg1: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  let rsarg1 = arg1 as i32;
+  rsfptr(rsarg0,rsarg1);
 }
 impl /* trait */ QFutureWatcherBase_progressRangeChanged_signal_connect for fn(i32, i32) {
   fn connect(self, sigthis: QFutureWatcherBase_progressRangeChanged_signal) {
@@ -1157,10 +1165,12 @@ impl /* trait */ QFutureWatcherBase_progressRangeChanged_signal_connect for Box<
 // canceled()
 extern fn QFutureWatcherBase_canceled_signal_connect_cb_6(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QFutureWatcherBase_canceled_signal_connect_cb_box_6(rsfptr_raw:*mut c_void, ) {
+extern fn QFutureWatcherBase_canceled_signal_connect_cb_box_6(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QFutureWatcherBase_canceled_signal_connect for fn() {
   fn connect(self, sigthis: QFutureWatcherBase_canceled_signal) {
@@ -1187,10 +1197,14 @@ impl /* trait */ QFutureWatcherBase_canceled_signal_connect for Box<fn()> {
 // progressValueChanged(int)
 extern fn QFutureWatcherBase_progressValueChanged_signal_connect_cb_7(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QFutureWatcherBase_progressValueChanged_signal_connect_cb_box_7(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QFutureWatcherBase_progressValueChanged_signal_connect_cb_box_7(rsfptr_raw:*mut fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QFutureWatcherBase_progressValueChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QFutureWatcherBase_progressValueChanged_signal) {
@@ -1217,10 +1231,14 @@ impl /* trait */ QFutureWatcherBase_progressValueChanged_signal_connect for Box<
 // resultReadyAt(int)
 extern fn QFutureWatcherBase_resultReadyAt_signal_connect_cb_8(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QFutureWatcherBase_resultReadyAt_signal_connect_cb_box_8(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QFutureWatcherBase_resultReadyAt_signal_connect_cb_box_8(rsfptr_raw:*mut fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QFutureWatcherBase_resultReadyAt_signal_connect for fn(i32) {
   fn connect(self, sigthis: QFutureWatcherBase_resultReadyAt_signal) {
@@ -1247,10 +1265,16 @@ impl /* trait */ QFutureWatcherBase_resultReadyAt_signal_connect for Box<fn(i32)
 // resultsReadyAt(int, int)
 extern fn QFutureWatcherBase_resultsReadyAt_signal_connect_cb_9(rsfptr:fn(i32, i32), arg0: c_int, arg1: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  let rsarg1 = arg1 as i32;
+  rsfptr(rsarg0,rsarg1);
 }
-extern fn QFutureWatcherBase_resultsReadyAt_signal_connect_cb_box_9(rsfptr_raw:*mut c_void, arg0: c_int, arg1: c_int) {
+extern fn QFutureWatcherBase_resultsReadyAt_signal_connect_cb_box_9(rsfptr_raw:*mut fn(i32, i32), arg0: c_int, arg1: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  let rsarg1 = arg1 as i32;
+  rsfptr(rsarg0,rsarg1);
 }
 impl /* trait */ QFutureWatcherBase_resultsReadyAt_signal_connect for fn(i32, i32) {
   fn connect(self, sigthis: QFutureWatcherBase_resultsReadyAt_signal) {

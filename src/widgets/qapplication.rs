@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtWidgets/qapplication.h
 // dst-file: /src/widgets/qapplication.rs
 //
@@ -157,7 +157,6 @@ extern {
   // proto: static QIcon QApplication::windowIcon();
   fn _ZN12QApplication10windowIconEv() -> *mut c_void;
   fn QApplication_SlotProxy_connect__ZN12QApplication12focusChangedEP7QWidgetS1_(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QApplication_SlotProxy_connect_box__ZN12QApplication12focusChangedEP7QWidgetS1_(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -1452,10 +1451,16 @@ pub trait QApplication_focusChanged_signal_connect {
 // focusChanged(class QWidget *, class QWidget *)
 extern fn QApplication_focusChanged_signal_connect_cb_0(rsfptr:fn(QWidget, QWidget), arg0: *mut c_void, arg1: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QWidget::inheritFrom(arg0 as u64);
+  let rsarg1 = QWidget::inheritFrom(arg1 as u64);
+  rsfptr(rsarg0,rsarg1);
 }
-extern fn QApplication_focusChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void, arg1: *mut c_void) {
+extern fn QApplication_focusChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QWidget, QWidget), arg0: *mut c_void, arg1: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QWidget::inheritFrom(arg0 as u64);
+  let rsarg1 = QWidget::inheritFrom(arg1 as u64);
+  rsfptr(rsarg0,rsarg1);
 }
 impl /* trait */ QApplication_focusChanged_signal_connect for fn(QWidget, QWidget) {
   fn connect(self, sigthis: QApplication_focusChanged_signal) {

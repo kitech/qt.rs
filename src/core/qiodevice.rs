@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtCore/qiodevice.h
 // dst-file: /src/core/qiodevice.rs
 //
@@ -116,13 +116,9 @@ extern {
   // proto:  void QIODevice::~QIODevice();
   fn _ZN9QIODeviceD0Ev(qthis: u64 /* *mut c_void*/);
   fn QIODevice_SlotProxy_connect__ZN9QIODevice12bytesWrittenEx(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QIODevice_SlotProxy_connect_box__ZN9QIODevice12bytesWrittenEx(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QIODevice_SlotProxy_connect__ZN9QIODevice12aboutToCloseEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QIODevice_SlotProxy_connect_box__ZN9QIODevice12aboutToCloseEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QIODevice_SlotProxy_connect__ZN9QIODevice9readyReadEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QIODevice_SlotProxy_connect_box__ZN9QIODevice9readyReadEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QIODevice_SlotProxy_connect__ZN9QIODevice19readChannelFinishedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QIODevice_SlotProxy_connect_box__ZN9QIODevice19readChannelFinishedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -1089,10 +1085,14 @@ pub trait QIODevice_bytesWritten_signal_connect {
 // bytesWritten(qint64)
 extern fn QIODevice_bytesWritten_signal_connect_cb_0(rsfptr:fn(i64), arg0: c_longlong) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i64;
+  rsfptr(rsarg0);
 }
-extern fn QIODevice_bytesWritten_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_longlong) {
+extern fn QIODevice_bytesWritten_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i64), arg0: c_longlong) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i64;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QIODevice_bytesWritten_signal_connect for fn(i64) {
   fn connect(self, sigthis: QIODevice_bytesWritten_signal) {
@@ -1119,10 +1119,12 @@ impl /* trait */ QIODevice_bytesWritten_signal_connect for Box<fn(i64)> {
 // aboutToClose()
 extern fn QIODevice_aboutToClose_signal_connect_cb_1(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QIODevice_aboutToClose_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, ) {
+extern fn QIODevice_aboutToClose_signal_connect_cb_box_1(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QIODevice_aboutToClose_signal_connect for fn() {
   fn connect(self, sigthis: QIODevice_aboutToClose_signal) {
@@ -1149,10 +1151,12 @@ impl /* trait */ QIODevice_aboutToClose_signal_connect for Box<fn()> {
 // readyRead()
 extern fn QIODevice_readyRead_signal_connect_cb_2(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QIODevice_readyRead_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, ) {
+extern fn QIODevice_readyRead_signal_connect_cb_box_2(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QIODevice_readyRead_signal_connect for fn() {
   fn connect(self, sigthis: QIODevice_readyRead_signal) {
@@ -1179,10 +1183,12 @@ impl /* trait */ QIODevice_readyRead_signal_connect for Box<fn()> {
 // readChannelFinished()
 extern fn QIODevice_readChannelFinished_signal_connect_cb_3(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QIODevice_readChannelFinished_signal_connect_cb_box_3(rsfptr_raw:*mut c_void, ) {
+extern fn QIODevice_readChannelFinished_signal_connect_cb_box_3(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QIODevice_readChannelFinished_signal_connect for fn() {
   fn connect(self, sigthis: QIODevice_readChannelFinished_signal) {

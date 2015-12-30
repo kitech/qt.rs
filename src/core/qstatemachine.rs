@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtCore/qstatemachine.h
 // dst-file: /src/core/qstatemachine.rs
 //
@@ -82,7 +82,6 @@ extern {
   fn dector_ZN13QStateMachineC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN13QStateMachineC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QStateMachine_SlotProxy_connect__ZN13QStateMachine14runningChangedEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QStateMachine_SlotProxy_connect_box__ZN13QStateMachine14runningChangedEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -668,10 +667,14 @@ pub trait QStateMachine_stopped_signal_connect {
 // runningChanged(_Bool)
 extern fn QStateMachine_runningChanged_signal_connect_cb_0(rsfptr:fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i8;
+  rsfptr(rsarg0);
 }
-extern fn QStateMachine_runningChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_char) {
+extern fn QStateMachine_runningChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i8;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QStateMachine_runningChanged_signal_connect for fn(i8) {
   fn connect(self, sigthis: QStateMachine_runningChanged_signal) {

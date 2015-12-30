@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtWidgets/qlineedit.h
 // dst-file: /src/widgets/qlineedit.rs
 //
@@ -182,17 +182,11 @@ extern {
   // proto:  bool QLineEdit::isReadOnly();
   fn _ZNK9QLineEdit10isReadOnlyEv(qthis: u64 /* *mut c_void*/) -> c_char;
   fn QLineEdit_SlotProxy_connect__ZN9QLineEdit11textChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QLineEdit_SlotProxy_connect_box__ZN9QLineEdit11textChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QLineEdit_SlotProxy_connect__ZN9QLineEdit15editingFinishedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QLineEdit_SlotProxy_connect_box__ZN9QLineEdit15editingFinishedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QLineEdit_SlotProxy_connect__ZN9QLineEdit16selectionChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QLineEdit_SlotProxy_connect_box__ZN9QLineEdit16selectionChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QLineEdit_SlotProxy_connect__ZN9QLineEdit21cursorPositionChangedEii(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QLineEdit_SlotProxy_connect_box__ZN9QLineEdit21cursorPositionChangedEii(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QLineEdit_SlotProxy_connect__ZN9QLineEdit13returnPressedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QLineEdit_SlotProxy_connect_box__ZN9QLineEdit13returnPressedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QLineEdit_SlotProxy_connect__ZN9QLineEdit10textEditedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QLineEdit_SlotProxy_connect_box__ZN9QLineEdit10textEditedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -1901,10 +1895,14 @@ pub trait QLineEdit_textChanged_signal_connect {
 // textChanged(const class QString &)
 extern fn QLineEdit_textChanged_signal_connect_cb_0(rsfptr:fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QLineEdit_textChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QLineEdit_textChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QLineEdit_textChanged_signal_connect for fn(QString) {
   fn connect(self, sigthis: QLineEdit_textChanged_signal) {
@@ -1931,10 +1929,12 @@ impl /* trait */ QLineEdit_textChanged_signal_connect for Box<fn(QString)> {
 // editingFinished()
 extern fn QLineEdit_editingFinished_signal_connect_cb_1(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QLineEdit_editingFinished_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, ) {
+extern fn QLineEdit_editingFinished_signal_connect_cb_box_1(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QLineEdit_editingFinished_signal_connect for fn() {
   fn connect(self, sigthis: QLineEdit_editingFinished_signal) {
@@ -1961,10 +1961,12 @@ impl /* trait */ QLineEdit_editingFinished_signal_connect for Box<fn()> {
 // selectionChanged()
 extern fn QLineEdit_selectionChanged_signal_connect_cb_2(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QLineEdit_selectionChanged_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, ) {
+extern fn QLineEdit_selectionChanged_signal_connect_cb_box_2(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QLineEdit_selectionChanged_signal_connect for fn() {
   fn connect(self, sigthis: QLineEdit_selectionChanged_signal) {
@@ -1991,10 +1993,16 @@ impl /* trait */ QLineEdit_selectionChanged_signal_connect for Box<fn()> {
 // cursorPositionChanged(int, int)
 extern fn QLineEdit_cursorPositionChanged_signal_connect_cb_3(rsfptr:fn(i32, i32), arg0: c_int, arg1: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  let rsarg1 = arg1 as i32;
+  rsfptr(rsarg0,rsarg1);
 }
-extern fn QLineEdit_cursorPositionChanged_signal_connect_cb_box_3(rsfptr_raw:*mut c_void, arg0: c_int, arg1: c_int) {
+extern fn QLineEdit_cursorPositionChanged_signal_connect_cb_box_3(rsfptr_raw:*mut fn(i32, i32), arg0: c_int, arg1: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  let rsarg1 = arg1 as i32;
+  rsfptr(rsarg0,rsarg1);
 }
 impl /* trait */ QLineEdit_cursorPositionChanged_signal_connect for fn(i32, i32) {
   fn connect(self, sigthis: QLineEdit_cursorPositionChanged_signal) {
@@ -2021,10 +2029,12 @@ impl /* trait */ QLineEdit_cursorPositionChanged_signal_connect for Box<fn(i32, 
 // returnPressed()
 extern fn QLineEdit_returnPressed_signal_connect_cb_4(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QLineEdit_returnPressed_signal_connect_cb_box_4(rsfptr_raw:*mut c_void, ) {
+extern fn QLineEdit_returnPressed_signal_connect_cb_box_4(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QLineEdit_returnPressed_signal_connect for fn() {
   fn connect(self, sigthis: QLineEdit_returnPressed_signal) {
@@ -2051,10 +2061,14 @@ impl /* trait */ QLineEdit_returnPressed_signal_connect for Box<fn()> {
 // textEdited(const class QString &)
 extern fn QLineEdit_textEdited_signal_connect_cb_5(rsfptr:fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QLineEdit_textEdited_signal_connect_cb_box_5(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QLineEdit_textEdited_signal_connect_cb_box_5(rsfptr_raw:*mut fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QLineEdit_textEdited_signal_connect for fn(QString) {
   fn connect(self, sigthis: QLineEdit_textEdited_signal) {

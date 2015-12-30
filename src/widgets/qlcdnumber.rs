@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtWidgets/qlcdnumber.h
 // dst-file: /src/widgets/qlcdnumber.rs
 //
@@ -81,7 +81,6 @@ extern {
   // proto:  void QLCDNumber::overflow();
   fn _ZN10QLCDNumber8overflowEv(qthis: u64 /* *mut c_void*/);
   fn QLCDNumber_SlotProxy_connect__ZN10QLCDNumber8overflowEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QLCDNumber_SlotProxy_connect_box__ZN10QLCDNumber8overflowEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -588,10 +587,12 @@ pub trait QLCDNumber_overflow_signal_connect {
 // overflow()
 extern fn QLCDNumber_overflow_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QLCDNumber_overflow_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, ) {
+extern fn QLCDNumber_overflow_signal_connect_cb_box_0(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QLCDNumber_overflow_signal_connect for fn() {
   fn connect(self, sigthis: QLCDNumber_overflow_signal) {

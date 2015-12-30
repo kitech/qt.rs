@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtWidgets/qsplashscreen.h
 // dst-file: /src/widgets/qsplashscreen.rs
 //
@@ -57,7 +57,6 @@ extern {
   // proto:  void QSplashScreen::finish(QWidget * w);
   fn _ZN13QSplashScreen6finishEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QSplashScreen_SlotProxy_connect__ZN13QSplashScreen14messageChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QSplashScreen_SlotProxy_connect_box__ZN13QSplashScreen14messageChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -364,10 +363,14 @@ pub trait QSplashScreen_messageChanged_signal_connect {
 // messageChanged(const class QString &)
 extern fn QSplashScreen_messageChanged_signal_connect_cb_0(rsfptr:fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QSplashScreen_messageChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QSplashScreen_messageChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QSplashScreen_messageChanged_signal_connect for fn(QString) {
   fn connect(self, sigthis: QSplashScreen_messageChanged_signal) {

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtGui/qstandarditemmodel.h
 // dst-file: /src/gui/qstandarditemmodel.rs
 //
@@ -293,7 +293,6 @@ extern {
   // proto:  void QStandardItem::setTristate(bool tristate);
   fn _ZN13QStandardItem11setTristateEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   fn QStandardItemModel_SlotProxy_connect__ZN18QStandardItemModel11itemChangedEP13QStandardItem(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QStandardItemModel_SlotProxy_connect_box__ZN18QStandardItemModel11itemChangedEP13QStandardItem(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -3138,10 +3137,14 @@ pub trait QStandardItemModel_itemChanged_signal_connect {
 // itemChanged(class QStandardItem *)
 extern fn QStandardItemModel_itemChanged_signal_connect_cb_0(rsfptr:fn(QStandardItem), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QStandardItem::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QStandardItemModel_itemChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QStandardItemModel_itemChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QStandardItem), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QStandardItem::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QStandardItemModel_itemChanged_signal_connect for fn(QStandardItem) {
   fn connect(self, sigthis: QStandardItemModel_itemChanged_signal) {

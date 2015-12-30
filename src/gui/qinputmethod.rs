@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtGui/qinputmethod.h
 // dst-file: /src/gui/qinputmethod.rs
 //
@@ -80,17 +80,11 @@ extern {
   // proto:  void QInputMethod::reset();
   fn _ZN12QInputMethod5resetEv(qthis: u64 /* *mut c_void*/);
   fn QInputMethod_SlotProxy_connect__ZN12QInputMethod22cursorRectangleChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QInputMethod_SlotProxy_connect_box__ZN12QInputMethod22cursorRectangleChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QInputMethod_SlotProxy_connect__ZN12QInputMethod13localeChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QInputMethod_SlotProxy_connect_box__ZN12QInputMethod13localeChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QInputMethod_SlotProxy_connect__ZN12QInputMethod14visibleChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QInputMethod_SlotProxy_connect_box__ZN12QInputMethod14visibleChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QInputMethod_SlotProxy_connect__ZN12QInputMethod24keyboardRectangleChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QInputMethod_SlotProxy_connect_box__ZN12QInputMethod24keyboardRectangleChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QInputMethod_SlotProxy_connect__ZN12QInputMethod21inputDirectionChangedEN2Qt15LayoutDirectionE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QInputMethod_SlotProxy_connect_box__ZN12QInputMethod21inputDirectionChangedEN2Qt15LayoutDirectionE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QInputMethod_SlotProxy_connect__ZN12QInputMethod16animatingChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QInputMethod_SlotProxy_connect_box__ZN12QInputMethod16animatingChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -728,10 +722,12 @@ pub trait QInputMethod_visibleChanged_signal_connect {
 // cursorRectangleChanged()
 extern fn QInputMethod_cursorRectangleChanged_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QInputMethod_cursorRectangleChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, ) {
+extern fn QInputMethod_cursorRectangleChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QInputMethod_cursorRectangleChanged_signal_connect for fn() {
   fn connect(self, sigthis: QInputMethod_cursorRectangleChanged_signal) {
@@ -758,10 +754,12 @@ impl /* trait */ QInputMethod_cursorRectangleChanged_signal_connect for Box<fn()
 // localeChanged()
 extern fn QInputMethod_localeChanged_signal_connect_cb_1(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QInputMethod_localeChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, ) {
+extern fn QInputMethod_localeChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QInputMethod_localeChanged_signal_connect for fn() {
   fn connect(self, sigthis: QInputMethod_localeChanged_signal) {
@@ -788,10 +786,12 @@ impl /* trait */ QInputMethod_localeChanged_signal_connect for Box<fn()> {
 // visibleChanged()
 extern fn QInputMethod_visibleChanged_signal_connect_cb_2(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QInputMethod_visibleChanged_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, ) {
+extern fn QInputMethod_visibleChanged_signal_connect_cb_box_2(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QInputMethod_visibleChanged_signal_connect for fn() {
   fn connect(self, sigthis: QInputMethod_visibleChanged_signal) {
@@ -818,10 +818,12 @@ impl /* trait */ QInputMethod_visibleChanged_signal_connect for Box<fn()> {
 // keyboardRectangleChanged()
 extern fn QInputMethod_keyboardRectangleChanged_signal_connect_cb_3(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QInputMethod_keyboardRectangleChanged_signal_connect_cb_box_3(rsfptr_raw:*mut c_void, ) {
+extern fn QInputMethod_keyboardRectangleChanged_signal_connect_cb_box_3(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QInputMethod_keyboardRectangleChanged_signal_connect for fn() {
   fn connect(self, sigthis: QInputMethod_keyboardRectangleChanged_signal) {
@@ -848,10 +850,14 @@ impl /* trait */ QInputMethod_keyboardRectangleChanged_signal_connect for Box<fn
 // inputDirectionChanged(Qt::LayoutDirection)
 extern fn QInputMethod_inputDirectionChanged_signal_connect_cb_4(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QInputMethod_inputDirectionChanged_signal_connect_cb_box_4(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QInputMethod_inputDirectionChanged_signal_connect_cb_box_4(rsfptr_raw:*mut fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QInputMethod_inputDirectionChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QInputMethod_inputDirectionChanged_signal) {
@@ -878,10 +884,12 @@ impl /* trait */ QInputMethod_inputDirectionChanged_signal_connect for Box<fn(i3
 // animatingChanged()
 extern fn QInputMethod_animatingChanged_signal_connect_cb_5(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QInputMethod_animatingChanged_signal_connect_cb_box_5(rsfptr_raw:*mut c_void, ) {
+extern fn QInputMethod_animatingChanged_signal_connect_cb_box_5(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QInputMethod_animatingChanged_signal_connect for fn() {
   fn connect(self, sigthis: QInputMethod_animatingChanged_signal) {

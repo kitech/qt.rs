@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtWidgets/qmenu.h
 // dst-file: /src/widgets/qmenu.rs
 //
@@ -142,13 +142,9 @@ extern {
   // proto:  QAction * QMenu::exec();
   fn _ZN5QMenu4execEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   fn QMenu_SlotProxy_connect__ZN5QMenu11aboutToShowEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QMenu_SlotProxy_connect_box__ZN5QMenu11aboutToShowEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QMenu_SlotProxy_connect__ZN5QMenu7hoveredEP7QAction(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QMenu_SlotProxy_connect_box__ZN5QMenu7hoveredEP7QAction(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QMenu_SlotProxy_connect__ZN5QMenu11aboutToHideEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QMenu_SlotProxy_connect_box__ZN5QMenu11aboutToHideEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QMenu_SlotProxy_connect__ZN5QMenu9triggeredEP7QAction(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QMenu_SlotProxy_connect_box__ZN5QMenu9triggeredEP7QAction(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -1343,10 +1339,12 @@ pub trait QMenu_aboutToHide_signal_connect {
 // aboutToShow()
 extern fn QMenu_aboutToShow_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QMenu_aboutToShow_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, ) {
+extern fn QMenu_aboutToShow_signal_connect_cb_box_0(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QMenu_aboutToShow_signal_connect for fn() {
   fn connect(self, sigthis: QMenu_aboutToShow_signal) {
@@ -1373,10 +1371,14 @@ impl /* trait */ QMenu_aboutToShow_signal_connect for Box<fn()> {
 // hovered(class QAction *)
 extern fn QMenu_hovered_signal_connect_cb_1(rsfptr:fn(QAction), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QAction::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QMenu_hovered_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QMenu_hovered_signal_connect_cb_box_1(rsfptr_raw:*mut fn(QAction), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QAction::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QMenu_hovered_signal_connect for fn(QAction) {
   fn connect(self, sigthis: QMenu_hovered_signal) {
@@ -1403,10 +1405,12 @@ impl /* trait */ QMenu_hovered_signal_connect for Box<fn(QAction)> {
 // aboutToHide()
 extern fn QMenu_aboutToHide_signal_connect_cb_2(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QMenu_aboutToHide_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, ) {
+extern fn QMenu_aboutToHide_signal_connect_cb_box_2(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QMenu_aboutToHide_signal_connect for fn() {
   fn connect(self, sigthis: QMenu_aboutToHide_signal) {
@@ -1433,10 +1437,14 @@ impl /* trait */ QMenu_aboutToHide_signal_connect for Box<fn()> {
 // triggered(class QAction *)
 extern fn QMenu_triggered_signal_connect_cb_3(rsfptr:fn(QAction), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QAction::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QMenu_triggered_signal_connect_cb_box_3(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QMenu_triggered_signal_connect_cb_box_3(rsfptr_raw:*mut fn(QAction), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QAction::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QMenu_triggered_signal_connect for fn(QAction) {
   fn connect(self, sigthis: QMenu_triggered_signal) {

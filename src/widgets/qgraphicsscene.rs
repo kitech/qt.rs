@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtWidgets/qgraphicsscene.h
 // dst-file: /src/widgets/qgraphicsscene.rs
 //
@@ -188,11 +188,8 @@ extern {
   // proto:  bool QGraphicsScene::stickyFocus();
   fn _ZNK14QGraphicsScene11stickyFocusEv(qthis: u64 /* *mut c_void*/) -> c_char;
   fn QGraphicsScene_SlotProxy_connect__ZN14QGraphicsScene16selectionChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGraphicsScene_SlotProxy_connect_box__ZN14QGraphicsScene16selectionChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QGraphicsScene_SlotProxy_connect__ZN14QGraphicsScene16focusItemChangedEP13QGraphicsItemS1_N2Qt11FocusReasonE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGraphicsScene_SlotProxy_connect_box__ZN14QGraphicsScene16focusItemChangedEP13QGraphicsItemS1_N2Qt11FocusReasonE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QGraphicsScene_SlotProxy_connect__ZN14QGraphicsScene16sceneRectChangedERK6QRectF(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGraphicsScene_SlotProxy_connect_box__ZN14QGraphicsScene16sceneRectChangedERK6QRectF(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -1782,10 +1779,12 @@ pub trait QGraphicsScene_focusItemChanged_signal_connect {
 // selectionChanged()
 extern fn QGraphicsScene_selectionChanged_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QGraphicsScene_selectionChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, ) {
+extern fn QGraphicsScene_selectionChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QGraphicsScene_selectionChanged_signal_connect for fn() {
   fn connect(self, sigthis: QGraphicsScene_selectionChanged_signal) {
@@ -1812,10 +1811,18 @@ impl /* trait */ QGraphicsScene_selectionChanged_signal_connect for Box<fn()> {
 // focusItemChanged(class QGraphicsItem *, class QGraphicsItem *, Qt::FocusReason)
 extern fn QGraphicsScene_focusItemChanged_signal_connect_cb_1(rsfptr:fn(QGraphicsItem, QGraphicsItem, i32), arg0: *mut c_void, arg1: *mut c_void, arg2: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QGraphicsItem::inheritFrom(arg0 as u64);
+  let rsarg1 = QGraphicsItem::inheritFrom(arg1 as u64);
+  let rsarg2 = arg2 as i32;
+  rsfptr(rsarg0,rsarg1,rsarg2);
 }
-extern fn QGraphicsScene_focusItemChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: c_int) {
+extern fn QGraphicsScene_focusItemChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(QGraphicsItem, QGraphicsItem, i32), arg0: *mut c_void, arg1: *mut c_void, arg2: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QGraphicsItem::inheritFrom(arg0 as u64);
+  let rsarg1 = QGraphicsItem::inheritFrom(arg1 as u64);
+  let rsarg2 = arg2 as i32;
+  rsfptr(rsarg0,rsarg1,rsarg2);
 }
 impl /* trait */ QGraphicsScene_focusItemChanged_signal_connect for fn(QGraphicsItem, QGraphicsItem, i32) {
   fn connect(self, sigthis: QGraphicsScene_focusItemChanged_signal) {
@@ -1842,10 +1849,14 @@ impl /* trait */ QGraphicsScene_focusItemChanged_signal_connect for Box<fn(QGrap
 // sceneRectChanged(const class QRectF &)
 extern fn QGraphicsScene_sceneRectChanged_signal_connect_cb_2(rsfptr:fn(QRectF), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QRectF::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QGraphicsScene_sceneRectChanged_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QGraphicsScene_sceneRectChanged_signal_connect_cb_box_2(rsfptr_raw:*mut fn(QRectF), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QRectF::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QGraphicsScene_sceneRectChanged_signal_connect for fn(QRectF) {
   fn connect(self, sigthis: QGraphicsScene_sceneRectChanged_signal) {

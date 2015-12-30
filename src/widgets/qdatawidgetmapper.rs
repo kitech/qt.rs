@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtWidgets/qdatawidgetmapper.h
 // dst-file: /src/widgets/qdatawidgetmapper.rs
 //
@@ -92,7 +92,6 @@ extern {
   // proto:  void QDataWidgetMapper::toNext();
   fn _ZN17QDataWidgetMapper6toNextEv(qthis: u64 /* *mut c_void*/);
   fn QDataWidgetMapper_SlotProxy_connect__ZN17QDataWidgetMapper19currentIndexChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QDataWidgetMapper_SlotProxy_connect_box__ZN17QDataWidgetMapper19currentIndexChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -747,10 +746,14 @@ pub trait QDataWidgetMapper_currentIndexChanged_signal_connect {
 // currentIndexChanged(int)
 extern fn QDataWidgetMapper_currentIndexChanged_signal_connect_cb_0(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QDataWidgetMapper_currentIndexChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QDataWidgetMapper_currentIndexChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QDataWidgetMapper_currentIndexChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QDataWidgetMapper_currentIndexChanged_signal) {

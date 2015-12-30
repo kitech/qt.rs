@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtCore/qabstractanimation.h
 // dst-file: /src/core/qabstractanimation.rs
 //
@@ -98,17 +98,11 @@ extern {
   // proto:  void QAnimationDriver::setStartTime(qint64 startTime);
   fn _ZN16QAnimationDriver12setStartTimeEx(qthis: u64 /* *mut c_void*/, arg0: c_longlong);
   fn QAbstractAnimation_SlotProxy_connect__ZN18QAbstractAnimation12stateChangedENS_5StateES0_(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QAbstractAnimation_SlotProxy_connect_box__ZN18QAbstractAnimation12stateChangedENS_5StateES0_(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QAbstractAnimation_SlotProxy_connect__ZN18QAbstractAnimation18currentLoopChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QAbstractAnimation_SlotProxy_connect_box__ZN18QAbstractAnimation18currentLoopChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QAbstractAnimation_SlotProxy_connect__ZN18QAbstractAnimation8finishedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QAbstractAnimation_SlotProxy_connect_box__ZN18QAbstractAnimation8finishedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QAbstractAnimation_SlotProxy_connect__ZN18QAbstractAnimation16directionChangedENS_9DirectionE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QAbstractAnimation_SlotProxy_connect_box__ZN18QAbstractAnimation16directionChangedENS_9DirectionE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QAnimationDriver_SlotProxy_connect__ZN16QAnimationDriver7stoppedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QAnimationDriver_SlotProxy_connect_box__ZN16QAnimationDriver7stoppedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QAnimationDriver_SlotProxy_connect__ZN16QAnimationDriver7startedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QAnimationDriver_SlotProxy_connect_box__ZN16QAnimationDriver7startedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -939,10 +933,16 @@ pub trait QAbstractAnimation_directionChanged_signal_connect {
 // stateChanged(class QAbstractAnimation::State, class QAbstractAnimation::State)
 extern fn QAbstractAnimation_stateChanged_signal_connect_cb_0(rsfptr:fn(i32, i32), arg0: c_int, arg1: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  let rsarg1 = arg1 as i32;
+  rsfptr(rsarg0,rsarg1);
 }
-extern fn QAbstractAnimation_stateChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_int, arg1: c_int) {
+extern fn QAbstractAnimation_stateChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i32, i32), arg0: c_int, arg1: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  let rsarg1 = arg1 as i32;
+  rsfptr(rsarg0,rsarg1);
 }
 impl /* trait */ QAbstractAnimation_stateChanged_signal_connect for fn(i32, i32) {
   fn connect(self, sigthis: QAbstractAnimation_stateChanged_signal) {
@@ -969,10 +969,14 @@ impl /* trait */ QAbstractAnimation_stateChanged_signal_connect for Box<fn(i32, 
 // currentLoopChanged(int)
 extern fn QAbstractAnimation_currentLoopChanged_signal_connect_cb_1(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QAbstractAnimation_currentLoopChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QAbstractAnimation_currentLoopChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QAbstractAnimation_currentLoopChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QAbstractAnimation_currentLoopChanged_signal) {
@@ -999,10 +1003,12 @@ impl /* trait */ QAbstractAnimation_currentLoopChanged_signal_connect for Box<fn
 // finished()
 extern fn QAbstractAnimation_finished_signal_connect_cb_2(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QAbstractAnimation_finished_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, ) {
+extern fn QAbstractAnimation_finished_signal_connect_cb_box_2(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QAbstractAnimation_finished_signal_connect for fn() {
   fn connect(self, sigthis: QAbstractAnimation_finished_signal) {
@@ -1029,10 +1035,14 @@ impl /* trait */ QAbstractAnimation_finished_signal_connect for Box<fn()> {
 // directionChanged(class QAbstractAnimation::Direction)
 extern fn QAbstractAnimation_directionChanged_signal_connect_cb_3(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QAbstractAnimation_directionChanged_signal_connect_cb_box_3(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QAbstractAnimation_directionChanged_signal_connect_cb_box_3(rsfptr_raw:*mut fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QAbstractAnimation_directionChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QAbstractAnimation_directionChanged_signal) {
@@ -1091,10 +1101,12 @@ pub trait QAnimationDriver_stopped_signal_connect {
 // stopped()
 extern fn QAnimationDriver_stopped_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QAnimationDriver_stopped_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, ) {
+extern fn QAnimationDriver_stopped_signal_connect_cb_box_0(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QAnimationDriver_stopped_signal_connect for fn() {
   fn connect(self, sigthis: QAnimationDriver_stopped_signal) {
@@ -1121,10 +1133,12 @@ impl /* trait */ QAnimationDriver_stopped_signal_connect for Box<fn()> {
 // started()
 extern fn QAnimationDriver_started_signal_connect_cb_1(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QAnimationDriver_started_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, ) {
+extern fn QAnimationDriver_started_signal_connect_cb_box_1(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QAnimationDriver_started_signal_connect for fn() {
   fn connect(self, sigthis: QAnimationDriver_started_signal) {

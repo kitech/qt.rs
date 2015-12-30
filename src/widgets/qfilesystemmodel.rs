@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtWidgets/qfilesystemmodel.h
 // dst-file: /src/widgets/qfilesystemmodel.rs
 //
@@ -130,11 +130,8 @@ extern {
   // proto:  void QFileSystemModel::setIconProvider(QFileIconProvider * provider);
   fn _ZN16QFileSystemModel15setIconProviderEP17QFileIconProvider(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QFileSystemModel_SlotProxy_connect__ZN16QFileSystemModel15directoryLoadedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QFileSystemModel_SlotProxy_connect_box__ZN16QFileSystemModel15directoryLoadedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QFileSystemModel_SlotProxy_connect__ZN16QFileSystemModel15rootPathChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QFileSystemModel_SlotProxy_connect_box__ZN16QFileSystemModel15rootPathChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QFileSystemModel_SlotProxy_connect__ZN16QFileSystemModel11fileRenamedERK7QStringS2_S2_(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QFileSystemModel_SlotProxy_connect_box__ZN16QFileSystemModel11fileRenamedERK7QStringS2_S2_(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -1235,10 +1232,14 @@ pub trait QFileSystemModel_fileRenamed_signal_connect {
 // directoryLoaded(const class QString &)
 extern fn QFileSystemModel_directoryLoaded_signal_connect_cb_0(rsfptr:fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QFileSystemModel_directoryLoaded_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QFileSystemModel_directoryLoaded_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QFileSystemModel_directoryLoaded_signal_connect for fn(QString) {
   fn connect(self, sigthis: QFileSystemModel_directoryLoaded_signal) {
@@ -1265,10 +1266,14 @@ impl /* trait */ QFileSystemModel_directoryLoaded_signal_connect for Box<fn(QStr
 // rootPathChanged(const class QString &)
 extern fn QFileSystemModel_rootPathChanged_signal_connect_cb_1(rsfptr:fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QFileSystemModel_rootPathChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QFileSystemModel_rootPathChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QFileSystemModel_rootPathChanged_signal_connect for fn(QString) {
   fn connect(self, sigthis: QFileSystemModel_rootPathChanged_signal) {
@@ -1295,10 +1300,18 @@ impl /* trait */ QFileSystemModel_rootPathChanged_signal_connect for Box<fn(QStr
 // fileRenamed(const class QString &, const class QString &, const class QString &)
 extern fn QFileSystemModel_fileRenamed_signal_connect_cb_2(rsfptr:fn(QString, QString, QString), arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  let rsarg1 = QString::inheritFrom(arg1 as u64);
+  let rsarg2 = QString::inheritFrom(arg2 as u64);
+  rsfptr(rsarg0,rsarg1,rsarg2);
 }
-extern fn QFileSystemModel_fileRenamed_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) {
+extern fn QFileSystemModel_fileRenamed_signal_connect_cb_box_2(rsfptr_raw:*mut fn(QString, QString, QString), arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  let rsarg1 = QString::inheritFrom(arg1 as u64);
+  let rsarg2 = QString::inheritFrom(arg2 as u64);
+  rsfptr(rsarg0,rsarg1,rsarg2);
 }
 impl /* trait */ QFileSystemModel_fileRenamed_signal_connect for fn(QString, QString, QString) {
   fn connect(self, sigthis: QFileSystemModel_fileRenamed_signal) {

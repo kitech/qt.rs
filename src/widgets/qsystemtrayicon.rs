@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtWidgets/qsystemtrayicon.h
 // dst-file: /src/widgets/qsystemtrayicon.rs
 //
@@ -76,9 +76,7 @@ extern {
   // proto: static bool QSystemTrayIcon::isSystemTrayAvailable();
   fn _ZN15QSystemTrayIcon21isSystemTrayAvailableEv() -> c_char;
   fn QSystemTrayIcon_SlotProxy_connect__ZN15QSystemTrayIcon14messageClickedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QSystemTrayIcon_SlotProxy_connect_box__ZN15QSystemTrayIcon14messageClickedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QSystemTrayIcon_SlotProxy_connect__ZN15QSystemTrayIcon9activatedENS_16ActivationReasonE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QSystemTrayIcon_SlotProxy_connect_box__ZN15QSystemTrayIcon9activatedENS_16ActivationReasonE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -572,10 +570,12 @@ pub trait QSystemTrayIcon_messageClicked_signal_connect {
 // messageClicked()
 extern fn QSystemTrayIcon_messageClicked_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QSystemTrayIcon_messageClicked_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, ) {
+extern fn QSystemTrayIcon_messageClicked_signal_connect_cb_box_0(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QSystemTrayIcon_messageClicked_signal_connect for fn() {
   fn connect(self, sigthis: QSystemTrayIcon_messageClicked_signal) {
@@ -602,10 +602,14 @@ impl /* trait */ QSystemTrayIcon_messageClicked_signal_connect for Box<fn()> {
 // activated(class QSystemTrayIcon::ActivationReason)
 extern fn QSystemTrayIcon_activated_signal_connect_cb_1(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QSystemTrayIcon_activated_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QSystemTrayIcon_activated_signal_connect_cb_box_1(rsfptr_raw:*mut fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QSystemTrayIcon_activated_signal_connect for fn(i32) {
   fn connect(self, sigthis: QSystemTrayIcon_activated_signal) {

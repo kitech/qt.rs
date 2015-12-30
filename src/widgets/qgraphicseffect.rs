@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtWidgets/qgraphicseffect.h
 // dst-file: /src/widgets/qgraphicseffect.rs
 //
@@ -168,25 +168,15 @@ extern {
   // proto:  void QGraphicsBlurEffect::blurRadiusChanged(qreal blurRadius);
   fn _ZN19QGraphicsBlurEffect17blurRadiusChangedEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   fn QGraphicsColorizeEffect_SlotProxy_connect__ZN23QGraphicsColorizeEffect15strengthChangedEd(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGraphicsColorizeEffect_SlotProxy_connect_box__ZN23QGraphicsColorizeEffect15strengthChangedEd(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QGraphicsColorizeEffect_SlotProxy_connect__ZN23QGraphicsColorizeEffect12colorChangedERK6QColor(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGraphicsColorizeEffect_SlotProxy_connect_box__ZN23QGraphicsColorizeEffect12colorChangedERK6QColor(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QGraphicsEffect_SlotProxy_connect__ZN15QGraphicsEffect14enabledChangedEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGraphicsEffect_SlotProxy_connect_box__ZN15QGraphicsEffect14enabledChangedEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QGraphicsDropShadowEffect_SlotProxy_connect__ZN25QGraphicsDropShadowEffect17blurRadiusChangedEd(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGraphicsDropShadowEffect_SlotProxy_connect_box__ZN25QGraphicsDropShadowEffect17blurRadiusChangedEd(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QGraphicsDropShadowEffect_SlotProxy_connect__ZN25QGraphicsDropShadowEffect12colorChangedERK6QColor(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGraphicsDropShadowEffect_SlotProxy_connect_box__ZN25QGraphicsDropShadowEffect12colorChangedERK6QColor(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QGraphicsDropShadowEffect_SlotProxy_connect__ZN25QGraphicsDropShadowEffect13offsetChangedERK7QPointF(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGraphicsDropShadowEffect_SlotProxy_connect_box__ZN25QGraphicsDropShadowEffect13offsetChangedERK7QPointF(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QGraphicsOpacityEffect_SlotProxy_connect__ZN22QGraphicsOpacityEffect14opacityChangedEd(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGraphicsOpacityEffect_SlotProxy_connect_box__ZN22QGraphicsOpacityEffect14opacityChangedEd(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QGraphicsOpacityEffect_SlotProxy_connect__ZN22QGraphicsOpacityEffect18opacityMaskChangedERK6QBrush(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGraphicsOpacityEffect_SlotProxy_connect_box__ZN22QGraphicsOpacityEffect18opacityMaskChangedERK6QBrush(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QGraphicsBlurEffect_SlotProxy_connect__ZN19QGraphicsBlurEffect16blurHintsChangedE6QFlagsINS_8BlurHintEE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGraphicsBlurEffect_SlotProxy_connect_box__ZN19QGraphicsBlurEffect16blurHintsChangedE6QFlagsINS_8BlurHintEE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QGraphicsBlurEffect_SlotProxy_connect__ZN19QGraphicsBlurEffect17blurRadiusChangedEd(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGraphicsBlurEffect_SlotProxy_connect_box__ZN19QGraphicsBlurEffect17blurRadiusChangedEd(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -1683,10 +1673,14 @@ pub trait QGraphicsColorizeEffect_colorChanged_signal_connect {
 // strengthChanged(qreal)
 extern fn QGraphicsColorizeEffect_strengthChanged_signal_connect_cb_0(rsfptr:fn(f64), arg0: c_double) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as f64;
+  rsfptr(rsarg0);
 }
-extern fn QGraphicsColorizeEffect_strengthChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_double) {
+extern fn QGraphicsColorizeEffect_strengthChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(f64), arg0: c_double) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as f64;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QGraphicsColorizeEffect_strengthChanged_signal_connect for fn(f64) {
   fn connect(self, sigthis: QGraphicsColorizeEffect_strengthChanged_signal) {
@@ -1713,10 +1707,14 @@ impl /* trait */ QGraphicsColorizeEffect_strengthChanged_signal_connect for Box<
 // colorChanged(const class QColor &)
 extern fn QGraphicsColorizeEffect_colorChanged_signal_connect_cb_1(rsfptr:fn(QColor), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QColor::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QGraphicsColorizeEffect_colorChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QGraphicsColorizeEffect_colorChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(QColor), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QColor::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QGraphicsColorizeEffect_colorChanged_signal_connect for fn(QColor) {
   fn connect(self, sigthis: QGraphicsColorizeEffect_colorChanged_signal) {
@@ -1759,10 +1757,14 @@ pub trait QGraphicsEffect_enabledChanged_signal_connect {
 // enabledChanged(_Bool)
 extern fn QGraphicsEffect_enabledChanged_signal_connect_cb_0(rsfptr:fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i8;
+  rsfptr(rsarg0);
 }
-extern fn QGraphicsEffect_enabledChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_char) {
+extern fn QGraphicsEffect_enabledChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i8;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QGraphicsEffect_enabledChanged_signal_connect for fn(i8) {
   fn connect(self, sigthis: QGraphicsEffect_enabledChanged_signal) {
@@ -1837,10 +1839,14 @@ pub trait QGraphicsDropShadowEffect_blurRadiusChanged_signal_connect {
 // blurRadiusChanged(qreal)
 extern fn QGraphicsDropShadowEffect_blurRadiusChanged_signal_connect_cb_0(rsfptr:fn(f64), arg0: c_double) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as f64;
+  rsfptr(rsarg0);
 }
-extern fn QGraphicsDropShadowEffect_blurRadiusChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_double) {
+extern fn QGraphicsDropShadowEffect_blurRadiusChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(f64), arg0: c_double) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as f64;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QGraphicsDropShadowEffect_blurRadiusChanged_signal_connect for fn(f64) {
   fn connect(self, sigthis: QGraphicsDropShadowEffect_blurRadiusChanged_signal) {
@@ -1867,10 +1873,14 @@ impl /* trait */ QGraphicsDropShadowEffect_blurRadiusChanged_signal_connect for 
 // colorChanged(const class QColor &)
 extern fn QGraphicsDropShadowEffect_colorChanged_signal_connect_cb_1(rsfptr:fn(QColor), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QColor::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QGraphicsDropShadowEffect_colorChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QGraphicsDropShadowEffect_colorChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(QColor), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QColor::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QGraphicsDropShadowEffect_colorChanged_signal_connect for fn(QColor) {
   fn connect(self, sigthis: QGraphicsDropShadowEffect_colorChanged_signal) {
@@ -1897,10 +1907,14 @@ impl /* trait */ QGraphicsDropShadowEffect_colorChanged_signal_connect for Box<f
 // offsetChanged(const class QPointF &)
 extern fn QGraphicsDropShadowEffect_offsetChanged_signal_connect_cb_2(rsfptr:fn(QPointF), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QPointF::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QGraphicsDropShadowEffect_offsetChanged_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QGraphicsDropShadowEffect_offsetChanged_signal_connect_cb_box_2(rsfptr_raw:*mut fn(QPointF), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QPointF::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QGraphicsDropShadowEffect_offsetChanged_signal_connect for fn(QPointF) {
   fn connect(self, sigthis: QGraphicsDropShadowEffect_offsetChanged_signal) {
@@ -1959,10 +1973,14 @@ pub trait QGraphicsOpacityEffect_opacityChanged_signal_connect {
 // opacityChanged(qreal)
 extern fn QGraphicsOpacityEffect_opacityChanged_signal_connect_cb_0(rsfptr:fn(f64), arg0: c_double) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as f64;
+  rsfptr(rsarg0);
 }
-extern fn QGraphicsOpacityEffect_opacityChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_double) {
+extern fn QGraphicsOpacityEffect_opacityChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(f64), arg0: c_double) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as f64;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QGraphicsOpacityEffect_opacityChanged_signal_connect for fn(f64) {
   fn connect(self, sigthis: QGraphicsOpacityEffect_opacityChanged_signal) {
@@ -1989,10 +2007,14 @@ impl /* trait */ QGraphicsOpacityEffect_opacityChanged_signal_connect for Box<fn
 // opacityMaskChanged(const class QBrush &)
 extern fn QGraphicsOpacityEffect_opacityMaskChanged_signal_connect_cb_1(rsfptr:fn(QBrush), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QBrush::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QGraphicsOpacityEffect_opacityMaskChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QGraphicsOpacityEffect_opacityMaskChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(QBrush), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QBrush::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QGraphicsOpacityEffect_opacityMaskChanged_signal_connect for fn(QBrush) {
   fn connect(self, sigthis: QGraphicsOpacityEffect_opacityMaskChanged_signal) {
@@ -2051,10 +2073,14 @@ pub trait QGraphicsBlurEffect_blurRadiusChanged_signal_connect {
 // blurHintsChanged(BlurHints)
 extern fn QGraphicsBlurEffect_blurHintsChanged_signal_connect_cb_0(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QGraphicsBlurEffect_blurHintsChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QGraphicsBlurEffect_blurHintsChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QGraphicsBlurEffect_blurHintsChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QGraphicsBlurEffect_blurHintsChanged_signal) {
@@ -2081,10 +2107,14 @@ impl /* trait */ QGraphicsBlurEffect_blurHintsChanged_signal_connect for Box<fn(
 // blurRadiusChanged(qreal)
 extern fn QGraphicsBlurEffect_blurRadiusChanged_signal_connect_cb_1(rsfptr:fn(f64), arg0: c_double) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as f64;
+  rsfptr(rsarg0);
 }
-extern fn QGraphicsBlurEffect_blurRadiusChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: c_double) {
+extern fn QGraphicsBlurEffect_blurRadiusChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(f64), arg0: c_double) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as f64;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QGraphicsBlurEffect_blurRadiusChanged_signal_connect for fn(f64) {
   fn connect(self, sigthis: QGraphicsBlurEffect_blurRadiusChanged_signal) {

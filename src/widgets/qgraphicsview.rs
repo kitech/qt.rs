@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtWidgets/qgraphicsview.h
 // dst-file: /src/widgets/qgraphicsview.rs
 //
@@ -161,7 +161,6 @@ extern {
   // proto:  void QGraphicsView::setScene(QGraphicsScene * scene);
   fn _ZN13QGraphicsView8setSceneEP14QGraphicsScene(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QGraphicsView_SlotProxy_connect__ZN13QGraphicsView17rubberBandChangedE5QRect7QPointFS1_(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGraphicsView_SlotProxy_connect_box__ZN13QGraphicsView17rubberBandChangedE5QRect7QPointFS1_(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -1329,10 +1328,18 @@ pub trait QGraphicsView_rubberBandChanged_signal_connect {
 // rubberBandChanged(class QRect, class QPointF, class QPointF)
 extern fn QGraphicsView_rubberBandChanged_signal_connect_cb_0(rsfptr:fn(QRect, QPointF, QPointF), arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QRect::inheritFrom(arg0 as u64);
+  let rsarg1 = QPointF::inheritFrom(arg1 as u64);
+  let rsarg2 = QPointF::inheritFrom(arg2 as u64);
+  rsfptr(rsarg0,rsarg1,rsarg2);
 }
-extern fn QGraphicsView_rubberBandChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) {
+extern fn QGraphicsView_rubberBandChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QRect, QPointF, QPointF), arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QRect::inheritFrom(arg0 as u64);
+  let rsarg1 = QPointF::inheritFrom(arg1 as u64);
+  let rsarg2 = QPointF::inheritFrom(arg2 as u64);
+  rsfptr(rsarg0,rsarg1,rsarg2);
 }
 impl /* trait */ QGraphicsView_rubberBandChanged_signal_connect for fn(QRect, QPointF, QPointF) {
   fn connect(self, sigthis: QGraphicsView_rubberBandChanged_signal) {

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtWidgets/qopenglwidget.h
 // dst-file: /src/widgets/qopenglwidget.rs
 //
@@ -64,13 +64,9 @@ extern {
   // proto:  QSurfaceFormat QOpenGLWidget::format();
   fn _ZNK13QOpenGLWidget6formatEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   fn QOpenGLWidget_SlotProxy_connect__ZN13QOpenGLWidget13aboutToResizeEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QOpenGLWidget_SlotProxy_connect_box__ZN13QOpenGLWidget13aboutToResizeEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QOpenGLWidget_SlotProxy_connect__ZN13QOpenGLWidget12frameSwappedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QOpenGLWidget_SlotProxy_connect_box__ZN13QOpenGLWidget12frameSwappedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QOpenGLWidget_SlotProxy_connect__ZN13QOpenGLWidget7resizedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QOpenGLWidget_SlotProxy_connect_box__ZN13QOpenGLWidget7resizedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QOpenGLWidget_SlotProxy_connect__ZN13QOpenGLWidget14aboutToComposeEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QOpenGLWidget_SlotProxy_connect_box__ZN13QOpenGLWidget14aboutToComposeEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -513,10 +509,12 @@ pub trait QOpenGLWidget_aboutToCompose_signal_connect {
 // aboutToResize()
 extern fn QOpenGLWidget_aboutToResize_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QOpenGLWidget_aboutToResize_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, ) {
+extern fn QOpenGLWidget_aboutToResize_signal_connect_cb_box_0(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QOpenGLWidget_aboutToResize_signal_connect for fn() {
   fn connect(self, sigthis: QOpenGLWidget_aboutToResize_signal) {
@@ -543,10 +541,12 @@ impl /* trait */ QOpenGLWidget_aboutToResize_signal_connect for Box<fn()> {
 // frameSwapped()
 extern fn QOpenGLWidget_frameSwapped_signal_connect_cb_1(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QOpenGLWidget_frameSwapped_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, ) {
+extern fn QOpenGLWidget_frameSwapped_signal_connect_cb_box_1(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QOpenGLWidget_frameSwapped_signal_connect for fn() {
   fn connect(self, sigthis: QOpenGLWidget_frameSwapped_signal) {
@@ -573,10 +573,12 @@ impl /* trait */ QOpenGLWidget_frameSwapped_signal_connect for Box<fn()> {
 // resized()
 extern fn QOpenGLWidget_resized_signal_connect_cb_2(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QOpenGLWidget_resized_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, ) {
+extern fn QOpenGLWidget_resized_signal_connect_cb_box_2(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QOpenGLWidget_resized_signal_connect for fn() {
   fn connect(self, sigthis: QOpenGLWidget_resized_signal) {
@@ -603,10 +605,12 @@ impl /* trait */ QOpenGLWidget_resized_signal_connect for Box<fn()> {
 // aboutToCompose()
 extern fn QOpenGLWidget_aboutToCompose_signal_connect_cb_3(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QOpenGLWidget_aboutToCompose_signal_connect_cb_box_3(rsfptr_raw:*mut c_void, ) {
+extern fn QOpenGLWidget_aboutToCompose_signal_connect_cb_box_3(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QOpenGLWidget_aboutToCompose_signal_connect for fn() {
   fn connect(self, sigthis: QOpenGLWidget_aboutToCompose_signal) {

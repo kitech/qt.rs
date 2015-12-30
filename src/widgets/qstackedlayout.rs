@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtWidgets/qstackedlayout.h
 // dst-file: /src/widgets/qstackedlayout.rs
 //
@@ -87,9 +87,7 @@ extern {
   // proto:  QWidget * QStackedLayout::widget(int );
   fn _ZNK14QStackedLayout6widgetEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   fn QStackedLayout_SlotProxy_connect__ZN14QStackedLayout13widgetRemovedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QStackedLayout_SlotProxy_connect_box__ZN14QStackedLayout13widgetRemovedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QStackedLayout_SlotProxy_connect__ZN14QStackedLayout14currentChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QStackedLayout_SlotProxy_connect_box__ZN14QStackedLayout14currentChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -701,10 +699,14 @@ pub trait QStackedLayout_currentChanged_signal_connect {
 // widgetRemoved(int)
 extern fn QStackedLayout_widgetRemoved_signal_connect_cb_0(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QStackedLayout_widgetRemoved_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QStackedLayout_widgetRemoved_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QStackedLayout_widgetRemoved_signal_connect for fn(i32) {
   fn connect(self, sigthis: QStackedLayout_widgetRemoved_signal) {
@@ -731,10 +733,14 @@ impl /* trait */ QStackedLayout_widgetRemoved_signal_connect for Box<fn(i32)> {
 // currentChanged(int)
 extern fn QStackedLayout_currentChanged_signal_connect_cb_1(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QStackedLayout_currentChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QStackedLayout_currentChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QStackedLayout_currentChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QStackedLayout_currentChanged_signal) {

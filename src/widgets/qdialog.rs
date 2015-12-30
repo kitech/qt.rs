@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtWidgets/qdialog.h
 // dst-file: /src/widgets/qdialog.rs
 //
@@ -77,11 +77,8 @@ extern {
   // proto:  void QDialog::setModal(bool modal);
   fn _ZN7QDialog8setModalEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   fn QDialog_SlotProxy_connect__ZN7QDialog8rejectedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QDialog_SlotProxy_connect_box__ZN7QDialog8rejectedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QDialog_SlotProxy_connect__ZN7QDialog8finishedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QDialog_SlotProxy_connect_box__ZN7QDialog8finishedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QDialog_SlotProxy_connect__ZN7QDialog8acceptedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QDialog_SlotProxy_connect_box__ZN7QDialog8acceptedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -671,10 +668,12 @@ pub trait QDialog_rejected_signal_connect {
 // rejected()
 extern fn QDialog_rejected_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QDialog_rejected_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, ) {
+extern fn QDialog_rejected_signal_connect_cb_box_0(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QDialog_rejected_signal_connect for fn() {
   fn connect(self, sigthis: QDialog_rejected_signal) {
@@ -701,10 +700,14 @@ impl /* trait */ QDialog_rejected_signal_connect for Box<fn()> {
 // finished(int)
 extern fn QDialog_finished_signal_connect_cb_1(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QDialog_finished_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QDialog_finished_signal_connect_cb_box_1(rsfptr_raw:*mut fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QDialog_finished_signal_connect for fn(i32) {
   fn connect(self, sigthis: QDialog_finished_signal) {
@@ -731,10 +734,12 @@ impl /* trait */ QDialog_finished_signal_connect for Box<fn(i32)> {
 // accepted()
 extern fn QDialog_accepted_signal_connect_cb_2(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QDialog_accepted_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, ) {
+extern fn QDialog_accepted_signal_connect_cb_box_2(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QDialog_accepted_signal_connect for fn() {
   fn connect(self, sigthis: QDialog_accepted_signal) {

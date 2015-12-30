@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtWidgets/qstatusbar.h
 // dst-file: /src/widgets/qstatusbar.rs
 //
@@ -64,7 +64,6 @@ extern {
   fn dector_ZN10QStatusBarC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
   fn _ZN10QStatusBarC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QStatusBar_SlotProxy_connect__ZN10QStatusBar14messageChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QStatusBar_SlotProxy_connect_box__ZN10QStatusBar14messageChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -463,10 +462,14 @@ pub trait QStatusBar_messageChanged_signal_connect {
 // messageChanged(const class QString &)
 extern fn QStatusBar_messageChanged_signal_connect_cb_0(rsfptr:fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QStatusBar_messageChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QStatusBar_messageChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QStatusBar_messageChanged_signal_connect for fn(QString) {
   fn connect(self, sigthis: QStatusBar_messageChanged_signal) {

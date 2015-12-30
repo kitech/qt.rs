@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtWidgets/qgraphicswidget.h
 // dst-file: /src/widgets/qgraphicswidget.rs
 //
@@ -142,9 +142,7 @@ extern {
   // proto:  void QGraphicsWidget::setGeometry(qreal x, qreal y, qreal w, qreal h);
   fn demth_ZN15QGraphicsWidget11setGeometryEdddd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
   fn QGraphicsWidget_SlotProxy_connect__ZN15QGraphicsWidget13layoutChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGraphicsWidget_SlotProxy_connect_box__ZN15QGraphicsWidget13layoutChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QGraphicsWidget_SlotProxy_connect__ZN15QGraphicsWidget15geometryChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QGraphicsWidget_SlotProxy_connect_box__ZN15QGraphicsWidget15geometryChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -1319,10 +1317,12 @@ pub trait QGraphicsWidget_geometryChanged_signal_connect {
 // layoutChanged()
 extern fn QGraphicsWidget_layoutChanged_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QGraphicsWidget_layoutChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, ) {
+extern fn QGraphicsWidget_layoutChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QGraphicsWidget_layoutChanged_signal_connect for fn() {
   fn connect(self, sigthis: QGraphicsWidget_layoutChanged_signal) {
@@ -1349,10 +1349,12 @@ impl /* trait */ QGraphicsWidget_layoutChanged_signal_connect for Box<fn()> {
 // geometryChanged()
 extern fn QGraphicsWidget_geometryChanged_signal_connect_cb_1(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QGraphicsWidget_geometryChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, ) {
+extern fn QGraphicsWidget_geometryChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QGraphicsWidget_geometryChanged_signal_connect for fn() {
   fn connect(self, sigthis: QGraphicsWidget_geometryChanged_signal) {

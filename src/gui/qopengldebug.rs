@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtGui/qopengldebug.h
 // dst-file: /src/gui/qopengldebug.rs
 //
@@ -74,7 +74,6 @@ extern {
   // proto:  bool QOpenGLDebugLogger::initialize();
   fn _ZN18QOpenGLDebugLogger10initializeEv(qthis: u64 /* *mut c_void*/) -> c_char;
   fn QOpenGLDebugLogger_SlotProxy_connect__ZN18QOpenGLDebugLogger13messageLoggedERK19QOpenGLDebugMessage(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QOpenGLDebugLogger_SlotProxy_connect_box__ZN18QOpenGLDebugLogger13messageLoggedERK19QOpenGLDebugMessage(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -540,10 +539,14 @@ pub trait QOpenGLDebugLogger_messageLogged_signal_connect {
 // messageLogged(const class QOpenGLDebugMessage &)
 extern fn QOpenGLDebugLogger_messageLogged_signal_connect_cb_0(rsfptr:fn(QOpenGLDebugMessage), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QOpenGLDebugMessage::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QOpenGLDebugLogger_messageLogged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QOpenGLDebugLogger_messageLogged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QOpenGLDebugMessage), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QOpenGLDebugMessage::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QOpenGLDebugLogger_messageLogged_signal_connect for fn(QOpenGLDebugMessage) {
   fn connect(self, sigthis: QOpenGLDebugLogger_messageLogged_signal) {

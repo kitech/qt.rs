@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtWidgets/qdatetimeedit.h
 // dst-file: /src/widgets/qdatetimeedit.rs
 //
@@ -172,15 +172,10 @@ extern {
   // proto:  QDate QDateTimeEdit::maximumDate();
   fn _ZNK13QDateTimeEdit11maximumDateEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   fn QTimeEdit_SlotProxy_connect__ZN9QTimeEdit15userTimeChangedERK5QTime(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QTimeEdit_SlotProxy_connect_box__ZN9QTimeEdit15userTimeChangedERK5QTime(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QDateEdit_SlotProxy_connect__ZN9QDateEdit15userDateChangedERK5QDate(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QDateEdit_SlotProxy_connect_box__ZN9QDateEdit15userDateChangedERK5QDate(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QDateTimeEdit_SlotProxy_connect__ZN13QDateTimeEdit15dateTimeChangedERK9QDateTime(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QDateTimeEdit_SlotProxy_connect_box__ZN13QDateTimeEdit15dateTimeChangedERK9QDateTime(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QDateTimeEdit_SlotProxy_connect__ZN13QDateTimeEdit11dateChangedERK5QDate(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QDateTimeEdit_SlotProxy_connect_box__ZN13QDateTimeEdit11dateChangedERK5QDate(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QDateTimeEdit_SlotProxy_connect__ZN13QDateTimeEdit11timeChangedERK5QTime(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QDateTimeEdit_SlotProxy_connect_box__ZN13QDateTimeEdit11timeChangedERK5QTime(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -1644,10 +1639,14 @@ pub trait QTimeEdit_userTimeChanged_signal_connect {
 // userTimeChanged(const class QTime &)
 extern fn QTimeEdit_userTimeChanged_signal_connect_cb_0(rsfptr:fn(QTime), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QTime::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QTimeEdit_userTimeChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QTimeEdit_userTimeChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QTime), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QTime::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QTimeEdit_userTimeChanged_signal_connect for fn(QTime) {
   fn connect(self, sigthis: QTimeEdit_userTimeChanged_signal) {
@@ -1690,10 +1689,14 @@ pub trait QDateEdit_userDateChanged_signal_connect {
 // userDateChanged(const class QDate &)
 extern fn QDateEdit_userDateChanged_signal_connect_cb_0(rsfptr:fn(QDate), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QDate::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QDateEdit_userDateChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QDateEdit_userDateChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QDate), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QDate::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QDateEdit_userDateChanged_signal_connect for fn(QDate) {
   fn connect(self, sigthis: QDateEdit_userDateChanged_signal) {
@@ -1768,10 +1771,14 @@ pub trait QDateTimeEdit_dateTimeChanged_signal_connect {
 // dateTimeChanged(const class QDateTime &)
 extern fn QDateTimeEdit_dateTimeChanged_signal_connect_cb_0(rsfptr:fn(QDateTime), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QDateTime::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QDateTimeEdit_dateTimeChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QDateTimeEdit_dateTimeChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QDateTime), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QDateTime::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QDateTimeEdit_dateTimeChanged_signal_connect for fn(QDateTime) {
   fn connect(self, sigthis: QDateTimeEdit_dateTimeChanged_signal) {
@@ -1798,10 +1805,14 @@ impl /* trait */ QDateTimeEdit_dateTimeChanged_signal_connect for Box<fn(QDateTi
 // dateChanged(const class QDate &)
 extern fn QDateTimeEdit_dateChanged_signal_connect_cb_1(rsfptr:fn(QDate), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QDate::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QDateTimeEdit_dateChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QDateTimeEdit_dateChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(QDate), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QDate::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QDateTimeEdit_dateChanged_signal_connect for fn(QDate) {
   fn connect(self, sigthis: QDateTimeEdit_dateChanged_signal) {
@@ -1828,10 +1839,14 @@ impl /* trait */ QDateTimeEdit_dateChanged_signal_connect for Box<fn(QDate)> {
 // timeChanged(const class QTime &)
 extern fn QDateTimeEdit_timeChanged_signal_connect_cb_2(rsfptr:fn(QTime), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QTime::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QDateTimeEdit_timeChanged_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QDateTimeEdit_timeChanged_signal_connect_cb_box_2(rsfptr_raw:*mut fn(QTime), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QTime::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QDateTimeEdit_timeChanged_signal_connect for fn(QTime) {
   fn connect(self, sigthis: QDateTimeEdit_timeChanged_signal) {

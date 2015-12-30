@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtWidgets/qprogressbar.h
 // dst-file: /src/widgets/qprogressbar.rs
 //
@@ -81,7 +81,6 @@ extern {
   // proto:  void QProgressBar::setMaximum(int maximum);
   fn _ZN12QProgressBar10setMaximumEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   fn QProgressBar_SlotProxy_connect__ZN12QProgressBar12valueChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QProgressBar_SlotProxy_connect_box__ZN12QProgressBar12valueChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -658,10 +657,14 @@ pub trait QProgressBar_valueChanged_signal_connect {
 // valueChanged(int)
 extern fn QProgressBar_valueChanged_signal_connect_cb_0(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QProgressBar_valueChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QProgressBar_valueChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QProgressBar_valueChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QProgressBar_valueChanged_signal) {

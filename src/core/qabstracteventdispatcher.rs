@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtCore/qabstracteventdispatcher.h
 // dst-file: /src/core/qabstracteventdispatcher.rs
 //
@@ -76,9 +76,7 @@ extern {
   // proto:  bool QAbstractEventDispatcher::unregisterTimer(int timerId);
   fn _ZN24QAbstractEventDispatcher15unregisterTimerEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
   fn QAbstractEventDispatcher_SlotProxy_connect__ZN24QAbstractEventDispatcher12aboutToBlockEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QAbstractEventDispatcher_SlotProxy_connect_box__ZN24QAbstractEventDispatcher12aboutToBlockEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QAbstractEventDispatcher_SlotProxy_connect__ZN24QAbstractEventDispatcher5awakeEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QAbstractEventDispatcher_SlotProxy_connect_box__ZN24QAbstractEventDispatcher5awakeEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -606,10 +604,12 @@ pub trait QAbstractEventDispatcher_awake_signal_connect {
 // aboutToBlock()
 extern fn QAbstractEventDispatcher_aboutToBlock_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QAbstractEventDispatcher_aboutToBlock_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, ) {
+extern fn QAbstractEventDispatcher_aboutToBlock_signal_connect_cb_box_0(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QAbstractEventDispatcher_aboutToBlock_signal_connect for fn() {
   fn connect(self, sigthis: QAbstractEventDispatcher_aboutToBlock_signal) {
@@ -636,10 +636,12 @@ impl /* trait */ QAbstractEventDispatcher_aboutToBlock_signal_connect for Box<fn
 // awake()
 extern fn QAbstractEventDispatcher_awake_signal_connect_cb_1(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QAbstractEventDispatcher_awake_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, ) {
+extern fn QAbstractEventDispatcher_awake_signal_connect_cb_box_1(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QAbstractEventDispatcher_awake_signal_connect for fn() {
   fn connect(self, sigthis: QAbstractEventDispatcher_awake_signal) {

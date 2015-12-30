@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtWidgets/qfontdialog.h
 // dst-file: /src/widgets/qfontdialog.rs
 //
@@ -64,9 +64,7 @@ extern {
   // proto:  void QFontDialog::setCurrentFont(const QFont & font);
   fn _ZN11QFontDialog14setCurrentFontERK5QFont(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QFontDialog_SlotProxy_connect__ZN11QFontDialog18currentFontChangedERK5QFont(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QFontDialog_SlotProxy_connect_box__ZN11QFontDialog18currentFontChangedERK5QFont(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QFontDialog_SlotProxy_connect__ZN11QFontDialog12fontSelectedERK5QFont(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QFontDialog_SlotProxy_connect_box__ZN11QFontDialog12fontSelectedERK5QFont(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -427,10 +425,14 @@ pub trait QFontDialog_currentFontChanged_signal_connect {
 // currentFontChanged(const class QFont &)
 extern fn QFontDialog_currentFontChanged_signal_connect_cb_0(rsfptr:fn(QFont), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QFont::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QFontDialog_currentFontChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QFontDialog_currentFontChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QFont), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QFont::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QFontDialog_currentFontChanged_signal_connect for fn(QFont) {
   fn connect(self, sigthis: QFontDialog_currentFontChanged_signal) {
@@ -457,10 +459,14 @@ impl /* trait */ QFontDialog_currentFontChanged_signal_connect for Box<fn(QFont)
 // fontSelected(const class QFont &)
 extern fn QFontDialog_fontSelected_signal_connect_cb_1(rsfptr:fn(QFont), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QFont::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QFontDialog_fontSelected_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QFontDialog_fontSelected_signal_connect_cb_box_1(rsfptr_raw:*mut fn(QFont), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QFont::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QFontDialog_fontSelected_signal_connect for fn(QFont) {
   fn connect(self, sigthis: QFontDialog_fontSelected_signal) {

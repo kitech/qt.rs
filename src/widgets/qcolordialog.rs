@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtWidgets/qcolordialog.h
 // dst-file: /src/widgets/qcolordialog.rs
 //
@@ -74,9 +74,7 @@ extern {
   // proto: static int QColorDialog::customCount();
   fn _ZN12QColorDialog11customCountEv() -> c_int;
   fn QColorDialog_SlotProxy_connect__ZN12QColorDialog19currentColorChangedERK6QColor(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QColorDialog_SlotProxy_connect_box__ZN12QColorDialog19currentColorChangedERK6QColor(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QColorDialog_SlotProxy_connect__ZN12QColorDialog13colorSelectedERK6QColor(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QColorDialog_SlotProxy_connect_box__ZN12QColorDialog13colorSelectedERK6QColor(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -558,10 +556,14 @@ pub trait QColorDialog_currentColorChanged_signal_connect {
 // currentColorChanged(const class QColor &)
 extern fn QColorDialog_currentColorChanged_signal_connect_cb_0(rsfptr:fn(QColor), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QColor::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QColorDialog_currentColorChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QColorDialog_currentColorChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QColor), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QColor::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QColorDialog_currentColorChanged_signal_connect for fn(QColor) {
   fn connect(self, sigthis: QColorDialog_currentColorChanged_signal) {
@@ -588,10 +590,14 @@ impl /* trait */ QColorDialog_currentColorChanged_signal_connect for Box<fn(QCol
 // colorSelected(const class QColor &)
 extern fn QColorDialog_colorSelected_signal_connect_cb_1(rsfptr:fn(QColor), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QColor::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QColorDialog_colorSelected_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QColorDialog_colorSelected_signal_connect_cb_box_1(rsfptr_raw:*mut fn(QColor), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QColor::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QColorDialog_colorSelected_signal_connect for fn(QColor) {
   fn connect(self, sigthis: QColorDialog_colorSelected_signal) {

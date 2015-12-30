@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtGui/qmovie.h
 // dst-file: /src/gui/qmovie.rs
 //
@@ -117,19 +117,12 @@ extern {
   // proto:  void QMovie::setFileName(const QString & fileName);
   fn _ZN6QMovie11setFileNameERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QMovie_SlotProxy_connect__ZN6QMovie12stateChangedENS_10MovieStateE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QMovie_SlotProxy_connect_box__ZN6QMovie12stateChangedENS_10MovieStateE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QMovie_SlotProxy_connect__ZN6QMovie7resizedERK5QSize(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QMovie_SlotProxy_connect_box__ZN6QMovie7resizedERK5QSize(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QMovie_SlotProxy_connect__ZN6QMovie12frameChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QMovie_SlotProxy_connect_box__ZN6QMovie12frameChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QMovie_SlotProxy_connect__ZN6QMovie8finishedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QMovie_SlotProxy_connect_box__ZN6QMovie8finishedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QMovie_SlotProxy_connect__ZN6QMovie5errorEN12QImageReader16ImageReaderErrorE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QMovie_SlotProxy_connect_box__ZN6QMovie5errorEN12QImageReader16ImageReaderErrorE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QMovie_SlotProxy_connect__ZN6QMovie7startedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QMovie_SlotProxy_connect_box__ZN6QMovie7startedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QMovie_SlotProxy_connect__ZN6QMovie7updatedERK5QRect(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QMovie_SlotProxy_connect_box__ZN6QMovie7updatedERK5QRect(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -1121,10 +1114,14 @@ pub trait QMovie_frameChanged_signal_connect {
 // stateChanged(class QMovie::MovieState)
 extern fn QMovie_stateChanged_signal_connect_cb_0(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QMovie_stateChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QMovie_stateChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QMovie_stateChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QMovie_stateChanged_signal) {
@@ -1151,10 +1148,14 @@ impl /* trait */ QMovie_stateChanged_signal_connect for Box<fn(i32)> {
 // resized(const class QSize &)
 extern fn QMovie_resized_signal_connect_cb_1(rsfptr:fn(QSize), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QSize::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QMovie_resized_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QMovie_resized_signal_connect_cb_box_1(rsfptr_raw:*mut fn(QSize), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QSize::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QMovie_resized_signal_connect for fn(QSize) {
   fn connect(self, sigthis: QMovie_resized_signal) {
@@ -1181,10 +1182,14 @@ impl /* trait */ QMovie_resized_signal_connect for Box<fn(QSize)> {
 // frameChanged(int)
 extern fn QMovie_frameChanged_signal_connect_cb_2(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QMovie_frameChanged_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QMovie_frameChanged_signal_connect_cb_box_2(rsfptr_raw:*mut fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QMovie_frameChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QMovie_frameChanged_signal) {
@@ -1211,10 +1216,12 @@ impl /* trait */ QMovie_frameChanged_signal_connect for Box<fn(i32)> {
 // finished()
 extern fn QMovie_finished_signal_connect_cb_3(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QMovie_finished_signal_connect_cb_box_3(rsfptr_raw:*mut c_void, ) {
+extern fn QMovie_finished_signal_connect_cb_box_3(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QMovie_finished_signal_connect for fn() {
   fn connect(self, sigthis: QMovie_finished_signal) {
@@ -1241,10 +1248,14 @@ impl /* trait */ QMovie_finished_signal_connect for Box<fn()> {
 // error(class QImageReader::ImageReaderError)
 extern fn QMovie_error_signal_connect_cb_4(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QMovie_error_signal_connect_cb_box_4(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QMovie_error_signal_connect_cb_box_4(rsfptr_raw:*mut fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QMovie_error_signal_connect for fn(i32) {
   fn connect(self, sigthis: QMovie_error_signal) {
@@ -1271,10 +1282,12 @@ impl /* trait */ QMovie_error_signal_connect for Box<fn(i32)> {
 // started()
 extern fn QMovie_started_signal_connect_cb_5(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QMovie_started_signal_connect_cb_box_5(rsfptr_raw:*mut c_void, ) {
+extern fn QMovie_started_signal_connect_cb_box_5(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QMovie_started_signal_connect for fn() {
   fn connect(self, sigthis: QMovie_started_signal) {
@@ -1301,10 +1314,14 @@ impl /* trait */ QMovie_started_signal_connect for Box<fn()> {
 // updated(const class QRect &)
 extern fn QMovie_updated_signal_connect_cb_6(rsfptr:fn(QRect), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QRect::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QMovie_updated_signal_connect_cb_box_6(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QMovie_updated_signal_connect_cb_box_6(rsfptr_raw:*mut fn(QRect), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QRect::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QMovie_updated_signal_connect for fn(QRect) {
   fn connect(self, sigthis: QMovie_updated_signal) {

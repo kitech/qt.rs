@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtCore/qsignalmapper.h
 // dst-file: /src/core/qsignalmapper.rs
 //
@@ -73,13 +73,9 @@ extern {
   // proto:  void QSignalMapper::setMapping(QObject * sender, QWidget * widget);
   fn _ZN13QSignalMapper10setMappingEP7QObjectP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   fn QSignalMapper_SlotProxy_connect__ZN13QSignalMapper6mappedEP7QWidget(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QSignalMapper_SlotProxy_connect_box__ZN13QSignalMapper6mappedEP7QWidget(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QSignalMapper_SlotProxy_connect__ZN13QSignalMapper6mappedEP7QObject(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QSignalMapper_SlotProxy_connect_box__ZN13QSignalMapper6mappedEP7QObject(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QSignalMapper_SlotProxy_connect__ZN13QSignalMapper6mappedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QSignalMapper_SlotProxy_connect_box__ZN13QSignalMapper6mappedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QSignalMapper_SlotProxy_connect__ZN13QSignalMapper6mappedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QSignalMapper_SlotProxy_connect_box__ZN13QSignalMapper6mappedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -452,10 +448,14 @@ pub trait QSignalMapper_mapped_signal_connect {
 // mapped(class QWidget *)
 extern fn QSignalMapper_mapped_signal_connect_cb_0(rsfptr:fn(QWidget), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QWidget::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QSignalMapper_mapped_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QSignalMapper_mapped_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QWidget), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QWidget::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QSignalMapper_mapped_signal_connect for fn(QWidget) {
   fn connect(self, sigthis: QSignalMapper_mapped_signal) {
@@ -482,10 +482,14 @@ impl /* trait */ QSignalMapper_mapped_signal_connect for Box<fn(QWidget)> {
 // mapped(class QObject *)
 extern fn QSignalMapper_mapped_signal_connect_cb_1(rsfptr:fn(QObject), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QObject::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QSignalMapper_mapped_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QSignalMapper_mapped_signal_connect_cb_box_1(rsfptr_raw:*mut fn(QObject), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QObject::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QSignalMapper_mapped_signal_connect for fn(QObject) {
   fn connect(self, sigthis: QSignalMapper_mapped_signal) {
@@ -512,10 +516,14 @@ impl /* trait */ QSignalMapper_mapped_signal_connect for Box<fn(QObject)> {
 // mapped(const class QString &)
 extern fn QSignalMapper_mapped_signal_connect_cb_2(rsfptr:fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QSignalMapper_mapped_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QSignalMapper_mapped_signal_connect_cb_box_2(rsfptr_raw:*mut fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QSignalMapper_mapped_signal_connect for fn(QString) {
   fn connect(self, sigthis: QSignalMapper_mapped_signal) {
@@ -542,10 +550,14 @@ impl /* trait */ QSignalMapper_mapped_signal_connect for Box<fn(QString)> {
 // mapped(int)
 extern fn QSignalMapper_mapped_signal_connect_cb_3(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QSignalMapper_mapped_signal_connect_cb_box_3(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QSignalMapper_mapped_signal_connect_cb_box_3(rsfptr_raw:*mut fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
 impl /* trait */ QSignalMapper_mapped_signal_connect for fn(i32) {
   fn connect(self, sigthis: QSignalMapper_mapped_signal) {

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Wed Dec 30 23:22:52 2015
 // src-file: /QtWidgets/qcalendarwidget.h
 // dst-file: /src/widgets/qcalendarwidget.rs
 //
@@ -114,13 +114,9 @@ extern {
   // proto:  void QCalendarWidget::showNextYear();
   fn _ZN15QCalendarWidget12showNextYearEv(qthis: u64 /* *mut c_void*/);
   fn QCalendarWidget_SlotProxy_connect__ZN15QCalendarWidget7clickedERK5QDate(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QCalendarWidget_SlotProxy_connect_box__ZN15QCalendarWidget7clickedERK5QDate(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QCalendarWidget_SlotProxy_connect__ZN15QCalendarWidget16selectionChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QCalendarWidget_SlotProxy_connect_box__ZN15QCalendarWidget16selectionChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QCalendarWidget_SlotProxy_connect__ZN15QCalendarWidget9activatedERK5QDate(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QCalendarWidget_SlotProxy_connect_box__ZN15QCalendarWidget9activatedERK5QDate(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QCalendarWidget_SlotProxy_connect__ZN15QCalendarWidget18currentPageChangedEii(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QCalendarWidget_SlotProxy_connect_box__ZN15QCalendarWidget18currentPageChangedEii(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -1105,10 +1101,14 @@ pub trait QCalendarWidget_selectionChanged_signal_connect {
 // clicked(const class QDate &)
 extern fn QCalendarWidget_clicked_signal_connect_cb_0(rsfptr:fn(QDate), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QDate::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QCalendarWidget_clicked_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QCalendarWidget_clicked_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QDate), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QDate::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QCalendarWidget_clicked_signal_connect for fn(QDate) {
   fn connect(self, sigthis: QCalendarWidget_clicked_signal) {
@@ -1135,10 +1135,12 @@ impl /* trait */ QCalendarWidget_clicked_signal_connect for Box<fn(QDate)> {
 // selectionChanged()
 extern fn QCalendarWidget_selectionChanged_signal_connect_cb_1(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QCalendarWidget_selectionChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, ) {
+extern fn QCalendarWidget_selectionChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  rsfptr();
 }
 impl /* trait */ QCalendarWidget_selectionChanged_signal_connect for fn() {
   fn connect(self, sigthis: QCalendarWidget_selectionChanged_signal) {
@@ -1165,10 +1167,14 @@ impl /* trait */ QCalendarWidget_selectionChanged_signal_connect for Box<fn()> {
 // activated(const class QDate &)
 extern fn QCalendarWidget_activated_signal_connect_cb_2(rsfptr:fn(QDate), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QDate::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QCalendarWidget_activated_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QCalendarWidget_activated_signal_connect_cb_box_2(rsfptr_raw:*mut fn(QDate), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QDate::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
 impl /* trait */ QCalendarWidget_activated_signal_connect for fn(QDate) {
   fn connect(self, sigthis: QCalendarWidget_activated_signal) {
@@ -1195,10 +1201,16 @@ impl /* trait */ QCalendarWidget_activated_signal_connect for Box<fn(QDate)> {
 // currentPageChanged(int, int)
 extern fn QCalendarWidget_currentPageChanged_signal_connect_cb_3(rsfptr:fn(i32, i32), arg0: c_int, arg1: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  let rsarg1 = arg1 as i32;
+  rsfptr(rsarg0,rsarg1);
 }
-extern fn QCalendarWidget_currentPageChanged_signal_connect_cb_box_3(rsfptr_raw:*mut c_void, arg0: c_int, arg1: c_int) {
+extern fn QCalendarWidget_currentPageChanged_signal_connect_cb_box_3(rsfptr_raw:*mut fn(i32, i32), arg0: c_int, arg1: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  let rsarg1 = arg1 as i32;
+  rsfptr(rsarg0,rsarg1);
 }
 impl /* trait */ QCalendarWidget_currentPageChanged_signal_connect for fn(i32, i32) {
   fn connect(self, sigthis: QCalendarWidget_currentPageChanged_signal) {
