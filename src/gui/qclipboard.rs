@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtGui/qclipboard.h
 // dst-file: /src/gui/qclipboard.rs
 //
@@ -44,12 +44,8 @@ extern {
   fn _ZN10QClipboardC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QClipboard::supportsFindBuffer();
   fn _ZNK10QClipboard18supportsFindBufferEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QClipboard::selectionChanged();
-  fn _ZN10QClipboard16selectionChangedEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QClipboard::ownsFindBuffer();
   fn _ZNK10QClipboard14ownsFindBufferEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QClipboard::dataChanged();
-  fn _ZN10QClipboard11dataChangedEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QClipboard::ownsClipboard();
   fn _ZNK10QClipboard13ownsClipboardEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  const QMetaObject * QClipboard::metaObject();
@@ -58,8 +54,6 @@ extern {
   fn _ZNK10QClipboard17supportsSelectionEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QClipboard::ownsSelection();
   fn _ZNK10QClipboard13ownsSelectionEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QClipboard::findBufferChanged();
-  fn _ZN10QClipboard17findBufferChangedEv(qthis: u64 /* *mut c_void*/);
   fn QClipboard_SlotProxy_connect__ZN10QClipboard7changedENS_4ModeE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QClipboard_SlotProxy_connect__ZN10QClipboard16selectionChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QClipboard_SlotProxy_connect__ZN10QClipboard11dataChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
@@ -72,10 +66,10 @@ extern {
 pub struct QClipboard {
   qbase: QObject,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _changed_1: QClipboard_changed_signal,
-  pub _findBufferChanged_1: QClipboard_findBufferChanged_signal,
-  pub _selectionChanged_1: QClipboard_selectionChanged_signal,
-  pub _dataChanged_1: QClipboard_dataChanged_signal,
+  pub _changed: QClipboard_changed_signal,
+  pub _findBufferChanged: QClipboard_findBufferChanged_signal,
+  pub _selectionChanged: QClipboard_selectionChanged_signal,
+  pub _dataChanged: QClipboard_dataChanged_signal,
 }
 
 impl /*struct*/ QClipboard {
@@ -185,28 +179,6 @@ impl<'a> /*trait*/ QClipboard_supportsFindBuffer<i8> for () {
   }
 }
 
-  // proto:  void QClipboard::selectionChanged();
-impl /*struct*/ QClipboard {
-  pub fn selectionChanged<RetType, T: QClipboard_selectionChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.selectionChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QClipboard_selectionChanged<RetType> {
-  fn selectionChanged(self , rsthis: & QClipboard) -> RetType;
-}
-
-  // proto:  void QClipboard::selectionChanged();
-impl<'a> /*trait*/ QClipboard_selectionChanged<()> for () {
-  fn selectionChanged(self , rsthis: & QClipboard) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QClipboard16selectionChangedEv()};
-     unsafe {_ZN10QClipboard16selectionChangedEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto:  bool QClipboard::ownsFindBuffer();
 impl /*struct*/ QClipboard {
   pub fn ownsFindBuffer<RetType, T: QClipboard_ownsFindBuffer<RetType>>(& self,  overload_args: T) -> RetType {
@@ -226,28 +198,6 @@ impl<'a> /*trait*/ QClipboard_ownsFindBuffer<i8> for () {
     // unsafe{_ZNK10QClipboard14ownsFindBufferEv()};
     let mut ret = unsafe {_ZNK10QClipboard14ownsFindBufferEv(rsthis.qclsinst)};
     return ret as i8;
-    // return 1;
-  }
-}
-
-  // proto:  void QClipboard::dataChanged();
-impl /*struct*/ QClipboard {
-  pub fn dataChanged<RetType, T: QClipboard_dataChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.dataChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QClipboard_dataChanged<RetType> {
-  fn dataChanged(self , rsthis: & QClipboard) -> RetType;
-}
-
-  // proto:  void QClipboard::dataChanged();
-impl<'a> /*trait*/ QClipboard_dataChanged<()> for () {
-  fn dataChanged(self , rsthis: & QClipboard) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QClipboard11dataChangedEv()};
-     unsafe {_ZN10QClipboard11dataChangedEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -343,32 +293,10 @@ impl<'a> /*trait*/ QClipboard_ownsSelection<i8> for () {
   }
 }
 
-  // proto:  void QClipboard::findBufferChanged();
-impl /*struct*/ QClipboard {
-  pub fn findBufferChanged<RetType, T: QClipboard_findBufferChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.findBufferChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QClipboard_findBufferChanged<RetType> {
-  fn findBufferChanged(self , rsthis: & QClipboard) -> RetType;
-}
-
-  // proto:  void QClipboard::findBufferChanged();
-impl<'a> /*trait*/ QClipboard_findBufferChanged<()> for () {
-  fn findBufferChanged(self , rsthis: & QClipboard) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QClipboard17findBufferChangedEv()};
-     unsafe {_ZN10QClipboard17findBufferChangedEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
 #[derive(Default)] // for QClipboard_changed
 pub struct QClipboard_changed_signal{poi:u64}
 impl /* struct */ QClipboard {
-  pub fn changed_1(&self) -> QClipboard_changed_signal {
+  pub fn changed(&self) -> QClipboard_changed_signal {
      return QClipboard_changed_signal{poi:self.qclsinst};
   }
 }
@@ -384,7 +312,7 @@ pub trait QClipboard_changed_signal_connect {
 #[derive(Default)] // for QClipboard_findBufferChanged
 pub struct QClipboard_findBufferChanged_signal{poi:u64}
 impl /* struct */ QClipboard {
-  pub fn findBufferChanged_1(&self) -> QClipboard_findBufferChanged_signal {
+  pub fn findBufferChanged(&self) -> QClipboard_findBufferChanged_signal {
      return QClipboard_findBufferChanged_signal{poi:self.qclsinst};
   }
 }
@@ -400,7 +328,7 @@ pub trait QClipboard_findBufferChanged_signal_connect {
 #[derive(Default)] // for QClipboard_selectionChanged
 pub struct QClipboard_selectionChanged_signal{poi:u64}
 impl /* struct */ QClipboard {
-  pub fn selectionChanged_1(&self) -> QClipboard_selectionChanged_signal {
+  pub fn selectionChanged(&self) -> QClipboard_selectionChanged_signal {
      return QClipboard_selectionChanged_signal{poi:self.qclsinst};
   }
 }
@@ -416,7 +344,7 @@ pub trait QClipboard_selectionChanged_signal_connect {
 #[derive(Default)] // for QClipboard_dataChanged
 pub struct QClipboard_dataChanged_signal{poi:u64}
 impl /* struct */ QClipboard {
-  pub fn dataChanged_1(&self) -> QClipboard_dataChanged_signal {
+  pub fn dataChanged(&self) -> QClipboard_dataChanged_signal {
      return QClipboard_dataChanged_signal{poi:self.qclsinst};
   }
 }
@@ -435,11 +363,12 @@ extern fn QClipboard_changed_signal_connect_cb_0(rsfptr:fn(i32), arg0: c_int) {
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QClipboard_changed_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
+extern fn QClipboard_changed_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QClipboard_changed_signal_connect for fn(i32) {
   fn connect(self, sigthis: QClipboard_changed_signal) {
@@ -460,7 +389,7 @@ impl /* trait */ QClipboard_changed_signal_connect for Box<Fn(i32)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QClipboard_changed_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QClipboard_SlotProxy_connect__ZN10QClipboard7changedENS_4ModeE(arg0, arg1, arg2)};
   }
 }
@@ -469,10 +398,11 @@ extern fn QClipboard_selectionChanged_signal_connect_cb_1(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QClipboard_selectionChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(), ) {
+extern fn QClipboard_selectionChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  rsfptr();
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QClipboard_selectionChanged_signal_connect for fn() {
   fn connect(self, sigthis: QClipboard_selectionChanged_signal) {
@@ -493,7 +423,7 @@ impl /* trait */ QClipboard_selectionChanged_signal_connect for Box<Fn()> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QClipboard_selectionChanged_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QClipboard_SlotProxy_connect__ZN10QClipboard16selectionChangedEv(arg0, arg1, arg2)};
   }
 }
@@ -502,10 +432,11 @@ extern fn QClipboard_dataChanged_signal_connect_cb_2(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QClipboard_dataChanged_signal_connect_cb_box_2(rsfptr_raw:*mut Fn(), ) {
+extern fn QClipboard_dataChanged_signal_connect_cb_box_2(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  rsfptr();
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QClipboard_dataChanged_signal_connect for fn() {
   fn connect(self, sigthis: QClipboard_dataChanged_signal) {
@@ -526,7 +457,7 @@ impl /* trait */ QClipboard_dataChanged_signal_connect for Box<Fn()> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QClipboard_dataChanged_signal_connect_cb_box_2 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QClipboard_SlotProxy_connect__ZN10QClipboard11dataChangedEv(arg0, arg1, arg2)};
   }
 }
@@ -535,10 +466,11 @@ extern fn QClipboard_findBufferChanged_signal_connect_cb_3(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QClipboard_findBufferChanged_signal_connect_cb_box_3(rsfptr_raw:*mut Fn(), ) {
+extern fn QClipboard_findBufferChanged_signal_connect_cb_box_3(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  rsfptr();
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QClipboard_findBufferChanged_signal_connect for fn() {
   fn connect(self, sigthis: QClipboard_findBufferChanged_signal) {
@@ -559,7 +491,7 @@ impl /* trait */ QClipboard_findBufferChanged_signal_connect for Box<Fn()> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QClipboard_findBufferChanged_signal_connect_cb_box_3 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QClipboard_SlotProxy_connect__ZN10QClipboard17findBufferChangedEv(arg0, arg1, arg2)};
   }
 }

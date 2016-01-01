@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtGui/qguiapplication.h
 // dst-file: /src/gui/qguiapplication.rs
 //
@@ -31,10 +31,10 @@ use super::qstylehints::QStyleHints; // 773
 use super::qclipboard::QClipboard; // 773
 use super::super::core::qobject::QObject; // 771
 use super::super::core::qcoreevent::QEvent; // 771
-use super::qsessionmanager::QSessionManager; // 773
-use super::qwindow::QWindow; // 773
 use super::super::core::qpoint::QPoint; // 771
+use super::qwindow::QWindow; // 773
 use super::super::core::qbytearray::QByteArray; // 771
+use super::qsessionmanager::QSessionManager; // 773
 // <= use block end
 
 // ext block begin =>
@@ -62,12 +62,8 @@ extern {
   fn _ZN15QGuiApplicationC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QGuiApplication::isSavingSession();
   fn _ZNK15QGuiApplication15isSavingSessionEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QGuiApplication::paletteChanged(const QPalette & pal);
-  fn _ZN15QGuiApplication14paletteChangedERK8QPalette(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static QFont QGuiApplication::font();
   fn _ZN15QGuiApplication4fontEv() -> *mut c_void;
-  // proto:  void QGuiApplication::screenAdded(QScreen * screen);
-  fn _ZN15QGuiApplication11screenAddedEP7QScreen(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QGuiApplication::isSessionRestored();
   fn _ZNK15QGuiApplication17isSessionRestoredEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QString QGuiApplication::sessionKey();
@@ -96,24 +92,16 @@ extern {
   fn _ZN15QGuiApplication15topLevelWindowsEv();
   // proto: static bool QGuiApplication::isRightToLeft();
   fn demth_ZN15QGuiApplication13isRightToLeftEv() -> c_char;
-  // proto:  void QGuiApplication::focusObjectChanged(QObject * focusObject);
-  fn _ZN15QGuiApplication18focusObjectChangedEP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QGuiApplication::fontDatabaseChanged();
-  fn _ZN15QGuiApplication19fontDatabaseChangedEv(qthis: u64 /* *mut c_void*/);
   // proto: static void QGuiApplication::changeOverrideCursor(const QCursor & );
   fn _ZN15QGuiApplication20changeOverrideCursorERK7QCursor(arg0: *mut c_void);
   // proto: static QWindowList QGuiApplication::allWindows();
   fn _ZN15QGuiApplication10allWindowsEv();
   // proto: static void QGuiApplication::setOverrideCursor(const QCursor & );
   fn _ZN15QGuiApplication17setOverrideCursorERK7QCursor(arg0: *mut c_void);
-  // proto:  void QGuiApplication::commitDataRequest(QSessionManager & sessionManager);
-  fn _ZN15QGuiApplication17commitDataRequestER15QSessionManager(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static void QGuiApplication::setWindowIcon(const QIcon & icon);
   fn _ZN15QGuiApplication13setWindowIconERK5QIcon(arg0: *mut c_void);
   // proto:  QString QGuiApplication::sessionId();
   fn _ZNK15QGuiApplication9sessionIdEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QGuiApplication::focusWindowChanged(QWindow * focusWindow);
-  fn _ZN15QGuiApplication18focusWindowChangedEP7QWindow(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static void QGuiApplication::setApplicationDisplayName(const QString & name);
   fn _ZN15QGuiApplication25setApplicationDisplayNameERK7QString(arg0: *mut c_void);
   // proto: static bool QGuiApplication::isLeftToRight();
@@ -133,8 +121,6 @@ extern {
   fn _ZN15QGuiApplication4execEv() -> c_int;
   // proto: static bool QGuiApplication::quitOnLastWindowClosed();
   fn _ZN15QGuiApplication22quitOnLastWindowClosedEv() -> c_char;
-  // proto:  void QGuiApplication::lastWindowClosed();
-  fn _ZN15QGuiApplication16lastWindowClosedEv(qthis: u64 /* *mut c_void*/);
   // proto: static void QGuiApplication::restoreOverrideCursor();
   fn _ZN15QGuiApplication21restoreOverrideCursorEv();
   // proto: static QPlatformNativeInterface * QGuiApplication::platformNativeInterface();
@@ -143,12 +129,8 @@ extern {
   fn _ZNK15QGuiApplication10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto: static QObject * QGuiApplication::focusObject();
   fn _ZN15QGuiApplication11focusObjectEv() -> *mut c_void;
-  // proto:  void QGuiApplication::screenRemoved(QScreen * screen);
-  fn _ZN15QGuiApplication13screenRemovedEP7QScreen(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static QWindow * QGuiApplication::focusWindow();
   fn _ZN15QGuiApplication11focusWindowEv() -> *mut c_void;
-  // proto:  void QGuiApplication::saveStateRequest(QSessionManager & sessionManager);
-  fn _ZN15QGuiApplication16saveStateRequestER15QSessionManager(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  qreal QGuiApplication::devicePixelRatio();
   fn _ZNK15QGuiApplication16devicePixelRatioEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto: static QFunctionPointer QGuiApplication::platformFunction(const QByteArray & function);
@@ -172,17 +154,17 @@ extern {
 pub struct QGuiApplication {
   qbase: QCoreApplication,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _saveStateRequest_1: QGuiApplication_saveStateRequest_signal,
-  pub _applicationStateChanged_1: QGuiApplication_applicationStateChanged_signal,
-  pub _screenAdded_1: QGuiApplication_screenAdded_signal,
-  pub _screenRemoved_1: QGuiApplication_screenRemoved_signal,
-  pub _focusObjectChanged_1: QGuiApplication_focusObjectChanged_signal,
-  pub _paletteChanged_1: QGuiApplication_paletteChanged_signal,
-  pub _focusWindowChanged_1: QGuiApplication_focusWindowChanged_signal,
-  pub _lastWindowClosed_1: QGuiApplication_lastWindowClosed_signal,
-  pub _fontDatabaseChanged_1: QGuiApplication_fontDatabaseChanged_signal,
-  pub _layoutDirectionChanged_1: QGuiApplication_layoutDirectionChanged_signal,
-  pub _commitDataRequest_1: QGuiApplication_commitDataRequest_signal,
+  pub _saveStateRequest: QGuiApplication_saveStateRequest_signal,
+  pub _applicationStateChanged: QGuiApplication_applicationStateChanged_signal,
+  pub _screenAdded: QGuiApplication_screenAdded_signal,
+  pub _screenRemoved: QGuiApplication_screenRemoved_signal,
+  pub _focusObjectChanged: QGuiApplication_focusObjectChanged_signal,
+  pub _paletteChanged: QGuiApplication_paletteChanged_signal,
+  pub _focusWindowChanged: QGuiApplication_focusWindowChanged_signal,
+  pub _lastWindowClosed: QGuiApplication_lastWindowClosed_signal,
+  pub _fontDatabaseChanged: QGuiApplication_fontDatabaseChanged_signal,
+  pub _layoutDirectionChanged: QGuiApplication_layoutDirectionChanged_signal,
+  pub _commitDataRequest: QGuiApplication_commitDataRequest_signal,
 }
 
 impl /*struct*/ QGuiApplication {
@@ -392,29 +374,6 @@ impl<'a> /*trait*/ QGuiApplication_isSavingSession<i8> for () {
   }
 }
 
-  // proto:  void QGuiApplication::paletteChanged(const QPalette & pal);
-impl /*struct*/ QGuiApplication {
-  pub fn paletteChanged<RetType, T: QGuiApplication_paletteChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.paletteChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QGuiApplication_paletteChanged<RetType> {
-  fn paletteChanged(self , rsthis: & QGuiApplication) -> RetType;
-}
-
-  // proto:  void QGuiApplication::paletteChanged(const QPalette & pal);
-impl<'a> /*trait*/ QGuiApplication_paletteChanged<()> for (&'a QPalette) {
-  fn paletteChanged(self , rsthis: & QGuiApplication) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QGuiApplication14paletteChangedERK8QPalette()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN15QGuiApplication14paletteChangedERK8QPalette(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto: static QFont QGuiApplication::font();
 impl /*struct*/ QGuiApplication {
   pub fn font_s<RetType, T: QGuiApplication_font_s<RetType>>( overload_args: T) -> RetType {
@@ -435,29 +394,6 @@ impl<'a> /*trait*/ QGuiApplication_font_s<QFont> for () {
     let mut ret = unsafe {_ZN15QGuiApplication4fontEv()};
     let mut ret1 = QFont::inheritFrom(ret as u64);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QGuiApplication::screenAdded(QScreen * screen);
-impl /*struct*/ QGuiApplication {
-  pub fn screenAdded<RetType, T: QGuiApplication_screenAdded<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.screenAdded(self);
-    // return 1;
-  }
-}
-
-pub trait QGuiApplication_screenAdded<RetType> {
-  fn screenAdded(self , rsthis: & QGuiApplication) -> RetType;
-}
-
-  // proto:  void QGuiApplication::screenAdded(QScreen * screen);
-impl<'a> /*trait*/ QGuiApplication_screenAdded<()> for (&'a QScreen) {
-  fn screenAdded(self , rsthis: & QGuiApplication) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QGuiApplication11screenAddedEP7QScreen()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN15QGuiApplication11screenAddedEP7QScreen(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -791,51 +727,6 @@ impl<'a> /*trait*/ QGuiApplication_isRightToLeft_s<i8> for () {
   }
 }
 
-  // proto:  void QGuiApplication::focusObjectChanged(QObject * focusObject);
-impl /*struct*/ QGuiApplication {
-  pub fn focusObjectChanged<RetType, T: QGuiApplication_focusObjectChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.focusObjectChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QGuiApplication_focusObjectChanged<RetType> {
-  fn focusObjectChanged(self , rsthis: & QGuiApplication) -> RetType;
-}
-
-  // proto:  void QGuiApplication::focusObjectChanged(QObject * focusObject);
-impl<'a> /*trait*/ QGuiApplication_focusObjectChanged<()> for (&'a QObject) {
-  fn focusObjectChanged(self , rsthis: & QGuiApplication) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QGuiApplication18focusObjectChangedEP7QObject()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN15QGuiApplication18focusObjectChangedEP7QObject(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QGuiApplication::fontDatabaseChanged();
-impl /*struct*/ QGuiApplication {
-  pub fn fontDatabaseChanged<RetType, T: QGuiApplication_fontDatabaseChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.fontDatabaseChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QGuiApplication_fontDatabaseChanged<RetType> {
-  fn fontDatabaseChanged(self , rsthis: & QGuiApplication) -> RetType;
-}
-
-  // proto:  void QGuiApplication::fontDatabaseChanged();
-impl<'a> /*trait*/ QGuiApplication_fontDatabaseChanged<()> for () {
-  fn fontDatabaseChanged(self , rsthis: & QGuiApplication) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QGuiApplication19fontDatabaseChangedEv()};
-     unsafe {_ZN15QGuiApplication19fontDatabaseChangedEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto: static void QGuiApplication::changeOverrideCursor(const QCursor & );
 impl /*struct*/ QGuiApplication {
   pub fn changeOverrideCursor_s<RetType, T: QGuiApplication_changeOverrideCursor_s<RetType>>( overload_args: T) -> RetType {
@@ -904,29 +795,6 @@ impl<'a> /*trait*/ QGuiApplication_setOverrideCursor_s<()> for (&'a QCursor) {
   }
 }
 
-  // proto:  void QGuiApplication::commitDataRequest(QSessionManager & sessionManager);
-impl /*struct*/ QGuiApplication {
-  pub fn commitDataRequest<RetType, T: QGuiApplication_commitDataRequest<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.commitDataRequest(self);
-    // return 1;
-  }
-}
-
-pub trait QGuiApplication_commitDataRequest<RetType> {
-  fn commitDataRequest(self , rsthis: & QGuiApplication) -> RetType;
-}
-
-  // proto:  void QGuiApplication::commitDataRequest(QSessionManager & sessionManager);
-impl<'a> /*trait*/ QGuiApplication_commitDataRequest<()> for (&'a QSessionManager) {
-  fn commitDataRequest(self , rsthis: & QGuiApplication) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QGuiApplication17commitDataRequestER15QSessionManager()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN15QGuiApplication17commitDataRequestER15QSessionManager(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto: static void QGuiApplication::setWindowIcon(const QIcon & icon);
 impl /*struct*/ QGuiApplication {
   pub fn setWindowIcon_s<RetType, T: QGuiApplication_setWindowIcon_s<RetType>>( overload_args: T) -> RetType {
@@ -970,29 +838,6 @@ impl<'a> /*trait*/ QGuiApplication_sessionId<QString> for () {
     let mut ret = unsafe {_ZNK15QGuiApplication9sessionIdEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QGuiApplication::focusWindowChanged(QWindow * focusWindow);
-impl /*struct*/ QGuiApplication {
-  pub fn focusWindowChanged<RetType, T: QGuiApplication_focusWindowChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.focusWindowChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QGuiApplication_focusWindowChanged<RetType> {
-  fn focusWindowChanged(self , rsthis: & QGuiApplication) -> RetType;
-}
-
-  // proto:  void QGuiApplication::focusWindowChanged(QWindow * focusWindow);
-impl<'a> /*trait*/ QGuiApplication_focusWindowChanged<()> for (&'a QWindow) {
-  fn focusWindowChanged(self , rsthis: & QGuiApplication) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QGuiApplication18focusWindowChangedEP7QWindow()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN15QGuiApplication18focusWindowChangedEP7QWindow(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1203,28 +1048,6 @@ impl<'a> /*trait*/ QGuiApplication_quitOnLastWindowClosed_s<i8> for () {
   }
 }
 
-  // proto:  void QGuiApplication::lastWindowClosed();
-impl /*struct*/ QGuiApplication {
-  pub fn lastWindowClosed<RetType, T: QGuiApplication_lastWindowClosed<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.lastWindowClosed(self);
-    // return 1;
-  }
-}
-
-pub trait QGuiApplication_lastWindowClosed<RetType> {
-  fn lastWindowClosed(self , rsthis: & QGuiApplication) -> RetType;
-}
-
-  // proto:  void QGuiApplication::lastWindowClosed();
-impl<'a> /*trait*/ QGuiApplication_lastWindowClosed<()> for () {
-  fn lastWindowClosed(self , rsthis: & QGuiApplication) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QGuiApplication16lastWindowClosedEv()};
-     unsafe {_ZN15QGuiApplication16lastWindowClosedEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto: static void QGuiApplication::restoreOverrideCursor();
 impl /*struct*/ QGuiApplication {
   pub fn restoreOverrideCursor_s<RetType, T: QGuiApplication_restoreOverrideCursor_s<RetType>>( overload_args: T) -> RetType {
@@ -1315,29 +1138,6 @@ impl<'a> /*trait*/ QGuiApplication_focusObject_s<QObject> for () {
   }
 }
 
-  // proto:  void QGuiApplication::screenRemoved(QScreen * screen);
-impl /*struct*/ QGuiApplication {
-  pub fn screenRemoved<RetType, T: QGuiApplication_screenRemoved<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.screenRemoved(self);
-    // return 1;
-  }
-}
-
-pub trait QGuiApplication_screenRemoved<RetType> {
-  fn screenRemoved(self , rsthis: & QGuiApplication) -> RetType;
-}
-
-  // proto:  void QGuiApplication::screenRemoved(QScreen * screen);
-impl<'a> /*trait*/ QGuiApplication_screenRemoved<()> for (&'a QScreen) {
-  fn screenRemoved(self , rsthis: & QGuiApplication) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QGuiApplication13screenRemovedEP7QScreen()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN15QGuiApplication13screenRemovedEP7QScreen(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto: static QWindow * QGuiApplication::focusWindow();
 impl /*struct*/ QGuiApplication {
   pub fn focusWindow_s<RetType, T: QGuiApplication_focusWindow_s<RetType>>( overload_args: T) -> RetType {
@@ -1358,29 +1158,6 @@ impl<'a> /*trait*/ QGuiApplication_focusWindow_s<QWindow> for () {
     let mut ret = unsafe {_ZN15QGuiApplication11focusWindowEv()};
     let mut ret1 = QWindow::inheritFrom(ret as u64);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QGuiApplication::saveStateRequest(QSessionManager & sessionManager);
-impl /*struct*/ QGuiApplication {
-  pub fn saveStateRequest<RetType, T: QGuiApplication_saveStateRequest<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.saveStateRequest(self);
-    // return 1;
-  }
-}
-
-pub trait QGuiApplication_saveStateRequest<RetType> {
-  fn saveStateRequest(self , rsthis: & QGuiApplication) -> RetType;
-}
-
-  // proto:  void QGuiApplication::saveStateRequest(QSessionManager & sessionManager);
-impl<'a> /*trait*/ QGuiApplication_saveStateRequest<()> for (&'a QSessionManager) {
-  fn saveStateRequest(self , rsthis: & QGuiApplication) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QGuiApplication16saveStateRequestER15QSessionManager()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN15QGuiApplication16saveStateRequestER15QSessionManager(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1434,7 +1211,7 @@ impl<'a> /*trait*/ QGuiApplication_platformFunction_s<()> for (&'a QByteArray) {
 #[derive(Default)] // for QGuiApplication_saveStateRequest
 pub struct QGuiApplication_saveStateRequest_signal{poi:u64}
 impl /* struct */ QGuiApplication {
-  pub fn saveStateRequest_1(&self) -> QGuiApplication_saveStateRequest_signal {
+  pub fn saveStateRequest(&self) -> QGuiApplication_saveStateRequest_signal {
      return QGuiApplication_saveStateRequest_signal{poi:self.qclsinst};
   }
 }
@@ -1450,7 +1227,7 @@ pub trait QGuiApplication_saveStateRequest_signal_connect {
 #[derive(Default)] // for QGuiApplication_applicationStateChanged
 pub struct QGuiApplication_applicationStateChanged_signal{poi:u64}
 impl /* struct */ QGuiApplication {
-  pub fn applicationStateChanged_1(&self) -> QGuiApplication_applicationStateChanged_signal {
+  pub fn applicationStateChanged(&self) -> QGuiApplication_applicationStateChanged_signal {
      return QGuiApplication_applicationStateChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1466,7 +1243,7 @@ pub trait QGuiApplication_applicationStateChanged_signal_connect {
 #[derive(Default)] // for QGuiApplication_screenAdded
 pub struct QGuiApplication_screenAdded_signal{poi:u64}
 impl /* struct */ QGuiApplication {
-  pub fn screenAdded_1(&self) -> QGuiApplication_screenAdded_signal {
+  pub fn screenAdded(&self) -> QGuiApplication_screenAdded_signal {
      return QGuiApplication_screenAdded_signal{poi:self.qclsinst};
   }
 }
@@ -1482,7 +1259,7 @@ pub trait QGuiApplication_screenAdded_signal_connect {
 #[derive(Default)] // for QGuiApplication_screenRemoved
 pub struct QGuiApplication_screenRemoved_signal{poi:u64}
 impl /* struct */ QGuiApplication {
-  pub fn screenRemoved_1(&self) -> QGuiApplication_screenRemoved_signal {
+  pub fn screenRemoved(&self) -> QGuiApplication_screenRemoved_signal {
      return QGuiApplication_screenRemoved_signal{poi:self.qclsinst};
   }
 }
@@ -1498,7 +1275,7 @@ pub trait QGuiApplication_screenRemoved_signal_connect {
 #[derive(Default)] // for QGuiApplication_focusObjectChanged
 pub struct QGuiApplication_focusObjectChanged_signal{poi:u64}
 impl /* struct */ QGuiApplication {
-  pub fn focusObjectChanged_1(&self) -> QGuiApplication_focusObjectChanged_signal {
+  pub fn focusObjectChanged(&self) -> QGuiApplication_focusObjectChanged_signal {
      return QGuiApplication_focusObjectChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1514,7 +1291,7 @@ pub trait QGuiApplication_focusObjectChanged_signal_connect {
 #[derive(Default)] // for QGuiApplication_paletteChanged
 pub struct QGuiApplication_paletteChanged_signal{poi:u64}
 impl /* struct */ QGuiApplication {
-  pub fn paletteChanged_1(&self) -> QGuiApplication_paletteChanged_signal {
+  pub fn paletteChanged(&self) -> QGuiApplication_paletteChanged_signal {
      return QGuiApplication_paletteChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1530,7 +1307,7 @@ pub trait QGuiApplication_paletteChanged_signal_connect {
 #[derive(Default)] // for QGuiApplication_focusWindowChanged
 pub struct QGuiApplication_focusWindowChanged_signal{poi:u64}
 impl /* struct */ QGuiApplication {
-  pub fn focusWindowChanged_1(&self) -> QGuiApplication_focusWindowChanged_signal {
+  pub fn focusWindowChanged(&self) -> QGuiApplication_focusWindowChanged_signal {
      return QGuiApplication_focusWindowChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1546,7 +1323,7 @@ pub trait QGuiApplication_focusWindowChanged_signal_connect {
 #[derive(Default)] // for QGuiApplication_lastWindowClosed
 pub struct QGuiApplication_lastWindowClosed_signal{poi:u64}
 impl /* struct */ QGuiApplication {
-  pub fn lastWindowClosed_1(&self) -> QGuiApplication_lastWindowClosed_signal {
+  pub fn lastWindowClosed(&self) -> QGuiApplication_lastWindowClosed_signal {
      return QGuiApplication_lastWindowClosed_signal{poi:self.qclsinst};
   }
 }
@@ -1562,7 +1339,7 @@ pub trait QGuiApplication_lastWindowClosed_signal_connect {
 #[derive(Default)] // for QGuiApplication_fontDatabaseChanged
 pub struct QGuiApplication_fontDatabaseChanged_signal{poi:u64}
 impl /* struct */ QGuiApplication {
-  pub fn fontDatabaseChanged_1(&self) -> QGuiApplication_fontDatabaseChanged_signal {
+  pub fn fontDatabaseChanged(&self) -> QGuiApplication_fontDatabaseChanged_signal {
      return QGuiApplication_fontDatabaseChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1578,7 +1355,7 @@ pub trait QGuiApplication_fontDatabaseChanged_signal_connect {
 #[derive(Default)] // for QGuiApplication_layoutDirectionChanged
 pub struct QGuiApplication_layoutDirectionChanged_signal{poi:u64}
 impl /* struct */ QGuiApplication {
-  pub fn layoutDirectionChanged_1(&self) -> QGuiApplication_layoutDirectionChanged_signal {
+  pub fn layoutDirectionChanged(&self) -> QGuiApplication_layoutDirectionChanged_signal {
      return QGuiApplication_layoutDirectionChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1594,7 +1371,7 @@ pub trait QGuiApplication_layoutDirectionChanged_signal_connect {
 #[derive(Default)] // for QGuiApplication_commitDataRequest
 pub struct QGuiApplication_commitDataRequest_signal{poi:u64}
 impl /* struct */ QGuiApplication {
-  pub fn commitDataRequest_1(&self) -> QGuiApplication_commitDataRequest_signal {
+  pub fn commitDataRequest(&self) -> QGuiApplication_commitDataRequest_signal {
      return QGuiApplication_commitDataRequest_signal{poi:self.qclsinst};
   }
 }
@@ -1613,11 +1390,12 @@ extern fn QGuiApplication_focusObjectChanged_signal_connect_cb_0(rsfptr:fn(QObje
   let rsarg0 = QObject::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QGuiApplication_focusObjectChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QObject), arg0: *mut c_void) {
+extern fn QGuiApplication_focusObjectChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(QObject)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QObject::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QGuiApplication_focusObjectChanged_signal_connect for fn(QObject) {
   fn connect(self, sigthis: QGuiApplication_focusObjectChanged_signal) {
@@ -1638,7 +1416,7 @@ impl /* trait */ QGuiApplication_focusObjectChanged_signal_connect for Box<Fn(QO
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QGuiApplication_focusObjectChanged_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QGuiApplication_SlotProxy_connect__ZN15QGuiApplication18focusObjectChangedEP7QObject(arg0, arg1, arg2)};
   }
 }
@@ -1647,10 +1425,11 @@ extern fn QGuiApplication_fontDatabaseChanged_signal_connect_cb_1(rsfptr:fn(), )
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QGuiApplication_fontDatabaseChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(), ) {
+extern fn QGuiApplication_fontDatabaseChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  rsfptr();
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QGuiApplication_fontDatabaseChanged_signal_connect for fn() {
   fn connect(self, sigthis: QGuiApplication_fontDatabaseChanged_signal) {
@@ -1671,7 +1450,7 @@ impl /* trait */ QGuiApplication_fontDatabaseChanged_signal_connect for Box<Fn()
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QGuiApplication_fontDatabaseChanged_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QGuiApplication_SlotProxy_connect__ZN15QGuiApplication19fontDatabaseChangedEv(arg0, arg1, arg2)};
   }
 }
@@ -1681,11 +1460,12 @@ extern fn QGuiApplication_applicationStateChanged_signal_connect_cb_2(rsfptr:fn(
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QGuiApplication_applicationStateChanged_signal_connect_cb_box_2(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
+extern fn QGuiApplication_applicationStateChanged_signal_connect_cb_box_2(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QGuiApplication_applicationStateChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QGuiApplication_applicationStateChanged_signal) {
@@ -1706,7 +1486,7 @@ impl /* trait */ QGuiApplication_applicationStateChanged_signal_connect for Box<
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QGuiApplication_applicationStateChanged_signal_connect_cb_box_2 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QGuiApplication_SlotProxy_connect__ZN15QGuiApplication23applicationStateChangedEN2Qt16ApplicationStateE(arg0, arg1, arg2)};
   }
 }
@@ -1716,11 +1496,12 @@ extern fn QGuiApplication_layoutDirectionChanged_signal_connect_cb_3(rsfptr:fn(i
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QGuiApplication_layoutDirectionChanged_signal_connect_cb_box_3(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
+extern fn QGuiApplication_layoutDirectionChanged_signal_connect_cb_box_3(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QGuiApplication_layoutDirectionChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QGuiApplication_layoutDirectionChanged_signal) {
@@ -1741,7 +1522,7 @@ impl /* trait */ QGuiApplication_layoutDirectionChanged_signal_connect for Box<F
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QGuiApplication_layoutDirectionChanged_signal_connect_cb_box_3 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QGuiApplication_SlotProxy_connect__ZN15QGuiApplication22layoutDirectionChangedEN2Qt15LayoutDirectionE(arg0, arg1, arg2)};
   }
 }
@@ -1751,11 +1532,12 @@ extern fn QGuiApplication_commitDataRequest_signal_connect_cb_4(rsfptr:fn(QSessi
   let rsarg0 = QSessionManager::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QGuiApplication_commitDataRequest_signal_connect_cb_box_4(rsfptr_raw:*mut Fn(QSessionManager), arg0: *mut c_void) {
+extern fn QGuiApplication_commitDataRequest_signal_connect_cb_box_4(rsfptr_raw:*mut Box<Fn(QSessionManager)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QSessionManager::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QGuiApplication_commitDataRequest_signal_connect for fn(QSessionManager) {
   fn connect(self, sigthis: QGuiApplication_commitDataRequest_signal) {
@@ -1776,7 +1558,7 @@ impl /* trait */ QGuiApplication_commitDataRequest_signal_connect for Box<Fn(QSe
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QGuiApplication_commitDataRequest_signal_connect_cb_box_4 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QGuiApplication_SlotProxy_connect__ZN15QGuiApplication17commitDataRequestER15QSessionManager(arg0, arg1, arg2)};
   }
 }
@@ -1786,11 +1568,12 @@ extern fn QGuiApplication_paletteChanged_signal_connect_cb_5(rsfptr:fn(QPalette)
   let rsarg0 = QPalette::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QGuiApplication_paletteChanged_signal_connect_cb_box_5(rsfptr_raw:*mut Fn(QPalette), arg0: *mut c_void) {
+extern fn QGuiApplication_paletteChanged_signal_connect_cb_box_5(rsfptr_raw:*mut Box<Fn(QPalette)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QPalette::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QGuiApplication_paletteChanged_signal_connect for fn(QPalette) {
   fn connect(self, sigthis: QGuiApplication_paletteChanged_signal) {
@@ -1811,7 +1594,7 @@ impl /* trait */ QGuiApplication_paletteChanged_signal_connect for Box<Fn(QPalet
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QGuiApplication_paletteChanged_signal_connect_cb_box_5 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QGuiApplication_SlotProxy_connect__ZN15QGuiApplication14paletteChangedERK8QPalette(arg0, arg1, arg2)};
   }
 }
@@ -1821,11 +1604,12 @@ extern fn QGuiApplication_screenRemoved_signal_connect_cb_6(rsfptr:fn(QScreen), 
   let rsarg0 = QScreen::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QGuiApplication_screenRemoved_signal_connect_cb_box_6(rsfptr_raw:*mut Fn(QScreen), arg0: *mut c_void) {
+extern fn QGuiApplication_screenRemoved_signal_connect_cb_box_6(rsfptr_raw:*mut Box<Fn(QScreen)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QScreen::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QGuiApplication_screenRemoved_signal_connect for fn(QScreen) {
   fn connect(self, sigthis: QGuiApplication_screenRemoved_signal) {
@@ -1846,7 +1630,7 @@ impl /* trait */ QGuiApplication_screenRemoved_signal_connect for Box<Fn(QScreen
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QGuiApplication_screenRemoved_signal_connect_cb_box_6 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QGuiApplication_SlotProxy_connect__ZN15QGuiApplication13screenRemovedEP7QScreen(arg0, arg1, arg2)};
   }
 }
@@ -1856,11 +1640,12 @@ extern fn QGuiApplication_focusWindowChanged_signal_connect_cb_7(rsfptr:fn(QWind
   let rsarg0 = QWindow::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QGuiApplication_focusWindowChanged_signal_connect_cb_box_7(rsfptr_raw:*mut Fn(QWindow), arg0: *mut c_void) {
+extern fn QGuiApplication_focusWindowChanged_signal_connect_cb_box_7(rsfptr_raw:*mut Box<Fn(QWindow)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QWindow::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QGuiApplication_focusWindowChanged_signal_connect for fn(QWindow) {
   fn connect(self, sigthis: QGuiApplication_focusWindowChanged_signal) {
@@ -1881,7 +1666,7 @@ impl /* trait */ QGuiApplication_focusWindowChanged_signal_connect for Box<Fn(QW
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QGuiApplication_focusWindowChanged_signal_connect_cb_box_7 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QGuiApplication_SlotProxy_connect__ZN15QGuiApplication18focusWindowChangedEP7QWindow(arg0, arg1, arg2)};
   }
 }
@@ -1890,10 +1675,11 @@ extern fn QGuiApplication_lastWindowClosed_signal_connect_cb_8(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QGuiApplication_lastWindowClosed_signal_connect_cb_box_8(rsfptr_raw:*mut Fn(), ) {
+extern fn QGuiApplication_lastWindowClosed_signal_connect_cb_box_8(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  rsfptr();
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QGuiApplication_lastWindowClosed_signal_connect for fn() {
   fn connect(self, sigthis: QGuiApplication_lastWindowClosed_signal) {
@@ -1914,7 +1700,7 @@ impl /* trait */ QGuiApplication_lastWindowClosed_signal_connect for Box<Fn()> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QGuiApplication_lastWindowClosed_signal_connect_cb_box_8 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QGuiApplication_SlotProxy_connect__ZN15QGuiApplication16lastWindowClosedEv(arg0, arg1, arg2)};
   }
 }
@@ -1924,11 +1710,12 @@ extern fn QGuiApplication_screenAdded_signal_connect_cb_9(rsfptr:fn(QScreen), ar
   let rsarg0 = QScreen::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QGuiApplication_screenAdded_signal_connect_cb_box_9(rsfptr_raw:*mut Fn(QScreen), arg0: *mut c_void) {
+extern fn QGuiApplication_screenAdded_signal_connect_cb_box_9(rsfptr_raw:*mut Box<Fn(QScreen)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QScreen::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QGuiApplication_screenAdded_signal_connect for fn(QScreen) {
   fn connect(self, sigthis: QGuiApplication_screenAdded_signal) {
@@ -1949,7 +1736,7 @@ impl /* trait */ QGuiApplication_screenAdded_signal_connect for Box<Fn(QScreen)>
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QGuiApplication_screenAdded_signal_connect_cb_box_9 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QGuiApplication_SlotProxy_connect__ZN15QGuiApplication11screenAddedEP7QScreen(arg0, arg1, arg2)};
   }
 }
@@ -1959,11 +1746,12 @@ extern fn QGuiApplication_saveStateRequest_signal_connect_cb_10(rsfptr:fn(QSessi
   let rsarg0 = QSessionManager::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QGuiApplication_saveStateRequest_signal_connect_cb_box_10(rsfptr_raw:*mut Fn(QSessionManager), arg0: *mut c_void) {
+extern fn QGuiApplication_saveStateRequest_signal_connect_cb_box_10(rsfptr_raw:*mut Box<Fn(QSessionManager)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QSessionManager::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QGuiApplication_saveStateRequest_signal_connect for fn(QSessionManager) {
   fn connect(self, sigthis: QGuiApplication_saveStateRequest_signal) {
@@ -1984,7 +1772,7 @@ impl /* trait */ QGuiApplication_saveStateRequest_signal_connect for Box<Fn(QSes
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QGuiApplication_saveStateRequest_signal_connect_cb_box_10 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QGuiApplication_SlotProxy_connect__ZN15QGuiApplication16saveStateRequestER15QSessionManager(arg0, arg1, arg2)};
   }
 }

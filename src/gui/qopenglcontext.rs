@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtGui/qopenglcontext.h
 // dst-file: /src/gui/qopenglcontext.rs
 //
@@ -89,8 +89,6 @@ extern {
   fn _ZNK14QOpenGLContext6screenEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QVariant QOpenGLContext::nativeHandle();
   fn _ZNK14QOpenGLContext12nativeHandleEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QOpenGLContext::aboutToBeDestroyed();
-  fn _ZN14QOpenGLContext18aboutToBeDestroyedEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QOpenGLContext::isOpenGLES();
   fn _ZNK14QOpenGLContext10isOpenGLESEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QPlatformOpenGLContext * QOpenGLContext::handle();
@@ -153,7 +151,7 @@ pub struct QOpenGLVersionProfile {
 pub struct QOpenGLContext {
   qbase: QObject,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _aboutToBeDestroyed_1: QOpenGLContext_aboutToBeDestroyed_signal,
+  pub _aboutToBeDestroyed: QOpenGLContext_aboutToBeDestroyed_signal,
 }
 
 // class sizeof(QOpenGLContextGroup)=1
@@ -735,28 +733,6 @@ impl<'a> /*trait*/ QOpenGLContext_nativeHandle<QVariant> for () {
   }
 }
 
-  // proto:  void QOpenGLContext::aboutToBeDestroyed();
-impl /*struct*/ QOpenGLContext {
-  pub fn aboutToBeDestroyed<RetType, T: QOpenGLContext_aboutToBeDestroyed<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.aboutToBeDestroyed(self);
-    // return 1;
-  }
-}
-
-pub trait QOpenGLContext_aboutToBeDestroyed<RetType> {
-  fn aboutToBeDestroyed(self , rsthis: & QOpenGLContext) -> RetType;
-}
-
-  // proto:  void QOpenGLContext::aboutToBeDestroyed();
-impl<'a> /*trait*/ QOpenGLContext_aboutToBeDestroyed<()> for () {
-  fn aboutToBeDestroyed(self , rsthis: & QOpenGLContext) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QOpenGLContext18aboutToBeDestroyedEv()};
-     unsafe {_ZN14QOpenGLContext18aboutToBeDestroyedEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto:  bool QOpenGLContext::isOpenGLES();
 impl /*struct*/ QOpenGLContext {
   pub fn isOpenGLES<RetType, T: QOpenGLContext_isOpenGLES<RetType>>(& self,  overload_args: T) -> RetType {
@@ -1279,7 +1255,7 @@ impl<'a> /*trait*/ QOpenGLContextGroup_shares<()> for () {
 #[derive(Default)] // for QOpenGLContext_aboutToBeDestroyed
 pub struct QOpenGLContext_aboutToBeDestroyed_signal{poi:u64}
 impl /* struct */ QOpenGLContext {
-  pub fn aboutToBeDestroyed_1(&self) -> QOpenGLContext_aboutToBeDestroyed_signal {
+  pub fn aboutToBeDestroyed(&self) -> QOpenGLContext_aboutToBeDestroyed_signal {
      return QOpenGLContext_aboutToBeDestroyed_signal{poi:self.qclsinst};
   }
 }
@@ -1297,10 +1273,11 @@ extern fn QOpenGLContext_aboutToBeDestroyed_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QOpenGLContext_aboutToBeDestroyed_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(), ) {
+extern fn QOpenGLContext_aboutToBeDestroyed_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  rsfptr();
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QOpenGLContext_aboutToBeDestroyed_signal_connect for fn() {
   fn connect(self, sigthis: QOpenGLContext_aboutToBeDestroyed_signal) {
@@ -1321,7 +1298,7 @@ impl /* trait */ QOpenGLContext_aboutToBeDestroyed_signal_connect for Box<Fn()> 
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QOpenGLContext_aboutToBeDestroyed_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QOpenGLContext_SlotProxy_connect__ZN14QOpenGLContext18aboutToBeDestroyedEv(arg0, arg1, arg2)};
   }
 }

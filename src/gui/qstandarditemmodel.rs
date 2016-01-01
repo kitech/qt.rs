@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtGui/qstandarditemmodel.h
 // dst-file: /src/gui/qstandarditemmodel.rs
 //
@@ -118,8 +118,6 @@ extern {
   fn _ZNK18QStandardItemModel8itemDataERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QStandardItemModel::setSortRole(int role);
   fn _ZN18QStandardItemModel11setSortRoleEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
-  // proto:  void QStandardItemModel::itemChanged(QStandardItem * item);
-  fn _ZN18QStandardItemModel11itemChangedEP13QStandardItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QStandardItemModel::hasChildren(const QModelIndex & parent);
   fn _ZNK18QStandardItemModel11hasChildrenERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  void QStandardItemModel::~QStandardItemModel();
@@ -301,7 +299,7 @@ extern {
 pub struct QStandardItemModel {
   qbase: QAbstractItemModel,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _itemChanged_1: QStandardItemModel_itemChanged_signal,
+  pub _itemChanged: QStandardItemModel_itemChanged_signal,
 }
 
 // class sizeof(QStandardItem)=1
@@ -1181,29 +1179,6 @@ impl<'a> /*trait*/ QStandardItemModel_setSortRole<()> for (i32) {
     // unsafe{_ZN18QStandardItemModel11setSortRoleEi()};
     let arg0 = self  as c_int;
      unsafe {_ZN18QStandardItemModel11setSortRoleEi(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QStandardItemModel::itemChanged(QStandardItem * item);
-impl /*struct*/ QStandardItemModel {
-  pub fn itemChanged<RetType, T: QStandardItemModel_itemChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.itemChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QStandardItemModel_itemChanged<RetType> {
-  fn itemChanged(self , rsthis: & QStandardItemModel) -> RetType;
-}
-
-  // proto:  void QStandardItemModel::itemChanged(QStandardItem * item);
-impl<'a> /*trait*/ QStandardItemModel_itemChanged<()> for (&'a QStandardItem) {
-  fn itemChanged(self , rsthis: & QStandardItemModel) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QStandardItemModel11itemChangedEP13QStandardItem()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN18QStandardItemModel11itemChangedEP13QStandardItem(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -3121,7 +3096,7 @@ impl<'a> /*trait*/ QStandardItem_setTristate<()> for (i8) {
 #[derive(Default)] // for QStandardItemModel_itemChanged
 pub struct QStandardItemModel_itemChanged_signal{poi:u64}
 impl /* struct */ QStandardItemModel {
-  pub fn itemChanged_1(&self) -> QStandardItemModel_itemChanged_signal {
+  pub fn itemChanged(&self) -> QStandardItemModel_itemChanged_signal {
      return QStandardItemModel_itemChanged_signal{poi:self.qclsinst};
   }
 }
@@ -3140,11 +3115,12 @@ extern fn QStandardItemModel_itemChanged_signal_connect_cb_0(rsfptr:fn(QStandard
   let rsarg0 = QStandardItem::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QStandardItemModel_itemChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QStandardItem), arg0: *mut c_void) {
+extern fn QStandardItemModel_itemChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(QStandardItem)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QStandardItem::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QStandardItemModel_itemChanged_signal_connect for fn(QStandardItem) {
   fn connect(self, sigthis: QStandardItemModel_itemChanged_signal) {
@@ -3165,7 +3141,7 @@ impl /* trait */ QStandardItemModel_itemChanged_signal_connect for Box<Fn(QStand
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QStandardItemModel_itemChanged_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QStandardItemModel_SlotProxy_connect__ZN18QStandardItemModel11itemChangedEP13QStandardItem(arg0, arg1, arg2)};
   }
 }
