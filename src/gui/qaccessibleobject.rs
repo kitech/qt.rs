@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qaccessibleobject.h
 // dst-file: /src/gui/qaccessibleobject.rs
 //
@@ -103,20 +103,20 @@ impl AsRef<QAccessibleObject> for QAccessibleApplication {
 }
   // proto:  void QAccessibleApplication::QAccessibleApplication();
 impl /*struct*/ QAccessibleApplication {
-  pub fn New<T: QAccessibleApplication_New>(value: T) -> QAccessibleApplication {
-    let rsthis = value.New();
+  pub fn new<T: QAccessibleApplication_new>(value: T) -> QAccessibleApplication {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QAccessibleApplication_New {
-  fn New(self) -> QAccessibleApplication;
+pub trait QAccessibleApplication_new {
+  fn new(self) -> QAccessibleApplication;
 }
 
   // proto:  void QAccessibleApplication::QAccessibleApplication();
-impl<'a> /*trait*/ QAccessibleApplication_New for () {
-  fn New(self) -> QAccessibleApplication {
+impl<'a> /*trait*/ QAccessibleApplication_new for () {
+  fn new(self) -> QAccessibleApplication {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN22QAccessibleApplicationC1Ev()};
     let ctysz: c_int = unsafe{QAccessibleApplication_Class_Size()};
@@ -292,20 +292,20 @@ impl AsRef<QAccessibleInterface> for QAccessibleObject {
 }
   // proto:  void QAccessibleObject::QAccessibleObject(QObject * object);
 impl /*struct*/ QAccessibleObject {
-  pub fn New<T: QAccessibleObject_New>(value: T) -> QAccessibleObject {
-    let rsthis = value.New();
+  pub fn new<T: QAccessibleObject_new>(value: T) -> QAccessibleObject {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QAccessibleObject_New {
-  fn New(self) -> QAccessibleObject;
+pub trait QAccessibleObject_new {
+  fn new(self) -> QAccessibleObject;
 }
 
   // proto:  void QAccessibleObject::QAccessibleObject(QObject * object);
-impl<'a> /*trait*/ QAccessibleObject_New for (&'a QObject) {
-  fn New(self) -> QAccessibleObject {
+impl<'a> /*trait*/ QAccessibleObject_new for (&'a QObject) {
+  fn new(self) -> QAccessibleObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAccessibleObjectC1EP7QObject()};
     let ctysz: c_int = unsafe{QAccessibleObject_Class_Size()};
@@ -394,8 +394,8 @@ impl<'a> /*trait*/ QAccessibleObject_childAt<QAccessibleInterface> for (i32, i32
 }
 
   // proto:  void QAccessibleObject::QAccessibleObject(const QAccessibleObject & );
-impl<'a> /*trait*/ QAccessibleObject_New for (&'a QAccessibleObject) {
-  fn New(self) -> QAccessibleObject {
+impl<'a> /*trait*/ QAccessibleObject_new for (&'a QAccessibleObject) {
+  fn new(self) -> QAccessibleObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAccessibleObjectC1ERKS_()};
     let ctysz: c_int = unsafe{QAccessibleObject_Class_Size()};
@@ -434,19 +434,19 @@ impl<'a> /*trait*/ QAccessibleObject_isValid<i8> for () {
 
   // proto:  void QAccessibleObject::~QAccessibleObject();
 impl /*struct*/ QAccessibleObject {
-  pub fn Free<RetType, T: QAccessibleObject_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QAccessibleObject_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleObject_Free<RetType> {
-  fn Free(self , rsthis: & QAccessibleObject) -> RetType;
+pub trait QAccessibleObject_free<RetType> {
+  fn free(self , rsthis: & QAccessibleObject) -> RetType;
 }
 
   // proto:  void QAccessibleObject::~QAccessibleObject();
-impl<'a> /*trait*/ QAccessibleObject_Free<()> for () {
-  fn Free(self , rsthis: & QAccessibleObject) -> () {
+impl<'a> /*trait*/ QAccessibleObject_free<()> for () {
+  fn free(self , rsthis: & QAccessibleObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAccessibleObjectD0Ev()};
      unsafe {_ZN17QAccessibleObjectD0Ev(rsthis.qclsinst)};

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qicon.h
 // dst-file: /src/gui/qicon.rs
 //
@@ -95,20 +95,20 @@ impl /*struct*/ QIcon {
 }
   // proto:  void QIcon::QIcon(const QIcon & other);
 impl /*struct*/ QIcon {
-  pub fn New<T: QIcon_New>(value: T) -> QIcon {
-    let rsthis = value.New();
+  pub fn new<T: QIcon_new>(value: T) -> QIcon {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QIcon_New {
-  fn New(self) -> QIcon;
+pub trait QIcon_new {
+  fn new(self) -> QIcon;
 }
 
   // proto:  void QIcon::QIcon(const QIcon & other);
-impl<'a> /*trait*/ QIcon_New for (&'a QIcon) {
-  fn New(self) -> QIcon {
+impl<'a> /*trait*/ QIcon_new for (&'a QIcon) {
+  fn new(self) -> QIcon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QIconC1ERKS_()};
     let ctysz: c_int = unsafe{QIcon_Class_Size()};
@@ -237,8 +237,8 @@ impl<'a> /*trait*/ QIcon_hasThemeIcon_s<i8> for (&'a QString) {
 }
 
   // proto:  void QIcon::QIcon(const QPixmap & pixmap);
-impl<'a> /*trait*/ QIcon_New for (&'a QPixmap) {
-  fn New(self) -> QIcon {
+impl<'a> /*trait*/ QIcon_new for (&'a QPixmap) {
+  fn new(self) -> QIcon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QIconC1ERK7QPixmap()};
     let ctysz: c_int = unsafe{QIcon_Class_Size()};
@@ -327,8 +327,8 @@ impl<'a> /*trait*/ QIcon_name<QString> for () {
 }
 
   // proto:  void QIcon::QIcon();
-impl<'a> /*trait*/ QIcon_New for () {
-  fn New(self) -> QIcon {
+impl<'a> /*trait*/ QIcon_new for () {
+  fn new(self) -> QIcon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QIconC1Ev()};
     let ctysz: c_int = unsafe{QIcon_Class_Size()};
@@ -342,8 +342,8 @@ impl<'a> /*trait*/ QIcon_New for () {
 }
 
   // proto:  void QIcon::QIcon(QIconEngine * engine);
-impl<'a> /*trait*/ QIcon_New for (&'a QIconEngine) {
-  fn New(self) -> QIcon {
+impl<'a> /*trait*/ QIcon_new for (&'a QIconEngine) {
+  fn new(self) -> QIcon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QIconC1EP11QIconEngine()};
     let ctysz: c_int = unsafe{QIcon_Class_Size()};
@@ -359,19 +359,19 @@ impl<'a> /*trait*/ QIcon_New for (&'a QIconEngine) {
 
   // proto:  void QIcon::~QIcon();
 impl /*struct*/ QIcon {
-  pub fn Free<RetType, T: QIcon_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QIcon_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QIcon_Free<RetType> {
-  fn Free(self , rsthis: & QIcon) -> RetType;
+pub trait QIcon_free<RetType> {
+  fn free(self , rsthis: & QIcon) -> RetType;
 }
 
   // proto:  void QIcon::~QIcon();
-impl<'a> /*trait*/ QIcon_Free<()> for () {
-  fn Free(self , rsthis: & QIcon) -> () {
+impl<'a> /*trait*/ QIcon_free<()> for () {
+  fn free(self , rsthis: & QIcon) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QIconD0Ev()};
      unsafe {_ZN5QIconD0Ev(rsthis.qclsinst)};
@@ -403,8 +403,8 @@ impl<'a> /*trait*/ QIcon_isDetached<i8> for () {
 }
 
   // proto:  void QIcon::QIcon(const QString & fileName);
-impl<'a> /*trait*/ QIcon_New for (&'a QString) {
-  fn New(self) -> QIcon {
+impl<'a> /*trait*/ QIcon_new for (&'a QString) {
+  fn new(self) -> QIcon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QIconC1ERK7QString()};
     let ctysz: c_int = unsafe{QIcon_Class_Size()};

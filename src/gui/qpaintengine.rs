@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qpaintengine.h
 // dst-file: /src/gui/qpaintengine.rs
 //
@@ -663,20 +663,20 @@ impl<'a> /*trait*/ QPaintEngine_drawEllipse<()> for (&'a QRect) {
 
   // proto:  void QPaintEngine::QPaintEngine(const QPaintEngine & );
 impl /*struct*/ QPaintEngine {
-  pub fn New<T: QPaintEngine_New>(value: T) -> QPaintEngine {
-    let rsthis = value.New();
+  pub fn new<T: QPaintEngine_new>(value: T) -> QPaintEngine {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QPaintEngine_New {
-  fn New(self) -> QPaintEngine;
+pub trait QPaintEngine_new {
+  fn new(self) -> QPaintEngine;
 }
 
   // proto:  void QPaintEngine::QPaintEngine(const QPaintEngine & );
-impl<'a> /*trait*/ QPaintEngine_New for (&'a QPaintEngine) {
-  fn New(self) -> QPaintEngine {
+impl<'a> /*trait*/ QPaintEngine_new for (&'a QPaintEngine) {
+  fn new(self) -> QPaintEngine {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPaintEngineC1ERKS_()};
     let ctysz: c_int = unsafe{QPaintEngine_Class_Size()};
@@ -809,19 +809,19 @@ impl<'a> /*trait*/ QPaintEngine_setSystemRect<()> for (&'a QRect) {
 
   // proto:  void QPaintEngine::~QPaintEngine();
 impl /*struct*/ QPaintEngine {
-  pub fn Free<RetType, T: QPaintEngine_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QPaintEngine_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngine_Free<RetType> {
-  fn Free(self , rsthis: & QPaintEngine) -> RetType;
+pub trait QPaintEngine_free<RetType> {
+  fn free(self , rsthis: & QPaintEngine) -> RetType;
 }
 
   // proto:  void QPaintEngine::~QPaintEngine();
-impl<'a> /*trait*/ QPaintEngine_Free<()> for () {
-  fn Free(self , rsthis: & QPaintEngine) -> () {
+impl<'a> /*trait*/ QPaintEngine_free<()> for () {
+  fn free(self , rsthis: & QPaintEngine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPaintEngineD0Ev()};
      unsafe {_ZN12QPaintEngineD0Ev(rsthis.qclsinst)};

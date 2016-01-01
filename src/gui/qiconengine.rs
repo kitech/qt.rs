@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qiconengine.h
 // dst-file: /src/gui/qiconengine.rs
 //
@@ -210,19 +210,19 @@ impl<'a> /*trait*/ QIconEngine_key<QString> for () {
 
   // proto:  void QIconEngine::~QIconEngine();
 impl /*struct*/ QIconEngine {
-  pub fn Free<RetType, T: QIconEngine_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QIconEngine_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QIconEngine_Free<RetType> {
-  fn Free(self , rsthis: & QIconEngine) -> RetType;
+pub trait QIconEngine_free<RetType> {
+  fn free(self , rsthis: & QIconEngine) -> RetType;
 }
 
   // proto:  void QIconEngine::~QIconEngine();
-impl<'a> /*trait*/ QIconEngine_Free<()> for () {
-  fn Free(self , rsthis: & QIconEngine) -> () {
+impl<'a> /*trait*/ QIconEngine_free<()> for () {
+  fn free(self , rsthis: & QIconEngine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QIconEngineD0Ev()};
      unsafe {_ZN11QIconEngineD0Ev(rsthis.qclsinst)};

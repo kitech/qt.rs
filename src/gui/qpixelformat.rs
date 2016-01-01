@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qpixelformat.h
 // dst-file: /src/gui/qpixelformat.rs
 //
@@ -102,20 +102,20 @@ impl<'a> /*trait*/ QPixelFormat_blackSize<u8> for () {
 
   // proto:  void QPixelFormat::QPixelFormat();
 impl /*struct*/ QPixelFormat {
-  pub fn New<T: QPixelFormat_New>(value: T) -> QPixelFormat {
-    let rsthis = value.New();
+  pub fn new<T: QPixelFormat_new>(value: T) -> QPixelFormat {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QPixelFormat_New {
-  fn New(self) -> QPixelFormat;
+pub trait QPixelFormat_new {
+  fn new(self) -> QPixelFormat;
 }
 
   // proto:  void QPixelFormat::QPixelFormat();
-impl<'a> /*trait*/ QPixelFormat_New for () {
-  fn New(self) -> QPixelFormat {
+impl<'a> /*trait*/ QPixelFormat_new for () {
+  fn new(self) -> QPixelFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPixelFormatC1Ev()};
     let ctysz: c_int = unsafe{QPixelFormat_Class_Size()};

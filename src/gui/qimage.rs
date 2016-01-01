@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qimage.h
 // dst-file: /src/gui/qimage.rs
 //
@@ -360,20 +360,20 @@ impl<'a> /*trait*/ QImage_rect<QRect> for () {
 
   // proto:  void QImage::QImage(const char *const [] xpm);
 impl /*struct*/ QImage {
-  pub fn New<T: QImage_New>(value: T) -> QImage {
-    let rsthis = value.New();
+  pub fn new<T: QImage_new>(value: T) -> QImage {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QImage_New {
-  fn New(self) -> QImage;
+pub trait QImage_new {
+  fn new(self) -> QImage;
 }
 
   // proto:  void QImage::QImage(const char *const [] xpm);
-impl<'a> /*trait*/ QImage_New for (&'a  Vec<&'a  i8>) {
-  fn New(self) -> QImage {
+impl<'a> /*trait*/ QImage_new for (&'a  Vec<&'a  i8>) {
+  fn new(self) -> QImage {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QImageC1EPKPKc()};
     let ctysz: c_int = unsafe{QImage_Class_Size()};
@@ -1144,8 +1144,8 @@ impl<'a> /*trait*/ QImage_loadFromData<i8> for (&'a QByteArray, &'a  String) {
 }
 
   // proto:  void QImage::QImage(const QString & fileName, const char * format);
-impl<'a> /*trait*/ QImage_New for (&'a QString, &'a  String) {
-  fn New(self) -> QImage {
+impl<'a> /*trait*/ QImage_new for (&'a QString, &'a  String) {
+  fn new(self) -> QImage {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QImageC1ERK7QStringPKc()};
     let ctysz: c_int = unsafe{QImage_Class_Size()};
@@ -1185,8 +1185,8 @@ impl<'a> /*trait*/ QImage_paintEngine<QPaintEngine> for () {
 }
 
   // proto:  void QImage::QImage(const QImage & );
-impl<'a> /*trait*/ QImage_New for (&'a QImage) {
-  fn New(self) -> QImage {
+impl<'a> /*trait*/ QImage_new for (&'a QImage) {
+  fn new(self) -> QImage {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QImageC1ERKS_()};
     let ctysz: c_int = unsafe{QImage_Class_Size()};
@@ -1497,8 +1497,8 @@ impl<'a> /*trait*/ QImage_load<i8> for (&'a QIODevice, &'a  String) {
 }
 
   // proto:  void QImage::QImage();
-impl<'a> /*trait*/ QImage_New for () {
-  fn New(self) -> QImage {
+impl<'a> /*trait*/ QImage_new for () {
+  fn new(self) -> QImage {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QImageC1Ev()};
     let ctysz: c_int = unsafe{QImage_Class_Size()};
@@ -1597,19 +1597,19 @@ impl<'a> /*trait*/ QImage_pixel<u32> for (i32, i32) {
 
   // proto:  void QImage::~QImage();
 impl /*struct*/ QImage {
-  pub fn Free<RetType, T: QImage_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QImage_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QImage_Free<RetType> {
-  fn Free(self , rsthis: & QImage) -> RetType;
+pub trait QImage_free<RetType> {
+  fn free(self , rsthis: & QImage) -> RetType;
 }
 
   // proto:  void QImage::~QImage();
-impl<'a> /*trait*/ QImage_Free<()> for () {
-  fn Free(self , rsthis: & QImage) -> () {
+impl<'a> /*trait*/ QImage_free<()> for () {
+  fn free(self , rsthis: & QImage) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QImageD0Ev()};
      unsafe {_ZN6QImageD0Ev(rsthis.qclsinst)};

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qimagewriter.h
 // dst-file: /src/gui/qimagewriter.rs
 //
@@ -211,19 +211,19 @@ impl<'a> /*trait*/ QImageWriter_optimizedWrite<i8> for () {
 
   // proto:  void QImageWriter::~QImageWriter();
 impl /*struct*/ QImageWriter {
-  pub fn Free<RetType, T: QImageWriter_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QImageWriter_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QImageWriter_Free<RetType> {
-  fn Free(self , rsthis: & QImageWriter) -> RetType;
+pub trait QImageWriter_free<RetType> {
+  fn free(self , rsthis: & QImageWriter) -> RetType;
 }
 
   // proto:  void QImageWriter::~QImageWriter();
-impl<'a> /*trait*/ QImageWriter_Free<()> for () {
-  fn Free(self , rsthis: & QImageWriter) -> () {
+impl<'a> /*trait*/ QImageWriter_free<()> for () {
+  fn free(self , rsthis: & QImageWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageWriterD0Ev()};
      unsafe {_ZN12QImageWriterD0Ev(rsthis.qclsinst)};
@@ -536,20 +536,20 @@ impl<'a> /*trait*/ QImageWriter_description<QString> for () {
 
   // proto:  void QImageWriter::QImageWriter();
 impl /*struct*/ QImageWriter {
-  pub fn New<T: QImageWriter_New>(value: T) -> QImageWriter {
-    let rsthis = value.New();
+  pub fn new<T: QImageWriter_new>(value: T) -> QImageWriter {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QImageWriter_New {
-  fn New(self) -> QImageWriter;
+pub trait QImageWriter_new {
+  fn new(self) -> QImageWriter;
 }
 
   // proto:  void QImageWriter::QImageWriter();
-impl<'a> /*trait*/ QImageWriter_New for () {
-  fn New(self) -> QImageWriter {
+impl<'a> /*trait*/ QImageWriter_new for () {
+  fn new(self) -> QImageWriter {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageWriterC1Ev()};
     let ctysz: c_int = unsafe{QImageWriter_Class_Size()};
@@ -586,8 +586,8 @@ impl<'a> /*trait*/ QImageWriter_setFormat<()> for (&'a QByteArray) {
 }
 
   // proto:  void QImageWriter::QImageWriter(const QString & fileName, const QByteArray & format);
-impl<'a> /*trait*/ QImageWriter_New for (&'a QString, &'a QByteArray) {
-  fn New(self) -> QImageWriter {
+impl<'a> /*trait*/ QImageWriter_new for (&'a QString, &'a QByteArray) {
+  fn new(self) -> QImageWriter {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageWriterC1ERK7QStringRK10QByteArray()};
     let ctysz: c_int = unsafe{QImageWriter_Class_Size()};
@@ -741,8 +741,8 @@ impl<'a> /*trait*/ QImageWriter_canWrite<i8> for () {
 }
 
   // proto:  void QImageWriter::QImageWriter(QIODevice * device, const QByteArray & format);
-impl<'a> /*trait*/ QImageWriter_New for (&'a QIODevice, &'a QByteArray) {
-  fn New(self) -> QImageWriter {
+impl<'a> /*trait*/ QImageWriter_new for (&'a QIODevice, &'a QByteArray) {
+  fn new(self) -> QImageWriter {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageWriterC1EP9QIODeviceRK10QByteArray()};
     let ctysz: c_int = unsafe{QImageWriter_Class_Size()};
@@ -827,8 +827,8 @@ impl<'a> /*trait*/ QImageWriter_setDescription<()> for (&'a QString) {
 }
 
   // proto:  void QImageWriter::QImageWriter(const QImageWriter & );
-impl<'a> /*trait*/ QImageWriter_New for (&'a QImageWriter) {
-  fn New(self) -> QImageWriter {
+impl<'a> /*trait*/ QImageWriter_new for (&'a QImageWriter) {
+  fn new(self) -> QImageWriter {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageWriterC1ERKS_()};
     let ctysz: c_int = unsafe{QImageWriter_Class_Size()};

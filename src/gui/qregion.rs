@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qregion.h
 // dst-file: /src/gui/qregion.rs
 //
@@ -150,20 +150,20 @@ impl<'a> /*trait*/ QRegion_boundingRect<QRect> for () {
 
   // proto:  void QRegion::QRegion(const QRegion & region);
 impl /*struct*/ QRegion {
-  pub fn New<T: QRegion_New>(value: T) -> QRegion {
-    let rsthis = value.New();
+  pub fn new<T: QRegion_new>(value: T) -> QRegion {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QRegion_New {
-  fn New(self) -> QRegion;
+pub trait QRegion_new {
+  fn new(self) -> QRegion;
 }
 
   // proto:  void QRegion::QRegion(const QRegion & region);
-impl<'a> /*trait*/ QRegion_New for (&'a QRegion) {
-  fn New(self) -> QRegion {
+impl<'a> /*trait*/ QRegion_new for (&'a QRegion) {
+  fn new(self) -> QRegion {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QRegionC1ERKS_()};
     let ctysz: c_int = unsafe{QRegion_Class_Size()};
@@ -298,8 +298,8 @@ impl<'a> /*trait*/ QRegion_swap<()> for (&'a QRegion) {
 }
 
   // proto:  void QRegion::QRegion(const QBitmap & bitmap);
-impl<'a> /*trait*/ QRegion_New for (&'a QBitmap) {
-  fn New(self) -> QRegion {
+impl<'a> /*trait*/ QRegion_new for (&'a QBitmap) {
+  fn new(self) -> QRegion {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QRegionC1ERK7QBitmap()};
     let ctysz: c_int = unsafe{QRegion_Class_Size()};
@@ -315,19 +315,19 @@ impl<'a> /*trait*/ QRegion_New for (&'a QBitmap) {
 
   // proto:  void QRegion::~QRegion();
 impl /*struct*/ QRegion {
-  pub fn Free<RetType, T: QRegion_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QRegion_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QRegion_Free<RetType> {
-  fn Free(self , rsthis: & QRegion) -> RetType;
+pub trait QRegion_free<RetType> {
+  fn free(self , rsthis: & QRegion) -> RetType;
 }
 
   // proto:  void QRegion::~QRegion();
-impl<'a> /*trait*/ QRegion_Free<()> for () {
-  fn Free(self , rsthis: & QRegion) -> () {
+impl<'a> /*trait*/ QRegion_free<()> for () {
+  fn free(self , rsthis: & QRegion) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QRegionD0Ev()};
      unsafe {_ZN7QRegionD0Ev(rsthis.qclsinst)};
@@ -347,8 +347,8 @@ impl<'a> /*trait*/ QRegion_translate<()> for (&'a QPoint) {
 }
 
   // proto:  void QRegion::QRegion();
-impl<'a> /*trait*/ QRegion_New for () {
-  fn New(self) -> QRegion {
+impl<'a> /*trait*/ QRegion_new for () {
+  fn new(self) -> QRegion {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QRegionC1Ev()};
     let ctysz: c_int = unsafe{QRegion_Class_Size()};

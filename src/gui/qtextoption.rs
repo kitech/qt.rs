@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qtextoption.h
 // dst-file: /src/gui/qtextoption.rs
 //
@@ -64,20 +64,20 @@ impl /*struct*/ QTextOption {
 }
   // proto:  void QTextOption::QTextOption(const QTextOption & o);
 impl /*struct*/ QTextOption {
-  pub fn New<T: QTextOption_New>(value: T) -> QTextOption {
-    let rsthis = value.New();
+  pub fn new<T: QTextOption_new>(value: T) -> QTextOption {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTextOption_New {
-  fn New(self) -> QTextOption;
+pub trait QTextOption_new {
+  fn new(self) -> QTextOption;
 }
 
   // proto:  void QTextOption::QTextOption(const QTextOption & o);
-impl<'a> /*trait*/ QTextOption_New for (&'a QTextOption) {
-  fn New(self) -> QTextOption {
+impl<'a> /*trait*/ QTextOption_new for (&'a QTextOption) {
+  fn new(self) -> QTextOption {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextOptionC1ERKS_()};
     let ctysz: c_int = unsafe{QTextOption_Class_Size()};
@@ -184,8 +184,8 @@ impl<'a> /*trait*/ QTextOption_useDesignMetrics<i8> for () {
 }
 
   // proto:  void QTextOption::QTextOption();
-impl<'a> /*trait*/ QTextOption_New for () {
-  fn New(self) -> QTextOption {
+impl<'a> /*trait*/ QTextOption_new for () {
+  fn new(self) -> QTextOption {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextOptionC1Ev()};
     let ctysz: c_int = unsafe{QTextOption_Class_Size()};
@@ -222,19 +222,19 @@ impl<'a> /*trait*/ QTextOption_tabArray<()> for () {
 
   // proto:  void QTextOption::~QTextOption();
 impl /*struct*/ QTextOption {
-  pub fn Free<RetType, T: QTextOption_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QTextOption_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QTextOption_Free<RetType> {
-  fn Free(self , rsthis: & QTextOption) -> RetType;
+pub trait QTextOption_free<RetType> {
+  fn free(self , rsthis: & QTextOption) -> RetType;
 }
 
   // proto:  void QTextOption::~QTextOption();
-impl<'a> /*trait*/ QTextOption_Free<()> for () {
-  fn Free(self , rsthis: & QTextOption) -> () {
+impl<'a> /*trait*/ QTextOption_free<()> for () {
+  fn free(self , rsthis: & QTextOption) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextOptionD0Ev()};
      unsafe {_ZN11QTextOptionD0Ev(rsthis.qclsinst)};

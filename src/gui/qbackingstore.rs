@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qbackingstore.h
 // dst-file: /src/gui/qbackingstore.rs
 //
@@ -176,19 +176,19 @@ impl<'a> /*trait*/ QBackingStore_staticContents<QRegion> for () {
 
   // proto:  void QBackingStore::~QBackingStore();
 impl /*struct*/ QBackingStore {
-  pub fn Free<RetType, T: QBackingStore_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QBackingStore_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QBackingStore_Free<RetType> {
-  fn Free(self , rsthis: & QBackingStore) -> RetType;
+pub trait QBackingStore_free<RetType> {
+  fn free(self , rsthis: & QBackingStore) -> RetType;
 }
 
   // proto:  void QBackingStore::~QBackingStore();
-impl<'a> /*trait*/ QBackingStore_Free<()> for () {
-  fn Free(self , rsthis: & QBackingStore) -> () {
+impl<'a> /*trait*/ QBackingStore_free<()> for () {
+  fn free(self , rsthis: & QBackingStore) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QBackingStoreD0Ev()};
      unsafe {_ZN13QBackingStoreD0Ev(rsthis.qclsinst)};
@@ -385,20 +385,20 @@ impl<'a> /*trait*/ QBackingStore_handle<()> for () {
 
   // proto:  void QBackingStore::QBackingStore(QWindow * window);
 impl /*struct*/ QBackingStore {
-  pub fn New<T: QBackingStore_New>(value: T) -> QBackingStore {
-    let rsthis = value.New();
+  pub fn new<T: QBackingStore_new>(value: T) -> QBackingStore {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QBackingStore_New {
-  fn New(self) -> QBackingStore;
+pub trait QBackingStore_new {
+  fn new(self) -> QBackingStore;
 }
 
   // proto:  void QBackingStore::QBackingStore(QWindow * window);
-impl<'a> /*trait*/ QBackingStore_New for (&'a QWindow) {
-  fn New(self) -> QBackingStore {
+impl<'a> /*trait*/ QBackingStore_new for (&'a QWindow) {
+  fn new(self) -> QBackingStore {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QBackingStoreC1EP7QWindow()};
     let ctysz: c_int = unsafe{QBackingStore_Class_Size()};

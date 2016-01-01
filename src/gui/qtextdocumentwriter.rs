@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qtextdocumentwriter.h
 // dst-file: /src/gui/qtextdocumentwriter.rs
 //
@@ -111,20 +111,20 @@ impl<'a> /*trait*/ QTextDocumentWriter_setCodec<()> for (&'a QTextCodec) {
 
   // proto:  void QTextDocumentWriter::QTextDocumentWriter(QIODevice * device, const QByteArray & format);
 impl /*struct*/ QTextDocumentWriter {
-  pub fn New<T: QTextDocumentWriter_New>(value: T) -> QTextDocumentWriter {
-    let rsthis = value.New();
+  pub fn new<T: QTextDocumentWriter_new>(value: T) -> QTextDocumentWriter {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTextDocumentWriter_New {
-  fn New(self) -> QTextDocumentWriter;
+pub trait QTextDocumentWriter_new {
+  fn new(self) -> QTextDocumentWriter;
 }
 
   // proto:  void QTextDocumentWriter::QTextDocumentWriter(QIODevice * device, const QByteArray & format);
-impl<'a> /*trait*/ QTextDocumentWriter_New for (&'a QIODevice, &'a QByteArray) {
-  fn New(self) -> QTextDocumentWriter {
+impl<'a> /*trait*/ QTextDocumentWriter_new for (&'a QIODevice, &'a QByteArray) {
+  fn new(self) -> QTextDocumentWriter {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QTextDocumentWriterC1EP9QIODeviceRK10QByteArray()};
     let ctysz: c_int = unsafe{QTextDocumentWriter_Class_Size()};
@@ -210,8 +210,8 @@ impl<'a> /*trait*/ QTextDocumentWriter_setDevice<()> for (&'a QIODevice) {
 }
 
   // proto:  void QTextDocumentWriter::QTextDocumentWriter(const QString & fileName, const QByteArray & format);
-impl<'a> /*trait*/ QTextDocumentWriter_New for (&'a QString, &'a QByteArray) {
-  fn New(self) -> QTextDocumentWriter {
+impl<'a> /*trait*/ QTextDocumentWriter_new for (&'a QString, &'a QByteArray) {
+  fn new(self) -> QTextDocumentWriter {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QTextDocumentWriterC1ERK7QStringRK10QByteArray()};
     let ctysz: c_int = unsafe{QTextDocumentWriter_Class_Size()};
@@ -286,8 +286,8 @@ impl<'a> /*trait*/ QTextDocumentWriter_write<i8> for (&'a QTextDocumentFragment)
 }
 
   // proto:  void QTextDocumentWriter::QTextDocumentWriter();
-impl<'a> /*trait*/ QTextDocumentWriter_New for () {
-  fn New(self) -> QTextDocumentWriter {
+impl<'a> /*trait*/ QTextDocumentWriter_new for () {
+  fn new(self) -> QTextDocumentWriter {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QTextDocumentWriterC1Ev()};
     let ctysz: c_int = unsafe{QTextDocumentWriter_Class_Size()};
@@ -396,19 +396,19 @@ impl<'a> /*trait*/ QTextDocumentWriter_device<QIODevice> for () {
 
   // proto:  void QTextDocumentWriter::~QTextDocumentWriter();
 impl /*struct*/ QTextDocumentWriter {
-  pub fn Free<RetType, T: QTextDocumentWriter_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QTextDocumentWriter_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QTextDocumentWriter_Free<RetType> {
-  fn Free(self , rsthis: & QTextDocumentWriter) -> RetType;
+pub trait QTextDocumentWriter_free<RetType> {
+  fn free(self , rsthis: & QTextDocumentWriter) -> RetType;
 }
 
   // proto:  void QTextDocumentWriter::~QTextDocumentWriter();
-impl<'a> /*trait*/ QTextDocumentWriter_Free<()> for () {
-  fn Free(self , rsthis: & QTextDocumentWriter) -> () {
+impl<'a> /*trait*/ QTextDocumentWriter_free<()> for () {
+  fn free(self , rsthis: & QTextDocumentWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QTextDocumentWriterD0Ev()};
      unsafe {_ZN19QTextDocumentWriterD0Ev(rsthis.qclsinst)};
@@ -417,8 +417,8 @@ impl<'a> /*trait*/ QTextDocumentWriter_Free<()> for () {
 }
 
   // proto:  void QTextDocumentWriter::QTextDocumentWriter(const QTextDocumentWriter & );
-impl<'a> /*trait*/ QTextDocumentWriter_New for (&'a QTextDocumentWriter) {
-  fn New(self) -> QTextDocumentWriter {
+impl<'a> /*trait*/ QTextDocumentWriter_new for (&'a QTextDocumentWriter) {
+  fn new(self) -> QTextDocumentWriter {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QTextDocumentWriterC1ERKS_()};
     let ctysz: c_int = unsafe{QTextDocumentWriter_Class_Size()};

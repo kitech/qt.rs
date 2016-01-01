@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qopenglshaderprogram.h
 // dst-file: /src/gui/qopenglshaderprogram.rs
 //
@@ -338,20 +338,20 @@ impl AsRef<QObject> for QOpenGLShader {
 }
   // proto:  void QOpenGLShader::QOpenGLShader(const QOpenGLShader & );
 impl /*struct*/ QOpenGLShader {
-  pub fn New<T: QOpenGLShader_New>(value: T) -> QOpenGLShader {
-    let rsthis = value.New();
+  pub fn new<T: QOpenGLShader_new>(value: T) -> QOpenGLShader {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QOpenGLShader_New {
-  fn New(self) -> QOpenGLShader;
+pub trait QOpenGLShader_new {
+  fn new(self) -> QOpenGLShader;
 }
 
   // proto:  void QOpenGLShader::QOpenGLShader(const QOpenGLShader & );
-impl<'a> /*trait*/ QOpenGLShader_New for (&'a QOpenGLShader) {
-  fn New(self) -> QOpenGLShader {
+impl<'a> /*trait*/ QOpenGLShader_new for (&'a QOpenGLShader) {
+  fn new(self) -> QOpenGLShader {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLShaderC1ERKS_()};
     let ctysz: c_int = unsafe{QOpenGLShader_Class_Size()};
@@ -508,19 +508,19 @@ impl<'a> /*trait*/ QOpenGLShader_sourceCode<QByteArray> for () {
 
   // proto:  void QOpenGLShader::~QOpenGLShader();
 impl /*struct*/ QOpenGLShader {
-  pub fn Free<RetType, T: QOpenGLShader_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QOpenGLShader_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLShader_Free<RetType> {
-  fn Free(self , rsthis: & QOpenGLShader) -> RetType;
+pub trait QOpenGLShader_free<RetType> {
+  fn free(self , rsthis: & QOpenGLShader) -> RetType;
 }
 
   // proto:  void QOpenGLShader::~QOpenGLShader();
-impl<'a> /*trait*/ QOpenGLShader_Free<()> for () {
-  fn Free(self , rsthis: & QOpenGLShader) -> () {
+impl<'a> /*trait*/ QOpenGLShader_free<()> for () {
+  fn free(self , rsthis: & QOpenGLShader) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLShaderD0Ev()};
      unsafe {_ZN13QOpenGLShaderD0Ev(rsthis.qclsinst)};
@@ -1453,19 +1453,19 @@ impl<'a> /*trait*/ QOpenGLShaderProgram_uniformLocation<i32> for (&'a  String) {
 
   // proto:  void QOpenGLShaderProgram::~QOpenGLShaderProgram();
 impl /*struct*/ QOpenGLShaderProgram {
-  pub fn Free<RetType, T: QOpenGLShaderProgram_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QOpenGLShaderProgram_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLShaderProgram_Free<RetType> {
-  fn Free(self , rsthis: & QOpenGLShaderProgram) -> RetType;
+pub trait QOpenGLShaderProgram_free<RetType> {
+  fn free(self , rsthis: & QOpenGLShaderProgram) -> RetType;
 }
 
   // proto:  void QOpenGLShaderProgram::~QOpenGLShaderProgram();
-impl<'a> /*trait*/ QOpenGLShaderProgram_Free<()> for () {
-  fn Free(self , rsthis: & QOpenGLShaderProgram) -> () {
+impl<'a> /*trait*/ QOpenGLShaderProgram_free<()> for () {
+  fn free(self , rsthis: & QOpenGLShaderProgram) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QOpenGLShaderProgramD0Ev()};
      unsafe {_ZN20QOpenGLShaderProgramD0Ev(rsthis.qclsinst)};
@@ -2060,20 +2060,20 @@ impl<'a> /*trait*/ QOpenGLShaderProgram_setUniformValue<()> for (&'a  String, i3
 
   // proto:  void QOpenGLShaderProgram::QOpenGLShaderProgram(QObject * parent);
 impl /*struct*/ QOpenGLShaderProgram {
-  pub fn New<T: QOpenGLShaderProgram_New>(value: T) -> QOpenGLShaderProgram {
-    let rsthis = value.New();
+  pub fn new<T: QOpenGLShaderProgram_new>(value: T) -> QOpenGLShaderProgram {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QOpenGLShaderProgram_New {
-  fn New(self) -> QOpenGLShaderProgram;
+pub trait QOpenGLShaderProgram_new {
+  fn new(self) -> QOpenGLShaderProgram;
 }
 
   // proto:  void QOpenGLShaderProgram::QOpenGLShaderProgram(QObject * parent);
-impl<'a> /*trait*/ QOpenGLShaderProgram_New for (&'a QObject) {
-  fn New(self) -> QOpenGLShaderProgram {
+impl<'a> /*trait*/ QOpenGLShaderProgram_new for (&'a QObject) {
+  fn new(self) -> QOpenGLShaderProgram {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QOpenGLShaderProgramC1EP7QObject()};
     let ctysz: c_int = unsafe{QOpenGLShaderProgram_Class_Size()};
@@ -2161,8 +2161,8 @@ impl<'a> /*trait*/ QOpenGLShaderProgram_setUniformValue<()> for (&'a  String, &'
 }
 
   // proto:  void QOpenGLShaderProgram::QOpenGLShaderProgram(const QOpenGLShaderProgram & );
-impl<'a> /*trait*/ QOpenGLShaderProgram_New for (&'a QOpenGLShaderProgram) {
-  fn New(self) -> QOpenGLShaderProgram {
+impl<'a> /*trait*/ QOpenGLShaderProgram_new for (&'a QOpenGLShaderProgram) {
+  fn new(self) -> QOpenGLShaderProgram {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QOpenGLShaderProgramC1ERKS_()};
     let ctysz: c_int = unsafe{QOpenGLShaderProgram_Class_Size()};

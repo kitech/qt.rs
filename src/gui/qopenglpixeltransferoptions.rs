@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qopenglpixeltransferoptions.h
 // dst-file: /src/gui/qopenglpixeltransferoptions.rs
 //
@@ -88,20 +88,20 @@ impl /*struct*/ QOpenGLPixelTransferOptions {
 }
   // proto:  void QOpenGLPixelTransferOptions::QOpenGLPixelTransferOptions();
 impl /*struct*/ QOpenGLPixelTransferOptions {
-  pub fn New<T: QOpenGLPixelTransferOptions_New>(value: T) -> QOpenGLPixelTransferOptions {
-    let rsthis = value.New();
+  pub fn new<T: QOpenGLPixelTransferOptions_new>(value: T) -> QOpenGLPixelTransferOptions {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QOpenGLPixelTransferOptions_New {
-  fn New(self) -> QOpenGLPixelTransferOptions;
+pub trait QOpenGLPixelTransferOptions_new {
+  fn new(self) -> QOpenGLPixelTransferOptions;
 }
 
   // proto:  void QOpenGLPixelTransferOptions::QOpenGLPixelTransferOptions();
-impl<'a> /*trait*/ QOpenGLPixelTransferOptions_New for () {
-  fn New(self) -> QOpenGLPixelTransferOptions {
+impl<'a> /*trait*/ QOpenGLPixelTransferOptions_new for () {
+  fn new(self) -> QOpenGLPixelTransferOptions {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QOpenGLPixelTransferOptionsC1Ev()};
     let ctysz: c_int = unsafe{QOpenGLPixelTransferOptions_Class_Size()};
@@ -116,19 +116,19 @@ impl<'a> /*trait*/ QOpenGLPixelTransferOptions_New for () {
 
   // proto:  void QOpenGLPixelTransferOptions::~QOpenGLPixelTransferOptions();
 impl /*struct*/ QOpenGLPixelTransferOptions {
-  pub fn Free<RetType, T: QOpenGLPixelTransferOptions_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QOpenGLPixelTransferOptions_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLPixelTransferOptions_Free<RetType> {
-  fn Free(self , rsthis: & QOpenGLPixelTransferOptions) -> RetType;
+pub trait QOpenGLPixelTransferOptions_free<RetType> {
+  fn free(self , rsthis: & QOpenGLPixelTransferOptions) -> RetType;
 }
 
   // proto:  void QOpenGLPixelTransferOptions::~QOpenGLPixelTransferOptions();
-impl<'a> /*trait*/ QOpenGLPixelTransferOptions_Free<()> for () {
-  fn Free(self , rsthis: & QOpenGLPixelTransferOptions) -> () {
+impl<'a> /*trait*/ QOpenGLPixelTransferOptions_free<()> for () {
+  fn free(self , rsthis: & QOpenGLPixelTransferOptions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QOpenGLPixelTransferOptionsD0Ev()};
      unsafe {_ZN27QOpenGLPixelTransferOptionsD0Ev(rsthis.qclsinst)};
@@ -183,8 +183,8 @@ impl<'a> /*trait*/ QOpenGLPixelTransferOptions_swap<()> for (&'a QOpenGLPixelTra
 }
 
   // proto:  void QOpenGLPixelTransferOptions::QOpenGLPixelTransferOptions(const QOpenGLPixelTransferOptions & );
-impl<'a> /*trait*/ QOpenGLPixelTransferOptions_New for (&'a QOpenGLPixelTransferOptions) {
-  fn New(self) -> QOpenGLPixelTransferOptions {
+impl<'a> /*trait*/ QOpenGLPixelTransferOptions_new for (&'a QOpenGLPixelTransferOptions) {
+  fn new(self) -> QOpenGLPixelTransferOptions {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QOpenGLPixelTransferOptionsC1ERKS_()};
     let ctysz: c_int = unsafe{QOpenGLPixelTransferOptions_Class_Size()};

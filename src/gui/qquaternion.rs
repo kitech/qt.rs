@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qquaternion.h
 // dst-file: /src/gui/qquaternion.rs
 //
@@ -231,20 +231,20 @@ impl<'a> /*trait*/ QQuaternion_setVector<()> for (&'a QVector3D) {
 
   // proto:  void QQuaternion::QQuaternion(const QVector4D & vector);
 impl /*struct*/ QQuaternion {
-  pub fn New<T: QQuaternion_New>(value: T) -> QQuaternion {
-    let rsthis = value.New();
+  pub fn new<T: QQuaternion_new>(value: T) -> QQuaternion {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QQuaternion_New {
-  fn New(self) -> QQuaternion;
+pub trait QQuaternion_new {
+  fn new(self) -> QQuaternion;
 }
 
   // proto:  void QQuaternion::QQuaternion(const QVector4D & vector);
-impl<'a> /*trait*/ QQuaternion_New for (&'a QVector4D) {
-  fn New(self) -> QQuaternion {
+impl<'a> /*trait*/ QQuaternion_new for (&'a QVector4D) {
+  fn new(self) -> QQuaternion {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QQuaternionC1ERK9QVector4D()};
     let ctysz: c_int = unsafe{QQuaternion_Class_Size()};
@@ -559,8 +559,8 @@ impl<'a> /*trait*/ QQuaternion_fromDirection_s<QQuaternion> for (&'a QVector3D, 
 }
 
   // proto:  void QQuaternion::QQuaternion();
-impl<'a> /*trait*/ QQuaternion_New for () {
-  fn New(self) -> QQuaternion {
+impl<'a> /*trait*/ QQuaternion_new for () {
+  fn new(self) -> QQuaternion {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QQuaternionC1Ev()};
     let ctysz: c_int = unsafe{QQuaternion_Class_Size()};
@@ -898,8 +898,8 @@ impl<'a> /*trait*/ QQuaternion_setVector<()> for (f32, f32, f32) {
 }
 
   // proto:  void QQuaternion::QQuaternion(float scalar, float xpos, float ypos, float zpos);
-impl<'a> /*trait*/ QQuaternion_New for (f32, f32, f32, f32) {
-  fn New(self) -> QQuaternion {
+impl<'a> /*trait*/ QQuaternion_new for (f32, f32, f32, f32) {
+  fn new(self) -> QQuaternion {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QQuaternionC1Effff()};
     let ctysz: c_int = unsafe{QQuaternion_Class_Size()};
@@ -943,8 +943,8 @@ impl<'a> /*trait*/ QQuaternion_fromAxisAndAngle_s<QQuaternion> for (&'a QVector3
 }
 
   // proto:  void QQuaternion::QQuaternion(float scalar, const QVector3D & vector);
-impl<'a> /*trait*/ QQuaternion_New for (f32, &'a QVector3D) {
-  fn New(self) -> QQuaternion {
+impl<'a> /*trait*/ QQuaternion_new for (f32, &'a QVector3D) {
+  fn new(self) -> QQuaternion {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QQuaternionC1EfRK9QVector3D()};
     let ctysz: c_int = unsafe{QQuaternion_Class_Size()};

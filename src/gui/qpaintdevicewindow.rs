@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qpaintdevicewindow.h
 // dst-file: /src/gui/qpaintdevicewindow.rs
 //
@@ -105,20 +105,20 @@ impl<'a> /*trait*/ QPaintDeviceWindow_update<()> for () {
 
   // proto:  void QPaintDeviceWindow::QPaintDeviceWindow(const QPaintDeviceWindow & );
 impl /*struct*/ QPaintDeviceWindow {
-  pub fn New<T: QPaintDeviceWindow_New>(value: T) -> QPaintDeviceWindow {
-    let rsthis = value.New();
+  pub fn new<T: QPaintDeviceWindow_new>(value: T) -> QPaintDeviceWindow {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QPaintDeviceWindow_New {
-  fn New(self) -> QPaintDeviceWindow;
+pub trait QPaintDeviceWindow_new {
+  fn new(self) -> QPaintDeviceWindow;
 }
 
   // proto:  void QPaintDeviceWindow::QPaintDeviceWindow(const QPaintDeviceWindow & );
-impl<'a> /*trait*/ QPaintDeviceWindow_New for (&'a QPaintDeviceWindow) {
-  fn New(self) -> QPaintDeviceWindow {
+impl<'a> /*trait*/ QPaintDeviceWindow_new for (&'a QPaintDeviceWindow) {
+  fn new(self) -> QPaintDeviceWindow {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QPaintDeviceWindowC1ERKS_()};
     let ctysz: c_int = unsafe{QPaintDeviceWindow_Class_Size()};

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qstylehints.h
 // dst-file: /src/gui/qstylehints.rs
 //
@@ -239,20 +239,20 @@ impl<'a> /*trait*/ QStyleHints_setKeyboardInputInterval<()> for (i32) {
 
   // proto:  void QStyleHints::QStyleHints();
 impl /*struct*/ QStyleHints {
-  pub fn New<T: QStyleHints_New>(value: T) -> QStyleHints {
-    let rsthis = value.New();
+  pub fn new<T: QStyleHints_new>(value: T) -> QStyleHints {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QStyleHints_New {
-  fn New(self) -> QStyleHints;
+pub trait QStyleHints_new {
+  fn new(self) -> QStyleHints;
 }
 
   // proto:  void QStyleHints::QStyleHints();
-impl<'a> /*trait*/ QStyleHints_New for () {
-  fn New(self) -> QStyleHints {
+impl<'a> /*trait*/ QStyleHints_new for () {
+  fn new(self) -> QStyleHints {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QStyleHintsC1Ev()};
     let ctysz: c_int = unsafe{QStyleHints_Class_Size()};
@@ -835,7 +835,7 @@ extern fn QStyleHints_mouseDoubleClickIntervalChanged_signal_connect_cb_0(rsfptr
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QStyleHints_mouseDoubleClickIntervalChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i32), arg0: c_int) {
+extern fn QStyleHints_mouseDoubleClickIntervalChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -844,7 +844,8 @@ extern fn QStyleHints_mouseDoubleClickIntervalChanged_signal_connect_cb_box_0(rs
 impl /* trait */ QStyleHints_mouseDoubleClickIntervalChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QStyleHints_mouseDoubleClickIntervalChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QStyleHints_mouseDoubleClickIntervalChanged_signal_connect_cb_0 as *mut c_void;
@@ -852,7 +853,7 @@ impl /* trait */ QStyleHints_mouseDoubleClickIntervalChanged_signal_connect for 
     unsafe {QStyleHints_SlotProxy_connect__ZN11QStyleHints31mouseDoubleClickIntervalChangedEi(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QStyleHints_mouseDoubleClickIntervalChanged_signal_connect for Box<fn(i32)> {
+impl /* trait */ QStyleHints_mouseDoubleClickIntervalChanged_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QStyleHints_mouseDoubleClickIntervalChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -869,7 +870,7 @@ extern fn QStyleHints_startDragTimeChanged_signal_connect_cb_1(rsfptr:fn(i32), a
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QStyleHints_startDragTimeChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(i32), arg0: c_int) {
+extern fn QStyleHints_startDragTimeChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -878,7 +879,8 @@ extern fn QStyleHints_startDragTimeChanged_signal_connect_cb_box_1(rsfptr_raw:*m
 impl /* trait */ QStyleHints_startDragTimeChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QStyleHints_startDragTimeChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QStyleHints_startDragTimeChanged_signal_connect_cb_1 as *mut c_void;
@@ -886,7 +888,7 @@ impl /* trait */ QStyleHints_startDragTimeChanged_signal_connect for fn(i32) {
     unsafe {QStyleHints_SlotProxy_connect__ZN11QStyleHints20startDragTimeChangedEi(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QStyleHints_startDragTimeChanged_signal_connect for Box<fn(i32)> {
+impl /* trait */ QStyleHints_startDragTimeChanged_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QStyleHints_startDragTimeChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -903,7 +905,7 @@ extern fn QStyleHints_keyboardInputIntervalChanged_signal_connect_cb_2(rsfptr:fn
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QStyleHints_keyboardInputIntervalChanged_signal_connect_cb_box_2(rsfptr_raw:*mut fn(i32), arg0: c_int) {
+extern fn QStyleHints_keyboardInputIntervalChanged_signal_connect_cb_box_2(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -912,7 +914,8 @@ extern fn QStyleHints_keyboardInputIntervalChanged_signal_connect_cb_box_2(rsfpt
 impl /* trait */ QStyleHints_keyboardInputIntervalChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QStyleHints_keyboardInputIntervalChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QStyleHints_keyboardInputIntervalChanged_signal_connect_cb_2 as *mut c_void;
@@ -920,7 +923,7 @@ impl /* trait */ QStyleHints_keyboardInputIntervalChanged_signal_connect for fn(
     unsafe {QStyleHints_SlotProxy_connect__ZN11QStyleHints28keyboardInputIntervalChangedEi(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QStyleHints_keyboardInputIntervalChanged_signal_connect for Box<fn(i32)> {
+impl /* trait */ QStyleHints_keyboardInputIntervalChanged_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QStyleHints_keyboardInputIntervalChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -937,7 +940,7 @@ extern fn QStyleHints_cursorFlashTimeChanged_signal_connect_cb_3(rsfptr:fn(i32),
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QStyleHints_cursorFlashTimeChanged_signal_connect_cb_box_3(rsfptr_raw:*mut fn(i32), arg0: c_int) {
+extern fn QStyleHints_cursorFlashTimeChanged_signal_connect_cb_box_3(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -946,7 +949,8 @@ extern fn QStyleHints_cursorFlashTimeChanged_signal_connect_cb_box_3(rsfptr_raw:
 impl /* trait */ QStyleHints_cursorFlashTimeChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QStyleHints_cursorFlashTimeChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QStyleHints_cursorFlashTimeChanged_signal_connect_cb_3 as *mut c_void;
@@ -954,7 +958,7 @@ impl /* trait */ QStyleHints_cursorFlashTimeChanged_signal_connect for fn(i32) {
     unsafe {QStyleHints_SlotProxy_connect__ZN11QStyleHints22cursorFlashTimeChangedEi(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QStyleHints_cursorFlashTimeChanged_signal_connect for Box<fn(i32)> {
+impl /* trait */ QStyleHints_cursorFlashTimeChanged_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QStyleHints_cursorFlashTimeChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -971,7 +975,7 @@ extern fn QStyleHints_startDragDistanceChanged_signal_connect_cb_4(rsfptr:fn(i32
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QStyleHints_startDragDistanceChanged_signal_connect_cb_box_4(rsfptr_raw:*mut fn(i32), arg0: c_int) {
+extern fn QStyleHints_startDragDistanceChanged_signal_connect_cb_box_4(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -980,7 +984,8 @@ extern fn QStyleHints_startDragDistanceChanged_signal_connect_cb_box_4(rsfptr_ra
 impl /* trait */ QStyleHints_startDragDistanceChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QStyleHints_startDragDistanceChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QStyleHints_startDragDistanceChanged_signal_connect_cb_4 as *mut c_void;
@@ -988,7 +993,7 @@ impl /* trait */ QStyleHints_startDragDistanceChanged_signal_connect for fn(i32)
     unsafe {QStyleHints_SlotProxy_connect__ZN11QStyleHints24startDragDistanceChangedEi(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QStyleHints_startDragDistanceChanged_signal_connect for Box<fn(i32)> {
+impl /* trait */ QStyleHints_startDragDistanceChanged_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QStyleHints_startDragDistanceChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

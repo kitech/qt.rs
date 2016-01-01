@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qmatrix4x4.h
 // dst-file: /src/gui/qmatrix4x4.rs
 //
@@ -362,20 +362,20 @@ impl<'a> /*trait*/ QMatrix4x4_ortho<()> for (f32, f32, f32, f32, f32, f32) {
 
   // proto:  void QMatrix4x4::QMatrix4x4();
 impl /*struct*/ QMatrix4x4 {
-  pub fn New<T: QMatrix4x4_New>(value: T) -> QMatrix4x4 {
-    let rsthis = value.New();
+  pub fn new<T: QMatrix4x4_new>(value: T) -> QMatrix4x4 {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QMatrix4x4_New {
-  fn New(self) -> QMatrix4x4;
+pub trait QMatrix4x4_new {
+  fn new(self) -> QMatrix4x4;
 }
 
   // proto:  void QMatrix4x4::QMatrix4x4();
-impl<'a> /*trait*/ QMatrix4x4_New for () {
-  fn New(self) -> QMatrix4x4 {
+impl<'a> /*trait*/ QMatrix4x4_new for () {
+  fn new(self) -> QMatrix4x4 {
     // let qthis: *mut c_void = unsafe{calloc(1, 68)};
     // unsafe{_ZN10QMatrix4x4C1Ev()};
     let ctysz: c_int = unsafe{QMatrix4x4_Class_Size()};
@@ -629,8 +629,8 @@ impl<'a> /*trait*/ QMatrix4x4_copyDataTo<()> for (&'a mut Vec<f32>) {
 }
 
   // proto:  void QMatrix4x4::QMatrix4x4(const QTransform & transform);
-impl<'a> /*trait*/ QMatrix4x4_New for (&'a QTransform) {
-  fn New(self) -> QMatrix4x4 {
+impl<'a> /*trait*/ QMatrix4x4_new for (&'a QTransform) {
+  fn new(self) -> QMatrix4x4 {
     // let qthis: *mut c_void = unsafe{calloc(1, 68)};
     // unsafe{_ZN10QMatrix4x4C1ERK10QTransform()};
     let ctysz: c_int = unsafe{QMatrix4x4_Class_Size()};
@@ -702,8 +702,8 @@ impl<'a> /*trait*/ QMatrix4x4_rotate<()> for (&'a QQuaternion) {
 }
 
   // proto:  void QMatrix4x4::QMatrix4x4(const QMatrix & matrix);
-impl<'a> /*trait*/ QMatrix4x4_New for (&'a QMatrix) {
-  fn New(self) -> QMatrix4x4 {
+impl<'a> /*trait*/ QMatrix4x4_new for (&'a QMatrix) {
+  fn new(self) -> QMatrix4x4 {
     // let qthis: *mut c_void = unsafe{calloc(1, 68)};
     // unsafe{_ZN10QMatrix4x4C1ERK7QMatrix()};
     let ctysz: c_int = unsafe{QMatrix4x4_Class_Size()};
@@ -844,8 +844,8 @@ impl<'a> /*trait*/ QMatrix4x4_map<QPoint> for (&'a QPoint) {
 }
 
   // proto:  void QMatrix4x4::QMatrix4x4(int );
-impl<'a> /*trait*/ QMatrix4x4_New for (i32) {
-  fn New(self) -> QMatrix4x4 {
+impl<'a> /*trait*/ QMatrix4x4_new for (i32) {
+  fn new(self) -> QMatrix4x4 {
     // let qthis: *mut c_void = unsafe{calloc(1, 68)};
     // unsafe{_ZN10QMatrix4x4C1Ei()};
     let ctysz: c_int = unsafe{QMatrix4x4_Class_Size()};
@@ -882,8 +882,8 @@ impl<'a> /*trait*/ QMatrix4x4_optimize<()> for () {
 }
 
   // proto:  void QMatrix4x4::QMatrix4x4(const float * values);
-impl<'a> /*trait*/ QMatrix4x4_New for (&'a  Vec<f32>) {
-  fn New(self) -> QMatrix4x4 {
+impl<'a> /*trait*/ QMatrix4x4_new for (&'a  Vec<f32>) {
+  fn new(self) -> QMatrix4x4 {
     // let qthis: *mut c_void = unsafe{calloc(1, 68)};
     // unsafe{_ZN10QMatrix4x4C1EPKf()};
     let ctysz: c_int = unsafe{QMatrix4x4_Class_Size()};
@@ -957,8 +957,8 @@ impl<'a> /*trait*/ QMatrix4x4_scale<()> for (f32, f32) {
 }
 
   // proto:  void QMatrix4x4::QMatrix4x4(float m11, float m12, float m13, float m14, float m21, float m22, float m23, float m24, float m31, float m32, float m33, float m34, float m41, float m42, float m43, float m44);
-impl<'a> /*trait*/ QMatrix4x4_New for (f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32) {
-  fn New(self) -> QMatrix4x4 {
+impl<'a> /*trait*/ QMatrix4x4_new for (f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32) {
+  fn new(self) -> QMatrix4x4 {
     // let qthis: *mut c_void = unsafe{calloc(1, 68)};
     // unsafe{_ZN10QMatrix4x4C1Effffffffffffffff()};
     let ctysz: c_int = unsafe{QMatrix4x4_Class_Size()};
@@ -1085,8 +1085,8 @@ impl<'a> /*trait*/ QMatrix4x4_fill<()> for (f32) {
 }
 
   // proto:  void QMatrix4x4::QMatrix4x4(const float * values, int cols, int rows);
-impl<'a> /*trait*/ QMatrix4x4_New for (&'a  Vec<f32>, i32, i32) {
-  fn New(self) -> QMatrix4x4 {
+impl<'a> /*trait*/ QMatrix4x4_new for (&'a  Vec<f32>, i32, i32) {
+  fn new(self) -> QMatrix4x4 {
     // let qthis: *mut c_void = unsafe{calloc(1, 68)};
     // unsafe{_ZN10QMatrix4x4C1EPKfii()};
     let ctysz: c_int = unsafe{QMatrix4x4_Class_Size()};

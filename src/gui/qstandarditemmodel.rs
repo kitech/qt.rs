@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qstandarditemmodel.h
 // dst-file: /src/gui/qstandarditemmodel.rs
 //
@@ -330,20 +330,20 @@ impl AsRef<QAbstractItemModel> for QStandardItemModel {
 }
   // proto:  void QStandardItemModel::QStandardItemModel(int rows, int columns, QObject * parent);
 impl /*struct*/ QStandardItemModel {
-  pub fn New<T: QStandardItemModel_New>(value: T) -> QStandardItemModel {
-    let rsthis = value.New();
+  pub fn new<T: QStandardItemModel_new>(value: T) -> QStandardItemModel {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QStandardItemModel_New {
-  fn New(self) -> QStandardItemModel;
+pub trait QStandardItemModel_new {
+  fn new(self) -> QStandardItemModel;
 }
 
   // proto:  void QStandardItemModel::QStandardItemModel(int rows, int columns, QObject * parent);
-impl<'a> /*trait*/ QStandardItemModel_New for (i32, i32, &'a QObject) {
-  fn New(self) -> QStandardItemModel {
+impl<'a> /*trait*/ QStandardItemModel_new for (i32, i32, &'a QObject) {
+  fn new(self) -> QStandardItemModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QStandardItemModelC1EiiP7QObject()};
     let ctysz: c_int = unsafe{QStandardItemModel_Class_Size()};
@@ -657,8 +657,8 @@ impl<'a> /*trait*/ QStandardItemModel_setVerticalHeaderItem<()> for (i32, &'a QS
 }
 
   // proto:  void QStandardItemModel::QStandardItemModel(const QStandardItemModel & );
-impl<'a> /*trait*/ QStandardItemModel_New for (&'a QStandardItemModel) {
-  fn New(self) -> QStandardItemModel {
+impl<'a> /*trait*/ QStandardItemModel_new for (&'a QStandardItemModel) {
+  fn new(self) -> QStandardItemModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QStandardItemModelC1ERKS_()};
     let ctysz: c_int = unsafe{QStandardItemModel_Class_Size()};
@@ -673,8 +673,8 @@ impl<'a> /*trait*/ QStandardItemModel_New for (&'a QStandardItemModel) {
 }
 
   // proto:  void QStandardItemModel::QStandardItemModel(QObject * parent);
-impl<'a> /*trait*/ QStandardItemModel_New for (&'a QObject) {
-  fn New(self) -> QStandardItemModel {
+impl<'a> /*trait*/ QStandardItemModel_new for (&'a QObject) {
+  fn new(self) -> QStandardItemModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QStandardItemModelC1EP7QObject()};
     let ctysz: c_int = unsafe{QStandardItemModel_Class_Size()};
@@ -1234,19 +1234,19 @@ impl<'a> /*trait*/ QStandardItemModel_hasChildren<i8> for (&'a QModelIndex) {
 
   // proto:  void QStandardItemModel::~QStandardItemModel();
 impl /*struct*/ QStandardItemModel {
-  pub fn Free<RetType, T: QStandardItemModel_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QStandardItemModel_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QStandardItemModel_Free<RetType> {
-  fn Free(self , rsthis: & QStandardItemModel) -> RetType;
+pub trait QStandardItemModel_free<RetType> {
+  fn free(self , rsthis: & QStandardItemModel) -> RetType;
 }
 
   // proto:  void QStandardItemModel::~QStandardItemModel();
-impl<'a> /*trait*/ QStandardItemModel_Free<()> for () {
-  fn Free(self , rsthis: & QStandardItemModel) -> () {
+impl<'a> /*trait*/ QStandardItemModel_free<()> for () {
+  fn free(self , rsthis: & QStandardItemModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QStandardItemModelD0Ev()};
      unsafe {_ZN18QStandardItemModelD0Ev(rsthis.qclsinst)};
@@ -2162,20 +2162,20 @@ impl<'a> /*trait*/ QStandardItem_data<QVariant> for (i32) {
 
   // proto:  void QStandardItem::QStandardItem(const QStandardItem & other);
 impl /*struct*/ QStandardItem {
-  pub fn New<T: QStandardItem_New>(value: T) -> QStandardItem {
-    let rsthis = value.New();
+  pub fn new<T: QStandardItem_new>(value: T) -> QStandardItem {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QStandardItem_New {
-  fn New(self) -> QStandardItem;
+pub trait QStandardItem_new {
+  fn new(self) -> QStandardItem;
 }
 
   // proto:  void QStandardItem::QStandardItem(const QStandardItem & other);
-impl<'a> /*trait*/ QStandardItem_New for (&'a QStandardItem) {
-  fn New(self) -> QStandardItem {
+impl<'a> /*trait*/ QStandardItem_new for (&'a QStandardItem) {
+  fn new(self) -> QStandardItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItemC1ERKS_()};
     let ctysz: c_int = unsafe{QStandardItem_Class_Size()};
@@ -2286,8 +2286,8 @@ impl<'a> /*trait*/ QStandardItem_setRowCount<()> for (i32) {
 }
 
   // proto:  void QStandardItem::QStandardItem(const QString & text);
-impl<'a> /*trait*/ QStandardItem_New for (&'a QString) {
-  fn New(self) -> QStandardItem {
+impl<'a> /*trait*/ QStandardItem_new for (&'a QString) {
+  fn new(self) -> QStandardItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItemC1ERK7QString()};
     let ctysz: c_int = unsafe{QStandardItem_Class_Size()};
@@ -2534,8 +2534,8 @@ impl<'a> /*trait*/ QStandardItem_insertRow<()> for (i32, &'a QStandardItem) {
 }
 
   // proto:  void QStandardItem::QStandardItem(const QIcon & icon, const QString & text);
-impl<'a> /*trait*/ QStandardItem_New for (&'a QIcon, &'a QString) {
-  fn New(self) -> QStandardItem {
+impl<'a> /*trait*/ QStandardItem_new for (&'a QIcon, &'a QString) {
+  fn new(self) -> QStandardItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItemC1ERK5QIconRK7QString()};
     let ctysz: c_int = unsafe{QStandardItem_Class_Size()};
@@ -2599,19 +2599,19 @@ impl<'a> /*trait*/ QStandardItem_removeColumns<()> for (i32, i32) {
 
   // proto:  void QStandardItem::~QStandardItem();
 impl /*struct*/ QStandardItem {
-  pub fn Free<RetType, T: QStandardItem_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QStandardItem_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_Free<RetType> {
-  fn Free(self , rsthis: & QStandardItem) -> RetType;
+pub trait QStandardItem_free<RetType> {
+  fn free(self , rsthis: & QStandardItem) -> RetType;
 }
 
   // proto:  void QStandardItem::~QStandardItem();
-impl<'a> /*trait*/ QStandardItem_Free<()> for () {
-  fn Free(self , rsthis: & QStandardItem) -> () {
+impl<'a> /*trait*/ QStandardItem_free<()> for () {
+  fn free(self , rsthis: & QStandardItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItemD0Ev()};
      unsafe {_ZN13QStandardItemD0Ev(rsthis.qclsinst)};
@@ -2620,8 +2620,8 @@ impl<'a> /*trait*/ QStandardItem_Free<()> for () {
 }
 
   // proto:  void QStandardItem::QStandardItem();
-impl<'a> /*trait*/ QStandardItem_New for () {
-  fn New(self) -> QStandardItem {
+impl<'a> /*trait*/ QStandardItem_new for () {
+  fn new(self) -> QStandardItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItemC1Ev()};
     let ctysz: c_int = unsafe{QStandardItem_Class_Size()};
@@ -2705,8 +2705,8 @@ impl<'a> /*trait*/ QStandardItem_setText<()> for (&'a QString) {
 }
 
   // proto:  void QStandardItem::QStandardItem(int rows, int columns);
-impl<'a> /*trait*/ QStandardItem_New for (i32, i32) {
-  fn New(self) -> QStandardItem {
+impl<'a> /*trait*/ QStandardItem_new for (i32, i32) {
+  fn new(self) -> QStandardItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItemC1Eii()};
     let ctysz: c_int = unsafe{QStandardItem_Class_Size()};
@@ -3140,7 +3140,7 @@ extern fn QStandardItemModel_itemChanged_signal_connect_cb_0(rsfptr:fn(QStandard
   let rsarg0 = QStandardItem::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QStandardItemModel_itemChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QStandardItem), arg0: *mut c_void) {
+extern fn QStandardItemModel_itemChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QStandardItem), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QStandardItem::inheritFrom(arg0 as u64);
@@ -3149,7 +3149,8 @@ extern fn QStandardItemModel_itemChanged_signal_connect_cb_box_0(rsfptr_raw:*mut
 impl /* trait */ QStandardItemModel_itemChanged_signal_connect for fn(QStandardItem) {
   fn connect(self, sigthis: QStandardItemModel_itemChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QStandardItemModel_itemChanged_signal_connect_cb_0 as *mut c_void;
@@ -3157,7 +3158,7 @@ impl /* trait */ QStandardItemModel_itemChanged_signal_connect for fn(QStandardI
     unsafe {QStandardItemModel_SlotProxy_connect__ZN18QStandardItemModel11itemChangedEP13QStandardItem(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QStandardItemModel_itemChanged_signal_connect for Box<fn(QStandardItem)> {
+impl /* trait */ QStandardItemModel_itemChanged_signal_connect for Box<Fn(QStandardItem)> {
   fn connect(self, sigthis: QStandardItemModel_itemChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

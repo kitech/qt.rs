@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qfontdatabase.h
 // dst-file: /src/gui/qfontdatabase.rs
 //
@@ -218,20 +218,20 @@ impl<'a> /*trait*/ QFontDatabase_italic<i8> for (&'a QString, &'a QString) {
 
   // proto:  void QFontDatabase::QFontDatabase();
 impl /*struct*/ QFontDatabase {
-  pub fn New<T: QFontDatabase_New>(value: T) -> QFontDatabase {
-    let rsthis = value.New();
+  pub fn new<T: QFontDatabase_new>(value: T) -> QFontDatabase {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QFontDatabase_New {
-  fn New(self) -> QFontDatabase;
+pub trait QFontDatabase_new {
+  fn new(self) -> QFontDatabase;
 }
 
   // proto:  void QFontDatabase::QFontDatabase();
-impl<'a> /*trait*/ QFontDatabase_New for () {
-  fn New(self) -> QFontDatabase {
+impl<'a> /*trait*/ QFontDatabase_new for () {
+  fn new(self) -> QFontDatabase {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QFontDatabaseC1Ev()};
     let ctysz: c_int = unsafe{QFontDatabase_Class_Size()};

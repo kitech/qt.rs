@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qopenglfunctions.h
 // dst-file: /src/gui/qopenglfunctions.rs
 //
@@ -352,20 +352,20 @@ impl /*struct*/ QOpenGLFunctionsPrivate {
 }
   // proto:  void QOpenGLFunctionsPrivate::QOpenGLFunctionsPrivate(QOpenGLContext * ctx);
 impl /*struct*/ QOpenGLFunctionsPrivate {
-  pub fn New<T: QOpenGLFunctionsPrivate_New>(value: T) -> QOpenGLFunctionsPrivate {
-    let rsthis = value.New();
+  pub fn new<T: QOpenGLFunctionsPrivate_new>(value: T) -> QOpenGLFunctionsPrivate {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctionsPrivate_New {
-  fn New(self) -> QOpenGLFunctionsPrivate;
+pub trait QOpenGLFunctionsPrivate_new {
+  fn new(self) -> QOpenGLFunctionsPrivate;
 }
 
   // proto:  void QOpenGLFunctionsPrivate::QOpenGLFunctionsPrivate(QOpenGLContext * ctx);
-impl<'a> /*trait*/ QOpenGLFunctionsPrivate_New for (&'a QOpenGLContext) {
-  fn New(self) -> QOpenGLFunctionsPrivate {
+impl<'a> /*trait*/ QOpenGLFunctionsPrivate_new for (&'a QOpenGLContext) {
+  fn new(self) -> QOpenGLFunctionsPrivate {
     // let qthis: *mut c_void = unsafe{calloc(1, 1152)};
     // unsafe{_ZN23QOpenGLFunctionsPrivateC1EP14QOpenGLContext()};
     let ctysz: c_int = unsafe{QOpenGLFunctionsPrivate_Class_Size()};
@@ -1261,19 +1261,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glGetShaderPrecisionFormat<()> for (u32, u32
 
   // proto:  void QOpenGLFunctions::~QOpenGLFunctions();
 impl /*struct*/ QOpenGLFunctions {
-  pub fn Free<RetType, T: QOpenGLFunctions_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QOpenGLFunctions_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_Free<RetType> {
-  fn Free(self , rsthis: & QOpenGLFunctions) -> RetType;
+pub trait QOpenGLFunctions_free<RetType> {
+  fn free(self , rsthis: & QOpenGLFunctions) -> RetType;
 }
 
   // proto:  void QOpenGLFunctions::~QOpenGLFunctions();
-impl<'a> /*trait*/ QOpenGLFunctions_Free<()> for () {
-  fn Free(self , rsthis: & QOpenGLFunctions) -> () {
+impl<'a> /*trait*/ QOpenGLFunctions_free<()> for () {
+  fn free(self , rsthis: & QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctionsD0Ev()};
      unsafe {_ZN16QOpenGLFunctionsD0Ev(rsthis.qclsinst)};
@@ -1718,20 +1718,20 @@ impl<'a> /*trait*/ QOpenGLFunctions_glUniformMatrix2fv<()> for (i32, i32, u8, &'
 
   // proto:  void QOpenGLFunctions::QOpenGLFunctions(QOpenGLContext * context);
 impl /*struct*/ QOpenGLFunctions {
-  pub fn New<T: QOpenGLFunctions_New>(value: T) -> QOpenGLFunctions {
-    let rsthis = value.New();
+  pub fn new<T: QOpenGLFunctions_new>(value: T) -> QOpenGLFunctions {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_New {
-  fn New(self) -> QOpenGLFunctions;
+pub trait QOpenGLFunctions_new {
+  fn new(self) -> QOpenGLFunctions;
 }
 
   // proto:  void QOpenGLFunctions::QOpenGLFunctions(QOpenGLContext * context);
-impl<'a> /*trait*/ QOpenGLFunctions_New for (&'a QOpenGLContext) {
-  fn New(self) -> QOpenGLFunctions {
+impl<'a> /*trait*/ QOpenGLFunctions_new for (&'a QOpenGLContext) {
+  fn new(self) -> QOpenGLFunctions {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctionsC1EP14QOpenGLContext()};
     let ctysz: c_int = unsafe{QOpenGLFunctions_Class_Size()};
@@ -3822,8 +3822,8 @@ impl<'a> /*trait*/ QOpenGLFunctions_glValidateProgram<()> for (u32) {
 }
 
   // proto:  void QOpenGLFunctions::QOpenGLFunctions();
-impl<'a> /*trait*/ QOpenGLFunctions_New for () {
-  fn New(self) -> QOpenGLFunctions {
+impl<'a> /*trait*/ QOpenGLFunctions_new for () {
+  fn new(self) -> QOpenGLFunctions {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctionsC1Ev()};
     let ctysz: c_int = unsafe{QOpenGLFunctions_Class_Size()};

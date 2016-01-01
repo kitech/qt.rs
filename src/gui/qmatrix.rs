@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qmatrix.h
 // dst-file: /src/gui/qmatrix.rs
 //
@@ -152,20 +152,20 @@ impl<'a> /*trait*/ QMatrix_dx<f64> for () {
 
   // proto:  void QMatrix::QMatrix(bool );
 impl /*struct*/ QMatrix {
-  pub fn New<T: QMatrix_New>(value: T) -> QMatrix {
-    let rsthis = value.New();
+  pub fn new<T: QMatrix_new>(value: T) -> QMatrix {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QMatrix_New {
-  fn New(self) -> QMatrix;
+pub trait QMatrix_new {
+  fn new(self) -> QMatrix;
 }
 
   // proto:  void QMatrix::QMatrix(bool );
-impl<'a> /*trait*/ QMatrix_New for (i8) {
-  fn New(self) -> QMatrix {
+impl<'a> /*trait*/ QMatrix_new for (i8) {
+  fn new(self) -> QMatrix {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZN7QMatrixC1Eb()};
     let ctysz: c_int = unsafe{QMatrix_Class_Size()};
@@ -304,8 +304,8 @@ impl<'a> /*trait*/ QMatrix_shear<QMatrix> for (f64, f64) {
 }
 
   // proto:  void QMatrix::QMatrix();
-impl<'a> /*trait*/ QMatrix_New for () {
-  fn New(self) -> QMatrix {
+impl<'a> /*trait*/ QMatrix_new for () {
+  fn new(self) -> QMatrix {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZN7QMatrixC1Ev()};
     let ctysz: c_int = unsafe{QMatrix_Class_Size()};
@@ -460,8 +460,8 @@ impl<'a> /*trait*/ QMatrix_setMatrix<()> for (f64, f64, f64, f64, f64, f64) {
 }
 
   // proto:  void QMatrix::QMatrix(const QMatrix & matrix);
-impl<'a> /*trait*/ QMatrix_New for (&'a QMatrix) {
-  fn New(self) -> QMatrix {
+impl<'a> /*trait*/ QMatrix_new for (&'a QMatrix) {
+  fn new(self) -> QMatrix {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZN7QMatrixC1ERKS_()};
     let ctysz: c_int = unsafe{QMatrix_Class_Size()};
@@ -685,8 +685,8 @@ impl<'a> /*trait*/ QMatrix_isIdentity<i8> for () {
 }
 
   // proto:  void QMatrix::QMatrix(qreal am11, qreal am12, qreal am21, qreal am22, qreal adx, qreal ady, bool );
-impl<'a> /*trait*/ QMatrix_New for (f64, f64, f64, f64, f64, f64, i8) {
-  fn New(self) -> QMatrix {
+impl<'a> /*trait*/ QMatrix_new for (f64, f64, f64, f64, f64, f64, i8) {
+  fn new(self) -> QMatrix {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZN7QMatrixC1Eddddddb()};
     let ctysz: c_int = unsafe{QMatrix_Class_Size()};
@@ -766,8 +766,8 @@ impl<'a> /*trait*/ QMatrix_mapRect<QRect> for (&'a QRect) {
 }
 
   // proto:  void QMatrix::QMatrix(qreal m11, qreal m12, qreal m21, qreal m22, qreal dx, qreal dy);
-impl<'a> /*trait*/ QMatrix_New for (f64, f64, f64, f64, f64, f64) {
-  fn New(self) -> QMatrix {
+impl<'a> /*trait*/ QMatrix_new for (f64, f64, f64, f64, f64, f64) {
+  fn new(self) -> QMatrix {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZN7QMatrixC1Edddddd()};
     let ctysz: c_int = unsafe{QMatrix_Class_Size()};

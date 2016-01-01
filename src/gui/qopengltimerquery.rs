@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qopengltimerquery.h
 // dst-file: /src/gui/qopengltimerquery.rs
 //
@@ -129,20 +129,20 @@ impl AsRef<QObject> for QOpenGLTimerQuery {
 }
   // proto:  void QOpenGLTimerQuery::QOpenGLTimerQuery(const QOpenGLTimerQuery & );
 impl /*struct*/ QOpenGLTimerQuery {
-  pub fn New<T: QOpenGLTimerQuery_New>(value: T) -> QOpenGLTimerQuery {
-    let rsthis = value.New();
+  pub fn new<T: QOpenGLTimerQuery_new>(value: T) -> QOpenGLTimerQuery {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QOpenGLTimerQuery_New {
-  fn New(self) -> QOpenGLTimerQuery;
+pub trait QOpenGLTimerQuery_new {
+  fn new(self) -> QOpenGLTimerQuery;
 }
 
   // proto:  void QOpenGLTimerQuery::QOpenGLTimerQuery(const QOpenGLTimerQuery & );
-impl<'a> /*trait*/ QOpenGLTimerQuery_New for (&'a QOpenGLTimerQuery) {
-  fn New(self) -> QOpenGLTimerQuery {
+impl<'a> /*trait*/ QOpenGLTimerQuery_new for (&'a QOpenGLTimerQuery) {
+  fn new(self) -> QOpenGLTimerQuery {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QOpenGLTimerQueryC1ERKS_()};
     let ctysz: c_int = unsafe{QOpenGLTimerQuery_Class_Size()};
@@ -226,19 +226,19 @@ impl<'a> /*trait*/ QOpenGLTimerQuery_end<()> for () {
 
   // proto:  void QOpenGLTimerQuery::~QOpenGLTimerQuery();
 impl /*struct*/ QOpenGLTimerQuery {
-  pub fn Free<RetType, T: QOpenGLTimerQuery_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QOpenGLTimerQuery_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLTimerQuery_Free<RetType> {
-  fn Free(self , rsthis: & QOpenGLTimerQuery) -> RetType;
+pub trait QOpenGLTimerQuery_free<RetType> {
+  fn free(self , rsthis: & QOpenGLTimerQuery) -> RetType;
 }
 
   // proto:  void QOpenGLTimerQuery::~QOpenGLTimerQuery();
-impl<'a> /*trait*/ QOpenGLTimerQuery_Free<()> for () {
-  fn Free(self , rsthis: & QOpenGLTimerQuery) -> () {
+impl<'a> /*trait*/ QOpenGLTimerQuery_free<()> for () {
+  fn free(self , rsthis: & QOpenGLTimerQuery) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QOpenGLTimerQueryD0Ev()};
      unsafe {_ZN17QOpenGLTimerQueryD0Ev(rsthis.qclsinst)};
@@ -269,8 +269,8 @@ impl<'a> /*trait*/ QOpenGLTimerQuery_begin<()> for () {
 }
 
   // proto:  void QOpenGLTimerQuery::QOpenGLTimerQuery(QObject * parent);
-impl<'a> /*trait*/ QOpenGLTimerQuery_New for (&'a QObject) {
-  fn New(self) -> QOpenGLTimerQuery {
+impl<'a> /*trait*/ QOpenGLTimerQuery_new for (&'a QObject) {
+  fn new(self) -> QOpenGLTimerQuery {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QOpenGLTimerQueryC1EP7QObject()};
     let ctysz: c_int = unsafe{QOpenGLTimerQuery_Class_Size()};
@@ -529,20 +529,20 @@ impl<'a> /*trait*/ QOpenGLTimeMonitor_destroy<()> for () {
 
   // proto:  void QOpenGLTimeMonitor::QOpenGLTimeMonitor(const QOpenGLTimeMonitor & );
 impl /*struct*/ QOpenGLTimeMonitor {
-  pub fn New<T: QOpenGLTimeMonitor_New>(value: T) -> QOpenGLTimeMonitor {
-    let rsthis = value.New();
+  pub fn new<T: QOpenGLTimeMonitor_new>(value: T) -> QOpenGLTimeMonitor {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QOpenGLTimeMonitor_New {
-  fn New(self) -> QOpenGLTimeMonitor;
+pub trait QOpenGLTimeMonitor_new {
+  fn new(self) -> QOpenGLTimeMonitor;
 }
 
   // proto:  void QOpenGLTimeMonitor::QOpenGLTimeMonitor(const QOpenGLTimeMonitor & );
-impl<'a> /*trait*/ QOpenGLTimeMonitor_New for (&'a QOpenGLTimeMonitor) {
-  fn New(self) -> QOpenGLTimeMonitor {
+impl<'a> /*trait*/ QOpenGLTimeMonitor_new for (&'a QOpenGLTimeMonitor) {
+  fn new(self) -> QOpenGLTimeMonitor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QOpenGLTimeMonitorC1ERKS_()};
     let ctysz: c_int = unsafe{QOpenGLTimeMonitor_Class_Size()};
@@ -581,19 +581,19 @@ impl<'a> /*trait*/ QOpenGLTimeMonitor_create<i8> for () {
 
   // proto:  void QOpenGLTimeMonitor::~QOpenGLTimeMonitor();
 impl /*struct*/ QOpenGLTimeMonitor {
-  pub fn Free<RetType, T: QOpenGLTimeMonitor_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QOpenGLTimeMonitor_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLTimeMonitor_Free<RetType> {
-  fn Free(self , rsthis: & QOpenGLTimeMonitor) -> RetType;
+pub trait QOpenGLTimeMonitor_free<RetType> {
+  fn free(self , rsthis: & QOpenGLTimeMonitor) -> RetType;
 }
 
   // proto:  void QOpenGLTimeMonitor::~QOpenGLTimeMonitor();
-impl<'a> /*trait*/ QOpenGLTimeMonitor_Free<()> for () {
-  fn Free(self , rsthis: & QOpenGLTimeMonitor) -> () {
+impl<'a> /*trait*/ QOpenGLTimeMonitor_free<()> for () {
+  fn free(self , rsthis: & QOpenGLTimeMonitor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QOpenGLTimeMonitorD0Ev()};
      unsafe {_ZN18QOpenGLTimeMonitorD0Ev(rsthis.qclsinst)};
@@ -714,8 +714,8 @@ impl<'a> /*trait*/ QOpenGLTimeMonitor_reset<()> for () {
 }
 
   // proto:  void QOpenGLTimeMonitor::QOpenGLTimeMonitor(QObject * parent);
-impl<'a> /*trait*/ QOpenGLTimeMonitor_New for (&'a QObject) {
-  fn New(self) -> QOpenGLTimeMonitor {
+impl<'a> /*trait*/ QOpenGLTimeMonitor_new for (&'a QObject) {
+  fn new(self) -> QOpenGLTimeMonitor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QOpenGLTimeMonitorC1EP7QObject()};
     let ctysz: c_int = unsafe{QOpenGLTimeMonitor_Class_Size()};

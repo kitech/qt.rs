@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qtransform.h
 // dst-file: /src/gui/qtransform.rs
 //
@@ -464,20 +464,20 @@ impl<'a> /*trait*/ QTransform_mapRect<QRect> for (&'a QRect) {
 
   // proto:  void QTransform::QTransform();
 impl /*struct*/ QTransform {
-  pub fn New<T: QTransform_New>(value: T) -> QTransform {
-    let rsthis = value.New();
+  pub fn new<T: QTransform_new>(value: T) -> QTransform {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTransform_New {
-  fn New(self) -> QTransform;
+pub trait QTransform_new {
+  fn new(self) -> QTransform;
 }
 
   // proto:  void QTransform::QTransform();
-impl<'a> /*trait*/ QTransform_New for () {
-  fn New(self) -> QTransform {
+impl<'a> /*trait*/ QTransform_new for () {
+  fn new(self) -> QTransform {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZN10QTransformC1Ev()};
     let ctysz: c_int = unsafe{QTransform_Class_Size()};
@@ -554,8 +554,8 @@ impl<'a> /*trait*/ QTransform_shear<QTransform> for (f64, f64) {
 }
 
   // proto:  void QTransform::QTransform(qreal h11, qreal h12, qreal h21, qreal h22, qreal dx, qreal dy);
-impl<'a> /*trait*/ QTransform_New for (f64, f64, f64, f64, f64, f64) {
-  fn New(self) -> QTransform {
+impl<'a> /*trait*/ QTransform_new for (f64, f64, f64, f64, f64, f64) {
+  fn new(self) -> QTransform {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZN10QTransformC1Edddddd()};
     let ctysz: c_int = unsafe{QTransform_Class_Size()};
@@ -651,8 +651,8 @@ impl<'a> /*trait*/ QTransform_map<QLineF> for (&'a QLineF) {
 }
 
   // proto:  void QTransform::QTransform(bool );
-impl<'a> /*trait*/ QTransform_New for (i8) {
-  fn New(self) -> QTransform {
+impl<'a> /*trait*/ QTransform_new for (i8) {
+  fn new(self) -> QTransform {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZN10QTransformC1Eb()};
     let ctysz: c_int = unsafe{QTransform_Class_Size()};
@@ -868,8 +868,8 @@ impl<'a> /*trait*/ QTransform_m31<f64> for () {
 }
 
   // proto:  void QTransform::QTransform(const QMatrix & mtx);
-impl<'a> /*trait*/ QTransform_New for (&'a QMatrix) {
-  fn New(self) -> QTransform {
+impl<'a> /*trait*/ QTransform_new for (&'a QMatrix) {
+  fn new(self) -> QTransform {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZN10QTransformC1ERK7QMatrix()};
     let ctysz: c_int = unsafe{QTransform_Class_Size()};
@@ -884,8 +884,8 @@ impl<'a> /*trait*/ QTransform_New for (&'a QMatrix) {
 }
 
   // proto:  void QTransform::QTransform(qreal h11, qreal h12, qreal h13, qreal h21, qreal h22, qreal h23, qreal h31, qreal h32, qreal h33);
-impl<'a> /*trait*/ QTransform_New for (f64, f64, f64, f64, f64, f64, f64, f64, f64) {
-  fn New(self) -> QTransform {
+impl<'a> /*trait*/ QTransform_new for (f64, f64, f64, f64, f64, f64, f64, f64, f64) {
+  fn new(self) -> QTransform {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZN10QTransformC1Eddddddddd()};
     let ctysz: c_int = unsafe{QTransform_Class_Size()};
@@ -1248,8 +1248,8 @@ impl<'a> /*trait*/ QTransform_dy<f64> for () {
 }
 
   // proto:  void QTransform::QTransform(qreal h11, qreal h12, qreal h13, qreal h21, qreal h22, qreal h23, qreal h31, qreal h32, qreal h33, bool );
-impl<'a> /*trait*/ QTransform_New for (f64, f64, f64, f64, f64, f64, f64, f64, f64, i8) {
-  fn New(self) -> QTransform {
+impl<'a> /*trait*/ QTransform_new for (f64, f64, f64, f64, f64, f64, f64, f64, f64, i8) {
+  fn new(self) -> QTransform {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZN10QTransformC1Edddddddddb()};
     let ctysz: c_int = unsafe{QTransform_Class_Size()};

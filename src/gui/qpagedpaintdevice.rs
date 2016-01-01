@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qpagedpaintdevice.h
 // dst-file: /src/gui/qpagedpaintdevice.rs
 //
@@ -106,19 +106,19 @@ impl<'a> /*trait*/ QPagedPaintDevice_pageSizeMM<QSizeF> for () {
 
   // proto:  void QPagedPaintDevice::~QPagedPaintDevice();
 impl /*struct*/ QPagedPaintDevice {
-  pub fn Free<RetType, T: QPagedPaintDevice_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QPagedPaintDevice_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QPagedPaintDevice_Free<RetType> {
-  fn Free(self , rsthis: & QPagedPaintDevice) -> RetType;
+pub trait QPagedPaintDevice_free<RetType> {
+  fn free(self , rsthis: & QPagedPaintDevice) -> RetType;
 }
 
   // proto:  void QPagedPaintDevice::~QPagedPaintDevice();
-impl<'a> /*trait*/ QPagedPaintDevice_Free<()> for () {
-  fn Free(self , rsthis: & QPagedPaintDevice) -> () {
+impl<'a> /*trait*/ QPagedPaintDevice_free<()> for () {
+  fn free(self , rsthis: & QPagedPaintDevice) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QPagedPaintDeviceD0Ev()};
      unsafe {_ZN17QPagedPaintDeviceD0Ev(rsthis.qclsinst)};
@@ -200,20 +200,20 @@ impl<'a> /*trait*/ QPagedPaintDevice_setPageSize<i8> for (&'a QPageSize) {
 
   // proto:  void QPagedPaintDevice::QPagedPaintDevice();
 impl /*struct*/ QPagedPaintDevice {
-  pub fn New<T: QPagedPaintDevice_New>(value: T) -> QPagedPaintDevice {
-    let rsthis = value.New();
+  pub fn new<T: QPagedPaintDevice_new>(value: T) -> QPagedPaintDevice {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QPagedPaintDevice_New {
-  fn New(self) -> QPagedPaintDevice;
+pub trait QPagedPaintDevice_new {
+  fn new(self) -> QPagedPaintDevice;
 }
 
   // proto:  void QPagedPaintDevice::QPagedPaintDevice();
-impl<'a> /*trait*/ QPagedPaintDevice_New for () {
-  fn New(self) -> QPagedPaintDevice {
+impl<'a> /*trait*/ QPagedPaintDevice_new for () {
+  fn new(self) -> QPagedPaintDevice {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QPagedPaintDeviceC1Ev()};
     let ctysz: c_int = unsafe{QPagedPaintDevice_Class_Size()};

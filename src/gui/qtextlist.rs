@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qtextlist.h
 // dst-file: /src/gui/qtextlist.rs
 //
@@ -164,20 +164,20 @@ impl<'a> /*trait*/ QTextList_setFormat<()> for (&'a QTextListFormat) {
 
   // proto:  void QTextList::QTextList(QTextDocument * doc);
 impl /*struct*/ QTextList {
-  pub fn New<T: QTextList_New>(value: T) -> QTextList {
-    let rsthis = value.New();
+  pub fn new<T: QTextList_new>(value: T) -> QTextList {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTextList_New {
-  fn New(self) -> QTextList;
+pub trait QTextList_new {
+  fn new(self) -> QTextList;
 }
 
   // proto:  void QTextList::QTextList(QTextDocument * doc);
-impl<'a> /*trait*/ QTextList_New for (&'a QTextDocument) {
-  fn New(self) -> QTextList {
+impl<'a> /*trait*/ QTextList_new for (&'a QTextDocument) {
+  fn new(self) -> QTextList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextListC1EP13QTextDocument()};
     let ctysz: c_int = unsafe{QTextList_Class_Size()};
@@ -192,8 +192,8 @@ impl<'a> /*trait*/ QTextList_New for (&'a QTextDocument) {
 }
 
   // proto:  void QTextList::QTextList(const QTextList & );
-impl<'a> /*trait*/ QTextList_New for (&'a QTextList) {
-  fn New(self) -> QTextList {
+impl<'a> /*trait*/ QTextList_new for (&'a QTextList) {
+  fn new(self) -> QTextList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextListC1ERKS_()};
     let ctysz: c_int = unsafe{QTextList_Class_Size()};
@@ -351,19 +351,19 @@ impl<'a> /*trait*/ QTextList_format<QTextListFormat> for () {
 
   // proto:  void QTextList::~QTextList();
 impl /*struct*/ QTextList {
-  pub fn Free<RetType, T: QTextList_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QTextList_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QTextList_Free<RetType> {
-  fn Free(self , rsthis: & QTextList) -> RetType;
+pub trait QTextList_free<RetType> {
+  fn free(self , rsthis: & QTextList) -> RetType;
 }
 
   // proto:  void QTextList::~QTextList();
-impl<'a> /*trait*/ QTextList_Free<()> for () {
-  fn Free(self , rsthis: & QTextList) -> () {
+impl<'a> /*trait*/ QTextList_free<()> for () {
+  fn free(self , rsthis: & QTextList) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextListD0Ev()};
      unsafe {_ZN9QTextListD0Ev(rsthis.qclsinst)};

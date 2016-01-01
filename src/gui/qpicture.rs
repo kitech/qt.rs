@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qpicture.h
 // dst-file: /src/gui/qpicture.rs
 //
@@ -174,20 +174,20 @@ impl /*struct*/ QPictureIO {
 }
   // proto:  void QPictureIO::QPictureIO(const QString & fileName, const char * format);
 impl /*struct*/ QPictureIO {
-  pub fn New<T: QPictureIO_New>(value: T) -> QPictureIO {
-    let rsthis = value.New();
+  pub fn new<T: QPictureIO_new>(value: T) -> QPictureIO {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QPictureIO_New {
-  fn New(self) -> QPictureIO;
+pub trait QPictureIO_new {
+  fn new(self) -> QPictureIO;
 }
 
   // proto:  void QPictureIO::QPictureIO(const QString & fileName, const char * format);
-impl<'a> /*trait*/ QPictureIO_New for (&'a QString, &'a  String) {
-  fn New(self) -> QPictureIO {
+impl<'a> /*trait*/ QPictureIO_new for (&'a QString, &'a  String) {
+  fn new(self) -> QPictureIO {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QPictureIOC1ERK7QStringPKc()};
     let ctysz: c_int = unsafe{QPictureIO_Class_Size()};
@@ -365,19 +365,19 @@ impl<'a> /*trait*/ QPictureIO_setFileName<()> for (&'a QString) {
 
   // proto:  void QPictureIO::~QPictureIO();
 impl /*struct*/ QPictureIO {
-  pub fn Free<RetType, T: QPictureIO_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QPictureIO_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QPictureIO_Free<RetType> {
-  fn Free(self , rsthis: & QPictureIO) -> RetType;
+pub trait QPictureIO_free<RetType> {
+  fn free(self , rsthis: & QPictureIO) -> RetType;
 }
 
   // proto:  void QPictureIO::~QPictureIO();
-impl<'a> /*trait*/ QPictureIO_Free<()> for () {
-  fn Free(self , rsthis: & QPictureIO) -> () {
+impl<'a> /*trait*/ QPictureIO_free<()> for () {
+  fn free(self , rsthis: & QPictureIO) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QPictureIOD0Ev()};
      unsafe {_ZN10QPictureIOD0Ev(rsthis.qclsinst)};
@@ -435,8 +435,8 @@ impl<'a> /*trait*/ QPictureIO_pictureFormat_s<QByteArray> for (&'a QIODevice) {
 }
 
   // proto:  void QPictureIO::QPictureIO(const QPictureIO & );
-impl<'a> /*trait*/ QPictureIO_New for (&'a QPictureIO) {
-  fn New(self) -> QPictureIO {
+impl<'a> /*trait*/ QPictureIO_new for (&'a QPictureIO) {
+  fn new(self) -> QPictureIO {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QPictureIOC1ERKS_()};
     let ctysz: c_int = unsafe{QPictureIO_Class_Size()};
@@ -498,8 +498,8 @@ impl<'a> /*trait*/ QPictureIO_fileName<QString> for () {
 }
 
   // proto:  void QPictureIO::QPictureIO(QIODevice * ioDevice, const char * format);
-impl<'a> /*trait*/ QPictureIO_New for (&'a QIODevice, &'a  String) {
-  fn New(self) -> QPictureIO {
+impl<'a> /*trait*/ QPictureIO_new for (&'a QIODevice, &'a  String) {
+  fn new(self) -> QPictureIO {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QPictureIOC1EP9QIODevicePKc()};
     let ctysz: c_int = unsafe{QPictureIO_Class_Size()};
@@ -806,8 +806,8 @@ impl<'a> /*trait*/ QPictureIO_setParameters<()> for (&'a  String) {
 }
 
   // proto:  void QPictureIO::QPictureIO();
-impl<'a> /*trait*/ QPictureIO_New for () {
-  fn New(self) -> QPictureIO {
+impl<'a> /*trait*/ QPictureIO_new for () {
+  fn new(self) -> QPictureIO {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QPictureIOC1Ev()};
     let ctysz: c_int = unsafe{QPictureIO_Class_Size()};
@@ -1023,20 +1023,20 @@ impl<'a> /*trait*/ QPicture_inputFormats_s<()> for () {
 
   // proto:  void QPicture::QPicture(int formatVersion);
 impl /*struct*/ QPicture {
-  pub fn New<T: QPicture_New>(value: T) -> QPicture {
-    let rsthis = value.New();
+  pub fn new<T: QPicture_new>(value: T) -> QPicture {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QPicture_New {
-  fn New(self) -> QPicture;
+pub trait QPicture_new {
+  fn new(self) -> QPicture;
 }
 
   // proto:  void QPicture::QPicture(int formatVersion);
-impl<'a> /*trait*/ QPicture_New for (i32) {
-  fn New(self) -> QPicture {
+impl<'a> /*trait*/ QPicture_new for (i32) {
+  fn new(self) -> QPicture {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPictureC1Ei()};
     let ctysz: c_int = unsafe{QPicture_Class_Size()};
@@ -1051,8 +1051,8 @@ impl<'a> /*trait*/ QPicture_New for (i32) {
 }
 
   // proto:  void QPicture::QPicture(const QPicture & );
-impl<'a> /*trait*/ QPicture_New for (&'a QPicture) {
-  fn New(self) -> QPicture {
+impl<'a> /*trait*/ QPicture_new for (&'a QPicture) {
+  fn new(self) -> QPicture {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPictureC1ERKS_()};
     let ctysz: c_int = unsafe{QPicture_Class_Size()};
@@ -1245,19 +1245,19 @@ impl<'a> /*trait*/ QPicture_load<i8> for (&'a QString, &'a  String) {
 
   // proto:  void QPicture::~QPicture();
 impl /*struct*/ QPicture {
-  pub fn Free<RetType, T: QPicture_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QPicture_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QPicture_Free<RetType> {
-  fn Free(self , rsthis: & QPicture) -> RetType;
+pub trait QPicture_free<RetType> {
+  fn free(self , rsthis: & QPicture) -> RetType;
 }
 
   // proto:  void QPicture::~QPicture();
-impl<'a> /*trait*/ QPicture_Free<()> for () {
-  fn Free(self , rsthis: & QPicture) -> () {
+impl<'a> /*trait*/ QPicture_free<()> for () {
+  fn free(self , rsthis: & QPicture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPictureD0Ev()};
      unsafe {_ZN8QPictureD0Ev(rsthis.qclsinst)};

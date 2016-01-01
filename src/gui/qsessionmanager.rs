@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qsessionmanager.h
 // dst-file: /src/gui/qsessionmanager.rs
 //
@@ -213,19 +213,19 @@ impl<'a> /*trait*/ QSessionManager_allowsErrorInteraction<i8> for () {
 
   // proto:  void QSessionManager::~QSessionManager();
 impl /*struct*/ QSessionManager {
-  pub fn Free<RetType, T: QSessionManager_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QSessionManager_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QSessionManager_Free<RetType> {
-  fn Free(self , rsthis: & QSessionManager) -> RetType;
+pub trait QSessionManager_free<RetType> {
+  fn free(self , rsthis: & QSessionManager) -> RetType;
 }
 
   // proto:  void QSessionManager::~QSessionManager();
-impl<'a> /*trait*/ QSessionManager_Free<()> for () {
-  fn Free(self , rsthis: & QSessionManager) -> () {
+impl<'a> /*trait*/ QSessionManager_free<()> for () {
+  fn free(self , rsthis: & QSessionManager) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSessionManagerD0Ev()};
      unsafe {_ZN15QSessionManagerD0Ev(rsthis.qclsinst)};
@@ -382,20 +382,20 @@ impl<'a> /*trait*/ QSessionManager_discardCommand<()> for () {
 
   // proto:  void QSessionManager::QSessionManager(QGuiApplication * app, QString & id, QString & key);
 impl /*struct*/ QSessionManager {
-  pub fn New<T: QSessionManager_New>(value: T) -> QSessionManager {
-    let rsthis = value.New();
+  pub fn new<T: QSessionManager_new>(value: T) -> QSessionManager {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QSessionManager_New {
-  fn New(self) -> QSessionManager;
+pub trait QSessionManager_new {
+  fn new(self) -> QSessionManager;
 }
 
   // proto:  void QSessionManager::QSessionManager(QGuiApplication * app, QString & id, QString & key);
-impl<'a> /*trait*/ QSessionManager_New for (&'a QGuiApplication, &'a QString, &'a QString) {
-  fn New(self) -> QSessionManager {
+impl<'a> /*trait*/ QSessionManager_new for (&'a QGuiApplication, &'a QString, &'a QString) {
+  fn new(self) -> QSessionManager {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSessionManagerC1EP15QGuiApplicationR7QStringS3_()};
     let ctysz: c_int = unsafe{QSessionManager_Class_Size()};

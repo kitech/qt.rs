@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qrawfont.h
 // dst-file: /src/gui/qrawfont.rs
 //
@@ -320,20 +320,20 @@ impl<'a> /*trait*/ QRawFont_descent<f64> for () {
 
   // proto:  void QRawFont::QRawFont();
 impl /*struct*/ QRawFont {
-  pub fn New<T: QRawFont_New>(value: T) -> QRawFont {
-    let rsthis = value.New();
+  pub fn new<T: QRawFont_new>(value: T) -> QRawFont {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QRawFont_New {
-  fn New(self) -> QRawFont;
+pub trait QRawFont_new {
+  fn new(self) -> QRawFont;
 }
 
   // proto:  void QRawFont::QRawFont();
-impl<'a> /*trait*/ QRawFont_New for () {
-  fn New(self) -> QRawFont {
+impl<'a> /*trait*/ QRawFont_new for () {
+  fn new(self) -> QRawFont {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QRawFontC1Ev()};
     let ctysz: c_int = unsafe{QRawFont_Class_Size()};
@@ -575,8 +575,8 @@ impl<'a> /*trait*/ QRawFont_weight<i32> for () {
 }
 
   // proto:  void QRawFont::QRawFont(const QRawFont & other);
-impl<'a> /*trait*/ QRawFont_New for (&'a QRawFont) {
-  fn New(self) -> QRawFont {
+impl<'a> /*trait*/ QRawFont_new for (&'a QRawFont) {
+  fn new(self) -> QRawFont {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QRawFontC1ERKS_()};
     let ctysz: c_int = unsafe{QRawFont_Class_Size()};
@@ -615,19 +615,19 @@ impl<'a> /*trait*/ QRawFont_xHeight<f64> for () {
 
   // proto:  void QRawFont::~QRawFont();
 impl /*struct*/ QRawFont {
-  pub fn Free<RetType, T: QRawFont_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QRawFont_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QRawFont_Free<RetType> {
-  fn Free(self , rsthis: & QRawFont) -> RetType;
+pub trait QRawFont_free<RetType> {
+  fn free(self , rsthis: & QRawFont) -> RetType;
 }
 
   // proto:  void QRawFont::~QRawFont();
-impl<'a> /*trait*/ QRawFont_Free<()> for () {
-  fn Free(self , rsthis: & QRawFont) -> () {
+impl<'a> /*trait*/ QRawFont_free<()> for () {
+  fn free(self , rsthis: & QRawFont) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QRawFontD0Ev()};
      unsafe {_ZN8QRawFontD0Ev(rsthis.qclsinst)};

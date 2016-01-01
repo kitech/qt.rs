@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qvector2d.h
 // dst-file: /src/gui/qvector2d.rs
 //
@@ -147,20 +147,20 @@ impl<'a> /*trait*/ QVector2D_setX<()> for (f32) {
 
   // proto:  void QVector2D::QVector2D(const QVector4D & vector);
 impl /*struct*/ QVector2D {
-  pub fn New<T: QVector2D_New>(value: T) -> QVector2D {
-    let rsthis = value.New();
+  pub fn new<T: QVector2D_new>(value: T) -> QVector2D {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QVector2D_New {
-  fn New(self) -> QVector2D;
+pub trait QVector2D_new {
+  fn new(self) -> QVector2D;
 }
 
   // proto:  void QVector2D::QVector2D(const QVector4D & vector);
-impl<'a> /*trait*/ QVector2D_New for (&'a QVector4D) {
-  fn New(self) -> QVector2D {
+impl<'a> /*trait*/ QVector2D_new for (&'a QVector4D) {
+  fn new(self) -> QVector2D {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QVector2DC1ERK9QVector4D()};
     let ctysz: c_int = unsafe{QVector2D_Class_Size()};
@@ -245,8 +245,8 @@ impl<'a> /*trait*/ QVector2D_setY<()> for (f32) {
 }
 
   // proto:  void QVector2D::QVector2D(const QPoint & point);
-impl<'a> /*trait*/ QVector2D_New for (&'a QPoint) {
-  fn New(self) -> QVector2D {
+impl<'a> /*trait*/ QVector2D_new for (&'a QPoint) {
+  fn new(self) -> QVector2D {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QVector2DC1ERK6QPoint()};
     let ctysz: c_int = unsafe{QVector2D_Class_Size()};
@@ -261,8 +261,8 @@ impl<'a> /*trait*/ QVector2D_New for (&'a QPoint) {
 }
 
   // proto:  void QVector2D::QVector2D(float xpos, float ypos);
-impl<'a> /*trait*/ QVector2D_New for (f32, f32) {
-  fn New(self) -> QVector2D {
+impl<'a> /*trait*/ QVector2D_new for (f32, f32) {
+  fn new(self) -> QVector2D {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QVector2DC1Eff()};
     let ctysz: c_int = unsafe{QVector2D_Class_Size()};
@@ -326,8 +326,8 @@ impl<'a> /*trait*/ QVector2D_distanceToLine<f32> for (&'a QVector2D, &'a QVector
 }
 
   // proto:  void QVector2D::QVector2D();
-impl<'a> /*trait*/ QVector2D_New for () {
-  fn New(self) -> QVector2D {
+impl<'a> /*trait*/ QVector2D_new for () {
+  fn new(self) -> QVector2D {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QVector2DC1Ev()};
     let ctysz: c_int = unsafe{QVector2D_Class_Size()};
@@ -410,8 +410,8 @@ impl<'a> /*trait*/ QVector2D_y<()> for () {
 }
 
   // proto:  void QVector2D::QVector2D(const QVector3D & vector);
-impl<'a> /*trait*/ QVector2D_New for (&'a QVector3D) {
-  fn New(self) -> QVector2D {
+impl<'a> /*trait*/ QVector2D_new for (&'a QVector3D) {
+  fn new(self) -> QVector2D {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QVector2DC1ERK9QVector3D()};
     let ctysz: c_int = unsafe{QVector2D_Class_Size()};
@@ -448,8 +448,8 @@ impl<'a> /*trait*/ QVector2D_x<()> for () {
 }
 
   // proto:  void QVector2D::QVector2D(const QPointF & point);
-impl<'a> /*trait*/ QVector2D_New for (&'a QPointF) {
-  fn New(self) -> QVector2D {
+impl<'a> /*trait*/ QVector2D_new for (&'a QPointF) {
+  fn new(self) -> QVector2D {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QVector2DC1ERK7QPointF()};
     let ctysz: c_int = unsafe{QVector2D_Class_Size()};

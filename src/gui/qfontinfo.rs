@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qfontinfo.h
 // dst-file: /src/gui/qfontinfo.rs
 //
@@ -155,20 +155,20 @@ impl<'a> /*trait*/ QFontInfo_pointSize<i32> for () {
 
   // proto:  void QFontInfo::QFontInfo(const QFontInfo & );
 impl /*struct*/ QFontInfo {
-  pub fn New<T: QFontInfo_New>(value: T) -> QFontInfo {
-    let rsthis = value.New();
+  pub fn new<T: QFontInfo_new>(value: T) -> QFontInfo {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QFontInfo_New {
-  fn New(self) -> QFontInfo;
+pub trait QFontInfo_new {
+  fn new(self) -> QFontInfo;
 }
 
   // proto:  void QFontInfo::QFontInfo(const QFontInfo & );
-impl<'a> /*trait*/ QFontInfo_New for (&'a QFontInfo) {
-  fn New(self) -> QFontInfo {
+impl<'a> /*trait*/ QFontInfo_new for (&'a QFontInfo) {
+  fn new(self) -> QFontInfo {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QFontInfoC1ERKS_()};
     let ctysz: c_int = unsafe{QFontInfo_Class_Size()};
@@ -322,8 +322,8 @@ impl<'a> /*trait*/ QFontInfo_swap<()> for (&'a QFontInfo) {
 }
 
   // proto:  void QFontInfo::QFontInfo(const QFont & );
-impl<'a> /*trait*/ QFontInfo_New for (&'a QFont) {
-  fn New(self) -> QFontInfo {
+impl<'a> /*trait*/ QFontInfo_new for (&'a QFont) {
+  fn new(self) -> QFontInfo {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QFontInfoC1ERK5QFont()};
     let ctysz: c_int = unsafe{QFontInfo_Class_Size()};
@@ -385,19 +385,19 @@ impl<'a> /*trait*/ QFontInfo_strikeOut<i8> for () {
 
   // proto:  void QFontInfo::~QFontInfo();
 impl /*struct*/ QFontInfo {
-  pub fn Free<RetType, T: QFontInfo_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QFontInfo_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QFontInfo_Free<RetType> {
-  fn Free(self , rsthis: & QFontInfo) -> RetType;
+pub trait QFontInfo_free<RetType> {
+  fn free(self , rsthis: & QFontInfo) -> RetType;
 }
 
   // proto:  void QFontInfo::~QFontInfo();
-impl<'a> /*trait*/ QFontInfo_Free<()> for () {
-  fn Free(self , rsthis: & QFontInfo) -> () {
+impl<'a> /*trait*/ QFontInfo_free<()> for () {
+  fn free(self , rsthis: & QFontInfo) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QFontInfoD0Ev()};
      unsafe {_ZN9QFontInfoD0Ev(rsthis.qclsinst)};

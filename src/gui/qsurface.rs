@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qsurface.h
 // dst-file: /src/gui/qsurface.rs
 //
@@ -151,19 +151,19 @@ impl<'a> /*trait*/ QSurface_size<QSize> for () {
 
   // proto:  void QSurface::~QSurface();
 impl /*struct*/ QSurface {
-  pub fn Free<RetType, T: QSurface_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QSurface_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QSurface_Free<RetType> {
-  fn Free(self , rsthis: & QSurface) -> RetType;
+pub trait QSurface_free<RetType> {
+  fn free(self , rsthis: & QSurface) -> RetType;
 }
 
   // proto:  void QSurface::~QSurface();
-impl<'a> /*trait*/ QSurface_Free<()> for () {
-  fn Free(self , rsthis: & QSurface) -> () {
+impl<'a> /*trait*/ QSurface_free<()> for () {
+  fn free(self , rsthis: & QSurface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSurfaceD0Ev()};
      unsafe {_ZN8QSurfaceD0Ev(rsthis.qclsinst)};

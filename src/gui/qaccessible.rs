@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qaccessible.h
 // dst-file: /src/gui/qaccessible.rs
 //
@@ -747,20 +747,20 @@ impl<'a> /*trait*/ QAccessible_accessibleInterface_s<QAccessibleInterface> for (
 
   // proto:  void QAccessible::QAccessible();
 impl /*struct*/ QAccessible {
-  pub fn New<T: QAccessible_New>(value: T) -> QAccessible {
-    let rsthis = value.New();
+  pub fn new<T: QAccessible_new>(value: T) -> QAccessible {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QAccessible_New {
-  fn New(self) -> QAccessible;
+pub trait QAccessible_new {
+  fn new(self) -> QAccessible;
 }
 
   // proto:  void QAccessible::QAccessible();
-impl<'a> /*trait*/ QAccessible_New for () {
-  fn New(self) -> QAccessible {
+impl<'a> /*trait*/ QAccessible_new for () {
+  fn new(self) -> QAccessible {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QAccessibleC1Ev()};
     let ctysz: c_int = unsafe{QAccessible_Class_Size()};
@@ -1126,19 +1126,19 @@ impl<'a> /*trait*/ QAccessibleTextInterface_characterCount<i32> for () {
 
   // proto:  void QAccessibleTextInterface::~QAccessibleTextInterface();
 impl /*struct*/ QAccessibleTextInterface {
-  pub fn Free<RetType, T: QAccessibleTextInterface_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QAccessibleTextInterface_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTextInterface_Free<RetType> {
-  fn Free(self , rsthis: & QAccessibleTextInterface) -> RetType;
+pub trait QAccessibleTextInterface_free<RetType> {
+  fn free(self , rsthis: & QAccessibleTextInterface) -> RetType;
 }
 
   // proto:  void QAccessibleTextInterface::~QAccessibleTextInterface();
-impl<'a> /*trait*/ QAccessibleTextInterface_Free<()> for () {
-  fn Free(self , rsthis: & QAccessibleTextInterface) -> () {
+impl<'a> /*trait*/ QAccessibleTextInterface_free<()> for () {
+  fn free(self , rsthis: & QAccessibleTextInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QAccessibleTextInterfaceD0Ev()};
      unsafe {_ZN24QAccessibleTextInterfaceD0Ev(rsthis.qclsinst)};
@@ -1394,20 +1394,20 @@ impl<'a> /*trait*/ QAccessibleEvent_accessibleInterface<QAccessibleInterface> fo
 
   // proto:  void QAccessibleEvent::QAccessibleEvent(const QAccessibleEvent & );
 impl /*struct*/ QAccessibleEvent {
-  pub fn New<T: QAccessibleEvent_New>(value: T) -> QAccessibleEvent {
-    let rsthis = value.New();
+  pub fn new<T: QAccessibleEvent_new>(value: T) -> QAccessibleEvent {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QAccessibleEvent_New {
-  fn New(self) -> QAccessibleEvent;
+pub trait QAccessibleEvent_new {
+  fn new(self) -> QAccessibleEvent;
 }
 
   // proto:  void QAccessibleEvent::QAccessibleEvent(const QAccessibleEvent & );
-impl<'a> /*trait*/ QAccessibleEvent_New for (&'a QAccessibleEvent) {
-  fn New(self) -> QAccessibleEvent {
+impl<'a> /*trait*/ QAccessibleEvent_new for (&'a QAccessibleEvent) {
+  fn new(self) -> QAccessibleEvent {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAccessibleEventC1ERKS_()};
     let ctysz: c_int = unsafe{QAccessibleEvent_Class_Size()};
@@ -1446,19 +1446,19 @@ impl<'a> /*trait*/ QAccessibleEvent_child<i32> for () {
 
   // proto:  void QAccessibleEvent::~QAccessibleEvent();
 impl /*struct*/ QAccessibleEvent {
-  pub fn Free<RetType, T: QAccessibleEvent_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QAccessibleEvent_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleEvent_Free<RetType> {
-  fn Free(self , rsthis: & QAccessibleEvent) -> RetType;
+pub trait QAccessibleEvent_free<RetType> {
+  fn free(self , rsthis: & QAccessibleEvent) -> RetType;
 }
 
   // proto:  void QAccessibleEvent::~QAccessibleEvent();
-impl<'a> /*trait*/ QAccessibleEvent_Free<()> for () {
-  fn Free(self , rsthis: & QAccessibleEvent) -> () {
+impl<'a> /*trait*/ QAccessibleEvent_free<()> for () {
+  fn free(self , rsthis: & QAccessibleEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAccessibleEventD0Ev()};
      unsafe {_ZN16QAccessibleEventD0Ev(rsthis.qclsinst)};
@@ -1761,19 +1761,19 @@ impl<'a> /*trait*/ QAccessibleActionInterface_nextPageAction_s<QString> for () {
 
   // proto:  void QAccessibleActionInterface::~QAccessibleActionInterface();
 impl /*struct*/ QAccessibleActionInterface {
-  pub fn Free<RetType, T: QAccessibleActionInterface_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QAccessibleActionInterface_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleActionInterface_Free<RetType> {
-  fn Free(self , rsthis: & QAccessibleActionInterface) -> RetType;
+pub trait QAccessibleActionInterface_free<RetType> {
+  fn free(self , rsthis: & QAccessibleActionInterface) -> RetType;
 }
 
   // proto:  void QAccessibleActionInterface::~QAccessibleActionInterface();
-impl<'a> /*trait*/ QAccessibleActionInterface_Free<()> for () {
-  fn Free(self , rsthis: & QAccessibleActionInterface) -> () {
+impl<'a> /*trait*/ QAccessibleActionInterface_free<()> for () {
+  fn free(self , rsthis: & QAccessibleActionInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QAccessibleActionInterfaceD0Ev()};
      unsafe {_ZN26QAccessibleActionInterfaceD0Ev(rsthis.qclsinst)};
@@ -2387,19 +2387,19 @@ impl<'a> /*trait*/ QAccessibleInterface_backgroundColor<QColor> for () {
 
   // proto:  void QAccessibleInterface::~QAccessibleInterface();
 impl /*struct*/ QAccessibleInterface {
-  pub fn Free<RetType, T: QAccessibleInterface_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QAccessibleInterface_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleInterface_Free<RetType> {
-  fn Free(self , rsthis: & QAccessibleInterface) -> RetType;
+pub trait QAccessibleInterface_free<RetType> {
+  fn free(self , rsthis: & QAccessibleInterface) -> RetType;
 }
 
   // proto:  void QAccessibleInterface::~QAccessibleInterface();
-impl<'a> /*trait*/ QAccessibleInterface_Free<()> for () {
-  fn Free(self , rsthis: & QAccessibleInterface) -> () {
+impl<'a> /*trait*/ QAccessibleInterface_free<()> for () {
+  fn free(self , rsthis: & QAccessibleInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QAccessibleInterfaceD0Ev()};
      unsafe {_ZN20QAccessibleInterfaceD0Ev(rsthis.qclsinst)};
@@ -2487,19 +2487,19 @@ impl<'a> /*trait*/ QAccessibleEditableTextInterface_deleteText<()> for (i32, i32
 
   // proto:  void QAccessibleEditableTextInterface::~QAccessibleEditableTextInterface();
 impl /*struct*/ QAccessibleEditableTextInterface {
-  pub fn Free<RetType, T: QAccessibleEditableTextInterface_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QAccessibleEditableTextInterface_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleEditableTextInterface_Free<RetType> {
-  fn Free(self , rsthis: & QAccessibleEditableTextInterface) -> RetType;
+pub trait QAccessibleEditableTextInterface_free<RetType> {
+  fn free(self , rsthis: & QAccessibleEditableTextInterface) -> RetType;
 }
 
   // proto:  void QAccessibleEditableTextInterface::~QAccessibleEditableTextInterface();
-impl<'a> /*trait*/ QAccessibleEditableTextInterface_Free<()> for () {
-  fn Free(self , rsthis: & QAccessibleEditableTextInterface) -> () {
+impl<'a> /*trait*/ QAccessibleEditableTextInterface_free<()> for () {
+  fn free(self , rsthis: & QAccessibleEditableTextInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN32QAccessibleEditableTextInterfaceD0Ev()};
      unsafe {_ZN32QAccessibleEditableTextInterfaceD0Ev(rsthis.qclsinst)};
@@ -2537,19 +2537,19 @@ impl<'a> /*trait*/ QAccessibleTableCellInterface_columnIndex<i32> for () {
 
   // proto:  void QAccessibleTableCellInterface::~QAccessibleTableCellInterface();
 impl /*struct*/ QAccessibleTableCellInterface {
-  pub fn Free<RetType, T: QAccessibleTableCellInterface_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QAccessibleTableCellInterface_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTableCellInterface_Free<RetType> {
-  fn Free(self , rsthis: & QAccessibleTableCellInterface) -> RetType;
+pub trait QAccessibleTableCellInterface_free<RetType> {
+  fn free(self , rsthis: & QAccessibleTableCellInterface) -> RetType;
 }
 
   // proto:  void QAccessibleTableCellInterface::~QAccessibleTableCellInterface();
-impl<'a> /*trait*/ QAccessibleTableCellInterface_Free<()> for () {
-  fn Free(self , rsthis: & QAccessibleTableCellInterface) -> () {
+impl<'a> /*trait*/ QAccessibleTableCellInterface_free<()> for () {
+  fn free(self , rsthis: & QAccessibleTableCellInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN29QAccessibleTableCellInterfaceD0Ev()};
      unsafe {_ZN29QAccessibleTableCellInterfaceD0Ev(rsthis.qclsinst)};
@@ -2865,19 +2865,19 @@ impl<'a> /*trait*/ QAccessibleTableInterface_selectedRowCount<i32> for () {
 
   // proto:  void QAccessibleTableInterface::~QAccessibleTableInterface();
 impl /*struct*/ QAccessibleTableInterface {
-  pub fn Free<RetType, T: QAccessibleTableInterface_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QAccessibleTableInterface_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTableInterface_Free<RetType> {
-  fn Free(self , rsthis: & QAccessibleTableInterface) -> RetType;
+pub trait QAccessibleTableInterface_free<RetType> {
+  fn free(self , rsthis: & QAccessibleTableInterface) -> RetType;
 }
 
   // proto:  void QAccessibleTableInterface::~QAccessibleTableInterface();
-impl<'a> /*trait*/ QAccessibleTableInterface_Free<()> for () {
-  fn Free(self , rsthis: & QAccessibleTableInterface) -> () {
+impl<'a> /*trait*/ QAccessibleTableInterface_free<()> for () {
+  fn free(self , rsthis: & QAccessibleTableInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN25QAccessibleTableInterfaceD0Ev()};
      unsafe {_ZN25QAccessibleTableInterfaceD0Ev(rsthis.qclsinst)};
@@ -3259,20 +3259,20 @@ impl<'a> /*trait*/ QAccessibleTextUpdateEvent_textInserted<QString> for () {
 
   // proto:  void QAccessibleTextUpdateEvent::QAccessibleTextUpdateEvent(QAccessibleInterface * iface, int position, const QString & oldText, const QString & text);
 impl /*struct*/ QAccessibleTextUpdateEvent {
-  pub fn New<T: QAccessibleTextUpdateEvent_New>(value: T) -> QAccessibleTextUpdateEvent {
-    let rsthis = value.New();
+  pub fn new<T: QAccessibleTextUpdateEvent_new>(value: T) -> QAccessibleTextUpdateEvent {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QAccessibleTextUpdateEvent_New {
-  fn New(self) -> QAccessibleTextUpdateEvent;
+pub trait QAccessibleTextUpdateEvent_new {
+  fn new(self) -> QAccessibleTextUpdateEvent;
 }
 
   // proto:  void QAccessibleTextUpdateEvent::QAccessibleTextUpdateEvent(QAccessibleInterface * iface, int position, const QString & oldText, const QString & text);
-impl<'a> /*trait*/ QAccessibleTextUpdateEvent_New for (&'a QAccessibleInterface, i32, &'a QString, &'a QString) {
-  fn New(self) -> QAccessibleTextUpdateEvent {
+impl<'a> /*trait*/ QAccessibleTextUpdateEvent_new for (&'a QAccessibleInterface, i32, &'a QString, &'a QString) {
+  fn new(self) -> QAccessibleTextUpdateEvent {
     // let qthis: *mut c_void = unsafe{calloc(1, 56)};
     // unsafe{_ZN26QAccessibleTextUpdateEventC1EP20QAccessibleInterfaceiRK7QStringS4_()};
     let ctysz: c_int = unsafe{QAccessibleTextUpdateEvent_Class_Size()};
@@ -3337,8 +3337,8 @@ impl<'a> /*trait*/ QAccessibleTextUpdateEvent_changePosition<i32> for () {
 }
 
   // proto:  void QAccessibleTextUpdateEvent::QAccessibleTextUpdateEvent(QObject * obj, int position, const QString & oldText, const QString & text);
-impl<'a> /*trait*/ QAccessibleTextUpdateEvent_New for (&'a QObject, i32, &'a QString, &'a QString) {
-  fn New(self) -> QAccessibleTextUpdateEvent {
+impl<'a> /*trait*/ QAccessibleTextUpdateEvent_new for (&'a QObject, i32, &'a QString, &'a QString) {
+  fn new(self) -> QAccessibleTextUpdateEvent {
     // let qthis: *mut c_void = unsafe{calloc(1, 56)};
     // unsafe{_ZN26QAccessibleTextUpdateEventC1EP7QObjectiRK7QStringS4_()};
     let ctysz: c_int = unsafe{QAccessibleTextUpdateEvent_Class_Size()};
@@ -3427,19 +3427,19 @@ impl<'a> /*trait*/ QAccessibleImageInterface_imagePosition<QPoint> for () {
 
   // proto:  void QAccessibleImageInterface::~QAccessibleImageInterface();
 impl /*struct*/ QAccessibleImageInterface {
-  pub fn Free<RetType, T: QAccessibleImageInterface_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QAccessibleImageInterface_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleImageInterface_Free<RetType> {
-  fn Free(self , rsthis: & QAccessibleImageInterface) -> RetType;
+pub trait QAccessibleImageInterface_free<RetType> {
+  fn free(self , rsthis: & QAccessibleImageInterface) -> RetType;
 }
 
   // proto:  void QAccessibleImageInterface::~QAccessibleImageInterface();
-impl<'a> /*trait*/ QAccessibleImageInterface_Free<()> for () {
-  fn Free(self , rsthis: & QAccessibleImageInterface) -> () {
+impl<'a> /*trait*/ QAccessibleImageInterface_free<()> for () {
+  fn free(self , rsthis: & QAccessibleImageInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN25QAccessibleImageInterfaceD0Ev()};
      unsafe {_ZN25QAccessibleImageInterfaceD0Ev(rsthis.qclsinst)};
@@ -3537,20 +3537,20 @@ impl<'a> /*trait*/ QAccessibleTextInsertEvent_changePosition<i32> for () {
 
   // proto:  void QAccessibleTextInsertEvent::QAccessibleTextInsertEvent(QAccessibleInterface * iface, int position, const QString & text);
 impl /*struct*/ QAccessibleTextInsertEvent {
-  pub fn New<T: QAccessibleTextInsertEvent_New>(value: T) -> QAccessibleTextInsertEvent {
-    let rsthis = value.New();
+  pub fn new<T: QAccessibleTextInsertEvent_new>(value: T) -> QAccessibleTextInsertEvent {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QAccessibleTextInsertEvent_New {
-  fn New(self) -> QAccessibleTextInsertEvent;
+pub trait QAccessibleTextInsertEvent_new {
+  fn new(self) -> QAccessibleTextInsertEvent;
 }
 
   // proto:  void QAccessibleTextInsertEvent::QAccessibleTextInsertEvent(QAccessibleInterface * iface, int position, const QString & text);
-impl<'a> /*trait*/ QAccessibleTextInsertEvent_New for (&'a QAccessibleInterface, i32, &'a QString) {
-  fn New(self) -> QAccessibleTextInsertEvent {
+impl<'a> /*trait*/ QAccessibleTextInsertEvent_new for (&'a QAccessibleInterface, i32, &'a QString) {
+  fn new(self) -> QAccessibleTextInsertEvent {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZN26QAccessibleTextInsertEventC1EP20QAccessibleInterfaceiRK7QString()};
     let ctysz: c_int = unsafe{QAccessibleTextInsertEvent_Class_Size()};
@@ -3567,8 +3567,8 @@ impl<'a> /*trait*/ QAccessibleTextInsertEvent_New for (&'a QAccessibleInterface,
 }
 
   // proto:  void QAccessibleTextInsertEvent::QAccessibleTextInsertEvent(QObject * obj, int position, const QString & text);
-impl<'a> /*trait*/ QAccessibleTextInsertEvent_New for (&'a QObject, i32, &'a QString) {
-  fn New(self) -> QAccessibleTextInsertEvent {
+impl<'a> /*trait*/ QAccessibleTextInsertEvent_new for (&'a QObject, i32, &'a QString) {
+  fn new(self) -> QAccessibleTextInsertEvent {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZN26QAccessibleTextInsertEventC1EP7QObjectiRK7QString()};
     let ctysz: c_int = unsafe{QAccessibleTextInsertEvent_Class_Size()};
@@ -3687,19 +3687,19 @@ impl<'a> /*trait*/ QAccessibleValueInterface_minimumValue<QVariant> for () {
 
   // proto:  void QAccessibleValueInterface::~QAccessibleValueInterface();
 impl /*struct*/ QAccessibleValueInterface {
-  pub fn Free<RetType, T: QAccessibleValueInterface_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QAccessibleValueInterface_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleValueInterface_Free<RetType> {
-  fn Free(self , rsthis: & QAccessibleValueInterface) -> RetType;
+pub trait QAccessibleValueInterface_free<RetType> {
+  fn free(self , rsthis: & QAccessibleValueInterface) -> RetType;
 }
 
   // proto:  void QAccessibleValueInterface::~QAccessibleValueInterface();
-impl<'a> /*trait*/ QAccessibleValueInterface_Free<()> for () {
-  fn Free(self , rsthis: & QAccessibleValueInterface) -> () {
+impl<'a> /*trait*/ QAccessibleValueInterface_free<()> for () {
+  fn free(self , rsthis: & QAccessibleValueInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN25QAccessibleValueInterfaceD0Ev()};
      unsafe {_ZN25QAccessibleValueInterfaceD0Ev(rsthis.qclsinst)};
@@ -3749,20 +3749,20 @@ impl AsRef<QAccessibleTextCursorEvent> for QAccessibleTextRemoveEvent {
 }
   // proto:  void QAccessibleTextRemoveEvent::QAccessibleTextRemoveEvent(QObject * obj, int position, const QString & text);
 impl /*struct*/ QAccessibleTextRemoveEvent {
-  pub fn New<T: QAccessibleTextRemoveEvent_New>(value: T) -> QAccessibleTextRemoveEvent {
-    let rsthis = value.New();
+  pub fn new<T: QAccessibleTextRemoveEvent_new>(value: T) -> QAccessibleTextRemoveEvent {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QAccessibleTextRemoveEvent_New {
-  fn New(self) -> QAccessibleTextRemoveEvent;
+pub trait QAccessibleTextRemoveEvent_new {
+  fn new(self) -> QAccessibleTextRemoveEvent;
 }
 
   // proto:  void QAccessibleTextRemoveEvent::QAccessibleTextRemoveEvent(QObject * obj, int position, const QString & text);
-impl<'a> /*trait*/ QAccessibleTextRemoveEvent_New for (&'a QObject, i32, &'a QString) {
-  fn New(self) -> QAccessibleTextRemoveEvent {
+impl<'a> /*trait*/ QAccessibleTextRemoveEvent_new for (&'a QObject, i32, &'a QString) {
+  fn new(self) -> QAccessibleTextRemoveEvent {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZN26QAccessibleTextRemoveEventC1EP7QObjectiRK7QString()};
     let ctysz: c_int = unsafe{QAccessibleTextRemoveEvent_Class_Size()};
@@ -3803,8 +3803,8 @@ impl<'a> /*trait*/ QAccessibleTextRemoveEvent_textRemoved<QString> for () {
 }
 
   // proto:  void QAccessibleTextRemoveEvent::QAccessibleTextRemoveEvent(QAccessibleInterface * iface, int position, const QString & text);
-impl<'a> /*trait*/ QAccessibleTextRemoveEvent_New for (&'a QAccessibleInterface, i32, &'a QString) {
-  fn New(self) -> QAccessibleTextRemoveEvent {
+impl<'a> /*trait*/ QAccessibleTextRemoveEvent_new for (&'a QAccessibleInterface, i32, &'a QString) {
+  fn new(self) -> QAccessibleTextRemoveEvent {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZN26QAccessibleTextRemoveEventC1EP20QAccessibleInterfaceiRK7QString()};
     let ctysz: c_int = unsafe{QAccessibleTextRemoveEvent_Class_Size()};
@@ -3885,20 +3885,20 @@ impl<'a> /*trait*/ QAccessibleTextSelectionEvent_selectionEnd<i32> for () {
 
   // proto:  void QAccessibleTextSelectionEvent::QAccessibleTextSelectionEvent(QAccessibleInterface * iface, int start, int end);
 impl /*struct*/ QAccessibleTextSelectionEvent {
-  pub fn New<T: QAccessibleTextSelectionEvent_New>(value: T) -> QAccessibleTextSelectionEvent {
-    let rsthis = value.New();
+  pub fn new<T: QAccessibleTextSelectionEvent_new>(value: T) -> QAccessibleTextSelectionEvent {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QAccessibleTextSelectionEvent_New {
-  fn New(self) -> QAccessibleTextSelectionEvent;
+pub trait QAccessibleTextSelectionEvent_new {
+  fn new(self) -> QAccessibleTextSelectionEvent;
 }
 
   // proto:  void QAccessibleTextSelectionEvent::QAccessibleTextSelectionEvent(QAccessibleInterface * iface, int start, int end);
-impl<'a> /*trait*/ QAccessibleTextSelectionEvent_New for (&'a QAccessibleInterface, i32, i32) {
-  fn New(self) -> QAccessibleTextSelectionEvent {
+impl<'a> /*trait*/ QAccessibleTextSelectionEvent_new for (&'a QAccessibleInterface, i32, i32) {
+  fn new(self) -> QAccessibleTextSelectionEvent {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZN29QAccessibleTextSelectionEventC1EP20QAccessibleInterfaceii()};
     let ctysz: c_int = unsafe{QAccessibleTextSelectionEvent_Class_Size()};
@@ -3938,8 +3938,8 @@ impl<'a> /*trait*/ QAccessibleTextSelectionEvent_selectionStart<i32> for () {
 }
 
   // proto:  void QAccessibleTextSelectionEvent::QAccessibleTextSelectionEvent(QObject * obj, int start, int end);
-impl<'a> /*trait*/ QAccessibleTextSelectionEvent_New for (&'a QObject, i32, i32) {
-  fn New(self) -> QAccessibleTextSelectionEvent {
+impl<'a> /*trait*/ QAccessibleTextSelectionEvent_new for (&'a QObject, i32, i32) {
+  fn new(self) -> QAccessibleTextSelectionEvent {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZN29QAccessibleTextSelectionEventC1EP7QObjectii()};
     let ctysz: c_int = unsafe{QAccessibleTextSelectionEvent_Class_Size()};
@@ -3998,20 +3998,20 @@ impl AsRef<QAccessibleEvent> for QAccessibleTextCursorEvent {
 }
   // proto:  void QAccessibleTextCursorEvent::QAccessibleTextCursorEvent(QAccessibleInterface * iface, int cursorPos);
 impl /*struct*/ QAccessibleTextCursorEvent {
-  pub fn New<T: QAccessibleTextCursorEvent_New>(value: T) -> QAccessibleTextCursorEvent {
-    let rsthis = value.New();
+  pub fn new<T: QAccessibleTextCursorEvent_new>(value: T) -> QAccessibleTextCursorEvent {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QAccessibleTextCursorEvent_New {
-  fn New(self) -> QAccessibleTextCursorEvent;
+pub trait QAccessibleTextCursorEvent_new {
+  fn new(self) -> QAccessibleTextCursorEvent;
 }
 
   // proto:  void QAccessibleTextCursorEvent::QAccessibleTextCursorEvent(QAccessibleInterface * iface, int cursorPos);
-impl<'a> /*trait*/ QAccessibleTextCursorEvent_New for (&'a QAccessibleInterface, i32) {
-  fn New(self) -> QAccessibleTextCursorEvent {
+impl<'a> /*trait*/ QAccessibleTextCursorEvent_new for (&'a QAccessibleInterface, i32) {
+  fn new(self) -> QAccessibleTextCursorEvent {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QAccessibleTextCursorEventC1EP20QAccessibleInterfacei()};
     let ctysz: c_int = unsafe{QAccessibleTextCursorEvent_Class_Size()};
@@ -4073,8 +4073,8 @@ impl<'a> /*trait*/ QAccessibleTextCursorEvent_cursorPosition<i32> for () {
 }
 
   // proto:  void QAccessibleTextCursorEvent::QAccessibleTextCursorEvent(QObject * obj, int cursorPos);
-impl<'a> /*trait*/ QAccessibleTextCursorEvent_New for (&'a QObject, i32) {
-  fn New(self) -> QAccessibleTextCursorEvent {
+impl<'a> /*trait*/ QAccessibleTextCursorEvent_new for (&'a QObject, i32) {
+  fn new(self) -> QAccessibleTextCursorEvent {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QAccessibleTextCursorEventC1EP7QObjecti()};
     let ctysz: c_int = unsafe{QAccessibleTextCursorEvent_Class_Size()};
@@ -4108,20 +4108,20 @@ impl AsRef<QAccessibleEvent> for QAccessibleValueChangeEvent {
 }
   // proto:  void QAccessibleValueChangeEvent::QAccessibleValueChangeEvent(QObject * obj, const QVariant & val);
 impl /*struct*/ QAccessibleValueChangeEvent {
-  pub fn New<T: QAccessibleValueChangeEvent_New>(value: T) -> QAccessibleValueChangeEvent {
-    let rsthis = value.New();
+  pub fn new<T: QAccessibleValueChangeEvent_new>(value: T) -> QAccessibleValueChangeEvent {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QAccessibleValueChangeEvent_New {
-  fn New(self) -> QAccessibleValueChangeEvent;
+pub trait QAccessibleValueChangeEvent_new {
+  fn new(self) -> QAccessibleValueChangeEvent;
 }
 
   // proto:  void QAccessibleValueChangeEvent::QAccessibleValueChangeEvent(QObject * obj, const QVariant & val);
-impl<'a> /*trait*/ QAccessibleValueChangeEvent_New for (&'a QObject, &'a QVariant) {
-  fn New(self) -> QAccessibleValueChangeEvent {
+impl<'a> /*trait*/ QAccessibleValueChangeEvent_new for (&'a QObject, &'a QVariant) {
+  fn new(self) -> QAccessibleValueChangeEvent {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZN27QAccessibleValueChangeEventC1EP7QObjectRK8QVariant()};
     let ctysz: c_int = unsafe{QAccessibleValueChangeEvent_Class_Size()};
@@ -4137,8 +4137,8 @@ impl<'a> /*trait*/ QAccessibleValueChangeEvent_New for (&'a QObject, &'a QVarian
 }
 
   // proto:  void QAccessibleValueChangeEvent::QAccessibleValueChangeEvent(QAccessibleInterface * iface, const QVariant & val);
-impl<'a> /*trait*/ QAccessibleValueChangeEvent_New for (&'a QAccessibleInterface, &'a QVariant) {
-  fn New(self) -> QAccessibleValueChangeEvent {
+impl<'a> /*trait*/ QAccessibleValueChangeEvent_new for (&'a QAccessibleInterface, &'a QVariant) {
+  fn new(self) -> QAccessibleValueChangeEvent {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZN27QAccessibleValueChangeEventC1EP20QAccessibleInterfaceRK8QVariant()};
     let ctysz: c_int = unsafe{QAccessibleValueChangeEvent_Class_Size()};

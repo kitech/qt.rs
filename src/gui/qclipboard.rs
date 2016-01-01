@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qclipboard.h
 // dst-file: /src/gui/qclipboard.rs
 //
@@ -97,19 +97,19 @@ impl AsRef<QObject> for QClipboard {
 }
   // proto:  void QClipboard::~QClipboard();
 impl /*struct*/ QClipboard {
-  pub fn Free<RetType, T: QClipboard_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QClipboard_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QClipboard_Free<RetType> {
-  fn Free(self , rsthis: & QClipboard) -> RetType;
+pub trait QClipboard_free<RetType> {
+  fn free(self , rsthis: & QClipboard) -> RetType;
 }
 
   // proto:  void QClipboard::~QClipboard();
-impl<'a> /*trait*/ QClipboard_Free<()> for () {
-  fn Free(self , rsthis: & QClipboard) -> () {
+impl<'a> /*trait*/ QClipboard_free<()> for () {
+  fn free(self , rsthis: & QClipboard) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QClipboardD0Ev()};
      unsafe {_ZN10QClipboardD0Ev(rsthis.qclsinst)};
@@ -119,20 +119,20 @@ impl<'a> /*trait*/ QClipboard_Free<()> for () {
 
   // proto:  void QClipboard::QClipboard(QObject * parent);
 impl /*struct*/ QClipboard {
-  pub fn New<T: QClipboard_New>(value: T) -> QClipboard {
-    let rsthis = value.New();
+  pub fn new<T: QClipboard_new>(value: T) -> QClipboard {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QClipboard_New {
-  fn New(self) -> QClipboard;
+pub trait QClipboard_new {
+  fn new(self) -> QClipboard;
 }
 
   // proto:  void QClipboard::QClipboard(QObject * parent);
-impl<'a> /*trait*/ QClipboard_New for (&'a QObject) {
-  fn New(self) -> QClipboard {
+impl<'a> /*trait*/ QClipboard_new for (&'a QObject) {
+  fn new(self) -> QClipboard {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QClipboardC1EP7QObject()};
     let ctysz: c_int = unsafe{QClipboard_Class_Size()};
@@ -147,8 +147,8 @@ impl<'a> /*trait*/ QClipboard_New for (&'a QObject) {
 }
 
   // proto:  void QClipboard::QClipboard(const QClipboard & );
-impl<'a> /*trait*/ QClipboard_New for (&'a QClipboard) {
-  fn New(self) -> QClipboard {
+impl<'a> /*trait*/ QClipboard_new for (&'a QClipboard) {
+  fn new(self) -> QClipboard {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QClipboardC1ERKS_()};
     let ctysz: c_int = unsafe{QClipboard_Class_Size()};
@@ -435,7 +435,7 @@ extern fn QClipboard_changed_signal_connect_cb_0(rsfptr:fn(i32), arg0: c_int) {
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QClipboard_changed_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i32), arg0: c_int) {
+extern fn QClipboard_changed_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -444,7 +444,8 @@ extern fn QClipboard_changed_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i32), ar
 impl /* trait */ QClipboard_changed_signal_connect for fn(i32) {
   fn connect(self, sigthis: QClipboard_changed_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QClipboard_changed_signal_connect_cb_0 as *mut c_void;
@@ -452,7 +453,7 @@ impl /* trait */ QClipboard_changed_signal_connect for fn(i32) {
     unsafe {QClipboard_SlotProxy_connect__ZN10QClipboard7changedENS_4ModeE(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QClipboard_changed_signal_connect for Box<fn(i32)> {
+impl /* trait */ QClipboard_changed_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QClipboard_changed_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -468,7 +469,7 @@ extern fn QClipboard_selectionChanged_signal_connect_cb_1(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QClipboard_selectionChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(), ) {
+extern fn QClipboard_selectionChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   rsfptr();
@@ -476,7 +477,8 @@ extern fn QClipboard_selectionChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn
 impl /* trait */ QClipboard_selectionChanged_signal_connect for fn() {
   fn connect(self, sigthis: QClipboard_selectionChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QClipboard_selectionChanged_signal_connect_cb_1 as *mut c_void;
@@ -484,7 +486,7 @@ impl /* trait */ QClipboard_selectionChanged_signal_connect for fn() {
     unsafe {QClipboard_SlotProxy_connect__ZN10QClipboard16selectionChangedEv(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QClipboard_selectionChanged_signal_connect for Box<fn()> {
+impl /* trait */ QClipboard_selectionChanged_signal_connect for Box<Fn()> {
   fn connect(self, sigthis: QClipboard_selectionChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -500,7 +502,7 @@ extern fn QClipboard_dataChanged_signal_connect_cb_2(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QClipboard_dataChanged_signal_connect_cb_box_2(rsfptr_raw:*mut fn(), ) {
+extern fn QClipboard_dataChanged_signal_connect_cb_box_2(rsfptr_raw:*mut Fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   rsfptr();
@@ -508,7 +510,8 @@ extern fn QClipboard_dataChanged_signal_connect_cb_box_2(rsfptr_raw:*mut fn(), )
 impl /* trait */ QClipboard_dataChanged_signal_connect for fn() {
   fn connect(self, sigthis: QClipboard_dataChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QClipboard_dataChanged_signal_connect_cb_2 as *mut c_void;
@@ -516,7 +519,7 @@ impl /* trait */ QClipboard_dataChanged_signal_connect for fn() {
     unsafe {QClipboard_SlotProxy_connect__ZN10QClipboard11dataChangedEv(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QClipboard_dataChanged_signal_connect for Box<fn()> {
+impl /* trait */ QClipboard_dataChanged_signal_connect for Box<Fn()> {
   fn connect(self, sigthis: QClipboard_dataChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -532,7 +535,7 @@ extern fn QClipboard_findBufferChanged_signal_connect_cb_3(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QClipboard_findBufferChanged_signal_connect_cb_box_3(rsfptr_raw:*mut fn(), ) {
+extern fn QClipboard_findBufferChanged_signal_connect_cb_box_3(rsfptr_raw:*mut Fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   rsfptr();
@@ -540,7 +543,8 @@ extern fn QClipboard_findBufferChanged_signal_connect_cb_box_3(rsfptr_raw:*mut f
 impl /* trait */ QClipboard_findBufferChanged_signal_connect for fn() {
   fn connect(self, sigthis: QClipboard_findBufferChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QClipboard_findBufferChanged_signal_connect_cb_3 as *mut c_void;
@@ -548,7 +552,7 @@ impl /* trait */ QClipboard_findBufferChanged_signal_connect for fn() {
     unsafe {QClipboard_SlotProxy_connect__ZN10QClipboard17findBufferChangedEv(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QClipboard_findBufferChanged_signal_connect for Box<fn()> {
+impl /* trait */ QClipboard_findBufferChanged_signal_connect for Box<Fn()> {
   fn connect(self, sigthis: QClipboard_findBufferChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qtouchdevice.h
 // dst-file: /src/gui/qtouchdevice.rs
 //
@@ -154,20 +154,20 @@ impl<'a> /*trait*/ QTouchDevice_devices_s<()> for () {
 
   // proto:  void QTouchDevice::QTouchDevice();
 impl /*struct*/ QTouchDevice {
-  pub fn New<T: QTouchDevice_New>(value: T) -> QTouchDevice {
-    let rsthis = value.New();
+  pub fn new<T: QTouchDevice_new>(value: T) -> QTouchDevice {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTouchDevice_New {
-  fn New(self) -> QTouchDevice;
+pub trait QTouchDevice_new {
+  fn new(self) -> QTouchDevice;
 }
 
   // proto:  void QTouchDevice::QTouchDevice();
-impl<'a> /*trait*/ QTouchDevice_New for () {
-  fn New(self) -> QTouchDevice {
+impl<'a> /*trait*/ QTouchDevice_new for () {
+  fn new(self) -> QTouchDevice {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTouchDeviceC1Ev()};
     let ctysz: c_int = unsafe{QTouchDevice_Class_Size()};
@@ -182,19 +182,19 @@ impl<'a> /*trait*/ QTouchDevice_New for () {
 
   // proto:  void QTouchDevice::~QTouchDevice();
 impl /*struct*/ QTouchDevice {
-  pub fn Free<RetType, T: QTouchDevice_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QTouchDevice_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QTouchDevice_Free<RetType> {
-  fn Free(self , rsthis: & QTouchDevice) -> RetType;
+pub trait QTouchDevice_free<RetType> {
+  fn free(self , rsthis: & QTouchDevice) -> RetType;
 }
 
   // proto:  void QTouchDevice::~QTouchDevice();
-impl<'a> /*trait*/ QTouchDevice_Free<()> for () {
-  fn Free(self , rsthis: & QTouchDevice) -> () {
+impl<'a> /*trait*/ QTouchDevice_free<()> for () {
+  fn free(self , rsthis: & QTouchDevice) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTouchDeviceD0Ev()};
      unsafe {_ZN12QTouchDeviceD0Ev(rsthis.qclsinst)};

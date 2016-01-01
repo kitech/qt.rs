@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qopenglpaintdevice.h
 // dst-file: /src/gui/qopenglpaintdevice.rs
 //
@@ -172,19 +172,19 @@ impl<'a> /*trait*/ QOpenGLPaintDevice_setPaintFlipped<()> for (i8) {
 
   // proto:  void QOpenGLPaintDevice::~QOpenGLPaintDevice();
 impl /*struct*/ QOpenGLPaintDevice {
-  pub fn Free<RetType, T: QOpenGLPaintDevice_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QOpenGLPaintDevice_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLPaintDevice_Free<RetType> {
-  fn Free(self , rsthis: & QOpenGLPaintDevice) -> RetType;
+pub trait QOpenGLPaintDevice_free<RetType> {
+  fn free(self , rsthis: & QOpenGLPaintDevice) -> RetType;
 }
 
   // proto:  void QOpenGLPaintDevice::~QOpenGLPaintDevice();
-impl<'a> /*trait*/ QOpenGLPaintDevice_Free<()> for () {
-  fn Free(self , rsthis: & QOpenGLPaintDevice) -> () {
+impl<'a> /*trait*/ QOpenGLPaintDevice_free<()> for () {
+  fn free(self , rsthis: & QOpenGLPaintDevice) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QOpenGLPaintDeviceD0Ev()};
      unsafe {_ZN18QOpenGLPaintDeviceD0Ev(rsthis.qclsinst)};
@@ -194,20 +194,20 @@ impl<'a> /*trait*/ QOpenGLPaintDevice_Free<()> for () {
 
   // proto:  void QOpenGLPaintDevice::QOpenGLPaintDevice(int width, int height);
 impl /*struct*/ QOpenGLPaintDevice {
-  pub fn New<T: QOpenGLPaintDevice_New>(value: T) -> QOpenGLPaintDevice {
-    let rsthis = value.New();
+  pub fn new<T: QOpenGLPaintDevice_new>(value: T) -> QOpenGLPaintDevice {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QOpenGLPaintDevice_New {
-  fn New(self) -> QOpenGLPaintDevice;
+pub trait QOpenGLPaintDevice_new {
+  fn new(self) -> QOpenGLPaintDevice;
 }
 
   // proto:  void QOpenGLPaintDevice::QOpenGLPaintDevice(int width, int height);
-impl<'a> /*trait*/ QOpenGLPaintDevice_New for (i32, i32) {
-  fn New(self) -> QOpenGLPaintDevice {
+impl<'a> /*trait*/ QOpenGLPaintDevice_new for (i32, i32) {
+  fn new(self) -> QOpenGLPaintDevice {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QOpenGLPaintDeviceC1Eii()};
     let ctysz: c_int = unsafe{QOpenGLPaintDevice_Class_Size()};
@@ -223,8 +223,8 @@ impl<'a> /*trait*/ QOpenGLPaintDevice_New for (i32, i32) {
 }
 
   // proto:  void QOpenGLPaintDevice::QOpenGLPaintDevice(const QOpenGLPaintDevice & );
-impl<'a> /*trait*/ QOpenGLPaintDevice_New for (&'a QOpenGLPaintDevice) {
-  fn New(self) -> QOpenGLPaintDevice {
+impl<'a> /*trait*/ QOpenGLPaintDevice_new for (&'a QOpenGLPaintDevice) {
+  fn new(self) -> QOpenGLPaintDevice {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QOpenGLPaintDeviceC1ERKS_()};
     let ctysz: c_int = unsafe{QOpenGLPaintDevice_Class_Size()};
@@ -284,8 +284,8 @@ impl<'a> /*trait*/ QOpenGLPaintDevice_setDevicePixelRatio<()> for (f64) {
 }
 
   // proto:  void QOpenGLPaintDevice::QOpenGLPaintDevice();
-impl<'a> /*trait*/ QOpenGLPaintDevice_New for () {
-  fn New(self) -> QOpenGLPaintDevice {
+impl<'a> /*trait*/ QOpenGLPaintDevice_new for () {
+  fn new(self) -> QOpenGLPaintDevice {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QOpenGLPaintDeviceC1Ev()};
     let ctysz: c_int = unsafe{QOpenGLPaintDevice_Class_Size()};
@@ -482,8 +482,8 @@ impl<'a> /*trait*/ QOpenGLPaintDevice_ensureActiveTarget<()> for () {
 }
 
   // proto:  void QOpenGLPaintDevice::QOpenGLPaintDevice(const QSize & size);
-impl<'a> /*trait*/ QOpenGLPaintDevice_New for (&'a QSize) {
-  fn New(self) -> QOpenGLPaintDevice {
+impl<'a> /*trait*/ QOpenGLPaintDevice_new for (&'a QSize) {
+  fn new(self) -> QOpenGLPaintDevice {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QOpenGLPaintDeviceC1ERK5QSize()};
     let ctysz: c_int = unsafe{QOpenGLPaintDevice_Class_Size()};

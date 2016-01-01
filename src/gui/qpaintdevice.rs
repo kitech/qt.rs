@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qpaintdevice.h
 // dst-file: /src/gui/qpaintdevice.rs
 //
@@ -267,20 +267,20 @@ impl<'a> /*trait*/ QPaintDevice_width<i32> for () {
 
   // proto:  void QPaintDevice::QPaintDevice(const QPaintDevice & );
 impl /*struct*/ QPaintDevice {
-  pub fn New<T: QPaintDevice_New>(value: T) -> QPaintDevice {
-    let rsthis = value.New();
+  pub fn new<T: QPaintDevice_new>(value: T) -> QPaintDevice {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QPaintDevice_New {
-  fn New(self) -> QPaintDevice;
+pub trait QPaintDevice_new {
+  fn new(self) -> QPaintDevice;
 }
 
   // proto:  void QPaintDevice::QPaintDevice(const QPaintDevice & );
-impl<'a> /*trait*/ QPaintDevice_New for (&'a QPaintDevice) {
-  fn New(self) -> QPaintDevice {
+impl<'a> /*trait*/ QPaintDevice_new for (&'a QPaintDevice) {
+  fn new(self) -> QPaintDevice {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPaintDeviceC1ERKS_()};
     let ctysz: c_int = unsafe{QPaintDevice_Class_Size()};
@@ -295,8 +295,8 @@ impl<'a> /*trait*/ QPaintDevice_New for (&'a QPaintDevice) {
 }
 
   // proto:  void QPaintDevice::QPaintDevice();
-impl<'a> /*trait*/ QPaintDevice_New for () {
-  fn New(self) -> QPaintDevice {
+impl<'a> /*trait*/ QPaintDevice_new for () {
+  fn new(self) -> QPaintDevice {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPaintDeviceC1Ev()};
     let ctysz: c_int = unsafe{QPaintDevice_Class_Size()};
@@ -427,19 +427,19 @@ impl<'a> /*trait*/ QPaintDevice_logicalDpiY<i32> for () {
 
   // proto:  void QPaintDevice::~QPaintDevice();
 impl /*struct*/ QPaintDevice {
-  pub fn Free<RetType, T: QPaintDevice_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QPaintDevice_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QPaintDevice_Free<RetType> {
-  fn Free(self , rsthis: & QPaintDevice) -> RetType;
+pub trait QPaintDevice_free<RetType> {
+  fn free(self , rsthis: & QPaintDevice) -> RetType;
 }
 
   // proto:  void QPaintDevice::~QPaintDevice();
-impl<'a> /*trait*/ QPaintDevice_Free<()> for () {
-  fn Free(self , rsthis: & QPaintDevice) -> () {
+impl<'a> /*trait*/ QPaintDevice_free<()> for () {
+  fn free(self , rsthis: & QPaintDevice) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPaintDeviceD0Ev()};
      unsafe {_ZN12QPaintDeviceD0Ev(rsthis.qclsinst)};

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qpagelayout.h
 // dst-file: /src/gui/qpagelayout.rs
 //
@@ -437,20 +437,20 @@ impl<'a> /*trait*/ QPageLayout_setTopMargin<i8> for (f64) {
 
   // proto:  void QPageLayout::QPageLayout();
 impl /*struct*/ QPageLayout {
-  pub fn New<T: QPageLayout_New>(value: T) -> QPageLayout {
-    let rsthis = value.New();
+  pub fn new<T: QPageLayout_new>(value: T) -> QPageLayout {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QPageLayout_New {
-  fn New(self) -> QPageLayout;
+pub trait QPageLayout_new {
+  fn new(self) -> QPageLayout;
 }
 
   // proto:  void QPageLayout::QPageLayout();
-impl<'a> /*trait*/ QPageLayout_New for () {
-  fn New(self) -> QPageLayout {
+impl<'a> /*trait*/ QPageLayout_new for () {
+  fn new(self) -> QPageLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPageLayoutC1Ev()};
     let ctysz: c_int = unsafe{QPageLayout_Class_Size()};
@@ -464,8 +464,8 @@ impl<'a> /*trait*/ QPageLayout_New for () {
 }
 
   // proto:  void QPageLayout::QPageLayout(const QPageLayout & other);
-impl<'a> /*trait*/ QPageLayout_New for (&'a QPageLayout) {
-  fn New(self) -> QPageLayout {
+impl<'a> /*trait*/ QPageLayout_new for (&'a QPageLayout) {
+  fn new(self) -> QPageLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPageLayoutC1ERKS_()};
     let ctysz: c_int = unsafe{QPageLayout_Class_Size()};
@@ -481,19 +481,19 @@ impl<'a> /*trait*/ QPageLayout_New for (&'a QPageLayout) {
 
   // proto:  void QPageLayout::~QPageLayout();
 impl /*struct*/ QPageLayout {
-  pub fn Free<RetType, T: QPageLayout_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QPageLayout_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QPageLayout_Free<RetType> {
-  fn Free(self , rsthis: & QPageLayout) -> RetType;
+pub trait QPageLayout_free<RetType> {
+  fn free(self , rsthis: & QPageLayout) -> RetType;
 }
 
   // proto:  void QPageLayout::~QPageLayout();
-impl<'a> /*trait*/ QPageLayout_Free<()> for () {
-  fn Free(self , rsthis: & QPageLayout) -> () {
+impl<'a> /*trait*/ QPageLayout_free<()> for () {
+  fn free(self , rsthis: & QPageLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPageLayoutD0Ev()};
      unsafe {_ZN11QPageLayoutD0Ev(rsthis.qclsinst)};

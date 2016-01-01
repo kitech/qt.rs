@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qdrag.h
 // dst-file: /src/gui/qdrag.rs
 //
@@ -142,20 +142,20 @@ impl<'a> /*trait*/ QDrag_mimeData<QMimeData> for () {
 
   // proto:  void QDrag::QDrag(QObject * dragSource);
 impl /*struct*/ QDrag {
-  pub fn New<T: QDrag_New>(value: T) -> QDrag {
-    let rsthis = value.New();
+  pub fn new<T: QDrag_new>(value: T) -> QDrag {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QDrag_New {
-  fn New(self) -> QDrag;
+pub trait QDrag_new {
+  fn new(self) -> QDrag;
 }
 
   // proto:  void QDrag::QDrag(QObject * dragSource);
-impl<'a> /*trait*/ QDrag_New for (&'a QObject) {
-  fn New(self) -> QDrag {
+impl<'a> /*trait*/ QDrag_new for (&'a QObject) {
+  fn new(self) -> QDrag {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QDragC1EP7QObject()};
     let ctysz: c_int = unsafe{QDrag_Class_Size()};
@@ -171,19 +171,19 @@ impl<'a> /*trait*/ QDrag_New for (&'a QObject) {
 
   // proto:  void QDrag::~QDrag();
 impl /*struct*/ QDrag {
-  pub fn Free<RetType, T: QDrag_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QDrag_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QDrag_Free<RetType> {
-  fn Free(self , rsthis: & QDrag) -> RetType;
+pub trait QDrag_free<RetType> {
+  fn free(self , rsthis: & QDrag) -> RetType;
 }
 
   // proto:  void QDrag::~QDrag();
-impl<'a> /*trait*/ QDrag_Free<()> for () {
-  fn Free(self , rsthis: & QDrag) -> () {
+impl<'a> /*trait*/ QDrag_free<()> for () {
+  fn free(self , rsthis: & QDrag) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QDragD0Ev()};
      unsafe {_ZN5QDragD0Ev(rsthis.qclsinst)};
@@ -192,8 +192,8 @@ impl<'a> /*trait*/ QDrag_Free<()> for () {
 }
 
   // proto:  void QDrag::QDrag(const QDrag & );
-impl<'a> /*trait*/ QDrag_New for (&'a QDrag) {
-  fn New(self) -> QDrag {
+impl<'a> /*trait*/ QDrag_new for (&'a QDrag) {
+  fn new(self) -> QDrag {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QDragC1ERKS_()};
     let ctysz: c_int = unsafe{QDrag_Class_Size()};
@@ -431,7 +431,7 @@ extern fn QDrag_targetChanged_signal_connect_cb_0(rsfptr:fn(QObject), arg0: *mut
   let rsarg0 = QObject::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QDrag_targetChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QObject), arg0: *mut c_void) {
+extern fn QDrag_targetChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QObject), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QObject::inheritFrom(arg0 as u64);
@@ -440,7 +440,8 @@ extern fn QDrag_targetChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QObject
 impl /* trait */ QDrag_targetChanged_signal_connect for fn(QObject) {
   fn connect(self, sigthis: QDrag_targetChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QDrag_targetChanged_signal_connect_cb_0 as *mut c_void;
@@ -448,7 +449,7 @@ impl /* trait */ QDrag_targetChanged_signal_connect for fn(QObject) {
     unsafe {QDrag_SlotProxy_connect__ZN5QDrag13targetChangedEP7QObject(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QDrag_targetChanged_signal_connect for Box<fn(QObject)> {
+impl /* trait */ QDrag_targetChanged_signal_connect for Box<Fn(QObject)> {
   fn connect(self, sigthis: QDrag_targetChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -465,7 +466,7 @@ extern fn QDrag_actionChanged_signal_connect_cb_1(rsfptr:fn(i32), arg0: c_int) {
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QDrag_actionChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(i32), arg0: c_int) {
+extern fn QDrag_actionChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -474,7 +475,8 @@ extern fn QDrag_actionChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(i32), a
 impl /* trait */ QDrag_actionChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QDrag_actionChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QDrag_actionChanged_signal_connect_cb_1 as *mut c_void;
@@ -482,7 +484,7 @@ impl /* trait */ QDrag_actionChanged_signal_connect for fn(i32) {
     unsafe {QDrag_SlotProxy_connect__ZN5QDrag13actionChangedEN2Qt10DropActionE(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QDrag_actionChanged_signal_connect for Box<fn(i32)> {
+impl /* trait */ QDrag_actionChanged_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QDrag_actionChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

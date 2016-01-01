@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qtextlayout.h
 // dst-file: /src/gui/qtextlayout.rs
 //
@@ -578,20 +578,20 @@ impl<'a> /*trait*/ QTextLine_rect<QRectF> for () {
 
   // proto:  void QTextLine::QTextLine();
 impl /*struct*/ QTextLine {
-  pub fn New<T: QTextLine_New>(value: T) -> QTextLine {
-    let rsthis = value.New();
+  pub fn new<T: QTextLine_new>(value: T) -> QTextLine {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTextLine_New {
-  fn New(self) -> QTextLine;
+pub trait QTextLine_new {
+  fn new(self) -> QTextLine;
 }
 
   // proto:  void QTextLine::QTextLine();
-impl<'a> /*trait*/ QTextLine_New for () {
-  fn New(self) -> QTextLine {
+impl<'a> /*trait*/ QTextLine_new for () {
+  fn new(self) -> QTextLine {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextLineC1Ev()};
     let ctysz: c_int = unsafe{QTextLine_Class_Size()};
@@ -925,20 +925,20 @@ impl<'a> /*trait*/ QTextLayout_setTextOption<()> for (&'a QTextOption) {
 
   // proto:  void QTextLayout::QTextLayout(const QString & text, const QFont & font, QPaintDevice * paintdevice);
 impl /*struct*/ QTextLayout {
-  pub fn New<T: QTextLayout_New>(value: T) -> QTextLayout {
-    let rsthis = value.New();
+  pub fn new<T: QTextLayout_new>(value: T) -> QTextLayout {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTextLayout_New {
-  fn New(self) -> QTextLayout;
+pub trait QTextLayout_new {
+  fn new(self) -> QTextLayout;
 }
 
   // proto:  void QTextLayout::QTextLayout(const QString & text, const QFont & font, QPaintDevice * paintdevice);
-impl<'a> /*trait*/ QTextLayout_New for (&'a QString, &'a QFont, &'a QPaintDevice) {
-  fn New(self) -> QTextLayout {
+impl<'a> /*trait*/ QTextLayout_new for (&'a QString, &'a QFont, &'a QPaintDevice) {
+  fn new(self) -> QTextLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextLayoutC1ERK7QStringRK5QFontP12QPaintDevice()};
     let ctysz: c_int = unsafe{QTextLayout_Class_Size()};
@@ -1142,19 +1142,19 @@ impl<'a> /*trait*/ QTextLayout_lineCount<i32> for () {
 
   // proto:  void QTextLayout::~QTextLayout();
 impl /*struct*/ QTextLayout {
-  pub fn Free<RetType, T: QTextLayout_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QTextLayout_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QTextLayout_Free<RetType> {
-  fn Free(self , rsthis: & QTextLayout) -> RetType;
+pub trait QTextLayout_free<RetType> {
+  fn free(self , rsthis: & QTextLayout) -> RetType;
 }
 
   // proto:  void QTextLayout::~QTextLayout();
-impl<'a> /*trait*/ QTextLayout_Free<()> for () {
-  fn Free(self , rsthis: & QTextLayout) -> () {
+impl<'a> /*trait*/ QTextLayout_free<()> for () {
+  fn free(self , rsthis: & QTextLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextLayoutD0Ev()};
      unsafe {_ZN11QTextLayoutD0Ev(rsthis.qclsinst)};
@@ -1235,8 +1235,8 @@ impl<'a> /*trait*/ QTextLayout_rightCursorPosition<i32> for (i32) {
 }
 
   // proto:  void QTextLayout::QTextLayout(const QTextBlock & b);
-impl<'a> /*trait*/ QTextLayout_New for (&'a QTextBlock) {
-  fn New(self) -> QTextLayout {
+impl<'a> /*trait*/ QTextLayout_new for (&'a QTextBlock) {
+  fn new(self) -> QTextLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextLayoutC1ERK10QTextBlock()};
     let ctysz: c_int = unsafe{QTextLayout_Class_Size()};
@@ -1369,8 +1369,8 @@ impl<'a> /*trait*/ QTextLayout_beginLayout<()> for () {
 }
 
   // proto:  void QTextLayout::QTextLayout(const QString & text);
-impl<'a> /*trait*/ QTextLayout_New for (&'a QString) {
-  fn New(self) -> QTextLayout {
+impl<'a> /*trait*/ QTextLayout_new for (&'a QString) {
+  fn new(self) -> QTextLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextLayoutC1ERK7QString()};
     let ctysz: c_int = unsafe{QTextLayout_Class_Size()};
@@ -1524,8 +1524,8 @@ impl<'a> /*trait*/ QTextLayout_text<QString> for () {
 }
 
   // proto:  void QTextLayout::QTextLayout(const QTextLayout & );
-impl<'a> /*trait*/ QTextLayout_New for (&'a QTextLayout) {
-  fn New(self) -> QTextLayout {
+impl<'a> /*trait*/ QTextLayout_new for (&'a QTextLayout) {
+  fn new(self) -> QTextLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextLayoutC1ERKS_()};
     let ctysz: c_int = unsafe{QTextLayout_Class_Size()};
@@ -1624,8 +1624,8 @@ impl<'a> /*trait*/ QTextLayout_endLayout<()> for () {
 }
 
   // proto:  void QTextLayout::QTextLayout();
-impl<'a> /*trait*/ QTextLayout_New for () {
-  fn New(self) -> QTextLayout {
+impl<'a> /*trait*/ QTextLayout_new for () {
+  fn new(self) -> QTextLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextLayoutC1Ev()};
     let ctysz: c_int = unsafe{QTextLayout_Class_Size()};
@@ -1854,20 +1854,20 @@ impl<'a> /*trait*/ QTextInlineObject_isValid<i8> for () {
 
   // proto:  void QTextInlineObject::QTextInlineObject();
 impl /*struct*/ QTextInlineObject {
-  pub fn New<T: QTextInlineObject_New>(value: T) -> QTextInlineObject {
-    let rsthis = value.New();
+  pub fn new<T: QTextInlineObject_new>(value: T) -> QTextInlineObject {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTextInlineObject_New {
-  fn New(self) -> QTextInlineObject;
+pub trait QTextInlineObject_new {
+  fn new(self) -> QTextInlineObject;
 }
 
   // proto:  void QTextInlineObject::QTextInlineObject();
-impl<'a> /*trait*/ QTextInlineObject_New for () {
-  fn New(self) -> QTextInlineObject {
+impl<'a> /*trait*/ QTextInlineObject_new for () {
+  fn new(self) -> QTextInlineObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QTextInlineObjectC1Ev()};
     let ctysz: c_int = unsafe{QTextInlineObject_Class_Size()};

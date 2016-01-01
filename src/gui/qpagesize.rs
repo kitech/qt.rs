@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qpagesize.h
 // dst-file: /src/gui/qpagesize.rs
 //
@@ -86,20 +86,20 @@ impl /*struct*/ QPageSize {
 }
   // proto:  void QPageSize::QPageSize();
 impl /*struct*/ QPageSize {
-  pub fn New<T: QPageSize_New>(value: T) -> QPageSize {
-    let rsthis = value.New();
+  pub fn new<T: QPageSize_new>(value: T) -> QPageSize {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QPageSize_New {
-  fn New(self) -> QPageSize;
+pub trait QPageSize_new {
+  fn new(self) -> QPageSize;
 }
 
   // proto:  void QPageSize::QPageSize();
-impl<'a> /*trait*/ QPageSize_New for () {
-  fn New(self) -> QPageSize {
+impl<'a> /*trait*/ QPageSize_new for () {
+  fn new(self) -> QPageSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QPageSizeC1Ev()};
     let ctysz: c_int = unsafe{QPageSize_Class_Size()};
@@ -113,8 +113,8 @@ impl<'a> /*trait*/ QPageSize_New for () {
 }
 
   // proto:  void QPageSize::QPageSize(const QString & key, const QSize & pointSize, const QString & name);
-impl<'a> /*trait*/ QPageSize_New for (&'a QString, &'a QSize, &'a QString) {
-  fn New(self) -> QPageSize {
+impl<'a> /*trait*/ QPageSize_new for (&'a QString, &'a QSize, &'a QString) {
+  fn new(self) -> QPageSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QPageSizeC1ERK7QStringRK5QSizeS2_()};
     let ctysz: c_int = unsafe{QPageSize_Class_Size()};
@@ -132,19 +132,19 @@ impl<'a> /*trait*/ QPageSize_New for (&'a QString, &'a QSize, &'a QString) {
 
   // proto:  void QPageSize::~QPageSize();
 impl /*struct*/ QPageSize {
-  pub fn Free<RetType, T: QPageSize_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QPageSize_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QPageSize_Free<RetType> {
-  fn Free(self , rsthis: & QPageSize) -> RetType;
+pub trait QPageSize_free<RetType> {
+  fn free(self , rsthis: & QPageSize) -> RetType;
 }
 
   // proto:  void QPageSize::~QPageSize();
-impl<'a> /*trait*/ QPageSize_Free<()> for () {
-  fn Free(self , rsthis: & QPageSize) -> () {
+impl<'a> /*trait*/ QPageSize_free<()> for () {
+  fn free(self , rsthis: & QPageSize) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QPageSizeD0Ev()};
      unsafe {_ZN9QPageSizeD0Ev(rsthis.qclsinst)};
@@ -296,8 +296,8 @@ impl<'a> /*trait*/ QPageSize_sizePixels<QSize> for (i32) {
 }
 
   // proto:  void QPageSize::QPageSize(const QPageSize & other);
-impl<'a> /*trait*/ QPageSize_New for (&'a QPageSize) {
-  fn New(self) -> QPageSize {
+impl<'a> /*trait*/ QPageSize_new for (&'a QPageSize) {
+  fn new(self) -> QPageSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QPageSizeC1ERKS_()};
     let ctysz: c_int = unsafe{QPageSize_Class_Size()};
@@ -384,8 +384,8 @@ impl<'a> /*trait*/ QPageSize_rectPoints<QRect> for () {
 }
 
   // proto:  void QPageSize::QPageSize(int windowsId, const QSize & pointSize, const QString & name);
-impl<'a> /*trait*/ QPageSize_New for (i32, &'a QSize, &'a QString) {
-  fn New(self) -> QPageSize {
+impl<'a> /*trait*/ QPageSize_new for (i32, &'a QSize, &'a QString) {
+  fn new(self) -> QPageSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QPageSizeC1EiRK5QSizeRK7QString()};
     let ctysz: c_int = unsafe{QPageSize_Class_Size()};

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qpen.h
 // dst-file: /src/gui/qpen.rs
 //
@@ -95,19 +95,19 @@ impl /*struct*/ QPen {
 }
   // proto:  void QPen::~QPen();
 impl /*struct*/ QPen {
-  pub fn Free<RetType, T: QPen_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QPen_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QPen_Free<RetType> {
-  fn Free(self , rsthis: & QPen) -> RetType;
+pub trait QPen_free<RetType> {
+  fn free(self , rsthis: & QPen) -> RetType;
 }
 
   // proto:  void QPen::~QPen();
-impl<'a> /*trait*/ QPen_Free<()> for () {
-  fn Free(self , rsthis: & QPen) -> () {
+impl<'a> /*trait*/ QPen_free<()> for () {
+  fn free(self , rsthis: & QPen) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QPenD0Ev()};
      unsafe {_ZN4QPenD0Ev(rsthis.qclsinst)};
@@ -140,20 +140,20 @@ impl<'a> /*trait*/ QPen_dashOffset<f64> for () {
 
   // proto:  void QPen::QPen(const QColor & color);
 impl /*struct*/ QPen {
-  pub fn New<T: QPen_New>(value: T) -> QPen {
-    let rsthis = value.New();
+  pub fn new<T: QPen_new>(value: T) -> QPen {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QPen_New {
-  fn New(self) -> QPen;
+pub trait QPen_new {
+  fn new(self) -> QPen;
 }
 
   // proto:  void QPen::QPen(const QColor & color);
-impl<'a> /*trait*/ QPen_New for (&'a QColor) {
-  fn New(self) -> QPen {
+impl<'a> /*trait*/ QPen_new for (&'a QColor) {
+  fn new(self) -> QPen {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QPenC1ERK6QColor()};
     let ctysz: c_int = unsafe{QPen_Class_Size()};
@@ -421,8 +421,8 @@ impl<'a> /*trait*/ QPen_isDetached<i8> for () {
 }
 
   // proto:  void QPen::QPen(const QPen & pen);
-impl<'a> /*trait*/ QPen_New for (&'a QPen) {
-  fn New(self) -> QPen {
+impl<'a> /*trait*/ QPen_new for (&'a QPen) {
+  fn new(self) -> QPen {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QPenC1ERKS_()};
     let ctysz: c_int = unsafe{QPen_Class_Size()};
@@ -460,8 +460,8 @@ impl<'a> /*trait*/ QPen_setMiterLimit<()> for (f64) {
 }
 
   // proto:  void QPen::QPen();
-impl<'a> /*trait*/ QPen_New for () {
-  fn New(self) -> QPen {
+impl<'a> /*trait*/ QPen_new for () {
+  fn new(self) -> QPen {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QPenC1Ev()};
     let ctysz: c_int = unsafe{QPen_Class_Size()};

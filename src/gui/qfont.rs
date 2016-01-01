@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qfont.h
 // dst-file: /src/gui/qfont.rs
 //
@@ -546,20 +546,20 @@ impl<'a> /*trait*/ QFont_setPointSize<()> for (i32) {
 
   // proto:  void QFont::QFont(const QString & family, int pointSize, int weight, bool italic);
 impl /*struct*/ QFont {
-  pub fn New<T: QFont_New>(value: T) -> QFont {
-    let rsthis = value.New();
+  pub fn new<T: QFont_new>(value: T) -> QFont {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QFont_New {
-  fn New(self) -> QFont;
+pub trait QFont_new {
+  fn new(self) -> QFont;
 }
 
   // proto:  void QFont::QFont(const QString & family, int pointSize, int weight, bool italic);
-impl<'a> /*trait*/ QFont_New for (&'a QString, i32, i32, i8) {
-  fn New(self) -> QFont {
+impl<'a> /*trait*/ QFont_new for (&'a QString, i32, i32, i8) {
+  fn new(self) -> QFont {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFontC1ERK7QStringiib()};
     let ctysz: c_int = unsafe{QFont_Class_Size()};
@@ -694,8 +694,8 @@ impl<'a> /*trait*/ QFont_setFamily<()> for (&'a QString) {
 }
 
   // proto:  void QFont::QFont(const QFont & );
-impl<'a> /*trait*/ QFont_New for (&'a QFont) {
-  fn New(self) -> QFont {
+impl<'a> /*trait*/ QFont_new for (&'a QFont) {
+  fn new(self) -> QFont {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFontC1ERKS_()};
     let ctysz: c_int = unsafe{QFont_Class_Size()};
@@ -734,19 +734,19 @@ impl<'a> /*trait*/ QFont_overline<i8> for () {
 
   // proto:  void QFont::~QFont();
 impl /*struct*/ QFont {
-  pub fn Free<RetType, T: QFont_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QFont_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QFont_Free<RetType> {
-  fn Free(self , rsthis: & QFont) -> RetType;
+pub trait QFont_free<RetType> {
+  fn free(self , rsthis: & QFont) -> RetType;
 }
 
   // proto:  void QFont::~QFont();
-impl<'a> /*trait*/ QFont_Free<()> for () {
-  fn Free(self , rsthis: & QFont) -> () {
+impl<'a> /*trait*/ QFont_free<()> for () {
+  fn free(self , rsthis: & QFont) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFontD0Ev()};
      unsafe {_ZN5QFontD0Ev(rsthis.qclsinst)};
@@ -998,8 +998,8 @@ impl<'a> /*trait*/ QFont_styleName<QString> for () {
 }
 
   // proto:  void QFont::QFont();
-impl<'a> /*trait*/ QFont_New for () {
-  fn New(self) -> QFont {
+impl<'a> /*trait*/ QFont_new for () {
+  fn new(self) -> QFont {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFontC1Ev()};
     let ctysz: c_int = unsafe{QFont_Class_Size()};
@@ -1199,8 +1199,8 @@ impl<'a> /*trait*/ QFont_fixedPitch<i8> for () {
 }
 
   // proto:  void QFont::QFont(const QFont & , QPaintDevice * pd);
-impl<'a> /*trait*/ QFont_New for (&'a QFont, &'a QPaintDevice) {
-  fn New(self) -> QFont {
+impl<'a> /*trait*/ QFont_new for (&'a QFont, &'a QPaintDevice) {
+  fn new(self) -> QFont {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFontC1ERKS_P12QPaintDevice()};
     let ctysz: c_int = unsafe{QFont_Class_Size()};

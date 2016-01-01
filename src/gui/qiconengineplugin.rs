@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qiconengineplugin.h
 // dst-file: /src/gui/qiconengineplugin.rs
 //
@@ -92,20 +92,20 @@ impl<'a> /*trait*/ QIconEnginePlugin_metaObject<()> for () {
 
   // proto:  void QIconEnginePlugin::QIconEnginePlugin(QObject * parent);
 impl /*struct*/ QIconEnginePlugin {
-  pub fn New<T: QIconEnginePlugin_New>(value: T) -> QIconEnginePlugin {
-    let rsthis = value.New();
+  pub fn new<T: QIconEnginePlugin_new>(value: T) -> QIconEnginePlugin {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QIconEnginePlugin_New {
-  fn New(self) -> QIconEnginePlugin;
+pub trait QIconEnginePlugin_new {
+  fn new(self) -> QIconEnginePlugin;
 }
 
   // proto:  void QIconEnginePlugin::QIconEnginePlugin(QObject * parent);
-impl<'a> /*trait*/ QIconEnginePlugin_New for (&'a QObject) {
-  fn New(self) -> QIconEnginePlugin {
+impl<'a> /*trait*/ QIconEnginePlugin_new for (&'a QObject) {
+  fn new(self) -> QIconEnginePlugin {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QIconEnginePluginC1EP7QObject()};
     let ctysz: c_int = unsafe{QIconEnginePlugin_Class_Size()};
@@ -146,19 +146,19 @@ impl<'a> /*trait*/ QIconEnginePlugin_create<QIconEngine> for (&'a QString) {
 
   // proto:  void QIconEnginePlugin::~QIconEnginePlugin();
 impl /*struct*/ QIconEnginePlugin {
-  pub fn Free<RetType, T: QIconEnginePlugin_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QIconEnginePlugin_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QIconEnginePlugin_Free<RetType> {
-  fn Free(self , rsthis: & QIconEnginePlugin) -> RetType;
+pub trait QIconEnginePlugin_free<RetType> {
+  fn free(self , rsthis: & QIconEnginePlugin) -> RetType;
 }
 
   // proto:  void QIconEnginePlugin::~QIconEnginePlugin();
-impl<'a> /*trait*/ QIconEnginePlugin_Free<()> for () {
-  fn Free(self , rsthis: & QIconEnginePlugin) -> () {
+impl<'a> /*trait*/ QIconEnginePlugin_free<()> for () {
+  fn free(self , rsthis: & QIconEnginePlugin) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QIconEnginePluginD0Ev()};
      unsafe {_ZN17QIconEnginePluginD0Ev(rsthis.qclsinst)};

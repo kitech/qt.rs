@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qtextobject.h
 // dst-file: /src/gui/qtextobject.rs
 //
@@ -291,19 +291,19 @@ impl<'a> /*trait*/ QTextObject_docHandle<()> for () {
 
   // proto:  void QTextObject::~QTextObject();
 impl /*struct*/ QTextObject {
-  pub fn Free<RetType, T: QTextObject_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QTextObject_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QTextObject_Free<RetType> {
-  fn Free(self , rsthis: & QTextObject) -> RetType;
+pub trait QTextObject_free<RetType> {
+  fn free(self , rsthis: & QTextObject) -> RetType;
 }
 
   // proto:  void QTextObject::~QTextObject();
-impl<'a> /*trait*/ QTextObject_Free<()> for () {
-  fn Free(self , rsthis: & QTextObject) -> () {
+impl<'a> /*trait*/ QTextObject_free<()> for () {
+  fn free(self , rsthis: & QTextObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextObjectD0Ev()};
      unsafe {_ZN11QTextObjectD0Ev(rsthis.qclsinst)};
@@ -313,20 +313,20 @@ impl<'a> /*trait*/ QTextObject_Free<()> for () {
 
   // proto:  void QTextObject::QTextObject(const QTextObject & );
 impl /*struct*/ QTextObject {
-  pub fn New<T: QTextObject_New>(value: T) -> QTextObject {
-    let rsthis = value.New();
+  pub fn new<T: QTextObject_new>(value: T) -> QTextObject {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTextObject_New {
-  fn New(self) -> QTextObject;
+pub trait QTextObject_new {
+  fn new(self) -> QTextObject;
 }
 
   // proto:  void QTextObject::QTextObject(const QTextObject & );
-impl<'a> /*trait*/ QTextObject_New for (&'a QTextObject) {
-  fn New(self) -> QTextObject {
+impl<'a> /*trait*/ QTextObject_new for (&'a QTextObject) {
+  fn new(self) -> QTextObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextObjectC1ERKS_()};
     let ctysz: c_int = unsafe{QTextObject_Class_Size()};
@@ -435,8 +435,8 @@ impl<'a> /*trait*/ QTextObject_objectIndex<i32> for () {
 }
 
   // proto:  void QTextObject::QTextObject(QTextDocument * doc);
-impl<'a> /*trait*/ QTextObject_New for (&'a QTextDocument) {
-  fn New(self) -> QTextObject {
+impl<'a> /*trait*/ QTextObject_new for (&'a QTextDocument) {
+  fn new(self) -> QTextObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextObjectC1EP13QTextDocument()};
     let ctysz: c_int = unsafe{QTextObject_Class_Size()};
@@ -479,19 +479,19 @@ impl /*struct*/ QTextBlockUserData {
 }
   // proto:  void QTextBlockUserData::~QTextBlockUserData();
 impl /*struct*/ QTextBlockUserData {
-  pub fn Free<RetType, T: QTextBlockUserData_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QTextBlockUserData_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QTextBlockUserData_Free<RetType> {
-  fn Free(self , rsthis: & QTextBlockUserData) -> RetType;
+pub trait QTextBlockUserData_free<RetType> {
+  fn free(self , rsthis: & QTextBlockUserData) -> RetType;
 }
 
   // proto:  void QTextBlockUserData::~QTextBlockUserData();
-impl<'a> /*trait*/ QTextBlockUserData_Free<()> for () {
-  fn Free(self , rsthis: & QTextBlockUserData) -> () {
+impl<'a> /*trait*/ QTextBlockUserData_free<()> for () {
+  fn free(self , rsthis: & QTextBlockUserData) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QTextBlockUserDataD0Ev()};
      unsafe {_ZN18QTextBlockUserDataD0Ev(rsthis.qclsinst)};
@@ -552,20 +552,20 @@ impl<'a> /*trait*/ QTextFragment_position<i32> for () {
 
   // proto:  void QTextFragment::QTextFragment(const QTextFragment & o);
 impl /*struct*/ QTextFragment {
-  pub fn New<T: QTextFragment_New>(value: T) -> QTextFragment {
-    let rsthis = value.New();
+  pub fn new<T: QTextFragment_new>(value: T) -> QTextFragment {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTextFragment_New {
-  fn New(self) -> QTextFragment;
+pub trait QTextFragment_new {
+  fn new(self) -> QTextFragment;
 }
 
   // proto:  void QTextFragment::QTextFragment(const QTextFragment & o);
-impl<'a> /*trait*/ QTextFragment_New for (&'a QTextFragment) {
-  fn New(self) -> QTextFragment {
+impl<'a> /*trait*/ QTextFragment_new for (&'a QTextFragment) {
+  fn new(self) -> QTextFragment {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextFragmentC1ERKS_()};
     let ctysz: c_int = unsafe{QTextFragment_Class_Size()};
@@ -604,8 +604,8 @@ impl<'a> /*trait*/ QTextFragment_contains<i8> for (i32) {
 }
 
   // proto:  void QTextFragment::QTextFragment();
-impl<'a> /*trait*/ QTextFragment_New for () {
-  fn New(self) -> QTextFragment {
+impl<'a> /*trait*/ QTextFragment_new for () {
+  fn new(self) -> QTextFragment {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextFragmentC1Ev()};
     let ctysz: c_int = unsafe{QTextFragment_Class_Size()};
@@ -743,19 +743,19 @@ impl /*struct*/ QTextFrameLayoutData {
 }
   // proto:  void QTextFrameLayoutData::~QTextFrameLayoutData();
 impl /*struct*/ QTextFrameLayoutData {
-  pub fn Free<RetType, T: QTextFrameLayoutData_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QTextFrameLayoutData_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QTextFrameLayoutData_Free<RetType> {
-  fn Free(self , rsthis: & QTextFrameLayoutData) -> RetType;
+pub trait QTextFrameLayoutData_free<RetType> {
+  fn free(self , rsthis: & QTextFrameLayoutData) -> RetType;
 }
 
   // proto:  void QTextFrameLayoutData::~QTextFrameLayoutData();
-impl<'a> /*trait*/ QTextFrameLayoutData_Free<()> for () {
-  fn Free(self , rsthis: & QTextFrameLayoutData) -> () {
+impl<'a> /*trait*/ QTextFrameLayoutData_free<()> for () {
+  fn free(self , rsthis: & QTextFrameLayoutData) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QTextFrameLayoutDataD0Ev()};
      unsafe {_ZN20QTextFrameLayoutDataD0Ev(rsthis.qclsinst)};
@@ -865,20 +865,20 @@ impl<'a> /*trait*/ QTextBlock_userData<QTextBlockUserData> for () {
 
   // proto:  void QTextBlock::QTextBlock(const QTextBlock & o);
 impl /*struct*/ QTextBlock {
-  pub fn New<T: QTextBlock_New>(value: T) -> QTextBlock {
-    let rsthis = value.New();
+  pub fn new<T: QTextBlock_new>(value: T) -> QTextBlock {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTextBlock_New {
-  fn New(self) -> QTextBlock;
+pub trait QTextBlock_new {
+  fn new(self) -> QTextBlock;
 }
 
   // proto:  void QTextBlock::QTextBlock(const QTextBlock & o);
-impl<'a> /*trait*/ QTextBlock_New for (&'a QTextBlock) {
-  fn New(self) -> QTextBlock {
+impl<'a> /*trait*/ QTextBlock_new for (&'a QTextBlock) {
+  fn new(self) -> QTextBlock {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextBlockC1ERKS_()};
     let ctysz: c_int = unsafe{QTextBlock_Class_Size()};
@@ -1426,8 +1426,8 @@ impl<'a> /*trait*/ QTextBlock_blockFormat<QTextBlockFormat> for () {
 }
 
   // proto:  void QTextBlock::QTextBlock();
-impl<'a> /*trait*/ QTextBlock_New for () {
-  fn New(self) -> QTextBlock {
+impl<'a> /*trait*/ QTextBlock_new for () {
+  fn new(self) -> QTextBlock {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextBlockC1Ev()};
     let ctysz: c_int = unsafe{QTextBlock_Class_Size()};
@@ -1506,20 +1506,20 @@ impl AsRef<QTextObject> for QTextBlockGroup {
 }
   // proto:  void QTextBlockGroup::QTextBlockGroup(const QTextBlockGroup & );
 impl /*struct*/ QTextBlockGroup {
-  pub fn New<T: QTextBlockGroup_New>(value: T) -> QTextBlockGroup {
-    let rsthis = value.New();
+  pub fn new<T: QTextBlockGroup_new>(value: T) -> QTextBlockGroup {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTextBlockGroup_New {
-  fn New(self) -> QTextBlockGroup;
+pub trait QTextBlockGroup_new {
+  fn new(self) -> QTextBlockGroup;
 }
 
   // proto:  void QTextBlockGroup::QTextBlockGroup(const QTextBlockGroup & );
-impl<'a> /*trait*/ QTextBlockGroup_New for (&'a QTextBlockGroup) {
-  fn New(self) -> QTextBlockGroup {
+impl<'a> /*trait*/ QTextBlockGroup_new for (&'a QTextBlockGroup) {
+  fn new(self) -> QTextBlockGroup {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextBlockGroupC1ERKS_()};
     let ctysz: c_int = unsafe{QTextBlockGroup_Class_Size()};
@@ -1557,19 +1557,19 @@ impl<'a> /*trait*/ QTextBlockGroup_metaObject<()> for () {
 
   // proto:  void QTextBlockGroup::~QTextBlockGroup();
 impl /*struct*/ QTextBlockGroup {
-  pub fn Free<RetType, T: QTextBlockGroup_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QTextBlockGroup_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QTextBlockGroup_Free<RetType> {
-  fn Free(self , rsthis: & QTextBlockGroup) -> RetType;
+pub trait QTextBlockGroup_free<RetType> {
+  fn free(self , rsthis: & QTextBlockGroup) -> RetType;
 }
 
   // proto:  void QTextBlockGroup::~QTextBlockGroup();
-impl<'a> /*trait*/ QTextBlockGroup_Free<()> for () {
-  fn Free(self , rsthis: & QTextBlockGroup) -> () {
+impl<'a> /*trait*/ QTextBlockGroup_free<()> for () {
+  fn free(self , rsthis: & QTextBlockGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextBlockGroupD0Ev()};
      unsafe {_ZN15QTextBlockGroupD0Ev(rsthis.qclsinst)};
@@ -1578,8 +1578,8 @@ impl<'a> /*trait*/ QTextBlockGroup_Free<()> for () {
 }
 
   // proto:  void QTextBlockGroup::QTextBlockGroup(QTextDocument * doc);
-impl<'a> /*trait*/ QTextBlockGroup_New for (&'a QTextDocument) {
-  fn New(self) -> QTextBlockGroup {
+impl<'a> /*trait*/ QTextBlockGroup_new for (&'a QTextDocument) {
+  fn new(self) -> QTextBlockGroup {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextBlockGroupC1EP13QTextDocument()};
     let ctysz: c_int = unsafe{QTextBlockGroup_Class_Size()};
@@ -1706,20 +1706,20 @@ impl<'a> /*trait*/ QTextFrame_setFrameFormat<()> for (&'a QTextFrameFormat) {
 
   // proto:  void QTextFrame::QTextFrame(const QTextFrame & );
 impl /*struct*/ QTextFrame {
-  pub fn New<T: QTextFrame_New>(value: T) -> QTextFrame {
-    let rsthis = value.New();
+  pub fn new<T: QTextFrame_new>(value: T) -> QTextFrame {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTextFrame_New {
-  fn New(self) -> QTextFrame;
+pub trait QTextFrame_new {
+  fn new(self) -> QTextFrame;
 }
 
   // proto:  void QTextFrame::QTextFrame(const QTextFrame & );
-impl<'a> /*trait*/ QTextFrame_New for (&'a QTextFrame) {
-  fn New(self) -> QTextFrame {
+impl<'a> /*trait*/ QTextFrame_new for (&'a QTextFrame) {
+  fn new(self) -> QTextFrame {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextFrameC1ERKS_()};
     let ctysz: c_int = unsafe{QTextFrame_Class_Size()};
@@ -1826,19 +1826,19 @@ impl<'a> /*trait*/ QTextFrame_childFrames<()> for () {
 
   // proto:  void QTextFrame::~QTextFrame();
 impl /*struct*/ QTextFrame {
-  pub fn Free<RetType, T: QTextFrame_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QTextFrame_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QTextFrame_Free<RetType> {
-  fn Free(self , rsthis: & QTextFrame) -> RetType;
+pub trait QTextFrame_free<RetType> {
+  fn free(self , rsthis: & QTextFrame) -> RetType;
 }
 
   // proto:  void QTextFrame::~QTextFrame();
-impl<'a> /*trait*/ QTextFrame_Free<()> for () {
-  fn Free(self , rsthis: & QTextFrame) -> () {
+impl<'a> /*trait*/ QTextFrame_free<()> for () {
+  fn free(self , rsthis: & QTextFrame) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextFrameD0Ev()};
      unsafe {_ZN10QTextFrameD0Ev(rsthis.qclsinst)};
@@ -1871,8 +1871,8 @@ impl<'a> /*trait*/ QTextFrame_lastCursorPosition<QTextCursor> for () {
 }
 
   // proto:  void QTextFrame::QTextFrame(QTextDocument * doc);
-impl<'a> /*trait*/ QTextFrame_New for (&'a QTextDocument) {
-  fn New(self) -> QTextFrame {
+impl<'a> /*trait*/ QTextFrame_new for (&'a QTextDocument) {
+  fn new(self) -> QTextFrame {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextFrameC1EP13QTextDocument()};
     let ctysz: c_int = unsafe{QTextFrame_Class_Size()};

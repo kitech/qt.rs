@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qopenglwindow.h
 // dst-file: /src/gui/qopenglwindow.rs
 //
@@ -134,20 +134,20 @@ impl<'a> /*trait*/ QOpenGLWindow_grabFramebuffer<QImage> for () {
 
   // proto:  void QOpenGLWindow::QOpenGLWindow(const QOpenGLWindow & );
 impl /*struct*/ QOpenGLWindow {
-  pub fn New<T: QOpenGLWindow_New>(value: T) -> QOpenGLWindow {
-    let rsthis = value.New();
+  pub fn new<T: QOpenGLWindow_new>(value: T) -> QOpenGLWindow {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QOpenGLWindow_New {
-  fn New(self) -> QOpenGLWindow;
+pub trait QOpenGLWindow_new {
+  fn new(self) -> QOpenGLWindow;
 }
 
   // proto:  void QOpenGLWindow::QOpenGLWindow(const QOpenGLWindow & );
-impl<'a> /*trait*/ QOpenGLWindow_New for (&'a QOpenGLWindow) {
-  fn New(self) -> QOpenGLWindow {
+impl<'a> /*trait*/ QOpenGLWindow_new for (&'a QOpenGLWindow) {
+  fn new(self) -> QOpenGLWindow {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLWindowC1ERKS_()};
     let ctysz: c_int = unsafe{QOpenGLWindow_Class_Size()};
@@ -296,19 +296,19 @@ impl<'a> /*trait*/ QOpenGLWindow_defaultFramebufferObject<u32> for () {
 
   // proto:  void QOpenGLWindow::~QOpenGLWindow();
 impl /*struct*/ QOpenGLWindow {
-  pub fn Free<RetType, T: QOpenGLWindow_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QOpenGLWindow_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLWindow_Free<RetType> {
-  fn Free(self , rsthis: & QOpenGLWindow) -> RetType;
+pub trait QOpenGLWindow_free<RetType> {
+  fn free(self , rsthis: & QOpenGLWindow) -> RetType;
 }
 
   // proto:  void QOpenGLWindow::~QOpenGLWindow();
-impl<'a> /*trait*/ QOpenGLWindow_Free<()> for () {
-  fn Free(self , rsthis: & QOpenGLWindow) -> () {
+impl<'a> /*trait*/ QOpenGLWindow_free<()> for () {
+  fn free(self , rsthis: & QOpenGLWindow) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLWindowD0Ev()};
      unsafe {_ZN13QOpenGLWindowD0Ev(rsthis.qclsinst)};
@@ -359,7 +359,7 @@ extern fn QOpenGLWindow_frameSwapped_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QOpenGLWindow_frameSwapped_signal_connect_cb_box_0(rsfptr_raw:*mut fn(), ) {
+extern fn QOpenGLWindow_frameSwapped_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   rsfptr();
@@ -367,7 +367,8 @@ extern fn QOpenGLWindow_frameSwapped_signal_connect_cb_box_0(rsfptr_raw:*mut fn(
 impl /* trait */ QOpenGLWindow_frameSwapped_signal_connect for fn() {
   fn connect(self, sigthis: QOpenGLWindow_frameSwapped_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QOpenGLWindow_frameSwapped_signal_connect_cb_0 as *mut c_void;
@@ -375,7 +376,7 @@ impl /* trait */ QOpenGLWindow_frameSwapped_signal_connect for fn() {
     unsafe {QOpenGLWindow_SlotProxy_connect__ZN13QOpenGLWindow12frameSwappedEv(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QOpenGLWindow_frameSwapped_signal_connect for Box<fn()> {
+impl /* trait */ QOpenGLWindow_frameSwapped_signal_connect for Box<Fn()> {
   fn connect(self, sigthis: QOpenGLWindow_frameSwapped_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

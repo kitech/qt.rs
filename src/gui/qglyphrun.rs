@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qglyphrun.h
 // dst-file: /src/gui/qglyphrun.rs
 //
@@ -93,19 +93,19 @@ impl /*struct*/ QGlyphRun {
 }
   // proto:  void QGlyphRun::~QGlyphRun();
 impl /*struct*/ QGlyphRun {
-  pub fn Free<RetType, T: QGlyphRun_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QGlyphRun_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QGlyphRun_Free<RetType> {
-  fn Free(self , rsthis: & QGlyphRun) -> RetType;
+pub trait QGlyphRun_free<RetType> {
+  fn free(self , rsthis: & QGlyphRun) -> RetType;
 }
 
   // proto:  void QGlyphRun::~QGlyphRun();
-impl<'a> /*trait*/ QGlyphRun_Free<()> for () {
-  fn Free(self , rsthis: & QGlyphRun) -> () {
+impl<'a> /*trait*/ QGlyphRun_free<()> for () {
+  fn free(self , rsthis: & QGlyphRun) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QGlyphRunD0Ev()};
      unsafe {_ZN9QGlyphRunD0Ev(rsthis.qclsinst)};
@@ -322,20 +322,20 @@ impl<'a> /*trait*/ QGlyphRun_strikeOut<i8> for () {
 
   // proto:  void QGlyphRun::QGlyphRun();
 impl /*struct*/ QGlyphRun {
-  pub fn New<T: QGlyphRun_New>(value: T) -> QGlyphRun {
-    let rsthis = value.New();
+  pub fn new<T: QGlyphRun_new>(value: T) -> QGlyphRun {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QGlyphRun_New {
-  fn New(self) -> QGlyphRun;
+pub trait QGlyphRun_new {
+  fn new(self) -> QGlyphRun;
 }
 
   // proto:  void QGlyphRun::QGlyphRun();
-impl<'a> /*trait*/ QGlyphRun_New for () {
-  fn New(self) -> QGlyphRun {
+impl<'a> /*trait*/ QGlyphRun_new for () {
+  fn new(self) -> QGlyphRun {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QGlyphRunC1Ev()};
     let ctysz: c_int = unsafe{QGlyphRun_Class_Size()};
@@ -396,8 +396,8 @@ impl<'a> /*trait*/ QGlyphRun_setRawFont<()> for (&'a QRawFont) {
 }
 
   // proto:  void QGlyphRun::QGlyphRun(const QGlyphRun & other);
-impl<'a> /*trait*/ QGlyphRun_New for (&'a QGlyphRun) {
-  fn New(self) -> QGlyphRun {
+impl<'a> /*trait*/ QGlyphRun_new for (&'a QGlyphRun) {
+  fn new(self) -> QGlyphRun {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QGlyphRunC1ERKS_()};
     let ctysz: c_int = unsafe{QGlyphRun_Class_Size()};

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qopengltexture.h
 // dst-file: /src/gui/qopengltexture.rs
 //
@@ -1093,19 +1093,19 @@ impl<'a> /*trait*/ QOpenGLTexture_allocateStorage<()> for () {
 
   // proto:  void QOpenGLTexture::~QOpenGLTexture();
 impl /*struct*/ QOpenGLTexture {
-  pub fn Free<RetType, T: QOpenGLTexture_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QOpenGLTexture_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLTexture_Free<RetType> {
-  fn Free(self , rsthis: & QOpenGLTexture) -> RetType;
+pub trait QOpenGLTexture_free<RetType> {
+  fn free(self , rsthis: & QOpenGLTexture) -> RetType;
 }
 
   // proto:  void QOpenGLTexture::~QOpenGLTexture();
-impl<'a> /*trait*/ QOpenGLTexture_Free<()> for () {
-  fn Free(self , rsthis: & QOpenGLTexture) -> () {
+impl<'a> /*trait*/ QOpenGLTexture_free<()> for () {
+  fn free(self , rsthis: & QOpenGLTexture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QOpenGLTextureD0Ev()};
      unsafe {_ZN14QOpenGLTextureD0Ev(rsthis.qclsinst)};
@@ -1380,20 +1380,20 @@ impl<'a> /*trait*/ QOpenGLTexture_borderColor<QColor> for () {
 
   // proto:  void QOpenGLTexture::QOpenGLTexture(const QOpenGLTexture & );
 impl /*struct*/ QOpenGLTexture {
-  pub fn New<T: QOpenGLTexture_New>(value: T) -> QOpenGLTexture {
-    let rsthis = value.New();
+  pub fn new<T: QOpenGLTexture_new>(value: T) -> QOpenGLTexture {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QOpenGLTexture_New {
-  fn New(self) -> QOpenGLTexture;
+pub trait QOpenGLTexture_new {
+  fn new(self) -> QOpenGLTexture;
 }
 
   // proto:  void QOpenGLTexture::QOpenGLTexture(const QOpenGLTexture & );
-impl<'a> /*trait*/ QOpenGLTexture_New for (&'a QOpenGLTexture) {
-  fn New(self) -> QOpenGLTexture {
+impl<'a> /*trait*/ QOpenGLTexture_new for (&'a QOpenGLTexture) {
+  fn new(self) -> QOpenGLTexture {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QOpenGLTextureC1ERKS_()};
     let ctysz: c_int = unsafe{QOpenGLTexture_Class_Size()};

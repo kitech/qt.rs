@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qaccessiblebridge.h
 // dst-file: /src/gui/qaccessiblebridge.rs
 //
@@ -86,20 +86,20 @@ impl AsRef<QObject> for QAccessibleBridgePlugin {
 }
   // proto:  void QAccessibleBridgePlugin::QAccessibleBridgePlugin(QObject * parent);
 impl /*struct*/ QAccessibleBridgePlugin {
-  pub fn New<T: QAccessibleBridgePlugin_New>(value: T) -> QAccessibleBridgePlugin {
-    let rsthis = value.New();
+  pub fn new<T: QAccessibleBridgePlugin_new>(value: T) -> QAccessibleBridgePlugin {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QAccessibleBridgePlugin_New {
-  fn New(self) -> QAccessibleBridgePlugin;
+pub trait QAccessibleBridgePlugin_new {
+  fn new(self) -> QAccessibleBridgePlugin;
 }
 
   // proto:  void QAccessibleBridgePlugin::QAccessibleBridgePlugin(QObject * parent);
-impl<'a> /*trait*/ QAccessibleBridgePlugin_New for (&'a QObject) {
-  fn New(self) -> QAccessibleBridgePlugin {
+impl<'a> /*trait*/ QAccessibleBridgePlugin_new for (&'a QObject) {
+  fn new(self) -> QAccessibleBridgePlugin {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QAccessibleBridgePluginC1EP7QObject()};
     let ctysz: c_int = unsafe{QAccessibleBridgePlugin_Class_Size()};
@@ -140,19 +140,19 @@ impl<'a> /*trait*/ QAccessibleBridgePlugin_create<QAccessibleBridge> for (&'a QS
 
   // proto:  void QAccessibleBridgePlugin::~QAccessibleBridgePlugin();
 impl /*struct*/ QAccessibleBridgePlugin {
-  pub fn Free<RetType, T: QAccessibleBridgePlugin_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QAccessibleBridgePlugin_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleBridgePlugin_Free<RetType> {
-  fn Free(self , rsthis: & QAccessibleBridgePlugin) -> RetType;
+pub trait QAccessibleBridgePlugin_free<RetType> {
+  fn free(self , rsthis: & QAccessibleBridgePlugin) -> RetType;
 }
 
   // proto:  void QAccessibleBridgePlugin::~QAccessibleBridgePlugin();
-impl<'a> /*trait*/ QAccessibleBridgePlugin_Free<()> for () {
-  fn Free(self , rsthis: & QAccessibleBridgePlugin) -> () {
+impl<'a> /*trait*/ QAccessibleBridgePlugin_free<()> for () {
+  fn free(self , rsthis: & QAccessibleBridgePlugin) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QAccessibleBridgePluginD0Ev()};
      unsafe {_ZN23QAccessibleBridgePluginD0Ev(rsthis.qclsinst)};
@@ -189,19 +189,19 @@ impl /*struct*/ QAccessibleBridge {
 }
   // proto:  void QAccessibleBridge::~QAccessibleBridge();
 impl /*struct*/ QAccessibleBridge {
-  pub fn Free<RetType, T: QAccessibleBridge_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QAccessibleBridge_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleBridge_Free<RetType> {
-  fn Free(self , rsthis: & QAccessibleBridge) -> RetType;
+pub trait QAccessibleBridge_free<RetType> {
+  fn free(self , rsthis: & QAccessibleBridge) -> RetType;
 }
 
   // proto:  void QAccessibleBridge::~QAccessibleBridge();
-impl<'a> /*trait*/ QAccessibleBridge_Free<()> for () {
-  fn Free(self , rsthis: & QAccessibleBridge) -> () {
+impl<'a> /*trait*/ QAccessibleBridge_free<()> for () {
+  fn free(self , rsthis: & QAccessibleBridge) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAccessibleBridgeD0Ev()};
      unsafe {_ZN17QAccessibleBridgeD0Ev(rsthis.qclsinst)};

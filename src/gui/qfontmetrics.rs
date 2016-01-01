@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qfontmetrics.h
 // dst-file: /src/gui/qfontmetrics.rs
 //
@@ -221,19 +221,19 @@ impl<'a> /*trait*/ QFontMetrics_maxWidth<i32> for () {
 
   // proto:  void QFontMetrics::~QFontMetrics();
 impl /*struct*/ QFontMetrics {
-  pub fn Free<RetType, T: QFontMetrics_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QFontMetrics_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QFontMetrics_Free<RetType> {
-  fn Free(self , rsthis: & QFontMetrics) -> RetType;
+pub trait QFontMetrics_free<RetType> {
+  fn free(self , rsthis: & QFontMetrics) -> RetType;
 }
 
   // proto:  void QFontMetrics::~QFontMetrics();
-impl<'a> /*trait*/ QFontMetrics_Free<()> for () {
-  fn Free(self , rsthis: & QFontMetrics) -> () {
+impl<'a> /*trait*/ QFontMetrics_free<()> for () {
+  fn free(self , rsthis: & QFontMetrics) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QFontMetricsD0Ev()};
      unsafe {_ZN12QFontMetricsD0Ev(rsthis.qclsinst)};
@@ -677,20 +677,20 @@ impl<'a> /*trait*/ QFontMetrics_lineSpacing<i32> for () {
 
   // proto:  void QFontMetrics::QFontMetrics(const QFontMetrics & );
 impl /*struct*/ QFontMetrics {
-  pub fn New<T: QFontMetrics_New>(value: T) -> QFontMetrics {
-    let rsthis = value.New();
+  pub fn new<T: QFontMetrics_new>(value: T) -> QFontMetrics {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QFontMetrics_New {
-  fn New(self) -> QFontMetrics;
+pub trait QFontMetrics_new {
+  fn new(self) -> QFontMetrics;
 }
 
   // proto:  void QFontMetrics::QFontMetrics(const QFontMetrics & );
-impl<'a> /*trait*/ QFontMetrics_New for (&'a QFontMetrics) {
-  fn New(self) -> QFontMetrics {
+impl<'a> /*trait*/ QFontMetrics_new for (&'a QFontMetrics) {
+  fn new(self) -> QFontMetrics {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QFontMetricsC1ERKS_()};
     let ctysz: c_int = unsafe{QFontMetrics_Class_Size()};
@@ -705,8 +705,8 @@ impl<'a> /*trait*/ QFontMetrics_New for (&'a QFontMetrics) {
 }
 
   // proto:  void QFontMetrics::QFontMetrics(const QFont & , QPaintDevice * pd);
-impl<'a> /*trait*/ QFontMetrics_New for (&'a QFont, &'a QPaintDevice) {
-  fn New(self) -> QFontMetrics {
+impl<'a> /*trait*/ QFontMetrics_new for (&'a QFont, &'a QPaintDevice) {
+  fn new(self) -> QFontMetrics {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QFontMetricsC1ERK5QFontP12QPaintDevice()};
     let ctysz: c_int = unsafe{QFontMetrics_Class_Size()};
@@ -781,8 +781,8 @@ impl<'a> /*trait*/ QFontMetrics_boundingRect<QRect> for (QChar) {
 }
 
   // proto:  void QFontMetrics::QFontMetrics(const QFont & );
-impl<'a> /*trait*/ QFontMetrics_New for (&'a QFont) {
-  fn New(self) -> QFontMetrics {
+impl<'a> /*trait*/ QFontMetrics_new for (&'a QFont) {
+  fn new(self) -> QFontMetrics {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QFontMetricsC1ERK5QFont()};
     let ctysz: c_int = unsafe{QFontMetrics_Class_Size()};
@@ -1007,20 +1007,20 @@ impl<'a> /*trait*/ QFontMetricsF_minRightBearing<f64> for () {
 
   // proto:  void QFontMetricsF::QFontMetricsF(const QFontMetricsF & );
 impl /*struct*/ QFontMetricsF {
-  pub fn New<T: QFontMetricsF_New>(value: T) -> QFontMetricsF {
-    let rsthis = value.New();
+  pub fn new<T: QFontMetricsF_new>(value: T) -> QFontMetricsF {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QFontMetricsF_New {
-  fn New(self) -> QFontMetricsF;
+pub trait QFontMetricsF_new {
+  fn new(self) -> QFontMetricsF;
 }
 
   // proto:  void QFontMetricsF::QFontMetricsF(const QFontMetricsF & );
-impl<'a> /*trait*/ QFontMetricsF_New for (&'a QFontMetricsF) {
-  fn New(self) -> QFontMetricsF {
+impl<'a> /*trait*/ QFontMetricsF_new for (&'a QFontMetricsF) {
+  fn new(self) -> QFontMetricsF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QFontMetricsFC1ERKS_()};
     let ctysz: c_int = unsafe{QFontMetricsF_Class_Size()};
@@ -1083,19 +1083,19 @@ impl<'a> /*trait*/ QFontMetricsF_width<f64> for (QChar) {
 
   // proto:  void QFontMetricsF::~QFontMetricsF();
 impl /*struct*/ QFontMetricsF {
-  pub fn Free<RetType, T: QFontMetricsF_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QFontMetricsF_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QFontMetricsF_Free<RetType> {
-  fn Free(self , rsthis: & QFontMetricsF) -> RetType;
+pub trait QFontMetricsF_free<RetType> {
+  fn free(self , rsthis: & QFontMetricsF) -> RetType;
 }
 
   // proto:  void QFontMetricsF::~QFontMetricsF();
-impl<'a> /*trait*/ QFontMetricsF_Free<()> for () {
-  fn Free(self , rsthis: & QFontMetricsF) -> () {
+impl<'a> /*trait*/ QFontMetricsF_free<()> for () {
+  fn free(self , rsthis: & QFontMetricsF) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QFontMetricsFD0Ev()};
      unsafe {_ZN13QFontMetricsFD0Ev(rsthis.qclsinst)};
@@ -1334,8 +1334,8 @@ impl<'a> /*trait*/ QFontMetricsF_lineWidth<f64> for () {
 }
 
   // proto:  void QFontMetricsF::QFontMetricsF(const QFontMetrics & );
-impl<'a> /*trait*/ QFontMetricsF_New for (&'a QFontMetrics) {
-  fn New(self) -> QFontMetricsF {
+impl<'a> /*trait*/ QFontMetricsF_new for (&'a QFontMetrics) {
+  fn new(self) -> QFontMetricsF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QFontMetricsFC1ERK12QFontMetrics()};
     let ctysz: c_int = unsafe{QFontMetricsF_Class_Size()};
@@ -1431,8 +1431,8 @@ impl<'a> /*trait*/ QFontMetricsF_averageCharWidth<f64> for () {
 }
 
   // proto:  void QFontMetricsF::QFontMetricsF(const QFont & , QPaintDevice * pd);
-impl<'a> /*trait*/ QFontMetricsF_New for (&'a QFont, &'a QPaintDevice) {
-  fn New(self) -> QFontMetricsF {
+impl<'a> /*trait*/ QFontMetricsF_new for (&'a QFont, &'a QPaintDevice) {
+  fn new(self) -> QFontMetricsF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QFontMetricsFC1ERK5QFontP12QPaintDevice()};
     let ctysz: c_int = unsafe{QFontMetricsF_Class_Size()};
@@ -1471,8 +1471,8 @@ impl<'a> /*trait*/ QFontMetricsF_leading<f64> for () {
 }
 
   // proto:  void QFontMetricsF::QFontMetricsF(const QFont & );
-impl<'a> /*trait*/ QFontMetricsF_New for (&'a QFont) {
-  fn New(self) -> QFontMetricsF {
+impl<'a> /*trait*/ QFontMetricsF_new for (&'a QFont) {
+  fn new(self) -> QFontMetricsF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QFontMetricsFC1ERK5QFont()};
     let ctysz: c_int = unsafe{QFontMetricsF_Class_Size()};

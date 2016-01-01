@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qtextformat.h
 // dst-file: /src/gui/qtextformat.rs
 //
@@ -542,20 +542,20 @@ impl<'a> /*trait*/ QTextLength_value<f64> for (f64) {
 
   // proto:  void QTextLength::QTextLength();
 impl /*struct*/ QTextLength {
-  pub fn New<T: QTextLength_New>(value: T) -> QTextLength {
-    let rsthis = value.New();
+  pub fn new<T: QTextLength_new>(value: T) -> QTextLength {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTextLength_New {
-  fn New(self) -> QTextLength;
+pub trait QTextLength_new {
+  fn new(self) -> QTextLength;
 }
 
   // proto:  void QTextLength::QTextLength();
-impl<'a> /*trait*/ QTextLength_New for () {
-  fn New(self) -> QTextLength {
+impl<'a> /*trait*/ QTextLength_new for () {
+  fn new(self) -> QTextLength {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextLengthC1Ev()};
     let ctysz: c_int = unsafe{QTextLength_Class_Size()};
@@ -610,20 +610,20 @@ impl AsRef<QTextCharFormat> for QTextImageFormat {
 }
   // proto:  void QTextImageFormat::QTextImageFormat();
 impl /*struct*/ QTextImageFormat {
-  pub fn New<T: QTextImageFormat_New>(value: T) -> QTextImageFormat {
-    let rsthis = value.New();
+  pub fn new<T: QTextImageFormat_new>(value: T) -> QTextImageFormat {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTextImageFormat_New {
-  fn New(self) -> QTextImageFormat;
+pub trait QTextImageFormat_new {
+  fn new(self) -> QTextImageFormat;
 }
 
   // proto:  void QTextImageFormat::QTextImageFormat();
-impl<'a> /*trait*/ QTextImageFormat_New for () {
-  fn New(self) -> QTextImageFormat {
+impl<'a> /*trait*/ QTextImageFormat_new for () {
+  fn new(self) -> QTextImageFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTextImageFormatC1Ev()};
     let ctysz: c_int = unsafe{QTextImageFormat_Class_Size()};
@@ -683,8 +683,8 @@ impl<'a> /*trait*/ QTextImageFormat_width<f64> for () {
 }
 
   // proto:  void QTextImageFormat::QTextImageFormat(const QTextFormat & format);
-impl<'a> /*trait*/ QTextImageFormat_New for (&'a QTextFormat) {
-  fn New(self) -> QTextImageFormat {
+impl<'a> /*trait*/ QTextImageFormat_new for (&'a QTextFormat) {
+  fn new(self) -> QTextImageFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTextImageFormatC1ERK11QTextFormat()};
     let ctysz: c_int = unsafe{QTextImageFormat_Class_Size()};
@@ -984,19 +984,19 @@ impl<'a> /*trait*/ QTextFormat_isTableCellFormat<i8> for () {
 
   // proto:  void QTextFormat::~QTextFormat();
 impl /*struct*/ QTextFormat {
-  pub fn Free<RetType, T: QTextFormat_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QTextFormat_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_Free<RetType> {
-  fn Free(self , rsthis: & QTextFormat) -> RetType;
+pub trait QTextFormat_free<RetType> {
+  fn free(self , rsthis: & QTextFormat) -> RetType;
 }
 
   // proto:  void QTextFormat::~QTextFormat();
-impl<'a> /*trait*/ QTextFormat_Free<()> for () {
-  fn Free(self , rsthis: & QTextFormat) -> () {
+impl<'a> /*trait*/ QTextFormat_free<()> for () {
+  fn free(self , rsthis: & QTextFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextFormatD0Ev()};
      unsafe {_ZN11QTextFormatD0Ev(rsthis.qclsinst)};
@@ -1029,20 +1029,20 @@ impl<'a> /*trait*/ QTextFormat_isValid<i8> for () {
 
   // proto:  void QTextFormat::QTextFormat(const QTextFormat & rhs);
 impl /*struct*/ QTextFormat {
-  pub fn New<T: QTextFormat_New>(value: T) -> QTextFormat {
-    let rsthis = value.New();
+  pub fn new<T: QTextFormat_new>(value: T) -> QTextFormat {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTextFormat_New {
-  fn New(self) -> QTextFormat;
+pub trait QTextFormat_new {
+  fn new(self) -> QTextFormat;
 }
 
   // proto:  void QTextFormat::QTextFormat(const QTextFormat & rhs);
-impl<'a> /*trait*/ QTextFormat_New for (&'a QTextFormat) {
-  fn New(self) -> QTextFormat {
+impl<'a> /*trait*/ QTextFormat_new for (&'a QTextFormat) {
+  fn new(self) -> QTextFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextFormatC1ERKS_()};
     let ctysz: c_int = unsafe{QTextFormat_Class_Size()};
@@ -1130,8 +1130,8 @@ impl<'a> /*trait*/ QTextFormat_colorProperty<QColor> for (i32) {
 }
 
   // proto:  void QTextFormat::QTextFormat();
-impl<'a> /*trait*/ QTextFormat_New for () {
-  fn New(self) -> QTextFormat {
+impl<'a> /*trait*/ QTextFormat_new for () {
+  fn new(self) -> QTextFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextFormatC1Ev()};
     let ctysz: c_int = unsafe{QTextFormat_Class_Size()};
@@ -1215,8 +1215,8 @@ impl<'a> /*trait*/ QTextFormat_isListFormat<i8> for () {
 }
 
   // proto:  void QTextFormat::QTextFormat(int type);
-impl<'a> /*trait*/ QTextFormat_New for (i32) {
-  fn New(self) -> QTextFormat {
+impl<'a> /*trait*/ QTextFormat_new for (i32) {
+  fn new(self) -> QTextFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextFormatC1Ei()};
     let ctysz: c_int = unsafe{QTextFormat_Class_Size()};
@@ -2093,20 +2093,20 @@ impl<'a> /*trait*/ QTextBlockFormat_lineHeight<f64> for () {
 
   // proto:  void QTextBlockFormat::QTextBlockFormat(const QTextFormat & fmt);
 impl /*struct*/ QTextBlockFormat {
-  pub fn New<T: QTextBlockFormat_New>(value: T) -> QTextBlockFormat {
-    let rsthis = value.New();
+  pub fn new<T: QTextBlockFormat_new>(value: T) -> QTextBlockFormat {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTextBlockFormat_New {
-  fn New(self) -> QTextBlockFormat;
+pub trait QTextBlockFormat_new {
+  fn new(self) -> QTextBlockFormat;
 }
 
   // proto:  void QTextBlockFormat::QTextBlockFormat(const QTextFormat & fmt);
-impl<'a> /*trait*/ QTextBlockFormat_New for (&'a QTextFormat) {
-  fn New(self) -> QTextBlockFormat {
+impl<'a> /*trait*/ QTextBlockFormat_new for (&'a QTextFormat) {
+  fn new(self) -> QTextBlockFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTextBlockFormatC1ERK11QTextFormat()};
     let ctysz: c_int = unsafe{QTextBlockFormat_Class_Size()};
@@ -2180,8 +2180,8 @@ impl<'a> /*trait*/ QTextBlockFormat_topMargin<f64> for () {
 }
 
   // proto:  void QTextBlockFormat::QTextBlockFormat();
-impl<'a> /*trait*/ QTextBlockFormat_New for () {
-  fn New(self) -> QTextBlockFormat {
+impl<'a> /*trait*/ QTextBlockFormat_new for () {
+  fn new(self) -> QTextBlockFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTextBlockFormatC1Ev()};
     let ctysz: c_int = unsafe{QTextBlockFormat_Class_Size()};
@@ -2860,20 +2860,20 @@ impl<'a> /*trait*/ QTextCharFormat_fontPointSize<f64> for () {
 
   // proto:  void QTextCharFormat::QTextCharFormat(const QTextFormat & fmt);
 impl /*struct*/ QTextCharFormat {
-  pub fn New<T: QTextCharFormat_New>(value: T) -> QTextCharFormat {
-    let rsthis = value.New();
+  pub fn new<T: QTextCharFormat_new>(value: T) -> QTextCharFormat {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_New {
-  fn New(self) -> QTextCharFormat;
+pub trait QTextCharFormat_new {
+  fn new(self) -> QTextCharFormat;
 }
 
   // proto:  void QTextCharFormat::QTextCharFormat(const QTextFormat & fmt);
-impl<'a> /*trait*/ QTextCharFormat_New for (&'a QTextFormat) {
-  fn New(self) -> QTextCharFormat {
+impl<'a> /*trait*/ QTextCharFormat_new for (&'a QTextFormat) {
+  fn new(self) -> QTextCharFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextCharFormatC1ERK11QTextFormat()};
     let ctysz: c_int = unsafe{QTextCharFormat_Class_Size()};
@@ -3187,8 +3187,8 @@ impl<'a> /*trait*/ QTextCharFormat_tableCellColumnSpan<i32> for () {
 }
 
   // proto:  void QTextCharFormat::QTextCharFormat();
-impl<'a> /*trait*/ QTextCharFormat_New for () {
-  fn New(self) -> QTextCharFormat {
+impl<'a> /*trait*/ QTextCharFormat_new for () {
+  fn new(self) -> QTextCharFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextCharFormatC1Ev()};
     let ctysz: c_int = unsafe{QTextCharFormat_Class_Size()};
@@ -3546,20 +3546,20 @@ impl AsRef<QTextFrameFormat> for QTextTableFormat {
 }
   // proto:  void QTextTableFormat::QTextTableFormat();
 impl /*struct*/ QTextTableFormat {
-  pub fn New<T: QTextTableFormat_New>(value: T) -> QTextTableFormat {
-    let rsthis = value.New();
+  pub fn new<T: QTextTableFormat_new>(value: T) -> QTextTableFormat {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTextTableFormat_New {
-  fn New(self) -> QTextTableFormat;
+pub trait QTextTableFormat_new {
+  fn new(self) -> QTextTableFormat;
 }
 
   // proto:  void QTextTableFormat::QTextTableFormat();
-impl<'a> /*trait*/ QTextTableFormat_New for () {
-  fn New(self) -> QTextTableFormat {
+impl<'a> /*trait*/ QTextTableFormat_new for () {
+  fn new(self) -> QTextTableFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTextTableFormatC1Ev()};
     let ctysz: c_int = unsafe{QTextTableFormat_Class_Size()};
@@ -3756,8 +3756,8 @@ impl<'a> /*trait*/ QTextTableFormat_setColumns<()> for (i32) {
 }
 
   // proto:  void QTextTableFormat::QTextTableFormat(const QTextFormat & fmt);
-impl<'a> /*trait*/ QTextTableFormat_New for (&'a QTextFormat) {
-  fn New(self) -> QTextTableFormat {
+impl<'a> /*trait*/ QTextTableFormat_new for (&'a QTextFormat) {
+  fn new(self) -> QTextTableFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTextTableFormatC1ERK11QTextFormat()};
     let ctysz: c_int = unsafe{QTextTableFormat_Class_Size()};
@@ -3858,20 +3858,20 @@ impl AsRef<QTextCharFormat> for QTextTableCellFormat {
 }
   // proto:  void QTextTableCellFormat::QTextTableCellFormat();
 impl /*struct*/ QTextTableCellFormat {
-  pub fn New<T: QTextTableCellFormat_New>(value: T) -> QTextTableCellFormat {
-    let rsthis = value.New();
+  pub fn new<T: QTextTableCellFormat_new>(value: T) -> QTextTableCellFormat {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTextTableCellFormat_New {
-  fn New(self) -> QTextTableCellFormat;
+pub trait QTextTableCellFormat_new {
+  fn new(self) -> QTextTableCellFormat;
 }
 
   // proto:  void QTextTableCellFormat::QTextTableCellFormat();
-impl<'a> /*trait*/ QTextTableCellFormat_New for () {
-  fn New(self) -> QTextTableCellFormat {
+impl<'a> /*trait*/ QTextTableCellFormat_new for () {
+  fn new(self) -> QTextTableCellFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QTextTableCellFormatC1Ev()};
     let ctysz: c_int = unsafe{QTextTableCellFormat_Class_Size()};
@@ -4046,8 +4046,8 @@ impl<'a> /*trait*/ QTextTableCellFormat_rightPadding<f64> for () {
 }
 
   // proto:  void QTextTableCellFormat::QTextTableCellFormat(const QTextFormat & fmt);
-impl<'a> /*trait*/ QTextTableCellFormat_New for (&'a QTextFormat) {
-  fn New(self) -> QTextTableCellFormat {
+impl<'a> /*trait*/ QTextTableCellFormat_new for (&'a QTextFormat) {
+  fn new(self) -> QTextTableCellFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QTextTableCellFormatC1ERK11QTextFormat()};
     let ctysz: c_int = unsafe{QTextTableCellFormat_Class_Size()};
@@ -4172,20 +4172,20 @@ impl<'a> /*trait*/ QTextListFormat_indent<i32> for () {
 
   // proto:  void QTextListFormat::QTextListFormat(const QTextFormat & fmt);
 impl /*struct*/ QTextListFormat {
-  pub fn New<T: QTextListFormat_New>(value: T) -> QTextListFormat {
-    let rsthis = value.New();
+  pub fn new<T: QTextListFormat_new>(value: T) -> QTextListFormat {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTextListFormat_New {
-  fn New(self) -> QTextListFormat;
+pub trait QTextListFormat_new {
+  fn new(self) -> QTextListFormat;
 }
 
   // proto:  void QTextListFormat::QTextListFormat(const QTextFormat & fmt);
-impl<'a> /*trait*/ QTextListFormat_New for (&'a QTextFormat) {
-  fn New(self) -> QTextListFormat {
+impl<'a> /*trait*/ QTextListFormat_new for (&'a QTextFormat) {
+  fn new(self) -> QTextListFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextListFormatC1ERK11QTextFormat()};
     let ctysz: c_int = unsafe{QTextListFormat_Class_Size()};
@@ -4247,8 +4247,8 @@ impl<'a> /*trait*/ QTextListFormat_numberSuffix<QString> for () {
 }
 
   // proto:  void QTextListFormat::QTextListFormat();
-impl<'a> /*trait*/ QTextListFormat_New for () {
-  fn New(self) -> QTextListFormat {
+impl<'a> /*trait*/ QTextListFormat_new for () {
+  fn new(self) -> QTextListFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextListFormatC1Ev()};
     let ctysz: c_int = unsafe{QTextListFormat_Class_Size()};
@@ -4789,20 +4789,20 @@ impl<'a> /*trait*/ QTextFrameFormat_width<QTextLength> for () {
 
   // proto:  void QTextFrameFormat::QTextFrameFormat(const QTextFormat & fmt);
 impl /*struct*/ QTextFrameFormat {
-  pub fn New<T: QTextFrameFormat_New>(value: T) -> QTextFrameFormat {
-    let rsthis = value.New();
+  pub fn new<T: QTextFrameFormat_new>(value: T) -> QTextFrameFormat {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTextFrameFormat_New {
-  fn New(self) -> QTextFrameFormat;
+pub trait QTextFrameFormat_new {
+  fn new(self) -> QTextFrameFormat;
 }
 
   // proto:  void QTextFrameFormat::QTextFrameFormat(const QTextFormat & fmt);
-impl<'a> /*trait*/ QTextFrameFormat_New for (&'a QTextFormat) {
-  fn New(self) -> QTextFrameFormat {
+impl<'a> /*trait*/ QTextFrameFormat_new for (&'a QTextFormat) {
+  fn new(self) -> QTextFrameFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTextFrameFormatC1ERK11QTextFormat()};
     let ctysz: c_int = unsafe{QTextFrameFormat_Class_Size()};
@@ -4886,8 +4886,8 @@ impl<'a> /*trait*/ QTextFrameFormat_border<f64> for () {
 }
 
   // proto:  void QTextFrameFormat::QTextFrameFormat();
-impl<'a> /*trait*/ QTextFrameFormat_New for () {
-  fn New(self) -> QTextFrameFormat {
+impl<'a> /*trait*/ QTextFrameFormat_new for () {
+  fn new(self) -> QTextFrameFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTextFrameFormatC1Ev()};
     let ctysz: c_int = unsafe{QTextFrameFormat_Class_Size()};

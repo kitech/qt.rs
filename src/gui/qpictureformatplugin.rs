@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qpictureformatplugin.h
 // dst-file: /src/gui/qpictureformatplugin.rs
 //
@@ -126,19 +126,19 @@ impl<'a> /*trait*/ QPictureFormatPlugin_savePicture<i8> for (&'a QString, &'a QS
 
   // proto:  void QPictureFormatPlugin::~QPictureFormatPlugin();
 impl /*struct*/ QPictureFormatPlugin {
-  pub fn Free<RetType, T: QPictureFormatPlugin_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QPictureFormatPlugin_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QPictureFormatPlugin_Free<RetType> {
-  fn Free(self , rsthis: & QPictureFormatPlugin) -> RetType;
+pub trait QPictureFormatPlugin_free<RetType> {
+  fn free(self , rsthis: & QPictureFormatPlugin) -> RetType;
 }
 
   // proto:  void QPictureFormatPlugin::~QPictureFormatPlugin();
-impl<'a> /*trait*/ QPictureFormatPlugin_Free<()> for () {
-  fn Free(self , rsthis: & QPictureFormatPlugin) -> () {
+impl<'a> /*trait*/ QPictureFormatPlugin_free<()> for () {
+  fn free(self , rsthis: & QPictureFormatPlugin) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QPictureFormatPluginD0Ev()};
      unsafe {_ZN20QPictureFormatPluginD0Ev(rsthis.qclsinst)};
@@ -148,20 +148,20 @@ impl<'a> /*trait*/ QPictureFormatPlugin_Free<()> for () {
 
   // proto:  void QPictureFormatPlugin::QPictureFormatPlugin(QObject * parent);
 impl /*struct*/ QPictureFormatPlugin {
-  pub fn New<T: QPictureFormatPlugin_New>(value: T) -> QPictureFormatPlugin {
-    let rsthis = value.New();
+  pub fn new<T: QPictureFormatPlugin_new>(value: T) -> QPictureFormatPlugin {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QPictureFormatPlugin_New {
-  fn New(self) -> QPictureFormatPlugin;
+pub trait QPictureFormatPlugin_new {
+  fn new(self) -> QPictureFormatPlugin;
 }
 
   // proto:  void QPictureFormatPlugin::QPictureFormatPlugin(QObject * parent);
-impl<'a> /*trait*/ QPictureFormatPlugin_New for (&'a QObject) {
-  fn New(self) -> QPictureFormatPlugin {
+impl<'a> /*trait*/ QPictureFormatPlugin_new for (&'a QObject) {
+  fn new(self) -> QPictureFormatPlugin {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QPictureFormatPluginC1EP7QObject()};
     let ctysz: c_int = unsafe{QPictureFormatPlugin_Class_Size()};

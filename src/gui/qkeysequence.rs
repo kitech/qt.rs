@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qkeysequence.h
 // dst-file: /src/gui/qkeysequence.rs
 //
@@ -114,20 +114,20 @@ impl<'a> /*trait*/ QKeySequence_isEmpty<i8> for () {
 
   // proto:  void QKeySequence::QKeySequence(const QKeySequence & ks);
 impl /*struct*/ QKeySequence {
-  pub fn New<T: QKeySequence_New>(value: T) -> QKeySequence {
-    let rsthis = value.New();
+  pub fn new<T: QKeySequence_new>(value: T) -> QKeySequence {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QKeySequence_New {
-  fn New(self) -> QKeySequence;
+pub trait QKeySequence_new {
+  fn new(self) -> QKeySequence;
 }
 
   // proto:  void QKeySequence::QKeySequence(const QKeySequence & ks);
-impl<'a> /*trait*/ QKeySequence_New for (&'a QKeySequence) {
-  fn New(self) -> QKeySequence {
+impl<'a> /*trait*/ QKeySequence_new for (&'a QKeySequence) {
+  fn new(self) -> QKeySequence {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QKeySequenceC1ERKS_()};
     let ctysz: c_int = unsafe{QKeySequence_Class_Size()};
@@ -142,8 +142,8 @@ impl<'a> /*trait*/ QKeySequence_New for (&'a QKeySequence) {
 }
 
   // proto:  void QKeySequence::QKeySequence(int k1, int k2, int k3, int k4);
-impl<'a> /*trait*/ QKeySequence_New for (i32, i32, i32, i32) {
-  fn New(self) -> QKeySequence {
+impl<'a> /*trait*/ QKeySequence_new for (i32, i32, i32, i32) {
+  fn new(self) -> QKeySequence {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QKeySequenceC1Eiiii()};
     let ctysz: c_int = unsafe{QKeySequence_Class_Size()};
@@ -209,8 +209,8 @@ impl<'a> /*trait*/ QKeySequence_mnemonic_s<QKeySequence> for (&'a QString) {
 }
 
   // proto:  void QKeySequence::QKeySequence();
-impl<'a> /*trait*/ QKeySequence_New for () {
-  fn New(self) -> QKeySequence {
+impl<'a> /*trait*/ QKeySequence_new for () {
+  fn new(self) -> QKeySequence {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QKeySequenceC1Ev()};
     let ctysz: c_int = unsafe{QKeySequence_Class_Size()};
@@ -225,19 +225,19 @@ impl<'a> /*trait*/ QKeySequence_New for () {
 
   // proto:  void QKeySequence::~QKeySequence();
 impl /*struct*/ QKeySequence {
-  pub fn Free<RetType, T: QKeySequence_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QKeySequence_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QKeySequence_Free<RetType> {
-  fn Free(self , rsthis: & QKeySequence) -> RetType;
+pub trait QKeySequence_free<RetType> {
+  fn free(self , rsthis: & QKeySequence) -> RetType;
 }
 
   // proto:  void QKeySequence::~QKeySequence();
-impl<'a> /*trait*/ QKeySequence_Free<()> for () {
-  fn Free(self , rsthis: & QKeySequence) -> () {
+impl<'a> /*trait*/ QKeySequence_free<()> for () {
+  fn free(self , rsthis: & QKeySequence) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QKeySequenceD0Ev()};
      unsafe {_ZN12QKeySequenceD0Ev(rsthis.qclsinst)};

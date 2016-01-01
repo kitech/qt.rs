@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qcolor.h
 // dst-file: /src/gui/qcolor.rs
 //
@@ -546,20 +546,20 @@ impl<'a> /*trait*/ QColor_toHsl<QColor> for () {
 
   // proto:  void QColor::QColor();
 impl /*struct*/ QColor {
-  pub fn New<T: QColor_New>(value: T) -> QColor {
-    let rsthis = value.New();
+  pub fn new<T: QColor_new>(value: T) -> QColor {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QColor_New {
-  fn New(self) -> QColor;
+pub trait QColor_new {
+  fn new(self) -> QColor;
 }
 
   // proto:  void QColor::QColor();
-impl<'a> /*trait*/ QColor_New for () {
-  fn New(self) -> QColor {
+impl<'a> /*trait*/ QColor_new for () {
+  fn new(self) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QColorC1Ev()};
     let ctysz: c_int = unsafe{QColor_Class_Size()};
@@ -573,8 +573,8 @@ impl<'a> /*trait*/ QColor_New for () {
 }
 
   // proto:  void QColor::QColor(const char * name);
-impl<'a> /*trait*/ QColor_New for (&'a  String) {
-  fn New(self) -> QColor {
+impl<'a> /*trait*/ QColor_new for (&'a  String) {
+  fn new(self) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QColorC1EPKc()};
     let ctysz: c_int = unsafe{QColor_Class_Size()};
@@ -1246,8 +1246,8 @@ impl<'a> /*trait*/ QColor_toHsv<QColor> for () {
 }
 
   // proto:  void QColor::QColor(const QColor & color);
-impl<'a> /*trait*/ QColor_New for (&'a QColor) {
-  fn New(self) -> QColor {
+impl<'a> /*trait*/ QColor_new for (&'a QColor) {
+  fn new(self) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QColorC1ERKS_()};
     let ctysz: c_int = unsafe{QColor_Class_Size()};
@@ -1771,8 +1771,8 @@ impl<'a> /*trait*/ QColor_setRed<()> for (i32) {
 }
 
   // proto:  void QColor::QColor(const QString & name);
-impl<'a> /*trait*/ QColor_New for (&'a QString) {
-  fn New(self) -> QColor {
+impl<'a> /*trait*/ QColor_new for (&'a QString) {
+  fn new(self) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QColorC1ERK7QString()};
     let ctysz: c_int = unsafe{QColor_Class_Size()};
@@ -1910,8 +1910,8 @@ impl<'a> /*trait*/ QColor_saturation<i32> for () {
 }
 
   // proto:  void QColor::QColor(int r, int g, int b, int a);
-impl<'a> /*trait*/ QColor_New for (i32, i32, i32, i32) {
-  fn New(self) -> QColor {
+impl<'a> /*trait*/ QColor_new for (i32, i32, i32, i32) {
+  fn new(self) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QColorC1Eiiii()};
     let ctysz: c_int = unsafe{QColor_Class_Size()};
@@ -2105,8 +2105,8 @@ impl<'a> /*trait*/ QColor_setHsl<()> for (i32, i32, i32, i32) {
 }
 
   // proto:  void QColor::QColor(QRgb rgb);
-impl<'a> /*trait*/ QColor_New for (u32) {
-  fn New(self) -> QColor {
+impl<'a> /*trait*/ QColor_new for (u32) {
+  fn new(self) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QColorC1Ej()};
     let ctysz: c_int = unsafe{QColor_Class_Size()};

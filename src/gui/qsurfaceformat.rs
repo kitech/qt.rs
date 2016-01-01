@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qsurfaceformat.h
 // dst-file: /src/gui/qsurfaceformat.rs
 //
@@ -478,20 +478,20 @@ impl<'a> /*trait*/ QSurfaceFormat_hasAlpha<i8> for () {
 
   // proto:  void QSurfaceFormat::QSurfaceFormat(const QSurfaceFormat & other);
 impl /*struct*/ QSurfaceFormat {
-  pub fn New<T: QSurfaceFormat_New>(value: T) -> QSurfaceFormat {
-    let rsthis = value.New();
+  pub fn new<T: QSurfaceFormat_new>(value: T) -> QSurfaceFormat {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QSurfaceFormat_New {
-  fn New(self) -> QSurfaceFormat;
+pub trait QSurfaceFormat_new {
+  fn new(self) -> QSurfaceFormat;
 }
 
   // proto:  void QSurfaceFormat::QSurfaceFormat(const QSurfaceFormat & other);
-impl<'a> /*trait*/ QSurfaceFormat_New for (&'a QSurfaceFormat) {
-  fn New(self) -> QSurfaceFormat {
+impl<'a> /*trait*/ QSurfaceFormat_new for (&'a QSurfaceFormat) {
+  fn new(self) -> QSurfaceFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QSurfaceFormatC1ERKS_()};
     let ctysz: c_int = unsafe{QSurfaceFormat_Class_Size()};
@@ -551,8 +551,8 @@ impl<'a> /*trait*/ QSurfaceFormat_blueBufferSize<i32> for () {
 }
 
   // proto:  void QSurfaceFormat::QSurfaceFormat();
-impl<'a> /*trait*/ QSurfaceFormat_New for () {
-  fn New(self) -> QSurfaceFormat {
+impl<'a> /*trait*/ QSurfaceFormat_new for () {
+  fn new(self) -> QSurfaceFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QSurfaceFormatC1Ev()};
     let ctysz: c_int = unsafe{QSurfaceFormat_Class_Size()};
@@ -590,19 +590,19 @@ impl<'a> /*trait*/ QSurfaceFormat_redBufferSize<i32> for () {
 
   // proto:  void QSurfaceFormat::~QSurfaceFormat();
 impl /*struct*/ QSurfaceFormat {
-  pub fn Free<RetType, T: QSurfaceFormat_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QSurfaceFormat_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QSurfaceFormat_Free<RetType> {
-  fn Free(self , rsthis: & QSurfaceFormat) -> RetType;
+pub trait QSurfaceFormat_free<RetType> {
+  fn free(self , rsthis: & QSurfaceFormat) -> RetType;
 }
 
   // proto:  void QSurfaceFormat::~QSurfaceFormat();
-impl<'a> /*trait*/ QSurfaceFormat_Free<()> for () {
-  fn Free(self , rsthis: & QSurfaceFormat) -> () {
+impl<'a> /*trait*/ QSurfaceFormat_free<()> for () {
+  fn free(self , rsthis: & QSurfaceFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QSurfaceFormatD0Ev()};
      unsafe {_ZN14QSurfaceFormatD0Ev(rsthis.qclsinst)};

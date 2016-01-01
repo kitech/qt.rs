@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qstatictext.h
 // dst-file: /src/gui/qstatictext.rs
 //
@@ -80,20 +80,20 @@ impl /*struct*/ QStaticText {
 }
   // proto:  void QStaticText::QStaticText(const QString & text);
 impl /*struct*/ QStaticText {
-  pub fn New<T: QStaticText_New>(value: T) -> QStaticText {
-    let rsthis = value.New();
+  pub fn new<T: QStaticText_new>(value: T) -> QStaticText {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QStaticText_New {
-  fn New(self) -> QStaticText;
+pub trait QStaticText_new {
+  fn new(self) -> QStaticText;
 }
 
   // proto:  void QStaticText::QStaticText(const QString & text);
-impl<'a> /*trait*/ QStaticText_New for (&'a QString) {
-  fn New(self) -> QStaticText {
+impl<'a> /*trait*/ QStaticText_new for (&'a QString) {
+  fn new(self) -> QStaticText {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QStaticTextC1ERK7QString()};
     let ctysz: c_int = unsafe{QStaticText_Class_Size()};
@@ -157,19 +157,19 @@ impl<'a> /*trait*/ QStaticText_text<QString> for () {
 
   // proto:  void QStaticText::~QStaticText();
 impl /*struct*/ QStaticText {
-  pub fn Free<RetType, T: QStaticText_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QStaticText_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QStaticText_Free<RetType> {
-  fn Free(self , rsthis: & QStaticText) -> RetType;
+pub trait QStaticText_free<RetType> {
+  fn free(self , rsthis: & QStaticText) -> RetType;
 }
 
   // proto:  void QStaticText::~QStaticText();
-impl<'a> /*trait*/ QStaticText_Free<()> for () {
-  fn Free(self , rsthis: & QStaticText) -> () {
+impl<'a> /*trait*/ QStaticText_free<()> for () {
+  fn free(self , rsthis: & QStaticText) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QStaticTextD0Ev()};
      unsafe {_ZN11QStaticTextD0Ev(rsthis.qclsinst)};
@@ -201,8 +201,8 @@ impl<'a> /*trait*/ QStaticText_setText<()> for (&'a QString) {
 }
 
   // proto:  void QStaticText::QStaticText();
-impl<'a> /*trait*/ QStaticText_New for () {
-  fn New(self) -> QStaticText {
+impl<'a> /*trait*/ QStaticText_new for () {
+  fn new(self) -> QStaticText {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QStaticTextC1Ev()};
     let ctysz: c_int = unsafe{QStaticText_Class_Size()};
@@ -356,8 +356,8 @@ impl<'a> /*trait*/ QStaticText_textOption<QTextOption> for () {
 }
 
   // proto:  void QStaticText::QStaticText(const QStaticText & other);
-impl<'a> /*trait*/ QStaticText_New for (&'a QStaticText) {
-  fn New(self) -> QStaticText {
+impl<'a> /*trait*/ QStaticText_new for (&'a QStaticText) {
+  fn new(self) -> QStaticText {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QStaticTextC1ERKS_()};
     let ctysz: c_int = unsafe{QStaticText_Class_Size()};

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qpainter.h
 // dst-file: /src/gui/qpainter.rs
 //
@@ -1550,20 +1550,20 @@ impl<'a> /*trait*/ QPainter_setWorldMatrixEnabled<()> for (i8) {
 
   // proto:  void QPainter::QPainter(const QPainter & );
 impl /*struct*/ QPainter {
-  pub fn New<T: QPainter_New>(value: T) -> QPainter {
-    let rsthis = value.New();
+  pub fn new<T: QPainter_new>(value: T) -> QPainter {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QPainter_New {
-  fn New(self) -> QPainter;
+pub trait QPainter_new {
+  fn new(self) -> QPainter;
 }
 
   // proto:  void QPainter::QPainter(const QPainter & );
-impl<'a> /*trait*/ QPainter_New for (&'a QPainter) {
-  fn New(self) -> QPainter {
+impl<'a> /*trait*/ QPainter_new for (&'a QPainter) {
+  fn new(self) -> QPainter {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPainterC1ERKS_()};
     let ctysz: c_int = unsafe{QPainter_Class_Size()};
@@ -1870,8 +1870,8 @@ impl<'a> /*trait*/ QPainter_drawTextItem<()> for (i32, i32, &'a QTextItem) {
 }
 
   // proto:  void QPainter::QPainter(QPaintDevice * );
-impl<'a> /*trait*/ QPainter_New for (&'a QPaintDevice) {
-  fn New(self) -> QPainter {
+impl<'a> /*trait*/ QPainter_new for (&'a QPaintDevice) {
+  fn new(self) -> QPainter {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPainterC1EP12QPaintDevice()};
     let ctysz: c_int = unsafe{QPainter_Class_Size()};
@@ -2791,19 +2791,19 @@ impl<'a> /*trait*/ QPainter_brush<QBrush> for () {
 
   // proto:  void QPainter::~QPainter();
 impl /*struct*/ QPainter {
-  pub fn Free<RetType, T: QPainter_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QPainter_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QPainter_Free<RetType> {
-  fn Free(self , rsthis: & QPainter) -> RetType;
+pub trait QPainter_free<RetType> {
+  fn free(self , rsthis: & QPainter) -> RetType;
 }
 
   // proto:  void QPainter::~QPainter();
-impl<'a> /*trait*/ QPainter_Free<()> for () {
-  fn Free(self , rsthis: & QPainter) -> () {
+impl<'a> /*trait*/ QPainter_free<()> for () {
+  fn free(self , rsthis: & QPainter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPainterD0Ev()};
      unsafe {_ZN8QPainterD0Ev(rsthis.qclsinst)};
@@ -3376,8 +3376,8 @@ impl<'a> /*trait*/ QPainter_fillRect<()> for (&'a QRectF, &'a QColor) {
 }
 
   // proto:  void QPainter::QPainter();
-impl<'a> /*trait*/ QPainter_New for () {
-  fn New(self) -> QPainter {
+impl<'a> /*trait*/ QPainter_new for () {
+  fn new(self) -> QPainter {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPainterC1Ev()};
     let ctysz: c_int = unsafe{QPainter_Class_Size()};

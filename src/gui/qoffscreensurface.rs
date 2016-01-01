@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qoffscreensurface.h
 // dst-file: /src/gui/qoffscreensurface.rs
 //
@@ -96,19 +96,19 @@ impl AsRef<QObject> for QOffscreenSurface {
 }
   // proto:  void QOffscreenSurface::~QOffscreenSurface();
 impl /*struct*/ QOffscreenSurface {
-  pub fn Free<RetType, T: QOffscreenSurface_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QOffscreenSurface_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QOffscreenSurface_Free<RetType> {
-  fn Free(self , rsthis: & QOffscreenSurface) -> RetType;
+pub trait QOffscreenSurface_free<RetType> {
+  fn free(self , rsthis: & QOffscreenSurface) -> RetType;
 }
 
   // proto:  void QOffscreenSurface::~QOffscreenSurface();
-impl<'a> /*trait*/ QOffscreenSurface_Free<()> for () {
-  fn Free(self , rsthis: & QOffscreenSurface) -> () {
+impl<'a> /*trait*/ QOffscreenSurface_free<()> for () {
+  fn free(self , rsthis: & QOffscreenSurface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QOffscreenSurfaceD0Ev()};
      unsafe {_ZN17QOffscreenSurfaceD0Ev(rsthis.qclsinst)};
@@ -141,20 +141,20 @@ impl<'a> /*trait*/ QOffscreenSurface_screenChanged<()> for (&'a QScreen) {
 
   // proto:  void QOffscreenSurface::QOffscreenSurface(const QOffscreenSurface & );
 impl /*struct*/ QOffscreenSurface {
-  pub fn New<T: QOffscreenSurface_New>(value: T) -> QOffscreenSurface {
-    let rsthis = value.New();
+  pub fn new<T: QOffscreenSurface_new>(value: T) -> QOffscreenSurface {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QOffscreenSurface_New {
-  fn New(self) -> QOffscreenSurface;
+pub trait QOffscreenSurface_new {
+  fn new(self) -> QOffscreenSurface;
 }
 
   // proto:  void QOffscreenSurface::QOffscreenSurface(const QOffscreenSurface & );
-impl<'a> /*trait*/ QOffscreenSurface_New for (&'a QOffscreenSurface) {
-  fn New(self) -> QOffscreenSurface {
+impl<'a> /*trait*/ QOffscreenSurface_new for (&'a QOffscreenSurface) {
+  fn new(self) -> QOffscreenSurface {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QOffscreenSurfaceC1ERKS_()};
     let ctysz: c_int = unsafe{QOffscreenSurface_Class_Size()};
@@ -169,8 +169,8 @@ impl<'a> /*trait*/ QOffscreenSurface_New for (&'a QOffscreenSurface) {
 }
 
   // proto:  void QOffscreenSurface::QOffscreenSurface(QScreen * screen);
-impl<'a> /*trait*/ QOffscreenSurface_New for (&'a QScreen) {
-  fn New(self) -> QOffscreenSurface {
+impl<'a> /*trait*/ QOffscreenSurface_new for (&'a QScreen) {
+  fn new(self) -> QOffscreenSurface {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QOffscreenSurfaceC1EP7QScreen()};
     let ctysz: c_int = unsafe{QOffscreenSurface_Class_Size()};
@@ -459,7 +459,7 @@ extern fn QOffscreenSurface_screenChanged_signal_connect_cb_0(rsfptr:fn(QScreen)
   let rsarg0 = QScreen::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QOffscreenSurface_screenChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QScreen), arg0: *mut c_void) {
+extern fn QOffscreenSurface_screenChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QScreen), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QScreen::inheritFrom(arg0 as u64);
@@ -468,7 +468,8 @@ extern fn QOffscreenSurface_screenChanged_signal_connect_cb_box_0(rsfptr_raw:*mu
 impl /* trait */ QOffscreenSurface_screenChanged_signal_connect for fn(QScreen) {
   fn connect(self, sigthis: QOffscreenSurface_screenChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QOffscreenSurface_screenChanged_signal_connect_cb_0 as *mut c_void;
@@ -476,7 +477,7 @@ impl /* trait */ QOffscreenSurface_screenChanged_signal_connect for fn(QScreen) 
     unsafe {QOffscreenSurface_SlotProxy_connect__ZN17QOffscreenSurface13screenChangedEP7QScreen(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QOffscreenSurface_screenChanged_signal_connect for Box<fn(QScreen)> {
+impl /* trait */ QOffscreenSurface_screenChanged_signal_connect for Box<Fn(QScreen)> {
   fn connect(self, sigthis: QOffscreenSurface_screenChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

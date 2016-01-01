@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qpalette.h
 // dst-file: /src/gui/qpalette.rs
 //
@@ -122,20 +122,20 @@ impl /*struct*/ QPalette {
 }
   // proto:  void QPalette::QPalette(const QColor & windowText, const QColor & window, const QColor & light, const QColor & dark, const QColor & mid, const QColor & text, const QColor & base);
 impl /*struct*/ QPalette {
-  pub fn New<T: QPalette_New>(value: T) -> QPalette {
-    let rsthis = value.New();
+  pub fn new<T: QPalette_new>(value: T) -> QPalette {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QPalette_New {
-  fn New(self) -> QPalette;
+pub trait QPalette_new {
+  fn new(self) -> QPalette;
 }
 
   // proto:  void QPalette::QPalette(const QColor & windowText, const QColor & window, const QColor & light, const QColor & dark, const QColor & mid, const QColor & text, const QColor & base);
-impl<'a> /*trait*/ QPalette_New for (&'a QColor, &'a QColor, &'a QColor, &'a QColor, &'a QColor, &'a QColor, &'a QColor) {
-  fn New(self) -> QPalette {
+impl<'a> /*trait*/ QPalette_new for (&'a QColor, &'a QColor, &'a QColor, &'a QColor, &'a QColor, &'a QColor, &'a QColor) {
+  fn new(self) -> QPalette {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPaletteC1ERK6QColorS2_S2_S2_S2_S2_S2_()};
     let ctysz: c_int = unsafe{QPalette_Class_Size()};
@@ -157,19 +157,19 @@ impl<'a> /*trait*/ QPalette_New for (&'a QColor, &'a QColor, &'a QColor, &'a QCo
 
   // proto:  void QPalette::~QPalette();
 impl /*struct*/ QPalette {
-  pub fn Free<RetType, T: QPalette_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QPalette_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QPalette_Free<RetType> {
-  fn Free(self , rsthis: & QPalette) -> RetType;
+pub trait QPalette_free<RetType> {
+  fn free(self , rsthis: & QPalette) -> RetType;
 }
 
   // proto:  void QPalette::~QPalette();
-impl<'a> /*trait*/ QPalette_Free<()> for () {
-  fn Free(self , rsthis: & QPalette) -> () {
+impl<'a> /*trait*/ QPalette_free<()> for () {
+  fn free(self , rsthis: & QPalette) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPaletteD0Ev()};
      unsafe {_ZN8QPaletteD0Ev(rsthis.qclsinst)};
@@ -273,8 +273,8 @@ impl<'a> /*trait*/ QPalette_resolve<()> for (u32) {
 }
 
   // proto:  void QPalette::QPalette();
-impl<'a> /*trait*/ QPalette_New for () {
-  fn New(self) -> QPalette {
+impl<'a> /*trait*/ QPalette_new for () {
+  fn new(self) -> QPalette {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPaletteC1Ev()};
     let ctysz: c_int = unsafe{QPalette_Class_Size()};
@@ -288,8 +288,8 @@ impl<'a> /*trait*/ QPalette_New for () {
 }
 
   // proto:  void QPalette::QPalette(const QColor & button);
-impl<'a> /*trait*/ QPalette_New for (&'a QColor) {
-  fn New(self) -> QPalette {
+impl<'a> /*trait*/ QPalette_new for (&'a QColor) {
+  fn new(self) -> QPalette {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPaletteC1ERK6QColor()};
     let ctysz: c_int = unsafe{QPalette_Class_Size()};
@@ -410,8 +410,8 @@ impl<'a> /*trait*/ QPalette_highlightedText<QBrush> for () {
 }
 
   // proto:  void QPalette::QPalette(const QColor & button, const QColor & window);
-impl<'a> /*trait*/ QPalette_New for (&'a QColor, &'a QColor) {
-  fn New(self) -> QPalette {
+impl<'a> /*trait*/ QPalette_new for (&'a QColor, &'a QColor) {
+  fn new(self) -> QPalette {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPaletteC1ERK6QColorS2_()};
     let ctysz: c_int = unsafe{QPalette_Class_Size()};
@@ -631,8 +631,8 @@ impl<'a> /*trait*/ QPalette_mid<QBrush> for () {
 }
 
   // proto:  void QPalette::QPalette(const QPalette & palette);
-impl<'a> /*trait*/ QPalette_New for (&'a QPalette) {
-  fn New(self) -> QPalette {
+impl<'a> /*trait*/ QPalette_new for (&'a QPalette) {
+  fn new(self) -> QPalette {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPaletteC1ERKS_()};
     let ctysz: c_int = unsafe{QPalette_Class_Size()};
@@ -815,8 +815,8 @@ impl<'a> /*trait*/ QPalette_alternateBase<QBrush> for () {
 }
 
   // proto:  void QPalette::QPalette(const QBrush & windowText, const QBrush & button, const QBrush & light, const QBrush & dark, const QBrush & mid, const QBrush & text, const QBrush & bright_text, const QBrush & base, const QBrush & window);
-impl<'a> /*trait*/ QPalette_New for (&'a QBrush, &'a QBrush, &'a QBrush, &'a QBrush, &'a QBrush, &'a QBrush, &'a QBrush, &'a QBrush, &'a QBrush) {
-  fn New(self) -> QPalette {
+impl<'a> /*trait*/ QPalette_new for (&'a QBrush, &'a QBrush, &'a QBrush, &'a QBrush, &'a QBrush, &'a QBrush, &'a QBrush, &'a QBrush, &'a QBrush) {
+  fn new(self) -> QPalette {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPaletteC1ERK6QBrushS2_S2_S2_S2_S2_S2_S2_S2_()};
     let ctysz: c_int = unsafe{QPalette_Class_Size()};

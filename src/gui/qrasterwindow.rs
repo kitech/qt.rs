@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qrasterwindow.h
 // dst-file: /src/gui/qrasterwindow.rs
 //
@@ -68,20 +68,20 @@ impl AsRef<QPaintDeviceWindow> for QRasterWindow {
 }
   // proto:  void QRasterWindow::QRasterWindow(QWindow * parent);
 impl /*struct*/ QRasterWindow {
-  pub fn New<T: QRasterWindow_New>(value: T) -> QRasterWindow {
-    let rsthis = value.New();
+  pub fn new<T: QRasterWindow_new>(value: T) -> QRasterWindow {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QRasterWindow_New {
-  fn New(self) -> QRasterWindow;
+pub trait QRasterWindow_new {
+  fn new(self) -> QRasterWindow;
 }
 
   // proto:  void QRasterWindow::QRasterWindow(QWindow * parent);
-impl<'a> /*trait*/ QRasterWindow_New for (&'a QWindow) {
-  fn New(self) -> QRasterWindow {
+impl<'a> /*trait*/ QRasterWindow_new for (&'a QWindow) {
+  fn new(self) -> QRasterWindow {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QRasterWindowC1EP7QWindow()};
     let ctysz: c_int = unsafe{QRasterWindow_Class_Size()};
@@ -118,8 +118,8 @@ impl<'a> /*trait*/ QRasterWindow_metaObject<()> for () {
 }
 
   // proto:  void QRasterWindow::QRasterWindow(const QRasterWindow & );
-impl<'a> /*trait*/ QRasterWindow_New for (&'a QRasterWindow) {
-  fn New(self) -> QRasterWindow {
+impl<'a> /*trait*/ QRasterWindow_new for (&'a QRasterWindow) {
+  fn new(self) -> QRasterWindow {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QRasterWindowC1ERKS_()};
     let ctysz: c_int = unsafe{QRasterWindow_Class_Size()};

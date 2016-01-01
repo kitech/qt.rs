@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qtextcursor.h
 // dst-file: /src/gui/qtextcursor.rs
 //
@@ -573,20 +573,20 @@ impl<'a> /*trait*/ QTextCursor_insertFrame<QTextFrame> for (&'a QTextFrameFormat
 
   // proto:  void QTextCursor::QTextCursor(const QTextCursor & cursor);
 impl /*struct*/ QTextCursor {
-  pub fn New<T: QTextCursor_New>(value: T) -> QTextCursor {
-    let rsthis = value.New();
+  pub fn new<T: QTextCursor_new>(value: T) -> QTextCursor {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTextCursor_New {
-  fn New(self) -> QTextCursor;
+pub trait QTextCursor_new {
+  fn new(self) -> QTextCursor;
 }
 
   // proto:  void QTextCursor::QTextCursor(const QTextCursor & cursor);
-impl<'a> /*trait*/ QTextCursor_New for (&'a QTextCursor) {
-  fn New(self) -> QTextCursor {
+impl<'a> /*trait*/ QTextCursor_new for (&'a QTextCursor) {
+  fn new(self) -> QTextCursor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursorC1ERKS_()};
     let ctysz: c_int = unsafe{QTextCursor_Class_Size()};
@@ -669,8 +669,8 @@ impl<'a> /*trait*/ QTextCursor_insertBlock<()> for () {
 }
 
   // proto:  void QTextCursor::QTextCursor(const QTextBlock & block);
-impl<'a> /*trait*/ QTextCursor_New for (&'a QTextBlock) {
-  fn New(self) -> QTextCursor {
+impl<'a> /*trait*/ QTextCursor_new for (&'a QTextBlock) {
+  fn new(self) -> QTextCursor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursorC1ERK10QTextBlock()};
     let ctysz: c_int = unsafe{QTextCursor_Class_Size()};
@@ -711,8 +711,8 @@ impl<'a> /*trait*/ QTextCursor_insertTable<QTextTable> for (i32, i32) {
 }
 
   // proto:  void QTextCursor::QTextCursor();
-impl<'a> /*trait*/ QTextCursor_New for () {
-  fn New(self) -> QTextCursor {
+impl<'a> /*trait*/ QTextCursor_new for () {
+  fn new(self) -> QTextCursor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursorC1Ev()};
     let ctysz: c_int = unsafe{QTextCursor_Class_Size()};
@@ -1177,8 +1177,8 @@ impl<'a> /*trait*/ QTextCursor_joinPreviousEditBlock<()> for () {
 }
 
   // proto:  void QTextCursor::QTextCursor(QTextDocument * document);
-impl<'a> /*trait*/ QTextCursor_New for (&'a QTextDocument) {
-  fn New(self) -> QTextCursor {
+impl<'a> /*trait*/ QTextCursor_new for (&'a QTextDocument) {
+  fn new(self) -> QTextCursor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursorC1EP13QTextDocument()};
     let ctysz: c_int = unsafe{QTextCursor_Class_Size()};
@@ -1356,19 +1356,19 @@ impl<'a> /*trait*/ QTextCursor_deletePreviousChar<()> for () {
 
   // proto:  void QTextCursor::~QTextCursor();
 impl /*struct*/ QTextCursor {
-  pub fn Free<RetType, T: QTextCursor_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QTextCursor_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_Free<RetType> {
-  fn Free(self , rsthis: & QTextCursor) -> RetType;
+pub trait QTextCursor_free<RetType> {
+  fn free(self , rsthis: & QTextCursor) -> RetType;
 }
 
   // proto:  void QTextCursor::~QTextCursor();
-impl<'a> /*trait*/ QTextCursor_Free<()> for () {
-  fn Free(self , rsthis: & QTextCursor) -> () {
+impl<'a> /*trait*/ QTextCursor_free<()> for () {
+  fn free(self , rsthis: & QTextCursor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursorD0Ev()};
      unsafe {_ZN11QTextCursorD0Ev(rsthis.qclsinst)};
@@ -1554,8 +1554,8 @@ impl<'a> /*trait*/ QTextCursor_insertTable<QTextTable> for (i32, i32, &'a QTextT
 }
 
   // proto:  void QTextCursor::QTextCursor(QTextFrame * frame);
-impl<'a> /*trait*/ QTextCursor_New for (&'a QTextFrame) {
-  fn New(self) -> QTextCursor {
+impl<'a> /*trait*/ QTextCursor_new for (&'a QTextFrame) {
+  fn new(self) -> QTextCursor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursorC1EP10QTextFrame()};
     let ctysz: c_int = unsafe{QTextCursor_Class_Size()};

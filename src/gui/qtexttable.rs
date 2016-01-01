@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qtexttable.h
 // dst-file: /src/gui/qtexttable.rs
 //
@@ -144,20 +144,20 @@ impl /*struct*/ QTextTableCell {
 }
   // proto:  void QTextTableCell::QTextTableCell(const QTextTableCell & o);
 impl /*struct*/ QTextTableCell {
-  pub fn New<T: QTextTableCell_New>(value: T) -> QTextTableCell {
-    let rsthis = value.New();
+  pub fn new<T: QTextTableCell_new>(value: T) -> QTextTableCell {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTextTableCell_New {
-  fn New(self) -> QTextTableCell;
+pub trait QTextTableCell_new {
+  fn new(self) -> QTextTableCell;
 }
 
   // proto:  void QTextTableCell::QTextTableCell(const QTextTableCell & o);
-impl<'a> /*trait*/ QTextTableCell_New for (&'a QTextTableCell) {
-  fn New(self) -> QTextTableCell {
+impl<'a> /*trait*/ QTextTableCell_new for (&'a QTextTableCell) {
+  fn new(self) -> QTextTableCell {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QTextTableCellC1ERKS_()};
     let ctysz: c_int = unsafe{QTextTableCell_Class_Size()};
@@ -219,19 +219,19 @@ impl<'a> /*trait*/ QTextTableCell_lastPosition<i32> for () {
 
   // proto:  void QTextTableCell::~QTextTableCell();
 impl /*struct*/ QTextTableCell {
-  pub fn Free<RetType, T: QTextTableCell_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QTextTableCell_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QTextTableCell_Free<RetType> {
-  fn Free(self , rsthis: & QTextTableCell) -> RetType;
+pub trait QTextTableCell_free<RetType> {
+  fn free(self , rsthis: & QTextTableCell) -> RetType;
 }
 
   // proto:  void QTextTableCell::~QTextTableCell();
-impl<'a> /*trait*/ QTextTableCell_Free<()> for () {
-  fn Free(self , rsthis: & QTextTableCell) -> () {
+impl<'a> /*trait*/ QTextTableCell_free<()> for () {
+  fn free(self , rsthis: & QTextTableCell) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QTextTableCellD0Ev()};
      unsafe {_ZN14QTextTableCellD0Ev(rsthis.qclsinst)};
@@ -286,8 +286,8 @@ impl<'a> /*trait*/ QTextTableCell_firstPosition<i32> for () {
 }
 
   // proto:  void QTextTableCell::QTextTableCell(const QTextTable * t, int f);
-impl<'a> /*trait*/ QTextTableCell_New for (&'a QTextTable, i32) {
-  fn New(self) -> QTextTableCell {
+impl<'a> /*trait*/ QTextTableCell_new for (&'a QTextTable, i32) {
+  fn new(self) -> QTextTableCell {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QTextTableCellC1EPK10QTextTablei()};
     let ctysz: c_int = unsafe{QTextTableCell_Class_Size()};
@@ -490,8 +490,8 @@ impl<'a> /*trait*/ QTextTableCell_firstCursorPosition<QTextCursor> for () {
 }
 
   // proto:  void QTextTableCell::QTextTableCell();
-impl<'a> /*trait*/ QTextTableCell_New for () {
-  fn New(self) -> QTextTableCell {
+impl<'a> /*trait*/ QTextTableCell_new for () {
+  fn new(self) -> QTextTableCell {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QTextTableCellC1Ev()};
     let ctysz: c_int = unsafe{QTextTableCell_Class_Size()};
@@ -679,20 +679,20 @@ impl<'a> /*trait*/ QTextTable_cellAt<QTextTableCell> for (&'a QTextCursor) {
 
   // proto:  void QTextTable::QTextTable(const QTextTable & );
 impl /*struct*/ QTextTable {
-  pub fn New<T: QTextTable_New>(value: T) -> QTextTable {
-    let rsthis = value.New();
+  pub fn new<T: QTextTable_new>(value: T) -> QTextTable {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTextTable_New {
-  fn New(self) -> QTextTable;
+pub trait QTextTable_new {
+  fn new(self) -> QTextTable;
 }
 
   // proto:  void QTextTable::QTextTable(const QTextTable & );
-impl<'a> /*trait*/ QTextTable_New for (&'a QTextTable) {
-  fn New(self) -> QTextTable {
+impl<'a> /*trait*/ QTextTable_new for (&'a QTextTable) {
+  fn new(self) -> QTextTable {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextTableC1ERKS_()};
     let ctysz: c_int = unsafe{QTextTable_Class_Size()};
@@ -831,19 +831,19 @@ impl<'a> /*trait*/ QTextTable_insertRows<()> for (i32, i32) {
 
   // proto:  void QTextTable::~QTextTable();
 impl /*struct*/ QTextTable {
-  pub fn Free<RetType, T: QTextTable_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QTextTable_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QTextTable_Free<RetType> {
-  fn Free(self , rsthis: & QTextTable) -> RetType;
+pub trait QTextTable_free<RetType> {
+  fn free(self , rsthis: & QTextTable) -> RetType;
 }
 
   // proto:  void QTextTable::~QTextTable();
-impl<'a> /*trait*/ QTextTable_Free<()> for () {
-  fn Free(self , rsthis: & QTextTable) -> () {
+impl<'a> /*trait*/ QTextTable_free<()> for () {
+  fn free(self , rsthis: & QTextTable) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextTableD0Ev()};
      unsafe {_ZN10QTextTableD0Ev(rsthis.qclsinst)};
@@ -852,8 +852,8 @@ impl<'a> /*trait*/ QTextTable_Free<()> for () {
 }
 
   // proto:  void QTextTable::QTextTable(QTextDocument * doc);
-impl<'a> /*trait*/ QTextTable_New for (&'a QTextDocument) {
-  fn New(self) -> QTextTable {
+impl<'a> /*trait*/ QTextTable_new for (&'a QTextDocument) {
+  fn new(self) -> QTextTable {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextTableC1EP13QTextDocument()};
     let ctysz: c_int = unsafe{QTextTable_Class_Size()};

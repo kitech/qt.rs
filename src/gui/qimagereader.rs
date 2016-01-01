@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qimagereader.h
 // dst-file: /src/gui/qimagereader.rs
 //
@@ -200,19 +200,19 @@ impl<'a> /*trait*/ QImageReader_canRead<i8> for () {
 
   // proto:  void QImageReader::~QImageReader();
 impl /*struct*/ QImageReader {
-  pub fn Free<RetType, T: QImageReader_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QImageReader_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QImageReader_Free<RetType> {
-  fn Free(self , rsthis: & QImageReader) -> RetType;
+pub trait QImageReader_free<RetType> {
+  fn free(self , rsthis: & QImageReader) -> RetType;
 }
 
   // proto:  void QImageReader::~QImageReader();
-impl<'a> /*trait*/ QImageReader_Free<()> for () {
-  fn Free(self , rsthis: & QImageReader) -> () {
+impl<'a> /*trait*/ QImageReader_free<()> for () {
+  fn free(self , rsthis: & QImageReader) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageReaderD0Ev()};
      unsafe {_ZN12QImageReaderD0Ev(rsthis.qclsinst)};
@@ -816,20 +816,20 @@ impl<'a> /*trait*/ QImageReader_setFileName<()> for (&'a QString) {
 
   // proto:  void QImageReader::QImageReader(const QImageReader & );
 impl /*struct*/ QImageReader {
-  pub fn New<T: QImageReader_New>(value: T) -> QImageReader {
-    let rsthis = value.New();
+  pub fn new<T: QImageReader_new>(value: T) -> QImageReader {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QImageReader_New {
-  fn New(self) -> QImageReader;
+pub trait QImageReader_new {
+  fn new(self) -> QImageReader;
 }
 
   // proto:  void QImageReader::QImageReader(const QImageReader & );
-impl<'a> /*trait*/ QImageReader_New for (&'a QImageReader) {
-  fn New(self) -> QImageReader {
+impl<'a> /*trait*/ QImageReader_new for (&'a QImageReader) {
+  fn new(self) -> QImageReader {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageReaderC1ERKS_()};
     let ctysz: c_int = unsafe{QImageReader_Class_Size()};
@@ -961,8 +961,8 @@ impl<'a> /*trait*/ QImageReader_currentImageRect<QRect> for () {
 }
 
   // proto:  void QImageReader::QImageReader(const QString & fileName, const QByteArray & format);
-impl<'a> /*trait*/ QImageReader_New for (&'a QString, &'a QByteArray) {
-  fn New(self) -> QImageReader {
+impl<'a> /*trait*/ QImageReader_new for (&'a QString, &'a QByteArray) {
+  fn new(self) -> QImageReader {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageReaderC1ERK7QStringRK10QByteArray()};
     let ctysz: c_int = unsafe{QImageReader_Class_Size()};
@@ -1083,8 +1083,8 @@ impl<'a> /*trait*/ QImageReader_setQuality<()> for (i32) {
 }
 
   // proto:  void QImageReader::QImageReader(QIODevice * device, const QByteArray & format);
-impl<'a> /*trait*/ QImageReader_New for (&'a QIODevice, &'a QByteArray) {
-  fn New(self) -> QImageReader {
+impl<'a> /*trait*/ QImageReader_new for (&'a QIODevice, &'a QByteArray) {
+  fn new(self) -> QImageReader {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageReaderC1EP9QIODeviceRK10QByteArray()};
     let ctysz: c_int = unsafe{QImageReader_Class_Size()};
@@ -1123,8 +1123,8 @@ impl<'a> /*trait*/ QImageReader_setAutoDetectImageFormat<()> for (i8) {
 }
 
   // proto:  void QImageReader::QImageReader();
-impl<'a> /*trait*/ QImageReader_New for () {
-  fn New(self) -> QImageReader {
+impl<'a> /*trait*/ QImageReader_new for () {
+  fn new(self) -> QImageReader {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageReaderC1Ev()};
     let ctysz: c_int = unsafe{QImageReader_Class_Size()};

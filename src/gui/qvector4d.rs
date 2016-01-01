@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qvector4d.h
 // dst-file: /src/gui/qvector4d.rs
 //
@@ -161,20 +161,20 @@ impl<'a> /*trait*/ QVector4D_setW<()> for (f32) {
 
   // proto:  void QVector4D::QVector4D(const QVector2D & vector, float zpos, float wpos);
 impl /*struct*/ QVector4D {
-  pub fn New<T: QVector4D_New>(value: T) -> QVector4D {
-    let rsthis = value.New();
+  pub fn new<T: QVector4D_new>(value: T) -> QVector4D {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QVector4D_New {
-  fn New(self) -> QVector4D;
+pub trait QVector4D_new {
+  fn new(self) -> QVector4D;
 }
 
   // proto:  void QVector4D::QVector4D(const QVector2D & vector, float zpos, float wpos);
-impl<'a> /*trait*/ QVector4D_New for (&'a QVector2D, f32, f32) {
-  fn New(self) -> QVector4D {
+impl<'a> /*trait*/ QVector4D_new for (&'a QVector2D, f32, f32) {
+  fn new(self) -> QVector4D {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QVector4DC1ERK9QVector2Dff()};
     let ctysz: c_int = unsafe{QVector4D_Class_Size()};
@@ -284,8 +284,8 @@ impl<'a> /*trait*/ QVector4D_setZ<()> for (f32) {
 }
 
   // proto:  void QVector4D::QVector4D(const QVector2D & vector);
-impl<'a> /*trait*/ QVector4D_New for (&'a QVector2D) {
-  fn New(self) -> QVector4D {
+impl<'a> /*trait*/ QVector4D_new for (&'a QVector2D) {
+  fn new(self) -> QVector4D {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QVector4DC1ERK9QVector2D()};
     let ctysz: c_int = unsafe{QVector4D_Class_Size()};
@@ -322,8 +322,8 @@ impl<'a> /*trait*/ QVector4D_normalize<()> for () {
 }
 
   // proto:  void QVector4D::QVector4D(float xpos, float ypos, float zpos, float wpos);
-impl<'a> /*trait*/ QVector4D_New for (f32, f32, f32, f32) {
-  fn New(self) -> QVector4D {
+impl<'a> /*trait*/ QVector4D_new for (f32, f32, f32, f32) {
+  fn new(self) -> QVector4D {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QVector4DC1Effff()};
     let ctysz: c_int = unsafe{QVector4D_Class_Size()};
@@ -341,8 +341,8 @@ impl<'a> /*trait*/ QVector4D_New for (f32, f32, f32, f32) {
 }
 
   // proto:  void QVector4D::QVector4D(const QVector3D & vector, float wpos);
-impl<'a> /*trait*/ QVector4D_New for (&'a QVector3D, f32) {
-  fn New(self) -> QVector4D {
+impl<'a> /*trait*/ QVector4D_new for (&'a QVector3D, f32) {
+  fn new(self) -> QVector4D {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QVector4DC1ERK9QVector3Df()};
     let ctysz: c_int = unsafe{QVector4D_Class_Size()};
@@ -358,8 +358,8 @@ impl<'a> /*trait*/ QVector4D_New for (&'a QVector3D, f32) {
 }
 
   // proto:  void QVector4D::QVector4D(const QPointF & point);
-impl<'a> /*trait*/ QVector4D_New for (&'a QPointF) {
-  fn New(self) -> QVector4D {
+impl<'a> /*trait*/ QVector4D_new for (&'a QPointF) {
+  fn new(self) -> QVector4D {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QVector4DC1ERK7QPointF()};
     let ctysz: c_int = unsafe{QVector4D_Class_Size()};
@@ -397,8 +397,8 @@ impl<'a> /*trait*/ QVector4D_z<f32> for () {
 }
 
   // proto:  void QVector4D::QVector4D();
-impl<'a> /*trait*/ QVector4D_New for () {
-  fn New(self) -> QVector4D {
+impl<'a> /*trait*/ QVector4D_new for () {
+  fn new(self) -> QVector4D {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QVector4DC1Ev()};
     let ctysz: c_int = unsafe{QVector4D_Class_Size()};
@@ -458,8 +458,8 @@ impl<'a> /*trait*/ QVector4D_setY<()> for (f32) {
 }
 
   // proto:  void QVector4D::QVector4D(const QPoint & point);
-impl<'a> /*trait*/ QVector4D_New for (&'a QPoint) {
-  fn New(self) -> QVector4D {
+impl<'a> /*trait*/ QVector4D_new for (&'a QPoint) {
+  fn new(self) -> QVector4D {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QVector4DC1ERK6QPoint()};
     let ctysz: c_int = unsafe{QVector4D_Class_Size()};
@@ -567,8 +567,8 @@ impl<'a> /*trait*/ QVector4D_length<f32> for () {
 }
 
   // proto:  void QVector4D::QVector4D(const QVector3D & vector);
-impl<'a> /*trait*/ QVector4D_New for (&'a QVector3D) {
-  fn New(self) -> QVector4D {
+impl<'a> /*trait*/ QVector4D_new for (&'a QVector3D) {
+  fn new(self) -> QVector4D {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QVector4DC1ERK9QVector3D()};
     let ctysz: c_int = unsafe{QVector4D_Class_Size()};

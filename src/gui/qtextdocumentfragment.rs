@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qtextdocumentfragment.h
 // dst-file: /src/gui/qtextdocumentfragment.rs
 //
@@ -102,20 +102,20 @@ impl<'a> /*trait*/ QTextDocumentFragment_fromHtml_s<QTextDocumentFragment> for (
 
   // proto:  void QTextDocumentFragment::QTextDocumentFragment(const QTextDocumentFragment & rhs);
 impl /*struct*/ QTextDocumentFragment {
-  pub fn New<T: QTextDocumentFragment_New>(value: T) -> QTextDocumentFragment {
-    let rsthis = value.New();
+  pub fn new<T: QTextDocumentFragment_new>(value: T) -> QTextDocumentFragment {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTextDocumentFragment_New {
-  fn New(self) -> QTextDocumentFragment;
+pub trait QTextDocumentFragment_new {
+  fn new(self) -> QTextDocumentFragment;
 }
 
   // proto:  void QTextDocumentFragment::QTextDocumentFragment(const QTextDocumentFragment & rhs);
-impl<'a> /*trait*/ QTextDocumentFragment_New for (&'a QTextDocumentFragment) {
-  fn New(self) -> QTextDocumentFragment {
+impl<'a> /*trait*/ QTextDocumentFragment_new for (&'a QTextDocumentFragment) {
+  fn new(self) -> QTextDocumentFragment {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QTextDocumentFragmentC1ERKS_()};
     let ctysz: c_int = unsafe{QTextDocumentFragment_Class_Size()};
@@ -181,19 +181,19 @@ impl<'a> /*trait*/ QTextDocumentFragment_toHtml<QString> for (&'a QByteArray) {
 
   // proto:  void QTextDocumentFragment::~QTextDocumentFragment();
 impl /*struct*/ QTextDocumentFragment {
-  pub fn Free<RetType, T: QTextDocumentFragment_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QTextDocumentFragment_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QTextDocumentFragment_Free<RetType> {
-  fn Free(self , rsthis: & QTextDocumentFragment) -> RetType;
+pub trait QTextDocumentFragment_free<RetType> {
+  fn free(self , rsthis: & QTextDocumentFragment) -> RetType;
 }
 
   // proto:  void QTextDocumentFragment::~QTextDocumentFragment();
-impl<'a> /*trait*/ QTextDocumentFragment_Free<()> for () {
-  fn Free(self , rsthis: & QTextDocumentFragment) -> () {
+impl<'a> /*trait*/ QTextDocumentFragment_free<()> for () {
+  fn free(self , rsthis: & QTextDocumentFragment) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QTextDocumentFragmentD0Ev()};
      unsafe {_ZN21QTextDocumentFragmentD0Ev(rsthis.qclsinst)};
@@ -215,8 +215,8 @@ impl<'a> /*trait*/ QTextDocumentFragment_fromHtml_s<QTextDocumentFragment> for (
 }
 
   // proto:  void QTextDocumentFragment::QTextDocumentFragment();
-impl<'a> /*trait*/ QTextDocumentFragment_New for () {
-  fn New(self) -> QTextDocumentFragment {
+impl<'a> /*trait*/ QTextDocumentFragment_new for () {
+  fn new(self) -> QTextDocumentFragment {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QTextDocumentFragmentC1Ev()};
     let ctysz: c_int = unsafe{QTextDocumentFragment_Class_Size()};
@@ -254,8 +254,8 @@ impl<'a> /*trait*/ QTextDocumentFragment_toPlainText<QString> for () {
 }
 
   // proto:  void QTextDocumentFragment::QTextDocumentFragment(const QTextCursor & range);
-impl<'a> /*trait*/ QTextDocumentFragment_New for (&'a QTextCursor) {
-  fn New(self) -> QTextDocumentFragment {
+impl<'a> /*trait*/ QTextDocumentFragment_new for (&'a QTextCursor) {
+  fn new(self) -> QTextDocumentFragment {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QTextDocumentFragmentC1ERK11QTextCursor()};
     let ctysz: c_int = unsafe{QTextDocumentFragment_Class_Size()};
@@ -270,8 +270,8 @@ impl<'a> /*trait*/ QTextDocumentFragment_New for (&'a QTextCursor) {
 }
 
   // proto:  void QTextDocumentFragment::QTextDocumentFragment(const QTextDocument * document);
-impl<'a> /*trait*/ QTextDocumentFragment_New for (&'a QTextDocument) {
-  fn New(self) -> QTextDocumentFragment {
+impl<'a> /*trait*/ QTextDocumentFragment_new for (&'a QTextDocument) {
+  fn new(self) -> QTextDocumentFragment {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QTextDocumentFragmentC1EPK13QTextDocument()};
     let ctysz: c_int = unsafe{QTextDocumentFragment_Class_Size()};

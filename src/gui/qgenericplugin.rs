@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qgenericplugin.h
 // dst-file: /src/gui/qgenericplugin.rs
 //
@@ -69,20 +69,20 @@ impl AsRef<QObject> for QGenericPlugin {
 }
   // proto:  void QGenericPlugin::QGenericPlugin(QObject * parent);
 impl /*struct*/ QGenericPlugin {
-  pub fn New<T: QGenericPlugin_New>(value: T) -> QGenericPlugin {
-    let rsthis = value.New();
+  pub fn new<T: QGenericPlugin_new>(value: T) -> QGenericPlugin {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QGenericPlugin_New {
-  fn New(self) -> QGenericPlugin;
+pub trait QGenericPlugin_new {
+  fn new(self) -> QGenericPlugin;
 }
 
   // proto:  void QGenericPlugin::QGenericPlugin(QObject * parent);
-impl<'a> /*trait*/ QGenericPlugin_New for (&'a QObject) {
-  fn New(self) -> QGenericPlugin {
+impl<'a> /*trait*/ QGenericPlugin_new for (&'a QObject) {
+  fn new(self) -> QGenericPlugin {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGenericPluginC1EP7QObject()};
     let ctysz: c_int = unsafe{QGenericPlugin_Class_Size()};
@@ -124,19 +124,19 @@ impl<'a> /*trait*/ QGenericPlugin_create<QObject> for (&'a QString, &'a QString)
 
   // proto:  void QGenericPlugin::~QGenericPlugin();
 impl /*struct*/ QGenericPlugin {
-  pub fn Free<RetType, T: QGenericPlugin_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QGenericPlugin_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QGenericPlugin_Free<RetType> {
-  fn Free(self , rsthis: & QGenericPlugin) -> RetType;
+pub trait QGenericPlugin_free<RetType> {
+  fn free(self , rsthis: & QGenericPlugin) -> RetType;
 }
 
   // proto:  void QGenericPlugin::~QGenericPlugin();
-impl<'a> /*trait*/ QGenericPlugin_Free<()> for () {
-  fn Free(self , rsthis: & QGenericPlugin) -> () {
+impl<'a> /*trait*/ QGenericPlugin_free<()> for () {
+  fn free(self , rsthis: & QGenericPlugin) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGenericPluginD0Ev()};
      unsafe {_ZN14QGenericPluginD0Ev(rsthis.qclsinst)};

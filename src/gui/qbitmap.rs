@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qbitmap.h
 // dst-file: /src/gui/qbitmap.rs
 //
@@ -89,20 +89,20 @@ impl AsRef<QPixmap> for QBitmap {
 }
   // proto:  void QBitmap::QBitmap(const QPixmap & );
 impl /*struct*/ QBitmap {
-  pub fn New<T: QBitmap_New>(value: T) -> QBitmap {
-    let rsthis = value.New();
+  pub fn new<T: QBitmap_new>(value: T) -> QBitmap {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QBitmap_New {
-  fn New(self) -> QBitmap;
+pub trait QBitmap_new {
+  fn new(self) -> QBitmap;
 }
 
   // proto:  void QBitmap::QBitmap(const QPixmap & );
-impl<'a> /*trait*/ QBitmap_New for (&'a QPixmap) {
-  fn New(self) -> QBitmap {
+impl<'a> /*trait*/ QBitmap_new for (&'a QPixmap) {
+  fn new(self) -> QBitmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QBitmapC1ERK7QPixmap()};
     let ctysz: c_int = unsafe{QBitmap_Class_Size()};
@@ -117,8 +117,8 @@ impl<'a> /*trait*/ QBitmap_New for (&'a QPixmap) {
 }
 
   // proto:  void QBitmap::QBitmap(const QSize & );
-impl<'a> /*trait*/ QBitmap_New for (&'a QSize) {
-  fn New(self) -> QBitmap {
+impl<'a> /*trait*/ QBitmap_new for (&'a QSize) {
+  fn new(self) -> QBitmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QBitmapC1ERK5QSize()};
     let ctysz: c_int = unsafe{QBitmap_Class_Size()};
@@ -133,8 +133,8 @@ impl<'a> /*trait*/ QBitmap_New for (&'a QSize) {
 }
 
   // proto:  void QBitmap::QBitmap(int w, int h);
-impl<'a> /*trait*/ QBitmap_New for (i32, i32) {
-  fn New(self) -> QBitmap {
+impl<'a> /*trait*/ QBitmap_new for (i32, i32) {
+  fn new(self) -> QBitmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QBitmapC1Eii()};
     let ctysz: c_int = unsafe{QBitmap_Class_Size()};
@@ -151,19 +151,19 @@ impl<'a> /*trait*/ QBitmap_New for (i32, i32) {
 
   // proto:  void QBitmap::~QBitmap();
 impl /*struct*/ QBitmap {
-  pub fn Free<RetType, T: QBitmap_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QBitmap_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QBitmap_Free<RetType> {
-  fn Free(self , rsthis: & QBitmap) -> RetType;
+pub trait QBitmap_free<RetType> {
+  fn free(self , rsthis: & QBitmap) -> RetType;
 }
 
   // proto:  void QBitmap::~QBitmap();
-impl<'a> /*trait*/ QBitmap_Free<()> for () {
-  fn Free(self , rsthis: & QBitmap) -> () {
+impl<'a> /*trait*/ QBitmap_free<()> for () {
+  fn free(self , rsthis: & QBitmap) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QBitmapD0Ev()};
      unsafe {_ZN7QBitmapD0Ev(rsthis.qclsinst)};
@@ -242,8 +242,8 @@ impl<'a> /*trait*/ QBitmap_clear<()> for () {
 }
 
   // proto:  void QBitmap::QBitmap(const QString & fileName, const char * format);
-impl<'a> /*trait*/ QBitmap_New for (&'a QString, &'a  String) {
-  fn New(self) -> QBitmap {
+impl<'a> /*trait*/ QBitmap_new for (&'a QString, &'a  String) {
+  fn new(self) -> QBitmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QBitmapC1ERK7QStringPKc()};
     let ctysz: c_int = unsafe{QBitmap_Class_Size()};
@@ -259,8 +259,8 @@ impl<'a> /*trait*/ QBitmap_New for (&'a QString, &'a  String) {
 }
 
   // proto:  void QBitmap::QBitmap();
-impl<'a> /*trait*/ QBitmap_New for () {
-  fn New(self) -> QBitmap {
+impl<'a> /*trait*/ QBitmap_new for () {
+  fn new(self) -> QBitmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QBitmapC1Ev()};
     let ctysz: c_int = unsafe{QBitmap_Class_Size()};

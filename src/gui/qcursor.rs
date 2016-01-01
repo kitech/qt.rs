@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qcursor.h
 // dst-file: /src/gui/qcursor.rs
 //
@@ -133,20 +133,20 @@ impl<'a> /*trait*/ QCursor_pixmap<QPixmap> for () {
 
   // proto:  void QCursor::QCursor(const QBitmap & bitmap, const QBitmap & mask, int hotX, int hotY);
 impl /*struct*/ QCursor {
-  pub fn New<T: QCursor_New>(value: T) -> QCursor {
-    let rsthis = value.New();
+  pub fn new<T: QCursor_new>(value: T) -> QCursor {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QCursor_New {
-  fn New(self) -> QCursor;
+pub trait QCursor_new {
+  fn new(self) -> QCursor;
 }
 
   // proto:  void QCursor::QCursor(const QBitmap & bitmap, const QBitmap & mask, int hotX, int hotY);
-impl<'a> /*trait*/ QCursor_New for (&'a QBitmap, &'a QBitmap, i32, i32) {
-  fn New(self) -> QCursor {
+impl<'a> /*trait*/ QCursor_new for (&'a QBitmap, &'a QBitmap, i32, i32) {
+  fn new(self) -> QCursor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QCursorC1ERK7QBitmapS2_ii()};
     let ctysz: c_int = unsafe{QCursor_Class_Size()};
@@ -164,8 +164,8 @@ impl<'a> /*trait*/ QCursor_New for (&'a QBitmap, &'a QBitmap, i32, i32) {
 }
 
   // proto:  void QCursor::QCursor(const QPixmap & pixmap, int hotX, int hotY);
-impl<'a> /*trait*/ QCursor_New for (&'a QPixmap, i32, i32) {
-  fn New(self) -> QCursor {
+impl<'a> /*trait*/ QCursor_new for (&'a QPixmap, i32, i32) {
+  fn new(self) -> QCursor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QCursorC1ERK7QPixmapii()};
     let ctysz: c_int = unsafe{QCursor_Class_Size()};
@@ -183,19 +183,19 @@ impl<'a> /*trait*/ QCursor_New for (&'a QPixmap, i32, i32) {
 
   // proto:  void QCursor::~QCursor();
 impl /*struct*/ QCursor {
-  pub fn Free<RetType, T: QCursor_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QCursor_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QCursor_Free<RetType> {
-  fn Free(self , rsthis: & QCursor) -> RetType;
+pub trait QCursor_free<RetType> {
+  fn free(self , rsthis: & QCursor) -> RetType;
 }
 
   // proto:  void QCursor::~QCursor();
-impl<'a> /*trait*/ QCursor_Free<()> for () {
-  fn Free(self , rsthis: & QCursor) -> () {
+impl<'a> /*trait*/ QCursor_free<()> for () {
+  fn free(self , rsthis: & QCursor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QCursorD0Ev()};
      unsafe {_ZN7QCursorD0Ev(rsthis.qclsinst)};
@@ -228,8 +228,8 @@ impl<'a> /*trait*/ QCursor_mask<QBitmap> for () {
 }
 
   // proto:  void QCursor::QCursor(const QCursor & cursor);
-impl<'a> /*trait*/ QCursor_New for (&'a QCursor) {
-  fn New(self) -> QCursor {
+impl<'a> /*trait*/ QCursor_new for (&'a QCursor) {
+  fn new(self) -> QCursor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QCursorC1ERKS_()};
     let ctysz: c_int = unsafe{QCursor_Class_Size()};
@@ -340,8 +340,8 @@ impl<'a> /*trait*/ QCursor_pos_s<QPoint> for () {
 }
 
   // proto:  void QCursor::QCursor();
-impl<'a> /*trait*/ QCursor_New for () {
-  fn New(self) -> QCursor {
+impl<'a> /*trait*/ QCursor_new for () {
+  fn new(self) -> QCursor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QCursorC1Ev()};
     let ctysz: c_int = unsafe{QCursor_Class_Size()};

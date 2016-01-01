@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qpolygon.h
 // dst-file: /src/gui/qpolygon.rs
 //
@@ -200,19 +200,19 @@ impl<'a> /*trait*/ QPolygon_setPoint<()> for (i32, i32, i32) {
 
   // proto:  void QPolygon::~QPolygon();
 impl /*struct*/ QPolygon {
-  pub fn Free<RetType, T: QPolygon_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QPolygon_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QPolygon_Free<RetType> {
-  fn Free(self , rsthis: & QPolygon) -> RetType;
+pub trait QPolygon_free<RetType> {
+  fn free(self , rsthis: & QPolygon) -> RetType;
 }
 
   // proto:  void QPolygon::~QPolygon();
-impl<'a> /*trait*/ QPolygon_Free<()> for () {
-  fn Free(self , rsthis: & QPolygon) -> () {
+impl<'a> /*trait*/ QPolygon_free<()> for () {
+  fn free(self , rsthis: & QPolygon) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPolygonD0Ev()};
      unsafe {demth_ZN8QPolygonD0Ev(rsthis.qclsinst)};
@@ -470,20 +470,20 @@ impl<'a> /*trait*/ QPolygon_point<QPoint> for (i32) {
 
   // proto:  void QPolygon::QPolygon(const QPolygon & a);
 impl /*struct*/ QPolygon {
-  pub fn New<T: QPolygon_New>(value: T) -> QPolygon {
-    let rsthis = value.New();
+  pub fn new<T: QPolygon_new>(value: T) -> QPolygon {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QPolygon_New {
-  fn New(self) -> QPolygon;
+pub trait QPolygon_new {
+  fn new(self) -> QPolygon;
 }
 
   // proto:  void QPolygon::QPolygon(const QPolygon & a);
-impl<'a> /*trait*/ QPolygon_New for (&'a QPolygon) {
-  fn New(self) -> QPolygon {
+impl<'a> /*trait*/ QPolygon_new for (&'a QPolygon) {
+  fn new(self) -> QPolygon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPolygonC1ERKS_()};
     let ctysz: c_int = unsafe{QPolygon_Class_Size()};
@@ -498,8 +498,8 @@ impl<'a> /*trait*/ QPolygon_New for (&'a QPolygon) {
 }
 
   // proto:  void QPolygon::QPolygon(int nPoints, const int * points);
-impl<'a> /*trait*/ QPolygon_New for (i32, &'a  Vec<i32>) {
-  fn New(self) -> QPolygon {
+impl<'a> /*trait*/ QPolygon_new for (i32, &'a  Vec<i32>) {
+  fn new(self) -> QPolygon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPolygonC1EiPKi()};
     let ctysz: c_int = unsafe{QPolygon_Class_Size()};
@@ -579,8 +579,8 @@ impl<'a> /*trait*/ QPolygon_setPoints<()> for (i32, &'a  Vec<i32>) {
 }
 
   // proto:  void QPolygon::QPolygon(int size);
-impl<'a> /*trait*/ QPolygon_New for (i32) {
-  fn New(self) -> QPolygon {
+impl<'a> /*trait*/ QPolygon_new for (i32) {
+  fn new(self) -> QPolygon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPolygonC1Ei()};
     let ctysz: c_int = unsafe{QPolygon_Class_Size()};
@@ -595,8 +595,8 @@ impl<'a> /*trait*/ QPolygon_New for (i32) {
 }
 
   // proto:  void QPolygon::QPolygon();
-impl<'a> /*trait*/ QPolygon_New for () {
-  fn New(self) -> QPolygon {
+impl<'a> /*trait*/ QPolygon_new for () {
+  fn new(self) -> QPolygon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPolygonC1Ev()};
     let ctysz: c_int = unsafe{QPolygon_Class_Size()};
@@ -610,8 +610,8 @@ impl<'a> /*trait*/ QPolygon_New for () {
 }
 
   // proto:  void QPolygon::QPolygon(const QRect & r, bool closed);
-impl<'a> /*trait*/ QPolygon_New for (&'a QRect, i8) {
-  fn New(self) -> QPolygon {
+impl<'a> /*trait*/ QPolygon_new for (&'a QRect, i8) {
+  fn new(self) -> QPolygon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPolygonC1ERK5QRectb()};
     let ctysz: c_int = unsafe{QPolygon_Class_Size()};
@@ -682,20 +682,20 @@ impl<'a> /*trait*/ QPolygonF_intersected<QPolygonF> for (&'a QPolygonF) {
 
   // proto:  void QPolygonF::QPolygonF(const QPolygon & a);
 impl /*struct*/ QPolygonF {
-  pub fn New<T: QPolygonF_New>(value: T) -> QPolygonF {
-    let rsthis = value.New();
+  pub fn new<T: QPolygonF_new>(value: T) -> QPolygonF {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QPolygonF_New {
-  fn New(self) -> QPolygonF;
+pub trait QPolygonF_new {
+  fn new(self) -> QPolygonF;
 }
 
   // proto:  void QPolygonF::QPolygonF(const QPolygon & a);
-impl<'a> /*trait*/ QPolygonF_New for (&'a QPolygon) {
-  fn New(self) -> QPolygonF {
+impl<'a> /*trait*/ QPolygonF_new for (&'a QPolygon) {
+  fn new(self) -> QPolygonF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QPolygonFC1ERK8QPolygon()};
     let ctysz: c_int = unsafe{QPolygonF_Class_Size()};
@@ -710,8 +710,8 @@ impl<'a> /*trait*/ QPolygonF_New for (&'a QPolygon) {
 }
 
   // proto:  void QPolygonF::QPolygonF(const QRectF & r);
-impl<'a> /*trait*/ QPolygonF_New for (&'a QRectF) {
-  fn New(self) -> QPolygonF {
+impl<'a> /*trait*/ QPolygonF_new for (&'a QRectF) {
+  fn new(self) -> QPolygonF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QPolygonFC1ERK6QRectF()};
     let ctysz: c_int = unsafe{QPolygonF_Class_Size()};
@@ -751,19 +751,19 @@ impl<'a> /*trait*/ QPolygonF_toPolygon<QPolygon> for () {
 
   // proto:  void QPolygonF::~QPolygonF();
 impl /*struct*/ QPolygonF {
-  pub fn Free<RetType, T: QPolygonF_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QPolygonF_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QPolygonF_Free<RetType> {
-  fn Free(self , rsthis: & QPolygonF) -> RetType;
+pub trait QPolygonF_free<RetType> {
+  fn free(self , rsthis: & QPolygonF) -> RetType;
 }
 
   // proto:  void QPolygonF::~QPolygonF();
-impl<'a> /*trait*/ QPolygonF_Free<()> for () {
-  fn Free(self , rsthis: & QPolygonF) -> () {
+impl<'a> /*trait*/ QPolygonF_free<()> for () {
+  fn free(self , rsthis: & QPolygonF) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QPolygonFD0Ev()};
      unsafe {demth_ZN9QPolygonFD0Ev(rsthis.qclsinst)};
@@ -772,8 +772,8 @@ impl<'a> /*trait*/ QPolygonF_Free<()> for () {
 }
 
   // proto:  void QPolygonF::QPolygonF(int size);
-impl<'a> /*trait*/ QPolygonF_New for (i32) {
-  fn New(self) -> QPolygonF {
+impl<'a> /*trait*/ QPolygonF_new for (i32) {
+  fn new(self) -> QPolygonF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QPolygonFC1Ei()};
     let ctysz: c_int = unsafe{QPolygonF_Class_Size()};
@@ -813,8 +813,8 @@ impl<'a> /*trait*/ QPolygonF_subtracted<QPolygonF> for (&'a QPolygonF) {
 }
 
   // proto:  void QPolygonF::QPolygonF();
-impl<'a> /*trait*/ QPolygonF_New for () {
-  fn New(self) -> QPolygonF {
+impl<'a> /*trait*/ QPolygonF_new for () {
+  fn new(self) -> QPolygonF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QPolygonFC1Ev()};
     let ctysz: c_int = unsafe{QPolygonF_Class_Size()};
@@ -911,8 +911,8 @@ impl<'a> /*trait*/ QPolygonF_translate<()> for (f64, f64) {
 }
 
   // proto:  void QPolygonF::QPolygonF(const QPolygonF & a);
-impl<'a> /*trait*/ QPolygonF_New for (&'a QPolygonF) {
-  fn New(self) -> QPolygonF {
+impl<'a> /*trait*/ QPolygonF_new for (&'a QPolygonF) {
+  fn new(self) -> QPolygonF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QPolygonFC1ERKS_()};
     let ctysz: c_int = unsafe{QPolygonF_Class_Size()};

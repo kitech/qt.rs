@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtGui/qpixmap.h
 // dst-file: /src/gui/qpixmap.rs
 //
@@ -263,20 +263,20 @@ impl<'a> /*trait*/ QPixmap_devicePixelRatio<f64> for () {
 
   // proto:  void QPixmap::QPixmap(const QSize & );
 impl /*struct*/ QPixmap {
-  pub fn New<T: QPixmap_New>(value: T) -> QPixmap {
-    let rsthis = value.New();
+  pub fn new<T: QPixmap_new>(value: T) -> QPixmap {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QPixmap_New {
-  fn New(self) -> QPixmap;
+pub trait QPixmap_new {
+  fn new(self) -> QPixmap;
 }
 
   // proto:  void QPixmap::QPixmap(const QSize & );
-impl<'a> /*trait*/ QPixmap_New for (&'a QSize) {
-  fn New(self) -> QPixmap {
+impl<'a> /*trait*/ QPixmap_new for (&'a QSize) {
+  fn new(self) -> QPixmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPixmapC1ERK5QSize()};
     let ctysz: c_int = unsafe{QPixmap_Class_Size()};
@@ -316,8 +316,8 @@ impl<'a> /*trait*/ QPixmap_fill<()> for (&'a QPaintDevice, i32, i32) {
 }
 
   // proto:  void QPixmap::QPixmap(const QSize & s, int type);
-impl<'a> /*trait*/ QPixmap_New for (&'a QSize, i32) {
-  fn New(self) -> QPixmap {
+impl<'a> /*trait*/ QPixmap_new for (&'a QSize, i32) {
+  fn new(self) -> QPixmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPixmapC1ERK5QSizei()};
     let ctysz: c_int = unsafe{QPixmap_Class_Size()};
@@ -448,8 +448,8 @@ impl<'a> /*trait*/ QPixmap_trueMatrix_s<QTransform> for (&'a QTransform, i32, i3
 }
 
   // proto:  void QPixmap::QPixmap(int w, int h);
-impl<'a> /*trait*/ QPixmap_New for (i32, i32) {
-  fn New(self) -> QPixmap {
+impl<'a> /*trait*/ QPixmap_new for (i32, i32) {
+  fn new(self) -> QPixmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPixmapC1Eii()};
     let ctysz: c_int = unsafe{QPixmap_Class_Size()};
@@ -650,8 +650,8 @@ impl<'a> /*trait*/ QPixmap_setMask<()> for (&'a QBitmap) {
 }
 
   // proto:  void QPixmap::QPixmap();
-impl<'a> /*trait*/ QPixmap_New for () {
-  fn New(self) -> QPixmap {
+impl<'a> /*trait*/ QPixmap_new for () {
+  fn new(self) -> QPixmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPixmapC1Ev()};
     let ctysz: c_int = unsafe{QPixmap_Class_Size()};
@@ -691,8 +691,8 @@ impl<'a> /*trait*/ QPixmap_grabWidget_s<QPixmap> for (&'a QObject, &'a QRect) {
 }
 
   // proto:  void QPixmap::QPixmap(const QPixmap & );
-impl<'a> /*trait*/ QPixmap_New for (&'a QPixmap) {
-  fn New(self) -> QPixmap {
+impl<'a> /*trait*/ QPixmap_new for (&'a QPixmap) {
+  fn new(self) -> QPixmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPixmapC1ERKS_()};
     let ctysz: c_int = unsafe{QPixmap_Class_Size()};
@@ -730,8 +730,8 @@ impl<'a> /*trait*/ QPixmap_setDevicePixelRatio<()> for (f64) {
 }
 
   // proto:  void QPixmap::QPixmap(const char *const [] xpm);
-impl<'a> /*trait*/ QPixmap_New for (&'a  Vec<&'a  i8>) {
-  fn New(self) -> QPixmap {
+impl<'a> /*trait*/ QPixmap_new for (&'a  Vec<&'a  i8>) {
+  fn new(self) -> QPixmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPixmapC1EPKPKc()};
     let ctysz: c_int = unsafe{QPixmap_Class_Size()};
@@ -1014,19 +1014,19 @@ impl<'a> /*trait*/ QPixmap_paintEngine<QPaintEngine> for () {
 
   // proto:  void QPixmap::~QPixmap();
 impl /*struct*/ QPixmap {
-  pub fn Free<RetType, T: QPixmap_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QPixmap_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QPixmap_Free<RetType> {
-  fn Free(self , rsthis: & QPixmap) -> RetType;
+pub trait QPixmap_free<RetType> {
+  fn free(self , rsthis: & QPixmap) -> RetType;
 }
 
   // proto:  void QPixmap::~QPixmap();
-impl<'a> /*trait*/ QPixmap_Free<()> for () {
-  fn Free(self , rsthis: & QPixmap) -> () {
+impl<'a> /*trait*/ QPixmap_free<()> for () {
+  fn free(self , rsthis: & QPixmap) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPixmapD0Ev()};
      unsafe {_ZN7QPixmapD0Ev(rsthis.qclsinst)};
