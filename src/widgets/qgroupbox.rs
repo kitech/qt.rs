@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtWidgets/qgroupbox.h
 // dst-file: /src/widgets/qgroupbox.rs
 //
@@ -49,8 +49,6 @@ extern {
   // proto:  void QGroupBox::QGroupBox(QWidget * parent);
   fn dector_ZN9QGroupBoxC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
   fn _ZN9QGroupBoxC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QGroupBox::toggled(bool );
-  fn _ZN9QGroupBox7toggledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  bool QGroupBox::isChecked();
   fn _ZNK9QGroupBox9isCheckedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QGroupBox::setChecked(bool checked);
@@ -67,8 +65,6 @@ extern {
   // proto:  void QGroupBox::QGroupBox(const QString & title, QWidget * parent);
   fn dector_ZN9QGroupBoxC1ERK7QStringP7QWidget(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   fn _ZN9QGroupBoxC1ERK7QStringP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
-  // proto:  void QGroupBox::clicked(bool checked);
-  fn _ZN9QGroupBox7clickedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   fn QGroupBox_SlotProxy_connect__ZN9QGroupBox7clickedEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QGroupBox_SlotProxy_connect__ZN9QGroupBox7toggledEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
@@ -79,8 +75,8 @@ extern {
 pub struct QGroupBox {
   qbase: QWidget,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _clicked_1: QGroupBox_clicked_signal,
-  pub _toggled_1: QGroupBox_toggled_signal,
+  pub _clicked: QGroupBox_clicked_signal,
+  pub _toggled: QGroupBox_toggled_signal,
 }
 
 impl /*struct*/ QGroupBox {
@@ -289,29 +285,6 @@ impl<'a> /*trait*/ QGroupBox_new for (&'a QWidget) {
   }
 }
 
-  // proto:  void QGroupBox::toggled(bool );
-impl /*struct*/ QGroupBox {
-  pub fn toggled<RetType, T: QGroupBox_toggled<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toggled(self);
-    // return 1;
-  }
-}
-
-pub trait QGroupBox_toggled<RetType> {
-  fn toggled(self , rsthis: & QGroupBox) -> RetType;
-}
-
-  // proto:  void QGroupBox::toggled(bool );
-impl<'a> /*trait*/ QGroupBox_toggled<()> for (i8) {
-  fn toggled(self , rsthis: & QGroupBox) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QGroupBox7toggledEb()};
-    let arg0 = self  as c_char;
-     unsafe {_ZN9QGroupBox7toggledEb(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  bool QGroupBox::isChecked();
 impl /*struct*/ QGroupBox {
   pub fn isChecked<RetType, T: QGroupBox_isChecked<RetType>>(& self,  overload_args: T) -> RetType {
@@ -461,33 +434,10 @@ impl<'a> /*trait*/ QGroupBox_new for (&'a QString, &'a QWidget) {
   }
 }
 
-  // proto:  void QGroupBox::clicked(bool checked);
-impl /*struct*/ QGroupBox {
-  pub fn clicked<RetType, T: QGroupBox_clicked<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.clicked(self);
-    // return 1;
-  }
-}
-
-pub trait QGroupBox_clicked<RetType> {
-  fn clicked(self , rsthis: & QGroupBox) -> RetType;
-}
-
-  // proto:  void QGroupBox::clicked(bool checked);
-impl<'a> /*trait*/ QGroupBox_clicked<()> for (i8) {
-  fn clicked(self , rsthis: & QGroupBox) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QGroupBox7clickedEb()};
-    let arg0 = self  as c_char;
-     unsafe {_ZN9QGroupBox7clickedEb(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
 #[derive(Default)] // for QGroupBox_clicked
 pub struct QGroupBox_clicked_signal{poi:u64}
 impl /* struct */ QGroupBox {
-  pub fn clicked_1(&self) -> QGroupBox_clicked_signal {
+  pub fn clicked(&self) -> QGroupBox_clicked_signal {
      return QGroupBox_clicked_signal{poi:self.qclsinst};
   }
 }
@@ -503,7 +453,7 @@ pub trait QGroupBox_clicked_signal_connect {
 #[derive(Default)] // for QGroupBox_toggled
 pub struct QGroupBox_toggled_signal{poi:u64}
 impl /* struct */ QGroupBox {
-  pub fn toggled_1(&self) -> QGroupBox_toggled_signal {
+  pub fn toggled(&self) -> QGroupBox_toggled_signal {
      return QGroupBox_toggled_signal{poi:self.qclsinst};
   }
 }
@@ -522,11 +472,12 @@ extern fn QGroupBox_clicked_signal_connect_cb_0(rsfptr:fn(i8), arg0: c_char) {
   let rsarg0 = arg0 as i8;
   rsfptr(rsarg0);
 }
-extern fn QGroupBox_clicked_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(i8), arg0: c_char) {
+extern fn QGroupBox_clicked_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(i8)>, arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i8;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QGroupBox_clicked_signal_connect for fn(i8) {
   fn connect(self, sigthis: QGroupBox_clicked_signal) {
@@ -547,7 +498,7 @@ impl /* trait */ QGroupBox_clicked_signal_connect for Box<Fn(i8)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QGroupBox_clicked_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QGroupBox_SlotProxy_connect__ZN9QGroupBox7clickedEb(arg0, arg1, arg2)};
   }
 }
@@ -557,11 +508,12 @@ extern fn QGroupBox_toggled_signal_connect_cb_1(rsfptr:fn(i8), arg0: c_char) {
   let rsarg0 = arg0 as i8;
   rsfptr(rsarg0);
 }
-extern fn QGroupBox_toggled_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(i8), arg0: c_char) {
+extern fn QGroupBox_toggled_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn(i8)>, arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i8;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QGroupBox_toggled_signal_connect for fn(i8) {
   fn connect(self, sigthis: QGroupBox_toggled_signal) {
@@ -582,7 +534,7 @@ impl /* trait */ QGroupBox_toggled_signal_connect for Box<Fn(i8)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QGroupBox_toggled_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QGroupBox_SlotProxy_connect__ZN9QGroupBox7toggledEb(arg0, arg1, arg2)};
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtWidgets/qmessagebox.h
 // dst-file: /src/widgets/qmessagebox.rs
 //
@@ -39,8 +39,6 @@ extern {
   fn QMessageBox_Class_Size() -> c_int;
   // proto: static int QMessageBox::critical(QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2);
   fn _ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_iii(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: c_int, arg4: c_int, arg5: c_int) -> c_int;
-  // proto:  void QMessageBox::buttonClicked(QAbstractButton * button);
-  fn _ZN11QMessageBox13buttonClickedEP15QAbstractButton(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMessageBox::setButtonText(int button, const QString & text);
   fn _ZN11QMessageBox13setButtonTextEiRK7QString(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  void QMessageBox::~QMessageBox();
@@ -120,7 +118,7 @@ extern {
 pub struct QMessageBox {
   qbase: QDialog,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _buttonClicked_1: QMessageBox_buttonClicked_signal,
+  pub _buttonClicked: QMessageBox_buttonClicked_signal,
 }
 
 impl /*struct*/ QMessageBox {
@@ -165,29 +163,6 @@ impl<'a> /*trait*/ QMessageBox_critical_s<i32> for (&'a QWidget, &'a QString, &'
     let arg5 = self.5  as c_int;
     let mut ret = unsafe {_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)};
     return ret as i32;
-    // return 1;
-  }
-}
-
-  // proto:  void QMessageBox::buttonClicked(QAbstractButton * button);
-impl /*struct*/ QMessageBox {
-  pub fn buttonClicked<RetType, T: QMessageBox_buttonClicked<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.buttonClicked(self);
-    // return 1;
-  }
-}
-
-pub trait QMessageBox_buttonClicked<RetType> {
-  fn buttonClicked(self , rsthis: & QMessageBox) -> RetType;
-}
-
-  // proto:  void QMessageBox::buttonClicked(QAbstractButton * button);
-impl<'a> /*trait*/ QMessageBox_buttonClicked<()> for (&'a QAbstractButton) {
-  fn buttonClicked(self , rsthis: & QMessageBox) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QMessageBox13buttonClickedEP15QAbstractButton()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QMessageBox13buttonClickedEP15QAbstractButton(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -986,7 +961,7 @@ impl<'a> /*trait*/ QMessageBox_information_s<i32> for (&'a QWidget, &'a QString,
 #[derive(Default)] // for QMessageBox_buttonClicked
 pub struct QMessageBox_buttonClicked_signal{poi:u64}
 impl /* struct */ QMessageBox {
-  pub fn buttonClicked_1(&self) -> QMessageBox_buttonClicked_signal {
+  pub fn buttonClicked(&self) -> QMessageBox_buttonClicked_signal {
      return QMessageBox_buttonClicked_signal{poi:self.qclsinst};
   }
 }
@@ -1005,11 +980,12 @@ extern fn QMessageBox_buttonClicked_signal_connect_cb_0(rsfptr:fn(QAbstractButto
   let rsarg0 = QAbstractButton::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QMessageBox_buttonClicked_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QAbstractButton), arg0: *mut c_void) {
+extern fn QMessageBox_buttonClicked_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(QAbstractButton)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QAbstractButton::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QMessageBox_buttonClicked_signal_connect for fn(QAbstractButton) {
   fn connect(self, sigthis: QMessageBox_buttonClicked_signal) {
@@ -1030,7 +1006,7 @@ impl /* trait */ QMessageBox_buttonClicked_signal_connect for Box<Fn(QAbstractBu
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QMessageBox_buttonClicked_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QMessageBox_SlotProxy_connect__ZN11QMessageBox13buttonClickedEP15QAbstractButton(arg0, arg1, arg2)};
   }
 }

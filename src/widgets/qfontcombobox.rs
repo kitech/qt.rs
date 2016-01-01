@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtWidgets/qfontcombobox.h
 // dst-file: /src/widgets/qfontcombobox.rs
 //
@@ -47,8 +47,6 @@ extern {
   fn _ZNK13QFontComboBox8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QFont QFontComboBox::currentFont();
   fn _ZNK13QFontComboBox11currentFontEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QFontComboBox::currentFontChanged(const QFont & f);
-  fn _ZN13QFontComboBox18currentFontChangedERK5QFont(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QFontComboBox::setCurrentFont(const QFont & f);
   fn _ZN13QFontComboBox14setCurrentFontERK5QFont(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QFontComboBox_SlotProxy_connect__ZN13QFontComboBox18currentFontChangedERK5QFont(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
@@ -60,7 +58,7 @@ extern {
 pub struct QFontComboBox {
   qbase: QComboBox,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _currentFontChanged_1: QFontComboBox_currentFontChanged_signal,
+  pub _currentFontChanged: QFontComboBox_currentFontChanged_signal,
 }
 
 impl /*struct*/ QFontComboBox {
@@ -217,29 +215,6 @@ impl<'a> /*trait*/ QFontComboBox_currentFont<QFont> for () {
   }
 }
 
-  // proto:  void QFontComboBox::currentFontChanged(const QFont & f);
-impl /*struct*/ QFontComboBox {
-  pub fn currentFontChanged<RetType, T: QFontComboBox_currentFontChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.currentFontChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QFontComboBox_currentFontChanged<RetType> {
-  fn currentFontChanged(self , rsthis: & QFontComboBox) -> RetType;
-}
-
-  // proto:  void QFontComboBox::currentFontChanged(const QFont & f);
-impl<'a> /*trait*/ QFontComboBox_currentFontChanged<()> for (&'a QFont) {
-  fn currentFontChanged(self , rsthis: & QFontComboBox) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QFontComboBox18currentFontChangedERK5QFont()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN13QFontComboBox18currentFontChangedERK5QFont(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  void QFontComboBox::setCurrentFont(const QFont & f);
 impl /*struct*/ QFontComboBox {
   pub fn setCurrentFont<RetType, T: QFontComboBox_setCurrentFont<RetType>>(& self,  overload_args: T) -> RetType {
@@ -266,7 +241,7 @@ impl<'a> /*trait*/ QFontComboBox_setCurrentFont<()> for (&'a QFont) {
 #[derive(Default)] // for QFontComboBox_currentFontChanged
 pub struct QFontComboBox_currentFontChanged_signal{poi:u64}
 impl /* struct */ QFontComboBox {
-  pub fn currentFontChanged_1(&self) -> QFontComboBox_currentFontChanged_signal {
+  pub fn currentFontChanged(&self) -> QFontComboBox_currentFontChanged_signal {
      return QFontComboBox_currentFontChanged_signal{poi:self.qclsinst};
   }
 }
@@ -285,11 +260,12 @@ extern fn QFontComboBox_currentFontChanged_signal_connect_cb_0(rsfptr:fn(QFont),
   let rsarg0 = QFont::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QFontComboBox_currentFontChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QFont), arg0: *mut c_void) {
+extern fn QFontComboBox_currentFontChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(QFont)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QFont::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QFontComboBox_currentFontChanged_signal_connect for fn(QFont) {
   fn connect(self, sigthis: QFontComboBox_currentFontChanged_signal) {
@@ -310,7 +286,7 @@ impl /* trait */ QFontComboBox_currentFontChanged_signal_connect for Box<Fn(QFon
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QFontComboBox_currentFontChanged_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QFontComboBox_SlotProxy_connect__ZN13QFontComboBox18currentFontChangedERK5QFont(arg0, arg1, arg2)};
   }
 }

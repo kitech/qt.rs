@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtWidgets/qstackedlayout.h
 // dst-file: /src/widgets/qstackedlayout.rs
 //
@@ -34,8 +34,6 @@ use super::super::core::qsize::QSize; // 771
 
 extern {
   fn QStackedLayout_Class_Size() -> c_int;
-  // proto:  void QStackedLayout::currentChanged(int index);
-  fn _ZN14QStackedLayout14currentChangedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QStackedLayout::insertWidget(int index, QWidget * w);
   fn _ZN14QStackedLayout12insertWidgetEiP7QWidget(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void) -> c_int;
   // proto:  void QStackedLayout::QStackedLayout(QLayout * parentLayout);
@@ -69,8 +67,6 @@ extern {
   fn _ZNK14QStackedLayout10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QStackedLayout::setCurrentIndex(int index);
   fn _ZN14QStackedLayout15setCurrentIndexEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
-  // proto:  void QStackedLayout::widgetRemoved(int index);
-  fn _ZN14QStackedLayout13widgetRemovedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  QLayoutItem * QStackedLayout::itemAt(int );
   fn _ZNK14QStackedLayout6itemAtEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  void QStackedLayout::~QStackedLayout();
@@ -96,8 +92,8 @@ extern {
 pub struct QStackedLayout {
   qbase: QLayout,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _widgetRemoved_1: QStackedLayout_widgetRemoved_signal,
-  pub _currentChanged_1: QStackedLayout_currentChanged_signal,
+  pub _widgetRemoved: QStackedLayout_widgetRemoved_signal,
+  pub _currentChanged: QStackedLayout_currentChanged_signal,
 }
 
 impl /*struct*/ QStackedLayout {
@@ -117,29 +113,6 @@ impl AsRef<QLayout> for QStackedLayout {
     return & self.qbase;
   }
 }
-  // proto:  void QStackedLayout::currentChanged(int index);
-impl /*struct*/ QStackedLayout {
-  pub fn currentChanged<RetType, T: QStackedLayout_currentChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.currentChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QStackedLayout_currentChanged<RetType> {
-  fn currentChanged(self , rsthis: & QStackedLayout) -> RetType;
-}
-
-  // proto:  void QStackedLayout::currentChanged(int index);
-impl<'a> /*trait*/ QStackedLayout_currentChanged<()> for (i32) {
-  fn currentChanged(self , rsthis: & QStackedLayout) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QStackedLayout14currentChangedEi()};
-    let arg0 = self  as c_int;
-     unsafe {_ZN14QStackedLayout14currentChangedEi(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  int QStackedLayout::insertWidget(int index, QWidget * w);
 impl /*struct*/ QStackedLayout {
   pub fn insertWidget<RetType, T: QStackedLayout_insertWidget<RetType>>(& self,  overload_args: T) -> RetType {
@@ -483,29 +456,6 @@ impl<'a> /*trait*/ QStackedLayout_setCurrentIndex<()> for (i32) {
   }
 }
 
-  // proto:  void QStackedLayout::widgetRemoved(int index);
-impl /*struct*/ QStackedLayout {
-  pub fn widgetRemoved<RetType, T: QStackedLayout_widgetRemoved<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.widgetRemoved(self);
-    // return 1;
-  }
-}
-
-pub trait QStackedLayout_widgetRemoved<RetType> {
-  fn widgetRemoved(self , rsthis: & QStackedLayout) -> RetType;
-}
-
-  // proto:  void QStackedLayout::widgetRemoved(int index);
-impl<'a> /*trait*/ QStackedLayout_widgetRemoved<()> for (i32) {
-  fn widgetRemoved(self , rsthis: & QStackedLayout) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QStackedLayout13widgetRemovedEi()};
-    let arg0 = self  as c_int;
-     unsafe {_ZN14QStackedLayout13widgetRemovedEi(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  QLayoutItem * QStackedLayout::itemAt(int );
 impl /*struct*/ QStackedLayout {
   pub fn itemAt<RetType, T: QStackedLayout_itemAt<RetType>>(& self,  overload_args: T) -> RetType {
@@ -667,7 +617,7 @@ impl<'a> /*trait*/ QStackedLayout_widget<QWidget> for (i32) {
 #[derive(Default)] // for QStackedLayout_widgetRemoved
 pub struct QStackedLayout_widgetRemoved_signal{poi:u64}
 impl /* struct */ QStackedLayout {
-  pub fn widgetRemoved_1(&self) -> QStackedLayout_widgetRemoved_signal {
+  pub fn widgetRemoved(&self) -> QStackedLayout_widgetRemoved_signal {
      return QStackedLayout_widgetRemoved_signal{poi:self.qclsinst};
   }
 }
@@ -683,7 +633,7 @@ pub trait QStackedLayout_widgetRemoved_signal_connect {
 #[derive(Default)] // for QStackedLayout_currentChanged
 pub struct QStackedLayout_currentChanged_signal{poi:u64}
 impl /* struct */ QStackedLayout {
-  pub fn currentChanged_1(&self) -> QStackedLayout_currentChanged_signal {
+  pub fn currentChanged(&self) -> QStackedLayout_currentChanged_signal {
      return QStackedLayout_currentChanged_signal{poi:self.qclsinst};
   }
 }
@@ -702,11 +652,12 @@ extern fn QStackedLayout_widgetRemoved_signal_connect_cb_0(rsfptr:fn(i32), arg0:
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QStackedLayout_widgetRemoved_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
+extern fn QStackedLayout_widgetRemoved_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QStackedLayout_widgetRemoved_signal_connect for fn(i32) {
   fn connect(self, sigthis: QStackedLayout_widgetRemoved_signal) {
@@ -727,7 +678,7 @@ impl /* trait */ QStackedLayout_widgetRemoved_signal_connect for Box<Fn(i32)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QStackedLayout_widgetRemoved_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QStackedLayout_SlotProxy_connect__ZN14QStackedLayout13widgetRemovedEi(arg0, arg1, arg2)};
   }
 }
@@ -737,11 +688,12 @@ extern fn QStackedLayout_currentChanged_signal_connect_cb_1(rsfptr:fn(i32), arg0
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QStackedLayout_currentChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
+extern fn QStackedLayout_currentChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QStackedLayout_currentChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QStackedLayout_currentChanged_signal) {
@@ -762,7 +714,7 @@ impl /* trait */ QStackedLayout_currentChanged_signal_connect for Box<Fn(i32)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QStackedLayout_currentChanged_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QStackedLayout_SlotProxy_connect__ZN14QStackedLayout14currentChangedEi(arg0, arg1, arg2)};
   }
 }

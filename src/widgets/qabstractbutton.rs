@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtWidgets/qabstractbutton.h
 // dst-file: /src/widgets/qabstractbutton.rs
 //
@@ -54,8 +54,6 @@ extern {
   fn _ZN15QAbstractButtonC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QAbstractButton::isDown();
   fn _ZNK15QAbstractButton6isDownEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QAbstractButton::toggled(bool checked);
-  fn _ZN15QAbstractButton7toggledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QAbstractButton::setAutoExclusive(bool );
   fn _ZN15QAbstractButton16setAutoExclusiveEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  const QMetaObject * QAbstractButton::metaObject();
@@ -68,10 +66,6 @@ extern {
   fn _ZNK15QAbstractButton15autoRepeatDelayEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QAbstractButton::autoExclusive();
   fn _ZNK15QAbstractButton13autoExclusiveEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QAbstractButton::clicked(bool checked);
-  fn _ZN15QAbstractButton7clickedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
-  // proto:  void QAbstractButton::released();
-  fn _ZN15QAbstractButton8releasedEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractButton::toggle();
   fn _ZN15QAbstractButton6toggleEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractButton::setIcon(const QIcon & icon);
@@ -103,8 +97,6 @@ extern {
   fn _ZNK15QAbstractButton10autoRepeatEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QAbstractButton::setIconSize(const QSize & size);
   fn _ZN15QAbstractButton11setIconSizeERK5QSize(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QAbstractButton::pressed();
-  fn _ZN15QAbstractButton7pressedEv(qthis: u64 /* *mut c_void*/);
   fn QAbstractButton_SlotProxy_connect__ZN15QAbstractButton7clickedEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QAbstractButton_SlotProxy_connect__ZN15QAbstractButton7toggledEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QAbstractButton_SlotProxy_connect__ZN15QAbstractButton7pressedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
@@ -117,10 +109,10 @@ extern {
 pub struct QAbstractButton {
   qbase: QWidget,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _released_1: QAbstractButton_released_signal,
-  pub _clicked_1: QAbstractButton_clicked_signal,
-  pub _pressed_1: QAbstractButton_pressed_signal,
-  pub _toggled_1: QAbstractButton_toggled_signal,
+  pub _released: QAbstractButton_released_signal,
+  pub _clicked: QAbstractButton_clicked_signal,
+  pub _pressed: QAbstractButton_pressed_signal,
+  pub _toggled: QAbstractButton_toggled_signal,
 }
 
 impl /*struct*/ QAbstractButton {
@@ -354,29 +346,6 @@ impl<'a> /*trait*/ QAbstractButton_isDown<i8> for () {
   }
 }
 
-  // proto:  void QAbstractButton::toggled(bool checked);
-impl /*struct*/ QAbstractButton {
-  pub fn toggled<RetType, T: QAbstractButton_toggled<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toggled(self);
-    // return 1;
-  }
-}
-
-pub trait QAbstractButton_toggled<RetType> {
-  fn toggled(self , rsthis: & QAbstractButton) -> RetType;
-}
-
-  // proto:  void QAbstractButton::toggled(bool checked);
-impl<'a> /*trait*/ QAbstractButton_toggled<()> for (i8) {
-  fn toggled(self , rsthis: & QAbstractButton) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QAbstractButton7toggledEb()};
-    let arg0 = self  as c_char;
-     unsafe {_ZN15QAbstractButton7toggledEb(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  void QAbstractButton::setAutoExclusive(bool );
 impl /*struct*/ QAbstractButton {
   pub fn setAutoExclusive<RetType, T: QAbstractButton_setAutoExclusive<RetType>>(& self,  overload_args: T) -> RetType {
@@ -510,51 +479,6 @@ impl<'a> /*trait*/ QAbstractButton_autoExclusive<i8> for () {
     // unsafe{_ZNK15QAbstractButton13autoExclusiveEv()};
     let mut ret = unsafe {_ZNK15QAbstractButton13autoExclusiveEv(rsthis.qclsinst)};
     return ret as i8;
-    // return 1;
-  }
-}
-
-  // proto:  void QAbstractButton::clicked(bool checked);
-impl /*struct*/ QAbstractButton {
-  pub fn clicked<RetType, T: QAbstractButton_clicked<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.clicked(self);
-    // return 1;
-  }
-}
-
-pub trait QAbstractButton_clicked<RetType> {
-  fn clicked(self , rsthis: & QAbstractButton) -> RetType;
-}
-
-  // proto:  void QAbstractButton::clicked(bool checked);
-impl<'a> /*trait*/ QAbstractButton_clicked<()> for (i8) {
-  fn clicked(self , rsthis: & QAbstractButton) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QAbstractButton7clickedEb()};
-    let arg0 = self  as c_char;
-     unsafe {_ZN15QAbstractButton7clickedEb(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QAbstractButton::released();
-impl /*struct*/ QAbstractButton {
-  pub fn released<RetType, T: QAbstractButton_released<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.released(self);
-    // return 1;
-  }
-}
-
-pub trait QAbstractButton_released<RetType> {
-  fn released(self , rsthis: & QAbstractButton) -> RetType;
-}
-
-  // proto:  void QAbstractButton::released();
-impl<'a> /*trait*/ QAbstractButton_released<()> for () {
-  fn released(self , rsthis: & QAbstractButton) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QAbstractButton8releasedEv()};
-     unsafe {_ZN15QAbstractButton8releasedEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -898,32 +822,10 @@ impl<'a> /*trait*/ QAbstractButton_setIconSize<()> for (&'a QSize) {
   }
 }
 
-  // proto:  void QAbstractButton::pressed();
-impl /*struct*/ QAbstractButton {
-  pub fn pressed<RetType, T: QAbstractButton_pressed<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.pressed(self);
-    // return 1;
-  }
-}
-
-pub trait QAbstractButton_pressed<RetType> {
-  fn pressed(self , rsthis: & QAbstractButton) -> RetType;
-}
-
-  // proto:  void QAbstractButton::pressed();
-impl<'a> /*trait*/ QAbstractButton_pressed<()> for () {
-  fn pressed(self , rsthis: & QAbstractButton) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QAbstractButton7pressedEv()};
-     unsafe {_ZN15QAbstractButton7pressedEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
 #[derive(Default)] // for QAbstractButton_released
 pub struct QAbstractButton_released_signal{poi:u64}
 impl /* struct */ QAbstractButton {
-  pub fn released_1(&self) -> QAbstractButton_released_signal {
+  pub fn released(&self) -> QAbstractButton_released_signal {
      return QAbstractButton_released_signal{poi:self.qclsinst};
   }
 }
@@ -939,7 +841,7 @@ pub trait QAbstractButton_released_signal_connect {
 #[derive(Default)] // for QAbstractButton_clicked
 pub struct QAbstractButton_clicked_signal{poi:u64}
 impl /* struct */ QAbstractButton {
-  pub fn clicked_1(&self) -> QAbstractButton_clicked_signal {
+  pub fn clicked(&self) -> QAbstractButton_clicked_signal {
      return QAbstractButton_clicked_signal{poi:self.qclsinst};
   }
 }
@@ -955,7 +857,7 @@ pub trait QAbstractButton_clicked_signal_connect {
 #[derive(Default)] // for QAbstractButton_pressed
 pub struct QAbstractButton_pressed_signal{poi:u64}
 impl /* struct */ QAbstractButton {
-  pub fn pressed_1(&self) -> QAbstractButton_pressed_signal {
+  pub fn pressed(&self) -> QAbstractButton_pressed_signal {
      return QAbstractButton_pressed_signal{poi:self.qclsinst};
   }
 }
@@ -971,7 +873,7 @@ pub trait QAbstractButton_pressed_signal_connect {
 #[derive(Default)] // for QAbstractButton_toggled
 pub struct QAbstractButton_toggled_signal{poi:u64}
 impl /* struct */ QAbstractButton {
-  pub fn toggled_1(&self) -> QAbstractButton_toggled_signal {
+  pub fn toggled(&self) -> QAbstractButton_toggled_signal {
      return QAbstractButton_toggled_signal{poi:self.qclsinst};
   }
 }
@@ -990,11 +892,12 @@ extern fn QAbstractButton_clicked_signal_connect_cb_0(rsfptr:fn(i8), arg0: c_cha
   let rsarg0 = arg0 as i8;
   rsfptr(rsarg0);
 }
-extern fn QAbstractButton_clicked_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(i8), arg0: c_char) {
+extern fn QAbstractButton_clicked_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(i8)>, arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i8;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QAbstractButton_clicked_signal_connect for fn(i8) {
   fn connect(self, sigthis: QAbstractButton_clicked_signal) {
@@ -1015,7 +918,7 @@ impl /* trait */ QAbstractButton_clicked_signal_connect for Box<Fn(i8)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAbstractButton_clicked_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QAbstractButton_SlotProxy_connect__ZN15QAbstractButton7clickedEb(arg0, arg1, arg2)};
   }
 }
@@ -1025,11 +928,12 @@ extern fn QAbstractButton_toggled_signal_connect_cb_1(rsfptr:fn(i8), arg0: c_cha
   let rsarg0 = arg0 as i8;
   rsfptr(rsarg0);
 }
-extern fn QAbstractButton_toggled_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(i8), arg0: c_char) {
+extern fn QAbstractButton_toggled_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn(i8)>, arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i8;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QAbstractButton_toggled_signal_connect for fn(i8) {
   fn connect(self, sigthis: QAbstractButton_toggled_signal) {
@@ -1050,7 +954,7 @@ impl /* trait */ QAbstractButton_toggled_signal_connect for Box<Fn(i8)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAbstractButton_toggled_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QAbstractButton_SlotProxy_connect__ZN15QAbstractButton7toggledEb(arg0, arg1, arg2)};
   }
 }
@@ -1059,10 +963,11 @@ extern fn QAbstractButton_pressed_signal_connect_cb_2(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QAbstractButton_pressed_signal_connect_cb_box_2(rsfptr_raw:*mut Fn(), ) {
+extern fn QAbstractButton_pressed_signal_connect_cb_box_2(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  rsfptr();
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QAbstractButton_pressed_signal_connect for fn() {
   fn connect(self, sigthis: QAbstractButton_pressed_signal) {
@@ -1083,7 +988,7 @@ impl /* trait */ QAbstractButton_pressed_signal_connect for Box<Fn()> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAbstractButton_pressed_signal_connect_cb_box_2 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QAbstractButton_SlotProxy_connect__ZN15QAbstractButton7pressedEv(arg0, arg1, arg2)};
   }
 }
@@ -1092,10 +997,11 @@ extern fn QAbstractButton_released_signal_connect_cb_3(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QAbstractButton_released_signal_connect_cb_box_3(rsfptr_raw:*mut Fn(), ) {
+extern fn QAbstractButton_released_signal_connect_cb_box_3(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  rsfptr();
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QAbstractButton_released_signal_connect for fn() {
   fn connect(self, sigthis: QAbstractButton_released_signal) {
@@ -1116,7 +1022,7 @@ impl /* trait */ QAbstractButton_released_signal_connect for Box<Fn()> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAbstractButton_released_signal_connect_cb_box_3 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QAbstractButton_SlotProxy_connect__ZN15QAbstractButton8releasedEv(arg0, arg1, arg2)};
   }
 }

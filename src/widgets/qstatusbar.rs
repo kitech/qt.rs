@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtWidgets/qstatusbar.h
 // dst-file: /src/widgets/qstatusbar.rs
 //
@@ -52,8 +52,6 @@ extern {
   fn _ZNK10QStatusBar14currentMessageEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  const QMetaObject * QStatusBar::metaObject();
   fn _ZNK10QStatusBar10metaObjectEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QStatusBar::messageChanged(const QString & text);
-  fn _ZN10QStatusBar14messageChangedERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QStatusBar::showMessage(const QString & text, int timeout);
   fn _ZN10QStatusBar11showMessageERK7QStringi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
   // proto:  int QStatusBar::insertWidget(int index, QWidget * widget, int stretch);
@@ -72,7 +70,7 @@ extern {
 pub struct QStatusBar {
   qbase: QWidget,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _messageChanged_1: QStatusBar_messageChanged_signal,
+  pub _messageChanged: QStatusBar_messageChanged_signal,
 }
 
 impl /*struct*/ QStatusBar {
@@ -330,29 +328,6 @@ impl<'a> /*trait*/ QStatusBar_metaObject<()> for () {
   }
 }
 
-  // proto:  void QStatusBar::messageChanged(const QString & text);
-impl /*struct*/ QStatusBar {
-  pub fn messageChanged<RetType, T: QStatusBar_messageChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.messageChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QStatusBar_messageChanged<RetType> {
-  fn messageChanged(self , rsthis: & QStatusBar) -> RetType;
-}
-
-  // proto:  void QStatusBar::messageChanged(const QString & text);
-impl<'a> /*trait*/ QStatusBar_messageChanged<()> for (&'a QString) {
-  fn messageChanged(self , rsthis: & QStatusBar) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QStatusBar14messageChangedERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN10QStatusBar14messageChangedERK7QString(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  void QStatusBar::showMessage(const QString & text, int timeout);
 impl /*struct*/ QStatusBar {
   pub fn showMessage<RetType, T: QStatusBar_showMessage<RetType>>(& self,  overload_args: T) -> RetType {
@@ -446,7 +421,7 @@ impl<'a> /*trait*/ QStatusBar_new for (&'a QWidget) {
 #[derive(Default)] // for QStatusBar_messageChanged
 pub struct QStatusBar_messageChanged_signal{poi:u64}
 impl /* struct */ QStatusBar {
-  pub fn messageChanged_1(&self) -> QStatusBar_messageChanged_signal {
+  pub fn messageChanged(&self) -> QStatusBar_messageChanged_signal {
      return QStatusBar_messageChanged_signal{poi:self.qclsinst};
   }
 }
@@ -465,11 +440,12 @@ extern fn QStatusBar_messageChanged_signal_connect_cb_0(rsfptr:fn(QString), arg0
   let rsarg0 = QString::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QStatusBar_messageChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QString), arg0: *mut c_void) {
+extern fn QStatusBar_messageChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(QString)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QString::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QStatusBar_messageChanged_signal_connect for fn(QString) {
   fn connect(self, sigthis: QStatusBar_messageChanged_signal) {
@@ -490,7 +466,7 @@ impl /* trait */ QStatusBar_messageChanged_signal_connect for Box<Fn(QString)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QStatusBar_messageChanged_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QStatusBar_SlotProxy_connect__ZN10QStatusBar14messageChangedERK7QString(arg0, arg1, arg2)};
   }
 }

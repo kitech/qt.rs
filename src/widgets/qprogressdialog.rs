@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtWidgets/qprogressdialog.h
 // dst-file: /src/widgets/qprogressdialog.rs
 //
@@ -74,8 +74,6 @@ extern {
   fn _ZN15QProgressDialogC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QProgressDialog::setRange(int minimum, int maximum);
   fn _ZN15QProgressDialog8setRangeEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
-  // proto:  void QProgressDialog::canceled();
-  fn _ZN15QProgressDialog8canceledEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QProgressDialog::setCancelButtonText(const QString & text);
   fn _ZN15QProgressDialog19setCancelButtonTextERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QSize QProgressDialog::sizeHint();
@@ -103,7 +101,7 @@ extern {
 pub struct QProgressDialog {
   qbase: QDialog,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _canceled_1: QProgressDialog_canceled_signal,
+  pub _canceled: QProgressDialog_canceled_signal,
 }
 
 impl /*struct*/ QProgressDialog {
@@ -542,28 +540,6 @@ impl<'a> /*trait*/ QProgressDialog_setRange<()> for (i32, i32) {
   }
 }
 
-  // proto:  void QProgressDialog::canceled();
-impl /*struct*/ QProgressDialog {
-  pub fn canceled<RetType, T: QProgressDialog_canceled<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.canceled(self);
-    // return 1;
-  }
-}
-
-pub trait QProgressDialog_canceled<RetType> {
-  fn canceled(self , rsthis: & QProgressDialog) -> RetType;
-}
-
-  // proto:  void QProgressDialog::canceled();
-impl<'a> /*trait*/ QProgressDialog_canceled<()> for () {
-  fn canceled(self , rsthis: & QProgressDialog) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QProgressDialog8canceledEv()};
-     unsafe {_ZN15QProgressDialog8canceledEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto:  void QProgressDialog::setCancelButtonText(const QString & text);
 impl /*struct*/ QProgressDialog {
   pub fn setCancelButtonText<RetType, T: QProgressDialog_setCancelButtonText<RetType>>(& self,  overload_args: T) -> RetType {
@@ -775,7 +751,7 @@ impl<'a> /*trait*/ QProgressDialog_setValue<()> for (i32) {
 #[derive(Default)] // for QProgressDialog_canceled
 pub struct QProgressDialog_canceled_signal{poi:u64}
 impl /* struct */ QProgressDialog {
-  pub fn canceled_1(&self) -> QProgressDialog_canceled_signal {
+  pub fn canceled(&self) -> QProgressDialog_canceled_signal {
      return QProgressDialog_canceled_signal{poi:self.qclsinst};
   }
 }
@@ -793,10 +769,11 @@ extern fn QProgressDialog_canceled_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QProgressDialog_canceled_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(), ) {
+extern fn QProgressDialog_canceled_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  rsfptr();
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QProgressDialog_canceled_signal_connect for fn() {
   fn connect(self, sigthis: QProgressDialog_canceled_signal) {
@@ -817,7 +794,7 @@ impl /* trait */ QProgressDialog_canceled_signal_connect for Box<Fn()> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QProgressDialog_canceled_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QProgressDialog_SlotProxy_connect__ZN15QProgressDialog8canceledEv(arg0, arg1, arg2)};
   }
 }

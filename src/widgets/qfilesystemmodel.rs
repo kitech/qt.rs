@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtWidgets/qfilesystemmodel.h
 // dst-file: /src/widgets/qfilesystemmodel.rs
 //
@@ -94,12 +94,8 @@ extern {
   fn _ZNK16QFileSystemModel12canFetchMoreERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  bool QFileSystemModel::remove(const QModelIndex & index);
   fn _ZN16QFileSystemModel6removeERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
-  // proto:  void QFileSystemModel::rootPathChanged(const QString & newPath);
-  fn _ZN16QFileSystemModel15rootPathChangedERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QModelIndex QFileSystemModel::setRootPath(const QString & path);
   fn _ZN16QFileSystemModel11setRootPathERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-  // proto:  void QFileSystemModel::directoryLoaded(const QString & path);
-  fn _ZN16QFileSystemModel15directoryLoadedERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QFileSystemModel::setResolveSymlinks(bool enable);
   fn _ZN16QFileSystemModel18setResolveSymlinksEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QFileSystemModel::setReadOnly(bool enable);
@@ -121,8 +117,6 @@ extern {
   fn _ZNK16QFileSystemModel8rootPathEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QDateTime QFileSystemModel::lastModified(const QModelIndex & index);
   fn _ZNK16QFileSystemModel12lastModifiedERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-  // proto:  void QFileSystemModel::fileRenamed(const QString & path, const QString & oldName, const QString & newName);
-  fn _ZN16QFileSystemModel11fileRenamedERK7QStringS2_S2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  bool QFileSystemModel::isDir(const QModelIndex & index);
   fn _ZNK16QFileSystemModel5isDirERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  bool QFileSystemModel::rmdir(const QModelIndex & index);
@@ -140,9 +134,9 @@ extern {
 pub struct QFileSystemModel {
   qbase: QAbstractItemModel,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _rootPathChanged_1: QFileSystemModel_rootPathChanged_signal,
-  pub _directoryLoaded_1: QFileSystemModel_directoryLoaded_signal,
-  pub _fileRenamed_1: QFileSystemModel_fileRenamed_signal,
+  pub _rootPathChanged: QFileSystemModel_rootPathChanged_signal,
+  pub _directoryLoaded: QFileSystemModel_directoryLoaded_signal,
+  pub _fileRenamed: QFileSystemModel_fileRenamed_signal,
 }
 
 impl /*struct*/ QFileSystemModel {
@@ -783,29 +777,6 @@ impl<'a> /*trait*/ QFileSystemModel_remove<i8> for (&'a QModelIndex) {
   }
 }
 
-  // proto:  void QFileSystemModel::rootPathChanged(const QString & newPath);
-impl /*struct*/ QFileSystemModel {
-  pub fn rootPathChanged<RetType, T: QFileSystemModel_rootPathChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.rootPathChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QFileSystemModel_rootPathChanged<RetType> {
-  fn rootPathChanged(self , rsthis: & QFileSystemModel) -> RetType;
-}
-
-  // proto:  void QFileSystemModel::rootPathChanged(const QString & newPath);
-impl<'a> /*trait*/ QFileSystemModel_rootPathChanged<()> for (&'a QString) {
-  fn rootPathChanged(self , rsthis: & QFileSystemModel) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QFileSystemModel15rootPathChangedERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN16QFileSystemModel15rootPathChangedERK7QString(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  QModelIndex QFileSystemModel::setRootPath(const QString & path);
 impl /*struct*/ QFileSystemModel {
   pub fn setRootPath<RetType, T: QFileSystemModel_setRootPath<RetType>>(& self,  overload_args: T) -> RetType {
@@ -827,29 +798,6 @@ impl<'a> /*trait*/ QFileSystemModel_setRootPath<QModelIndex> for (&'a QString) {
     let mut ret = unsafe {_ZN16QFileSystemModel11setRootPathERK7QString(rsthis.qclsinst, arg0)};
     let mut ret1 = QModelIndex::inheritFrom(ret as u64);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QFileSystemModel::directoryLoaded(const QString & path);
-impl /*struct*/ QFileSystemModel {
-  pub fn directoryLoaded<RetType, T: QFileSystemModel_directoryLoaded<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.directoryLoaded(self);
-    // return 1;
-  }
-}
-
-pub trait QFileSystemModel_directoryLoaded<RetType> {
-  fn directoryLoaded(self , rsthis: & QFileSystemModel) -> RetType;
-}
-
-  // proto:  void QFileSystemModel::directoryLoaded(const QString & path);
-impl<'a> /*trait*/ QFileSystemModel_directoryLoaded<()> for (&'a QString) {
-  fn directoryLoaded(self , rsthis: & QFileSystemModel) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QFileSystemModel15directoryLoadedERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN16QFileSystemModel15directoryLoadedERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1085,31 +1033,6 @@ impl<'a> /*trait*/ QFileSystemModel_lastModified<QDateTime> for (&'a QModelIndex
   }
 }
 
-  // proto:  void QFileSystemModel::fileRenamed(const QString & path, const QString & oldName, const QString & newName);
-impl /*struct*/ QFileSystemModel {
-  pub fn fileRenamed<RetType, T: QFileSystemModel_fileRenamed<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.fileRenamed(self);
-    // return 1;
-  }
-}
-
-pub trait QFileSystemModel_fileRenamed<RetType> {
-  fn fileRenamed(self , rsthis: & QFileSystemModel) -> RetType;
-}
-
-  // proto:  void QFileSystemModel::fileRenamed(const QString & path, const QString & oldName, const QString & newName);
-impl<'a> /*trait*/ QFileSystemModel_fileRenamed<()> for (&'a QString, &'a QString, &'a QString) {
-  fn fileRenamed(self , rsthis: & QFileSystemModel) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QFileSystemModel11fileRenamedERK7QStringS2_S2_()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2.qclsinst  as *mut c_void;
-     unsafe {_ZN16QFileSystemModel11fileRenamedERK7QStringS2_S2_(rsthis.qclsinst, arg0, arg1, arg2)};
-    // return 1;
-  }
-}
-
   // proto:  bool QFileSystemModel::isDir(const QModelIndex & index);
 impl /*struct*/ QFileSystemModel {
   pub fn isDir<RetType, T: QFileSystemModel_isDir<RetType>>(& self,  overload_args: T) -> RetType {
@@ -1184,7 +1107,7 @@ impl<'a> /*trait*/ QFileSystemModel_setIconProvider<()> for (&'a QFileIconProvid
 #[derive(Default)] // for QFileSystemModel_rootPathChanged
 pub struct QFileSystemModel_rootPathChanged_signal{poi:u64}
 impl /* struct */ QFileSystemModel {
-  pub fn rootPathChanged_1(&self) -> QFileSystemModel_rootPathChanged_signal {
+  pub fn rootPathChanged(&self) -> QFileSystemModel_rootPathChanged_signal {
      return QFileSystemModel_rootPathChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1200,7 +1123,7 @@ pub trait QFileSystemModel_rootPathChanged_signal_connect {
 #[derive(Default)] // for QFileSystemModel_directoryLoaded
 pub struct QFileSystemModel_directoryLoaded_signal{poi:u64}
 impl /* struct */ QFileSystemModel {
-  pub fn directoryLoaded_1(&self) -> QFileSystemModel_directoryLoaded_signal {
+  pub fn directoryLoaded(&self) -> QFileSystemModel_directoryLoaded_signal {
      return QFileSystemModel_directoryLoaded_signal{poi:self.qclsinst};
   }
 }
@@ -1216,7 +1139,7 @@ pub trait QFileSystemModel_directoryLoaded_signal_connect {
 #[derive(Default)] // for QFileSystemModel_fileRenamed
 pub struct QFileSystemModel_fileRenamed_signal{poi:u64}
 impl /* struct */ QFileSystemModel {
-  pub fn fileRenamed_1(&self) -> QFileSystemModel_fileRenamed_signal {
+  pub fn fileRenamed(&self) -> QFileSystemModel_fileRenamed_signal {
      return QFileSystemModel_fileRenamed_signal{poi:self.qclsinst};
   }
 }
@@ -1235,11 +1158,12 @@ extern fn QFileSystemModel_directoryLoaded_signal_connect_cb_0(rsfptr:fn(QString
   let rsarg0 = QString::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QFileSystemModel_directoryLoaded_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QString), arg0: *mut c_void) {
+extern fn QFileSystemModel_directoryLoaded_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(QString)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QString::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QFileSystemModel_directoryLoaded_signal_connect for fn(QString) {
   fn connect(self, sigthis: QFileSystemModel_directoryLoaded_signal) {
@@ -1260,7 +1184,7 @@ impl /* trait */ QFileSystemModel_directoryLoaded_signal_connect for Box<Fn(QStr
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QFileSystemModel_directoryLoaded_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QFileSystemModel_SlotProxy_connect__ZN16QFileSystemModel15directoryLoadedERK7QString(arg0, arg1, arg2)};
   }
 }
@@ -1270,11 +1194,12 @@ extern fn QFileSystemModel_rootPathChanged_signal_connect_cb_1(rsfptr:fn(QString
   let rsarg0 = QString::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QFileSystemModel_rootPathChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(QString), arg0: *mut c_void) {
+extern fn QFileSystemModel_rootPathChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn(QString)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QString::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QFileSystemModel_rootPathChanged_signal_connect for fn(QString) {
   fn connect(self, sigthis: QFileSystemModel_rootPathChanged_signal) {
@@ -1295,7 +1220,7 @@ impl /* trait */ QFileSystemModel_rootPathChanged_signal_connect for Box<Fn(QStr
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QFileSystemModel_rootPathChanged_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QFileSystemModel_SlotProxy_connect__ZN16QFileSystemModel15rootPathChangedERK7QString(arg0, arg1, arg2)};
   }
 }
@@ -1307,13 +1232,14 @@ extern fn QFileSystemModel_fileRenamed_signal_connect_cb_2(rsfptr:fn(QString, QS
   let rsarg2 = QString::inheritFrom(arg2 as u64);
   rsfptr(rsarg0,rsarg1,rsarg2);
 }
-extern fn QFileSystemModel_fileRenamed_signal_connect_cb_box_2(rsfptr_raw:*mut Fn(QString, QString, QString), arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) {
+extern fn QFileSystemModel_fileRenamed_signal_connect_cb_box_2(rsfptr_raw:*mut Box<Fn(QString, QString, QString)>, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QString::inheritFrom(arg0 as u64);
   let rsarg1 = QString::inheritFrom(arg1 as u64);
   let rsarg2 = QString::inheritFrom(arg2 as u64);
-  rsfptr(rsarg0,rsarg1,rsarg2);
+  // rsfptr(rsarg0,rsarg1,rsarg2);
+  unsafe{(*rsfptr_raw)(rsarg0,rsarg1,rsarg2)};
 }
 impl /* trait */ QFileSystemModel_fileRenamed_signal_connect for fn(QString, QString, QString) {
   fn connect(self, sigthis: QFileSystemModel_fileRenamed_signal) {
@@ -1334,7 +1260,7 @@ impl /* trait */ QFileSystemModel_fileRenamed_signal_connect for Box<Fn(QString,
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QFileSystemModel_fileRenamed_signal_connect_cb_box_2 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QFileSystemModel_SlotProxy_connect__ZN16QFileSystemModel11fileRenamedERK7QStringS2_S2_(arg0, arg1, arg2)};
   }
 }

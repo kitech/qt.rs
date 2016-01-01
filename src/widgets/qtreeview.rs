@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtWidgets/qtreeview.h
 // dst-file: /src/widgets/qtreeview.rs
 //
@@ -115,8 +115,6 @@ extern {
   fn _ZN9QTreeView16resetIndentationEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QTreeView::isRowHidden(int row, const QModelIndex & parent);
   fn _ZNK9QTreeView11isRowHiddenEiRK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void) -> c_char;
-  // proto:  void QTreeView::collapsed(const QModelIndex & index);
-  fn _ZN9QTreeView9collapsedERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTreeView::QTreeView(const QTreeView & );
   fn dector_ZN9QTreeViewC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN9QTreeViewC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
@@ -146,8 +144,6 @@ extern {
   fn _ZNK9QTreeView15itemsExpandableEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QTreeView::setRootIsDecorated(bool show);
   fn _ZN9QTreeView18setRootIsDecoratedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
-  // proto:  void QTreeView::expanded(const QModelIndex & index);
-  fn _ZN9QTreeView8expandedERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QTreeView::isHeaderHidden();
   fn _ZNK9QTreeView14isHeaderHiddenEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  int QTreeView::columnAt(int x);
@@ -180,8 +176,8 @@ extern {
 pub struct QTreeView {
   qbase: QAbstractItemView,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _collapsed_1: QTreeView_collapsed_signal,
-  pub _expanded_1: QTreeView_expanded_signal,
+  pub _collapsed: QTreeView_collapsed_signal,
+  pub _expanded: QTreeView_expanded_signal,
 }
 
 impl /*struct*/ QTreeView {
@@ -1093,29 +1089,6 @@ impl<'a> /*trait*/ QTreeView_isRowHidden<i8> for (i32, &'a QModelIndex) {
   }
 }
 
-  // proto:  void QTreeView::collapsed(const QModelIndex & index);
-impl /*struct*/ QTreeView {
-  pub fn collapsed<RetType, T: QTreeView_collapsed<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.collapsed(self);
-    // return 1;
-  }
-}
-
-pub trait QTreeView_collapsed<RetType> {
-  fn collapsed(self , rsthis: & QTreeView) -> RetType;
-}
-
-  // proto:  void QTreeView::collapsed(const QModelIndex & index);
-impl<'a> /*trait*/ QTreeView_collapsed<()> for (&'a QModelIndex) {
-  fn collapsed(self , rsthis: & QTreeView) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QTreeView9collapsedERK11QModelIndex()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN9QTreeView9collapsedERK11QModelIndex(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  void QTreeView::QTreeView(const QTreeView & );
 impl<'a> /*trait*/ QTreeView_new for (&'a QTreeView) {
   fn new(self) -> QTreeView {
@@ -1430,29 +1403,6 @@ impl<'a> /*trait*/ QTreeView_setRootIsDecorated<()> for (i8) {
   }
 }
 
-  // proto:  void QTreeView::expanded(const QModelIndex & index);
-impl /*struct*/ QTreeView {
-  pub fn expanded<RetType, T: QTreeView_expanded<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.expanded(self);
-    // return 1;
-  }
-}
-
-pub trait QTreeView_expanded<RetType> {
-  fn expanded(self , rsthis: & QTreeView) -> RetType;
-}
-
-  // proto:  void QTreeView::expanded(const QModelIndex & index);
-impl<'a> /*trait*/ QTreeView_expanded<()> for (&'a QModelIndex) {
-  fn expanded(self , rsthis: & QTreeView) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QTreeView8expandedERK11QModelIndex()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN9QTreeView8expandedERK11QModelIndex(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  bool QTreeView::isHeaderHidden();
 impl /*struct*/ QTreeView {
   pub fn isHeaderHidden<RetType, T: QTreeView_isHeaderHidden<RetType>>(& self,  overload_args: T) -> RetType {
@@ -1715,7 +1665,7 @@ impl<'a> /*trait*/ QTreeView_setColumnWidth<()> for (i32, i32) {
 #[derive(Default)] // for QTreeView_collapsed
 pub struct QTreeView_collapsed_signal{poi:u64}
 impl /* struct */ QTreeView {
-  pub fn collapsed_1(&self) -> QTreeView_collapsed_signal {
+  pub fn collapsed(&self) -> QTreeView_collapsed_signal {
      return QTreeView_collapsed_signal{poi:self.qclsinst};
   }
 }
@@ -1731,7 +1681,7 @@ pub trait QTreeView_collapsed_signal_connect {
 #[derive(Default)] // for QTreeView_expanded
 pub struct QTreeView_expanded_signal{poi:u64}
 impl /* struct */ QTreeView {
-  pub fn expanded_1(&self) -> QTreeView_expanded_signal {
+  pub fn expanded(&self) -> QTreeView_expanded_signal {
      return QTreeView_expanded_signal{poi:self.qclsinst};
   }
 }
@@ -1750,11 +1700,12 @@ extern fn QTreeView_collapsed_signal_connect_cb_0(rsfptr:fn(QModelIndex), arg0: 
   let rsarg0 = QModelIndex::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QTreeView_collapsed_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QModelIndex), arg0: *mut c_void) {
+extern fn QTreeView_collapsed_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(QModelIndex)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QModelIndex::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QTreeView_collapsed_signal_connect for fn(QModelIndex) {
   fn connect(self, sigthis: QTreeView_collapsed_signal) {
@@ -1775,7 +1726,7 @@ impl /* trait */ QTreeView_collapsed_signal_connect for Box<Fn(QModelIndex)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QTreeView_collapsed_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QTreeView_SlotProxy_connect__ZN9QTreeView9collapsedERK11QModelIndex(arg0, arg1, arg2)};
   }
 }
@@ -1785,11 +1736,12 @@ extern fn QTreeView_expanded_signal_connect_cb_1(rsfptr:fn(QModelIndex), arg0: *
   let rsarg0 = QModelIndex::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QTreeView_expanded_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(QModelIndex), arg0: *mut c_void) {
+extern fn QTreeView_expanded_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn(QModelIndex)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QModelIndex::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QTreeView_expanded_signal_connect for fn(QModelIndex) {
   fn connect(self, sigthis: QTreeView_expanded_signal) {
@@ -1810,7 +1762,7 @@ impl /* trait */ QTreeView_expanded_signal_connect for Box<Fn(QModelIndex)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QTreeView_expanded_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QTreeView_SlotProxy_connect__ZN9QTreeView8expandedERK11QModelIndex(arg0, arg1, arg2)};
   }
 }

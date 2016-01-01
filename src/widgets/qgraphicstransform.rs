@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtWidgets/qgraphicstransform.h
 // dst-file: /src/widgets/qgraphicstransform.rs
 //
@@ -33,8 +33,6 @@ use super::super::gui::qmatrix4x4::QMatrix4x4; // 771
 
 extern {
   fn QGraphicsRotation_Class_Size() -> c_int;
-  // proto:  void QGraphicsRotation::angleChanged();
-  fn _ZN17QGraphicsRotation12angleChangedEv(qthis: u64 /* *mut c_void*/);
   // proto:  QVector3D QGraphicsRotation::origin();
   fn _ZNK17QGraphicsRotation6originEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QGraphicsRotation::setAngle(qreal );
@@ -56,19 +54,11 @@ extern {
   fn _ZN17QGraphicsRotation7setAxisERK9QVector3D(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  qreal QGraphicsRotation::angle();
   fn _ZNK17QGraphicsRotation5angleEv(qthis: u64 /* *mut c_void*/) -> c_double;
-  // proto:  void QGraphicsRotation::originChanged();
-  fn _ZN17QGraphicsRotation13originChangedEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QGraphicsRotation::axisChanged();
-  fn _ZN17QGraphicsRotation11axisChangedEv(qthis: u64 /* *mut c_void*/);
   fn QGraphicsScale_Class_Size() -> c_int;
   // proto:  void QGraphicsScale::applyTo(QMatrix4x4 * matrix);
   fn _ZNK14QGraphicsScale7applyToEP10QMatrix4x4(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  qreal QGraphicsScale::zScale();
   fn _ZNK14QGraphicsScale6zScaleEv(qthis: u64 /* *mut c_void*/) -> c_double;
-  // proto:  void QGraphicsScale::yScaleChanged();
-  fn _ZN14QGraphicsScale13yScaleChangedEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QGraphicsScale::originChanged();
-  fn _ZN14QGraphicsScale13originChangedEv(qthis: u64 /* *mut c_void*/);
   // proto:  qreal QGraphicsScale::xScale();
   fn _ZNK14QGraphicsScale6xScaleEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  qreal QGraphicsScale::yScale();
@@ -79,16 +69,10 @@ extern {
   fn _ZN14QGraphicsScale9setYScaleEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  QVector3D QGraphicsScale::origin();
   fn _ZNK14QGraphicsScale6originEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QGraphicsScale::scaleChanged();
-  fn _ZN14QGraphicsScale12scaleChangedEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QGraphicsScale::setZScale(qreal );
   fn _ZN14QGraphicsScale9setZScaleEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QGraphicsScale::setXScale(qreal );
   fn _ZN14QGraphicsScale9setXScaleEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
-  // proto:  void QGraphicsScale::xScaleChanged();
-  fn _ZN14QGraphicsScale13xScaleChangedEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QGraphicsScale::zScaleChanged();
-  fn _ZN14QGraphicsScale13zScaleChangedEv(qthis: u64 /* *mut c_void*/);
   // proto:  const QMetaObject * QGraphicsScale::metaObject();
   fn _ZNK14QGraphicsScale10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QGraphicsScale::QGraphicsScale(QObject * parent);
@@ -122,9 +106,9 @@ extern {
 pub struct QGraphicsRotation {
   qbase: QGraphicsTransform,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _originChanged_1: QGraphicsRotation_originChanged_signal,
-  pub _axisChanged_1: QGraphicsRotation_axisChanged_signal,
-  pub _angleChanged_1: QGraphicsRotation_angleChanged_signal,
+  pub _originChanged: QGraphicsRotation_originChanged_signal,
+  pub _axisChanged: QGraphicsRotation_axisChanged_signal,
+  pub _angleChanged: QGraphicsRotation_angleChanged_signal,
 }
 
 // class sizeof(QGraphicsScale)=1
@@ -132,11 +116,11 @@ pub struct QGraphicsRotation {
 pub struct QGraphicsScale {
   qbase: QGraphicsTransform,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _yScaleChanged_1: QGraphicsScale_yScaleChanged_signal,
-  pub _xScaleChanged_1: QGraphicsScale_xScaleChanged_signal,
-  pub _zScaleChanged_1: QGraphicsScale_zScaleChanged_signal,
-  pub _scaleChanged_1: QGraphicsScale_scaleChanged_signal,
-  pub _originChanged_1: QGraphicsScale_originChanged_signal,
+  pub _yScaleChanged: QGraphicsScale_yScaleChanged_signal,
+  pub _xScaleChanged: QGraphicsScale_xScaleChanged_signal,
+  pub _zScaleChanged: QGraphicsScale_zScaleChanged_signal,
+  pub _scaleChanged: QGraphicsScale_scaleChanged_signal,
+  pub _originChanged: QGraphicsScale_originChanged_signal,
 }
 
 // class sizeof(QGraphicsTransform)=1
@@ -163,28 +147,6 @@ impl AsRef<QGraphicsTransform> for QGraphicsRotation {
     return & self.qbase;
   }
 }
-  // proto:  void QGraphicsRotation::angleChanged();
-impl /*struct*/ QGraphicsRotation {
-  pub fn angleChanged<RetType, T: QGraphicsRotation_angleChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.angleChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QGraphicsRotation_angleChanged<RetType> {
-  fn angleChanged(self , rsthis: & QGraphicsRotation) -> RetType;
-}
-
-  // proto:  void QGraphicsRotation::angleChanged();
-impl<'a> /*trait*/ QGraphicsRotation_angleChanged<()> for () {
-  fn angleChanged(self , rsthis: & QGraphicsRotation) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QGraphicsRotation12angleChangedEv()};
-     unsafe {_ZN17QGraphicsRotation12angleChangedEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto:  QVector3D QGraphicsRotation::origin();
 impl /*struct*/ QGraphicsRotation {
   pub fn origin<RetType, T: QGraphicsRotation_origin<RetType>>(& self,  overload_args: T) -> RetType {
@@ -421,50 +383,6 @@ impl<'a> /*trait*/ QGraphicsRotation_angle<f64> for () {
   }
 }
 
-  // proto:  void QGraphicsRotation::originChanged();
-impl /*struct*/ QGraphicsRotation {
-  pub fn originChanged<RetType, T: QGraphicsRotation_originChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.originChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QGraphicsRotation_originChanged<RetType> {
-  fn originChanged(self , rsthis: & QGraphicsRotation) -> RetType;
-}
-
-  // proto:  void QGraphicsRotation::originChanged();
-impl<'a> /*trait*/ QGraphicsRotation_originChanged<()> for () {
-  fn originChanged(self , rsthis: & QGraphicsRotation) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QGraphicsRotation13originChangedEv()};
-     unsafe {_ZN17QGraphicsRotation13originChangedEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QGraphicsRotation::axisChanged();
-impl /*struct*/ QGraphicsRotation {
-  pub fn axisChanged<RetType, T: QGraphicsRotation_axisChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.axisChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QGraphicsRotation_axisChanged<RetType> {
-  fn axisChanged(self , rsthis: & QGraphicsRotation) -> RetType;
-}
-
-  // proto:  void QGraphicsRotation::axisChanged();
-impl<'a> /*trait*/ QGraphicsRotation_axisChanged<()> for () {
-  fn axisChanged(self , rsthis: & QGraphicsRotation) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QGraphicsRotation11axisChangedEv()};
-     unsafe {_ZN17QGraphicsRotation11axisChangedEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
 impl /*struct*/ QGraphicsScale {
   pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QGraphicsScale {
     return QGraphicsScale{qbase: QGraphicsTransform::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
@@ -524,50 +442,6 @@ impl<'a> /*trait*/ QGraphicsScale_zScale<f64> for () {
     // unsafe{_ZNK14QGraphicsScale6zScaleEv()};
     let mut ret = unsafe {_ZNK14QGraphicsScale6zScaleEv(rsthis.qclsinst)};
     return ret as f64;
-    // return 1;
-  }
-}
-
-  // proto:  void QGraphicsScale::yScaleChanged();
-impl /*struct*/ QGraphicsScale {
-  pub fn yScaleChanged<RetType, T: QGraphicsScale_yScaleChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.yScaleChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QGraphicsScale_yScaleChanged<RetType> {
-  fn yScaleChanged(self , rsthis: & QGraphicsScale) -> RetType;
-}
-
-  // proto:  void QGraphicsScale::yScaleChanged();
-impl<'a> /*trait*/ QGraphicsScale_yScaleChanged<()> for () {
-  fn yScaleChanged(self , rsthis: & QGraphicsScale) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QGraphicsScale13yScaleChangedEv()};
-     unsafe {_ZN14QGraphicsScale13yScaleChangedEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QGraphicsScale::originChanged();
-impl /*struct*/ QGraphicsScale {
-  pub fn originChanged<RetType, T: QGraphicsScale_originChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.originChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QGraphicsScale_originChanged<RetType> {
-  fn originChanged(self , rsthis: & QGraphicsScale) -> RetType;
-}
-
-  // proto:  void QGraphicsScale::originChanged();
-impl<'a> /*trait*/ QGraphicsScale_originChanged<()> for () {
-  fn originChanged(self , rsthis: & QGraphicsScale) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QGraphicsScale13originChangedEv()};
-     unsafe {_ZN14QGraphicsScale13originChangedEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -688,28 +562,6 @@ impl<'a> /*trait*/ QGraphicsScale_origin<QVector3D> for () {
   }
 }
 
-  // proto:  void QGraphicsScale::scaleChanged();
-impl /*struct*/ QGraphicsScale {
-  pub fn scaleChanged<RetType, T: QGraphicsScale_scaleChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.scaleChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QGraphicsScale_scaleChanged<RetType> {
-  fn scaleChanged(self , rsthis: & QGraphicsScale) -> RetType;
-}
-
-  // proto:  void QGraphicsScale::scaleChanged();
-impl<'a> /*trait*/ QGraphicsScale_scaleChanged<()> for () {
-  fn scaleChanged(self , rsthis: & QGraphicsScale) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QGraphicsScale12scaleChangedEv()};
-     unsafe {_ZN14QGraphicsScale12scaleChangedEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto:  void QGraphicsScale::setZScale(qreal );
 impl /*struct*/ QGraphicsScale {
   pub fn setZScale<RetType, T: QGraphicsScale_setZScale<RetType>>(& self,  overload_args: T) -> RetType {
@@ -752,50 +604,6 @@ impl<'a> /*trait*/ QGraphicsScale_setXScale<()> for (f64) {
     // unsafe{_ZN14QGraphicsScale9setXScaleEd()};
     let arg0 = self  as c_double;
      unsafe {_ZN14QGraphicsScale9setXScaleEd(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QGraphicsScale::xScaleChanged();
-impl /*struct*/ QGraphicsScale {
-  pub fn xScaleChanged<RetType, T: QGraphicsScale_xScaleChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.xScaleChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QGraphicsScale_xScaleChanged<RetType> {
-  fn xScaleChanged(self , rsthis: & QGraphicsScale) -> RetType;
-}
-
-  // proto:  void QGraphicsScale::xScaleChanged();
-impl<'a> /*trait*/ QGraphicsScale_xScaleChanged<()> for () {
-  fn xScaleChanged(self , rsthis: & QGraphicsScale) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QGraphicsScale13xScaleChangedEv()};
-     unsafe {_ZN14QGraphicsScale13xScaleChangedEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QGraphicsScale::zScaleChanged();
-impl /*struct*/ QGraphicsScale {
-  pub fn zScaleChanged<RetType, T: QGraphicsScale_zScaleChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.zScaleChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QGraphicsScale_zScaleChanged<RetType> {
-  fn zScaleChanged(self , rsthis: & QGraphicsScale) -> RetType;
-}
-
-  // proto:  void QGraphicsScale::zScaleChanged();
-impl<'a> /*trait*/ QGraphicsScale_zScaleChanged<()> for () {
-  fn zScaleChanged(self , rsthis: & QGraphicsScale) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QGraphicsScale13zScaleChangedEv()};
-     unsafe {_ZN14QGraphicsScale13zScaleChangedEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -989,7 +797,7 @@ impl<'a> /*trait*/ QGraphicsTransform_metaObject<()> for () {
 #[derive(Default)] // for QGraphicsRotation_originChanged
 pub struct QGraphicsRotation_originChanged_signal{poi:u64}
 impl /* struct */ QGraphicsRotation {
-  pub fn originChanged_1(&self) -> QGraphicsRotation_originChanged_signal {
+  pub fn originChanged(&self) -> QGraphicsRotation_originChanged_signal {
      return QGraphicsRotation_originChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1005,7 +813,7 @@ pub trait QGraphicsRotation_originChanged_signal_connect {
 #[derive(Default)] // for QGraphicsRotation_axisChanged
 pub struct QGraphicsRotation_axisChanged_signal{poi:u64}
 impl /* struct */ QGraphicsRotation {
-  pub fn axisChanged_1(&self) -> QGraphicsRotation_axisChanged_signal {
+  pub fn axisChanged(&self) -> QGraphicsRotation_axisChanged_signal {
      return QGraphicsRotation_axisChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1021,7 +829,7 @@ pub trait QGraphicsRotation_axisChanged_signal_connect {
 #[derive(Default)] // for QGraphicsRotation_angleChanged
 pub struct QGraphicsRotation_angleChanged_signal{poi:u64}
 impl /* struct */ QGraphicsRotation {
-  pub fn angleChanged_1(&self) -> QGraphicsRotation_angleChanged_signal {
+  pub fn angleChanged(&self) -> QGraphicsRotation_angleChanged_signal {
      return QGraphicsRotation_angleChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1039,10 +847,11 @@ extern fn QGraphicsRotation_angleChanged_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QGraphicsRotation_angleChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(), ) {
+extern fn QGraphicsRotation_angleChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  rsfptr();
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QGraphicsRotation_angleChanged_signal_connect for fn() {
   fn connect(self, sigthis: QGraphicsRotation_angleChanged_signal) {
@@ -1063,7 +872,7 @@ impl /* trait */ QGraphicsRotation_angleChanged_signal_connect for Box<Fn()> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QGraphicsRotation_angleChanged_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QGraphicsRotation_SlotProxy_connect__ZN17QGraphicsRotation12angleChangedEv(arg0, arg1, arg2)};
   }
 }
@@ -1072,10 +881,11 @@ extern fn QGraphicsRotation_axisChanged_signal_connect_cb_1(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QGraphicsRotation_axisChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(), ) {
+extern fn QGraphicsRotation_axisChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  rsfptr();
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QGraphicsRotation_axisChanged_signal_connect for fn() {
   fn connect(self, sigthis: QGraphicsRotation_axisChanged_signal) {
@@ -1096,7 +906,7 @@ impl /* trait */ QGraphicsRotation_axisChanged_signal_connect for Box<Fn()> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QGraphicsRotation_axisChanged_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QGraphicsRotation_SlotProxy_connect__ZN17QGraphicsRotation11axisChangedEv(arg0, arg1, arg2)};
   }
 }
@@ -1105,10 +915,11 @@ extern fn QGraphicsRotation_originChanged_signal_connect_cb_2(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QGraphicsRotation_originChanged_signal_connect_cb_box_2(rsfptr_raw:*mut Fn(), ) {
+extern fn QGraphicsRotation_originChanged_signal_connect_cb_box_2(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  rsfptr();
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QGraphicsRotation_originChanged_signal_connect for fn() {
   fn connect(self, sigthis: QGraphicsRotation_originChanged_signal) {
@@ -1129,14 +940,14 @@ impl /* trait */ QGraphicsRotation_originChanged_signal_connect for Box<Fn()> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QGraphicsRotation_originChanged_signal_connect_cb_box_2 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QGraphicsRotation_SlotProxy_connect__ZN17QGraphicsRotation13originChangedEv(arg0, arg1, arg2)};
   }
 }
 #[derive(Default)] // for QGraphicsScale_yScaleChanged
 pub struct QGraphicsScale_yScaleChanged_signal{poi:u64}
 impl /* struct */ QGraphicsScale {
-  pub fn yScaleChanged_1(&self) -> QGraphicsScale_yScaleChanged_signal {
+  pub fn yScaleChanged(&self) -> QGraphicsScale_yScaleChanged_signal {
      return QGraphicsScale_yScaleChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1152,7 +963,7 @@ pub trait QGraphicsScale_yScaleChanged_signal_connect {
 #[derive(Default)] // for QGraphicsScale_xScaleChanged
 pub struct QGraphicsScale_xScaleChanged_signal{poi:u64}
 impl /* struct */ QGraphicsScale {
-  pub fn xScaleChanged_1(&self) -> QGraphicsScale_xScaleChanged_signal {
+  pub fn xScaleChanged(&self) -> QGraphicsScale_xScaleChanged_signal {
      return QGraphicsScale_xScaleChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1168,7 +979,7 @@ pub trait QGraphicsScale_xScaleChanged_signal_connect {
 #[derive(Default)] // for QGraphicsScale_zScaleChanged
 pub struct QGraphicsScale_zScaleChanged_signal{poi:u64}
 impl /* struct */ QGraphicsScale {
-  pub fn zScaleChanged_1(&self) -> QGraphicsScale_zScaleChanged_signal {
+  pub fn zScaleChanged(&self) -> QGraphicsScale_zScaleChanged_signal {
      return QGraphicsScale_zScaleChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1184,7 +995,7 @@ pub trait QGraphicsScale_zScaleChanged_signal_connect {
 #[derive(Default)] // for QGraphicsScale_scaleChanged
 pub struct QGraphicsScale_scaleChanged_signal{poi:u64}
 impl /* struct */ QGraphicsScale {
-  pub fn scaleChanged_1(&self) -> QGraphicsScale_scaleChanged_signal {
+  pub fn scaleChanged(&self) -> QGraphicsScale_scaleChanged_signal {
      return QGraphicsScale_scaleChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1200,7 +1011,7 @@ pub trait QGraphicsScale_scaleChanged_signal_connect {
 #[derive(Default)] // for QGraphicsScale_originChanged
 pub struct QGraphicsScale_originChanged_signal{poi:u64}
 impl /* struct */ QGraphicsScale {
-  pub fn originChanged_1(&self) -> QGraphicsScale_originChanged_signal {
+  pub fn originChanged(&self) -> QGraphicsScale_originChanged_signal {
      return QGraphicsScale_originChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1218,10 +1029,11 @@ extern fn QGraphicsScale_scaleChanged_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QGraphicsScale_scaleChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(), ) {
+extern fn QGraphicsScale_scaleChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  rsfptr();
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QGraphicsScale_scaleChanged_signal_connect for fn() {
   fn connect(self, sigthis: QGraphicsScale_scaleChanged_signal) {
@@ -1242,7 +1054,7 @@ impl /* trait */ QGraphicsScale_scaleChanged_signal_connect for Box<Fn()> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QGraphicsScale_scaleChanged_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QGraphicsScale_SlotProxy_connect__ZN14QGraphicsScale12scaleChangedEv(arg0, arg1, arg2)};
   }
 }
@@ -1251,10 +1063,11 @@ extern fn QGraphicsScale_originChanged_signal_connect_cb_1(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QGraphicsScale_originChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(), ) {
+extern fn QGraphicsScale_originChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  rsfptr();
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QGraphicsScale_originChanged_signal_connect for fn() {
   fn connect(self, sigthis: QGraphicsScale_originChanged_signal) {
@@ -1275,7 +1088,7 @@ impl /* trait */ QGraphicsScale_originChanged_signal_connect for Box<Fn()> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QGraphicsScale_originChanged_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QGraphicsScale_SlotProxy_connect__ZN14QGraphicsScale13originChangedEv(arg0, arg1, arg2)};
   }
 }
@@ -1284,10 +1097,11 @@ extern fn QGraphicsScale_zScaleChanged_signal_connect_cb_2(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QGraphicsScale_zScaleChanged_signal_connect_cb_box_2(rsfptr_raw:*mut Fn(), ) {
+extern fn QGraphicsScale_zScaleChanged_signal_connect_cb_box_2(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  rsfptr();
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QGraphicsScale_zScaleChanged_signal_connect for fn() {
   fn connect(self, sigthis: QGraphicsScale_zScaleChanged_signal) {
@@ -1308,7 +1122,7 @@ impl /* trait */ QGraphicsScale_zScaleChanged_signal_connect for Box<Fn()> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QGraphicsScale_zScaleChanged_signal_connect_cb_box_2 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QGraphicsScale_SlotProxy_connect__ZN14QGraphicsScale13zScaleChangedEv(arg0, arg1, arg2)};
   }
 }
@@ -1317,10 +1131,11 @@ extern fn QGraphicsScale_yScaleChanged_signal_connect_cb_3(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QGraphicsScale_yScaleChanged_signal_connect_cb_box_3(rsfptr_raw:*mut Fn(), ) {
+extern fn QGraphicsScale_yScaleChanged_signal_connect_cb_box_3(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  rsfptr();
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QGraphicsScale_yScaleChanged_signal_connect for fn() {
   fn connect(self, sigthis: QGraphicsScale_yScaleChanged_signal) {
@@ -1341,7 +1156,7 @@ impl /* trait */ QGraphicsScale_yScaleChanged_signal_connect for Box<Fn()> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QGraphicsScale_yScaleChanged_signal_connect_cb_box_3 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QGraphicsScale_SlotProxy_connect__ZN14QGraphicsScale13yScaleChangedEv(arg0, arg1, arg2)};
   }
 }
@@ -1350,10 +1165,11 @@ extern fn QGraphicsScale_xScaleChanged_signal_connect_cb_4(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QGraphicsScale_xScaleChanged_signal_connect_cb_box_4(rsfptr_raw:*mut Fn(), ) {
+extern fn QGraphicsScale_xScaleChanged_signal_connect_cb_box_4(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  rsfptr();
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QGraphicsScale_xScaleChanged_signal_connect for fn() {
   fn connect(self, sigthis: QGraphicsScale_xScaleChanged_signal) {
@@ -1374,7 +1190,7 @@ impl /* trait */ QGraphicsScale_xScaleChanged_signal_connect for Box<Fn()> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QGraphicsScale_xScaleChanged_signal_connect_cb_box_4 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QGraphicsScale_SlotProxy_connect__ZN14QGraphicsScale13xScaleChangedEv(arg0, arg1, arg2)};
   }
 }

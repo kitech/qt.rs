@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtWidgets/qinputdialog.h
 // dst-file: /src/widgets/qinputdialog.rs
 //
@@ -51,8 +51,6 @@ extern {
   fn _ZNK12QInputDialog14doubleDecimalsEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QInputDialog::setDoubleDecimals(int decimals);
   fn _ZN12QInputDialog17setDoubleDecimalsEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
-  // proto:  void QInputDialog::intValueChanged(int value);
-  fn _ZN12QInputDialog15intValueChangedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QInputDialog::setIntMinimum(int min);
   fn _ZN12QInputDialog13setIntMinimumEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QInputDialog::setTextValue(const QString & text);
@@ -64,8 +62,6 @@ extern {
   // proto:  void QInputDialog::QInputDialog(const QInputDialog & );
   fn dector_ZN12QInputDialogC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN12QInputDialogC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QInputDialog::textValueSelected(const QString & text);
-  fn _ZN12QInputDialog17textValueSelectedERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QInputDialog::setLabelText(const QString & text);
   fn _ZN12QInputDialog12setLabelTextERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QString QInputDialog::labelText();
@@ -92,8 +88,6 @@ extern {
   fn _ZNK12QInputDialog18isComboBoxEditableEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QInputDialog::open(QObject * receiver, const char * member);
   fn _ZN12QInputDialog4openEP7QObjectPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_char);
-  // proto:  void QInputDialog::doubleValueChanged(double value);
-  fn _ZN12QInputDialog18doubleValueChangedEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  QString QInputDialog::okButtonText();
   fn _ZNK12QInputDialog12okButtonTextEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QSize QInputDialog::sizeHint();
@@ -110,14 +104,8 @@ extern {
   fn _ZNK12QInputDialog11doubleValueEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QInputDialog::setCancelButtonText(const QString & text);
   fn _ZN12QInputDialog19setCancelButtonTextERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QInputDialog::doubleValueSelected(double value);
-  fn _ZN12QInputDialog19doubleValueSelectedEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  QString QInputDialog::textValue();
   fn _ZNK12QInputDialog9textValueEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QInputDialog::textValueChanged(const QString & text);
-  fn _ZN12QInputDialog16textValueChangedERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QInputDialog::intValueSelected(int value);
-  fn _ZN12QInputDialog16intValueSelectedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QInputDialog::setDoubleMaximum(double max);
   fn _ZN12QInputDialog16setDoubleMaximumEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  int QInputDialog::intValue();
@@ -138,12 +126,12 @@ extern {
 pub struct QInputDialog {
   qbase: QDialog,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _doubleValueChanged_1: QInputDialog_doubleValueChanged_signal,
-  pub _intValueChanged_1: QInputDialog_intValueChanged_signal,
-  pub _textValueChanged_1: QInputDialog_textValueChanged_signal,
-  pub _intValueSelected_1: QInputDialog_intValueSelected_signal,
-  pub _textValueSelected_1: QInputDialog_textValueSelected_signal,
-  pub _doubleValueSelected_1: QInputDialog_doubleValueSelected_signal,
+  pub _doubleValueChanged: QInputDialog_doubleValueChanged_signal,
+  pub _intValueChanged: QInputDialog_intValueChanged_signal,
+  pub _textValueChanged: QInputDialog_textValueChanged_signal,
+  pub _intValueSelected: QInputDialog_intValueSelected_signal,
+  pub _textValueSelected: QInputDialog_textValueSelected_signal,
+  pub _doubleValueSelected: QInputDialog_doubleValueSelected_signal,
 }
 
 impl /*struct*/ QInputDialog {
@@ -346,29 +334,6 @@ impl<'a> /*trait*/ QInputDialog_setDoubleDecimals<()> for (i32) {
   }
 }
 
-  // proto:  void QInputDialog::intValueChanged(int value);
-impl /*struct*/ QInputDialog {
-  pub fn intValueChanged<RetType, T: QInputDialog_intValueChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.intValueChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QInputDialog_intValueChanged<RetType> {
-  fn intValueChanged(self , rsthis: & QInputDialog) -> RetType;
-}
-
-  // proto:  void QInputDialog::intValueChanged(int value);
-impl<'a> /*trait*/ QInputDialog_intValueChanged<()> for (i32) {
-  fn intValueChanged(self , rsthis: & QInputDialog) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QInputDialog15intValueChangedEi()};
-    let arg0 = self  as c_int;
-     unsafe {_ZN12QInputDialog15intValueChangedEi(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  void QInputDialog::setIntMinimum(int min);
 impl /*struct*/ QInputDialog {
   pub fn setIntMinimum<RetType, T: QInputDialog_setIntMinimum<RetType>>(& self,  overload_args: T) -> RetType {
@@ -485,29 +450,6 @@ impl<'a> /*trait*/ QInputDialog_new for (&'a QInputDialog) {
     let qthis: u64 = unsafe {dector_ZN12QInputDialogC1ERKS_(arg0)} as u64;
     let rsthis = QInputDialog{qbase: QDialog::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  void QInputDialog::textValueSelected(const QString & text);
-impl /*struct*/ QInputDialog {
-  pub fn textValueSelected<RetType, T: QInputDialog_textValueSelected<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.textValueSelected(self);
-    // return 1;
-  }
-}
-
-pub trait QInputDialog_textValueSelected<RetType> {
-  fn textValueSelected(self , rsthis: & QInputDialog) -> RetType;
-}
-
-  // proto:  void QInputDialog::textValueSelected(const QString & text);
-impl<'a> /*trait*/ QInputDialog_textValueSelected<()> for (&'a QString) {
-  fn textValueSelected(self , rsthis: & QInputDialog) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QInputDialog17textValueSelectedERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN12QInputDialog17textValueSelectedERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -813,29 +755,6 @@ impl<'a> /*trait*/ QInputDialog_open<()> for (&'a QObject, &'a  String) {
   }
 }
 
-  // proto:  void QInputDialog::doubleValueChanged(double value);
-impl /*struct*/ QInputDialog {
-  pub fn doubleValueChanged<RetType, T: QInputDialog_doubleValueChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.doubleValueChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QInputDialog_doubleValueChanged<RetType> {
-  fn doubleValueChanged(self , rsthis: & QInputDialog) -> RetType;
-}
-
-  // proto:  void QInputDialog::doubleValueChanged(double value);
-impl<'a> /*trait*/ QInputDialog_doubleValueChanged<()> for (f64) {
-  fn doubleValueChanged(self , rsthis: & QInputDialog) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QInputDialog18doubleValueChangedEd()};
-    let arg0 = self  as c_double;
-     unsafe {_ZN12QInputDialog18doubleValueChangedEd(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  QString QInputDialog::okButtonText();
 impl /*struct*/ QInputDialog {
   pub fn okButtonText<RetType, T: QInputDialog_okButtonText<RetType>>(& self,  overload_args: T) -> RetType {
@@ -1024,29 +943,6 @@ impl<'a> /*trait*/ QInputDialog_setCancelButtonText<()> for (&'a QString) {
   }
 }
 
-  // proto:  void QInputDialog::doubleValueSelected(double value);
-impl /*struct*/ QInputDialog {
-  pub fn doubleValueSelected<RetType, T: QInputDialog_doubleValueSelected<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.doubleValueSelected(self);
-    // return 1;
-  }
-}
-
-pub trait QInputDialog_doubleValueSelected<RetType> {
-  fn doubleValueSelected(self , rsthis: & QInputDialog) -> RetType;
-}
-
-  // proto:  void QInputDialog::doubleValueSelected(double value);
-impl<'a> /*trait*/ QInputDialog_doubleValueSelected<()> for (f64) {
-  fn doubleValueSelected(self , rsthis: & QInputDialog) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QInputDialog19doubleValueSelectedEd()};
-    let arg0 = self  as c_double;
-     unsafe {_ZN12QInputDialog19doubleValueSelectedEd(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  QString QInputDialog::textValue();
 impl /*struct*/ QInputDialog {
   pub fn textValue<RetType, T: QInputDialog_textValue<RetType>>(& self,  overload_args: T) -> RetType {
@@ -1067,52 +963,6 @@ impl<'a> /*trait*/ QInputDialog_textValue<QString> for () {
     let mut ret = unsafe {_ZNK12QInputDialog9textValueEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QInputDialog::textValueChanged(const QString & text);
-impl /*struct*/ QInputDialog {
-  pub fn textValueChanged<RetType, T: QInputDialog_textValueChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.textValueChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QInputDialog_textValueChanged<RetType> {
-  fn textValueChanged(self , rsthis: & QInputDialog) -> RetType;
-}
-
-  // proto:  void QInputDialog::textValueChanged(const QString & text);
-impl<'a> /*trait*/ QInputDialog_textValueChanged<()> for (&'a QString) {
-  fn textValueChanged(self , rsthis: & QInputDialog) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QInputDialog16textValueChangedERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN12QInputDialog16textValueChangedERK7QString(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QInputDialog::intValueSelected(int value);
-impl /*struct*/ QInputDialog {
-  pub fn intValueSelected<RetType, T: QInputDialog_intValueSelected<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.intValueSelected(self);
-    // return 1;
-  }
-}
-
-pub trait QInputDialog_intValueSelected<RetType> {
-  fn intValueSelected(self , rsthis: & QInputDialog) -> RetType;
-}
-
-  // proto:  void QInputDialog::intValueSelected(int value);
-impl<'a> /*trait*/ QInputDialog_intValueSelected<()> for (i32) {
-  fn intValueSelected(self , rsthis: & QInputDialog) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QInputDialog16intValueSelectedEi()};
-    let arg0 = self  as c_int;
-     unsafe {_ZN12QInputDialog16intValueSelectedEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1190,7 +1040,7 @@ impl<'a> /*trait*/ QInputDialog_setDoubleRange<()> for (f64, f64) {
 #[derive(Default)] // for QInputDialog_doubleValueChanged
 pub struct QInputDialog_doubleValueChanged_signal{poi:u64}
 impl /* struct */ QInputDialog {
-  pub fn doubleValueChanged_1(&self) -> QInputDialog_doubleValueChanged_signal {
+  pub fn doubleValueChanged(&self) -> QInputDialog_doubleValueChanged_signal {
      return QInputDialog_doubleValueChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1206,7 +1056,7 @@ pub trait QInputDialog_doubleValueChanged_signal_connect {
 #[derive(Default)] // for QInputDialog_intValueChanged
 pub struct QInputDialog_intValueChanged_signal{poi:u64}
 impl /* struct */ QInputDialog {
-  pub fn intValueChanged_1(&self) -> QInputDialog_intValueChanged_signal {
+  pub fn intValueChanged(&self) -> QInputDialog_intValueChanged_signal {
      return QInputDialog_intValueChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1222,7 +1072,7 @@ pub trait QInputDialog_intValueChanged_signal_connect {
 #[derive(Default)] // for QInputDialog_textValueChanged
 pub struct QInputDialog_textValueChanged_signal{poi:u64}
 impl /* struct */ QInputDialog {
-  pub fn textValueChanged_1(&self) -> QInputDialog_textValueChanged_signal {
+  pub fn textValueChanged(&self) -> QInputDialog_textValueChanged_signal {
      return QInputDialog_textValueChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1238,7 +1088,7 @@ pub trait QInputDialog_textValueChanged_signal_connect {
 #[derive(Default)] // for QInputDialog_intValueSelected
 pub struct QInputDialog_intValueSelected_signal{poi:u64}
 impl /* struct */ QInputDialog {
-  pub fn intValueSelected_1(&self) -> QInputDialog_intValueSelected_signal {
+  pub fn intValueSelected(&self) -> QInputDialog_intValueSelected_signal {
      return QInputDialog_intValueSelected_signal{poi:self.qclsinst};
   }
 }
@@ -1254,7 +1104,7 @@ pub trait QInputDialog_intValueSelected_signal_connect {
 #[derive(Default)] // for QInputDialog_textValueSelected
 pub struct QInputDialog_textValueSelected_signal{poi:u64}
 impl /* struct */ QInputDialog {
-  pub fn textValueSelected_1(&self) -> QInputDialog_textValueSelected_signal {
+  pub fn textValueSelected(&self) -> QInputDialog_textValueSelected_signal {
      return QInputDialog_textValueSelected_signal{poi:self.qclsinst};
   }
 }
@@ -1270,7 +1120,7 @@ pub trait QInputDialog_textValueSelected_signal_connect {
 #[derive(Default)] // for QInputDialog_doubleValueSelected
 pub struct QInputDialog_doubleValueSelected_signal{poi:u64}
 impl /* struct */ QInputDialog {
-  pub fn doubleValueSelected_1(&self) -> QInputDialog_doubleValueSelected_signal {
+  pub fn doubleValueSelected(&self) -> QInputDialog_doubleValueSelected_signal {
      return QInputDialog_doubleValueSelected_signal{poi:self.qclsinst};
   }
 }
@@ -1289,11 +1139,12 @@ extern fn QInputDialog_intValueChanged_signal_connect_cb_0(rsfptr:fn(i32), arg0:
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QInputDialog_intValueChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
+extern fn QInputDialog_intValueChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QInputDialog_intValueChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QInputDialog_intValueChanged_signal) {
@@ -1314,7 +1165,7 @@ impl /* trait */ QInputDialog_intValueChanged_signal_connect for Box<Fn(i32)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QInputDialog_intValueChanged_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QInputDialog_SlotProxy_connect__ZN12QInputDialog15intValueChangedEi(arg0, arg1, arg2)};
   }
 }
@@ -1324,11 +1175,12 @@ extern fn QInputDialog_textValueSelected_signal_connect_cb_1(rsfptr:fn(QString),
   let rsarg0 = QString::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QInputDialog_textValueSelected_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(QString), arg0: *mut c_void) {
+extern fn QInputDialog_textValueSelected_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn(QString)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QString::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QInputDialog_textValueSelected_signal_connect for fn(QString) {
   fn connect(self, sigthis: QInputDialog_textValueSelected_signal) {
@@ -1349,7 +1201,7 @@ impl /* trait */ QInputDialog_textValueSelected_signal_connect for Box<Fn(QStrin
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QInputDialog_textValueSelected_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QInputDialog_SlotProxy_connect__ZN12QInputDialog17textValueSelectedERK7QString(arg0, arg1, arg2)};
   }
 }
@@ -1359,11 +1211,12 @@ extern fn QInputDialog_intValueSelected_signal_connect_cb_2(rsfptr:fn(i32), arg0
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QInputDialog_intValueSelected_signal_connect_cb_box_2(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
+extern fn QInputDialog_intValueSelected_signal_connect_cb_box_2(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QInputDialog_intValueSelected_signal_connect for fn(i32) {
   fn connect(self, sigthis: QInputDialog_intValueSelected_signal) {
@@ -1384,7 +1237,7 @@ impl /* trait */ QInputDialog_intValueSelected_signal_connect for Box<Fn(i32)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QInputDialog_intValueSelected_signal_connect_cb_box_2 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QInputDialog_SlotProxy_connect__ZN12QInputDialog16intValueSelectedEi(arg0, arg1, arg2)};
   }
 }
@@ -1394,11 +1247,12 @@ extern fn QInputDialog_doubleValueSelected_signal_connect_cb_3(rsfptr:fn(f64), a
   let rsarg0 = arg0 as f64;
   rsfptr(rsarg0);
 }
-extern fn QInputDialog_doubleValueSelected_signal_connect_cb_box_3(rsfptr_raw:*mut Fn(f64), arg0: c_double) {
+extern fn QInputDialog_doubleValueSelected_signal_connect_cb_box_3(rsfptr_raw:*mut Box<Fn(f64)>, arg0: c_double) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as f64;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QInputDialog_doubleValueSelected_signal_connect for fn(f64) {
   fn connect(self, sigthis: QInputDialog_doubleValueSelected_signal) {
@@ -1419,7 +1273,7 @@ impl /* trait */ QInputDialog_doubleValueSelected_signal_connect for Box<Fn(f64)
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QInputDialog_doubleValueSelected_signal_connect_cb_box_3 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QInputDialog_SlotProxy_connect__ZN12QInputDialog19doubleValueSelectedEd(arg0, arg1, arg2)};
   }
 }
@@ -1429,11 +1283,12 @@ extern fn QInputDialog_doubleValueChanged_signal_connect_cb_4(rsfptr:fn(f64), ar
   let rsarg0 = arg0 as f64;
   rsfptr(rsarg0);
 }
-extern fn QInputDialog_doubleValueChanged_signal_connect_cb_box_4(rsfptr_raw:*mut Fn(f64), arg0: c_double) {
+extern fn QInputDialog_doubleValueChanged_signal_connect_cb_box_4(rsfptr_raw:*mut Box<Fn(f64)>, arg0: c_double) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as f64;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QInputDialog_doubleValueChanged_signal_connect for fn(f64) {
   fn connect(self, sigthis: QInputDialog_doubleValueChanged_signal) {
@@ -1454,7 +1309,7 @@ impl /* trait */ QInputDialog_doubleValueChanged_signal_connect for Box<Fn(f64)>
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QInputDialog_doubleValueChanged_signal_connect_cb_box_4 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QInputDialog_SlotProxy_connect__ZN12QInputDialog18doubleValueChangedEd(arg0, arg1, arg2)};
   }
 }
@@ -1464,11 +1319,12 @@ extern fn QInputDialog_textValueChanged_signal_connect_cb_5(rsfptr:fn(QString), 
   let rsarg0 = QString::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QInputDialog_textValueChanged_signal_connect_cb_box_5(rsfptr_raw:*mut Fn(QString), arg0: *mut c_void) {
+extern fn QInputDialog_textValueChanged_signal_connect_cb_box_5(rsfptr_raw:*mut Box<Fn(QString)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QString::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QInputDialog_textValueChanged_signal_connect for fn(QString) {
   fn connect(self, sigthis: QInputDialog_textValueChanged_signal) {
@@ -1489,7 +1345,7 @@ impl /* trait */ QInputDialog_textValueChanged_signal_connect for Box<Fn(QString
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QInputDialog_textValueChanged_signal_connect_cb_box_5 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QInputDialog_SlotProxy_connect__ZN12QInputDialog16textValueChangedERK7QString(arg0, arg1, arg2)};
   }
 }

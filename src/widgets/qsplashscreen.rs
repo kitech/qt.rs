@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtWidgets/qsplashscreen.h
 // dst-file: /src/widgets/qsplashscreen.rs
 //
@@ -44,8 +44,6 @@ extern {
   fn _ZN13QSplashScreenC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QPixmap QSplashScreen::pixmap();
   fn _ZNK13QSplashScreen6pixmapEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QSplashScreen::messageChanged(const QString & message);
-  fn _ZN13QSplashScreen14messageChangedERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QSplashScreen::showMessage(const QString & message, int alignment, const QColor & color);
   fn _ZN13QSplashScreen11showMessageERK7QStringiRK6QColor(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void);
   // proto:  void QSplashScreen::setPixmap(const QPixmap & pixmap);
@@ -65,7 +63,7 @@ extern {
 pub struct QSplashScreen {
   qbase: QWidget,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _messageChanged_1: QSplashScreen_messageChanged_signal,
+  pub _messageChanged: QSplashScreen_messageChanged_signal,
 }
 
 impl /*struct*/ QSplashScreen {
@@ -204,29 +202,6 @@ impl<'a> /*trait*/ QSplashScreen_pixmap<QPixmap> for () {
   }
 }
 
-  // proto:  void QSplashScreen::messageChanged(const QString & message);
-impl /*struct*/ QSplashScreen {
-  pub fn messageChanged<RetType, T: QSplashScreen_messageChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.messageChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QSplashScreen_messageChanged<RetType> {
-  fn messageChanged(self , rsthis: & QSplashScreen) -> RetType;
-}
-
-  // proto:  void QSplashScreen::messageChanged(const QString & message);
-impl<'a> /*trait*/ QSplashScreen_messageChanged<()> for (&'a QString) {
-  fn messageChanged(self , rsthis: & QSplashScreen) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QSplashScreen14messageChangedERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN13QSplashScreen14messageChangedERK7QString(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  void QSplashScreen::showMessage(const QString & message, int alignment, const QColor & color);
 impl /*struct*/ QSplashScreen {
   pub fn showMessage<RetType, T: QSplashScreen_showMessage<RetType>>(& self,  overload_args: T) -> RetType {
@@ -347,7 +322,7 @@ impl<'a> /*trait*/ QSplashScreen_finish<()> for (&'a QWidget) {
 #[derive(Default)] // for QSplashScreen_messageChanged
 pub struct QSplashScreen_messageChanged_signal{poi:u64}
 impl /* struct */ QSplashScreen {
-  pub fn messageChanged_1(&self) -> QSplashScreen_messageChanged_signal {
+  pub fn messageChanged(&self) -> QSplashScreen_messageChanged_signal {
      return QSplashScreen_messageChanged_signal{poi:self.qclsinst};
   }
 }
@@ -366,11 +341,12 @@ extern fn QSplashScreen_messageChanged_signal_connect_cb_0(rsfptr:fn(QString), a
   let rsarg0 = QString::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QSplashScreen_messageChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QString), arg0: *mut c_void) {
+extern fn QSplashScreen_messageChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(QString)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QString::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QSplashScreen_messageChanged_signal_connect for fn(QString) {
   fn connect(self, sigthis: QSplashScreen_messageChanged_signal) {
@@ -391,7 +367,7 @@ impl /* trait */ QSplashScreen_messageChanged_signal_connect for Box<Fn(QString)
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QSplashScreen_messageChanged_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QSplashScreen_SlotProxy_connect__ZN13QSplashScreen14messageChangedERK7QString(arg0, arg1, arg2)};
   }
 }

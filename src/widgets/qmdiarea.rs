@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtWidgets/qmdiarea.h
 // dst-file: /src/widgets/qmdiarea.rs
 //
@@ -72,8 +72,6 @@ extern {
   // proto:  void QMdiArea::QMdiArea(const QMdiArea & );
   fn dector_ZN8QMdiAreaC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN8QMdiAreaC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QMdiArea::subWindowActivated(QMdiSubWindow * );
-  fn _ZN8QMdiArea18subWindowActivatedEP13QMdiSubWindow(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMdiArea::cascadeSubWindows();
   fn _ZN8QMdiArea17cascadeSubWindowsEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QMdiArea::closeActiveSubWindow();
@@ -95,7 +93,7 @@ extern {
 pub struct QMdiArea {
   qbase: QAbstractScrollArea,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _subWindowActivated_1: QMdiArea_subWindowActivated_signal,
+  pub _subWindowActivated: QMdiArea_subWindowActivated_signal,
 }
 
 impl /*struct*/ QMdiArea {
@@ -526,29 +524,6 @@ impl<'a> /*trait*/ QMdiArea_new for (&'a QMdiArea) {
   }
 }
 
-  // proto:  void QMdiArea::subWindowActivated(QMdiSubWindow * );
-impl /*struct*/ QMdiArea {
-  pub fn subWindowActivated<RetType, T: QMdiArea_subWindowActivated<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.subWindowActivated(self);
-    // return 1;
-  }
-}
-
-pub trait QMdiArea_subWindowActivated<RetType> {
-  fn subWindowActivated(self , rsthis: & QMdiArea) -> RetType;
-}
-
-  // proto:  void QMdiArea::subWindowActivated(QMdiSubWindow * );
-impl<'a> /*trait*/ QMdiArea_subWindowActivated<()> for (&'a QMdiSubWindow) {
-  fn subWindowActivated(self , rsthis: & QMdiArea) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QMdiArea18subWindowActivatedEP13QMdiSubWindow()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN8QMdiArea18subWindowActivatedEP13QMdiSubWindow(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  void QMdiArea::cascadeSubWindows();
 impl /*struct*/ QMdiArea {
   pub fn cascadeSubWindows<RetType, T: QMdiArea_cascadeSubWindows<RetType>>(& self,  overload_args: T) -> RetType {
@@ -689,7 +664,7 @@ impl<'a> /*trait*/ QMdiArea_minimumSizeHint<QSize> for () {
 #[derive(Default)] // for QMdiArea_subWindowActivated
 pub struct QMdiArea_subWindowActivated_signal{poi:u64}
 impl /* struct */ QMdiArea {
-  pub fn subWindowActivated_1(&self) -> QMdiArea_subWindowActivated_signal {
+  pub fn subWindowActivated(&self) -> QMdiArea_subWindowActivated_signal {
      return QMdiArea_subWindowActivated_signal{poi:self.qclsinst};
   }
 }
@@ -708,11 +683,12 @@ extern fn QMdiArea_subWindowActivated_signal_connect_cb_0(rsfptr:fn(QMdiSubWindo
   let rsarg0 = QMdiSubWindow::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QMdiArea_subWindowActivated_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QMdiSubWindow), arg0: *mut c_void) {
+extern fn QMdiArea_subWindowActivated_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(QMdiSubWindow)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QMdiSubWindow::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QMdiArea_subWindowActivated_signal_connect for fn(QMdiSubWindow) {
   fn connect(self, sigthis: QMdiArea_subWindowActivated_signal) {
@@ -733,7 +709,7 @@ impl /* trait */ QMdiArea_subWindowActivated_signal_connect for Box<Fn(QMdiSubWi
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QMdiArea_subWindowActivated_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QMdiArea_SlotProxy_connect__ZN8QMdiArea18subWindowActivatedEP13QMdiSubWindow(arg0, arg1, arg2)};
   }
 }

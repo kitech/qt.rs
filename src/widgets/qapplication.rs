@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtWidgets/qapplication.h
 // dst-file: /src/widgets/qapplication.rs
 //
@@ -112,8 +112,6 @@ extern {
   // proto:  void QApplication::QApplication(int & argc, char ** argv, int );
   fn dector_ZN12QApplicationC1ERiPPci(arg0: *mut c_int, arg1: *mut c_char, arg2: c_int) -> *mut c_void;
   fn _ZN12QApplicationC1ERiPPci(qthis: u64 /* *mut c_void*/, arg0: *mut c_int, arg1: *mut c_char, arg2: c_int);
-  // proto:  void QApplication::focusChanged(QWidget * old, QWidget * now);
-  fn _ZN12QApplication12focusChangedEP7QWidgetS1_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto: static void QApplication::setStartDragTime(int ms);
   fn _ZN12QApplication16setStartDragTimeEi(arg0: c_int);
   // proto: static QWidget * QApplication::topLevelAt(int x, int y);
@@ -165,7 +163,7 @@ extern {
 pub struct QApplication {
   qbase: QGuiApplication,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _focusChanged_1: QApplication_focusChanged_signal,
+  pub _focusChanged: QApplication_focusChanged_signal,
 }
 
 impl /*struct*/ QApplication {
@@ -941,30 +939,6 @@ impl<'a> /*trait*/ QApplication_new for (&'a mut i32, &'a mut String, i32) {
   }
 }
 
-  // proto:  void QApplication::focusChanged(QWidget * old, QWidget * now);
-impl /*struct*/ QApplication {
-  pub fn focusChanged<RetType, T: QApplication_focusChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.focusChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QApplication_focusChanged<RetType> {
-  fn focusChanged(self , rsthis: & QApplication) -> RetType;
-}
-
-  // proto:  void QApplication::focusChanged(QWidget * old, QWidget * now);
-impl<'a> /*trait*/ QApplication_focusChanged<()> for (&'a QWidget, &'a QWidget) {
-  fn focusChanged(self , rsthis: & QApplication) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QApplication12focusChangedEP7QWidgetS1_()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN12QApplication12focusChangedEP7QWidgetS1_(rsthis.qclsinst, arg0, arg1)};
-    // return 1;
-  }
-}
-
   // proto: static void QApplication::setStartDragTime(int ms);
 impl /*struct*/ QApplication {
   pub fn setStartDragTime_s<RetType, T: QApplication_setStartDragTime_s<RetType>>( overload_args: T) -> RetType {
@@ -1435,7 +1409,7 @@ impl<'a> /*trait*/ QApplication_windowIcon_s<QIcon> for () {
 #[derive(Default)] // for QApplication_focusChanged
 pub struct QApplication_focusChanged_signal{poi:u64}
 impl /* struct */ QApplication {
-  pub fn focusChanged_1(&self) -> QApplication_focusChanged_signal {
+  pub fn focusChanged(&self) -> QApplication_focusChanged_signal {
      return QApplication_focusChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1455,12 +1429,13 @@ extern fn QApplication_focusChanged_signal_connect_cb_0(rsfptr:fn(QWidget, QWidg
   let rsarg1 = QWidget::inheritFrom(arg1 as u64);
   rsfptr(rsarg0,rsarg1);
 }
-extern fn QApplication_focusChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QWidget, QWidget), arg0: *mut c_void, arg1: *mut c_void) {
+extern fn QApplication_focusChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(QWidget, QWidget)>, arg0: *mut c_void, arg1: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QWidget::inheritFrom(arg0 as u64);
   let rsarg1 = QWidget::inheritFrom(arg1 as u64);
-  rsfptr(rsarg0,rsarg1);
+  // rsfptr(rsarg0,rsarg1);
+  unsafe{(*rsfptr_raw)(rsarg0,rsarg1)};
 }
 impl /* trait */ QApplication_focusChanged_signal_connect for fn(QWidget, QWidget) {
   fn connect(self, sigthis: QApplication_focusChanged_signal) {
@@ -1481,7 +1456,7 @@ impl /* trait */ QApplication_focusChanged_signal_connect for Box<Fn(QWidget, QW
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QApplication_focusChanged_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QApplication_SlotProxy_connect__ZN12QApplication12focusChangedEP7QWidgetS1_(arg0, arg1, arg2)};
   }
 }

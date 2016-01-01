@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtWidgets/qlistwidget.h
 // dst-file: /src/widgets/qlistwidget.rs
 //
@@ -132,17 +132,11 @@ extern {
   fn QListWidget_Class_Size() -> c_int;
   // proto:  void QListWidget::dropEvent(QDropEvent * event);
   fn _ZN11QListWidget9dropEventEP10QDropEvent(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QListWidget::itemClicked(QListWidgetItem * item);
-  fn _ZN11QListWidget11itemClickedEP15QListWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QWidget * QListWidget::itemWidget(QListWidgetItem * item);
   fn _ZNK11QListWidget10itemWidgetEP15QListWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-  // proto:  void QListWidget::itemPressed(QListWidgetItem * item);
-  fn _ZN11QListWidget11itemPressedEP15QListWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QListWidget::QListWidget(QWidget * parent);
   fn dector_ZN11QListWidgetC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
   fn _ZN11QListWidgetC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QListWidget::currentRowChanged(int currentRow);
-  fn _ZN11QListWidget17currentRowChangedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QListWidget::currentRow();
   fn _ZNK11QListWidget10currentRowEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  QListWidgetItem * QListWidget::item(int row);
@@ -167,8 +161,6 @@ extern {
   fn _ZN11QListWidgetD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QListWidget::addItem(QListWidgetItem * item);
   fn demth_ZN11QListWidget7addItemEP15QListWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QListWidget::itemSelectionChanged();
-  fn _ZN11QListWidget20itemSelectionChangedEv(qthis: u64 /* *mut c_void*/);
   // proto:  QListWidgetItem * QListWidget::takeItem(int row);
   fn _ZN11QListWidget8takeItemEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  bool QListWidget::isSortingEnabled();
@@ -179,8 +171,6 @@ extern {
   fn _ZNK11QListWidget13selectedItemsEv(qthis: u64 /* *mut c_void*/);
   // proto:  const QMetaObject * QListWidget::metaObject();
   fn _ZNK11QListWidget10metaObjectEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QListWidget::itemDoubleClicked(QListWidgetItem * item);
-  fn _ZN11QListWidget17itemDoubleClickedEP15QListWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QListWidget::setItemSelected(const QListWidgetItem * item, bool select);
   fn _ZN11QListWidget15setItemSelectedEPK15QListWidgetItemb(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_char);
   // proto:  void QListWidget::insertItem(int row, QListWidgetItem * item);
@@ -193,26 +183,16 @@ extern {
   fn _ZNK11QListWidget14visualItemRectEPK15QListWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QListWidget::removeItemWidget(QListWidgetItem * item);
   fn demth_ZN11QListWidget16removeItemWidgetEP15QListWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QListWidget::itemActivated(QListWidgetItem * item);
-  fn _ZN11QListWidget13itemActivatedEP15QListWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QListWidget::closePersistentEditor(QListWidgetItem * item);
   fn _ZN11QListWidget21closePersistentEditorEP15QListWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QListWidget::itemEntered(QListWidgetItem * item);
-  fn _ZN11QListWidget11itemEnteredEP15QListWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QListWidget::isItemHidden(const QListWidgetItem * item);
   fn _ZNK11QListWidget12isItemHiddenEPK15QListWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
-  // proto:  void QListWidget::itemChanged(QListWidgetItem * item);
-  fn _ZN11QListWidget11itemChangedEP15QListWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QListWidgetItem * QListWidget::itemAt(int x, int y);
   fn demth_ZNK11QListWidget6itemAtEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> *mut c_void;
-  // proto:  void QListWidget::currentItemChanged(QListWidgetItem * current, QListWidgetItem * previous);
-  fn _ZN11QListWidget18currentItemChangedEP15QListWidgetItemS1_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QListWidget::addItem(const QString & label);
   fn demth_ZN11QListWidget7addItemERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QListWidget::insertItems(int row, const QStringList & labels);
   fn _ZN11QListWidget11insertItemsEiRK11QStringList(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
-  // proto:  void QListWidget::currentTextChanged(const QString & currentText);
-  fn _ZN11QListWidget18currentTextChangedERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QListWidgetItem * QListWidget::currentItem();
   fn _ZNK11QListWidget11currentItemEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QListWidget::setCurrentItem(QListWidgetItem * item);
@@ -249,16 +229,16 @@ pub struct QListWidgetItem {
 pub struct QListWidget {
   qbase: QListView,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _itemDoubleClicked_1: QListWidget_itemDoubleClicked_signal,
-  pub _itemClicked_1: QListWidget_itemClicked_signal,
-  pub _currentItemChanged_1: QListWidget_currentItemChanged_signal,
-  pub _itemEntered_1: QListWidget_itemEntered_signal,
-  pub _itemPressed_1: QListWidget_itemPressed_signal,
-  pub _itemSelectionChanged_1: QListWidget_itemSelectionChanged_signal,
-  pub _itemActivated_1: QListWidget_itemActivated_signal,
-  pub _itemChanged_1: QListWidget_itemChanged_signal,
-  pub _currentRowChanged_1: QListWidget_currentRowChanged_signal,
-  pub _currentTextChanged_1: QListWidget_currentTextChanged_signal,
+  pub _itemDoubleClicked: QListWidget_itemDoubleClicked_signal,
+  pub _itemClicked: QListWidget_itemClicked_signal,
+  pub _currentItemChanged: QListWidget_currentItemChanged_signal,
+  pub _itemEntered: QListWidget_itemEntered_signal,
+  pub _itemPressed: QListWidget_itemPressed_signal,
+  pub _itemSelectionChanged: QListWidget_itemSelectionChanged_signal,
+  pub _itemActivated: QListWidget_itemActivated_signal,
+  pub _itemChanged: QListWidget_itemChanged_signal,
+  pub _currentRowChanged: QListWidget_currentRowChanged_signal,
+  pub _currentTextChanged: QListWidget_currentTextChanged_signal,
 }
 
 impl /*struct*/ QListWidgetItem {
@@ -1232,29 +1212,6 @@ impl<'a> /*trait*/ QListWidget_dropEvent<()> for (&'a QDropEvent) {
   }
 }
 
-  // proto:  void QListWidget::itemClicked(QListWidgetItem * item);
-impl /*struct*/ QListWidget {
-  pub fn itemClicked<RetType, T: QListWidget_itemClicked<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.itemClicked(self);
-    // return 1;
-  }
-}
-
-pub trait QListWidget_itemClicked<RetType> {
-  fn itemClicked(self , rsthis: & QListWidget) -> RetType;
-}
-
-  // proto:  void QListWidget::itemClicked(QListWidgetItem * item);
-impl<'a> /*trait*/ QListWidget_itemClicked<()> for (&'a QListWidgetItem) {
-  fn itemClicked(self , rsthis: & QListWidget) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QListWidget11itemClickedEP15QListWidgetItem()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QListWidget11itemClickedEP15QListWidgetItem(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  QWidget * QListWidget::itemWidget(QListWidgetItem * item);
 impl /*struct*/ QListWidget {
   pub fn itemWidget<RetType, T: QListWidget_itemWidget<RetType>>(& self,  overload_args: T) -> RetType {
@@ -1276,29 +1233,6 @@ impl<'a> /*trait*/ QListWidget_itemWidget<QWidget> for (&'a QListWidgetItem) {
     let mut ret = unsafe {_ZNK11QListWidget10itemWidgetEP15QListWidgetItem(rsthis.qclsinst, arg0)};
     let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QListWidget::itemPressed(QListWidgetItem * item);
-impl /*struct*/ QListWidget {
-  pub fn itemPressed<RetType, T: QListWidget_itemPressed<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.itemPressed(self);
-    // return 1;
-  }
-}
-
-pub trait QListWidget_itemPressed<RetType> {
-  fn itemPressed(self , rsthis: & QListWidget) -> RetType;
-}
-
-  // proto:  void QListWidget::itemPressed(QListWidgetItem * item);
-impl<'a> /*trait*/ QListWidget_itemPressed<()> for (&'a QListWidgetItem) {
-  fn itemPressed(self , rsthis: & QListWidget) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QListWidget11itemPressedEP15QListWidgetItem()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QListWidget11itemPressedEP15QListWidgetItem(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1328,29 +1262,6 @@ impl<'a> /*trait*/ QListWidget_new for (&'a QWidget) {
     let qthis: u64 = unsafe {dector_ZN11QListWidgetC1EP7QWidget(arg0)} as u64;
     let rsthis = QListWidget{qbase: QListView::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  void QListWidget::currentRowChanged(int currentRow);
-impl /*struct*/ QListWidget {
-  pub fn currentRowChanged<RetType, T: QListWidget_currentRowChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.currentRowChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QListWidget_currentRowChanged<RetType> {
-  fn currentRowChanged(self , rsthis: & QListWidget) -> RetType;
-}
-
-  // proto:  void QListWidget::currentRowChanged(int currentRow);
-impl<'a> /*trait*/ QListWidget_currentRowChanged<()> for (i32) {
-  fn currentRowChanged(self , rsthis: & QListWidget) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QListWidget17currentRowChangedEi()};
-    let arg0 = self  as c_int;
-     unsafe {_ZN11QListWidget17currentRowChangedEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1636,28 +1547,6 @@ impl<'a> /*trait*/ QListWidget_addItem<()> for (&'a QListWidgetItem) {
   }
 }
 
-  // proto:  void QListWidget::itemSelectionChanged();
-impl /*struct*/ QListWidget {
-  pub fn itemSelectionChanged<RetType, T: QListWidget_itemSelectionChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.itemSelectionChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QListWidget_itemSelectionChanged<RetType> {
-  fn itemSelectionChanged(self , rsthis: & QListWidget) -> RetType;
-}
-
-  // proto:  void QListWidget::itemSelectionChanged();
-impl<'a> /*trait*/ QListWidget_itemSelectionChanged<()> for () {
-  fn itemSelectionChanged(self , rsthis: & QListWidget) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QListWidget20itemSelectionChangedEv()};
-     unsafe {_ZN11QListWidget20itemSelectionChangedEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto:  QListWidgetItem * QListWidget::takeItem(int row);
 impl /*struct*/ QListWidget {
   pub fn takeItem<RetType, T: QListWidget_takeItem<RetType>>(& self,  overload_args: T) -> RetType {
@@ -1769,29 +1658,6 @@ impl<'a> /*trait*/ QListWidget_metaObject<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QListWidget10metaObjectEv()};
      unsafe {_ZNK11QListWidget10metaObjectEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QListWidget::itemDoubleClicked(QListWidgetItem * item);
-impl /*struct*/ QListWidget {
-  pub fn itemDoubleClicked<RetType, T: QListWidget_itemDoubleClicked<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.itemDoubleClicked(self);
-    // return 1;
-  }
-}
-
-pub trait QListWidget_itemDoubleClicked<RetType> {
-  fn itemDoubleClicked(self , rsthis: & QListWidget) -> RetType;
-}
-
-  // proto:  void QListWidget::itemDoubleClicked(QListWidgetItem * item);
-impl<'a> /*trait*/ QListWidget_itemDoubleClicked<()> for (&'a QListWidgetItem) {
-  fn itemDoubleClicked(self , rsthis: & QListWidget) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QListWidget17itemDoubleClickedEP15QListWidgetItem()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QListWidget17itemDoubleClickedEP15QListWidgetItem(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1926,29 +1792,6 @@ impl<'a> /*trait*/ QListWidget_removeItemWidget<()> for (&'a QListWidgetItem) {
   }
 }
 
-  // proto:  void QListWidget::itemActivated(QListWidgetItem * item);
-impl /*struct*/ QListWidget {
-  pub fn itemActivated<RetType, T: QListWidget_itemActivated<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.itemActivated(self);
-    // return 1;
-  }
-}
-
-pub trait QListWidget_itemActivated<RetType> {
-  fn itemActivated(self , rsthis: & QListWidget) -> RetType;
-}
-
-  // proto:  void QListWidget::itemActivated(QListWidgetItem * item);
-impl<'a> /*trait*/ QListWidget_itemActivated<()> for (&'a QListWidgetItem) {
-  fn itemActivated(self , rsthis: & QListWidget) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QListWidget13itemActivatedEP15QListWidgetItem()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QListWidget13itemActivatedEP15QListWidgetItem(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  void QListWidget::closePersistentEditor(QListWidgetItem * item);
 impl /*struct*/ QListWidget {
   pub fn closePersistentEditor<RetType, T: QListWidget_closePersistentEditor<RetType>>(& self,  overload_args: T) -> RetType {
@@ -1968,29 +1811,6 @@ impl<'a> /*trait*/ QListWidget_closePersistentEditor<()> for (&'a QListWidgetIte
     // unsafe{_ZN11QListWidget21closePersistentEditorEP15QListWidgetItem()};
     let arg0 = self.qclsinst  as *mut c_void;
      unsafe {_ZN11QListWidget21closePersistentEditorEP15QListWidgetItem(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QListWidget::itemEntered(QListWidgetItem * item);
-impl /*struct*/ QListWidget {
-  pub fn itemEntered<RetType, T: QListWidget_itemEntered<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.itemEntered(self);
-    // return 1;
-  }
-}
-
-pub trait QListWidget_itemEntered<RetType> {
-  fn itemEntered(self , rsthis: & QListWidget) -> RetType;
-}
-
-  // proto:  void QListWidget::itemEntered(QListWidgetItem * item);
-impl<'a> /*trait*/ QListWidget_itemEntered<()> for (&'a QListWidgetItem) {
-  fn itemEntered(self , rsthis: & QListWidget) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QListWidget11itemEnteredEP15QListWidgetItem()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QListWidget11itemEnteredEP15QListWidgetItem(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -2019,29 +1839,6 @@ impl<'a> /*trait*/ QListWidget_isItemHidden<i8> for (&'a QListWidgetItem) {
   }
 }
 
-  // proto:  void QListWidget::itemChanged(QListWidgetItem * item);
-impl /*struct*/ QListWidget {
-  pub fn itemChanged<RetType, T: QListWidget_itemChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.itemChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QListWidget_itemChanged<RetType> {
-  fn itemChanged(self , rsthis: & QListWidget) -> RetType;
-}
-
-  // proto:  void QListWidget::itemChanged(QListWidgetItem * item);
-impl<'a> /*trait*/ QListWidget_itemChanged<()> for (&'a QListWidgetItem) {
-  fn itemChanged(self , rsthis: & QListWidget) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QListWidget11itemChangedEP15QListWidgetItem()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QListWidget11itemChangedEP15QListWidgetItem(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  QListWidgetItem * QListWidget::itemAt(int x, int y);
 impl<'a> /*trait*/ QListWidget_itemAt<QListWidgetItem> for (i32, i32) {
   fn itemAt(self , rsthis: & QListWidget) -> QListWidgetItem {
@@ -2052,30 +1849,6 @@ impl<'a> /*trait*/ QListWidget_itemAt<QListWidgetItem> for (i32, i32) {
     let mut ret = unsafe {demth_ZNK11QListWidget6itemAtEii(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QListWidgetItem::inheritFrom(ret as u64);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QListWidget::currentItemChanged(QListWidgetItem * current, QListWidgetItem * previous);
-impl /*struct*/ QListWidget {
-  pub fn currentItemChanged<RetType, T: QListWidget_currentItemChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.currentItemChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QListWidget_currentItemChanged<RetType> {
-  fn currentItemChanged(self , rsthis: & QListWidget) -> RetType;
-}
-
-  // proto:  void QListWidget::currentItemChanged(QListWidgetItem * current, QListWidgetItem * previous);
-impl<'a> /*trait*/ QListWidget_currentItemChanged<()> for (&'a QListWidgetItem, &'a QListWidgetItem) {
-  fn currentItemChanged(self , rsthis: & QListWidget) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QListWidget18currentItemChangedEP15QListWidgetItemS1_()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN11QListWidget18currentItemChangedEP15QListWidgetItemS1_(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -2111,29 +1884,6 @@ impl<'a> /*trait*/ QListWidget_insertItems<()> for (i32, &'a QStringList) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
      unsafe {_ZN11QListWidget11insertItemsEiRK11QStringList(rsthis.qclsinst, arg0, arg1)};
-    // return 1;
-  }
-}
-
-  // proto:  void QListWidget::currentTextChanged(const QString & currentText);
-impl /*struct*/ QListWidget {
-  pub fn currentTextChanged<RetType, T: QListWidget_currentTextChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.currentTextChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QListWidget_currentTextChanged<RetType> {
-  fn currentTextChanged(self , rsthis: & QListWidget) -> RetType;
-}
-
-  // proto:  void QListWidget::currentTextChanged(const QString & currentText);
-impl<'a> /*trait*/ QListWidget_currentTextChanged<()> for (&'a QString) {
-  fn currentTextChanged(self , rsthis: & QListWidget) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QListWidget18currentTextChangedERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QListWidget18currentTextChangedERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -2252,7 +2002,7 @@ impl<'a> /*trait*/ QListWidget_new for (&'a QListWidget) {
 #[derive(Default)] // for QListWidget_itemDoubleClicked
 pub struct QListWidget_itemDoubleClicked_signal{poi:u64}
 impl /* struct */ QListWidget {
-  pub fn itemDoubleClicked_1(&self) -> QListWidget_itemDoubleClicked_signal {
+  pub fn itemDoubleClicked(&self) -> QListWidget_itemDoubleClicked_signal {
      return QListWidget_itemDoubleClicked_signal{poi:self.qclsinst};
   }
 }
@@ -2268,7 +2018,7 @@ pub trait QListWidget_itemDoubleClicked_signal_connect {
 #[derive(Default)] // for QListWidget_itemClicked
 pub struct QListWidget_itemClicked_signal{poi:u64}
 impl /* struct */ QListWidget {
-  pub fn itemClicked_1(&self) -> QListWidget_itemClicked_signal {
+  pub fn itemClicked(&self) -> QListWidget_itemClicked_signal {
      return QListWidget_itemClicked_signal{poi:self.qclsinst};
   }
 }
@@ -2284,7 +2034,7 @@ pub trait QListWidget_itemClicked_signal_connect {
 #[derive(Default)] // for QListWidget_currentItemChanged
 pub struct QListWidget_currentItemChanged_signal{poi:u64}
 impl /* struct */ QListWidget {
-  pub fn currentItemChanged_1(&self) -> QListWidget_currentItemChanged_signal {
+  pub fn currentItemChanged(&self) -> QListWidget_currentItemChanged_signal {
      return QListWidget_currentItemChanged_signal{poi:self.qclsinst};
   }
 }
@@ -2300,7 +2050,7 @@ pub trait QListWidget_currentItemChanged_signal_connect {
 #[derive(Default)] // for QListWidget_itemEntered
 pub struct QListWidget_itemEntered_signal{poi:u64}
 impl /* struct */ QListWidget {
-  pub fn itemEntered_1(&self) -> QListWidget_itemEntered_signal {
+  pub fn itemEntered(&self) -> QListWidget_itemEntered_signal {
      return QListWidget_itemEntered_signal{poi:self.qclsinst};
   }
 }
@@ -2316,7 +2066,7 @@ pub trait QListWidget_itemEntered_signal_connect {
 #[derive(Default)] // for QListWidget_itemPressed
 pub struct QListWidget_itemPressed_signal{poi:u64}
 impl /* struct */ QListWidget {
-  pub fn itemPressed_1(&self) -> QListWidget_itemPressed_signal {
+  pub fn itemPressed(&self) -> QListWidget_itemPressed_signal {
      return QListWidget_itemPressed_signal{poi:self.qclsinst};
   }
 }
@@ -2332,7 +2082,7 @@ pub trait QListWidget_itemPressed_signal_connect {
 #[derive(Default)] // for QListWidget_itemSelectionChanged
 pub struct QListWidget_itemSelectionChanged_signal{poi:u64}
 impl /* struct */ QListWidget {
-  pub fn itemSelectionChanged_1(&self) -> QListWidget_itemSelectionChanged_signal {
+  pub fn itemSelectionChanged(&self) -> QListWidget_itemSelectionChanged_signal {
      return QListWidget_itemSelectionChanged_signal{poi:self.qclsinst};
   }
 }
@@ -2348,7 +2098,7 @@ pub trait QListWidget_itemSelectionChanged_signal_connect {
 #[derive(Default)] // for QListWidget_itemActivated
 pub struct QListWidget_itemActivated_signal{poi:u64}
 impl /* struct */ QListWidget {
-  pub fn itemActivated_1(&self) -> QListWidget_itemActivated_signal {
+  pub fn itemActivated(&self) -> QListWidget_itemActivated_signal {
      return QListWidget_itemActivated_signal{poi:self.qclsinst};
   }
 }
@@ -2364,7 +2114,7 @@ pub trait QListWidget_itemActivated_signal_connect {
 #[derive(Default)] // for QListWidget_itemChanged
 pub struct QListWidget_itemChanged_signal{poi:u64}
 impl /* struct */ QListWidget {
-  pub fn itemChanged_1(&self) -> QListWidget_itemChanged_signal {
+  pub fn itemChanged(&self) -> QListWidget_itemChanged_signal {
      return QListWidget_itemChanged_signal{poi:self.qclsinst};
   }
 }
@@ -2380,7 +2130,7 @@ pub trait QListWidget_itemChanged_signal_connect {
 #[derive(Default)] // for QListWidget_currentRowChanged
 pub struct QListWidget_currentRowChanged_signal{poi:u64}
 impl /* struct */ QListWidget {
-  pub fn currentRowChanged_1(&self) -> QListWidget_currentRowChanged_signal {
+  pub fn currentRowChanged(&self) -> QListWidget_currentRowChanged_signal {
      return QListWidget_currentRowChanged_signal{poi:self.qclsinst};
   }
 }
@@ -2396,7 +2146,7 @@ pub trait QListWidget_currentRowChanged_signal_connect {
 #[derive(Default)] // for QListWidget_currentTextChanged
 pub struct QListWidget_currentTextChanged_signal{poi:u64}
 impl /* struct */ QListWidget {
-  pub fn currentTextChanged_1(&self) -> QListWidget_currentTextChanged_signal {
+  pub fn currentTextChanged(&self) -> QListWidget_currentTextChanged_signal {
      return QListWidget_currentTextChanged_signal{poi:self.qclsinst};
   }
 }
@@ -2415,11 +2165,12 @@ extern fn QListWidget_itemDoubleClicked_signal_connect_cb_0(rsfptr:fn(QListWidge
   let rsarg0 = QListWidgetItem::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QListWidget_itemDoubleClicked_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QListWidgetItem), arg0: *mut c_void) {
+extern fn QListWidget_itemDoubleClicked_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(QListWidgetItem)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QListWidgetItem::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QListWidget_itemDoubleClicked_signal_connect for fn(QListWidgetItem) {
   fn connect(self, sigthis: QListWidget_itemDoubleClicked_signal) {
@@ -2440,7 +2191,7 @@ impl /* trait */ QListWidget_itemDoubleClicked_signal_connect for Box<Fn(QListWi
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QListWidget_itemDoubleClicked_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QListWidget_SlotProxy_connect__ZN11QListWidget17itemDoubleClickedEP15QListWidgetItem(arg0, arg1, arg2)};
   }
 }
@@ -2450,11 +2201,12 @@ extern fn QListWidget_itemEntered_signal_connect_cb_1(rsfptr:fn(QListWidgetItem)
   let rsarg0 = QListWidgetItem::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QListWidget_itemEntered_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(QListWidgetItem), arg0: *mut c_void) {
+extern fn QListWidget_itemEntered_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn(QListWidgetItem)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QListWidgetItem::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QListWidget_itemEntered_signal_connect for fn(QListWidgetItem) {
   fn connect(self, sigthis: QListWidget_itemEntered_signal) {
@@ -2475,7 +2227,7 @@ impl /* trait */ QListWidget_itemEntered_signal_connect for Box<Fn(QListWidgetIt
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QListWidget_itemEntered_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QListWidget_SlotProxy_connect__ZN11QListWidget11itemEnteredEP15QListWidgetItem(arg0, arg1, arg2)};
   }
 }
@@ -2485,11 +2237,12 @@ extern fn QListWidget_itemClicked_signal_connect_cb_2(rsfptr:fn(QListWidgetItem)
   let rsarg0 = QListWidgetItem::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QListWidget_itemClicked_signal_connect_cb_box_2(rsfptr_raw:*mut Fn(QListWidgetItem), arg0: *mut c_void) {
+extern fn QListWidget_itemClicked_signal_connect_cb_box_2(rsfptr_raw:*mut Box<Fn(QListWidgetItem)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QListWidgetItem::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QListWidget_itemClicked_signal_connect for fn(QListWidgetItem) {
   fn connect(self, sigthis: QListWidget_itemClicked_signal) {
@@ -2510,7 +2263,7 @@ impl /* trait */ QListWidget_itemClicked_signal_connect for Box<Fn(QListWidgetIt
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QListWidget_itemClicked_signal_connect_cb_box_2 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QListWidget_SlotProxy_connect__ZN11QListWidget11itemClickedEP15QListWidgetItem(arg0, arg1, arg2)};
   }
 }
@@ -2521,12 +2274,13 @@ extern fn QListWidget_currentItemChanged_signal_connect_cb_3(rsfptr:fn(QListWidg
   let rsarg1 = QListWidgetItem::inheritFrom(arg1 as u64);
   rsfptr(rsarg0,rsarg1);
 }
-extern fn QListWidget_currentItemChanged_signal_connect_cb_box_3(rsfptr_raw:*mut Fn(QListWidgetItem, QListWidgetItem), arg0: *mut c_void, arg1: *mut c_void) {
+extern fn QListWidget_currentItemChanged_signal_connect_cb_box_3(rsfptr_raw:*mut Box<Fn(QListWidgetItem, QListWidgetItem)>, arg0: *mut c_void, arg1: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QListWidgetItem::inheritFrom(arg0 as u64);
   let rsarg1 = QListWidgetItem::inheritFrom(arg1 as u64);
-  rsfptr(rsarg0,rsarg1);
+  // rsfptr(rsarg0,rsarg1);
+  unsafe{(*rsfptr_raw)(rsarg0,rsarg1)};
 }
 impl /* trait */ QListWidget_currentItemChanged_signal_connect for fn(QListWidgetItem, QListWidgetItem) {
   fn connect(self, sigthis: QListWidget_currentItemChanged_signal) {
@@ -2547,7 +2301,7 @@ impl /* trait */ QListWidget_currentItemChanged_signal_connect for Box<Fn(QListW
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QListWidget_currentItemChanged_signal_connect_cb_box_3 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QListWidget_SlotProxy_connect__ZN11QListWidget18currentItemChangedEP15QListWidgetItemS1_(arg0, arg1, arg2)};
   }
 }
@@ -2557,11 +2311,12 @@ extern fn QListWidget_currentTextChanged_signal_connect_cb_4(rsfptr:fn(QString),
   let rsarg0 = QString::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QListWidget_currentTextChanged_signal_connect_cb_box_4(rsfptr_raw:*mut Fn(QString), arg0: *mut c_void) {
+extern fn QListWidget_currentTextChanged_signal_connect_cb_box_4(rsfptr_raw:*mut Box<Fn(QString)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QString::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QListWidget_currentTextChanged_signal_connect for fn(QString) {
   fn connect(self, sigthis: QListWidget_currentTextChanged_signal) {
@@ -2582,7 +2337,7 @@ impl /* trait */ QListWidget_currentTextChanged_signal_connect for Box<Fn(QStrin
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QListWidget_currentTextChanged_signal_connect_cb_box_4 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QListWidget_SlotProxy_connect__ZN11QListWidget18currentTextChangedERK7QString(arg0, arg1, arg2)};
   }
 }
@@ -2592,11 +2347,12 @@ extern fn QListWidget_itemChanged_signal_connect_cb_5(rsfptr:fn(QListWidgetItem)
   let rsarg0 = QListWidgetItem::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QListWidget_itemChanged_signal_connect_cb_box_5(rsfptr_raw:*mut Fn(QListWidgetItem), arg0: *mut c_void) {
+extern fn QListWidget_itemChanged_signal_connect_cb_box_5(rsfptr_raw:*mut Box<Fn(QListWidgetItem)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QListWidgetItem::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QListWidget_itemChanged_signal_connect for fn(QListWidgetItem) {
   fn connect(self, sigthis: QListWidget_itemChanged_signal) {
@@ -2617,7 +2373,7 @@ impl /* trait */ QListWidget_itemChanged_signal_connect for Box<Fn(QListWidgetIt
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QListWidget_itemChanged_signal_connect_cb_box_5 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QListWidget_SlotProxy_connect__ZN11QListWidget11itemChangedEP15QListWidgetItem(arg0, arg1, arg2)};
   }
 }
@@ -2626,10 +2382,11 @@ extern fn QListWidget_itemSelectionChanged_signal_connect_cb_6(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QListWidget_itemSelectionChanged_signal_connect_cb_box_6(rsfptr_raw:*mut Fn(), ) {
+extern fn QListWidget_itemSelectionChanged_signal_connect_cb_box_6(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  rsfptr();
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QListWidget_itemSelectionChanged_signal_connect for fn() {
   fn connect(self, sigthis: QListWidget_itemSelectionChanged_signal) {
@@ -2650,7 +2407,7 @@ impl /* trait */ QListWidget_itemSelectionChanged_signal_connect for Box<Fn()> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QListWidget_itemSelectionChanged_signal_connect_cb_box_6 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QListWidget_SlotProxy_connect__ZN11QListWidget20itemSelectionChangedEv(arg0, arg1, arg2)};
   }
 }
@@ -2660,11 +2417,12 @@ extern fn QListWidget_itemPressed_signal_connect_cb_7(rsfptr:fn(QListWidgetItem)
   let rsarg0 = QListWidgetItem::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QListWidget_itemPressed_signal_connect_cb_box_7(rsfptr_raw:*mut Fn(QListWidgetItem), arg0: *mut c_void) {
+extern fn QListWidget_itemPressed_signal_connect_cb_box_7(rsfptr_raw:*mut Box<Fn(QListWidgetItem)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QListWidgetItem::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QListWidget_itemPressed_signal_connect for fn(QListWidgetItem) {
   fn connect(self, sigthis: QListWidget_itemPressed_signal) {
@@ -2685,7 +2443,7 @@ impl /* trait */ QListWidget_itemPressed_signal_connect for Box<Fn(QListWidgetIt
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QListWidget_itemPressed_signal_connect_cb_box_7 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QListWidget_SlotProxy_connect__ZN11QListWidget11itemPressedEP15QListWidgetItem(arg0, arg1, arg2)};
   }
 }
@@ -2695,11 +2453,12 @@ extern fn QListWidget_itemActivated_signal_connect_cb_8(rsfptr:fn(QListWidgetIte
   let rsarg0 = QListWidgetItem::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QListWidget_itemActivated_signal_connect_cb_box_8(rsfptr_raw:*mut Fn(QListWidgetItem), arg0: *mut c_void) {
+extern fn QListWidget_itemActivated_signal_connect_cb_box_8(rsfptr_raw:*mut Box<Fn(QListWidgetItem)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QListWidgetItem::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QListWidget_itemActivated_signal_connect for fn(QListWidgetItem) {
   fn connect(self, sigthis: QListWidget_itemActivated_signal) {
@@ -2720,7 +2479,7 @@ impl /* trait */ QListWidget_itemActivated_signal_connect for Box<Fn(QListWidget
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QListWidget_itemActivated_signal_connect_cb_box_8 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QListWidget_SlotProxy_connect__ZN11QListWidget13itemActivatedEP15QListWidgetItem(arg0, arg1, arg2)};
   }
 }
@@ -2730,11 +2489,12 @@ extern fn QListWidget_currentRowChanged_signal_connect_cb_9(rsfptr:fn(i32), arg0
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QListWidget_currentRowChanged_signal_connect_cb_box_9(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
+extern fn QListWidget_currentRowChanged_signal_connect_cb_box_9(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QListWidget_currentRowChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QListWidget_currentRowChanged_signal) {
@@ -2755,7 +2515,7 @@ impl /* trait */ QListWidget_currentRowChanged_signal_connect for Box<Fn(i32)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QListWidget_currentRowChanged_signal_connect_cb_box_9 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QListWidget_SlotProxy_connect__ZN11QListWidget17currentRowChangedEi(arg0, arg1, arg2)};
   }
 }

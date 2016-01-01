@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtWidgets/qabstractspinbox.h
 // dst-file: /src/widgets/qabstractspinbox.rs
 //
@@ -49,8 +49,6 @@ extern {
   fn _ZN16QAbstractSpinBox5eventEP6QEvent(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  bool QAbstractSpinBox::keyboardTracking();
   fn _ZNK16QAbstractSpinBox16keyboardTrackingEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QAbstractSpinBox::editingFinished();
-  fn _ZN16QAbstractSpinBox15editingFinishedEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractSpinBox::QAbstractSpinBox(const QAbstractSpinBox & );
   fn dector_ZN16QAbstractSpinBoxC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN16QAbstractSpinBoxC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
@@ -106,7 +104,7 @@ extern {
 pub struct QAbstractSpinBox {
   qbase: QWidget,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _editingFinished_1: QAbstractSpinBox_editingFinished_signal,
+  pub _editingFinished: QAbstractSpinBox_editingFinished_signal,
 }
 
 impl /*struct*/ QAbstractSpinBox {
@@ -306,28 +304,6 @@ impl<'a> /*trait*/ QAbstractSpinBox_keyboardTracking<i8> for () {
     // unsafe{_ZNK16QAbstractSpinBox16keyboardTrackingEv()};
     let mut ret = unsafe {_ZNK16QAbstractSpinBox16keyboardTrackingEv(rsthis.qclsinst)};
     return ret as i8;
-    // return 1;
-  }
-}
-
-  // proto:  void QAbstractSpinBox::editingFinished();
-impl /*struct*/ QAbstractSpinBox {
-  pub fn editingFinished<RetType, T: QAbstractSpinBox_editingFinished<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.editingFinished(self);
-    // return 1;
-  }
-}
-
-pub trait QAbstractSpinBox_editingFinished<RetType> {
-  fn editingFinished(self , rsthis: & QAbstractSpinBox) -> RetType;
-}
-
-  // proto:  void QAbstractSpinBox::editingFinished();
-impl<'a> /*trait*/ QAbstractSpinBox_editingFinished<()> for () {
-  fn editingFinished(self , rsthis: & QAbstractSpinBox) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QAbstractSpinBox15editingFinishedEv()};
-     unsafe {_ZN16QAbstractSpinBox15editingFinishedEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -838,7 +814,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_hasFrame<i8> for () {
 #[derive(Default)] // for QAbstractSpinBox_editingFinished
 pub struct QAbstractSpinBox_editingFinished_signal{poi:u64}
 impl /* struct */ QAbstractSpinBox {
-  pub fn editingFinished_1(&self) -> QAbstractSpinBox_editingFinished_signal {
+  pub fn editingFinished(&self) -> QAbstractSpinBox_editingFinished_signal {
      return QAbstractSpinBox_editingFinished_signal{poi:self.qclsinst};
   }
 }
@@ -856,10 +832,11 @@ extern fn QAbstractSpinBox_editingFinished_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QAbstractSpinBox_editingFinished_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(), ) {
+extern fn QAbstractSpinBox_editingFinished_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  rsfptr();
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QAbstractSpinBox_editingFinished_signal_connect for fn() {
   fn connect(self, sigthis: QAbstractSpinBox_editingFinished_signal) {
@@ -880,7 +857,7 @@ impl /* trait */ QAbstractSpinBox_editingFinished_signal_connect for Box<Fn()> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAbstractSpinBox_editingFinished_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QAbstractSpinBox_SlotProxy_connect__ZN16QAbstractSpinBox15editingFinishedEv(arg0, arg1, arg2)};
   }
 }

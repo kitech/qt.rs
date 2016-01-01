@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtWidgets/qtoolbox.h
 // dst-file: /src/widgets/qtoolbox.rs
 //
@@ -72,8 +72,6 @@ extern {
   fn _ZNK8QToolBox13isItemEnabledEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
   // proto:  void QToolBox::setItemEnabled(int index, bool enabled);
   fn _ZN8QToolBox14setItemEnabledEib(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_char);
-  // proto:  void QToolBox::currentChanged(int index);
-  fn _ZN8QToolBox14currentChangedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  QIcon QToolBox::itemIcon(int index);
   fn _ZNK8QToolBox8itemIconEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  void QToolBox::~QToolBox();
@@ -91,7 +89,7 @@ extern {
 pub struct QToolBox {
   qbase: QFrame,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _currentChanged_1: QToolBox_currentChanged_signal,
+  pub _currentChanged: QToolBox_currentChanged_signal,
 }
 
 impl /*struct*/ QToolBox {
@@ -571,29 +569,6 @@ impl<'a> /*trait*/ QToolBox_setItemEnabled<()> for (i32, i8) {
   }
 }
 
-  // proto:  void QToolBox::currentChanged(int index);
-impl /*struct*/ QToolBox {
-  pub fn currentChanged<RetType, T: QToolBox_currentChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.currentChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QToolBox_currentChanged<RetType> {
-  fn currentChanged(self , rsthis: & QToolBox) -> RetType;
-}
-
-  // proto:  void QToolBox::currentChanged(int index);
-impl<'a> /*trait*/ QToolBox_currentChanged<()> for (i32) {
-  fn currentChanged(self , rsthis: & QToolBox) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QToolBox14currentChangedEi()};
-    let arg0 = self  as c_int;
-     unsafe {_ZN8QToolBox14currentChangedEi(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  QIcon QToolBox::itemIcon(int index);
 impl /*struct*/ QToolBox {
   pub fn itemIcon<RetType, T: QToolBox_itemIcon<RetType>>(& self,  overload_args: T) -> RetType {
@@ -673,7 +648,7 @@ impl<'a> /*trait*/ QToolBox_insertItem<i32> for (i32, &'a QWidget, &'a QIcon, &'
 #[derive(Default)] // for QToolBox_currentChanged
 pub struct QToolBox_currentChanged_signal{poi:u64}
 impl /* struct */ QToolBox {
-  pub fn currentChanged_1(&self) -> QToolBox_currentChanged_signal {
+  pub fn currentChanged(&self) -> QToolBox_currentChanged_signal {
      return QToolBox_currentChanged_signal{poi:self.qclsinst};
   }
 }
@@ -692,11 +667,12 @@ extern fn QToolBox_currentChanged_signal_connect_cb_0(rsfptr:fn(i32), arg0: c_in
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QToolBox_currentChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
+extern fn QToolBox_currentChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QToolBox_currentChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QToolBox_currentChanged_signal) {
@@ -717,7 +693,7 @@ impl /* trait */ QToolBox_currentChanged_signal_connect for Box<Fn(i32)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QToolBox_currentChanged_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QToolBox_SlotProxy_connect__ZN8QToolBox14currentChangedEi(arg0, arg1, arg2)};
   }
 }

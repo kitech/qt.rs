@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtWidgets/qabstractitemview.h
 // dst-file: /src/widgets/qabstractitemview.rs
 //
@@ -61,10 +61,6 @@ extern {
   fn _ZNK17QAbstractItemView21itemDelegateForColumnEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  QItemSelectionModel * QAbstractItemView::selectionModel();
   fn _ZNK17QAbstractItemView14selectionModelEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QAbstractItemView::viewportEntered();
-  fn _ZN17QAbstractItemView15viewportEnteredEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QAbstractItemView::entered(const QModelIndex & index);
-  fn _ZN17QAbstractItemView7enteredERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAbstractItemView::reset();
   fn _ZN17QAbstractItemView5resetEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractItemView::setItemDelegateForRow(int row, QAbstractItemDelegate * delegate);
@@ -75,8 +71,6 @@ extern {
   fn _ZN17QAbstractItemView19setAutoScrollMarginEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  QRect QAbstractItemView::visualRect(const QModelIndex & index);
   fn _ZNK17QAbstractItemView10visualRectERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-  // proto:  void QAbstractItemView::doubleClicked(const QModelIndex & index);
-  fn _ZN17QAbstractItemView13doubleClickedERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAbstractItemView::doItemsLayout();
   fn _ZN17QAbstractItemView13doItemsLayoutEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractItemView::~QAbstractItemView();
@@ -125,12 +119,8 @@ extern {
   fn _ZN17QAbstractItemView11scrollToTopEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractItemView::setSelectionModel(QItemSelectionModel * selectionModel);
   fn _ZN17QAbstractItemView17setSelectionModelEP19QItemSelectionModel(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QAbstractItemView::pressed(const QModelIndex & index);
-  fn _ZN17QAbstractItemView7pressedERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAbstractItemView::setCurrentIndex(const QModelIndex & index);
   fn _ZN17QAbstractItemView15setCurrentIndexERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QAbstractItemView::clicked(const QModelIndex & index);
-  fn _ZN17QAbstractItemView7clickedERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QModelIndex QAbstractItemView::indexAt(const QPoint & point);
   fn _ZNK17QAbstractItemView7indexAtERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QAbstractItemView::setTabKeyNavigation(bool enable);
@@ -143,8 +133,6 @@ extern {
   fn _ZN17QAbstractItemView8setModelEP18QAbstractItemModel(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAbstractItemView::update(const QModelIndex & index);
   fn _ZN17QAbstractItemView6updateERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QAbstractItemView::iconSizeChanged(const QSize & size);
-  fn _ZN17QAbstractItemView15iconSizeChangedERK5QSize(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QAbstractItemView::metaObject();
   fn _ZNK17QAbstractItemView10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractItemView::openPersistentEditor(const QModelIndex & index);
@@ -157,8 +145,6 @@ extern {
   fn _ZNK17QAbstractItemView16tabKeyNavigationEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  int QAbstractItemView::autoScrollMargin();
   fn _ZNK17QAbstractItemView16autoScrollMarginEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  void QAbstractItemView::activated(const QModelIndex & index);
-  fn _ZN17QAbstractItemView9activatedERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QAbstractItemView::alternatingRowColors();
   fn _ZNK17QAbstractItemView20alternatingRowColorsEv(qthis: u64 /* *mut c_void*/) -> c_char;
   fn QAbstractItemView_SlotProxy_connect__ZN17QAbstractItemView7enteredERK11QModelIndex(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
@@ -176,13 +162,13 @@ extern {
 pub struct QAbstractItemView {
   qbase: QAbstractScrollArea,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _iconSizeChanged_1: QAbstractItemView_iconSizeChanged_signal,
-  pub _clicked_1: QAbstractItemView_clicked_signal,
-  pub _viewportEntered_1: QAbstractItemView_viewportEntered_signal,
-  pub _activated_1: QAbstractItemView_activated_signal,
-  pub _pressed_1: QAbstractItemView_pressed_signal,
-  pub _entered_1: QAbstractItemView_entered_signal,
-  pub _doubleClicked_1: QAbstractItemView_doubleClicked_signal,
+  pub _iconSizeChanged: QAbstractItemView_iconSizeChanged_signal,
+  pub _clicked: QAbstractItemView_clicked_signal,
+  pub _viewportEntered: QAbstractItemView_viewportEntered_signal,
+  pub _activated: QAbstractItemView_activated_signal,
+  pub _pressed: QAbstractItemView_pressed_signal,
+  pub _entered: QAbstractItemView_entered_signal,
+  pub _doubleClicked: QAbstractItemView_doubleClicked_signal,
 }
 
 impl /*struct*/ QAbstractItemView {
@@ -461,51 +447,6 @@ impl<'a> /*trait*/ QAbstractItemView_selectionModel<QItemSelectionModel> for () 
   }
 }
 
-  // proto:  void QAbstractItemView::viewportEntered();
-impl /*struct*/ QAbstractItemView {
-  pub fn viewportEntered<RetType, T: QAbstractItemView_viewportEntered<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.viewportEntered(self);
-    // return 1;
-  }
-}
-
-pub trait QAbstractItemView_viewportEntered<RetType> {
-  fn viewportEntered(self , rsthis: & QAbstractItemView) -> RetType;
-}
-
-  // proto:  void QAbstractItemView::viewportEntered();
-impl<'a> /*trait*/ QAbstractItemView_viewportEntered<()> for () {
-  fn viewportEntered(self , rsthis: & QAbstractItemView) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QAbstractItemView15viewportEnteredEv()};
-     unsafe {_ZN17QAbstractItemView15viewportEnteredEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QAbstractItemView::entered(const QModelIndex & index);
-impl /*struct*/ QAbstractItemView {
-  pub fn entered<RetType, T: QAbstractItemView_entered<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.entered(self);
-    // return 1;
-  }
-}
-
-pub trait QAbstractItemView_entered<RetType> {
-  fn entered(self , rsthis: & QAbstractItemView) -> RetType;
-}
-
-  // proto:  void QAbstractItemView::entered(const QModelIndex & index);
-impl<'a> /*trait*/ QAbstractItemView_entered<()> for (&'a QModelIndex) {
-  fn entered(self , rsthis: & QAbstractItemView) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QAbstractItemView7enteredERK11QModelIndex()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN17QAbstractItemView7enteredERK11QModelIndex(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  void QAbstractItemView::reset();
 impl /*struct*/ QAbstractItemView {
   pub fn reset<RetType, T: QAbstractItemView_reset<RetType>>(& self,  overload_args: T) -> RetType {
@@ -619,29 +560,6 @@ impl<'a> /*trait*/ QAbstractItemView_visualRect<QRect> for (&'a QModelIndex) {
     let mut ret = unsafe {_ZNK17QAbstractItemView10visualRectERK11QModelIndex(rsthis.qclsinst, arg0)};
     let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QAbstractItemView::doubleClicked(const QModelIndex & index);
-impl /*struct*/ QAbstractItemView {
-  pub fn doubleClicked<RetType, T: QAbstractItemView_doubleClicked<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.doubleClicked(self);
-    // return 1;
-  }
-}
-
-pub trait QAbstractItemView_doubleClicked<RetType> {
-  fn doubleClicked(self , rsthis: & QAbstractItemView) -> RetType;
-}
-
-  // proto:  void QAbstractItemView::doubleClicked(const QModelIndex & index);
-impl<'a> /*trait*/ QAbstractItemView_doubleClicked<()> for (&'a QModelIndex) {
-  fn doubleClicked(self , rsthis: & QAbstractItemView) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QAbstractItemView13doubleClickedERK11QModelIndex()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN17QAbstractItemView13doubleClickedERK11QModelIndex(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1159,29 +1077,6 @@ impl<'a> /*trait*/ QAbstractItemView_setSelectionModel<()> for (&'a QItemSelecti
   }
 }
 
-  // proto:  void QAbstractItemView::pressed(const QModelIndex & index);
-impl /*struct*/ QAbstractItemView {
-  pub fn pressed<RetType, T: QAbstractItemView_pressed<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.pressed(self);
-    // return 1;
-  }
-}
-
-pub trait QAbstractItemView_pressed<RetType> {
-  fn pressed(self , rsthis: & QAbstractItemView) -> RetType;
-}
-
-  // proto:  void QAbstractItemView::pressed(const QModelIndex & index);
-impl<'a> /*trait*/ QAbstractItemView_pressed<()> for (&'a QModelIndex) {
-  fn pressed(self , rsthis: & QAbstractItemView) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QAbstractItemView7pressedERK11QModelIndex()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN17QAbstractItemView7pressedERK11QModelIndex(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  void QAbstractItemView::setCurrentIndex(const QModelIndex & index);
 impl /*struct*/ QAbstractItemView {
   pub fn setCurrentIndex<RetType, T: QAbstractItemView_setCurrentIndex<RetType>>(& self,  overload_args: T) -> RetType {
@@ -1201,29 +1096,6 @@ impl<'a> /*trait*/ QAbstractItemView_setCurrentIndex<()> for (&'a QModelIndex) {
     // unsafe{_ZN17QAbstractItemView15setCurrentIndexERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
      unsafe {_ZN17QAbstractItemView15setCurrentIndexERK11QModelIndex(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QAbstractItemView::clicked(const QModelIndex & index);
-impl /*struct*/ QAbstractItemView {
-  pub fn clicked<RetType, T: QAbstractItemView_clicked<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.clicked(self);
-    // return 1;
-  }
-}
-
-pub trait QAbstractItemView_clicked<RetType> {
-  fn clicked(self , rsthis: & QAbstractItemView) -> RetType;
-}
-
-  // proto:  void QAbstractItemView::clicked(const QModelIndex & index);
-impl<'a> /*trait*/ QAbstractItemView_clicked<()> for (&'a QModelIndex) {
-  fn clicked(self , rsthis: & QAbstractItemView) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QAbstractItemView7clickedERK11QModelIndex()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN17QAbstractItemView7clickedERK11QModelIndex(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1369,29 +1241,6 @@ impl<'a> /*trait*/ QAbstractItemView_update<()> for (&'a QModelIndex) {
   }
 }
 
-  // proto:  void QAbstractItemView::iconSizeChanged(const QSize & size);
-impl /*struct*/ QAbstractItemView {
-  pub fn iconSizeChanged<RetType, T: QAbstractItemView_iconSizeChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.iconSizeChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QAbstractItemView_iconSizeChanged<RetType> {
-  fn iconSizeChanged(self , rsthis: & QAbstractItemView) -> RetType;
-}
-
-  // proto:  void QAbstractItemView::iconSizeChanged(const QSize & size);
-impl<'a> /*trait*/ QAbstractItemView_iconSizeChanged<()> for (&'a QSize) {
-  fn iconSizeChanged(self , rsthis: & QAbstractItemView) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QAbstractItemView15iconSizeChangedERK5QSize()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN17QAbstractItemView15iconSizeChangedERK5QSize(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  const QMetaObject * QAbstractItemView::metaObject();
 impl /*struct*/ QAbstractItemView {
   pub fn metaObject<RetType, T: QAbstractItemView_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
@@ -1529,29 +1378,6 @@ impl<'a> /*trait*/ QAbstractItemView_autoScrollMargin<i32> for () {
   }
 }
 
-  // proto:  void QAbstractItemView::activated(const QModelIndex & index);
-impl /*struct*/ QAbstractItemView {
-  pub fn activated<RetType, T: QAbstractItemView_activated<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.activated(self);
-    // return 1;
-  }
-}
-
-pub trait QAbstractItemView_activated<RetType> {
-  fn activated(self , rsthis: & QAbstractItemView) -> RetType;
-}
-
-  // proto:  void QAbstractItemView::activated(const QModelIndex & index);
-impl<'a> /*trait*/ QAbstractItemView_activated<()> for (&'a QModelIndex) {
-  fn activated(self , rsthis: & QAbstractItemView) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QAbstractItemView9activatedERK11QModelIndex()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN17QAbstractItemView9activatedERK11QModelIndex(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  bool QAbstractItemView::alternatingRowColors();
 impl /*struct*/ QAbstractItemView {
   pub fn alternatingRowColors<RetType, T: QAbstractItemView_alternatingRowColors<RetType>>(& self,  overload_args: T) -> RetType {
@@ -1578,7 +1404,7 @@ impl<'a> /*trait*/ QAbstractItemView_alternatingRowColors<i8> for () {
 #[derive(Default)] // for QAbstractItemView_iconSizeChanged
 pub struct QAbstractItemView_iconSizeChanged_signal{poi:u64}
 impl /* struct */ QAbstractItemView {
-  pub fn iconSizeChanged_1(&self) -> QAbstractItemView_iconSizeChanged_signal {
+  pub fn iconSizeChanged(&self) -> QAbstractItemView_iconSizeChanged_signal {
      return QAbstractItemView_iconSizeChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1594,7 +1420,7 @@ pub trait QAbstractItemView_iconSizeChanged_signal_connect {
 #[derive(Default)] // for QAbstractItemView_clicked
 pub struct QAbstractItemView_clicked_signal{poi:u64}
 impl /* struct */ QAbstractItemView {
-  pub fn clicked_1(&self) -> QAbstractItemView_clicked_signal {
+  pub fn clicked(&self) -> QAbstractItemView_clicked_signal {
      return QAbstractItemView_clicked_signal{poi:self.qclsinst};
   }
 }
@@ -1610,7 +1436,7 @@ pub trait QAbstractItemView_clicked_signal_connect {
 #[derive(Default)] // for QAbstractItemView_viewportEntered
 pub struct QAbstractItemView_viewportEntered_signal{poi:u64}
 impl /* struct */ QAbstractItemView {
-  pub fn viewportEntered_1(&self) -> QAbstractItemView_viewportEntered_signal {
+  pub fn viewportEntered(&self) -> QAbstractItemView_viewportEntered_signal {
      return QAbstractItemView_viewportEntered_signal{poi:self.qclsinst};
   }
 }
@@ -1626,7 +1452,7 @@ pub trait QAbstractItemView_viewportEntered_signal_connect {
 #[derive(Default)] // for QAbstractItemView_activated
 pub struct QAbstractItemView_activated_signal{poi:u64}
 impl /* struct */ QAbstractItemView {
-  pub fn activated_1(&self) -> QAbstractItemView_activated_signal {
+  pub fn activated(&self) -> QAbstractItemView_activated_signal {
      return QAbstractItemView_activated_signal{poi:self.qclsinst};
   }
 }
@@ -1642,7 +1468,7 @@ pub trait QAbstractItemView_activated_signal_connect {
 #[derive(Default)] // for QAbstractItemView_pressed
 pub struct QAbstractItemView_pressed_signal{poi:u64}
 impl /* struct */ QAbstractItemView {
-  pub fn pressed_1(&self) -> QAbstractItemView_pressed_signal {
+  pub fn pressed(&self) -> QAbstractItemView_pressed_signal {
      return QAbstractItemView_pressed_signal{poi:self.qclsinst};
   }
 }
@@ -1658,7 +1484,7 @@ pub trait QAbstractItemView_pressed_signal_connect {
 #[derive(Default)] // for QAbstractItemView_entered
 pub struct QAbstractItemView_entered_signal{poi:u64}
 impl /* struct */ QAbstractItemView {
-  pub fn entered_1(&self) -> QAbstractItemView_entered_signal {
+  pub fn entered(&self) -> QAbstractItemView_entered_signal {
      return QAbstractItemView_entered_signal{poi:self.qclsinst};
   }
 }
@@ -1674,7 +1500,7 @@ pub trait QAbstractItemView_entered_signal_connect {
 #[derive(Default)] // for QAbstractItemView_doubleClicked
 pub struct QAbstractItemView_doubleClicked_signal{poi:u64}
 impl /* struct */ QAbstractItemView {
-  pub fn doubleClicked_1(&self) -> QAbstractItemView_doubleClicked_signal {
+  pub fn doubleClicked(&self) -> QAbstractItemView_doubleClicked_signal {
      return QAbstractItemView_doubleClicked_signal{poi:self.qclsinst};
   }
 }
@@ -1693,11 +1519,12 @@ extern fn QAbstractItemView_entered_signal_connect_cb_0(rsfptr:fn(QModelIndex), 
   let rsarg0 = QModelIndex::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QAbstractItemView_entered_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QModelIndex), arg0: *mut c_void) {
+extern fn QAbstractItemView_entered_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(QModelIndex)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QModelIndex::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QAbstractItemView_entered_signal_connect for fn(QModelIndex) {
   fn connect(self, sigthis: QAbstractItemView_entered_signal) {
@@ -1718,7 +1545,7 @@ impl /* trait */ QAbstractItemView_entered_signal_connect for Box<Fn(QModelIndex
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAbstractItemView_entered_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QAbstractItemView_SlotProxy_connect__ZN17QAbstractItemView7enteredERK11QModelIndex(arg0, arg1, arg2)};
   }
 }
@@ -1728,11 +1555,12 @@ extern fn QAbstractItemView_doubleClicked_signal_connect_cb_1(rsfptr:fn(QModelIn
   let rsarg0 = QModelIndex::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QAbstractItemView_doubleClicked_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(QModelIndex), arg0: *mut c_void) {
+extern fn QAbstractItemView_doubleClicked_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn(QModelIndex)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QModelIndex::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QAbstractItemView_doubleClicked_signal_connect for fn(QModelIndex) {
   fn connect(self, sigthis: QAbstractItemView_doubleClicked_signal) {
@@ -1753,7 +1581,7 @@ impl /* trait */ QAbstractItemView_doubleClicked_signal_connect for Box<Fn(QMode
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAbstractItemView_doubleClicked_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QAbstractItemView_SlotProxy_connect__ZN17QAbstractItemView13doubleClickedERK11QModelIndex(arg0, arg1, arg2)};
   }
 }
@@ -1763,11 +1591,12 @@ extern fn QAbstractItemView_pressed_signal_connect_cb_2(rsfptr:fn(QModelIndex), 
   let rsarg0 = QModelIndex::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QAbstractItemView_pressed_signal_connect_cb_box_2(rsfptr_raw:*mut Fn(QModelIndex), arg0: *mut c_void) {
+extern fn QAbstractItemView_pressed_signal_connect_cb_box_2(rsfptr_raw:*mut Box<Fn(QModelIndex)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QModelIndex::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QAbstractItemView_pressed_signal_connect for fn(QModelIndex) {
   fn connect(self, sigthis: QAbstractItemView_pressed_signal) {
@@ -1788,7 +1617,7 @@ impl /* trait */ QAbstractItemView_pressed_signal_connect for Box<Fn(QModelIndex
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAbstractItemView_pressed_signal_connect_cb_box_2 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QAbstractItemView_SlotProxy_connect__ZN17QAbstractItemView7pressedERK11QModelIndex(arg0, arg1, arg2)};
   }
 }
@@ -1797,10 +1626,11 @@ extern fn QAbstractItemView_viewportEntered_signal_connect_cb_3(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QAbstractItemView_viewportEntered_signal_connect_cb_box_3(rsfptr_raw:*mut Fn(), ) {
+extern fn QAbstractItemView_viewportEntered_signal_connect_cb_box_3(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  rsfptr();
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QAbstractItemView_viewportEntered_signal_connect for fn() {
   fn connect(self, sigthis: QAbstractItemView_viewportEntered_signal) {
@@ -1821,7 +1651,7 @@ impl /* trait */ QAbstractItemView_viewportEntered_signal_connect for Box<Fn()> 
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAbstractItemView_viewportEntered_signal_connect_cb_box_3 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QAbstractItemView_SlotProxy_connect__ZN17QAbstractItemView15viewportEnteredEv(arg0, arg1, arg2)};
   }
 }
@@ -1831,11 +1661,12 @@ extern fn QAbstractItemView_iconSizeChanged_signal_connect_cb_4(rsfptr:fn(QSize)
   let rsarg0 = QSize::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QAbstractItemView_iconSizeChanged_signal_connect_cb_box_4(rsfptr_raw:*mut Fn(QSize), arg0: *mut c_void) {
+extern fn QAbstractItemView_iconSizeChanged_signal_connect_cb_box_4(rsfptr_raw:*mut Box<Fn(QSize)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QSize::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QAbstractItemView_iconSizeChanged_signal_connect for fn(QSize) {
   fn connect(self, sigthis: QAbstractItemView_iconSizeChanged_signal) {
@@ -1856,7 +1687,7 @@ impl /* trait */ QAbstractItemView_iconSizeChanged_signal_connect for Box<Fn(QSi
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAbstractItemView_iconSizeChanged_signal_connect_cb_box_4 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QAbstractItemView_SlotProxy_connect__ZN17QAbstractItemView15iconSizeChangedERK5QSize(arg0, arg1, arg2)};
   }
 }
@@ -1866,11 +1697,12 @@ extern fn QAbstractItemView_activated_signal_connect_cb_5(rsfptr:fn(QModelIndex)
   let rsarg0 = QModelIndex::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QAbstractItemView_activated_signal_connect_cb_box_5(rsfptr_raw:*mut Fn(QModelIndex), arg0: *mut c_void) {
+extern fn QAbstractItemView_activated_signal_connect_cb_box_5(rsfptr_raw:*mut Box<Fn(QModelIndex)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QModelIndex::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QAbstractItemView_activated_signal_connect for fn(QModelIndex) {
   fn connect(self, sigthis: QAbstractItemView_activated_signal) {
@@ -1891,7 +1723,7 @@ impl /* trait */ QAbstractItemView_activated_signal_connect for Box<Fn(QModelInd
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAbstractItemView_activated_signal_connect_cb_box_5 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QAbstractItemView_SlotProxy_connect__ZN17QAbstractItemView9activatedERK11QModelIndex(arg0, arg1, arg2)};
   }
 }
@@ -1901,11 +1733,12 @@ extern fn QAbstractItemView_clicked_signal_connect_cb_6(rsfptr:fn(QModelIndex), 
   let rsarg0 = QModelIndex::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QAbstractItemView_clicked_signal_connect_cb_box_6(rsfptr_raw:*mut Fn(QModelIndex), arg0: *mut c_void) {
+extern fn QAbstractItemView_clicked_signal_connect_cb_box_6(rsfptr_raw:*mut Box<Fn(QModelIndex)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QModelIndex::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QAbstractItemView_clicked_signal_connect for fn(QModelIndex) {
   fn connect(self, sigthis: QAbstractItemView_clicked_signal) {
@@ -1926,7 +1759,7 @@ impl /* trait */ QAbstractItemView_clicked_signal_connect for Box<Fn(QModelIndex
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAbstractItemView_clicked_signal_connect_cb_box_6 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QAbstractItemView_SlotProxy_connect__ZN17QAbstractItemView7clickedERK11QModelIndex(arg0, arg1, arg2)};
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtWidgets/qsplitter.h
 // dst-file: /src/widgets/qsplitter.rs
 //
@@ -41,8 +41,6 @@ extern {
   fn _ZNK9QSplitter19childrenCollapsibleEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  int QSplitter::count();
   fn _ZNK9QSplitter5countEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  void QSplitter::splitterMoved(int pos, int index);
-  fn _ZN9QSplitter13splitterMovedEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  QByteArray QSplitter::saveState();
   fn _ZNK9QSplitter9saveStateEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  const QMetaObject * QSplitter::metaObject();
@@ -114,7 +112,7 @@ extern {
 pub struct QSplitter {
   qbase: QFrame,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _splitterMoved_1: QSplitter_splitterMoved_signal,
+  pub _splitterMoved: QSplitter_splitterMoved_signal,
 }
 
 // class sizeof(QSplitterHandle)=1
@@ -207,30 +205,6 @@ impl<'a> /*trait*/ QSplitter_count<i32> for () {
     // unsafe{_ZNK9QSplitter5countEv()};
     let mut ret = unsafe {_ZNK9QSplitter5countEv(rsthis.qclsinst)};
     return ret as i32;
-    // return 1;
-  }
-}
-
-  // proto:  void QSplitter::splitterMoved(int pos, int index);
-impl /*struct*/ QSplitter {
-  pub fn splitterMoved<RetType, T: QSplitter_splitterMoved<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.splitterMoved(self);
-    // return 1;
-  }
-}
-
-pub trait QSplitter_splitterMoved<RetType> {
-  fn splitterMoved(self , rsthis: & QSplitter) -> RetType;
-}
-
-  // proto:  void QSplitter::splitterMoved(int pos, int index);
-impl<'a> /*trait*/ QSplitter_splitterMoved<()> for (i32, i32) {
-  fn splitterMoved(self , rsthis: & QSplitter) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QSplitter13splitterMovedEii()};
-    let arg0 = self.0  as c_int;
-    let arg1 = self.1  as c_int;
-     unsafe {_ZN9QSplitter13splitterMovedEii(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -937,7 +911,7 @@ impl<'a> /*trait*/ QSplitterHandle_metaObject<()> for () {
 #[derive(Default)] // for QSplitter_splitterMoved
 pub struct QSplitter_splitterMoved_signal{poi:u64}
 impl /* struct */ QSplitter {
-  pub fn splitterMoved_1(&self) -> QSplitter_splitterMoved_signal {
+  pub fn splitterMoved(&self) -> QSplitter_splitterMoved_signal {
      return QSplitter_splitterMoved_signal{poi:self.qclsinst};
   }
 }
@@ -957,12 +931,13 @@ extern fn QSplitter_splitterMoved_signal_connect_cb_0(rsfptr:fn(i32, i32), arg0:
   let rsarg1 = arg1 as i32;
   rsfptr(rsarg0,rsarg1);
 }
-extern fn QSplitter_splitterMoved_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(i32, i32), arg0: c_int, arg1: c_int) {
+extern fn QSplitter_splitterMoved_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(i32, i32)>, arg0: c_int, arg1: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
   let rsarg1 = arg1 as i32;
-  rsfptr(rsarg0,rsarg1);
+  // rsfptr(rsarg0,rsarg1);
+  unsafe{(*rsfptr_raw)(rsarg0,rsarg1)};
 }
 impl /* trait */ QSplitter_splitterMoved_signal_connect for fn(i32, i32) {
   fn connect(self, sigthis: QSplitter_splitterMoved_signal) {
@@ -983,7 +958,7 @@ impl /* trait */ QSplitter_splitterMoved_signal_connect for Box<Fn(i32, i32)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QSplitter_splitterMoved_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QSplitter_SlotProxy_connect__ZN9QSplitter13splitterMovedEii(arg0, arg1, arg2)};
   }
 }

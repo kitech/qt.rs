@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtWidgets/qundostack.h
 // dst-file: /src/widgets/qundostack.rs
 //
@@ -20,8 +20,8 @@ use self::libc::*;
 // use block begin =>
 use super::super::core::qobject::QObject; // 771
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
 // use super::qundostack::QUndoCommand; // 773
+use super::super::core::qstring::QString; // 771
 use super::qaction::QAction; // 773
 // <= use block end
 
@@ -35,10 +35,6 @@ extern {
   fn QUndoStack_Class_Size() -> c_int;
   // proto:  int QUndoStack::undoLimit();
   fn _ZNK10QUndoStack9undoLimitEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  void QUndoStack::undoTextChanged(const QString & undoText);
-  fn _ZN10QUndoStack15undoTextChangedERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QUndoStack::redoTextChanged(const QString & redoText);
-  fn _ZN10QUndoStack15redoTextChangedERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QUndoCommand * QUndoStack::command(int index);
   fn _ZNK10QUndoStack7commandEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  bool QUndoStack::canRedo();
@@ -59,23 +55,15 @@ extern {
   fn _ZN10QUndoStack5clearEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QUndoStack::undo();
   fn _ZN10QUndoStack4undoEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QUndoStack::canRedoChanged(bool canRedo);
-  fn _ZN10QUndoStack14canRedoChangedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  bool QUndoStack::canUndo();
   fn _ZNK10QUndoStack7canUndoEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QUndoStack::isActive();
   fn _ZNK10QUndoStack8isActiveEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QUndoStack::cleanChanged(bool clean);
-  fn _ZN10QUndoStack12cleanChangedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QUndoStack::~QUndoStack();
   fn _ZN10QUndoStackD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QUndoStack::QUndoStack(QObject * parent);
   fn dector_ZN10QUndoStackC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
   fn _ZN10QUndoStackC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QUndoStack::indexChanged(int idx);
-  fn _ZN10QUndoStack12indexChangedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
-  // proto:  void QUndoStack::canUndoChanged(bool canUndo);
-  fn _ZN10QUndoStack14canUndoChangedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  bool QUndoStack::isClean();
   fn _ZNK10QUndoStack7isCleanEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QUndoStack::redo();
@@ -147,12 +135,12 @@ extern {
 pub struct QUndoStack {
   qbase: QObject,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _redoTextChanged_1: QUndoStack_redoTextChanged_signal,
-  pub _cleanChanged_1: QUndoStack_cleanChanged_signal,
-  pub _canUndoChanged_1: QUndoStack_canUndoChanged_signal,
-  pub _indexChanged_1: QUndoStack_indexChanged_signal,
-  pub _canRedoChanged_1: QUndoStack_canRedoChanged_signal,
-  pub _undoTextChanged_1: QUndoStack_undoTextChanged_signal,
+  pub _redoTextChanged: QUndoStack_redoTextChanged_signal,
+  pub _cleanChanged: QUndoStack_cleanChanged_signal,
+  pub _canUndoChanged: QUndoStack_canUndoChanged_signal,
+  pub _indexChanged: QUndoStack_indexChanged_signal,
+  pub _canRedoChanged: QUndoStack_canRedoChanged_signal,
+  pub _undoTextChanged: QUndoStack_undoTextChanged_signal,
 }
 
 // class sizeof(QUndoCommand)=16
@@ -198,52 +186,6 @@ impl<'a> /*trait*/ QUndoStack_undoLimit<i32> for () {
     // unsafe{_ZNK10QUndoStack9undoLimitEv()};
     let mut ret = unsafe {_ZNK10QUndoStack9undoLimitEv(rsthis.qclsinst)};
     return ret as i32;
-    // return 1;
-  }
-}
-
-  // proto:  void QUndoStack::undoTextChanged(const QString & undoText);
-impl /*struct*/ QUndoStack {
-  pub fn undoTextChanged<RetType, T: QUndoStack_undoTextChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.undoTextChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QUndoStack_undoTextChanged<RetType> {
-  fn undoTextChanged(self , rsthis: & QUndoStack) -> RetType;
-}
-
-  // proto:  void QUndoStack::undoTextChanged(const QString & undoText);
-impl<'a> /*trait*/ QUndoStack_undoTextChanged<()> for (&'a QString) {
-  fn undoTextChanged(self , rsthis: & QUndoStack) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QUndoStack15undoTextChangedERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN10QUndoStack15undoTextChangedERK7QString(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QUndoStack::redoTextChanged(const QString & redoText);
-impl /*struct*/ QUndoStack {
-  pub fn redoTextChanged<RetType, T: QUndoStack_redoTextChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.redoTextChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QUndoStack_redoTextChanged<RetType> {
-  fn redoTextChanged(self , rsthis: & QUndoStack) -> RetType;
-}
-
-  // proto:  void QUndoStack::redoTextChanged(const QString & redoText);
-impl<'a> /*trait*/ QUndoStack_redoTextChanged<()> for (&'a QString) {
-  fn redoTextChanged(self , rsthis: & QUndoStack) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QUndoStack15redoTextChangedERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN10QUndoStack15redoTextChangedERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -484,29 +426,6 @@ impl<'a> /*trait*/ QUndoStack_undo<()> for () {
   }
 }
 
-  // proto:  void QUndoStack::canRedoChanged(bool canRedo);
-impl /*struct*/ QUndoStack {
-  pub fn canRedoChanged<RetType, T: QUndoStack_canRedoChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.canRedoChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QUndoStack_canRedoChanged<RetType> {
-  fn canRedoChanged(self , rsthis: & QUndoStack) -> RetType;
-}
-
-  // proto:  void QUndoStack::canRedoChanged(bool canRedo);
-impl<'a> /*trait*/ QUndoStack_canRedoChanged<()> for (i8) {
-  fn canRedoChanged(self , rsthis: & QUndoStack) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QUndoStack14canRedoChangedEb()};
-    let arg0 = self  as c_char;
-     unsafe {_ZN10QUndoStack14canRedoChangedEb(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  bool QUndoStack::canUndo();
 impl /*struct*/ QUndoStack {
   pub fn canUndo<RetType, T: QUndoStack_canUndo<RetType>>(& self,  overload_args: T) -> RetType {
@@ -549,29 +468,6 @@ impl<'a> /*trait*/ QUndoStack_isActive<i8> for () {
     // unsafe{_ZNK10QUndoStack8isActiveEv()};
     let mut ret = unsafe {_ZNK10QUndoStack8isActiveEv(rsthis.qclsinst)};
     return ret as i8;
-    // return 1;
-  }
-}
-
-  // proto:  void QUndoStack::cleanChanged(bool clean);
-impl /*struct*/ QUndoStack {
-  pub fn cleanChanged<RetType, T: QUndoStack_cleanChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.cleanChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QUndoStack_cleanChanged<RetType> {
-  fn cleanChanged(self , rsthis: & QUndoStack) -> RetType;
-}
-
-  // proto:  void QUndoStack::cleanChanged(bool clean);
-impl<'a> /*trait*/ QUndoStack_cleanChanged<()> for (i8) {
-  fn cleanChanged(self , rsthis: & QUndoStack) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QUndoStack12cleanChangedEb()};
-    let arg0 = self  as c_char;
-     unsafe {_ZN10QUndoStack12cleanChangedEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -623,52 +519,6 @@ impl<'a> /*trait*/ QUndoStack_new for (&'a QObject) {
     let qthis: u64 = unsafe {dector_ZN10QUndoStackC1EP7QObject(arg0)} as u64;
     let rsthis = QUndoStack{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  void QUndoStack::indexChanged(int idx);
-impl /*struct*/ QUndoStack {
-  pub fn indexChanged<RetType, T: QUndoStack_indexChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.indexChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QUndoStack_indexChanged<RetType> {
-  fn indexChanged(self , rsthis: & QUndoStack) -> RetType;
-}
-
-  // proto:  void QUndoStack::indexChanged(int idx);
-impl<'a> /*trait*/ QUndoStack_indexChanged<()> for (i32) {
-  fn indexChanged(self , rsthis: & QUndoStack) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QUndoStack12indexChangedEi()};
-    let arg0 = self  as c_int;
-     unsafe {_ZN10QUndoStack12indexChangedEi(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QUndoStack::canUndoChanged(bool canUndo);
-impl /*struct*/ QUndoStack {
-  pub fn canUndoChanged<RetType, T: QUndoStack_canUndoChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.canUndoChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QUndoStack_canUndoChanged<RetType> {
-  fn canUndoChanged(self , rsthis: & QUndoStack) -> RetType;
-}
-
-  // proto:  void QUndoStack::canUndoChanged(bool canUndo);
-impl<'a> /*trait*/ QUndoStack_canUndoChanged<()> for (i8) {
-  fn canUndoChanged(self , rsthis: & QUndoStack) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QUndoStack14canUndoChangedEb()};
-    let arg0 = self  as c_char;
-     unsafe {_ZN10QUndoStack14canUndoChangedEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1251,7 +1101,7 @@ impl<'a> /*trait*/ QUndoCommand_setText<()> for (&'a QString) {
 #[derive(Default)] // for QUndoStack_redoTextChanged
 pub struct QUndoStack_redoTextChanged_signal{poi:u64}
 impl /* struct */ QUndoStack {
-  pub fn redoTextChanged_1(&self) -> QUndoStack_redoTextChanged_signal {
+  pub fn redoTextChanged(&self) -> QUndoStack_redoTextChanged_signal {
      return QUndoStack_redoTextChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1267,7 +1117,7 @@ pub trait QUndoStack_redoTextChanged_signal_connect {
 #[derive(Default)] // for QUndoStack_cleanChanged
 pub struct QUndoStack_cleanChanged_signal{poi:u64}
 impl /* struct */ QUndoStack {
-  pub fn cleanChanged_1(&self) -> QUndoStack_cleanChanged_signal {
+  pub fn cleanChanged(&self) -> QUndoStack_cleanChanged_signal {
      return QUndoStack_cleanChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1283,7 +1133,7 @@ pub trait QUndoStack_cleanChanged_signal_connect {
 #[derive(Default)] // for QUndoStack_canUndoChanged
 pub struct QUndoStack_canUndoChanged_signal{poi:u64}
 impl /* struct */ QUndoStack {
-  pub fn canUndoChanged_1(&self) -> QUndoStack_canUndoChanged_signal {
+  pub fn canUndoChanged(&self) -> QUndoStack_canUndoChanged_signal {
      return QUndoStack_canUndoChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1299,7 +1149,7 @@ pub trait QUndoStack_canUndoChanged_signal_connect {
 #[derive(Default)] // for QUndoStack_indexChanged
 pub struct QUndoStack_indexChanged_signal{poi:u64}
 impl /* struct */ QUndoStack {
-  pub fn indexChanged_1(&self) -> QUndoStack_indexChanged_signal {
+  pub fn indexChanged(&self) -> QUndoStack_indexChanged_signal {
      return QUndoStack_indexChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1315,7 +1165,7 @@ pub trait QUndoStack_indexChanged_signal_connect {
 #[derive(Default)] // for QUndoStack_canRedoChanged
 pub struct QUndoStack_canRedoChanged_signal{poi:u64}
 impl /* struct */ QUndoStack {
-  pub fn canRedoChanged_1(&self) -> QUndoStack_canRedoChanged_signal {
+  pub fn canRedoChanged(&self) -> QUndoStack_canRedoChanged_signal {
      return QUndoStack_canRedoChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1331,7 +1181,7 @@ pub trait QUndoStack_canRedoChanged_signal_connect {
 #[derive(Default)] // for QUndoStack_undoTextChanged
 pub struct QUndoStack_undoTextChanged_signal{poi:u64}
 impl /* struct */ QUndoStack {
-  pub fn undoTextChanged_1(&self) -> QUndoStack_undoTextChanged_signal {
+  pub fn undoTextChanged(&self) -> QUndoStack_undoTextChanged_signal {
      return QUndoStack_undoTextChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1350,11 +1200,12 @@ extern fn QUndoStack_undoTextChanged_signal_connect_cb_0(rsfptr:fn(QString), arg
   let rsarg0 = QString::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QUndoStack_undoTextChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QString), arg0: *mut c_void) {
+extern fn QUndoStack_undoTextChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(QString)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QString::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QUndoStack_undoTextChanged_signal_connect for fn(QString) {
   fn connect(self, sigthis: QUndoStack_undoTextChanged_signal) {
@@ -1375,7 +1226,7 @@ impl /* trait */ QUndoStack_undoTextChanged_signal_connect for Box<Fn(QString)> 
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QUndoStack_undoTextChanged_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QUndoStack_SlotProxy_connect__ZN10QUndoStack15undoTextChangedERK7QString(arg0, arg1, arg2)};
   }
 }
@@ -1385,11 +1236,12 @@ extern fn QUndoStack_redoTextChanged_signal_connect_cb_1(rsfptr:fn(QString), arg
   let rsarg0 = QString::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QUndoStack_redoTextChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(QString), arg0: *mut c_void) {
+extern fn QUndoStack_redoTextChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn(QString)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QString::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QUndoStack_redoTextChanged_signal_connect for fn(QString) {
   fn connect(self, sigthis: QUndoStack_redoTextChanged_signal) {
@@ -1410,7 +1262,7 @@ impl /* trait */ QUndoStack_redoTextChanged_signal_connect for Box<Fn(QString)> 
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QUndoStack_redoTextChanged_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QUndoStack_SlotProxy_connect__ZN10QUndoStack15redoTextChangedERK7QString(arg0, arg1, arg2)};
   }
 }
@@ -1420,11 +1272,12 @@ extern fn QUndoStack_cleanChanged_signal_connect_cb_2(rsfptr:fn(i8), arg0: c_cha
   let rsarg0 = arg0 as i8;
   rsfptr(rsarg0);
 }
-extern fn QUndoStack_cleanChanged_signal_connect_cb_box_2(rsfptr_raw:*mut Fn(i8), arg0: c_char) {
+extern fn QUndoStack_cleanChanged_signal_connect_cb_box_2(rsfptr_raw:*mut Box<Fn(i8)>, arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i8;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QUndoStack_cleanChanged_signal_connect for fn(i8) {
   fn connect(self, sigthis: QUndoStack_cleanChanged_signal) {
@@ -1445,7 +1298,7 @@ impl /* trait */ QUndoStack_cleanChanged_signal_connect for Box<Fn(i8)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QUndoStack_cleanChanged_signal_connect_cb_box_2 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QUndoStack_SlotProxy_connect__ZN10QUndoStack12cleanChangedEb(arg0, arg1, arg2)};
   }
 }
@@ -1455,11 +1308,12 @@ extern fn QUndoStack_canRedoChanged_signal_connect_cb_3(rsfptr:fn(i8), arg0: c_c
   let rsarg0 = arg0 as i8;
   rsfptr(rsarg0);
 }
-extern fn QUndoStack_canRedoChanged_signal_connect_cb_box_3(rsfptr_raw:*mut Fn(i8), arg0: c_char) {
+extern fn QUndoStack_canRedoChanged_signal_connect_cb_box_3(rsfptr_raw:*mut Box<Fn(i8)>, arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i8;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QUndoStack_canRedoChanged_signal_connect for fn(i8) {
   fn connect(self, sigthis: QUndoStack_canRedoChanged_signal) {
@@ -1480,7 +1334,7 @@ impl /* trait */ QUndoStack_canRedoChanged_signal_connect for Box<Fn(i8)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QUndoStack_canRedoChanged_signal_connect_cb_box_3 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QUndoStack_SlotProxy_connect__ZN10QUndoStack14canRedoChangedEb(arg0, arg1, arg2)};
   }
 }
@@ -1490,11 +1344,12 @@ extern fn QUndoStack_indexChanged_signal_connect_cb_4(rsfptr:fn(i32), arg0: c_in
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QUndoStack_indexChanged_signal_connect_cb_box_4(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
+extern fn QUndoStack_indexChanged_signal_connect_cb_box_4(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QUndoStack_indexChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QUndoStack_indexChanged_signal) {
@@ -1515,7 +1370,7 @@ impl /* trait */ QUndoStack_indexChanged_signal_connect for Box<Fn(i32)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QUndoStack_indexChanged_signal_connect_cb_box_4 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QUndoStack_SlotProxy_connect__ZN10QUndoStack12indexChangedEi(arg0, arg1, arg2)};
   }
 }
@@ -1525,11 +1380,12 @@ extern fn QUndoStack_canUndoChanged_signal_connect_cb_5(rsfptr:fn(i8), arg0: c_c
   let rsarg0 = arg0 as i8;
   rsfptr(rsarg0);
 }
-extern fn QUndoStack_canUndoChanged_signal_connect_cb_box_5(rsfptr_raw:*mut Fn(i8), arg0: c_char) {
+extern fn QUndoStack_canUndoChanged_signal_connect_cb_box_5(rsfptr_raw:*mut Box<Fn(i8)>, arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i8;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QUndoStack_canUndoChanged_signal_connect for fn(i8) {
   fn connect(self, sigthis: QUndoStack_canUndoChanged_signal) {
@@ -1550,7 +1406,7 @@ impl /* trait */ QUndoStack_canUndoChanged_signal_connect for Box<Fn(i8)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QUndoStack_canUndoChanged_signal_connect_cb_box_5 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QUndoStack_SlotProxy_connect__ZN10QUndoStack14canUndoChangedEb(arg0, arg1, arg2)};
   }
 }

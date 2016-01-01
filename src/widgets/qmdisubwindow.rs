@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtWidgets/qmdisubwindow.h
 // dst-file: /src/widgets/qmdisubwindow.rs
 //
@@ -57,8 +57,6 @@ extern {
   fn _ZNK13QMdiSubWindow22maximizedButtonsWidgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QSize QMdiSubWindow::minimumSizeHint();
   fn _ZNK13QMdiSubWindow15minimumSizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QMdiSubWindow::aboutToActivate();
-  fn _ZN13QMdiSubWindow15aboutToActivateEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QMdiSubWindow::showSystemMenu();
   fn _ZN13QMdiSubWindow14showSystemMenuEv(qthis: u64 /* *mut c_void*/);
   // proto:  QMenu * QMdiSubWindow::systemMenu();
@@ -84,8 +82,8 @@ extern {
 pub struct QMdiSubWindow {
   qbase: QWidget,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _aboutToActivate_1: QMdiSubWindow_aboutToActivate_signal,
-  pub _windowStateChanged_1: QMdiSubWindow_windowStateChanged_signal,
+  pub _aboutToActivate: QMdiSubWindow_aboutToActivate_signal,
+  pub _windowStateChanged: QMdiSubWindow_windowStateChanged_signal,
 }
 
 impl /*struct*/ QMdiSubWindow {
@@ -383,28 +381,6 @@ impl<'a> /*trait*/ QMdiSubWindow_minimumSizeHint<QSize> for () {
   }
 }
 
-  // proto:  void QMdiSubWindow::aboutToActivate();
-impl /*struct*/ QMdiSubWindow {
-  pub fn aboutToActivate<RetType, T: QMdiSubWindow_aboutToActivate<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.aboutToActivate(self);
-    // return 1;
-  }
-}
-
-pub trait QMdiSubWindow_aboutToActivate<RetType> {
-  fn aboutToActivate(self , rsthis: & QMdiSubWindow) -> RetType;
-}
-
-  // proto:  void QMdiSubWindow::aboutToActivate();
-impl<'a> /*trait*/ QMdiSubWindow_aboutToActivate<()> for () {
-  fn aboutToActivate(self , rsthis: & QMdiSubWindow) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QMdiSubWindow15aboutToActivateEv()};
-     unsafe {_ZN13QMdiSubWindow15aboutToActivateEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto:  void QMdiSubWindow::showSystemMenu();
 impl /*struct*/ QMdiSubWindow {
   pub fn showSystemMenu<RetType, T: QMdiSubWindow_showSystemMenu<RetType>>(& self,  overload_args: T) -> RetType {
@@ -576,7 +552,7 @@ impl<'a> /*trait*/ QMdiSubWindow_setKeyboardPageStep<()> for (i32) {
 #[derive(Default)] // for QMdiSubWindow_aboutToActivate
 pub struct QMdiSubWindow_aboutToActivate_signal{poi:u64}
 impl /* struct */ QMdiSubWindow {
-  pub fn aboutToActivate_1(&self) -> QMdiSubWindow_aboutToActivate_signal {
+  pub fn aboutToActivate(&self) -> QMdiSubWindow_aboutToActivate_signal {
      return QMdiSubWindow_aboutToActivate_signal{poi:self.qclsinst};
   }
 }
@@ -592,7 +568,7 @@ pub trait QMdiSubWindow_aboutToActivate_signal_connect {
 #[derive(Default)] // for QMdiSubWindow_windowStateChanged
 pub struct QMdiSubWindow_windowStateChanged_signal{poi:u64}
 impl /* struct */ QMdiSubWindow {
-  pub fn windowStateChanged_1(&self) -> QMdiSubWindow_windowStateChanged_signal {
+  pub fn windowStateChanged(&self) -> QMdiSubWindow_windowStateChanged_signal {
      return QMdiSubWindow_windowStateChanged_signal{poi:self.qclsinst};
   }
 }
@@ -612,12 +588,13 @@ extern fn QMdiSubWindow_windowStateChanged_signal_connect_cb_0(rsfptr:fn(i32, i3
   let rsarg1 = arg1 as i32;
   rsfptr(rsarg0,rsarg1);
 }
-extern fn QMdiSubWindow_windowStateChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(i32, i32), arg0: c_int, arg1: c_int) {
+extern fn QMdiSubWindow_windowStateChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(i32, i32)>, arg0: c_int, arg1: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
   let rsarg1 = arg1 as i32;
-  rsfptr(rsarg0,rsarg1);
+  // rsfptr(rsarg0,rsarg1);
+  unsafe{(*rsfptr_raw)(rsarg0,rsarg1)};
 }
 impl /* trait */ QMdiSubWindow_windowStateChanged_signal_connect for fn(i32, i32) {
   fn connect(self, sigthis: QMdiSubWindow_windowStateChanged_signal) {
@@ -638,7 +615,7 @@ impl /* trait */ QMdiSubWindow_windowStateChanged_signal_connect for Box<Fn(i32,
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QMdiSubWindow_windowStateChanged_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QMdiSubWindow_SlotProxy_connect__ZN13QMdiSubWindow18windowStateChangedE6QFlagsIN2Qt11WindowStateEES3_(arg0, arg1, arg2)};
   }
 }
@@ -647,10 +624,11 @@ extern fn QMdiSubWindow_aboutToActivate_signal_connect_cb_1(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QMdiSubWindow_aboutToActivate_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(), ) {
+extern fn QMdiSubWindow_aboutToActivate_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  rsfptr();
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QMdiSubWindow_aboutToActivate_signal_connect for fn() {
   fn connect(self, sigthis: QMdiSubWindow_aboutToActivate_signal) {
@@ -671,7 +649,7 @@ impl /* trait */ QMdiSubWindow_aboutToActivate_signal_connect for Box<Fn()> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QMdiSubWindow_aboutToActivate_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QMdiSubWindow_SlotProxy_connect__ZN13QMdiSubWindow15aboutToActivateEv(arg0, arg1, arg2)};
   }
 }

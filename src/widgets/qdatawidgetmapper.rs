@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtWidgets/qdatawidgetmapper.h
 // dst-file: /src/widgets/qdatawidgetmapper.rs
 //
@@ -54,8 +54,6 @@ extern {
   fn _ZN17QDataWidgetMapper13removeMappingEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QDataWidgetMapper::toFirst();
   fn _ZN17QDataWidgetMapper7toFirstEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QDataWidgetMapper::currentIndexChanged(int index);
-  fn _ZN17QDataWidgetMapper19currentIndexChangedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QDataWidgetMapper::toPrevious();
   fn _ZN17QDataWidgetMapper10toPreviousEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QDataWidgetMapper::setRootIndex(const QModelIndex & index);
@@ -100,7 +98,7 @@ extern {
 pub struct QDataWidgetMapper {
   qbase: QObject,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _currentIndexChanged_1: QDataWidgetMapper_currentIndexChanged_signal,
+  pub _currentIndexChanged: QDataWidgetMapper_currentIndexChanged_signal,
 }
 
 impl /*struct*/ QDataWidgetMapper {
@@ -333,29 +331,6 @@ impl<'a> /*trait*/ QDataWidgetMapper_toFirst<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QDataWidgetMapper7toFirstEv()};
      unsafe {_ZN17QDataWidgetMapper7toFirstEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QDataWidgetMapper::currentIndexChanged(int index);
-impl /*struct*/ QDataWidgetMapper {
-  pub fn currentIndexChanged<RetType, T: QDataWidgetMapper_currentIndexChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.currentIndexChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QDataWidgetMapper_currentIndexChanged<RetType> {
-  fn currentIndexChanged(self , rsthis: & QDataWidgetMapper) -> RetType;
-}
-
-  // proto:  void QDataWidgetMapper::currentIndexChanged(int index);
-impl<'a> /*trait*/ QDataWidgetMapper_currentIndexChanged<()> for (i32) {
-  fn currentIndexChanged(self , rsthis: & QDataWidgetMapper) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QDataWidgetMapper19currentIndexChangedEi()};
-    let arg0 = self  as c_int;
-     unsafe {_ZN17QDataWidgetMapper19currentIndexChangedEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -730,7 +705,7 @@ impl<'a> /*trait*/ QDataWidgetMapper_toNext<()> for () {
 #[derive(Default)] // for QDataWidgetMapper_currentIndexChanged
 pub struct QDataWidgetMapper_currentIndexChanged_signal{poi:u64}
 impl /* struct */ QDataWidgetMapper {
-  pub fn currentIndexChanged_1(&self) -> QDataWidgetMapper_currentIndexChanged_signal {
+  pub fn currentIndexChanged(&self) -> QDataWidgetMapper_currentIndexChanged_signal {
      return QDataWidgetMapper_currentIndexChanged_signal{poi:self.qclsinst};
   }
 }
@@ -749,11 +724,12 @@ extern fn QDataWidgetMapper_currentIndexChanged_signal_connect_cb_0(rsfptr:fn(i3
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QDataWidgetMapper_currentIndexChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
+extern fn QDataWidgetMapper_currentIndexChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QDataWidgetMapper_currentIndexChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QDataWidgetMapper_currentIndexChanged_signal) {
@@ -774,7 +750,7 @@ impl /* trait */ QDataWidgetMapper_currentIndexChanged_signal_connect for Box<Fn
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QDataWidgetMapper_currentIndexChanged_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QDataWidgetMapper_SlotProxy_connect__ZN17QDataWidgetMapper19currentIndexChangedEi(arg0, arg1, arg2)};
   }
 }

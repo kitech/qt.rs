@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtWidgets/qlcdnumber.h
 // dst-file: /src/widgets/qlcdnumber.rs
 //
@@ -78,8 +78,6 @@ extern {
   fn _ZNK10QLCDNumber17smallDecimalPointEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QLCDNumber::setOctMode();
   fn _ZN10QLCDNumber10setOctModeEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QLCDNumber::overflow();
-  fn _ZN10QLCDNumber8overflowEv(qthis: u64 /* *mut c_void*/);
   fn QLCDNumber_SlotProxy_connect__ZN10QLCDNumber8overflowEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
@@ -89,7 +87,7 @@ extern {
 pub struct QLCDNumber {
   qbase: QFrame,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _overflow_1: QLCDNumber_overflow_signal,
+  pub _overflow: QLCDNumber_overflow_signal,
 }
 
 impl /*struct*/ QLCDNumber {
@@ -546,32 +544,10 @@ impl<'a> /*trait*/ QLCDNumber_setOctMode<()> for () {
   }
 }
 
-  // proto:  void QLCDNumber::overflow();
-impl /*struct*/ QLCDNumber {
-  pub fn overflow<RetType, T: QLCDNumber_overflow<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.overflow(self);
-    // return 1;
-  }
-}
-
-pub trait QLCDNumber_overflow<RetType> {
-  fn overflow(self , rsthis: & QLCDNumber) -> RetType;
-}
-
-  // proto:  void QLCDNumber::overflow();
-impl<'a> /*trait*/ QLCDNumber_overflow<()> for () {
-  fn overflow(self , rsthis: & QLCDNumber) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QLCDNumber8overflowEv()};
-     unsafe {_ZN10QLCDNumber8overflowEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
 #[derive(Default)] // for QLCDNumber_overflow
 pub struct QLCDNumber_overflow_signal{poi:u64}
 impl /* struct */ QLCDNumber {
-  pub fn overflow_1(&self) -> QLCDNumber_overflow_signal {
+  pub fn overflow(&self) -> QLCDNumber_overflow_signal {
      return QLCDNumber_overflow_signal{poi:self.qclsinst};
   }
 }
@@ -589,10 +565,11 @@ extern fn QLCDNumber_overflow_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QLCDNumber_overflow_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(), ) {
+extern fn QLCDNumber_overflow_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  rsfptr();
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QLCDNumber_overflow_signal_connect for fn() {
   fn connect(self, sigthis: QLCDNumber_overflow_signal) {
@@ -613,7 +590,7 @@ impl /* trait */ QLCDNumber_overflow_signal_connect for Box<Fn()> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QLCDNumber_overflow_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QLCDNumber_SlotProxy_connect__ZN10QLCDNumber8overflowEv(arg0, arg1, arg2)};
   }
 }

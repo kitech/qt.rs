@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtWidgets/qfiledialog.h
 // dst-file: /src/widgets/qfiledialog.rs
 //
@@ -44,18 +44,12 @@ extern {
   fn _ZNK11QFileDialog10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QFileDialog::setDirectoryUrl(const QUrl & directory);
   fn _ZN11QFileDialog15setDirectoryUrlERK4QUrl(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QFileDialog::directoryUrlEntered(const QUrl & directory);
-  fn _ZN11QFileDialog19directoryUrlEnteredERK4QUrl(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QFileDialog::currentChanged(const QString & path);
-  fn _ZN11QFileDialog14currentChangedERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QStringList QFileDialog::nameFilters();
   fn _ZNK11QFileDialog11nameFiltersEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QFileDialog::setConfirmOverwrite(bool enabled);
   fn _ZN11QFileDialog19setConfirmOverwriteEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QFileDialog::setDefaultSuffix(const QString & suffix);
   fn _ZN11QFileDialog16setDefaultSuffixERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QFileDialog::filterSelected(const QString & filter);
-  fn _ZN11QFileDialog14filterSelectedERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QFileDialog::setItemDelegate(QAbstractItemDelegate * delegate);
   fn _ZN11QFileDialog15setItemDelegateEP21QAbstractItemDelegate(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QList<QUrl> QFileDialog::sidebarUrls();
@@ -78,20 +72,12 @@ extern {
   fn _ZNK11QFileDialog12directoryUrlEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QFileDialog::isReadOnly();
   fn _ZNK11QFileDialog10isReadOnlyEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QFileDialog::directoryEntered(const QString & directory);
-  fn _ZN11QFileDialog16directoryEnteredERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QFileDialog::fileSelected(const QString & file);
-  fn _ZN11QFileDialog12fileSelectedERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QByteArray QFileDialog::saveState();
   fn _ZNK11QFileDialog9saveStateEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QFileDialog::currentUrlChanged(const QUrl & url);
-  fn _ZN11QFileDialog17currentUrlChangedERK4QUrl(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QFileDialog::open(QObject * receiver, const char * member);
   fn _ZN11QFileDialog4openEP7QObjectPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_char);
   // proto:  QDir QFileDialog::directory();
   fn _ZNK11QFileDialog9directoryEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QFileDialog::urlSelected(const QUrl & url);
-  fn _ZN11QFileDialog11urlSelectedERK4QUrl(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QFileDialog::setDirectory(const QDir & directory);
   fn demth_ZN11QFileDialog12setDirectoryERK4QDir(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QFileDialog::setVisible(bool visible);
@@ -108,8 +94,6 @@ extern {
   fn _ZN11QFileDialog18setResolveSymlinksEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QFileDialog::setReadOnly(bool enabled);
   fn _ZN11QFileDialog11setReadOnlyEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
-  // proto:  void QFileDialog::filesSelected(const QStringList & files);
-  fn _ZN11QFileDialog13filesSelectedERK11QStringList(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QFileDialog::setNameFilterDetailsVisible(bool enabled);
   fn _ZN11QFileDialog27setNameFilterDetailsVisibleEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QFileDialog::selectNameFilter(const QString & filter);
@@ -162,15 +146,15 @@ extern {
 pub struct QFileDialog {
   qbase: QDialog,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _filesSelected_1: QFileDialog_filesSelected_signal,
-  pub _fileSelected_1: QFileDialog_fileSelected_signal,
-  pub _currentChanged_1: QFileDialog_currentChanged_signal,
-  pub _directoryEntered_1: QFileDialog_directoryEntered_signal,
-  pub _currentUrlChanged_1: QFileDialog_currentUrlChanged_signal,
-  pub _directoryUrlEntered_1: QFileDialog_directoryUrlEntered_signal,
-  pub _filterSelected_1: QFileDialog_filterSelected_signal,
-  pub _urlsSelected_1: QFileDialog_urlsSelected_signal,
-  pub _urlSelected_1: QFileDialog_urlSelected_signal,
+  pub _filesSelected: QFileDialog_filesSelected_signal,
+  pub _fileSelected: QFileDialog_fileSelected_signal,
+  pub _currentChanged: QFileDialog_currentChanged_signal,
+  pub _directoryEntered: QFileDialog_directoryEntered_signal,
+  pub _currentUrlChanged: QFileDialog_currentUrlChanged_signal,
+  pub _directoryUrlEntered: QFileDialog_directoryUrlEntered_signal,
+  pub _filterSelected: QFileDialog_filterSelected_signal,
+  pub _urlsSelected: QFileDialog_urlsSelected_signal,
+  pub _urlSelected: QFileDialog_urlSelected_signal,
 }
 
 impl /*struct*/ QFileDialog {
@@ -231,52 +215,6 @@ impl<'a> /*trait*/ QFileDialog_setDirectoryUrl<()> for (&'a QUrl) {
     // unsafe{_ZN11QFileDialog15setDirectoryUrlERK4QUrl()};
     let arg0 = self.qclsinst  as *mut c_void;
      unsafe {_ZN11QFileDialog15setDirectoryUrlERK4QUrl(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QFileDialog::directoryUrlEntered(const QUrl & directory);
-impl /*struct*/ QFileDialog {
-  pub fn directoryUrlEntered<RetType, T: QFileDialog_directoryUrlEntered<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.directoryUrlEntered(self);
-    // return 1;
-  }
-}
-
-pub trait QFileDialog_directoryUrlEntered<RetType> {
-  fn directoryUrlEntered(self , rsthis: & QFileDialog) -> RetType;
-}
-
-  // proto:  void QFileDialog::directoryUrlEntered(const QUrl & directory);
-impl<'a> /*trait*/ QFileDialog_directoryUrlEntered<()> for (&'a QUrl) {
-  fn directoryUrlEntered(self , rsthis: & QFileDialog) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QFileDialog19directoryUrlEnteredERK4QUrl()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QFileDialog19directoryUrlEnteredERK4QUrl(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QFileDialog::currentChanged(const QString & path);
-impl /*struct*/ QFileDialog {
-  pub fn currentChanged<RetType, T: QFileDialog_currentChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.currentChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QFileDialog_currentChanged<RetType> {
-  fn currentChanged(self , rsthis: & QFileDialog) -> RetType;
-}
-
-  // proto:  void QFileDialog::currentChanged(const QString & path);
-impl<'a> /*trait*/ QFileDialog_currentChanged<()> for (&'a QString) {
-  fn currentChanged(self , rsthis: & QFileDialog) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QFileDialog14currentChangedERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QFileDialog14currentChangedERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -345,29 +283,6 @@ impl<'a> /*trait*/ QFileDialog_setDefaultSuffix<()> for (&'a QString) {
     // unsafe{_ZN11QFileDialog16setDefaultSuffixERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
      unsafe {_ZN11QFileDialog16setDefaultSuffixERK7QString(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QFileDialog::filterSelected(const QString & filter);
-impl /*struct*/ QFileDialog {
-  pub fn filterSelected<RetType, T: QFileDialog_filterSelected<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.filterSelected(self);
-    // return 1;
-  }
-}
-
-pub trait QFileDialog_filterSelected<RetType> {
-  fn filterSelected(self , rsthis: & QFileDialog) -> RetType;
-}
-
-  // proto:  void QFileDialog::filterSelected(const QString & filter);
-impl<'a> /*trait*/ QFileDialog_filterSelected<()> for (&'a QString) {
-  fn filterSelected(self , rsthis: & QFileDialog) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QFileDialog14filterSelectedERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QFileDialog14filterSelectedERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -627,52 +542,6 @@ impl<'a> /*trait*/ QFileDialog_isReadOnly<i8> for () {
   }
 }
 
-  // proto:  void QFileDialog::directoryEntered(const QString & directory);
-impl /*struct*/ QFileDialog {
-  pub fn directoryEntered<RetType, T: QFileDialog_directoryEntered<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.directoryEntered(self);
-    // return 1;
-  }
-}
-
-pub trait QFileDialog_directoryEntered<RetType> {
-  fn directoryEntered(self , rsthis: & QFileDialog) -> RetType;
-}
-
-  // proto:  void QFileDialog::directoryEntered(const QString & directory);
-impl<'a> /*trait*/ QFileDialog_directoryEntered<()> for (&'a QString) {
-  fn directoryEntered(self , rsthis: & QFileDialog) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QFileDialog16directoryEnteredERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QFileDialog16directoryEnteredERK7QString(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QFileDialog::fileSelected(const QString & file);
-impl /*struct*/ QFileDialog {
-  pub fn fileSelected<RetType, T: QFileDialog_fileSelected<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.fileSelected(self);
-    // return 1;
-  }
-}
-
-pub trait QFileDialog_fileSelected<RetType> {
-  fn fileSelected(self , rsthis: & QFileDialog) -> RetType;
-}
-
-  // proto:  void QFileDialog::fileSelected(const QString & file);
-impl<'a> /*trait*/ QFileDialog_fileSelected<()> for (&'a QString) {
-  fn fileSelected(self , rsthis: & QFileDialog) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QFileDialog12fileSelectedERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QFileDialog12fileSelectedERK7QString(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  QByteArray QFileDialog::saveState();
 impl /*struct*/ QFileDialog {
   pub fn saveState<RetType, T: QFileDialog_saveState<RetType>>(& self,  overload_args: T) -> RetType {
@@ -693,29 +562,6 @@ impl<'a> /*trait*/ QFileDialog_saveState<QByteArray> for () {
     let mut ret = unsafe {_ZNK11QFileDialog9saveStateEv(rsthis.qclsinst)};
     let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QFileDialog::currentUrlChanged(const QUrl & url);
-impl /*struct*/ QFileDialog {
-  pub fn currentUrlChanged<RetType, T: QFileDialog_currentUrlChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.currentUrlChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QFileDialog_currentUrlChanged<RetType> {
-  fn currentUrlChanged(self , rsthis: & QFileDialog) -> RetType;
-}
-
-  // proto:  void QFileDialog::currentUrlChanged(const QUrl & url);
-impl<'a> /*trait*/ QFileDialog_currentUrlChanged<()> for (&'a QUrl) {
-  fn currentUrlChanged(self , rsthis: & QFileDialog) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QFileDialog17currentUrlChangedERK4QUrl()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QFileDialog17currentUrlChangedERK4QUrl(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -764,29 +610,6 @@ impl<'a> /*trait*/ QFileDialog_directory<QDir> for () {
     let mut ret = unsafe {_ZNK11QFileDialog9directoryEv(rsthis.qclsinst)};
     let mut ret1 = QDir::inheritFrom(ret as u64);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QFileDialog::urlSelected(const QUrl & url);
-impl /*struct*/ QFileDialog {
-  pub fn urlSelected<RetType, T: QFileDialog_urlSelected<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.urlSelected(self);
-    // return 1;
-  }
-}
-
-pub trait QFileDialog_urlSelected<RetType> {
-  fn urlSelected(self , rsthis: & QFileDialog) -> RetType;
-}
-
-  // proto:  void QFileDialog::urlSelected(const QUrl & url);
-impl<'a> /*trait*/ QFileDialog_urlSelected<()> for (&'a QUrl) {
-  fn urlSelected(self , rsthis: & QFileDialog) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QFileDialog11urlSelectedERK4QUrl()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QFileDialog11urlSelectedERK4QUrl(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -958,29 +781,6 @@ impl<'a> /*trait*/ QFileDialog_setReadOnly<()> for (i8) {
     // unsafe{_ZN11QFileDialog11setReadOnlyEb()};
     let arg0 = self  as c_char;
      unsafe {_ZN11QFileDialog11setReadOnlyEb(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QFileDialog::filesSelected(const QStringList & files);
-impl /*struct*/ QFileDialog {
-  pub fn filesSelected<RetType, T: QFileDialog_filesSelected<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.filesSelected(self);
-    // return 1;
-  }
-}
-
-pub trait QFileDialog_filesSelected<RetType> {
-  fn filesSelected(self , rsthis: & QFileDialog) -> RetType;
-}
-
-  // proto:  void QFileDialog::filesSelected(const QStringList & files);
-impl<'a> /*trait*/ QFileDialog_filesSelected<()> for (&'a QStringList) {
-  fn filesSelected(self , rsthis: & QFileDialog) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QFileDialog13filesSelectedERK11QStringList()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QFileDialog13filesSelectedERK11QStringList(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1377,7 +1177,7 @@ impl<'a> /*trait*/ QFileDialog_new for (&'a QWidget, &'a QString, &'a QString, &
 #[derive(Default)] // for QFileDialog_filesSelected
 pub struct QFileDialog_filesSelected_signal{poi:u64}
 impl /* struct */ QFileDialog {
-  pub fn filesSelected_1(&self) -> QFileDialog_filesSelected_signal {
+  pub fn filesSelected(&self) -> QFileDialog_filesSelected_signal {
      return QFileDialog_filesSelected_signal{poi:self.qclsinst};
   }
 }
@@ -1393,7 +1193,7 @@ pub trait QFileDialog_filesSelected_signal_connect {
 #[derive(Default)] // for QFileDialog_fileSelected
 pub struct QFileDialog_fileSelected_signal{poi:u64}
 impl /* struct */ QFileDialog {
-  pub fn fileSelected_1(&self) -> QFileDialog_fileSelected_signal {
+  pub fn fileSelected(&self) -> QFileDialog_fileSelected_signal {
      return QFileDialog_fileSelected_signal{poi:self.qclsinst};
   }
 }
@@ -1409,7 +1209,7 @@ pub trait QFileDialog_fileSelected_signal_connect {
 #[derive(Default)] // for QFileDialog_currentChanged
 pub struct QFileDialog_currentChanged_signal{poi:u64}
 impl /* struct */ QFileDialog {
-  pub fn currentChanged_1(&self) -> QFileDialog_currentChanged_signal {
+  pub fn currentChanged(&self) -> QFileDialog_currentChanged_signal {
      return QFileDialog_currentChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1425,7 +1225,7 @@ pub trait QFileDialog_currentChanged_signal_connect {
 #[derive(Default)] // for QFileDialog_directoryEntered
 pub struct QFileDialog_directoryEntered_signal{poi:u64}
 impl /* struct */ QFileDialog {
-  pub fn directoryEntered_1(&self) -> QFileDialog_directoryEntered_signal {
+  pub fn directoryEntered(&self) -> QFileDialog_directoryEntered_signal {
      return QFileDialog_directoryEntered_signal{poi:self.qclsinst};
   }
 }
@@ -1441,7 +1241,7 @@ pub trait QFileDialog_directoryEntered_signal_connect {
 #[derive(Default)] // for QFileDialog_currentUrlChanged
 pub struct QFileDialog_currentUrlChanged_signal{poi:u64}
 impl /* struct */ QFileDialog {
-  pub fn currentUrlChanged_1(&self) -> QFileDialog_currentUrlChanged_signal {
+  pub fn currentUrlChanged(&self) -> QFileDialog_currentUrlChanged_signal {
      return QFileDialog_currentUrlChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1457,7 +1257,7 @@ pub trait QFileDialog_currentUrlChanged_signal_connect {
 #[derive(Default)] // for QFileDialog_directoryUrlEntered
 pub struct QFileDialog_directoryUrlEntered_signal{poi:u64}
 impl /* struct */ QFileDialog {
-  pub fn directoryUrlEntered_1(&self) -> QFileDialog_directoryUrlEntered_signal {
+  pub fn directoryUrlEntered(&self) -> QFileDialog_directoryUrlEntered_signal {
      return QFileDialog_directoryUrlEntered_signal{poi:self.qclsinst};
   }
 }
@@ -1473,7 +1273,7 @@ pub trait QFileDialog_directoryUrlEntered_signal_connect {
 #[derive(Default)] // for QFileDialog_filterSelected
 pub struct QFileDialog_filterSelected_signal{poi:u64}
 impl /* struct */ QFileDialog {
-  pub fn filterSelected_1(&self) -> QFileDialog_filterSelected_signal {
+  pub fn filterSelected(&self) -> QFileDialog_filterSelected_signal {
      return QFileDialog_filterSelected_signal{poi:self.qclsinst};
   }
 }
@@ -1489,7 +1289,7 @@ pub trait QFileDialog_filterSelected_signal_connect {
 #[derive(Default)] // for QFileDialog_urlsSelected
 pub struct QFileDialog_urlsSelected_signal{poi:u64}
 impl /* struct */ QFileDialog {
-  pub fn urlsSelected_1(&self) -> QFileDialog_urlsSelected_signal {
+  pub fn urlsSelected(&self) -> QFileDialog_urlsSelected_signal {
      return QFileDialog_urlsSelected_signal{poi:self.qclsinst};
   }
 }
@@ -1505,7 +1305,7 @@ pub trait QFileDialog_urlsSelected_signal_connect {
 #[derive(Default)] // for QFileDialog_urlSelected
 pub struct QFileDialog_urlSelected_signal{poi:u64}
 impl /* struct */ QFileDialog {
-  pub fn urlSelected_1(&self) -> QFileDialog_urlSelected_signal {
+  pub fn urlSelected(&self) -> QFileDialog_urlSelected_signal {
      return QFileDialog_urlSelected_signal{poi:self.qclsinst};
   }
 }
@@ -1524,11 +1324,12 @@ extern fn QFileDialog_directoryUrlEntered_signal_connect_cb_0(rsfptr:fn(QUrl), a
   let rsarg0 = QUrl::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QFileDialog_directoryUrlEntered_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QUrl), arg0: *mut c_void) {
+extern fn QFileDialog_directoryUrlEntered_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(QUrl)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QUrl::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QFileDialog_directoryUrlEntered_signal_connect for fn(QUrl) {
   fn connect(self, sigthis: QFileDialog_directoryUrlEntered_signal) {
@@ -1549,7 +1350,7 @@ impl /* trait */ QFileDialog_directoryUrlEntered_signal_connect for Box<Fn(QUrl)
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QFileDialog_directoryUrlEntered_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QFileDialog_SlotProxy_connect__ZN11QFileDialog19directoryUrlEnteredERK4QUrl(arg0, arg1, arg2)};
   }
 }
@@ -1559,11 +1360,12 @@ extern fn QFileDialog_fileSelected_signal_connect_cb_1(rsfptr:fn(QString), arg0:
   let rsarg0 = QString::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QFileDialog_fileSelected_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(QString), arg0: *mut c_void) {
+extern fn QFileDialog_fileSelected_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn(QString)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QString::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QFileDialog_fileSelected_signal_connect for fn(QString) {
   fn connect(self, sigthis: QFileDialog_fileSelected_signal) {
@@ -1584,7 +1386,7 @@ impl /* trait */ QFileDialog_fileSelected_signal_connect for Box<Fn(QString)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QFileDialog_fileSelected_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QFileDialog_SlotProxy_connect__ZN11QFileDialog12fileSelectedERK7QString(arg0, arg1, arg2)};
   }
 }
@@ -1594,11 +1396,12 @@ extern fn QFileDialog_urlSelected_signal_connect_cb_2(rsfptr:fn(QUrl), arg0: *mu
   let rsarg0 = QUrl::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QFileDialog_urlSelected_signal_connect_cb_box_2(rsfptr_raw:*mut Fn(QUrl), arg0: *mut c_void) {
+extern fn QFileDialog_urlSelected_signal_connect_cb_box_2(rsfptr_raw:*mut Box<Fn(QUrl)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QUrl::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QFileDialog_urlSelected_signal_connect for fn(QUrl) {
   fn connect(self, sigthis: QFileDialog_urlSelected_signal) {
@@ -1619,7 +1422,7 @@ impl /* trait */ QFileDialog_urlSelected_signal_connect for Box<Fn(QUrl)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QFileDialog_urlSelected_signal_connect_cb_box_2 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QFileDialog_SlotProxy_connect__ZN11QFileDialog11urlSelectedERK4QUrl(arg0, arg1, arg2)};
   }
 }
@@ -1629,11 +1432,12 @@ extern fn QFileDialog_directoryEntered_signal_connect_cb_3(rsfptr:fn(QString), a
   let rsarg0 = QString::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QFileDialog_directoryEntered_signal_connect_cb_box_3(rsfptr_raw:*mut Fn(QString), arg0: *mut c_void) {
+extern fn QFileDialog_directoryEntered_signal_connect_cb_box_3(rsfptr_raw:*mut Box<Fn(QString)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QString::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QFileDialog_directoryEntered_signal_connect for fn(QString) {
   fn connect(self, sigthis: QFileDialog_directoryEntered_signal) {
@@ -1654,7 +1458,7 @@ impl /* trait */ QFileDialog_directoryEntered_signal_connect for Box<Fn(QString)
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QFileDialog_directoryEntered_signal_connect_cb_box_3 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QFileDialog_SlotProxy_connect__ZN11QFileDialog16directoryEnteredERK7QString(arg0, arg1, arg2)};
   }
 }
@@ -1664,11 +1468,12 @@ extern fn QFileDialog_currentUrlChanged_signal_connect_cb_4(rsfptr:fn(QUrl), arg
   let rsarg0 = QUrl::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QFileDialog_currentUrlChanged_signal_connect_cb_box_4(rsfptr_raw:*mut Fn(QUrl), arg0: *mut c_void) {
+extern fn QFileDialog_currentUrlChanged_signal_connect_cb_box_4(rsfptr_raw:*mut Box<Fn(QUrl)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QUrl::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QFileDialog_currentUrlChanged_signal_connect for fn(QUrl) {
   fn connect(self, sigthis: QFileDialog_currentUrlChanged_signal) {
@@ -1689,7 +1494,7 @@ impl /* trait */ QFileDialog_currentUrlChanged_signal_connect for Box<Fn(QUrl)> 
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QFileDialog_currentUrlChanged_signal_connect_cb_box_4 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QFileDialog_SlotProxy_connect__ZN11QFileDialog17currentUrlChangedERK4QUrl(arg0, arg1, arg2)};
   }
 }
@@ -1699,11 +1504,12 @@ extern fn QFileDialog_filesSelected_signal_connect_cb_5(rsfptr:fn(QStringList), 
   let rsarg0 = QStringList::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QFileDialog_filesSelected_signal_connect_cb_box_5(rsfptr_raw:*mut Fn(QStringList), arg0: *mut c_void) {
+extern fn QFileDialog_filesSelected_signal_connect_cb_box_5(rsfptr_raw:*mut Box<Fn(QStringList)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QStringList::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QFileDialog_filesSelected_signal_connect for fn(QStringList) {
   fn connect(self, sigthis: QFileDialog_filesSelected_signal) {
@@ -1724,7 +1530,7 @@ impl /* trait */ QFileDialog_filesSelected_signal_connect for Box<Fn(QStringList
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QFileDialog_filesSelected_signal_connect_cb_box_5 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QFileDialog_SlotProxy_connect__ZN11QFileDialog13filesSelectedERK11QStringList(arg0, arg1, arg2)};
   }
 }
@@ -1734,11 +1540,12 @@ extern fn QFileDialog_currentChanged_signal_connect_cb_6(rsfptr:fn(QString), arg
   let rsarg0 = QString::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QFileDialog_currentChanged_signal_connect_cb_box_6(rsfptr_raw:*mut Fn(QString), arg0: *mut c_void) {
+extern fn QFileDialog_currentChanged_signal_connect_cb_box_6(rsfptr_raw:*mut Box<Fn(QString)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QString::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QFileDialog_currentChanged_signal_connect for fn(QString) {
   fn connect(self, sigthis: QFileDialog_currentChanged_signal) {
@@ -1759,7 +1566,7 @@ impl /* trait */ QFileDialog_currentChanged_signal_connect for Box<Fn(QString)> 
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QFileDialog_currentChanged_signal_connect_cb_box_6 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QFileDialog_SlotProxy_connect__ZN11QFileDialog14currentChangedERK7QString(arg0, arg1, arg2)};
   }
 }
@@ -1769,11 +1576,12 @@ extern fn QFileDialog_filterSelected_signal_connect_cb_7(rsfptr:fn(QString), arg
   let rsarg0 = QString::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QFileDialog_filterSelected_signal_connect_cb_box_7(rsfptr_raw:*mut Fn(QString), arg0: *mut c_void) {
+extern fn QFileDialog_filterSelected_signal_connect_cb_box_7(rsfptr_raw:*mut Box<Fn(QString)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QString::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QFileDialog_filterSelected_signal_connect for fn(QString) {
   fn connect(self, sigthis: QFileDialog_filterSelected_signal) {
@@ -1794,7 +1602,7 @@ impl /* trait */ QFileDialog_filterSelected_signal_connect for Box<Fn(QString)> 
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QFileDialog_filterSelected_signal_connect_cb_box_7 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QFileDialog_SlotProxy_connect__ZN11QFileDialog14filterSelectedERK7QString(arg0, arg1, arg2)};
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtWidgets/qtoolbar.h
 // dst-file: /src/widgets/qtoolbar.rs
 //
@@ -47,8 +47,6 @@ extern {
   fn _ZNK8QToolBar14actionGeometryEP7QAction(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QWidget * QToolBar::widgetForAction(QAction * action);
   fn _ZNK8QToolBar15widgetForActionEP7QAction(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-  // proto:  void QToolBar::visibilityChanged(bool visible);
-  fn _ZN8QToolBar17visibilityChangedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QToolBar::clear();
   fn _ZN8QToolBar5clearEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QToolBar::QToolBar(const QString & title, QWidget * parent);
@@ -66,10 +64,6 @@ extern {
   fn _ZN8QToolBar12setFloatableEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QAction * QToolBar::addAction(const QString & text);
   fn _ZN8QToolBar9addActionERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-  // proto:  void QToolBar::topLevelChanged(bool topLevel);
-  fn _ZN8QToolBar15topLevelChangedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
-  // proto:  void QToolBar::actionTriggered(QAction * action);
-  fn _ZN8QToolBar15actionTriggeredEP7QAction(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QAction * QToolBar::addAction(const QIcon & icon, const QString & text);
   fn _ZN8QToolBar9addActionERK5QIconRK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  void QToolBar::QToolBar(QWidget * parent);
@@ -77,12 +71,8 @@ extern {
   fn _ZN8QToolBarC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QAction * QToolBar::actionAt(const QPoint & p);
   fn _ZNK8QToolBar8actionAtERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-  // proto:  void QToolBar::movableChanged(bool movable);
-  fn _ZN8QToolBar14movableChangedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QAction * QToolBar::actionAt(int x, int y);
   fn demth_ZNK8QToolBar8actionAtEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> *mut c_void;
-  // proto:  void QToolBar::iconSizeChanged(const QSize & iconSize);
-  fn _ZN8QToolBar15iconSizeChangedERK5QSize(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QToolBar::isFloating();
   fn _ZNK8QToolBar10isFloatingEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QAction * QToolBar::toggleViewAction();
@@ -118,14 +108,14 @@ extern {
 pub struct QToolBar {
   qbase: QWidget,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _iconSizeChanged_1: QToolBar_iconSizeChanged_signal,
-  pub _allowedAreasChanged_1: QToolBar_allowedAreasChanged_signal,
-  pub _movableChanged_1: QToolBar_movableChanged_signal,
-  pub _toolButtonStyleChanged_1: QToolBar_toolButtonStyleChanged_signal,
-  pub _topLevelChanged_1: QToolBar_topLevelChanged_signal,
-  pub _actionTriggered_1: QToolBar_actionTriggered_signal,
-  pub _orientationChanged_1: QToolBar_orientationChanged_signal,
-  pub _visibilityChanged_1: QToolBar_visibilityChanged_signal,
+  pub _iconSizeChanged: QToolBar_iconSizeChanged_signal,
+  pub _allowedAreasChanged: QToolBar_allowedAreasChanged_signal,
+  pub _movableChanged: QToolBar_movableChanged_signal,
+  pub _toolButtonStyleChanged: QToolBar_toolButtonStyleChanged_signal,
+  pub _topLevelChanged: QToolBar_topLevelChanged_signal,
+  pub _actionTriggered: QToolBar_actionTriggered_signal,
+  pub _orientationChanged: QToolBar_orientationChanged_signal,
+  pub _visibilityChanged: QToolBar_visibilityChanged_signal,
 }
 
 impl /*struct*/ QToolBar {
@@ -266,29 +256,6 @@ impl<'a> /*trait*/ QToolBar_widgetForAction<QWidget> for (&'a QAction) {
     let mut ret = unsafe {_ZNK8QToolBar15widgetForActionEP7QAction(rsthis.qclsinst, arg0)};
     let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QToolBar::visibilityChanged(bool visible);
-impl /*struct*/ QToolBar {
-  pub fn visibilityChanged<RetType, T: QToolBar_visibilityChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.visibilityChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QToolBar_visibilityChanged<RetType> {
-  fn visibilityChanged(self , rsthis: & QToolBar) -> RetType;
-}
-
-  // proto:  void QToolBar::visibilityChanged(bool visible);
-impl<'a> /*trait*/ QToolBar_visibilityChanged<()> for (i8) {
-  fn visibilityChanged(self , rsthis: & QToolBar) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QToolBar17visibilityChangedEb()};
-    let arg0 = self  as c_char;
-     unsafe {_ZN8QToolBar17visibilityChangedEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -474,52 +441,6 @@ impl<'a> /*trait*/ QToolBar_addAction<QAction> for (&'a QString) {
   }
 }
 
-  // proto:  void QToolBar::topLevelChanged(bool topLevel);
-impl /*struct*/ QToolBar {
-  pub fn topLevelChanged<RetType, T: QToolBar_topLevelChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.topLevelChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QToolBar_topLevelChanged<RetType> {
-  fn topLevelChanged(self , rsthis: & QToolBar) -> RetType;
-}
-
-  // proto:  void QToolBar::topLevelChanged(bool topLevel);
-impl<'a> /*trait*/ QToolBar_topLevelChanged<()> for (i8) {
-  fn topLevelChanged(self , rsthis: & QToolBar) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QToolBar15topLevelChangedEb()};
-    let arg0 = self  as c_char;
-     unsafe {_ZN8QToolBar15topLevelChangedEb(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QToolBar::actionTriggered(QAction * action);
-impl /*struct*/ QToolBar {
-  pub fn actionTriggered<RetType, T: QToolBar_actionTriggered<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.actionTriggered(self);
-    // return 1;
-  }
-}
-
-pub trait QToolBar_actionTriggered<RetType> {
-  fn actionTriggered(self , rsthis: & QToolBar) -> RetType;
-}
-
-  // proto:  void QToolBar::actionTriggered(QAction * action);
-impl<'a> /*trait*/ QToolBar_actionTriggered<()> for (&'a QAction) {
-  fn actionTriggered(self , rsthis: & QToolBar) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QToolBar15actionTriggeredEP7QAction()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN8QToolBar15actionTriggeredEP7QAction(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  QAction * QToolBar::addAction(const QIcon & icon, const QString & text);
 impl<'a> /*trait*/ QToolBar_addAction<QAction> for (&'a QIcon, &'a QString) {
   fn addAction(self , rsthis: & QToolBar) -> QAction {
@@ -575,29 +496,6 @@ impl<'a> /*trait*/ QToolBar_actionAt<QAction> for (&'a QPoint) {
   }
 }
 
-  // proto:  void QToolBar::movableChanged(bool movable);
-impl /*struct*/ QToolBar {
-  pub fn movableChanged<RetType, T: QToolBar_movableChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.movableChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QToolBar_movableChanged<RetType> {
-  fn movableChanged(self , rsthis: & QToolBar) -> RetType;
-}
-
-  // proto:  void QToolBar::movableChanged(bool movable);
-impl<'a> /*trait*/ QToolBar_movableChanged<()> for (i8) {
-  fn movableChanged(self , rsthis: & QToolBar) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QToolBar14movableChangedEb()};
-    let arg0 = self  as c_char;
-     unsafe {_ZN8QToolBar14movableChangedEb(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  QAction * QToolBar::actionAt(int x, int y);
 impl<'a> /*trait*/ QToolBar_actionAt<QAction> for (i32, i32) {
   fn actionAt(self , rsthis: & QToolBar) -> QAction {
@@ -608,29 +506,6 @@ impl<'a> /*trait*/ QToolBar_actionAt<QAction> for (i32, i32) {
     let mut ret = unsafe {demth_ZNK8QToolBar8actionAtEii(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QToolBar::iconSizeChanged(const QSize & iconSize);
-impl /*struct*/ QToolBar {
-  pub fn iconSizeChanged<RetType, T: QToolBar_iconSizeChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.iconSizeChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QToolBar_iconSizeChanged<RetType> {
-  fn iconSizeChanged(self , rsthis: & QToolBar) -> RetType;
-}
-
-  // proto:  void QToolBar::iconSizeChanged(const QSize & iconSize);
-impl<'a> /*trait*/ QToolBar_iconSizeChanged<()> for (&'a QSize) {
-  fn iconSizeChanged(self , rsthis: & QToolBar) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QToolBar15iconSizeChangedERK5QSize()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN8QToolBar15iconSizeChangedERK5QSize(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -836,7 +711,7 @@ impl<'a> /*trait*/ QToolBar_insertSeparator<QAction> for (&'a QAction) {
 #[derive(Default)] // for QToolBar_iconSizeChanged
 pub struct QToolBar_iconSizeChanged_signal{poi:u64}
 impl /* struct */ QToolBar {
-  pub fn iconSizeChanged_1(&self) -> QToolBar_iconSizeChanged_signal {
+  pub fn iconSizeChanged(&self) -> QToolBar_iconSizeChanged_signal {
      return QToolBar_iconSizeChanged_signal{poi:self.qclsinst};
   }
 }
@@ -852,7 +727,7 @@ pub trait QToolBar_iconSizeChanged_signal_connect {
 #[derive(Default)] // for QToolBar_allowedAreasChanged
 pub struct QToolBar_allowedAreasChanged_signal{poi:u64}
 impl /* struct */ QToolBar {
-  pub fn allowedAreasChanged_1(&self) -> QToolBar_allowedAreasChanged_signal {
+  pub fn allowedAreasChanged(&self) -> QToolBar_allowedAreasChanged_signal {
      return QToolBar_allowedAreasChanged_signal{poi:self.qclsinst};
   }
 }
@@ -868,7 +743,7 @@ pub trait QToolBar_allowedAreasChanged_signal_connect {
 #[derive(Default)] // for QToolBar_movableChanged
 pub struct QToolBar_movableChanged_signal{poi:u64}
 impl /* struct */ QToolBar {
-  pub fn movableChanged_1(&self) -> QToolBar_movableChanged_signal {
+  pub fn movableChanged(&self) -> QToolBar_movableChanged_signal {
      return QToolBar_movableChanged_signal{poi:self.qclsinst};
   }
 }
@@ -884,7 +759,7 @@ pub trait QToolBar_movableChanged_signal_connect {
 #[derive(Default)] // for QToolBar_toolButtonStyleChanged
 pub struct QToolBar_toolButtonStyleChanged_signal{poi:u64}
 impl /* struct */ QToolBar {
-  pub fn toolButtonStyleChanged_1(&self) -> QToolBar_toolButtonStyleChanged_signal {
+  pub fn toolButtonStyleChanged(&self) -> QToolBar_toolButtonStyleChanged_signal {
      return QToolBar_toolButtonStyleChanged_signal{poi:self.qclsinst};
   }
 }
@@ -900,7 +775,7 @@ pub trait QToolBar_toolButtonStyleChanged_signal_connect {
 #[derive(Default)] // for QToolBar_topLevelChanged
 pub struct QToolBar_topLevelChanged_signal{poi:u64}
 impl /* struct */ QToolBar {
-  pub fn topLevelChanged_1(&self) -> QToolBar_topLevelChanged_signal {
+  pub fn topLevelChanged(&self) -> QToolBar_topLevelChanged_signal {
      return QToolBar_topLevelChanged_signal{poi:self.qclsinst};
   }
 }
@@ -916,7 +791,7 @@ pub trait QToolBar_topLevelChanged_signal_connect {
 #[derive(Default)] // for QToolBar_actionTriggered
 pub struct QToolBar_actionTriggered_signal{poi:u64}
 impl /* struct */ QToolBar {
-  pub fn actionTriggered_1(&self) -> QToolBar_actionTriggered_signal {
+  pub fn actionTriggered(&self) -> QToolBar_actionTriggered_signal {
      return QToolBar_actionTriggered_signal{poi:self.qclsinst};
   }
 }
@@ -932,7 +807,7 @@ pub trait QToolBar_actionTriggered_signal_connect {
 #[derive(Default)] // for QToolBar_orientationChanged
 pub struct QToolBar_orientationChanged_signal{poi:u64}
 impl /* struct */ QToolBar {
-  pub fn orientationChanged_1(&self) -> QToolBar_orientationChanged_signal {
+  pub fn orientationChanged(&self) -> QToolBar_orientationChanged_signal {
      return QToolBar_orientationChanged_signal{poi:self.qclsinst};
   }
 }
@@ -948,7 +823,7 @@ pub trait QToolBar_orientationChanged_signal_connect {
 #[derive(Default)] // for QToolBar_visibilityChanged
 pub struct QToolBar_visibilityChanged_signal{poi:u64}
 impl /* struct */ QToolBar {
-  pub fn visibilityChanged_1(&self) -> QToolBar_visibilityChanged_signal {
+  pub fn visibilityChanged(&self) -> QToolBar_visibilityChanged_signal {
      return QToolBar_visibilityChanged_signal{poi:self.qclsinst};
   }
 }
@@ -967,11 +842,12 @@ extern fn QToolBar_actionTriggered_signal_connect_cb_0(rsfptr:fn(QAction), arg0:
   let rsarg0 = QAction::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QToolBar_actionTriggered_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QAction), arg0: *mut c_void) {
+extern fn QToolBar_actionTriggered_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(QAction)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QAction::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QToolBar_actionTriggered_signal_connect for fn(QAction) {
   fn connect(self, sigthis: QToolBar_actionTriggered_signal) {
@@ -992,7 +868,7 @@ impl /* trait */ QToolBar_actionTriggered_signal_connect for Box<Fn(QAction)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QToolBar_actionTriggered_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QToolBar_SlotProxy_connect__ZN8QToolBar15actionTriggeredEP7QAction(arg0, arg1, arg2)};
   }
 }
@@ -1002,11 +878,12 @@ extern fn QToolBar_movableChanged_signal_connect_cb_1(rsfptr:fn(i8), arg0: c_cha
   let rsarg0 = arg0 as i8;
   rsfptr(rsarg0);
 }
-extern fn QToolBar_movableChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(i8), arg0: c_char) {
+extern fn QToolBar_movableChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn(i8)>, arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i8;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QToolBar_movableChanged_signal_connect for fn(i8) {
   fn connect(self, sigthis: QToolBar_movableChanged_signal) {
@@ -1027,7 +904,7 @@ impl /* trait */ QToolBar_movableChanged_signal_connect for Box<Fn(i8)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QToolBar_movableChanged_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QToolBar_SlotProxy_connect__ZN8QToolBar14movableChangedEb(arg0, arg1, arg2)};
   }
 }
@@ -1037,11 +914,12 @@ extern fn QToolBar_visibilityChanged_signal_connect_cb_2(rsfptr:fn(i8), arg0: c_
   let rsarg0 = arg0 as i8;
   rsfptr(rsarg0);
 }
-extern fn QToolBar_visibilityChanged_signal_connect_cb_box_2(rsfptr_raw:*mut Fn(i8), arg0: c_char) {
+extern fn QToolBar_visibilityChanged_signal_connect_cb_box_2(rsfptr_raw:*mut Box<Fn(i8)>, arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i8;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QToolBar_visibilityChanged_signal_connect for fn(i8) {
   fn connect(self, sigthis: QToolBar_visibilityChanged_signal) {
@@ -1062,7 +940,7 @@ impl /* trait */ QToolBar_visibilityChanged_signal_connect for Box<Fn(i8)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QToolBar_visibilityChanged_signal_connect_cb_box_2 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QToolBar_SlotProxy_connect__ZN8QToolBar17visibilityChangedEb(arg0, arg1, arg2)};
   }
 }
@@ -1072,11 +950,12 @@ extern fn QToolBar_iconSizeChanged_signal_connect_cb_3(rsfptr:fn(QSize), arg0: *
   let rsarg0 = QSize::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QToolBar_iconSizeChanged_signal_connect_cb_box_3(rsfptr_raw:*mut Fn(QSize), arg0: *mut c_void) {
+extern fn QToolBar_iconSizeChanged_signal_connect_cb_box_3(rsfptr_raw:*mut Box<Fn(QSize)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QSize::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QToolBar_iconSizeChanged_signal_connect for fn(QSize) {
   fn connect(self, sigthis: QToolBar_iconSizeChanged_signal) {
@@ -1097,7 +976,7 @@ impl /* trait */ QToolBar_iconSizeChanged_signal_connect for Box<Fn(QSize)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QToolBar_iconSizeChanged_signal_connect_cb_box_3 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QToolBar_SlotProxy_connect__ZN8QToolBar15iconSizeChangedERK5QSize(arg0, arg1, arg2)};
   }
 }
@@ -1107,11 +986,12 @@ extern fn QToolBar_orientationChanged_signal_connect_cb_4(rsfptr:fn(i32), arg0: 
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QToolBar_orientationChanged_signal_connect_cb_box_4(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
+extern fn QToolBar_orientationChanged_signal_connect_cb_box_4(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QToolBar_orientationChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QToolBar_orientationChanged_signal) {
@@ -1132,7 +1012,7 @@ impl /* trait */ QToolBar_orientationChanged_signal_connect for Box<Fn(i32)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QToolBar_orientationChanged_signal_connect_cb_box_4 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QToolBar_SlotProxy_connect__ZN8QToolBar18orientationChangedEN2Qt11OrientationE(arg0, arg1, arg2)};
   }
 }
@@ -1142,11 +1022,12 @@ extern fn QToolBar_toolButtonStyleChanged_signal_connect_cb_5(rsfptr:fn(i32), ar
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QToolBar_toolButtonStyleChanged_signal_connect_cb_box_5(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
+extern fn QToolBar_toolButtonStyleChanged_signal_connect_cb_box_5(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QToolBar_toolButtonStyleChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QToolBar_toolButtonStyleChanged_signal) {
@@ -1167,7 +1048,7 @@ impl /* trait */ QToolBar_toolButtonStyleChanged_signal_connect for Box<Fn(i32)>
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QToolBar_toolButtonStyleChanged_signal_connect_cb_box_5 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QToolBar_SlotProxy_connect__ZN8QToolBar22toolButtonStyleChangedEN2Qt15ToolButtonStyleE(arg0, arg1, arg2)};
   }
 }
@@ -1177,11 +1058,12 @@ extern fn QToolBar_topLevelChanged_signal_connect_cb_6(rsfptr:fn(i8), arg0: c_ch
   let rsarg0 = arg0 as i8;
   rsfptr(rsarg0);
 }
-extern fn QToolBar_topLevelChanged_signal_connect_cb_box_6(rsfptr_raw:*mut Fn(i8), arg0: c_char) {
+extern fn QToolBar_topLevelChanged_signal_connect_cb_box_6(rsfptr_raw:*mut Box<Fn(i8)>, arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i8;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QToolBar_topLevelChanged_signal_connect for fn(i8) {
   fn connect(self, sigthis: QToolBar_topLevelChanged_signal) {
@@ -1202,7 +1084,7 @@ impl /* trait */ QToolBar_topLevelChanged_signal_connect for Box<Fn(i8)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QToolBar_topLevelChanged_signal_connect_cb_box_6 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QToolBar_SlotProxy_connect__ZN8QToolBar15topLevelChangedEb(arg0, arg1, arg2)};
   }
 }
@@ -1212,11 +1094,12 @@ extern fn QToolBar_allowedAreasChanged_signal_connect_cb_7(rsfptr:fn(i32), arg0:
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QToolBar_allowedAreasChanged_signal_connect_cb_box_7(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
+extern fn QToolBar_allowedAreasChanged_signal_connect_cb_box_7(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QToolBar_allowedAreasChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QToolBar_allowedAreasChanged_signal) {
@@ -1237,7 +1120,7 @@ impl /* trait */ QToolBar_allowedAreasChanged_signal_connect for Box<Fn(i32)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QToolBar_allowedAreasChanged_signal_connect_cb_box_7 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QToolBar_SlotProxy_connect__ZN8QToolBar19allowedAreasChangedE6QFlagsIN2Qt11ToolBarAreaEE(arg0, arg1, arg2)};
   }
 }

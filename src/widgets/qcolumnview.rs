@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtWidgets/qcolumnview.h
 // dst-file: /src/widgets/qcolumnview.rs
 //
@@ -61,8 +61,6 @@ extern {
   fn _ZN11QColumnViewC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QColumnView::setModel(QAbstractItemModel * model);
   fn _ZN11QColumnView8setModelEP18QAbstractItemModel(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QColumnView::updatePreviewWidget(const QModelIndex & index);
-  fn _ZN11QColumnView19updatePreviewWidgetERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QColumnView::setRootIndex(const QModelIndex & index);
   fn _ZN11QColumnView12setRootIndexERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QWidget * QColumnView::previewWidget();
@@ -82,7 +80,7 @@ extern {
 pub struct QColumnView {
   qbase: QAbstractItemView,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _updatePreviewWidget_1: QColumnView_updatePreviewWidget_signal,
+  pub _updatePreviewWidget: QColumnView_updatePreviewWidget_signal,
 }
 
 impl /*struct*/ QColumnView {
@@ -354,29 +352,6 @@ impl<'a> /*trait*/ QColumnView_setModel<()> for (&'a QAbstractItemModel) {
   }
 }
 
-  // proto:  void QColumnView::updatePreviewWidget(const QModelIndex & index);
-impl /*struct*/ QColumnView {
-  pub fn updatePreviewWidget<RetType, T: QColumnView_updatePreviewWidget<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.updatePreviewWidget(self);
-    // return 1;
-  }
-}
-
-pub trait QColumnView_updatePreviewWidget<RetType> {
-  fn updatePreviewWidget(self , rsthis: & QColumnView) -> RetType;
-}
-
-  // proto:  void QColumnView::updatePreviewWidget(const QModelIndex & index);
-impl<'a> /*trait*/ QColumnView_updatePreviewWidget<()> for (&'a QModelIndex) {
-  fn updatePreviewWidget(self , rsthis: & QColumnView) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QColumnView19updatePreviewWidgetERK11QModelIndex()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QColumnView19updatePreviewWidgetERK11QModelIndex(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  void QColumnView::setRootIndex(const QModelIndex & index);
 impl /*struct*/ QColumnView {
   pub fn setRootIndex<RetType, T: QColumnView_setRootIndex<RetType>>(& self,  overload_args: T) -> RetType {
@@ -497,7 +472,7 @@ impl<'a> /*trait*/ QColumnView_free<()> for () {
 #[derive(Default)] // for QColumnView_updatePreviewWidget
 pub struct QColumnView_updatePreviewWidget_signal{poi:u64}
 impl /* struct */ QColumnView {
-  pub fn updatePreviewWidget_1(&self) -> QColumnView_updatePreviewWidget_signal {
+  pub fn updatePreviewWidget(&self) -> QColumnView_updatePreviewWidget_signal {
      return QColumnView_updatePreviewWidget_signal{poi:self.qclsinst};
   }
 }
@@ -516,11 +491,12 @@ extern fn QColumnView_updatePreviewWidget_signal_connect_cb_0(rsfptr:fn(QModelIn
   let rsarg0 = QModelIndex::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QColumnView_updatePreviewWidget_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QModelIndex), arg0: *mut c_void) {
+extern fn QColumnView_updatePreviewWidget_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(QModelIndex)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QModelIndex::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QColumnView_updatePreviewWidget_signal_connect for fn(QModelIndex) {
   fn connect(self, sigthis: QColumnView_updatePreviewWidget_signal) {
@@ -541,7 +517,7 @@ impl /* trait */ QColumnView_updatePreviewWidget_signal_connect for Box<Fn(QMode
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QColumnView_updatePreviewWidget_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QColumnView_SlotProxy_connect__ZN11QColumnView19updatePreviewWidgetERK11QModelIndex(arg0, arg1, arg2)};
   }
 }

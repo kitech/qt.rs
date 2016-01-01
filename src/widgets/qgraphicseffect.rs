@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtWidgets/qgraphicseffect.h
 // dst-file: /src/widgets/qgraphicseffect.rs
 //
@@ -37,8 +37,6 @@ extern {
   fn QGraphicsColorizeEffect_Class_Size() -> c_int;
   // proto:  void QGraphicsColorizeEffect::setColor(const QColor & c);
   fn _ZN23QGraphicsColorizeEffect8setColorERK6QColor(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QGraphicsColorizeEffect::strengthChanged(qreal strength);
-  fn _ZN23QGraphicsColorizeEffect15strengthChangedEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QGraphicsColorizeEffect::QGraphicsColorizeEffect(const QGraphicsColorizeEffect & );
   fn dector_ZN23QGraphicsColorizeEffectC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN23QGraphicsColorizeEffectC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
@@ -51,8 +49,6 @@ extern {
   fn _ZNK23QGraphicsColorizeEffect8strengthEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QGraphicsColorizeEffect::~QGraphicsColorizeEffect();
   fn _ZN23QGraphicsColorizeEffectD0Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  void QGraphicsColorizeEffect::colorChanged(const QColor & color);
-  fn _ZN23QGraphicsColorizeEffect12colorChangedERK6QColor(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QColor QGraphicsColorizeEffect::color();
   fn _ZNK23QGraphicsColorizeEffect5colorEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  const QMetaObject * QGraphicsColorizeEffect::metaObject();
@@ -66,8 +62,6 @@ extern {
   fn _ZN15QGraphicsEffect6updateEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QGraphicsEffect::setEnabled(bool enable);
   fn _ZN15QGraphicsEffect10setEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
-  // proto:  void QGraphicsEffect::enabledChanged(bool enabled);
-  fn _ZN15QGraphicsEffect14enabledChangedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  const QMetaObject * QGraphicsEffect::metaObject();
   fn _ZNK15QGraphicsEffect10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QGraphicsEffect::isEnabled();
@@ -83,8 +77,6 @@ extern {
   fn dector_ZN15QGraphicsEffectC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
   fn _ZN15QGraphicsEffectC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QGraphicsDropShadowEffect_Class_Size() -> c_int;
-  // proto:  void QGraphicsDropShadowEffect::blurRadiusChanged(qreal blurRadius);
-  fn _ZN25QGraphicsDropShadowEffect17blurRadiusChangedEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  const QMetaObject * QGraphicsDropShadowEffect::metaObject();
   fn _ZNK25QGraphicsDropShadowEffect10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  QRectF QGraphicsDropShadowEffect::boundingRectFor(const QRectF & rect);
@@ -106,8 +98,6 @@ extern {
   fn _ZN25QGraphicsDropShadowEffect8setColorERK6QColor(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsDropShadowEffect::setOffset(const QPointF & ofs);
   fn _ZN25QGraphicsDropShadowEffect9setOffsetERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QGraphicsDropShadowEffect::offsetChanged(const QPointF & offset);
-  fn _ZN25QGraphicsDropShadowEffect13offsetChangedERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsDropShadowEffect::setOffset(qreal dx, qreal dy);
   fn demth_ZN25QGraphicsDropShadowEffect9setOffsetEdd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double);
   // proto:  void QGraphicsDropShadowEffect::setOffset(qreal d);
@@ -115,8 +105,6 @@ extern {
   // proto:  void QGraphicsDropShadowEffect::QGraphicsDropShadowEffect(const QGraphicsDropShadowEffect & );
   fn dector_ZN25QGraphicsDropShadowEffectC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN25QGraphicsDropShadowEffectC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QGraphicsDropShadowEffect::colorChanged(const QColor & color);
-  fn _ZN25QGraphicsDropShadowEffect12colorChangedERK6QColor(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  qreal QGraphicsDropShadowEffect::yOffset();
   fn demth_ZNK25QGraphicsDropShadowEffect7yOffsetEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QGraphicsDropShadowEffect::setXOffset(qreal dx);
@@ -138,10 +126,6 @@ extern {
   fn _ZN22QGraphicsOpacityEffectC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QBrush QGraphicsOpacityEffect::opacityMask();
   fn _ZNK22QGraphicsOpacityEffect11opacityMaskEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QGraphicsOpacityEffect::opacityChanged(qreal opacity);
-  fn _ZN22QGraphicsOpacityEffect14opacityChangedEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
-  // proto:  void QGraphicsOpacityEffect::opacityMaskChanged(const QBrush & mask);
-  fn _ZN22QGraphicsOpacityEffect18opacityMaskChangedERK6QBrush(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QGraphicsOpacityEffect::metaObject();
   fn _ZNK22QGraphicsOpacityEffect10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  qreal QGraphicsOpacityEffect::opacity();
@@ -165,8 +149,6 @@ extern {
   // proto:  void QGraphicsBlurEffect::QGraphicsBlurEffect(QObject * parent);
   fn dector_ZN19QGraphicsBlurEffectC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
   fn _ZN19QGraphicsBlurEffectC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QGraphicsBlurEffect::blurRadiusChanged(qreal blurRadius);
-  fn _ZN19QGraphicsBlurEffect17blurRadiusChangedEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   fn QGraphicsColorizeEffect_SlotProxy_connect__ZN23QGraphicsColorizeEffect15strengthChangedEd(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QGraphicsColorizeEffect_SlotProxy_connect__ZN23QGraphicsColorizeEffect12colorChangedERK6QColor(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QGraphicsEffect_SlotProxy_connect__ZN15QGraphicsEffect14enabledChangedEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
@@ -185,8 +167,8 @@ extern {
 pub struct QGraphicsColorizeEffect {
   qbase: QGraphicsEffect,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _strengthChanged_1: QGraphicsColorizeEffect_strengthChanged_signal,
-  pub _colorChanged_1: QGraphicsColorizeEffect_colorChanged_signal,
+  pub _strengthChanged: QGraphicsColorizeEffect_strengthChanged_signal,
+  pub _colorChanged: QGraphicsColorizeEffect_colorChanged_signal,
 }
 
 // class sizeof(QGraphicsEffect)=1
@@ -194,7 +176,7 @@ pub struct QGraphicsColorizeEffect {
 pub struct QGraphicsEffect {
   qbase: QObject,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _enabledChanged_1: QGraphicsEffect_enabledChanged_signal,
+  pub _enabledChanged: QGraphicsEffect_enabledChanged_signal,
 }
 
 // class sizeof(QGraphicsDropShadowEffect)=1
@@ -202,9 +184,9 @@ pub struct QGraphicsEffect {
 pub struct QGraphicsDropShadowEffect {
   qbase: QGraphicsEffect,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _colorChanged_1: QGraphicsDropShadowEffect_colorChanged_signal,
-  pub _offsetChanged_1: QGraphicsDropShadowEffect_offsetChanged_signal,
-  pub _blurRadiusChanged_1: QGraphicsDropShadowEffect_blurRadiusChanged_signal,
+  pub _colorChanged: QGraphicsDropShadowEffect_colorChanged_signal,
+  pub _offsetChanged: QGraphicsDropShadowEffect_offsetChanged_signal,
+  pub _blurRadiusChanged: QGraphicsDropShadowEffect_blurRadiusChanged_signal,
 }
 
 // class sizeof(QGraphicsOpacityEffect)=1
@@ -212,8 +194,8 @@ pub struct QGraphicsDropShadowEffect {
 pub struct QGraphicsOpacityEffect {
   qbase: QGraphicsEffect,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _opacityMaskChanged_1: QGraphicsOpacityEffect_opacityMaskChanged_signal,
-  pub _opacityChanged_1: QGraphicsOpacityEffect_opacityChanged_signal,
+  pub _opacityMaskChanged: QGraphicsOpacityEffect_opacityMaskChanged_signal,
+  pub _opacityChanged: QGraphicsOpacityEffect_opacityChanged_signal,
 }
 
 // class sizeof(QGraphicsBlurEffect)=1
@@ -221,8 +203,8 @@ pub struct QGraphicsOpacityEffect {
 pub struct QGraphicsBlurEffect {
   qbase: QGraphicsEffect,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _blurHintsChanged_1: QGraphicsBlurEffect_blurHintsChanged_signal,
-  pub _blurRadiusChanged_1: QGraphicsBlurEffect_blurRadiusChanged_signal,
+  pub _blurHintsChanged: QGraphicsBlurEffect_blurHintsChanged_signal,
+  pub _blurRadiusChanged: QGraphicsBlurEffect_blurRadiusChanged_signal,
 }
 
 impl /*struct*/ QGraphicsColorizeEffect {
@@ -261,29 +243,6 @@ impl<'a> /*trait*/ QGraphicsColorizeEffect_setColor<()> for (&'a QColor) {
     // unsafe{_ZN23QGraphicsColorizeEffect8setColorERK6QColor()};
     let arg0 = self.qclsinst  as *mut c_void;
      unsafe {_ZN23QGraphicsColorizeEffect8setColorERK6QColor(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QGraphicsColorizeEffect::strengthChanged(qreal strength);
-impl /*struct*/ QGraphicsColorizeEffect {
-  pub fn strengthChanged<RetType, T: QGraphicsColorizeEffect_strengthChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.strengthChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QGraphicsColorizeEffect_strengthChanged<RetType> {
-  fn strengthChanged(self , rsthis: & QGraphicsColorizeEffect) -> RetType;
-}
-
-  // proto:  void QGraphicsColorizeEffect::strengthChanged(qreal strength);
-impl<'a> /*trait*/ QGraphicsColorizeEffect_strengthChanged<()> for (f64) {
-  fn strengthChanged(self , rsthis: & QGraphicsColorizeEffect) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN23QGraphicsColorizeEffect15strengthChangedEd()};
-    let arg0 = self  as c_double;
-     unsafe {_ZN23QGraphicsColorizeEffect15strengthChangedEd(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -397,29 +356,6 @@ impl<'a> /*trait*/ QGraphicsColorizeEffect_free<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QGraphicsColorizeEffectD0Ev()};
      unsafe {_ZN23QGraphicsColorizeEffectD0Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QGraphicsColorizeEffect::colorChanged(const QColor & color);
-impl /*struct*/ QGraphicsColorizeEffect {
-  pub fn colorChanged<RetType, T: QGraphicsColorizeEffect_colorChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.colorChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QGraphicsColorizeEffect_colorChanged<RetType> {
-  fn colorChanged(self , rsthis: & QGraphicsColorizeEffect) -> RetType;
-}
-
-  // proto:  void QGraphicsColorizeEffect::colorChanged(const QColor & color);
-impl<'a> /*trait*/ QGraphicsColorizeEffect_colorChanged<()> for (&'a QColor) {
-  fn colorChanged(self , rsthis: & QGraphicsColorizeEffect) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN23QGraphicsColorizeEffect12colorChangedERK6QColor()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN23QGraphicsColorizeEffect12colorChangedERK6QColor(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -579,29 +515,6 @@ impl<'a> /*trait*/ QGraphicsEffect_setEnabled<()> for (i8) {
   }
 }
 
-  // proto:  void QGraphicsEffect::enabledChanged(bool enabled);
-impl /*struct*/ QGraphicsEffect {
-  pub fn enabledChanged<RetType, T: QGraphicsEffect_enabledChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.enabledChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QGraphicsEffect_enabledChanged<RetType> {
-  fn enabledChanged(self , rsthis: & QGraphicsEffect) -> RetType;
-}
-
-  // proto:  void QGraphicsEffect::enabledChanged(bool enabled);
-impl<'a> /*trait*/ QGraphicsEffect_enabledChanged<()> for (i8) {
-  fn enabledChanged(self , rsthis: & QGraphicsEffect) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QGraphicsEffect14enabledChangedEb()};
-    let arg0 = self  as c_char;
-     unsafe {_ZN15QGraphicsEffect14enabledChangedEb(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  const QMetaObject * QGraphicsEffect::metaObject();
 impl /*struct*/ QGraphicsEffect {
   pub fn metaObject<RetType, T: QGraphicsEffect_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
@@ -755,29 +668,6 @@ impl AsRef<QGraphicsEffect> for QGraphicsDropShadowEffect {
     return & self.qbase;
   }
 }
-  // proto:  void QGraphicsDropShadowEffect::blurRadiusChanged(qreal blurRadius);
-impl /*struct*/ QGraphicsDropShadowEffect {
-  pub fn blurRadiusChanged<RetType, T: QGraphicsDropShadowEffect_blurRadiusChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.blurRadiusChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QGraphicsDropShadowEffect_blurRadiusChanged<RetType> {
-  fn blurRadiusChanged(self , rsthis: & QGraphicsDropShadowEffect) -> RetType;
-}
-
-  // proto:  void QGraphicsDropShadowEffect::blurRadiusChanged(qreal blurRadius);
-impl<'a> /*trait*/ QGraphicsDropShadowEffect_blurRadiusChanged<()> for (f64) {
-  fn blurRadiusChanged(self , rsthis: & QGraphicsDropShadowEffect) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN25QGraphicsDropShadowEffect17blurRadiusChangedEd()};
-    let arg0 = self  as c_double;
-     unsafe {_ZN25QGraphicsDropShadowEffect17blurRadiusChangedEd(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  const QMetaObject * QGraphicsDropShadowEffect::metaObject();
 impl /*struct*/ QGraphicsDropShadowEffect {
   pub fn metaObject<RetType, T: QGraphicsDropShadowEffect_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
@@ -1017,29 +907,6 @@ impl<'a> /*trait*/ QGraphicsDropShadowEffect_setOffset<()> for (&'a QPointF) {
   }
 }
 
-  // proto:  void QGraphicsDropShadowEffect::offsetChanged(const QPointF & offset);
-impl /*struct*/ QGraphicsDropShadowEffect {
-  pub fn offsetChanged<RetType, T: QGraphicsDropShadowEffect_offsetChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.offsetChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QGraphicsDropShadowEffect_offsetChanged<RetType> {
-  fn offsetChanged(self , rsthis: & QGraphicsDropShadowEffect) -> RetType;
-}
-
-  // proto:  void QGraphicsDropShadowEffect::offsetChanged(const QPointF & offset);
-impl<'a> /*trait*/ QGraphicsDropShadowEffect_offsetChanged<()> for (&'a QPointF) {
-  fn offsetChanged(self , rsthis: & QGraphicsDropShadowEffect) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN25QGraphicsDropShadowEffect13offsetChangedERK7QPointF()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN25QGraphicsDropShadowEffect13offsetChangedERK7QPointF(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  void QGraphicsDropShadowEffect::setOffset(qreal dx, qreal dy);
 impl<'a> /*trait*/ QGraphicsDropShadowEffect_setOffset<()> for (f64, f64) {
   fn setOffset(self , rsthis: & QGraphicsDropShadowEffect) -> () {
@@ -1075,29 +942,6 @@ impl<'a> /*trait*/ QGraphicsDropShadowEffect_new for (&'a QGraphicsDropShadowEff
     let qthis: u64 = unsafe {dector_ZN25QGraphicsDropShadowEffectC1ERKS_(arg0)} as u64;
     let rsthis = QGraphicsDropShadowEffect{qbase: QGraphicsEffect::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  void QGraphicsDropShadowEffect::colorChanged(const QColor & color);
-impl /*struct*/ QGraphicsDropShadowEffect {
-  pub fn colorChanged<RetType, T: QGraphicsDropShadowEffect_colorChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.colorChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QGraphicsDropShadowEffect_colorChanged<RetType> {
-  fn colorChanged(self , rsthis: & QGraphicsDropShadowEffect) -> RetType;
-}
-
-  // proto:  void QGraphicsDropShadowEffect::colorChanged(const QColor & color);
-impl<'a> /*trait*/ QGraphicsDropShadowEffect_colorChanged<()> for (&'a QColor) {
-  fn colorChanged(self , rsthis: & QGraphicsDropShadowEffect) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN25QGraphicsDropShadowEffect12colorChangedERK6QColor()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN25QGraphicsDropShadowEffect12colorChangedERK6QColor(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1320,52 +1164,6 @@ impl<'a> /*trait*/ QGraphicsOpacityEffect_opacityMask<QBrush> for () {
     let mut ret = unsafe {_ZNK22QGraphicsOpacityEffect11opacityMaskEv(rsthis.qclsinst)};
     let mut ret1 = QBrush::inheritFrom(ret as u64);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QGraphicsOpacityEffect::opacityChanged(qreal opacity);
-impl /*struct*/ QGraphicsOpacityEffect {
-  pub fn opacityChanged<RetType, T: QGraphicsOpacityEffect_opacityChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.opacityChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QGraphicsOpacityEffect_opacityChanged<RetType> {
-  fn opacityChanged(self , rsthis: & QGraphicsOpacityEffect) -> RetType;
-}
-
-  // proto:  void QGraphicsOpacityEffect::opacityChanged(qreal opacity);
-impl<'a> /*trait*/ QGraphicsOpacityEffect_opacityChanged<()> for (f64) {
-  fn opacityChanged(self , rsthis: & QGraphicsOpacityEffect) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN22QGraphicsOpacityEffect14opacityChangedEd()};
-    let arg0 = self  as c_double;
-     unsafe {_ZN22QGraphicsOpacityEffect14opacityChangedEd(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QGraphicsOpacityEffect::opacityMaskChanged(const QBrush & mask);
-impl /*struct*/ QGraphicsOpacityEffect {
-  pub fn opacityMaskChanged<RetType, T: QGraphicsOpacityEffect_opacityMaskChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.opacityMaskChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QGraphicsOpacityEffect_opacityMaskChanged<RetType> {
-  fn opacityMaskChanged(self , rsthis: & QGraphicsOpacityEffect) -> RetType;
-}
-
-  // proto:  void QGraphicsOpacityEffect::opacityMaskChanged(const QBrush & mask);
-impl<'a> /*trait*/ QGraphicsOpacityEffect_opacityMaskChanged<()> for (&'a QBrush) {
-  fn opacityMaskChanged(self , rsthis: & QGraphicsOpacityEffect) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN22QGraphicsOpacityEffect18opacityMaskChangedERK6QBrush()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN22QGraphicsOpacityEffect18opacityMaskChangedERK6QBrush(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1615,33 +1413,10 @@ impl<'a> /*trait*/ QGraphicsBlurEffect_new for (&'a QObject) {
   }
 }
 
-  // proto:  void QGraphicsBlurEffect::blurRadiusChanged(qreal blurRadius);
-impl /*struct*/ QGraphicsBlurEffect {
-  pub fn blurRadiusChanged<RetType, T: QGraphicsBlurEffect_blurRadiusChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.blurRadiusChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QGraphicsBlurEffect_blurRadiusChanged<RetType> {
-  fn blurRadiusChanged(self , rsthis: & QGraphicsBlurEffect) -> RetType;
-}
-
-  // proto:  void QGraphicsBlurEffect::blurRadiusChanged(qreal blurRadius);
-impl<'a> /*trait*/ QGraphicsBlurEffect_blurRadiusChanged<()> for (f64) {
-  fn blurRadiusChanged(self , rsthis: & QGraphicsBlurEffect) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QGraphicsBlurEffect17blurRadiusChangedEd()};
-    let arg0 = self  as c_double;
-     unsafe {_ZN19QGraphicsBlurEffect17blurRadiusChangedEd(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
 #[derive(Default)] // for QGraphicsColorizeEffect_strengthChanged
 pub struct QGraphicsColorizeEffect_strengthChanged_signal{poi:u64}
 impl /* struct */ QGraphicsColorizeEffect {
-  pub fn strengthChanged_1(&self) -> QGraphicsColorizeEffect_strengthChanged_signal {
+  pub fn strengthChanged(&self) -> QGraphicsColorizeEffect_strengthChanged_signal {
      return QGraphicsColorizeEffect_strengthChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1657,7 +1432,7 @@ pub trait QGraphicsColorizeEffect_strengthChanged_signal_connect {
 #[derive(Default)] // for QGraphicsColorizeEffect_colorChanged
 pub struct QGraphicsColorizeEffect_colorChanged_signal{poi:u64}
 impl /* struct */ QGraphicsColorizeEffect {
-  pub fn colorChanged_1(&self) -> QGraphicsColorizeEffect_colorChanged_signal {
+  pub fn colorChanged(&self) -> QGraphicsColorizeEffect_colorChanged_signal {
      return QGraphicsColorizeEffect_colorChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1676,11 +1451,12 @@ extern fn QGraphicsColorizeEffect_strengthChanged_signal_connect_cb_0(rsfptr:fn(
   let rsarg0 = arg0 as f64;
   rsfptr(rsarg0);
 }
-extern fn QGraphicsColorizeEffect_strengthChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(f64), arg0: c_double) {
+extern fn QGraphicsColorizeEffect_strengthChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(f64)>, arg0: c_double) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as f64;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QGraphicsColorizeEffect_strengthChanged_signal_connect for fn(f64) {
   fn connect(self, sigthis: QGraphicsColorizeEffect_strengthChanged_signal) {
@@ -1701,7 +1477,7 @@ impl /* trait */ QGraphicsColorizeEffect_strengthChanged_signal_connect for Box<
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QGraphicsColorizeEffect_strengthChanged_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QGraphicsColorizeEffect_SlotProxy_connect__ZN23QGraphicsColorizeEffect15strengthChangedEd(arg0, arg1, arg2)};
   }
 }
@@ -1711,11 +1487,12 @@ extern fn QGraphicsColorizeEffect_colorChanged_signal_connect_cb_1(rsfptr:fn(QCo
   let rsarg0 = QColor::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QGraphicsColorizeEffect_colorChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(QColor), arg0: *mut c_void) {
+extern fn QGraphicsColorizeEffect_colorChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn(QColor)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QColor::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QGraphicsColorizeEffect_colorChanged_signal_connect for fn(QColor) {
   fn connect(self, sigthis: QGraphicsColorizeEffect_colorChanged_signal) {
@@ -1736,14 +1513,14 @@ impl /* trait */ QGraphicsColorizeEffect_colorChanged_signal_connect for Box<Fn(
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QGraphicsColorizeEffect_colorChanged_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QGraphicsColorizeEffect_SlotProxy_connect__ZN23QGraphicsColorizeEffect12colorChangedERK6QColor(arg0, arg1, arg2)};
   }
 }
 #[derive(Default)] // for QGraphicsEffect_enabledChanged
 pub struct QGraphicsEffect_enabledChanged_signal{poi:u64}
 impl /* struct */ QGraphicsEffect {
-  pub fn enabledChanged_1(&self) -> QGraphicsEffect_enabledChanged_signal {
+  pub fn enabledChanged(&self) -> QGraphicsEffect_enabledChanged_signal {
      return QGraphicsEffect_enabledChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1762,11 +1539,12 @@ extern fn QGraphicsEffect_enabledChanged_signal_connect_cb_0(rsfptr:fn(i8), arg0
   let rsarg0 = arg0 as i8;
   rsfptr(rsarg0);
 }
-extern fn QGraphicsEffect_enabledChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(i8), arg0: c_char) {
+extern fn QGraphicsEffect_enabledChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(i8)>, arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i8;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QGraphicsEffect_enabledChanged_signal_connect for fn(i8) {
   fn connect(self, sigthis: QGraphicsEffect_enabledChanged_signal) {
@@ -1787,14 +1565,14 @@ impl /* trait */ QGraphicsEffect_enabledChanged_signal_connect for Box<Fn(i8)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QGraphicsEffect_enabledChanged_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QGraphicsEffect_SlotProxy_connect__ZN15QGraphicsEffect14enabledChangedEb(arg0, arg1, arg2)};
   }
 }
 #[derive(Default)] // for QGraphicsDropShadowEffect_colorChanged
 pub struct QGraphicsDropShadowEffect_colorChanged_signal{poi:u64}
 impl /* struct */ QGraphicsDropShadowEffect {
-  pub fn colorChanged_1(&self) -> QGraphicsDropShadowEffect_colorChanged_signal {
+  pub fn colorChanged(&self) -> QGraphicsDropShadowEffect_colorChanged_signal {
      return QGraphicsDropShadowEffect_colorChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1810,7 +1588,7 @@ pub trait QGraphicsDropShadowEffect_colorChanged_signal_connect {
 #[derive(Default)] // for QGraphicsDropShadowEffect_offsetChanged
 pub struct QGraphicsDropShadowEffect_offsetChanged_signal{poi:u64}
 impl /* struct */ QGraphicsDropShadowEffect {
-  pub fn offsetChanged_1(&self) -> QGraphicsDropShadowEffect_offsetChanged_signal {
+  pub fn offsetChanged(&self) -> QGraphicsDropShadowEffect_offsetChanged_signal {
      return QGraphicsDropShadowEffect_offsetChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1826,7 +1604,7 @@ pub trait QGraphicsDropShadowEffect_offsetChanged_signal_connect {
 #[derive(Default)] // for QGraphicsDropShadowEffect_blurRadiusChanged
 pub struct QGraphicsDropShadowEffect_blurRadiusChanged_signal{poi:u64}
 impl /* struct */ QGraphicsDropShadowEffect {
-  pub fn blurRadiusChanged_1(&self) -> QGraphicsDropShadowEffect_blurRadiusChanged_signal {
+  pub fn blurRadiusChanged(&self) -> QGraphicsDropShadowEffect_blurRadiusChanged_signal {
      return QGraphicsDropShadowEffect_blurRadiusChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1845,11 +1623,12 @@ extern fn QGraphicsDropShadowEffect_blurRadiusChanged_signal_connect_cb_0(rsfptr
   let rsarg0 = arg0 as f64;
   rsfptr(rsarg0);
 }
-extern fn QGraphicsDropShadowEffect_blurRadiusChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(f64), arg0: c_double) {
+extern fn QGraphicsDropShadowEffect_blurRadiusChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(f64)>, arg0: c_double) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as f64;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QGraphicsDropShadowEffect_blurRadiusChanged_signal_connect for fn(f64) {
   fn connect(self, sigthis: QGraphicsDropShadowEffect_blurRadiusChanged_signal) {
@@ -1870,7 +1649,7 @@ impl /* trait */ QGraphicsDropShadowEffect_blurRadiusChanged_signal_connect for 
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QGraphicsDropShadowEffect_blurRadiusChanged_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QGraphicsDropShadowEffect_SlotProxy_connect__ZN25QGraphicsDropShadowEffect17blurRadiusChangedEd(arg0, arg1, arg2)};
   }
 }
@@ -1880,11 +1659,12 @@ extern fn QGraphicsDropShadowEffect_colorChanged_signal_connect_cb_1(rsfptr:fn(Q
   let rsarg0 = QColor::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QGraphicsDropShadowEffect_colorChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(QColor), arg0: *mut c_void) {
+extern fn QGraphicsDropShadowEffect_colorChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn(QColor)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QColor::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QGraphicsDropShadowEffect_colorChanged_signal_connect for fn(QColor) {
   fn connect(self, sigthis: QGraphicsDropShadowEffect_colorChanged_signal) {
@@ -1905,7 +1685,7 @@ impl /* trait */ QGraphicsDropShadowEffect_colorChanged_signal_connect for Box<F
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QGraphicsDropShadowEffect_colorChanged_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QGraphicsDropShadowEffect_SlotProxy_connect__ZN25QGraphicsDropShadowEffect12colorChangedERK6QColor(arg0, arg1, arg2)};
   }
 }
@@ -1915,11 +1695,12 @@ extern fn QGraphicsDropShadowEffect_offsetChanged_signal_connect_cb_2(rsfptr:fn(
   let rsarg0 = QPointF::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QGraphicsDropShadowEffect_offsetChanged_signal_connect_cb_box_2(rsfptr_raw:*mut Fn(QPointF), arg0: *mut c_void) {
+extern fn QGraphicsDropShadowEffect_offsetChanged_signal_connect_cb_box_2(rsfptr_raw:*mut Box<Fn(QPointF)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QPointF::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QGraphicsDropShadowEffect_offsetChanged_signal_connect for fn(QPointF) {
   fn connect(self, sigthis: QGraphicsDropShadowEffect_offsetChanged_signal) {
@@ -1940,14 +1721,14 @@ impl /* trait */ QGraphicsDropShadowEffect_offsetChanged_signal_connect for Box<
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QGraphicsDropShadowEffect_offsetChanged_signal_connect_cb_box_2 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QGraphicsDropShadowEffect_SlotProxy_connect__ZN25QGraphicsDropShadowEffect13offsetChangedERK7QPointF(arg0, arg1, arg2)};
   }
 }
 #[derive(Default)] // for QGraphicsOpacityEffect_opacityMaskChanged
 pub struct QGraphicsOpacityEffect_opacityMaskChanged_signal{poi:u64}
 impl /* struct */ QGraphicsOpacityEffect {
-  pub fn opacityMaskChanged_1(&self) -> QGraphicsOpacityEffect_opacityMaskChanged_signal {
+  pub fn opacityMaskChanged(&self) -> QGraphicsOpacityEffect_opacityMaskChanged_signal {
      return QGraphicsOpacityEffect_opacityMaskChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1963,7 +1744,7 @@ pub trait QGraphicsOpacityEffect_opacityMaskChanged_signal_connect {
 #[derive(Default)] // for QGraphicsOpacityEffect_opacityChanged
 pub struct QGraphicsOpacityEffect_opacityChanged_signal{poi:u64}
 impl /* struct */ QGraphicsOpacityEffect {
-  pub fn opacityChanged_1(&self) -> QGraphicsOpacityEffect_opacityChanged_signal {
+  pub fn opacityChanged(&self) -> QGraphicsOpacityEffect_opacityChanged_signal {
      return QGraphicsOpacityEffect_opacityChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1982,11 +1763,12 @@ extern fn QGraphicsOpacityEffect_opacityChanged_signal_connect_cb_0(rsfptr:fn(f6
   let rsarg0 = arg0 as f64;
   rsfptr(rsarg0);
 }
-extern fn QGraphicsOpacityEffect_opacityChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(f64), arg0: c_double) {
+extern fn QGraphicsOpacityEffect_opacityChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(f64)>, arg0: c_double) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as f64;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QGraphicsOpacityEffect_opacityChanged_signal_connect for fn(f64) {
   fn connect(self, sigthis: QGraphicsOpacityEffect_opacityChanged_signal) {
@@ -2007,7 +1789,7 @@ impl /* trait */ QGraphicsOpacityEffect_opacityChanged_signal_connect for Box<Fn
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QGraphicsOpacityEffect_opacityChanged_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QGraphicsOpacityEffect_SlotProxy_connect__ZN22QGraphicsOpacityEffect14opacityChangedEd(arg0, arg1, arg2)};
   }
 }
@@ -2017,11 +1799,12 @@ extern fn QGraphicsOpacityEffect_opacityMaskChanged_signal_connect_cb_1(rsfptr:f
   let rsarg0 = QBrush::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QGraphicsOpacityEffect_opacityMaskChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(QBrush), arg0: *mut c_void) {
+extern fn QGraphicsOpacityEffect_opacityMaskChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn(QBrush)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QBrush::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QGraphicsOpacityEffect_opacityMaskChanged_signal_connect for fn(QBrush) {
   fn connect(self, sigthis: QGraphicsOpacityEffect_opacityMaskChanged_signal) {
@@ -2042,14 +1825,14 @@ impl /* trait */ QGraphicsOpacityEffect_opacityMaskChanged_signal_connect for Bo
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QGraphicsOpacityEffect_opacityMaskChanged_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QGraphicsOpacityEffect_SlotProxy_connect__ZN22QGraphicsOpacityEffect18opacityMaskChangedERK6QBrush(arg0, arg1, arg2)};
   }
 }
 #[derive(Default)] // for QGraphicsBlurEffect_blurHintsChanged
 pub struct QGraphicsBlurEffect_blurHintsChanged_signal{poi:u64}
 impl /* struct */ QGraphicsBlurEffect {
-  pub fn blurHintsChanged_1(&self) -> QGraphicsBlurEffect_blurHintsChanged_signal {
+  pub fn blurHintsChanged(&self) -> QGraphicsBlurEffect_blurHintsChanged_signal {
      return QGraphicsBlurEffect_blurHintsChanged_signal{poi:self.qclsinst};
   }
 }
@@ -2065,7 +1848,7 @@ pub trait QGraphicsBlurEffect_blurHintsChanged_signal_connect {
 #[derive(Default)] // for QGraphicsBlurEffect_blurRadiusChanged
 pub struct QGraphicsBlurEffect_blurRadiusChanged_signal{poi:u64}
 impl /* struct */ QGraphicsBlurEffect {
-  pub fn blurRadiusChanged_1(&self) -> QGraphicsBlurEffect_blurRadiusChanged_signal {
+  pub fn blurRadiusChanged(&self) -> QGraphicsBlurEffect_blurRadiusChanged_signal {
      return QGraphicsBlurEffect_blurRadiusChanged_signal{poi:self.qclsinst};
   }
 }
@@ -2084,11 +1867,12 @@ extern fn QGraphicsBlurEffect_blurHintsChanged_signal_connect_cb_0(rsfptr:fn(i32
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QGraphicsBlurEffect_blurHintsChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
+extern fn QGraphicsBlurEffect_blurHintsChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QGraphicsBlurEffect_blurHintsChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QGraphicsBlurEffect_blurHintsChanged_signal) {
@@ -2109,7 +1893,7 @@ impl /* trait */ QGraphicsBlurEffect_blurHintsChanged_signal_connect for Box<Fn(
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QGraphicsBlurEffect_blurHintsChanged_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QGraphicsBlurEffect_SlotProxy_connect__ZN19QGraphicsBlurEffect16blurHintsChangedE6QFlagsINS_8BlurHintEE(arg0, arg1, arg2)};
   }
 }
@@ -2119,11 +1903,12 @@ extern fn QGraphicsBlurEffect_blurRadiusChanged_signal_connect_cb_1(rsfptr:fn(f6
   let rsarg0 = arg0 as f64;
   rsfptr(rsarg0);
 }
-extern fn QGraphicsBlurEffect_blurRadiusChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(f64), arg0: c_double) {
+extern fn QGraphicsBlurEffect_blurRadiusChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn(f64)>, arg0: c_double) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as f64;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QGraphicsBlurEffect_blurRadiusChanged_signal_connect for fn(f64) {
   fn connect(self, sigthis: QGraphicsBlurEffect_blurRadiusChanged_signal) {
@@ -2144,7 +1929,7 @@ impl /* trait */ QGraphicsBlurEffect_blurRadiusChanged_signal_connect for Box<Fn
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QGraphicsBlurEffect_blurRadiusChanged_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QGraphicsBlurEffect_SlotProxy_connect__ZN19QGraphicsBlurEffect17blurRadiusChangedEd(arg0, arg1, arg2)};
   }
 }

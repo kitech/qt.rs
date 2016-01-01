@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtWidgets/qmainwindow.h
 // dst-file: /src/widgets/qmainwindow.rs
 //
@@ -22,9 +22,9 @@ use super::qwidget::QWidget; // 773
 use std::ops::Deref;
 use super::qstatusbar::QStatusBar; // 773
 use super::qtoolbar::QToolBar; // 773
-use super::super::core::qsize::QSize; // 771
 use super::qdockwidget::QDockWidget; // 773
 use super::super::core::qstring::QString; // 771
+use super::super::core::qsize::QSize; // 771
 use super::super::core::qbytearray::QByteArray; // 771
 use super::qmenu::QMenu; // 773
 use super::qmenubar::QMenuBar; // 773
@@ -45,8 +45,6 @@ extern {
   fn _ZN11QMainWindow11setAnimatedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QMainWindow::setDockNestingEnabled(bool enabled);
   fn _ZN11QMainWindow21setDockNestingEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
-  // proto:  void QMainWindow::iconSizeChanged(const QSize & iconSize);
-  fn _ZN11QMainWindow15iconSizeChangedERK5QSize(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QMainWindow::unifiedTitleAndToolBarOnMac();
   fn _ZNK11QMainWindow27unifiedTitleAndToolBarOnMacEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QWidget * QMainWindow::menuWidget();
@@ -126,8 +124,8 @@ extern {
 pub struct QMainWindow {
   qbase: QWidget,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _toolButtonStyleChanged_1: QMainWindow_toolButtonStyleChanged_signal,
-  pub _iconSizeChanged_1: QMainWindow_iconSizeChanged_signal,
+  pub _toolButtonStyleChanged: QMainWindow_toolButtonStyleChanged_signal,
+  pub _iconSizeChanged: QMainWindow_iconSizeChanged_signal,
 }
 
 impl /*struct*/ QMainWindow {
@@ -213,29 +211,6 @@ impl<'a> /*trait*/ QMainWindow_setDockNestingEnabled<()> for (i8) {
     // unsafe{_ZN11QMainWindow21setDockNestingEnabledEb()};
     let arg0 = self  as c_char;
      unsafe {_ZN11QMainWindow21setDockNestingEnabledEb(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QMainWindow::iconSizeChanged(const QSize & iconSize);
-impl /*struct*/ QMainWindow {
-  pub fn iconSizeChanged<RetType, T: QMainWindow_iconSizeChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.iconSizeChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QMainWindow_iconSizeChanged<RetType> {
-  fn iconSizeChanged(self , rsthis: & QMainWindow) -> RetType;
-}
-
-  // proto:  void QMainWindow::iconSizeChanged(const QSize & iconSize);
-impl<'a> /*trait*/ QMainWindow_iconSizeChanged<()> for (&'a QSize) {
-  fn iconSizeChanged(self , rsthis: & QMainWindow) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QMainWindow15iconSizeChangedERK5QSize()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QMainWindow15iconSizeChangedERK5QSize(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1034,7 +1009,7 @@ impl<'a> /*trait*/ QMainWindow_tabifiedDockWidgets<()> for (&'a QDockWidget) {
 #[derive(Default)] // for QMainWindow_toolButtonStyleChanged
 pub struct QMainWindow_toolButtonStyleChanged_signal{poi:u64}
 impl /* struct */ QMainWindow {
-  pub fn toolButtonStyleChanged_1(&self) -> QMainWindow_toolButtonStyleChanged_signal {
+  pub fn toolButtonStyleChanged(&self) -> QMainWindow_toolButtonStyleChanged_signal {
      return QMainWindow_toolButtonStyleChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1050,7 +1025,7 @@ pub trait QMainWindow_toolButtonStyleChanged_signal_connect {
 #[derive(Default)] // for QMainWindow_iconSizeChanged
 pub struct QMainWindow_iconSizeChanged_signal{poi:u64}
 impl /* struct */ QMainWindow {
-  pub fn iconSizeChanged_1(&self) -> QMainWindow_iconSizeChanged_signal {
+  pub fn iconSizeChanged(&self) -> QMainWindow_iconSizeChanged_signal {
      return QMainWindow_iconSizeChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1069,11 +1044,12 @@ extern fn QMainWindow_toolButtonStyleChanged_signal_connect_cb_0(rsfptr:fn(i32),
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QMainWindow_toolButtonStyleChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
+extern fn QMainWindow_toolButtonStyleChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QMainWindow_toolButtonStyleChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QMainWindow_toolButtonStyleChanged_signal) {
@@ -1094,7 +1070,7 @@ impl /* trait */ QMainWindow_toolButtonStyleChanged_signal_connect for Box<Fn(i3
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QMainWindow_toolButtonStyleChanged_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QMainWindow_SlotProxy_connect__ZN11QMainWindow22toolButtonStyleChangedEN2Qt15ToolButtonStyleE(arg0, arg1, arg2)};
   }
 }
@@ -1104,11 +1080,12 @@ extern fn QMainWindow_iconSizeChanged_signal_connect_cb_1(rsfptr:fn(QSize), arg0
   let rsarg0 = QSize::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QMainWindow_iconSizeChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(QSize), arg0: *mut c_void) {
+extern fn QMainWindow_iconSizeChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn(QSize)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QSize::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QMainWindow_iconSizeChanged_signal_connect for fn(QSize) {
   fn connect(self, sigthis: QMainWindow_iconSizeChanged_signal) {
@@ -1129,7 +1106,7 @@ impl /* trait */ QMainWindow_iconSizeChanged_signal_connect for Box<Fn(QSize)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QMainWindow_iconSizeChanged_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QMainWindow_SlotProxy_connect__ZN11QMainWindow15iconSizeChangedERK5QSize(arg0, arg1, arg2)};
   }
 }

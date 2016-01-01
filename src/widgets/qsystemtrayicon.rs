@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtWidgets/qsystemtrayicon.h
 // dst-file: /src/widgets/qsystemtrayicon.rs
 //
@@ -61,8 +61,6 @@ extern {
   fn demth_ZN15QSystemTrayIcon4showEv(qthis: u64 /* *mut c_void*/);
   // proto: static bool QSystemTrayIcon::supportsMessages();
   fn _ZN15QSystemTrayIcon16supportsMessagesEv() -> c_char;
-  // proto:  void QSystemTrayIcon::messageClicked();
-  fn _ZN15QSystemTrayIcon14messageClickedEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QSystemTrayIcon::setContextMenu(QMenu * menu);
   fn _ZN15QSystemTrayIcon14setContextMenuEP5QMenu(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QRect QSystemTrayIcon::geometry();
@@ -85,8 +83,8 @@ extern {
 pub struct QSystemTrayIcon {
   qbase: QObject,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _activated_1: QSystemTrayIcon_activated_signal,
-  pub _messageClicked_1: QSystemTrayIcon_messageClicked_signal,
+  pub _activated: QSystemTrayIcon_activated_signal,
+  pub _messageClicked: QSystemTrayIcon_messageClicked_signal,
 }
 
 impl /*struct*/ QSystemTrayIcon {
@@ -372,28 +370,6 @@ impl<'a> /*trait*/ QSystemTrayIcon_supportsMessages_s<i8> for () {
   }
 }
 
-  // proto:  void QSystemTrayIcon::messageClicked();
-impl /*struct*/ QSystemTrayIcon {
-  pub fn messageClicked<RetType, T: QSystemTrayIcon_messageClicked<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.messageClicked(self);
-    // return 1;
-  }
-}
-
-pub trait QSystemTrayIcon_messageClicked<RetType> {
-  fn messageClicked(self , rsthis: & QSystemTrayIcon) -> RetType;
-}
-
-  // proto:  void QSystemTrayIcon::messageClicked();
-impl<'a> /*trait*/ QSystemTrayIcon_messageClicked<()> for () {
-  fn messageClicked(self , rsthis: & QSystemTrayIcon) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QSystemTrayIcon14messageClickedEv()};
-     unsafe {_ZN15QSystemTrayIcon14messageClickedEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto:  void QSystemTrayIcon::setContextMenu(QMenu * menu);
 impl /*struct*/ QSystemTrayIcon {
   pub fn setContextMenu<RetType, T: QSystemTrayIcon_setContextMenu<RetType>>(& self,  overload_args: T) -> RetType {
@@ -538,7 +514,7 @@ impl<'a> /*trait*/ QSystemTrayIcon_isSystemTrayAvailable_s<i8> for () {
 #[derive(Default)] // for QSystemTrayIcon_activated
 pub struct QSystemTrayIcon_activated_signal{poi:u64}
 impl /* struct */ QSystemTrayIcon {
-  pub fn activated_1(&self) -> QSystemTrayIcon_activated_signal {
+  pub fn activated(&self) -> QSystemTrayIcon_activated_signal {
      return QSystemTrayIcon_activated_signal{poi:self.qclsinst};
   }
 }
@@ -554,7 +530,7 @@ pub trait QSystemTrayIcon_activated_signal_connect {
 #[derive(Default)] // for QSystemTrayIcon_messageClicked
 pub struct QSystemTrayIcon_messageClicked_signal{poi:u64}
 impl /* struct */ QSystemTrayIcon {
-  pub fn messageClicked_1(&self) -> QSystemTrayIcon_messageClicked_signal {
+  pub fn messageClicked(&self) -> QSystemTrayIcon_messageClicked_signal {
      return QSystemTrayIcon_messageClicked_signal{poi:self.qclsinst};
   }
 }
@@ -572,10 +548,11 @@ extern fn QSystemTrayIcon_messageClicked_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QSystemTrayIcon_messageClicked_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(), ) {
+extern fn QSystemTrayIcon_messageClicked_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  rsfptr();
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QSystemTrayIcon_messageClicked_signal_connect for fn() {
   fn connect(self, sigthis: QSystemTrayIcon_messageClicked_signal) {
@@ -596,7 +573,7 @@ impl /* trait */ QSystemTrayIcon_messageClicked_signal_connect for Box<Fn()> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QSystemTrayIcon_messageClicked_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QSystemTrayIcon_SlotProxy_connect__ZN15QSystemTrayIcon14messageClickedEv(arg0, arg1, arg2)};
   }
 }
@@ -606,11 +583,12 @@ extern fn QSystemTrayIcon_activated_signal_connect_cb_1(rsfptr:fn(i32), arg0: c_
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QSystemTrayIcon_activated_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
+extern fn QSystemTrayIcon_activated_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QSystemTrayIcon_activated_signal_connect for fn(i32) {
   fn connect(self, sigthis: QSystemTrayIcon_activated_signal) {
@@ -631,7 +609,7 @@ impl /* trait */ QSystemTrayIcon_activated_signal_connect for Box<Fn(i32)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QSystemTrayIcon_activated_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QSystemTrayIcon_SlotProxy_connect__ZN15QSystemTrayIcon9activatedENS_16ActivationReasonE(arg0, arg1, arg2)};
   }
 }

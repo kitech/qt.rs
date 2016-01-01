@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtWidgets/qwizard.h
 // dst-file: /src/widgets/qwizard.rs
 //
@@ -56,8 +56,6 @@ extern {
   fn _ZN11QWizardPage11cleanupPageEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QWizardPage::isComplete();
   fn _ZNK11QWizardPage10isCompleteEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QWizardPage::completeChanged();
-  fn _ZN11QWizardPage15completeChangedEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QWizardPage::isCommitPage();
   fn _ZNK11QWizardPage12isCommitPageEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QWizardPage::QWizardPage(QWidget * parent);
@@ -82,8 +80,6 @@ extern {
   fn _ZNK7QWizard11currentPageEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QWizard::next();
   fn _ZN7QWizard4nextEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QWizard::helpRequested();
-  fn _ZN7QWizard13helpRequestedEv(qthis: u64 /* *mut c_void*/);
   // proto:  QWizardPage * QWizard::page(int id);
   fn _ZNK7QWizard4pageEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  const QMetaObject * QWizard::metaObject();
@@ -102,20 +98,14 @@ extern {
   fn _ZN7QWizard18setDefaultPropertyEPKcS1_S1_(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: *mut c_char, arg2: *mut c_char);
   // proto:  void QWizard::setStartId(int id);
   fn _ZN7QWizard10setStartIdEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
-  // proto:  void QWizard::currentIdChanged(int id);
-  fn _ZN7QWizard16currentIdChangedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QWizard::~QWizard();
   fn _ZN7QWizardD0Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  void QWizard::pageAdded(int id);
-  fn _ZN7QWizard9pageAddedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  QList<int> QWizard::visitedPages();
   fn _ZNK7QWizard12visitedPagesEv(qthis: u64 /* *mut c_void*/);
   // proto:  int QWizard::nextId();
   fn _ZNK7QWizard6nextIdEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QWizard::startId();
   fn _ZNK7QWizard7startIdEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  void QWizard::customButtonClicked(int which);
-  fn _ZN7QWizard19customButtonClickedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QWizard::QWizard(const QWizard & );
   fn dector_ZN7QWizardC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN7QWizardC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
@@ -127,8 +117,6 @@ extern {
   fn _ZNK7QWizard7pageIdsEv(qthis: u64 /* *mut c_void*/);
   // proto:  int QWizard::currentId();
   fn _ZNK7QWizard9currentIdEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  void QWizard::pageRemoved(int id);
-  fn _ZN7QWizard11pageRemovedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QWizard::setVisible(bool visible);
   fn _ZN7QWizard10setVisibleEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  bool QWizard::hasVisitedPage(int id);
@@ -153,7 +141,7 @@ extern {
 pub struct QWizardPage {
   qbase: QWidget,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _completeChanged_1: QWizardPage_completeChanged_signal,
+  pub _completeChanged: QWizardPage_completeChanged_signal,
 }
 
 // class sizeof(QWizard)=1
@@ -161,11 +149,11 @@ pub struct QWizardPage {
 pub struct QWizard {
   qbase: QDialog,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _pageRemoved_1: QWizard_pageRemoved_signal,
-  pub _pageAdded_1: QWizard_pageAdded_signal,
-  pub _helpRequested_1: QWizard_helpRequested_signal,
-  pub _currentIdChanged_1: QWizard_currentIdChanged_signal,
-  pub _customButtonClicked_1: QWizard_customButtonClicked_signal,
+  pub _pageRemoved: QWizard_pageRemoved_signal,
+  pub _pageAdded: QWizard_pageAdded_signal,
+  pub _helpRequested: QWizard_helpRequested_signal,
+  pub _currentIdChanged: QWizard_currentIdChanged_signal,
+  pub _customButtonClicked: QWizard_customButtonClicked_signal,
 }
 
 impl /*struct*/ QWizardPage {
@@ -394,28 +382,6 @@ impl<'a> /*trait*/ QWizardPage_isComplete<i8> for () {
     // unsafe{_ZNK11QWizardPage10isCompleteEv()};
     let mut ret = unsafe {_ZNK11QWizardPage10isCompleteEv(rsthis.qclsinst)};
     return ret as i8;
-    // return 1;
-  }
-}
-
-  // proto:  void QWizardPage::completeChanged();
-impl /*struct*/ QWizardPage {
-  pub fn completeChanged<RetType, T: QWizardPage_completeChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.completeChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QWizardPage_completeChanged<RetType> {
-  fn completeChanged(self , rsthis: & QWizardPage) -> RetType;
-}
-
-  // proto:  void QWizardPage::completeChanged();
-impl<'a> /*trait*/ QWizardPage_completeChanged<()> for () {
-  fn completeChanged(self , rsthis: & QWizardPage) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QWizardPage15completeChangedEv()};
-     unsafe {_ZN11QWizardPage15completeChangedEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -681,28 +647,6 @@ impl<'a> /*trait*/ QWizard_next<()> for () {
   }
 }
 
-  // proto:  void QWizard::helpRequested();
-impl /*struct*/ QWizard {
-  pub fn helpRequested<RetType, T: QWizard_helpRequested<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.helpRequested(self);
-    // return 1;
-  }
-}
-
-pub trait QWizard_helpRequested<RetType> {
-  fn helpRequested(self , rsthis: & QWizard) -> RetType;
-}
-
-  // proto:  void QWizard::helpRequested();
-impl<'a> /*trait*/ QWizard_helpRequested<()> for () {
-  fn helpRequested(self , rsthis: & QWizard) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QWizard13helpRequestedEv()};
-     unsafe {_ZN7QWizard13helpRequestedEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto:  QWizardPage * QWizard::page(int id);
 impl /*struct*/ QWizard {
   pub fn page<RetType, T: QWizard_page<RetType>>(& self,  overload_args: T) -> RetType {
@@ -914,29 +858,6 @@ impl<'a> /*trait*/ QWizard_setStartId<()> for (i32) {
   }
 }
 
-  // proto:  void QWizard::currentIdChanged(int id);
-impl /*struct*/ QWizard {
-  pub fn currentIdChanged<RetType, T: QWizard_currentIdChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.currentIdChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QWizard_currentIdChanged<RetType> {
-  fn currentIdChanged(self , rsthis: & QWizard) -> RetType;
-}
-
-  // proto:  void QWizard::currentIdChanged(int id);
-impl<'a> /*trait*/ QWizard_currentIdChanged<()> for (i32) {
-  fn currentIdChanged(self , rsthis: & QWizard) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QWizard16currentIdChangedEi()};
-    let arg0 = self  as c_int;
-     unsafe {_ZN7QWizard16currentIdChangedEi(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  void QWizard::~QWizard();
 impl /*struct*/ QWizard {
   pub fn free<RetType, T: QWizard_free<RetType>>(& self,  overload_args: T) -> RetType {
@@ -955,29 +876,6 @@ impl<'a> /*trait*/ QWizard_free<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWizardD0Ev()};
      unsafe {_ZN7QWizardD0Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QWizard::pageAdded(int id);
-impl /*struct*/ QWizard {
-  pub fn pageAdded<RetType, T: QWizard_pageAdded<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.pageAdded(self);
-    // return 1;
-  }
-}
-
-pub trait QWizard_pageAdded<RetType> {
-  fn pageAdded(self , rsthis: & QWizard) -> RetType;
-}
-
-  // proto:  void QWizard::pageAdded(int id);
-impl<'a> /*trait*/ QWizard_pageAdded<()> for (i32) {
-  fn pageAdded(self , rsthis: & QWizard) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QWizard9pageAddedEi()};
-    let arg0 = self  as c_int;
-     unsafe {_ZN7QWizard9pageAddedEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1046,29 +944,6 @@ impl<'a> /*trait*/ QWizard_startId<i32> for () {
     // unsafe{_ZNK7QWizard7startIdEv()};
     let mut ret = unsafe {_ZNK7QWizard7startIdEv(rsthis.qclsinst)};
     return ret as i32;
-    // return 1;
-  }
-}
-
-  // proto:  void QWizard::customButtonClicked(int which);
-impl /*struct*/ QWizard {
-  pub fn customButtonClicked<RetType, T: QWizard_customButtonClicked<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.customButtonClicked(self);
-    // return 1;
-  }
-}
-
-pub trait QWizard_customButtonClicked<RetType> {
-  fn customButtonClicked(self , rsthis: & QWizard) -> RetType;
-}
-
-  // proto:  void QWizard::customButtonClicked(int which);
-impl<'a> /*trait*/ QWizard_customButtonClicked<()> for (i32) {
-  fn customButtonClicked(self , rsthis: & QWizard) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QWizard19customButtonClickedEi()};
-    let arg0 = self  as c_int;
-     unsafe {_ZN7QWizard19customButtonClickedEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1190,29 +1065,6 @@ impl<'a> /*trait*/ QWizard_currentId<i32> for () {
     // unsafe{_ZNK7QWizard9currentIdEv()};
     let mut ret = unsafe {_ZNK7QWizard9currentIdEv(rsthis.qclsinst)};
     return ret as i32;
-    // return 1;
-  }
-}
-
-  // proto:  void QWizard::pageRemoved(int id);
-impl /*struct*/ QWizard {
-  pub fn pageRemoved<RetType, T: QWizard_pageRemoved<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.pageRemoved(self);
-    // return 1;
-  }
-}
-
-pub trait QWizard_pageRemoved<RetType> {
-  fn pageRemoved(self , rsthis: & QWizard) -> RetType;
-}
-
-  // proto:  void QWizard::pageRemoved(int id);
-impl<'a> /*trait*/ QWizard_pageRemoved<()> for (i32) {
-  fn pageRemoved(self , rsthis: & QWizard) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QWizard11pageRemovedEi()};
-    let arg0 = self  as c_int;
-     unsafe {_ZN7QWizard11pageRemovedEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1339,7 +1191,7 @@ impl<'a> /*trait*/ QWizard_sideWidget<QWidget> for () {
 #[derive(Default)] // for QWizardPage_completeChanged
 pub struct QWizardPage_completeChanged_signal{poi:u64}
 impl /* struct */ QWizardPage {
-  pub fn completeChanged_1(&self) -> QWizardPage_completeChanged_signal {
+  pub fn completeChanged(&self) -> QWizardPage_completeChanged_signal {
      return QWizardPage_completeChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1357,10 +1209,11 @@ extern fn QWizardPage_completeChanged_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QWizardPage_completeChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(), ) {
+extern fn QWizardPage_completeChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  rsfptr();
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QWizardPage_completeChanged_signal_connect for fn() {
   fn connect(self, sigthis: QWizardPage_completeChanged_signal) {
@@ -1381,14 +1234,14 @@ impl /* trait */ QWizardPage_completeChanged_signal_connect for Box<Fn()> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QWizardPage_completeChanged_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QWizardPage_SlotProxy_connect__ZN11QWizardPage15completeChangedEv(arg0, arg1, arg2)};
   }
 }
 #[derive(Default)] // for QWizard_pageRemoved
 pub struct QWizard_pageRemoved_signal{poi:u64}
 impl /* struct */ QWizard {
-  pub fn pageRemoved_1(&self) -> QWizard_pageRemoved_signal {
+  pub fn pageRemoved(&self) -> QWizard_pageRemoved_signal {
      return QWizard_pageRemoved_signal{poi:self.qclsinst};
   }
 }
@@ -1404,7 +1257,7 @@ pub trait QWizard_pageRemoved_signal_connect {
 #[derive(Default)] // for QWizard_pageAdded
 pub struct QWizard_pageAdded_signal{poi:u64}
 impl /* struct */ QWizard {
-  pub fn pageAdded_1(&self) -> QWizard_pageAdded_signal {
+  pub fn pageAdded(&self) -> QWizard_pageAdded_signal {
      return QWizard_pageAdded_signal{poi:self.qclsinst};
   }
 }
@@ -1420,7 +1273,7 @@ pub trait QWizard_pageAdded_signal_connect {
 #[derive(Default)] // for QWizard_helpRequested
 pub struct QWizard_helpRequested_signal{poi:u64}
 impl /* struct */ QWizard {
-  pub fn helpRequested_1(&self) -> QWizard_helpRequested_signal {
+  pub fn helpRequested(&self) -> QWizard_helpRequested_signal {
      return QWizard_helpRequested_signal{poi:self.qclsinst};
   }
 }
@@ -1436,7 +1289,7 @@ pub trait QWizard_helpRequested_signal_connect {
 #[derive(Default)] // for QWizard_currentIdChanged
 pub struct QWizard_currentIdChanged_signal{poi:u64}
 impl /* struct */ QWizard {
-  pub fn currentIdChanged_1(&self) -> QWizard_currentIdChanged_signal {
+  pub fn currentIdChanged(&self) -> QWizard_currentIdChanged_signal {
      return QWizard_currentIdChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1452,7 +1305,7 @@ pub trait QWizard_currentIdChanged_signal_connect {
 #[derive(Default)] // for QWizard_customButtonClicked
 pub struct QWizard_customButtonClicked_signal{poi:u64}
 impl /* struct */ QWizard {
-  pub fn customButtonClicked_1(&self) -> QWizard_customButtonClicked_signal {
+  pub fn customButtonClicked(&self) -> QWizard_customButtonClicked_signal {
      return QWizard_customButtonClicked_signal{poi:self.qclsinst};
   }
 }
@@ -1470,10 +1323,11 @@ extern fn QWizard_helpRequested_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QWizard_helpRequested_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(), ) {
+extern fn QWizard_helpRequested_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  rsfptr();
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QWizard_helpRequested_signal_connect for fn() {
   fn connect(self, sigthis: QWizard_helpRequested_signal) {
@@ -1494,7 +1348,7 @@ impl /* trait */ QWizard_helpRequested_signal_connect for Box<Fn()> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QWizard_helpRequested_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QWizard_SlotProxy_connect__ZN7QWizard13helpRequestedEv(arg0, arg1, arg2)};
   }
 }
@@ -1504,11 +1358,12 @@ extern fn QWizard_currentIdChanged_signal_connect_cb_1(rsfptr:fn(i32), arg0: c_i
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QWizard_currentIdChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
+extern fn QWizard_currentIdChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QWizard_currentIdChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QWizard_currentIdChanged_signal) {
@@ -1529,7 +1384,7 @@ impl /* trait */ QWizard_currentIdChanged_signal_connect for Box<Fn(i32)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QWizard_currentIdChanged_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QWizard_SlotProxy_connect__ZN7QWizard16currentIdChangedEi(arg0, arg1, arg2)};
   }
 }
@@ -1539,11 +1394,12 @@ extern fn QWizard_pageRemoved_signal_connect_cb_2(rsfptr:fn(i32), arg0: c_int) {
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QWizard_pageRemoved_signal_connect_cb_box_2(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
+extern fn QWizard_pageRemoved_signal_connect_cb_box_2(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QWizard_pageRemoved_signal_connect for fn(i32) {
   fn connect(self, sigthis: QWizard_pageRemoved_signal) {
@@ -1564,7 +1420,7 @@ impl /* trait */ QWizard_pageRemoved_signal_connect for Box<Fn(i32)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QWizard_pageRemoved_signal_connect_cb_box_2 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QWizard_SlotProxy_connect__ZN7QWizard11pageRemovedEi(arg0, arg1, arg2)};
   }
 }
@@ -1574,11 +1430,12 @@ extern fn QWizard_customButtonClicked_signal_connect_cb_3(rsfptr:fn(i32), arg0: 
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QWizard_customButtonClicked_signal_connect_cb_box_3(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
+extern fn QWizard_customButtonClicked_signal_connect_cb_box_3(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QWizard_customButtonClicked_signal_connect for fn(i32) {
   fn connect(self, sigthis: QWizard_customButtonClicked_signal) {
@@ -1599,7 +1456,7 @@ impl /* trait */ QWizard_customButtonClicked_signal_connect for Box<Fn(i32)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QWizard_customButtonClicked_signal_connect_cb_box_3 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QWizard_SlotProxy_connect__ZN7QWizard19customButtonClickedEi(arg0, arg1, arg2)};
   }
 }
@@ -1609,11 +1466,12 @@ extern fn QWizard_pageAdded_signal_connect_cb_4(rsfptr:fn(i32), arg0: c_int) {
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QWizard_pageAdded_signal_connect_cb_box_4(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
+extern fn QWizard_pageAdded_signal_connect_cb_box_4(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QWizard_pageAdded_signal_connect for fn(i32) {
   fn connect(self, sigthis: QWizard_pageAdded_signal) {
@@ -1634,7 +1492,7 @@ impl /* trait */ QWizard_pageAdded_signal_connect for Box<Fn(i32)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QWizard_pageAdded_signal_connect_cb_box_4 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QWizard_SlotProxy_connect__ZN7QWizard9pageAddedEi(arg0, arg1, arg2)};
   }
 }

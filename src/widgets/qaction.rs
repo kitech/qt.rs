@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtWidgets/qaction.h
 // dst-file: /src/widgets/qaction.rs
 //
@@ -62,10 +62,6 @@ extern {
   fn _ZN7QActionC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QAction::metaObject();
   fn _ZNK7QAction10metaObjectEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QAction::triggered(bool checked);
-  fn _ZN7QAction9triggeredEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
-  // proto:  void QAction::toggled(bool );
-  fn _ZN7QAction7toggledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QAction::setText(const QString & text);
   fn _ZN7QAction7setTextERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QAction::showStatusText(QWidget * widget);
@@ -84,8 +80,6 @@ extern {
   fn _ZNK7QAction4menuEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAction::trigger();
   fn _ZN7QAction7triggerEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QAction::changed();
-  fn _ZN7QAction7changedEv(qthis: u64 /* *mut c_void*/);
   // proto:  QFont QAction::font();
   fn _ZNK7QAction4fontEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAction::QAction(const QIcon & icon, const QString & text, QObject * parent);
@@ -129,8 +123,6 @@ extern {
   fn _ZNK7QAction11actionGroupEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAction::setStatusTip(const QString & statusTip);
   fn _ZN7QAction12setStatusTipERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QAction::hovered();
-  fn _ZN7QAction7hoveredEv(qthis: u64 /* *mut c_void*/);
   // proto:  QVariant QAction::data();
   fn _ZNK7QAction4dataEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAction::QAction(const QAction & );
@@ -164,10 +156,10 @@ extern {
 pub struct QAction {
   qbase: QObject,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _changed_1: QAction_changed_signal,
-  pub _hovered_1: QAction_hovered_signal,
-  pub _triggered_1: QAction_triggered_signal,
-  pub _toggled_1: QAction_toggled_signal,
+  pub _changed: QAction_changed_signal,
+  pub _hovered: QAction_hovered_signal,
+  pub _triggered: QAction_triggered_signal,
+  pub _toggled: QAction_toggled_signal,
 }
 
 impl /*struct*/ QAction {
@@ -438,52 +430,6 @@ impl<'a> /*trait*/ QAction_metaObject<()> for () {
   }
 }
 
-  // proto:  void QAction::triggered(bool checked);
-impl /*struct*/ QAction {
-  pub fn triggered<RetType, T: QAction_triggered<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.triggered(self);
-    // return 1;
-  }
-}
-
-pub trait QAction_triggered<RetType> {
-  fn triggered(self , rsthis: & QAction) -> RetType;
-}
-
-  // proto:  void QAction::triggered(bool checked);
-impl<'a> /*trait*/ QAction_triggered<()> for (i8) {
-  fn triggered(self , rsthis: & QAction) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QAction9triggeredEb()};
-    let arg0 = self  as c_char;
-     unsafe {_ZN7QAction9triggeredEb(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QAction::toggled(bool );
-impl /*struct*/ QAction {
-  pub fn toggled<RetType, T: QAction_toggled<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toggled(self);
-    // return 1;
-  }
-}
-
-pub trait QAction_toggled<RetType> {
-  fn toggled(self , rsthis: & QAction) -> RetType;
-}
-
-  // proto:  void QAction::toggled(bool );
-impl<'a> /*trait*/ QAction_toggled<()> for (i8) {
-  fn toggled(self , rsthis: & QAction) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QAction7toggledEb()};
-    let arg0 = self  as c_char;
-     unsafe {_ZN7QAction7toggledEb(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  void QAction::setText(const QString & text);
 impl /*struct*/ QAction {
   pub fn setText<RetType, T: QAction_setText<RetType>>(& self,  overload_args: T) -> RetType {
@@ -690,28 +636,6 @@ impl<'a> /*trait*/ QAction_trigger<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QAction7triggerEv()};
      unsafe {_ZN7QAction7triggerEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QAction::changed();
-impl /*struct*/ QAction {
-  pub fn changed<RetType, T: QAction_changed<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.changed(self);
-    // return 1;
-  }
-}
-
-pub trait QAction_changed<RetType> {
-  fn changed(self , rsthis: & QAction) -> RetType;
-}
-
-  // proto:  void QAction::changed();
-impl<'a> /*trait*/ QAction_changed<()> for () {
-  fn changed(self , rsthis: & QAction) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QAction7changedEv()};
-     unsafe {_ZN7QAction7changedEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1197,28 +1121,6 @@ impl<'a> /*trait*/ QAction_setStatusTip<()> for (&'a QString) {
   }
 }
 
-  // proto:  void QAction::hovered();
-impl /*struct*/ QAction {
-  pub fn hovered<RetType, T: QAction_hovered<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.hovered(self);
-    // return 1;
-  }
-}
-
-pub trait QAction_hovered<RetType> {
-  fn hovered(self , rsthis: & QAction) -> RetType;
-}
-
-  // proto:  void QAction::hovered();
-impl<'a> /*trait*/ QAction_hovered<()> for () {
-  fn hovered(self , rsthis: & QAction) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QAction7hoveredEv()};
-     unsafe {_ZN7QAction7hoveredEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto:  QVariant QAction::data();
 impl /*struct*/ QAction {
   pub fn data<RetType, T: QAction_data<RetType>>(& self,  overload_args: T) -> RetType {
@@ -1446,7 +1348,7 @@ impl<'a> /*trait*/ QAction_setEnabled<()> for (i8) {
 #[derive(Default)] // for QAction_changed
 pub struct QAction_changed_signal{poi:u64}
 impl /* struct */ QAction {
-  pub fn changed_1(&self) -> QAction_changed_signal {
+  pub fn changed(&self) -> QAction_changed_signal {
      return QAction_changed_signal{poi:self.qclsinst};
   }
 }
@@ -1462,7 +1364,7 @@ pub trait QAction_changed_signal_connect {
 #[derive(Default)] // for QAction_hovered
 pub struct QAction_hovered_signal{poi:u64}
 impl /* struct */ QAction {
-  pub fn hovered_1(&self) -> QAction_hovered_signal {
+  pub fn hovered(&self) -> QAction_hovered_signal {
      return QAction_hovered_signal{poi:self.qclsinst};
   }
 }
@@ -1478,7 +1380,7 @@ pub trait QAction_hovered_signal_connect {
 #[derive(Default)] // for QAction_triggered
 pub struct QAction_triggered_signal{poi:u64}
 impl /* struct */ QAction {
-  pub fn triggered_1(&self) -> QAction_triggered_signal {
+  pub fn triggered(&self) -> QAction_triggered_signal {
      return QAction_triggered_signal{poi:self.qclsinst};
   }
 }
@@ -1494,7 +1396,7 @@ pub trait QAction_triggered_signal_connect {
 #[derive(Default)] // for QAction_toggled
 pub struct QAction_toggled_signal{poi:u64}
 impl /* struct */ QAction {
-  pub fn toggled_1(&self) -> QAction_toggled_signal {
+  pub fn toggled(&self) -> QAction_toggled_signal {
      return QAction_toggled_signal{poi:self.qclsinst};
   }
 }
@@ -1513,11 +1415,12 @@ extern fn QAction_toggled_signal_connect_cb_0(rsfptr:fn(i8), arg0: c_char) {
   let rsarg0 = arg0 as i8;
   rsfptr(rsarg0);
 }
-extern fn QAction_toggled_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(i8), arg0: c_char) {
+extern fn QAction_toggled_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(i8)>, arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i8;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QAction_toggled_signal_connect for fn(i8) {
   fn connect(self, sigthis: QAction_toggled_signal) {
@@ -1538,7 +1441,7 @@ impl /* trait */ QAction_toggled_signal_connect for Box<Fn(i8)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAction_toggled_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QAction_SlotProxy_connect__ZN7QAction7toggledEb(arg0, arg1, arg2)};
   }
 }
@@ -1548,11 +1451,12 @@ extern fn QAction_triggered_signal_connect_cb_1(rsfptr:fn(i8), arg0: c_char) {
   let rsarg0 = arg0 as i8;
   rsfptr(rsarg0);
 }
-extern fn QAction_triggered_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(i8), arg0: c_char) {
+extern fn QAction_triggered_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn(i8)>, arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i8;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QAction_triggered_signal_connect for fn(i8) {
   fn connect(self, sigthis: QAction_triggered_signal) {
@@ -1573,7 +1477,7 @@ impl /* trait */ QAction_triggered_signal_connect for Box<Fn(i8)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAction_triggered_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QAction_SlotProxy_connect__ZN7QAction9triggeredEb(arg0, arg1, arg2)};
   }
 }
@@ -1582,10 +1486,11 @@ extern fn QAction_changed_signal_connect_cb_2(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QAction_changed_signal_connect_cb_box_2(rsfptr_raw:*mut Fn(), ) {
+extern fn QAction_changed_signal_connect_cb_box_2(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  rsfptr();
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QAction_changed_signal_connect for fn() {
   fn connect(self, sigthis: QAction_changed_signal) {
@@ -1606,7 +1511,7 @@ impl /* trait */ QAction_changed_signal_connect for Box<Fn()> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAction_changed_signal_connect_cb_box_2 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QAction_SlotProxy_connect__ZN7QAction7changedEv(arg0, arg1, arg2)};
   }
 }
@@ -1615,10 +1520,11 @@ extern fn QAction_hovered_signal_connect_cb_3(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QAction_hovered_signal_connect_cb_box_3(rsfptr_raw:*mut Fn(), ) {
+extern fn QAction_hovered_signal_connect_cb_box_3(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  rsfptr();
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QAction_hovered_signal_connect for fn() {
   fn connect(self, sigthis: QAction_hovered_signal) {
@@ -1639,7 +1545,7 @@ impl /* trait */ QAction_hovered_signal_connect for Box<Fn()> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAction_hovered_signal_connect_cb_box_3 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QAction_SlotProxy_connect__ZN7QAction7hoveredEv(arg0, arg1, arg2)};
   }
 }
