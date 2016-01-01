@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qurl.h
 // dst-file: /src/core/qurl.rs
 //
@@ -203,19 +203,19 @@ impl<'a> /*trait*/ QUrl_idnWhitelist_s<()> for () {
 
   // proto:  void QUrl::~QUrl();
 impl /*struct*/ QUrl {
-  pub fn Free<RetType, T: QUrl_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QUrl_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QUrl_Free<RetType> {
-  fn Free(self , rsthis: & QUrl) -> RetType;
+pub trait QUrl_free<RetType> {
+  fn free(self , rsthis: & QUrl) -> RetType;
 }
 
   // proto:  void QUrl::~QUrl();
-impl<'a> /*trait*/ QUrl_Free<()> for () {
-  fn Free(self , rsthis: & QUrl) -> () {
+impl<'a> /*trait*/ QUrl_free<()> for () {
+  fn free(self , rsthis: & QUrl) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QUrlD0Ev()};
      unsafe {_ZN4QUrlD0Ev(rsthis.qclsinst)};
@@ -343,20 +343,20 @@ impl<'a> /*trait*/ QUrl_setPort<()> for (i32) {
 
   // proto:  void QUrl::QUrl(const QUrl & copy);
 impl /*struct*/ QUrl {
-  pub fn New<T: QUrl_New>(value: T) -> QUrl {
-    let rsthis = value.New();
+  pub fn new<T: QUrl_new>(value: T) -> QUrl {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QUrl_New {
-  fn New(self) -> QUrl;
+pub trait QUrl_new {
+  fn new(self) -> QUrl;
 }
 
   // proto:  void QUrl::QUrl(const QUrl & copy);
-impl<'a> /*trait*/ QUrl_New for (&'a QUrl) {
-  fn New(self) -> QUrl {
+impl<'a> /*trait*/ QUrl_new for (&'a QUrl) {
+  fn new(self) -> QUrl {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QUrlC1ERKS_()};
     let ctysz: c_int = unsafe{QUrl_Class_Size()};
@@ -586,8 +586,8 @@ impl<'a> /*trait*/ QUrl_isValid<i8> for () {
 }
 
   // proto:  void QUrl::QUrl();
-impl<'a> /*trait*/ QUrl_New for () {
-  fn New(self) -> QUrl {
+impl<'a> /*trait*/ QUrl_new for () {
+  fn new(self) -> QUrl {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QUrlC1Ev()};
     let ctysz: c_int = unsafe{QUrl_Class_Size()};

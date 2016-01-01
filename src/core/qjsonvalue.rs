@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qjsonvalue.h
 // dst-file: /src/core/qjsonvalue.rs
 //
@@ -216,20 +216,20 @@ impl<'a> /*trait*/ QJsonValue_isDouble<i8> for () {
 
   // proto:  void QJsonValue::QJsonValue(const QString & s);
 impl /*struct*/ QJsonValue {
-  pub fn New<T: QJsonValue_New>(value: T) -> QJsonValue {
-    let rsthis = value.New();
+  pub fn new<T: QJsonValue_new>(value: T) -> QJsonValue {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QJsonValue_New {
-  fn New(self) -> QJsonValue;
+pub trait QJsonValue_new {
+  fn new(self) -> QJsonValue;
 }
 
   // proto:  void QJsonValue::QJsonValue(const QString & s);
-impl<'a> /*trait*/ QJsonValue_New for (&'a QString) {
-  fn New(self) -> QJsonValue {
+impl<'a> /*trait*/ QJsonValue_new for (&'a QString) {
+  fn new(self) -> QJsonValue {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QJsonValueC1ERK7QString()};
     let ctysz: c_int = unsafe{QJsonValue_Class_Size()};
@@ -268,8 +268,8 @@ impl<'a> /*trait*/ QJsonValue_toInt<i32> for (i32) {
 }
 
   // proto:  void QJsonValue::QJsonValue(const void * );
-impl<'a> /*trait*/ QJsonValue_New for (*mut c_void) {
-  fn New(self) -> QJsonValue {
+impl<'a> /*trait*/ QJsonValue_new for (*mut c_void) {
+  fn new(self) -> QJsonValue {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QJsonValueC1EPKv()};
     let ctysz: c_int = unsafe{QJsonValue_Class_Size()};
@@ -329,8 +329,8 @@ impl<'a> /*trait*/ QJsonValue_isArray<i8> for () {
 }
 
   // proto:  void QJsonValue::QJsonValue(const char * s);
-impl<'a> /*trait*/ QJsonValue_New for (&'a  String) {
-  fn New(self) -> QJsonValue {
+impl<'a> /*trait*/ QJsonValue_new for (&'a  String) {
+  fn new(self) -> QJsonValue {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QJsonValueC1EPKc()};
     let ctysz: c_int = unsafe{QJsonValue_Class_Size()};
@@ -395,19 +395,19 @@ impl<'a> /*trait*/ QJsonValue_toDouble<f64> for (f64) {
 
   // proto:  void QJsonValue::~QJsonValue();
 impl /*struct*/ QJsonValue {
-  pub fn Free<RetType, T: QJsonValue_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QJsonValue_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QJsonValue_Free<RetType> {
-  fn Free(self , rsthis: & QJsonValue) -> RetType;
+pub trait QJsonValue_free<RetType> {
+  fn free(self , rsthis: & QJsonValue) -> RetType;
 }
 
   // proto:  void QJsonValue::~QJsonValue();
-impl<'a> /*trait*/ QJsonValue_Free<()> for () {
-  fn Free(self , rsthis: & QJsonValue) -> () {
+impl<'a> /*trait*/ QJsonValue_free<()> for () {
+  fn free(self , rsthis: & QJsonValue) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QJsonValueD0Ev()};
      unsafe {_ZN10QJsonValueD0Ev(rsthis.qclsinst)};
@@ -510,8 +510,8 @@ impl<'a> /*trait*/ QJsonValue_toBool<i8> for (i8) {
 }
 
   // proto:  void QJsonValue::QJsonValue(double n);
-impl<'a> /*trait*/ QJsonValue_New for (f64) {
-  fn New(self) -> QJsonValue {
+impl<'a> /*trait*/ QJsonValue_new for (f64) {
+  fn new(self) -> QJsonValue {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QJsonValueC1Ed()};
     let ctysz: c_int = unsafe{QJsonValue_Class_Size()};
@@ -549,8 +549,8 @@ impl<'a> /*trait*/ QJsonValue_isBool<i8> for () {
 }
 
   // proto:  void QJsonValue::QJsonValue(bool b);
-impl<'a> /*trait*/ QJsonValue_New for (i8) {
-  fn New(self) -> QJsonValue {
+impl<'a> /*trait*/ QJsonValue_new for (i8) {
+  fn new(self) -> QJsonValue {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QJsonValueC1Eb()};
     let ctysz: c_int = unsafe{QJsonValue_Class_Size()};
@@ -634,8 +634,8 @@ impl<'a> /*trait*/ QJsonValue_isString<i8> for () {
 }
 
   // proto:  void QJsonValue::QJsonValue(int n);
-impl<'a> /*trait*/ QJsonValue_New for (i32) {
-  fn New(self) -> QJsonValue {
+impl<'a> /*trait*/ QJsonValue_new for (i32) {
+  fn new(self) -> QJsonValue {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QJsonValueC1Ei()};
     let ctysz: c_int = unsafe{QJsonValue_Class_Size()};
@@ -650,8 +650,8 @@ impl<'a> /*trait*/ QJsonValue_New for (i32) {
 }
 
   // proto:  void QJsonValue::QJsonValue(qint64 n);
-impl<'a> /*trait*/ QJsonValue_New for (i64) {
-  fn New(self) -> QJsonValue {
+impl<'a> /*trait*/ QJsonValue_new for (i64) {
+  fn new(self) -> QJsonValue {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QJsonValueC1Ex()};
     let ctysz: c_int = unsafe{QJsonValue_Class_Size()};

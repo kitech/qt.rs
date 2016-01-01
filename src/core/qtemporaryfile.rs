@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qtemporaryfile.h
 // dst-file: /src/core/qtemporaryfile.rs
 //
@@ -148,20 +148,20 @@ impl<'a> /*trait*/ QTemporaryFile_createLocalFile_s<QTemporaryFile> for (&'a QFi
 
   // proto:  void QTemporaryFile::QTemporaryFile(const QString & templateName);
 impl /*struct*/ QTemporaryFile {
-  pub fn New<T: QTemporaryFile_New>(value: T) -> QTemporaryFile {
-    let rsthis = value.New();
+  pub fn new<T: QTemporaryFile_new>(value: T) -> QTemporaryFile {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTemporaryFile_New {
-  fn New(self) -> QTemporaryFile;
+pub trait QTemporaryFile_new {
+  fn new(self) -> QTemporaryFile;
 }
 
   // proto:  void QTemporaryFile::QTemporaryFile(const QString & templateName);
-impl<'a> /*trait*/ QTemporaryFile_New for (&'a QString) {
-  fn New(self) -> QTemporaryFile {
+impl<'a> /*trait*/ QTemporaryFile_new for (&'a QString) {
+  fn new(self) -> QTemporaryFile {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QTemporaryFileC1ERK7QString()};
     let ctysz: c_int = unsafe{QTemporaryFile_Class_Size()};
@@ -176,8 +176,8 @@ impl<'a> /*trait*/ QTemporaryFile_New for (&'a QString) {
 }
 
   // proto:  void QTemporaryFile::QTemporaryFile();
-impl<'a> /*trait*/ QTemporaryFile_New for () {
-  fn New(self) -> QTemporaryFile {
+impl<'a> /*trait*/ QTemporaryFile_new for () {
+  fn new(self) -> QTemporaryFile {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QTemporaryFileC1Ev()};
     let ctysz: c_int = unsafe{QTemporaryFile_Class_Size()};
@@ -191,8 +191,8 @@ impl<'a> /*trait*/ QTemporaryFile_New for () {
 }
 
   // proto:  void QTemporaryFile::QTemporaryFile(QObject * parent);
-impl<'a> /*trait*/ QTemporaryFile_New for (&'a QObject) {
-  fn New(self) -> QTemporaryFile {
+impl<'a> /*trait*/ QTemporaryFile_new for (&'a QObject) {
+  fn new(self) -> QTemporaryFile {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QTemporaryFileC1EP7QObject()};
     let ctysz: c_int = unsafe{QTemporaryFile_Class_Size()};
@@ -208,19 +208,19 @@ impl<'a> /*trait*/ QTemporaryFile_New for (&'a QObject) {
 
   // proto:  void QTemporaryFile::~QTemporaryFile();
 impl /*struct*/ QTemporaryFile {
-  pub fn Free<RetType, T: QTemporaryFile_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QTemporaryFile_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QTemporaryFile_Free<RetType> {
-  fn Free(self , rsthis: & QTemporaryFile) -> RetType;
+pub trait QTemporaryFile_free<RetType> {
+  fn free(self , rsthis: & QTemporaryFile) -> RetType;
 }
 
   // proto:  void QTemporaryFile::~QTemporaryFile();
-impl<'a> /*trait*/ QTemporaryFile_Free<()> for () {
-  fn Free(self , rsthis: & QTemporaryFile) -> () {
+impl<'a> /*trait*/ QTemporaryFile_free<()> for () {
+  fn free(self , rsthis: & QTemporaryFile) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QTemporaryFileD0Ev()};
      unsafe {_ZN14QTemporaryFileD0Ev(rsthis.qclsinst)};
@@ -419,8 +419,8 @@ impl<'a> /*trait*/ QTemporaryFile_setFileTemplate<()> for (&'a QString) {
 }
 
   // proto:  void QTemporaryFile::QTemporaryFile(const QTemporaryFile & );
-impl<'a> /*trait*/ QTemporaryFile_New for (&'a QTemporaryFile) {
-  fn New(self) -> QTemporaryFile {
+impl<'a> /*trait*/ QTemporaryFile_new for (&'a QTemporaryFile) {
+  fn new(self) -> QTemporaryFile {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QTemporaryFileC1ERKS_()};
     let ctysz: c_int = unsafe{QTemporaryFile_Class_Size()};
@@ -435,8 +435,8 @@ impl<'a> /*trait*/ QTemporaryFile_New for (&'a QTemporaryFile) {
 }
 
   // proto:  void QTemporaryFile::QTemporaryFile(const QString & templateName, QObject * parent);
-impl<'a> /*trait*/ QTemporaryFile_New for (&'a QString, &'a QObject) {
-  fn New(self) -> QTemporaryFile {
+impl<'a> /*trait*/ QTemporaryFile_new for (&'a QString, &'a QObject) {
+  fn new(self) -> QTemporaryFile {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QTemporaryFileC1ERK7QStringP7QObject()};
     let ctysz: c_int = unsafe{QTemporaryFile_Class_Size()};

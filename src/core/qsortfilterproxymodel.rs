@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qsortfilterproxymodel.h
 // dst-file: /src/core/qsortfilterproxymodel.rs
 //
@@ -872,20 +872,20 @@ impl<'a> /*trait*/ QSortFilterProxyModel_setSourceModel<()> for (&'a QAbstractIt
 
   // proto:  void QSortFilterProxyModel::QSortFilterProxyModel(const QSortFilterProxyModel & );
 impl /*struct*/ QSortFilterProxyModel {
-  pub fn New<T: QSortFilterProxyModel_New>(value: T) -> QSortFilterProxyModel {
-    let rsthis = value.New();
+  pub fn new<T: QSortFilterProxyModel_new>(value: T) -> QSortFilterProxyModel {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QSortFilterProxyModel_New {
-  fn New(self) -> QSortFilterProxyModel;
+pub trait QSortFilterProxyModel_new {
+  fn new(self) -> QSortFilterProxyModel;
 }
 
   // proto:  void QSortFilterProxyModel::QSortFilterProxyModel(const QSortFilterProxyModel & );
-impl<'a> /*trait*/ QSortFilterProxyModel_New for (&'a QSortFilterProxyModel) {
-  fn New(self) -> QSortFilterProxyModel {
+impl<'a> /*trait*/ QSortFilterProxyModel_new for (&'a QSortFilterProxyModel) {
+  fn new(self) -> QSortFilterProxyModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QSortFilterProxyModelC1ERKS_()};
     let ctysz: c_int = unsafe{QSortFilterProxyModel_Class_Size()};
@@ -927,19 +927,19 @@ impl<'a> /*trait*/ QSortFilterProxyModel_removeColumns<i8> for (i32, i32, &'a QM
 
   // proto:  void QSortFilterProxyModel::~QSortFilterProxyModel();
 impl /*struct*/ QSortFilterProxyModel {
-  pub fn Free<RetType, T: QSortFilterProxyModel_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QSortFilterProxyModel_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QSortFilterProxyModel_Free<RetType> {
-  fn Free(self , rsthis: & QSortFilterProxyModel) -> RetType;
+pub trait QSortFilterProxyModel_free<RetType> {
+  fn free(self , rsthis: & QSortFilterProxyModel) -> RetType;
 }
 
   // proto:  void QSortFilterProxyModel::~QSortFilterProxyModel();
-impl<'a> /*trait*/ QSortFilterProxyModel_Free<()> for () {
-  fn Free(self , rsthis: & QSortFilterProxyModel) -> () {
+impl<'a> /*trait*/ QSortFilterProxyModel_free<()> for () {
+  fn free(self , rsthis: & QSortFilterProxyModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QSortFilterProxyModelD0Ev()};
      unsafe {_ZN21QSortFilterProxyModelD0Ev(rsthis.qclsinst)};
@@ -1104,8 +1104,8 @@ impl<'a> /*trait*/ QSortFilterProxyModel_setFilterRole<()> for (i32) {
 }
 
   // proto:  void QSortFilterProxyModel::QSortFilterProxyModel(QObject * parent);
-impl<'a> /*trait*/ QSortFilterProxyModel_New for (&'a QObject) {
-  fn New(self) -> QSortFilterProxyModel {
+impl<'a> /*trait*/ QSortFilterProxyModel_new for (&'a QObject) {
+  fn new(self) -> QSortFilterProxyModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QSortFilterProxyModelC1EP7QObject()};
     let ctysz: c_int = unsafe{QSortFilterProxyModel_Class_Size()};

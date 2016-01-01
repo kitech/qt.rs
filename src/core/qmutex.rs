@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qmutex.h
 // dst-file: /src/core/qmutex.rs
 //
@@ -97,20 +97,20 @@ impl /*struct*/ QMutexLocker {
 }
   // proto:  void QMutexLocker::QMutexLocker(QBasicMutex * m);
 impl /*struct*/ QMutexLocker {
-  pub fn New<T: QMutexLocker_New>(value: T) -> QMutexLocker {
-    let rsthis = value.New();
+  pub fn new<T: QMutexLocker_new>(value: T) -> QMutexLocker {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QMutexLocker_New {
-  fn New(self) -> QMutexLocker;
+pub trait QMutexLocker_new {
+  fn new(self) -> QMutexLocker;
 }
 
   // proto:  void QMutexLocker::QMutexLocker(QBasicMutex * m);
-impl<'a> /*trait*/ QMutexLocker_New for (&'a QBasicMutex) {
-  fn New(self) -> QMutexLocker {
+impl<'a> /*trait*/ QMutexLocker_new for (&'a QBasicMutex) {
+  fn new(self) -> QMutexLocker {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QMutexLockerC1EP11QBasicMutex()};
     let ctysz: c_int = unsafe{QMutexLocker_Class_Size()};
@@ -149,8 +149,8 @@ impl<'a> /*trait*/ QMutexLocker_mutex<QMutex> for () {
 }
 
   // proto:  void QMutexLocker::QMutexLocker(const QMutexLocker & );
-impl<'a> /*trait*/ QMutexLocker_New for (&'a QMutexLocker) {
-  fn New(self) -> QMutexLocker {
+impl<'a> /*trait*/ QMutexLocker_new for (&'a QMutexLocker) {
+  fn new(self) -> QMutexLocker {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QMutexLockerC1ERKS_()};
     let ctysz: c_int = unsafe{QMutexLocker_Class_Size()};
@@ -210,19 +210,19 @@ impl<'a> /*trait*/ QMutexLocker_unlock<()> for () {
 
   // proto:  void QMutexLocker::~QMutexLocker();
 impl /*struct*/ QMutexLocker {
-  pub fn Free<RetType, T: QMutexLocker_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QMutexLocker_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QMutexLocker_Free<RetType> {
-  fn Free(self , rsthis: & QMutexLocker) -> RetType;
+pub trait QMutexLocker_free<RetType> {
+  fn free(self , rsthis: & QMutexLocker) -> RetType;
 }
 
   // proto:  void QMutexLocker::~QMutexLocker();
-impl<'a> /*trait*/ QMutexLocker_Free<()> for () {
-  fn Free(self , rsthis: & QMutexLocker) -> () {
+impl<'a> /*trait*/ QMutexLocker_free<()> for () {
+  fn free(self , rsthis: & QMutexLocker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QMutexLockerD0Ev()};
      unsafe {demth_ZN12QMutexLockerD0Ev(rsthis.qclsinst)};
@@ -344,19 +344,19 @@ impl AsRef<QBasicMutex> for QMutex {
 }
   // proto:  void QMutex::~QMutex();
 impl /*struct*/ QMutex {
-  pub fn Free<RetType, T: QMutex_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QMutex_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QMutex_Free<RetType> {
-  fn Free(self , rsthis: & QMutex) -> RetType;
+pub trait QMutex_free<RetType> {
+  fn free(self , rsthis: & QMutex) -> RetType;
 }
 
   // proto:  void QMutex::~QMutex();
-impl<'a> /*trait*/ QMutex_Free<()> for () {
-  fn Free(self , rsthis: & QMutex) -> () {
+impl<'a> /*trait*/ QMutex_free<()> for () {
+  fn free(self , rsthis: & QMutex) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMutexD0Ev()};
      unsafe {_ZN6QMutexD0Ev(rsthis.qclsinst)};
@@ -390,20 +390,20 @@ impl<'a> /*trait*/ QMutex_tryLock<i8> for (i32) {
 
   // proto:  void QMutex::QMutex(const QMutex & );
 impl /*struct*/ QMutex {
-  pub fn New<T: QMutex_New>(value: T) -> QMutex {
-    let rsthis = value.New();
+  pub fn new<T: QMutex_new>(value: T) -> QMutex {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QMutex_New {
-  fn New(self) -> QMutex;
+pub trait QMutex_new {
+  fn new(self) -> QMutex;
 }
 
   // proto:  void QMutex::QMutex(const QMutex & );
-impl<'a> /*trait*/ QMutex_New for (&'a QMutex) {
-  fn New(self) -> QMutex {
+impl<'a> /*trait*/ QMutex_new for (&'a QMutex) {
+  fn new(self) -> QMutex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMutexC1ERKS_()};
     let ctysz: c_int = unsafe{QMutex_Class_Size()};

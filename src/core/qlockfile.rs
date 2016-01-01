@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qlockfile.h
 // dst-file: /src/core/qlockfile.rs
 //
@@ -140,20 +140,20 @@ impl<'a> /*trait*/ QLockFile_isLocked<i8> for () {
 
   // proto:  void QLockFile::QLockFile(const QLockFile & );
 impl /*struct*/ QLockFile {
-  pub fn New<T: QLockFile_New>(value: T) -> QLockFile {
-    let rsthis = value.New();
+  pub fn new<T: QLockFile_new>(value: T) -> QLockFile {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QLockFile_New {
-  fn New(self) -> QLockFile;
+pub trait QLockFile_new {
+  fn new(self) -> QLockFile;
 }
 
   // proto:  void QLockFile::QLockFile(const QLockFile & );
-impl<'a> /*trait*/ QLockFile_New for (&'a QLockFile) {
-  fn New(self) -> QLockFile {
+impl<'a> /*trait*/ QLockFile_new for (&'a QLockFile) {
+  fn new(self) -> QLockFile {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QLockFileC1ERKS_()};
     let ctysz: c_int = unsafe{QLockFile_Class_Size()};
@@ -169,19 +169,19 @@ impl<'a> /*trait*/ QLockFile_New for (&'a QLockFile) {
 
   // proto:  void QLockFile::~QLockFile();
 impl /*struct*/ QLockFile {
-  pub fn Free<RetType, T: QLockFile_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QLockFile_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QLockFile_Free<RetType> {
-  fn Free(self , rsthis: & QLockFile) -> RetType;
+pub trait QLockFile_free<RetType> {
+  fn free(self , rsthis: & QLockFile) -> RetType;
 }
 
   // proto:  void QLockFile::~QLockFile();
-impl<'a> /*trait*/ QLockFile_Free<()> for () {
-  fn Free(self , rsthis: & QLockFile) -> () {
+impl<'a> /*trait*/ QLockFile_free<()> for () {
+  fn free(self , rsthis: & QLockFile) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QLockFileD0Ev()};
      unsafe {_ZN9QLockFileD0Ev(rsthis.qclsinst)};
@@ -308,8 +308,8 @@ impl<'a> /*trait*/ QLockFile_getLockInfo<i8> for (&'a mut Vec<i64>, &'a QString,
 }
 
   // proto:  void QLockFile::QLockFile(const QString & fileName);
-impl<'a> /*trait*/ QLockFile_New for (&'a QString) {
-  fn New(self) -> QLockFile {
+impl<'a> /*trait*/ QLockFile_new for (&'a QString) {
+  fn new(self) -> QLockFile {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QLockFileC1ERK7QString()};
     let ctysz: c_int = unsafe{QLockFile_Class_Size()};

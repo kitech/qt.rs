@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qfile.h
 // dst-file: /src/core/qfile.rs
 //
@@ -149,20 +149,20 @@ impl<'a> /*trait*/ QFile_symLinkTarget<QString> for () {
 
   // proto:  void QFile::QFile();
 impl /*struct*/ QFile {
-  pub fn New<T: QFile_New>(value: T) -> QFile {
-    let rsthis = value.New();
+  pub fn new<T: QFile_new>(value: T) -> QFile {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QFile_New {
-  fn New(self) -> QFile;
+pub trait QFile_new {
+  fn new(self) -> QFile;
 }
 
   // proto:  void QFile::QFile();
-impl<'a> /*trait*/ QFile_New for () {
-  fn New(self) -> QFile {
+impl<'a> /*trait*/ QFile_new for () {
+  fn new(self) -> QFile {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFileC1Ev()};
     let ctysz: c_int = unsafe{QFile_Class_Size()};
@@ -176,8 +176,8 @@ impl<'a> /*trait*/ QFile_New for () {
 }
 
   // proto:  void QFile::QFile(QObject * parent);
-impl<'a> /*trait*/ QFile_New for (&'a QObject) {
-  fn New(self) -> QFile {
+impl<'a> /*trait*/ QFile_new for (&'a QObject) {
+  fn new(self) -> QFile {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFileC1EP7QObject()};
     let ctysz: c_int = unsafe{QFile_Class_Size()};
@@ -316,19 +316,19 @@ impl<'a> /*trait*/ QFile_exists_s<i8> for (&'a QString) {
 
   // proto:  void QFile::~QFile();
 impl /*struct*/ QFile {
-  pub fn Free<RetType, T: QFile_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QFile_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QFile_Free<RetType> {
-  fn Free(self , rsthis: & QFile) -> RetType;
+pub trait QFile_free<RetType> {
+  fn free(self , rsthis: & QFile) -> RetType;
 }
 
   // proto:  void QFile::~QFile();
-impl<'a> /*trait*/ QFile_Free<()> for () {
-  fn Free(self , rsthis: & QFile) -> () {
+impl<'a> /*trait*/ QFile_free<()> for () {
+  fn free(self , rsthis: & QFile) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFileD0Ev()};
      unsafe {_ZN5QFileD0Ev(rsthis.qclsinst)};
@@ -457,8 +457,8 @@ impl<'a> /*trait*/ QFile_resize<i8> for (i64) {
 }
 
   // proto:  void QFile::QFile(const QFile & );
-impl<'a> /*trait*/ QFile_New for (&'a QFile) {
-  fn New(self) -> QFile {
+impl<'a> /*trait*/ QFile_new for (&'a QFile) {
+  fn new(self) -> QFile {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFileC1ERKS_()};
     let ctysz: c_int = unsafe{QFile_Class_Size()};
@@ -676,8 +676,8 @@ impl<'a> /*trait*/ QFile_metaObject<()> for () {
 }
 
   // proto:  void QFile::QFile(const QString & name, QObject * parent);
-impl<'a> /*trait*/ QFile_New for (&'a QString, &'a QObject) {
-  fn New(self) -> QFile {
+impl<'a> /*trait*/ QFile_new for (&'a QString, &'a QObject) {
+  fn new(self) -> QFile {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFileC1ERK7QStringP7QObject()};
     let ctysz: c_int = unsafe{QFile_Class_Size()};
@@ -742,8 +742,8 @@ impl<'a> /*trait*/ QFile_remove_s<i8> for (&'a QString) {
 }
 
   // proto:  void QFile::QFile(const QString & name);
-impl<'a> /*trait*/ QFile_New for (&'a QString) {
-  fn New(self) -> QFile {
+impl<'a> /*trait*/ QFile_new for (&'a QString) {
+  fn new(self) -> QFile {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFileC1ERK7QString()};
     let ctysz: c_int = unsafe{QFile_Class_Size()};

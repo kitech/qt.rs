@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qcollator.h
 // dst-file: /src/core/qcollator.rs
 //
@@ -121,20 +121,20 @@ impl<'a> /*trait*/ QCollator_numericMode<i8> for () {
 
   // proto:  void QCollator::QCollator(const QLocale & locale);
 impl /*struct*/ QCollator {
-  pub fn New<T: QCollator_New>(value: T) -> QCollator {
-    let rsthis = value.New();
+  pub fn new<T: QCollator_new>(value: T) -> QCollator {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QCollator_New {
-  fn New(self) -> QCollator;
+pub trait QCollator_new {
+  fn new(self) -> QCollator;
 }
 
   // proto:  void QCollator::QCollator(const QLocale & locale);
-impl<'a> /*trait*/ QCollator_New for (&'a QLocale) {
-  fn New(self) -> QCollator {
+impl<'a> /*trait*/ QCollator_new for (&'a QLocale) {
+  fn new(self) -> QCollator {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QCollatorC1ERK7QLocale()};
     let ctysz: c_int = unsafe{QCollator_Class_Size()};
@@ -261,19 +261,19 @@ impl<'a> /*trait*/ QCollator_compare<i32> for (&'a QString, &'a QString) {
 
   // proto:  void QCollator::~QCollator();
 impl /*struct*/ QCollator {
-  pub fn Free<RetType, T: QCollator_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QCollator_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QCollator_Free<RetType> {
-  fn Free(self , rsthis: & QCollator) -> RetType;
+pub trait QCollator_free<RetType> {
+  fn free(self , rsthis: & QCollator) -> RetType;
 }
 
   // proto:  void QCollator::~QCollator();
-impl<'a> /*trait*/ QCollator_Free<()> for () {
-  fn Free(self , rsthis: & QCollator) -> () {
+impl<'a> /*trait*/ QCollator_free<()> for () {
+  fn free(self , rsthis: & QCollator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QCollatorD0Ev()};
      unsafe {_ZN9QCollatorD0Ev(rsthis.qclsinst)};
@@ -305,8 +305,8 @@ impl<'a> /*trait*/ QCollator_ignorePunctuation<i8> for () {
 }
 
   // proto:  void QCollator::QCollator(const QCollator & );
-impl<'a> /*trait*/ QCollator_New for (&'a QCollator) {
-  fn New(self) -> QCollator {
+impl<'a> /*trait*/ QCollator_new for (&'a QCollator) {
+  fn new(self) -> QCollator {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QCollatorC1ERKS_()};
     let ctysz: c_int = unsafe{QCollator_Class_Size()};
@@ -397,19 +397,19 @@ impl /*struct*/ QCollatorSortKey {
 }
   // proto:  void QCollatorSortKey::~QCollatorSortKey();
 impl /*struct*/ QCollatorSortKey {
-  pub fn Free<RetType, T: QCollatorSortKey_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QCollatorSortKey_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QCollatorSortKey_Free<RetType> {
-  fn Free(self , rsthis: & QCollatorSortKey) -> RetType;
+pub trait QCollatorSortKey_free<RetType> {
+  fn free(self , rsthis: & QCollatorSortKey) -> RetType;
 }
 
   // proto:  void QCollatorSortKey::~QCollatorSortKey();
-impl<'a> /*trait*/ QCollatorSortKey_Free<()> for () {
-  fn Free(self , rsthis: & QCollatorSortKey) -> () {
+impl<'a> /*trait*/ QCollatorSortKey_free<()> for () {
+  fn free(self , rsthis: & QCollatorSortKey) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QCollatorSortKeyD0Ev()};
      unsafe {_ZN16QCollatorSortKeyD0Ev(rsthis.qclsinst)};
@@ -466,20 +466,20 @@ impl<'a> /*trait*/ QCollatorSortKey_compare<i32> for (&'a QCollatorSortKey) {
 
   // proto:  void QCollatorSortKey::QCollatorSortKey(const QCollatorSortKey & other);
 impl /*struct*/ QCollatorSortKey {
-  pub fn New<T: QCollatorSortKey_New>(value: T) -> QCollatorSortKey {
-    let rsthis = value.New();
+  pub fn new<T: QCollatorSortKey_new>(value: T) -> QCollatorSortKey {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QCollatorSortKey_New {
-  fn New(self) -> QCollatorSortKey;
+pub trait QCollatorSortKey_new {
+  fn new(self) -> QCollatorSortKey;
 }
 
   // proto:  void QCollatorSortKey::QCollatorSortKey(const QCollatorSortKey & other);
-impl<'a> /*trait*/ QCollatorSortKey_New for (&'a QCollatorSortKey) {
-  fn New(self) -> QCollatorSortKey {
+impl<'a> /*trait*/ QCollatorSortKey_new for (&'a QCollatorSortKey) {
+  fn new(self) -> QCollatorSortKey {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QCollatorSortKeyC1ERKS_()};
     let ctysz: c_int = unsafe{QCollatorSortKey_Class_Size()};
@@ -494,8 +494,8 @@ impl<'a> /*trait*/ QCollatorSortKey_New for (&'a QCollatorSortKey) {
 }
 
   // proto:  void QCollatorSortKey::QCollatorSortKey();
-impl<'a> /*trait*/ QCollatorSortKey_New for () {
-  fn New(self) -> QCollatorSortKey {
+impl<'a> /*trait*/ QCollatorSortKey_new for () {
+  fn new(self) -> QCollatorSortKey {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QCollatorSortKeyC1Ev()};
     let ctysz: c_int = unsafe{QCollatorSortKey_Class_Size()};

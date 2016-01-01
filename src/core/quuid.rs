@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/quuid.h
 // dst-file: /src/core/quuid.rs
 //
@@ -83,20 +83,20 @@ impl /*struct*/ QUuid {
 }
   // proto:  void QUuid::QUuid(const QString & );
 impl /*struct*/ QUuid {
-  pub fn New<T: QUuid_New>(value: T) -> QUuid {
-    let rsthis = value.New();
+  pub fn new<T: QUuid_new>(value: T) -> QUuid {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QUuid_New {
-  fn New(self) -> QUuid;
+pub trait QUuid_new {
+  fn new(self) -> QUuid;
 }
 
   // proto:  void QUuid::QUuid(const QString & );
-impl<'a> /*trait*/ QUuid_New for (&'a QString) {
-  fn New(self) -> QUuid {
+impl<'a> /*trait*/ QUuid_new for (&'a QString) {
+  fn new(self) -> QUuid {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QUuidC1ERK7QString()};
     let ctysz: c_int = unsafe{QUuid_Class_Size()};
@@ -232,8 +232,8 @@ impl<'a> /*trait*/ QUuid_createUuid_s<QUuid> for () {
 }
 
   // proto:  void QUuid::QUuid(uint l, ushort w1, ushort w2, uchar b1, uchar b2, uchar b3, uchar b4, uchar b5, uchar b6, uchar b7, uchar b8);
-impl<'a> /*trait*/ QUuid_New for (u32, u16, u16, u8, u8, u8, u8, u8, u8, u8, u8) {
-  fn New(self) -> QUuid {
+impl<'a> /*trait*/ QUuid_new for (u32, u16, u16, u8, u8, u8, u8, u8, u8, u8, u8) {
+  fn new(self) -> QUuid {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QUuidC1Ejtthhhhhhhh()};
     let ctysz: c_int = unsafe{QUuid_Class_Size()};
@@ -258,8 +258,8 @@ impl<'a> /*trait*/ QUuid_New for (u32, u16, u16, u8, u8, u8, u8, u8, u8, u8, u8)
 }
 
   // proto:  void QUuid::QUuid(const QByteArray & );
-impl<'a> /*trait*/ QUuid_New for (&'a QByteArray) {
-  fn New(self) -> QUuid {
+impl<'a> /*trait*/ QUuid_new for (&'a QByteArray) {
+  fn new(self) -> QUuid {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QUuidC1ERK10QByteArray()};
     let ctysz: c_int = unsafe{QUuid_Class_Size()};
@@ -300,8 +300,8 @@ impl<'a> /*trait*/ QUuid_createUuidV3_s<QUuid> for (&'a QUuid, &'a QString) {
 }
 
   // proto:  void QUuid::QUuid();
-impl<'a> /*trait*/ QUuid_New for () {
-  fn New(self) -> QUuid {
+impl<'a> /*trait*/ QUuid_new for () {
+  fn new(self) -> QUuid {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QUuidC1Ev()};
     let ctysz: c_int = unsafe{QUuid_Class_Size()};
@@ -339,8 +339,8 @@ impl<'a> /*trait*/ QUuid_toByteArray<QByteArray> for () {
 }
 
   // proto:  void QUuid::QUuid(const char * );
-impl<'a> /*trait*/ QUuid_New for (&'a  String) {
-  fn New(self) -> QUuid {
+impl<'a> /*trait*/ QUuid_new for (&'a  String) {
+  fn new(self) -> QUuid {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QUuidC1EPKc()};
     let ctysz: c_int = unsafe{QUuid_Class_Size()};

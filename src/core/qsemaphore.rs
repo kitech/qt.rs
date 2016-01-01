@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qsemaphore.h
 // dst-file: /src/core/qsemaphore.rs
 //
@@ -158,20 +158,20 @@ impl<'a> /*trait*/ QSemaphore_tryAcquire<i8> for (i32, i32) {
 
   // proto:  void QSemaphore::QSemaphore(const QSemaphore & );
 impl /*struct*/ QSemaphore {
-  pub fn New<T: QSemaphore_New>(value: T) -> QSemaphore {
-    let rsthis = value.New();
+  pub fn new<T: QSemaphore_new>(value: T) -> QSemaphore {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QSemaphore_New {
-  fn New(self) -> QSemaphore;
+pub trait QSemaphore_new {
+  fn new(self) -> QSemaphore;
 }
 
   // proto:  void QSemaphore::QSemaphore(const QSemaphore & );
-impl<'a> /*trait*/ QSemaphore_New for (&'a QSemaphore) {
-  fn New(self) -> QSemaphore {
+impl<'a> /*trait*/ QSemaphore_new for (&'a QSemaphore) {
+  fn new(self) -> QSemaphore {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QSemaphoreC1ERKS_()};
     let ctysz: c_int = unsafe{QSemaphore_Class_Size()};
@@ -198,8 +198,8 @@ impl<'a> /*trait*/ QSemaphore_tryAcquire<i8> for (i32) {
 }
 
   // proto:  void QSemaphore::QSemaphore(int n);
-impl<'a> /*trait*/ QSemaphore_New for (i32) {
-  fn New(self) -> QSemaphore {
+impl<'a> /*trait*/ QSemaphore_new for (i32) {
+  fn new(self) -> QSemaphore {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QSemaphoreC1Ei()};
     let ctysz: c_int = unsafe{QSemaphore_Class_Size()};
@@ -215,19 +215,19 @@ impl<'a> /*trait*/ QSemaphore_New for (i32) {
 
   // proto:  void QSemaphore::~QSemaphore();
 impl /*struct*/ QSemaphore {
-  pub fn Free<RetType, T: QSemaphore_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QSemaphore_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QSemaphore_Free<RetType> {
-  fn Free(self , rsthis: & QSemaphore) -> RetType;
+pub trait QSemaphore_free<RetType> {
+  fn free(self , rsthis: & QSemaphore) -> RetType;
 }
 
   // proto:  void QSemaphore::~QSemaphore();
-impl<'a> /*trait*/ QSemaphore_Free<()> for () {
-  fn Free(self , rsthis: & QSemaphore) -> () {
+impl<'a> /*trait*/ QSemaphore_free<()> for () {
+  fn free(self , rsthis: & QSemaphore) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QSemaphoreD0Ev()};
      unsafe {_ZN10QSemaphoreD0Ev(rsthis.qclsinst)};

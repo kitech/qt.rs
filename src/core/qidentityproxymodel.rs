@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qidentityproxymodel.h
 // dst-file: /src/core/qidentityproxymodel.rs
 //
@@ -308,19 +308,19 @@ impl<'a> /*trait*/ QIdentityProxyModel_metaObject<()> for () {
 
   // proto:  void QIdentityProxyModel::~QIdentityProxyModel();
 impl /*struct*/ QIdentityProxyModel {
-  pub fn Free<RetType, T: QIdentityProxyModel_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QIdentityProxyModel_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QIdentityProxyModel_Free<RetType> {
-  fn Free(self , rsthis: & QIdentityProxyModel) -> RetType;
+pub trait QIdentityProxyModel_free<RetType> {
+  fn free(self , rsthis: & QIdentityProxyModel) -> RetType;
 }
 
   // proto:  void QIdentityProxyModel::~QIdentityProxyModel();
-impl<'a> /*trait*/ QIdentityProxyModel_Free<()> for () {
-  fn Free(self , rsthis: & QIdentityProxyModel) -> () {
+impl<'a> /*trait*/ QIdentityProxyModel_free<()> for () {
+  fn free(self , rsthis: & QIdentityProxyModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QIdentityProxyModelD0Ev()};
      unsafe {_ZN19QIdentityProxyModelD0Ev(rsthis.qclsinst)};
@@ -428,20 +428,20 @@ impl<'a> /*trait*/ QIdentityProxyModel_mapFromSource<QModelIndex> for (&'a QMode
 
   // proto:  void QIdentityProxyModel::QIdentityProxyModel(QObject * parent);
 impl /*struct*/ QIdentityProxyModel {
-  pub fn New<T: QIdentityProxyModel_New>(value: T) -> QIdentityProxyModel {
-    let rsthis = value.New();
+  pub fn new<T: QIdentityProxyModel_new>(value: T) -> QIdentityProxyModel {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QIdentityProxyModel_New {
-  fn New(self) -> QIdentityProxyModel;
+pub trait QIdentityProxyModel_new {
+  fn new(self) -> QIdentityProxyModel;
 }
 
   // proto:  void QIdentityProxyModel::QIdentityProxyModel(QObject * parent);
-impl<'a> /*trait*/ QIdentityProxyModel_New for (&'a QObject) {
-  fn New(self) -> QIdentityProxyModel {
+impl<'a> /*trait*/ QIdentityProxyModel_new for (&'a QObject) {
+  fn new(self) -> QIdentityProxyModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QIdentityProxyModelC1EP7QObject()};
     let ctysz: c_int = unsafe{QIdentityProxyModel_Class_Size()};
@@ -480,8 +480,8 @@ impl<'a> /*trait*/ QIdentityProxyModel_columnCount<i32> for (&'a QModelIndex) {
 }
 
   // proto:  void QIdentityProxyModel::QIdentityProxyModel(const QIdentityProxyModel & );
-impl<'a> /*trait*/ QIdentityProxyModel_New for (&'a QIdentityProxyModel) {
-  fn New(self) -> QIdentityProxyModel {
+impl<'a> /*trait*/ QIdentityProxyModel_new for (&'a QIdentityProxyModel) {
+  fn new(self) -> QIdentityProxyModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QIdentityProxyModelC1ERKS_()};
     let ctysz: c_int = unsafe{QIdentityProxyModel_Class_Size()};

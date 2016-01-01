@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qbytearraymatcher.h
 // dst-file: /src/core/qbytearraymatcher.rs
 //
@@ -142,20 +142,20 @@ impl<'a> /*trait*/ QByteArrayMatcher_setPattern<()> for (&'a QByteArray) {
 
   // proto:  void QByteArrayMatcher::QByteArrayMatcher();
 impl /*struct*/ QByteArrayMatcher {
-  pub fn New<T: QByteArrayMatcher_New>(value: T) -> QByteArrayMatcher {
-    let rsthis = value.New();
+  pub fn new<T: QByteArrayMatcher_new>(value: T) -> QByteArrayMatcher {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QByteArrayMatcher_New {
-  fn New(self) -> QByteArrayMatcher;
+pub trait QByteArrayMatcher_new {
+  fn new(self) -> QByteArrayMatcher;
 }
 
   // proto:  void QByteArrayMatcher::QByteArrayMatcher();
-impl<'a> /*trait*/ QByteArrayMatcher_New for () {
-  fn New(self) -> QByteArrayMatcher {
+impl<'a> /*trait*/ QByteArrayMatcher_new for () {
+  fn new(self) -> QByteArrayMatcher {
     // let qthis: *mut c_void = unsafe{calloc(1, 1040)};
     // unsafe{_ZN17QByteArrayMatcherC1Ev()};
     let ctysz: c_int = unsafe{QByteArrayMatcher_Class_Size()};
@@ -169,8 +169,8 @@ impl<'a> /*trait*/ QByteArrayMatcher_New for () {
 }
 
   // proto:  void QByteArrayMatcher::QByteArrayMatcher(const char * pattern, int length);
-impl<'a> /*trait*/ QByteArrayMatcher_New for (&'a  String, i32) {
-  fn New(self) -> QByteArrayMatcher {
+impl<'a> /*trait*/ QByteArrayMatcher_new for (&'a  String, i32) {
+  fn new(self) -> QByteArrayMatcher {
     // let qthis: *mut c_void = unsafe{calloc(1, 1040)};
     // unsafe{_ZN17QByteArrayMatcherC1EPKci()};
     let ctysz: c_int = unsafe{QByteArrayMatcher_Class_Size()};
@@ -186,8 +186,8 @@ impl<'a> /*trait*/ QByteArrayMatcher_New for (&'a  String, i32) {
 }
 
   // proto:  void QByteArrayMatcher::QByteArrayMatcher(const QByteArray & pattern);
-impl<'a> /*trait*/ QByteArrayMatcher_New for (&'a QByteArray) {
-  fn New(self) -> QByteArrayMatcher {
+impl<'a> /*trait*/ QByteArrayMatcher_new for (&'a QByteArray) {
+  fn new(self) -> QByteArrayMatcher {
     // let qthis: *mut c_void = unsafe{calloc(1, 1040)};
     // unsafe{_ZN17QByteArrayMatcherC1ERK10QByteArray()};
     let ctysz: c_int = unsafe{QByteArrayMatcher_Class_Size()};
@@ -215,8 +215,8 @@ impl<'a> /*trait*/ QByteArrayMatcher_indexIn<i32> for (&'a QByteArray, i32) {
 }
 
   // proto:  void QByteArrayMatcher::QByteArrayMatcher(const QByteArrayMatcher & other);
-impl<'a> /*trait*/ QByteArrayMatcher_New for (&'a QByteArrayMatcher) {
-  fn New(self) -> QByteArrayMatcher {
+impl<'a> /*trait*/ QByteArrayMatcher_new for (&'a QByteArrayMatcher) {
+  fn new(self) -> QByteArrayMatcher {
     // let qthis: *mut c_void = unsafe{calloc(1, 1040)};
     // unsafe{_ZN17QByteArrayMatcherC1ERKS_()};
     let ctysz: c_int = unsafe{QByteArrayMatcher_Class_Size()};
@@ -232,19 +232,19 @@ impl<'a> /*trait*/ QByteArrayMatcher_New for (&'a QByteArrayMatcher) {
 
   // proto:  void QByteArrayMatcher::~QByteArrayMatcher();
 impl /*struct*/ QByteArrayMatcher {
-  pub fn Free<RetType, T: QByteArrayMatcher_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QByteArrayMatcher_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QByteArrayMatcher_Free<RetType> {
-  fn Free(self , rsthis: & QByteArrayMatcher) -> RetType;
+pub trait QByteArrayMatcher_free<RetType> {
+  fn free(self , rsthis: & QByteArrayMatcher) -> RetType;
 }
 
   // proto:  void QByteArrayMatcher::~QByteArrayMatcher();
-impl<'a> /*trait*/ QByteArrayMatcher_Free<()> for () {
-  fn Free(self , rsthis: & QByteArrayMatcher) -> () {
+impl<'a> /*trait*/ QByteArrayMatcher_free<()> for () {
+  fn free(self , rsthis: & QByteArrayMatcher) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 1040)};
     // unsafe{_ZN17QByteArrayMatcherD0Ev()};
      unsafe {_ZN17QByteArrayMatcherD0Ev(rsthis.qclsinst)};

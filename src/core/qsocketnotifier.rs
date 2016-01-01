@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qsocketnotifier.h
 // dst-file: /src/core/qsocketnotifier.rs
 //
@@ -73,20 +73,20 @@ impl AsRef<QObject> for QSocketNotifier {
 }
   // proto:  void QSocketNotifier::QSocketNotifier(const QSocketNotifier & );
 impl /*struct*/ QSocketNotifier {
-  pub fn New<T: QSocketNotifier_New>(value: T) -> QSocketNotifier {
-    let rsthis = value.New();
+  pub fn new<T: QSocketNotifier_new>(value: T) -> QSocketNotifier {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QSocketNotifier_New {
-  fn New(self) -> QSocketNotifier;
+pub trait QSocketNotifier_new {
+  fn new(self) -> QSocketNotifier;
 }
 
   // proto:  void QSocketNotifier::QSocketNotifier(const QSocketNotifier & );
-impl<'a> /*trait*/ QSocketNotifier_New for (&'a QSocketNotifier) {
-  fn New(self) -> QSocketNotifier {
+impl<'a> /*trait*/ QSocketNotifier_new for (&'a QSocketNotifier) {
+  fn new(self) -> QSocketNotifier {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSocketNotifierC1ERKS_()};
     let ctysz: c_int = unsafe{QSocketNotifier_Class_Size()};
@@ -193,19 +193,19 @@ impl<'a> /*trait*/ QSocketNotifier_metaObject<()> for () {
 
   // proto:  void QSocketNotifier::~QSocketNotifier();
 impl /*struct*/ QSocketNotifier {
-  pub fn Free<RetType, T: QSocketNotifier_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QSocketNotifier_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QSocketNotifier_Free<RetType> {
-  fn Free(self , rsthis: & QSocketNotifier) -> RetType;
+pub trait QSocketNotifier_free<RetType> {
+  fn free(self , rsthis: & QSocketNotifier) -> RetType;
 }
 
   // proto:  void QSocketNotifier::~QSocketNotifier();
-impl<'a> /*trait*/ QSocketNotifier_Free<()> for () {
-  fn Free(self , rsthis: & QSocketNotifier) -> () {
+impl<'a> /*trait*/ QSocketNotifier_free<()> for () {
+  fn free(self , rsthis: & QSocketNotifier) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSocketNotifierD0Ev()};
      unsafe {_ZN15QSocketNotifierD0Ev(rsthis.qclsinst)};

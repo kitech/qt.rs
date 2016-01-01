@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qloggingcategory.h
 // dst-file: /src/core/qloggingcategory.rs
 //
@@ -76,20 +76,20 @@ impl /*struct*/ QLoggingCategory {
 }
   // proto:  void QLoggingCategory::QLoggingCategory(const char * category, QtMsgType severityLevel);
 impl /*struct*/ QLoggingCategory {
-  pub fn New<T: QLoggingCategory_New>(value: T) -> QLoggingCategory {
-    let rsthis = value.New();
+  pub fn new<T: QLoggingCategory_new>(value: T) -> QLoggingCategory {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QLoggingCategory_New {
-  fn New(self) -> QLoggingCategory;
+pub trait QLoggingCategory_new {
+  fn new(self) -> QLoggingCategory;
 }
 
   // proto:  void QLoggingCategory::QLoggingCategory(const char * category, QtMsgType severityLevel);
-impl<'a> /*trait*/ QLoggingCategory_New for (&'a  String, i32) {
-  fn New(self) -> QLoggingCategory {
+impl<'a> /*trait*/ QLoggingCategory_new for (&'a  String, i32) {
+  fn new(self) -> QLoggingCategory {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QLoggingCategoryC1EPKc9QtMsgType()};
     let ctysz: c_int = unsafe{QLoggingCategory_Class_Size()};
@@ -105,8 +105,8 @@ impl<'a> /*trait*/ QLoggingCategory_New for (&'a  String, i32) {
 }
 
   // proto:  void QLoggingCategory::QLoggingCategory(const QLoggingCategory & );
-impl<'a> /*trait*/ QLoggingCategory_New for (&'a QLoggingCategory) {
-  fn New(self) -> QLoggingCategory {
+impl<'a> /*trait*/ QLoggingCategory_new for (&'a QLoggingCategory) {
+  fn new(self) -> QLoggingCategory {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QLoggingCategoryC1ERKS_()};
     let ctysz: c_int = unsafe{QLoggingCategory_Class_Size()};
@@ -145,19 +145,19 @@ impl<'a> /*trait*/ QLoggingCategory_isDebugEnabled<i8> for () {
 
   // proto:  void QLoggingCategory::~QLoggingCategory();
 impl /*struct*/ QLoggingCategory {
-  pub fn Free<RetType, T: QLoggingCategory_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QLoggingCategory_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QLoggingCategory_Free<RetType> {
-  fn Free(self , rsthis: & QLoggingCategory) -> RetType;
+pub trait QLoggingCategory_free<RetType> {
+  fn free(self , rsthis: & QLoggingCategory) -> RetType;
 }
 
   // proto:  void QLoggingCategory::~QLoggingCategory();
-impl<'a> /*trait*/ QLoggingCategory_Free<()> for () {
-  fn Free(self , rsthis: & QLoggingCategory) -> () {
+impl<'a> /*trait*/ QLoggingCategory_free<()> for () {
+  fn free(self , rsthis: & QLoggingCategory) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QLoggingCategoryD0Ev()};
      unsafe {_ZN16QLoggingCategoryD0Ev(rsthis.qclsinst)};
@@ -166,8 +166,8 @@ impl<'a> /*trait*/ QLoggingCategory_Free<()> for () {
 }
 
   // proto:  void QLoggingCategory::QLoggingCategory(const char * category);
-impl<'a> /*trait*/ QLoggingCategory_New for (&'a  String) {
-  fn New(self) -> QLoggingCategory {
+impl<'a> /*trait*/ QLoggingCategory_new for (&'a  String) {
+  fn new(self) -> QLoggingCategory {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QLoggingCategoryC1EPKc()};
     let ctysz: c_int = unsafe{QLoggingCategory_Class_Size()};

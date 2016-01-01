@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qabstractstate.h
 // dst-file: /src/core/qabstractstate.rs
 //
@@ -83,19 +83,19 @@ impl AsRef<QObject> for QAbstractState {
 }
   // proto:  void QAbstractState::~QAbstractState();
 impl /*struct*/ QAbstractState {
-  pub fn Free<RetType, T: QAbstractState_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QAbstractState_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QAbstractState_Free<RetType> {
-  fn Free(self , rsthis: & QAbstractState) -> RetType;
+pub trait QAbstractState_free<RetType> {
+  fn free(self , rsthis: & QAbstractState) -> RetType;
 }
 
   // proto:  void QAbstractState::~QAbstractState();
-impl<'a> /*trait*/ QAbstractState_Free<()> for () {
-  fn Free(self , rsthis: & QAbstractState) -> () {
+impl<'a> /*trait*/ QAbstractState_free<()> for () {
+  fn free(self , rsthis: & QAbstractState) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QAbstractStateD0Ev()};
      unsafe {_ZN14QAbstractStateD0Ev(rsthis.qclsinst)};
@@ -105,20 +105,20 @@ impl<'a> /*trait*/ QAbstractState_Free<()> for () {
 
   // proto:  void QAbstractState::QAbstractState(const QAbstractState & );
 impl /*struct*/ QAbstractState {
-  pub fn New<T: QAbstractState_New>(value: T) -> QAbstractState {
-    let rsthis = value.New();
+  pub fn new<T: QAbstractState_new>(value: T) -> QAbstractState {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QAbstractState_New {
-  fn New(self) -> QAbstractState;
+pub trait QAbstractState_new {
+  fn new(self) -> QAbstractState;
 }
 
   // proto:  void QAbstractState::QAbstractState(const QAbstractState & );
-impl<'a> /*trait*/ QAbstractState_New for (&'a QAbstractState) {
-  fn New(self) -> QAbstractState {
+impl<'a> /*trait*/ QAbstractState_new for (&'a QAbstractState) {
+  fn new(self) -> QAbstractState {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QAbstractStateC1ERKS_()};
     let ctysz: c_int = unsafe{QAbstractState_Class_Size()};
@@ -133,8 +133,8 @@ impl<'a> /*trait*/ QAbstractState_New for (&'a QAbstractState) {
 }
 
   // proto:  void QAbstractState::QAbstractState(QState * parent);
-impl<'a> /*trait*/ QAbstractState_New for (&'a QState) {
-  fn New(self) -> QAbstractState {
+impl<'a> /*trait*/ QAbstractState_new for (&'a QState) {
+  fn new(self) -> QAbstractState {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QAbstractStateC1EP6QState()};
     let ctysz: c_int = unsafe{QAbstractState_Class_Size()};
@@ -318,7 +318,7 @@ extern fn QAbstractState_activeChanged_signal_connect_cb_0(rsfptr:fn(i8), arg0: 
   let rsarg0 = arg0 as i8;
   rsfptr(rsarg0);
 }
-extern fn QAbstractState_activeChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i8), arg0: c_char) {
+extern fn QAbstractState_activeChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i8;
@@ -327,7 +327,8 @@ extern fn QAbstractState_activeChanged_signal_connect_cb_box_0(rsfptr_raw:*mut f
 impl /* trait */ QAbstractState_activeChanged_signal_connect for fn(i8) {
   fn connect(self, sigthis: QAbstractState_activeChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAbstractState_activeChanged_signal_connect_cb_0 as *mut c_void;
@@ -335,7 +336,7 @@ impl /* trait */ QAbstractState_activeChanged_signal_connect for fn(i8) {
     unsafe {QAbstractState_SlotProxy_connect__ZN14QAbstractState13activeChangedEb(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QAbstractState_activeChanged_signal_connect for Box<fn(i8)> {
+impl /* trait */ QAbstractState_activeChanged_signal_connect for Box<Fn(i8)> {
   fn connect(self, sigthis: QAbstractState_activeChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qfileinfo.h
 // dst-file: /src/core/qfileinfo.rs
 //
@@ -182,20 +182,20 @@ impl<'a> /*trait*/ QFileInfo_isHidden<i8> for () {
 
   // proto:  void QFileInfo::QFileInfo();
 impl /*struct*/ QFileInfo {
-  pub fn New<T: QFileInfo_New>(value: T) -> QFileInfo {
-    let rsthis = value.New();
+  pub fn new<T: QFileInfo_new>(value: T) -> QFileInfo {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QFileInfo_New {
-  fn New(self) -> QFileInfo;
+pub trait QFileInfo_new {
+  fn new(self) -> QFileInfo;
 }
 
   // proto:  void QFileInfo::QFileInfo();
-impl<'a> /*trait*/ QFileInfo_New for () {
-  fn New(self) -> QFileInfo {
+impl<'a> /*trait*/ QFileInfo_new for () {
+  fn new(self) -> QFileInfo {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QFileInfoC1Ev()};
     let ctysz: c_int = unsafe{QFileInfo_Class_Size()};
@@ -374,8 +374,8 @@ impl<'a> /*trait*/ QFileInfo_isDir<i8> for () {
 }
 
   // proto:  void QFileInfo::QFileInfo(const QString & file);
-impl<'a> /*trait*/ QFileInfo_New for (&'a QString) {
-  fn New(self) -> QFileInfo {
+impl<'a> /*trait*/ QFileInfo_new for (&'a QString) {
+  fn new(self) -> QFileInfo {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QFileInfoC1ERK7QString()};
     let ctysz: c_int = unsafe{QFileInfo_Class_Size()};
@@ -460,8 +460,8 @@ impl<'a> /*trait*/ QFileInfo_isFile<i8> for () {
 }
 
   // proto:  void QFileInfo::QFileInfo(const QFile & file);
-impl<'a> /*trait*/ QFileInfo_New for (&'a QFile) {
-  fn New(self) -> QFileInfo {
+impl<'a> /*trait*/ QFileInfo_new for (&'a QFile) {
+  fn new(self) -> QFileInfo {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QFileInfoC1ERK5QFile()};
     let ctysz: c_int = unsafe{QFileInfo_Class_Size()};
@@ -558,8 +558,8 @@ impl<'a> /*trait*/ QFileInfo_filePath<QString> for () {
 }
 
   // proto:  void QFileInfo::QFileInfo(const QFileInfo & fileinfo);
-impl<'a> /*trait*/ QFileInfo_New for (&'a QFileInfo) {
-  fn New(self) -> QFileInfo {
+impl<'a> /*trait*/ QFileInfo_new for (&'a QFileInfo) {
+  fn new(self) -> QFileInfo {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QFileInfoC1ERKS_()};
     let ctysz: c_int = unsafe{QFileInfo_Class_Size()};
@@ -643,8 +643,8 @@ impl<'a> /*trait*/ QFileInfo_refresh<()> for () {
 }
 
   // proto:  void QFileInfo::QFileInfo(const QDir & dir, const QString & file);
-impl<'a> /*trait*/ QFileInfo_New for (&'a QDir, &'a QString) {
-  fn New(self) -> QFileInfo {
+impl<'a> /*trait*/ QFileInfo_new for (&'a QDir, &'a QString) {
+  fn new(self) -> QFileInfo {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QFileInfoC1ERK4QDirRK7QString()};
     let ctysz: c_int = unsafe{QFileInfo_Class_Size()};
@@ -837,19 +837,19 @@ impl<'a> /*trait*/ QFileInfo_caching<i8> for () {
 
   // proto:  void QFileInfo::~QFileInfo();
 impl /*struct*/ QFileInfo {
-  pub fn Free<RetType, T: QFileInfo_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QFileInfo_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_Free<RetType> {
-  fn Free(self , rsthis: & QFileInfo) -> RetType;
+pub trait QFileInfo_free<RetType> {
+  fn free(self , rsthis: & QFileInfo) -> RetType;
 }
 
   // proto:  void QFileInfo::~QFileInfo();
-impl<'a> /*trait*/ QFileInfo_Free<()> for () {
-  fn Free(self , rsthis: & QFileInfo) -> () {
+impl<'a> /*trait*/ QFileInfo_free<()> for () {
+  fn free(self , rsthis: & QFileInfo) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QFileInfoD0Ev()};
      unsafe {_ZN9QFileInfoD0Ev(rsthis.qclsinst)};

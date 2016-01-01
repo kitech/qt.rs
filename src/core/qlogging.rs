@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qlogging.h
 // dst-file: /src/core/qlogging.rs
 //
@@ -118,20 +118,20 @@ impl /*struct*/ QMessageLogContext {
 }
   // proto:  void QMessageLogContext::QMessageLogContext(const char * fileName, int lineNumber, const char * functionName, const char * categoryName);
 impl /*struct*/ QMessageLogContext {
-  pub fn New<T: QMessageLogContext_New>(value: T) -> QMessageLogContext {
-    let rsthis = value.New();
+  pub fn new<T: QMessageLogContext_new>(value: T) -> QMessageLogContext {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QMessageLogContext_New {
-  fn New(self) -> QMessageLogContext;
+pub trait QMessageLogContext_new {
+  fn new(self) -> QMessageLogContext;
 }
 
   // proto:  void QMessageLogContext::QMessageLogContext(const char * fileName, int lineNumber, const char * functionName, const char * categoryName);
-impl<'a> /*trait*/ QMessageLogContext_New for (&'a  String, i32, &'a  String, &'a  String) {
-  fn New(self) -> QMessageLogContext {
+impl<'a> /*trait*/ QMessageLogContext_new for (&'a  String, i32, &'a  String, &'a  String) {
+  fn new(self) -> QMessageLogContext {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QMessageLogContextC1EPKciS1_S1_()};
     let ctysz: c_int = unsafe{QMessageLogContext_Class_Size()};
@@ -172,8 +172,8 @@ impl<'a> /*trait*/ QMessageLogContext_copy<()> for (&'a QMessageLogContext) {
 }
 
   // proto:  void QMessageLogContext::QMessageLogContext();
-impl<'a> /*trait*/ QMessageLogContext_New for () {
-  fn New(self) -> QMessageLogContext {
+impl<'a> /*trait*/ QMessageLogContext_new for () {
+  fn new(self) -> QMessageLogContext {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QMessageLogContextC1Ev()};
     let ctysz: c_int = unsafe{QMessageLogContext_Class_Size()};
@@ -187,8 +187,8 @@ impl<'a> /*trait*/ QMessageLogContext_New for () {
 }
 
   // proto:  void QMessageLogContext::QMessageLogContext(const QMessageLogContext & );
-impl<'a> /*trait*/ QMessageLogContext_New for (&'a QMessageLogContext) {
-  fn New(self) -> QMessageLogContext {
+impl<'a> /*trait*/ QMessageLogContext_new for (&'a QMessageLogContext) {
+  fn new(self) -> QMessageLogContext {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QMessageLogContextC1ERKS_()};
     let ctysz: c_int = unsafe{QMessageLogContext_Class_Size()};
@@ -351,20 +351,20 @@ impl<'a> /*trait*/ QMessageLogger_critical<()> for (&'a  String) {
 
   // proto:  void QMessageLogger::QMessageLogger();
 impl /*struct*/ QMessageLogger {
-  pub fn New<T: QMessageLogger_New>(value: T) -> QMessageLogger {
-    let rsthis = value.New();
+  pub fn new<T: QMessageLogger_new>(value: T) -> QMessageLogger {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QMessageLogger_New {
-  fn New(self) -> QMessageLogger;
+pub trait QMessageLogger_new {
+  fn new(self) -> QMessageLogger;
 }
 
   // proto:  void QMessageLogger::QMessageLogger();
-impl<'a> /*trait*/ QMessageLogger_New for () {
-  fn New(self) -> QMessageLogger {
+impl<'a> /*trait*/ QMessageLogger_new for () {
+  fn new(self) -> QMessageLogger {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QMessageLoggerC1Ev()};
     let ctysz: c_int = unsafe{QMessageLogger_Class_Size()};
@@ -426,8 +426,8 @@ impl<'a> /*trait*/ QMessageLogger_critical<QDebug> for () {
 }
 
   // proto:  void QMessageLogger::QMessageLogger(const char * file, int line, const char * function);
-impl<'a> /*trait*/ QMessageLogger_New for (&'a  String, i32, &'a  String) {
-  fn New(self) -> QMessageLogger {
+impl<'a> /*trait*/ QMessageLogger_new for (&'a  String, i32, &'a  String) {
+  fn new(self) -> QMessageLogger {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QMessageLoggerC1EPKciS1_()};
     let ctysz: c_int = unsafe{QMessageLogger_Class_Size()};
@@ -469,8 +469,8 @@ impl<'a> /*trait*/ QMessageLogger_debug<QDebug> for (&'a QLoggingCategory) {
 }
 
   // proto:  void QMessageLogger::QMessageLogger(const QMessageLogger & );
-impl<'a> /*trait*/ QMessageLogger_New for (&'a QMessageLogger) {
-  fn New(self) -> QMessageLogger {
+impl<'a> /*trait*/ QMessageLogger_new for (&'a QMessageLogger) {
+  fn new(self) -> QMessageLogger {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QMessageLoggerC1ERKS_()};
     let ctysz: c_int = unsafe{QMessageLogger_Class_Size()};
@@ -568,8 +568,8 @@ impl<'a> /*trait*/ QMessageLogger_critical<()> for (&'a QLoggingCategory, &'a  S
 }
 
   // proto:  void QMessageLogger::QMessageLogger(const char * file, int line, const char * function, const char * category);
-impl<'a> /*trait*/ QMessageLogger_New for (&'a  String, i32, &'a  String, &'a  String) {
-  fn New(self) -> QMessageLogger {
+impl<'a> /*trait*/ QMessageLogger_new for (&'a  String, i32, &'a  String, &'a  String) {
+  fn new(self) -> QMessageLogger {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QMessageLoggerC1EPKciS1_S1_()};
     let ctysz: c_int = unsafe{QMessageLogger_Class_Size()};

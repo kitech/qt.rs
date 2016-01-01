@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qmimetype.h
 // dst-file: /src/core/qmimetype.rs
 //
@@ -85,19 +85,19 @@ impl /*struct*/ QMimeType {
 }
   // proto:  void QMimeType::~QMimeType();
 impl /*struct*/ QMimeType {
-  pub fn Free<RetType, T: QMimeType_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QMimeType_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QMimeType_Free<RetType> {
-  fn Free(self , rsthis: & QMimeType) -> RetType;
+pub trait QMimeType_free<RetType> {
+  fn free(self , rsthis: & QMimeType) -> RetType;
 }
 
   // proto:  void QMimeType::~QMimeType();
-impl<'a> /*trait*/ QMimeType_Free<()> for () {
-  fn Free(self , rsthis: & QMimeType) -> () {
+impl<'a> /*trait*/ QMimeType_free<()> for () {
+  fn free(self , rsthis: & QMimeType) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QMimeTypeD0Ev()};
      unsafe {_ZN9QMimeTypeD0Ev(rsthis.qclsinst)};
@@ -199,20 +199,20 @@ impl<'a> /*trait*/ QMimeType_parentMimeTypes<()> for () {
 
   // proto:  void QMimeType::QMimeType(const QMimeType & other);
 impl /*struct*/ QMimeType {
-  pub fn New<T: QMimeType_New>(value: T) -> QMimeType {
-    let rsthis = value.New();
+  pub fn new<T: QMimeType_new>(value: T) -> QMimeType {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QMimeType_New {
-  fn New(self) -> QMimeType;
+pub trait QMimeType_new {
+  fn new(self) -> QMimeType;
 }
 
   // proto:  void QMimeType::QMimeType(const QMimeType & other);
-impl<'a> /*trait*/ QMimeType_New for (&'a QMimeType) {
-  fn New(self) -> QMimeType {
+impl<'a> /*trait*/ QMimeType_new for (&'a QMimeType) {
+  fn new(self) -> QMimeType {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QMimeTypeC1ERKS_()};
     let ctysz: c_int = unsafe{QMimeType_Class_Size()};
@@ -297,8 +297,8 @@ impl<'a> /*trait*/ QMimeType_isValid<i8> for () {
 }
 
   // proto:  void QMimeType::QMimeType();
-impl<'a> /*trait*/ QMimeType_New for () {
-  fn New(self) -> QMimeType {
+impl<'a> /*trait*/ QMimeType_new for () {
+  fn new(self) -> QMimeType {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QMimeTypeC1Ev()};
     let ctysz: c_int = unsafe{QMimeType_Class_Size()};

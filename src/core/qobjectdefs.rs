@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qobjectdefs.h
 // dst-file: /src/core/qobjectdefs.rs
 //
@@ -168,20 +168,20 @@ impl /*struct*/ Connection {
 }
   // proto:  void Connection::Connection();
 impl /*struct*/ Connection {
-  pub fn New<T: Connection_New>(value: T) -> Connection {
-    let rsthis = value.New();
+  pub fn new<T: Connection_new>(value: T) -> Connection {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait Connection_New {
-  fn New(self) -> Connection;
+pub trait Connection_new {
+  fn new(self) -> Connection;
 }
 
   // proto:  void Connection::Connection();
-impl<'a> /*trait*/ Connection_New for () {
-  fn New(self) -> Connection {
+impl<'a> /*trait*/ Connection_new for () {
+  fn new(self) -> Connection {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMetaObject10ConnectionC1Ev()};
     let ctysz: c_int = unsafe{Connection_Class_Size()};
@@ -196,19 +196,19 @@ impl<'a> /*trait*/ Connection_New for () {
 
   // proto:  void Connection::~Connection();
 impl /*struct*/ Connection {
-  pub fn Free<RetType, T: Connection_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: Connection_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait Connection_Free<RetType> {
-  fn Free(self , rsthis: & Connection) -> RetType;
+pub trait Connection_free<RetType> {
+  fn free(self , rsthis: & Connection) -> RetType;
 }
 
   // proto:  void Connection::~Connection();
-impl<'a> /*trait*/ Connection_Free<()> for () {
-  fn Free(self , rsthis: & Connection) -> () {
+impl<'a> /*trait*/ Connection_free<()> for () {
+  fn free(self , rsthis: & Connection) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMetaObject10ConnectionD0Ev()};
      unsafe {_ZN11QMetaObject10ConnectionD0Ev(rsthis.qclsinst)};
@@ -217,8 +217,8 @@ impl<'a> /*trait*/ Connection_Free<()> for () {
 }
 
   // proto:  void Connection::Connection(void * data);
-impl<'a> /*trait*/ Connection_New for (*mut c_void) {
-  fn New(self) -> Connection {
+impl<'a> /*trait*/ Connection_new for (*mut c_void) {
+  fn new(self) -> Connection {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMetaObject10ConnectionC1EPv()};
     let ctysz: c_int = unsafe{Connection_Class_Size()};
@@ -251,20 +251,20 @@ impl AsRef<QGenericArgument> for QGenericReturnArgument {
 }
   // proto:  void QGenericReturnArgument::QGenericReturnArgument(const char * aName, void * aData);
 impl /*struct*/ QGenericReturnArgument {
-  pub fn New<T: QGenericReturnArgument_New>(value: T) -> QGenericReturnArgument {
-    let rsthis = value.New();
+  pub fn new<T: QGenericReturnArgument_new>(value: T) -> QGenericReturnArgument {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QGenericReturnArgument_New {
-  fn New(self) -> QGenericReturnArgument;
+pub trait QGenericReturnArgument_new {
+  fn new(self) -> QGenericReturnArgument;
 }
 
   // proto:  void QGenericReturnArgument::QGenericReturnArgument(const char * aName, void * aData);
-impl<'a> /*trait*/ QGenericReturnArgument_New for (&'a  String, *mut c_void) {
-  fn New(self) -> QGenericReturnArgument {
+impl<'a> /*trait*/ QGenericReturnArgument_new for (&'a  String, *mut c_void) {
+  fn new(self) -> QGenericReturnArgument {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN22QGenericReturnArgumentC1EPKcPv()};
     let ctysz: c_int = unsafe{QGenericReturnArgument_Class_Size()};
@@ -1150,20 +1150,20 @@ impl<'a> /*trait*/ QGenericArgument_data<()> for () {
 
   // proto:  void QGenericArgument::QGenericArgument(const char * aName, const void * aData);
 impl /*struct*/ QGenericArgument {
-  pub fn New<T: QGenericArgument_New>(value: T) -> QGenericArgument {
-    let rsthis = value.New();
+  pub fn new<T: QGenericArgument_new>(value: T) -> QGenericArgument {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QGenericArgument_New {
-  fn New(self) -> QGenericArgument;
+pub trait QGenericArgument_new {
+  fn new(self) -> QGenericArgument;
 }
 
   // proto:  void QGenericArgument::QGenericArgument(const char * aName, const void * aData);
-impl<'a> /*trait*/ QGenericArgument_New for (&'a  String, *mut c_void) {
-  fn New(self) -> QGenericArgument {
+impl<'a> /*trait*/ QGenericArgument_new for (&'a  String, *mut c_void) {
+  fn new(self) -> QGenericArgument {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QGenericArgumentC1EPKcPKv()};
     let ctysz: c_int = unsafe{QGenericArgument_Class_Size()};

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qmargins.h
 // dst-file: /src/core/qmargins.rs
 //
@@ -247,20 +247,20 @@ impl<'a> /*trait*/ QMarginsF_left<f64> for () {
 
   // proto:  void QMarginsF::QMarginsF();
 impl /*struct*/ QMarginsF {
-  pub fn New<T: QMarginsF_New>(value: T) -> QMarginsF {
-    let rsthis = value.New();
+  pub fn new<T: QMarginsF_new>(value: T) -> QMarginsF {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QMarginsF_New {
-  fn New(self) -> QMarginsF;
+pub trait QMarginsF_new {
+  fn new(self) -> QMarginsF;
 }
 
   // proto:  void QMarginsF::QMarginsF();
-impl<'a> /*trait*/ QMarginsF_New for () {
-  fn New(self) -> QMarginsF {
+impl<'a> /*trait*/ QMarginsF_new for () {
+  fn new(self) -> QMarginsF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QMarginsFC1Ev()};
     let ctysz: c_int = unsafe{QMarginsF_Class_Size()};
@@ -274,8 +274,8 @@ impl<'a> /*trait*/ QMarginsF_New for () {
 }
 
   // proto:  void QMarginsF::QMarginsF(qreal left, qreal top, qreal right, qreal bottom);
-impl<'a> /*trait*/ QMarginsF_New for (f64, f64, f64, f64) {
-  fn New(self) -> QMarginsF {
+impl<'a> /*trait*/ QMarginsF_new for (f64, f64, f64, f64) {
+  fn new(self) -> QMarginsF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QMarginsFC1Edddd()};
     let ctysz: c_int = unsafe{QMarginsF_Class_Size()};
@@ -316,8 +316,8 @@ impl<'a> /*trait*/ QMarginsF_bottom<f64> for () {
 }
 
   // proto:  void QMarginsF::QMarginsF(const QMargins & margins);
-impl<'a> /*trait*/ QMarginsF_New for (&'a QMargins) {
-  fn New(self) -> QMarginsF {
+impl<'a> /*trait*/ QMarginsF_new for (&'a QMargins) {
+  fn new(self) -> QMarginsF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QMarginsFC1ERK8QMargins()};
     let ctysz: c_int = unsafe{QMarginsF_Class_Size()};
@@ -614,20 +614,20 @@ impl<'a> /*trait*/ QMargins_isNull<i8> for () {
 
   // proto:  void QMargins::QMargins();
 impl /*struct*/ QMargins {
-  pub fn New<T: QMargins_New>(value: T) -> QMargins {
-    let rsthis = value.New();
+  pub fn new<T: QMargins_new>(value: T) -> QMargins {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QMargins_New {
-  fn New(self) -> QMargins;
+pub trait QMargins_new {
+  fn new(self) -> QMargins;
 }
 
   // proto:  void QMargins::QMargins();
-impl<'a> /*trait*/ QMargins_New for () {
-  fn New(self) -> QMargins {
+impl<'a> /*trait*/ QMargins_new for () {
+  fn new(self) -> QMargins {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMarginsC1Ev()};
     let ctysz: c_int = unsafe{QMargins_Class_Size()};
@@ -641,8 +641,8 @@ impl<'a> /*trait*/ QMargins_New for () {
 }
 
   // proto:  void QMargins::QMargins(int left, int top, int right, int bottom);
-impl<'a> /*trait*/ QMargins_New for (i32, i32, i32, i32) {
-  fn New(self) -> QMargins {
+impl<'a> /*trait*/ QMargins_new for (i32, i32, i32, i32) {
+  fn new(self) -> QMargins {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMarginsC1Eiiii()};
     let ctysz: c_int = unsafe{QMargins_Class_Size()};

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qelapsedtimer.h
 // dst-file: /src/core/qelapsedtimer.rs
 //
@@ -161,20 +161,20 @@ impl<'a> /*trait*/ QElapsedTimer_isMonotonic_s<i8> for () {
 
   // proto:  void QElapsedTimer::QElapsedTimer();
 impl /*struct*/ QElapsedTimer {
-  pub fn New<T: QElapsedTimer_New>(value: T) -> QElapsedTimer {
-    let rsthis = value.New();
+  pub fn new<T: QElapsedTimer_new>(value: T) -> QElapsedTimer {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QElapsedTimer_New {
-  fn New(self) -> QElapsedTimer;
+pub trait QElapsedTimer_new {
+  fn new(self) -> QElapsedTimer;
 }
 
   // proto:  void QElapsedTimer::QElapsedTimer();
-impl<'a> /*trait*/ QElapsedTimer_New for () {
-  fn New(self) -> QElapsedTimer {
+impl<'a> /*trait*/ QElapsedTimer_new for () {
+  fn new(self) -> QElapsedTimer {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QElapsedTimerC1Ev()};
     let ctysz: c_int = unsafe{QElapsedTimer_Class_Size()};

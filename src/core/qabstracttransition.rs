@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qabstracttransition.h
 // dst-file: /src/core/qabstracttransition.rs
 //
@@ -160,19 +160,19 @@ impl<'a> /*trait*/ QAbstractTransition_sourceState<QState> for () {
 
   // proto:  void QAbstractTransition::~QAbstractTransition();
 impl /*struct*/ QAbstractTransition {
-  pub fn Free<RetType, T: QAbstractTransition_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QAbstractTransition_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QAbstractTransition_Free<RetType> {
-  fn Free(self , rsthis: & QAbstractTransition) -> RetType;
+pub trait QAbstractTransition_free<RetType> {
+  fn free(self , rsthis: & QAbstractTransition) -> RetType;
 }
 
   // proto:  void QAbstractTransition::~QAbstractTransition();
-impl<'a> /*trait*/ QAbstractTransition_Free<()> for () {
-  fn Free(self , rsthis: & QAbstractTransition) -> () {
+impl<'a> /*trait*/ QAbstractTransition_free<()> for () {
+  fn free(self , rsthis: & QAbstractTransition) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QAbstractTransitionD0Ev()};
      unsafe {_ZN19QAbstractTransitionD0Ev(rsthis.qclsinst)};
@@ -182,20 +182,20 @@ impl<'a> /*trait*/ QAbstractTransition_Free<()> for () {
 
   // proto:  void QAbstractTransition::QAbstractTransition(QState * sourceState);
 impl /*struct*/ QAbstractTransition {
-  pub fn New<T: QAbstractTransition_New>(value: T) -> QAbstractTransition {
-    let rsthis = value.New();
+  pub fn new<T: QAbstractTransition_new>(value: T) -> QAbstractTransition {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QAbstractTransition_New {
-  fn New(self) -> QAbstractTransition;
+pub trait QAbstractTransition_new {
+  fn new(self) -> QAbstractTransition;
 }
 
   // proto:  void QAbstractTransition::QAbstractTransition(QState * sourceState);
-impl<'a> /*trait*/ QAbstractTransition_New for (&'a QState) {
-  fn New(self) -> QAbstractTransition {
+impl<'a> /*trait*/ QAbstractTransition_new for (&'a QState) {
+  fn new(self) -> QAbstractTransition {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QAbstractTransitionC1EP6QState()};
     let ctysz: c_int = unsafe{QAbstractTransition_Class_Size()};
@@ -323,8 +323,8 @@ impl<'a> /*trait*/ QAbstractTransition_metaObject<()> for () {
 }
 
   // proto:  void QAbstractTransition::QAbstractTransition(const QAbstractTransition & );
-impl<'a> /*trait*/ QAbstractTransition_New for (&'a QAbstractTransition) {
-  fn New(self) -> QAbstractTransition {
+impl<'a> /*trait*/ QAbstractTransition_new for (&'a QAbstractTransition) {
+  fn new(self) -> QAbstractTransition {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QAbstractTransitionC1ERKS_()};
     let ctysz: c_int = unsafe{QAbstractTransition_Class_Size()};

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qdatetime.h
 // dst-file: /src/core/qdatetime.rs
 //
@@ -546,20 +546,20 @@ impl<'a> /*trait*/ QTime_isValid<i8> for () {
 
   // proto:  void QTime::QTime(int ms);
 impl /*struct*/ QTime {
-  pub fn New<T: QTime_New>(value: T) -> QTime {
-    let rsthis = value.New();
+  pub fn new<T: QTime_new>(value: T) -> QTime {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTime_New {
-  fn New(self) -> QTime;
+pub trait QTime_new {
+  fn new(self) -> QTime;
 }
 
   // proto:  void QTime::QTime(int ms);
-impl<'a> /*trait*/ QTime_New for (i32) {
-  fn New(self) -> QTime {
+impl<'a> /*trait*/ QTime_new for (i32) {
+  fn new(self) -> QTime {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QTimeC1Ei()};
     let ctysz: c_int = unsafe{QTime_Class_Size()};
@@ -597,8 +597,8 @@ impl<'a> /*trait*/ QTime_msec<i32> for () {
 }
 
   // proto:  void QTime::QTime(int h, int m, int s, int ms);
-impl<'a> /*trait*/ QTime_New for (i32, i32, i32, i32) {
-  fn New(self) -> QTime {
+impl<'a> /*trait*/ QTime_new for (i32, i32, i32, i32) {
+  fn new(self) -> QTime {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QTimeC1Eiiii()};
     let ctysz: c_int = unsafe{QTime_Class_Size()};
@@ -640,8 +640,8 @@ impl<'a> /*trait*/ QTime_secsTo<i32> for (&'a QTime) {
 }
 
   // proto:  void QTime::QTime();
-impl<'a> /*trait*/ QTime_New for () {
-  fn New(self) -> QTime {
+impl<'a> /*trait*/ QTime_new for () {
+  fn new(self) -> QTime {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QTimeC1Ev()};
     let ctysz: c_int = unsafe{QTime_Class_Size()};
@@ -953,20 +953,20 @@ impl<'a> /*trait*/ QDateTime_setTime_t<()> for (u32) {
 
   // proto:  void QDateTime::QDateTime(const QDateTime & other);
 impl /*struct*/ QDateTime {
-  pub fn New<T: QDateTime_New>(value: T) -> QDateTime {
-    let rsthis = value.New();
+  pub fn new<T: QDateTime_new>(value: T) -> QDateTime {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QDateTime_New {
-  fn New(self) -> QDateTime;
+pub trait QDateTime_new {
+  fn new(self) -> QDateTime;
 }
 
   // proto:  void QDateTime::QDateTime(const QDateTime & other);
-impl<'a> /*trait*/ QDateTime_New for (&'a QDateTime) {
-  fn New(self) -> QDateTime {
+impl<'a> /*trait*/ QDateTime_new for (&'a QDateTime) {
+  fn new(self) -> QDateTime {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QDateTimeC1ERKS_()};
     let ctysz: c_int = unsafe{QDateTime_Class_Size()};
@@ -981,8 +981,8 @@ impl<'a> /*trait*/ QDateTime_New for (&'a QDateTime) {
 }
 
   // proto:  void QDateTime::QDateTime();
-impl<'a> /*trait*/ QDateTime_New for () {
-  fn New(self) -> QDateTime {
+impl<'a> /*trait*/ QDateTime_new for () {
+  fn new(self) -> QDateTime {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QDateTimeC1Ev()};
     let ctysz: c_int = unsafe{QDateTime_Class_Size()};
@@ -1213,8 +1213,8 @@ impl<'a> /*trait*/ QDateTime_fromMSecsSinceEpoch_s<QDateTime> for (i64) {
 }
 
   // proto:  void QDateTime::QDateTime(const QDate & date, const QTime & time, const QTimeZone & timeZone);
-impl<'a> /*trait*/ QDateTime_New for (&'a QDate, &'a QTime, &'a QTimeZone) {
-  fn New(self) -> QDateTime {
+impl<'a> /*trait*/ QDateTime_new for (&'a QDate, &'a QTime, &'a QTimeZone) {
+  fn new(self) -> QDateTime {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QDateTimeC1ERK5QDateRK5QTimeRK9QTimeZone()};
     let ctysz: c_int = unsafe{QDateTime_Class_Size()};
@@ -1444,8 +1444,8 @@ impl<'a> /*trait*/ QDateTime_offsetFromUtc<i32> for () {
 }
 
   // proto:  void QDateTime::QDateTime(const QDate & );
-impl<'a> /*trait*/ QDateTime_New for (&'a QDate) {
-  fn New(self) -> QDateTime {
+impl<'a> /*trait*/ QDateTime_new for (&'a QDate) {
+  fn new(self) -> QDateTime {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QDateTimeC1ERK5QDate()};
     let ctysz: c_int = unsafe{QDateTime_Class_Size()};
@@ -1510,19 +1510,19 @@ impl<'a> /*trait*/ QDateTime_secsTo<i64> for (&'a QDateTime) {
 
   // proto:  void QDateTime::~QDateTime();
 impl /*struct*/ QDateTime {
-  pub fn Free<RetType, T: QDateTime_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QDateTime_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QDateTime_Free<RetType> {
-  fn Free(self , rsthis: & QDateTime) -> RetType;
+pub trait QDateTime_free<RetType> {
+  fn free(self , rsthis: & QDateTime) -> RetType;
 }
 
   // proto:  void QDateTime::~QDateTime();
-impl<'a> /*trait*/ QDateTime_Free<()> for () {
-  fn Free(self , rsthis: & QDateTime) -> () {
+impl<'a> /*trait*/ QDateTime_free<()> for () {
+  fn free(self , rsthis: & QDateTime) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QDateTimeD0Ev()};
      unsafe {_ZN9QDateTimeD0Ev(rsthis.qclsinst)};
@@ -1949,20 +1949,20 @@ impl<'a> /*trait*/ QDate_toJulianDay<i64> for () {
 
   // proto:  void QDate::QDate(qint64 julianDay);
 impl /*struct*/ QDate {
-  pub fn New<T: QDate_New>(value: T) -> QDate {
-    let rsthis = value.New();
+  pub fn new<T: QDate_new>(value: T) -> QDate {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QDate_New {
-  fn New(self) -> QDate;
+pub trait QDate_new {
+  fn new(self) -> QDate;
 }
 
   // proto:  void QDate::QDate(qint64 julianDay);
-impl<'a> /*trait*/ QDate_New for (i64) {
-  fn New(self) -> QDate {
+impl<'a> /*trait*/ QDate_new for (i64) {
+  fn new(self) -> QDate {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QDateC1Ex()};
     let ctysz: c_int = unsafe{QDate_Class_Size()};
@@ -1977,8 +1977,8 @@ impl<'a> /*trait*/ QDate_New for (i64) {
 }
 
   // proto:  void QDate::QDate();
-impl<'a> /*trait*/ QDate_New for () {
-  fn New(self) -> QDate {
+impl<'a> /*trait*/ QDate_new for () {
+  fn new(self) -> QDate {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QDateC1Ev()};
     let ctysz: c_int = unsafe{QDate_Class_Size()};
@@ -2041,8 +2041,8 @@ impl<'a> /*trait*/ QDate_currentDate_s<QDate> for () {
 }
 
   // proto:  void QDate::QDate(int y, int m, int d);
-impl<'a> /*trait*/ QDate_New for (i32, i32, i32) {
-  fn New(self) -> QDate {
+impl<'a> /*trait*/ QDate_new for (i32, i32, i32) {
+  fn new(self) -> QDate {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QDateC1Eiii()};
     let ctysz: c_int = unsafe{QDate_Class_Size()};

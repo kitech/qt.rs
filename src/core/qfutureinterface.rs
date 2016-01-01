@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qfutureinterface.h
 // dst-file: /src/core/qfutureinterface.rs
 //
@@ -308,19 +308,19 @@ impl<'a> /*trait*/ QFutureInterfaceBase_isRunning<i8> for () {
 
   // proto:  void QFutureInterfaceBase::~QFutureInterfaceBase();
 impl /*struct*/ QFutureInterfaceBase {
-  pub fn Free<RetType, T: QFutureInterfaceBase_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QFutureInterfaceBase_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QFutureInterfaceBase_Free<RetType> {
-  fn Free(self , rsthis: & QFutureInterfaceBase) -> RetType;
+pub trait QFutureInterfaceBase_free<RetType> {
+  fn free(self , rsthis: & QFutureInterfaceBase) -> RetType;
 }
 
   // proto:  void QFutureInterfaceBase::~QFutureInterfaceBase();
-impl<'a> /*trait*/ QFutureInterfaceBase_Free<()> for () {
-  fn Free(self , rsthis: & QFutureInterfaceBase) -> () {
+impl<'a> /*trait*/ QFutureInterfaceBase_free<()> for () {
+  fn free(self , rsthis: & QFutureInterfaceBase) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QFutureInterfaceBaseD0Ev()};
      unsafe {_ZN20QFutureInterfaceBaseD0Ev(rsthis.qclsinst)};
@@ -559,20 +559,20 @@ impl<'a> /*trait*/ QFutureInterfaceBase_resultCount<i32> for () {
 
   // proto:  void QFutureInterfaceBase::QFutureInterfaceBase(const QFutureInterfaceBase & other);
 impl /*struct*/ QFutureInterfaceBase {
-  pub fn New<T: QFutureInterfaceBase_New>(value: T) -> QFutureInterfaceBase {
-    let rsthis = value.New();
+  pub fn new<T: QFutureInterfaceBase_new>(value: T) -> QFutureInterfaceBase {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QFutureInterfaceBase_New {
-  fn New(self) -> QFutureInterfaceBase;
+pub trait QFutureInterfaceBase_new {
+  fn new(self) -> QFutureInterfaceBase;
 }
 
   // proto:  void QFutureInterfaceBase::QFutureInterfaceBase(const QFutureInterfaceBase & other);
-impl<'a> /*trait*/ QFutureInterfaceBase_New for (&'a QFutureInterfaceBase) {
-  fn New(self) -> QFutureInterfaceBase {
+impl<'a> /*trait*/ QFutureInterfaceBase_new for (&'a QFutureInterfaceBase) {
+  fn new(self) -> QFutureInterfaceBase {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QFutureInterfaceBaseC1ERKS_()};
     let ctysz: c_int = unsafe{QFutureInterfaceBase_Class_Size()};

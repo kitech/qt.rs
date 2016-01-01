@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qtimezone.h
 // dst-file: /src/core/qtimezone.rs
 //
@@ -230,20 +230,20 @@ impl<'a> /*trait*/ QTimeZone_availableTimeZoneIds_s<()> for (i32) {
 
   // proto:  void QTimeZone::QTimeZone(int offsetSeconds);
 impl /*struct*/ QTimeZone {
-  pub fn New<T: QTimeZone_New>(value: T) -> QTimeZone {
-    let rsthis = value.New();
+  pub fn new<T: QTimeZone_new>(value: T) -> QTimeZone {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTimeZone_New {
-  fn New(self) -> QTimeZone;
+pub trait QTimeZone_new {
+  fn new(self) -> QTimeZone;
 }
 
   // proto:  void QTimeZone::QTimeZone(int offsetSeconds);
-impl<'a> /*trait*/ QTimeZone_New for (i32) {
-  fn New(self) -> QTimeZone {
+impl<'a> /*trait*/ QTimeZone_new for (i32) {
+  fn new(self) -> QTimeZone {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeZoneC1Ei()};
     let ctysz: c_int = unsafe{QTimeZone_Class_Size()};
@@ -283,8 +283,8 @@ impl<'a> /*trait*/ QTimeZone_abbreviation<QString> for (&'a QDateTime) {
 }
 
   // proto:  void QTimeZone::QTimeZone();
-impl<'a> /*trait*/ QTimeZone_New for () {
-  fn New(self) -> QTimeZone {
+impl<'a> /*trait*/ QTimeZone_new for () {
+  fn new(self) -> QTimeZone {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeZoneC1Ev()};
     let ctysz: c_int = unsafe{QTimeZone_Class_Size()};
@@ -515,8 +515,8 @@ impl<'a> /*trait*/ QTimeZone_systemTimeZone_s<QTimeZone> for () {
 }
 
   // proto:  void QTimeZone::QTimeZone(const QByteArray & ianaId);
-impl<'a> /*trait*/ QTimeZone_New for (&'a QByteArray) {
-  fn New(self) -> QTimeZone {
+impl<'a> /*trait*/ QTimeZone_new for (&'a QByteArray) {
+  fn new(self) -> QTimeZone {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeZoneC1ERK10QByteArray()};
     let ctysz: c_int = unsafe{QTimeZone_Class_Size()};
@@ -531,8 +531,8 @@ impl<'a> /*trait*/ QTimeZone_New for (&'a QByteArray) {
 }
 
   // proto:  void QTimeZone::QTimeZone(const QTimeZone & other);
-impl<'a> /*trait*/ QTimeZone_New for (&'a QTimeZone) {
-  fn New(self) -> QTimeZone {
+impl<'a> /*trait*/ QTimeZone_new for (&'a QTimeZone) {
+  fn new(self) -> QTimeZone {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeZoneC1ERKS_()};
     let ctysz: c_int = unsafe{QTimeZone_Class_Size()};
@@ -548,19 +548,19 @@ impl<'a> /*trait*/ QTimeZone_New for (&'a QTimeZone) {
 
   // proto:  void QTimeZone::~QTimeZone();
 impl /*struct*/ QTimeZone {
-  pub fn Free<RetType, T: QTimeZone_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QTimeZone_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QTimeZone_Free<RetType> {
-  fn Free(self , rsthis: & QTimeZone) -> RetType;
+pub trait QTimeZone_free<RetType> {
+  fn free(self , rsthis: & QTimeZone) -> RetType;
 }
 
   // proto:  void QTimeZone::~QTimeZone();
-impl<'a> /*trait*/ QTimeZone_Free<()> for () {
-  fn Free(self , rsthis: & QTimeZone) -> () {
+impl<'a> /*trait*/ QTimeZone_free<()> for () {
+  fn free(self , rsthis: & QTimeZone) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeZoneD0Ev()};
      unsafe {_ZN9QTimeZoneD0Ev(rsthis.qclsinst)};

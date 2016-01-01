@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qsignaltransition.h
 // dst-file: /src/core/qsignaltransition.rs
 //
@@ -132,19 +132,19 @@ impl<'a> /*trait*/ QSignalTransition_signal<QByteArray> for () {
 
   // proto:  void QSignalTransition::~QSignalTransition();
 impl /*struct*/ QSignalTransition {
-  pub fn Free<RetType, T: QSignalTransition_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QSignalTransition_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QSignalTransition_Free<RetType> {
-  fn Free(self , rsthis: & QSignalTransition) -> RetType;
+pub trait QSignalTransition_free<RetType> {
+  fn free(self , rsthis: & QSignalTransition) -> RetType;
 }
 
   // proto:  void QSignalTransition::~QSignalTransition();
-impl<'a> /*trait*/ QSignalTransition_Free<()> for () {
-  fn Free(self , rsthis: & QSignalTransition) -> () {
+impl<'a> /*trait*/ QSignalTransition_free<()> for () {
+  fn free(self , rsthis: & QSignalTransition) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QSignalTransitionD0Ev()};
      unsafe {_ZN17QSignalTransitionD0Ev(rsthis.qclsinst)};
@@ -154,20 +154,20 @@ impl<'a> /*trait*/ QSignalTransition_Free<()> for () {
 
   // proto:  void QSignalTransition::QSignalTransition(const QSignalTransition & );
 impl /*struct*/ QSignalTransition {
-  pub fn New<T: QSignalTransition_New>(value: T) -> QSignalTransition {
-    let rsthis = value.New();
+  pub fn new<T: QSignalTransition_new>(value: T) -> QSignalTransition {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QSignalTransition_New {
-  fn New(self) -> QSignalTransition;
+pub trait QSignalTransition_new {
+  fn new(self) -> QSignalTransition;
 }
 
   // proto:  void QSignalTransition::QSignalTransition(const QSignalTransition & );
-impl<'a> /*trait*/ QSignalTransition_New for (&'a QSignalTransition) {
-  fn New(self) -> QSignalTransition {
+impl<'a> /*trait*/ QSignalTransition_new for (&'a QSignalTransition) {
+  fn new(self) -> QSignalTransition {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QSignalTransitionC1ERKS_()};
     let ctysz: c_int = unsafe{QSignalTransition_Class_Size()};
@@ -182,8 +182,8 @@ impl<'a> /*trait*/ QSignalTransition_New for (&'a QSignalTransition) {
 }
 
   // proto:  void QSignalTransition::QSignalTransition(const QObject * sender, const char * signal, QState * sourceState);
-impl<'a> /*trait*/ QSignalTransition_New for (&'a QObject, &'a  String, &'a QState) {
-  fn New(self) -> QSignalTransition {
+impl<'a> /*trait*/ QSignalTransition_new for (&'a QObject, &'a  String, &'a QState) {
+  fn new(self) -> QSignalTransition {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QSignalTransitionC1EPK7QObjectPKcP6QState()};
     let ctysz: c_int = unsafe{QSignalTransition_Class_Size()};
@@ -224,8 +224,8 @@ impl<'a> /*trait*/ QSignalTransition_senderObject<QObject> for () {
 }
 
   // proto:  void QSignalTransition::QSignalTransition(QState * sourceState);
-impl<'a> /*trait*/ QSignalTransition_New for (&'a QState) {
-  fn New(self) -> QSignalTransition {
+impl<'a> /*trait*/ QSignalTransition_new for (&'a QState) {
+  fn new(self) -> QSignalTransition {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QSignalTransitionC1EP6QState()};
     let ctysz: c_int = unsafe{QSignalTransition_Class_Size()};

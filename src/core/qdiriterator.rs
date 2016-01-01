@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qdiriterator.h
 // dst-file: /src/core/qdiriterator.rs
 //
@@ -115,20 +115,20 @@ impl<'a> /*trait*/ QDirIterator_path<QString> for () {
 
   // proto:  void QDirIterator::QDirIterator(const QDirIterator & );
 impl /*struct*/ QDirIterator {
-  pub fn New<T: QDirIterator_New>(value: T) -> QDirIterator {
-    let rsthis = value.New();
+  pub fn new<T: QDirIterator_new>(value: T) -> QDirIterator {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QDirIterator_New {
-  fn New(self) -> QDirIterator;
+pub trait QDirIterator_new {
+  fn new(self) -> QDirIterator;
 }
 
   // proto:  void QDirIterator::QDirIterator(const QDirIterator & );
-impl<'a> /*trait*/ QDirIterator_New for (&'a QDirIterator) {
-  fn New(self) -> QDirIterator {
+impl<'a> /*trait*/ QDirIterator_new for (&'a QDirIterator) {
+  fn new(self) -> QDirIterator {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QDirIteratorC1ERKS_()};
     let ctysz: c_int = unsafe{QDirIterator_Class_Size()};
@@ -192,19 +192,19 @@ impl<'a> /*trait*/ QDirIterator_filePath<QString> for () {
 
   // proto:  void QDirIterator::~QDirIterator();
 impl /*struct*/ QDirIterator {
-  pub fn Free<RetType, T: QDirIterator_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QDirIterator_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QDirIterator_Free<RetType> {
-  fn Free(self , rsthis: & QDirIterator) -> RetType;
+pub trait QDirIterator_free<RetType> {
+  fn free(self , rsthis: & QDirIterator) -> RetType;
 }
 
   // proto:  void QDirIterator::~QDirIterator();
-impl<'a> /*trait*/ QDirIterator_Free<()> for () {
-  fn Free(self , rsthis: & QDirIterator) -> () {
+impl<'a> /*trait*/ QDirIterator_free<()> for () {
+  fn free(self , rsthis: & QDirIterator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QDirIteratorD0Ev()};
      unsafe {_ZN12QDirIteratorD0Ev(rsthis.qclsinst)};

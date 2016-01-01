@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qstandardpaths.h
 // dst-file: /src/core/qstandardpaths.rs
 //
@@ -61,20 +61,20 @@ impl /*struct*/ QStandardPaths {
 }
   // proto:  void QStandardPaths::QStandardPaths();
 impl /*struct*/ QStandardPaths {
-  pub fn New<T: QStandardPaths_New>(value: T) -> QStandardPaths {
-    let rsthis = value.New();
+  pub fn new<T: QStandardPaths_new>(value: T) -> QStandardPaths {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QStandardPaths_New {
-  fn New(self) -> QStandardPaths;
+pub trait QStandardPaths_new {
+  fn new(self) -> QStandardPaths;
 }
 
   // proto:  void QStandardPaths::QStandardPaths();
-impl<'a> /*trait*/ QStandardPaths_New for () {
-  fn New(self) -> QStandardPaths {
+impl<'a> /*trait*/ QStandardPaths_new for () {
+  fn new(self) -> QStandardPaths {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QStandardPathsC1Ev()};
     let ctysz: c_int = unsafe{QStandardPaths_Class_Size()};
@@ -89,19 +89,19 @@ impl<'a> /*trait*/ QStandardPaths_New for () {
 
   // proto:  void QStandardPaths::~QStandardPaths();
 impl /*struct*/ QStandardPaths {
-  pub fn Free<RetType, T: QStandardPaths_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QStandardPaths_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QStandardPaths_Free<RetType> {
-  fn Free(self , rsthis: & QStandardPaths) -> RetType;
+pub trait QStandardPaths_free<RetType> {
+  fn free(self , rsthis: & QStandardPaths) -> RetType;
 }
 
   // proto:  void QStandardPaths::~QStandardPaths();
-impl<'a> /*trait*/ QStandardPaths_Free<()> for () {
-  fn Free(self , rsthis: & QStandardPaths) -> () {
+impl<'a> /*trait*/ QStandardPaths_free<()> for () {
+  fn free(self , rsthis: & QStandardPaths) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QStandardPathsD0Ev()};
      unsafe {_ZN14QStandardPathsD0Ev(rsthis.qclsinst)};

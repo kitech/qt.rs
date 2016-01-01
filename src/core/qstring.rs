@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qstring.h
 // dst-file: /src/core/qstring.rs
 //
@@ -713,20 +713,20 @@ impl<'a> /*trait*/ QString_left<QString> for (i32) {
 
   // proto:  void QString::QString(QChar c);
 impl /*struct*/ QString {
-  pub fn New<T: QString_New>(value: T) -> QString {
-    let rsthis = value.New();
+  pub fn new<T: QString_new>(value: T) -> QString {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QString_New {
-  fn New(self) -> QString;
+pub trait QString_new {
+  fn new(self) -> QString;
 }
 
   // proto:  void QString::QString(QChar c);
-impl<'a> /*trait*/ QString_New for (QChar) {
-  fn New(self) -> QString {
+impl<'a> /*trait*/ QString_new for (QChar) {
+  fn new(self) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QStringC1E5QChar()};
     let ctysz: c_int = unsafe{QString_Class_Size()};
@@ -851,8 +851,8 @@ impl<'a> /*trait*/ QString_push_front<()> for (QChar) {
 }
 
   // proto:  void QString::QString();
-impl<'a> /*trait*/ QString_New for () {
-  fn New(self) -> QString {
+impl<'a> /*trait*/ QString_new for () {
+  fn new(self) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QStringC1Ev()};
     let ctysz: c_int = unsafe{QString_Class_Size()};
@@ -971,8 +971,8 @@ impl<'a> /*trait*/ QString_setNum<QString> for (i16, i32) {
 }
 
   // proto:  void QString::QString(const QChar * unicode, int size);
-impl<'a> /*trait*/ QString_New for (&'a QChar, i32) {
-  fn New(self) -> QString {
+impl<'a> /*trait*/ QString_new for (&'a QChar, i32) {
+  fn new(self) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QStringC1EPK5QChari()};
     let ctysz: c_int = unsafe{QString_Class_Size()};
@@ -1831,8 +1831,8 @@ impl<'a> /*trait*/ QString_localeAwareCompare_s<i32> for (&'a QString, &'a QStri
 }
 
   // proto:  void QString::QString(const char * ch);
-impl<'a> /*trait*/ QString_New for (&'a  String) {
-  fn New(self) -> QString {
+impl<'a> /*trait*/ QString_new for (&'a  String) {
+  fn new(self) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QStringC1EPKc()};
     let ctysz: c_int = unsafe{QString_Class_Size()};
@@ -2047,19 +2047,19 @@ impl<'a> /*trait*/ QString_fromLatin1_s<QString> for (&'a QByteArray) {
 
   // proto:  void QString::~QString();
 impl /*struct*/ QString {
-  pub fn Free<RetType, T: QString_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QString_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QString_Free<RetType> {
-  fn Free(self , rsthis: & QString) -> RetType;
+pub trait QString_free<RetType> {
+  fn free(self , rsthis: & QString) -> RetType;
 }
 
   // proto:  void QString::~QString();
-impl<'a> /*trait*/ QString_Free<()> for () {
-  fn Free(self , rsthis: & QString) -> () {
+impl<'a> /*trait*/ QString_free<()> for () {
+  fn free(self , rsthis: & QString) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QStringD0Ev()};
      unsafe {demth_ZN7QStringD0Ev(rsthis.qclsinst)};
@@ -2767,8 +2767,8 @@ impl<'a> /*trait*/ QString_at<QChar> for (i32) {
 }
 
   // proto:  void QString::QString(int size, QChar c);
-impl<'a> /*trait*/ QString_New for (i32, QChar) {
-  fn New(self) -> QString {
+impl<'a> /*trait*/ QString_new for (i32, QChar) {
+  fn new(self) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QStringC1Ei5QChar()};
     let ctysz: c_int = unsafe{QString_Class_Size()};
@@ -3052,8 +3052,8 @@ impl<'a> /*trait*/ QString_arg<QString> for (u16, i32, i32, QChar) {
 }
 
   // proto:  void QString::QString(const QString & );
-impl<'a> /*trait*/ QString_New for (&'a QString) {
-  fn New(self) -> QString {
+impl<'a> /*trait*/ QString_new for (&'a QString) {
+  fn new(self) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QStringC1ERKS_()};
     let ctysz: c_int = unsafe{QString_Class_Size()};
@@ -3084,8 +3084,8 @@ impl<'a> /*trait*/ QString_arg<QString> for (i16, i32, i32, QChar) {
 }
 
   // proto:  void QString::QString(const QByteArray & a);
-impl<'a> /*trait*/ QString_New for (&'a QByteArray) {
-  fn New(self) -> QString {
+impl<'a> /*trait*/ QString_new for (&'a QByteArray) {
+  fn new(self) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QStringC1ERK10QByteArray()};
     let ctysz: c_int = unsafe{QString_Class_Size()};
@@ -3559,20 +3559,20 @@ impl<'a> /*trait*/ QLatin1String_data<String> for () {
 
   // proto:  void QLatin1String::QLatin1String(const char * s);
 impl /*struct*/ QLatin1String {
-  pub fn New<T: QLatin1String_New>(value: T) -> QLatin1String {
-    let rsthis = value.New();
+  pub fn new<T: QLatin1String_new>(value: T) -> QLatin1String {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QLatin1String_New {
-  fn New(self) -> QLatin1String;
+pub trait QLatin1String_new {
+  fn new(self) -> QLatin1String;
 }
 
   // proto:  void QLatin1String::QLatin1String(const char * s);
-impl<'a> /*trait*/ QLatin1String_New for (&'a  String) {
-  fn New(self) -> QLatin1String {
+impl<'a> /*trait*/ QLatin1String_new for (&'a  String) {
+  fn new(self) -> QLatin1String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QLatin1StringC1EPKc()};
     let ctysz: c_int = unsafe{QLatin1String_Class_Size()};
@@ -3610,8 +3610,8 @@ impl<'a> /*trait*/ QLatin1String_size<i32> for () {
 }
 
   // proto:  void QLatin1String::QLatin1String(const QByteArray & s);
-impl<'a> /*trait*/ QLatin1String_New for (&'a QByteArray) {
-  fn New(self) -> QLatin1String {
+impl<'a> /*trait*/ QLatin1String_new for (&'a QByteArray) {
+  fn new(self) -> QLatin1String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QLatin1StringC1ERK10QByteArray()};
     let ctysz: c_int = unsafe{QLatin1String_Class_Size()};
@@ -3650,8 +3650,8 @@ impl<'a> /*trait*/ QLatin1String_latin1<String> for () {
 }
 
   // proto:  void QLatin1String::QLatin1String(const char * s, int sz);
-impl<'a> /*trait*/ QLatin1String_New for (&'a  String, i32) {
-  fn New(self) -> QLatin1String {
+impl<'a> /*trait*/ QLatin1String_new for (&'a  String, i32) {
+  fn new(self) -> QLatin1String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QLatin1StringC1EPKci()};
     let ctysz: c_int = unsafe{QLatin1String_Class_Size()};
@@ -3788,20 +3788,20 @@ impl<'a> /*trait*/ QCharRef_isMark<i8> for () {
 
   // proto:  void QCharRef::QCharRef(QString & str, int idx);
 impl /*struct*/ QCharRef {
-  pub fn New<T: QCharRef_New>(value: T) -> QCharRef {
-    let rsthis = value.New();
+  pub fn new<T: QCharRef_new>(value: T) -> QCharRef {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QCharRef_New {
-  fn New(self) -> QCharRef;
+pub trait QCharRef_new {
+  fn new(self) -> QCharRef;
 }
 
   // proto:  void QCharRef::QCharRef(QString & str, int idx);
-impl<'a> /*trait*/ QCharRef_New for (&'a QString, i32) {
-  fn New(self) -> QCharRef {
+impl<'a> /*trait*/ QCharRef_new for (&'a QString, i32) {
+  fn new(self) -> QCharRef {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QCharRefC1ER7QStringi()};
     let ctysz: c_int = unsafe{QCharRef_Class_Size()};
@@ -4336,20 +4336,20 @@ impl<'a> /*trait*/ QStringRef_toShort<i16> for (&'a mut Vec<i8>, i32) {
 
   // proto:  void QStringRef::QStringRef(const QString * string);
 impl /*struct*/ QStringRef {
-  pub fn New<T: QStringRef_New>(value: T) -> QStringRef {
-    let rsthis = value.New();
+  pub fn new<T: QStringRef_new>(value: T) -> QStringRef {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QStringRef_New {
-  fn New(self) -> QStringRef;
+pub trait QStringRef_new {
+  fn new(self) -> QStringRef;
 }
 
   // proto:  void QStringRef::QStringRef(const QString * string);
-impl<'a> /*trait*/ QStringRef_New for (&'a QString) {
-  fn New(self) -> QStringRef {
+impl<'a> /*trait*/ QStringRef_new for (&'a QString) {
+  fn new(self) -> QStringRef {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QStringRefC1EPK7QString()};
     let ctysz: c_int = unsafe{QStringRef_Class_Size()};
@@ -4719,8 +4719,8 @@ impl<'a> /*trait*/ QStringRef_count<i32> for () {
 }
 
   // proto:  void QStringRef::QStringRef(const QString * string, int position, int size);
-impl<'a> /*trait*/ QStringRef_New for (&'a QString, i32, i32) {
-  fn New(self) -> QStringRef {
+impl<'a> /*trait*/ QStringRef_new for (&'a QString, i32, i32) {
+  fn new(self) -> QStringRef {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QStringRefC1EPK7QStringii()};
     let ctysz: c_int = unsafe{QStringRef_Class_Size()};
@@ -4737,8 +4737,8 @@ impl<'a> /*trait*/ QStringRef_New for (&'a QString, i32, i32) {
 }
 
   // proto:  void QStringRef::QStringRef();
-impl<'a> /*trait*/ QStringRef_New for () {
-  fn New(self) -> QStringRef {
+impl<'a> /*trait*/ QStringRef_new for () {
+  fn new(self) -> QStringRef {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QStringRefC1Ev()};
     let ctysz: c_int = unsafe{QStringRef_Class_Size()};
@@ -5182,19 +5182,19 @@ impl<'a> /*trait*/ QStringRef_length<i32> for () {
 
   // proto:  void QStringRef::~QStringRef();
 impl /*struct*/ QStringRef {
-  pub fn Free<RetType, T: QStringRef_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QStringRef_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QStringRef_Free<RetType> {
-  fn Free(self , rsthis: & QStringRef) -> RetType;
+pub trait QStringRef_free<RetType> {
+  fn free(self , rsthis: & QStringRef) -> RetType;
 }
 
   // proto:  void QStringRef::~QStringRef();
-impl<'a> /*trait*/ QStringRef_Free<()> for () {
-  fn Free(self , rsthis: & QStringRef) -> () {
+impl<'a> /*trait*/ QStringRef_free<()> for () {
+  fn free(self , rsthis: & QStringRef) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QStringRefD0Ev()};
      unsafe {demth_ZN10QStringRefD0Ev(rsthis.qclsinst)};

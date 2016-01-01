@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qmimedatabase.h
 // dst-file: /src/core/qmimedatabase.rs
 //
@@ -103,20 +103,20 @@ impl<'a> /*trait*/ QMimeDatabase_mimeTypeForUrl<QMimeType> for (&'a QUrl) {
 
   // proto:  void QMimeDatabase::QMimeDatabase();
 impl /*struct*/ QMimeDatabase {
-  pub fn New<T: QMimeDatabase_New>(value: T) -> QMimeDatabase {
-    let rsthis = value.New();
+  pub fn new<T: QMimeDatabase_new>(value: T) -> QMimeDatabase {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QMimeDatabase_New {
-  fn New(self) -> QMimeDatabase;
+pub trait QMimeDatabase_new {
+  fn new(self) -> QMimeDatabase;
 }
 
   // proto:  void QMimeDatabase::QMimeDatabase();
-impl<'a> /*trait*/ QMimeDatabase_New for () {
-  fn New(self) -> QMimeDatabase {
+impl<'a> /*trait*/ QMimeDatabase_new for () {
+  fn new(self) -> QMimeDatabase {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QMimeDatabaseC1Ev()};
     let ctysz: c_int = unsafe{QMimeDatabase_Class_Size()};
@@ -268,19 +268,19 @@ impl<'a> /*trait*/ QMimeDatabase_mimeTypeForData<QMimeType> for (&'a QIODevice) 
 
   // proto:  void QMimeDatabase::~QMimeDatabase();
 impl /*struct*/ QMimeDatabase {
-  pub fn Free<RetType, T: QMimeDatabase_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QMimeDatabase_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QMimeDatabase_Free<RetType> {
-  fn Free(self , rsthis: & QMimeDatabase) -> RetType;
+pub trait QMimeDatabase_free<RetType> {
+  fn free(self , rsthis: & QMimeDatabase) -> RetType;
 }
 
   // proto:  void QMimeDatabase::~QMimeDatabase();
-impl<'a> /*trait*/ QMimeDatabase_Free<()> for () {
-  fn Free(self , rsthis: & QMimeDatabase) -> () {
+impl<'a> /*trait*/ QMimeDatabase_free<()> for () {
+  fn free(self , rsthis: & QMimeDatabase) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QMimeDatabaseD0Ev()};
      unsafe {_ZN13QMimeDatabaseD0Ev(rsthis.qclsinst)};
@@ -325,8 +325,8 @@ impl<'a> /*trait*/ QMimeDatabase_allMimeTypes<()> for () {
 }
 
   // proto:  void QMimeDatabase::QMimeDatabase(const QMimeDatabase & );
-impl<'a> /*trait*/ QMimeDatabase_New for (&'a QMimeDatabase) {
-  fn New(self) -> QMimeDatabase {
+impl<'a> /*trait*/ QMimeDatabase_new for (&'a QMimeDatabase) {
+  fn new(self) -> QMimeDatabase {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QMimeDatabaseC1ERKS_()};
     let ctysz: c_int = unsafe{QMimeDatabase_Class_Size()};

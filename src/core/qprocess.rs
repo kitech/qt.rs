@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qprocess.h
 // dst-file: /src/core/qprocess.rs
 //
@@ -347,20 +347,20 @@ impl<'a> /*trait*/ QProcess_setProcessEnvironment<()> for (&'a QProcessEnvironme
 
   // proto:  void QProcess::QProcess(const QProcess & );
 impl /*struct*/ QProcess {
-  pub fn New<T: QProcess_New>(value: T) -> QProcess {
-    let rsthis = value.New();
+  pub fn new<T: QProcess_new>(value: T) -> QProcess {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QProcess_New {
-  fn New(self) -> QProcess;
+pub trait QProcess_new {
+  fn new(self) -> QProcess;
 }
 
   // proto:  void QProcess::QProcess(const QProcess & );
-impl<'a> /*trait*/ QProcess_New for (&'a QProcess) {
-  fn New(self) -> QProcess {
+impl<'a> /*trait*/ QProcess_new for (&'a QProcess) {
+  fn new(self) -> QProcess {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcessC1ERKS_()};
     let ctysz: c_int = unsafe{QProcess_Class_Size()};
@@ -422,19 +422,19 @@ impl<'a> /*trait*/ QProcess_setArguments<()> for (&'a QStringList) {
 
   // proto:  void QProcess::~QProcess();
 impl /*struct*/ QProcess {
-  pub fn Free<RetType, T: QProcess_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QProcess_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QProcess_Free<RetType> {
-  fn Free(self , rsthis: & QProcess) -> RetType;
+pub trait QProcess_free<RetType> {
+  fn free(self , rsthis: & QProcess) -> RetType;
 }
 
   // proto:  void QProcess::~QProcess();
-impl<'a> /*trait*/ QProcess_Free<()> for () {
-  fn Free(self , rsthis: & QProcess) -> () {
+impl<'a> /*trait*/ QProcess_free<()> for () {
+  fn free(self , rsthis: & QProcess) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcessD0Ev()};
      unsafe {_ZN8QProcessD0Ev(rsthis.qclsinst)};
@@ -613,8 +613,8 @@ impl<'a> /*trait*/ QProcess_waitForBytesWritten<i8> for (i32) {
 }
 
   // proto:  void QProcess::QProcess(QObject * parent);
-impl<'a> /*trait*/ QProcess_New for (&'a QObject) {
-  fn New(self) -> QProcess {
+impl<'a> /*trait*/ QProcess_new for (&'a QObject) {
+  fn new(self) -> QProcess {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcessC1EP7QObject()};
     let ctysz: c_int = unsafe{QProcess_Class_Size()};
@@ -1282,19 +1282,19 @@ impl<'a> /*trait*/ QProcessEnvironment_isEmpty<i8> for () {
 
   // proto:  void QProcessEnvironment::~QProcessEnvironment();
 impl /*struct*/ QProcessEnvironment {
-  pub fn Free<RetType, T: QProcessEnvironment_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QProcessEnvironment_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QProcessEnvironment_Free<RetType> {
-  fn Free(self , rsthis: & QProcessEnvironment) -> RetType;
+pub trait QProcessEnvironment_free<RetType> {
+  fn free(self , rsthis: & QProcessEnvironment) -> RetType;
 }
 
   // proto:  void QProcessEnvironment::~QProcessEnvironment();
-impl<'a> /*trait*/ QProcessEnvironment_Free<()> for () {
-  fn Free(self , rsthis: & QProcessEnvironment) -> () {
+impl<'a> /*trait*/ QProcessEnvironment_free<()> for () {
+  fn free(self , rsthis: & QProcessEnvironment) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QProcessEnvironmentD0Ev()};
      unsafe {_ZN19QProcessEnvironmentD0Ev(rsthis.qclsinst)};
@@ -1327,20 +1327,20 @@ impl<'a> /*trait*/ QProcessEnvironment_swap<()> for (&'a QProcessEnvironment) {
 
   // proto:  void QProcessEnvironment::QProcessEnvironment(const QProcessEnvironment & other);
 impl /*struct*/ QProcessEnvironment {
-  pub fn New<T: QProcessEnvironment_New>(value: T) -> QProcessEnvironment {
-    let rsthis = value.New();
+  pub fn new<T: QProcessEnvironment_new>(value: T) -> QProcessEnvironment {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QProcessEnvironment_New {
-  fn New(self) -> QProcessEnvironment;
+pub trait QProcessEnvironment_new {
+  fn new(self) -> QProcessEnvironment;
 }
 
   // proto:  void QProcessEnvironment::QProcessEnvironment(const QProcessEnvironment & other);
-impl<'a> /*trait*/ QProcessEnvironment_New for (&'a QProcessEnvironment) {
-  fn New(self) -> QProcessEnvironment {
+impl<'a> /*trait*/ QProcessEnvironment_new for (&'a QProcessEnvironment) {
+  fn new(self) -> QProcessEnvironment {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QProcessEnvironmentC1ERKS_()};
     let ctysz: c_int = unsafe{QProcessEnvironment_Class_Size()};
@@ -1425,8 +1425,8 @@ impl<'a> /*trait*/ QProcessEnvironment_toStringList<()> for () {
 }
 
   // proto:  void QProcessEnvironment::QProcessEnvironment();
-impl<'a> /*trait*/ QProcessEnvironment_New for () {
-  fn New(self) -> QProcessEnvironment {
+impl<'a> /*trait*/ QProcessEnvironment_new for () {
+  fn new(self) -> QProcessEnvironment {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QProcessEnvironmentC1Ev()};
     let ctysz: c_int = unsafe{QProcessEnvironment_Class_Size()};
@@ -1552,7 +1552,7 @@ extern fn QProcess_error_signal_connect_cb_0(rsfptr:fn(i32), arg0: c_int) {
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QProcess_error_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i32), arg0: c_int) {
+extern fn QProcess_error_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -1561,7 +1561,8 @@ extern fn QProcess_error_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i32), arg0: 
 impl /* trait */ QProcess_error_signal_connect for fn(i32) {
   fn connect(self, sigthis: QProcess_error_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QProcess_error_signal_connect_cb_0 as *mut c_void;
@@ -1569,7 +1570,7 @@ impl /* trait */ QProcess_error_signal_connect for fn(i32) {
     unsafe {QProcess_SlotProxy_connect__ZN8QProcess5errorENS_12ProcessErrorE(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QProcess_error_signal_connect for Box<fn(i32)> {
+impl /* trait */ QProcess_error_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QProcess_error_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -1587,7 +1588,7 @@ extern fn QProcess_finished_signal_connect_cb_1(rsfptr:fn(i32, i32), arg0: c_int
   let rsarg1 = arg1 as i32;
   rsfptr(rsarg0,rsarg1);
 }
-extern fn QProcess_finished_signal_connect_cb_box_1(rsfptr_raw:*mut fn(i32, i32), arg0: c_int, arg1: c_int) {
+extern fn QProcess_finished_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(i32, i32), arg0: c_int, arg1: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -1597,7 +1598,8 @@ extern fn QProcess_finished_signal_connect_cb_box_1(rsfptr_raw:*mut fn(i32, i32)
 impl /* trait */ QProcess_finished_signal_connect for fn(i32, i32) {
   fn connect(self, sigthis: QProcess_finished_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QProcess_finished_signal_connect_cb_1 as *mut c_void;
@@ -1605,7 +1607,7 @@ impl /* trait */ QProcess_finished_signal_connect for fn(i32, i32) {
     unsafe {QProcess_SlotProxy_connect__ZN8QProcess8finishedEiNS_10ExitStatusE(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QProcess_finished_signal_connect for Box<fn(i32, i32)> {
+impl /* trait */ QProcess_finished_signal_connect for Box<Fn(i32, i32)> {
   fn connect(self, sigthis: QProcess_finished_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -1622,7 +1624,7 @@ extern fn QProcess_finished_signal_connect_cb_2(rsfptr:fn(i32), arg0: c_int) {
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QProcess_finished_signal_connect_cb_box_2(rsfptr_raw:*mut fn(i32), arg0: c_int) {
+extern fn QProcess_finished_signal_connect_cb_box_2(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -1631,7 +1633,8 @@ extern fn QProcess_finished_signal_connect_cb_box_2(rsfptr_raw:*mut fn(i32), arg
 impl /* trait */ QProcess_finished_signal_connect for fn(i32) {
   fn connect(self, sigthis: QProcess_finished_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QProcess_finished_signal_connect_cb_2 as *mut c_void;
@@ -1639,7 +1642,7 @@ impl /* trait */ QProcess_finished_signal_connect for fn(i32) {
     unsafe {QProcess_SlotProxy_connect__ZN8QProcess8finishedEi(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QProcess_finished_signal_connect for Box<fn(i32)> {
+impl /* trait */ QProcess_finished_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QProcess_finished_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

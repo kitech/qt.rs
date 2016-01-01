@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qcommandlineparser.h
 // dst-file: /src/core/qcommandlineparser.rs
 //
@@ -314,20 +314,20 @@ impl<'a> /*trait*/ QCommandLineParser_showVersion<()> for () {
 
   // proto:  void QCommandLineParser::QCommandLineParser(const QCommandLineParser & );
 impl /*struct*/ QCommandLineParser {
-  pub fn New<T: QCommandLineParser_New>(value: T) -> QCommandLineParser {
-    let rsthis = value.New();
+  pub fn new<T: QCommandLineParser_new>(value: T) -> QCommandLineParser {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QCommandLineParser_New {
-  fn New(self) -> QCommandLineParser;
+pub trait QCommandLineParser_new {
+  fn new(self) -> QCommandLineParser;
 }
 
   // proto:  void QCommandLineParser::QCommandLineParser(const QCommandLineParser & );
-impl<'a> /*trait*/ QCommandLineParser_New for (&'a QCommandLineParser) {
-  fn New(self) -> QCommandLineParser {
+impl<'a> /*trait*/ QCommandLineParser_new for (&'a QCommandLineParser) {
+  fn new(self) -> QCommandLineParser {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLineParserC1ERKS_()};
     let ctysz: c_int = unsafe{QCommandLineParser_Class_Size()};
@@ -426,19 +426,19 @@ impl<'a> /*trait*/ QCommandLineParser_addPositionalArgument<()> for (&'a QString
 
   // proto:  void QCommandLineParser::~QCommandLineParser();
 impl /*struct*/ QCommandLineParser {
-  pub fn Free<RetType, T: QCommandLineParser_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QCommandLineParser_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QCommandLineParser_Free<RetType> {
-  fn Free(self , rsthis: & QCommandLineParser) -> RetType;
+pub trait QCommandLineParser_free<RetType> {
+  fn free(self , rsthis: & QCommandLineParser) -> RetType;
 }
 
   // proto:  void QCommandLineParser::~QCommandLineParser();
-impl<'a> /*trait*/ QCommandLineParser_Free<()> for () {
-  fn Free(self , rsthis: & QCommandLineParser) -> () {
+impl<'a> /*trait*/ QCommandLineParser_free<()> for () {
+  fn free(self , rsthis: & QCommandLineParser) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLineParserD0Ev()};
      unsafe {_ZN18QCommandLineParserD0Ev(rsthis.qclsinst)};
@@ -599,8 +599,8 @@ impl<'a> /*trait*/ QCommandLineParser_setApplicationDescription<()> for (&'a QSt
 }
 
   // proto:  void QCommandLineParser::QCommandLineParser();
-impl<'a> /*trait*/ QCommandLineParser_New for () {
-  fn New(self) -> QCommandLineParser {
+impl<'a> /*trait*/ QCommandLineParser_new for () {
+  fn new(self) -> QCommandLineParser {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLineParserC1Ev()};
     let ctysz: c_int = unsafe{QCommandLineParser_Class_Size()};

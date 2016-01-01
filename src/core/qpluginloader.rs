@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qpluginloader.h
 // dst-file: /src/core/qpluginloader.rs
 //
@@ -139,20 +139,20 @@ impl<'a> /*trait*/ QPluginLoader_unload<i8> for () {
 
   // proto:  void QPluginLoader::QPluginLoader(const QString & fileName, QObject * parent);
 impl /*struct*/ QPluginLoader {
-  pub fn New<T: QPluginLoader_New>(value: T) -> QPluginLoader {
-    let rsthis = value.New();
+  pub fn new<T: QPluginLoader_new>(value: T) -> QPluginLoader {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QPluginLoader_New {
-  fn New(self) -> QPluginLoader;
+pub trait QPluginLoader_new {
+  fn new(self) -> QPluginLoader;
 }
 
   // proto:  void QPluginLoader::QPluginLoader(const QString & fileName, QObject * parent);
-impl<'a> /*trait*/ QPluginLoader_New for (&'a QString, &'a QObject) {
-  fn New(self) -> QPluginLoader {
+impl<'a> /*trait*/ QPluginLoader_new for (&'a QString, &'a QObject) {
+  fn new(self) -> QPluginLoader {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QPluginLoaderC1ERK7QStringP7QObject()};
     let ctysz: c_int = unsafe{QPluginLoader_Class_Size()};
@@ -327,8 +327,8 @@ impl<'a> /*trait*/ QPluginLoader_errorString<QString> for () {
 }
 
   // proto:  void QPluginLoader::QPluginLoader(const QPluginLoader & );
-impl<'a> /*trait*/ QPluginLoader_New for (&'a QPluginLoader) {
-  fn New(self) -> QPluginLoader {
+impl<'a> /*trait*/ QPluginLoader_new for (&'a QPluginLoader) {
+  fn new(self) -> QPluginLoader {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QPluginLoaderC1ERKS_()};
     let ctysz: c_int = unsafe{QPluginLoader_Class_Size()};
@@ -390,8 +390,8 @@ impl<'a> /*trait*/ QPluginLoader_setFileName<()> for (&'a QString) {
 }
 
   // proto:  void QPluginLoader::QPluginLoader(QObject * parent);
-impl<'a> /*trait*/ QPluginLoader_New for (&'a QObject) {
-  fn New(self) -> QPluginLoader {
+impl<'a> /*trait*/ QPluginLoader_new for (&'a QObject) {
+  fn new(self) -> QPluginLoader {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QPluginLoaderC1EP7QObject()};
     let ctysz: c_int = unsafe{QPluginLoader_Class_Size()};
@@ -407,19 +407,19 @@ impl<'a> /*trait*/ QPluginLoader_New for (&'a QObject) {
 
   // proto:  void QPluginLoader::~QPluginLoader();
 impl /*struct*/ QPluginLoader {
-  pub fn Free<RetType, T: QPluginLoader_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QPluginLoader_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QPluginLoader_Free<RetType> {
-  fn Free(self , rsthis: & QPluginLoader) -> RetType;
+pub trait QPluginLoader_free<RetType> {
+  fn free(self , rsthis: & QPluginLoader) -> RetType;
 }
 
   // proto:  void QPluginLoader::~QPluginLoader();
-impl<'a> /*trait*/ QPluginLoader_Free<()> for () {
-  fn Free(self , rsthis: & QPluginLoader) -> () {
+impl<'a> /*trait*/ QPluginLoader_free<()> for () {
+  fn free(self , rsthis: & QPluginLoader) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QPluginLoaderD0Ev()};
      unsafe {_ZN13QPluginLoaderD0Ev(rsthis.qclsinst)};

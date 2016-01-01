@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qlocale.h
 // dst-file: /src/core/qlocale.rs
 //
@@ -654,20 +654,20 @@ impl<'a> /*trait*/ QLocale_toCurrencyString<QString> for (u64, &'a QString) {
 
   // proto:  void QLocale::QLocale(const QString & name);
 impl /*struct*/ QLocale {
-  pub fn New<T: QLocale_New>(value: T) -> QLocale {
-    let rsthis = value.New();
+  pub fn new<T: QLocale_new>(value: T) -> QLocale {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QLocale_New {
-  fn New(self) -> QLocale;
+pub trait QLocale_new {
+  fn new(self) -> QLocale;
 }
 
   // proto:  void QLocale::QLocale(const QString & name);
-impl<'a> /*trait*/ QLocale_New for (&'a QString) {
-  fn New(self) -> QLocale {
+impl<'a> /*trait*/ QLocale_new for (&'a QString) {
+  fn new(self) -> QLocale {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QLocaleC1ERK7QString()};
     let ctysz: c_int = unsafe{QLocale_Class_Size()};
@@ -771,19 +771,19 @@ impl<'a> /*trait*/ QLocale_negativeSign<QChar> for () {
 
   // proto:  void QLocale::~QLocale();
 impl /*struct*/ QLocale {
-  pub fn Free<RetType, T: QLocale_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QLocale_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QLocale_Free<RetType> {
-  fn Free(self , rsthis: & QLocale) -> RetType;
+pub trait QLocale_free<RetType> {
+  fn free(self , rsthis: & QLocale) -> RetType;
 }
 
   // proto:  void QLocale::~QLocale();
-impl<'a> /*trait*/ QLocale_Free<()> for () {
-  fn Free(self , rsthis: & QLocale) -> () {
+impl<'a> /*trait*/ QLocale_free<()> for () {
+  fn free(self , rsthis: & QLocale) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QLocaleD0Ev()};
      unsafe {_ZN7QLocaleD0Ev(rsthis.qclsinst)};
@@ -792,8 +792,8 @@ impl<'a> /*trait*/ QLocale_Free<()> for () {
 }
 
   // proto:  void QLocale::QLocale(const QLocale & other);
-impl<'a> /*trait*/ QLocale_New for (&'a QLocale) {
-  fn New(self) -> QLocale {
+impl<'a> /*trait*/ QLocale_new for (&'a QLocale) {
+  fn new(self) -> QLocale {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QLocaleC1ERKS_()};
     let ctysz: c_int = unsafe{QLocale_Class_Size()};
@@ -1248,8 +1248,8 @@ impl<'a> /*trait*/ QLocale_toString<QString> for (i16) {
 }
 
   // proto:  void QLocale::QLocale();
-impl<'a> /*trait*/ QLocale_New for () {
-  fn New(self) -> QLocale {
+impl<'a> /*trait*/ QLocale_new for () {
+  fn new(self) -> QLocale {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QLocaleC1Ev()};
     let ctysz: c_int = unsafe{QLocale_Class_Size()};

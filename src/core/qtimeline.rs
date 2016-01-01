@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qtimeline.h
 // dst-file: /src/core/qtimeline.rs
 //
@@ -144,20 +144,20 @@ impl<'a> /*trait*/ QTimeLine_start<()> for () {
 
   // proto:  void QTimeLine::QTimeLine(const QTimeLine & );
 impl /*struct*/ QTimeLine {
-  pub fn New<T: QTimeLine_New>(value: T) -> QTimeLine {
-    let rsthis = value.New();
+  pub fn new<T: QTimeLine_new>(value: T) -> QTimeLine {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTimeLine_New {
-  fn New(self) -> QTimeLine;
+pub trait QTimeLine_new {
+  fn new(self) -> QTimeLine;
 }
 
   // proto:  void QTimeLine::QTimeLine(const QTimeLine & );
-impl<'a> /*trait*/ QTimeLine_New for (&'a QTimeLine) {
-  fn New(self) -> QTimeLine {
+impl<'a> /*trait*/ QTimeLine_new for (&'a QTimeLine) {
+  fn new(self) -> QTimeLine {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeLineC1ERKS_()};
     let ctysz: c_int = unsafe{QTimeLine_Class_Size()};
@@ -263,19 +263,19 @@ impl<'a> /*trait*/ QTimeLine_stop<()> for () {
 
   // proto:  void QTimeLine::~QTimeLine();
 impl /*struct*/ QTimeLine {
-  pub fn Free<RetType, T: QTimeLine_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QTimeLine_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QTimeLine_Free<RetType> {
-  fn Free(self , rsthis: & QTimeLine) -> RetType;
+pub trait QTimeLine_free<RetType> {
+  fn free(self , rsthis: & QTimeLine) -> RetType;
 }
 
   // proto:  void QTimeLine::~QTimeLine();
-impl<'a> /*trait*/ QTimeLine_Free<()> for () {
-  fn Free(self , rsthis: & QTimeLine) -> () {
+impl<'a> /*trait*/ QTimeLine_free<()> for () {
+  fn free(self , rsthis: & QTimeLine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeLineD0Ev()};
      unsafe {_ZN9QTimeLineD0Ev(rsthis.qclsinst)};
@@ -377,8 +377,8 @@ impl<'a> /*trait*/ QTimeLine_setStartFrame<()> for (i32) {
 }
 
   // proto:  void QTimeLine::QTimeLine(int duration, QObject * parent);
-impl<'a> /*trait*/ QTimeLine_New for (i32, &'a QObject) {
-  fn New(self) -> QTimeLine {
+impl<'a> /*trait*/ QTimeLine_new for (i32, &'a QObject) {
+  fn new(self) -> QTimeLine {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeLineC1EiP7QObject()};
     let ctysz: c_int = unsafe{QTimeLine_Class_Size()};

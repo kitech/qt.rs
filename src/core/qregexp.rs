@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qregexp.h
 // dst-file: /src/core/qregexp.rs
 //
@@ -85,20 +85,20 @@ impl /*struct*/ QRegExp {
 }
   // proto:  void QRegExp::QRegExp(const QRegExp & rx);
 impl /*struct*/ QRegExp {
-  pub fn New<T: QRegExp_New>(value: T) -> QRegExp {
-    let rsthis = value.New();
+  pub fn new<T: QRegExp_new>(value: T) -> QRegExp {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QRegExp_New {
-  fn New(self) -> QRegExp;
+pub trait QRegExp_new {
+  fn new(self) -> QRegExp;
 }
 
   // proto:  void QRegExp::QRegExp(const QRegExp & rx);
-impl<'a> /*trait*/ QRegExp_New for (&'a QRegExp) {
-  fn New(self) -> QRegExp {
+impl<'a> /*trait*/ QRegExp_new for (&'a QRegExp) {
+  fn new(self) -> QRegExp {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QRegExpC1ERKS_()};
     let ctysz: c_int = unsafe{QRegExp_Class_Size()};
@@ -323,19 +323,19 @@ impl<'a> /*trait*/ QRegExp_isValid<i8> for () {
 
   // proto:  void QRegExp::~QRegExp();
 impl /*struct*/ QRegExp {
-  pub fn Free<RetType, T: QRegExp_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QRegExp_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QRegExp_Free<RetType> {
-  fn Free(self , rsthis: & QRegExp) -> RetType;
+pub trait QRegExp_free<RetType> {
+  fn free(self , rsthis: & QRegExp) -> RetType;
 }
 
   // proto:  void QRegExp::~QRegExp();
-impl<'a> /*trait*/ QRegExp_Free<()> for () {
-  fn Free(self , rsthis: & QRegExp) -> () {
+impl<'a> /*trait*/ QRegExp_free<()> for () {
+  fn free(self , rsthis: & QRegExp) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QRegExpD0Ev()};
      unsafe {_ZN7QRegExpD0Ev(rsthis.qclsinst)};
@@ -415,8 +415,8 @@ impl<'a> /*trait*/ QRegExp_pos<i32> for (i32) {
 }
 
   // proto:  void QRegExp::QRegExp();
-impl<'a> /*trait*/ QRegExp_New for () {
-  fn New(self) -> QRegExp {
+impl<'a> /*trait*/ QRegExp_new for () {
+  fn new(self) -> QRegExp {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QRegExpC1Ev()};
     let ctysz: c_int = unsafe{QRegExp_Class_Size()};

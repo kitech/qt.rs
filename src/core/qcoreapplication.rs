@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qcoreapplication.h
 // dst-file: /src/core/qcoreapplication.rs
 //
@@ -405,20 +405,20 @@ impl<'a> /*trait*/ QCoreApplication_applicationName_s<QString> for () {
 
   // proto:  void QCoreApplication::QCoreApplication(const QCoreApplication & );
 impl /*struct*/ QCoreApplication {
-  pub fn New<T: QCoreApplication_New>(value: T) -> QCoreApplication {
-    let rsthis = value.New();
+  pub fn new<T: QCoreApplication_new>(value: T) -> QCoreApplication {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QCoreApplication_New {
-  fn New(self) -> QCoreApplication;
+pub trait QCoreApplication_new {
+  fn new(self) -> QCoreApplication;
 }
 
   // proto:  void QCoreApplication::QCoreApplication(const QCoreApplication & );
-impl<'a> /*trait*/ QCoreApplication_New for (&'a QCoreApplication) {
-  fn New(self) -> QCoreApplication {
+impl<'a> /*trait*/ QCoreApplication_new for (&'a QCoreApplication) {
+  fn new(self) -> QCoreApplication {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QCoreApplicationC1ERKS_()};
     let ctysz: c_int = unsafe{QCoreApplication_Class_Size()};
@@ -809,19 +809,19 @@ impl<'a> /*trait*/ QCoreApplication_setOrganizationDomain_s<()> for (&'a QString
 
   // proto:  void QCoreApplication::~QCoreApplication();
 impl /*struct*/ QCoreApplication {
-  pub fn Free<RetType, T: QCoreApplication_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QCoreApplication_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QCoreApplication_Free<RetType> {
-  fn Free(self , rsthis: & QCoreApplication) -> RetType;
+pub trait QCoreApplication_free<RetType> {
+  fn free(self , rsthis: & QCoreApplication) -> RetType;
 }
 
   // proto:  void QCoreApplication::~QCoreApplication();
-impl<'a> /*trait*/ QCoreApplication_Free<()> for () {
-  fn Free(self , rsthis: & QCoreApplication) -> () {
+impl<'a> /*trait*/ QCoreApplication_free<()> for () {
+  fn free(self , rsthis: & QCoreApplication) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QCoreApplicationD0Ev()};
      unsafe {_ZN16QCoreApplicationD0Ev(rsthis.qclsinst)};
@@ -1223,8 +1223,8 @@ impl<'a> /*trait*/ QCoreApplication_metaObject<()> for () {
 }
 
   // proto:  void QCoreApplication::QCoreApplication(int & argc, char ** argv, int );
-impl<'a> /*trait*/ QCoreApplication_New for (&'a mut i32, &'a mut String, i32) {
-  fn New(self) -> QCoreApplication {
+impl<'a> /*trait*/ QCoreApplication_new for (&'a mut i32, &'a mut String, i32) {
+  fn new(self) -> QCoreApplication {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QCoreApplicationC1ERiPPci()};
     let ctysz: c_int = unsafe{QCoreApplication_Class_Size()};
@@ -1371,7 +1371,7 @@ extern fn QCoreApplication_applicationVersionChanged_signal_connect_cb_0(rsfptr:
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QCoreApplication_applicationVersionChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(), ) {
+extern fn QCoreApplication_applicationVersionChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   rsfptr();
@@ -1379,7 +1379,8 @@ extern fn QCoreApplication_applicationVersionChanged_signal_connect_cb_box_0(rsf
 impl /* trait */ QCoreApplication_applicationVersionChanged_signal_connect for fn() {
   fn connect(self, sigthis: QCoreApplication_applicationVersionChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QCoreApplication_applicationVersionChanged_signal_connect_cb_0 as *mut c_void;
@@ -1387,7 +1388,7 @@ impl /* trait */ QCoreApplication_applicationVersionChanged_signal_connect for f
     unsafe {QCoreApplication_SlotProxy_connect__ZN16QCoreApplication25applicationVersionChangedEv(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QCoreApplication_applicationVersionChanged_signal_connect for Box<fn()> {
+impl /* trait */ QCoreApplication_applicationVersionChanged_signal_connect for Box<Fn()> {
   fn connect(self, sigthis: QCoreApplication_applicationVersionChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -1403,7 +1404,7 @@ extern fn QCoreApplication_organizationNameChanged_signal_connect_cb_1(rsfptr:fn
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QCoreApplication_organizationNameChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(), ) {
+extern fn QCoreApplication_organizationNameChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   rsfptr();
@@ -1411,7 +1412,8 @@ extern fn QCoreApplication_organizationNameChanged_signal_connect_cb_box_1(rsfpt
 impl /* trait */ QCoreApplication_organizationNameChanged_signal_connect for fn() {
   fn connect(self, sigthis: QCoreApplication_organizationNameChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QCoreApplication_organizationNameChanged_signal_connect_cb_1 as *mut c_void;
@@ -1419,7 +1421,7 @@ impl /* trait */ QCoreApplication_organizationNameChanged_signal_connect for fn(
     unsafe {QCoreApplication_SlotProxy_connect__ZN16QCoreApplication23organizationNameChangedEv(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QCoreApplication_organizationNameChanged_signal_connect for Box<fn()> {
+impl /* trait */ QCoreApplication_organizationNameChanged_signal_connect for Box<Fn()> {
   fn connect(self, sigthis: QCoreApplication_organizationNameChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -1435,7 +1437,7 @@ extern fn QCoreApplication_applicationNameChanged_signal_connect_cb_2(rsfptr:fn(
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QCoreApplication_applicationNameChanged_signal_connect_cb_box_2(rsfptr_raw:*mut fn(), ) {
+extern fn QCoreApplication_applicationNameChanged_signal_connect_cb_box_2(rsfptr_raw:*mut Fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   rsfptr();
@@ -1443,7 +1445,8 @@ extern fn QCoreApplication_applicationNameChanged_signal_connect_cb_box_2(rsfptr
 impl /* trait */ QCoreApplication_applicationNameChanged_signal_connect for fn() {
   fn connect(self, sigthis: QCoreApplication_applicationNameChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QCoreApplication_applicationNameChanged_signal_connect_cb_2 as *mut c_void;
@@ -1451,7 +1454,7 @@ impl /* trait */ QCoreApplication_applicationNameChanged_signal_connect for fn()
     unsafe {QCoreApplication_SlotProxy_connect__ZN16QCoreApplication22applicationNameChangedEv(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QCoreApplication_applicationNameChanged_signal_connect for Box<fn()> {
+impl /* trait */ QCoreApplication_applicationNameChanged_signal_connect for Box<Fn()> {
   fn connect(self, sigthis: QCoreApplication_applicationNameChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -1467,7 +1470,7 @@ extern fn QCoreApplication_organizationDomainChanged_signal_connect_cb_3(rsfptr:
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QCoreApplication_organizationDomainChanged_signal_connect_cb_box_3(rsfptr_raw:*mut fn(), ) {
+extern fn QCoreApplication_organizationDomainChanged_signal_connect_cb_box_3(rsfptr_raw:*mut Fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   rsfptr();
@@ -1475,7 +1478,8 @@ extern fn QCoreApplication_organizationDomainChanged_signal_connect_cb_box_3(rsf
 impl /* trait */ QCoreApplication_organizationDomainChanged_signal_connect for fn() {
   fn connect(self, sigthis: QCoreApplication_organizationDomainChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QCoreApplication_organizationDomainChanged_signal_connect_cb_3 as *mut c_void;
@@ -1483,7 +1487,7 @@ impl /* trait */ QCoreApplication_organizationDomainChanged_signal_connect for f
     unsafe {QCoreApplication_SlotProxy_connect__ZN16QCoreApplication25organizationDomainChangedEv(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QCoreApplication_organizationDomainChanged_signal_connect for Box<fn()> {
+impl /* trait */ QCoreApplication_organizationDomainChanged_signal_connect for Box<Fn()> {
   fn connect(self, sigthis: QCoreApplication_organizationDomainChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qatomic.h
 // dst-file: /src/core/qatomic.rs
 //
@@ -49,20 +49,20 @@ impl /*struct*/ QAtomicInt {
 }
   // proto:  void QAtomicInt::QAtomicInt(int value);
 impl /*struct*/ QAtomicInt {
-  pub fn New<T: QAtomicInt_New>(value: T) -> QAtomicInt {
-    let rsthis = value.New();
+  pub fn new<T: QAtomicInt_new>(value: T) -> QAtomicInt {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QAtomicInt_New {
-  fn New(self) -> QAtomicInt;
+pub trait QAtomicInt_new {
+  fn new(self) -> QAtomicInt;
 }
 
   // proto:  void QAtomicInt::QAtomicInt(int value);
-impl<'a> /*trait*/ QAtomicInt_New for (i32) {
-  fn New(self) -> QAtomicInt {
+impl<'a> /*trait*/ QAtomicInt_new for (i32) {
+  fn new(self) -> QAtomicInt {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QAtomicIntC1Ei()};
     let ctysz: c_int = unsafe{QAtomicInt_Class_Size()};

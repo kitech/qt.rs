@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qstatemachine.h
 // dst-file: /src/core/qstatemachine.rs
 //
@@ -275,20 +275,20 @@ impl<'a> /*trait*/ QStateMachine_setAnimated<()> for (i8) {
 
   // proto:  void QStateMachine::QStateMachine(QObject * parent);
 impl /*struct*/ QStateMachine {
-  pub fn New<T: QStateMachine_New>(value: T) -> QStateMachine {
-    let rsthis = value.New();
+  pub fn new<T: QStateMachine_new>(value: T) -> QStateMachine {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QStateMachine_New {
-  fn New(self) -> QStateMachine;
+pub trait QStateMachine_new {
+  fn new(self) -> QStateMachine;
 }
 
   // proto:  void QStateMachine::QStateMachine(QObject * parent);
-impl<'a> /*trait*/ QStateMachine_New for (&'a QObject) {
-  fn New(self) -> QStateMachine {
+impl<'a> /*trait*/ QStateMachine_new for (&'a QObject) {
+  fn new(self) -> QStateMachine {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStateMachineC1EP7QObject()};
     let ctysz: c_int = unsafe{QStateMachine_Class_Size()};
@@ -375,19 +375,19 @@ impl<'a> /*trait*/ QStateMachine_cancelDelayedEvent<i8> for (i32) {
 
   // proto:  void QStateMachine::~QStateMachine();
 impl /*struct*/ QStateMachine {
-  pub fn Free<RetType, T: QStateMachine_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QStateMachine_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QStateMachine_Free<RetType> {
-  fn Free(self , rsthis: & QStateMachine) -> RetType;
+pub trait QStateMachine_free<RetType> {
+  fn free(self , rsthis: & QStateMachine) -> RetType;
 }
 
   // proto:  void QStateMachine::~QStateMachine();
-impl<'a> /*trait*/ QStateMachine_Free<()> for () {
-  fn Free(self , rsthis: & QStateMachine) -> () {
+impl<'a> /*trait*/ QStateMachine_free<()> for () {
+  fn free(self , rsthis: & QStateMachine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStateMachineD0Ev()};
      unsafe {_ZN13QStateMachineD0Ev(rsthis.qclsinst)};
@@ -601,8 +601,8 @@ impl<'a> /*trait*/ QStateMachine_eventFilter<i8> for (&'a QObject, &'a QEvent) {
 }
 
   // proto:  void QStateMachine::QStateMachine(const QStateMachine & );
-impl<'a> /*trait*/ QStateMachine_New for (&'a QStateMachine) {
-  fn New(self) -> QStateMachine {
+impl<'a> /*trait*/ QStateMachine_new for (&'a QStateMachine) {
+  fn new(self) -> QStateMachine {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStateMachineC1ERKS_()};
     let ctysz: c_int = unsafe{QStateMachine_Class_Size()};
@@ -670,7 +670,7 @@ extern fn QStateMachine_runningChanged_signal_connect_cb_0(rsfptr:fn(i8), arg0: 
   let rsarg0 = arg0 as i8;
   rsfptr(rsarg0);
 }
-extern fn QStateMachine_runningChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i8), arg0: c_char) {
+extern fn QStateMachine_runningChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i8;
@@ -679,7 +679,8 @@ extern fn QStateMachine_runningChanged_signal_connect_cb_box_0(rsfptr_raw:*mut f
 impl /* trait */ QStateMachine_runningChanged_signal_connect for fn(i8) {
   fn connect(self, sigthis: QStateMachine_runningChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QStateMachine_runningChanged_signal_connect_cb_0 as *mut c_void;
@@ -687,7 +688,7 @@ impl /* trait */ QStateMachine_runningChanged_signal_connect for fn(i8) {
     unsafe {QStateMachine_SlotProxy_connect__ZN13QStateMachine14runningChangedEb(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QStateMachine_runningChanged_signal_connect for Box<fn(i8)> {
+impl /* trait */ QStateMachine_runningChanged_signal_connect for Box<Fn(i8)> {
   fn connect(self, sigthis: QStateMachine_runningChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qcommandlineoption.h
 // dst-file: /src/core/qcommandlineoption.rs
 //
@@ -128,20 +128,20 @@ impl<'a> /*trait*/ QCommandLineOption_names<()> for () {
 
   // proto:  void QCommandLineOption::QCommandLineOption(const QCommandLineOption & other);
 impl /*struct*/ QCommandLineOption {
-  pub fn New<T: QCommandLineOption_New>(value: T) -> QCommandLineOption {
-    let rsthis = value.New();
+  pub fn new<T: QCommandLineOption_new>(value: T) -> QCommandLineOption {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QCommandLineOption_New {
-  fn New(self) -> QCommandLineOption;
+pub trait QCommandLineOption_new {
+  fn new(self) -> QCommandLineOption;
 }
 
   // proto:  void QCommandLineOption::QCommandLineOption(const QCommandLineOption & other);
-impl<'a> /*trait*/ QCommandLineOption_New for (&'a QCommandLineOption) {
-  fn New(self) -> QCommandLineOption {
+impl<'a> /*trait*/ QCommandLineOption_new for (&'a QCommandLineOption) {
+  fn new(self) -> QCommandLineOption {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLineOptionC1ERKS_()};
     let ctysz: c_int = unsafe{QCommandLineOption_Class_Size()};
@@ -179,8 +179,8 @@ impl<'a> /*trait*/ QCommandLineOption_setDescription<()> for (&'a QString) {
 }
 
   // proto:  void QCommandLineOption::QCommandLineOption(const QString & name, const QString & description, const QString & valueName, const QString & defaultValue);
-impl<'a> /*trait*/ QCommandLineOption_New for (&'a QString, &'a QString, &'a QString, &'a QString) {
-  fn New(self) -> QCommandLineOption {
+impl<'a> /*trait*/ QCommandLineOption_new for (&'a QString, &'a QString, &'a QString, &'a QString) {
+  fn new(self) -> QCommandLineOption {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLineOptionC1ERK7QStringS2_S2_S2_()};
     let ctysz: c_int = unsafe{QCommandLineOption_Class_Size()};
@@ -222,8 +222,8 @@ impl<'a> /*trait*/ QCommandLineOption_valueName<QString> for () {
 }
 
   // proto:  void QCommandLineOption::QCommandLineOption(const QStringList & names, const QString & description, const QString & valueName, const QString & defaultValue);
-impl<'a> /*trait*/ QCommandLineOption_New for (&'a QStringList, &'a QString, &'a QString, &'a QString) {
-  fn New(self) -> QCommandLineOption {
+impl<'a> /*trait*/ QCommandLineOption_new for (&'a QStringList, &'a QString, &'a QString, &'a QString) {
+  fn new(self) -> QCommandLineOption {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLineOptionC1ERK11QStringListRK7QStringS5_S5_()};
     let ctysz: c_int = unsafe{QCommandLineOption_Class_Size()};
@@ -289,19 +289,19 @@ impl<'a> /*trait*/ QCommandLineOption_description<QString> for () {
 
   // proto:  void QCommandLineOption::~QCommandLineOption();
 impl /*struct*/ QCommandLineOption {
-  pub fn Free<RetType, T: QCommandLineOption_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QCommandLineOption_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QCommandLineOption_Free<RetType> {
-  fn Free(self , rsthis: & QCommandLineOption) -> RetType;
+pub trait QCommandLineOption_free<RetType> {
+  fn free(self , rsthis: & QCommandLineOption) -> RetType;
 }
 
   // proto:  void QCommandLineOption::~QCommandLineOption();
-impl<'a> /*trait*/ QCommandLineOption_Free<()> for () {
-  fn Free(self , rsthis: & QCommandLineOption) -> () {
+impl<'a> /*trait*/ QCommandLineOption_free<()> for () {
+  fn free(self , rsthis: & QCommandLineOption) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLineOptionD0Ev()};
      unsafe {_ZN18QCommandLineOptionD0Ev(rsthis.qclsinst)};
@@ -310,8 +310,8 @@ impl<'a> /*trait*/ QCommandLineOption_Free<()> for () {
 }
 
   // proto:  void QCommandLineOption::QCommandLineOption(const QStringList & names);
-impl<'a> /*trait*/ QCommandLineOption_New for (&'a QStringList) {
-  fn New(self) -> QCommandLineOption {
+impl<'a> /*trait*/ QCommandLineOption_new for (&'a QStringList) {
+  fn new(self) -> QCommandLineOption {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLineOptionC1ERK11QStringList()};
     let ctysz: c_int = unsafe{QCommandLineOption_Class_Size()};
@@ -372,8 +372,8 @@ impl<'a> /*trait*/ QCommandLineOption_setDefaultValues<()> for (&'a QStringList)
 }
 
   // proto:  void QCommandLineOption::QCommandLineOption(const QString & name);
-impl<'a> /*trait*/ QCommandLineOption_New for (&'a QString) {
-  fn New(self) -> QCommandLineOption {
+impl<'a> /*trait*/ QCommandLineOption_new for (&'a QString) {
+  fn new(self) -> QCommandLineOption {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLineOptionC1ERK7QString()};
     let ctysz: c_int = unsafe{QCommandLineOption_Class_Size()};

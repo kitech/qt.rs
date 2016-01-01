@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qsize.h
 // dst-file: /src/core/qsize.rs
 //
@@ -195,20 +195,20 @@ impl<'a> /*trait*/ QSize_isNull<i8> for () {
 
   // proto:  void QSize::QSize();
 impl /*struct*/ QSize {
-  pub fn New<T: QSize_New>(value: T) -> QSize {
-    let rsthis = value.New();
+  pub fn new<T: QSize_new>(value: T) -> QSize {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QSize_New {
-  fn New(self) -> QSize;
+pub trait QSize_new {
+  fn new(self) -> QSize;
 }
 
   // proto:  void QSize::QSize();
-impl<'a> /*trait*/ QSize_New for () {
-  fn New(self) -> QSize {
+impl<'a> /*trait*/ QSize_new for () {
+  fn new(self) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QSizeC1Ev()};
     let ctysz: c_int = unsafe{QSize_Class_Size()};
@@ -292,8 +292,8 @@ impl<'a> /*trait*/ QSize_rheight<()> for () {
 }
 
   // proto:  void QSize::QSize(int w, int h);
-impl<'a> /*trait*/ QSize_New for (i32, i32) {
-  fn New(self) -> QSize {
+impl<'a> /*trait*/ QSize_new for (i32, i32) {
+  fn new(self) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QSizeC1Eii()};
     let ctysz: c_int = unsafe{QSize_Class_Size()};
@@ -589,20 +589,20 @@ impl<'a> /*trait*/ QSizeF_setHeight<()> for (f64) {
 
   // proto:  void QSizeF::QSizeF();
 impl /*struct*/ QSizeF {
-  pub fn New<T: QSizeF_New>(value: T) -> QSizeF {
-    let rsthis = value.New();
+  pub fn new<T: QSizeF_new>(value: T) -> QSizeF {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QSizeF_New {
-  fn New(self) -> QSizeF;
+pub trait QSizeF_new {
+  fn new(self) -> QSizeF;
 }
 
   // proto:  void QSizeF::QSizeF();
-impl<'a> /*trait*/ QSizeF_New for () {
-  fn New(self) -> QSizeF {
+impl<'a> /*trait*/ QSizeF_new for () {
+  fn new(self) -> QSizeF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QSizeFC1Ev()};
     let ctysz: c_int = unsafe{QSizeF_Class_Size()};
@@ -732,8 +732,8 @@ impl<'a> /*trait*/ QSizeF_transpose<()> for () {
 }
 
   // proto:  void QSizeF::QSizeF(const QSize & sz);
-impl<'a> /*trait*/ QSizeF_New for (&'a QSize) {
-  fn New(self) -> QSizeF {
+impl<'a> /*trait*/ QSizeF_new for (&'a QSize) {
+  fn new(self) -> QSizeF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QSizeFC1ERK5QSize()};
     let ctysz: c_int = unsafe{QSizeF_Class_Size()};
@@ -843,8 +843,8 @@ impl<'a> /*trait*/ QSizeF_toSize<QSize> for () {
 }
 
   // proto:  void QSizeF::QSizeF(qreal w, qreal h);
-impl<'a> /*trait*/ QSizeF_New for (f64, f64) {
-  fn New(self) -> QSizeF {
+impl<'a> /*trait*/ QSizeF_new for (f64, f64) {
+  fn new(self) -> QSizeF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QSizeFC1Edd()};
     let ctysz: c_int = unsafe{QSizeF_Class_Size()};

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qjsonarray.h
 // dst-file: /src/core/qjsonarray.rs
 //
@@ -216,19 +216,19 @@ impl<'a> /*trait*/ QJsonArray_toVariantList<()> for () {
 
   // proto:  void QJsonArray::~QJsonArray();
 impl /*struct*/ QJsonArray {
-  pub fn Free<RetType, T: QJsonArray_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QJsonArray_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QJsonArray_Free<RetType> {
-  fn Free(self , rsthis: & QJsonArray) -> RetType;
+pub trait QJsonArray_free<RetType> {
+  fn free(self , rsthis: & QJsonArray) -> RetType;
 }
 
   // proto:  void QJsonArray::~QJsonArray();
-impl<'a> /*trait*/ QJsonArray_Free<()> for () {
-  fn Free(self , rsthis: & QJsonArray) -> () {
+impl<'a> /*trait*/ QJsonArray_free<()> for () {
+  fn free(self , rsthis: & QJsonArray) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QJsonArrayD0Ev()};
      unsafe {_ZN10QJsonArrayD0Ev(rsthis.qclsinst)};
@@ -284,20 +284,20 @@ impl<'a> /*trait*/ QJsonArray_count<i32> for () {
 
   // proto:  void QJsonArray::QJsonArray();
 impl /*struct*/ QJsonArray {
-  pub fn New<T: QJsonArray_New>(value: T) -> QJsonArray {
-    let rsthis = value.New();
+  pub fn new<T: QJsonArray_new>(value: T) -> QJsonArray {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QJsonArray_New {
-  fn New(self) -> QJsonArray;
+pub trait QJsonArray_new {
+  fn new(self) -> QJsonArray;
 }
 
   // proto:  void QJsonArray::QJsonArray();
-impl<'a> /*trait*/ QJsonArray_New for () {
-  fn New(self) -> QJsonArray {
+impl<'a> /*trait*/ QJsonArray_new for () {
+  fn new(self) -> QJsonArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QJsonArrayC1Ev()};
     let ctysz: c_int = unsafe{QJsonArray_Class_Size()};

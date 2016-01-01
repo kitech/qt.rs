@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qdir.h
 // dst-file: /src/core/qdir.rs
 //
@@ -257,20 +257,20 @@ impl<'a> /*trait*/ QDir_tempPath_s<QString> for () {
 
   // proto:  void QDir::QDir(const QString & path);
 impl /*struct*/ QDir {
-  pub fn New<T: QDir_New>(value: T) -> QDir {
-    let rsthis = value.New();
+  pub fn new<T: QDir_new>(value: T) -> QDir {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QDir_New {
-  fn New(self) -> QDir;
+pub trait QDir_new {
+  fn new(self) -> QDir;
 }
 
   // proto:  void QDir::QDir(const QString & path);
-impl<'a> /*trait*/ QDir_New for (&'a QString) {
-  fn New(self) -> QDir {
+impl<'a> /*trait*/ QDir_new for (&'a QString) {
+  fn new(self) -> QDir {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QDirC1ERK7QString()};
     let ctysz: c_int = unsafe{QDir_Class_Size()};
@@ -834,19 +834,19 @@ impl<'a> /*trait*/ QDir_remove<i8> for (&'a QString) {
 
   // proto:  void QDir::~QDir();
 impl /*struct*/ QDir {
-  pub fn Free<RetType, T: QDir_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QDir_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QDir_Free<RetType> {
-  fn Free(self , rsthis: & QDir) -> RetType;
+pub trait QDir_free<RetType> {
+  fn free(self , rsthis: & QDir) -> RetType;
 }
 
   // proto:  void QDir::~QDir();
-impl<'a> /*trait*/ QDir_Free<()> for () {
-  fn Free(self , rsthis: & QDir) -> () {
+impl<'a> /*trait*/ QDir_free<()> for () {
+  fn free(self , rsthis: & QDir) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QDirD0Ev()};
      unsafe {_ZN4QDirD0Ev(rsthis.qclsinst)};
@@ -1376,8 +1376,8 @@ impl<'a> /*trait*/ QDir_homePath_s<QString> for () {
 }
 
   // proto:  void QDir::QDir(const QDir & );
-impl<'a> /*trait*/ QDir_New for (&'a QDir) {
-  fn New(self) -> QDir {
+impl<'a> /*trait*/ QDir_new for (&'a QDir) {
+  fn new(self) -> QDir {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QDirC1ERKS_()};
     let ctysz: c_int = unsafe{QDir_Class_Size()};

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qmetatype.h
 // dst-file: /src/core/qmetatype.rs
 //
@@ -460,20 +460,20 @@ impl<'a> /*trait*/ QMetaType_unregisterType_s<i8> for (i32) {
 
   // proto:  void QMetaType::QMetaType(const QMetaType & other);
 impl /*struct*/ QMetaType {
-  pub fn New<T: QMetaType_New>(value: T) -> QMetaType {
-    let rsthis = value.New();
+  pub fn new<T: QMetaType_new>(value: T) -> QMetaType {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QMetaType_New {
-  fn New(self) -> QMetaType;
+pub trait QMetaType_new {
+  fn new(self) -> QMetaType;
 }
 
   // proto:  void QMetaType::QMetaType(const QMetaType & other);
-impl<'a> /*trait*/ QMetaType_New for (&'a QMetaType) {
-  fn New(self) -> QMetaType {
+impl<'a> /*trait*/ QMetaType_new for (&'a QMetaType) {
+  fn new(self) -> QMetaType {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZN9QMetaTypeC1ERKS_()};
     let ctysz: c_int = unsafe{QMetaType_Class_Size()};
@@ -659,19 +659,19 @@ impl<'a> /*trait*/ QMetaType_destruct<()> for (*mut c_void) {
 
   // proto:  void QMetaType::~QMetaType();
 impl /*struct*/ QMetaType {
-  pub fn Free<RetType, T: QMetaType_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QMetaType_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QMetaType_Free<RetType> {
-  fn Free(self , rsthis: & QMetaType) -> RetType;
+pub trait QMetaType_free<RetType> {
+  fn free(self , rsthis: & QMetaType) -> RetType;
 }
 
   // proto:  void QMetaType::~QMetaType();
-impl<'a> /*trait*/ QMetaType_Free<()> for () {
-  fn Free(self , rsthis: & QMetaType) -> () {
+impl<'a> /*trait*/ QMetaType_free<()> for () {
+  fn free(self , rsthis: & QMetaType) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZN9QMetaTypeD0Ev()};
      unsafe {demth_ZN9QMetaTypeD0Ev(rsthis.qclsinst)};
@@ -817,8 +817,8 @@ impl<'a> /*trait*/ QMetaType_convert_s<i8> for (*mut c_void, i32, *mut c_void, i
 }
 
   // proto:  void QMetaType::QMetaType(const int type);
-impl<'a> /*trait*/ QMetaType_New for (i32) {
-  fn New(self) -> QMetaType {
+impl<'a> /*trait*/ QMetaType_new for (i32) {
+  fn new(self) -> QMetaType {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZN9QMetaTypeC1Ei()};
     let ctysz: c_int = unsafe{QMetaType_Class_Size()};

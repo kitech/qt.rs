@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qparallelanimationgroup.h
 // dst-file: /src/core/qparallelanimationgroup.rs
 //
@@ -72,19 +72,19 @@ impl AsRef<QAnimationGroup> for QParallelAnimationGroup {
 }
   // proto:  void QParallelAnimationGroup::~QParallelAnimationGroup();
 impl /*struct*/ QParallelAnimationGroup {
-  pub fn Free<RetType, T: QParallelAnimationGroup_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QParallelAnimationGroup_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QParallelAnimationGroup_Free<RetType> {
-  fn Free(self , rsthis: & QParallelAnimationGroup) -> RetType;
+pub trait QParallelAnimationGroup_free<RetType> {
+  fn free(self , rsthis: & QParallelAnimationGroup) -> RetType;
 }
 
   // proto:  void QParallelAnimationGroup::~QParallelAnimationGroup();
-impl<'a> /*trait*/ QParallelAnimationGroup_Free<()> for () {
-  fn Free(self , rsthis: & QParallelAnimationGroup) -> () {
+impl<'a> /*trait*/ QParallelAnimationGroup_free<()> for () {
+  fn free(self , rsthis: & QParallelAnimationGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QParallelAnimationGroupD0Ev()};
      unsafe {_ZN23QParallelAnimationGroupD0Ev(rsthis.qclsinst)};
@@ -94,20 +94,20 @@ impl<'a> /*trait*/ QParallelAnimationGroup_Free<()> for () {
 
   // proto:  void QParallelAnimationGroup::QParallelAnimationGroup(const QParallelAnimationGroup & );
 impl /*struct*/ QParallelAnimationGroup {
-  pub fn New<T: QParallelAnimationGroup_New>(value: T) -> QParallelAnimationGroup {
-    let rsthis = value.New();
+  pub fn new<T: QParallelAnimationGroup_new>(value: T) -> QParallelAnimationGroup {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QParallelAnimationGroup_New {
-  fn New(self) -> QParallelAnimationGroup;
+pub trait QParallelAnimationGroup_new {
+  fn new(self) -> QParallelAnimationGroup;
 }
 
   // proto:  void QParallelAnimationGroup::QParallelAnimationGroup(const QParallelAnimationGroup & );
-impl<'a> /*trait*/ QParallelAnimationGroup_New for (&'a QParallelAnimationGroup) {
-  fn New(self) -> QParallelAnimationGroup {
+impl<'a> /*trait*/ QParallelAnimationGroup_new for (&'a QParallelAnimationGroup) {
+  fn new(self) -> QParallelAnimationGroup {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QParallelAnimationGroupC1ERKS_()};
     let ctysz: c_int = unsafe{QParallelAnimationGroup_Class_Size()};
@@ -145,8 +145,8 @@ impl<'a> /*trait*/ QParallelAnimationGroup_duration<i32> for () {
 }
 
   // proto:  void QParallelAnimationGroup::QParallelAnimationGroup(QObject * parent);
-impl<'a> /*trait*/ QParallelAnimationGroup_New for (&'a QObject) {
-  fn New(self) -> QParallelAnimationGroup {
+impl<'a> /*trait*/ QParallelAnimationGroup_new for (&'a QObject) {
+  fn new(self) -> QParallelAnimationGroup {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QParallelAnimationGroupC1EP7QObject()};
     let ctysz: c_int = unsafe{QParallelAnimationGroup_Class_Size()};

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qrect.h
 // dst-file: /src/core/qrect.rs
 //
@@ -426,20 +426,20 @@ impl<'a> /*trait*/ QRect_moveRight<()> for (i32) {
 
   // proto:  void QRect::QRect(const QPoint & topleft, const QPoint & bottomright);
 impl /*struct*/ QRect {
-  pub fn New<T: QRect_New>(value: T) -> QRect {
-    let rsthis = value.New();
+  pub fn new<T: QRect_new>(value: T) -> QRect {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QRect_New {
-  fn New(self) -> QRect;
+pub trait QRect_new {
+  fn new(self) -> QRect;
 }
 
   // proto:  void QRect::QRect(const QPoint & topleft, const QPoint & bottomright);
-impl<'a> /*trait*/ QRect_New for (&'a QPoint, &'a QPoint) {
-  fn New(self) -> QRect {
+impl<'a> /*trait*/ QRect_new for (&'a QPoint, &'a QPoint) {
+  fn new(self) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QRectC1ERK6QPointS2_()};
     let ctysz: c_int = unsafe{QRect_Class_Size()};
@@ -888,8 +888,8 @@ impl<'a> /*trait*/ QRect_adjusted<QRect> for (i32, i32, i32, i32) {
 }
 
   // proto:  void QRect::QRect(const QPoint & topleft, const QSize & size);
-impl<'a> /*trait*/ QRect_New for (&'a QPoint, &'a QSize) {
-  fn New(self) -> QRect {
+impl<'a> /*trait*/ QRect_new for (&'a QPoint, &'a QSize) {
+  fn new(self) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QRectC1ERK6QPointRK5QSize()};
     let ctysz: c_int = unsafe{QRect_Class_Size()};
@@ -928,8 +928,8 @@ impl<'a> /*trait*/ QRect_height<i32> for () {
 }
 
   // proto:  void QRect::QRect(int left, int top, int width, int height);
-impl<'a> /*trait*/ QRect_New for (i32, i32, i32, i32) {
-  fn New(self) -> QRect {
+impl<'a> /*trait*/ QRect_new for (i32, i32, i32, i32) {
+  fn new(self) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QRectC1Eiiii()};
     let ctysz: c_int = unsafe{QRect_Class_Size()};
@@ -1557,8 +1557,8 @@ impl<'a> /*trait*/ QRect_bottom<i32> for () {
 }
 
   // proto:  void QRect::QRect();
-impl<'a> /*trait*/ QRect_New for () {
-  fn New(self) -> QRect {
+impl<'a> /*trait*/ QRect_new for () {
+  fn new(self) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QRectC1Ev()};
     let ctysz: c_int = unsafe{QRect_Class_Size()};
@@ -1801,20 +1801,20 @@ impl /*struct*/ QRectF {
 }
   // proto:  void QRectF::QRectF();
 impl /*struct*/ QRectF {
-  pub fn New<T: QRectF_New>(value: T) -> QRectF {
-    let rsthis = value.New();
+  pub fn new<T: QRectF_new>(value: T) -> QRectF {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QRectF_New {
-  fn New(self) -> QRectF;
+pub trait QRectF_new {
+  fn new(self) -> QRectF;
 }
 
   // proto:  void QRectF::QRectF();
-impl<'a> /*trait*/ QRectF_New for () {
-  fn New(self) -> QRectF {
+impl<'a> /*trait*/ QRectF_new for () {
+  fn new(self) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QRectFC1Ev()};
     let ctysz: c_int = unsafe{QRectF_Class_Size()};
@@ -1968,8 +1968,8 @@ impl<'a> /*trait*/ QRectF_setSize<()> for (&'a QSizeF) {
 }
 
   // proto:  void QRectF::QRectF(const QPointF & topleft, const QPointF & bottomRight);
-impl<'a> /*trait*/ QRectF_New for (&'a QPointF, &'a QPointF) {
-  fn New(self) -> QRectF {
+impl<'a> /*trait*/ QRectF_new for (&'a QPointF, &'a QPointF) {
+  fn new(self) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QRectFC1ERK7QPointFS2_()};
     let ctysz: c_int = unsafe{QRectF_Class_Size()};
@@ -2372,8 +2372,8 @@ impl<'a> /*trait*/ QRectF_isNull<i8> for () {
 }
 
   // proto:  void QRectF::QRectF(const QPointF & topleft, const QSizeF & size);
-impl<'a> /*trait*/ QRectF_New for (&'a QPointF, &'a QSizeF) {
-  fn New(self) -> QRectF {
+impl<'a> /*trait*/ QRectF_new for (&'a QPointF, &'a QSizeF) {
+  fn new(self) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QRectFC1ERK7QPointFRK6QSizeF()};
     let ctysz: c_int = unsafe{QRectF_Class_Size()};
@@ -2838,8 +2838,8 @@ impl<'a> /*trait*/ QRectF_translate<()> for (f64, f64) {
 }
 
   // proto:  void QRectF::QRectF(qreal left, qreal top, qreal width, qreal height);
-impl<'a> /*trait*/ QRectF_New for (f64, f64, f64, f64) {
-  fn New(self) -> QRectF {
+impl<'a> /*trait*/ QRectF_new for (f64, f64, f64, f64) {
+  fn new(self) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QRectFC1Edddd()};
     let ctysz: c_int = unsafe{QRectF_Class_Size()};
@@ -3266,8 +3266,8 @@ impl<'a> /*trait*/ QRectF_right<f64> for () {
 }
 
   // proto:  void QRectF::QRectF(const QRect & rect);
-impl<'a> /*trait*/ QRectF_New for (&'a QRect) {
-  fn New(self) -> QRectF {
+impl<'a> /*trait*/ QRectF_new for (&'a QRect) {
+  fn new(self) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QRectFC1ERK5QRect()};
     let ctysz: c_int = unsafe{QRectF_Class_Size()};

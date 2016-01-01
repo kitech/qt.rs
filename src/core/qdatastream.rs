@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qdatastream.h
 // dst-file: /src/core/qdatastream.rs
 //
@@ -134,20 +134,20 @@ impl<'a> /*trait*/ QDataStream_unsetDevice<()> for () {
 
   // proto:  void QDataStream::QDataStream(const QDataStream & );
 impl /*struct*/ QDataStream {
-  pub fn New<T: QDataStream_New>(value: T) -> QDataStream {
-    let rsthis = value.New();
+  pub fn new<T: QDataStream_new>(value: T) -> QDataStream {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QDataStream_New {
-  fn New(self) -> QDataStream;
+pub trait QDataStream_new {
+  fn new(self) -> QDataStream;
 }
 
   // proto:  void QDataStream::QDataStream(const QDataStream & );
-impl<'a> /*trait*/ QDataStream_New for (&'a QDataStream) {
-  fn New(self) -> QDataStream {
+impl<'a> /*trait*/ QDataStream_new for (&'a QDataStream) {
+  fn new(self) -> QDataStream {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QDataStreamC1ERKS_()};
     let ctysz: c_int = unsafe{QDataStream_Class_Size()};
@@ -162,8 +162,8 @@ impl<'a> /*trait*/ QDataStream_New for (&'a QDataStream) {
 }
 
   // proto:  void QDataStream::QDataStream(QIODevice * );
-impl<'a> /*trait*/ QDataStream_New for (&'a QIODevice) {
-  fn New(self) -> QDataStream {
+impl<'a> /*trait*/ QDataStream_new for (&'a QIODevice) {
+  fn new(self) -> QDataStream {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QDataStreamC1EP9QIODevice()};
     let ctysz: c_int = unsafe{QDataStream_Class_Size()};
@@ -179,19 +179,19 @@ impl<'a> /*trait*/ QDataStream_New for (&'a QIODevice) {
 
   // proto:  void QDataStream::~QDataStream();
 impl /*struct*/ QDataStream {
-  pub fn Free<RetType, T: QDataStream_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QDataStream_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QDataStream_Free<RetType> {
-  fn Free(self , rsthis: & QDataStream) -> RetType;
+pub trait QDataStream_free<RetType> {
+  fn free(self , rsthis: & QDataStream) -> RetType;
 }
 
   // proto:  void QDataStream::~QDataStream();
-impl<'a> /*trait*/ QDataStream_Free<()> for () {
-  fn Free(self , rsthis: & QDataStream) -> () {
+impl<'a> /*trait*/ QDataStream_free<()> for () {
+  fn free(self , rsthis: & QDataStream) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QDataStreamD0Ev()};
      unsafe {_ZN11QDataStreamD0Ev(rsthis.qclsinst)};
@@ -250,8 +250,8 @@ impl<'a> /*trait*/ QDataStream_writeBytes<QDataStream> for (&'a  String, u32) {
 }
 
   // proto:  void QDataStream::QDataStream();
-impl<'a> /*trait*/ QDataStream_New for () {
-  fn New(self) -> QDataStream {
+impl<'a> /*trait*/ QDataStream_new for () {
+  fn new(self) -> QDataStream {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QDataStreamC1Ev()};
     let ctysz: c_int = unsafe{QDataStream_Class_Size()};
@@ -287,8 +287,8 @@ impl<'a> /*trait*/ QDataStream_resetStatus<()> for () {
 }
 
   // proto:  void QDataStream::QDataStream(const QByteArray & );
-impl<'a> /*trait*/ QDataStream_New for (&'a QByteArray) {
-  fn New(self) -> QDataStream {
+impl<'a> /*trait*/ QDataStream_new for (&'a QByteArray) {
+  fn new(self) -> QDataStream {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QDataStreamC1ERK10QByteArray()};
     let ctysz: c_int = unsafe{QDataStream_Class_Size()};

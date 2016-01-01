@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qstorageinfo.h
 // dst-file: /src/core/qstorageinfo.rs
 //
@@ -120,20 +120,20 @@ impl<'a> /*trait*/ QStorageInfo_bytesFree<i64> for () {
 
   // proto:  void QStorageInfo::QStorageInfo(const QStorageInfo & other);
 impl /*struct*/ QStorageInfo {
-  pub fn New<T: QStorageInfo_New>(value: T) -> QStorageInfo {
-    let rsthis = value.New();
+  pub fn new<T: QStorageInfo_new>(value: T) -> QStorageInfo {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QStorageInfo_New {
-  fn New(self) -> QStorageInfo;
+pub trait QStorageInfo_new {
+  fn new(self) -> QStorageInfo;
 }
 
   // proto:  void QStorageInfo::QStorageInfo(const QStorageInfo & other);
-impl<'a> /*trait*/ QStorageInfo_New for (&'a QStorageInfo) {
-  fn New(self) -> QStorageInfo {
+impl<'a> /*trait*/ QStorageInfo_new for (&'a QStorageInfo) {
+  fn new(self) -> QStorageInfo {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QStorageInfoC1ERKS_()};
     let ctysz: c_int = unsafe{QStorageInfo_Class_Size()};
@@ -403,19 +403,19 @@ impl<'a> /*trait*/ QStorageInfo_rootPath<QString> for () {
 
   // proto:  void QStorageInfo::~QStorageInfo();
 impl /*struct*/ QStorageInfo {
-  pub fn Free<RetType, T: QStorageInfo_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QStorageInfo_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QStorageInfo_Free<RetType> {
-  fn Free(self , rsthis: & QStorageInfo) -> RetType;
+pub trait QStorageInfo_free<RetType> {
+  fn free(self , rsthis: & QStorageInfo) -> RetType;
 }
 
   // proto:  void QStorageInfo::~QStorageInfo();
-impl<'a> /*trait*/ QStorageInfo_Free<()> for () {
-  fn Free(self , rsthis: & QStorageInfo) -> () {
+impl<'a> /*trait*/ QStorageInfo_free<()> for () {
+  fn free(self , rsthis: & QStorageInfo) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QStorageInfoD0Ev()};
      unsafe {_ZN12QStorageInfoD0Ev(rsthis.qclsinst)};
@@ -447,8 +447,8 @@ impl<'a> /*trait*/ QStorageInfo_bytesAvailable<i64> for () {
 }
 
   // proto:  void QStorageInfo::QStorageInfo();
-impl<'a> /*trait*/ QStorageInfo_New for () {
-  fn New(self) -> QStorageInfo {
+impl<'a> /*trait*/ QStorageInfo_new for () {
+  fn new(self) -> QStorageInfo {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QStorageInfoC1Ev()};
     let ctysz: c_int = unsafe{QStorageInfo_Class_Size()};
@@ -462,8 +462,8 @@ impl<'a> /*trait*/ QStorageInfo_New for () {
 }
 
   // proto:  void QStorageInfo::QStorageInfo(const QDir & dir);
-impl<'a> /*trait*/ QStorageInfo_New for (&'a QDir) {
-  fn New(self) -> QStorageInfo {
+impl<'a> /*trait*/ QStorageInfo_new for (&'a QDir) {
+  fn new(self) -> QStorageInfo {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QStorageInfoC1ERK4QDir()};
     let ctysz: c_int = unsafe{QStorageInfo_Class_Size()};
@@ -502,8 +502,8 @@ impl<'a> /*trait*/ QStorageInfo_root_s<QStorageInfo> for () {
 }
 
   // proto:  void QStorageInfo::QStorageInfo(const QString & path);
-impl<'a> /*trait*/ QStorageInfo_New for (&'a QString) {
-  fn New(self) -> QStorageInfo {
+impl<'a> /*trait*/ QStorageInfo_new for (&'a QString) {
+  fn new(self) -> QStorageInfo {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QStorageInfoC1ERK7QString()};
     let ctysz: c_int = unsafe{QStorageInfo_Class_Size()};

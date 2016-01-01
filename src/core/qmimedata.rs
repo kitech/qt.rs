@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qmimedata.h
 // dst-file: /src/core/qmimedata.rs
 //
@@ -160,19 +160,19 @@ impl<'a> /*trait*/ QMimeData_colorData<QVariant> for () {
 
   // proto:  void QMimeData::~QMimeData();
 impl /*struct*/ QMimeData {
-  pub fn Free<RetType, T: QMimeData_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QMimeData_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QMimeData_Free<RetType> {
-  fn Free(self , rsthis: & QMimeData) -> RetType;
+pub trait QMimeData_free<RetType> {
+  fn free(self , rsthis: & QMimeData) -> RetType;
 }
 
   // proto:  void QMimeData::~QMimeData();
-impl<'a> /*trait*/ QMimeData_Free<()> for () {
-  fn Free(self , rsthis: & QMimeData) -> () {
+impl<'a> /*trait*/ QMimeData_free<()> for () {
+  fn free(self , rsthis: & QMimeData) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QMimeDataD0Ev()};
      unsafe {_ZN9QMimeDataD0Ev(rsthis.qclsinst)};
@@ -205,20 +205,20 @@ impl<'a> /*trait*/ QMimeData_hasHtml<i8> for () {
 
   // proto:  void QMimeData::QMimeData(const QMimeData & );
 impl /*struct*/ QMimeData {
-  pub fn New<T: QMimeData_New>(value: T) -> QMimeData {
-    let rsthis = value.New();
+  pub fn new<T: QMimeData_new>(value: T) -> QMimeData {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QMimeData_New {
-  fn New(self) -> QMimeData;
+pub trait QMimeData_new {
+  fn new(self) -> QMimeData;
 }
 
   // proto:  void QMimeData::QMimeData(const QMimeData & );
-impl<'a> /*trait*/ QMimeData_New for (&'a QMimeData) {
-  fn New(self) -> QMimeData {
+impl<'a> /*trait*/ QMimeData_new for (&'a QMimeData) {
+  fn new(self) -> QMimeData {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QMimeDataC1ERKS_()};
     let ctysz: c_int = unsafe{QMimeData_Class_Size()};
@@ -489,8 +489,8 @@ impl<'a> /*trait*/ QMimeData_html<QString> for () {
 }
 
   // proto:  void QMimeData::QMimeData();
-impl<'a> /*trait*/ QMimeData_New for () {
-  fn New(self) -> QMimeData {
+impl<'a> /*trait*/ QMimeData_new for () {
+  fn new(self) -> QMimeData {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QMimeDataC1Ev()};
     let ctysz: c_int = unsafe{QMimeData_Class_Size()};

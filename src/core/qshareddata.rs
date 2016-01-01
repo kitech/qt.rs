@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qshareddata.h
 // dst-file: /src/core/qshareddata.rs
 //
@@ -52,20 +52,20 @@ impl /*struct*/ QSharedData {
 }
   // proto:  void QSharedData::QSharedData();
 impl /*struct*/ QSharedData {
-  pub fn New<T: QSharedData_New>(value: T) -> QSharedData {
-    let rsthis = value.New();
+  pub fn new<T: QSharedData_new>(value: T) -> QSharedData {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QSharedData_New {
-  fn New(self) -> QSharedData;
+pub trait QSharedData_new {
+  fn new(self) -> QSharedData;
 }
 
   // proto:  void QSharedData::QSharedData();
-impl<'a> /*trait*/ QSharedData_New for () {
-  fn New(self) -> QSharedData {
+impl<'a> /*trait*/ QSharedData_new for () {
+  fn new(self) -> QSharedData {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QSharedDataC1Ev()};
     let ctysz: c_int = unsafe{QSharedData_Class_Size()};
@@ -79,8 +79,8 @@ impl<'a> /*trait*/ QSharedData_New for () {
 }
 
   // proto:  void QSharedData::QSharedData(const QSharedData & );
-impl<'a> /*trait*/ QSharedData_New for (&'a QSharedData) {
-  fn New(self) -> QSharedData {
+impl<'a> /*trait*/ QSharedData_new for (&'a QSharedData) {
+  fn new(self) -> QSharedData {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QSharedDataC1ERKS_()};
     let ctysz: c_int = unsafe{QSharedData_Class_Size()};

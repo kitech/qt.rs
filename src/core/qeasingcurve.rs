@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qeasingcurve.h
 // dst-file: /src/core/qeasingcurve.rs
 //
@@ -76,20 +76,20 @@ impl /*struct*/ QEasingCurve {
 }
   // proto:  void QEasingCurve::QEasingCurve(const QEasingCurve & other);
 impl /*struct*/ QEasingCurve {
-  pub fn New<T: QEasingCurve_New>(value: T) -> QEasingCurve {
-    let rsthis = value.New();
+  pub fn new<T: QEasingCurve_new>(value: T) -> QEasingCurve {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QEasingCurve_New {
-  fn New(self) -> QEasingCurve;
+pub trait QEasingCurve_new {
+  fn new(self) -> QEasingCurve;
 }
 
   // proto:  void QEasingCurve::QEasingCurve(const QEasingCurve & other);
-impl<'a> /*trait*/ QEasingCurve_New for (&'a QEasingCurve) {
-  fn New(self) -> QEasingCurve {
+impl<'a> /*trait*/ QEasingCurve_new for (&'a QEasingCurve) {
+  fn new(self) -> QEasingCurve {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QEasingCurveC1ERKS_()};
     let ctysz: c_int = unsafe{QEasingCurve_Class_Size()};
@@ -105,19 +105,19 @@ impl<'a> /*trait*/ QEasingCurve_New for (&'a QEasingCurve) {
 
   // proto:  void QEasingCurve::~QEasingCurve();
 impl /*struct*/ QEasingCurve {
-  pub fn Free<RetType, T: QEasingCurve_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QEasingCurve_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QEasingCurve_Free<RetType> {
-  fn Free(self , rsthis: & QEasingCurve) -> RetType;
+pub trait QEasingCurve_free<RetType> {
+  fn free(self , rsthis: & QEasingCurve) -> RetType;
 }
 
   // proto:  void QEasingCurve::~QEasingCurve();
-impl<'a> /*trait*/ QEasingCurve_Free<()> for () {
-  fn Free(self , rsthis: & QEasingCurve) -> () {
+impl<'a> /*trait*/ QEasingCurve_free<()> for () {
+  fn free(self , rsthis: & QEasingCurve) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QEasingCurveD0Ev()};
      unsafe {_ZN12QEasingCurveD0Ev(rsthis.qclsinst)};

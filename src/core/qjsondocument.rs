@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qjsondocument.h
 // dst-file: /src/core/qjsondocument.rs
 //
@@ -200,20 +200,20 @@ impl<'a> /*trait*/ QJsonDocument_isNull<i8> for () {
 
   // proto:  void QJsonDocument::QJsonDocument();
 impl /*struct*/ QJsonDocument {
-  pub fn New<T: QJsonDocument_New>(value: T) -> QJsonDocument {
-    let rsthis = value.New();
+  pub fn new<T: QJsonDocument_new>(value: T) -> QJsonDocument {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QJsonDocument_New {
-  fn New(self) -> QJsonDocument;
+pub trait QJsonDocument_new {
+  fn new(self) -> QJsonDocument;
 }
 
   // proto:  void QJsonDocument::QJsonDocument();
-impl<'a> /*trait*/ QJsonDocument_New for () {
-  fn New(self) -> QJsonDocument {
+impl<'a> /*trait*/ QJsonDocument_new for () {
+  fn new(self) -> QJsonDocument {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QJsonDocumentC1Ev()};
     let ctysz: c_int = unsafe{QJsonDocument_Class_Size()};
@@ -323,19 +323,19 @@ impl<'a> /*trait*/ QJsonDocument_isObject<i8> for () {
 
   // proto:  void QJsonDocument::~QJsonDocument();
 impl /*struct*/ QJsonDocument {
-  pub fn Free<RetType, T: QJsonDocument_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QJsonDocument_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QJsonDocument_Free<RetType> {
-  fn Free(self , rsthis: & QJsonDocument) -> RetType;
+pub trait QJsonDocument_free<RetType> {
+  fn free(self , rsthis: & QJsonDocument) -> RetType;
 }
 
   // proto:  void QJsonDocument::~QJsonDocument();
-impl<'a> /*trait*/ QJsonDocument_Free<()> for () {
-  fn Free(self , rsthis: & QJsonDocument) -> () {
+impl<'a> /*trait*/ QJsonDocument_free<()> for () {
+  fn free(self , rsthis: & QJsonDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QJsonDocumentD0Ev()};
      unsafe {_ZN13QJsonDocumentD0Ev(rsthis.qclsinst)};

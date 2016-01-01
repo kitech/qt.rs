@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qtranslator.h
 // dst-file: /src/core/qtranslator.rs
 //
@@ -103,20 +103,20 @@ impl<'a> /*trait*/ QTranslator_metaObject<()> for () {
 
   // proto:  void QTranslator::QTranslator(QObject * parent);
 impl /*struct*/ QTranslator {
-  pub fn New<T: QTranslator_New>(value: T) -> QTranslator {
-    let rsthis = value.New();
+  pub fn new<T: QTranslator_new>(value: T) -> QTranslator {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTranslator_New {
-  fn New(self) -> QTranslator;
+pub trait QTranslator_new {
+  fn new(self) -> QTranslator;
 }
 
   // proto:  void QTranslator::QTranslator(QObject * parent);
-impl<'a> /*trait*/ QTranslator_New for (&'a QObject) {
-  fn New(self) -> QTranslator {
+impl<'a> /*trait*/ QTranslator_new for (&'a QObject) {
+  fn new(self) -> QTranslator {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTranslatorC1EP7QObject()};
     let ctysz: c_int = unsafe{QTranslator_Class_Size()};
@@ -154,8 +154,8 @@ impl<'a> /*trait*/ QTranslator_isEmpty<i8> for () {
 }
 
   // proto:  void QTranslator::QTranslator(const QTranslator & );
-impl<'a> /*trait*/ QTranslator_New for (&'a QTranslator) {
-  fn New(self) -> QTranslator {
+impl<'a> /*trait*/ QTranslator_new for (&'a QTranslator) {
+  fn new(self) -> QTranslator {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTranslatorC1ERKS_()};
     let ctysz: c_int = unsafe{QTranslator_Class_Size()};
@@ -171,19 +171,19 @@ impl<'a> /*trait*/ QTranslator_New for (&'a QTranslator) {
 
   // proto:  void QTranslator::~QTranslator();
 impl /*struct*/ QTranslator {
-  pub fn Free<RetType, T: QTranslator_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QTranslator_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QTranslator_Free<RetType> {
-  fn Free(self , rsthis: & QTranslator) -> RetType;
+pub trait QTranslator_free<RetType> {
+  fn free(self , rsthis: & QTranslator) -> RetType;
 }
 
   // proto:  void QTranslator::~QTranslator();
-impl<'a> /*trait*/ QTranslator_Free<()> for () {
-  fn Free(self , rsthis: & QTranslator) -> () {
+impl<'a> /*trait*/ QTranslator_free<()> for () {
+  fn free(self , rsthis: & QTranslator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTranslatorD0Ev()};
      unsafe {_ZN11QTranslatorD0Ev(rsthis.qclsinst)};

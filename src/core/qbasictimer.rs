@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qbasictimer.h
 // dst-file: /src/core/qbasictimer.rs
 //
@@ -60,19 +60,19 @@ impl /*struct*/ QBasicTimer {
 }
   // proto:  void QBasicTimer::~QBasicTimer();
 impl /*struct*/ QBasicTimer {
-  pub fn Free<RetType, T: QBasicTimer_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QBasicTimer_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QBasicTimer_Free<RetType> {
-  fn Free(self , rsthis: & QBasicTimer) -> RetType;
+pub trait QBasicTimer_free<RetType> {
+  fn free(self , rsthis: & QBasicTimer) -> RetType;
 }
 
   // proto:  void QBasicTimer::~QBasicTimer();
-impl<'a> /*trait*/ QBasicTimer_Free<()> for () {
-  fn Free(self , rsthis: & QBasicTimer) -> () {
+impl<'a> /*trait*/ QBasicTimer_free<()> for () {
+  fn free(self , rsthis: & QBasicTimer) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QBasicTimerD0Ev()};
      unsafe {demth_ZN11QBasicTimerD0Ev(rsthis.qclsinst)};
@@ -150,20 +150,20 @@ impl<'a> /*trait*/ QBasicTimer_isActive<i8> for () {
 
   // proto:  void QBasicTimer::QBasicTimer();
 impl /*struct*/ QBasicTimer {
-  pub fn New<T: QBasicTimer_New>(value: T) -> QBasicTimer {
-    let rsthis = value.New();
+  pub fn new<T: QBasicTimer_new>(value: T) -> QBasicTimer {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QBasicTimer_New {
-  fn New(self) -> QBasicTimer;
+pub trait QBasicTimer_new {
+  fn new(self) -> QBasicTimer;
 }
 
   // proto:  void QBasicTimer::QBasicTimer();
-impl<'a> /*trait*/ QBasicTimer_New for () {
-  fn New(self) -> QBasicTimer {
+impl<'a> /*trait*/ QBasicTimer_new for () {
+  fn new(self) -> QBasicTimer {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QBasicTimerC1Ev()};
     let ctysz: c_int = unsafe{QBasicTimer_Class_Size()};

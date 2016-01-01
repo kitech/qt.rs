@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qabstractproxymodel.h
 // dst-file: /src/core/qabstractproxymodel.rs
 //
@@ -326,20 +326,20 @@ impl<'a> /*trait*/ QAbstractProxyModel_metaObject<()> for () {
 
   // proto:  void QAbstractProxyModel::QAbstractProxyModel(const QAbstractProxyModel & );
 impl /*struct*/ QAbstractProxyModel {
-  pub fn New<T: QAbstractProxyModel_New>(value: T) -> QAbstractProxyModel {
-    let rsthis = value.New();
+  pub fn new<T: QAbstractProxyModel_new>(value: T) -> QAbstractProxyModel {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QAbstractProxyModel_New {
-  fn New(self) -> QAbstractProxyModel;
+pub trait QAbstractProxyModel_new {
+  fn new(self) -> QAbstractProxyModel;
 }
 
   // proto:  void QAbstractProxyModel::QAbstractProxyModel(const QAbstractProxyModel & );
-impl<'a> /*trait*/ QAbstractProxyModel_New for (&'a QAbstractProxyModel) {
-  fn New(self) -> QAbstractProxyModel {
+impl<'a> /*trait*/ QAbstractProxyModel_new for (&'a QAbstractProxyModel) {
+  fn new(self) -> QAbstractProxyModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QAbstractProxyModelC1ERKS_()};
     let ctysz: c_int = unsafe{QAbstractProxyModel_Class_Size()};
@@ -552,19 +552,19 @@ impl<'a> /*trait*/ QAbstractProxyModel_fetchMore<()> for (&'a QModelIndex) {
 
   // proto:  void QAbstractProxyModel::~QAbstractProxyModel();
 impl /*struct*/ QAbstractProxyModel {
-  pub fn Free<RetType, T: QAbstractProxyModel_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QAbstractProxyModel_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QAbstractProxyModel_Free<RetType> {
-  fn Free(self , rsthis: & QAbstractProxyModel) -> RetType;
+pub trait QAbstractProxyModel_free<RetType> {
+  fn free(self , rsthis: & QAbstractProxyModel) -> RetType;
 }
 
   // proto:  void QAbstractProxyModel::~QAbstractProxyModel();
-impl<'a> /*trait*/ QAbstractProxyModel_Free<()> for () {
-  fn Free(self , rsthis: & QAbstractProxyModel) -> () {
+impl<'a> /*trait*/ QAbstractProxyModel_free<()> for () {
+  fn free(self , rsthis: & QAbstractProxyModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QAbstractProxyModelD0Ev()};
      unsafe {_ZN19QAbstractProxyModelD0Ev(rsthis.qclsinst)};
@@ -573,8 +573,8 @@ impl<'a> /*trait*/ QAbstractProxyModel_Free<()> for () {
 }
 
   // proto:  void QAbstractProxyModel::QAbstractProxyModel(QObject * parent);
-impl<'a> /*trait*/ QAbstractProxyModel_New for (&'a QObject) {
-  fn New(self) -> QAbstractProxyModel {
+impl<'a> /*trait*/ QAbstractProxyModel_new for (&'a QObject) {
+  fn new(self) -> QAbstractProxyModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QAbstractProxyModelC1EP7QObject()};
     let ctysz: c_int = unsafe{QAbstractProxyModel_Class_Size()};

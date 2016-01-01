@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qtemporarydir.h
 // dst-file: /src/core/qtemporarydir.rs
 //
@@ -160,19 +160,19 @@ impl<'a> /*trait*/ QTemporaryDir_setAutoRemove<()> for (i8) {
 
   // proto:  void QTemporaryDir::~QTemporaryDir();
 impl /*struct*/ QTemporaryDir {
-  pub fn Free<RetType, T: QTemporaryDir_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QTemporaryDir_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QTemporaryDir_Free<RetType> {
-  fn Free(self , rsthis: & QTemporaryDir) -> RetType;
+pub trait QTemporaryDir_free<RetType> {
+  fn free(self , rsthis: & QTemporaryDir) -> RetType;
 }
 
   // proto:  void QTemporaryDir::~QTemporaryDir();
-impl<'a> /*trait*/ QTemporaryDir_Free<()> for () {
-  fn Free(self , rsthis: & QTemporaryDir) -> () {
+impl<'a> /*trait*/ QTemporaryDir_free<()> for () {
+  fn free(self , rsthis: & QTemporaryDir) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTemporaryDirD0Ev()};
      unsafe {_ZN13QTemporaryDirD0Ev(rsthis.qclsinst)};
@@ -182,20 +182,20 @@ impl<'a> /*trait*/ QTemporaryDir_Free<()> for () {
 
   // proto:  void QTemporaryDir::QTemporaryDir();
 impl /*struct*/ QTemporaryDir {
-  pub fn New<T: QTemporaryDir_New>(value: T) -> QTemporaryDir {
-    let rsthis = value.New();
+  pub fn new<T: QTemporaryDir_new>(value: T) -> QTemporaryDir {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTemporaryDir_New {
-  fn New(self) -> QTemporaryDir;
+pub trait QTemporaryDir_new {
+  fn new(self) -> QTemporaryDir;
 }
 
   // proto:  void QTemporaryDir::QTemporaryDir();
-impl<'a> /*trait*/ QTemporaryDir_New for () {
-  fn New(self) -> QTemporaryDir {
+impl<'a> /*trait*/ QTemporaryDir_new for () {
+  fn new(self) -> QTemporaryDir {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTemporaryDirC1Ev()};
     let ctysz: c_int = unsafe{QTemporaryDir_Class_Size()};
@@ -209,8 +209,8 @@ impl<'a> /*trait*/ QTemporaryDir_New for () {
 }
 
   // proto:  void QTemporaryDir::QTemporaryDir(const QString & templateName);
-impl<'a> /*trait*/ QTemporaryDir_New for (&'a QString) {
-  fn New(self) -> QTemporaryDir {
+impl<'a> /*trait*/ QTemporaryDir_new for (&'a QString) {
+  fn new(self) -> QTemporaryDir {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTemporaryDirC1ERK7QString()};
     let ctysz: c_int = unsafe{QTemporaryDir_Class_Size()};
@@ -249,8 +249,8 @@ impl<'a> /*trait*/ QTemporaryDir_path<QString> for () {
 }
 
   // proto:  void QTemporaryDir::QTemporaryDir(const QTemporaryDir & );
-impl<'a> /*trait*/ QTemporaryDir_New for (&'a QTemporaryDir) {
-  fn New(self) -> QTemporaryDir {
+impl<'a> /*trait*/ QTemporaryDir_new for (&'a QTemporaryDir) {
+  fn new(self) -> QTemporaryDir {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTemporaryDirC1ERKS_()};
     let ctysz: c_int = unsafe{QTemporaryDir_Class_Size()};

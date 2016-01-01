@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qanimationgroup.h
 // dst-file: /src/core/qanimationgroup.rs
 //
@@ -109,19 +109,19 @@ impl<'a> /*trait*/ QAnimationGroup_animationAt<()> for (i32) {
 
   // proto:  void QAnimationGroup::~QAnimationGroup();
 impl /*struct*/ QAnimationGroup {
-  pub fn Free<RetType, T: QAnimationGroup_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QAnimationGroup_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QAnimationGroup_Free<RetType> {
-  fn Free(self , rsthis: & QAnimationGroup) -> RetType;
+pub trait QAnimationGroup_free<RetType> {
+  fn free(self , rsthis: & QAnimationGroup) -> RetType;
 }
 
   // proto:  void QAnimationGroup::~QAnimationGroup();
-impl<'a> /*trait*/ QAnimationGroup_Free<()> for () {
-  fn Free(self , rsthis: & QAnimationGroup) -> () {
+impl<'a> /*trait*/ QAnimationGroup_free<()> for () {
+  fn free(self , rsthis: & QAnimationGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QAnimationGroupD0Ev()};
      unsafe {_ZN15QAnimationGroupD0Ev(rsthis.qclsinst)};
@@ -131,20 +131,20 @@ impl<'a> /*trait*/ QAnimationGroup_Free<()> for () {
 
   // proto:  void QAnimationGroup::QAnimationGroup(const QAnimationGroup & );
 impl /*struct*/ QAnimationGroup {
-  pub fn New<T: QAnimationGroup_New>(value: T) -> QAnimationGroup {
-    let rsthis = value.New();
+  pub fn new<T: QAnimationGroup_new>(value: T) -> QAnimationGroup {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QAnimationGroup_New {
-  fn New(self) -> QAnimationGroup;
+pub trait QAnimationGroup_new {
+  fn new(self) -> QAnimationGroup;
 }
 
   // proto:  void QAnimationGroup::QAnimationGroup(const QAnimationGroup & );
-impl<'a> /*trait*/ QAnimationGroup_New for (&'a QAnimationGroup) {
-  fn New(self) -> QAnimationGroup {
+impl<'a> /*trait*/ QAnimationGroup_new for (&'a QAnimationGroup) {
+  fn new(self) -> QAnimationGroup {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QAnimationGroupC1ERKS_()};
     let ctysz: c_int = unsafe{QAnimationGroup_Class_Size()};
@@ -182,8 +182,8 @@ impl<'a> /*trait*/ QAnimationGroup_removeAnimation<()> for (&'a QAbstractAnimati
 }
 
   // proto:  void QAnimationGroup::QAnimationGroup(QObject * parent);
-impl<'a> /*trait*/ QAnimationGroup_New for (&'a QObject) {
-  fn New(self) -> QAnimationGroup {
+impl<'a> /*trait*/ QAnimationGroup_new for (&'a QObject) {
+  fn new(self) -> QAnimationGroup {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QAnimationGroupC1EP7QObject()};
     let ctysz: c_int = unsafe{QAnimationGroup_Class_Size()};

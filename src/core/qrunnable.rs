@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qrunnable.h
 // dst-file: /src/core/qrunnable.rs
 //
@@ -57,19 +57,19 @@ impl /*struct*/ QRunnable {
 }
   // proto:  void QRunnable::~QRunnable();
 impl /*struct*/ QRunnable {
-  pub fn Free<RetType, T: QRunnable_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QRunnable_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QRunnable_Free<RetType> {
-  fn Free(self , rsthis: & QRunnable) -> RetType;
+pub trait QRunnable_free<RetType> {
+  fn free(self , rsthis: & QRunnable) -> RetType;
 }
 
   // proto:  void QRunnable::~QRunnable();
-impl<'a> /*trait*/ QRunnable_Free<()> for () {
-  fn Free(self , rsthis: & QRunnable) -> () {
+impl<'a> /*trait*/ QRunnable_free<()> for () {
+  fn free(self , rsthis: & QRunnable) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QRunnableD0Ev()};
      unsafe {_ZN9QRunnableD0Ev(rsthis.qclsinst)};
@@ -102,20 +102,20 @@ impl<'a> /*trait*/ QRunnable_setAutoDelete<()> for (i8) {
 
   // proto:  void QRunnable::QRunnable();
 impl /*struct*/ QRunnable {
-  pub fn New<T: QRunnable_New>(value: T) -> QRunnable {
-    let rsthis = value.New();
+  pub fn new<T: QRunnable_new>(value: T) -> QRunnable {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QRunnable_New {
-  fn New(self) -> QRunnable;
+pub trait QRunnable_new {
+  fn new(self) -> QRunnable;
 }
 
   // proto:  void QRunnable::QRunnable();
-impl<'a> /*trait*/ QRunnable_New for () {
-  fn New(self) -> QRunnable {
+impl<'a> /*trait*/ QRunnable_new for () {
+  fn new(self) -> QRunnable {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QRunnableC1Ev()};
     let ctysz: c_int = unsafe{QRunnable_Class_Size()};

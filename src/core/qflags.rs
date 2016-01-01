@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qflags.h
 // dst-file: /src/core/qflags.rs
 //
@@ -69,20 +69,20 @@ impl /*struct*/ QIncompatibleFlag {
 }
   // proto:  void QIncompatibleFlag::QIncompatibleFlag(int i);
 impl /*struct*/ QIncompatibleFlag {
-  pub fn New<T: QIncompatibleFlag_New>(value: T) -> QIncompatibleFlag {
-    let rsthis = value.New();
+  pub fn new<T: QIncompatibleFlag_new>(value: T) -> QIncompatibleFlag {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QIncompatibleFlag_New {
-  fn New(self) -> QIncompatibleFlag;
+pub trait QIncompatibleFlag_new {
+  fn new(self) -> QIncompatibleFlag;
 }
 
   // proto:  void QIncompatibleFlag::QIncompatibleFlag(int i);
-impl<'a> /*trait*/ QIncompatibleFlag_New for (i32) {
-  fn New(self) -> QIncompatibleFlag {
+impl<'a> /*trait*/ QIncompatibleFlag_new for (i32) {
+  fn new(self) -> QIncompatibleFlag {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QIncompatibleFlagC1Ei()};
     let ctysz: c_int = unsafe{QIncompatibleFlag_Class_Size()};
@@ -103,20 +103,20 @@ impl /*struct*/ QFlag {
 }
   // proto:  void QFlag::QFlag(ushort ai);
 impl /*struct*/ QFlag {
-  pub fn New<T: QFlag_New>(value: T) -> QFlag {
-    let rsthis = value.New();
+  pub fn new<T: QFlag_new>(value: T) -> QFlag {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QFlag_New {
-  fn New(self) -> QFlag;
+pub trait QFlag_new {
+  fn new(self) -> QFlag;
 }
 
   // proto:  void QFlag::QFlag(ushort ai);
-impl<'a> /*trait*/ QFlag_New for (u16) {
-  fn New(self) -> QFlag {
+impl<'a> /*trait*/ QFlag_new for (u16) {
+  fn new(self) -> QFlag {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFlagC1Et()};
     let ctysz: c_int = unsafe{QFlag_Class_Size()};
@@ -131,8 +131,8 @@ impl<'a> /*trait*/ QFlag_New for (u16) {
 }
 
   // proto:  void QFlag::QFlag(int ai);
-impl<'a> /*trait*/ QFlag_New for (i32) {
-  fn New(self) -> QFlag {
+impl<'a> /*trait*/ QFlag_new for (i32) {
+  fn new(self) -> QFlag {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFlagC1Ei()};
     let ctysz: c_int = unsafe{QFlag_Class_Size()};
@@ -147,8 +147,8 @@ impl<'a> /*trait*/ QFlag_New for (i32) {
 }
 
   // proto:  void QFlag::QFlag(short ai);
-impl<'a> /*trait*/ QFlag_New for (i16) {
-  fn New(self) -> QFlag {
+impl<'a> /*trait*/ QFlag_new for (i16) {
+  fn new(self) -> QFlag {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFlagC1Es()};
     let ctysz: c_int = unsafe{QFlag_Class_Size()};
@@ -163,8 +163,8 @@ impl<'a> /*trait*/ QFlag_New for (i16) {
 }
 
   // proto:  void QFlag::QFlag(uint ai);
-impl<'a> /*trait*/ QFlag_New for (u32) {
-  fn New(self) -> QFlag {
+impl<'a> /*trait*/ QFlag_new for (u32) {
+  fn new(self) -> QFlag {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFlagC1Ej()};
     let ctysz: c_int = unsafe{QFlag_Class_Size()};

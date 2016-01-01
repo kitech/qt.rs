@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qiodevice.h
 // dst-file: /src/core/qiodevice.rs
 //
@@ -610,20 +610,20 @@ impl<'a> /*trait*/ QIODevice_seek<i8> for (i64) {
 
   // proto:  void QIODevice::QIODevice(const QIODevice & );
 impl /*struct*/ QIODevice {
-  pub fn New<T: QIODevice_New>(value: T) -> QIODevice {
-    let rsthis = value.New();
+  pub fn new<T: QIODevice_new>(value: T) -> QIODevice {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QIODevice_New {
-  fn New(self) -> QIODevice;
+pub trait QIODevice_new {
+  fn new(self) -> QIODevice;
 }
 
   // proto:  void QIODevice::QIODevice(const QIODevice & );
-impl<'a> /*trait*/ QIODevice_New for (&'a QIODevice) {
-  fn New(self) -> QIODevice {
+impl<'a> /*trait*/ QIODevice_new for (&'a QIODevice) {
+  fn new(self) -> QIODevice {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QIODeviceC1ERKS_()};
     let ctysz: c_int = unsafe{QIODevice_Class_Size()};
@@ -875,8 +875,8 @@ impl<'a> /*trait*/ QIODevice_peek<QByteArray> for (i64) {
 }
 
   // proto:  void QIODevice::QIODevice(QObject * parent);
-impl<'a> /*trait*/ QIODevice_New for (&'a QObject) {
-  fn New(self) -> QIODevice {
+impl<'a> /*trait*/ QIODevice_new for (&'a QObject) {
+  fn new(self) -> QIODevice {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QIODeviceC1EP7QObject()};
     let ctysz: c_int = unsafe{QIODevice_Class_Size()};
@@ -936,8 +936,8 @@ impl<'a> /*trait*/ QIODevice_setTextModeEnabled<()> for (i8) {
 }
 
   // proto:  void QIODevice::QIODevice();
-impl<'a> /*trait*/ QIODevice_New for () {
-  fn New(self) -> QIODevice {
+impl<'a> /*trait*/ QIODevice_new for () {
+  fn new(self) -> QIODevice {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QIODeviceC1Ev()};
     let ctysz: c_int = unsafe{QIODevice_Class_Size()};
@@ -998,19 +998,19 @@ impl<'a> /*trait*/ QIODevice_canReadLine<i8> for () {
 
   // proto:  void QIODevice::~QIODevice();
 impl /*struct*/ QIODevice {
-  pub fn Free<RetType, T: QIODevice_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QIODevice_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QIODevice_Free<RetType> {
-  fn Free(self , rsthis: & QIODevice) -> RetType;
+pub trait QIODevice_free<RetType> {
+  fn free(self , rsthis: & QIODevice) -> RetType;
 }
 
   // proto:  void QIODevice::~QIODevice();
-impl<'a> /*trait*/ QIODevice_Free<()> for () {
-  fn Free(self , rsthis: & QIODevice) -> () {
+impl<'a> /*trait*/ QIODevice_free<()> for () {
+  fn free(self , rsthis: & QIODevice) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QIODeviceD0Ev()};
      unsafe {_ZN9QIODeviceD0Ev(rsthis.qclsinst)};
@@ -1088,7 +1088,7 @@ extern fn QIODevice_bytesWritten_signal_connect_cb_0(rsfptr:fn(i64), arg0: c_lon
   let rsarg0 = arg0 as i64;
   rsfptr(rsarg0);
 }
-extern fn QIODevice_bytesWritten_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i64), arg0: c_longlong) {
+extern fn QIODevice_bytesWritten_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(i64), arg0: c_longlong) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i64;
@@ -1097,7 +1097,8 @@ extern fn QIODevice_bytesWritten_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i64)
 impl /* trait */ QIODevice_bytesWritten_signal_connect for fn(i64) {
   fn connect(self, sigthis: QIODevice_bytesWritten_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QIODevice_bytesWritten_signal_connect_cb_0 as *mut c_void;
@@ -1105,7 +1106,7 @@ impl /* trait */ QIODevice_bytesWritten_signal_connect for fn(i64) {
     unsafe {QIODevice_SlotProxy_connect__ZN9QIODevice12bytesWrittenEx(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QIODevice_bytesWritten_signal_connect for Box<fn(i64)> {
+impl /* trait */ QIODevice_bytesWritten_signal_connect for Box<Fn(i64)> {
   fn connect(self, sigthis: QIODevice_bytesWritten_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -1121,7 +1122,7 @@ extern fn QIODevice_aboutToClose_signal_connect_cb_1(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QIODevice_aboutToClose_signal_connect_cb_box_1(rsfptr_raw:*mut fn(), ) {
+extern fn QIODevice_aboutToClose_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   rsfptr();
@@ -1129,7 +1130,8 @@ extern fn QIODevice_aboutToClose_signal_connect_cb_box_1(rsfptr_raw:*mut fn(), )
 impl /* trait */ QIODevice_aboutToClose_signal_connect for fn() {
   fn connect(self, sigthis: QIODevice_aboutToClose_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QIODevice_aboutToClose_signal_connect_cb_1 as *mut c_void;
@@ -1137,7 +1139,7 @@ impl /* trait */ QIODevice_aboutToClose_signal_connect for fn() {
     unsafe {QIODevice_SlotProxy_connect__ZN9QIODevice12aboutToCloseEv(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QIODevice_aboutToClose_signal_connect for Box<fn()> {
+impl /* trait */ QIODevice_aboutToClose_signal_connect for Box<Fn()> {
   fn connect(self, sigthis: QIODevice_aboutToClose_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -1153,7 +1155,7 @@ extern fn QIODevice_readyRead_signal_connect_cb_2(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QIODevice_readyRead_signal_connect_cb_box_2(rsfptr_raw:*mut fn(), ) {
+extern fn QIODevice_readyRead_signal_connect_cb_box_2(rsfptr_raw:*mut Fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   rsfptr();
@@ -1161,7 +1163,8 @@ extern fn QIODevice_readyRead_signal_connect_cb_box_2(rsfptr_raw:*mut fn(), ) {
 impl /* trait */ QIODevice_readyRead_signal_connect for fn() {
   fn connect(self, sigthis: QIODevice_readyRead_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QIODevice_readyRead_signal_connect_cb_2 as *mut c_void;
@@ -1169,7 +1172,7 @@ impl /* trait */ QIODevice_readyRead_signal_connect for fn() {
     unsafe {QIODevice_SlotProxy_connect__ZN9QIODevice9readyReadEv(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QIODevice_readyRead_signal_connect for Box<fn()> {
+impl /* trait */ QIODevice_readyRead_signal_connect for Box<Fn()> {
   fn connect(self, sigthis: QIODevice_readyRead_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -1185,7 +1188,7 @@ extern fn QIODevice_readChannelFinished_signal_connect_cb_3(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QIODevice_readChannelFinished_signal_connect_cb_box_3(rsfptr_raw:*mut fn(), ) {
+extern fn QIODevice_readChannelFinished_signal_connect_cb_box_3(rsfptr_raw:*mut Fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   rsfptr();
@@ -1193,7 +1196,8 @@ extern fn QIODevice_readChannelFinished_signal_connect_cb_box_3(rsfptr_raw:*mut 
 impl /* trait */ QIODevice_readChannelFinished_signal_connect for fn() {
   fn connect(self, sigthis: QIODevice_readChannelFinished_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QIODevice_readChannelFinished_signal_connect_cb_3 as *mut c_void;
@@ -1201,7 +1205,7 @@ impl /* trait */ QIODevice_readChannelFinished_signal_connect for fn() {
     unsafe {QIODevice_SlotProxy_connect__ZN9QIODevice19readChannelFinishedEv(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QIODevice_readChannelFinished_signal_connect for Box<fn()> {
+impl /* trait */ QIODevice_readChannelFinished_signal_connect for Box<Fn()> {
   fn connect(self, sigthis: QIODevice_readChannelFinished_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

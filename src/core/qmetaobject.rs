@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qmetaobject.h
 // dst-file: /src/core/qmetaobject.rs
 //
@@ -375,20 +375,20 @@ impl<'a> /*trait*/ QMetaEnum_valueToKeys<QByteArray> for (i32) {
 
   // proto:  void QMetaEnum::QMetaEnum();
 impl /*struct*/ QMetaEnum {
-  pub fn New<T: QMetaEnum_New>(value: T) -> QMetaEnum {
-    let rsthis = value.New();
+  pub fn new<T: QMetaEnum_new>(value: T) -> QMetaEnum {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QMetaEnum_New {
-  fn New(self) -> QMetaEnum;
+pub trait QMetaEnum_new {
+  fn new(self) -> QMetaEnum;
 }
 
   // proto:  void QMetaEnum::QMetaEnum();
-impl<'a> /*trait*/ QMetaEnum_New for () {
-  fn New(self) -> QMetaEnum {
+impl<'a> /*trait*/ QMetaEnum_new for () {
+  fn new(self) -> QMetaEnum {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QMetaEnumC1Ev()};
     let ctysz: c_int = unsafe{QMetaEnum_Class_Size()};
@@ -529,20 +529,20 @@ impl /*struct*/ QMetaClassInfo {
 }
   // proto:  void QMetaClassInfo::QMetaClassInfo();
 impl /*struct*/ QMetaClassInfo {
-  pub fn New<T: QMetaClassInfo_New>(value: T) -> QMetaClassInfo {
-    let rsthis = value.New();
+  pub fn new<T: QMetaClassInfo_new>(value: T) -> QMetaClassInfo {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QMetaClassInfo_New {
-  fn New(self) -> QMetaClassInfo;
+pub trait QMetaClassInfo_new {
+  fn new(self) -> QMetaClassInfo;
 }
 
   // proto:  void QMetaClassInfo::QMetaClassInfo();
-impl<'a> /*trait*/ QMetaClassInfo_New for () {
-  fn New(self) -> QMetaClassInfo {
+impl<'a> /*trait*/ QMetaClassInfo_new for () {
+  fn new(self) -> QMetaClassInfo {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QMetaClassInfoC1Ev()};
     let ctysz: c_int = unsafe{QMetaClassInfo_Class_Size()};
@@ -770,20 +770,20 @@ impl<'a> /*trait*/ QMetaMethod_getParameterTypes<()> for (&'a mut Vec<i32>) {
 
   // proto:  void QMetaMethod::QMetaMethod();
 impl /*struct*/ QMetaMethod {
-  pub fn New<T: QMetaMethod_New>(value: T) -> QMetaMethod {
-    let rsthis = value.New();
+  pub fn new<T: QMetaMethod_new>(value: T) -> QMetaMethod {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QMetaMethod_New {
-  fn New(self) -> QMetaMethod;
+pub trait QMetaMethod_new {
+  fn new(self) -> QMetaMethod;
 }
 
   // proto:  void QMetaMethod::QMetaMethod();
-impl<'a> /*trait*/ QMetaMethod_New for () {
-  fn New(self) -> QMetaMethod {
+impl<'a> /*trait*/ QMetaMethod_new for () {
+  fn new(self) -> QMetaMethod {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMetaMethodC1Ev()};
     let ctysz: c_int = unsafe{QMetaMethod_Class_Size()};
@@ -1035,20 +1035,20 @@ impl<'a> /*trait*/ QMetaProperty_isEnumType<i8> for () {
 
   // proto:  void QMetaProperty::QMetaProperty();
 impl /*struct*/ QMetaProperty {
-  pub fn New<T: QMetaProperty_New>(value: T) -> QMetaProperty {
-    let rsthis = value.New();
+  pub fn new<T: QMetaProperty_new>(value: T) -> QMetaProperty {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QMetaProperty_New {
-  fn New(self) -> QMetaProperty;
+pub trait QMetaProperty_new {
+  fn new(self) -> QMetaProperty;
 }
 
   // proto:  void QMetaProperty::QMetaProperty();
-impl<'a> /*trait*/ QMetaProperty_New for () {
-  fn New(self) -> QMetaProperty {
+impl<'a> /*trait*/ QMetaProperty_new for () {
+  fn new(self) -> QMetaProperty {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QMetaPropertyC1Ev()};
     let ctysz: c_int = unsafe{QMetaProperty_Class_Size()};

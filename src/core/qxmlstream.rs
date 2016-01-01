@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qxmlstream.h
 // dst-file: /src/core/qxmlstream.rs
 //
@@ -501,20 +501,20 @@ impl<'a> /*trait*/ QXmlStreamStringRef_string<QString> for () {
 
   // proto:  void QXmlStreamStringRef::QXmlStreamStringRef(const QString & aString);
 impl /*struct*/ QXmlStreamStringRef {
-  pub fn New<T: QXmlStreamStringRef_New>(value: T) -> QXmlStreamStringRef {
-    let rsthis = value.New();
+  pub fn new<T: QXmlStreamStringRef_new>(value: T) -> QXmlStreamStringRef {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QXmlStreamStringRef_New {
-  fn New(self) -> QXmlStreamStringRef;
+pub trait QXmlStreamStringRef_new {
+  fn new(self) -> QXmlStreamStringRef;
 }
 
   // proto:  void QXmlStreamStringRef::QXmlStreamStringRef(const QString & aString);
-impl<'a> /*trait*/ QXmlStreamStringRef_New for (&'a QString) {
-  fn New(self) -> QXmlStreamStringRef {
+impl<'a> /*trait*/ QXmlStreamStringRef_new for (&'a QString) {
+  fn new(self) -> QXmlStreamStringRef {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QXmlStreamStringRefC1ERK7QString()};
     let ctysz: c_int = unsafe{QXmlStreamStringRef_Class_Size()};
@@ -530,19 +530,19 @@ impl<'a> /*trait*/ QXmlStreamStringRef_New for (&'a QString) {
 
   // proto:  void QXmlStreamStringRef::~QXmlStreamStringRef();
 impl /*struct*/ QXmlStreamStringRef {
-  pub fn Free<RetType, T: QXmlStreamStringRef_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QXmlStreamStringRef_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QXmlStreamStringRef_Free<RetType> {
-  fn Free(self , rsthis: & QXmlStreamStringRef) -> RetType;
+pub trait QXmlStreamStringRef_free<RetType> {
+  fn free(self , rsthis: & QXmlStreamStringRef) -> RetType;
 }
 
   // proto:  void QXmlStreamStringRef::~QXmlStreamStringRef();
-impl<'a> /*trait*/ QXmlStreamStringRef_Free<()> for () {
-  fn Free(self , rsthis: & QXmlStreamStringRef) -> () {
+impl<'a> /*trait*/ QXmlStreamStringRef_free<()> for () {
+  fn free(self , rsthis: & QXmlStreamStringRef) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QXmlStreamStringRefD0Ev()};
      unsafe {demth_ZN19QXmlStreamStringRefD0Ev(rsthis.qclsinst)};
@@ -551,8 +551,8 @@ impl<'a> /*trait*/ QXmlStreamStringRef_Free<()> for () {
 }
 
   // proto:  void QXmlStreamStringRef::QXmlStreamStringRef();
-impl<'a> /*trait*/ QXmlStreamStringRef_New for () {
-  fn New(self) -> QXmlStreamStringRef {
+impl<'a> /*trait*/ QXmlStreamStringRef_new for () {
+  fn new(self) -> QXmlStreamStringRef {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QXmlStreamStringRefC1Ev()};
     let ctysz: c_int = unsafe{QXmlStreamStringRef_Class_Size()};
@@ -938,20 +938,20 @@ impl<'a> /*trait*/ QXmlStreamReader_addExtraNamespaceDeclaration<()> for (&'a QX
 
   // proto:  void QXmlStreamReader::QXmlStreamReader(const QByteArray & data);
 impl /*struct*/ QXmlStreamReader {
-  pub fn New<T: QXmlStreamReader_New>(value: T) -> QXmlStreamReader {
-    let rsthis = value.New();
+  pub fn new<T: QXmlStreamReader_new>(value: T) -> QXmlStreamReader {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QXmlStreamReader_New {
-  fn New(self) -> QXmlStreamReader;
+pub trait QXmlStreamReader_new {
+  fn new(self) -> QXmlStreamReader;
 }
 
   // proto:  void QXmlStreamReader::QXmlStreamReader(const QByteArray & data);
-impl<'a> /*trait*/ QXmlStreamReader_New for (&'a QByteArray) {
-  fn New(self) -> QXmlStreamReader {
+impl<'a> /*trait*/ QXmlStreamReader_new for (&'a QByteArray) {
+  fn new(self) -> QXmlStreamReader {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamReaderC1ERK10QByteArray()};
     let ctysz: c_int = unsafe{QXmlStreamReader_Class_Size()};
@@ -1079,8 +1079,8 @@ impl<'a> /*trait*/ QXmlStreamReader_setDevice<()> for (&'a QIODevice) {
 }
 
   // proto:  void QXmlStreamReader::QXmlStreamReader(QIODevice * device);
-impl<'a> /*trait*/ QXmlStreamReader_New for (&'a QIODevice) {
-  fn New(self) -> QXmlStreamReader {
+impl<'a> /*trait*/ QXmlStreamReader_new for (&'a QIODevice) {
+  fn new(self) -> QXmlStreamReader {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamReaderC1EP9QIODevice()};
     let ctysz: c_int = unsafe{QXmlStreamReader_Class_Size()};
@@ -1256,8 +1256,8 @@ impl<'a> /*trait*/ QXmlStreamReader_isCharacters<i8> for () {
 }
 
   // proto:  void QXmlStreamReader::QXmlStreamReader();
-impl<'a> /*trait*/ QXmlStreamReader_New for () {
-  fn New(self) -> QXmlStreamReader {
+impl<'a> /*trait*/ QXmlStreamReader_new for () {
+  fn new(self) -> QXmlStreamReader {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamReaderC1Ev()};
     let ctysz: c_int = unsafe{QXmlStreamReader_Class_Size()};
@@ -1271,8 +1271,8 @@ impl<'a> /*trait*/ QXmlStreamReader_New for () {
 }
 
   // proto:  void QXmlStreamReader::QXmlStreamReader(const QString & data);
-impl<'a> /*trait*/ QXmlStreamReader_New for (&'a QString) {
-  fn New(self) -> QXmlStreamReader {
+impl<'a> /*trait*/ QXmlStreamReader_new for (&'a QString) {
+  fn new(self) -> QXmlStreamReader {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamReaderC1ERK7QString()};
     let ctysz: c_int = unsafe{QXmlStreamReader_Class_Size()};
@@ -1332,8 +1332,8 @@ impl<'a> /*trait*/ QXmlStreamReader_isWhitespace<i8> for () {
 }
 
   // proto:  void QXmlStreamReader::QXmlStreamReader(const QXmlStreamReader & );
-impl<'a> /*trait*/ QXmlStreamReader_New for (&'a QXmlStreamReader) {
-  fn New(self) -> QXmlStreamReader {
+impl<'a> /*trait*/ QXmlStreamReader_new for (&'a QXmlStreamReader) {
+  fn new(self) -> QXmlStreamReader {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamReaderC1ERKS_()};
     let ctysz: c_int = unsafe{QXmlStreamReader_Class_Size()};
@@ -1418,19 +1418,19 @@ impl<'a> /*trait*/ QXmlStreamReader_isCDATA<i8> for () {
 
   // proto:  void QXmlStreamReader::~QXmlStreamReader();
 impl /*struct*/ QXmlStreamReader {
-  pub fn Free<RetType, T: QXmlStreamReader_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QXmlStreamReader_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QXmlStreamReader_Free<RetType> {
-  fn Free(self , rsthis: & QXmlStreamReader) -> RetType;
+pub trait QXmlStreamReader_free<RetType> {
+  fn free(self , rsthis: & QXmlStreamReader) -> RetType;
 }
 
   // proto:  void QXmlStreamReader::~QXmlStreamReader();
-impl<'a> /*trait*/ QXmlStreamReader_Free<()> for () {
-  fn Free(self , rsthis: & QXmlStreamReader) -> () {
+impl<'a> /*trait*/ QXmlStreamReader_free<()> for () {
+  fn free(self , rsthis: & QXmlStreamReader) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamReaderD0Ev()};
      unsafe {_ZN16QXmlStreamReaderD0Ev(rsthis.qclsinst)};
@@ -1720,8 +1720,8 @@ impl<'a> /*trait*/ QXmlStreamReader_isComment<i8> for () {
 }
 
   // proto:  void QXmlStreamReader::QXmlStreamReader(const char * data);
-impl<'a> /*trait*/ QXmlStreamReader_New for (&'a  String) {
-  fn New(self) -> QXmlStreamReader {
+impl<'a> /*trait*/ QXmlStreamReader_new for (&'a  String) {
+  fn new(self) -> QXmlStreamReader {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamReaderC1EPKc()};
     let ctysz: c_int = unsafe{QXmlStreamReader_Class_Size()};
@@ -1872,19 +1872,19 @@ impl<'a> /*trait*/ QXmlStreamEntityResolver_resolveUndeclaredEntity<QString> for
 
   // proto:  void QXmlStreamEntityResolver::~QXmlStreamEntityResolver();
 impl /*struct*/ QXmlStreamEntityResolver {
-  pub fn Free<RetType, T: QXmlStreamEntityResolver_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QXmlStreamEntityResolver_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QXmlStreamEntityResolver_Free<RetType> {
-  fn Free(self , rsthis: & QXmlStreamEntityResolver) -> RetType;
+pub trait QXmlStreamEntityResolver_free<RetType> {
+  fn free(self , rsthis: & QXmlStreamEntityResolver) -> RetType;
 }
 
   // proto:  void QXmlStreamEntityResolver::~QXmlStreamEntityResolver();
-impl<'a> /*trait*/ QXmlStreamEntityResolver_Free<()> for () {
-  fn Free(self , rsthis: & QXmlStreamEntityResolver) -> () {
+impl<'a> /*trait*/ QXmlStreamEntityResolver_free<()> for () {
+  fn free(self , rsthis: & QXmlStreamEntityResolver) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QXmlStreamEntityResolverD0Ev()};
      unsafe {_ZN24QXmlStreamEntityResolverD0Ev(rsthis.qclsinst)};
@@ -1921,20 +1921,20 @@ impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_namespaceUri<()> for () {
 
   // proto:  void QXmlStreamNamespaceDeclaration::QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & );
 impl /*struct*/ QXmlStreamNamespaceDeclaration {
-  pub fn New<T: QXmlStreamNamespaceDeclaration_New>(value: T) -> QXmlStreamNamespaceDeclaration {
-    let rsthis = value.New();
+  pub fn new<T: QXmlStreamNamespaceDeclaration_new>(value: T) -> QXmlStreamNamespaceDeclaration {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QXmlStreamNamespaceDeclaration_New {
-  fn New(self) -> QXmlStreamNamespaceDeclaration;
+pub trait QXmlStreamNamespaceDeclaration_new {
+  fn new(self) -> QXmlStreamNamespaceDeclaration;
 }
 
   // proto:  void QXmlStreamNamespaceDeclaration::QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & );
-impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_New for (&'a QXmlStreamNamespaceDeclaration) {
-  fn New(self) -> QXmlStreamNamespaceDeclaration {
+impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_new for (&'a QXmlStreamNamespaceDeclaration) {
+  fn new(self) -> QXmlStreamNamespaceDeclaration {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZN30QXmlStreamNamespaceDeclarationC1ERKS_()};
     let ctysz: c_int = unsafe{QXmlStreamNamespaceDeclaration_Class_Size()};
@@ -1949,8 +1949,8 @@ impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_New for (&'a QXmlStreamNamespa
 }
 
   // proto:  void QXmlStreamNamespaceDeclaration::QXmlStreamNamespaceDeclaration();
-impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_New for () {
-  fn New(self) -> QXmlStreamNamespaceDeclaration {
+impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_new for () {
+  fn new(self) -> QXmlStreamNamespaceDeclaration {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZN30QXmlStreamNamespaceDeclarationC1Ev()};
     let ctysz: c_int = unsafe{QXmlStreamNamespaceDeclaration_Class_Size()};
@@ -1986,8 +1986,8 @@ impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_prefix<()> for () {
 }
 
   // proto:  void QXmlStreamNamespaceDeclaration::QXmlStreamNamespaceDeclaration(const QString & prefix, const QString & namespaceUri);
-impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_New for (&'a QString, &'a QString) {
-  fn New(self) -> QXmlStreamNamespaceDeclaration {
+impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_new for (&'a QString, &'a QString) {
+  fn new(self) -> QXmlStreamNamespaceDeclaration {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZN30QXmlStreamNamespaceDeclarationC1ERK7QStringS2_()};
     let ctysz: c_int = unsafe{QXmlStreamNamespaceDeclaration_Class_Size()};
@@ -2004,19 +2004,19 @@ impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_New for (&'a QString, &'a QStr
 
   // proto:  void QXmlStreamNamespaceDeclaration::~QXmlStreamNamespaceDeclaration();
 impl /*struct*/ QXmlStreamNamespaceDeclaration {
-  pub fn Free<RetType, T: QXmlStreamNamespaceDeclaration_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QXmlStreamNamespaceDeclaration_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QXmlStreamNamespaceDeclaration_Free<RetType> {
-  fn Free(self , rsthis: & QXmlStreamNamespaceDeclaration) -> RetType;
+pub trait QXmlStreamNamespaceDeclaration_free<RetType> {
+  fn free(self , rsthis: & QXmlStreamNamespaceDeclaration) -> RetType;
 }
 
   // proto:  void QXmlStreamNamespaceDeclaration::~QXmlStreamNamespaceDeclaration();
-impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_Free<()> for () {
-  fn Free(self , rsthis: & QXmlStreamNamespaceDeclaration) -> () {
+impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_free<()> for () {
+  fn free(self , rsthis: & QXmlStreamNamespaceDeclaration) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZN30QXmlStreamNamespaceDeclarationD0Ev()};
      unsafe {_ZN30QXmlStreamNamespaceDeclarationD0Ev(rsthis.qclsinst)};
@@ -2031,19 +2031,19 @@ impl /*struct*/ QXmlStreamEntityDeclaration {
 }
   // proto:  void QXmlStreamEntityDeclaration::~QXmlStreamEntityDeclaration();
 impl /*struct*/ QXmlStreamEntityDeclaration {
-  pub fn Free<RetType, T: QXmlStreamEntityDeclaration_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QXmlStreamEntityDeclaration_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QXmlStreamEntityDeclaration_Free<RetType> {
-  fn Free(self , rsthis: & QXmlStreamEntityDeclaration) -> RetType;
+pub trait QXmlStreamEntityDeclaration_free<RetType> {
+  fn free(self , rsthis: & QXmlStreamEntityDeclaration) -> RetType;
 }
 
   // proto:  void QXmlStreamEntityDeclaration::~QXmlStreamEntityDeclaration();
-impl<'a> /*trait*/ QXmlStreamEntityDeclaration_Free<()> for () {
-  fn Free(self , rsthis: & QXmlStreamEntityDeclaration) -> () {
+impl<'a> /*trait*/ QXmlStreamEntityDeclaration_free<()> for () {
+  fn free(self , rsthis: & QXmlStreamEntityDeclaration) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZN27QXmlStreamEntityDeclarationD0Ev()};
      unsafe {_ZN27QXmlStreamEntityDeclarationD0Ev(rsthis.qclsinst)};
@@ -2097,20 +2097,20 @@ impl<'a> /*trait*/ QXmlStreamEntityDeclaration_name<()> for () {
 
   // proto:  void QXmlStreamEntityDeclaration::QXmlStreamEntityDeclaration();
 impl /*struct*/ QXmlStreamEntityDeclaration {
-  pub fn New<T: QXmlStreamEntityDeclaration_New>(value: T) -> QXmlStreamEntityDeclaration {
-    let rsthis = value.New();
+  pub fn new<T: QXmlStreamEntityDeclaration_new>(value: T) -> QXmlStreamEntityDeclaration {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QXmlStreamEntityDeclaration_New {
-  fn New(self) -> QXmlStreamEntityDeclaration;
+pub trait QXmlStreamEntityDeclaration_new {
+  fn new(self) -> QXmlStreamEntityDeclaration;
 }
 
   // proto:  void QXmlStreamEntityDeclaration::QXmlStreamEntityDeclaration();
-impl<'a> /*trait*/ QXmlStreamEntityDeclaration_New for () {
-  fn New(self) -> QXmlStreamEntityDeclaration {
+impl<'a> /*trait*/ QXmlStreamEntityDeclaration_new for () {
+  fn new(self) -> QXmlStreamEntityDeclaration {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZN27QXmlStreamEntityDeclarationC1Ev()};
     let ctysz: c_int = unsafe{QXmlStreamEntityDeclaration_Class_Size()};
@@ -2168,8 +2168,8 @@ impl<'a> /*trait*/ QXmlStreamEntityDeclaration_notationName<()> for () {
 }
 
   // proto:  void QXmlStreamEntityDeclaration::QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration & );
-impl<'a> /*trait*/ QXmlStreamEntityDeclaration_New for (&'a QXmlStreamEntityDeclaration) {
-  fn New(self) -> QXmlStreamEntityDeclaration {
+impl<'a> /*trait*/ QXmlStreamEntityDeclaration_new for (&'a QXmlStreamEntityDeclaration) {
+  fn new(self) -> QXmlStreamEntityDeclaration {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZN27QXmlStreamEntityDeclarationC1ERKS_()};
     let ctysz: c_int = unsafe{QXmlStreamEntityDeclaration_Class_Size()};
@@ -2235,20 +2235,20 @@ impl<'a> /*trait*/ QXmlStreamAttributes_value<()> for (&'a QString) {
 
   // proto:  void QXmlStreamAttributes::QXmlStreamAttributes();
 impl /*struct*/ QXmlStreamAttributes {
-  pub fn New<T: QXmlStreamAttributes_New>(value: T) -> QXmlStreamAttributes {
-    let rsthis = value.New();
+  pub fn new<T: QXmlStreamAttributes_new>(value: T) -> QXmlStreamAttributes {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QXmlStreamAttributes_New {
-  fn New(self) -> QXmlStreamAttributes;
+pub trait QXmlStreamAttributes_new {
+  fn new(self) -> QXmlStreamAttributes;
 }
 
   // proto:  void QXmlStreamAttributes::QXmlStreamAttributes();
-impl<'a> /*trait*/ QXmlStreamAttributes_New for () {
-  fn New(self) -> QXmlStreamAttributes {
+impl<'a> /*trait*/ QXmlStreamAttributes_new for () {
+  fn new(self) -> QXmlStreamAttributes {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QXmlStreamAttributesC1Ev()};
     let ctysz: c_int = unsafe{QXmlStreamAttributes_Class_Size()};
@@ -2376,20 +2376,20 @@ impl<'a> /*trait*/ QXmlStreamWriter_writeEndElement<()> for () {
 
   // proto:  void QXmlStreamWriter::QXmlStreamWriter();
 impl /*struct*/ QXmlStreamWriter {
-  pub fn New<T: QXmlStreamWriter_New>(value: T) -> QXmlStreamWriter {
-    let rsthis = value.New();
+  pub fn new<T: QXmlStreamWriter_new>(value: T) -> QXmlStreamWriter {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QXmlStreamWriter_New {
-  fn New(self) -> QXmlStreamWriter;
+pub trait QXmlStreamWriter_new {
+  fn new(self) -> QXmlStreamWriter;
 }
 
   // proto:  void QXmlStreamWriter::QXmlStreamWriter();
-impl<'a> /*trait*/ QXmlStreamWriter_New for () {
-  fn New(self) -> QXmlStreamWriter {
+impl<'a> /*trait*/ QXmlStreamWriter_new for () {
+  fn new(self) -> QXmlStreamWriter {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriterC1Ev()};
     let ctysz: c_int = unsafe{QXmlStreamWriter_Class_Size()};
@@ -2729,8 +2729,8 @@ impl<'a> /*trait*/ QXmlStreamWriter_writeStartElement<()> for (&'a QString, &'a 
 }
 
   // proto:  void QXmlStreamWriter::QXmlStreamWriter(QString * string);
-impl<'a> /*trait*/ QXmlStreamWriter_New for (&'a QString) {
-  fn New(self) -> QXmlStreamWriter {
+impl<'a> /*trait*/ QXmlStreamWriter_new for (&'a QString) {
+  fn new(self) -> QXmlStreamWriter {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriterC1EP7QString()};
     let ctysz: c_int = unsafe{QXmlStreamWriter_Class_Size()};
@@ -2829,8 +2829,8 @@ impl<'a> /*trait*/ QXmlStreamWriter_writeNamespace<()> for (&'a QString, &'a QSt
 }
 
   // proto:  void QXmlStreamWriter::QXmlStreamWriter(const QXmlStreamWriter & );
-impl<'a> /*trait*/ QXmlStreamWriter_New for (&'a QXmlStreamWriter) {
-  fn New(self) -> QXmlStreamWriter {
+impl<'a> /*trait*/ QXmlStreamWriter_new for (&'a QXmlStreamWriter) {
+  fn new(self) -> QXmlStreamWriter {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriterC1ERKS_()};
     let ctysz: c_int = unsafe{QXmlStreamWriter_Class_Size()};
@@ -2982,19 +2982,19 @@ impl<'a> /*trait*/ QXmlStreamWriter_autoFormattingIndent<i32> for () {
 
   // proto:  void QXmlStreamWriter::~QXmlStreamWriter();
 impl /*struct*/ QXmlStreamWriter {
-  pub fn Free<RetType, T: QXmlStreamWriter_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QXmlStreamWriter_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QXmlStreamWriter_Free<RetType> {
-  fn Free(self , rsthis: & QXmlStreamWriter) -> RetType;
+pub trait QXmlStreamWriter_free<RetType> {
+  fn free(self , rsthis: & QXmlStreamWriter) -> RetType;
 }
 
   // proto:  void QXmlStreamWriter::~QXmlStreamWriter();
-impl<'a> /*trait*/ QXmlStreamWriter_Free<()> for () {
-  fn Free(self , rsthis: & QXmlStreamWriter) -> () {
+impl<'a> /*trait*/ QXmlStreamWriter_free<()> for () {
+  fn free(self , rsthis: & QXmlStreamWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriterD0Ev()};
      unsafe {_ZN16QXmlStreamWriterD0Ev(rsthis.qclsinst)};
@@ -3096,8 +3096,8 @@ impl<'a> /*trait*/ QXmlStreamWriter_writeCurrentToken<()> for (&'a QXmlStreamRea
 }
 
   // proto:  void QXmlStreamWriter::QXmlStreamWriter(QByteArray * array);
-impl<'a> /*trait*/ QXmlStreamWriter_New for (&'a QByteArray) {
-  fn New(self) -> QXmlStreamWriter {
+impl<'a> /*trait*/ QXmlStreamWriter_new for (&'a QByteArray) {
+  fn new(self) -> QXmlStreamWriter {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriterC1EP10QByteArray()};
     let ctysz: c_int = unsafe{QXmlStreamWriter_Class_Size()};
@@ -3136,8 +3136,8 @@ impl<'a> /*trait*/ QXmlStreamWriter_writeEmptyElement<()> for (&'a QString, &'a 
 }
 
   // proto:  void QXmlStreamWriter::QXmlStreamWriter(QIODevice * device);
-impl<'a> /*trait*/ QXmlStreamWriter_New for (&'a QIODevice) {
-  fn New(self) -> QXmlStreamWriter {
+impl<'a> /*trait*/ QXmlStreamWriter_new for (&'a QIODevice) {
+  fn new(self) -> QXmlStreamWriter {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriterC1EP9QIODevice()};
     let ctysz: c_int = unsafe{QXmlStreamWriter_Class_Size()};
@@ -3169,20 +3169,20 @@ impl /*struct*/ QXmlStreamNotationDeclaration {
 }
   // proto:  void QXmlStreamNotationDeclaration::QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration & );
 impl /*struct*/ QXmlStreamNotationDeclaration {
-  pub fn New<T: QXmlStreamNotationDeclaration_New>(value: T) -> QXmlStreamNotationDeclaration {
-    let rsthis = value.New();
+  pub fn new<T: QXmlStreamNotationDeclaration_new>(value: T) -> QXmlStreamNotationDeclaration {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QXmlStreamNotationDeclaration_New {
-  fn New(self) -> QXmlStreamNotationDeclaration;
+pub trait QXmlStreamNotationDeclaration_new {
+  fn new(self) -> QXmlStreamNotationDeclaration;
 }
 
   // proto:  void QXmlStreamNotationDeclaration::QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration & );
-impl<'a> /*trait*/ QXmlStreamNotationDeclaration_New for (&'a QXmlStreamNotationDeclaration) {
-  fn New(self) -> QXmlStreamNotationDeclaration {
+impl<'a> /*trait*/ QXmlStreamNotationDeclaration_new for (&'a QXmlStreamNotationDeclaration) {
+  fn new(self) -> QXmlStreamNotationDeclaration {
     // let qthis: *mut c_void = unsafe{calloc(1, 56)};
     // unsafe{_ZN29QXmlStreamNotationDeclarationC1ERKS_()};
     let ctysz: c_int = unsafe{QXmlStreamNotationDeclaration_Class_Size()};
@@ -3242,19 +3242,19 @@ impl<'a> /*trait*/ QXmlStreamNotationDeclaration_name<()> for () {
 
   // proto:  void QXmlStreamNotationDeclaration::~QXmlStreamNotationDeclaration();
 impl /*struct*/ QXmlStreamNotationDeclaration {
-  pub fn Free<RetType, T: QXmlStreamNotationDeclaration_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QXmlStreamNotationDeclaration_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QXmlStreamNotationDeclaration_Free<RetType> {
-  fn Free(self , rsthis: & QXmlStreamNotationDeclaration) -> RetType;
+pub trait QXmlStreamNotationDeclaration_free<RetType> {
+  fn free(self , rsthis: & QXmlStreamNotationDeclaration) -> RetType;
 }
 
   // proto:  void QXmlStreamNotationDeclaration::~QXmlStreamNotationDeclaration();
-impl<'a> /*trait*/ QXmlStreamNotationDeclaration_Free<()> for () {
-  fn Free(self , rsthis: & QXmlStreamNotationDeclaration) -> () {
+impl<'a> /*trait*/ QXmlStreamNotationDeclaration_free<()> for () {
+  fn free(self , rsthis: & QXmlStreamNotationDeclaration) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 56)};
     // unsafe{_ZN29QXmlStreamNotationDeclarationD0Ev()};
      unsafe {_ZN29QXmlStreamNotationDeclarationD0Ev(rsthis.qclsinst)};
@@ -3285,8 +3285,8 @@ impl<'a> /*trait*/ QXmlStreamNotationDeclaration_systemId<()> for () {
 }
 
   // proto:  void QXmlStreamNotationDeclaration::QXmlStreamNotationDeclaration();
-impl<'a> /*trait*/ QXmlStreamNotationDeclaration_New for () {
-  fn New(self) -> QXmlStreamNotationDeclaration {
+impl<'a> /*trait*/ QXmlStreamNotationDeclaration_new for () {
+  fn new(self) -> QXmlStreamNotationDeclaration {
     // let qthis: *mut c_void = unsafe{calloc(1, 56)};
     // unsafe{_ZN29QXmlStreamNotationDeclarationC1Ev()};
     let ctysz: c_int = unsafe{QXmlStreamNotationDeclaration_Class_Size()};
@@ -3306,20 +3306,20 @@ impl /*struct*/ QXmlStreamAttribute {
 }
   // proto:  void QXmlStreamAttribute::QXmlStreamAttribute(const QString & qualifiedName, const QString & value);
 impl /*struct*/ QXmlStreamAttribute {
-  pub fn New<T: QXmlStreamAttribute_New>(value: T) -> QXmlStreamAttribute {
-    let rsthis = value.New();
+  pub fn new<T: QXmlStreamAttribute_new>(value: T) -> QXmlStreamAttribute {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QXmlStreamAttribute_New {
-  fn New(self) -> QXmlStreamAttribute;
+pub trait QXmlStreamAttribute_new {
+  fn new(self) -> QXmlStreamAttribute;
 }
 
   // proto:  void QXmlStreamAttribute::QXmlStreamAttribute(const QString & qualifiedName, const QString & value);
-impl<'a> /*trait*/ QXmlStreamAttribute_New for (&'a QString, &'a QString) {
-  fn New(self) -> QXmlStreamAttribute {
+impl<'a> /*trait*/ QXmlStreamAttribute_new for (&'a QString, &'a QString) {
+  fn new(self) -> QXmlStreamAttribute {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZN19QXmlStreamAttributeC1ERK7QStringS2_()};
     let ctysz: c_int = unsafe{QXmlStreamAttribute_Class_Size()};
@@ -3358,19 +3358,19 @@ impl<'a> /*trait*/ QXmlStreamAttribute_qualifiedName<()> for () {
 
   // proto:  void QXmlStreamAttribute::~QXmlStreamAttribute();
 impl /*struct*/ QXmlStreamAttribute {
-  pub fn Free<RetType, T: QXmlStreamAttribute_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QXmlStreamAttribute_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QXmlStreamAttribute_Free<RetType> {
-  fn Free(self , rsthis: & QXmlStreamAttribute) -> RetType;
+pub trait QXmlStreamAttribute_free<RetType> {
+  fn free(self , rsthis: & QXmlStreamAttribute) -> RetType;
 }
 
   // proto:  void QXmlStreamAttribute::~QXmlStreamAttribute();
-impl<'a> /*trait*/ QXmlStreamAttribute_Free<()> for () {
-  fn Free(self , rsthis: & QXmlStreamAttribute) -> () {
+impl<'a> /*trait*/ QXmlStreamAttribute_free<()> for () {
+  fn free(self , rsthis: & QXmlStreamAttribute) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZN19QXmlStreamAttributeD0Ev()};
      unsafe {_ZN19QXmlStreamAttributeD0Ev(rsthis.qclsinst)};
@@ -3423,8 +3423,8 @@ impl<'a> /*trait*/ QXmlStreamAttribute_namespaceUri<()> for () {
 }
 
   // proto:  void QXmlStreamAttribute::QXmlStreamAttribute();
-impl<'a> /*trait*/ QXmlStreamAttribute_New for () {
-  fn New(self) -> QXmlStreamAttribute {
+impl<'a> /*trait*/ QXmlStreamAttribute_new for () {
+  fn new(self) -> QXmlStreamAttribute {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZN19QXmlStreamAttributeC1Ev()};
     let ctysz: c_int = unsafe{QXmlStreamAttribute_Class_Size()};
@@ -3438,8 +3438,8 @@ impl<'a> /*trait*/ QXmlStreamAttribute_New for () {
 }
 
   // proto:  void QXmlStreamAttribute::QXmlStreamAttribute(const QXmlStreamAttribute & );
-impl<'a> /*trait*/ QXmlStreamAttribute_New for (&'a QXmlStreamAttribute) {
-  fn New(self) -> QXmlStreamAttribute {
+impl<'a> /*trait*/ QXmlStreamAttribute_new for (&'a QXmlStreamAttribute) {
+  fn new(self) -> QXmlStreamAttribute {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZN19QXmlStreamAttributeC1ERKS_()};
     let ctysz: c_int = unsafe{QXmlStreamAttribute_Class_Size()};
@@ -3454,8 +3454,8 @@ impl<'a> /*trait*/ QXmlStreamAttribute_New for (&'a QXmlStreamAttribute) {
 }
 
   // proto:  void QXmlStreamAttribute::QXmlStreamAttribute(const QString & namespaceUri, const QString & name, const QString & value);
-impl<'a> /*trait*/ QXmlStreamAttribute_New for (&'a QString, &'a QString, &'a QString) {
-  fn New(self) -> QXmlStreamAttribute {
+impl<'a> /*trait*/ QXmlStreamAttribute_new for (&'a QString, &'a QString, &'a QString) {
+  fn new(self) -> QXmlStreamAttribute {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZN19QXmlStreamAttributeC1ERK7QStringS2_S2_()};
     let ctysz: c_int = unsafe{QXmlStreamAttribute_Class_Size()};

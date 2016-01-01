@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qsharedmemory.h
 // dst-file: /src/core/qsharedmemory.rs
 //
@@ -143,20 +143,20 @@ impl<'a> /*trait*/ QSharedMemory_setNativeKey<()> for (&'a QString) {
 
   // proto:  void QSharedMemory::QSharedMemory(const QString & key, QObject * parent);
 impl /*struct*/ QSharedMemory {
-  pub fn New<T: QSharedMemory_New>(value: T) -> QSharedMemory {
-    let rsthis = value.New();
+  pub fn new<T: QSharedMemory_new>(value: T) -> QSharedMemory {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QSharedMemory_New {
-  fn New(self) -> QSharedMemory;
+pub trait QSharedMemory_new {
+  fn new(self) -> QSharedMemory;
 }
 
   // proto:  void QSharedMemory::QSharedMemory(const QString & key, QObject * parent);
-impl<'a> /*trait*/ QSharedMemory_New for (&'a QString, &'a QObject) {
-  fn New(self) -> QSharedMemory {
+impl<'a> /*trait*/ QSharedMemory_new for (&'a QString, &'a QObject) {
+  fn new(self) -> QSharedMemory {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QSharedMemoryC1ERK7QStringP7QObject()};
     let ctysz: c_int = unsafe{QSharedMemory_Class_Size()};
@@ -287,8 +287,8 @@ impl<'a> /*trait*/ QSharedMemory_data<()> for () {
 }
 
   // proto:  void QSharedMemory::QSharedMemory(const QSharedMemory & );
-impl<'a> /*trait*/ QSharedMemory_New for (&'a QSharedMemory) {
-  fn New(self) -> QSharedMemory {
+impl<'a> /*trait*/ QSharedMemory_new for (&'a QSharedMemory) {
+  fn new(self) -> QSharedMemory {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QSharedMemoryC1ERKS_()};
     let ctysz: c_int = unsafe{QSharedMemory_Class_Size()};
@@ -350,19 +350,19 @@ impl<'a> /*trait*/ QSharedMemory_lock<i8> for () {
 
   // proto:  void QSharedMemory::~QSharedMemory();
 impl /*struct*/ QSharedMemory {
-  pub fn Free<RetType, T: QSharedMemory_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QSharedMemory_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QSharedMemory_Free<RetType> {
-  fn Free(self , rsthis: & QSharedMemory) -> RetType;
+pub trait QSharedMemory_free<RetType> {
+  fn free(self , rsthis: & QSharedMemory) -> RetType;
 }
 
   // proto:  void QSharedMemory::~QSharedMemory();
-impl<'a> /*trait*/ QSharedMemory_Free<()> for () {
-  fn Free(self , rsthis: & QSharedMemory) -> () {
+impl<'a> /*trait*/ QSharedMemory_free<()> for () {
+  fn free(self , rsthis: & QSharedMemory) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QSharedMemoryD0Ev()};
      unsafe {_ZN13QSharedMemoryD0Ev(rsthis.qclsinst)};
@@ -463,8 +463,8 @@ impl<'a> /*trait*/ QSharedMemory_metaObject<()> for () {
 }
 
   // proto:  void QSharedMemory::QSharedMemory(QObject * parent);
-impl<'a> /*trait*/ QSharedMemory_New for (&'a QObject) {
-  fn New(self) -> QSharedMemory {
+impl<'a> /*trait*/ QSharedMemory_new for (&'a QObject) {
+  fn new(self) -> QSharedMemory {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QSharedMemoryC1EP7QObject()};
     let ctysz: c_int = unsafe{QSharedMemory_Class_Size()};

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qfiledevice.h
 // dst-file: /src/core/qfiledevice.rs
 //
@@ -261,20 +261,20 @@ impl<'a> /*trait*/ QFileDevice_fileName<QString> for () {
 
   // proto:  void QFileDevice::QFileDevice(QObject * parent);
 impl /*struct*/ QFileDevice {
-  pub fn New<T: QFileDevice_New>(value: T) -> QFileDevice {
-    let rsthis = value.New();
+  pub fn new<T: QFileDevice_new>(value: T) -> QFileDevice {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QFileDevice_New {
-  fn New(self) -> QFileDevice;
+pub trait QFileDevice_new {
+  fn new(self) -> QFileDevice;
 }
 
   // proto:  void QFileDevice::QFileDevice(QObject * parent);
-impl<'a> /*trait*/ QFileDevice_New for (&'a QObject) {
-  fn New(self) -> QFileDevice {
+impl<'a> /*trait*/ QFileDevice_new for (&'a QObject) {
+  fn new(self) -> QFileDevice {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDeviceC1EP7QObject()};
     let ctysz: c_int = unsafe{QFileDevice_Class_Size()};
@@ -290,19 +290,19 @@ impl<'a> /*trait*/ QFileDevice_New for (&'a QObject) {
 
   // proto:  void QFileDevice::~QFileDevice();
 impl /*struct*/ QFileDevice {
-  pub fn Free<RetType, T: QFileDevice_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QFileDevice_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QFileDevice_Free<RetType> {
-  fn Free(self , rsthis: & QFileDevice) -> RetType;
+pub trait QFileDevice_free<RetType> {
+  fn free(self , rsthis: & QFileDevice) -> RetType;
 }
 
   // proto:  void QFileDevice::~QFileDevice();
-impl<'a> /*trait*/ QFileDevice_Free<()> for () {
-  fn Free(self , rsthis: & QFileDevice) -> () {
+impl<'a> /*trait*/ QFileDevice_free<()> for () {
+  fn free(self , rsthis: & QFileDevice) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDeviceD0Ev()};
      unsafe {_ZN11QFileDeviceD0Ev(rsthis.qclsinst)};
@@ -380,8 +380,8 @@ impl<'a> /*trait*/ QFileDevice_flush<i8> for () {
 }
 
   // proto:  void QFileDevice::QFileDevice();
-impl<'a> /*trait*/ QFileDevice_New for () {
-  fn New(self) -> QFileDevice {
+impl<'a> /*trait*/ QFileDevice_new for () {
+  fn new(self) -> QFileDevice {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDeviceC1Ev()};
     let ctysz: c_int = unsafe{QFileDevice_Class_Size()};
@@ -417,8 +417,8 @@ impl<'a> /*trait*/ QFileDevice_unsetError<()> for () {
 }
 
   // proto:  void QFileDevice::QFileDevice(const QFileDevice & );
-impl<'a> /*trait*/ QFileDevice_New for (&'a QFileDevice) {
-  fn New(self) -> QFileDevice {
+impl<'a> /*trait*/ QFileDevice_new for (&'a QFileDevice) {
+  fn new(self) -> QFileDevice {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDeviceC1ERKS_()};
     let ctysz: c_int = unsafe{QFileDevice_Class_Size()};

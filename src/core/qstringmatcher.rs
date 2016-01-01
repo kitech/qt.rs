@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qstringmatcher.h
 // dst-file: /src/core/qstringmatcher.rs
 //
@@ -64,20 +64,20 @@ impl /*struct*/ QStringMatcher {
 }
   // proto:  void QStringMatcher::QStringMatcher();
 impl /*struct*/ QStringMatcher {
-  pub fn New<T: QStringMatcher_New>(value: T) -> QStringMatcher {
-    let rsthis = value.New();
+  pub fn new<T: QStringMatcher_new>(value: T) -> QStringMatcher {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QStringMatcher_New {
-  fn New(self) -> QStringMatcher;
+pub trait QStringMatcher_new {
+  fn new(self) -> QStringMatcher;
 }
 
   // proto:  void QStringMatcher::QStringMatcher();
-impl<'a> /*trait*/ QStringMatcher_New for () {
-  fn New(self) -> QStringMatcher {
+impl<'a> /*trait*/ QStringMatcher_new for () {
+  fn new(self) -> QStringMatcher {
     // let qthis: *mut c_void = unsafe{calloc(1, 1048)};
     // unsafe{_ZN14QStringMatcherC1Ev()};
     let ctysz: c_int = unsafe{QStringMatcher_Class_Size()};
@@ -91,8 +91,8 @@ impl<'a> /*trait*/ QStringMatcher_New for () {
 }
 
   // proto:  void QStringMatcher::QStringMatcher(const QStringMatcher & other);
-impl<'a> /*trait*/ QStringMatcher_New for (&'a QStringMatcher) {
-  fn New(self) -> QStringMatcher {
+impl<'a> /*trait*/ QStringMatcher_new for (&'a QStringMatcher) {
+  fn new(self) -> QStringMatcher {
     // let qthis: *mut c_void = unsafe{calloc(1, 1048)};
     // unsafe{_ZN14QStringMatcherC1ERKS_()};
     let ctysz: c_int = unsafe{QStringMatcher_Class_Size()};
@@ -181,19 +181,19 @@ impl<'a> /*trait*/ QStringMatcher_pattern<QString> for () {
 
   // proto:  void QStringMatcher::~QStringMatcher();
 impl /*struct*/ QStringMatcher {
-  pub fn Free<RetType, T: QStringMatcher_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QStringMatcher_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QStringMatcher_Free<RetType> {
-  fn Free(self , rsthis: & QStringMatcher) -> RetType;
+pub trait QStringMatcher_free<RetType> {
+  fn free(self , rsthis: & QStringMatcher) -> RetType;
 }
 
   // proto:  void QStringMatcher::~QStringMatcher();
-impl<'a> /*trait*/ QStringMatcher_Free<()> for () {
-  fn Free(self , rsthis: & QStringMatcher) -> () {
+impl<'a> /*trait*/ QStringMatcher_free<()> for () {
+  fn free(self , rsthis: & QStringMatcher) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 1048)};
     // unsafe{_ZN14QStringMatcherD0Ev()};
      unsafe {_ZN14QStringMatcherD0Ev(rsthis.qclsinst)};

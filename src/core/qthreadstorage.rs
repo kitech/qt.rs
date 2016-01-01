@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qthreadstorage.h
 // dst-file: /src/core/qthreadstorage.rs
 //
@@ -122,19 +122,19 @@ impl<'a> /*trait*/ QThreadStorageData_finish_s<()> for (*mut c_void) {
 
   // proto:  void QThreadStorageData::~QThreadStorageData();
 impl /*struct*/ QThreadStorageData {
-  pub fn Free<RetType, T: QThreadStorageData_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QThreadStorageData_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QThreadStorageData_Free<RetType> {
-  fn Free(self , rsthis: & QThreadStorageData) -> RetType;
+pub trait QThreadStorageData_free<RetType> {
+  fn free(self , rsthis: & QThreadStorageData) -> RetType;
 }
 
   // proto:  void QThreadStorageData::~QThreadStorageData();
-impl<'a> /*trait*/ QThreadStorageData_Free<()> for () {
-  fn Free(self , rsthis: & QThreadStorageData) -> () {
+impl<'a> /*trait*/ QThreadStorageData_free<()> for () {
+  fn free(self , rsthis: & QThreadStorageData) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QThreadStorageDataD0Ev()};
      unsafe {_ZN18QThreadStorageDataD0Ev(rsthis.qclsinst)};

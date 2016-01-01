@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qeventtransition.h
 // dst-file: /src/core/qeventtransition.rs
 //
@@ -75,20 +75,20 @@ impl AsRef<QAbstractTransition> for QEventTransition {
 }
   // proto:  void QEventTransition::QEventTransition(const QEventTransition & );
 impl /*struct*/ QEventTransition {
-  pub fn New<T: QEventTransition_New>(value: T) -> QEventTransition {
-    let rsthis = value.New();
+  pub fn new<T: QEventTransition_new>(value: T) -> QEventTransition {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QEventTransition_New {
-  fn New(self) -> QEventTransition;
+pub trait QEventTransition_new {
+  fn new(self) -> QEventTransition;
 }
 
   // proto:  void QEventTransition::QEventTransition(const QEventTransition & );
-impl<'a> /*trait*/ QEventTransition_New for (&'a QEventTransition) {
-  fn New(self) -> QEventTransition {
+impl<'a> /*trait*/ QEventTransition_new for (&'a QEventTransition) {
+  fn new(self) -> QEventTransition {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QEventTransitionC1ERKS_()};
     let ctysz: c_int = unsafe{QEventTransition_Class_Size()};
@@ -104,19 +104,19 @@ impl<'a> /*trait*/ QEventTransition_New for (&'a QEventTransition) {
 
   // proto:  void QEventTransition::~QEventTransition();
 impl /*struct*/ QEventTransition {
-  pub fn Free<RetType, T: QEventTransition_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QEventTransition_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QEventTransition_Free<RetType> {
-  fn Free(self , rsthis: & QEventTransition) -> RetType;
+pub trait QEventTransition_free<RetType> {
+  fn free(self , rsthis: & QEventTransition) -> RetType;
 }
 
   // proto:  void QEventTransition::~QEventTransition();
-impl<'a> /*trait*/ QEventTransition_Free<()> for () {
-  fn Free(self , rsthis: & QEventTransition) -> () {
+impl<'a> /*trait*/ QEventTransition_free<()> for () {
+  fn free(self , rsthis: & QEventTransition) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QEventTransitionD0Ev()};
      unsafe {_ZN16QEventTransitionD0Ev(rsthis.qclsinst)};
@@ -148,8 +148,8 @@ impl<'a> /*trait*/ QEventTransition_setEventSource<()> for (&'a QObject) {
 }
 
   // proto:  void QEventTransition::QEventTransition(QState * sourceState);
-impl<'a> /*trait*/ QEventTransition_New for (&'a QState) {
-  fn New(self) -> QEventTransition {
+impl<'a> /*trait*/ QEventTransition_new for (&'a QState) {
+  fn new(self) -> QEventTransition {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QEventTransitionC1EP6QState()};
     let ctysz: c_int = unsafe{QEventTransition_Class_Size()};

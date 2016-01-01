@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qregularexpression.h
 // dst-file: /src/core/qregularexpression.rs
 //
@@ -225,20 +225,20 @@ impl<'a> /*trait*/ QRegularExpressionMatchIterator_peekNext<QRegularExpressionMa
 
   // proto:  void QRegularExpressionMatchIterator::QRegularExpressionMatchIterator();
 impl /*struct*/ QRegularExpressionMatchIterator {
-  pub fn New<T: QRegularExpressionMatchIterator_New>(value: T) -> QRegularExpressionMatchIterator {
-    let rsthis = value.New();
+  pub fn new<T: QRegularExpressionMatchIterator_new>(value: T) -> QRegularExpressionMatchIterator {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QRegularExpressionMatchIterator_New {
-  fn New(self) -> QRegularExpressionMatchIterator;
+pub trait QRegularExpressionMatchIterator_new {
+  fn new(self) -> QRegularExpressionMatchIterator;
 }
 
   // proto:  void QRegularExpressionMatchIterator::QRegularExpressionMatchIterator();
-impl<'a> /*trait*/ QRegularExpressionMatchIterator_New for () {
-  fn New(self) -> QRegularExpressionMatchIterator {
+impl<'a> /*trait*/ QRegularExpressionMatchIterator_new for () {
+  fn new(self) -> QRegularExpressionMatchIterator {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN31QRegularExpressionMatchIteratorC1Ev()};
     let ctysz: c_int = unsafe{QRegularExpressionMatchIterator_Class_Size()};
@@ -276,8 +276,8 @@ impl<'a> /*trait*/ QRegularExpressionMatchIterator_regularExpression<QRegularExp
 }
 
   // proto:  void QRegularExpressionMatchIterator::QRegularExpressionMatchIterator(const QRegularExpressionMatchIterator & iterator);
-impl<'a> /*trait*/ QRegularExpressionMatchIterator_New for (&'a QRegularExpressionMatchIterator) {
-  fn New(self) -> QRegularExpressionMatchIterator {
+impl<'a> /*trait*/ QRegularExpressionMatchIterator_new for (&'a QRegularExpressionMatchIterator) {
+  fn new(self) -> QRegularExpressionMatchIterator {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN31QRegularExpressionMatchIteratorC1ERKS_()};
     let ctysz: c_int = unsafe{QRegularExpressionMatchIterator_Class_Size()};
@@ -293,19 +293,19 @@ impl<'a> /*trait*/ QRegularExpressionMatchIterator_New for (&'a QRegularExpressi
 
   // proto:  void QRegularExpressionMatchIterator::~QRegularExpressionMatchIterator();
 impl /*struct*/ QRegularExpressionMatchIterator {
-  pub fn Free<RetType, T: QRegularExpressionMatchIterator_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QRegularExpressionMatchIterator_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QRegularExpressionMatchIterator_Free<RetType> {
-  fn Free(self , rsthis: & QRegularExpressionMatchIterator) -> RetType;
+pub trait QRegularExpressionMatchIterator_free<RetType> {
+  fn free(self , rsthis: & QRegularExpressionMatchIterator) -> RetType;
 }
 
   // proto:  void QRegularExpressionMatchIterator::~QRegularExpressionMatchIterator();
-impl<'a> /*trait*/ QRegularExpressionMatchIterator_Free<()> for () {
-  fn Free(self , rsthis: & QRegularExpressionMatchIterator) -> () {
+impl<'a> /*trait*/ QRegularExpressionMatchIterator_free<()> for () {
+  fn free(self , rsthis: & QRegularExpressionMatchIterator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN31QRegularExpressionMatchIteratorD0Ev()};
      unsafe {_ZN31QRegularExpressionMatchIteratorD0Ev(rsthis.qclsinst)};
@@ -414,19 +414,19 @@ impl<'a> /*trait*/ QRegularExpression_pattern<QString> for () {
 
   // proto:  void QRegularExpression::~QRegularExpression();
 impl /*struct*/ QRegularExpression {
-  pub fn Free<RetType, T: QRegularExpression_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QRegularExpression_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QRegularExpression_Free<RetType> {
-  fn Free(self , rsthis: & QRegularExpression) -> RetType;
+pub trait QRegularExpression_free<RetType> {
+  fn free(self , rsthis: & QRegularExpression) -> RetType;
 }
 
   // proto:  void QRegularExpression::~QRegularExpression();
-impl<'a> /*trait*/ QRegularExpression_Free<()> for () {
-  fn Free(self , rsthis: & QRegularExpression) -> () {
+impl<'a> /*trait*/ QRegularExpression_free<()> for () {
+  fn free(self , rsthis: & QRegularExpression) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QRegularExpressionD0Ev()};
      unsafe {_ZN18QRegularExpressionD0Ev(rsthis.qclsinst)};
@@ -483,20 +483,20 @@ impl<'a> /*trait*/ QRegularExpression_escape_s<QString> for (&'a QString) {
 
   // proto:  void QRegularExpression::QRegularExpression();
 impl /*struct*/ QRegularExpression {
-  pub fn New<T: QRegularExpression_New>(value: T) -> QRegularExpression {
-    let rsthis = value.New();
+  pub fn new<T: QRegularExpression_new>(value: T) -> QRegularExpression {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QRegularExpression_New {
-  fn New(self) -> QRegularExpression;
+pub trait QRegularExpression_new {
+  fn new(self) -> QRegularExpression;
 }
 
   // proto:  void QRegularExpression::QRegularExpression();
-impl<'a> /*trait*/ QRegularExpression_New for () {
-  fn New(self) -> QRegularExpression {
+impl<'a> /*trait*/ QRegularExpression_new for () {
+  fn new(self) -> QRegularExpression {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QRegularExpressionC1Ev()};
     let ctysz: c_int = unsafe{QRegularExpression_Class_Size()};
@@ -580,8 +580,8 @@ impl<'a> /*trait*/ QRegularExpression_isValid<i8> for () {
 }
 
   // proto:  void QRegularExpression::QRegularExpression(const QRegularExpression & re);
-impl<'a> /*trait*/ QRegularExpression_New for (&'a QRegularExpression) {
-  fn New(self) -> QRegularExpression {
+impl<'a> /*trait*/ QRegularExpression_new for (&'a QRegularExpression) {
+  fn new(self) -> QRegularExpression {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QRegularExpressionC1ERKS_()};
     let ctysz: c_int = unsafe{QRegularExpression_Class_Size()};
@@ -693,20 +693,20 @@ impl<'a> /*trait*/ QRegularExpressionMatch_lastCapturedIndex<i32> for () {
 
   // proto:  void QRegularExpressionMatch::QRegularExpressionMatch();
 impl /*struct*/ QRegularExpressionMatch {
-  pub fn New<T: QRegularExpressionMatch_New>(value: T) -> QRegularExpressionMatch {
-    let rsthis = value.New();
+  pub fn new<T: QRegularExpressionMatch_new>(value: T) -> QRegularExpressionMatch {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QRegularExpressionMatch_New {
-  fn New(self) -> QRegularExpressionMatch;
+pub trait QRegularExpressionMatch_new {
+  fn new(self) -> QRegularExpressionMatch;
 }
 
   // proto:  void QRegularExpressionMatch::QRegularExpressionMatch();
-impl<'a> /*trait*/ QRegularExpressionMatch_New for () {
-  fn New(self) -> QRegularExpressionMatch {
+impl<'a> /*trait*/ QRegularExpressionMatch_new for () {
+  fn new(self) -> QRegularExpressionMatch {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QRegularExpressionMatchC1Ev()};
     let ctysz: c_int = unsafe{QRegularExpressionMatch_Class_Size()};
@@ -873,8 +873,8 @@ impl<'a> /*trait*/ QRegularExpressionMatch_capturedTexts<()> for () {
 }
 
   // proto:  void QRegularExpressionMatch::QRegularExpressionMatch(const QRegularExpressionMatch & match);
-impl<'a> /*trait*/ QRegularExpressionMatch_New for (&'a QRegularExpressionMatch) {
-  fn New(self) -> QRegularExpressionMatch {
+impl<'a> /*trait*/ QRegularExpressionMatch_new for (&'a QRegularExpressionMatch) {
+  fn new(self) -> QRegularExpressionMatch {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QRegularExpressionMatchC1ERKS_()};
     let ctysz: c_int = unsafe{QRegularExpressionMatch_Class_Size()};
@@ -913,19 +913,19 @@ impl<'a> /*trait*/ QRegularExpressionMatch_swap<()> for (&'a QRegularExpressionM
 
   // proto:  void QRegularExpressionMatch::~QRegularExpressionMatch();
 impl /*struct*/ QRegularExpressionMatch {
-  pub fn Free<RetType, T: QRegularExpressionMatch_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QRegularExpressionMatch_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QRegularExpressionMatch_Free<RetType> {
-  fn Free(self , rsthis: & QRegularExpressionMatch) -> RetType;
+pub trait QRegularExpressionMatch_free<RetType> {
+  fn free(self , rsthis: & QRegularExpressionMatch) -> RetType;
 }
 
   // proto:  void QRegularExpressionMatch::~QRegularExpressionMatch();
-impl<'a> /*trait*/ QRegularExpressionMatch_Free<()> for () {
-  fn Free(self , rsthis: & QRegularExpressionMatch) -> () {
+impl<'a> /*trait*/ QRegularExpressionMatch_free<()> for () {
+  fn free(self , rsthis: & QRegularExpressionMatch) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QRegularExpressionMatchD0Ev()};
      unsafe {_ZN23QRegularExpressionMatchD0Ev(rsthis.qclsinst)};

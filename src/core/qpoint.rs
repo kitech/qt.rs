@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qpoint.h
 // dst-file: /src/core/qpoint.rs
 //
@@ -177,20 +177,20 @@ impl<'a> /*trait*/ QPoint_x<()> for () {
 
   // proto:  void QPoint::QPoint(int xpos, int ypos);
 impl /*struct*/ QPoint {
-  pub fn New<T: QPoint_New>(value: T) -> QPoint {
-    let rsthis = value.New();
+  pub fn new<T: QPoint_new>(value: T) -> QPoint {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QPoint_New {
-  fn New(self) -> QPoint;
+pub trait QPoint_new {
+  fn new(self) -> QPoint;
 }
 
   // proto:  void QPoint::QPoint(int xpos, int ypos);
-impl<'a> /*trait*/ QPoint_New for (i32, i32) {
-  fn New(self) -> QPoint {
+impl<'a> /*trait*/ QPoint_new for (i32, i32) {
+  fn new(self) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QPointC1Eii()};
     let ctysz: c_int = unsafe{QPoint_Class_Size()};
@@ -274,8 +274,8 @@ impl<'a> /*trait*/ QPoint_isNull<i8> for () {
 }
 
   // proto:  void QPoint::QPoint();
-impl<'a> /*trait*/ QPoint_New for () {
-  fn New(self) -> QPoint {
+impl<'a> /*trait*/ QPoint_new for () {
+  fn new(self) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QPointC1Ev()};
     let ctysz: c_int = unsafe{QPoint_Class_Size()};
@@ -363,20 +363,20 @@ impl /*struct*/ QPointF {
 }
   // proto:  void QPointF::QPointF(qreal xpos, qreal ypos);
 impl /*struct*/ QPointF {
-  pub fn New<T: QPointF_New>(value: T) -> QPointF {
-    let rsthis = value.New();
+  pub fn new<T: QPointF_new>(value: T) -> QPointF {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QPointF_New {
-  fn New(self) -> QPointF;
+pub trait QPointF_new {
+  fn new(self) -> QPointF;
 }
 
   // proto:  void QPointF::QPointF(qreal xpos, qreal ypos);
-impl<'a> /*trait*/ QPointF_New for (f64, f64) {
-  fn New(self) -> QPointF {
+impl<'a> /*trait*/ QPointF_new for (f64, f64) {
+  fn new(self) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPointFC1Edd()};
     let ctysz: c_int = unsafe{QPointF_Class_Size()};
@@ -392,8 +392,8 @@ impl<'a> /*trait*/ QPointF_New for (f64, f64) {
 }
 
   // proto:  void QPointF::QPointF();
-impl<'a> /*trait*/ QPointF_New for () {
-  fn New(self) -> QPointF {
+impl<'a> /*trait*/ QPointF_new for () {
+  fn new(self) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPointFC1Ev()};
     let ctysz: c_int = unsafe{QPointF_Class_Size()};
@@ -543,8 +543,8 @@ impl<'a> /*trait*/ QPointF_x<()> for () {
 }
 
   // proto:  void QPointF::QPointF(const QPoint & p);
-impl<'a> /*trait*/ QPointF_New for (&'a QPoint) {
-  fn New(self) -> QPointF {
+impl<'a> /*trait*/ QPointF_new for (&'a QPoint) {
+  fn new(self) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPointFC1ERK6QPoint()};
     let ctysz: c_int = unsafe{QPointF_Class_Size()};

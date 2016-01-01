@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qresource.h
 // dst-file: /src/core/qresource.rs
 //
@@ -83,20 +83,20 @@ impl /*struct*/ QResource {
 }
   // proto:  void QResource::QResource(const QString & file, const QLocale & locale);
 impl /*struct*/ QResource {
-  pub fn New<T: QResource_New>(value: T) -> QResource {
-    let rsthis = value.New();
+  pub fn new<T: QResource_new>(value: T) -> QResource {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QResource_New {
-  fn New(self) -> QResource;
+pub trait QResource_new {
+  fn new(self) -> QResource;
 }
 
   // proto:  void QResource::QResource(const QString & file, const QLocale & locale);
-impl<'a> /*trait*/ QResource_New for (&'a QString, &'a QLocale) {
-  fn New(self) -> QResource {
+impl<'a> /*trait*/ QResource_new for (&'a QString, &'a QLocale) {
+  fn new(self) -> QResource {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QResourceC1ERK7QStringRK7QLocale()};
     let ctysz: c_int = unsafe{QResource_Class_Size()};
@@ -363,19 +363,19 @@ impl<'a> /*trait*/ QResource_size<i64> for () {
 
   // proto:  void QResource::~QResource();
 impl /*struct*/ QResource {
-  pub fn Free<RetType, T: QResource_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QResource_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QResource_Free<RetType> {
-  fn Free(self , rsthis: & QResource) -> RetType;
+pub trait QResource_free<RetType> {
+  fn free(self , rsthis: & QResource) -> RetType;
 }
 
   // proto:  void QResource::~QResource();
-impl<'a> /*trait*/ QResource_Free<()> for () {
-  fn Free(self , rsthis: & QResource) -> () {
+impl<'a> /*trait*/ QResource_free<()> for () {
+  fn free(self , rsthis: & QResource) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QResourceD0Ev()};
      unsafe {_ZN9QResourceD0Ev(rsthis.qclsinst)};

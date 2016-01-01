@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qtimer.h
 // dst-file: /src/core/qtimer.rs
 //
@@ -92,19 +92,19 @@ impl AsRef<QObject> for QTimer {
 }
   // proto:  void QTimer::~QTimer();
 impl /*struct*/ QTimer {
-  pub fn Free<RetType, T: QTimer_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QTimer_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QTimer_Free<RetType> {
-  fn Free(self , rsthis: & QTimer) -> RetType;
+pub trait QTimer_free<RetType> {
+  fn free(self , rsthis: & QTimer) -> RetType;
 }
 
   // proto:  void QTimer::~QTimer();
-impl<'a> /*trait*/ QTimer_Free<()> for () {
-  fn Free(self , rsthis: & QTimer) -> () {
+impl<'a> /*trait*/ QTimer_free<()> for () {
+  fn free(self , rsthis: & QTimer) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QTimerD0Ev()};
      unsafe {_ZN6QTimerD0Ev(rsthis.qclsinst)};
@@ -286,20 +286,20 @@ impl<'a> /*trait*/ QTimer_start<()> for (i32) {
 
   // proto:  void QTimer::QTimer(const QTimer & );
 impl /*struct*/ QTimer {
-  pub fn New<T: QTimer_New>(value: T) -> QTimer {
-    let rsthis = value.New();
+  pub fn new<T: QTimer_new>(value: T) -> QTimer {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTimer_New {
-  fn New(self) -> QTimer;
+pub trait QTimer_new {
+  fn new(self) -> QTimer;
 }
 
   // proto:  void QTimer::QTimer(const QTimer & );
-impl<'a> /*trait*/ QTimer_New for (&'a QTimer) {
-  fn New(self) -> QTimer {
+impl<'a> /*trait*/ QTimer_new for (&'a QTimer) {
+  fn new(self) -> QTimer {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QTimerC1ERKS_()};
     let ctysz: c_int = unsafe{QTimer_Class_Size()};
@@ -405,8 +405,8 @@ impl<'a> /*trait*/ QTimer_metaObject<()> for () {
 }
 
   // proto:  void QTimer::QTimer(QObject * parent);
-impl<'a> /*trait*/ QTimer_New for (&'a QObject) {
-  fn New(self) -> QTimer {
+impl<'a> /*trait*/ QTimer_new for (&'a QObject) {
+  fn new(self) -> QTimer {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QTimerC1EP7QObject()};
     let ctysz: c_int = unsafe{QTimer_Class_Size()};

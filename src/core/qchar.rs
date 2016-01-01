@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qchar.h
 // dst-file: /src/core/qchar.rs
 //
@@ -235,20 +235,20 @@ impl<'a> /*trait*/ QLatin1Char_unicode<u16> for () {
 
   // proto:  void QLatin1Char::QLatin1Char(char c);
 impl /*struct*/ QLatin1Char {
-  pub fn New<T: QLatin1Char_New>(value: T) -> QLatin1Char {
-    let rsthis = value.New();
+  pub fn new<T: QLatin1Char_new>(value: T) -> QLatin1Char {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QLatin1Char_New {
-  fn New(self) -> QLatin1Char;
+pub trait QLatin1Char_new {
+  fn new(self) -> QLatin1Char;
 }
 
   // proto:  void QLatin1Char::QLatin1Char(char c);
-impl<'a> /*trait*/ QLatin1Char_New for (i8) {
-  fn New(self) -> QLatin1Char {
+impl<'a> /*trait*/ QLatin1Char_new for (i8) {
+  fn new(self) -> QLatin1Char {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QLatin1CharC1Ec()};
     let ctysz: c_int = unsafe{QLatin1Char_Class_Size()};
@@ -1061,20 +1061,20 @@ impl<'a> /*trait*/ QChar_isUpper_s<i8> for (u32) {
 
   // proto:  void QChar::QChar(uchar c, uchar r);
 impl /*struct*/ QChar {
-  pub fn New<T: QChar_New>(value: T) -> QChar {
-    let rsthis = value.New();
+  pub fn new<T: QChar_new>(value: T) -> QChar {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QChar_New {
-  fn New(self) -> QChar;
+pub trait QChar_new {
+  fn new(self) -> QChar;
 }
 
   // proto:  void QChar::QChar(uchar c, uchar r);
-impl<'a> /*trait*/ QChar_New for (u8, u8) {
-  fn New(self) -> QChar {
+impl<'a> /*trait*/ QChar_new for (u8, u8) {
+  fn new(self) -> QChar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QCharC1Ehh()};
     let ctysz: c_int = unsafe{QChar_Class_Size()};
@@ -1137,8 +1137,8 @@ impl<'a> /*trait*/ QChar_isPrint<i8> for () {
 }
 
   // proto:  void QChar::QChar(char c);
-impl<'a> /*trait*/ QChar_New for (i8) {
-  fn New(self) -> QChar {
+impl<'a> /*trait*/ QChar_new for (i8) {
+  fn new(self) -> QChar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QCharC1Ec()};
     let ctysz: c_int = unsafe{QChar_Class_Size()};
@@ -1200,8 +1200,8 @@ impl<'a> /*trait*/ QChar_decomposition<QString> for () {
 }
 
   // proto:  void QChar::QChar(uint rc);
-impl<'a> /*trait*/ QChar_New for (u32) {
-  fn New(self) -> QChar {
+impl<'a> /*trait*/ QChar_new for (u32) {
+  fn new(self) -> QChar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QCharC1Ej()};
     let ctysz: c_int = unsafe{QChar_Class_Size()};
@@ -1216,8 +1216,8 @@ impl<'a> /*trait*/ QChar_New for (u32) {
 }
 
   // proto:  void QChar::QChar(int rc);
-impl<'a> /*trait*/ QChar_New for (i32) {
-  fn New(self) -> QChar {
+impl<'a> /*trait*/ QChar_new for (i32) {
+  fn new(self) -> QChar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QCharC1Ei()};
     let ctysz: c_int = unsafe{QChar_Class_Size()};
@@ -1255,8 +1255,8 @@ impl<'a> /*trait*/ QChar_isSpace<i8> for () {
 }
 
   // proto:  void QChar::QChar(short rc);
-impl<'a> /*trait*/ QChar_New for (i16) {
-  fn New(self) -> QChar {
+impl<'a> /*trait*/ QChar_new for (i16) {
+  fn new(self) -> QChar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QCharC1Es()};
     let ctysz: c_int = unsafe{QChar_Class_Size()};
@@ -1271,8 +1271,8 @@ impl<'a> /*trait*/ QChar_New for (i16) {
 }
 
   // proto:  void QChar::QChar();
-impl<'a> /*trait*/ QChar_New for () {
-  fn New(self) -> QChar {
+impl<'a> /*trait*/ QChar_new for () {
+  fn new(self) -> QChar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QCharC1Ev()};
     let ctysz: c_int = unsafe{QChar_Class_Size()};
@@ -1286,8 +1286,8 @@ impl<'a> /*trait*/ QChar_New for () {
 }
 
   // proto:  void QChar::QChar(ushort rc);
-impl<'a> /*trait*/ QChar_New for (u16) {
-  fn New(self) -> QChar {
+impl<'a> /*trait*/ QChar_new for (u16) {
+  fn new(self) -> QChar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QCharC1Et()};
     let ctysz: c_int = unsafe{QChar_Class_Size()};
@@ -1701,8 +1701,8 @@ impl<'a> /*trait*/ QChar_toLower<QChar> for () {
 }
 
   // proto:  void QChar::QChar(uchar c);
-impl<'a> /*trait*/ QChar_New for (u8) {
-  fn New(self) -> QChar {
+impl<'a> /*trait*/ QChar_new for (u8) {
+  fn new(self) -> QChar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QCharC1Eh()};
     let ctysz: c_int = unsafe{QChar_Class_Size()};

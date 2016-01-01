@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qthreadpool.h
 // dst-file: /src/core/qthreadpool.rs
 //
@@ -93,19 +93,19 @@ impl AsRef<QObject> for QThreadPool {
 }
   // proto:  void QThreadPool::~QThreadPool();
 impl /*struct*/ QThreadPool {
-  pub fn Free<RetType, T: QThreadPool_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QThreadPool_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QThreadPool_Free<RetType> {
-  fn Free(self , rsthis: & QThreadPool) -> RetType;
+pub trait QThreadPool_free<RetType> {
+  fn free(self , rsthis: & QThreadPool) -> RetType;
 }
 
   // proto:  void QThreadPool::~QThreadPool();
-impl<'a> /*trait*/ QThreadPool_Free<()> for () {
-  fn Free(self , rsthis: & QThreadPool) -> () {
+impl<'a> /*trait*/ QThreadPool_free<()> for () {
+  fn free(self , rsthis: & QThreadPool) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QThreadPoolD0Ev()};
      unsafe {_ZN11QThreadPoolD0Ev(rsthis.qclsinst)};
@@ -345,20 +345,20 @@ impl<'a> /*trait*/ QThreadPool_clear<()> for () {
 
   // proto:  void QThreadPool::QThreadPool(QObject * parent);
 impl /*struct*/ QThreadPool {
-  pub fn New<T: QThreadPool_New>(value: T) -> QThreadPool {
-    let rsthis = value.New();
+  pub fn new<T: QThreadPool_new>(value: T) -> QThreadPool {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QThreadPool_New {
-  fn New(self) -> QThreadPool;
+pub trait QThreadPool_new {
+  fn new(self) -> QThreadPool;
 }
 
   // proto:  void QThreadPool::QThreadPool(QObject * parent);
-impl<'a> /*trait*/ QThreadPool_New for (&'a QObject) {
-  fn New(self) -> QThreadPool {
+impl<'a> /*trait*/ QThreadPool_new for (&'a QObject) {
+  fn new(self) -> QThreadPool {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QThreadPoolC1EP7QObject()};
     let ctysz: c_int = unsafe{QThreadPool_Class_Size()};

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qsavefile.h
 // dst-file: /src/core/qsavefile.rs
 //
@@ -111,20 +111,20 @@ impl<'a> /*trait*/ QSaveFile_cancelWriting<()> for () {
 
   // proto:  void QSaveFile::QSaveFile(QObject * parent);
 impl /*struct*/ QSaveFile {
-  pub fn New<T: QSaveFile_New>(value: T) -> QSaveFile {
-    let rsthis = value.New();
+  pub fn new<T: QSaveFile_new>(value: T) -> QSaveFile {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QSaveFile_New {
-  fn New(self) -> QSaveFile;
+pub trait QSaveFile_new {
+  fn new(self) -> QSaveFile;
 }
 
   // proto:  void QSaveFile::QSaveFile(QObject * parent);
-impl<'a> /*trait*/ QSaveFile_New for (&'a QObject) {
-  fn New(self) -> QSaveFile {
+impl<'a> /*trait*/ QSaveFile_new for (&'a QObject) {
+  fn new(self) -> QSaveFile {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QSaveFileC1EP7QObject()};
     let ctysz: c_int = unsafe{QSaveFile_Class_Size()};
@@ -139,8 +139,8 @@ impl<'a> /*trait*/ QSaveFile_New for (&'a QObject) {
 }
 
   // proto:  void QSaveFile::QSaveFile(const QSaveFile & );
-impl<'a> /*trait*/ QSaveFile_New for (&'a QSaveFile) {
-  fn New(self) -> QSaveFile {
+impl<'a> /*trait*/ QSaveFile_new for (&'a QSaveFile) {
+  fn new(self) -> QSaveFile {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QSaveFileC1ERKS_()};
     let ctysz: c_int = unsafe{QSaveFile_Class_Size()};
@@ -155,8 +155,8 @@ impl<'a> /*trait*/ QSaveFile_New for (&'a QSaveFile) {
 }
 
   // proto:  void QSaveFile::QSaveFile(const QString & name, QObject * parent);
-impl<'a> /*trait*/ QSaveFile_New for (&'a QString, &'a QObject) {
-  fn New(self) -> QSaveFile {
+impl<'a> /*trait*/ QSaveFile_new for (&'a QString, &'a QObject) {
+  fn new(self) -> QSaveFile {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QSaveFileC1ERK7QStringP7QObject()};
     let ctysz: c_int = unsafe{QSaveFile_Class_Size()};
@@ -196,8 +196,8 @@ impl<'a> /*trait*/ QSaveFile_fileName<QString> for () {
 }
 
   // proto:  void QSaveFile::QSaveFile(const QString & name);
-impl<'a> /*trait*/ QSaveFile_New for (&'a QString) {
-  fn New(self) -> QSaveFile {
+impl<'a> /*trait*/ QSaveFile_new for (&'a QString) {
+  fn new(self) -> QSaveFile {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QSaveFileC1ERK7QString()};
     let ctysz: c_int = unsafe{QSaveFile_Class_Size()};
@@ -258,19 +258,19 @@ impl<'a> /*trait*/ QSaveFile_commit<i8> for () {
 
   // proto:  void QSaveFile::~QSaveFile();
 impl /*struct*/ QSaveFile {
-  pub fn Free<RetType, T: QSaveFile_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QSaveFile_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QSaveFile_Free<RetType> {
-  fn Free(self , rsthis: & QSaveFile) -> RetType;
+pub trait QSaveFile_free<RetType> {
+  fn free(self , rsthis: & QSaveFile) -> RetType;
 }
 
   // proto:  void QSaveFile::~QSaveFile();
-impl<'a> /*trait*/ QSaveFile_Free<()> for () {
-  fn Free(self , rsthis: & QSaveFile) -> () {
+impl<'a> /*trait*/ QSaveFile_free<()> for () {
+  fn free(self , rsthis: & QSaveFile) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QSaveFileD0Ev()};
      unsafe {_ZN9QSaveFileD0Ev(rsthis.qclsinst)};

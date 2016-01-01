@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qfinalstate.h
 // dst-file: /src/core/qfinalstate.rs
 //
@@ -70,20 +70,20 @@ impl AsRef<QAbstractState> for QFinalState {
 }
   // proto:  void QFinalState::QFinalState(QState * parent);
 impl /*struct*/ QFinalState {
-  pub fn New<T: QFinalState_New>(value: T) -> QFinalState {
-    let rsthis = value.New();
+  pub fn new<T: QFinalState_new>(value: T) -> QFinalState {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QFinalState_New {
-  fn New(self) -> QFinalState;
+pub trait QFinalState_new {
+  fn new(self) -> QFinalState;
 }
 
   // proto:  void QFinalState::QFinalState(QState * parent);
-impl<'a> /*trait*/ QFinalState_New for (&'a QState) {
-  fn New(self) -> QFinalState {
+impl<'a> /*trait*/ QFinalState_new for (&'a QState) {
+  fn new(self) -> QFinalState {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFinalStateC1EP6QState()};
     let ctysz: c_int = unsafe{QFinalState_Class_Size()};
@@ -98,8 +98,8 @@ impl<'a> /*trait*/ QFinalState_New for (&'a QState) {
 }
 
   // proto:  void QFinalState::QFinalState(const QFinalState & );
-impl<'a> /*trait*/ QFinalState_New for (&'a QFinalState) {
-  fn New(self) -> QFinalState {
+impl<'a> /*trait*/ QFinalState_new for (&'a QFinalState) {
+  fn new(self) -> QFinalState {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFinalStateC1ERKS_()};
     let ctysz: c_int = unsafe{QFinalState_Class_Size()};
@@ -115,19 +115,19 @@ impl<'a> /*trait*/ QFinalState_New for (&'a QFinalState) {
 
   // proto:  void QFinalState::~QFinalState();
 impl /*struct*/ QFinalState {
-  pub fn Free<RetType, T: QFinalState_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QFinalState_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QFinalState_Free<RetType> {
-  fn Free(self , rsthis: & QFinalState) -> RetType;
+pub trait QFinalState_free<RetType> {
+  fn free(self , rsthis: & QFinalState) -> RetType;
 }
 
   // proto:  void QFinalState::~QFinalState();
-impl<'a> /*trait*/ QFinalState_Free<()> for () {
-  fn Free(self , rsthis: & QFinalState) -> () {
+impl<'a> /*trait*/ QFinalState_free<()> for () {
+  fn free(self , rsthis: & QFinalState) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFinalStateD0Ev()};
      unsafe {_ZN11QFinalStateD0Ev(rsthis.qclsinst)};

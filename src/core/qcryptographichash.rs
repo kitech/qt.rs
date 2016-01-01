@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qcryptographichash.h
 // dst-file: /src/core/qcryptographichash.rs
 //
@@ -87,19 +87,19 @@ impl<'a> /*trait*/ QCryptographicHash_addData<i8> for (&'a QIODevice) {
 
   // proto:  void QCryptographicHash::~QCryptographicHash();
 impl /*struct*/ QCryptographicHash {
-  pub fn Free<RetType, T: QCryptographicHash_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QCryptographicHash_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QCryptographicHash_Free<RetType> {
-  fn Free(self , rsthis: & QCryptographicHash) -> RetType;
+pub trait QCryptographicHash_free<RetType> {
+  fn free(self , rsthis: & QCryptographicHash) -> RetType;
 }
 
   // proto:  void QCryptographicHash::~QCryptographicHash();
-impl<'a> /*trait*/ QCryptographicHash_Free<()> for () {
-  fn Free(self , rsthis: & QCryptographicHash) -> () {
+impl<'a> /*trait*/ QCryptographicHash_free<()> for () {
+  fn free(self , rsthis: & QCryptographicHash) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCryptographicHashD0Ev()};
      unsafe {_ZN18QCryptographicHashD0Ev(rsthis.qclsinst)};
@@ -178,20 +178,20 @@ impl<'a> /*trait*/ QCryptographicHash_addData<()> for (&'a QByteArray) {
 
   // proto:  void QCryptographicHash::QCryptographicHash(const QCryptographicHash & );
 impl /*struct*/ QCryptographicHash {
-  pub fn New<T: QCryptographicHash_New>(value: T) -> QCryptographicHash {
-    let rsthis = value.New();
+  pub fn new<T: QCryptographicHash_new>(value: T) -> QCryptographicHash {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QCryptographicHash_New {
-  fn New(self) -> QCryptographicHash;
+pub trait QCryptographicHash_new {
+  fn new(self) -> QCryptographicHash;
 }
 
   // proto:  void QCryptographicHash::QCryptographicHash(const QCryptographicHash & );
-impl<'a> /*trait*/ QCryptographicHash_New for (&'a QCryptographicHash) {
-  fn New(self) -> QCryptographicHash {
+impl<'a> /*trait*/ QCryptographicHash_new for (&'a QCryptographicHash) {
+  fn new(self) -> QCryptographicHash {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCryptographicHashC1ERKS_()};
     let ctysz: c_int = unsafe{QCryptographicHash_Class_Size()};

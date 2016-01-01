@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qurlquery.h
 // dst-file: /src/core/qurlquery.rs
 //
@@ -91,20 +91,20 @@ impl /*struct*/ QUrlQuery {
 }
   // proto:  void QUrlQuery::QUrlQuery(const QString & queryString);
 impl /*struct*/ QUrlQuery {
-  pub fn New<T: QUrlQuery_New>(value: T) -> QUrlQuery {
-    let rsthis = value.New();
+  pub fn new<T: QUrlQuery_new>(value: T) -> QUrlQuery {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QUrlQuery_New {
-  fn New(self) -> QUrlQuery;
+pub trait QUrlQuery_new {
+  fn new(self) -> QUrlQuery;
 }
 
   // proto:  void QUrlQuery::QUrlQuery(const QString & queryString);
-impl<'a> /*trait*/ QUrlQuery_New for (&'a QString) {
-  fn New(self) -> QUrlQuery {
+impl<'a> /*trait*/ QUrlQuery_new for (&'a QString) {
+  fn new(self) -> QUrlQuery {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUrlQueryC1ERK7QString()};
     let ctysz: c_int = unsafe{QUrlQuery_Class_Size()};
@@ -282,8 +282,8 @@ impl<'a> /*trait*/ QUrlQuery_isDetached<i8> for () {
 }
 
   // proto:  void QUrlQuery::QUrlQuery();
-impl<'a> /*trait*/ QUrlQuery_New for () {
-  fn New(self) -> QUrlQuery {
+impl<'a> /*trait*/ QUrlQuery_new for () {
+  fn new(self) -> QUrlQuery {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUrlQueryC1Ev()};
     let ctysz: c_int = unsafe{QUrlQuery_Class_Size()};
@@ -322,19 +322,19 @@ impl<'a> /*trait*/ QUrlQuery_setQueryDelimiters<()> for (QChar, QChar) {
 
   // proto:  void QUrlQuery::~QUrlQuery();
 impl /*struct*/ QUrlQuery {
-  pub fn Free<RetType, T: QUrlQuery_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QUrlQuery_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QUrlQuery_Free<RetType> {
-  fn Free(self , rsthis: & QUrlQuery) -> RetType;
+pub trait QUrlQuery_free<RetType> {
+  fn free(self , rsthis: & QUrlQuery) -> RetType;
 }
 
   // proto:  void QUrlQuery::~QUrlQuery();
-impl<'a> /*trait*/ QUrlQuery_Free<()> for () {
-  fn Free(self , rsthis: & QUrlQuery) -> () {
+impl<'a> /*trait*/ QUrlQuery_free<()> for () {
+  fn free(self , rsthis: & QUrlQuery) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUrlQueryD0Ev()};
      unsafe {_ZN9QUrlQueryD0Ev(rsthis.qclsinst)};
@@ -436,8 +436,8 @@ impl<'a> /*trait*/ QUrlQuery_defaultQueryPairDelimiter_s<QChar> for () {
 }
 
   // proto:  void QUrlQuery::QUrlQuery(const QUrl & url);
-impl<'a> /*trait*/ QUrlQuery_New for (&'a QUrl) {
-  fn New(self) -> QUrlQuery {
+impl<'a> /*trait*/ QUrlQuery_new for (&'a QUrl) {
+  fn new(self) -> QUrlQuery {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUrlQueryC1ERK4QUrl()};
     let ctysz: c_int = unsafe{QUrlQuery_Class_Size()};
@@ -476,8 +476,8 @@ impl<'a> /*trait*/ QUrlQuery_addQueryItem<()> for (&'a QString, &'a QString) {
 }
 
   // proto:  void QUrlQuery::QUrlQuery(const QUrlQuery & other);
-impl<'a> /*trait*/ QUrlQuery_New for (&'a QUrlQuery) {
-  fn New(self) -> QUrlQuery {
+impl<'a> /*trait*/ QUrlQuery_new for (&'a QUrlQuery) {
+  fn new(self) -> QUrlQuery {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUrlQueryC1ERKS_()};
     let ctysz: c_int = unsafe{QUrlQuery_Class_Size()};

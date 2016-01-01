@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qpropertyanimation.h
 // dst-file: /src/core/qpropertyanimation.rs
 //
@@ -129,20 +129,20 @@ impl<'a> /*trait*/ QPropertyAnimation_setTargetObject<()> for (&'a QObject) {
 
   // proto:  void QPropertyAnimation::QPropertyAnimation(QObject * parent);
 impl /*struct*/ QPropertyAnimation {
-  pub fn New<T: QPropertyAnimation_New>(value: T) -> QPropertyAnimation {
-    let rsthis = value.New();
+  pub fn new<T: QPropertyAnimation_new>(value: T) -> QPropertyAnimation {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QPropertyAnimation_New {
-  fn New(self) -> QPropertyAnimation;
+pub trait QPropertyAnimation_new {
+  fn new(self) -> QPropertyAnimation;
 }
 
   // proto:  void QPropertyAnimation::QPropertyAnimation(QObject * parent);
-impl<'a> /*trait*/ QPropertyAnimation_New for (&'a QObject) {
-  fn New(self) -> QPropertyAnimation {
+impl<'a> /*trait*/ QPropertyAnimation_new for (&'a QObject) {
+  fn new(self) -> QPropertyAnimation {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QPropertyAnimationC1EP7QObject()};
     let ctysz: c_int = unsafe{QPropertyAnimation_Class_Size()};
@@ -158,19 +158,19 @@ impl<'a> /*trait*/ QPropertyAnimation_New for (&'a QObject) {
 
   // proto:  void QPropertyAnimation::~QPropertyAnimation();
 impl /*struct*/ QPropertyAnimation {
-  pub fn Free<RetType, T: QPropertyAnimation_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QPropertyAnimation_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QPropertyAnimation_Free<RetType> {
-  fn Free(self , rsthis: & QPropertyAnimation) -> RetType;
+pub trait QPropertyAnimation_free<RetType> {
+  fn free(self , rsthis: & QPropertyAnimation) -> RetType;
 }
 
   // proto:  void QPropertyAnimation::~QPropertyAnimation();
-impl<'a> /*trait*/ QPropertyAnimation_Free<()> for () {
-  fn Free(self , rsthis: & QPropertyAnimation) -> () {
+impl<'a> /*trait*/ QPropertyAnimation_free<()> for () {
+  fn free(self , rsthis: & QPropertyAnimation) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QPropertyAnimationD0Ev()};
      unsafe {_ZN18QPropertyAnimationD0Ev(rsthis.qclsinst)};
@@ -225,8 +225,8 @@ impl<'a> /*trait*/ QPropertyAnimation_metaObject<()> for () {
 }
 
   // proto:  void QPropertyAnimation::QPropertyAnimation(const QPropertyAnimation & );
-impl<'a> /*trait*/ QPropertyAnimation_New for (&'a QPropertyAnimation) {
-  fn New(self) -> QPropertyAnimation {
+impl<'a> /*trait*/ QPropertyAnimation_new for (&'a QPropertyAnimation) {
+  fn new(self) -> QPropertyAnimation {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QPropertyAnimationC1ERKS_()};
     let ctysz: c_int = unsafe{QPropertyAnimation_Class_Size()};
@@ -241,8 +241,8 @@ impl<'a> /*trait*/ QPropertyAnimation_New for (&'a QPropertyAnimation) {
 }
 
   // proto:  void QPropertyAnimation::QPropertyAnimation(QObject * target, const QByteArray & propertyName, QObject * parent);
-impl<'a> /*trait*/ QPropertyAnimation_New for (&'a QObject, &'a QByteArray, &'a QObject) {
-  fn New(self) -> QPropertyAnimation {
+impl<'a> /*trait*/ QPropertyAnimation_new for (&'a QObject, &'a QByteArray, &'a QObject) {
+  fn new(self) -> QPropertyAnimation {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QPropertyAnimationC1EP7QObjectRK10QByteArrayS1_()};
     let ctysz: c_int = unsafe{QPropertyAnimation_Class_Size()};

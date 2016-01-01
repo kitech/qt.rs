@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qlibrary.h
 // dst-file: /src/core/qlibrary.rs
 //
@@ -130,20 +130,20 @@ impl<'a> /*trait*/ QLibrary_resolve_s<()> for (&'a QString, &'a QString, &'a  St
 
   // proto:  void QLibrary::QLibrary(const QString & fileName, const QString & version, QObject * parent);
 impl /*struct*/ QLibrary {
-  pub fn New<T: QLibrary_New>(value: T) -> QLibrary {
-    let rsthis = value.New();
+  pub fn new<T: QLibrary_new>(value: T) -> QLibrary {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QLibrary_New {
-  fn New(self) -> QLibrary;
+pub trait QLibrary_new {
+  fn new(self) -> QLibrary;
 }
 
   // proto:  void QLibrary::QLibrary(const QString & fileName, const QString & version, QObject * parent);
-impl<'a> /*trait*/ QLibrary_New for (&'a QString, &'a QString, &'a QObject) {
-  fn New(self) -> QLibrary {
+impl<'a> /*trait*/ QLibrary_new for (&'a QString, &'a QString, &'a QObject) {
+  fn new(self) -> QLibrary {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QLibraryC1ERK7QStringS2_P7QObject()};
     let ctysz: c_int = unsafe{QLibrary_Class_Size()};
@@ -194,8 +194,8 @@ impl<'a> /*trait*/ QLibrary_resolve_s<()> for (&'a QString, &'a  String) {
 }
 
   // proto:  void QLibrary::QLibrary(QObject * parent);
-impl<'a> /*trait*/ QLibrary_New for (&'a QObject) {
-  fn New(self) -> QLibrary {
+impl<'a> /*trait*/ QLibrary_new for (&'a QObject) {
+  fn new(self) -> QLibrary {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QLibraryC1EP7QObject()};
     let ctysz: c_int = unsafe{QLibrary_Class_Size()};
@@ -256,8 +256,8 @@ impl<'a> /*trait*/ QLibrary_load<i8> for () {
 }
 
   // proto:  void QLibrary::QLibrary(const QString & fileName, QObject * parent);
-impl<'a> /*trait*/ QLibrary_New for (&'a QString, &'a QObject) {
-  fn New(self) -> QLibrary {
+impl<'a> /*trait*/ QLibrary_new for (&'a QString, &'a QObject) {
+  fn new(self) -> QLibrary {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QLibraryC1ERK7QStringP7QObject()};
     let ctysz: c_int = unsafe{QLibrary_Class_Size()};
@@ -320,8 +320,8 @@ impl<'a> /*trait*/ QLibrary_setFileName<()> for (&'a QString) {
 }
 
   // proto:  void QLibrary::QLibrary(const QLibrary & );
-impl<'a> /*trait*/ QLibrary_New for (&'a QLibrary) {
-  fn New(self) -> QLibrary {
+impl<'a> /*trait*/ QLibrary_new for (&'a QLibrary) {
+  fn new(self) -> QLibrary {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QLibraryC1ERKS_()};
     let ctysz: c_int = unsafe{QLibrary_Class_Size()};
@@ -442,8 +442,8 @@ impl<'a> /*trait*/ QLibrary_setFileNameAndVersion<()> for (&'a QString, i32) {
 }
 
   // proto:  void QLibrary::QLibrary(const QString & fileName, int verNum, QObject * parent);
-impl<'a> /*trait*/ QLibrary_New for (&'a QString, i32, &'a QObject) {
-  fn New(self) -> QLibrary {
+impl<'a> /*trait*/ QLibrary_new for (&'a QString, i32, &'a QObject) {
+  fn new(self) -> QLibrary {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QLibraryC1ERK7QStringiP7QObject()};
     let ctysz: c_int = unsafe{QLibrary_Class_Size()};
@@ -461,19 +461,19 @@ impl<'a> /*trait*/ QLibrary_New for (&'a QString, i32, &'a QObject) {
 
   // proto:  void QLibrary::~QLibrary();
 impl /*struct*/ QLibrary {
-  pub fn Free<RetType, T: QLibrary_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QLibrary_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QLibrary_Free<RetType> {
-  fn Free(self , rsthis: & QLibrary) -> RetType;
+pub trait QLibrary_free<RetType> {
+  fn free(self , rsthis: & QLibrary) -> RetType;
 }
 
   // proto:  void QLibrary::~QLibrary();
-impl<'a> /*trait*/ QLibrary_Free<()> for () {
-  fn Free(self , rsthis: & QLibrary) -> () {
+impl<'a> /*trait*/ QLibrary_free<()> for () {
+  fn free(self , rsthis: & QLibrary) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QLibraryD0Ev()};
      unsafe {_ZN8QLibraryD0Ev(rsthis.qclsinst)};

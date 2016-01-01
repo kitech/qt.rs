@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qfilesystemwatcher.h
 // dst-file: /src/core/qfilesystemwatcher.rs
 //
@@ -85,19 +85,19 @@ impl AsRef<QObject> for QFileSystemWatcher {
 }
   // proto:  void QFileSystemWatcher::~QFileSystemWatcher();
 impl /*struct*/ QFileSystemWatcher {
-  pub fn Free<RetType, T: QFileSystemWatcher_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QFileSystemWatcher_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemWatcher_Free<RetType> {
-  fn Free(self , rsthis: & QFileSystemWatcher) -> RetType;
+pub trait QFileSystemWatcher_free<RetType> {
+  fn free(self , rsthis: & QFileSystemWatcher) -> RetType;
 }
 
   // proto:  void QFileSystemWatcher::~QFileSystemWatcher();
-impl<'a> /*trait*/ QFileSystemWatcher_Free<()> for () {
-  fn Free(self , rsthis: & QFileSystemWatcher) -> () {
+impl<'a> /*trait*/ QFileSystemWatcher_free<()> for () {
+  fn free(self , rsthis: & QFileSystemWatcher) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QFileSystemWatcherD0Ev()};
      unsafe {_ZN18QFileSystemWatcherD0Ev(rsthis.qclsinst)};
@@ -221,20 +221,20 @@ impl<'a> /*trait*/ QFileSystemWatcher_removePaths<()> for (&'a QStringList) {
 
   // proto:  void QFileSystemWatcher::QFileSystemWatcher(QObject * parent);
 impl /*struct*/ QFileSystemWatcher {
-  pub fn New<T: QFileSystemWatcher_New>(value: T) -> QFileSystemWatcher {
-    let rsthis = value.New();
+  pub fn new<T: QFileSystemWatcher_new>(value: T) -> QFileSystemWatcher {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QFileSystemWatcher_New {
-  fn New(self) -> QFileSystemWatcher;
+pub trait QFileSystemWatcher_new {
+  fn new(self) -> QFileSystemWatcher;
 }
 
   // proto:  void QFileSystemWatcher::QFileSystemWatcher(QObject * parent);
-impl<'a> /*trait*/ QFileSystemWatcher_New for (&'a QObject) {
-  fn New(self) -> QFileSystemWatcher {
+impl<'a> /*trait*/ QFileSystemWatcher_new for (&'a QObject) {
+  fn new(self) -> QFileSystemWatcher {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QFileSystemWatcherC1EP7QObject()};
     let ctysz: c_int = unsafe{QFileSystemWatcher_Class_Size()};
@@ -295,8 +295,8 @@ impl<'a> /*trait*/ QFileSystemWatcher_metaObject<()> for () {
 }
 
   // proto:  void QFileSystemWatcher::QFileSystemWatcher(const QStringList & paths, QObject * parent);
-impl<'a> /*trait*/ QFileSystemWatcher_New for (&'a QStringList, &'a QObject) {
-  fn New(self) -> QFileSystemWatcher {
+impl<'a> /*trait*/ QFileSystemWatcher_new for (&'a QStringList, &'a QObject) {
+  fn new(self) -> QFileSystemWatcher {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QFileSystemWatcherC1ERK11QStringListP7QObject()};
     let ctysz: c_int = unsafe{QFileSystemWatcher_Class_Size()};

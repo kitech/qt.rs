@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qstringlistmodel.h
 // dst-file: /src/core/qstringlistmodel.rs
 //
@@ -90,20 +90,20 @@ impl AsRef<QAbstractListModel> for QStringListModel {
 }
   // proto:  void QStringListModel::QStringListModel(const QStringList & strings, QObject * parent);
 impl /*struct*/ QStringListModel {
-  pub fn New<T: QStringListModel_New>(value: T) -> QStringListModel {
-    let rsthis = value.New();
+  pub fn new<T: QStringListModel_new>(value: T) -> QStringListModel {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QStringListModel_New {
-  fn New(self) -> QStringListModel;
+pub trait QStringListModel_new {
+  fn new(self) -> QStringListModel;
 }
 
   // proto:  void QStringListModel::QStringListModel(const QStringList & strings, QObject * parent);
-impl<'a> /*trait*/ QStringListModel_New for (&'a QStringList, &'a QObject) {
-  fn New(self) -> QStringListModel {
+impl<'a> /*trait*/ QStringListModel_new for (&'a QStringList, &'a QObject) {
+  fn new(self) -> QStringListModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QStringListModelC1ERK11QStringListP7QObject()};
     let ctysz: c_int = unsafe{QStringListModel_Class_Size()};
@@ -241,8 +241,8 @@ impl<'a> /*trait*/ QStringListModel_removeRows<i8> for (i32, i32, &'a QModelInde
 }
 
   // proto:  void QStringListModel::QStringListModel(QObject * parent);
-impl<'a> /*trait*/ QStringListModel_New for (&'a QObject) {
-  fn New(self) -> QStringListModel {
+impl<'a> /*trait*/ QStringListModel_new for (&'a QObject) {
+  fn new(self) -> QStringListModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QStringListModelC1EP7QObject()};
     let ctysz: c_int = unsafe{QStringListModel_Class_Size()};
@@ -257,8 +257,8 @@ impl<'a> /*trait*/ QStringListModel_New for (&'a QObject) {
 }
 
   // proto:  void QStringListModel::QStringListModel(const QStringListModel & );
-impl<'a> /*trait*/ QStringListModel_New for (&'a QStringListModel) {
-  fn New(self) -> QStringListModel {
+impl<'a> /*trait*/ QStringListModel_new for (&'a QStringListModel) {
+  fn new(self) -> QStringListModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QStringListModelC1ERKS_()};
     let ctysz: c_int = unsafe{QStringListModel_Class_Size()};

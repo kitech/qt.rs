@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qabstractitemmodel.h
 // dst-file: /src/core/qabstractitemmodel.rs
 //
@@ -263,20 +263,20 @@ impl /*struct*/ QModelIndex {
 }
   // proto:  void QModelIndex::QModelIndex(int arow, int acolumn, void * ptr, const QAbstractItemModel * amodel);
 impl /*struct*/ QModelIndex {
-  pub fn New<T: QModelIndex_New>(value: T) -> QModelIndex {
-    let rsthis = value.New();
+  pub fn new<T: QModelIndex_new>(value: T) -> QModelIndex {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QModelIndex_New {
-  fn New(self) -> QModelIndex;
+pub trait QModelIndex_new {
+  fn new(self) -> QModelIndex;
 }
 
   // proto:  void QModelIndex::QModelIndex(int arow, int acolumn, void * ptr, const QAbstractItemModel * amodel);
-impl<'a> /*trait*/ QModelIndex_New for (i32, i32, *mut c_void, &'a QAbstractItemModel) {
-  fn New(self) -> QModelIndex {
+impl<'a> /*trait*/ QModelIndex_new for (i32, i32, *mut c_void, &'a QAbstractItemModel) {
+  fn new(self) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QModelIndexC1EiiPvPK18QAbstractItemModel()};
     let ctysz: c_int = unsafe{QModelIndex_Class_Size()};
@@ -294,8 +294,8 @@ impl<'a> /*trait*/ QModelIndex_New for (i32, i32, *mut c_void, &'a QAbstractItem
 }
 
   // proto:  void QModelIndex::QModelIndex();
-impl<'a> /*trait*/ QModelIndex_New for () {
-  fn New(self) -> QModelIndex {
+impl<'a> /*trait*/ QModelIndex_new for () {
+  fn new(self) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QModelIndexC1Ev()};
     let ctysz: c_int = unsafe{QModelIndex_Class_Size()};
@@ -403,8 +403,8 @@ impl<'a> /*trait*/ QModelIndex_internalPointer<()> for () {
 }
 
   // proto:  void QModelIndex::QModelIndex(int arow, int acolumn, quintptr id, const QAbstractItemModel * amodel);
-impl<'a> /*trait*/ QModelIndex_New for (i32, i32, i32, &'a QAbstractItemModel) {
-  fn New(self) -> QModelIndex {
+impl<'a> /*trait*/ QModelIndex_new for (i32, i32, i32, &'a QAbstractItemModel) {
+  fn new(self) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QModelIndexC1EiiiPK18QAbstractItemModel()};
     let ctysz: c_int = unsafe{QModelIndex_Class_Size()};
@@ -646,20 +646,20 @@ impl<'a> /*trait*/ QPersistentModelIndex_parent<QModelIndex> for () {
 
   // proto:  void QPersistentModelIndex::QPersistentModelIndex(const QPersistentModelIndex & other);
 impl /*struct*/ QPersistentModelIndex {
-  pub fn New<T: QPersistentModelIndex_New>(value: T) -> QPersistentModelIndex {
-    let rsthis = value.New();
+  pub fn new<T: QPersistentModelIndex_new>(value: T) -> QPersistentModelIndex {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QPersistentModelIndex_New {
-  fn New(self) -> QPersistentModelIndex;
+pub trait QPersistentModelIndex_new {
+  fn new(self) -> QPersistentModelIndex;
 }
 
   // proto:  void QPersistentModelIndex::QPersistentModelIndex(const QPersistentModelIndex & other);
-impl<'a> /*trait*/ QPersistentModelIndex_New for (&'a QPersistentModelIndex) {
-  fn New(self) -> QPersistentModelIndex {
+impl<'a> /*trait*/ QPersistentModelIndex_new for (&'a QPersistentModelIndex) {
+  fn new(self) -> QPersistentModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QPersistentModelIndexC1ERKS_()};
     let ctysz: c_int = unsafe{QPersistentModelIndex_Class_Size()};
@@ -765,19 +765,19 @@ impl<'a> /*trait*/ QPersistentModelIndex_model<()> for () {
 
   // proto:  void QPersistentModelIndex::~QPersistentModelIndex();
 impl /*struct*/ QPersistentModelIndex {
-  pub fn Free<RetType, T: QPersistentModelIndex_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QPersistentModelIndex_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QPersistentModelIndex_Free<RetType> {
-  fn Free(self , rsthis: & QPersistentModelIndex) -> RetType;
+pub trait QPersistentModelIndex_free<RetType> {
+  fn free(self , rsthis: & QPersistentModelIndex) -> RetType;
 }
 
   // proto:  void QPersistentModelIndex::~QPersistentModelIndex();
-impl<'a> /*trait*/ QPersistentModelIndex_Free<()> for () {
-  fn Free(self , rsthis: & QPersistentModelIndex) -> () {
+impl<'a> /*trait*/ QPersistentModelIndex_free<()> for () {
+  fn free(self , rsthis: & QPersistentModelIndex) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QPersistentModelIndexD0Ev()};
      unsafe {_ZN21QPersistentModelIndexD0Ev(rsthis.qclsinst)};
@@ -786,8 +786,8 @@ impl<'a> /*trait*/ QPersistentModelIndex_Free<()> for () {
 }
 
   // proto:  void QPersistentModelIndex::QPersistentModelIndex(const QModelIndex & index);
-impl<'a> /*trait*/ QPersistentModelIndex_New for (&'a QModelIndex) {
-  fn New(self) -> QPersistentModelIndex {
+impl<'a> /*trait*/ QPersistentModelIndex_new for (&'a QModelIndex) {
+  fn new(self) -> QPersistentModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QPersistentModelIndexC1ERK11QModelIndex()};
     let ctysz: c_int = unsafe{QPersistentModelIndex_Class_Size()};
@@ -802,8 +802,8 @@ impl<'a> /*trait*/ QPersistentModelIndex_New for (&'a QModelIndex) {
 }
 
   // proto:  void QPersistentModelIndex::QPersistentModelIndex();
-impl<'a> /*trait*/ QPersistentModelIndex_New for () {
-  fn New(self) -> QPersistentModelIndex {
+impl<'a> /*trait*/ QPersistentModelIndex_new for () {
+  fn new(self) -> QPersistentModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QPersistentModelIndexC1Ev()};
     let ctysz: c_int = unsafe{QPersistentModelIndex_Class_Size()};
@@ -930,20 +930,20 @@ impl AsRef<QAbstractItemModel> for QAbstractTableModel {
 }
   // proto:  void QAbstractTableModel::QAbstractTableModel(const QAbstractTableModel & );
 impl /*struct*/ QAbstractTableModel {
-  pub fn New<T: QAbstractTableModel_New>(value: T) -> QAbstractTableModel {
-    let rsthis = value.New();
+  pub fn new<T: QAbstractTableModel_new>(value: T) -> QAbstractTableModel {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QAbstractTableModel_New {
-  fn New(self) -> QAbstractTableModel;
+pub trait QAbstractTableModel_new {
+  fn new(self) -> QAbstractTableModel;
 }
 
   // proto:  void QAbstractTableModel::QAbstractTableModel(const QAbstractTableModel & );
-impl<'a> /*trait*/ QAbstractTableModel_New for (&'a QAbstractTableModel) {
-  fn New(self) -> QAbstractTableModel {
+impl<'a> /*trait*/ QAbstractTableModel_new for (&'a QAbstractTableModel) {
+  fn new(self) -> QAbstractTableModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QAbstractTableModelC1ERKS_()};
     let ctysz: c_int = unsafe{QAbstractTableModel_Class_Size()};
@@ -958,8 +958,8 @@ impl<'a> /*trait*/ QAbstractTableModel_New for (&'a QAbstractTableModel) {
 }
 
   // proto:  void QAbstractTableModel::QAbstractTableModel(QObject * parent);
-impl<'a> /*trait*/ QAbstractTableModel_New for (&'a QObject) {
-  fn New(self) -> QAbstractTableModel {
+impl<'a> /*trait*/ QAbstractTableModel_new for (&'a QObject) {
+  fn new(self) -> QAbstractTableModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QAbstractTableModelC1EP7QObject()};
     let ctysz: c_int = unsafe{QAbstractTableModel_Class_Size()};
@@ -1029,19 +1029,19 @@ impl<'a> /*trait*/ QAbstractTableModel_sibling<QModelIndex> for (i32, i32, &'a Q
 
   // proto:  void QAbstractTableModel::~QAbstractTableModel();
 impl /*struct*/ QAbstractTableModel {
-  pub fn Free<RetType, T: QAbstractTableModel_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QAbstractTableModel_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QAbstractTableModel_Free<RetType> {
-  fn Free(self , rsthis: & QAbstractTableModel) -> RetType;
+pub trait QAbstractTableModel_free<RetType> {
+  fn free(self , rsthis: & QAbstractTableModel) -> RetType;
 }
 
   // proto:  void QAbstractTableModel::~QAbstractTableModel();
-impl<'a> /*trait*/ QAbstractTableModel_Free<()> for () {
-  fn Free(self , rsthis: & QAbstractTableModel) -> () {
+impl<'a> /*trait*/ QAbstractTableModel_free<()> for () {
+  fn free(self , rsthis: & QAbstractTableModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QAbstractTableModelD0Ev()};
      unsafe {_ZN19QAbstractTableModelD0Ev(rsthis.qclsinst)};
@@ -1116,19 +1116,19 @@ impl<'a> /*trait*/ QAbstractItemModel_removeColumns<i8> for (i32, i32, &'a QMode
 
   // proto:  void QAbstractItemModel::~QAbstractItemModel();
 impl /*struct*/ QAbstractItemModel {
-  pub fn Free<RetType, T: QAbstractItemModel_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QAbstractItemModel_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QAbstractItemModel_Free<RetType> {
-  fn Free(self , rsthis: & QAbstractItemModel) -> RetType;
+pub trait QAbstractItemModel_free<RetType> {
+  fn free(self , rsthis: & QAbstractItemModel) -> RetType;
 }
 
   // proto:  void QAbstractItemModel::~QAbstractItemModel();
-impl<'a> /*trait*/ QAbstractItemModel_Free<()> for () {
-  fn Free(self , rsthis: & QAbstractItemModel) -> () {
+impl<'a> /*trait*/ QAbstractItemModel_free<()> for () {
+  fn free(self , rsthis: & QAbstractItemModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QAbstractItemModelD0Ev()};
      unsafe {_ZN18QAbstractItemModelD0Ev(rsthis.qclsinst)};
@@ -1334,20 +1334,20 @@ impl<'a> /*trait*/ QAbstractItemModel_span<QSize> for (&'a QModelIndex) {
 
   // proto:  void QAbstractItemModel::QAbstractItemModel(QObject * parent);
 impl /*struct*/ QAbstractItemModel {
-  pub fn New<T: QAbstractItemModel_New>(value: T) -> QAbstractItemModel {
-    let rsthis = value.New();
+  pub fn new<T: QAbstractItemModel_new>(value: T) -> QAbstractItemModel {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QAbstractItemModel_New {
-  fn New(self) -> QAbstractItemModel;
+pub trait QAbstractItemModel_new {
+  fn new(self) -> QAbstractItemModel;
 }
 
   // proto:  void QAbstractItemModel::QAbstractItemModel(QObject * parent);
-impl<'a> /*trait*/ QAbstractItemModel_New for (&'a QObject) {
-  fn New(self) -> QAbstractItemModel {
+impl<'a> /*trait*/ QAbstractItemModel_new for (&'a QObject) {
+  fn new(self) -> QAbstractItemModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QAbstractItemModelC1EP7QObject()};
     let ctysz: c_int = unsafe{QAbstractItemModel_Class_Size()};
@@ -1414,8 +1414,8 @@ impl<'a> /*trait*/ QAbstractItemModel_insertRow<i8> for (i32, &'a QModelIndex) {
 }
 
   // proto:  void QAbstractItemModel::QAbstractItemModel(const QAbstractItemModel & );
-impl<'a> /*trait*/ QAbstractItemModel_New for (&'a QAbstractItemModel) {
-  fn New(self) -> QAbstractItemModel {
+impl<'a> /*trait*/ QAbstractItemModel_new for (&'a QAbstractItemModel) {
+  fn new(self) -> QAbstractItemModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QAbstractItemModelC1ERKS_()};
     let ctysz: c_int = unsafe{QAbstractItemModel_Class_Size()};
@@ -1975,20 +1975,20 @@ impl<'a> /*trait*/ QAbstractListModel_sibling<QModelIndex> for (i32, i32, &'a QM
 
   // proto:  void QAbstractListModel::QAbstractListModel(QObject * parent);
 impl /*struct*/ QAbstractListModel {
-  pub fn New<T: QAbstractListModel_New>(value: T) -> QAbstractListModel {
-    let rsthis = value.New();
+  pub fn new<T: QAbstractListModel_new>(value: T) -> QAbstractListModel {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QAbstractListModel_New {
-  fn New(self) -> QAbstractListModel;
+pub trait QAbstractListModel_new {
+  fn new(self) -> QAbstractListModel;
 }
 
   // proto:  void QAbstractListModel::QAbstractListModel(QObject * parent);
-impl<'a> /*trait*/ QAbstractListModel_New for (&'a QObject) {
-  fn New(self) -> QAbstractListModel {
+impl<'a> /*trait*/ QAbstractListModel_new for (&'a QObject) {
+  fn new(self) -> QAbstractListModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QAbstractListModelC1EP7QObject()};
     let ctysz: c_int = unsafe{QAbstractListModel_Class_Size()};
@@ -2025,8 +2025,8 @@ impl<'a> /*trait*/ QAbstractListModel_metaObject<()> for () {
 }
 
   // proto:  void QAbstractListModel::QAbstractListModel(const QAbstractListModel & );
-impl<'a> /*trait*/ QAbstractListModel_New for (&'a QAbstractListModel) {
-  fn New(self) -> QAbstractListModel {
+impl<'a> /*trait*/ QAbstractListModel_new for (&'a QAbstractListModel) {
+  fn new(self) -> QAbstractListModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QAbstractListModelC1ERKS_()};
     let ctysz: c_int = unsafe{QAbstractListModel_Class_Size()};
@@ -2069,19 +2069,19 @@ impl<'a> /*trait*/ QAbstractListModel_index<QModelIndex> for (i32, i32, &'a QMod
 
   // proto:  void QAbstractListModel::~QAbstractListModel();
 impl /*struct*/ QAbstractListModel {
-  pub fn Free<RetType, T: QAbstractListModel_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QAbstractListModel_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QAbstractListModel_Free<RetType> {
-  fn Free(self , rsthis: & QAbstractListModel) -> RetType;
+pub trait QAbstractListModel_free<RetType> {
+  fn free(self , rsthis: & QAbstractListModel) -> RetType;
 }
 
   // proto:  void QAbstractListModel::~QAbstractListModel();
-impl<'a> /*trait*/ QAbstractListModel_Free<()> for () {
-  fn Free(self , rsthis: & QAbstractListModel) -> () {
+impl<'a> /*trait*/ QAbstractListModel_free<()> for () {
+  fn free(self , rsthis: & QAbstractListModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QAbstractListModelD0Ev()};
      unsafe {_ZN18QAbstractListModelD0Ev(rsthis.qclsinst)};
@@ -2385,7 +2385,7 @@ extern fn QAbstractItemModel_headerDataChanged_signal_connect_cb_0(rsfptr:fn(i32
   let rsarg2 = arg2 as i32;
   rsfptr(rsarg0,rsarg1,rsarg2);
 }
-extern fn QAbstractItemModel_headerDataChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i32, i32, i32), arg0: c_int, arg1: c_int, arg2: c_int) {
+extern fn QAbstractItemModel_headerDataChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(i32, i32, i32), arg0: c_int, arg1: c_int, arg2: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -2396,7 +2396,8 @@ extern fn QAbstractItemModel_headerDataChanged_signal_connect_cb_box_0(rsfptr_ra
 impl /* trait */ QAbstractItemModel_headerDataChanged_signal_connect for fn(i32, i32, i32) {
   fn connect(self, sigthis: QAbstractItemModel_headerDataChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAbstractItemModel_headerDataChanged_signal_connect_cb_0 as *mut c_void;
@@ -2404,7 +2405,7 @@ impl /* trait */ QAbstractItemModel_headerDataChanged_signal_connect for fn(i32,
     unsafe {QAbstractItemModel_SlotProxy_connect__ZN18QAbstractItemModel17headerDataChangedEN2Qt11OrientationEii(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QAbstractItemModel_headerDataChanged_signal_connect for Box<fn(i32, i32, i32)> {
+impl /* trait */ QAbstractItemModel_headerDataChanged_signal_connect for Box<Fn(i32, i32, i32)> {
   fn connect(self, sigthis: QAbstractItemModel_headerDataChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

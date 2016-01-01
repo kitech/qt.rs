@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qsettings.h
 // dst-file: /src/core/qsettings.rs
 //
@@ -129,20 +129,20 @@ impl AsRef<QObject> for QSettings {
 }
   // proto:  void QSettings::QSettings(QObject * parent);
 impl /*struct*/ QSettings {
-  pub fn New<T: QSettings_New>(value: T) -> QSettings {
-    let rsthis = value.New();
+  pub fn new<T: QSettings_new>(value: T) -> QSettings {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QSettings_New {
-  fn New(self) -> QSettings;
+pub trait QSettings_new {
+  fn new(self) -> QSettings;
 }
 
   // proto:  void QSettings::QSettings(QObject * parent);
-impl<'a> /*trait*/ QSettings_New for (&'a QObject) {
-  fn New(self) -> QSettings {
+impl<'a> /*trait*/ QSettings_new for (&'a QObject) {
+  fn new(self) -> QSettings {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QSettingsC1EP7QObject()};
     let ctysz: c_int = unsafe{QSettings_Class_Size()};
@@ -320,8 +320,8 @@ impl<'a> /*trait*/ QSettings_setArrayIndex<()> for (i32) {
 }
 
   // proto:  void QSettings::QSettings(const QString & organization, const QString & application, QObject * parent);
-impl<'a> /*trait*/ QSettings_New for (&'a QString, &'a QString, &'a QObject) {
-  fn New(self) -> QSettings {
+impl<'a> /*trait*/ QSettings_new for (&'a QString, &'a QString, &'a QObject) {
+  fn new(self) -> QSettings {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QSettingsC1ERK7QStringS2_P7QObject()};
     let ctysz: c_int = unsafe{QSettings_Class_Size()};
@@ -419,19 +419,19 @@ impl<'a> /*trait*/ QSettings_clear<()> for () {
 
   // proto:  void QSettings::~QSettings();
 impl /*struct*/ QSettings {
-  pub fn Free<RetType, T: QSettings_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QSettings_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QSettings_Free<RetType> {
-  fn Free(self , rsthis: & QSettings) -> RetType;
+pub trait QSettings_free<RetType> {
+  fn free(self , rsthis: & QSettings) -> RetType;
 }
 
   // proto:  void QSettings::~QSettings();
-impl<'a> /*trait*/ QSettings_Free<()> for () {
-  fn Free(self , rsthis: & QSettings) -> () {
+impl<'a> /*trait*/ QSettings_free<()> for () {
+  fn free(self , rsthis: & QSettings) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QSettingsD0Ev()};
      unsafe {_ZN9QSettingsD0Ev(rsthis.qclsinst)};
@@ -742,8 +742,8 @@ impl<'a> /*trait*/ QSettings_childKeys<()> for () {
 }
 
   // proto:  void QSettings::QSettings(const QSettings & );
-impl<'a> /*trait*/ QSettings_New for (&'a QSettings) {
-  fn New(self) -> QSettings {
+impl<'a> /*trait*/ QSettings_new for (&'a QSettings) {
+  fn new(self) -> QSettings {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QSettingsC1ERKS_()};
     let ctysz: c_int = unsafe{QSettings_Class_Size()};

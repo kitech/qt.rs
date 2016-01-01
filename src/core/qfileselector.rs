@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qfileselector.h
 // dst-file: /src/core/qfileselector.rs
 //
@@ -148,20 +148,20 @@ impl<'a> /*trait*/ QFileSelector_select<QUrl> for (&'a QUrl) {
 
   // proto:  void QFileSelector::QFileSelector(QObject * parent);
 impl /*struct*/ QFileSelector {
-  pub fn New<T: QFileSelector_New>(value: T) -> QFileSelector {
-    let rsthis = value.New();
+  pub fn new<T: QFileSelector_new>(value: T) -> QFileSelector {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QFileSelector_New {
-  fn New(self) -> QFileSelector;
+pub trait QFileSelector_new {
+  fn new(self) -> QFileSelector;
 }
 
   // proto:  void QFileSelector::QFileSelector(QObject * parent);
-impl<'a> /*trait*/ QFileSelector_New for (&'a QObject) {
-  fn New(self) -> QFileSelector {
+impl<'a> /*trait*/ QFileSelector_new for (&'a QObject) {
+  fn new(self) -> QFileSelector {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QFileSelectorC1EP7QObject()};
     let ctysz: c_int = unsafe{QFileSelector_Class_Size()};
@@ -213,19 +213,19 @@ impl<'a> /*trait*/ QFileSelector_select<QString> for (&'a QString) {
 
   // proto:  void QFileSelector::~QFileSelector();
 impl /*struct*/ QFileSelector {
-  pub fn Free<RetType, T: QFileSelector_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QFileSelector_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QFileSelector_Free<RetType> {
-  fn Free(self , rsthis: & QFileSelector) -> RetType;
+pub trait QFileSelector_free<RetType> {
+  fn free(self , rsthis: & QFileSelector) -> RetType;
 }
 
   // proto:  void QFileSelector::~QFileSelector();
-impl<'a> /*trait*/ QFileSelector_Free<()> for () {
-  fn Free(self , rsthis: & QFileSelector) -> () {
+impl<'a> /*trait*/ QFileSelector_free<()> for () {
+  fn free(self , rsthis: & QFileSelector) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QFileSelectorD0Ev()};
      unsafe {_ZN13QFileSelectorD0Ev(rsthis.qclsinst)};

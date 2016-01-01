@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qdebug.h
 // dst-file: /src/core/qdebug.rs
 //
@@ -269,20 +269,20 @@ impl /*struct*/ QDebugStateSaver {
 }
   // proto:  void QDebugStateSaver::QDebugStateSaver(QDebug & dbg);
 impl /*struct*/ QDebugStateSaver {
-  pub fn New<T: QDebugStateSaver_New>(value: T) -> QDebugStateSaver {
-    let rsthis = value.New();
+  pub fn new<T: QDebugStateSaver_new>(value: T) -> QDebugStateSaver {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QDebugStateSaver_New {
-  fn New(self) -> QDebugStateSaver;
+pub trait QDebugStateSaver_new {
+  fn new(self) -> QDebugStateSaver;
 }
 
   // proto:  void QDebugStateSaver::QDebugStateSaver(QDebug & dbg);
-impl<'a> /*trait*/ QDebugStateSaver_New for (&'a QDebug) {
-  fn New(self) -> QDebugStateSaver {
+impl<'a> /*trait*/ QDebugStateSaver_new for (&'a QDebug) {
+  fn new(self) -> QDebugStateSaver {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QDebugStateSaverC1ER6QDebug()};
     let ctysz: c_int = unsafe{QDebugStateSaver_Class_Size()};
@@ -297,8 +297,8 @@ impl<'a> /*trait*/ QDebugStateSaver_New for (&'a QDebug) {
 }
 
   // proto:  void QDebugStateSaver::QDebugStateSaver(const QDebugStateSaver & );
-impl<'a> /*trait*/ QDebugStateSaver_New for (&'a QDebugStateSaver) {
-  fn New(self) -> QDebugStateSaver {
+impl<'a> /*trait*/ QDebugStateSaver_new for (&'a QDebugStateSaver) {
+  fn new(self) -> QDebugStateSaver {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QDebugStateSaverC1ERKS_()};
     let ctysz: c_int = unsafe{QDebugStateSaver_Class_Size()};
@@ -314,19 +314,19 @@ impl<'a> /*trait*/ QDebugStateSaver_New for (&'a QDebugStateSaver) {
 
   // proto:  void QDebugStateSaver::~QDebugStateSaver();
 impl /*struct*/ QDebugStateSaver {
-  pub fn Free<RetType, T: QDebugStateSaver_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QDebugStateSaver_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QDebugStateSaver_Free<RetType> {
-  fn Free(self , rsthis: & QDebugStateSaver) -> RetType;
+pub trait QDebugStateSaver_free<RetType> {
+  fn free(self , rsthis: & QDebugStateSaver) -> RetType;
 }
 
   // proto:  void QDebugStateSaver::~QDebugStateSaver();
-impl<'a> /*trait*/ QDebugStateSaver_Free<()> for () {
-  fn Free(self , rsthis: & QDebugStateSaver) -> () {
+impl<'a> /*trait*/ QDebugStateSaver_free<()> for () {
+  fn free(self , rsthis: & QDebugStateSaver) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QDebugStateSaverD0Ev()};
      unsafe {_ZN16QDebugStateSaverD0Ev(rsthis.qclsinst)};
@@ -365,19 +365,19 @@ impl<'a> /*trait*/ QDebug_noquote<QDebug> for () {
 
   // proto:  void QDebug::~QDebug();
 impl /*struct*/ QDebug {
-  pub fn Free<RetType, T: QDebug_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QDebug_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QDebug_Free<RetType> {
-  fn Free(self , rsthis: & QDebug) -> RetType;
+pub trait QDebug_free<RetType> {
+  fn free(self , rsthis: & QDebug) -> RetType;
 }
 
   // proto:  void QDebug::~QDebug();
-impl<'a> /*trait*/ QDebug_Free<()> for () {
-  fn Free(self , rsthis: & QDebug) -> () {
+impl<'a> /*trait*/ QDebug_free<()> for () {
+  fn free(self , rsthis: & QDebug) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QDebugD0Ev()};
      unsafe {_ZN6QDebugD0Ev(rsthis.qclsinst)};
@@ -387,20 +387,20 @@ impl<'a> /*trait*/ QDebug_Free<()> for () {
 
   // proto:  void QDebug::QDebug(const QDebug & o);
 impl /*struct*/ QDebug {
-  pub fn New<T: QDebug_New>(value: T) -> QDebug {
-    let rsthis = value.New();
+  pub fn new<T: QDebug_new>(value: T) -> QDebug {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QDebug_New {
-  fn New(self) -> QDebug;
+pub trait QDebug_new {
+  fn new(self) -> QDebug;
 }
 
   // proto:  void QDebug::QDebug(const QDebug & o);
-impl<'a> /*trait*/ QDebug_New for (&'a QDebug) {
-  fn New(self) -> QDebug {
+impl<'a> /*trait*/ QDebug_new for (&'a QDebug) {
+  fn new(self) -> QDebug {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QDebugC1ERKS_()};
     let ctysz: c_int = unsafe{QDebug_Class_Size()};
@@ -439,8 +439,8 @@ impl<'a> /*trait*/ QDebug_space<QDebug> for () {
 }
 
   // proto:  void QDebug::QDebug(QtMsgType t);
-impl<'a> /*trait*/ QDebug_New for (i32) {
-  fn New(self) -> QDebug {
+impl<'a> /*trait*/ QDebug_new for (i32) {
+  fn new(self) -> QDebug {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QDebugC1E9QtMsgType()};
     let ctysz: c_int = unsafe{QDebug_Class_Size()};
@@ -526,8 +526,8 @@ impl<'a> /*trait*/ QDebug_setAutoInsertSpaces<()> for (i8) {
 }
 
   // proto:  void QDebug::QDebug(QString * string);
-impl<'a> /*trait*/ QDebug_New for (&'a QString) {
-  fn New(self) -> QDebug {
+impl<'a> /*trait*/ QDebug_new for (&'a QString) {
+  fn new(self) -> QDebug {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QDebugC1EP7QString()};
     let ctysz: c_int = unsafe{QDebug_Class_Size()};
@@ -612,8 +612,8 @@ impl<'a> /*trait*/ QDebug_autoInsertSpaces<i8> for () {
 }
 
   // proto:  void QDebug::QDebug(QIODevice * device);
-impl<'a> /*trait*/ QDebug_New for (&'a QIODevice) {
-  fn New(self) -> QDebug {
+impl<'a> /*trait*/ QDebug_new for (&'a QIODevice) {
+  fn new(self) -> QDebug {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QDebugC1EP9QIODevice()};
     let ctysz: c_int = unsafe{QDebug_Class_Size()};

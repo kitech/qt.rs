@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qobject.h
 // dst-file: /src/core/qobject.rs
 //
@@ -195,20 +195,20 @@ impl<'a> /*trait*/ QSignalBlocker_unblock<()> for () {
 
   // proto:  void QSignalBlocker::QSignalBlocker(QObject & o);
 impl /*struct*/ QSignalBlocker {
-  pub fn New<T: QSignalBlocker_New>(value: T) -> QSignalBlocker {
-    let rsthis = value.New();
+  pub fn new<T: QSignalBlocker_new>(value: T) -> QSignalBlocker {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QSignalBlocker_New {
-  fn New(self) -> QSignalBlocker;
+pub trait QSignalBlocker_new {
+  fn new(self) -> QSignalBlocker;
 }
 
   // proto:  void QSignalBlocker::QSignalBlocker(QObject & o);
-impl<'a> /*trait*/ QSignalBlocker_New for (&'a QObject) {
-  fn New(self) -> QSignalBlocker {
+impl<'a> /*trait*/ QSignalBlocker_new for (&'a QObject) {
+  fn new(self) -> QSignalBlocker {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QSignalBlockerC1ER7QObject()};
     let ctysz: c_int = unsafe{QSignalBlocker_Class_Size()};
@@ -223,8 +223,8 @@ impl<'a> /*trait*/ QSignalBlocker_New for (&'a QObject) {
 }
 
   // proto:  void QSignalBlocker::QSignalBlocker(const QSignalBlocker & );
-impl<'a> /*trait*/ QSignalBlocker_New for (&'a QSignalBlocker) {
-  fn New(self) -> QSignalBlocker {
+impl<'a> /*trait*/ QSignalBlocker_new for (&'a QSignalBlocker) {
+  fn new(self) -> QSignalBlocker {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QSignalBlockerC1ERKS_()};
     let ctysz: c_int = unsafe{QSignalBlocker_Class_Size()};
@@ -262,19 +262,19 @@ impl<'a> /*trait*/ QSignalBlocker_reblock<()> for () {
 
   // proto:  void QSignalBlocker::~QSignalBlocker();
 impl /*struct*/ QSignalBlocker {
-  pub fn Free<RetType, T: QSignalBlocker_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QSignalBlocker_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QSignalBlocker_Free<RetType> {
-  fn Free(self , rsthis: & QSignalBlocker) -> RetType;
+pub trait QSignalBlocker_free<RetType> {
+  fn free(self , rsthis: & QSignalBlocker) -> RetType;
 }
 
   // proto:  void QSignalBlocker::~QSignalBlocker();
-impl<'a> /*trait*/ QSignalBlocker_Free<()> for () {
-  fn Free(self , rsthis: & QSignalBlocker) -> () {
+impl<'a> /*trait*/ QSignalBlocker_free<()> for () {
+  fn free(self , rsthis: & QSignalBlocker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QSignalBlockerD0Ev()};
      unsafe {demth_ZN14QSignalBlockerD0Ev(rsthis.qclsinst)};
@@ -311,19 +311,19 @@ impl<'a> /*trait*/ QObjectData_dynamicMetaObject<()> for () {
 
   // proto:  void QObjectData::~QObjectData();
 impl /*struct*/ QObjectData {
-  pub fn Free<RetType, T: QObjectData_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QObjectData_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QObjectData_Free<RetType> {
-  fn Free(self , rsthis: & QObjectData) -> RetType;
+pub trait QObjectData_free<RetType> {
+  fn free(self , rsthis: & QObjectData) -> RetType;
 }
 
   // proto:  void QObjectData::~QObjectData();
-impl<'a> /*trait*/ QObjectData_Free<()> for () {
-  fn Free(self , rsthis: & QObjectData) -> () {
+impl<'a> /*trait*/ QObjectData_free<()> for () {
+  fn free(self , rsthis: & QObjectData) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QObjectDataD0Ev()};
      unsafe {_ZN11QObjectDataD0Ev(rsthis.qclsinst)};
@@ -338,19 +338,19 @@ impl /*struct*/ QObjectUserData {
 }
   // proto:  void QObjectUserData::~QObjectUserData();
 impl /*struct*/ QObjectUserData {
-  pub fn Free<RetType, T: QObjectUserData_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QObjectUserData_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QObjectUserData_Free<RetType> {
-  fn Free(self , rsthis: & QObjectUserData) -> RetType;
+pub trait QObjectUserData_free<RetType> {
+  fn free(self , rsthis: & QObjectUserData) -> RetType;
 }
 
   // proto:  void QObjectUserData::~QObjectUserData();
-impl<'a> /*trait*/ QObjectUserData_Free<()> for () {
-  fn Free(self , rsthis: & QObjectUserData) -> () {
+impl<'a> /*trait*/ QObjectUserData_free<()> for () {
+  fn free(self , rsthis: & QObjectUserData) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QObjectUserDataD0Ev()};
      unsafe {_ZN15QObjectUserDataD0Ev(rsthis.qclsinst)};
@@ -529,20 +529,20 @@ impl<'a> /*trait*/ QObject_setUserData<()> for (u32, &'a QObjectUserData) {
 
   // proto:  void QObject::QObject(const QObject & );
 impl /*struct*/ QObject {
-  pub fn New<T: QObject_New>(value: T) -> QObject {
-    let rsthis = value.New();
+  pub fn new<T: QObject_new>(value: T) -> QObject {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QObject_New {
-  fn New(self) -> QObject;
+pub trait QObject_new {
+  fn new(self) -> QObject;
 }
 
   // proto:  void QObject::QObject(const QObject & );
-impl<'a> /*trait*/ QObject_New for (&'a QObject) {
-  fn New(self) -> QObject {
+impl<'a> /*trait*/ QObject_new for (&'a QObject) {
+  fn new(self) -> QObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QObjectC1ERKS_()};
     let ctysz: c_int = unsafe{QObject_Class_Size()};
@@ -854,19 +854,19 @@ impl<'a> /*trait*/ QObject_deleteLater<()> for () {
 
   // proto:  void QObject::~QObject();
 impl /*struct*/ QObject {
-  pub fn Free<RetType, T: QObject_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QObject_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QObject_Free<RetType> {
-  fn Free(self , rsthis: & QObject) -> RetType;
+pub trait QObject_free<RetType> {
+  fn free(self , rsthis: & QObject) -> RetType;
 }
 
   // proto:  void QObject::~QObject();
-impl<'a> /*trait*/ QObject_Free<()> for () {
-  fn Free(self , rsthis: & QObject) -> () {
+impl<'a> /*trait*/ QObject_free<()> for () {
+  fn free(self , rsthis: & QObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QObjectD0Ev()};
      unsafe {_ZN7QObjectD0Ev(rsthis.qclsinst)};
@@ -1186,7 +1186,7 @@ extern fn QObject_destroyed_signal_connect_cb_0(rsfptr:fn(QObject), arg0: *mut c
   let rsarg0 = QObject::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QObject_destroyed_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QObject), arg0: *mut c_void) {
+extern fn QObject_destroyed_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QObject), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QObject::inheritFrom(arg0 as u64);
@@ -1195,7 +1195,8 @@ extern fn QObject_destroyed_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QObject),
 impl /* trait */ QObject_destroyed_signal_connect for fn(QObject) {
   fn connect(self, sigthis: QObject_destroyed_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QObject_destroyed_signal_connect_cb_0 as *mut c_void;
@@ -1203,7 +1204,7 @@ impl /* trait */ QObject_destroyed_signal_connect for fn(QObject) {
     unsafe {QObject_SlotProxy_connect__ZN7QObject9destroyedEPS_(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QObject_destroyed_signal_connect for Box<fn(QObject)> {
+impl /* trait */ QObject_destroyed_signal_connect for Box<Fn(QObject)> {
   fn connect(self, sigthis: QObject_destroyed_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

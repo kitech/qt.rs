@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qjsonobject.h
 // dst-file: /src/core/qjsonobject.rs
 //
@@ -145,19 +145,19 @@ impl<'a> /*trait*/ QJsonObject_remove<()> for (&'a QString) {
 
   // proto:  void QJsonObject::~QJsonObject();
 impl /*struct*/ QJsonObject {
-  pub fn Free<RetType, T: QJsonObject_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QJsonObject_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QJsonObject_Free<RetType> {
-  fn Free(self , rsthis: & QJsonObject) -> RetType;
+pub trait QJsonObject_free<RetType> {
+  fn free(self , rsthis: & QJsonObject) -> RetType;
 }
 
   // proto:  void QJsonObject::~QJsonObject();
-impl<'a> /*trait*/ QJsonObject_Free<()> for () {
-  fn Free(self , rsthis: & QJsonObject) -> () {
+impl<'a> /*trait*/ QJsonObject_free<()> for () {
+  fn free(self , rsthis: & QJsonObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QJsonObjectD0Ev()};
      unsafe {_ZN11QJsonObjectD0Ev(rsthis.qclsinst)};
@@ -350,20 +350,20 @@ impl<'a> /*trait*/ QJsonObject_contains<i8> for (&'a QString) {
 
   // proto:  void QJsonObject::QJsonObject();
 impl /*struct*/ QJsonObject {
-  pub fn New<T: QJsonObject_New>(value: T) -> QJsonObject {
-    let rsthis = value.New();
+  pub fn new<T: QJsonObject_new>(value: T) -> QJsonObject {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QJsonObject_New {
-  fn New(self) -> QJsonObject;
+pub trait QJsonObject_new {
+  fn new(self) -> QJsonObject;
 }
 
   // proto:  void QJsonObject::QJsonObject();
-impl<'a> /*trait*/ QJsonObject_New for () {
-  fn New(self) -> QJsonObject {
+impl<'a> /*trait*/ QJsonObject_new for () {
+  fn new(self) -> QJsonObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QJsonObjectC1Ev()};
     let ctysz: c_int = unsafe{QJsonObject_Class_Size()};

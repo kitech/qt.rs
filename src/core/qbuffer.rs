@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qbuffer.h
 // dst-file: /src/core/qbuffer.rs
 //
@@ -143,19 +143,19 @@ impl<'a> /*trait*/ QBuffer_canReadLine<i8> for () {
 
   // proto:  void QBuffer::~QBuffer();
 impl /*struct*/ QBuffer {
-  pub fn Free<RetType, T: QBuffer_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QBuffer_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QBuffer_Free<RetType> {
-  fn Free(self , rsthis: & QBuffer) -> RetType;
+pub trait QBuffer_free<RetType> {
+  fn free(self , rsthis: & QBuffer) -> RetType;
 }
 
   // proto:  void QBuffer::~QBuffer();
-impl<'a> /*trait*/ QBuffer_Free<()> for () {
-  fn Free(self , rsthis: & QBuffer) -> () {
+impl<'a> /*trait*/ QBuffer_free<()> for () {
+  fn free(self , rsthis: & QBuffer) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QBufferD0Ev()};
      unsafe {_ZN7QBufferD0Ev(rsthis.qclsinst)};
@@ -212,20 +212,20 @@ impl<'a> /*trait*/ QBuffer_data<QByteArray> for () {
 
   // proto:  void QBuffer::QBuffer(QObject * parent);
 impl /*struct*/ QBuffer {
-  pub fn New<T: QBuffer_New>(value: T) -> QBuffer {
-    let rsthis = value.New();
+  pub fn new<T: QBuffer_new>(value: T) -> QBuffer {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QBuffer_New {
-  fn New(self) -> QBuffer;
+pub trait QBuffer_new {
+  fn new(self) -> QBuffer;
 }
 
   // proto:  void QBuffer::QBuffer(QObject * parent);
-impl<'a> /*trait*/ QBuffer_New for (&'a QObject) {
-  fn New(self) -> QBuffer {
+impl<'a> /*trait*/ QBuffer_new for (&'a QObject) {
+  fn new(self) -> QBuffer {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QBufferC1EP7QObject()};
     let ctysz: c_int = unsafe{QBuffer_Class_Size()};
@@ -310,8 +310,8 @@ impl<'a> /*trait*/ QBuffer_pos<i64> for () {
 }
 
   // proto:  void QBuffer::QBuffer(const QBuffer & );
-impl<'a> /*trait*/ QBuffer_New for (&'a QBuffer) {
-  fn New(self) -> QBuffer {
+impl<'a> /*trait*/ QBuffer_new for (&'a QBuffer) {
+  fn new(self) -> QBuffer {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QBufferC1ERKS_()};
     let ctysz: c_int = unsafe{QBuffer_Class_Size()};
@@ -393,8 +393,8 @@ impl<'a> /*trait*/ QBuffer_size<i64> for () {
 }
 
   // proto:  void QBuffer::QBuffer(QByteArray * buf, QObject * parent);
-impl<'a> /*trait*/ QBuffer_New for (&'a QByteArray, &'a QObject) {
-  fn New(self) -> QBuffer {
+impl<'a> /*trait*/ QBuffer_new for (&'a QByteArray, &'a QObject) {
+  fn new(self) -> QBuffer {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QBufferC1EP10QByteArrayP7QObject()};
     let ctysz: c_int = unsafe{QBuffer_Class_Size()};

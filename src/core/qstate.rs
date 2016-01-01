@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qstate.h
 // dst-file: /src/core/qstate.rs
 //
@@ -142,19 +142,19 @@ impl<'a> /*trait*/ QState_initialState<()> for () {
 
   // proto:  void QState::~QState();
 impl /*struct*/ QState {
-  pub fn Free<RetType, T: QState_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QState_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QState_Free<RetType> {
-  fn Free(self , rsthis: & QState) -> RetType;
+pub trait QState_free<RetType> {
+  fn free(self , rsthis: & QState) -> RetType;
 }
 
   // proto:  void QState::~QState();
-impl<'a> /*trait*/ QState_Free<()> for () {
-  fn Free(self , rsthis: & QState) -> () {
+impl<'a> /*trait*/ QState_free<()> for () {
+  fn free(self , rsthis: & QState) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QStateD0Ev()};
      unsafe {_ZN6QStateD0Ev(rsthis.qclsinst)};
@@ -189,20 +189,20 @@ impl<'a> /*trait*/ QState_assignProperty<()> for (&'a QObject, &'a  String, &'a 
 
   // proto:  void QState::QState(const QState & );
 impl /*struct*/ QState {
-  pub fn New<T: QState_New>(value: T) -> QState {
-    let rsthis = value.New();
+  pub fn new<T: QState_new>(value: T) -> QState {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QState_New {
-  fn New(self) -> QState;
+pub trait QState_new {
+  fn new(self) -> QState;
 }
 
   // proto:  void QState::QState(const QState & );
-impl<'a> /*trait*/ QState_New for (&'a QState) {
-  fn New(self) -> QState {
+impl<'a> /*trait*/ QState_new for (&'a QState) {
+  fn new(self) -> QState {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QStateC1ERKS_()};
     let ctysz: c_int = unsafe{QState_Class_Size()};

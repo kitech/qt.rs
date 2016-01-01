@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qbytearray.h
 // dst-file: /src/core/qbytearray.rs
 //
@@ -321,20 +321,20 @@ impl /*struct*/ QByteRef {
 }
   // proto:  void QByteRef::QByteRef(QByteArray & array, int idx);
 impl /*struct*/ QByteRef {
-  pub fn New<T: QByteRef_New>(value: T) -> QByteRef {
-    let rsthis = value.New();
+  pub fn new<T: QByteRef_new>(value: T) -> QByteRef {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QByteRef_New {
-  fn New(self) -> QByteRef;
+pub trait QByteRef_new {
+  fn new(self) -> QByteRef;
 }
 
   // proto:  void QByteRef::QByteRef(QByteArray & array, int idx);
-impl<'a> /*trait*/ QByteRef_New for (&'a QByteArray, i32) {
-  fn New(self) -> QByteRef {
+impl<'a> /*trait*/ QByteRef_new for (&'a QByteArray, i32) {
+  fn new(self) -> QByteRef {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QByteRefC1ER10QByteArrayi()};
     let ctysz: c_int = unsafe{QByteRef_Class_Size()};
@@ -593,19 +593,19 @@ impl<'a> /*trait*/ QByteArray_count<i32> for (&'a QByteArray) {
 
   // proto:  void QByteArray::~QByteArray();
 impl /*struct*/ QByteArray {
-  pub fn Free<RetType, T: QByteArray_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QByteArray_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QByteArray_Free<RetType> {
-  fn Free(self , rsthis: & QByteArray) -> RetType;
+pub trait QByteArray_free<RetType> {
+  fn free(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  void QByteArray::~QByteArray();
-impl<'a> /*trait*/ QByteArray_Free<()> for () {
-  fn Free(self , rsthis: & QByteArray) -> () {
+impl<'a> /*trait*/ QByteArray_free<()> for () {
+  fn free(self , rsthis: & QByteArray) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArrayD0Ev()};
      unsafe {demth_ZN10QByteArrayD0Ev(rsthis.qclsinst)};
@@ -639,20 +639,20 @@ impl<'a> /*trait*/ QByteArray_end<String> for () {
 
   // proto:  void QByteArray::QByteArray();
 impl /*struct*/ QByteArray {
-  pub fn New<T: QByteArray_New>(value: T) -> QByteArray {
-    let rsthis = value.New();
+  pub fn new<T: QByteArray_new>(value: T) -> QByteArray {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QByteArray_New {
-  fn New(self) -> QByteArray;
+pub trait QByteArray_new {
+  fn new(self) -> QByteArray;
 }
 
   // proto:  void QByteArray::QByteArray();
-impl<'a> /*trait*/ QByteArray_New for () {
-  fn New(self) -> QByteArray {
+impl<'a> /*trait*/ QByteArray_new for () {
+  fn new(self) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArrayC1Ev()};
     let ctysz: c_int = unsafe{QByteArray_Class_Size()};
@@ -1088,8 +1088,8 @@ impl<'a> /*trait*/ QByteArray_contains<i8> for (i8) {
 }
 
   // proto:  void QByteArray::QByteArray(int size, char c);
-impl<'a> /*trait*/ QByteArray_New for (i32, i8) {
-  fn New(self) -> QByteArray {
+impl<'a> /*trait*/ QByteArray_new for (i32, i8) {
+  fn new(self) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArrayC1Eic()};
     let ctysz: c_int = unsafe{QByteArray_Class_Size()};
@@ -1463,8 +1463,8 @@ impl<'a> /*trait*/ QByteArray_squeeze<()> for () {
 }
 
   // proto:  void QByteArray::QByteArray(const char * , int size);
-impl<'a> /*trait*/ QByteArray_New for (&'a  String, i32) {
-  fn New(self) -> QByteArray {
+impl<'a> /*trait*/ QByteArray_new for (&'a  String, i32) {
+  fn new(self) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArrayC1EPKci()};
     let ctysz: c_int = unsafe{QByteArray_Class_Size()};
@@ -2065,8 +2065,8 @@ impl<'a> /*trait*/ QByteArray_constData<String> for () {
 }
 
   // proto:  void QByteArray::QByteArray(const QByteArray & );
-impl<'a> /*trait*/ QByteArray_New for (&'a QByteArray) {
-  fn New(self) -> QByteArray {
+impl<'a> /*trait*/ QByteArray_new for (&'a QByteArray) {
+  fn new(self) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArrayC1ERKS_()};
     let ctysz: c_int = unsafe{QByteArray_Class_Size()};

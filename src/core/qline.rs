@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qline.h
 // dst-file: /src/core/qline.rs
 //
@@ -262,20 +262,20 @@ impl<'a> /*trait*/ QLine_x2<i32> for () {
 
   // proto:  void QLine::QLine(const QPoint & pt1, const QPoint & pt2);
 impl /*struct*/ QLine {
-  pub fn New<T: QLine_New>(value: T) -> QLine {
-    let rsthis = value.New();
+  pub fn new<T: QLine_new>(value: T) -> QLine {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QLine_New {
-  fn New(self) -> QLine;
+pub trait QLine_new {
+  fn new(self) -> QLine;
 }
 
   // proto:  void QLine::QLine(const QPoint & pt1, const QPoint & pt2);
-impl<'a> /*trait*/ QLine_New for (&'a QPoint, &'a QPoint) {
-  fn New(self) -> QLine {
+impl<'a> /*trait*/ QLine_new for (&'a QPoint, &'a QPoint) {
+  fn new(self) -> QLine {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QLineC1ERK6QPointS2_()};
     let ctysz: c_int = unsafe{QLine_Class_Size()};
@@ -477,8 +477,8 @@ impl<'a> /*trait*/ QLine_p2<QPoint> for () {
 }
 
   // proto:  void QLine::QLine(int x1, int y1, int x2, int y2);
-impl<'a> /*trait*/ QLine_New for (i32, i32, i32, i32) {
-  fn New(self) -> QLine {
+impl<'a> /*trait*/ QLine_new for (i32, i32, i32, i32) {
+  fn new(self) -> QLine {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QLineC1Eiiii()};
     let ctysz: c_int = unsafe{QLine_Class_Size()};
@@ -595,8 +595,8 @@ impl<'a> /*trait*/ QLine_x1<i32> for () {
 }
 
   // proto:  void QLine::QLine();
-impl<'a> /*trait*/ QLine_New for () {
-  fn New(self) -> QLine {
+impl<'a> /*trait*/ QLine_new for () {
+  fn new(self) -> QLine {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QLineC1Ev()};
     let ctysz: c_int = unsafe{QLine_Class_Size()};
@@ -782,20 +782,20 @@ impl<'a> /*trait*/ QLineF_angle<f64> for () {
 
   // proto:  void QLineF::QLineF(const QPointF & pt1, const QPointF & pt2);
 impl /*struct*/ QLineF {
-  pub fn New<T: QLineF_New>(value: T) -> QLineF {
-    let rsthis = value.New();
+  pub fn new<T: QLineF_new>(value: T) -> QLineF {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QLineF_New {
-  fn New(self) -> QLineF;
+pub trait QLineF_new {
+  fn new(self) -> QLineF;
 }
 
   // proto:  void QLineF::QLineF(const QPointF & pt1, const QPointF & pt2);
-impl<'a> /*trait*/ QLineF_New for (&'a QPointF, &'a QPointF) {
-  fn New(self) -> QLineF {
+impl<'a> /*trait*/ QLineF_new for (&'a QPointF, &'a QPointF) {
+  fn new(self) -> QLineF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QLineFC1ERK7QPointFS2_()};
     let ctysz: c_int = unsafe{QLineF_Class_Size()};
@@ -834,8 +834,8 @@ impl<'a> /*trait*/ QLineF_length<f64> for () {
 }
 
   // proto:  void QLineF::QLineF(const QLine & line);
-impl<'a> /*trait*/ QLineF_New for (&'a QLine) {
-  fn New(self) -> QLineF {
+impl<'a> /*trait*/ QLineF_new for (&'a QLine) {
+  fn new(self) -> QLineF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QLineFC1ERK5QLine()};
     let ctysz: c_int = unsafe{QLineF_Class_Size()};
@@ -930,8 +930,8 @@ impl<'a> /*trait*/ QLineF_dx<f64> for () {
 }
 
   // proto:  void QLineF::QLineF();
-impl<'a> /*trait*/ QLineF_New for () {
-  fn New(self) -> QLineF {
+impl<'a> /*trait*/ QLineF_new for () {
+  fn new(self) -> QLineF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QLineFC1Ev()};
     let ctysz: c_int = unsafe{QLineF_Class_Size()};
@@ -1089,8 +1089,8 @@ impl<'a> /*trait*/ QLineF_y2<f64> for () {
 }
 
   // proto:  void QLineF::QLineF(qreal x1, qreal y1, qreal x2, qreal y2);
-impl<'a> /*trait*/ QLineF_New for (f64, f64, f64, f64) {
-  fn New(self) -> QLineF {
+impl<'a> /*trait*/ QLineF_new for (f64, f64, f64, f64) {
+  fn new(self) -> QLineF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QLineFC1Edddd()};
     let ctysz: c_int = unsafe{QLineF_Class_Size()};

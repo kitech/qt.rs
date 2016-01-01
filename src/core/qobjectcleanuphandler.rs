@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qobjectcleanuphandler.h
 // dst-file: /src/core/qobjectcleanuphandler.rs
 //
@@ -119,19 +119,19 @@ impl<'a> /*trait*/ QObjectCleanupHandler_isEmpty<i8> for () {
 
   // proto:  void QObjectCleanupHandler::~QObjectCleanupHandler();
 impl /*struct*/ QObjectCleanupHandler {
-  pub fn Free<RetType, T: QObjectCleanupHandler_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QObjectCleanupHandler_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QObjectCleanupHandler_Free<RetType> {
-  fn Free(self , rsthis: & QObjectCleanupHandler) -> RetType;
+pub trait QObjectCleanupHandler_free<RetType> {
+  fn free(self , rsthis: & QObjectCleanupHandler) -> RetType;
 }
 
   // proto:  void QObjectCleanupHandler::~QObjectCleanupHandler();
-impl<'a> /*trait*/ QObjectCleanupHandler_Free<()> for () {
-  fn Free(self , rsthis: & QObjectCleanupHandler) -> () {
+impl<'a> /*trait*/ QObjectCleanupHandler_free<()> for () {
+  fn free(self , rsthis: & QObjectCleanupHandler) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QObjectCleanupHandlerD0Ev()};
      unsafe {_ZN21QObjectCleanupHandlerD0Ev(rsthis.qclsinst)};
@@ -211,20 +211,20 @@ impl<'a> /*trait*/ QObjectCleanupHandler_add<QObject> for (&'a QObject) {
 
   // proto:  void QObjectCleanupHandler::QObjectCleanupHandler();
 impl /*struct*/ QObjectCleanupHandler {
-  pub fn New<T: QObjectCleanupHandler_New>(value: T) -> QObjectCleanupHandler {
-    let rsthis = value.New();
+  pub fn new<T: QObjectCleanupHandler_new>(value: T) -> QObjectCleanupHandler {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QObjectCleanupHandler_New {
-  fn New(self) -> QObjectCleanupHandler;
+pub trait QObjectCleanupHandler_new {
+  fn new(self) -> QObjectCleanupHandler;
 }
 
   // proto:  void QObjectCleanupHandler::QObjectCleanupHandler();
-impl<'a> /*trait*/ QObjectCleanupHandler_New for () {
-  fn New(self) -> QObjectCleanupHandler {
+impl<'a> /*trait*/ QObjectCleanupHandler_new for () {
+  fn new(self) -> QObjectCleanupHandler {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QObjectCleanupHandlerC1Ev()};
     let ctysz: c_int = unsafe{QObjectCleanupHandler_Class_Size()};

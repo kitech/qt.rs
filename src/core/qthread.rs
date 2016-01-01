@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qthread.h
 // dst-file: /src/core/qthread.rs
 //
@@ -110,20 +110,20 @@ impl AsRef<QObject> for QThread {
 }
   // proto:  void QThread::QThread(QObject * parent);
 impl /*struct*/ QThread {
-  pub fn New<T: QThread_New>(value: T) -> QThread {
-    let rsthis = value.New();
+  pub fn new<T: QThread_new>(value: T) -> QThread {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QThread_New {
-  fn New(self) -> QThread;
+pub trait QThread_new {
+  fn new(self) -> QThread;
 }
 
   // proto:  void QThread::QThread(QObject * parent);
-impl<'a> /*trait*/ QThread_New for (&'a QObject) {
-  fn New(self) -> QThread {
+impl<'a> /*trait*/ QThread_new for (&'a QObject) {
+  fn new(self) -> QThread {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QThreadC1EP7QObject()};
     let ctysz: c_int = unsafe{QThread_Class_Size()};
@@ -574,19 +574,19 @@ impl<'a> /*trait*/ QThread_terminate<()> for () {
 
   // proto:  void QThread::~QThread();
 impl /*struct*/ QThread {
-  pub fn Free<RetType, T: QThread_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QThread_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QThread_Free<RetType> {
-  fn Free(self , rsthis: & QThread) -> RetType;
+pub trait QThread_free<RetType> {
+  fn free(self , rsthis: & QThread) -> RetType;
 }
 
   // proto:  void QThread::~QThread();
-impl<'a> /*trait*/ QThread_Free<()> for () {
-  fn Free(self , rsthis: & QThread) -> () {
+impl<'a> /*trait*/ QThread_free<()> for () {
+  fn free(self , rsthis: & QThread) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QThreadD0Ev()};
      unsafe {_ZN7QThreadD0Ev(rsthis.qclsinst)};

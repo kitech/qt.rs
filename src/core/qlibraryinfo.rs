@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qlibraryinfo.h
 // dst-file: /src/core/qlibraryinfo.rs
 //
@@ -63,20 +63,20 @@ impl /*struct*/ QLibraryInfo {
 }
   // proto:  void QLibraryInfo::QLibraryInfo();
 impl /*struct*/ QLibraryInfo {
-  pub fn New<T: QLibraryInfo_New>(value: T) -> QLibraryInfo {
-    let rsthis = value.New();
+  pub fn new<T: QLibraryInfo_new>(value: T) -> QLibraryInfo {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QLibraryInfo_New {
-  fn New(self) -> QLibraryInfo;
+pub trait QLibraryInfo_new {
+  fn new(self) -> QLibraryInfo;
 }
 
   // proto:  void QLibraryInfo::QLibraryInfo();
-impl<'a> /*trait*/ QLibraryInfo_New for () {
-  fn New(self) -> QLibraryInfo {
+impl<'a> /*trait*/ QLibraryInfo_new for () {
+  fn new(self) -> QLibraryInfo {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QLibraryInfoC1Ev()};
     let ctysz: c_int = unsafe{QLibraryInfo_Class_Size()};

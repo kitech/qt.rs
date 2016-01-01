@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qvariantanimation.h
 // dst-file: /src/core/qvariantanimation.rs
 //
@@ -219,19 +219,19 @@ impl<'a> /*trait*/ QVariantAnimation_keyValueAt<QVariant> for (f64) {
 
   // proto:  void QVariantAnimation::~QVariantAnimation();
 impl /*struct*/ QVariantAnimation {
-  pub fn Free<RetType, T: QVariantAnimation_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QVariantAnimation_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QVariantAnimation_Free<RetType> {
-  fn Free(self , rsthis: & QVariantAnimation) -> RetType;
+pub trait QVariantAnimation_free<RetType> {
+  fn free(self , rsthis: & QVariantAnimation) -> RetType;
 }
 
   // proto:  void QVariantAnimation::~QVariantAnimation();
-impl<'a> /*trait*/ QVariantAnimation_Free<()> for () {
-  fn Free(self , rsthis: & QVariantAnimation) -> () {
+impl<'a> /*trait*/ QVariantAnimation_free<()> for () {
+  fn free(self , rsthis: & QVariantAnimation) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QVariantAnimationD0Ev()};
      unsafe {_ZN17QVariantAnimationD0Ev(rsthis.qclsinst)};
@@ -426,20 +426,20 @@ impl<'a> /*trait*/ QVariantAnimation_easingCurve<QEasingCurve> for () {
 
   // proto:  void QVariantAnimation::QVariantAnimation(const QVariantAnimation & );
 impl /*struct*/ QVariantAnimation {
-  pub fn New<T: QVariantAnimation_New>(value: T) -> QVariantAnimation {
-    let rsthis = value.New();
+  pub fn new<T: QVariantAnimation_new>(value: T) -> QVariantAnimation {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QVariantAnimation_New {
-  fn New(self) -> QVariantAnimation;
+pub trait QVariantAnimation_new {
+  fn new(self) -> QVariantAnimation;
 }
 
   // proto:  void QVariantAnimation::QVariantAnimation(const QVariantAnimation & );
-impl<'a> /*trait*/ QVariantAnimation_New for (&'a QVariantAnimation) {
-  fn New(self) -> QVariantAnimation {
+impl<'a> /*trait*/ QVariantAnimation_new for (&'a QVariantAnimation) {
+  fn new(self) -> QVariantAnimation {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QVariantAnimationC1ERKS_()};
     let ctysz: c_int = unsafe{QVariantAnimation_Class_Size()};
@@ -454,8 +454,8 @@ impl<'a> /*trait*/ QVariantAnimation_New for (&'a QVariantAnimation) {
 }
 
   // proto:  void QVariantAnimation::QVariantAnimation(QObject * parent);
-impl<'a> /*trait*/ QVariantAnimation_New for (&'a QObject) {
-  fn New(self) -> QVariantAnimation {
+impl<'a> /*trait*/ QVariantAnimation_new for (&'a QObject) {
+  fn new(self) -> QVariantAnimation {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QVariantAnimationC1EP7QObject()};
     let ctysz: c_int = unsafe{QVariantAnimation_Class_Size()};
@@ -514,7 +514,7 @@ extern fn QVariantAnimation_valueChanged_signal_connect_cb_0(rsfptr:fn(QVariant)
   let rsarg0 = QVariant::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QVariantAnimation_valueChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QVariant), arg0: *mut c_void) {
+extern fn QVariantAnimation_valueChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QVariant), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QVariant::inheritFrom(arg0 as u64);
@@ -523,7 +523,8 @@ extern fn QVariantAnimation_valueChanged_signal_connect_cb_box_0(rsfptr_raw:*mut
 impl /* trait */ QVariantAnimation_valueChanged_signal_connect for fn(QVariant) {
   fn connect(self, sigthis: QVariantAnimation_valueChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QVariantAnimation_valueChanged_signal_connect_cb_0 as *mut c_void;
@@ -531,7 +532,7 @@ impl /* trait */ QVariantAnimation_valueChanged_signal_connect for fn(QVariant) 
     unsafe {QVariantAnimation_SlotProxy_connect__ZN17QVariantAnimation12valueChangedERK8QVariant(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QVariantAnimation_valueChanged_signal_connect for Box<fn(QVariant)> {
+impl /* trait */ QVariantAnimation_valueChanged_signal_connect for Box<Fn(QVariant)> {
   fn connect(self, sigthis: QVariantAnimation_valueChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qbitarray.h
 // dst-file: /src/core/qbitarray.rs
 //
@@ -105,20 +105,20 @@ impl /*struct*/ QBitRef {
 }
   // proto:  void QBitRef::QBitRef(QBitArray & array, int idx);
 impl /*struct*/ QBitRef {
-  pub fn New<T: QBitRef_New>(value: T) -> QBitRef {
-    let rsthis = value.New();
+  pub fn new<T: QBitRef_new>(value: T) -> QBitRef {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QBitRef_New {
-  fn New(self) -> QBitRef;
+pub trait QBitRef_new {
+  fn new(self) -> QBitRef;
 }
 
   // proto:  void QBitRef::QBitRef(QBitArray & array, int idx);
-impl<'a> /*trait*/ QBitRef_New for (&'a QBitArray, i32) {
-  fn New(self) -> QBitRef {
+impl<'a> /*trait*/ QBitRef_new for (&'a QBitArray, i32) {
+  fn new(self) -> QBitRef {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QBitRefC1ER9QBitArrayi()};
     let ctysz: c_int = unsafe{QBitRef_Class_Size()};
@@ -140,20 +140,20 @@ impl /*struct*/ QBitArray {
 }
   // proto:  void QBitArray::QBitArray(int size, bool val);
 impl /*struct*/ QBitArray {
-  pub fn New<T: QBitArray_New>(value: T) -> QBitArray {
-    let rsthis = value.New();
+  pub fn new<T: QBitArray_new>(value: T) -> QBitArray {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QBitArray_New {
-  fn New(self) -> QBitArray;
+pub trait QBitArray_new {
+  fn new(self) -> QBitArray;
 }
 
   // proto:  void QBitArray::QBitArray(int size, bool val);
-impl<'a> /*trait*/ QBitArray_New for (i32, i8) {
-  fn New(self) -> QBitArray {
+impl<'a> /*trait*/ QBitArray_new for (i32, i8) {
+  fn new(self) -> QBitArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QBitArrayC1Eib()};
     let ctysz: c_int = unsafe{QBitArray_Class_Size()};
@@ -318,8 +318,8 @@ impl<'a> /*trait*/ QBitArray_detach<()> for () {
 }
 
   // proto:  void QBitArray::QBitArray();
-impl<'a> /*trait*/ QBitArray_New for () {
-  fn New(self) -> QBitArray {
+impl<'a> /*trait*/ QBitArray_new for () {
+  fn new(self) -> QBitArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QBitArrayC1Ev()};
     let ctysz: c_int = unsafe{QBitArray_Class_Size()};
@@ -473,8 +473,8 @@ impl<'a> /*trait*/ QBitArray_toggleBit<i8> for (i32) {
 }
 
   // proto:  void QBitArray::QBitArray(const QBitArray & other);
-impl<'a> /*trait*/ QBitArray_New for (&'a QBitArray) {
-  fn New(self) -> QBitArray {
+impl<'a> /*trait*/ QBitArray_new for (&'a QBitArray) {
+  fn new(self) -> QBitArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QBitArrayC1ERKS_()};
     let ctysz: c_int = unsafe{QBitArray_Class_Size()};

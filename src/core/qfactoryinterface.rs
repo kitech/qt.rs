@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtCore/qfactoryinterface.h
 // dst-file: /src/core/qfactoryinterface.rs
 //
@@ -50,19 +50,19 @@ impl /*struct*/ QFactoryInterface {
 }
   // proto:  void QFactoryInterface::~QFactoryInterface();
 impl /*struct*/ QFactoryInterface {
-  pub fn Free<RetType, T: QFactoryInterface_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QFactoryInterface_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QFactoryInterface_Free<RetType> {
-  fn Free(self , rsthis: & QFactoryInterface) -> RetType;
+pub trait QFactoryInterface_free<RetType> {
+  fn free(self , rsthis: & QFactoryInterface) -> RetType;
 }
 
   // proto:  void QFactoryInterface::~QFactoryInterface();
-impl<'a> /*trait*/ QFactoryInterface_Free<()> for () {
-  fn Free(self , rsthis: & QFactoryInterface) -> () {
+impl<'a> /*trait*/ QFactoryInterface_free<()> for () {
+  fn free(self , rsthis: & QFactoryInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QFactoryInterfaceD0Ev()};
      unsafe {_ZN17QFactoryInterfaceD0Ev(rsthis.qclsinst)};
