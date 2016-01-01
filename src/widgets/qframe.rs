@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qframe.h
 // dst-file: /src/widgets/qframe.rs
 //
@@ -205,20 +205,20 @@ impl<'a> /*trait*/ QFrame_sizeHint<QSize> for () {
 
   // proto:  void QFrame::QFrame(const QFrame & );
 impl /*struct*/ QFrame {
-  pub fn New<T: QFrame_New>(value: T) -> QFrame {
-    let rsthis = value.New();
+  pub fn new<T: QFrame_new>(value: T) -> QFrame {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QFrame_New {
-  fn New(self) -> QFrame;
+pub trait QFrame_new {
+  fn new(self) -> QFrame;
 }
 
   // proto:  void QFrame::QFrame(const QFrame & );
-impl<'a> /*trait*/ QFrame_New for (&'a QFrame) {
-  fn New(self) -> QFrame {
+impl<'a> /*trait*/ QFrame_new for (&'a QFrame) {
+  fn new(self) -> QFrame {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QFrameC1ERKS_()};
     let ctysz: c_int = unsafe{QFrame_Class_Size()};
@@ -371,19 +371,19 @@ impl<'a> /*trait*/ QFrame_frameWidth<i32> for () {
 
   // proto:  void QFrame::~QFrame();
 impl /*struct*/ QFrame {
-  pub fn Free<RetType, T: QFrame_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QFrame_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QFrame_Free<RetType> {
-  fn Free(self , rsthis: & QFrame) -> RetType;
+pub trait QFrame_free<RetType> {
+  fn free(self , rsthis: & QFrame) -> RetType;
 }
 
   // proto:  void QFrame::~QFrame();
-impl<'a> /*trait*/ QFrame_Free<()> for () {
-  fn Free(self , rsthis: & QFrame) -> () {
+impl<'a> /*trait*/ QFrame_free<()> for () {
+  fn free(self , rsthis: & QFrame) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QFrameD0Ev()};
      unsafe {_ZN6QFrameD0Ev(rsthis.qclsinst)};

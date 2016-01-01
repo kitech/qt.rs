@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qstylepainter.h
 // dst-file: /src/widgets/qstylepainter.rs
 //
@@ -88,20 +88,20 @@ impl AsRef<QPainter> for QStylePainter {
 }
   // proto:  void QStylePainter::QStylePainter(QWidget * w);
 impl /*struct*/ QStylePainter {
-  pub fn New<T: QStylePainter_New>(value: T) -> QStylePainter {
-    let rsthis = value.New();
+  pub fn new<T: QStylePainter_new>(value: T) -> QStylePainter {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QStylePainter_New {
-  fn New(self) -> QStylePainter;
+pub trait QStylePainter_new {
+  fn new(self) -> QStylePainter;
 }
 
   // proto:  void QStylePainter::QStylePainter(QWidget * w);
-impl<'a> /*trait*/ QStylePainter_New for (&'a QWidget) {
-  fn New(self) -> QStylePainter {
+impl<'a> /*trait*/ QStylePainter_new for (&'a QWidget) {
+  fn new(self) -> QStylePainter {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStylePainterC1EP7QWidget()};
     let ctysz: c_int = unsafe{QStylePainter_Class_Size()};
@@ -116,8 +116,8 @@ impl<'a> /*trait*/ QStylePainter_New for (&'a QWidget) {
 }
 
   // proto:  void QStylePainter::QStylePainter(QPaintDevice * pd, QWidget * w);
-impl<'a> /*trait*/ QStylePainter_New for (&'a QPaintDevice, &'a QWidget) {
-  fn New(self) -> QStylePainter {
+impl<'a> /*trait*/ QStylePainter_new for (&'a QPaintDevice, &'a QWidget) {
+  fn new(self) -> QStylePainter {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStylePainterC1EP12QPaintDeviceP7QWidget()};
     let ctysz: c_int = unsafe{QStylePainter_Class_Size()};
@@ -133,8 +133,8 @@ impl<'a> /*trait*/ QStylePainter_New for (&'a QPaintDevice, &'a QWidget) {
 }
 
   // proto:  void QStylePainter::QStylePainter();
-impl<'a> /*trait*/ QStylePainter_New for () {
-  fn New(self) -> QStylePainter {
+impl<'a> /*trait*/ QStylePainter_new for () {
+  fn new(self) -> QStylePainter {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStylePainterC1Ev()};
     let ctysz: c_int = unsafe{QStylePainter_Class_Size()};
@@ -173,8 +173,8 @@ impl<'a> /*trait*/ QStylePainter_begin<i8> for (&'a QPaintDevice, &'a QWidget) {
 }
 
   // proto:  void QStylePainter::QStylePainter(const QStylePainter & );
-impl<'a> /*trait*/ QStylePainter_New for (&'a QStylePainter) {
-  fn New(self) -> QStylePainter {
+impl<'a> /*trait*/ QStylePainter_new for (&'a QStylePainter) {
+  fn new(self) -> QStylePainter {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStylePainterC1ERKS_()};
     let ctysz: c_int = unsafe{QStylePainter_Class_Size()};

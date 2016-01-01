@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qmainwindow.h
 // dst-file: /src/widgets/qmainwindow.rs
 //
@@ -383,20 +383,20 @@ impl<'a> /*trait*/ QMainWindow_removeDockWidget<()> for (&'a QDockWidget) {
 
   // proto:  void QMainWindow::QMainWindow(const QMainWindow & );
 impl /*struct*/ QMainWindow {
-  pub fn New<T: QMainWindow_New>(value: T) -> QMainWindow {
-    let rsthis = value.New();
+  pub fn new<T: QMainWindow_new>(value: T) -> QMainWindow {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QMainWindow_New {
-  fn New(self) -> QMainWindow;
+pub trait QMainWindow_new {
+  fn new(self) -> QMainWindow;
 }
 
   // proto:  void QMainWindow::QMainWindow(const QMainWindow & );
-impl<'a> /*trait*/ QMainWindow_New for (&'a QMainWindow) {
-  fn New(self) -> QMainWindow {
+impl<'a> /*trait*/ QMainWindow_new for (&'a QMainWindow) {
+  fn new(self) -> QMainWindow {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMainWindowC1ERKS_()};
     let ctysz: c_int = unsafe{QMainWindow_Class_Size()};
@@ -733,19 +733,19 @@ impl<'a> /*trait*/ QMainWindow_setStatusBar<()> for (&'a QStatusBar) {
 
   // proto:  void QMainWindow::~QMainWindow();
 impl /*struct*/ QMainWindow {
-  pub fn Free<RetType, T: QMainWindow_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QMainWindow_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QMainWindow_Free<RetType> {
-  fn Free(self , rsthis: & QMainWindow) -> RetType;
+pub trait QMainWindow_free<RetType> {
+  fn free(self , rsthis: & QMainWindow) -> RetType;
 }
 
   // proto:  void QMainWindow::~QMainWindow();
-impl<'a> /*trait*/ QMainWindow_Free<()> for () {
-  fn Free(self , rsthis: & QMainWindow) -> () {
+impl<'a> /*trait*/ QMainWindow_free<()> for () {
+  fn free(self , rsthis: & QMainWindow) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMainWindowD0Ev()};
      unsafe {_ZN11QMainWindowD0Ev(rsthis.qclsinst)};
@@ -1069,7 +1069,7 @@ extern fn QMainWindow_toolButtonStyleChanged_signal_connect_cb_0(rsfptr:fn(i32),
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QMainWindow_toolButtonStyleChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i32), arg0: c_int) {
+extern fn QMainWindow_toolButtonStyleChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -1078,7 +1078,8 @@ extern fn QMainWindow_toolButtonStyleChanged_signal_connect_cb_box_0(rsfptr_raw:
 impl /* trait */ QMainWindow_toolButtonStyleChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QMainWindow_toolButtonStyleChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QMainWindow_toolButtonStyleChanged_signal_connect_cb_0 as *mut c_void;
@@ -1086,7 +1087,7 @@ impl /* trait */ QMainWindow_toolButtonStyleChanged_signal_connect for fn(i32) {
     unsafe {QMainWindow_SlotProxy_connect__ZN11QMainWindow22toolButtonStyleChangedEN2Qt15ToolButtonStyleE(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QMainWindow_toolButtonStyleChanged_signal_connect for Box<fn(i32)> {
+impl /* trait */ QMainWindow_toolButtonStyleChanged_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QMainWindow_toolButtonStyleChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -1103,7 +1104,7 @@ extern fn QMainWindow_iconSizeChanged_signal_connect_cb_1(rsfptr:fn(QSize), arg0
   let rsarg0 = QSize::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QMainWindow_iconSizeChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(QSize), arg0: *mut c_void) {
+extern fn QMainWindow_iconSizeChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(QSize), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QSize::inheritFrom(arg0 as u64);
@@ -1112,7 +1113,8 @@ extern fn QMainWindow_iconSizeChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn
 impl /* trait */ QMainWindow_iconSizeChanged_signal_connect for fn(QSize) {
   fn connect(self, sigthis: QMainWindow_iconSizeChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QMainWindow_iconSizeChanged_signal_connect_cb_1 as *mut c_void;
@@ -1120,7 +1122,7 @@ impl /* trait */ QMainWindow_iconSizeChanged_signal_connect for fn(QSize) {
     unsafe {QMainWindow_SlotProxy_connect__ZN11QMainWindow15iconSizeChangedERK5QSize(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QMainWindow_iconSizeChanged_signal_connect for Box<fn(QSize)> {
+impl /* trait */ QMainWindow_iconSizeChanged_signal_connect for Box<Fn(QSize)> {
   fn connect(self, sigthis: QMainWindow_iconSizeChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

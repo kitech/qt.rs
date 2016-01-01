@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qmessagebox.h
 // dst-file: /src/widgets/qmessagebox.rs
 //
@@ -218,19 +218,19 @@ impl<'a> /*trait*/ QMessageBox_setButtonText<()> for (i32, &'a QString) {
 
   // proto:  void QMessageBox::~QMessageBox();
 impl /*struct*/ QMessageBox {
-  pub fn Free<RetType, T: QMessageBox_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QMessageBox_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QMessageBox_Free<RetType> {
-  fn Free(self , rsthis: & QMessageBox) -> RetType;
+pub trait QMessageBox_free<RetType> {
+  fn free(self , rsthis: & QMessageBox) -> RetType;
 }
 
   // proto:  void QMessageBox::~QMessageBox();
-impl<'a> /*trait*/ QMessageBox_Free<()> for () {
-  fn Free(self , rsthis: & QMessageBox) -> () {
+impl<'a> /*trait*/ QMessageBox_free<()> for () {
+  fn free(self , rsthis: & QMessageBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBoxD0Ev()};
      unsafe {_ZN11QMessageBoxD0Ev(rsthis.qclsinst)};
@@ -395,20 +395,20 @@ impl<'a> /*trait*/ QMessageBox_warning_s<i32> for (&'a QWidget, &'a QString, &'a
 
   // proto:  void QMessageBox::QMessageBox(const QMessageBox & );
 impl /*struct*/ QMessageBox {
-  pub fn New<T: QMessageBox_New>(value: T) -> QMessageBox {
-    let rsthis = value.New();
+  pub fn new<T: QMessageBox_new>(value: T) -> QMessageBox {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QMessageBox_New {
-  fn New(self) -> QMessageBox;
+pub trait QMessageBox_new {
+  fn new(self) -> QMessageBox;
 }
 
   // proto:  void QMessageBox::QMessageBox(const QMessageBox & );
-impl<'a> /*trait*/ QMessageBox_New for (&'a QMessageBox) {
-  fn New(self) -> QMessageBox {
+impl<'a> /*trait*/ QMessageBox_new for (&'a QMessageBox) {
+  fn new(self) -> QMessageBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBoxC1ERKS_()};
     let ctysz: c_int = unsafe{QMessageBox_Class_Size()};
@@ -626,8 +626,8 @@ impl<'a> /*trait*/ QMessageBox_setDetailedText<()> for (&'a QString) {
 }
 
   // proto:  void QMessageBox::QMessageBox(QWidget * parent);
-impl<'a> /*trait*/ QMessageBox_New for (&'a QWidget) {
-  fn New(self) -> QMessageBox {
+impl<'a> /*trait*/ QMessageBox_new for (&'a QWidget) {
+  fn new(self) -> QMessageBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBoxC1EP7QWidget()};
     let ctysz: c_int = unsafe{QMessageBox_Class_Size()};
@@ -1005,7 +1005,7 @@ extern fn QMessageBox_buttonClicked_signal_connect_cb_0(rsfptr:fn(QAbstractButto
   let rsarg0 = QAbstractButton::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QMessageBox_buttonClicked_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QAbstractButton), arg0: *mut c_void) {
+extern fn QMessageBox_buttonClicked_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QAbstractButton), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QAbstractButton::inheritFrom(arg0 as u64);
@@ -1014,7 +1014,8 @@ extern fn QMessageBox_buttonClicked_signal_connect_cb_box_0(rsfptr_raw:*mut fn(Q
 impl /* trait */ QMessageBox_buttonClicked_signal_connect for fn(QAbstractButton) {
   fn connect(self, sigthis: QMessageBox_buttonClicked_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QMessageBox_buttonClicked_signal_connect_cb_0 as *mut c_void;
@@ -1022,7 +1023,7 @@ impl /* trait */ QMessageBox_buttonClicked_signal_connect for fn(QAbstractButton
     unsafe {QMessageBox_SlotProxy_connect__ZN11QMessageBox13buttonClickedEP15QAbstractButton(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QMessageBox_buttonClicked_signal_connect for Box<fn(QAbstractButton)> {
+impl /* trait */ QMessageBox_buttonClicked_signal_connect for Box<Fn(QAbstractButton)> {
   fn connect(self, sigthis: QMessageBox_buttonClicked_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

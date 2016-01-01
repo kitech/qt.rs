@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qtoolbutton.h
 // dst-file: /src/widgets/qtoolbutton.rs
 //
@@ -211,19 +211,19 @@ impl<'a> /*trait*/ QToolButton_minimumSizeHint<QSize> for () {
 
   // proto:  void QToolButton::~QToolButton();
 impl /*struct*/ QToolButton {
-  pub fn Free<RetType, T: QToolButton_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QToolButton_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QToolButton_Free<RetType> {
-  fn Free(self , rsthis: & QToolButton) -> RetType;
+pub trait QToolButton_free<RetType> {
+  fn free(self , rsthis: & QToolButton) -> RetType;
 }
 
   // proto:  void QToolButton::~QToolButton();
-impl<'a> /*trait*/ QToolButton_Free<()> for () {
-  fn Free(self , rsthis: & QToolButton) -> () {
+impl<'a> /*trait*/ QToolButton_free<()> for () {
+  fn free(self , rsthis: & QToolButton) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QToolButtonD0Ev()};
      unsafe {_ZN11QToolButtonD0Ev(rsthis.qclsinst)};
@@ -279,20 +279,20 @@ impl<'a> /*trait*/ QToolButton_sizeHint<QSize> for () {
 
   // proto:  void QToolButton::QToolButton(const QToolButton & );
 impl /*struct*/ QToolButton {
-  pub fn New<T: QToolButton_New>(value: T) -> QToolButton {
-    let rsthis = value.New();
+  pub fn new<T: QToolButton_new>(value: T) -> QToolButton {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QToolButton_New {
-  fn New(self) -> QToolButton;
+pub trait QToolButton_new {
+  fn new(self) -> QToolButton;
 }
 
   // proto:  void QToolButton::QToolButton(const QToolButton & );
-impl<'a> /*trait*/ QToolButton_New for (&'a QToolButton) {
-  fn New(self) -> QToolButton {
+impl<'a> /*trait*/ QToolButton_new for (&'a QToolButton) {
+  fn new(self) -> QToolButton {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QToolButtonC1ERKS_()};
     let ctysz: c_int = unsafe{QToolButton_Class_Size()};
@@ -377,8 +377,8 @@ impl<'a> /*trait*/ QToolButton_setMenu<()> for (&'a QMenu) {
 }
 
   // proto:  void QToolButton::QToolButton(QWidget * parent);
-impl<'a> /*trait*/ QToolButton_New for (&'a QWidget) {
-  fn New(self) -> QToolButton {
+impl<'a> /*trait*/ QToolButton_new for (&'a QWidget) {
+  fn new(self) -> QToolButton {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QToolButtonC1EP7QWidget()};
     let ctysz: c_int = unsafe{QToolButton_Class_Size()};
@@ -437,7 +437,7 @@ extern fn QToolButton_triggered_signal_connect_cb_0(rsfptr:fn(QAction), arg0: *m
   let rsarg0 = QAction::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QToolButton_triggered_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QAction), arg0: *mut c_void) {
+extern fn QToolButton_triggered_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QAction), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QAction::inheritFrom(arg0 as u64);
@@ -446,7 +446,8 @@ extern fn QToolButton_triggered_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QActi
 impl /* trait */ QToolButton_triggered_signal_connect for fn(QAction) {
   fn connect(self, sigthis: QToolButton_triggered_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QToolButton_triggered_signal_connect_cb_0 as *mut c_void;
@@ -454,7 +455,7 @@ impl /* trait */ QToolButton_triggered_signal_connect for fn(QAction) {
     unsafe {QToolButton_SlotProxy_connect__ZN11QToolButton9triggeredEP7QAction(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QToolButton_triggered_signal_connect for Box<fn(QAction)> {
+impl /* trait */ QToolButton_triggered_signal_connect for Box<Fn(QAction)> {
   fn connect(self, sigthis: QToolButton_triggered_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

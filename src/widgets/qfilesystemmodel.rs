@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qfilesystemmodel.h
 // dst-file: /src/widgets/qfilesystemmodel.rs
 //
@@ -235,19 +235,19 @@ impl<'a> /*trait*/ QFileSystemModel_mimeTypes<()> for () {
 
   // proto:  void QFileSystemModel::~QFileSystemModel();
 impl /*struct*/ QFileSystemModel {
-  pub fn Free<RetType, T: QFileSystemModel_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QFileSystemModel_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_Free<RetType> {
-  fn Free(self , rsthis: & QFileSystemModel) -> RetType;
+pub trait QFileSystemModel_free<RetType> {
+  fn free(self , rsthis: & QFileSystemModel) -> RetType;
 }
 
   // proto:  void QFileSystemModel::~QFileSystemModel();
-impl<'a> /*trait*/ QFileSystemModel_Free<()> for () {
-  fn Free(self , rsthis: & QFileSystemModel) -> () {
+impl<'a> /*trait*/ QFileSystemModel_free<()> for () {
+  fn free(self , rsthis: & QFileSystemModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QFileSystemModelD0Ev()};
      unsafe {_ZN16QFileSystemModelD0Ev(rsthis.qclsinst)};
@@ -472,20 +472,20 @@ impl<'a> /*trait*/ QFileSystemModel_fetchMore<()> for (&'a QModelIndex) {
 
   // proto:  void QFileSystemModel::QFileSystemModel(const QFileSystemModel & );
 impl /*struct*/ QFileSystemModel {
-  pub fn New<T: QFileSystemModel_New>(value: T) -> QFileSystemModel {
-    let rsthis = value.New();
+  pub fn new<T: QFileSystemModel_new>(value: T) -> QFileSystemModel {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_New {
-  fn New(self) -> QFileSystemModel;
+pub trait QFileSystemModel_new {
+  fn new(self) -> QFileSystemModel;
 }
 
   // proto:  void QFileSystemModel::QFileSystemModel(const QFileSystemModel & );
-impl<'a> /*trait*/ QFileSystemModel_New for (&'a QFileSystemModel) {
-  fn New(self) -> QFileSystemModel {
+impl<'a> /*trait*/ QFileSystemModel_new for (&'a QFileSystemModel) {
+  fn new(self) -> QFileSystemModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QFileSystemModelC1ERKS_()};
     let ctysz: c_int = unsafe{QFileSystemModel_Class_Size()};
@@ -923,8 +923,8 @@ impl<'a> /*trait*/ QFileSystemModel_nameFilters<()> for () {
 }
 
   // proto:  void QFileSystemModel::QFileSystemModel(QObject * parent);
-impl<'a> /*trait*/ QFileSystemModel_New for (&'a QObject) {
-  fn New(self) -> QFileSystemModel {
+impl<'a> /*trait*/ QFileSystemModel_new for (&'a QObject) {
+  fn new(self) -> QFileSystemModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QFileSystemModelC1EP7QObject()};
     let ctysz: c_int = unsafe{QFileSystemModel_Class_Size()};
@@ -1235,7 +1235,7 @@ extern fn QFileSystemModel_directoryLoaded_signal_connect_cb_0(rsfptr:fn(QString
   let rsarg0 = QString::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QFileSystemModel_directoryLoaded_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QString), arg0: *mut c_void) {
+extern fn QFileSystemModel_directoryLoaded_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QString::inheritFrom(arg0 as u64);
@@ -1244,7 +1244,8 @@ extern fn QFileSystemModel_directoryLoaded_signal_connect_cb_box_0(rsfptr_raw:*m
 impl /* trait */ QFileSystemModel_directoryLoaded_signal_connect for fn(QString) {
   fn connect(self, sigthis: QFileSystemModel_directoryLoaded_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QFileSystemModel_directoryLoaded_signal_connect_cb_0 as *mut c_void;
@@ -1252,7 +1253,7 @@ impl /* trait */ QFileSystemModel_directoryLoaded_signal_connect for fn(QString)
     unsafe {QFileSystemModel_SlotProxy_connect__ZN16QFileSystemModel15directoryLoadedERK7QString(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QFileSystemModel_directoryLoaded_signal_connect for Box<fn(QString)> {
+impl /* trait */ QFileSystemModel_directoryLoaded_signal_connect for Box<Fn(QString)> {
   fn connect(self, sigthis: QFileSystemModel_directoryLoaded_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -1269,7 +1270,7 @@ extern fn QFileSystemModel_rootPathChanged_signal_connect_cb_1(rsfptr:fn(QString
   let rsarg0 = QString::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QFileSystemModel_rootPathChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(QString), arg0: *mut c_void) {
+extern fn QFileSystemModel_rootPathChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QString::inheritFrom(arg0 as u64);
@@ -1278,7 +1279,8 @@ extern fn QFileSystemModel_rootPathChanged_signal_connect_cb_box_1(rsfptr_raw:*m
 impl /* trait */ QFileSystemModel_rootPathChanged_signal_connect for fn(QString) {
   fn connect(self, sigthis: QFileSystemModel_rootPathChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QFileSystemModel_rootPathChanged_signal_connect_cb_1 as *mut c_void;
@@ -1286,7 +1288,7 @@ impl /* trait */ QFileSystemModel_rootPathChanged_signal_connect for fn(QString)
     unsafe {QFileSystemModel_SlotProxy_connect__ZN16QFileSystemModel15rootPathChangedERK7QString(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QFileSystemModel_rootPathChanged_signal_connect for Box<fn(QString)> {
+impl /* trait */ QFileSystemModel_rootPathChanged_signal_connect for Box<Fn(QString)> {
   fn connect(self, sigthis: QFileSystemModel_rootPathChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -1305,7 +1307,7 @@ extern fn QFileSystemModel_fileRenamed_signal_connect_cb_2(rsfptr:fn(QString, QS
   let rsarg2 = QString::inheritFrom(arg2 as u64);
   rsfptr(rsarg0,rsarg1,rsarg2);
 }
-extern fn QFileSystemModel_fileRenamed_signal_connect_cb_box_2(rsfptr_raw:*mut fn(QString, QString, QString), arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) {
+extern fn QFileSystemModel_fileRenamed_signal_connect_cb_box_2(rsfptr_raw:*mut Fn(QString, QString, QString), arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QString::inheritFrom(arg0 as u64);
@@ -1316,7 +1318,8 @@ extern fn QFileSystemModel_fileRenamed_signal_connect_cb_box_2(rsfptr_raw:*mut f
 impl /* trait */ QFileSystemModel_fileRenamed_signal_connect for fn(QString, QString, QString) {
   fn connect(self, sigthis: QFileSystemModel_fileRenamed_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QFileSystemModel_fileRenamed_signal_connect_cb_2 as *mut c_void;
@@ -1324,7 +1327,7 @@ impl /* trait */ QFileSystemModel_fileRenamed_signal_connect for fn(QString, QSt
     unsafe {QFileSystemModel_SlotProxy_connect__ZN16QFileSystemModel11fileRenamedERK7QStringS2_S2_(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QFileSystemModel_fileRenamed_signal_connect for Box<fn(QString, QString, QString)> {
+impl /* trait */ QFileSystemModel_fileRenamed_signal_connect for Box<Fn(QString, QString, QString)> {
   fn connect(self, sigthis: QFileSystemModel_fileRenamed_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

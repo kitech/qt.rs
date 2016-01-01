@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qsplitter.h
 // dst-file: /src/widgets/qsplitter.rs
 //
@@ -329,20 +329,20 @@ impl<'a> /*trait*/ QSplitter_addWidget<()> for (&'a QWidget) {
 
   // proto:  void QSplitter::QSplitter(const QSplitter & );
 impl /*struct*/ QSplitter {
-  pub fn New<T: QSplitter_New>(value: T) -> QSplitter {
-    let rsthis = value.New();
+  pub fn new<T: QSplitter_new>(value: T) -> QSplitter {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QSplitter_New {
-  fn New(self) -> QSplitter;
+pub trait QSplitter_new {
+  fn new(self) -> QSplitter;
 }
 
   // proto:  void QSplitter::QSplitter(const QSplitter & );
-impl<'a> /*trait*/ QSplitter_New for (&'a QSplitter) {
-  fn New(self) -> QSplitter {
+impl<'a> /*trait*/ QSplitter_new for (&'a QSplitter) {
+  fn new(self) -> QSplitter {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QSplitterC1ERKS_()};
     let ctysz: c_int = unsafe{QSplitter_Class_Size()};
@@ -357,8 +357,8 @@ impl<'a> /*trait*/ QSplitter_New for (&'a QSplitter) {
 }
 
   // proto:  void QSplitter::QSplitter(QWidget * parent);
-impl<'a> /*trait*/ QSplitter_New for (&'a QWidget) {
-  fn New(self) -> QSplitter {
+impl<'a> /*trait*/ QSplitter_new for (&'a QWidget) {
+  fn new(self) -> QSplitter {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QSplitterC1EP7QWidget()};
     let ctysz: c_int = unsafe{QSplitter_Class_Size()};
@@ -587,19 +587,19 @@ impl<'a> /*trait*/ QSplitter_restoreState<i8> for (&'a QByteArray) {
 
   // proto:  void QSplitter::~QSplitter();
 impl /*struct*/ QSplitter {
-  pub fn Free<RetType, T: QSplitter_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QSplitter_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QSplitter_Free<RetType> {
-  fn Free(self , rsthis: & QSplitter) -> RetType;
+pub trait QSplitter_free<RetType> {
+  fn free(self , rsthis: & QSplitter) -> RetType;
 }
 
   // proto:  void QSplitter::~QSplitter();
-impl<'a> /*trait*/ QSplitter_Free<()> for () {
-  fn Free(self , rsthis: & QSplitter) -> () {
+impl<'a> /*trait*/ QSplitter_free<()> for () {
+  fn free(self , rsthis: & QSplitter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QSplitterD0Ev()};
      unsafe {_ZN9QSplitterD0Ev(rsthis.qclsinst)};
@@ -792,19 +792,19 @@ impl AsRef<QWidget> for QSplitterHandle {
 }
   // proto:  void QSplitterHandle::~QSplitterHandle();
 impl /*struct*/ QSplitterHandle {
-  pub fn Free<RetType, T: QSplitterHandle_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QSplitterHandle_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QSplitterHandle_Free<RetType> {
-  fn Free(self , rsthis: & QSplitterHandle) -> RetType;
+pub trait QSplitterHandle_free<RetType> {
+  fn free(self , rsthis: & QSplitterHandle) -> RetType;
 }
 
   // proto:  void QSplitterHandle::~QSplitterHandle();
-impl<'a> /*trait*/ QSplitterHandle_Free<()> for () {
-  fn Free(self , rsthis: & QSplitterHandle) -> () {
+impl<'a> /*trait*/ QSplitterHandle_free<()> for () {
+  fn free(self , rsthis: & QSplitterHandle) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSplitterHandleD0Ev()};
      unsafe {_ZN15QSplitterHandleD0Ev(rsthis.qclsinst)};
@@ -814,20 +814,20 @@ impl<'a> /*trait*/ QSplitterHandle_Free<()> for () {
 
   // proto:  void QSplitterHandle::QSplitterHandle(const QSplitterHandle & );
 impl /*struct*/ QSplitterHandle {
-  pub fn New<T: QSplitterHandle_New>(value: T) -> QSplitterHandle {
-    let rsthis = value.New();
+  pub fn new<T: QSplitterHandle_new>(value: T) -> QSplitterHandle {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QSplitterHandle_New {
-  fn New(self) -> QSplitterHandle;
+pub trait QSplitterHandle_new {
+  fn new(self) -> QSplitterHandle;
 }
 
   // proto:  void QSplitterHandle::QSplitterHandle(const QSplitterHandle & );
-impl<'a> /*trait*/ QSplitterHandle_New for (&'a QSplitterHandle) {
-  fn New(self) -> QSplitterHandle {
+impl<'a> /*trait*/ QSplitterHandle_new for (&'a QSplitterHandle) {
+  fn new(self) -> QSplitterHandle {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSplitterHandleC1ERKS_()};
     let ctysz: c_int = unsafe{QSplitterHandle_Class_Size()};
@@ -957,7 +957,7 @@ extern fn QSplitter_splitterMoved_signal_connect_cb_0(rsfptr:fn(i32, i32), arg0:
   let rsarg1 = arg1 as i32;
   rsfptr(rsarg0,rsarg1);
 }
-extern fn QSplitter_splitterMoved_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i32, i32), arg0: c_int, arg1: c_int) {
+extern fn QSplitter_splitterMoved_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(i32, i32), arg0: c_int, arg1: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -967,7 +967,8 @@ extern fn QSplitter_splitterMoved_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i32
 impl /* trait */ QSplitter_splitterMoved_signal_connect for fn(i32, i32) {
   fn connect(self, sigthis: QSplitter_splitterMoved_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QSplitter_splitterMoved_signal_connect_cb_0 as *mut c_void;
@@ -975,7 +976,7 @@ impl /* trait */ QSplitter_splitterMoved_signal_connect for fn(i32, i32) {
     unsafe {QSplitter_SlotProxy_connect__ZN9QSplitter13splitterMovedEii(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QSplitter_splitterMoved_signal_connect for Box<fn(i32, i32)> {
+impl /* trait */ QSplitter_splitterMoved_signal_connect for Box<Fn(i32, i32)> {
   fn connect(self, sigthis: QSplitter_splitterMoved_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

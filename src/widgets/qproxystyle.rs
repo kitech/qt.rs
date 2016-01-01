@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qproxystyle.h
 // dst-file: /src/widgets/qproxystyle.rs
 //
@@ -131,20 +131,20 @@ impl<'a> /*trait*/ QProxyStyle_unpolish<()> for (&'a QWidget) {
 
   // proto:  void QProxyStyle::QProxyStyle(const QString & key);
 impl /*struct*/ QProxyStyle {
-  pub fn New<T: QProxyStyle_New>(value: T) -> QProxyStyle {
-    let rsthis = value.New();
+  pub fn new<T: QProxyStyle_new>(value: T) -> QProxyStyle {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QProxyStyle_New {
-  fn New(self) -> QProxyStyle;
+pub trait QProxyStyle_new {
+  fn new(self) -> QProxyStyle;
 }
 
   // proto:  void QProxyStyle::QProxyStyle(const QString & key);
-impl<'a> /*trait*/ QProxyStyle_New for (&'a QString) {
-  fn New(self) -> QProxyStyle {
+impl<'a> /*trait*/ QProxyStyle_new for (&'a QString) {
+  fn new(self) -> QProxyStyle {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QProxyStyleC1ERK7QString()};
     let ctysz: c_int = unsafe{QProxyStyle_Class_Size()};
@@ -267,19 +267,19 @@ impl<'a> /*trait*/ QProxyStyle_drawItemPixmap<()> for (&'a QPainter, &'a QRect, 
 
   // proto:  void QProxyStyle::~QProxyStyle();
 impl /*struct*/ QProxyStyle {
-  pub fn Free<RetType, T: QProxyStyle_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QProxyStyle_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QProxyStyle_Free<RetType> {
-  fn Free(self , rsthis: & QProxyStyle) -> RetType;
+pub trait QProxyStyle_free<RetType> {
+  fn free(self , rsthis: & QProxyStyle) -> RetType;
 }
 
   // proto:  void QProxyStyle::~QProxyStyle();
-impl<'a> /*trait*/ QProxyStyle_Free<()> for () {
-  fn Free(self , rsthis: & QProxyStyle) -> () {
+impl<'a> /*trait*/ QProxyStyle_free<()> for () {
+  fn free(self , rsthis: & QProxyStyle) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QProxyStyleD0Ev()};
      unsafe {_ZN11QProxyStyleD0Ev(rsthis.qclsinst)};
@@ -312,8 +312,8 @@ impl<'a> /*trait*/ QProxyStyle_baseStyle<QStyle> for () {
 }
 
   // proto:  void QProxyStyle::QProxyStyle(const QProxyStyle & );
-impl<'a> /*trait*/ QProxyStyle_New for (&'a QProxyStyle) {
-  fn New(self) -> QProxyStyle {
+impl<'a> /*trait*/ QProxyStyle_new for (&'a QProxyStyle) {
+  fn new(self) -> QProxyStyle {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QProxyStyleC1ERKS_()};
     let ctysz: c_int = unsafe{QProxyStyle_Class_Size()};
@@ -428,8 +428,8 @@ impl<'a> /*trait*/ QProxyStyle_metaObject<()> for () {
 }
 
   // proto:  void QProxyStyle::QProxyStyle(QStyle * style);
-impl<'a> /*trait*/ QProxyStyle_New for (&'a QStyle) {
-  fn New(self) -> QProxyStyle {
+impl<'a> /*trait*/ QProxyStyle_new for (&'a QStyle) {
+  fn new(self) -> QProxyStyle {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QProxyStyleC1EP6QStyle()};
     let ctysz: c_int = unsafe{QProxyStyle_Class_Size()};

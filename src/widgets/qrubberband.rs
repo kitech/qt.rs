@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qrubberband.h
 // dst-file: /src/widgets/qrubberband.rs
 //
@@ -150,19 +150,19 @@ impl<'a> /*trait*/ QRubberBand_move_<()> for (&'a QPoint) {
 
   // proto:  void QRubberBand::~QRubberBand();
 impl /*struct*/ QRubberBand {
-  pub fn Free<RetType, T: QRubberBand_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QRubberBand_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QRubberBand_Free<RetType> {
-  fn Free(self , rsthis: & QRubberBand) -> RetType;
+pub trait QRubberBand_free<RetType> {
+  fn free(self , rsthis: & QRubberBand) -> RetType;
 }
 
   // proto:  void QRubberBand::~QRubberBand();
-impl<'a> /*trait*/ QRubberBand_Free<()> for () {
-  fn Free(self , rsthis: & QRubberBand) -> () {
+impl<'a> /*trait*/ QRubberBand_free<()> for () {
+  fn free(self , rsthis: & QRubberBand) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QRubberBandD0Ev()};
      unsafe {_ZN11QRubberBandD0Ev(rsthis.qclsinst)};

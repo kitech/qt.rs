@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qgraphicsscene.h
 // dst-file: /src/widgets/qgraphicsscene.rs
 //
@@ -530,20 +530,20 @@ impl<'a> /*trait*/ QGraphicsScene_isSortCacheEnabled<i8> for () {
 
   // proto:  void QGraphicsScene::QGraphicsScene(const QRectF & sceneRect, QObject * parent);
 impl /*struct*/ QGraphicsScene {
-  pub fn New<T: QGraphicsScene_New>(value: T) -> QGraphicsScene {
-    let rsthis = value.New();
+  pub fn new<T: QGraphicsScene_new>(value: T) -> QGraphicsScene {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_New {
-  fn New(self) -> QGraphicsScene;
+pub trait QGraphicsScene_new {
+  fn new(self) -> QGraphicsScene;
 }
 
   // proto:  void QGraphicsScene::QGraphicsScene(const QRectF & sceneRect, QObject * parent);
-impl<'a> /*trait*/ QGraphicsScene_New for (&'a QRectF, &'a QObject) {
-  fn New(self) -> QGraphicsScene {
+impl<'a> /*trait*/ QGraphicsScene_new for (&'a QRectF, &'a QObject) {
+  fn new(self) -> QGraphicsScene {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsSceneC1ERK6QRectFP7QObject()};
     let ctysz: c_int = unsafe{QGraphicsScene_Class_Size()};
@@ -559,8 +559,8 @@ impl<'a> /*trait*/ QGraphicsScene_New for (&'a QRectF, &'a QObject) {
 }
 
   // proto:  void QGraphicsScene::QGraphicsScene(QObject * parent);
-impl<'a> /*trait*/ QGraphicsScene_New for (&'a QObject) {
-  fn New(self) -> QGraphicsScene {
+impl<'a> /*trait*/ QGraphicsScene_new for (&'a QObject) {
+  fn new(self) -> QGraphicsScene {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsSceneC1EP7QObject()};
     let ctysz: c_int = unsafe{QGraphicsScene_Class_Size()};
@@ -980,19 +980,19 @@ impl<'a> /*trait*/ QGraphicsScene_views<()> for () {
 
   // proto:  void QGraphicsScene::~QGraphicsScene();
 impl /*struct*/ QGraphicsScene {
-  pub fn Free<RetType, T: QGraphicsScene_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QGraphicsScene_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_Free<RetType> {
-  fn Free(self , rsthis: & QGraphicsScene) -> RetType;
+pub trait QGraphicsScene_free<RetType> {
+  fn free(self , rsthis: & QGraphicsScene) -> RetType;
 }
 
   // proto:  void QGraphicsScene::~QGraphicsScene();
-impl<'a> /*trait*/ QGraphicsScene_Free<()> for () {
-  fn Free(self , rsthis: & QGraphicsScene) -> () {
+impl<'a> /*trait*/ QGraphicsScene_free<()> for () {
+  fn free(self , rsthis: & QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsSceneD0Ev()};
      unsafe {_ZN14QGraphicsSceneD0Ev(rsthis.qclsinst)};
@@ -1135,8 +1135,8 @@ impl<'a> /*trait*/ QGraphicsScene_setMinimumRenderSize<()> for (f64) {
 }
 
   // proto:  void QGraphicsScene::QGraphicsScene(qreal x, qreal y, qreal width, qreal height, QObject * parent);
-impl<'a> /*trait*/ QGraphicsScene_New for (f64, f64, f64, f64, &'a QObject) {
-  fn New(self) -> QGraphicsScene {
+impl<'a> /*trait*/ QGraphicsScene_new for (f64, f64, f64, f64, &'a QObject) {
+  fn new(self) -> QGraphicsScene {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsSceneC1EddddP7QObject()};
     let ctysz: c_int = unsafe{QGraphicsScene_Class_Size()};
@@ -1308,8 +1308,8 @@ impl<'a> /*trait*/ QGraphicsScene_clearSelection<()> for () {
 }
 
   // proto:  void QGraphicsScene::QGraphicsScene(const QGraphicsScene & );
-impl<'a> /*trait*/ QGraphicsScene_New for (&'a QGraphicsScene) {
-  fn New(self) -> QGraphicsScene {
+impl<'a> /*trait*/ QGraphicsScene_new for (&'a QGraphicsScene) {
+  fn new(self) -> QGraphicsScene {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsSceneC1ERKS_()};
     let ctysz: c_int = unsafe{QGraphicsScene_Class_Size()};
@@ -1781,7 +1781,7 @@ extern fn QGraphicsScene_selectionChanged_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QGraphicsScene_selectionChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(), ) {
+extern fn QGraphicsScene_selectionChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   rsfptr();
@@ -1789,7 +1789,8 @@ extern fn QGraphicsScene_selectionChanged_signal_connect_cb_box_0(rsfptr_raw:*mu
 impl /* trait */ QGraphicsScene_selectionChanged_signal_connect for fn() {
   fn connect(self, sigthis: QGraphicsScene_selectionChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QGraphicsScene_selectionChanged_signal_connect_cb_0 as *mut c_void;
@@ -1797,7 +1798,7 @@ impl /* trait */ QGraphicsScene_selectionChanged_signal_connect for fn() {
     unsafe {QGraphicsScene_SlotProxy_connect__ZN14QGraphicsScene16selectionChangedEv(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QGraphicsScene_selectionChanged_signal_connect for Box<fn()> {
+impl /* trait */ QGraphicsScene_selectionChanged_signal_connect for Box<Fn()> {
   fn connect(self, sigthis: QGraphicsScene_selectionChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -1816,7 +1817,7 @@ extern fn QGraphicsScene_focusItemChanged_signal_connect_cb_1(rsfptr:fn(QGraphic
   let rsarg2 = arg2 as i32;
   rsfptr(rsarg0,rsarg1,rsarg2);
 }
-extern fn QGraphicsScene_focusItemChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(QGraphicsItem, QGraphicsItem, i32), arg0: *mut c_void, arg1: *mut c_void, arg2: c_int) {
+extern fn QGraphicsScene_focusItemChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(QGraphicsItem, QGraphicsItem, i32), arg0: *mut c_void, arg1: *mut c_void, arg2: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QGraphicsItem::inheritFrom(arg0 as u64);
@@ -1827,7 +1828,8 @@ extern fn QGraphicsScene_focusItemChanged_signal_connect_cb_box_1(rsfptr_raw:*mu
 impl /* trait */ QGraphicsScene_focusItemChanged_signal_connect for fn(QGraphicsItem, QGraphicsItem, i32) {
   fn connect(self, sigthis: QGraphicsScene_focusItemChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QGraphicsScene_focusItemChanged_signal_connect_cb_1 as *mut c_void;
@@ -1835,7 +1837,7 @@ impl /* trait */ QGraphicsScene_focusItemChanged_signal_connect for fn(QGraphics
     unsafe {QGraphicsScene_SlotProxy_connect__ZN14QGraphicsScene16focusItemChangedEP13QGraphicsItemS1_N2Qt11FocusReasonE(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QGraphicsScene_focusItemChanged_signal_connect for Box<fn(QGraphicsItem, QGraphicsItem, i32)> {
+impl /* trait */ QGraphicsScene_focusItemChanged_signal_connect for Box<Fn(QGraphicsItem, QGraphicsItem, i32)> {
   fn connect(self, sigthis: QGraphicsScene_focusItemChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -1852,7 +1854,7 @@ extern fn QGraphicsScene_sceneRectChanged_signal_connect_cb_2(rsfptr:fn(QRectF),
   let rsarg0 = QRectF::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QGraphicsScene_sceneRectChanged_signal_connect_cb_box_2(rsfptr_raw:*mut fn(QRectF), arg0: *mut c_void) {
+extern fn QGraphicsScene_sceneRectChanged_signal_connect_cb_box_2(rsfptr_raw:*mut Fn(QRectF), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QRectF::inheritFrom(arg0 as u64);
@@ -1861,7 +1863,8 @@ extern fn QGraphicsScene_sceneRectChanged_signal_connect_cb_box_2(rsfptr_raw:*mu
 impl /* trait */ QGraphicsScene_sceneRectChanged_signal_connect for fn(QRectF) {
   fn connect(self, sigthis: QGraphicsScene_sceneRectChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QGraphicsScene_sceneRectChanged_signal_connect_cb_2 as *mut c_void;
@@ -1869,7 +1872,7 @@ impl /* trait */ QGraphicsScene_sceneRectChanged_signal_connect for fn(QRectF) {
     unsafe {QGraphicsScene_SlotProxy_connect__ZN14QGraphicsScene16sceneRectChangedERK6QRectF(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QGraphicsScene_sceneRectChanged_signal_connect for Box<fn(QRectF)> {
+impl /* trait */ QGraphicsScene_sceneRectChanged_signal_connect for Box<Fn(QRectF)> {
   fn connect(self, sigthis: QGraphicsScene_sceneRectChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

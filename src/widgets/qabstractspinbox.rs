@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qabstractspinbox.h
 // dst-file: /src/widgets/qabstractspinbox.rs
 //
@@ -334,20 +334,20 @@ impl<'a> /*trait*/ QAbstractSpinBox_editingFinished<()> for () {
 
   // proto:  void QAbstractSpinBox::QAbstractSpinBox(const QAbstractSpinBox & );
 impl /*struct*/ QAbstractSpinBox {
-  pub fn New<T: QAbstractSpinBox_New>(value: T) -> QAbstractSpinBox {
-    let rsthis = value.New();
+  pub fn new<T: QAbstractSpinBox_new>(value: T) -> QAbstractSpinBox {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QAbstractSpinBox_New {
-  fn New(self) -> QAbstractSpinBox;
+pub trait QAbstractSpinBox_new {
+  fn new(self) -> QAbstractSpinBox;
 }
 
   // proto:  void QAbstractSpinBox::QAbstractSpinBox(const QAbstractSpinBox & );
-impl<'a> /*trait*/ QAbstractSpinBox_New for (&'a QAbstractSpinBox) {
-  fn New(self) -> QAbstractSpinBox {
+impl<'a> /*trait*/ QAbstractSpinBox_new for (&'a QAbstractSpinBox) {
+  fn new(self) -> QAbstractSpinBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAbstractSpinBoxC1ERKS_()};
     let ctysz: c_int = unsafe{QAbstractSpinBox_Class_Size()};
@@ -409,19 +409,19 @@ impl<'a> /*trait*/ QAbstractSpinBox_sizeHint<QSize> for () {
 
   // proto:  void QAbstractSpinBox::~QAbstractSpinBox();
 impl /*struct*/ QAbstractSpinBox {
-  pub fn Free<RetType, T: QAbstractSpinBox_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QAbstractSpinBox_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QAbstractSpinBox_Free<RetType> {
-  fn Free(self , rsthis: & QAbstractSpinBox) -> RetType;
+pub trait QAbstractSpinBox_free<RetType> {
+  fn free(self , rsthis: & QAbstractSpinBox) -> RetType;
 }
 
   // proto:  void QAbstractSpinBox::~QAbstractSpinBox();
-impl<'a> /*trait*/ QAbstractSpinBox_Free<()> for () {
-  fn Free(self , rsthis: & QAbstractSpinBox) -> () {
+impl<'a> /*trait*/ QAbstractSpinBox_free<()> for () {
+  fn free(self , rsthis: & QAbstractSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAbstractSpinBoxD0Ev()};
      unsafe {_ZN16QAbstractSpinBoxD0Ev(rsthis.qclsinst)};
@@ -614,8 +614,8 @@ impl<'a> /*trait*/ QAbstractSpinBox_wrapping<i8> for () {
 }
 
   // proto:  void QAbstractSpinBox::QAbstractSpinBox(QWidget * parent);
-impl<'a> /*trait*/ QAbstractSpinBox_New for (&'a QWidget) {
-  fn New(self) -> QAbstractSpinBox {
+impl<'a> /*trait*/ QAbstractSpinBox_new for (&'a QWidget) {
+  fn new(self) -> QAbstractSpinBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAbstractSpinBoxC1EP7QWidget()};
     let ctysz: c_int = unsafe{QAbstractSpinBox_Class_Size()};
@@ -856,7 +856,7 @@ extern fn QAbstractSpinBox_editingFinished_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QAbstractSpinBox_editingFinished_signal_connect_cb_box_0(rsfptr_raw:*mut fn(), ) {
+extern fn QAbstractSpinBox_editingFinished_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   rsfptr();
@@ -864,7 +864,8 @@ extern fn QAbstractSpinBox_editingFinished_signal_connect_cb_box_0(rsfptr_raw:*m
 impl /* trait */ QAbstractSpinBox_editingFinished_signal_connect for fn() {
   fn connect(self, sigthis: QAbstractSpinBox_editingFinished_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAbstractSpinBox_editingFinished_signal_connect_cb_0 as *mut c_void;
@@ -872,7 +873,7 @@ impl /* trait */ QAbstractSpinBox_editingFinished_signal_connect for fn() {
     unsafe {QAbstractSpinBox_SlotProxy_connect__ZN16QAbstractSpinBox15editingFinishedEv(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QAbstractSpinBox_editingFinished_signal_connect for Box<fn()> {
+impl /* trait */ QAbstractSpinBox_editingFinished_signal_connect for Box<Fn()> {
   fn connect(self, sigthis: QAbstractSpinBox_editingFinished_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

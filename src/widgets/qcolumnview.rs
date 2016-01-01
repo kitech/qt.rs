@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qcolumnview.h
 // dst-file: /src/widgets/qcolumnview.rs
 //
@@ -104,20 +104,20 @@ impl AsRef<QAbstractItemView> for QColumnView {
 }
   // proto:  void QColumnView::QColumnView(QWidget * parent);
 impl /*struct*/ QColumnView {
-  pub fn New<T: QColumnView_New>(value: T) -> QColumnView {
-    let rsthis = value.New();
+  pub fn new<T: QColumnView_new>(value: T) -> QColumnView {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QColumnView_New {
-  fn New(self) -> QColumnView;
+pub trait QColumnView_new {
+  fn new(self) -> QColumnView;
 }
 
   // proto:  void QColumnView::QColumnView(QWidget * parent);
-impl<'a> /*trait*/ QColumnView_New for (&'a QWidget) {
-  fn New(self) -> QColumnView {
+impl<'a> /*trait*/ QColumnView_new for (&'a QWidget) {
+  fn new(self) -> QColumnView {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QColumnViewC1EP7QWidget()};
     let ctysz: c_int = unsafe{QColumnView_Class_Size()};
@@ -316,8 +316,8 @@ impl<'a> /*trait*/ QColumnView_resizeGripsVisible<i8> for () {
 }
 
   // proto:  void QColumnView::QColumnView(const QColumnView & );
-impl<'a> /*trait*/ QColumnView_New for (&'a QColumnView) {
-  fn New(self) -> QColumnView {
+impl<'a> /*trait*/ QColumnView_new for (&'a QColumnView) {
+  fn new(self) -> QColumnView {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QColumnViewC1ERKS_()};
     let ctysz: c_int = unsafe{QColumnView_Class_Size()};
@@ -474,19 +474,19 @@ impl<'a> /*trait*/ QColumnView_visualRect<QRect> for (&'a QModelIndex) {
 
   // proto:  void QColumnView::~QColumnView();
 impl /*struct*/ QColumnView {
-  pub fn Free<RetType, T: QColumnView_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QColumnView_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QColumnView_Free<RetType> {
-  fn Free(self , rsthis: & QColumnView) -> RetType;
+pub trait QColumnView_free<RetType> {
+  fn free(self , rsthis: & QColumnView) -> RetType;
 }
 
   // proto:  void QColumnView::~QColumnView();
-impl<'a> /*trait*/ QColumnView_Free<()> for () {
-  fn Free(self , rsthis: & QColumnView) -> () {
+impl<'a> /*trait*/ QColumnView_free<()> for () {
+  fn free(self , rsthis: & QColumnView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QColumnViewD0Ev()};
      unsafe {_ZN11QColumnViewD0Ev(rsthis.qclsinst)};
@@ -516,7 +516,7 @@ extern fn QColumnView_updatePreviewWidget_signal_connect_cb_0(rsfptr:fn(QModelIn
   let rsarg0 = QModelIndex::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QColumnView_updatePreviewWidget_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QModelIndex), arg0: *mut c_void) {
+extern fn QColumnView_updatePreviewWidget_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QModelIndex), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QModelIndex::inheritFrom(arg0 as u64);
@@ -525,7 +525,8 @@ extern fn QColumnView_updatePreviewWidget_signal_connect_cb_box_0(rsfptr_raw:*mu
 impl /* trait */ QColumnView_updatePreviewWidget_signal_connect for fn(QModelIndex) {
   fn connect(self, sigthis: QColumnView_updatePreviewWidget_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QColumnView_updatePreviewWidget_signal_connect_cb_0 as *mut c_void;
@@ -533,7 +534,7 @@ impl /* trait */ QColumnView_updatePreviewWidget_signal_connect for fn(QModelInd
     unsafe {QColumnView_SlotProxy_connect__ZN11QColumnView19updatePreviewWidgetERK11QModelIndex(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QColumnView_updatePreviewWidget_signal_connect for Box<fn(QModelIndex)> {
+impl /* trait */ QColumnView_updatePreviewWidget_signal_connect for Box<Fn(QModelIndex)> {
   fn connect(self, sigthis: QColumnView_updatePreviewWidget_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

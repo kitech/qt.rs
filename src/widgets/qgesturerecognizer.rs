@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qgesturerecognizer.h
 // dst-file: /src/widgets/qgesturerecognizer.rs
 //
@@ -58,19 +58,19 @@ impl /*struct*/ QGestureRecognizer {
 }
   // proto:  void QGestureRecognizer::~QGestureRecognizer();
 impl /*struct*/ QGestureRecognizer {
-  pub fn Free<RetType, T: QGestureRecognizer_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QGestureRecognizer_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QGestureRecognizer_Free<RetType> {
-  fn Free(self , rsthis: & QGestureRecognizer) -> RetType;
+pub trait QGestureRecognizer_free<RetType> {
+  fn free(self , rsthis: & QGestureRecognizer) -> RetType;
 }
 
   // proto:  void QGestureRecognizer::~QGestureRecognizer();
-impl<'a> /*trait*/ QGestureRecognizer_Free<()> for () {
-  fn Free(self , rsthis: & QGestureRecognizer) -> () {
+impl<'a> /*trait*/ QGestureRecognizer_free<()> for () {
+  fn free(self , rsthis: & QGestureRecognizer) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QGestureRecognizerD0Ev()};
      unsafe {_ZN18QGestureRecognizerD0Ev(rsthis.qclsinst)};
@@ -80,20 +80,20 @@ impl<'a> /*trait*/ QGestureRecognizer_Free<()> for () {
 
   // proto:  void QGestureRecognizer::QGestureRecognizer();
 impl /*struct*/ QGestureRecognizer {
-  pub fn New<T: QGestureRecognizer_New>(value: T) -> QGestureRecognizer {
-    let rsthis = value.New();
+  pub fn new<T: QGestureRecognizer_new>(value: T) -> QGestureRecognizer {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QGestureRecognizer_New {
-  fn New(self) -> QGestureRecognizer;
+pub trait QGestureRecognizer_new {
+  fn new(self) -> QGestureRecognizer;
 }
 
   // proto:  void QGestureRecognizer::QGestureRecognizer();
-impl<'a> /*trait*/ QGestureRecognizer_New for () {
-  fn New(self) -> QGestureRecognizer {
+impl<'a> /*trait*/ QGestureRecognizer_new for () {
+  fn new(self) -> QGestureRecognizer {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QGestureRecognizerC1Ev()};
     let ctysz: c_int = unsafe{QGestureRecognizer_Class_Size()};

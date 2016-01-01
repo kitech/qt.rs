@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qtableview.h
 // dst-file: /src/widgets/qtableview.rs
 //
@@ -795,19 +795,19 @@ impl<'a> /*trait*/ QTableView_selectColumn<()> for (i32) {
 
   // proto:  void QTableView::~QTableView();
 impl /*struct*/ QTableView {
-  pub fn Free<RetType, T: QTableView_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QTableView_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QTableView_Free<RetType> {
-  fn Free(self , rsthis: & QTableView) -> RetType;
+pub trait QTableView_free<RetType> {
+  fn free(self , rsthis: & QTableView) -> RetType;
 }
 
   // proto:  void QTableView::~QTableView();
-impl<'a> /*trait*/ QTableView_Free<()> for () {
-  fn Free(self , rsthis: & QTableView) -> () {
+impl<'a> /*trait*/ QTableView_free<()> for () {
+  fn free(self , rsthis: & QTableView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTableViewD0Ev()};
      unsafe {_ZN10QTableViewD0Ev(rsthis.qclsinst)};
@@ -840,20 +840,20 @@ impl<'a> /*trait*/ QTableView_resizeColumnToContents<()> for (i32) {
 
   // proto:  void QTableView::QTableView(QWidget * parent);
 impl /*struct*/ QTableView {
-  pub fn New<T: QTableView_New>(value: T) -> QTableView {
-    let rsthis = value.New();
+  pub fn new<T: QTableView_new>(value: T) -> QTableView {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTableView_New {
-  fn New(self) -> QTableView;
+pub trait QTableView_new {
+  fn new(self) -> QTableView;
 }
 
   // proto:  void QTableView::QTableView(QWidget * parent);
-impl<'a> /*trait*/ QTableView_New for (&'a QWidget) {
-  fn New(self) -> QTableView {
+impl<'a> /*trait*/ QTableView_new for (&'a QWidget) {
+  fn new(self) -> QTableView {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTableViewC1EP7QWidget()};
     let ctysz: c_int = unsafe{QTableView_Class_Size()};
@@ -988,8 +988,8 @@ impl<'a> /*trait*/ QTableView_rowHeight<i32> for (i32) {
 }
 
   // proto:  void QTableView::QTableView(const QTableView & );
-impl<'a> /*trait*/ QTableView_New for (&'a QTableView) {
-  fn New(self) -> QTableView {
+impl<'a> /*trait*/ QTableView_new for (&'a QTableView) {
+  fn new(self) -> QTableView {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTableViewC1ERKS_()};
     let ctysz: c_int = unsafe{QTableView_Class_Size()};

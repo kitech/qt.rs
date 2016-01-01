@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qgraphicsanchorlayout.h
 // dst-file: /src/widgets/qgraphicsanchorlayout.rs
 //
@@ -112,20 +112,20 @@ impl AsRef<QGraphicsLayout> for QGraphicsAnchorLayout {
 }
   // proto:  void QGraphicsAnchorLayout::QGraphicsAnchorLayout(QGraphicsLayoutItem * parent);
 impl /*struct*/ QGraphicsAnchorLayout {
-  pub fn New<T: QGraphicsAnchorLayout_New>(value: T) -> QGraphicsAnchorLayout {
-    let rsthis = value.New();
+  pub fn new<T: QGraphicsAnchorLayout_new>(value: T) -> QGraphicsAnchorLayout {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QGraphicsAnchorLayout_New {
-  fn New(self) -> QGraphicsAnchorLayout;
+pub trait QGraphicsAnchorLayout_new {
+  fn new(self) -> QGraphicsAnchorLayout;
 }
 
   // proto:  void QGraphicsAnchorLayout::QGraphicsAnchorLayout(QGraphicsLayoutItem * parent);
-impl<'a> /*trait*/ QGraphicsAnchorLayout_New for (&'a QGraphicsLayoutItem) {
-  fn New(self) -> QGraphicsAnchorLayout {
+impl<'a> /*trait*/ QGraphicsAnchorLayout_new for (&'a QGraphicsLayoutItem) {
+  fn new(self) -> QGraphicsAnchorLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QGraphicsAnchorLayoutC1EP19QGraphicsLayoutItem()};
     let ctysz: c_int = unsafe{QGraphicsAnchorLayout_Class_Size()};
@@ -140,8 +140,8 @@ impl<'a> /*trait*/ QGraphicsAnchorLayout_New for (&'a QGraphicsLayoutItem) {
 }
 
   // proto:  void QGraphicsAnchorLayout::QGraphicsAnchorLayout(const QGraphicsAnchorLayout & );
-impl<'a> /*trait*/ QGraphicsAnchorLayout_New for (&'a QGraphicsAnchorLayout) {
-  fn New(self) -> QGraphicsAnchorLayout {
+impl<'a> /*trait*/ QGraphicsAnchorLayout_new for (&'a QGraphicsAnchorLayout) {
+  fn new(self) -> QGraphicsAnchorLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QGraphicsAnchorLayoutC1ERKS_()};
     let ctysz: c_int = unsafe{QGraphicsAnchorLayout_Class_Size()};
@@ -363,19 +363,19 @@ impl<'a> /*trait*/ QGraphicsAnchorLayout_setHorizontalSpacing<()> for (f64) {
 
   // proto:  void QGraphicsAnchorLayout::~QGraphicsAnchorLayout();
 impl /*struct*/ QGraphicsAnchorLayout {
-  pub fn Free<RetType, T: QGraphicsAnchorLayout_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QGraphicsAnchorLayout_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsAnchorLayout_Free<RetType> {
-  fn Free(self , rsthis: & QGraphicsAnchorLayout) -> RetType;
+pub trait QGraphicsAnchorLayout_free<RetType> {
+  fn free(self , rsthis: & QGraphicsAnchorLayout) -> RetType;
 }
 
   // proto:  void QGraphicsAnchorLayout::~QGraphicsAnchorLayout();
-impl<'a> /*trait*/ QGraphicsAnchorLayout_Free<()> for () {
-  fn Free(self , rsthis: & QGraphicsAnchorLayout) -> () {
+impl<'a> /*trait*/ QGraphicsAnchorLayout_free<()> for () {
+  fn free(self , rsthis: & QGraphicsAnchorLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QGraphicsAnchorLayoutD0Ev()};
      unsafe {_ZN21QGraphicsAnchorLayoutD0Ev(rsthis.qclsinst)};
@@ -425,19 +425,19 @@ impl AsRef<QObject> for QGraphicsAnchor {
 }
   // proto:  void QGraphicsAnchor::~QGraphicsAnchor();
 impl /*struct*/ QGraphicsAnchor {
-  pub fn Free<RetType, T: QGraphicsAnchor_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QGraphicsAnchor_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsAnchor_Free<RetType> {
-  fn Free(self , rsthis: & QGraphicsAnchor) -> RetType;
+pub trait QGraphicsAnchor_free<RetType> {
+  fn free(self , rsthis: & QGraphicsAnchor) -> RetType;
 }
 
   // proto:  void QGraphicsAnchor::~QGraphicsAnchor();
-impl<'a> /*trait*/ QGraphicsAnchor_Free<()> for () {
-  fn Free(self , rsthis: & QGraphicsAnchor) -> () {
+impl<'a> /*trait*/ QGraphicsAnchor_free<()> for () {
+  fn free(self , rsthis: & QGraphicsAnchor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsAnchorD0Ev()};
      unsafe {_ZN15QGraphicsAnchorD0Ev(rsthis.qclsinst)};
@@ -492,20 +492,20 @@ impl<'a> /*trait*/ QGraphicsAnchor_setSpacing<()> for (f64) {
 
   // proto:  void QGraphicsAnchor::QGraphicsAnchor(QGraphicsAnchorLayout * parent);
 impl /*struct*/ QGraphicsAnchor {
-  pub fn New<T: QGraphicsAnchor_New>(value: T) -> QGraphicsAnchor {
-    let rsthis = value.New();
+  pub fn new<T: QGraphicsAnchor_new>(value: T) -> QGraphicsAnchor {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QGraphicsAnchor_New {
-  fn New(self) -> QGraphicsAnchor;
+pub trait QGraphicsAnchor_new {
+  fn new(self) -> QGraphicsAnchor;
 }
 
   // proto:  void QGraphicsAnchor::QGraphicsAnchor(QGraphicsAnchorLayout * parent);
-impl<'a> /*trait*/ QGraphicsAnchor_New for (&'a QGraphicsAnchorLayout) {
-  fn New(self) -> QGraphicsAnchor {
+impl<'a> /*trait*/ QGraphicsAnchor_new for (&'a QGraphicsAnchorLayout) {
+  fn new(self) -> QGraphicsAnchor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsAnchorC1EP21QGraphicsAnchorLayout()};
     let ctysz: c_int = unsafe{QGraphicsAnchor_Class_Size()};

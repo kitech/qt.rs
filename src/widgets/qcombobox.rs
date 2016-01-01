@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qcombobox.h
 // dst-file: /src/widgets/qcombobox.rs
 //
@@ -1052,20 +1052,20 @@ impl<'a> /*trait*/ QComboBox_maxVisibleItems<i32> for () {
 
   // proto:  void QComboBox::QComboBox(QWidget * parent);
 impl /*struct*/ QComboBox {
-  pub fn New<T: QComboBox_New>(value: T) -> QComboBox {
-    let rsthis = value.New();
+  pub fn new<T: QComboBox_new>(value: T) -> QComboBox {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QComboBox_New {
-  fn New(self) -> QComboBox;
+pub trait QComboBox_new {
+  fn new(self) -> QComboBox;
 }
 
   // proto:  void QComboBox::QComboBox(QWidget * parent);
-impl<'a> /*trait*/ QComboBox_New for (&'a QWidget) {
-  fn New(self) -> QComboBox {
+impl<'a> /*trait*/ QComboBox_new for (&'a QWidget) {
+  fn new(self) -> QComboBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QComboBoxC1EP7QWidget()};
     let ctysz: c_int = unsafe{QComboBox_Class_Size()};
@@ -1126,8 +1126,8 @@ impl<'a> /*trait*/ QComboBox_setCurrentIndex<()> for (i32) {
 }
 
   // proto:  void QComboBox::QComboBox(const QComboBox & );
-impl<'a> /*trait*/ QComboBox_New for (&'a QComboBox) {
-  fn New(self) -> QComboBox {
+impl<'a> /*trait*/ QComboBox_new for (&'a QComboBox) {
+  fn new(self) -> QComboBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QComboBoxC1ERKS_()};
     let ctysz: c_int = unsafe{QComboBox_Class_Size()};
@@ -1363,19 +1363,19 @@ impl<'a> /*trait*/ QComboBox_duplicatesEnabled<i8> for () {
 
   // proto:  void QComboBox::~QComboBox();
 impl /*struct*/ QComboBox {
-  pub fn Free<RetType, T: QComboBox_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QComboBox_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QComboBox_Free<RetType> {
-  fn Free(self , rsthis: & QComboBox) -> RetType;
+pub trait QComboBox_free<RetType> {
+  fn free(self , rsthis: & QComboBox) -> RetType;
 }
 
   // proto:  void QComboBox::~QComboBox();
-impl<'a> /*trait*/ QComboBox_Free<()> for () {
-  fn Free(self , rsthis: & QComboBox) -> () {
+impl<'a> /*trait*/ QComboBox_free<()> for () {
+  fn free(self , rsthis: & QComboBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QComboBoxD0Ev()};
      unsafe {_ZN9QComboBoxD0Ev(rsthis.qclsinst)};
@@ -1932,7 +1932,7 @@ extern fn QComboBox_activated_signal_connect_cb_0(rsfptr:fn(QString), arg0: *mut
   let rsarg0 = QString::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QComboBox_activated_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QString), arg0: *mut c_void) {
+extern fn QComboBox_activated_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QString::inheritFrom(arg0 as u64);
@@ -1941,7 +1941,8 @@ extern fn QComboBox_activated_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QString
 impl /* trait */ QComboBox_activated_signal_connect for fn(QString) {
   fn connect(self, sigthis: QComboBox_activated_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QComboBox_activated_signal_connect_cb_0 as *mut c_void;
@@ -1949,7 +1950,7 @@ impl /* trait */ QComboBox_activated_signal_connect for fn(QString) {
     unsafe {QComboBox_SlotProxy_connect__ZN9QComboBox9activatedERK7QString(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QComboBox_activated_signal_connect for Box<fn(QString)> {
+impl /* trait */ QComboBox_activated_signal_connect for Box<Fn(QString)> {
   fn connect(self, sigthis: QComboBox_activated_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -1966,7 +1967,7 @@ extern fn QComboBox_currentIndexChanged_signal_connect_cb_1(rsfptr:fn(QString), 
   let rsarg0 = QString::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QComboBox_currentIndexChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(QString), arg0: *mut c_void) {
+extern fn QComboBox_currentIndexChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QString::inheritFrom(arg0 as u64);
@@ -1975,7 +1976,8 @@ extern fn QComboBox_currentIndexChanged_signal_connect_cb_box_1(rsfptr_raw:*mut 
 impl /* trait */ QComboBox_currentIndexChanged_signal_connect for fn(QString) {
   fn connect(self, sigthis: QComboBox_currentIndexChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QComboBox_currentIndexChanged_signal_connect_cb_1 as *mut c_void;
@@ -1983,7 +1985,7 @@ impl /* trait */ QComboBox_currentIndexChanged_signal_connect for fn(QString) {
     unsafe {QComboBox_SlotProxy_connect__ZN9QComboBox19currentIndexChangedERK7QString(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QComboBox_currentIndexChanged_signal_connect for Box<fn(QString)> {
+impl /* trait */ QComboBox_currentIndexChanged_signal_connect for Box<Fn(QString)> {
   fn connect(self, sigthis: QComboBox_currentIndexChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -2000,7 +2002,7 @@ extern fn QComboBox_currentTextChanged_signal_connect_cb_2(rsfptr:fn(QString), a
   let rsarg0 = QString::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QComboBox_currentTextChanged_signal_connect_cb_box_2(rsfptr_raw:*mut fn(QString), arg0: *mut c_void) {
+extern fn QComboBox_currentTextChanged_signal_connect_cb_box_2(rsfptr_raw:*mut Fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QString::inheritFrom(arg0 as u64);
@@ -2009,7 +2011,8 @@ extern fn QComboBox_currentTextChanged_signal_connect_cb_box_2(rsfptr_raw:*mut f
 impl /* trait */ QComboBox_currentTextChanged_signal_connect for fn(QString) {
   fn connect(self, sigthis: QComboBox_currentTextChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QComboBox_currentTextChanged_signal_connect_cb_2 as *mut c_void;
@@ -2017,7 +2020,7 @@ impl /* trait */ QComboBox_currentTextChanged_signal_connect for fn(QString) {
     unsafe {QComboBox_SlotProxy_connect__ZN9QComboBox18currentTextChangedERK7QString(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QComboBox_currentTextChanged_signal_connect for Box<fn(QString)> {
+impl /* trait */ QComboBox_currentTextChanged_signal_connect for Box<Fn(QString)> {
   fn connect(self, sigthis: QComboBox_currentTextChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -2034,7 +2037,7 @@ extern fn QComboBox_highlighted_signal_connect_cb_3(rsfptr:fn(QString), arg0: *m
   let rsarg0 = QString::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QComboBox_highlighted_signal_connect_cb_box_3(rsfptr_raw:*mut fn(QString), arg0: *mut c_void) {
+extern fn QComboBox_highlighted_signal_connect_cb_box_3(rsfptr_raw:*mut Fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QString::inheritFrom(arg0 as u64);
@@ -2043,7 +2046,8 @@ extern fn QComboBox_highlighted_signal_connect_cb_box_3(rsfptr_raw:*mut fn(QStri
 impl /* trait */ QComboBox_highlighted_signal_connect for fn(QString) {
   fn connect(self, sigthis: QComboBox_highlighted_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QComboBox_highlighted_signal_connect_cb_3 as *mut c_void;
@@ -2051,7 +2055,7 @@ impl /* trait */ QComboBox_highlighted_signal_connect for fn(QString) {
     unsafe {QComboBox_SlotProxy_connect__ZN9QComboBox11highlightedERK7QString(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QComboBox_highlighted_signal_connect for Box<fn(QString)> {
+impl /* trait */ QComboBox_highlighted_signal_connect for Box<Fn(QString)> {
   fn connect(self, sigthis: QComboBox_highlighted_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -2068,7 +2072,7 @@ extern fn QComboBox_editTextChanged_signal_connect_cb_4(rsfptr:fn(QString), arg0
   let rsarg0 = QString::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QComboBox_editTextChanged_signal_connect_cb_box_4(rsfptr_raw:*mut fn(QString), arg0: *mut c_void) {
+extern fn QComboBox_editTextChanged_signal_connect_cb_box_4(rsfptr_raw:*mut Fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QString::inheritFrom(arg0 as u64);
@@ -2077,7 +2081,8 @@ extern fn QComboBox_editTextChanged_signal_connect_cb_box_4(rsfptr_raw:*mut fn(Q
 impl /* trait */ QComboBox_editTextChanged_signal_connect for fn(QString) {
   fn connect(self, sigthis: QComboBox_editTextChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QComboBox_editTextChanged_signal_connect_cb_4 as *mut c_void;
@@ -2085,7 +2090,7 @@ impl /* trait */ QComboBox_editTextChanged_signal_connect for fn(QString) {
     unsafe {QComboBox_SlotProxy_connect__ZN9QComboBox15editTextChangedERK7QString(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QComboBox_editTextChanged_signal_connect for Box<fn(QString)> {
+impl /* trait */ QComboBox_editTextChanged_signal_connect for Box<Fn(QString)> {
   fn connect(self, sigthis: QComboBox_editTextChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -2102,7 +2107,7 @@ extern fn QComboBox_highlighted_signal_connect_cb_5(rsfptr:fn(i32), arg0: c_int)
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QComboBox_highlighted_signal_connect_cb_box_5(rsfptr_raw:*mut fn(i32), arg0: c_int) {
+extern fn QComboBox_highlighted_signal_connect_cb_box_5(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -2111,7 +2116,8 @@ extern fn QComboBox_highlighted_signal_connect_cb_box_5(rsfptr_raw:*mut fn(i32),
 impl /* trait */ QComboBox_highlighted_signal_connect for fn(i32) {
   fn connect(self, sigthis: QComboBox_highlighted_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QComboBox_highlighted_signal_connect_cb_5 as *mut c_void;
@@ -2119,7 +2125,7 @@ impl /* trait */ QComboBox_highlighted_signal_connect for fn(i32) {
     unsafe {QComboBox_SlotProxy_connect__ZN9QComboBox11highlightedEi(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QComboBox_highlighted_signal_connect for Box<fn(i32)> {
+impl /* trait */ QComboBox_highlighted_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QComboBox_highlighted_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -2136,7 +2142,7 @@ extern fn QComboBox_activated_signal_connect_cb_6(rsfptr:fn(i32), arg0: c_int) {
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QComboBox_activated_signal_connect_cb_box_6(rsfptr_raw:*mut fn(i32), arg0: c_int) {
+extern fn QComboBox_activated_signal_connect_cb_box_6(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -2145,7 +2151,8 @@ extern fn QComboBox_activated_signal_connect_cb_box_6(rsfptr_raw:*mut fn(i32), a
 impl /* trait */ QComboBox_activated_signal_connect for fn(i32) {
   fn connect(self, sigthis: QComboBox_activated_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QComboBox_activated_signal_connect_cb_6 as *mut c_void;
@@ -2153,7 +2160,7 @@ impl /* trait */ QComboBox_activated_signal_connect for fn(i32) {
     unsafe {QComboBox_SlotProxy_connect__ZN9QComboBox9activatedEi(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QComboBox_activated_signal_connect for Box<fn(i32)> {
+impl /* trait */ QComboBox_activated_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QComboBox_activated_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -2170,7 +2177,7 @@ extern fn QComboBox_currentIndexChanged_signal_connect_cb_7(rsfptr:fn(i32), arg0
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QComboBox_currentIndexChanged_signal_connect_cb_box_7(rsfptr_raw:*mut fn(i32), arg0: c_int) {
+extern fn QComboBox_currentIndexChanged_signal_connect_cb_box_7(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -2179,7 +2186,8 @@ extern fn QComboBox_currentIndexChanged_signal_connect_cb_box_7(rsfptr_raw:*mut 
 impl /* trait */ QComboBox_currentIndexChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QComboBox_currentIndexChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QComboBox_currentIndexChanged_signal_connect_cb_7 as *mut c_void;
@@ -2187,7 +2195,7 @@ impl /* trait */ QComboBox_currentIndexChanged_signal_connect for fn(i32) {
     unsafe {QComboBox_SlotProxy_connect__ZN9QComboBox19currentIndexChangedEi(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QComboBox_currentIndexChanged_signal_connect for Box<fn(i32)> {
+impl /* trait */ QComboBox_currentIndexChanged_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QComboBox_currentIndexChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

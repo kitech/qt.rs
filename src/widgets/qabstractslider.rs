@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qabstractslider.h
 // dst-file: /src/widgets/qabstractslider.rs
 //
@@ -249,20 +249,20 @@ impl<'a> /*trait*/ QAbstractSlider_setInvertedControls<()> for (i8) {
 
   // proto:  void QAbstractSlider::QAbstractSlider(const QAbstractSlider & );
 impl /*struct*/ QAbstractSlider {
-  pub fn New<T: QAbstractSlider_New>(value: T) -> QAbstractSlider {
-    let rsthis = value.New();
+  pub fn new<T: QAbstractSlider_new>(value: T) -> QAbstractSlider {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QAbstractSlider_New {
-  fn New(self) -> QAbstractSlider;
+pub trait QAbstractSlider_new {
+  fn new(self) -> QAbstractSlider;
 }
 
   // proto:  void QAbstractSlider::QAbstractSlider(const QAbstractSlider & );
-impl<'a> /*trait*/ QAbstractSlider_New for (&'a QAbstractSlider) {
-  fn New(self) -> QAbstractSlider {
+impl<'a> /*trait*/ QAbstractSlider_new for (&'a QAbstractSlider) {
+  fn new(self) -> QAbstractSlider {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QAbstractSliderC1ERKS_()};
     let ctysz: c_int = unsafe{QAbstractSlider_Class_Size()};
@@ -439,19 +439,19 @@ impl<'a> /*trait*/ QAbstractSlider_valueChanged<()> for (i32) {
 
   // proto:  void QAbstractSlider::~QAbstractSlider();
 impl /*struct*/ QAbstractSlider {
-  pub fn Free<RetType, T: QAbstractSlider_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QAbstractSlider_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QAbstractSlider_Free<RetType> {
-  fn Free(self , rsthis: & QAbstractSlider) -> RetType;
+pub trait QAbstractSlider_free<RetType> {
+  fn free(self , rsthis: & QAbstractSlider) -> RetType;
 }
 
   // proto:  void QAbstractSlider::~QAbstractSlider();
-impl<'a> /*trait*/ QAbstractSlider_Free<()> for () {
-  fn Free(self , rsthis: & QAbstractSlider) -> () {
+impl<'a> /*trait*/ QAbstractSlider_free<()> for () {
+  fn free(self , rsthis: & QAbstractSlider) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QAbstractSliderD0Ev()};
      unsafe {_ZN15QAbstractSliderD0Ev(rsthis.qclsinst)};
@@ -781,8 +781,8 @@ impl<'a> /*trait*/ QAbstractSlider_setTracking<()> for (i8) {
 }
 
   // proto:  void QAbstractSlider::QAbstractSlider(QWidget * parent);
-impl<'a> /*trait*/ QAbstractSlider_New for (&'a QWidget) {
-  fn New(self) -> QAbstractSlider {
+impl<'a> /*trait*/ QAbstractSlider_new for (&'a QWidget) {
+  fn new(self) -> QAbstractSlider {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QAbstractSliderC1EP7QWidget()};
     let ctysz: c_int = unsafe{QAbstractSlider_Class_Size()};
@@ -944,7 +944,7 @@ extern fn QAbstractSlider_sliderPressed_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QAbstractSlider_sliderPressed_signal_connect_cb_box_0(rsfptr_raw:*mut fn(), ) {
+extern fn QAbstractSlider_sliderPressed_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   rsfptr();
@@ -952,7 +952,8 @@ extern fn QAbstractSlider_sliderPressed_signal_connect_cb_box_0(rsfptr_raw:*mut 
 impl /* trait */ QAbstractSlider_sliderPressed_signal_connect for fn() {
   fn connect(self, sigthis: QAbstractSlider_sliderPressed_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAbstractSlider_sliderPressed_signal_connect_cb_0 as *mut c_void;
@@ -960,7 +961,7 @@ impl /* trait */ QAbstractSlider_sliderPressed_signal_connect for fn() {
     unsafe {QAbstractSlider_SlotProxy_connect__ZN15QAbstractSlider13sliderPressedEv(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QAbstractSlider_sliderPressed_signal_connect for Box<fn()> {
+impl /* trait */ QAbstractSlider_sliderPressed_signal_connect for Box<Fn()> {
   fn connect(self, sigthis: QAbstractSlider_sliderPressed_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -977,7 +978,7 @@ extern fn QAbstractSlider_actionTriggered_signal_connect_cb_1(rsfptr:fn(i32), ar
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QAbstractSlider_actionTriggered_signal_connect_cb_box_1(rsfptr_raw:*mut fn(i32), arg0: c_int) {
+extern fn QAbstractSlider_actionTriggered_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -986,7 +987,8 @@ extern fn QAbstractSlider_actionTriggered_signal_connect_cb_box_1(rsfptr_raw:*mu
 impl /* trait */ QAbstractSlider_actionTriggered_signal_connect for fn(i32) {
   fn connect(self, sigthis: QAbstractSlider_actionTriggered_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAbstractSlider_actionTriggered_signal_connect_cb_1 as *mut c_void;
@@ -994,7 +996,7 @@ impl /* trait */ QAbstractSlider_actionTriggered_signal_connect for fn(i32) {
     unsafe {QAbstractSlider_SlotProxy_connect__ZN15QAbstractSlider15actionTriggeredEi(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QAbstractSlider_actionTriggered_signal_connect for Box<fn(i32)> {
+impl /* trait */ QAbstractSlider_actionTriggered_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QAbstractSlider_actionTriggered_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -1011,7 +1013,7 @@ extern fn QAbstractSlider_sliderMoved_signal_connect_cb_2(rsfptr:fn(i32), arg0: 
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QAbstractSlider_sliderMoved_signal_connect_cb_box_2(rsfptr_raw:*mut fn(i32), arg0: c_int) {
+extern fn QAbstractSlider_sliderMoved_signal_connect_cb_box_2(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -1020,7 +1022,8 @@ extern fn QAbstractSlider_sliderMoved_signal_connect_cb_box_2(rsfptr_raw:*mut fn
 impl /* trait */ QAbstractSlider_sliderMoved_signal_connect for fn(i32) {
   fn connect(self, sigthis: QAbstractSlider_sliderMoved_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAbstractSlider_sliderMoved_signal_connect_cb_2 as *mut c_void;
@@ -1028,7 +1031,7 @@ impl /* trait */ QAbstractSlider_sliderMoved_signal_connect for fn(i32) {
     unsafe {QAbstractSlider_SlotProxy_connect__ZN15QAbstractSlider11sliderMovedEi(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QAbstractSlider_sliderMoved_signal_connect for Box<fn(i32)> {
+impl /* trait */ QAbstractSlider_sliderMoved_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QAbstractSlider_sliderMoved_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -1046,7 +1049,7 @@ extern fn QAbstractSlider_rangeChanged_signal_connect_cb_3(rsfptr:fn(i32, i32), 
   let rsarg1 = arg1 as i32;
   rsfptr(rsarg0,rsarg1);
 }
-extern fn QAbstractSlider_rangeChanged_signal_connect_cb_box_3(rsfptr_raw:*mut fn(i32, i32), arg0: c_int, arg1: c_int) {
+extern fn QAbstractSlider_rangeChanged_signal_connect_cb_box_3(rsfptr_raw:*mut Fn(i32, i32), arg0: c_int, arg1: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -1056,7 +1059,8 @@ extern fn QAbstractSlider_rangeChanged_signal_connect_cb_box_3(rsfptr_raw:*mut f
 impl /* trait */ QAbstractSlider_rangeChanged_signal_connect for fn(i32, i32) {
   fn connect(self, sigthis: QAbstractSlider_rangeChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAbstractSlider_rangeChanged_signal_connect_cb_3 as *mut c_void;
@@ -1064,7 +1068,7 @@ impl /* trait */ QAbstractSlider_rangeChanged_signal_connect for fn(i32, i32) {
     unsafe {QAbstractSlider_SlotProxy_connect__ZN15QAbstractSlider12rangeChangedEii(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QAbstractSlider_rangeChanged_signal_connect for Box<fn(i32, i32)> {
+impl /* trait */ QAbstractSlider_rangeChanged_signal_connect for Box<Fn(i32, i32)> {
   fn connect(self, sigthis: QAbstractSlider_rangeChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -1081,7 +1085,7 @@ extern fn QAbstractSlider_valueChanged_signal_connect_cb_4(rsfptr:fn(i32), arg0:
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QAbstractSlider_valueChanged_signal_connect_cb_box_4(rsfptr_raw:*mut fn(i32), arg0: c_int) {
+extern fn QAbstractSlider_valueChanged_signal_connect_cb_box_4(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -1090,7 +1094,8 @@ extern fn QAbstractSlider_valueChanged_signal_connect_cb_box_4(rsfptr_raw:*mut f
 impl /* trait */ QAbstractSlider_valueChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QAbstractSlider_valueChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAbstractSlider_valueChanged_signal_connect_cb_4 as *mut c_void;
@@ -1098,7 +1103,7 @@ impl /* trait */ QAbstractSlider_valueChanged_signal_connect for fn(i32) {
     unsafe {QAbstractSlider_SlotProxy_connect__ZN15QAbstractSlider12valueChangedEi(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QAbstractSlider_valueChanged_signal_connect for Box<fn(i32)> {
+impl /* trait */ QAbstractSlider_valueChanged_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QAbstractSlider_valueChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -1114,7 +1119,7 @@ extern fn QAbstractSlider_sliderReleased_signal_connect_cb_5(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QAbstractSlider_sliderReleased_signal_connect_cb_box_5(rsfptr_raw:*mut fn(), ) {
+extern fn QAbstractSlider_sliderReleased_signal_connect_cb_box_5(rsfptr_raw:*mut Fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   rsfptr();
@@ -1122,7 +1127,8 @@ extern fn QAbstractSlider_sliderReleased_signal_connect_cb_box_5(rsfptr_raw:*mut
 impl /* trait */ QAbstractSlider_sliderReleased_signal_connect for fn() {
   fn connect(self, sigthis: QAbstractSlider_sliderReleased_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAbstractSlider_sliderReleased_signal_connect_cb_5 as *mut c_void;
@@ -1130,7 +1136,7 @@ impl /* trait */ QAbstractSlider_sliderReleased_signal_connect for fn() {
     unsafe {QAbstractSlider_SlotProxy_connect__ZN15QAbstractSlider14sliderReleasedEv(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QAbstractSlider_sliderReleased_signal_connect for Box<fn()> {
+impl /* trait */ QAbstractSlider_sliderReleased_signal_connect for Box<Fn()> {
   fn connect(self, sigthis: QAbstractSlider_sliderReleased_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

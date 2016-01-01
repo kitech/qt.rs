@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qwidgetaction.h
 // dst-file: /src/widgets/qwidgetaction.rs
 //
@@ -101,19 +101,19 @@ impl<'a> /*trait*/ QWidgetAction_metaObject<()> for () {
 
   // proto:  void QWidgetAction::~QWidgetAction();
 impl /*struct*/ QWidgetAction {
-  pub fn Free<RetType, T: QWidgetAction_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QWidgetAction_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QWidgetAction_Free<RetType> {
-  fn Free(self , rsthis: & QWidgetAction) -> RetType;
+pub trait QWidgetAction_free<RetType> {
+  fn free(self , rsthis: & QWidgetAction) -> RetType;
 }
 
   // proto:  void QWidgetAction::~QWidgetAction();
-impl<'a> /*trait*/ QWidgetAction_Free<()> for () {
-  fn Free(self , rsthis: & QWidgetAction) -> () {
+impl<'a> /*trait*/ QWidgetAction_free<()> for () {
+  fn free(self , rsthis: & QWidgetAction) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QWidgetActionD0Ev()};
      unsafe {_ZN13QWidgetActionD0Ev(rsthis.qclsinst)};
@@ -169,20 +169,20 @@ impl<'a> /*trait*/ QWidgetAction_releaseWidget<()> for (&'a QWidget) {
 
   // proto:  void QWidgetAction::QWidgetAction(const QWidgetAction & );
 impl /*struct*/ QWidgetAction {
-  pub fn New<T: QWidgetAction_New>(value: T) -> QWidgetAction {
-    let rsthis = value.New();
+  pub fn new<T: QWidgetAction_new>(value: T) -> QWidgetAction {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QWidgetAction_New {
-  fn New(self) -> QWidgetAction;
+pub trait QWidgetAction_new {
+  fn new(self) -> QWidgetAction;
 }
 
   // proto:  void QWidgetAction::QWidgetAction(const QWidgetAction & );
-impl<'a> /*trait*/ QWidgetAction_New for (&'a QWidgetAction) {
-  fn New(self) -> QWidgetAction {
+impl<'a> /*trait*/ QWidgetAction_new for (&'a QWidgetAction) {
+  fn new(self) -> QWidgetAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QWidgetActionC1ERKS_()};
     let ctysz: c_int = unsafe{QWidgetAction_Class_Size()};
@@ -197,8 +197,8 @@ impl<'a> /*trait*/ QWidgetAction_New for (&'a QWidgetAction) {
 }
 
   // proto:  void QWidgetAction::QWidgetAction(QObject * parent);
-impl<'a> /*trait*/ QWidgetAction_New for (&'a QObject) {
-  fn New(self) -> QWidgetAction {
+impl<'a> /*trait*/ QWidgetAction_new for (&'a QObject) {
+  fn new(self) -> QWidgetAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QWidgetActionC1EP7QObject()};
     let ctysz: c_int = unsafe{QWidgetAction_Class_Size()};

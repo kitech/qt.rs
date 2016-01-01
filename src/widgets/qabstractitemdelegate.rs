@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qabstractitemdelegate.h
 // dst-file: /src/widgets/qabstractitemdelegate.rs
 //
@@ -249,20 +249,20 @@ impl<'a> /*trait*/ QAbstractItemDelegate_setEditorData<()> for (&'a QWidget, &'a
 
   // proto:  void QAbstractItemDelegate::QAbstractItemDelegate(QObject * parent);
 impl /*struct*/ QAbstractItemDelegate {
-  pub fn New<T: QAbstractItemDelegate_New>(value: T) -> QAbstractItemDelegate {
-    let rsthis = value.New();
+  pub fn new<T: QAbstractItemDelegate_new>(value: T) -> QAbstractItemDelegate {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QAbstractItemDelegate_New {
-  fn New(self) -> QAbstractItemDelegate;
+pub trait QAbstractItemDelegate_new {
+  fn new(self) -> QAbstractItemDelegate;
 }
 
   // proto:  void QAbstractItemDelegate::QAbstractItemDelegate(QObject * parent);
-impl<'a> /*trait*/ QAbstractItemDelegate_New for (&'a QObject) {
-  fn New(self) -> QAbstractItemDelegate {
+impl<'a> /*trait*/ QAbstractItemDelegate_new for (&'a QObject) {
+  fn new(self) -> QAbstractItemDelegate {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QAbstractItemDelegateC1EP7QObject()};
     let ctysz: c_int = unsafe{QAbstractItemDelegate_Class_Size()};
@@ -329,8 +329,8 @@ impl<'a> /*trait*/ QAbstractItemDelegate_paint<()> for (&'a QPainter, &'a QStyle
 }
 
   // proto:  void QAbstractItemDelegate::QAbstractItemDelegate(const QAbstractItemDelegate & );
-impl<'a> /*trait*/ QAbstractItemDelegate_New for (&'a QAbstractItemDelegate) {
-  fn New(self) -> QAbstractItemDelegate {
+impl<'a> /*trait*/ QAbstractItemDelegate_new for (&'a QAbstractItemDelegate) {
+  fn new(self) -> QAbstractItemDelegate {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QAbstractItemDelegateC1ERKS_()};
     let ctysz: c_int = unsafe{QAbstractItemDelegate_Class_Size()};
@@ -426,19 +426,19 @@ impl<'a> /*trait*/ QAbstractItemDelegate_helpEvent<i8> for (&'a QHelpEvent, &'a 
 
   // proto:  void QAbstractItemDelegate::~QAbstractItemDelegate();
 impl /*struct*/ QAbstractItemDelegate {
-  pub fn Free<RetType, T: QAbstractItemDelegate_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QAbstractItemDelegate_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QAbstractItemDelegate_Free<RetType> {
-  fn Free(self , rsthis: & QAbstractItemDelegate) -> RetType;
+pub trait QAbstractItemDelegate_free<RetType> {
+  fn free(self , rsthis: & QAbstractItemDelegate) -> RetType;
 }
 
   // proto:  void QAbstractItemDelegate::~QAbstractItemDelegate();
-impl<'a> /*trait*/ QAbstractItemDelegate_Free<()> for () {
-  fn Free(self , rsthis: & QAbstractItemDelegate) -> () {
+impl<'a> /*trait*/ QAbstractItemDelegate_free<()> for () {
+  fn free(self , rsthis: & QAbstractItemDelegate) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QAbstractItemDelegateD0Ev()};
      unsafe {_ZN21QAbstractItemDelegateD0Ev(rsthis.qclsinst)};
@@ -550,7 +550,7 @@ extern fn QAbstractItemDelegate_closeEditor_signal_connect_cb_0(rsfptr:fn(QWidge
   let rsarg1 = arg1 as i32;
   rsfptr(rsarg0,rsarg1);
 }
-extern fn QAbstractItemDelegate_closeEditor_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QWidget, i32), arg0: *mut c_void, arg1: c_int) {
+extern fn QAbstractItemDelegate_closeEditor_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QWidget, i32), arg0: *mut c_void, arg1: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QWidget::inheritFrom(arg0 as u64);
@@ -560,7 +560,8 @@ extern fn QAbstractItemDelegate_closeEditor_signal_connect_cb_box_0(rsfptr_raw:*
 impl /* trait */ QAbstractItemDelegate_closeEditor_signal_connect for fn(QWidget, i32) {
   fn connect(self, sigthis: QAbstractItemDelegate_closeEditor_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAbstractItemDelegate_closeEditor_signal_connect_cb_0 as *mut c_void;
@@ -568,7 +569,7 @@ impl /* trait */ QAbstractItemDelegate_closeEditor_signal_connect for fn(QWidget
     unsafe {QAbstractItemDelegate_SlotProxy_connect__ZN21QAbstractItemDelegate11closeEditorEP7QWidgetNS_11EndEditHintE(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QAbstractItemDelegate_closeEditor_signal_connect for Box<fn(QWidget, i32)> {
+impl /* trait */ QAbstractItemDelegate_closeEditor_signal_connect for Box<Fn(QWidget, i32)> {
   fn connect(self, sigthis: QAbstractItemDelegate_closeEditor_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -585,7 +586,7 @@ extern fn QAbstractItemDelegate_sizeHintChanged_signal_connect_cb_1(rsfptr:fn(QM
   let rsarg0 = QModelIndex::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QAbstractItemDelegate_sizeHintChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(QModelIndex), arg0: *mut c_void) {
+extern fn QAbstractItemDelegate_sizeHintChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(QModelIndex), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QModelIndex::inheritFrom(arg0 as u64);
@@ -594,7 +595,8 @@ extern fn QAbstractItemDelegate_sizeHintChanged_signal_connect_cb_box_1(rsfptr_r
 impl /* trait */ QAbstractItemDelegate_sizeHintChanged_signal_connect for fn(QModelIndex) {
   fn connect(self, sigthis: QAbstractItemDelegate_sizeHintChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAbstractItemDelegate_sizeHintChanged_signal_connect_cb_1 as *mut c_void;
@@ -602,7 +604,7 @@ impl /* trait */ QAbstractItemDelegate_sizeHintChanged_signal_connect for fn(QMo
     unsafe {QAbstractItemDelegate_SlotProxy_connect__ZN21QAbstractItemDelegate15sizeHintChangedERK11QModelIndex(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QAbstractItemDelegate_sizeHintChanged_signal_connect for Box<fn(QModelIndex)> {
+impl /* trait */ QAbstractItemDelegate_sizeHintChanged_signal_connect for Box<Fn(QModelIndex)> {
   fn connect(self, sigthis: QAbstractItemDelegate_sizeHintChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -619,7 +621,7 @@ extern fn QAbstractItemDelegate_commitData_signal_connect_cb_2(rsfptr:fn(QWidget
   let rsarg0 = QWidget::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QAbstractItemDelegate_commitData_signal_connect_cb_box_2(rsfptr_raw:*mut fn(QWidget), arg0: *mut c_void) {
+extern fn QAbstractItemDelegate_commitData_signal_connect_cb_box_2(rsfptr_raw:*mut Fn(QWidget), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QWidget::inheritFrom(arg0 as u64);
@@ -628,7 +630,8 @@ extern fn QAbstractItemDelegate_commitData_signal_connect_cb_box_2(rsfptr_raw:*m
 impl /* trait */ QAbstractItemDelegate_commitData_signal_connect for fn(QWidget) {
   fn connect(self, sigthis: QAbstractItemDelegate_commitData_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAbstractItemDelegate_commitData_signal_connect_cb_2 as *mut c_void;
@@ -636,7 +639,7 @@ impl /* trait */ QAbstractItemDelegate_commitData_signal_connect for fn(QWidget)
     unsafe {QAbstractItemDelegate_SlotProxy_connect__ZN21QAbstractItemDelegate10commitDataEP7QWidget(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QAbstractItemDelegate_commitData_signal_connect for Box<fn(QWidget)> {
+impl /* trait */ QAbstractItemDelegate_commitData_signal_connect for Box<Fn(QWidget)> {
   fn connect(self, sigthis: QAbstractItemDelegate_commitData_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

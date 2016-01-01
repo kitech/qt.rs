@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qtoolbox.h
 // dst-file: /src/widgets/qtoolbox.rs
 //
@@ -236,20 +236,20 @@ impl<'a> /*trait*/ QToolBox_itemToolTip<QString> for (i32) {
 
   // proto:  void QToolBox::QToolBox(const QToolBox & );
 impl /*struct*/ QToolBox {
-  pub fn New<T: QToolBox_New>(value: T) -> QToolBox {
-    let rsthis = value.New();
+  pub fn new<T: QToolBox_new>(value: T) -> QToolBox {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QToolBox_New {
-  fn New(self) -> QToolBox;
+pub trait QToolBox_new {
+  fn new(self) -> QToolBox;
 }
 
   // proto:  void QToolBox::QToolBox(const QToolBox & );
-impl<'a> /*trait*/ QToolBox_New for (&'a QToolBox) {
-  fn New(self) -> QToolBox {
+impl<'a> /*trait*/ QToolBox_new for (&'a QToolBox) {
+  fn new(self) -> QToolBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBoxC1ERKS_()};
     let ctysz: c_int = unsafe{QToolBox_Class_Size()};
@@ -621,19 +621,19 @@ impl<'a> /*trait*/ QToolBox_itemIcon<QIcon> for (i32) {
 
   // proto:  void QToolBox::~QToolBox();
 impl /*struct*/ QToolBox {
-  pub fn Free<RetType, T: QToolBox_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QToolBox_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QToolBox_Free<RetType> {
-  fn Free(self , rsthis: & QToolBox) -> RetType;
+pub trait QToolBox_free<RetType> {
+  fn free(self , rsthis: & QToolBox) -> RetType;
 }
 
   // proto:  void QToolBox::~QToolBox();
-impl<'a> /*trait*/ QToolBox_Free<()> for () {
-  fn Free(self , rsthis: & QToolBox) -> () {
+impl<'a> /*trait*/ QToolBox_free<()> for () {
+  fn free(self , rsthis: & QToolBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBoxD0Ev()};
      unsafe {_ZN8QToolBoxD0Ev(rsthis.qclsinst)};
@@ -692,7 +692,7 @@ extern fn QToolBox_currentChanged_signal_connect_cb_0(rsfptr:fn(i32), arg0: c_in
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QToolBox_currentChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i32), arg0: c_int) {
+extern fn QToolBox_currentChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -701,7 +701,8 @@ extern fn QToolBox_currentChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i32
 impl /* trait */ QToolBox_currentChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QToolBox_currentChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QToolBox_currentChanged_signal_connect_cb_0 as *mut c_void;
@@ -709,7 +710,7 @@ impl /* trait */ QToolBox_currentChanged_signal_connect for fn(i32) {
     unsafe {QToolBox_SlotProxy_connect__ZN8QToolBox14currentChangedEi(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QToolBox_currentChanged_signal_connect for Box<fn(i32)> {
+impl /* trait */ QToolBox_currentChanged_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QToolBox_currentChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

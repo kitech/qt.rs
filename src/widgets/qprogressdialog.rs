@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qprogressdialog.h
 // dst-file: /src/widgets/qprogressdialog.rs
 //
@@ -264,19 +264,19 @@ impl<'a> /*trait*/ QProgressDialog_wasCanceled<i8> for () {
 
   // proto:  void QProgressDialog::~QProgressDialog();
 impl /*struct*/ QProgressDialog {
-  pub fn Free<RetType, T: QProgressDialog_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QProgressDialog_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QProgressDialog_Free<RetType> {
-  fn Free(self , rsthis: & QProgressDialog) -> RetType;
+pub trait QProgressDialog_free<RetType> {
+  fn free(self , rsthis: & QProgressDialog) -> RetType;
 }
 
   // proto:  void QProgressDialog::~QProgressDialog();
-impl<'a> /*trait*/ QProgressDialog_Free<()> for () {
-  fn Free(self , rsthis: & QProgressDialog) -> () {
+impl<'a> /*trait*/ QProgressDialog_free<()> for () {
+  fn free(self , rsthis: & QProgressDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QProgressDialogD0Ev()};
      unsafe {_ZN15QProgressDialogD0Ev(rsthis.qclsinst)};
@@ -491,20 +491,20 @@ impl<'a> /*trait*/ QProgressDialog_reset<()> for () {
 
   // proto:  void QProgressDialog::QProgressDialog(const QProgressDialog & );
 impl /*struct*/ QProgressDialog {
-  pub fn New<T: QProgressDialog_New>(value: T) -> QProgressDialog {
-    let rsthis = value.New();
+  pub fn new<T: QProgressDialog_new>(value: T) -> QProgressDialog {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QProgressDialog_New {
-  fn New(self) -> QProgressDialog;
+pub trait QProgressDialog_new {
+  fn new(self) -> QProgressDialog;
 }
 
   // proto:  void QProgressDialog::QProgressDialog(const QProgressDialog & );
-impl<'a> /*trait*/ QProgressDialog_New for (&'a QProgressDialog) {
-  fn New(self) -> QProgressDialog {
+impl<'a> /*trait*/ QProgressDialog_new for (&'a QProgressDialog) {
+  fn new(self) -> QProgressDialog {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QProgressDialogC1ERKS_()};
     let ctysz: c_int = unsafe{QProgressDialog_Class_Size()};
@@ -793,7 +793,7 @@ extern fn QProgressDialog_canceled_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QProgressDialog_canceled_signal_connect_cb_box_0(rsfptr_raw:*mut fn(), ) {
+extern fn QProgressDialog_canceled_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   rsfptr();
@@ -801,7 +801,8 @@ extern fn QProgressDialog_canceled_signal_connect_cb_box_0(rsfptr_raw:*mut fn(),
 impl /* trait */ QProgressDialog_canceled_signal_connect for fn() {
   fn connect(self, sigthis: QProgressDialog_canceled_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QProgressDialog_canceled_signal_connect_cb_0 as *mut c_void;
@@ -809,7 +810,7 @@ impl /* trait */ QProgressDialog_canceled_signal_connect for fn() {
     unsafe {QProgressDialog_SlotProxy_connect__ZN15QProgressDialog8canceledEv(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QProgressDialog_canceled_signal_connect for Box<fn()> {
+impl /* trait */ QProgressDialog_canceled_signal_connect for Box<Fn()> {
   fn connect(self, sigthis: QProgressDialog_canceled_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

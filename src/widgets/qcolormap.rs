@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qcolormap.h
 // dst-file: /src/widgets/qcolormap.rs
 //
@@ -142,19 +142,19 @@ impl<'a> /*trait*/ QColormap_colorAt<QColor> for (u32) {
 
   // proto:  void QColormap::~QColormap();
 impl /*struct*/ QColormap {
-  pub fn Free<RetType, T: QColormap_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QColormap_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QColormap_Free<RetType> {
-  fn Free(self , rsthis: & QColormap) -> RetType;
+pub trait QColormap_free<RetType> {
+  fn free(self , rsthis: & QColormap) -> RetType;
 }
 
   // proto:  void QColormap::~QColormap();
-impl<'a> /*trait*/ QColormap_Free<()> for () {
-  fn Free(self , rsthis: & QColormap) -> () {
+impl<'a> /*trait*/ QColormap_free<()> for () {
+  fn free(self , rsthis: & QColormap) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QColormapD0Ev()};
      unsafe {_ZN9QColormapD0Ev(rsthis.qclsinst)};
@@ -164,20 +164,20 @@ impl<'a> /*trait*/ QColormap_Free<()> for () {
 
   // proto:  void QColormap::QColormap();
 impl /*struct*/ QColormap {
-  pub fn New<T: QColormap_New>(value: T) -> QColormap {
-    let rsthis = value.New();
+  pub fn new<T: QColormap_new>(value: T) -> QColormap {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QColormap_New {
-  fn New(self) -> QColormap;
+pub trait QColormap_new {
+  fn new(self) -> QColormap;
 }
 
   // proto:  void QColormap::QColormap();
-impl<'a> /*trait*/ QColormap_New for () {
-  fn New(self) -> QColormap {
+impl<'a> /*trait*/ QColormap_new for () {
+  fn new(self) -> QColormap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QColormapC1Ev()};
     let ctysz: c_int = unsafe{QColormap_Class_Size()};
@@ -239,8 +239,8 @@ impl<'a> /*trait*/ QColormap_size<i32> for () {
 }
 
   // proto:  void QColormap::QColormap(const QColormap & colormap);
-impl<'a> /*trait*/ QColormap_New for (&'a QColormap) {
-  fn New(self) -> QColormap {
+impl<'a> /*trait*/ QColormap_new for (&'a QColormap) {
+  fn new(self) -> QColormap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QColormapC1ERKS_()};
     let ctysz: c_int = unsafe{QColormap_Class_Size()};

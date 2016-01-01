@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qkeyeventtransition.h
 // dst-file: /src/widgets/qkeyeventtransition.rs
 //
@@ -120,19 +120,19 @@ impl<'a> /*trait*/ QKeyEventTransition_metaObject<()> for () {
 
   // proto:  void QKeyEventTransition::~QKeyEventTransition();
 impl /*struct*/ QKeyEventTransition {
-  pub fn Free<RetType, T: QKeyEventTransition_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QKeyEventTransition_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QKeyEventTransition_Free<RetType> {
-  fn Free(self , rsthis: & QKeyEventTransition) -> RetType;
+pub trait QKeyEventTransition_free<RetType> {
+  fn free(self , rsthis: & QKeyEventTransition) -> RetType;
 }
 
   // proto:  void QKeyEventTransition::~QKeyEventTransition();
-impl<'a> /*trait*/ QKeyEventTransition_Free<()> for () {
-  fn Free(self , rsthis: & QKeyEventTransition) -> () {
+impl<'a> /*trait*/ QKeyEventTransition_free<()> for () {
+  fn free(self , rsthis: & QKeyEventTransition) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QKeyEventTransitionD0Ev()};
      unsafe {_ZN19QKeyEventTransitionD0Ev(rsthis.qclsinst)};
@@ -165,20 +165,20 @@ impl<'a> /*trait*/ QKeyEventTransition_key<i32> for () {
 
   // proto:  void QKeyEventTransition::QKeyEventTransition(QState * sourceState);
 impl /*struct*/ QKeyEventTransition {
-  pub fn New<T: QKeyEventTransition_New>(value: T) -> QKeyEventTransition {
-    let rsthis = value.New();
+  pub fn new<T: QKeyEventTransition_new>(value: T) -> QKeyEventTransition {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QKeyEventTransition_New {
-  fn New(self) -> QKeyEventTransition;
+pub trait QKeyEventTransition_new {
+  fn new(self) -> QKeyEventTransition;
 }
 
   // proto:  void QKeyEventTransition::QKeyEventTransition(QState * sourceState);
-impl<'a> /*trait*/ QKeyEventTransition_New for (&'a QState) {
-  fn New(self) -> QKeyEventTransition {
+impl<'a> /*trait*/ QKeyEventTransition_new for (&'a QState) {
+  fn new(self) -> QKeyEventTransition {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QKeyEventTransitionC1EP6QState()};
     let ctysz: c_int = unsafe{QKeyEventTransition_Class_Size()};
@@ -193,8 +193,8 @@ impl<'a> /*trait*/ QKeyEventTransition_New for (&'a QState) {
 }
 
   // proto:  void QKeyEventTransition::QKeyEventTransition(const QKeyEventTransition & );
-impl<'a> /*trait*/ QKeyEventTransition_New for (&'a QKeyEventTransition) {
-  fn New(self) -> QKeyEventTransition {
+impl<'a> /*trait*/ QKeyEventTransition_new for (&'a QKeyEventTransition) {
+  fn new(self) -> QKeyEventTransition {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QKeyEventTransitionC1ERKS_()};
     let ctysz: c_int = unsafe{QKeyEventTransition_Class_Size()};

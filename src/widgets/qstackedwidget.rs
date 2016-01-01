@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qstackedwidget.h
 // dst-file: /src/widgets/qstackedwidget.rs
 //
@@ -121,20 +121,20 @@ impl<'a> /*trait*/ QStackedWidget_setCurrentIndex<()> for (i32) {
 
   // proto:  void QStackedWidget::QStackedWidget(QWidget * parent);
 impl /*struct*/ QStackedWidget {
-  pub fn New<T: QStackedWidget_New>(value: T) -> QStackedWidget {
-    let rsthis = value.New();
+  pub fn new<T: QStackedWidget_new>(value: T) -> QStackedWidget {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QStackedWidget_New {
-  fn New(self) -> QStackedWidget;
+pub trait QStackedWidget_new {
+  fn new(self) -> QStackedWidget;
 }
 
   // proto:  void QStackedWidget::QStackedWidget(QWidget * parent);
-impl<'a> /*trait*/ QStackedWidget_New for (&'a QWidget) {
-  fn New(self) -> QStackedWidget {
+impl<'a> /*trait*/ QStackedWidget_new for (&'a QWidget) {
+  fn new(self) -> QStackedWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QStackedWidgetC1EP7QWidget()};
     let ctysz: c_int = unsafe{QStackedWidget_Class_Size()};
@@ -410,19 +410,19 @@ impl<'a> /*trait*/ QStackedWidget_setCurrentWidget<()> for (&'a QWidget) {
 
   // proto:  void QStackedWidget::~QStackedWidget();
 impl /*struct*/ QStackedWidget {
-  pub fn Free<RetType, T: QStackedWidget_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QStackedWidget_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QStackedWidget_Free<RetType> {
-  fn Free(self , rsthis: & QStackedWidget) -> RetType;
+pub trait QStackedWidget_free<RetType> {
+  fn free(self , rsthis: & QStackedWidget) -> RetType;
 }
 
   // proto:  void QStackedWidget::~QStackedWidget();
-impl<'a> /*trait*/ QStackedWidget_Free<()> for () {
-  fn Free(self , rsthis: & QStackedWidget) -> () {
+impl<'a> /*trait*/ QStackedWidget_free<()> for () {
+  fn free(self , rsthis: & QStackedWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QStackedWidgetD0Ev()};
      unsafe {_ZN14QStackedWidgetD0Ev(rsthis.qclsinst)};
@@ -431,8 +431,8 @@ impl<'a> /*trait*/ QStackedWidget_Free<()> for () {
 }
 
   // proto:  void QStackedWidget::QStackedWidget(const QStackedWidget & );
-impl<'a> /*trait*/ QStackedWidget_New for (&'a QStackedWidget) {
-  fn New(self) -> QStackedWidget {
+impl<'a> /*trait*/ QStackedWidget_new for (&'a QStackedWidget) {
+  fn new(self) -> QStackedWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QStackedWidgetC1ERKS_()};
     let ctysz: c_int = unsafe{QStackedWidget_Class_Size()};
@@ -506,7 +506,7 @@ extern fn QStackedWidget_currentChanged_signal_connect_cb_0(rsfptr:fn(i32), arg0
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QStackedWidget_currentChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i32), arg0: c_int) {
+extern fn QStackedWidget_currentChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -515,7 +515,8 @@ extern fn QStackedWidget_currentChanged_signal_connect_cb_box_0(rsfptr_raw:*mut 
 impl /* trait */ QStackedWidget_currentChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QStackedWidget_currentChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QStackedWidget_currentChanged_signal_connect_cb_0 as *mut c_void;
@@ -523,7 +524,7 @@ impl /* trait */ QStackedWidget_currentChanged_signal_connect for fn(i32) {
     unsafe {QStackedWidget_SlotProxy_connect__ZN14QStackedWidget14currentChangedEi(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QStackedWidget_currentChanged_signal_connect for Box<fn(i32)> {
+impl /* trait */ QStackedWidget_currentChanged_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QStackedWidget_currentChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -540,7 +541,7 @@ extern fn QStackedWidget_widgetRemoved_signal_connect_cb_1(rsfptr:fn(i32), arg0:
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QStackedWidget_widgetRemoved_signal_connect_cb_box_1(rsfptr_raw:*mut fn(i32), arg0: c_int) {
+extern fn QStackedWidget_widgetRemoved_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -549,7 +550,8 @@ extern fn QStackedWidget_widgetRemoved_signal_connect_cb_box_1(rsfptr_raw:*mut f
 impl /* trait */ QStackedWidget_widgetRemoved_signal_connect for fn(i32) {
   fn connect(self, sigthis: QStackedWidget_widgetRemoved_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QStackedWidget_widgetRemoved_signal_connect_cb_1 as *mut c_void;
@@ -557,7 +559,7 @@ impl /* trait */ QStackedWidget_widgetRemoved_signal_connect for fn(i32) {
     unsafe {QStackedWidget_SlotProxy_connect__ZN14QStackedWidget13widgetRemovedEi(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QStackedWidget_widgetRemoved_signal_connect for Box<fn(i32)> {
+impl /* trait */ QStackedWidget_widgetRemoved_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QStackedWidget_widgetRemoved_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

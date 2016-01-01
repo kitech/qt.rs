@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qdirmodel.h
 // dst-file: /src/widgets/qdirmodel.rs
 //
@@ -300,19 +300,19 @@ impl<'a> /*trait*/ QDirModel_mimeTypes<()> for () {
 
   // proto:  void QDirModel::~QDirModel();
 impl /*struct*/ QDirModel {
-  pub fn Free<RetType, T: QDirModel_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QDirModel_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QDirModel_Free<RetType> {
-  fn Free(self , rsthis: & QDirModel) -> RetType;
+pub trait QDirModel_free<RetType> {
+  fn free(self , rsthis: & QDirModel) -> RetType;
 }
 
   // proto:  void QDirModel::~QDirModel();
-impl<'a> /*trait*/ QDirModel_Free<()> for () {
-  fn Free(self , rsthis: & QDirModel) -> () {
+impl<'a> /*trait*/ QDirModel_free<()> for () {
+  fn free(self , rsthis: & QDirModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QDirModelD0Ev()};
      unsafe {_ZN9QDirModelD0Ev(rsthis.qclsinst)};
@@ -512,20 +512,20 @@ impl<'a> /*trait*/ QDirModel_index<QModelIndex> for (i32, i32, &'a QModelIndex) 
 
   // proto:  void QDirModel::QDirModel(QObject * parent);
 impl /*struct*/ QDirModel {
-  pub fn New<T: QDirModel_New>(value: T) -> QDirModel {
-    let rsthis = value.New();
+  pub fn new<T: QDirModel_new>(value: T) -> QDirModel {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QDirModel_New {
-  fn New(self) -> QDirModel;
+pub trait QDirModel_new {
+  fn new(self) -> QDirModel;
 }
 
   // proto:  void QDirModel::QDirModel(QObject * parent);
-impl<'a> /*trait*/ QDirModel_New for (&'a QObject) {
-  fn New(self) -> QDirModel {
+impl<'a> /*trait*/ QDirModel_new for (&'a QObject) {
+  fn new(self) -> QDirModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QDirModelC1EP7QObject()};
     let ctysz: c_int = unsafe{QDirModel_Class_Size()};
@@ -798,8 +798,8 @@ impl<'a> /*trait*/ QDirModel_setReadOnly<()> for (i8) {
 }
 
   // proto:  void QDirModel::QDirModel(const QDirModel & );
-impl<'a> /*trait*/ QDirModel_New for (&'a QDirModel) {
-  fn New(self) -> QDirModel {
+impl<'a> /*trait*/ QDirModel_new for (&'a QDirModel) {
+  fn new(self) -> QDirModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QDirModelC1ERKS_()};
     let ctysz: c_int = unsafe{QDirModel_Class_Size()};

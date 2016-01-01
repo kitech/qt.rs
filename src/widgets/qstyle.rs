@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qstyle.h
 // dst-file: /src/widgets/qstyle.rs
 //
@@ -106,20 +106,20 @@ impl AsRef<QObject> for QStyle {
 }
   // proto:  void QStyle::QStyle(const QStyle & );
 impl /*struct*/ QStyle {
-  pub fn New<T: QStyle_New>(value: T) -> QStyle {
-    let rsthis = value.New();
+  pub fn new<T: QStyle_new>(value: T) -> QStyle {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QStyle_New {
-  fn New(self) -> QStyle;
+pub trait QStyle_new {
+  fn new(self) -> QStyle;
 }
 
   // proto:  void QStyle::QStyle(const QStyle & );
-impl<'a> /*trait*/ QStyle_New for (&'a QStyle) {
-  fn New(self) -> QStyle {
+impl<'a> /*trait*/ QStyle_new for (&'a QStyle) {
+  fn new(self) -> QStyle {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QStyleC1ERKS_()};
     let ctysz: c_int = unsafe{QStyle_Class_Size()};
@@ -158,19 +158,19 @@ impl<'a> /*trait*/ QStyle_unpolish<()> for (&'a QWidget) {
 
   // proto:  void QStyle::~QStyle();
 impl /*struct*/ QStyle {
-  pub fn Free<RetType, T: QStyle_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QStyle_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QStyle_Free<RetType> {
-  fn Free(self , rsthis: & QStyle) -> RetType;
+pub trait QStyle_free<RetType> {
+  fn free(self , rsthis: & QStyle) -> RetType;
 }
 
   // proto:  void QStyle::~QStyle();
-impl<'a> /*trait*/ QStyle_Free<()> for () {
-  fn Free(self , rsthis: & QStyle) -> () {
+impl<'a> /*trait*/ QStyle_free<()> for () {
+  fn free(self , rsthis: & QStyle) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QStyleD0Ev()};
      unsafe {_ZN6QStyleD0Ev(rsthis.qclsinst)};
@@ -202,8 +202,8 @@ impl<'a> /*trait*/ QStyle_polish<()> for (&'a QPalette) {
 }
 
   // proto:  void QStyle::QStyle();
-impl<'a> /*trait*/ QStyle_New for () {
-  fn New(self) -> QStyle {
+impl<'a> /*trait*/ QStyle_new for () {
+  fn new(self) -> QStyle {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QStyleC1Ev()};
     let ctysz: c_int = unsafe{QStyle_Class_Size()};

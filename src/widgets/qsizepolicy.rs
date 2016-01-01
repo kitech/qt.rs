@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qsizepolicy.h
 // dst-file: /src/widgets/qsizepolicy.rs
 //
@@ -303,20 +303,20 @@ impl<'a> /*trait*/ QSizePolicy_setHorizontalStretch<()> for (i32) {
 
   // proto:  void QSizePolicy::QSizePolicy(int i);
 impl /*struct*/ QSizePolicy {
-  pub fn New<T: QSizePolicy_New>(value: T) -> QSizePolicy {
-    let rsthis = value.New();
+  pub fn new<T: QSizePolicy_new>(value: T) -> QSizePolicy {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QSizePolicy_New {
-  fn New(self) -> QSizePolicy;
+pub trait QSizePolicy_new {
+  fn new(self) -> QSizePolicy;
 }
 
   // proto:  void QSizePolicy::QSizePolicy(int i);
-impl<'a> /*trait*/ QSizePolicy_New for (i32) {
-  fn New(self) -> QSizePolicy {
+impl<'a> /*trait*/ QSizePolicy_new for (i32) {
+  fn new(self) -> QSizePolicy {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QSizePolicyC1Ei()};
     let ctysz: c_int = unsafe{QSizePolicy_Class_Size()};
@@ -331,8 +331,8 @@ impl<'a> /*trait*/ QSizePolicy_New for (i32) {
 }
 
   // proto:  void QSizePolicy::QSizePolicy();
-impl<'a> /*trait*/ QSizePolicy_New for () {
-  fn New(self) -> QSizePolicy {
+impl<'a> /*trait*/ QSizePolicy_new for () {
+  fn new(self) -> QSizePolicy {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QSizePolicyC1Ev()};
     let ctysz: c_int = unsafe{QSizePolicy_Class_Size()};

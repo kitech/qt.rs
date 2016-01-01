@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qgraphicslinearlayout.h
 // dst-file: /src/widgets/qgraphicslinearlayout.rs
 //
@@ -127,20 +127,20 @@ impl<'a> /*trait*/ QGraphicsLinearLayout_spacing<f64> for () {
 
   // proto:  void QGraphicsLinearLayout::QGraphicsLinearLayout(QGraphicsLayoutItem * parent);
 impl /*struct*/ QGraphicsLinearLayout {
-  pub fn New<T: QGraphicsLinearLayout_New>(value: T) -> QGraphicsLinearLayout {
-    let rsthis = value.New();
+  pub fn new<T: QGraphicsLinearLayout_new>(value: T) -> QGraphicsLinearLayout {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QGraphicsLinearLayout_New {
-  fn New(self) -> QGraphicsLinearLayout;
+pub trait QGraphicsLinearLayout_new {
+  fn new(self) -> QGraphicsLinearLayout;
 }
 
   // proto:  void QGraphicsLinearLayout::QGraphicsLinearLayout(QGraphicsLayoutItem * parent);
-impl<'a> /*trait*/ QGraphicsLinearLayout_New for (&'a QGraphicsLayoutItem) {
-  fn New(self) -> QGraphicsLinearLayout {
+impl<'a> /*trait*/ QGraphicsLinearLayout_new for (&'a QGraphicsLayoutItem) {
+  fn new(self) -> QGraphicsLinearLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QGraphicsLinearLayoutC1EP19QGraphicsLayoutItem()};
     let ctysz: c_int = unsafe{QGraphicsLinearLayout_Class_Size()};
@@ -155,8 +155,8 @@ impl<'a> /*trait*/ QGraphicsLinearLayout_New for (&'a QGraphicsLayoutItem) {
 }
 
   // proto:  void QGraphicsLinearLayout::QGraphicsLinearLayout(const QGraphicsLinearLayout & );
-impl<'a> /*trait*/ QGraphicsLinearLayout_New for (&'a QGraphicsLinearLayout) {
-  fn New(self) -> QGraphicsLinearLayout {
+impl<'a> /*trait*/ QGraphicsLinearLayout_new for (&'a QGraphicsLinearLayout) {
+  fn new(self) -> QGraphicsLinearLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QGraphicsLinearLayoutC1ERKS_()};
     let ctysz: c_int = unsafe{QGraphicsLinearLayout_Class_Size()};
@@ -333,19 +333,19 @@ impl<'a> /*trait*/ QGraphicsLinearLayout_insertItem<()> for (i32, &'a QGraphicsL
 
   // proto:  void QGraphicsLinearLayout::~QGraphicsLinearLayout();
 impl /*struct*/ QGraphicsLinearLayout {
-  pub fn Free<RetType, T: QGraphicsLinearLayout_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QGraphicsLinearLayout_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsLinearLayout_Free<RetType> {
-  fn Free(self , rsthis: & QGraphicsLinearLayout) -> RetType;
+pub trait QGraphicsLinearLayout_free<RetType> {
+  fn free(self , rsthis: & QGraphicsLinearLayout) -> RetType;
 }
 
   // proto:  void QGraphicsLinearLayout::~QGraphicsLinearLayout();
-impl<'a> /*trait*/ QGraphicsLinearLayout_Free<()> for () {
-  fn Free(self , rsthis: & QGraphicsLinearLayout) -> () {
+impl<'a> /*trait*/ QGraphicsLinearLayout_free<()> for () {
+  fn free(self , rsthis: & QGraphicsLinearLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QGraphicsLinearLayoutD0Ev()};
      unsafe {_ZN21QGraphicsLinearLayoutD0Ev(rsthis.qclsinst)};

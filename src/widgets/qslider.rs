@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qslider.h
 // dst-file: /src/widgets/qslider.rs
 //
@@ -198,20 +198,20 @@ impl<'a> /*trait*/ QSlider_setTickInterval<()> for (i32) {
 
   // proto:  void QSlider::QSlider(const QSlider & );
 impl /*struct*/ QSlider {
-  pub fn New<T: QSlider_New>(value: T) -> QSlider {
-    let rsthis = value.New();
+  pub fn new<T: QSlider_new>(value: T) -> QSlider {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QSlider_New {
-  fn New(self) -> QSlider;
+pub trait QSlider_new {
+  fn new(self) -> QSlider;
 }
 
   // proto:  void QSlider::QSlider(const QSlider & );
-impl<'a> /*trait*/ QSlider_New for (&'a QSlider) {
-  fn New(self) -> QSlider {
+impl<'a> /*trait*/ QSlider_new for (&'a QSlider) {
+  fn new(self) -> QSlider {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QSliderC1ERKS_()};
     let ctysz: c_int = unsafe{QSlider_Class_Size()};
@@ -227,19 +227,19 @@ impl<'a> /*trait*/ QSlider_New for (&'a QSlider) {
 
   // proto:  void QSlider::~QSlider();
 impl /*struct*/ QSlider {
-  pub fn Free<RetType, T: QSlider_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QSlider_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QSlider_Free<RetType> {
-  fn Free(self , rsthis: & QSlider) -> RetType;
+pub trait QSlider_free<RetType> {
+  fn free(self , rsthis: & QSlider) -> RetType;
 }
 
   // proto:  void QSlider::~QSlider();
-impl<'a> /*trait*/ QSlider_Free<()> for () {
-  fn Free(self , rsthis: & QSlider) -> () {
+impl<'a> /*trait*/ QSlider_free<()> for () {
+  fn free(self , rsthis: & QSlider) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QSliderD0Ev()};
      unsafe {_ZN7QSliderD0Ev(rsthis.qclsinst)};
@@ -248,8 +248,8 @@ impl<'a> /*trait*/ QSlider_Free<()> for () {
 }
 
   // proto:  void QSlider::QSlider(QWidget * parent);
-impl<'a> /*trait*/ QSlider_New for (&'a QWidget) {
-  fn New(self) -> QSlider {
+impl<'a> /*trait*/ QSlider_new for (&'a QWidget) {
+  fn new(self) -> QSlider {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QSliderC1EP7QWidget()};
     let ctysz: c_int = unsafe{QSlider_Class_Size()};

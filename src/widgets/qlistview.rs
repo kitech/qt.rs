@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qlistview.h
 // dst-file: /src/widgets/qlistview.rs
 //
@@ -123,20 +123,20 @@ impl AsRef<QAbstractItemView> for QListView {
 }
   // proto:  void QListView::QListView(QWidget * parent);
 impl /*struct*/ QListView {
-  pub fn New<T: QListView_New>(value: T) -> QListView {
-    let rsthis = value.New();
+  pub fn new<T: QListView_new>(value: T) -> QListView {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QListView_New {
-  fn New(self) -> QListView;
+pub trait QListView_new {
+  fn new(self) -> QListView;
 }
 
   // proto:  void QListView::QListView(QWidget * parent);
-impl<'a> /*trait*/ QListView_New for (&'a QWidget) {
-  fn New(self) -> QListView {
+impl<'a> /*trait*/ QListView_new for (&'a QWidget) {
+  fn new(self) -> QListView {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QListViewC1EP7QWidget()};
     let ctysz: c_int = unsafe{QListView_Class_Size()};
@@ -474,8 +474,8 @@ impl<'a> /*trait*/ QListView_setModelColumn<()> for (i32) {
 }
 
   // proto:  void QListView::QListView(const QListView & );
-impl<'a> /*trait*/ QListView_New for (&'a QListView) {
-  fn New(self) -> QListView {
+impl<'a> /*trait*/ QListView_new for (&'a QListView) {
+  fn new(self) -> QListView {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QListViewC1ERKS_()};
     let ctysz: c_int = unsafe{QListView_Class_Size()};
@@ -563,19 +563,19 @@ impl<'a> /*trait*/ QListView_isRowHidden<i8> for (i32) {
 
   // proto:  void QListView::~QListView();
 impl /*struct*/ QListView {
-  pub fn Free<RetType, T: QListView_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QListView_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QListView_Free<RetType> {
-  fn Free(self , rsthis: & QListView) -> RetType;
+pub trait QListView_free<RetType> {
+  fn free(self , rsthis: & QListView) -> RetType;
 }
 
   // proto:  void QListView::~QListView();
-impl<'a> /*trait*/ QListView_Free<()> for () {
-  fn Free(self , rsthis: & QListView) -> () {
+impl<'a> /*trait*/ QListView_free<()> for () {
+  fn free(self , rsthis: & QListView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QListViewD0Ev()};
      unsafe {_ZN9QListViewD0Ev(rsthis.qclsinst)};

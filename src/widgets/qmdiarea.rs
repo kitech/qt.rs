@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qmdiarea.h
 // dst-file: /src/widgets/qmdiarea.rs
 //
@@ -162,19 +162,19 @@ impl<'a> /*trait*/ QMdiArea_setBackground<()> for (&'a QBrush) {
 
   // proto:  void QMdiArea::~QMdiArea();
 impl /*struct*/ QMdiArea {
-  pub fn Free<RetType, T: QMdiArea_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QMdiArea_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QMdiArea_Free<RetType> {
-  fn Free(self , rsthis: & QMdiArea) -> RetType;
+pub trait QMdiArea_free<RetType> {
+  fn free(self , rsthis: & QMdiArea) -> RetType;
 }
 
   // proto:  void QMdiArea::~QMdiArea();
-impl<'a> /*trait*/ QMdiArea_Free<()> for () {
-  fn Free(self , rsthis: & QMdiArea) -> () {
+impl<'a> /*trait*/ QMdiArea_free<()> for () {
+  fn free(self , rsthis: & QMdiArea) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMdiAreaD0Ev()};
      unsafe {_ZN8QMdiAreaD0Ev(rsthis.qclsinst)};
@@ -437,20 +437,20 @@ impl<'a> /*trait*/ QMdiArea_metaObject<()> for () {
 
   // proto:  void QMdiArea::QMdiArea(QWidget * parent);
 impl /*struct*/ QMdiArea {
-  pub fn New<T: QMdiArea_New>(value: T) -> QMdiArea {
-    let rsthis = value.New();
+  pub fn new<T: QMdiArea_new>(value: T) -> QMdiArea {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QMdiArea_New {
-  fn New(self) -> QMdiArea;
+pub trait QMdiArea_new {
+  fn new(self) -> QMdiArea;
 }
 
   // proto:  void QMdiArea::QMdiArea(QWidget * parent);
-impl<'a> /*trait*/ QMdiArea_New for (&'a QWidget) {
-  fn New(self) -> QMdiArea {
+impl<'a> /*trait*/ QMdiArea_new for (&'a QWidget) {
+  fn new(self) -> QMdiArea {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMdiAreaC1EP7QWidget()};
     let ctysz: c_int = unsafe{QMdiArea_Class_Size()};
@@ -511,8 +511,8 @@ impl<'a> /*trait*/ QMdiArea_closeAllSubWindows<()> for () {
 }
 
   // proto:  void QMdiArea::QMdiArea(const QMdiArea & );
-impl<'a> /*trait*/ QMdiArea_New for (&'a QMdiArea) {
-  fn New(self) -> QMdiArea {
+impl<'a> /*trait*/ QMdiArea_new for (&'a QMdiArea) {
+  fn new(self) -> QMdiArea {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMdiAreaC1ERKS_()};
     let ctysz: c_int = unsafe{QMdiArea_Class_Size()};
@@ -708,7 +708,7 @@ extern fn QMdiArea_subWindowActivated_signal_connect_cb_0(rsfptr:fn(QMdiSubWindo
   let rsarg0 = QMdiSubWindow::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QMdiArea_subWindowActivated_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QMdiSubWindow), arg0: *mut c_void) {
+extern fn QMdiArea_subWindowActivated_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QMdiSubWindow), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QMdiSubWindow::inheritFrom(arg0 as u64);
@@ -717,7 +717,8 @@ extern fn QMdiArea_subWindowActivated_signal_connect_cb_box_0(rsfptr_raw:*mut fn
 impl /* trait */ QMdiArea_subWindowActivated_signal_connect for fn(QMdiSubWindow) {
   fn connect(self, sigthis: QMdiArea_subWindowActivated_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QMdiArea_subWindowActivated_signal_connect_cb_0 as *mut c_void;
@@ -725,7 +726,7 @@ impl /* trait */ QMdiArea_subWindowActivated_signal_connect for fn(QMdiSubWindow
     unsafe {QMdiArea_SlotProxy_connect__ZN8QMdiArea18subWindowActivatedEP13QMdiSubWindow(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QMdiArea_subWindowActivated_signal_connect for Box<fn(QMdiSubWindow)> {
+impl /* trait */ QMdiArea_subWindowActivated_signal_connect for Box<Fn(QMdiSubWindow)> {
   fn connect(self, sigthis: QMdiArea_subWindowActivated_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

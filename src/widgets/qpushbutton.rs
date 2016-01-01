@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qpushbutton.h
 // dst-file: /src/widgets/qpushbutton.rs
 //
@@ -218,19 +218,19 @@ impl<'a> /*trait*/ QPushButton_setDefault<()> for (i8) {
 
   // proto:  void QPushButton::~QPushButton();
 impl /*struct*/ QPushButton {
-  pub fn Free<RetType, T: QPushButton_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QPushButton_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QPushButton_Free<RetType> {
-  fn Free(self , rsthis: & QPushButton) -> RetType;
+pub trait QPushButton_free<RetType> {
+  fn free(self , rsthis: & QPushButton) -> RetType;
 }
 
   // proto:  void QPushButton::~QPushButton();
-impl<'a> /*trait*/ QPushButton_Free<()> for () {
-  fn Free(self , rsthis: & QPushButton) -> () {
+impl<'a> /*trait*/ QPushButton_free<()> for () {
+  fn free(self , rsthis: & QPushButton) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPushButtonD0Ev()};
      unsafe {_ZN11QPushButtonD0Ev(rsthis.qclsinst)};
@@ -240,20 +240,20 @@ impl<'a> /*trait*/ QPushButton_Free<()> for () {
 
   // proto:  void QPushButton::QPushButton(const QPushButton & );
 impl /*struct*/ QPushButton {
-  pub fn New<T: QPushButton_New>(value: T) -> QPushButton {
-    let rsthis = value.New();
+  pub fn new<T: QPushButton_new>(value: T) -> QPushButton {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QPushButton_New {
-  fn New(self) -> QPushButton;
+pub trait QPushButton_new {
+  fn new(self) -> QPushButton;
 }
 
   // proto:  void QPushButton::QPushButton(const QPushButton & );
-impl<'a> /*trait*/ QPushButton_New for (&'a QPushButton) {
-  fn New(self) -> QPushButton {
+impl<'a> /*trait*/ QPushButton_new for (&'a QPushButton) {
+  fn new(self) -> QPushButton {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPushButtonC1ERKS_()};
     let ctysz: c_int = unsafe{QPushButton_Class_Size()};
@@ -291,8 +291,8 @@ impl<'a> /*trait*/ QPushButton_isDefault<i8> for () {
 }
 
   // proto:  void QPushButton::QPushButton(const QIcon & icon, const QString & text, QWidget * parent);
-impl<'a> /*trait*/ QPushButton_New for (&'a QIcon, &'a QString, &'a QWidget) {
-  fn New(self) -> QPushButton {
+impl<'a> /*trait*/ QPushButton_new for (&'a QIcon, &'a QString, &'a QWidget) {
+  fn new(self) -> QPushButton {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPushButtonC1ERK5QIconRK7QStringP7QWidget()};
     let ctysz: c_int = unsafe{QPushButton_Class_Size()};
@@ -402,8 +402,8 @@ impl<'a> /*trait*/ QPushButton_menu<QMenu> for () {
 }
 
   // proto:  void QPushButton::QPushButton(QWidget * parent);
-impl<'a> /*trait*/ QPushButton_New for (&'a QWidget) {
-  fn New(self) -> QPushButton {
+impl<'a> /*trait*/ QPushButton_new for (&'a QWidget) {
+  fn new(self) -> QPushButton {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPushButtonC1EP7QWidget()};
     let ctysz: c_int = unsafe{QPushButton_Class_Size()};
@@ -440,8 +440,8 @@ impl<'a> /*trait*/ QPushButton_showMenu<()> for () {
 }
 
   // proto:  void QPushButton::QPushButton(const QString & text, QWidget * parent);
-impl<'a> /*trait*/ QPushButton_New for (&'a QString, &'a QWidget) {
-  fn New(self) -> QPushButton {
+impl<'a> /*trait*/ QPushButton_new for (&'a QString, &'a QWidget) {
+  fn new(self) -> QPushButton {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPushButtonC1ERK7QStringP7QWidget()};
     let ctysz: c_int = unsafe{QPushButton_Class_Size()};

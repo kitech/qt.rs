@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qwidget.h
 // dst-file: /src/widgets/qwidget.rs
 //
@@ -3032,19 +3032,19 @@ impl<'a> /*trait*/ QWidget_setWindowIcon<()> for (&'a QIcon) {
 
   // proto:  void QWidget::~QWidget();
 impl /*struct*/ QWidget {
-  pub fn Free<RetType, T: QWidget_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QWidget_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QWidget_Free<RetType> {
-  fn Free(self , rsthis: & QWidget) -> RetType;
+pub trait QWidget_free<RetType> {
+  fn free(self , rsthis: & QWidget) -> RetType;
 }
 
   // proto:  void QWidget::~QWidget();
-impl<'a> /*trait*/ QWidget_Free<()> for () {
-  fn Free(self , rsthis: & QWidget) -> () {
+impl<'a> /*trait*/ QWidget_free<()> for () {
+  fn free(self , rsthis: & QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidgetD0Ev()};
      unsafe {_ZN7QWidgetD0Ev(rsthis.qclsinst)};
@@ -4569,20 +4569,20 @@ impl<'a> /*trait*/ QWidget_isAncestorOf<i8> for (&'a QWidget) {
 
   // proto:  void QWidget::QWidget(const QWidget & );
 impl /*struct*/ QWidget {
-  pub fn New<T: QWidget_New>(value: T) -> QWidget {
-    let rsthis = value.New();
+  pub fn new<T: QWidget_new>(value: T) -> QWidget {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QWidget_New {
-  fn New(self) -> QWidget;
+pub trait QWidget_new {
+  fn new(self) -> QWidget;
 }
 
   // proto:  void QWidget::QWidget(const QWidget & );
-impl<'a> /*trait*/ QWidget_New for (&'a QWidget) {
-  fn New(self) -> QWidget {
+impl<'a> /*trait*/ QWidget_new for (&'a QWidget) {
+  fn new(self) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidgetC1ERKS_()};
     let ctysz: c_int = unsafe{QWidget_Class_Size()};
@@ -5332,7 +5332,7 @@ extern fn QWidget_customContextMenuRequested_signal_connect_cb_0(rsfptr:fn(QPoin
   let rsarg0 = QPoint::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QWidget_customContextMenuRequested_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QPoint), arg0: *mut c_void) {
+extern fn QWidget_customContextMenuRequested_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QPoint), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QPoint::inheritFrom(arg0 as u64);
@@ -5341,7 +5341,8 @@ extern fn QWidget_customContextMenuRequested_signal_connect_cb_box_0(rsfptr_raw:
 impl /* trait */ QWidget_customContextMenuRequested_signal_connect for fn(QPoint) {
   fn connect(self, sigthis: QWidget_customContextMenuRequested_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QWidget_customContextMenuRequested_signal_connect_cb_0 as *mut c_void;
@@ -5349,7 +5350,7 @@ impl /* trait */ QWidget_customContextMenuRequested_signal_connect for fn(QPoint
     unsafe {QWidget_SlotProxy_connect__ZN7QWidget26customContextMenuRequestedERK6QPoint(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QWidget_customContextMenuRequested_signal_connect for Box<fn(QPoint)> {
+impl /* trait */ QWidget_customContextMenuRequested_signal_connect for Box<Fn(QPoint)> {
   fn connect(self, sigthis: QWidget_customContextMenuRequested_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -5366,7 +5367,7 @@ extern fn QWidget_windowIconChanged_signal_connect_cb_1(rsfptr:fn(QIcon), arg0: 
   let rsarg0 = QIcon::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QWidget_windowIconChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(QIcon), arg0: *mut c_void) {
+extern fn QWidget_windowIconChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(QIcon), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QIcon::inheritFrom(arg0 as u64);
@@ -5375,7 +5376,8 @@ extern fn QWidget_windowIconChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(Q
 impl /* trait */ QWidget_windowIconChanged_signal_connect for fn(QIcon) {
   fn connect(self, sigthis: QWidget_windowIconChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QWidget_windowIconChanged_signal_connect_cb_1 as *mut c_void;
@@ -5383,7 +5385,7 @@ impl /* trait */ QWidget_windowIconChanged_signal_connect for fn(QIcon) {
     unsafe {QWidget_SlotProxy_connect__ZN7QWidget17windowIconChangedERK5QIcon(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QWidget_windowIconChanged_signal_connect for Box<fn(QIcon)> {
+impl /* trait */ QWidget_windowIconChanged_signal_connect for Box<Fn(QIcon)> {
   fn connect(self, sigthis: QWidget_windowIconChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -5400,7 +5402,7 @@ extern fn QWidget_windowIconTextChanged_signal_connect_cb_2(rsfptr:fn(QString), 
   let rsarg0 = QString::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QWidget_windowIconTextChanged_signal_connect_cb_box_2(rsfptr_raw:*mut fn(QString), arg0: *mut c_void) {
+extern fn QWidget_windowIconTextChanged_signal_connect_cb_box_2(rsfptr_raw:*mut Fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QString::inheritFrom(arg0 as u64);
@@ -5409,7 +5411,8 @@ extern fn QWidget_windowIconTextChanged_signal_connect_cb_box_2(rsfptr_raw:*mut 
 impl /* trait */ QWidget_windowIconTextChanged_signal_connect for fn(QString) {
   fn connect(self, sigthis: QWidget_windowIconTextChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QWidget_windowIconTextChanged_signal_connect_cb_2 as *mut c_void;
@@ -5417,7 +5420,7 @@ impl /* trait */ QWidget_windowIconTextChanged_signal_connect for fn(QString) {
     unsafe {QWidget_SlotProxy_connect__ZN7QWidget21windowIconTextChangedERK7QString(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QWidget_windowIconTextChanged_signal_connect for Box<fn(QString)> {
+impl /* trait */ QWidget_windowIconTextChanged_signal_connect for Box<Fn(QString)> {
   fn connect(self, sigthis: QWidget_windowIconTextChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -5434,7 +5437,7 @@ extern fn QWidget_windowTitleChanged_signal_connect_cb_3(rsfptr:fn(QString), arg
   let rsarg0 = QString::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QWidget_windowTitleChanged_signal_connect_cb_box_3(rsfptr_raw:*mut fn(QString), arg0: *mut c_void) {
+extern fn QWidget_windowTitleChanged_signal_connect_cb_box_3(rsfptr_raw:*mut Fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QString::inheritFrom(arg0 as u64);
@@ -5443,7 +5446,8 @@ extern fn QWidget_windowTitleChanged_signal_connect_cb_box_3(rsfptr_raw:*mut fn(
 impl /* trait */ QWidget_windowTitleChanged_signal_connect for fn(QString) {
   fn connect(self, sigthis: QWidget_windowTitleChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QWidget_windowTitleChanged_signal_connect_cb_3 as *mut c_void;
@@ -5451,7 +5455,7 @@ impl /* trait */ QWidget_windowTitleChanged_signal_connect for fn(QString) {
     unsafe {QWidget_SlotProxy_connect__ZN7QWidget18windowTitleChangedERK7QString(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QWidget_windowTitleChanged_signal_connect for Box<fn(QString)> {
+impl /* trait */ QWidget_windowTitleChanged_signal_connect for Box<Fn(QString)> {
   fn connect(self, sigthis: QWidget_windowTitleChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

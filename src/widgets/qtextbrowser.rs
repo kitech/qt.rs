@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qtextbrowser.h
 // dst-file: /src/widgets/qtextbrowser.rs
 //
@@ -370,20 +370,20 @@ impl<'a> /*trait*/ QTextBrowser_openExternalLinks<i8> for () {
 
   // proto:  void QTextBrowser::QTextBrowser(QWidget * parent);
 impl /*struct*/ QTextBrowser {
-  pub fn New<T: QTextBrowser_New>(value: T) -> QTextBrowser {
-    let rsthis = value.New();
+  pub fn new<T: QTextBrowser_new>(value: T) -> QTextBrowser {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTextBrowser_New {
-  fn New(self) -> QTextBrowser;
+pub trait QTextBrowser_new {
+  fn new(self) -> QTextBrowser;
 }
 
   // proto:  void QTextBrowser::QTextBrowser(QWidget * parent);
-impl<'a> /*trait*/ QTextBrowser_New for (&'a QWidget) {
-  fn New(self) -> QTextBrowser {
+impl<'a> /*trait*/ QTextBrowser_new for (&'a QWidget) {
+  fn new(self) -> QTextBrowser {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTextBrowserC1EP7QWidget()};
     let ctysz: c_int = unsafe{QTextBrowser_Class_Size()};
@@ -444,19 +444,19 @@ impl<'a> /*trait*/ QTextBrowser_home<()> for () {
 
   // proto:  void QTextBrowser::~QTextBrowser();
 impl /*struct*/ QTextBrowser {
-  pub fn Free<RetType, T: QTextBrowser_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QTextBrowser_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QTextBrowser_Free<RetType> {
-  fn Free(self , rsthis: & QTextBrowser) -> RetType;
+pub trait QTextBrowser_free<RetType> {
+  fn free(self , rsthis: & QTextBrowser) -> RetType;
 }
 
   // proto:  void QTextBrowser::~QTextBrowser();
-impl<'a> /*trait*/ QTextBrowser_Free<()> for () {
-  fn Free(self , rsthis: & QTextBrowser) -> () {
+impl<'a> /*trait*/ QTextBrowser_free<()> for () {
+  fn free(self , rsthis: & QTextBrowser) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTextBrowserD0Ev()};
      unsafe {_ZN12QTextBrowserD0Ev(rsthis.qclsinst)};
@@ -465,8 +465,8 @@ impl<'a> /*trait*/ QTextBrowser_Free<()> for () {
 }
 
   // proto:  void QTextBrowser::QTextBrowser(const QTextBrowser & );
-impl<'a> /*trait*/ QTextBrowser_New for (&'a QTextBrowser) {
-  fn New(self) -> QTextBrowser {
+impl<'a> /*trait*/ QTextBrowser_new for (&'a QTextBrowser) {
+  fn new(self) -> QTextBrowser {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTextBrowserC1ERKS_()};
     let ctysz: c_int = unsafe{QTextBrowser_Class_Size()};
@@ -939,7 +939,7 @@ extern fn QTextBrowser_historyChanged_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QTextBrowser_historyChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(), ) {
+extern fn QTextBrowser_historyChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   rsfptr();
@@ -947,7 +947,8 @@ extern fn QTextBrowser_historyChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn
 impl /* trait */ QTextBrowser_historyChanged_signal_connect for fn() {
   fn connect(self, sigthis: QTextBrowser_historyChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QTextBrowser_historyChanged_signal_connect_cb_0 as *mut c_void;
@@ -955,7 +956,7 @@ impl /* trait */ QTextBrowser_historyChanged_signal_connect for fn() {
     unsafe {QTextBrowser_SlotProxy_connect__ZN12QTextBrowser14historyChangedEv(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QTextBrowser_historyChanged_signal_connect for Box<fn()> {
+impl /* trait */ QTextBrowser_historyChanged_signal_connect for Box<Fn()> {
   fn connect(self, sigthis: QTextBrowser_historyChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -972,7 +973,7 @@ extern fn QTextBrowser_highlighted_signal_connect_cb_1(rsfptr:fn(QString), arg0:
   let rsarg0 = QString::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QTextBrowser_highlighted_signal_connect_cb_box_1(rsfptr_raw:*mut fn(QString), arg0: *mut c_void) {
+extern fn QTextBrowser_highlighted_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QString::inheritFrom(arg0 as u64);
@@ -981,7 +982,8 @@ extern fn QTextBrowser_highlighted_signal_connect_cb_box_1(rsfptr_raw:*mut fn(QS
 impl /* trait */ QTextBrowser_highlighted_signal_connect for fn(QString) {
   fn connect(self, sigthis: QTextBrowser_highlighted_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QTextBrowser_highlighted_signal_connect_cb_1 as *mut c_void;
@@ -989,7 +991,7 @@ impl /* trait */ QTextBrowser_highlighted_signal_connect for fn(QString) {
     unsafe {QTextBrowser_SlotProxy_connect__ZN12QTextBrowser11highlightedERK7QString(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QTextBrowser_highlighted_signal_connect for Box<fn(QString)> {
+impl /* trait */ QTextBrowser_highlighted_signal_connect for Box<Fn(QString)> {
   fn connect(self, sigthis: QTextBrowser_highlighted_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -1006,7 +1008,7 @@ extern fn QTextBrowser_sourceChanged_signal_connect_cb_2(rsfptr:fn(QUrl), arg0: 
   let rsarg0 = QUrl::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QTextBrowser_sourceChanged_signal_connect_cb_box_2(rsfptr_raw:*mut fn(QUrl), arg0: *mut c_void) {
+extern fn QTextBrowser_sourceChanged_signal_connect_cb_box_2(rsfptr_raw:*mut Fn(QUrl), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QUrl::inheritFrom(arg0 as u64);
@@ -1015,7 +1017,8 @@ extern fn QTextBrowser_sourceChanged_signal_connect_cb_box_2(rsfptr_raw:*mut fn(
 impl /* trait */ QTextBrowser_sourceChanged_signal_connect for fn(QUrl) {
   fn connect(self, sigthis: QTextBrowser_sourceChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QTextBrowser_sourceChanged_signal_connect_cb_2 as *mut c_void;
@@ -1023,7 +1026,7 @@ impl /* trait */ QTextBrowser_sourceChanged_signal_connect for fn(QUrl) {
     unsafe {QTextBrowser_SlotProxy_connect__ZN12QTextBrowser13sourceChangedERK4QUrl(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QTextBrowser_sourceChanged_signal_connect for Box<fn(QUrl)> {
+impl /* trait */ QTextBrowser_sourceChanged_signal_connect for Box<Fn(QUrl)> {
   fn connect(self, sigthis: QTextBrowser_sourceChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -1040,7 +1043,7 @@ extern fn QTextBrowser_highlighted_signal_connect_cb_3(rsfptr:fn(QUrl), arg0: *m
   let rsarg0 = QUrl::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QTextBrowser_highlighted_signal_connect_cb_box_3(rsfptr_raw:*mut fn(QUrl), arg0: *mut c_void) {
+extern fn QTextBrowser_highlighted_signal_connect_cb_box_3(rsfptr_raw:*mut Fn(QUrl), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QUrl::inheritFrom(arg0 as u64);
@@ -1049,7 +1052,8 @@ extern fn QTextBrowser_highlighted_signal_connect_cb_box_3(rsfptr_raw:*mut fn(QU
 impl /* trait */ QTextBrowser_highlighted_signal_connect for fn(QUrl) {
   fn connect(self, sigthis: QTextBrowser_highlighted_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QTextBrowser_highlighted_signal_connect_cb_3 as *mut c_void;
@@ -1057,7 +1061,7 @@ impl /* trait */ QTextBrowser_highlighted_signal_connect for fn(QUrl) {
     unsafe {QTextBrowser_SlotProxy_connect__ZN12QTextBrowser11highlightedERK4QUrl(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QTextBrowser_highlighted_signal_connect for Box<fn(QUrl)> {
+impl /* trait */ QTextBrowser_highlighted_signal_connect for Box<Fn(QUrl)> {
   fn connect(self, sigthis: QTextBrowser_highlighted_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -1074,7 +1078,7 @@ extern fn QTextBrowser_forwardAvailable_signal_connect_cb_4(rsfptr:fn(i8), arg0:
   let rsarg0 = arg0 as i8;
   rsfptr(rsarg0);
 }
-extern fn QTextBrowser_forwardAvailable_signal_connect_cb_box_4(rsfptr_raw:*mut fn(i8), arg0: c_char) {
+extern fn QTextBrowser_forwardAvailable_signal_connect_cb_box_4(rsfptr_raw:*mut Fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i8;
@@ -1083,7 +1087,8 @@ extern fn QTextBrowser_forwardAvailable_signal_connect_cb_box_4(rsfptr_raw:*mut 
 impl /* trait */ QTextBrowser_forwardAvailable_signal_connect for fn(i8) {
   fn connect(self, sigthis: QTextBrowser_forwardAvailable_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QTextBrowser_forwardAvailable_signal_connect_cb_4 as *mut c_void;
@@ -1091,7 +1096,7 @@ impl /* trait */ QTextBrowser_forwardAvailable_signal_connect for fn(i8) {
     unsafe {QTextBrowser_SlotProxy_connect__ZN12QTextBrowser16forwardAvailableEb(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QTextBrowser_forwardAvailable_signal_connect for Box<fn(i8)> {
+impl /* trait */ QTextBrowser_forwardAvailable_signal_connect for Box<Fn(i8)> {
   fn connect(self, sigthis: QTextBrowser_forwardAvailable_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -1108,7 +1113,7 @@ extern fn QTextBrowser_anchorClicked_signal_connect_cb_5(rsfptr:fn(QUrl), arg0: 
   let rsarg0 = QUrl::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QTextBrowser_anchorClicked_signal_connect_cb_box_5(rsfptr_raw:*mut fn(QUrl), arg0: *mut c_void) {
+extern fn QTextBrowser_anchorClicked_signal_connect_cb_box_5(rsfptr_raw:*mut Fn(QUrl), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QUrl::inheritFrom(arg0 as u64);
@@ -1117,7 +1122,8 @@ extern fn QTextBrowser_anchorClicked_signal_connect_cb_box_5(rsfptr_raw:*mut fn(
 impl /* trait */ QTextBrowser_anchorClicked_signal_connect for fn(QUrl) {
   fn connect(self, sigthis: QTextBrowser_anchorClicked_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QTextBrowser_anchorClicked_signal_connect_cb_5 as *mut c_void;
@@ -1125,7 +1131,7 @@ impl /* trait */ QTextBrowser_anchorClicked_signal_connect for fn(QUrl) {
     unsafe {QTextBrowser_SlotProxy_connect__ZN12QTextBrowser13anchorClickedERK4QUrl(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QTextBrowser_anchorClicked_signal_connect for Box<fn(QUrl)> {
+impl /* trait */ QTextBrowser_anchorClicked_signal_connect for Box<Fn(QUrl)> {
   fn connect(self, sigthis: QTextBrowser_anchorClicked_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -1142,7 +1148,7 @@ extern fn QTextBrowser_backwardAvailable_signal_connect_cb_6(rsfptr:fn(i8), arg0
   let rsarg0 = arg0 as i8;
   rsfptr(rsarg0);
 }
-extern fn QTextBrowser_backwardAvailable_signal_connect_cb_box_6(rsfptr_raw:*mut fn(i8), arg0: c_char) {
+extern fn QTextBrowser_backwardAvailable_signal_connect_cb_box_6(rsfptr_raw:*mut Fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i8;
@@ -1151,7 +1157,8 @@ extern fn QTextBrowser_backwardAvailable_signal_connect_cb_box_6(rsfptr_raw:*mut
 impl /* trait */ QTextBrowser_backwardAvailable_signal_connect for fn(i8) {
   fn connect(self, sigthis: QTextBrowser_backwardAvailable_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QTextBrowser_backwardAvailable_signal_connect_cb_6 as *mut c_void;
@@ -1159,7 +1166,7 @@ impl /* trait */ QTextBrowser_backwardAvailable_signal_connect for fn(i8) {
     unsafe {QTextBrowser_SlotProxy_connect__ZN12QTextBrowser17backwardAvailableEb(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QTextBrowser_backwardAvailable_signal_connect for Box<fn(i8)> {
+impl /* trait */ QTextBrowser_backwardAvailable_signal_connect for Box<Fn(i8)> {
   fn connect(self, sigthis: QTextBrowser_backwardAvailable_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

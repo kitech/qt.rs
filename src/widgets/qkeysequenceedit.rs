@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qkeysequenceedit.h
 // dst-file: /src/widgets/qkeysequenceedit.rs
 //
@@ -87,20 +87,20 @@ impl AsRef<QWidget> for QKeySequenceEdit {
 }
   // proto:  void QKeySequenceEdit::QKeySequenceEdit(const QKeySequenceEdit & );
 impl /*struct*/ QKeySequenceEdit {
-  pub fn New<T: QKeySequenceEdit_New>(value: T) -> QKeySequenceEdit {
-    let rsthis = value.New();
+  pub fn new<T: QKeySequenceEdit_new>(value: T) -> QKeySequenceEdit {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QKeySequenceEdit_New {
-  fn New(self) -> QKeySequenceEdit;
+pub trait QKeySequenceEdit_new {
+  fn new(self) -> QKeySequenceEdit;
 }
 
   // proto:  void QKeySequenceEdit::QKeySequenceEdit(const QKeySequenceEdit & );
-impl<'a> /*trait*/ QKeySequenceEdit_New for (&'a QKeySequenceEdit) {
-  fn New(self) -> QKeySequenceEdit {
+impl<'a> /*trait*/ QKeySequenceEdit_new for (&'a QKeySequenceEdit) {
+  fn new(self) -> QKeySequenceEdit {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QKeySequenceEditC1ERKS_()};
     let ctysz: c_int = unsafe{QKeySequenceEdit_Class_Size()};
@@ -115,8 +115,8 @@ impl<'a> /*trait*/ QKeySequenceEdit_New for (&'a QKeySequenceEdit) {
 }
 
   // proto:  void QKeySequenceEdit::QKeySequenceEdit(const QKeySequence & keySequence, QWidget * parent);
-impl<'a> /*trait*/ QKeySequenceEdit_New for (&'a QKeySequence, &'a QWidget) {
-  fn New(self) -> QKeySequenceEdit {
+impl<'a> /*trait*/ QKeySequenceEdit_new for (&'a QKeySequence, &'a QWidget) {
+  fn new(self) -> QKeySequenceEdit {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QKeySequenceEditC1ERK12QKeySequenceP7QWidget()};
     let ctysz: c_int = unsafe{QKeySequenceEdit_Class_Size()};
@@ -202,19 +202,19 @@ impl<'a> /*trait*/ QKeySequenceEdit_keySequence<QKeySequence> for () {
 
   // proto:  void QKeySequenceEdit::~QKeySequenceEdit();
 impl /*struct*/ QKeySequenceEdit {
-  pub fn Free<RetType, T: QKeySequenceEdit_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QKeySequenceEdit_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QKeySequenceEdit_Free<RetType> {
-  fn Free(self , rsthis: & QKeySequenceEdit) -> RetType;
+pub trait QKeySequenceEdit_free<RetType> {
+  fn free(self , rsthis: & QKeySequenceEdit) -> RetType;
 }
 
   // proto:  void QKeySequenceEdit::~QKeySequenceEdit();
-impl<'a> /*trait*/ QKeySequenceEdit_Free<()> for () {
-  fn Free(self , rsthis: & QKeySequenceEdit) -> () {
+impl<'a> /*trait*/ QKeySequenceEdit_free<()> for () {
+  fn free(self , rsthis: & QKeySequenceEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QKeySequenceEditD0Ev()};
      unsafe {_ZN16QKeySequenceEditD0Ev(rsthis.qclsinst)};
@@ -268,8 +268,8 @@ impl<'a> /*trait*/ QKeySequenceEdit_editingFinished<()> for () {
 }
 
   // proto:  void QKeySequenceEdit::QKeySequenceEdit(QWidget * parent);
-impl<'a> /*trait*/ QKeySequenceEdit_New for (&'a QWidget) {
-  fn New(self) -> QKeySequenceEdit {
+impl<'a> /*trait*/ QKeySequenceEdit_new for (&'a QWidget) {
+  fn new(self) -> QKeySequenceEdit {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QKeySequenceEditC1EP7QWidget()};
     let ctysz: c_int = unsafe{QKeySequenceEdit_Class_Size()};
@@ -343,7 +343,7 @@ extern fn QKeySequenceEdit_keySequenceChanged_signal_connect_cb_0(rsfptr:fn(QKey
   let rsarg0 = QKeySequence::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QKeySequenceEdit_keySequenceChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QKeySequence), arg0: *mut c_void) {
+extern fn QKeySequenceEdit_keySequenceChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QKeySequence), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QKeySequence::inheritFrom(arg0 as u64);
@@ -352,7 +352,8 @@ extern fn QKeySequenceEdit_keySequenceChanged_signal_connect_cb_box_0(rsfptr_raw
 impl /* trait */ QKeySequenceEdit_keySequenceChanged_signal_connect for fn(QKeySequence) {
   fn connect(self, sigthis: QKeySequenceEdit_keySequenceChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QKeySequenceEdit_keySequenceChanged_signal_connect_cb_0 as *mut c_void;
@@ -360,7 +361,7 @@ impl /* trait */ QKeySequenceEdit_keySequenceChanged_signal_connect for fn(QKeyS
     unsafe {QKeySequenceEdit_SlotProxy_connect__ZN16QKeySequenceEdit18keySequenceChangedERK12QKeySequence(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QKeySequenceEdit_keySequenceChanged_signal_connect for Box<fn(QKeySequence)> {
+impl /* trait */ QKeySequenceEdit_keySequenceChanged_signal_connect for Box<Fn(QKeySequence)> {
   fn connect(self, sigthis: QKeySequenceEdit_keySequenceChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -376,7 +377,7 @@ extern fn QKeySequenceEdit_editingFinished_signal_connect_cb_1(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QKeySequenceEdit_editingFinished_signal_connect_cb_box_1(rsfptr_raw:*mut fn(), ) {
+extern fn QKeySequenceEdit_editingFinished_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   rsfptr();
@@ -384,7 +385,8 @@ extern fn QKeySequenceEdit_editingFinished_signal_connect_cb_box_1(rsfptr_raw:*m
 impl /* trait */ QKeySequenceEdit_editingFinished_signal_connect for fn() {
   fn connect(self, sigthis: QKeySequenceEdit_editingFinished_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QKeySequenceEdit_editingFinished_signal_connect_cb_1 as *mut c_void;
@@ -392,7 +394,7 @@ impl /* trait */ QKeySequenceEdit_editingFinished_signal_connect for fn() {
     unsafe {QKeySequenceEdit_SlotProxy_connect__ZN16QKeySequenceEdit15editingFinishedEv(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QKeySequenceEdit_editingFinished_signal_connect for Box<fn()> {
+impl /* trait */ QKeySequenceEdit_editingFinished_signal_connect for Box<Fn()> {
   fn connect(self, sigthis: QKeySequenceEdit_editingFinished_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

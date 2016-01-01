@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qprogressbar.h
 // dst-file: /src/widgets/qprogressbar.rs
 //
@@ -295,20 +295,20 @@ impl<'a> /*trait*/ QProgressBar_setMinimum<()> for (i32) {
 
   // proto:  void QProgressBar::QProgressBar(const QProgressBar & );
 impl /*struct*/ QProgressBar {
-  pub fn New<T: QProgressBar_New>(value: T) -> QProgressBar {
-    let rsthis = value.New();
+  pub fn new<T: QProgressBar_new>(value: T) -> QProgressBar {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QProgressBar_New {
-  fn New(self) -> QProgressBar;
+pub trait QProgressBar_new {
+  fn new(self) -> QProgressBar;
 }
 
   // proto:  void QProgressBar::QProgressBar(const QProgressBar & );
-impl<'a> /*trait*/ QProgressBar_New for (&'a QProgressBar) {
-  fn New(self) -> QProgressBar {
+impl<'a> /*trait*/ QProgressBar_new for (&'a QProgressBar) {
+  fn new(self) -> QProgressBar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QProgressBarC1ERKS_()};
     let ctysz: c_int = unsafe{QProgressBar_Class_Size()};
@@ -346,8 +346,8 @@ impl<'a> /*trait*/ QProgressBar_valueChanged<()> for (i32) {
 }
 
   // proto:  void QProgressBar::QProgressBar(QWidget * parent);
-impl<'a> /*trait*/ QProgressBar_New for (&'a QWidget) {
-  fn New(self) -> QProgressBar {
+impl<'a> /*trait*/ QProgressBar_new for (&'a QWidget) {
+  fn new(self) -> QProgressBar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QProgressBarC1EP7QWidget()};
     let ctysz: c_int = unsafe{QProgressBar_Class_Size()};
@@ -595,19 +595,19 @@ impl<'a> /*trait*/ QProgressBar_setInvertedAppearance<()> for (i8) {
 
   // proto:  void QProgressBar::~QProgressBar();
 impl /*struct*/ QProgressBar {
-  pub fn Free<RetType, T: QProgressBar_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QProgressBar_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QProgressBar_Free<RetType> {
-  fn Free(self , rsthis: & QProgressBar) -> RetType;
+pub trait QProgressBar_free<RetType> {
+  fn free(self , rsthis: & QProgressBar) -> RetType;
 }
 
   // proto:  void QProgressBar::~QProgressBar();
-impl<'a> /*trait*/ QProgressBar_Free<()> for () {
-  fn Free(self , rsthis: & QProgressBar) -> () {
+impl<'a> /*trait*/ QProgressBar_free<()> for () {
+  fn free(self , rsthis: & QProgressBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QProgressBarD0Ev()};
      unsafe {_ZN12QProgressBarD0Ev(rsthis.qclsinst)};
@@ -660,7 +660,7 @@ extern fn QProgressBar_valueChanged_signal_connect_cb_0(rsfptr:fn(i32), arg0: c_
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QProgressBar_valueChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i32), arg0: c_int) {
+extern fn QProgressBar_valueChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -669,7 +669,8 @@ extern fn QProgressBar_valueChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i
 impl /* trait */ QProgressBar_valueChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QProgressBar_valueChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QProgressBar_valueChanged_signal_connect_cb_0 as *mut c_void;
@@ -677,7 +678,7 @@ impl /* trait */ QProgressBar_valueChanged_signal_connect for fn(i32) {
     unsafe {QProgressBar_SlotProxy_connect__ZN12QProgressBar12valueChangedEi(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QProgressBar_valueChanged_signal_connect for Box<fn(i32)> {
+impl /* trait */ QProgressBar_valueChanged_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QProgressBar_valueChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

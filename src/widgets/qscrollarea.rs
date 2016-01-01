@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qscrollarea.h
 // dst-file: /src/widgets/qscrollarea.rs
 //
@@ -89,20 +89,20 @@ impl AsRef<QAbstractScrollArea> for QScrollArea {
 }
   // proto:  void QScrollArea::QScrollArea(QWidget * parent);
 impl /*struct*/ QScrollArea {
-  pub fn New<T: QScrollArea_New>(value: T) -> QScrollArea {
-    let rsthis = value.New();
+  pub fn new<T: QScrollArea_new>(value: T) -> QScrollArea {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QScrollArea_New {
-  fn New(self) -> QScrollArea;
+pub trait QScrollArea_new {
+  fn new(self) -> QScrollArea;
 }
 
   // proto:  void QScrollArea::QScrollArea(QWidget * parent);
-impl<'a> /*trait*/ QScrollArea_New for (&'a QWidget) {
-  fn New(self) -> QScrollArea {
+impl<'a> /*trait*/ QScrollArea_new for (&'a QWidget) {
+  fn new(self) -> QScrollArea {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QScrollAreaC1EP7QWidget()};
     let ctysz: c_int = unsafe{QScrollArea_Class_Size()};
@@ -140,8 +140,8 @@ impl<'a> /*trait*/ QScrollArea_setWidgetResizable<()> for (i8) {
 }
 
   // proto:  void QScrollArea::QScrollArea(const QScrollArea & );
-impl<'a> /*trait*/ QScrollArea_New for (&'a QScrollArea) {
-  fn New(self) -> QScrollArea {
+impl<'a> /*trait*/ QScrollArea_new for (&'a QScrollArea) {
+  fn new(self) -> QScrollArea {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QScrollAreaC1ERKS_()};
     let ctysz: c_int = unsafe{QScrollArea_Class_Size()};
@@ -326,19 +326,19 @@ impl<'a> /*trait*/ QScrollArea_widgetResizable<i8> for () {
 
   // proto:  void QScrollArea::~QScrollArea();
 impl /*struct*/ QScrollArea {
-  pub fn Free<RetType, T: QScrollArea_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QScrollArea_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QScrollArea_Free<RetType> {
-  fn Free(self , rsthis: & QScrollArea) -> RetType;
+pub trait QScrollArea_free<RetType> {
+  fn free(self , rsthis: & QScrollArea) -> RetType;
 }
 
   // proto:  void QScrollArea::~QScrollArea();
-impl<'a> /*trait*/ QScrollArea_Free<()> for () {
-  fn Free(self , rsthis: & QScrollArea) -> () {
+impl<'a> /*trait*/ QScrollArea_free<()> for () {
+  fn free(self , rsthis: & QScrollArea) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QScrollAreaD0Ev()};
      unsafe {_ZN11QScrollAreaD0Ev(rsthis.qclsinst)};

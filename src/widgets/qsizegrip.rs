@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qsizegrip.h
 // dst-file: /src/widgets/qsizegrip.rs
 //
@@ -74,20 +74,20 @@ impl AsRef<QWidget> for QSizeGrip {
 }
   // proto:  void QSizeGrip::QSizeGrip(const QSizeGrip & );
 impl /*struct*/ QSizeGrip {
-  pub fn New<T: QSizeGrip_New>(value: T) -> QSizeGrip {
-    let rsthis = value.New();
+  pub fn new<T: QSizeGrip_new>(value: T) -> QSizeGrip {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QSizeGrip_New {
-  fn New(self) -> QSizeGrip;
+pub trait QSizeGrip_new {
+  fn new(self) -> QSizeGrip;
 }
 
   // proto:  void QSizeGrip::QSizeGrip(const QSizeGrip & );
-impl<'a> /*trait*/ QSizeGrip_New for (&'a QSizeGrip) {
-  fn New(self) -> QSizeGrip {
+impl<'a> /*trait*/ QSizeGrip_new for (&'a QSizeGrip) {
+  fn new(self) -> QSizeGrip {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QSizeGripC1ERKS_()};
     let ctysz: c_int = unsafe{QSizeGrip_Class_Size()};
@@ -102,8 +102,8 @@ impl<'a> /*trait*/ QSizeGrip_New for (&'a QSizeGrip) {
 }
 
   // proto:  void QSizeGrip::QSizeGrip(QWidget * parent);
-impl<'a> /*trait*/ QSizeGrip_New for (&'a QWidget) {
-  fn New(self) -> QSizeGrip {
+impl<'a> /*trait*/ QSizeGrip_new for (&'a QWidget) {
+  fn new(self) -> QSizeGrip {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QSizeGripC1EP7QWidget()};
     let ctysz: c_int = unsafe{QSizeGrip_Class_Size()};
@@ -119,19 +119,19 @@ impl<'a> /*trait*/ QSizeGrip_New for (&'a QWidget) {
 
   // proto:  void QSizeGrip::~QSizeGrip();
 impl /*struct*/ QSizeGrip {
-  pub fn Free<RetType, T: QSizeGrip_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QSizeGrip_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QSizeGrip_Free<RetType> {
-  fn Free(self , rsthis: & QSizeGrip) -> RetType;
+pub trait QSizeGrip_free<RetType> {
+  fn free(self , rsthis: & QSizeGrip) -> RetType;
 }
 
   // proto:  void QSizeGrip::~QSizeGrip();
-impl<'a> /*trait*/ QSizeGrip_Free<()> for () {
-  fn Free(self , rsthis: & QSizeGrip) -> () {
+impl<'a> /*trait*/ QSizeGrip_free<()> for () {
+  fn free(self , rsthis: & QSizeGrip) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QSizeGripD0Ev()};
      unsafe {_ZN9QSizeGripD0Ev(rsthis.qclsinst)};

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qundoview.h
 // dst-file: /src/widgets/qundoview.rs
 //
@@ -96,20 +96,20 @@ impl AsRef<QListView> for QUndoView {
 }
   // proto:  void QUndoView::QUndoView(QUndoGroup * group, QWidget * parent);
 impl /*struct*/ QUndoView {
-  pub fn New<T: QUndoView_New>(value: T) -> QUndoView {
-    let rsthis = value.New();
+  pub fn new<T: QUndoView_new>(value: T) -> QUndoView {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QUndoView_New {
-  fn New(self) -> QUndoView;
+pub trait QUndoView_new {
+  fn new(self) -> QUndoView;
 }
 
   // proto:  void QUndoView::QUndoView(QUndoGroup * group, QWidget * parent);
-impl<'a> /*trait*/ QUndoView_New for (&'a QUndoGroup, &'a QWidget) {
-  fn New(self) -> QUndoView {
+impl<'a> /*trait*/ QUndoView_new for (&'a QUndoGroup, &'a QWidget) {
+  fn new(self) -> QUndoView {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUndoViewC1EP10QUndoGroupP7QWidget()};
     let ctysz: c_int = unsafe{QUndoView_Class_Size()};
@@ -335,8 +335,8 @@ impl<'a> /*trait*/ QUndoView_emptyLabel<QString> for () {
 }
 
   // proto:  void QUndoView::QUndoView(const QUndoView & );
-impl<'a> /*trait*/ QUndoView_New for (&'a QUndoView) {
-  fn New(self) -> QUndoView {
+impl<'a> /*trait*/ QUndoView_new for (&'a QUndoView) {
+  fn new(self) -> QUndoView {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUndoViewC1ERKS_()};
     let ctysz: c_int = unsafe{QUndoView_Class_Size()};
@@ -351,8 +351,8 @@ impl<'a> /*trait*/ QUndoView_New for (&'a QUndoView) {
 }
 
   // proto:  void QUndoView::QUndoView(QWidget * parent);
-impl<'a> /*trait*/ QUndoView_New for (&'a QWidget) {
-  fn New(self) -> QUndoView {
+impl<'a> /*trait*/ QUndoView_new for (&'a QWidget) {
+  fn new(self) -> QUndoView {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUndoViewC1EP7QWidget()};
     let ctysz: c_int = unsafe{QUndoView_Class_Size()};
@@ -368,19 +368,19 @@ impl<'a> /*trait*/ QUndoView_New for (&'a QWidget) {
 
   // proto:  void QUndoView::~QUndoView();
 impl /*struct*/ QUndoView {
-  pub fn Free<RetType, T: QUndoView_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QUndoView_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QUndoView_Free<RetType> {
-  fn Free(self , rsthis: & QUndoView) -> RetType;
+pub trait QUndoView_free<RetType> {
+  fn free(self , rsthis: & QUndoView) -> RetType;
 }
 
   // proto:  void QUndoView::~QUndoView();
-impl<'a> /*trait*/ QUndoView_Free<()> for () {
-  fn Free(self , rsthis: & QUndoView) -> () {
+impl<'a> /*trait*/ QUndoView_free<()> for () {
+  fn free(self , rsthis: & QUndoView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUndoViewD0Ev()};
      unsafe {_ZN9QUndoViewD0Ev(rsthis.qclsinst)};
@@ -389,8 +389,8 @@ impl<'a> /*trait*/ QUndoView_Free<()> for () {
 }
 
   // proto:  void QUndoView::QUndoView(QUndoStack * stack, QWidget * parent);
-impl<'a> /*trait*/ QUndoView_New for (&'a QUndoStack, &'a QWidget) {
-  fn New(self) -> QUndoView {
+impl<'a> /*trait*/ QUndoView_new for (&'a QUndoStack, &'a QWidget) {
+  fn new(self) -> QUndoView {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUndoViewC1EP10QUndoStackP7QWidget()};
     let ctysz: c_int = unsafe{QUndoView_Class_Size()};

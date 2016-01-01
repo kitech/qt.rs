@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qlayoutitem.h
 // dst-file: /src/widgets/qlayoutitem.rs
 //
@@ -354,19 +354,19 @@ impl<'a> /*trait*/ QLayoutItem_sizeHint<QSize> for () {
 
   // proto:  void QLayoutItem::~QLayoutItem();
 impl /*struct*/ QLayoutItem {
-  pub fn Free<RetType, T: QLayoutItem_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QLayoutItem_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QLayoutItem_Free<RetType> {
-  fn Free(self , rsthis: & QLayoutItem) -> RetType;
+pub trait QLayoutItem_free<RetType> {
+  fn free(self , rsthis: & QLayoutItem) -> RetType;
 }
 
   // proto:  void QLayoutItem::~QLayoutItem();
-impl<'a> /*trait*/ QLayoutItem_Free<()> for () {
-  fn Free(self , rsthis: & QLayoutItem) -> () {
+impl<'a> /*trait*/ QLayoutItem_free<()> for () {
+  fn free(self , rsthis: & QLayoutItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QLayoutItemD0Ev()};
      unsafe {_ZN11QLayoutItemD0Ev(rsthis.qclsinst)};
@@ -560,19 +560,19 @@ impl<'a> /*trait*/ QSpacerItem_sizePolicy<QSizePolicy> for () {
 
   // proto:  void QSpacerItem::~QSpacerItem();
 impl /*struct*/ QSpacerItem {
-  pub fn Free<RetType, T: QSpacerItem_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QSpacerItem_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QSpacerItem_Free<RetType> {
-  fn Free(self , rsthis: & QSpacerItem) -> RetType;
+pub trait QSpacerItem_free<RetType> {
+  fn free(self , rsthis: & QSpacerItem) -> RetType;
 }
 
   // proto:  void QSpacerItem::~QSpacerItem();
-impl<'a> /*trait*/ QSpacerItem_Free<()> for () {
-  fn Free(self , rsthis: & QSpacerItem) -> () {
+impl<'a> /*trait*/ QSpacerItem_free<()> for () {
+  fn free(self , rsthis: & QSpacerItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QSpacerItemD0Ev()};
      unsafe {_ZN11QSpacerItemD0Ev(rsthis.qclsinst)};
@@ -812,19 +812,19 @@ impl<'a> /*trait*/ QWidgetItem_hasHeightForWidth<i8> for () {
 
   // proto:  void QWidgetItem::~QWidgetItem();
 impl /*struct*/ QWidgetItem {
-  pub fn Free<RetType, T: QWidgetItem_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QWidgetItem_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QWidgetItem_Free<RetType> {
-  fn Free(self , rsthis: & QWidgetItem) -> RetType;
+pub trait QWidgetItem_free<RetType> {
+  fn free(self , rsthis: & QWidgetItem) -> RetType;
 }
 
   // proto:  void QWidgetItem::~QWidgetItem();
-impl<'a> /*trait*/ QWidgetItem_Free<()> for () {
-  fn Free(self , rsthis: & QWidgetItem) -> () {
+impl<'a> /*trait*/ QWidgetItem_free<()> for () {
+  fn free(self , rsthis: & QWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QWidgetItemD0Ev()};
      unsafe {_ZN11QWidgetItemD0Ev(rsthis.qclsinst)};
@@ -834,20 +834,20 @@ impl<'a> /*trait*/ QWidgetItem_Free<()> for () {
 
   // proto:  void QWidgetItem::QWidgetItem(QWidget * w);
 impl /*struct*/ QWidgetItem {
-  pub fn New<T: QWidgetItem_New>(value: T) -> QWidgetItem {
-    let rsthis = value.New();
+  pub fn new<T: QWidgetItem_new>(value: T) -> QWidgetItem {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QWidgetItem_New {
-  fn New(self) -> QWidgetItem;
+pub trait QWidgetItem_new {
+  fn new(self) -> QWidgetItem;
 }
 
   // proto:  void QWidgetItem::QWidgetItem(QWidget * w);
-impl<'a> /*trait*/ QWidgetItem_New for (&'a QWidget) {
-  fn New(self) -> QWidgetItem {
+impl<'a> /*trait*/ QWidgetItem_new for (&'a QWidget) {
+  fn new(self) -> QWidgetItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QWidgetItemC1EP7QWidget()};
     let ctysz: c_int = unsafe{QWidgetItem_Class_Size()};
@@ -933,8 +933,8 @@ impl<'a> /*trait*/ QWidgetItem_heightForWidth<i32> for (i32) {
 }
 
   // proto:  void QWidgetItem::QWidgetItem(const QWidgetItem & );
-impl<'a> /*trait*/ QWidgetItem_New for (&'a QWidgetItem) {
-  fn New(self) -> QWidgetItem {
+impl<'a> /*trait*/ QWidgetItem_new for (&'a QWidgetItem) {
+  fn new(self) -> QWidgetItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QWidgetItemC1ERKS_()};
     let ctysz: c_int = unsafe{QWidgetItem_Class_Size()};
@@ -1110,19 +1110,19 @@ impl<'a> /*trait*/ QWidgetItemV2_heightForWidth<i32> for (i32) {
 
   // proto:  void QWidgetItemV2::~QWidgetItemV2();
 impl /*struct*/ QWidgetItemV2 {
-  pub fn Free<RetType, T: QWidgetItemV2_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QWidgetItemV2_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QWidgetItemV2_Free<RetType> {
-  fn Free(self , rsthis: & QWidgetItemV2) -> RetType;
+pub trait QWidgetItemV2_free<RetType> {
+  fn free(self , rsthis: & QWidgetItemV2) -> RetType;
 }
 
   // proto:  void QWidgetItemV2::~QWidgetItemV2();
-impl<'a> /*trait*/ QWidgetItemV2_Free<()> for () {
-  fn Free(self , rsthis: & QWidgetItemV2) -> () {
+impl<'a> /*trait*/ QWidgetItemV2_free<()> for () {
+  fn free(self , rsthis: & QWidgetItemV2) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QWidgetItemV2D0Ev()};
      unsafe {_ZN13QWidgetItemV2D0Ev(rsthis.qclsinst)};
@@ -1132,20 +1132,20 @@ impl<'a> /*trait*/ QWidgetItemV2_Free<()> for () {
 
   // proto:  void QWidgetItemV2::QWidgetItemV2(QWidget * widget);
 impl /*struct*/ QWidgetItemV2 {
-  pub fn New<T: QWidgetItemV2_New>(value: T) -> QWidgetItemV2 {
-    let rsthis = value.New();
+  pub fn new<T: QWidgetItemV2_new>(value: T) -> QWidgetItemV2 {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QWidgetItemV2_New {
-  fn New(self) -> QWidgetItemV2;
+pub trait QWidgetItemV2_new {
+  fn new(self) -> QWidgetItemV2;
 }
 
   // proto:  void QWidgetItemV2::QWidgetItemV2(QWidget * widget);
-impl<'a> /*trait*/ QWidgetItemV2_New for (&'a QWidget) {
-  fn New(self) -> QWidgetItemV2 {
+impl<'a> /*trait*/ QWidgetItemV2_new for (&'a QWidget) {
+  fn new(self) -> QWidgetItemV2 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QWidgetItemV2C1EP7QWidget()};
     let ctysz: c_int = unsafe{QWidgetItemV2_Class_Size()};
@@ -1184,8 +1184,8 @@ impl<'a> /*trait*/ QWidgetItemV2_maximumSize<QSize> for () {
 }
 
   // proto:  void QWidgetItemV2::QWidgetItemV2(const QWidgetItemV2 & );
-impl<'a> /*trait*/ QWidgetItemV2_New for (&'a QWidgetItemV2) {
-  fn New(self) -> QWidgetItemV2 {
+impl<'a> /*trait*/ QWidgetItemV2_new for (&'a QWidgetItemV2) {
+  fn new(self) -> QWidgetItemV2 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QWidgetItemV2C1ERKS_()};
     let ctysz: c_int = unsafe{QWidgetItemV2_Class_Size()};

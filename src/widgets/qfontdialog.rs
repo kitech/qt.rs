@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qfontdialog.h
 // dst-file: /src/widgets/qfontdialog.rs
 //
@@ -96,20 +96,20 @@ impl AsRef<QDialog> for QFontDialog {
 }
   // proto:  void QFontDialog::QFontDialog(QWidget * parent);
 impl /*struct*/ QFontDialog {
-  pub fn New<T: QFontDialog_New>(value: T) -> QFontDialog {
-    let rsthis = value.New();
+  pub fn new<T: QFontDialog_new>(value: T) -> QFontDialog {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QFontDialog_New {
-  fn New(self) -> QFontDialog;
+pub trait QFontDialog_new {
+  fn new(self) -> QFontDialog;
 }
 
   // proto:  void QFontDialog::QFontDialog(QWidget * parent);
-impl<'a> /*trait*/ QFontDialog_New for (&'a QWidget) {
-  fn New(self) -> QFontDialog {
+impl<'a> /*trait*/ QFontDialog_new for (&'a QWidget) {
+  fn new(self) -> QFontDialog {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFontDialogC1EP7QWidget()};
     let ctysz: c_int = unsafe{QFontDialog_Class_Size()};
@@ -124,8 +124,8 @@ impl<'a> /*trait*/ QFontDialog_New for (&'a QWidget) {
 }
 
   // proto:  void QFontDialog::QFontDialog(const QFontDialog & );
-impl<'a> /*trait*/ QFontDialog_New for (&'a QFontDialog) {
-  fn New(self) -> QFontDialog {
+impl<'a> /*trait*/ QFontDialog_new for (&'a QFontDialog) {
+  fn new(self) -> QFontDialog {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFontDialogC1ERKS_()};
     let ctysz: c_int = unsafe{QFontDialog_Class_Size()};
@@ -187,8 +187,8 @@ impl<'a> /*trait*/ QFontDialog_open<()> for (&'a QObject, &'a  String) {
 }
 
   // proto:  void QFontDialog::QFontDialog(const QFont & initial, QWidget * parent);
-impl<'a> /*trait*/ QFontDialog_New for (&'a QFont, &'a QWidget) {
-  fn New(self) -> QFontDialog {
+impl<'a> /*trait*/ QFontDialog_new for (&'a QFont, &'a QWidget) {
+  fn new(self) -> QFontDialog {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFontDialogC1ERK5QFontP7QWidget()};
     let ctysz: c_int = unsafe{QFontDialog_Class_Size()};
@@ -252,19 +252,19 @@ impl<'a> /*trait*/ QFontDialog_setVisible<()> for (i8) {
 
   // proto:  void QFontDialog::~QFontDialog();
 impl /*struct*/ QFontDialog {
-  pub fn Free<RetType, T: QFontDialog_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QFontDialog_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QFontDialog_Free<RetType> {
-  fn Free(self , rsthis: & QFontDialog) -> RetType;
+pub trait QFontDialog_free<RetType> {
+  fn free(self , rsthis: & QFontDialog) -> RetType;
 }
 
   // proto:  void QFontDialog::~QFontDialog();
-impl<'a> /*trait*/ QFontDialog_Free<()> for () {
-  fn Free(self , rsthis: & QFontDialog) -> () {
+impl<'a> /*trait*/ QFontDialog_free<()> for () {
+  fn free(self , rsthis: & QFontDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFontDialogD0Ev()};
      unsafe {_ZN11QFontDialogD0Ev(rsthis.qclsinst)};
@@ -428,7 +428,7 @@ extern fn QFontDialog_currentFontChanged_signal_connect_cb_0(rsfptr:fn(QFont), a
   let rsarg0 = QFont::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QFontDialog_currentFontChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QFont), arg0: *mut c_void) {
+extern fn QFontDialog_currentFontChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QFont), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QFont::inheritFrom(arg0 as u64);
@@ -437,7 +437,8 @@ extern fn QFontDialog_currentFontChanged_signal_connect_cb_box_0(rsfptr_raw:*mut
 impl /* trait */ QFontDialog_currentFontChanged_signal_connect for fn(QFont) {
   fn connect(self, sigthis: QFontDialog_currentFontChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QFontDialog_currentFontChanged_signal_connect_cb_0 as *mut c_void;
@@ -445,7 +446,7 @@ impl /* trait */ QFontDialog_currentFontChanged_signal_connect for fn(QFont) {
     unsafe {QFontDialog_SlotProxy_connect__ZN11QFontDialog18currentFontChangedERK5QFont(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QFontDialog_currentFontChanged_signal_connect for Box<fn(QFont)> {
+impl /* trait */ QFontDialog_currentFontChanged_signal_connect for Box<Fn(QFont)> {
   fn connect(self, sigthis: QFontDialog_currentFontChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -462,7 +463,7 @@ extern fn QFontDialog_fontSelected_signal_connect_cb_1(rsfptr:fn(QFont), arg0: *
   let rsarg0 = QFont::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QFontDialog_fontSelected_signal_connect_cb_box_1(rsfptr_raw:*mut fn(QFont), arg0: *mut c_void) {
+extern fn QFontDialog_fontSelected_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(QFont), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QFont::inheritFrom(arg0 as u64);
@@ -471,7 +472,8 @@ extern fn QFontDialog_fontSelected_signal_connect_cb_box_1(rsfptr_raw:*mut fn(QF
 impl /* trait */ QFontDialog_fontSelected_signal_connect for fn(QFont) {
   fn connect(self, sigthis: QFontDialog_fontSelected_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QFontDialog_fontSelected_signal_connect_cb_1 as *mut c_void;
@@ -479,7 +481,7 @@ impl /* trait */ QFontDialog_fontSelected_signal_connect for fn(QFont) {
     unsafe {QFontDialog_SlotProxy_connect__ZN11QFontDialog12fontSelectedERK5QFont(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QFontDialog_fontSelected_signal_connect for Box<fn(QFont)> {
+impl /* trait */ QFontDialog_fontSelected_signal_connect for Box<Fn(QFont)> {
   fn connect(self, sigthis: QFontDialog_fontSelected_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

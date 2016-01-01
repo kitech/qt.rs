@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qformlayout.h
 // dst-file: /src/widgets/qformlayout.rs
 //
@@ -325,20 +325,20 @@ impl<'a> /*trait*/ QFormLayout_spacing<i32> for () {
 
   // proto:  void QFormLayout::QFormLayout(QWidget * parent);
 impl /*struct*/ QFormLayout {
-  pub fn New<T: QFormLayout_New>(value: T) -> QFormLayout {
-    let rsthis = value.New();
+  pub fn new<T: QFormLayout_new>(value: T) -> QFormLayout {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QFormLayout_New {
-  fn New(self) -> QFormLayout;
+pub trait QFormLayout_new {
+  fn new(self) -> QFormLayout;
 }
 
   // proto:  void QFormLayout::QFormLayout(QWidget * parent);
-impl<'a> /*trait*/ QFormLayout_New for (&'a QWidget) {
-  fn New(self) -> QFormLayout {
+impl<'a> /*trait*/ QFormLayout_new for (&'a QWidget) {
+  fn new(self) -> QFormLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFormLayoutC1EP7QWidget()};
     let ctysz: c_int = unsafe{QFormLayout_Class_Size()};
@@ -506,19 +506,19 @@ impl<'a> /*trait*/ QFormLayout_setSpacing<()> for (i32) {
 
   // proto:  void QFormLayout::~QFormLayout();
 impl /*struct*/ QFormLayout {
-  pub fn Free<RetType, T: QFormLayout_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QFormLayout_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QFormLayout_Free<RetType> {
-  fn Free(self , rsthis: & QFormLayout) -> RetType;
+pub trait QFormLayout_free<RetType> {
+  fn free(self , rsthis: & QFormLayout) -> RetType;
 }
 
   // proto:  void QFormLayout::~QFormLayout();
-impl<'a> /*trait*/ QFormLayout_Free<()> for () {
-  fn Free(self , rsthis: & QFormLayout) -> () {
+impl<'a> /*trait*/ QFormLayout_free<()> for () {
+  fn free(self , rsthis: & QFormLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFormLayoutD0Ev()};
      unsafe {_ZN11QFormLayoutD0Ev(rsthis.qclsinst)};

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qgridlayout.h
 // dst-file: /src/widgets/qgridlayout.rs
 //
@@ -518,20 +518,20 @@ impl<'a> /*trait*/ QGridLayout_columnStretch<i32> for (i32) {
 
   // proto:  void QGridLayout::QGridLayout(const QGridLayout & );
 impl /*struct*/ QGridLayout {
-  pub fn New<T: QGridLayout_New>(value: T) -> QGridLayout {
-    let rsthis = value.New();
+  pub fn new<T: QGridLayout_new>(value: T) -> QGridLayout {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QGridLayout_New {
-  fn New(self) -> QGridLayout;
+pub trait QGridLayout_new {
+  fn new(self) -> QGridLayout;
 }
 
   // proto:  void QGridLayout::QGridLayout(const QGridLayout & );
-impl<'a> /*trait*/ QGridLayout_New for (&'a QGridLayout) {
-  fn New(self) -> QGridLayout {
+impl<'a> /*trait*/ QGridLayout_new for (&'a QGridLayout) {
+  fn new(self) -> QGridLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QGridLayoutC1ERKS_()};
     let ctysz: c_int = unsafe{QGridLayout_Class_Size()};
@@ -761,8 +761,8 @@ impl<'a> /*trait*/ QGridLayout_verticalSpacing<i32> for () {
 }
 
   // proto:  void QGridLayout::QGridLayout(QWidget * parent);
-impl<'a> /*trait*/ QGridLayout_New for (&'a QWidget) {
-  fn New(self) -> QGridLayout {
+impl<'a> /*trait*/ QGridLayout_new for (&'a QWidget) {
+  fn new(self) -> QGridLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QGridLayoutC1EP7QWidget()};
     let ctysz: c_int = unsafe{QGridLayout_Class_Size()};
@@ -824,8 +824,8 @@ impl<'a> /*trait*/ QGridLayout_setColumnMinimumWidth<()> for (i32, i32) {
 }
 
   // proto:  void QGridLayout::QGridLayout();
-impl<'a> /*trait*/ QGridLayout_New for () {
-  fn New(self) -> QGridLayout {
+impl<'a> /*trait*/ QGridLayout_new for () {
+  fn new(self) -> QGridLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QGridLayoutC1Ev()};
     let ctysz: c_int = unsafe{QGridLayout_Class_Size()};
@@ -864,19 +864,19 @@ impl<'a> /*trait*/ QGridLayout_heightForWidth<i32> for (i32) {
 
   // proto:  void QGridLayout::~QGridLayout();
 impl /*struct*/ QGridLayout {
-  pub fn Free<RetType, T: QGridLayout_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QGridLayout_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QGridLayout_Free<RetType> {
-  fn Free(self , rsthis: & QGridLayout) -> RetType;
+pub trait QGridLayout_free<RetType> {
+  fn free(self , rsthis: & QGridLayout) -> RetType;
 }
 
   // proto:  void QGridLayout::~QGridLayout();
-impl<'a> /*trait*/ QGridLayout_Free<()> for () {
-  fn Free(self , rsthis: & QGridLayout) -> () {
+impl<'a> /*trait*/ QGridLayout_free<()> for () {
+  fn free(self , rsthis: & QGridLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QGridLayoutD0Ev()};
      unsafe {_ZN11QGridLayoutD0Ev(rsthis.qclsinst)};

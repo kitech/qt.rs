@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qspinbox.h
 // dst-file: /src/widgets/qspinbox.rs
 //
@@ -243,19 +243,19 @@ impl<'a> /*trait*/ QSpinBox_value<i32> for () {
 
   // proto:  void QSpinBox::~QSpinBox();
 impl /*struct*/ QSpinBox {
-  pub fn Free<RetType, T: QSpinBox_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QSpinBox_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QSpinBox_Free<RetType> {
-  fn Free(self , rsthis: & QSpinBox) -> RetType;
+pub trait QSpinBox_free<RetType> {
+  fn free(self , rsthis: & QSpinBox) -> RetType;
 }
 
   // proto:  void QSpinBox::~QSpinBox();
-impl<'a> /*trait*/ QSpinBox_Free<()> for () {
-  fn Free(self , rsthis: & QSpinBox) -> () {
+impl<'a> /*trait*/ QSpinBox_free<()> for () {
+  fn free(self , rsthis: & QSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSpinBoxD0Ev()};
      unsafe {_ZN8QSpinBoxD0Ev(rsthis.qclsinst)};
@@ -357,20 +357,20 @@ impl<'a> /*trait*/ QSpinBox_setDisplayIntegerBase<()> for (i32) {
 
   // proto:  void QSpinBox::QSpinBox(QWidget * parent);
 impl /*struct*/ QSpinBox {
-  pub fn New<T: QSpinBox_New>(value: T) -> QSpinBox {
-    let rsthis = value.New();
+  pub fn new<T: QSpinBox_new>(value: T) -> QSpinBox {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QSpinBox_New {
-  fn New(self) -> QSpinBox;
+pub trait QSpinBox_new {
+  fn new(self) -> QSpinBox;
 }
 
   // proto:  void QSpinBox::QSpinBox(QWidget * parent);
-impl<'a> /*trait*/ QSpinBox_New for (&'a QWidget) {
-  fn New(self) -> QSpinBox {
+impl<'a> /*trait*/ QSpinBox_new for (&'a QWidget) {
+  fn new(self) -> QSpinBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSpinBoxC1EP7QWidget()};
     let ctysz: c_int = unsafe{QSpinBox_Class_Size()};
@@ -408,8 +408,8 @@ impl<'a> /*trait*/ QSpinBox_singleStep<i32> for () {
 }
 
   // proto:  void QSpinBox::QSpinBox(const QSpinBox & );
-impl<'a> /*trait*/ QSpinBox_New for (&'a QSpinBox) {
-  fn New(self) -> QSpinBox {
+impl<'a> /*trait*/ QSpinBox_new for (&'a QSpinBox) {
+  fn new(self) -> QSpinBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSpinBoxC1ERKS_()};
     let ctysz: c_int = unsafe{QSpinBox_Class_Size()};
@@ -952,19 +952,19 @@ impl<'a> /*trait*/ QDoubleSpinBox_singleStep<f64> for () {
 
   // proto:  void QDoubleSpinBox::~QDoubleSpinBox();
 impl /*struct*/ QDoubleSpinBox {
-  pub fn Free<RetType, T: QDoubleSpinBox_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QDoubleSpinBox_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QDoubleSpinBox_Free<RetType> {
-  fn Free(self , rsthis: & QDoubleSpinBox) -> RetType;
+pub trait QDoubleSpinBox_free<RetType> {
+  fn free(self , rsthis: & QDoubleSpinBox) -> RetType;
 }
 
   // proto:  void QDoubleSpinBox::~QDoubleSpinBox();
-impl<'a> /*trait*/ QDoubleSpinBox_Free<()> for () {
-  fn Free(self , rsthis: & QDoubleSpinBox) -> () {
+impl<'a> /*trait*/ QDoubleSpinBox_free<()> for () {
+  fn free(self , rsthis: & QDoubleSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QDoubleSpinBoxD0Ev()};
      unsafe {_ZN14QDoubleSpinBoxD0Ev(rsthis.qclsinst)};
@@ -997,20 +997,20 @@ impl<'a> /*trait*/ QDoubleSpinBox_fixup<()> for (&'a QString) {
 
   // proto:  void QDoubleSpinBox::QDoubleSpinBox(const QDoubleSpinBox & );
 impl /*struct*/ QDoubleSpinBox {
-  pub fn New<T: QDoubleSpinBox_New>(value: T) -> QDoubleSpinBox {
-    let rsthis = value.New();
+  pub fn new<T: QDoubleSpinBox_new>(value: T) -> QDoubleSpinBox {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QDoubleSpinBox_New {
-  fn New(self) -> QDoubleSpinBox;
+pub trait QDoubleSpinBox_new {
+  fn new(self) -> QDoubleSpinBox;
 }
 
   // proto:  void QDoubleSpinBox::QDoubleSpinBox(const QDoubleSpinBox & );
-impl<'a> /*trait*/ QDoubleSpinBox_New for (&'a QDoubleSpinBox) {
-  fn New(self) -> QDoubleSpinBox {
+impl<'a> /*trait*/ QDoubleSpinBox_new for (&'a QDoubleSpinBox) {
+  fn new(self) -> QDoubleSpinBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QDoubleSpinBoxC1ERKS_()};
     let ctysz: c_int = unsafe{QDoubleSpinBox_Class_Size()};
@@ -1188,8 +1188,8 @@ impl<'a> /*trait*/ QDoubleSpinBox_setRange<()> for (f64, f64) {
 }
 
   // proto:  void QDoubleSpinBox::QDoubleSpinBox(QWidget * parent);
-impl<'a> /*trait*/ QDoubleSpinBox_New for (&'a QWidget) {
-  fn New(self) -> QDoubleSpinBox {
+impl<'a> /*trait*/ QDoubleSpinBox_new for (&'a QWidget) {
+  fn new(self) -> QDoubleSpinBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QDoubleSpinBoxC1EP7QWidget()};
     let ctysz: c_int = unsafe{QDoubleSpinBox_Class_Size()};
@@ -1272,7 +1272,7 @@ extern fn QSpinBox_valueChanged_signal_connect_cb_0(rsfptr:fn(QString), arg0: *m
   let rsarg0 = QString::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QSpinBox_valueChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QString), arg0: *mut c_void) {
+extern fn QSpinBox_valueChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QString::inheritFrom(arg0 as u64);
@@ -1281,7 +1281,8 @@ extern fn QSpinBox_valueChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QStri
 impl /* trait */ QSpinBox_valueChanged_signal_connect for fn(QString) {
   fn connect(self, sigthis: QSpinBox_valueChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QSpinBox_valueChanged_signal_connect_cb_0 as *mut c_void;
@@ -1289,7 +1290,7 @@ impl /* trait */ QSpinBox_valueChanged_signal_connect for fn(QString) {
     unsafe {QSpinBox_SlotProxy_connect__ZN8QSpinBox12valueChangedERK7QString(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QSpinBox_valueChanged_signal_connect for Box<fn(QString)> {
+impl /* trait */ QSpinBox_valueChanged_signal_connect for Box<Fn(QString)> {
   fn connect(self, sigthis: QSpinBox_valueChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -1306,7 +1307,7 @@ extern fn QSpinBox_valueChanged_signal_connect_cb_1(rsfptr:fn(i32), arg0: c_int)
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QSpinBox_valueChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(i32), arg0: c_int) {
+extern fn QSpinBox_valueChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -1315,7 +1316,8 @@ extern fn QSpinBox_valueChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(i32),
 impl /* trait */ QSpinBox_valueChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QSpinBox_valueChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QSpinBox_valueChanged_signal_connect_cb_1 as *mut c_void;
@@ -1323,7 +1325,7 @@ impl /* trait */ QSpinBox_valueChanged_signal_connect for fn(i32) {
     unsafe {QSpinBox_SlotProxy_connect__ZN8QSpinBox12valueChangedEi(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QSpinBox_valueChanged_signal_connect for Box<fn(i32)> {
+impl /* trait */ QSpinBox_valueChanged_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QSpinBox_valueChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -1356,7 +1358,7 @@ extern fn QDoubleSpinBox_valueChanged_signal_connect_cb_0(rsfptr:fn(f64), arg0: 
   let rsarg0 = arg0 as f64;
   rsfptr(rsarg0);
 }
-extern fn QDoubleSpinBox_valueChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(f64), arg0: c_double) {
+extern fn QDoubleSpinBox_valueChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(f64), arg0: c_double) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as f64;
@@ -1365,7 +1367,8 @@ extern fn QDoubleSpinBox_valueChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn
 impl /* trait */ QDoubleSpinBox_valueChanged_signal_connect for fn(f64) {
   fn connect(self, sigthis: QDoubleSpinBox_valueChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QDoubleSpinBox_valueChanged_signal_connect_cb_0 as *mut c_void;
@@ -1373,7 +1376,7 @@ impl /* trait */ QDoubleSpinBox_valueChanged_signal_connect for fn(f64) {
     unsafe {QDoubleSpinBox_SlotProxy_connect__ZN14QDoubleSpinBox12valueChangedEd(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QDoubleSpinBox_valueChanged_signal_connect for Box<fn(f64)> {
+impl /* trait */ QDoubleSpinBox_valueChanged_signal_connect for Box<Fn(f64)> {
   fn connect(self, sigthis: QDoubleSpinBox_valueChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -1390,7 +1393,7 @@ extern fn QDoubleSpinBox_valueChanged_signal_connect_cb_1(rsfptr:fn(QString), ar
   let rsarg0 = QString::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QDoubleSpinBox_valueChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(QString), arg0: *mut c_void) {
+extern fn QDoubleSpinBox_valueChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QString::inheritFrom(arg0 as u64);
@@ -1399,7 +1402,8 @@ extern fn QDoubleSpinBox_valueChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn
 impl /* trait */ QDoubleSpinBox_valueChanged_signal_connect for fn(QString) {
   fn connect(self, sigthis: QDoubleSpinBox_valueChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QDoubleSpinBox_valueChanged_signal_connect_cb_1 as *mut c_void;
@@ -1407,7 +1411,7 @@ impl /* trait */ QDoubleSpinBox_valueChanged_signal_connect for fn(QString) {
     unsafe {QDoubleSpinBox_SlotProxy_connect__ZN14QDoubleSpinBox12valueChangedERK7QString(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QDoubleSpinBox_valueChanged_signal_connect for Box<fn(QString)> {
+impl /* trait */ QDoubleSpinBox_valueChanged_signal_connect for Box<Fn(QString)> {
   fn connect(self, sigthis: QDoubleSpinBox_valueChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

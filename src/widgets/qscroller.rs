@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qscroller.h
 // dst-file: /src/widgets/qscroller.rs
 //
@@ -116,19 +116,19 @@ impl AsRef<QObject> for QScroller {
 }
   // proto:  void QScroller::~QScroller();
 impl /*struct*/ QScroller {
-  pub fn Free<RetType, T: QScroller_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QScroller_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QScroller_Free<RetType> {
-  fn Free(self , rsthis: & QScroller) -> RetType;
+pub trait QScroller_free<RetType> {
+  fn free(self , rsthis: & QScroller) -> RetType;
 }
 
   // proto:  void QScroller::~QScroller();
-impl<'a> /*trait*/ QScroller_Free<()> for () {
-  fn Free(self , rsthis: & QScroller) -> () {
+impl<'a> /*trait*/ QScroller_free<()> for () {
+  fn free(self , rsthis: & QScroller) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QScrollerD0Ev()};
      unsafe {_ZN9QScrollerD0Ev(rsthis.qclsinst)};
@@ -372,20 +372,20 @@ impl<'a> /*trait*/ QScroller_hasScroller_s<i8> for (&'a QObject) {
 
   // proto:  void QScroller::QScroller(const QScroller & );
 impl /*struct*/ QScroller {
-  pub fn New<T: QScroller_New>(value: T) -> QScroller {
-    let rsthis = value.New();
+  pub fn new<T: QScroller_new>(value: T) -> QScroller {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QScroller_New {
-  fn New(self) -> QScroller;
+pub trait QScroller_new {
+  fn new(self) -> QScroller;
 }
 
   // proto:  void QScroller::QScroller(const QScroller & );
-impl<'a> /*trait*/ QScroller_New for (&'a QScroller) {
-  fn New(self) -> QScroller {
+impl<'a> /*trait*/ QScroller_new for (&'a QScroller) {
+  fn new(self) -> QScroller {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QScrollerC1ERKS_()};
     let ctysz: c_int = unsafe{QScroller_Class_Size()};
@@ -460,8 +460,8 @@ impl<'a> /*trait*/ QScroller_ensureVisible<()> for (&'a QRectF, f64, f64, i32) {
 }
 
   // proto:  void QScroller::QScroller(QObject * target);
-impl<'a> /*trait*/ QScroller_New for (&'a QObject) {
-  fn New(self) -> QScroller {
+impl<'a> /*trait*/ QScroller_new for (&'a QObject) {
+  fn new(self) -> QScroller {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QScrollerC1EP7QObject()};
     let ctysz: c_int = unsafe{QScroller_Class_Size()};
@@ -667,7 +667,7 @@ extern fn QScroller_scrollerPropertiesChanged_signal_connect_cb_0(rsfptr:fn(QScr
   let rsarg0 = QScrollerProperties::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QScroller_scrollerPropertiesChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QScrollerProperties), arg0: *mut c_void) {
+extern fn QScroller_scrollerPropertiesChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QScrollerProperties), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QScrollerProperties::inheritFrom(arg0 as u64);
@@ -676,7 +676,8 @@ extern fn QScroller_scrollerPropertiesChanged_signal_connect_cb_box_0(rsfptr_raw
 impl /* trait */ QScroller_scrollerPropertiesChanged_signal_connect for fn(QScrollerProperties) {
   fn connect(self, sigthis: QScroller_scrollerPropertiesChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QScroller_scrollerPropertiesChanged_signal_connect_cb_0 as *mut c_void;
@@ -684,7 +685,7 @@ impl /* trait */ QScroller_scrollerPropertiesChanged_signal_connect for fn(QScro
     unsafe {QScroller_SlotProxy_connect__ZN9QScroller25scrollerPropertiesChangedERK19QScrollerProperties(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QScroller_scrollerPropertiesChanged_signal_connect for Box<fn(QScrollerProperties)> {
+impl /* trait */ QScroller_scrollerPropertiesChanged_signal_connect for Box<Fn(QScrollerProperties)> {
   fn connect(self, sigthis: QScroller_scrollerPropertiesChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -701,7 +702,7 @@ extern fn QScroller_stateChanged_signal_connect_cb_1(rsfptr:fn(i32), arg0: c_int
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QScroller_stateChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(i32), arg0: c_int) {
+extern fn QScroller_stateChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -710,7 +711,8 @@ extern fn QScroller_stateChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(i32)
 impl /* trait */ QScroller_stateChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QScroller_stateChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QScroller_stateChanged_signal_connect_cb_1 as *mut c_void;
@@ -718,7 +720,7 @@ impl /* trait */ QScroller_stateChanged_signal_connect for fn(i32) {
     unsafe {QScroller_SlotProxy_connect__ZN9QScroller12stateChangedENS_5StateE(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QScroller_stateChanged_signal_connect for Box<fn(i32)> {
+impl /* trait */ QScroller_stateChanged_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QScroller_stateChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

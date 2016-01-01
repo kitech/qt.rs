@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qgraphicsproxywidget.h
 // dst-file: /src/widgets/qgraphicsproxywidget.rs
 //
@@ -85,19 +85,19 @@ impl AsRef<QGraphicsWidget> for QGraphicsProxyWidget {
 }
   // proto:  void QGraphicsProxyWidget::~QGraphicsProxyWidget();
 impl /*struct*/ QGraphicsProxyWidget {
-  pub fn Free<RetType, T: QGraphicsProxyWidget_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QGraphicsProxyWidget_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsProxyWidget_Free<RetType> {
-  fn Free(self , rsthis: & QGraphicsProxyWidget) -> RetType;
+pub trait QGraphicsProxyWidget_free<RetType> {
+  fn free(self , rsthis: & QGraphicsProxyWidget) -> RetType;
 }
 
   // proto:  void QGraphicsProxyWidget::~QGraphicsProxyWidget();
-impl<'a> /*trait*/ QGraphicsProxyWidget_Free<()> for () {
-  fn Free(self , rsthis: & QGraphicsProxyWidget) -> () {
+impl<'a> /*trait*/ QGraphicsProxyWidget_free<()> for () {
+  fn free(self , rsthis: & QGraphicsProxyWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QGraphicsProxyWidgetD0Ev()};
      unsafe {_ZN20QGraphicsProxyWidgetD0Ev(rsthis.qclsinst)};
@@ -178,20 +178,20 @@ impl<'a> /*trait*/ QGraphicsProxyWidget_subWidgetRect<QRectF> for (&'a QWidget) 
 
   // proto:  void QGraphicsProxyWidget::QGraphicsProxyWidget(const QGraphicsProxyWidget & );
 impl /*struct*/ QGraphicsProxyWidget {
-  pub fn New<T: QGraphicsProxyWidget_New>(value: T) -> QGraphicsProxyWidget {
-    let rsthis = value.New();
+  pub fn new<T: QGraphicsProxyWidget_new>(value: T) -> QGraphicsProxyWidget {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QGraphicsProxyWidget_New {
-  fn New(self) -> QGraphicsProxyWidget;
+pub trait QGraphicsProxyWidget_new {
+  fn new(self) -> QGraphicsProxyWidget;
 }
 
   // proto:  void QGraphicsProxyWidget::QGraphicsProxyWidget(const QGraphicsProxyWidget & );
-impl<'a> /*trait*/ QGraphicsProxyWidget_New for (&'a QGraphicsProxyWidget) {
-  fn New(self) -> QGraphicsProxyWidget {
+impl<'a> /*trait*/ QGraphicsProxyWidget_new for (&'a QGraphicsProxyWidget) {
+  fn new(self) -> QGraphicsProxyWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QGraphicsProxyWidgetC1ERKS_()};
     let ctysz: c_int = unsafe{QGraphicsProxyWidget_Class_Size()};

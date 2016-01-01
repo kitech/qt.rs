@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qgraphicsgridlayout.h
 // dst-file: /src/widgets/qgraphicsgridlayout.rs
 //
@@ -401,19 +401,19 @@ impl<'a> /*trait*/ QGraphicsGridLayout_removeItem<()> for (&'a QGraphicsLayoutIt
 
   // proto:  void QGraphicsGridLayout::~QGraphicsGridLayout();
 impl /*struct*/ QGraphicsGridLayout {
-  pub fn Free<RetType, T: QGraphicsGridLayout_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QGraphicsGridLayout_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsGridLayout_Free<RetType> {
-  fn Free(self , rsthis: & QGraphicsGridLayout) -> RetType;
+pub trait QGraphicsGridLayout_free<RetType> {
+  fn free(self , rsthis: & QGraphicsGridLayout) -> RetType;
 }
 
   // proto:  void QGraphicsGridLayout::~QGraphicsGridLayout();
-impl<'a> /*trait*/ QGraphicsGridLayout_Free<()> for () {
-  fn Free(self , rsthis: & QGraphicsGridLayout) -> () {
+impl<'a> /*trait*/ QGraphicsGridLayout_free<()> for () {
+  fn free(self , rsthis: & QGraphicsGridLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsGridLayoutD0Ev()};
      unsafe {_ZN19QGraphicsGridLayoutD0Ev(rsthis.qclsinst)};
@@ -471,20 +471,20 @@ impl<'a> /*trait*/ QGraphicsGridLayout_rowMaximumHeight<f64> for (i32) {
 
   // proto:  void QGraphicsGridLayout::QGraphicsGridLayout(QGraphicsLayoutItem * parent);
 impl /*struct*/ QGraphicsGridLayout {
-  pub fn New<T: QGraphicsGridLayout_New>(value: T) -> QGraphicsGridLayout {
-    let rsthis = value.New();
+  pub fn new<T: QGraphicsGridLayout_new>(value: T) -> QGraphicsGridLayout {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QGraphicsGridLayout_New {
-  fn New(self) -> QGraphicsGridLayout;
+pub trait QGraphicsGridLayout_new {
+  fn new(self) -> QGraphicsGridLayout;
 }
 
   // proto:  void QGraphicsGridLayout::QGraphicsGridLayout(QGraphicsLayoutItem * parent);
-impl<'a> /*trait*/ QGraphicsGridLayout_New for (&'a QGraphicsLayoutItem) {
-  fn New(self) -> QGraphicsGridLayout {
+impl<'a> /*trait*/ QGraphicsGridLayout_new for (&'a QGraphicsLayoutItem) {
+  fn new(self) -> QGraphicsGridLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsGridLayoutC1EP19QGraphicsLayoutItem()};
     let ctysz: c_int = unsafe{QGraphicsGridLayout_Class_Size()};
@@ -983,8 +983,8 @@ impl<'a> /*trait*/ QGraphicsGridLayout_columnSpacing<f64> for (i32) {
 }
 
   // proto:  void QGraphicsGridLayout::QGraphicsGridLayout(const QGraphicsGridLayout & );
-impl<'a> /*trait*/ QGraphicsGridLayout_New for (&'a QGraphicsGridLayout) {
-  fn New(self) -> QGraphicsGridLayout {
+impl<'a> /*trait*/ QGraphicsGridLayout_new for (&'a QGraphicsGridLayout) {
+  fn new(self) -> QGraphicsGridLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsGridLayoutC1ERKS_()};
     let ctysz: c_int = unsafe{QGraphicsGridLayout_Class_Size()};

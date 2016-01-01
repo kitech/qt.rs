@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qmenu.h
 // dst-file: /src/widgets/qmenu.rs
 //
@@ -692,20 +692,20 @@ impl<'a> /*trait*/ QMenu_addAction<QAction> for (&'a QString, &'a QObject, &'a  
 
   // proto:  void QMenu::QMenu(QWidget * parent);
 impl /*struct*/ QMenu {
-  pub fn New<T: QMenu_New>(value: T) -> QMenu {
-    let rsthis = value.New();
+  pub fn new<T: QMenu_new>(value: T) -> QMenu {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QMenu_New {
-  fn New(self) -> QMenu;
+pub trait QMenu_new {
+  fn new(self) -> QMenu;
 }
 
   // proto:  void QMenu::QMenu(QWidget * parent);
-impl<'a> /*trait*/ QMenu_New for (&'a QWidget) {
-  fn New(self) -> QMenu {
+impl<'a> /*trait*/ QMenu_new for (&'a QWidget) {
+  fn new(self) -> QMenu {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenuC1EP7QWidget()};
     let ctysz: c_int = unsafe{QMenu_Class_Size()};
@@ -766,8 +766,8 @@ impl<'a> /*trait*/ QMenu_setSeparatorsCollapsible<()> for (i8) {
 }
 
   // proto:  void QMenu::QMenu(const QMenu & );
-impl<'a> /*trait*/ QMenu_New for (&'a QMenu) {
-  fn New(self) -> QMenu {
+impl<'a> /*trait*/ QMenu_new for (&'a QMenu) {
+  fn new(self) -> QMenu {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenuC1ERKS_()};
     let ctysz: c_int = unsafe{QMenu_Class_Size()};
@@ -884,8 +884,8 @@ impl<'a> /*trait*/ QMenu_actionGeometry<QRect> for (&'a QAction) {
 }
 
   // proto:  void QMenu::QMenu(const QString & title, QWidget * parent);
-impl<'a> /*trait*/ QMenu_New for (&'a QString, &'a QWidget) {
-  fn New(self) -> QMenu {
+impl<'a> /*trait*/ QMenu_new for (&'a QString, &'a QWidget) {
+  fn new(self) -> QMenu {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenuC1ERK7QStringP7QWidget()};
     let ctysz: c_int = unsafe{QMenu_Class_Size()};
@@ -986,19 +986,19 @@ impl<'a> /*trait*/ QMenu_isTearOffMenuVisible<i8> for () {
 
   // proto:  void QMenu::~QMenu();
 impl /*struct*/ QMenu {
-  pub fn Free<RetType, T: QMenu_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QMenu_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QMenu_Free<RetType> {
-  fn Free(self , rsthis: & QMenu) -> RetType;
+pub trait QMenu_free<RetType> {
+  fn free(self , rsthis: & QMenu) -> RetType;
 }
 
   // proto:  void QMenu::~QMenu();
-impl<'a> /*trait*/ QMenu_Free<()> for () {
-  fn Free(self , rsthis: & QMenu) -> () {
+impl<'a> /*trait*/ QMenu_free<()> for () {
+  fn free(self , rsthis: & QMenu) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenuD0Ev()};
      unsafe {_ZN5QMenuD0Ev(rsthis.qclsinst)};
@@ -1341,7 +1341,7 @@ extern fn QMenu_aboutToShow_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QMenu_aboutToShow_signal_connect_cb_box_0(rsfptr_raw:*mut fn(), ) {
+extern fn QMenu_aboutToShow_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   rsfptr();
@@ -1349,7 +1349,8 @@ extern fn QMenu_aboutToShow_signal_connect_cb_box_0(rsfptr_raw:*mut fn(), ) {
 impl /* trait */ QMenu_aboutToShow_signal_connect for fn() {
   fn connect(self, sigthis: QMenu_aboutToShow_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QMenu_aboutToShow_signal_connect_cb_0 as *mut c_void;
@@ -1357,7 +1358,7 @@ impl /* trait */ QMenu_aboutToShow_signal_connect for fn() {
     unsafe {QMenu_SlotProxy_connect__ZN5QMenu11aboutToShowEv(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QMenu_aboutToShow_signal_connect for Box<fn()> {
+impl /* trait */ QMenu_aboutToShow_signal_connect for Box<Fn()> {
   fn connect(self, sigthis: QMenu_aboutToShow_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -1374,7 +1375,7 @@ extern fn QMenu_hovered_signal_connect_cb_1(rsfptr:fn(QAction), arg0: *mut c_voi
   let rsarg0 = QAction::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QMenu_hovered_signal_connect_cb_box_1(rsfptr_raw:*mut fn(QAction), arg0: *mut c_void) {
+extern fn QMenu_hovered_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(QAction), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QAction::inheritFrom(arg0 as u64);
@@ -1383,7 +1384,8 @@ extern fn QMenu_hovered_signal_connect_cb_box_1(rsfptr_raw:*mut fn(QAction), arg
 impl /* trait */ QMenu_hovered_signal_connect for fn(QAction) {
   fn connect(self, sigthis: QMenu_hovered_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QMenu_hovered_signal_connect_cb_1 as *mut c_void;
@@ -1391,7 +1393,7 @@ impl /* trait */ QMenu_hovered_signal_connect for fn(QAction) {
     unsafe {QMenu_SlotProxy_connect__ZN5QMenu7hoveredEP7QAction(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QMenu_hovered_signal_connect for Box<fn(QAction)> {
+impl /* trait */ QMenu_hovered_signal_connect for Box<Fn(QAction)> {
   fn connect(self, sigthis: QMenu_hovered_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -1407,7 +1409,7 @@ extern fn QMenu_aboutToHide_signal_connect_cb_2(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QMenu_aboutToHide_signal_connect_cb_box_2(rsfptr_raw:*mut fn(), ) {
+extern fn QMenu_aboutToHide_signal_connect_cb_box_2(rsfptr_raw:*mut Fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   rsfptr();
@@ -1415,7 +1417,8 @@ extern fn QMenu_aboutToHide_signal_connect_cb_box_2(rsfptr_raw:*mut fn(), ) {
 impl /* trait */ QMenu_aboutToHide_signal_connect for fn() {
   fn connect(self, sigthis: QMenu_aboutToHide_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QMenu_aboutToHide_signal_connect_cb_2 as *mut c_void;
@@ -1423,7 +1426,7 @@ impl /* trait */ QMenu_aboutToHide_signal_connect for fn() {
     unsafe {QMenu_SlotProxy_connect__ZN5QMenu11aboutToHideEv(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QMenu_aboutToHide_signal_connect for Box<fn()> {
+impl /* trait */ QMenu_aboutToHide_signal_connect for Box<Fn()> {
   fn connect(self, sigthis: QMenu_aboutToHide_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -1440,7 +1443,7 @@ extern fn QMenu_triggered_signal_connect_cb_3(rsfptr:fn(QAction), arg0: *mut c_v
   let rsarg0 = QAction::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QMenu_triggered_signal_connect_cb_box_3(rsfptr_raw:*mut fn(QAction), arg0: *mut c_void) {
+extern fn QMenu_triggered_signal_connect_cb_box_3(rsfptr_raw:*mut Fn(QAction), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QAction::inheritFrom(arg0 as u64);
@@ -1449,7 +1452,8 @@ extern fn QMenu_triggered_signal_connect_cb_box_3(rsfptr_raw:*mut fn(QAction), a
 impl /* trait */ QMenu_triggered_signal_connect for fn(QAction) {
   fn connect(self, sigthis: QMenu_triggered_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QMenu_triggered_signal_connect_cb_3 as *mut c_void;
@@ -1457,7 +1461,7 @@ impl /* trait */ QMenu_triggered_signal_connect for fn(QAction) {
     unsafe {QMenu_SlotProxy_connect__ZN5QMenu9triggeredEP7QAction(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QMenu_triggered_signal_connect for Box<fn(QAction)> {
+impl /* trait */ QMenu_triggered_signal_connect for Box<Fn(QAction)> {
   fn connect(self, sigthis: QMenu_triggered_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

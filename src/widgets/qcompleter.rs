@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qcompleter.h
 // dst-file: /src/widgets/qcompleter.rs
 //
@@ -146,20 +146,20 @@ impl AsRef<QObject> for QCompleter {
 }
   // proto:  void QCompleter::QCompleter(QObject * parent);
 impl /*struct*/ QCompleter {
-  pub fn New<T: QCompleter_New>(value: T) -> QCompleter {
-    let rsthis = value.New();
+  pub fn new<T: QCompleter_new>(value: T) -> QCompleter {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QCompleter_New {
-  fn New(self) -> QCompleter;
+pub trait QCompleter_new {
+  fn new(self) -> QCompleter;
 }
 
   // proto:  void QCompleter::QCompleter(QObject * parent);
-impl<'a> /*trait*/ QCompleter_New for (&'a QObject) {
-  fn New(self) -> QCompleter {
+impl<'a> /*trait*/ QCompleter_new for (&'a QObject) {
+  fn new(self) -> QCompleter {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QCompleterC1EP7QObject()};
     let ctysz: c_int = unsafe{QCompleter_Class_Size()};
@@ -310,8 +310,8 @@ impl<'a> /*trait*/ QCompleter_completionCount<i32> for () {
 }
 
   // proto:  void QCompleter::QCompleter(const QStringList & completions, QObject * parent);
-impl<'a> /*trait*/ QCompleter_New for (&'a QStringList, &'a QObject) {
-  fn New(self) -> QCompleter {
+impl<'a> /*trait*/ QCompleter_new for (&'a QStringList, &'a QObject) {
+  fn new(self) -> QCompleter {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QCompleterC1ERK11QStringListP7QObject()};
     let ctysz: c_int = unsafe{QCompleter_Class_Size()};
@@ -469,19 +469,19 @@ impl<'a> /*trait*/ QCompleter_maxVisibleItems<i32> for () {
 
   // proto:  void QCompleter::~QCompleter();
 impl /*struct*/ QCompleter {
-  pub fn Free<RetType, T: QCompleter_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QCompleter_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QCompleter_Free<RetType> {
-  fn Free(self , rsthis: & QCompleter) -> RetType;
+pub trait QCompleter_free<RetType> {
+  fn free(self , rsthis: & QCompleter) -> RetType;
 }
 
   // proto:  void QCompleter::~QCompleter();
-impl<'a> /*trait*/ QCompleter_Free<()> for () {
-  fn Free(self , rsthis: & QCompleter) -> () {
+impl<'a> /*trait*/ QCompleter_free<()> for () {
+  fn free(self , rsthis: & QCompleter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QCompleterD0Ev()};
      unsafe {_ZN10QCompleterD0Ev(rsthis.qclsinst)};
@@ -765,8 +765,8 @@ impl<'a> /*trait*/ QCompleter_wrapAround<i8> for () {
 }
 
   // proto:  void QCompleter::QCompleter(QAbstractItemModel * model, QObject * parent);
-impl<'a> /*trait*/ QCompleter_New for (&'a QAbstractItemModel, &'a QObject) {
-  fn New(self) -> QCompleter {
+impl<'a> /*trait*/ QCompleter_new for (&'a QAbstractItemModel, &'a QObject) {
+  fn new(self) -> QCompleter {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QCompleterC1EP18QAbstractItemModelP7QObject()};
     let ctysz: c_int = unsafe{QCompleter_Class_Size()};
@@ -805,8 +805,8 @@ impl<'a> /*trait*/ QCompleter_setPopup<()> for (&'a QAbstractItemView) {
 }
 
   // proto:  void QCompleter::QCompleter(const QCompleter & );
-impl<'a> /*trait*/ QCompleter_New for (&'a QCompleter) {
-  fn New(self) -> QCompleter {
+impl<'a> /*trait*/ QCompleter_new for (&'a QCompleter) {
+  fn new(self) -> QCompleter {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QCompleterC1ERKS_()};
     let ctysz: c_int = unsafe{QCompleter_Class_Size()};
@@ -952,7 +952,7 @@ extern fn QCompleter_highlighted_signal_connect_cb_0(rsfptr:fn(QModelIndex), arg
   let rsarg0 = QModelIndex::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QCompleter_highlighted_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QModelIndex), arg0: *mut c_void) {
+extern fn QCompleter_highlighted_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QModelIndex), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QModelIndex::inheritFrom(arg0 as u64);
@@ -961,7 +961,8 @@ extern fn QCompleter_highlighted_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QMod
 impl /* trait */ QCompleter_highlighted_signal_connect for fn(QModelIndex) {
   fn connect(self, sigthis: QCompleter_highlighted_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QCompleter_highlighted_signal_connect_cb_0 as *mut c_void;
@@ -969,7 +970,7 @@ impl /* trait */ QCompleter_highlighted_signal_connect for fn(QModelIndex) {
     unsafe {QCompleter_SlotProxy_connect__ZN10QCompleter11highlightedERK11QModelIndex(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QCompleter_highlighted_signal_connect for Box<fn(QModelIndex)> {
+impl /* trait */ QCompleter_highlighted_signal_connect for Box<Fn(QModelIndex)> {
   fn connect(self, sigthis: QCompleter_highlighted_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -986,7 +987,7 @@ extern fn QCompleter_activated_signal_connect_cb_1(rsfptr:fn(QString), arg0: *mu
   let rsarg0 = QString::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QCompleter_activated_signal_connect_cb_box_1(rsfptr_raw:*mut fn(QString), arg0: *mut c_void) {
+extern fn QCompleter_activated_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QString::inheritFrom(arg0 as u64);
@@ -995,7 +996,8 @@ extern fn QCompleter_activated_signal_connect_cb_box_1(rsfptr_raw:*mut fn(QStrin
 impl /* trait */ QCompleter_activated_signal_connect for fn(QString) {
   fn connect(self, sigthis: QCompleter_activated_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QCompleter_activated_signal_connect_cb_1 as *mut c_void;
@@ -1003,7 +1005,7 @@ impl /* trait */ QCompleter_activated_signal_connect for fn(QString) {
     unsafe {QCompleter_SlotProxy_connect__ZN10QCompleter9activatedERK7QString(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QCompleter_activated_signal_connect for Box<fn(QString)> {
+impl /* trait */ QCompleter_activated_signal_connect for Box<Fn(QString)> {
   fn connect(self, sigthis: QCompleter_activated_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -1020,7 +1022,7 @@ extern fn QCompleter_activated_signal_connect_cb_2(rsfptr:fn(QModelIndex), arg0:
   let rsarg0 = QModelIndex::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QCompleter_activated_signal_connect_cb_box_2(rsfptr_raw:*mut fn(QModelIndex), arg0: *mut c_void) {
+extern fn QCompleter_activated_signal_connect_cb_box_2(rsfptr_raw:*mut Fn(QModelIndex), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QModelIndex::inheritFrom(arg0 as u64);
@@ -1029,7 +1031,8 @@ extern fn QCompleter_activated_signal_connect_cb_box_2(rsfptr_raw:*mut fn(QModel
 impl /* trait */ QCompleter_activated_signal_connect for fn(QModelIndex) {
   fn connect(self, sigthis: QCompleter_activated_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QCompleter_activated_signal_connect_cb_2 as *mut c_void;
@@ -1037,7 +1040,7 @@ impl /* trait */ QCompleter_activated_signal_connect for fn(QModelIndex) {
     unsafe {QCompleter_SlotProxy_connect__ZN10QCompleter9activatedERK11QModelIndex(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QCompleter_activated_signal_connect for Box<fn(QModelIndex)> {
+impl /* trait */ QCompleter_activated_signal_connect for Box<Fn(QModelIndex)> {
   fn connect(self, sigthis: QCompleter_activated_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -1054,7 +1057,7 @@ extern fn QCompleter_highlighted_signal_connect_cb_3(rsfptr:fn(QString), arg0: *
   let rsarg0 = QString::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QCompleter_highlighted_signal_connect_cb_box_3(rsfptr_raw:*mut fn(QString), arg0: *mut c_void) {
+extern fn QCompleter_highlighted_signal_connect_cb_box_3(rsfptr_raw:*mut Fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QString::inheritFrom(arg0 as u64);
@@ -1063,7 +1066,8 @@ extern fn QCompleter_highlighted_signal_connect_cb_box_3(rsfptr_raw:*mut fn(QStr
 impl /* trait */ QCompleter_highlighted_signal_connect for fn(QString) {
   fn connect(self, sigthis: QCompleter_highlighted_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QCompleter_highlighted_signal_connect_cb_3 as *mut c_void;
@@ -1071,7 +1075,7 @@ impl /* trait */ QCompleter_highlighted_signal_connect for fn(QString) {
     unsafe {QCompleter_SlotProxy_connect__ZN10QCompleter11highlightedERK7QString(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QCompleter_highlighted_signal_connect for Box<fn(QString)> {
+impl /* trait */ QCompleter_highlighted_signal_connect for Box<Fn(QString)> {
   fn connect(self, sigthis: QCompleter_highlighted_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

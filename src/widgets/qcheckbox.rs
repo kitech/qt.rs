@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qcheckbox.h
 // dst-file: /src/widgets/qcheckbox.rs
 //
@@ -133,19 +133,19 @@ impl<'a> /*trait*/ QCheckBox_minimumSizeHint<QSize> for () {
 
   // proto:  void QCheckBox::~QCheckBox();
 impl /*struct*/ QCheckBox {
-  pub fn Free<RetType, T: QCheckBox_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QCheckBox_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QCheckBox_Free<RetType> {
-  fn Free(self , rsthis: & QCheckBox) -> RetType;
+pub trait QCheckBox_free<RetType> {
+  fn free(self , rsthis: & QCheckBox) -> RetType;
 }
 
   // proto:  void QCheckBox::~QCheckBox();
-impl<'a> /*trait*/ QCheckBox_Free<()> for () {
-  fn Free(self , rsthis: & QCheckBox) -> () {
+impl<'a> /*trait*/ QCheckBox_free<()> for () {
+  fn free(self , rsthis: & QCheckBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QCheckBoxD0Ev()};
      unsafe {_ZN9QCheckBoxD0Ev(rsthis.qclsinst)};
@@ -225,20 +225,20 @@ impl<'a> /*trait*/ QCheckBox_setTristate<()> for (i8) {
 
   // proto:  void QCheckBox::QCheckBox(const QCheckBox & );
 impl /*struct*/ QCheckBox {
-  pub fn New<T: QCheckBox_New>(value: T) -> QCheckBox {
-    let rsthis = value.New();
+  pub fn new<T: QCheckBox_new>(value: T) -> QCheckBox {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QCheckBox_New {
-  fn New(self) -> QCheckBox;
+pub trait QCheckBox_new {
+  fn new(self) -> QCheckBox;
 }
 
   // proto:  void QCheckBox::QCheckBox(const QCheckBox & );
-impl<'a> /*trait*/ QCheckBox_New for (&'a QCheckBox) {
-  fn New(self) -> QCheckBox {
+impl<'a> /*trait*/ QCheckBox_new for (&'a QCheckBox) {
+  fn new(self) -> QCheckBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QCheckBoxC1ERKS_()};
     let ctysz: c_int = unsafe{QCheckBox_Class_Size()};
@@ -253,8 +253,8 @@ impl<'a> /*trait*/ QCheckBox_New for (&'a QCheckBox) {
 }
 
   // proto:  void QCheckBox::QCheckBox(QWidget * parent);
-impl<'a> /*trait*/ QCheckBox_New for (&'a QWidget) {
-  fn New(self) -> QCheckBox {
+impl<'a> /*trait*/ QCheckBox_new for (&'a QWidget) {
+  fn new(self) -> QCheckBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QCheckBoxC1EP7QWidget()};
     let ctysz: c_int = unsafe{QCheckBox_Class_Size()};
@@ -292,8 +292,8 @@ impl<'a> /*trait*/ QCheckBox_isTristate<i8> for () {
 }
 
   // proto:  void QCheckBox::QCheckBox(const QString & text, QWidget * parent);
-impl<'a> /*trait*/ QCheckBox_New for (&'a QString, &'a QWidget) {
-  fn New(self) -> QCheckBox {
+impl<'a> /*trait*/ QCheckBox_new for (&'a QString, &'a QWidget) {
+  fn new(self) -> QCheckBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QCheckBoxC1ERK7QStringP7QWidget()};
     let ctysz: c_int = unsafe{QCheckBox_Class_Size()};
@@ -330,7 +330,7 @@ extern fn QCheckBox_stateChanged_signal_connect_cb_0(rsfptr:fn(i32), arg0: c_int
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QCheckBox_stateChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i32), arg0: c_int) {
+extern fn QCheckBox_stateChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -339,7 +339,8 @@ extern fn QCheckBox_stateChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i32)
 impl /* trait */ QCheckBox_stateChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QCheckBox_stateChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QCheckBox_stateChanged_signal_connect_cb_0 as *mut c_void;
@@ -347,7 +348,7 @@ impl /* trait */ QCheckBox_stateChanged_signal_connect for fn(i32) {
     unsafe {QCheckBox_SlotProxy_connect__ZN9QCheckBox12stateChangedEi(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QCheckBox_stateChanged_signal_connect for Box<fn(i32)> {
+impl /* trait */ QCheckBox_stateChanged_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QCheckBox_stateChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

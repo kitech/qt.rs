@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qdatawidgetmapper.h
 // dst-file: /src/widgets/qdatawidgetmapper.rs
 //
@@ -122,20 +122,20 @@ impl AsRef<QObject> for QDataWidgetMapper {
 }
   // proto:  void QDataWidgetMapper::QDataWidgetMapper(const QDataWidgetMapper & );
 impl /*struct*/ QDataWidgetMapper {
-  pub fn New<T: QDataWidgetMapper_New>(value: T) -> QDataWidgetMapper {
-    let rsthis = value.New();
+  pub fn new<T: QDataWidgetMapper_new>(value: T) -> QDataWidgetMapper {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QDataWidgetMapper_New {
-  fn New(self) -> QDataWidgetMapper;
+pub trait QDataWidgetMapper_new {
+  fn new(self) -> QDataWidgetMapper;
 }
 
   // proto:  void QDataWidgetMapper::QDataWidgetMapper(const QDataWidgetMapper & );
-impl<'a> /*trait*/ QDataWidgetMapper_New for (&'a QDataWidgetMapper) {
-  fn New(self) -> QDataWidgetMapper {
+impl<'a> /*trait*/ QDataWidgetMapper_new for (&'a QDataWidgetMapper) {
+  fn new(self) -> QDataWidgetMapper {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QDataWidgetMapperC1ERKS_()};
     let ctysz: c_int = unsafe{QDataWidgetMapper_Class_Size()};
@@ -546,19 +546,19 @@ impl<'a> /*trait*/ QDataWidgetMapper_setCurrentModelIndex<()> for (&'a QModelInd
 
   // proto:  void QDataWidgetMapper::~QDataWidgetMapper();
 impl /*struct*/ QDataWidgetMapper {
-  pub fn Free<RetType, T: QDataWidgetMapper_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QDataWidgetMapper_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QDataWidgetMapper_Free<RetType> {
-  fn Free(self , rsthis: & QDataWidgetMapper) -> RetType;
+pub trait QDataWidgetMapper_free<RetType> {
+  fn free(self , rsthis: & QDataWidgetMapper) -> RetType;
 }
 
   // proto:  void QDataWidgetMapper::~QDataWidgetMapper();
-impl<'a> /*trait*/ QDataWidgetMapper_Free<()> for () {
-  fn Free(self , rsthis: & QDataWidgetMapper) -> () {
+impl<'a> /*trait*/ QDataWidgetMapper_free<()> for () {
+  fn free(self , rsthis: & QDataWidgetMapper) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QDataWidgetMapperD0Ev()};
      unsafe {_ZN17QDataWidgetMapperD0Ev(rsthis.qclsinst)};
@@ -579,8 +579,8 @@ impl<'a> /*trait*/ QDataWidgetMapper_addMapping<()> for (&'a QWidget, i32) {
 }
 
   // proto:  void QDataWidgetMapper::QDataWidgetMapper(QObject * parent);
-impl<'a> /*trait*/ QDataWidgetMapper_New for (&'a QObject) {
-  fn New(self) -> QDataWidgetMapper {
+impl<'a> /*trait*/ QDataWidgetMapper_new for (&'a QObject) {
+  fn new(self) -> QDataWidgetMapper {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QDataWidgetMapperC1EP7QObject()};
     let ctysz: c_int = unsafe{QDataWidgetMapper_Class_Size()};
@@ -749,7 +749,7 @@ extern fn QDataWidgetMapper_currentIndexChanged_signal_connect_cb_0(rsfptr:fn(i3
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QDataWidgetMapper_currentIndexChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i32), arg0: c_int) {
+extern fn QDataWidgetMapper_currentIndexChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -758,7 +758,8 @@ extern fn QDataWidgetMapper_currentIndexChanged_signal_connect_cb_box_0(rsfptr_r
 impl /* trait */ QDataWidgetMapper_currentIndexChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QDataWidgetMapper_currentIndexChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QDataWidgetMapper_currentIndexChanged_signal_connect_cb_0 as *mut c_void;
@@ -766,7 +767,7 @@ impl /* trait */ QDataWidgetMapper_currentIndexChanged_signal_connect for fn(i32
     unsafe {QDataWidgetMapper_SlotProxy_connect__ZN17QDataWidgetMapper19currentIndexChangedEi(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QDataWidgetMapper_currentIndexChanged_signal_connect for Box<fn(i32)> {
+impl /* trait */ QDataWidgetMapper_currentIndexChanged_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QDataWidgetMapper_currentIndexChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

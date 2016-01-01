@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qerrormessage.h
 // dst-file: /src/widgets/qerrormessage.rs
 //
@@ -99,20 +99,20 @@ impl<'a> /*trait*/ QErrorMessage_metaObject<()> for () {
 
   // proto:  void QErrorMessage::QErrorMessage(QWidget * parent);
 impl /*struct*/ QErrorMessage {
-  pub fn New<T: QErrorMessage_New>(value: T) -> QErrorMessage {
-    let rsthis = value.New();
+  pub fn new<T: QErrorMessage_new>(value: T) -> QErrorMessage {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QErrorMessage_New {
-  fn New(self) -> QErrorMessage;
+pub trait QErrorMessage_new {
+  fn new(self) -> QErrorMessage;
 }
 
   // proto:  void QErrorMessage::QErrorMessage(QWidget * parent);
-impl<'a> /*trait*/ QErrorMessage_New for (&'a QWidget) {
-  fn New(self) -> QErrorMessage {
+impl<'a> /*trait*/ QErrorMessage_new for (&'a QWidget) {
+  fn new(self) -> QErrorMessage {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QErrorMessageC1EP7QWidget()};
     let ctysz: c_int = unsafe{QErrorMessage_Class_Size()};
@@ -187,19 +187,19 @@ impl<'a> /*trait*/ QErrorMessage_showMessage<()> for (&'a QString) {
 
   // proto:  void QErrorMessage::~QErrorMessage();
 impl /*struct*/ QErrorMessage {
-  pub fn Free<RetType, T: QErrorMessage_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QErrorMessage_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QErrorMessage_Free<RetType> {
-  fn Free(self , rsthis: & QErrorMessage) -> RetType;
+pub trait QErrorMessage_free<RetType> {
+  fn free(self , rsthis: & QErrorMessage) -> RetType;
 }
 
   // proto:  void QErrorMessage::~QErrorMessage();
-impl<'a> /*trait*/ QErrorMessage_Free<()> for () {
-  fn Free(self , rsthis: & QErrorMessage) -> () {
+impl<'a> /*trait*/ QErrorMessage_free<()> for () {
+  fn free(self , rsthis: & QErrorMessage) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QErrorMessageD0Ev()};
      unsafe {_ZN13QErrorMessageD0Ev(rsthis.qclsinst)};
@@ -208,8 +208,8 @@ impl<'a> /*trait*/ QErrorMessage_Free<()> for () {
 }
 
   // proto:  void QErrorMessage::QErrorMessage(const QErrorMessage & );
-impl<'a> /*trait*/ QErrorMessage_New for (&'a QErrorMessage) {
-  fn New(self) -> QErrorMessage {
+impl<'a> /*trait*/ QErrorMessage_new for (&'a QErrorMessage) {
+  fn new(self) -> QErrorMessage {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QErrorMessageC1ERKS_()};
     let ctysz: c_int = unsafe{QErrorMessage_Class_Size()};

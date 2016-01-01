@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qheaderview.h
 // dst-file: /src/widgets/qheaderview.rs
 //
@@ -341,20 +341,20 @@ impl<'a> /*trait*/ QHeaderView_sectionSize<i32> for (i32) {
 
   // proto:  void QHeaderView::QHeaderView(const QHeaderView & );
 impl /*struct*/ QHeaderView {
-  pub fn New<T: QHeaderView_New>(value: T) -> QHeaderView {
-    let rsthis = value.New();
+  pub fn new<T: QHeaderView_new>(value: T) -> QHeaderView {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QHeaderView_New {
-  fn New(self) -> QHeaderView;
+pub trait QHeaderView_new {
+  fn new(self) -> QHeaderView;
 }
 
   // proto:  void QHeaderView::QHeaderView(const QHeaderView & );
-impl<'a> /*trait*/ QHeaderView_New for (&'a QHeaderView) {
-  fn New(self) -> QHeaderView {
+impl<'a> /*trait*/ QHeaderView_new for (&'a QHeaderView) {
+  fn new(self) -> QHeaderView {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderViewC1ERKS_()};
     let ctysz: c_int = unsafe{QHeaderView_Class_Size()};
@@ -738,19 +738,19 @@ impl<'a> /*trait*/ QHeaderView_logicalIndexAt<i32> for (&'a QPoint) {
 
   // proto:  void QHeaderView::~QHeaderView();
 impl /*struct*/ QHeaderView {
-  pub fn Free<RetType, T: QHeaderView_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QHeaderView_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QHeaderView_Free<RetType> {
-  fn Free(self , rsthis: & QHeaderView) -> RetType;
+pub trait QHeaderView_free<RetType> {
+  fn free(self , rsthis: & QHeaderView) -> RetType;
 }
 
   // proto:  void QHeaderView::~QHeaderView();
-impl<'a> /*trait*/ QHeaderView_Free<()> for () {
-  fn Free(self , rsthis: & QHeaderView) -> () {
+impl<'a> /*trait*/ QHeaderView_free<()> for () {
+  fn free(self , rsthis: & QHeaderView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderViewD0Ev()};
      unsafe {_ZN11QHeaderViewD0Ev(rsthis.qclsinst)};
@@ -1948,7 +1948,7 @@ extern fn QHeaderView_sectionEntered_signal_connect_cb_0(rsfptr:fn(i32), arg0: c
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QHeaderView_sectionEntered_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i32), arg0: c_int) {
+extern fn QHeaderView_sectionEntered_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -1957,7 +1957,8 @@ extern fn QHeaderView_sectionEntered_signal_connect_cb_box_0(rsfptr_raw:*mut fn(
 impl /* trait */ QHeaderView_sectionEntered_signal_connect for fn(i32) {
   fn connect(self, sigthis: QHeaderView_sectionEntered_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QHeaderView_sectionEntered_signal_connect_cb_0 as *mut c_void;
@@ -1965,7 +1966,7 @@ impl /* trait */ QHeaderView_sectionEntered_signal_connect for fn(i32) {
     unsafe {QHeaderView_SlotProxy_connect__ZN11QHeaderView14sectionEnteredEi(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QHeaderView_sectionEntered_signal_connect for Box<fn(i32)> {
+impl /* trait */ QHeaderView_sectionEntered_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QHeaderView_sectionEntered_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -1981,7 +1982,7 @@ extern fn QHeaderView_geometriesChanged_signal_connect_cb_1(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QHeaderView_geometriesChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(), ) {
+extern fn QHeaderView_geometriesChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   rsfptr();
@@ -1989,7 +1990,8 @@ extern fn QHeaderView_geometriesChanged_signal_connect_cb_box_1(rsfptr_raw:*mut 
 impl /* trait */ QHeaderView_geometriesChanged_signal_connect for fn() {
   fn connect(self, sigthis: QHeaderView_geometriesChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QHeaderView_geometriesChanged_signal_connect_cb_1 as *mut c_void;
@@ -1997,7 +1999,7 @@ impl /* trait */ QHeaderView_geometriesChanged_signal_connect for fn() {
     unsafe {QHeaderView_SlotProxy_connect__ZN11QHeaderView17geometriesChangedEv(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QHeaderView_geometriesChanged_signal_connect for Box<fn()> {
+impl /* trait */ QHeaderView_geometriesChanged_signal_connect for Box<Fn()> {
   fn connect(self, sigthis: QHeaderView_geometriesChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -2014,7 +2016,7 @@ extern fn QHeaderView_sectionClicked_signal_connect_cb_2(rsfptr:fn(i32), arg0: c
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QHeaderView_sectionClicked_signal_connect_cb_box_2(rsfptr_raw:*mut fn(i32), arg0: c_int) {
+extern fn QHeaderView_sectionClicked_signal_connect_cb_box_2(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -2023,7 +2025,8 @@ extern fn QHeaderView_sectionClicked_signal_connect_cb_box_2(rsfptr_raw:*mut fn(
 impl /* trait */ QHeaderView_sectionClicked_signal_connect for fn(i32) {
   fn connect(self, sigthis: QHeaderView_sectionClicked_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QHeaderView_sectionClicked_signal_connect_cb_2 as *mut c_void;
@@ -2031,7 +2034,7 @@ impl /* trait */ QHeaderView_sectionClicked_signal_connect for fn(i32) {
     unsafe {QHeaderView_SlotProxy_connect__ZN11QHeaderView14sectionClickedEi(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QHeaderView_sectionClicked_signal_connect for Box<fn(i32)> {
+impl /* trait */ QHeaderView_sectionClicked_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QHeaderView_sectionClicked_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -2050,7 +2053,7 @@ extern fn QHeaderView_sectionMoved_signal_connect_cb_3(rsfptr:fn(i32, i32, i32),
   let rsarg2 = arg2 as i32;
   rsfptr(rsarg0,rsarg1,rsarg2);
 }
-extern fn QHeaderView_sectionMoved_signal_connect_cb_box_3(rsfptr_raw:*mut fn(i32, i32, i32), arg0: c_int, arg1: c_int, arg2: c_int) {
+extern fn QHeaderView_sectionMoved_signal_connect_cb_box_3(rsfptr_raw:*mut Fn(i32, i32, i32), arg0: c_int, arg1: c_int, arg2: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -2061,7 +2064,8 @@ extern fn QHeaderView_sectionMoved_signal_connect_cb_box_3(rsfptr_raw:*mut fn(i3
 impl /* trait */ QHeaderView_sectionMoved_signal_connect for fn(i32, i32, i32) {
   fn connect(self, sigthis: QHeaderView_sectionMoved_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QHeaderView_sectionMoved_signal_connect_cb_3 as *mut c_void;
@@ -2069,7 +2073,7 @@ impl /* trait */ QHeaderView_sectionMoved_signal_connect for fn(i32, i32, i32) {
     unsafe {QHeaderView_SlotProxy_connect__ZN11QHeaderView12sectionMovedEiii(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QHeaderView_sectionMoved_signal_connect for Box<fn(i32, i32, i32)> {
+impl /* trait */ QHeaderView_sectionMoved_signal_connect for Box<Fn(i32, i32, i32)> {
   fn connect(self, sigthis: QHeaderView_sectionMoved_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -2086,7 +2090,7 @@ extern fn QHeaderView_sectionPressed_signal_connect_cb_4(rsfptr:fn(i32), arg0: c
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QHeaderView_sectionPressed_signal_connect_cb_box_4(rsfptr_raw:*mut fn(i32), arg0: c_int) {
+extern fn QHeaderView_sectionPressed_signal_connect_cb_box_4(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -2095,7 +2099,8 @@ extern fn QHeaderView_sectionPressed_signal_connect_cb_box_4(rsfptr_raw:*mut fn(
 impl /* trait */ QHeaderView_sectionPressed_signal_connect for fn(i32) {
   fn connect(self, sigthis: QHeaderView_sectionPressed_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QHeaderView_sectionPressed_signal_connect_cb_4 as *mut c_void;
@@ -2103,7 +2108,7 @@ impl /* trait */ QHeaderView_sectionPressed_signal_connect for fn(i32) {
     unsafe {QHeaderView_SlotProxy_connect__ZN11QHeaderView14sectionPressedEi(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QHeaderView_sectionPressed_signal_connect for Box<fn(i32)> {
+impl /* trait */ QHeaderView_sectionPressed_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QHeaderView_sectionPressed_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -2120,7 +2125,7 @@ extern fn QHeaderView_sectionDoubleClicked_signal_connect_cb_5(rsfptr:fn(i32), a
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QHeaderView_sectionDoubleClicked_signal_connect_cb_box_5(rsfptr_raw:*mut fn(i32), arg0: c_int) {
+extern fn QHeaderView_sectionDoubleClicked_signal_connect_cb_box_5(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -2129,7 +2134,8 @@ extern fn QHeaderView_sectionDoubleClicked_signal_connect_cb_box_5(rsfptr_raw:*m
 impl /* trait */ QHeaderView_sectionDoubleClicked_signal_connect for fn(i32) {
   fn connect(self, sigthis: QHeaderView_sectionDoubleClicked_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QHeaderView_sectionDoubleClicked_signal_connect_cb_5 as *mut c_void;
@@ -2137,7 +2143,7 @@ impl /* trait */ QHeaderView_sectionDoubleClicked_signal_connect for fn(i32) {
     unsafe {QHeaderView_SlotProxy_connect__ZN11QHeaderView20sectionDoubleClickedEi(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QHeaderView_sectionDoubleClicked_signal_connect for Box<fn(i32)> {
+impl /* trait */ QHeaderView_sectionDoubleClicked_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QHeaderView_sectionDoubleClicked_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -2154,7 +2160,7 @@ extern fn QHeaderView_sectionHandleDoubleClicked_signal_connect_cb_6(rsfptr:fn(i
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QHeaderView_sectionHandleDoubleClicked_signal_connect_cb_box_6(rsfptr_raw:*mut fn(i32), arg0: c_int) {
+extern fn QHeaderView_sectionHandleDoubleClicked_signal_connect_cb_box_6(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -2163,7 +2169,8 @@ extern fn QHeaderView_sectionHandleDoubleClicked_signal_connect_cb_box_6(rsfptr_
 impl /* trait */ QHeaderView_sectionHandleDoubleClicked_signal_connect for fn(i32) {
   fn connect(self, sigthis: QHeaderView_sectionHandleDoubleClicked_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QHeaderView_sectionHandleDoubleClicked_signal_connect_cb_6 as *mut c_void;
@@ -2171,7 +2178,7 @@ impl /* trait */ QHeaderView_sectionHandleDoubleClicked_signal_connect for fn(i3
     unsafe {QHeaderView_SlotProxy_connect__ZN11QHeaderView26sectionHandleDoubleClickedEi(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QHeaderView_sectionHandleDoubleClicked_signal_connect for Box<fn(i32)> {
+impl /* trait */ QHeaderView_sectionHandleDoubleClicked_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QHeaderView_sectionHandleDoubleClicked_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -2190,7 +2197,7 @@ extern fn QHeaderView_sectionResized_signal_connect_cb_7(rsfptr:fn(i32, i32, i32
   let rsarg2 = arg2 as i32;
   rsfptr(rsarg0,rsarg1,rsarg2);
 }
-extern fn QHeaderView_sectionResized_signal_connect_cb_box_7(rsfptr_raw:*mut fn(i32, i32, i32), arg0: c_int, arg1: c_int, arg2: c_int) {
+extern fn QHeaderView_sectionResized_signal_connect_cb_box_7(rsfptr_raw:*mut Fn(i32, i32, i32), arg0: c_int, arg1: c_int, arg2: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -2201,7 +2208,8 @@ extern fn QHeaderView_sectionResized_signal_connect_cb_box_7(rsfptr_raw:*mut fn(
 impl /* trait */ QHeaderView_sectionResized_signal_connect for fn(i32, i32, i32) {
   fn connect(self, sigthis: QHeaderView_sectionResized_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QHeaderView_sectionResized_signal_connect_cb_7 as *mut c_void;
@@ -2209,7 +2217,7 @@ impl /* trait */ QHeaderView_sectionResized_signal_connect for fn(i32, i32, i32)
     unsafe {QHeaderView_SlotProxy_connect__ZN11QHeaderView14sectionResizedEiii(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QHeaderView_sectionResized_signal_connect for Box<fn(i32, i32, i32)> {
+impl /* trait */ QHeaderView_sectionResized_signal_connect for Box<Fn(i32, i32, i32)> {
   fn connect(self, sigthis: QHeaderView_sectionResized_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -2227,7 +2235,7 @@ extern fn QHeaderView_sectionCountChanged_signal_connect_cb_8(rsfptr:fn(i32, i32
   let rsarg1 = arg1 as i32;
   rsfptr(rsarg0,rsarg1);
 }
-extern fn QHeaderView_sectionCountChanged_signal_connect_cb_box_8(rsfptr_raw:*mut fn(i32, i32), arg0: c_int, arg1: c_int) {
+extern fn QHeaderView_sectionCountChanged_signal_connect_cb_box_8(rsfptr_raw:*mut Fn(i32, i32), arg0: c_int, arg1: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -2237,7 +2245,8 @@ extern fn QHeaderView_sectionCountChanged_signal_connect_cb_box_8(rsfptr_raw:*mu
 impl /* trait */ QHeaderView_sectionCountChanged_signal_connect for fn(i32, i32) {
   fn connect(self, sigthis: QHeaderView_sectionCountChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QHeaderView_sectionCountChanged_signal_connect_cb_8 as *mut c_void;
@@ -2245,7 +2254,7 @@ impl /* trait */ QHeaderView_sectionCountChanged_signal_connect for fn(i32, i32)
     unsafe {QHeaderView_SlotProxy_connect__ZN11QHeaderView19sectionCountChangedEii(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QHeaderView_sectionCountChanged_signal_connect for Box<fn(i32, i32)> {
+impl /* trait */ QHeaderView_sectionCountChanged_signal_connect for Box<Fn(i32, i32)> {
   fn connect(self, sigthis: QHeaderView_sectionCountChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -2263,7 +2272,7 @@ extern fn QHeaderView_sortIndicatorChanged_signal_connect_cb_9(rsfptr:fn(i32, i3
   let rsarg1 = arg1 as i32;
   rsfptr(rsarg0,rsarg1);
 }
-extern fn QHeaderView_sortIndicatorChanged_signal_connect_cb_box_9(rsfptr_raw:*mut fn(i32, i32), arg0: c_int, arg1: c_int) {
+extern fn QHeaderView_sortIndicatorChanged_signal_connect_cb_box_9(rsfptr_raw:*mut Fn(i32, i32), arg0: c_int, arg1: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -2273,7 +2282,8 @@ extern fn QHeaderView_sortIndicatorChanged_signal_connect_cb_box_9(rsfptr_raw:*m
 impl /* trait */ QHeaderView_sortIndicatorChanged_signal_connect for fn(i32, i32) {
   fn connect(self, sigthis: QHeaderView_sortIndicatorChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QHeaderView_sortIndicatorChanged_signal_connect_cb_9 as *mut c_void;
@@ -2281,7 +2291,7 @@ impl /* trait */ QHeaderView_sortIndicatorChanged_signal_connect for fn(i32, i32
     unsafe {QHeaderView_SlotProxy_connect__ZN11QHeaderView20sortIndicatorChangedEiN2Qt9SortOrderE(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QHeaderView_sortIndicatorChanged_signal_connect for Box<fn(i32, i32)> {
+impl /* trait */ QHeaderView_sortIndicatorChanged_signal_connect for Box<Fn(i32, i32)> {
   fn connect(self, sigthis: QHeaderView_sortIndicatorChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

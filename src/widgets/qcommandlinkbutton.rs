@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qcommandlinkbutton.h
 // dst-file: /src/widgets/qcommandlinkbutton.rs
 //
@@ -81,20 +81,20 @@ impl AsRef<QPushButton> for QCommandLinkButton {
 }
   // proto:  void QCommandLinkButton::QCommandLinkButton(const QString & text, const QString & description, QWidget * parent);
 impl /*struct*/ QCommandLinkButton {
-  pub fn New<T: QCommandLinkButton_New>(value: T) -> QCommandLinkButton {
-    let rsthis = value.New();
+  pub fn new<T: QCommandLinkButton_new>(value: T) -> QCommandLinkButton {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QCommandLinkButton_New {
-  fn New(self) -> QCommandLinkButton;
+pub trait QCommandLinkButton_new {
+  fn new(self) -> QCommandLinkButton;
 }
 
   // proto:  void QCommandLinkButton::QCommandLinkButton(const QString & text, const QString & description, QWidget * parent);
-impl<'a> /*trait*/ QCommandLinkButton_New for (&'a QString, &'a QString, &'a QWidget) {
-  fn New(self) -> QCommandLinkButton {
+impl<'a> /*trait*/ QCommandLinkButton_new for (&'a QString, &'a QString, &'a QWidget) {
+  fn new(self) -> QCommandLinkButton {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLinkButtonC1ERK7QStringS2_P7QWidget()};
     let ctysz: c_int = unsafe{QCommandLinkButton_Class_Size()};
@@ -134,19 +134,19 @@ impl<'a> /*trait*/ QCommandLinkButton_metaObject<()> for () {
 
   // proto:  void QCommandLinkButton::~QCommandLinkButton();
 impl /*struct*/ QCommandLinkButton {
-  pub fn Free<RetType, T: QCommandLinkButton_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QCommandLinkButton_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QCommandLinkButton_Free<RetType> {
-  fn Free(self , rsthis: & QCommandLinkButton) -> RetType;
+pub trait QCommandLinkButton_free<RetType> {
+  fn free(self , rsthis: & QCommandLinkButton) -> RetType;
 }
 
   // proto:  void QCommandLinkButton::~QCommandLinkButton();
-impl<'a> /*trait*/ QCommandLinkButton_Free<()> for () {
-  fn Free(self , rsthis: & QCommandLinkButton) -> () {
+impl<'a> /*trait*/ QCommandLinkButton_free<()> for () {
+  fn free(self , rsthis: & QCommandLinkButton) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLinkButtonD0Ev()};
      unsafe {_ZN18QCommandLinkButtonD0Ev(rsthis.qclsinst)};
@@ -155,8 +155,8 @@ impl<'a> /*trait*/ QCommandLinkButton_Free<()> for () {
 }
 
   // proto:  void QCommandLinkButton::QCommandLinkButton(const QCommandLinkButton & );
-impl<'a> /*trait*/ QCommandLinkButton_New for (&'a QCommandLinkButton) {
-  fn New(self) -> QCommandLinkButton {
+impl<'a> /*trait*/ QCommandLinkButton_new for (&'a QCommandLinkButton) {
+  fn new(self) -> QCommandLinkButton {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLinkButtonC1ERKS_()};
     let ctysz: c_int = unsafe{QCommandLinkButton_Class_Size()};
@@ -171,8 +171,8 @@ impl<'a> /*trait*/ QCommandLinkButton_New for (&'a QCommandLinkButton) {
 }
 
   // proto:  void QCommandLinkButton::QCommandLinkButton(QWidget * parent);
-impl<'a> /*trait*/ QCommandLinkButton_New for (&'a QWidget) {
-  fn New(self) -> QCommandLinkButton {
+impl<'a> /*trait*/ QCommandLinkButton_new for (&'a QWidget) {
+  fn new(self) -> QCommandLinkButton {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLinkButtonC1EP7QWidget()};
     let ctysz: c_int = unsafe{QCommandLinkButton_Class_Size()};
@@ -211,8 +211,8 @@ impl<'a> /*trait*/ QCommandLinkButton_description<QString> for () {
 }
 
   // proto:  void QCommandLinkButton::QCommandLinkButton(const QString & text, QWidget * parent);
-impl<'a> /*trait*/ QCommandLinkButton_New for (&'a QString, &'a QWidget) {
-  fn New(self) -> QCommandLinkButton {
+impl<'a> /*trait*/ QCommandLinkButton_new for (&'a QString, &'a QWidget) {
+  fn new(self) -> QCommandLinkButton {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLinkButtonC1ERK7QStringP7QWidget()};
     let ctysz: c_int = unsafe{QCommandLinkButton_Class_Size()};

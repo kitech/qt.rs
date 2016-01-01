@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qfontcombobox.h
 // dst-file: /src/widgets/qfontcombobox.rs
 //
@@ -82,20 +82,20 @@ impl AsRef<QComboBox> for QFontComboBox {
 }
   // proto:  void QFontComboBox::QFontComboBox(const QFontComboBox & );
 impl /*struct*/ QFontComboBox {
-  pub fn New<T: QFontComboBox_New>(value: T) -> QFontComboBox {
-    let rsthis = value.New();
+  pub fn new<T: QFontComboBox_new>(value: T) -> QFontComboBox {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QFontComboBox_New {
-  fn New(self) -> QFontComboBox;
+pub trait QFontComboBox_new {
+  fn new(self) -> QFontComboBox;
 }
 
   // proto:  void QFontComboBox::QFontComboBox(const QFontComboBox & );
-impl<'a> /*trait*/ QFontComboBox_New for (&'a QFontComboBox) {
-  fn New(self) -> QFontComboBox {
+impl<'a> /*trait*/ QFontComboBox_new for (&'a QFontComboBox) {
+  fn new(self) -> QFontComboBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QFontComboBoxC1ERKS_()};
     let ctysz: c_int = unsafe{QFontComboBox_Class_Size()};
@@ -111,19 +111,19 @@ impl<'a> /*trait*/ QFontComboBox_New for (&'a QFontComboBox) {
 
   // proto:  void QFontComboBox::~QFontComboBox();
 impl /*struct*/ QFontComboBox {
-  pub fn Free<RetType, T: QFontComboBox_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QFontComboBox_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QFontComboBox_Free<RetType> {
-  fn Free(self , rsthis: & QFontComboBox) -> RetType;
+pub trait QFontComboBox_free<RetType> {
+  fn free(self , rsthis: & QFontComboBox) -> RetType;
 }
 
   // proto:  void QFontComboBox::~QFontComboBox();
-impl<'a> /*trait*/ QFontComboBox_Free<()> for () {
-  fn Free(self , rsthis: & QFontComboBox) -> () {
+impl<'a> /*trait*/ QFontComboBox_free<()> for () {
+  fn free(self , rsthis: & QFontComboBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QFontComboBoxD0Ev()};
      unsafe {_ZN13QFontComboBoxD0Ev(rsthis.qclsinst)};
@@ -154,8 +154,8 @@ impl<'a> /*trait*/ QFontComboBox_metaObject<()> for () {
 }
 
   // proto:  void QFontComboBox::QFontComboBox(QWidget * parent);
-impl<'a> /*trait*/ QFontComboBox_New for (&'a QWidget) {
-  fn New(self) -> QFontComboBox {
+impl<'a> /*trait*/ QFontComboBox_new for (&'a QWidget) {
+  fn new(self) -> QFontComboBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QFontComboBoxC1EP7QWidget()};
     let ctysz: c_int = unsafe{QFontComboBox_Class_Size()};
@@ -285,7 +285,7 @@ extern fn QFontComboBox_currentFontChanged_signal_connect_cb_0(rsfptr:fn(QFont),
   let rsarg0 = QFont::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QFontComboBox_currentFontChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QFont), arg0: *mut c_void) {
+extern fn QFontComboBox_currentFontChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QFont), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QFont::inheritFrom(arg0 as u64);
@@ -294,7 +294,8 @@ extern fn QFontComboBox_currentFontChanged_signal_connect_cb_box_0(rsfptr_raw:*m
 impl /* trait */ QFontComboBox_currentFontChanged_signal_connect for fn(QFont) {
   fn connect(self, sigthis: QFontComboBox_currentFontChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QFontComboBox_currentFontChanged_signal_connect_cb_0 as *mut c_void;
@@ -302,7 +303,7 @@ impl /* trait */ QFontComboBox_currentFontChanged_signal_connect for fn(QFont) {
     unsafe {QFontComboBox_SlotProxy_connect__ZN13QFontComboBox18currentFontChangedERK5QFont(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QFontComboBox_currentFontChanged_signal_connect for Box<fn(QFont)> {
+impl /* trait */ QFontComboBox_currentFontChanged_signal_connect for Box<Fn(QFont)> {
   fn connect(self, sigthis: QFontComboBox_currentFontChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

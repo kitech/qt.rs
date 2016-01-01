@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qstyleditemdelegate.h
 // dst-file: /src/widgets/qstyleditemdelegate.rs
 //
@@ -151,19 +151,19 @@ impl<'a> /*trait*/ QStyledItemDelegate_createEditor<QWidget> for (&'a QWidget, &
 
   // proto:  void QStyledItemDelegate::~QStyledItemDelegate();
 impl /*struct*/ QStyledItemDelegate {
-  pub fn Free<RetType, T: QStyledItemDelegate_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QStyledItemDelegate_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QStyledItemDelegate_Free<RetType> {
-  fn Free(self , rsthis: & QStyledItemDelegate) -> RetType;
+pub trait QStyledItemDelegate_free<RetType> {
+  fn free(self , rsthis: & QStyledItemDelegate) -> RetType;
 }
 
   // proto:  void QStyledItemDelegate::~QStyledItemDelegate();
-impl<'a> /*trait*/ QStyledItemDelegate_Free<()> for () {
-  fn Free(self , rsthis: & QStyledItemDelegate) -> () {
+impl<'a> /*trait*/ QStyledItemDelegate_free<()> for () {
+  fn free(self , rsthis: & QStyledItemDelegate) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QStyledItemDelegateD0Ev()};
      unsafe {_ZN19QStyledItemDelegateD0Ev(rsthis.qclsinst)};
@@ -247,20 +247,20 @@ impl<'a> /*trait*/ QStyledItemDelegate_setModelData<()> for (&'a QWidget, &'a QA
 
   // proto:  void QStyledItemDelegate::QStyledItemDelegate(const QStyledItemDelegate & );
 impl /*struct*/ QStyledItemDelegate {
-  pub fn New<T: QStyledItemDelegate_New>(value: T) -> QStyledItemDelegate {
-    let rsthis = value.New();
+  pub fn new<T: QStyledItemDelegate_new>(value: T) -> QStyledItemDelegate {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QStyledItemDelegate_New {
-  fn New(self) -> QStyledItemDelegate;
+pub trait QStyledItemDelegate_new {
+  fn new(self) -> QStyledItemDelegate;
 }
 
   // proto:  void QStyledItemDelegate::QStyledItemDelegate(const QStyledItemDelegate & );
-impl<'a> /*trait*/ QStyledItemDelegate_New for (&'a QStyledItemDelegate) {
-  fn New(self) -> QStyledItemDelegate {
+impl<'a> /*trait*/ QStyledItemDelegate_new for (&'a QStyledItemDelegate) {
+  fn new(self) -> QStyledItemDelegate {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QStyledItemDelegateC1ERKS_()};
     let ctysz: c_int = unsafe{QStyledItemDelegate_Class_Size()};
@@ -347,8 +347,8 @@ impl<'a> /*trait*/ QStyledItemDelegate_itemEditorFactory<QItemEditorFactory> for
 }
 
   // proto:  void QStyledItemDelegate::QStyledItemDelegate(QObject * parent);
-impl<'a> /*trait*/ QStyledItemDelegate_New for (&'a QObject) {
-  fn New(self) -> QStyledItemDelegate {
+impl<'a> /*trait*/ QStyledItemDelegate_new for (&'a QObject) {
+  fn new(self) -> QStyledItemDelegate {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QStyledItemDelegateC1EP7QObject()};
     let ctysz: c_int = unsafe{QStyledItemDelegate_Class_Size()};

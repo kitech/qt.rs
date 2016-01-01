@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qlabel.h
 // dst-file: /src/widgets/qlabel.rs
 //
@@ -302,19 +302,19 @@ impl<'a> /*trait*/ QLabel_metaObject<()> for () {
 
   // proto:  void QLabel::~QLabel();
 impl /*struct*/ QLabel {
-  pub fn Free<RetType, T: QLabel_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QLabel_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QLabel_Free<RetType> {
-  fn Free(self , rsthis: & QLabel) -> RetType;
+pub trait QLabel_free<RetType> {
+  fn free(self , rsthis: & QLabel) -> RetType;
 }
 
   // proto:  void QLabel::~QLabel();
-impl<'a> /*trait*/ QLabel_Free<()> for () {
-  fn Free(self , rsthis: & QLabel) -> () {
+impl<'a> /*trait*/ QLabel_free<()> for () {
+  fn free(self , rsthis: & QLabel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QLabelD0Ev()};
      unsafe {_ZN6QLabelD0Ev(rsthis.qclsinst)};
@@ -730,20 +730,20 @@ impl<'a> /*trait*/ QLabel_setBuddy<()> for (&'a QWidget) {
 
   // proto:  void QLabel::QLabel(const QLabel & );
 impl /*struct*/ QLabel {
-  pub fn New<T: QLabel_New>(value: T) -> QLabel {
-    let rsthis = value.New();
+  pub fn new<T: QLabel_new>(value: T) -> QLabel {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QLabel_New {
-  fn New(self) -> QLabel;
+pub trait QLabel_new {
+  fn new(self) -> QLabel;
 }
 
   // proto:  void QLabel::QLabel(const QLabel & );
-impl<'a> /*trait*/ QLabel_New for (&'a QLabel) {
-  fn New(self) -> QLabel {
+impl<'a> /*trait*/ QLabel_new for (&'a QLabel) {
+  fn new(self) -> QLabel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QLabelC1ERKS_()};
     let ctysz: c_int = unsafe{QLabel_Class_Size()};
@@ -982,7 +982,7 @@ extern fn QLabel_linkActivated_signal_connect_cb_0(rsfptr:fn(QString), arg0: *mu
   let rsarg0 = QString::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QLabel_linkActivated_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QString), arg0: *mut c_void) {
+extern fn QLabel_linkActivated_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QString::inheritFrom(arg0 as u64);
@@ -991,7 +991,8 @@ extern fn QLabel_linkActivated_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QStrin
 impl /* trait */ QLabel_linkActivated_signal_connect for fn(QString) {
   fn connect(self, sigthis: QLabel_linkActivated_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QLabel_linkActivated_signal_connect_cb_0 as *mut c_void;
@@ -999,7 +1000,7 @@ impl /* trait */ QLabel_linkActivated_signal_connect for fn(QString) {
     unsafe {QLabel_SlotProxy_connect__ZN6QLabel13linkActivatedERK7QString(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QLabel_linkActivated_signal_connect for Box<fn(QString)> {
+impl /* trait */ QLabel_linkActivated_signal_connect for Box<Fn(QString)> {
   fn connect(self, sigthis: QLabel_linkActivated_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -1016,7 +1017,7 @@ extern fn QLabel_linkHovered_signal_connect_cb_1(rsfptr:fn(QString), arg0: *mut 
   let rsarg0 = QString::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QLabel_linkHovered_signal_connect_cb_box_1(rsfptr_raw:*mut fn(QString), arg0: *mut c_void) {
+extern fn QLabel_linkHovered_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QString::inheritFrom(arg0 as u64);
@@ -1025,7 +1026,8 @@ extern fn QLabel_linkHovered_signal_connect_cb_box_1(rsfptr_raw:*mut fn(QString)
 impl /* trait */ QLabel_linkHovered_signal_connect for fn(QString) {
   fn connect(self, sigthis: QLabel_linkHovered_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QLabel_linkHovered_signal_connect_cb_1 as *mut c_void;
@@ -1033,7 +1035,7 @@ impl /* trait */ QLabel_linkHovered_signal_connect for fn(QString) {
     unsafe {QLabel_SlotProxy_connect__ZN6QLabel11linkHoveredERK7QString(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QLabel_linkHovered_signal_connect for Box<fn(QString)> {
+impl /* trait */ QLabel_linkHovered_signal_connect for Box<Fn(QString)> {
   fn connect(self, sigthis: QLabel_linkHovered_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

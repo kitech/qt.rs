@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qtextedit.h
 // dst-file: /src/widgets/qtextedit.rs
 //
@@ -928,19 +928,19 @@ impl<'a> /*trait*/ QTextEdit_placeholderText<QString> for () {
 
   // proto:  void QTextEdit::~QTextEdit();
 impl /*struct*/ QTextEdit {
-  pub fn Free<RetType, T: QTextEdit_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QTextEdit_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_Free<RetType> {
-  fn Free(self , rsthis: & QTextEdit) -> RetType;
+pub trait QTextEdit_free<RetType> {
+  fn free(self , rsthis: & QTextEdit) -> RetType;
 }
 
   // proto:  void QTextEdit::~QTextEdit();
-impl<'a> /*trait*/ QTextEdit_Free<()> for () {
-  fn Free(self , rsthis: & QTextEdit) -> () {
+impl<'a> /*trait*/ QTextEdit_free<()> for () {
+  fn free(self , rsthis: & QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEditD0Ev()};
      unsafe {_ZN9QTextEditD0Ev(rsthis.qclsinst)};
@@ -1466,20 +1466,20 @@ impl<'a> /*trait*/ QTextEdit_setUndoRedoEnabled<()> for (i8) {
 
   // proto:  void QTextEdit::QTextEdit(const QTextEdit & );
 impl /*struct*/ QTextEdit {
-  pub fn New<T: QTextEdit_New>(value: T) -> QTextEdit {
-    let rsthis = value.New();
+  pub fn new<T: QTextEdit_new>(value: T) -> QTextEdit {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTextEdit_New {
-  fn New(self) -> QTextEdit;
+pub trait QTextEdit_new {
+  fn new(self) -> QTextEdit;
 }
 
   // proto:  void QTextEdit::QTextEdit(const QTextEdit & );
-impl<'a> /*trait*/ QTextEdit_New for (&'a QTextEdit) {
-  fn New(self) -> QTextEdit {
+impl<'a> /*trait*/ QTextEdit_new for (&'a QTextEdit) {
+  fn new(self) -> QTextEdit {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEditC1ERKS_()};
     let ctysz: c_int = unsafe{QTextEdit_Class_Size()};
@@ -1903,8 +1903,8 @@ impl<'a> /*trait*/ QTextEdit_textBackgroundColor<QColor> for () {
 }
 
   // proto:  void QTextEdit::QTextEdit(const QString & text, QWidget * parent);
-impl<'a> /*trait*/ QTextEdit_New for (&'a QString, &'a QWidget) {
-  fn New(self) -> QTextEdit {
+impl<'a> /*trait*/ QTextEdit_new for (&'a QString, &'a QWidget) {
+  fn new(self) -> QTextEdit {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEditC1ERK7QStringP7QWidget()};
     let ctysz: c_int = unsafe{QTextEdit_Class_Size()};
@@ -2105,8 +2105,8 @@ impl<'a> /*trait*/ QTextEdit_redoAvailable<()> for (i8) {
 }
 
   // proto:  void QTextEdit::QTextEdit(QWidget * parent);
-impl<'a> /*trait*/ QTextEdit_New for (&'a QWidget) {
-  fn New(self) -> QTextEdit {
+impl<'a> /*trait*/ QTextEdit_new for (&'a QWidget) {
+  fn new(self) -> QTextEdit {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEditC1EP7QWidget()};
     let ctysz: c_int = unsafe{QTextEdit_Class_Size()};
@@ -2261,7 +2261,7 @@ extern fn QTextEdit_undoAvailable_signal_connect_cb_0(rsfptr:fn(i8), arg0: c_cha
   let rsarg0 = arg0 as i8;
   rsfptr(rsarg0);
 }
-extern fn QTextEdit_undoAvailable_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i8), arg0: c_char) {
+extern fn QTextEdit_undoAvailable_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i8;
@@ -2270,7 +2270,8 @@ extern fn QTextEdit_undoAvailable_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i8)
 impl /* trait */ QTextEdit_undoAvailable_signal_connect for fn(i8) {
   fn connect(self, sigthis: QTextEdit_undoAvailable_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QTextEdit_undoAvailable_signal_connect_cb_0 as *mut c_void;
@@ -2278,7 +2279,7 @@ impl /* trait */ QTextEdit_undoAvailable_signal_connect for fn(i8) {
     unsafe {QTextEdit_SlotProxy_connect__ZN9QTextEdit13undoAvailableEb(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QTextEdit_undoAvailable_signal_connect for Box<fn(i8)> {
+impl /* trait */ QTextEdit_undoAvailable_signal_connect for Box<Fn(i8)> {
   fn connect(self, sigthis: QTextEdit_undoAvailable_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -2295,7 +2296,7 @@ extern fn QTextEdit_redoAvailable_signal_connect_cb_1(rsfptr:fn(i8), arg0: c_cha
   let rsarg0 = arg0 as i8;
   rsfptr(rsarg0);
 }
-extern fn QTextEdit_redoAvailable_signal_connect_cb_box_1(rsfptr_raw:*mut fn(i8), arg0: c_char) {
+extern fn QTextEdit_redoAvailable_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i8;
@@ -2304,7 +2305,8 @@ extern fn QTextEdit_redoAvailable_signal_connect_cb_box_1(rsfptr_raw:*mut fn(i8)
 impl /* trait */ QTextEdit_redoAvailable_signal_connect for fn(i8) {
   fn connect(self, sigthis: QTextEdit_redoAvailable_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QTextEdit_redoAvailable_signal_connect_cb_1 as *mut c_void;
@@ -2312,7 +2314,7 @@ impl /* trait */ QTextEdit_redoAvailable_signal_connect for fn(i8) {
     unsafe {QTextEdit_SlotProxy_connect__ZN9QTextEdit13redoAvailableEb(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QTextEdit_redoAvailable_signal_connect for Box<fn(i8)> {
+impl /* trait */ QTextEdit_redoAvailable_signal_connect for Box<Fn(i8)> {
   fn connect(self, sigthis: QTextEdit_redoAvailable_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -2329,7 +2331,7 @@ extern fn QTextEdit_copyAvailable_signal_connect_cb_2(rsfptr:fn(i8), arg0: c_cha
   let rsarg0 = arg0 as i8;
   rsfptr(rsarg0);
 }
-extern fn QTextEdit_copyAvailable_signal_connect_cb_box_2(rsfptr_raw:*mut fn(i8), arg0: c_char) {
+extern fn QTextEdit_copyAvailable_signal_connect_cb_box_2(rsfptr_raw:*mut Fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i8;
@@ -2338,7 +2340,8 @@ extern fn QTextEdit_copyAvailable_signal_connect_cb_box_2(rsfptr_raw:*mut fn(i8)
 impl /* trait */ QTextEdit_copyAvailable_signal_connect for fn(i8) {
   fn connect(self, sigthis: QTextEdit_copyAvailable_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QTextEdit_copyAvailable_signal_connect_cb_2 as *mut c_void;
@@ -2346,7 +2349,7 @@ impl /* trait */ QTextEdit_copyAvailable_signal_connect for fn(i8) {
     unsafe {QTextEdit_SlotProxy_connect__ZN9QTextEdit13copyAvailableEb(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QTextEdit_copyAvailable_signal_connect for Box<fn(i8)> {
+impl /* trait */ QTextEdit_copyAvailable_signal_connect for Box<Fn(i8)> {
   fn connect(self, sigthis: QTextEdit_copyAvailable_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -2362,7 +2365,7 @@ extern fn QTextEdit_cursorPositionChanged_signal_connect_cb_3(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QTextEdit_cursorPositionChanged_signal_connect_cb_box_3(rsfptr_raw:*mut fn(), ) {
+extern fn QTextEdit_cursorPositionChanged_signal_connect_cb_box_3(rsfptr_raw:*mut Fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   rsfptr();
@@ -2370,7 +2373,8 @@ extern fn QTextEdit_cursorPositionChanged_signal_connect_cb_box_3(rsfptr_raw:*mu
 impl /* trait */ QTextEdit_cursorPositionChanged_signal_connect for fn() {
   fn connect(self, sigthis: QTextEdit_cursorPositionChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QTextEdit_cursorPositionChanged_signal_connect_cb_3 as *mut c_void;
@@ -2378,7 +2382,7 @@ impl /* trait */ QTextEdit_cursorPositionChanged_signal_connect for fn() {
     unsafe {QTextEdit_SlotProxy_connect__ZN9QTextEdit21cursorPositionChangedEv(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QTextEdit_cursorPositionChanged_signal_connect for Box<fn()> {
+impl /* trait */ QTextEdit_cursorPositionChanged_signal_connect for Box<Fn()> {
   fn connect(self, sigthis: QTextEdit_cursorPositionChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -2394,7 +2398,7 @@ extern fn QTextEdit_selectionChanged_signal_connect_cb_4(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QTextEdit_selectionChanged_signal_connect_cb_box_4(rsfptr_raw:*mut fn(), ) {
+extern fn QTextEdit_selectionChanged_signal_connect_cb_box_4(rsfptr_raw:*mut Fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   rsfptr();
@@ -2402,7 +2406,8 @@ extern fn QTextEdit_selectionChanged_signal_connect_cb_box_4(rsfptr_raw:*mut fn(
 impl /* trait */ QTextEdit_selectionChanged_signal_connect for fn() {
   fn connect(self, sigthis: QTextEdit_selectionChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QTextEdit_selectionChanged_signal_connect_cb_4 as *mut c_void;
@@ -2410,7 +2415,7 @@ impl /* trait */ QTextEdit_selectionChanged_signal_connect for fn() {
     unsafe {QTextEdit_SlotProxy_connect__ZN9QTextEdit16selectionChangedEv(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QTextEdit_selectionChanged_signal_connect for Box<fn()> {
+impl /* trait */ QTextEdit_selectionChanged_signal_connect for Box<Fn()> {
   fn connect(self, sigthis: QTextEdit_selectionChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -2427,7 +2432,7 @@ extern fn QTextEdit_currentCharFormatChanged_signal_connect_cb_5(rsfptr:fn(QText
   let rsarg0 = QTextCharFormat::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QTextEdit_currentCharFormatChanged_signal_connect_cb_box_5(rsfptr_raw:*mut fn(QTextCharFormat), arg0: *mut c_void) {
+extern fn QTextEdit_currentCharFormatChanged_signal_connect_cb_box_5(rsfptr_raw:*mut Fn(QTextCharFormat), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QTextCharFormat::inheritFrom(arg0 as u64);
@@ -2436,7 +2441,8 @@ extern fn QTextEdit_currentCharFormatChanged_signal_connect_cb_box_5(rsfptr_raw:
 impl /* trait */ QTextEdit_currentCharFormatChanged_signal_connect for fn(QTextCharFormat) {
   fn connect(self, sigthis: QTextEdit_currentCharFormatChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QTextEdit_currentCharFormatChanged_signal_connect_cb_5 as *mut c_void;
@@ -2444,7 +2450,7 @@ impl /* trait */ QTextEdit_currentCharFormatChanged_signal_connect for fn(QTextC
     unsafe {QTextEdit_SlotProxy_connect__ZN9QTextEdit24currentCharFormatChangedERK15QTextCharFormat(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QTextEdit_currentCharFormatChanged_signal_connect for Box<fn(QTextCharFormat)> {
+impl /* trait */ QTextEdit_currentCharFormatChanged_signal_connect for Box<Fn(QTextCharFormat)> {
   fn connect(self, sigthis: QTextEdit_currentCharFormatChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -2460,7 +2466,7 @@ extern fn QTextEdit_textChanged_signal_connect_cb_6(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QTextEdit_textChanged_signal_connect_cb_box_6(rsfptr_raw:*mut fn(), ) {
+extern fn QTextEdit_textChanged_signal_connect_cb_box_6(rsfptr_raw:*mut Fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   rsfptr();
@@ -2468,7 +2474,8 @@ extern fn QTextEdit_textChanged_signal_connect_cb_box_6(rsfptr_raw:*mut fn(), ) 
 impl /* trait */ QTextEdit_textChanged_signal_connect for fn() {
   fn connect(self, sigthis: QTextEdit_textChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QTextEdit_textChanged_signal_connect_cb_6 as *mut c_void;
@@ -2476,7 +2483,7 @@ impl /* trait */ QTextEdit_textChanged_signal_connect for fn() {
     unsafe {QTextEdit_SlotProxy_connect__ZN9QTextEdit11textChangedEv(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QTextEdit_textChanged_signal_connect for Box<fn()> {
+impl /* trait */ QTextEdit_textChanged_signal_connect for Box<Fn()> {
   fn connect(self, sigthis: QTextEdit_textChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

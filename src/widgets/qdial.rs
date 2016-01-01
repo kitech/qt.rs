@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qdial.h
 // dst-file: /src/widgets/qdial.rs
 //
@@ -112,19 +112,19 @@ impl<'a> /*trait*/ QDial_wrapping<i8> for () {
 
   // proto:  void QDial::~QDial();
 impl /*struct*/ QDial {
-  pub fn Free<RetType, T: QDial_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QDial_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QDial_Free<RetType> {
-  fn Free(self , rsthis: & QDial) -> RetType;
+pub trait QDial_free<RetType> {
+  fn free(self , rsthis: & QDial) -> RetType;
 }
 
   // proto:  void QDial::~QDial();
-impl<'a> /*trait*/ QDial_Free<()> for () {
-  fn Free(self , rsthis: & QDial) -> () {
+impl<'a> /*trait*/ QDial_free<()> for () {
+  fn free(self , rsthis: & QDial) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QDialD0Ev()};
      unsafe {_ZN5QDialD0Ev(rsthis.qclsinst)};
@@ -295,20 +295,20 @@ impl<'a> /*trait*/ QDial_minimumSizeHint<QSize> for () {
 
   // proto:  void QDial::QDial(const QDial & );
 impl /*struct*/ QDial {
-  pub fn New<T: QDial_New>(value: T) -> QDial {
-    let rsthis = value.New();
+  pub fn new<T: QDial_new>(value: T) -> QDial {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QDial_New {
-  fn New(self) -> QDial;
+pub trait QDial_new {
+  fn new(self) -> QDial;
 }
 
   // proto:  void QDial::QDial(const QDial & );
-impl<'a> /*trait*/ QDial_New for (&'a QDial) {
-  fn New(self) -> QDial {
+impl<'a> /*trait*/ QDial_new for (&'a QDial) {
+  fn new(self) -> QDial {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QDialC1ERKS_()};
     let ctysz: c_int = unsafe{QDial_Class_Size()};
@@ -370,8 +370,8 @@ impl<'a> /*trait*/ QDial_sizeHint<QSize> for () {
 }
 
   // proto:  void QDial::QDial(QWidget * parent);
-impl<'a> /*trait*/ QDial_New for (&'a QWidget) {
-  fn New(self) -> QDial {
+impl<'a> /*trait*/ QDial_new for (&'a QWidget) {
+  fn new(self) -> QDial {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QDialC1EP7QWidget()};
     let ctysz: c_int = unsafe{QDial_Class_Size()};

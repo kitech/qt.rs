@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qaction.h
 // dst-file: /src/widgets/qaction.rs
 //
@@ -258,20 +258,20 @@ impl<'a> /*trait*/ QAction_whatsThis<QString> for () {
 
   // proto:  void QAction::QAction(const QString & text, QObject * parent);
 impl /*struct*/ QAction {
-  pub fn New<T: QAction_New>(value: T) -> QAction {
-    let rsthis = value.New();
+  pub fn new<T: QAction_new>(value: T) -> QAction {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QAction_New {
-  fn New(self) -> QAction;
+pub trait QAction_new {
+  fn new(self) -> QAction;
 }
 
   // proto:  void QAction::QAction(const QString & text, QObject * parent);
-impl<'a> /*trait*/ QAction_New for (&'a QString, &'a QObject) {
-  fn New(self) -> QAction {
+impl<'a> /*trait*/ QAction_new for (&'a QString, &'a QObject) {
+  fn new(self) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QActionC1ERK7QStringP7QObject()};
     let ctysz: c_int = unsafe{QAction_Class_Size()};
@@ -288,19 +288,19 @@ impl<'a> /*trait*/ QAction_New for (&'a QString, &'a QObject) {
 
   // proto:  void QAction::~QAction();
 impl /*struct*/ QAction {
-  pub fn Free<RetType, T: QAction_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QAction_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QAction_Free<RetType> {
-  fn Free(self , rsthis: & QAction) -> RetType;
+pub trait QAction_free<RetType> {
+  fn free(self , rsthis: & QAction) -> RetType;
 }
 
   // proto:  void QAction::~QAction();
-impl<'a> /*trait*/ QAction_Free<()> for () {
-  fn Free(self , rsthis: & QAction) -> () {
+impl<'a> /*trait*/ QAction_free<()> for () {
+  fn free(self , rsthis: & QAction) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QActionD0Ev()};
      unsafe {_ZN7QActionD0Ev(rsthis.qclsinst)};
@@ -401,8 +401,8 @@ impl<'a> /*trait*/ QAction_setIcon<()> for (&'a QIcon) {
 }
 
   // proto:  void QAction::QAction(QObject * parent);
-impl<'a> /*trait*/ QAction_New for (&'a QObject) {
-  fn New(self) -> QAction {
+impl<'a> /*trait*/ QAction_new for (&'a QObject) {
+  fn new(self) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QActionC1EP7QObject()};
     let ctysz: c_int = unsafe{QAction_Class_Size()};
@@ -741,8 +741,8 @@ impl<'a> /*trait*/ QAction_font<QFont> for () {
 }
 
   // proto:  void QAction::QAction(const QIcon & icon, const QString & text, QObject * parent);
-impl<'a> /*trait*/ QAction_New for (&'a QIcon, &'a QString, &'a QObject) {
-  fn New(self) -> QAction {
+impl<'a> /*trait*/ QAction_new for (&'a QIcon, &'a QString, &'a QObject) {
+  fn new(self) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QActionC1ERK5QIconRK7QStringP7QObject()};
     let ctysz: c_int = unsafe{QAction_Class_Size()};
@@ -1244,8 +1244,8 @@ impl<'a> /*trait*/ QAction_data<QVariant> for () {
 }
 
   // proto:  void QAction::QAction(const QAction & );
-impl<'a> /*trait*/ QAction_New for (&'a QAction) {
-  fn New(self) -> QAction {
+impl<'a> /*trait*/ QAction_new for (&'a QAction) {
+  fn new(self) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QActionC1ERKS_()};
     let ctysz: c_int = unsafe{QAction_Class_Size()};
@@ -1513,7 +1513,7 @@ extern fn QAction_toggled_signal_connect_cb_0(rsfptr:fn(i8), arg0: c_char) {
   let rsarg0 = arg0 as i8;
   rsfptr(rsarg0);
 }
-extern fn QAction_toggled_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i8), arg0: c_char) {
+extern fn QAction_toggled_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i8;
@@ -1522,7 +1522,8 @@ extern fn QAction_toggled_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i8), arg0: 
 impl /* trait */ QAction_toggled_signal_connect for fn(i8) {
   fn connect(self, sigthis: QAction_toggled_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAction_toggled_signal_connect_cb_0 as *mut c_void;
@@ -1530,7 +1531,7 @@ impl /* trait */ QAction_toggled_signal_connect for fn(i8) {
     unsafe {QAction_SlotProxy_connect__ZN7QAction7toggledEb(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QAction_toggled_signal_connect for Box<fn(i8)> {
+impl /* trait */ QAction_toggled_signal_connect for Box<Fn(i8)> {
   fn connect(self, sigthis: QAction_toggled_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -1547,7 +1548,7 @@ extern fn QAction_triggered_signal_connect_cb_1(rsfptr:fn(i8), arg0: c_char) {
   let rsarg0 = arg0 as i8;
   rsfptr(rsarg0);
 }
-extern fn QAction_triggered_signal_connect_cb_box_1(rsfptr_raw:*mut fn(i8), arg0: c_char) {
+extern fn QAction_triggered_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i8;
@@ -1556,7 +1557,8 @@ extern fn QAction_triggered_signal_connect_cb_box_1(rsfptr_raw:*mut fn(i8), arg0
 impl /* trait */ QAction_triggered_signal_connect for fn(i8) {
   fn connect(self, sigthis: QAction_triggered_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAction_triggered_signal_connect_cb_1 as *mut c_void;
@@ -1564,7 +1566,7 @@ impl /* trait */ QAction_triggered_signal_connect for fn(i8) {
     unsafe {QAction_SlotProxy_connect__ZN7QAction9triggeredEb(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QAction_triggered_signal_connect for Box<fn(i8)> {
+impl /* trait */ QAction_triggered_signal_connect for Box<Fn(i8)> {
   fn connect(self, sigthis: QAction_triggered_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -1580,7 +1582,7 @@ extern fn QAction_changed_signal_connect_cb_2(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QAction_changed_signal_connect_cb_box_2(rsfptr_raw:*mut fn(), ) {
+extern fn QAction_changed_signal_connect_cb_box_2(rsfptr_raw:*mut Fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   rsfptr();
@@ -1588,7 +1590,8 @@ extern fn QAction_changed_signal_connect_cb_box_2(rsfptr_raw:*mut fn(), ) {
 impl /* trait */ QAction_changed_signal_connect for fn() {
   fn connect(self, sigthis: QAction_changed_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAction_changed_signal_connect_cb_2 as *mut c_void;
@@ -1596,7 +1599,7 @@ impl /* trait */ QAction_changed_signal_connect for fn() {
     unsafe {QAction_SlotProxy_connect__ZN7QAction7changedEv(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QAction_changed_signal_connect for Box<fn()> {
+impl /* trait */ QAction_changed_signal_connect for Box<Fn()> {
   fn connect(self, sigthis: QAction_changed_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -1612,7 +1615,7 @@ extern fn QAction_hovered_signal_connect_cb_3(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QAction_hovered_signal_connect_cb_box_3(rsfptr_raw:*mut fn(), ) {
+extern fn QAction_hovered_signal_connect_cb_box_3(rsfptr_raw:*mut Fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   rsfptr();
@@ -1620,7 +1623,8 @@ extern fn QAction_hovered_signal_connect_cb_box_3(rsfptr_raw:*mut fn(), ) {
 impl /* trait */ QAction_hovered_signal_connect for fn() {
   fn connect(self, sigthis: QAction_hovered_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAction_hovered_signal_connect_cb_3 as *mut c_void;
@@ -1628,7 +1632,7 @@ impl /* trait */ QAction_hovered_signal_connect for fn() {
     unsafe {QAction_SlotProxy_connect__ZN7QAction7hoveredEv(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QAction_hovered_signal_connect for Box<fn()> {
+impl /* trait */ QAction_hovered_signal_connect for Box<Fn()> {
   fn connect(self, sigthis: QAction_hovered_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

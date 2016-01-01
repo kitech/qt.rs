@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qplaintextedit.h
 // dst-file: /src/widgets/qplaintextedit.rs
 //
@@ -406,19 +406,19 @@ impl<'a> /*trait*/ QPlainTextDocumentLayout_ensureBlockLayout<()> for (&'a QText
 
   // proto:  void QPlainTextDocumentLayout::~QPlainTextDocumentLayout();
 impl /*struct*/ QPlainTextDocumentLayout {
-  pub fn Free<RetType, T: QPlainTextDocumentLayout_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QPlainTextDocumentLayout_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QPlainTextDocumentLayout_Free<RetType> {
-  fn Free(self , rsthis: & QPlainTextDocumentLayout) -> RetType;
+pub trait QPlainTextDocumentLayout_free<RetType> {
+  fn free(self , rsthis: & QPlainTextDocumentLayout) -> RetType;
 }
 
   // proto:  void QPlainTextDocumentLayout::~QPlainTextDocumentLayout();
-impl<'a> /*trait*/ QPlainTextDocumentLayout_Free<()> for () {
-  fn Free(self , rsthis: & QPlainTextDocumentLayout) -> () {
+impl<'a> /*trait*/ QPlainTextDocumentLayout_free<()> for () {
+  fn free(self , rsthis: & QPlainTextDocumentLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QPlainTextDocumentLayoutD0Ev()};
      unsafe {_ZN24QPlainTextDocumentLayoutD0Ev(rsthis.qclsinst)};
@@ -476,20 +476,20 @@ impl<'a> /*trait*/ QPlainTextDocumentLayout_cursorWidth<i32> for () {
 
   // proto:  void QPlainTextDocumentLayout::QPlainTextDocumentLayout(QTextDocument * document);
 impl /*struct*/ QPlainTextDocumentLayout {
-  pub fn New<T: QPlainTextDocumentLayout_New>(value: T) -> QPlainTextDocumentLayout {
-    let rsthis = value.New();
+  pub fn new<T: QPlainTextDocumentLayout_new>(value: T) -> QPlainTextDocumentLayout {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QPlainTextDocumentLayout_New {
-  fn New(self) -> QPlainTextDocumentLayout;
+pub trait QPlainTextDocumentLayout_new {
+  fn new(self) -> QPlainTextDocumentLayout;
 }
 
   // proto:  void QPlainTextDocumentLayout::QPlainTextDocumentLayout(QTextDocument * document);
-impl<'a> /*trait*/ QPlainTextDocumentLayout_New for (&'a QTextDocument) {
-  fn New(self) -> QPlainTextDocumentLayout {
+impl<'a> /*trait*/ QPlainTextDocumentLayout_new for (&'a QTextDocument) {
+  fn new(self) -> QPlainTextDocumentLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QPlainTextDocumentLayoutC1EP13QTextDocument()};
     let ctysz: c_int = unsafe{QPlainTextDocumentLayout_Class_Size()};
@@ -1037,20 +1037,20 @@ impl<'a> /*trait*/ QPlainTextEdit_redo<()> for () {
 
   // proto:  void QPlainTextEdit::QPlainTextEdit(const QString & text, QWidget * parent);
 impl /*struct*/ QPlainTextEdit {
-  pub fn New<T: QPlainTextEdit_New>(value: T) -> QPlainTextEdit {
-    let rsthis = value.New();
+  pub fn new<T: QPlainTextEdit_new>(value: T) -> QPlainTextEdit {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QPlainTextEdit_New {
-  fn New(self) -> QPlainTextEdit;
+pub trait QPlainTextEdit_new {
+  fn new(self) -> QPlainTextEdit;
 }
 
   // proto:  void QPlainTextEdit::QPlainTextEdit(const QString & text, QWidget * parent);
-impl<'a> /*trait*/ QPlainTextEdit_New for (&'a QString, &'a QWidget) {
-  fn New(self) -> QPlainTextEdit {
+impl<'a> /*trait*/ QPlainTextEdit_new for (&'a QString, &'a QWidget) {
+  fn new(self) -> QPlainTextEdit {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QPlainTextEditC1ERK7QStringP7QWidget()};
     let ctysz: c_int = unsafe{QPlainTextEdit_Class_Size()};
@@ -1454,8 +1454,8 @@ impl<'a> /*trait*/ QPlainTextEdit_cursorPositionChanged<()> for () {
 }
 
   // proto:  void QPlainTextEdit::QPlainTextEdit(const QPlainTextEdit & );
-impl<'a> /*trait*/ QPlainTextEdit_New for (&'a QPlainTextEdit) {
-  fn New(self) -> QPlainTextEdit {
+impl<'a> /*trait*/ QPlainTextEdit_new for (&'a QPlainTextEdit) {
+  fn new(self) -> QPlainTextEdit {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QPlainTextEditC1ERKS_()};
     let ctysz: c_int = unsafe{QPlainTextEdit_Class_Size()};
@@ -1687,19 +1687,19 @@ impl<'a> /*trait*/ QPlainTextEdit_setDocumentTitle<()> for (&'a QString) {
 
   // proto:  void QPlainTextEdit::~QPlainTextEdit();
 impl /*struct*/ QPlainTextEdit {
-  pub fn Free<RetType, T: QPlainTextEdit_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QPlainTextEdit_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QPlainTextEdit_Free<RetType> {
-  fn Free(self , rsthis: & QPlainTextEdit) -> RetType;
+pub trait QPlainTextEdit_free<RetType> {
+  fn free(self , rsthis: & QPlainTextEdit) -> RetType;
 }
 
   // proto:  void QPlainTextEdit::~QPlainTextEdit();
-impl<'a> /*trait*/ QPlainTextEdit_Free<()> for () {
-  fn Free(self , rsthis: & QPlainTextEdit) -> () {
+impl<'a> /*trait*/ QPlainTextEdit_free<()> for () {
+  fn free(self , rsthis: & QPlainTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QPlainTextEditD0Ev()};
      unsafe {_ZN14QPlainTextEditD0Ev(rsthis.qclsinst)};
@@ -1802,8 +1802,8 @@ impl<'a> /*trait*/ QPlainTextEdit_canPaste<i8> for () {
 }
 
   // proto:  void QPlainTextEdit::QPlainTextEdit(QWidget * parent);
-impl<'a> /*trait*/ QPlainTextEdit_New for (&'a QWidget) {
-  fn New(self) -> QPlainTextEdit {
+impl<'a> /*trait*/ QPlainTextEdit_new for (&'a QWidget) {
+  fn new(self) -> QPlainTextEdit {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QPlainTextEditC1EP7QWidget()};
     let ctysz: c_int = unsafe{QPlainTextEdit_Class_Size()};
@@ -2256,7 +2256,7 @@ extern fn QPlainTextEdit_blockCountChanged_signal_connect_cb_0(rsfptr:fn(i32), a
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QPlainTextEdit_blockCountChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(i32), arg0: c_int) {
+extern fn QPlainTextEdit_blockCountChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -2265,7 +2265,8 @@ extern fn QPlainTextEdit_blockCountChanged_signal_connect_cb_box_0(rsfptr_raw:*m
 impl /* trait */ QPlainTextEdit_blockCountChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QPlainTextEdit_blockCountChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QPlainTextEdit_blockCountChanged_signal_connect_cb_0 as *mut c_void;
@@ -2273,7 +2274,7 @@ impl /* trait */ QPlainTextEdit_blockCountChanged_signal_connect for fn(i32) {
     unsafe {QPlainTextEdit_SlotProxy_connect__ZN14QPlainTextEdit17blockCountChangedEi(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QPlainTextEdit_blockCountChanged_signal_connect for Box<fn(i32)> {
+impl /* trait */ QPlainTextEdit_blockCountChanged_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QPlainTextEdit_blockCountChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -2290,7 +2291,7 @@ extern fn QPlainTextEdit_undoAvailable_signal_connect_cb_1(rsfptr:fn(i8), arg0: 
   let rsarg0 = arg0 as i8;
   rsfptr(rsarg0);
 }
-extern fn QPlainTextEdit_undoAvailable_signal_connect_cb_box_1(rsfptr_raw:*mut fn(i8), arg0: c_char) {
+extern fn QPlainTextEdit_undoAvailable_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i8;
@@ -2299,7 +2300,8 @@ extern fn QPlainTextEdit_undoAvailable_signal_connect_cb_box_1(rsfptr_raw:*mut f
 impl /* trait */ QPlainTextEdit_undoAvailable_signal_connect for fn(i8) {
   fn connect(self, sigthis: QPlainTextEdit_undoAvailable_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QPlainTextEdit_undoAvailable_signal_connect_cb_1 as *mut c_void;
@@ -2307,7 +2309,7 @@ impl /* trait */ QPlainTextEdit_undoAvailable_signal_connect for fn(i8) {
     unsafe {QPlainTextEdit_SlotProxy_connect__ZN14QPlainTextEdit13undoAvailableEb(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QPlainTextEdit_undoAvailable_signal_connect for Box<fn(i8)> {
+impl /* trait */ QPlainTextEdit_undoAvailable_signal_connect for Box<Fn(i8)> {
   fn connect(self, sigthis: QPlainTextEdit_undoAvailable_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -2323,7 +2325,7 @@ extern fn QPlainTextEdit_selectionChanged_signal_connect_cb_2(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QPlainTextEdit_selectionChanged_signal_connect_cb_box_2(rsfptr_raw:*mut fn(), ) {
+extern fn QPlainTextEdit_selectionChanged_signal_connect_cb_box_2(rsfptr_raw:*mut Fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   rsfptr();
@@ -2331,7 +2333,8 @@ extern fn QPlainTextEdit_selectionChanged_signal_connect_cb_box_2(rsfptr_raw:*mu
 impl /* trait */ QPlainTextEdit_selectionChanged_signal_connect for fn() {
   fn connect(self, sigthis: QPlainTextEdit_selectionChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QPlainTextEdit_selectionChanged_signal_connect_cb_2 as *mut c_void;
@@ -2339,7 +2342,7 @@ impl /* trait */ QPlainTextEdit_selectionChanged_signal_connect for fn() {
     unsafe {QPlainTextEdit_SlotProxy_connect__ZN14QPlainTextEdit16selectionChangedEv(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QPlainTextEdit_selectionChanged_signal_connect for Box<fn()> {
+impl /* trait */ QPlainTextEdit_selectionChanged_signal_connect for Box<Fn()> {
   fn connect(self, sigthis: QPlainTextEdit_selectionChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -2356,7 +2359,7 @@ extern fn QPlainTextEdit_redoAvailable_signal_connect_cb_3(rsfptr:fn(i8), arg0: 
   let rsarg0 = arg0 as i8;
   rsfptr(rsarg0);
 }
-extern fn QPlainTextEdit_redoAvailable_signal_connect_cb_box_3(rsfptr_raw:*mut fn(i8), arg0: c_char) {
+extern fn QPlainTextEdit_redoAvailable_signal_connect_cb_box_3(rsfptr_raw:*mut Fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i8;
@@ -2365,7 +2368,8 @@ extern fn QPlainTextEdit_redoAvailable_signal_connect_cb_box_3(rsfptr_raw:*mut f
 impl /* trait */ QPlainTextEdit_redoAvailable_signal_connect for fn(i8) {
   fn connect(self, sigthis: QPlainTextEdit_redoAvailable_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QPlainTextEdit_redoAvailable_signal_connect_cb_3 as *mut c_void;
@@ -2373,7 +2377,7 @@ impl /* trait */ QPlainTextEdit_redoAvailable_signal_connect for fn(i8) {
     unsafe {QPlainTextEdit_SlotProxy_connect__ZN14QPlainTextEdit13redoAvailableEb(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QPlainTextEdit_redoAvailable_signal_connect for Box<fn(i8)> {
+impl /* trait */ QPlainTextEdit_redoAvailable_signal_connect for Box<Fn(i8)> {
   fn connect(self, sigthis: QPlainTextEdit_redoAvailable_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -2390,7 +2394,7 @@ extern fn QPlainTextEdit_modificationChanged_signal_connect_cb_4(rsfptr:fn(i8), 
   let rsarg0 = arg0 as i8;
   rsfptr(rsarg0);
 }
-extern fn QPlainTextEdit_modificationChanged_signal_connect_cb_box_4(rsfptr_raw:*mut fn(i8), arg0: c_char) {
+extern fn QPlainTextEdit_modificationChanged_signal_connect_cb_box_4(rsfptr_raw:*mut Fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i8;
@@ -2399,7 +2403,8 @@ extern fn QPlainTextEdit_modificationChanged_signal_connect_cb_box_4(rsfptr_raw:
 impl /* trait */ QPlainTextEdit_modificationChanged_signal_connect for fn(i8) {
   fn connect(self, sigthis: QPlainTextEdit_modificationChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QPlainTextEdit_modificationChanged_signal_connect_cb_4 as *mut c_void;
@@ -2407,7 +2412,7 @@ impl /* trait */ QPlainTextEdit_modificationChanged_signal_connect for fn(i8) {
     unsafe {QPlainTextEdit_SlotProxy_connect__ZN14QPlainTextEdit19modificationChangedEb(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QPlainTextEdit_modificationChanged_signal_connect for Box<fn(i8)> {
+impl /* trait */ QPlainTextEdit_modificationChanged_signal_connect for Box<Fn(i8)> {
   fn connect(self, sigthis: QPlainTextEdit_modificationChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -2425,7 +2430,7 @@ extern fn QPlainTextEdit_updateRequest_signal_connect_cb_5(rsfptr:fn(QRect, i32)
   let rsarg1 = arg1 as i32;
   rsfptr(rsarg0,rsarg1);
 }
-extern fn QPlainTextEdit_updateRequest_signal_connect_cb_box_5(rsfptr_raw:*mut fn(QRect, i32), arg0: *mut c_void, arg1: c_int) {
+extern fn QPlainTextEdit_updateRequest_signal_connect_cb_box_5(rsfptr_raw:*mut Fn(QRect, i32), arg0: *mut c_void, arg1: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QRect::inheritFrom(arg0 as u64);
@@ -2435,7 +2440,8 @@ extern fn QPlainTextEdit_updateRequest_signal_connect_cb_box_5(rsfptr_raw:*mut f
 impl /* trait */ QPlainTextEdit_updateRequest_signal_connect for fn(QRect, i32) {
   fn connect(self, sigthis: QPlainTextEdit_updateRequest_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QPlainTextEdit_updateRequest_signal_connect_cb_5 as *mut c_void;
@@ -2443,7 +2449,7 @@ impl /* trait */ QPlainTextEdit_updateRequest_signal_connect for fn(QRect, i32) 
     unsafe {QPlainTextEdit_SlotProxy_connect__ZN14QPlainTextEdit13updateRequestERK5QRecti(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QPlainTextEdit_updateRequest_signal_connect for Box<fn(QRect, i32)> {
+impl /* trait */ QPlainTextEdit_updateRequest_signal_connect for Box<Fn(QRect, i32)> {
   fn connect(self, sigthis: QPlainTextEdit_updateRequest_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -2459,7 +2465,7 @@ extern fn QPlainTextEdit_textChanged_signal_connect_cb_6(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QPlainTextEdit_textChanged_signal_connect_cb_box_6(rsfptr_raw:*mut fn(), ) {
+extern fn QPlainTextEdit_textChanged_signal_connect_cb_box_6(rsfptr_raw:*mut Fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   rsfptr();
@@ -2467,7 +2473,8 @@ extern fn QPlainTextEdit_textChanged_signal_connect_cb_box_6(rsfptr_raw:*mut fn(
 impl /* trait */ QPlainTextEdit_textChanged_signal_connect for fn() {
   fn connect(self, sigthis: QPlainTextEdit_textChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QPlainTextEdit_textChanged_signal_connect_cb_6 as *mut c_void;
@@ -2475,7 +2482,7 @@ impl /* trait */ QPlainTextEdit_textChanged_signal_connect for fn() {
     unsafe {QPlainTextEdit_SlotProxy_connect__ZN14QPlainTextEdit11textChangedEv(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QPlainTextEdit_textChanged_signal_connect for Box<fn()> {
+impl /* trait */ QPlainTextEdit_textChanged_signal_connect for Box<Fn()> {
   fn connect(self, sigthis: QPlainTextEdit_textChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -2491,7 +2498,7 @@ extern fn QPlainTextEdit_cursorPositionChanged_signal_connect_cb_7(rsfptr:fn(), 
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QPlainTextEdit_cursorPositionChanged_signal_connect_cb_box_7(rsfptr_raw:*mut fn(), ) {
+extern fn QPlainTextEdit_cursorPositionChanged_signal_connect_cb_box_7(rsfptr_raw:*mut Fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   rsfptr();
@@ -2499,7 +2506,8 @@ extern fn QPlainTextEdit_cursorPositionChanged_signal_connect_cb_box_7(rsfptr_ra
 impl /* trait */ QPlainTextEdit_cursorPositionChanged_signal_connect for fn() {
   fn connect(self, sigthis: QPlainTextEdit_cursorPositionChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QPlainTextEdit_cursorPositionChanged_signal_connect_cb_7 as *mut c_void;
@@ -2507,7 +2515,7 @@ impl /* trait */ QPlainTextEdit_cursorPositionChanged_signal_connect for fn() {
     unsafe {QPlainTextEdit_SlotProxy_connect__ZN14QPlainTextEdit21cursorPositionChangedEv(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QPlainTextEdit_cursorPositionChanged_signal_connect for Box<fn()> {
+impl /* trait */ QPlainTextEdit_cursorPositionChanged_signal_connect for Box<Fn()> {
   fn connect(self, sigthis: QPlainTextEdit_cursorPositionChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -2524,7 +2532,7 @@ extern fn QPlainTextEdit_copyAvailable_signal_connect_cb_8(rsfptr:fn(i8), arg0: 
   let rsarg0 = arg0 as i8;
   rsfptr(rsarg0);
 }
-extern fn QPlainTextEdit_copyAvailable_signal_connect_cb_box_8(rsfptr_raw:*mut fn(i8), arg0: c_char) {
+extern fn QPlainTextEdit_copyAvailable_signal_connect_cb_box_8(rsfptr_raw:*mut Fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i8;
@@ -2533,7 +2541,8 @@ extern fn QPlainTextEdit_copyAvailable_signal_connect_cb_box_8(rsfptr_raw:*mut f
 impl /* trait */ QPlainTextEdit_copyAvailable_signal_connect for fn(i8) {
   fn connect(self, sigthis: QPlainTextEdit_copyAvailable_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QPlainTextEdit_copyAvailable_signal_connect_cb_8 as *mut c_void;
@@ -2541,7 +2550,7 @@ impl /* trait */ QPlainTextEdit_copyAvailable_signal_connect for fn(i8) {
     unsafe {QPlainTextEdit_SlotProxy_connect__ZN14QPlainTextEdit13copyAvailableEb(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QPlainTextEdit_copyAvailable_signal_connect for Box<fn(i8)> {
+impl /* trait */ QPlainTextEdit_copyAvailable_signal_connect for Box<Fn(i8)> {
   fn connect(self, sigthis: QPlainTextEdit_copyAvailable_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

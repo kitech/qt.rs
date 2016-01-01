@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qlayout.h
 // dst-file: /src/widgets/qlayout.rs
 //
@@ -198,20 +198,20 @@ impl<'a> /*trait*/ QLayout_spacing<i32> for () {
 
   // proto:  void QLayout::QLayout();
 impl /*struct*/ QLayout {
-  pub fn New<T: QLayout_New>(value: T) -> QLayout {
-    let rsthis = value.New();
+  pub fn new<T: QLayout_new>(value: T) -> QLayout {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QLayout_New {
-  fn New(self) -> QLayout;
+pub trait QLayout_new {
+  fn new(self) -> QLayout;
 }
 
   // proto:  void QLayout::QLayout();
-impl<'a> /*trait*/ QLayout_New for () {
-  fn New(self) -> QLayout {
+impl<'a> /*trait*/ QLayout_new for () {
+  fn new(self) -> QLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QLayoutC1Ev()};
     let ctysz: c_int = unsafe{QLayout_Class_Size()};
@@ -531,8 +531,8 @@ impl<'a> /*trait*/ QLayout_totalSizeHint<QSize> for () {
 }
 
   // proto:  void QLayout::QLayout(QWidget * parent);
-impl<'a> /*trait*/ QLayout_New for (&'a QWidget) {
-  fn New(self) -> QLayout {
+impl<'a> /*trait*/ QLayout_new for (&'a QWidget) {
+  fn new(self) -> QLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QLayoutC1EP7QWidget()};
     let ctysz: c_int = unsafe{QLayout_Class_Size()};
@@ -760,19 +760,19 @@ impl<'a> /*trait*/ QLayout_isEnabled<i8> for () {
 
   // proto:  void QLayout::~QLayout();
 impl /*struct*/ QLayout {
-  pub fn Free<RetType, T: QLayout_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QLayout_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QLayout_Free<RetType> {
-  fn Free(self , rsthis: & QLayout) -> RetType;
+pub trait QLayout_free<RetType> {
+  fn free(self , rsthis: & QLayout) -> RetType;
 }
 
   // proto:  void QLayout::~QLayout();
-impl<'a> /*trait*/ QLayout_Free<()> for () {
-  fn Free(self , rsthis: & QLayout) -> () {
+impl<'a> /*trait*/ QLayout_free<()> for () {
+  fn free(self , rsthis: & QLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QLayoutD0Ev()};
      unsafe {_ZN7QLayoutD0Ev(rsthis.qclsinst)};
@@ -851,8 +851,8 @@ impl<'a> /*trait*/ QLayout_menuBar<QWidget> for () {
 }
 
   // proto:  void QLayout::QLayout(const QLayout & );
-impl<'a> /*trait*/ QLayout_New for (&'a QLayout) {
-  fn New(self) -> QLayout {
+impl<'a> /*trait*/ QLayout_new for (&'a QLayout) {
+  fn new(self) -> QLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QLayoutC1ERKS_()};
     let ctysz: c_int = unsafe{QLayout_Class_Size()};

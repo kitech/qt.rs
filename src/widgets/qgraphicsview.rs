@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qgraphicsview.h
 // dst-file: /src/widgets/qgraphicsview.rs
 //
@@ -422,20 +422,20 @@ impl<'a> /*trait*/ QGraphicsView_isInteractive<i8> for () {
 
   // proto:  void QGraphicsView::QGraphicsView(const QGraphicsView & );
 impl /*struct*/ QGraphicsView {
-  pub fn New<T: QGraphicsView_New>(value: T) -> QGraphicsView {
-    let rsthis = value.New();
+  pub fn new<T: QGraphicsView_new>(value: T) -> QGraphicsView {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QGraphicsView_New {
-  fn New(self) -> QGraphicsView;
+pub trait QGraphicsView_new {
+  fn new(self) -> QGraphicsView;
 }
 
   // proto:  void QGraphicsView::QGraphicsView(const QGraphicsView & );
-impl<'a> /*trait*/ QGraphicsView_New for (&'a QGraphicsView) {
-  fn New(self) -> QGraphicsView {
+impl<'a> /*trait*/ QGraphicsView_new for (&'a QGraphicsView) {
+  fn new(self) -> QGraphicsView {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QGraphicsViewC1ERKS_()};
     let ctysz: c_int = unsafe{QGraphicsView_Class_Size()};
@@ -724,8 +724,8 @@ impl<'a> /*trait*/ QGraphicsView_mapToScene<QPolygonF> for (i32, i32, i32, i32) 
 }
 
   // proto:  void QGraphicsView::QGraphicsView(QGraphicsScene * scene, QWidget * parent);
-impl<'a> /*trait*/ QGraphicsView_New for (&'a QGraphicsScene, &'a QWidget) {
-  fn New(self) -> QGraphicsView {
+impl<'a> /*trait*/ QGraphicsView_new for (&'a QGraphicsScene, &'a QWidget) {
+  fn new(self) -> QGraphicsView {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QGraphicsViewC1EP14QGraphicsSceneP7QWidget()};
     let ctysz: c_int = unsafe{QGraphicsView_Class_Size()};
@@ -741,8 +741,8 @@ impl<'a> /*trait*/ QGraphicsView_New for (&'a QGraphicsScene, &'a QWidget) {
 }
 
   // proto:  void QGraphicsView::QGraphicsView(QWidget * parent);
-impl<'a> /*trait*/ QGraphicsView_New for (&'a QWidget) {
-  fn New(self) -> QGraphicsView {
+impl<'a> /*trait*/ QGraphicsView_new for (&'a QWidget) {
+  fn new(self) -> QGraphicsView {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QGraphicsViewC1EP7QWidget()};
     let ctysz: c_int = unsafe{QGraphicsView_Class_Size()};
@@ -1198,19 +1198,19 @@ impl<'a> /*trait*/ QGraphicsView_mapFromScene<QPainterPath> for (&'a QPainterPat
 
   // proto:  void QGraphicsView::~QGraphicsView();
 impl /*struct*/ QGraphicsView {
-  pub fn Free<RetType, T: QGraphicsView_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QGraphicsView_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsView_Free<RetType> {
-  fn Free(self , rsthis: & QGraphicsView) -> RetType;
+pub trait QGraphicsView_free<RetType> {
+  fn free(self , rsthis: & QGraphicsView) -> RetType;
 }
 
   // proto:  void QGraphicsView::~QGraphicsView();
-impl<'a> /*trait*/ QGraphicsView_Free<()> for () {
-  fn Free(self , rsthis: & QGraphicsView) -> () {
+impl<'a> /*trait*/ QGraphicsView_free<()> for () {
+  fn free(self , rsthis: & QGraphicsView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QGraphicsViewD0Ev()};
      unsafe {_ZN13QGraphicsViewD0Ev(rsthis.qclsinst)};
@@ -1333,7 +1333,7 @@ extern fn QGraphicsView_rubberBandChanged_signal_connect_cb_0(rsfptr:fn(QRect, Q
   let rsarg2 = QPointF::inheritFrom(arg2 as u64);
   rsfptr(rsarg0,rsarg1,rsarg2);
 }
-extern fn QGraphicsView_rubberBandChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QRect, QPointF, QPointF), arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) {
+extern fn QGraphicsView_rubberBandChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QRect, QPointF, QPointF), arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QRect::inheritFrom(arg0 as u64);
@@ -1344,7 +1344,8 @@ extern fn QGraphicsView_rubberBandChanged_signal_connect_cb_box_0(rsfptr_raw:*mu
 impl /* trait */ QGraphicsView_rubberBandChanged_signal_connect for fn(QRect, QPointF, QPointF) {
   fn connect(self, sigthis: QGraphicsView_rubberBandChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QGraphicsView_rubberBandChanged_signal_connect_cb_0 as *mut c_void;
@@ -1352,7 +1353,7 @@ impl /* trait */ QGraphicsView_rubberBandChanged_signal_connect for fn(QRect, QP
     unsafe {QGraphicsView_SlotProxy_connect__ZN13QGraphicsView17rubberBandChangedE5QRect7QPointFS1_(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QGraphicsView_rubberBandChanged_signal_connect for Box<fn(QRect, QPointF, QPointF)> {
+impl /* trait */ QGraphicsView_rubberBandChanged_signal_connect for Box<Fn(QRect, QPointF, QPointF)> {
   fn connect(self, sigthis: QGraphicsView_rubberBandChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

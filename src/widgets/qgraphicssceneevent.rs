@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qgraphicssceneevent.h
 // dst-file: /src/widgets/qgraphicssceneevent.rs
 //
@@ -354,19 +354,19 @@ impl<'a> /*trait*/ QGraphicsSceneMoveEvent_oldPos<QPointF> for () {
 
   // proto:  void QGraphicsSceneMoveEvent::~QGraphicsSceneMoveEvent();
 impl /*struct*/ QGraphicsSceneMoveEvent {
-  pub fn Free<RetType, T: QGraphicsSceneMoveEvent_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QGraphicsSceneMoveEvent_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneMoveEvent_Free<RetType> {
-  fn Free(self , rsthis: & QGraphicsSceneMoveEvent) -> RetType;
+pub trait QGraphicsSceneMoveEvent_free<RetType> {
+  fn free(self , rsthis: & QGraphicsSceneMoveEvent) -> RetType;
 }
 
   // proto:  void QGraphicsSceneMoveEvent::~QGraphicsSceneMoveEvent();
-impl<'a> /*trait*/ QGraphicsSceneMoveEvent_Free<()> for () {
-  fn Free(self , rsthis: & QGraphicsSceneMoveEvent) -> () {
+impl<'a> /*trait*/ QGraphicsSceneMoveEvent_free<()> for () {
+  fn free(self , rsthis: & QGraphicsSceneMoveEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QGraphicsSceneMoveEventD0Ev()};
      unsafe {_ZN23QGraphicsSceneMoveEventD0Ev(rsthis.qclsinst)};
@@ -376,20 +376,20 @@ impl<'a> /*trait*/ QGraphicsSceneMoveEvent_Free<()> for () {
 
   // proto:  void QGraphicsSceneMoveEvent::QGraphicsSceneMoveEvent(const QGraphicsSceneMoveEvent & );
 impl /*struct*/ QGraphicsSceneMoveEvent {
-  pub fn New<T: QGraphicsSceneMoveEvent_New>(value: T) -> QGraphicsSceneMoveEvent {
-    let rsthis = value.New();
+  pub fn new<T: QGraphicsSceneMoveEvent_new>(value: T) -> QGraphicsSceneMoveEvent {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneMoveEvent_New {
-  fn New(self) -> QGraphicsSceneMoveEvent;
+pub trait QGraphicsSceneMoveEvent_new {
+  fn new(self) -> QGraphicsSceneMoveEvent;
 }
 
   // proto:  void QGraphicsSceneMoveEvent::QGraphicsSceneMoveEvent(const QGraphicsSceneMoveEvent & );
-impl<'a> /*trait*/ QGraphicsSceneMoveEvent_New for (&'a QGraphicsSceneMoveEvent) {
-  fn New(self) -> QGraphicsSceneMoveEvent {
+impl<'a> /*trait*/ QGraphicsSceneMoveEvent_new for (&'a QGraphicsSceneMoveEvent) {
+  fn new(self) -> QGraphicsSceneMoveEvent {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QGraphicsSceneMoveEventC1ERKS_()};
     let ctysz: c_int = unsafe{QGraphicsSceneMoveEvent_Class_Size()};
@@ -427,8 +427,8 @@ impl<'a> /*trait*/ QGraphicsSceneMoveEvent_setNewPos<()> for (&'a QPointF) {
 }
 
   // proto:  void QGraphicsSceneMoveEvent::QGraphicsSceneMoveEvent();
-impl<'a> /*trait*/ QGraphicsSceneMoveEvent_New for () {
-  fn New(self) -> QGraphicsSceneMoveEvent {
+impl<'a> /*trait*/ QGraphicsSceneMoveEvent_new for () {
+  fn new(self) -> QGraphicsSceneMoveEvent {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QGraphicsSceneMoveEventC1Ev()};
     let ctysz: c_int = unsafe{QGraphicsSceneMoveEvent_Class_Size()};
@@ -483,20 +483,20 @@ impl AsRef<QGraphicsSceneEvent> for QGraphicsSceneContextMenuEvent {
 }
   // proto:  void QGraphicsSceneContextMenuEvent::QGraphicsSceneContextMenuEvent(const QGraphicsSceneContextMenuEvent & );
 impl /*struct*/ QGraphicsSceneContextMenuEvent {
-  pub fn New<T: QGraphicsSceneContextMenuEvent_New>(value: T) -> QGraphicsSceneContextMenuEvent {
-    let rsthis = value.New();
+  pub fn new<T: QGraphicsSceneContextMenuEvent_new>(value: T) -> QGraphicsSceneContextMenuEvent {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneContextMenuEvent_New {
-  fn New(self) -> QGraphicsSceneContextMenuEvent;
+pub trait QGraphicsSceneContextMenuEvent_new {
+  fn new(self) -> QGraphicsSceneContextMenuEvent;
 }
 
   // proto:  void QGraphicsSceneContextMenuEvent::QGraphicsSceneContextMenuEvent(const QGraphicsSceneContextMenuEvent & );
-impl<'a> /*trait*/ QGraphicsSceneContextMenuEvent_New for (&'a QGraphicsSceneContextMenuEvent) {
-  fn New(self) -> QGraphicsSceneContextMenuEvent {
+impl<'a> /*trait*/ QGraphicsSceneContextMenuEvent_new for (&'a QGraphicsSceneContextMenuEvent) {
+  fn new(self) -> QGraphicsSceneContextMenuEvent {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN30QGraphicsSceneContextMenuEventC1ERKS_()};
     let ctysz: c_int = unsafe{QGraphicsSceneContextMenuEvent_Class_Size()};
@@ -536,19 +536,19 @@ impl<'a> /*trait*/ QGraphicsSceneContextMenuEvent_scenePos<QPointF> for () {
 
   // proto:  void QGraphicsSceneContextMenuEvent::~QGraphicsSceneContextMenuEvent();
 impl /*struct*/ QGraphicsSceneContextMenuEvent {
-  pub fn Free<RetType, T: QGraphicsSceneContextMenuEvent_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QGraphicsSceneContextMenuEvent_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneContextMenuEvent_Free<RetType> {
-  fn Free(self , rsthis: & QGraphicsSceneContextMenuEvent) -> RetType;
+pub trait QGraphicsSceneContextMenuEvent_free<RetType> {
+  fn free(self , rsthis: & QGraphicsSceneContextMenuEvent) -> RetType;
 }
 
   // proto:  void QGraphicsSceneContextMenuEvent::~QGraphicsSceneContextMenuEvent();
-impl<'a> /*trait*/ QGraphicsSceneContextMenuEvent_Free<()> for () {
-  fn Free(self , rsthis: & QGraphicsSceneContextMenuEvent) -> () {
+impl<'a> /*trait*/ QGraphicsSceneContextMenuEvent_free<()> for () {
+  fn free(self , rsthis: & QGraphicsSceneContextMenuEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN30QGraphicsSceneContextMenuEventD0Ev()};
      unsafe {_ZN30QGraphicsSceneContextMenuEventD0Ev(rsthis.qclsinst)};
@@ -716,20 +716,20 @@ impl<'a> /*trait*/ QGraphicsSceneMouseEvent_screenPos<QPoint> for () {
 
   // proto:  void QGraphicsSceneMouseEvent::QGraphicsSceneMouseEvent(const QGraphicsSceneMouseEvent & );
 impl /*struct*/ QGraphicsSceneMouseEvent {
-  pub fn New<T: QGraphicsSceneMouseEvent_New>(value: T) -> QGraphicsSceneMouseEvent {
-    let rsthis = value.New();
+  pub fn new<T: QGraphicsSceneMouseEvent_new>(value: T) -> QGraphicsSceneMouseEvent {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneMouseEvent_New {
-  fn New(self) -> QGraphicsSceneMouseEvent;
+pub trait QGraphicsSceneMouseEvent_new {
+  fn new(self) -> QGraphicsSceneMouseEvent;
 }
 
   // proto:  void QGraphicsSceneMouseEvent::QGraphicsSceneMouseEvent(const QGraphicsSceneMouseEvent & );
-impl<'a> /*trait*/ QGraphicsSceneMouseEvent_New for (&'a QGraphicsSceneMouseEvent) {
-  fn New(self) -> QGraphicsSceneMouseEvent {
+impl<'a> /*trait*/ QGraphicsSceneMouseEvent_new for (&'a QGraphicsSceneMouseEvent) {
+  fn new(self) -> QGraphicsSceneMouseEvent {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneMouseEventC1ERKS_()};
     let ctysz: c_int = unsafe{QGraphicsSceneMouseEvent_Class_Size()};
@@ -769,19 +769,19 @@ impl<'a> /*trait*/ QGraphicsSceneMouseEvent_lastScenePos<QPointF> for () {
 
   // proto:  void QGraphicsSceneMouseEvent::~QGraphicsSceneMouseEvent();
 impl /*struct*/ QGraphicsSceneMouseEvent {
-  pub fn Free<RetType, T: QGraphicsSceneMouseEvent_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QGraphicsSceneMouseEvent_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneMouseEvent_Free<RetType> {
-  fn Free(self , rsthis: & QGraphicsSceneMouseEvent) -> RetType;
+pub trait QGraphicsSceneMouseEvent_free<RetType> {
+  fn free(self , rsthis: & QGraphicsSceneMouseEvent) -> RetType;
 }
 
   // proto:  void QGraphicsSceneMouseEvent::~QGraphicsSceneMouseEvent();
-impl<'a> /*trait*/ QGraphicsSceneMouseEvent_Free<()> for () {
-  fn Free(self , rsthis: & QGraphicsSceneMouseEvent) -> () {
+impl<'a> /*trait*/ QGraphicsSceneMouseEvent_free<()> for () {
+  fn free(self , rsthis: & QGraphicsSceneMouseEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneMouseEventD0Ev()};
      unsafe {_ZN24QGraphicsSceneMouseEventD0Ev(rsthis.qclsinst)};
@@ -1089,19 +1089,19 @@ impl<'a> /*trait*/ QGraphicsSceneHelpEvent_screenPos<QPoint> for () {
 
   // proto:  void QGraphicsSceneHelpEvent::~QGraphicsSceneHelpEvent();
 impl /*struct*/ QGraphicsSceneHelpEvent {
-  pub fn Free<RetType, T: QGraphicsSceneHelpEvent_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QGraphicsSceneHelpEvent_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneHelpEvent_Free<RetType> {
-  fn Free(self , rsthis: & QGraphicsSceneHelpEvent) -> RetType;
+pub trait QGraphicsSceneHelpEvent_free<RetType> {
+  fn free(self , rsthis: & QGraphicsSceneHelpEvent) -> RetType;
 }
 
   // proto:  void QGraphicsSceneHelpEvent::~QGraphicsSceneHelpEvent();
-impl<'a> /*trait*/ QGraphicsSceneHelpEvent_Free<()> for () {
-  fn Free(self , rsthis: & QGraphicsSceneHelpEvent) -> () {
+impl<'a> /*trait*/ QGraphicsSceneHelpEvent_free<()> for () {
+  fn free(self , rsthis: & QGraphicsSceneHelpEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QGraphicsSceneHelpEventD0Ev()};
      unsafe {_ZN23QGraphicsSceneHelpEventD0Ev(rsthis.qclsinst)};
@@ -1111,20 +1111,20 @@ impl<'a> /*trait*/ QGraphicsSceneHelpEvent_Free<()> for () {
 
   // proto:  void QGraphicsSceneHelpEvent::QGraphicsSceneHelpEvent(const QGraphicsSceneHelpEvent & );
 impl /*struct*/ QGraphicsSceneHelpEvent {
-  pub fn New<T: QGraphicsSceneHelpEvent_New>(value: T) -> QGraphicsSceneHelpEvent {
-    let rsthis = value.New();
+  pub fn new<T: QGraphicsSceneHelpEvent_new>(value: T) -> QGraphicsSceneHelpEvent {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneHelpEvent_New {
-  fn New(self) -> QGraphicsSceneHelpEvent;
+pub trait QGraphicsSceneHelpEvent_new {
+  fn new(self) -> QGraphicsSceneHelpEvent;
 }
 
   // proto:  void QGraphicsSceneHelpEvent::QGraphicsSceneHelpEvent(const QGraphicsSceneHelpEvent & );
-impl<'a> /*trait*/ QGraphicsSceneHelpEvent_New for (&'a QGraphicsSceneHelpEvent) {
-  fn New(self) -> QGraphicsSceneHelpEvent {
+impl<'a> /*trait*/ QGraphicsSceneHelpEvent_new for (&'a QGraphicsSceneHelpEvent) {
+  fn new(self) -> QGraphicsSceneHelpEvent {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QGraphicsSceneHelpEventC1ERKS_()};
     let ctysz: c_int = unsafe{QGraphicsSceneHelpEvent_Class_Size()};
@@ -1275,20 +1275,20 @@ impl<'a> /*trait*/ QGraphicsSceneHoverEvent_lastPos<QPointF> for () {
 
   // proto:  void QGraphicsSceneHoverEvent::QGraphicsSceneHoverEvent(const QGraphicsSceneHoverEvent & );
 impl /*struct*/ QGraphicsSceneHoverEvent {
-  pub fn New<T: QGraphicsSceneHoverEvent_New>(value: T) -> QGraphicsSceneHoverEvent {
-    let rsthis = value.New();
+  pub fn new<T: QGraphicsSceneHoverEvent_new>(value: T) -> QGraphicsSceneHoverEvent {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneHoverEvent_New {
-  fn New(self) -> QGraphicsSceneHoverEvent;
+pub trait QGraphicsSceneHoverEvent_new {
+  fn new(self) -> QGraphicsSceneHoverEvent;
 }
 
   // proto:  void QGraphicsSceneHoverEvent::QGraphicsSceneHoverEvent(const QGraphicsSceneHoverEvent & );
-impl<'a> /*trait*/ QGraphicsSceneHoverEvent_New for (&'a QGraphicsSceneHoverEvent) {
-  fn New(self) -> QGraphicsSceneHoverEvent {
+impl<'a> /*trait*/ QGraphicsSceneHoverEvent_new for (&'a QGraphicsSceneHoverEvent) {
+  fn new(self) -> QGraphicsSceneHoverEvent {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneHoverEventC1ERKS_()};
     let ctysz: c_int = unsafe{QGraphicsSceneHoverEvent_Class_Size()};
@@ -1515,19 +1515,19 @@ impl<'a> /*trait*/ QGraphicsSceneHoverEvent_setScreenPos<()> for (&'a QPoint) {
 
   // proto:  void QGraphicsSceneHoverEvent::~QGraphicsSceneHoverEvent();
 impl /*struct*/ QGraphicsSceneHoverEvent {
-  pub fn Free<RetType, T: QGraphicsSceneHoverEvent_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QGraphicsSceneHoverEvent_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneHoverEvent_Free<RetType> {
-  fn Free(self , rsthis: & QGraphicsSceneHoverEvent) -> RetType;
+pub trait QGraphicsSceneHoverEvent_free<RetType> {
+  fn free(self , rsthis: & QGraphicsSceneHoverEvent) -> RetType;
 }
 
   // proto:  void QGraphicsSceneHoverEvent::~QGraphicsSceneHoverEvent();
-impl<'a> /*trait*/ QGraphicsSceneHoverEvent_Free<()> for () {
-  fn Free(self , rsthis: & QGraphicsSceneHoverEvent) -> () {
+impl<'a> /*trait*/ QGraphicsSceneHoverEvent_free<()> for () {
+  fn free(self , rsthis: & QGraphicsSceneHoverEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneHoverEventD0Ev()};
      unsafe {_ZN24QGraphicsSceneHoverEventD0Ev(rsthis.qclsinst)};
@@ -1578,19 +1578,19 @@ impl<'a> /*trait*/ QGraphicsSceneWheelEvent_pos<QPointF> for () {
 
   // proto:  void QGraphicsSceneWheelEvent::~QGraphicsSceneWheelEvent();
 impl /*struct*/ QGraphicsSceneWheelEvent {
-  pub fn Free<RetType, T: QGraphicsSceneWheelEvent_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QGraphicsSceneWheelEvent_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneWheelEvent_Free<RetType> {
-  fn Free(self , rsthis: & QGraphicsSceneWheelEvent) -> RetType;
+pub trait QGraphicsSceneWheelEvent_free<RetType> {
+  fn free(self , rsthis: & QGraphicsSceneWheelEvent) -> RetType;
 }
 
   // proto:  void QGraphicsSceneWheelEvent::~QGraphicsSceneWheelEvent();
-impl<'a> /*trait*/ QGraphicsSceneWheelEvent_Free<()> for () {
-  fn Free(self , rsthis: & QGraphicsSceneWheelEvent) -> () {
+impl<'a> /*trait*/ QGraphicsSceneWheelEvent_free<()> for () {
+  fn free(self , rsthis: & QGraphicsSceneWheelEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneWheelEventD0Ev()};
      unsafe {_ZN24QGraphicsSceneWheelEventD0Ev(rsthis.qclsinst)};
@@ -1646,20 +1646,20 @@ impl<'a> /*trait*/ QGraphicsSceneWheelEvent_setScenePos<()> for (&'a QPointF) {
 
   // proto:  void QGraphicsSceneWheelEvent::QGraphicsSceneWheelEvent(const QGraphicsSceneWheelEvent & );
 impl /*struct*/ QGraphicsSceneWheelEvent {
-  pub fn New<T: QGraphicsSceneWheelEvent_New>(value: T) -> QGraphicsSceneWheelEvent {
-    let rsthis = value.New();
+  pub fn new<T: QGraphicsSceneWheelEvent_new>(value: T) -> QGraphicsSceneWheelEvent {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneWheelEvent_New {
-  fn New(self) -> QGraphicsSceneWheelEvent;
+pub trait QGraphicsSceneWheelEvent_new {
+  fn new(self) -> QGraphicsSceneWheelEvent;
 }
 
   // proto:  void QGraphicsSceneWheelEvent::QGraphicsSceneWheelEvent(const QGraphicsSceneWheelEvent & );
-impl<'a> /*trait*/ QGraphicsSceneWheelEvent_New for (&'a QGraphicsSceneWheelEvent) {
-  fn New(self) -> QGraphicsSceneWheelEvent {
+impl<'a> /*trait*/ QGraphicsSceneWheelEvent_new for (&'a QGraphicsSceneWheelEvent) {
+  fn new(self) -> QGraphicsSceneWheelEvent {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneWheelEventC1ERKS_()};
     let ctysz: c_int = unsafe{QGraphicsSceneWheelEvent_Class_Size()};
@@ -1880,20 +1880,20 @@ impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_setPos<()> for (&'a QPointF) {
 
   // proto:  void QGraphicsSceneDragDropEvent::QGraphicsSceneDragDropEvent(const QGraphicsSceneDragDropEvent & );
 impl /*struct*/ QGraphicsSceneDragDropEvent {
-  pub fn New<T: QGraphicsSceneDragDropEvent_New>(value: T) -> QGraphicsSceneDragDropEvent {
-    let rsthis = value.New();
+  pub fn new<T: QGraphicsSceneDragDropEvent_new>(value: T) -> QGraphicsSceneDragDropEvent {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneDragDropEvent_New {
-  fn New(self) -> QGraphicsSceneDragDropEvent;
+pub trait QGraphicsSceneDragDropEvent_new {
+  fn new(self) -> QGraphicsSceneDragDropEvent;
 }
 
   // proto:  void QGraphicsSceneDragDropEvent::QGraphicsSceneDragDropEvent(const QGraphicsSceneDragDropEvent & );
-impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_New for (&'a QGraphicsSceneDragDropEvent) {
-  fn New(self) -> QGraphicsSceneDragDropEvent {
+impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_new for (&'a QGraphicsSceneDragDropEvent) {
+  fn new(self) -> QGraphicsSceneDragDropEvent {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QGraphicsSceneDragDropEventC1ERKS_()};
     let ctysz: c_int = unsafe{QGraphicsSceneDragDropEvent_Class_Size()};
@@ -2004,19 +2004,19 @@ impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_mimeData<QMimeData> for () {
 
   // proto:  void QGraphicsSceneDragDropEvent::~QGraphicsSceneDragDropEvent();
 impl /*struct*/ QGraphicsSceneDragDropEvent {
-  pub fn Free<RetType, T: QGraphicsSceneDragDropEvent_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QGraphicsSceneDragDropEvent_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneDragDropEvent_Free<RetType> {
-  fn Free(self , rsthis: & QGraphicsSceneDragDropEvent) -> RetType;
+pub trait QGraphicsSceneDragDropEvent_free<RetType> {
+  fn free(self , rsthis: & QGraphicsSceneDragDropEvent) -> RetType;
 }
 
   // proto:  void QGraphicsSceneDragDropEvent::~QGraphicsSceneDragDropEvent();
-impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_Free<()> for () {
-  fn Free(self , rsthis: & QGraphicsSceneDragDropEvent) -> () {
+impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_free<()> for () {
+  fn free(self , rsthis: & QGraphicsSceneDragDropEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QGraphicsSceneDragDropEventD0Ev()};
      unsafe {_ZN27QGraphicsSceneDragDropEventD0Ev(rsthis.qclsinst)};
@@ -2134,20 +2134,20 @@ impl AsRef<QEvent> for QGraphicsSceneEvent {
 }
   // proto:  void QGraphicsSceneEvent::QGraphicsSceneEvent(const QGraphicsSceneEvent & );
 impl /*struct*/ QGraphicsSceneEvent {
-  pub fn New<T: QGraphicsSceneEvent_New>(value: T) -> QGraphicsSceneEvent {
-    let rsthis = value.New();
+  pub fn new<T: QGraphicsSceneEvent_new>(value: T) -> QGraphicsSceneEvent {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneEvent_New {
-  fn New(self) -> QGraphicsSceneEvent;
+pub trait QGraphicsSceneEvent_new {
+  fn new(self) -> QGraphicsSceneEvent;
 }
 
   // proto:  void QGraphicsSceneEvent::QGraphicsSceneEvent(const QGraphicsSceneEvent & );
-impl<'a> /*trait*/ QGraphicsSceneEvent_New for (&'a QGraphicsSceneEvent) {
-  fn New(self) -> QGraphicsSceneEvent {
+impl<'a> /*trait*/ QGraphicsSceneEvent_new for (&'a QGraphicsSceneEvent) {
+  fn new(self) -> QGraphicsSceneEvent {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsSceneEventC1ERKS_()};
     let ctysz: c_int = unsafe{QGraphicsSceneEvent_Class_Size()};
@@ -2210,19 +2210,19 @@ impl<'a> /*trait*/ QGraphicsSceneEvent_setWidget<()> for (&'a QWidget) {
 
   // proto:  void QGraphicsSceneEvent::~QGraphicsSceneEvent();
 impl /*struct*/ QGraphicsSceneEvent {
-  pub fn Free<RetType, T: QGraphicsSceneEvent_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QGraphicsSceneEvent_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneEvent_Free<RetType> {
-  fn Free(self , rsthis: & QGraphicsSceneEvent) -> RetType;
+pub trait QGraphicsSceneEvent_free<RetType> {
+  fn free(self , rsthis: & QGraphicsSceneEvent) -> RetType;
 }
 
   // proto:  void QGraphicsSceneEvent::~QGraphicsSceneEvent();
-impl<'a> /*trait*/ QGraphicsSceneEvent_Free<()> for () {
-  fn Free(self , rsthis: & QGraphicsSceneEvent) -> () {
+impl<'a> /*trait*/ QGraphicsSceneEvent_free<()> for () {
+  fn free(self , rsthis: & QGraphicsSceneEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsSceneEventD0Ev()};
      unsafe {_ZN19QGraphicsSceneEventD0Ev(rsthis.qclsinst)};
@@ -2297,19 +2297,19 @@ impl<'a> /*trait*/ QGraphicsSceneResizeEvent_oldSize<QSizeF> for () {
 
   // proto:  void QGraphicsSceneResizeEvent::~QGraphicsSceneResizeEvent();
 impl /*struct*/ QGraphicsSceneResizeEvent {
-  pub fn Free<RetType, T: QGraphicsSceneResizeEvent_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QGraphicsSceneResizeEvent_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneResizeEvent_Free<RetType> {
-  fn Free(self , rsthis: & QGraphicsSceneResizeEvent) -> RetType;
+pub trait QGraphicsSceneResizeEvent_free<RetType> {
+  fn free(self , rsthis: & QGraphicsSceneResizeEvent) -> RetType;
 }
 
   // proto:  void QGraphicsSceneResizeEvent::~QGraphicsSceneResizeEvent();
-impl<'a> /*trait*/ QGraphicsSceneResizeEvent_Free<()> for () {
-  fn Free(self , rsthis: & QGraphicsSceneResizeEvent) -> () {
+impl<'a> /*trait*/ QGraphicsSceneResizeEvent_free<()> for () {
+  fn free(self , rsthis: & QGraphicsSceneResizeEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN25QGraphicsSceneResizeEventD0Ev()};
      unsafe {_ZN25QGraphicsSceneResizeEventD0Ev(rsthis.qclsinst)};
@@ -2342,20 +2342,20 @@ impl<'a> /*trait*/ QGraphicsSceneResizeEvent_setNewSize<()> for (&'a QSizeF) {
 
   // proto:  void QGraphicsSceneResizeEvent::QGraphicsSceneResizeEvent();
 impl /*struct*/ QGraphicsSceneResizeEvent {
-  pub fn New<T: QGraphicsSceneResizeEvent_New>(value: T) -> QGraphicsSceneResizeEvent {
-    let rsthis = value.New();
+  pub fn new<T: QGraphicsSceneResizeEvent_new>(value: T) -> QGraphicsSceneResizeEvent {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneResizeEvent_New {
-  fn New(self) -> QGraphicsSceneResizeEvent;
+pub trait QGraphicsSceneResizeEvent_new {
+  fn new(self) -> QGraphicsSceneResizeEvent;
 }
 
   // proto:  void QGraphicsSceneResizeEvent::QGraphicsSceneResizeEvent();
-impl<'a> /*trait*/ QGraphicsSceneResizeEvent_New for () {
-  fn New(self) -> QGraphicsSceneResizeEvent {
+impl<'a> /*trait*/ QGraphicsSceneResizeEvent_new for () {
+  fn new(self) -> QGraphicsSceneResizeEvent {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN25QGraphicsSceneResizeEventC1Ev()};
     let ctysz: c_int = unsafe{QGraphicsSceneResizeEvent_Class_Size()};
@@ -2392,8 +2392,8 @@ impl<'a> /*trait*/ QGraphicsSceneResizeEvent_setOldSize<()> for (&'a QSizeF) {
 }
 
   // proto:  void QGraphicsSceneResizeEvent::QGraphicsSceneResizeEvent(const QGraphicsSceneResizeEvent & );
-impl<'a> /*trait*/ QGraphicsSceneResizeEvent_New for (&'a QGraphicsSceneResizeEvent) {
-  fn New(self) -> QGraphicsSceneResizeEvent {
+impl<'a> /*trait*/ QGraphicsSceneResizeEvent_new for (&'a QGraphicsSceneResizeEvent) {
+  fn new(self) -> QGraphicsSceneResizeEvent {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN25QGraphicsSceneResizeEventC1ERKS_()};
     let ctysz: c_int = unsafe{QGraphicsSceneResizeEvent_Class_Size()};

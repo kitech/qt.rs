@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qaccessiblewidget.h
 // dst-file: /src/widgets/qaccessiblewidget.rs
 //
@@ -263,20 +263,20 @@ impl<'a> /*trait*/ QAccessibleWidget_focusChild<QAccessibleInterface> for () {
 
   // proto:  void QAccessibleWidget::QAccessibleWidget(const QAccessibleWidget & );
 impl /*struct*/ QAccessibleWidget {
-  pub fn New<T: QAccessibleWidget_New>(value: T) -> QAccessibleWidget {
-    let rsthis = value.New();
+  pub fn new<T: QAccessibleWidget_new>(value: T) -> QAccessibleWidget {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QAccessibleWidget_New {
-  fn New(self) -> QAccessibleWidget;
+pub trait QAccessibleWidget_new {
+  fn new(self) -> QAccessibleWidget;
 }
 
   // proto:  void QAccessibleWidget::QAccessibleWidget(const QAccessibleWidget & );
-impl<'a> /*trait*/ QAccessibleWidget_New for (&'a QAccessibleWidget) {
-  fn New(self) -> QAccessibleWidget {
+impl<'a> /*trait*/ QAccessibleWidget_new for (&'a QAccessibleWidget) {
+  fn new(self) -> QAccessibleWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAccessibleWidgetC1ERKS_()};
     let ctysz: c_int = unsafe{QAccessibleWidget_Class_Size()};
@@ -316,19 +316,19 @@ impl<'a> /*trait*/ QAccessibleWidget_backgroundColor<QColor> for () {
 
   // proto:  void QAccessibleWidget::~QAccessibleWidget();
 impl /*struct*/ QAccessibleWidget {
-  pub fn Free<RetType, T: QAccessibleWidget_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QAccessibleWidget_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleWidget_Free<RetType> {
-  fn Free(self , rsthis: & QAccessibleWidget) -> RetType;
+pub trait QAccessibleWidget_free<RetType> {
+  fn free(self , rsthis: & QAccessibleWidget) -> RetType;
 }
 
   // proto:  void QAccessibleWidget::~QAccessibleWidget();
-impl<'a> /*trait*/ QAccessibleWidget_Free<()> for () {
-  fn Free(self , rsthis: & QAccessibleWidget) -> () {
+impl<'a> /*trait*/ QAccessibleWidget_free<()> for () {
+  fn free(self , rsthis: & QAccessibleWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAccessibleWidgetD0Ev()};
      unsafe {_ZN17QAccessibleWidgetD0Ev(rsthis.qclsinst)};

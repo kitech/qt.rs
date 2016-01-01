@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qstatusbar.h
 // dst-file: /src/widgets/qstatusbar.rs
 //
@@ -94,19 +94,19 @@ impl AsRef<QWidget> for QStatusBar {
 }
   // proto:  void QStatusBar::~QStatusBar();
 impl /*struct*/ QStatusBar {
-  pub fn Free<RetType, T: QStatusBar_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QStatusBar_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QStatusBar_Free<RetType> {
-  fn Free(self , rsthis: & QStatusBar) -> RetType;
+pub trait QStatusBar_free<RetType> {
+  fn free(self , rsthis: & QStatusBar) -> RetType;
 }
 
   // proto:  void QStatusBar::~QStatusBar();
-impl<'a> /*trait*/ QStatusBar_Free<()> for () {
-  fn Free(self , rsthis: & QStatusBar) -> () {
+impl<'a> /*trait*/ QStatusBar_free<()> for () {
+  fn free(self , rsthis: & QStatusBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QStatusBarD0Ev()};
      unsafe {_ZN10QStatusBarD0Ev(rsthis.qclsinst)};
@@ -165,20 +165,20 @@ impl<'a> /*trait*/ QStatusBar_removeWidget<()> for (&'a QWidget) {
 
   // proto:  void QStatusBar::QStatusBar(const QStatusBar & );
 impl /*struct*/ QStatusBar {
-  pub fn New<T: QStatusBar_New>(value: T) -> QStatusBar {
-    let rsthis = value.New();
+  pub fn new<T: QStatusBar_new>(value: T) -> QStatusBar {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QStatusBar_New {
-  fn New(self) -> QStatusBar;
+pub trait QStatusBar_new {
+  fn new(self) -> QStatusBar;
 }
 
   // proto:  void QStatusBar::QStatusBar(const QStatusBar & );
-impl<'a> /*trait*/ QStatusBar_New for (&'a QStatusBar) {
-  fn New(self) -> QStatusBar {
+impl<'a> /*trait*/ QStatusBar_new for (&'a QStatusBar) {
+  fn new(self) -> QStatusBar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QStatusBarC1ERKS_()};
     let ctysz: c_int = unsafe{QStatusBar_Class_Size()};
@@ -428,8 +428,8 @@ impl<'a> /*trait*/ QStatusBar_addWidget<()> for (&'a QWidget, i32) {
 }
 
   // proto:  void QStatusBar::QStatusBar(QWidget * parent);
-impl<'a> /*trait*/ QStatusBar_New for (&'a QWidget) {
-  fn New(self) -> QStatusBar {
+impl<'a> /*trait*/ QStatusBar_new for (&'a QWidget) {
+  fn new(self) -> QStatusBar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QStatusBarC1EP7QWidget()};
     let ctysz: c_int = unsafe{QStatusBar_Class_Size()};
@@ -465,7 +465,7 @@ extern fn QStatusBar_messageChanged_signal_connect_cb_0(rsfptr:fn(QString), arg0
   let rsarg0 = QString::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QStatusBar_messageChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QString), arg0: *mut c_void) {
+extern fn QStatusBar_messageChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QString::inheritFrom(arg0 as u64);
@@ -474,7 +474,8 @@ extern fn QStatusBar_messageChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(Q
 impl /* trait */ QStatusBar_messageChanged_signal_connect for fn(QString) {
   fn connect(self, sigthis: QStatusBar_messageChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QStatusBar_messageChanged_signal_connect_cb_0 as *mut c_void;
@@ -482,7 +483,7 @@ impl /* trait */ QStatusBar_messageChanged_signal_connect for fn(QString) {
     unsafe {QStatusBar_SlotProxy_connect__ZN10QStatusBar14messageChangedERK7QString(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QStatusBar_messageChanged_signal_connect for Box<fn(QString)> {
+impl /* trait */ QStatusBar_messageChanged_signal_connect for Box<Fn(QString)> {
   fn connect(self, sigthis: QStatusBar_messageChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

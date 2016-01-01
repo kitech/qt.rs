@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qgraphicslayoutitem.h
 // dst-file: /src/widgets/qgraphicslayoutitem.rs
 //
@@ -304,20 +304,20 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_geometry<QRectF> for () {
 
   // proto:  void QGraphicsLayoutItem::QGraphicsLayoutItem(QGraphicsLayoutItem * parent, bool isLayout);
 impl /*struct*/ QGraphicsLayoutItem {
-  pub fn New<T: QGraphicsLayoutItem_New>(value: T) -> QGraphicsLayoutItem {
-    let rsthis = value.New();
+  pub fn new<T: QGraphicsLayoutItem_new>(value: T) -> QGraphicsLayoutItem {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QGraphicsLayoutItem_New {
-  fn New(self) -> QGraphicsLayoutItem;
+pub trait QGraphicsLayoutItem_new {
+  fn new(self) -> QGraphicsLayoutItem;
 }
 
   // proto:  void QGraphicsLayoutItem::QGraphicsLayoutItem(QGraphicsLayoutItem * parent, bool isLayout);
-impl<'a> /*trait*/ QGraphicsLayoutItem_New for (&'a QGraphicsLayoutItem, i8) {
-  fn New(self) -> QGraphicsLayoutItem {
+impl<'a> /*trait*/ QGraphicsLayoutItem_new for (&'a QGraphicsLayoutItem, i8) {
+  fn new(self) -> QGraphicsLayoutItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsLayoutItemC1EPS_b()};
     let ctysz: c_int = unsafe{QGraphicsLayoutItem_Class_Size()};
@@ -847,19 +847,19 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_setPreferredSize<()> for (f64, f64) {
 
   // proto:  void QGraphicsLayoutItem::~QGraphicsLayoutItem();
 impl /*struct*/ QGraphicsLayoutItem {
-  pub fn Free<RetType, T: QGraphicsLayoutItem_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QGraphicsLayoutItem_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsLayoutItem_Free<RetType> {
-  fn Free(self , rsthis: & QGraphicsLayoutItem) -> RetType;
+pub trait QGraphicsLayoutItem_free<RetType> {
+  fn free(self , rsthis: & QGraphicsLayoutItem) -> RetType;
 }
 
   // proto:  void QGraphicsLayoutItem::~QGraphicsLayoutItem();
-impl<'a> /*trait*/ QGraphicsLayoutItem_Free<()> for () {
-  fn Free(self , rsthis: & QGraphicsLayoutItem) -> () {
+impl<'a> /*trait*/ QGraphicsLayoutItem_free<()> for () {
+  fn free(self , rsthis: & QGraphicsLayoutItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsLayoutItemD0Ev()};
      unsafe {_ZN19QGraphicsLayoutItemD0Ev(rsthis.qclsinst)};

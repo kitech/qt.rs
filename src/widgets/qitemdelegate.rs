@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qitemdelegate.h
 // dst-file: /src/widgets/qitemdelegate.rs
 //
@@ -292,20 +292,20 @@ impl<'a> /*trait*/ QItemDelegate_createEditor<QWidget> for (&'a QWidget, &'a QSt
 
   // proto:  void QItemDelegate::QItemDelegate(QObject * parent);
 impl /*struct*/ QItemDelegate {
-  pub fn New<T: QItemDelegate_New>(value: T) -> QItemDelegate {
-    let rsthis = value.New();
+  pub fn new<T: QItemDelegate_new>(value: T) -> QItemDelegate {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QItemDelegate_New {
-  fn New(self) -> QItemDelegate;
+pub trait QItemDelegate_new {
+  fn new(self) -> QItemDelegate;
 }
 
   // proto:  void QItemDelegate::QItemDelegate(QObject * parent);
-impl<'a> /*trait*/ QItemDelegate_New for (&'a QObject) {
-  fn New(self) -> QItemDelegate {
+impl<'a> /*trait*/ QItemDelegate_new for (&'a QObject) {
+  fn new(self) -> QItemDelegate {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QItemDelegateC1EP7QObject()};
     let ctysz: c_int = unsafe{QItemDelegate_Class_Size()};
@@ -320,8 +320,8 @@ impl<'a> /*trait*/ QItemDelegate_New for (&'a QObject) {
 }
 
   // proto:  void QItemDelegate::QItemDelegate(const QItemDelegate & );
-impl<'a> /*trait*/ QItemDelegate_New for (&'a QItemDelegate) {
-  fn New(self) -> QItemDelegate {
+impl<'a> /*trait*/ QItemDelegate_new for (&'a QItemDelegate) {
+  fn new(self) -> QItemDelegate {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QItemDelegateC1ERKS_()};
     let ctysz: c_int = unsafe{QItemDelegate_Class_Size()};
@@ -360,19 +360,19 @@ impl<'a> /*trait*/ QItemDelegate_hasClipping<i8> for () {
 
   // proto:  void QItemDelegate::~QItemDelegate();
 impl /*struct*/ QItemDelegate {
-  pub fn Free<RetType, T: QItemDelegate_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QItemDelegate_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QItemDelegate_Free<RetType> {
-  fn Free(self , rsthis: & QItemDelegate) -> RetType;
+pub trait QItemDelegate_free<RetType> {
+  fn free(self , rsthis: & QItemDelegate) -> RetType;
 }
 
   // proto:  void QItemDelegate::~QItemDelegate();
-impl<'a> /*trait*/ QItemDelegate_Free<()> for () {
-  fn Free(self , rsthis: & QItemDelegate) -> () {
+impl<'a> /*trait*/ QItemDelegate_free<()> for () {
+  fn free(self , rsthis: & QItemDelegate) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QItemDelegateD0Ev()};
      unsafe {_ZN13QItemDelegateD0Ev(rsthis.qclsinst)};

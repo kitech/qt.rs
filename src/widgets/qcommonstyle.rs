@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qcommonstyle.h
 // dst-file: /src/widgets/qcommonstyle.rs
 //
@@ -123,20 +123,20 @@ impl<'a> /*trait*/ QCommonStyle_polish<()> for (&'a QPalette) {
 
   // proto:  void QCommonStyle::QCommonStyle(const QCommonStyle & );
 impl /*struct*/ QCommonStyle {
-  pub fn New<T: QCommonStyle_New>(value: T) -> QCommonStyle {
-    let rsthis = value.New();
+  pub fn new<T: QCommonStyle_new>(value: T) -> QCommonStyle {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QCommonStyle_New {
-  fn New(self) -> QCommonStyle;
+pub trait QCommonStyle_new {
+  fn new(self) -> QCommonStyle;
 }
 
   // proto:  void QCommonStyle::QCommonStyle(const QCommonStyle & );
-impl<'a> /*trait*/ QCommonStyle_New for (&'a QCommonStyle) {
-  fn New(self) -> QCommonStyle {
+impl<'a> /*trait*/ QCommonStyle_new for (&'a QCommonStyle) {
+  fn new(self) -> QCommonStyle {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QCommonStyleC1ERKS_()};
     let ctysz: c_int = unsafe{QCommonStyle_Class_Size()};
@@ -196,8 +196,8 @@ impl<'a> /*trait*/ QCommonStyle_polish<()> for (&'a QApplication) {
 }
 
   // proto:  void QCommonStyle::QCommonStyle();
-impl<'a> /*trait*/ QCommonStyle_New for () {
-  fn New(self) -> QCommonStyle {
+impl<'a> /*trait*/ QCommonStyle_new for () {
+  fn new(self) -> QCommonStyle {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QCommonStyleC1Ev()};
     let ctysz: c_int = unsafe{QCommonStyle_Class_Size()};
@@ -234,19 +234,19 @@ impl<'a> /*trait*/ QCommonStyle_metaObject<()> for () {
 
   // proto:  void QCommonStyle::~QCommonStyle();
 impl /*struct*/ QCommonStyle {
-  pub fn Free<RetType, T: QCommonStyle_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QCommonStyle_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QCommonStyle_Free<RetType> {
-  fn Free(self , rsthis: & QCommonStyle) -> RetType;
+pub trait QCommonStyle_free<RetType> {
+  fn free(self , rsthis: & QCommonStyle) -> RetType;
 }
 
   // proto:  void QCommonStyle::~QCommonStyle();
-impl<'a> /*trait*/ QCommonStyle_Free<()> for () {
-  fn Free(self , rsthis: & QCommonStyle) -> () {
+impl<'a> /*trait*/ QCommonStyle_free<()> for () {
+  fn free(self , rsthis: & QCommonStyle) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QCommonStyleD0Ev()};
      unsafe {_ZN12QCommonStyleD0Ev(rsthis.qclsinst)};

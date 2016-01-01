@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qitemeditorfactory.h
 // dst-file: /src/widgets/qitemeditorfactory.rs
 //
@@ -127,19 +127,19 @@ impl<'a> /*trait*/ QItemEditorCreatorBase_createWidget<QWidget> for (&'a QWidget
 
   // proto:  void QItemEditorCreatorBase::~QItemEditorCreatorBase();
 impl /*struct*/ QItemEditorCreatorBase {
-  pub fn Free<RetType, T: QItemEditorCreatorBase_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QItemEditorCreatorBase_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QItemEditorCreatorBase_Free<RetType> {
-  fn Free(self , rsthis: & QItemEditorCreatorBase) -> RetType;
+pub trait QItemEditorCreatorBase_free<RetType> {
+  fn free(self , rsthis: & QItemEditorCreatorBase) -> RetType;
 }
 
   // proto:  void QItemEditorCreatorBase::~QItemEditorCreatorBase();
-impl<'a> /*trait*/ QItemEditorCreatorBase_Free<()> for () {
-  fn Free(self , rsthis: & QItemEditorCreatorBase) -> () {
+impl<'a> /*trait*/ QItemEditorCreatorBase_free<()> for () {
+  fn free(self , rsthis: & QItemEditorCreatorBase) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN22QItemEditorCreatorBaseD0Ev()};
      unsafe {_ZN22QItemEditorCreatorBaseD0Ev(rsthis.qclsinst)};
@@ -154,20 +154,20 @@ impl /*struct*/ QItemEditorFactory {
 }
   // proto:  void QItemEditorFactory::QItemEditorFactory();
 impl /*struct*/ QItemEditorFactory {
-  pub fn New<T: QItemEditorFactory_New>(value: T) -> QItemEditorFactory {
-    let rsthis = value.New();
+  pub fn new<T: QItemEditorFactory_new>(value: T) -> QItemEditorFactory {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QItemEditorFactory_New {
-  fn New(self) -> QItemEditorFactory;
+pub trait QItemEditorFactory_new {
+  fn new(self) -> QItemEditorFactory;
 }
 
   // proto:  void QItemEditorFactory::QItemEditorFactory();
-impl<'a> /*trait*/ QItemEditorFactory_New for () {
-  fn New(self) -> QItemEditorFactory {
+impl<'a> /*trait*/ QItemEditorFactory_new for () {
+  fn new(self) -> QItemEditorFactory {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QItemEditorFactoryC1Ev()};
     let ctysz: c_int = unsafe{QItemEditorFactory_Class_Size()};
@@ -231,19 +231,19 @@ impl<'a> /*trait*/ QItemEditorFactory_defaultFactory_s<QItemEditorFactory> for (
 
   // proto:  void QItemEditorFactory::~QItemEditorFactory();
 impl /*struct*/ QItemEditorFactory {
-  pub fn Free<RetType, T: QItemEditorFactory_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QItemEditorFactory_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QItemEditorFactory_Free<RetType> {
-  fn Free(self , rsthis: & QItemEditorFactory) -> RetType;
+pub trait QItemEditorFactory_free<RetType> {
+  fn free(self , rsthis: & QItemEditorFactory) -> RetType;
 }
 
   // proto:  void QItemEditorFactory::~QItemEditorFactory();
-impl<'a> /*trait*/ QItemEditorFactory_Free<()> for () {
-  fn Free(self , rsthis: & QItemEditorFactory) -> () {
+impl<'a> /*trait*/ QItemEditorFactory_free<()> for () {
+  fn free(self , rsthis: & QItemEditorFactory) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QItemEditorFactoryD0Ev()};
      unsafe {_ZN18QItemEditorFactoryD0Ev(rsthis.qclsinst)};

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qgraphicsitemanimation.h
 // dst-file: /src/widgets/qgraphicsitemanimation.rs
 //
@@ -149,20 +149,20 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_setPosAt<()> for (f64, &'a QPointF) {
 
   // proto:  void QGraphicsItemAnimation::QGraphicsItemAnimation(const QGraphicsItemAnimation & );
 impl /*struct*/ QGraphicsItemAnimation {
-  pub fn New<T: QGraphicsItemAnimation_New>(value: T) -> QGraphicsItemAnimation {
-    let rsthis = value.New();
+  pub fn new<T: QGraphicsItemAnimation_new>(value: T) -> QGraphicsItemAnimation {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QGraphicsItemAnimation_New {
-  fn New(self) -> QGraphicsItemAnimation;
+pub trait QGraphicsItemAnimation_new {
+  fn new(self) -> QGraphicsItemAnimation;
 }
 
   // proto:  void QGraphicsItemAnimation::QGraphicsItemAnimation(const QGraphicsItemAnimation & );
-impl<'a> /*trait*/ QGraphicsItemAnimation_New for (&'a QGraphicsItemAnimation) {
-  fn New(self) -> QGraphicsItemAnimation {
+impl<'a> /*trait*/ QGraphicsItemAnimation_new for (&'a QGraphicsItemAnimation) {
+  fn new(self) -> QGraphicsItemAnimation {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN22QGraphicsItemAnimationC1ERKS_()};
     let ctysz: c_int = unsafe{QGraphicsItemAnimation_Class_Size()};
@@ -391,8 +391,8 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_item<()> for () {
 }
 
   // proto:  void QGraphicsItemAnimation::QGraphicsItemAnimation(QObject * parent);
-impl<'a> /*trait*/ QGraphicsItemAnimation_New for (&'a QObject) {
-  fn New(self) -> QGraphicsItemAnimation {
+impl<'a> /*trait*/ QGraphicsItemAnimation_new for (&'a QObject) {
+  fn new(self) -> QGraphicsItemAnimation {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN22QGraphicsItemAnimationC1EP7QObject()};
     let ctysz: c_int = unsafe{QGraphicsItemAnimation_Class_Size()};
@@ -408,19 +408,19 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_New for (&'a QObject) {
 
   // proto:  void QGraphicsItemAnimation::~QGraphicsItemAnimation();
 impl /*struct*/ QGraphicsItemAnimation {
-  pub fn Free<RetType, T: QGraphicsItemAnimation_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QGraphicsItemAnimation_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsItemAnimation_Free<RetType> {
-  fn Free(self , rsthis: & QGraphicsItemAnimation) -> RetType;
+pub trait QGraphicsItemAnimation_free<RetType> {
+  fn free(self , rsthis: & QGraphicsItemAnimation) -> RetType;
 }
 
   // proto:  void QGraphicsItemAnimation::~QGraphicsItemAnimation();
-impl<'a> /*trait*/ QGraphicsItemAnimation_Free<()> for () {
-  fn Free(self , rsthis: & QGraphicsItemAnimation) -> () {
+impl<'a> /*trait*/ QGraphicsItemAnimation_free<()> for () {
+  fn free(self , rsthis: & QGraphicsItemAnimation) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN22QGraphicsItemAnimationD0Ev()};
      unsafe {_ZN22QGraphicsItemAnimationD0Ev(rsthis.qclsinst)};

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qgraphicswidget.h
 // dst-file: /src/widgets/qgraphicswidget.rs
 //
@@ -408,20 +408,20 @@ impl<'a> /*trait*/ QGraphicsWidget_unsetLayoutDirection<()> for () {
 
   // proto:  void QGraphicsWidget::QGraphicsWidget(const QGraphicsWidget & );
 impl /*struct*/ QGraphicsWidget {
-  pub fn New<T: QGraphicsWidget_New>(value: T) -> QGraphicsWidget {
-    let rsthis = value.New();
+  pub fn new<T: QGraphicsWidget_new>(value: T) -> QGraphicsWidget {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QGraphicsWidget_New {
-  fn New(self) -> QGraphicsWidget;
+pub trait QGraphicsWidget_new {
+  fn new(self) -> QGraphicsWidget;
 }
 
   // proto:  void QGraphicsWidget::QGraphicsWidget(const QGraphicsWidget & );
-impl<'a> /*trait*/ QGraphicsWidget_New for (&'a QGraphicsWidget) {
-  fn New(self) -> QGraphicsWidget {
+impl<'a> /*trait*/ QGraphicsWidget_new for (&'a QGraphicsWidget) {
+  fn new(self) -> QGraphicsWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsWidgetC1ERKS_()};
     let ctysz: c_int = unsafe{QGraphicsWidget_Class_Size()};
@@ -989,19 +989,19 @@ impl<'a> /*trait*/ QGraphicsWidget_layout<()> for () {
 
   // proto:  void QGraphicsWidget::~QGraphicsWidget();
 impl /*struct*/ QGraphicsWidget {
-  pub fn Free<RetType, T: QGraphicsWidget_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QGraphicsWidget_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsWidget_Free<RetType> {
-  fn Free(self , rsthis: & QGraphicsWidget) -> RetType;
+pub trait QGraphicsWidget_free<RetType> {
+  fn free(self , rsthis: & QGraphicsWidget) -> RetType;
 }
 
   // proto:  void QGraphicsWidget::~QGraphicsWidget();
-impl<'a> /*trait*/ QGraphicsWidget_Free<()> for () {
-  fn Free(self , rsthis: & QGraphicsWidget) -> () {
+impl<'a> /*trait*/ QGraphicsWidget_free<()> for () {
+  fn free(self , rsthis: & QGraphicsWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsWidgetD0Ev()};
      unsafe {_ZN15QGraphicsWidgetD0Ev(rsthis.qclsinst)};
@@ -1319,7 +1319,7 @@ extern fn QGraphicsWidget_layoutChanged_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QGraphicsWidget_layoutChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(), ) {
+extern fn QGraphicsWidget_layoutChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   rsfptr();
@@ -1327,7 +1327,8 @@ extern fn QGraphicsWidget_layoutChanged_signal_connect_cb_box_0(rsfptr_raw:*mut 
 impl /* trait */ QGraphicsWidget_layoutChanged_signal_connect for fn() {
   fn connect(self, sigthis: QGraphicsWidget_layoutChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QGraphicsWidget_layoutChanged_signal_connect_cb_0 as *mut c_void;
@@ -1335,7 +1336,7 @@ impl /* trait */ QGraphicsWidget_layoutChanged_signal_connect for fn() {
     unsafe {QGraphicsWidget_SlotProxy_connect__ZN15QGraphicsWidget13layoutChangedEv(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QGraphicsWidget_layoutChanged_signal_connect for Box<fn()> {
+impl /* trait */ QGraphicsWidget_layoutChanged_signal_connect for Box<Fn()> {
   fn connect(self, sigthis: QGraphicsWidget_layoutChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -1351,7 +1352,7 @@ extern fn QGraphicsWidget_geometryChanged_signal_connect_cb_1(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QGraphicsWidget_geometryChanged_signal_connect_cb_box_1(rsfptr_raw:*mut fn(), ) {
+extern fn QGraphicsWidget_geometryChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(), ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   rsfptr();
@@ -1359,7 +1360,8 @@ extern fn QGraphicsWidget_geometryChanged_signal_connect_cb_box_1(rsfptr_raw:*mu
 impl /* trait */ QGraphicsWidget_geometryChanged_signal_connect for fn() {
   fn connect(self, sigthis: QGraphicsWidget_geometryChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QGraphicsWidget_geometryChanged_signal_connect_cb_1 as *mut c_void;
@@ -1367,7 +1369,7 @@ impl /* trait */ QGraphicsWidget_geometryChanged_signal_connect for fn() {
     unsafe {QGraphicsWidget_SlotProxy_connect__ZN15QGraphicsWidget15geometryChangedEv(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QGraphicsWidget_geometryChanged_signal_connect for Box<fn()> {
+impl /* trait */ QGraphicsWidget_geometryChanged_signal_connect for Box<Fn()> {
   fn connect(self, sigthis: QGraphicsWidget_geometryChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

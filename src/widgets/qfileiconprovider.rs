@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qfileiconprovider.h
 // dst-file: /src/widgets/qfileiconprovider.rs
 //
@@ -111,20 +111,20 @@ impl<'a> /*trait*/ QFileIconProvider_icon<QIcon> for (&'a QFileInfo) {
 
   // proto:  void QFileIconProvider::QFileIconProvider(const QFileIconProvider & );
 impl /*struct*/ QFileIconProvider {
-  pub fn New<T: QFileIconProvider_New>(value: T) -> QFileIconProvider {
-    let rsthis = value.New();
+  pub fn new<T: QFileIconProvider_new>(value: T) -> QFileIconProvider {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QFileIconProvider_New {
-  fn New(self) -> QFileIconProvider;
+pub trait QFileIconProvider_new {
+  fn new(self) -> QFileIconProvider;
 }
 
   // proto:  void QFileIconProvider::QFileIconProvider(const QFileIconProvider & );
-impl<'a> /*trait*/ QFileIconProvider_New for (&'a QFileIconProvider) {
-  fn New(self) -> QFileIconProvider {
+impl<'a> /*trait*/ QFileIconProvider_new for (&'a QFileIconProvider) {
+  fn new(self) -> QFileIconProvider {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QFileIconProviderC1ERKS_()};
     let ctysz: c_int = unsafe{QFileIconProvider_Class_Size()};
@@ -139,8 +139,8 @@ impl<'a> /*trait*/ QFileIconProvider_New for (&'a QFileIconProvider) {
 }
 
   // proto:  void QFileIconProvider::QFileIconProvider();
-impl<'a> /*trait*/ QFileIconProvider_New for () {
-  fn New(self) -> QFileIconProvider {
+impl<'a> /*trait*/ QFileIconProvider_new for () {
+  fn new(self) -> QFileIconProvider {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QFileIconProviderC1Ev()};
     let ctysz: c_int = unsafe{QFileIconProvider_Class_Size()};
@@ -155,19 +155,19 @@ impl<'a> /*trait*/ QFileIconProvider_New for () {
 
   // proto:  void QFileIconProvider::~QFileIconProvider();
 impl /*struct*/ QFileIconProvider {
-  pub fn Free<RetType, T: QFileIconProvider_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QFileIconProvider_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QFileIconProvider_Free<RetType> {
-  fn Free(self , rsthis: & QFileIconProvider) -> RetType;
+pub trait QFileIconProvider_free<RetType> {
+  fn free(self , rsthis: & QFileIconProvider) -> RetType;
 }
 
   // proto:  void QFileIconProvider::~QFileIconProvider();
-impl<'a> /*trait*/ QFileIconProvider_Free<()> for () {
-  fn Free(self , rsthis: & QFileIconProvider) -> () {
+impl<'a> /*trait*/ QFileIconProvider_free<()> for () {
+  fn free(self , rsthis: & QFileIconProvider) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QFileIconProviderD0Ev()};
      unsafe {_ZN17QFileIconProviderD0Ev(rsthis.qclsinst)};

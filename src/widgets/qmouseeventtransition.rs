@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qmouseeventtransition.h
 // dst-file: /src/widgets/qmouseeventtransition.rs
 //
@@ -98,20 +98,20 @@ impl<'a> /*trait*/ QMouseEventTransition_metaObject<()> for () {
 
   // proto:  void QMouseEventTransition::QMouseEventTransition(QState * sourceState);
 impl /*struct*/ QMouseEventTransition {
-  pub fn New<T: QMouseEventTransition_New>(value: T) -> QMouseEventTransition {
-    let rsthis = value.New();
+  pub fn new<T: QMouseEventTransition_new>(value: T) -> QMouseEventTransition {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QMouseEventTransition_New {
-  fn New(self) -> QMouseEventTransition;
+pub trait QMouseEventTransition_new {
+  fn new(self) -> QMouseEventTransition;
 }
 
   // proto:  void QMouseEventTransition::QMouseEventTransition(QState * sourceState);
-impl<'a> /*trait*/ QMouseEventTransition_New for (&'a QState) {
-  fn New(self) -> QMouseEventTransition {
+impl<'a> /*trait*/ QMouseEventTransition_new for (&'a QState) {
+  fn new(self) -> QMouseEventTransition {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QMouseEventTransitionC1EP6QState()};
     let ctysz: c_int = unsafe{QMouseEventTransition_Class_Size()};
@@ -126,8 +126,8 @@ impl<'a> /*trait*/ QMouseEventTransition_New for (&'a QState) {
 }
 
   // proto:  void QMouseEventTransition::QMouseEventTransition(const QMouseEventTransition & );
-impl<'a> /*trait*/ QMouseEventTransition_New for (&'a QMouseEventTransition) {
-  fn New(self) -> QMouseEventTransition {
+impl<'a> /*trait*/ QMouseEventTransition_new for (&'a QMouseEventTransition) {
+  fn new(self) -> QMouseEventTransition {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QMouseEventTransitionC1ERKS_()};
     let ctysz: c_int = unsafe{QMouseEventTransition_Class_Size()};
@@ -166,19 +166,19 @@ impl<'a> /*trait*/ QMouseEventTransition_setHitTestPath<()> for (&'a QPainterPat
 
   // proto:  void QMouseEventTransition::~QMouseEventTransition();
 impl /*struct*/ QMouseEventTransition {
-  pub fn Free<RetType, T: QMouseEventTransition_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QMouseEventTransition_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QMouseEventTransition_Free<RetType> {
-  fn Free(self , rsthis: & QMouseEventTransition) -> RetType;
+pub trait QMouseEventTransition_free<RetType> {
+  fn free(self , rsthis: & QMouseEventTransition) -> RetType;
 }
 
   // proto:  void QMouseEventTransition::~QMouseEventTransition();
-impl<'a> /*trait*/ QMouseEventTransition_Free<()> for () {
-  fn Free(self , rsthis: & QMouseEventTransition) -> () {
+impl<'a> /*trait*/ QMouseEventTransition_free<()> for () {
+  fn free(self , rsthis: & QMouseEventTransition) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QMouseEventTransitionD0Ev()};
      unsafe {_ZN21QMouseEventTransitionD0Ev(rsthis.qclsinst)};

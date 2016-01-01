@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qtooltip.h
 // dst-file: /src/widgets/qtooltip.rs
 //
@@ -170,20 +170,20 @@ impl<'a> /*trait*/ QToolTip_showText_s<()> for (&'a QPoint, &'a QString, &'a QWi
 
   // proto:  void QToolTip::QToolTip();
 impl /*struct*/ QToolTip {
-  pub fn New<T: QToolTip_New>(value: T) -> QToolTip {
-    let rsthis = value.New();
+  pub fn new<T: QToolTip_new>(value: T) -> QToolTip {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QToolTip_New {
-  fn New(self) -> QToolTip;
+pub trait QToolTip_new {
+  fn new(self) -> QToolTip;
 }
 
   // proto:  void QToolTip::QToolTip();
-impl<'a> /*trait*/ QToolTip_New for () {
-  fn New(self) -> QToolTip {
+impl<'a> /*trait*/ QToolTip_new for () {
+  fn new(self) -> QToolTip {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolTipC1Ev()};
     let ctysz: c_int = unsafe{QToolTip_Class_Size()};

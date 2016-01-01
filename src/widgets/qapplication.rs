@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qapplication.h
 // dst-file: /src/widgets/qapplication.rs
 //
@@ -826,20 +826,20 @@ impl<'a> /*trait*/ QApplication_wheelScrollLines_s<i32> for () {
 
   // proto:  void QApplication::QApplication(const QApplication & );
 impl /*struct*/ QApplication {
-  pub fn New<T: QApplication_New>(value: T) -> QApplication {
-    let rsthis = value.New();
+  pub fn new<T: QApplication_new>(value: T) -> QApplication {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QApplication_New {
-  fn New(self) -> QApplication;
+pub trait QApplication_new {
+  fn new(self) -> QApplication;
 }
 
   // proto:  void QApplication::QApplication(const QApplication & );
-impl<'a> /*trait*/ QApplication_New for (&'a QApplication) {
-  fn New(self) -> QApplication {
+impl<'a> /*trait*/ QApplication_new for (&'a QApplication) {
+  fn new(self) -> QApplication {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplicationC1ERKS_()};
     let ctysz: c_int = unsafe{QApplication_Class_Size()};
@@ -924,8 +924,8 @@ impl<'a> /*trait*/ QApplication_activePopupWidget_s<QWidget> for () {
 }
 
   // proto:  void QApplication::QApplication(int & argc, char ** argv, int );
-impl<'a> /*trait*/ QApplication_New for (&'a mut i32, &'a mut String, i32) {
-  fn New(self) -> QApplication {
+impl<'a> /*trait*/ QApplication_new for (&'a mut i32, &'a mut String, i32) {
+  fn new(self) -> QApplication {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplicationC1ERiPPci()};
     let ctysz: c_int = unsafe{QApplication_Class_Size()};
@@ -1039,19 +1039,19 @@ impl<'a> /*trait*/ QApplication_setStyle_s<()> for (&'a QStyle) {
 
   // proto:  void QApplication::~QApplication();
 impl /*struct*/ QApplication {
-  pub fn Free<RetType, T: QApplication_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QApplication_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QApplication_Free<RetType> {
-  fn Free(self , rsthis: & QApplication) -> RetType;
+pub trait QApplication_free<RetType> {
+  fn free(self , rsthis: & QApplication) -> RetType;
 }
 
   // proto:  void QApplication::~QApplication();
-impl<'a> /*trait*/ QApplication_Free<()> for () {
-  fn Free(self , rsthis: & QApplication) -> () {
+impl<'a> /*trait*/ QApplication_free<()> for () {
+  fn free(self , rsthis: & QApplication) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplicationD0Ev()};
      unsafe {_ZN12QApplicationD0Ev(rsthis.qclsinst)};
@@ -1455,7 +1455,7 @@ extern fn QApplication_focusChanged_signal_connect_cb_0(rsfptr:fn(QWidget, QWidg
   let rsarg1 = QWidget::inheritFrom(arg1 as u64);
   rsfptr(rsarg0,rsarg1);
 }
-extern fn QApplication_focusChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QWidget, QWidget), arg0: *mut c_void, arg1: *mut c_void) {
+extern fn QApplication_focusChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QWidget, QWidget), arg0: *mut c_void, arg1: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QWidget::inheritFrom(arg0 as u64);
@@ -1465,7 +1465,8 @@ extern fn QApplication_focusChanged_signal_connect_cb_box_0(rsfptr_raw:*mut fn(Q
 impl /* trait */ QApplication_focusChanged_signal_connect for fn(QWidget, QWidget) {
   fn connect(self, sigthis: QApplication_focusChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QApplication_focusChanged_signal_connect_cb_0 as *mut c_void;
@@ -1473,7 +1474,7 @@ impl /* trait */ QApplication_focusChanged_signal_connect for fn(QWidget, QWidge
     unsafe {QApplication_SlotProxy_connect__ZN12QApplication12focusChangedEP7QWidgetS1_(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QApplication_focusChanged_signal_connect for Box<fn(QWidget, QWidget)> {
+impl /* trait */ QApplication_focusChanged_signal_connect for Box<Fn(QWidget, QWidget)> {
   fn connect(self, sigthis: QApplication_focusChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qbuttongroup.h
 // dst-file: /src/widgets/qbuttongroup.rs
 //
@@ -164,19 +164,19 @@ impl<'a> /*trait*/ QButtonGroup_buttons<()> for () {
 
   // proto:  void QButtonGroup::~QButtonGroup();
 impl /*struct*/ QButtonGroup {
-  pub fn Free<RetType, T: QButtonGroup_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QButtonGroup_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QButtonGroup_Free<RetType> {
-  fn Free(self , rsthis: & QButtonGroup) -> RetType;
+pub trait QButtonGroup_free<RetType> {
+  fn free(self , rsthis: & QButtonGroup) -> RetType;
 }
 
   // proto:  void QButtonGroup::~QButtonGroup();
-impl<'a> /*trait*/ QButtonGroup_Free<()> for () {
-  fn Free(self , rsthis: & QButtonGroup) -> () {
+impl<'a> /*trait*/ QButtonGroup_free<()> for () {
+  fn free(self , rsthis: & QButtonGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QButtonGroupD0Ev()};
      unsafe {_ZN12QButtonGroupD0Ev(rsthis.qclsinst)};
@@ -280,20 +280,20 @@ impl<'a> /*trait*/ QButtonGroup_removeButton<()> for (&'a QAbstractButton) {
 
   // proto:  void QButtonGroup::QButtonGroup(const QButtonGroup & );
 impl /*struct*/ QButtonGroup {
-  pub fn New<T: QButtonGroup_New>(value: T) -> QButtonGroup {
-    let rsthis = value.New();
+  pub fn new<T: QButtonGroup_new>(value: T) -> QButtonGroup {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QButtonGroup_New {
-  fn New(self) -> QButtonGroup;
+pub trait QButtonGroup_new {
+  fn new(self) -> QButtonGroup;
 }
 
   // proto:  void QButtonGroup::QButtonGroup(const QButtonGroup & );
-impl<'a> /*trait*/ QButtonGroup_New for (&'a QButtonGroup) {
-  fn New(self) -> QButtonGroup {
+impl<'a> /*trait*/ QButtonGroup_new for (&'a QButtonGroup) {
+  fn new(self) -> QButtonGroup {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QButtonGroupC1ERKS_()};
     let ctysz: c_int = unsafe{QButtonGroup_Class_Size()};
@@ -388,8 +388,8 @@ impl<'a> /*trait*/ QButtonGroup_buttonToggled<()> for (i32, i8) {
 }
 
   // proto:  void QButtonGroup::QButtonGroup(QObject * parent);
-impl<'a> /*trait*/ QButtonGroup_New for (&'a QObject) {
-  fn New(self) -> QButtonGroup {
+impl<'a> /*trait*/ QButtonGroup_new for (&'a QObject) {
+  fn new(self) -> QButtonGroup {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QButtonGroupC1EP7QObject()};
     let ctysz: c_int = unsafe{QButtonGroup_Class_Size()};
@@ -644,7 +644,7 @@ extern fn QButtonGroup_buttonReleased_signal_connect_cb_0(rsfptr:fn(QAbstractBut
   let rsarg0 = QAbstractButton::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QButtonGroup_buttonReleased_signal_connect_cb_box_0(rsfptr_raw:*mut fn(QAbstractButton), arg0: *mut c_void) {
+extern fn QButtonGroup_buttonReleased_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QAbstractButton), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QAbstractButton::inheritFrom(arg0 as u64);
@@ -653,7 +653,8 @@ extern fn QButtonGroup_buttonReleased_signal_connect_cb_box_0(rsfptr_raw:*mut fn
 impl /* trait */ QButtonGroup_buttonReleased_signal_connect for fn(QAbstractButton) {
   fn connect(self, sigthis: QButtonGroup_buttonReleased_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QButtonGroup_buttonReleased_signal_connect_cb_0 as *mut c_void;
@@ -661,7 +662,7 @@ impl /* trait */ QButtonGroup_buttonReleased_signal_connect for fn(QAbstractButt
     unsafe {QButtonGroup_SlotProxy_connect__ZN12QButtonGroup14buttonReleasedEP15QAbstractButton(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QButtonGroup_buttonReleased_signal_connect for Box<fn(QAbstractButton)> {
+impl /* trait */ QButtonGroup_buttonReleased_signal_connect for Box<Fn(QAbstractButton)> {
   fn connect(self, sigthis: QButtonGroup_buttonReleased_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -678,7 +679,7 @@ extern fn QButtonGroup_buttonPressed_signal_connect_cb_1(rsfptr:fn(i32), arg0: c
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QButtonGroup_buttonPressed_signal_connect_cb_box_1(rsfptr_raw:*mut fn(i32), arg0: c_int) {
+extern fn QButtonGroup_buttonPressed_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -687,7 +688,8 @@ extern fn QButtonGroup_buttonPressed_signal_connect_cb_box_1(rsfptr_raw:*mut fn(
 impl /* trait */ QButtonGroup_buttonPressed_signal_connect for fn(i32) {
   fn connect(self, sigthis: QButtonGroup_buttonPressed_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QButtonGroup_buttonPressed_signal_connect_cb_1 as *mut c_void;
@@ -695,7 +697,7 @@ impl /* trait */ QButtonGroup_buttonPressed_signal_connect for fn(i32) {
     unsafe {QButtonGroup_SlotProxy_connect__ZN12QButtonGroup13buttonPressedEi(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QButtonGroup_buttonPressed_signal_connect for Box<fn(i32)> {
+impl /* trait */ QButtonGroup_buttonPressed_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QButtonGroup_buttonPressed_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -713,7 +715,7 @@ extern fn QButtonGroup_buttonToggled_signal_connect_cb_2(rsfptr:fn(i32, i8), arg
   let rsarg1 = arg1 as i8;
   rsfptr(rsarg0,rsarg1);
 }
-extern fn QButtonGroup_buttonToggled_signal_connect_cb_box_2(rsfptr_raw:*mut fn(i32, i8), arg0: c_int, arg1: c_char) {
+extern fn QButtonGroup_buttonToggled_signal_connect_cb_box_2(rsfptr_raw:*mut Fn(i32, i8), arg0: c_int, arg1: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -723,7 +725,8 @@ extern fn QButtonGroup_buttonToggled_signal_connect_cb_box_2(rsfptr_raw:*mut fn(
 impl /* trait */ QButtonGroup_buttonToggled_signal_connect for fn(i32, i8) {
   fn connect(self, sigthis: QButtonGroup_buttonToggled_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QButtonGroup_buttonToggled_signal_connect_cb_2 as *mut c_void;
@@ -731,7 +734,7 @@ impl /* trait */ QButtonGroup_buttonToggled_signal_connect for fn(i32, i8) {
     unsafe {QButtonGroup_SlotProxy_connect__ZN12QButtonGroup13buttonToggledEib(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QButtonGroup_buttonToggled_signal_connect for Box<fn(i32, i8)> {
+impl /* trait */ QButtonGroup_buttonToggled_signal_connect for Box<Fn(i32, i8)> {
   fn connect(self, sigthis: QButtonGroup_buttonToggled_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -748,7 +751,7 @@ extern fn QButtonGroup_buttonPressed_signal_connect_cb_3(rsfptr:fn(QAbstractButt
   let rsarg0 = QAbstractButton::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QButtonGroup_buttonPressed_signal_connect_cb_box_3(rsfptr_raw:*mut fn(QAbstractButton), arg0: *mut c_void) {
+extern fn QButtonGroup_buttonPressed_signal_connect_cb_box_3(rsfptr_raw:*mut Fn(QAbstractButton), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QAbstractButton::inheritFrom(arg0 as u64);
@@ -757,7 +760,8 @@ extern fn QButtonGroup_buttonPressed_signal_connect_cb_box_3(rsfptr_raw:*mut fn(
 impl /* trait */ QButtonGroup_buttonPressed_signal_connect for fn(QAbstractButton) {
   fn connect(self, sigthis: QButtonGroup_buttonPressed_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QButtonGroup_buttonPressed_signal_connect_cb_3 as *mut c_void;
@@ -765,7 +769,7 @@ impl /* trait */ QButtonGroup_buttonPressed_signal_connect for fn(QAbstractButto
     unsafe {QButtonGroup_SlotProxy_connect__ZN12QButtonGroup13buttonPressedEP15QAbstractButton(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QButtonGroup_buttonPressed_signal_connect for Box<fn(QAbstractButton)> {
+impl /* trait */ QButtonGroup_buttonPressed_signal_connect for Box<Fn(QAbstractButton)> {
   fn connect(self, sigthis: QButtonGroup_buttonPressed_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -782,7 +786,7 @@ extern fn QButtonGroup_buttonReleased_signal_connect_cb_4(rsfptr:fn(i32), arg0: 
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QButtonGroup_buttonReleased_signal_connect_cb_box_4(rsfptr_raw:*mut fn(i32), arg0: c_int) {
+extern fn QButtonGroup_buttonReleased_signal_connect_cb_box_4(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -791,7 +795,8 @@ extern fn QButtonGroup_buttonReleased_signal_connect_cb_box_4(rsfptr_raw:*mut fn
 impl /* trait */ QButtonGroup_buttonReleased_signal_connect for fn(i32) {
   fn connect(self, sigthis: QButtonGroup_buttonReleased_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QButtonGroup_buttonReleased_signal_connect_cb_4 as *mut c_void;
@@ -799,7 +804,7 @@ impl /* trait */ QButtonGroup_buttonReleased_signal_connect for fn(i32) {
     unsafe {QButtonGroup_SlotProxy_connect__ZN12QButtonGroup14buttonReleasedEi(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QButtonGroup_buttonReleased_signal_connect for Box<fn(i32)> {
+impl /* trait */ QButtonGroup_buttonReleased_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QButtonGroup_buttonReleased_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -817,7 +822,7 @@ extern fn QButtonGroup_buttonToggled_signal_connect_cb_5(rsfptr:fn(QAbstractButt
   let rsarg1 = arg1 as i8;
   rsfptr(rsarg0,rsarg1);
 }
-extern fn QButtonGroup_buttonToggled_signal_connect_cb_box_5(rsfptr_raw:*mut fn(QAbstractButton, i8), arg0: *mut c_void, arg1: c_char) {
+extern fn QButtonGroup_buttonToggled_signal_connect_cb_box_5(rsfptr_raw:*mut Fn(QAbstractButton, i8), arg0: *mut c_void, arg1: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QAbstractButton::inheritFrom(arg0 as u64);
@@ -827,7 +832,8 @@ extern fn QButtonGroup_buttonToggled_signal_connect_cb_box_5(rsfptr_raw:*mut fn(
 impl /* trait */ QButtonGroup_buttonToggled_signal_connect for fn(QAbstractButton, i8) {
   fn connect(self, sigthis: QButtonGroup_buttonToggled_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QButtonGroup_buttonToggled_signal_connect_cb_5 as *mut c_void;
@@ -835,7 +841,7 @@ impl /* trait */ QButtonGroup_buttonToggled_signal_connect for fn(QAbstractButto
     unsafe {QButtonGroup_SlotProxy_connect__ZN12QButtonGroup13buttonToggledEP15QAbstractButtonb(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QButtonGroup_buttonToggled_signal_connect for Box<fn(QAbstractButton, i8)> {
+impl /* trait */ QButtonGroup_buttonToggled_signal_connect for Box<Fn(QAbstractButton, i8)> {
   fn connect(self, sigthis: QButtonGroup_buttonToggled_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -852,7 +858,7 @@ extern fn QButtonGroup_buttonClicked_signal_connect_cb_6(rsfptr:fn(i32), arg0: c
   let rsarg0 = arg0 as i32;
   rsfptr(rsarg0);
 }
-extern fn QButtonGroup_buttonClicked_signal_connect_cb_box_6(rsfptr_raw:*mut fn(i32), arg0: c_int) {
+extern fn QButtonGroup_buttonClicked_signal_connect_cb_box_6(rsfptr_raw:*mut Fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
@@ -861,7 +867,8 @@ extern fn QButtonGroup_buttonClicked_signal_connect_cb_box_6(rsfptr_raw:*mut fn(
 impl /* trait */ QButtonGroup_buttonClicked_signal_connect for fn(i32) {
   fn connect(self, sigthis: QButtonGroup_buttonClicked_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QButtonGroup_buttonClicked_signal_connect_cb_6 as *mut c_void;
@@ -869,7 +876,7 @@ impl /* trait */ QButtonGroup_buttonClicked_signal_connect for fn(i32) {
     unsafe {QButtonGroup_SlotProxy_connect__ZN12QButtonGroup13buttonClickedEi(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QButtonGroup_buttonClicked_signal_connect for Box<fn(i32)> {
+impl /* trait */ QButtonGroup_buttonClicked_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QButtonGroup_buttonClicked_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
@@ -886,7 +893,7 @@ extern fn QButtonGroup_buttonClicked_signal_connect_cb_7(rsfptr:fn(QAbstractButt
   let rsarg0 = QAbstractButton::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QButtonGroup_buttonClicked_signal_connect_cb_box_7(rsfptr_raw:*mut fn(QAbstractButton), arg0: *mut c_void) {
+extern fn QButtonGroup_buttonClicked_signal_connect_cb_box_7(rsfptr_raw:*mut Fn(QAbstractButton), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QAbstractButton::inheritFrom(arg0 as u64);
@@ -895,7 +902,8 @@ extern fn QButtonGroup_buttonClicked_signal_connect_cb_box_7(rsfptr_raw:*mut fn(
 impl /* trait */ QButtonGroup_buttonClicked_signal_connect for fn(QAbstractButton) {
   fn connect(self, sigthis: QButtonGroup_buttonClicked_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QButtonGroup_buttonClicked_signal_connect_cb_7 as *mut c_void;
@@ -903,7 +911,7 @@ impl /* trait */ QButtonGroup_buttonClicked_signal_connect for fn(QAbstractButto
     unsafe {QButtonGroup_SlotProxy_connect__ZN12QButtonGroup13buttonClickedEP15QAbstractButton(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QButtonGroup_buttonClicked_signal_connect for Box<fn(QAbstractButton)> {
+impl /* trait */ QButtonGroup_buttonClicked_signal_connect for Box<Fn(QAbstractButton)> {
   fn connect(self, sigthis: QButtonGroup_buttonClicked_signal) {
     // do smth...
     // Box::into_raw(self) as u64;

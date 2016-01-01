@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 30 23:22:52 2015
+// created: Fri Jan  1 12:13:41 2016
 // src-file: /QtWidgets/qwhatsthis.h
 // dst-file: /src/widgets/qwhatsthis.rs
 //
@@ -155,20 +155,20 @@ impl<'a> /*trait*/ QWhatsThis_leaveWhatsThisMode_s<()> for () {
 
   // proto:  void QWhatsThis::QWhatsThis();
 impl /*struct*/ QWhatsThis {
-  pub fn New<T: QWhatsThis_New>(value: T) -> QWhatsThis {
-    let rsthis = value.New();
+  pub fn new<T: QWhatsThis_new>(value: T) -> QWhatsThis {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QWhatsThis_New {
-  fn New(self) -> QWhatsThis;
+pub trait QWhatsThis_new {
+  fn new(self) -> QWhatsThis;
 }
 
   // proto:  void QWhatsThis::QWhatsThis();
-impl<'a> /*trait*/ QWhatsThis_New for () {
-  fn New(self) -> QWhatsThis {
+impl<'a> /*trait*/ QWhatsThis_new for () {
+  fn new(self) -> QWhatsThis {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QWhatsThisC1Ev()};
     let ctysz: c_int = unsafe{QWhatsThis_Class_Size()};
