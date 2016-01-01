@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtCore/qvariantanimation.h
 // dst-file: /src/core/qvariantanimation.rs
 //
@@ -37,8 +37,6 @@ extern {
   fn _ZN17QVariantAnimation11setDurationEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QVariantAnimation::setKeyValueAt(qreal step, const QVariant & value);
   fn _ZN17QVariantAnimation13setKeyValueAtEdRK8QVariant(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: *mut c_void);
-  // proto:  void QVariantAnimation::valueChanged(const QVariant & value);
-  fn _ZN17QVariantAnimation12valueChangedERK8QVariant(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QVariant QVariantAnimation::endValue();
   fn _ZNK17QVariantAnimation8endValueEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QVariant QVariantAnimation::keyValueAt(qreal step);
@@ -78,7 +76,7 @@ extern {
 pub struct QVariantAnimation {
   qbase: QAbstractAnimation,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _valueChanged_1: QVariantAnimation_valueChanged_signal,
+  pub _valueChanged: QVariantAnimation_valueChanged_signal,
 }
 
 impl /*struct*/ QVariantAnimation {
@@ -141,29 +139,6 @@ impl<'a> /*trait*/ QVariantAnimation_setKeyValueAt<()> for (f64, &'a QVariant) {
     let arg0 = self.0  as c_double;
     let arg1 = self.1.qclsinst  as *mut c_void;
      unsafe {_ZN17QVariantAnimation13setKeyValueAtEdRK8QVariant(rsthis.qclsinst, arg0, arg1)};
-    // return 1;
-  }
-}
-
-  // proto:  void QVariantAnimation::valueChanged(const QVariant & value);
-impl /*struct*/ QVariantAnimation {
-  pub fn valueChanged<RetType, T: QVariantAnimation_valueChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.valueChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QVariantAnimation_valueChanged<RetType> {
-  fn valueChanged(self , rsthis: & QVariantAnimation) -> RetType;
-}
-
-  // proto:  void QVariantAnimation::valueChanged(const QVariant & value);
-impl<'a> /*trait*/ QVariantAnimation_valueChanged<()> for (&'a QVariant) {
-  fn valueChanged(self , rsthis: & QVariantAnimation) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QVariantAnimation12valueChangedERK8QVariant()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN17QVariantAnimation12valueChangedERK8QVariant(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -495,7 +470,7 @@ impl<'a> /*trait*/ QVariantAnimation_setEasingCurve<()> for (&'a QEasingCurve) {
 #[derive(Default)] // for QVariantAnimation_valueChanged
 pub struct QVariantAnimation_valueChanged_signal{poi:u64}
 impl /* struct */ QVariantAnimation {
-  pub fn valueChanged_1(&self) -> QVariantAnimation_valueChanged_signal {
+  pub fn valueChanged(&self) -> QVariantAnimation_valueChanged_signal {
      return QVariantAnimation_valueChanged_signal{poi:self.qclsinst};
   }
 }
@@ -514,11 +489,12 @@ extern fn QVariantAnimation_valueChanged_signal_connect_cb_0(rsfptr:fn(QVariant)
   let rsarg0 = QVariant::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QVariantAnimation_valueChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QVariant), arg0: *mut c_void) {
+extern fn QVariantAnimation_valueChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(QVariant)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QVariant::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QVariantAnimation_valueChanged_signal_connect for fn(QVariant) {
   fn connect(self, sigthis: QVariantAnimation_valueChanged_signal) {
@@ -539,7 +515,7 @@ impl /* trait */ QVariantAnimation_valueChanged_signal_connect for Box<Fn(QVaria
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QVariantAnimation_valueChanged_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QVariantAnimation_SlotProxy_connect__ZN17QVariantAnimation12valueChangedERK8QVariant(arg0, arg1, arg2)};
   }
 }

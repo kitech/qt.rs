@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtCore/qtimer.h
 // dst-file: /src/core/qtimer.rs
 //
@@ -70,7 +70,7 @@ extern {
 pub struct QTimer {
   qbase: QObject,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _timeout_1: QTimer_timeout_signal,
+  pub _timeout: QTimer_timeout_signal,
 }
 
 impl /*struct*/ QTimer {
@@ -423,7 +423,7 @@ impl<'a> /*trait*/ QTimer_new for (&'a QObject) {
 #[derive(Default)] // for QTimer_timeout
 pub struct QTimer_timeout_signal{poi:u64}
 impl /* struct */ QTimer {
-  pub fn timeout_1(&self) -> QTimer_timeout_signal {
+  pub fn timeout(&self) -> QTimer_timeout_signal {
      return QTimer_timeout_signal{poi:self.qclsinst};
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtCore/qcoreapplication.h
 // dst-file: /src/core/qcoreapplication.rs
 //
@@ -52,8 +52,6 @@ extern {
   fn _ZN16QCoreApplication8instanceEv() -> *mut c_void;
   // proto: static bool QCoreApplication::isSetuidAllowed();
   fn _ZN16QCoreApplication15isSetuidAllowedEv() -> c_char;
-  // proto:  void QCoreApplication::applicationVersionChanged();
-  fn _ZN16QCoreApplication25applicationVersionChangedEv(qthis: u64 /* *mut c_void*/);
   // proto: static QString QCoreApplication::applicationName();
   fn _ZN16QCoreApplication15applicationNameEv() -> *mut c_void;
   // proto:  void QCoreApplication::QCoreApplication(const QCoreApplication & );
@@ -65,8 +63,6 @@ extern {
   fn _ZN16QCoreApplication9postEventEP7QObjectP6QEventi(arg0: *mut c_void, arg1: *mut c_void, arg2: c_int);
   // proto: static QStringList QCoreApplication::libraryPaths();
   fn _ZN16QCoreApplication12libraryPathsEv();
-  // proto:  void QCoreApplication::applicationNameChanged();
-  fn _ZN16QCoreApplication22applicationNameChangedEv(qthis: u64 /* *mut c_void*/);
   // proto: static void QCoreApplication::removeLibraryPath(const QString & );
   fn _ZN16QCoreApplication17removeLibraryPathERK7QString(arg0: *mut c_void);
   // proto: static QString QCoreApplication::translate(const char * context, const char * key, const char * disambiguation, int n);
@@ -93,8 +89,6 @@ extern {
   fn _ZN16QCoreApplication21setOrganizationDomainERK7QString(arg0: *mut c_void);
   // proto:  void QCoreApplication::~QCoreApplication();
   fn _ZN16QCoreApplicationD0Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  void QCoreApplication::organizationDomainChanged();
-  fn _ZN16QCoreApplication25organizationDomainChangedEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QCoreApplication::removeNativeEventFilter(QAbstractNativeEventFilter * filterObj);
   fn _ZN16QCoreApplication23removeNativeEventFilterEP26QAbstractNativeEventFilter(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static QString QCoreApplication::organizationDomain();
@@ -121,8 +115,6 @@ extern {
   fn _ZN16QCoreApplication6notifyEP7QObjectP6QEvent(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> c_char;
   // proto: static bool QCoreApplication::isQuitLockEnabled();
   fn _ZN16QCoreApplication17isQuitLockEnabledEv() -> c_char;
-  // proto:  void QCoreApplication::organizationNameChanged();
-  fn _ZN16QCoreApplication23organizationNameChangedEv(qthis: u64 /* *mut c_void*/);
   // proto: static void QCoreApplication::removePostedEvents(QObject * receiver, int eventType);
   fn _ZN16QCoreApplication18removePostedEventsEP7QObjecti(arg0: *mut c_void, arg1: c_int);
   // proto:  const QMetaObject * QCoreApplication::metaObject();
@@ -146,11 +138,11 @@ extern {
 pub struct QCoreApplication {
   qbase: QObject,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _aboutToQuit_1: QCoreApplication_aboutToQuit_signal,
-  pub _applicationVersionChanged_1: QCoreApplication_applicationVersionChanged_signal,
-  pub _organizationDomainChanged_1: QCoreApplication_organizationDomainChanged_signal,
-  pub _applicationNameChanged_1: QCoreApplication_applicationNameChanged_signal,
-  pub _organizationNameChanged_1: QCoreApplication_organizationNameChanged_signal,
+  pub _aboutToQuit: QCoreApplication_aboutToQuit_signal,
+  pub _applicationVersionChanged: QCoreApplication_applicationVersionChanged_signal,
+  pub _organizationDomainChanged: QCoreApplication_organizationDomainChanged_signal,
+  pub _applicationNameChanged: QCoreApplication_applicationNameChanged_signal,
+  pub _organizationNameChanged: QCoreApplication_organizationNameChanged_signal,
 }
 
 impl /*struct*/ QCoreApplication {
@@ -357,28 +349,6 @@ impl<'a> /*trait*/ QCoreApplication_isSetuidAllowed_s<i8> for () {
   }
 }
 
-  // proto:  void QCoreApplication::applicationVersionChanged();
-impl /*struct*/ QCoreApplication {
-  pub fn applicationVersionChanged<RetType, T: QCoreApplication_applicationVersionChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.applicationVersionChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QCoreApplication_applicationVersionChanged<RetType> {
-  fn applicationVersionChanged(self , rsthis: & QCoreApplication) -> RetType;
-}
-
-  // proto:  void QCoreApplication::applicationVersionChanged();
-impl<'a> /*trait*/ QCoreApplication_applicationVersionChanged<()> for () {
-  fn applicationVersionChanged(self , rsthis: & QCoreApplication) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QCoreApplication25applicationVersionChangedEv()};
-     unsafe {_ZN16QCoreApplication25applicationVersionChangedEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto: static QString QCoreApplication::applicationName();
 impl /*struct*/ QCoreApplication {
   pub fn applicationName_s<RetType, T: QCoreApplication_applicationName_s<RetType>>( overload_args: T) -> RetType {
@@ -498,28 +468,6 @@ impl<'a> /*trait*/ QCoreApplication_libraryPaths_s<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QCoreApplication12libraryPathsEv()};
      unsafe {_ZN16QCoreApplication12libraryPathsEv()};
-    // return 1;
-  }
-}
-
-  // proto:  void QCoreApplication::applicationNameChanged();
-impl /*struct*/ QCoreApplication {
-  pub fn applicationNameChanged<RetType, T: QCoreApplication_applicationNameChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.applicationNameChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QCoreApplication_applicationNameChanged<RetType> {
-  fn applicationNameChanged(self , rsthis: & QCoreApplication) -> RetType;
-}
-
-  // proto:  void QCoreApplication::applicationNameChanged();
-impl<'a> /*trait*/ QCoreApplication_applicationNameChanged<()> for () {
-  fn applicationNameChanged(self , rsthis: & QCoreApplication) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QCoreApplication22applicationNameChangedEv()};
-     unsafe {_ZN16QCoreApplication22applicationNameChangedEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -829,28 +777,6 @@ impl<'a> /*trait*/ QCoreApplication_free<()> for () {
   }
 }
 
-  // proto:  void QCoreApplication::organizationDomainChanged();
-impl /*struct*/ QCoreApplication {
-  pub fn organizationDomainChanged<RetType, T: QCoreApplication_organizationDomainChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.organizationDomainChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QCoreApplication_organizationDomainChanged<RetType> {
-  fn organizationDomainChanged(self , rsthis: & QCoreApplication) -> RetType;
-}
-
-  // proto:  void QCoreApplication::organizationDomainChanged();
-impl<'a> /*trait*/ QCoreApplication_organizationDomainChanged<()> for () {
-  fn organizationDomainChanged(self , rsthis: & QCoreApplication) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QCoreApplication25organizationDomainChangedEv()};
-     unsafe {_ZN16QCoreApplication25organizationDomainChangedEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto:  void QCoreApplication::removeNativeEventFilter(QAbstractNativeEventFilter * filterObj);
 impl /*struct*/ QCoreApplication {
   pub fn removeNativeEventFilter<RetType, T: QCoreApplication_removeNativeEventFilter<RetType>>(& self,  overload_args: T) -> RetType {
@@ -1154,28 +1080,6 @@ impl<'a> /*trait*/ QCoreApplication_isQuitLockEnabled_s<i8> for () {
   }
 }
 
-  // proto:  void QCoreApplication::organizationNameChanged();
-impl /*struct*/ QCoreApplication {
-  pub fn organizationNameChanged<RetType, T: QCoreApplication_organizationNameChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.organizationNameChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QCoreApplication_organizationNameChanged<RetType> {
-  fn organizationNameChanged(self , rsthis: & QCoreApplication) -> RetType;
-}
-
-  // proto:  void QCoreApplication::organizationNameChanged();
-impl<'a> /*trait*/ QCoreApplication_organizationNameChanged<()> for () {
-  fn organizationNameChanged(self , rsthis: & QCoreApplication) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QCoreApplication23organizationNameChangedEv()};
-     unsafe {_ZN16QCoreApplication23organizationNameChangedEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto: static void QCoreApplication::removePostedEvents(QObject * receiver, int eventType);
 impl /*struct*/ QCoreApplication {
   pub fn removePostedEvents_s<RetType, T: QCoreApplication_removePostedEvents_s<RetType>>( overload_args: T) -> RetType {
@@ -1289,7 +1193,7 @@ impl<'a> /*trait*/ QCoreApplication_setEventDispatcher_s<()> for (&'a QAbstractE
 #[derive(Default)] // for QCoreApplication_aboutToQuit
 pub struct QCoreApplication_aboutToQuit_signal{poi:u64}
 impl /* struct */ QCoreApplication {
-  pub fn aboutToQuit_1(&self) -> QCoreApplication_aboutToQuit_signal {
+  pub fn aboutToQuit(&self) -> QCoreApplication_aboutToQuit_signal {
      return QCoreApplication_aboutToQuit_signal{poi:self.qclsinst};
   }
 }
@@ -1305,7 +1209,7 @@ pub trait QCoreApplication_aboutToQuit_signal_connect {
 #[derive(Default)] // for QCoreApplication_applicationVersionChanged
 pub struct QCoreApplication_applicationVersionChanged_signal{poi:u64}
 impl /* struct */ QCoreApplication {
-  pub fn applicationVersionChanged_1(&self) -> QCoreApplication_applicationVersionChanged_signal {
+  pub fn applicationVersionChanged(&self) -> QCoreApplication_applicationVersionChanged_signal {
      return QCoreApplication_applicationVersionChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1321,7 +1225,7 @@ pub trait QCoreApplication_applicationVersionChanged_signal_connect {
 #[derive(Default)] // for QCoreApplication_organizationDomainChanged
 pub struct QCoreApplication_organizationDomainChanged_signal{poi:u64}
 impl /* struct */ QCoreApplication {
-  pub fn organizationDomainChanged_1(&self) -> QCoreApplication_organizationDomainChanged_signal {
+  pub fn organizationDomainChanged(&self) -> QCoreApplication_organizationDomainChanged_signal {
      return QCoreApplication_organizationDomainChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1337,7 +1241,7 @@ pub trait QCoreApplication_organizationDomainChanged_signal_connect {
 #[derive(Default)] // for QCoreApplication_applicationNameChanged
 pub struct QCoreApplication_applicationNameChanged_signal{poi:u64}
 impl /* struct */ QCoreApplication {
-  pub fn applicationNameChanged_1(&self) -> QCoreApplication_applicationNameChanged_signal {
+  pub fn applicationNameChanged(&self) -> QCoreApplication_applicationNameChanged_signal {
      return QCoreApplication_applicationNameChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1353,7 +1257,7 @@ pub trait QCoreApplication_applicationNameChanged_signal_connect {
 #[derive(Default)] // for QCoreApplication_organizationNameChanged
 pub struct QCoreApplication_organizationNameChanged_signal{poi:u64}
 impl /* struct */ QCoreApplication {
-  pub fn organizationNameChanged_1(&self) -> QCoreApplication_organizationNameChanged_signal {
+  pub fn organizationNameChanged(&self) -> QCoreApplication_organizationNameChanged_signal {
      return QCoreApplication_organizationNameChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1371,10 +1275,11 @@ extern fn QCoreApplication_applicationVersionChanged_signal_connect_cb_0(rsfptr:
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QCoreApplication_applicationVersionChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(), ) {
+extern fn QCoreApplication_applicationVersionChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  rsfptr();
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QCoreApplication_applicationVersionChanged_signal_connect for fn() {
   fn connect(self, sigthis: QCoreApplication_applicationVersionChanged_signal) {
@@ -1395,7 +1300,7 @@ impl /* trait */ QCoreApplication_applicationVersionChanged_signal_connect for B
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QCoreApplication_applicationVersionChanged_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QCoreApplication_SlotProxy_connect__ZN16QCoreApplication25applicationVersionChangedEv(arg0, arg1, arg2)};
   }
 }
@@ -1404,10 +1309,11 @@ extern fn QCoreApplication_organizationNameChanged_signal_connect_cb_1(rsfptr:fn
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QCoreApplication_organizationNameChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(), ) {
+extern fn QCoreApplication_organizationNameChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  rsfptr();
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QCoreApplication_organizationNameChanged_signal_connect for fn() {
   fn connect(self, sigthis: QCoreApplication_organizationNameChanged_signal) {
@@ -1428,7 +1334,7 @@ impl /* trait */ QCoreApplication_organizationNameChanged_signal_connect for Box
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QCoreApplication_organizationNameChanged_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QCoreApplication_SlotProxy_connect__ZN16QCoreApplication23organizationNameChangedEv(arg0, arg1, arg2)};
   }
 }
@@ -1437,10 +1343,11 @@ extern fn QCoreApplication_applicationNameChanged_signal_connect_cb_2(rsfptr:fn(
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QCoreApplication_applicationNameChanged_signal_connect_cb_box_2(rsfptr_raw:*mut Fn(), ) {
+extern fn QCoreApplication_applicationNameChanged_signal_connect_cb_box_2(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  rsfptr();
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QCoreApplication_applicationNameChanged_signal_connect for fn() {
   fn connect(self, sigthis: QCoreApplication_applicationNameChanged_signal) {
@@ -1461,7 +1368,7 @@ impl /* trait */ QCoreApplication_applicationNameChanged_signal_connect for Box<
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QCoreApplication_applicationNameChanged_signal_connect_cb_box_2 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QCoreApplication_SlotProxy_connect__ZN16QCoreApplication22applicationNameChangedEv(arg0, arg1, arg2)};
   }
 }
@@ -1470,10 +1377,11 @@ extern fn QCoreApplication_organizationDomainChanged_signal_connect_cb_3(rsfptr:
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QCoreApplication_organizationDomainChanged_signal_connect_cb_box_3(rsfptr_raw:*mut Fn(), ) {
+extern fn QCoreApplication_organizationDomainChanged_signal_connect_cb_box_3(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  rsfptr();
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QCoreApplication_organizationDomainChanged_signal_connect for fn() {
   fn connect(self, sigthis: QCoreApplication_organizationDomainChanged_signal) {
@@ -1494,7 +1402,7 @@ impl /* trait */ QCoreApplication_organizationDomainChanged_signal_connect for B
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QCoreApplication_organizationDomainChanged_signal_connect_cb_box_3 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QCoreApplication_SlotProxy_connect__ZN16QCoreApplication25organizationDomainChangedEv(arg0, arg1, arg2)};
   }
 }

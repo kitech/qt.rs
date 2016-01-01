@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtCore/qsocketnotifier.h
 // dst-file: /src/core/qsocketnotifier.rs
 //
@@ -51,7 +51,7 @@ extern {
 pub struct QSocketNotifier {
   qbase: QObject,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _activated_1: QSocketNotifier_activated_signal,
+  pub _activated: QSocketNotifier_activated_signal,
 }
 
 impl /*struct*/ QSocketNotifier {
@@ -216,7 +216,7 @@ impl<'a> /*trait*/ QSocketNotifier_free<()> for () {
 #[derive(Default)] // for QSocketNotifier_activated
 pub struct QSocketNotifier_activated_signal{poi:u64}
 impl /* struct */ QSocketNotifier {
-  pub fn activated_1(&self) -> QSocketNotifier_activated_signal {
+  pub fn activated(&self) -> QSocketNotifier_activated_signal {
      return QSocketNotifier_activated_signal{poi:self.qclsinst};
   }
 }

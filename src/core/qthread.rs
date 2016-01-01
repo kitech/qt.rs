@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtCore/qthread.h
 // dst-file: /src/core/qthread.rs
 //
@@ -87,8 +87,8 @@ extern {
 pub struct QThread {
   qbase: QObject,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _started_1: QThread_started_signal,
-  pub _finished_1: QThread_finished_signal,
+  pub _started: QThread_started_signal,
+  pub _finished: QThread_finished_signal,
 }
 
 impl /*struct*/ QThread {
@@ -642,7 +642,7 @@ impl<'a> /*trait*/ QThread_loopLevel<i32> for () {
 #[derive(Default)] // for QThread_started
 pub struct QThread_started_signal{poi:u64}
 impl /* struct */ QThread {
-  pub fn started_1(&self) -> QThread_started_signal {
+  pub fn started(&self) -> QThread_started_signal {
      return QThread_started_signal{poi:self.qclsinst};
   }
 }
@@ -658,7 +658,7 @@ pub trait QThread_started_signal_connect {
 #[derive(Default)] // for QThread_finished
 pub struct QThread_finished_signal{poi:u64}
 impl /* struct */ QThread {
-  pub fn finished_1(&self) -> QThread_finished_signal {
+  pub fn finished(&self) -> QThread_finished_signal {
      return QThread_finished_signal{poi:self.qclsinst};
   }
 }

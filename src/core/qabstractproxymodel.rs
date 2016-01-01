@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtCore/qabstractproxymodel.h
 // dst-file: /src/core/qabstractproxymodel.rs
 //
@@ -90,7 +90,7 @@ extern {
 pub struct QAbstractProxyModel {
   qbase: QAbstractItemModel,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _sourceModelChanged_1: QAbstractProxyModel_sourceModelChanged_signal,
+  pub _sourceModelChanged: QAbstractProxyModel_sourceModelChanged_signal,
 }
 
 impl /*struct*/ QAbstractProxyModel {
@@ -637,7 +637,7 @@ impl<'a> /*trait*/ QAbstractProxyModel_sourceModel<()> for () {
 #[derive(Default)] // for QAbstractProxyModel_sourceModelChanged
 pub struct QAbstractProxyModel_sourceModelChanged_signal{poi:u64}
 impl /* struct */ QAbstractProxyModel {
-  pub fn sourceModelChanged_1(&self) -> QAbstractProxyModel_sourceModelChanged_signal {
+  pub fn sourceModelChanged(&self) -> QAbstractProxyModel_sourceModelChanged_signal {
      return QAbstractProxyModel_sourceModelChanged_signal{poi:self.qclsinst};
   }
 }

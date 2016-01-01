@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtCore/qsignaltransition.h
 // dst-file: /src/core/qsignaltransition.rs
 //
@@ -62,8 +62,8 @@ extern {
 pub struct QSignalTransition {
   qbase: QAbstractTransition,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _senderObjectChanged_1: QSignalTransition_senderObjectChanged_signal,
-  pub _signalChanged_1: QSignalTransition_signalChanged_signal,
+  pub _senderObjectChanged: QSignalTransition_senderObjectChanged_signal,
+  pub _signalChanged: QSignalTransition_signalChanged_signal,
 }
 
 impl /*struct*/ QSignalTransition {
@@ -287,7 +287,7 @@ impl<'a> /*trait*/ QSignalTransition_metaObject<()> for () {
 #[derive(Default)] // for QSignalTransition_senderObjectChanged
 pub struct QSignalTransition_senderObjectChanged_signal{poi:u64}
 impl /* struct */ QSignalTransition {
-  pub fn senderObjectChanged_1(&self) -> QSignalTransition_senderObjectChanged_signal {
+  pub fn senderObjectChanged(&self) -> QSignalTransition_senderObjectChanged_signal {
      return QSignalTransition_senderObjectChanged_signal{poi:self.qclsinst};
   }
 }
@@ -303,7 +303,7 @@ pub trait QSignalTransition_senderObjectChanged_signal_connect {
 #[derive(Default)] // for QSignalTransition_signalChanged
 pub struct QSignalTransition_signalChanged_signal{poi:u64}
 impl /* struct */ QSignalTransition {
-  pub fn signalChanged_1(&self) -> QSignalTransition_signalChanged_signal {
+  pub fn signalChanged(&self) -> QSignalTransition_signalChanged_signal {
      return QSignalTransition_signalChanged_signal{poi:self.qclsinst};
   }
 }

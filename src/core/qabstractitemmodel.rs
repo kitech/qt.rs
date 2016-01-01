@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtCore/qabstractitemmodel.h
 // dst-file: /src/core/qabstractitemmodel.rs
 //
@@ -229,24 +229,24 @@ pub struct QAbstractTableModel {
 pub struct QAbstractItemModel {
   qbase: QObject,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _modelReset_1: QAbstractItemModel_modelReset_signal,
-  pub _columnsAboutToBeMoved_1: QAbstractItemModel_columnsAboutToBeMoved_signal,
-  pub _columnsInserted_1: QAbstractItemModel_columnsInserted_signal,
-  pub _rowsAboutToBeRemoved_1: QAbstractItemModel_rowsAboutToBeRemoved_signal,
-  pub _columnsAboutToBeRemoved_1: QAbstractItemModel_columnsAboutToBeRemoved_signal,
-  pub _rowsAboutToBeMoved_1: QAbstractItemModel_rowsAboutToBeMoved_signal,
-  pub _layoutChanged_1: QAbstractItemModel_layoutChanged_signal,
-  pub _columnsRemoved_1: QAbstractItemModel_columnsRemoved_signal,
-  pub _rowsInserted_1: QAbstractItemModel_rowsInserted_signal,
-  pub _columnsAboutToBeInserted_1: QAbstractItemModel_columnsAboutToBeInserted_signal,
-  pub _layoutAboutToBeChanged_1: QAbstractItemModel_layoutAboutToBeChanged_signal,
-  pub _rowsRemoved_1: QAbstractItemModel_rowsRemoved_signal,
-  pub _rowsMoved_1: QAbstractItemModel_rowsMoved_signal,
-  pub _headerDataChanged_1: QAbstractItemModel_headerDataChanged_signal,
-  pub _columnsMoved_1: QAbstractItemModel_columnsMoved_signal,
-  pub _rowsAboutToBeInserted_1: QAbstractItemModel_rowsAboutToBeInserted_signal,
-  pub _modelAboutToBeReset_1: QAbstractItemModel_modelAboutToBeReset_signal,
-  pub _dataChanged_1: QAbstractItemModel_dataChanged_signal,
+  pub _modelReset: QAbstractItemModel_modelReset_signal,
+  pub _columnsAboutToBeMoved: QAbstractItemModel_columnsAboutToBeMoved_signal,
+  pub _columnsInserted: QAbstractItemModel_columnsInserted_signal,
+  pub _rowsAboutToBeRemoved: QAbstractItemModel_rowsAboutToBeRemoved_signal,
+  pub _columnsAboutToBeRemoved: QAbstractItemModel_columnsAboutToBeRemoved_signal,
+  pub _rowsAboutToBeMoved: QAbstractItemModel_rowsAboutToBeMoved_signal,
+  pub _layoutChanged: QAbstractItemModel_layoutChanged_signal,
+  pub _columnsRemoved: QAbstractItemModel_columnsRemoved_signal,
+  pub _rowsInserted: QAbstractItemModel_rowsInserted_signal,
+  pub _columnsAboutToBeInserted: QAbstractItemModel_columnsAboutToBeInserted_signal,
+  pub _layoutAboutToBeChanged: QAbstractItemModel_layoutAboutToBeChanged_signal,
+  pub _rowsRemoved: QAbstractItemModel_rowsRemoved_signal,
+  pub _rowsMoved: QAbstractItemModel_rowsMoved_signal,
+  pub _headerDataChanged: QAbstractItemModel_headerDataChanged_signal,
+  pub _columnsMoved: QAbstractItemModel_columnsMoved_signal,
+  pub _rowsAboutToBeInserted: QAbstractItemModel_rowsAboutToBeInserted_signal,
+  pub _modelAboutToBeReset: QAbstractItemModel_modelAboutToBeReset_signal,
+  pub _dataChanged: QAbstractItemModel_dataChanged_signal,
 }
 
 // class sizeof(QAbstractListModel)=1
@@ -2092,7 +2092,7 @@ impl<'a> /*trait*/ QAbstractListModel_free<()> for () {
 #[derive(Default)] // for QAbstractItemModel_modelReset
 pub struct QAbstractItemModel_modelReset_signal{poi:u64}
 impl /* struct */ QAbstractItemModel {
-  pub fn modelReset_1(&self) -> QAbstractItemModel_modelReset_signal {
+  pub fn modelReset(&self) -> QAbstractItemModel_modelReset_signal {
      return QAbstractItemModel_modelReset_signal{poi:self.qclsinst};
   }
 }
@@ -2108,7 +2108,7 @@ pub trait QAbstractItemModel_modelReset_signal_connect {
 #[derive(Default)] // for QAbstractItemModel_columnsAboutToBeMoved
 pub struct QAbstractItemModel_columnsAboutToBeMoved_signal{poi:u64}
 impl /* struct */ QAbstractItemModel {
-  pub fn columnsAboutToBeMoved_1(&self) -> QAbstractItemModel_columnsAboutToBeMoved_signal {
+  pub fn columnsAboutToBeMoved(&self) -> QAbstractItemModel_columnsAboutToBeMoved_signal {
      return QAbstractItemModel_columnsAboutToBeMoved_signal{poi:self.qclsinst};
   }
 }
@@ -2124,7 +2124,7 @@ pub trait QAbstractItemModel_columnsAboutToBeMoved_signal_connect {
 #[derive(Default)] // for QAbstractItemModel_columnsInserted
 pub struct QAbstractItemModel_columnsInserted_signal{poi:u64}
 impl /* struct */ QAbstractItemModel {
-  pub fn columnsInserted_1(&self) -> QAbstractItemModel_columnsInserted_signal {
+  pub fn columnsInserted(&self) -> QAbstractItemModel_columnsInserted_signal {
      return QAbstractItemModel_columnsInserted_signal{poi:self.qclsinst};
   }
 }
@@ -2140,7 +2140,7 @@ pub trait QAbstractItemModel_columnsInserted_signal_connect {
 #[derive(Default)] // for QAbstractItemModel_rowsAboutToBeRemoved
 pub struct QAbstractItemModel_rowsAboutToBeRemoved_signal{poi:u64}
 impl /* struct */ QAbstractItemModel {
-  pub fn rowsAboutToBeRemoved_1(&self) -> QAbstractItemModel_rowsAboutToBeRemoved_signal {
+  pub fn rowsAboutToBeRemoved(&self) -> QAbstractItemModel_rowsAboutToBeRemoved_signal {
      return QAbstractItemModel_rowsAboutToBeRemoved_signal{poi:self.qclsinst};
   }
 }
@@ -2156,7 +2156,7 @@ pub trait QAbstractItemModel_rowsAboutToBeRemoved_signal_connect {
 #[derive(Default)] // for QAbstractItemModel_columnsAboutToBeRemoved
 pub struct QAbstractItemModel_columnsAboutToBeRemoved_signal{poi:u64}
 impl /* struct */ QAbstractItemModel {
-  pub fn columnsAboutToBeRemoved_1(&self) -> QAbstractItemModel_columnsAboutToBeRemoved_signal {
+  pub fn columnsAboutToBeRemoved(&self) -> QAbstractItemModel_columnsAboutToBeRemoved_signal {
      return QAbstractItemModel_columnsAboutToBeRemoved_signal{poi:self.qclsinst};
   }
 }
@@ -2172,7 +2172,7 @@ pub trait QAbstractItemModel_columnsAboutToBeRemoved_signal_connect {
 #[derive(Default)] // for QAbstractItemModel_rowsAboutToBeMoved
 pub struct QAbstractItemModel_rowsAboutToBeMoved_signal{poi:u64}
 impl /* struct */ QAbstractItemModel {
-  pub fn rowsAboutToBeMoved_1(&self) -> QAbstractItemModel_rowsAboutToBeMoved_signal {
+  pub fn rowsAboutToBeMoved(&self) -> QAbstractItemModel_rowsAboutToBeMoved_signal {
      return QAbstractItemModel_rowsAboutToBeMoved_signal{poi:self.qclsinst};
   }
 }
@@ -2188,7 +2188,7 @@ pub trait QAbstractItemModel_rowsAboutToBeMoved_signal_connect {
 #[derive(Default)] // for QAbstractItemModel_layoutChanged
 pub struct QAbstractItemModel_layoutChanged_signal{poi:u64}
 impl /* struct */ QAbstractItemModel {
-  pub fn layoutChanged_1(&self) -> QAbstractItemModel_layoutChanged_signal {
+  pub fn layoutChanged(&self) -> QAbstractItemModel_layoutChanged_signal {
      return QAbstractItemModel_layoutChanged_signal{poi:self.qclsinst};
   }
 }
@@ -2204,7 +2204,7 @@ pub trait QAbstractItemModel_layoutChanged_signal_connect {
 #[derive(Default)] // for QAbstractItemModel_columnsRemoved
 pub struct QAbstractItemModel_columnsRemoved_signal{poi:u64}
 impl /* struct */ QAbstractItemModel {
-  pub fn columnsRemoved_1(&self) -> QAbstractItemModel_columnsRemoved_signal {
+  pub fn columnsRemoved(&self) -> QAbstractItemModel_columnsRemoved_signal {
      return QAbstractItemModel_columnsRemoved_signal{poi:self.qclsinst};
   }
 }
@@ -2220,7 +2220,7 @@ pub trait QAbstractItemModel_columnsRemoved_signal_connect {
 #[derive(Default)] // for QAbstractItemModel_rowsInserted
 pub struct QAbstractItemModel_rowsInserted_signal{poi:u64}
 impl /* struct */ QAbstractItemModel {
-  pub fn rowsInserted_1(&self) -> QAbstractItemModel_rowsInserted_signal {
+  pub fn rowsInserted(&self) -> QAbstractItemModel_rowsInserted_signal {
      return QAbstractItemModel_rowsInserted_signal{poi:self.qclsinst};
   }
 }
@@ -2236,7 +2236,7 @@ pub trait QAbstractItemModel_rowsInserted_signal_connect {
 #[derive(Default)] // for QAbstractItemModel_columnsAboutToBeInserted
 pub struct QAbstractItemModel_columnsAboutToBeInserted_signal{poi:u64}
 impl /* struct */ QAbstractItemModel {
-  pub fn columnsAboutToBeInserted_1(&self) -> QAbstractItemModel_columnsAboutToBeInserted_signal {
+  pub fn columnsAboutToBeInserted(&self) -> QAbstractItemModel_columnsAboutToBeInserted_signal {
      return QAbstractItemModel_columnsAboutToBeInserted_signal{poi:self.qclsinst};
   }
 }
@@ -2252,7 +2252,7 @@ pub trait QAbstractItemModel_columnsAboutToBeInserted_signal_connect {
 #[derive(Default)] // for QAbstractItemModel_layoutAboutToBeChanged
 pub struct QAbstractItemModel_layoutAboutToBeChanged_signal{poi:u64}
 impl /* struct */ QAbstractItemModel {
-  pub fn layoutAboutToBeChanged_1(&self) -> QAbstractItemModel_layoutAboutToBeChanged_signal {
+  pub fn layoutAboutToBeChanged(&self) -> QAbstractItemModel_layoutAboutToBeChanged_signal {
      return QAbstractItemModel_layoutAboutToBeChanged_signal{poi:self.qclsinst};
   }
 }
@@ -2268,7 +2268,7 @@ pub trait QAbstractItemModel_layoutAboutToBeChanged_signal_connect {
 #[derive(Default)] // for QAbstractItemModel_rowsRemoved
 pub struct QAbstractItemModel_rowsRemoved_signal{poi:u64}
 impl /* struct */ QAbstractItemModel {
-  pub fn rowsRemoved_1(&self) -> QAbstractItemModel_rowsRemoved_signal {
+  pub fn rowsRemoved(&self) -> QAbstractItemModel_rowsRemoved_signal {
      return QAbstractItemModel_rowsRemoved_signal{poi:self.qclsinst};
   }
 }
@@ -2284,7 +2284,7 @@ pub trait QAbstractItemModel_rowsRemoved_signal_connect {
 #[derive(Default)] // for QAbstractItemModel_rowsMoved
 pub struct QAbstractItemModel_rowsMoved_signal{poi:u64}
 impl /* struct */ QAbstractItemModel {
-  pub fn rowsMoved_1(&self) -> QAbstractItemModel_rowsMoved_signal {
+  pub fn rowsMoved(&self) -> QAbstractItemModel_rowsMoved_signal {
      return QAbstractItemModel_rowsMoved_signal{poi:self.qclsinst};
   }
 }
@@ -2300,7 +2300,7 @@ pub trait QAbstractItemModel_rowsMoved_signal_connect {
 #[derive(Default)] // for QAbstractItemModel_headerDataChanged
 pub struct QAbstractItemModel_headerDataChanged_signal{poi:u64}
 impl /* struct */ QAbstractItemModel {
-  pub fn headerDataChanged_1(&self) -> QAbstractItemModel_headerDataChanged_signal {
+  pub fn headerDataChanged(&self) -> QAbstractItemModel_headerDataChanged_signal {
      return QAbstractItemModel_headerDataChanged_signal{poi:self.qclsinst};
   }
 }
@@ -2316,7 +2316,7 @@ pub trait QAbstractItemModel_headerDataChanged_signal_connect {
 #[derive(Default)] // for QAbstractItemModel_columnsMoved
 pub struct QAbstractItemModel_columnsMoved_signal{poi:u64}
 impl /* struct */ QAbstractItemModel {
-  pub fn columnsMoved_1(&self) -> QAbstractItemModel_columnsMoved_signal {
+  pub fn columnsMoved(&self) -> QAbstractItemModel_columnsMoved_signal {
      return QAbstractItemModel_columnsMoved_signal{poi:self.qclsinst};
   }
 }
@@ -2332,7 +2332,7 @@ pub trait QAbstractItemModel_columnsMoved_signal_connect {
 #[derive(Default)] // for QAbstractItemModel_rowsAboutToBeInserted
 pub struct QAbstractItemModel_rowsAboutToBeInserted_signal{poi:u64}
 impl /* struct */ QAbstractItemModel {
-  pub fn rowsAboutToBeInserted_1(&self) -> QAbstractItemModel_rowsAboutToBeInserted_signal {
+  pub fn rowsAboutToBeInserted(&self) -> QAbstractItemModel_rowsAboutToBeInserted_signal {
      return QAbstractItemModel_rowsAboutToBeInserted_signal{poi:self.qclsinst};
   }
 }
@@ -2348,7 +2348,7 @@ pub trait QAbstractItemModel_rowsAboutToBeInserted_signal_connect {
 #[derive(Default)] // for QAbstractItemModel_modelAboutToBeReset
 pub struct QAbstractItemModel_modelAboutToBeReset_signal{poi:u64}
 impl /* struct */ QAbstractItemModel {
-  pub fn modelAboutToBeReset_1(&self) -> QAbstractItemModel_modelAboutToBeReset_signal {
+  pub fn modelAboutToBeReset(&self) -> QAbstractItemModel_modelAboutToBeReset_signal {
      return QAbstractItemModel_modelAboutToBeReset_signal{poi:self.qclsinst};
   }
 }
@@ -2364,7 +2364,7 @@ pub trait QAbstractItemModel_modelAboutToBeReset_signal_connect {
 #[derive(Default)] // for QAbstractItemModel_dataChanged
 pub struct QAbstractItemModel_dataChanged_signal{poi:u64}
 impl /* struct */ QAbstractItemModel {
-  pub fn dataChanged_1(&self) -> QAbstractItemModel_dataChanged_signal {
+  pub fn dataChanged(&self) -> QAbstractItemModel_dataChanged_signal {
      return QAbstractItemModel_dataChanged_signal{poi:self.qclsinst};
   }
 }
@@ -2385,13 +2385,14 @@ extern fn QAbstractItemModel_headerDataChanged_signal_connect_cb_0(rsfptr:fn(i32
   let rsarg2 = arg2 as i32;
   rsfptr(rsarg0,rsarg1,rsarg2);
 }
-extern fn QAbstractItemModel_headerDataChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(i32, i32, i32), arg0: c_int, arg1: c_int, arg2: c_int) {
+extern fn QAbstractItemModel_headerDataChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(i32, i32, i32)>, arg0: c_int, arg1: c_int, arg2: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i32;
   let rsarg1 = arg1 as i32;
   let rsarg2 = arg2 as i32;
-  rsfptr(rsarg0,rsarg1,rsarg2);
+  // rsfptr(rsarg0,rsarg1,rsarg2);
+  unsafe{(*rsfptr_raw)(rsarg0,rsarg1,rsarg2)};
 }
 impl /* trait */ QAbstractItemModel_headerDataChanged_signal_connect for fn(i32, i32, i32) {
   fn connect(self, sigthis: QAbstractItemModel_headerDataChanged_signal) {
@@ -2412,7 +2413,7 @@ impl /* trait */ QAbstractItemModel_headerDataChanged_signal_connect for Box<Fn(
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAbstractItemModel_headerDataChanged_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QAbstractItemModel_SlotProxy_connect__ZN18QAbstractItemModel17headerDataChangedEN2Qt11OrientationEii(arg0, arg1, arg2)};
   }
 }

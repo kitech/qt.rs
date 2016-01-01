@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtCore/qiodevice.h
 // dst-file: /src/core/qiodevice.rs
 //
@@ -42,16 +42,12 @@ extern {
   fn _ZN9QIODevice5writeEPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> c_longlong;
   // proto:  bool QIODevice::isReadable();
   fn _ZNK9QIODevice10isReadableEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QIODevice::readyRead();
-  fn _ZN9QIODevice9readyReadEv(qthis: u64 /* *mut c_void*/);
   // proto:  qint64 QIODevice::readLine(char * data, qint64 maxlen);
   fn _ZN9QIODevice8readLineEPcx(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_longlong) -> c_longlong;
   // proto:  QByteArray QIODevice::readLine(qint64 maxlen);
   fn _ZN9QIODevice8readLineEx(qthis: u64 /* *mut c_void*/, arg0: c_longlong) -> *mut c_void;
   // proto:  bool QIODevice::waitForReadyRead(int msecs);
   fn _ZN9QIODevice16waitForReadyReadEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
-  // proto:  void QIODevice::aboutToClose();
-  fn _ZN9QIODevice12aboutToCloseEv(qthis: u64 /* *mut c_void*/);
   // proto:  qint64 QIODevice::size();
   fn _ZNK9QIODevice4sizeEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
   // proto:  bool QIODevice::getChar(char * c);
@@ -79,16 +75,12 @@ extern {
   fn _ZN9QIODeviceC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  qint64 QIODevice::pos();
   fn _ZNK9QIODevice3posEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
-  // proto:  void QIODevice::readChannelFinished();
-  fn _ZN9QIODevice19readChannelFinishedEv(qthis: u64 /* *mut c_void*/);
   // proto:  QByteArray QIODevice::read(qint64 maxlen);
   fn _ZN9QIODevice4readEx(qthis: u64 /* *mut c_void*/, arg0: c_longlong) -> *mut c_void;
   // proto:  qint64 QIODevice::peek(char * data, qint64 maxlen);
   fn _ZN9QIODevice4peekEPcx(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_longlong) -> c_longlong;
   // proto:  qint64 QIODevice::read(char * data, qint64 maxlen);
   fn _ZN9QIODevice4readEPcx(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_longlong) -> c_longlong;
-  // proto:  void QIODevice::bytesWritten(qint64 bytes);
-  fn _ZN9QIODevice12bytesWrittenEx(qthis: u64 /* *mut c_void*/, arg0: c_longlong);
   // proto:  bool QIODevice::waitForBytesWritten(int msecs);
   fn _ZN9QIODevice19waitForBytesWrittenEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
   // proto:  qint64 QIODevice::bytesToWrite();
@@ -127,10 +119,10 @@ extern {
 pub struct QIODevice {
   qbase: QObject,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _readyRead_1: QIODevice_readyRead_signal,
-  pub _readChannelFinished_1: QIODevice_readChannelFinished_signal,
-  pub _aboutToClose_1: QIODevice_aboutToClose_signal,
-  pub _bytesWritten_1: QIODevice_bytesWritten_signal,
+  pub _readyRead: QIODevice_readyRead_signal,
+  pub _readChannelFinished: QIODevice_readChannelFinished_signal,
+  pub _aboutToClose: QIODevice_aboutToClose_signal,
+  pub _bytesWritten: QIODevice_bytesWritten_signal,
 }
 
 impl /*struct*/ QIODevice {
@@ -256,28 +248,6 @@ impl<'a> /*trait*/ QIODevice_isReadable<i8> for () {
   }
 }
 
-  // proto:  void QIODevice::readyRead();
-impl /*struct*/ QIODevice {
-  pub fn readyRead<RetType, T: QIODevice_readyRead<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.readyRead(self);
-    // return 1;
-  }
-}
-
-pub trait QIODevice_readyRead<RetType> {
-  fn readyRead(self , rsthis: & QIODevice) -> RetType;
-}
-
-  // proto:  void QIODevice::readyRead();
-impl<'a> /*trait*/ QIODevice_readyRead<()> for () {
-  fn readyRead(self , rsthis: & QIODevice) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QIODevice9readyReadEv()};
-     unsafe {_ZN9QIODevice9readyReadEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto:  qint64 QIODevice::readLine(char * data, qint64 maxlen);
 impl /*struct*/ QIODevice {
   pub fn readLine<RetType, T: QIODevice_readLine<RetType>>(& self,  overload_args: T) -> RetType {
@@ -336,28 +306,6 @@ impl<'a> /*trait*/ QIODevice_waitForReadyRead<i8> for (i32) {
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZN9QIODevice16waitForReadyReadEi(rsthis.qclsinst, arg0)};
     return ret as i8;
-    // return 1;
-  }
-}
-
-  // proto:  void QIODevice::aboutToClose();
-impl /*struct*/ QIODevice {
-  pub fn aboutToClose<RetType, T: QIODevice_aboutToClose<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.aboutToClose(self);
-    // return 1;
-  }
-}
-
-pub trait QIODevice_aboutToClose<RetType> {
-  fn aboutToClose(self , rsthis: & QIODevice) -> RetType;
-}
-
-  // proto:  void QIODevice::aboutToClose();
-impl<'a> /*trait*/ QIODevice_aboutToClose<()> for () {
-  fn aboutToClose(self , rsthis: & QIODevice) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QIODevice12aboutToCloseEv()};
-     unsafe {_ZN9QIODevice12aboutToCloseEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -660,28 +608,6 @@ impl<'a> /*trait*/ QIODevice_pos<i64> for () {
   }
 }
 
-  // proto:  void QIODevice::readChannelFinished();
-impl /*struct*/ QIODevice {
-  pub fn readChannelFinished<RetType, T: QIODevice_readChannelFinished<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.readChannelFinished(self);
-    // return 1;
-  }
-}
-
-pub trait QIODevice_readChannelFinished<RetType> {
-  fn readChannelFinished(self , rsthis: & QIODevice) -> RetType;
-}
-
-  // proto:  void QIODevice::readChannelFinished();
-impl<'a> /*trait*/ QIODevice_readChannelFinished<()> for () {
-  fn readChannelFinished(self , rsthis: & QIODevice) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QIODevice19readChannelFinishedEv()};
-     unsafe {_ZN9QIODevice19readChannelFinishedEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto:  QByteArray QIODevice::read(qint64 maxlen);
 impl /*struct*/ QIODevice {
   pub fn read<RetType, T: QIODevice_read<RetType>>(& self,  overload_args: T) -> RetType {
@@ -741,29 +667,6 @@ impl<'a> /*trait*/ QIODevice_read<i64> for (&'a mut String, i64) {
     let arg1 = self.1  as c_longlong;
     let mut ret = unsafe {_ZN9QIODevice4readEPcx(rsthis.qclsinst, arg0, arg1)};
     return ret as i64;
-    // return 1;
-  }
-}
-
-  // proto:  void QIODevice::bytesWritten(qint64 bytes);
-impl /*struct*/ QIODevice {
-  pub fn bytesWritten<RetType, T: QIODevice_bytesWritten<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.bytesWritten(self);
-    // return 1;
-  }
-}
-
-pub trait QIODevice_bytesWritten<RetType> {
-  fn bytesWritten(self , rsthis: & QIODevice) -> RetType;
-}
-
-  // proto:  void QIODevice::bytesWritten(qint64 bytes);
-impl<'a> /*trait*/ QIODevice_bytesWritten<()> for (i64) {
-  fn bytesWritten(self , rsthis: & QIODevice) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QIODevice12bytesWrittenEx()};
-    let arg0 = self  as c_longlong;
-     unsafe {_ZN9QIODevice12bytesWrittenEx(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1021,7 +924,7 @@ impl<'a> /*trait*/ QIODevice_free<()> for () {
 #[derive(Default)] // for QIODevice_readyRead
 pub struct QIODevice_readyRead_signal{poi:u64}
 impl /* struct */ QIODevice {
-  pub fn readyRead_1(&self) -> QIODevice_readyRead_signal {
+  pub fn readyRead(&self) -> QIODevice_readyRead_signal {
      return QIODevice_readyRead_signal{poi:self.qclsinst};
   }
 }
@@ -1037,7 +940,7 @@ pub trait QIODevice_readyRead_signal_connect {
 #[derive(Default)] // for QIODevice_readChannelFinished
 pub struct QIODevice_readChannelFinished_signal{poi:u64}
 impl /* struct */ QIODevice {
-  pub fn readChannelFinished_1(&self) -> QIODevice_readChannelFinished_signal {
+  pub fn readChannelFinished(&self) -> QIODevice_readChannelFinished_signal {
      return QIODevice_readChannelFinished_signal{poi:self.qclsinst};
   }
 }
@@ -1053,7 +956,7 @@ pub trait QIODevice_readChannelFinished_signal_connect {
 #[derive(Default)] // for QIODevice_aboutToClose
 pub struct QIODevice_aboutToClose_signal{poi:u64}
 impl /* struct */ QIODevice {
-  pub fn aboutToClose_1(&self) -> QIODevice_aboutToClose_signal {
+  pub fn aboutToClose(&self) -> QIODevice_aboutToClose_signal {
      return QIODevice_aboutToClose_signal{poi:self.qclsinst};
   }
 }
@@ -1069,7 +972,7 @@ pub trait QIODevice_aboutToClose_signal_connect {
 #[derive(Default)] // for QIODevice_bytesWritten
 pub struct QIODevice_bytesWritten_signal{poi:u64}
 impl /* struct */ QIODevice {
-  pub fn bytesWritten_1(&self) -> QIODevice_bytesWritten_signal {
+  pub fn bytesWritten(&self) -> QIODevice_bytesWritten_signal {
      return QIODevice_bytesWritten_signal{poi:self.qclsinst};
   }
 }
@@ -1088,11 +991,12 @@ extern fn QIODevice_bytesWritten_signal_connect_cb_0(rsfptr:fn(i64), arg0: c_lon
   let rsarg0 = arg0 as i64;
   rsfptr(rsarg0);
 }
-extern fn QIODevice_bytesWritten_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(i64), arg0: c_longlong) {
+extern fn QIODevice_bytesWritten_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(i64)>, arg0: c_longlong) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i64;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QIODevice_bytesWritten_signal_connect for fn(i64) {
   fn connect(self, sigthis: QIODevice_bytesWritten_signal) {
@@ -1113,7 +1017,7 @@ impl /* trait */ QIODevice_bytesWritten_signal_connect for Box<Fn(i64)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QIODevice_bytesWritten_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QIODevice_SlotProxy_connect__ZN9QIODevice12bytesWrittenEx(arg0, arg1, arg2)};
   }
 }
@@ -1122,10 +1026,11 @@ extern fn QIODevice_aboutToClose_signal_connect_cb_1(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QIODevice_aboutToClose_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(), ) {
+extern fn QIODevice_aboutToClose_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  rsfptr();
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QIODevice_aboutToClose_signal_connect for fn() {
   fn connect(self, sigthis: QIODevice_aboutToClose_signal) {
@@ -1146,7 +1051,7 @@ impl /* trait */ QIODevice_aboutToClose_signal_connect for Box<Fn()> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QIODevice_aboutToClose_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QIODevice_SlotProxy_connect__ZN9QIODevice12aboutToCloseEv(arg0, arg1, arg2)};
   }
 }
@@ -1155,10 +1060,11 @@ extern fn QIODevice_readyRead_signal_connect_cb_2(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QIODevice_readyRead_signal_connect_cb_box_2(rsfptr_raw:*mut Fn(), ) {
+extern fn QIODevice_readyRead_signal_connect_cb_box_2(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  rsfptr();
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QIODevice_readyRead_signal_connect for fn() {
   fn connect(self, sigthis: QIODevice_readyRead_signal) {
@@ -1179,7 +1085,7 @@ impl /* trait */ QIODevice_readyRead_signal_connect for Box<Fn()> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QIODevice_readyRead_signal_connect_cb_box_2 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QIODevice_SlotProxy_connect__ZN9QIODevice9readyReadEv(arg0, arg1, arg2)};
   }
 }
@@ -1188,10 +1094,11 @@ extern fn QIODevice_readChannelFinished_signal_connect_cb_3(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QIODevice_readChannelFinished_signal_connect_cb_box_3(rsfptr_raw:*mut Fn(), ) {
+extern fn QIODevice_readChannelFinished_signal_connect_cb_box_3(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  rsfptr();
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QIODevice_readChannelFinished_signal_connect for fn() {
   fn connect(self, sigthis: QIODevice_readChannelFinished_signal) {
@@ -1212,7 +1119,7 @@ impl /* trait */ QIODevice_readChannelFinished_signal_connect for Box<Fn()> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QIODevice_readChannelFinished_signal_connect_cb_box_3 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QIODevice_SlotProxy_connect__ZN9QIODevice19readChannelFinishedEv(arg0, arg1, arg2)};
   }
 }

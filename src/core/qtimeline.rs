@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtCore/qtimeline.h
 // dst-file: /src/core/qtimeline.rs
 //
@@ -97,10 +97,10 @@ extern {
 pub struct QTimeLine {
   qbase: QObject,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _valueChanged_1: QTimeLine_valueChanged_signal,
-  pub _finished_1: QTimeLine_finished_signal,
-  pub _frameChanged_1: QTimeLine_frameChanged_signal,
-  pub _stateChanged_1: QTimeLine_stateChanged_signal,
+  pub _valueChanged: QTimeLine_valueChanged_signal,
+  pub _finished: QTimeLine_finished_signal,
+  pub _frameChanged: QTimeLine_frameChanged_signal,
+  pub _stateChanged: QTimeLine_stateChanged_signal,
 }
 
 impl /*struct*/ QTimeLine {
@@ -765,7 +765,7 @@ impl<'a> /*trait*/ QTimeLine_currentValue<f64> for () {
 #[derive(Default)] // for QTimeLine_valueChanged
 pub struct QTimeLine_valueChanged_signal{poi:u64}
 impl /* struct */ QTimeLine {
-  pub fn valueChanged_1(&self) -> QTimeLine_valueChanged_signal {
+  pub fn valueChanged(&self) -> QTimeLine_valueChanged_signal {
      return QTimeLine_valueChanged_signal{poi:self.qclsinst};
   }
 }
@@ -781,7 +781,7 @@ pub trait QTimeLine_valueChanged_signal_connect {
 #[derive(Default)] // for QTimeLine_finished
 pub struct QTimeLine_finished_signal{poi:u64}
 impl /* struct */ QTimeLine {
-  pub fn finished_1(&self) -> QTimeLine_finished_signal {
+  pub fn finished(&self) -> QTimeLine_finished_signal {
      return QTimeLine_finished_signal{poi:self.qclsinst};
   }
 }
@@ -797,7 +797,7 @@ pub trait QTimeLine_finished_signal_connect {
 #[derive(Default)] // for QTimeLine_frameChanged
 pub struct QTimeLine_frameChanged_signal{poi:u64}
 impl /* struct */ QTimeLine {
-  pub fn frameChanged_1(&self) -> QTimeLine_frameChanged_signal {
+  pub fn frameChanged(&self) -> QTimeLine_frameChanged_signal {
      return QTimeLine_frameChanged_signal{poi:self.qclsinst};
   }
 }
@@ -813,7 +813,7 @@ pub trait QTimeLine_frameChanged_signal_connect {
 #[derive(Default)] // for QTimeLine_stateChanged
 pub struct QTimeLine_stateChanged_signal{poi:u64}
 impl /* struct */ QTimeLine {
-  pub fn stateChanged_1(&self) -> QTimeLine_stateChanged_signal {
+  pub fn stateChanged(&self) -> QTimeLine_stateChanged_signal {
      return QTimeLine_stateChanged_signal{poi:self.qclsinst};
   }
 }

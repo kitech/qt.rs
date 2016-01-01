@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtCore/qobject.h
 // dst-file: /src/core/qobject.rs
 //
@@ -62,8 +62,6 @@ extern {
   fn QObject_Class_Size() -> c_int;
   // proto:  bool QObject::inherits(const char * classname);
   fn demth_ZNK7QObject8inheritsEPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> c_char;
-  // proto:  void QObject::destroyed(QObject * );
-  fn _ZN7QObject9destroyedEPS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QObject::moveToThread(QThread * thread);
   fn _ZN7QObject12moveToThreadEP7QThread(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QObject::removeEventFilter(QObject * );
@@ -162,8 +160,8 @@ pub struct QObjectUserData {
 pub struct QObject {
   // qbase: None,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _destroyed_1: QObject_destroyed_signal,
-  pub _objectNameChanged_1: QObject_objectNameChanged_signal,
+  pub _destroyed: QObject_destroyed_signal,
+  pub _objectNameChanged: QObject_objectNameChanged_signal,
 }
 
 impl /*struct*/ QSignalBlocker {
@@ -383,29 +381,6 @@ impl<'a> /*trait*/ QObject_inherits<i8> for (&'a  String) {
     let arg0 = self.as_ptr()  as *mut c_char;
     let mut ret = unsafe {demth_ZNK7QObject8inheritsEPKc(rsthis.qclsinst, arg0)};
     return ret as i8;
-    // return 1;
-  }
-}
-
-  // proto:  void QObject::destroyed(QObject * );
-impl /*struct*/ QObject {
-  pub fn destroyed<RetType, T: QObject_destroyed<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.destroyed(self);
-    // return 1;
-  }
-}
-
-pub trait QObject_destroyed<RetType> {
-  fn destroyed(self , rsthis: & QObject) -> RetType;
-}
-
-  // proto:  void QObject::destroyed(QObject * );
-impl<'a> /*trait*/ QObject_destroyed<()> for (&'a QObject) {
-  fn destroyed(self , rsthis: & QObject) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QObject9destroyedEPS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN7QObject9destroyedEPS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1151,7 +1126,7 @@ impl<'a> /*trait*/ QObject_killTimer<()> for (i32) {
 #[derive(Default)] // for QObject_destroyed
 pub struct QObject_destroyed_signal{poi:u64}
 impl /* struct */ QObject {
-  pub fn destroyed_1(&self) -> QObject_destroyed_signal {
+  pub fn destroyed(&self) -> QObject_destroyed_signal {
      return QObject_destroyed_signal{poi:self.qclsinst};
   }
 }
@@ -1167,7 +1142,7 @@ pub trait QObject_destroyed_signal_connect {
 #[derive(Default)] // for QObject_objectNameChanged
 pub struct QObject_objectNameChanged_signal{poi:u64}
 impl /* struct */ QObject {
-  pub fn objectNameChanged_1(&self) -> QObject_objectNameChanged_signal {
+  pub fn objectNameChanged(&self) -> QObject_objectNameChanged_signal {
      return QObject_objectNameChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1186,11 +1161,12 @@ extern fn QObject_destroyed_signal_connect_cb_0(rsfptr:fn(QObject), arg0: *mut c
   let rsarg0 = QObject::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QObject_destroyed_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(QObject), arg0: *mut c_void) {
+extern fn QObject_destroyed_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(QObject)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QObject::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QObject_destroyed_signal_connect for fn(QObject) {
   fn connect(self, sigthis: QObject_destroyed_signal) {
@@ -1211,7 +1187,7 @@ impl /* trait */ QObject_destroyed_signal_connect for Box<Fn(QObject)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QObject_destroyed_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QObject_SlotProxy_connect__ZN7QObject9destroyedEPS_(arg0, arg1, arg2)};
   }
 }

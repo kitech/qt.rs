@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtCore/qhistorystate.h
 // dst-file: /src/core/qhistorystate.rs
 //
@@ -53,8 +53,8 @@ extern {
 pub struct QHistoryState {
   qbase: QAbstractState,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _defaultStateChanged_1: QHistoryState_defaultStateChanged_signal,
-  pub _historyTypeChanged_1: QHistoryState_historyTypeChanged_signal,
+  pub _defaultStateChanged: QHistoryState_defaultStateChanged_signal,
+  pub _historyTypeChanged: QHistoryState_historyTypeChanged_signal,
 }
 
 impl /*struct*/ QHistoryState {
@@ -211,7 +211,7 @@ impl<'a> /*trait*/ QHistoryState_free<()> for () {
 #[derive(Default)] // for QHistoryState_defaultStateChanged
 pub struct QHistoryState_defaultStateChanged_signal{poi:u64}
 impl /* struct */ QHistoryState {
-  pub fn defaultStateChanged_1(&self) -> QHistoryState_defaultStateChanged_signal {
+  pub fn defaultStateChanged(&self) -> QHistoryState_defaultStateChanged_signal {
      return QHistoryState_defaultStateChanged_signal{poi:self.qclsinst};
   }
 }
@@ -227,7 +227,7 @@ pub trait QHistoryState_defaultStateChanged_signal_connect {
 #[derive(Default)] // for QHistoryState_historyTypeChanged
 pub struct QHistoryState_historyTypeChanged_signal{poi:u64}
 impl /* struct */ QHistoryState {
-  pub fn historyTypeChanged_1(&self) -> QHistoryState_historyTypeChanged_signal {
+  pub fn historyTypeChanged(&self) -> QHistoryState_historyTypeChanged_signal {
      return QHistoryState_historyTypeChanged_signal{poi:self.qclsinst};
   }
 }

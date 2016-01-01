@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtCore/qfilesystemwatcher.h
 // dst-file: /src/core/qfilesystemwatcher.rs
 //
@@ -62,8 +62,8 @@ extern {
 pub struct QFileSystemWatcher {
   qbase: QObject,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _directoryChanged_1: QFileSystemWatcher_directoryChanged_signal,
-  pub _fileChanged_1: QFileSystemWatcher_fileChanged_signal,
+  pub _directoryChanged: QFileSystemWatcher_directoryChanged_signal,
+  pub _fileChanged: QFileSystemWatcher_fileChanged_signal,
 }
 
 impl /*struct*/ QFileSystemWatcher {
@@ -314,7 +314,7 @@ impl<'a> /*trait*/ QFileSystemWatcher_new for (&'a QStringList, &'a QObject) {
 #[derive(Default)] // for QFileSystemWatcher_directoryChanged
 pub struct QFileSystemWatcher_directoryChanged_signal{poi:u64}
 impl /* struct */ QFileSystemWatcher {
-  pub fn directoryChanged_1(&self) -> QFileSystemWatcher_directoryChanged_signal {
+  pub fn directoryChanged(&self) -> QFileSystemWatcher_directoryChanged_signal {
      return QFileSystemWatcher_directoryChanged_signal{poi:self.qclsinst};
   }
 }
@@ -330,7 +330,7 @@ pub trait QFileSystemWatcher_directoryChanged_signal_connect {
 #[derive(Default)] // for QFileSystemWatcher_fileChanged
 pub struct QFileSystemWatcher_fileChanged_signal{poi:u64}
 impl /* struct */ QFileSystemWatcher {
-  pub fn fileChanged_1(&self) -> QFileSystemWatcher_fileChanged_signal {
+  pub fn fileChanged(&self) -> QFileSystemWatcher_fileChanged_signal {
      return QFileSystemWatcher_fileChanged_signal{poi:self.qclsinst};
   }
 }

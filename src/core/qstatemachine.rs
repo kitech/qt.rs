@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtCore/qstatemachine.h
 // dst-file: /src/core/qstatemachine.rs
 //
@@ -62,8 +62,6 @@ extern {
   fn _ZN13QStateMachineD0Ev(qthis: u64 /* *mut c_void*/);
   // proto:  const QMetaObject * QStateMachine::metaObject();
   fn _ZNK13QStateMachine10metaObjectEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QStateMachine::runningChanged(bool running);
-  fn _ZN13QStateMachine14runningChangedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QStateMachine::addState(QAbstractState * state);
   fn _ZN13QStateMachine8addStateEP14QAbstractState(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QStateMachine::clearError();
@@ -90,9 +88,9 @@ extern {
 pub struct QStateMachine {
   qbase: QState,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _started_1: QStateMachine_started_signal,
-  pub _runningChanged_1: QStateMachine_runningChanged_signal,
-  pub _stopped_1: QStateMachine_stopped_signal,
+  pub _started: QStateMachine_started_signal,
+  pub _runningChanged: QStateMachine_runningChanged_signal,
+  pub _stopped: QStateMachine_stopped_signal,
 }
 
 impl /*struct*/ QStateMachine {
@@ -417,29 +415,6 @@ impl<'a> /*trait*/ QStateMachine_metaObject<()> for () {
   }
 }
 
-  // proto:  void QStateMachine::runningChanged(bool running);
-impl /*struct*/ QStateMachine {
-  pub fn runningChanged<RetType, T: QStateMachine_runningChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.runningChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QStateMachine_runningChanged<RetType> {
-  fn runningChanged(self , rsthis: & QStateMachine) -> RetType;
-}
-
-  // proto:  void QStateMachine::runningChanged(bool running);
-impl<'a> /*trait*/ QStateMachine_runningChanged<()> for (i8) {
-  fn runningChanged(self , rsthis: & QStateMachine) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QStateMachine14runningChangedEb()};
-    let arg0 = self  as c_char;
-     unsafe {_ZN13QStateMachine14runningChangedEb(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  void QStateMachine::addState(QAbstractState * state);
 impl /*struct*/ QStateMachine {
   pub fn addState<RetType, T: QStateMachine_addState<RetType>>(& self,  overload_args: T) -> RetType {
@@ -619,7 +594,7 @@ impl<'a> /*trait*/ QStateMachine_new for (&'a QStateMachine) {
 #[derive(Default)] // for QStateMachine_started
 pub struct QStateMachine_started_signal{poi:u64}
 impl /* struct */ QStateMachine {
-  pub fn started_1(&self) -> QStateMachine_started_signal {
+  pub fn started(&self) -> QStateMachine_started_signal {
      return QStateMachine_started_signal{poi:self.qclsinst};
   }
 }
@@ -635,7 +610,7 @@ pub trait QStateMachine_started_signal_connect {
 #[derive(Default)] // for QStateMachine_runningChanged
 pub struct QStateMachine_runningChanged_signal{poi:u64}
 impl /* struct */ QStateMachine {
-  pub fn runningChanged_1(&self) -> QStateMachine_runningChanged_signal {
+  pub fn runningChanged(&self) -> QStateMachine_runningChanged_signal {
      return QStateMachine_runningChanged_signal{poi:self.qclsinst};
   }
 }
@@ -651,7 +626,7 @@ pub trait QStateMachine_runningChanged_signal_connect {
 #[derive(Default)] // for QStateMachine_stopped
 pub struct QStateMachine_stopped_signal{poi:u64}
 impl /* struct */ QStateMachine {
-  pub fn stopped_1(&self) -> QStateMachine_stopped_signal {
+  pub fn stopped(&self) -> QStateMachine_stopped_signal {
      return QStateMachine_stopped_signal{poi:self.qclsinst};
   }
 }
@@ -670,11 +645,12 @@ extern fn QStateMachine_runningChanged_signal_connect_cb_0(rsfptr:fn(i8), arg0: 
   let rsarg0 = arg0 as i8;
   rsfptr(rsarg0);
 }
-extern fn QStateMachine_runningChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(i8), arg0: c_char) {
+extern fn QStateMachine_runningChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(i8)>, arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i8;
-  rsfptr(rsarg0);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QStateMachine_runningChanged_signal_connect for fn(i8) {
   fn connect(self, sigthis: QStateMachine_runningChanged_signal) {
@@ -695,7 +671,7 @@ impl /* trait */ QStateMachine_runningChanged_signal_connect for Box<Fn(i8)> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QStateMachine_runningChanged_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QStateMachine_SlotProxy_connect__ZN13QStateMachine14runningChangedEb(arg0, arg1, arg2)};
   }
 }

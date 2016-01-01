@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtCore/qstate.h
 // dst-file: /src/core/qstate.rs
 //
@@ -72,11 +72,11 @@ extern {
 pub struct QState {
   qbase: QAbstractState,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _childModeChanged_1: QState_childModeChanged_signal,
-  pub _errorStateChanged_1: QState_errorStateChanged_signal,
-  pub _finished_1: QState_finished_signal,
-  pub _propertiesAssigned_1: QState_propertiesAssigned_signal,
-  pub _initialStateChanged_1: QState_initialStateChanged_signal,
+  pub _childModeChanged: QState_childModeChanged_signal,
+  pub _errorStateChanged: QState_errorStateChanged_signal,
+  pub _finished: QState_finished_signal,
+  pub _propertiesAssigned: QState_propertiesAssigned_signal,
+  pub _initialStateChanged: QState_initialStateChanged_signal,
 }
 
 impl /*struct*/ QState {
@@ -381,7 +381,7 @@ impl<'a> /*trait*/ QState_setInitialState<()> for (&'a QAbstractState) {
 #[derive(Default)] // for QState_childModeChanged
 pub struct QState_childModeChanged_signal{poi:u64}
 impl /* struct */ QState {
-  pub fn childModeChanged_1(&self) -> QState_childModeChanged_signal {
+  pub fn childModeChanged(&self) -> QState_childModeChanged_signal {
      return QState_childModeChanged_signal{poi:self.qclsinst};
   }
 }
@@ -397,7 +397,7 @@ pub trait QState_childModeChanged_signal_connect {
 #[derive(Default)] // for QState_errorStateChanged
 pub struct QState_errorStateChanged_signal{poi:u64}
 impl /* struct */ QState {
-  pub fn errorStateChanged_1(&self) -> QState_errorStateChanged_signal {
+  pub fn errorStateChanged(&self) -> QState_errorStateChanged_signal {
      return QState_errorStateChanged_signal{poi:self.qclsinst};
   }
 }
@@ -413,7 +413,7 @@ pub trait QState_errorStateChanged_signal_connect {
 #[derive(Default)] // for QState_finished
 pub struct QState_finished_signal{poi:u64}
 impl /* struct */ QState {
-  pub fn finished_1(&self) -> QState_finished_signal {
+  pub fn finished(&self) -> QState_finished_signal {
      return QState_finished_signal{poi:self.qclsinst};
   }
 }
@@ -429,7 +429,7 @@ pub trait QState_finished_signal_connect {
 #[derive(Default)] // for QState_propertiesAssigned
 pub struct QState_propertiesAssigned_signal{poi:u64}
 impl /* struct */ QState {
-  pub fn propertiesAssigned_1(&self) -> QState_propertiesAssigned_signal {
+  pub fn propertiesAssigned(&self) -> QState_propertiesAssigned_signal {
      return QState_propertiesAssigned_signal{poi:self.qclsinst};
   }
 }
@@ -445,7 +445,7 @@ pub trait QState_propertiesAssigned_signal_connect {
 #[derive(Default)] // for QState_initialStateChanged
 pub struct QState_initialStateChanged_signal{poi:u64}
 impl /* struct */ QState {
-  pub fn initialStateChanged_1(&self) -> QState_initialStateChanged_signal {
+  pub fn initialStateChanged(&self) -> QState_initialStateChanged_signal {
      return QState_initialStateChanged_signal{poi:self.qclsinst};
   }
 }

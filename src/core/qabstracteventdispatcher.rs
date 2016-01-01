@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 12:13:41 2016
+// created: Fri Jan  1 15:54:32 2016
 // src-file: /QtCore/qabstracteventdispatcher.h
 // dst-file: /src/core/qabstracteventdispatcher.rs
 //
@@ -45,12 +45,8 @@ extern {
   fn _ZN24QAbstractEventDispatcher17filterNativeEventERK10QByteArrayPvPl(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_long) -> c_char;
   // proto:  void QAbstractEventDispatcher::~QAbstractEventDispatcher();
   fn _ZN24QAbstractEventDispatcherD0Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  void QAbstractEventDispatcher::aboutToBlock();
-  fn _ZN24QAbstractEventDispatcher12aboutToBlockEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractEventDispatcher::interrupt();
   fn _ZN24QAbstractEventDispatcher9interruptEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QAbstractEventDispatcher::awake();
-  fn _ZN24QAbstractEventDispatcher5awakeEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractEventDispatcher::registerSocketNotifier(QSocketNotifier * notifier);
   fn _ZN24QAbstractEventDispatcher22registerSocketNotifierEP15QSocketNotifier(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAbstractEventDispatcher::installNativeEventFilter(QAbstractNativeEventFilter * filterObj);
@@ -85,8 +81,8 @@ extern {
 pub struct QAbstractEventDispatcher {
   qbase: QObject,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _aboutToBlock_1: QAbstractEventDispatcher_aboutToBlock_signal,
-  pub _awake_1: QAbstractEventDispatcher_awake_signal,
+  pub _aboutToBlock: QAbstractEventDispatcher_aboutToBlock_signal,
+  pub _awake: QAbstractEventDispatcher_awake_signal,
 }
 
 impl /*struct*/ QAbstractEventDispatcher {
@@ -229,28 +225,6 @@ impl<'a> /*trait*/ QAbstractEventDispatcher_free<()> for () {
   }
 }
 
-  // proto:  void QAbstractEventDispatcher::aboutToBlock();
-impl /*struct*/ QAbstractEventDispatcher {
-  pub fn aboutToBlock<RetType, T: QAbstractEventDispatcher_aboutToBlock<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.aboutToBlock(self);
-    // return 1;
-  }
-}
-
-pub trait QAbstractEventDispatcher_aboutToBlock<RetType> {
-  fn aboutToBlock(self , rsthis: & QAbstractEventDispatcher) -> RetType;
-}
-
-  // proto:  void QAbstractEventDispatcher::aboutToBlock();
-impl<'a> /*trait*/ QAbstractEventDispatcher_aboutToBlock<()> for () {
-  fn aboutToBlock(self , rsthis: & QAbstractEventDispatcher) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN24QAbstractEventDispatcher12aboutToBlockEv()};
-     unsafe {_ZN24QAbstractEventDispatcher12aboutToBlockEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto:  void QAbstractEventDispatcher::interrupt();
 impl /*struct*/ QAbstractEventDispatcher {
   pub fn interrupt<RetType, T: QAbstractEventDispatcher_interrupt<RetType>>(& self,  overload_args: T) -> RetType {
@@ -269,28 +243,6 @@ impl<'a> /*trait*/ QAbstractEventDispatcher_interrupt<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QAbstractEventDispatcher9interruptEv()};
      unsafe {_ZN24QAbstractEventDispatcher9interruptEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QAbstractEventDispatcher::awake();
-impl /*struct*/ QAbstractEventDispatcher {
-  pub fn awake<RetType, T: QAbstractEventDispatcher_awake<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.awake(self);
-    // return 1;
-  }
-}
-
-pub trait QAbstractEventDispatcher_awake<RetType> {
-  fn awake(self , rsthis: & QAbstractEventDispatcher) -> RetType;
-}
-
-  // proto:  void QAbstractEventDispatcher::awake();
-impl<'a> /*trait*/ QAbstractEventDispatcher_awake<()> for () {
-  fn awake(self , rsthis: & QAbstractEventDispatcher) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN24QAbstractEventDispatcher5awakeEv()};
-     unsafe {_ZN24QAbstractEventDispatcher5awakeEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -572,7 +524,7 @@ impl<'a> /*trait*/ QAbstractEventDispatcher_unregisterTimer<i8> for (i32) {
 #[derive(Default)] // for QAbstractEventDispatcher_aboutToBlock
 pub struct QAbstractEventDispatcher_aboutToBlock_signal{poi:u64}
 impl /* struct */ QAbstractEventDispatcher {
-  pub fn aboutToBlock_1(&self) -> QAbstractEventDispatcher_aboutToBlock_signal {
+  pub fn aboutToBlock(&self) -> QAbstractEventDispatcher_aboutToBlock_signal {
      return QAbstractEventDispatcher_aboutToBlock_signal{poi:self.qclsinst};
   }
 }
@@ -588,7 +540,7 @@ pub trait QAbstractEventDispatcher_aboutToBlock_signal_connect {
 #[derive(Default)] // for QAbstractEventDispatcher_awake
 pub struct QAbstractEventDispatcher_awake_signal{poi:u64}
 impl /* struct */ QAbstractEventDispatcher {
-  pub fn awake_1(&self) -> QAbstractEventDispatcher_awake_signal {
+  pub fn awake(&self) -> QAbstractEventDispatcher_awake_signal {
      return QAbstractEventDispatcher_awake_signal{poi:self.qclsinst};
   }
 }
@@ -606,10 +558,11 @@ extern fn QAbstractEventDispatcher_aboutToBlock_signal_connect_cb_0(rsfptr:fn(),
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QAbstractEventDispatcher_aboutToBlock_signal_connect_cb_box_0(rsfptr_raw:*mut Fn(), ) {
+extern fn QAbstractEventDispatcher_aboutToBlock_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  rsfptr();
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QAbstractEventDispatcher_aboutToBlock_signal_connect for fn() {
   fn connect(self, sigthis: QAbstractEventDispatcher_aboutToBlock_signal) {
@@ -630,7 +583,7 @@ impl /* trait */ QAbstractEventDispatcher_aboutToBlock_signal_connect for Box<Fn
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAbstractEventDispatcher_aboutToBlock_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QAbstractEventDispatcher_SlotProxy_connect__ZN24QAbstractEventDispatcher12aboutToBlockEv(arg0, arg1, arg2)};
   }
 }
@@ -639,10 +592,11 @@ extern fn QAbstractEventDispatcher_awake_signal_connect_cb_1(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QAbstractEventDispatcher_awake_signal_connect_cb_box_1(rsfptr_raw:*mut Fn(), ) {
+extern fn QAbstractEventDispatcher_awake_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  rsfptr();
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QAbstractEventDispatcher_awake_signal_connect for fn() {
   fn connect(self, sigthis: QAbstractEventDispatcher_awake_signal) {
@@ -663,7 +617,7 @@ impl /* trait */ QAbstractEventDispatcher_awake_signal_connect for Box<Fn()> {
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAbstractEventDispatcher_awake_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QAbstractEventDispatcher_SlotProxy_connect__ZN24QAbstractEventDispatcher5awakeEv(arg0, arg1, arg2)};
   }
 }
