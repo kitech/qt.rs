@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qjsondocument.h
 // dst-file: /src/core/qjsondocument.rs
 //
@@ -43,8 +43,7 @@ extern {
   // proto:  bool QJsonDocument::isNull();
   fn _ZNK13QJsonDocument6isNullEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QJsonDocument::QJsonDocument();
-  fn dector_ZN13QJsonDocumentC1Ev() -> *mut c_void;
-  fn _ZN13QJsonDocumentC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN13QJsonDocumentC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QVariant QJsonDocument::toVariant();
   fn _ZNK13QJsonDocument9toVariantEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QJsonDocument::isEmpty();
@@ -54,7 +53,7 @@ extern {
   // proto:  bool QJsonDocument::isObject();
   fn _ZNK13QJsonDocument8isObjectEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QJsonDocument::~QJsonDocument();
-  fn _ZN13QJsonDocumentD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN13QJsonDocumentD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QJsonDocument::isArray();
   fn _ZNK13QJsonDocument7isArrayEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QByteArray QJsonDocument::toBinaryData();
@@ -215,11 +214,11 @@ pub trait QJsonDocument_new {
 impl<'a> /*trait*/ QJsonDocument_new for () {
   fn new(self) -> QJsonDocument {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QJsonDocumentC1Ev()};
+    // unsafe{_ZN13QJsonDocumentC2Ev()};
     let ctysz: c_int = unsafe{QJsonDocument_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN13QJsonDocumentC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN13QJsonDocumentC1Ev()} as u64;
+    unsafe {_ZN13QJsonDocumentC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QJsonDocument{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -337,8 +336,8 @@ pub trait QJsonDocument_free<RetType> {
 impl<'a> /*trait*/ QJsonDocument_free<()> for () {
   fn free(self , rsthis: & QJsonDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QJsonDocumentD0Ev()};
-     unsafe {_ZN13QJsonDocumentD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN13QJsonDocumentD2Ev()};
+     unsafe {_ZN13QJsonDocumentD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

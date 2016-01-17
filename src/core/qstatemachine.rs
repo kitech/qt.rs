@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qstatemachine.h
 // dst-file: /src/core/qstatemachine.rs
 //
@@ -50,8 +50,7 @@ extern {
   // proto:  void QStateMachine::setAnimated(bool enabled);
   fn _ZN13QStateMachine11setAnimatedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QStateMachine::QStateMachine(QObject * parent);
-  fn dector_ZN13QStateMachineC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN13QStateMachineC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN13QStateMachineC2EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QString QStateMachine::errorString();
   fn _ZNK13QStateMachine11errorStringEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QStateMachine::isRunning();
@@ -59,7 +58,7 @@ extern {
   // proto:  bool QStateMachine::cancelDelayedEvent(int id);
   fn _ZN13QStateMachine18cancelDelayedEventEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
   // proto:  void QStateMachine::~QStateMachine();
-  fn _ZN13QStateMachineD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN13QStateMachineD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  const QMetaObject * QStateMachine::metaObject();
   fn _ZNK13QStateMachine10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QStateMachine::addState(QAbstractState * state);
@@ -77,8 +76,7 @@ extern {
   // proto:  bool QStateMachine::eventFilter(QObject * watched, QEvent * event);
   fn _ZN13QStateMachine11eventFilterEP7QObjectP6QEvent(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> c_char;
   // proto:  void QStateMachine::QStateMachine(const QStateMachine & );
-  fn dector_ZN13QStateMachineC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN13QStateMachineC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN13QStateMachineC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QStateMachine_SlotProxy_connect__ZN13QStateMachine14runningChangedEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
@@ -288,12 +286,12 @@ pub trait QStateMachine_new {
 impl<'a> /*trait*/ QStateMachine_new for (&'a QObject) {
   fn new(self) -> QStateMachine {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QStateMachineC1EP7QObject()};
+    // unsafe{_ZN13QStateMachineC2EP7QObject()};
     let ctysz: c_int = unsafe{QStateMachine_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN13QStateMachineC1EP7QObject(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN13QStateMachineC1EP7QObject(arg0)} as u64;
+    unsafe {_ZN13QStateMachineC2EP7QObject(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStateMachine{qbase: QState::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -387,8 +385,8 @@ pub trait QStateMachine_free<RetType> {
 impl<'a> /*trait*/ QStateMachine_free<()> for () {
   fn free(self , rsthis: & QStateMachine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QStateMachineD0Ev()};
-     unsafe {_ZN13QStateMachineD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN13QStateMachineD2Ev()};
+     unsafe {_ZN13QStateMachineD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -579,12 +577,12 @@ impl<'a> /*trait*/ QStateMachine_eventFilter<i8> for (&'a QObject, &'a QEvent) {
 impl<'a> /*trait*/ QStateMachine_new for (&'a QStateMachine) {
   fn new(self) -> QStateMachine {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QStateMachineC1ERKS_()};
+    // unsafe{_ZN13QStateMachineC2ERKS_()};
     let ctysz: c_int = unsafe{QStateMachine_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN13QStateMachineC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN13QStateMachineC1ERKS_(arg0)} as u64;
+    unsafe {_ZN13QStateMachineC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStateMachine{qbase: QState::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

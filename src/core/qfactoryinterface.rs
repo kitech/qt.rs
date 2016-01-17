@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qfactoryinterface.h
 // dst-file: /src/core/qfactoryinterface.rs
 //
@@ -30,7 +30,7 @@ use std::ops::Deref;
 extern {
   fn QFactoryInterface_Class_Size() -> c_int;
   // proto:  void QFactoryInterface::~QFactoryInterface();
-  fn _ZN17QFactoryInterfaceD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN17QFactoryInterfaceD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QStringList QFactoryInterface::keys();
   fn _ZNK17QFactoryInterface4keysEv(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
@@ -64,8 +64,8 @@ pub trait QFactoryInterface_free<RetType> {
 impl<'a> /*trait*/ QFactoryInterface_free<()> for () {
   fn free(self , rsthis: & QFactoryInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QFactoryInterfaceD0Ev()};
-     unsafe {_ZN17QFactoryInterfaceD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN17QFactoryInterfaceD2Ev()};
+     unsafe {_ZN17QFactoryInterfaceD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

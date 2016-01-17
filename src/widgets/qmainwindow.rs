@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qmainwindow.h
 // dst-file: /src/widgets/qmainwindow.rs
 //
@@ -58,8 +58,7 @@ extern {
   // proto:  void QMainWindow::removeDockWidget(QDockWidget * dockwidget);
   fn _ZN11QMainWindow16removeDockWidgetEP11QDockWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMainWindow::QMainWindow(const QMainWindow & );
-  fn dector_ZN11QMainWindowC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QMainWindowC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN11QMainWindowC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QMainWindow::isAnimated();
   fn _ZNK11QMainWindow10isAnimatedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QToolBar * QMainWindow::addToolBar(const QString & title);
@@ -89,7 +88,7 @@ extern {
   // proto:  void QMainWindow::setStatusBar(QStatusBar * statusbar);
   fn _ZN11QMainWindow12setStatusBarEP10QStatusBar(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMainWindow::~QMainWindow();
-  fn _ZN11QMainWindowD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN11QMainWindowD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QMainWindow::isSeparator(const QPoint & pos);
   fn _ZNK11QMainWindow11isSeparatorERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  QSize QMainWindow::iconSize();
@@ -373,12 +372,12 @@ pub trait QMainWindow_new {
 impl<'a> /*trait*/ QMainWindow_new for (&'a QMainWindow) {
   fn new(self) -> QMainWindow {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QMainWindowC1ERKS_()};
+    // unsafe{_ZN11QMainWindowC2ERKS_()};
     let ctysz: c_int = unsafe{QMainWindow_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN11QMainWindowC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN11QMainWindowC1ERKS_(arg0)} as u64;
+    unsafe {_ZN11QMainWindowC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QMainWindow{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -722,8 +721,8 @@ pub trait QMainWindow_free<RetType> {
 impl<'a> /*trait*/ QMainWindow_free<()> for () {
   fn free(self , rsthis: & QMainWindow) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QMainWindowD0Ev()};
-     unsafe {_ZN11QMainWindowD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN11QMainWindowD2Ev()};
+     unsafe {_ZN11QMainWindowD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

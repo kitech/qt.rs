@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtGui/qstylehints.h
 // dst-file: /src/gui/qstylehints.rs
 //
@@ -42,8 +42,7 @@ extern {
   // proto:  void QStyleHints::setKeyboardInputInterval(int keyboardInputInterval);
   fn _ZN11QStyleHints24setKeyboardInputIntervalEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QStyleHints::QStyleHints();
-  fn dector_ZN11QStyleHintsC1Ev() -> *mut c_void;
-  fn _ZN11QStyleHintsC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN11QStyleHintsC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QStyleHints::showIsFullScreen();
   fn _ZNK11QStyleHints16showIsFullScreenEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QStyleHints::useRtlExtensions();
@@ -244,11 +243,11 @@ pub trait QStyleHints_new {
 impl<'a> /*trait*/ QStyleHints_new for () {
   fn new(self) -> QStyleHints {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QStyleHintsC1Ev()};
+    // unsafe{_ZN11QStyleHintsC2Ev()};
     let ctysz: c_int = unsafe{QStyleHints_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN11QStyleHintsC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN11QStyleHintsC1Ev()} as u64;
+    unsafe {_ZN11QStyleHintsC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleHints{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

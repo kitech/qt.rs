@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qcheckbox.h
 // dst-file: /src/widgets/qcheckbox.rs
 //
@@ -38,22 +38,19 @@ extern {
   // proto:  QSize QCheckBox::minimumSizeHint();
   fn _ZNK9QCheckBox15minimumSizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QCheckBox::~QCheckBox();
-  fn _ZN9QCheckBoxD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN9QCheckBoxD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QSize QCheckBox::sizeHint();
   fn _ZNK9QCheckBox8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QCheckBox::setTristate(bool y);
   fn _ZN9QCheckBox11setTristateEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QCheckBox::QCheckBox(const QCheckBox & );
-  fn dector_ZN9QCheckBoxC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QCheckBoxC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN9QCheckBoxC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QCheckBox::QCheckBox(QWidget * parent);
-  fn dector_ZN9QCheckBoxC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QCheckBoxC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN9QCheckBoxC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QCheckBox::isTristate();
   fn _ZNK9QCheckBox10isTristateEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QCheckBox::QCheckBox(const QString & text, QWidget * parent);
-  fn dector_ZN9QCheckBoxC1ERK7QStringP7QWidget(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN9QCheckBoxC1ERK7QStringP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN9QCheckBoxC2ERK7QStringP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   fn QCheckBox_SlotProxy_connect__ZN9QCheckBox12stateChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
@@ -145,8 +142,8 @@ pub trait QCheckBox_free<RetType> {
 impl<'a> /*trait*/ QCheckBox_free<()> for () {
   fn free(self , rsthis: & QCheckBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QCheckBoxD0Ev()};
-     unsafe {_ZN9QCheckBoxD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN9QCheckBoxD2Ev()};
+     unsafe {_ZN9QCheckBoxD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -215,12 +212,12 @@ pub trait QCheckBox_new {
 impl<'a> /*trait*/ QCheckBox_new for (&'a QCheckBox) {
   fn new(self) -> QCheckBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QCheckBoxC1ERKS_()};
+    // unsafe{_ZN9QCheckBoxC2ERKS_()};
     let ctysz: c_int = unsafe{QCheckBox_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN9QCheckBoxC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN9QCheckBoxC1ERKS_(arg0)} as u64;
+    unsafe {_ZN9QCheckBoxC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QCheckBox{qbase: QAbstractButton::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -231,12 +228,12 @@ impl<'a> /*trait*/ QCheckBox_new for (&'a QCheckBox) {
 impl<'a> /*trait*/ QCheckBox_new for (&'a QWidget) {
   fn new(self) -> QCheckBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QCheckBoxC1EP7QWidget()};
+    // unsafe{_ZN9QCheckBoxC2EP7QWidget()};
     let ctysz: c_int = unsafe{QCheckBox_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN9QCheckBoxC1EP7QWidget(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN9QCheckBoxC1EP7QWidget(arg0)} as u64;
+    unsafe {_ZN9QCheckBoxC2EP7QWidget(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QCheckBox{qbase: QAbstractButton::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -270,13 +267,13 @@ impl<'a> /*trait*/ QCheckBox_isTristate<i8> for () {
 impl<'a> /*trait*/ QCheckBox_new for (&'a QString, &'a QWidget) {
   fn new(self) -> QCheckBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QCheckBoxC1ERK7QStringP7QWidget()};
+    // unsafe{_ZN9QCheckBoxC2ERK7QStringP7QWidget()};
     let ctysz: c_int = unsafe{QCheckBox_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    // unsafe {_ZN9QCheckBoxC1ERK7QStringP7QWidget(qthis, arg0, arg1)};
-    let qthis: u64 = unsafe {dector_ZN9QCheckBoxC1ERK7QStringP7QWidget(arg0, arg1)} as u64;
+    unsafe {_ZN9QCheckBoxC2ERK7QStringP7QWidget(qthis_ph, arg0, arg1)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QCheckBox{qbase: QAbstractButton::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtGui/qscreen.h
 // dst-file: /src/gui/qscreen.rs
 //
@@ -50,7 +50,7 @@ extern {
   // proto:  QRect QScreen::availableVirtualGeometry();
   fn _ZNK7QScreen24availableVirtualGeometryEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QScreen::~QScreen();
-  fn _ZN7QScreenD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN7QScreenD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QSize QScreen::virtualSize();
   fn _ZNK7QScreen11virtualSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  qreal QScreen::devicePixelRatio();
@@ -58,8 +58,7 @@ extern {
   // proto:  QList<QScreen *> QScreen::virtualSiblings();
   fn _ZNK7QScreen15virtualSiblingsEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QScreen::QScreen(const QScreen & );
-  fn dector_ZN7QScreenC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN7QScreenC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN7QScreenC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QRect QScreen::virtualGeometry();
   fn _ZNK7QScreen15virtualGeometryEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  qreal QScreen::logicalDotsPerInch();
@@ -317,8 +316,8 @@ pub trait QScreen_free<RetType> {
 impl<'a> /*trait*/ QScreen_free<()> for () {
   fn free(self , rsthis: & QScreen) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QScreenD0Ev()};
-     unsafe {_ZN7QScreenD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN7QScreenD2Ev()};
+     unsafe {_ZN7QScreenD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -409,12 +408,12 @@ pub trait QScreen_new {
 impl<'a> /*trait*/ QScreen_new for (&'a QScreen) {
   fn new(self) -> QScreen {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QScreenC1ERKS_()};
+    // unsafe{_ZN7QScreenC2ERKS_()};
     let ctysz: c_int = unsafe{QScreen_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN7QScreenC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN7QScreenC1ERKS_(arg0)} as u64;
+    unsafe {_ZN7QScreenC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QScreen{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

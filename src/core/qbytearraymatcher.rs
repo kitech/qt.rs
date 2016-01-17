@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qbytearraymatcher.h
 // dst-file: /src/core/qbytearraymatcher.rs
 //
@@ -31,27 +31,23 @@ use super::qbytearray::QByteArray; // 773
 extern {
   fn QByteArrayMatcher_Class_Size() -> c_int;
   // proto:  QByteArray QByteArrayMatcher::pattern();
-  fn demth_ZNK17QByteArrayMatcher7patternEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn _ZNK17QByteArrayMatcher7patternEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QByteArrayMatcher::indexIn(const char * str, int len, int from);
   fn _ZNK17QByteArrayMatcher7indexInEPKcii(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int, arg2: c_int) -> c_int;
   // proto:  void QByteArrayMatcher::setPattern(const QByteArray & pattern);
   fn _ZN17QByteArrayMatcher10setPatternERK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QByteArrayMatcher::QByteArrayMatcher();
-  fn dector_ZN17QByteArrayMatcherC1Ev() -> *mut c_void;
-  fn _ZN17QByteArrayMatcherC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN17QByteArrayMatcherC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QByteArrayMatcher::QByteArrayMatcher(const char * pattern, int length);
-  fn dector_ZN17QByteArrayMatcherC1EPKci(arg0: *mut c_char, arg1: c_int) -> *mut c_void;
-  fn _ZN17QByteArrayMatcherC1EPKci(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int);
+  fn _ZN17QByteArrayMatcherC2EPKci(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int);
   // proto:  void QByteArrayMatcher::QByteArrayMatcher(const QByteArray & pattern);
-  fn dector_ZN17QByteArrayMatcherC1ERK10QByteArray(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN17QByteArrayMatcherC1ERK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN17QByteArrayMatcherC2ERK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QByteArrayMatcher::indexIn(const QByteArray & ba, int from);
   fn _ZNK17QByteArrayMatcher7indexInERK10QByteArrayi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> c_int;
   // proto:  void QByteArrayMatcher::QByteArrayMatcher(const QByteArrayMatcher & other);
-  fn dector_ZN17QByteArrayMatcherC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN17QByteArrayMatcherC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN17QByteArrayMatcherC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QByteArrayMatcher::~QByteArrayMatcher();
-  fn _ZN17QByteArrayMatcherD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN17QByteArrayMatcherD2Ev(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
@@ -84,7 +80,7 @@ impl<'a> /*trait*/ QByteArrayMatcher_pattern<QByteArray> for () {
   fn pattern(self , rsthis: & QByteArrayMatcher) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 1040)};
     // unsafe{_ZNK17QByteArrayMatcher7patternEv()};
-    let mut ret = unsafe {demth_ZNK17QByteArrayMatcher7patternEv(rsthis.qclsinst)};
+    let mut ret = unsafe {_ZNK17QByteArrayMatcher7patternEv(rsthis.qclsinst)};
     let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -157,11 +153,11 @@ pub trait QByteArrayMatcher_new {
 impl<'a> /*trait*/ QByteArrayMatcher_new for () {
   fn new(self) -> QByteArrayMatcher {
     // let qthis: *mut c_void = unsafe{calloc(1, 1040)};
-    // unsafe{_ZN17QByteArrayMatcherC1Ev()};
+    // unsafe{_ZN17QByteArrayMatcherC2Ev()};
     let ctysz: c_int = unsafe{QByteArrayMatcher_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN17QByteArrayMatcherC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN17QByteArrayMatcherC1Ev()} as u64;
+    unsafe {_ZN17QByteArrayMatcherC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QByteArrayMatcher{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -172,13 +168,13 @@ impl<'a> /*trait*/ QByteArrayMatcher_new for () {
 impl<'a> /*trait*/ QByteArrayMatcher_new for (&'a  String, i32) {
   fn new(self) -> QByteArrayMatcher {
     // let qthis: *mut c_void = unsafe{calloc(1, 1040)};
-    // unsafe{_ZN17QByteArrayMatcherC1EPKci()};
+    // unsafe{_ZN17QByteArrayMatcherC2EPKci()};
     let ctysz: c_int = unsafe{QByteArrayMatcher_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as c_int;
-    // unsafe {_ZN17QByteArrayMatcherC1EPKci(qthis, arg0, arg1)};
-    let qthis: u64 = unsafe {dector_ZN17QByteArrayMatcherC1EPKci(arg0, arg1)} as u64;
+    unsafe {_ZN17QByteArrayMatcherC2EPKci(qthis_ph, arg0, arg1)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QByteArrayMatcher{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -189,12 +185,12 @@ impl<'a> /*trait*/ QByteArrayMatcher_new for (&'a  String, i32) {
 impl<'a> /*trait*/ QByteArrayMatcher_new for (&'a QByteArray) {
   fn new(self) -> QByteArrayMatcher {
     // let qthis: *mut c_void = unsafe{calloc(1, 1040)};
-    // unsafe{_ZN17QByteArrayMatcherC1ERK10QByteArray()};
+    // unsafe{_ZN17QByteArrayMatcherC2ERK10QByteArray()};
     let ctysz: c_int = unsafe{QByteArrayMatcher_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN17QByteArrayMatcherC1ERK10QByteArray(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN17QByteArrayMatcherC1ERK10QByteArray(arg0)} as u64;
+    unsafe {_ZN17QByteArrayMatcherC2ERK10QByteArray(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QByteArrayMatcher{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -218,12 +214,12 @@ impl<'a> /*trait*/ QByteArrayMatcher_indexIn<i32> for (&'a QByteArray, i32) {
 impl<'a> /*trait*/ QByteArrayMatcher_new for (&'a QByteArrayMatcher) {
   fn new(self) -> QByteArrayMatcher {
     // let qthis: *mut c_void = unsafe{calloc(1, 1040)};
-    // unsafe{_ZN17QByteArrayMatcherC1ERKS_()};
+    // unsafe{_ZN17QByteArrayMatcherC2ERKS_()};
     let ctysz: c_int = unsafe{QByteArrayMatcher_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN17QByteArrayMatcherC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN17QByteArrayMatcherC1ERKS_(arg0)} as u64;
+    unsafe {_ZN17QByteArrayMatcherC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QByteArrayMatcher{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -246,8 +242,8 @@ pub trait QByteArrayMatcher_free<RetType> {
 impl<'a> /*trait*/ QByteArrayMatcher_free<()> for () {
   fn free(self , rsthis: & QByteArrayMatcher) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 1040)};
-    // unsafe{_ZN17QByteArrayMatcherD0Ev()};
-     unsafe {_ZN17QByteArrayMatcherD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN17QByteArrayMatcherD2Ev()};
+     unsafe {_ZN17QByteArrayMatcherD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

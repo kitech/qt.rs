@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qiodevice.h
 // dst-file: /src/core/qiodevice.rs
 //
@@ -37,7 +37,7 @@ extern {
   // proto:  QString QIODevice::errorString();
   fn _ZNK9QIODevice11errorStringEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  qint64 QIODevice::write(const QByteArray & data);
-  fn demth_ZN9QIODevice5writeERK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_longlong;
+  fn _ZN9QIODevice5writeERK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_longlong;
   // proto:  qint64 QIODevice::write(const char * data);
   fn _ZN9QIODevice5writeEPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> c_longlong;
   // proto:  bool QIODevice::isReadable();
@@ -71,8 +71,7 @@ extern {
   // proto:  bool QIODevice::seek(qint64 pos);
   fn _ZN9QIODevice4seekEx(qthis: u64 /* *mut c_void*/, arg0: c_longlong) -> c_char;
   // proto:  void QIODevice::QIODevice(const QIODevice & );
-  fn dector_ZN9QIODeviceC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QIODeviceC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN9QIODeviceC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  qint64 QIODevice::pos();
   fn _ZNK9QIODevice3posEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
   // proto:  QByteArray QIODevice::read(qint64 maxlen);
@@ -92,21 +91,19 @@ extern {
   // proto:  QByteArray QIODevice::peek(qint64 maxlen);
   fn _ZN9QIODevice4peekEx(qthis: u64 /* *mut c_void*/, arg0: c_longlong) -> *mut c_void;
   // proto:  void QIODevice::QIODevice(QObject * parent);
-  fn dector_ZN9QIODeviceC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QIODeviceC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN9QIODeviceC2EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QIODevice::metaObject();
   fn _ZNK9QIODevice10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QIODevice::setTextModeEnabled(bool enabled);
   fn _ZN9QIODevice18setTextModeEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QIODevice::QIODevice();
-  fn dector_ZN9QIODeviceC1Ev() -> *mut c_void;
-  fn _ZN9QIODeviceC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN9QIODeviceC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QIODevice::isOpen();
   fn _ZNK9QIODevice6isOpenEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QIODevice::canReadLine();
   fn _ZNK9QIODevice11canReadLineEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QIODevice::~QIODevice();
-  fn _ZN9QIODeviceD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN9QIODeviceD2Ev(qthis: u64 /* *mut c_void*/);
   fn QIODevice_SlotProxy_connect__ZN9QIODevice12bytesWrittenEx(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QIODevice_SlotProxy_connect__ZN9QIODevice12aboutToCloseEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QIODevice_SlotProxy_connect__ZN9QIODevice9readyReadEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
@@ -207,7 +204,7 @@ impl<'a> /*trait*/ QIODevice_write<i64> for (&'a QByteArray) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QIODevice5writeERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {demth_ZN9QIODevice5writeERK10QByteArray(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {_ZN9QIODevice5writeERK10QByteArray(rsthis.qclsinst, arg0)};
     return ret as i64;
     // return 1;
   }
@@ -573,12 +570,12 @@ pub trait QIODevice_new {
 impl<'a> /*trait*/ QIODevice_new for (&'a QIODevice) {
   fn new(self) -> QIODevice {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QIODeviceC1ERKS_()};
+    // unsafe{_ZN9QIODeviceC2ERKS_()};
     let ctysz: c_int = unsafe{QIODevice_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN9QIODeviceC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN9QIODeviceC1ERKS_(arg0)} as u64;
+    unsafe {_ZN9QIODeviceC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QIODevice{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -781,12 +778,12 @@ impl<'a> /*trait*/ QIODevice_peek<QByteArray> for (i64) {
 impl<'a> /*trait*/ QIODevice_new for (&'a QObject) {
   fn new(self) -> QIODevice {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QIODeviceC1EP7QObject()};
+    // unsafe{_ZN9QIODeviceC2EP7QObject()};
     let ctysz: c_int = unsafe{QIODevice_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN9QIODeviceC1EP7QObject(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN9QIODeviceC1EP7QObject(arg0)} as u64;
+    unsafe {_ZN9QIODeviceC2EP7QObject(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QIODevice{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -842,11 +839,11 @@ impl<'a> /*trait*/ QIODevice_setTextModeEnabled<()> for (i8) {
 impl<'a> /*trait*/ QIODevice_new for () {
   fn new(self) -> QIODevice {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QIODeviceC1Ev()};
+    // unsafe{_ZN9QIODeviceC2Ev()};
     let ctysz: c_int = unsafe{QIODevice_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN9QIODeviceC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN9QIODeviceC1Ev()} as u64;
+    unsafe {_ZN9QIODeviceC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QIODevice{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -915,8 +912,8 @@ pub trait QIODevice_free<RetType> {
 impl<'a> /*trait*/ QIODevice_free<()> for () {
   fn free(self , rsthis: & QIODevice) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QIODeviceD0Ev()};
-     unsafe {_ZN9QIODeviceD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN9QIODeviceD2Ev()};
+     unsafe {_ZN9QIODeviceD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

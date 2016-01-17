@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qabstractscrollarea.h
 // dst-file: /src/widgets/qabstractscrollarea.rs
 //
@@ -38,15 +38,13 @@ extern {
   // proto:  QSize QAbstractScrollArea::maximumViewportSize();
   fn _ZNK19QAbstractScrollArea19maximumViewportSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAbstractScrollArea::QAbstractScrollArea(QWidget * parent);
-  fn dector_ZN19QAbstractScrollAreaC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN19QAbstractScrollAreaC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN19QAbstractScrollAreaC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAbstractScrollArea::setViewport(QWidget * widget);
   fn _ZN19QAbstractScrollArea11setViewportEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QSize QAbstractScrollArea::minimumSizeHint();
   fn _ZNK19QAbstractScrollArea15minimumSizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAbstractScrollArea::QAbstractScrollArea(const QAbstractScrollArea & );
-  fn dector_ZN19QAbstractScrollAreaC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN19QAbstractScrollAreaC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN19QAbstractScrollAreaC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAbstractScrollArea::setCornerWidget(QWidget * widget);
   fn _ZN19QAbstractScrollArea15setCornerWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QAbstractScrollArea::metaObject();
@@ -60,7 +58,7 @@ extern {
   // proto:  QWidget * QAbstractScrollArea::viewport();
   fn _ZNK19QAbstractScrollArea8viewportEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAbstractScrollArea::~QAbstractScrollArea();
-  fn _ZN19QAbstractScrollAreaD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN19QAbstractScrollAreaD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QSize QAbstractScrollArea::sizeHint();
   fn _ZNK19QAbstractScrollArea8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAbstractScrollArea::setHorizontalScrollBar(QScrollBar * scrollbar);
@@ -159,12 +157,12 @@ pub trait QAbstractScrollArea_new {
 impl<'a> /*trait*/ QAbstractScrollArea_new for (&'a QWidget) {
   fn new(self) -> QAbstractScrollArea {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QAbstractScrollAreaC1EP7QWidget()};
+    // unsafe{_ZN19QAbstractScrollAreaC2EP7QWidget()};
     let ctysz: c_int = unsafe{QAbstractScrollArea_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN19QAbstractScrollAreaC1EP7QWidget(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN19QAbstractScrollAreaC1EP7QWidget(arg0)} as u64;
+    unsafe {_ZN19QAbstractScrollAreaC2EP7QWidget(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QAbstractScrollArea{qbase: QFrame::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -222,12 +220,12 @@ impl<'a> /*trait*/ QAbstractScrollArea_minimumSizeHint<QSize> for () {
 impl<'a> /*trait*/ QAbstractScrollArea_new for (&'a QAbstractScrollArea) {
   fn new(self) -> QAbstractScrollArea {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QAbstractScrollAreaC1ERKS_()};
+    // unsafe{_ZN19QAbstractScrollAreaC2ERKS_()};
     let ctysz: c_int = unsafe{QAbstractScrollArea_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN19QAbstractScrollAreaC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN19QAbstractScrollAreaC1ERKS_(arg0)} as u64;
+    unsafe {_ZN19QAbstractScrollAreaC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QAbstractScrollArea{qbase: QFrame::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -390,8 +388,8 @@ pub trait QAbstractScrollArea_free<RetType> {
 impl<'a> /*trait*/ QAbstractScrollArea_free<()> for () {
   fn free(self , rsthis: & QAbstractScrollArea) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QAbstractScrollAreaD0Ev()};
-     unsafe {_ZN19QAbstractScrollAreaD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN19QAbstractScrollAreaD2Ev()};
+     unsafe {_ZN19QAbstractScrollAreaD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

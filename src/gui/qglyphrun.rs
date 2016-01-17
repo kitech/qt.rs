@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtGui/qglyphrun.h
 // dst-file: /src/gui/qglyphrun.rs
 //
@@ -33,7 +33,7 @@ use super::qrawfont::QRawFont; // 773
 extern {
   fn QGlyphRun_Class_Size() -> c_int;
   // proto:  void QGlyphRun::~QGlyphRun();
-  fn _ZN9QGlyphRunD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN9QGlyphRunD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QGlyphRun::setBoundingRect(const QRectF & boundingRect);
   fn _ZN9QGlyphRun15setBoundingRectERK6QRectF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QGlyphRun::overline();
@@ -53,15 +53,13 @@ extern {
   // proto:  bool QGlyphRun::strikeOut();
   fn _ZNK9QGlyphRun9strikeOutEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QGlyphRun::QGlyphRun();
-  fn dector_ZN9QGlyphRunC1Ev() -> *mut c_void;
-  fn _ZN9QGlyphRunC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN9QGlyphRunC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QRawFont QGlyphRun::rawFont();
   fn _ZNK9QGlyphRun7rawFontEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QGlyphRun::setRawFont(const QRawFont & rawFont);
   fn _ZN9QGlyphRun10setRawFontERK8QRawFont(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGlyphRun::QGlyphRun(const QGlyphRun & other);
-  fn dector_ZN9QGlyphRunC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QGlyphRunC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN9QGlyphRunC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QGlyphRun::isRightToLeft();
   fn _ZNK9QGlyphRun13isRightToLeftEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QVector<quint32> QGlyphRun::glyphIndexes();
@@ -107,8 +105,8 @@ pub trait QGlyphRun_free<RetType> {
 impl<'a> /*trait*/ QGlyphRun_free<()> for () {
   fn free(self , rsthis: & QGlyphRun) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QGlyphRunD0Ev()};
-     unsafe {_ZN9QGlyphRunD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN9QGlyphRunD2Ev()};
+     unsafe {_ZN9QGlyphRunD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -337,11 +335,11 @@ pub trait QGlyphRun_new {
 impl<'a> /*trait*/ QGlyphRun_new for () {
   fn new(self) -> QGlyphRun {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QGlyphRunC1Ev()};
+    // unsafe{_ZN9QGlyphRunC2Ev()};
     let ctysz: c_int = unsafe{QGlyphRun_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN9QGlyphRunC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN9QGlyphRunC1Ev()} as u64;
+    unsafe {_ZN9QGlyphRunC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QGlyphRun{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -399,12 +397,12 @@ impl<'a> /*trait*/ QGlyphRun_setRawFont<()> for (&'a QRawFont) {
 impl<'a> /*trait*/ QGlyphRun_new for (&'a QGlyphRun) {
   fn new(self) -> QGlyphRun {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QGlyphRunC1ERKS_()};
+    // unsafe{_ZN9QGlyphRunC2ERKS_()};
     let ctysz: c_int = unsafe{QGlyphRun_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN9QGlyphRunC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN9QGlyphRunC1ERKS_(arg0)} as u64;
+    unsafe {_ZN9QGlyphRunC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QGlyphRun{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

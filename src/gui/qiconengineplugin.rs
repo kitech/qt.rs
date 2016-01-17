@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtGui/qiconengineplugin.h
 // dst-file: /src/gui/qiconengineplugin.rs
 //
@@ -35,12 +35,11 @@ extern {
   // proto:  const QMetaObject * QIconEnginePlugin::metaObject();
   fn _ZNK17QIconEnginePlugin10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QIconEnginePlugin::QIconEnginePlugin(QObject * parent);
-  fn dector_ZN17QIconEnginePluginC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN17QIconEnginePluginC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN17QIconEnginePluginC2EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QIconEngine * QIconEnginePlugin::create(const QString & filename);
   fn _ZN17QIconEnginePlugin6createERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QIconEnginePlugin::~QIconEnginePlugin();
-  fn _ZN17QIconEnginePluginD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN17QIconEnginePluginD2Ev(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
@@ -107,12 +106,12 @@ pub trait QIconEnginePlugin_new {
 impl<'a> /*trait*/ QIconEnginePlugin_new for (&'a QObject) {
   fn new(self) -> QIconEnginePlugin {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QIconEnginePluginC1EP7QObject()};
+    // unsafe{_ZN17QIconEnginePluginC2EP7QObject()};
     let ctysz: c_int = unsafe{QIconEnginePlugin_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN17QIconEnginePluginC1EP7QObject(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN17QIconEnginePluginC1EP7QObject(arg0)} as u64;
+    unsafe {_ZN17QIconEnginePluginC2EP7QObject(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QIconEnginePlugin{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -160,8 +159,8 @@ pub trait QIconEnginePlugin_free<RetType> {
 impl<'a> /*trait*/ QIconEnginePlugin_free<()> for () {
   fn free(self , rsthis: & QIconEnginePlugin) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QIconEnginePluginD0Ev()};
-     unsafe {_ZN17QIconEnginePluginD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN17QIconEnginePluginD2Ev()};
+     unsafe {_ZN17QIconEnginePluginD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtGui/qtexttable.h
 // dst-file: /src/gui/qtexttable.rs
 //
@@ -37,21 +37,19 @@ use super::qtextdocument::QTextDocument; // 773
 extern {
   fn QTextTableCell_Class_Size() -> c_int;
   // proto:  void QTextTableCell::QTextTableCell(const QTextTableCell & o);
-  fn dector_ZN14QTextTableCellC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN14QTextTableCellC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN14QTextTableCellC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTextTableCell::setFormat(const QTextCharFormat & format);
   fn _ZN14QTextTableCell9setFormatERK15QTextCharFormat(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QTextTableCell::lastPosition();
   fn _ZNK14QTextTableCell12lastPositionEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QTextTableCell::~QTextTableCell();
-  fn _ZN14QTextTableCellD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN14QTextTableCellD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  int QTextTableCell::rowSpan();
   fn _ZNK14QTextTableCell7rowSpanEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QTextTableCell::firstPosition();
   fn _ZNK14QTextTableCell13firstPositionEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QTextTableCell::QTextTableCell(const QTextTable * t, int f);
-  fn dector_ZN14QTextTableCellC1EPK10QTextTablei(arg0: *mut c_void, arg1: c_int) -> *mut c_void;
-  fn _ZN14QTextTableCellC1EPK10QTextTablei(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
+  fn _ZN14QTextTableCellC2EPK10QTextTablei(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
   // proto:  int QTextTableCell::tableCellFormatIndex();
   fn _ZNK14QTextTableCell20tableCellFormatIndexEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QTextTableCell::columnSpan();
@@ -61,7 +59,7 @@ extern {
   // proto:  int QTextTableCell::row();
   fn _ZNK14QTextTableCell3rowEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QTextTableCell::isValid();
-  fn demth_ZNK14QTextTableCell7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn _ZNK14QTextTableCell7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QTextCursor QTextTableCell::lastCursorPosition();
   fn _ZNK14QTextTableCell18lastCursorPositionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QTextTableCell::column();
@@ -69,8 +67,7 @@ extern {
   // proto:  QTextCursor QTextTableCell::firstCursorPosition();
   fn _ZNK14QTextTableCell19firstCursorPositionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QTextTableCell::QTextTableCell();
-  fn dector_ZN14QTextTableCellC1Ev() -> *mut c_void;
-  fn _ZN14QTextTableCellC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN14QTextTableCellC2Ev(qthis: u64 /* *mut c_void*/);
   fn QTextTable_Class_Size() -> c_int;
   // proto:  QTextTableCell QTextTable::cellAt(int row, int col);
   fn _ZNK10QTextTable6cellAtEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> *mut c_void;
@@ -87,8 +84,7 @@ extern {
   // proto:  QTextTableCell QTextTable::cellAt(const QTextCursor & c);
   fn _ZNK10QTextTable6cellAtERK11QTextCursor(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QTextTable::QTextTable(const QTextTable & );
-  fn dector_ZN10QTextTableC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN10QTextTableC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN10QTextTableC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTextTable::setFormat(const QTextTableFormat & format);
   fn _ZN10QTextTable9setFormatERK16QTextTableFormat(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTextTable::insertColumns(int pos, int num);
@@ -100,10 +96,9 @@ extern {
   // proto:  void QTextTable::insertRows(int pos, int num);
   fn _ZN10QTextTable10insertRowsEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  void QTextTable::~QTextTable();
-  fn _ZN10QTextTableD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN10QTextTableD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QTextTable::QTextTable(QTextDocument * doc);
-  fn dector_ZN10QTextTableC1EP13QTextDocument(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN10QTextTableC1EP13QTextDocument(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN10QTextTableC2EP13QTextDocument(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QTextTableCell QTextTable::cellAt(int position);
   fn _ZNK10QTextTable6cellAtEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  QTextCursor QTextTable::rowStart(const QTextCursor & c);
@@ -159,12 +154,12 @@ pub trait QTextTableCell_new {
 impl<'a> /*trait*/ QTextTableCell_new for (&'a QTextTableCell) {
   fn new(self) -> QTextTableCell {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QTextTableCellC1ERKS_()};
+    // unsafe{_ZN14QTextTableCellC2ERKS_()};
     let ctysz: c_int = unsafe{QTextTableCell_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN14QTextTableCellC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN14QTextTableCellC1ERKS_(arg0)} as u64;
+    unsafe {_ZN14QTextTableCellC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QTextTableCell{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -233,8 +228,8 @@ pub trait QTextTableCell_free<RetType> {
 impl<'a> /*trait*/ QTextTableCell_free<()> for () {
   fn free(self , rsthis: & QTextTableCell) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QTextTableCellD0Ev()};
-     unsafe {_ZN14QTextTableCellD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN14QTextTableCellD2Ev()};
+     unsafe {_ZN14QTextTableCellD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -289,13 +284,13 @@ impl<'a> /*trait*/ QTextTableCell_firstPosition<i32> for () {
 impl<'a> /*trait*/ QTextTableCell_new for (&'a QTextTable, i32) {
   fn new(self) -> QTextTableCell {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QTextTableCellC1EPK10QTextTablei()};
+    // unsafe{_ZN14QTextTableCellC2EPK10QTextTablei()};
     let ctysz: c_int = unsafe{QTextTableCell_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
-    // unsafe {_ZN14QTextTableCellC1EPK10QTextTablei(qthis, arg0, arg1)};
-    let qthis: u64 = unsafe {dector_ZN14QTextTableCellC1EPK10QTextTablei(arg0, arg1)} as u64;
+    unsafe {_ZN14QTextTableCellC2EPK10QTextTablei(qthis_ph, arg0, arg1)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QTextTableCell{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -412,7 +407,7 @@ impl<'a> /*trait*/ QTextTableCell_isValid<i8> for () {
   fn isValid(self , rsthis: & QTextTableCell) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QTextTableCell7isValidEv()};
-    let mut ret = unsafe {demth_ZNK14QTextTableCell7isValidEv(rsthis.qclsinst)};
+    let mut ret = unsafe {_ZNK14QTextTableCell7isValidEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -493,11 +488,11 @@ impl<'a> /*trait*/ QTextTableCell_firstCursorPosition<QTextCursor> for () {
 impl<'a> /*trait*/ QTextTableCell_new for () {
   fn new(self) -> QTextTableCell {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QTextTableCellC1Ev()};
+    // unsafe{_ZN14QTextTableCellC2Ev()};
     let ctysz: c_int = unsafe{QTextTableCell_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN14QTextTableCellC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN14QTextTableCellC1Ev()} as u64;
+    unsafe {_ZN14QTextTableCellC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QTextTableCell{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -694,12 +689,12 @@ pub trait QTextTable_new {
 impl<'a> /*trait*/ QTextTable_new for (&'a QTextTable) {
   fn new(self) -> QTextTable {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QTextTableC1ERKS_()};
+    // unsafe{_ZN10QTextTableC2ERKS_()};
     let ctysz: c_int = unsafe{QTextTable_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN10QTextTableC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN10QTextTableC1ERKS_(arg0)} as u64;
+    unsafe {_ZN10QTextTableC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QTextTable{qbase: QTextFrame::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -845,8 +840,8 @@ pub trait QTextTable_free<RetType> {
 impl<'a> /*trait*/ QTextTable_free<()> for () {
   fn free(self , rsthis: & QTextTable) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QTextTableD0Ev()};
-     unsafe {_ZN10QTextTableD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN10QTextTableD2Ev()};
+     unsafe {_ZN10QTextTableD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -855,12 +850,12 @@ impl<'a> /*trait*/ QTextTable_free<()> for () {
 impl<'a> /*trait*/ QTextTable_new for (&'a QTextDocument) {
   fn new(self) -> QTextTable {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QTextTableC1EP13QTextDocument()};
+    // unsafe{_ZN10QTextTableC2EP13QTextDocument()};
     let ctysz: c_int = unsafe{QTextTable_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN10QTextTableC1EP13QTextDocument(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN10QTextTableC1EP13QTextDocument(arg0)} as u64;
+    unsafe {_ZN10QTextTableC2EP13QTextDocument(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QTextTable{qbase: QTextFrame::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

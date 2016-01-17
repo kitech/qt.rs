@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtGui/qpaintengine.h
 // dst-file: /src/gui/qpaintengine.rs
 //
@@ -92,8 +92,7 @@ extern {
   // proto:  void QPaintEngine::drawEllipse(const QRect & r);
   fn _ZN12QPaintEngine11drawEllipseERK5QRect(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPaintEngine::QPaintEngine(const QPaintEngine & );
-  fn dector_ZN12QPaintEngineC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN12QPaintEngineC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN12QPaintEngineC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QPaintEngine::isActive();
   fn _ZNK12QPaintEngine8isActiveEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QPaintEngine::drawPoints(const QPointF * points, int pointCount);
@@ -105,7 +104,7 @@ extern {
   // proto:  void QPaintEngine::setSystemRect(const QRect & rect);
   fn _ZN12QPaintEngine13setSystemRectERK5QRect(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPaintEngine::~QPaintEngine();
-  fn _ZN12QPaintEngineD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN12QPaintEngineD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QPaintEngine::end();
   fn _ZN12QPaintEngine3endEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QPaintEngine::drawTiledPixmap(const QRectF & r, const QPixmap & pixmap, const QPointF & s);
@@ -143,9 +142,9 @@ extern {
   // proto:  void QPaintEngine::drawTextItem(const QPointF & p, const QTextItem & textItem);
   fn _ZN12QPaintEngine12drawTextItemERK7QPointFRK9QTextItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QPaintEngine::fix_neg_rect(int * x, int * y, int * w, int * h);
-  fn demth_ZN12QPaintEngine12fix_neg_rectEPiS0_S0_S0_(qthis: u64 /* *mut c_void*/, arg0: *mut c_int, arg1: *mut c_int, arg2: *mut c_int, arg3: *mut c_int);
+  fn _ZN12QPaintEngine12fix_neg_rectEPiS0_S0_S0_(qthis: u64 /* *mut c_void*/, arg0: *mut c_int, arg1: *mut c_int, arg2: *mut c_int, arg3: *mut c_int);
   // proto:  bool QPaintEngine::isExtended();
-  fn demth_ZNK12QPaintEngine10isExtendedEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn _ZNK12QPaintEngine10isExtendedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QPaintEngine::drawRects(const QRect * rects, int rectCount);
   fn _ZN12QPaintEngine9drawRectsEPK5QRecti(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
   // proto:  void QPaintEngine::drawPoints(const QPoint * points, int pointCount);
@@ -678,12 +677,12 @@ pub trait QPaintEngine_new {
 impl<'a> /*trait*/ QPaintEngine_new for (&'a QPaintEngine) {
   fn new(self) -> QPaintEngine {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QPaintEngineC1ERKS_()};
+    // unsafe{_ZN12QPaintEngineC2ERKS_()};
     let ctysz: c_int = unsafe{QPaintEngine_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN12QPaintEngineC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN12QPaintEngineC1ERKS_(arg0)} as u64;
+    unsafe {_ZN12QPaintEngineC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QPaintEngine{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -823,8 +822,8 @@ pub trait QPaintEngine_free<RetType> {
 impl<'a> /*trait*/ QPaintEngine_free<()> for () {
   fn free(self , rsthis: & QPaintEngine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QPaintEngineD0Ev()};
-     unsafe {_ZN12QPaintEngineD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN12QPaintEngineD2Ev()};
+     unsafe {_ZN12QPaintEngineD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1252,7 +1251,7 @@ impl<'a> /*trait*/ QPaintEngine_fix_neg_rect<()> for (&'a mut Vec<i32>, &'a mut 
     let arg1 = self.1.as_ptr()  as *mut c_int;
     let arg2 = self.2.as_ptr()  as *mut c_int;
     let arg3 = self.3.as_ptr()  as *mut c_int;
-     unsafe {demth_ZN12QPaintEngine12fix_neg_rectEPiS0_S0_S0_(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
+     unsafe {_ZN12QPaintEngine12fix_neg_rectEPiS0_S0_S0_(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
     // return 1;
   }
 }
@@ -1274,7 +1273,7 @@ impl<'a> /*trait*/ QPaintEngine_isExtended<i8> for () {
   fn isExtended(self , rsthis: & QPaintEngine) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintEngine10isExtendedEv()};
-    let mut ret = unsafe {demth_ZNK12QPaintEngine10isExtendedEv(rsthis.qclsinst)};
+    let mut ret = unsafe {_ZNK12QPaintEngine10isExtendedEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qgesturerecognizer.h
 // dst-file: /src/widgets/qgesturerecognizer.rs
 //
@@ -33,10 +33,9 @@ use super::super::core::qcoreevent::QEvent; // 771
 extern {
   fn QGestureRecognizer_Class_Size() -> c_int;
   // proto:  void QGestureRecognizer::~QGestureRecognizer();
-  fn _ZN18QGestureRecognizerD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN18QGestureRecognizerD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QGestureRecognizer::QGestureRecognizer();
-  fn dector_ZN18QGestureRecognizerC1Ev() -> *mut c_void;
-  fn _ZN18QGestureRecognizerC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN18QGestureRecognizerC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QGestureRecognizer::reset(QGesture * state);
   fn _ZN18QGestureRecognizer5resetEP8QGesture(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QGesture * QGestureRecognizer::create(QObject * target);
@@ -72,8 +71,8 @@ pub trait QGestureRecognizer_free<RetType> {
 impl<'a> /*trait*/ QGestureRecognizer_free<()> for () {
   fn free(self , rsthis: & QGestureRecognizer) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QGestureRecognizerD0Ev()};
-     unsafe {_ZN18QGestureRecognizerD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN18QGestureRecognizerD2Ev()};
+     unsafe {_ZN18QGestureRecognizerD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -95,11 +94,11 @@ pub trait QGestureRecognizer_new {
 impl<'a> /*trait*/ QGestureRecognizer_new for () {
   fn new(self) -> QGestureRecognizer {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QGestureRecognizerC1Ev()};
+    // unsafe{_ZN18QGestureRecognizerC2Ev()};
     let ctysz: c_int = unsafe{QGestureRecognizer_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN18QGestureRecognizerC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN18QGestureRecognizerC1Ev()} as u64;
+    unsafe {_ZN18QGestureRecognizerC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QGestureRecognizer{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

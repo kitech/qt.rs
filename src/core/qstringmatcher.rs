@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qstringmatcher.h
 // dst-file: /src/core/qstringmatcher.rs
 //
@@ -32,11 +32,9 @@ use super::qstring::QString; // 773
 extern {
   fn QStringMatcher_Class_Size() -> c_int;
   // proto:  void QStringMatcher::QStringMatcher();
-  fn dector_ZN14QStringMatcherC1Ev() -> *mut c_void;
-  fn _ZN14QStringMatcherC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN14QStringMatcherC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QStringMatcher::QStringMatcher(const QStringMatcher & other);
-  fn dector_ZN14QStringMatcherC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN14QStringMatcherC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN14QStringMatcherC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QStringMatcher::indexIn(const QChar * str, int length, int from);
   fn _ZNK14QStringMatcher7indexInEPK5QCharii(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int, arg2: c_int) -> c_int;
   // proto:  void QStringMatcher::setPattern(const QString & pattern);
@@ -44,7 +42,7 @@ extern {
   // proto:  QString QStringMatcher::pattern();
   fn _ZNK14QStringMatcher7patternEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QStringMatcher::~QStringMatcher();
-  fn _ZN14QStringMatcherD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN14QStringMatcherD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  int QStringMatcher::indexIn(const QString & str, int from);
   fn _ZNK14QStringMatcher7indexInERK7QStringi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> c_int;
 } // <= ext block end
@@ -79,11 +77,11 @@ pub trait QStringMatcher_new {
 impl<'a> /*trait*/ QStringMatcher_new for () {
   fn new(self) -> QStringMatcher {
     // let qthis: *mut c_void = unsafe{calloc(1, 1048)};
-    // unsafe{_ZN14QStringMatcherC1Ev()};
+    // unsafe{_ZN14QStringMatcherC2Ev()};
     let ctysz: c_int = unsafe{QStringMatcher_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN14QStringMatcherC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN14QStringMatcherC1Ev()} as u64;
+    unsafe {_ZN14QStringMatcherC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStringMatcher{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -94,12 +92,12 @@ impl<'a> /*trait*/ QStringMatcher_new for () {
 impl<'a> /*trait*/ QStringMatcher_new for (&'a QStringMatcher) {
   fn new(self) -> QStringMatcher {
     // let qthis: *mut c_void = unsafe{calloc(1, 1048)};
-    // unsafe{_ZN14QStringMatcherC1ERKS_()};
+    // unsafe{_ZN14QStringMatcherC2ERKS_()};
     let ctysz: c_int = unsafe{QStringMatcher_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN14QStringMatcherC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN14QStringMatcherC1ERKS_(arg0)} as u64;
+    unsafe {_ZN14QStringMatcherC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStringMatcher{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -195,8 +193,8 @@ pub trait QStringMatcher_free<RetType> {
 impl<'a> /*trait*/ QStringMatcher_free<()> for () {
   fn free(self , rsthis: & QStringMatcher) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 1048)};
-    // unsafe{_ZN14QStringMatcherD0Ev()};
-     unsafe {_ZN14QStringMatcherD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN14QStringMatcherD2Ev()};
+     unsafe {_ZN14QStringMatcherD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

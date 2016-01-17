@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qabstractspinbox.h
 // dst-file: /src/widgets/qabstractspinbox.rs
 //
@@ -50,14 +50,13 @@ extern {
   // proto:  bool QAbstractSpinBox::keyboardTracking();
   fn _ZNK16QAbstractSpinBox16keyboardTrackingEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QAbstractSpinBox::QAbstractSpinBox(const QAbstractSpinBox & );
-  fn dector_ZN16QAbstractSpinBoxC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN16QAbstractSpinBoxC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN16QAbstractSpinBoxC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QAbstractSpinBox::metaObject();
   fn _ZNK16QAbstractSpinBox10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  QSize QAbstractSpinBox::sizeHint();
   fn _ZNK16QAbstractSpinBox8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAbstractSpinBox::~QAbstractSpinBox();
-  fn _ZN16QAbstractSpinBoxD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN16QAbstractSpinBoxD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractSpinBox::fixup(QString & input);
   fn _ZNK16QAbstractSpinBox5fixupER7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAbstractSpinBox::selectAll();
@@ -75,8 +74,7 @@ extern {
   // proto:  bool QAbstractSpinBox::wrapping();
   fn _ZNK16QAbstractSpinBox8wrappingEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QAbstractSpinBox::QAbstractSpinBox(QWidget * parent);
-  fn dector_ZN16QAbstractSpinBoxC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN16QAbstractSpinBoxC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN16QAbstractSpinBoxC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAbstractSpinBox::stepUp();
   fn _ZN16QAbstractSpinBox6stepUpEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractSpinBox::setWrapping(bool w);
@@ -325,12 +323,12 @@ pub trait QAbstractSpinBox_new {
 impl<'a> /*trait*/ QAbstractSpinBox_new for (&'a QAbstractSpinBox) {
   fn new(self) -> QAbstractSpinBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QAbstractSpinBoxC1ERKS_()};
+    // unsafe{_ZN16QAbstractSpinBoxC2ERKS_()};
     let ctysz: c_int = unsafe{QAbstractSpinBox_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN16QAbstractSpinBoxC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN16QAbstractSpinBoxC1ERKS_(arg0)} as u64;
+    unsafe {_ZN16QAbstractSpinBoxC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QAbstractSpinBox{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -399,8 +397,8 @@ pub trait QAbstractSpinBox_free<RetType> {
 impl<'a> /*trait*/ QAbstractSpinBox_free<()> for () {
   fn free(self , rsthis: & QAbstractSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QAbstractSpinBoxD0Ev()};
-     unsafe {_ZN16QAbstractSpinBoxD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN16QAbstractSpinBoxD2Ev()};
+     unsafe {_ZN16QAbstractSpinBoxD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -593,12 +591,12 @@ impl<'a> /*trait*/ QAbstractSpinBox_wrapping<i8> for () {
 impl<'a> /*trait*/ QAbstractSpinBox_new for (&'a QWidget) {
   fn new(self) -> QAbstractSpinBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QAbstractSpinBoxC1EP7QWidget()};
+    // unsafe{_ZN16QAbstractSpinBoxC2EP7QWidget()};
     let ctysz: c_int = unsafe{QAbstractSpinBox_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN16QAbstractSpinBoxC1EP7QWidget(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN16QAbstractSpinBoxC1EP7QWidget(arg0)} as u64;
+    unsafe {_ZN16QAbstractSpinBoxC2EP7QWidget(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QAbstractSpinBox{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

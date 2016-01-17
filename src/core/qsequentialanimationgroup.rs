@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qsequentialanimationgroup.h
 // dst-file: /src/core/qsequentialanimationgroup.rs
 //
@@ -36,15 +36,13 @@ extern {
   // proto:  QPauseAnimation * QSequentialAnimationGroup::insertPause(int index, int msecs);
   fn _ZN25QSequentialAnimationGroup11insertPauseEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> *mut c_void;
   // proto:  void QSequentialAnimationGroup::QSequentialAnimationGroup(QObject * parent);
-  fn dector_ZN25QSequentialAnimationGroupC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN25QSequentialAnimationGroupC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN25QSequentialAnimationGroupC2EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QPauseAnimation * QSequentialAnimationGroup::addPause(int msecs);
   fn _ZN25QSequentialAnimationGroup8addPauseEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  void QSequentialAnimationGroup::~QSequentialAnimationGroup();
-  fn _ZN25QSequentialAnimationGroupD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN25QSequentialAnimationGroupD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QSequentialAnimationGroup::QSequentialAnimationGroup(const QSequentialAnimationGroup & );
-  fn dector_ZN25QSequentialAnimationGroupC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN25QSequentialAnimationGroupC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN25QSequentialAnimationGroupC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QSequentialAnimationGroup::metaObject();
   fn _ZNK25QSequentialAnimationGroup10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  QAbstractAnimation * QSequentialAnimationGroup::currentAnimation();
@@ -123,12 +121,12 @@ pub trait QSequentialAnimationGroup_new {
 impl<'a> /*trait*/ QSequentialAnimationGroup_new for (&'a QObject) {
   fn new(self) -> QSequentialAnimationGroup {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN25QSequentialAnimationGroupC1EP7QObject()};
+    // unsafe{_ZN25QSequentialAnimationGroupC2EP7QObject()};
     let ctysz: c_int = unsafe{QSequentialAnimationGroup_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN25QSequentialAnimationGroupC1EP7QObject(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN25QSequentialAnimationGroupC1EP7QObject(arg0)} as u64;
+    unsafe {_ZN25QSequentialAnimationGroupC2EP7QObject(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QSequentialAnimationGroup{qbase: QAnimationGroup::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -176,8 +174,8 @@ pub trait QSequentialAnimationGroup_free<RetType> {
 impl<'a> /*trait*/ QSequentialAnimationGroup_free<()> for () {
   fn free(self , rsthis: & QSequentialAnimationGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN25QSequentialAnimationGroupD0Ev()};
-     unsafe {_ZN25QSequentialAnimationGroupD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN25QSequentialAnimationGroupD2Ev()};
+     unsafe {_ZN25QSequentialAnimationGroupD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -186,12 +184,12 @@ impl<'a> /*trait*/ QSequentialAnimationGroup_free<()> for () {
 impl<'a> /*trait*/ QSequentialAnimationGroup_new for (&'a QSequentialAnimationGroup) {
   fn new(self) -> QSequentialAnimationGroup {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN25QSequentialAnimationGroupC1ERKS_()};
+    // unsafe{_ZN25QSequentialAnimationGroupC2ERKS_()};
     let ctysz: c_int = unsafe{QSequentialAnimationGroup_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN25QSequentialAnimationGroupC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN25QSequentialAnimationGroupC1ERKS_(arg0)} as u64;
+    unsafe {_ZN25QSequentialAnimationGroupC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QSequentialAnimationGroup{qbase: QAnimationGroup::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

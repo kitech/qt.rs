@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtGui/qpen.h
 // dst-file: /src/gui/qpen.rs
 //
@@ -32,12 +32,11 @@ use super::qbrush::QBrush; // 773
 extern {
   fn QPen_Class_Size() -> c_int;
   // proto:  void QPen::~QPen();
-  fn _ZN4QPenD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN4QPenD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  qreal QPen::dashOffset();
   fn _ZNK4QPen10dashOffsetEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QPen::QPen(const QColor & color);
-  fn dector_ZN4QPenC1ERK6QColor(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN4QPenC1ERK6QColor(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN4QPenC2ERK6QColor(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  qreal QPen::miterLimit();
   fn _ZNK4QPen10miterLimitEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QPen::setWidthF(qreal width);
@@ -61,13 +60,11 @@ extern {
   // proto:  bool QPen::isDetached();
   fn _ZN4QPen10isDetachedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QPen::QPen(const QPen & pen);
-  fn dector_ZN4QPenC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN4QPenC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN4QPenC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPen::setMiterLimit(qreal limit);
   fn _ZN4QPen13setMiterLimitEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QPen::QPen();
-  fn dector_ZN4QPenC1Ev() -> *mut c_void;
-  fn _ZN4QPenC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN4QPenC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  int QPen::width();
   fn _ZNK4QPen5widthEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QPen::swap(QPen & other);
@@ -109,8 +106,8 @@ pub trait QPen_free<RetType> {
 impl<'a> /*trait*/ QPen_free<()> for () {
   fn free(self , rsthis: & QPen) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN4QPenD0Ev()};
-     unsafe {_ZN4QPenD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN4QPenD2Ev()};
+     unsafe {_ZN4QPenD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -155,12 +152,12 @@ pub trait QPen_new {
 impl<'a> /*trait*/ QPen_new for (&'a QColor) {
   fn new(self) -> QPen {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN4QPenC1ERK6QColor()};
+    // unsafe{_ZN4QPenC2ERK6QColor()};
     let ctysz: c_int = unsafe{QPen_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN4QPenC1ERK6QColor(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN4QPenC1ERK6QColor(arg0)} as u64;
+    unsafe {_ZN4QPenC2ERK6QColor(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QPen{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -424,12 +421,12 @@ impl<'a> /*trait*/ QPen_isDetached<i8> for () {
 impl<'a> /*trait*/ QPen_new for (&'a QPen) {
   fn new(self) -> QPen {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN4QPenC1ERKS_()};
+    // unsafe{_ZN4QPenC2ERKS_()};
     let ctysz: c_int = unsafe{QPen_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN4QPenC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN4QPenC1ERKS_(arg0)} as u64;
+    unsafe {_ZN4QPenC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QPen{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -463,11 +460,11 @@ impl<'a> /*trait*/ QPen_setMiterLimit<()> for (f64) {
 impl<'a> /*trait*/ QPen_new for () {
   fn new(self) -> QPen {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN4QPenC1Ev()};
+    // unsafe{_ZN4QPenC2Ev()};
     let ctysz: c_int = unsafe{QPen_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN4QPenC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN4QPenC1Ev()} as u64;
+    unsafe {_ZN4QPenC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QPen{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

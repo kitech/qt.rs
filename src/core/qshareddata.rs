@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qshareddata.h
 // dst-file: /src/core/qshareddata.rs
 //
@@ -30,11 +30,9 @@ use std::ops::Deref;
 extern {
   fn QSharedData_Class_Size() -> c_int;
   // proto:  void QSharedData::QSharedData();
-  fn dector_ZN11QSharedDataC1Ev() -> *mut c_void;
-  fn demth_ZN11QSharedDataC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN11QSharedDataC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QSharedData::QSharedData(const QSharedData & );
-  fn dector_ZN11QSharedDataC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn demth_ZN11QSharedDataC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN11QSharedDataC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -67,11 +65,11 @@ pub trait QSharedData_new {
 impl<'a> /*trait*/ QSharedData_new for () {
   fn new(self) -> QSharedData {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QSharedDataC1Ev()};
+    // unsafe{_ZN11QSharedDataC2Ev()};
     let ctysz: c_int = unsafe{QSharedData_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN11QSharedDataC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN11QSharedDataC1Ev()} as u64;
+    unsafe {_ZN11QSharedDataC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QSharedData{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -82,12 +80,12 @@ impl<'a> /*trait*/ QSharedData_new for () {
 impl<'a> /*trait*/ QSharedData_new for (&'a QSharedData) {
   fn new(self) -> QSharedData {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QSharedDataC1ERKS_()};
+    // unsafe{_ZN11QSharedDataC2ERKS_()};
     let ctysz: c_int = unsafe{QSharedData_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN11QSharedDataC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN11QSharedDataC1ERKS_(arg0)} as u64;
+    unsafe {_ZN11QSharedDataC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QSharedData{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

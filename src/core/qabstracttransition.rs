@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qabstracttransition.h
 // dst-file: /src/core/qabstracttransition.rs
 //
@@ -41,10 +41,9 @@ extern {
   // proto:  QState * QAbstractTransition::sourceState();
   fn _ZNK19QAbstractTransition11sourceStateEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAbstractTransition::~QAbstractTransition();
-  fn _ZN19QAbstractTransitionD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN19QAbstractTransitionD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractTransition::QAbstractTransition(QState * sourceState);
-  fn dector_ZN19QAbstractTransitionC1EP6QState(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN19QAbstractTransitionC1EP6QState(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN19QAbstractTransitionC2EP6QState(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAbstractTransition::setTargetState(QAbstractState * target);
   fn _ZN19QAbstractTransition14setTargetStateEP14QAbstractState(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAbstractTransition::addAnimation(QAbstractAnimation * animation);
@@ -56,8 +55,7 @@ extern {
   // proto:  const QMetaObject * QAbstractTransition::metaObject();
   fn _ZNK19QAbstractTransition10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractTransition::QAbstractTransition(const QAbstractTransition & );
-  fn dector_ZN19QAbstractTransitionC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN19QAbstractTransitionC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN19QAbstractTransitionC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QStateMachine * QAbstractTransition::machine();
   fn _ZNK19QAbstractTransition7machineEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
 } // <= ext block end
@@ -174,8 +172,8 @@ pub trait QAbstractTransition_free<RetType> {
 impl<'a> /*trait*/ QAbstractTransition_free<()> for () {
   fn free(self , rsthis: & QAbstractTransition) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QAbstractTransitionD0Ev()};
-     unsafe {_ZN19QAbstractTransitionD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN19QAbstractTransitionD2Ev()};
+     unsafe {_ZN19QAbstractTransitionD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -197,12 +195,12 @@ pub trait QAbstractTransition_new {
 impl<'a> /*trait*/ QAbstractTransition_new for (&'a QState) {
   fn new(self) -> QAbstractTransition {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QAbstractTransitionC1EP6QState()};
+    // unsafe{_ZN19QAbstractTransitionC2EP6QState()};
     let ctysz: c_int = unsafe{QAbstractTransition_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN19QAbstractTransitionC1EP6QState(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN19QAbstractTransitionC1EP6QState(arg0)} as u64;
+    unsafe {_ZN19QAbstractTransitionC2EP6QState(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QAbstractTransition{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -326,12 +324,12 @@ impl<'a> /*trait*/ QAbstractTransition_metaObject<()> for () {
 impl<'a> /*trait*/ QAbstractTransition_new for (&'a QAbstractTransition) {
   fn new(self) -> QAbstractTransition {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QAbstractTransitionC1ERKS_()};
+    // unsafe{_ZN19QAbstractTransitionC2ERKS_()};
     let ctysz: c_int = unsafe{QAbstractTransition_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN19QAbstractTransitionC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN19QAbstractTransitionC1ERKS_(arg0)} as u64;
+    unsafe {_ZN19QAbstractTransitionC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QAbstractTransition{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

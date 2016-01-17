@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtGui/qgenericplugin.h
 // dst-file: /src/gui/qgenericplugin.rs
 //
@@ -32,12 +32,11 @@ use super::super::core::qstring::QString; // 771
 extern {
   fn QGenericPlugin_Class_Size() -> c_int;
   // proto:  void QGenericPlugin::QGenericPlugin(QObject * parent);
-  fn dector_ZN14QGenericPluginC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN14QGenericPluginC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN14QGenericPluginC2EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QObject * QGenericPlugin::create(const QString & name, const QString & spec);
   fn _ZN14QGenericPlugin6createERK7QStringS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  void QGenericPlugin::~QGenericPlugin();
-  fn _ZN14QGenericPluginD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN14QGenericPluginD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  const QMetaObject * QGenericPlugin::metaObject();
   fn _ZNK14QGenericPlugin10metaObjectEv(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
@@ -84,12 +83,12 @@ pub trait QGenericPlugin_new {
 impl<'a> /*trait*/ QGenericPlugin_new for (&'a QObject) {
   fn new(self) -> QGenericPlugin {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QGenericPluginC1EP7QObject()};
+    // unsafe{_ZN14QGenericPluginC2EP7QObject()};
     let ctysz: c_int = unsafe{QGenericPlugin_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN14QGenericPluginC1EP7QObject(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN14QGenericPluginC1EP7QObject(arg0)} as u64;
+    unsafe {_ZN14QGenericPluginC2EP7QObject(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QGenericPlugin{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -138,8 +137,8 @@ pub trait QGenericPlugin_free<RetType> {
 impl<'a> /*trait*/ QGenericPlugin_free<()> for () {
   fn free(self , rsthis: & QGenericPlugin) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QGenericPluginD0Ev()};
-     unsafe {_ZN14QGenericPluginD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN14QGenericPluginD2Ev()};
+     unsafe {_ZN14QGenericPluginD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

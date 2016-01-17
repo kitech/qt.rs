@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtGui/qmatrix.h
 // dst-file: /src/gui/qmatrix.rs
 //
@@ -42,8 +42,7 @@ extern {
   // proto:  qreal QMatrix::dx();
   fn _ZNK7QMatrix2dxEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QMatrix::QMatrix(bool );
-  fn dector_ZN7QMatrixC1Eb(arg0: c_char) -> *mut c_void;
-  fn demth_ZN7QMatrixC1Eb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn _ZN7QMatrixC2Eb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  qreal QMatrix::dy();
   fn _ZNK7QMatrix2dyEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  QMatrix & QMatrix::scale(qreal sx, qreal sy);
@@ -55,8 +54,7 @@ extern {
   // proto:  QMatrix & QMatrix::shear(qreal sh, qreal sv);
   fn _ZN7QMatrix5shearEdd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double) -> *mut c_void;
   // proto:  void QMatrix::QMatrix();
-  fn dector_ZN7QMatrixC1Ev() -> *mut c_void;
-  fn _ZN7QMatrixC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN7QMatrixC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  qreal QMatrix::m21();
   fn _ZNK7QMatrix3m21Ev(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  QPointF QMatrix::map(const QPointF & p);
@@ -72,8 +70,7 @@ extern {
   // proto:  void QMatrix::setMatrix(qreal m11, qreal m12, qreal m21, qreal m22, qreal dx, qreal dy);
   fn _ZN7QMatrix9setMatrixEdddddd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double, arg5: c_double);
   // proto:  void QMatrix::QMatrix(const QMatrix & matrix);
-  fn dector_ZN7QMatrixC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN7QMatrixC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN7QMatrixC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMatrix::reset();
   fn _ZN7QMatrix5resetEv(qthis: u64 /* *mut c_void*/);
   // proto:  QLineF QMatrix::map(const QLineF & l);
@@ -95,10 +92,9 @@ extern {
   // proto:  QRectF QMatrix::mapRect(const QRectF & );
   fn _ZNK7QMatrix7mapRectERK6QRectF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  bool QMatrix::isIdentity();
-  fn demth_ZNK7QMatrix10isIdentityEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn _ZNK7QMatrix10isIdentityEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QMatrix::QMatrix(qreal am11, qreal am12, qreal am21, qreal am22, qreal adx, qreal ady, bool );
-  fn dector_ZN7QMatrixC1Eddddddb(arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double, arg5: c_double, arg6: c_char) -> *mut c_void;
-  fn demth_ZN7QMatrixC1Eddddddb(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double, arg5: c_double, arg6: c_char);
+  fn _ZN7QMatrixC2Eddddddb(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double, arg5: c_double, arg6: c_char);
   // proto:  qreal QMatrix::m12();
   fn _ZNK7QMatrix3m12Ev(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  bool QMatrix::isInvertible();
@@ -106,8 +102,7 @@ extern {
   // proto:  QRect QMatrix::mapRect(const QRect & );
   fn _ZNK7QMatrix7mapRectERK5QRect(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QMatrix::QMatrix(qreal m11, qreal m12, qreal m21, qreal m22, qreal dx, qreal dy);
-  fn dector_ZN7QMatrixC1Edddddd(arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double, arg5: c_double) -> *mut c_void;
-  fn _ZN7QMatrixC1Edddddd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double, arg5: c_double);
+  fn _ZN7QMatrixC2Edddddd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double, arg5: c_double);
   // proto:  qreal QMatrix::m22();
   fn _ZNK7QMatrix3m22Ev(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  QPolygon QMatrix::map(const QPolygon & a);
@@ -167,12 +162,12 @@ pub trait QMatrix_new {
 impl<'a> /*trait*/ QMatrix_new for (i8) {
   fn new(self) -> QMatrix {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
-    // unsafe{_ZN7QMatrixC1Eb()};
+    // unsafe{_ZN7QMatrixC2Eb()};
     let ctysz: c_int = unsafe{QMatrix_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_char;
-    // unsafe {_ZN7QMatrixC1Eb(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN7QMatrixC1Eb(arg0)} as u64;
+    unsafe {_ZN7QMatrixC2Eb(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QMatrix{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -307,11 +302,11 @@ impl<'a> /*trait*/ QMatrix_shear<QMatrix> for (f64, f64) {
 impl<'a> /*trait*/ QMatrix_new for () {
   fn new(self) -> QMatrix {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
-    // unsafe{_ZN7QMatrixC1Ev()};
+    // unsafe{_ZN7QMatrixC2Ev()};
     let ctysz: c_int = unsafe{QMatrix_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN7QMatrixC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN7QMatrixC1Ev()} as u64;
+    unsafe {_ZN7QMatrixC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QMatrix{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -463,12 +458,12 @@ impl<'a> /*trait*/ QMatrix_setMatrix<()> for (f64, f64, f64, f64, f64, f64) {
 impl<'a> /*trait*/ QMatrix_new for (&'a QMatrix) {
   fn new(self) -> QMatrix {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
-    // unsafe{_ZN7QMatrixC1ERKS_()};
+    // unsafe{_ZN7QMatrixC2ERKS_()};
     let ctysz: c_int = unsafe{QMatrix_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN7QMatrixC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN7QMatrixC1ERKS_(arg0)} as u64;
+    unsafe {_ZN7QMatrixC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QMatrix{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -678,7 +673,7 @@ impl<'a> /*trait*/ QMatrix_isIdentity<i8> for () {
   fn isIdentity(self , rsthis: & QMatrix) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK7QMatrix10isIdentityEv()};
-    let mut ret = unsafe {demth_ZNK7QMatrix10isIdentityEv(rsthis.qclsinst)};
+    let mut ret = unsafe {_ZNK7QMatrix10isIdentityEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -688,7 +683,7 @@ impl<'a> /*trait*/ QMatrix_isIdentity<i8> for () {
 impl<'a> /*trait*/ QMatrix_new for (f64, f64, f64, f64, f64, f64, i8) {
   fn new(self) -> QMatrix {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
-    // unsafe{_ZN7QMatrixC1Eddddddb()};
+    // unsafe{_ZN7QMatrixC2Eddddddb()};
     let ctysz: c_int = unsafe{QMatrix_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_double;
@@ -698,8 +693,8 @@ impl<'a> /*trait*/ QMatrix_new for (f64, f64, f64, f64, f64, f64, i8) {
     let arg4 = self.4  as c_double;
     let arg5 = self.5  as c_double;
     let arg6 = self.6  as c_char;
-    // unsafe {_ZN7QMatrixC1Eddddddb(qthis, arg0, arg1, arg2, arg3, arg4, arg5, arg6)};
-    let qthis: u64 = unsafe {dector_ZN7QMatrixC1Eddddddb(arg0, arg1, arg2, arg3, arg4, arg5, arg6)} as u64;
+    unsafe {_ZN7QMatrixC2Eddddddb(qthis_ph, arg0, arg1, arg2, arg3, arg4, arg5, arg6)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QMatrix{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -769,7 +764,7 @@ impl<'a> /*trait*/ QMatrix_mapRect<QRect> for (&'a QRect) {
 impl<'a> /*trait*/ QMatrix_new for (f64, f64, f64, f64, f64, f64) {
   fn new(self) -> QMatrix {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
-    // unsafe{_ZN7QMatrixC1Edddddd()};
+    // unsafe{_ZN7QMatrixC2Edddddd()};
     let ctysz: c_int = unsafe{QMatrix_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_double;
@@ -778,8 +773,8 @@ impl<'a> /*trait*/ QMatrix_new for (f64, f64, f64, f64, f64, f64) {
     let arg3 = self.3  as c_double;
     let arg4 = self.4  as c_double;
     let arg5 = self.5  as c_double;
-    // unsafe {_ZN7QMatrixC1Edddddd(qthis, arg0, arg1, arg2, arg3, arg4, arg5)};
-    let qthis: u64 = unsafe {dector_ZN7QMatrixC1Edddddd(arg0, arg1, arg2, arg3, arg4, arg5)} as u64;
+    unsafe {_ZN7QMatrixC2Edddddd(qthis_ph, arg0, arg1, arg2, arg3, arg4, arg5)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QMatrix{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

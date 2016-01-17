@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qkeyeventtransition.h
 // dst-file: /src/widgets/qkeyeventtransition.rs
 //
@@ -37,15 +37,13 @@ extern {
   // proto:  const QMetaObject * QKeyEventTransition::metaObject();
   fn _ZNK19QKeyEventTransition10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QKeyEventTransition::~QKeyEventTransition();
-  fn _ZN19QKeyEventTransitionD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN19QKeyEventTransitionD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  int QKeyEventTransition::key();
   fn _ZNK19QKeyEventTransition3keyEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QKeyEventTransition::QKeyEventTransition(QState * sourceState);
-  fn dector_ZN19QKeyEventTransitionC1EP6QState(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN19QKeyEventTransitionC1EP6QState(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN19QKeyEventTransitionC2EP6QState(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QKeyEventTransition::QKeyEventTransition(const QKeyEventTransition & );
-  fn dector_ZN19QKeyEventTransitionC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN19QKeyEventTransitionC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN19QKeyEventTransitionC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -134,8 +132,8 @@ pub trait QKeyEventTransition_free<RetType> {
 impl<'a> /*trait*/ QKeyEventTransition_free<()> for () {
   fn free(self , rsthis: & QKeyEventTransition) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QKeyEventTransitionD0Ev()};
-     unsafe {_ZN19QKeyEventTransitionD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN19QKeyEventTransitionD2Ev()};
+     unsafe {_ZN19QKeyEventTransitionD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -180,12 +178,12 @@ pub trait QKeyEventTransition_new {
 impl<'a> /*trait*/ QKeyEventTransition_new for (&'a QState) {
   fn new(self) -> QKeyEventTransition {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QKeyEventTransitionC1EP6QState()};
+    // unsafe{_ZN19QKeyEventTransitionC2EP6QState()};
     let ctysz: c_int = unsafe{QKeyEventTransition_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN19QKeyEventTransitionC1EP6QState(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN19QKeyEventTransitionC1EP6QState(arg0)} as u64;
+    unsafe {_ZN19QKeyEventTransitionC2EP6QState(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QKeyEventTransition{qbase: QEventTransition::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -196,12 +194,12 @@ impl<'a> /*trait*/ QKeyEventTransition_new for (&'a QState) {
 impl<'a> /*trait*/ QKeyEventTransition_new for (&'a QKeyEventTransition) {
   fn new(self) -> QKeyEventTransition {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QKeyEventTransitionC1ERKS_()};
+    // unsafe{_ZN19QKeyEventTransitionC2ERKS_()};
     let ctysz: c_int = unsafe{QKeyEventTransition_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN19QKeyEventTransitionC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN19QKeyEventTransitionC1ERKS_(arg0)} as u64;
+    unsafe {_ZN19QKeyEventTransitionC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QKeyEventTransition{qbase: QEventTransition::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

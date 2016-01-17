@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qdatetime.h
 // dst-file: /src/core/qdatetime.rs
 //
@@ -36,7 +36,7 @@ extern {
   // proto:  QTime QTime::addMSecs(int ms);
   fn _ZNK5QTime8addMSecsEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto: static QTime QTime::fromMSecsSinceStartOfDay(int msecs);
-  fn demth_ZN5QTime24fromMSecsSinceStartOfDayEi(arg0: c_int) -> *mut c_void;
+  fn _ZN5QTime24fromMSecsSinceStartOfDayEi(arg0: c_int) -> *mut c_void;
   // proto: static QTime QTime::currentTime();
   fn _ZN5QTime11currentTimeEv() -> *mut c_void;
   // proto:  int QTime::second();
@@ -58,18 +58,15 @@ extern {
   // proto:  bool QTime::isValid();
   fn _ZNK5QTime7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QTime::QTime(int ms);
-  fn dector_ZN5QTimeC1Ei(arg0: c_int) -> *mut c_void;
-  fn _ZN5QTimeC1Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn _ZN5QTimeC2Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QTime::msec();
   fn _ZNK5QTime4msecEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QTime::QTime(int h, int m, int s, int ms);
-  fn dector_ZN5QTimeC1Eiiii(arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int) -> *mut c_void;
-  fn _ZN5QTimeC1Eiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
+  fn _ZN5QTimeC2Eiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
   // proto:  int QTime::secsTo(const QTime & );
   fn _ZNK5QTime6secsToERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
   // proto:  void QTime::QTime();
-  fn dector_ZN5QTimeC1Ev() -> *mut c_void;
-  fn _ZN5QTimeC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN5QTimeC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QTime::setHMS(int h, int m, int s, int ms);
   fn _ZN5QTime6setHMSEiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int) -> c_char;
   // proto:  QString QTime::toString(const QString & format);
@@ -84,7 +81,7 @@ extern {
   fn _ZN5QTime10fromStringERK7QStringS2_(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   fn QDateTime_Class_Size() -> c_int;
   // proto:  QDateTime QDateTime::toLocalTime();
-  fn demth_ZNK9QDateTime11toLocalTimeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn _ZNK9QDateTime11toLocalTimeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QDateTime::setOffsetFromUtc(int offsetSeconds);
   fn _ZN9QDateTime16setOffsetFromUtcEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  QTimeZone QDateTime::timeZone();
@@ -96,11 +93,9 @@ extern {
   // proto:  void QDateTime::setTime_t(uint secsSince1Jan1970UTC);
   fn _ZN9QDateTime9setTime_tEj(qthis: u64 /* *mut c_void*/, arg0: c_uint);
   // proto:  void QDateTime::QDateTime(const QDateTime & other);
-  fn dector_ZN9QDateTimeC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QDateTimeC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN9QDateTimeC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QDateTime::QDateTime();
-  fn dector_ZN9QDateTimeC1Ev() -> *mut c_void;
-  fn _ZN9QDateTimeC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN9QDateTimeC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QDateTime::isDaylightTime();
   fn _ZNK9QDateTime14isDaylightTimeEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QDateTime::isValid();
@@ -120,18 +115,17 @@ extern {
   // proto: static QDateTime QDateTime::fromMSecsSinceEpoch(qint64 msecs);
   fn _ZN9QDateTime19fromMSecsSinceEpochEx(arg0: c_longlong) -> *mut c_void;
   // proto:  void QDateTime::QDateTime(const QDate & date, const QTime & time, const QTimeZone & timeZone);
-  fn dector_ZN9QDateTimeC1ERK5QDateRK5QTimeRK9QTimeZone(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> *mut c_void;
-  fn _ZN9QDateTimeC1ERK5QDateRK5QTimeRK9QTimeZone(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
+  fn _ZN9QDateTimeC2ERK5QDateRK5QTimeRK9QTimeZone(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto: static QDateTime QDateTime::fromString(const QString & s, const QString & format);
   fn _ZN9QDateTime10fromStringERK7QStringS2_(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  void QDateTime::swap(QDateTime & other);
-  fn demth_ZN9QDateTime4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN9QDateTime4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  uint QDateTime::toTime_t();
   fn _ZNK9QDateTime8toTime_tEv(qthis: u64 /* *mut c_void*/) -> c_uint;
   // proto:  QString QDateTime::timeZoneAbbreviation();
   fn _ZNK9QDateTime20timeZoneAbbreviationEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QDateTime QDateTime::toUTC();
-  fn demth_ZNK9QDateTime5toUTCEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn _ZNK9QDateTime5toUTCEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QDate QDateTime::date();
   fn _ZNK9QDateTime4dateEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QDateTime::isNull();
@@ -141,14 +135,13 @@ extern {
   // proto:  int QDateTime::offsetFromUtc();
   fn _ZNK9QDateTime13offsetFromUtcEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QDateTime::QDateTime(const QDate & );
-  fn dector_ZN9QDateTimeC1ERK5QDate(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QDateTimeC1ERK5QDate(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN9QDateTimeC2ERK5QDate(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QDateTime QDateTime::addMSecs(qint64 msecs);
   fn _ZNK9QDateTime8addMSecsEx(qthis: u64 /* *mut c_void*/, arg0: c_longlong) -> *mut c_void;
   // proto:  qint64 QDateTime::secsTo(const QDateTime & );
   fn _ZNK9QDateTime6secsToERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_longlong;
   // proto:  void QDateTime::~QDateTime();
-  fn _ZN9QDateTimeD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN9QDateTimeD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QDateTime QDateTime::addMonths(int months);
   fn _ZNK9QDateTime9addMonthsEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto: static QDateTime QDateTime::currentDateTime();
@@ -187,18 +180,15 @@ extern {
   // proto:  qint64 QDate::toJulianDay();
   fn _ZNK5QDate11toJulianDayEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
   // proto:  void QDate::QDate(qint64 julianDay);
-  fn dector_ZN5QDateC1Ex(arg0: c_longlong) -> *mut c_void;
-  fn _ZN5QDateC1Ex(qthis: u64 /* *mut c_void*/, arg0: c_longlong);
+  fn _ZN5QDateC2Ex(qthis: u64 /* *mut c_void*/, arg0: c_longlong);
   // proto:  void QDate::QDate();
-  fn dector_ZN5QDateC1Ev() -> *mut c_void;
-  fn _ZN5QDateC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN5QDateC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QDate::getDate(int * year, int * month, int * day);
   fn _ZN5QDate7getDateEPiS0_S0_(qthis: u64 /* *mut c_void*/, arg0: *mut c_int, arg1: *mut c_int, arg2: *mut c_int);
   // proto: static QDate QDate::currentDate();
   fn _ZN5QDate11currentDateEv() -> *mut c_void;
   // proto:  void QDate::QDate(int y, int m, int d);
-  fn dector_ZN5QDateC1Eiii(arg0: c_int, arg1: c_int, arg2: c_int) -> *mut c_void;
-  fn _ZN5QDateC1Eiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int);
+  fn _ZN5QDateC2Eiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int);
   // proto:  int QDate::weekNumber(int * yearNum);
   fn _ZNK5QDate10weekNumberEPi(qthis: u64 /* *mut c_void*/, arg0: *mut c_int) -> c_int;
   // proto:  QString QDate::toString(const QString & format);
@@ -212,7 +202,7 @@ extern {
   // proto:  bool QDate::isNull();
   fn _ZNK5QDate6isNullEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto: static QDate QDate::fromJulianDay(qint64 jd);
-  fn demth_ZN5QDate13fromJulianDayEx(arg0: c_longlong) -> *mut c_void;
+  fn _ZN5QDate13fromJulianDayEx(arg0: c_longlong) -> *mut c_void;
   // proto:  bool QDate::isValid();
   fn _ZNK5QDate7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QDate QDate::addDays(qint64 days);
@@ -305,7 +295,7 @@ impl<'a> /*trait*/ QTime_fromMSecsSinceStartOfDay_s<QTime> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QTime24fromMSecsSinceStartOfDayEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {demth_ZN5QTime24fromMSecsSinceStartOfDayEi(arg0)};
+    let mut ret = unsafe {_ZN5QTime24fromMSecsSinceStartOfDayEi(arg0)};
     let mut ret1 = QTime::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -561,12 +551,12 @@ pub trait QTime_new {
 impl<'a> /*trait*/ QTime_new for (i32) {
   fn new(self) -> QTime {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QTimeC1Ei()};
+    // unsafe{_ZN5QTimeC2Ei()};
     let ctysz: c_int = unsafe{QTime_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
-    // unsafe {_ZN5QTimeC1Ei(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN5QTimeC1Ei(arg0)} as u64;
+    unsafe {_ZN5QTimeC2Ei(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QTime{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -600,15 +590,15 @@ impl<'a> /*trait*/ QTime_msec<i32> for () {
 impl<'a> /*trait*/ QTime_new for (i32, i32, i32, i32) {
   fn new(self) -> QTime {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QTimeC1Eiiii()};
+    // unsafe{_ZN5QTimeC2Eiiii()};
     let ctysz: c_int = unsafe{QTime_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as c_int;
     let arg3 = self.3  as c_int;
-    // unsafe {_ZN5QTimeC1Eiiii(qthis, arg0, arg1, arg2, arg3)};
-    let qthis: u64 = unsafe {dector_ZN5QTimeC1Eiiii(arg0, arg1, arg2, arg3)} as u64;
+    unsafe {_ZN5QTimeC2Eiiii(qthis_ph, arg0, arg1, arg2, arg3)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QTime{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -643,11 +633,11 @@ impl<'a> /*trait*/ QTime_secsTo<i32> for (&'a QTime) {
 impl<'a> /*trait*/ QTime_new for () {
   fn new(self) -> QTime {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QTimeC1Ev()};
+    // unsafe{_ZN5QTimeC2Ev()};
     let ctysz: c_int = unsafe{QTime_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN5QTimeC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN5QTimeC1Ev()} as u64;
+    unsafe {_ZN5QTimeC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QTime{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -828,7 +818,7 @@ impl<'a> /*trait*/ QDateTime_toLocalTime<QDateTime> for () {
   fn toLocalTime(self , rsthis: & QDateTime) -> QDateTime {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDateTime11toLocalTimeEv()};
-    let mut ret = unsafe {demth_ZNK9QDateTime11toLocalTimeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {_ZNK9QDateTime11toLocalTimeEv(rsthis.qclsinst)};
     let mut ret1 = QDateTime::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -968,12 +958,12 @@ pub trait QDateTime_new {
 impl<'a> /*trait*/ QDateTime_new for (&'a QDateTime) {
   fn new(self) -> QDateTime {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QDateTimeC1ERKS_()};
+    // unsafe{_ZN9QDateTimeC2ERKS_()};
     let ctysz: c_int = unsafe{QDateTime_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN9QDateTimeC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN9QDateTimeC1ERKS_(arg0)} as u64;
+    unsafe {_ZN9QDateTimeC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QDateTime{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -984,11 +974,11 @@ impl<'a> /*trait*/ QDateTime_new for (&'a QDateTime) {
 impl<'a> /*trait*/ QDateTime_new for () {
   fn new(self) -> QDateTime {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QDateTimeC1Ev()};
+    // unsafe{_ZN9QDateTimeC2Ev()};
     let ctysz: c_int = unsafe{QDateTime_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN9QDateTimeC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN9QDateTimeC1Ev()} as u64;
+    unsafe {_ZN9QDateTimeC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QDateTime{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1216,14 +1206,14 @@ impl<'a> /*trait*/ QDateTime_fromMSecsSinceEpoch_s<QDateTime> for (i64) {
 impl<'a> /*trait*/ QDateTime_new for (&'a QDate, &'a QTime, &'a QTimeZone) {
   fn new(self) -> QDateTime {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QDateTimeC1ERK5QDateRK5QTimeRK9QTimeZone()};
+    // unsafe{_ZN9QDateTimeC2ERK5QDateRK5QTimeRK9QTimeZone()};
     let ctysz: c_int = unsafe{QDateTime_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
-    // unsafe {_ZN9QDateTimeC1ERK5QDateRK5QTimeRK9QTimeZone(qthis, arg0, arg1, arg2)};
-    let qthis: u64 = unsafe {dector_ZN9QDateTimeC1ERK5QDateRK5QTimeRK9QTimeZone(arg0, arg1, arg2)} as u64;
+    unsafe {_ZN9QDateTimeC2ERK5QDateRK5QTimeRK9QTimeZone(qthis_ph, arg0, arg1, arg2)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QDateTime{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1274,7 +1264,7 @@ impl<'a> /*trait*/ QDateTime_swap<()> for (&'a QDateTime) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QDateTime4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {demth_ZN9QDateTime4swapERS_(rsthis.qclsinst, arg0)};
+     unsafe {_ZN9QDateTime4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1343,7 +1333,7 @@ impl<'a> /*trait*/ QDateTime_toUTC<QDateTime> for () {
   fn toUTC(self , rsthis: & QDateTime) -> QDateTime {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDateTime5toUTCEv()};
-    let mut ret = unsafe {demth_ZNK9QDateTime5toUTCEv(rsthis.qclsinst)};
+    let mut ret = unsafe {_ZNK9QDateTime5toUTCEv(rsthis.qclsinst)};
     let mut ret1 = QDateTime::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1447,12 +1437,12 @@ impl<'a> /*trait*/ QDateTime_offsetFromUtc<i32> for () {
 impl<'a> /*trait*/ QDateTime_new for (&'a QDate) {
   fn new(self) -> QDateTime {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QDateTimeC1ERK5QDate()};
+    // unsafe{_ZN9QDateTimeC2ERK5QDate()};
     let ctysz: c_int = unsafe{QDateTime_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN9QDateTimeC1ERK5QDate(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN9QDateTimeC1ERK5QDate(arg0)} as u64;
+    unsafe {_ZN9QDateTimeC2ERK5QDate(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QDateTime{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1524,8 +1514,8 @@ pub trait QDateTime_free<RetType> {
 impl<'a> /*trait*/ QDateTime_free<()> for () {
   fn free(self , rsthis: & QDateTime) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QDateTimeD0Ev()};
-     unsafe {_ZN9QDateTimeD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN9QDateTimeD2Ev()};
+     unsafe {_ZN9QDateTimeD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1964,12 +1954,12 @@ pub trait QDate_new {
 impl<'a> /*trait*/ QDate_new for (i64) {
   fn new(self) -> QDate {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QDateC1Ex()};
+    // unsafe{_ZN5QDateC2Ex()};
     let ctysz: c_int = unsafe{QDate_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_longlong;
-    // unsafe {_ZN5QDateC1Ex(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN5QDateC1Ex(arg0)} as u64;
+    unsafe {_ZN5QDateC2Ex(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QDate{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1980,11 +1970,11 @@ impl<'a> /*trait*/ QDate_new for (i64) {
 impl<'a> /*trait*/ QDate_new for () {
   fn new(self) -> QDate {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QDateC1Ev()};
+    // unsafe{_ZN5QDateC2Ev()};
     let ctysz: c_int = unsafe{QDate_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN5QDateC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN5QDateC1Ev()} as u64;
+    unsafe {_ZN5QDateC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QDate{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -2044,14 +2034,14 @@ impl<'a> /*trait*/ QDate_currentDate_s<QDate> for () {
 impl<'a> /*trait*/ QDate_new for (i32, i32, i32) {
   fn new(self) -> QDate {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QDateC1Eiii()};
+    // unsafe{_ZN5QDateC2Eiii()};
     let ctysz: c_int = unsafe{QDate_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as c_int;
-    // unsafe {_ZN5QDateC1Eiii(qthis, arg0, arg1, arg2)};
-    let qthis: u64 = unsafe {dector_ZN5QDateC1Eiii(arg0, arg1, arg2)} as u64;
+    unsafe {_ZN5QDateC2Eiii(qthis_ph, arg0, arg1, arg2)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QDate{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -2220,7 +2210,7 @@ impl<'a> /*trait*/ QDate_fromJulianDay_s<QDate> for (i64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QDate13fromJulianDayEx()};
     let arg0 = self  as c_longlong;
-    let mut ret = unsafe {demth_ZN5QDate13fromJulianDayEx(arg0)};
+    let mut ret = unsafe {_ZN5QDate13fromJulianDayEx(arg0)};
     let mut ret1 = QDate::inheritFrom(ret as u64);
     return ret1;
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qobjectcleanuphandler.h
 // dst-file: /src/core/qobjectcleanuphandler.rs
 //
@@ -35,7 +35,7 @@ extern {
   // proto:  bool QObjectCleanupHandler::isEmpty();
   fn _ZNK21QObjectCleanupHandler7isEmptyEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QObjectCleanupHandler::~QObjectCleanupHandler();
-  fn _ZN21QObjectCleanupHandlerD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN21QObjectCleanupHandlerD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  const QMetaObject * QObjectCleanupHandler::metaObject();
   fn _ZNK21QObjectCleanupHandler10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QObjectCleanupHandler::remove(QObject * object);
@@ -43,8 +43,7 @@ extern {
   // proto:  QObject * QObjectCleanupHandler::add(QObject * object);
   fn _ZN21QObjectCleanupHandler3addEP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QObjectCleanupHandler::QObjectCleanupHandler();
-  fn dector_ZN21QObjectCleanupHandlerC1Ev() -> *mut c_void;
-  fn _ZN21QObjectCleanupHandlerC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN21QObjectCleanupHandlerC2Ev(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
@@ -133,8 +132,8 @@ pub trait QObjectCleanupHandler_free<RetType> {
 impl<'a> /*trait*/ QObjectCleanupHandler_free<()> for () {
   fn free(self , rsthis: & QObjectCleanupHandler) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN21QObjectCleanupHandlerD0Ev()};
-     unsafe {_ZN21QObjectCleanupHandlerD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN21QObjectCleanupHandlerD2Ev()};
+     unsafe {_ZN21QObjectCleanupHandlerD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -226,11 +225,11 @@ pub trait QObjectCleanupHandler_new {
 impl<'a> /*trait*/ QObjectCleanupHandler_new for () {
   fn new(self) -> QObjectCleanupHandler {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN21QObjectCleanupHandlerC1Ev()};
+    // unsafe{_ZN21QObjectCleanupHandlerC2Ev()};
     let ctysz: c_int = unsafe{QObjectCleanupHandler_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN21QObjectCleanupHandlerC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN21QObjectCleanupHandlerC1Ev()} as u64;
+    unsafe {_ZN21QObjectCleanupHandlerC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QObjectCleanupHandler{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

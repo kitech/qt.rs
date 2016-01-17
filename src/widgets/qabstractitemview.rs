@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qabstractitemview.h
 // dst-file: /src/widgets/qabstractitemview.rs
 //
@@ -74,7 +74,7 @@ extern {
   // proto:  void QAbstractItemView::doItemsLayout();
   fn _ZN17QAbstractItemView13doItemsLayoutEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractItemView::~QAbstractItemView();
-  fn _ZN17QAbstractItemViewD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN17QAbstractItemViewD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QAbstractItemModel * QAbstractItemView::model();
   fn _ZNK17QAbstractItemView5modelEv(qthis: u64 /* *mut c_void*/);
   // proto:  QSize QAbstractItemView::iconSize();
@@ -88,15 +88,13 @@ extern {
   // proto:  int QAbstractItemView::sizeHintForRow(int row);
   fn _ZNK17QAbstractItemView14sizeHintForRowEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
   // proto:  void QAbstractItemView::QAbstractItemView(QWidget * parent);
-  fn dector_ZN17QAbstractItemViewC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN17QAbstractItemViewC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN17QAbstractItemViewC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QAbstractItemView::showDropIndicator();
   fn _ZNK17QAbstractItemView17showDropIndicatorEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QAbstractItemView::hasAutoScroll();
   fn _ZNK17QAbstractItemView13hasAutoScrollEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QAbstractItemView::QAbstractItemView(const QAbstractItemView & );
-  fn dector_ZN17QAbstractItemViewC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN17QAbstractItemViewC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN17QAbstractItemViewC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAbstractItemView::selectAll();
   fn _ZN17QAbstractItemView9selectAllEv(qthis: u64 /* *mut c_void*/);
   // proto:  QAbstractItemDelegate * QAbstractItemView::itemDelegate();
@@ -602,8 +600,8 @@ pub trait QAbstractItemView_free<RetType> {
 impl<'a> /*trait*/ QAbstractItemView_free<()> for () {
   fn free(self , rsthis: & QAbstractItemView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QAbstractItemViewD0Ev()};
-     unsafe {_ZN17QAbstractItemViewD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN17QAbstractItemViewD2Ev()};
+     unsafe {_ZN17QAbstractItemViewD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -765,12 +763,12 @@ pub trait QAbstractItemView_new {
 impl<'a> /*trait*/ QAbstractItemView_new for (&'a QWidget) {
   fn new(self) -> QAbstractItemView {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QAbstractItemViewC1EP7QWidget()};
+    // unsafe{_ZN17QAbstractItemViewC2EP7QWidget()};
     let ctysz: c_int = unsafe{QAbstractItemView_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN17QAbstractItemViewC1EP7QWidget(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN17QAbstractItemViewC1EP7QWidget(arg0)} as u64;
+    unsafe {_ZN17QAbstractItemViewC2EP7QWidget(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QAbstractItemView{qbase: QAbstractScrollArea::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -827,12 +825,12 @@ impl<'a> /*trait*/ QAbstractItemView_hasAutoScroll<i8> for () {
 impl<'a> /*trait*/ QAbstractItemView_new for (&'a QAbstractItemView) {
   fn new(self) -> QAbstractItemView {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QAbstractItemViewC1ERKS_()};
+    // unsafe{_ZN17QAbstractItemViewC2ERKS_()};
     let ctysz: c_int = unsafe{QAbstractItemView_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN17QAbstractItemViewC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN17QAbstractItemViewC1ERKS_(arg0)} as u64;
+    unsafe {_ZN17QAbstractItemViewC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QAbstractItemView{qbase: QAbstractScrollArea::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

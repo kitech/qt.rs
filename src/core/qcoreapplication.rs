@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qcoreapplication.h
 // dst-file: /src/core/qcoreapplication.rs
 //
@@ -55,8 +55,7 @@ extern {
   // proto: static QString QCoreApplication::applicationName();
   fn _ZN16QCoreApplication15applicationNameEv() -> *mut c_void;
   // proto:  void QCoreApplication::QCoreApplication(const QCoreApplication & );
-  fn dector_ZN16QCoreApplicationC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN16QCoreApplicationC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN16QCoreApplicationC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static void QCoreApplication::setSetuidAllowed(bool allow);
   fn _ZN16QCoreApplication16setSetuidAllowedEb(arg0: c_char);
   // proto: static void QCoreApplication::postEvent(QObject * receiver, QEvent * event, int priority);
@@ -88,7 +87,7 @@ extern {
   // proto: static void QCoreApplication::setOrganizationDomain(const QString & orgDomain);
   fn _ZN16QCoreApplication21setOrganizationDomainERK7QString(arg0: *mut c_void);
   // proto:  void QCoreApplication::~QCoreApplication();
-  fn _ZN16QCoreApplicationD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN16QCoreApplicationD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QCoreApplication::removeNativeEventFilter(QAbstractNativeEventFilter * filterObj);
   fn _ZN16QCoreApplication23removeNativeEventFilterEP26QAbstractNativeEventFilter(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static QString QCoreApplication::organizationDomain();
@@ -120,8 +119,7 @@ extern {
   // proto:  const QMetaObject * QCoreApplication::metaObject();
   fn _ZNK16QCoreApplication10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QCoreApplication::QCoreApplication(int & argc, char ** argv, int );
-  fn dector_ZN16QCoreApplicationC1ERiPPci(arg0: *mut c_int, arg1: *mut c_char, arg2: c_int) -> *mut c_void;
-  fn _ZN16QCoreApplicationC1ERiPPci(qthis: u64 /* *mut c_void*/, arg0: *mut c_int, arg1: *mut c_char, arg2: c_int);
+  fn _ZN16QCoreApplicationC2ERiPPci(qthis: u64 /* *mut c_void*/, arg0: *mut c_int, arg1: *mut c_char, arg2: c_int);
   // proto: static void QCoreApplication::setApplicationVersion(const QString & version);
   fn _ZN16QCoreApplication21setApplicationVersionERK7QString(arg0: *mut c_void);
   // proto: static void QCoreApplication::setEventDispatcher(QAbstractEventDispatcher * eventDispatcher);
@@ -390,12 +388,12 @@ pub trait QCoreApplication_new {
 impl<'a> /*trait*/ QCoreApplication_new for (&'a QCoreApplication) {
   fn new(self) -> QCoreApplication {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QCoreApplicationC1ERKS_()};
+    // unsafe{_ZN16QCoreApplicationC2ERKS_()};
     let ctysz: c_int = unsafe{QCoreApplication_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN16QCoreApplicationC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN16QCoreApplicationC1ERKS_(arg0)} as u64;
+    unsafe {_ZN16QCoreApplicationC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QCoreApplication{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -771,8 +769,8 @@ pub trait QCoreApplication_free<RetType> {
 impl<'a> /*trait*/ QCoreApplication_free<()> for () {
   fn free(self , rsthis: & QCoreApplication) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QCoreApplicationD0Ev()};
-     unsafe {_ZN16QCoreApplicationD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN16QCoreApplicationD2Ev()};
+     unsafe {_ZN16QCoreApplicationD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1130,14 +1128,14 @@ impl<'a> /*trait*/ QCoreApplication_metaObject<()> for () {
 impl<'a> /*trait*/ QCoreApplication_new for (&'a mut i32, &'a mut String, i32) {
   fn new(self) -> QCoreApplication {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QCoreApplicationC1ERiPPci()};
+    // unsafe{_ZN16QCoreApplicationC2ERiPPci()};
     let ctysz: c_int = unsafe{QCoreApplication_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as *mut c_int;
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let arg2 = self.2  as c_int;
-    // unsafe {_ZN16QCoreApplicationC1ERiPPci(qthis, arg0, arg1, arg2)};
-    let qthis: u64 = unsafe {dector_ZN16QCoreApplicationC1ERiPPci(arg0, arg1, arg2)} as u64;
+    unsafe {_ZN16QCoreApplicationC2ERiPPci(qthis_ph, arg0, arg1, arg2)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QCoreApplication{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qframe.h
 // dst-file: /src/widgets/qframe.rs
 //
@@ -43,8 +43,7 @@ extern {
   // proto:  QSize QFrame::sizeHint();
   fn _ZNK6QFrame8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QFrame::QFrame(const QFrame & );
-  fn dector_ZN6QFrameC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN6QFrameC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN6QFrameC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QFrame::frameStyle();
   fn _ZNK6QFrame10frameStyleEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QFrame::midLineWidth();
@@ -58,7 +57,7 @@ extern {
   // proto:  int QFrame::frameWidth();
   fn _ZNK6QFrame10frameWidthEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QFrame::~QFrame();
-  fn _ZN6QFrameD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN6QFrameD2Ev(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
@@ -220,12 +219,12 @@ pub trait QFrame_new {
 impl<'a> /*trait*/ QFrame_new for (&'a QFrame) {
   fn new(self) -> QFrame {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN6QFrameC1ERKS_()};
+    // unsafe{_ZN6QFrameC2ERKS_()};
     let ctysz: c_int = unsafe{QFrame_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN6QFrameC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN6QFrameC1ERKS_(arg0)} as u64;
+    unsafe {_ZN6QFrameC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QFrame{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -385,8 +384,8 @@ pub trait QFrame_free<RetType> {
 impl<'a> /*trait*/ QFrame_free<()> for () {
   fn free(self , rsthis: & QFrame) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN6QFrameD0Ev()};
-     unsafe {_ZN6QFrameD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN6QFrameD2Ev()};
+     unsafe {_ZN6QFrameD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

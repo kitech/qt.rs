@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtGui/qpaintdevicewindow.h
 // dst-file: /src/gui/qpaintdevicewindow.rs
 //
@@ -37,8 +37,7 @@ extern {
   // proto:  void QPaintDeviceWindow::update();
   fn _ZN18QPaintDeviceWindow6updateEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QPaintDeviceWindow::QPaintDeviceWindow(const QPaintDeviceWindow & );
-  fn dector_ZN18QPaintDeviceWindowC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN18QPaintDeviceWindowC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN18QPaintDeviceWindowC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QPaintDeviceWindow::metaObject();
   fn _ZNK18QPaintDeviceWindow10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QPaintDeviceWindow::update(const QRect & rect);
@@ -120,12 +119,12 @@ pub trait QPaintDeviceWindow_new {
 impl<'a> /*trait*/ QPaintDeviceWindow_new for (&'a QPaintDeviceWindow) {
   fn new(self) -> QPaintDeviceWindow {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QPaintDeviceWindowC1ERKS_()};
+    // unsafe{_ZN18QPaintDeviceWindowC2ERKS_()};
     let ctysz: c_int = unsafe{QPaintDeviceWindow_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN18QPaintDeviceWindowC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN18QPaintDeviceWindowC1ERKS_(arg0)} as u64;
+    unsafe {_ZN18QPaintDeviceWindowC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QPaintDeviceWindow{qbase: QWindow::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qloggingcategory.h
 // dst-file: /src/core/qloggingcategory.rs
 //
@@ -31,18 +31,15 @@ use super::qstring::QString; // 773
 extern {
   fn QLoggingCategory_Class_Size() -> c_int;
   // proto:  void QLoggingCategory::QLoggingCategory(const char * category, QtMsgType severityLevel);
-  fn dector_ZN16QLoggingCategoryC1EPKc9QtMsgType(arg0: *mut c_char, arg1: c_int) -> *mut c_void;
-  fn _ZN16QLoggingCategoryC1EPKc9QtMsgType(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int);
+  fn _ZN16QLoggingCategoryC2EPKc9QtMsgType(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int);
   // proto:  void QLoggingCategory::QLoggingCategory(const QLoggingCategory & );
-  fn dector_ZN16QLoggingCategoryC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN16QLoggingCategoryC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN16QLoggingCategoryC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QLoggingCategory::isDebugEnabled();
   fn _ZNK16QLoggingCategory14isDebugEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QLoggingCategory::~QLoggingCategory();
-  fn _ZN16QLoggingCategoryD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN16QLoggingCategoryD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QLoggingCategory::QLoggingCategory(const char * category);
-  fn dector_ZN16QLoggingCategoryC1EPKc(arg0: *mut c_char) -> *mut c_void;
-  fn _ZN16QLoggingCategoryC1EPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_char);
+  fn _ZN16QLoggingCategoryC2EPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_char);
   // proto:  void QLoggingCategory::setEnabled(QtMsgType type, bool enable);
   fn _ZN16QLoggingCategory10setEnabledE9QtMsgTypeb(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_char);
   // proto:  bool QLoggingCategory::isEnabled(QtMsgType type);
@@ -91,13 +88,13 @@ pub trait QLoggingCategory_new {
 impl<'a> /*trait*/ QLoggingCategory_new for (&'a  String, i32) {
   fn new(self) -> QLoggingCategory {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QLoggingCategoryC1EPKc9QtMsgType()};
+    // unsafe{_ZN16QLoggingCategoryC2EPKc9QtMsgType()};
     let ctysz: c_int = unsafe{QLoggingCategory_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as c_int;
-    // unsafe {_ZN16QLoggingCategoryC1EPKc9QtMsgType(qthis, arg0, arg1)};
-    let qthis: u64 = unsafe {dector_ZN16QLoggingCategoryC1EPKc9QtMsgType(arg0, arg1)} as u64;
+    unsafe {_ZN16QLoggingCategoryC2EPKc9QtMsgType(qthis_ph, arg0, arg1)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QLoggingCategory{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -108,12 +105,12 @@ impl<'a> /*trait*/ QLoggingCategory_new for (&'a  String, i32) {
 impl<'a> /*trait*/ QLoggingCategory_new for (&'a QLoggingCategory) {
   fn new(self) -> QLoggingCategory {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QLoggingCategoryC1ERKS_()};
+    // unsafe{_ZN16QLoggingCategoryC2ERKS_()};
     let ctysz: c_int = unsafe{QLoggingCategory_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN16QLoggingCategoryC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN16QLoggingCategoryC1ERKS_(arg0)} as u64;
+    unsafe {_ZN16QLoggingCategoryC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QLoggingCategory{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -159,8 +156,8 @@ pub trait QLoggingCategory_free<RetType> {
 impl<'a> /*trait*/ QLoggingCategory_free<()> for () {
   fn free(self , rsthis: & QLoggingCategory) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QLoggingCategoryD0Ev()};
-     unsafe {_ZN16QLoggingCategoryD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN16QLoggingCategoryD2Ev()};
+     unsafe {_ZN16QLoggingCategoryD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -169,12 +166,12 @@ impl<'a> /*trait*/ QLoggingCategory_free<()> for () {
 impl<'a> /*trait*/ QLoggingCategory_new for (&'a  String) {
   fn new(self) -> QLoggingCategory {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QLoggingCategoryC1EPKc()};
+    // unsafe{_ZN16QLoggingCategoryC2EPKc()};
     let ctysz: c_int = unsafe{QLoggingCategory_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.as_ptr()  as *mut c_char;
-    // unsafe {_ZN16QLoggingCategoryC1EPKc(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN16QLoggingCategoryC1EPKc(arg0)} as u64;
+    unsafe {_ZN16QLoggingCategoryC2EPKc(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QLoggingCategory{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

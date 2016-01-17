@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtGui/qdrag.h
 // dst-file: /src/gui/qdrag.rs
 //
@@ -38,13 +38,11 @@ extern {
   // proto:  QMimeData * QDrag::mimeData();
   fn _ZNK5QDrag8mimeDataEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QDrag::QDrag(QObject * dragSource);
-  fn dector_ZN5QDragC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN5QDragC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN5QDragC2EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QDrag::~QDrag();
-  fn _ZN5QDragD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN5QDragD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QDrag::QDrag(const QDrag & );
-  fn dector_ZN5QDragC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN5QDragC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN5QDragC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QDrag::setHotSpot(const QPoint & hotspot);
   fn _ZN5QDrag10setHotSpotERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QDrag::metaObject();
@@ -155,12 +153,12 @@ pub trait QDrag_new {
 impl<'a> /*trait*/ QDrag_new for (&'a QObject) {
   fn new(self) -> QDrag {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QDragC1EP7QObject()};
+    // unsafe{_ZN5QDragC2EP7QObject()};
     let ctysz: c_int = unsafe{QDrag_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN5QDragC1EP7QObject(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN5QDragC1EP7QObject(arg0)} as u64;
+    unsafe {_ZN5QDragC2EP7QObject(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QDrag{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -183,8 +181,8 @@ pub trait QDrag_free<RetType> {
 impl<'a> /*trait*/ QDrag_free<()> for () {
   fn free(self , rsthis: & QDrag) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QDragD0Ev()};
-     unsafe {_ZN5QDragD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN5QDragD2Ev()};
+     unsafe {_ZN5QDragD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -193,12 +191,12 @@ impl<'a> /*trait*/ QDrag_free<()> for () {
 impl<'a> /*trait*/ QDrag_new for (&'a QDrag) {
   fn new(self) -> QDrag {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QDragC1ERKS_()};
+    // unsafe{_ZN5QDragC2ERKS_()};
     let ctysz: c_int = unsafe{QDrag_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN5QDragC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN5QDragC1ERKS_(arg0)} as u64;
+    unsafe {_ZN5QDragC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QDrag{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qsizegrip.h
 // dst-file: /src/widgets/qsizegrip.rs
 //
@@ -32,13 +32,11 @@ use super::super::core::qsize::QSize; // 771
 extern {
   fn QSizeGrip_Class_Size() -> c_int;
   // proto:  void QSizeGrip::QSizeGrip(const QSizeGrip & );
-  fn dector_ZN9QSizeGripC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QSizeGripC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN9QSizeGripC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QSizeGrip::QSizeGrip(QWidget * parent);
-  fn dector_ZN9QSizeGripC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QSizeGripC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN9QSizeGripC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QSizeGrip::~QSizeGrip();
-  fn _ZN9QSizeGripD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN9QSizeGripD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QSizeGrip::setVisible(bool );
   fn _ZN9QSizeGrip10setVisibleEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  const QMetaObject * QSizeGrip::metaObject();
@@ -89,12 +87,12 @@ pub trait QSizeGrip_new {
 impl<'a> /*trait*/ QSizeGrip_new for (&'a QSizeGrip) {
   fn new(self) -> QSizeGrip {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QSizeGripC1ERKS_()};
+    // unsafe{_ZN9QSizeGripC2ERKS_()};
     let ctysz: c_int = unsafe{QSizeGrip_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN9QSizeGripC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN9QSizeGripC1ERKS_(arg0)} as u64;
+    unsafe {_ZN9QSizeGripC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QSizeGrip{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -105,12 +103,12 @@ impl<'a> /*trait*/ QSizeGrip_new for (&'a QSizeGrip) {
 impl<'a> /*trait*/ QSizeGrip_new for (&'a QWidget) {
   fn new(self) -> QSizeGrip {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QSizeGripC1EP7QWidget()};
+    // unsafe{_ZN9QSizeGripC2EP7QWidget()};
     let ctysz: c_int = unsafe{QSizeGrip_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN9QSizeGripC1EP7QWidget(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN9QSizeGripC1EP7QWidget(arg0)} as u64;
+    unsafe {_ZN9QSizeGripC2EP7QWidget(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QSizeGrip{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -133,8 +131,8 @@ pub trait QSizeGrip_free<RetType> {
 impl<'a> /*trait*/ QSizeGrip_free<()> for () {
   fn free(self , rsthis: & QSizeGrip) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QSizeGripD0Ev()};
-     unsafe {_ZN9QSizeGripD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN9QSizeGripD2Ev()};
+     unsafe {_ZN9QSizeGripD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

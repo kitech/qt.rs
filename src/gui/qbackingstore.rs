@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtGui/qbackingstore.h
 // dst-file: /src/gui/qbackingstore.rs
 //
@@ -43,7 +43,7 @@ extern {
   // proto:  QRegion QBackingStore::staticContents();
   fn _ZNK13QBackingStore14staticContentsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QBackingStore::~QBackingStore();
-  fn _ZN13QBackingStoreD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN13QBackingStoreD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QBackingStore::setStaticContents(const QRegion & region);
   fn _ZN13QBackingStore17setStaticContentsERK7QRegion(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QBackingStore::resize(const QSize & size);
@@ -61,8 +61,7 @@ extern {
   // proto:  QPlatformBackingStore * QBackingStore::handle();
   fn _ZNK13QBackingStore6handleEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QBackingStore::QBackingStore(QWindow * window);
-  fn dector_ZN13QBackingStoreC1EP7QWindow(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN13QBackingStoreC1EP7QWindow(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN13QBackingStoreC2EP7QWindow(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -190,8 +189,8 @@ pub trait QBackingStore_free<RetType> {
 impl<'a> /*trait*/ QBackingStore_free<()> for () {
   fn free(self , rsthis: & QBackingStore) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QBackingStoreD0Ev()};
-     unsafe {_ZN13QBackingStoreD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN13QBackingStoreD2Ev()};
+     unsafe {_ZN13QBackingStoreD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -400,12 +399,12 @@ pub trait QBackingStore_new {
 impl<'a> /*trait*/ QBackingStore_new for (&'a QWindow) {
   fn new(self) -> QBackingStore {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QBackingStoreC1EP7QWindow()};
+    // unsafe{_ZN13QBackingStoreC2EP7QWindow()};
     let ctysz: c_int = unsafe{QBackingStore_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN13QBackingStoreC1EP7QWindow(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN13QBackingStoreC1EP7QWindow(arg0)} as u64;
+    unsafe {_ZN13QBackingStoreC2EP7QWindow(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QBackingStore{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qmdisubwindow.h
 // dst-file: /src/widgets/qmdisubwindow.rs
 //
@@ -46,7 +46,7 @@ extern {
   // proto:  void QMdiSubWindow::setSystemMenu(QMenu * systemMenu);
   fn _ZN13QMdiSubWindow13setSystemMenuEP5QMenu(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMdiSubWindow::~QMdiSubWindow();
-  fn _ZN13QMdiSubWindowD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN13QMdiSubWindowD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QMdiSubWindow::setKeyboardSingleStep(int step);
   fn _ZN13QMdiSubWindow21setKeyboardSingleStepEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  QWidget * QMdiSubWindow::widget();
@@ -62,8 +62,7 @@ extern {
   // proto:  QMenu * QMdiSubWindow::systemMenu();
   fn _ZNK13QMdiSubWindow10systemMenuEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QMdiSubWindow::QMdiSubWindow(const QMdiSubWindow & );
-  fn dector_ZN13QMdiSubWindowC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN13QMdiSubWindowC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN13QMdiSubWindowC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMdiSubWindow::setWidget(QWidget * widget);
   fn _ZN13QMdiSubWindow9setWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QMdiSubWindow::isShaded();
@@ -258,8 +257,8 @@ pub trait QMdiSubWindow_free<RetType> {
 impl<'a> /*trait*/ QMdiSubWindow_free<()> for () {
   fn free(self , rsthis: & QMdiSubWindow) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QMdiSubWindowD0Ev()};
-     unsafe {_ZN13QMdiSubWindowD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN13QMdiSubWindowD2Ev()};
+     unsafe {_ZN13QMdiSubWindowD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -444,12 +443,12 @@ pub trait QMdiSubWindow_new {
 impl<'a> /*trait*/ QMdiSubWindow_new for (&'a QMdiSubWindow) {
   fn new(self) -> QMdiSubWindow {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QMdiSubWindowC1ERKS_()};
+    // unsafe{_ZN13QMdiSubWindowC2ERKS_()};
     let ctysz: c_int = unsafe{QMdiSubWindow_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN13QMdiSubWindowC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN13QMdiSubWindowC1ERKS_(arg0)} as u64;
+    unsafe {_ZN13QMdiSubWindowC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QMdiSubWindow{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

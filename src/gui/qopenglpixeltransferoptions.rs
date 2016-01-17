@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtGui/qopenglpixeltransferoptions.h
 // dst-file: /src/gui/qopenglpixeltransferoptions.rs
 //
@@ -30,17 +30,15 @@ use std::ops::Deref;
 extern {
   fn QOpenGLPixelTransferOptions_Class_Size() -> c_int;
   // proto:  void QOpenGLPixelTransferOptions::QOpenGLPixelTransferOptions();
-  fn dector_ZN27QOpenGLPixelTransferOptionsC1Ev() -> *mut c_void;
-  fn _ZN27QOpenGLPixelTransferOptionsC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN27QOpenGLPixelTransferOptionsC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QOpenGLPixelTransferOptions::~QOpenGLPixelTransferOptions();
-  fn _ZN27QOpenGLPixelTransferOptionsD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN27QOpenGLPixelTransferOptionsD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QOpenGLPixelTransferOptions::isSwapBytesEnabled();
   fn _ZNK27QOpenGLPixelTransferOptions18isSwapBytesEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QOpenGLPixelTransferOptions::swap(QOpenGLPixelTransferOptions & other);
   fn _ZN27QOpenGLPixelTransferOptions4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QOpenGLPixelTransferOptions::QOpenGLPixelTransferOptions(const QOpenGLPixelTransferOptions & );
-  fn dector_ZN27QOpenGLPixelTransferOptionsC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN27QOpenGLPixelTransferOptionsC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN27QOpenGLPixelTransferOptionsC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QOpenGLPixelTransferOptions::skipImages();
   fn _ZNK27QOpenGLPixelTransferOptions10skipImagesEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QOpenGLPixelTransferOptions::setSkipRows(int skipRows);
@@ -103,11 +101,11 @@ pub trait QOpenGLPixelTransferOptions_new {
 impl<'a> /*trait*/ QOpenGLPixelTransferOptions_new for () {
   fn new(self) -> QOpenGLPixelTransferOptions {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN27QOpenGLPixelTransferOptionsC1Ev()};
+    // unsafe{_ZN27QOpenGLPixelTransferOptionsC2Ev()};
     let ctysz: c_int = unsafe{QOpenGLPixelTransferOptions_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN27QOpenGLPixelTransferOptionsC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN27QOpenGLPixelTransferOptionsC1Ev()} as u64;
+    unsafe {_ZN27QOpenGLPixelTransferOptionsC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QOpenGLPixelTransferOptions{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -130,8 +128,8 @@ pub trait QOpenGLPixelTransferOptions_free<RetType> {
 impl<'a> /*trait*/ QOpenGLPixelTransferOptions_free<()> for () {
   fn free(self , rsthis: & QOpenGLPixelTransferOptions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN27QOpenGLPixelTransferOptionsD0Ev()};
-     unsafe {_ZN27QOpenGLPixelTransferOptionsD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN27QOpenGLPixelTransferOptionsD2Ev()};
+     unsafe {_ZN27QOpenGLPixelTransferOptionsD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -186,12 +184,12 @@ impl<'a> /*trait*/ QOpenGLPixelTransferOptions_swap<()> for (&'a QOpenGLPixelTra
 impl<'a> /*trait*/ QOpenGLPixelTransferOptions_new for (&'a QOpenGLPixelTransferOptions) {
   fn new(self) -> QOpenGLPixelTransferOptions {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN27QOpenGLPixelTransferOptionsC1ERKS_()};
+    // unsafe{_ZN27QOpenGLPixelTransferOptionsC2ERKS_()};
     let ctysz: c_int = unsafe{QOpenGLPixelTransferOptions_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN27QOpenGLPixelTransferOptionsC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN27QOpenGLPixelTransferOptionsC1ERKS_(arg0)} as u64;
+    unsafe {_ZN27QOpenGLPixelTransferOptionsC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QOpenGLPixelTransferOptions{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

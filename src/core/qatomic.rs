@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qatomic.h
 // dst-file: /src/core/qatomic.rs
 //
@@ -30,8 +30,7 @@ use std::ops::Deref;
 extern {
   fn QAtomicInt_Class_Size() -> c_int;
   // proto:  void QAtomicInt::QAtomicInt(int value);
-  fn dector_ZN10QAtomicIntC1Ei(arg0: c_int) -> *mut c_void;
-  fn _ZN10QAtomicIntC1Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn _ZN10QAtomicIntC2Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
 } // <= ext block end
 
 // body block begin =>
@@ -64,12 +63,12 @@ pub trait QAtomicInt_new {
 impl<'a> /*trait*/ QAtomicInt_new for (i32) {
   fn new(self) -> QAtomicInt {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QAtomicIntC1Ei()};
+    // unsafe{_ZN10QAtomicIntC2Ei()};
     let ctysz: c_int = unsafe{QAtomicInt_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
-    // unsafe {_ZN10QAtomicIntC1Ei(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN10QAtomicIntC1Ei(arg0)} as u64;
+    unsafe {_ZN10QAtomicIntC2Ei(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QAtomicInt{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

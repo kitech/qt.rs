@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qmimedata.h
 // dst-file: /src/core/qmimedata.rs
 //
@@ -38,12 +38,11 @@ extern {
   // proto:  QVariant QMimeData::colorData();
   fn _ZNK9QMimeData9colorDataEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QMimeData::~QMimeData();
-  fn _ZN9QMimeDataD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN9QMimeDataD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QMimeData::hasHtml();
   fn _ZNK9QMimeData7hasHtmlEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QMimeData::QMimeData(const QMimeData & );
-  fn dector_ZN9QMimeDataC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QMimeDataC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN9QMimeDataC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QVariant QMimeData::imageData();
   fn _ZNK9QMimeData9imageDataEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QMimeData::hasFormat(const QString & mimetype);
@@ -67,8 +66,7 @@ extern {
   // proto:  QString QMimeData::html();
   fn _ZNK9QMimeData4htmlEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QMimeData::QMimeData();
-  fn dector_ZN9QMimeDataC1Ev() -> *mut c_void;
-  fn _ZN9QMimeDataC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN9QMimeDataC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QList<QUrl> QMimeData::urls();
   fn _ZNK9QMimeData4urlsEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QMimeData::setColorData(const QVariant & color);
@@ -174,8 +172,8 @@ pub trait QMimeData_free<RetType> {
 impl<'a> /*trait*/ QMimeData_free<()> for () {
   fn free(self , rsthis: & QMimeData) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QMimeDataD0Ev()};
-     unsafe {_ZN9QMimeDataD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN9QMimeDataD2Ev()};
+     unsafe {_ZN9QMimeDataD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -220,12 +218,12 @@ pub trait QMimeData_new {
 impl<'a> /*trait*/ QMimeData_new for (&'a QMimeData) {
   fn new(self) -> QMimeData {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QMimeDataC1ERKS_()};
+    // unsafe{_ZN9QMimeDataC2ERKS_()};
     let ctysz: c_int = unsafe{QMimeData_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN9QMimeDataC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN9QMimeDataC1ERKS_(arg0)} as u64;
+    unsafe {_ZN9QMimeDataC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QMimeData{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -492,11 +490,11 @@ impl<'a> /*trait*/ QMimeData_html<QString> for () {
 impl<'a> /*trait*/ QMimeData_new for () {
   fn new(self) -> QMimeData {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QMimeDataC1Ev()};
+    // unsafe{_ZN9QMimeDataC2Ev()};
     let ctysz: c_int = unsafe{QMimeData_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN9QMimeDataC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN9QMimeDataC1Ev()} as u64;
+    unsafe {_ZN9QMimeDataC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QMimeData{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

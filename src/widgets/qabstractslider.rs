@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qabstractslider.h
 // dst-file: /src/widgets/qabstractslider.rs
 //
@@ -39,8 +39,7 @@ extern {
   // proto:  void QAbstractSlider::setInvertedControls(bool );
   fn _ZN15QAbstractSlider19setInvertedControlsEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QAbstractSlider::QAbstractSlider(const QAbstractSlider & );
-  fn dector_ZN15QAbstractSliderC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN15QAbstractSliderC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN15QAbstractSliderC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QAbstractSlider::minimum();
   fn _ZNK15QAbstractSlider7minimumEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QAbstractSlider::singleStep();
@@ -54,7 +53,7 @@ extern {
   // proto:  void QAbstractSlider::setValue(int );
   fn _ZN15QAbstractSlider8setValueEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QAbstractSlider::~QAbstractSlider();
-  fn _ZN15QAbstractSliderD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN15QAbstractSliderD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractSlider::setPageStep(int );
   fn _ZN15QAbstractSlider11setPageStepEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QAbstractSlider::setSliderDown(bool );
@@ -76,8 +75,7 @@ extern {
   // proto:  void QAbstractSlider::setTracking(bool enable);
   fn _ZN15QAbstractSlider11setTrackingEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QAbstractSlider::QAbstractSlider(QWidget * parent);
-  fn dector_ZN15QAbstractSliderC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN15QAbstractSliderC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN15QAbstractSliderC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAbstractSlider::setRange(int min, int max);
   fn _ZN15QAbstractSlider8setRangeEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  void QAbstractSlider::setMinimum(int );
@@ -230,12 +228,12 @@ pub trait QAbstractSlider_new {
 impl<'a> /*trait*/ QAbstractSlider_new for (&'a QAbstractSlider) {
   fn new(self) -> QAbstractSlider {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QAbstractSliderC1ERKS_()};
+    // unsafe{_ZN15QAbstractSliderC2ERKS_()};
     let ctysz: c_int = unsafe{QAbstractSlider_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN15QAbstractSliderC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN15QAbstractSliderC1ERKS_(arg0)} as u64;
+    unsafe {_ZN15QAbstractSliderC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QAbstractSlider{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -396,8 +394,8 @@ pub trait QAbstractSlider_free<RetType> {
 impl<'a> /*trait*/ QAbstractSlider_free<()> for () {
   fn free(self , rsthis: & QAbstractSlider) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QAbstractSliderD0Ev()};
-     unsafe {_ZN15QAbstractSliderD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN15QAbstractSliderD2Ev()};
+     unsafe {_ZN15QAbstractSliderD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -635,12 +633,12 @@ impl<'a> /*trait*/ QAbstractSlider_setTracking<()> for (i8) {
 impl<'a> /*trait*/ QAbstractSlider_new for (&'a QWidget) {
   fn new(self) -> QAbstractSlider {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QAbstractSliderC1EP7QWidget()};
+    // unsafe{_ZN15QAbstractSliderC2EP7QWidget()};
     let ctysz: c_int = unsafe{QAbstractSlider_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN15QAbstractSliderC1EP7QWidget(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN15QAbstractSliderC1EP7QWidget(arg0)} as u64;
+    unsafe {_ZN15QAbstractSliderC2EP7QWidget(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QAbstractSlider{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

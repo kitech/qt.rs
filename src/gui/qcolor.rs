@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtGui/qcolor.h
 // dst-file: /src/gui/qcolor.rs
 //
@@ -57,11 +57,9 @@ extern {
   // proto:  QColor QColor::toHsl();
   fn _ZNK6QColor5toHslEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QColor::QColor();
-  fn dector_ZN6QColorC1Ev() -> *mut c_void;
-  fn _ZN6QColorC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN6QColorC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QColor::QColor(const char * name);
-  fn dector_ZN6QColorC1EPKc(arg0: *mut c_char) -> *mut c_void;
-  fn _ZN6QColorC1EPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_char);
+  fn _ZN6QColorC2EPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_char);
   // proto:  void QColor::setBlue(int blue);
   fn _ZN6QColor7setBlueEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QColor::cyan();
@@ -119,8 +117,7 @@ extern {
   // proto:  QColor QColor::toHsv();
   fn _ZNK6QColor5toHsvEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QColor::QColor(const QColor & color);
-  fn dector_ZN6QColorC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN6QColorC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN6QColorC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static QColor QColor::fromHsv(int h, int s, int v, int a);
   fn _ZN6QColor7fromHsvEiiii(arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int) -> *mut c_void;
   // proto:  qreal QColor::hueF();
@@ -164,8 +161,7 @@ extern {
   // proto:  void QColor::setRed(int red);
   fn _ZN6QColor6setRedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QColor::QColor(const QString & name);
-  fn dector_ZN6QColorC1ERK7QString(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN6QColorC1ERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN6QColorC2ERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static QColor QColor::fromRgba(QRgb rgba);
   fn _ZN6QColor8fromRgbaEj(arg0: c_uint) -> *mut c_void;
   // proto:  void QColor::setHsv(int h, int s, int v, int a);
@@ -177,8 +173,7 @@ extern {
   // proto:  int QColor::saturation();
   fn _ZNK6QColor10saturationEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QColor::QColor(int r, int g, int b, int a);
-  fn dector_ZN6QColorC1Eiiii(arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int) -> *mut c_void;
-  fn _ZN6QColorC1Eiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
+  fn _ZN6QColorC2Eiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
   // proto:  qreal QColor::alphaF();
   fn _ZNK6QColor6alphaFEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  int QColor::value();
@@ -194,8 +189,7 @@ extern {
   // proto:  void QColor::setHsl(int h, int s, int l, int a);
   fn _ZN6QColor6setHslEiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
   // proto:  void QColor::QColor(QRgb rgb);
-  fn dector_ZN6QColorC1Ej(arg0: c_uint) -> *mut c_void;
-  fn _ZN6QColorC1Ej(qthis: u64 /* *mut c_void*/, arg0: c_uint);
+  fn _ZN6QColorC2Ej(qthis: u64 /* *mut c_void*/, arg0: c_uint);
   // proto:  void QColor::setGreen(int green);
   fn _ZN6QColor8setGreenEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QColor::getHsl(int * h, int * s, int * l, int * a);
@@ -561,11 +555,11 @@ pub trait QColor_new {
 impl<'a> /*trait*/ QColor_new for () {
   fn new(self) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN6QColorC1Ev()};
+    // unsafe{_ZN6QColorC2Ev()};
     let ctysz: c_int = unsafe{QColor_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN6QColorC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN6QColorC1Ev()} as u64;
+    unsafe {_ZN6QColorC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QColor{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -576,12 +570,12 @@ impl<'a> /*trait*/ QColor_new for () {
 impl<'a> /*trait*/ QColor_new for (&'a  String) {
   fn new(self) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN6QColorC1EPKc()};
+    // unsafe{_ZN6QColorC2EPKc()};
     let ctysz: c_int = unsafe{QColor_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.as_ptr()  as *mut c_char;
-    // unsafe {_ZN6QColorC1EPKc(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN6QColorC1EPKc(arg0)} as u64;
+    unsafe {_ZN6QColorC2EPKc(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QColor{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1249,12 +1243,12 @@ impl<'a> /*trait*/ QColor_toHsv<QColor> for () {
 impl<'a> /*trait*/ QColor_new for (&'a QColor) {
   fn new(self) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN6QColorC1ERKS_()};
+    // unsafe{_ZN6QColorC2ERKS_()};
     let ctysz: c_int = unsafe{QColor_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN6QColorC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN6QColorC1ERKS_(arg0)} as u64;
+    unsafe {_ZN6QColorC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QColor{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1774,12 +1768,12 @@ impl<'a> /*trait*/ QColor_setRed<()> for (i32) {
 impl<'a> /*trait*/ QColor_new for (&'a QString) {
   fn new(self) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN6QColorC1ERK7QString()};
+    // unsafe{_ZN6QColorC2ERK7QString()};
     let ctysz: c_int = unsafe{QColor_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN6QColorC1ERK7QString(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN6QColorC1ERK7QString(arg0)} as u64;
+    unsafe {_ZN6QColorC2ERK7QString(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QColor{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1913,15 +1907,15 @@ impl<'a> /*trait*/ QColor_saturation<i32> for () {
 impl<'a> /*trait*/ QColor_new for (i32, i32, i32, i32) {
   fn new(self) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN6QColorC1Eiiii()};
+    // unsafe{_ZN6QColorC2Eiiii()};
     let ctysz: c_int = unsafe{QColor_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as c_int;
     let arg3 = self.3  as c_int;
-    // unsafe {_ZN6QColorC1Eiiii(qthis, arg0, arg1, arg2, arg3)};
-    let qthis: u64 = unsafe {dector_ZN6QColorC1Eiiii(arg0, arg1, arg2, arg3)} as u64;
+    unsafe {_ZN6QColorC2Eiiii(qthis_ph, arg0, arg1, arg2, arg3)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QColor{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -2108,12 +2102,12 @@ impl<'a> /*trait*/ QColor_setHsl<()> for (i32, i32, i32, i32) {
 impl<'a> /*trait*/ QColor_new for (u32) {
   fn new(self) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN6QColorC1Ej()};
+    // unsafe{_ZN6QColorC2Ej()};
     let ctysz: c_int = unsafe{QColor_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_uint;
-    // unsafe {_ZN6QColorC1Ej(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN6QColorC1Ej(arg0)} as u64;
+    unsafe {_ZN6QColorC2Ej(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QColor{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qstandardpaths.h
 // dst-file: /src/core/qstandardpaths.rs
 //
@@ -32,10 +32,9 @@ use super::qstringlist::QStringList; // 773
 extern {
   fn QStandardPaths_Class_Size() -> c_int;
   // proto:  void QStandardPaths::QStandardPaths();
-  fn dector_ZN14QStandardPathsC1Ev() -> *mut c_void;
-  fn _ZN14QStandardPathsC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN14QStandardPathsC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QStandardPaths::~QStandardPaths();
-  fn _ZN14QStandardPathsD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN14QStandardPathsD2Ev(qthis: u64 /* *mut c_void*/);
   // proto: static void QStandardPaths::setTestModeEnabled(bool testMode);
   fn _ZN14QStandardPaths18setTestModeEnabledEb(arg0: c_char);
   // proto: static QString QStandardPaths::findExecutable(const QString & executableName, const QStringList & paths);
@@ -76,11 +75,11 @@ pub trait QStandardPaths_new {
 impl<'a> /*trait*/ QStandardPaths_new for () {
   fn new(self) -> QStandardPaths {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QStandardPathsC1Ev()};
+    // unsafe{_ZN14QStandardPathsC2Ev()};
     let ctysz: c_int = unsafe{QStandardPaths_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN14QStandardPathsC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN14QStandardPathsC1Ev()} as u64;
+    unsafe {_ZN14QStandardPathsC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStandardPaths{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -103,8 +102,8 @@ pub trait QStandardPaths_free<RetType> {
 impl<'a> /*trait*/ QStandardPaths_free<()> for () {
   fn free(self , rsthis: & QStandardPaths) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QStandardPathsD0Ev()};
-     unsafe {_ZN14QStandardPathsD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN14QStandardPathsD2Ev()};
+     unsafe {_ZN14QStandardPathsD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

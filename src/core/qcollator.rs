@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qcollator.h
 // dst-file: /src/core/qcollator.rs
 //
@@ -36,8 +36,7 @@ extern {
   // proto:  bool QCollator::numericMode();
   fn _ZNK9QCollator11numericModeEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QCollator::QCollator(const QLocale & locale);
-  fn dector_ZN9QCollatorC1ERK7QLocale(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QCollatorC1ERK7QLocale(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN9QCollatorC2ERK7QLocale(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QCollator::setLocale(const QLocale & locale);
   fn _ZN9QCollator9setLocaleERK7QLocale(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QCollator::setNumericMode(bool on);
@@ -49,12 +48,11 @@ extern {
   // proto:  int QCollator::compare(const QString & s1, const QString & s2);
   fn _ZNK9QCollator7compareERK7QStringS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> c_int;
   // proto:  void QCollator::~QCollator();
-  fn _ZN9QCollatorD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN9QCollatorD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QCollator::ignorePunctuation();
   fn _ZNK9QCollator17ignorePunctuationEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QCollator::QCollator(const QCollator & );
-  fn dector_ZN9QCollatorC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QCollatorC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN9QCollatorC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QLocale QCollator::locale();
   fn _ZNK9QCollator6localeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QCollator::swap(QCollator & other);
@@ -63,17 +61,15 @@ extern {
   fn _ZN9QCollator20setIgnorePunctuationEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   fn QCollatorSortKey_Class_Size() -> c_int;
   // proto:  void QCollatorSortKey::~QCollatorSortKey();
-  fn _ZN16QCollatorSortKeyD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN16QCollatorSortKeyD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QCollatorSortKey::swap(QCollatorSortKey & other);
   fn _ZN16QCollatorSortKey4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QCollatorSortKey::compare(const QCollatorSortKey & key);
   fn _ZNK16QCollatorSortKey7compareERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
   // proto:  void QCollatorSortKey::QCollatorSortKey(const QCollatorSortKey & other);
-  fn dector_ZN16QCollatorSortKeyC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN16QCollatorSortKeyC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN16QCollatorSortKeyC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QCollatorSortKey::QCollatorSortKey();
-  fn dector_ZN16QCollatorSortKeyC1Ev() -> *mut c_void;
-  fn _ZN16QCollatorSortKeyC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN16QCollatorSortKeyC2Ev(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
@@ -136,12 +132,12 @@ pub trait QCollator_new {
 impl<'a> /*trait*/ QCollator_new for (&'a QLocale) {
   fn new(self) -> QCollator {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QCollatorC1ERK7QLocale()};
+    // unsafe{_ZN9QCollatorC2ERK7QLocale()};
     let ctysz: c_int = unsafe{QCollator_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN9QCollatorC1ERK7QLocale(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN9QCollatorC1ERK7QLocale(arg0)} as u64;
+    unsafe {_ZN9QCollatorC2ERK7QLocale(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QCollator{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -275,8 +271,8 @@ pub trait QCollator_free<RetType> {
 impl<'a> /*trait*/ QCollator_free<()> for () {
   fn free(self , rsthis: & QCollator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QCollatorD0Ev()};
-     unsafe {_ZN9QCollatorD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN9QCollatorD2Ev()};
+     unsafe {_ZN9QCollatorD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -308,12 +304,12 @@ impl<'a> /*trait*/ QCollator_ignorePunctuation<i8> for () {
 impl<'a> /*trait*/ QCollator_new for (&'a QCollator) {
   fn new(self) -> QCollator {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QCollatorC1ERKS_()};
+    // unsafe{_ZN9QCollatorC2ERKS_()};
     let ctysz: c_int = unsafe{QCollator_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN9QCollatorC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN9QCollatorC1ERKS_(arg0)} as u64;
+    unsafe {_ZN9QCollatorC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QCollator{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -411,8 +407,8 @@ pub trait QCollatorSortKey_free<RetType> {
 impl<'a> /*trait*/ QCollatorSortKey_free<()> for () {
   fn free(self , rsthis: & QCollatorSortKey) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QCollatorSortKeyD0Ev()};
-     unsafe {_ZN16QCollatorSortKeyD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN16QCollatorSortKeyD2Ev()};
+     unsafe {_ZN16QCollatorSortKeyD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -481,12 +477,12 @@ pub trait QCollatorSortKey_new {
 impl<'a> /*trait*/ QCollatorSortKey_new for (&'a QCollatorSortKey) {
   fn new(self) -> QCollatorSortKey {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QCollatorSortKeyC1ERKS_()};
+    // unsafe{_ZN16QCollatorSortKeyC2ERKS_()};
     let ctysz: c_int = unsafe{QCollatorSortKey_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN16QCollatorSortKeyC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN16QCollatorSortKeyC1ERKS_(arg0)} as u64;
+    unsafe {_ZN16QCollatorSortKeyC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QCollatorSortKey{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -497,11 +493,11 @@ impl<'a> /*trait*/ QCollatorSortKey_new for (&'a QCollatorSortKey) {
 impl<'a> /*trait*/ QCollatorSortKey_new for () {
   fn new(self) -> QCollatorSortKey {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QCollatorSortKeyC1Ev()};
+    // unsafe{_ZN16QCollatorSortKeyC2Ev()};
     let ctysz: c_int = unsafe{QCollatorSortKey_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN16QCollatorSortKeyC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN16QCollatorSortKeyC1Ev()} as u64;
+    unsafe {_ZN16QCollatorSortKeyC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QCollatorSortKey{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

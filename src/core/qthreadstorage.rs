@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qthreadstorage.h
 // dst-file: /src/core/qthreadstorage.rs
 //
@@ -36,7 +36,7 @@ extern {
   // proto: static void QThreadStorageData::finish(void ** );
   fn _ZN18QThreadStorageData6finishEPPv(arg0: *mut c_void);
   // proto:  void QThreadStorageData::~QThreadStorageData();
-  fn _ZN18QThreadStorageDataD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN18QThreadStorageDataD2Ev(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
@@ -136,8 +136,8 @@ pub trait QThreadStorageData_free<RetType> {
 impl<'a> /*trait*/ QThreadStorageData_free<()> for () {
   fn free(self , rsthis: & QThreadStorageData) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QThreadStorageDataD0Ev()};
-     unsafe {_ZN18QThreadStorageDataD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN18QThreadStorageDataD2Ev()};
+     unsafe {_ZN18QThreadStorageDataD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qstatusbar.h
 // dst-file: /src/widgets/qstatusbar.rs
 //
@@ -32,14 +32,13 @@ use super::super::core::qstring::QString; // 771
 extern {
   fn QStatusBar_Class_Size() -> c_int;
   // proto:  void QStatusBar::~QStatusBar();
-  fn _ZN10QStatusBarD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN10QStatusBarD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  int QStatusBar::insertPermanentWidget(int index, QWidget * widget, int stretch);
   fn _ZN10QStatusBar21insertPermanentWidgetEiP7QWidgeti(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void, arg2: c_int) -> c_int;
   // proto:  void QStatusBar::removeWidget(QWidget * widget);
   fn _ZN10QStatusBar12removeWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QStatusBar::QStatusBar(const QStatusBar & );
-  fn dector_ZN10QStatusBarC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN10QStatusBarC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN10QStatusBarC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QStatusBar::setSizeGripEnabled(bool );
   fn _ZN10QStatusBar18setSizeGripEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QStatusBar::addPermanentWidget(QWidget * widget, int stretch);
@@ -59,8 +58,7 @@ extern {
   // proto:  void QStatusBar::addWidget(QWidget * widget, int stretch);
   fn _ZN10QStatusBar9addWidgetEP7QWidgeti(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
   // proto:  void QStatusBar::QStatusBar(QWidget * parent);
-  fn dector_ZN10QStatusBarC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN10QStatusBarC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN10QStatusBarC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QStatusBar_SlotProxy_connect__ZN10QStatusBar14messageChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
@@ -106,8 +104,8 @@ pub trait QStatusBar_free<RetType> {
 impl<'a> /*trait*/ QStatusBar_free<()> for () {
   fn free(self , rsthis: & QStatusBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QStatusBarD0Ev()};
-     unsafe {_ZN10QStatusBarD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN10QStatusBarD2Ev()};
+     unsafe {_ZN10QStatusBarD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -178,12 +176,12 @@ pub trait QStatusBar_new {
 impl<'a> /*trait*/ QStatusBar_new for (&'a QStatusBar) {
   fn new(self) -> QStatusBar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QStatusBarC1ERKS_()};
+    // unsafe{_ZN10QStatusBarC2ERKS_()};
     let ctysz: c_int = unsafe{QStatusBar_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN10QStatusBarC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN10QStatusBarC1ERKS_(arg0)} as u64;
+    unsafe {_ZN10QStatusBarC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStatusBar{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -406,12 +404,12 @@ impl<'a> /*trait*/ QStatusBar_addWidget<()> for (&'a QWidget, i32) {
 impl<'a> /*trait*/ QStatusBar_new for (&'a QWidget) {
   fn new(self) -> QStatusBar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QStatusBarC1EP7QWidget()};
+    // unsafe{_ZN10QStatusBarC2EP7QWidget()};
     let ctysz: c_int = unsafe{QStatusBar_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN10QStatusBarC1EP7QWidget(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN10QStatusBarC1EP7QWidget(arg0)} as u64;
+    unsafe {_ZN10QStatusBarC2EP7QWidget(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStatusBar{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

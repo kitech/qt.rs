@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtGui/qinputmethod.h
 // dst-file: /src/gui/qinputmethod.rs
 //
@@ -47,8 +47,7 @@ extern {
   // proto:  void QInputMethod::show();
   fn _ZN12QInputMethod4showEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QInputMethod::QInputMethod();
-  fn dector_ZN12QInputMethodC1Ev() -> *mut c_void;
-  fn _ZN12QInputMethodC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN12QInputMethodC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QInputMethod::isAnimating();
   fn _ZNK12QInputMethod11isAnimatingEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QInputMethod::setVisible(bool visible);
@@ -64,7 +63,7 @@ extern {
   // proto:  bool QInputMethod::isVisible();
   fn _ZNK12QInputMethod9isVisibleEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QInputMethod::~QInputMethod();
-  fn _ZN12QInputMethodD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN12QInputMethodD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QLocale QInputMethod::locale();
   fn _ZNK12QInputMethod6localeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QInputMethod::reset();
@@ -263,11 +262,11 @@ pub trait QInputMethod_new {
 impl<'a> /*trait*/ QInputMethod_new for () {
   fn new(self) -> QInputMethod {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QInputMethodC1Ev()};
+    // unsafe{_ZN12QInputMethodC2Ev()};
     let ctysz: c_int = unsafe{QInputMethod_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN12QInputMethodC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN12QInputMethodC1Ev()} as u64;
+    unsafe {_ZN12QInputMethodC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QInputMethod{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -451,8 +450,8 @@ pub trait QInputMethod_free<RetType> {
 impl<'a> /*trait*/ QInputMethod_free<()> for () {
   fn free(self , rsthis: & QInputMethod) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QInputMethodD0Ev()};
-     unsafe {_ZN12QInputMethodD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN12QInputMethodD2Ev()};
+     unsafe {_ZN12QInputMethodD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

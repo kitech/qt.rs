@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qlibraryinfo.h
 // dst-file: /src/core/qlibraryinfo.rs
 //
@@ -32,8 +32,7 @@ use super::qdatetime::QDate; // 773
 extern {
   fn QLibraryInfo_Class_Size() -> c_int;
   // proto:  void QLibraryInfo::QLibraryInfo();
-  fn dector_ZN12QLibraryInfoC1Ev() -> *mut c_void;
-  fn _ZN12QLibraryInfoC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN12QLibraryInfoC2Ev(qthis: u64 /* *mut c_void*/);
   // proto: static QStringList QLibraryInfo::platformPluginArguments(const QString & platformName);
   fn _ZN12QLibraryInfo23platformPluginArgumentsERK7QString(arg0: *mut c_void);
   // proto: static QString QLibraryInfo::licensee();
@@ -78,11 +77,11 @@ pub trait QLibraryInfo_new {
 impl<'a> /*trait*/ QLibraryInfo_new for () {
   fn new(self) -> QLibraryInfo {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QLibraryInfoC1Ev()};
+    // unsafe{_ZN12QLibraryInfoC2Ev()};
     let ctysz: c_int = unsafe{QLibraryInfo_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN12QLibraryInfoC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN12QLibraryInfoC1Ev()} as u64;
+    unsafe {_ZN12QLibraryInfoC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QLibraryInfo{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

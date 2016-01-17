@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qcalendarwidget.h
 // dst-file: /src/widgets/qcalendarwidget.rs
 //
@@ -48,7 +48,7 @@ extern {
   // proto:  void QCalendarWidget::setGridVisible(bool show);
   fn _ZN15QCalendarWidget14setGridVisibleEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QCalendarWidget::~QCalendarWidget();
-  fn _ZN15QCalendarWidgetD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN15QCalendarWidgetD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QSize QCalendarWidget::sizeHint();
   fn _ZNK15QCalendarWidget8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QCalendarWidget::monthShown();
@@ -56,8 +56,7 @@ extern {
   // proto:  void QCalendarWidget::setSelectedDate(const QDate & date);
   fn _ZN15QCalendarWidget15setSelectedDateERK5QDate(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QCalendarWidget::QCalendarWidget(QWidget * parent);
-  fn dector_ZN15QCalendarWidgetC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN15QCalendarWidgetC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN15QCalendarWidgetC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QCalendarWidget::metaObject();
   fn _ZNK15QCalendarWidget10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QCalendarWidget::setNavigationBarVisible(bool visible);
@@ -73,8 +72,7 @@ extern {
   // proto:  QDate QCalendarWidget::minimumDate();
   fn _ZNK15QCalendarWidget11minimumDateEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QCalendarWidget::QCalendarWidget(const QCalendarWidget & );
-  fn dector_ZN15QCalendarWidgetC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN15QCalendarWidgetC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN15QCalendarWidgetC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QCalendarWidget::isDateEditEnabled();
   fn _ZNK15QCalendarWidget17isDateEditEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QMap<QDate, QTextCharFormat> QCalendarWidget::dateTextFormat();
@@ -316,8 +314,8 @@ pub trait QCalendarWidget_free<RetType> {
 impl<'a> /*trait*/ QCalendarWidget_free<()> for () {
   fn free(self , rsthis: & QCalendarWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QCalendarWidgetD0Ev()};
-     unsafe {_ZN15QCalendarWidgetD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN15QCalendarWidgetD2Ev()};
+     unsafe {_ZN15QCalendarWidgetD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -409,12 +407,12 @@ pub trait QCalendarWidget_new {
 impl<'a> /*trait*/ QCalendarWidget_new for (&'a QWidget) {
   fn new(self) -> QCalendarWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QCalendarWidgetC1EP7QWidget()};
+    // unsafe{_ZN15QCalendarWidgetC2EP7QWidget()};
     let ctysz: c_int = unsafe{QCalendarWidget_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN15QCalendarWidgetC1EP7QWidget(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN15QCalendarWidgetC1EP7QWidget(arg0)} as u64;
+    unsafe {_ZN15QCalendarWidgetC2EP7QWidget(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QCalendarWidget{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -588,12 +586,12 @@ impl<'a> /*trait*/ QCalendarWidget_minimumDate<QDate> for () {
 impl<'a> /*trait*/ QCalendarWidget_new for (&'a QCalendarWidget) {
   fn new(self) -> QCalendarWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QCalendarWidgetC1ERKS_()};
+    // unsafe{_ZN15QCalendarWidgetC2ERKS_()};
     let ctysz: c_int = unsafe{QCalendarWidget_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN15QCalendarWidgetC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN15QCalendarWidgetC1ERKS_(arg0)} as u64;
+    unsafe {_ZN15QCalendarWidgetC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QCalendarWidget{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

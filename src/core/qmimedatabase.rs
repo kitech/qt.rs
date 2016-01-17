@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qmimedatabase.h
 // dst-file: /src/core/qmimedatabase.rs
 //
@@ -38,8 +38,7 @@ extern {
   // proto:  QMimeType QMimeDatabase::mimeTypeForUrl(const QUrl & url);
   fn _ZNK13QMimeDatabase14mimeTypeForUrlERK4QUrl(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QMimeDatabase::QMimeDatabase();
-  fn dector_ZN13QMimeDatabaseC1Ev() -> *mut c_void;
-  fn _ZN13QMimeDatabaseC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN13QMimeDatabaseC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QMimeType QMimeDatabase::mimeTypeForData(const QByteArray & data);
   fn _ZNK13QMimeDatabase15mimeTypeForDataERK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QMimeType QMimeDatabase::mimeTypeForName(const QString & nameOrAlias);
@@ -53,14 +52,13 @@ extern {
   // proto:  QMimeType QMimeDatabase::mimeTypeForData(QIODevice * device);
   fn _ZNK13QMimeDatabase15mimeTypeForDataEP9QIODevice(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QMimeDatabase::~QMimeDatabase();
-  fn _ZN13QMimeDatabaseD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN13QMimeDatabaseD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QMimeType QMimeDatabase::mimeTypeForFileNameAndData(const QString & fileName, const QByteArray & data);
   fn _ZNK13QMimeDatabase26mimeTypeForFileNameAndDataERK7QStringRK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  QList<QMimeType> QMimeDatabase::allMimeTypes();
   fn _ZNK13QMimeDatabase12allMimeTypesEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QMimeDatabase::QMimeDatabase(const QMimeDatabase & );
-  fn dector_ZN13QMimeDatabaseC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN13QMimeDatabaseC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN13QMimeDatabaseC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -118,11 +116,11 @@ pub trait QMimeDatabase_new {
 impl<'a> /*trait*/ QMimeDatabase_new for () {
   fn new(self) -> QMimeDatabase {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QMimeDatabaseC1Ev()};
+    // unsafe{_ZN13QMimeDatabaseC2Ev()};
     let ctysz: c_int = unsafe{QMimeDatabase_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN13QMimeDatabaseC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN13QMimeDatabaseC1Ev()} as u64;
+    unsafe {_ZN13QMimeDatabaseC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QMimeDatabase{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -282,8 +280,8 @@ pub trait QMimeDatabase_free<RetType> {
 impl<'a> /*trait*/ QMimeDatabase_free<()> for () {
   fn free(self , rsthis: & QMimeDatabase) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QMimeDatabaseD0Ev()};
-     unsafe {_ZN13QMimeDatabaseD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN13QMimeDatabaseD2Ev()};
+     unsafe {_ZN13QMimeDatabaseD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -328,12 +326,12 @@ impl<'a> /*trait*/ QMimeDatabase_allMimeTypes<()> for () {
 impl<'a> /*trait*/ QMimeDatabase_new for (&'a QMimeDatabase) {
   fn new(self) -> QMimeDatabase {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QMimeDatabaseC1ERKS_()};
+    // unsafe{_ZN13QMimeDatabaseC2ERKS_()};
     let ctysz: c_int = unsafe{QMimeDatabase_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN13QMimeDatabaseC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN13QMimeDatabaseC1ERKS_(arg0)} as u64;
+    unsafe {_ZN13QMimeDatabaseC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QMimeDatabase{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qrunnable.h
 // dst-file: /src/core/qrunnable.rs
 //
@@ -30,12 +30,11 @@ use std::ops::Deref;
 extern {
   fn QRunnable_Class_Size() -> c_int;
   // proto:  void QRunnable::~QRunnable();
-  fn _ZN9QRunnableD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN9QRunnableD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QRunnable::setAutoDelete(bool _autoDelete);
   fn _ZN9QRunnable13setAutoDeleteEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QRunnable::QRunnable();
-  fn dector_ZN9QRunnableC1Ev() -> *mut c_void;
-  fn _ZN9QRunnableC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN9QRunnableC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QRunnable::run();
   fn _ZN9QRunnable3runEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QRunnable::autoDelete();
@@ -71,8 +70,8 @@ pub trait QRunnable_free<RetType> {
 impl<'a> /*trait*/ QRunnable_free<()> for () {
   fn free(self , rsthis: & QRunnable) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QRunnableD0Ev()};
-     unsafe {_ZN9QRunnableD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN9QRunnableD2Ev()};
+     unsafe {_ZN9QRunnableD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -117,11 +116,11 @@ pub trait QRunnable_new {
 impl<'a> /*trait*/ QRunnable_new for () {
   fn new(self) -> QRunnable {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QRunnableC1Ev()};
+    // unsafe{_ZN9QRunnableC2Ev()};
     let ctysz: c_int = unsafe{QRunnable_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN9QRunnableC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN9QRunnableC1Ev()} as u64;
+    unsafe {_ZN9QRunnableC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QRunnable{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

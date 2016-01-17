@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtGui/qguiapplication.h
 // dst-file: /src/gui/qguiapplication.rs
 //
@@ -46,7 +46,7 @@ use super::qsessionmanager::QSessionManager; // 773
 extern {
   fn QGuiApplication_Class_Size() -> c_int;
   // proto:  void QGuiApplication::~QGuiApplication();
-  fn _ZN15QGuiApplicationD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN15QGuiApplicationD2Ev(qthis: u64 /* *mut c_void*/);
   // proto: static void QGuiApplication::setFont(const QFont & );
   fn _ZN15QGuiApplication7setFontERK5QFont(arg0: *mut c_void);
   // proto: static QString QGuiApplication::platformName();
@@ -58,8 +58,7 @@ extern {
   // proto: static QInputMethod * QGuiApplication::inputMethod();
   fn _ZN15QGuiApplication11inputMethodEv() -> *mut c_void;
   // proto:  void QGuiApplication::QGuiApplication(const QGuiApplication & );
-  fn dector_ZN15QGuiApplicationC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN15QGuiApplicationC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN15QGuiApplicationC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QGuiApplication::isSavingSession();
   fn _ZNK15QGuiApplication15isSavingSessionEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto: static QFont QGuiApplication::font();
@@ -91,7 +90,7 @@ extern {
   // proto: static QWindowList QGuiApplication::topLevelWindows();
   fn _ZN15QGuiApplication15topLevelWindowsEv();
   // proto: static bool QGuiApplication::isRightToLeft();
-  fn demth_ZN15QGuiApplication13isRightToLeftEv() -> c_char;
+  fn _ZN15QGuiApplication13isRightToLeftEv() -> c_char;
   // proto: static void QGuiApplication::changeOverrideCursor(const QCursor & );
   fn _ZN15QGuiApplication20changeOverrideCursorERK7QCursor(arg0: *mut c_void);
   // proto: static QWindowList QGuiApplication::allWindows();
@@ -105,12 +104,11 @@ extern {
   // proto: static void QGuiApplication::setApplicationDisplayName(const QString & name);
   fn _ZN15QGuiApplication25setApplicationDisplayNameERK7QString(arg0: *mut c_void);
   // proto: static bool QGuiApplication::isLeftToRight();
-  fn demth_ZN15QGuiApplication13isLeftToRightEv() -> c_char;
+  fn _ZN15QGuiApplication13isLeftToRightEv() -> c_char;
   // proto: static QWindow * QGuiApplication::topLevelAt(const QPoint & pos);
   fn _ZN15QGuiApplication10topLevelAtERK6QPoint(arg0: *mut c_void) -> *mut c_void;
   // proto:  void QGuiApplication::QGuiApplication(int & argc, char ** argv, int );
-  fn dector_ZN15QGuiApplicationC1ERiPPci(arg0: *mut c_int, arg1: *mut c_char, arg2: c_int) -> *mut c_void;
-  fn _ZN15QGuiApplicationC1ERiPPci(qthis: u64 /* *mut c_void*/, arg0: *mut c_int, arg1: *mut c_char, arg2: c_int);
+  fn _ZN15QGuiApplicationC2ERiPPci(qthis: u64 /* *mut c_void*/, arg0: *mut c_int, arg1: *mut c_char, arg2: c_int);
   // proto: static void QGuiApplication::setDesktopSettingsAware(bool on);
   fn _ZN15QGuiApplication23setDesktopSettingsAwareEb(arg0: c_char);
   // proto: static QWindow * QGuiApplication::modalWindow();
@@ -200,8 +198,8 @@ pub trait QGuiApplication_free<RetType> {
 impl<'a> /*trait*/ QGuiApplication_free<()> for () {
   fn free(self , rsthis: & QGuiApplication) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QGuiApplicationD0Ev()};
-     unsafe {_ZN15QGuiApplicationD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN15QGuiApplicationD2Ev()};
+     unsafe {_ZN15QGuiApplicationD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -339,12 +337,12 @@ pub trait QGuiApplication_new {
 impl<'a> /*trait*/ QGuiApplication_new for (&'a QGuiApplication) {
   fn new(self) -> QGuiApplication {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QGuiApplicationC1ERKS_()};
+    // unsafe{_ZN15QGuiApplicationC2ERKS_()};
     let ctysz: c_int = unsafe{QGuiApplication_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN15QGuiApplicationC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN15QGuiApplicationC1ERKS_(arg0)} as u64;
+    unsafe {_ZN15QGuiApplicationC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QGuiApplication{qbase: QCoreApplication::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -721,7 +719,7 @@ impl<'a> /*trait*/ QGuiApplication_isRightToLeft_s<i8> for () {
   fn isRightToLeft_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication13isRightToLeftEv()};
-    let mut ret = unsafe {demth_ZN15QGuiApplication13isRightToLeftEv()};
+    let mut ret = unsafe {_ZN15QGuiApplication13isRightToLeftEv()};
     return ret as i8;
     // return 1;
   }
@@ -882,7 +880,7 @@ impl<'a> /*trait*/ QGuiApplication_isLeftToRight_s<i8> for () {
   fn isLeftToRight_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication13isLeftToRightEv()};
-    let mut ret = unsafe {demth_ZN15QGuiApplication13isLeftToRightEv()};
+    let mut ret = unsafe {_ZN15QGuiApplication13isLeftToRightEv()};
     return ret as i8;
     // return 1;
   }
@@ -917,14 +915,14 @@ impl<'a> /*trait*/ QGuiApplication_topLevelAt_s<QWindow> for (&'a QPoint) {
 impl<'a> /*trait*/ QGuiApplication_new for (&'a mut i32, &'a mut String, i32) {
   fn new(self) -> QGuiApplication {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QGuiApplicationC1ERiPPci()};
+    // unsafe{_ZN15QGuiApplicationC2ERiPPci()};
     let ctysz: c_int = unsafe{QGuiApplication_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as *mut c_int;
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let arg2 = self.2  as c_int;
-    // unsafe {_ZN15QGuiApplicationC1ERiPPci(qthis, arg0, arg1, arg2)};
-    let qthis: u64 = unsafe {dector_ZN15QGuiApplicationC1ERiPPci(arg0, arg1, arg2)} as u64;
+    unsafe {_ZN15QGuiApplicationC2ERiPPci(qthis_ph, arg0, arg1, arg2)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QGuiApplication{qbase: QCoreApplication::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

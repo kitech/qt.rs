@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtGui/qtextdocumentfragment.h
 // dst-file: /src/gui/qtextdocumentfragment.rs
 //
@@ -36,27 +36,23 @@ extern {
   // proto: static QTextDocumentFragment QTextDocumentFragment::fromHtml(const QString & html, const QTextDocument * resourceProvider);
   fn _ZN21QTextDocumentFragment8fromHtmlERK7QStringPK13QTextDocument(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  void QTextDocumentFragment::QTextDocumentFragment(const QTextDocumentFragment & rhs);
-  fn dector_ZN21QTextDocumentFragmentC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN21QTextDocumentFragmentC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN21QTextDocumentFragmentC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static QTextDocumentFragment QTextDocumentFragment::fromPlainText(const QString & plainText);
   fn _ZN21QTextDocumentFragment13fromPlainTextERK7QString(arg0: *mut c_void) -> *mut c_void;
   // proto:  QString QTextDocumentFragment::toHtml(const QByteArray & encoding);
   fn _ZNK21QTextDocumentFragment6toHtmlERK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QTextDocumentFragment::~QTextDocumentFragment();
-  fn _ZN21QTextDocumentFragmentD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN21QTextDocumentFragmentD2Ev(qthis: u64 /* *mut c_void*/);
   // proto: static QTextDocumentFragment QTextDocumentFragment::fromHtml(const QString & html);
   fn _ZN21QTextDocumentFragment8fromHtmlERK7QString(arg0: *mut c_void) -> *mut c_void;
   // proto:  void QTextDocumentFragment::QTextDocumentFragment();
-  fn dector_ZN21QTextDocumentFragmentC1Ev() -> *mut c_void;
-  fn _ZN21QTextDocumentFragmentC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN21QTextDocumentFragmentC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QString QTextDocumentFragment::toPlainText();
   fn _ZNK21QTextDocumentFragment11toPlainTextEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QTextDocumentFragment::QTextDocumentFragment(const QTextCursor & range);
-  fn dector_ZN21QTextDocumentFragmentC1ERK11QTextCursor(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN21QTextDocumentFragmentC1ERK11QTextCursor(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN21QTextDocumentFragmentC2ERK11QTextCursor(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTextDocumentFragment::QTextDocumentFragment(const QTextDocument * document);
-  fn dector_ZN21QTextDocumentFragmentC1EPK13QTextDocument(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN21QTextDocumentFragmentC1EPK13QTextDocument(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN21QTextDocumentFragmentC2EPK13QTextDocument(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QTextDocumentFragment::isEmpty();
   fn _ZNK21QTextDocumentFragment7isEmptyEv(qthis: u64 /* *mut c_void*/) -> c_char;
 } // <= ext block end
@@ -117,12 +113,12 @@ pub trait QTextDocumentFragment_new {
 impl<'a> /*trait*/ QTextDocumentFragment_new for (&'a QTextDocumentFragment) {
   fn new(self) -> QTextDocumentFragment {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN21QTextDocumentFragmentC1ERKS_()};
+    // unsafe{_ZN21QTextDocumentFragmentC2ERKS_()};
     let ctysz: c_int = unsafe{QTextDocumentFragment_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN21QTextDocumentFragmentC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN21QTextDocumentFragmentC1ERKS_(arg0)} as u64;
+    unsafe {_ZN21QTextDocumentFragmentC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QTextDocumentFragment{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -195,8 +191,8 @@ pub trait QTextDocumentFragment_free<RetType> {
 impl<'a> /*trait*/ QTextDocumentFragment_free<()> for () {
   fn free(self , rsthis: & QTextDocumentFragment) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN21QTextDocumentFragmentD0Ev()};
-     unsafe {_ZN21QTextDocumentFragmentD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN21QTextDocumentFragmentD2Ev()};
+     unsafe {_ZN21QTextDocumentFragmentD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -218,11 +214,11 @@ impl<'a> /*trait*/ QTextDocumentFragment_fromHtml_s<QTextDocumentFragment> for (
 impl<'a> /*trait*/ QTextDocumentFragment_new for () {
   fn new(self) -> QTextDocumentFragment {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN21QTextDocumentFragmentC1Ev()};
+    // unsafe{_ZN21QTextDocumentFragmentC2Ev()};
     let ctysz: c_int = unsafe{QTextDocumentFragment_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN21QTextDocumentFragmentC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN21QTextDocumentFragmentC1Ev()} as u64;
+    unsafe {_ZN21QTextDocumentFragmentC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QTextDocumentFragment{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -257,12 +253,12 @@ impl<'a> /*trait*/ QTextDocumentFragment_toPlainText<QString> for () {
 impl<'a> /*trait*/ QTextDocumentFragment_new for (&'a QTextCursor) {
   fn new(self) -> QTextDocumentFragment {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN21QTextDocumentFragmentC1ERK11QTextCursor()};
+    // unsafe{_ZN21QTextDocumentFragmentC2ERK11QTextCursor()};
     let ctysz: c_int = unsafe{QTextDocumentFragment_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN21QTextDocumentFragmentC1ERK11QTextCursor(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN21QTextDocumentFragmentC1ERK11QTextCursor(arg0)} as u64;
+    unsafe {_ZN21QTextDocumentFragmentC2ERK11QTextCursor(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QTextDocumentFragment{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -273,12 +269,12 @@ impl<'a> /*trait*/ QTextDocumentFragment_new for (&'a QTextCursor) {
 impl<'a> /*trait*/ QTextDocumentFragment_new for (&'a QTextDocument) {
   fn new(self) -> QTextDocumentFragment {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN21QTextDocumentFragmentC1EPK13QTextDocument()};
+    // unsafe{_ZN21QTextDocumentFragmentC2EPK13QTextDocument()};
     let ctysz: c_int = unsafe{QTextDocumentFragment_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN21QTextDocumentFragmentC1EPK13QTextDocument(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN21QTextDocumentFragmentC1EPK13QTextDocument(arg0)} as u64;
+    unsafe {_ZN21QTextDocumentFragmentC2EPK13QTextDocument(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QTextDocumentFragment{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

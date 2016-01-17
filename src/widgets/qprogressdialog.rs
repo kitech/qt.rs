@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qprogressdialog.h
 // dst-file: /src/widgets/qprogressdialog.rs
 //
@@ -50,7 +50,7 @@ extern {
   // proto:  bool QProgressDialog::wasCanceled();
   fn _ZNK15QProgressDialog11wasCanceledEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QProgressDialog::~QProgressDialog();
-  fn _ZN15QProgressDialogD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN15QProgressDialogD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  int QProgressDialog::minimumDuration();
   fn _ZNK15QProgressDialog15minimumDurationEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QProgressDialog::setMinimumDuration(int ms);
@@ -70,8 +70,7 @@ extern {
   // proto:  void QProgressDialog::reset();
   fn _ZN15QProgressDialog5resetEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QProgressDialog::QProgressDialog(const QProgressDialog & );
-  fn dector_ZN15QProgressDialogC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN15QProgressDialogC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN15QProgressDialogC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QProgressDialog::setRange(int minimum, int maximum);
   fn _ZN15QProgressDialog8setRangeEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  void QProgressDialog::setCancelButtonText(const QString & text);
@@ -276,8 +275,8 @@ pub trait QProgressDialog_free<RetType> {
 impl<'a> /*trait*/ QProgressDialog_free<()> for () {
   fn free(self , rsthis: & QProgressDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QProgressDialogD0Ev()};
-     unsafe {_ZN15QProgressDialogD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN15QProgressDialogD2Ev()};
+     unsafe {_ZN15QProgressDialogD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -504,12 +503,12 @@ pub trait QProgressDialog_new {
 impl<'a> /*trait*/ QProgressDialog_new for (&'a QProgressDialog) {
   fn new(self) -> QProgressDialog {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QProgressDialogC1ERKS_()};
+    // unsafe{_ZN15QProgressDialogC2ERKS_()};
     let ctysz: c_int = unsafe{QProgressDialog_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN15QProgressDialogC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN15QProgressDialogC1ERKS_(arg0)} as u64;
+    unsafe {_ZN15QProgressDialogC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QProgressDialog{qbase: QDialog::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qmimetype.h
 // dst-file: /src/core/qmimetype.rs
 //
@@ -31,7 +31,7 @@ use super::qstring::QString; // 773
 extern {
   fn QMimeType_Class_Size() -> c_int;
   // proto:  void QMimeType::~QMimeType();
-  fn _ZN9QMimeTypeD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN9QMimeTypeD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QString QMimeType::comment();
   fn _ZNK9QMimeType7commentEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QStringList QMimeType::aliases();
@@ -41,8 +41,7 @@ extern {
   // proto:  QStringList QMimeType::parentMimeTypes();
   fn _ZNK9QMimeType15parentMimeTypesEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QMimeType::QMimeType(const QMimeType & other);
-  fn dector_ZN9QMimeTypeC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QMimeTypeC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN9QMimeTypeC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QMimeType::inherits(const QString & mimeTypeName);
   fn _ZNK9QMimeType8inheritsERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  bool QMimeType::isDefault();
@@ -50,8 +49,7 @@ extern {
   // proto:  bool QMimeType::isValid();
   fn _ZNK9QMimeType7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QMimeType::QMimeType();
-  fn dector_ZN9QMimeTypeC1Ev() -> *mut c_void;
-  fn _ZN9QMimeTypeC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN9QMimeTypeC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QMimeType::swap(QMimeType & other);
   fn _ZN9QMimeType4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QStringList QMimeType::suffixes();
@@ -99,8 +97,8 @@ pub trait QMimeType_free<RetType> {
 impl<'a> /*trait*/ QMimeType_free<()> for () {
   fn free(self , rsthis: & QMimeType) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QMimeTypeD0Ev()};
-     unsafe {_ZN9QMimeTypeD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN9QMimeTypeD2Ev()};
+     unsafe {_ZN9QMimeTypeD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -214,12 +212,12 @@ pub trait QMimeType_new {
 impl<'a> /*trait*/ QMimeType_new for (&'a QMimeType) {
   fn new(self) -> QMimeType {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QMimeTypeC1ERKS_()};
+    // unsafe{_ZN9QMimeTypeC2ERKS_()};
     let ctysz: c_int = unsafe{QMimeType_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN9QMimeTypeC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN9QMimeTypeC1ERKS_(arg0)} as u64;
+    unsafe {_ZN9QMimeTypeC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QMimeType{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -300,11 +298,11 @@ impl<'a> /*trait*/ QMimeType_isValid<i8> for () {
 impl<'a> /*trait*/ QMimeType_new for () {
   fn new(self) -> QMimeType {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QMimeTypeC1Ev()};
+    // unsafe{_ZN9QMimeTypeC2Ev()};
     let ctysz: c_int = unsafe{QMimeType_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN9QMimeTypeC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN9QMimeTypeC1Ev()} as u64;
+    unsafe {_ZN9QMimeTypeC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QMimeType{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

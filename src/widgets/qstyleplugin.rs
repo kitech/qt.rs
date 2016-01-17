@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qstyleplugin.h
 // dst-file: /src/widgets/qstyleplugin.rs
 //
@@ -37,10 +37,9 @@ extern {
   // proto:  const QMetaObject * QStylePlugin::metaObject();
   fn _ZNK12QStylePlugin10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QStylePlugin::QStylePlugin(QObject * parent);
-  fn dector_ZN12QStylePluginC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN12QStylePluginC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN12QStylePluginC2EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QStylePlugin::~QStylePlugin();
-  fn _ZN12QStylePluginD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN12QStylePluginD2Ev(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
@@ -132,12 +131,12 @@ pub trait QStylePlugin_new {
 impl<'a> /*trait*/ QStylePlugin_new for (&'a QObject) {
   fn new(self) -> QStylePlugin {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QStylePluginC1EP7QObject()};
+    // unsafe{_ZN12QStylePluginC2EP7QObject()};
     let ctysz: c_int = unsafe{QStylePlugin_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN12QStylePluginC1EP7QObject(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN12QStylePluginC1EP7QObject(arg0)} as u64;
+    unsafe {_ZN12QStylePluginC2EP7QObject(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStylePlugin{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -160,8 +159,8 @@ pub trait QStylePlugin_free<RetType> {
 impl<'a> /*trait*/ QStylePlugin_free<()> for () {
   fn free(self , rsthis: & QStylePlugin) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QStylePluginD0Ev()};
-     unsafe {_ZN12QStylePluginD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN12QStylePluginD2Ev()};
+     unsafe {_ZN12QStylePluginD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

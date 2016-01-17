@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qlabel.h
 // dst-file: /src/widgets/qlabel.rs
 //
@@ -51,7 +51,7 @@ extern {
   // proto:  const QMetaObject * QLabel::metaObject();
   fn _ZNK6QLabel10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QLabel::~QLabel();
-  fn _ZN6QLabelD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN6QLabelD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QLabel::setSelection(int , int );
   fn _ZN6QLabel12setSelectionEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  bool QLabel::hasScaledContents();
@@ -87,8 +87,7 @@ extern {
   // proto:  void QLabel::setBuddy(QWidget * );
   fn _ZN6QLabel8setBuddyEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QLabel::QLabel(const QLabel & );
-  fn dector_ZN6QLabelC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN6QLabelC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN6QLabelC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QLabel::indent();
   fn _ZNK6QLabel6indentEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  QSize QLabel::sizeHint();
@@ -312,8 +311,8 @@ pub trait QLabel_free<RetType> {
 impl<'a> /*trait*/ QLabel_free<()> for () {
   fn free(self , rsthis: & QLabel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN6QLabelD0Ev()};
-     unsafe {_ZN6QLabelD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN6QLabelD2Ev()};
+     unsafe {_ZN6QLabelD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -718,12 +717,12 @@ pub trait QLabel_new {
 impl<'a> /*trait*/ QLabel_new for (&'a QLabel) {
   fn new(self) -> QLabel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN6QLabelC1ERKS_()};
+    // unsafe{_ZN6QLabelC2ERKS_()};
     let ctysz: c_int = unsafe{QLabel_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN6QLabelC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN6QLabelC1ERKS_(arg0)} as u64;
+    unsafe {_ZN6QLabelC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QLabel{qbase: QFrame::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

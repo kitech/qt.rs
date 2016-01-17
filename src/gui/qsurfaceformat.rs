@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtGui/qsurfaceformat.h
 // dst-file: /src/gui/qsurfaceformat.rs
 //
@@ -62,19 +62,17 @@ extern {
   // proto:  bool QSurfaceFormat::hasAlpha();
   fn _ZNK14QSurfaceFormat8hasAlphaEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QSurfaceFormat::QSurfaceFormat(const QSurfaceFormat & other);
-  fn dector_ZN14QSurfaceFormatC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN14QSurfaceFormatC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN14QSurfaceFormatC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QPair<int, int> QSurfaceFormat::version();
   fn _ZNK14QSurfaceFormat7versionEv(qthis: u64 /* *mut c_void*/);
   // proto:  int QSurfaceFormat::blueBufferSize();
   fn _ZNK14QSurfaceFormat14blueBufferSizeEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QSurfaceFormat::QSurfaceFormat();
-  fn dector_ZN14QSurfaceFormatC1Ev() -> *mut c_void;
-  fn _ZN14QSurfaceFormatC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN14QSurfaceFormatC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  int QSurfaceFormat::redBufferSize();
   fn _ZNK14QSurfaceFormat13redBufferSizeEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QSurfaceFormat::~QSurfaceFormat();
-  fn _ZN14QSurfaceFormatD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN14QSurfaceFormatD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QSurfaceFormat::setGreenBufferSize(int size);
   fn _ZN14QSurfaceFormat18setGreenBufferSizeEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QSurfaceFormat::samples();
@@ -493,12 +491,12 @@ pub trait QSurfaceFormat_new {
 impl<'a> /*trait*/ QSurfaceFormat_new for (&'a QSurfaceFormat) {
   fn new(self) -> QSurfaceFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QSurfaceFormatC1ERKS_()};
+    // unsafe{_ZN14QSurfaceFormatC2ERKS_()};
     let ctysz: c_int = unsafe{QSurfaceFormat_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN14QSurfaceFormatC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN14QSurfaceFormatC1ERKS_(arg0)} as u64;
+    unsafe {_ZN14QSurfaceFormatC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QSurfaceFormat{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -554,11 +552,11 @@ impl<'a> /*trait*/ QSurfaceFormat_blueBufferSize<i32> for () {
 impl<'a> /*trait*/ QSurfaceFormat_new for () {
   fn new(self) -> QSurfaceFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QSurfaceFormatC1Ev()};
+    // unsafe{_ZN14QSurfaceFormatC2Ev()};
     let ctysz: c_int = unsafe{QSurfaceFormat_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN14QSurfaceFormatC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN14QSurfaceFormatC1Ev()} as u64;
+    unsafe {_ZN14QSurfaceFormatC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QSurfaceFormat{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -604,8 +602,8 @@ pub trait QSurfaceFormat_free<RetType> {
 impl<'a> /*trait*/ QSurfaceFormat_free<()> for () {
   fn free(self , rsthis: & QSurfaceFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QSurfaceFormatD0Ev()};
-     unsafe {_ZN14QSurfaceFormatD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN14QSurfaceFormatD2Ev()};
+     unsafe {_ZN14QSurfaceFormatD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

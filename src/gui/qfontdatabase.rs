@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtGui/qfontdatabase.h
 // dst-file: /src/gui/qfontdatabase.rs
 //
@@ -44,8 +44,7 @@ extern {
   // proto:  bool QFontDatabase::italic(const QString & family, const QString & style);
   fn _ZNK13QFontDatabase6italicERK7QStringS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> c_char;
   // proto:  void QFontDatabase::QFontDatabase();
-  fn dector_ZN13QFontDatabaseC1Ev() -> *mut c_void;
-  fn _ZN13QFontDatabaseC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN13QFontDatabaseC2Ev(qthis: u64 /* *mut c_void*/);
   // proto: static QStringList QFontDatabase::applicationFontFamilies(int id);
   fn _ZN13QFontDatabase23applicationFontFamiliesEi(arg0: c_int);
   // proto:  bool QFontDatabase::hasFamily(const QString & family);
@@ -233,11 +232,11 @@ pub trait QFontDatabase_new {
 impl<'a> /*trait*/ QFontDatabase_new for () {
   fn new(self) -> QFontDatabase {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QFontDatabaseC1Ev()};
+    // unsafe{_ZN13QFontDatabaseC2Ev()};
     let ctysz: c_int = unsafe{QFontDatabase_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN13QFontDatabaseC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN13QFontDatabaseC1Ev()} as u64;
+    unsafe {_ZN13QFontDatabaseC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QFontDatabase{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtGui/qpictureformatplugin.h
 // dst-file: /src/gui/qpictureformatplugin.rs
 //
@@ -37,10 +37,9 @@ extern {
   // proto:  bool QPictureFormatPlugin::savePicture(const QString & format, const QString & filename, const QPicture & pic);
   fn _ZN20QPictureFormatPlugin11savePictureERK7QStringS2_RK8QPicture(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> c_char;
   // proto:  void QPictureFormatPlugin::~QPictureFormatPlugin();
-  fn _ZN20QPictureFormatPluginD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN20QPictureFormatPluginD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QPictureFormatPlugin::QPictureFormatPlugin(QObject * parent);
-  fn dector_ZN20QPictureFormatPluginC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN20QPictureFormatPluginC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN20QPictureFormatPluginC2EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QPictureFormatPlugin::installIOHandler(const QString & format);
   fn _ZN20QPictureFormatPlugin16installIOHandlerERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  const QMetaObject * QPictureFormatPlugin::metaObject();
@@ -140,8 +139,8 @@ pub trait QPictureFormatPlugin_free<RetType> {
 impl<'a> /*trait*/ QPictureFormatPlugin_free<()> for () {
   fn free(self , rsthis: & QPictureFormatPlugin) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN20QPictureFormatPluginD0Ev()};
-     unsafe {_ZN20QPictureFormatPluginD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN20QPictureFormatPluginD2Ev()};
+     unsafe {_ZN20QPictureFormatPluginD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -163,12 +162,12 @@ pub trait QPictureFormatPlugin_new {
 impl<'a> /*trait*/ QPictureFormatPlugin_new for (&'a QObject) {
   fn new(self) -> QPictureFormatPlugin {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN20QPictureFormatPluginC1EP7QObject()};
+    // unsafe{_ZN20QPictureFormatPluginC2EP7QObject()};
     let ctysz: c_int = unsafe{QPictureFormatPlugin_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN20QPictureFormatPluginC1EP7QObject(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN20QPictureFormatPluginC1EP7QObject(arg0)} as u64;
+    unsafe {_ZN20QPictureFormatPluginC2EP7QObject(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QPictureFormatPlugin{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

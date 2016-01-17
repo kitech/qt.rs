@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtGui/qpagedpaintdevice.h
 // dst-file: /src/gui/qpagedpaintdevice.rs
 //
@@ -37,7 +37,7 @@ extern {
   // proto:  QSizeF QPagedPaintDevice::pageSizeMM();
   fn _ZNK17QPagedPaintDevice10pageSizeMMEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QPagedPaintDevice::~QPagedPaintDevice();
-  fn _ZN17QPagedPaintDeviceD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN17QPagedPaintDeviceD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QPagedPaintDevice::setPageMargins(const QMarginsF & margins);
   fn _ZN17QPagedPaintDevice14setPageMarginsERK9QMarginsF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  QPageLayout QPagedPaintDevice::pageLayout();
@@ -45,8 +45,7 @@ extern {
   // proto:  bool QPagedPaintDevice::setPageSize(const QPageSize & pageSize);
   fn _ZN17QPagedPaintDevice11setPageSizeERK9QPageSize(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  void QPagedPaintDevice::QPagedPaintDevice();
-  fn dector_ZN17QPagedPaintDeviceC1Ev() -> *mut c_void;
-  fn _ZN17QPagedPaintDeviceC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN17QPagedPaintDeviceC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QPagedPaintDevice::setPageSizeMM(const QSizeF & size);
   fn _ZN17QPagedPaintDevice13setPageSizeMMERK6QSizeF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QPagedPaintDevice::setPageLayout(const QPageLayout & pageLayout);
@@ -120,8 +119,8 @@ pub trait QPagedPaintDevice_free<RetType> {
 impl<'a> /*trait*/ QPagedPaintDevice_free<()> for () {
   fn free(self , rsthis: & QPagedPaintDevice) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QPagedPaintDeviceD0Ev()};
-     unsafe {_ZN17QPagedPaintDeviceD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN17QPagedPaintDeviceD2Ev()};
+     unsafe {_ZN17QPagedPaintDeviceD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -215,11 +214,11 @@ pub trait QPagedPaintDevice_new {
 impl<'a> /*trait*/ QPagedPaintDevice_new for () {
   fn new(self) -> QPagedPaintDevice {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QPagedPaintDeviceC1Ev()};
+    // unsafe{_ZN17QPagedPaintDeviceC2Ev()};
     let ctysz: c_int = unsafe{QPagedPaintDevice_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN17QPagedPaintDeviceC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN17QPagedPaintDeviceC1Ev()} as u64;
+    unsafe {_ZN17QPagedPaintDeviceC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QPagedPaintDevice{qbase: QPaintDevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

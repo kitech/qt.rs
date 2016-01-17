@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qactiongroup.h
 // dst-file: /src/widgets/qactiongroup.rs
 //
@@ -34,12 +34,11 @@ use super::super::core::qstring::QString; // 771
 extern {
   fn QActionGroup_Class_Size() -> c_int;
   // proto:  void QActionGroup::QActionGroup(QObject * parent);
-  fn dector_ZN12QActionGroupC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN12QActionGroupC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN12QActionGroupC2EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QList<QAction *> QActionGroup::actions();
   fn _ZNK12QActionGroup7actionsEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QActionGroup::setDisabled(bool b);
-  fn demth_ZN12QActionGroup11setDisabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn _ZN12QActionGroup11setDisabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QActionGroup::setEnabled(bool );
   fn _ZN12QActionGroup10setEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  const QMetaObject * QActionGroup::metaObject();
@@ -47,7 +46,7 @@ extern {
   // proto:  QAction * QActionGroup::addAction(QAction * a);
   fn _ZN12QActionGroup9addActionEP7QAction(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QActionGroup::~QActionGroup();
-  fn _ZN12QActionGroupD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN12QActionGroupD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QAction * QActionGroup::checkedAction();
   fn _ZNK12QActionGroup13checkedActionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QAction * QActionGroup::addAction(const QIcon & icon, const QString & text);
@@ -67,8 +66,7 @@ extern {
   // proto:  void QActionGroup::removeAction(QAction * a);
   fn _ZN12QActionGroup12removeActionEP7QAction(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QActionGroup::QActionGroup(const QActionGroup & );
-  fn dector_ZN12QActionGroupC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN12QActionGroupC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN12QActionGroupC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QActionGroup_SlotProxy_connect__ZN12QActionGroup7hoveredEP7QAction(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QActionGroup_SlotProxy_connect__ZN12QActionGroup9triggeredEP7QAction(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
@@ -117,12 +115,12 @@ pub trait QActionGroup_new {
 impl<'a> /*trait*/ QActionGroup_new for (&'a QObject) {
   fn new(self) -> QActionGroup {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QActionGroupC1EP7QObject()};
+    // unsafe{_ZN12QActionGroupC2EP7QObject()};
     let ctysz: c_int = unsafe{QActionGroup_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN12QActionGroupC1EP7QObject(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN12QActionGroupC1EP7QObject(arg0)} as u64;
+    unsafe {_ZN12QActionGroupC2EP7QObject(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QActionGroup{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -169,7 +167,7 @@ impl<'a> /*trait*/ QActionGroup_setDisabled<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QActionGroup11setDisabledEb()};
     let arg0 = self  as c_char;
-     unsafe {demth_ZN12QActionGroup11setDisabledEb(rsthis.qclsinst, arg0)};
+     unsafe {_ZN12QActionGroup11setDisabledEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -260,8 +258,8 @@ pub trait QActionGroup_free<RetType> {
 impl<'a> /*trait*/ QActionGroup_free<()> for () {
   fn free(self , rsthis: & QActionGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QActionGroupD0Ev()};
-     unsafe {_ZN12QActionGroupD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN12QActionGroupD2Ev()};
+     unsafe {_ZN12QActionGroupD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -459,12 +457,12 @@ impl<'a> /*trait*/ QActionGroup_removeAction<()> for (&'a QAction) {
 impl<'a> /*trait*/ QActionGroup_new for (&'a QActionGroup) {
   fn new(self) -> QActionGroup {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QActionGroupC1ERKS_()};
+    // unsafe{_ZN12QActionGroupC2ERKS_()};
     let ctysz: c_int = unsafe{QActionGroup_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN12QActionGroupC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN12QActionGroupC1ERKS_(arg0)} as u64;
+    unsafe {_ZN12QActionGroupC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QActionGroup{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

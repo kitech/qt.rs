@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qstringlist.h
 // dst-file: /src/core/qstringlist.rs
 //
@@ -33,23 +33,21 @@ use super::qregexp::QRegExp; // 773
 extern {
   fn QStringList_Class_Size() -> c_int;
   // proto:  int QStringList::lastIndexOf(const QRegularExpression & re, int from);
-  fn demth_ZNK11QStringList11lastIndexOfERK18QRegularExpressioni(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> c_int;
+  fn _ZNK11QStringList11lastIndexOfERK18QRegularExpressioni(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> c_int;
   // proto:  void QStringList::QStringList();
-  fn dector_ZN11QStringListC1Ev() -> *mut c_void;
-  fn demth_ZN11QStringListC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN11QStringListC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  int QStringList::indexOf(const QRegExp & rx, int from);
-  fn demth_ZNK11QStringList7indexOfERK7QRegExpi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> c_int;
+  fn _ZNK11QStringList7indexOfERK7QRegExpi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> c_int;
   // proto:  int QStringList::indexOf(QRegExp & rx, int from);
-  fn demth_ZNK11QStringList7indexOfER7QRegExpi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> c_int;
+  fn _ZNK11QStringList7indexOfER7QRegExpi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> c_int;
   // proto:  int QStringList::indexOf(const QRegularExpression & re, int from);
-  fn demth_ZNK11QStringList7indexOfERK18QRegularExpressioni(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> c_int;
+  fn _ZNK11QStringList7indexOfERK18QRegularExpressioni(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> c_int;
   // proto:  int QStringList::lastIndexOf(const QRegExp & rx, int from);
-  fn demth_ZNK11QStringList11lastIndexOfERK7QRegExpi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> c_int;
+  fn _ZNK11QStringList11lastIndexOfERK7QRegExpi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> c_int;
   // proto:  int QStringList::lastIndexOf(QRegExp & rx, int from);
-  fn demth_ZNK11QStringList11lastIndexOfER7QRegExpi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> c_int;
+  fn _ZNK11QStringList11lastIndexOfER7QRegExpi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> c_int;
   // proto:  void QStringList::QStringList(const QString & i);
-  fn dector_ZN11QStringListC1ERK7QString(arg0: *mut c_void) -> *mut c_void;
-  fn demth_ZN11QStringListC1ERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN11QStringListC2ERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -84,7 +82,7 @@ impl<'a> /*trait*/ QStringList_lastIndexOf<i32> for (&'a QRegularExpression, i32
     // unsafe{_ZNK11QStringList11lastIndexOfERK18QRegularExpressioni()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
-    let mut ret = unsafe {demth_ZNK11QStringList11lastIndexOfERK18QRegularExpressioni(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {_ZNK11QStringList11lastIndexOfERK18QRegularExpressioni(rsthis.qclsinst, arg0, arg1)};
     return ret as i32;
     // return 1;
   }
@@ -107,11 +105,11 @@ pub trait QStringList_new {
 impl<'a> /*trait*/ QStringList_new for () {
   fn new(self) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QStringListC1Ev()};
+    // unsafe{_ZN11QStringListC2Ev()};
     let ctysz: c_int = unsafe{QStringList_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN11QStringListC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN11QStringListC1Ev()} as u64;
+    unsafe {_ZN11QStringListC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStringList{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -137,7 +135,7 @@ impl<'a> /*trait*/ QStringList_indexOf<i32> for (&'a QRegExp, i32) {
     // unsafe{_ZNK11QStringList7indexOfERK7QRegExpi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
-    let mut ret = unsafe {demth_ZNK11QStringList7indexOfERK7QRegExpi(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {_ZNK11QStringList7indexOfERK7QRegExpi(rsthis.qclsinst, arg0, arg1)};
     return ret as i32;
     // return 1;
   }
@@ -150,7 +148,7 @@ impl<'a> /*trait*/ QStringList_indexOf<i32> for (&'a QRegularExpression, i32) {
     // unsafe{_ZNK11QStringList7indexOfERK18QRegularExpressioni()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
-    let mut ret = unsafe {demth_ZNK11QStringList7indexOfERK18QRegularExpressioni(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {_ZNK11QStringList7indexOfERK18QRegularExpressioni(rsthis.qclsinst, arg0, arg1)};
     return ret as i32;
     // return 1;
   }
@@ -163,7 +161,7 @@ impl<'a> /*trait*/ QStringList_lastIndexOf<i32> for (&'a QRegExp, i32) {
     // unsafe{_ZNK11QStringList11lastIndexOfERK7QRegExpi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
-    let mut ret = unsafe {demth_ZNK11QStringList11lastIndexOfERK7QRegExpi(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {_ZNK11QStringList11lastIndexOfERK7QRegExpi(rsthis.qclsinst, arg0, arg1)};
     return ret as i32;
     // return 1;
   }
@@ -173,12 +171,12 @@ impl<'a> /*trait*/ QStringList_lastIndexOf<i32> for (&'a QRegExp, i32) {
 impl<'a> /*trait*/ QStringList_new for (&'a QString) {
   fn new(self) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QStringListC1ERK7QString()};
+    // unsafe{_ZN11QStringListC2ERK7QString()};
     let ctysz: c_int = unsafe{QStringList_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN11QStringListC1ERK7QString(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN11QStringListC1ERK7QString(arg0)} as u64;
+    unsafe {_ZN11QStringListC2ERK7QString(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStringList{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

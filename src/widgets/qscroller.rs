@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qscroller.h
 // dst-file: /src/widgets/qscroller.rs
 //
@@ -34,7 +34,7 @@ use super::super::core::qrect::QRectF; // 771
 extern {
   fn QScroller_Class_Size() -> c_int;
   // proto:  void QScroller::~QScroller();
-  fn _ZN9QScrollerD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN9QScrollerD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QScroller::setSnapPositionsY(qreal first, qreal interval);
   fn _ZN9QScroller17setSnapPositionsYEdd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double);
   // proto:  QPointF QScroller::finalPosition();
@@ -56,8 +56,7 @@ extern {
   // proto: static bool QScroller::hasScroller(QObject * target);
   fn _ZN9QScroller11hasScrollerEP7QObject(arg0: *mut c_void) -> c_char;
   // proto:  void QScroller::QScroller(const QScroller & );
-  fn dector_ZN9QScrollerC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QScrollerC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN9QScrollerC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QScroller::scrollTo(const QPointF & pos, int scrollTime);
   fn _ZN9QScroller8scrollToERK7QPointFi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
   // proto:  void QScroller::stop();
@@ -65,8 +64,7 @@ extern {
   // proto:  void QScroller::ensureVisible(const QRectF & rect, qreal xmargin, qreal ymargin, int scrollTime);
   fn _ZN9QScroller13ensureVisibleERK6QRectFddi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_double, arg2: c_double, arg3: c_int);
   // proto:  void QScroller::QScroller(QObject * target);
-  fn dector_ZN9QScrollerC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QScrollerC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN9QScrollerC2EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static void QScroller::ungrabGesture(QObject * target);
   fn _ZN9QScroller13ungrabGestureEP7QObject(arg0: *mut c_void);
   // proto:  QScrollerProperties QScroller::scrollerProperties();
@@ -128,8 +126,8 @@ pub trait QScroller_free<RetType> {
 impl<'a> /*trait*/ QScroller_free<()> for () {
   fn free(self , rsthis: & QScroller) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QScrollerD0Ev()};
-     unsafe {_ZN9QScrollerD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN9QScrollerD2Ev()};
+     unsafe {_ZN9QScrollerD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -385,12 +383,12 @@ pub trait QScroller_new {
 impl<'a> /*trait*/ QScroller_new for (&'a QScroller) {
   fn new(self) -> QScroller {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QScrollerC1ERKS_()};
+    // unsafe{_ZN9QScrollerC2ERKS_()};
     let ctysz: c_int = unsafe{QScroller_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN9QScrollerC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN9QScrollerC1ERKS_(arg0)} as u64;
+    unsafe {_ZN9QScrollerC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QScroller{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -461,12 +459,12 @@ impl<'a> /*trait*/ QScroller_ensureVisible<()> for (&'a QRectF, f64, f64, i32) {
 impl<'a> /*trait*/ QScroller_new for (&'a QObject) {
   fn new(self) -> QScroller {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QScrollerC1EP7QObject()};
+    // unsafe{_ZN9QScrollerC2EP7QObject()};
     let ctysz: c_int = unsafe{QScroller_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN9QScrollerC1EP7QObject(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN9QScrollerC1EP7QObject(arg0)} as u64;
+    unsafe {_ZN9QScrollerC2EP7QObject(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QScroller{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

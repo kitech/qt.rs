@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtGui/qopenglcontext.h
 // dst-file: /src/gui/qopenglcontext.rs
 //
@@ -39,18 +39,15 @@ extern {
   // proto:  bool QOpenGLVersionProfile::isLegacyVersion();
   fn _ZNK21QOpenGLVersionProfile15isLegacyVersionEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QOpenGLVersionProfile::~QOpenGLVersionProfile();
-  fn _ZN21QOpenGLVersionProfileD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN21QOpenGLVersionProfileD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QOpenGLVersionProfile::hasProfiles();
   fn _ZNK21QOpenGLVersionProfile11hasProfilesEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QOpenGLVersionProfile::QOpenGLVersionProfile(const QSurfaceFormat & format);
-  fn dector_ZN21QOpenGLVersionProfileC1ERK14QSurfaceFormat(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN21QOpenGLVersionProfileC1ERK14QSurfaceFormat(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN21QOpenGLVersionProfileC2ERK14QSurfaceFormat(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QOpenGLVersionProfile::QOpenGLVersionProfile(const QOpenGLVersionProfile & other);
-  fn dector_ZN21QOpenGLVersionProfileC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN21QOpenGLVersionProfileC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN21QOpenGLVersionProfileC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QOpenGLVersionProfile::QOpenGLVersionProfile();
-  fn dector_ZN21QOpenGLVersionProfileC1Ev() -> *mut c_void;
-  fn _ZN21QOpenGLVersionProfileC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN21QOpenGLVersionProfileC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QPair<int, int> QOpenGLVersionProfile::version();
   fn _ZNK21QOpenGLVersionProfile7versionEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QOpenGLVersionProfile::setVersion(int majorVersion, int minorVersion);
@@ -63,12 +60,11 @@ extern {
   // proto:  void QOpenGLContext::setScreen(QScreen * screen);
   fn _ZN14QOpenGLContext9setScreenEP7QScreen(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QOpenGLContext::QOpenGLContext(QObject * parent);
-  fn dector_ZN14QOpenGLContextC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN14QOpenGLContextC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN14QOpenGLContextC2EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QOpenGLFunctions * QOpenGLContext::functions();
   fn _ZNK14QOpenGLContext9functionsEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QOpenGLContext::~QOpenGLContext();
-  fn _ZN14QOpenGLContextD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN14QOpenGLContextD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QOpenGLContext::setFormat(const QSurfaceFormat & format);
   fn _ZN14QOpenGLContext9setFormatERK14QSurfaceFormat(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QOpenGLContext::metaObject();
@@ -129,10 +125,9 @@ extern {
   // proto: static QOpenGLContextGroup * QOpenGLContextGroup::currentContextGroup();
   fn _ZN19QOpenGLContextGroup19currentContextGroupEv();
   // proto:  void QOpenGLContextGroup::~QOpenGLContextGroup();
-  fn _ZN19QOpenGLContextGroupD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN19QOpenGLContextGroupD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QOpenGLContextGroup::QOpenGLContextGroup();
-  fn dector_ZN19QOpenGLContextGroupC1Ev() -> *mut c_void;
-  fn _ZN19QOpenGLContextGroupC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN19QOpenGLContextGroupC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QList<QOpenGLContext *> QOpenGLContextGroup::shares();
   fn _ZNK19QOpenGLContextGroup6sharesEv(qthis: u64 /* *mut c_void*/);
   fn QOpenGLContext_SlotProxy_connect__ZN14QOpenGLContext18aboutToBeDestroyedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
@@ -205,8 +200,8 @@ pub trait QOpenGLVersionProfile_free<RetType> {
 impl<'a> /*trait*/ QOpenGLVersionProfile_free<()> for () {
   fn free(self , rsthis: & QOpenGLVersionProfile) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN21QOpenGLVersionProfileD0Ev()};
-     unsafe {_ZN21QOpenGLVersionProfileD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN21QOpenGLVersionProfileD2Ev()};
+     unsafe {_ZN21QOpenGLVersionProfileD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -251,12 +246,12 @@ pub trait QOpenGLVersionProfile_new {
 impl<'a> /*trait*/ QOpenGLVersionProfile_new for (&'a QSurfaceFormat) {
   fn new(self) -> QOpenGLVersionProfile {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN21QOpenGLVersionProfileC1ERK14QSurfaceFormat()};
+    // unsafe{_ZN21QOpenGLVersionProfileC2ERK14QSurfaceFormat()};
     let ctysz: c_int = unsafe{QOpenGLVersionProfile_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN21QOpenGLVersionProfileC1ERK14QSurfaceFormat(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN21QOpenGLVersionProfileC1ERK14QSurfaceFormat(arg0)} as u64;
+    unsafe {_ZN21QOpenGLVersionProfileC2ERK14QSurfaceFormat(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QOpenGLVersionProfile{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -267,12 +262,12 @@ impl<'a> /*trait*/ QOpenGLVersionProfile_new for (&'a QSurfaceFormat) {
 impl<'a> /*trait*/ QOpenGLVersionProfile_new for (&'a QOpenGLVersionProfile) {
   fn new(self) -> QOpenGLVersionProfile {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN21QOpenGLVersionProfileC1ERKS_()};
+    // unsafe{_ZN21QOpenGLVersionProfileC2ERKS_()};
     let ctysz: c_int = unsafe{QOpenGLVersionProfile_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN21QOpenGLVersionProfileC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN21QOpenGLVersionProfileC1ERKS_(arg0)} as u64;
+    unsafe {_ZN21QOpenGLVersionProfileC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QOpenGLVersionProfile{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -283,11 +278,11 @@ impl<'a> /*trait*/ QOpenGLVersionProfile_new for (&'a QOpenGLVersionProfile) {
 impl<'a> /*trait*/ QOpenGLVersionProfile_new for () {
   fn new(self) -> QOpenGLVersionProfile {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN21QOpenGLVersionProfileC1Ev()};
+    // unsafe{_ZN21QOpenGLVersionProfileC2Ev()};
     let ctysz: c_int = unsafe{QOpenGLVersionProfile_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN21QOpenGLVersionProfileC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN21QOpenGLVersionProfileC1Ev()} as u64;
+    unsafe {_ZN21QOpenGLVersionProfileC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QOpenGLVersionProfile{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -443,12 +438,12 @@ pub trait QOpenGLContext_new {
 impl<'a> /*trait*/ QOpenGLContext_new for (&'a QObject) {
   fn new(self) -> QOpenGLContext {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QOpenGLContextC1EP7QObject()};
+    // unsafe{_ZN14QOpenGLContextC2EP7QObject()};
     let ctysz: c_int = unsafe{QOpenGLContext_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN14QOpenGLContextC1EP7QObject(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN14QOpenGLContextC1EP7QObject(arg0)} as u64;
+    unsafe {_ZN14QOpenGLContextC2EP7QObject(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QOpenGLContext{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -493,8 +488,8 @@ pub trait QOpenGLContext_free<RetType> {
 impl<'a> /*trait*/ QOpenGLContext_free<()> for () {
   fn free(self , rsthis: & QOpenGLContext) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QOpenGLContextD0Ev()};
-     unsafe {_ZN14QOpenGLContextD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN14QOpenGLContextD2Ev()};
+     unsafe {_ZN14QOpenGLContextD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1196,8 +1191,8 @@ pub trait QOpenGLContextGroup_free<RetType> {
 impl<'a> /*trait*/ QOpenGLContextGroup_free<()> for () {
   fn free(self , rsthis: & QOpenGLContextGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QOpenGLContextGroupD0Ev()};
-     unsafe {_ZN19QOpenGLContextGroupD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN19QOpenGLContextGroupD2Ev()};
+     unsafe {_ZN19QOpenGLContextGroupD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1219,11 +1214,11 @@ pub trait QOpenGLContextGroup_new {
 impl<'a> /*trait*/ QOpenGLContextGroup_new for () {
   fn new(self) -> QOpenGLContextGroup {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QOpenGLContextGroupC1Ev()};
+    // unsafe{_ZN19QOpenGLContextGroupC2Ev()};
     let ctysz: c_int = unsafe{QOpenGLContextGroup_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN19QOpenGLContextGroupC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN19QOpenGLContextGroupC1Ev()} as u64;
+    unsafe {_ZN19QOpenGLContextGroupC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QOpenGLContextGroup{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

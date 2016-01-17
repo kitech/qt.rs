@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qtabwidget.h
 // dst-file: /src/widgets/qtabwidget.rs
 //
@@ -79,11 +79,9 @@ extern {
   // proto:  void QTabWidget::setTabText(int index, const QString & );
   fn _ZN10QTabWidget10setTabTextEiRK7QString(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  void QTabWidget::QTabWidget(const QTabWidget & );
-  fn dector_ZN10QTabWidgetC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN10QTabWidgetC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN10QTabWidgetC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTabWidget::QTabWidget(QWidget * parent);
-  fn dector_ZN10QTabWidgetC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN10QTabWidgetC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN10QTabWidgetC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QTabWidget::tabBarAutoHide();
   fn _ZNK10QTabWidget14tabBarAutoHideEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QTabWidget::setTabIcon(int index, const QIcon & icon);
@@ -103,7 +101,7 @@ extern {
   // proto:  void QTabWidget::setCurrentIndex(int index);
   fn _ZN10QTabWidget15setCurrentIndexEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QTabWidget::~QTabWidget();
-  fn _ZN10QTabWidgetD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN10QTabWidgetD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QTabWidget::setTabWhatsThis(int index, const QString & text);
   fn _ZN10QTabWidget15setTabWhatsThisEiRK7QString(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  QSize QTabWidget::sizeHint();
@@ -689,12 +687,12 @@ pub trait QTabWidget_new {
 impl<'a> /*trait*/ QTabWidget_new for (&'a QTabWidget) {
   fn new(self) -> QTabWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QTabWidgetC1ERKS_()};
+    // unsafe{_ZN10QTabWidgetC2ERKS_()};
     let ctysz: c_int = unsafe{QTabWidget_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN10QTabWidgetC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN10QTabWidgetC1ERKS_(arg0)} as u64;
+    unsafe {_ZN10QTabWidgetC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QTabWidget{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -705,12 +703,12 @@ impl<'a> /*trait*/ QTabWidget_new for (&'a QTabWidget) {
 impl<'a> /*trait*/ QTabWidget_new for (&'a QWidget) {
   fn new(self) -> QTabWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QTabWidgetC1EP7QWidget()};
+    // unsafe{_ZN10QTabWidgetC2EP7QWidget()};
     let ctysz: c_int = unsafe{QTabWidget_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN10QTabWidgetC1EP7QWidget(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN10QTabWidgetC1EP7QWidget(arg0)} as u64;
+    unsafe {_ZN10QTabWidgetC2EP7QWidget(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QTabWidget{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -946,8 +944,8 @@ pub trait QTabWidget_free<RetType> {
 impl<'a> /*trait*/ QTabWidget_free<()> for () {
   fn free(self , rsthis: & QTabWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QTabWidgetD0Ev()};
-     unsafe {_ZN10QTabWidgetD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN10QTabWidgetD2Ev()};
+     unsafe {_ZN10QTabWidgetD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

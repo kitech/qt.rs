@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qgraphicsitemanimation.h
 // dst-file: /src/widgets/qgraphicsitemanimation.rs
 //
@@ -37,8 +37,7 @@ extern {
   // proto:  void QGraphicsItemAnimation::setPosAt(qreal step, const QPointF & pos);
   fn _ZN22QGraphicsItemAnimation8setPosAtEdRK7QPointF(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: *mut c_void);
   // proto:  void QGraphicsItemAnimation::QGraphicsItemAnimation(const QGraphicsItemAnimation & );
-  fn dector_ZN22QGraphicsItemAnimationC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN22QGraphicsItemAnimationC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN22QGraphicsItemAnimationC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  qreal QGraphicsItemAnimation::xTranslationAt(qreal step);
   fn _ZNK22QGraphicsItemAnimation14xTranslationAtEd(qthis: u64 /* *mut c_void*/, arg0: c_double) -> c_double;
   // proto:  void QGraphicsItemAnimation::setRotationAt(qreal step, qreal angle);
@@ -58,10 +57,9 @@ extern {
   // proto:  QGraphicsItem * QGraphicsItemAnimation::item();
   fn _ZNK22QGraphicsItemAnimation4itemEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QGraphicsItemAnimation::QGraphicsItemAnimation(QObject * parent);
-  fn dector_ZN22QGraphicsItemAnimationC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN22QGraphicsItemAnimationC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN22QGraphicsItemAnimationC2EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsItemAnimation::~QGraphicsItemAnimation();
-  fn _ZN22QGraphicsItemAnimationD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN22QGraphicsItemAnimationD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QGraphicsItemAnimation::setScaleAt(qreal step, qreal sx, qreal sy);
   fn _ZN22QGraphicsItemAnimation10setScaleAtEddd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double);
   // proto:  void QGraphicsItemAnimation::setTranslationAt(qreal step, qreal dx, qreal dy);
@@ -164,12 +162,12 @@ pub trait QGraphicsItemAnimation_new {
 impl<'a> /*trait*/ QGraphicsItemAnimation_new for (&'a QGraphicsItemAnimation) {
   fn new(self) -> QGraphicsItemAnimation {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN22QGraphicsItemAnimationC1ERKS_()};
+    // unsafe{_ZN22QGraphicsItemAnimationC2ERKS_()};
     let ctysz: c_int = unsafe{QGraphicsItemAnimation_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN22QGraphicsItemAnimationC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN22QGraphicsItemAnimationC1ERKS_(arg0)} as u64;
+    unsafe {_ZN22QGraphicsItemAnimationC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QGraphicsItemAnimation{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -394,12 +392,12 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_item<()> for () {
 impl<'a> /*trait*/ QGraphicsItemAnimation_new for (&'a QObject) {
   fn new(self) -> QGraphicsItemAnimation {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN22QGraphicsItemAnimationC1EP7QObject()};
+    // unsafe{_ZN22QGraphicsItemAnimationC2EP7QObject()};
     let ctysz: c_int = unsafe{QGraphicsItemAnimation_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN22QGraphicsItemAnimationC1EP7QObject(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN22QGraphicsItemAnimationC1EP7QObject(arg0)} as u64;
+    unsafe {_ZN22QGraphicsItemAnimationC2EP7QObject(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QGraphicsItemAnimation{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -422,8 +420,8 @@ pub trait QGraphicsItemAnimation_free<RetType> {
 impl<'a> /*trait*/ QGraphicsItemAnimation_free<()> for () {
   fn free(self , rsthis: & QGraphicsItemAnimation) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN22QGraphicsItemAnimationD0Ev()};
-     unsafe {_ZN22QGraphicsItemAnimationD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN22QGraphicsItemAnimationD2Ev()};
+     unsafe {_ZN22QGraphicsItemAnimationD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qheaderview.h
 // dst-file: /src/widgets/qheaderview.rs
 //
@@ -44,8 +44,7 @@ extern {
   // proto:  int QHeaderView::sectionSize(int logicalIndex);
   fn _ZNK11QHeaderView11sectionSizeEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
   // proto:  void QHeaderView::QHeaderView(const QHeaderView & );
-  fn dector_ZN11QHeaderViewC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QHeaderViewC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN11QHeaderViewC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QHeaderView::setStretchLastSection(bool stretch);
   fn _ZN11QHeaderView21setStretchLastSectionEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QHeaderView::reset();
@@ -63,7 +62,7 @@ extern {
   // proto:  int QHeaderView::length();
   fn _ZNK11QHeaderView6lengthEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QHeaderView::hideSection(int logicalIndex);
-  fn demth_ZN11QHeaderView11hideSectionEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn _ZN11QHeaderView11hideSectionEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QHeaderView::sortIndicatorSection();
   fn _ZNK11QHeaderView20sortIndicatorSectionEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QHeaderView::cascadingSectionResizes();
@@ -75,9 +74,9 @@ extern {
   // proto:  void QHeaderView::setOffset(int offset);
   fn _ZN11QHeaderView9setOffsetEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QHeaderView::logicalIndexAt(const QPoint & pos);
-  fn demth_ZNK11QHeaderView14logicalIndexAtERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
+  fn _ZNK11QHeaderView14logicalIndexAtERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
   // proto:  void QHeaderView::~QHeaderView();
-  fn _ZN11QHeaderViewD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN11QHeaderViewD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  int QHeaderView::sectionViewportPosition(int logicalIndex);
   fn _ZNK11QHeaderView23sectionViewportPositionEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
   // proto:  bool QHeaderView::highlightSections();
@@ -89,7 +88,7 @@ extern {
   // proto:  const QMetaObject * QHeaderView::metaObject();
   fn _ZNK11QHeaderView10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QHeaderView::showSection(int logicalIndex);
-  fn demth_ZN11QHeaderView11showSectionEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn _ZN11QHeaderView11showSectionEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QHeaderView::setVisible(bool v);
   fn _ZN11QHeaderView10setVisibleEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  int QHeaderView::hiddenSectionCount();
@@ -135,7 +134,7 @@ extern {
   // proto:  bool QHeaderView::isSectionHidden(int logicalIndex);
   fn _ZNK11QHeaderView15isSectionHiddenEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
   // proto:  int QHeaderView::logicalIndexAt(int x, int y);
-  fn demth_ZNK11QHeaderView14logicalIndexAtEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> c_int;
+  fn _ZNK11QHeaderView14logicalIndexAtEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> c_int;
   // proto:  int QHeaderView::logicalIndexAt(int position);
   fn _ZNK11QHeaderView14logicalIndexAtEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
   // proto:  int QHeaderView::logicalIndex(int visualIndex);
@@ -313,12 +312,12 @@ pub trait QHeaderView_new {
 impl<'a> /*trait*/ QHeaderView_new for (&'a QHeaderView) {
   fn new(self) -> QHeaderView {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QHeaderViewC1ERKS_()};
+    // unsafe{_ZN11QHeaderViewC2ERKS_()};
     let ctysz: c_int = unsafe{QHeaderView_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN11QHeaderViewC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN11QHeaderViewC1ERKS_(arg0)} as u64;
+    unsafe {_ZN11QHeaderViewC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QHeaderView{qbase: QAbstractItemView::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -526,7 +525,7 @@ impl<'a> /*trait*/ QHeaderView_hideSection<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderView11hideSectionEi()};
     let arg0 = self  as c_int;
-     unsafe {demth_ZN11QHeaderView11hideSectionEi(rsthis.qclsinst, arg0)};
+     unsafe {_ZN11QHeaderView11hideSectionEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -665,7 +664,7 @@ impl<'a> /*trait*/ QHeaderView_logicalIndexAt<i32> for (&'a QPoint) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView14logicalIndexAtERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {demth_ZNK11QHeaderView14logicalIndexAtERK6QPoint(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {_ZNK11QHeaderView14logicalIndexAtERK6QPoint(rsthis.qclsinst, arg0)};
     return ret as i32;
     // return 1;
   }
@@ -687,8 +686,8 @@ pub trait QHeaderView_free<RetType> {
 impl<'a> /*trait*/ QHeaderView_free<()> for () {
   fn free(self , rsthis: & QHeaderView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QHeaderViewD0Ev()};
-     unsafe {_ZN11QHeaderViewD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN11QHeaderViewD2Ev()};
+     unsafe {_ZN11QHeaderViewD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -826,7 +825,7 @@ impl<'a> /*trait*/ QHeaderView_showSection<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderView11showSectionEi()};
     let arg0 = self  as c_int;
-     unsafe {demth_ZN11QHeaderView11showSectionEi(rsthis.qclsinst, arg0)};
+     unsafe {_ZN11QHeaderView11showSectionEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1347,7 +1346,7 @@ impl<'a> /*trait*/ QHeaderView_logicalIndexAt<i32> for (i32, i32) {
     // unsafe{_ZNK11QHeaderView14logicalIndexAtEii()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-    let mut ret = unsafe {demth_ZNK11QHeaderView14logicalIndexAtEii(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {_ZNK11QHeaderView14logicalIndexAtEii(rsthis.qclsinst, arg0, arg1)};
     return ret as i32;
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qstate.h
 // dst-file: /src/core/qstate.rs
 //
@@ -39,15 +39,13 @@ extern {
   // proto:  QAbstractState * QState::initialState();
   fn _ZNK6QState12initialStateEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QState::~QState();
-  fn _ZN6QStateD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN6QStateD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QState::assignProperty(QObject * object, const char * name, const QVariant & value);
   fn _ZN6QState14assignPropertyEP7QObjectPKcRK8QVariant(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_char, arg2: *mut c_void);
   // proto:  void QState::QState(const QState & );
-  fn dector_ZN6QStateC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN6QStateC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN6QStateC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QState::QState(QState * parent);
-  fn dector_ZN6QStateC1EPS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN6QStateC1EPS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN6QStateC2EPS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QState::metaObject();
   fn _ZNK6QState10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QState::setErrorState(QAbstractState * state);
@@ -156,8 +154,8 @@ pub trait QState_free<RetType> {
 impl<'a> /*trait*/ QState_free<()> for () {
   fn free(self , rsthis: & QState) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN6QStateD0Ev()};
-     unsafe {_ZN6QStateD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN6QStateD2Ev()};
+     unsafe {_ZN6QStateD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -204,12 +202,12 @@ pub trait QState_new {
 impl<'a> /*trait*/ QState_new for (&'a QState) {
   fn new(self) -> QState {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN6QStateC1ERKS_()};
+    // unsafe{_ZN6QStateC2ERKS_()};
     let ctysz: c_int = unsafe{QState_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN6QStateC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN6QStateC1ERKS_(arg0)} as u64;
+    unsafe {_ZN6QStateC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QState{qbase: QAbstractState::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

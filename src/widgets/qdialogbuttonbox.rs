@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qdialogbuttonbox.h
 // dst-file: /src/widgets/qdialogbuttonbox.rs
 //
@@ -43,13 +43,11 @@ extern {
   // proto:  void QDialogButtonBox::removeButton(QAbstractButton * button);
   fn _ZN16QDialogButtonBox12removeButtonEP15QAbstractButton(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QDialogButtonBox::~QDialogButtonBox();
-  fn _ZN16QDialogButtonBoxD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN16QDialogButtonBoxD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QDialogButtonBox::QDialogButtonBox(QWidget * parent);
-  fn dector_ZN16QDialogButtonBoxC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN16QDialogButtonBoxC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN16QDialogButtonBoxC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QDialogButtonBox::QDialogButtonBox(const QDialogButtonBox & );
-  fn dector_ZN16QDialogButtonBoxC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN16QDialogButtonBoxC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN16QDialogButtonBoxC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QDialogButtonBox::clear();
   fn _ZN16QDialogButtonBox5clearEv(qthis: u64 /* *mut c_void*/);
   fn QDialogButtonBox_SlotProxy_connect__ZN16QDialogButtonBox8acceptedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
@@ -216,8 +214,8 @@ pub trait QDialogButtonBox_free<RetType> {
 impl<'a> /*trait*/ QDialogButtonBox_free<()> for () {
   fn free(self , rsthis: & QDialogButtonBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QDialogButtonBoxD0Ev()};
-     unsafe {_ZN16QDialogButtonBoxD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN16QDialogButtonBoxD2Ev()};
+     unsafe {_ZN16QDialogButtonBoxD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -239,12 +237,12 @@ pub trait QDialogButtonBox_new {
 impl<'a> /*trait*/ QDialogButtonBox_new for (&'a QWidget) {
   fn new(self) -> QDialogButtonBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QDialogButtonBoxC1EP7QWidget()};
+    // unsafe{_ZN16QDialogButtonBoxC2EP7QWidget()};
     let ctysz: c_int = unsafe{QDialogButtonBox_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN16QDialogButtonBoxC1EP7QWidget(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN16QDialogButtonBoxC1EP7QWidget(arg0)} as u64;
+    unsafe {_ZN16QDialogButtonBoxC2EP7QWidget(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QDialogButtonBox{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -255,12 +253,12 @@ impl<'a> /*trait*/ QDialogButtonBox_new for (&'a QWidget) {
 impl<'a> /*trait*/ QDialogButtonBox_new for (&'a QDialogButtonBox) {
   fn new(self) -> QDialogButtonBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QDialogButtonBoxC1ERKS_()};
+    // unsafe{_ZN16QDialogButtonBoxC2ERKS_()};
     let ctysz: c_int = unsafe{QDialogButtonBox_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN16QDialogButtonBoxC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN16QDialogButtonBoxC1ERKS_(arg0)} as u64;
+    unsafe {_ZN16QDialogButtonBoxC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QDialogButtonBox{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

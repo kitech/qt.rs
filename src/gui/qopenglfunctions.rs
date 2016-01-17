@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtGui/qopenglfunctions.h
 // dst-file: /src/gui/qopenglfunctions.rs
 //
@@ -31,8 +31,7 @@ use super::qopenglcontext::QOpenGLContext; // 773
 extern {
   fn QOpenGLFunctionsPrivate_Class_Size() -> c_int;
   // proto:  void QOpenGLFunctionsPrivate::QOpenGLFunctionsPrivate(QOpenGLContext * ctx);
-  fn dector_ZN23QOpenGLFunctionsPrivateC1EP14QOpenGLContext(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN23QOpenGLFunctionsPrivateC1EP14QOpenGLContext(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN23QOpenGLFunctionsPrivateC2EP14QOpenGLContext(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QOpenGLFunctions_Class_Size() -> c_int;
   // proto:  void QOpenGLFunctions::glBindAttribLocation(GLuint program, GLuint index, const char * name);
   fn _ZN16QOpenGLFunctions20glBindAttribLocationEjjPKc(qthis: u64 /* *mut c_void*/, arg0: c_uint, arg1: c_uint, arg2: *mut c_char);
@@ -105,7 +104,7 @@ extern {
   // proto:  void QOpenGLFunctions::glGetShaderPrecisionFormat(GLenum shadertype, GLenum precisiontype, GLint * range, GLint * precision);
   fn _ZN16QOpenGLFunctions26glGetShaderPrecisionFormatEjjPiS0_(qthis: u64 /* *mut c_void*/, arg0: c_uint, arg1: c_uint, arg2: *mut c_int, arg3: *mut c_int);
   // proto:  void QOpenGLFunctions::~QOpenGLFunctions();
-  fn _ZN16QOpenGLFunctionsD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN16QOpenGLFunctionsD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QOpenGLFunctions::glUniform4fv(GLint location, GLsizei count, const GLfloat * v);
   fn _ZN16QOpenGLFunctions12glUniform4fvEiiPKf(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: *mut c_float);
   // proto:  void QOpenGLFunctions::glGetProgramiv(GLuint program, GLenum pname, GLint * params);
@@ -141,8 +140,7 @@ extern {
   // proto:  void QOpenGLFunctions::glUniformMatrix2fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat * value);
   fn _ZN16QOpenGLFunctions18glUniformMatrix2fvEiihPKf(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_uchar, arg3: *mut c_float);
   // proto:  void QOpenGLFunctions::QOpenGLFunctions(QOpenGLContext * context);
-  fn dector_ZN16QOpenGLFunctionsC1EP14QOpenGLContext(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN16QOpenGLFunctionsC1EP14QOpenGLContext(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN16QOpenGLFunctionsC2EP14QOpenGLContext(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QOpenGLFunctions::glUniformMatrix3fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat * value);
   fn _ZN16QOpenGLFunctions18glUniformMatrix3fvEiihPKf(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_uchar, arg3: *mut c_float);
   // proto:  void QOpenGLFunctions::glBindBuffer(GLenum target, GLuint buffer);
@@ -312,8 +310,7 @@ extern {
   // proto:  void QOpenGLFunctions::glValidateProgram(GLuint program);
   fn _ZN16QOpenGLFunctions17glValidateProgramEj(qthis: u64 /* *mut c_void*/, arg0: c_uint);
   // proto:  void QOpenGLFunctions::QOpenGLFunctions();
-  fn dector_ZN16QOpenGLFunctionsC1Ev() -> *mut c_void;
-  fn _ZN16QOpenGLFunctionsC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN16QOpenGLFunctionsC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QOpenGLFunctions::glFlush();
   fn _ZN16QOpenGLFunctions7glFlushEv(qthis: u64 /* *mut c_void*/);
   // proto:  GLenum QOpenGLFunctions::glCheckFramebufferStatus(GLenum target);
@@ -367,12 +364,12 @@ pub trait QOpenGLFunctionsPrivate_new {
 impl<'a> /*trait*/ QOpenGLFunctionsPrivate_new for (&'a QOpenGLContext) {
   fn new(self) -> QOpenGLFunctionsPrivate {
     // let qthis: *mut c_void = unsafe{calloc(1, 1152)};
-    // unsafe{_ZN23QOpenGLFunctionsPrivateC1EP14QOpenGLContext()};
+    // unsafe{_ZN23QOpenGLFunctionsPrivateC2EP14QOpenGLContext()};
     let ctysz: c_int = unsafe{QOpenGLFunctionsPrivate_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN23QOpenGLFunctionsPrivateC1EP14QOpenGLContext(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN23QOpenGLFunctionsPrivateC1EP14QOpenGLContext(arg0)} as u64;
+    unsafe {_ZN23QOpenGLFunctionsPrivateC2EP14QOpenGLContext(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QOpenGLFunctionsPrivate{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1275,8 +1272,8 @@ pub trait QOpenGLFunctions_free<RetType> {
 impl<'a> /*trait*/ QOpenGLFunctions_free<()> for () {
   fn free(self , rsthis: & QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QOpenGLFunctionsD0Ev()};
-     unsafe {_ZN16QOpenGLFunctionsD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN16QOpenGLFunctionsD2Ev()};
+     unsafe {_ZN16QOpenGLFunctionsD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1733,12 +1730,12 @@ pub trait QOpenGLFunctions_new {
 impl<'a> /*trait*/ QOpenGLFunctions_new for (&'a QOpenGLContext) {
   fn new(self) -> QOpenGLFunctions {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QOpenGLFunctionsC1EP14QOpenGLContext()};
+    // unsafe{_ZN16QOpenGLFunctionsC2EP14QOpenGLContext()};
     let ctysz: c_int = unsafe{QOpenGLFunctions_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN16QOpenGLFunctionsC1EP14QOpenGLContext(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN16QOpenGLFunctionsC1EP14QOpenGLContext(arg0)} as u64;
+    unsafe {_ZN16QOpenGLFunctionsC2EP14QOpenGLContext(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QOpenGLFunctions{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -3825,11 +3822,11 @@ impl<'a> /*trait*/ QOpenGLFunctions_glValidateProgram<()> for (u32) {
 impl<'a> /*trait*/ QOpenGLFunctions_new for () {
   fn new(self) -> QOpenGLFunctions {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QOpenGLFunctionsC1Ev()};
+    // unsafe{_ZN16QOpenGLFunctionsC2Ev()};
     let ctysz: c_int = unsafe{QOpenGLFunctions_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN16QOpenGLFunctionsC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN16QOpenGLFunctionsC1Ev()} as u64;
+    unsafe {_ZN16QOpenGLFunctionsC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QOpenGLFunctions{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

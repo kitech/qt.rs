@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qabstractproxymodel.h
 // dst-file: /src/core/qabstractproxymodel.rs
 //
@@ -55,8 +55,7 @@ extern {
   // proto:  const QMetaObject * QAbstractProxyModel::metaObject();
   fn _ZNK19QAbstractProxyModel10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractProxyModel::QAbstractProxyModel(const QAbstractProxyModel & );
-  fn dector_ZN19QAbstractProxyModelC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN19QAbstractProxyModelC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN19QAbstractProxyModelC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QModelIndex QAbstractProxyModel::mapToSource(const QModelIndex & proxyIndex);
   fn _ZNK19QAbstractProxyModel11mapToSourceERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QModelIndex QAbstractProxyModel::mapFromSource(const QModelIndex & sourceIndex);
@@ -74,10 +73,9 @@ extern {
   // proto:  void QAbstractProxyModel::fetchMore(const QModelIndex & parent);
   fn _ZN19QAbstractProxyModel9fetchMoreERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAbstractProxyModel::~QAbstractProxyModel();
-  fn _ZN19QAbstractProxyModelD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN19QAbstractProxyModelD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractProxyModel::QAbstractProxyModel(QObject * parent);
-  fn dector_ZN19QAbstractProxyModelC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN19QAbstractProxyModelC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN19QAbstractProxyModelC2EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QAbstractProxyModel::hasChildren(const QModelIndex & parent);
   fn _ZNK19QAbstractProxyModel11hasChildrenERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  QAbstractItemModel * QAbstractProxyModel::sourceModel();
@@ -341,12 +339,12 @@ pub trait QAbstractProxyModel_new {
 impl<'a> /*trait*/ QAbstractProxyModel_new for (&'a QAbstractProxyModel) {
   fn new(self) -> QAbstractProxyModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QAbstractProxyModelC1ERKS_()};
+    // unsafe{_ZN19QAbstractProxyModelC2ERKS_()};
     let ctysz: c_int = unsafe{QAbstractProxyModel_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN19QAbstractProxyModelC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN19QAbstractProxyModelC1ERKS_(arg0)} as u64;
+    unsafe {_ZN19QAbstractProxyModelC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QAbstractProxyModel{qbase: QAbstractItemModel::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -566,8 +564,8 @@ pub trait QAbstractProxyModel_free<RetType> {
 impl<'a> /*trait*/ QAbstractProxyModel_free<()> for () {
   fn free(self , rsthis: & QAbstractProxyModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QAbstractProxyModelD0Ev()};
-     unsafe {_ZN19QAbstractProxyModelD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN19QAbstractProxyModelD2Ev()};
+     unsafe {_ZN19QAbstractProxyModelD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -576,12 +574,12 @@ impl<'a> /*trait*/ QAbstractProxyModel_free<()> for () {
 impl<'a> /*trait*/ QAbstractProxyModel_new for (&'a QObject) {
   fn new(self) -> QAbstractProxyModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QAbstractProxyModelC1EP7QObject()};
+    // unsafe{_ZN19QAbstractProxyModelC2EP7QObject()};
     let ctysz: c_int = unsafe{QAbstractProxyModel_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN19QAbstractProxyModelC1EP7QObject(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN19QAbstractProxyModelC1EP7QObject(arg0)} as u64;
+    unsafe {_ZN19QAbstractProxyModelC2EP7QObject(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QAbstractProxyModel{qbase: QAbstractItemModel::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

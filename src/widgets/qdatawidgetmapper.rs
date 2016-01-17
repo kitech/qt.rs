@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qdatawidgetmapper.h
 // dst-file: /src/widgets/qdatawidgetmapper.rs
 //
@@ -36,8 +36,7 @@ use super::qabstractitemdelegate::QAbstractItemDelegate; // 773
 extern {
   fn QDataWidgetMapper_Class_Size() -> c_int;
   // proto:  void QDataWidgetMapper::QDataWidgetMapper(const QDataWidgetMapper & );
-  fn dector_ZN17QDataWidgetMapperC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN17QDataWidgetMapperC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN17QDataWidgetMapperC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QDataWidgetMapper::currentIndex();
   fn _ZNK17QDataWidgetMapper12currentIndexEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QDataWidgetMapper::addMapping(QWidget * widget, int section, const QByteArray & propertyName);
@@ -71,12 +70,11 @@ extern {
   // proto:  void QDataWidgetMapper::setCurrentModelIndex(const QModelIndex & index);
   fn _ZN17QDataWidgetMapper20setCurrentModelIndexERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QDataWidgetMapper::~QDataWidgetMapper();
-  fn _ZN17QDataWidgetMapperD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN17QDataWidgetMapperD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QDataWidgetMapper::addMapping(QWidget * widget, int section);
   fn _ZN17QDataWidgetMapper10addMappingEP7QWidgeti(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
   // proto:  void QDataWidgetMapper::QDataWidgetMapper(QObject * parent);
-  fn dector_ZN17QDataWidgetMapperC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN17QDataWidgetMapperC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN17QDataWidgetMapperC2EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QDataWidgetMapper::metaObject();
   fn _ZNK17QDataWidgetMapper10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QDataWidgetMapper::toLast();
@@ -135,12 +133,12 @@ pub trait QDataWidgetMapper_new {
 impl<'a> /*trait*/ QDataWidgetMapper_new for (&'a QDataWidgetMapper) {
   fn new(self) -> QDataWidgetMapper {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QDataWidgetMapperC1ERKS_()};
+    // unsafe{_ZN17QDataWidgetMapperC2ERKS_()};
     let ctysz: c_int = unsafe{QDataWidgetMapper_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN17QDataWidgetMapperC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN17QDataWidgetMapperC1ERKS_(arg0)} as u64;
+    unsafe {_ZN17QDataWidgetMapperC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QDataWidgetMapper{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -535,8 +533,8 @@ pub trait QDataWidgetMapper_free<RetType> {
 impl<'a> /*trait*/ QDataWidgetMapper_free<()> for () {
   fn free(self , rsthis: & QDataWidgetMapper) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QDataWidgetMapperD0Ev()};
-     unsafe {_ZN17QDataWidgetMapperD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN17QDataWidgetMapperD2Ev()};
+     unsafe {_ZN17QDataWidgetMapperD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -557,12 +555,12 @@ impl<'a> /*trait*/ QDataWidgetMapper_addMapping<()> for (&'a QWidget, i32) {
 impl<'a> /*trait*/ QDataWidgetMapper_new for (&'a QObject) {
   fn new(self) -> QDataWidgetMapper {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QDataWidgetMapperC1EP7QObject()};
+    // unsafe{_ZN17QDataWidgetMapperC2EP7QObject()};
     let ctysz: c_int = unsafe{QDataWidgetMapper_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN17QDataWidgetMapperC1EP7QObject(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN17QDataWidgetMapperC1EP7QObject(arg0)} as u64;
+    unsafe {_ZN17QDataWidgetMapperC2EP7QObject(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QDataWidgetMapper{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

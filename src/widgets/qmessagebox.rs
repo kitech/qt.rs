@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qmessagebox.h
 // dst-file: /src/widgets/qmessagebox.rs
 //
@@ -42,7 +42,7 @@ extern {
   // proto:  void QMessageBox::setButtonText(int button, const QString & text);
   fn _ZN11QMessageBox13setButtonTextEiRK7QString(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  void QMessageBox::~QMessageBox();
-  fn _ZN11QMessageBoxD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN11QMessageBoxD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QMessageBox::setText(const QString & text);
   fn _ZN11QMessageBox7setTextERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMessageBox::setIconPixmap(const QPixmap & pixmap);
@@ -56,8 +56,7 @@ extern {
   // proto: static int QMessageBox::warning(QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2);
   fn _ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_iii(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: c_int, arg4: c_int, arg5: c_int) -> c_int;
   // proto:  void QMessageBox::QMessageBox(const QMessageBox & );
-  fn dector_ZN11QMessageBoxC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QMessageBoxC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN11QMessageBoxC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QMessageBox::metaObject();
   fn _ZNK11QMessageBox10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto: static int QMessageBox::question(QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2);
@@ -77,8 +76,7 @@ extern {
   // proto:  void QMessageBox::setDetailedText(const QString & text);
   fn _ZN11QMessageBox15setDetailedTextERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMessageBox::QMessageBox(QWidget * parent);
-  fn dector_ZN11QMessageBoxC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QMessageBoxC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN11QMessageBoxC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static int QMessageBox::critical(QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text, const QString & button2Text, int defaultButtonNumber, int escapeButtonNumber);
   fn _ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void, arg4: *mut c_void, arg5: *mut c_void, arg6: c_int, arg7: c_int) -> c_int;
   // proto:  QAbstractButton * QMessageBox::clickedButton();
@@ -207,8 +205,8 @@ pub trait QMessageBox_free<RetType> {
 impl<'a> /*trait*/ QMessageBox_free<()> for () {
   fn free(self , rsthis: & QMessageBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QMessageBoxD0Ev()};
-     unsafe {_ZN11QMessageBoxD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN11QMessageBoxD2Ev()};
+     unsafe {_ZN11QMessageBoxD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -385,12 +383,12 @@ pub trait QMessageBox_new {
 impl<'a> /*trait*/ QMessageBox_new for (&'a QMessageBox) {
   fn new(self) -> QMessageBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QMessageBoxC1ERKS_()};
+    // unsafe{_ZN11QMessageBoxC2ERKS_()};
     let ctysz: c_int = unsafe{QMessageBox_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN11QMessageBoxC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN11QMessageBoxC1ERKS_(arg0)} as u64;
+    unsafe {_ZN11QMessageBoxC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QMessageBox{qbase: QDialog::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -604,12 +602,12 @@ impl<'a> /*trait*/ QMessageBox_setDetailedText<()> for (&'a QString) {
 impl<'a> /*trait*/ QMessageBox_new for (&'a QWidget) {
   fn new(self) -> QMessageBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QMessageBoxC1EP7QWidget()};
+    // unsafe{_ZN11QMessageBoxC2EP7QWidget()};
     let ctysz: c_int = unsafe{QMessageBox_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN11QMessageBoxC1EP7QWidget(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN11QMessageBoxC1EP7QWidget(arg0)} as u64;
+    unsafe {_ZN11QMessageBoxC2EP7QWidget(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QMessageBox{qbase: QDialog::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

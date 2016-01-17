@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qabstractstate.h
 // dst-file: /src/core/qabstractstate.rs
 //
@@ -33,13 +33,11 @@ use super::qstatemachine::QStateMachine; // 773
 extern {
   fn QAbstractState_Class_Size() -> c_int;
   // proto:  void QAbstractState::~QAbstractState();
-  fn _ZN14QAbstractStateD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN14QAbstractStateD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractState::QAbstractState(const QAbstractState & );
-  fn dector_ZN14QAbstractStateC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN14QAbstractStateC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN14QAbstractStateC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAbstractState::QAbstractState(QState * parent);
-  fn dector_ZN14QAbstractStateC1EP6QState(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN14QAbstractStateC1EP6QState(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN14QAbstractStateC2EP6QState(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QAbstractState::metaObject();
   fn _ZNK14QAbstractState10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  QState * QAbstractState::parentState();
@@ -95,8 +93,8 @@ pub trait QAbstractState_free<RetType> {
 impl<'a> /*trait*/ QAbstractState_free<()> for () {
   fn free(self , rsthis: & QAbstractState) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QAbstractStateD0Ev()};
-     unsafe {_ZN14QAbstractStateD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN14QAbstractStateD2Ev()};
+     unsafe {_ZN14QAbstractStateD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -118,12 +116,12 @@ pub trait QAbstractState_new {
 impl<'a> /*trait*/ QAbstractState_new for (&'a QAbstractState) {
   fn new(self) -> QAbstractState {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QAbstractStateC1ERKS_()};
+    // unsafe{_ZN14QAbstractStateC2ERKS_()};
     let ctysz: c_int = unsafe{QAbstractState_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN14QAbstractStateC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN14QAbstractStateC1ERKS_(arg0)} as u64;
+    unsafe {_ZN14QAbstractStateC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QAbstractState{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -134,12 +132,12 @@ impl<'a> /*trait*/ QAbstractState_new for (&'a QAbstractState) {
 impl<'a> /*trait*/ QAbstractState_new for (&'a QState) {
   fn new(self) -> QAbstractState {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QAbstractStateC1EP6QState()};
+    // unsafe{_ZN14QAbstractStateC2EP6QState()};
     let ctysz: c_int = unsafe{QAbstractState_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN14QAbstractStateC1EP6QState(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN14QAbstractStateC1EP6QState(arg0)} as u64;
+    unsafe {_ZN14QAbstractStateC2EP6QState(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QAbstractState{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

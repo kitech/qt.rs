@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtGui/qpixelformat.h
 // dst-file: /src/gui/qpixelformat.rs
 //
@@ -32,8 +32,7 @@ extern {
   // proto:  uchar QPixelFormat::blackSize();
   fn _ZNK12QPixelFormat9blackSizeEv(qthis: u64 /* *mut c_void*/) -> c_uchar;
   // proto:  void QPixelFormat::QPixelFormat();
-  fn dector_ZN12QPixelFormatC1Ev() -> *mut c_void;
-  fn _ZN12QPixelFormatC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN12QPixelFormatC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  uchar QPixelFormat::subEnum();
   fn _ZNK12QPixelFormat7subEnumEv(qthis: u64 /* *mut c_void*/) -> c_uchar;
   // proto:  uchar QPixelFormat::greenSize();
@@ -117,11 +116,11 @@ pub trait QPixelFormat_new {
 impl<'a> /*trait*/ QPixelFormat_new for () {
   fn new(self) -> QPixelFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QPixelFormatC1Ev()};
+    // unsafe{_ZN12QPixelFormatC2Ev()};
     let ctysz: c_int = unsafe{QPixelFormat_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN12QPixelFormatC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN12QPixelFormatC1Ev()} as u64;
+    unsafe {_ZN12QPixelFormatC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QPixelFormat{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

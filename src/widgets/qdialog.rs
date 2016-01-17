@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qdialog.h
 // dst-file: /src/widgets/qdialog.rs
 //
@@ -40,7 +40,7 @@ extern {
   // proto:  void QDialog::open();
   fn _ZN7QDialog4openEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QDialog::~QDialog();
-  fn _ZN7QDialogD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN7QDialogD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QDialog::setResult(int r);
   fn _ZN7QDialog9setResultEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QDialog::setSizeGripEnabled(bool );
@@ -64,8 +64,7 @@ extern {
   // proto:  void QDialog::reject();
   fn _ZN7QDialog6rejectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QDialog::QDialog(const QDialog & );
-  fn dector_ZN7QDialogC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN7QDialogC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN7QDialogC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QDialog::isSizeGripEnabled();
   fn _ZNK7QDialog17isSizeGripEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QDialog::setModal(bool modal);
@@ -210,8 +209,8 @@ pub trait QDialog_free<RetType> {
 impl<'a> /*trait*/ QDialog_free<()> for () {
   fn free(self , rsthis: & QDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QDialogD0Ev()};
-     unsafe {_ZN7QDialogD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN7QDialogD2Ev()};
+     unsafe {_ZN7QDialogD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -486,12 +485,12 @@ pub trait QDialog_new {
 impl<'a> /*trait*/ QDialog_new for (&'a QDialog) {
   fn new(self) -> QDialog {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QDialogC1ERKS_()};
+    // unsafe{_ZN7QDialogC2ERKS_()};
     let ctysz: c_int = unsafe{QDialog_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN7QDialogC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN7QDialogC1ERKS_(arg0)} as u64;
+    unsafe {_ZN7QDialogC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QDialog{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qregularexpression.h
 // dst-file: /src/core/qregularexpression.rs
 //
@@ -39,15 +39,13 @@ extern {
   // proto:  QRegularExpressionMatch QRegularExpressionMatchIterator::peekNext();
   fn _ZNK31QRegularExpressionMatchIterator8peekNextEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QRegularExpressionMatchIterator::QRegularExpressionMatchIterator();
-  fn dector_ZN31QRegularExpressionMatchIteratorC1Ev() -> *mut c_void;
-  fn _ZN31QRegularExpressionMatchIteratorC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN31QRegularExpressionMatchIteratorC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QRegularExpression QRegularExpressionMatchIterator::regularExpression();
   fn _ZNK31QRegularExpressionMatchIterator17regularExpressionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QRegularExpressionMatchIterator::QRegularExpressionMatchIterator(const QRegularExpressionMatchIterator & iterator);
-  fn dector_ZN31QRegularExpressionMatchIteratorC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN31QRegularExpressionMatchIteratorC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN31QRegularExpressionMatchIteratorC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QRegularExpressionMatchIterator::~QRegularExpressionMatchIterator();
-  fn _ZN31QRegularExpressionMatchIteratorD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN31QRegularExpressionMatchIteratorD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QRegularExpressionMatch QRegularExpressionMatchIterator::next();
   fn _ZN31QRegularExpressionMatchIterator4nextEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QRegularExpressionMatchIterator::swap(QRegularExpressionMatchIterator & other);
@@ -58,14 +56,13 @@ extern {
   // proto:  QString QRegularExpression::pattern();
   fn _ZNK18QRegularExpression7patternEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QRegularExpression::~QRegularExpression();
-  fn _ZN18QRegularExpressionD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN18QRegularExpressionD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QRegularExpression::optimize();
   fn _ZNK18QRegularExpression8optimizeEv(qthis: u64 /* *mut c_void*/);
   // proto: static QString QRegularExpression::escape(const QString & str);
   fn _ZN18QRegularExpression6escapeERK7QString(arg0: *mut c_void) -> *mut c_void;
   // proto:  void QRegularExpression::QRegularExpression();
-  fn dector_ZN18QRegularExpressionC1Ev() -> *mut c_void;
-  fn _ZN18QRegularExpressionC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN18QRegularExpressionC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QRegularExpression::swap(QRegularExpression & other);
   fn _ZN18QRegularExpression4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QString QRegularExpression::errorString();
@@ -73,8 +70,7 @@ extern {
   // proto:  bool QRegularExpression::isValid();
   fn _ZNK18QRegularExpression7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QRegularExpression::QRegularExpression(const QRegularExpression & re);
-  fn dector_ZN18QRegularExpressionC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN18QRegularExpressionC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN18QRegularExpressionC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QStringList QRegularExpression::namedCaptureGroups();
   fn _ZNK18QRegularExpression18namedCaptureGroupsEv(qthis: u64 /* *mut c_void*/);
   // proto:  int QRegularExpression::captureCount();
@@ -85,8 +81,7 @@ extern {
   // proto:  int QRegularExpressionMatch::lastCapturedIndex();
   fn _ZNK23QRegularExpressionMatch17lastCapturedIndexEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QRegularExpressionMatch::QRegularExpressionMatch();
-  fn dector_ZN23QRegularExpressionMatchC1Ev() -> *mut c_void;
-  fn _ZN23QRegularExpressionMatchC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN23QRegularExpressionMatchC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QRegularExpressionMatch::isValid();
   fn _ZNK23QRegularExpressionMatch7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  int QRegularExpressionMatch::capturedLength(int nth);
@@ -102,12 +97,11 @@ extern {
   // proto:  QStringList QRegularExpressionMatch::capturedTexts();
   fn _ZNK23QRegularExpressionMatch13capturedTextsEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QRegularExpressionMatch::QRegularExpressionMatch(const QRegularExpressionMatch & match);
-  fn dector_ZN23QRegularExpressionMatchC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN23QRegularExpressionMatchC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN23QRegularExpressionMatchC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QRegularExpressionMatch::swap(QRegularExpressionMatch & other);
   fn _ZN23QRegularExpressionMatch4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QRegularExpressionMatch::~QRegularExpressionMatch();
-  fn _ZN23QRegularExpressionMatchD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN23QRegularExpressionMatchD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  int QRegularExpressionMatch::capturedEnd(int nth);
   fn _ZNK23QRegularExpressionMatch11capturedEndEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
   // proto:  QStringRef QRegularExpressionMatch::capturedRef(const QString & name);
@@ -240,11 +234,11 @@ pub trait QRegularExpressionMatchIterator_new {
 impl<'a> /*trait*/ QRegularExpressionMatchIterator_new for () {
   fn new(self) -> QRegularExpressionMatchIterator {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN31QRegularExpressionMatchIteratorC1Ev()};
+    // unsafe{_ZN31QRegularExpressionMatchIteratorC2Ev()};
     let ctysz: c_int = unsafe{QRegularExpressionMatchIterator_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN31QRegularExpressionMatchIteratorC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN31QRegularExpressionMatchIteratorC1Ev()} as u64;
+    unsafe {_ZN31QRegularExpressionMatchIteratorC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QRegularExpressionMatchIterator{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -279,12 +273,12 @@ impl<'a> /*trait*/ QRegularExpressionMatchIterator_regularExpression<QRegularExp
 impl<'a> /*trait*/ QRegularExpressionMatchIterator_new for (&'a QRegularExpressionMatchIterator) {
   fn new(self) -> QRegularExpressionMatchIterator {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN31QRegularExpressionMatchIteratorC1ERKS_()};
+    // unsafe{_ZN31QRegularExpressionMatchIteratorC2ERKS_()};
     let ctysz: c_int = unsafe{QRegularExpressionMatchIterator_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN31QRegularExpressionMatchIteratorC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN31QRegularExpressionMatchIteratorC1ERKS_(arg0)} as u64;
+    unsafe {_ZN31QRegularExpressionMatchIteratorC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QRegularExpressionMatchIterator{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -307,8 +301,8 @@ pub trait QRegularExpressionMatchIterator_free<RetType> {
 impl<'a> /*trait*/ QRegularExpressionMatchIterator_free<()> for () {
   fn free(self , rsthis: & QRegularExpressionMatchIterator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN31QRegularExpressionMatchIteratorD0Ev()};
-     unsafe {_ZN31QRegularExpressionMatchIteratorD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN31QRegularExpressionMatchIteratorD2Ev()};
+     unsafe {_ZN31QRegularExpressionMatchIteratorD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -428,8 +422,8 @@ pub trait QRegularExpression_free<RetType> {
 impl<'a> /*trait*/ QRegularExpression_free<()> for () {
   fn free(self , rsthis: & QRegularExpression) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QRegularExpressionD0Ev()};
-     unsafe {_ZN18QRegularExpressionD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN18QRegularExpressionD2Ev()};
+     unsafe {_ZN18QRegularExpressionD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -498,11 +492,11 @@ pub trait QRegularExpression_new {
 impl<'a> /*trait*/ QRegularExpression_new for () {
   fn new(self) -> QRegularExpression {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QRegularExpressionC1Ev()};
+    // unsafe{_ZN18QRegularExpressionC2Ev()};
     let ctysz: c_int = unsafe{QRegularExpression_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN18QRegularExpressionC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN18QRegularExpressionC1Ev()} as u64;
+    unsafe {_ZN18QRegularExpressionC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QRegularExpression{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -583,12 +577,12 @@ impl<'a> /*trait*/ QRegularExpression_isValid<i8> for () {
 impl<'a> /*trait*/ QRegularExpression_new for (&'a QRegularExpression) {
   fn new(self) -> QRegularExpression {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QRegularExpressionC1ERKS_()};
+    // unsafe{_ZN18QRegularExpressionC2ERKS_()};
     let ctysz: c_int = unsafe{QRegularExpression_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN18QRegularExpressionC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN18QRegularExpressionC1ERKS_(arg0)} as u64;
+    unsafe {_ZN18QRegularExpressionC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QRegularExpression{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -708,11 +702,11 @@ pub trait QRegularExpressionMatch_new {
 impl<'a> /*trait*/ QRegularExpressionMatch_new for () {
   fn new(self) -> QRegularExpressionMatch {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN23QRegularExpressionMatchC1Ev()};
+    // unsafe{_ZN23QRegularExpressionMatchC2Ev()};
     let ctysz: c_int = unsafe{QRegularExpressionMatch_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN23QRegularExpressionMatchC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN23QRegularExpressionMatchC1Ev()} as u64;
+    unsafe {_ZN23QRegularExpressionMatchC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QRegularExpressionMatch{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -876,12 +870,12 @@ impl<'a> /*trait*/ QRegularExpressionMatch_capturedTexts<()> for () {
 impl<'a> /*trait*/ QRegularExpressionMatch_new for (&'a QRegularExpressionMatch) {
   fn new(self) -> QRegularExpressionMatch {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN23QRegularExpressionMatchC1ERKS_()};
+    // unsafe{_ZN23QRegularExpressionMatchC2ERKS_()};
     let ctysz: c_int = unsafe{QRegularExpressionMatch_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN23QRegularExpressionMatchC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN23QRegularExpressionMatchC1ERKS_(arg0)} as u64;
+    unsafe {_ZN23QRegularExpressionMatchC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QRegularExpressionMatch{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -927,8 +921,8 @@ pub trait QRegularExpressionMatch_free<RetType> {
 impl<'a> /*trait*/ QRegularExpressionMatch_free<()> for () {
   fn free(self , rsthis: & QRegularExpressionMatch) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN23QRegularExpressionMatchD0Ev()};
-     unsafe {_ZN23QRegularExpressionMatchD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN23QRegularExpressionMatchD2Ev()};
+     unsafe {_ZN23QRegularExpressionMatchD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

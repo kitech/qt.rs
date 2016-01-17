@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qformlayout.h
 // dst-file: /src/widgets/qformlayout.rs
 //
@@ -54,8 +54,7 @@ extern {
   // proto:  int QFormLayout::spacing();
   fn _ZNK11QFormLayout7spacingEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QFormLayout::QFormLayout(QWidget * parent);
-  fn dector_ZN11QFormLayoutC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QFormLayoutC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN11QFormLayoutC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QFormLayout::insertRow(int row, QLayout * layout);
   fn _ZN11QFormLayout9insertRowEiP7QLayout(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  void QFormLayout::setGeometry(const QRect & rect);
@@ -73,7 +72,7 @@ extern {
   // proto:  void QFormLayout::setSpacing(int );
   fn _ZN11QFormLayout10setSpacingEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QFormLayout::~QFormLayout();
-  fn _ZN11QFormLayoutD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN11QFormLayoutD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QFormLayout::addRow(QLayout * layout);
   fn _ZN11QFormLayout6addRowEP7QLayout(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QSize QFormLayout::sizeHint();
@@ -340,12 +339,12 @@ pub trait QFormLayout_new {
 impl<'a> /*trait*/ QFormLayout_new for (&'a QWidget) {
   fn new(self) -> QFormLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QFormLayoutC1EP7QWidget()};
+    // unsafe{_ZN11QFormLayoutC2EP7QWidget()};
     let ctysz: c_int = unsafe{QFormLayout_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN11QFormLayoutC1EP7QWidget(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN11QFormLayoutC1EP7QWidget(arg0)} as u64;
+    unsafe {_ZN11QFormLayoutC2EP7QWidget(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QFormLayout{qbase: QLayout::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -520,8 +519,8 @@ pub trait QFormLayout_free<RetType> {
 impl<'a> /*trait*/ QFormLayout_free<()> for () {
   fn free(self , rsthis: & QFormLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QFormLayoutD0Ev()};
-     unsafe {_ZN11QFormLayoutD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN11QFormLayoutD2Ev()};
+     unsafe {_ZN11QFormLayoutD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

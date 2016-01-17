@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qeasingcurve.h
 // dst-file: /src/core/qeasingcurve.rs
 //
@@ -31,10 +31,9 @@ use super::qpoint::QPointF; // 773
 extern {
   fn QEasingCurve_Class_Size() -> c_int;
   // proto:  void QEasingCurve::QEasingCurve(const QEasingCurve & other);
-  fn dector_ZN12QEasingCurveC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN12QEasingCurveC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN12QEasingCurveC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QEasingCurve::~QEasingCurve();
-  fn _ZN12QEasingCurveD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN12QEasingCurveD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  EasingFunction QEasingCurve::customType();
   fn _ZNK12QEasingCurve10customTypeEv(qthis: u64 /* *mut c_void*/);
   // proto:  qreal QEasingCurve::overshoot();
@@ -52,7 +51,7 @@ extern {
   // proto:  void QEasingCurve::setAmplitude(qreal amplitude);
   fn _ZN12QEasingCurve12setAmplitudeEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QEasingCurve::swap(QEasingCurve & other);
-  fn demth_ZN12QEasingCurve4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN12QEasingCurve4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QEasingCurve::setOvershoot(qreal overshoot);
   fn _ZN12QEasingCurve12setOvershootEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  QVector<QPointF> QEasingCurve::toCubicSpline();
@@ -91,12 +90,12 @@ pub trait QEasingCurve_new {
 impl<'a> /*trait*/ QEasingCurve_new for (&'a QEasingCurve) {
   fn new(self) -> QEasingCurve {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QEasingCurveC1ERKS_()};
+    // unsafe{_ZN12QEasingCurveC2ERKS_()};
     let ctysz: c_int = unsafe{QEasingCurve_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN12QEasingCurveC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN12QEasingCurveC1ERKS_(arg0)} as u64;
+    unsafe {_ZN12QEasingCurveC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QEasingCurve{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -119,8 +118,8 @@ pub trait QEasingCurve_free<RetType> {
 impl<'a> /*trait*/ QEasingCurve_free<()> for () {
   fn free(self , rsthis: & QEasingCurve) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QEasingCurveD0Ev()};
-     unsafe {_ZN12QEasingCurveD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN12QEasingCurveD2Ev()};
+     unsafe {_ZN12QEasingCurveD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -332,7 +331,7 @@ impl<'a> /*trait*/ QEasingCurve_swap<()> for (&'a QEasingCurve) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QEasingCurve4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {demth_ZN12QEasingCurve4swapERS_(rsthis.qclsinst, arg0)};
+     unsafe {_ZN12QEasingCurve4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

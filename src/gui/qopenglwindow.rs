@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtGui/qopenglwindow.h
 // dst-file: /src/gui/qopenglwindow.rs
 //
@@ -38,8 +38,7 @@ extern {
   // proto:  QImage QOpenGLWindow::grabFramebuffer();
   fn _ZN13QOpenGLWindow15grabFramebufferEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QOpenGLWindow::QOpenGLWindow(const QOpenGLWindow & );
-  fn dector_ZN13QOpenGLWindowC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN13QOpenGLWindowC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN13QOpenGLWindowC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QOpenGLContext * QOpenGLWindow::shareContext();
   fn _ZNK13QOpenGLWindow12shareContextEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QOpenGLWindow::makeCurrent();
@@ -51,7 +50,7 @@ extern {
   // proto:  GLuint QOpenGLWindow::defaultFramebufferObject();
   fn _ZNK13QOpenGLWindow24defaultFramebufferObjectEv(qthis: u64 /* *mut c_void*/) -> c_uint;
   // proto:  void QOpenGLWindow::~QOpenGLWindow();
-  fn _ZN13QOpenGLWindowD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN13QOpenGLWindowD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  const QMetaObject * QOpenGLWindow::metaObject();
   fn _ZNK13QOpenGLWindow10metaObjectEv(qthis: u64 /* *mut c_void*/);
   fn QOpenGLWindow_SlotProxy_connect__ZN13QOpenGLWindow12frameSwappedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
@@ -147,12 +146,12 @@ pub trait QOpenGLWindow_new {
 impl<'a> /*trait*/ QOpenGLWindow_new for (&'a QOpenGLWindow) {
   fn new(self) -> QOpenGLWindow {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QOpenGLWindowC1ERKS_()};
+    // unsafe{_ZN13QOpenGLWindowC2ERKS_()};
     let ctysz: c_int = unsafe{QOpenGLWindow_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN13QOpenGLWindowC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN13QOpenGLWindowC1ERKS_(arg0)} as u64;
+    unsafe {_ZN13QOpenGLWindowC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QOpenGLWindow{qbase: QPaintDeviceWindow::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -286,8 +285,8 @@ pub trait QOpenGLWindow_free<RetType> {
 impl<'a> /*trait*/ QOpenGLWindow_free<()> for () {
   fn free(self , rsthis: & QOpenGLWindow) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QOpenGLWindowD0Ev()};
-     unsafe {_ZN13QOpenGLWindowD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN13QOpenGLWindowD2Ev()};
+     unsafe {_ZN13QOpenGLWindowD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

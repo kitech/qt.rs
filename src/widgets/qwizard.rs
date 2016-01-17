@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qwizard.h
 // dst-file: /src/widgets/qwizard.rs
 //
@@ -38,8 +38,7 @@ use super::qabstractbutton::QAbstractButton; // 773
 extern {
   fn QWizardPage_Class_Size() -> c_int;
   // proto:  void QWizardPage::QWizardPage(const QWizardPage & );
-  fn dector_ZN11QWizardPageC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QWizardPageC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN11QWizardPageC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QWizardPage::metaObject();
   fn _ZNK11QWizardPage10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  QString QWizardPage::title();
@@ -59,14 +58,13 @@ extern {
   // proto:  bool QWizardPage::isCommitPage();
   fn _ZNK11QWizardPage12isCommitPageEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QWizardPage::QWizardPage(QWidget * parent);
-  fn dector_ZN11QWizardPageC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QWizardPageC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN11QWizardPageC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QWizardPage::setFinalPage(bool finalPage);
   fn _ZN11QWizardPage12setFinalPageEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QWizardPage::setSubTitle(const QString & subTitle);
   fn _ZN11QWizardPage11setSubTitleERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QWizardPage::~QWizardPage();
-  fn _ZN11QWizardPageD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN11QWizardPageD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QWizardPage::setCommitPage(bool commitPage);
   fn _ZN11QWizardPage13setCommitPageEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QWizardPage::initializePage();
@@ -99,7 +97,7 @@ extern {
   // proto:  void QWizard::setStartId(int id);
   fn _ZN7QWizard10setStartIdEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QWizard::~QWizard();
-  fn _ZN7QWizardD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN7QWizardD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QList<int> QWizard::visitedPages();
   fn _ZNK7QWizard12visitedPagesEv(qthis: u64 /* *mut c_void*/);
   // proto:  int QWizard::nextId();
@@ -107,8 +105,7 @@ extern {
   // proto:  int QWizard::startId();
   fn _ZNK7QWizard7startIdEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QWizard::QWizard(const QWizard & );
-  fn dector_ZN7QWizardC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN7QWizardC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN7QWizardC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QWizard::addPage(QWizardPage * page);
   fn _ZN7QWizard7addPageEP11QWizardPage(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
   // proto:  void QWizard::removePage(int id);
@@ -190,12 +187,12 @@ pub trait QWizardPage_new {
 impl<'a> /*trait*/ QWizardPage_new for (&'a QWizardPage) {
   fn new(self) -> QWizardPage {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QWizardPageC1ERKS_()};
+    // unsafe{_ZN11QWizardPageC2ERKS_()};
     let ctysz: c_int = unsafe{QWizardPage_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN11QWizardPageC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN11QWizardPageC1ERKS_(arg0)} as u64;
+    unsafe {_ZN11QWizardPageC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QWizardPage{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -413,12 +410,12 @@ impl<'a> /*trait*/ QWizardPage_isCommitPage<i8> for () {
 impl<'a> /*trait*/ QWizardPage_new for (&'a QWidget) {
   fn new(self) -> QWizardPage {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QWizardPageC1EP7QWidget()};
+    // unsafe{_ZN11QWizardPageC2EP7QWidget()};
     let ctysz: c_int = unsafe{QWizardPage_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN11QWizardPageC1EP7QWidget(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN11QWizardPageC1EP7QWidget(arg0)} as u64;
+    unsafe {_ZN11QWizardPageC2EP7QWidget(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QWizardPage{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -487,8 +484,8 @@ pub trait QWizardPage_free<RetType> {
 impl<'a> /*trait*/ QWizardPage_free<()> for () {
   fn free(self , rsthis: & QWizardPage) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QWizardPageD0Ev()};
-     unsafe {_ZN11QWizardPageD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN11QWizardPageD2Ev()};
+     unsafe {_ZN11QWizardPageD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -874,8 +871,8 @@ pub trait QWizard_free<RetType> {
 impl<'a> /*trait*/ QWizard_free<()> for () {
   fn free(self , rsthis: & QWizard) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QWizardD0Ev()};
-     unsafe {_ZN7QWizardD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN7QWizardD2Ev()};
+     unsafe {_ZN7QWizardD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -965,12 +962,12 @@ pub trait QWizard_new {
 impl<'a> /*trait*/ QWizard_new for (&'a QWizard) {
   fn new(self) -> QWizard {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QWizardC1ERKS_()};
+    // unsafe{_ZN7QWizardC2ERKS_()};
     let ctysz: c_int = unsafe{QWizard_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN7QWizardC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN7QWizardC1ERKS_(arg0)} as u64;
+    unsafe {_ZN7QWizardC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QWizard{qbase: QDialog::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

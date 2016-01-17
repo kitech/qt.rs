@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qhistorystate.h
 // dst-file: /src/core/qhistorystate.rs
 //
@@ -34,17 +34,15 @@ extern {
   // proto:  const QMetaObject * QHistoryState::metaObject();
   fn _ZNK13QHistoryState10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QHistoryState::QHistoryState(const QHistoryState & );
-  fn dector_ZN13QHistoryStateC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN13QHistoryStateC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN13QHistoryStateC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QHistoryState::setDefaultState(QAbstractState * state);
   fn _ZN13QHistoryState15setDefaultStateEP14QAbstractState(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QHistoryState::QHistoryState(QState * parent);
-  fn dector_ZN13QHistoryStateC1EP6QState(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN13QHistoryStateC1EP6QState(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN13QHistoryStateC2EP6QState(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QAbstractState * QHistoryState::defaultState();
   fn _ZNK13QHistoryState12defaultStateEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QHistoryState::~QHistoryState();
-  fn _ZN13QHistoryStateD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN13QHistoryStateD2Ev(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
@@ -113,12 +111,12 @@ pub trait QHistoryState_new {
 impl<'a> /*trait*/ QHistoryState_new for (&'a QHistoryState) {
   fn new(self) -> QHistoryState {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QHistoryStateC1ERKS_()};
+    // unsafe{_ZN13QHistoryStateC2ERKS_()};
     let ctysz: c_int = unsafe{QHistoryState_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN13QHistoryStateC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN13QHistoryStateC1ERKS_(arg0)} as u64;
+    unsafe {_ZN13QHistoryStateC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QHistoryState{qbase: QAbstractState::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -152,12 +150,12 @@ impl<'a> /*trait*/ QHistoryState_setDefaultState<()> for (&'a QAbstractState) {
 impl<'a> /*trait*/ QHistoryState_new for (&'a QState) {
   fn new(self) -> QHistoryState {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QHistoryStateC1EP6QState()};
+    // unsafe{_ZN13QHistoryStateC2EP6QState()};
     let ctysz: c_int = unsafe{QHistoryState_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN13QHistoryStateC1EP6QState(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN13QHistoryStateC1EP6QState(arg0)} as u64;
+    unsafe {_ZN13QHistoryStateC2EP6QState(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QHistoryState{qbase: QAbstractState::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -202,8 +200,8 @@ pub trait QHistoryState_free<RetType> {
 impl<'a> /*trait*/ QHistoryState_free<()> for () {
   fn free(self , rsthis: & QHistoryState) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QHistoryStateD0Ev()};
-     unsafe {_ZN13QHistoryStateD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN13QHistoryStateD2Ev()};
+     unsafe {_ZN13QHistoryStateD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

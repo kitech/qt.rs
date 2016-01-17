@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qundogroup.h
 // dst-file: /src/widgets/qundogroup.rs
 //
@@ -42,15 +42,13 @@ extern {
   // proto:  void QUndoGroup::redo();
   fn _ZN10QUndoGroup4redoEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QUndoGroup::QUndoGroup(QObject * parent);
-  fn dector_ZN10QUndoGroupC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN10QUndoGroupC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN10QUndoGroupC2EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QUndoGroup::setActiveStack(QUndoStack * stack);
   fn _ZN10QUndoGroup14setActiveStackEP10QUndoStack(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QAction * QUndoGroup::createRedoAction(QObject * parent, const QString & prefix);
   fn _ZNK10QUndoGroup16createRedoActionEP7QObjectRK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  void QUndoGroup::QUndoGroup(const QUndoGroup & );
-  fn dector_ZN10QUndoGroupC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN10QUndoGroupC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN10QUndoGroupC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QUndoGroup::metaObject();
   fn _ZNK10QUndoGroup10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QUndoGroup::canRedo();
@@ -64,7 +62,7 @@ extern {
   // proto:  bool QUndoGroup::canUndo();
   fn _ZNK10QUndoGroup7canUndoEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QUndoGroup::~QUndoGroup();
-  fn _ZN10QUndoGroupD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN10QUndoGroupD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QUndoGroup::isClean();
   fn _ZNK10QUndoGroup7isCleanEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QAction * QUndoGroup::createUndoAction(QObject * parent, const QString & prefix);
@@ -218,12 +216,12 @@ pub trait QUndoGroup_new {
 impl<'a> /*trait*/ QUndoGroup_new for (&'a QObject) {
   fn new(self) -> QUndoGroup {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QUndoGroupC1EP7QObject()};
+    // unsafe{_ZN10QUndoGroupC2EP7QObject()};
     let ctysz: c_int = unsafe{QUndoGroup_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN10QUndoGroupC1EP7QObject(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN10QUndoGroupC1EP7QObject(arg0)} as u64;
+    unsafe {_ZN10QUndoGroupC2EP7QObject(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QUndoGroup{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -283,12 +281,12 @@ impl<'a> /*trait*/ QUndoGroup_createRedoAction<QAction> for (&'a QObject, &'a QS
 impl<'a> /*trait*/ QUndoGroup_new for (&'a QUndoGroup) {
   fn new(self) -> QUndoGroup {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QUndoGroupC1ERKS_()};
+    // unsafe{_ZN10QUndoGroupC2ERKS_()};
     let ctysz: c_int = unsafe{QUndoGroup_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN10QUndoGroupC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN10QUndoGroupC1ERKS_(arg0)} as u64;
+    unsafe {_ZN10QUndoGroupC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QUndoGroup{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -451,8 +449,8 @@ pub trait QUndoGroup_free<RetType> {
 impl<'a> /*trait*/ QUndoGroup_free<()> for () {
   fn free(self , rsthis: & QUndoGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QUndoGroupD0Ev()};
-     unsafe {_ZN10QUndoGroupD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN10QUndoGroupD2Ev()};
+     unsafe {_ZN10QUndoGroupD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

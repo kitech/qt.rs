@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qfiledevice.h
 // dst-file: /src/core/qfiledevice.rs
 //
@@ -47,10 +47,9 @@ extern {
   // proto:  QString QFileDevice::fileName();
   fn _ZNK11QFileDevice8fileNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QFileDevice::QFileDevice(QObject * parent);
-  fn dector_ZN11QFileDeviceC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QFileDeviceC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN11QFileDeviceC2EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QFileDevice::~QFileDevice();
-  fn _ZN11QFileDeviceD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN11QFileDeviceD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QFileDevice::atEnd();
   fn _ZNK11QFileDevice5atEndEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QFileDevice::isSequential();
@@ -58,13 +57,11 @@ extern {
   // proto:  bool QFileDevice::flush();
   fn _ZN11QFileDevice5flushEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QFileDevice::QFileDevice();
-  fn dector_ZN11QFileDeviceC1Ev() -> *mut c_void;
-  fn _ZN11QFileDeviceC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN11QFileDeviceC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QFileDevice::unsetError();
   fn _ZN11QFileDevice10unsetErrorEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QFileDevice::QFileDevice(const QFileDevice & );
-  fn dector_ZN11QFileDeviceC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QFileDeviceC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN11QFileDeviceC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QFileDevice::metaObject();
   fn _ZNK11QFileDevice10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QFileDevice::resize(qint64 sz);
@@ -276,12 +273,12 @@ pub trait QFileDevice_new {
 impl<'a> /*trait*/ QFileDevice_new for (&'a QObject) {
   fn new(self) -> QFileDevice {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QFileDeviceC1EP7QObject()};
+    // unsafe{_ZN11QFileDeviceC2EP7QObject()};
     let ctysz: c_int = unsafe{QFileDevice_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN11QFileDeviceC1EP7QObject(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN11QFileDeviceC1EP7QObject(arg0)} as u64;
+    unsafe {_ZN11QFileDeviceC2EP7QObject(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QFileDevice{qbase: QIODevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -304,8 +301,8 @@ pub trait QFileDevice_free<RetType> {
 impl<'a> /*trait*/ QFileDevice_free<()> for () {
   fn free(self , rsthis: & QFileDevice) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QFileDeviceD0Ev()};
-     unsafe {_ZN11QFileDeviceD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN11QFileDeviceD2Ev()};
+     unsafe {_ZN11QFileDeviceD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -383,11 +380,11 @@ impl<'a> /*trait*/ QFileDevice_flush<i8> for () {
 impl<'a> /*trait*/ QFileDevice_new for () {
   fn new(self) -> QFileDevice {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QFileDeviceC1Ev()};
+    // unsafe{_ZN11QFileDeviceC2Ev()};
     let ctysz: c_int = unsafe{QFileDevice_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN11QFileDeviceC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN11QFileDeviceC1Ev()} as u64;
+    unsafe {_ZN11QFileDeviceC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QFileDevice{qbase: QIODevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -420,12 +417,12 @@ impl<'a> /*trait*/ QFileDevice_unsetError<()> for () {
 impl<'a> /*trait*/ QFileDevice_new for (&'a QFileDevice) {
   fn new(self) -> QFileDevice {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QFileDeviceC1ERKS_()};
+    // unsafe{_ZN11QFileDeviceC2ERKS_()};
     let ctysz: c_int = unsafe{QFileDevice_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN11QFileDeviceC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN11QFileDeviceC1ERKS_(arg0)} as u64;
+    unsafe {_ZN11QFileDeviceC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QFileDevice{qbase: QIODevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

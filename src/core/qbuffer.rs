@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qbuffer.h
 // dst-file: /src/core/qbuffer.rs
 //
@@ -37,14 +37,13 @@ extern {
   // proto:  bool QBuffer::canReadLine();
   fn _ZNK7QBuffer11canReadLineEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QBuffer::~QBuffer();
-  fn _ZN7QBufferD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN7QBufferD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QBuffer::setData(const QByteArray & data);
   fn _ZN7QBuffer7setDataERK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QByteArray & QBuffer::data();
   fn _ZNK7QBuffer4dataEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QBuffer::QBuffer(QObject * parent);
-  fn dector_ZN7QBufferC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN7QBufferC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN7QBufferC2EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QBuffer::setBuffer(QByteArray * a);
   fn _ZN7QBuffer9setBufferEP10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QByteArray & QBuffer::buffer();
@@ -52,8 +51,7 @@ extern {
   // proto:  qint64 QBuffer::pos();
   fn _ZNK7QBuffer3posEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
   // proto:  void QBuffer::QBuffer(const QBuffer & );
-  fn dector_ZN7QBufferC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN7QBufferC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN7QBufferC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QBuffer::close();
   fn _ZN7QBuffer5closeEv(qthis: u64 /* *mut c_void*/);
   // proto:  const QMetaObject * QBuffer::metaObject();
@@ -61,12 +59,11 @@ extern {
   // proto:  qint64 QBuffer::size();
   fn _ZNK7QBuffer4sizeEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
   // proto:  void QBuffer::QBuffer(QByteArray * buf, QObject * parent);
-  fn dector_ZN7QBufferC1EP10QByteArrayP7QObject(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN7QBufferC1EP10QByteArrayP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN7QBufferC2EP10QByteArrayP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  bool QBuffer::atEnd();
   fn _ZNK7QBuffer5atEndEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QBuffer::setData(const char * data, int len);
-  fn demth_ZN7QBuffer7setDataEPKci(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int);
+  fn _ZN7QBuffer7setDataEPKci(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int);
 } // <= ext block end
 
 // body block begin =>
@@ -157,8 +154,8 @@ pub trait QBuffer_free<RetType> {
 impl<'a> /*trait*/ QBuffer_free<()> for () {
   fn free(self , rsthis: & QBuffer) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QBufferD0Ev()};
-     unsafe {_ZN7QBufferD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN7QBufferD2Ev()};
+     unsafe {_ZN7QBufferD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -227,12 +224,12 @@ pub trait QBuffer_new {
 impl<'a> /*trait*/ QBuffer_new for (&'a QObject) {
   fn new(self) -> QBuffer {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QBufferC1EP7QObject()};
+    // unsafe{_ZN7QBufferC2EP7QObject()};
     let ctysz: c_int = unsafe{QBuffer_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN7QBufferC1EP7QObject(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN7QBufferC1EP7QObject(arg0)} as u64;
+    unsafe {_ZN7QBufferC2EP7QObject(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QBuffer{qbase: QIODevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -313,12 +310,12 @@ impl<'a> /*trait*/ QBuffer_pos<i64> for () {
 impl<'a> /*trait*/ QBuffer_new for (&'a QBuffer) {
   fn new(self) -> QBuffer {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QBufferC1ERKS_()};
+    // unsafe{_ZN7QBufferC2ERKS_()};
     let ctysz: c_int = unsafe{QBuffer_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN7QBufferC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN7QBufferC1ERKS_(arg0)} as u64;
+    unsafe {_ZN7QBufferC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QBuffer{qbase: QIODevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -396,13 +393,13 @@ impl<'a> /*trait*/ QBuffer_size<i64> for () {
 impl<'a> /*trait*/ QBuffer_new for (&'a QByteArray, &'a QObject) {
   fn new(self) -> QBuffer {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QBufferC1EP10QByteArrayP7QObject()};
+    // unsafe{_ZN7QBufferC2EP10QByteArrayP7QObject()};
     let ctysz: c_int = unsafe{QBuffer_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    // unsafe {_ZN7QBufferC1EP10QByteArrayP7QObject(qthis, arg0, arg1)};
-    let qthis: u64 = unsafe {dector_ZN7QBufferC1EP10QByteArrayP7QObject(arg0, arg1)} as u64;
+    unsafe {_ZN7QBufferC2EP10QByteArrayP7QObject(qthis_ph, arg0, arg1)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QBuffer{qbase: QIODevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -439,7 +436,7 @@ impl<'a> /*trait*/ QBuffer_setData<()> for (&'a  String, i32) {
     // unsafe{_ZN7QBuffer7setDataEPKci()};
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as c_int;
-     unsafe {demth_ZN7QBuffer7setDataEPKci(rsthis.qclsinst, arg0, arg1)};
+     unsafe {_ZN7QBuffer7setDataEPKci(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }

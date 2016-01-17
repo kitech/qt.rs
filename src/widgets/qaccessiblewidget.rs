@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qaccessiblewidget.h
 // dst-file: /src/widgets/qaccessiblewidget.rs
 //
@@ -51,12 +51,11 @@ extern {
   // proto:  QAccessibleInterface * QAccessibleWidget::focusChild();
   fn _ZNK17QAccessibleWidget10focusChildEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAccessibleWidget::QAccessibleWidget(const QAccessibleWidget & );
-  fn dector_ZN17QAccessibleWidgetC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN17QAccessibleWidgetC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN17QAccessibleWidgetC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QColor QAccessibleWidget::backgroundColor();
   fn _ZNK17QAccessibleWidget15backgroundColorEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAccessibleWidget::~QAccessibleWidget();
-  fn _ZN17QAccessibleWidgetD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN17QAccessibleWidgetD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QStringList QAccessibleWidget::actionNames();
   fn _ZNK17QAccessibleWidget11actionNamesEv(qthis: u64 /* *mut c_void*/);
   // proto:  QAccessibleInterface * QAccessibleWidget::parent();
@@ -278,12 +277,12 @@ pub trait QAccessibleWidget_new {
 impl<'a> /*trait*/ QAccessibleWidget_new for (&'a QAccessibleWidget) {
   fn new(self) -> QAccessibleWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QAccessibleWidgetC1ERKS_()};
+    // unsafe{_ZN17QAccessibleWidgetC2ERKS_()};
     let ctysz: c_int = unsafe{QAccessibleWidget_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN17QAccessibleWidgetC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN17QAccessibleWidgetC1ERKS_(arg0)} as u64;
+    unsafe {_ZN17QAccessibleWidgetC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QAccessibleWidget{qbase: QAccessibleObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -330,8 +329,8 @@ pub trait QAccessibleWidget_free<RetType> {
 impl<'a> /*trait*/ QAccessibleWidget_free<()> for () {
   fn free(self , rsthis: & QAccessibleWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QAccessibleWidgetD0Ev()};
-     unsafe {_ZN17QAccessibleWidgetD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN17QAccessibleWidgetD2Ev()};
+     unsafe {_ZN17QAccessibleWidgetD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

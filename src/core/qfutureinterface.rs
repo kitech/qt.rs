@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qfutureinterface.h
 // dst-file: /src/core/qfutureinterface.rs
 //
@@ -50,7 +50,7 @@ extern {
   // proto:  bool QFutureInterfaceBase::isRunning();
   fn _ZNK20QFutureInterfaceBase9isRunningEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QFutureInterfaceBase::~QFutureInterfaceBase();
-  fn _ZN20QFutureInterfaceBaseD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN20QFutureInterfaceBaseD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QFutureInterfaceBase::cancel();
   fn _ZN20QFutureInterfaceBase6cancelEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QFutureInterfaceBase::reportStarted();
@@ -72,8 +72,7 @@ extern {
   // proto:  int QFutureInterfaceBase::resultCount();
   fn _ZNK20QFutureInterfaceBase11resultCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QFutureInterfaceBase::QFutureInterfaceBase(const QFutureInterfaceBase & other);
-  fn dector_ZN20QFutureInterfaceBaseC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN20QFutureInterfaceBaseC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN20QFutureInterfaceBaseC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QFutureInterfaceBase::progressValue();
   fn _ZNK20QFutureInterfaceBase13progressValueEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QFutureInterfaceBase::isThrottled();
@@ -322,8 +321,8 @@ pub trait QFutureInterfaceBase_free<RetType> {
 impl<'a> /*trait*/ QFutureInterfaceBase_free<()> for () {
   fn free(self , rsthis: & QFutureInterfaceBase) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN20QFutureInterfaceBaseD0Ev()};
-     unsafe {_ZN20QFutureInterfaceBaseD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN20QFutureInterfaceBaseD2Ev()};
+     unsafe {_ZN20QFutureInterfaceBaseD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -574,12 +573,12 @@ pub trait QFutureInterfaceBase_new {
 impl<'a> /*trait*/ QFutureInterfaceBase_new for (&'a QFutureInterfaceBase) {
   fn new(self) -> QFutureInterfaceBase {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN20QFutureInterfaceBaseC1ERKS_()};
+    // unsafe{_ZN20QFutureInterfaceBaseC2ERKS_()};
     let ctysz: c_int = unsafe{QFutureInterfaceBase_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN20QFutureInterfaceBaseC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN20QFutureInterfaceBaseC1ERKS_(arg0)} as u64;
+    unsafe {_ZN20QFutureInterfaceBaseC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QFutureInterfaceBase{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtGui/qsessionmanager.h
 // dst-file: /src/gui/qsessionmanager.rs
 //
@@ -44,7 +44,7 @@ extern {
   // proto:  bool QSessionManager::allowsErrorInteraction();
   fn _ZN15QSessionManager22allowsErrorInteractionEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QSessionManager::~QSessionManager();
-  fn _ZN15QSessionManagerD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN15QSessionManagerD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QStringList QSessionManager::restartCommand();
   fn _ZNK15QSessionManager14restartCommandEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QSessionManager::requestPhase2();
@@ -60,8 +60,7 @@ extern {
   // proto:  QStringList QSessionManager::discardCommand();
   fn _ZNK15QSessionManager14discardCommandEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QSessionManager::QSessionManager(QGuiApplication * app, QString & id, QString & key);
-  fn dector_ZN15QSessionManagerC1EP15QGuiApplicationR7QStringS3_(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> *mut c_void;
-  fn _ZN15QSessionManagerC1EP15QGuiApplicationR7QStringS3_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
+  fn _ZN15QSessionManagerC2EP15QGuiApplicationR7QStringS3_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  void QSessionManager::cancel();
   fn _ZN15QSessionManager6cancelEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QSessionManager::setDiscardCommand(const QStringList & );
@@ -227,8 +226,8 @@ pub trait QSessionManager_free<RetType> {
 impl<'a> /*trait*/ QSessionManager_free<()> for () {
   fn free(self , rsthis: & QSessionManager) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QSessionManagerD0Ev()};
-     unsafe {_ZN15QSessionManagerD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN15QSessionManagerD2Ev()};
+     unsafe {_ZN15QSessionManagerD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -397,14 +396,14 @@ pub trait QSessionManager_new {
 impl<'a> /*trait*/ QSessionManager_new for (&'a QGuiApplication, &'a QString, &'a QString) {
   fn new(self) -> QSessionManager {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QSessionManagerC1EP15QGuiApplicationR7QStringS3_()};
+    // unsafe{_ZN15QSessionManagerC2EP15QGuiApplicationR7QStringS3_()};
     let ctysz: c_int = unsafe{QSessionManager_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
-    // unsafe {_ZN15QSessionManagerC1EP15QGuiApplicationR7QStringS3_(qthis, arg0, arg1, arg2)};
-    let qthis: u64 = unsafe {dector_ZN15QSessionManagerC1EP15QGuiApplicationR7QStringS3_(arg0, arg1, arg2)} as u64;
+    unsafe {_ZN15QSessionManagerC2EP15QGuiApplicationR7QStringS3_(qthis_ph, arg0, arg1, arg2)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QSessionManager{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

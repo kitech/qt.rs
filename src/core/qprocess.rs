@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qprocess.h
 // dst-file: /src/core/qprocess.rs
 //
@@ -50,14 +50,13 @@ extern {
   // proto:  void QProcess::setProcessEnvironment(const QProcessEnvironment & environment);
   fn _ZN8QProcess21setProcessEnvironmentERK19QProcessEnvironment(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QProcess::QProcess(const QProcess & );
-  fn dector_ZN8QProcessC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN8QProcessC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN8QProcessC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  Q_PID QProcess::pid();
   fn _ZNK8QProcess3pidEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
   // proto:  void QProcess::setArguments(const QStringList & arguments);
   fn _ZN8QProcess12setArgumentsERK11QStringList(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QProcess::~QProcess();
-  fn _ZN8QProcessD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN8QProcessD2Ev(qthis: u64 /* *mut c_void*/);
   // proto: static int QProcess::execute(const QString & command);
   fn _ZN8QProcess7executeERK7QString(arg0: *mut c_void) -> c_int;
   // proto:  void QProcess::closeWriteChannel();
@@ -75,8 +74,7 @@ extern {
   // proto:  bool QProcess::waitForBytesWritten(int msecs);
   fn _ZN8QProcess19waitForBytesWrittenEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
   // proto:  void QProcess::QProcess(QObject * parent);
-  fn dector_ZN8QProcessC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN8QProcessC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN8QProcessC2EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QString QProcess::program();
   fn _ZNK8QProcess7programEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  qint64 QProcess::processId();
@@ -133,12 +131,11 @@ extern {
   // proto:  bool QProcessEnvironment::isEmpty();
   fn _ZNK19QProcessEnvironment7isEmptyEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QProcessEnvironment::~QProcessEnvironment();
-  fn _ZN19QProcessEnvironmentD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN19QProcessEnvironmentD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QProcessEnvironment::swap(QProcessEnvironment & other);
-  fn demth_ZN19QProcessEnvironment4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN19QProcessEnvironment4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QProcessEnvironment::QProcessEnvironment(const QProcessEnvironment & other);
-  fn dector_ZN19QProcessEnvironmentC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN19QProcessEnvironmentC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN19QProcessEnvironmentC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static QProcessEnvironment QProcessEnvironment::systemEnvironment();
   fn _ZN19QProcessEnvironment17systemEnvironmentEv() -> *mut c_void;
   // proto:  void QProcessEnvironment::insert(const QString & name, const QString & value);
@@ -146,8 +143,7 @@ extern {
   // proto:  QStringList QProcessEnvironment::toStringList();
   fn _ZNK19QProcessEnvironment12toStringListEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QProcessEnvironment::QProcessEnvironment();
-  fn dector_ZN19QProcessEnvironmentC1Ev() -> *mut c_void;
-  fn _ZN19QProcessEnvironmentC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN19QProcessEnvironmentC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QProcessEnvironment::insert(const QProcessEnvironment & e);
   fn _ZN19QProcessEnvironment6insertERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QProcess_SlotProxy_connect__ZN8QProcess5errorENS_12ProcessErrorE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
@@ -360,12 +356,12 @@ pub trait QProcess_new {
 impl<'a> /*trait*/ QProcess_new for (&'a QProcess) {
   fn new(self) -> QProcess {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QProcessC1ERKS_()};
+    // unsafe{_ZN8QProcessC2ERKS_()};
     let ctysz: c_int = unsafe{QProcess_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN8QProcessC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN8QProcessC1ERKS_(arg0)} as u64;
+    unsafe {_ZN8QProcessC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QProcess{qbase: QIODevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -434,8 +430,8 @@ pub trait QProcess_free<RetType> {
 impl<'a> /*trait*/ QProcess_free<()> for () {
   fn free(self , rsthis: & QProcess) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QProcessD0Ev()};
-     unsafe {_ZN8QProcessD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN8QProcessD2Ev()};
+     unsafe {_ZN8QProcessD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -614,12 +610,12 @@ impl<'a> /*trait*/ QProcess_waitForBytesWritten<i8> for (i32) {
 impl<'a> /*trait*/ QProcess_new for (&'a QObject) {
   fn new(self) -> QProcess {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QProcessC1EP7QObject()};
+    // unsafe{_ZN8QProcessC2EP7QObject()};
     let ctysz: c_int = unsafe{QProcess_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN8QProcessC1EP7QObject(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN8QProcessC1EP7QObject(arg0)} as u64;
+    unsafe {_ZN8QProcessC2EP7QObject(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QProcess{qbase: QIODevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1271,8 +1267,8 @@ pub trait QProcessEnvironment_free<RetType> {
 impl<'a> /*trait*/ QProcessEnvironment_free<()> for () {
   fn free(self , rsthis: & QProcessEnvironment) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QProcessEnvironmentD0Ev()};
-     unsafe {_ZN19QProcessEnvironmentD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN19QProcessEnvironmentD2Ev()};
+     unsafe {_ZN19QProcessEnvironmentD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1295,7 +1291,7 @@ impl<'a> /*trait*/ QProcessEnvironment_swap<()> for (&'a QProcessEnvironment) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QProcessEnvironment4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {demth_ZN19QProcessEnvironment4swapERS_(rsthis.qclsinst, arg0)};
+     unsafe {_ZN19QProcessEnvironment4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1317,12 +1313,12 @@ pub trait QProcessEnvironment_new {
 impl<'a> /*trait*/ QProcessEnvironment_new for (&'a QProcessEnvironment) {
   fn new(self) -> QProcessEnvironment {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QProcessEnvironmentC1ERKS_()};
+    // unsafe{_ZN19QProcessEnvironmentC2ERKS_()};
     let ctysz: c_int = unsafe{QProcessEnvironment_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN19QProcessEnvironmentC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN19QProcessEnvironmentC1ERKS_(arg0)} as u64;
+    unsafe {_ZN19QProcessEnvironmentC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QProcessEnvironment{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1403,11 +1399,11 @@ impl<'a> /*trait*/ QProcessEnvironment_toStringList<()> for () {
 impl<'a> /*trait*/ QProcessEnvironment_new for () {
   fn new(self) -> QProcessEnvironment {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QProcessEnvironmentC1Ev()};
+    // unsafe{_ZN19QProcessEnvironmentC2Ev()};
     let ctysz: c_int = unsafe{QProcessEnvironment_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN19QProcessEnvironmentC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN19QProcessEnvironmentC1Ev()} as u64;
+    unsafe {_ZN19QProcessEnvironmentC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QProcessEnvironment{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

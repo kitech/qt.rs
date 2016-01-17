@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qcryptographichash.h
 // dst-file: /src/core/qcryptographichash.rs
 //
@@ -34,7 +34,7 @@ extern {
   // proto:  bool QCryptographicHash::addData(QIODevice * device);
   fn _ZN18QCryptographicHash7addDataEP9QIODevice(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  void QCryptographicHash::~QCryptographicHash();
-  fn _ZN18QCryptographicHashD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN18QCryptographicHashD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QCryptographicHash::reset();
   fn _ZN18QCryptographicHash5resetEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QCryptographicHash::addData(const char * data, int length);
@@ -44,8 +44,7 @@ extern {
   // proto:  void QCryptographicHash::addData(const QByteArray & data);
   fn _ZN18QCryptographicHash7addDataERK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QCryptographicHash::QCryptographicHash(const QCryptographicHash & );
-  fn dector_ZN18QCryptographicHashC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN18QCryptographicHashC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN18QCryptographicHashC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -101,8 +100,8 @@ pub trait QCryptographicHash_free<RetType> {
 impl<'a> /*trait*/ QCryptographicHash_free<()> for () {
   fn free(self , rsthis: & QCryptographicHash) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QCryptographicHashD0Ev()};
-     unsafe {_ZN18QCryptographicHashD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN18QCryptographicHashD2Ev()};
+     unsafe {_ZN18QCryptographicHashD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -193,12 +192,12 @@ pub trait QCryptographicHash_new {
 impl<'a> /*trait*/ QCryptographicHash_new for (&'a QCryptographicHash) {
   fn new(self) -> QCryptographicHash {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QCryptographicHashC1ERKS_()};
+    // unsafe{_ZN18QCryptographicHashC2ERKS_()};
     let ctysz: c_int = unsafe{QCryptographicHash_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN18QCryptographicHashC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN18QCryptographicHashC1ERKS_(arg0)} as u64;
+    unsafe {_ZN18QCryptographicHashC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QCryptographicHash{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

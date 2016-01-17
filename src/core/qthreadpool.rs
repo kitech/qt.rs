@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qthreadpool.h
 // dst-file: /src/core/qthreadpool.rs
 //
@@ -32,7 +32,7 @@ use super::qrunnable::QRunnable; // 773
 extern {
   fn QThreadPool_Class_Size() -> c_int;
   // proto:  void QThreadPool::~QThreadPool();
-  fn _ZN11QThreadPoolD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN11QThreadPoolD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  int QThreadPool::expiryTimeout();
   fn _ZNK11QThreadPool13expiryTimeoutEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QThreadPool::waitForDone(int msecs);
@@ -54,8 +54,7 @@ extern {
   // proto:  void QThreadPool::clear();
   fn _ZN11QThreadPool5clearEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QThreadPool::QThreadPool(QObject * parent);
-  fn dector_ZN11QThreadPoolC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QThreadPoolC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN11QThreadPoolC2EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QThreadPool::start(QRunnable * runnable, int priority);
   fn _ZN11QThreadPool5startEP9QRunnablei(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
   // proto:  int QThreadPool::maxThreadCount();
@@ -107,8 +106,8 @@ pub trait QThreadPool_free<RetType> {
 impl<'a> /*trait*/ QThreadPool_free<()> for () {
   fn free(self , rsthis: & QThreadPool) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QThreadPoolD0Ev()};
-     unsafe {_ZN11QThreadPoolD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN11QThreadPoolD2Ev()};
+     unsafe {_ZN11QThreadPoolD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -360,12 +359,12 @@ pub trait QThreadPool_new {
 impl<'a> /*trait*/ QThreadPool_new for (&'a QObject) {
   fn new(self) -> QThreadPool {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QThreadPoolC1EP7QObject()};
+    // unsafe{_ZN11QThreadPoolC2EP7QObject()};
     let ctysz: c_int = unsafe{QThreadPool_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN11QThreadPoolC1EP7QObject(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN11QThreadPoolC1EP7QObject(arg0)} as u64;
+    unsafe {_ZN11QThreadPoolC2EP7QObject(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QThreadPool{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtGui/qopenglvertexarrayobject.h
 // dst-file: /src/gui/qopenglvertexarrayobject.rs
 //
@@ -31,8 +31,7 @@ use std::ops::Deref;
 extern {
   fn QOpenGLVertexArrayObject_Class_Size() -> c_int;
   // proto:  void QOpenGLVertexArrayObject::QOpenGLVertexArrayObject(const QOpenGLVertexArrayObject & );
-  fn dector_ZN24QOpenGLVertexArrayObjectC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN24QOpenGLVertexArrayObjectC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN24QOpenGLVertexArrayObjectC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  GLuint QOpenGLVertexArrayObject::objectId();
   fn _ZNK24QOpenGLVertexArrayObject8objectIdEv(qthis: u64 /* *mut c_void*/) -> c_uint;
   // proto:  void QOpenGLVertexArrayObject::release();
@@ -40,8 +39,7 @@ extern {
   // proto:  const QMetaObject * QOpenGLVertexArrayObject::metaObject();
   fn _ZNK24QOpenGLVertexArrayObject10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QOpenGLVertexArrayObject::QOpenGLVertexArrayObject(QObject * parent);
-  fn dector_ZN24QOpenGLVertexArrayObjectC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN24QOpenGLVertexArrayObjectC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN24QOpenGLVertexArrayObjectC2EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QOpenGLVertexArrayObject::bind();
   fn _ZN24QOpenGLVertexArrayObject4bindEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QOpenGLVertexArrayObject::isCreated();
@@ -51,7 +49,7 @@ extern {
   // proto:  bool QOpenGLVertexArrayObject::create();
   fn _ZN24QOpenGLVertexArrayObject6createEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QOpenGLVertexArrayObject::~QOpenGLVertexArrayObject();
-  fn _ZN24QOpenGLVertexArrayObjectD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN24QOpenGLVertexArrayObjectD2Ev(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
@@ -96,12 +94,12 @@ pub trait QOpenGLVertexArrayObject_new {
 impl<'a> /*trait*/ QOpenGLVertexArrayObject_new for (&'a QOpenGLVertexArrayObject) {
   fn new(self) -> QOpenGLVertexArrayObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN24QOpenGLVertexArrayObjectC1ERKS_()};
+    // unsafe{_ZN24QOpenGLVertexArrayObjectC2ERKS_()};
     let ctysz: c_int = unsafe{QOpenGLVertexArrayObject_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN24QOpenGLVertexArrayObjectC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN24QOpenGLVertexArrayObjectC1ERKS_(arg0)} as u64;
+    unsafe {_ZN24QOpenGLVertexArrayObjectC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QOpenGLVertexArrayObject{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -179,12 +177,12 @@ impl<'a> /*trait*/ QOpenGLVertexArrayObject_metaObject<()> for () {
 impl<'a> /*trait*/ QOpenGLVertexArrayObject_new for (&'a QObject) {
   fn new(self) -> QOpenGLVertexArrayObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN24QOpenGLVertexArrayObjectC1EP7QObject()};
+    // unsafe{_ZN24QOpenGLVertexArrayObjectC2EP7QObject()};
     let ctysz: c_int = unsafe{QOpenGLVertexArrayObject_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN24QOpenGLVertexArrayObjectC1EP7QObject(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN24QOpenGLVertexArrayObjectC1EP7QObject(arg0)} as u64;
+    unsafe {_ZN24QOpenGLVertexArrayObjectC2EP7QObject(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QOpenGLVertexArrayObject{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -297,8 +295,8 @@ pub trait QOpenGLVertexArrayObject_free<RetType> {
 impl<'a> /*trait*/ QOpenGLVertexArrayObject_free<()> for () {
   fn free(self , rsthis: & QOpenGLVertexArrayObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN24QOpenGLVertexArrayObjectD0Ev()};
-     unsafe {_ZN24QOpenGLVertexArrayObjectD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN24QOpenGLVertexArrayObjectD2Ev()};
+     unsafe {_ZN24QOpenGLVertexArrayObjectD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

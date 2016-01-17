@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qtoolbox.h
 // dst-file: /src/widgets/qtoolbox.rs
 //
@@ -44,8 +44,7 @@ extern {
   // proto:  QString QToolBox::itemToolTip(int index);
   fn _ZNK8QToolBox11itemToolTipEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  void QToolBox::QToolBox(const QToolBox & );
-  fn dector_ZN8QToolBoxC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN8QToolBoxC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN8QToolBoxC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QToolBox::setCurrentWidget(QWidget * widget);
   fn _ZN8QToolBox16setCurrentWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QToolBox::setCurrentIndex(int index);
@@ -75,7 +74,7 @@ extern {
   // proto:  QIcon QToolBox::itemIcon(int index);
   fn _ZNK8QToolBox8itemIconEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  void QToolBox::~QToolBox();
-  fn _ZN8QToolBoxD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN8QToolBoxD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  int QToolBox::addItem(QWidget * widget, const QIcon & icon, const QString & text);
   fn _ZN8QToolBox7addItemEP7QWidgetRK5QIconRK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> c_int;
   // proto:  int QToolBox::insertItem(int index, QWidget * widget, const QIcon & icon, const QString & text);
@@ -249,12 +248,12 @@ pub trait QToolBox_new {
 impl<'a> /*trait*/ QToolBox_new for (&'a QToolBox) {
   fn new(self) -> QToolBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QToolBoxC1ERKS_()};
+    // unsafe{_ZN8QToolBoxC2ERKS_()};
     let ctysz: c_int = unsafe{QToolBox_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN8QToolBoxC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN8QToolBoxC1ERKS_(arg0)} as u64;
+    unsafe {_ZN8QToolBoxC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QToolBox{qbase: QFrame::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -610,8 +609,8 @@ pub trait QToolBox_free<RetType> {
 impl<'a> /*trait*/ QToolBox_free<()> for () {
   fn free(self , rsthis: & QToolBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QToolBoxD0Ev()};
-     unsafe {_ZN8QToolBoxD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN8QToolBoxD2Ev()};
+     unsafe {_ZN8QToolBoxD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

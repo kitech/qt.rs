@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qabstracteventdispatcher.h
 // dst-file: /src/core/qabstracteventdispatcher.rs
 //
@@ -37,14 +37,13 @@ extern {
   // proto:  bool QAbstractEventDispatcher::hasPendingEvents();
   fn _ZN24QAbstractEventDispatcher16hasPendingEventsEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QAbstractEventDispatcher::QAbstractEventDispatcher(QObject * parent);
-  fn dector_ZN24QAbstractEventDispatcherC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN24QAbstractEventDispatcherC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN24QAbstractEventDispatcherC2EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static QAbstractEventDispatcher * QAbstractEventDispatcher::instance(QThread * thread);
   fn _ZN24QAbstractEventDispatcher8instanceEP7QThread(arg0: *mut c_void);
   // proto:  bool QAbstractEventDispatcher::filterNativeEvent(const QByteArray & eventType, void * message, long * result);
   fn _ZN24QAbstractEventDispatcher17filterNativeEventERK10QByteArrayPvPl(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_long) -> c_char;
   // proto:  void QAbstractEventDispatcher::~QAbstractEventDispatcher();
-  fn _ZN24QAbstractEventDispatcherD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN24QAbstractEventDispatcherD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractEventDispatcher::interrupt();
   fn _ZN24QAbstractEventDispatcher9interruptEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractEventDispatcher::registerSocketNotifier(QSocketNotifier * notifier);
@@ -142,12 +141,12 @@ pub trait QAbstractEventDispatcher_new {
 impl<'a> /*trait*/ QAbstractEventDispatcher_new for (&'a QObject) {
   fn new(self) -> QAbstractEventDispatcher {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN24QAbstractEventDispatcherC1EP7QObject()};
+    // unsafe{_ZN24QAbstractEventDispatcherC2EP7QObject()};
     let ctysz: c_int = unsafe{QAbstractEventDispatcher_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN24QAbstractEventDispatcherC1EP7QObject(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN24QAbstractEventDispatcherC1EP7QObject(arg0)} as u64;
+    unsafe {_ZN24QAbstractEventDispatcherC2EP7QObject(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QAbstractEventDispatcher{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -219,8 +218,8 @@ pub trait QAbstractEventDispatcher_free<RetType> {
 impl<'a> /*trait*/ QAbstractEventDispatcher_free<()> for () {
   fn free(self , rsthis: & QAbstractEventDispatcher) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN24QAbstractEventDispatcherD0Ev()};
-     unsafe {_ZN24QAbstractEventDispatcherD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN24QAbstractEventDispatcherD2Ev()};
+     unsafe {_ZN24QAbstractEventDispatcherD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

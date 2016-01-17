@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qsplitter.h
 // dst-file: /src/widgets/qsplitter.rs
 //
@@ -50,11 +50,9 @@ extern {
   // proto:  void QSplitter::addWidget(QWidget * widget);
   fn _ZN9QSplitter9addWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QSplitter::QSplitter(const QSplitter & );
-  fn dector_ZN9QSplitterC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QSplitterC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN9QSplitterC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QSplitter::QSplitter(QWidget * parent);
-  fn dector_ZN9QSplitterC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QSplitterC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN9QSplitterC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QSplitter::setHandleWidth(int );
   fn _ZN9QSplitter14setHandleWidthEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QSplitter::setStretchFactor(int index, int stretch);
@@ -74,7 +72,7 @@ extern {
   // proto:  bool QSplitter::restoreState(const QByteArray & state);
   fn _ZN9QSplitter12restoreStateERK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  void QSplitter::~QSplitter();
-  fn _ZN9QSplitterD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN9QSplitterD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QSplitter::setChildrenCollapsible(bool );
   fn _ZN9QSplitter22setChildrenCollapsibleEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  int QSplitter::handleWidth();
@@ -91,10 +89,9 @@ extern {
   fn _ZNK9QSplitter6handleEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   fn QSplitterHandle_Class_Size() -> c_int;
   // proto:  void QSplitterHandle::~QSplitterHandle();
-  fn _ZN15QSplitterHandleD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN15QSplitterHandleD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QSplitterHandle::QSplitterHandle(const QSplitterHandle & );
-  fn dector_ZN15QSplitterHandleC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN15QSplitterHandleC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN15QSplitterHandleC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QSize QSplitterHandle::sizeHint();
   fn _ZNK15QSplitterHandle8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QSplitterHandle::opaqueResize();
@@ -318,12 +315,12 @@ pub trait QSplitter_new {
 impl<'a> /*trait*/ QSplitter_new for (&'a QSplitter) {
   fn new(self) -> QSplitter {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QSplitterC1ERKS_()};
+    // unsafe{_ZN9QSplitterC2ERKS_()};
     let ctysz: c_int = unsafe{QSplitter_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN9QSplitterC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN9QSplitterC1ERKS_(arg0)} as u64;
+    unsafe {_ZN9QSplitterC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QSplitter{qbase: QFrame::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -334,12 +331,12 @@ impl<'a> /*trait*/ QSplitter_new for (&'a QSplitter) {
 impl<'a> /*trait*/ QSplitter_new for (&'a QWidget) {
   fn new(self) -> QSplitter {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QSplitterC1EP7QWidget()};
+    // unsafe{_ZN9QSplitterC2EP7QWidget()};
     let ctysz: c_int = unsafe{QSplitter_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN9QSplitterC1EP7QWidget(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN9QSplitterC1EP7QWidget(arg0)} as u64;
+    unsafe {_ZN9QSplitterC2EP7QWidget(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QSplitter{qbase: QFrame::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -575,8 +572,8 @@ pub trait QSplitter_free<RetType> {
 impl<'a> /*trait*/ QSplitter_free<()> for () {
   fn free(self , rsthis: & QSplitter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QSplitterD0Ev()};
-     unsafe {_ZN9QSplitterD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN9QSplitterD2Ev()};
+     unsafe {_ZN9QSplitterD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -780,8 +777,8 @@ pub trait QSplitterHandle_free<RetType> {
 impl<'a> /*trait*/ QSplitterHandle_free<()> for () {
   fn free(self , rsthis: & QSplitterHandle) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QSplitterHandleD0Ev()};
-     unsafe {_ZN15QSplitterHandleD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN15QSplitterHandleD2Ev()};
+     unsafe {_ZN15QSplitterHandleD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -803,12 +800,12 @@ pub trait QSplitterHandle_new {
 impl<'a> /*trait*/ QSplitterHandle_new for (&'a QSplitterHandle) {
   fn new(self) -> QSplitterHandle {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QSplitterHandleC1ERKS_()};
+    // unsafe{_ZN15QSplitterHandleC2ERKS_()};
     let ctysz: c_int = unsafe{QSplitterHandle_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN15QSplitterHandleC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN15QSplitterHandleC1ERKS_(arg0)} as u64;
+    unsafe {_ZN15QSplitterHandleC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QSplitterHandle{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

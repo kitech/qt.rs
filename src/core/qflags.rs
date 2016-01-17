@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qflags.h
 // dst-file: /src/core/qflags.rs
 //
@@ -30,21 +30,16 @@ use std::ops::Deref;
 extern {
   fn QIncompatibleFlag_Class_Size() -> c_int;
   // proto:  void QIncompatibleFlag::QIncompatibleFlag(int i);
-  fn dector_ZN17QIncompatibleFlagC1Ei(arg0: c_int) -> *mut c_void;
-  fn _ZN17QIncompatibleFlagC1Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn _ZN17QIncompatibleFlagC2Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
   fn QFlag_Class_Size() -> c_int;
   // proto:  void QFlag::QFlag(ushort ai);
-  fn dector_ZN5QFlagC1Et(arg0: c_ushort) -> *mut c_void;
-  fn _ZN5QFlagC1Et(qthis: u64 /* *mut c_void*/, arg0: c_ushort);
+  fn _ZN5QFlagC2Et(qthis: u64 /* *mut c_void*/, arg0: c_ushort);
   // proto:  void QFlag::QFlag(int ai);
-  fn dector_ZN5QFlagC1Ei(arg0: c_int) -> *mut c_void;
-  fn _ZN5QFlagC1Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn _ZN5QFlagC2Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QFlag::QFlag(short ai);
-  fn dector_ZN5QFlagC1Es(arg0: c_short) -> *mut c_void;
-  fn _ZN5QFlagC1Es(qthis: u64 /* *mut c_void*/, arg0: c_short);
+  fn _ZN5QFlagC2Es(qthis: u64 /* *mut c_void*/, arg0: c_short);
   // proto:  void QFlag::QFlag(uint ai);
-  fn dector_ZN5QFlagC1Ej(arg0: c_uint) -> *mut c_void;
-  fn _ZN5QFlagC1Ej(qthis: u64 /* *mut c_void*/, arg0: c_uint);
+  fn _ZN5QFlagC2Ej(qthis: u64 /* *mut c_void*/, arg0: c_uint);
 } // <= ext block end
 
 // body block begin =>
@@ -84,12 +79,12 @@ pub trait QIncompatibleFlag_new {
 impl<'a> /*trait*/ QIncompatibleFlag_new for (i32) {
   fn new(self) -> QIncompatibleFlag {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QIncompatibleFlagC1Ei()};
+    // unsafe{_ZN17QIncompatibleFlagC2Ei()};
     let ctysz: c_int = unsafe{QIncompatibleFlag_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
-    // unsafe {_ZN17QIncompatibleFlagC1Ei(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN17QIncompatibleFlagC1Ei(arg0)} as u64;
+    unsafe {_ZN17QIncompatibleFlagC2Ei(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QIncompatibleFlag{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -118,12 +113,12 @@ pub trait QFlag_new {
 impl<'a> /*trait*/ QFlag_new for (u16) {
   fn new(self) -> QFlag {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QFlagC1Et()};
+    // unsafe{_ZN5QFlagC2Et()};
     let ctysz: c_int = unsafe{QFlag_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_ushort;
-    // unsafe {_ZN5QFlagC1Et(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN5QFlagC1Et(arg0)} as u64;
+    unsafe {_ZN5QFlagC2Et(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QFlag{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -134,12 +129,12 @@ impl<'a> /*trait*/ QFlag_new for (u16) {
 impl<'a> /*trait*/ QFlag_new for (i32) {
   fn new(self) -> QFlag {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QFlagC1Ei()};
+    // unsafe{_ZN5QFlagC2Ei()};
     let ctysz: c_int = unsafe{QFlag_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
-    // unsafe {_ZN5QFlagC1Ei(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN5QFlagC1Ei(arg0)} as u64;
+    unsafe {_ZN5QFlagC2Ei(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QFlag{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -150,12 +145,12 @@ impl<'a> /*trait*/ QFlag_new for (i32) {
 impl<'a> /*trait*/ QFlag_new for (i16) {
   fn new(self) -> QFlag {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QFlagC1Es()};
+    // unsafe{_ZN5QFlagC2Es()};
     let ctysz: c_int = unsafe{QFlag_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_short;
-    // unsafe {_ZN5QFlagC1Es(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN5QFlagC1Es(arg0)} as u64;
+    unsafe {_ZN5QFlagC2Es(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QFlag{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -166,12 +161,12 @@ impl<'a> /*trait*/ QFlag_new for (i16) {
 impl<'a> /*trait*/ QFlag_new for (u32) {
   fn new(self) -> QFlag {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QFlagC1Ej()};
+    // unsafe{_ZN5QFlagC2Ej()};
     let ctysz: c_int = unsafe{QFlag_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_uint;
-    // unsafe {_ZN5QFlagC1Ej(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN5QFlagC1Ej(arg0)} as u64;
+    unsafe {_ZN5QFlagC2Ej(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QFlag{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

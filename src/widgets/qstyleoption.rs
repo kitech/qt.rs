@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qstyleoption.h
 // dst-file: /src/widgets/qstyleoption.rs
 //
@@ -35,264 +35,191 @@ use super::qwidget::QWidget; // 773
 extern {
   fn QStyleOptionComboBox_Class_Size() -> c_int;
   // proto:  void QStyleOptionComboBox::QStyleOptionComboBox(const QStyleOptionComboBox & other);
-  fn dector_ZN20QStyleOptionComboBoxC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN20QStyleOptionComboBoxC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN20QStyleOptionComboBoxC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QStyleOptionComboBox::QStyleOptionComboBox();
-  fn dector_ZN20QStyleOptionComboBoxC1Ev() -> *mut c_void;
-  fn _ZN20QStyleOptionComboBoxC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN20QStyleOptionComboBoxC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QStyleOptionComboBox::QStyleOptionComboBox(int version);
-  fn dector_ZN20QStyleOptionComboBoxC1Ei(arg0: c_int) -> *mut c_void;
-  fn _ZN20QStyleOptionComboBoxC1Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn _ZN20QStyleOptionComboBoxC2Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
   fn QStyleOptionMenuItem_Class_Size() -> c_int;
   // proto:  void QStyleOptionMenuItem::QStyleOptionMenuItem(const QStyleOptionMenuItem & other);
-  fn dector_ZN20QStyleOptionMenuItemC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN20QStyleOptionMenuItemC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN20QStyleOptionMenuItemC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QStyleOptionMenuItem::QStyleOptionMenuItem();
-  fn dector_ZN20QStyleOptionMenuItemC1Ev() -> *mut c_void;
-  fn _ZN20QStyleOptionMenuItemC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN20QStyleOptionMenuItemC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QStyleOptionMenuItem::QStyleOptionMenuItem(int version);
-  fn dector_ZN20QStyleOptionMenuItemC1Ei(arg0: c_int) -> *mut c_void;
-  fn _ZN20QStyleOptionMenuItemC1Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn _ZN20QStyleOptionMenuItemC2Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
   fn QStyleHintReturnVariant_Class_Size() -> c_int;
   // proto:  void QStyleHintReturnVariant::~QStyleHintReturnVariant();
-  fn _ZN23QStyleHintReturnVariantD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN23QStyleHintReturnVariantD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QStyleHintReturnVariant::QStyleHintReturnVariant();
-  fn dector_ZN23QStyleHintReturnVariantC1Ev() -> *mut c_void;
-  fn _ZN23QStyleHintReturnVariantC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN23QStyleHintReturnVariantC2Ev(qthis: u64 /* *mut c_void*/);
   fn QStyleOptionTitleBar_Class_Size() -> c_int;
   // proto:  void QStyleOptionTitleBar::QStyleOptionTitleBar(int version);
-  fn dector_ZN20QStyleOptionTitleBarC1Ei(arg0: c_int) -> *mut c_void;
-  fn _ZN20QStyleOptionTitleBarC1Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn _ZN20QStyleOptionTitleBarC2Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QStyleOptionTitleBar::QStyleOptionTitleBar(const QStyleOptionTitleBar & other);
-  fn dector_ZN20QStyleOptionTitleBarC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN20QStyleOptionTitleBarC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN20QStyleOptionTitleBarC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QStyleOptionTitleBar::QStyleOptionTitleBar();
-  fn dector_ZN20QStyleOptionTitleBarC1Ev() -> *mut c_void;
-  fn _ZN20QStyleOptionTitleBarC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN20QStyleOptionTitleBarC2Ev(qthis: u64 /* *mut c_void*/);
   fn QStyleOptionGraphicsItem_Class_Size() -> c_int;
   // proto:  void QStyleOptionGraphicsItem::QStyleOptionGraphicsItem();
-  fn dector_ZN24QStyleOptionGraphicsItemC1Ev() -> *mut c_void;
-  fn _ZN24QStyleOptionGraphicsItemC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN24QStyleOptionGraphicsItemC2Ev(qthis: u64 /* *mut c_void*/);
   // proto: static qreal QStyleOptionGraphicsItem::levelOfDetailFromTransform(const QTransform & worldTransform);
   fn _ZN24QStyleOptionGraphicsItem26levelOfDetailFromTransformERK10QTransform(arg0: *mut c_void) -> c_double;
   // proto:  void QStyleOptionGraphicsItem::QStyleOptionGraphicsItem(const QStyleOptionGraphicsItem & other);
-  fn dector_ZN24QStyleOptionGraphicsItemC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN24QStyleOptionGraphicsItemC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN24QStyleOptionGraphicsItemC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QStyleOptionGraphicsItem::QStyleOptionGraphicsItem(int version);
-  fn dector_ZN24QStyleOptionGraphicsItemC1Ei(arg0: c_int) -> *mut c_void;
-  fn _ZN24QStyleOptionGraphicsItemC1Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn _ZN24QStyleOptionGraphicsItemC2Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
   fn QStyleOption_Class_Size() -> c_int;
   // proto:  void QStyleOption::~QStyleOption();
-  fn _ZN12QStyleOptionD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN12QStyleOptionD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QStyleOption::init(const QWidget * w);
   fn _ZN12QStyleOption4initEPK7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QStyleOption::QStyleOption(const QStyleOption & other);
-  fn dector_ZN12QStyleOptionC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN12QStyleOptionC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN12QStyleOptionC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QStyleOption::QStyleOption(int version, int type);
-  fn dector_ZN12QStyleOptionC1Eii(arg0: c_int, arg1: c_int) -> *mut c_void;
-  fn _ZN12QStyleOptionC1Eii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
+  fn _ZN12QStyleOptionC2Eii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  void QStyleOption::initFrom(const QWidget * w);
-  fn demth_ZN12QStyleOption8initFromEPK7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN12QStyleOption8initFromEPK7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QStyleOptionDockWidget_Class_Size() -> c_int;
   // proto:  void QStyleOptionDockWidget::QStyleOptionDockWidget();
-  fn dector_ZN22QStyleOptionDockWidgetC1Ev() -> *mut c_void;
-  fn _ZN22QStyleOptionDockWidgetC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN22QStyleOptionDockWidgetC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QStyleOptionDockWidget::QStyleOptionDockWidget(int version);
-  fn dector_ZN22QStyleOptionDockWidgetC1Ei(arg0: c_int) -> *mut c_void;
-  fn _ZN22QStyleOptionDockWidgetC1Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn _ZN22QStyleOptionDockWidgetC2Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QStyleOptionDockWidget::QStyleOptionDockWidget(const QStyleOptionDockWidget & other);
-  fn dector_ZN22QStyleOptionDockWidgetC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN22QStyleOptionDockWidgetC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN22QStyleOptionDockWidgetC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QStyleOptionProgressBar_Class_Size() -> c_int;
   // proto:  void QStyleOptionProgressBar::QStyleOptionProgressBar(const QStyleOptionProgressBar & other);
-  fn dector_ZN23QStyleOptionProgressBarC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN23QStyleOptionProgressBarC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN23QStyleOptionProgressBarC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QStyleOptionProgressBar::QStyleOptionProgressBar(int version);
-  fn dector_ZN23QStyleOptionProgressBarC1Ei(arg0: c_int) -> *mut c_void;
-  fn _ZN23QStyleOptionProgressBarC1Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn _ZN23QStyleOptionProgressBarC2Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QStyleOptionProgressBar::QStyleOptionProgressBar();
-  fn dector_ZN23QStyleOptionProgressBarC1Ev() -> *mut c_void;
-  fn _ZN23QStyleOptionProgressBarC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN23QStyleOptionProgressBarC2Ev(qthis: u64 /* *mut c_void*/);
   fn QStyleOptionSlider_Class_Size() -> c_int;
   // proto:  void QStyleOptionSlider::QStyleOptionSlider(const QStyleOptionSlider & other);
-  fn dector_ZN18QStyleOptionSliderC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN18QStyleOptionSliderC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN18QStyleOptionSliderC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QStyleOptionSlider::QStyleOptionSlider(int version);
-  fn dector_ZN18QStyleOptionSliderC1Ei(arg0: c_int) -> *mut c_void;
-  fn _ZN18QStyleOptionSliderC1Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn _ZN18QStyleOptionSliderC2Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QStyleOptionSlider::QStyleOptionSlider();
-  fn dector_ZN18QStyleOptionSliderC1Ev() -> *mut c_void;
-  fn _ZN18QStyleOptionSliderC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN18QStyleOptionSliderC2Ev(qthis: u64 /* *mut c_void*/);
   fn QStyleOptionFrame_Class_Size() -> c_int;
   // proto:  void QStyleOptionFrame::QStyleOptionFrame();
-  fn dector_ZN17QStyleOptionFrameC1Ev() -> *mut c_void;
-  fn _ZN17QStyleOptionFrameC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN17QStyleOptionFrameC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QStyleOptionFrame::QStyleOptionFrame(const QStyleOptionFrame & other);
-  fn dector_ZN17QStyleOptionFrameC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN17QStyleOptionFrameC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN17QStyleOptionFrameC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QStyleOptionFrame::QStyleOptionFrame(int version);
-  fn dector_ZN17QStyleOptionFrameC1Ei(arg0: c_int) -> *mut c_void;
-  fn _ZN17QStyleOptionFrameC1Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn _ZN17QStyleOptionFrameC2Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
   fn QStyleOptionComplex_Class_Size() -> c_int;
   // proto:  void QStyleOptionComplex::QStyleOptionComplex(int version, int type);
-  fn dector_ZN19QStyleOptionComplexC1Eii(arg0: c_int, arg1: c_int) -> *mut c_void;
-  fn _ZN19QStyleOptionComplexC1Eii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
+  fn _ZN19QStyleOptionComplexC2Eii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  void QStyleOptionComplex::QStyleOptionComplex(const QStyleOptionComplex & other);
-  fn dector_ZN19QStyleOptionComplexC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN19QStyleOptionComplexC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN19QStyleOptionComplexC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QStyleHintReturn_Class_Size() -> c_int;
   // proto:  void QStyleHintReturn::~QStyleHintReturn();
-  fn _ZN16QStyleHintReturnD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN16QStyleHintReturnD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QStyleHintReturn::QStyleHintReturn(int version, int type);
-  fn dector_ZN16QStyleHintReturnC1Eii(arg0: c_int, arg1: c_int) -> *mut c_void;
-  fn _ZN16QStyleHintReturnC1Eii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
+  fn _ZN16QStyleHintReturnC2Eii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   fn QStyleOptionHeader_Class_Size() -> c_int;
   // proto:  void QStyleOptionHeader::QStyleOptionHeader();
-  fn dector_ZN18QStyleOptionHeaderC1Ev() -> *mut c_void;
-  fn _ZN18QStyleOptionHeaderC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN18QStyleOptionHeaderC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QStyleOptionHeader::QStyleOptionHeader(const QStyleOptionHeader & other);
-  fn dector_ZN18QStyleOptionHeaderC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN18QStyleOptionHeaderC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN18QStyleOptionHeaderC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QStyleOptionHeader::QStyleOptionHeader(int version);
-  fn dector_ZN18QStyleOptionHeaderC1Ei(arg0: c_int) -> *mut c_void;
-  fn _ZN18QStyleOptionHeaderC1Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn _ZN18QStyleOptionHeaderC2Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
   fn QStyleOptionToolBox_Class_Size() -> c_int;
   // proto:  void QStyleOptionToolBox::QStyleOptionToolBox();
-  fn dector_ZN19QStyleOptionToolBoxC1Ev() -> *mut c_void;
-  fn _ZN19QStyleOptionToolBoxC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN19QStyleOptionToolBoxC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QStyleOptionToolBox::QStyleOptionToolBox(const QStyleOptionToolBox & other);
-  fn dector_ZN19QStyleOptionToolBoxC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN19QStyleOptionToolBoxC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN19QStyleOptionToolBoxC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QStyleOptionToolBox::QStyleOptionToolBox(int version);
-  fn dector_ZN19QStyleOptionToolBoxC1Ei(arg0: c_int) -> *mut c_void;
-  fn _ZN19QStyleOptionToolBoxC1Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn _ZN19QStyleOptionToolBoxC2Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
   fn QStyleOptionFocusRect_Class_Size() -> c_int;
   // proto:  void QStyleOptionFocusRect::QStyleOptionFocusRect(int version);
-  fn dector_ZN21QStyleOptionFocusRectC1Ei(arg0: c_int) -> *mut c_void;
-  fn _ZN21QStyleOptionFocusRectC1Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn _ZN21QStyleOptionFocusRectC2Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QStyleOptionFocusRect::QStyleOptionFocusRect();
-  fn dector_ZN21QStyleOptionFocusRectC1Ev() -> *mut c_void;
-  fn _ZN21QStyleOptionFocusRectC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN21QStyleOptionFocusRectC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QStyleOptionFocusRect::QStyleOptionFocusRect(const QStyleOptionFocusRect & other);
-  fn dector_ZN21QStyleOptionFocusRectC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN21QStyleOptionFocusRectC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN21QStyleOptionFocusRectC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QStyleOptionGroupBox_Class_Size() -> c_int;
   // proto:  void QStyleOptionGroupBox::QStyleOptionGroupBox(int version);
-  fn dector_ZN20QStyleOptionGroupBoxC1Ei(arg0: c_int) -> *mut c_void;
-  fn _ZN20QStyleOptionGroupBoxC1Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn _ZN20QStyleOptionGroupBoxC2Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QStyleOptionGroupBox::QStyleOptionGroupBox(const QStyleOptionGroupBox & other);
-  fn dector_ZN20QStyleOptionGroupBoxC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN20QStyleOptionGroupBoxC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN20QStyleOptionGroupBoxC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QStyleOptionGroupBox::QStyleOptionGroupBox();
-  fn dector_ZN20QStyleOptionGroupBoxC1Ev() -> *mut c_void;
-  fn _ZN20QStyleOptionGroupBoxC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN20QStyleOptionGroupBoxC2Ev(qthis: u64 /* *mut c_void*/);
   fn QStyleOptionTab_Class_Size() -> c_int;
   // proto:  void QStyleOptionTab::QStyleOptionTab(const QStyleOptionTab & other);
-  fn dector_ZN15QStyleOptionTabC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN15QStyleOptionTabC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN15QStyleOptionTabC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QStyleOptionTab::QStyleOptionTab(int version);
-  fn dector_ZN15QStyleOptionTabC1Ei(arg0: c_int) -> *mut c_void;
-  fn _ZN15QStyleOptionTabC1Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn _ZN15QStyleOptionTabC2Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QStyleOptionTab::QStyleOptionTab();
-  fn dector_ZN15QStyleOptionTabC1Ev() -> *mut c_void;
-  fn _ZN15QStyleOptionTabC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN15QStyleOptionTabC2Ev(qthis: u64 /* *mut c_void*/);
   fn QStyleOptionTabBarBase_Class_Size() -> c_int;
   // proto:  void QStyleOptionTabBarBase::QStyleOptionTabBarBase();
-  fn dector_ZN22QStyleOptionTabBarBaseC1Ev() -> *mut c_void;
-  fn _ZN22QStyleOptionTabBarBaseC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN22QStyleOptionTabBarBaseC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QStyleOptionTabBarBase::QStyleOptionTabBarBase(int version);
-  fn dector_ZN22QStyleOptionTabBarBaseC1Ei(arg0: c_int) -> *mut c_void;
-  fn _ZN22QStyleOptionTabBarBaseC1Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn _ZN22QStyleOptionTabBarBaseC2Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QStyleOptionTabBarBase::QStyleOptionTabBarBase(const QStyleOptionTabBarBase & other);
-  fn dector_ZN22QStyleOptionTabBarBaseC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN22QStyleOptionTabBarBaseC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN22QStyleOptionTabBarBaseC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QStyleOptionRubberBand_Class_Size() -> c_int;
   // proto:  void QStyleOptionRubberBand::QStyleOptionRubberBand(int version);
-  fn dector_ZN22QStyleOptionRubberBandC1Ei(arg0: c_int) -> *mut c_void;
-  fn _ZN22QStyleOptionRubberBandC1Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn _ZN22QStyleOptionRubberBandC2Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QStyleOptionRubberBand::QStyleOptionRubberBand();
-  fn dector_ZN22QStyleOptionRubberBandC1Ev() -> *mut c_void;
-  fn _ZN22QStyleOptionRubberBandC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN22QStyleOptionRubberBandC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QStyleOptionRubberBand::QStyleOptionRubberBand(const QStyleOptionRubberBand & other);
-  fn dector_ZN22QStyleOptionRubberBandC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN22QStyleOptionRubberBandC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN22QStyleOptionRubberBandC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QStyleOptionButton_Class_Size() -> c_int;
   // proto:  void QStyleOptionButton::QStyleOptionButton(int version);
-  fn dector_ZN18QStyleOptionButtonC1Ei(arg0: c_int) -> *mut c_void;
-  fn _ZN18QStyleOptionButtonC1Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn _ZN18QStyleOptionButtonC2Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QStyleOptionButton::QStyleOptionButton();
-  fn dector_ZN18QStyleOptionButtonC1Ev() -> *mut c_void;
-  fn _ZN18QStyleOptionButtonC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN18QStyleOptionButtonC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QStyleOptionButton::QStyleOptionButton(const QStyleOptionButton & other);
-  fn dector_ZN18QStyleOptionButtonC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN18QStyleOptionButtonC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN18QStyleOptionButtonC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QStyleHintReturnMask_Class_Size() -> c_int;
   // proto:  void QStyleHintReturnMask::QStyleHintReturnMask();
-  fn dector_ZN20QStyleHintReturnMaskC1Ev() -> *mut c_void;
-  fn _ZN20QStyleHintReturnMaskC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN20QStyleHintReturnMaskC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QStyleHintReturnMask::~QStyleHintReturnMask();
-  fn _ZN20QStyleHintReturnMaskD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN20QStyleHintReturnMaskD2Ev(qthis: u64 /* *mut c_void*/);
   fn QStyleOptionToolButton_Class_Size() -> c_int;
   // proto:  void QStyleOptionToolButton::QStyleOptionToolButton(int version);
-  fn dector_ZN22QStyleOptionToolButtonC1Ei(arg0: c_int) -> *mut c_void;
-  fn _ZN22QStyleOptionToolButtonC1Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn _ZN22QStyleOptionToolButtonC2Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QStyleOptionToolButton::QStyleOptionToolButton();
-  fn dector_ZN22QStyleOptionToolButtonC1Ev() -> *mut c_void;
-  fn _ZN22QStyleOptionToolButtonC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN22QStyleOptionToolButtonC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QStyleOptionToolButton::QStyleOptionToolButton(const QStyleOptionToolButton & other);
-  fn dector_ZN22QStyleOptionToolButtonC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN22QStyleOptionToolButtonC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN22QStyleOptionToolButtonC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QStyleOptionSizeGrip_Class_Size() -> c_int;
   // proto:  void QStyleOptionSizeGrip::QStyleOptionSizeGrip(int version);
-  fn dector_ZN20QStyleOptionSizeGripC1Ei(arg0: c_int) -> *mut c_void;
-  fn _ZN20QStyleOptionSizeGripC1Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn _ZN20QStyleOptionSizeGripC2Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QStyleOptionSizeGrip::QStyleOptionSizeGrip();
-  fn dector_ZN20QStyleOptionSizeGripC1Ev() -> *mut c_void;
-  fn _ZN20QStyleOptionSizeGripC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN20QStyleOptionSizeGripC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QStyleOptionSizeGrip::QStyleOptionSizeGrip(const QStyleOptionSizeGrip & other);
-  fn dector_ZN20QStyleOptionSizeGripC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN20QStyleOptionSizeGripC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN20QStyleOptionSizeGripC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QStyleOptionViewItem_Class_Size() -> c_int;
   // proto:  void QStyleOptionViewItem::QStyleOptionViewItem(const QStyleOptionViewItem & other);
-  fn dector_ZN20QStyleOptionViewItemC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN20QStyleOptionViewItemC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN20QStyleOptionViewItemC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QStyleOptionViewItem::QStyleOptionViewItem(int version);
-  fn dector_ZN20QStyleOptionViewItemC1Ei(arg0: c_int) -> *mut c_void;
-  fn _ZN20QStyleOptionViewItemC1Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn _ZN20QStyleOptionViewItemC2Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QStyleOptionViewItem::QStyleOptionViewItem();
-  fn dector_ZN20QStyleOptionViewItemC1Ev() -> *mut c_void;
-  fn _ZN20QStyleOptionViewItemC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN20QStyleOptionViewItemC2Ev(qthis: u64 /* *mut c_void*/);
   fn QStyleOptionSpinBox_Class_Size() -> c_int;
   // proto:  void QStyleOptionSpinBox::QStyleOptionSpinBox();
-  fn dector_ZN19QStyleOptionSpinBoxC1Ev() -> *mut c_void;
-  fn _ZN19QStyleOptionSpinBoxC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN19QStyleOptionSpinBoxC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QStyleOptionSpinBox::QStyleOptionSpinBox(const QStyleOptionSpinBox & other);
-  fn dector_ZN19QStyleOptionSpinBoxC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN19QStyleOptionSpinBoxC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN19QStyleOptionSpinBoxC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QStyleOptionSpinBox::QStyleOptionSpinBox(int version);
-  fn dector_ZN19QStyleOptionSpinBoxC1Ei(arg0: c_int) -> *mut c_void;
-  fn _ZN19QStyleOptionSpinBoxC1Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn _ZN19QStyleOptionSpinBoxC2Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
   fn QStyleOptionToolBar_Class_Size() -> c_int;
   // proto:  void QStyleOptionToolBar::QStyleOptionToolBar(const QStyleOptionToolBar & other);
-  fn dector_ZN19QStyleOptionToolBarC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN19QStyleOptionToolBarC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN19QStyleOptionToolBarC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QStyleOptionToolBar::QStyleOptionToolBar(int version);
-  fn dector_ZN19QStyleOptionToolBarC1Ei(arg0: c_int) -> *mut c_void;
-  fn _ZN19QStyleOptionToolBarC1Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn _ZN19QStyleOptionToolBarC2Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QStyleOptionToolBar::QStyleOptionToolBar();
-  fn dector_ZN19QStyleOptionToolBarC1Ev() -> *mut c_void;
-  fn _ZN19QStyleOptionToolBarC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN19QStyleOptionToolBarC2Ev(qthis: u64 /* *mut c_void*/);
   fn QStyleOptionTabWidgetFrame_Class_Size() -> c_int;
   // proto:  void QStyleOptionTabWidgetFrame::QStyleOptionTabWidgetFrame(const QStyleOptionTabWidgetFrame & other);
-  fn dector_ZN26QStyleOptionTabWidgetFrameC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn demth_ZN26QStyleOptionTabWidgetFrameC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN26QStyleOptionTabWidgetFrameC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QStyleOptionTabWidgetFrame::QStyleOptionTabWidgetFrame(int version);
-  fn dector_ZN26QStyleOptionTabWidgetFrameC1Ei(arg0: c_int) -> *mut c_void;
-  fn _ZN26QStyleOptionTabWidgetFrameC1Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn _ZN26QStyleOptionTabWidgetFrameC2Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QStyleOptionTabWidgetFrame::QStyleOptionTabWidgetFrame();
-  fn dector_ZN26QStyleOptionTabWidgetFrameC1Ev() -> *mut c_void;
-  fn _ZN26QStyleOptionTabWidgetFrameC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN26QStyleOptionTabWidgetFrameC2Ev(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
@@ -519,12 +446,12 @@ pub trait QStyleOptionComboBox_new {
 impl<'a> /*trait*/ QStyleOptionComboBox_new for (&'a QStyleOptionComboBox) {
   fn new(self) -> QStyleOptionComboBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN20QStyleOptionComboBoxC1ERKS_()};
+    // unsafe{_ZN20QStyleOptionComboBoxC2ERKS_()};
     let ctysz: c_int = unsafe{QStyleOptionComboBox_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN20QStyleOptionComboBoxC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN20QStyleOptionComboBoxC1ERKS_(arg0)} as u64;
+    unsafe {_ZN20QStyleOptionComboBoxC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionComboBox{qbase: QStyleOptionComplex::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -535,11 +462,11 @@ impl<'a> /*trait*/ QStyleOptionComboBox_new for (&'a QStyleOptionComboBox) {
 impl<'a> /*trait*/ QStyleOptionComboBox_new for () {
   fn new(self) -> QStyleOptionComboBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN20QStyleOptionComboBoxC1Ev()};
+    // unsafe{_ZN20QStyleOptionComboBoxC2Ev()};
     let ctysz: c_int = unsafe{QStyleOptionComboBox_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN20QStyleOptionComboBoxC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN20QStyleOptionComboBoxC1Ev()} as u64;
+    unsafe {_ZN20QStyleOptionComboBoxC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionComboBox{qbase: QStyleOptionComplex::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -550,12 +477,12 @@ impl<'a> /*trait*/ QStyleOptionComboBox_new for () {
 impl<'a> /*trait*/ QStyleOptionComboBox_new for (i32) {
   fn new(self) -> QStyleOptionComboBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN20QStyleOptionComboBoxC1Ei()};
+    // unsafe{_ZN20QStyleOptionComboBoxC2Ei()};
     let ctysz: c_int = unsafe{QStyleOptionComboBox_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
-    // unsafe {_ZN20QStyleOptionComboBoxC1Ei(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN20QStyleOptionComboBoxC1Ei(arg0)} as u64;
+    unsafe {_ZN20QStyleOptionComboBoxC2Ei(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionComboBox{qbase: QStyleOptionComplex::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -596,12 +523,12 @@ pub trait QStyleOptionMenuItem_new {
 impl<'a> /*trait*/ QStyleOptionMenuItem_new for (&'a QStyleOptionMenuItem) {
   fn new(self) -> QStyleOptionMenuItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN20QStyleOptionMenuItemC1ERKS_()};
+    // unsafe{_ZN20QStyleOptionMenuItemC2ERKS_()};
     let ctysz: c_int = unsafe{QStyleOptionMenuItem_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN20QStyleOptionMenuItemC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN20QStyleOptionMenuItemC1ERKS_(arg0)} as u64;
+    unsafe {_ZN20QStyleOptionMenuItemC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionMenuItem{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -612,11 +539,11 @@ impl<'a> /*trait*/ QStyleOptionMenuItem_new for (&'a QStyleOptionMenuItem) {
 impl<'a> /*trait*/ QStyleOptionMenuItem_new for () {
   fn new(self) -> QStyleOptionMenuItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN20QStyleOptionMenuItemC1Ev()};
+    // unsafe{_ZN20QStyleOptionMenuItemC2Ev()};
     let ctysz: c_int = unsafe{QStyleOptionMenuItem_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN20QStyleOptionMenuItemC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN20QStyleOptionMenuItemC1Ev()} as u64;
+    unsafe {_ZN20QStyleOptionMenuItemC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionMenuItem{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -627,12 +554,12 @@ impl<'a> /*trait*/ QStyleOptionMenuItem_new for () {
 impl<'a> /*trait*/ QStyleOptionMenuItem_new for (i32) {
   fn new(self) -> QStyleOptionMenuItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN20QStyleOptionMenuItemC1Ei()};
+    // unsafe{_ZN20QStyleOptionMenuItemC2Ei()};
     let ctysz: c_int = unsafe{QStyleOptionMenuItem_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
-    // unsafe {_ZN20QStyleOptionMenuItemC1Ei(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN20QStyleOptionMenuItemC1Ei(arg0)} as u64;
+    unsafe {_ZN20QStyleOptionMenuItemC2Ei(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionMenuItem{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -672,8 +599,8 @@ pub trait QStyleHintReturnVariant_free<RetType> {
 impl<'a> /*trait*/ QStyleHintReturnVariant_free<()> for () {
   fn free(self , rsthis: & QStyleHintReturnVariant) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN23QStyleHintReturnVariantD0Ev()};
-     unsafe {_ZN23QStyleHintReturnVariantD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN23QStyleHintReturnVariantD2Ev()};
+     unsafe {_ZN23QStyleHintReturnVariantD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -695,11 +622,11 @@ pub trait QStyleHintReturnVariant_new {
 impl<'a> /*trait*/ QStyleHintReturnVariant_new for () {
   fn new(self) -> QStyleHintReturnVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN23QStyleHintReturnVariantC1Ev()};
+    // unsafe{_ZN23QStyleHintReturnVariantC2Ev()};
     let ctysz: c_int = unsafe{QStyleHintReturnVariant_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN23QStyleHintReturnVariantC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN23QStyleHintReturnVariantC1Ev()} as u64;
+    unsafe {_ZN23QStyleHintReturnVariantC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleHintReturnVariant{qbase: QStyleHintReturn::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -740,12 +667,12 @@ pub trait QStyleOptionTitleBar_new {
 impl<'a> /*trait*/ QStyleOptionTitleBar_new for (i32) {
   fn new(self) -> QStyleOptionTitleBar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN20QStyleOptionTitleBarC1Ei()};
+    // unsafe{_ZN20QStyleOptionTitleBarC2Ei()};
     let ctysz: c_int = unsafe{QStyleOptionTitleBar_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
-    // unsafe {_ZN20QStyleOptionTitleBarC1Ei(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN20QStyleOptionTitleBarC1Ei(arg0)} as u64;
+    unsafe {_ZN20QStyleOptionTitleBarC2Ei(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionTitleBar{qbase: QStyleOptionComplex::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -756,12 +683,12 @@ impl<'a> /*trait*/ QStyleOptionTitleBar_new for (i32) {
 impl<'a> /*trait*/ QStyleOptionTitleBar_new for (&'a QStyleOptionTitleBar) {
   fn new(self) -> QStyleOptionTitleBar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN20QStyleOptionTitleBarC1ERKS_()};
+    // unsafe{_ZN20QStyleOptionTitleBarC2ERKS_()};
     let ctysz: c_int = unsafe{QStyleOptionTitleBar_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN20QStyleOptionTitleBarC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN20QStyleOptionTitleBarC1ERKS_(arg0)} as u64;
+    unsafe {_ZN20QStyleOptionTitleBarC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionTitleBar{qbase: QStyleOptionComplex::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -772,11 +699,11 @@ impl<'a> /*trait*/ QStyleOptionTitleBar_new for (&'a QStyleOptionTitleBar) {
 impl<'a> /*trait*/ QStyleOptionTitleBar_new for () {
   fn new(self) -> QStyleOptionTitleBar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN20QStyleOptionTitleBarC1Ev()};
+    // unsafe{_ZN20QStyleOptionTitleBarC2Ev()};
     let ctysz: c_int = unsafe{QStyleOptionTitleBar_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN20QStyleOptionTitleBarC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN20QStyleOptionTitleBarC1Ev()} as u64;
+    unsafe {_ZN20QStyleOptionTitleBarC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionTitleBar{qbase: QStyleOptionComplex::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -817,11 +744,11 @@ pub trait QStyleOptionGraphicsItem_new {
 impl<'a> /*trait*/ QStyleOptionGraphicsItem_new for () {
   fn new(self) -> QStyleOptionGraphicsItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN24QStyleOptionGraphicsItemC1Ev()};
+    // unsafe{_ZN24QStyleOptionGraphicsItemC2Ev()};
     let ctysz: c_int = unsafe{QStyleOptionGraphicsItem_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN24QStyleOptionGraphicsItemC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN24QStyleOptionGraphicsItemC1Ev()} as u64;
+    unsafe {_ZN24QStyleOptionGraphicsItemC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionGraphicsItem{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -856,12 +783,12 @@ impl<'a> /*trait*/ QStyleOptionGraphicsItem_levelOfDetailFromTransform_s<f64> fo
 impl<'a> /*trait*/ QStyleOptionGraphicsItem_new for (&'a QStyleOptionGraphicsItem) {
   fn new(self) -> QStyleOptionGraphicsItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN24QStyleOptionGraphicsItemC1ERKS_()};
+    // unsafe{_ZN24QStyleOptionGraphicsItemC2ERKS_()};
     let ctysz: c_int = unsafe{QStyleOptionGraphicsItem_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN24QStyleOptionGraphicsItemC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN24QStyleOptionGraphicsItemC1ERKS_(arg0)} as u64;
+    unsafe {_ZN24QStyleOptionGraphicsItemC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionGraphicsItem{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -872,12 +799,12 @@ impl<'a> /*trait*/ QStyleOptionGraphicsItem_new for (&'a QStyleOptionGraphicsIte
 impl<'a> /*trait*/ QStyleOptionGraphicsItem_new for (i32) {
   fn new(self) -> QStyleOptionGraphicsItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN24QStyleOptionGraphicsItemC1Ei()};
+    // unsafe{_ZN24QStyleOptionGraphicsItemC2Ei()};
     let ctysz: c_int = unsafe{QStyleOptionGraphicsItem_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
-    // unsafe {_ZN24QStyleOptionGraphicsItemC1Ei(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN24QStyleOptionGraphicsItemC1Ei(arg0)} as u64;
+    unsafe {_ZN24QStyleOptionGraphicsItemC2Ei(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionGraphicsItem{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -905,8 +832,8 @@ pub trait QStyleOption_free<RetType> {
 impl<'a> /*trait*/ QStyleOption_free<()> for () {
   fn free(self , rsthis: & QStyleOption) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QStyleOptionD0Ev()};
-     unsafe {_ZN12QStyleOptionD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN12QStyleOptionD2Ev()};
+     unsafe {_ZN12QStyleOptionD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -951,12 +878,12 @@ pub trait QStyleOption_new {
 impl<'a> /*trait*/ QStyleOption_new for (&'a QStyleOption) {
   fn new(self) -> QStyleOption {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QStyleOptionC1ERKS_()};
+    // unsafe{_ZN12QStyleOptionC2ERKS_()};
     let ctysz: c_int = unsafe{QStyleOption_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN12QStyleOptionC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN12QStyleOptionC1ERKS_(arg0)} as u64;
+    unsafe {_ZN12QStyleOptionC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOption{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -967,13 +894,13 @@ impl<'a> /*trait*/ QStyleOption_new for (&'a QStyleOption) {
 impl<'a> /*trait*/ QStyleOption_new for (i32, i32) {
   fn new(self) -> QStyleOption {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QStyleOptionC1Eii()};
+    // unsafe{_ZN12QStyleOptionC2Eii()};
     let ctysz: c_int = unsafe{QStyleOption_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-    // unsafe {_ZN12QStyleOptionC1Eii(qthis, arg0, arg1)};
-    let qthis: u64 = unsafe {dector_ZN12QStyleOptionC1Eii(arg0, arg1)} as u64;
+    unsafe {_ZN12QStyleOptionC2Eii(qthis_ph, arg0, arg1)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOption{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -998,7 +925,7 @@ impl<'a> /*trait*/ QStyleOption_initFrom<()> for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QStyleOption8initFromEPK7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {demth_ZN12QStyleOption8initFromEPK7QWidget(rsthis.qclsinst, arg0)};
+     unsafe {_ZN12QStyleOption8initFromEPK7QWidget(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1037,11 +964,11 @@ pub trait QStyleOptionDockWidget_new {
 impl<'a> /*trait*/ QStyleOptionDockWidget_new for () {
   fn new(self) -> QStyleOptionDockWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN22QStyleOptionDockWidgetC1Ev()};
+    // unsafe{_ZN22QStyleOptionDockWidgetC2Ev()};
     let ctysz: c_int = unsafe{QStyleOptionDockWidget_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN22QStyleOptionDockWidgetC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN22QStyleOptionDockWidgetC1Ev()} as u64;
+    unsafe {_ZN22QStyleOptionDockWidgetC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionDockWidget{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1052,12 +979,12 @@ impl<'a> /*trait*/ QStyleOptionDockWidget_new for () {
 impl<'a> /*trait*/ QStyleOptionDockWidget_new for (i32) {
   fn new(self) -> QStyleOptionDockWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN22QStyleOptionDockWidgetC1Ei()};
+    // unsafe{_ZN22QStyleOptionDockWidgetC2Ei()};
     let ctysz: c_int = unsafe{QStyleOptionDockWidget_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
-    // unsafe {_ZN22QStyleOptionDockWidgetC1Ei(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN22QStyleOptionDockWidgetC1Ei(arg0)} as u64;
+    unsafe {_ZN22QStyleOptionDockWidgetC2Ei(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionDockWidget{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1068,12 +995,12 @@ impl<'a> /*trait*/ QStyleOptionDockWidget_new for (i32) {
 impl<'a> /*trait*/ QStyleOptionDockWidget_new for (&'a QStyleOptionDockWidget) {
   fn new(self) -> QStyleOptionDockWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN22QStyleOptionDockWidgetC1ERKS_()};
+    // unsafe{_ZN22QStyleOptionDockWidgetC2ERKS_()};
     let ctysz: c_int = unsafe{QStyleOptionDockWidget_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN22QStyleOptionDockWidgetC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN22QStyleOptionDockWidgetC1ERKS_(arg0)} as u64;
+    unsafe {_ZN22QStyleOptionDockWidgetC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionDockWidget{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1114,12 +1041,12 @@ pub trait QStyleOptionProgressBar_new {
 impl<'a> /*trait*/ QStyleOptionProgressBar_new for (&'a QStyleOptionProgressBar) {
   fn new(self) -> QStyleOptionProgressBar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN23QStyleOptionProgressBarC1ERKS_()};
+    // unsafe{_ZN23QStyleOptionProgressBarC2ERKS_()};
     let ctysz: c_int = unsafe{QStyleOptionProgressBar_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN23QStyleOptionProgressBarC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN23QStyleOptionProgressBarC1ERKS_(arg0)} as u64;
+    unsafe {_ZN23QStyleOptionProgressBarC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionProgressBar{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1130,12 +1057,12 @@ impl<'a> /*trait*/ QStyleOptionProgressBar_new for (&'a QStyleOptionProgressBar)
 impl<'a> /*trait*/ QStyleOptionProgressBar_new for (i32) {
   fn new(self) -> QStyleOptionProgressBar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN23QStyleOptionProgressBarC1Ei()};
+    // unsafe{_ZN23QStyleOptionProgressBarC2Ei()};
     let ctysz: c_int = unsafe{QStyleOptionProgressBar_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
-    // unsafe {_ZN23QStyleOptionProgressBarC1Ei(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN23QStyleOptionProgressBarC1Ei(arg0)} as u64;
+    unsafe {_ZN23QStyleOptionProgressBarC2Ei(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionProgressBar{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1146,11 +1073,11 @@ impl<'a> /*trait*/ QStyleOptionProgressBar_new for (i32) {
 impl<'a> /*trait*/ QStyleOptionProgressBar_new for () {
   fn new(self) -> QStyleOptionProgressBar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN23QStyleOptionProgressBarC1Ev()};
+    // unsafe{_ZN23QStyleOptionProgressBarC2Ev()};
     let ctysz: c_int = unsafe{QStyleOptionProgressBar_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN23QStyleOptionProgressBarC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN23QStyleOptionProgressBarC1Ev()} as u64;
+    unsafe {_ZN23QStyleOptionProgressBarC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionProgressBar{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1191,12 +1118,12 @@ pub trait QStyleOptionSlider_new {
 impl<'a> /*trait*/ QStyleOptionSlider_new for (&'a QStyleOptionSlider) {
   fn new(self) -> QStyleOptionSlider {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QStyleOptionSliderC1ERKS_()};
+    // unsafe{_ZN18QStyleOptionSliderC2ERKS_()};
     let ctysz: c_int = unsafe{QStyleOptionSlider_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN18QStyleOptionSliderC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN18QStyleOptionSliderC1ERKS_(arg0)} as u64;
+    unsafe {_ZN18QStyleOptionSliderC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionSlider{qbase: QStyleOptionComplex::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1207,12 +1134,12 @@ impl<'a> /*trait*/ QStyleOptionSlider_new for (&'a QStyleOptionSlider) {
 impl<'a> /*trait*/ QStyleOptionSlider_new for (i32) {
   fn new(self) -> QStyleOptionSlider {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QStyleOptionSliderC1Ei()};
+    // unsafe{_ZN18QStyleOptionSliderC2Ei()};
     let ctysz: c_int = unsafe{QStyleOptionSlider_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
-    // unsafe {_ZN18QStyleOptionSliderC1Ei(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN18QStyleOptionSliderC1Ei(arg0)} as u64;
+    unsafe {_ZN18QStyleOptionSliderC2Ei(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionSlider{qbase: QStyleOptionComplex::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1223,11 +1150,11 @@ impl<'a> /*trait*/ QStyleOptionSlider_new for (i32) {
 impl<'a> /*trait*/ QStyleOptionSlider_new for () {
   fn new(self) -> QStyleOptionSlider {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QStyleOptionSliderC1Ev()};
+    // unsafe{_ZN18QStyleOptionSliderC2Ev()};
     let ctysz: c_int = unsafe{QStyleOptionSlider_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN18QStyleOptionSliderC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN18QStyleOptionSliderC1Ev()} as u64;
+    unsafe {_ZN18QStyleOptionSliderC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionSlider{qbase: QStyleOptionComplex::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1268,11 +1195,11 @@ pub trait QStyleOptionFrame_new {
 impl<'a> /*trait*/ QStyleOptionFrame_new for () {
   fn new(self) -> QStyleOptionFrame {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QStyleOptionFrameC1Ev()};
+    // unsafe{_ZN17QStyleOptionFrameC2Ev()};
     let ctysz: c_int = unsafe{QStyleOptionFrame_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN17QStyleOptionFrameC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN17QStyleOptionFrameC1Ev()} as u64;
+    unsafe {_ZN17QStyleOptionFrameC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionFrame{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1283,12 +1210,12 @@ impl<'a> /*trait*/ QStyleOptionFrame_new for () {
 impl<'a> /*trait*/ QStyleOptionFrame_new for (&'a QStyleOptionFrame) {
   fn new(self) -> QStyleOptionFrame {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QStyleOptionFrameC1ERKS_()};
+    // unsafe{_ZN17QStyleOptionFrameC2ERKS_()};
     let ctysz: c_int = unsafe{QStyleOptionFrame_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN17QStyleOptionFrameC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN17QStyleOptionFrameC1ERKS_(arg0)} as u64;
+    unsafe {_ZN17QStyleOptionFrameC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionFrame{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1299,12 +1226,12 @@ impl<'a> /*trait*/ QStyleOptionFrame_new for (&'a QStyleOptionFrame) {
 impl<'a> /*trait*/ QStyleOptionFrame_new for (i32) {
   fn new(self) -> QStyleOptionFrame {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QStyleOptionFrameC1Ei()};
+    // unsafe{_ZN17QStyleOptionFrameC2Ei()};
     let ctysz: c_int = unsafe{QStyleOptionFrame_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
-    // unsafe {_ZN17QStyleOptionFrameC1Ei(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN17QStyleOptionFrameC1Ei(arg0)} as u64;
+    unsafe {_ZN17QStyleOptionFrameC2Ei(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionFrame{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1345,13 +1272,13 @@ pub trait QStyleOptionComplex_new {
 impl<'a> /*trait*/ QStyleOptionComplex_new for (i32, i32) {
   fn new(self) -> QStyleOptionComplex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QStyleOptionComplexC1Eii()};
+    // unsafe{_ZN19QStyleOptionComplexC2Eii()};
     let ctysz: c_int = unsafe{QStyleOptionComplex_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-    // unsafe {_ZN19QStyleOptionComplexC1Eii(qthis, arg0, arg1)};
-    let qthis: u64 = unsafe {dector_ZN19QStyleOptionComplexC1Eii(arg0, arg1)} as u64;
+    unsafe {_ZN19QStyleOptionComplexC2Eii(qthis_ph, arg0, arg1)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionComplex{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1362,12 +1289,12 @@ impl<'a> /*trait*/ QStyleOptionComplex_new for (i32, i32) {
 impl<'a> /*trait*/ QStyleOptionComplex_new for (&'a QStyleOptionComplex) {
   fn new(self) -> QStyleOptionComplex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QStyleOptionComplexC1ERKS_()};
+    // unsafe{_ZN19QStyleOptionComplexC2ERKS_()};
     let ctysz: c_int = unsafe{QStyleOptionComplex_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN19QStyleOptionComplexC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN19QStyleOptionComplexC1ERKS_(arg0)} as u64;
+    unsafe {_ZN19QStyleOptionComplexC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionComplex{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1395,8 +1322,8 @@ pub trait QStyleHintReturn_free<RetType> {
 impl<'a> /*trait*/ QStyleHintReturn_free<()> for () {
   fn free(self , rsthis: & QStyleHintReturn) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QStyleHintReturnD0Ev()};
-     unsafe {_ZN16QStyleHintReturnD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN16QStyleHintReturnD2Ev()};
+     unsafe {_ZN16QStyleHintReturnD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1418,13 +1345,13 @@ pub trait QStyleHintReturn_new {
 impl<'a> /*trait*/ QStyleHintReturn_new for (i32, i32) {
   fn new(self) -> QStyleHintReturn {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QStyleHintReturnC1Eii()};
+    // unsafe{_ZN16QStyleHintReturnC2Eii()};
     let ctysz: c_int = unsafe{QStyleHintReturn_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-    // unsafe {_ZN16QStyleHintReturnC1Eii(qthis, arg0, arg1)};
-    let qthis: u64 = unsafe {dector_ZN16QStyleHintReturnC1Eii(arg0, arg1)} as u64;
+    unsafe {_ZN16QStyleHintReturnC2Eii(qthis_ph, arg0, arg1)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleHintReturn{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1465,11 +1392,11 @@ pub trait QStyleOptionHeader_new {
 impl<'a> /*trait*/ QStyleOptionHeader_new for () {
   fn new(self) -> QStyleOptionHeader {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QStyleOptionHeaderC1Ev()};
+    // unsafe{_ZN18QStyleOptionHeaderC2Ev()};
     let ctysz: c_int = unsafe{QStyleOptionHeader_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN18QStyleOptionHeaderC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN18QStyleOptionHeaderC1Ev()} as u64;
+    unsafe {_ZN18QStyleOptionHeaderC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionHeader{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1480,12 +1407,12 @@ impl<'a> /*trait*/ QStyleOptionHeader_new for () {
 impl<'a> /*trait*/ QStyleOptionHeader_new for (&'a QStyleOptionHeader) {
   fn new(self) -> QStyleOptionHeader {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QStyleOptionHeaderC1ERKS_()};
+    // unsafe{_ZN18QStyleOptionHeaderC2ERKS_()};
     let ctysz: c_int = unsafe{QStyleOptionHeader_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN18QStyleOptionHeaderC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN18QStyleOptionHeaderC1ERKS_(arg0)} as u64;
+    unsafe {_ZN18QStyleOptionHeaderC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionHeader{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1496,12 +1423,12 @@ impl<'a> /*trait*/ QStyleOptionHeader_new for (&'a QStyleOptionHeader) {
 impl<'a> /*trait*/ QStyleOptionHeader_new for (i32) {
   fn new(self) -> QStyleOptionHeader {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QStyleOptionHeaderC1Ei()};
+    // unsafe{_ZN18QStyleOptionHeaderC2Ei()};
     let ctysz: c_int = unsafe{QStyleOptionHeader_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
-    // unsafe {_ZN18QStyleOptionHeaderC1Ei(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN18QStyleOptionHeaderC1Ei(arg0)} as u64;
+    unsafe {_ZN18QStyleOptionHeaderC2Ei(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionHeader{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1542,11 +1469,11 @@ pub trait QStyleOptionToolBox_new {
 impl<'a> /*trait*/ QStyleOptionToolBox_new for () {
   fn new(self) -> QStyleOptionToolBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QStyleOptionToolBoxC1Ev()};
+    // unsafe{_ZN19QStyleOptionToolBoxC2Ev()};
     let ctysz: c_int = unsafe{QStyleOptionToolBox_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN19QStyleOptionToolBoxC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN19QStyleOptionToolBoxC1Ev()} as u64;
+    unsafe {_ZN19QStyleOptionToolBoxC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionToolBox{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1557,12 +1484,12 @@ impl<'a> /*trait*/ QStyleOptionToolBox_new for () {
 impl<'a> /*trait*/ QStyleOptionToolBox_new for (&'a QStyleOptionToolBox) {
   fn new(self) -> QStyleOptionToolBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QStyleOptionToolBoxC1ERKS_()};
+    // unsafe{_ZN19QStyleOptionToolBoxC2ERKS_()};
     let ctysz: c_int = unsafe{QStyleOptionToolBox_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN19QStyleOptionToolBoxC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN19QStyleOptionToolBoxC1ERKS_(arg0)} as u64;
+    unsafe {_ZN19QStyleOptionToolBoxC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionToolBox{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1573,12 +1500,12 @@ impl<'a> /*trait*/ QStyleOptionToolBox_new for (&'a QStyleOptionToolBox) {
 impl<'a> /*trait*/ QStyleOptionToolBox_new for (i32) {
   fn new(self) -> QStyleOptionToolBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QStyleOptionToolBoxC1Ei()};
+    // unsafe{_ZN19QStyleOptionToolBoxC2Ei()};
     let ctysz: c_int = unsafe{QStyleOptionToolBox_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
-    // unsafe {_ZN19QStyleOptionToolBoxC1Ei(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN19QStyleOptionToolBoxC1Ei(arg0)} as u64;
+    unsafe {_ZN19QStyleOptionToolBoxC2Ei(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionToolBox{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1619,12 +1546,12 @@ pub trait QStyleOptionFocusRect_new {
 impl<'a> /*trait*/ QStyleOptionFocusRect_new for (i32) {
   fn new(self) -> QStyleOptionFocusRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN21QStyleOptionFocusRectC1Ei()};
+    // unsafe{_ZN21QStyleOptionFocusRectC2Ei()};
     let ctysz: c_int = unsafe{QStyleOptionFocusRect_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
-    // unsafe {_ZN21QStyleOptionFocusRectC1Ei(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN21QStyleOptionFocusRectC1Ei(arg0)} as u64;
+    unsafe {_ZN21QStyleOptionFocusRectC2Ei(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionFocusRect{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1635,11 +1562,11 @@ impl<'a> /*trait*/ QStyleOptionFocusRect_new for (i32) {
 impl<'a> /*trait*/ QStyleOptionFocusRect_new for () {
   fn new(self) -> QStyleOptionFocusRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN21QStyleOptionFocusRectC1Ev()};
+    // unsafe{_ZN21QStyleOptionFocusRectC2Ev()};
     let ctysz: c_int = unsafe{QStyleOptionFocusRect_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN21QStyleOptionFocusRectC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN21QStyleOptionFocusRectC1Ev()} as u64;
+    unsafe {_ZN21QStyleOptionFocusRectC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionFocusRect{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1650,12 +1577,12 @@ impl<'a> /*trait*/ QStyleOptionFocusRect_new for () {
 impl<'a> /*trait*/ QStyleOptionFocusRect_new for (&'a QStyleOptionFocusRect) {
   fn new(self) -> QStyleOptionFocusRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN21QStyleOptionFocusRectC1ERKS_()};
+    // unsafe{_ZN21QStyleOptionFocusRectC2ERKS_()};
     let ctysz: c_int = unsafe{QStyleOptionFocusRect_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN21QStyleOptionFocusRectC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN21QStyleOptionFocusRectC1ERKS_(arg0)} as u64;
+    unsafe {_ZN21QStyleOptionFocusRectC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionFocusRect{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1696,12 +1623,12 @@ pub trait QStyleOptionGroupBox_new {
 impl<'a> /*trait*/ QStyleOptionGroupBox_new for (i32) {
   fn new(self) -> QStyleOptionGroupBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN20QStyleOptionGroupBoxC1Ei()};
+    // unsafe{_ZN20QStyleOptionGroupBoxC2Ei()};
     let ctysz: c_int = unsafe{QStyleOptionGroupBox_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
-    // unsafe {_ZN20QStyleOptionGroupBoxC1Ei(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN20QStyleOptionGroupBoxC1Ei(arg0)} as u64;
+    unsafe {_ZN20QStyleOptionGroupBoxC2Ei(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionGroupBox{qbase: QStyleOptionComplex::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1712,12 +1639,12 @@ impl<'a> /*trait*/ QStyleOptionGroupBox_new for (i32) {
 impl<'a> /*trait*/ QStyleOptionGroupBox_new for (&'a QStyleOptionGroupBox) {
   fn new(self) -> QStyleOptionGroupBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN20QStyleOptionGroupBoxC1ERKS_()};
+    // unsafe{_ZN20QStyleOptionGroupBoxC2ERKS_()};
     let ctysz: c_int = unsafe{QStyleOptionGroupBox_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN20QStyleOptionGroupBoxC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN20QStyleOptionGroupBoxC1ERKS_(arg0)} as u64;
+    unsafe {_ZN20QStyleOptionGroupBoxC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionGroupBox{qbase: QStyleOptionComplex::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1728,11 +1655,11 @@ impl<'a> /*trait*/ QStyleOptionGroupBox_new for (&'a QStyleOptionGroupBox) {
 impl<'a> /*trait*/ QStyleOptionGroupBox_new for () {
   fn new(self) -> QStyleOptionGroupBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN20QStyleOptionGroupBoxC1Ev()};
+    // unsafe{_ZN20QStyleOptionGroupBoxC2Ev()};
     let ctysz: c_int = unsafe{QStyleOptionGroupBox_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN20QStyleOptionGroupBoxC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN20QStyleOptionGroupBoxC1Ev()} as u64;
+    unsafe {_ZN20QStyleOptionGroupBoxC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionGroupBox{qbase: QStyleOptionComplex::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1773,12 +1700,12 @@ pub trait QStyleOptionTab_new {
 impl<'a> /*trait*/ QStyleOptionTab_new for (&'a QStyleOptionTab) {
   fn new(self) -> QStyleOptionTab {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QStyleOptionTabC1ERKS_()};
+    // unsafe{_ZN15QStyleOptionTabC2ERKS_()};
     let ctysz: c_int = unsafe{QStyleOptionTab_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN15QStyleOptionTabC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN15QStyleOptionTabC1ERKS_(arg0)} as u64;
+    unsafe {_ZN15QStyleOptionTabC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionTab{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1789,12 +1716,12 @@ impl<'a> /*trait*/ QStyleOptionTab_new for (&'a QStyleOptionTab) {
 impl<'a> /*trait*/ QStyleOptionTab_new for (i32) {
   fn new(self) -> QStyleOptionTab {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QStyleOptionTabC1Ei()};
+    // unsafe{_ZN15QStyleOptionTabC2Ei()};
     let ctysz: c_int = unsafe{QStyleOptionTab_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
-    // unsafe {_ZN15QStyleOptionTabC1Ei(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN15QStyleOptionTabC1Ei(arg0)} as u64;
+    unsafe {_ZN15QStyleOptionTabC2Ei(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionTab{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1805,11 +1732,11 @@ impl<'a> /*trait*/ QStyleOptionTab_new for (i32) {
 impl<'a> /*trait*/ QStyleOptionTab_new for () {
   fn new(self) -> QStyleOptionTab {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QStyleOptionTabC1Ev()};
+    // unsafe{_ZN15QStyleOptionTabC2Ev()};
     let ctysz: c_int = unsafe{QStyleOptionTab_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN15QStyleOptionTabC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN15QStyleOptionTabC1Ev()} as u64;
+    unsafe {_ZN15QStyleOptionTabC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionTab{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1850,11 +1777,11 @@ pub trait QStyleOptionTabBarBase_new {
 impl<'a> /*trait*/ QStyleOptionTabBarBase_new for () {
   fn new(self) -> QStyleOptionTabBarBase {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN22QStyleOptionTabBarBaseC1Ev()};
+    // unsafe{_ZN22QStyleOptionTabBarBaseC2Ev()};
     let ctysz: c_int = unsafe{QStyleOptionTabBarBase_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN22QStyleOptionTabBarBaseC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN22QStyleOptionTabBarBaseC1Ev()} as u64;
+    unsafe {_ZN22QStyleOptionTabBarBaseC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionTabBarBase{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1865,12 +1792,12 @@ impl<'a> /*trait*/ QStyleOptionTabBarBase_new for () {
 impl<'a> /*trait*/ QStyleOptionTabBarBase_new for (i32) {
   fn new(self) -> QStyleOptionTabBarBase {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN22QStyleOptionTabBarBaseC1Ei()};
+    // unsafe{_ZN22QStyleOptionTabBarBaseC2Ei()};
     let ctysz: c_int = unsafe{QStyleOptionTabBarBase_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
-    // unsafe {_ZN22QStyleOptionTabBarBaseC1Ei(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN22QStyleOptionTabBarBaseC1Ei(arg0)} as u64;
+    unsafe {_ZN22QStyleOptionTabBarBaseC2Ei(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionTabBarBase{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1881,12 +1808,12 @@ impl<'a> /*trait*/ QStyleOptionTabBarBase_new for (i32) {
 impl<'a> /*trait*/ QStyleOptionTabBarBase_new for (&'a QStyleOptionTabBarBase) {
   fn new(self) -> QStyleOptionTabBarBase {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN22QStyleOptionTabBarBaseC1ERKS_()};
+    // unsafe{_ZN22QStyleOptionTabBarBaseC2ERKS_()};
     let ctysz: c_int = unsafe{QStyleOptionTabBarBase_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN22QStyleOptionTabBarBaseC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN22QStyleOptionTabBarBaseC1ERKS_(arg0)} as u64;
+    unsafe {_ZN22QStyleOptionTabBarBaseC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionTabBarBase{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1927,12 +1854,12 @@ pub trait QStyleOptionRubberBand_new {
 impl<'a> /*trait*/ QStyleOptionRubberBand_new for (i32) {
   fn new(self) -> QStyleOptionRubberBand {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN22QStyleOptionRubberBandC1Ei()};
+    // unsafe{_ZN22QStyleOptionRubberBandC2Ei()};
     let ctysz: c_int = unsafe{QStyleOptionRubberBand_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
-    // unsafe {_ZN22QStyleOptionRubberBandC1Ei(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN22QStyleOptionRubberBandC1Ei(arg0)} as u64;
+    unsafe {_ZN22QStyleOptionRubberBandC2Ei(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionRubberBand{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1943,11 +1870,11 @@ impl<'a> /*trait*/ QStyleOptionRubberBand_new for (i32) {
 impl<'a> /*trait*/ QStyleOptionRubberBand_new for () {
   fn new(self) -> QStyleOptionRubberBand {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN22QStyleOptionRubberBandC1Ev()};
+    // unsafe{_ZN22QStyleOptionRubberBandC2Ev()};
     let ctysz: c_int = unsafe{QStyleOptionRubberBand_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN22QStyleOptionRubberBandC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN22QStyleOptionRubberBandC1Ev()} as u64;
+    unsafe {_ZN22QStyleOptionRubberBandC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionRubberBand{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1958,12 +1885,12 @@ impl<'a> /*trait*/ QStyleOptionRubberBand_new for () {
 impl<'a> /*trait*/ QStyleOptionRubberBand_new for (&'a QStyleOptionRubberBand) {
   fn new(self) -> QStyleOptionRubberBand {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN22QStyleOptionRubberBandC1ERKS_()};
+    // unsafe{_ZN22QStyleOptionRubberBandC2ERKS_()};
     let ctysz: c_int = unsafe{QStyleOptionRubberBand_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN22QStyleOptionRubberBandC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN22QStyleOptionRubberBandC1ERKS_(arg0)} as u64;
+    unsafe {_ZN22QStyleOptionRubberBandC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionRubberBand{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -2004,12 +1931,12 @@ pub trait QStyleOptionButton_new {
 impl<'a> /*trait*/ QStyleOptionButton_new for (i32) {
   fn new(self) -> QStyleOptionButton {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QStyleOptionButtonC1Ei()};
+    // unsafe{_ZN18QStyleOptionButtonC2Ei()};
     let ctysz: c_int = unsafe{QStyleOptionButton_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
-    // unsafe {_ZN18QStyleOptionButtonC1Ei(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN18QStyleOptionButtonC1Ei(arg0)} as u64;
+    unsafe {_ZN18QStyleOptionButtonC2Ei(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionButton{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -2020,11 +1947,11 @@ impl<'a> /*trait*/ QStyleOptionButton_new for (i32) {
 impl<'a> /*trait*/ QStyleOptionButton_new for () {
   fn new(self) -> QStyleOptionButton {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QStyleOptionButtonC1Ev()};
+    // unsafe{_ZN18QStyleOptionButtonC2Ev()};
     let ctysz: c_int = unsafe{QStyleOptionButton_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN18QStyleOptionButtonC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN18QStyleOptionButtonC1Ev()} as u64;
+    unsafe {_ZN18QStyleOptionButtonC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionButton{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -2035,12 +1962,12 @@ impl<'a> /*trait*/ QStyleOptionButton_new for () {
 impl<'a> /*trait*/ QStyleOptionButton_new for (&'a QStyleOptionButton) {
   fn new(self) -> QStyleOptionButton {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QStyleOptionButtonC1ERKS_()};
+    // unsafe{_ZN18QStyleOptionButtonC2ERKS_()};
     let ctysz: c_int = unsafe{QStyleOptionButton_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN18QStyleOptionButtonC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN18QStyleOptionButtonC1ERKS_(arg0)} as u64;
+    unsafe {_ZN18QStyleOptionButtonC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionButton{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -2081,11 +2008,11 @@ pub trait QStyleHintReturnMask_new {
 impl<'a> /*trait*/ QStyleHintReturnMask_new for () {
   fn new(self) -> QStyleHintReturnMask {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN20QStyleHintReturnMaskC1Ev()};
+    // unsafe{_ZN20QStyleHintReturnMaskC2Ev()};
     let ctysz: c_int = unsafe{QStyleHintReturnMask_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN20QStyleHintReturnMaskC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN20QStyleHintReturnMaskC1Ev()} as u64;
+    unsafe {_ZN20QStyleHintReturnMaskC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleHintReturnMask{qbase: QStyleHintReturn::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -2108,8 +2035,8 @@ pub trait QStyleHintReturnMask_free<RetType> {
 impl<'a> /*trait*/ QStyleHintReturnMask_free<()> for () {
   fn free(self , rsthis: & QStyleHintReturnMask) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN20QStyleHintReturnMaskD0Ev()};
-     unsafe {_ZN20QStyleHintReturnMaskD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN20QStyleHintReturnMaskD2Ev()};
+     unsafe {_ZN20QStyleHintReturnMaskD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -2148,12 +2075,12 @@ pub trait QStyleOptionToolButton_new {
 impl<'a> /*trait*/ QStyleOptionToolButton_new for (i32) {
   fn new(self) -> QStyleOptionToolButton {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN22QStyleOptionToolButtonC1Ei()};
+    // unsafe{_ZN22QStyleOptionToolButtonC2Ei()};
     let ctysz: c_int = unsafe{QStyleOptionToolButton_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
-    // unsafe {_ZN22QStyleOptionToolButtonC1Ei(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN22QStyleOptionToolButtonC1Ei(arg0)} as u64;
+    unsafe {_ZN22QStyleOptionToolButtonC2Ei(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionToolButton{qbase: QStyleOptionComplex::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -2164,11 +2091,11 @@ impl<'a> /*trait*/ QStyleOptionToolButton_new for (i32) {
 impl<'a> /*trait*/ QStyleOptionToolButton_new for () {
   fn new(self) -> QStyleOptionToolButton {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN22QStyleOptionToolButtonC1Ev()};
+    // unsafe{_ZN22QStyleOptionToolButtonC2Ev()};
     let ctysz: c_int = unsafe{QStyleOptionToolButton_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN22QStyleOptionToolButtonC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN22QStyleOptionToolButtonC1Ev()} as u64;
+    unsafe {_ZN22QStyleOptionToolButtonC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionToolButton{qbase: QStyleOptionComplex::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -2179,12 +2106,12 @@ impl<'a> /*trait*/ QStyleOptionToolButton_new for () {
 impl<'a> /*trait*/ QStyleOptionToolButton_new for (&'a QStyleOptionToolButton) {
   fn new(self) -> QStyleOptionToolButton {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN22QStyleOptionToolButtonC1ERKS_()};
+    // unsafe{_ZN22QStyleOptionToolButtonC2ERKS_()};
     let ctysz: c_int = unsafe{QStyleOptionToolButton_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN22QStyleOptionToolButtonC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN22QStyleOptionToolButtonC1ERKS_(arg0)} as u64;
+    unsafe {_ZN22QStyleOptionToolButtonC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionToolButton{qbase: QStyleOptionComplex::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -2225,12 +2152,12 @@ pub trait QStyleOptionSizeGrip_new {
 impl<'a> /*trait*/ QStyleOptionSizeGrip_new for (i32) {
   fn new(self) -> QStyleOptionSizeGrip {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN20QStyleOptionSizeGripC1Ei()};
+    // unsafe{_ZN20QStyleOptionSizeGripC2Ei()};
     let ctysz: c_int = unsafe{QStyleOptionSizeGrip_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
-    // unsafe {_ZN20QStyleOptionSizeGripC1Ei(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN20QStyleOptionSizeGripC1Ei(arg0)} as u64;
+    unsafe {_ZN20QStyleOptionSizeGripC2Ei(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionSizeGrip{qbase: QStyleOptionComplex::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -2241,11 +2168,11 @@ impl<'a> /*trait*/ QStyleOptionSizeGrip_new for (i32) {
 impl<'a> /*trait*/ QStyleOptionSizeGrip_new for () {
   fn new(self) -> QStyleOptionSizeGrip {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN20QStyleOptionSizeGripC1Ev()};
+    // unsafe{_ZN20QStyleOptionSizeGripC2Ev()};
     let ctysz: c_int = unsafe{QStyleOptionSizeGrip_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN20QStyleOptionSizeGripC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN20QStyleOptionSizeGripC1Ev()} as u64;
+    unsafe {_ZN20QStyleOptionSizeGripC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionSizeGrip{qbase: QStyleOptionComplex::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -2256,12 +2183,12 @@ impl<'a> /*trait*/ QStyleOptionSizeGrip_new for () {
 impl<'a> /*trait*/ QStyleOptionSizeGrip_new for (&'a QStyleOptionSizeGrip) {
   fn new(self) -> QStyleOptionSizeGrip {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN20QStyleOptionSizeGripC1ERKS_()};
+    // unsafe{_ZN20QStyleOptionSizeGripC2ERKS_()};
     let ctysz: c_int = unsafe{QStyleOptionSizeGrip_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN20QStyleOptionSizeGripC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN20QStyleOptionSizeGripC1ERKS_(arg0)} as u64;
+    unsafe {_ZN20QStyleOptionSizeGripC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionSizeGrip{qbase: QStyleOptionComplex::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -2302,12 +2229,12 @@ pub trait QStyleOptionViewItem_new {
 impl<'a> /*trait*/ QStyleOptionViewItem_new for (&'a QStyleOptionViewItem) {
   fn new(self) -> QStyleOptionViewItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN20QStyleOptionViewItemC1ERKS_()};
+    // unsafe{_ZN20QStyleOptionViewItemC2ERKS_()};
     let ctysz: c_int = unsafe{QStyleOptionViewItem_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN20QStyleOptionViewItemC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN20QStyleOptionViewItemC1ERKS_(arg0)} as u64;
+    unsafe {_ZN20QStyleOptionViewItemC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionViewItem{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -2318,12 +2245,12 @@ impl<'a> /*trait*/ QStyleOptionViewItem_new for (&'a QStyleOptionViewItem) {
 impl<'a> /*trait*/ QStyleOptionViewItem_new for (i32) {
   fn new(self) -> QStyleOptionViewItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN20QStyleOptionViewItemC1Ei()};
+    // unsafe{_ZN20QStyleOptionViewItemC2Ei()};
     let ctysz: c_int = unsafe{QStyleOptionViewItem_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
-    // unsafe {_ZN20QStyleOptionViewItemC1Ei(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN20QStyleOptionViewItemC1Ei(arg0)} as u64;
+    unsafe {_ZN20QStyleOptionViewItemC2Ei(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionViewItem{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -2334,11 +2261,11 @@ impl<'a> /*trait*/ QStyleOptionViewItem_new for (i32) {
 impl<'a> /*trait*/ QStyleOptionViewItem_new for () {
   fn new(self) -> QStyleOptionViewItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN20QStyleOptionViewItemC1Ev()};
+    // unsafe{_ZN20QStyleOptionViewItemC2Ev()};
     let ctysz: c_int = unsafe{QStyleOptionViewItem_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN20QStyleOptionViewItemC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN20QStyleOptionViewItemC1Ev()} as u64;
+    unsafe {_ZN20QStyleOptionViewItemC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionViewItem{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -2379,11 +2306,11 @@ pub trait QStyleOptionSpinBox_new {
 impl<'a> /*trait*/ QStyleOptionSpinBox_new for () {
   fn new(self) -> QStyleOptionSpinBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QStyleOptionSpinBoxC1Ev()};
+    // unsafe{_ZN19QStyleOptionSpinBoxC2Ev()};
     let ctysz: c_int = unsafe{QStyleOptionSpinBox_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN19QStyleOptionSpinBoxC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN19QStyleOptionSpinBoxC1Ev()} as u64;
+    unsafe {_ZN19QStyleOptionSpinBoxC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionSpinBox{qbase: QStyleOptionComplex::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -2394,12 +2321,12 @@ impl<'a> /*trait*/ QStyleOptionSpinBox_new for () {
 impl<'a> /*trait*/ QStyleOptionSpinBox_new for (&'a QStyleOptionSpinBox) {
   fn new(self) -> QStyleOptionSpinBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QStyleOptionSpinBoxC1ERKS_()};
+    // unsafe{_ZN19QStyleOptionSpinBoxC2ERKS_()};
     let ctysz: c_int = unsafe{QStyleOptionSpinBox_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN19QStyleOptionSpinBoxC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN19QStyleOptionSpinBoxC1ERKS_(arg0)} as u64;
+    unsafe {_ZN19QStyleOptionSpinBoxC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionSpinBox{qbase: QStyleOptionComplex::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -2410,12 +2337,12 @@ impl<'a> /*trait*/ QStyleOptionSpinBox_new for (&'a QStyleOptionSpinBox) {
 impl<'a> /*trait*/ QStyleOptionSpinBox_new for (i32) {
   fn new(self) -> QStyleOptionSpinBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QStyleOptionSpinBoxC1Ei()};
+    // unsafe{_ZN19QStyleOptionSpinBoxC2Ei()};
     let ctysz: c_int = unsafe{QStyleOptionSpinBox_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
-    // unsafe {_ZN19QStyleOptionSpinBoxC1Ei(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN19QStyleOptionSpinBoxC1Ei(arg0)} as u64;
+    unsafe {_ZN19QStyleOptionSpinBoxC2Ei(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionSpinBox{qbase: QStyleOptionComplex::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -2456,12 +2383,12 @@ pub trait QStyleOptionToolBar_new {
 impl<'a> /*trait*/ QStyleOptionToolBar_new for (&'a QStyleOptionToolBar) {
   fn new(self) -> QStyleOptionToolBar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QStyleOptionToolBarC1ERKS_()};
+    // unsafe{_ZN19QStyleOptionToolBarC2ERKS_()};
     let ctysz: c_int = unsafe{QStyleOptionToolBar_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN19QStyleOptionToolBarC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN19QStyleOptionToolBarC1ERKS_(arg0)} as u64;
+    unsafe {_ZN19QStyleOptionToolBarC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionToolBar{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -2472,12 +2399,12 @@ impl<'a> /*trait*/ QStyleOptionToolBar_new for (&'a QStyleOptionToolBar) {
 impl<'a> /*trait*/ QStyleOptionToolBar_new for (i32) {
   fn new(self) -> QStyleOptionToolBar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QStyleOptionToolBarC1Ei()};
+    // unsafe{_ZN19QStyleOptionToolBarC2Ei()};
     let ctysz: c_int = unsafe{QStyleOptionToolBar_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
-    // unsafe {_ZN19QStyleOptionToolBarC1Ei(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN19QStyleOptionToolBarC1Ei(arg0)} as u64;
+    unsafe {_ZN19QStyleOptionToolBarC2Ei(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionToolBar{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -2488,11 +2415,11 @@ impl<'a> /*trait*/ QStyleOptionToolBar_new for (i32) {
 impl<'a> /*trait*/ QStyleOptionToolBar_new for () {
   fn new(self) -> QStyleOptionToolBar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QStyleOptionToolBarC1Ev()};
+    // unsafe{_ZN19QStyleOptionToolBarC2Ev()};
     let ctysz: c_int = unsafe{QStyleOptionToolBar_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN19QStyleOptionToolBarC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN19QStyleOptionToolBarC1Ev()} as u64;
+    unsafe {_ZN19QStyleOptionToolBarC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionToolBar{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -2533,12 +2460,12 @@ pub trait QStyleOptionTabWidgetFrame_new {
 impl<'a> /*trait*/ QStyleOptionTabWidgetFrame_new for (&'a QStyleOptionTabWidgetFrame) {
   fn new(self) -> QStyleOptionTabWidgetFrame {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN26QStyleOptionTabWidgetFrameC1ERKS_()};
+    // unsafe{_ZN26QStyleOptionTabWidgetFrameC2ERKS_()};
     let ctysz: c_int = unsafe{QStyleOptionTabWidgetFrame_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN26QStyleOptionTabWidgetFrameC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN26QStyleOptionTabWidgetFrameC1ERKS_(arg0)} as u64;
+    unsafe {_ZN26QStyleOptionTabWidgetFrameC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionTabWidgetFrame{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -2549,12 +2476,12 @@ impl<'a> /*trait*/ QStyleOptionTabWidgetFrame_new for (&'a QStyleOptionTabWidget
 impl<'a> /*trait*/ QStyleOptionTabWidgetFrame_new for (i32) {
   fn new(self) -> QStyleOptionTabWidgetFrame {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN26QStyleOptionTabWidgetFrameC1Ei()};
+    // unsafe{_ZN26QStyleOptionTabWidgetFrameC2Ei()};
     let ctysz: c_int = unsafe{QStyleOptionTabWidgetFrame_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
-    // unsafe {_ZN26QStyleOptionTabWidgetFrameC1Ei(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN26QStyleOptionTabWidgetFrameC1Ei(arg0)} as u64;
+    unsafe {_ZN26QStyleOptionTabWidgetFrameC2Ei(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionTabWidgetFrame{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -2565,11 +2492,11 @@ impl<'a> /*trait*/ QStyleOptionTabWidgetFrame_new for (i32) {
 impl<'a> /*trait*/ QStyleOptionTabWidgetFrame_new for () {
   fn new(self) -> QStyleOptionTabWidgetFrame {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN26QStyleOptionTabWidgetFrameC1Ev()};
+    // unsafe{_ZN26QStyleOptionTabWidgetFrameC2Ev()};
     let ctysz: c_int = unsafe{QStyleOptionTabWidgetFrame_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN26QStyleOptionTabWidgetFrameC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN26QStyleOptionTabWidgetFrameC1Ev()} as u64;
+    unsafe {_ZN26QStyleOptionTabWidgetFrameC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QStyleOptionTabWidgetFrame{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

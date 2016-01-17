@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qshortcut.h
 // dst-file: /src/widgets/qshortcut.rs
 //
@@ -38,7 +38,7 @@ extern {
   // proto:  const QMetaObject * QShortcut::metaObject();
   fn _ZNK9QShortcut10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  QWidget * QShortcut::parentWidget();
-  fn demth_ZNK9QShortcut12parentWidgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn _ZNK9QShortcut12parentWidgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QShortcut::setAutoRepeat(bool on);
   fn _ZN9QShortcut13setAutoRepeatEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  bool QShortcut::isEnabled();
@@ -46,7 +46,7 @@ extern {
   // proto:  QKeySequence QShortcut::key();
   fn _ZNK9QShortcut3keyEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QShortcut::~QShortcut();
-  fn _ZN9QShortcutD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN9QShortcutD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QShortcut::setWhatsThis(const QString & text);
   fn _ZN9QShortcut12setWhatsThisERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QShortcut::setEnabled(bool enable);
@@ -56,8 +56,7 @@ extern {
   // proto:  QString QShortcut::whatsThis();
   fn _ZNK9QShortcut9whatsThisEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QShortcut::QShortcut(QWidget * parent);
-  fn dector_ZN9QShortcutC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QShortcutC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN9QShortcutC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QShortcut::autoRepeat();
   fn _ZNK9QShortcut10autoRepeatEv(qthis: u64 /* *mut c_void*/) -> c_char;
   fn QShortcut_SlotProxy_connect__ZN9QShortcut9activatedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
@@ -153,7 +152,7 @@ impl<'a> /*trait*/ QShortcut_parentWidget<QWidget> for () {
   fn parentWidget(self , rsthis: & QShortcut) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QShortcut12parentWidgetEv()};
-    let mut ret = unsafe {demth_ZNK9QShortcut12parentWidgetEv(rsthis.qclsinst)};
+    let mut ret = unsafe {_ZNK9QShortcut12parentWidgetEv(rsthis.qclsinst)};
     let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -246,8 +245,8 @@ pub trait QShortcut_free<RetType> {
 impl<'a> /*trait*/ QShortcut_free<()> for () {
   fn free(self , rsthis: & QShortcut) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QShortcutD0Ev()};
-     unsafe {_ZN9QShortcutD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN9QShortcutD2Ev()};
+     unsafe {_ZN9QShortcutD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -362,12 +361,12 @@ pub trait QShortcut_new {
 impl<'a> /*trait*/ QShortcut_new for (&'a QWidget) {
   fn new(self) -> QShortcut {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QShortcutC1EP7QWidget()};
+    // unsafe{_ZN9QShortcutC2EP7QWidget()};
     let ctysz: c_int = unsafe{QShortcut_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN9QShortcutC1EP7QWidget(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN9QShortcutC1EP7QWidget(arg0)} as u64;
+    unsafe {_ZN9QShortcutC2EP7QWidget(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QShortcut{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

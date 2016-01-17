@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qtoolbutton.h
 // dst-file: /src/widgets/qtoolbutton.rs
 //
@@ -43,14 +43,13 @@ extern {
   // proto:  QSize QToolButton::minimumSizeHint();
   fn _ZNK11QToolButton15minimumSizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QToolButton::~QToolButton();
-  fn _ZN11QToolButtonD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN11QToolButtonD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QToolButton::showMenu();
   fn _ZN11QToolButton8showMenuEv(qthis: u64 /* *mut c_void*/);
   // proto:  QSize QToolButton::sizeHint();
   fn _ZNK11QToolButton8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QToolButton::QToolButton(const QToolButton & );
-  fn dector_ZN11QToolButtonC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QToolButtonC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN11QToolButtonC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QToolButton::autoRaise();
   fn _ZNK11QToolButton9autoRaiseEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QMenu * QToolButton::menu();
@@ -58,8 +57,7 @@ extern {
   // proto:  void QToolButton::setMenu(QMenu * menu);
   fn _ZN11QToolButton7setMenuEP5QMenu(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QToolButton::QToolButton(QWidget * parent);
-  fn dector_ZN11QToolButtonC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QToolButtonC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN11QToolButtonC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QToolButton::setDefaultAction(QAction * );
   fn _ZN11QToolButton16setDefaultActionEP7QAction(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QToolButton_SlotProxy_connect__ZN11QToolButton9triggeredEP7QAction(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
@@ -200,8 +198,8 @@ pub trait QToolButton_free<RetType> {
 impl<'a> /*trait*/ QToolButton_free<()> for () {
   fn free(self , rsthis: & QToolButton) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QToolButtonD0Ev()};
-     unsafe {_ZN11QToolButtonD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN11QToolButtonD2Ev()};
+     unsafe {_ZN11QToolButtonD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -269,12 +267,12 @@ pub trait QToolButton_new {
 impl<'a> /*trait*/ QToolButton_new for (&'a QToolButton) {
   fn new(self) -> QToolButton {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QToolButtonC1ERKS_()};
+    // unsafe{_ZN11QToolButtonC2ERKS_()};
     let ctysz: c_int = unsafe{QToolButton_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN11QToolButtonC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN11QToolButtonC1ERKS_(arg0)} as u64;
+    unsafe {_ZN11QToolButtonC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QToolButton{qbase: QAbstractButton::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -355,12 +353,12 @@ impl<'a> /*trait*/ QToolButton_setMenu<()> for (&'a QMenu) {
 impl<'a> /*trait*/ QToolButton_new for (&'a QWidget) {
   fn new(self) -> QToolButton {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QToolButtonC1EP7QWidget()};
+    // unsafe{_ZN11QToolButtonC2EP7QWidget()};
     let ctysz: c_int = unsafe{QToolButton_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN11QToolButtonC1EP7QWidget(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN11QToolButtonC1EP7QWidget(arg0)} as u64;
+    unsafe {_ZN11QToolButtonC2EP7QWidget(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QToolButton{qbase: QAbstractButton::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

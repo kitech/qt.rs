@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtGui/qtextcursor.h
 // dst-file: /src/gui/qtextcursor.rs
 //
@@ -76,8 +76,7 @@ extern {
   // proto:  QTextFrame * QTextCursor::insertFrame(const QTextFrameFormat & format);
   fn _ZN11QTextCursor11insertFrameERK16QTextFrameFormat(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QTextCursor::QTextCursor(const QTextCursor & cursor);
-  fn dector_ZN11QTextCursorC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QTextCursorC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN11QTextCursorC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTextCursor::deleteChar();
   fn _ZN11QTextCursor10deleteCharEv(qthis: u64 /* *mut c_void*/);
   // proto:  QTextFrame * QTextCursor::currentFrame();
@@ -85,13 +84,11 @@ extern {
   // proto:  void QTextCursor::insertBlock();
   fn _ZN11QTextCursor11insertBlockEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QTextCursor::QTextCursor(const QTextBlock & block);
-  fn dector_ZN11QTextCursorC1ERK10QTextBlock(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QTextCursorC1ERK10QTextBlock(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN11QTextCursorC2ERK10QTextBlock(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QTextTable * QTextCursor::insertTable(int rows, int cols);
   fn _ZN11QTextCursor11insertTableEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> *mut c_void;
   // proto:  void QTextCursor::QTextCursor();
-  fn dector_ZN11QTextCursorC1Ev() -> *mut c_void;
-  fn _ZN11QTextCursorC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN11QTextCursorC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QTextCursor::atStart();
   fn _ZNK11QTextCursor7atStartEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  int QTextCursor::selectionStart();
@@ -135,8 +132,7 @@ extern {
   // proto:  void QTextCursor::joinPreviousEditBlock();
   fn _ZN11QTextCursor21joinPreviousEditBlockEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QTextCursor::QTextCursor(QTextDocument * document);
-  fn dector_ZN11QTextCursorC1EP13QTextDocument(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QTextCursorC1EP13QTextDocument(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN11QTextCursorC2EP13QTextDocument(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTextCursor::insertText(const QString & text, const QTextCharFormat & format);
   fn _ZN11QTextCursor10insertTextERK7QStringRK15QTextCharFormat(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QTextCursor::mergeBlockFormat(const QTextBlockFormat & modifier);
@@ -154,7 +150,7 @@ extern {
   // proto:  void QTextCursor::deletePreviousChar();
   fn _ZN11QTextCursor18deletePreviousCharEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QTextCursor::~QTextCursor();
-  fn _ZN11QTextCursorD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN11QTextCursorD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QTextCursor::clearSelection();
   fn _ZN11QTextCursor14clearSelectionEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QTextCursor::setVisualNavigation(bool b);
@@ -172,8 +168,7 @@ extern {
   // proto:  QTextTable * QTextCursor::insertTable(int rows, int cols, const QTextTableFormat & format);
   fn _ZN11QTextCursor11insertTableEiiRK16QTextTableFormat(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
   // proto:  void QTextCursor::QTextCursor(QTextFrame * frame);
-  fn dector_ZN11QTextCursorC1EP10QTextFrame(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QTextCursorC1EP10QTextFrame(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN11QTextCursorC2EP10QTextFrame(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QTextCursor::selectionEnd();
   fn _ZNK11QTextCursor12selectionEndEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QTextCursor::setBlockFormat(const QTextBlockFormat & format);
@@ -588,12 +583,12 @@ pub trait QTextCursor_new {
 impl<'a> /*trait*/ QTextCursor_new for (&'a QTextCursor) {
   fn new(self) -> QTextCursor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QTextCursorC1ERKS_()};
+    // unsafe{_ZN11QTextCursorC2ERKS_()};
     let ctysz: c_int = unsafe{QTextCursor_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN11QTextCursorC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN11QTextCursorC1ERKS_(arg0)} as u64;
+    unsafe {_ZN11QTextCursorC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QTextCursor{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -672,12 +667,12 @@ impl<'a> /*trait*/ QTextCursor_insertBlock<()> for () {
 impl<'a> /*trait*/ QTextCursor_new for (&'a QTextBlock) {
   fn new(self) -> QTextCursor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QTextCursorC1ERK10QTextBlock()};
+    // unsafe{_ZN11QTextCursorC2ERK10QTextBlock()};
     let ctysz: c_int = unsafe{QTextCursor_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN11QTextCursorC1ERK10QTextBlock(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN11QTextCursorC1ERK10QTextBlock(arg0)} as u64;
+    unsafe {_ZN11QTextCursorC2ERK10QTextBlock(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QTextCursor{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -714,11 +709,11 @@ impl<'a> /*trait*/ QTextCursor_insertTable<QTextTable> for (i32, i32) {
 impl<'a> /*trait*/ QTextCursor_new for () {
   fn new(self) -> QTextCursor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QTextCursorC1Ev()};
+    // unsafe{_ZN11QTextCursorC2Ev()};
     let ctysz: c_int = unsafe{QTextCursor_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN11QTextCursorC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN11QTextCursorC1Ev()} as u64;
+    unsafe {_ZN11QTextCursorC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QTextCursor{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1180,12 +1175,12 @@ impl<'a> /*trait*/ QTextCursor_joinPreviousEditBlock<()> for () {
 impl<'a> /*trait*/ QTextCursor_new for (&'a QTextDocument) {
   fn new(self) -> QTextCursor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QTextCursorC1EP13QTextDocument()};
+    // unsafe{_ZN11QTextCursorC2EP13QTextDocument()};
     let ctysz: c_int = unsafe{QTextCursor_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN11QTextCursorC1EP13QTextDocument(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN11QTextCursorC1EP13QTextDocument(arg0)} as u64;
+    unsafe {_ZN11QTextCursorC2EP13QTextDocument(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QTextCursor{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1370,8 +1365,8 @@ pub trait QTextCursor_free<RetType> {
 impl<'a> /*trait*/ QTextCursor_free<()> for () {
   fn free(self , rsthis: & QTextCursor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QTextCursorD0Ev()};
-     unsafe {_ZN11QTextCursorD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN11QTextCursorD2Ev()};
+     unsafe {_ZN11QTextCursorD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1557,12 +1552,12 @@ impl<'a> /*trait*/ QTextCursor_insertTable<QTextTable> for (i32, i32, &'a QTextT
 impl<'a> /*trait*/ QTextCursor_new for (&'a QTextFrame) {
   fn new(self) -> QTextCursor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QTextCursorC1EP10QTextFrame()};
+    // unsafe{_ZN11QTextCursorC2EP10QTextFrame()};
     let ctysz: c_int = unsafe{QTextCursor_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN11QTextCursorC1EP10QTextFrame(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN11QTextCursorC1EP10QTextFrame(arg0)} as u64;
+    unsafe {_ZN11QTextCursorC2EP10QTextFrame(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QTextCursor{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

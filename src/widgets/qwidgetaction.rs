@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qwidgetaction.h
 // dst-file: /src/widgets/qwidgetaction.rs
 //
@@ -35,17 +35,15 @@ extern {
   // proto:  const QMetaObject * QWidgetAction::metaObject();
   fn _ZNK13QWidgetAction10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QWidgetAction::~QWidgetAction();
-  fn _ZN13QWidgetActionD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN13QWidgetActionD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QWidgetAction::setDefaultWidget(QWidget * w);
   fn _ZN13QWidgetAction16setDefaultWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QWidgetAction::releaseWidget(QWidget * widget);
   fn _ZN13QWidgetAction13releaseWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QWidgetAction::QWidgetAction(const QWidgetAction & );
-  fn dector_ZN13QWidgetActionC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN13QWidgetActionC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN13QWidgetActionC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QWidgetAction::QWidgetAction(QObject * parent);
-  fn dector_ZN13QWidgetActionC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN13QWidgetActionC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN13QWidgetActionC2EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QWidget * QWidgetAction::requestWidget(QWidget * parent);
   fn _ZN13QWidgetAction13requestWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QWidget * QWidgetAction::defaultWidget();
@@ -115,8 +113,8 @@ pub trait QWidgetAction_free<RetType> {
 impl<'a> /*trait*/ QWidgetAction_free<()> for () {
   fn free(self , rsthis: & QWidgetAction) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QWidgetActionD0Ev()};
-     unsafe {_ZN13QWidgetActionD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN13QWidgetActionD2Ev()};
+     unsafe {_ZN13QWidgetActionD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -184,12 +182,12 @@ pub trait QWidgetAction_new {
 impl<'a> /*trait*/ QWidgetAction_new for (&'a QWidgetAction) {
   fn new(self) -> QWidgetAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QWidgetActionC1ERKS_()};
+    // unsafe{_ZN13QWidgetActionC2ERKS_()};
     let ctysz: c_int = unsafe{QWidgetAction_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN13QWidgetActionC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN13QWidgetActionC1ERKS_(arg0)} as u64;
+    unsafe {_ZN13QWidgetActionC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QWidgetAction{qbase: QAction::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -200,12 +198,12 @@ impl<'a> /*trait*/ QWidgetAction_new for (&'a QWidgetAction) {
 impl<'a> /*trait*/ QWidgetAction_new for (&'a QObject) {
   fn new(self) -> QWidgetAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QWidgetActionC1EP7QObject()};
+    // unsafe{_ZN13QWidgetActionC2EP7QObject()};
     let ctysz: c_int = unsafe{QWidgetAction_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN13QWidgetActionC1EP7QObject(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN13QWidgetActionC1EP7QObject(arg0)} as u64;
+    unsafe {_ZN13QWidgetActionC2EP7QObject(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QWidgetAction{qbase: QAction::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

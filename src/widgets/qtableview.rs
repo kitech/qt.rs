@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qtableview.h
 // dst-file: /src/widgets/qtableview.rs
 //
@@ -92,12 +92,11 @@ extern {
   // proto:  void QTableView::selectColumn(int column);
   fn _ZN10QTableView12selectColumnEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QTableView::~QTableView();
-  fn _ZN10QTableViewD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN10QTableViewD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QTableView::resizeColumnToContents(int column);
   fn _ZN10QTableView22resizeColumnToContentsEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QTableView::QTableView(QWidget * parent);
-  fn dector_ZN10QTableViewC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN10QTableViewC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN10QTableViewC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTableView::sortByColumn(int column);
   fn _ZN10QTableView12sortByColumnEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QTableView::columnSpan(int row, int column);
@@ -109,8 +108,7 @@ extern {
   // proto:  int QTableView::rowHeight(int row);
   fn _ZNK10QTableView9rowHeightEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
   // proto:  void QTableView::QTableView(const QTableView & );
-  fn dector_ZN10QTableViewC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN10QTableViewC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN10QTableViewC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QTableView::rowAt(int y);
   fn _ZNK10QTableView5rowAtEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
   // proto:  int QTableView::rowSpan(int row, int column);
@@ -809,8 +807,8 @@ pub trait QTableView_free<RetType> {
 impl<'a> /*trait*/ QTableView_free<()> for () {
   fn free(self , rsthis: & QTableView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QTableViewD0Ev()};
-     unsafe {_ZN10QTableViewD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN10QTableViewD2Ev()};
+     unsafe {_ZN10QTableViewD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -855,12 +853,12 @@ pub trait QTableView_new {
 impl<'a> /*trait*/ QTableView_new for (&'a QWidget) {
   fn new(self) -> QTableView {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QTableViewC1EP7QWidget()};
+    // unsafe{_ZN10QTableViewC2EP7QWidget()};
     let ctysz: c_int = unsafe{QTableView_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN10QTableViewC1EP7QWidget(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN10QTableViewC1EP7QWidget(arg0)} as u64;
+    unsafe {_ZN10QTableViewC2EP7QWidget(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QTableView{qbase: QAbstractItemView::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -991,12 +989,12 @@ impl<'a> /*trait*/ QTableView_rowHeight<i32> for (i32) {
 impl<'a> /*trait*/ QTableView_new for (&'a QTableView) {
   fn new(self) -> QTableView {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QTableViewC1ERKS_()};
+    // unsafe{_ZN10QTableViewC2ERKS_()};
     let ctysz: c_int = unsafe{QTableView_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN10QTableViewC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN10QTableViewC1ERKS_(arg0)} as u64;
+    unsafe {_ZN10QTableViewC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QTableView{qbase: QAbstractItemView::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtGui/qabstracttextdocumentlayout.h
 // dst-file: /src/gui/qabstracttextdocumentlayout.rs
 //
@@ -42,7 +42,7 @@ use super::qtextobject::QTextBlock; // 773
 extern {
   fn QTextObjectInterface_Class_Size() -> c_int;
   // proto:  void QTextObjectInterface::~QTextObjectInterface();
-  fn _ZN20QTextObjectInterfaceD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN20QTextObjectInterfaceD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QSizeF QTextObjectInterface::intrinsicSize(QTextDocument * doc, int posInDocument, const QTextFormat & format);
   fn _ZN20QTextObjectInterface13intrinsicSizeEP13QTextDocumentiRK11QTextFormat(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
   // proto:  void QTextObjectInterface::drawObject(QPainter * painter, const QRectF & rect, QTextDocument * doc, int posInDocument, const QTextFormat & format);
@@ -55,7 +55,7 @@ extern {
   // proto:  int QAbstractTextDocumentLayout::pageCount();
   fn _ZNK27QAbstractTextDocumentLayout9pageCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QAbstractTextDocumentLayout::~QAbstractTextDocumentLayout();
-  fn _ZN27QAbstractTextDocumentLayoutD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN27QAbstractTextDocumentLayoutD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractTextDocumentLayout::setPaintDevice(QPaintDevice * device);
   fn _ZN27QAbstractTextDocumentLayout14setPaintDeviceEP12QPaintDevice(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QTextDocument * QAbstractTextDocumentLayout::document();
@@ -63,8 +63,7 @@ extern {
   // proto:  void QAbstractTextDocumentLayout::unregisterHandler(int objectType, QObject * component);
   fn _ZN27QAbstractTextDocumentLayout17unregisterHandlerEiP7QObject(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  void QAbstractTextDocumentLayout::QAbstractTextDocumentLayout(QTextDocument * doc);
-  fn dector_ZN27QAbstractTextDocumentLayoutC1EP13QTextDocument(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN27QAbstractTextDocumentLayoutC1EP13QTextDocument(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN27QAbstractTextDocumentLayoutC2EP13QTextDocument(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QSizeF QAbstractTextDocumentLayout::documentSize();
   fn _ZNK27QAbstractTextDocumentLayout12documentSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QPaintDevice * QAbstractTextDocumentLayout::paintDevice();
@@ -123,8 +122,8 @@ pub trait QTextObjectInterface_free<RetType> {
 impl<'a> /*trait*/ QTextObjectInterface_free<()> for () {
   fn free(self , rsthis: & QTextObjectInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN20QTextObjectInterfaceD0Ev()};
-     unsafe {_ZN20QTextObjectInterfaceD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN20QTextObjectInterfaceD2Ev()};
+     unsafe {_ZN20QTextObjectInterfaceD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -285,8 +284,8 @@ pub trait QAbstractTextDocumentLayout_free<RetType> {
 impl<'a> /*trait*/ QAbstractTextDocumentLayout_free<()> for () {
   fn free(self , rsthis: & QAbstractTextDocumentLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN27QAbstractTextDocumentLayoutD0Ev()};
-     unsafe {_ZN27QAbstractTextDocumentLayoutD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN27QAbstractTextDocumentLayoutD2Ev()};
+     unsafe {_ZN27QAbstractTextDocumentLayoutD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -379,12 +378,12 @@ pub trait QAbstractTextDocumentLayout_new {
 impl<'a> /*trait*/ QAbstractTextDocumentLayout_new for (&'a QTextDocument) {
   fn new(self) -> QAbstractTextDocumentLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN27QAbstractTextDocumentLayoutC1EP13QTextDocument()};
+    // unsafe{_ZN27QAbstractTextDocumentLayoutC2EP13QTextDocument()};
     let ctysz: c_int = unsafe{QAbstractTextDocumentLayout_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN27QAbstractTextDocumentLayoutC1EP13QTextDocument(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN27QAbstractTextDocumentLayoutC1EP13QTextDocument(arg0)} as u64;
+    unsafe {_ZN27QAbstractTextDocumentLayoutC2EP13QTextDocument(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QAbstractTextDocumentLayout{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

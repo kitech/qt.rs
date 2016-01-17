@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qtreeview.h
 // dst-file: /src/widgets/qtreeview.rs
 //
@@ -65,10 +65,9 @@ extern {
   // proto:  int QTreeView::autoExpandDelay();
   fn _ZNK9QTreeView15autoExpandDelayEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QTreeView::QTreeView(QWidget * parent);
-  fn dector_ZN9QTreeViewC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QTreeViewC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN9QTreeViewC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTreeView::~QTreeView();
-  fn _ZN9QTreeViewD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN9QTreeViewD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  int QTreeView::indentation();
   fn _ZNK9QTreeView11indentationEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QTreeView::columnViewportPosition(int column);
@@ -116,8 +115,7 @@ extern {
   // proto:  bool QTreeView::isRowHidden(int row, const QModelIndex & parent);
   fn _ZNK9QTreeView11isRowHiddenEiRK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void) -> c_char;
   // proto:  void QTreeView::QTreeView(const QTreeView & );
-  fn dector_ZN9QTreeViewC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QTreeViewC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN9QTreeViewC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTreeView::selectAll();
   fn _ZN9QTreeView9selectAllEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QTreeView::wordWrap();
@@ -517,12 +515,12 @@ pub trait QTreeView_new {
 impl<'a> /*trait*/ QTreeView_new for (&'a QWidget) {
   fn new(self) -> QTreeView {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QTreeViewC1EP7QWidget()};
+    // unsafe{_ZN9QTreeViewC2EP7QWidget()};
     let ctysz: c_int = unsafe{QTreeView_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN9QTreeViewC1EP7QWidget(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN9QTreeViewC1EP7QWidget(arg0)} as u64;
+    unsafe {_ZN9QTreeViewC2EP7QWidget(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QTreeView{qbase: QAbstractItemView::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -545,8 +543,8 @@ pub trait QTreeView_free<RetType> {
 impl<'a> /*trait*/ QTreeView_free<()> for () {
   fn free(self , rsthis: & QTreeView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QTreeViewD0Ev()};
-     unsafe {_ZN9QTreeViewD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN9QTreeViewD2Ev()};
+     unsafe {_ZN9QTreeViewD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1093,12 +1091,12 @@ impl<'a> /*trait*/ QTreeView_isRowHidden<i8> for (i32, &'a QModelIndex) {
 impl<'a> /*trait*/ QTreeView_new for (&'a QTreeView) {
   fn new(self) -> QTreeView {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QTreeViewC1ERKS_()};
+    // unsafe{_ZN9QTreeViewC2ERKS_()};
     let ctysz: c_int = unsafe{QTreeView_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN9QTreeViewC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN9QTreeViewC1ERKS_(arg0)} as u64;
+    unsafe {_ZN9QTreeViewC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QTreeView{qbase: QAbstractItemView::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qvariantanimation.h
 // dst-file: /src/core/qvariantanimation.rs
 //
@@ -42,7 +42,7 @@ extern {
   // proto:  QVariant QVariantAnimation::keyValueAt(qreal step);
   fn _ZNK17QVariantAnimation10keyValueAtEd(qthis: u64 /* *mut c_void*/, arg0: c_double) -> *mut c_void;
   // proto:  void QVariantAnimation::~QVariantAnimation();
-  fn _ZN17QVariantAnimationD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN17QVariantAnimationD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QVariant QVariantAnimation::currentValue();
   fn _ZNK17QVariantAnimation12currentValueEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QVariantAnimation::duration();
@@ -60,11 +60,9 @@ extern {
   // proto:  QEasingCurve QVariantAnimation::easingCurve();
   fn _ZNK17QVariantAnimation11easingCurveEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QVariantAnimation::QVariantAnimation(const QVariantAnimation & );
-  fn dector_ZN17QVariantAnimationC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN17QVariantAnimationC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN17QVariantAnimationC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QVariantAnimation::QVariantAnimation(QObject * parent);
-  fn dector_ZN17QVariantAnimationC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN17QVariantAnimationC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN17QVariantAnimationC2EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QVariantAnimation::setEasingCurve(const QEasingCurve & easing);
   fn _ZN17QVariantAnimation14setEasingCurveERK12QEasingCurve(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QVariantAnimation_SlotProxy_connect__ZN17QVariantAnimation12valueChangedERK8QVariant(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
@@ -208,8 +206,8 @@ pub trait QVariantAnimation_free<RetType> {
 impl<'a> /*trait*/ QVariantAnimation_free<()> for () {
   fn free(self , rsthis: & QVariantAnimation) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QVariantAnimationD0Ev()};
-     unsafe {_ZN17QVariantAnimationD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN17QVariantAnimationD2Ev()};
+     unsafe {_ZN17QVariantAnimationD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -416,12 +414,12 @@ pub trait QVariantAnimation_new {
 impl<'a> /*trait*/ QVariantAnimation_new for (&'a QVariantAnimation) {
   fn new(self) -> QVariantAnimation {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QVariantAnimationC1ERKS_()};
+    // unsafe{_ZN17QVariantAnimationC2ERKS_()};
     let ctysz: c_int = unsafe{QVariantAnimation_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN17QVariantAnimationC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN17QVariantAnimationC1ERKS_(arg0)} as u64;
+    unsafe {_ZN17QVariantAnimationC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QVariantAnimation{qbase: QAbstractAnimation::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -432,12 +430,12 @@ impl<'a> /*trait*/ QVariantAnimation_new for (&'a QVariantAnimation) {
 impl<'a> /*trait*/ QVariantAnimation_new for (&'a QObject) {
   fn new(self) -> QVariantAnimation {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QVariantAnimationC1EP7QObject()};
+    // unsafe{_ZN17QVariantAnimationC2EP7QObject()};
     let ctysz: c_int = unsafe{QVariantAnimation_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN17QVariantAnimationC1EP7QObject(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN17QVariantAnimationC1EP7QObject(arg0)} as u64;
+    unsafe {_ZN17QVariantAnimationC2EP7QObject(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QVariantAnimation{qbase: QAbstractAnimation::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

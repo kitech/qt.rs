@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtGui/qmatrix4x4.h
 // dst-file: /src/gui/qmatrix4x4.rs
 //
@@ -45,9 +45,9 @@ extern {
   // proto:  void QMatrix4x4::translate(float x, float y, float z);
   fn _ZN10QMatrix4x49translateEfff(qthis: u64 /* *mut c_void*/, arg0: c_float, arg1: c_float, arg2: c_float);
   // proto:  const float * QMatrix4x4::constData();
-  fn demth_ZNK10QMatrix4x49constDataEv(qthis: u64 /* *mut c_void*/) -> *mut c_float;
+  fn _ZNK10QMatrix4x49constDataEv(qthis: u64 /* *mut c_void*/) -> *mut c_float;
   // proto:  float * QMatrix4x4::data();
-  fn demth_ZN10QMatrix4x44dataEv(qthis: u64 /* *mut c_void*/) -> *mut c_float;
+  fn _ZN10QMatrix4x44dataEv(qthis: u64 /* *mut c_void*/) -> *mut c_float;
   // proto:  QMatrix4x4 QMatrix4x4::inverted(bool * invertible);
   fn _ZNK10QMatrix4x48invertedEPb(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> *mut c_void;
   // proto:  QVector3D QMatrix4x4::mapVector(const QVector3D & vector);
@@ -55,20 +55,19 @@ extern {
   // proto:  void QMatrix4x4::ortho(float left, float right, float bottom, float top, float nearPlane, float farPlane);
   fn _ZN10QMatrix4x45orthoEffffff(qthis: u64 /* *mut c_void*/, arg0: c_float, arg1: c_float, arg2: c_float, arg3: c_float, arg4: c_float, arg5: c_float);
   // proto:  void QMatrix4x4::QMatrix4x4();
-  fn dector_ZN10QMatrix4x4C1Ev() -> *mut c_void;
-  fn demth_ZN10QMatrix4x4C1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN10QMatrix4x4C2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QMatrix QMatrix4x4::toAffine();
   fn _ZNK10QMatrix4x48toAffineEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QRectF QMatrix4x4::mapRect(const QRectF & rect);
   fn _ZNK10QMatrix4x47mapRectERK6QRectF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QMatrix4x4::setColumn(int index, const QVector4D & value);
-  fn demth_ZN10QMatrix4x49setColumnEiRK9QVector4D(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
+  fn _ZN10QMatrix4x49setColumnEiRK9QVector4D(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  bool QMatrix4x4::isIdentity();
-  fn demth_ZNK10QMatrix4x410isIdentityEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn _ZNK10QMatrix4x410isIdentityEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QVector4D QMatrix4x4::column(int index);
-  fn demth_ZNK10QMatrix4x46columnEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
+  fn _ZNK10QMatrix4x46columnEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  void QMatrix4x4::setRow(int index, const QVector4D & value);
-  fn demth_ZN10QMatrix4x46setRowEiRK9QVector4D(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
+  fn _ZN10QMatrix4x46setRowEiRK9QVector4D(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  void QMatrix4x4::flipCoordinates();
   fn _ZN10QMatrix4x415flipCoordinatesEv(qthis: u64 /* *mut c_void*/);
   // proto:  QMatrix3x3 QMatrix4x4::normalMatrix();
@@ -78,17 +77,15 @@ extern {
   // proto:  void QMatrix4x4::copyDataTo(float * values);
   fn _ZNK10QMatrix4x410copyDataToEPf(qthis: u64 /* *mut c_void*/, arg0: *mut c_float);
   // proto:  void QMatrix4x4::QMatrix4x4(const QTransform & transform);
-  fn dector_ZN10QMatrix4x4C1ERK10QTransform(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN10QMatrix4x4C1ERK10QTransform(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN10QMatrix4x4C2ERK10QTransform(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QMatrix4x4::isAffine();
-  fn demth_ZNK10QMatrix4x48isAffineEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn _ZNK10QMatrix4x48isAffineEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QMatrix4x4::ortho(const QRect & rect);
   fn _ZN10QMatrix4x45orthoERK5QRect(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMatrix4x4::rotate(const QQuaternion & quaternion);
   fn _ZN10QMatrix4x46rotateERK11QQuaternion(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMatrix4x4::QMatrix4x4(const QMatrix & matrix);
-  fn dector_ZN10QMatrix4x4C1ERK7QMatrix(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN10QMatrix4x4C1ERK7QMatrix(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN10QMatrix4x4C2ERK7QMatrix(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMatrix4x4::perspective(float verticalAngle, float aspectRatio, float nearPlane, float farPlane);
   fn _ZN10QMatrix4x411perspectiveEffff(qthis: u64 /* *mut c_void*/, arg0: c_float, arg1: c_float, arg2: c_float, arg3: c_float);
   // proto:  void QMatrix4x4::translate(const QVector3D & vector);
@@ -102,24 +99,21 @@ extern {
   // proto:  QPoint QMatrix4x4::map(const QPoint & point);
   fn _ZNK10QMatrix4x43mapERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QMatrix4x4::QMatrix4x4(int );
-  fn dector_ZN10QMatrix4x4C1Ei(arg0: c_int) -> *mut c_void;
-  fn _ZN10QMatrix4x4C1Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn _ZN10QMatrix4x4C2Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QMatrix4x4::optimize();
   fn _ZN10QMatrix4x48optimizeEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QMatrix4x4::QMatrix4x4(const float * values);
-  fn dector_ZN10QMatrix4x4C1EPKf(arg0: *mut c_float) -> *mut c_void;
-  fn _ZN10QMatrix4x4C1EPKf(qthis: u64 /* *mut c_void*/, arg0: *mut c_float);
+  fn _ZN10QMatrix4x4C2EPKf(qthis: u64 /* *mut c_void*/, arg0: *mut c_float);
   // proto:  void QMatrix4x4::translate(float x, float y);
   fn _ZN10QMatrix4x49translateEff(qthis: u64 /* *mut c_void*/, arg0: c_float, arg1: c_float);
   // proto:  void QMatrix4x4::setToIdentity();
-  fn demth_ZN10QMatrix4x413setToIdentityEv(qthis: u64 /* *mut c_void*/);
+  fn _ZN10QMatrix4x413setToIdentityEv(qthis: u64 /* *mut c_void*/);
   // proto:  QRect QMatrix4x4::mapRect(const QRect & rect);
   fn _ZNK10QMatrix4x47mapRectERK5QRect(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QMatrix4x4::scale(float x, float y);
   fn _ZN10QMatrix4x45scaleEff(qthis: u64 /* *mut c_void*/, arg0: c_float, arg1: c_float);
   // proto:  void QMatrix4x4::QMatrix4x4(float m11, float m12, float m13, float m14, float m21, float m22, float m23, float m24, float m31, float m32, float m33, float m34, float m41, float m42, float m43, float m44);
-  fn dector_ZN10QMatrix4x4C1Effffffffffffffff(arg0: c_float, arg1: c_float, arg2: c_float, arg3: c_float, arg4: c_float, arg5: c_float, arg6: c_float, arg7: c_float, arg8: c_float, arg9: c_float, arg10: c_float, arg11: c_float, arg12: c_float, arg13: c_float, arg14: c_float, arg15: c_float) -> *mut c_void;
-  fn demth_ZN10QMatrix4x4C1Effffffffffffffff(qthis: u64 /* *mut c_void*/, arg0: c_float, arg1: c_float, arg2: c_float, arg3: c_float, arg4: c_float, arg5: c_float, arg6: c_float, arg7: c_float, arg8: c_float, arg9: c_float, arg10: c_float, arg11: c_float, arg12: c_float, arg13: c_float, arg14: c_float, arg15: c_float);
+  fn _ZN10QMatrix4x4C2Effffffffffffffff(qthis: u64 /* *mut c_void*/, arg0: c_float, arg1: c_float, arg2: c_float, arg3: c_float, arg4: c_float, arg5: c_float, arg6: c_float, arg7: c_float, arg8: c_float, arg9: c_float, arg10: c_float, arg11: c_float, arg12: c_float, arg13: c_float, arg14: c_float, arg15: c_float);
   // proto:  QVector3D QMatrix4x4::map(const QVector3D & point);
   fn _ZNK10QMatrix4x43mapERK9QVector3D(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QMatrix4x4::lookAt(const QVector3D & eye, const QVector3D & center, const QVector3D & up);
@@ -131,10 +125,9 @@ extern {
   // proto:  void QMatrix4x4::rotate(float angle, float x, float y, float z);
   fn _ZN10QMatrix4x46rotateEffff(qthis: u64 /* *mut c_void*/, arg0: c_float, arg1: c_float, arg2: c_float, arg3: c_float);
   // proto:  void QMatrix4x4::fill(float value);
-  fn demth_ZN10QMatrix4x44fillEf(qthis: u64 /* *mut c_void*/, arg0: c_float);
+  fn _ZN10QMatrix4x44fillEf(qthis: u64 /* *mut c_void*/, arg0: c_float);
   // proto:  void QMatrix4x4::QMatrix4x4(const float * values, int cols, int rows);
-  fn dector_ZN10QMatrix4x4C1EPKfii(arg0: *mut c_float, arg1: c_int, arg2: c_int) -> *mut c_void;
-  fn _ZN10QMatrix4x4C1EPKfii(qthis: u64 /* *mut c_void*/, arg0: *mut c_float, arg1: c_int, arg2: c_int);
+  fn _ZN10QMatrix4x4C2EPKfii(qthis: u64 /* *mut c_void*/, arg0: *mut c_float, arg1: c_int, arg2: c_int);
   // proto:  QTransform QMatrix4x4::toTransform(float distanceToPlane);
   fn _ZNK10QMatrix4x411toTransformEf(qthis: u64 /* *mut c_void*/, arg0: c_float) -> *mut c_void;
   // proto:  QMatrix4x4 QMatrix4x4::transposed();
@@ -144,7 +137,7 @@ extern {
   // proto:  void QMatrix4x4::scale(float factor);
   fn _ZN10QMatrix4x45scaleEf(qthis: u64 /* *mut c_void*/, arg0: c_float);
   // proto:  QVector4D QMatrix4x4::row(int index);
-  fn demth_ZNK10QMatrix4x43rowEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
+  fn _ZNK10QMatrix4x43rowEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  void QMatrix4x4::rotate(float angle, const QVector3D & vector);
   fn _ZN10QMatrix4x46rotateEfRK9QVector3D(qthis: u64 /* *mut c_void*/, arg0: c_float, arg1: *mut c_void);
   // proto:  QVector4D QMatrix4x4::map(const QVector4D & point);
@@ -253,7 +246,7 @@ impl<'a> /*trait*/ QMatrix4x4_constData<*mut f32> for () {
   fn constData(self , rsthis: & QMatrix4x4) -> *mut f32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 68)};
     // unsafe{_ZNK10QMatrix4x49constDataEv()};
-    let mut ret = unsafe {demth_ZNK10QMatrix4x49constDataEv(rsthis.qclsinst)};
+    let mut ret = unsafe {_ZNK10QMatrix4x49constDataEv(rsthis.qclsinst)};
     return ret as *mut f32;
     // return 1;
   }
@@ -276,7 +269,7 @@ impl<'a> /*trait*/ QMatrix4x4_data<*mut f32> for () {
   fn data(self , rsthis: & QMatrix4x4) -> *mut f32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 68)};
     // unsafe{_ZN10QMatrix4x44dataEv()};
-    let mut ret = unsafe {demth_ZN10QMatrix4x44dataEv(rsthis.qclsinst)};
+    let mut ret = unsafe {_ZN10QMatrix4x44dataEv(rsthis.qclsinst)};
     return ret as *mut f32;
     // return 1;
   }
@@ -377,11 +370,11 @@ pub trait QMatrix4x4_new {
 impl<'a> /*trait*/ QMatrix4x4_new for () {
   fn new(self) -> QMatrix4x4 {
     // let qthis: *mut c_void = unsafe{calloc(1, 68)};
-    // unsafe{_ZN10QMatrix4x4C1Ev()};
+    // unsafe{_ZN10QMatrix4x4C2Ev()};
     let ctysz: c_int = unsafe{QMatrix4x4_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN10QMatrix4x4C1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN10QMatrix4x4C1Ev()} as u64;
+    unsafe {_ZN10QMatrix4x4C2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QMatrix4x4{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -456,7 +449,7 @@ impl<'a> /*trait*/ QMatrix4x4_setColumn<()> for (i32, &'a QVector4D) {
     // unsafe{_ZN10QMatrix4x49setColumnEiRK9QVector4D()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {demth_ZN10QMatrix4x49setColumnEiRK9QVector4D(rsthis.qclsinst, arg0, arg1)};
+     unsafe {_ZN10QMatrix4x49setColumnEiRK9QVector4D(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -478,7 +471,7 @@ impl<'a> /*trait*/ QMatrix4x4_isIdentity<i8> for () {
   fn isIdentity(self , rsthis: & QMatrix4x4) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 68)};
     // unsafe{_ZNK10QMatrix4x410isIdentityEv()};
-    let mut ret = unsafe {demth_ZNK10QMatrix4x410isIdentityEv(rsthis.qclsinst)};
+    let mut ret = unsafe {_ZNK10QMatrix4x410isIdentityEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -502,7 +495,7 @@ impl<'a> /*trait*/ QMatrix4x4_column<QVector4D> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 68)};
     // unsafe{_ZNK10QMatrix4x46columnEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {demth_ZNK10QMatrix4x46columnEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {_ZNK10QMatrix4x46columnEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QVector4D::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -528,7 +521,7 @@ impl<'a> /*trait*/ QMatrix4x4_setRow<()> for (i32, &'a QVector4D) {
     // unsafe{_ZN10QMatrix4x46setRowEiRK9QVector4D()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {demth_ZN10QMatrix4x46setRowEiRK9QVector4D(rsthis.qclsinst, arg0, arg1)};
+     unsafe {_ZN10QMatrix4x46setRowEiRK9QVector4D(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -632,12 +625,12 @@ impl<'a> /*trait*/ QMatrix4x4_copyDataTo<()> for (&'a mut Vec<f32>) {
 impl<'a> /*trait*/ QMatrix4x4_new for (&'a QTransform) {
   fn new(self) -> QMatrix4x4 {
     // let qthis: *mut c_void = unsafe{calloc(1, 68)};
-    // unsafe{_ZN10QMatrix4x4C1ERK10QTransform()};
+    // unsafe{_ZN10QMatrix4x4C2ERK10QTransform()};
     let ctysz: c_int = unsafe{QMatrix4x4_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN10QMatrix4x4C1ERK10QTransform(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN10QMatrix4x4C1ERK10QTransform(arg0)} as u64;
+    unsafe {_ZN10QMatrix4x4C2ERK10QTransform(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QMatrix4x4{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -661,7 +654,7 @@ impl<'a> /*trait*/ QMatrix4x4_isAffine<i8> for () {
   fn isAffine(self , rsthis: & QMatrix4x4) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 68)};
     // unsafe{_ZNK10QMatrix4x48isAffineEv()};
-    let mut ret = unsafe {demth_ZNK10QMatrix4x48isAffineEv(rsthis.qclsinst)};
+    let mut ret = unsafe {_ZNK10QMatrix4x48isAffineEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -705,12 +698,12 @@ impl<'a> /*trait*/ QMatrix4x4_rotate<()> for (&'a QQuaternion) {
 impl<'a> /*trait*/ QMatrix4x4_new for (&'a QMatrix) {
   fn new(self) -> QMatrix4x4 {
     // let qthis: *mut c_void = unsafe{calloc(1, 68)};
-    // unsafe{_ZN10QMatrix4x4C1ERK7QMatrix()};
+    // unsafe{_ZN10QMatrix4x4C2ERK7QMatrix()};
     let ctysz: c_int = unsafe{QMatrix4x4_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN10QMatrix4x4C1ERK7QMatrix(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN10QMatrix4x4C1ERK7QMatrix(arg0)} as u64;
+    unsafe {_ZN10QMatrix4x4C2ERK7QMatrix(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QMatrix4x4{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -847,12 +840,12 @@ impl<'a> /*trait*/ QMatrix4x4_map<QPoint> for (&'a QPoint) {
 impl<'a> /*trait*/ QMatrix4x4_new for (i32) {
   fn new(self) -> QMatrix4x4 {
     // let qthis: *mut c_void = unsafe{calloc(1, 68)};
-    // unsafe{_ZN10QMatrix4x4C1Ei()};
+    // unsafe{_ZN10QMatrix4x4C2Ei()};
     let ctysz: c_int = unsafe{QMatrix4x4_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
-    // unsafe {_ZN10QMatrix4x4C1Ei(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN10QMatrix4x4C1Ei(arg0)} as u64;
+    unsafe {_ZN10QMatrix4x4C2Ei(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QMatrix4x4{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -885,12 +878,12 @@ impl<'a> /*trait*/ QMatrix4x4_optimize<()> for () {
 impl<'a> /*trait*/ QMatrix4x4_new for (&'a  Vec<f32>) {
   fn new(self) -> QMatrix4x4 {
     // let qthis: *mut c_void = unsafe{calloc(1, 68)};
-    // unsafe{_ZN10QMatrix4x4C1EPKf()};
+    // unsafe{_ZN10QMatrix4x4C2EPKf()};
     let ctysz: c_int = unsafe{QMatrix4x4_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.as_ptr()  as *mut c_float;
-    // unsafe {_ZN10QMatrix4x4C1EPKf(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN10QMatrix4x4C1EPKf(arg0)} as u64;
+    unsafe {_ZN10QMatrix4x4C2EPKf(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QMatrix4x4{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -926,7 +919,7 @@ impl<'a> /*trait*/ QMatrix4x4_setToIdentity<()> for () {
   fn setToIdentity(self , rsthis: & QMatrix4x4) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 68)};
     // unsafe{_ZN10QMatrix4x413setToIdentityEv()};
-     unsafe {demth_ZN10QMatrix4x413setToIdentityEv(rsthis.qclsinst)};
+     unsafe {_ZN10QMatrix4x413setToIdentityEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -960,7 +953,7 @@ impl<'a> /*trait*/ QMatrix4x4_scale<()> for (f32, f32) {
 impl<'a> /*trait*/ QMatrix4x4_new for (f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32) {
   fn new(self) -> QMatrix4x4 {
     // let qthis: *mut c_void = unsafe{calloc(1, 68)};
-    // unsafe{_ZN10QMatrix4x4C1Effffffffffffffff()};
+    // unsafe{_ZN10QMatrix4x4C2Effffffffffffffff()};
     let ctysz: c_int = unsafe{QMatrix4x4_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_float;
@@ -979,8 +972,8 @@ impl<'a> /*trait*/ QMatrix4x4_new for (f32, f32, f32, f32, f32, f32, f32, f32, f
     let arg13 = self.13  as c_float;
     let arg14 = self.14  as c_float;
     let arg15 = self.15  as c_float;
-    // unsafe {_ZN10QMatrix4x4C1Effffffffffffffff(qthis, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15)};
-    let qthis: u64 = unsafe {dector_ZN10QMatrix4x4C1Effffffffffffffff(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15)} as u64;
+    unsafe {_ZN10QMatrix4x4C2Effffffffffffffff(qthis_ph, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QMatrix4x4{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1079,7 +1072,7 @@ impl<'a> /*trait*/ QMatrix4x4_fill<()> for (f32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 68)};
     // unsafe{_ZN10QMatrix4x44fillEf()};
     let arg0 = self  as c_float;
-     unsafe {demth_ZN10QMatrix4x44fillEf(rsthis.qclsinst, arg0)};
+     unsafe {_ZN10QMatrix4x44fillEf(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1088,14 +1081,14 @@ impl<'a> /*trait*/ QMatrix4x4_fill<()> for (f32) {
 impl<'a> /*trait*/ QMatrix4x4_new for (&'a  Vec<f32>, i32, i32) {
   fn new(self) -> QMatrix4x4 {
     // let qthis: *mut c_void = unsafe{calloc(1, 68)};
-    // unsafe{_ZN10QMatrix4x4C1EPKfii()};
+    // unsafe{_ZN10QMatrix4x4C2EPKfii()};
     let ctysz: c_int = unsafe{QMatrix4x4_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.as_ptr()  as *mut c_float;
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as c_int;
-    // unsafe {_ZN10QMatrix4x4C1EPKfii(qthis, arg0, arg1, arg2)};
-    let qthis: u64 = unsafe {dector_ZN10QMatrix4x4C1EPKfii(arg0, arg1, arg2)} as u64;
+    unsafe {_ZN10QMatrix4x4C2EPKfii(qthis_ph, arg0, arg1, arg2)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QMatrix4x4{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1181,7 +1174,7 @@ impl<'a> /*trait*/ QMatrix4x4_row<QVector4D> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 68)};
     // unsafe{_ZNK10QMatrix4x43rowEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {demth_ZNK10QMatrix4x43rowEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {_ZNK10QMatrix4x43rowEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QVector4D::inheritFrom(ret as u64);
     return ret1;
     // return 1;

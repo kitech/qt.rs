@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qopenglwidget.h
 // dst-file: /src/widgets/qopenglwidget.rs
 //
@@ -33,12 +33,11 @@ use super::super::gui::qsurfaceformat::QSurfaceFormat; // 771
 extern {
   fn QOpenGLWidget_Class_Size() -> c_int;
   // proto:  void QOpenGLWidget::~QOpenGLWidget();
-  fn _ZN13QOpenGLWidgetD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN13QOpenGLWidgetD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  GLuint QOpenGLWidget::defaultFramebufferObject();
   fn _ZNK13QOpenGLWidget24defaultFramebufferObjectEv(qthis: u64 /* *mut c_void*/) -> c_uint;
   // proto:  void QOpenGLWidget::QOpenGLWidget(const QOpenGLWidget & );
-  fn dector_ZN13QOpenGLWidgetC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN13QOpenGLWidgetC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN13QOpenGLWidgetC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QOpenGLWidget::isValid();
   fn _ZNK13QOpenGLWidget7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QOpenGLContext * QOpenGLWidget::context();
@@ -106,8 +105,8 @@ pub trait QOpenGLWidget_free<RetType> {
 impl<'a> /*trait*/ QOpenGLWidget_free<()> for () {
   fn free(self , rsthis: & QOpenGLWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QOpenGLWidgetD0Ev()};
-     unsafe {_ZN13QOpenGLWidgetD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN13QOpenGLWidgetD2Ev()};
+     unsafe {_ZN13QOpenGLWidgetD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -152,12 +151,12 @@ pub trait QOpenGLWidget_new {
 impl<'a> /*trait*/ QOpenGLWidget_new for (&'a QOpenGLWidget) {
   fn new(self) -> QOpenGLWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QOpenGLWidgetC1ERKS_()};
+    // unsafe{_ZN13QOpenGLWidgetC2ERKS_()};
     let ctysz: c_int = unsafe{QOpenGLWidget_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN13QOpenGLWidgetC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN13QOpenGLWidgetC1ERKS_(arg0)} as u64;
+    unsafe {_ZN13QOpenGLWidgetC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QOpenGLWidget{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

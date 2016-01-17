@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qresource.h
 // dst-file: /src/core/qresource.rs
 //
@@ -32,8 +32,7 @@ use super::qlocale::QLocale; // 773
 extern {
   fn QResource_Class_Size() -> c_int;
   // proto:  void QResource::QResource(const QString & file, const QLocale & locale);
-  fn dector_ZN9QResourceC1ERK7QStringRK7QLocale(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN9QResourceC1ERK7QStringRK7QLocale(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN9QResourceC2ERK7QStringRK7QLocale(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  QLocale QResource::locale();
   fn _ZNK9QResource6localeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QResource::setLocale(const QLocale & locale);
@@ -57,7 +56,7 @@ extern {
   // proto:  qint64 QResource::size();
   fn _ZNK9QResource4sizeEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
   // proto:  void QResource::~QResource();
-  fn _ZN9QResourceD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN9QResourceD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QResource::isValid();
   fn _ZNK9QResource7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QResource::setFileName(const QString & file);
@@ -98,13 +97,13 @@ pub trait QResource_new {
 impl<'a> /*trait*/ QResource_new for (&'a QString, &'a QLocale) {
   fn new(self) -> QResource {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QResourceC1ERK7QStringRK7QLocale()};
+    // unsafe{_ZN9QResourceC2ERK7QStringRK7QLocale()};
     let ctysz: c_int = unsafe{QResource_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    // unsafe {_ZN9QResourceC1ERK7QStringRK7QLocale(qthis, arg0, arg1)};
-    let qthis: u64 = unsafe {dector_ZN9QResourceC1ERK7QStringRK7QLocale(arg0, arg1)} as u64;
+    unsafe {_ZN9QResourceC2ERK7QStringRK7QLocale(qthis_ph, arg0, arg1)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QResource{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -377,8 +376,8 @@ pub trait QResource_free<RetType> {
 impl<'a> /*trait*/ QResource_free<()> for () {
   fn free(self , rsthis: & QResource) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QResourceD0Ev()};
-     unsafe {_ZN9QResourceD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN9QResourceD2Ev()};
+     unsafe {_ZN9QResourceD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

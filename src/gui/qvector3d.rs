@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtGui/qvector3d.h
 // dst-file: /src/gui/qvector3d.rs
 //
@@ -66,16 +66,13 @@ extern {
   // proto:  float QVector3D::distanceToPlane(const QVector3D & plane1, const QVector3D & plane2, const QVector3D & plane3);
   fn _ZNK9QVector3D15distanceToPlaneERKS_S1_S1_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> c_float;
   // proto:  void QVector3D::QVector3D(const QPointF & point);
-  fn dector_ZN9QVector3DC1ERK7QPointF(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QVector3DC1ERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN9QVector3DC2ERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  float QVector3D::distanceToPoint(const QVector3D & point);
   fn _ZNK9QVector3D15distanceToPointERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_float;
   // proto:  void QVector3D::QVector3D(const QVector2D & vector);
-  fn dector_ZN9QVector3DC1ERK9QVector2D(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QVector3DC1ERK9QVector2D(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN9QVector3DC2ERK9QVector2D(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QVector3D::QVector3D(const QPoint & point);
-  fn dector_ZN9QVector3DC1ERK6QPoint(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QVector3DC1ERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN9QVector3DC2ERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  float QVector3D::lengthSquared();
   fn _ZNK9QVector3D13lengthSquaredEv(qthis: u64 /* *mut c_void*/) -> c_float;
   // proto: static QVector3D QVector3D::normal(const QVector3D & v1, const QVector3D & v2, const QVector3D & v3);
@@ -85,8 +82,7 @@ extern {
   // proto:  QVector3D QVector3D::normalized();
   fn _ZNK9QVector3D10normalizedEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QVector3D::QVector3D(const QVector4D & vector);
-  fn dector_ZN9QVector3DC1ERK9QVector4D(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QVector3DC1ERK9QVector4D(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN9QVector3DC2ERK9QVector4D(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QVector3D::isNull();
   fn _ZNK9QVector3D6isNullEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  float QVector3D::length();
@@ -94,16 +90,13 @@ extern {
   // proto: static float QVector3D::dotProduct(const QVector3D & v1, const QVector3D & v2);
   fn _ZN9QVector3D10dotProductERKS_S1_(arg0: *mut c_void, arg1: *mut c_void) -> c_float;
   // proto:  void QVector3D::QVector3D();
-  fn dector_ZN9QVector3DC1Ev() -> *mut c_void;
-  fn _ZN9QVector3DC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN9QVector3DC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QVector3D::QVector3D(float xpos, float ypos, float zpos);
-  fn dector_ZN9QVector3DC1Efff(arg0: c_float, arg1: c_float, arg2: c_float) -> *mut c_void;
-  fn _ZN9QVector3DC1Efff(qthis: u64 /* *mut c_void*/, arg0: c_float, arg1: c_float, arg2: c_float);
+  fn _ZN9QVector3DC2Efff(qthis: u64 /* *mut c_void*/, arg0: c_float, arg1: c_float, arg2: c_float);
   // proto:  QVector4D QVector3D::toVector4D();
   fn _ZNK9QVector3D10toVector4DEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QVector3D::QVector3D(const QVector2D & vector, float zpos);
-  fn dector_ZN9QVector3DC1ERK9QVector2Df(arg0: *mut c_void, arg1: c_float) -> *mut c_void;
-  fn _ZN9QVector3DC1ERK9QVector2Df(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_float);
+  fn _ZN9QVector3DC2ERK9QVector2Df(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_float);
   // proto:  void QVector3D::setX(float x);
   fn _ZN9QVector3D4setXEf(qthis: u64 /* *mut c_void*/, arg0: c_float);
 } // <= ext block end
@@ -502,12 +495,12 @@ pub trait QVector3D_new {
 impl<'a> /*trait*/ QVector3D_new for (&'a QPointF) {
   fn new(self) -> QVector3D {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QVector3DC1ERK7QPointF()};
+    // unsafe{_ZN9QVector3DC2ERK7QPointF()};
     let ctysz: c_int = unsafe{QVector3D_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN9QVector3DC1ERK7QPointF(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN9QVector3DC1ERK7QPointF(arg0)} as u64;
+    unsafe {_ZN9QVector3DC2ERK7QPointF(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QVector3D{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -542,12 +535,12 @@ impl<'a> /*trait*/ QVector3D_distanceToPoint<f32> for (&'a QVector3D) {
 impl<'a> /*trait*/ QVector3D_new for (&'a QVector2D) {
   fn new(self) -> QVector3D {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QVector3DC1ERK9QVector2D()};
+    // unsafe{_ZN9QVector3DC2ERK9QVector2D()};
     let ctysz: c_int = unsafe{QVector3D_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN9QVector3DC1ERK9QVector2D(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN9QVector3DC1ERK9QVector2D(arg0)} as u64;
+    unsafe {_ZN9QVector3DC2ERK9QVector2D(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QVector3D{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -558,12 +551,12 @@ impl<'a> /*trait*/ QVector3D_new for (&'a QVector2D) {
 impl<'a> /*trait*/ QVector3D_new for (&'a QPoint) {
   fn new(self) -> QVector3D {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QVector3DC1ERK6QPoint()};
+    // unsafe{_ZN9QVector3DC2ERK6QPoint()};
     let ctysz: c_int = unsafe{QVector3D_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN9QVector3DC1ERK6QPoint(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN9QVector3DC1ERK6QPoint(arg0)} as u64;
+    unsafe {_ZN9QVector3DC2ERK6QPoint(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QVector3D{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -649,12 +642,12 @@ impl<'a> /*trait*/ QVector3D_normalized<QVector3D> for () {
 impl<'a> /*trait*/ QVector3D_new for (&'a QVector4D) {
   fn new(self) -> QVector3D {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QVector3DC1ERK9QVector4D()};
+    // unsafe{_ZN9QVector3DC2ERK9QVector4D()};
     let ctysz: c_int = unsafe{QVector3D_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN9QVector3DC1ERK9QVector4D(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN9QVector3DC1ERK9QVector4D(arg0)} as u64;
+    unsafe {_ZN9QVector3DC2ERK9QVector4D(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QVector3D{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -736,11 +729,11 @@ impl<'a> /*trait*/ QVector3D_dotProduct_s<f32> for (&'a QVector3D, &'a QVector3D
 impl<'a> /*trait*/ QVector3D_new for () {
   fn new(self) -> QVector3D {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QVector3DC1Ev()};
+    // unsafe{_ZN9QVector3DC2Ev()};
     let ctysz: c_int = unsafe{QVector3D_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN9QVector3DC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN9QVector3DC1Ev()} as u64;
+    unsafe {_ZN9QVector3DC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QVector3D{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -751,14 +744,14 @@ impl<'a> /*trait*/ QVector3D_new for () {
 impl<'a> /*trait*/ QVector3D_new for (f32, f32, f32) {
   fn new(self) -> QVector3D {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QVector3DC1Efff()};
+    // unsafe{_ZN9QVector3DC2Efff()};
     let ctysz: c_int = unsafe{QVector3D_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_float;
     let arg1 = self.1  as c_float;
     let arg2 = self.2  as c_float;
-    // unsafe {_ZN9QVector3DC1Efff(qthis, arg0, arg1, arg2)};
-    let qthis: u64 = unsafe {dector_ZN9QVector3DC1Efff(arg0, arg1, arg2)} as u64;
+    unsafe {_ZN9QVector3DC2Efff(qthis_ph, arg0, arg1, arg2)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QVector3D{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -793,13 +786,13 @@ impl<'a> /*trait*/ QVector3D_toVector4D<QVector4D> for () {
 impl<'a> /*trait*/ QVector3D_new for (&'a QVector2D, f32) {
   fn new(self) -> QVector3D {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QVector3DC1ERK9QVector2Df()};
+    // unsafe{_ZN9QVector3DC2ERK9QVector2Df()};
     let ctysz: c_int = unsafe{QVector3D_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_float;
-    // unsafe {_ZN9QVector3DC1ERK9QVector2Df(qthis, arg0, arg1)};
-    let qthis: u64 = unsafe {dector_ZN9QVector3DC1ERK9QVector2Df(arg0, arg1)} as u64;
+    unsafe {_ZN9QVector3DC2ERK9QVector2Df(qthis_ph, arg0, arg1)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QVector3D{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

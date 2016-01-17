@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qsocketnotifier.h
 // dst-file: /src/core/qsocketnotifier.rs
 //
@@ -31,8 +31,7 @@ use std::ops::Deref;
 extern {
   fn QSocketNotifier_Class_Size() -> c_int;
   // proto:  void QSocketNotifier::QSocketNotifier(const QSocketNotifier & );
-  fn dector_ZN15QSocketNotifierC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN15QSocketNotifierC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN15QSocketNotifierC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  qintptr QSocketNotifier::socket();
   fn _ZNK15QSocketNotifier6socketEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QSocketNotifier::isEnabled();
@@ -42,7 +41,7 @@ extern {
   // proto:  const QMetaObject * QSocketNotifier::metaObject();
   fn _ZNK15QSocketNotifier10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QSocketNotifier::~QSocketNotifier();
-  fn _ZN15QSocketNotifierD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN15QSocketNotifierD2Ev(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
@@ -88,12 +87,12 @@ pub trait QSocketNotifier_new {
 impl<'a> /*trait*/ QSocketNotifier_new for (&'a QSocketNotifier) {
   fn new(self) -> QSocketNotifier {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QSocketNotifierC1ERKS_()};
+    // unsafe{_ZN15QSocketNotifierC2ERKS_()};
     let ctysz: c_int = unsafe{QSocketNotifier_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN15QSocketNotifierC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN15QSocketNotifierC1ERKS_(arg0)} as u64;
+    unsafe {_ZN15QSocketNotifierC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QSocketNotifier{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -207,8 +206,8 @@ pub trait QSocketNotifier_free<RetType> {
 impl<'a> /*trait*/ QSocketNotifier_free<()> for () {
   fn free(self , rsthis: & QSocketNotifier) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QSocketNotifierD0Ev()};
-     unsafe {_ZN15QSocketNotifierD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN15QSocketNotifierD2Ev()};
+     unsafe {_ZN15QSocketNotifierD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qthread.h
 // dst-file: /src/core/qthread.rs
 //
@@ -33,8 +33,7 @@ use super::qcoreevent::QEvent; // 773
 extern {
   fn QThread_Class_Size() -> c_int;
   // proto:  void QThread::QThread(QObject * parent);
-  fn dector_ZN7QThreadC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN7QThreadC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN7QThreadC2EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QThread::setEventDispatcher(QAbstractEventDispatcher * eventDispatcher);
   fn _ZN7QThread18setEventDispatcherEP24QAbstractEventDispatcher(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QThread::metaObject();
@@ -74,7 +73,7 @@ extern {
   // proto:  void QThread::terminate();
   fn _ZN7QThread9terminateEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QThread::~QThread();
-  fn _ZN7QThreadD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN7QThreadD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QThread::quit();
   fn _ZN7QThread4quitEv(qthis: u64 /* *mut c_void*/);
   // proto:  int QThread::loopLevel();
@@ -125,12 +124,12 @@ pub trait QThread_new {
 impl<'a> /*trait*/ QThread_new for (&'a QObject) {
   fn new(self) -> QThread {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QThreadC1EP7QObject()};
+    // unsafe{_ZN7QThreadC2EP7QObject()};
     let ctysz: c_int = unsafe{QThread_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN7QThreadC1EP7QObject(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN7QThreadC1EP7QObject(arg0)} as u64;
+    unsafe {_ZN7QThreadC2EP7QObject(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QThread{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -588,8 +587,8 @@ pub trait QThread_free<RetType> {
 impl<'a> /*trait*/ QThread_free<()> for () {
   fn free(self , rsthis: & QThread) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QThreadD0Ev()};
-     unsafe {_ZN7QThreadD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN7QThreadD2Ev()};
+     unsafe {_ZN7QThreadD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

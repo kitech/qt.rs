@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qaction.h
 // dst-file: /src/widgets/qaction.rs
 //
@@ -45,10 +45,9 @@ extern {
   // proto:  QString QAction::whatsThis();
   fn _ZNK7QAction9whatsThisEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAction::QAction(const QString & text, QObject * parent);
-  fn dector_ZN7QActionC1ERK7QStringP7QObject(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN7QActionC1ERK7QStringP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN7QActionC2ERK7QStringP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QAction::~QAction();
-  fn _ZN7QActionD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN7QActionD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QAction::isVisible();
   fn _ZNK7QAction9isVisibleEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QAction::setFont(const QFont & font);
@@ -58,8 +57,7 @@ extern {
   // proto:  void QAction::setIcon(const QIcon & icon);
   fn _ZN7QAction7setIconERK5QIcon(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAction::QAction(QObject * parent);
-  fn dector_ZN7QActionC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN7QActionC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN7QActionC2EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QAction::metaObject();
   fn _ZNK7QAction10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QAction::setText(const QString & text);
@@ -83,12 +81,11 @@ extern {
   // proto:  QFont QAction::font();
   fn _ZNK7QAction4fontEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAction::QAction(const QIcon & icon, const QString & text, QObject * parent);
-  fn dector_ZN7QActionC1ERK5QIconRK7QStringP7QObject(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> *mut c_void;
-  fn _ZN7QActionC1ERK5QIconRK7QStringP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
+  fn _ZN7QActionC2ERK5QIconRK7QStringP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  void QAction::setChecked(bool );
   fn _ZN7QAction10setCheckedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QAction::setDisabled(bool b);
-  fn demth_ZN7QAction11setDisabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn _ZN7QAction11setDisabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QAction::setShortcut(const QKeySequence & shortcut);
   fn _ZN7QAction11setShortcutERK12QKeySequence(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAction::toggle();
@@ -126,8 +123,7 @@ extern {
   // proto:  QVariant QAction::data();
   fn _ZNK7QAction4dataEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAction::QAction(const QAction & );
-  fn dector_ZN7QActionC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN7QActionC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN7QActionC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QAction::isChecked();
   fn _ZNK7QAction9isCheckedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QAction::autoRepeat();
@@ -265,13 +261,13 @@ pub trait QAction_new {
 impl<'a> /*trait*/ QAction_new for (&'a QString, &'a QObject) {
   fn new(self) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QActionC1ERK7QStringP7QObject()};
+    // unsafe{_ZN7QActionC2ERK7QStringP7QObject()};
     let ctysz: c_int = unsafe{QAction_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    // unsafe {_ZN7QActionC1ERK7QStringP7QObject(qthis, arg0, arg1)};
-    let qthis: u64 = unsafe {dector_ZN7QActionC1ERK7QStringP7QObject(arg0, arg1)} as u64;
+    unsafe {_ZN7QActionC2ERK7QStringP7QObject(qthis_ph, arg0, arg1)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QAction{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -294,8 +290,8 @@ pub trait QAction_free<RetType> {
 impl<'a> /*trait*/ QAction_free<()> for () {
   fn free(self , rsthis: & QAction) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QActionD0Ev()};
-     unsafe {_ZN7QActionD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN7QActionD2Ev()};
+     unsafe {_ZN7QActionD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -396,12 +392,12 @@ impl<'a> /*trait*/ QAction_setIcon<()> for (&'a QIcon) {
 impl<'a> /*trait*/ QAction_new for (&'a QObject) {
   fn new(self) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QActionC1EP7QObject()};
+    // unsafe{_ZN7QActionC2EP7QObject()};
     let ctysz: c_int = unsafe{QAction_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN7QActionC1EP7QObject(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN7QActionC1EP7QObject(arg0)} as u64;
+    unsafe {_ZN7QActionC2EP7QObject(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QAction{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -668,14 +664,14 @@ impl<'a> /*trait*/ QAction_font<QFont> for () {
 impl<'a> /*trait*/ QAction_new for (&'a QIcon, &'a QString, &'a QObject) {
   fn new(self) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QActionC1ERK5QIconRK7QStringP7QObject()};
+    // unsafe{_ZN7QActionC2ERK5QIconRK7QStringP7QObject()};
     let ctysz: c_int = unsafe{QAction_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
-    // unsafe {_ZN7QActionC1ERK5QIconRK7QStringP7QObject(qthis, arg0, arg1, arg2)};
-    let qthis: u64 = unsafe {dector_ZN7QActionC1ERK5QIconRK7QStringP7QObject(arg0, arg1, arg2)} as u64;
+    unsafe {_ZN7QActionC2ERK5QIconRK7QStringP7QObject(qthis_ph, arg0, arg1, arg2)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QAction{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -723,7 +719,7 @@ impl<'a> /*trait*/ QAction_setDisabled<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QAction11setDisabledEb()};
     let arg0 = self  as c_char;
-     unsafe {demth_ZN7QAction11setDisabledEb(rsthis.qclsinst, arg0)};
+     unsafe {_ZN7QAction11setDisabledEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1149,12 +1145,12 @@ impl<'a> /*trait*/ QAction_data<QVariant> for () {
 impl<'a> /*trait*/ QAction_new for (&'a QAction) {
   fn new(self) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QActionC1ERKS_()};
+    // unsafe{_ZN7QActionC2ERKS_()};
     let ctysz: c_int = unsafe{QAction_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN7QActionC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN7QActionC1ERKS_(arg0)} as u64;
+    unsafe {_ZN7QActionC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QAction{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

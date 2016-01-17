@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qgraphicsview.h
 // dst-file: /src/widgets/qgraphicsview.rs
 //
@@ -54,11 +54,11 @@ extern {
   // proto:  void QGraphicsView::translate(qreal dx, qreal dy);
   fn _ZN13QGraphicsView9translateEdd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double);
   // proto:  QPointF QGraphicsView::mapToScene(int x, int y);
-  fn demth_ZNK13QGraphicsView10mapToSceneEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> *mut c_void;
+  fn _ZNK13QGraphicsView10mapToSceneEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> *mut c_void;
   // proto:  const QMetaObject * QGraphicsView::metaObject();
   fn _ZNK13QGraphicsView10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QGraphicsView::setSceneRect(qreal x, qreal y, qreal w, qreal h);
-  fn demth_ZN13QGraphicsView12setSceneRectEdddd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
+  fn _ZN13QGraphicsView12setSceneRectEdddd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
   // proto:  QRect QGraphicsView::rubberBandRect();
   fn _ZNK13QGraphicsView14rubberBandRectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QGraphicsView::setMatrix(const QMatrix & matrix, bool combine);
@@ -66,14 +66,13 @@ extern {
   // proto:  bool QGraphicsView::isInteractive();
   fn _ZNK13QGraphicsView13isInteractiveEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QGraphicsView::QGraphicsView(const QGraphicsView & );
-  fn dector_ZN13QGraphicsViewC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN13QGraphicsViewC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN13QGraphicsViewC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsView::setBackgroundBrush(const QBrush & brush);
   fn _ZN13QGraphicsView18setBackgroundBrushERK6QBrush(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QGraphicsView::isTransformed();
   fn _ZNK13QGraphicsView13isTransformedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QGraphicsItem * QGraphicsView::itemAt(int x, int y);
-  fn demth_ZNK13QGraphicsView6itemAtEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
+  fn _ZNK13QGraphicsView6itemAtEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  void QGraphicsView::centerOn(const QPointF & pos);
   fn _ZN13QGraphicsView8centerOnERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsView::setForegroundBrush(const QBrush & brush);
@@ -93,13 +92,11 @@ extern {
   // proto:  QMatrix QGraphicsView::matrix();
   fn _ZNK13QGraphicsView6matrixEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QPolygonF QGraphicsView::mapToScene(int x, int y, int w, int h);
-  fn demth_ZNK13QGraphicsView10mapToSceneEiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int) -> *mut c_void;
+  fn _ZNK13QGraphicsView10mapToSceneEiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int) -> *mut c_void;
   // proto:  void QGraphicsView::QGraphicsView(QGraphicsScene * scene, QWidget * parent);
-  fn dector_ZN13QGraphicsViewC1EP14QGraphicsSceneP7QWidget(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN13QGraphicsViewC1EP14QGraphicsSceneP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN13QGraphicsViewC2EP14QGraphicsSceneP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QGraphicsView::QGraphicsView(QWidget * parent);
-  fn dector_ZN13QGraphicsViewC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN13QGraphicsViewC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN13QGraphicsViewC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsView::centerOn(const QGraphicsItem * item);
   fn _ZN13QGraphicsView8centerOnEPK13QGraphicsItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QTransform QGraphicsView::viewportTransform();
@@ -119,7 +116,7 @@ extern {
   // proto:  QBrush QGraphicsView::backgroundBrush();
   fn _ZNK13QGraphicsView15backgroundBrushEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QPoint QGraphicsView::mapFromScene(qreal x, qreal y);
-  fn demth_ZNK13QGraphicsView12mapFromSceneEdd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double) -> *mut c_void;
+  fn _ZNK13QGraphicsView12mapFromSceneEdd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double) -> *mut c_void;
   // proto:  void QGraphicsView::ensureVisible(const QRectF & rect, int xmargin, int ymargin);
   fn _ZN13QGraphicsView13ensureVisibleERK6QRectFii(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int, arg2: c_int);
   // proto:  QList<QGraphicsItem *> QGraphicsView::items();
@@ -127,15 +124,15 @@ extern {
   // proto:  QTransform QGraphicsView::transform();
   fn _ZNK13QGraphicsView9transformEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QList<QGraphicsItem *> QGraphicsView::items(int x, int y);
-  fn demth_ZNK13QGraphicsView5itemsEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
+  fn _ZNK13QGraphicsView5itemsEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  void QGraphicsView::centerOn(qreal x, qreal y);
-  fn demth_ZN13QGraphicsView8centerOnEdd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double);
+  fn _ZN13QGraphicsView8centerOnEdd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double);
   // proto:  void QGraphicsView::ensureVisible(qreal x, qreal y, qreal w, qreal h, int xmargin, int ymargin);
-  fn demth_ZN13QGraphicsView13ensureVisibleEddddii(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_int, arg5: c_int);
+  fn _ZN13QGraphicsView13ensureVisibleEddddii(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_int, arg5: c_int);
   // proto:  void QGraphicsView::rotate(qreal angle);
   fn _ZN13QGraphicsView6rotateEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  QPolygon QGraphicsView::mapFromScene(qreal x, qreal y, qreal w, qreal h);
-  fn demth_ZNK13QGraphicsView12mapFromSceneEdddd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double) -> *mut c_void;
+  fn _ZNK13QGraphicsView12mapFromSceneEdddd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double) -> *mut c_void;
   // proto:  void QGraphicsView::setTransform(const QTransform & matrix, bool combine);
   fn _ZN13QGraphicsView12setTransformERK10QTransformb(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_char);
   // proto:  void QGraphicsView::setSceneRect(const QRectF & rect);
@@ -147,7 +144,7 @@ extern {
   // proto:  QPainterPath QGraphicsView::mapFromScene(const QPainterPath & path);
   fn _ZNK13QGraphicsView12mapFromSceneERK12QPainterPath(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsView::~QGraphicsView();
-  fn _ZN13QGraphicsViewD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN13QGraphicsViewD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QList<QGraphicsItem *> QGraphicsView::items(const QPoint & pos);
   fn _ZNK13QGraphicsView5itemsERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsView::resetMatrix();
@@ -292,7 +289,7 @@ impl<'a> /*trait*/ QGraphicsView_mapToScene<QPointF> for (i32, i32) {
     // unsafe{_ZNK13QGraphicsView10mapToSceneEii()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-    let mut ret = unsafe {demth_ZNK13QGraphicsView10mapToSceneEii(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {_ZNK13QGraphicsView10mapToSceneEii(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QPointF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -342,7 +339,7 @@ impl<'a> /*trait*/ QGraphicsView_setSceneRect<()> for (f64, f64, f64, f64) {
     let arg1 = self.1  as c_double;
     let arg2 = self.2  as c_double;
     let arg3 = self.3  as c_double;
-     unsafe {demth_ZN13QGraphicsView12setSceneRectEdddd(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
+     unsafe {_ZN13QGraphicsView12setSceneRectEdddd(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
     // return 1;
   }
 }
@@ -435,12 +432,12 @@ pub trait QGraphicsView_new {
 impl<'a> /*trait*/ QGraphicsView_new for (&'a QGraphicsView) {
   fn new(self) -> QGraphicsView {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QGraphicsViewC1ERKS_()};
+    // unsafe{_ZN13QGraphicsViewC2ERKS_()};
     let ctysz: c_int = unsafe{QGraphicsView_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN13QGraphicsViewC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN13QGraphicsViewC1ERKS_(arg0)} as u64;
+    unsafe {_ZN13QGraphicsViewC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QGraphicsView{qbase: QAbstractScrollArea::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -512,7 +509,7 @@ impl<'a> /*trait*/ QGraphicsView_itemAt<()> for (i32, i32) {
     // unsafe{_ZNK13QGraphicsView6itemAtEii()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-     unsafe {demth_ZNK13QGraphicsView6itemAtEii(rsthis.qclsinst, arg0, arg1)};
+     unsafe {_ZNK13QGraphicsView6itemAtEii(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -714,7 +711,7 @@ impl<'a> /*trait*/ QGraphicsView_mapToScene<QPolygonF> for (i32, i32, i32, i32) 
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as c_int;
     let arg3 = self.3  as c_int;
-    let mut ret = unsafe {demth_ZNK13QGraphicsView10mapToSceneEiiii(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
+    let mut ret = unsafe {_ZNK13QGraphicsView10mapToSceneEiiii(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
     let mut ret1 = QPolygonF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -725,13 +722,13 @@ impl<'a> /*trait*/ QGraphicsView_mapToScene<QPolygonF> for (i32, i32, i32, i32) 
 impl<'a> /*trait*/ QGraphicsView_new for (&'a QGraphicsScene, &'a QWidget) {
   fn new(self) -> QGraphicsView {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QGraphicsViewC1EP14QGraphicsSceneP7QWidget()};
+    // unsafe{_ZN13QGraphicsViewC2EP14QGraphicsSceneP7QWidget()};
     let ctysz: c_int = unsafe{QGraphicsView_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    // unsafe {_ZN13QGraphicsViewC1EP14QGraphicsSceneP7QWidget(qthis, arg0, arg1)};
-    let qthis: u64 = unsafe {dector_ZN13QGraphicsViewC1EP14QGraphicsSceneP7QWidget(arg0, arg1)} as u64;
+    unsafe {_ZN13QGraphicsViewC2EP14QGraphicsSceneP7QWidget(qthis_ph, arg0, arg1)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QGraphicsView{qbase: QAbstractScrollArea::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -742,12 +739,12 @@ impl<'a> /*trait*/ QGraphicsView_new for (&'a QGraphicsScene, &'a QWidget) {
 impl<'a> /*trait*/ QGraphicsView_new for (&'a QWidget) {
   fn new(self) -> QGraphicsView {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QGraphicsViewC1EP7QWidget()};
+    // unsafe{_ZN13QGraphicsViewC2EP7QWidget()};
     let ctysz: c_int = unsafe{QGraphicsView_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN13QGraphicsViewC1EP7QWidget(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN13QGraphicsViewC1EP7QWidget(arg0)} as u64;
+    unsafe {_ZN13QGraphicsViewC2EP7QWidget(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QGraphicsView{qbase: QAbstractScrollArea::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -950,7 +947,7 @@ impl<'a> /*trait*/ QGraphicsView_mapFromScene<QPoint> for (f64, f64) {
     // unsafe{_ZNK13QGraphicsView12mapFromSceneEdd()};
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
-    let mut ret = unsafe {demth_ZNK13QGraphicsView12mapFromSceneEdd(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {_ZNK13QGraphicsView12mapFromSceneEdd(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QPoint::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1023,7 +1020,7 @@ impl<'a> /*trait*/ QGraphicsView_items<()> for (i32, i32) {
     // unsafe{_ZNK13QGraphicsView5itemsEii()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-     unsafe {demth_ZNK13QGraphicsView5itemsEii(rsthis.qclsinst, arg0, arg1)};
+     unsafe {_ZNK13QGraphicsView5itemsEii(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -1035,7 +1032,7 @@ impl<'a> /*trait*/ QGraphicsView_centerOn<()> for (f64, f64) {
     // unsafe{_ZN13QGraphicsView8centerOnEdd()};
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
-     unsafe {demth_ZN13QGraphicsView8centerOnEdd(rsthis.qclsinst, arg0, arg1)};
+     unsafe {_ZN13QGraphicsView8centerOnEdd(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -1051,7 +1048,7 @@ impl<'a> /*trait*/ QGraphicsView_ensureVisible<()> for (f64, f64, f64, f64, i32,
     let arg3 = self.3  as c_double;
     let arg4 = self.4  as c_int;
     let arg5 = self.5  as c_int;
-     unsafe {demth_ZN13QGraphicsView13ensureVisibleEddddii(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)};
+     unsafe {_ZN13QGraphicsView13ensureVisibleEddddii(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)};
     // return 1;
   }
 }
@@ -1088,7 +1085,7 @@ impl<'a> /*trait*/ QGraphicsView_mapFromScene<QPolygon> for (f64, f64, f64, f64)
     let arg1 = self.1  as c_double;
     let arg2 = self.2  as c_double;
     let arg3 = self.3  as c_double;
-    let mut ret = unsafe {demth_ZNK13QGraphicsView12mapFromSceneEdddd(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
+    let mut ret = unsafe {_ZNK13QGraphicsView12mapFromSceneEdddd(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
     let mut ret1 = QPolygon::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1185,8 +1182,8 @@ pub trait QGraphicsView_free<RetType> {
 impl<'a> /*trait*/ QGraphicsView_free<()> for () {
   fn free(self , rsthis: & QGraphicsView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QGraphicsViewD0Ev()};
-     unsafe {_ZN13QGraphicsViewD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN13QGraphicsViewD2Ev()};
+     unsafe {_ZN13QGraphicsViewD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

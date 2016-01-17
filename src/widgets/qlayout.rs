@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qlayout.h
 // dst-file: /src/widgets/qlayout.rs
 //
@@ -40,8 +40,7 @@ extern {
   // proto:  int QLayout::spacing();
   fn _ZNK7QLayout7spacingEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QLayout::QLayout();
-  fn dector_ZN7QLayoutC1Ev() -> *mut c_void;
-  fn _ZN7QLayoutC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN7QLayoutC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QRect QLayout::geometry();
   fn _ZNK7QLayout8geometryEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QLayout::count();
@@ -69,8 +68,7 @@ extern {
   // proto:  QSize QLayout::totalSizeHint();
   fn _ZNK7QLayout13totalSizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QLayout::QLayout(QWidget * parent);
-  fn dector_ZN7QLayoutC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN7QLayoutC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN7QLayoutC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QLayout::addItem(QLayoutItem * );
   fn _ZN7QLayout7addItemEP11QLayoutItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QLayout::totalHeightForWidth(int w);
@@ -90,7 +88,7 @@ extern {
   // proto:  bool QLayout::isEnabled();
   fn _ZNK7QLayout9isEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QLayout::~QLayout();
-  fn _ZN7QLayoutD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN7QLayoutD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  int QLayout::margin();
   fn _ZNK7QLayout6marginEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QLayout::setSpacing(int );
@@ -98,8 +96,7 @@ extern {
   // proto:  QWidget * QLayout::menuBar();
   fn _ZNK7QLayout7menuBarEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QLayout::QLayout(const QLayout & );
-  fn dector_ZN7QLayoutC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN7QLayoutC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN7QLayoutC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QLayout::metaObject();
   fn _ZNK7QLayout10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  QLayoutItem * QLayout::itemAt(int index);
@@ -213,11 +210,11 @@ pub trait QLayout_new {
 impl<'a> /*trait*/ QLayout_new for () {
   fn new(self) -> QLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QLayoutC1Ev()};
+    // unsafe{_ZN7QLayoutC2Ev()};
     let ctysz: c_int = unsafe{QLayout_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN7QLayoutC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN7QLayoutC1Ev()} as u64;
+    unsafe {_ZN7QLayoutC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QLayout{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -534,12 +531,12 @@ impl<'a> /*trait*/ QLayout_totalSizeHint<QSize> for () {
 impl<'a> /*trait*/ QLayout_new for (&'a QWidget) {
   fn new(self) -> QLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QLayoutC1EP7QWidget()};
+    // unsafe{_ZN7QLayoutC2EP7QWidget()};
     let ctysz: c_int = unsafe{QLayout_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN7QLayoutC1EP7QWidget(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN7QLayoutC1EP7QWidget(arg0)} as u64;
+    unsafe {_ZN7QLayoutC2EP7QWidget(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QLayout{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -774,8 +771,8 @@ pub trait QLayout_free<RetType> {
 impl<'a> /*trait*/ QLayout_free<()> for () {
   fn free(self , rsthis: & QLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QLayoutD0Ev()};
-     unsafe {_ZN7QLayoutD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN7QLayoutD2Ev()};
+     unsafe {_ZN7QLayoutD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -854,12 +851,12 @@ impl<'a> /*trait*/ QLayout_menuBar<QWidget> for () {
 impl<'a> /*trait*/ QLayout_new for (&'a QLayout) {
   fn new(self) -> QLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QLayoutC1ERKS_()};
+    // unsafe{_ZN7QLayoutC2ERKS_()};
     let ctysz: c_int = unsafe{QLayout_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN7QLayoutC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN7QLayoutC1ERKS_(arg0)} as u64;
+    unsafe {_ZN7QLayoutC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QLayout{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

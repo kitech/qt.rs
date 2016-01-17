@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qidentityproxymodel.h
 // dst-file: /src/core/qidentityproxymodel.rs
 //
@@ -53,7 +53,7 @@ extern {
   // proto:  const QMetaObject * QIdentityProxyModel::metaObject();
   fn _ZNK19QIdentityProxyModel10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QIdentityProxyModel::~QIdentityProxyModel();
-  fn _ZN19QIdentityProxyModelD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN19QIdentityProxyModelD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QModelIndex QIdentityProxyModel::parent(const QModelIndex & child);
   fn _ZNK19QIdentityProxyModel6parentERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QIdentityProxyModel::setSourceModel(QAbstractItemModel * sourceModel);
@@ -63,13 +63,11 @@ extern {
   // proto:  QModelIndex QIdentityProxyModel::mapFromSource(const QModelIndex & sourceIndex);
   fn _ZNK19QIdentityProxyModel13mapFromSourceERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QIdentityProxyModel::QIdentityProxyModel(QObject * parent);
-  fn dector_ZN19QIdentityProxyModelC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN19QIdentityProxyModelC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN19QIdentityProxyModelC2EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QIdentityProxyModel::columnCount(const QModelIndex & parent);
   fn _ZNK19QIdentityProxyModel11columnCountERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
   // proto:  void QIdentityProxyModel::QIdentityProxyModel(const QIdentityProxyModel & );
-  fn dector_ZN19QIdentityProxyModelC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN19QIdentityProxyModelC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN19QIdentityProxyModelC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QItemSelection QIdentityProxyModel::mapSelectionToSource(const QItemSelection & selection);
   fn _ZNK19QIdentityProxyModel20mapSelectionToSourceERK14QItemSelection(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  int QIdentityProxyModel::rowCount(const QModelIndex & parent);
@@ -322,8 +320,8 @@ pub trait QIdentityProxyModel_free<RetType> {
 impl<'a> /*trait*/ QIdentityProxyModel_free<()> for () {
   fn free(self , rsthis: & QIdentityProxyModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QIdentityProxyModelD0Ev()};
-     unsafe {_ZN19QIdentityProxyModelD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN19QIdentityProxyModelD2Ev()};
+     unsafe {_ZN19QIdentityProxyModelD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -443,12 +441,12 @@ pub trait QIdentityProxyModel_new {
 impl<'a> /*trait*/ QIdentityProxyModel_new for (&'a QObject) {
   fn new(self) -> QIdentityProxyModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QIdentityProxyModelC1EP7QObject()};
+    // unsafe{_ZN19QIdentityProxyModelC2EP7QObject()};
     let ctysz: c_int = unsafe{QIdentityProxyModel_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN19QIdentityProxyModelC1EP7QObject(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN19QIdentityProxyModelC1EP7QObject(arg0)} as u64;
+    unsafe {_ZN19QIdentityProxyModelC2EP7QObject(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QIdentityProxyModel{qbase: QAbstractProxyModel::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -483,12 +481,12 @@ impl<'a> /*trait*/ QIdentityProxyModel_columnCount<i32> for (&'a QModelIndex) {
 impl<'a> /*trait*/ QIdentityProxyModel_new for (&'a QIdentityProxyModel) {
   fn new(self) -> QIdentityProxyModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QIdentityProxyModelC1ERKS_()};
+    // unsafe{_ZN19QIdentityProxyModelC2ERKS_()};
     let ctysz: c_int = unsafe{QIdentityProxyModel_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN19QIdentityProxyModelC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN19QIdentityProxyModelC1ERKS_(arg0)} as u64;
+    unsafe {_ZN19QIdentityProxyModelC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QIdentityProxyModel{qbase: QAbstractProxyModel::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

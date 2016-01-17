@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qgraphicsscene.h
 // dst-file: /src/widgets/qgraphicsscene.rs
 //
@@ -76,11 +76,9 @@ extern {
   // proto:  bool QGraphicsScene::isSortCacheEnabled();
   fn _ZNK14QGraphicsScene18isSortCacheEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QGraphicsScene::QGraphicsScene(const QRectF & sceneRect, QObject * parent);
-  fn dector_ZN14QGraphicsSceneC1ERK6QRectFP7QObject(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN14QGraphicsSceneC1ERK6QRectFP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn _ZN14QGraphicsSceneC2ERK6QRectFP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QGraphicsScene::QGraphicsScene(QObject * parent);
-  fn dector_ZN14QGraphicsSceneC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN14QGraphicsSceneC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN14QGraphicsSceneC2EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsScene::clearFocus();
   fn _ZN14QGraphicsScene10clearFocusEv(qthis: u64 /* *mut c_void*/);
   // proto:  const QMetaObject * QGraphicsScene::metaObject();
@@ -88,7 +86,7 @@ extern {
   // proto:  QGraphicsSimpleTextItem * QGraphicsScene::addSimpleText(const QString & text, const QFont & font);
   fn _ZN14QGraphicsScene13addSimpleTextERK7QStringRK5QFont(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  QGraphicsLineItem * QGraphicsScene::addLine(qreal x1, qreal y1, qreal x2, qreal y2, const QPen & pen);
-  fn demth_ZN14QGraphicsScene7addLineEddddRK4QPen(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: *mut c_void);
+  fn _ZN14QGraphicsScene7addLineEddddRK4QPen(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: *mut c_void);
   // proto:  void QGraphicsScene::setBspTreeDepth(int depth);
   fn _ZN14QGraphicsScene15setBspTreeDepthEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  QRectF QGraphicsScene::sceneRect();
@@ -98,7 +96,7 @@ extern {
   // proto:  QBrush QGraphicsScene::backgroundBrush();
   fn _ZNK14QGraphicsScene15backgroundBrushEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QGraphicsItem * QGraphicsScene::itemAt(qreal x, qreal y, const QTransform & deviceTransform);
-  fn demth_ZNK14QGraphicsScene6itemAtEddRK10QTransform(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: *mut c_void);
+  fn _ZNK14QGraphicsScene6itemAtEddRK10QTransform(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: *mut c_void);
   // proto:  void QGraphicsScene::advance();
   fn _ZN14QGraphicsScene7advanceEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QGraphicsScene::setStickyFocus(bool enabled);
@@ -116,13 +114,13 @@ extern {
   // proto:  QList<QGraphicsView *> QGraphicsScene::views();
   fn _ZNK14QGraphicsScene5viewsEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QGraphicsScene::~QGraphicsScene();
-  fn _ZN14QGraphicsSceneD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN14QGraphicsSceneD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QGraphicsRectItem * QGraphicsScene::addRect(qreal x, qreal y, qreal w, qreal h, const QPen & pen, const QBrush & brush);
-  fn demth_ZN14QGraphicsScene7addRectEddddRK4QPenRK6QBrush(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: *mut c_void, arg5: *mut c_void);
+  fn _ZN14QGraphicsScene7addRectEddddRK4QPenRK6QBrush(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: *mut c_void, arg5: *mut c_void);
   // proto:  int QGraphicsScene::bspTreeDepth();
   fn _ZNK14QGraphicsScene12bspTreeDepthEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QGraphicsScene::setSceneRect(qreal x, qreal y, qreal w, qreal h);
-  fn demth_ZN14QGraphicsScene12setSceneRectEdddd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
+  fn _ZN14QGraphicsScene12setSceneRectEdddd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
   // proto:  void QGraphicsScene::setStyle(QStyle * style);
   fn _ZN14QGraphicsScene8setStyleEP6QStyle(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsScene::setPalette(const QPalette & palette);
@@ -130,8 +128,7 @@ extern {
   // proto:  void QGraphicsScene::setMinimumRenderSize(qreal minSize);
   fn _ZN14QGraphicsScene20setMinimumRenderSizeEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QGraphicsScene::QGraphicsScene(qreal x, qreal y, qreal width, qreal height, QObject * parent);
-  fn dector_ZN14QGraphicsSceneC1EddddP7QObject(arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: *mut c_void) -> *mut c_void;
-  fn _ZN14QGraphicsSceneC1EddddP7QObject(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: *mut c_void);
+  fn _ZN14QGraphicsSceneC2EddddP7QObject(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: *mut c_void);
   // proto:  QGraphicsItem * QGraphicsScene::mouseGrabberItem();
   fn _ZNK14QGraphicsScene16mouseGrabberItemEv(qthis: u64 /* *mut c_void*/);
   // proto:  QGraphicsRectItem * QGraphicsScene::addRect(const QRectF & rect, const QPen & pen, const QBrush & brush);
@@ -139,7 +136,7 @@ extern {
   // proto:  QGraphicsEllipseItem * QGraphicsScene::addEllipse(const QRectF & rect, const QPen & pen, const QBrush & brush);
   fn _ZN14QGraphicsScene10addEllipseERK6QRectFRK4QPenRK6QBrush(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  qreal QGraphicsScene::height();
-  fn demth_ZNK14QGraphicsScene6heightEv(qthis: u64 /* *mut c_void*/) -> c_double;
+  fn _ZNK14QGraphicsScene6heightEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QGraphicsScene::setSelectionArea(const QPainterPath & path, const QTransform & deviceTransform);
   fn _ZN14QGraphicsScene16setSelectionAreaERK12QPainterPathRK10QTransform(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  QFont QGraphicsScene::font();
@@ -147,12 +144,11 @@ extern {
   // proto:  void QGraphicsScene::clearSelection();
   fn _ZN14QGraphicsScene14clearSelectionEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QGraphicsScene::QGraphicsScene(const QGraphicsScene & );
-  fn dector_ZN14QGraphicsSceneC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN14QGraphicsSceneC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN14QGraphicsSceneC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsScene::removeItem(QGraphicsItem * item);
   fn _ZN14QGraphicsScene10removeItemEP13QGraphicsItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QGraphicsEllipseItem * QGraphicsScene::addEllipse(qreal x, qreal y, qreal w, qreal h, const QPen & pen, const QBrush & brush);
-  fn demth_ZN14QGraphicsScene10addEllipseEddddRK4QPenRK6QBrush(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: *mut c_void, arg5: *mut c_void);
+  fn _ZN14QGraphicsScene10addEllipseEddddRK4QPenRK6QBrush(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: *mut c_void, arg5: *mut c_void);
   // proto:  void QGraphicsScene::setActiveWindow(QGraphicsWidget * widget);
   fn _ZN14QGraphicsScene15setActiveWindowEP15QGraphicsWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QGraphicsItem * QGraphicsScene::focusItem();
@@ -166,9 +162,9 @@ extern {
   // proto:  void QGraphicsScene::destroyItemGroup(QGraphicsItemGroup * group);
   fn _ZN14QGraphicsScene16destroyItemGroupEP18QGraphicsItemGroup(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  qreal QGraphicsScene::width();
-  fn demth_ZNK14QGraphicsScene5widthEv(qthis: u64 /* *mut c_void*/) -> c_double;
+  fn _ZNK14QGraphicsScene5widthEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QGraphicsScene::update(qreal x, qreal y, qreal w, qreal h);
-  fn demth_ZN14QGraphicsScene6updateEdddd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
+  fn _ZN14QGraphicsScene6updateEdddd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
   // proto:  void QGraphicsScene::addItem(QGraphicsItem * item);
   fn _ZN14QGraphicsScene7addItemEP13QGraphicsItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsScene::setBackgroundBrush(const QBrush & brush);
@@ -541,13 +537,13 @@ pub trait QGraphicsScene_new {
 impl<'a> /*trait*/ QGraphicsScene_new for (&'a QRectF, &'a QObject) {
   fn new(self) -> QGraphicsScene {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QGraphicsSceneC1ERK6QRectFP7QObject()};
+    // unsafe{_ZN14QGraphicsSceneC2ERK6QRectFP7QObject()};
     let ctysz: c_int = unsafe{QGraphicsScene_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    // unsafe {_ZN14QGraphicsSceneC1ERK6QRectFP7QObject(qthis, arg0, arg1)};
-    let qthis: u64 = unsafe {dector_ZN14QGraphicsSceneC1ERK6QRectFP7QObject(arg0, arg1)} as u64;
+    unsafe {_ZN14QGraphicsSceneC2ERK6QRectFP7QObject(qthis_ph, arg0, arg1)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QGraphicsScene{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -558,12 +554,12 @@ impl<'a> /*trait*/ QGraphicsScene_new for (&'a QRectF, &'a QObject) {
 impl<'a> /*trait*/ QGraphicsScene_new for (&'a QObject) {
   fn new(self) -> QGraphicsScene {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QGraphicsSceneC1EP7QObject()};
+    // unsafe{_ZN14QGraphicsSceneC2EP7QObject()};
     let ctysz: c_int = unsafe{QGraphicsScene_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN14QGraphicsSceneC1EP7QObject(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN14QGraphicsSceneC1EP7QObject(arg0)} as u64;
+    unsafe {_ZN14QGraphicsSceneC2EP7QObject(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QGraphicsScene{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -648,7 +644,7 @@ impl<'a> /*trait*/ QGraphicsScene_addLine<()> for (f64, f64, f64, f64, &'a QPen)
     let arg2 = self.2  as c_double;
     let arg3 = self.3  as c_double;
     let arg4 = self.4.qclsinst  as *mut c_void;
-     unsafe {demth_ZN14QGraphicsScene7addLineEddddRK4QPen(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4)};
+     unsafe {_ZN14QGraphicsScene7addLineEddddRK4QPen(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4)};
     // return 1;
   }
 }
@@ -766,7 +762,7 @@ impl<'a> /*trait*/ QGraphicsScene_itemAt<()> for (f64, f64, &'a QTransform) {
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
     let arg2 = self.2.qclsinst  as *mut c_void;
-     unsafe {demth_ZNK14QGraphicsScene6itemAtEddRK10QTransform(rsthis.qclsinst, arg0, arg1, arg2)};
+     unsafe {_ZNK14QGraphicsScene6itemAtEddRK10QTransform(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
 }
@@ -968,8 +964,8 @@ pub trait QGraphicsScene_free<RetType> {
 impl<'a> /*trait*/ QGraphicsScene_free<()> for () {
   fn free(self , rsthis: & QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QGraphicsSceneD0Ev()};
-     unsafe {_ZN14QGraphicsSceneD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN14QGraphicsSceneD2Ev()};
+     unsafe {_ZN14QGraphicsSceneD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -997,7 +993,7 @@ impl<'a> /*trait*/ QGraphicsScene_addRect<()> for (f64, f64, f64, f64, &'a QPen,
     let arg3 = self.3  as c_double;
     let arg4 = self.4.qclsinst  as *mut c_void;
     let arg5 = self.5.qclsinst  as *mut c_void;
-     unsafe {demth_ZN14QGraphicsScene7addRectEddddRK4QPenRK6QBrush(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)};
+     unsafe {_ZN14QGraphicsScene7addRectEddddRK4QPenRK6QBrush(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)};
     // return 1;
   }
 }
@@ -1034,7 +1030,7 @@ impl<'a> /*trait*/ QGraphicsScene_setSceneRect<()> for (f64, f64, f64, f64) {
     let arg1 = self.1  as c_double;
     let arg2 = self.2  as c_double;
     let arg3 = self.3  as c_double;
-     unsafe {demth_ZN14QGraphicsScene12setSceneRectEdddd(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
+     unsafe {_ZN14QGraphicsScene12setSceneRectEdddd(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
     // return 1;
   }
 }
@@ -1112,7 +1108,7 @@ impl<'a> /*trait*/ QGraphicsScene_setMinimumRenderSize<()> for (f64) {
 impl<'a> /*trait*/ QGraphicsScene_new for (f64, f64, f64, f64, &'a QObject) {
   fn new(self) -> QGraphicsScene {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QGraphicsSceneC1EddddP7QObject()};
+    // unsafe{_ZN14QGraphicsSceneC2EddddP7QObject()};
     let ctysz: c_int = unsafe{QGraphicsScene_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_double;
@@ -1120,8 +1116,8 @@ impl<'a> /*trait*/ QGraphicsScene_new for (f64, f64, f64, f64, &'a QObject) {
     let arg2 = self.2  as c_double;
     let arg3 = self.3  as c_double;
     let arg4 = self.4.qclsinst  as *mut c_void;
-    // unsafe {_ZN14QGraphicsSceneC1EddddP7QObject(qthis, arg0, arg1, arg2, arg3, arg4)};
-    let qthis: u64 = unsafe {dector_ZN14QGraphicsSceneC1EddddP7QObject(arg0, arg1, arg2, arg3, arg4)} as u64;
+    unsafe {_ZN14QGraphicsSceneC2EddddP7QObject(qthis_ph, arg0, arg1, arg2, arg3, arg4)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QGraphicsScene{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1205,7 +1201,7 @@ impl<'a> /*trait*/ QGraphicsScene_height<f64> for () {
   fn height(self , rsthis: & QGraphicsScene) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScene6heightEv()};
-    let mut ret = unsafe {demth_ZNK14QGraphicsScene6heightEv(rsthis.qclsinst)};
+    let mut ret = unsafe {_ZNK14QGraphicsScene6heightEv(rsthis.qclsinst)};
     return ret as f64;
     // return 1;
   }
@@ -1285,12 +1281,12 @@ impl<'a> /*trait*/ QGraphicsScene_clearSelection<()> for () {
 impl<'a> /*trait*/ QGraphicsScene_new for (&'a QGraphicsScene) {
   fn new(self) -> QGraphicsScene {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QGraphicsSceneC1ERKS_()};
+    // unsafe{_ZN14QGraphicsSceneC2ERKS_()};
     let ctysz: c_int = unsafe{QGraphicsScene_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN14QGraphicsSceneC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN14QGraphicsSceneC1ERKS_(arg0)} as u64;
+    unsafe {_ZN14QGraphicsSceneC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QGraphicsScene{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1331,7 +1327,7 @@ impl<'a> /*trait*/ QGraphicsScene_addEllipse<()> for (f64, f64, f64, f64, &'a QP
     let arg3 = self.3  as c_double;
     let arg4 = self.4.qclsinst  as *mut c_void;
     let arg5 = self.5.qclsinst  as *mut c_void;
-     unsafe {demth_ZN14QGraphicsScene10addEllipseEddddRK4QPenRK6QBrush(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)};
+     unsafe {_ZN14QGraphicsScene10addEllipseEddddRK4QPenRK6QBrush(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)};
     // return 1;
   }
 }
@@ -1480,7 +1476,7 @@ impl<'a> /*trait*/ QGraphicsScene_width<f64> for () {
   fn width(self , rsthis: & QGraphicsScene) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScene5widthEv()};
-    let mut ret = unsafe {demth_ZNK14QGraphicsScene5widthEv(rsthis.qclsinst)};
+    let mut ret = unsafe {_ZNK14QGraphicsScene5widthEv(rsthis.qclsinst)};
     return ret as f64;
     // return 1;
   }
@@ -1495,7 +1491,7 @@ impl<'a> /*trait*/ QGraphicsScene_update<()> for (f64, f64, f64, f64) {
     let arg1 = self.1  as c_double;
     let arg2 = self.2  as c_double;
     let arg3 = self.3  as c_double;
-     unsafe {demth_ZN14QGraphicsScene6updateEdddd(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
+     unsafe {_ZN14QGraphicsScene6updateEdddd(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
     // return 1;
   }
 }

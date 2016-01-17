@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtGui/qpagelayout.h
 // dst-file: /src/gui/qpagelayout.rs
 //
@@ -63,13 +63,11 @@ extern {
   // proto:  bool QPageLayout::setTopMargin(qreal topMargin);
   fn _ZN11QPageLayout12setTopMarginEd(qthis: u64 /* *mut c_void*/, arg0: c_double) -> c_char;
   // proto:  void QPageLayout::QPageLayout();
-  fn dector_ZN11QPageLayoutC1Ev() -> *mut c_void;
-  fn _ZN11QPageLayoutC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN11QPageLayoutC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QPageLayout::QPageLayout(const QPageLayout & other);
-  fn dector_ZN11QPageLayoutC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QPageLayoutC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN11QPageLayoutC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPageLayout::~QPageLayout();
-  fn _ZN11QPageLayoutD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN11QPageLayoutD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QRect QPageLayout::fullRectPixels(int resolution);
   fn _ZNK11QPageLayout14fullRectPixelsEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  QMarginsF QPageLayout::margins();
@@ -452,11 +450,11 @@ pub trait QPageLayout_new {
 impl<'a> /*trait*/ QPageLayout_new for () {
   fn new(self) -> QPageLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QPageLayoutC1Ev()};
+    // unsafe{_ZN11QPageLayoutC2Ev()};
     let ctysz: c_int = unsafe{QPageLayout_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN11QPageLayoutC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN11QPageLayoutC1Ev()} as u64;
+    unsafe {_ZN11QPageLayoutC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QPageLayout{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -467,12 +465,12 @@ impl<'a> /*trait*/ QPageLayout_new for () {
 impl<'a> /*trait*/ QPageLayout_new for (&'a QPageLayout) {
   fn new(self) -> QPageLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QPageLayoutC1ERKS_()};
+    // unsafe{_ZN11QPageLayoutC2ERKS_()};
     let ctysz: c_int = unsafe{QPageLayout_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN11QPageLayoutC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN11QPageLayoutC1ERKS_(arg0)} as u64;
+    unsafe {_ZN11QPageLayoutC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QPageLayout{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -495,8 +493,8 @@ pub trait QPageLayout_free<RetType> {
 impl<'a> /*trait*/ QPageLayout_free<()> for () {
   fn free(self , rsthis: & QPageLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QPageLayoutD0Ev()};
-     unsafe {_ZN11QPageLayoutD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN11QPageLayoutD2Ev()};
+     unsafe {_ZN11QPageLayoutD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

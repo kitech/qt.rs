@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtGui/qiconengine.h
 // dst-file: /src/gui/qiconengine.rs
 //
@@ -48,7 +48,7 @@ extern {
   // proto:  QString QIconEngine::key();
   fn _ZNK11QIconEngine3keyEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QIconEngine::~QIconEngine();
-  fn _ZN11QIconEngineD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN11QIconEngineD2Ev(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
@@ -224,8 +224,8 @@ pub trait QIconEngine_free<RetType> {
 impl<'a> /*trait*/ QIconEngine_free<()> for () {
   fn free(self , rsthis: & QIconEngine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QIconEngineD0Ev()};
-     unsafe {_ZN11QIconEngineD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN11QIconEngineD2Ev()};
+     unsafe {_ZN11QIconEngineD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

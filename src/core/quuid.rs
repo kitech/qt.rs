@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/quuid.h
 // dst-file: /src/core/quuid.rs
 //
@@ -32,8 +32,7 @@ use super::qbytearray::QByteArray; // 773
 extern {
   fn QUuid_Class_Size() -> c_int;
   // proto:  void QUuid::QUuid(const QString & );
-  fn dector_ZN5QUuidC1ERK7QString(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN5QUuidC1ERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN5QUuidC2ERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QByteArray QUuid::toRfc4122();
   fn _ZNK5QUuid9toRfc4122Ev(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QUuid::toString();
@@ -41,25 +40,21 @@ extern {
   // proto:  bool QUuid::isNull();
   fn _ZNK5QUuid6isNullEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto: static QUuid QUuid::createUuidV5(const QUuid & ns, const QString & baseData);
-  fn demth_ZN5QUuid12createUuidV5ERKS_RK7QString(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
+  fn _ZN5QUuid12createUuidV5ERKS_RK7QString(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto: static QUuid QUuid::createUuid();
   fn _ZN5QUuid10createUuidEv() -> *mut c_void;
   // proto:  void QUuid::QUuid(uint l, ushort w1, ushort w2, uchar b1, uchar b2, uchar b3, uchar b4, uchar b5, uchar b6, uchar b7, uchar b8);
-  fn dector_ZN5QUuidC1Ejtthhhhhhhh(arg0: c_uint, arg1: c_ushort, arg2: c_ushort, arg3: c_uchar, arg4: c_uchar, arg5: c_uchar, arg6: c_uchar, arg7: c_uchar, arg8: c_uchar, arg9: c_uchar, arg10: c_uchar) -> *mut c_void;
-  fn _ZN5QUuidC1Ejtthhhhhhhh(qthis: u64 /* *mut c_void*/, arg0: c_uint, arg1: c_ushort, arg2: c_ushort, arg3: c_uchar, arg4: c_uchar, arg5: c_uchar, arg6: c_uchar, arg7: c_uchar, arg8: c_uchar, arg9: c_uchar, arg10: c_uchar);
+  fn _ZN5QUuidC2Ejtthhhhhhhh(qthis: u64 /* *mut c_void*/, arg0: c_uint, arg1: c_ushort, arg2: c_ushort, arg3: c_uchar, arg4: c_uchar, arg5: c_uchar, arg6: c_uchar, arg7: c_uchar, arg8: c_uchar, arg9: c_uchar, arg10: c_uchar);
   // proto:  void QUuid::QUuid(const QByteArray & );
-  fn dector_ZN5QUuidC1ERK10QByteArray(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN5QUuidC1ERK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN5QUuidC2ERK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static QUuid QUuid::createUuidV3(const QUuid & ns, const QString & baseData);
-  fn demth_ZN5QUuid12createUuidV3ERKS_RK7QString(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
+  fn _ZN5QUuid12createUuidV3ERKS_RK7QString(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  void QUuid::QUuid();
-  fn dector_ZN5QUuidC1Ev() -> *mut c_void;
-  fn _ZN5QUuidC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN5QUuidC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QByteArray QUuid::toByteArray();
   fn _ZNK5QUuid11toByteArrayEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QUuid::QUuid(const char * );
-  fn dector_ZN5QUuidC1EPKc(arg0: *mut c_char) -> *mut c_void;
-  fn _ZN5QUuidC1EPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_char);
+  fn _ZN5QUuidC2EPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_char);
   // proto: static QUuid QUuid::createUuidV5(const QUuid & ns, const QByteArray & baseData);
   fn _ZN5QUuid12createUuidV5ERKS_RK10QByteArray(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto: static QUuid QUuid::fromRfc4122(const QByteArray & );
@@ -98,12 +93,12 @@ pub trait QUuid_new {
 impl<'a> /*trait*/ QUuid_new for (&'a QString) {
   fn new(self) -> QUuid {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QUuidC1ERK7QString()};
+    // unsafe{_ZN5QUuidC2ERK7QString()};
     let ctysz: c_int = unsafe{QUuid_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN5QUuidC1ERK7QString(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN5QUuidC1ERK7QString(arg0)} as u64;
+    unsafe {_ZN5QUuidC2ERK7QString(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QUuid{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -200,7 +195,7 @@ impl<'a> /*trait*/ QUuid_createUuidV5_s<QUuid> for (&'a QUuid, &'a QString) {
     // unsafe{_ZN5QUuid12createUuidV5ERKS_RK7QString()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {demth_ZN5QUuid12createUuidV5ERKS_RK7QString(arg0, arg1)};
+    let mut ret = unsafe {_ZN5QUuid12createUuidV5ERKS_RK7QString(arg0, arg1)};
     let mut ret1 = QUuid::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -235,7 +230,7 @@ impl<'a> /*trait*/ QUuid_createUuid_s<QUuid> for () {
 impl<'a> /*trait*/ QUuid_new for (u32, u16, u16, u8, u8, u8, u8, u8, u8, u8, u8) {
   fn new(self) -> QUuid {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QUuidC1Ejtthhhhhhhh()};
+    // unsafe{_ZN5QUuidC2Ejtthhhhhhhh()};
     let ctysz: c_int = unsafe{QUuid_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_uint;
@@ -249,8 +244,8 @@ impl<'a> /*trait*/ QUuid_new for (u32, u16, u16, u8, u8, u8, u8, u8, u8, u8, u8)
     let arg8 = self.8  as c_uchar;
     let arg9 = self.9  as c_uchar;
     let arg10 = self.10  as c_uchar;
-    // unsafe {_ZN5QUuidC1Ejtthhhhhhhh(qthis, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10)};
-    let qthis: u64 = unsafe {dector_ZN5QUuidC1Ejtthhhhhhhh(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10)} as u64;
+    unsafe {_ZN5QUuidC2Ejtthhhhhhhh(qthis_ph, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QUuid{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -261,12 +256,12 @@ impl<'a> /*trait*/ QUuid_new for (u32, u16, u16, u8, u8, u8, u8, u8, u8, u8, u8)
 impl<'a> /*trait*/ QUuid_new for (&'a QByteArray) {
   fn new(self) -> QUuid {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QUuidC1ERK10QByteArray()};
+    // unsafe{_ZN5QUuidC2ERK10QByteArray()};
     let ctysz: c_int = unsafe{QUuid_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN5QUuidC1ERK10QByteArray(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN5QUuidC1ERK10QByteArray(arg0)} as u64;
+    unsafe {_ZN5QUuidC2ERK10QByteArray(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QUuid{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -292,7 +287,7 @@ impl<'a> /*trait*/ QUuid_createUuidV3_s<QUuid> for (&'a QUuid, &'a QString) {
     // unsafe{_ZN5QUuid12createUuidV3ERKS_RK7QString()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {demth_ZN5QUuid12createUuidV3ERKS_RK7QString(arg0, arg1)};
+    let mut ret = unsafe {_ZN5QUuid12createUuidV3ERKS_RK7QString(arg0, arg1)};
     let mut ret1 = QUuid::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -303,11 +298,11 @@ impl<'a> /*trait*/ QUuid_createUuidV3_s<QUuid> for (&'a QUuid, &'a QString) {
 impl<'a> /*trait*/ QUuid_new for () {
   fn new(self) -> QUuid {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QUuidC1Ev()};
+    // unsafe{_ZN5QUuidC2Ev()};
     let ctysz: c_int = unsafe{QUuid_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN5QUuidC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN5QUuidC1Ev()} as u64;
+    unsafe {_ZN5QUuidC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QUuid{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -342,12 +337,12 @@ impl<'a> /*trait*/ QUuid_toByteArray<QByteArray> for () {
 impl<'a> /*trait*/ QUuid_new for (&'a  String) {
   fn new(self) -> QUuid {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QUuidC1EPKc()};
+    // unsafe{_ZN5QUuidC2EPKc()};
     let ctysz: c_int = unsafe{QUuid_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.as_ptr()  as *mut c_char;
-    // unsafe {_ZN5QUuidC1EPKc(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN5QUuidC1EPKc(arg0)} as u64;
+    unsafe {_ZN5QUuidC2EPKc(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QUuid{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

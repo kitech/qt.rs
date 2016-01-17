@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtGui/qfontinfo.h
 // dst-file: /src/gui/qfontinfo.rs
 //
@@ -38,12 +38,11 @@ extern {
   // proto:  int QFontInfo::pointSize();
   fn _ZNK9QFontInfo9pointSizeEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QFontInfo::QFontInfo(const QFontInfo & );
-  fn dector_ZN9QFontInfoC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QFontInfoC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN9QFontInfoC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QString QFontInfo::family();
   fn _ZNK9QFontInfo6familyEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QFontInfo::bold();
-  fn demth_ZNK9QFontInfo4boldEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn _ZNK9QFontInfo4boldEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  qreal QFontInfo::pointSizeF();
   fn _ZNK9QFontInfo10pointSizeFEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  bool QFontInfo::fixedPitch();
@@ -53,14 +52,13 @@ extern {
   // proto:  void QFontInfo::swap(QFontInfo & other);
   fn _ZN9QFontInfo4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QFontInfo::QFontInfo(const QFont & );
-  fn dector_ZN9QFontInfoC1ERK5QFont(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QFontInfoC1ERK5QFont(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN9QFontInfoC2ERK5QFont(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QFontInfo::pixelSize();
   fn _ZNK9QFontInfo9pixelSizeEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QFontInfo::strikeOut();
   fn _ZNK9QFontInfo9strikeOutEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QFontInfo::~QFontInfo();
-  fn _ZN9QFontInfoD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN9QFontInfoD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QFontInfo::italic();
   fn _ZNK9QFontInfo6italicEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QFontInfo::underline();
@@ -170,12 +168,12 @@ pub trait QFontInfo_new {
 impl<'a> /*trait*/ QFontInfo_new for (&'a QFontInfo) {
   fn new(self) -> QFontInfo {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QFontInfoC1ERKS_()};
+    // unsafe{_ZN9QFontInfoC2ERKS_()};
     let ctysz: c_int = unsafe{QFontInfo_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN9QFontInfoC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN9QFontInfoC1ERKS_(arg0)} as u64;
+    unsafe {_ZN9QFontInfoC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QFontInfo{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -223,7 +221,7 @@ impl<'a> /*trait*/ QFontInfo_bold<i8> for () {
   fn bold(self , rsthis: & QFontInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo4boldEv()};
-    let mut ret = unsafe {demth_ZNK9QFontInfo4boldEv(rsthis.qclsinst)};
+    let mut ret = unsafe {_ZNK9QFontInfo4boldEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -325,12 +323,12 @@ impl<'a> /*trait*/ QFontInfo_swap<()> for (&'a QFontInfo) {
 impl<'a> /*trait*/ QFontInfo_new for (&'a QFont) {
   fn new(self) -> QFontInfo {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QFontInfoC1ERK5QFont()};
+    // unsafe{_ZN9QFontInfoC2ERK5QFont()};
     let ctysz: c_int = unsafe{QFontInfo_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN9QFontInfoC1ERK5QFont(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN9QFontInfoC1ERK5QFont(arg0)} as u64;
+    unsafe {_ZN9QFontInfoC2ERK5QFont(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QFontInfo{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -399,8 +397,8 @@ pub trait QFontInfo_free<RetType> {
 impl<'a> /*trait*/ QFontInfo_free<()> for () {
   fn free(self , rsthis: & QFontInfo) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QFontInfoD0Ev()};
-     unsafe {_ZN9QFontInfoD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN9QFontInfoD2Ev()};
+     unsafe {_ZN9QFontInfoD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

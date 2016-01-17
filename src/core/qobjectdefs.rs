@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qobjectdefs.h
 // dst-file: /src/core/qobjectdefs.rs
 //
@@ -36,19 +36,16 @@ use super::qmetaobject::QMetaClassInfo; // 773
 // #[link(name = "QtInline")]
 
 extern {
-  fn Connection_Class_Size() -> c_int;
-  // proto:  void Connection::Connection();
-  fn dector_ZN11QMetaObject10ConnectionC1Ev() -> *mut c_void;
-  fn _ZN11QMetaObject10ConnectionC1Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  void Connection::~Connection();
-  fn _ZN11QMetaObject10ConnectionD0Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  void Connection::Connection(void * data);
-  fn dector_ZN11QMetaObject10ConnectionC1EPv(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QMetaObject10ConnectionC1EPv(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn QMetaObject__Connection_Class_Size() -> c_int;
+  // proto:  void QMetaObject::Connection::Connection();
+  fn _ZN11QMetaObject10ConnectionC2Ev(qthis: u64 /* *mut c_void*/);
+  // proto:  void QMetaObject::Connection::~Connection();
+  fn _ZN11QMetaObject10ConnectionD2Ev(qthis: u64 /* *mut c_void*/);
+  // proto:  void QMetaObject::Connection::Connection(void * data);
+  fn _ZN11QMetaObject10ConnectionC2EPv(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QGenericReturnArgument_Class_Size() -> c_int;
   // proto:  void QGenericReturnArgument::QGenericReturnArgument(const char * aName, void * aData);
-  fn dector_ZN22QGenericReturnArgumentC1EPKcPv(arg0: *mut c_char, arg1: *mut c_void) -> *mut c_void;
-  fn demth_ZN22QGenericReturnArgumentC1EPKcPv(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: *mut c_void);
+  fn _ZN22QGenericReturnArgumentC2EPKcPv(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: *mut c_void);
   fn QMetaObject_Class_Size() -> c_int;
   // proto: static QByteArray QMetaObject::normalizedSignature(const char * method);
   fn _ZN11QMetaObject19normalizedSignatureEPKc(arg0: *mut c_char) -> *mut c_void;
@@ -124,18 +121,17 @@ extern {
   fn _ZNK11QMetaObject14classInfoCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   fn QGenericArgument_Class_Size() -> c_int;
   // proto:  const char * QGenericArgument::name();
-  fn demth_ZNK16QGenericArgument4nameEv(qthis: u64 /* *mut c_void*/) -> *mut c_char;
+  fn _ZNK16QGenericArgument4nameEv(qthis: u64 /* *mut c_void*/) -> *mut c_char;
   // proto:  void * QGenericArgument::data();
-  fn demth_ZNK16QGenericArgument4dataEv(qthis: u64 /* *mut c_void*/);
+  fn _ZNK16QGenericArgument4dataEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QGenericArgument::QGenericArgument(const char * aName, const void * aData);
-  fn dector_ZN16QGenericArgumentC1EPKcPKv(arg0: *mut c_char, arg1: *mut c_void) -> *mut c_void;
-  fn demth_ZN16QGenericArgumentC1EPKcPKv(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: *mut c_void);
+  fn _ZN16QGenericArgumentC2EPKcPKv(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
-// class sizeof(Connection)=8
+// class sizeof(QMetaObject__Connection)=8
 #[derive(Default)]
-pub struct Connection {
+pub struct QMetaObject__Connection {
   // qbase: None,
   pub qclsinst: u64 /* *mut c_void*/,
 }
@@ -161,72 +157,72 @@ pub struct QGenericArgument {
   pub qclsinst: u64 /* *mut c_void*/,
 }
 
-impl /*struct*/ Connection {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> Connection {
-    return Connection{qclsinst: qthis, ..Default::default()};
+impl /*struct*/ QMetaObject__Connection {
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QMetaObject__Connection {
+    return QMetaObject__Connection{qclsinst: qthis, ..Default::default()};
   }
 }
-  // proto:  void Connection::Connection();
-impl /*struct*/ Connection {
-  pub fn new<T: Connection_new>(value: T) -> Connection {
+  // proto:  void QMetaObject::Connection::Connection();
+impl /*struct*/ QMetaObject__Connection {
+  pub fn new<T: QMetaObject__Connection_new>(value: T) -> QMetaObject__Connection {
     let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait Connection_new {
-  fn new(self) -> Connection;
+pub trait QMetaObject__Connection_new {
+  fn new(self) -> QMetaObject__Connection;
 }
 
-  // proto:  void Connection::Connection();
-impl<'a> /*trait*/ Connection_new for () {
-  fn new(self) -> Connection {
+  // proto:  void QMetaObject::Connection::Connection();
+impl<'a> /*trait*/ QMetaObject__Connection_new for () {
+  fn new(self) -> QMetaObject__Connection {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QMetaObject10ConnectionC1Ev()};
-    let ctysz: c_int = unsafe{Connection_Class_Size()};
+    // unsafe{_ZN11QMetaObject10ConnectionC2Ev()};
+    let ctysz: c_int = unsafe{QMetaObject__Connection_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN11QMetaObject10ConnectionC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN11QMetaObject10ConnectionC1Ev()} as u64;
-    let rsthis = Connection{qclsinst: qthis, ..Default::default()};
+    unsafe {_ZN11QMetaObject10ConnectionC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
+    let rsthis = QMetaObject__Connection{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  void Connection::~Connection();
-impl /*struct*/ Connection {
-  pub fn free<RetType, T: Connection_free<RetType>>(& self,  overload_args: T) -> RetType {
+  // proto:  void QMetaObject::Connection::~Connection();
+impl /*struct*/ QMetaObject__Connection {
+  pub fn free<RetType, T: QMetaObject__Connection_free<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait Connection_free<RetType> {
-  fn free(self , rsthis: & Connection) -> RetType;
+pub trait QMetaObject__Connection_free<RetType> {
+  fn free(self , rsthis: & QMetaObject__Connection) -> RetType;
 }
 
-  // proto:  void Connection::~Connection();
-impl<'a> /*trait*/ Connection_free<()> for () {
-  fn free(self , rsthis: & Connection) -> () {
+  // proto:  void QMetaObject::Connection::~Connection();
+impl<'a> /*trait*/ QMetaObject__Connection_free<()> for () {
+  fn free(self , rsthis: & QMetaObject__Connection) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QMetaObject10ConnectionD0Ev()};
-     unsafe {_ZN11QMetaObject10ConnectionD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN11QMetaObject10ConnectionD2Ev()};
+     unsafe {_ZN11QMetaObject10ConnectionD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
 
-  // proto:  void Connection::Connection(void * data);
-impl<'a> /*trait*/ Connection_new for (*mut c_void) {
-  fn new(self) -> Connection {
+  // proto:  void QMetaObject::Connection::Connection(void * data);
+impl<'a> /*trait*/ QMetaObject__Connection_new for (*mut c_void) {
+  fn new(self) -> QMetaObject__Connection {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QMetaObject10ConnectionC1EPv()};
-    let ctysz: c_int = unsafe{Connection_Class_Size()};
+    // unsafe{_ZN11QMetaObject10ConnectionC2EPv()};
+    let ctysz: c_int = unsafe{QMetaObject__Connection_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as *mut c_void;
-    // unsafe {_ZN11QMetaObject10ConnectionC1EPv(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN11QMetaObject10ConnectionC1EPv(arg0)} as u64;
-    let rsthis = Connection{qclsinst: qthis, ..Default::default()};
+    unsafe {_ZN11QMetaObject10ConnectionC2EPv(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
+    let rsthis = QMetaObject__Connection{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
@@ -266,13 +262,13 @@ pub trait QGenericReturnArgument_new {
 impl<'a> /*trait*/ QGenericReturnArgument_new for (&'a  String, *mut c_void) {
   fn new(self) -> QGenericReturnArgument {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN22QGenericReturnArgumentC1EPKcPv()};
+    // unsafe{_ZN22QGenericReturnArgumentC2EPKcPv()};
     let ctysz: c_int = unsafe{QGenericReturnArgument_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as *mut c_void;
-    // unsafe {_ZN22QGenericReturnArgumentC1EPKcPv(qthis, arg0, arg1)};
-    let qthis: u64 = unsafe {dector_ZN22QGenericReturnArgumentC1EPKcPv(arg0, arg1)} as u64;
+    unsafe {_ZN22QGenericReturnArgumentC2EPKcPv(qthis_ph, arg0, arg1)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QGenericReturnArgument{qbase: QGenericArgument::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1119,7 +1115,7 @@ impl<'a> /*trait*/ QGenericArgument_name<String> for () {
   fn name(self , rsthis: & QGenericArgument) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QGenericArgument4nameEv()};
-    let mut ret = unsafe {demth_ZNK16QGenericArgument4nameEv(rsthis.qclsinst)};
+    let mut ret = unsafe {_ZNK16QGenericArgument4nameEv(rsthis.qclsinst)};
     let slen = unsafe {strlen(ret as *const i8)} as usize;
     return unsafe{String::from_raw_parts(ret as *mut u8, slen, slen+1)};
     // return 1;
@@ -1143,7 +1139,7 @@ impl<'a> /*trait*/ QGenericArgument_data<()> for () {
   fn data(self , rsthis: & QGenericArgument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QGenericArgument4dataEv()};
-     unsafe {demth_ZNK16QGenericArgument4dataEv(rsthis.qclsinst)};
+     unsafe {_ZNK16QGenericArgument4dataEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1165,13 +1161,13 @@ pub trait QGenericArgument_new {
 impl<'a> /*trait*/ QGenericArgument_new for (&'a  String, *mut c_void) {
   fn new(self) -> QGenericArgument {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QGenericArgumentC1EPKcPKv()};
+    // unsafe{_ZN16QGenericArgumentC2EPKcPKv()};
     let ctysz: c_int = unsafe{QGenericArgument_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as *mut c_void;
-    // unsafe {_ZN16QGenericArgumentC1EPKcPKv(qthis, arg0, arg1)};
-    let qthis: u64 = unsafe {dector_ZN16QGenericArgumentC1EPKcPKv(arg0, arg1)} as u64;
+    unsafe {_ZN16QGenericArgumentC2EPKcPKv(qthis_ph, arg0, arg1)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QGenericArgument{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

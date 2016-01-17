@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtGui/qopengltexture.h
 // dst-file: /src/gui/qopengltexture.rs
 //
@@ -119,7 +119,7 @@ extern {
   // proto:  void QOpenGLTexture::allocateStorage();
   fn _ZN14QOpenGLTexture15allocateStorageEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QOpenGLTexture::~QOpenGLTexture();
-  fn _ZN14QOpenGLTextureD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN14QOpenGLTextureD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  int QOpenGLTexture::mipMaxLevel();
   fn _ZNK14QOpenGLTexture11mipMaxLevelEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QOpenGLTexture::setBorderColor(QColor color);
@@ -149,8 +149,7 @@ extern {
   // proto:  QColor QOpenGLTexture::borderColor();
   fn _ZNK14QOpenGLTexture11borderColorEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QOpenGLTexture::QOpenGLTexture(const QOpenGLTexture & );
-  fn dector_ZN14QOpenGLTextureC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN14QOpenGLTextureC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN14QOpenGLTextureC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QOpenGLTexture::setCompressedData(int mipLevel, int layer, int dataSize, void * data, const QOpenGLPixelTransferOptions *const options);
   fn _ZN14QOpenGLTexture17setCompressedDataEiiiPvPK27QOpenGLPixelTransferOptions(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: *mut c_void, arg4: *mut c_void);
   // proto:  void QOpenGLTexture::setCompressedData(int mipLevel, int dataSize, void * data, const QOpenGLPixelTransferOptions *const options);
@@ -1107,8 +1106,8 @@ pub trait QOpenGLTexture_free<RetType> {
 impl<'a> /*trait*/ QOpenGLTexture_free<()> for () {
   fn free(self , rsthis: & QOpenGLTexture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QOpenGLTextureD0Ev()};
-     unsafe {_ZN14QOpenGLTextureD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN14QOpenGLTextureD2Ev()};
+     unsafe {_ZN14QOpenGLTextureD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1395,12 +1394,12 @@ pub trait QOpenGLTexture_new {
 impl<'a> /*trait*/ QOpenGLTexture_new for (&'a QOpenGLTexture) {
   fn new(self) -> QOpenGLTexture {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QOpenGLTextureC1ERKS_()};
+    // unsafe{_ZN14QOpenGLTextureC2ERKS_()};
     let ctysz: c_int = unsafe{QOpenGLTexture_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN14QOpenGLTextureC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN14QOpenGLTextureC1ERKS_(arg0)} as u64;
+    unsafe {_ZN14QOpenGLTextureC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QOpenGLTexture{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

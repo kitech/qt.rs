@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qlistview.h
 // dst-file: /src/widgets/qlistview.rs
 //
@@ -36,8 +36,7 @@ use super::super::core::qrect::QRect; // 771
 extern {
   fn QListView_Class_Size() -> c_int;
   // proto:  void QListView::QListView(QWidget * parent);
-  fn dector_ZN9QListViewC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QListViewC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN9QListViewC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QListView::setWordWrap(bool on);
   fn _ZN9QListView11setWordWrapEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QListView::doItemsLayout();
@@ -67,8 +66,7 @@ extern {
   // proto:  void QListView::setModelColumn(int column);
   fn _ZN9QListView14setModelColumnEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QListView::QListView(const QListView & );
-  fn dector_ZN9QListViewC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QListViewC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN9QListViewC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QListView::setSpacing(int space);
   fn _ZN9QListView10setSpacingEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  QRect QListView::visualRect(const QModelIndex & index);
@@ -76,7 +74,7 @@ extern {
   // proto:  bool QListView::isRowHidden(int row);
   fn _ZNK9QListView11isRowHiddenEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
   // proto:  void QListView::~QListView();
-  fn _ZN9QListViewD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN9QListViewD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  const QMetaObject * QListView::metaObject();
   fn _ZNK9QListView10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  int QListView::batchSize();
@@ -138,12 +136,12 @@ pub trait QListView_new {
 impl<'a> /*trait*/ QListView_new for (&'a QWidget) {
   fn new(self) -> QListView {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QListViewC1EP7QWidget()};
+    // unsafe{_ZN9QListViewC2EP7QWidget()};
     let ctysz: c_int = unsafe{QListView_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN9QListViewC1EP7QWidget(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN9QListViewC1EP7QWidget(arg0)} as u64;
+    unsafe {_ZN9QListViewC2EP7QWidget(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QListView{qbase: QAbstractItemView::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -477,12 +475,12 @@ impl<'a> /*trait*/ QListView_setModelColumn<()> for (i32) {
 impl<'a> /*trait*/ QListView_new for (&'a QListView) {
   fn new(self) -> QListView {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QListViewC1ERKS_()};
+    // unsafe{_ZN9QListViewC2ERKS_()};
     let ctysz: c_int = unsafe{QListView_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN9QListViewC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN9QListViewC1ERKS_(arg0)} as u64;
+    unsafe {_ZN9QListViewC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QListView{qbase: QAbstractItemView::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -577,8 +575,8 @@ pub trait QListView_free<RetType> {
 impl<'a> /*trait*/ QListView_free<()> for () {
   fn free(self , rsthis: & QListView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QListViewD0Ev()};
-     unsafe {_ZN9QListViewD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN9QListViewD2Ev()};
+     unsafe {_ZN9QListViewD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

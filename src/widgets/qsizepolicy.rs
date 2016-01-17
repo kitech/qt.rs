@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qsizepolicy.h
 // dst-file: /src/widgets/qsizepolicy.rs
 //
@@ -50,11 +50,9 @@ extern {
   // proto:  void QSizePolicy::setHorizontalStretch(int stretchFactor);
   fn _ZN11QSizePolicy20setHorizontalStretchEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QSizePolicy::QSizePolicy(int i);
-  fn dector_ZN11QSizePolicyC1Ei(arg0: c_int) -> *mut c_void;
-  fn _ZN11QSizePolicyC1Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn _ZN11QSizePolicyC2Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QSizePolicy::QSizePolicy();
-  fn dector_ZN11QSizePolicyC1Ev() -> *mut c_void;
-  fn _ZN11QSizePolicyC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN11QSizePolicyC2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  int QSizePolicy::verticalStretch();
   fn _ZNK11QSizePolicy15verticalStretchEv(qthis: u64 /* *mut c_void*/) -> c_int;
 } // <= ext block end
@@ -318,12 +316,12 @@ pub trait QSizePolicy_new {
 impl<'a> /*trait*/ QSizePolicy_new for (i32) {
   fn new(self) -> QSizePolicy {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QSizePolicyC1Ei()};
+    // unsafe{_ZN11QSizePolicyC2Ei()};
     let ctysz: c_int = unsafe{QSizePolicy_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
-    // unsafe {_ZN11QSizePolicyC1Ei(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN11QSizePolicyC1Ei(arg0)} as u64;
+    unsafe {_ZN11QSizePolicyC2Ei(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QSizePolicy{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -334,11 +332,11 @@ impl<'a> /*trait*/ QSizePolicy_new for (i32) {
 impl<'a> /*trait*/ QSizePolicy_new for () {
   fn new(self) -> QSizePolicy {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QSizePolicyC1Ev()};
+    // unsafe{_ZN11QSizePolicyC2Ev()};
     let ctysz: c_int = unsafe{QSizePolicy_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN11QSizePolicyC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN11QSizePolicyC1Ev()} as u64;
+    unsafe {_ZN11QSizePolicyC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QSizePolicy{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtCore/qfuturewatcher.h
 // dst-file: /src/core/qfuturewatcher.rs
 //
@@ -65,8 +65,7 @@ extern {
   // proto:  QString QFutureWatcherBase::progressText();
   fn _ZNK18QFutureWatcherBase12progressTextEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QFutureWatcherBase::QFutureWatcherBase(QObject * parent);
-  fn dector_ZN18QFutureWatcherBaseC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN18QFutureWatcherBaseC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN18QFutureWatcherBaseC2EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QFutureWatcherBase::togglePaused();
   fn _ZN18QFutureWatcherBase12togglePausedEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QFutureWatcherBase::waitForFinished();
@@ -501,12 +500,12 @@ pub trait QFutureWatcherBase_new {
 impl<'a> /*trait*/ QFutureWatcherBase_new for (&'a QObject) {
   fn new(self) -> QFutureWatcherBase {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QFutureWatcherBaseC1EP7QObject()};
+    // unsafe{_ZN18QFutureWatcherBaseC2EP7QObject()};
     let ctysz: c_int = unsafe{QFutureWatcherBase_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN18QFutureWatcherBaseC1EP7QObject(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN18QFutureWatcherBaseC1EP7QObject(arg0)} as u64;
+    unsafe {_ZN18QFutureWatcherBaseC2EP7QObject(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QFutureWatcherBase{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

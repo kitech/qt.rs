@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtGui/qsurface.h
 // dst-file: /src/gui/qsurface.rs
 //
@@ -40,7 +40,7 @@ extern {
   // proto:  QSize QSurface::size();
   fn _ZNK8QSurface4sizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QSurface::~QSurface();
-  fn _ZN8QSurfaceD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN8QSurfaceD2Ev(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
@@ -165,8 +165,8 @@ pub trait QSurface_free<RetType> {
 impl<'a> /*trait*/ QSurface_free<()> for () {
   fn free(self , rsthis: & QSurface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QSurfaceD0Ev()};
-     unsafe {_ZN8QSurfaceD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN8QSurfaceD2Ev()};
+     unsafe {_ZN8QSurfaceD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

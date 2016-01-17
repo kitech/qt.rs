@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtGui/qoffscreensurface.h
 // dst-file: /src/gui/qoffscreensurface.rs
 //
@@ -34,13 +34,11 @@ use super::super::core::qsize::QSize; // 771
 extern {
   fn QOffscreenSurface_Class_Size() -> c_int;
   // proto:  void QOffscreenSurface::~QOffscreenSurface();
-  fn _ZN17QOffscreenSurfaceD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN17QOffscreenSurfaceD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QOffscreenSurface::QOffscreenSurface(const QOffscreenSurface & );
-  fn dector_ZN17QOffscreenSurfaceC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN17QOffscreenSurfaceC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN17QOffscreenSurfaceC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QOffscreenSurface::QOffscreenSurface(QScreen * screen);
-  fn dector_ZN17QOffscreenSurfaceC1EP7QScreen(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN17QOffscreenSurfaceC1EP7QScreen(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN17QOffscreenSurfaceC2EP7QScreen(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QScreen * QOffscreenSurface::screen();
   fn _ZNK17QOffscreenSurface6screenEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QOffscreenSurface::setFormat(const QSurfaceFormat & format);
@@ -108,8 +106,8 @@ pub trait QOffscreenSurface_free<RetType> {
 impl<'a> /*trait*/ QOffscreenSurface_free<()> for () {
   fn free(self , rsthis: & QOffscreenSurface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QOffscreenSurfaceD0Ev()};
-     unsafe {_ZN17QOffscreenSurfaceD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN17QOffscreenSurfaceD2Ev()};
+     unsafe {_ZN17QOffscreenSurfaceD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -131,12 +129,12 @@ pub trait QOffscreenSurface_new {
 impl<'a> /*trait*/ QOffscreenSurface_new for (&'a QOffscreenSurface) {
   fn new(self) -> QOffscreenSurface {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QOffscreenSurfaceC1ERKS_()};
+    // unsafe{_ZN17QOffscreenSurfaceC2ERKS_()};
     let ctysz: c_int = unsafe{QOffscreenSurface_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN17QOffscreenSurfaceC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN17QOffscreenSurfaceC1ERKS_(arg0)} as u64;
+    unsafe {_ZN17QOffscreenSurfaceC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QOffscreenSurface{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -147,12 +145,12 @@ impl<'a> /*trait*/ QOffscreenSurface_new for (&'a QOffscreenSurface) {
 impl<'a> /*trait*/ QOffscreenSurface_new for (&'a QScreen) {
   fn new(self) -> QOffscreenSurface {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QOffscreenSurfaceC1EP7QScreen()};
+    // unsafe{_ZN17QOffscreenSurfaceC2EP7QScreen()};
     let ctysz: c_int = unsafe{QOffscreenSurface_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN17QOffscreenSurfaceC1EP7QScreen(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN17QOffscreenSurfaceC1EP7QScreen(arg0)} as u64;
+    unsafe {_ZN17QOffscreenSurfaceC2EP7QScreen(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QOffscreenSurface{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

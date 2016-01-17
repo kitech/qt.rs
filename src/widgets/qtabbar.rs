@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qtabbar.h
 // dst-file: /src/widgets/qtabbar.rs
 //
@@ -64,8 +64,7 @@ extern {
   // proto:  const QMetaObject * QTabBar::metaObject();
   fn _ZNK7QTabBar10metaObjectEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QTabBar::QTabBar(const QTabBar & );
-  fn dector_ZN7QTabBarC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN7QTabBarC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN7QTabBarC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QTabBar::insertTab(int index, const QIcon & icon, const QString & text);
   fn _ZN7QTabBar9insertTabEiRK5QIconRK7QString(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void, arg2: *mut c_void) -> c_int;
   // proto:  void QTabBar::setTabIcon(int index, const QIcon & icon);
@@ -103,12 +102,11 @@ extern {
   // proto:  void QTabBar::setTabData(int index, const QVariant & data);
   fn _ZN7QTabBar10setTabDataEiRK8QVariant(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  void QTabBar::QTabBar(QWidget * parent);
-  fn dector_ZN7QTabBarC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN7QTabBarC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN7QTabBarC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QColor QTabBar::tabTextColor(int index);
   fn _ZNK7QTabBar12tabTextColorEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  void QTabBar::~QTabBar();
-  fn _ZN7QTabBarD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN7QTabBarD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  int QTabBar::insertTab(int index, const QString & text);
   fn _ZN7QTabBar9insertTabEiRK7QString(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void) -> c_int;
   // proto:  int QTabBar::addTab(const QString & text);
@@ -495,12 +493,12 @@ pub trait QTabBar_new {
 impl<'a> /*trait*/ QTabBar_new for (&'a QTabBar) {
   fn new(self) -> QTabBar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QTabBarC1ERKS_()};
+    // unsafe{_ZN7QTabBarC2ERKS_()};
     let ctysz: c_int = unsafe{QTabBar_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN7QTabBarC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN7QTabBarC1ERKS_(arg0)} as u64;
+    unsafe {_ZN7QTabBarC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QTabBar{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -940,12 +938,12 @@ impl<'a> /*trait*/ QTabBar_setTabData<()> for (i32, &'a QVariant) {
 impl<'a> /*trait*/ QTabBar_new for (&'a QWidget) {
   fn new(self) -> QTabBar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QTabBarC1EP7QWidget()};
+    // unsafe{_ZN7QTabBarC2EP7QWidget()};
     let ctysz: c_int = unsafe{QTabBar_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN7QTabBarC1EP7QWidget(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN7QTabBarC1EP7QWidget(arg0)} as u64;
+    unsafe {_ZN7QTabBarC2EP7QWidget(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QTabBar{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -993,8 +991,8 @@ pub trait QTabBar_free<RetType> {
 impl<'a> /*trait*/ QTabBar_free<()> for () {
   fn free(self , rsthis: & QTabBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QTabBarD0Ev()};
-     unsafe {_ZN7QTabBarD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN7QTabBarD2Ev()};
+     unsafe {_ZN7QTabBarD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

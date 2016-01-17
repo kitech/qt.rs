@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtWidgets/qspinbox.h
 // dst-file: /src/widgets/qspinbox.rs
 //
@@ -39,7 +39,7 @@ extern {
   // proto:  int QSpinBox::value();
   fn _ZNK8QSpinBox5valueEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QSpinBox::~QSpinBox();
-  fn _ZN8QSpinBoxD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN8QSpinBoxD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QSpinBox::setMaximum(int max);
   fn _ZN8QSpinBox10setMaximumEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QSpinBox::setValue(int val);
@@ -47,13 +47,11 @@ extern {
   // proto:  void QSpinBox::setDisplayIntegerBase(int base);
   fn _ZN8QSpinBox21setDisplayIntegerBaseEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QSpinBox::QSpinBox(QWidget * parent);
-  fn dector_ZN8QSpinBoxC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN8QSpinBoxC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN8QSpinBoxC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QSpinBox::singleStep();
   fn _ZNK8QSpinBox10singleStepEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QSpinBox::QSpinBox(const QSpinBox & );
-  fn dector_ZN8QSpinBoxC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN8QSpinBoxC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN8QSpinBoxC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QSpinBox::displayIntegerBase();
   fn _ZNK8QSpinBox18displayIntegerBaseEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QSpinBox::setSuffix(const QString & suffix);
@@ -96,12 +94,11 @@ extern {
   // proto:  double QDoubleSpinBox::singleStep();
   fn _ZNK14QDoubleSpinBox10singleStepEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QDoubleSpinBox::~QDoubleSpinBox();
-  fn _ZN14QDoubleSpinBoxD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN14QDoubleSpinBoxD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QDoubleSpinBox::fixup(QString & str);
   fn _ZNK14QDoubleSpinBox5fixupER7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QDoubleSpinBox::QDoubleSpinBox(const QDoubleSpinBox & );
-  fn dector_ZN14QDoubleSpinBoxC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN14QDoubleSpinBoxC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN14QDoubleSpinBoxC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QDoubleSpinBox::setPrefix(const QString & prefix);
   fn _ZN14QDoubleSpinBox9setPrefixERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QString QDoubleSpinBox::cleanText();
@@ -117,8 +114,7 @@ extern {
   // proto:  void QDoubleSpinBox::setRange(double min, double max);
   fn _ZN14QDoubleSpinBox8setRangeEdd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double);
   // proto:  void QDoubleSpinBox::QDoubleSpinBox(QWidget * parent);
-  fn dector_ZN14QDoubleSpinBoxC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN14QDoubleSpinBoxC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN14QDoubleSpinBoxC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  double QDoubleSpinBox::maximum();
   fn _ZNK14QDoubleSpinBox7maximumEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  QString QDoubleSpinBox::suffix();
@@ -249,8 +245,8 @@ pub trait QSpinBox_free<RetType> {
 impl<'a> /*trait*/ QSpinBox_free<()> for () {
   fn free(self , rsthis: & QSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QSpinBoxD0Ev()};
-     unsafe {_ZN8QSpinBoxD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN8QSpinBoxD2Ev()};
+     unsafe {_ZN8QSpinBoxD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -341,12 +337,12 @@ pub trait QSpinBox_new {
 impl<'a> /*trait*/ QSpinBox_new for (&'a QWidget) {
   fn new(self) -> QSpinBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QSpinBoxC1EP7QWidget()};
+    // unsafe{_ZN8QSpinBoxC2EP7QWidget()};
     let ctysz: c_int = unsafe{QSpinBox_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN8QSpinBoxC1EP7QWidget(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN8QSpinBoxC1EP7QWidget(arg0)} as u64;
+    unsafe {_ZN8QSpinBoxC2EP7QWidget(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QSpinBox{qbase: QAbstractSpinBox::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -380,12 +376,12 @@ impl<'a> /*trait*/ QSpinBox_singleStep<i32> for () {
 impl<'a> /*trait*/ QSpinBox_new for (&'a QSpinBox) {
   fn new(self) -> QSpinBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QSpinBoxC1ERKS_()};
+    // unsafe{_ZN8QSpinBoxC2ERKS_()};
     let ctysz: c_int = unsafe{QSpinBox_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN8QSpinBoxC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN8QSpinBoxC1ERKS_(arg0)} as u64;
+    unsafe {_ZN8QSpinBoxC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QSpinBox{qbase: QAbstractSpinBox::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -890,8 +886,8 @@ pub trait QDoubleSpinBox_free<RetType> {
 impl<'a> /*trait*/ QDoubleSpinBox_free<()> for () {
   fn free(self , rsthis: & QDoubleSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QDoubleSpinBoxD0Ev()};
-     unsafe {_ZN14QDoubleSpinBoxD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN14QDoubleSpinBoxD2Ev()};
+     unsafe {_ZN14QDoubleSpinBoxD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -936,12 +932,12 @@ pub trait QDoubleSpinBox_new {
 impl<'a> /*trait*/ QDoubleSpinBox_new for (&'a QDoubleSpinBox) {
   fn new(self) -> QDoubleSpinBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QDoubleSpinBoxC1ERKS_()};
+    // unsafe{_ZN14QDoubleSpinBoxC2ERKS_()};
     let ctysz: c_int = unsafe{QDoubleSpinBox_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN14QDoubleSpinBoxC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN14QDoubleSpinBoxC1ERKS_(arg0)} as u64;
+    unsafe {_ZN14QDoubleSpinBoxC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QDoubleSpinBox{qbase: QAbstractSpinBox::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1115,12 +1111,12 @@ impl<'a> /*trait*/ QDoubleSpinBox_setRange<()> for (f64, f64) {
 impl<'a> /*trait*/ QDoubleSpinBox_new for (&'a QWidget) {
   fn new(self) -> QDoubleSpinBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QDoubleSpinBoxC1EP7QWidget()};
+    // unsafe{_ZN14QDoubleSpinBoxC2EP7QWidget()};
     let ctysz: c_int = unsafe{QDoubleSpinBox_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN14QDoubleSpinBoxC1EP7QWidget(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN14QDoubleSpinBoxC1EP7QWidget(arg0)} as u64;
+    unsafe {_ZN14QDoubleSpinBoxC2EP7QWidget(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QDoubleSpinBox{qbase: QAbstractSpinBox::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

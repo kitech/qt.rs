@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Fri Jan  1 15:54:32 2016
+// created: Sun Jan 17 17:37:11 2016
 // src-file: /QtGui/qpixmap.h
 // dst-file: /src/gui/qpixmap.rs
 //
@@ -48,32 +48,29 @@ extern {
   // proto:  bool QPixmap::save(const QString & fileName, const char * format, int quality);
   fn _ZNK7QPixmap4saveERK7QStringPKci(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_char, arg2: c_int) -> c_char;
   // proto:  void QPixmap::swap(QPixmap & other);
-  fn demth_ZN7QPixmap4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN7QPixmap4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QPixmap::isQBitmap();
   fn _ZNK7QPixmap9isQBitmapEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  qreal QPixmap::devicePixelRatio();
   fn _ZNK7QPixmap16devicePixelRatioEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QPixmap::QPixmap(const QSize & );
-  fn dector_ZN7QPixmapC1ERK5QSize(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN7QPixmapC1ERK5QSize(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN7QPixmapC2ERK5QSize(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPixmap::fill(const QPaintDevice * device, int xofs, int yofs);
-  fn demth_ZN7QPixmap4fillEPK12QPaintDeviceii(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int, arg2: c_int);
+  fn _ZN7QPixmap4fillEPK12QPaintDeviceii(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int, arg2: c_int);
   // proto:  void QPixmap::QPixmap(const QSize & s, int type);
-  fn dector_ZN7QPixmapC1ERK5QSizei(arg0: *mut c_void, arg1: c_int) -> *mut c_void;
-  fn _ZN7QPixmapC1ERK5QSizei(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
+  fn _ZN7QPixmapC2ERK5QSizei(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
   // proto:  void QPixmap::fill(const QColor & fillColor);
   fn _ZN7QPixmap4fillERK6QColor(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QPixmap::devType();
   fn _ZNK7QPixmap7devTypeEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QPixmap::scroll(int dx, int dy, int x, int y, int width, int height, QRegion * exposed);
-  fn demth_ZN7QPixmap6scrollEiiiiiiP7QRegion(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_int, arg5: c_int, arg6: *mut c_void);
+  fn _ZN7QPixmap6scrollEiiiiiiP7QRegion(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_int, arg5: c_int, arg6: *mut c_void);
   // proto:  QPixmap QPixmap::copy(const QRect & rect);
   fn _ZNK7QPixmap4copyERK5QRect(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto: static QTransform QPixmap::trueMatrix(const QTransform & m, int w, int h);
   fn _ZN7QPixmap10trueMatrixERK10QTransformii(arg0: *mut c_void, arg1: c_int, arg2: c_int) -> *mut c_void;
   // proto:  void QPixmap::QPixmap(int w, int h);
-  fn dector_ZN7QPixmapC1Eii(arg0: c_int, arg1: c_int) -> *mut c_void;
-  fn _ZN7QPixmapC1Eii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
+  fn _ZN7QPixmapC2Eii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto: static QPixmap QPixmap::grabWindow(WId , int x, int y, int w, int h);
   fn _ZN7QPixmap10grabWindowEiiiii(arg0: *mut c_uint, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_int) -> *mut c_void;
   // proto:  void QPixmap::fill(const QPaintDevice * device, const QPoint & ofs);
@@ -83,7 +80,7 @@ extern {
   // proto:  bool QPixmap::isNull();
   fn _ZNK7QPixmap6isNullEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QPixmap QPixmap::copy(int x, int y, int width, int height);
-  fn demth_ZNK7QPixmap4copyEiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int) -> *mut c_void;
+  fn _ZNK7QPixmap4copyEiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int) -> *mut c_void;
   // proto: static int QPixmap::defaultDepth();
   fn _ZN7QPixmap12defaultDepthEv() -> c_int;
   // proto:  void QPixmap::detach();
@@ -93,18 +90,15 @@ extern {
   // proto:  void QPixmap::setMask(const QBitmap & );
   fn _ZN7QPixmap7setMaskERK7QBitmap(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPixmap::QPixmap();
-  fn dector_ZN7QPixmapC1Ev() -> *mut c_void;
-  fn _ZN7QPixmapC1Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN7QPixmapC2Ev(qthis: u64 /* *mut c_void*/);
   // proto: static QPixmap QPixmap::grabWidget(QObject * widget, const QRect & rect);
   fn _ZN7QPixmap10grabWidgetEP7QObjectRK5QRect(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  void QPixmap::QPixmap(const QPixmap & );
-  fn dector_ZN7QPixmapC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN7QPixmapC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn _ZN7QPixmapC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPixmap::setDevicePixelRatio(qreal scaleFactor);
   fn _ZN7QPixmap19setDevicePixelRatioEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QPixmap::QPixmap(const char *const [] xpm);
-  fn dector_ZN7QPixmapC1EPKPKc(arg0: *mut *mut c_char) -> *mut c_void;
-  fn _ZN7QPixmapC1EPKPKc(qthis: u64 /* *mut c_void*/, arg0: *mut *mut c_char);
+  fn _ZN7QPixmapC2EPKPKc(qthis: u64 /* *mut c_void*/, arg0: *mut *mut c_char);
   // proto:  qint64 QPixmap::cacheKey();
   fn _ZNK7QPixmap8cacheKeyEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
   // proto:  QBitmap QPixmap::createHeuristicMask(bool clipTight);
@@ -114,7 +108,7 @@ extern {
   // proto:  QImage QPixmap::toImage();
   fn _ZNK7QPixmap7toImageEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto: static QPixmap QPixmap::grabWidget(QObject * widget, int x, int y, int w, int h);
-  fn demth_ZN7QPixmap10grabWidgetEP7QObjectiiii(arg0: *mut c_void, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_int) -> *mut c_void;
+  fn _ZN7QPixmap10grabWidgetEP7QObjectiiii(arg0: *mut c_void, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_int) -> *mut c_void;
   // proto:  QPlatformPixmap * QPixmap::handle();
   fn _ZNK7QPixmap6handleEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QPixmap::hasAlphaChannel();
@@ -130,7 +124,7 @@ extern {
   // proto:  QPaintEngine * QPixmap::paintEngine();
   fn _ZNK7QPixmap11paintEngineEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QPixmap::~QPixmap();
-  fn _ZN7QPixmapD0Ev(qthis: u64 /* *mut c_void*/);
+  fn _ZN7QPixmapD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  int QPixmap::height();
   fn _ZNK7QPixmap6heightEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QPixmap::save(QIODevice * device, const char * format, int quality);
@@ -210,7 +204,7 @@ impl<'a> /*trait*/ QPixmap_swap<()> for (&'a QPixmap) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPixmap4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {demth_ZN7QPixmap4swapERS_(rsthis.qclsinst, arg0)};
+     unsafe {_ZN7QPixmap4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -278,12 +272,12 @@ pub trait QPixmap_new {
 impl<'a> /*trait*/ QPixmap_new for (&'a QSize) {
   fn new(self) -> QPixmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QPixmapC1ERK5QSize()};
+    // unsafe{_ZN7QPixmapC2ERK5QSize()};
     let ctysz: c_int = unsafe{QPixmap_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN7QPixmapC1ERK5QSize(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN7QPixmapC1ERK5QSize(arg0)} as u64;
+    unsafe {_ZN7QPixmapC2ERK5QSize(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QPixmap{qbase: QPaintDevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -310,7 +304,7 @@ impl<'a> /*trait*/ QPixmap_fill<()> for (&'a QPaintDevice, i32, i32) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as c_int;
-     unsafe {demth_ZN7QPixmap4fillEPK12QPaintDeviceii(rsthis.qclsinst, arg0, arg1, arg2)};
+     unsafe {_ZN7QPixmap4fillEPK12QPaintDeviceii(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
 }
@@ -319,13 +313,13 @@ impl<'a> /*trait*/ QPixmap_fill<()> for (&'a QPaintDevice, i32, i32) {
 impl<'a> /*trait*/ QPixmap_new for (&'a QSize, i32) {
   fn new(self) -> QPixmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QPixmapC1ERK5QSizei()};
+    // unsafe{_ZN7QPixmapC2ERK5QSizei()};
     let ctysz: c_int = unsafe{QPixmap_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
-    // unsafe {_ZN7QPixmapC1ERK5QSizei(qthis, arg0, arg1)};
-    let qthis: u64 = unsafe {dector_ZN7QPixmapC1ERK5QSizei(arg0, arg1)} as u64;
+    unsafe {_ZN7QPixmapC2ERK5QSizei(qthis_ph, arg0, arg1)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QPixmap{qbase: QPaintDevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -390,7 +384,7 @@ impl<'a> /*trait*/ QPixmap_scroll<()> for (i32, i32, i32, i32, i32, i32, &'a QRe
     let arg4 = self.4  as c_int;
     let arg5 = self.5  as c_int;
     let arg6 = self.6.qclsinst  as *mut c_void;
-     unsafe {demth_ZN7QPixmap6scrollEiiiiiiP7QRegion(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5, arg6)};
+     unsafe {_ZN7QPixmap6scrollEiiiiiiP7QRegion(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5, arg6)};
     // return 1;
   }
 }
@@ -451,13 +445,13 @@ impl<'a> /*trait*/ QPixmap_trueMatrix_s<QTransform> for (&'a QTransform, i32, i3
 impl<'a> /*trait*/ QPixmap_new for (i32, i32) {
   fn new(self) -> QPixmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QPixmapC1Eii()};
+    // unsafe{_ZN7QPixmapC2Eii()};
     let ctysz: c_int = unsafe{QPixmap_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-    // unsafe {_ZN7QPixmapC1Eii(qthis, arg0, arg1)};
-    let qthis: u64 = unsafe {dector_ZN7QPixmapC1Eii(arg0, arg1)} as u64;
+    unsafe {_ZN7QPixmapC2Eii(qthis_ph, arg0, arg1)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QPixmap{qbase: QPaintDevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -560,7 +554,7 @@ impl<'a> /*trait*/ QPixmap_copy<QPixmap> for (i32, i32, i32, i32) {
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as c_int;
     let arg3 = self.3  as c_int;
-    let mut ret = unsafe {demth_ZNK7QPixmap4copyEiiii(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
+    let mut ret = unsafe {_ZNK7QPixmap4copyEiiii(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
     let mut ret1 = QPixmap::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -653,11 +647,11 @@ impl<'a> /*trait*/ QPixmap_setMask<()> for (&'a QBitmap) {
 impl<'a> /*trait*/ QPixmap_new for () {
   fn new(self) -> QPixmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QPixmapC1Ev()};
+    // unsafe{_ZN7QPixmapC2Ev()};
     let ctysz: c_int = unsafe{QPixmap_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN7QPixmapC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN7QPixmapC1Ev()} as u64;
+    unsafe {_ZN7QPixmapC2Ev(qthis_ph)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QPixmap{qbase: QPaintDevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -694,12 +688,12 @@ impl<'a> /*trait*/ QPixmap_grabWidget_s<QPixmap> for (&'a QObject, &'a QRect) {
 impl<'a> /*trait*/ QPixmap_new for (&'a QPixmap) {
   fn new(self) -> QPixmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QPixmapC1ERKS_()};
+    // unsafe{_ZN7QPixmapC2ERKS_()};
     let ctysz: c_int = unsafe{QPixmap_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN7QPixmapC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN7QPixmapC1ERKS_(arg0)} as u64;
+    unsafe {_ZN7QPixmapC2ERKS_(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QPixmap{qbase: QPaintDevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -733,12 +727,12 @@ impl<'a> /*trait*/ QPixmap_setDevicePixelRatio<()> for (f64) {
 impl<'a> /*trait*/ QPixmap_new for (&'a  Vec<&'a  i8>) {
   fn new(self) -> QPixmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QPixmapC1EPKPKc()};
+    // unsafe{_ZN7QPixmapC2EPKPKc()};
     let ctysz: c_int = unsafe{QPixmap_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.as_ptr()  as *mut *mut c_char;
-    // unsafe {_ZN7QPixmapC1EPKPKc(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN7QPixmapC1EPKPKc(arg0)} as u64;
+    unsafe {_ZN7QPixmapC2EPKPKc(qthis_ph, arg0)};
+    let qthis: u64 = qthis_ph;
     let rsthis = QPixmap{qbase: QPaintDevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -850,7 +844,7 @@ impl<'a> /*trait*/ QPixmap_grabWidget_s<QPixmap> for (&'a QObject, i32, i32, i32
     let arg2 = self.2  as c_int;
     let arg3 = self.3  as c_int;
     let arg4 = self.4  as c_int;
-    let mut ret = unsafe {demth_ZN7QPixmap10grabWidgetEP7QObjectiiii(arg0, arg1, arg2, arg3, arg4)};
+    let mut ret = unsafe {_ZN7QPixmap10grabWidgetEP7QObjectiiii(arg0, arg1, arg2, arg3, arg4)};
     let mut ret1 = QPixmap::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1028,8 +1022,8 @@ pub trait QPixmap_free<RetType> {
 impl<'a> /*trait*/ QPixmap_free<()> for () {
   fn free(self , rsthis: & QPixmap) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QPixmapD0Ev()};
-     unsafe {_ZN7QPixmapD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN7QPixmapD2Ev()};
+     unsafe {_ZN7QPixmapD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

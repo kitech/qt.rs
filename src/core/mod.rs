@@ -97,7 +97,7 @@ pub use self::qcommandlineoption::QCommandLineOption;
 pub use self::qabstractitemmodel::QPersistentModelIndex;
 
 pub mod qobjectdefs;
-pub use self::qobjectdefs::Connection;
+pub use self::qobjectdefs::QMetaObject__Connection;
 
 pub mod qstandardpaths;
 pub use self::qstandardpaths::QStandardPaths;
