@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtGui/qpaintdevicewindow.h
 // dst-file: /src/gui/qpaintdevicewindow.rs
 //
@@ -21,6 +21,7 @@ use self::libc::*;
 use super::qwindow::QWindow; // 773
 use std::ops::Deref;
 use super::qregion::QRegion; // 773
+use super::super::core::qobjectdefs::QMetaObject; // 771
 use super::super::core::qrect::QRect; // 771
 // <= use block end
 
@@ -33,15 +34,13 @@ use super::super::core::qrect::QRect; // 771
 extern {
   fn QPaintDeviceWindow_Class_Size() -> c_int;
   // proto:  void QPaintDeviceWindow::update(const QRegion & region);
-  fn _ZN18QPaintDeviceWindow6updateERK7QRegion(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN18QPaintDeviceWindow6updateERK7QRegion(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPaintDeviceWindow::update();
-  fn _ZN18QPaintDeviceWindow6updateEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QPaintDeviceWindow::QPaintDeviceWindow(const QPaintDeviceWindow & );
-  fn _ZN18QPaintDeviceWindowC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN18QPaintDeviceWindow6updateEv(qthis: u64 /* *mut c_void*/);
   // proto:  const QMetaObject * QPaintDeviceWindow::metaObject();
-  fn _ZNK18QPaintDeviceWindow10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK18QPaintDeviceWindow10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QPaintDeviceWindow::update(const QRect & rect);
-  fn _ZN18QPaintDeviceWindow6updateERK5QRect(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN18QPaintDeviceWindow6updateERK5QRect(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -87,7 +86,7 @@ impl<'a> /*trait*/ QPaintDeviceWindow_update<()> for (&'a QRegion) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QPaintDeviceWindow6updateERK7QRegion()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN18QPaintDeviceWindow6updateERK7QRegion(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN18QPaintDeviceWindow6updateERK7QRegion(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -97,36 +96,7 @@ impl<'a> /*trait*/ QPaintDeviceWindow_update<()> for () {
   fn update(self , rsthis: & QPaintDeviceWindow) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QPaintDeviceWindow6updateEv()};
-     unsafe {_ZN18QPaintDeviceWindow6updateEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QPaintDeviceWindow::QPaintDeviceWindow(const QPaintDeviceWindow & );
-impl /*struct*/ QPaintDeviceWindow {
-  pub fn new<T: QPaintDeviceWindow_new>(value: T) -> QPaintDeviceWindow {
-    let rsthis = value.new();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QPaintDeviceWindow_new {
-  fn new(self) -> QPaintDeviceWindow;
-}
-
-  // proto:  void QPaintDeviceWindow::QPaintDeviceWindow(const QPaintDeviceWindow & );
-impl<'a> /*trait*/ QPaintDeviceWindow_new for (&'a QPaintDeviceWindow) {
-  fn new(self) -> QPaintDeviceWindow {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QPaintDeviceWindowC2ERKS_()};
-    let ctysz: c_int = unsafe{QPaintDeviceWindow_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN18QPaintDeviceWindowC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QPaintDeviceWindow{qbase: QWindow::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
+     unsafe {C_ZN18QPaintDeviceWindow6updateEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -144,11 +114,13 @@ pub trait QPaintDeviceWindow_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QPaintDeviceWindow::metaObject();
-impl<'a> /*trait*/ QPaintDeviceWindow_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QPaintDeviceWindow) -> () {
+impl<'a> /*trait*/ QPaintDeviceWindow_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QPaintDeviceWindow) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QPaintDeviceWindow10metaObjectEv()};
-     unsafe {_ZNK18QPaintDeviceWindow10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK18QPaintDeviceWindow10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -159,7 +131,7 @@ impl<'a> /*trait*/ QPaintDeviceWindow_update<()> for (&'a QRect) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QPaintDeviceWindow6updateERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN18QPaintDeviceWindow6updateERK5QRect(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN18QPaintDeviceWindow6updateERK5QRect(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

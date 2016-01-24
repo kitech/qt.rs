@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtGui/qfontinfo.h
 // dst-file: /src/gui/qfontinfo.rs
 //
@@ -32,41 +32,41 @@ use super::qfont::QFont; // 773
 extern {
   fn QFontInfo_Class_Size() -> c_int;
   // proto:  bool QFontInfo::rawMode();
-  fn _ZNK9QFontInfo7rawModeEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK9QFontInfo7rawModeEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QFontInfo::exactMatch();
-  fn _ZNK9QFontInfo10exactMatchEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK9QFontInfo10exactMatchEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  int QFontInfo::pointSize();
-  fn _ZNK9QFontInfo9pointSizeEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK9QFontInfo9pointSizeEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QFontInfo::QFontInfo(const QFontInfo & );
-  fn _ZN9QFontInfoC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QFontInfoC2ERKS_(arg0: *mut c_void) -> u64;
   // proto:  QString QFontInfo::family();
-  fn _ZNK9QFontInfo6familyEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK9QFontInfo6familyEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QFontInfo::bold();
-  fn _ZNK9QFontInfo4boldEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK9QFontInfo4boldEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  qreal QFontInfo::pointSizeF();
-  fn _ZNK9QFontInfo10pointSizeFEv(qthis: u64 /* *mut c_void*/) -> c_double;
+  fn C_ZNK9QFontInfo10pointSizeFEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  bool QFontInfo::fixedPitch();
-  fn _ZNK9QFontInfo10fixedPitchEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK9QFontInfo10fixedPitchEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QFontInfo::overline();
-  fn _ZNK9QFontInfo8overlineEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK9QFontInfo8overlineEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QFontInfo::swap(QFontInfo & other);
-  fn _ZN9QFontInfo4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QFontInfo4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QFontInfo::QFontInfo(const QFont & );
-  fn _ZN9QFontInfoC2ERK5QFont(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QFontInfoC2ERK5QFont(arg0: *mut c_void) -> u64;
   // proto:  int QFontInfo::pixelSize();
-  fn _ZNK9QFontInfo9pixelSizeEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK9QFontInfo9pixelSizeEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QFontInfo::strikeOut();
-  fn _ZNK9QFontInfo9strikeOutEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK9QFontInfo9strikeOutEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QFontInfo::~QFontInfo();
-  fn _ZN9QFontInfoD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN9QFontInfoD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QFontInfo::italic();
-  fn _ZNK9QFontInfo6italicEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK9QFontInfo6italicEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QFontInfo::underline();
-  fn _ZNK9QFontInfo9underlineEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK9QFontInfo9underlineEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QString QFontInfo::styleName();
-  fn _ZNK9QFontInfo9styleNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK9QFontInfo9styleNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QFontInfo::weight();
-  fn _ZNK9QFontInfo6weightEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK9QFontInfo6weightEv(qthis: u64 /* *mut c_void*/) -> c_int;
 } // <= ext block end
 
 // body block begin =>
@@ -99,7 +99,7 @@ impl<'a> /*trait*/ QFontInfo_rawMode<i8> for () {
   fn rawMode(self , rsthis: & QFontInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo7rawModeEv()};
-    let mut ret = unsafe {_ZNK9QFontInfo7rawModeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QFontInfo7rawModeEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -122,7 +122,7 @@ impl<'a> /*trait*/ QFontInfo_exactMatch<i8> for () {
   fn exactMatch(self , rsthis: & QFontInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo10exactMatchEv()};
-    let mut ret = unsafe {_ZNK9QFontInfo10exactMatchEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QFontInfo10exactMatchEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -145,7 +145,7 @@ impl<'a> /*trait*/ QFontInfo_pointSize<i32> for () {
   fn pointSize(self , rsthis: & QFontInfo) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo9pointSizeEv()};
-    let mut ret = unsafe {_ZNK9QFontInfo9pointSizeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QFontInfo9pointSizeEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -172,8 +172,7 @@ impl<'a> /*trait*/ QFontInfo_new for (&'a QFontInfo) {
     let ctysz: c_int = unsafe{QFontInfo_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN9QFontInfoC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN9QFontInfoC2ERKS_(arg0)};
     let rsthis = QFontInfo{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -197,7 +196,7 @@ impl<'a> /*trait*/ QFontInfo_family<QString> for () {
   fn family(self , rsthis: & QFontInfo) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo6familyEv()};
-    let mut ret = unsafe {_ZNK9QFontInfo6familyEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QFontInfo6familyEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -221,7 +220,7 @@ impl<'a> /*trait*/ QFontInfo_bold<i8> for () {
   fn bold(self , rsthis: & QFontInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo4boldEv()};
-    let mut ret = unsafe {_ZNK9QFontInfo4boldEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QFontInfo4boldEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -244,7 +243,7 @@ impl<'a> /*trait*/ QFontInfo_pointSizeF<f64> for () {
   fn pointSizeF(self , rsthis: & QFontInfo) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo10pointSizeFEv()};
-    let mut ret = unsafe {_ZNK9QFontInfo10pointSizeFEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QFontInfo10pointSizeFEv(rsthis.qclsinst)};
     return ret as f64;
     // return 1;
   }
@@ -267,7 +266,7 @@ impl<'a> /*trait*/ QFontInfo_fixedPitch<i8> for () {
   fn fixedPitch(self , rsthis: & QFontInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo10fixedPitchEv()};
-    let mut ret = unsafe {_ZNK9QFontInfo10fixedPitchEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QFontInfo10fixedPitchEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -290,7 +289,7 @@ impl<'a> /*trait*/ QFontInfo_overline<i8> for () {
   fn overline(self , rsthis: & QFontInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo8overlineEv()};
-    let mut ret = unsafe {_ZNK9QFontInfo8overlineEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QFontInfo8overlineEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -314,7 +313,7 @@ impl<'a> /*trait*/ QFontInfo_swap<()> for (&'a QFontInfo) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QFontInfo4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN9QFontInfo4swapERS_(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QFontInfo4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -327,8 +326,7 @@ impl<'a> /*trait*/ QFontInfo_new for (&'a QFont) {
     let ctysz: c_int = unsafe{QFontInfo_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN9QFontInfoC2ERK5QFont(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN9QFontInfoC2ERK5QFont(arg0)};
     let rsthis = QFontInfo{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -352,7 +350,7 @@ impl<'a> /*trait*/ QFontInfo_pixelSize<i32> for () {
   fn pixelSize(self , rsthis: & QFontInfo) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo9pixelSizeEv()};
-    let mut ret = unsafe {_ZNK9QFontInfo9pixelSizeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QFontInfo9pixelSizeEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -375,7 +373,7 @@ impl<'a> /*trait*/ QFontInfo_strikeOut<i8> for () {
   fn strikeOut(self , rsthis: & QFontInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo9strikeOutEv()};
-    let mut ret = unsafe {_ZNK9QFontInfo9strikeOutEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QFontInfo9strikeOutEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -398,7 +396,7 @@ impl<'a> /*trait*/ QFontInfo_free<()> for () {
   fn free(self , rsthis: & QFontInfo) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QFontInfoD2Ev()};
-     unsafe {_ZN9QFontInfoD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN9QFontInfoD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -420,7 +418,7 @@ impl<'a> /*trait*/ QFontInfo_italic<i8> for () {
   fn italic(self , rsthis: & QFontInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo6italicEv()};
-    let mut ret = unsafe {_ZNK9QFontInfo6italicEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QFontInfo6italicEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -443,7 +441,7 @@ impl<'a> /*trait*/ QFontInfo_underline<i8> for () {
   fn underline(self , rsthis: & QFontInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo9underlineEv()};
-    let mut ret = unsafe {_ZNK9QFontInfo9underlineEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QFontInfo9underlineEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -466,7 +464,7 @@ impl<'a> /*trait*/ QFontInfo_styleName<QString> for () {
   fn styleName(self , rsthis: & QFontInfo) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo9styleNameEv()};
-    let mut ret = unsafe {_ZNK9QFontInfo9styleNameEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QFontInfo9styleNameEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -490,7 +488,7 @@ impl<'a> /*trait*/ QFontInfo_weight<i32> for () {
   fn weight(self , rsthis: & QFontInfo) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo6weightEv()};
-    let mut ret = unsafe {_ZNK9QFontInfo6weightEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QFontInfo6weightEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }

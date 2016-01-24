@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtGui/qpagelayout.h
 // dst-file: /src/gui/qpagelayout.rs
 //
@@ -35,55 +35,55 @@ use super::qpagesize::QPageSize; // 773
 extern {
   fn QPageLayout_Class_Size() -> c_int;
   // proto:  bool QPageLayout::setRightMargin(qreal rightMargin);
-  fn _ZN11QPageLayout14setRightMarginEd(qthis: u64 /* *mut c_void*/, arg0: c_double) -> c_char;
+  fn C_ZN11QPageLayout14setRightMarginEd(qthis: u64 /* *mut c_void*/, arg0: c_double) -> c_char;
   // proto:  void QPageLayout::swap(QPageLayout & other);
-  fn _ZN11QPageLayout4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QPageLayout4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QMargins QPageLayout::marginsPoints();
-  fn _ZNK11QPageLayout13marginsPointsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK11QPageLayout13marginsPointsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QMargins QPageLayout::marginsPixels(int resolution);
-  fn _ZNK11QPageLayout13marginsPixelsEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
+  fn C_ZNK11QPageLayout13marginsPixelsEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  bool QPageLayout::isValid();
-  fn _ZNK11QPageLayout7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK11QPageLayout7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QRectF QPageLayout::fullRect();
-  fn _ZNK11QPageLayout8fullRectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK11QPageLayout8fullRectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QRectF QPageLayout::paintRect();
-  fn _ZNK11QPageLayout9paintRectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK11QPageLayout9paintRectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QPageLayout::setMinimumMargins(const QMarginsF & minMargins);
-  fn _ZN11QPageLayout17setMinimumMarginsERK9QMarginsF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QPageLayout17setMinimumMarginsERK9QMarginsF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QPageLayout::setLeftMargin(qreal leftMargin);
-  fn _ZN11QPageLayout13setLeftMarginEd(qthis: u64 /* *mut c_void*/, arg0: c_double) -> c_char;
+  fn C_ZN11QPageLayout13setLeftMarginEd(qthis: u64 /* *mut c_void*/, arg0: c_double) -> c_char;
   // proto:  bool QPageLayout::setBottomMargin(qreal bottomMargin);
-  fn _ZN11QPageLayout15setBottomMarginEd(qthis: u64 /* *mut c_void*/, arg0: c_double) -> c_char;
+  fn C_ZN11QPageLayout15setBottomMarginEd(qthis: u64 /* *mut c_void*/, arg0: c_double) -> c_char;
   // proto:  QRect QPageLayout::fullRectPoints();
-  fn _ZNK11QPageLayout14fullRectPointsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK11QPageLayout14fullRectPointsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QMarginsF QPageLayout::minimumMargins();
-  fn _ZNK11QPageLayout14minimumMarginsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK11QPageLayout14minimumMarginsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QPageSize QPageLayout::pageSize();
-  fn _ZNK11QPageLayout8pageSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK11QPageLayout8pageSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QPageLayout::setTopMargin(qreal topMargin);
-  fn _ZN11QPageLayout12setTopMarginEd(qthis: u64 /* *mut c_void*/, arg0: c_double) -> c_char;
+  fn C_ZN11QPageLayout12setTopMarginEd(qthis: u64 /* *mut c_void*/, arg0: c_double) -> c_char;
   // proto:  void QPageLayout::QPageLayout();
-  fn _ZN11QPageLayoutC2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN11QPageLayoutC2Ev() -> u64;
   // proto:  void QPageLayout::QPageLayout(const QPageLayout & other);
-  fn _ZN11QPageLayoutC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QPageLayoutC2ERKS_(arg0: *mut c_void) -> u64;
   // proto:  void QPageLayout::~QPageLayout();
-  fn _ZN11QPageLayoutD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN11QPageLayoutD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QRect QPageLayout::fullRectPixels(int resolution);
-  fn _ZNK11QPageLayout14fullRectPixelsEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
+  fn C_ZNK11QPageLayout14fullRectPixelsEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  QMarginsF QPageLayout::margins();
-  fn _ZNK11QPageLayout7marginsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK11QPageLayout7marginsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QRect QPageLayout::paintRectPoints();
-  fn _ZNK11QPageLayout15paintRectPointsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK11QPageLayout15paintRectPointsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QRect QPageLayout::paintRectPixels(int resolution);
-  fn _ZNK11QPageLayout15paintRectPixelsEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
+  fn C_ZNK11QPageLayout15paintRectPixelsEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  void QPageLayout::setPageSize(const QPageSize & pageSize, const QMarginsF & minMargins);
-  fn _ZN11QPageLayout11setPageSizeERK9QPageSizeRK9QMarginsF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN11QPageLayout11setPageSizeERK9QPageSizeRK9QMarginsF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  QMarginsF QPageLayout::maximumMargins();
-  fn _ZNK11QPageLayout14maximumMarginsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK11QPageLayout14maximumMarginsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QPageLayout::isEquivalentTo(const QPageLayout & other);
-  fn _ZNK11QPageLayout14isEquivalentToERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
+  fn C_ZNK11QPageLayout14isEquivalentToERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  bool QPageLayout::setMargins(const QMarginsF & margins);
-  fn _ZN11QPageLayout10setMarginsERK9QMarginsF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
+  fn C_ZN11QPageLayout10setMarginsERK9QMarginsF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
 } // <= ext block end
 
 // body block begin =>
@@ -117,7 +117,7 @@ impl<'a> /*trait*/ QPageLayout_setRightMargin<i8> for (f64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPageLayout14setRightMarginEd()};
     let arg0 = self  as c_double;
-    let mut ret = unsafe {_ZN11QPageLayout14setRightMarginEd(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN11QPageLayout14setRightMarginEd(rsthis.qclsinst, arg0)};
     return ret as i8;
     // return 1;
   }
@@ -141,7 +141,7 @@ impl<'a> /*trait*/ QPageLayout_swap<()> for (&'a QPageLayout) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPageLayout4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QPageLayout4swapERS_(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QPageLayout4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -163,7 +163,7 @@ impl<'a> /*trait*/ QPageLayout_marginsPoints<QMargins> for () {
   fn marginsPoints(self , rsthis: & QPageLayout) -> QMargins {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPageLayout13marginsPointsEv()};
-    let mut ret = unsafe {_ZNK11QPageLayout13marginsPointsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QPageLayout13marginsPointsEv(rsthis.qclsinst)};
     let mut ret1 = QMargins::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -188,7 +188,7 @@ impl<'a> /*trait*/ QPageLayout_marginsPixels<QMargins> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPageLayout13marginsPixelsEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZNK11QPageLayout13marginsPixelsEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK11QPageLayout13marginsPixelsEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QMargins::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -212,7 +212,7 @@ impl<'a> /*trait*/ QPageLayout_isValid<i8> for () {
   fn isValid(self , rsthis: & QPageLayout) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPageLayout7isValidEv()};
-    let mut ret = unsafe {_ZNK11QPageLayout7isValidEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QPageLayout7isValidEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -235,7 +235,7 @@ impl<'a> /*trait*/ QPageLayout_fullRect<QRectF> for () {
   fn fullRect(self , rsthis: & QPageLayout) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPageLayout8fullRectEv()};
-    let mut ret = unsafe {_ZNK11QPageLayout8fullRectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QPageLayout8fullRectEv(rsthis.qclsinst)};
     let mut ret1 = QRectF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -259,7 +259,7 @@ impl<'a> /*trait*/ QPageLayout_paintRect<QRectF> for () {
   fn paintRect(self , rsthis: & QPageLayout) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPageLayout9paintRectEv()};
-    let mut ret = unsafe {_ZNK11QPageLayout9paintRectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QPageLayout9paintRectEv(rsthis.qclsinst)};
     let mut ret1 = QRectF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -284,7 +284,7 @@ impl<'a> /*trait*/ QPageLayout_setMinimumMargins<()> for (&'a QMarginsF) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPageLayout17setMinimumMarginsERK9QMarginsF()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QPageLayout17setMinimumMarginsERK9QMarginsF(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QPageLayout17setMinimumMarginsERK9QMarginsF(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -307,7 +307,7 @@ impl<'a> /*trait*/ QPageLayout_setLeftMargin<i8> for (f64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPageLayout13setLeftMarginEd()};
     let arg0 = self  as c_double;
-    let mut ret = unsafe {_ZN11QPageLayout13setLeftMarginEd(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN11QPageLayout13setLeftMarginEd(rsthis.qclsinst, arg0)};
     return ret as i8;
     // return 1;
   }
@@ -331,7 +331,7 @@ impl<'a> /*trait*/ QPageLayout_setBottomMargin<i8> for (f64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPageLayout15setBottomMarginEd()};
     let arg0 = self  as c_double;
-    let mut ret = unsafe {_ZN11QPageLayout15setBottomMarginEd(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN11QPageLayout15setBottomMarginEd(rsthis.qclsinst, arg0)};
     return ret as i8;
     // return 1;
   }
@@ -354,7 +354,7 @@ impl<'a> /*trait*/ QPageLayout_fullRectPoints<QRect> for () {
   fn fullRectPoints(self , rsthis: & QPageLayout) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPageLayout14fullRectPointsEv()};
-    let mut ret = unsafe {_ZNK11QPageLayout14fullRectPointsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QPageLayout14fullRectPointsEv(rsthis.qclsinst)};
     let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -378,7 +378,7 @@ impl<'a> /*trait*/ QPageLayout_minimumMargins<QMarginsF> for () {
   fn minimumMargins(self , rsthis: & QPageLayout) -> QMarginsF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPageLayout14minimumMarginsEv()};
-    let mut ret = unsafe {_ZNK11QPageLayout14minimumMarginsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QPageLayout14minimumMarginsEv(rsthis.qclsinst)};
     let mut ret1 = QMarginsF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -402,7 +402,7 @@ impl<'a> /*trait*/ QPageLayout_pageSize<QPageSize> for () {
   fn pageSize(self , rsthis: & QPageLayout) -> QPageSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPageLayout8pageSizeEv()};
-    let mut ret = unsafe {_ZNK11QPageLayout8pageSizeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QPageLayout8pageSizeEv(rsthis.qclsinst)};
     let mut ret1 = QPageSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -427,7 +427,7 @@ impl<'a> /*trait*/ QPageLayout_setTopMargin<i8> for (f64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPageLayout12setTopMarginEd()};
     let arg0 = self  as c_double;
-    let mut ret = unsafe {_ZN11QPageLayout12setTopMarginEd(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN11QPageLayout12setTopMarginEd(rsthis.qclsinst, arg0)};
     return ret as i8;
     // return 1;
   }
@@ -453,8 +453,7 @@ impl<'a> /*trait*/ QPageLayout_new for () {
     // unsafe{_ZN11QPageLayoutC2Ev()};
     let ctysz: c_int = unsafe{QPageLayout_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    unsafe {_ZN11QPageLayoutC2Ev(qthis_ph)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN11QPageLayoutC2Ev()};
     let rsthis = QPageLayout{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -469,8 +468,7 @@ impl<'a> /*trait*/ QPageLayout_new for (&'a QPageLayout) {
     let ctysz: c_int = unsafe{QPageLayout_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QPageLayoutC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN11QPageLayoutC2ERKS_(arg0)};
     let rsthis = QPageLayout{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -494,7 +492,7 @@ impl<'a> /*trait*/ QPageLayout_free<()> for () {
   fn free(self , rsthis: & QPageLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPageLayoutD2Ev()};
-     unsafe {_ZN11QPageLayoutD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN11QPageLayoutD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -517,7 +515,7 @@ impl<'a> /*trait*/ QPageLayout_fullRectPixels<QRect> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPageLayout14fullRectPixelsEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZNK11QPageLayout14fullRectPixelsEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK11QPageLayout14fullRectPixelsEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -541,7 +539,7 @@ impl<'a> /*trait*/ QPageLayout_margins<QMarginsF> for () {
   fn margins(self , rsthis: & QPageLayout) -> QMarginsF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPageLayout7marginsEv()};
-    let mut ret = unsafe {_ZNK11QPageLayout7marginsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QPageLayout7marginsEv(rsthis.qclsinst)};
     let mut ret1 = QMarginsF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -565,7 +563,7 @@ impl<'a> /*trait*/ QPageLayout_paintRectPoints<QRect> for () {
   fn paintRectPoints(self , rsthis: & QPageLayout) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPageLayout15paintRectPointsEv()};
-    let mut ret = unsafe {_ZNK11QPageLayout15paintRectPointsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QPageLayout15paintRectPointsEv(rsthis.qclsinst)};
     let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -590,7 +588,7 @@ impl<'a> /*trait*/ QPageLayout_paintRectPixels<QRect> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPageLayout15paintRectPixelsEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZNK11QPageLayout15paintRectPixelsEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK11QPageLayout15paintRectPixelsEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -616,7 +614,7 @@ impl<'a> /*trait*/ QPageLayout_setPageSize<()> for (&'a QPageSize, &'a QMarginsF
     // unsafe{_ZN11QPageLayout11setPageSizeERK9QPageSizeRK9QMarginsF()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN11QPageLayout11setPageSizeERK9QPageSizeRK9QMarginsF(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN11QPageLayout11setPageSizeERK9QPageSizeRK9QMarginsF(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -638,7 +636,7 @@ impl<'a> /*trait*/ QPageLayout_maximumMargins<QMarginsF> for () {
   fn maximumMargins(self , rsthis: & QPageLayout) -> QMarginsF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPageLayout14maximumMarginsEv()};
-    let mut ret = unsafe {_ZNK11QPageLayout14maximumMarginsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QPageLayout14maximumMarginsEv(rsthis.qclsinst)};
     let mut ret1 = QMarginsF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -663,7 +661,7 @@ impl<'a> /*trait*/ QPageLayout_isEquivalentTo<i8> for (&'a QPageLayout) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPageLayout14isEquivalentToERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK11QPageLayout14isEquivalentToERKS_(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK11QPageLayout14isEquivalentToERKS_(rsthis.qclsinst, arg0)};
     return ret as i8;
     // return 1;
   }
@@ -687,7 +685,7 @@ impl<'a> /*trait*/ QPageLayout_setMargins<i8> for (&'a QMarginsF) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPageLayout10setMarginsERK9QMarginsF()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN11QPageLayout10setMarginsERK9QMarginsF(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN11QPageLayout10setMarginsERK9QMarginsF(rsthis.qclsinst, arg0)};
     return ret as i8;
     // return 1;
   }

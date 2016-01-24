@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtGui/qaccessiblebridge.h
 // dst-file: /src/gui/qaccessiblebridge.rs
 //
@@ -22,6 +22,7 @@ use super::super::core::qobject::QObject; // 771
 use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
 // use super::qaccessiblebridge::QAccessibleBridge; // 773
+use super::super::core::qobjectdefs::QMetaObject; // 771
 use super::qaccessible::QAccessibleEvent; // 773
 use super::qaccessible::QAccessibleInterface; // 773
 // <= use block end
@@ -35,20 +36,20 @@ use super::qaccessible::QAccessibleInterface; // 773
 extern {
   fn QAccessibleBridgePlugin_Class_Size() -> c_int;
   // proto:  void QAccessibleBridgePlugin::QAccessibleBridgePlugin(QObject * parent);
-  fn _ZN23QAccessibleBridgePluginC2EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN23QAccessibleBridgePluginC2EP7QObject(arg0: *mut c_void) -> u64;
   // proto:  QAccessibleBridge * QAccessibleBridgePlugin::create(const QString & key);
-  fn _ZN23QAccessibleBridgePlugin6createERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZN23QAccessibleBridgePlugin6createERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QAccessibleBridgePlugin::~QAccessibleBridgePlugin();
-  fn _ZN23QAccessibleBridgePluginD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN23QAccessibleBridgePluginD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  const QMetaObject * QAccessibleBridgePlugin::metaObject();
-  fn _ZNK23QAccessibleBridgePlugin10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK23QAccessibleBridgePlugin10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   fn QAccessibleBridge_Class_Size() -> c_int;
   // proto:  void QAccessibleBridge::~QAccessibleBridge();
-  fn _ZN17QAccessibleBridgeD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN17QAccessibleBridgeD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QAccessibleBridge::notifyAccessibilityUpdate(QAccessibleEvent * event);
-  fn _ZN17QAccessibleBridge25notifyAccessibilityUpdateEP16QAccessibleEvent(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN17QAccessibleBridge25notifyAccessibilityUpdateEP16QAccessibleEvent(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAccessibleBridge::setRootObject(QAccessibleInterface * );
-  fn _ZN17QAccessibleBridge13setRootObjectEP20QAccessibleInterface(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN17QAccessibleBridge13setRootObjectEP20QAccessibleInterface(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -104,8 +105,7 @@ impl<'a> /*trait*/ QAccessibleBridgePlugin_new for (&'a QObject) {
     let ctysz: c_int = unsafe{QAccessibleBridgePlugin_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN23QAccessibleBridgePluginC2EP7QObject(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN23QAccessibleBridgePluginC2EP7QObject(arg0)};
     let rsthis = QAccessibleBridgePlugin{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -130,7 +130,7 @@ impl<'a> /*trait*/ QAccessibleBridgePlugin_create<QAccessibleBridge> for (&'a QS
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QAccessibleBridgePlugin6createERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN23QAccessibleBridgePlugin6createERK7QString(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN23QAccessibleBridgePlugin6createERK7QString(rsthis.qclsinst, arg0)};
     let mut ret1 = QAccessibleBridge::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -154,7 +154,7 @@ impl<'a> /*trait*/ QAccessibleBridgePlugin_free<()> for () {
   fn free(self , rsthis: & QAccessibleBridgePlugin) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QAccessibleBridgePluginD2Ev()};
-     unsafe {_ZN23QAccessibleBridgePluginD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN23QAccessibleBridgePluginD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -172,11 +172,13 @@ pub trait QAccessibleBridgePlugin_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QAccessibleBridgePlugin::metaObject();
-impl<'a> /*trait*/ QAccessibleBridgePlugin_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QAccessibleBridgePlugin) -> () {
+impl<'a> /*trait*/ QAccessibleBridgePlugin_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QAccessibleBridgePlugin) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK23QAccessibleBridgePlugin10metaObjectEv()};
-     unsafe {_ZNK23QAccessibleBridgePlugin10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK23QAccessibleBridgePlugin10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -203,7 +205,7 @@ impl<'a> /*trait*/ QAccessibleBridge_free<()> for () {
   fn free(self , rsthis: & QAccessibleBridge) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAccessibleBridgeD2Ev()};
-     unsafe {_ZN17QAccessibleBridgeD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN17QAccessibleBridgeD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -226,7 +228,7 @@ impl<'a> /*trait*/ QAccessibleBridge_notifyAccessibilityUpdate<()> for (&'a QAcc
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAccessibleBridge25notifyAccessibilityUpdateEP16QAccessibleEvent()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN17QAccessibleBridge25notifyAccessibilityUpdateEP16QAccessibleEvent(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN17QAccessibleBridge25notifyAccessibilityUpdateEP16QAccessibleEvent(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -249,7 +251,7 @@ impl<'a> /*trait*/ QAccessibleBridge_setRootObject<()> for (&'a QAccessibleInter
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAccessibleBridge13setRootObjectEP20QAccessibleInterface()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN17QAccessibleBridge13setRootObjectEP20QAccessibleInterface(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN17QAccessibleBridge13setRootObjectEP20QAccessibleInterface(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

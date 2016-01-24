@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtGui/qpdfwriter.h
 // dst-file: /src/gui/qpdfwriter.rs
 //
@@ -22,6 +22,7 @@ use super::super::core::qobject::QObject; // 771
 use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
 use super::super::core::qsize::QSizeF; // 771
+use super::super::core::qobjectdefs::QMetaObject; // 771
 use super::super::core::qiodevice::QIODevice; // 771
 // <= use block end
 
@@ -34,31 +35,29 @@ use super::super::core::qiodevice::QIODevice; // 771
 extern {
   fn QPdfWriter_Class_Size() -> c_int;
   // proto:  void QPdfWriter::~QPdfWriter();
-  fn _ZN10QPdfWriterD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN10QPdfWriterD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QPdfWriter::setCreator(const QString & creator);
-  fn _ZN10QPdfWriter10setCreatorERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN10QPdfWriter10setCreatorERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPdfWriter::setPageSizeMM(const QSizeF & size);
-  fn _ZN10QPdfWriter13setPageSizeMMERK6QSizeF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN10QPdfWriter13setPageSizeMMERK6QSizeF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPdfWriter::setResolution(int resolution);
-  fn _ZN10QPdfWriter13setResolutionEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
-  // proto:  void QPdfWriter::QPdfWriter(const QPdfWriter & );
-  fn _ZN10QPdfWriterC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN10QPdfWriter13setResolutionEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  bool QPdfWriter::newPage();
-  fn _ZN10QPdfWriter7newPageEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZN10QPdfWriter7newPageEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QString QPdfWriter::title();
-  fn _ZNK10QPdfWriter5titleEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK10QPdfWriter5titleEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QPdfWriter::creator();
-  fn _ZNK10QPdfWriter7creatorEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK10QPdfWriter7creatorEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QPdfWriter::resolution();
-  fn _ZNK10QPdfWriter10resolutionEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK10QPdfWriter10resolutionEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  const QMetaObject * QPdfWriter::metaObject();
-  fn _ZNK10QPdfWriter10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK10QPdfWriter10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QPdfWriter::QPdfWriter(const QString & filename);
-  fn _ZN10QPdfWriterC2ERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN10QPdfWriterC2ERK7QString(arg0: *mut c_void) -> u64;
   // proto:  void QPdfWriter::QPdfWriter(QIODevice * device);
-  fn _ZN10QPdfWriterC2EP9QIODevice(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN10QPdfWriterC2EP9QIODevice(arg0: *mut c_void) -> u64;
   // proto:  void QPdfWriter::setTitle(const QString & title);
-  fn _ZN10QPdfWriter8setTitleERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN10QPdfWriter8setTitleERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -103,7 +102,7 @@ impl<'a> /*trait*/ QPdfWriter_free<()> for () {
   fn free(self , rsthis: & QPdfWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QPdfWriterD2Ev()};
-     unsafe {_ZN10QPdfWriterD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN10QPdfWriterD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -126,7 +125,7 @@ impl<'a> /*trait*/ QPdfWriter_setCreator<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QPdfWriter10setCreatorERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN10QPdfWriter10setCreatorERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN10QPdfWriter10setCreatorERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -149,7 +148,7 @@ impl<'a> /*trait*/ QPdfWriter_setPageSizeMM<()> for (&'a QSizeF) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QPdfWriter13setPageSizeMMERK6QSizeF()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN10QPdfWriter13setPageSizeMMERK6QSizeF(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN10QPdfWriter13setPageSizeMMERK6QSizeF(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -172,36 +171,7 @@ impl<'a> /*trait*/ QPdfWriter_setResolution<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QPdfWriter13setResolutionEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN10QPdfWriter13setResolutionEi(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QPdfWriter::QPdfWriter(const QPdfWriter & );
-impl /*struct*/ QPdfWriter {
-  pub fn new<T: QPdfWriter_new>(value: T) -> QPdfWriter {
-    let rsthis = value.new();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QPdfWriter_new {
-  fn new(self) -> QPdfWriter;
-}
-
-  // proto:  void QPdfWriter::QPdfWriter(const QPdfWriter & );
-impl<'a> /*trait*/ QPdfWriter_new for (&'a QPdfWriter) {
-  fn new(self) -> QPdfWriter {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QPdfWriterC2ERKS_()};
-    let ctysz: c_int = unsafe{QPdfWriter_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN10QPdfWriterC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QPdfWriter{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
+     unsafe {C_ZN10QPdfWriter13setResolutionEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -223,7 +193,7 @@ impl<'a> /*trait*/ QPdfWriter_newPage<i8> for () {
   fn newPage(self , rsthis: & QPdfWriter) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QPdfWriter7newPageEv()};
-    let mut ret = unsafe {_ZN10QPdfWriter7newPageEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZN10QPdfWriter7newPageEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -246,7 +216,7 @@ impl<'a> /*trait*/ QPdfWriter_title<QString> for () {
   fn title(self , rsthis: & QPdfWriter) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QPdfWriter5titleEv()};
-    let mut ret = unsafe {_ZNK10QPdfWriter5titleEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QPdfWriter5titleEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -270,7 +240,7 @@ impl<'a> /*trait*/ QPdfWriter_creator<QString> for () {
   fn creator(self , rsthis: & QPdfWriter) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QPdfWriter7creatorEv()};
-    let mut ret = unsafe {_ZNK10QPdfWriter7creatorEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QPdfWriter7creatorEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -294,7 +264,7 @@ impl<'a> /*trait*/ QPdfWriter_resolution<i32> for () {
   fn resolution(self , rsthis: & QPdfWriter) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QPdfWriter10resolutionEv()};
-    let mut ret = unsafe {_ZNK10QPdfWriter10resolutionEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QPdfWriter10resolutionEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -313,13 +283,28 @@ pub trait QPdfWriter_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QPdfWriter::metaObject();
-impl<'a> /*trait*/ QPdfWriter_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QPdfWriter) -> () {
+impl<'a> /*trait*/ QPdfWriter_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QPdfWriter) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QPdfWriter10metaObjectEv()};
-     unsafe {_ZNK10QPdfWriter10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QPdfWriter10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
+}
+
+  // proto:  void QPdfWriter::QPdfWriter(const QString & filename);
+impl /*struct*/ QPdfWriter {
+  pub fn new<T: QPdfWriter_new>(value: T) -> QPdfWriter {
+    let rsthis = value.new();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QPdfWriter_new {
+  fn new(self) -> QPdfWriter;
 }
 
   // proto:  void QPdfWriter::QPdfWriter(const QString & filename);
@@ -330,8 +315,7 @@ impl<'a> /*trait*/ QPdfWriter_new for (&'a QString) {
     let ctysz: c_int = unsafe{QPdfWriter_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN10QPdfWriterC2ERK7QString(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN10QPdfWriterC2ERK7QString(arg0)};
     let rsthis = QPdfWriter{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -346,8 +330,7 @@ impl<'a> /*trait*/ QPdfWriter_new for (&'a QIODevice) {
     let ctysz: c_int = unsafe{QPdfWriter_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN10QPdfWriterC2EP9QIODevice(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN10QPdfWriterC2EP9QIODevice(arg0)};
     let rsthis = QPdfWriter{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -372,7 +355,7 @@ impl<'a> /*trait*/ QPdfWriter_setTitle<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QPdfWriter8setTitleERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN10QPdfWriter8setTitleERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN10QPdfWriter8setTitleERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtGui/qopengltexture.h
 // dst-file: /src/gui/qopengltexture.rs
 //
@@ -33,127 +33,125 @@ use super::qcolor::QColor; // 773
 extern {
   fn QOpenGLTexture_Class_Size() -> c_int;
   // proto:  void QOpenGLTexture::bind();
-  fn _ZN14QOpenGLTexture4bindEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN14QOpenGLTexture4bindEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QOpenGLTexture::setFixedSamplePositions(bool fixed);
-  fn _ZN14QOpenGLTexture23setFixedSamplePositionsEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN14QOpenGLTexture23setFixedSamplePositionsEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  int QOpenGLTexture::height();
-  fn _ZNK14QOpenGLTexture6heightEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK14QOpenGLTexture6heightEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QOpenGLTexture::isAutoMipMapGenerationEnabled();
-  fn _ZNK14QOpenGLTexture29isAutoMipMapGenerationEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK14QOpenGLTexture29isAutoMipMapGenerationEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QOpenGLTexture::setCompressedData(int dataSize, const void * data, const QOpenGLPixelTransferOptions *const options);
-  fn _ZN14QOpenGLTexture17setCompressedDataEiPKvPK27QOpenGLPixelTransferOptions(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void, arg2: *mut c_void);
+  fn C_ZN14QOpenGLTexture17setCompressedDataEiPKvPK27QOpenGLPixelTransferOptions(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  void QOpenGLTexture::setMaximumLevelOfDetail(float value);
-  fn _ZN14QOpenGLTexture23setMaximumLevelOfDetailEf(qthis: u64 /* *mut c_void*/, arg0: c_float);
+  fn C_ZN14QOpenGLTexture23setMaximumLevelOfDetailEf(qthis: u64 /* *mut c_void*/, arg0: c_float);
   // proto:  void QOpenGLTexture::setAutoMipMapGenerationEnabled(bool enabled);
-  fn _ZN14QOpenGLTexture30setAutoMipMapGenerationEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN14QOpenGLTexture30setAutoMipMapGenerationEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  int QOpenGLTexture::depth();
-  fn _ZNK14QOpenGLTexture5depthEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK14QOpenGLTexture5depthEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QOpenGLTexture::generateMipMaps(int baseLevel, bool resetBaseLevel);
-  fn _ZN14QOpenGLTexture15generateMipMapsEib(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_char);
+  fn C_ZN14QOpenGLTexture15generateMipMapsEib(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_char);
   // proto:  void QOpenGLTexture::setCompressedData(int mipLevel, int dataSize, const void * data, const QOpenGLPixelTransferOptions *const options);
-  fn _ZN14QOpenGLTexture17setCompressedDataEiiPKvPK27QOpenGLPixelTransferOptions(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: *mut c_void, arg3: *mut c_void);
+  fn C_ZN14QOpenGLTexture17setCompressedDataEiiPKvPK27QOpenGLPixelTransferOptions(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: *mut c_void, arg3: *mut c_void);
   // proto:  void QOpenGLTexture::setMipBaseLevel(int baseLevel);
-  fn _ZN14QOpenGLTexture15setMipBaseLevelEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN14QOpenGLTexture15setMipBaseLevelEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  QPair<float, float> QOpenGLTexture::levelOfDetailRange();
-  fn _ZNK14QOpenGLTexture18levelOfDetailRangeEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK14QOpenGLTexture18levelOfDetailRangeEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QOpenGLTexture::create();
-  fn _ZN14QOpenGLTexture6createEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZN14QOpenGLTexture6createEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QOpenGLTexture::setCompressedData(int mipLevel, int layer, int dataSize, const void * data, const QOpenGLPixelTransferOptions *const options);
-  fn _ZN14QOpenGLTexture17setCompressedDataEiiiPKvPK27QOpenGLPixelTransferOptions(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: *mut c_void, arg4: *mut c_void);
+  fn C_ZN14QOpenGLTexture17setCompressedDataEiiiPKvPK27QOpenGLPixelTransferOptions(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: *mut c_void, arg4: *mut c_void);
   // proto:  void QOpenGLTexture::setLevelOfDetailRange(float min, float max);
-  fn _ZN14QOpenGLTexture21setLevelOfDetailRangeEff(qthis: u64 /* *mut c_void*/, arg0: c_float, arg1: c_float);
+  fn C_ZN14QOpenGLTexture21setLevelOfDetailRangeEff(qthis: u64 /* *mut c_void*/, arg0: c_float, arg1: c_float);
   // proto:  void QOpenGLTexture::borderColor(unsigned int * border);
-  fn _ZNK14QOpenGLTexture11borderColorEPj(qthis: u64 /* *mut c_void*/, arg0: *mut c_uint);
+  fn C_ZNK14QOpenGLTexture11borderColorEPj(qthis: u64 /* *mut c_void*/, arg0: *mut c_uint);
   // proto:  bool QOpenGLTexture::isStorageAllocated();
-  fn _ZNK14QOpenGLTexture18isStorageAllocatedEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK14QOpenGLTexture18isStorageAllocatedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QOpenGLTexture::borderColor(int * border);
-  fn _ZNK14QOpenGLTexture11borderColorEPi(qthis: u64 /* *mut c_void*/, arg0: *mut c_int);
+  fn C_ZNK14QOpenGLTexture11borderColorEPi(qthis: u64 /* *mut c_void*/, arg0: *mut c_int);
   // proto:  bool QOpenGLTexture::isTextureView();
-  fn _ZNK14QOpenGLTexture13isTextureViewEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK14QOpenGLTexture13isTextureViewEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QOpenGLTexture::isFixedSamplePositions();
-  fn _ZNK14QOpenGLTexture22isFixedSamplePositionsEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK14QOpenGLTexture22isFixedSamplePositionsEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  int QOpenGLTexture::faces();
-  fn _ZNK14QOpenGLTexture5facesEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK14QOpenGLTexture5facesEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QOpenGLTexture::setLayers(int layers);
-  fn _ZN14QOpenGLTexture9setLayersEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN14QOpenGLTexture9setLayersEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QOpenGLTexture::setCompressedData(int dataSize, void * data, const QOpenGLPixelTransferOptions *const options);
-  fn _ZN14QOpenGLTexture17setCompressedDataEiPvPK27QOpenGLPixelTransferOptions(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void, arg2: *mut c_void);
+  fn C_ZN14QOpenGLTexture17setCompressedDataEiPvPK27QOpenGLPixelTransferOptions(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  int QOpenGLTexture::width();
-  fn _ZNK14QOpenGLTexture5widthEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK14QOpenGLTexture5widthEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QOpenGLTexture::layers();
-  fn _ZNK14QOpenGLTexture6layersEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK14QOpenGLTexture6layersEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QOpenGLTexture::borderColor(float * border);
-  fn _ZNK14QOpenGLTexture11borderColorEPf(qthis: u64 /* *mut c_void*/, arg0: *mut c_float);
+  fn C_ZNK14QOpenGLTexture11borderColorEPf(qthis: u64 /* *mut c_void*/, arg0: *mut c_float);
   // proto:  float QOpenGLTexture::minimumLevelOfDetail();
-  fn _ZNK14QOpenGLTexture20minimumLevelOfDetailEv(qthis: u64 /* *mut c_void*/) -> c_float;
+  fn C_ZNK14QOpenGLTexture20minimumLevelOfDetailEv(qthis: u64 /* *mut c_void*/) -> c_float;
   // proto:  void QOpenGLTexture::setBorderColor(int r, int g, int b, int a);
-  fn _ZN14QOpenGLTexture14setBorderColorEiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
+  fn C_ZN14QOpenGLTexture14setBorderColorEiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
   // proto:  void QOpenGLTexture::setMinimumLevelOfDetail(float value);
-  fn _ZN14QOpenGLTexture23setMinimumLevelOfDetailEf(qthis: u64 /* *mut c_void*/, arg0: c_float);
+  fn C_ZN14QOpenGLTexture23setMinimumLevelOfDetailEf(qthis: u64 /* *mut c_void*/, arg0: c_float);
   // proto:  void QOpenGLTexture::setMipLevels(int levels);
-  fn _ZN14QOpenGLTexture12setMipLevelsEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN14QOpenGLTexture12setMipLevelsEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  QPair<int, int> QOpenGLTexture::mipLevelRange();
-  fn _ZNK14QOpenGLTexture13mipLevelRangeEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK14QOpenGLTexture13mipLevelRangeEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QOpenGLTexture::setMipMaxLevel(int maxLevel);
-  fn _ZN14QOpenGLTexture14setMipMaxLevelEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN14QOpenGLTexture14setMipMaxLevelEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  float QOpenGLTexture::levelofDetailBias();
-  fn _ZNK14QOpenGLTexture17levelofDetailBiasEv(qthis: u64 /* *mut c_void*/) -> c_float;
+  fn C_ZNK14QOpenGLTexture17levelofDetailBiasEv(qthis: u64 /* *mut c_void*/) -> c_float;
   // proto:  int QOpenGLTexture::maximumMipLevels();
-  fn _ZNK14QOpenGLTexture16maximumMipLevelsEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK14QOpenGLTexture16maximumMipLevelsEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QOpenGLTexture::isBound(uint unit);
-  fn _ZN14QOpenGLTexture7isBoundEj(qthis: u64 /* *mut c_void*/, arg0: c_uint) -> c_char;
+  fn C_ZN14QOpenGLTexture7isBoundEj(qthis: u64 /* *mut c_void*/, arg0: c_uint) -> c_char;
   // proto:  void QOpenGLTexture::setBorderColor(uint r, uint g, uint b, uint a);
-  fn _ZN14QOpenGLTexture14setBorderColorEjjjj(qthis: u64 /* *mut c_void*/, arg0: c_uint, arg1: c_uint, arg2: c_uint, arg3: c_uint);
+  fn C_ZN14QOpenGLTexture14setBorderColorEjjjj(qthis: u64 /* *mut c_void*/, arg0: c_uint, arg1: c_uint, arg2: c_uint, arg3: c_uint);
   // proto:  void QOpenGLTexture::setMaximumAnisotropy(float anisotropy);
-  fn _ZN14QOpenGLTexture20setMaximumAnisotropyEf(qthis: u64 /* *mut c_void*/, arg0: c_float);
+  fn C_ZN14QOpenGLTexture20setMaximumAnisotropyEf(qthis: u64 /* *mut c_void*/, arg0: c_float);
   // proto:  void QOpenGLTexture::setSamples(int samples);
-  fn _ZN14QOpenGLTexture10setSamplesEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN14QOpenGLTexture10setSamplesEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QOpenGLTexture::mipLevels();
-  fn _ZNK14QOpenGLTexture9mipLevelsEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK14QOpenGLTexture9mipLevelsEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QOpenGLTexture::setLevelofDetailBias(float bias);
-  fn _ZN14QOpenGLTexture20setLevelofDetailBiasEf(qthis: u64 /* *mut c_void*/, arg0: c_float);
+  fn C_ZN14QOpenGLTexture20setLevelofDetailBiasEf(qthis: u64 /* *mut c_void*/, arg0: c_float);
   // proto:  GLuint QOpenGLTexture::textureId();
-  fn _ZNK14QOpenGLTexture9textureIdEv(qthis: u64 /* *mut c_void*/) -> c_uint;
+  fn C_ZNK14QOpenGLTexture9textureIdEv(qthis: u64 /* *mut c_void*/) -> c_uint;
   // proto:  void QOpenGLTexture::setMipLevelRange(int baseLevel, int maxLevel);
-  fn _ZN14QOpenGLTexture16setMipLevelRangeEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
+  fn C_ZN14QOpenGLTexture16setMipLevelRangeEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  void QOpenGLTexture::allocateStorage();
-  fn _ZN14QOpenGLTexture15allocateStorageEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN14QOpenGLTexture15allocateStorageEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QOpenGLTexture::~QOpenGLTexture();
-  fn _ZN14QOpenGLTextureD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN14QOpenGLTextureD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  int QOpenGLTexture::mipMaxLevel();
-  fn _ZNK14QOpenGLTexture11mipMaxLevelEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK14QOpenGLTexture11mipMaxLevelEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QOpenGLTexture::setBorderColor(QColor color);
-  fn _ZN14QOpenGLTexture14setBorderColorE6QColor(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN14QOpenGLTexture14setBorderColorE6QColor(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QOpenGLTexture::destroy();
-  fn _ZN14QOpenGLTexture7destroyEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN14QOpenGLTexture7destroyEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QOpenGLTexture::generateMipMaps();
-  fn _ZN14QOpenGLTexture15generateMipMapsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN14QOpenGLTexture15generateMipMapsEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QOpenGLTexture::release();
-  fn _ZN14QOpenGLTexture7releaseEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN14QOpenGLTexture7releaseEv(qthis: u64 /* *mut c_void*/);
   // proto:  float QOpenGLTexture::maximumAnisotropy();
-  fn _ZNK14QOpenGLTexture17maximumAnisotropyEv(qthis: u64 /* *mut c_void*/) -> c_float;
+  fn C_ZNK14QOpenGLTexture17maximumAnisotropyEv(qthis: u64 /* *mut c_void*/) -> c_float;
   // proto:  float QOpenGLTexture::maximumLevelOfDetail();
-  fn _ZNK14QOpenGLTexture20maximumLevelOfDetailEv(qthis: u64 /* *mut c_void*/) -> c_float;
+  fn C_ZNK14QOpenGLTexture20maximumLevelOfDetailEv(qthis: u64 /* *mut c_void*/) -> c_float;
   // proto:  void QOpenGLTexture::setSize(int width, int height, int depth);
-  fn _ZN14QOpenGLTexture7setSizeEiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int);
+  fn C_ZN14QOpenGLTexture7setSizeEiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int);
   // proto:  bool QOpenGLTexture::isCreated();
-  fn _ZNK14QOpenGLTexture9isCreatedEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK14QOpenGLTexture9isCreatedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QOpenGLTexture::isBound();
-  fn _ZNK14QOpenGLTexture7isBoundEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK14QOpenGLTexture7isBoundEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QOpenGLTexture::setBorderColor(float r, float g, float b, float a);
-  fn _ZN14QOpenGLTexture14setBorderColorEffff(qthis: u64 /* *mut c_void*/, arg0: c_float, arg1: c_float, arg2: c_float, arg3: c_float);
+  fn C_ZN14QOpenGLTexture14setBorderColorEffff(qthis: u64 /* *mut c_void*/, arg0: c_float, arg1: c_float, arg2: c_float, arg3: c_float);
   // proto:  int QOpenGLTexture::samples();
-  fn _ZNK14QOpenGLTexture7samplesEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK14QOpenGLTexture7samplesEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QOpenGLTexture::mipBaseLevel();
-  fn _ZNK14QOpenGLTexture12mipBaseLevelEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK14QOpenGLTexture12mipBaseLevelEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  QColor QOpenGLTexture::borderColor();
-  fn _ZNK14QOpenGLTexture11borderColorEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QOpenGLTexture::QOpenGLTexture(const QOpenGLTexture & );
-  fn _ZN14QOpenGLTextureC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK14QOpenGLTexture11borderColorEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QOpenGLTexture::setCompressedData(int mipLevel, int layer, int dataSize, void * data, const QOpenGLPixelTransferOptions *const options);
-  fn _ZN14QOpenGLTexture17setCompressedDataEiiiPvPK27QOpenGLPixelTransferOptions(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: *mut c_void, arg4: *mut c_void);
+  fn C_ZN14QOpenGLTexture17setCompressedDataEiiiPvPK27QOpenGLPixelTransferOptions(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: *mut c_void, arg4: *mut c_void);
   // proto:  void QOpenGLTexture::setCompressedData(int mipLevel, int dataSize, void * data, const QOpenGLPixelTransferOptions *const options);
-  fn _ZN14QOpenGLTexture17setCompressedDataEiiPvPK27QOpenGLPixelTransferOptions(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: *mut c_void, arg3: *mut c_void);
+  fn C_ZN14QOpenGLTexture17setCompressedDataEiiPvPK27QOpenGLPixelTransferOptions(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: *mut c_void, arg3: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -186,7 +184,7 @@ impl<'a> /*trait*/ QOpenGLTexture_bind<()> for () {
   fn bind(self , rsthis: & QOpenGLTexture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QOpenGLTexture4bindEv()};
-     unsafe {_ZN14QOpenGLTexture4bindEv(rsthis.qclsinst)};
+     unsafe {C_ZN14QOpenGLTexture4bindEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -209,7 +207,7 @@ impl<'a> /*trait*/ QOpenGLTexture_setFixedSamplePositions<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QOpenGLTexture23setFixedSamplePositionsEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN14QOpenGLTexture23setFixedSamplePositionsEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN14QOpenGLTexture23setFixedSamplePositionsEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -231,7 +229,7 @@ impl<'a> /*trait*/ QOpenGLTexture_height<i32> for () {
   fn height(self , rsthis: & QOpenGLTexture) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QOpenGLTexture6heightEv()};
-    let mut ret = unsafe {_ZNK14QOpenGLTexture6heightEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QOpenGLTexture6heightEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -254,7 +252,7 @@ impl<'a> /*trait*/ QOpenGLTexture_isAutoMipMapGenerationEnabled<i8> for () {
   fn isAutoMipMapGenerationEnabled(self , rsthis: & QOpenGLTexture) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QOpenGLTexture29isAutoMipMapGenerationEnabledEv()};
-    let mut ret = unsafe {_ZNK14QOpenGLTexture29isAutoMipMapGenerationEnabledEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QOpenGLTexture29isAutoMipMapGenerationEnabledEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -280,7 +278,7 @@ impl<'a> /*trait*/ QOpenGLTexture_setCompressedData<()> for (i32, *mut c_void, &
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
-     unsafe {_ZN14QOpenGLTexture17setCompressedDataEiPKvPK27QOpenGLPixelTransferOptions(rsthis.qclsinst, arg0, arg1, arg2)};
+     unsafe {C_ZN14QOpenGLTexture17setCompressedDataEiPKvPK27QOpenGLPixelTransferOptions(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
 }
@@ -303,7 +301,7 @@ impl<'a> /*trait*/ QOpenGLTexture_setMaximumLevelOfDetail<()> for (f32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QOpenGLTexture23setMaximumLevelOfDetailEf()};
     let arg0 = self  as c_float;
-     unsafe {_ZN14QOpenGLTexture23setMaximumLevelOfDetailEf(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN14QOpenGLTexture23setMaximumLevelOfDetailEf(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -326,7 +324,7 @@ impl<'a> /*trait*/ QOpenGLTexture_setAutoMipMapGenerationEnabled<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QOpenGLTexture30setAutoMipMapGenerationEnabledEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN14QOpenGLTexture30setAutoMipMapGenerationEnabledEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN14QOpenGLTexture30setAutoMipMapGenerationEnabledEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -348,7 +346,7 @@ impl<'a> /*trait*/ QOpenGLTexture_depth<i32> for () {
   fn depth(self , rsthis: & QOpenGLTexture) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QOpenGLTexture5depthEv()};
-    let mut ret = unsafe {_ZNK14QOpenGLTexture5depthEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QOpenGLTexture5depthEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -373,7 +371,7 @@ impl<'a> /*trait*/ QOpenGLTexture_generateMipMaps<()> for (i32, i8) {
     // unsafe{_ZN14QOpenGLTexture15generateMipMapsEib()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_char;
-     unsafe {_ZN14QOpenGLTexture15generateMipMapsEib(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN14QOpenGLTexture15generateMipMapsEib(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -387,7 +385,7 @@ impl<'a> /*trait*/ QOpenGLTexture_setCompressedData<()> for (i32, i32, *mut c_vo
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as *mut c_void;
     let arg3 = self.3.qclsinst  as *mut c_void;
-     unsafe {_ZN14QOpenGLTexture17setCompressedDataEiiPKvPK27QOpenGLPixelTransferOptions(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
+     unsafe {C_ZN14QOpenGLTexture17setCompressedDataEiiPKvPK27QOpenGLPixelTransferOptions(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
     // return 1;
   }
 }
@@ -410,7 +408,7 @@ impl<'a> /*trait*/ QOpenGLTexture_setMipBaseLevel<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QOpenGLTexture15setMipBaseLevelEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN14QOpenGLTexture15setMipBaseLevelEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN14QOpenGLTexture15setMipBaseLevelEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -432,7 +430,7 @@ impl<'a> /*trait*/ QOpenGLTexture_levelOfDetailRange<()> for () {
   fn levelOfDetailRange(self , rsthis: & QOpenGLTexture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QOpenGLTexture18levelOfDetailRangeEv()};
-     unsafe {_ZNK14QOpenGLTexture18levelOfDetailRangeEv(rsthis.qclsinst)};
+     unsafe {C_ZNK14QOpenGLTexture18levelOfDetailRangeEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -454,7 +452,7 @@ impl<'a> /*trait*/ QOpenGLTexture_create<i8> for () {
   fn create(self , rsthis: & QOpenGLTexture) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QOpenGLTexture6createEv()};
-    let mut ret = unsafe {_ZN14QOpenGLTexture6createEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZN14QOpenGLTexture6createEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -470,7 +468,7 @@ impl<'a> /*trait*/ QOpenGLTexture_setCompressedData<()> for (i32, i32, i32, *mut
     let arg2 = self.2  as c_int;
     let arg3 = self.3  as *mut c_void;
     let arg4 = self.4.qclsinst  as *mut c_void;
-     unsafe {_ZN14QOpenGLTexture17setCompressedDataEiiiPKvPK27QOpenGLPixelTransferOptions(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4)};
+     unsafe {C_ZN14QOpenGLTexture17setCompressedDataEiiiPKvPK27QOpenGLPixelTransferOptions(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4)};
     // return 1;
   }
 }
@@ -494,7 +492,7 @@ impl<'a> /*trait*/ QOpenGLTexture_setLevelOfDetailRange<()> for (f32, f32) {
     // unsafe{_ZN14QOpenGLTexture21setLevelOfDetailRangeEff()};
     let arg0 = self.0  as c_float;
     let arg1 = self.1  as c_float;
-     unsafe {_ZN14QOpenGLTexture21setLevelOfDetailRangeEff(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN14QOpenGLTexture21setLevelOfDetailRangeEff(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -517,7 +515,7 @@ impl<'a> /*trait*/ QOpenGLTexture_borderColor<()> for (&'a mut Vec<u32>) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QOpenGLTexture11borderColorEPj()};
     let arg0 = self.as_ptr()  as *mut c_uint;
-     unsafe {_ZNK14QOpenGLTexture11borderColorEPj(rsthis.qclsinst, arg0)};
+     unsafe {C_ZNK14QOpenGLTexture11borderColorEPj(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -539,7 +537,7 @@ impl<'a> /*trait*/ QOpenGLTexture_isStorageAllocated<i8> for () {
   fn isStorageAllocated(self , rsthis: & QOpenGLTexture) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QOpenGLTexture18isStorageAllocatedEv()};
-    let mut ret = unsafe {_ZNK14QOpenGLTexture18isStorageAllocatedEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QOpenGLTexture18isStorageAllocatedEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -551,7 +549,7 @@ impl<'a> /*trait*/ QOpenGLTexture_borderColor<()> for (&'a mut Vec<i32>) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QOpenGLTexture11borderColorEPi()};
     let arg0 = self.as_ptr()  as *mut c_int;
-     unsafe {_ZNK14QOpenGLTexture11borderColorEPi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZNK14QOpenGLTexture11borderColorEPi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -573,7 +571,7 @@ impl<'a> /*trait*/ QOpenGLTexture_isTextureView<i8> for () {
   fn isTextureView(self , rsthis: & QOpenGLTexture) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QOpenGLTexture13isTextureViewEv()};
-    let mut ret = unsafe {_ZNK14QOpenGLTexture13isTextureViewEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QOpenGLTexture13isTextureViewEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -596,7 +594,7 @@ impl<'a> /*trait*/ QOpenGLTexture_isFixedSamplePositions<i8> for () {
   fn isFixedSamplePositions(self , rsthis: & QOpenGLTexture) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QOpenGLTexture22isFixedSamplePositionsEv()};
-    let mut ret = unsafe {_ZNK14QOpenGLTexture22isFixedSamplePositionsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QOpenGLTexture22isFixedSamplePositionsEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -619,7 +617,7 @@ impl<'a> /*trait*/ QOpenGLTexture_faces<i32> for () {
   fn faces(self , rsthis: & QOpenGLTexture) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QOpenGLTexture5facesEv()};
-    let mut ret = unsafe {_ZNK14QOpenGLTexture5facesEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QOpenGLTexture5facesEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -643,7 +641,7 @@ impl<'a> /*trait*/ QOpenGLTexture_setLayers<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QOpenGLTexture9setLayersEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN14QOpenGLTexture9setLayersEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN14QOpenGLTexture9setLayersEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -665,7 +663,7 @@ impl<'a> /*trait*/ QOpenGLTexture_width<i32> for () {
   fn width(self , rsthis: & QOpenGLTexture) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QOpenGLTexture5widthEv()};
-    let mut ret = unsafe {_ZNK14QOpenGLTexture5widthEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QOpenGLTexture5widthEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -688,7 +686,7 @@ impl<'a> /*trait*/ QOpenGLTexture_layers<i32> for () {
   fn layers(self , rsthis: & QOpenGLTexture) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QOpenGLTexture6layersEv()};
-    let mut ret = unsafe {_ZNK14QOpenGLTexture6layersEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QOpenGLTexture6layersEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -700,7 +698,7 @@ impl<'a> /*trait*/ QOpenGLTexture_borderColor<()> for (&'a mut Vec<f32>) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QOpenGLTexture11borderColorEPf()};
     let arg0 = self.as_ptr()  as *mut c_float;
-     unsafe {_ZNK14QOpenGLTexture11borderColorEPf(rsthis.qclsinst, arg0)};
+     unsafe {C_ZNK14QOpenGLTexture11borderColorEPf(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -722,7 +720,7 @@ impl<'a> /*trait*/ QOpenGLTexture_minimumLevelOfDetail<f32> for () {
   fn minimumLevelOfDetail(self , rsthis: & QOpenGLTexture) -> f32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QOpenGLTexture20minimumLevelOfDetailEv()};
-    let mut ret = unsafe {_ZNK14QOpenGLTexture20minimumLevelOfDetailEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QOpenGLTexture20minimumLevelOfDetailEv(rsthis.qclsinst)};
     return ret as f32;
     // return 1;
   }
@@ -749,7 +747,7 @@ impl<'a> /*trait*/ QOpenGLTexture_setBorderColor<()> for (i32, i32, i32, i32) {
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as c_int;
     let arg3 = self.3  as c_int;
-     unsafe {_ZN14QOpenGLTexture14setBorderColorEiiii(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
+     unsafe {C_ZN14QOpenGLTexture14setBorderColorEiiii(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
     // return 1;
   }
 }
@@ -772,7 +770,7 @@ impl<'a> /*trait*/ QOpenGLTexture_setMinimumLevelOfDetail<()> for (f32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QOpenGLTexture23setMinimumLevelOfDetailEf()};
     let arg0 = self  as c_float;
-     unsafe {_ZN14QOpenGLTexture23setMinimumLevelOfDetailEf(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN14QOpenGLTexture23setMinimumLevelOfDetailEf(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -795,7 +793,7 @@ impl<'a> /*trait*/ QOpenGLTexture_setMipLevels<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QOpenGLTexture12setMipLevelsEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN14QOpenGLTexture12setMipLevelsEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN14QOpenGLTexture12setMipLevelsEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -817,7 +815,7 @@ impl<'a> /*trait*/ QOpenGLTexture_mipLevelRange<()> for () {
   fn mipLevelRange(self , rsthis: & QOpenGLTexture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QOpenGLTexture13mipLevelRangeEv()};
-     unsafe {_ZNK14QOpenGLTexture13mipLevelRangeEv(rsthis.qclsinst)};
+     unsafe {C_ZNK14QOpenGLTexture13mipLevelRangeEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -840,7 +838,7 @@ impl<'a> /*trait*/ QOpenGLTexture_setMipMaxLevel<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QOpenGLTexture14setMipMaxLevelEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN14QOpenGLTexture14setMipMaxLevelEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN14QOpenGLTexture14setMipMaxLevelEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -862,7 +860,7 @@ impl<'a> /*trait*/ QOpenGLTexture_levelofDetailBias<f32> for () {
   fn levelofDetailBias(self , rsthis: & QOpenGLTexture) -> f32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QOpenGLTexture17levelofDetailBiasEv()};
-    let mut ret = unsafe {_ZNK14QOpenGLTexture17levelofDetailBiasEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QOpenGLTexture17levelofDetailBiasEv(rsthis.qclsinst)};
     return ret as f32;
     // return 1;
   }
@@ -885,7 +883,7 @@ impl<'a> /*trait*/ QOpenGLTexture_maximumMipLevels<i32> for () {
   fn maximumMipLevels(self , rsthis: & QOpenGLTexture) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QOpenGLTexture16maximumMipLevelsEv()};
-    let mut ret = unsafe {_ZNK14QOpenGLTexture16maximumMipLevelsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QOpenGLTexture16maximumMipLevelsEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -909,7 +907,7 @@ impl<'a> /*trait*/ QOpenGLTexture_isBound<i8> for (u32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QOpenGLTexture7isBoundEj()};
     let arg0 = self  as c_uint;
-    let mut ret = unsafe {_ZN14QOpenGLTexture7isBoundEj(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN14QOpenGLTexture7isBoundEj(rsthis.qclsinst, arg0)};
     return ret as i8;
     // return 1;
   }
@@ -924,7 +922,7 @@ impl<'a> /*trait*/ QOpenGLTexture_setBorderColor<()> for (u32, u32, u32, u32) {
     let arg1 = self.1  as c_uint;
     let arg2 = self.2  as c_uint;
     let arg3 = self.3  as c_uint;
-     unsafe {_ZN14QOpenGLTexture14setBorderColorEjjjj(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
+     unsafe {C_ZN14QOpenGLTexture14setBorderColorEjjjj(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
     // return 1;
   }
 }
@@ -947,7 +945,7 @@ impl<'a> /*trait*/ QOpenGLTexture_setMaximumAnisotropy<()> for (f32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QOpenGLTexture20setMaximumAnisotropyEf()};
     let arg0 = self  as c_float;
-     unsafe {_ZN14QOpenGLTexture20setMaximumAnisotropyEf(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN14QOpenGLTexture20setMaximumAnisotropyEf(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -970,7 +968,7 @@ impl<'a> /*trait*/ QOpenGLTexture_setSamples<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QOpenGLTexture10setSamplesEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN14QOpenGLTexture10setSamplesEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN14QOpenGLTexture10setSamplesEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -992,7 +990,7 @@ impl<'a> /*trait*/ QOpenGLTexture_mipLevels<i32> for () {
   fn mipLevels(self , rsthis: & QOpenGLTexture) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QOpenGLTexture9mipLevelsEv()};
-    let mut ret = unsafe {_ZNK14QOpenGLTexture9mipLevelsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QOpenGLTexture9mipLevelsEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -1016,7 +1014,7 @@ impl<'a> /*trait*/ QOpenGLTexture_setLevelofDetailBias<()> for (f32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QOpenGLTexture20setLevelofDetailBiasEf()};
     let arg0 = self  as c_float;
-     unsafe {_ZN14QOpenGLTexture20setLevelofDetailBiasEf(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN14QOpenGLTexture20setLevelofDetailBiasEf(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1038,7 +1036,7 @@ impl<'a> /*trait*/ QOpenGLTexture_textureId<u32> for () {
   fn textureId(self , rsthis: & QOpenGLTexture) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QOpenGLTexture9textureIdEv()};
-    let mut ret = unsafe {_ZNK14QOpenGLTexture9textureIdEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QOpenGLTexture9textureIdEv(rsthis.qclsinst)};
     return ret as u32;
     // return 1;
   }
@@ -1063,7 +1061,7 @@ impl<'a> /*trait*/ QOpenGLTexture_setMipLevelRange<()> for (i32, i32) {
     // unsafe{_ZN14QOpenGLTexture16setMipLevelRangeEii()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-     unsafe {_ZN14QOpenGLTexture16setMipLevelRangeEii(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN14QOpenGLTexture16setMipLevelRangeEii(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -1085,7 +1083,7 @@ impl<'a> /*trait*/ QOpenGLTexture_allocateStorage<()> for () {
   fn allocateStorage(self , rsthis: & QOpenGLTexture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QOpenGLTexture15allocateStorageEv()};
-     unsafe {_ZN14QOpenGLTexture15allocateStorageEv(rsthis.qclsinst)};
+     unsafe {C_ZN14QOpenGLTexture15allocateStorageEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1107,7 +1105,7 @@ impl<'a> /*trait*/ QOpenGLTexture_free<()> for () {
   fn free(self , rsthis: & QOpenGLTexture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QOpenGLTextureD2Ev()};
-     unsafe {_ZN14QOpenGLTextureD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN14QOpenGLTextureD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1129,7 +1127,7 @@ impl<'a> /*trait*/ QOpenGLTexture_mipMaxLevel<i32> for () {
   fn mipMaxLevel(self , rsthis: & QOpenGLTexture) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QOpenGLTexture11mipMaxLevelEv()};
-    let mut ret = unsafe {_ZNK14QOpenGLTexture11mipMaxLevelEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QOpenGLTexture11mipMaxLevelEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -1141,7 +1139,7 @@ impl<'a> /*trait*/ QOpenGLTexture_setBorderColor<()> for (QColor) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QOpenGLTexture14setBorderColorE6QColor()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN14QOpenGLTexture14setBorderColorE6QColor(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN14QOpenGLTexture14setBorderColorE6QColor(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1163,7 +1161,7 @@ impl<'a> /*trait*/ QOpenGLTexture_destroy<()> for () {
   fn destroy(self , rsthis: & QOpenGLTexture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QOpenGLTexture7destroyEv()};
-     unsafe {_ZN14QOpenGLTexture7destroyEv(rsthis.qclsinst)};
+     unsafe {C_ZN14QOpenGLTexture7destroyEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1173,7 +1171,7 @@ impl<'a> /*trait*/ QOpenGLTexture_generateMipMaps<()> for () {
   fn generateMipMaps(self , rsthis: & QOpenGLTexture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QOpenGLTexture15generateMipMapsEv()};
-     unsafe {_ZN14QOpenGLTexture15generateMipMapsEv(rsthis.qclsinst)};
+     unsafe {C_ZN14QOpenGLTexture15generateMipMapsEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1195,7 +1193,7 @@ impl<'a> /*trait*/ QOpenGLTexture_release<()> for () {
   fn release(self , rsthis: & QOpenGLTexture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QOpenGLTexture7releaseEv()};
-     unsafe {_ZN14QOpenGLTexture7releaseEv(rsthis.qclsinst)};
+     unsafe {C_ZN14QOpenGLTexture7releaseEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1217,7 +1215,7 @@ impl<'a> /*trait*/ QOpenGLTexture_maximumAnisotropy<f32> for () {
   fn maximumAnisotropy(self , rsthis: & QOpenGLTexture) -> f32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QOpenGLTexture17maximumAnisotropyEv()};
-    let mut ret = unsafe {_ZNK14QOpenGLTexture17maximumAnisotropyEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QOpenGLTexture17maximumAnisotropyEv(rsthis.qclsinst)};
     return ret as f32;
     // return 1;
   }
@@ -1240,7 +1238,7 @@ impl<'a> /*trait*/ QOpenGLTexture_maximumLevelOfDetail<f32> for () {
   fn maximumLevelOfDetail(self , rsthis: & QOpenGLTexture) -> f32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QOpenGLTexture20maximumLevelOfDetailEv()};
-    let mut ret = unsafe {_ZNK14QOpenGLTexture20maximumLevelOfDetailEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QOpenGLTexture20maximumLevelOfDetailEv(rsthis.qclsinst)};
     return ret as f32;
     // return 1;
   }
@@ -1266,7 +1264,7 @@ impl<'a> /*trait*/ QOpenGLTexture_setSize<()> for (i32, i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as c_int;
-     unsafe {_ZN14QOpenGLTexture7setSizeEiii(rsthis.qclsinst, arg0, arg1, arg2)};
+     unsafe {C_ZN14QOpenGLTexture7setSizeEiii(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
 }
@@ -1288,7 +1286,7 @@ impl<'a> /*trait*/ QOpenGLTexture_isCreated<i8> for () {
   fn isCreated(self , rsthis: & QOpenGLTexture) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QOpenGLTexture9isCreatedEv()};
-    let mut ret = unsafe {_ZNK14QOpenGLTexture9isCreatedEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QOpenGLTexture9isCreatedEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -1299,7 +1297,7 @@ impl<'a> /*trait*/ QOpenGLTexture_isBound<i8> for () {
   fn isBound(self , rsthis: & QOpenGLTexture) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QOpenGLTexture7isBoundEv()};
-    let mut ret = unsafe {_ZNK14QOpenGLTexture7isBoundEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QOpenGLTexture7isBoundEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -1314,7 +1312,7 @@ impl<'a> /*trait*/ QOpenGLTexture_setBorderColor<()> for (f32, f32, f32, f32) {
     let arg1 = self.1  as c_float;
     let arg2 = self.2  as c_float;
     let arg3 = self.3  as c_float;
-     unsafe {_ZN14QOpenGLTexture14setBorderColorEffff(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
+     unsafe {C_ZN14QOpenGLTexture14setBorderColorEffff(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
     // return 1;
   }
 }
@@ -1336,7 +1334,7 @@ impl<'a> /*trait*/ QOpenGLTexture_samples<i32> for () {
   fn samples(self , rsthis: & QOpenGLTexture) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QOpenGLTexture7samplesEv()};
-    let mut ret = unsafe {_ZNK14QOpenGLTexture7samplesEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QOpenGLTexture7samplesEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -1359,7 +1357,7 @@ impl<'a> /*trait*/ QOpenGLTexture_mipBaseLevel<i32> for () {
   fn mipBaseLevel(self , rsthis: & QOpenGLTexture) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QOpenGLTexture12mipBaseLevelEv()};
-    let mut ret = unsafe {_ZNK14QOpenGLTexture12mipBaseLevelEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QOpenGLTexture12mipBaseLevelEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -1370,38 +1368,9 @@ impl<'a> /*trait*/ QOpenGLTexture_borderColor<QColor> for () {
   fn borderColor(self , rsthis: & QOpenGLTexture) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QOpenGLTexture11borderColorEv()};
-    let mut ret = unsafe {_ZNK14QOpenGLTexture11borderColorEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QOpenGLTexture11borderColorEv(rsthis.qclsinst)};
     let mut ret1 = QColor::inheritFrom(ret as u64);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QOpenGLTexture::QOpenGLTexture(const QOpenGLTexture & );
-impl /*struct*/ QOpenGLTexture {
-  pub fn new<T: QOpenGLTexture_new>(value: T) -> QOpenGLTexture {
-    let rsthis = value.new();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QOpenGLTexture_new {
-  fn new(self) -> QOpenGLTexture;
-}
-
-  // proto:  void QOpenGLTexture::QOpenGLTexture(const QOpenGLTexture & );
-impl<'a> /*trait*/ QOpenGLTexture_new for (&'a QOpenGLTexture) {
-  fn new(self) -> QOpenGLTexture {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QOpenGLTextureC2ERKS_()};
-    let ctysz: c_int = unsafe{QOpenGLTexture_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN14QOpenGLTextureC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QOpenGLTexture{qclsinst: qthis, ..Default::default()};
-    return rsthis;
     // return 1;
   }
 }

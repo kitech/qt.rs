@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtGui/qstatictext.h
 // dst-file: /src/gui/qstatictext.rs
 //
@@ -35,31 +35,31 @@ use super::qtextoption::QTextOption; // 773
 extern {
   fn QStaticText_Class_Size() -> c_int;
   // proto:  void QStaticText::QStaticText(const QString & text);
-  fn _ZN11QStaticTextC2ERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QStaticTextC2ERK7QString(arg0: *mut c_void) -> u64;
   // proto:  QSizeF QStaticText::size();
-  fn _ZNK11QStaticText4sizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK11QStaticText4sizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QStaticText::text();
-  fn _ZNK11QStaticText4textEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK11QStaticText4textEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QStaticText::~QStaticText();
-  fn _ZN11QStaticTextD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN11QStaticTextD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QStaticText::setText(const QString & text);
-  fn _ZN11QStaticText7setTextERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QStaticText7setTextERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QStaticText::QStaticText();
-  fn _ZN11QStaticTextC2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN11QStaticTextC2Ev() -> u64;
   // proto:  void QStaticText::prepare(const QTransform & matrix, const QFont & font);
-  fn _ZN11QStaticText7prepareERK10QTransformRK5QFont(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN11QStaticText7prepareERK10QTransformRK5QFont(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QStaticText::setTextOption(const QTextOption & textOption);
-  fn _ZN11QStaticText13setTextOptionERK11QTextOption(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QStaticText13setTextOptionERK11QTextOption(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QStaticText::setTextWidth(qreal textWidth);
-  fn _ZN11QStaticText12setTextWidthEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
+  fn C_ZN11QStaticText12setTextWidthEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  qreal QStaticText::textWidth();
-  fn _ZNK11QStaticText9textWidthEv(qthis: u64 /* *mut c_void*/) -> c_double;
+  fn C_ZNK11QStaticText9textWidthEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QStaticText::swap(QStaticText & other);
-  fn _ZN11QStaticText4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QStaticText4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QTextOption QStaticText::textOption();
-  fn _ZNK11QStaticText10textOptionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK11QStaticText10textOptionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QStaticText::QStaticText(const QStaticText & other);
-  fn _ZN11QStaticTextC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QStaticTextC2ERKS_(arg0: *mut c_void) -> u64;
 } // <= ext block end
 
 // body block begin =>
@@ -96,8 +96,7 @@ impl<'a> /*trait*/ QStaticText_new for (&'a QString) {
     let ctysz: c_int = unsafe{QStaticText_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QStaticTextC2ERK7QString(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN11QStaticTextC2ERK7QString(arg0)};
     let rsthis = QStaticText{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -121,7 +120,7 @@ impl<'a> /*trait*/ QStaticText_size<QSizeF> for () {
   fn size(self , rsthis: & QStaticText) -> QSizeF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QStaticText4sizeEv()};
-    let mut ret = unsafe {_ZNK11QStaticText4sizeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QStaticText4sizeEv(rsthis.qclsinst)};
     let mut ret1 = QSizeF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -145,7 +144,7 @@ impl<'a> /*trait*/ QStaticText_text<QString> for () {
   fn text(self , rsthis: & QStaticText) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QStaticText4textEv()};
-    let mut ret = unsafe {_ZNK11QStaticText4textEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QStaticText4textEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -169,7 +168,7 @@ impl<'a> /*trait*/ QStaticText_free<()> for () {
   fn free(self , rsthis: & QStaticText) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QStaticTextD2Ev()};
-     unsafe {_ZN11QStaticTextD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN11QStaticTextD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -192,7 +191,7 @@ impl<'a> /*trait*/ QStaticText_setText<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QStaticText7setTextERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QStaticText7setTextERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QStaticText7setTextERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -204,8 +203,7 @@ impl<'a> /*trait*/ QStaticText_new for () {
     // unsafe{_ZN11QStaticTextC2Ev()};
     let ctysz: c_int = unsafe{QStaticText_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    unsafe {_ZN11QStaticTextC2Ev(qthis_ph)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN11QStaticTextC2Ev()};
     let rsthis = QStaticText{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -231,7 +229,7 @@ impl<'a> /*trait*/ QStaticText_prepare<()> for (&'a QTransform, &'a QFont) {
     // unsafe{_ZN11QStaticText7prepareERK10QTransformRK5QFont()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN11QStaticText7prepareERK10QTransformRK5QFont(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN11QStaticText7prepareERK10QTransformRK5QFont(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -254,7 +252,7 @@ impl<'a> /*trait*/ QStaticText_setTextOption<()> for (&'a QTextOption) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QStaticText13setTextOptionERK11QTextOption()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QStaticText13setTextOptionERK11QTextOption(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QStaticText13setTextOptionERK11QTextOption(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -277,7 +275,7 @@ impl<'a> /*trait*/ QStaticText_setTextWidth<()> for (f64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QStaticText12setTextWidthEd()};
     let arg0 = self  as c_double;
-     unsafe {_ZN11QStaticText12setTextWidthEd(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QStaticText12setTextWidthEd(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -299,7 +297,7 @@ impl<'a> /*trait*/ QStaticText_textWidth<f64> for () {
   fn textWidth(self , rsthis: & QStaticText) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QStaticText9textWidthEv()};
-    let mut ret = unsafe {_ZNK11QStaticText9textWidthEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QStaticText9textWidthEv(rsthis.qclsinst)};
     return ret as f64;
     // return 1;
   }
@@ -323,7 +321,7 @@ impl<'a> /*trait*/ QStaticText_swap<()> for (&'a QStaticText) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QStaticText4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QStaticText4swapERS_(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QStaticText4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -345,7 +343,7 @@ impl<'a> /*trait*/ QStaticText_textOption<QTextOption> for () {
   fn textOption(self , rsthis: & QStaticText) -> QTextOption {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QStaticText10textOptionEv()};
-    let mut ret = unsafe {_ZNK11QStaticText10textOptionEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QStaticText10textOptionEv(rsthis.qclsinst)};
     let mut ret1 = QTextOption::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -360,8 +358,7 @@ impl<'a> /*trait*/ QStaticText_new for (&'a QStaticText) {
     let ctysz: c_int = unsafe{QStaticText_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QStaticTextC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN11QStaticTextC2ERKS_(arg0)};
     let rsthis = QStaticText{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtGui/qtouchdevice.h
 // dst-file: /src/gui/qtouchdevice.rs
 //
@@ -31,19 +31,19 @@ use super::super::core::qstring::QString; // 771
 extern {
   fn QTouchDevice_Class_Size() -> c_int;
   // proto:  void QTouchDevice::setName(const QString & name);
-  fn _ZN12QTouchDevice7setNameERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN12QTouchDevice7setNameERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QString QTouchDevice::name();
-  fn _ZNK12QTouchDevice4nameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK12QTouchDevice4nameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QTouchDevice::setMaximumTouchPoints(int max);
-  fn _ZN12QTouchDevice21setMaximumTouchPointsEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN12QTouchDevice21setMaximumTouchPointsEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto: static QList<const QTouchDevice *> QTouchDevice::devices();
-  fn _ZN12QTouchDevice7devicesEv();
+  fn C_ZN12QTouchDevice7devicesEv();
   // proto:  void QTouchDevice::QTouchDevice();
-  fn _ZN12QTouchDeviceC2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN12QTouchDeviceC2Ev() -> u64;
   // proto:  void QTouchDevice::~QTouchDevice();
-  fn _ZN12QTouchDeviceD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN12QTouchDeviceD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  int QTouchDevice::maximumTouchPoints();
-  fn _ZNK12QTouchDevice18maximumTouchPointsEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK12QTouchDevice18maximumTouchPointsEv(qthis: u64 /* *mut c_void*/) -> c_int;
 } // <= ext block end
 
 // body block begin =>
@@ -77,7 +77,7 @@ impl<'a> /*trait*/ QTouchDevice_setName<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTouchDevice7setNameERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN12QTouchDevice7setNameERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN12QTouchDevice7setNameERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -99,7 +99,7 @@ impl<'a> /*trait*/ QTouchDevice_name<QString> for () {
   fn name(self , rsthis: & QTouchDevice) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTouchDevice4nameEv()};
-    let mut ret = unsafe {_ZNK12QTouchDevice4nameEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QTouchDevice4nameEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -124,7 +124,7 @@ impl<'a> /*trait*/ QTouchDevice_setMaximumTouchPoints<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTouchDevice21setMaximumTouchPointsEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN12QTouchDevice21setMaximumTouchPointsEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN12QTouchDevice21setMaximumTouchPointsEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -146,7 +146,7 @@ impl<'a> /*trait*/ QTouchDevice_devices_s<()> for () {
   fn devices_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTouchDevice7devicesEv()};
-     unsafe {_ZN12QTouchDevice7devicesEv()};
+     unsafe {C_ZN12QTouchDevice7devicesEv()};
     // return 1;
   }
 }
@@ -171,8 +171,7 @@ impl<'a> /*trait*/ QTouchDevice_new for () {
     // unsafe{_ZN12QTouchDeviceC2Ev()};
     let ctysz: c_int = unsafe{QTouchDevice_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    unsafe {_ZN12QTouchDeviceC2Ev(qthis_ph)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN12QTouchDeviceC2Ev()};
     let rsthis = QTouchDevice{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -196,7 +195,7 @@ impl<'a> /*trait*/ QTouchDevice_free<()> for () {
   fn free(self , rsthis: & QTouchDevice) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTouchDeviceD2Ev()};
-     unsafe {_ZN12QTouchDeviceD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN12QTouchDeviceD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -218,7 +217,7 @@ impl<'a> /*trait*/ QTouchDevice_maximumTouchPoints<i32> for () {
   fn maximumTouchPoints(self , rsthis: & QTouchDevice) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTouchDevice18maximumTouchPointsEv()};
-    let mut ret = unsafe {_ZNK12QTouchDevice18maximumTouchPointsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QTouchDevice18maximumTouchPointsEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }

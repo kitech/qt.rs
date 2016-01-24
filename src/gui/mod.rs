@@ -1,9 +1,6 @@
 pub mod qtouchdevice;
 pub use self::qtouchdevice::QTouchDevice;
 
-pub mod qopenglfunctions;
-pub use self::qopenglfunctions::QOpenGLFunctionsPrivate;
-
 pub mod qwindow;
 pub use self::qwindow::QWindow;
 
@@ -22,9 +19,6 @@ pub use self::qevent::QWhatsThisClickedEvent;
 pub mod qopenglcontext;
 pub use self::qopenglcontext::QOpenGLVersionProfile;
 
-pub mod qopenglversionfunctions;
-pub use self::qopenglversionfunctions::QAbstractOpenGLFunctionsPrivate;
-
 pub use self::qevent::QExposeEvent;
 
 pub mod qtextformat;
@@ -35,12 +29,6 @@ pub use self::qtextoption::QTextOption;
 
 pub mod qpagelayout;
 pub use self::qpagelayout::QPageLayout;
-
-pub use self::qopenglversionfunctions::QOpenGLFunctions_4_5_DeprecatedBackend;
-
-pub use self::qopenglversionfunctions::QOpenGLFunctions_1_2_DeprecatedBackend;
-
-pub use self::qopenglversionfunctions::QOpenGLFunctions_4_1_CoreBackend;
 
 pub mod qvector2d;
 pub use self::qvector2d::QVector2D;
@@ -55,14 +43,10 @@ pub use self::qimagereader::QImageReader;
 pub mod qrawfont;
 pub use self::qrawfont::QRawFont;
 
-pub use self::qopenglversionfunctions::QOpenGLFunctions_3_3_CoreBackend;
-
 pub mod qmatrix4x4;
 pub use self::qmatrix4x4::QMatrix4x4;
 
 pub use self::qtextformat::QTextImageFormat;
-
-pub use self::qopenglversionfunctions::QOpenGLFunctions_1_5_CoreBackend;
 
 pub mod qaccessible;
 pub use self::qaccessible::QAccessible;
@@ -95,8 +79,6 @@ pub use self::qvalidator::QRegularExpressionValidator;
 pub mod qfontmetrics;
 pub use self::qfontmetrics::QFontMetrics;
 
-pub use self::qopenglversionfunctions::QOpenGLFunctions_4_5_CoreBackend;
-
 pub use self::qevent::QHelpEvent;
 
 pub use self::qevent::QActionEvent;
@@ -115,8 +97,6 @@ pub use self::qstatictext::QStaticText;
 
 pub mod qpalette;
 pub use self::qpalette::QPalette;
-
-pub use self::qopenglversionfunctions::QOpenGLFunctions_4_4_CoreBackend;
 
 pub use self::qevent::QMouseEvent;
 
@@ -160,8 +140,6 @@ pub use self::qguiapplication::QGuiApplication;
 pub mod qpen;
 pub use self::qpen::QPen;
 
-pub use self::qopenglversionfunctions::QOpenGLFunctions_4_3_CoreBackend;
-
 pub use self::qevent::QTouchEvent;
 
 pub mod qdrag;
@@ -169,8 +147,6 @@ pub use self::qdrag::QDrag;
 
 pub mod qdesktopservices;
 pub use self::qdesktopservices::QDesktopServices;
-
-pub use self::qopenglversionfunctions::QOpenGLFunctions_3_0_DeprecatedBackend;
 
 pub mod qopengltimerquery;
 pub use self::qopengltimerquery::QOpenGLTimerQuery;
@@ -180,8 +156,6 @@ pub use self::qaccessible::QAccessibleEvent;
 pub use self::qaccessible::QAccessibleActionInterface;
 
 pub use self::qtextobject::QTextFragment;
-
-pub use self::qopenglversionfunctions::QOpenGLFunctions_2_1_CoreBackend;
 
 pub use self::qaccessibleobject::QAccessibleObject;
 
@@ -225,8 +199,6 @@ pub use self::qevent::QCloseEvent;
 pub mod qfontinfo;
 pub use self::qfontinfo::QFontInfo;
 
-pub use self::qopenglversionfunctions::QOpenGLFunctions_1_0_DeprecatedBackend;
-
 pub use self::qvalidator::QIntValidator;
 
 pub mod qmatrix;
@@ -242,8 +214,6 @@ pub use self::qevent::QDragEnterEvent;
 
 pub mod qimagewriter;
 pub use self::qimagewriter::QImageWriter;
-
-pub use self::qopenglversionfunctions::QOpenGLFunctions_3_0_CoreBackend;
 
 pub mod qopenglbuffer;
 pub use self::qopenglbuffer::QOpenGLBuffer;
@@ -261,8 +231,6 @@ pub use self::qpagedpaintdevice::QPagedPaintDevice;
 
 pub use self::qtextdocument::QAbstractUndoItem;
 
-pub use self::qopenglversionfunctions::QOpenGLFunctions_1_2_CoreBackend;
-
 pub use self::qevent::QWheelEvent;
 
 pub mod qpolygon;
@@ -274,14 +242,8 @@ pub use self::qtextlayout::QTextLine;
 pub mod qopenglpixeltransferoptions;
 pub use self::qopenglpixeltransferoptions::QOpenGLPixelTransferOptions;
 
-pub use self::qopenglversionfunctions::QOpenGLFunctions_1_1_DeprecatedBackend;
-
-pub use self::qopenglversionfunctions::QOpenGLFunctions_4_2_CoreBackend;
-
 pub mod qpainter;
 pub use self::qpainter::QPainter;
-
-pub use self::qopenglversionfunctions::QOpenGLFunctions_2_0_CoreBackend;
 
 pub use self::qtextlayout::QTextLayout;
 
@@ -298,8 +260,6 @@ pub use self::qaccessiblebridge::QAccessibleBridgePlugin;
 
 pub mod qstandarditemmodel;
 pub use self::qstandarditemmodel::QStandardItemModel;
-
-pub use self::qopenglversionfunctions::QOpenGLFunctions_3_2_CoreBackend;
 
 pub use self::qaccessible::QAccessibleTableInterface;
 
@@ -360,6 +320,7 @@ pub use self::qbrush::QGradient;
 
 pub use self::qtextlayout::QTextInlineObject;
 
+pub mod qopenglversionfunctions;
 pub use self::qopenglversionfunctions::QOpenGLVersionFunctionsBackend;
 
 pub mod qglyphrun;
@@ -389,10 +350,6 @@ pub use self::qscreen::QScreen;
 pub mod qclipboard;
 pub use self::qclipboard::QClipboard;
 
-pub use self::qopenglversionfunctions::QOpenGLFunctions_2_0_DeprecatedBackend;
-
-pub use self::qopenglversionfunctions::QOpenGLFunctions_1_3_DeprecatedBackend;
-
 pub use self::qevent::QMoveEvent;
 
 pub use self::qimageiohandler::QImageIOPlugin;
@@ -413,11 +370,7 @@ pub use self::qevent::QHideEvent;
 pub mod qpdfwriter;
 pub use self::qpdfwriter::QPdfWriter;
 
-pub use self::qopenglversionfunctions::QOpenGLFunctions_1_4_DeprecatedBackend;
-
 pub use self::qevent::QDragLeaveEvent;
-
-pub use self::qopenglversionfunctions::QOpenGLFunctions_1_3_CoreBackend;
 
 pub use self::qopenglversionfunctions::QOpenGLVersionStatus;
 
@@ -455,6 +408,7 @@ pub use self::qopenglframebufferobject::QOpenGLFramebufferObjectFormat;
 pub mod qstylehints;
 pub use self::qstylehints::QStyleHints;
 
+pub mod qopenglfunctions;
 pub use self::qopenglfunctions::QOpenGLFunctions;
 
 pub use self::qopenglshaderprogram::QOpenGLShaderProgram;
@@ -468,16 +422,10 @@ pub use self::qaccessible::QAccessibleTextSelectionEvent;
 
 pub use self::qevent::QApplicationStateChangeEvent;
 
-pub use self::qopenglversionfunctions::QOpenGLFunctions_1_0_CoreBackend;
-
-pub use self::qopenglversionfunctions::QOpenGLFunctions_3_1_CoreBackend;
-
 pub use self::qtextobject::QTextBlockGroup;
 
 pub mod qpixmapcache;
 pub use self::qpixmapcache::QPixmapCache;
-
-pub use self::qopenglversionfunctions::QOpenGLFunctions_1_1_CoreBackend;
 
 pub mod qgenericpluginfactory;
 pub use self::qgenericpluginfactory::QGenericPluginFactory;
@@ -508,8 +456,6 @@ pub use self::qaccessiblebridge::QAccessibleBridge;
 
 pub use self::qtextobject::QTextFrame;
 
-pub use self::qopenglversionfunctions::QOpenGLFunctions_1_4_CoreBackend;
-
 pub use self::qvalidator::QValidator;
 
 pub mod qtextdocumentwriter;
@@ -522,15 +468,11 @@ pub use self::qbrush::QLinearGradient;
 
 pub use self::qvalidator::QRegExpValidator;
 
-pub use self::qopenglversionfunctions::QOpenGLFunctions_4_0_CoreBackend;
-
 pub use self::qopenglframebufferobject::QOpenGLFramebufferObject;
 
 pub use self::qaccessible::QAccessibleValueChangeEvent;
 
 pub use self::qtextformat::QTextFrameFormat;
-
-pub use self::qopenglversionfunctions::QOpenGLFunctions_3_3_DeprecatedBackend;
 
 pub use self::qtexttable::QTextTable;
 

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtGui/qsyntaxhighlighter.h
 // dst-file: /src/gui/qsyntaxhighlighter.rs
 //
@@ -22,6 +22,7 @@ use super::super::core::qobject::QObject; // 771
 use std::ops::Deref;
 use super::qtextobject::QTextBlock; // 773
 use super::qtextdocument::QTextDocument; // 773
+use super::super::core::qobjectdefs::QMetaObject; // 771
 // <= use block end
 
 // ext block begin =>
@@ -33,23 +34,21 @@ use super::qtextdocument::QTextDocument; // 773
 extern {
   fn QSyntaxHighlighter_Class_Size() -> c_int;
   // proto:  void QSyntaxHighlighter::~QSyntaxHighlighter();
-  fn _ZN18QSyntaxHighlighterD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN18QSyntaxHighlighterD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QSyntaxHighlighter::rehighlight();
-  fn _ZN18QSyntaxHighlighter11rehighlightEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN18QSyntaxHighlighter11rehighlightEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QSyntaxHighlighter::QSyntaxHighlighter(QObject * parent);
-  fn _ZN18QSyntaxHighlighterC2EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN18QSyntaxHighlighterC2EP7QObject(arg0: *mut c_void) -> u64;
   // proto:  void QSyntaxHighlighter::rehighlightBlock(const QTextBlock & block);
-  fn _ZN18QSyntaxHighlighter16rehighlightBlockERK10QTextBlock(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN18QSyntaxHighlighter16rehighlightBlockERK10QTextBlock(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QSyntaxHighlighter::setDocument(QTextDocument * doc);
-  fn _ZN18QSyntaxHighlighter11setDocumentEP13QTextDocument(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN18QSyntaxHighlighter11setDocumentEP13QTextDocument(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QSyntaxHighlighter::QSyntaxHighlighter(QTextDocument * parent);
-  fn _ZN18QSyntaxHighlighterC2EP13QTextDocument(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QSyntaxHighlighter::QSyntaxHighlighter(const QSyntaxHighlighter & );
-  fn _ZN18QSyntaxHighlighterC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN18QSyntaxHighlighterC2EP13QTextDocument(arg0: *mut c_void) -> u64;
   // proto:  const QMetaObject * QSyntaxHighlighter::metaObject();
-  fn _ZNK18QSyntaxHighlighter10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK18QSyntaxHighlighter10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QTextDocument * QSyntaxHighlighter::document();
-  fn _ZNK18QSyntaxHighlighter8documentEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK18QSyntaxHighlighter8documentEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
 } // <= ext block end
 
 // body block begin =>
@@ -94,7 +93,7 @@ impl<'a> /*trait*/ QSyntaxHighlighter_free<()> for () {
   fn free(self , rsthis: & QSyntaxHighlighter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QSyntaxHighlighterD2Ev()};
-     unsafe {_ZN18QSyntaxHighlighterD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN18QSyntaxHighlighterD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -116,7 +115,7 @@ impl<'a> /*trait*/ QSyntaxHighlighter_rehighlight<()> for () {
   fn rehighlight(self , rsthis: & QSyntaxHighlighter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QSyntaxHighlighter11rehighlightEv()};
-     unsafe {_ZN18QSyntaxHighlighter11rehighlightEv(rsthis.qclsinst)};
+     unsafe {C_ZN18QSyntaxHighlighter11rehighlightEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -142,8 +141,7 @@ impl<'a> /*trait*/ QSyntaxHighlighter_new for (&'a QObject) {
     let ctysz: c_int = unsafe{QSyntaxHighlighter_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN18QSyntaxHighlighterC2EP7QObject(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN18QSyntaxHighlighterC2EP7QObject(arg0)};
     let rsthis = QSyntaxHighlighter{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -168,7 +166,7 @@ impl<'a> /*trait*/ QSyntaxHighlighter_rehighlightBlock<()> for (&'a QTextBlock) 
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QSyntaxHighlighter16rehighlightBlockERK10QTextBlock()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN18QSyntaxHighlighter16rehighlightBlockERK10QTextBlock(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN18QSyntaxHighlighter16rehighlightBlockERK10QTextBlock(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -191,7 +189,7 @@ impl<'a> /*trait*/ QSyntaxHighlighter_setDocument<()> for (&'a QTextDocument) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QSyntaxHighlighter11setDocumentEP13QTextDocument()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN18QSyntaxHighlighter11setDocumentEP13QTextDocument(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN18QSyntaxHighlighter11setDocumentEP13QTextDocument(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -204,24 +202,7 @@ impl<'a> /*trait*/ QSyntaxHighlighter_new for (&'a QTextDocument) {
     let ctysz: c_int = unsafe{QSyntaxHighlighter_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN18QSyntaxHighlighterC2EP13QTextDocument(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QSyntaxHighlighter{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  void QSyntaxHighlighter::QSyntaxHighlighter(const QSyntaxHighlighter & );
-impl<'a> /*trait*/ QSyntaxHighlighter_new for (&'a QSyntaxHighlighter) {
-  fn new(self) -> QSyntaxHighlighter {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QSyntaxHighlighterC2ERKS_()};
-    let ctysz: c_int = unsafe{QSyntaxHighlighter_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN18QSyntaxHighlighterC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN18QSyntaxHighlighterC2EP13QTextDocument(arg0)};
     let rsthis = QSyntaxHighlighter{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -241,11 +222,13 @@ pub trait QSyntaxHighlighter_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QSyntaxHighlighter::metaObject();
-impl<'a> /*trait*/ QSyntaxHighlighter_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QSyntaxHighlighter) -> () {
+impl<'a> /*trait*/ QSyntaxHighlighter_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QSyntaxHighlighter) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QSyntaxHighlighter10metaObjectEv()};
-     unsafe {_ZNK18QSyntaxHighlighter10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK18QSyntaxHighlighter10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -267,7 +250,7 @@ impl<'a> /*trait*/ QSyntaxHighlighter_document<QTextDocument> for () {
   fn document(self , rsthis: & QSyntaxHighlighter) -> QTextDocument {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QSyntaxHighlighter8documentEv()};
-    let mut ret = unsafe {_ZNK18QSyntaxHighlighter8documentEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK18QSyntaxHighlighter8documentEv(rsthis.qclsinst)};
     let mut ret1 = QTextDocument::inheritFrom(ret as u64);
     return ret1;
     // return 1;

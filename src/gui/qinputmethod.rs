@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtGui/qinputmethod.h
 // dst-file: /src/gui/qinputmethod.rs
 //
@@ -21,6 +21,7 @@ use self::libc::*;
 use super::super::core::qobject::QObject; // 771
 use std::ops::Deref;
 use super::super::core::qrect::QRectF; // 771
+use super::super::core::qobjectdefs::QMetaObject; // 771
 use super::qtransform::QTransform; // 773
 use super::super::core::qvariant::QVariant; // 771
 use super::super::core::qlocale::QLocale; // 771
@@ -35,44 +36,39 @@ use super::super::core::qlocale::QLocale; // 771
 extern {
   fn QInputMethod_Class_Size() -> c_int;
   // proto:  QRectF QInputMethod::inputItemRectangle();
-  fn _ZNK12QInputMethod18inputItemRectangleEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK12QInputMethod18inputItemRectangleEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  const QMetaObject * QInputMethod::metaObject();
-  fn _ZNK12QInputMethod10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK12QInputMethod10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QTransform QInputMethod::inputItemTransform();
-  fn _ZNK12QInputMethod18inputItemTransformEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK12QInputMethod18inputItemTransformEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QInputMethod::hide();
-  fn _ZN12QInputMethod4hideEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN12QInputMethod4hideEv(qthis: u64 /* *mut c_void*/);
   // proto:  QRectF QInputMethod::keyboardRectangle();
-  fn _ZNK12QInputMethod17keyboardRectangleEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK12QInputMethod17keyboardRectangleEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QInputMethod::show();
-  fn _ZN12QInputMethod4showEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QInputMethod::QInputMethod();
-  fn _ZN12QInputMethodC2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN12QInputMethod4showEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QInputMethod::isAnimating();
-  fn _ZNK12QInputMethod11isAnimatingEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK12QInputMethod11isAnimatingEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QInputMethod::setVisible(bool visible);
-  fn _ZN12QInputMethod10setVisibleEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN12QInputMethod10setVisibleEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QInputMethod::setInputItemRectangle(const QRectF & rect);
-  fn _ZN12QInputMethod21setInputItemRectangleERK6QRectF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN12QInputMethod21setInputItemRectangleERK6QRectF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QInputMethod::commit();
-  fn _ZN12QInputMethod6commitEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN12QInputMethod6commitEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QInputMethod::setInputItemTransform(const QTransform & transform);
-  fn _ZN12QInputMethod21setInputItemTransformERK10QTransform(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN12QInputMethod21setInputItemTransformERK10QTransform(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QRectF QInputMethod::cursorRectangle();
-  fn _ZNK12QInputMethod15cursorRectangleEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK12QInputMethod15cursorRectangleEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QInputMethod::isVisible();
-  fn _ZNK12QInputMethod9isVisibleEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QInputMethod::~QInputMethod();
-  fn _ZN12QInputMethodD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK12QInputMethod9isVisibleEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QLocale QInputMethod::locale();
-  fn _ZNK12QInputMethod6localeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK12QInputMethod6localeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QInputMethod::reset();
-  fn _ZN12QInputMethod5resetEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN12QInputMethod5resetEv(qthis: u64 /* *mut c_void*/);
   fn QInputMethod_SlotProxy_connect__ZN12QInputMethod22cursorRectangleChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QInputMethod_SlotProxy_connect__ZN12QInputMethod13localeChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QInputMethod_SlotProxy_connect__ZN12QInputMethod14visibleChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QInputMethod_SlotProxy_connect__ZN12QInputMethod24keyboardRectangleChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QInputMethod_SlotProxy_connect__ZN12QInputMethod21inputDirectionChangedEN2Qt15LayoutDirectionE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QInputMethod_SlotProxy_connect__ZN12QInputMethod16animatingChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
@@ -124,7 +120,7 @@ impl<'a> /*trait*/ QInputMethod_inputItemRectangle<QRectF> for () {
   fn inputItemRectangle(self , rsthis: & QInputMethod) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QInputMethod18inputItemRectangleEv()};
-    let mut ret = unsafe {_ZNK12QInputMethod18inputItemRectangleEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QInputMethod18inputItemRectangleEv(rsthis.qclsinst)};
     let mut ret1 = QRectF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -144,11 +140,13 @@ pub trait QInputMethod_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QInputMethod::metaObject();
-impl<'a> /*trait*/ QInputMethod_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QInputMethod) -> () {
+impl<'a> /*trait*/ QInputMethod_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QInputMethod) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QInputMethod10metaObjectEv()};
-     unsafe {_ZNK12QInputMethod10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QInputMethod10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -170,7 +168,7 @@ impl<'a> /*trait*/ QInputMethod_inputItemTransform<QTransform> for () {
   fn inputItemTransform(self , rsthis: & QInputMethod) -> QTransform {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QInputMethod18inputItemTransformEv()};
-    let mut ret = unsafe {_ZNK12QInputMethod18inputItemTransformEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QInputMethod18inputItemTransformEv(rsthis.qclsinst)};
     let mut ret1 = QTransform::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -194,7 +192,7 @@ impl<'a> /*trait*/ QInputMethod_hide<()> for () {
   fn hide(self , rsthis: & QInputMethod) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QInputMethod4hideEv()};
-     unsafe {_ZN12QInputMethod4hideEv(rsthis.qclsinst)};
+     unsafe {C_ZN12QInputMethod4hideEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -216,7 +214,7 @@ impl<'a> /*trait*/ QInputMethod_keyboardRectangle<QRectF> for () {
   fn keyboardRectangle(self , rsthis: & QInputMethod) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QInputMethod17keyboardRectangleEv()};
-    let mut ret = unsafe {_ZNK12QInputMethod17keyboardRectangleEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QInputMethod17keyboardRectangleEv(rsthis.qclsinst)};
     let mut ret1 = QRectF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -240,35 +238,7 @@ impl<'a> /*trait*/ QInputMethod_show<()> for () {
   fn show(self , rsthis: & QInputMethod) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QInputMethod4showEv()};
-     unsafe {_ZN12QInputMethod4showEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QInputMethod::QInputMethod();
-impl /*struct*/ QInputMethod {
-  pub fn new<T: QInputMethod_new>(value: T) -> QInputMethod {
-    let rsthis = value.new();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QInputMethod_new {
-  fn new(self) -> QInputMethod;
-}
-
-  // proto:  void QInputMethod::QInputMethod();
-impl<'a> /*trait*/ QInputMethod_new for () {
-  fn new(self) -> QInputMethod {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QInputMethodC2Ev()};
-    let ctysz: c_int = unsafe{QInputMethod_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    unsafe {_ZN12QInputMethodC2Ev(qthis_ph)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QInputMethod{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
+     unsafe {C_ZN12QInputMethod4showEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -290,7 +260,7 @@ impl<'a> /*trait*/ QInputMethod_isAnimating<i8> for () {
   fn isAnimating(self , rsthis: & QInputMethod) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QInputMethod11isAnimatingEv()};
-    let mut ret = unsafe {_ZNK12QInputMethod11isAnimatingEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QInputMethod11isAnimatingEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -314,7 +284,7 @@ impl<'a> /*trait*/ QInputMethod_setVisible<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QInputMethod10setVisibleEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN12QInputMethod10setVisibleEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN12QInputMethod10setVisibleEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -337,7 +307,7 @@ impl<'a> /*trait*/ QInputMethod_setInputItemRectangle<()> for (&'a QRectF) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QInputMethod21setInputItemRectangleERK6QRectF()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN12QInputMethod21setInputItemRectangleERK6QRectF(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN12QInputMethod21setInputItemRectangleERK6QRectF(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -359,7 +329,7 @@ impl<'a> /*trait*/ QInputMethod_commit<()> for () {
   fn commit(self , rsthis: & QInputMethod) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QInputMethod6commitEv()};
-     unsafe {_ZN12QInputMethod6commitEv(rsthis.qclsinst)};
+     unsafe {C_ZN12QInputMethod6commitEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -382,7 +352,7 @@ impl<'a> /*trait*/ QInputMethod_setInputItemTransform<()> for (&'a QTransform) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QInputMethod21setInputItemTransformERK10QTransform()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN12QInputMethod21setInputItemTransformERK10QTransform(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN12QInputMethod21setInputItemTransformERK10QTransform(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -404,7 +374,7 @@ impl<'a> /*trait*/ QInputMethod_cursorRectangle<QRectF> for () {
   fn cursorRectangle(self , rsthis: & QInputMethod) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QInputMethod15cursorRectangleEv()};
-    let mut ret = unsafe {_ZNK12QInputMethod15cursorRectangleEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QInputMethod15cursorRectangleEv(rsthis.qclsinst)};
     let mut ret1 = QRectF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -428,30 +398,8 @@ impl<'a> /*trait*/ QInputMethod_isVisible<i8> for () {
   fn isVisible(self , rsthis: & QInputMethod) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QInputMethod9isVisibleEv()};
-    let mut ret = unsafe {_ZNK12QInputMethod9isVisibleEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QInputMethod9isVisibleEv(rsthis.qclsinst)};
     return ret as i8;
-    // return 1;
-  }
-}
-
-  // proto:  void QInputMethod::~QInputMethod();
-impl /*struct*/ QInputMethod {
-  pub fn free<RetType, T: QInputMethod_free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.free(self);
-    // return 1;
-  }
-}
-
-pub trait QInputMethod_free<RetType> {
-  fn free(self , rsthis: & QInputMethod) -> RetType;
-}
-
-  // proto:  void QInputMethod::~QInputMethod();
-impl<'a> /*trait*/ QInputMethod_free<()> for () {
-  fn free(self , rsthis: & QInputMethod) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QInputMethodD2Ev()};
-     unsafe {_ZN12QInputMethodD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -473,7 +421,7 @@ impl<'a> /*trait*/ QInputMethod_locale<QLocale> for () {
   fn locale(self , rsthis: & QInputMethod) -> QLocale {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QInputMethod6localeEv()};
-    let mut ret = unsafe {_ZNK12QInputMethod6localeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QInputMethod6localeEv(rsthis.qclsinst)};
     let mut ret1 = QLocale::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -497,7 +445,7 @@ impl<'a> /*trait*/ QInputMethod_reset<()> for () {
   fn reset(self , rsthis: & QInputMethod) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QInputMethod5resetEv()};
-     unsafe {_ZN12QInputMethod5resetEv(rsthis.qclsinst)};
+     unsafe {C_ZN12QInputMethod5resetEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -734,48 +682,12 @@ impl /* trait */ QInputMethod_keyboardRectangleChanged_signal_connect for Box<Fn
     unsafe {QInputMethod_SlotProxy_connect__ZN12QInputMethod24keyboardRectangleChangedEv(arg0, arg1, arg2)};
   }
 }
-// inputDirectionChanged(Qt::LayoutDirection)
-extern fn QInputMethod_inputDirectionChanged_signal_connect_cb_4(rsfptr:fn(i32), arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-  let rsarg0 = arg0 as i32;
-  rsfptr(rsarg0);
-}
-extern fn QInputMethod_inputDirectionChanged_signal_connect_cb_box_4(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  let rsarg0 = arg0 as i32;
-  // rsfptr(rsarg0);
-  unsafe{(*rsfptr_raw)(rsarg0)};
-}
-impl /* trait */ QInputMethod_inputDirectionChanged_signal_connect for fn(i32) {
-  fn connect(self, sigthis: QInputMethod_inputDirectionChanged_signal) {
-    // do smth...
-    // self as u64; // error for Fn, Ok for fn
-    self as *mut c_void as u64;
-    self as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QInputMethod_inputDirectionChanged_signal_connect_cb_4 as *mut c_void;
-    let arg2 = self as *mut c_void;
-    unsafe {QInputMethod_SlotProxy_connect__ZN12QInputMethod21inputDirectionChangedEN2Qt15LayoutDirectionE(arg0, arg1, arg2)};
-  }
-}
-impl /* trait */ QInputMethod_inputDirectionChanged_signal_connect for Box<Fn(i32)> {
-  fn connect(self, sigthis: QInputMethod_inputDirectionChanged_signal) {
-    // do smth...
-    // Box::into_raw(self) as u64;
-    // Box::into_raw(self) as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QInputMethod_inputDirectionChanged_signal_connect_cb_box_4 as *mut c_void;
-    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
-    unsafe {QInputMethod_SlotProxy_connect__ZN12QInputMethod21inputDirectionChangedEN2Qt15LayoutDirectionE(arg0, arg1, arg2)};
-  }
-}
 // animatingChanged()
-extern fn QInputMethod_animatingChanged_signal_connect_cb_5(rsfptr:fn(), ) {
+extern fn QInputMethod_animatingChanged_signal_connect_cb_4(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QInputMethod_animatingChanged_signal_connect_cb_box_5(rsfptr_raw:*mut Box<Fn()>, ) {
+extern fn QInputMethod_animatingChanged_signal_connect_cb_box_4(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   // rsfptr();
@@ -788,7 +700,7 @@ impl /* trait */ QInputMethod_animatingChanged_signal_connect for fn() {
     self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QInputMethod_animatingChanged_signal_connect_cb_5 as *mut c_void;
+    let arg1 = QInputMethod_animatingChanged_signal_connect_cb_4 as *mut c_void;
     let arg2 = self as *mut c_void;
     unsafe {QInputMethod_SlotProxy_connect__ZN12QInputMethod16animatingChangedEv(arg0, arg1, arg2)};
   }
@@ -799,7 +711,7 @@ impl /* trait */ QInputMethod_animatingChanged_signal_connect for Box<Fn()> {
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QInputMethod_animatingChanged_signal_connect_cb_box_5 as *mut c_void;
+    let arg1 = QInputMethod_animatingChanged_signal_connect_cb_box_4 as *mut c_void;
     let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QInputMethod_SlotProxy_connect__ZN12QInputMethod16animatingChangedEv(arg0, arg1, arg2)};
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtGui/qgenericpluginfactory.h
 // dst-file: /src/gui/qgenericpluginfactory.rs
 //
@@ -32,9 +32,9 @@ use super::super::core::qobject::QObject; // 771
 extern {
   fn QGenericPluginFactory_Class_Size() -> c_int;
   // proto: static QObject * QGenericPluginFactory::create(const QString & , const QString & );
-  fn _ZN21QGenericPluginFactory6createERK7QStringS2_(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
+  fn C_ZN21QGenericPluginFactory6createERK7QStringS2_(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto: static QStringList QGenericPluginFactory::keys();
-  fn _ZN21QGenericPluginFactory4keysEv();
+  fn C_ZN21QGenericPluginFactory4keysEv();
 } // <= ext block end
 
 // body block begin =>
@@ -69,7 +69,7 @@ impl<'a> /*trait*/ QGenericPluginFactory_create_s<QObject> for (&'a QString, &'a
     // unsafe{_ZN21QGenericPluginFactory6createERK7QStringS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN21QGenericPluginFactory6createERK7QStringS2_(arg0, arg1)};
+    let mut ret = unsafe {C_ZN21QGenericPluginFactory6createERK7QStringS2_(arg0, arg1)};
     let mut ret1 = QObject::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -93,7 +93,7 @@ impl<'a> /*trait*/ QGenericPluginFactory_keys_s<()> for () {
   fn keys_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QGenericPluginFactory4keysEv()};
-     unsafe {_ZN21QGenericPluginFactory4keysEv()};
+     unsafe {C_ZN21QGenericPluginFactory4keysEv()};
     // return 1;
   }
 }
