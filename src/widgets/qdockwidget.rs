@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtWidgets/qdockwidget.h
 // dst-file: /src/widgets/qdockwidget.rs
 //
@@ -22,6 +22,7 @@ use super::qwidget::QWidget; // 773
 use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
 use super::qaction::QAction; // 773
+use super::super::core::qobjectdefs::QMetaObject; // 771
 // <= use block end
 
 // ext block begin =>
@@ -33,30 +34,25 @@ use super::qaction::QAction; // 773
 extern {
   fn QDockWidget_Class_Size() -> c_int;
   // proto:  QWidget * QDockWidget::widget();
-  fn _ZNK11QDockWidget6widgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK11QDockWidget6widgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QDockWidget::setFloating(bool floating);
-  fn _ZN11QDockWidget11setFloatingEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN11QDockWidget11setFloatingEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QWidget * QDockWidget::titleBarWidget();
-  fn _ZNK11QDockWidget14titleBarWidgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK11QDockWidget14titleBarWidgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QDockWidget::~QDockWidget();
-  fn _ZN11QDockWidgetD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN11QDockWidgetD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QDockWidget::setWidget(QWidget * widget);
-  fn _ZN11QDockWidget9setWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QDockWidget9setWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QDockWidget::isFloating();
-  fn _ZNK11QDockWidget10isFloatingEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK11QDockWidget10isFloatingEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QAction * QDockWidget::toggleViewAction();
-  fn _ZNK11QDockWidget16toggleViewActionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QDockWidget::QDockWidget(const QDockWidget & );
-  fn _ZN11QDockWidgetC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK11QDockWidget16toggleViewActionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QDockWidget::setTitleBarWidget(QWidget * widget);
-  fn _ZN11QDockWidget17setTitleBarWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QDockWidget17setTitleBarWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QDockWidget::metaObject();
-  fn _ZNK11QDockWidget10metaObjectEv(qthis: u64 /* *mut c_void*/);
-  fn QDockWidget_SlotProxy_connect__ZN11QDockWidget19dockLocationChangedEN2Qt14DockWidgetAreaE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QDockWidget_SlotProxy_connect__ZN11QDockWidget15featuresChangedE6QFlagsINS_17DockWidgetFeatureEE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn C_ZNK11QDockWidget10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   fn QDockWidget_SlotProxy_connect__ZN11QDockWidget17visibilityChangedEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QDockWidget_SlotProxy_connect__ZN11QDockWidget15topLevelChangedEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QDockWidget_SlotProxy_connect__ZN11QDockWidget19allowedAreasChangedE6QFlagsIN2Qt14DockWidgetAreaEE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -106,7 +102,7 @@ impl<'a> /*trait*/ QDockWidget_widget<QWidget> for () {
   fn widget(self , rsthis: & QDockWidget) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QDockWidget6widgetEv()};
-    let mut ret = unsafe {_ZNK11QDockWidget6widgetEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QDockWidget6widgetEv(rsthis.qclsinst)};
     let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -131,7 +127,7 @@ impl<'a> /*trait*/ QDockWidget_setFloating<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QDockWidget11setFloatingEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN11QDockWidget11setFloatingEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QDockWidget11setFloatingEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -153,7 +149,7 @@ impl<'a> /*trait*/ QDockWidget_titleBarWidget<QWidget> for () {
   fn titleBarWidget(self , rsthis: & QDockWidget) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QDockWidget14titleBarWidgetEv()};
-    let mut ret = unsafe {_ZNK11QDockWidget14titleBarWidgetEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QDockWidget14titleBarWidgetEv(rsthis.qclsinst)};
     let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -177,7 +173,7 @@ impl<'a> /*trait*/ QDockWidget_free<()> for () {
   fn free(self , rsthis: & QDockWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QDockWidgetD2Ev()};
-     unsafe {_ZN11QDockWidgetD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN11QDockWidgetD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -200,7 +196,7 @@ impl<'a> /*trait*/ QDockWidget_setWidget<()> for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QDockWidget9setWidgetEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QDockWidget9setWidgetEP7QWidget(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QDockWidget9setWidgetEP7QWidget(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -222,7 +218,7 @@ impl<'a> /*trait*/ QDockWidget_isFloating<i8> for () {
   fn isFloating(self , rsthis: & QDockWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QDockWidget10isFloatingEv()};
-    let mut ret = unsafe {_ZNK11QDockWidget10isFloatingEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QDockWidget10isFloatingEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -245,38 +241,9 @@ impl<'a> /*trait*/ QDockWidget_toggleViewAction<QAction> for () {
   fn toggleViewAction(self , rsthis: & QDockWidget) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QDockWidget16toggleViewActionEv()};
-    let mut ret = unsafe {_ZNK11QDockWidget16toggleViewActionEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QDockWidget16toggleViewActionEv(rsthis.qclsinst)};
     let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QDockWidget::QDockWidget(const QDockWidget & );
-impl /*struct*/ QDockWidget {
-  pub fn new<T: QDockWidget_new>(value: T) -> QDockWidget {
-    let rsthis = value.new();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QDockWidget_new {
-  fn new(self) -> QDockWidget;
-}
-
-  // proto:  void QDockWidget::QDockWidget(const QDockWidget & );
-impl<'a> /*trait*/ QDockWidget_new for (&'a QDockWidget) {
-  fn new(self) -> QDockWidget {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QDockWidgetC2ERKS_()};
-    let ctysz: c_int = unsafe{QDockWidget_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QDockWidgetC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QDockWidget{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
     // return 1;
   }
 }
@@ -299,7 +266,7 @@ impl<'a> /*trait*/ QDockWidget_setTitleBarWidget<()> for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QDockWidget17setTitleBarWidgetEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QDockWidget17setTitleBarWidgetEP7QWidget(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QDockWidget17setTitleBarWidgetEP7QWidget(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -317,11 +284,13 @@ pub trait QDockWidget_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QDockWidget::metaObject();
-impl<'a> /*trait*/ QDockWidget_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QDockWidget) -> () {
+impl<'a> /*trait*/ QDockWidget_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QDockWidget) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QDockWidget10metaObjectEv()};
-     unsafe {_ZNK11QDockWidget10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QDockWidget10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -406,85 +375,13 @@ pub trait QDockWidget_dockLocationChanged_signal_connect {
   fn connect(self, sigthis: QDockWidget_dockLocationChanged_signal);
 }
 
-// dockLocationChanged(Qt::DockWidgetArea)
-extern fn QDockWidget_dockLocationChanged_signal_connect_cb_0(rsfptr:fn(i32), arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-  let rsarg0 = arg0 as i32;
-  rsfptr(rsarg0);
-}
-extern fn QDockWidget_dockLocationChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  let rsarg0 = arg0 as i32;
-  // rsfptr(rsarg0);
-  unsafe{(*rsfptr_raw)(rsarg0)};
-}
-impl /* trait */ QDockWidget_dockLocationChanged_signal_connect for fn(i32) {
-  fn connect(self, sigthis: QDockWidget_dockLocationChanged_signal) {
-    // do smth...
-    // self as u64; // error for Fn, Ok for fn
-    self as *mut c_void as u64;
-    self as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QDockWidget_dockLocationChanged_signal_connect_cb_0 as *mut c_void;
-    let arg2 = self as *mut c_void;
-    unsafe {QDockWidget_SlotProxy_connect__ZN11QDockWidget19dockLocationChangedEN2Qt14DockWidgetAreaE(arg0, arg1, arg2)};
-  }
-}
-impl /* trait */ QDockWidget_dockLocationChanged_signal_connect for Box<Fn(i32)> {
-  fn connect(self, sigthis: QDockWidget_dockLocationChanged_signal) {
-    // do smth...
-    // Box::into_raw(self) as u64;
-    // Box::into_raw(self) as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QDockWidget_dockLocationChanged_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
-    unsafe {QDockWidget_SlotProxy_connect__ZN11QDockWidget19dockLocationChangedEN2Qt14DockWidgetAreaE(arg0, arg1, arg2)};
-  }
-}
-// featuresChanged(class QDockWidget::DockWidgetFeatures)
-extern fn QDockWidget_featuresChanged_signal_connect_cb_1(rsfptr:fn(i32), arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-  let rsarg0 = arg0 as i32;
-  rsfptr(rsarg0);
-}
-extern fn QDockWidget_featuresChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  let rsarg0 = arg0 as i32;
-  // rsfptr(rsarg0);
-  unsafe{(*rsfptr_raw)(rsarg0)};
-}
-impl /* trait */ QDockWidget_featuresChanged_signal_connect for fn(i32) {
-  fn connect(self, sigthis: QDockWidget_featuresChanged_signal) {
-    // do smth...
-    // self as u64; // error for Fn, Ok for fn
-    self as *mut c_void as u64;
-    self as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QDockWidget_featuresChanged_signal_connect_cb_1 as *mut c_void;
-    let arg2 = self as *mut c_void;
-    unsafe {QDockWidget_SlotProxy_connect__ZN11QDockWidget15featuresChangedE6QFlagsINS_17DockWidgetFeatureEE(arg0, arg1, arg2)};
-  }
-}
-impl /* trait */ QDockWidget_featuresChanged_signal_connect for Box<Fn(i32)> {
-  fn connect(self, sigthis: QDockWidget_featuresChanged_signal) {
-    // do smth...
-    // Box::into_raw(self) as u64;
-    // Box::into_raw(self) as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QDockWidget_featuresChanged_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
-    unsafe {QDockWidget_SlotProxy_connect__ZN11QDockWidget15featuresChangedE6QFlagsINS_17DockWidgetFeatureEE(arg0, arg1, arg2)};
-  }
-}
 // visibilityChanged(_Bool)
-extern fn QDockWidget_visibilityChanged_signal_connect_cb_2(rsfptr:fn(i8), arg0: c_char) {
+extern fn QDockWidget_visibilityChanged_signal_connect_cb_0(rsfptr:fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsarg0 = arg0 as i8;
   rsfptr(rsarg0);
 }
-extern fn QDockWidget_visibilityChanged_signal_connect_cb_box_2(rsfptr_raw:*mut Box<Fn(i8)>, arg0: c_char) {
+extern fn QDockWidget_visibilityChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(i8)>, arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i8;
@@ -498,7 +395,7 @@ impl /* trait */ QDockWidget_visibilityChanged_signal_connect for fn(i8) {
     self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QDockWidget_visibilityChanged_signal_connect_cb_2 as *mut c_void;
+    let arg1 = QDockWidget_visibilityChanged_signal_connect_cb_0 as *mut c_void;
     let arg2 = self as *mut c_void;
     unsafe {QDockWidget_SlotProxy_connect__ZN11QDockWidget17visibilityChangedEb(arg0, arg1, arg2)};
   }
@@ -509,18 +406,18 @@ impl /* trait */ QDockWidget_visibilityChanged_signal_connect for Box<Fn(i8)> {
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QDockWidget_visibilityChanged_signal_connect_cb_box_2 as *mut c_void;
+    let arg1 = QDockWidget_visibilityChanged_signal_connect_cb_box_0 as *mut c_void;
     let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QDockWidget_SlotProxy_connect__ZN11QDockWidget17visibilityChangedEb(arg0, arg1, arg2)};
   }
 }
 // topLevelChanged(_Bool)
-extern fn QDockWidget_topLevelChanged_signal_connect_cb_3(rsfptr:fn(i8), arg0: c_char) {
+extern fn QDockWidget_topLevelChanged_signal_connect_cb_1(rsfptr:fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsarg0 = arg0 as i8;
   rsfptr(rsarg0);
 }
-extern fn QDockWidget_topLevelChanged_signal_connect_cb_box_3(rsfptr_raw:*mut Box<Fn(i8)>, arg0: c_char) {
+extern fn QDockWidget_topLevelChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn(i8)>, arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i8;
@@ -534,7 +431,7 @@ impl /* trait */ QDockWidget_topLevelChanged_signal_connect for fn(i8) {
     self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QDockWidget_topLevelChanged_signal_connect_cb_3 as *mut c_void;
+    let arg1 = QDockWidget_topLevelChanged_signal_connect_cb_1 as *mut c_void;
     let arg2 = self as *mut c_void;
     unsafe {QDockWidget_SlotProxy_connect__ZN11QDockWidget15topLevelChangedEb(arg0, arg1, arg2)};
   }
@@ -545,45 +442,9 @@ impl /* trait */ QDockWidget_topLevelChanged_signal_connect for Box<Fn(i8)> {
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QDockWidget_topLevelChanged_signal_connect_cb_box_3 as *mut c_void;
+    let arg1 = QDockWidget_topLevelChanged_signal_connect_cb_box_1 as *mut c_void;
     let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QDockWidget_SlotProxy_connect__ZN11QDockWidget15topLevelChangedEb(arg0, arg1, arg2)};
-  }
-}
-// allowedAreasChanged(Qt::DockWidgetAreas)
-extern fn QDockWidget_allowedAreasChanged_signal_connect_cb_4(rsfptr:fn(i32), arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-  let rsarg0 = arg0 as i32;
-  rsfptr(rsarg0);
-}
-extern fn QDockWidget_allowedAreasChanged_signal_connect_cb_box_4(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  let rsarg0 = arg0 as i32;
-  // rsfptr(rsarg0);
-  unsafe{(*rsfptr_raw)(rsarg0)};
-}
-impl /* trait */ QDockWidget_allowedAreasChanged_signal_connect for fn(i32) {
-  fn connect(self, sigthis: QDockWidget_allowedAreasChanged_signal) {
-    // do smth...
-    // self as u64; // error for Fn, Ok for fn
-    self as *mut c_void as u64;
-    self as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QDockWidget_allowedAreasChanged_signal_connect_cb_4 as *mut c_void;
-    let arg2 = self as *mut c_void;
-    unsafe {QDockWidget_SlotProxy_connect__ZN11QDockWidget19allowedAreasChangedE6QFlagsIN2Qt14DockWidgetAreaEE(arg0, arg1, arg2)};
-  }
-}
-impl /* trait */ QDockWidget_allowedAreasChanged_signal_connect for Box<Fn(i32)> {
-  fn connect(self, sigthis: QDockWidget_allowedAreasChanged_signal) {
-    // do smth...
-    // Box::into_raw(self) as u64;
-    // Box::into_raw(self) as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QDockWidget_allowedAreasChanged_signal_connect_cb_box_4 as *mut c_void;
-    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
-    unsafe {QDockWidget_SlotProxy_connect__ZN11QDockWidget19allowedAreasChangedE6QFlagsIN2Qt14DockWidgetAreaEE(arg0, arg1, arg2)};
   }
 }
 // <= body block end

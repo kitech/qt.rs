@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtWidgets/qstylefactory.h
 // dst-file: /src/widgets/qstylefactory.rs
 //
@@ -32,9 +32,9 @@ use super::qstyle::QStyle; // 773
 extern {
   fn QStyleFactory_Class_Size() -> c_int;
   // proto: static QStyle * QStyleFactory::create(const QString & );
-  fn _ZN13QStyleFactory6createERK7QString(arg0: *mut c_void) -> *mut c_void;
+  fn C_ZN13QStyleFactory6createERK7QString(arg0: *mut c_void) -> *mut c_void;
   // proto: static QStringList QStyleFactory::keys();
-  fn _ZN13QStyleFactory4keysEv();
+  fn C_ZN13QStyleFactory4keysEv();
 } // <= ext block end
 
 // body block begin =>
@@ -68,7 +68,7 @@ impl<'a> /*trait*/ QStyleFactory_create_s<QStyle> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStyleFactory6createERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN13QStyleFactory6createERK7QString(arg0)};
+    let mut ret = unsafe {C_ZN13QStyleFactory6createERK7QString(arg0)};
     let mut ret1 = QStyle::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -92,7 +92,7 @@ impl<'a> /*trait*/ QStyleFactory_keys_s<()> for () {
   fn keys_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStyleFactory4keysEv()};
-     unsafe {_ZN13QStyleFactory4keysEv()};
+     unsafe {C_ZN13QStyleFactory4keysEv()};
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtWidgets/qabstractslider.h
 // dst-file: /src/widgets/qabstractslider.rs
 //
@@ -20,6 +20,7 @@ use self::libc::*;
 // use block begin =>
 use super::qwidget::QWidget; // 773
 use std::ops::Deref;
+use super::super::core::qobjectdefs::QMetaObject; // 771
 // <= use block end
 
 // ext block begin =>
@@ -31,55 +32,53 @@ use std::ops::Deref;
 extern {
   fn QAbstractSlider_Class_Size() -> c_int;
   // proto:  void QAbstractSlider::setSliderPosition(int );
-  fn _ZN15QAbstractSlider17setSliderPositionEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN15QAbstractSlider17setSliderPositionEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  bool QAbstractSlider::isSliderDown();
-  fn _ZNK15QAbstractSlider12isSliderDownEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK15QAbstractSlider12isSliderDownEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  int QAbstractSlider::value();
-  fn _ZNK15QAbstractSlider5valueEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK15QAbstractSlider5valueEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QAbstractSlider::setInvertedControls(bool );
-  fn _ZN15QAbstractSlider19setInvertedControlsEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
-  // proto:  void QAbstractSlider::QAbstractSlider(const QAbstractSlider & );
-  fn _ZN15QAbstractSliderC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN15QAbstractSlider19setInvertedControlsEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  int QAbstractSlider::minimum();
-  fn _ZNK15QAbstractSlider7minimumEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK15QAbstractSlider7minimumEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QAbstractSlider::singleStep();
-  fn _ZNK15QAbstractSlider10singleStepEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK15QAbstractSlider10singleStepEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QAbstractSlider::pageStep();
-  fn _ZNK15QAbstractSlider8pageStepEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK15QAbstractSlider8pageStepEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QAbstractSlider::setMaximum(int );
-  fn _ZN15QAbstractSlider10setMaximumEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN15QAbstractSlider10setMaximumEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  bool QAbstractSlider::invertedControls();
-  fn _ZNK15QAbstractSlider16invertedControlsEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK15QAbstractSlider16invertedControlsEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QAbstractSlider::setValue(int );
-  fn _ZN15QAbstractSlider8setValueEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN15QAbstractSlider8setValueEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QAbstractSlider::~QAbstractSlider();
-  fn _ZN15QAbstractSliderD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN15QAbstractSliderD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractSlider::setPageStep(int );
-  fn _ZN15QAbstractSlider11setPageStepEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN15QAbstractSlider11setPageStepEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QAbstractSlider::setSliderDown(bool );
-  fn _ZN15QAbstractSlider13setSliderDownEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN15QAbstractSlider13setSliderDownEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  int QAbstractSlider::maximum();
-  fn _ZNK15QAbstractSlider7maximumEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK15QAbstractSlider7maximumEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  const QMetaObject * QAbstractSlider::metaObject();
-  fn _ZNK15QAbstractSlider10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK15QAbstractSlider10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAbstractSlider::setSingleStep(int );
-  fn _ZN15QAbstractSlider13setSingleStepEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN15QAbstractSlider13setSingleStepEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QAbstractSlider::setInvertedAppearance(bool );
-  fn _ZN15QAbstractSlider21setInvertedAppearanceEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN15QAbstractSlider21setInvertedAppearanceEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  bool QAbstractSlider::hasTracking();
-  fn _ZNK15QAbstractSlider11hasTrackingEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK15QAbstractSlider11hasTrackingEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QAbstractSlider::invertedAppearance();
-  fn _ZNK15QAbstractSlider18invertedAppearanceEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK15QAbstractSlider18invertedAppearanceEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  int QAbstractSlider::sliderPosition();
-  fn _ZNK15QAbstractSlider14sliderPositionEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK15QAbstractSlider14sliderPositionEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QAbstractSlider::setTracking(bool enable);
-  fn _ZN15QAbstractSlider11setTrackingEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN15QAbstractSlider11setTrackingEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QAbstractSlider::QAbstractSlider(QWidget * parent);
-  fn _ZN15QAbstractSliderC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN15QAbstractSliderC2EP7QWidget(arg0: *mut c_void) -> u64;
   // proto:  void QAbstractSlider::setRange(int min, int max);
-  fn _ZN15QAbstractSlider8setRangeEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
+  fn C_ZN15QAbstractSlider8setRangeEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  void QAbstractSlider::setMinimum(int );
-  fn _ZN15QAbstractSlider10setMinimumEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN15QAbstractSlider10setMinimumEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   fn QAbstractSlider_SlotProxy_connect__ZN15QAbstractSlider13sliderPressedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QAbstractSlider_SlotProxy_connect__ZN15QAbstractSlider15actionTriggeredEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QAbstractSlider_SlotProxy_connect__ZN15QAbstractSlider11sliderMovedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
@@ -137,7 +136,7 @@ impl<'a> /*trait*/ QAbstractSlider_setSliderPosition<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QAbstractSlider17setSliderPositionEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN15QAbstractSlider17setSliderPositionEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QAbstractSlider17setSliderPositionEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -159,7 +158,7 @@ impl<'a> /*trait*/ QAbstractSlider_isSliderDown<i8> for () {
   fn isSliderDown(self , rsthis: & QAbstractSlider) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAbstractSlider12isSliderDownEv()};
-    let mut ret = unsafe {_ZNK15QAbstractSlider12isSliderDownEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QAbstractSlider12isSliderDownEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -182,7 +181,7 @@ impl<'a> /*trait*/ QAbstractSlider_value<i32> for () {
   fn value(self , rsthis: & QAbstractSlider) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAbstractSlider5valueEv()};
-    let mut ret = unsafe {_ZNK15QAbstractSlider5valueEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QAbstractSlider5valueEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -206,36 +205,7 @@ impl<'a> /*trait*/ QAbstractSlider_setInvertedControls<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QAbstractSlider19setInvertedControlsEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN15QAbstractSlider19setInvertedControlsEb(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QAbstractSlider::QAbstractSlider(const QAbstractSlider & );
-impl /*struct*/ QAbstractSlider {
-  pub fn new<T: QAbstractSlider_new>(value: T) -> QAbstractSlider {
-    let rsthis = value.new();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QAbstractSlider_new {
-  fn new(self) -> QAbstractSlider;
-}
-
-  // proto:  void QAbstractSlider::QAbstractSlider(const QAbstractSlider & );
-impl<'a> /*trait*/ QAbstractSlider_new for (&'a QAbstractSlider) {
-  fn new(self) -> QAbstractSlider {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QAbstractSliderC2ERKS_()};
-    let ctysz: c_int = unsafe{QAbstractSlider_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN15QAbstractSliderC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QAbstractSlider{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
+     unsafe {C_ZN15QAbstractSlider19setInvertedControlsEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -257,7 +227,7 @@ impl<'a> /*trait*/ QAbstractSlider_minimum<i32> for () {
   fn minimum(self , rsthis: & QAbstractSlider) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAbstractSlider7minimumEv()};
-    let mut ret = unsafe {_ZNK15QAbstractSlider7minimumEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QAbstractSlider7minimumEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -280,7 +250,7 @@ impl<'a> /*trait*/ QAbstractSlider_singleStep<i32> for () {
   fn singleStep(self , rsthis: & QAbstractSlider) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAbstractSlider10singleStepEv()};
-    let mut ret = unsafe {_ZNK15QAbstractSlider10singleStepEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QAbstractSlider10singleStepEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -303,7 +273,7 @@ impl<'a> /*trait*/ QAbstractSlider_pageStep<i32> for () {
   fn pageStep(self , rsthis: & QAbstractSlider) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAbstractSlider8pageStepEv()};
-    let mut ret = unsafe {_ZNK15QAbstractSlider8pageStepEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QAbstractSlider8pageStepEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -327,7 +297,7 @@ impl<'a> /*trait*/ QAbstractSlider_setMaximum<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QAbstractSlider10setMaximumEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN15QAbstractSlider10setMaximumEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QAbstractSlider10setMaximumEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -349,7 +319,7 @@ impl<'a> /*trait*/ QAbstractSlider_invertedControls<i8> for () {
   fn invertedControls(self , rsthis: & QAbstractSlider) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAbstractSlider16invertedControlsEv()};
-    let mut ret = unsafe {_ZNK15QAbstractSlider16invertedControlsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QAbstractSlider16invertedControlsEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -373,7 +343,7 @@ impl<'a> /*trait*/ QAbstractSlider_setValue<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QAbstractSlider8setValueEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN15QAbstractSlider8setValueEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QAbstractSlider8setValueEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -395,7 +365,7 @@ impl<'a> /*trait*/ QAbstractSlider_free<()> for () {
   fn free(self , rsthis: & QAbstractSlider) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QAbstractSliderD2Ev()};
-     unsafe {_ZN15QAbstractSliderD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN15QAbstractSliderD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -418,7 +388,7 @@ impl<'a> /*trait*/ QAbstractSlider_setPageStep<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QAbstractSlider11setPageStepEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN15QAbstractSlider11setPageStepEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QAbstractSlider11setPageStepEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -441,7 +411,7 @@ impl<'a> /*trait*/ QAbstractSlider_setSliderDown<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QAbstractSlider13setSliderDownEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN15QAbstractSlider13setSliderDownEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QAbstractSlider13setSliderDownEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -463,7 +433,7 @@ impl<'a> /*trait*/ QAbstractSlider_maximum<i32> for () {
   fn maximum(self , rsthis: & QAbstractSlider) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAbstractSlider7maximumEv()};
-    let mut ret = unsafe {_ZNK15QAbstractSlider7maximumEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QAbstractSlider7maximumEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -482,11 +452,13 @@ pub trait QAbstractSlider_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QAbstractSlider::metaObject();
-impl<'a> /*trait*/ QAbstractSlider_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QAbstractSlider) -> () {
+impl<'a> /*trait*/ QAbstractSlider_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QAbstractSlider) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAbstractSlider10metaObjectEv()};
-     unsafe {_ZNK15QAbstractSlider10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QAbstractSlider10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -509,7 +481,7 @@ impl<'a> /*trait*/ QAbstractSlider_setSingleStep<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QAbstractSlider13setSingleStepEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN15QAbstractSlider13setSingleStepEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QAbstractSlider13setSingleStepEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -532,7 +504,7 @@ impl<'a> /*trait*/ QAbstractSlider_setInvertedAppearance<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QAbstractSlider21setInvertedAppearanceEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN15QAbstractSlider21setInvertedAppearanceEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QAbstractSlider21setInvertedAppearanceEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -554,7 +526,7 @@ impl<'a> /*trait*/ QAbstractSlider_hasTracking<i8> for () {
   fn hasTracking(self , rsthis: & QAbstractSlider) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAbstractSlider11hasTrackingEv()};
-    let mut ret = unsafe {_ZNK15QAbstractSlider11hasTrackingEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QAbstractSlider11hasTrackingEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -577,7 +549,7 @@ impl<'a> /*trait*/ QAbstractSlider_invertedAppearance<i8> for () {
   fn invertedAppearance(self , rsthis: & QAbstractSlider) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAbstractSlider18invertedAppearanceEv()};
-    let mut ret = unsafe {_ZNK15QAbstractSlider18invertedAppearanceEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QAbstractSlider18invertedAppearanceEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -600,7 +572,7 @@ impl<'a> /*trait*/ QAbstractSlider_sliderPosition<i32> for () {
   fn sliderPosition(self , rsthis: & QAbstractSlider) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAbstractSlider14sliderPositionEv()};
-    let mut ret = unsafe {_ZNK15QAbstractSlider14sliderPositionEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QAbstractSlider14sliderPositionEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -624,9 +596,22 @@ impl<'a> /*trait*/ QAbstractSlider_setTracking<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QAbstractSlider11setTrackingEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN15QAbstractSlider11setTrackingEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QAbstractSlider11setTrackingEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
+}
+
+  // proto:  void QAbstractSlider::QAbstractSlider(QWidget * parent);
+impl /*struct*/ QAbstractSlider {
+  pub fn new<T: QAbstractSlider_new>(value: T) -> QAbstractSlider {
+    let rsthis = value.new();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QAbstractSlider_new {
+  fn new(self) -> QAbstractSlider;
 }
 
   // proto:  void QAbstractSlider::QAbstractSlider(QWidget * parent);
@@ -637,8 +622,7 @@ impl<'a> /*trait*/ QAbstractSlider_new for (&'a QWidget) {
     let ctysz: c_int = unsafe{QAbstractSlider_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN15QAbstractSliderC2EP7QWidget(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN15QAbstractSliderC2EP7QWidget(arg0)};
     let rsthis = QAbstractSlider{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -664,7 +648,7 @@ impl<'a> /*trait*/ QAbstractSlider_setRange<()> for (i32, i32) {
     // unsafe{_ZN15QAbstractSlider8setRangeEii()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-     unsafe {_ZN15QAbstractSlider8setRangeEii(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN15QAbstractSlider8setRangeEii(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -687,7 +671,7 @@ impl<'a> /*trait*/ QAbstractSlider_setMinimum<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QAbstractSlider10setMinimumEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN15QAbstractSlider10setMinimumEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QAbstractSlider10setMinimumEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

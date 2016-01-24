@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtWidgets/qlistview.h
 // dst-file: /src/widgets/qlistview.rs
 //
@@ -25,6 +25,7 @@ use super::qwidget::QWidget; // 773
 use super::super::core::qsize::QSize; // 771
 use super::super::core::qpoint::QPoint; // 771
 use super::super::core::qrect::QRect; // 771
+use super::super::core::qobjectdefs::QMetaObject; // 771
 // <= use block end
 
 // ext block begin =>
@@ -36,61 +37,59 @@ use super::super::core::qrect::QRect; // 771
 extern {
   fn QListView_Class_Size() -> c_int;
   // proto:  void QListView::QListView(QWidget * parent);
-  fn _ZN9QListViewC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QListViewC2EP7QWidget(arg0: *mut c_void) -> u64;
   // proto:  void QListView::setWordWrap(bool on);
-  fn _ZN9QListView11setWordWrapEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN9QListView11setWordWrapEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QListView::doItemsLayout();
-  fn _ZN9QListView13doItemsLayoutEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN9QListView13doItemsLayoutEv(qthis: u64 /* *mut c_void*/);
   // proto:  int QListView::spacing();
-  fn _ZNK9QListView7spacingEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK9QListView7spacingEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QListView::setGridSize(const QSize & size);
-  fn _ZN9QListView11setGridSizeERK5QSize(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QListView11setGridSizeERK5QSize(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QModelIndex QListView::indexAt(const QPoint & p);
-  fn _ZNK9QListView7indexAtERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZNK9QListView7indexAtERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QListView::setWrapping(bool enable);
-  fn _ZN9QListView11setWrappingEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN9QListView11setWrappingEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QListView::setSelectionRectVisible(bool show);
-  fn _ZN9QListView23setSelectionRectVisibleEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN9QListView23setSelectionRectVisibleEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QListView::setBatchSize(int batchSize);
-  fn _ZN9QListView12setBatchSizeEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN9QListView12setBatchSizeEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  bool QListView::uniformItemSizes();
-  fn _ZNK9QListView16uniformItemSizesEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK9QListView16uniformItemSizesEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QListView::setRootIndex(const QModelIndex & index);
-  fn _ZN9QListView12setRootIndexERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QListView12setRootIndexERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QListView::isWrapping();
-  fn _ZNK9QListView10isWrappingEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK9QListView10isWrappingEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QListView::reset();
-  fn _ZN9QListView5resetEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN9QListView5resetEv(qthis: u64 /* *mut c_void*/);
   // proto:  QSize QListView::gridSize();
-  fn _ZNK9QListView8gridSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK9QListView8gridSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QListView::setModelColumn(int column);
-  fn _ZN9QListView14setModelColumnEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
-  // proto:  void QListView::QListView(const QListView & );
-  fn _ZN9QListViewC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QListView14setModelColumnEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QListView::setSpacing(int space);
-  fn _ZN9QListView10setSpacingEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN9QListView10setSpacingEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  QRect QListView::visualRect(const QModelIndex & index);
-  fn _ZNK9QListView10visualRectERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZNK9QListView10visualRectERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  bool QListView::isRowHidden(int row);
-  fn _ZNK9QListView11isRowHiddenEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
+  fn C_ZNK9QListView11isRowHiddenEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
   // proto:  void QListView::~QListView();
-  fn _ZN9QListViewD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN9QListViewD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  const QMetaObject * QListView::metaObject();
-  fn _ZNK9QListView10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK9QListView10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QListView::batchSize();
-  fn _ZNK9QListView9batchSizeEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK9QListView9batchSizeEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QListView::isSelectionRectVisible();
-  fn _ZNK9QListView22isSelectionRectVisibleEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK9QListView22isSelectionRectVisibleEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QListView::wordWrap();
-  fn _ZNK9QListView8wordWrapEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK9QListView8wordWrapEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QListView::setRowHidden(int row, bool hide);
-  fn _ZN9QListView12setRowHiddenEib(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_char);
+  fn C_ZN9QListView12setRowHiddenEib(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_char);
   // proto:  void QListView::clearPropertyFlags();
-  fn _ZN9QListView18clearPropertyFlagsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN9QListView18clearPropertyFlagsEv(qthis: u64 /* *mut c_void*/);
   // proto:  int QListView::modelColumn();
-  fn _ZNK9QListView11modelColumnEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK9QListView11modelColumnEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QListView::setUniformItemSizes(bool enable);
-  fn _ZN9QListView19setUniformItemSizesEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN9QListView19setUniformItemSizesEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
 } // <= ext block end
 
 // body block begin =>
@@ -140,8 +139,7 @@ impl<'a> /*trait*/ QListView_new for (&'a QWidget) {
     let ctysz: c_int = unsafe{QListView_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN9QListViewC2EP7QWidget(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN9QListViewC2EP7QWidget(arg0)};
     let rsthis = QListView{qbase: QAbstractItemView::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -166,7 +164,7 @@ impl<'a> /*trait*/ QListView_setWordWrap<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QListView11setWordWrapEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN9QListView11setWordWrapEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QListView11setWordWrapEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -188,7 +186,7 @@ impl<'a> /*trait*/ QListView_doItemsLayout<()> for () {
   fn doItemsLayout(self , rsthis: & QListView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QListView13doItemsLayoutEv()};
-     unsafe {_ZN9QListView13doItemsLayoutEv(rsthis.qclsinst)};
+     unsafe {C_ZN9QListView13doItemsLayoutEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -210,7 +208,7 @@ impl<'a> /*trait*/ QListView_spacing<i32> for () {
   fn spacing(self , rsthis: & QListView) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QListView7spacingEv()};
-    let mut ret = unsafe {_ZNK9QListView7spacingEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QListView7spacingEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -234,7 +232,7 @@ impl<'a> /*trait*/ QListView_setGridSize<()> for (&'a QSize) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QListView11setGridSizeERK5QSize()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN9QListView11setGridSizeERK5QSize(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QListView11setGridSizeERK5QSize(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -257,7 +255,7 @@ impl<'a> /*trait*/ QListView_indexAt<QModelIndex> for (&'a QPoint) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QListView7indexAtERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK9QListView7indexAtERK6QPoint(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK9QListView7indexAtERK6QPoint(rsthis.qclsinst, arg0)};
     let mut ret1 = QModelIndex::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -282,7 +280,7 @@ impl<'a> /*trait*/ QListView_setWrapping<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QListView11setWrappingEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN9QListView11setWrappingEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QListView11setWrappingEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -305,7 +303,7 @@ impl<'a> /*trait*/ QListView_setSelectionRectVisible<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QListView23setSelectionRectVisibleEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN9QListView23setSelectionRectVisibleEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QListView23setSelectionRectVisibleEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -328,7 +326,7 @@ impl<'a> /*trait*/ QListView_setBatchSize<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QListView12setBatchSizeEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN9QListView12setBatchSizeEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QListView12setBatchSizeEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -350,7 +348,7 @@ impl<'a> /*trait*/ QListView_uniformItemSizes<i8> for () {
   fn uniformItemSizes(self , rsthis: & QListView) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QListView16uniformItemSizesEv()};
-    let mut ret = unsafe {_ZNK9QListView16uniformItemSizesEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QListView16uniformItemSizesEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -374,7 +372,7 @@ impl<'a> /*trait*/ QListView_setRootIndex<()> for (&'a QModelIndex) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QListView12setRootIndexERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN9QListView12setRootIndexERK11QModelIndex(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QListView12setRootIndexERK11QModelIndex(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -396,7 +394,7 @@ impl<'a> /*trait*/ QListView_isWrapping<i8> for () {
   fn isWrapping(self , rsthis: & QListView) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QListView10isWrappingEv()};
-    let mut ret = unsafe {_ZNK9QListView10isWrappingEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QListView10isWrappingEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -419,7 +417,7 @@ impl<'a> /*trait*/ QListView_reset<()> for () {
   fn reset(self , rsthis: & QListView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QListView5resetEv()};
-     unsafe {_ZN9QListView5resetEv(rsthis.qclsinst)};
+     unsafe {C_ZN9QListView5resetEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -441,7 +439,7 @@ impl<'a> /*trait*/ QListView_gridSize<QSize> for () {
   fn gridSize(self , rsthis: & QListView) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QListView8gridSizeEv()};
-    let mut ret = unsafe {_ZNK9QListView8gridSizeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QListView8gridSizeEv(rsthis.qclsinst)};
     let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -466,23 +464,7 @@ impl<'a> /*trait*/ QListView_setModelColumn<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QListView14setModelColumnEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN9QListView14setModelColumnEi(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QListView::QListView(const QListView & );
-impl<'a> /*trait*/ QListView_new for (&'a QListView) {
-  fn new(self) -> QListView {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QListViewC2ERKS_()};
-    let ctysz: c_int = unsafe{QListView_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN9QListViewC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QListView{qbase: QAbstractItemView::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
+     unsafe {C_ZN9QListView14setModelColumnEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -505,7 +487,7 @@ impl<'a> /*trait*/ QListView_setSpacing<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QListView10setSpacingEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN9QListView10setSpacingEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QListView10setSpacingEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -528,7 +510,7 @@ impl<'a> /*trait*/ QListView_visualRect<QRect> for (&'a QModelIndex) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QListView10visualRectERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK9QListView10visualRectERK11QModelIndex(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK9QListView10visualRectERK11QModelIndex(rsthis.qclsinst, arg0)};
     let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -553,7 +535,7 @@ impl<'a> /*trait*/ QListView_isRowHidden<i8> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QListView11isRowHiddenEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZNK9QListView11isRowHiddenEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK9QListView11isRowHiddenEi(rsthis.qclsinst, arg0)};
     return ret as i8;
     // return 1;
   }
@@ -576,7 +558,7 @@ impl<'a> /*trait*/ QListView_free<()> for () {
   fn free(self , rsthis: & QListView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QListViewD2Ev()};
-     unsafe {_ZN9QListViewD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN9QListViewD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -594,11 +576,13 @@ pub trait QListView_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QListView::metaObject();
-impl<'a> /*trait*/ QListView_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QListView) -> () {
+impl<'a> /*trait*/ QListView_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QListView) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QListView10metaObjectEv()};
-     unsafe {_ZNK9QListView10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QListView10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -620,7 +604,7 @@ impl<'a> /*trait*/ QListView_batchSize<i32> for () {
   fn batchSize(self , rsthis: & QListView) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QListView9batchSizeEv()};
-    let mut ret = unsafe {_ZNK9QListView9batchSizeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QListView9batchSizeEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -643,7 +627,7 @@ impl<'a> /*trait*/ QListView_isSelectionRectVisible<i8> for () {
   fn isSelectionRectVisible(self , rsthis: & QListView) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QListView22isSelectionRectVisibleEv()};
-    let mut ret = unsafe {_ZNK9QListView22isSelectionRectVisibleEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QListView22isSelectionRectVisibleEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -666,7 +650,7 @@ impl<'a> /*trait*/ QListView_wordWrap<i8> for () {
   fn wordWrap(self , rsthis: & QListView) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QListView8wordWrapEv()};
-    let mut ret = unsafe {_ZNK9QListView8wordWrapEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QListView8wordWrapEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -691,7 +675,7 @@ impl<'a> /*trait*/ QListView_setRowHidden<()> for (i32, i8) {
     // unsafe{_ZN9QListView12setRowHiddenEib()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_char;
-     unsafe {_ZN9QListView12setRowHiddenEib(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN9QListView12setRowHiddenEib(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -713,7 +697,7 @@ impl<'a> /*trait*/ QListView_clearPropertyFlags<()> for () {
   fn clearPropertyFlags(self , rsthis: & QListView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QListView18clearPropertyFlagsEv()};
-     unsafe {_ZN9QListView18clearPropertyFlagsEv(rsthis.qclsinst)};
+     unsafe {C_ZN9QListView18clearPropertyFlagsEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -735,7 +719,7 @@ impl<'a> /*trait*/ QListView_modelColumn<i32> for () {
   fn modelColumn(self , rsthis: & QListView) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QListView11modelColumnEv()};
-    let mut ret = unsafe {_ZNK9QListView11modelColumnEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QListView11modelColumnEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -759,7 +743,7 @@ impl<'a> /*trait*/ QListView_setUniformItemSizes<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QListView19setUniformItemSizesEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN9QListView19setUniformItemSizesEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QListView19setUniformItemSizesEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

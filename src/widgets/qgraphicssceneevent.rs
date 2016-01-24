@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtWidgets/qgraphicssceneevent.h
 // dst-file: /src/widgets/qgraphicssceneevent.rs
 //
@@ -37,179 +37,161 @@ use super::super::core::qsize::QSizeF; // 771
 extern {
   fn QGraphicsSceneMoveEvent_Class_Size() -> c_int;
   // proto:  QPointF QGraphicsSceneMoveEvent::newPos();
-  fn _ZNK23QGraphicsSceneMoveEvent6newPosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK23QGraphicsSceneMoveEvent6newPosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QPointF QGraphicsSceneMoveEvent::oldPos();
-  fn _ZNK23QGraphicsSceneMoveEvent6oldPosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK23QGraphicsSceneMoveEvent6oldPosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QGraphicsSceneMoveEvent::~QGraphicsSceneMoveEvent();
-  fn _ZN23QGraphicsSceneMoveEventD2Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  void QGraphicsSceneMoveEvent::QGraphicsSceneMoveEvent(const QGraphicsSceneMoveEvent & );
-  fn _ZN23QGraphicsSceneMoveEventC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN23QGraphicsSceneMoveEventD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QGraphicsSceneMoveEvent::setNewPos(const QPointF & pos);
-  fn _ZN23QGraphicsSceneMoveEvent9setNewPosERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN23QGraphicsSceneMoveEvent9setNewPosERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsSceneMoveEvent::QGraphicsSceneMoveEvent();
-  fn _ZN23QGraphicsSceneMoveEventC2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN23QGraphicsSceneMoveEventC2Ev() -> u64;
   // proto:  void QGraphicsSceneMoveEvent::setOldPos(const QPointF & pos);
-  fn _ZN23QGraphicsSceneMoveEvent9setOldPosERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN23QGraphicsSceneMoveEvent9setOldPosERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QGraphicsSceneContextMenuEvent_Class_Size() -> c_int;
-  // proto:  void QGraphicsSceneContextMenuEvent::QGraphicsSceneContextMenuEvent(const QGraphicsSceneContextMenuEvent & );
-  fn _ZN30QGraphicsSceneContextMenuEventC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QPointF QGraphicsSceneContextMenuEvent::scenePos();
-  fn _ZNK30QGraphicsSceneContextMenuEvent8scenePosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK30QGraphicsSceneContextMenuEvent8scenePosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QGraphicsSceneContextMenuEvent::~QGraphicsSceneContextMenuEvent();
-  fn _ZN30QGraphicsSceneContextMenuEventD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN30QGraphicsSceneContextMenuEventD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QPointF QGraphicsSceneContextMenuEvent::pos();
-  fn _ZNK30QGraphicsSceneContextMenuEvent3posEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK30QGraphicsSceneContextMenuEvent3posEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QGraphicsSceneContextMenuEvent::setScreenPos(const QPoint & pos);
-  fn _ZN30QGraphicsSceneContextMenuEvent12setScreenPosERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN30QGraphicsSceneContextMenuEvent12setScreenPosERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsSceneContextMenuEvent::setPos(const QPointF & pos);
-  fn _ZN30QGraphicsSceneContextMenuEvent6setPosERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN30QGraphicsSceneContextMenuEvent6setPosERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QPoint QGraphicsSceneContextMenuEvent::screenPos();
-  fn _ZNK30QGraphicsSceneContextMenuEvent9screenPosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK30QGraphicsSceneContextMenuEvent9screenPosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QGraphicsSceneContextMenuEvent::setScenePos(const QPointF & pos);
-  fn _ZN30QGraphicsSceneContextMenuEvent11setScenePosERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN30QGraphicsSceneContextMenuEvent11setScenePosERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QGraphicsSceneMouseEvent_Class_Size() -> c_int;
   // proto:  QPoint QGraphicsSceneMouseEvent::screenPos();
-  fn _ZNK24QGraphicsSceneMouseEvent9screenPosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QGraphicsSceneMouseEvent::QGraphicsSceneMouseEvent(const QGraphicsSceneMouseEvent & );
-  fn _ZN24QGraphicsSceneMouseEventC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK24QGraphicsSceneMouseEvent9screenPosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QPointF QGraphicsSceneMouseEvent::lastScenePos();
-  fn _ZNK24QGraphicsSceneMouseEvent12lastScenePosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK24QGraphicsSceneMouseEvent12lastScenePosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QGraphicsSceneMouseEvent::~QGraphicsSceneMouseEvent();
-  fn _ZN24QGraphicsSceneMouseEventD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN24QGraphicsSceneMouseEventD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QPointF QGraphicsSceneMouseEvent::pos();
-  fn _ZNK24QGraphicsSceneMouseEvent3posEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK24QGraphicsSceneMouseEvent3posEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QGraphicsSceneMouseEvent::setLastPos(const QPointF & pos);
-  fn _ZN24QGraphicsSceneMouseEvent10setLastPosERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN24QGraphicsSceneMouseEvent10setLastPosERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsSceneMouseEvent::setLastScenePos(const QPointF & pos);
-  fn _ZN24QGraphicsSceneMouseEvent15setLastScenePosERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN24QGraphicsSceneMouseEvent15setLastScenePosERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QPoint QGraphicsSceneMouseEvent::lastScreenPos();
-  fn _ZNK24QGraphicsSceneMouseEvent13lastScreenPosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK24QGraphicsSceneMouseEvent13lastScreenPosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QGraphicsSceneMouseEvent::setScreenPos(const QPoint & pos);
-  fn _ZN24QGraphicsSceneMouseEvent12setScreenPosERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN24QGraphicsSceneMouseEvent12setScreenPosERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsSceneMouseEvent::setLastScreenPos(const QPoint & pos);
-  fn _ZN24QGraphicsSceneMouseEvent16setLastScreenPosERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN24QGraphicsSceneMouseEvent16setLastScreenPosERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsSceneMouseEvent::setScenePos(const QPointF & pos);
-  fn _ZN24QGraphicsSceneMouseEvent11setScenePosERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN24QGraphicsSceneMouseEvent11setScenePosERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QPointF QGraphicsSceneMouseEvent::lastPos();
-  fn _ZNK24QGraphicsSceneMouseEvent7lastPosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK24QGraphicsSceneMouseEvent7lastPosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QPointF QGraphicsSceneMouseEvent::scenePos();
-  fn _ZNK24QGraphicsSceneMouseEvent8scenePosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK24QGraphicsSceneMouseEvent8scenePosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QGraphicsSceneMouseEvent::setPos(const QPointF & pos);
-  fn _ZN24QGraphicsSceneMouseEvent6setPosERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN24QGraphicsSceneMouseEvent6setPosERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QGraphicsSceneHelpEvent_Class_Size() -> c_int;
   // proto:  void QGraphicsSceneHelpEvent::setScenePos(const QPointF & pos);
-  fn _ZN23QGraphicsSceneHelpEvent11setScenePosERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN23QGraphicsSceneHelpEvent11setScenePosERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QPoint QGraphicsSceneHelpEvent::screenPos();
-  fn _ZNK23QGraphicsSceneHelpEvent9screenPosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK23QGraphicsSceneHelpEvent9screenPosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QGraphicsSceneHelpEvent::~QGraphicsSceneHelpEvent();
-  fn _ZN23QGraphicsSceneHelpEventD2Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  void QGraphicsSceneHelpEvent::QGraphicsSceneHelpEvent(const QGraphicsSceneHelpEvent & );
-  fn _ZN23QGraphicsSceneHelpEventC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN23QGraphicsSceneHelpEventD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QGraphicsSceneHelpEvent::setScreenPos(const QPoint & pos);
-  fn _ZN23QGraphicsSceneHelpEvent12setScreenPosERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN23QGraphicsSceneHelpEvent12setScreenPosERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QPointF QGraphicsSceneHelpEvent::scenePos();
-  fn _ZNK23QGraphicsSceneHelpEvent8scenePosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK23QGraphicsSceneHelpEvent8scenePosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   fn QGraphicsSceneHoverEvent_Class_Size() -> c_int;
   // proto:  QPointF QGraphicsSceneHoverEvent::scenePos();
-  fn _ZNK24QGraphicsSceneHoverEvent8scenePosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK24QGraphicsSceneHoverEvent8scenePosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QGraphicsSceneHoverEvent::setLastPos(const QPointF & pos);
-  fn _ZN24QGraphicsSceneHoverEvent10setLastPosERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN24QGraphicsSceneHoverEvent10setLastPosERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QPointF QGraphicsSceneHoverEvent::lastPos();
-  fn _ZNK24QGraphicsSceneHoverEvent7lastPosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QGraphicsSceneHoverEvent::QGraphicsSceneHoverEvent(const QGraphicsSceneHoverEvent & );
-  fn _ZN24QGraphicsSceneHoverEventC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK24QGraphicsSceneHoverEvent7lastPosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QPointF QGraphicsSceneHoverEvent::lastScenePos();
-  fn _ZNK24QGraphicsSceneHoverEvent12lastScenePosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK24QGraphicsSceneHoverEvent12lastScenePosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QGraphicsSceneHoverEvent::setLastScreenPos(const QPoint & pos);
-  fn _ZN24QGraphicsSceneHoverEvent16setLastScreenPosERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN24QGraphicsSceneHoverEvent16setLastScreenPosERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsSceneHoverEvent::setScenePos(const QPointF & pos);
-  fn _ZN24QGraphicsSceneHoverEvent11setScenePosERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN24QGraphicsSceneHoverEvent11setScenePosERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsSceneHoverEvent::setPos(const QPointF & pos);
-  fn _ZN24QGraphicsSceneHoverEvent6setPosERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN24QGraphicsSceneHoverEvent6setPosERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QPoint QGraphicsSceneHoverEvent::screenPos();
-  fn _ZNK24QGraphicsSceneHoverEvent9screenPosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK24QGraphicsSceneHoverEvent9screenPosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QPoint QGraphicsSceneHoverEvent::lastScreenPos();
-  fn _ZNK24QGraphicsSceneHoverEvent13lastScreenPosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK24QGraphicsSceneHoverEvent13lastScreenPosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QGraphicsSceneHoverEvent::setLastScenePos(const QPointF & pos);
-  fn _ZN24QGraphicsSceneHoverEvent15setLastScenePosERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN24QGraphicsSceneHoverEvent15setLastScenePosERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QPointF QGraphicsSceneHoverEvent::pos();
-  fn _ZNK24QGraphicsSceneHoverEvent3posEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK24QGraphicsSceneHoverEvent3posEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QGraphicsSceneHoverEvent::setScreenPos(const QPoint & pos);
-  fn _ZN24QGraphicsSceneHoverEvent12setScreenPosERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN24QGraphicsSceneHoverEvent12setScreenPosERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsSceneHoverEvent::~QGraphicsSceneHoverEvent();
-  fn _ZN24QGraphicsSceneHoverEventD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN24QGraphicsSceneHoverEventD2Ev(qthis: u64 /* *mut c_void*/);
   fn QGraphicsSceneWheelEvent_Class_Size() -> c_int;
   // proto:  QPointF QGraphicsSceneWheelEvent::pos();
-  fn _ZNK24QGraphicsSceneWheelEvent3posEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK24QGraphicsSceneWheelEvent3posEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QGraphicsSceneWheelEvent::~QGraphicsSceneWheelEvent();
-  fn _ZN24QGraphicsSceneWheelEventD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN24QGraphicsSceneWheelEventD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QGraphicsSceneWheelEvent::setDelta(int delta);
-  fn _ZN24QGraphicsSceneWheelEvent8setDeltaEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN24QGraphicsSceneWheelEvent8setDeltaEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QGraphicsSceneWheelEvent::setScenePos(const QPointF & pos);
-  fn _ZN24QGraphicsSceneWheelEvent11setScenePosERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QGraphicsSceneWheelEvent::QGraphicsSceneWheelEvent(const QGraphicsSceneWheelEvent & );
-  fn _ZN24QGraphicsSceneWheelEventC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN24QGraphicsSceneWheelEvent11setScenePosERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsSceneWheelEvent::setPos(const QPointF & pos);
-  fn _ZN24QGraphicsSceneWheelEvent6setPosERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN24QGraphicsSceneWheelEvent6setPosERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsSceneWheelEvent::setScreenPos(const QPoint & pos);
-  fn _ZN24QGraphicsSceneWheelEvent12setScreenPosERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN24QGraphicsSceneWheelEvent12setScreenPosERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QGraphicsSceneWheelEvent::delta();
-  fn _ZNK24QGraphicsSceneWheelEvent5deltaEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK24QGraphicsSceneWheelEvent5deltaEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  QPointF QGraphicsSceneWheelEvent::scenePos();
-  fn _ZNK24QGraphicsSceneWheelEvent8scenePosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK24QGraphicsSceneWheelEvent8scenePosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QPoint QGraphicsSceneWheelEvent::screenPos();
-  fn _ZNK24QGraphicsSceneWheelEvent9screenPosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK24QGraphicsSceneWheelEvent9screenPosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   fn QGraphicsSceneDragDropEvent_Class_Size() -> c_int;
   // proto:  QWidget * QGraphicsSceneDragDropEvent::source();
-  fn _ZNK27QGraphicsSceneDragDropEvent6sourceEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK27QGraphicsSceneDragDropEvent6sourceEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QPointF QGraphicsSceneDragDropEvent::scenePos();
-  fn _ZNK27QGraphicsSceneDragDropEvent8scenePosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK27QGraphicsSceneDragDropEvent8scenePosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QGraphicsSceneDragDropEvent::setPos(const QPointF & pos);
-  fn _ZN27QGraphicsSceneDragDropEvent6setPosERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QGraphicsSceneDragDropEvent::QGraphicsSceneDragDropEvent(const QGraphicsSceneDragDropEvent & );
-  fn _ZN27QGraphicsSceneDragDropEventC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN27QGraphicsSceneDragDropEvent6setPosERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsSceneDragDropEvent::setScreenPos(const QPoint & pos);
-  fn _ZN27QGraphicsSceneDragDropEvent12setScreenPosERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN27QGraphicsSceneDragDropEvent12setScreenPosERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QPointF QGraphicsSceneDragDropEvent::pos();
-  fn _ZNK27QGraphicsSceneDragDropEvent3posEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK27QGraphicsSceneDragDropEvent3posEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QPoint QGraphicsSceneDragDropEvent::screenPos();
-  fn _ZNK27QGraphicsSceneDragDropEvent9screenPosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK27QGraphicsSceneDragDropEvent9screenPosEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  const QMimeData * QGraphicsSceneDragDropEvent::mimeData();
-  fn _ZNK27QGraphicsSceneDragDropEvent8mimeDataEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK27QGraphicsSceneDragDropEvent8mimeDataEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QGraphicsSceneDragDropEvent::~QGraphicsSceneDragDropEvent();
-  fn _ZN27QGraphicsSceneDragDropEventD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN27QGraphicsSceneDragDropEventD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QGraphicsSceneDragDropEvent::setMimeData(const QMimeData * data);
-  fn _ZN27QGraphicsSceneDragDropEvent11setMimeDataEPK9QMimeData(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN27QGraphicsSceneDragDropEvent11setMimeDataEPK9QMimeData(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsSceneDragDropEvent::setSource(QWidget * source);
-  fn _ZN27QGraphicsSceneDragDropEvent9setSourceEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN27QGraphicsSceneDragDropEvent9setSourceEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsSceneDragDropEvent::setScenePos(const QPointF & pos);
-  fn _ZN27QGraphicsSceneDragDropEvent11setScenePosERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN27QGraphicsSceneDragDropEvent11setScenePosERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsSceneDragDropEvent::acceptProposedAction();
-  fn _ZN27QGraphicsSceneDragDropEvent20acceptProposedActionEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN27QGraphicsSceneDragDropEvent20acceptProposedActionEv(qthis: u64 /* *mut c_void*/);
   fn QGraphicsSceneEvent_Class_Size() -> c_int;
-  // proto:  void QGraphicsSceneEvent::QGraphicsSceneEvent(const QGraphicsSceneEvent & );
-  fn _ZN19QGraphicsSceneEventC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QWidget * QGraphicsSceneEvent::widget();
-  fn _ZNK19QGraphicsSceneEvent6widgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK19QGraphicsSceneEvent6widgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QGraphicsSceneEvent::setWidget(QWidget * widget);
-  fn _ZN19QGraphicsSceneEvent9setWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN19QGraphicsSceneEvent9setWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsSceneEvent::~QGraphicsSceneEvent();
-  fn _ZN19QGraphicsSceneEventD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN19QGraphicsSceneEventD2Ev(qthis: u64 /* *mut c_void*/);
   fn QGraphicsSceneResizeEvent_Class_Size() -> c_int;
   // proto:  QSizeF QGraphicsSceneResizeEvent::newSize();
-  fn _ZNK25QGraphicsSceneResizeEvent7newSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK25QGraphicsSceneResizeEvent7newSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QSizeF QGraphicsSceneResizeEvent::oldSize();
-  fn _ZNK25QGraphicsSceneResizeEvent7oldSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK25QGraphicsSceneResizeEvent7oldSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QGraphicsSceneResizeEvent::~QGraphicsSceneResizeEvent();
-  fn _ZN25QGraphicsSceneResizeEventD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN25QGraphicsSceneResizeEventD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QGraphicsSceneResizeEvent::setNewSize(const QSizeF & size);
-  fn _ZN25QGraphicsSceneResizeEvent10setNewSizeERK6QSizeF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN25QGraphicsSceneResizeEvent10setNewSizeERK6QSizeF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsSceneResizeEvent::QGraphicsSceneResizeEvent();
-  fn _ZN25QGraphicsSceneResizeEventC2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN25QGraphicsSceneResizeEventC2Ev() -> u64;
   // proto:  void QGraphicsSceneResizeEvent::setOldSize(const QSizeF & size);
-  fn _ZN25QGraphicsSceneResizeEvent10setOldSizeERK6QSizeF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QGraphicsSceneResizeEvent::QGraphicsSceneResizeEvent(const QGraphicsSceneResizeEvent & );
-  fn _ZN25QGraphicsSceneResizeEventC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN25QGraphicsSceneResizeEvent10setOldSizeERK6QSizeF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -310,7 +292,7 @@ impl<'a> /*trait*/ QGraphicsSceneMoveEvent_newPos<QPointF> for () {
   fn newPos(self , rsthis: & QGraphicsSceneMoveEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK23QGraphicsSceneMoveEvent6newPosEv()};
-    let mut ret = unsafe {_ZNK23QGraphicsSceneMoveEvent6newPosEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK23QGraphicsSceneMoveEvent6newPosEv(rsthis.qclsinst)};
     let mut ret1 = QPointF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -334,7 +316,7 @@ impl<'a> /*trait*/ QGraphicsSceneMoveEvent_oldPos<QPointF> for () {
   fn oldPos(self , rsthis: & QGraphicsSceneMoveEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK23QGraphicsSceneMoveEvent6oldPosEv()};
-    let mut ret = unsafe {_ZNK23QGraphicsSceneMoveEvent6oldPosEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK23QGraphicsSceneMoveEvent6oldPosEv(rsthis.qclsinst)};
     let mut ret1 = QPointF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -358,36 +340,7 @@ impl<'a> /*trait*/ QGraphicsSceneMoveEvent_free<()> for () {
   fn free(self , rsthis: & QGraphicsSceneMoveEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QGraphicsSceneMoveEventD2Ev()};
-     unsafe {_ZN23QGraphicsSceneMoveEventD2Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QGraphicsSceneMoveEvent::QGraphicsSceneMoveEvent(const QGraphicsSceneMoveEvent & );
-impl /*struct*/ QGraphicsSceneMoveEvent {
-  pub fn new<T: QGraphicsSceneMoveEvent_new>(value: T) -> QGraphicsSceneMoveEvent {
-    let rsthis = value.new();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QGraphicsSceneMoveEvent_new {
-  fn new(self) -> QGraphicsSceneMoveEvent;
-}
-
-  // proto:  void QGraphicsSceneMoveEvent::QGraphicsSceneMoveEvent(const QGraphicsSceneMoveEvent & );
-impl<'a> /*trait*/ QGraphicsSceneMoveEvent_new for (&'a QGraphicsSceneMoveEvent) {
-  fn new(self) -> QGraphicsSceneMoveEvent {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN23QGraphicsSceneMoveEventC2ERKS_()};
-    let ctysz: c_int = unsafe{QGraphicsSceneMoveEvent_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN23QGraphicsSceneMoveEventC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QGraphicsSceneMoveEvent{qbase: QGraphicsSceneEvent::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
+     unsafe {C_ZN23QGraphicsSceneMoveEventD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -410,9 +363,22 @@ impl<'a> /*trait*/ QGraphicsSceneMoveEvent_setNewPos<()> for (&'a QPointF) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QGraphicsSceneMoveEvent9setNewPosERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN23QGraphicsSceneMoveEvent9setNewPosERK7QPointF(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN23QGraphicsSceneMoveEvent9setNewPosERK7QPointF(rsthis.qclsinst, arg0)};
     // return 1;
   }
+}
+
+  // proto:  void QGraphicsSceneMoveEvent::QGraphicsSceneMoveEvent();
+impl /*struct*/ QGraphicsSceneMoveEvent {
+  pub fn new<T: QGraphicsSceneMoveEvent_new>(value: T) -> QGraphicsSceneMoveEvent {
+    let rsthis = value.new();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QGraphicsSceneMoveEvent_new {
+  fn new(self) -> QGraphicsSceneMoveEvent;
 }
 
   // proto:  void QGraphicsSceneMoveEvent::QGraphicsSceneMoveEvent();
@@ -422,8 +388,7 @@ impl<'a> /*trait*/ QGraphicsSceneMoveEvent_new for () {
     // unsafe{_ZN23QGraphicsSceneMoveEventC2Ev()};
     let ctysz: c_int = unsafe{QGraphicsSceneMoveEvent_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    unsafe {_ZN23QGraphicsSceneMoveEventC2Ev(qthis_ph)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN23QGraphicsSceneMoveEventC2Ev()};
     let rsthis = QGraphicsSceneMoveEvent{qbase: QGraphicsSceneEvent::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -448,7 +413,7 @@ impl<'a> /*trait*/ QGraphicsSceneMoveEvent_setOldPos<()> for (&'a QPointF) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QGraphicsSceneMoveEvent9setOldPosERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN23QGraphicsSceneMoveEvent9setOldPosERK7QPointF(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN23QGraphicsSceneMoveEvent9setOldPosERK7QPointF(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -470,35 +435,6 @@ impl AsRef<QGraphicsSceneEvent> for QGraphicsSceneContextMenuEvent {
     return & self.qbase;
   }
 }
-  // proto:  void QGraphicsSceneContextMenuEvent::QGraphicsSceneContextMenuEvent(const QGraphicsSceneContextMenuEvent & );
-impl /*struct*/ QGraphicsSceneContextMenuEvent {
-  pub fn new<T: QGraphicsSceneContextMenuEvent_new>(value: T) -> QGraphicsSceneContextMenuEvent {
-    let rsthis = value.new();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QGraphicsSceneContextMenuEvent_new {
-  fn new(self) -> QGraphicsSceneContextMenuEvent;
-}
-
-  // proto:  void QGraphicsSceneContextMenuEvent::QGraphicsSceneContextMenuEvent(const QGraphicsSceneContextMenuEvent & );
-impl<'a> /*trait*/ QGraphicsSceneContextMenuEvent_new for (&'a QGraphicsSceneContextMenuEvent) {
-  fn new(self) -> QGraphicsSceneContextMenuEvent {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN30QGraphicsSceneContextMenuEventC2ERKS_()};
-    let ctysz: c_int = unsafe{QGraphicsSceneContextMenuEvent_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN30QGraphicsSceneContextMenuEventC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QGraphicsSceneContextMenuEvent{qbase: QGraphicsSceneEvent::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
   // proto:  QPointF QGraphicsSceneContextMenuEvent::scenePos();
 impl /*struct*/ QGraphicsSceneContextMenuEvent {
   pub fn scenePos<RetType, T: QGraphicsSceneContextMenuEvent_scenePos<RetType>>(& self,  overload_args: T) -> RetType {
@@ -516,7 +452,7 @@ impl<'a> /*trait*/ QGraphicsSceneContextMenuEvent_scenePos<QPointF> for () {
   fn scenePos(self , rsthis: & QGraphicsSceneContextMenuEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK30QGraphicsSceneContextMenuEvent8scenePosEv()};
-    let mut ret = unsafe {_ZNK30QGraphicsSceneContextMenuEvent8scenePosEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK30QGraphicsSceneContextMenuEvent8scenePosEv(rsthis.qclsinst)};
     let mut ret1 = QPointF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -540,7 +476,7 @@ impl<'a> /*trait*/ QGraphicsSceneContextMenuEvent_free<()> for () {
   fn free(self , rsthis: & QGraphicsSceneContextMenuEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN30QGraphicsSceneContextMenuEventD2Ev()};
-     unsafe {_ZN30QGraphicsSceneContextMenuEventD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN30QGraphicsSceneContextMenuEventD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -562,7 +498,7 @@ impl<'a> /*trait*/ QGraphicsSceneContextMenuEvent_pos<QPointF> for () {
   fn pos(self , rsthis: & QGraphicsSceneContextMenuEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK30QGraphicsSceneContextMenuEvent3posEv()};
-    let mut ret = unsafe {_ZNK30QGraphicsSceneContextMenuEvent3posEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK30QGraphicsSceneContextMenuEvent3posEv(rsthis.qclsinst)};
     let mut ret1 = QPointF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -587,7 +523,7 @@ impl<'a> /*trait*/ QGraphicsSceneContextMenuEvent_setScreenPos<()> for (&'a QPoi
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN30QGraphicsSceneContextMenuEvent12setScreenPosERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN30QGraphicsSceneContextMenuEvent12setScreenPosERK6QPoint(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN30QGraphicsSceneContextMenuEvent12setScreenPosERK6QPoint(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -610,7 +546,7 @@ impl<'a> /*trait*/ QGraphicsSceneContextMenuEvent_setPos<()> for (&'a QPointF) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN30QGraphicsSceneContextMenuEvent6setPosERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN30QGraphicsSceneContextMenuEvent6setPosERK7QPointF(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN30QGraphicsSceneContextMenuEvent6setPosERK7QPointF(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -632,7 +568,7 @@ impl<'a> /*trait*/ QGraphicsSceneContextMenuEvent_screenPos<QPoint> for () {
   fn screenPos(self , rsthis: & QGraphicsSceneContextMenuEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK30QGraphicsSceneContextMenuEvent9screenPosEv()};
-    let mut ret = unsafe {_ZNK30QGraphicsSceneContextMenuEvent9screenPosEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK30QGraphicsSceneContextMenuEvent9screenPosEv(rsthis.qclsinst)};
     let mut ret1 = QPoint::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -657,7 +593,7 @@ impl<'a> /*trait*/ QGraphicsSceneContextMenuEvent_setScenePos<()> for (&'a QPoin
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN30QGraphicsSceneContextMenuEvent11setScenePosERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN30QGraphicsSceneContextMenuEvent11setScenePosERK7QPointF(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN30QGraphicsSceneContextMenuEvent11setScenePosERK7QPointF(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -696,38 +632,9 @@ impl<'a> /*trait*/ QGraphicsSceneMouseEvent_screenPos<QPoint> for () {
   fn screenPos(self , rsthis: & QGraphicsSceneMouseEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QGraphicsSceneMouseEvent9screenPosEv()};
-    let mut ret = unsafe {_ZNK24QGraphicsSceneMouseEvent9screenPosEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK24QGraphicsSceneMouseEvent9screenPosEv(rsthis.qclsinst)};
     let mut ret1 = QPoint::inheritFrom(ret as u64);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QGraphicsSceneMouseEvent::QGraphicsSceneMouseEvent(const QGraphicsSceneMouseEvent & );
-impl /*struct*/ QGraphicsSceneMouseEvent {
-  pub fn new<T: QGraphicsSceneMouseEvent_new>(value: T) -> QGraphicsSceneMouseEvent {
-    let rsthis = value.new();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QGraphicsSceneMouseEvent_new {
-  fn new(self) -> QGraphicsSceneMouseEvent;
-}
-
-  // proto:  void QGraphicsSceneMouseEvent::QGraphicsSceneMouseEvent(const QGraphicsSceneMouseEvent & );
-impl<'a> /*trait*/ QGraphicsSceneMouseEvent_new for (&'a QGraphicsSceneMouseEvent) {
-  fn new(self) -> QGraphicsSceneMouseEvent {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN24QGraphicsSceneMouseEventC2ERKS_()};
-    let ctysz: c_int = unsafe{QGraphicsSceneMouseEvent_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN24QGraphicsSceneMouseEventC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QGraphicsSceneMouseEvent{qbase: QGraphicsSceneEvent::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
     // return 1;
   }
 }
@@ -749,7 +656,7 @@ impl<'a> /*trait*/ QGraphicsSceneMouseEvent_lastScenePos<QPointF> for () {
   fn lastScenePos(self , rsthis: & QGraphicsSceneMouseEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QGraphicsSceneMouseEvent12lastScenePosEv()};
-    let mut ret = unsafe {_ZNK24QGraphicsSceneMouseEvent12lastScenePosEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK24QGraphicsSceneMouseEvent12lastScenePosEv(rsthis.qclsinst)};
     let mut ret1 = QPointF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -773,7 +680,7 @@ impl<'a> /*trait*/ QGraphicsSceneMouseEvent_free<()> for () {
   fn free(self , rsthis: & QGraphicsSceneMouseEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneMouseEventD2Ev()};
-     unsafe {_ZN24QGraphicsSceneMouseEventD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN24QGraphicsSceneMouseEventD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -795,7 +702,7 @@ impl<'a> /*trait*/ QGraphicsSceneMouseEvent_pos<QPointF> for () {
   fn pos(self , rsthis: & QGraphicsSceneMouseEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QGraphicsSceneMouseEvent3posEv()};
-    let mut ret = unsafe {_ZNK24QGraphicsSceneMouseEvent3posEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK24QGraphicsSceneMouseEvent3posEv(rsthis.qclsinst)};
     let mut ret1 = QPointF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -820,7 +727,7 @@ impl<'a> /*trait*/ QGraphicsSceneMouseEvent_setLastPos<()> for (&'a QPointF) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneMouseEvent10setLastPosERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN24QGraphicsSceneMouseEvent10setLastPosERK7QPointF(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN24QGraphicsSceneMouseEvent10setLastPosERK7QPointF(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -843,7 +750,7 @@ impl<'a> /*trait*/ QGraphicsSceneMouseEvent_setLastScenePos<()> for (&'a QPointF
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneMouseEvent15setLastScenePosERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN24QGraphicsSceneMouseEvent15setLastScenePosERK7QPointF(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN24QGraphicsSceneMouseEvent15setLastScenePosERK7QPointF(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -865,7 +772,7 @@ impl<'a> /*trait*/ QGraphicsSceneMouseEvent_lastScreenPos<QPoint> for () {
   fn lastScreenPos(self , rsthis: & QGraphicsSceneMouseEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QGraphicsSceneMouseEvent13lastScreenPosEv()};
-    let mut ret = unsafe {_ZNK24QGraphicsSceneMouseEvent13lastScreenPosEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK24QGraphicsSceneMouseEvent13lastScreenPosEv(rsthis.qclsinst)};
     let mut ret1 = QPoint::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -890,7 +797,7 @@ impl<'a> /*trait*/ QGraphicsSceneMouseEvent_setScreenPos<()> for (&'a QPoint) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneMouseEvent12setScreenPosERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN24QGraphicsSceneMouseEvent12setScreenPosERK6QPoint(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN24QGraphicsSceneMouseEvent12setScreenPosERK6QPoint(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -913,7 +820,7 @@ impl<'a> /*trait*/ QGraphicsSceneMouseEvent_setLastScreenPos<()> for (&'a QPoint
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneMouseEvent16setLastScreenPosERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN24QGraphicsSceneMouseEvent16setLastScreenPosERK6QPoint(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN24QGraphicsSceneMouseEvent16setLastScreenPosERK6QPoint(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -936,7 +843,7 @@ impl<'a> /*trait*/ QGraphicsSceneMouseEvent_setScenePos<()> for (&'a QPointF) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneMouseEvent11setScenePosERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN24QGraphicsSceneMouseEvent11setScenePosERK7QPointF(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN24QGraphicsSceneMouseEvent11setScenePosERK7QPointF(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -958,7 +865,7 @@ impl<'a> /*trait*/ QGraphicsSceneMouseEvent_lastPos<QPointF> for () {
   fn lastPos(self , rsthis: & QGraphicsSceneMouseEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QGraphicsSceneMouseEvent7lastPosEv()};
-    let mut ret = unsafe {_ZNK24QGraphicsSceneMouseEvent7lastPosEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK24QGraphicsSceneMouseEvent7lastPosEv(rsthis.qclsinst)};
     let mut ret1 = QPointF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -982,7 +889,7 @@ impl<'a> /*trait*/ QGraphicsSceneMouseEvent_scenePos<QPointF> for () {
   fn scenePos(self , rsthis: & QGraphicsSceneMouseEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QGraphicsSceneMouseEvent8scenePosEv()};
-    let mut ret = unsafe {_ZNK24QGraphicsSceneMouseEvent8scenePosEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK24QGraphicsSceneMouseEvent8scenePosEv(rsthis.qclsinst)};
     let mut ret1 = QPointF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1007,7 +914,7 @@ impl<'a> /*trait*/ QGraphicsSceneMouseEvent_setPos<()> for (&'a QPointF) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneMouseEvent6setPosERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN24QGraphicsSceneMouseEvent6setPosERK7QPointF(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN24QGraphicsSceneMouseEvent6setPosERK7QPointF(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1047,7 +954,7 @@ impl<'a> /*trait*/ QGraphicsSceneHelpEvent_setScenePos<()> for (&'a QPointF) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QGraphicsSceneHelpEvent11setScenePosERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN23QGraphicsSceneHelpEvent11setScenePosERK7QPointF(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN23QGraphicsSceneHelpEvent11setScenePosERK7QPointF(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1069,7 +976,7 @@ impl<'a> /*trait*/ QGraphicsSceneHelpEvent_screenPos<QPoint> for () {
   fn screenPos(self , rsthis: & QGraphicsSceneHelpEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK23QGraphicsSceneHelpEvent9screenPosEv()};
-    let mut ret = unsafe {_ZNK23QGraphicsSceneHelpEvent9screenPosEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK23QGraphicsSceneHelpEvent9screenPosEv(rsthis.qclsinst)};
     let mut ret1 = QPoint::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1093,36 +1000,7 @@ impl<'a> /*trait*/ QGraphicsSceneHelpEvent_free<()> for () {
   fn free(self , rsthis: & QGraphicsSceneHelpEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QGraphicsSceneHelpEventD2Ev()};
-     unsafe {_ZN23QGraphicsSceneHelpEventD2Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QGraphicsSceneHelpEvent::QGraphicsSceneHelpEvent(const QGraphicsSceneHelpEvent & );
-impl /*struct*/ QGraphicsSceneHelpEvent {
-  pub fn new<T: QGraphicsSceneHelpEvent_new>(value: T) -> QGraphicsSceneHelpEvent {
-    let rsthis = value.new();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QGraphicsSceneHelpEvent_new {
-  fn new(self) -> QGraphicsSceneHelpEvent;
-}
-
-  // proto:  void QGraphicsSceneHelpEvent::QGraphicsSceneHelpEvent(const QGraphicsSceneHelpEvent & );
-impl<'a> /*trait*/ QGraphicsSceneHelpEvent_new for (&'a QGraphicsSceneHelpEvent) {
-  fn new(self) -> QGraphicsSceneHelpEvent {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN23QGraphicsSceneHelpEventC2ERKS_()};
-    let ctysz: c_int = unsafe{QGraphicsSceneHelpEvent_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN23QGraphicsSceneHelpEventC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QGraphicsSceneHelpEvent{qbase: QGraphicsSceneEvent::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
+     unsafe {C_ZN23QGraphicsSceneHelpEventD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1145,7 +1023,7 @@ impl<'a> /*trait*/ QGraphicsSceneHelpEvent_setScreenPos<()> for (&'a QPoint) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QGraphicsSceneHelpEvent12setScreenPosERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN23QGraphicsSceneHelpEvent12setScreenPosERK6QPoint(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN23QGraphicsSceneHelpEvent12setScreenPosERK6QPoint(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1167,7 +1045,7 @@ impl<'a> /*trait*/ QGraphicsSceneHelpEvent_scenePos<QPointF> for () {
   fn scenePos(self , rsthis: & QGraphicsSceneHelpEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK23QGraphicsSceneHelpEvent8scenePosEv()};
-    let mut ret = unsafe {_ZNK23QGraphicsSceneHelpEvent8scenePosEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK23QGraphicsSceneHelpEvent8scenePosEv(rsthis.qclsinst)};
     let mut ret1 = QPointF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1208,7 +1086,7 @@ impl<'a> /*trait*/ QGraphicsSceneHoverEvent_scenePos<QPointF> for () {
   fn scenePos(self , rsthis: & QGraphicsSceneHoverEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QGraphicsSceneHoverEvent8scenePosEv()};
-    let mut ret = unsafe {_ZNK24QGraphicsSceneHoverEvent8scenePosEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK24QGraphicsSceneHoverEvent8scenePosEv(rsthis.qclsinst)};
     let mut ret1 = QPointF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1233,7 +1111,7 @@ impl<'a> /*trait*/ QGraphicsSceneHoverEvent_setLastPos<()> for (&'a QPointF) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneHoverEvent10setLastPosERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN24QGraphicsSceneHoverEvent10setLastPosERK7QPointF(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN24QGraphicsSceneHoverEvent10setLastPosERK7QPointF(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1255,38 +1133,9 @@ impl<'a> /*trait*/ QGraphicsSceneHoverEvent_lastPos<QPointF> for () {
   fn lastPos(self , rsthis: & QGraphicsSceneHoverEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QGraphicsSceneHoverEvent7lastPosEv()};
-    let mut ret = unsafe {_ZNK24QGraphicsSceneHoverEvent7lastPosEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK24QGraphicsSceneHoverEvent7lastPosEv(rsthis.qclsinst)};
     let mut ret1 = QPointF::inheritFrom(ret as u64);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QGraphicsSceneHoverEvent::QGraphicsSceneHoverEvent(const QGraphicsSceneHoverEvent & );
-impl /*struct*/ QGraphicsSceneHoverEvent {
-  pub fn new<T: QGraphicsSceneHoverEvent_new>(value: T) -> QGraphicsSceneHoverEvent {
-    let rsthis = value.new();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QGraphicsSceneHoverEvent_new {
-  fn new(self) -> QGraphicsSceneHoverEvent;
-}
-
-  // proto:  void QGraphicsSceneHoverEvent::QGraphicsSceneHoverEvent(const QGraphicsSceneHoverEvent & );
-impl<'a> /*trait*/ QGraphicsSceneHoverEvent_new for (&'a QGraphicsSceneHoverEvent) {
-  fn new(self) -> QGraphicsSceneHoverEvent {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN24QGraphicsSceneHoverEventC2ERKS_()};
-    let ctysz: c_int = unsafe{QGraphicsSceneHoverEvent_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN24QGraphicsSceneHoverEventC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QGraphicsSceneHoverEvent{qbase: QGraphicsSceneEvent::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
     // return 1;
   }
 }
@@ -1308,7 +1157,7 @@ impl<'a> /*trait*/ QGraphicsSceneHoverEvent_lastScenePos<QPointF> for () {
   fn lastScenePos(self , rsthis: & QGraphicsSceneHoverEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QGraphicsSceneHoverEvent12lastScenePosEv()};
-    let mut ret = unsafe {_ZNK24QGraphicsSceneHoverEvent12lastScenePosEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK24QGraphicsSceneHoverEvent12lastScenePosEv(rsthis.qclsinst)};
     let mut ret1 = QPointF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1333,7 +1182,7 @@ impl<'a> /*trait*/ QGraphicsSceneHoverEvent_setLastScreenPos<()> for (&'a QPoint
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneHoverEvent16setLastScreenPosERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN24QGraphicsSceneHoverEvent16setLastScreenPosERK6QPoint(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN24QGraphicsSceneHoverEvent16setLastScreenPosERK6QPoint(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1356,7 +1205,7 @@ impl<'a> /*trait*/ QGraphicsSceneHoverEvent_setScenePos<()> for (&'a QPointF) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneHoverEvent11setScenePosERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN24QGraphicsSceneHoverEvent11setScenePosERK7QPointF(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN24QGraphicsSceneHoverEvent11setScenePosERK7QPointF(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1379,7 +1228,7 @@ impl<'a> /*trait*/ QGraphicsSceneHoverEvent_setPos<()> for (&'a QPointF) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneHoverEvent6setPosERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN24QGraphicsSceneHoverEvent6setPosERK7QPointF(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN24QGraphicsSceneHoverEvent6setPosERK7QPointF(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1401,7 +1250,7 @@ impl<'a> /*trait*/ QGraphicsSceneHoverEvent_screenPos<QPoint> for () {
   fn screenPos(self , rsthis: & QGraphicsSceneHoverEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QGraphicsSceneHoverEvent9screenPosEv()};
-    let mut ret = unsafe {_ZNK24QGraphicsSceneHoverEvent9screenPosEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK24QGraphicsSceneHoverEvent9screenPosEv(rsthis.qclsinst)};
     let mut ret1 = QPoint::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1425,7 +1274,7 @@ impl<'a> /*trait*/ QGraphicsSceneHoverEvent_lastScreenPos<QPoint> for () {
   fn lastScreenPos(self , rsthis: & QGraphicsSceneHoverEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QGraphicsSceneHoverEvent13lastScreenPosEv()};
-    let mut ret = unsafe {_ZNK24QGraphicsSceneHoverEvent13lastScreenPosEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK24QGraphicsSceneHoverEvent13lastScreenPosEv(rsthis.qclsinst)};
     let mut ret1 = QPoint::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1450,7 +1299,7 @@ impl<'a> /*trait*/ QGraphicsSceneHoverEvent_setLastScenePos<()> for (&'a QPointF
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneHoverEvent15setLastScenePosERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN24QGraphicsSceneHoverEvent15setLastScenePosERK7QPointF(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN24QGraphicsSceneHoverEvent15setLastScenePosERK7QPointF(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1472,7 +1321,7 @@ impl<'a> /*trait*/ QGraphicsSceneHoverEvent_pos<QPointF> for () {
   fn pos(self , rsthis: & QGraphicsSceneHoverEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QGraphicsSceneHoverEvent3posEv()};
-    let mut ret = unsafe {_ZNK24QGraphicsSceneHoverEvent3posEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK24QGraphicsSceneHoverEvent3posEv(rsthis.qclsinst)};
     let mut ret1 = QPointF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1497,7 +1346,7 @@ impl<'a> /*trait*/ QGraphicsSceneHoverEvent_setScreenPos<()> for (&'a QPoint) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneHoverEvent12setScreenPosERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN24QGraphicsSceneHoverEvent12setScreenPosERK6QPoint(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN24QGraphicsSceneHoverEvent12setScreenPosERK6QPoint(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1519,7 +1368,7 @@ impl<'a> /*trait*/ QGraphicsSceneHoverEvent_free<()> for () {
   fn free(self , rsthis: & QGraphicsSceneHoverEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneHoverEventD2Ev()};
-     unsafe {_ZN24QGraphicsSceneHoverEventD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN24QGraphicsSceneHoverEventD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1558,7 +1407,7 @@ impl<'a> /*trait*/ QGraphicsSceneWheelEvent_pos<QPointF> for () {
   fn pos(self , rsthis: & QGraphicsSceneWheelEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QGraphicsSceneWheelEvent3posEv()};
-    let mut ret = unsafe {_ZNK24QGraphicsSceneWheelEvent3posEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK24QGraphicsSceneWheelEvent3posEv(rsthis.qclsinst)};
     let mut ret1 = QPointF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1582,7 +1431,7 @@ impl<'a> /*trait*/ QGraphicsSceneWheelEvent_free<()> for () {
   fn free(self , rsthis: & QGraphicsSceneWheelEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneWheelEventD2Ev()};
-     unsafe {_ZN24QGraphicsSceneWheelEventD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN24QGraphicsSceneWheelEventD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1605,7 +1454,7 @@ impl<'a> /*trait*/ QGraphicsSceneWheelEvent_setDelta<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneWheelEvent8setDeltaEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN24QGraphicsSceneWheelEvent8setDeltaEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN24QGraphicsSceneWheelEvent8setDeltaEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1628,36 +1477,7 @@ impl<'a> /*trait*/ QGraphicsSceneWheelEvent_setScenePos<()> for (&'a QPointF) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneWheelEvent11setScenePosERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN24QGraphicsSceneWheelEvent11setScenePosERK7QPointF(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QGraphicsSceneWheelEvent::QGraphicsSceneWheelEvent(const QGraphicsSceneWheelEvent & );
-impl /*struct*/ QGraphicsSceneWheelEvent {
-  pub fn new<T: QGraphicsSceneWheelEvent_new>(value: T) -> QGraphicsSceneWheelEvent {
-    let rsthis = value.new();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QGraphicsSceneWheelEvent_new {
-  fn new(self) -> QGraphicsSceneWheelEvent;
-}
-
-  // proto:  void QGraphicsSceneWheelEvent::QGraphicsSceneWheelEvent(const QGraphicsSceneWheelEvent & );
-impl<'a> /*trait*/ QGraphicsSceneWheelEvent_new for (&'a QGraphicsSceneWheelEvent) {
-  fn new(self) -> QGraphicsSceneWheelEvent {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN24QGraphicsSceneWheelEventC2ERKS_()};
-    let ctysz: c_int = unsafe{QGraphicsSceneWheelEvent_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN24QGraphicsSceneWheelEventC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QGraphicsSceneWheelEvent{qbase: QGraphicsSceneEvent::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
+     unsafe {C_ZN24QGraphicsSceneWheelEvent11setScenePosERK7QPointF(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1680,7 +1500,7 @@ impl<'a> /*trait*/ QGraphicsSceneWheelEvent_setPos<()> for (&'a QPointF) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneWheelEvent6setPosERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN24QGraphicsSceneWheelEvent6setPosERK7QPointF(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN24QGraphicsSceneWheelEvent6setPosERK7QPointF(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1703,7 +1523,7 @@ impl<'a> /*trait*/ QGraphicsSceneWheelEvent_setScreenPos<()> for (&'a QPoint) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneWheelEvent12setScreenPosERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN24QGraphicsSceneWheelEvent12setScreenPosERK6QPoint(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN24QGraphicsSceneWheelEvent12setScreenPosERK6QPoint(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1725,7 +1545,7 @@ impl<'a> /*trait*/ QGraphicsSceneWheelEvent_delta<i32> for () {
   fn delta(self , rsthis: & QGraphicsSceneWheelEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QGraphicsSceneWheelEvent5deltaEv()};
-    let mut ret = unsafe {_ZNK24QGraphicsSceneWheelEvent5deltaEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK24QGraphicsSceneWheelEvent5deltaEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -1748,7 +1568,7 @@ impl<'a> /*trait*/ QGraphicsSceneWheelEvent_scenePos<QPointF> for () {
   fn scenePos(self , rsthis: & QGraphicsSceneWheelEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QGraphicsSceneWheelEvent8scenePosEv()};
-    let mut ret = unsafe {_ZNK24QGraphicsSceneWheelEvent8scenePosEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK24QGraphicsSceneWheelEvent8scenePosEv(rsthis.qclsinst)};
     let mut ret1 = QPointF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1772,7 +1592,7 @@ impl<'a> /*trait*/ QGraphicsSceneWheelEvent_screenPos<QPoint> for () {
   fn screenPos(self , rsthis: & QGraphicsSceneWheelEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QGraphicsSceneWheelEvent9screenPosEv()};
-    let mut ret = unsafe {_ZNK24QGraphicsSceneWheelEvent9screenPosEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK24QGraphicsSceneWheelEvent9screenPosEv(rsthis.qclsinst)};
     let mut ret1 = QPoint::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1813,7 +1633,7 @@ impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_source<QWidget> for () {
   fn source(self , rsthis: & QGraphicsSceneDragDropEvent) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QGraphicsSceneDragDropEvent6sourceEv()};
-    let mut ret = unsafe {_ZNK27QGraphicsSceneDragDropEvent6sourceEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK27QGraphicsSceneDragDropEvent6sourceEv(rsthis.qclsinst)};
     let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1837,7 +1657,7 @@ impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_scenePos<QPointF> for () {
   fn scenePos(self , rsthis: & QGraphicsSceneDragDropEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QGraphicsSceneDragDropEvent8scenePosEv()};
-    let mut ret = unsafe {_ZNK27QGraphicsSceneDragDropEvent8scenePosEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK27QGraphicsSceneDragDropEvent8scenePosEv(rsthis.qclsinst)};
     let mut ret1 = QPointF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1862,36 +1682,7 @@ impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_setPos<()> for (&'a QPointF) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QGraphicsSceneDragDropEvent6setPosERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN27QGraphicsSceneDragDropEvent6setPosERK7QPointF(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QGraphicsSceneDragDropEvent::QGraphicsSceneDragDropEvent(const QGraphicsSceneDragDropEvent & );
-impl /*struct*/ QGraphicsSceneDragDropEvent {
-  pub fn new<T: QGraphicsSceneDragDropEvent_new>(value: T) -> QGraphicsSceneDragDropEvent {
-    let rsthis = value.new();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QGraphicsSceneDragDropEvent_new {
-  fn new(self) -> QGraphicsSceneDragDropEvent;
-}
-
-  // proto:  void QGraphicsSceneDragDropEvent::QGraphicsSceneDragDropEvent(const QGraphicsSceneDragDropEvent & );
-impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_new for (&'a QGraphicsSceneDragDropEvent) {
-  fn new(self) -> QGraphicsSceneDragDropEvent {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN27QGraphicsSceneDragDropEventC2ERKS_()};
-    let ctysz: c_int = unsafe{QGraphicsSceneDragDropEvent_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN27QGraphicsSceneDragDropEventC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QGraphicsSceneDragDropEvent{qbase: QGraphicsSceneEvent::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
+     unsafe {C_ZN27QGraphicsSceneDragDropEvent6setPosERK7QPointF(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1914,7 +1705,7 @@ impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_setScreenPos<()> for (&'a QPoint)
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QGraphicsSceneDragDropEvent12setScreenPosERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN27QGraphicsSceneDragDropEvent12setScreenPosERK6QPoint(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN27QGraphicsSceneDragDropEvent12setScreenPosERK6QPoint(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1936,7 +1727,7 @@ impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_pos<QPointF> for () {
   fn pos(self , rsthis: & QGraphicsSceneDragDropEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QGraphicsSceneDragDropEvent3posEv()};
-    let mut ret = unsafe {_ZNK27QGraphicsSceneDragDropEvent3posEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK27QGraphicsSceneDragDropEvent3posEv(rsthis.qclsinst)};
     let mut ret1 = QPointF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1960,7 +1751,7 @@ impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_screenPos<QPoint> for () {
   fn screenPos(self , rsthis: & QGraphicsSceneDragDropEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QGraphicsSceneDragDropEvent9screenPosEv()};
-    let mut ret = unsafe {_ZNK27QGraphicsSceneDragDropEvent9screenPosEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK27QGraphicsSceneDragDropEvent9screenPosEv(rsthis.qclsinst)};
     let mut ret1 = QPoint::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1984,7 +1775,7 @@ impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_mimeData<QMimeData> for () {
   fn mimeData(self , rsthis: & QGraphicsSceneDragDropEvent) -> QMimeData {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QGraphicsSceneDragDropEvent8mimeDataEv()};
-    let mut ret = unsafe {_ZNK27QGraphicsSceneDragDropEvent8mimeDataEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK27QGraphicsSceneDragDropEvent8mimeDataEv(rsthis.qclsinst)};
     let mut ret1 = QMimeData::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -2008,7 +1799,7 @@ impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_free<()> for () {
   fn free(self , rsthis: & QGraphicsSceneDragDropEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QGraphicsSceneDragDropEventD2Ev()};
-     unsafe {_ZN27QGraphicsSceneDragDropEventD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN27QGraphicsSceneDragDropEventD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -2031,7 +1822,7 @@ impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_setMimeData<()> for (&'a QMimeDat
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QGraphicsSceneDragDropEvent11setMimeDataEPK9QMimeData()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN27QGraphicsSceneDragDropEvent11setMimeDataEPK9QMimeData(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN27QGraphicsSceneDragDropEvent11setMimeDataEPK9QMimeData(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -2054,7 +1845,7 @@ impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_setSource<()> for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QGraphicsSceneDragDropEvent9setSourceEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN27QGraphicsSceneDragDropEvent9setSourceEP7QWidget(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN27QGraphicsSceneDragDropEvent9setSourceEP7QWidget(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -2077,7 +1868,7 @@ impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_setScenePos<()> for (&'a QPointF)
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QGraphicsSceneDragDropEvent11setScenePosERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN27QGraphicsSceneDragDropEvent11setScenePosERK7QPointF(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN27QGraphicsSceneDragDropEvent11setScenePosERK7QPointF(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -2099,7 +1890,7 @@ impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_acceptProposedAction<()> for () {
   fn acceptProposedAction(self , rsthis: & QGraphicsSceneDragDropEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QGraphicsSceneDragDropEvent20acceptProposedActionEv()};
-     unsafe {_ZN27QGraphicsSceneDragDropEvent20acceptProposedActionEv(rsthis.qclsinst)};
+     unsafe {C_ZN27QGraphicsSceneDragDropEvent20acceptProposedActionEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -2121,35 +1912,6 @@ impl AsRef<QEvent> for QGraphicsSceneEvent {
     return & self.qbase;
   }
 }
-  // proto:  void QGraphicsSceneEvent::QGraphicsSceneEvent(const QGraphicsSceneEvent & );
-impl /*struct*/ QGraphicsSceneEvent {
-  pub fn new<T: QGraphicsSceneEvent_new>(value: T) -> QGraphicsSceneEvent {
-    let rsthis = value.new();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QGraphicsSceneEvent_new {
-  fn new(self) -> QGraphicsSceneEvent;
-}
-
-  // proto:  void QGraphicsSceneEvent::QGraphicsSceneEvent(const QGraphicsSceneEvent & );
-impl<'a> /*trait*/ QGraphicsSceneEvent_new for (&'a QGraphicsSceneEvent) {
-  fn new(self) -> QGraphicsSceneEvent {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QGraphicsSceneEventC2ERKS_()};
-    let ctysz: c_int = unsafe{QGraphicsSceneEvent_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN19QGraphicsSceneEventC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QGraphicsSceneEvent{qbase: QEvent::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
   // proto:  QWidget * QGraphicsSceneEvent::widget();
 impl /*struct*/ QGraphicsSceneEvent {
   pub fn widget<RetType, T: QGraphicsSceneEvent_widget<RetType>>(& self,  overload_args: T) -> RetType {
@@ -2167,7 +1929,7 @@ impl<'a> /*trait*/ QGraphicsSceneEvent_widget<QWidget> for () {
   fn widget(self , rsthis: & QGraphicsSceneEvent) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QGraphicsSceneEvent6widgetEv()};
-    let mut ret = unsafe {_ZNK19QGraphicsSceneEvent6widgetEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK19QGraphicsSceneEvent6widgetEv(rsthis.qclsinst)};
     let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -2192,7 +1954,7 @@ impl<'a> /*trait*/ QGraphicsSceneEvent_setWidget<()> for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsSceneEvent9setWidgetEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN19QGraphicsSceneEvent9setWidgetEP7QWidget(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN19QGraphicsSceneEvent9setWidgetEP7QWidget(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -2214,7 +1976,7 @@ impl<'a> /*trait*/ QGraphicsSceneEvent_free<()> for () {
   fn free(self , rsthis: & QGraphicsSceneEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsSceneEventD2Ev()};
-     unsafe {_ZN19QGraphicsSceneEventD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN19QGraphicsSceneEventD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -2253,7 +2015,7 @@ impl<'a> /*trait*/ QGraphicsSceneResizeEvent_newSize<QSizeF> for () {
   fn newSize(self , rsthis: & QGraphicsSceneResizeEvent) -> QSizeF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK25QGraphicsSceneResizeEvent7newSizeEv()};
-    let mut ret = unsafe {_ZNK25QGraphicsSceneResizeEvent7newSizeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK25QGraphicsSceneResizeEvent7newSizeEv(rsthis.qclsinst)};
     let mut ret1 = QSizeF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -2277,7 +2039,7 @@ impl<'a> /*trait*/ QGraphicsSceneResizeEvent_oldSize<QSizeF> for () {
   fn oldSize(self , rsthis: & QGraphicsSceneResizeEvent) -> QSizeF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK25QGraphicsSceneResizeEvent7oldSizeEv()};
-    let mut ret = unsafe {_ZNK25QGraphicsSceneResizeEvent7oldSizeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK25QGraphicsSceneResizeEvent7oldSizeEv(rsthis.qclsinst)};
     let mut ret1 = QSizeF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -2301,7 +2063,7 @@ impl<'a> /*trait*/ QGraphicsSceneResizeEvent_free<()> for () {
   fn free(self , rsthis: & QGraphicsSceneResizeEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN25QGraphicsSceneResizeEventD2Ev()};
-     unsafe {_ZN25QGraphicsSceneResizeEventD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN25QGraphicsSceneResizeEventD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -2324,7 +2086,7 @@ impl<'a> /*trait*/ QGraphicsSceneResizeEvent_setNewSize<()> for (&'a QSizeF) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN25QGraphicsSceneResizeEvent10setNewSizeERK6QSizeF()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN25QGraphicsSceneResizeEvent10setNewSizeERK6QSizeF(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN25QGraphicsSceneResizeEvent10setNewSizeERK6QSizeF(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -2349,8 +2111,7 @@ impl<'a> /*trait*/ QGraphicsSceneResizeEvent_new for () {
     // unsafe{_ZN25QGraphicsSceneResizeEventC2Ev()};
     let ctysz: c_int = unsafe{QGraphicsSceneResizeEvent_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    unsafe {_ZN25QGraphicsSceneResizeEventC2Ev(qthis_ph)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN25QGraphicsSceneResizeEventC2Ev()};
     let rsthis = QGraphicsSceneResizeEvent{qbase: QGraphicsSceneEvent::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -2375,23 +2136,7 @@ impl<'a> /*trait*/ QGraphicsSceneResizeEvent_setOldSize<()> for (&'a QSizeF) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN25QGraphicsSceneResizeEvent10setOldSizeERK6QSizeF()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN25QGraphicsSceneResizeEvent10setOldSizeERK6QSizeF(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QGraphicsSceneResizeEvent::QGraphicsSceneResizeEvent(const QGraphicsSceneResizeEvent & );
-impl<'a> /*trait*/ QGraphicsSceneResizeEvent_new for (&'a QGraphicsSceneResizeEvent) {
-  fn new(self) -> QGraphicsSceneResizeEvent {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN25QGraphicsSceneResizeEventC2ERKS_()};
-    let ctysz: c_int = unsafe{QGraphicsSceneResizeEvent_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN25QGraphicsSceneResizeEventC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QGraphicsSceneResizeEvent{qbase: QGraphicsSceneEvent::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
+     unsafe {C_ZN25QGraphicsSceneResizeEvent10setOldSizeERK6QSizeF(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

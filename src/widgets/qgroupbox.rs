@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtWidgets/qgroupbox.h
 // dst-file: /src/widgets/qgroupbox.rs
 //
@@ -20,6 +20,7 @@ use self::libc::*;
 // use block begin =>
 use super::qwidget::QWidget; // 773
 use std::ops::Deref;
+use super::super::core::qobjectdefs::QMetaObject; // 771
 use super::super::core::qsize::QSize; // 771
 use super::super::core::qstring::QString; // 771
 // <= use block end
@@ -33,35 +34,33 @@ use super::super::core::qstring::QString; // 771
 extern {
   fn QGroupBox_Class_Size() -> c_int;
   // proto:  bool QGroupBox::isCheckable();
-  fn _ZNK9QGroupBox11isCheckableEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK9QGroupBox11isCheckableEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QGroupBox::setCheckable(bool checkable);
-  fn _ZN9QGroupBox12setCheckableEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN9QGroupBox12setCheckableEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  const QMetaObject * QGroupBox::metaObject();
-  fn _ZNK9QGroupBox10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK9QGroupBox10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QGroupBox::isFlat();
-  fn _ZNK9QGroupBox6isFlatEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK9QGroupBox6isFlatEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QSize QGroupBox::minimumSizeHint();
-  fn _ZNK9QGroupBox15minimumSizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK9QGroupBox15minimumSizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QGroupBox::setFlat(bool flat);
-  fn _ZN9QGroupBox7setFlatEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN9QGroupBox7setFlatEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QGroupBox::~QGroupBox();
-  fn _ZN9QGroupBoxD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN9QGroupBoxD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QGroupBox::QGroupBox(QWidget * parent);
-  fn _ZN9QGroupBoxC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QGroupBoxC2EP7QWidget(arg0: *mut c_void) -> u64;
   // proto:  bool QGroupBox::isChecked();
-  fn _ZNK9QGroupBox9isCheckedEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK9QGroupBox9isCheckedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QGroupBox::setChecked(bool checked);
-  fn _ZN9QGroupBox10setCheckedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
-  // proto:  void QGroupBox::QGroupBox(const QGroupBox & );
-  fn _ZN9QGroupBoxC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QGroupBox10setCheckedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QString QGroupBox::title();
-  fn _ZNK9QGroupBox5titleEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK9QGroupBox5titleEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QGroupBox::setAlignment(int alignment);
-  fn _ZN9QGroupBox12setAlignmentEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN9QGroupBox12setAlignmentEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QGroupBox::setTitle(const QString & title);
-  fn _ZN9QGroupBox8setTitleERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QGroupBox8setTitleERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGroupBox::QGroupBox(const QString & title, QWidget * parent);
-  fn _ZN9QGroupBoxC2ERK7QStringP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN9QGroupBoxC2ERK7QStringP7QWidget(arg0: *mut c_void, arg1: *mut c_void) -> u64;
   fn QGroupBox_SlotProxy_connect__ZN9QGroupBox7clickedEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QGroupBox_SlotProxy_connect__ZN9QGroupBox7toggledEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
@@ -110,7 +109,7 @@ impl<'a> /*trait*/ QGroupBox_isCheckable<i8> for () {
   fn isCheckable(self , rsthis: & QGroupBox) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QGroupBox11isCheckableEv()};
-    let mut ret = unsafe {_ZNK9QGroupBox11isCheckableEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QGroupBox11isCheckableEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -134,7 +133,7 @@ impl<'a> /*trait*/ QGroupBox_setCheckable<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QGroupBox12setCheckableEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN9QGroupBox12setCheckableEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QGroupBox12setCheckableEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -152,11 +151,13 @@ pub trait QGroupBox_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QGroupBox::metaObject();
-impl<'a> /*trait*/ QGroupBox_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QGroupBox) -> () {
+impl<'a> /*trait*/ QGroupBox_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QGroupBox) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QGroupBox10metaObjectEv()};
-     unsafe {_ZNK9QGroupBox10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QGroupBox10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -178,7 +179,7 @@ impl<'a> /*trait*/ QGroupBox_isFlat<i8> for () {
   fn isFlat(self , rsthis: & QGroupBox) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QGroupBox6isFlatEv()};
-    let mut ret = unsafe {_ZNK9QGroupBox6isFlatEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QGroupBox6isFlatEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -201,7 +202,7 @@ impl<'a> /*trait*/ QGroupBox_minimumSizeHint<QSize> for () {
   fn minimumSizeHint(self , rsthis: & QGroupBox) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QGroupBox15minimumSizeHintEv()};
-    let mut ret = unsafe {_ZNK9QGroupBox15minimumSizeHintEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QGroupBox15minimumSizeHintEv(rsthis.qclsinst)};
     let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -226,7 +227,7 @@ impl<'a> /*trait*/ QGroupBox_setFlat<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QGroupBox7setFlatEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN9QGroupBox7setFlatEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QGroupBox7setFlatEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -248,7 +249,7 @@ impl<'a> /*trait*/ QGroupBox_free<()> for () {
   fn free(self , rsthis: & QGroupBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QGroupBoxD2Ev()};
-     unsafe {_ZN9QGroupBoxD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN9QGroupBoxD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -274,8 +275,7 @@ impl<'a> /*trait*/ QGroupBox_new for (&'a QWidget) {
     let ctysz: c_int = unsafe{QGroupBox_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN9QGroupBoxC2EP7QWidget(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN9QGroupBoxC2EP7QWidget(arg0)};
     let rsthis = QGroupBox{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -299,7 +299,7 @@ impl<'a> /*trait*/ QGroupBox_isChecked<i8> for () {
   fn isChecked(self , rsthis: & QGroupBox) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QGroupBox9isCheckedEv()};
-    let mut ret = unsafe {_ZNK9QGroupBox9isCheckedEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QGroupBox9isCheckedEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -323,23 +323,7 @@ impl<'a> /*trait*/ QGroupBox_setChecked<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QGroupBox10setCheckedEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN9QGroupBox10setCheckedEb(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QGroupBox::QGroupBox(const QGroupBox & );
-impl<'a> /*trait*/ QGroupBox_new for (&'a QGroupBox) {
-  fn new(self) -> QGroupBox {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QGroupBoxC2ERKS_()};
-    let ctysz: c_int = unsafe{QGroupBox_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN9QGroupBoxC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QGroupBox{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
+     unsafe {C_ZN9QGroupBox10setCheckedEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -361,7 +345,7 @@ impl<'a> /*trait*/ QGroupBox_title<QString> for () {
   fn title(self , rsthis: & QGroupBox) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QGroupBox5titleEv()};
-    let mut ret = unsafe {_ZNK9QGroupBox5titleEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QGroupBox5titleEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -386,7 +370,7 @@ impl<'a> /*trait*/ QGroupBox_setAlignment<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QGroupBox12setAlignmentEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN9QGroupBox12setAlignmentEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QGroupBox12setAlignmentEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -409,7 +393,7 @@ impl<'a> /*trait*/ QGroupBox_setTitle<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QGroupBox8setTitleERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN9QGroupBox8setTitleERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QGroupBox8setTitleERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -423,8 +407,7 @@ impl<'a> /*trait*/ QGroupBox_new for (&'a QString, &'a QWidget) {
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    unsafe {_ZN9QGroupBoxC2ERK7QStringP7QWidget(qthis_ph, arg0, arg1)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN9QGroupBoxC2ERK7QStringP7QWidget(arg0, arg1)};
     let rsthis = QGroupBox{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtWidgets/qlistwidget.h
 // dst-file: /src/widgets/qlistwidget.rs
 //
@@ -34,6 +34,7 @@ use super::super::gui::qevent::QDropEvent; // 771
 use super::qwidget::QWidget; // 773
 use super::super::core::qpoint::QPoint; // 771
 use super::super::core::qstringlist::QStringList; // 771
+use super::super::core::qobjectdefs::QMetaObject; // 771
 use super::super::core::qrect::QRect; // 771
 // <= use block end
 
@@ -46,158 +47,156 @@ use super::super::core::qrect::QRect; // 771
 extern {
   fn QListWidgetItem_Class_Size() -> c_int;
   // proto:  void QListWidgetItem::~QListWidgetItem();
-  fn _ZN15QListWidgetItemD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN15QListWidgetItemD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QListWidgetItem::isHidden();
-  fn _ZNK15QListWidgetItem8isHiddenEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK15QListWidgetItem8isHiddenEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QListWidgetItem::setData(int role, const QVariant & value);
-  fn _ZN15QListWidgetItem7setDataEiRK8QVariant(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
+  fn C_ZN15QListWidgetItem7setDataEiRK8QVariant(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  void QListWidgetItem::setBackground(const QBrush & brush);
-  fn _ZN15QListWidgetItem13setBackgroundERK6QBrush(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN15QListWidgetItem13setBackgroundERK6QBrush(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QListWidgetItem::setSelected(bool select);
-  fn _ZN15QListWidgetItem11setSelectedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN15QListWidgetItem11setSelectedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QFont QListWidgetItem::font();
-  fn _ZNK15QListWidgetItem4fontEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK15QListWidgetItem4fontEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QListWidgetItem::setTextAlignment(int alignment);
-  fn _ZN15QListWidgetItem16setTextAlignmentEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN15QListWidgetItem16setTextAlignmentEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QListWidgetItem::QListWidgetItem(QListWidget * view, int type);
-  fn _ZN15QListWidgetItemC2EP11QListWidgeti(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
+  fn C_ZN15QListWidgetItemC2EP11QListWidgeti(arg0: *mut c_void, arg1: c_int) -> u64;
   // proto:  void QListWidgetItem::write(QDataStream & out);
-  fn _ZNK15QListWidgetItem5writeER11QDataStream(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK15QListWidgetItem5writeER11QDataStream(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QString QListWidgetItem::whatsThis();
-  fn _ZNK15QListWidgetItem9whatsThisEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK15QListWidgetItem9whatsThisEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QListWidgetItem::type();
-  fn _ZNK15QListWidgetItem4typeEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK15QListWidgetItem4typeEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QListWidgetItem::QListWidgetItem(const QIcon & icon, const QString & text, QListWidget * view, int type);
-  fn _ZN15QListWidgetItemC2ERK5QIconRK7QStringP11QListWidgeti(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: c_int);
+  fn C_ZN15QListWidgetItemC2ERK5QIconRK7QStringP11QListWidgeti(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: c_int) -> u64;
   // proto:  QIcon QListWidgetItem::icon();
-  fn _ZNK15QListWidgetItem4iconEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK15QListWidgetItem4iconEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QColor QListWidgetItem::textColor();
-  fn _ZNK15QListWidgetItem9textColorEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK15QListWidgetItem9textColorEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QBrush QListWidgetItem::foreground();
-  fn _ZNK15QListWidgetItem10foregroundEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK15QListWidgetItem10foregroundEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QBrush QListWidgetItem::background();
-  fn _ZNK15QListWidgetItem10backgroundEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK15QListWidgetItem10backgroundEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QListWidgetItem::setStatusTip(const QString & statusTip);
-  fn _ZN15QListWidgetItem12setStatusTipERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN15QListWidgetItem12setStatusTipERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QString QListWidgetItem::text();
-  fn _ZNK15QListWidgetItem4textEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK15QListWidgetItem4textEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QColor QListWidgetItem::backgroundColor();
-  fn _ZNK15QListWidgetItem15backgroundColorEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK15QListWidgetItem15backgroundColorEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QListWidgetItem::isSelected();
-  fn _ZNK15QListWidgetItem10isSelectedEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK15QListWidgetItem10isSelectedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QListWidgetItem::setFont(const QFont & font);
-  fn _ZN15QListWidgetItem7setFontERK5QFont(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN15QListWidgetItem7setFontERK5QFont(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QListWidgetItem::setText(const QString & text);
-  fn _ZN15QListWidgetItem7setTextERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN15QListWidgetItem7setTextERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QListWidgetItem::QListWidgetItem(const QString & text, QListWidget * view, int type);
-  fn _ZN15QListWidgetItemC2ERK7QStringP11QListWidgeti(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: c_int);
+  fn C_ZN15QListWidgetItemC2ERK7QStringP11QListWidgeti(arg0: *mut c_void, arg1: *mut c_void, arg2: c_int) -> u64;
   // proto:  QVariant QListWidgetItem::data(int role);
-  fn _ZNK15QListWidgetItem4dataEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
+  fn C_ZNK15QListWidgetItem4dataEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  QSize QListWidgetItem::sizeHint();
-  fn _ZNK15QListWidgetItem8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK15QListWidgetItem8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QListWidgetItem::setWhatsThis(const QString & whatsThis);
-  fn _ZN15QListWidgetItem12setWhatsThisERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN15QListWidgetItem12setWhatsThisERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QListWidgetItem::read(QDataStream & in);
-  fn _ZN15QListWidgetItem4readER11QDataStream(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN15QListWidgetItem4readER11QDataStream(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QListWidgetItem::setTextColor(const QColor & color);
-  fn _ZN15QListWidgetItem12setTextColorERK6QColor(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN15QListWidgetItem12setTextColorERK6QColor(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QListWidgetItem::setSizeHint(const QSize & size);
-  fn _ZN15QListWidgetItem11setSizeHintERK5QSize(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN15QListWidgetItem11setSizeHintERK5QSize(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QListWidget * QListWidgetItem::listWidget();
-  fn _ZNK15QListWidgetItem10listWidgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK15QListWidgetItem10listWidgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QListWidgetItem::setIcon(const QIcon & icon);
-  fn _ZN15QListWidgetItem7setIconERK5QIcon(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN15QListWidgetItem7setIconERK5QIcon(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QListWidgetItem * QListWidgetItem::clone();
-  fn _ZNK15QListWidgetItem5cloneEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK15QListWidgetItem5cloneEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QListWidgetItem::setBackgroundColor(const QColor & color);
-  fn _ZN15QListWidgetItem18setBackgroundColorERK6QColor(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN15QListWidgetItem18setBackgroundColorERK6QColor(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QListWidgetItem::setForeground(const QBrush & brush);
-  fn _ZN15QListWidgetItem13setForegroundERK6QBrush(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN15QListWidgetItem13setForegroundERK6QBrush(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QListWidgetItem::QListWidgetItem(const QListWidgetItem & other);
-  fn _ZN15QListWidgetItemC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN15QListWidgetItemC2ERKS_(arg0: *mut c_void) -> u64;
   // proto:  void QListWidgetItem::setHidden(bool hide);
-  fn _ZN15QListWidgetItem9setHiddenEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN15QListWidgetItem9setHiddenEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QString QListWidgetItem::toolTip();
-  fn _ZNK15QListWidgetItem7toolTipEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK15QListWidgetItem7toolTipEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QListWidgetItem::textAlignment();
-  fn _ZNK15QListWidgetItem13textAlignmentEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK15QListWidgetItem13textAlignmentEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  QString QListWidgetItem::statusTip();
-  fn _ZNK15QListWidgetItem9statusTipEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK15QListWidgetItem9statusTipEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QListWidgetItem::setToolTip(const QString & toolTip);
-  fn _ZN15QListWidgetItem10setToolTipERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN15QListWidgetItem10setToolTipERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QListWidget_Class_Size() -> c_int;
   // proto:  void QListWidget::dropEvent(QDropEvent * event);
-  fn _ZN11QListWidget9dropEventEP10QDropEvent(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QListWidget9dropEventEP10QDropEvent(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QWidget * QListWidget::itemWidget(QListWidgetItem * item);
-  fn _ZNK11QListWidget10itemWidgetEP15QListWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZNK11QListWidget10itemWidgetEP15QListWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QListWidget::QListWidget(QWidget * parent);
-  fn _ZN11QListWidgetC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QListWidgetC2EP7QWidget(arg0: *mut c_void) -> u64;
   // proto:  int QListWidget::currentRow();
-  fn _ZNK11QListWidget10currentRowEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK11QListWidget10currentRowEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  QListWidgetItem * QListWidget::item(int row);
-  fn _ZNK11QListWidget4itemEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
+  fn C_ZNK11QListWidget4itemEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  QListWidgetItem * QListWidget::itemAt(const QPoint & p);
-  fn _ZNK11QListWidget6itemAtERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZNK11QListWidget6itemAtERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QListWidget::insertItem(int row, const QString & label);
-  fn _ZN11QListWidget10insertItemEiRK7QString(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
+  fn C_ZN11QListWidget10insertItemEiRK7QString(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  int QListWidget::row(const QListWidgetItem * item);
-  fn _ZNK11QListWidget3rowEPK15QListWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
+  fn C_ZNK11QListWidget3rowEPK15QListWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
   // proto:  void QListWidget::openPersistentEditor(QListWidgetItem * item);
-  fn _ZN11QListWidget20openPersistentEditorEP15QListWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QListWidget20openPersistentEditorEP15QListWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QListWidget::clear();
-  fn _ZN11QListWidget5clearEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN11QListWidget5clearEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QListWidget::editItem(QListWidgetItem * item);
-  fn _ZN11QListWidget8editItemEP15QListWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QListWidget8editItemEP15QListWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QListWidget::count();
-  fn _ZNK11QListWidget5countEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK11QListWidget5countEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QListWidget::setItemHidden(const QListWidgetItem * item, bool hide);
-  fn _ZN11QListWidget13setItemHiddenEPK15QListWidgetItemb(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_char);
+  fn C_ZN11QListWidget13setItemHiddenEPK15QListWidgetItemb(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_char);
   // proto:  void QListWidget::~QListWidget();
-  fn _ZN11QListWidgetD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN11QListWidgetD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QListWidget::addItem(QListWidgetItem * item);
-  fn _ZN11QListWidget7addItemEP15QListWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QListWidget7addItemEP15QListWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QListWidgetItem * QListWidget::takeItem(int row);
-  fn _ZN11QListWidget8takeItemEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
+  fn C_ZN11QListWidget8takeItemEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  bool QListWidget::isSortingEnabled();
-  fn _ZNK11QListWidget16isSortingEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK11QListWidget16isSortingEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QListWidget::addItems(const QStringList & labels);
-  fn _ZN11QListWidget8addItemsERK11QStringList(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QListWidget8addItemsERK11QStringList(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QList<QListWidgetItem *> QListWidget::selectedItems();
-  fn _ZNK11QListWidget13selectedItemsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK11QListWidget13selectedItemsEv(qthis: u64 /* *mut c_void*/);
   // proto:  const QMetaObject * QListWidget::metaObject();
-  fn _ZNK11QListWidget10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK11QListWidget10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QListWidget::setItemSelected(const QListWidgetItem * item, bool select);
-  fn _ZN11QListWidget15setItemSelectedEPK15QListWidgetItemb(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_char);
+  fn C_ZN11QListWidget15setItemSelectedEPK15QListWidgetItemb(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_char);
   // proto:  void QListWidget::insertItem(int row, QListWidgetItem * item);
-  fn _ZN11QListWidget10insertItemEiP15QListWidgetItem(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
+  fn C_ZN11QListWidget10insertItemEiP15QListWidgetItem(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  void QListWidget::setCurrentRow(int row);
-  fn _ZN11QListWidget13setCurrentRowEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN11QListWidget13setCurrentRowEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QListWidget::setSortingEnabled(bool enable);
-  fn _ZN11QListWidget17setSortingEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN11QListWidget17setSortingEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QRect QListWidget::visualItemRect(const QListWidgetItem * item);
-  fn _ZNK11QListWidget14visualItemRectEPK15QListWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZNK11QListWidget14visualItemRectEPK15QListWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QListWidget::removeItemWidget(QListWidgetItem * item);
-  fn _ZN11QListWidget16removeItemWidgetEP15QListWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QListWidget16removeItemWidgetEP15QListWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QListWidget::closePersistentEditor(QListWidgetItem * item);
-  fn _ZN11QListWidget21closePersistentEditorEP15QListWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QListWidget21closePersistentEditorEP15QListWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QListWidget::isItemHidden(const QListWidgetItem * item);
-  fn _ZNK11QListWidget12isItemHiddenEPK15QListWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
+  fn C_ZNK11QListWidget12isItemHiddenEPK15QListWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  QListWidgetItem * QListWidget::itemAt(int x, int y);
-  fn _ZNK11QListWidget6itemAtEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> *mut c_void;
+  fn C_ZNK11QListWidget6itemAtEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> *mut c_void;
   // proto:  void QListWidget::addItem(const QString & label);
-  fn _ZN11QListWidget7addItemERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QListWidget7addItemERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QListWidget::insertItems(int row, const QStringList & labels);
-  fn _ZN11QListWidget11insertItemsEiRK11QStringList(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
+  fn C_ZN11QListWidget11insertItemsEiRK11QStringList(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  QListWidgetItem * QListWidget::currentItem();
-  fn _ZNK11QListWidget11currentItemEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK11QListWidget11currentItemEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QListWidget::setCurrentItem(QListWidgetItem * item);
-  fn _ZN11QListWidget14setCurrentItemEP15QListWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QListWidget14setCurrentItemEP15QListWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QListWidget::setItemWidget(QListWidgetItem * item, QWidget * widget);
-  fn _ZN11QListWidget13setItemWidgetEP15QListWidgetItemP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN11QListWidget13setItemWidgetEP15QListWidgetItemP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  bool QListWidget::isItemSelected(const QListWidgetItem * item);
-  fn _ZNK11QListWidget14isItemSelectedEPK15QListWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
-  // proto:  void QListWidget::QListWidget(const QListWidget & );
-  fn _ZN11QListWidgetC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK11QListWidget14isItemSelectedEPK15QListWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   fn QListWidget_SlotProxy_connect__ZN11QListWidget17itemDoubleClickedEP15QListWidgetItem(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QListWidget_SlotProxy_connect__ZN11QListWidget11itemEnteredEP15QListWidgetItem(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QListWidget_SlotProxy_connect__ZN11QListWidget11itemClickedEP15QListWidgetItem(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
@@ -257,7 +256,7 @@ impl<'a> /*trait*/ QListWidgetItem_free<()> for () {
   fn free(self , rsthis: & QListWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QListWidgetItemD2Ev()};
-     unsafe {_ZN15QListWidgetItemD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN15QListWidgetItemD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -279,7 +278,7 @@ impl<'a> /*trait*/ QListWidgetItem_isHidden<i8> for () {
   fn isHidden(self , rsthis: & QListWidgetItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QListWidgetItem8isHiddenEv()};
-    let mut ret = unsafe {_ZNK15QListWidgetItem8isHiddenEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QListWidgetItem8isHiddenEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -304,7 +303,7 @@ impl<'a> /*trait*/ QListWidgetItem_setData<()> for (i32, &'a QVariant) {
     // unsafe{_ZN15QListWidgetItem7setDataEiRK8QVariant()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN15QListWidgetItem7setDataEiRK8QVariant(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN15QListWidgetItem7setDataEiRK8QVariant(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -327,7 +326,7 @@ impl<'a> /*trait*/ QListWidgetItem_setBackground<()> for (&'a QBrush) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QListWidgetItem13setBackgroundERK6QBrush()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN15QListWidgetItem13setBackgroundERK6QBrush(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QListWidgetItem13setBackgroundERK6QBrush(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -350,7 +349,7 @@ impl<'a> /*trait*/ QListWidgetItem_setSelected<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QListWidgetItem11setSelectedEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN15QListWidgetItem11setSelectedEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QListWidgetItem11setSelectedEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -372,7 +371,7 @@ impl<'a> /*trait*/ QListWidgetItem_font<QFont> for () {
   fn font(self , rsthis: & QListWidgetItem) -> QFont {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QListWidgetItem4fontEv()};
-    let mut ret = unsafe {_ZNK15QListWidgetItem4fontEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QListWidgetItem4fontEv(rsthis.qclsinst)};
     let mut ret1 = QFont::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -397,7 +396,7 @@ impl<'a> /*trait*/ QListWidgetItem_setTextAlignment<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QListWidgetItem16setTextAlignmentEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN15QListWidgetItem16setTextAlignmentEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QListWidgetItem16setTextAlignmentEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -424,8 +423,7 @@ impl<'a> /*trait*/ QListWidgetItem_new for (&'a QListWidget, i32) {
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
-    unsafe {_ZN15QListWidgetItemC2EP11QListWidgeti(qthis_ph, arg0, arg1)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN15QListWidgetItemC2EP11QListWidgeti(arg0, arg1)};
     let rsthis = QListWidgetItem{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -450,7 +448,7 @@ impl<'a> /*trait*/ QListWidgetItem_write<()> for (&'a QDataStream) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QListWidgetItem5writeER11QDataStream()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZNK15QListWidgetItem5writeER11QDataStream(rsthis.qclsinst, arg0)};
+     unsafe {C_ZNK15QListWidgetItem5writeER11QDataStream(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -472,7 +470,7 @@ impl<'a> /*trait*/ QListWidgetItem_whatsThis<QString> for () {
   fn whatsThis(self , rsthis: & QListWidgetItem) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QListWidgetItem9whatsThisEv()};
-    let mut ret = unsafe {_ZNK15QListWidgetItem9whatsThisEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QListWidgetItem9whatsThisEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -496,7 +494,7 @@ impl<'a> /*trait*/ QListWidgetItem_type_<i32> for () {
   fn type_(self , rsthis: & QListWidgetItem) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QListWidgetItem4typeEv()};
-    let mut ret = unsafe {_ZNK15QListWidgetItem4typeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QListWidgetItem4typeEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -513,8 +511,7 @@ impl<'a> /*trait*/ QListWidgetItem_new for (&'a QIcon, &'a QString, &'a QListWid
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let arg3 = self.3  as c_int;
-    unsafe {_ZN15QListWidgetItemC2ERK5QIconRK7QStringP11QListWidgeti(qthis_ph, arg0, arg1, arg2, arg3)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN15QListWidgetItemC2ERK5QIconRK7QStringP11QListWidgeti(arg0, arg1, arg2, arg3)};
     let rsthis = QListWidgetItem{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -538,7 +535,7 @@ impl<'a> /*trait*/ QListWidgetItem_icon<QIcon> for () {
   fn icon(self , rsthis: & QListWidgetItem) -> QIcon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QListWidgetItem4iconEv()};
-    let mut ret = unsafe {_ZNK15QListWidgetItem4iconEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QListWidgetItem4iconEv(rsthis.qclsinst)};
     let mut ret1 = QIcon::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -562,7 +559,7 @@ impl<'a> /*trait*/ QListWidgetItem_textColor<QColor> for () {
   fn textColor(self , rsthis: & QListWidgetItem) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QListWidgetItem9textColorEv()};
-    let mut ret = unsafe {_ZNK15QListWidgetItem9textColorEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QListWidgetItem9textColorEv(rsthis.qclsinst)};
     let mut ret1 = QColor::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -586,7 +583,7 @@ impl<'a> /*trait*/ QListWidgetItem_foreground<QBrush> for () {
   fn foreground(self , rsthis: & QListWidgetItem) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QListWidgetItem10foregroundEv()};
-    let mut ret = unsafe {_ZNK15QListWidgetItem10foregroundEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QListWidgetItem10foregroundEv(rsthis.qclsinst)};
     let mut ret1 = QBrush::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -610,7 +607,7 @@ impl<'a> /*trait*/ QListWidgetItem_background<QBrush> for () {
   fn background(self , rsthis: & QListWidgetItem) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QListWidgetItem10backgroundEv()};
-    let mut ret = unsafe {_ZNK15QListWidgetItem10backgroundEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QListWidgetItem10backgroundEv(rsthis.qclsinst)};
     let mut ret1 = QBrush::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -635,7 +632,7 @@ impl<'a> /*trait*/ QListWidgetItem_setStatusTip<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QListWidgetItem12setStatusTipERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN15QListWidgetItem12setStatusTipERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QListWidgetItem12setStatusTipERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -657,7 +654,7 @@ impl<'a> /*trait*/ QListWidgetItem_text<QString> for () {
   fn text(self , rsthis: & QListWidgetItem) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QListWidgetItem4textEv()};
-    let mut ret = unsafe {_ZNK15QListWidgetItem4textEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QListWidgetItem4textEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -681,7 +678,7 @@ impl<'a> /*trait*/ QListWidgetItem_backgroundColor<QColor> for () {
   fn backgroundColor(self , rsthis: & QListWidgetItem) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QListWidgetItem15backgroundColorEv()};
-    let mut ret = unsafe {_ZNK15QListWidgetItem15backgroundColorEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QListWidgetItem15backgroundColorEv(rsthis.qclsinst)};
     let mut ret1 = QColor::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -705,7 +702,7 @@ impl<'a> /*trait*/ QListWidgetItem_isSelected<i8> for () {
   fn isSelected(self , rsthis: & QListWidgetItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QListWidgetItem10isSelectedEv()};
-    let mut ret = unsafe {_ZNK15QListWidgetItem10isSelectedEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QListWidgetItem10isSelectedEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -729,7 +726,7 @@ impl<'a> /*trait*/ QListWidgetItem_setFont<()> for (&'a QFont) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QListWidgetItem7setFontERK5QFont()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN15QListWidgetItem7setFontERK5QFont(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QListWidgetItem7setFontERK5QFont(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -752,7 +749,7 @@ impl<'a> /*trait*/ QListWidgetItem_setText<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QListWidgetItem7setTextERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN15QListWidgetItem7setTextERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QListWidgetItem7setTextERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -767,8 +764,7 @@ impl<'a> /*trait*/ QListWidgetItem_new for (&'a QString, &'a QListWidget, i32) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2  as c_int;
-    unsafe {_ZN15QListWidgetItemC2ERK7QStringP11QListWidgeti(qthis_ph, arg0, arg1, arg2)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN15QListWidgetItemC2ERK7QStringP11QListWidgeti(arg0, arg1, arg2)};
     let rsthis = QListWidgetItem{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -793,7 +789,7 @@ impl<'a> /*trait*/ QListWidgetItem_data<QVariant> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QListWidgetItem4dataEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZNK15QListWidgetItem4dataEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK15QListWidgetItem4dataEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QVariant::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -817,7 +813,7 @@ impl<'a> /*trait*/ QListWidgetItem_sizeHint<QSize> for () {
   fn sizeHint(self , rsthis: & QListWidgetItem) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QListWidgetItem8sizeHintEv()};
-    let mut ret = unsafe {_ZNK15QListWidgetItem8sizeHintEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QListWidgetItem8sizeHintEv(rsthis.qclsinst)};
     let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -842,7 +838,7 @@ impl<'a> /*trait*/ QListWidgetItem_setWhatsThis<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QListWidgetItem12setWhatsThisERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN15QListWidgetItem12setWhatsThisERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QListWidgetItem12setWhatsThisERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -865,7 +861,7 @@ impl<'a> /*trait*/ QListWidgetItem_read<()> for (&'a QDataStream) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QListWidgetItem4readER11QDataStream()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN15QListWidgetItem4readER11QDataStream(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QListWidgetItem4readER11QDataStream(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -888,7 +884,7 @@ impl<'a> /*trait*/ QListWidgetItem_setTextColor<()> for (&'a QColor) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QListWidgetItem12setTextColorERK6QColor()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN15QListWidgetItem12setTextColorERK6QColor(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QListWidgetItem12setTextColorERK6QColor(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -911,7 +907,7 @@ impl<'a> /*trait*/ QListWidgetItem_setSizeHint<()> for (&'a QSize) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QListWidgetItem11setSizeHintERK5QSize()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN15QListWidgetItem11setSizeHintERK5QSize(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QListWidgetItem11setSizeHintERK5QSize(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -933,7 +929,7 @@ impl<'a> /*trait*/ QListWidgetItem_listWidget<QListWidget> for () {
   fn listWidget(self , rsthis: & QListWidgetItem) -> QListWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QListWidgetItem10listWidgetEv()};
-    let mut ret = unsafe {_ZNK15QListWidgetItem10listWidgetEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QListWidgetItem10listWidgetEv(rsthis.qclsinst)};
     let mut ret1 = QListWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -958,7 +954,7 @@ impl<'a> /*trait*/ QListWidgetItem_setIcon<()> for (&'a QIcon) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QListWidgetItem7setIconERK5QIcon()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN15QListWidgetItem7setIconERK5QIcon(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QListWidgetItem7setIconERK5QIcon(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -980,7 +976,7 @@ impl<'a> /*trait*/ QListWidgetItem_clone<QListWidgetItem> for () {
   fn clone(self , rsthis: & QListWidgetItem) -> QListWidgetItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QListWidgetItem5cloneEv()};
-    let mut ret = unsafe {_ZNK15QListWidgetItem5cloneEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QListWidgetItem5cloneEv(rsthis.qclsinst)};
     let mut ret1 = QListWidgetItem::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1005,7 +1001,7 @@ impl<'a> /*trait*/ QListWidgetItem_setBackgroundColor<()> for (&'a QColor) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QListWidgetItem18setBackgroundColorERK6QColor()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN15QListWidgetItem18setBackgroundColorERK6QColor(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QListWidgetItem18setBackgroundColorERK6QColor(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1028,7 +1024,7 @@ impl<'a> /*trait*/ QListWidgetItem_setForeground<()> for (&'a QBrush) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QListWidgetItem13setForegroundERK6QBrush()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN15QListWidgetItem13setForegroundERK6QBrush(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QListWidgetItem13setForegroundERK6QBrush(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1041,8 +1037,7 @@ impl<'a> /*trait*/ QListWidgetItem_new for (&'a QListWidgetItem) {
     let ctysz: c_int = unsafe{QListWidgetItem_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN15QListWidgetItemC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN15QListWidgetItemC2ERKS_(arg0)};
     let rsthis = QListWidgetItem{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1067,7 +1062,7 @@ impl<'a> /*trait*/ QListWidgetItem_setHidden<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QListWidgetItem9setHiddenEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN15QListWidgetItem9setHiddenEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QListWidgetItem9setHiddenEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1089,7 +1084,7 @@ impl<'a> /*trait*/ QListWidgetItem_toolTip<QString> for () {
   fn toolTip(self , rsthis: & QListWidgetItem) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QListWidgetItem7toolTipEv()};
-    let mut ret = unsafe {_ZNK15QListWidgetItem7toolTipEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QListWidgetItem7toolTipEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1113,7 +1108,7 @@ impl<'a> /*trait*/ QListWidgetItem_textAlignment<i32> for () {
   fn textAlignment(self , rsthis: & QListWidgetItem) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QListWidgetItem13textAlignmentEv()};
-    let mut ret = unsafe {_ZNK15QListWidgetItem13textAlignmentEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QListWidgetItem13textAlignmentEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -1136,7 +1131,7 @@ impl<'a> /*trait*/ QListWidgetItem_statusTip<QString> for () {
   fn statusTip(self , rsthis: & QListWidgetItem) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QListWidgetItem9statusTipEv()};
-    let mut ret = unsafe {_ZNK15QListWidgetItem9statusTipEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QListWidgetItem9statusTipEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1161,7 +1156,7 @@ impl<'a> /*trait*/ QListWidgetItem_setToolTip<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QListWidgetItem10setToolTipERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN15QListWidgetItem10setToolTipERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QListWidgetItem10setToolTipERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1201,7 +1196,7 @@ impl<'a> /*trait*/ QListWidget_dropEvent<()> for (&'a QDropEvent) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QListWidget9dropEventEP10QDropEvent()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QListWidget9dropEventEP10QDropEvent(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QListWidget9dropEventEP10QDropEvent(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1224,7 +1219,7 @@ impl<'a> /*trait*/ QListWidget_itemWidget<QWidget> for (&'a QListWidgetItem) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QListWidget10itemWidgetEP15QListWidgetItem()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK11QListWidget10itemWidgetEP15QListWidgetItem(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK11QListWidget10itemWidgetEP15QListWidgetItem(rsthis.qclsinst, arg0)};
     let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1252,8 +1247,7 @@ impl<'a> /*trait*/ QListWidget_new for (&'a QWidget) {
     let ctysz: c_int = unsafe{QListWidget_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QListWidgetC2EP7QWidget(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN11QListWidgetC2EP7QWidget(arg0)};
     let rsthis = QListWidget{qbase: QListView::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1277,7 +1271,7 @@ impl<'a> /*trait*/ QListWidget_currentRow<i32> for () {
   fn currentRow(self , rsthis: & QListWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QListWidget10currentRowEv()};
-    let mut ret = unsafe {_ZNK11QListWidget10currentRowEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QListWidget10currentRowEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -1301,7 +1295,7 @@ impl<'a> /*trait*/ QListWidget_item<QListWidgetItem> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QListWidget4itemEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZNK11QListWidget4itemEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK11QListWidget4itemEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QListWidgetItem::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1326,7 +1320,7 @@ impl<'a> /*trait*/ QListWidget_itemAt<QListWidgetItem> for (&'a QPoint) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QListWidget6itemAtERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK11QListWidget6itemAtERK6QPoint(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK11QListWidget6itemAtERK6QPoint(rsthis.qclsinst, arg0)};
     let mut ret1 = QListWidgetItem::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1352,7 +1346,7 @@ impl<'a> /*trait*/ QListWidget_insertItem<()> for (i32, &'a QString) {
     // unsafe{_ZN11QListWidget10insertItemEiRK7QString()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN11QListWidget10insertItemEiRK7QString(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN11QListWidget10insertItemEiRK7QString(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -1375,7 +1369,7 @@ impl<'a> /*trait*/ QListWidget_row<i32> for (&'a QListWidgetItem) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QListWidget3rowEPK15QListWidgetItem()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK11QListWidget3rowEPK15QListWidgetItem(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK11QListWidget3rowEPK15QListWidgetItem(rsthis.qclsinst, arg0)};
     return ret as i32;
     // return 1;
   }
@@ -1399,7 +1393,7 @@ impl<'a> /*trait*/ QListWidget_openPersistentEditor<()> for (&'a QListWidgetItem
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QListWidget20openPersistentEditorEP15QListWidgetItem()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QListWidget20openPersistentEditorEP15QListWidgetItem(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QListWidget20openPersistentEditorEP15QListWidgetItem(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1421,7 +1415,7 @@ impl<'a> /*trait*/ QListWidget_clear<()> for () {
   fn clear(self , rsthis: & QListWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QListWidget5clearEv()};
-     unsafe {_ZN11QListWidget5clearEv(rsthis.qclsinst)};
+     unsafe {C_ZN11QListWidget5clearEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1444,7 +1438,7 @@ impl<'a> /*trait*/ QListWidget_editItem<()> for (&'a QListWidgetItem) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QListWidget8editItemEP15QListWidgetItem()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QListWidget8editItemEP15QListWidgetItem(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QListWidget8editItemEP15QListWidgetItem(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1466,7 +1460,7 @@ impl<'a> /*trait*/ QListWidget_count<i32> for () {
   fn count(self , rsthis: & QListWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QListWidget5countEv()};
-    let mut ret = unsafe {_ZNK11QListWidget5countEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QListWidget5countEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -1491,7 +1485,7 @@ impl<'a> /*trait*/ QListWidget_setItemHidden<()> for (&'a QListWidgetItem, i8) {
     // unsafe{_ZN11QListWidget13setItemHiddenEPK15QListWidgetItemb()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_char;
-     unsafe {_ZN11QListWidget13setItemHiddenEPK15QListWidgetItemb(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN11QListWidget13setItemHiddenEPK15QListWidgetItemb(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -1513,7 +1507,7 @@ impl<'a> /*trait*/ QListWidget_free<()> for () {
   fn free(self , rsthis: & QListWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QListWidgetD2Ev()};
-     unsafe {_ZN11QListWidgetD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN11QListWidgetD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1536,7 +1530,7 @@ impl<'a> /*trait*/ QListWidget_addItem<()> for (&'a QListWidgetItem) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QListWidget7addItemEP15QListWidgetItem()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QListWidget7addItemEP15QListWidgetItem(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QListWidget7addItemEP15QListWidgetItem(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1559,7 +1553,7 @@ impl<'a> /*trait*/ QListWidget_takeItem<QListWidgetItem> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QListWidget8takeItemEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZN11QListWidget8takeItemEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN11QListWidget8takeItemEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QListWidgetItem::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1583,7 +1577,7 @@ impl<'a> /*trait*/ QListWidget_isSortingEnabled<i8> for () {
   fn isSortingEnabled(self , rsthis: & QListWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QListWidget16isSortingEnabledEv()};
-    let mut ret = unsafe {_ZNK11QListWidget16isSortingEnabledEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QListWidget16isSortingEnabledEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -1607,7 +1601,7 @@ impl<'a> /*trait*/ QListWidget_addItems<()> for (&'a QStringList) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QListWidget8addItemsERK11QStringList()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QListWidget8addItemsERK11QStringList(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QListWidget8addItemsERK11QStringList(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1629,7 +1623,7 @@ impl<'a> /*trait*/ QListWidget_selectedItems<()> for () {
   fn selectedItems(self , rsthis: & QListWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QListWidget13selectedItemsEv()};
-     unsafe {_ZNK11QListWidget13selectedItemsEv(rsthis.qclsinst)};
+     unsafe {C_ZNK11QListWidget13selectedItemsEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1647,11 +1641,13 @@ pub trait QListWidget_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QListWidget::metaObject();
-impl<'a> /*trait*/ QListWidget_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QListWidget) -> () {
+impl<'a> /*trait*/ QListWidget_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QListWidget) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QListWidget10metaObjectEv()};
-     unsafe {_ZNK11QListWidget10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QListWidget10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -1675,7 +1671,7 @@ impl<'a> /*trait*/ QListWidget_setItemSelected<()> for (&'a QListWidgetItem, i8)
     // unsafe{_ZN11QListWidget15setItemSelectedEPK15QListWidgetItemb()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_char;
-     unsafe {_ZN11QListWidget15setItemSelectedEPK15QListWidgetItemb(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN11QListWidget15setItemSelectedEPK15QListWidgetItemb(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -1687,7 +1683,7 @@ impl<'a> /*trait*/ QListWidget_insertItem<()> for (i32, &'a QListWidgetItem) {
     // unsafe{_ZN11QListWidget10insertItemEiP15QListWidgetItem()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN11QListWidget10insertItemEiP15QListWidgetItem(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN11QListWidget10insertItemEiP15QListWidgetItem(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -1710,7 +1706,7 @@ impl<'a> /*trait*/ QListWidget_setCurrentRow<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QListWidget13setCurrentRowEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN11QListWidget13setCurrentRowEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QListWidget13setCurrentRowEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1733,7 +1729,7 @@ impl<'a> /*trait*/ QListWidget_setSortingEnabled<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QListWidget17setSortingEnabledEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN11QListWidget17setSortingEnabledEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QListWidget17setSortingEnabledEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1756,7 +1752,7 @@ impl<'a> /*trait*/ QListWidget_visualItemRect<QRect> for (&'a QListWidgetItem) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QListWidget14visualItemRectEPK15QListWidgetItem()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK11QListWidget14visualItemRectEPK15QListWidgetItem(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK11QListWidget14visualItemRectEPK15QListWidgetItem(rsthis.qclsinst, arg0)};
     let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1781,7 +1777,7 @@ impl<'a> /*trait*/ QListWidget_removeItemWidget<()> for (&'a QListWidgetItem) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QListWidget16removeItemWidgetEP15QListWidgetItem()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QListWidget16removeItemWidgetEP15QListWidgetItem(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QListWidget16removeItemWidgetEP15QListWidgetItem(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1804,7 +1800,7 @@ impl<'a> /*trait*/ QListWidget_closePersistentEditor<()> for (&'a QListWidgetIte
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QListWidget21closePersistentEditorEP15QListWidgetItem()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QListWidget21closePersistentEditorEP15QListWidgetItem(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QListWidget21closePersistentEditorEP15QListWidgetItem(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1827,7 +1823,7 @@ impl<'a> /*trait*/ QListWidget_isItemHidden<i8> for (&'a QListWidgetItem) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QListWidget12isItemHiddenEPK15QListWidgetItem()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK11QListWidget12isItemHiddenEPK15QListWidgetItem(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK11QListWidget12isItemHiddenEPK15QListWidgetItem(rsthis.qclsinst, arg0)};
     return ret as i8;
     // return 1;
   }
@@ -1840,7 +1836,7 @@ impl<'a> /*trait*/ QListWidget_itemAt<QListWidgetItem> for (i32, i32) {
     // unsafe{_ZNK11QListWidget6itemAtEii()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-    let mut ret = unsafe {_ZNK11QListWidget6itemAtEii(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {C_ZNK11QListWidget6itemAtEii(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QListWidgetItem::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1853,7 +1849,7 @@ impl<'a> /*trait*/ QListWidget_addItem<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QListWidget7addItemERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QListWidget7addItemERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QListWidget7addItemERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1877,7 +1873,7 @@ impl<'a> /*trait*/ QListWidget_insertItems<()> for (i32, &'a QStringList) {
     // unsafe{_ZN11QListWidget11insertItemsEiRK11QStringList()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN11QListWidget11insertItemsEiRK11QStringList(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN11QListWidget11insertItemsEiRK11QStringList(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -1899,7 +1895,7 @@ impl<'a> /*trait*/ QListWidget_currentItem<QListWidgetItem> for () {
   fn currentItem(self , rsthis: & QListWidget) -> QListWidgetItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QListWidget11currentItemEv()};
-    let mut ret = unsafe {_ZNK11QListWidget11currentItemEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QListWidget11currentItemEv(rsthis.qclsinst)};
     let mut ret1 = QListWidgetItem::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1924,7 +1920,7 @@ impl<'a> /*trait*/ QListWidget_setCurrentItem<()> for (&'a QListWidgetItem) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QListWidget14setCurrentItemEP15QListWidgetItem()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QListWidget14setCurrentItemEP15QListWidgetItem(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QListWidget14setCurrentItemEP15QListWidgetItem(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1948,7 +1944,7 @@ impl<'a> /*trait*/ QListWidget_setItemWidget<()> for (&'a QListWidgetItem, &'a Q
     // unsafe{_ZN11QListWidget13setItemWidgetEP15QListWidgetItemP7QWidget()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN11QListWidget13setItemWidgetEP15QListWidgetItemP7QWidget(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN11QListWidget13setItemWidgetEP15QListWidgetItemP7QWidget(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -1971,24 +1967,8 @@ impl<'a> /*trait*/ QListWidget_isItemSelected<i8> for (&'a QListWidgetItem) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QListWidget14isItemSelectedEPK15QListWidgetItem()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK11QListWidget14isItemSelectedEPK15QListWidgetItem(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK11QListWidget14isItemSelectedEPK15QListWidgetItem(rsthis.qclsinst, arg0)};
     return ret as i8;
-    // return 1;
-  }
-}
-
-  // proto:  void QListWidget::QListWidget(const QListWidget & );
-impl<'a> /*trait*/ QListWidget_new for (&'a QListWidget) {
-  fn new(self) -> QListWidget {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QListWidgetC2ERKS_()};
-    let ctysz: c_int = unsafe{QListWidget_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QListWidgetC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QListWidget{qbase: QListView::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
     // return 1;
   }
 }

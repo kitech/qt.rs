@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtWidgets/qgraphicsproxywidget.h
 // dst-file: /src/widgets/qgraphicsproxywidget.rs
 //
@@ -22,6 +22,7 @@ use super::qgraphicswidget::QGraphicsWidget; // 773
 use std::ops::Deref;
 use super::qwidget::QWidget; // 773
 use super::super::core::qrect::QRectF; // 771
+use super::super::core::qobjectdefs::QMetaObject; // 771
 use super::super::gui::qpainter::QPainter; // 771
 use super::qstyleoption::QStyleOptionGraphicsItem; // 773
 use super::qgraphicsitem::QGraphicsItem; // 773
@@ -36,25 +37,23 @@ use super::qgraphicsitem::QGraphicsItem; // 773
 extern {
   fn QGraphicsProxyWidget_Class_Size() -> c_int;
   // proto:  void QGraphicsProxyWidget::~QGraphicsProxyWidget();
-  fn _ZN20QGraphicsProxyWidgetD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN20QGraphicsProxyWidgetD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QGraphicsProxyWidget * QGraphicsProxyWidget::createProxyForChildWidget(QWidget * child);
-  fn _ZN20QGraphicsProxyWidget25createProxyForChildWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN20QGraphicsProxyWidget25createProxyForChildWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsProxyWidget::setWidget(QWidget * widget);
-  fn _ZN20QGraphicsProxyWidget9setWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN20QGraphicsProxyWidget9setWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QRectF QGraphicsProxyWidget::subWidgetRect(const QWidget * widget);
-  fn _ZNK20QGraphicsProxyWidget13subWidgetRectEPK7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-  // proto:  void QGraphicsProxyWidget::QGraphicsProxyWidget(const QGraphicsProxyWidget & );
-  fn _ZN20QGraphicsProxyWidgetC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK20QGraphicsProxyWidget13subWidgetRectEPK7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  const QMetaObject * QGraphicsProxyWidget::metaObject();
-  fn _ZNK20QGraphicsProxyWidget10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK20QGraphicsProxyWidget10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QGraphicsProxyWidget::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
-  fn _ZN20QGraphicsProxyWidget5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
+  fn C_ZN20QGraphicsProxyWidget5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  void QGraphicsProxyWidget::setGeometry(const QRectF & rect);
-  fn _ZN20QGraphicsProxyWidget11setGeometryERK6QRectF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN20QGraphicsProxyWidget11setGeometryERK6QRectF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QWidget * QGraphicsProxyWidget::widget();
-  fn _ZNK20QGraphicsProxyWidget6widgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK20QGraphicsProxyWidget6widgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QGraphicsProxyWidget::type();
-  fn _ZNK20QGraphicsProxyWidget4typeEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK20QGraphicsProxyWidget4typeEv(qthis: u64 /* *mut c_void*/) -> c_int;
 } // <= ext block end
 
 // body block begin =>
@@ -99,7 +98,7 @@ impl<'a> /*trait*/ QGraphicsProxyWidget_free<()> for () {
   fn free(self , rsthis: & QGraphicsProxyWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QGraphicsProxyWidgetD2Ev()};
-     unsafe {_ZN20QGraphicsProxyWidgetD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN20QGraphicsProxyWidgetD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -122,7 +121,7 @@ impl<'a> /*trait*/ QGraphicsProxyWidget_createProxyForChildWidget<()> for (&'a Q
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QGraphicsProxyWidget25createProxyForChildWidgetEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN20QGraphicsProxyWidget25createProxyForChildWidgetEP7QWidget(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN20QGraphicsProxyWidget25createProxyForChildWidgetEP7QWidget(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -145,7 +144,7 @@ impl<'a> /*trait*/ QGraphicsProxyWidget_setWidget<()> for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QGraphicsProxyWidget9setWidgetEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN20QGraphicsProxyWidget9setWidgetEP7QWidget(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN20QGraphicsProxyWidget9setWidgetEP7QWidget(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -168,38 +167,9 @@ impl<'a> /*trait*/ QGraphicsProxyWidget_subWidgetRect<QRectF> for (&'a QWidget) 
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QGraphicsProxyWidget13subWidgetRectEPK7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK20QGraphicsProxyWidget13subWidgetRectEPK7QWidget(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK20QGraphicsProxyWidget13subWidgetRectEPK7QWidget(rsthis.qclsinst, arg0)};
     let mut ret1 = QRectF::inheritFrom(ret as u64);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QGraphicsProxyWidget::QGraphicsProxyWidget(const QGraphicsProxyWidget & );
-impl /*struct*/ QGraphicsProxyWidget {
-  pub fn new<T: QGraphicsProxyWidget_new>(value: T) -> QGraphicsProxyWidget {
-    let rsthis = value.new();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QGraphicsProxyWidget_new {
-  fn new(self) -> QGraphicsProxyWidget;
-}
-
-  // proto:  void QGraphicsProxyWidget::QGraphicsProxyWidget(const QGraphicsProxyWidget & );
-impl<'a> /*trait*/ QGraphicsProxyWidget_new for (&'a QGraphicsProxyWidget) {
-  fn new(self) -> QGraphicsProxyWidget {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN20QGraphicsProxyWidgetC2ERKS_()};
-    let ctysz: c_int = unsafe{QGraphicsProxyWidget_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN20QGraphicsProxyWidgetC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QGraphicsProxyWidget{qbase: QGraphicsWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
     // return 1;
   }
 }
@@ -217,11 +187,13 @@ pub trait QGraphicsProxyWidget_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QGraphicsProxyWidget::metaObject();
-impl<'a> /*trait*/ QGraphicsProxyWidget_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QGraphicsProxyWidget) -> () {
+impl<'a> /*trait*/ QGraphicsProxyWidget_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QGraphicsProxyWidget) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QGraphicsProxyWidget10metaObjectEv()};
-     unsafe {_ZNK20QGraphicsProxyWidget10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK20QGraphicsProxyWidget10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -246,7 +218,7 @@ impl<'a> /*trait*/ QGraphicsProxyWidget_paint<()> for (&'a QPainter, &'a QStyleO
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
-     unsafe {_ZN20QGraphicsProxyWidget5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(rsthis.qclsinst, arg0, arg1, arg2)};
+     unsafe {C_ZN20QGraphicsProxyWidget5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
 }
@@ -269,7 +241,7 @@ impl<'a> /*trait*/ QGraphicsProxyWidget_setGeometry<()> for (&'a QRectF) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QGraphicsProxyWidget11setGeometryERK6QRectF()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN20QGraphicsProxyWidget11setGeometryERK6QRectF(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN20QGraphicsProxyWidget11setGeometryERK6QRectF(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -291,7 +263,7 @@ impl<'a> /*trait*/ QGraphicsProxyWidget_widget<QWidget> for () {
   fn widget(self , rsthis: & QGraphicsProxyWidget) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QGraphicsProxyWidget6widgetEv()};
-    let mut ret = unsafe {_ZNK20QGraphicsProxyWidget6widgetEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK20QGraphicsProxyWidget6widgetEv(rsthis.qclsinst)};
     let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -315,7 +287,7 @@ impl<'a> /*trait*/ QGraphicsProxyWidget_type_<i32> for () {
   fn type_(self , rsthis: & QGraphicsProxyWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QGraphicsProxyWidget4typeEv()};
-    let mut ret = unsafe {_ZNK20QGraphicsProxyWidget4typeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK20QGraphicsProxyWidget4typeEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }

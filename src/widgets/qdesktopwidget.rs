@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtWidgets/qdesktopwidget.h
 // dst-file: /src/widgets/qdesktopwidget.rs
 //
@@ -22,6 +22,7 @@ use super::qwidget::QWidget; // 773
 use std::ops::Deref;
 use super::super::core::qpoint::QPoint; // 771
 use super::super::core::qrect::QRect; // 771
+use super::super::core::qobjectdefs::QMetaObject; // 771
 // <= use block end
 
 // ext block begin =>
@@ -33,39 +34,37 @@ use super::super::core::qrect::QRect; // 771
 extern {
   fn QDesktopWidget_Class_Size() -> c_int;
   // proto:  const QRect QDesktopWidget::screenGeometry(const QPoint & point);
-  fn _ZNK14QDesktopWidget14screenGeometryERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZNK14QDesktopWidget14screenGeometryERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QWidget * QDesktopWidget::screen(int screen);
-  fn _ZN14QDesktopWidget6screenEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
+  fn C_ZN14QDesktopWidget6screenEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  const QRect QDesktopWidget::screenGeometry(const QWidget * widget);
-  fn _ZNK14QDesktopWidget14screenGeometryEPK7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZNK14QDesktopWidget14screenGeometryEPK7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  int QDesktopWidget::numScreens();
-  fn _ZNK14QDesktopWidget10numScreensEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK14QDesktopWidget10numScreensEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QDesktopWidget::~QDesktopWidget();
-  fn _ZN14QDesktopWidgetD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN14QDesktopWidgetD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  const QRect QDesktopWidget::screenGeometry(int screen);
-  fn _ZNK14QDesktopWidget14screenGeometryEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
+  fn C_ZNK14QDesktopWidget14screenGeometryEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  const QRect QDesktopWidget::availableGeometry(const QWidget * widget);
-  fn _ZNK14QDesktopWidget17availableGeometryEPK7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-  // proto:  void QDesktopWidget::QDesktopWidget(const QDesktopWidget & );
-  fn _ZN14QDesktopWidgetC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK14QDesktopWidget17availableGeometryEPK7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  int QDesktopWidget::screenNumber(const QPoint & );
-  fn _ZNK14QDesktopWidget12screenNumberERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
+  fn C_ZNK14QDesktopWidget12screenNumberERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
   // proto:  int QDesktopWidget::screenCount();
-  fn _ZNK14QDesktopWidget11screenCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK14QDesktopWidget11screenCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QDesktopWidget::isVirtualDesktop();
-  fn _ZNK14QDesktopWidget16isVirtualDesktopEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK14QDesktopWidget16isVirtualDesktopEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  int QDesktopWidget::screenNumber(const QWidget * widget);
-  fn _ZNK14QDesktopWidget12screenNumberEPK7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
+  fn C_ZNK14QDesktopWidget12screenNumberEPK7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
   // proto:  int QDesktopWidget::primaryScreen();
-  fn _ZNK14QDesktopWidget13primaryScreenEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK14QDesktopWidget13primaryScreenEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QDesktopWidget::QDesktopWidget();
-  fn _ZN14QDesktopWidgetC2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN14QDesktopWidgetC2Ev() -> u64;
   // proto:  const QRect QDesktopWidget::availableGeometry(const QPoint & point);
-  fn _ZNK14QDesktopWidget17availableGeometryERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZNK14QDesktopWidget17availableGeometryERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  const QRect QDesktopWidget::availableGeometry(int screen);
-  fn _ZNK14QDesktopWidget17availableGeometryEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
+  fn C_ZNK14QDesktopWidget17availableGeometryEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  const QMetaObject * QDesktopWidget::metaObject();
-  fn _ZNK14QDesktopWidget10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK14QDesktopWidget10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   fn QDesktopWidget_SlotProxy_connect__ZN14QDesktopWidget18screenCountChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QDesktopWidget_SlotProxy_connect__ZN14QDesktopWidget7resizedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QDesktopWidget_SlotProxy_connect__ZN14QDesktopWidget15workAreaResizedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
@@ -117,7 +116,7 @@ impl<'a> /*trait*/ QDesktopWidget_screenGeometry<QRect> for (&'a QPoint) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDesktopWidget14screenGeometryERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK14QDesktopWidget14screenGeometryERK6QPoint(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK14QDesktopWidget14screenGeometryERK6QPoint(rsthis.qclsinst, arg0)};
     let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -142,7 +141,7 @@ impl<'a> /*trait*/ QDesktopWidget_screen<QWidget> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QDesktopWidget6screenEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZN14QDesktopWidget6screenEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN14QDesktopWidget6screenEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -155,7 +154,7 @@ impl<'a> /*trait*/ QDesktopWidget_screenGeometry<QRect> for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDesktopWidget14screenGeometryEPK7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK14QDesktopWidget14screenGeometryEPK7QWidget(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK14QDesktopWidget14screenGeometryEPK7QWidget(rsthis.qclsinst, arg0)};
     let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -179,7 +178,7 @@ impl<'a> /*trait*/ QDesktopWidget_numScreens<i32> for () {
   fn numScreens(self , rsthis: & QDesktopWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDesktopWidget10numScreensEv()};
-    let mut ret = unsafe {_ZNK14QDesktopWidget10numScreensEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QDesktopWidget10numScreensEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -202,7 +201,7 @@ impl<'a> /*trait*/ QDesktopWidget_free<()> for () {
   fn free(self , rsthis: & QDesktopWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QDesktopWidgetD2Ev()};
-     unsafe {_ZN14QDesktopWidgetD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN14QDesktopWidgetD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -213,7 +212,7 @@ impl<'a> /*trait*/ QDesktopWidget_screenGeometry<QRect> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDesktopWidget14screenGeometryEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZNK14QDesktopWidget14screenGeometryEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK14QDesktopWidget14screenGeometryEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -238,38 +237,9 @@ impl<'a> /*trait*/ QDesktopWidget_availableGeometry<QRect> for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDesktopWidget17availableGeometryEPK7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK14QDesktopWidget17availableGeometryEPK7QWidget(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK14QDesktopWidget17availableGeometryEPK7QWidget(rsthis.qclsinst, arg0)};
     let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QDesktopWidget::QDesktopWidget(const QDesktopWidget & );
-impl /*struct*/ QDesktopWidget {
-  pub fn new<T: QDesktopWidget_new>(value: T) -> QDesktopWidget {
-    let rsthis = value.new();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QDesktopWidget_new {
-  fn new(self) -> QDesktopWidget;
-}
-
-  // proto:  void QDesktopWidget::QDesktopWidget(const QDesktopWidget & );
-impl<'a> /*trait*/ QDesktopWidget_new for (&'a QDesktopWidget) {
-  fn new(self) -> QDesktopWidget {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QDesktopWidgetC2ERKS_()};
-    let ctysz: c_int = unsafe{QDesktopWidget_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN14QDesktopWidgetC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QDesktopWidget{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
     // return 1;
   }
 }
@@ -292,7 +262,7 @@ impl<'a> /*trait*/ QDesktopWidget_screenNumber<i32> for (&'a QPoint) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDesktopWidget12screenNumberERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK14QDesktopWidget12screenNumberERK6QPoint(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK14QDesktopWidget12screenNumberERK6QPoint(rsthis.qclsinst, arg0)};
     return ret as i32;
     // return 1;
   }
@@ -315,7 +285,7 @@ impl<'a> /*trait*/ QDesktopWidget_screenCount<i32> for () {
   fn screenCount(self , rsthis: & QDesktopWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDesktopWidget11screenCountEv()};
-    let mut ret = unsafe {_ZNK14QDesktopWidget11screenCountEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QDesktopWidget11screenCountEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -338,7 +308,7 @@ impl<'a> /*trait*/ QDesktopWidget_isVirtualDesktop<i8> for () {
   fn isVirtualDesktop(self , rsthis: & QDesktopWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDesktopWidget16isVirtualDesktopEv()};
-    let mut ret = unsafe {_ZNK14QDesktopWidget16isVirtualDesktopEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QDesktopWidget16isVirtualDesktopEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -350,7 +320,7 @@ impl<'a> /*trait*/ QDesktopWidget_screenNumber<i32> for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDesktopWidget12screenNumberEPK7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK14QDesktopWidget12screenNumberEPK7QWidget(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK14QDesktopWidget12screenNumberEPK7QWidget(rsthis.qclsinst, arg0)};
     return ret as i32;
     // return 1;
   }
@@ -373,10 +343,23 @@ impl<'a> /*trait*/ QDesktopWidget_primaryScreen<i32> for () {
   fn primaryScreen(self , rsthis: & QDesktopWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDesktopWidget13primaryScreenEv()};
-    let mut ret = unsafe {_ZNK14QDesktopWidget13primaryScreenEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QDesktopWidget13primaryScreenEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
+}
+
+  // proto:  void QDesktopWidget::QDesktopWidget();
+impl /*struct*/ QDesktopWidget {
+  pub fn new<T: QDesktopWidget_new>(value: T) -> QDesktopWidget {
+    let rsthis = value.new();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QDesktopWidget_new {
+  fn new(self) -> QDesktopWidget;
 }
 
   // proto:  void QDesktopWidget::QDesktopWidget();
@@ -386,8 +369,7 @@ impl<'a> /*trait*/ QDesktopWidget_new for () {
     // unsafe{_ZN14QDesktopWidgetC2Ev()};
     let ctysz: c_int = unsafe{QDesktopWidget_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    unsafe {_ZN14QDesktopWidgetC2Ev(qthis_ph)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN14QDesktopWidgetC2Ev()};
     let rsthis = QDesktopWidget{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -400,7 +382,7 @@ impl<'a> /*trait*/ QDesktopWidget_availableGeometry<QRect> for (&'a QPoint) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDesktopWidget17availableGeometryERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK14QDesktopWidget17availableGeometryERK6QPoint(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK14QDesktopWidget17availableGeometryERK6QPoint(rsthis.qclsinst, arg0)};
     let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -413,7 +395,7 @@ impl<'a> /*trait*/ QDesktopWidget_availableGeometry<QRect> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDesktopWidget17availableGeometryEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZNK14QDesktopWidget17availableGeometryEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK14QDesktopWidget17availableGeometryEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -433,11 +415,13 @@ pub trait QDesktopWidget_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QDesktopWidget::metaObject();
-impl<'a> /*trait*/ QDesktopWidget_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QDesktopWidget) -> () {
+impl<'a> /*trait*/ QDesktopWidget_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QDesktopWidget) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDesktopWidget10metaObjectEv()};
-     unsafe {_ZNK14QDesktopWidget10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QDesktopWidget10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }

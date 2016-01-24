@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtWidgets/qkeysequenceedit.h
 // dst-file: /src/widgets/qkeysequenceedit.rs
 //
@@ -21,6 +21,7 @@ use self::libc::*;
 use super::qwidget::QWidget; // 773
 use std::ops::Deref;
 use super::super::gui::qkeysequence::QKeySequence; // 771
+use super::super::core::qobjectdefs::QMetaObject; // 771
 // <= use block end
 
 // ext block begin =>
@@ -31,22 +32,20 @@ use super::super::gui::qkeysequence::QKeySequence; // 771
 
 extern {
   fn QKeySequenceEdit_Class_Size() -> c_int;
-  // proto:  void QKeySequenceEdit::QKeySequenceEdit(const QKeySequenceEdit & );
-  fn _ZN16QKeySequenceEditC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QKeySequenceEdit::QKeySequenceEdit(const QKeySequence & keySequence, QWidget * parent);
-  fn _ZN16QKeySequenceEditC2ERK12QKeySequenceP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN16QKeySequenceEditC2ERK12QKeySequenceP7QWidget(arg0: *mut c_void, arg1: *mut c_void) -> u64;
   // proto:  void QKeySequenceEdit::clear();
-  fn _ZN16QKeySequenceEdit5clearEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN16QKeySequenceEdit5clearEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QKeySequenceEdit::setKeySequence(const QKeySequence & keySequence);
-  fn _ZN16QKeySequenceEdit14setKeySequenceERK12QKeySequence(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN16QKeySequenceEdit14setKeySequenceERK12QKeySequence(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QKeySequence QKeySequenceEdit::keySequence();
-  fn _ZNK16QKeySequenceEdit11keySequenceEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK16QKeySequenceEdit11keySequenceEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QKeySequenceEdit::~QKeySequenceEdit();
-  fn _ZN16QKeySequenceEditD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN16QKeySequenceEditD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QKeySequenceEdit::QKeySequenceEdit(QWidget * parent);
-  fn _ZN16QKeySequenceEditC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN16QKeySequenceEditC2EP7QWidget(arg0: *mut c_void) -> u64;
   // proto:  const QMetaObject * QKeySequenceEdit::metaObject();
-  fn _ZNK16QKeySequenceEdit10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK16QKeySequenceEdit10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   fn QKeySequenceEdit_SlotProxy_connect__ZN16QKeySequenceEdit18keySequenceChangedERK12QKeySequence(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QKeySequenceEdit_SlotProxy_connect__ZN16QKeySequenceEdit15editingFinishedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
@@ -78,7 +77,7 @@ impl AsRef<QWidget> for QKeySequenceEdit {
     return & self.qbase;
   }
 }
-  // proto:  void QKeySequenceEdit::QKeySequenceEdit(const QKeySequenceEdit & );
+  // proto:  void QKeySequenceEdit::QKeySequenceEdit(const QKeySequence & keySequence, QWidget * parent);
 impl /*struct*/ QKeySequenceEdit {
   pub fn new<T: QKeySequenceEdit_new>(value: T) -> QKeySequenceEdit {
     let rsthis = value.new();
@@ -91,22 +90,6 @@ pub trait QKeySequenceEdit_new {
   fn new(self) -> QKeySequenceEdit;
 }
 
-  // proto:  void QKeySequenceEdit::QKeySequenceEdit(const QKeySequenceEdit & );
-impl<'a> /*trait*/ QKeySequenceEdit_new for (&'a QKeySequenceEdit) {
-  fn new(self) -> QKeySequenceEdit {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QKeySequenceEditC2ERKS_()};
-    let ctysz: c_int = unsafe{QKeySequenceEdit_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN16QKeySequenceEditC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QKeySequenceEdit{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
   // proto:  void QKeySequenceEdit::QKeySequenceEdit(const QKeySequence & keySequence, QWidget * parent);
 impl<'a> /*trait*/ QKeySequenceEdit_new for (&'a QKeySequence, &'a QWidget) {
   fn new(self) -> QKeySequenceEdit {
@@ -116,8 +99,7 @@ impl<'a> /*trait*/ QKeySequenceEdit_new for (&'a QKeySequence, &'a QWidget) {
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    unsafe {_ZN16QKeySequenceEditC2ERK12QKeySequenceP7QWidget(qthis_ph, arg0, arg1)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN16QKeySequenceEditC2ERK12QKeySequenceP7QWidget(arg0, arg1)};
     let rsthis = QKeySequenceEdit{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -141,7 +123,7 @@ impl<'a> /*trait*/ QKeySequenceEdit_clear<()> for () {
   fn clear(self , rsthis: & QKeySequenceEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QKeySequenceEdit5clearEv()};
-     unsafe {_ZN16QKeySequenceEdit5clearEv(rsthis.qclsinst)};
+     unsafe {C_ZN16QKeySequenceEdit5clearEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -164,7 +146,7 @@ impl<'a> /*trait*/ QKeySequenceEdit_setKeySequence<()> for (&'a QKeySequence) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QKeySequenceEdit14setKeySequenceERK12QKeySequence()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN16QKeySequenceEdit14setKeySequenceERK12QKeySequence(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN16QKeySequenceEdit14setKeySequenceERK12QKeySequence(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -186,7 +168,7 @@ impl<'a> /*trait*/ QKeySequenceEdit_keySequence<QKeySequence> for () {
   fn keySequence(self , rsthis: & QKeySequenceEdit) -> QKeySequence {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QKeySequenceEdit11keySequenceEv()};
-    let mut ret = unsafe {_ZNK16QKeySequenceEdit11keySequenceEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QKeySequenceEdit11keySequenceEv(rsthis.qclsinst)};
     let mut ret1 = QKeySequence::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -210,7 +192,7 @@ impl<'a> /*trait*/ QKeySequenceEdit_free<()> for () {
   fn free(self , rsthis: & QKeySequenceEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QKeySequenceEditD2Ev()};
-     unsafe {_ZN16QKeySequenceEditD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN16QKeySequenceEditD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -223,8 +205,7 @@ impl<'a> /*trait*/ QKeySequenceEdit_new for (&'a QWidget) {
     let ctysz: c_int = unsafe{QKeySequenceEdit_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN16QKeySequenceEditC2EP7QWidget(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN16QKeySequenceEditC2EP7QWidget(arg0)};
     let rsthis = QKeySequenceEdit{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -244,11 +225,13 @@ pub trait QKeySequenceEdit_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QKeySequenceEdit::metaObject();
-impl<'a> /*trait*/ QKeySequenceEdit_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QKeySequenceEdit) -> () {
+impl<'a> /*trait*/ QKeySequenceEdit_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QKeySequenceEdit) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QKeySequenceEdit10metaObjectEv()};
-     unsafe {_ZNK16QKeySequenceEdit10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QKeySequenceEdit10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }

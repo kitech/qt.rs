@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtWidgets/qabstractitemview.h
 // dst-file: /src/widgets/qabstractitemview.rs
 //
@@ -27,8 +27,9 @@ use super::qabstractitemdelegate::QAbstractItemDelegate; // 773
 use super::super::core::qstring::QString; // 771
 use super::super::core::qitemselectionmodel::QItemSelectionModel; // 771
 use super::super::core::qrect::QRect; // 771
-use super::super::core::qpoint::QPoint; // 771
 use super::super::core::qabstractitemmodel::QAbstractItemModel; // 771
+use super::super::core::qpoint::QPoint; // 771
+use super::super::core::qobjectdefs::QMetaObject; // 771
 // <= use block end
 
 // ext block begin =>
@@ -40,111 +41,109 @@ use super::super::core::qabstractitemmodel::QAbstractItemModel; // 771
 extern {
   fn QAbstractItemView_Class_Size() -> c_int;
   // proto:  QWidget * QAbstractItemView::indexWidget(const QModelIndex & index);
-  fn _ZNK17QAbstractItemView11indexWidgetERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZNK17QAbstractItemView11indexWidgetERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QAbstractItemView::scrollToBottom();
-  fn _ZN17QAbstractItemView14scrollToBottomEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN17QAbstractItemView14scrollToBottomEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractItemView::setDropIndicatorShown(bool enable);
-  fn _ZN17QAbstractItemView21setDropIndicatorShownEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN17QAbstractItemView21setDropIndicatorShownEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QSize QAbstractItemView::sizeHintForIndex(const QModelIndex & index);
-  fn _ZNK17QAbstractItemView16sizeHintForIndexERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZNK17QAbstractItemView16sizeHintForIndexERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QAbstractItemView::setItemDelegateForColumn(int column, QAbstractItemDelegate * delegate);
-  fn _ZN17QAbstractItemView24setItemDelegateForColumnEiP21QAbstractItemDelegate(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
+  fn C_ZN17QAbstractItemView24setItemDelegateForColumnEiP21QAbstractItemDelegate(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  bool QAbstractItemView::dragEnabled();
-  fn _ZNK17QAbstractItemView11dragEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK17QAbstractItemView11dragEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QAbstractItemDelegate * QAbstractItemView::itemDelegate(const QModelIndex & index);
-  fn _ZNK17QAbstractItemView12itemDelegateERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK17QAbstractItemView12itemDelegateERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QAbstractItemView::keyboardSearch(const QString & search);
-  fn _ZN17QAbstractItemView14keyboardSearchERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN17QAbstractItemView14keyboardSearchERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QModelIndex QAbstractItemView::rootIndex();
-  fn _ZNK17QAbstractItemView9rootIndexEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK17QAbstractItemView9rootIndexEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QAbstractItemDelegate * QAbstractItemView::itemDelegateForColumn(int column);
-  fn _ZNK17QAbstractItemView21itemDelegateForColumnEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZNK17QAbstractItemView21itemDelegateForColumnEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  QItemSelectionModel * QAbstractItemView::selectionModel();
-  fn _ZNK17QAbstractItemView14selectionModelEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK17QAbstractItemView14selectionModelEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAbstractItemView::reset();
-  fn _ZN17QAbstractItemView5resetEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN17QAbstractItemView5resetEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractItemView::setItemDelegateForRow(int row, QAbstractItemDelegate * delegate);
-  fn _ZN17QAbstractItemView21setItemDelegateForRowEiP21QAbstractItemDelegate(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
+  fn C_ZN17QAbstractItemView21setItemDelegateForRowEiP21QAbstractItemDelegate(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  void QAbstractItemView::setRootIndex(const QModelIndex & index);
-  fn _ZN17QAbstractItemView12setRootIndexERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN17QAbstractItemView12setRootIndexERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAbstractItemView::setAutoScrollMargin(int margin);
-  fn _ZN17QAbstractItemView19setAutoScrollMarginEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN17QAbstractItemView19setAutoScrollMarginEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  QRect QAbstractItemView::visualRect(const QModelIndex & index);
-  fn _ZNK17QAbstractItemView10visualRectERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZNK17QAbstractItemView10visualRectERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QAbstractItemView::doItemsLayout();
-  fn _ZN17QAbstractItemView13doItemsLayoutEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN17QAbstractItemView13doItemsLayoutEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractItemView::~QAbstractItemView();
-  fn _ZN17QAbstractItemViewD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN17QAbstractItemViewD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QAbstractItemModel * QAbstractItemView::model();
-  fn _ZNK17QAbstractItemView5modelEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK17QAbstractItemView5modelEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QSize QAbstractItemView::iconSize();
-  fn _ZNK17QAbstractItemView8iconSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK17QAbstractItemView8iconSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAbstractItemView::setItemDelegate(QAbstractItemDelegate * delegate);
-  fn _ZN17QAbstractItemView15setItemDelegateEP21QAbstractItemDelegate(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN17QAbstractItemView15setItemDelegateEP21QAbstractItemDelegate(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAbstractItemView::setDragEnabled(bool enable);
-  fn _ZN17QAbstractItemView14setDragEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN17QAbstractItemView14setDragEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QModelIndex QAbstractItemView::currentIndex();
-  fn _ZNK17QAbstractItemView12currentIndexEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK17QAbstractItemView12currentIndexEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QAbstractItemView::sizeHintForRow(int row);
-  fn _ZNK17QAbstractItemView14sizeHintForRowEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
+  fn C_ZNK17QAbstractItemView14sizeHintForRowEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
   // proto:  void QAbstractItemView::QAbstractItemView(QWidget * parent);
-  fn _ZN17QAbstractItemViewC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN17QAbstractItemViewC2EP7QWidget(arg0: *mut c_void) -> u64;
   // proto:  bool QAbstractItemView::showDropIndicator();
-  fn _ZNK17QAbstractItemView17showDropIndicatorEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK17QAbstractItemView17showDropIndicatorEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QAbstractItemView::hasAutoScroll();
-  fn _ZNK17QAbstractItemView13hasAutoScrollEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QAbstractItemView::QAbstractItemView(const QAbstractItemView & );
-  fn _ZN17QAbstractItemViewC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK17QAbstractItemView13hasAutoScrollEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QAbstractItemView::selectAll();
-  fn _ZN17QAbstractItemView9selectAllEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN17QAbstractItemView9selectAllEv(qthis: u64 /* *mut c_void*/);
   // proto:  QAbstractItemDelegate * QAbstractItemView::itemDelegate();
-  fn _ZNK17QAbstractItemView12itemDelegateEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK17QAbstractItemView12itemDelegateEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAbstractItemView::edit(const QModelIndex & index);
-  fn _ZN17QAbstractItemView4editERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN17QAbstractItemView4editERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAbstractItemView::setAlternatingRowColors(bool enable);
-  fn _ZN17QAbstractItemView23setAlternatingRowColorsEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN17QAbstractItemView23setAlternatingRowColorsEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  int QAbstractItemView::sizeHintForColumn(int column);
-  fn _ZNK17QAbstractItemView17sizeHintForColumnEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
+  fn C_ZNK17QAbstractItemView17sizeHintForColumnEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
   // proto:  void QAbstractItemView::setIconSize(const QSize & size);
-  fn _ZN17QAbstractItemView11setIconSizeERK5QSize(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN17QAbstractItemView11setIconSizeERK5QSize(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAbstractItemView::closePersistentEditor(const QModelIndex & index);
-  fn _ZN17QAbstractItemView21closePersistentEditorERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN17QAbstractItemView21closePersistentEditorERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAbstractItemView::setDragDropOverwriteMode(bool overwrite);
-  fn _ZN17QAbstractItemView24setDragDropOverwriteModeEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN17QAbstractItemView24setDragDropOverwriteModeEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QAbstractItemView::clearSelection();
-  fn _ZN17QAbstractItemView14clearSelectionEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN17QAbstractItemView14clearSelectionEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractItemView::scrollToTop();
-  fn _ZN17QAbstractItemView11scrollToTopEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN17QAbstractItemView11scrollToTopEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractItemView::setSelectionModel(QItemSelectionModel * selectionModel);
-  fn _ZN17QAbstractItemView17setSelectionModelEP19QItemSelectionModel(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN17QAbstractItemView17setSelectionModelEP19QItemSelectionModel(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAbstractItemView::setCurrentIndex(const QModelIndex & index);
-  fn _ZN17QAbstractItemView15setCurrentIndexERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN17QAbstractItemView15setCurrentIndexERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QModelIndex QAbstractItemView::indexAt(const QPoint & point);
-  fn _ZNK17QAbstractItemView7indexAtERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZNK17QAbstractItemView7indexAtERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QAbstractItemView::setTabKeyNavigation(bool enable);
-  fn _ZN17QAbstractItemView19setTabKeyNavigationEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN17QAbstractItemView19setTabKeyNavigationEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QAbstractItemView::setIndexWidget(const QModelIndex & index, QWidget * widget);
-  fn _ZN17QAbstractItemView14setIndexWidgetERK11QModelIndexP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN17QAbstractItemView14setIndexWidgetERK11QModelIndexP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QAbstractItemView::setAutoScroll(bool enable);
-  fn _ZN17QAbstractItemView13setAutoScrollEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN17QAbstractItemView13setAutoScrollEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QAbstractItemView::setModel(QAbstractItemModel * model);
-  fn _ZN17QAbstractItemView8setModelEP18QAbstractItemModel(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN17QAbstractItemView8setModelEP18QAbstractItemModel(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAbstractItemView::update(const QModelIndex & index);
-  fn _ZN17QAbstractItemView6updateERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN17QAbstractItemView6updateERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QAbstractItemView::metaObject();
-  fn _ZNK17QAbstractItemView10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK17QAbstractItemView10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAbstractItemView::openPersistentEditor(const QModelIndex & index);
-  fn _ZN17QAbstractItemView20openPersistentEditorERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN17QAbstractItemView20openPersistentEditorERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QAbstractItemDelegate * QAbstractItemView::itemDelegateForRow(int row);
-  fn _ZNK17QAbstractItemView18itemDelegateForRowEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZNK17QAbstractItemView18itemDelegateForRowEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  bool QAbstractItemView::dragDropOverwriteMode();
-  fn _ZNK17QAbstractItemView21dragDropOverwriteModeEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK17QAbstractItemView21dragDropOverwriteModeEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QAbstractItemView::tabKeyNavigation();
-  fn _ZNK17QAbstractItemView16tabKeyNavigationEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK17QAbstractItemView16tabKeyNavigationEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  int QAbstractItemView::autoScrollMargin();
-  fn _ZNK17QAbstractItemView16autoScrollMarginEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK17QAbstractItemView16autoScrollMarginEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QAbstractItemView::alternatingRowColors();
-  fn _ZNK17QAbstractItemView20alternatingRowColorsEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK17QAbstractItemView20alternatingRowColorsEv(qthis: u64 /* *mut c_void*/) -> c_char;
   fn QAbstractItemView_SlotProxy_connect__ZN17QAbstractItemView7enteredERK11QModelIndex(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QAbstractItemView_SlotProxy_connect__ZN17QAbstractItemView13doubleClickedERK11QModelIndex(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QAbstractItemView_SlotProxy_connect__ZN17QAbstractItemView7pressedERK11QModelIndex(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
@@ -204,7 +203,7 @@ impl<'a> /*trait*/ QAbstractItemView_indexWidget<QWidget> for (&'a QModelIndex) 
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAbstractItemView11indexWidgetERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK17QAbstractItemView11indexWidgetERK11QModelIndex(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK17QAbstractItemView11indexWidgetERK11QModelIndex(rsthis.qclsinst, arg0)};
     let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -228,7 +227,7 @@ impl<'a> /*trait*/ QAbstractItemView_scrollToBottom<()> for () {
   fn scrollToBottom(self , rsthis: & QAbstractItemView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAbstractItemView14scrollToBottomEv()};
-     unsafe {_ZN17QAbstractItemView14scrollToBottomEv(rsthis.qclsinst)};
+     unsafe {C_ZN17QAbstractItemView14scrollToBottomEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -251,7 +250,7 @@ impl<'a> /*trait*/ QAbstractItemView_setDropIndicatorShown<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAbstractItemView21setDropIndicatorShownEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN17QAbstractItemView21setDropIndicatorShownEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN17QAbstractItemView21setDropIndicatorShownEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -274,7 +273,7 @@ impl<'a> /*trait*/ QAbstractItemView_sizeHintForIndex<QSize> for (&'a QModelInde
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAbstractItemView16sizeHintForIndexERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK17QAbstractItemView16sizeHintForIndexERK11QModelIndex(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK17QAbstractItemView16sizeHintForIndexERK11QModelIndex(rsthis.qclsinst, arg0)};
     let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -300,7 +299,7 @@ impl<'a> /*trait*/ QAbstractItemView_setItemDelegateForColumn<()> for (i32, &'a 
     // unsafe{_ZN17QAbstractItemView24setItemDelegateForColumnEiP21QAbstractItemDelegate()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN17QAbstractItemView24setItemDelegateForColumnEiP21QAbstractItemDelegate(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN17QAbstractItemView24setItemDelegateForColumnEiP21QAbstractItemDelegate(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -322,7 +321,7 @@ impl<'a> /*trait*/ QAbstractItemView_dragEnabled<i8> for () {
   fn dragEnabled(self , rsthis: & QAbstractItemView) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAbstractItemView11dragEnabledEv()};
-    let mut ret = unsafe {_ZNK17QAbstractItemView11dragEnabledEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK17QAbstractItemView11dragEnabledEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -341,12 +340,14 @@ pub trait QAbstractItemView_itemDelegate<RetType> {
 }
 
   // proto:  QAbstractItemDelegate * QAbstractItemView::itemDelegate(const QModelIndex & index);
-impl<'a> /*trait*/ QAbstractItemView_itemDelegate<()> for (&'a QModelIndex) {
-  fn itemDelegate(self , rsthis: & QAbstractItemView) -> () {
+impl<'a> /*trait*/ QAbstractItemView_itemDelegate<QAbstractItemDelegate> for (&'a QModelIndex) {
+  fn itemDelegate(self , rsthis: & QAbstractItemView) -> QAbstractItemDelegate {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAbstractItemView12itemDelegateERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZNK17QAbstractItemView12itemDelegateERK11QModelIndex(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK17QAbstractItemView12itemDelegateERK11QModelIndex(rsthis.qclsinst, arg0)};
+    let mut ret1 = QAbstractItemDelegate::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -369,7 +370,7 @@ impl<'a> /*trait*/ QAbstractItemView_keyboardSearch<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAbstractItemView14keyboardSearchERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN17QAbstractItemView14keyboardSearchERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN17QAbstractItemView14keyboardSearchERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -391,7 +392,7 @@ impl<'a> /*trait*/ QAbstractItemView_rootIndex<QModelIndex> for () {
   fn rootIndex(self , rsthis: & QAbstractItemView) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAbstractItemView9rootIndexEv()};
-    let mut ret = unsafe {_ZNK17QAbstractItemView9rootIndexEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK17QAbstractItemView9rootIndexEv(rsthis.qclsinst)};
     let mut ret1 = QModelIndex::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -411,12 +412,14 @@ pub trait QAbstractItemView_itemDelegateForColumn<RetType> {
 }
 
   // proto:  QAbstractItemDelegate * QAbstractItemView::itemDelegateForColumn(int column);
-impl<'a> /*trait*/ QAbstractItemView_itemDelegateForColumn<()> for (i32) {
-  fn itemDelegateForColumn(self , rsthis: & QAbstractItemView) -> () {
+impl<'a> /*trait*/ QAbstractItemView_itemDelegateForColumn<QAbstractItemDelegate> for (i32) {
+  fn itemDelegateForColumn(self , rsthis: & QAbstractItemView) -> QAbstractItemDelegate {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAbstractItemView21itemDelegateForColumnEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZNK17QAbstractItemView21itemDelegateForColumnEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK17QAbstractItemView21itemDelegateForColumnEi(rsthis.qclsinst, arg0)};
+    let mut ret1 = QAbstractItemDelegate::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -438,7 +441,7 @@ impl<'a> /*trait*/ QAbstractItemView_selectionModel<QItemSelectionModel> for () 
   fn selectionModel(self , rsthis: & QAbstractItemView) -> QItemSelectionModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAbstractItemView14selectionModelEv()};
-    let mut ret = unsafe {_ZNK17QAbstractItemView14selectionModelEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK17QAbstractItemView14selectionModelEv(rsthis.qclsinst)};
     let mut ret1 = QItemSelectionModel::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -462,7 +465,7 @@ impl<'a> /*trait*/ QAbstractItemView_reset<()> for () {
   fn reset(self , rsthis: & QAbstractItemView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAbstractItemView5resetEv()};
-     unsafe {_ZN17QAbstractItemView5resetEv(rsthis.qclsinst)};
+     unsafe {C_ZN17QAbstractItemView5resetEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -486,7 +489,7 @@ impl<'a> /*trait*/ QAbstractItemView_setItemDelegateForRow<()> for (i32, &'a QAb
     // unsafe{_ZN17QAbstractItemView21setItemDelegateForRowEiP21QAbstractItemDelegate()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN17QAbstractItemView21setItemDelegateForRowEiP21QAbstractItemDelegate(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN17QAbstractItemView21setItemDelegateForRowEiP21QAbstractItemDelegate(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -509,7 +512,7 @@ impl<'a> /*trait*/ QAbstractItemView_setRootIndex<()> for (&'a QModelIndex) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAbstractItemView12setRootIndexERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN17QAbstractItemView12setRootIndexERK11QModelIndex(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN17QAbstractItemView12setRootIndexERK11QModelIndex(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -532,7 +535,7 @@ impl<'a> /*trait*/ QAbstractItemView_setAutoScrollMargin<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAbstractItemView19setAutoScrollMarginEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN17QAbstractItemView19setAutoScrollMarginEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN17QAbstractItemView19setAutoScrollMarginEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -555,7 +558,7 @@ impl<'a> /*trait*/ QAbstractItemView_visualRect<QRect> for (&'a QModelIndex) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAbstractItemView10visualRectERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK17QAbstractItemView10visualRectERK11QModelIndex(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK17QAbstractItemView10visualRectERK11QModelIndex(rsthis.qclsinst, arg0)};
     let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -579,7 +582,7 @@ impl<'a> /*trait*/ QAbstractItemView_doItemsLayout<()> for () {
   fn doItemsLayout(self , rsthis: & QAbstractItemView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAbstractItemView13doItemsLayoutEv()};
-     unsafe {_ZN17QAbstractItemView13doItemsLayoutEv(rsthis.qclsinst)};
+     unsafe {C_ZN17QAbstractItemView13doItemsLayoutEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -601,7 +604,7 @@ impl<'a> /*trait*/ QAbstractItemView_free<()> for () {
   fn free(self , rsthis: & QAbstractItemView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAbstractItemViewD2Ev()};
-     unsafe {_ZN17QAbstractItemViewD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN17QAbstractItemViewD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -619,11 +622,13 @@ pub trait QAbstractItemView_model<RetType> {
 }
 
   // proto:  QAbstractItemModel * QAbstractItemView::model();
-impl<'a> /*trait*/ QAbstractItemView_model<()> for () {
-  fn model(self , rsthis: & QAbstractItemView) -> () {
+impl<'a> /*trait*/ QAbstractItemView_model<QAbstractItemModel> for () {
+  fn model(self , rsthis: & QAbstractItemView) -> QAbstractItemModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAbstractItemView5modelEv()};
-     unsafe {_ZNK17QAbstractItemView5modelEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK17QAbstractItemView5modelEv(rsthis.qclsinst)};
+    let mut ret1 = QAbstractItemModel::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -645,7 +650,7 @@ impl<'a> /*trait*/ QAbstractItemView_iconSize<QSize> for () {
   fn iconSize(self , rsthis: & QAbstractItemView) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAbstractItemView8iconSizeEv()};
-    let mut ret = unsafe {_ZNK17QAbstractItemView8iconSizeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK17QAbstractItemView8iconSizeEv(rsthis.qclsinst)};
     let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -670,7 +675,7 @@ impl<'a> /*trait*/ QAbstractItemView_setItemDelegate<()> for (&'a QAbstractItemD
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAbstractItemView15setItemDelegateEP21QAbstractItemDelegate()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN17QAbstractItemView15setItemDelegateEP21QAbstractItemDelegate(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN17QAbstractItemView15setItemDelegateEP21QAbstractItemDelegate(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -693,7 +698,7 @@ impl<'a> /*trait*/ QAbstractItemView_setDragEnabled<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAbstractItemView14setDragEnabledEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN17QAbstractItemView14setDragEnabledEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN17QAbstractItemView14setDragEnabledEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -715,7 +720,7 @@ impl<'a> /*trait*/ QAbstractItemView_currentIndex<QModelIndex> for () {
   fn currentIndex(self , rsthis: & QAbstractItemView) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAbstractItemView12currentIndexEv()};
-    let mut ret = unsafe {_ZNK17QAbstractItemView12currentIndexEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK17QAbstractItemView12currentIndexEv(rsthis.qclsinst)};
     let mut ret1 = QModelIndex::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -740,7 +745,7 @@ impl<'a> /*trait*/ QAbstractItemView_sizeHintForRow<i32> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAbstractItemView14sizeHintForRowEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZNK17QAbstractItemView14sizeHintForRowEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK17QAbstractItemView14sizeHintForRowEi(rsthis.qclsinst, arg0)};
     return ret as i32;
     // return 1;
   }
@@ -767,8 +772,7 @@ impl<'a> /*trait*/ QAbstractItemView_new for (&'a QWidget) {
     let ctysz: c_int = unsafe{QAbstractItemView_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN17QAbstractItemViewC2EP7QWidget(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN17QAbstractItemViewC2EP7QWidget(arg0)};
     let rsthis = QAbstractItemView{qbase: QAbstractScrollArea::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -792,7 +796,7 @@ impl<'a> /*trait*/ QAbstractItemView_showDropIndicator<i8> for () {
   fn showDropIndicator(self , rsthis: & QAbstractItemView) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAbstractItemView17showDropIndicatorEv()};
-    let mut ret = unsafe {_ZNK17QAbstractItemView17showDropIndicatorEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK17QAbstractItemView17showDropIndicatorEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -815,24 +819,8 @@ impl<'a> /*trait*/ QAbstractItemView_hasAutoScroll<i8> for () {
   fn hasAutoScroll(self , rsthis: & QAbstractItemView) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAbstractItemView13hasAutoScrollEv()};
-    let mut ret = unsafe {_ZNK17QAbstractItemView13hasAutoScrollEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK17QAbstractItemView13hasAutoScrollEv(rsthis.qclsinst)};
     return ret as i8;
-    // return 1;
-  }
-}
-
-  // proto:  void QAbstractItemView::QAbstractItemView(const QAbstractItemView & );
-impl<'a> /*trait*/ QAbstractItemView_new for (&'a QAbstractItemView) {
-  fn new(self) -> QAbstractItemView {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QAbstractItemViewC2ERKS_()};
-    let ctysz: c_int = unsafe{QAbstractItemView_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN17QAbstractItemViewC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QAbstractItemView{qbase: QAbstractScrollArea::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
     // return 1;
   }
 }
@@ -854,17 +842,19 @@ impl<'a> /*trait*/ QAbstractItemView_selectAll<()> for () {
   fn selectAll(self , rsthis: & QAbstractItemView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAbstractItemView9selectAllEv()};
-     unsafe {_ZN17QAbstractItemView9selectAllEv(rsthis.qclsinst)};
+     unsafe {C_ZN17QAbstractItemView9selectAllEv(rsthis.qclsinst)};
     // return 1;
   }
 }
 
   // proto:  QAbstractItemDelegate * QAbstractItemView::itemDelegate();
-impl<'a> /*trait*/ QAbstractItemView_itemDelegate<()> for () {
-  fn itemDelegate(self , rsthis: & QAbstractItemView) -> () {
+impl<'a> /*trait*/ QAbstractItemView_itemDelegate<QAbstractItemDelegate> for () {
+  fn itemDelegate(self , rsthis: & QAbstractItemView) -> QAbstractItemDelegate {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAbstractItemView12itemDelegateEv()};
-     unsafe {_ZNK17QAbstractItemView12itemDelegateEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK17QAbstractItemView12itemDelegateEv(rsthis.qclsinst)};
+    let mut ret1 = QAbstractItemDelegate::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -887,7 +877,7 @@ impl<'a> /*trait*/ QAbstractItemView_edit<()> for (&'a QModelIndex) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAbstractItemView4editERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN17QAbstractItemView4editERK11QModelIndex(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN17QAbstractItemView4editERK11QModelIndex(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -910,7 +900,7 @@ impl<'a> /*trait*/ QAbstractItemView_setAlternatingRowColors<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAbstractItemView23setAlternatingRowColorsEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN17QAbstractItemView23setAlternatingRowColorsEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN17QAbstractItemView23setAlternatingRowColorsEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -933,7 +923,7 @@ impl<'a> /*trait*/ QAbstractItemView_sizeHintForColumn<i32> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAbstractItemView17sizeHintForColumnEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZNK17QAbstractItemView17sizeHintForColumnEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK17QAbstractItemView17sizeHintForColumnEi(rsthis.qclsinst, arg0)};
     return ret as i32;
     // return 1;
   }
@@ -957,7 +947,7 @@ impl<'a> /*trait*/ QAbstractItemView_setIconSize<()> for (&'a QSize) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAbstractItemView11setIconSizeERK5QSize()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN17QAbstractItemView11setIconSizeERK5QSize(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN17QAbstractItemView11setIconSizeERK5QSize(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -980,7 +970,7 @@ impl<'a> /*trait*/ QAbstractItemView_closePersistentEditor<()> for (&'a QModelIn
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAbstractItemView21closePersistentEditorERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN17QAbstractItemView21closePersistentEditorERK11QModelIndex(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN17QAbstractItemView21closePersistentEditorERK11QModelIndex(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1003,7 +993,7 @@ impl<'a> /*trait*/ QAbstractItemView_setDragDropOverwriteMode<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAbstractItemView24setDragDropOverwriteModeEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN17QAbstractItemView24setDragDropOverwriteModeEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN17QAbstractItemView24setDragDropOverwriteModeEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1025,7 +1015,7 @@ impl<'a> /*trait*/ QAbstractItemView_clearSelection<()> for () {
   fn clearSelection(self , rsthis: & QAbstractItemView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAbstractItemView14clearSelectionEv()};
-     unsafe {_ZN17QAbstractItemView14clearSelectionEv(rsthis.qclsinst)};
+     unsafe {C_ZN17QAbstractItemView14clearSelectionEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1047,7 +1037,7 @@ impl<'a> /*trait*/ QAbstractItemView_scrollToTop<()> for () {
   fn scrollToTop(self , rsthis: & QAbstractItemView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAbstractItemView11scrollToTopEv()};
-     unsafe {_ZN17QAbstractItemView11scrollToTopEv(rsthis.qclsinst)};
+     unsafe {C_ZN17QAbstractItemView11scrollToTopEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1070,7 +1060,7 @@ impl<'a> /*trait*/ QAbstractItemView_setSelectionModel<()> for (&'a QItemSelecti
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAbstractItemView17setSelectionModelEP19QItemSelectionModel()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN17QAbstractItemView17setSelectionModelEP19QItemSelectionModel(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN17QAbstractItemView17setSelectionModelEP19QItemSelectionModel(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1093,7 +1083,7 @@ impl<'a> /*trait*/ QAbstractItemView_setCurrentIndex<()> for (&'a QModelIndex) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAbstractItemView15setCurrentIndexERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN17QAbstractItemView15setCurrentIndexERK11QModelIndex(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN17QAbstractItemView15setCurrentIndexERK11QModelIndex(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1116,7 +1106,7 @@ impl<'a> /*trait*/ QAbstractItemView_indexAt<QModelIndex> for (&'a QPoint) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAbstractItemView7indexAtERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK17QAbstractItemView7indexAtERK6QPoint(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK17QAbstractItemView7indexAtERK6QPoint(rsthis.qclsinst, arg0)};
     let mut ret1 = QModelIndex::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1141,7 +1131,7 @@ impl<'a> /*trait*/ QAbstractItemView_setTabKeyNavigation<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAbstractItemView19setTabKeyNavigationEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN17QAbstractItemView19setTabKeyNavigationEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN17QAbstractItemView19setTabKeyNavigationEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1165,7 +1155,7 @@ impl<'a> /*trait*/ QAbstractItemView_setIndexWidget<()> for (&'a QModelIndex, &'
     // unsafe{_ZN17QAbstractItemView14setIndexWidgetERK11QModelIndexP7QWidget()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN17QAbstractItemView14setIndexWidgetERK11QModelIndexP7QWidget(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN17QAbstractItemView14setIndexWidgetERK11QModelIndexP7QWidget(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -1188,7 +1178,7 @@ impl<'a> /*trait*/ QAbstractItemView_setAutoScroll<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAbstractItemView13setAutoScrollEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN17QAbstractItemView13setAutoScrollEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN17QAbstractItemView13setAutoScrollEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1211,7 +1201,7 @@ impl<'a> /*trait*/ QAbstractItemView_setModel<()> for (&'a QAbstractItemModel) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAbstractItemView8setModelEP18QAbstractItemModel()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN17QAbstractItemView8setModelEP18QAbstractItemModel(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN17QAbstractItemView8setModelEP18QAbstractItemModel(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1234,7 +1224,7 @@ impl<'a> /*trait*/ QAbstractItemView_update<()> for (&'a QModelIndex) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAbstractItemView6updateERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN17QAbstractItemView6updateERK11QModelIndex(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN17QAbstractItemView6updateERK11QModelIndex(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1252,11 +1242,13 @@ pub trait QAbstractItemView_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QAbstractItemView::metaObject();
-impl<'a> /*trait*/ QAbstractItemView_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QAbstractItemView) -> () {
+impl<'a> /*trait*/ QAbstractItemView_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QAbstractItemView) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAbstractItemView10metaObjectEv()};
-     unsafe {_ZNK17QAbstractItemView10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK17QAbstractItemView10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -1279,7 +1271,7 @@ impl<'a> /*trait*/ QAbstractItemView_openPersistentEditor<()> for (&'a QModelInd
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAbstractItemView20openPersistentEditorERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN17QAbstractItemView20openPersistentEditorERK11QModelIndex(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN17QAbstractItemView20openPersistentEditorERK11QModelIndex(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1297,12 +1289,14 @@ pub trait QAbstractItemView_itemDelegateForRow<RetType> {
 }
 
   // proto:  QAbstractItemDelegate * QAbstractItemView::itemDelegateForRow(int row);
-impl<'a> /*trait*/ QAbstractItemView_itemDelegateForRow<()> for (i32) {
-  fn itemDelegateForRow(self , rsthis: & QAbstractItemView) -> () {
+impl<'a> /*trait*/ QAbstractItemView_itemDelegateForRow<QAbstractItemDelegate> for (i32) {
+  fn itemDelegateForRow(self , rsthis: & QAbstractItemView) -> QAbstractItemDelegate {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAbstractItemView18itemDelegateForRowEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZNK17QAbstractItemView18itemDelegateForRowEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK17QAbstractItemView18itemDelegateForRowEi(rsthis.qclsinst, arg0)};
+    let mut ret1 = QAbstractItemDelegate::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -1324,7 +1318,7 @@ impl<'a> /*trait*/ QAbstractItemView_dragDropOverwriteMode<i8> for () {
   fn dragDropOverwriteMode(self , rsthis: & QAbstractItemView) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAbstractItemView21dragDropOverwriteModeEv()};
-    let mut ret = unsafe {_ZNK17QAbstractItemView21dragDropOverwriteModeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK17QAbstractItemView21dragDropOverwriteModeEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -1347,7 +1341,7 @@ impl<'a> /*trait*/ QAbstractItemView_tabKeyNavigation<i8> for () {
   fn tabKeyNavigation(self , rsthis: & QAbstractItemView) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAbstractItemView16tabKeyNavigationEv()};
-    let mut ret = unsafe {_ZNK17QAbstractItemView16tabKeyNavigationEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK17QAbstractItemView16tabKeyNavigationEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -1370,7 +1364,7 @@ impl<'a> /*trait*/ QAbstractItemView_autoScrollMargin<i32> for () {
   fn autoScrollMargin(self , rsthis: & QAbstractItemView) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAbstractItemView16autoScrollMarginEv()};
-    let mut ret = unsafe {_ZNK17QAbstractItemView16autoScrollMarginEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK17QAbstractItemView16autoScrollMarginEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -1393,7 +1387,7 @@ impl<'a> /*trait*/ QAbstractItemView_alternatingRowColors<i8> for () {
   fn alternatingRowColors(self , rsthis: & QAbstractItemView) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAbstractItemView20alternatingRowColorsEv()};
-    let mut ret = unsafe {_ZNK17QAbstractItemView20alternatingRowColorsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK17QAbstractItemView20alternatingRowColorsEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }

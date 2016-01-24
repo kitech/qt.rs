@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtWidgets/qpushbutton.h
 // dst-file: /src/widgets/qpushbutton.rs
 //
@@ -21,10 +21,11 @@ use self::libc::*;
 use super::qabstractbutton::QAbstractButton; // 773
 use std::ops::Deref;
 use super::qmenu::QMenu; // 773
-use super::qwidget::QWidget; // 773
 use super::super::core::qsize::QSize; // 771
 use super::super::gui::qicon::QIcon; // 771
 use super::super::core::qstring::QString; // 771
+use super::qwidget::QWidget; // 773
+use super::super::core::qobjectdefs::QMetaObject; // 771
 // <= use block end
 
 // ext block begin =>
@@ -36,39 +37,37 @@ use super::super::core::qstring::QString; // 771
 extern {
   fn QPushButton_Class_Size() -> c_int;
   // proto:  void QPushButton::setMenu(QMenu * menu);
-  fn _ZN11QPushButton7setMenuEP5QMenu(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QPushButton7setMenuEP5QMenu(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPushButton::setFlat(bool );
-  fn _ZN11QPushButton7setFlatEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN11QPushButton7setFlatEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QPushButton::setAutoDefault(bool );
-  fn _ZN11QPushButton14setAutoDefaultEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN11QPushButton14setAutoDefaultEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QSize QPushButton::minimumSizeHint();
-  fn _ZNK11QPushButton15minimumSizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK11QPushButton15minimumSizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QPushButton::setDefault(bool );
-  fn _ZN11QPushButton10setDefaultEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN11QPushButton10setDefaultEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QPushButton::~QPushButton();
-  fn _ZN11QPushButtonD2Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  void QPushButton::QPushButton(const QPushButton & );
-  fn _ZN11QPushButtonC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QPushButtonD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QPushButton::isDefault();
-  fn _ZNK11QPushButton9isDefaultEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK11QPushButton9isDefaultEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QPushButton::QPushButton(const QIcon & icon, const QString & text, QWidget * parent);
-  fn _ZN11QPushButtonC2ERK5QIconRK7QStringP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
+  fn C_ZN11QPushButtonC2ERK5QIconRK7QStringP7QWidget(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> u64;
   // proto:  bool QPushButton::autoDefault();
-  fn _ZNK11QPushButton11autoDefaultEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK11QPushButton11autoDefaultEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QSize QPushButton::sizeHint();
-  fn _ZNK11QPushButton8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK11QPushButton8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  const QMetaObject * QPushButton::metaObject();
-  fn _ZNK11QPushButton10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK11QPushButton10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QMenu * QPushButton::menu();
-  fn _ZNK11QPushButton4menuEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK11QPushButton4menuEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QPushButton::QPushButton(QWidget * parent);
-  fn _ZN11QPushButtonC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QPushButtonC2EP7QWidget(arg0: *mut c_void) -> u64;
   // proto:  void QPushButton::showMenu();
-  fn _ZN11QPushButton8showMenuEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN11QPushButton8showMenuEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QPushButton::QPushButton(const QString & text, QWidget * parent);
-  fn _ZN11QPushButtonC2ERK7QStringP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN11QPushButtonC2ERK7QStringP7QWidget(arg0: *mut c_void, arg1: *mut c_void) -> u64;
   // proto:  bool QPushButton::isFlat();
-  fn _ZNK11QPushButton6isFlatEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK11QPushButton6isFlatEv(qthis: u64 /* *mut c_void*/) -> c_char;
 } // <= ext block end
 
 // body block begin =>
@@ -114,7 +113,7 @@ impl<'a> /*trait*/ QPushButton_setMenu<()> for (&'a QMenu) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPushButton7setMenuEP5QMenu()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QPushButton7setMenuEP5QMenu(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QPushButton7setMenuEP5QMenu(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -137,7 +136,7 @@ impl<'a> /*trait*/ QPushButton_setFlat<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPushButton7setFlatEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN11QPushButton7setFlatEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QPushButton7setFlatEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -160,7 +159,7 @@ impl<'a> /*trait*/ QPushButton_setAutoDefault<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPushButton14setAutoDefaultEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN11QPushButton14setAutoDefaultEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QPushButton14setAutoDefaultEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -182,7 +181,7 @@ impl<'a> /*trait*/ QPushButton_minimumSizeHint<QSize> for () {
   fn minimumSizeHint(self , rsthis: & QPushButton) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPushButton15minimumSizeHintEv()};
-    let mut ret = unsafe {_ZNK11QPushButton15minimumSizeHintEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QPushButton15minimumSizeHintEv(rsthis.qclsinst)};
     let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -207,7 +206,7 @@ impl<'a> /*trait*/ QPushButton_setDefault<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPushButton10setDefaultEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN11QPushButton10setDefaultEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QPushButton10setDefaultEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -229,36 +228,7 @@ impl<'a> /*trait*/ QPushButton_free<()> for () {
   fn free(self , rsthis: & QPushButton) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPushButtonD2Ev()};
-     unsafe {_ZN11QPushButtonD2Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QPushButton::QPushButton(const QPushButton & );
-impl /*struct*/ QPushButton {
-  pub fn new<T: QPushButton_new>(value: T) -> QPushButton {
-    let rsthis = value.new();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QPushButton_new {
-  fn new(self) -> QPushButton;
-}
-
-  // proto:  void QPushButton::QPushButton(const QPushButton & );
-impl<'a> /*trait*/ QPushButton_new for (&'a QPushButton) {
-  fn new(self) -> QPushButton {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QPushButtonC2ERKS_()};
-    let ctysz: c_int = unsafe{QPushButton_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QPushButtonC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QPushButton{qbase: QAbstractButton::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
+     unsafe {C_ZN11QPushButtonD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -280,10 +250,23 @@ impl<'a> /*trait*/ QPushButton_isDefault<i8> for () {
   fn isDefault(self , rsthis: & QPushButton) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPushButton9isDefaultEv()};
-    let mut ret = unsafe {_ZNK11QPushButton9isDefaultEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QPushButton9isDefaultEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
+}
+
+  // proto:  void QPushButton::QPushButton(const QIcon & icon, const QString & text, QWidget * parent);
+impl /*struct*/ QPushButton {
+  pub fn new<T: QPushButton_new>(value: T) -> QPushButton {
+    let rsthis = value.new();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QPushButton_new {
+  fn new(self) -> QPushButton;
 }
 
   // proto:  void QPushButton::QPushButton(const QIcon & icon, const QString & text, QWidget * parent);
@@ -296,8 +279,7 @@ impl<'a> /*trait*/ QPushButton_new for (&'a QIcon, &'a QString, &'a QWidget) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
-    unsafe {_ZN11QPushButtonC2ERK5QIconRK7QStringP7QWidget(qthis_ph, arg0, arg1, arg2)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN11QPushButtonC2ERK5QIconRK7QStringP7QWidget(arg0, arg1, arg2)};
     let rsthis = QPushButton{qbase: QAbstractButton::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -321,7 +303,7 @@ impl<'a> /*trait*/ QPushButton_autoDefault<i8> for () {
   fn autoDefault(self , rsthis: & QPushButton) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPushButton11autoDefaultEv()};
-    let mut ret = unsafe {_ZNK11QPushButton11autoDefaultEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QPushButton11autoDefaultEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -344,7 +326,7 @@ impl<'a> /*trait*/ QPushButton_sizeHint<QSize> for () {
   fn sizeHint(self , rsthis: & QPushButton) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPushButton8sizeHintEv()};
-    let mut ret = unsafe {_ZNK11QPushButton8sizeHintEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QPushButton8sizeHintEv(rsthis.qclsinst)};
     let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -364,11 +346,13 @@ pub trait QPushButton_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QPushButton::metaObject();
-impl<'a> /*trait*/ QPushButton_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QPushButton) -> () {
+impl<'a> /*trait*/ QPushButton_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QPushButton) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPushButton10metaObjectEv()};
-     unsafe {_ZNK11QPushButton10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QPushButton10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -390,7 +374,7 @@ impl<'a> /*trait*/ QPushButton_menu<QMenu> for () {
   fn menu(self , rsthis: & QPushButton) -> QMenu {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPushButton4menuEv()};
-    let mut ret = unsafe {_ZNK11QPushButton4menuEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QPushButton4menuEv(rsthis.qclsinst)};
     let mut ret1 = QMenu::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -405,8 +389,7 @@ impl<'a> /*trait*/ QPushButton_new for (&'a QWidget) {
     let ctysz: c_int = unsafe{QPushButton_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QPushButtonC2EP7QWidget(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN11QPushButtonC2EP7QWidget(arg0)};
     let rsthis = QPushButton{qbase: QAbstractButton::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -430,7 +413,7 @@ impl<'a> /*trait*/ QPushButton_showMenu<()> for () {
   fn showMenu(self , rsthis: & QPushButton) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPushButton8showMenuEv()};
-     unsafe {_ZN11QPushButton8showMenuEv(rsthis.qclsinst)};
+     unsafe {C_ZN11QPushButton8showMenuEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -444,8 +427,7 @@ impl<'a> /*trait*/ QPushButton_new for (&'a QString, &'a QWidget) {
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    unsafe {_ZN11QPushButtonC2ERK7QStringP7QWidget(qthis_ph, arg0, arg1)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN11QPushButtonC2ERK7QStringP7QWidget(arg0, arg1)};
     let rsthis = QPushButton{qbase: QAbstractButton::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -469,7 +451,7 @@ impl<'a> /*trait*/ QPushButton_isFlat<i8> for () {
   fn isFlat(self , rsthis: & QPushButton) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPushButton6isFlatEv()};
-    let mut ret = unsafe {_ZNK11QPushButton6isFlatEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QPushButton6isFlatEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtWidgets/qundogroup.h
 // dst-file: /src/widgets/qundogroup.rs
 //
@@ -23,6 +23,7 @@ use std::ops::Deref;
 use super::qundostack::QUndoStack; // 773
 use super::super::core::qstring::QString; // 771
 use super::qaction::QAction; // 773
+use super::super::core::qobjectdefs::QMetaObject; // 771
 // <= use block end
 
 // ext block begin =>
@@ -34,41 +35,39 @@ use super::qaction::QAction; // 773
 extern {
   fn QUndoGroup_Class_Size() -> c_int;
   // proto:  void QUndoGroup::addStack(QUndoStack * stack);
-  fn _ZN10QUndoGroup8addStackEP10QUndoStack(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN10QUndoGroup8addStackEP10QUndoStack(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QUndoGroup::undo();
-  fn _ZN10QUndoGroup4undoEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN10QUndoGroup4undoEv(qthis: u64 /* *mut c_void*/);
   // proto:  QList<QUndoStack *> QUndoGroup::stacks();
-  fn _ZNK10QUndoGroup6stacksEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK10QUndoGroup6stacksEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QUndoGroup::redo();
-  fn _ZN10QUndoGroup4redoEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN10QUndoGroup4redoEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QUndoGroup::QUndoGroup(QObject * parent);
-  fn _ZN10QUndoGroupC2EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN10QUndoGroupC2EP7QObject(arg0: *mut c_void) -> u64;
   // proto:  void QUndoGroup::setActiveStack(QUndoStack * stack);
-  fn _ZN10QUndoGroup14setActiveStackEP10QUndoStack(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN10QUndoGroup14setActiveStackEP10QUndoStack(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QAction * QUndoGroup::createRedoAction(QObject * parent, const QString & prefix);
-  fn _ZNK10QUndoGroup16createRedoActionEP7QObjectRK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  // proto:  void QUndoGroup::QUndoGroup(const QUndoGroup & );
-  fn _ZN10QUndoGroupC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK10QUndoGroup16createRedoActionEP7QObjectRK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  const QMetaObject * QUndoGroup::metaObject();
-  fn _ZNK10QUndoGroup10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK10QUndoGroup10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QUndoGroup::canRedo();
-  fn _ZNK10QUndoGroup7canRedoEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK10QUndoGroup7canRedoEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QString QUndoGroup::redoText();
-  fn _ZNK10QUndoGroup8redoTextEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK10QUndoGroup8redoTextEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QUndoStack * QUndoGroup::activeStack();
-  fn _ZNK10QUndoGroup11activeStackEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK10QUndoGroup11activeStackEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QUndoGroup::undoText();
-  fn _ZNK10QUndoGroup8undoTextEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK10QUndoGroup8undoTextEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QUndoGroup::canUndo();
-  fn _ZNK10QUndoGroup7canUndoEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK10QUndoGroup7canUndoEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QUndoGroup::~QUndoGroup();
-  fn _ZN10QUndoGroupD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN10QUndoGroupD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QUndoGroup::isClean();
-  fn _ZNK10QUndoGroup7isCleanEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK10QUndoGroup7isCleanEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QAction * QUndoGroup::createUndoAction(QObject * parent, const QString & prefix);
-  fn _ZNK10QUndoGroup16createUndoActionEP7QObjectRK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
+  fn C_ZNK10QUndoGroup16createUndoActionEP7QObjectRK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  void QUndoGroup::removeStack(QUndoStack * stack);
-  fn _ZN10QUndoGroup11removeStackEP10QUndoStack(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN10QUndoGroup11removeStackEP10QUndoStack(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QUndoGroup_SlotProxy_connect__ZN10QUndoGroup14canRedoChangedEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QUndoGroup_SlotProxy_connect__ZN10QUndoGroup18activeStackChangedEP10QUndoStack(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QUndoGroup_SlotProxy_connect__ZN10QUndoGroup12cleanChangedEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
@@ -128,7 +127,7 @@ impl<'a> /*trait*/ QUndoGroup_addStack<()> for (&'a QUndoStack) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QUndoGroup8addStackEP10QUndoStack()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN10QUndoGroup8addStackEP10QUndoStack(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN10QUndoGroup8addStackEP10QUndoStack(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -150,7 +149,7 @@ impl<'a> /*trait*/ QUndoGroup_undo<()> for () {
   fn undo(self , rsthis: & QUndoGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QUndoGroup4undoEv()};
-     unsafe {_ZN10QUndoGroup4undoEv(rsthis.qclsinst)};
+     unsafe {C_ZN10QUndoGroup4undoEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -172,7 +171,7 @@ impl<'a> /*trait*/ QUndoGroup_stacks<()> for () {
   fn stacks(self , rsthis: & QUndoGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QUndoGroup6stacksEv()};
-     unsafe {_ZNK10QUndoGroup6stacksEv(rsthis.qclsinst)};
+     unsafe {C_ZNK10QUndoGroup6stacksEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -194,7 +193,7 @@ impl<'a> /*trait*/ QUndoGroup_redo<()> for () {
   fn redo(self , rsthis: & QUndoGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QUndoGroup4redoEv()};
-     unsafe {_ZN10QUndoGroup4redoEv(rsthis.qclsinst)};
+     unsafe {C_ZN10QUndoGroup4redoEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -220,8 +219,7 @@ impl<'a> /*trait*/ QUndoGroup_new for (&'a QObject) {
     let ctysz: c_int = unsafe{QUndoGroup_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN10QUndoGroupC2EP7QObject(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN10QUndoGroupC2EP7QObject(arg0)};
     let rsthis = QUndoGroup{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -246,7 +244,7 @@ impl<'a> /*trait*/ QUndoGroup_setActiveStack<()> for (&'a QUndoStack) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QUndoGroup14setActiveStackEP10QUndoStack()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN10QUndoGroup14setActiveStackEP10QUndoStack(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN10QUndoGroup14setActiveStackEP10QUndoStack(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -270,25 +268,9 @@ impl<'a> /*trait*/ QUndoGroup_createRedoAction<QAction> for (&'a QObject, &'a QS
     // unsafe{_ZNK10QUndoGroup16createRedoActionEP7QObjectRK7QString()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK10QUndoGroup16createRedoActionEP7QObjectRK7QString(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {C_ZNK10QUndoGroup16createRedoActionEP7QObjectRK7QString(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QUndoGroup::QUndoGroup(const QUndoGroup & );
-impl<'a> /*trait*/ QUndoGroup_new for (&'a QUndoGroup) {
-  fn new(self) -> QUndoGroup {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QUndoGroupC2ERKS_()};
-    let ctysz: c_int = unsafe{QUndoGroup_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN10QUndoGroupC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QUndoGroup{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
     // return 1;
   }
 }
@@ -306,11 +288,13 @@ pub trait QUndoGroup_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QUndoGroup::metaObject();
-impl<'a> /*trait*/ QUndoGroup_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QUndoGroup) -> () {
+impl<'a> /*trait*/ QUndoGroup_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QUndoGroup) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QUndoGroup10metaObjectEv()};
-     unsafe {_ZNK10QUndoGroup10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QUndoGroup10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -332,7 +316,7 @@ impl<'a> /*trait*/ QUndoGroup_canRedo<i8> for () {
   fn canRedo(self , rsthis: & QUndoGroup) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QUndoGroup7canRedoEv()};
-    let mut ret = unsafe {_ZNK10QUndoGroup7canRedoEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QUndoGroup7canRedoEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -355,7 +339,7 @@ impl<'a> /*trait*/ QUndoGroup_redoText<QString> for () {
   fn redoText(self , rsthis: & QUndoGroup) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QUndoGroup8redoTextEv()};
-    let mut ret = unsafe {_ZNK10QUndoGroup8redoTextEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QUndoGroup8redoTextEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -379,7 +363,7 @@ impl<'a> /*trait*/ QUndoGroup_activeStack<QUndoStack> for () {
   fn activeStack(self , rsthis: & QUndoGroup) -> QUndoStack {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QUndoGroup11activeStackEv()};
-    let mut ret = unsafe {_ZNK10QUndoGroup11activeStackEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QUndoGroup11activeStackEv(rsthis.qclsinst)};
     let mut ret1 = QUndoStack::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -403,7 +387,7 @@ impl<'a> /*trait*/ QUndoGroup_undoText<QString> for () {
   fn undoText(self , rsthis: & QUndoGroup) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QUndoGroup8undoTextEv()};
-    let mut ret = unsafe {_ZNK10QUndoGroup8undoTextEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QUndoGroup8undoTextEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -427,7 +411,7 @@ impl<'a> /*trait*/ QUndoGroup_canUndo<i8> for () {
   fn canUndo(self , rsthis: & QUndoGroup) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QUndoGroup7canUndoEv()};
-    let mut ret = unsafe {_ZNK10QUndoGroup7canUndoEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QUndoGroup7canUndoEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -450,7 +434,7 @@ impl<'a> /*trait*/ QUndoGroup_free<()> for () {
   fn free(self , rsthis: & QUndoGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QUndoGroupD2Ev()};
-     unsafe {_ZN10QUndoGroupD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN10QUndoGroupD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -472,7 +456,7 @@ impl<'a> /*trait*/ QUndoGroup_isClean<i8> for () {
   fn isClean(self , rsthis: & QUndoGroup) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QUndoGroup7isCleanEv()};
-    let mut ret = unsafe {_ZNK10QUndoGroup7isCleanEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QUndoGroup7isCleanEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -497,7 +481,7 @@ impl<'a> /*trait*/ QUndoGroup_createUndoAction<QAction> for (&'a QObject, &'a QS
     // unsafe{_ZNK10QUndoGroup16createUndoActionEP7QObjectRK7QString()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK10QUndoGroup16createUndoActionEP7QObjectRK7QString(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {C_ZNK10QUndoGroup16createUndoActionEP7QObjectRK7QString(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -522,7 +506,7 @@ impl<'a> /*trait*/ QUndoGroup_removeStack<()> for (&'a QUndoStack) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QUndoGroup11removeStackEP10QUndoStack()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN10QUndoGroup11removeStackEP10QUndoStack(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN10QUndoGroup11removeStackEP10QUndoStack(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

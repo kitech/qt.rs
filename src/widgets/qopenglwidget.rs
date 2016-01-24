@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtWidgets/qopenglwidget.h
 // dst-file: /src/widgets/qopenglwidget.rs
 //
@@ -20,7 +20,9 @@ use self::libc::*;
 // use block begin =>
 use super::qwidget::QWidget; // 773
 use std::ops::Deref;
+use super::super::gui::qopenglcontext::QOpenGLContext; // 771
 use super::super::gui::qimage::QImage; // 771
+use super::super::core::qobjectdefs::QMetaObject; // 771
 use super::super::gui::qsurfaceformat::QSurfaceFormat; // 771
 // <= use block end
 
@@ -33,27 +35,25 @@ use super::super::gui::qsurfaceformat::QSurfaceFormat; // 771
 extern {
   fn QOpenGLWidget_Class_Size() -> c_int;
   // proto:  void QOpenGLWidget::~QOpenGLWidget();
-  fn _ZN13QOpenGLWidgetD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN13QOpenGLWidgetD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  GLuint QOpenGLWidget::defaultFramebufferObject();
-  fn _ZNK13QOpenGLWidget24defaultFramebufferObjectEv(qthis: u64 /* *mut c_void*/) -> c_uint;
-  // proto:  void QOpenGLWidget::QOpenGLWidget(const QOpenGLWidget & );
-  fn _ZN13QOpenGLWidgetC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK13QOpenGLWidget24defaultFramebufferObjectEv(qthis: u64 /* *mut c_void*/) -> c_uint;
   // proto:  bool QOpenGLWidget::isValid();
-  fn _ZNK13QOpenGLWidget7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK13QOpenGLWidget7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QOpenGLContext * QOpenGLWidget::context();
-  fn _ZNK13QOpenGLWidget7contextEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK13QOpenGLWidget7contextEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QOpenGLWidget::doneCurrent();
-  fn _ZN13QOpenGLWidget11doneCurrentEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN13QOpenGLWidget11doneCurrentEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QOpenGLWidget::makeCurrent();
-  fn _ZN13QOpenGLWidget11makeCurrentEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN13QOpenGLWidget11makeCurrentEv(qthis: u64 /* *mut c_void*/);
   // proto:  QImage QOpenGLWidget::grabFramebuffer();
-  fn _ZN13QOpenGLWidget15grabFramebufferEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZN13QOpenGLWidget15grabFramebufferEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  const QMetaObject * QOpenGLWidget::metaObject();
-  fn _ZNK13QOpenGLWidget10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK13QOpenGLWidget10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QOpenGLWidget::setFormat(const QSurfaceFormat & format);
-  fn _ZN13QOpenGLWidget9setFormatERK14QSurfaceFormat(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN13QOpenGLWidget9setFormatERK14QSurfaceFormat(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QSurfaceFormat QOpenGLWidget::format();
-  fn _ZNK13QOpenGLWidget6formatEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK13QOpenGLWidget6formatEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   fn QOpenGLWidget_SlotProxy_connect__ZN13QOpenGLWidget13aboutToResizeEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QOpenGLWidget_SlotProxy_connect__ZN13QOpenGLWidget12frameSwappedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QOpenGLWidget_SlotProxy_connect__ZN13QOpenGLWidget7resizedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
@@ -106,7 +106,7 @@ impl<'a> /*trait*/ QOpenGLWidget_free<()> for () {
   fn free(self , rsthis: & QOpenGLWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLWidgetD2Ev()};
-     unsafe {_ZN13QOpenGLWidgetD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN13QOpenGLWidgetD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -128,37 +128,8 @@ impl<'a> /*trait*/ QOpenGLWidget_defaultFramebufferObject<u32> for () {
   fn defaultFramebufferObject(self , rsthis: & QOpenGLWidget) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QOpenGLWidget24defaultFramebufferObjectEv()};
-    let mut ret = unsafe {_ZNK13QOpenGLWidget24defaultFramebufferObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QOpenGLWidget24defaultFramebufferObjectEv(rsthis.qclsinst)};
     return ret as u32;
-    // return 1;
-  }
-}
-
-  // proto:  void QOpenGLWidget::QOpenGLWidget(const QOpenGLWidget & );
-impl /*struct*/ QOpenGLWidget {
-  pub fn new<T: QOpenGLWidget_new>(value: T) -> QOpenGLWidget {
-    let rsthis = value.new();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QOpenGLWidget_new {
-  fn new(self) -> QOpenGLWidget;
-}
-
-  // proto:  void QOpenGLWidget::QOpenGLWidget(const QOpenGLWidget & );
-impl<'a> /*trait*/ QOpenGLWidget_new for (&'a QOpenGLWidget) {
-  fn new(self) -> QOpenGLWidget {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QOpenGLWidgetC2ERKS_()};
-    let ctysz: c_int = unsafe{QOpenGLWidget_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN13QOpenGLWidgetC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QOpenGLWidget{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
     // return 1;
   }
 }
@@ -180,7 +151,7 @@ impl<'a> /*trait*/ QOpenGLWidget_isValid<i8> for () {
   fn isValid(self , rsthis: & QOpenGLWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QOpenGLWidget7isValidEv()};
-    let mut ret = unsafe {_ZNK13QOpenGLWidget7isValidEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QOpenGLWidget7isValidEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -199,11 +170,13 @@ pub trait QOpenGLWidget_context<RetType> {
 }
 
   // proto:  QOpenGLContext * QOpenGLWidget::context();
-impl<'a> /*trait*/ QOpenGLWidget_context<()> for () {
-  fn context(self , rsthis: & QOpenGLWidget) -> () {
+impl<'a> /*trait*/ QOpenGLWidget_context<QOpenGLContext> for () {
+  fn context(self , rsthis: & QOpenGLWidget) -> QOpenGLContext {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QOpenGLWidget7contextEv()};
-     unsafe {_ZNK13QOpenGLWidget7contextEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QOpenGLWidget7contextEv(rsthis.qclsinst)};
+    let mut ret1 = QOpenGLContext::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -225,7 +198,7 @@ impl<'a> /*trait*/ QOpenGLWidget_doneCurrent<()> for () {
   fn doneCurrent(self , rsthis: & QOpenGLWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLWidget11doneCurrentEv()};
-     unsafe {_ZN13QOpenGLWidget11doneCurrentEv(rsthis.qclsinst)};
+     unsafe {C_ZN13QOpenGLWidget11doneCurrentEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -247,7 +220,7 @@ impl<'a> /*trait*/ QOpenGLWidget_makeCurrent<()> for () {
   fn makeCurrent(self , rsthis: & QOpenGLWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLWidget11makeCurrentEv()};
-     unsafe {_ZN13QOpenGLWidget11makeCurrentEv(rsthis.qclsinst)};
+     unsafe {C_ZN13QOpenGLWidget11makeCurrentEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -269,7 +242,7 @@ impl<'a> /*trait*/ QOpenGLWidget_grabFramebuffer<QImage> for () {
   fn grabFramebuffer(self , rsthis: & QOpenGLWidget) -> QImage {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLWidget15grabFramebufferEv()};
-    let mut ret = unsafe {_ZN13QOpenGLWidget15grabFramebufferEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZN13QOpenGLWidget15grabFramebufferEv(rsthis.qclsinst)};
     let mut ret1 = QImage::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -289,11 +262,13 @@ pub trait QOpenGLWidget_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QOpenGLWidget::metaObject();
-impl<'a> /*trait*/ QOpenGLWidget_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QOpenGLWidget) -> () {
+impl<'a> /*trait*/ QOpenGLWidget_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QOpenGLWidget) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QOpenGLWidget10metaObjectEv()};
-     unsafe {_ZNK13QOpenGLWidget10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QOpenGLWidget10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -316,7 +291,7 @@ impl<'a> /*trait*/ QOpenGLWidget_setFormat<()> for (&'a QSurfaceFormat) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLWidget9setFormatERK14QSurfaceFormat()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN13QOpenGLWidget9setFormatERK14QSurfaceFormat(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN13QOpenGLWidget9setFormatERK14QSurfaceFormat(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -338,7 +313,7 @@ impl<'a> /*trait*/ QOpenGLWidget_format<QSurfaceFormat> for () {
   fn format(self , rsthis: & QOpenGLWidget) -> QSurfaceFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QOpenGLWidget6formatEv()};
-    let mut ret = unsafe {_ZNK13QOpenGLWidget6formatEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QOpenGLWidget6formatEv(rsthis.qclsinst)};
     let mut ret1 = QSurfaceFormat::inheritFrom(ret as u64);
     return ret1;
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtWidgets/qscrollbar.h
 // dst-file: /src/widgets/qscrollbar.rs
 //
@@ -21,6 +21,7 @@ use self::libc::*;
 use super::qabstractslider::QAbstractSlider; // 773
 use std::ops::Deref;
 use super::super::core::qcoreevent::QEvent; // 771
+use super::super::core::qobjectdefs::QMetaObject; // 771
 use super::super::core::qsize::QSize; // 771
 use super::qwidget::QWidget; // 773
 // <= use block end
@@ -34,17 +35,15 @@ use super::qwidget::QWidget; // 773
 extern {
   fn QScrollBar_Class_Size() -> c_int;
   // proto:  bool QScrollBar::event(QEvent * event);
-  fn _ZN10QScrollBar5eventEP6QEvent(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
-  // proto:  void QScrollBar::QScrollBar(const QScrollBar & );
-  fn _ZN10QScrollBarC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN10QScrollBar5eventEP6QEvent(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  const QMetaObject * QScrollBar::metaObject();
-  fn _ZNK10QScrollBar10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK10QScrollBar10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QSize QScrollBar::sizeHint();
-  fn _ZNK10QScrollBar8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK10QScrollBar8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QScrollBar::QScrollBar(QWidget * parent);
-  fn _ZN10QScrollBarC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN10QScrollBarC2EP7QWidget(arg0: *mut c_void) -> u64;
   // proto:  void QScrollBar::~QScrollBar();
-  fn _ZN10QScrollBarD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN10QScrollBarD2Ev(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
@@ -90,37 +89,8 @@ impl<'a> /*trait*/ QScrollBar_event<i8> for (&'a QEvent) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QScrollBar5eventEP6QEvent()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN10QScrollBar5eventEP6QEvent(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN10QScrollBar5eventEP6QEvent(rsthis.qclsinst, arg0)};
     return ret as i8;
-    // return 1;
-  }
-}
-
-  // proto:  void QScrollBar::QScrollBar(const QScrollBar & );
-impl /*struct*/ QScrollBar {
-  pub fn new<T: QScrollBar_new>(value: T) -> QScrollBar {
-    let rsthis = value.new();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QScrollBar_new {
-  fn new(self) -> QScrollBar;
-}
-
-  // proto:  void QScrollBar::QScrollBar(const QScrollBar & );
-impl<'a> /*trait*/ QScrollBar_new for (&'a QScrollBar) {
-  fn new(self) -> QScrollBar {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QScrollBarC2ERKS_()};
-    let ctysz: c_int = unsafe{QScrollBar_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN10QScrollBarC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QScrollBar{qbase: QAbstractSlider::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
     // return 1;
   }
 }
@@ -138,11 +108,13 @@ pub trait QScrollBar_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QScrollBar::metaObject();
-impl<'a> /*trait*/ QScrollBar_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QScrollBar) -> () {
+impl<'a> /*trait*/ QScrollBar_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QScrollBar) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QScrollBar10metaObjectEv()};
-     unsafe {_ZNK10QScrollBar10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QScrollBar10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -164,11 +136,24 @@ impl<'a> /*trait*/ QScrollBar_sizeHint<QSize> for () {
   fn sizeHint(self , rsthis: & QScrollBar) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QScrollBar8sizeHintEv()};
-    let mut ret = unsafe {_ZNK10QScrollBar8sizeHintEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QScrollBar8sizeHintEv(rsthis.qclsinst)};
     let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
+}
+
+  // proto:  void QScrollBar::QScrollBar(QWidget * parent);
+impl /*struct*/ QScrollBar {
+  pub fn new<T: QScrollBar_new>(value: T) -> QScrollBar {
+    let rsthis = value.new();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QScrollBar_new {
+  fn new(self) -> QScrollBar;
 }
 
   // proto:  void QScrollBar::QScrollBar(QWidget * parent);
@@ -179,8 +164,7 @@ impl<'a> /*trait*/ QScrollBar_new for (&'a QWidget) {
     let ctysz: c_int = unsafe{QScrollBar_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN10QScrollBarC2EP7QWidget(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN10QScrollBarC2EP7QWidget(arg0)};
     let rsthis = QScrollBar{qbase: QAbstractSlider::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -204,7 +188,7 @@ impl<'a> /*trait*/ QScrollBar_free<()> for () {
   fn free(self , rsthis: & QScrollBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QScrollBarD2Ev()};
-     unsafe {_ZN10QScrollBarD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN10QScrollBarD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

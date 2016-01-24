@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtWidgets/qstyleplugin.h
 // dst-file: /src/widgets/qstyleplugin.rs
 //
@@ -22,6 +22,7 @@ use super::super::core::qobject::QObject; // 771
 use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
 use super::qstyle::QStyle; // 773
+use super::super::core::qobjectdefs::QMetaObject; // 771
 // <= use block end
 
 // ext block begin =>
@@ -33,13 +34,13 @@ use super::qstyle::QStyle; // 773
 extern {
   fn QStylePlugin_Class_Size() -> c_int;
   // proto:  QStyle * QStylePlugin::create(const QString & key);
-  fn _ZN12QStylePlugin6createERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZN12QStylePlugin6createERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  const QMetaObject * QStylePlugin::metaObject();
-  fn _ZNK12QStylePlugin10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK12QStylePlugin10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QStylePlugin::QStylePlugin(QObject * parent);
-  fn _ZN12QStylePluginC2EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN12QStylePluginC2EP7QObject(arg0: *mut c_void) -> u64;
   // proto:  void QStylePlugin::~QStylePlugin();
-  fn _ZN12QStylePluginD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN12QStylePluginD2Ev(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
@@ -85,7 +86,7 @@ impl<'a> /*trait*/ QStylePlugin_create<QStyle> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QStylePlugin6createERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN12QStylePlugin6createERK7QString(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN12QStylePlugin6createERK7QString(rsthis.qclsinst, arg0)};
     let mut ret1 = QStyle::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -105,11 +106,13 @@ pub trait QStylePlugin_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QStylePlugin::metaObject();
-impl<'a> /*trait*/ QStylePlugin_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QStylePlugin) -> () {
+impl<'a> /*trait*/ QStylePlugin_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QStylePlugin) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QStylePlugin10metaObjectEv()};
-     unsafe {_ZNK12QStylePlugin10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QStylePlugin10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -135,8 +138,7 @@ impl<'a> /*trait*/ QStylePlugin_new for (&'a QObject) {
     let ctysz: c_int = unsafe{QStylePlugin_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN12QStylePluginC2EP7QObject(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN12QStylePluginC2EP7QObject(arg0)};
     let rsthis = QStylePlugin{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -160,7 +162,7 @@ impl<'a> /*trait*/ QStylePlugin_free<()> for () {
   fn free(self , rsthis: & QStylePlugin) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QStylePluginD2Ev()};
-     unsafe {_ZN12QStylePluginD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN12QStylePluginD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

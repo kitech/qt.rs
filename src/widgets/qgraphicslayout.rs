@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtWidgets/qgraphicslayout.h
 // dst-file: /src/widgets/qgraphicslayout.rs
 //
@@ -32,35 +32,33 @@ use super::super::core::qcoreevent::QEvent; // 771
 extern {
   fn QGraphicsLayout_Class_Size() -> c_int;
   // proto:  void QGraphicsLayout::updateGeometry();
-  fn _ZN15QGraphicsLayout14updateGeometryEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN15QGraphicsLayout14updateGeometryEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QGraphicsLayout::isActivated();
-  fn _ZNK15QGraphicsLayout11isActivatedEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK15QGraphicsLayout11isActivatedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QGraphicsLayout::invalidate();
-  fn _ZN15QGraphicsLayout10invalidateEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN15QGraphicsLayout10invalidateEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QGraphicsLayout::removeAt(int index);
-  fn _ZN15QGraphicsLayout8removeAtEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN15QGraphicsLayout8removeAtEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  QGraphicsLayoutItem * QGraphicsLayout::itemAt(int i);
-  fn _ZNK15QGraphicsLayout6itemAtEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
-  // proto:  void QGraphicsLayout::QGraphicsLayout(const QGraphicsLayout & );
-  fn _ZN15QGraphicsLayoutC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK15QGraphicsLayout6itemAtEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QGraphicsLayout::getContentsMargins(qreal * left, qreal * top, qreal * right, qreal * bottom);
-  fn _ZNK15QGraphicsLayout18getContentsMarginsEPdS0_S0_S0_(qthis: u64 /* *mut c_void*/, arg0: *mut c_double, arg1: *mut c_double, arg2: *mut c_double, arg3: *mut c_double);
+  fn C_ZNK15QGraphicsLayout18getContentsMarginsEPdS0_S0_S0_(qthis: u64 /* *mut c_void*/, arg0: *mut c_double, arg1: *mut c_double, arg2: *mut c_double, arg3: *mut c_double);
   // proto:  void QGraphicsLayout::setContentsMargins(qreal left, qreal top, qreal right, qreal bottom);
-  fn _ZN15QGraphicsLayout18setContentsMarginsEdddd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
+  fn C_ZN15QGraphicsLayout18setContentsMarginsEdddd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
   // proto:  void QGraphicsLayout::widgetEvent(QEvent * e);
-  fn _ZN15QGraphicsLayout11widgetEventEP6QEvent(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN15QGraphicsLayout11widgetEventEP6QEvent(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static bool QGraphicsLayout::instantInvalidatePropagation();
-  fn _ZN15QGraphicsLayout28instantInvalidatePropagationEv() -> c_char;
+  fn C_ZN15QGraphicsLayout28instantInvalidatePropagationEv() -> c_char;
   // proto: static void QGraphicsLayout::setInstantInvalidatePropagation(bool enable);
-  fn _ZN15QGraphicsLayout31setInstantInvalidatePropagationEb(arg0: c_char);
+  fn C_ZN15QGraphicsLayout31setInstantInvalidatePropagationEb(arg0: c_char);
   // proto:  void QGraphicsLayout::~QGraphicsLayout();
-  fn _ZN15QGraphicsLayoutD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN15QGraphicsLayoutD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QGraphicsLayout::activate();
-  fn _ZN15QGraphicsLayout8activateEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN15QGraphicsLayout8activateEv(qthis: u64 /* *mut c_void*/);
   // proto:  int QGraphicsLayout::count();
-  fn _ZNK15QGraphicsLayout5countEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK15QGraphicsLayout5countEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QGraphicsLayout::QGraphicsLayout(QGraphicsLayoutItem * parent);
-  fn _ZN15QGraphicsLayoutC2EP19QGraphicsLayoutItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN15QGraphicsLayoutC2EP19QGraphicsLayoutItem(arg0: *mut c_void) -> u64;
 } // <= ext block end
 
 // body block begin =>
@@ -105,7 +103,7 @@ impl<'a> /*trait*/ QGraphicsLayout_updateGeometry<()> for () {
   fn updateGeometry(self , rsthis: & QGraphicsLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsLayout14updateGeometryEv()};
-     unsafe {_ZN15QGraphicsLayout14updateGeometryEv(rsthis.qclsinst)};
+     unsafe {C_ZN15QGraphicsLayout14updateGeometryEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -127,7 +125,7 @@ impl<'a> /*trait*/ QGraphicsLayout_isActivated<i8> for () {
   fn isActivated(self , rsthis: & QGraphicsLayout) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGraphicsLayout11isActivatedEv()};
-    let mut ret = unsafe {_ZNK15QGraphicsLayout11isActivatedEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QGraphicsLayout11isActivatedEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -150,7 +148,7 @@ impl<'a> /*trait*/ QGraphicsLayout_invalidate<()> for () {
   fn invalidate(self , rsthis: & QGraphicsLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsLayout10invalidateEv()};
-     unsafe {_ZN15QGraphicsLayout10invalidateEv(rsthis.qclsinst)};
+     unsafe {C_ZN15QGraphicsLayout10invalidateEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -173,7 +171,7 @@ impl<'a> /*trait*/ QGraphicsLayout_removeAt<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsLayout8removeAtEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN15QGraphicsLayout8removeAtEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QGraphicsLayout8removeAtEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -196,36 +194,7 @@ impl<'a> /*trait*/ QGraphicsLayout_itemAt<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGraphicsLayout6itemAtEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZNK15QGraphicsLayout6itemAtEi(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QGraphicsLayout::QGraphicsLayout(const QGraphicsLayout & );
-impl /*struct*/ QGraphicsLayout {
-  pub fn new<T: QGraphicsLayout_new>(value: T) -> QGraphicsLayout {
-    let rsthis = value.new();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QGraphicsLayout_new {
-  fn new(self) -> QGraphicsLayout;
-}
-
-  // proto:  void QGraphicsLayout::QGraphicsLayout(const QGraphicsLayout & );
-impl<'a> /*trait*/ QGraphicsLayout_new for (&'a QGraphicsLayout) {
-  fn new(self) -> QGraphicsLayout {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QGraphicsLayoutC2ERKS_()};
-    let ctysz: c_int = unsafe{QGraphicsLayout_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN15QGraphicsLayoutC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QGraphicsLayout{qbase: QGraphicsLayoutItem::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
+     unsafe {C_ZNK15QGraphicsLayout6itemAtEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -251,7 +220,7 @@ impl<'a> /*trait*/ QGraphicsLayout_getContentsMargins<()> for (&'a mut Vec<f64>,
     let arg1 = self.1.as_ptr()  as *mut c_double;
     let arg2 = self.2.as_ptr()  as *mut c_double;
     let arg3 = self.3.as_ptr()  as *mut c_double;
-     unsafe {_ZNK15QGraphicsLayout18getContentsMarginsEPdS0_S0_S0_(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
+     unsafe {C_ZNK15QGraphicsLayout18getContentsMarginsEPdS0_S0_S0_(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
     // return 1;
   }
 }
@@ -277,7 +246,7 @@ impl<'a> /*trait*/ QGraphicsLayout_setContentsMargins<()> for (f64, f64, f64, f6
     let arg1 = self.1  as c_double;
     let arg2 = self.2  as c_double;
     let arg3 = self.3  as c_double;
-     unsafe {_ZN15QGraphicsLayout18setContentsMarginsEdddd(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
+     unsafe {C_ZN15QGraphicsLayout18setContentsMarginsEdddd(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
     // return 1;
   }
 }
@@ -300,7 +269,7 @@ impl<'a> /*trait*/ QGraphicsLayout_widgetEvent<()> for (&'a QEvent) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsLayout11widgetEventEP6QEvent()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN15QGraphicsLayout11widgetEventEP6QEvent(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QGraphicsLayout11widgetEventEP6QEvent(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -322,7 +291,7 @@ impl<'a> /*trait*/ QGraphicsLayout_instantInvalidatePropagation_s<i8> for () {
   fn instantInvalidatePropagation_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsLayout28instantInvalidatePropagationEv()};
-    let mut ret = unsafe {_ZN15QGraphicsLayout28instantInvalidatePropagationEv()};
+    let mut ret = unsafe {C_ZN15QGraphicsLayout28instantInvalidatePropagationEv()};
     return ret as i8;
     // return 1;
   }
@@ -346,7 +315,7 @@ impl<'a> /*trait*/ QGraphicsLayout_setInstantInvalidatePropagation_s<()> for (i8
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsLayout31setInstantInvalidatePropagationEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN15QGraphicsLayout31setInstantInvalidatePropagationEb(arg0)};
+     unsafe {C_ZN15QGraphicsLayout31setInstantInvalidatePropagationEb(arg0)};
     // return 1;
   }
 }
@@ -368,7 +337,7 @@ impl<'a> /*trait*/ QGraphicsLayout_free<()> for () {
   fn free(self , rsthis: & QGraphicsLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsLayoutD2Ev()};
-     unsafe {_ZN15QGraphicsLayoutD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN15QGraphicsLayoutD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -390,7 +359,7 @@ impl<'a> /*trait*/ QGraphicsLayout_activate<()> for () {
   fn activate(self , rsthis: & QGraphicsLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsLayout8activateEv()};
-     unsafe {_ZN15QGraphicsLayout8activateEv(rsthis.qclsinst)};
+     unsafe {C_ZN15QGraphicsLayout8activateEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -412,10 +381,23 @@ impl<'a> /*trait*/ QGraphicsLayout_count<i32> for () {
   fn count(self , rsthis: & QGraphicsLayout) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGraphicsLayout5countEv()};
-    let mut ret = unsafe {_ZNK15QGraphicsLayout5countEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QGraphicsLayout5countEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
+}
+
+  // proto:  void QGraphicsLayout::QGraphicsLayout(QGraphicsLayoutItem * parent);
+impl /*struct*/ QGraphicsLayout {
+  pub fn new<T: QGraphicsLayout_new>(value: T) -> QGraphicsLayout {
+    let rsthis = value.new();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QGraphicsLayout_new {
+  fn new(self) -> QGraphicsLayout;
 }
 
   // proto:  void QGraphicsLayout::QGraphicsLayout(QGraphicsLayoutItem * parent);
@@ -426,8 +408,7 @@ impl<'a> /*trait*/ QGraphicsLayout_new for (&'a QGraphicsLayoutItem) {
     let ctysz: c_int = unsafe{QGraphicsLayout_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN15QGraphicsLayoutC2EP19QGraphicsLayoutItem(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN15QGraphicsLayoutC2EP19QGraphicsLayoutItem(arg0)};
     let rsthis = QGraphicsLayout{qbase: QGraphicsLayoutItem::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

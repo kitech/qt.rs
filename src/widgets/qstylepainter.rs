@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtWidgets/qstylepainter.h
 // dst-file: /src/widgets/qstylepainter.rs
 //
@@ -40,21 +40,19 @@ use super::qstyleoption::QStyleOption; // 773
 extern {
   fn QStylePainter_Class_Size() -> c_int;
   // proto:  void QStylePainter::QStylePainter(QWidget * w);
-  fn _ZN13QStylePainterC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN13QStylePainterC2EP7QWidget(arg0: *mut c_void) -> u64;
   // proto:  void QStylePainter::QStylePainter(QPaintDevice * pd, QWidget * w);
-  fn _ZN13QStylePainterC2EP12QPaintDeviceP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN13QStylePainterC2EP12QPaintDeviceP7QWidget(arg0: *mut c_void, arg1: *mut c_void) -> u64;
   // proto:  void QStylePainter::QStylePainter();
-  fn _ZN13QStylePainterC2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN13QStylePainterC2Ev() -> u64;
   // proto:  bool QStylePainter::begin(QPaintDevice * pd, QWidget * w);
-  fn _ZN13QStylePainter5beginEP12QPaintDeviceP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> c_char;
-  // proto:  void QStylePainter::QStylePainter(const QStylePainter & );
-  fn _ZN13QStylePainterC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN13QStylePainter5beginEP12QPaintDeviceP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> c_char;
   // proto:  bool QStylePainter::begin(QWidget * w);
-  fn _ZN13QStylePainter5beginEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
+  fn C_ZN13QStylePainter5beginEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  void QStylePainter::drawItemPixmap(const QRect & r, int flags, const QPixmap & pixmap);
-  fn _ZN13QStylePainter14drawItemPixmapERK5QRectiRK7QPixmap(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void);
+  fn C_ZN13QStylePainter14drawItemPixmapERK5QRectiRK7QPixmap(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void);
   // proto:  QStyle * QStylePainter::style();
-  fn _ZNK13QStylePainter5styleEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK13QStylePainter5styleEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
 } // <= ext block end
 
 // body block begin =>
@@ -103,8 +101,7 @@ impl<'a> /*trait*/ QStylePainter_new for (&'a QWidget) {
     let ctysz: c_int = unsafe{QStylePainter_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN13QStylePainterC2EP7QWidget(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN13QStylePainterC2EP7QWidget(arg0)};
     let rsthis = QStylePainter{qbase: QPainter::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -120,8 +117,7 @@ impl<'a> /*trait*/ QStylePainter_new for (&'a QPaintDevice, &'a QWidget) {
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    unsafe {_ZN13QStylePainterC2EP12QPaintDeviceP7QWidget(qthis_ph, arg0, arg1)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN13QStylePainterC2EP12QPaintDeviceP7QWidget(arg0, arg1)};
     let rsthis = QStylePainter{qbase: QPainter::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -135,8 +131,7 @@ impl<'a> /*trait*/ QStylePainter_new for () {
     // unsafe{_ZN13QStylePainterC2Ev()};
     let ctysz: c_int = unsafe{QStylePainter_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    unsafe {_ZN13QStylePainterC2Ev(qthis_ph)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN13QStylePainterC2Ev()};
     let rsthis = QStylePainter{qbase: QPainter::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -162,24 +157,8 @@ impl<'a> /*trait*/ QStylePainter_begin<i8> for (&'a QPaintDevice, &'a QWidget) {
     // unsafe{_ZN13QStylePainter5beginEP12QPaintDeviceP7QWidget()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN13QStylePainter5beginEP12QPaintDeviceP7QWidget(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {C_ZN13QStylePainter5beginEP12QPaintDeviceP7QWidget(rsthis.qclsinst, arg0, arg1)};
     return ret as i8;
-    // return 1;
-  }
-}
-
-  // proto:  void QStylePainter::QStylePainter(const QStylePainter & );
-impl<'a> /*trait*/ QStylePainter_new for (&'a QStylePainter) {
-  fn new(self) -> QStylePainter {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QStylePainterC2ERKS_()};
-    let ctysz: c_int = unsafe{QStylePainter_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN13QStylePainterC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QStylePainter{qbase: QPainter::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
     // return 1;
   }
 }
@@ -190,7 +169,7 @@ impl<'a> /*trait*/ QStylePainter_begin<i8> for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStylePainter5beginEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN13QStylePainter5beginEP7QWidget(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN13QStylePainter5beginEP7QWidget(rsthis.qclsinst, arg0)};
     return ret as i8;
     // return 1;
   }
@@ -216,7 +195,7 @@ impl<'a> /*trait*/ QStylePainter_drawItemPixmap<()> for (&'a QRect, i32, &'a QPi
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
-     unsafe {_ZN13QStylePainter14drawItemPixmapERK5QRectiRK7QPixmap(rsthis.qclsinst, arg0, arg1, arg2)};
+     unsafe {C_ZN13QStylePainter14drawItemPixmapERK5QRectiRK7QPixmap(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
 }
@@ -238,7 +217,7 @@ impl<'a> /*trait*/ QStylePainter_style<QStyle> for () {
   fn style(self , rsthis: & QStylePainter) -> QStyle {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStylePainter5styleEv()};
-    let mut ret = unsafe {_ZNK13QStylePainter5styleEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QStylePainter5styleEv(rsthis.qclsinst)};
     let mut ret1 = QStyle::inheritFrom(ret as u64);
     return ret1;
     // return 1;

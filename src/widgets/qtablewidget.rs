@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtWidgets/qtablewidget.h
 // dst-file: /src/widgets/qtablewidget.rs
 //
@@ -21,6 +21,7 @@ use self::libc::*;
 use std::ops::Deref;
 use super::qtableview::QTableView; // 773
 use super::super::core::qstring::QString; // 771
+use super::super::core::qobjectdefs::QMetaObject; // 771
 // use super::qtablewidget::QTableWidgetItem; // 773
 use super::super::core::qstringlist::QStringList; // 771
 use super::super::core::qrect::QRect; // 771
@@ -46,213 +47,211 @@ use super::super::core::qdatastream::QDataStream; // 771
 extern {
   fn QTableWidgetSelectionRange_Class_Size() -> c_int;
   // proto:  void QTableWidgetSelectionRange::QTableWidgetSelectionRange(int top, int left, int bottom, int right);
-  fn _ZN26QTableWidgetSelectionRangeC2Eiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
+  fn C_ZN26QTableWidgetSelectionRangeC2Eiiii(arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int) -> u64;
   // proto:  int QTableWidgetSelectionRange::columnCount();
-  fn _ZNK26QTableWidgetSelectionRange11columnCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK26QTableWidgetSelectionRange11columnCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QTableWidgetSelectionRange::rowCount();
-  fn _ZNK26QTableWidgetSelectionRange8rowCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK26QTableWidgetSelectionRange8rowCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QTableWidgetSelectionRange::leftColumn();
-  fn _ZNK26QTableWidgetSelectionRange10leftColumnEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK26QTableWidgetSelectionRange10leftColumnEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QTableWidgetSelectionRange::~QTableWidgetSelectionRange();
-  fn _ZN26QTableWidgetSelectionRangeD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN26QTableWidgetSelectionRangeD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  int QTableWidgetSelectionRange::topRow();
-  fn _ZNK26QTableWidgetSelectionRange6topRowEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK26QTableWidgetSelectionRange6topRowEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QTableWidgetSelectionRange::rightColumn();
-  fn _ZNK26QTableWidgetSelectionRange11rightColumnEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK26QTableWidgetSelectionRange11rightColumnEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QTableWidgetSelectionRange::QTableWidgetSelectionRange();
-  fn _ZN26QTableWidgetSelectionRangeC2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN26QTableWidgetSelectionRangeC2Ev() -> u64;
   // proto:  void QTableWidgetSelectionRange::QTableWidgetSelectionRange(const QTableWidgetSelectionRange & other);
-  fn _ZN26QTableWidgetSelectionRangeC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN26QTableWidgetSelectionRangeC2ERKS_(arg0: *mut c_void) -> u64;
   // proto:  int QTableWidgetSelectionRange::bottomRow();
-  fn _ZNK26QTableWidgetSelectionRange9bottomRowEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK26QTableWidgetSelectionRange9bottomRowEv(qthis: u64 /* *mut c_void*/) -> c_int;
   fn QTableWidget_Class_Size() -> c_int;
   // proto:  void QTableWidget::setColumnCount(int columns);
-  fn _ZN12QTableWidget14setColumnCountEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN12QTableWidget14setColumnCountEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QTableWidget::~QTableWidget();
-  fn _ZN12QTableWidgetD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN12QTableWidgetD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QList<QTableWidgetItem *> QTableWidget::selectedItems();
-  fn _ZNK12QTableWidget13selectedItemsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK12QTableWidget13selectedItemsEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QTableWidget::isSortingEnabled();
-  fn _ZNK12QTableWidget16isSortingEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK12QTableWidget16isSortingEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  const QMetaObject * QTableWidget::metaObject();
-  fn _ZNK12QTableWidget10metaObjectEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QTableWidget::QTableWidget(const QTableWidget & );
-  fn _ZN12QTableWidgetC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK12QTableWidget10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QTableWidget::closePersistentEditor(QTableWidgetItem * item);
-  fn _ZN12QTableWidget21closePersistentEditorEP16QTableWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN12QTableWidget21closePersistentEditorEP16QTableWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTableWidget::setHorizontalHeaderLabels(const QStringList & labels);
-  fn _ZN12QTableWidget25setHorizontalHeaderLabelsERK11QStringList(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN12QTableWidget25setHorizontalHeaderLabelsERK11QStringList(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTableWidget::setItemSelected(const QTableWidgetItem * item, bool select);
-  fn _ZN12QTableWidget15setItemSelectedEPK16QTableWidgetItemb(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_char);
+  fn C_ZN12QTableWidget15setItemSelectedEPK16QTableWidgetItemb(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_char);
   // proto:  QTableWidgetItem * QTableWidget::takeItem(int row, int column);
-  fn _ZN12QTableWidget8takeItemEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> *mut c_void;
+  fn C_ZN12QTableWidget8takeItemEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> *mut c_void;
   // proto:  void QTableWidget::removeCellWidget(int row, int column);
-  fn _ZN12QTableWidget16removeCellWidgetEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
+  fn C_ZN12QTableWidget16removeCellWidgetEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  void QTableWidget::setVerticalHeaderItem(int row, QTableWidgetItem * item);
-  fn _ZN12QTableWidget21setVerticalHeaderItemEiP16QTableWidgetItem(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
+  fn C_ZN12QTableWidget21setVerticalHeaderItemEiP16QTableWidgetItem(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  QRect QTableWidget::visualItemRect(const QTableWidgetItem * item);
-  fn _ZNK12QTableWidget14visualItemRectEPK16QTableWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZNK12QTableWidget14visualItemRectEPK16QTableWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QTableWidgetItem * QTableWidget::currentItem();
-  fn _ZNK12QTableWidget11currentItemEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK12QTableWidget11currentItemEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QTableWidget::row(const QTableWidgetItem * item);
-  fn _ZNK12QTableWidget3rowEPK16QTableWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
+  fn C_ZNK12QTableWidget3rowEPK16QTableWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
   // proto:  void QTableWidget::removeRow(int row);
-  fn _ZN12QTableWidget9removeRowEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN12QTableWidget9removeRowEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QTableWidget::setItemPrototype(const QTableWidgetItem * item);
-  fn _ZN12QTableWidget16setItemPrototypeEPK16QTableWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN12QTableWidget16setItemPrototypeEPK16QTableWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTableWidget::QTableWidget(int rows, int columns, QWidget * parent);
-  fn _ZN12QTableWidgetC2EiiP7QWidget(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: *mut c_void);
+  fn C_ZN12QTableWidgetC2EiiP7QWidget(arg0: c_int, arg1: c_int, arg2: *mut c_void) -> u64;
   // proto:  int QTableWidget::visualRow(int logicalRow);
-  fn _ZNK12QTableWidget9visualRowEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
+  fn C_ZNK12QTableWidget9visualRowEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
   // proto:  void QTableWidget::setCellWidget(int row, int column, QWidget * widget);
-  fn _ZN12QTableWidget13setCellWidgetEiiP7QWidget(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: *mut c_void);
+  fn C_ZN12QTableWidget13setCellWidgetEiiP7QWidget(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: *mut c_void);
   // proto:  void QTableWidget::openPersistentEditor(QTableWidgetItem * item);
-  fn _ZN12QTableWidget20openPersistentEditorEP16QTableWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN12QTableWidget20openPersistentEditorEP16QTableWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QTableWidget::columnCount();
-  fn _ZNK12QTableWidget11columnCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK12QTableWidget11columnCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QTableWidget::currentRow();
-  fn _ZNK12QTableWidget10currentRowEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK12QTableWidget10currentRowEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QTableWidget::setCurrentItem(QTableWidgetItem * item);
-  fn _ZN12QTableWidget14setCurrentItemEP16QTableWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN12QTableWidget14setCurrentItemEP16QTableWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QWidget * QTableWidget::cellWidget(int row, int column);
-  fn _ZNK12QTableWidget10cellWidgetEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> *mut c_void;
+  fn C_ZNK12QTableWidget10cellWidgetEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> *mut c_void;
   // proto:  void QTableWidget::setSortingEnabled(bool enable);
-  fn _ZN12QTableWidget17setSortingEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN12QTableWidget17setSortingEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QTableWidget::setItem(int row, int column, QTableWidgetItem * item);
-  fn _ZN12QTableWidget7setItemEiiP16QTableWidgetItem(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: *mut c_void);
+  fn C_ZN12QTableWidget7setItemEiiP16QTableWidgetItem(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: *mut c_void);
   // proto:  QTableWidgetItem * QTableWidget::horizontalHeaderItem(int column);
-  fn _ZNK12QTableWidget20horizontalHeaderItemEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
+  fn C_ZNK12QTableWidget20horizontalHeaderItemEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  void QTableWidget::editItem(QTableWidgetItem * item);
-  fn _ZN12QTableWidget8editItemEP16QTableWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN12QTableWidget8editItemEP16QTableWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QList<QTableWidgetSelectionRange> QTableWidget::selectedRanges();
-  fn _ZNK12QTableWidget14selectedRangesEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK12QTableWidget14selectedRangesEv(qthis: u64 /* *mut c_void*/);
   // proto:  int QTableWidget::currentColumn();
-  fn _ZNK12QTableWidget13currentColumnEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK12QTableWidget13currentColumnEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QTableWidget::removeColumn(int column);
-  fn _ZN12QTableWidget12removeColumnEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN12QTableWidget12removeColumnEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QTableWidget::setRangeSelected(const QTableWidgetSelectionRange & range, bool select);
-  fn _ZN12QTableWidget16setRangeSelectedERK26QTableWidgetSelectionRangeb(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_char);
+  fn C_ZN12QTableWidget16setRangeSelectedERK26QTableWidgetSelectionRangeb(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_char);
   // proto:  int QTableWidget::column(const QTableWidgetItem * item);
-  fn _ZNK12QTableWidget6columnEPK16QTableWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
+  fn C_ZNK12QTableWidget6columnEPK16QTableWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
   // proto:  bool QTableWidget::isItemSelected(const QTableWidgetItem * item);
-  fn _ZNK12QTableWidget14isItemSelectedEPK16QTableWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
+  fn C_ZNK12QTableWidget14isItemSelectedEPK16QTableWidgetItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  QTableWidgetItem * QTableWidget::takeVerticalHeaderItem(int row);
-  fn _ZN12QTableWidget22takeVerticalHeaderItemEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
+  fn C_ZN12QTableWidget22takeVerticalHeaderItemEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  void QTableWidget::insertRow(int row);
-  fn _ZN12QTableWidget9insertRowEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN12QTableWidget9insertRowEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QTableWidget::rowCount();
-  fn _ZNK12QTableWidget8rowCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK12QTableWidget8rowCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  QTableWidgetItem * QTableWidget::item(int row, int column);
-  fn _ZNK12QTableWidget4itemEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> *mut c_void;
+  fn C_ZNK12QTableWidget4itemEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> *mut c_void;
   // proto:  void QTableWidget::QTableWidget(QWidget * parent);
-  fn _ZN12QTableWidgetC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN12QTableWidgetC2EP7QWidget(arg0: *mut c_void) -> u64;
   // proto:  void QTableWidget::setVerticalHeaderLabels(const QStringList & labels);
-  fn _ZN12QTableWidget23setVerticalHeaderLabelsERK11QStringList(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN12QTableWidget23setVerticalHeaderLabelsERK11QStringList(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QTableWidgetItem * QTableWidget::itemPrototype();
-  fn _ZNK12QTableWidget13itemPrototypeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK12QTableWidget13itemPrototypeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QTableWidgetItem * QTableWidget::itemAt(const QPoint & p);
-  fn _ZNK12QTableWidget6itemAtERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZNK12QTableWidget6itemAtERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QTableWidget::clearContents();
-  fn _ZN12QTableWidget13clearContentsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN12QTableWidget13clearContentsEv(qthis: u64 /* *mut c_void*/);
   // proto:  QTableWidgetItem * QTableWidget::itemAt(int x, int y);
-  fn _ZNK12QTableWidget6itemAtEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> *mut c_void;
+  fn C_ZNK12QTableWidget6itemAtEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> *mut c_void;
   // proto:  void QTableWidget::setCurrentCell(int row, int column);
-  fn _ZN12QTableWidget14setCurrentCellEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
+  fn C_ZN12QTableWidget14setCurrentCellEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  void QTableWidget::setRowCount(int rows);
-  fn _ZN12QTableWidget11setRowCountEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN12QTableWidget11setRowCountEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QTableWidget::setHorizontalHeaderItem(int column, QTableWidgetItem * item);
-  fn _ZN12QTableWidget23setHorizontalHeaderItemEiP16QTableWidgetItem(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
+  fn C_ZN12QTableWidget23setHorizontalHeaderItemEiP16QTableWidgetItem(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  int QTableWidget::visualColumn(int logicalColumn);
-  fn _ZNK12QTableWidget12visualColumnEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
+  fn C_ZNK12QTableWidget12visualColumnEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
   // proto:  QTableWidgetItem * QTableWidget::takeHorizontalHeaderItem(int column);
-  fn _ZN12QTableWidget24takeHorizontalHeaderItemEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
+  fn C_ZN12QTableWidget24takeHorizontalHeaderItemEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  QTableWidgetItem * QTableWidget::verticalHeaderItem(int row);
-  fn _ZNK12QTableWidget18verticalHeaderItemEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
+  fn C_ZNK12QTableWidget18verticalHeaderItemEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  void QTableWidget::clear();
-  fn _ZN12QTableWidget5clearEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN12QTableWidget5clearEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QTableWidget::insertColumn(int column);
-  fn _ZN12QTableWidget12insertColumnEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN12QTableWidget12insertColumnEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   fn QTableWidgetItem_Class_Size() -> c_int;
   // proto:  QColor QTableWidgetItem::backgroundColor();
-  fn _ZNK16QTableWidgetItem15backgroundColorEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK16QTableWidgetItem15backgroundColorEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QVariant QTableWidgetItem::data(int role);
-  fn _ZNK16QTableWidgetItem4dataEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
+  fn C_ZNK16QTableWidgetItem4dataEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  void QTableWidgetItem::setSelected(bool select);
-  fn _ZN16QTableWidgetItem11setSelectedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN16QTableWidgetItem11setSelectedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QTableWidgetItem::setStatusTip(const QString & statusTip);
-  fn _ZN16QTableWidgetItem12setStatusTipERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN16QTableWidgetItem12setStatusTipERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QColor QTableWidgetItem::textColor();
-  fn _ZNK16QTableWidgetItem9textColorEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK16QTableWidgetItem9textColorEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QTableWidgetItem::~QTableWidgetItem();
-  fn _ZN16QTableWidgetItemD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN16QTableWidgetItemD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QString QTableWidgetItem::text();
-  fn _ZNK16QTableWidgetItem4textEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK16QTableWidgetItem4textEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QTableWidgetItem::setSizeHint(const QSize & size);
-  fn _ZN16QTableWidgetItem11setSizeHintERK5QSize(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN16QTableWidgetItem11setSizeHintERK5QSize(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QBrush QTableWidgetItem::foreground();
-  fn _ZNK16QTableWidgetItem10foregroundEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK16QTableWidgetItem10foregroundEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QTableWidgetItem::type();
-  fn _ZNK16QTableWidgetItem4typeEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK16QTableWidgetItem4typeEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QTableWidgetItem::column();
-  fn _ZNK16QTableWidgetItem6columnEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK16QTableWidgetItem6columnEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QTableWidgetItem::setTextAlignment(int alignment);
-  fn _ZN16QTableWidgetItem16setTextAlignmentEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN16QTableWidgetItem16setTextAlignmentEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  QFont QTableWidgetItem::font();
-  fn _ZNK16QTableWidgetItem4fontEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK16QTableWidgetItem4fontEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QIcon QTableWidgetItem::icon();
-  fn _ZNK16QTableWidgetItem4iconEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK16QTableWidgetItem4iconEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QTableWidgetItem::write(QDataStream & out);
-  fn _ZNK16QTableWidgetItem5writeER11QDataStream(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK16QTableWidgetItem5writeER11QDataStream(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTableWidgetItem::QTableWidgetItem(const QTableWidgetItem & other);
-  fn _ZN16QTableWidgetItemC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN16QTableWidgetItemC2ERKS_(arg0: *mut c_void) -> u64;
   // proto:  QBrush QTableWidgetItem::background();
-  fn _ZNK16QTableWidgetItem10backgroundEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK16QTableWidgetItem10backgroundEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QTableWidgetItem::setIcon(const QIcon & icon);
-  fn _ZN16QTableWidgetItem7setIconERK5QIcon(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN16QTableWidgetItem7setIconERK5QIcon(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTableWidgetItem::QTableWidgetItem(const QString & text, int type);
-  fn _ZN16QTableWidgetItemC2ERK7QStringi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
+  fn C_ZN16QTableWidgetItemC2ERK7QStringi(arg0: *mut c_void, arg1: c_int) -> u64;
   // proto:  QString QTableWidgetItem::statusTip();
-  fn _ZNK16QTableWidgetItem9statusTipEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK16QTableWidgetItem9statusTipEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QTableWidgetItem * QTableWidgetItem::clone();
-  fn _ZNK16QTableWidgetItem5cloneEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK16QTableWidgetItem5cloneEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QTableWidgetItem::QTableWidgetItem(int type);
-  fn _ZN16QTableWidgetItemC2Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN16QTableWidgetItemC2Ei(arg0: c_int) -> u64;
   // proto:  void QTableWidgetItem::setWhatsThis(const QString & whatsThis);
-  fn _ZN16QTableWidgetItem12setWhatsThisERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN16QTableWidgetItem12setWhatsThisERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QSize QTableWidgetItem::sizeHint();
-  fn _ZNK16QTableWidgetItem8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK16QTableWidgetItem8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QTableWidgetItem::setForeground(const QBrush & brush);
-  fn _ZN16QTableWidgetItem13setForegroundERK6QBrush(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN16QTableWidgetItem13setForegroundERK6QBrush(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QTableWidgetItem::row();
-  fn _ZNK16QTableWidgetItem3rowEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK16QTableWidgetItem3rowEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QTableWidgetItem::setData(int role, const QVariant & value);
-  fn _ZN16QTableWidgetItem7setDataEiRK8QVariant(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
+  fn C_ZN16QTableWidgetItem7setDataEiRK8QVariant(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  QTableWidget * QTableWidgetItem::tableWidget();
-  fn _ZNK16QTableWidgetItem11tableWidgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK16QTableWidgetItem11tableWidgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QTableWidgetItem::QTableWidgetItem(const QIcon & icon, const QString & text, int type);
-  fn _ZN16QTableWidgetItemC2ERK5QIconRK7QStringi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: c_int);
+  fn C_ZN16QTableWidgetItemC2ERK5QIconRK7QStringi(arg0: *mut c_void, arg1: *mut c_void, arg2: c_int) -> u64;
   // proto:  int QTableWidgetItem::textAlignment();
-  fn _ZNK16QTableWidgetItem13textAlignmentEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK16QTableWidgetItem13textAlignmentEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QTableWidgetItem::read(QDataStream & in);
-  fn _ZN16QTableWidgetItem4readER11QDataStream(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN16QTableWidgetItem4readER11QDataStream(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QString QTableWidgetItem::toolTip();
-  fn _ZNK16QTableWidgetItem7toolTipEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK16QTableWidgetItem7toolTipEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QTableWidgetItem::isSelected();
-  fn _ZNK16QTableWidgetItem10isSelectedEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK16QTableWidgetItem10isSelectedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QTableWidgetItem::setBackgroundColor(const QColor & color);
-  fn _ZN16QTableWidgetItem18setBackgroundColorERK6QColor(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN16QTableWidgetItem18setBackgroundColorERK6QColor(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTableWidgetItem::setBackground(const QBrush & brush);
-  fn _ZN16QTableWidgetItem13setBackgroundERK6QBrush(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN16QTableWidgetItem13setBackgroundERK6QBrush(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTableWidgetItem::setFont(const QFont & font);
-  fn _ZN16QTableWidgetItem7setFontERK5QFont(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN16QTableWidgetItem7setFontERK5QFont(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTableWidgetItem::setTextColor(const QColor & color);
-  fn _ZN16QTableWidgetItem12setTextColorERK6QColor(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN16QTableWidgetItem12setTextColorERK6QColor(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTableWidgetItem::setText(const QString & text);
-  fn _ZN16QTableWidgetItem7setTextERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN16QTableWidgetItem7setTextERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QString QTableWidgetItem::whatsThis();
-  fn _ZNK16QTableWidgetItem9whatsThisEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK16QTableWidgetItem9whatsThisEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QTableWidgetItem::setToolTip(const QString & toolTip);
-  fn _ZN16QTableWidgetItem10setToolTipERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN16QTableWidgetItem10setToolTipERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QTableWidget_SlotProxy_connect__ZN12QTableWidget13itemActivatedEP16QTableWidgetItem(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QTableWidget_SlotProxy_connect__ZN12QTableWidget20itemSelectionChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QTableWidget_SlotProxy_connect__ZN12QTableWidget11itemChangedEP16QTableWidgetItem(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
@@ -336,8 +335,7 @@ impl<'a> /*trait*/ QTableWidgetSelectionRange_new for (i32, i32, i32, i32) {
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as c_int;
     let arg3 = self.3  as c_int;
-    unsafe {_ZN26QTableWidgetSelectionRangeC2Eiiii(qthis_ph, arg0, arg1, arg2, arg3)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN26QTableWidgetSelectionRangeC2Eiiii(arg0, arg1, arg2, arg3)};
     let rsthis = QTableWidgetSelectionRange{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -361,7 +359,7 @@ impl<'a> /*trait*/ QTableWidgetSelectionRange_columnCount<i32> for () {
   fn columnCount(self , rsthis: & QTableWidgetSelectionRange) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK26QTableWidgetSelectionRange11columnCountEv()};
-    let mut ret = unsafe {_ZNK26QTableWidgetSelectionRange11columnCountEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK26QTableWidgetSelectionRange11columnCountEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -384,7 +382,7 @@ impl<'a> /*trait*/ QTableWidgetSelectionRange_rowCount<i32> for () {
   fn rowCount(self , rsthis: & QTableWidgetSelectionRange) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK26QTableWidgetSelectionRange8rowCountEv()};
-    let mut ret = unsafe {_ZNK26QTableWidgetSelectionRange8rowCountEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK26QTableWidgetSelectionRange8rowCountEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -407,7 +405,7 @@ impl<'a> /*trait*/ QTableWidgetSelectionRange_leftColumn<i32> for () {
   fn leftColumn(self , rsthis: & QTableWidgetSelectionRange) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK26QTableWidgetSelectionRange10leftColumnEv()};
-    let mut ret = unsafe {_ZNK26QTableWidgetSelectionRange10leftColumnEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK26QTableWidgetSelectionRange10leftColumnEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -430,7 +428,7 @@ impl<'a> /*trait*/ QTableWidgetSelectionRange_free<()> for () {
   fn free(self , rsthis: & QTableWidgetSelectionRange) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QTableWidgetSelectionRangeD2Ev()};
-     unsafe {_ZN26QTableWidgetSelectionRangeD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN26QTableWidgetSelectionRangeD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -452,7 +450,7 @@ impl<'a> /*trait*/ QTableWidgetSelectionRange_topRow<i32> for () {
   fn topRow(self , rsthis: & QTableWidgetSelectionRange) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK26QTableWidgetSelectionRange6topRowEv()};
-    let mut ret = unsafe {_ZNK26QTableWidgetSelectionRange6topRowEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK26QTableWidgetSelectionRange6topRowEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -475,7 +473,7 @@ impl<'a> /*trait*/ QTableWidgetSelectionRange_rightColumn<i32> for () {
   fn rightColumn(self , rsthis: & QTableWidgetSelectionRange) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK26QTableWidgetSelectionRange11rightColumnEv()};
-    let mut ret = unsafe {_ZNK26QTableWidgetSelectionRange11rightColumnEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK26QTableWidgetSelectionRange11rightColumnEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -488,8 +486,7 @@ impl<'a> /*trait*/ QTableWidgetSelectionRange_new for () {
     // unsafe{_ZN26QTableWidgetSelectionRangeC2Ev()};
     let ctysz: c_int = unsafe{QTableWidgetSelectionRange_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    unsafe {_ZN26QTableWidgetSelectionRangeC2Ev(qthis_ph)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN26QTableWidgetSelectionRangeC2Ev()};
     let rsthis = QTableWidgetSelectionRange{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -504,8 +501,7 @@ impl<'a> /*trait*/ QTableWidgetSelectionRange_new for (&'a QTableWidgetSelection
     let ctysz: c_int = unsafe{QTableWidgetSelectionRange_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN26QTableWidgetSelectionRangeC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN26QTableWidgetSelectionRangeC2ERKS_(arg0)};
     let rsthis = QTableWidgetSelectionRange{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -529,7 +525,7 @@ impl<'a> /*trait*/ QTableWidgetSelectionRange_bottomRow<i32> for () {
   fn bottomRow(self , rsthis: & QTableWidgetSelectionRange) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK26QTableWidgetSelectionRange9bottomRowEv()};
-    let mut ret = unsafe {_ZNK26QTableWidgetSelectionRange9bottomRowEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK26QTableWidgetSelectionRange9bottomRowEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -570,7 +566,7 @@ impl<'a> /*trait*/ QTableWidget_setColumnCount<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget14setColumnCountEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN12QTableWidget14setColumnCountEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN12QTableWidget14setColumnCountEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -592,7 +588,7 @@ impl<'a> /*trait*/ QTableWidget_free<()> for () {
   fn free(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidgetD2Ev()};
-     unsafe {_ZN12QTableWidgetD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN12QTableWidgetD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -614,7 +610,7 @@ impl<'a> /*trait*/ QTableWidget_selectedItems<()> for () {
   fn selectedItems(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget13selectedItemsEv()};
-     unsafe {_ZNK12QTableWidget13selectedItemsEv(rsthis.qclsinst)};
+     unsafe {C_ZNK12QTableWidget13selectedItemsEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -636,7 +632,7 @@ impl<'a> /*trait*/ QTableWidget_isSortingEnabled<i8> for () {
   fn isSortingEnabled(self , rsthis: & QTableWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget16isSortingEnabledEv()};
-    let mut ret = unsafe {_ZNK12QTableWidget16isSortingEnabledEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QTableWidget16isSortingEnabledEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -655,40 +651,13 @@ pub trait QTableWidget_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QTableWidget::metaObject();
-impl<'a> /*trait*/ QTableWidget_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QTableWidget) -> () {
+impl<'a> /*trait*/ QTableWidget_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QTableWidget) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget10metaObjectEv()};
-     unsafe {_ZNK12QTableWidget10metaObjectEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QTableWidget::QTableWidget(const QTableWidget & );
-impl /*struct*/ QTableWidget {
-  pub fn new<T: QTableWidget_new>(value: T) -> QTableWidget {
-    let rsthis = value.new();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QTableWidget_new {
-  fn new(self) -> QTableWidget;
-}
-
-  // proto:  void QTableWidget::QTableWidget(const QTableWidget & );
-impl<'a> /*trait*/ QTableWidget_new for (&'a QTableWidget) {
-  fn new(self) -> QTableWidget {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QTableWidgetC2ERKS_()};
-    let ctysz: c_int = unsafe{QTableWidget_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN12QTableWidgetC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QTableWidget{qbase: QTableView::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
+    let mut ret = unsafe {C_ZNK12QTableWidget10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -711,7 +680,7 @@ impl<'a> /*trait*/ QTableWidget_closePersistentEditor<()> for (&'a QTableWidgetI
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget21closePersistentEditorEP16QTableWidgetItem()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN12QTableWidget21closePersistentEditorEP16QTableWidgetItem(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN12QTableWidget21closePersistentEditorEP16QTableWidgetItem(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -734,7 +703,7 @@ impl<'a> /*trait*/ QTableWidget_setHorizontalHeaderLabels<()> for (&'a QStringLi
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget25setHorizontalHeaderLabelsERK11QStringList()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN12QTableWidget25setHorizontalHeaderLabelsERK11QStringList(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN12QTableWidget25setHorizontalHeaderLabelsERK11QStringList(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -758,7 +727,7 @@ impl<'a> /*trait*/ QTableWidget_setItemSelected<()> for (&'a QTableWidgetItem, i
     // unsafe{_ZN12QTableWidget15setItemSelectedEPK16QTableWidgetItemb()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_char;
-     unsafe {_ZN12QTableWidget15setItemSelectedEPK16QTableWidgetItemb(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN12QTableWidget15setItemSelectedEPK16QTableWidgetItemb(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -782,7 +751,7 @@ impl<'a> /*trait*/ QTableWidget_takeItem<QTableWidgetItem> for (i32, i32) {
     // unsafe{_ZN12QTableWidget8takeItemEii()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-    let mut ret = unsafe {_ZN12QTableWidget8takeItemEii(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {C_ZN12QTableWidget8takeItemEii(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QTableWidgetItem::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -808,7 +777,7 @@ impl<'a> /*trait*/ QTableWidget_removeCellWidget<()> for (i32, i32) {
     // unsafe{_ZN12QTableWidget16removeCellWidgetEii()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-     unsafe {_ZN12QTableWidget16removeCellWidgetEii(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN12QTableWidget16removeCellWidgetEii(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -832,7 +801,7 @@ impl<'a> /*trait*/ QTableWidget_setVerticalHeaderItem<()> for (i32, &'a QTableWi
     // unsafe{_ZN12QTableWidget21setVerticalHeaderItemEiP16QTableWidgetItem()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN12QTableWidget21setVerticalHeaderItemEiP16QTableWidgetItem(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN12QTableWidget21setVerticalHeaderItemEiP16QTableWidgetItem(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -855,7 +824,7 @@ impl<'a> /*trait*/ QTableWidget_visualItemRect<QRect> for (&'a QTableWidgetItem)
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget14visualItemRectEPK16QTableWidgetItem()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK12QTableWidget14visualItemRectEPK16QTableWidgetItem(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK12QTableWidget14visualItemRectEPK16QTableWidgetItem(rsthis.qclsinst, arg0)};
     let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -879,7 +848,7 @@ impl<'a> /*trait*/ QTableWidget_currentItem<QTableWidgetItem> for () {
   fn currentItem(self , rsthis: & QTableWidget) -> QTableWidgetItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget11currentItemEv()};
-    let mut ret = unsafe {_ZNK12QTableWidget11currentItemEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QTableWidget11currentItemEv(rsthis.qclsinst)};
     let mut ret1 = QTableWidgetItem::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -904,7 +873,7 @@ impl<'a> /*trait*/ QTableWidget_row<i32> for (&'a QTableWidgetItem) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget3rowEPK16QTableWidgetItem()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK12QTableWidget3rowEPK16QTableWidgetItem(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK12QTableWidget3rowEPK16QTableWidgetItem(rsthis.qclsinst, arg0)};
     return ret as i32;
     // return 1;
   }
@@ -928,7 +897,7 @@ impl<'a> /*trait*/ QTableWidget_removeRow<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget9removeRowEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN12QTableWidget9removeRowEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN12QTableWidget9removeRowEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -951,9 +920,22 @@ impl<'a> /*trait*/ QTableWidget_setItemPrototype<()> for (&'a QTableWidgetItem) 
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget16setItemPrototypeEPK16QTableWidgetItem()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN12QTableWidget16setItemPrototypeEPK16QTableWidgetItem(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN12QTableWidget16setItemPrototypeEPK16QTableWidgetItem(rsthis.qclsinst, arg0)};
     // return 1;
   }
+}
+
+  // proto:  void QTableWidget::QTableWidget(int rows, int columns, QWidget * parent);
+impl /*struct*/ QTableWidget {
+  pub fn new<T: QTableWidget_new>(value: T) -> QTableWidget {
+    let rsthis = value.new();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QTableWidget_new {
+  fn new(self) -> QTableWidget;
 }
 
   // proto:  void QTableWidget::QTableWidget(int rows, int columns, QWidget * parent);
@@ -966,8 +948,7 @@ impl<'a> /*trait*/ QTableWidget_new for (i32, i32, &'a QWidget) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
-    unsafe {_ZN12QTableWidgetC2EiiP7QWidget(qthis_ph, arg0, arg1, arg2)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN12QTableWidgetC2EiiP7QWidget(arg0, arg1, arg2)};
     let rsthis = QTableWidget{qbase: QTableView::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -992,7 +973,7 @@ impl<'a> /*trait*/ QTableWidget_visualRow<i32> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget9visualRowEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZNK12QTableWidget9visualRowEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK12QTableWidget9visualRowEi(rsthis.qclsinst, arg0)};
     return ret as i32;
     // return 1;
   }
@@ -1018,7 +999,7 @@ impl<'a> /*trait*/ QTableWidget_setCellWidget<()> for (i32, i32, &'a QWidget) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
-     unsafe {_ZN12QTableWidget13setCellWidgetEiiP7QWidget(rsthis.qclsinst, arg0, arg1, arg2)};
+     unsafe {C_ZN12QTableWidget13setCellWidgetEiiP7QWidget(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
 }
@@ -1041,7 +1022,7 @@ impl<'a> /*trait*/ QTableWidget_openPersistentEditor<()> for (&'a QTableWidgetIt
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget20openPersistentEditorEP16QTableWidgetItem()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN12QTableWidget20openPersistentEditorEP16QTableWidgetItem(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN12QTableWidget20openPersistentEditorEP16QTableWidgetItem(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1063,7 +1044,7 @@ impl<'a> /*trait*/ QTableWidget_columnCount<i32> for () {
   fn columnCount(self , rsthis: & QTableWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget11columnCountEv()};
-    let mut ret = unsafe {_ZNK12QTableWidget11columnCountEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QTableWidget11columnCountEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -1086,7 +1067,7 @@ impl<'a> /*trait*/ QTableWidget_currentRow<i32> for () {
   fn currentRow(self , rsthis: & QTableWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget10currentRowEv()};
-    let mut ret = unsafe {_ZNK12QTableWidget10currentRowEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QTableWidget10currentRowEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -1110,7 +1091,7 @@ impl<'a> /*trait*/ QTableWidget_setCurrentItem<()> for (&'a QTableWidgetItem) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget14setCurrentItemEP16QTableWidgetItem()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN12QTableWidget14setCurrentItemEP16QTableWidgetItem(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN12QTableWidget14setCurrentItemEP16QTableWidgetItem(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1134,7 +1115,7 @@ impl<'a> /*trait*/ QTableWidget_cellWidget<QWidget> for (i32, i32) {
     // unsafe{_ZNK12QTableWidget10cellWidgetEii()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-    let mut ret = unsafe {_ZNK12QTableWidget10cellWidgetEii(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {C_ZNK12QTableWidget10cellWidgetEii(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1159,7 +1140,7 @@ impl<'a> /*trait*/ QTableWidget_setSortingEnabled<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget17setSortingEnabledEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN12QTableWidget17setSortingEnabledEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN12QTableWidget17setSortingEnabledEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1184,7 +1165,7 @@ impl<'a> /*trait*/ QTableWidget_setItem<()> for (i32, i32, &'a QTableWidgetItem)
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
-     unsafe {_ZN12QTableWidget7setItemEiiP16QTableWidgetItem(rsthis.qclsinst, arg0, arg1, arg2)};
+     unsafe {C_ZN12QTableWidget7setItemEiiP16QTableWidgetItem(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
 }
@@ -1207,7 +1188,7 @@ impl<'a> /*trait*/ QTableWidget_horizontalHeaderItem<QTableWidgetItem> for (i32)
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget20horizontalHeaderItemEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZNK12QTableWidget20horizontalHeaderItemEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK12QTableWidget20horizontalHeaderItemEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QTableWidgetItem::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1232,7 +1213,7 @@ impl<'a> /*trait*/ QTableWidget_editItem<()> for (&'a QTableWidgetItem) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget8editItemEP16QTableWidgetItem()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN12QTableWidget8editItemEP16QTableWidgetItem(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN12QTableWidget8editItemEP16QTableWidgetItem(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1254,7 +1235,7 @@ impl<'a> /*trait*/ QTableWidget_selectedRanges<()> for () {
   fn selectedRanges(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget14selectedRangesEv()};
-     unsafe {_ZNK12QTableWidget14selectedRangesEv(rsthis.qclsinst)};
+     unsafe {C_ZNK12QTableWidget14selectedRangesEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1276,7 +1257,7 @@ impl<'a> /*trait*/ QTableWidget_currentColumn<i32> for () {
   fn currentColumn(self , rsthis: & QTableWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget13currentColumnEv()};
-    let mut ret = unsafe {_ZNK12QTableWidget13currentColumnEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QTableWidget13currentColumnEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -1300,7 +1281,7 @@ impl<'a> /*trait*/ QTableWidget_removeColumn<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget12removeColumnEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN12QTableWidget12removeColumnEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN12QTableWidget12removeColumnEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1324,7 +1305,7 @@ impl<'a> /*trait*/ QTableWidget_setRangeSelected<()> for (&'a QTableWidgetSelect
     // unsafe{_ZN12QTableWidget16setRangeSelectedERK26QTableWidgetSelectionRangeb()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_char;
-     unsafe {_ZN12QTableWidget16setRangeSelectedERK26QTableWidgetSelectionRangeb(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN12QTableWidget16setRangeSelectedERK26QTableWidgetSelectionRangeb(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -1347,7 +1328,7 @@ impl<'a> /*trait*/ QTableWidget_column<i32> for (&'a QTableWidgetItem) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget6columnEPK16QTableWidgetItem()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK12QTableWidget6columnEPK16QTableWidgetItem(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK12QTableWidget6columnEPK16QTableWidgetItem(rsthis.qclsinst, arg0)};
     return ret as i32;
     // return 1;
   }
@@ -1371,7 +1352,7 @@ impl<'a> /*trait*/ QTableWidget_isItemSelected<i8> for (&'a QTableWidgetItem) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget14isItemSelectedEPK16QTableWidgetItem()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK12QTableWidget14isItemSelectedEPK16QTableWidgetItem(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK12QTableWidget14isItemSelectedEPK16QTableWidgetItem(rsthis.qclsinst, arg0)};
     return ret as i8;
     // return 1;
   }
@@ -1395,7 +1376,7 @@ impl<'a> /*trait*/ QTableWidget_takeVerticalHeaderItem<QTableWidgetItem> for (i3
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget22takeVerticalHeaderItemEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZN12QTableWidget22takeVerticalHeaderItemEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN12QTableWidget22takeVerticalHeaderItemEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QTableWidgetItem::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1420,7 +1401,7 @@ impl<'a> /*trait*/ QTableWidget_insertRow<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget9insertRowEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN12QTableWidget9insertRowEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN12QTableWidget9insertRowEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1442,7 +1423,7 @@ impl<'a> /*trait*/ QTableWidget_rowCount<i32> for () {
   fn rowCount(self , rsthis: & QTableWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget8rowCountEv()};
-    let mut ret = unsafe {_ZNK12QTableWidget8rowCountEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QTableWidget8rowCountEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -1467,7 +1448,7 @@ impl<'a> /*trait*/ QTableWidget_item<QTableWidgetItem> for (i32, i32) {
     // unsafe{_ZNK12QTableWidget4itemEii()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-    let mut ret = unsafe {_ZNK12QTableWidget4itemEii(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {C_ZNK12QTableWidget4itemEii(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QTableWidgetItem::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1482,8 +1463,7 @@ impl<'a> /*trait*/ QTableWidget_new for (&'a QWidget) {
     let ctysz: c_int = unsafe{QTableWidget_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN12QTableWidgetC2EP7QWidget(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN12QTableWidgetC2EP7QWidget(arg0)};
     let rsthis = QTableWidget{qbase: QTableView::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1508,7 +1488,7 @@ impl<'a> /*trait*/ QTableWidget_setVerticalHeaderLabels<()> for (&'a QStringList
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget23setVerticalHeaderLabelsERK11QStringList()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN12QTableWidget23setVerticalHeaderLabelsERK11QStringList(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN12QTableWidget23setVerticalHeaderLabelsERK11QStringList(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1530,7 +1510,7 @@ impl<'a> /*trait*/ QTableWidget_itemPrototype<QTableWidgetItem> for () {
   fn itemPrototype(self , rsthis: & QTableWidget) -> QTableWidgetItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget13itemPrototypeEv()};
-    let mut ret = unsafe {_ZNK12QTableWidget13itemPrototypeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QTableWidget13itemPrototypeEv(rsthis.qclsinst)};
     let mut ret1 = QTableWidgetItem::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1555,7 +1535,7 @@ impl<'a> /*trait*/ QTableWidget_itemAt<QTableWidgetItem> for (&'a QPoint) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget6itemAtERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK12QTableWidget6itemAtERK6QPoint(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK12QTableWidget6itemAtERK6QPoint(rsthis.qclsinst, arg0)};
     let mut ret1 = QTableWidgetItem::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1579,7 +1559,7 @@ impl<'a> /*trait*/ QTableWidget_clearContents<()> for () {
   fn clearContents(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget13clearContentsEv()};
-     unsafe {_ZN12QTableWidget13clearContentsEv(rsthis.qclsinst)};
+     unsafe {C_ZN12QTableWidget13clearContentsEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1591,7 +1571,7 @@ impl<'a> /*trait*/ QTableWidget_itemAt<QTableWidgetItem> for (i32, i32) {
     // unsafe{_ZNK12QTableWidget6itemAtEii()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-    let mut ret = unsafe {_ZNK12QTableWidget6itemAtEii(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {C_ZNK12QTableWidget6itemAtEii(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QTableWidgetItem::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1617,7 +1597,7 @@ impl<'a> /*trait*/ QTableWidget_setCurrentCell<()> for (i32, i32) {
     // unsafe{_ZN12QTableWidget14setCurrentCellEii()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-     unsafe {_ZN12QTableWidget14setCurrentCellEii(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN12QTableWidget14setCurrentCellEii(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -1640,7 +1620,7 @@ impl<'a> /*trait*/ QTableWidget_setRowCount<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget11setRowCountEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN12QTableWidget11setRowCountEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN12QTableWidget11setRowCountEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1664,7 +1644,7 @@ impl<'a> /*trait*/ QTableWidget_setHorizontalHeaderItem<()> for (i32, &'a QTable
     // unsafe{_ZN12QTableWidget23setHorizontalHeaderItemEiP16QTableWidgetItem()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN12QTableWidget23setHorizontalHeaderItemEiP16QTableWidgetItem(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN12QTableWidget23setHorizontalHeaderItemEiP16QTableWidgetItem(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -1687,7 +1667,7 @@ impl<'a> /*trait*/ QTableWidget_visualColumn<i32> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget12visualColumnEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZNK12QTableWidget12visualColumnEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK12QTableWidget12visualColumnEi(rsthis.qclsinst, arg0)};
     return ret as i32;
     // return 1;
   }
@@ -1711,7 +1691,7 @@ impl<'a> /*trait*/ QTableWidget_takeHorizontalHeaderItem<QTableWidgetItem> for (
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget24takeHorizontalHeaderItemEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZN12QTableWidget24takeHorizontalHeaderItemEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN12QTableWidget24takeHorizontalHeaderItemEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QTableWidgetItem::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1736,7 +1716,7 @@ impl<'a> /*trait*/ QTableWidget_verticalHeaderItem<QTableWidgetItem> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget18verticalHeaderItemEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZNK12QTableWidget18verticalHeaderItemEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK12QTableWidget18verticalHeaderItemEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QTableWidgetItem::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1760,7 +1740,7 @@ impl<'a> /*trait*/ QTableWidget_clear<()> for () {
   fn clear(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget5clearEv()};
-     unsafe {_ZN12QTableWidget5clearEv(rsthis.qclsinst)};
+     unsafe {C_ZN12QTableWidget5clearEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1783,7 +1763,7 @@ impl<'a> /*trait*/ QTableWidget_insertColumn<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget12insertColumnEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN12QTableWidget12insertColumnEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN12QTableWidget12insertColumnEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1810,7 +1790,7 @@ impl<'a> /*trait*/ QTableWidgetItem_backgroundColor<QColor> for () {
   fn backgroundColor(self , rsthis: & QTableWidgetItem) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem15backgroundColorEv()};
-    let mut ret = unsafe {_ZNK16QTableWidgetItem15backgroundColorEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QTableWidgetItem15backgroundColorEv(rsthis.qclsinst)};
     let mut ret1 = QColor::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1835,7 +1815,7 @@ impl<'a> /*trait*/ QTableWidgetItem_data<QVariant> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem4dataEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZNK16QTableWidgetItem4dataEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK16QTableWidgetItem4dataEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QVariant::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1860,7 +1840,7 @@ impl<'a> /*trait*/ QTableWidgetItem_setSelected<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem11setSelectedEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN16QTableWidgetItem11setSelectedEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN16QTableWidgetItem11setSelectedEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1883,7 +1863,7 @@ impl<'a> /*trait*/ QTableWidgetItem_setStatusTip<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem12setStatusTipERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN16QTableWidgetItem12setStatusTipERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN16QTableWidgetItem12setStatusTipERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1905,7 +1885,7 @@ impl<'a> /*trait*/ QTableWidgetItem_textColor<QColor> for () {
   fn textColor(self , rsthis: & QTableWidgetItem) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem9textColorEv()};
-    let mut ret = unsafe {_ZNK16QTableWidgetItem9textColorEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QTableWidgetItem9textColorEv(rsthis.qclsinst)};
     let mut ret1 = QColor::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1929,7 +1909,7 @@ impl<'a> /*trait*/ QTableWidgetItem_free<()> for () {
   fn free(self , rsthis: & QTableWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItemD2Ev()};
-     unsafe {_ZN16QTableWidgetItemD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN16QTableWidgetItemD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1951,7 +1931,7 @@ impl<'a> /*trait*/ QTableWidgetItem_text<QString> for () {
   fn text(self , rsthis: & QTableWidgetItem) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem4textEv()};
-    let mut ret = unsafe {_ZNK16QTableWidgetItem4textEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QTableWidgetItem4textEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1976,7 +1956,7 @@ impl<'a> /*trait*/ QTableWidgetItem_setSizeHint<()> for (&'a QSize) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem11setSizeHintERK5QSize()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN16QTableWidgetItem11setSizeHintERK5QSize(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN16QTableWidgetItem11setSizeHintERK5QSize(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1998,7 +1978,7 @@ impl<'a> /*trait*/ QTableWidgetItem_foreground<QBrush> for () {
   fn foreground(self , rsthis: & QTableWidgetItem) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem10foregroundEv()};
-    let mut ret = unsafe {_ZNK16QTableWidgetItem10foregroundEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QTableWidgetItem10foregroundEv(rsthis.qclsinst)};
     let mut ret1 = QBrush::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -2022,7 +2002,7 @@ impl<'a> /*trait*/ QTableWidgetItem_type_<i32> for () {
   fn type_(self , rsthis: & QTableWidgetItem) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem4typeEv()};
-    let mut ret = unsafe {_ZNK16QTableWidgetItem4typeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QTableWidgetItem4typeEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -2045,7 +2025,7 @@ impl<'a> /*trait*/ QTableWidgetItem_column<i32> for () {
   fn column(self , rsthis: & QTableWidgetItem) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem6columnEv()};
-    let mut ret = unsafe {_ZNK16QTableWidgetItem6columnEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QTableWidgetItem6columnEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -2069,7 +2049,7 @@ impl<'a> /*trait*/ QTableWidgetItem_setTextAlignment<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem16setTextAlignmentEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN16QTableWidgetItem16setTextAlignmentEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN16QTableWidgetItem16setTextAlignmentEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -2091,7 +2071,7 @@ impl<'a> /*trait*/ QTableWidgetItem_font<QFont> for () {
   fn font(self , rsthis: & QTableWidgetItem) -> QFont {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem4fontEv()};
-    let mut ret = unsafe {_ZNK16QTableWidgetItem4fontEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QTableWidgetItem4fontEv(rsthis.qclsinst)};
     let mut ret1 = QFont::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -2115,7 +2095,7 @@ impl<'a> /*trait*/ QTableWidgetItem_icon<QIcon> for () {
   fn icon(self , rsthis: & QTableWidgetItem) -> QIcon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem4iconEv()};
-    let mut ret = unsafe {_ZNK16QTableWidgetItem4iconEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QTableWidgetItem4iconEv(rsthis.qclsinst)};
     let mut ret1 = QIcon::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -2140,7 +2120,7 @@ impl<'a> /*trait*/ QTableWidgetItem_write<()> for (&'a QDataStream) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem5writeER11QDataStream()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZNK16QTableWidgetItem5writeER11QDataStream(rsthis.qclsinst, arg0)};
+     unsafe {C_ZNK16QTableWidgetItem5writeER11QDataStream(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -2166,8 +2146,7 @@ impl<'a> /*trait*/ QTableWidgetItem_new for (&'a QTableWidgetItem) {
     let ctysz: c_int = unsafe{QTableWidgetItem_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN16QTableWidgetItemC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN16QTableWidgetItemC2ERKS_(arg0)};
     let rsthis = QTableWidgetItem{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -2191,7 +2170,7 @@ impl<'a> /*trait*/ QTableWidgetItem_background<QBrush> for () {
   fn background(self , rsthis: & QTableWidgetItem) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem10backgroundEv()};
-    let mut ret = unsafe {_ZNK16QTableWidgetItem10backgroundEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QTableWidgetItem10backgroundEv(rsthis.qclsinst)};
     let mut ret1 = QBrush::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -2216,7 +2195,7 @@ impl<'a> /*trait*/ QTableWidgetItem_setIcon<()> for (&'a QIcon) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem7setIconERK5QIcon()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN16QTableWidgetItem7setIconERK5QIcon(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN16QTableWidgetItem7setIconERK5QIcon(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -2230,8 +2209,7 @@ impl<'a> /*trait*/ QTableWidgetItem_new for (&'a QString, i32) {
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
-    unsafe {_ZN16QTableWidgetItemC2ERK7QStringi(qthis_ph, arg0, arg1)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN16QTableWidgetItemC2ERK7QStringi(arg0, arg1)};
     let rsthis = QTableWidgetItem{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -2255,7 +2233,7 @@ impl<'a> /*trait*/ QTableWidgetItem_statusTip<QString> for () {
   fn statusTip(self , rsthis: & QTableWidgetItem) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem9statusTipEv()};
-    let mut ret = unsafe {_ZNK16QTableWidgetItem9statusTipEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QTableWidgetItem9statusTipEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -2279,7 +2257,7 @@ impl<'a> /*trait*/ QTableWidgetItem_clone<QTableWidgetItem> for () {
   fn clone(self , rsthis: & QTableWidgetItem) -> QTableWidgetItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem5cloneEv()};
-    let mut ret = unsafe {_ZNK16QTableWidgetItem5cloneEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QTableWidgetItem5cloneEv(rsthis.qclsinst)};
     let mut ret1 = QTableWidgetItem::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -2294,8 +2272,7 @@ impl<'a> /*trait*/ QTableWidgetItem_new for (i32) {
     let ctysz: c_int = unsafe{QTableWidgetItem_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
-    unsafe {_ZN16QTableWidgetItemC2Ei(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN16QTableWidgetItemC2Ei(arg0)};
     let rsthis = QTableWidgetItem{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -2320,7 +2297,7 @@ impl<'a> /*trait*/ QTableWidgetItem_setWhatsThis<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem12setWhatsThisERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN16QTableWidgetItem12setWhatsThisERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN16QTableWidgetItem12setWhatsThisERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -2342,7 +2319,7 @@ impl<'a> /*trait*/ QTableWidgetItem_sizeHint<QSize> for () {
   fn sizeHint(self , rsthis: & QTableWidgetItem) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem8sizeHintEv()};
-    let mut ret = unsafe {_ZNK16QTableWidgetItem8sizeHintEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QTableWidgetItem8sizeHintEv(rsthis.qclsinst)};
     let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -2367,7 +2344,7 @@ impl<'a> /*trait*/ QTableWidgetItem_setForeground<()> for (&'a QBrush) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem13setForegroundERK6QBrush()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN16QTableWidgetItem13setForegroundERK6QBrush(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN16QTableWidgetItem13setForegroundERK6QBrush(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -2389,7 +2366,7 @@ impl<'a> /*trait*/ QTableWidgetItem_row<i32> for () {
   fn row(self , rsthis: & QTableWidgetItem) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem3rowEv()};
-    let mut ret = unsafe {_ZNK16QTableWidgetItem3rowEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QTableWidgetItem3rowEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -2414,7 +2391,7 @@ impl<'a> /*trait*/ QTableWidgetItem_setData<()> for (i32, &'a QVariant) {
     // unsafe{_ZN16QTableWidgetItem7setDataEiRK8QVariant()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN16QTableWidgetItem7setDataEiRK8QVariant(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN16QTableWidgetItem7setDataEiRK8QVariant(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -2436,7 +2413,7 @@ impl<'a> /*trait*/ QTableWidgetItem_tableWidget<QTableWidget> for () {
   fn tableWidget(self , rsthis: & QTableWidgetItem) -> QTableWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem11tableWidgetEv()};
-    let mut ret = unsafe {_ZNK16QTableWidgetItem11tableWidgetEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QTableWidgetItem11tableWidgetEv(rsthis.qclsinst)};
     let mut ret1 = QTableWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -2453,8 +2430,7 @@ impl<'a> /*trait*/ QTableWidgetItem_new for (&'a QIcon, &'a QString, i32) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2  as c_int;
-    unsafe {_ZN16QTableWidgetItemC2ERK5QIconRK7QStringi(qthis_ph, arg0, arg1, arg2)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN16QTableWidgetItemC2ERK5QIconRK7QStringi(arg0, arg1, arg2)};
     let rsthis = QTableWidgetItem{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -2478,7 +2454,7 @@ impl<'a> /*trait*/ QTableWidgetItem_textAlignment<i32> for () {
   fn textAlignment(self , rsthis: & QTableWidgetItem) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem13textAlignmentEv()};
-    let mut ret = unsafe {_ZNK16QTableWidgetItem13textAlignmentEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QTableWidgetItem13textAlignmentEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -2502,7 +2478,7 @@ impl<'a> /*trait*/ QTableWidgetItem_read<()> for (&'a QDataStream) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem4readER11QDataStream()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN16QTableWidgetItem4readER11QDataStream(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN16QTableWidgetItem4readER11QDataStream(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -2524,7 +2500,7 @@ impl<'a> /*trait*/ QTableWidgetItem_toolTip<QString> for () {
   fn toolTip(self , rsthis: & QTableWidgetItem) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem7toolTipEv()};
-    let mut ret = unsafe {_ZNK16QTableWidgetItem7toolTipEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QTableWidgetItem7toolTipEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -2548,7 +2524,7 @@ impl<'a> /*trait*/ QTableWidgetItem_isSelected<i8> for () {
   fn isSelected(self , rsthis: & QTableWidgetItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem10isSelectedEv()};
-    let mut ret = unsafe {_ZNK16QTableWidgetItem10isSelectedEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QTableWidgetItem10isSelectedEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -2572,7 +2548,7 @@ impl<'a> /*trait*/ QTableWidgetItem_setBackgroundColor<()> for (&'a QColor) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem18setBackgroundColorERK6QColor()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN16QTableWidgetItem18setBackgroundColorERK6QColor(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN16QTableWidgetItem18setBackgroundColorERK6QColor(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -2595,7 +2571,7 @@ impl<'a> /*trait*/ QTableWidgetItem_setBackground<()> for (&'a QBrush) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem13setBackgroundERK6QBrush()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN16QTableWidgetItem13setBackgroundERK6QBrush(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN16QTableWidgetItem13setBackgroundERK6QBrush(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -2618,7 +2594,7 @@ impl<'a> /*trait*/ QTableWidgetItem_setFont<()> for (&'a QFont) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem7setFontERK5QFont()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN16QTableWidgetItem7setFontERK5QFont(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN16QTableWidgetItem7setFontERK5QFont(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -2641,7 +2617,7 @@ impl<'a> /*trait*/ QTableWidgetItem_setTextColor<()> for (&'a QColor) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem12setTextColorERK6QColor()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN16QTableWidgetItem12setTextColorERK6QColor(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN16QTableWidgetItem12setTextColorERK6QColor(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -2664,7 +2640,7 @@ impl<'a> /*trait*/ QTableWidgetItem_setText<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem7setTextERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN16QTableWidgetItem7setTextERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN16QTableWidgetItem7setTextERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -2686,7 +2662,7 @@ impl<'a> /*trait*/ QTableWidgetItem_whatsThis<QString> for () {
   fn whatsThis(self , rsthis: & QTableWidgetItem) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem9whatsThisEv()};
-    let mut ret = unsafe {_ZNK16QTableWidgetItem9whatsThisEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QTableWidgetItem9whatsThisEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -2711,7 +2687,7 @@ impl<'a> /*trait*/ QTableWidgetItem_setToolTip<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem10setToolTipERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN16QTableWidgetItem10setToolTipERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN16QTableWidgetItem10setToolTipERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

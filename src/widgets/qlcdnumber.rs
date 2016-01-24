@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtWidgets/qlcdnumber.h
 // dst-file: /src/widgets/qlcdnumber.rs
 //
@@ -20,6 +20,7 @@ use self::libc::*;
 // use block begin =>
 use super::qframe::QFrame; // 773
 use std::ops::Deref;
+use super::super::core::qobjectdefs::QMetaObject; // 771
 use super::qwidget::QWidget; // 773
 use super::super::core::qsize::QSize; // 771
 use super::super::core::qstring::QString; // 771
@@ -34,47 +35,45 @@ use super::super::core::qstring::QString; // 771
 extern {
   fn QLCDNumber_Class_Size() -> c_int;
   // proto:  void QLCDNumber::display(int num);
-  fn _ZN10QLCDNumber7displayEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN10QLCDNumber7displayEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QLCDNumber::setHexMode();
-  fn _ZN10QLCDNumber10setHexModeEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN10QLCDNumber10setHexModeEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QLCDNumber::display(double num);
-  fn _ZN10QLCDNumber7displayEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
+  fn C_ZN10QLCDNumber7displayEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  const QMetaObject * QLCDNumber::metaObject();
-  fn _ZNK10QLCDNumber10metaObjectEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QLCDNumber::QLCDNumber(const QLCDNumber & );
-  fn _ZN10QLCDNumberC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK10QLCDNumber10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QLCDNumber::digitCount();
-  fn _ZNK10QLCDNumber10digitCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK10QLCDNumber10digitCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QLCDNumber::~QLCDNumber();
-  fn _ZN10QLCDNumberD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN10QLCDNumberD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QLCDNumber::checkOverflow(int num);
-  fn _ZNK10QLCDNumber13checkOverflowEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
+  fn C_ZNK10QLCDNumber13checkOverflowEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
   // proto:  void QLCDNumber::setDecMode();
-  fn _ZN10QLCDNumber10setDecModeEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN10QLCDNumber10setDecModeEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QLCDNumber::QLCDNumber(uint numDigits, QWidget * parent);
-  fn _ZN10QLCDNumberC2EjP7QWidget(qthis: u64 /* *mut c_void*/, arg0: c_uint, arg1: *mut c_void);
+  fn C_ZN10QLCDNumberC2EjP7QWidget(arg0: c_uint, arg1: *mut c_void) -> u64;
   // proto:  bool QLCDNumber::checkOverflow(double num);
-  fn _ZNK10QLCDNumber13checkOverflowEd(qthis: u64 /* *mut c_void*/, arg0: c_double) -> c_char;
+  fn C_ZNK10QLCDNumber13checkOverflowEd(qthis: u64 /* *mut c_void*/, arg0: c_double) -> c_char;
   // proto:  QSize QLCDNumber::sizeHint();
-  fn _ZNK10QLCDNumber8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK10QLCDNumber8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QLCDNumber::display(const QString & str);
-  fn _ZN10QLCDNumber7displayERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN10QLCDNumber7displayERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QLCDNumber::QLCDNumber(QWidget * parent);
-  fn _ZN10QLCDNumberC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN10QLCDNumberC2EP7QWidget(arg0: *mut c_void) -> u64;
   // proto:  double QLCDNumber::value();
-  fn _ZNK10QLCDNumber5valueEv(qthis: u64 /* *mut c_void*/) -> c_double;
+  fn C_ZNK10QLCDNumber5valueEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QLCDNumber::setBinMode();
-  fn _ZN10QLCDNumber10setBinModeEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN10QLCDNumber10setBinModeEv(qthis: u64 /* *mut c_void*/);
   // proto:  int QLCDNumber::intValue();
-  fn _ZNK10QLCDNumber8intValueEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK10QLCDNumber8intValueEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QLCDNumber::setDigitCount(int nDigits);
-  fn _ZN10QLCDNumber13setDigitCountEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN10QLCDNumber13setDigitCountEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QLCDNumber::setSmallDecimalPoint(bool );
-  fn _ZN10QLCDNumber20setSmallDecimalPointEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN10QLCDNumber20setSmallDecimalPointEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  bool QLCDNumber::smallDecimalPoint();
-  fn _ZNK10QLCDNumber17smallDecimalPointEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK10QLCDNumber17smallDecimalPointEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QLCDNumber::setOctMode();
-  fn _ZN10QLCDNumber10setOctModeEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN10QLCDNumber10setOctModeEv(qthis: u64 /* *mut c_void*/);
   fn QLCDNumber_SlotProxy_connect__ZN10QLCDNumber8overflowEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
@@ -122,7 +121,7 @@ impl<'a> /*trait*/ QLCDNumber_display<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QLCDNumber7displayEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN10QLCDNumber7displayEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN10QLCDNumber7displayEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -144,7 +143,7 @@ impl<'a> /*trait*/ QLCDNumber_setHexMode<()> for () {
   fn setHexMode(self , rsthis: & QLCDNumber) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QLCDNumber10setHexModeEv()};
-     unsafe {_ZN10QLCDNumber10setHexModeEv(rsthis.qclsinst)};
+     unsafe {C_ZN10QLCDNumber10setHexModeEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -155,7 +154,7 @@ impl<'a> /*trait*/ QLCDNumber_display<()> for (f64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QLCDNumber7displayEd()};
     let arg0 = self  as c_double;
-     unsafe {_ZN10QLCDNumber7displayEd(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN10QLCDNumber7displayEd(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -173,40 +172,13 @@ pub trait QLCDNumber_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QLCDNumber::metaObject();
-impl<'a> /*trait*/ QLCDNumber_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QLCDNumber) -> () {
+impl<'a> /*trait*/ QLCDNumber_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QLCDNumber) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QLCDNumber10metaObjectEv()};
-     unsafe {_ZNK10QLCDNumber10metaObjectEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QLCDNumber::QLCDNumber(const QLCDNumber & );
-impl /*struct*/ QLCDNumber {
-  pub fn new<T: QLCDNumber_new>(value: T) -> QLCDNumber {
-    let rsthis = value.new();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QLCDNumber_new {
-  fn new(self) -> QLCDNumber;
-}
-
-  // proto:  void QLCDNumber::QLCDNumber(const QLCDNumber & );
-impl<'a> /*trait*/ QLCDNumber_new for (&'a QLCDNumber) {
-  fn new(self) -> QLCDNumber {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QLCDNumberC2ERKS_()};
-    let ctysz: c_int = unsafe{QLCDNumber_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN10QLCDNumberC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QLCDNumber{qbase: QFrame::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
+    let mut ret = unsafe {C_ZNK10QLCDNumber10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -228,7 +200,7 @@ impl<'a> /*trait*/ QLCDNumber_digitCount<i32> for () {
   fn digitCount(self , rsthis: & QLCDNumber) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QLCDNumber10digitCountEv()};
-    let mut ret = unsafe {_ZNK10QLCDNumber10digitCountEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QLCDNumber10digitCountEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -251,7 +223,7 @@ impl<'a> /*trait*/ QLCDNumber_free<()> for () {
   fn free(self , rsthis: & QLCDNumber) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QLCDNumberD2Ev()};
-     unsafe {_ZN10QLCDNumberD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN10QLCDNumberD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -274,7 +246,7 @@ impl<'a> /*trait*/ QLCDNumber_checkOverflow<i8> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QLCDNumber13checkOverflowEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZNK10QLCDNumber13checkOverflowEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK10QLCDNumber13checkOverflowEi(rsthis.qclsinst, arg0)};
     return ret as i8;
     // return 1;
   }
@@ -297,9 +269,22 @@ impl<'a> /*trait*/ QLCDNumber_setDecMode<()> for () {
   fn setDecMode(self , rsthis: & QLCDNumber) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QLCDNumber10setDecModeEv()};
-     unsafe {_ZN10QLCDNumber10setDecModeEv(rsthis.qclsinst)};
+     unsafe {C_ZN10QLCDNumber10setDecModeEv(rsthis.qclsinst)};
     // return 1;
   }
+}
+
+  // proto:  void QLCDNumber::QLCDNumber(uint numDigits, QWidget * parent);
+impl /*struct*/ QLCDNumber {
+  pub fn new<T: QLCDNumber_new>(value: T) -> QLCDNumber {
+    let rsthis = value.new();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QLCDNumber_new {
+  fn new(self) -> QLCDNumber;
 }
 
   // proto:  void QLCDNumber::QLCDNumber(uint numDigits, QWidget * parent);
@@ -311,8 +296,7 @@ impl<'a> /*trait*/ QLCDNumber_new for (u32, &'a QWidget) {
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_uint;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    unsafe {_ZN10QLCDNumberC2EjP7QWidget(qthis_ph, arg0, arg1)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN10QLCDNumberC2EjP7QWidget(arg0, arg1)};
     let rsthis = QLCDNumber{qbase: QFrame::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -325,7 +309,7 @@ impl<'a> /*trait*/ QLCDNumber_checkOverflow<i8> for (f64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QLCDNumber13checkOverflowEd()};
     let arg0 = self  as c_double;
-    let mut ret = unsafe {_ZNK10QLCDNumber13checkOverflowEd(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK10QLCDNumber13checkOverflowEd(rsthis.qclsinst, arg0)};
     return ret as i8;
     // return 1;
   }
@@ -348,7 +332,7 @@ impl<'a> /*trait*/ QLCDNumber_sizeHint<QSize> for () {
   fn sizeHint(self , rsthis: & QLCDNumber) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QLCDNumber8sizeHintEv()};
-    let mut ret = unsafe {_ZNK10QLCDNumber8sizeHintEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QLCDNumber8sizeHintEv(rsthis.qclsinst)};
     let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -361,7 +345,7 @@ impl<'a> /*trait*/ QLCDNumber_display<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QLCDNumber7displayERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN10QLCDNumber7displayERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN10QLCDNumber7displayERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -374,8 +358,7 @@ impl<'a> /*trait*/ QLCDNumber_new for (&'a QWidget) {
     let ctysz: c_int = unsafe{QLCDNumber_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN10QLCDNumberC2EP7QWidget(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN10QLCDNumberC2EP7QWidget(arg0)};
     let rsthis = QLCDNumber{qbase: QFrame::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -399,7 +382,7 @@ impl<'a> /*trait*/ QLCDNumber_value<f64> for () {
   fn value(self , rsthis: & QLCDNumber) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QLCDNumber5valueEv()};
-    let mut ret = unsafe {_ZNK10QLCDNumber5valueEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QLCDNumber5valueEv(rsthis.qclsinst)};
     return ret as f64;
     // return 1;
   }
@@ -422,7 +405,7 @@ impl<'a> /*trait*/ QLCDNumber_setBinMode<()> for () {
   fn setBinMode(self , rsthis: & QLCDNumber) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QLCDNumber10setBinModeEv()};
-     unsafe {_ZN10QLCDNumber10setBinModeEv(rsthis.qclsinst)};
+     unsafe {C_ZN10QLCDNumber10setBinModeEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -444,7 +427,7 @@ impl<'a> /*trait*/ QLCDNumber_intValue<i32> for () {
   fn intValue(self , rsthis: & QLCDNumber) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QLCDNumber8intValueEv()};
-    let mut ret = unsafe {_ZNK10QLCDNumber8intValueEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QLCDNumber8intValueEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -468,7 +451,7 @@ impl<'a> /*trait*/ QLCDNumber_setDigitCount<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QLCDNumber13setDigitCountEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN10QLCDNumber13setDigitCountEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN10QLCDNumber13setDigitCountEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -491,7 +474,7 @@ impl<'a> /*trait*/ QLCDNumber_setSmallDecimalPoint<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QLCDNumber20setSmallDecimalPointEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN10QLCDNumber20setSmallDecimalPointEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN10QLCDNumber20setSmallDecimalPointEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -513,7 +496,7 @@ impl<'a> /*trait*/ QLCDNumber_smallDecimalPoint<i8> for () {
   fn smallDecimalPoint(self , rsthis: & QLCDNumber) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QLCDNumber17smallDecimalPointEv()};
-    let mut ret = unsafe {_ZNK10QLCDNumber17smallDecimalPointEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QLCDNumber17smallDecimalPointEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -536,7 +519,7 @@ impl<'a> /*trait*/ QLCDNumber_setOctMode<()> for () {
   fn setOctMode(self , rsthis: & QLCDNumber) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QLCDNumber10setOctModeEv()};
-     unsafe {_ZN10QLCDNumber10setOctModeEv(rsthis.qclsinst)};
+     unsafe {C_ZN10QLCDNumber10setOctModeEv(rsthis.qclsinst)};
     // return 1;
   }
 }

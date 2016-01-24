@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtWidgets/qabstractspinbox.h
 // dst-file: /src/widgets/qabstractspinbox.rs
 //
@@ -22,6 +22,7 @@ use super::qwidget::QWidget; // 773
 use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
 use super::super::core::qcoreevent::QEvent; // 771
+use super::super::core::qobjectdefs::QMetaObject; // 771
 use super::super::core::qsize::QSize; // 771
 // <= use block end
 
@@ -34,65 +35,63 @@ use super::super::core::qsize::QSize; // 771
 extern {
   fn QAbstractSpinBox_Class_Size() -> c_int;
   // proto:  void QAbstractSpinBox::stepBy(int steps);
-  fn _ZN16QAbstractSpinBox6stepByEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN16QAbstractSpinBox6stepByEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QAbstractSpinBox::setReadOnly(bool r);
-  fn _ZN16QAbstractSpinBox11setReadOnlyEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN16QAbstractSpinBox11setReadOnlyEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QAbstractSpinBox::setFrame(bool );
-  fn _ZN16QAbstractSpinBox8setFrameEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN16QAbstractSpinBox8setFrameEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QAbstractSpinBox::setSpecialValueText(const QString & txt);
-  fn _ZN16QAbstractSpinBox19setSpecialValueTextERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN16QAbstractSpinBox19setSpecialValueTextERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAbstractSpinBox::setAccelerated(bool on);
-  fn _ZN16QAbstractSpinBox14setAcceleratedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN16QAbstractSpinBox14setAcceleratedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QAbstractSpinBox::interpretText();
-  fn _ZN16QAbstractSpinBox13interpretTextEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN16QAbstractSpinBox13interpretTextEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QAbstractSpinBox::event(QEvent * event);
-  fn _ZN16QAbstractSpinBox5eventEP6QEvent(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
+  fn C_ZN16QAbstractSpinBox5eventEP6QEvent(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  bool QAbstractSpinBox::keyboardTracking();
-  fn _ZNK16QAbstractSpinBox16keyboardTrackingEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QAbstractSpinBox::QAbstractSpinBox(const QAbstractSpinBox & );
-  fn _ZN16QAbstractSpinBoxC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK16QAbstractSpinBox16keyboardTrackingEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  const QMetaObject * QAbstractSpinBox::metaObject();
-  fn _ZNK16QAbstractSpinBox10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK16QAbstractSpinBox10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QSize QAbstractSpinBox::sizeHint();
-  fn _ZNK16QAbstractSpinBox8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK16QAbstractSpinBox8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAbstractSpinBox::~QAbstractSpinBox();
-  fn _ZN16QAbstractSpinBoxD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN16QAbstractSpinBoxD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractSpinBox::fixup(QString & input);
-  fn _ZNK16QAbstractSpinBox5fixupER7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK16QAbstractSpinBox5fixupER7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAbstractSpinBox::selectAll();
-  fn _ZN16QAbstractSpinBox9selectAllEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN16QAbstractSpinBox9selectAllEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractSpinBox::stepDown();
-  fn _ZN16QAbstractSpinBox8stepDownEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN16QAbstractSpinBox8stepDownEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractSpinBox::clear();
-  fn _ZN16QAbstractSpinBox5clearEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN16QAbstractSpinBox5clearEv(qthis: u64 /* *mut c_void*/);
   // proto:  QString QAbstractSpinBox::text();
-  fn _ZNK16QAbstractSpinBox4textEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK16QAbstractSpinBox4textEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QAbstractSpinBox::specialValueText();
-  fn _ZNK16QAbstractSpinBox16specialValueTextEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK16QAbstractSpinBox16specialValueTextEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QSize QAbstractSpinBox::minimumSizeHint();
-  fn _ZNK16QAbstractSpinBox15minimumSizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK16QAbstractSpinBox15minimumSizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QAbstractSpinBox::wrapping();
-  fn _ZNK16QAbstractSpinBox8wrappingEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK16QAbstractSpinBox8wrappingEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QAbstractSpinBox::QAbstractSpinBox(QWidget * parent);
-  fn _ZN16QAbstractSpinBoxC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN16QAbstractSpinBoxC2EP7QWidget(arg0: *mut c_void) -> u64;
   // proto:  void QAbstractSpinBox::stepUp();
-  fn _ZN16QAbstractSpinBox6stepUpEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN16QAbstractSpinBox6stepUpEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractSpinBox::setWrapping(bool w);
-  fn _ZN16QAbstractSpinBox11setWrappingEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN16QAbstractSpinBox11setWrappingEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QAbstractSpinBox::setKeyboardTracking(bool kt);
-  fn _ZN16QAbstractSpinBox19setKeyboardTrackingEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN16QAbstractSpinBox19setKeyboardTrackingEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  bool QAbstractSpinBox::isAccelerated();
-  fn _ZNK16QAbstractSpinBox13isAcceleratedEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK16QAbstractSpinBox13isAcceleratedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QAbstractSpinBox::setGroupSeparatorShown(bool shown);
-  fn _ZN16QAbstractSpinBox22setGroupSeparatorShownEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN16QAbstractSpinBox22setGroupSeparatorShownEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  bool QAbstractSpinBox::isReadOnly();
-  fn _ZNK16QAbstractSpinBox10isReadOnlyEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK16QAbstractSpinBox10isReadOnlyEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QAbstractSpinBox::hasAcceptableInput();
-  fn _ZNK16QAbstractSpinBox18hasAcceptableInputEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK16QAbstractSpinBox18hasAcceptableInputEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QAbstractSpinBox::isGroupSeparatorShown();
-  fn _ZNK16QAbstractSpinBox21isGroupSeparatorShownEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK16QAbstractSpinBox21isGroupSeparatorShownEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QAbstractSpinBox::hasFrame();
-  fn _ZNK16QAbstractSpinBox8hasFrameEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK16QAbstractSpinBox8hasFrameEv(qthis: u64 /* *mut c_void*/) -> c_char;
   fn QAbstractSpinBox_SlotProxy_connect__ZN16QAbstractSpinBox15editingFinishedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
@@ -140,7 +139,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_stepBy<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAbstractSpinBox6stepByEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN16QAbstractSpinBox6stepByEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN16QAbstractSpinBox6stepByEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -163,7 +162,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_setReadOnly<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAbstractSpinBox11setReadOnlyEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN16QAbstractSpinBox11setReadOnlyEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN16QAbstractSpinBox11setReadOnlyEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -186,7 +185,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_setFrame<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAbstractSpinBox8setFrameEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN16QAbstractSpinBox8setFrameEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN16QAbstractSpinBox8setFrameEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -209,7 +208,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_setSpecialValueText<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAbstractSpinBox19setSpecialValueTextERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN16QAbstractSpinBox19setSpecialValueTextERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN16QAbstractSpinBox19setSpecialValueTextERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -232,7 +231,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_setAccelerated<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAbstractSpinBox14setAcceleratedEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN16QAbstractSpinBox14setAcceleratedEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN16QAbstractSpinBox14setAcceleratedEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -254,7 +253,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_interpretText<()> for () {
   fn interpretText(self , rsthis: & QAbstractSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAbstractSpinBox13interpretTextEv()};
-     unsafe {_ZN16QAbstractSpinBox13interpretTextEv(rsthis.qclsinst)};
+     unsafe {C_ZN16QAbstractSpinBox13interpretTextEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -277,7 +276,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_event<i8> for (&'a QEvent) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAbstractSpinBox5eventEP6QEvent()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN16QAbstractSpinBox5eventEP6QEvent(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN16QAbstractSpinBox5eventEP6QEvent(rsthis.qclsinst, arg0)};
     return ret as i8;
     // return 1;
   }
@@ -300,37 +299,8 @@ impl<'a> /*trait*/ QAbstractSpinBox_keyboardTracking<i8> for () {
   fn keyboardTracking(self , rsthis: & QAbstractSpinBox) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAbstractSpinBox16keyboardTrackingEv()};
-    let mut ret = unsafe {_ZNK16QAbstractSpinBox16keyboardTrackingEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QAbstractSpinBox16keyboardTrackingEv(rsthis.qclsinst)};
     return ret as i8;
-    // return 1;
-  }
-}
-
-  // proto:  void QAbstractSpinBox::QAbstractSpinBox(const QAbstractSpinBox & );
-impl /*struct*/ QAbstractSpinBox {
-  pub fn new<T: QAbstractSpinBox_new>(value: T) -> QAbstractSpinBox {
-    let rsthis = value.new();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QAbstractSpinBox_new {
-  fn new(self) -> QAbstractSpinBox;
-}
-
-  // proto:  void QAbstractSpinBox::QAbstractSpinBox(const QAbstractSpinBox & );
-impl<'a> /*trait*/ QAbstractSpinBox_new for (&'a QAbstractSpinBox) {
-  fn new(self) -> QAbstractSpinBox {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QAbstractSpinBoxC2ERKS_()};
-    let ctysz: c_int = unsafe{QAbstractSpinBox_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN16QAbstractSpinBoxC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QAbstractSpinBox{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
     // return 1;
   }
 }
@@ -348,11 +318,13 @@ pub trait QAbstractSpinBox_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QAbstractSpinBox::metaObject();
-impl<'a> /*trait*/ QAbstractSpinBox_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QAbstractSpinBox) -> () {
+impl<'a> /*trait*/ QAbstractSpinBox_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QAbstractSpinBox) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAbstractSpinBox10metaObjectEv()};
-     unsafe {_ZNK16QAbstractSpinBox10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QAbstractSpinBox10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -374,7 +346,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_sizeHint<QSize> for () {
   fn sizeHint(self , rsthis: & QAbstractSpinBox) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAbstractSpinBox8sizeHintEv()};
-    let mut ret = unsafe {_ZNK16QAbstractSpinBox8sizeHintEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QAbstractSpinBox8sizeHintEv(rsthis.qclsinst)};
     let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -398,7 +370,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_free<()> for () {
   fn free(self , rsthis: & QAbstractSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAbstractSpinBoxD2Ev()};
-     unsafe {_ZN16QAbstractSpinBoxD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN16QAbstractSpinBoxD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -421,7 +393,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_fixup<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAbstractSpinBox5fixupER7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZNK16QAbstractSpinBox5fixupER7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZNK16QAbstractSpinBox5fixupER7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -443,7 +415,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_selectAll<()> for () {
   fn selectAll(self , rsthis: & QAbstractSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAbstractSpinBox9selectAllEv()};
-     unsafe {_ZN16QAbstractSpinBox9selectAllEv(rsthis.qclsinst)};
+     unsafe {C_ZN16QAbstractSpinBox9selectAllEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -465,7 +437,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_stepDown<()> for () {
   fn stepDown(self , rsthis: & QAbstractSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAbstractSpinBox8stepDownEv()};
-     unsafe {_ZN16QAbstractSpinBox8stepDownEv(rsthis.qclsinst)};
+     unsafe {C_ZN16QAbstractSpinBox8stepDownEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -487,7 +459,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_clear<()> for () {
   fn clear(self , rsthis: & QAbstractSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAbstractSpinBox5clearEv()};
-     unsafe {_ZN16QAbstractSpinBox5clearEv(rsthis.qclsinst)};
+     unsafe {C_ZN16QAbstractSpinBox5clearEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -509,7 +481,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_text<QString> for () {
   fn text(self , rsthis: & QAbstractSpinBox) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAbstractSpinBox4textEv()};
-    let mut ret = unsafe {_ZNK16QAbstractSpinBox4textEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QAbstractSpinBox4textEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -533,7 +505,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_specialValueText<QString> for () {
   fn specialValueText(self , rsthis: & QAbstractSpinBox) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAbstractSpinBox16specialValueTextEv()};
-    let mut ret = unsafe {_ZNK16QAbstractSpinBox16specialValueTextEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QAbstractSpinBox16specialValueTextEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -557,7 +529,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_minimumSizeHint<QSize> for () {
   fn minimumSizeHint(self , rsthis: & QAbstractSpinBox) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAbstractSpinBox15minimumSizeHintEv()};
-    let mut ret = unsafe {_ZNK16QAbstractSpinBox15minimumSizeHintEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QAbstractSpinBox15minimumSizeHintEv(rsthis.qclsinst)};
     let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -581,10 +553,23 @@ impl<'a> /*trait*/ QAbstractSpinBox_wrapping<i8> for () {
   fn wrapping(self , rsthis: & QAbstractSpinBox) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAbstractSpinBox8wrappingEv()};
-    let mut ret = unsafe {_ZNK16QAbstractSpinBox8wrappingEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QAbstractSpinBox8wrappingEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
+}
+
+  // proto:  void QAbstractSpinBox::QAbstractSpinBox(QWidget * parent);
+impl /*struct*/ QAbstractSpinBox {
+  pub fn new<T: QAbstractSpinBox_new>(value: T) -> QAbstractSpinBox {
+    let rsthis = value.new();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QAbstractSpinBox_new {
+  fn new(self) -> QAbstractSpinBox;
 }
 
   // proto:  void QAbstractSpinBox::QAbstractSpinBox(QWidget * parent);
@@ -595,8 +580,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_new for (&'a QWidget) {
     let ctysz: c_int = unsafe{QAbstractSpinBox_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN16QAbstractSpinBoxC2EP7QWidget(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN16QAbstractSpinBoxC2EP7QWidget(arg0)};
     let rsthis = QAbstractSpinBox{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -620,7 +604,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_stepUp<()> for () {
   fn stepUp(self , rsthis: & QAbstractSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAbstractSpinBox6stepUpEv()};
-     unsafe {_ZN16QAbstractSpinBox6stepUpEv(rsthis.qclsinst)};
+     unsafe {C_ZN16QAbstractSpinBox6stepUpEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -643,7 +627,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_setWrapping<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAbstractSpinBox11setWrappingEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN16QAbstractSpinBox11setWrappingEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN16QAbstractSpinBox11setWrappingEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -666,7 +650,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_setKeyboardTracking<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAbstractSpinBox19setKeyboardTrackingEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN16QAbstractSpinBox19setKeyboardTrackingEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN16QAbstractSpinBox19setKeyboardTrackingEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -688,7 +672,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_isAccelerated<i8> for () {
   fn isAccelerated(self , rsthis: & QAbstractSpinBox) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAbstractSpinBox13isAcceleratedEv()};
-    let mut ret = unsafe {_ZNK16QAbstractSpinBox13isAcceleratedEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QAbstractSpinBox13isAcceleratedEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -712,7 +696,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_setGroupSeparatorShown<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAbstractSpinBox22setGroupSeparatorShownEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN16QAbstractSpinBox22setGroupSeparatorShownEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN16QAbstractSpinBox22setGroupSeparatorShownEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -734,7 +718,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_isReadOnly<i8> for () {
   fn isReadOnly(self , rsthis: & QAbstractSpinBox) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAbstractSpinBox10isReadOnlyEv()};
-    let mut ret = unsafe {_ZNK16QAbstractSpinBox10isReadOnlyEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QAbstractSpinBox10isReadOnlyEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -757,7 +741,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_hasAcceptableInput<i8> for () {
   fn hasAcceptableInput(self , rsthis: & QAbstractSpinBox) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAbstractSpinBox18hasAcceptableInputEv()};
-    let mut ret = unsafe {_ZNK16QAbstractSpinBox18hasAcceptableInputEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QAbstractSpinBox18hasAcceptableInputEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -780,7 +764,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_isGroupSeparatorShown<i8> for () {
   fn isGroupSeparatorShown(self , rsthis: & QAbstractSpinBox) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAbstractSpinBox21isGroupSeparatorShownEv()};
-    let mut ret = unsafe {_ZNK16QAbstractSpinBox21isGroupSeparatorShownEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QAbstractSpinBox21isGroupSeparatorShownEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -803,7 +787,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_hasFrame<i8> for () {
   fn hasFrame(self , rsthis: & QAbstractSpinBox) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAbstractSpinBox8hasFrameEv()};
-    let mut ret = unsafe {_ZNK16QAbstractSpinBox8hasFrameEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QAbstractSpinBox8hasFrameEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }

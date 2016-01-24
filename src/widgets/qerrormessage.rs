@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtWidgets/qerrormessage.h
 // dst-file: /src/widgets/qerrormessage.rs
 //
@@ -20,6 +20,7 @@ use self::libc::*;
 // use block begin =>
 use super::qdialog::QDialog; // 773
 use std::ops::Deref;
+use super::super::core::qobjectdefs::QMetaObject; // 771
 use super::qwidget::QWidget; // 773
 use super::super::core::qstring::QString; // 771
 // <= use block end
@@ -33,19 +34,17 @@ use super::super::core::qstring::QString; // 771
 extern {
   fn QErrorMessage_Class_Size() -> c_int;
   // proto:  const QMetaObject * QErrorMessage::metaObject();
-  fn _ZNK13QErrorMessage10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK13QErrorMessage10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QErrorMessage::QErrorMessage(QWidget * parent);
-  fn _ZN13QErrorMessageC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN13QErrorMessageC2EP7QWidget(arg0: *mut c_void) -> u64;
   // proto: static QErrorMessage * QErrorMessage::qtHandler();
-  fn _ZN13QErrorMessage9qtHandlerEv() -> *mut c_void;
+  fn C_ZN13QErrorMessage9qtHandlerEv() -> *mut c_void;
   // proto:  void QErrorMessage::showMessage(const QString & message, const QString & type);
-  fn _ZN13QErrorMessage11showMessageERK7QStringS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN13QErrorMessage11showMessageERK7QStringS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QErrorMessage::showMessage(const QString & message);
-  fn _ZN13QErrorMessage11showMessageERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN13QErrorMessage11showMessageERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QErrorMessage::~QErrorMessage();
-  fn _ZN13QErrorMessageD2Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  void QErrorMessage::QErrorMessage(const QErrorMessage & );
-  fn _ZN13QErrorMessageC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN13QErrorMessageD2Ev(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
@@ -86,11 +85,13 @@ pub trait QErrorMessage_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QErrorMessage::metaObject();
-impl<'a> /*trait*/ QErrorMessage_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QErrorMessage) -> () {
+impl<'a> /*trait*/ QErrorMessage_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QErrorMessage) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QErrorMessage10metaObjectEv()};
-     unsafe {_ZNK13QErrorMessage10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QErrorMessage10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -116,8 +117,7 @@ impl<'a> /*trait*/ QErrorMessage_new for (&'a QWidget) {
     let ctysz: c_int = unsafe{QErrorMessage_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN13QErrorMessageC2EP7QWidget(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN13QErrorMessageC2EP7QWidget(arg0)};
     let rsthis = QErrorMessage{qbase: QDialog::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -141,7 +141,7 @@ impl<'a> /*trait*/ QErrorMessage_qtHandler_s<QErrorMessage> for () {
   fn qtHandler_s(self ) -> QErrorMessage {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QErrorMessage9qtHandlerEv()};
-    let mut ret = unsafe {_ZN13QErrorMessage9qtHandlerEv()};
+    let mut ret = unsafe {C_ZN13QErrorMessage9qtHandlerEv()};
     let mut ret1 = QErrorMessage::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -167,7 +167,7 @@ impl<'a> /*trait*/ QErrorMessage_showMessage<()> for (&'a QString, &'a QString) 
     // unsafe{_ZN13QErrorMessage11showMessageERK7QStringS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN13QErrorMessage11showMessageERK7QStringS2_(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN13QErrorMessage11showMessageERK7QStringS2_(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -178,7 +178,7 @@ impl<'a> /*trait*/ QErrorMessage_showMessage<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QErrorMessage11showMessageERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN13QErrorMessage11showMessageERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN13QErrorMessage11showMessageERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -200,23 +200,7 @@ impl<'a> /*trait*/ QErrorMessage_free<()> for () {
   fn free(self , rsthis: & QErrorMessage) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QErrorMessageD2Ev()};
-     unsafe {_ZN13QErrorMessageD2Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QErrorMessage::QErrorMessage(const QErrorMessage & );
-impl<'a> /*trait*/ QErrorMessage_new for (&'a QErrorMessage) {
-  fn new(self) -> QErrorMessage {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QErrorMessageC2ERKS_()};
-    let ctysz: c_int = unsafe{QErrorMessage_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN13QErrorMessageC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QErrorMessage{qbase: QDialog::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
+     unsafe {C_ZN13QErrorMessageD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

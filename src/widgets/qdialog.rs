@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtWidgets/qdialog.h
 // dst-file: /src/widgets/qdialog.rs
 //
@@ -20,6 +20,7 @@ use self::libc::*;
 // use block begin =>
 use super::qwidget::QWidget; // 773
 use std::ops::Deref;
+use super::super::core::qobjectdefs::QMetaObject; // 771
 use super::super::core::qsize::QSize; // 771
 // <= use block end
 
@@ -32,43 +33,41 @@ use super::super::core::qsize::QSize; // 771
 extern {
   fn QDialog_Class_Size() -> c_int;
   // proto:  void QDialog::setExtension(QWidget * extension);
-  fn _ZN7QDialog12setExtensionEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN7QDialog12setExtensionEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QDialog::result();
-  fn _ZNK7QDialog6resultEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK7QDialog6resultEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QDialog::done(int );
-  fn _ZN7QDialog4doneEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN7QDialog4doneEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QDialog::open();
-  fn _ZN7QDialog4openEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN7QDialog4openEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QDialog::~QDialog();
-  fn _ZN7QDialogD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN7QDialogD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QDialog::setResult(int r);
-  fn _ZN7QDialog9setResultEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN7QDialog9setResultEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QDialog::setSizeGripEnabled(bool );
-  fn _ZN7QDialog18setSizeGripEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN7QDialog18setSizeGripEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QDialog::showExtension(bool );
-  fn _ZN7QDialog13showExtensionEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN7QDialog13showExtensionEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  const QMetaObject * QDialog::metaObject();
-  fn _ZNK7QDialog10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK7QDialog10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QSize QDialog::minimumSizeHint();
-  fn _ZNK7QDialog15minimumSizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK7QDialog15minimumSizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QSize QDialog::sizeHint();
-  fn _ZNK7QDialog8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK7QDialog8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QDialog::accept();
-  fn _ZN7QDialog6acceptEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN7QDialog6acceptEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QDialog::setVisible(bool visible);
-  fn _ZN7QDialog10setVisibleEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN7QDialog10setVisibleEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QWidget * QDialog::extension();
-  fn _ZNK7QDialog9extensionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK7QDialog9extensionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QDialog::exec();
-  fn _ZN7QDialog4execEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZN7QDialog4execEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QDialog::reject();
-  fn _ZN7QDialog6rejectEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QDialog::QDialog(const QDialog & );
-  fn _ZN7QDialogC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN7QDialog6rejectEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QDialog::isSizeGripEnabled();
-  fn _ZNK7QDialog17isSizeGripEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK7QDialog17isSizeGripEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QDialog::setModal(bool modal);
-  fn _ZN7QDialog8setModalEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN7QDialog8setModalEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   fn QDialog_SlotProxy_connect__ZN7QDialog8rejectedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QDialog_SlotProxy_connect__ZN7QDialog8finishedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QDialog_SlotProxy_connect__ZN7QDialog8acceptedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
@@ -120,7 +119,7 @@ impl<'a> /*trait*/ QDialog_setExtension<()> for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QDialog12setExtensionEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN7QDialog12setExtensionEP7QWidget(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN7QDialog12setExtensionEP7QWidget(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -142,7 +141,7 @@ impl<'a> /*trait*/ QDialog_result<i32> for () {
   fn result(self , rsthis: & QDialog) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QDialog6resultEv()};
-    let mut ret = unsafe {_ZNK7QDialog6resultEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QDialog6resultEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -166,7 +165,7 @@ impl<'a> /*trait*/ QDialog_done<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QDialog4doneEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN7QDialog4doneEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN7QDialog4doneEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -188,7 +187,7 @@ impl<'a> /*trait*/ QDialog_open<()> for () {
   fn open(self , rsthis: & QDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QDialog4openEv()};
-     unsafe {_ZN7QDialog4openEv(rsthis.qclsinst)};
+     unsafe {C_ZN7QDialog4openEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -210,7 +209,7 @@ impl<'a> /*trait*/ QDialog_free<()> for () {
   fn free(self , rsthis: & QDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QDialogD2Ev()};
-     unsafe {_ZN7QDialogD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN7QDialogD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -233,7 +232,7 @@ impl<'a> /*trait*/ QDialog_setResult<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QDialog9setResultEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN7QDialog9setResultEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN7QDialog9setResultEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -256,7 +255,7 @@ impl<'a> /*trait*/ QDialog_setSizeGripEnabled<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QDialog18setSizeGripEnabledEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN7QDialog18setSizeGripEnabledEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN7QDialog18setSizeGripEnabledEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -279,7 +278,7 @@ impl<'a> /*trait*/ QDialog_showExtension<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QDialog13showExtensionEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN7QDialog13showExtensionEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN7QDialog13showExtensionEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -297,11 +296,13 @@ pub trait QDialog_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QDialog::metaObject();
-impl<'a> /*trait*/ QDialog_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QDialog) -> () {
+impl<'a> /*trait*/ QDialog_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QDialog) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QDialog10metaObjectEv()};
-     unsafe {_ZNK7QDialog10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QDialog10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -323,7 +324,7 @@ impl<'a> /*trait*/ QDialog_minimumSizeHint<QSize> for () {
   fn minimumSizeHint(self , rsthis: & QDialog) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QDialog15minimumSizeHintEv()};
-    let mut ret = unsafe {_ZNK7QDialog15minimumSizeHintEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QDialog15minimumSizeHintEv(rsthis.qclsinst)};
     let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -347,7 +348,7 @@ impl<'a> /*trait*/ QDialog_sizeHint<QSize> for () {
   fn sizeHint(self , rsthis: & QDialog) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QDialog8sizeHintEv()};
-    let mut ret = unsafe {_ZNK7QDialog8sizeHintEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QDialog8sizeHintEv(rsthis.qclsinst)};
     let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -371,7 +372,7 @@ impl<'a> /*trait*/ QDialog_accept<()> for () {
   fn accept(self , rsthis: & QDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QDialog6acceptEv()};
-     unsafe {_ZN7QDialog6acceptEv(rsthis.qclsinst)};
+     unsafe {C_ZN7QDialog6acceptEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -394,7 +395,7 @@ impl<'a> /*trait*/ QDialog_setVisible<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QDialog10setVisibleEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN7QDialog10setVisibleEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN7QDialog10setVisibleEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -416,7 +417,7 @@ impl<'a> /*trait*/ QDialog_extension<QWidget> for () {
   fn extension(self , rsthis: & QDialog) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QDialog9extensionEv()};
-    let mut ret = unsafe {_ZNK7QDialog9extensionEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QDialog9extensionEv(rsthis.qclsinst)};
     let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -440,7 +441,7 @@ impl<'a> /*trait*/ QDialog_exec<i32> for () {
   fn exec(self , rsthis: & QDialog) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QDialog4execEv()};
-    let mut ret = unsafe {_ZN7QDialog4execEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZN7QDialog4execEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -463,36 +464,7 @@ impl<'a> /*trait*/ QDialog_reject<()> for () {
   fn reject(self , rsthis: & QDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QDialog6rejectEv()};
-     unsafe {_ZN7QDialog6rejectEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QDialog::QDialog(const QDialog & );
-impl /*struct*/ QDialog {
-  pub fn new<T: QDialog_new>(value: T) -> QDialog {
-    let rsthis = value.new();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QDialog_new {
-  fn new(self) -> QDialog;
-}
-
-  // proto:  void QDialog::QDialog(const QDialog & );
-impl<'a> /*trait*/ QDialog_new for (&'a QDialog) {
-  fn new(self) -> QDialog {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QDialogC2ERKS_()};
-    let ctysz: c_int = unsafe{QDialog_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN7QDialogC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QDialog{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
+     unsafe {C_ZN7QDialog6rejectEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -514,7 +486,7 @@ impl<'a> /*trait*/ QDialog_isSizeGripEnabled<i8> for () {
   fn isSizeGripEnabled(self , rsthis: & QDialog) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QDialog17isSizeGripEnabledEv()};
-    let mut ret = unsafe {_ZNK7QDialog17isSizeGripEnabledEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QDialog17isSizeGripEnabledEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -538,7 +510,7 @@ impl<'a> /*trait*/ QDialog_setModal<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QDialog8setModalEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN7QDialog8setModalEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN7QDialog8setModalEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtWidgets/qfontdialog.h
 // dst-file: /src/widgets/qfontdialog.rs
 //
@@ -24,6 +24,7 @@ use super::qwidget::QWidget; // 773
 use super::super::core::qobject::QObject; // 771
 use super::super::gui::qfont::QFont; // 771
 use super::super::core::qstring::QString; // 771
+use super::super::core::qobjectdefs::QMetaObject; // 771
 // <= use block end
 
 // ext block begin =>
@@ -35,27 +36,25 @@ use super::super::core::qstring::QString; // 771
 extern {
   fn QFontDialog_Class_Size() -> c_int;
   // proto:  void QFontDialog::QFontDialog(QWidget * parent);
-  fn _ZN11QFontDialogC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QFontDialog::QFontDialog(const QFontDialog & );
-  fn _ZN11QFontDialogC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QFontDialogC2EP7QWidget(arg0: *mut c_void) -> u64;
   // proto:  void QFontDialog::open(QObject * receiver, const char * member);
-  fn _ZN11QFontDialog4openEP7QObjectPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_char);
+  fn C_ZN11QFontDialog4openEP7QObjectPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_char);
   // proto:  void QFontDialog::QFontDialog(const QFont & initial, QWidget * parent);
-  fn _ZN11QFontDialogC2ERK5QFontP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN11QFontDialogC2ERK5QFontP7QWidget(arg0: *mut c_void, arg1: *mut c_void) -> u64;
   // proto:  QFont QFontDialog::currentFont();
-  fn _ZNK11QFontDialog11currentFontEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK11QFontDialog11currentFontEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QFontDialog::setVisible(bool visible);
-  fn _ZN11QFontDialog10setVisibleEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN11QFontDialog10setVisibleEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QFontDialog::~QFontDialog();
-  fn _ZN11QFontDialogD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN11QFontDialogD2Ev(qthis: u64 /* *mut c_void*/);
   // proto: static QFont QFontDialog::getFont(bool * ok, QWidget * parent);
-  fn _ZN11QFontDialog7getFontEPbP7QWidget(arg0: *mut c_char, arg1: *mut c_void) -> *mut c_void;
+  fn C_ZN11QFontDialog7getFontEPbP7QWidget(arg0: *mut c_char, arg1: *mut c_void) -> *mut c_void;
   // proto:  const QMetaObject * QFontDialog::metaObject();
-  fn _ZNK11QFontDialog10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK11QFontDialog10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QFont QFontDialog::selectedFont();
-  fn _ZNK11QFontDialog12selectedFontEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK11QFontDialog12selectedFontEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QFontDialog::setCurrentFont(const QFont & font);
-  fn _ZN11QFontDialog14setCurrentFontERK5QFont(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QFontDialog14setCurrentFontERK5QFont(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QFontDialog_SlotProxy_connect__ZN11QFontDialog18currentFontChangedERK5QFont(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QFontDialog_SlotProxy_connect__ZN11QFontDialog12fontSelectedERK5QFont(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
@@ -108,24 +107,7 @@ impl<'a> /*trait*/ QFontDialog_new for (&'a QWidget) {
     let ctysz: c_int = unsafe{QFontDialog_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QFontDialogC2EP7QWidget(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QFontDialog{qbase: QDialog::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  void QFontDialog::QFontDialog(const QFontDialog & );
-impl<'a> /*trait*/ QFontDialog_new for (&'a QFontDialog) {
-  fn new(self) -> QFontDialog {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QFontDialogC2ERKS_()};
-    let ctysz: c_int = unsafe{QFontDialog_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QFontDialogC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN11QFontDialogC2EP7QWidget(arg0)};
     let rsthis = QFontDialog{qbase: QDialog::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -151,7 +133,7 @@ impl<'a> /*trait*/ QFontDialog_open<()> for (&'a QObject, &'a  String) {
     // unsafe{_ZN11QFontDialog4openEP7QObjectPKc()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.as_ptr()  as *mut c_char;
-     unsafe {_ZN11QFontDialog4openEP7QObjectPKc(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN11QFontDialog4openEP7QObjectPKc(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -165,8 +147,7 @@ impl<'a> /*trait*/ QFontDialog_new for (&'a QFont, &'a QWidget) {
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    unsafe {_ZN11QFontDialogC2ERK5QFontP7QWidget(qthis_ph, arg0, arg1)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN11QFontDialogC2ERK5QFontP7QWidget(arg0, arg1)};
     let rsthis = QFontDialog{qbase: QDialog::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -190,7 +171,7 @@ impl<'a> /*trait*/ QFontDialog_currentFont<QFont> for () {
   fn currentFont(self , rsthis: & QFontDialog) -> QFont {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFontDialog11currentFontEv()};
-    let mut ret = unsafe {_ZNK11QFontDialog11currentFontEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QFontDialog11currentFontEv(rsthis.qclsinst)};
     let mut ret1 = QFont::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -215,7 +196,7 @@ impl<'a> /*trait*/ QFontDialog_setVisible<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFontDialog10setVisibleEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN11QFontDialog10setVisibleEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QFontDialog10setVisibleEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -237,7 +218,7 @@ impl<'a> /*trait*/ QFontDialog_free<()> for () {
   fn free(self , rsthis: & QFontDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFontDialogD2Ev()};
-     unsafe {_ZN11QFontDialogD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN11QFontDialogD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -261,7 +242,7 @@ impl<'a> /*trait*/ QFontDialog_getFont_s<QFont> for (&'a mut Vec<i8>, &'a QWidge
     // unsafe{_ZN11QFontDialog7getFontEPbP7QWidget()};
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN11QFontDialog7getFontEPbP7QWidget(arg0, arg1)};
+    let mut ret = unsafe {C_ZN11QFontDialog7getFontEPbP7QWidget(arg0, arg1)};
     let mut ret1 = QFont::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -281,11 +262,13 @@ pub trait QFontDialog_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QFontDialog::metaObject();
-impl<'a> /*trait*/ QFontDialog_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QFontDialog) -> () {
+impl<'a> /*trait*/ QFontDialog_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QFontDialog) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFontDialog10metaObjectEv()};
-     unsafe {_ZNK11QFontDialog10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QFontDialog10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -307,7 +290,7 @@ impl<'a> /*trait*/ QFontDialog_selectedFont<QFont> for () {
   fn selectedFont(self , rsthis: & QFontDialog) -> QFont {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFontDialog12selectedFontEv()};
-    let mut ret = unsafe {_ZNK11QFontDialog12selectedFontEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QFontDialog12selectedFontEv(rsthis.qclsinst)};
     let mut ret1 = QFont::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -332,7 +315,7 @@ impl<'a> /*trait*/ QFontDialog_setCurrentFont<()> for (&'a QFont) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFontDialog14setCurrentFontERK5QFont()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QFontDialog14setCurrentFontERK5QFont(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QFontDialog14setCurrentFontERK5QFont(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

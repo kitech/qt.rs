@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtWidgets/qmenu.h
 // dst-file: /src/widgets/qmenu.rs
 //
@@ -23,6 +23,7 @@ use std::ops::Deref;
 use super::qaction::QAction; // 773
 use super::super::gui::qicon::QIcon; // 771
 use super::super::core::qstring::QString; // 771
+use super::super::core::qobjectdefs::QMetaObject; // 771
 use super::super::core::qpoint::QPoint; // 771
 use super::super::core::qobject::QObject; // 771
 use super::super::gui::qkeysequence::QKeySequence; // 771
@@ -39,97 +40,95 @@ use super::super::core::qsize::QSize; // 771
 extern {
   fn QMenu_Class_Size() -> c_int;
   // proto:  bool QMenu::isTearOffEnabled();
-  fn _ZNK5QMenu16isTearOffEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK5QMenu16isTearOffEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QMenu::toolTipsVisible();
-  fn _ZNK5QMenu15toolTipsVisibleEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK5QMenu15toolTipsVisibleEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QAction * QMenu::menuAction();
-  fn _ZNK5QMenu10menuActionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK5QMenu10menuActionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QAction * QMenu::addAction(const QIcon & icon, const QString & text);
-  fn _ZN5QMenu9addActionERK5QIconRK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
+  fn C_ZN5QMenu9addActionERK5QIconRK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  void QMenu::setTearOffEnabled(bool );
-  fn _ZN5QMenu17setTearOffEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN5QMenu17setTearOffEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QAction * QMenu::addSection(const QString & text);
-  fn _ZN5QMenu10addSectionERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZN5QMenu10addSectionERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  const QMetaObject * QMenu::metaObject();
-  fn _ZNK5QMenu10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK5QMenu10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QMenu::clear();
-  fn _ZN5QMenu5clearEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN5QMenu5clearEv(qthis: u64 /* *mut c_void*/);
   // proto:  QAction * QMenu::insertMenu(QAction * before, QMenu * menu);
-  fn _ZN5QMenu10insertMenuEP7QActionPS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
+  fn C_ZN5QMenu10insertMenuEP7QActionPS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  QIcon QMenu::icon();
-  fn _ZNK5QMenu4iconEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK5QMenu4iconEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QAction * QMenu::insertSection(QAction * before, const QString & text);
-  fn _ZN5QMenu13insertSectionEP7QActionRK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
+  fn C_ZN5QMenu13insertSectionEP7QActionRK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  QPlatformMenu * QMenu::platformMenu();
-  fn _ZN5QMenu12platformMenuEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN5QMenu12platformMenuEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QMenu::setNoReplayFor(QWidget * widget);
-  fn _ZN5QMenu14setNoReplayForEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN5QMenu14setNoReplayForEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMenu::setIcon(const QIcon & icon);
-  fn _ZN5QMenu7setIconERK5QIcon(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN5QMenu7setIconERK5QIcon(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QAction * QMenu::exec(const QPoint & pos, QAction * at);
-  fn _ZN5QMenu4execERK6QPointP7QAction(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
+  fn C_ZN5QMenu4execERK6QPointP7QAction(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  bool QMenu::separatorsCollapsible();
-  fn _ZNK5QMenu21separatorsCollapsibleEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK5QMenu21separatorsCollapsibleEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QMenu * QMenu::addMenu(const QString & title);
-  fn _ZN5QMenu7addMenuERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZN5QMenu7addMenuERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QAction * QMenu::addSeparator();
-  fn _ZN5QMenu12addSeparatorEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZN5QMenu12addSeparatorEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QMenu::hideTearOffMenu();
-  fn _ZN5QMenu15hideTearOffMenuEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN5QMenu15hideTearOffMenuEv(qthis: u64 /* *mut c_void*/);
   // proto:  QAction * QMenu::addAction(const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut);
-  fn _ZN5QMenu9addActionERK7QStringPK7QObjectPKcRK12QKeySequence(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_char, arg3: *mut c_void) -> *mut c_void;
+  fn C_ZN5QMenu9addActionERK7QStringPK7QObjectPKcRK12QKeySequence(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_char, arg3: *mut c_void) -> *mut c_void;
   // proto:  void QMenu::QMenu(QWidget * parent);
-  fn _ZN5QMenuC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN5QMenuC2EP7QWidget(arg0: *mut c_void) -> u64;
   // proto:  void QMenu::setActiveAction(QAction * act);
-  fn _ZN5QMenu15setActiveActionEP7QAction(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN5QMenu15setActiveActionEP7QAction(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMenu::setSeparatorsCollapsible(bool collapse);
-  fn _ZN5QMenu24setSeparatorsCollapsibleEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
-  // proto:  void QMenu::QMenu(const QMenu & );
-  fn _ZN5QMenuC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN5QMenu24setSeparatorsCollapsibleEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QAction * QMenu::addAction(const QString & text);
-  fn _ZN5QMenu9addActionERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZN5QMenu9addActionERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QAction * QMenu::activeAction();
-  fn _ZNK5QMenu12activeActionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK5QMenu12activeActionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QMenu::isEmpty();
-  fn _ZNK5QMenu7isEmptyEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK5QMenu7isEmptyEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QAction * QMenu::addAction(const QIcon & icon, const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut);
-  fn _ZN5QMenu9addActionERK5QIconRK7QStringPK7QObjectPKcRK12QKeySequence(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_char, arg4: *mut c_void) -> *mut c_void;
+  fn C_ZN5QMenu9addActionERK5QIconRK7QStringPK7QObjectPKcRK12QKeySequence(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_char, arg4: *mut c_void) -> *mut c_void;
   // proto:  QRect QMenu::actionGeometry(QAction * );
-  fn _ZNK5QMenu14actionGeometryEP7QAction(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZNK5QMenu14actionGeometryEP7QAction(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QMenu::QMenu(const QString & title, QWidget * parent);
-  fn _ZN5QMenuC2ERK7QStringP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN5QMenuC2ERK7QStringP7QWidget(arg0: *mut c_void, arg1: *mut c_void) -> u64;
   // proto:  QAction * QMenu::insertSeparator(QAction * before);
-  fn _ZN5QMenu15insertSeparatorEP7QAction(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZN5QMenu15insertSeparatorEP7QAction(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QAction * QMenu::addSection(const QIcon & icon, const QString & text);
-  fn _ZN5QMenu10addSectionERK5QIconRK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
+  fn C_ZN5QMenu10addSectionERK5QIconRK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  bool QMenu::isTearOffMenuVisible();
-  fn _ZNK5QMenu20isTearOffMenuVisibleEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK5QMenu20isTearOffMenuVisibleEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QMenu::~QMenu();
-  fn _ZN5QMenuD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN5QMenuD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QString QMenu::title();
-  fn _ZNK5QMenu5titleEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK5QMenu5titleEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QAction * QMenu::defaultAction();
-  fn _ZNK5QMenu13defaultActionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK5QMenu13defaultActionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QAction * QMenu::addMenu(QMenu * menu);
-  fn _ZN5QMenu7addMenuEPS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZN5QMenu7addMenuEPS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QSize QMenu::sizeHint();
-  fn _ZNK5QMenu8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK5QMenu8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QMenu::setDefaultAction(QAction * );
-  fn _ZN5QMenu16setDefaultActionEP7QAction(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN5QMenu16setDefaultActionEP7QAction(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QAction * QMenu::actionAt(const QPoint & );
-  fn _ZNK5QMenu8actionAtERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZNK5QMenu8actionAtERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QAction * QMenu::insertSection(QAction * before, const QIcon & icon, const QString & text);
-  fn _ZN5QMenu13insertSectionEP7QActionRK5QIconRK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> *mut c_void;
+  fn C_ZN5QMenu13insertSectionEP7QActionRK5QIconRK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> *mut c_void;
   // proto:  void QMenu::popup(const QPoint & pos, QAction * at);
-  fn _ZN5QMenu5popupERK6QPointP7QAction(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN5QMenu5popupERK6QPointP7QAction(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QMenu::setToolTipsVisible(bool visible);
-  fn _ZN5QMenu18setToolTipsVisibleEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN5QMenu18setToolTipsVisibleEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QMenu::setTitle(const QString & title);
-  fn _ZN5QMenu8setTitleERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN5QMenu8setTitleERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QMenu * QMenu::addMenu(const QIcon & icon, const QString & title);
-  fn _ZN5QMenu7addMenuERK5QIconRK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
+  fn C_ZN5QMenu7addMenuERK5QIconRK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  QAction * QMenu::exec();
-  fn _ZN5QMenu4execEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZN5QMenu4execEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   fn QMenu_SlotProxy_connect__ZN5QMenu11aboutToShowEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QMenu_SlotProxy_connect__ZN5QMenu7hoveredEP7QAction(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QMenu_SlotProxy_connect__ZN5QMenu11aboutToHideEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
@@ -182,7 +181,7 @@ impl<'a> /*trait*/ QMenu_isTearOffEnabled<i8> for () {
   fn isTearOffEnabled(self , rsthis: & QMenu) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QMenu16isTearOffEnabledEv()};
-    let mut ret = unsafe {_ZNK5QMenu16isTearOffEnabledEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK5QMenu16isTearOffEnabledEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -205,7 +204,7 @@ impl<'a> /*trait*/ QMenu_toolTipsVisible<i8> for () {
   fn toolTipsVisible(self , rsthis: & QMenu) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QMenu15toolTipsVisibleEv()};
-    let mut ret = unsafe {_ZNK5QMenu15toolTipsVisibleEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK5QMenu15toolTipsVisibleEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -228,7 +227,7 @@ impl<'a> /*trait*/ QMenu_menuAction<QAction> for () {
   fn menuAction(self , rsthis: & QMenu) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QMenu10menuActionEv()};
-    let mut ret = unsafe {_ZNK5QMenu10menuActionEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK5QMenu10menuActionEv(rsthis.qclsinst)};
     let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -254,7 +253,7 @@ impl<'a> /*trait*/ QMenu_addAction<QAction> for (&'a QIcon, &'a QString) {
     // unsafe{_ZN5QMenu9addActionERK5QIconRK7QString()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN5QMenu9addActionERK5QIconRK7QString(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {C_ZN5QMenu9addActionERK5QIconRK7QString(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -279,7 +278,7 @@ impl<'a> /*trait*/ QMenu_setTearOffEnabled<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu17setTearOffEnabledEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN5QMenu17setTearOffEnabledEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN5QMenu17setTearOffEnabledEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -302,7 +301,7 @@ impl<'a> /*trait*/ QMenu_addSection<QAction> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu10addSectionERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN5QMenu10addSectionERK7QString(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN5QMenu10addSectionERK7QString(rsthis.qclsinst, arg0)};
     let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -322,11 +321,13 @@ pub trait QMenu_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QMenu::metaObject();
-impl<'a> /*trait*/ QMenu_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QMenu) -> () {
+impl<'a> /*trait*/ QMenu_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QMenu) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QMenu10metaObjectEv()};
-     unsafe {_ZNK5QMenu10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK5QMenu10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -348,7 +349,7 @@ impl<'a> /*trait*/ QMenu_clear<()> for () {
   fn clear(self , rsthis: & QMenu) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu5clearEv()};
-     unsafe {_ZN5QMenu5clearEv(rsthis.qclsinst)};
+     unsafe {C_ZN5QMenu5clearEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -372,7 +373,7 @@ impl<'a> /*trait*/ QMenu_insertMenu<QAction> for (&'a QAction, &'a QMenu) {
     // unsafe{_ZN5QMenu10insertMenuEP7QActionPS_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN5QMenu10insertMenuEP7QActionPS_(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {C_ZN5QMenu10insertMenuEP7QActionPS_(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -396,7 +397,7 @@ impl<'a> /*trait*/ QMenu_icon<QIcon> for () {
   fn icon(self , rsthis: & QMenu) -> QIcon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QMenu4iconEv()};
-    let mut ret = unsafe {_ZNK5QMenu4iconEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK5QMenu4iconEv(rsthis.qclsinst)};
     let mut ret1 = QIcon::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -422,7 +423,7 @@ impl<'a> /*trait*/ QMenu_insertSection<QAction> for (&'a QAction, &'a QString) {
     // unsafe{_ZN5QMenu13insertSectionEP7QActionRK7QString()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN5QMenu13insertSectionEP7QActionRK7QString(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {C_ZN5QMenu13insertSectionEP7QActionRK7QString(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -446,7 +447,7 @@ impl<'a> /*trait*/ QMenu_platformMenu<()> for () {
   fn platformMenu(self , rsthis: & QMenu) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu12platformMenuEv()};
-     unsafe {_ZN5QMenu12platformMenuEv(rsthis.qclsinst)};
+     unsafe {C_ZN5QMenu12platformMenuEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -469,7 +470,7 @@ impl<'a> /*trait*/ QMenu_setNoReplayFor<()> for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu14setNoReplayForEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN5QMenu14setNoReplayForEP7QWidget(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN5QMenu14setNoReplayForEP7QWidget(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -492,7 +493,7 @@ impl<'a> /*trait*/ QMenu_setIcon<()> for (&'a QIcon) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu7setIconERK5QIcon()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN5QMenu7setIconERK5QIcon(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN5QMenu7setIconERK5QIcon(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -516,7 +517,7 @@ impl<'a> /*trait*/ QMenu_exec<QAction> for (&'a QPoint, &'a QAction) {
     // unsafe{_ZN5QMenu4execERK6QPointP7QAction()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN5QMenu4execERK6QPointP7QAction(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {C_ZN5QMenu4execERK6QPointP7QAction(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -540,7 +541,7 @@ impl<'a> /*trait*/ QMenu_separatorsCollapsible<i8> for () {
   fn separatorsCollapsible(self , rsthis: & QMenu) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QMenu21separatorsCollapsibleEv()};
-    let mut ret = unsafe {_ZNK5QMenu21separatorsCollapsibleEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK5QMenu21separatorsCollapsibleEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -564,7 +565,7 @@ impl<'a> /*trait*/ QMenu_addMenu<QMenu> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu7addMenuERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN5QMenu7addMenuERK7QString(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN5QMenu7addMenuERK7QString(rsthis.qclsinst, arg0)};
     let mut ret1 = QMenu::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -588,7 +589,7 @@ impl<'a> /*trait*/ QMenu_addSeparator<QAction> for () {
   fn addSeparator(self , rsthis: & QMenu) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu12addSeparatorEv()};
-    let mut ret = unsafe {_ZN5QMenu12addSeparatorEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZN5QMenu12addSeparatorEv(rsthis.qclsinst)};
     let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -612,7 +613,7 @@ impl<'a> /*trait*/ QMenu_hideTearOffMenu<()> for () {
   fn hideTearOffMenu(self , rsthis: & QMenu) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu15hideTearOffMenuEv()};
-     unsafe {_ZN5QMenu15hideTearOffMenuEv(rsthis.qclsinst)};
+     unsafe {C_ZN5QMenu15hideTearOffMenuEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -626,7 +627,7 @@ impl<'a> /*trait*/ QMenu_addAction<QAction> for (&'a QString, &'a QObject, &'a  
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.as_ptr()  as *mut c_char;
     let arg3 = self.3.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN5QMenu9addActionERK7QStringPK7QObjectPKcRK12QKeySequence(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
+    let mut ret = unsafe {C_ZN5QMenu9addActionERK7QStringPK7QObjectPKcRK12QKeySequence(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
     let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -654,8 +655,7 @@ impl<'a> /*trait*/ QMenu_new for (&'a QWidget) {
     let ctysz: c_int = unsafe{QMenu_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN5QMenuC2EP7QWidget(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN5QMenuC2EP7QWidget(arg0)};
     let rsthis = QMenu{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -680,7 +680,7 @@ impl<'a> /*trait*/ QMenu_setActiveAction<()> for (&'a QAction) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu15setActiveActionEP7QAction()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN5QMenu15setActiveActionEP7QAction(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN5QMenu15setActiveActionEP7QAction(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -703,23 +703,7 @@ impl<'a> /*trait*/ QMenu_setSeparatorsCollapsible<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu24setSeparatorsCollapsibleEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN5QMenu24setSeparatorsCollapsibleEb(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QMenu::QMenu(const QMenu & );
-impl<'a> /*trait*/ QMenu_new for (&'a QMenu) {
-  fn new(self) -> QMenu {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN5QMenuC2ERKS_()};
-    let ctysz: c_int = unsafe{QMenu_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN5QMenuC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QMenu{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
+     unsafe {C_ZN5QMenu24setSeparatorsCollapsibleEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -730,7 +714,7 @@ impl<'a> /*trait*/ QMenu_addAction<QAction> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu9addActionERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN5QMenu9addActionERK7QString(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN5QMenu9addActionERK7QString(rsthis.qclsinst, arg0)};
     let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -754,7 +738,7 @@ impl<'a> /*trait*/ QMenu_activeAction<QAction> for () {
   fn activeAction(self , rsthis: & QMenu) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QMenu12activeActionEv()};
-    let mut ret = unsafe {_ZNK5QMenu12activeActionEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK5QMenu12activeActionEv(rsthis.qclsinst)};
     let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -778,7 +762,7 @@ impl<'a> /*trait*/ QMenu_isEmpty<i8> for () {
   fn isEmpty(self , rsthis: & QMenu) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QMenu7isEmptyEv()};
-    let mut ret = unsafe {_ZNK5QMenu7isEmptyEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK5QMenu7isEmptyEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -794,7 +778,7 @@ impl<'a> /*trait*/ QMenu_addAction<QAction> for (&'a QIcon, &'a QString, &'a QOb
     let arg2 = self.2.qclsinst  as *mut c_void;
     let arg3 = self.3.as_ptr()  as *mut c_char;
     let arg4 = self.4.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN5QMenu9addActionERK5QIconRK7QStringPK7QObjectPKcRK12QKeySequence(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4)};
+    let mut ret = unsafe {C_ZN5QMenu9addActionERK5QIconRK7QStringPK7QObjectPKcRK12QKeySequence(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4)};
     let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -819,7 +803,7 @@ impl<'a> /*trait*/ QMenu_actionGeometry<QRect> for (&'a QAction) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QMenu14actionGeometryEP7QAction()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK5QMenu14actionGeometryEP7QAction(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK5QMenu14actionGeometryEP7QAction(rsthis.qclsinst, arg0)};
     let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -835,8 +819,7 @@ impl<'a> /*trait*/ QMenu_new for (&'a QString, &'a QWidget) {
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    unsafe {_ZN5QMenuC2ERK7QStringP7QWidget(qthis_ph, arg0, arg1)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN5QMenuC2ERK7QStringP7QWidget(arg0, arg1)};
     let rsthis = QMenu{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -861,7 +844,7 @@ impl<'a> /*trait*/ QMenu_insertSeparator<QAction> for (&'a QAction) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu15insertSeparatorEP7QAction()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN5QMenu15insertSeparatorEP7QAction(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN5QMenu15insertSeparatorEP7QAction(rsthis.qclsinst, arg0)};
     let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -875,7 +858,7 @@ impl<'a> /*trait*/ QMenu_addSection<QAction> for (&'a QIcon, &'a QString) {
     // unsafe{_ZN5QMenu10addSectionERK5QIconRK7QString()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN5QMenu10addSectionERK5QIconRK7QString(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {C_ZN5QMenu10addSectionERK5QIconRK7QString(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -899,7 +882,7 @@ impl<'a> /*trait*/ QMenu_isTearOffMenuVisible<i8> for () {
   fn isTearOffMenuVisible(self , rsthis: & QMenu) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QMenu20isTearOffMenuVisibleEv()};
-    let mut ret = unsafe {_ZNK5QMenu20isTearOffMenuVisibleEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK5QMenu20isTearOffMenuVisibleEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -922,7 +905,7 @@ impl<'a> /*trait*/ QMenu_free<()> for () {
   fn free(self , rsthis: & QMenu) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenuD2Ev()};
-     unsafe {_ZN5QMenuD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN5QMenuD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -944,7 +927,7 @@ impl<'a> /*trait*/ QMenu_title<QString> for () {
   fn title(self , rsthis: & QMenu) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QMenu5titleEv()};
-    let mut ret = unsafe {_ZNK5QMenu5titleEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK5QMenu5titleEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -968,7 +951,7 @@ impl<'a> /*trait*/ QMenu_defaultAction<QAction> for () {
   fn defaultAction(self , rsthis: & QMenu) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QMenu13defaultActionEv()};
-    let mut ret = unsafe {_ZNK5QMenu13defaultActionEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK5QMenu13defaultActionEv(rsthis.qclsinst)};
     let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -981,7 +964,7 @@ impl<'a> /*trait*/ QMenu_addMenu<QAction> for (&'a QMenu) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu7addMenuEPS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN5QMenu7addMenuEPS_(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN5QMenu7addMenuEPS_(rsthis.qclsinst, arg0)};
     let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1005,7 +988,7 @@ impl<'a> /*trait*/ QMenu_sizeHint<QSize> for () {
   fn sizeHint(self , rsthis: & QMenu) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QMenu8sizeHintEv()};
-    let mut ret = unsafe {_ZNK5QMenu8sizeHintEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK5QMenu8sizeHintEv(rsthis.qclsinst)};
     let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1030,7 +1013,7 @@ impl<'a> /*trait*/ QMenu_setDefaultAction<()> for (&'a QAction) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu16setDefaultActionEP7QAction()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN5QMenu16setDefaultActionEP7QAction(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN5QMenu16setDefaultActionEP7QAction(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1053,7 +1036,7 @@ impl<'a> /*trait*/ QMenu_actionAt<QAction> for (&'a QPoint) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QMenu8actionAtERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK5QMenu8actionAtERK6QPoint(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK5QMenu8actionAtERK6QPoint(rsthis.qclsinst, arg0)};
     let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1068,7 +1051,7 @@ impl<'a> /*trait*/ QMenu_insertSection<QAction> for (&'a QAction, &'a QIcon, &'a
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN5QMenu13insertSectionEP7QActionRK5QIconRK7QString(rsthis.qclsinst, arg0, arg1, arg2)};
+    let mut ret = unsafe {C_ZN5QMenu13insertSectionEP7QActionRK5QIconRK7QString(rsthis.qclsinst, arg0, arg1, arg2)};
     let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1094,7 +1077,7 @@ impl<'a> /*trait*/ QMenu_popup<()> for (&'a QPoint, &'a QAction) {
     // unsafe{_ZN5QMenu5popupERK6QPointP7QAction()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN5QMenu5popupERK6QPointP7QAction(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN5QMenu5popupERK6QPointP7QAction(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -1117,7 +1100,7 @@ impl<'a> /*trait*/ QMenu_setToolTipsVisible<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu18setToolTipsVisibleEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN5QMenu18setToolTipsVisibleEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN5QMenu18setToolTipsVisibleEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1140,7 +1123,7 @@ impl<'a> /*trait*/ QMenu_setTitle<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu8setTitleERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN5QMenu8setTitleERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN5QMenu8setTitleERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1152,7 +1135,7 @@ impl<'a> /*trait*/ QMenu_addMenu<QMenu> for (&'a QIcon, &'a QString) {
     // unsafe{_ZN5QMenu7addMenuERK5QIconRK7QString()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN5QMenu7addMenuERK5QIconRK7QString(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {C_ZN5QMenu7addMenuERK5QIconRK7QString(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QMenu::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1164,7 +1147,7 @@ impl<'a> /*trait*/ QMenu_exec<QAction> for () {
   fn exec(self , rsthis: & QMenu) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu4execEv()};
-    let mut ret = unsafe {_ZN5QMenu4execEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZN5QMenu4execEv(rsthis.qclsinst)};
     let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
     // return 1;

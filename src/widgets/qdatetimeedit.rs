@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtWidgets/qdatetimeedit.h
 // dst-file: /src/widgets/qdatetimeedit.rs
 //
@@ -21,6 +21,7 @@ use self::libc::*;
 // use super::qdatetimeedit::QDateTimeEdit; // 773
 use std::ops::Deref;
 use super::qwidget::QWidget; // 773
+use super::super::core::qobjectdefs::QMetaObject; // 771
 use super::super::core::qdatetime::QTime; // 771
 use super::super::core::qdatetime::QDate; // 771
 use super::qabstractspinbox::QAbstractSpinBox; // 773
@@ -29,7 +30,6 @@ use super::super::core::qcoreevent::QEvent; // 771
 use super::qcalendarwidget::QCalendarWidget; // 773
 use super::super::core::qstring::QString; // 771
 use super::super::core::qsize::QSize; // 771
-use super::super::core::qvariant::QVariant; // 771
 // <= use block end
 
 // ext block begin =>
@@ -41,117 +41,115 @@ use super::super::core::qvariant::QVariant; // 771
 extern {
   fn QTimeEdit_Class_Size() -> c_int;
   // proto:  void QTimeEdit::QTimeEdit(QWidget * parent);
-  fn _ZN9QTimeEditC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QTimeEditC2EP7QWidget(arg0: *mut c_void) -> u64;
   // proto:  const QMetaObject * QTimeEdit::metaObject();
-  fn _ZNK9QTimeEdit10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK9QTimeEdit10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QTimeEdit::QTimeEdit(const QTime & time, QWidget * parent);
-  fn _ZN9QTimeEditC2ERK5QTimeP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN9QTimeEditC2ERK5QTimeP7QWidget(arg0: *mut c_void, arg1: *mut c_void) -> u64;
   // proto:  void QTimeEdit::~QTimeEdit();
-  fn _ZN9QTimeEditD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN9QTimeEditD2Ev(qthis: u64 /* *mut c_void*/);
   fn QDateEdit_Class_Size() -> c_int;
   // proto:  void QDateEdit::QDateEdit(const QDate & date, QWidget * parent);
-  fn _ZN9QDateEditC2ERK5QDateP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN9QDateEditC2ERK5QDateP7QWidget(arg0: *mut c_void, arg1: *mut c_void) -> u64;
   // proto:  const QMetaObject * QDateEdit::metaObject();
-  fn _ZNK9QDateEdit10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK9QDateEdit10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QDateEdit::QDateEdit(QWidget * parent);
-  fn _ZN9QDateEditC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QDateEditC2EP7QWidget(arg0: *mut c_void) -> u64;
   // proto:  void QDateEdit::~QDateEdit();
-  fn _ZN9QDateEditD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN9QDateEditD2Ev(qthis: u64 /* *mut c_void*/);
   fn QDateTimeEdit_Class_Size() -> c_int;
-  // proto:  void QDateTimeEdit::QDateTimeEdit(const QDateTimeEdit & );
-  fn _ZN13QDateTimeEditC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QDate QDateTimeEdit::date();
-  fn _ZNK13QDateTimeEdit4dateEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK13QDateTimeEdit4dateEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QDateTimeEdit::clearMinimumDateTime();
-  fn _ZN13QDateTimeEdit20clearMinimumDateTimeEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN13QDateTimeEdit20clearMinimumDateTimeEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QDateTimeEdit::clear();
-  fn _ZN13QDateTimeEdit5clearEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN13QDateTimeEdit5clearEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QDateTimeEdit::QDateTimeEdit(const QTime & t, QWidget * parent);
-  fn _ZN13QDateTimeEditC2ERK5QTimeP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN13QDateTimeEditC2ERK5QTimeP7QWidget(arg0: *mut c_void, arg1: *mut c_void) -> u64;
   // proto:  void QDateTimeEdit::setDate(const QDate & date);
-  fn _ZN13QDateTimeEdit7setDateERK5QDate(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN13QDateTimeEdit7setDateERK5QDate(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QDateTime QDateTimeEdit::maximumDateTime();
-  fn _ZNK13QDateTimeEdit15maximumDateTimeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK13QDateTimeEdit15maximumDateTimeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QDateTimeEdit::setMinimumDate(const QDate & min);
-  fn _ZN13QDateTimeEdit14setMinimumDateERK5QDate(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN13QDateTimeEdit14setMinimumDateERK5QDate(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QDateTimeEdit::QDateTimeEdit(const QDate & d, QWidget * parent);
-  fn _ZN13QDateTimeEditC2ERK5QDateP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN13QDateTimeEditC2ERK5QDateP7QWidget(arg0: *mut c_void, arg1: *mut c_void) -> u64;
   // proto:  void QDateTimeEdit::setMaximumDate(const QDate & max);
-  fn _ZN13QDateTimeEdit14setMaximumDateERK5QDate(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN13QDateTimeEdit14setMaximumDateERK5QDate(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QTime QDateTimeEdit::maximumTime();
-  fn _ZNK13QDateTimeEdit11maximumTimeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK13QDateTimeEdit11maximumTimeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  const QMetaObject * QDateTimeEdit::metaObject();
-  fn _ZNK13QDateTimeEdit10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK13QDateTimeEdit10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QDateTimeEdit::~QDateTimeEdit();
-  fn _ZN13QDateTimeEditD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN13QDateTimeEditD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QDateTimeEdit::clearMinimumDate();
-  fn _ZN13QDateTimeEdit16clearMinimumDateEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN13QDateTimeEdit16clearMinimumDateEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QDateTimeEdit::setDateRange(const QDate & min, const QDate & max);
-  fn _ZN13QDateTimeEdit12setDateRangeERK5QDateS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN13QDateTimeEdit12setDateRangeERK5QDateS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QDateTimeEdit::setMinimumTime(const QTime & min);
-  fn _ZN13QDateTimeEdit14setMinimumTimeERK5QTime(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN13QDateTimeEdit14setMinimumTimeERK5QTime(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QTime QDateTimeEdit::time();
-  fn _ZNK13QDateTimeEdit4timeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK13QDateTimeEdit4timeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QDateTimeEdit::currentSectionIndex();
-  fn _ZNK13QDateTimeEdit19currentSectionIndexEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK13QDateTimeEdit19currentSectionIndexEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QDateTimeEdit::event(QEvent * event);
-  fn _ZN13QDateTimeEdit5eventEP6QEvent(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
+  fn C_ZN13QDateTimeEdit5eventEP6QEvent(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  void QDateTimeEdit::setDateTime(const QDateTime & dateTime);
-  fn _ZN13QDateTimeEdit11setDateTimeERK9QDateTime(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN13QDateTimeEdit11setDateTimeERK9QDateTime(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QDateTimeEdit::setCalendarWidget(QCalendarWidget * calendarWidget);
-  fn _ZN13QDateTimeEdit17setCalendarWidgetEP15QCalendarWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN13QDateTimeEdit17setCalendarWidgetEP15QCalendarWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QDateTimeEdit::setDateTimeRange(const QDateTime & min, const QDateTime & max);
-  fn _ZN13QDateTimeEdit16setDateTimeRangeERK9QDateTimeS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN13QDateTimeEdit16setDateTimeRangeERK9QDateTimeS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QDateTimeEdit::setTime(const QTime & time);
-  fn _ZN13QDateTimeEdit7setTimeERK5QTime(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN13QDateTimeEdit7setTimeERK5QTime(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QDateTime QDateTimeEdit::dateTime();
-  fn _ZNK13QDateTimeEdit8dateTimeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK13QDateTimeEdit8dateTimeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QDateTimeEdit::setMaximumTime(const QTime & max);
-  fn _ZN13QDateTimeEdit14setMaximumTimeERK5QTime(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN13QDateTimeEdit14setMaximumTimeERK5QTime(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QDateTimeEdit::setMinimumDateTime(const QDateTime & dt);
-  fn _ZN13QDateTimeEdit18setMinimumDateTimeERK9QDateTime(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN13QDateTimeEdit18setMinimumDateTimeERK9QDateTime(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QDateTimeEdit::clearMaximumTime();
-  fn _ZN13QDateTimeEdit16clearMaximumTimeEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN13QDateTimeEdit16clearMaximumTimeEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QDateTimeEdit::calendarPopup();
-  fn _ZNK13QDateTimeEdit13calendarPopupEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK13QDateTimeEdit13calendarPopupEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QDateTimeEdit::setMaximumDateTime(const QDateTime & dt);
-  fn _ZN13QDateTimeEdit18setMaximumDateTimeERK9QDateTime(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN13QDateTimeEdit18setMaximumDateTimeERK9QDateTime(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QDateTimeEdit::clearMaximumDateTime();
-  fn _ZN13QDateTimeEdit20clearMaximumDateTimeEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN13QDateTimeEdit20clearMaximumDateTimeEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QDateTimeEdit::QDateTimeEdit(QWidget * parent);
-  fn _ZN13QDateTimeEditC2EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN13QDateTimeEditC2EP7QWidget(arg0: *mut c_void) -> u64;
   // proto:  QDateTime QDateTimeEdit::minimumDateTime();
-  fn _ZNK13QDateTimeEdit15minimumDateTimeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK13QDateTimeEdit15minimumDateTimeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QCalendarWidget * QDateTimeEdit::calendarWidget();
-  fn _ZNK13QDateTimeEdit14calendarWidgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK13QDateTimeEdit14calendarWidgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QDateTimeEdit::setDisplayFormat(const QString & format);
-  fn _ZN13QDateTimeEdit16setDisplayFormatERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN13QDateTimeEdit16setDisplayFormatERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QDateTimeEdit::clearMaximumDate();
-  fn _ZN13QDateTimeEdit16clearMaximumDateEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN13QDateTimeEdit16clearMaximumDateEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QDateTimeEdit::setCalendarPopup(bool enable);
-  fn _ZN13QDateTimeEdit16setCalendarPopupEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN13QDateTimeEdit16setCalendarPopupEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QDateTimeEdit::stepBy(int steps);
-  fn _ZN13QDateTimeEdit6stepByEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN13QDateTimeEdit6stepByEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QDateTimeEdit::QDateTimeEdit(const QDateTime & dt, QWidget * parent);
-  fn _ZN13QDateTimeEditC2ERK9QDateTimeP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN13QDateTimeEditC2ERK9QDateTimeP7QWidget(arg0: *mut c_void, arg1: *mut c_void) -> u64;
   // proto:  QString QDateTimeEdit::displayFormat();
-  fn _ZNK13QDateTimeEdit13displayFormatEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK13QDateTimeEdit13displayFormatEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QTime QDateTimeEdit::minimumTime();
-  fn _ZNK13QDateTimeEdit11minimumTimeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK13QDateTimeEdit11minimumTimeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QSize QDateTimeEdit::sizeHint();
-  fn _ZNK13QDateTimeEdit8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK13QDateTimeEdit8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QDateTimeEdit::sectionCount();
-  fn _ZNK13QDateTimeEdit12sectionCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK13QDateTimeEdit12sectionCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QDateTimeEdit::setCurrentSectionIndex(int index);
-  fn _ZN13QDateTimeEdit22setCurrentSectionIndexEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN13QDateTimeEdit22setCurrentSectionIndexEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QDateTimeEdit::clearMinimumTime();
-  fn _ZN13QDateTimeEdit16clearMinimumTimeEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN13QDateTimeEdit16clearMinimumTimeEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QDateTimeEdit::setTimeRange(const QTime & min, const QTime & max);
-  fn _ZN13QDateTimeEdit12setTimeRangeERK5QTimeS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN13QDateTimeEdit12setTimeRangeERK5QTimeS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  QDate QDateTimeEdit::minimumDate();
-  fn _ZNK13QDateTimeEdit11minimumDateEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK13QDateTimeEdit11minimumDateEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QDate QDateTimeEdit::maximumDate();
-  fn _ZNK13QDateTimeEdit11maximumDateEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK13QDateTimeEdit11maximumDateEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   fn QTimeEdit_SlotProxy_connect__ZN9QTimeEdit15userTimeChangedERK5QTime(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QDateEdit_SlotProxy_connect__ZN9QDateEdit15userDateChangedERK5QDate(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QDateTimeEdit_SlotProxy_connect__ZN13QDateTimeEdit15dateTimeChangedERK9QDateTime(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
@@ -224,8 +222,7 @@ impl<'a> /*trait*/ QTimeEdit_new for (&'a QWidget) {
     let ctysz: c_int = unsafe{QTimeEdit_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN9QTimeEditC2EP7QWidget(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN9QTimeEditC2EP7QWidget(arg0)};
     let rsthis = QTimeEdit{qbase: QDateTimeEdit::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -245,11 +242,13 @@ pub trait QTimeEdit_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QTimeEdit::metaObject();
-impl<'a> /*trait*/ QTimeEdit_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QTimeEdit) -> () {
+impl<'a> /*trait*/ QTimeEdit_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QTimeEdit) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTimeEdit10metaObjectEv()};
-     unsafe {_ZNK9QTimeEdit10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QTimeEdit10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -263,8 +262,7 @@ impl<'a> /*trait*/ QTimeEdit_new for (&'a QTime, &'a QWidget) {
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    unsafe {_ZN9QTimeEditC2ERK5QTimeP7QWidget(qthis_ph, arg0, arg1)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN9QTimeEditC2ERK5QTimeP7QWidget(arg0, arg1)};
     let rsthis = QTimeEdit{qbase: QDateTimeEdit::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -288,7 +286,7 @@ impl<'a> /*trait*/ QTimeEdit_free<()> for () {
   fn free(self , rsthis: & QTimeEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeEditD2Ev()};
-     unsafe {_ZN9QTimeEditD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN9QTimeEditD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -332,8 +330,7 @@ impl<'a> /*trait*/ QDateEdit_new for (&'a QDate, &'a QWidget) {
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    unsafe {_ZN9QDateEditC2ERK5QDateP7QWidget(qthis_ph, arg0, arg1)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN9QDateEditC2ERK5QDateP7QWidget(arg0, arg1)};
     let rsthis = QDateEdit{qbase: QDateTimeEdit::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -353,11 +350,13 @@ pub trait QDateEdit_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QDateEdit::metaObject();
-impl<'a> /*trait*/ QDateEdit_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QDateEdit) -> () {
+impl<'a> /*trait*/ QDateEdit_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QDateEdit) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDateEdit10metaObjectEv()};
-     unsafe {_ZNK9QDateEdit10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QDateEdit10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -370,8 +369,7 @@ impl<'a> /*trait*/ QDateEdit_new for (&'a QWidget) {
     let ctysz: c_int = unsafe{QDateEdit_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN9QDateEditC2EP7QWidget(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN9QDateEditC2EP7QWidget(arg0)};
     let rsthis = QDateEdit{qbase: QDateTimeEdit::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -395,7 +393,7 @@ impl<'a> /*trait*/ QDateEdit_free<()> for () {
   fn free(self , rsthis: & QDateEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QDateEditD2Ev()};
-     unsafe {_ZN9QDateEditD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN9QDateEditD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -417,35 +415,6 @@ impl AsRef<QAbstractSpinBox> for QDateTimeEdit {
     return & self.qbase;
   }
 }
-  // proto:  void QDateTimeEdit::QDateTimeEdit(const QDateTimeEdit & );
-impl /*struct*/ QDateTimeEdit {
-  pub fn new<T: QDateTimeEdit_new>(value: T) -> QDateTimeEdit {
-    let rsthis = value.new();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QDateTimeEdit_new {
-  fn new(self) -> QDateTimeEdit;
-}
-
-  // proto:  void QDateTimeEdit::QDateTimeEdit(const QDateTimeEdit & );
-impl<'a> /*trait*/ QDateTimeEdit_new for (&'a QDateTimeEdit) {
-  fn new(self) -> QDateTimeEdit {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QDateTimeEditC2ERKS_()};
-    let ctysz: c_int = unsafe{QDateTimeEdit_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN13QDateTimeEditC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QDateTimeEdit{qbase: QAbstractSpinBox::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
   // proto:  QDate QDateTimeEdit::date();
 impl /*struct*/ QDateTimeEdit {
   pub fn date<RetType, T: QDateTimeEdit_date<RetType>>(& self,  overload_args: T) -> RetType {
@@ -463,7 +432,7 @@ impl<'a> /*trait*/ QDateTimeEdit_date<QDate> for () {
   fn date(self , rsthis: & QDateTimeEdit) -> QDate {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QDateTimeEdit4dateEv()};
-    let mut ret = unsafe {_ZNK13QDateTimeEdit4dateEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QDateTimeEdit4dateEv(rsthis.qclsinst)};
     let mut ret1 = QDate::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -487,7 +456,7 @@ impl<'a> /*trait*/ QDateTimeEdit_clearMinimumDateTime<()> for () {
   fn clearMinimumDateTime(self , rsthis: & QDateTimeEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QDateTimeEdit20clearMinimumDateTimeEv()};
-     unsafe {_ZN13QDateTimeEdit20clearMinimumDateTimeEv(rsthis.qclsinst)};
+     unsafe {C_ZN13QDateTimeEdit20clearMinimumDateTimeEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -509,9 +478,22 @@ impl<'a> /*trait*/ QDateTimeEdit_clear<()> for () {
   fn clear(self , rsthis: & QDateTimeEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QDateTimeEdit5clearEv()};
-     unsafe {_ZN13QDateTimeEdit5clearEv(rsthis.qclsinst)};
+     unsafe {C_ZN13QDateTimeEdit5clearEv(rsthis.qclsinst)};
     // return 1;
   }
+}
+
+  // proto:  void QDateTimeEdit::QDateTimeEdit(const QTime & t, QWidget * parent);
+impl /*struct*/ QDateTimeEdit {
+  pub fn new<T: QDateTimeEdit_new>(value: T) -> QDateTimeEdit {
+    let rsthis = value.new();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QDateTimeEdit_new {
+  fn new(self) -> QDateTimeEdit;
 }
 
   // proto:  void QDateTimeEdit::QDateTimeEdit(const QTime & t, QWidget * parent);
@@ -523,8 +505,7 @@ impl<'a> /*trait*/ QDateTimeEdit_new for (&'a QTime, &'a QWidget) {
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    unsafe {_ZN13QDateTimeEditC2ERK5QTimeP7QWidget(qthis_ph, arg0, arg1)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN13QDateTimeEditC2ERK5QTimeP7QWidget(arg0, arg1)};
     let rsthis = QDateTimeEdit{qbase: QAbstractSpinBox::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -549,7 +530,7 @@ impl<'a> /*trait*/ QDateTimeEdit_setDate<()> for (&'a QDate) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QDateTimeEdit7setDateERK5QDate()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN13QDateTimeEdit7setDateERK5QDate(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN13QDateTimeEdit7setDateERK5QDate(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -571,7 +552,7 @@ impl<'a> /*trait*/ QDateTimeEdit_maximumDateTime<QDateTime> for () {
   fn maximumDateTime(self , rsthis: & QDateTimeEdit) -> QDateTime {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QDateTimeEdit15maximumDateTimeEv()};
-    let mut ret = unsafe {_ZNK13QDateTimeEdit15maximumDateTimeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QDateTimeEdit15maximumDateTimeEv(rsthis.qclsinst)};
     let mut ret1 = QDateTime::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -596,7 +577,7 @@ impl<'a> /*trait*/ QDateTimeEdit_setMinimumDate<()> for (&'a QDate) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QDateTimeEdit14setMinimumDateERK5QDate()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN13QDateTimeEdit14setMinimumDateERK5QDate(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN13QDateTimeEdit14setMinimumDateERK5QDate(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -610,8 +591,7 @@ impl<'a> /*trait*/ QDateTimeEdit_new for (&'a QDate, &'a QWidget) {
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    unsafe {_ZN13QDateTimeEditC2ERK5QDateP7QWidget(qthis_ph, arg0, arg1)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN13QDateTimeEditC2ERK5QDateP7QWidget(arg0, arg1)};
     let rsthis = QDateTimeEdit{qbase: QAbstractSpinBox::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -636,7 +616,7 @@ impl<'a> /*trait*/ QDateTimeEdit_setMaximumDate<()> for (&'a QDate) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QDateTimeEdit14setMaximumDateERK5QDate()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN13QDateTimeEdit14setMaximumDateERK5QDate(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN13QDateTimeEdit14setMaximumDateERK5QDate(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -658,7 +638,7 @@ impl<'a> /*trait*/ QDateTimeEdit_maximumTime<QTime> for () {
   fn maximumTime(self , rsthis: & QDateTimeEdit) -> QTime {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QDateTimeEdit11maximumTimeEv()};
-    let mut ret = unsafe {_ZNK13QDateTimeEdit11maximumTimeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QDateTimeEdit11maximumTimeEv(rsthis.qclsinst)};
     let mut ret1 = QTime::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -678,11 +658,13 @@ pub trait QDateTimeEdit_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QDateTimeEdit::metaObject();
-impl<'a> /*trait*/ QDateTimeEdit_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QDateTimeEdit) -> () {
+impl<'a> /*trait*/ QDateTimeEdit_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QDateTimeEdit) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QDateTimeEdit10metaObjectEv()};
-     unsafe {_ZNK13QDateTimeEdit10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QDateTimeEdit10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -704,7 +686,7 @@ impl<'a> /*trait*/ QDateTimeEdit_free<()> for () {
   fn free(self , rsthis: & QDateTimeEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QDateTimeEditD2Ev()};
-     unsafe {_ZN13QDateTimeEditD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN13QDateTimeEditD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -726,7 +708,7 @@ impl<'a> /*trait*/ QDateTimeEdit_clearMinimumDate<()> for () {
   fn clearMinimumDate(self , rsthis: & QDateTimeEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QDateTimeEdit16clearMinimumDateEv()};
-     unsafe {_ZN13QDateTimeEdit16clearMinimumDateEv(rsthis.qclsinst)};
+     unsafe {C_ZN13QDateTimeEdit16clearMinimumDateEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -750,7 +732,7 @@ impl<'a> /*trait*/ QDateTimeEdit_setDateRange<()> for (&'a QDate, &'a QDate) {
     // unsafe{_ZN13QDateTimeEdit12setDateRangeERK5QDateS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN13QDateTimeEdit12setDateRangeERK5QDateS2_(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN13QDateTimeEdit12setDateRangeERK5QDateS2_(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -773,7 +755,7 @@ impl<'a> /*trait*/ QDateTimeEdit_setMinimumTime<()> for (&'a QTime) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QDateTimeEdit14setMinimumTimeERK5QTime()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN13QDateTimeEdit14setMinimumTimeERK5QTime(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN13QDateTimeEdit14setMinimumTimeERK5QTime(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -795,7 +777,7 @@ impl<'a> /*trait*/ QDateTimeEdit_time<QTime> for () {
   fn time(self , rsthis: & QDateTimeEdit) -> QTime {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QDateTimeEdit4timeEv()};
-    let mut ret = unsafe {_ZNK13QDateTimeEdit4timeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QDateTimeEdit4timeEv(rsthis.qclsinst)};
     let mut ret1 = QTime::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -819,7 +801,7 @@ impl<'a> /*trait*/ QDateTimeEdit_currentSectionIndex<i32> for () {
   fn currentSectionIndex(self , rsthis: & QDateTimeEdit) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QDateTimeEdit19currentSectionIndexEv()};
-    let mut ret = unsafe {_ZNK13QDateTimeEdit19currentSectionIndexEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QDateTimeEdit19currentSectionIndexEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -843,7 +825,7 @@ impl<'a> /*trait*/ QDateTimeEdit_event<i8> for (&'a QEvent) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QDateTimeEdit5eventEP6QEvent()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN13QDateTimeEdit5eventEP6QEvent(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN13QDateTimeEdit5eventEP6QEvent(rsthis.qclsinst, arg0)};
     return ret as i8;
     // return 1;
   }
@@ -867,7 +849,7 @@ impl<'a> /*trait*/ QDateTimeEdit_setDateTime<()> for (&'a QDateTime) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QDateTimeEdit11setDateTimeERK9QDateTime()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN13QDateTimeEdit11setDateTimeERK9QDateTime(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN13QDateTimeEdit11setDateTimeERK9QDateTime(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -890,7 +872,7 @@ impl<'a> /*trait*/ QDateTimeEdit_setCalendarWidget<()> for (&'a QCalendarWidget)
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QDateTimeEdit17setCalendarWidgetEP15QCalendarWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN13QDateTimeEdit17setCalendarWidgetEP15QCalendarWidget(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN13QDateTimeEdit17setCalendarWidgetEP15QCalendarWidget(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -914,7 +896,7 @@ impl<'a> /*trait*/ QDateTimeEdit_setDateTimeRange<()> for (&'a QDateTime, &'a QD
     // unsafe{_ZN13QDateTimeEdit16setDateTimeRangeERK9QDateTimeS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN13QDateTimeEdit16setDateTimeRangeERK9QDateTimeS2_(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN13QDateTimeEdit16setDateTimeRangeERK9QDateTimeS2_(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -937,7 +919,7 @@ impl<'a> /*trait*/ QDateTimeEdit_setTime<()> for (&'a QTime) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QDateTimeEdit7setTimeERK5QTime()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN13QDateTimeEdit7setTimeERK5QTime(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN13QDateTimeEdit7setTimeERK5QTime(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -959,7 +941,7 @@ impl<'a> /*trait*/ QDateTimeEdit_dateTime<QDateTime> for () {
   fn dateTime(self , rsthis: & QDateTimeEdit) -> QDateTime {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QDateTimeEdit8dateTimeEv()};
-    let mut ret = unsafe {_ZNK13QDateTimeEdit8dateTimeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QDateTimeEdit8dateTimeEv(rsthis.qclsinst)};
     let mut ret1 = QDateTime::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -984,7 +966,7 @@ impl<'a> /*trait*/ QDateTimeEdit_setMaximumTime<()> for (&'a QTime) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QDateTimeEdit14setMaximumTimeERK5QTime()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN13QDateTimeEdit14setMaximumTimeERK5QTime(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN13QDateTimeEdit14setMaximumTimeERK5QTime(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1007,7 +989,7 @@ impl<'a> /*trait*/ QDateTimeEdit_setMinimumDateTime<()> for (&'a QDateTime) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QDateTimeEdit18setMinimumDateTimeERK9QDateTime()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN13QDateTimeEdit18setMinimumDateTimeERK9QDateTime(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN13QDateTimeEdit18setMinimumDateTimeERK9QDateTime(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1029,7 +1011,7 @@ impl<'a> /*trait*/ QDateTimeEdit_clearMaximumTime<()> for () {
   fn clearMaximumTime(self , rsthis: & QDateTimeEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QDateTimeEdit16clearMaximumTimeEv()};
-     unsafe {_ZN13QDateTimeEdit16clearMaximumTimeEv(rsthis.qclsinst)};
+     unsafe {C_ZN13QDateTimeEdit16clearMaximumTimeEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1051,7 +1033,7 @@ impl<'a> /*trait*/ QDateTimeEdit_calendarPopup<i8> for () {
   fn calendarPopup(self , rsthis: & QDateTimeEdit) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QDateTimeEdit13calendarPopupEv()};
-    let mut ret = unsafe {_ZNK13QDateTimeEdit13calendarPopupEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QDateTimeEdit13calendarPopupEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -1075,7 +1057,7 @@ impl<'a> /*trait*/ QDateTimeEdit_setMaximumDateTime<()> for (&'a QDateTime) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QDateTimeEdit18setMaximumDateTimeERK9QDateTime()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN13QDateTimeEdit18setMaximumDateTimeERK9QDateTime(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN13QDateTimeEdit18setMaximumDateTimeERK9QDateTime(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1097,7 +1079,7 @@ impl<'a> /*trait*/ QDateTimeEdit_clearMaximumDateTime<()> for () {
   fn clearMaximumDateTime(self , rsthis: & QDateTimeEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QDateTimeEdit20clearMaximumDateTimeEv()};
-     unsafe {_ZN13QDateTimeEdit20clearMaximumDateTimeEv(rsthis.qclsinst)};
+     unsafe {C_ZN13QDateTimeEdit20clearMaximumDateTimeEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1110,8 +1092,7 @@ impl<'a> /*trait*/ QDateTimeEdit_new for (&'a QWidget) {
     let ctysz: c_int = unsafe{QDateTimeEdit_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN13QDateTimeEditC2EP7QWidget(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN13QDateTimeEditC2EP7QWidget(arg0)};
     let rsthis = QDateTimeEdit{qbase: QAbstractSpinBox::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1135,7 +1116,7 @@ impl<'a> /*trait*/ QDateTimeEdit_minimumDateTime<QDateTime> for () {
   fn minimumDateTime(self , rsthis: & QDateTimeEdit) -> QDateTime {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QDateTimeEdit15minimumDateTimeEv()};
-    let mut ret = unsafe {_ZNK13QDateTimeEdit15minimumDateTimeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QDateTimeEdit15minimumDateTimeEv(rsthis.qclsinst)};
     let mut ret1 = QDateTime::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1159,7 +1140,7 @@ impl<'a> /*trait*/ QDateTimeEdit_calendarWidget<QCalendarWidget> for () {
   fn calendarWidget(self , rsthis: & QDateTimeEdit) -> QCalendarWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QDateTimeEdit14calendarWidgetEv()};
-    let mut ret = unsafe {_ZNK13QDateTimeEdit14calendarWidgetEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QDateTimeEdit14calendarWidgetEv(rsthis.qclsinst)};
     let mut ret1 = QCalendarWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1184,7 +1165,7 @@ impl<'a> /*trait*/ QDateTimeEdit_setDisplayFormat<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QDateTimeEdit16setDisplayFormatERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN13QDateTimeEdit16setDisplayFormatERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN13QDateTimeEdit16setDisplayFormatERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1206,7 +1187,7 @@ impl<'a> /*trait*/ QDateTimeEdit_clearMaximumDate<()> for () {
   fn clearMaximumDate(self , rsthis: & QDateTimeEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QDateTimeEdit16clearMaximumDateEv()};
-     unsafe {_ZN13QDateTimeEdit16clearMaximumDateEv(rsthis.qclsinst)};
+     unsafe {C_ZN13QDateTimeEdit16clearMaximumDateEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1229,7 +1210,7 @@ impl<'a> /*trait*/ QDateTimeEdit_setCalendarPopup<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QDateTimeEdit16setCalendarPopupEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN13QDateTimeEdit16setCalendarPopupEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN13QDateTimeEdit16setCalendarPopupEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1252,7 +1233,7 @@ impl<'a> /*trait*/ QDateTimeEdit_stepBy<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QDateTimeEdit6stepByEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN13QDateTimeEdit6stepByEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN13QDateTimeEdit6stepByEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1266,8 +1247,7 @@ impl<'a> /*trait*/ QDateTimeEdit_new for (&'a QDateTime, &'a QWidget) {
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    unsafe {_ZN13QDateTimeEditC2ERK9QDateTimeP7QWidget(qthis_ph, arg0, arg1)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN13QDateTimeEditC2ERK9QDateTimeP7QWidget(arg0, arg1)};
     let rsthis = QDateTimeEdit{qbase: QAbstractSpinBox::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1291,7 +1271,7 @@ impl<'a> /*trait*/ QDateTimeEdit_displayFormat<QString> for () {
   fn displayFormat(self , rsthis: & QDateTimeEdit) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QDateTimeEdit13displayFormatEv()};
-    let mut ret = unsafe {_ZNK13QDateTimeEdit13displayFormatEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QDateTimeEdit13displayFormatEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1315,7 +1295,7 @@ impl<'a> /*trait*/ QDateTimeEdit_minimumTime<QTime> for () {
   fn minimumTime(self , rsthis: & QDateTimeEdit) -> QTime {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QDateTimeEdit11minimumTimeEv()};
-    let mut ret = unsafe {_ZNK13QDateTimeEdit11minimumTimeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QDateTimeEdit11minimumTimeEv(rsthis.qclsinst)};
     let mut ret1 = QTime::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1339,7 +1319,7 @@ impl<'a> /*trait*/ QDateTimeEdit_sizeHint<QSize> for () {
   fn sizeHint(self , rsthis: & QDateTimeEdit) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QDateTimeEdit8sizeHintEv()};
-    let mut ret = unsafe {_ZNK13QDateTimeEdit8sizeHintEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QDateTimeEdit8sizeHintEv(rsthis.qclsinst)};
     let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1363,7 +1343,7 @@ impl<'a> /*trait*/ QDateTimeEdit_sectionCount<i32> for () {
   fn sectionCount(self , rsthis: & QDateTimeEdit) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QDateTimeEdit12sectionCountEv()};
-    let mut ret = unsafe {_ZNK13QDateTimeEdit12sectionCountEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QDateTimeEdit12sectionCountEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -1387,7 +1367,7 @@ impl<'a> /*trait*/ QDateTimeEdit_setCurrentSectionIndex<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QDateTimeEdit22setCurrentSectionIndexEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN13QDateTimeEdit22setCurrentSectionIndexEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN13QDateTimeEdit22setCurrentSectionIndexEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1409,7 +1389,7 @@ impl<'a> /*trait*/ QDateTimeEdit_clearMinimumTime<()> for () {
   fn clearMinimumTime(self , rsthis: & QDateTimeEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QDateTimeEdit16clearMinimumTimeEv()};
-     unsafe {_ZN13QDateTimeEdit16clearMinimumTimeEv(rsthis.qclsinst)};
+     unsafe {C_ZN13QDateTimeEdit16clearMinimumTimeEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1433,7 +1413,7 @@ impl<'a> /*trait*/ QDateTimeEdit_setTimeRange<()> for (&'a QTime, &'a QTime) {
     // unsafe{_ZN13QDateTimeEdit12setTimeRangeERK5QTimeS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN13QDateTimeEdit12setTimeRangeERK5QTimeS2_(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN13QDateTimeEdit12setTimeRangeERK5QTimeS2_(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -1455,7 +1435,7 @@ impl<'a> /*trait*/ QDateTimeEdit_minimumDate<QDate> for () {
   fn minimumDate(self , rsthis: & QDateTimeEdit) -> QDate {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QDateTimeEdit11minimumDateEv()};
-    let mut ret = unsafe {_ZNK13QDateTimeEdit11minimumDateEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QDateTimeEdit11minimumDateEv(rsthis.qclsinst)};
     let mut ret1 = QDate::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1479,7 +1459,7 @@ impl<'a> /*trait*/ QDateTimeEdit_maximumDate<QDate> for () {
   fn maximumDate(self , rsthis: & QDateTimeEdit) -> QDate {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QDateTimeEdit11maximumDateEv()};
-    let mut ret = unsafe {_ZNK13QDateTimeEdit11maximumDateEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QDateTimeEdit11maximumDateEv(rsthis.qclsinst)};
     let mut ret1 = QDate::inheritFrom(ret as u64);
     return ret1;
     // return 1;
