@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtCore/qabstractstate.h
 // dst-file: /src/core/qabstractstate.rs
 //
@@ -20,6 +20,7 @@ use self::libc::*;
 // use block begin =>
 use super::qobject::QObject; // 773
 use std::ops::Deref;
+use super::qobjectdefs::QMetaObject; // 773
 use super::qstate::QState; // 773
 use super::qstatemachine::QStateMachine; // 773
 // <= use block end
@@ -33,19 +34,15 @@ use super::qstatemachine::QStateMachine; // 773
 extern {
   fn QAbstractState_Class_Size() -> c_int;
   // proto:  void QAbstractState::~QAbstractState();
-  fn _ZN14QAbstractStateD2Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  void QAbstractState::QAbstractState(const QAbstractState & );
-  fn _ZN14QAbstractStateC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QAbstractState::QAbstractState(QState * parent);
-  fn _ZN14QAbstractStateC2EP6QState(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN14QAbstractStateD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  const QMetaObject * QAbstractState::metaObject();
-  fn _ZNK14QAbstractState10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK14QAbstractState10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QState * QAbstractState::parentState();
-  fn _ZNK14QAbstractState11parentStateEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK14QAbstractState11parentStateEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QStateMachine * QAbstractState::machine();
-  fn _ZNK14QAbstractState7machineEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK14QAbstractState7machineEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QAbstractState::active();
-  fn _ZNK14QAbstractState6activeEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK14QAbstractState6activeEv(qthis: u64 /* *mut c_void*/) -> c_char;
   fn QAbstractState_SlotProxy_connect__ZN14QAbstractState13activeChangedEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
@@ -94,52 +91,7 @@ impl<'a> /*trait*/ QAbstractState_free<()> for () {
   fn free(self , rsthis: & QAbstractState) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QAbstractStateD2Ev()};
-     unsafe {_ZN14QAbstractStateD2Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QAbstractState::QAbstractState(const QAbstractState & );
-impl /*struct*/ QAbstractState {
-  pub fn new<T: QAbstractState_new>(value: T) -> QAbstractState {
-    let rsthis = value.new();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QAbstractState_new {
-  fn new(self) -> QAbstractState;
-}
-
-  // proto:  void QAbstractState::QAbstractState(const QAbstractState & );
-impl<'a> /*trait*/ QAbstractState_new for (&'a QAbstractState) {
-  fn new(self) -> QAbstractState {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QAbstractStateC2ERKS_()};
-    let ctysz: c_int = unsafe{QAbstractState_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN14QAbstractStateC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QAbstractState{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  void QAbstractState::QAbstractState(QState * parent);
-impl<'a> /*trait*/ QAbstractState_new for (&'a QState) {
-  fn new(self) -> QAbstractState {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QAbstractStateC2EP6QState()};
-    let ctysz: c_int = unsafe{QAbstractState_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN14QAbstractStateC2EP6QState(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QAbstractState{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
+     unsafe {C_ZN14QAbstractStateD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -157,11 +109,13 @@ pub trait QAbstractState_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QAbstractState::metaObject();
-impl<'a> /*trait*/ QAbstractState_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QAbstractState) -> () {
+impl<'a> /*trait*/ QAbstractState_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QAbstractState) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QAbstractState10metaObjectEv()};
-     unsafe {_ZNK14QAbstractState10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QAbstractState10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -183,7 +137,7 @@ impl<'a> /*trait*/ QAbstractState_parentState<QState> for () {
   fn parentState(self , rsthis: & QAbstractState) -> QState {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QAbstractState11parentStateEv()};
-    let mut ret = unsafe {_ZNK14QAbstractState11parentStateEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QAbstractState11parentStateEv(rsthis.qclsinst)};
     let mut ret1 = QState::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -207,7 +161,7 @@ impl<'a> /*trait*/ QAbstractState_machine<QStateMachine> for () {
   fn machine(self , rsthis: & QAbstractState) -> QStateMachine {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QAbstractState7machineEv()};
-    let mut ret = unsafe {_ZNK14QAbstractState7machineEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QAbstractState7machineEv(rsthis.qclsinst)};
     let mut ret1 = QStateMachine::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -231,7 +185,7 @@ impl<'a> /*trait*/ QAbstractState_active<i8> for () {
   fn active(self , rsthis: & QAbstractState) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QAbstractState6activeEv()};
-    let mut ret = unsafe {_ZNK14QAbstractState6activeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QAbstractState6activeEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }

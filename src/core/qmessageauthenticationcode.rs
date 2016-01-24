@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtCore/qmessageauthenticationcode.h
 // dst-file: /src/core/qmessageauthenticationcode.rs
 //
@@ -32,21 +32,19 @@ use super::qiodevice::QIODevice; // 773
 extern {
   fn QMessageAuthenticationCode_Class_Size() -> c_int;
   // proto:  QByteArray QMessageAuthenticationCode::result();
-  fn _ZNK26QMessageAuthenticationCode6resultEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK26QMessageAuthenticationCode6resultEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QMessageAuthenticationCode::addData(const QByteArray & data);
-  fn _ZN26QMessageAuthenticationCode7addDataERK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QMessageAuthenticationCode::QMessageAuthenticationCode(const QMessageAuthenticationCode & );
-  fn _ZN26QMessageAuthenticationCodeC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN26QMessageAuthenticationCode7addDataERK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMessageAuthenticationCode::addData(const char * data, int length);
-  fn _ZN26QMessageAuthenticationCode7addDataEPKci(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int);
+  fn C_ZN26QMessageAuthenticationCode7addDataEPKci(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int);
   // proto:  void QMessageAuthenticationCode::~QMessageAuthenticationCode();
-  fn _ZN26QMessageAuthenticationCodeD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN26QMessageAuthenticationCodeD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QMessageAuthenticationCode::reset();
-  fn _ZN26QMessageAuthenticationCode5resetEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN26QMessageAuthenticationCode5resetEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QMessageAuthenticationCode::addData(QIODevice * device);
-  fn _ZN26QMessageAuthenticationCode7addDataEP9QIODevice(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
+  fn C_ZN26QMessageAuthenticationCode7addDataEP9QIODevice(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  void QMessageAuthenticationCode::setKey(const QByteArray & key);
-  fn _ZN26QMessageAuthenticationCode6setKeyERK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN26QMessageAuthenticationCode6setKeyERK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -79,7 +77,7 @@ impl<'a> /*trait*/ QMessageAuthenticationCode_result<QByteArray> for () {
   fn result(self , rsthis: & QMessageAuthenticationCode) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK26QMessageAuthenticationCode6resultEv()};
-    let mut ret = unsafe {_ZNK26QMessageAuthenticationCode6resultEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK26QMessageAuthenticationCode6resultEv(rsthis.qclsinst)};
     let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -104,36 +102,7 @@ impl<'a> /*trait*/ QMessageAuthenticationCode_addData<()> for (&'a QByteArray) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QMessageAuthenticationCode7addDataERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN26QMessageAuthenticationCode7addDataERK10QByteArray(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QMessageAuthenticationCode::QMessageAuthenticationCode(const QMessageAuthenticationCode & );
-impl /*struct*/ QMessageAuthenticationCode {
-  pub fn new<T: QMessageAuthenticationCode_new>(value: T) -> QMessageAuthenticationCode {
-    let rsthis = value.new();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QMessageAuthenticationCode_new {
-  fn new(self) -> QMessageAuthenticationCode;
-}
-
-  // proto:  void QMessageAuthenticationCode::QMessageAuthenticationCode(const QMessageAuthenticationCode & );
-impl<'a> /*trait*/ QMessageAuthenticationCode_new for (&'a QMessageAuthenticationCode) {
-  fn new(self) -> QMessageAuthenticationCode {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN26QMessageAuthenticationCodeC2ERKS_()};
-    let ctysz: c_int = unsafe{QMessageAuthenticationCode_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN26QMessageAuthenticationCodeC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QMessageAuthenticationCode{qclsinst: qthis, ..Default::default()};
-    return rsthis;
+     unsafe {C_ZN26QMessageAuthenticationCode7addDataERK10QByteArray(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -145,7 +114,7 @@ impl<'a> /*trait*/ QMessageAuthenticationCode_addData<()> for (&'a  String, i32)
     // unsafe{_ZN26QMessageAuthenticationCode7addDataEPKci()};
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as c_int;
-     unsafe {_ZN26QMessageAuthenticationCode7addDataEPKci(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN26QMessageAuthenticationCode7addDataEPKci(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -167,7 +136,7 @@ impl<'a> /*trait*/ QMessageAuthenticationCode_free<()> for () {
   fn free(self , rsthis: & QMessageAuthenticationCode) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QMessageAuthenticationCodeD2Ev()};
-     unsafe {_ZN26QMessageAuthenticationCodeD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN26QMessageAuthenticationCodeD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -189,7 +158,7 @@ impl<'a> /*trait*/ QMessageAuthenticationCode_reset<()> for () {
   fn reset(self , rsthis: & QMessageAuthenticationCode) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QMessageAuthenticationCode5resetEv()};
-     unsafe {_ZN26QMessageAuthenticationCode5resetEv(rsthis.qclsinst)};
+     unsafe {C_ZN26QMessageAuthenticationCode5resetEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -200,7 +169,7 @@ impl<'a> /*trait*/ QMessageAuthenticationCode_addData<i8> for (&'a QIODevice) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QMessageAuthenticationCode7addDataEP9QIODevice()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN26QMessageAuthenticationCode7addDataEP9QIODevice(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN26QMessageAuthenticationCode7addDataEP9QIODevice(rsthis.qclsinst, arg0)};
     return ret as i8;
     // return 1;
   }
@@ -224,7 +193,7 @@ impl<'a> /*trait*/ QMessageAuthenticationCode_setKey<()> for (&'a QByteArray) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QMessageAuthenticationCode6setKeyERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN26QMessageAuthenticationCode6setKeyERK10QByteArray(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN26QMessageAuthenticationCode6setKeyERK10QByteArray(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

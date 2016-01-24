@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtCore/qfactoryinterface.h
 // dst-file: /src/core/qfactoryinterface.rs
 //
@@ -30,9 +30,9 @@ use std::ops::Deref;
 extern {
   fn QFactoryInterface_Class_Size() -> c_int;
   // proto:  void QFactoryInterface::~QFactoryInterface();
-  fn _ZN17QFactoryInterfaceD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN17QFactoryInterfaceD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QStringList QFactoryInterface::keys();
-  fn _ZNK17QFactoryInterface4keysEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK17QFactoryInterface4keysEv(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
@@ -65,7 +65,7 @@ impl<'a> /*trait*/ QFactoryInterface_free<()> for () {
   fn free(self , rsthis: & QFactoryInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QFactoryInterfaceD2Ev()};
-     unsafe {_ZN17QFactoryInterfaceD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN17QFactoryInterfaceD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -87,7 +87,7 @@ impl<'a> /*trait*/ QFactoryInterface_keys<()> for () {
   fn keys(self , rsthis: & QFactoryInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QFactoryInterface4keysEv()};
-     unsafe {_ZNK17QFactoryInterface4keysEv(rsthis.qclsinst)};
+     unsafe {C_ZNK17QFactoryInterface4keysEv(rsthis.qclsinst)};
     // return 1;
   }
 }

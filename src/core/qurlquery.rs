@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtCore/qurlquery.h
 // dst-file: /src/core/qurlquery.rs
 //
@@ -33,43 +33,43 @@ use super::qurl::QUrl; // 773
 extern {
   fn QUrlQuery_Class_Size() -> c_int;
   // proto:  void QUrlQuery::QUrlQuery(const QString & queryString);
-  fn _ZN9QUrlQueryC2ERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QUrlQueryC2ERK7QString(arg0: *mut c_void) -> u64;
   // proto:  void QUrlQuery::clear();
-  fn _ZN9QUrlQuery5clearEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN9QUrlQuery5clearEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QUrlQuery::setQuery(const QString & queryString);
-  fn _ZN9QUrlQuery8setQueryERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QUrlQuery8setQueryERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QChar QUrlQuery::queryValueDelimiter();
-  fn _ZNK9QUrlQuery19queryValueDelimiterEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK9QUrlQuery19queryValueDelimiterEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QChar QUrlQuery::queryPairDelimiter();
-  fn _ZNK9QUrlQuery18queryPairDelimiterEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK9QUrlQuery18queryPairDelimiterEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto: static QChar QUrlQuery::defaultQueryValueDelimiter();
-  fn _ZN9QUrlQuery26defaultQueryValueDelimiterEv() -> *mut c_void;
+  fn C_ZN9QUrlQuery26defaultQueryValueDelimiterEv() -> *mut c_void;
   // proto:  void QUrlQuery::swap(QUrlQuery & other);
-  fn _ZN9QUrlQuery4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QUrlQuery4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QUrlQuery::isDetached();
-  fn _ZNK9QUrlQuery10isDetachedEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK9QUrlQuery10isDetachedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QUrlQuery::QUrlQuery();
-  fn _ZN9QUrlQueryC2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN9QUrlQueryC2Ev() -> u64;
   // proto:  void QUrlQuery::setQueryDelimiters(QChar valueDelimiter, QChar pairDelimiter);
-  fn _ZN9QUrlQuery18setQueryDelimitersE5QCharS0_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN9QUrlQuery18setQueryDelimitersE5QCharS0_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QUrlQuery::~QUrlQuery();
-  fn _ZN9QUrlQueryD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN9QUrlQueryD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QUrlQuery::removeAllQueryItems(const QString & key);
-  fn _ZN9QUrlQuery19removeAllQueryItemsERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QUrlQuery19removeAllQueryItemsERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QUrlQuery::isEmpty();
-  fn _ZNK9QUrlQuery7isEmptyEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK9QUrlQuery7isEmptyEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QUrlQuery::removeQueryItem(const QString & key);
-  fn _ZN9QUrlQuery15removeQueryItemERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QUrlQuery15removeQueryItemERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static QChar QUrlQuery::defaultQueryPairDelimiter();
-  fn _ZN9QUrlQuery25defaultQueryPairDelimiterEv() -> *mut c_void;
+  fn C_ZN9QUrlQuery25defaultQueryPairDelimiterEv() -> *mut c_void;
   // proto:  void QUrlQuery::QUrlQuery(const QUrl & url);
-  fn _ZN9QUrlQueryC2ERK4QUrl(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QUrlQueryC2ERK4QUrl(arg0: *mut c_void) -> u64;
   // proto:  void QUrlQuery::addQueryItem(const QString & key, const QString & value);
-  fn _ZN9QUrlQuery12addQueryItemERK7QStringS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN9QUrlQuery12addQueryItemERK7QStringS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QUrlQuery::QUrlQuery(const QUrlQuery & other);
-  fn _ZN9QUrlQueryC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QUrlQueryC2ERKS_(arg0: *mut c_void) -> u64;
   // proto:  bool QUrlQuery::hasQueryItem(const QString & key);
-  fn _ZNK9QUrlQuery12hasQueryItemERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
+  fn C_ZNK9QUrlQuery12hasQueryItemERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
 } // <= ext block end
 
 // body block begin =>
@@ -106,8 +106,7 @@ impl<'a> /*trait*/ QUrlQuery_new for (&'a QString) {
     let ctysz: c_int = unsafe{QUrlQuery_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN9QUrlQueryC2ERK7QString(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN9QUrlQueryC2ERK7QString(arg0)};
     let rsthis = QUrlQuery{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -131,7 +130,7 @@ impl<'a> /*trait*/ QUrlQuery_clear<()> for () {
   fn clear(self , rsthis: & QUrlQuery) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUrlQuery5clearEv()};
-     unsafe {_ZN9QUrlQuery5clearEv(rsthis.qclsinst)};
+     unsafe {C_ZN9QUrlQuery5clearEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -154,7 +153,7 @@ impl<'a> /*trait*/ QUrlQuery_setQuery<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUrlQuery8setQueryERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN9QUrlQuery8setQueryERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QUrlQuery8setQueryERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -176,7 +175,7 @@ impl<'a> /*trait*/ QUrlQuery_queryValueDelimiter<QChar> for () {
   fn queryValueDelimiter(self , rsthis: & QUrlQuery) -> QChar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QUrlQuery19queryValueDelimiterEv()};
-    let mut ret = unsafe {_ZNK9QUrlQuery19queryValueDelimiterEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QUrlQuery19queryValueDelimiterEv(rsthis.qclsinst)};
     let mut ret1 = QChar::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -200,7 +199,7 @@ impl<'a> /*trait*/ QUrlQuery_queryPairDelimiter<QChar> for () {
   fn queryPairDelimiter(self , rsthis: & QUrlQuery) -> QChar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QUrlQuery18queryPairDelimiterEv()};
-    let mut ret = unsafe {_ZNK9QUrlQuery18queryPairDelimiterEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QUrlQuery18queryPairDelimiterEv(rsthis.qclsinst)};
     let mut ret1 = QChar::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -224,7 +223,7 @@ impl<'a> /*trait*/ QUrlQuery_defaultQueryValueDelimiter_s<QChar> for () {
   fn defaultQueryValueDelimiter_s(self ) -> QChar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUrlQuery26defaultQueryValueDelimiterEv()};
-    let mut ret = unsafe {_ZN9QUrlQuery26defaultQueryValueDelimiterEv()};
+    let mut ret = unsafe {C_ZN9QUrlQuery26defaultQueryValueDelimiterEv()};
     let mut ret1 = QChar::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -249,7 +248,7 @@ impl<'a> /*trait*/ QUrlQuery_swap<()> for (&'a QUrlQuery) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUrlQuery4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN9QUrlQuery4swapERS_(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QUrlQuery4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -271,7 +270,7 @@ impl<'a> /*trait*/ QUrlQuery_isDetached<i8> for () {
   fn isDetached(self , rsthis: & QUrlQuery) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QUrlQuery10isDetachedEv()};
-    let mut ret = unsafe {_ZNK9QUrlQuery10isDetachedEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QUrlQuery10isDetachedEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -284,8 +283,7 @@ impl<'a> /*trait*/ QUrlQuery_new for () {
     // unsafe{_ZN9QUrlQueryC2Ev()};
     let ctysz: c_int = unsafe{QUrlQuery_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    unsafe {_ZN9QUrlQueryC2Ev(qthis_ph)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN9QUrlQueryC2Ev()};
     let rsthis = QUrlQuery{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -311,7 +309,7 @@ impl<'a> /*trait*/ QUrlQuery_setQueryDelimiters<()> for (QChar, QChar) {
     // unsafe{_ZN9QUrlQuery18setQueryDelimitersE5QCharS0_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN9QUrlQuery18setQueryDelimitersE5QCharS0_(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN9QUrlQuery18setQueryDelimitersE5QCharS0_(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -333,7 +331,7 @@ impl<'a> /*trait*/ QUrlQuery_free<()> for () {
   fn free(self , rsthis: & QUrlQuery) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUrlQueryD2Ev()};
-     unsafe {_ZN9QUrlQueryD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN9QUrlQueryD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -356,7 +354,7 @@ impl<'a> /*trait*/ QUrlQuery_removeAllQueryItems<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUrlQuery19removeAllQueryItemsERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN9QUrlQuery19removeAllQueryItemsERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QUrlQuery19removeAllQueryItemsERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -378,7 +376,7 @@ impl<'a> /*trait*/ QUrlQuery_isEmpty<i8> for () {
   fn isEmpty(self , rsthis: & QUrlQuery) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QUrlQuery7isEmptyEv()};
-    let mut ret = unsafe {_ZNK9QUrlQuery7isEmptyEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QUrlQuery7isEmptyEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -402,7 +400,7 @@ impl<'a> /*trait*/ QUrlQuery_removeQueryItem<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUrlQuery15removeQueryItemERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN9QUrlQuery15removeQueryItemERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QUrlQuery15removeQueryItemERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -424,7 +422,7 @@ impl<'a> /*trait*/ QUrlQuery_defaultQueryPairDelimiter_s<QChar> for () {
   fn defaultQueryPairDelimiter_s(self ) -> QChar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUrlQuery25defaultQueryPairDelimiterEv()};
-    let mut ret = unsafe {_ZN9QUrlQuery25defaultQueryPairDelimiterEv()};
+    let mut ret = unsafe {C_ZN9QUrlQuery25defaultQueryPairDelimiterEv()};
     let mut ret1 = QChar::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -439,8 +437,7 @@ impl<'a> /*trait*/ QUrlQuery_new for (&'a QUrl) {
     let ctysz: c_int = unsafe{QUrlQuery_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN9QUrlQueryC2ERK4QUrl(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN9QUrlQueryC2ERK4QUrl(arg0)};
     let rsthis = QUrlQuery{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -466,7 +463,7 @@ impl<'a> /*trait*/ QUrlQuery_addQueryItem<()> for (&'a QString, &'a QString) {
     // unsafe{_ZN9QUrlQuery12addQueryItemERK7QStringS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN9QUrlQuery12addQueryItemERK7QStringS2_(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN9QUrlQuery12addQueryItemERK7QStringS2_(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -479,8 +476,7 @@ impl<'a> /*trait*/ QUrlQuery_new for (&'a QUrlQuery) {
     let ctysz: c_int = unsafe{QUrlQuery_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN9QUrlQueryC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN9QUrlQueryC2ERKS_(arg0)};
     let rsthis = QUrlQuery{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -505,7 +501,7 @@ impl<'a> /*trait*/ QUrlQuery_hasQueryItem<i8> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QUrlQuery12hasQueryItemERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK9QUrlQuery12hasQueryItemERK7QString(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK9QUrlQuery12hasQueryItemERK7QString(rsthis.qclsinst, arg0)};
     return ret as i8;
     // return 1;
   }

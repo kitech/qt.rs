@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtCore/qabstracttransition.h
 // dst-file: /src/core/qabstracttransition.rs
 //
@@ -20,9 +20,10 @@ use self::libc::*;
 // use block begin =>
 use super::qobject::QObject; // 773
 use std::ops::Deref;
-use super::qstate::QState; // 773
 use super::qabstractstate::QAbstractState; // 773
+use super::qstate::QState; // 773
 use super::qabstractanimation::QAbstractAnimation; // 773
+use super::qobjectdefs::QMetaObject; // 773
 use super::qstatemachine::QStateMachine; // 773
 // <= use block end
 
@@ -35,29 +36,27 @@ use super::qstatemachine::QStateMachine; // 773
 extern {
   fn QAbstractTransition_Class_Size() -> c_int;
   // proto:  QAbstractState * QAbstractTransition::targetState();
-  fn _ZNK19QAbstractTransition11targetStateEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK19QAbstractTransition11targetStateEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QList<QAbstractState *> QAbstractTransition::targetStates();
-  fn _ZNK19QAbstractTransition12targetStatesEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK19QAbstractTransition12targetStatesEv(qthis: u64 /* *mut c_void*/);
   // proto:  QState * QAbstractTransition::sourceState();
-  fn _ZNK19QAbstractTransition11sourceStateEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK19QAbstractTransition11sourceStateEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAbstractTransition::~QAbstractTransition();
-  fn _ZN19QAbstractTransitionD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN19QAbstractTransitionD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractTransition::QAbstractTransition(QState * sourceState);
-  fn _ZN19QAbstractTransitionC2EP6QState(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN19QAbstractTransitionC2EP6QState(arg0: *mut c_void) -> u64;
   // proto:  void QAbstractTransition::setTargetState(QAbstractState * target);
-  fn _ZN19QAbstractTransition14setTargetStateEP14QAbstractState(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN19QAbstractTransition14setTargetStateEP14QAbstractState(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAbstractTransition::addAnimation(QAbstractAnimation * animation);
-  fn _ZN19QAbstractTransition12addAnimationEP18QAbstractAnimation(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN19QAbstractTransition12addAnimationEP18QAbstractAnimation(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QList<QAbstractAnimation *> QAbstractTransition::animations();
-  fn _ZNK19QAbstractTransition10animationsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK19QAbstractTransition10animationsEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractTransition::removeAnimation(QAbstractAnimation * animation);
-  fn _ZN19QAbstractTransition15removeAnimationEP18QAbstractAnimation(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN19QAbstractTransition15removeAnimationEP18QAbstractAnimation(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QAbstractTransition::metaObject();
-  fn _ZNK19QAbstractTransition10metaObjectEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QAbstractTransition::QAbstractTransition(const QAbstractTransition & );
-  fn _ZN19QAbstractTransitionC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK19QAbstractTransition10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QStateMachine * QAbstractTransition::machine();
-  fn _ZNK19QAbstractTransition7machineEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK19QAbstractTransition7machineEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
 } // <= ext block end
 
 // body block begin =>
@@ -101,11 +100,13 @@ pub trait QAbstractTransition_targetState<RetType> {
 }
 
   // proto:  QAbstractState * QAbstractTransition::targetState();
-impl<'a> /*trait*/ QAbstractTransition_targetState<()> for () {
-  fn targetState(self , rsthis: & QAbstractTransition) -> () {
+impl<'a> /*trait*/ QAbstractTransition_targetState<QAbstractState> for () {
+  fn targetState(self , rsthis: & QAbstractTransition) -> QAbstractState {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QAbstractTransition11targetStateEv()};
-     unsafe {_ZNK19QAbstractTransition11targetStateEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK19QAbstractTransition11targetStateEv(rsthis.qclsinst)};
+    let mut ret1 = QAbstractState::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -127,7 +128,7 @@ impl<'a> /*trait*/ QAbstractTransition_targetStates<()> for () {
   fn targetStates(self , rsthis: & QAbstractTransition) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QAbstractTransition12targetStatesEv()};
-     unsafe {_ZNK19QAbstractTransition12targetStatesEv(rsthis.qclsinst)};
+     unsafe {C_ZNK19QAbstractTransition12targetStatesEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -149,7 +150,7 @@ impl<'a> /*trait*/ QAbstractTransition_sourceState<QState> for () {
   fn sourceState(self , rsthis: & QAbstractTransition) -> QState {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QAbstractTransition11sourceStateEv()};
-    let mut ret = unsafe {_ZNK19QAbstractTransition11sourceStateEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK19QAbstractTransition11sourceStateEv(rsthis.qclsinst)};
     let mut ret1 = QState::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -173,7 +174,7 @@ impl<'a> /*trait*/ QAbstractTransition_free<()> for () {
   fn free(self , rsthis: & QAbstractTransition) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QAbstractTransitionD2Ev()};
-     unsafe {_ZN19QAbstractTransitionD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN19QAbstractTransitionD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -199,8 +200,7 @@ impl<'a> /*trait*/ QAbstractTransition_new for (&'a QState) {
     let ctysz: c_int = unsafe{QAbstractTransition_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN19QAbstractTransitionC2EP6QState(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN19QAbstractTransitionC2EP6QState(arg0)};
     let rsthis = QAbstractTransition{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -225,7 +225,7 @@ impl<'a> /*trait*/ QAbstractTransition_setTargetState<()> for (&'a QAbstractStat
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QAbstractTransition14setTargetStateEP14QAbstractState()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN19QAbstractTransition14setTargetStateEP14QAbstractState(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN19QAbstractTransition14setTargetStateEP14QAbstractState(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -248,7 +248,7 @@ impl<'a> /*trait*/ QAbstractTransition_addAnimation<()> for (&'a QAbstractAnimat
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QAbstractTransition12addAnimationEP18QAbstractAnimation()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN19QAbstractTransition12addAnimationEP18QAbstractAnimation(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN19QAbstractTransition12addAnimationEP18QAbstractAnimation(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -270,7 +270,7 @@ impl<'a> /*trait*/ QAbstractTransition_animations<()> for () {
   fn animations(self , rsthis: & QAbstractTransition) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QAbstractTransition10animationsEv()};
-     unsafe {_ZNK19QAbstractTransition10animationsEv(rsthis.qclsinst)};
+     unsafe {C_ZNK19QAbstractTransition10animationsEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -293,7 +293,7 @@ impl<'a> /*trait*/ QAbstractTransition_removeAnimation<()> for (&'a QAbstractAni
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QAbstractTransition15removeAnimationEP18QAbstractAnimation()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN19QAbstractTransition15removeAnimationEP18QAbstractAnimation(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN19QAbstractTransition15removeAnimationEP18QAbstractAnimation(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -311,27 +311,13 @@ pub trait QAbstractTransition_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QAbstractTransition::metaObject();
-impl<'a> /*trait*/ QAbstractTransition_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QAbstractTransition) -> () {
+impl<'a> /*trait*/ QAbstractTransition_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QAbstractTransition) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QAbstractTransition10metaObjectEv()};
-     unsafe {_ZNK19QAbstractTransition10metaObjectEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QAbstractTransition::QAbstractTransition(const QAbstractTransition & );
-impl<'a> /*trait*/ QAbstractTransition_new for (&'a QAbstractTransition) {
-  fn new(self) -> QAbstractTransition {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QAbstractTransitionC2ERKS_()};
-    let ctysz: c_int = unsafe{QAbstractTransition_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN19QAbstractTransitionC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QAbstractTransition{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
+    let mut ret = unsafe {C_ZNK19QAbstractTransition10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -353,7 +339,7 @@ impl<'a> /*trait*/ QAbstractTransition_machine<QStateMachine> for () {
   fn machine(self , rsthis: & QAbstractTransition) -> QStateMachine {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QAbstractTransition7machineEv()};
-    let mut ret = unsafe {_ZNK19QAbstractTransition7machineEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK19QAbstractTransition7machineEv(rsthis.qclsinst)};
     let mut ret1 = QStateMachine::inheritFrom(ret as u64);
     return ret1;
     // return 1;

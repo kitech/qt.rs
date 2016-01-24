@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtCore/qtextstream.h
 // dst-file: /src/core/qtextstream.rs
 //
@@ -37,82 +37,80 @@ use super::qbytearray::QByteArray; // 773
 extern {
   fn QTextStreamManipulator_Class_Size() -> c_int;
   // proto:  void QTextStreamManipulator::exec(QTextStream & s);
-  fn _ZN22QTextStreamManipulator4execER11QTextStream(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN22QTextStreamManipulator4execER11QTextStream(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTextStreamManipulator::QTextStreamManipulator(QTSMFI m, int a);
-  fn _ZN22QTextStreamManipulatorC2EM11QTextStreamFviEi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
+  fn C_ZN22QTextStreamManipulatorC2EM11QTextStreamFviEi(arg0: *mut c_void, arg1: c_int) -> u64;
   // proto:  void QTextStreamManipulator::QTextStreamManipulator(QTSMFC m, QChar c);
-  fn _ZN22QTextStreamManipulatorC2EM11QTextStreamFv5QCharES1_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN22QTextStreamManipulatorC2EM11QTextStreamFv5QCharES1_(arg0: *mut c_void, arg1: *mut c_void) -> u64;
   fn QTextStream_Class_Size() -> c_int;
   // proto:  QTextCodec * QTextStream::codec();
-  fn _ZNK11QTextStream5codecEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK11QTextStream5codecEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QTextStream::QTextStream(QIODevice * device);
-  fn _ZN11QTextStreamC2EP9QIODevice(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QTextStreamC2EP9QIODevice(arg0: *mut c_void) -> u64;
   // proto:  void QTextStream::setLocale(const QLocale & locale);
-  fn _ZN11QTextStream9setLocaleERK7QLocale(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QTextStream9setLocaleERK7QLocale(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTextStream::QTextStream();
-  fn _ZN11QTextStreamC2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN11QTextStreamC2Ev() -> u64;
   // proto:  bool QTextStream::atEnd();
-  fn _ZNK11QTextStream5atEndEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK11QTextStream5atEndEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QTextStream::readLineInto(QString * line, qint64 maxlen);
-  fn _ZN11QTextStream12readLineIntoEP7QStringx(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_longlong) -> c_char;
+  fn C_ZN11QTextStream12readLineIntoEP7QStringx(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_longlong) -> c_char;
   // proto:  void QTextStream::setRealNumberPrecision(int precision);
-  fn _ZN11QTextStream22setRealNumberPrecisionEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN11QTextStream22setRealNumberPrecisionEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QTextStream::setDevice(QIODevice * device);
-  fn _ZN11QTextStream9setDeviceEP9QIODevice(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QTextStream9setDeviceEP9QIODevice(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTextStream::reset();
-  fn _ZN11QTextStream5resetEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN11QTextStream5resetEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QTextStream::seek(qint64 pos);
-  fn _ZN11QTextStream4seekEx(qthis: u64 /* *mut c_void*/, arg0: c_longlong) -> c_char;
+  fn C_ZN11QTextStream4seekEx(qthis: u64 /* *mut c_void*/, arg0: c_longlong) -> c_char;
   // proto:  QString * QTextStream::string();
-  fn _ZNK11QTextStream6stringEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK11QTextStream6stringEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QTextStream::setAutoDetectUnicode(bool enabled);
-  fn _ZN11QTextStream20setAutoDetectUnicodeEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN11QTextStream20setAutoDetectUnicodeEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QChar QTextStream::padChar();
-  fn _ZNK11QTextStream7padCharEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK11QTextStream7padCharEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QIODevice * QTextStream::device();
-  fn _ZNK11QTextStream6deviceEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK11QTextStream6deviceEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QTextStream::resetStatus();
-  fn _ZN11QTextStream11resetStatusEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN11QTextStream11resetStatusEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QTextStream::autoDetectUnicode();
-  fn _ZNK11QTextStream17autoDetectUnicodeEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK11QTextStream17autoDetectUnicodeEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  int QTextStream::fieldWidth();
-  fn _ZNK11QTextStream10fieldWidthEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK11QTextStream10fieldWidthEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QTextStream::generateByteOrderMark();
-  fn _ZNK11QTextStream21generateByteOrderMarkEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK11QTextStream21generateByteOrderMarkEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QTextStream::setGenerateByteOrderMark(bool generate);
-  fn _ZN11QTextStream24setGenerateByteOrderMarkEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN11QTextStream24setGenerateByteOrderMarkEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QTextStream::setCodec(QTextCodec * codec);
-  fn _ZN11QTextStream8setCodecEP10QTextCodec(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QTextStream8setCodecEP10QTextCodec(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTextStream::flush();
-  fn _ZN11QTextStream5flushEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN11QTextStream5flushEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QTextStream::setIntegerBase(int base);
-  fn _ZN11QTextStream14setIntegerBaseEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN11QTextStream14setIntegerBaseEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QTextStream::~QTextStream();
-  fn _ZN11QTextStreamD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN11QTextStreamD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QLocale QTextStream::locale();
-  fn _ZNK11QTextStream6localeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK11QTextStream6localeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QTextStream::read(qint64 maxlen);
-  fn _ZN11QTextStream4readEx(qthis: u64 /* *mut c_void*/, arg0: c_longlong) -> *mut c_void;
+  fn C_ZN11QTextStream4readEx(qthis: u64 /* *mut c_void*/, arg0: c_longlong) -> *mut c_void;
   // proto:  void QTextStream::setPadChar(QChar ch);
-  fn _ZN11QTextStream10setPadCharE5QChar(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QTextStream10setPadCharE5QChar(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QTextStream::realNumberPrecision();
-  fn _ZNK11QTextStream19realNumberPrecisionEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK11QTextStream19realNumberPrecisionEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  qint64 QTextStream::pos();
-  fn _ZNK11QTextStream3posEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
+  fn C_ZNK11QTextStream3posEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
   // proto:  QString QTextStream::readAll();
-  fn _ZN11QTextStream7readAllEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZN11QTextStream7readAllEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QTextStream::skipWhiteSpace();
-  fn _ZN11QTextStream14skipWhiteSpaceEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN11QTextStream14skipWhiteSpaceEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QTextStream::setFieldWidth(int width);
-  fn _ZN11QTextStream13setFieldWidthEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN11QTextStream13setFieldWidthEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QTextStream::setCodec(const char * codecName);
-  fn _ZN11QTextStream8setCodecEPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_char);
+  fn C_ZN11QTextStream8setCodecEPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_char);
   // proto:  int QTextStream::integerBase();
-  fn _ZNK11QTextStream11integerBaseEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK11QTextStream11integerBaseEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  QString QTextStream::readLine(qint64 maxlen);
-  fn _ZN11QTextStream8readLineEx(qthis: u64 /* *mut c_void*/, arg0: c_longlong) -> *mut c_void;
-  // proto:  void QTextStream::QTextStream(const QTextStream & );
-  fn _ZN11QTextStreamC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QTextStream8readLineEx(qthis: u64 /* *mut c_void*/, arg0: c_longlong) -> *mut c_void;
 } // <= ext block end
 
 // body block begin =>
@@ -153,7 +151,7 @@ impl<'a> /*trait*/ QTextStreamManipulator_exec<()> for (&'a QTextStream) {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZN22QTextStreamManipulator4execER11QTextStream()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN22QTextStreamManipulator4execER11QTextStream(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN22QTextStreamManipulator4execER11QTextStream(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -180,8 +178,7 @@ impl<'a> /*trait*/ QTextStreamManipulator_new for (*mut u64, i32) {
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as *mut c_void;
     let arg1 = self.1  as c_int;
-    unsafe {_ZN22QTextStreamManipulatorC2EM11QTextStreamFviEi(qthis_ph, arg0, arg1)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN22QTextStreamManipulatorC2EM11QTextStreamFviEi(arg0, arg1)};
     let rsthis = QTextStreamManipulator{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -197,8 +194,7 @@ impl<'a> /*trait*/ QTextStreamManipulator_new for (*mut u64, QChar) {
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    unsafe {_ZN22QTextStreamManipulatorC2EM11QTextStreamFv5QCharES1_(qthis_ph, arg0, arg1)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN22QTextStreamManipulatorC2EM11QTextStreamFv5QCharES1_(arg0, arg1)};
     let rsthis = QTextStreamManipulator{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -227,7 +223,7 @@ impl<'a> /*trait*/ QTextStream_codec<QTextCodec> for () {
   fn codec(self , rsthis: & QTextStream) -> QTextCodec {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextStream5codecEv()};
-    let mut ret = unsafe {_ZNK11QTextStream5codecEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QTextStream5codecEv(rsthis.qclsinst)};
     let mut ret1 = QTextCodec::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -255,8 +251,7 @@ impl<'a> /*trait*/ QTextStream_new for (&'a QIODevice) {
     let ctysz: c_int = unsafe{QTextStream_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QTextStreamC2EP9QIODevice(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN11QTextStreamC2EP9QIODevice(arg0)};
     let rsthis = QTextStream{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -281,7 +276,7 @@ impl<'a> /*trait*/ QTextStream_setLocale<()> for (&'a QLocale) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream9setLocaleERK7QLocale()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QTextStream9setLocaleERK7QLocale(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QTextStream9setLocaleERK7QLocale(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -293,8 +288,7 @@ impl<'a> /*trait*/ QTextStream_new for () {
     // unsafe{_ZN11QTextStreamC2Ev()};
     let ctysz: c_int = unsafe{QTextStream_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    unsafe {_ZN11QTextStreamC2Ev(qthis_ph)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN11QTextStreamC2Ev()};
     let rsthis = QTextStream{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -318,7 +312,7 @@ impl<'a> /*trait*/ QTextStream_atEnd<i8> for () {
   fn atEnd(self , rsthis: & QTextStream) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextStream5atEndEv()};
-    let mut ret = unsafe {_ZNK11QTextStream5atEndEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QTextStream5atEndEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -343,7 +337,7 @@ impl<'a> /*trait*/ QTextStream_readLineInto<i8> for (&'a QString, i64) {
     // unsafe{_ZN11QTextStream12readLineIntoEP7QStringx()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_longlong;
-    let mut ret = unsafe {_ZN11QTextStream12readLineIntoEP7QStringx(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {C_ZN11QTextStream12readLineIntoEP7QStringx(rsthis.qclsinst, arg0, arg1)};
     return ret as i8;
     // return 1;
   }
@@ -367,7 +361,7 @@ impl<'a> /*trait*/ QTextStream_setRealNumberPrecision<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream22setRealNumberPrecisionEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN11QTextStream22setRealNumberPrecisionEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QTextStream22setRealNumberPrecisionEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -390,7 +384,7 @@ impl<'a> /*trait*/ QTextStream_setDevice<()> for (&'a QIODevice) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream9setDeviceEP9QIODevice()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QTextStream9setDeviceEP9QIODevice(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QTextStream9setDeviceEP9QIODevice(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -412,7 +406,7 @@ impl<'a> /*trait*/ QTextStream_reset<()> for () {
   fn reset(self , rsthis: & QTextStream) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream5resetEv()};
-     unsafe {_ZN11QTextStream5resetEv(rsthis.qclsinst)};
+     unsafe {C_ZN11QTextStream5resetEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -435,7 +429,7 @@ impl<'a> /*trait*/ QTextStream_seek<i8> for (i64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream4seekEx()};
     let arg0 = self  as c_longlong;
-    let mut ret = unsafe {_ZN11QTextStream4seekEx(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN11QTextStream4seekEx(rsthis.qclsinst, arg0)};
     return ret as i8;
     // return 1;
   }
@@ -458,7 +452,7 @@ impl<'a> /*trait*/ QTextStream_string<QString> for () {
   fn string(self , rsthis: & QTextStream) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextStream6stringEv()};
-    let mut ret = unsafe {_ZNK11QTextStream6stringEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QTextStream6stringEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -483,7 +477,7 @@ impl<'a> /*trait*/ QTextStream_setAutoDetectUnicode<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream20setAutoDetectUnicodeEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN11QTextStream20setAutoDetectUnicodeEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QTextStream20setAutoDetectUnicodeEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -505,7 +499,7 @@ impl<'a> /*trait*/ QTextStream_padChar<QChar> for () {
   fn padChar(self , rsthis: & QTextStream) -> QChar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextStream7padCharEv()};
-    let mut ret = unsafe {_ZNK11QTextStream7padCharEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QTextStream7padCharEv(rsthis.qclsinst)};
     let mut ret1 = QChar::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -529,7 +523,7 @@ impl<'a> /*trait*/ QTextStream_device<QIODevice> for () {
   fn device(self , rsthis: & QTextStream) -> QIODevice {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextStream6deviceEv()};
-    let mut ret = unsafe {_ZNK11QTextStream6deviceEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QTextStream6deviceEv(rsthis.qclsinst)};
     let mut ret1 = QIODevice::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -553,7 +547,7 @@ impl<'a> /*trait*/ QTextStream_resetStatus<()> for () {
   fn resetStatus(self , rsthis: & QTextStream) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream11resetStatusEv()};
-     unsafe {_ZN11QTextStream11resetStatusEv(rsthis.qclsinst)};
+     unsafe {C_ZN11QTextStream11resetStatusEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -575,7 +569,7 @@ impl<'a> /*trait*/ QTextStream_autoDetectUnicode<i8> for () {
   fn autoDetectUnicode(self , rsthis: & QTextStream) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextStream17autoDetectUnicodeEv()};
-    let mut ret = unsafe {_ZNK11QTextStream17autoDetectUnicodeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QTextStream17autoDetectUnicodeEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -598,7 +592,7 @@ impl<'a> /*trait*/ QTextStream_fieldWidth<i32> for () {
   fn fieldWidth(self , rsthis: & QTextStream) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextStream10fieldWidthEv()};
-    let mut ret = unsafe {_ZNK11QTextStream10fieldWidthEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QTextStream10fieldWidthEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -621,7 +615,7 @@ impl<'a> /*trait*/ QTextStream_generateByteOrderMark<i8> for () {
   fn generateByteOrderMark(self , rsthis: & QTextStream) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextStream21generateByteOrderMarkEv()};
-    let mut ret = unsafe {_ZNK11QTextStream21generateByteOrderMarkEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QTextStream21generateByteOrderMarkEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -645,7 +639,7 @@ impl<'a> /*trait*/ QTextStream_setGenerateByteOrderMark<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream24setGenerateByteOrderMarkEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN11QTextStream24setGenerateByteOrderMarkEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QTextStream24setGenerateByteOrderMarkEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -668,7 +662,7 @@ impl<'a> /*trait*/ QTextStream_setCodec<()> for (&'a QTextCodec) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream8setCodecEP10QTextCodec()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QTextStream8setCodecEP10QTextCodec(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QTextStream8setCodecEP10QTextCodec(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -690,7 +684,7 @@ impl<'a> /*trait*/ QTextStream_flush<()> for () {
   fn flush(self , rsthis: & QTextStream) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream5flushEv()};
-     unsafe {_ZN11QTextStream5flushEv(rsthis.qclsinst)};
+     unsafe {C_ZN11QTextStream5flushEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -713,7 +707,7 @@ impl<'a> /*trait*/ QTextStream_setIntegerBase<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream14setIntegerBaseEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN11QTextStream14setIntegerBaseEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QTextStream14setIntegerBaseEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -735,7 +729,7 @@ impl<'a> /*trait*/ QTextStream_free<()> for () {
   fn free(self , rsthis: & QTextStream) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStreamD2Ev()};
-     unsafe {_ZN11QTextStreamD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN11QTextStreamD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -757,7 +751,7 @@ impl<'a> /*trait*/ QTextStream_locale<QLocale> for () {
   fn locale(self , rsthis: & QTextStream) -> QLocale {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextStream6localeEv()};
-    let mut ret = unsafe {_ZNK11QTextStream6localeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QTextStream6localeEv(rsthis.qclsinst)};
     let mut ret1 = QLocale::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -782,7 +776,7 @@ impl<'a> /*trait*/ QTextStream_read<QString> for (i64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream4readEx()};
     let arg0 = self  as c_longlong;
-    let mut ret = unsafe {_ZN11QTextStream4readEx(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN11QTextStream4readEx(rsthis.qclsinst, arg0)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -807,7 +801,7 @@ impl<'a> /*trait*/ QTextStream_setPadChar<()> for (QChar) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream10setPadCharE5QChar()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QTextStream10setPadCharE5QChar(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QTextStream10setPadCharE5QChar(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -829,7 +823,7 @@ impl<'a> /*trait*/ QTextStream_realNumberPrecision<i32> for () {
   fn realNumberPrecision(self , rsthis: & QTextStream) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextStream19realNumberPrecisionEv()};
-    let mut ret = unsafe {_ZNK11QTextStream19realNumberPrecisionEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QTextStream19realNumberPrecisionEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -852,7 +846,7 @@ impl<'a> /*trait*/ QTextStream_pos<i64> for () {
   fn pos(self , rsthis: & QTextStream) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextStream3posEv()};
-    let mut ret = unsafe {_ZNK11QTextStream3posEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QTextStream3posEv(rsthis.qclsinst)};
     return ret as i64;
     // return 1;
   }
@@ -875,7 +869,7 @@ impl<'a> /*trait*/ QTextStream_readAll<QString> for () {
   fn readAll(self , rsthis: & QTextStream) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream7readAllEv()};
-    let mut ret = unsafe {_ZN11QTextStream7readAllEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZN11QTextStream7readAllEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -899,7 +893,7 @@ impl<'a> /*trait*/ QTextStream_skipWhiteSpace<()> for () {
   fn skipWhiteSpace(self , rsthis: & QTextStream) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream14skipWhiteSpaceEv()};
-     unsafe {_ZN11QTextStream14skipWhiteSpaceEv(rsthis.qclsinst)};
+     unsafe {C_ZN11QTextStream14skipWhiteSpaceEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -922,7 +916,7 @@ impl<'a> /*trait*/ QTextStream_setFieldWidth<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream13setFieldWidthEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN11QTextStream13setFieldWidthEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QTextStream13setFieldWidthEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -933,7 +927,7 @@ impl<'a> /*trait*/ QTextStream_setCodec<()> for (&'a  String) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream8setCodecEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
-     unsafe {_ZN11QTextStream8setCodecEPKc(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QTextStream8setCodecEPKc(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -955,7 +949,7 @@ impl<'a> /*trait*/ QTextStream_integerBase<i32> for () {
   fn integerBase(self , rsthis: & QTextStream) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextStream11integerBaseEv()};
-    let mut ret = unsafe {_ZNK11QTextStream11integerBaseEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QTextStream11integerBaseEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -979,25 +973,9 @@ impl<'a> /*trait*/ QTextStream_readLine<QString> for (i64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream8readLineEx()};
     let arg0 = self  as c_longlong;
-    let mut ret = unsafe {_ZN11QTextStream8readLineEx(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN11QTextStream8readLineEx(rsthis.qclsinst, arg0)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QTextStream::QTextStream(const QTextStream & );
-impl<'a> /*trait*/ QTextStream_new for (&'a QTextStream) {
-  fn new(self) -> QTextStream {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QTextStreamC2ERKS_()};
-    let ctysz: c_int = unsafe{QTextStream_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QTextStreamC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QTextStream{qclsinst: qthis, ..Default::default()};
-    return rsthis;
     // return 1;
   }
 }

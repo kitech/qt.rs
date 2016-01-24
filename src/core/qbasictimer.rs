@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtCore/qbasictimer.h
 // dst-file: /src/core/qbasictimer.rs
 //
@@ -31,17 +31,17 @@ use super::qobject::QObject; // 773
 extern {
   fn QBasicTimer_Class_Size() -> c_int;
   // proto:  void QBasicTimer::~QBasicTimer();
-  fn _ZN11QBasicTimerD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN11QBasicTimerD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QBasicTimer::stop();
-  fn _ZN11QBasicTimer4stopEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN11QBasicTimer4stopEv(qthis: u64 /* *mut c_void*/);
   // proto:  int QBasicTimer::timerId();
-  fn _ZNK11QBasicTimer7timerIdEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK11QBasicTimer7timerIdEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QBasicTimer::isActive();
-  fn _ZNK11QBasicTimer8isActiveEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK11QBasicTimer8isActiveEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QBasicTimer::QBasicTimer();
-  fn _ZN11QBasicTimerC2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN11QBasicTimerC2Ev() -> u64;
   // proto:  void QBasicTimer::start(int msec, QObject * obj);
-  fn _ZN11QBasicTimer5startEiP7QObject(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
+  fn C_ZN11QBasicTimer5startEiP7QObject(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -74,7 +74,7 @@ impl<'a> /*trait*/ QBasicTimer_free<()> for () {
   fn free(self , rsthis: & QBasicTimer) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QBasicTimerD2Ev()};
-     unsafe {_ZN11QBasicTimerD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN11QBasicTimerD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -96,7 +96,7 @@ impl<'a> /*trait*/ QBasicTimer_stop<()> for () {
   fn stop(self , rsthis: & QBasicTimer) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QBasicTimer4stopEv()};
-     unsafe {_ZN11QBasicTimer4stopEv(rsthis.qclsinst)};
+     unsafe {C_ZN11QBasicTimer4stopEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -118,7 +118,7 @@ impl<'a> /*trait*/ QBasicTimer_timerId<i32> for () {
   fn timerId(self , rsthis: & QBasicTimer) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QBasicTimer7timerIdEv()};
-    let mut ret = unsafe {_ZNK11QBasicTimer7timerIdEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QBasicTimer7timerIdEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -141,7 +141,7 @@ impl<'a> /*trait*/ QBasicTimer_isActive<i8> for () {
   fn isActive(self , rsthis: & QBasicTimer) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QBasicTimer8isActiveEv()};
-    let mut ret = unsafe {_ZNK11QBasicTimer8isActiveEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QBasicTimer8isActiveEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -167,8 +167,7 @@ impl<'a> /*trait*/ QBasicTimer_new for () {
     // unsafe{_ZN11QBasicTimerC2Ev()};
     let ctysz: c_int = unsafe{QBasicTimer_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    unsafe {_ZN11QBasicTimerC2Ev(qthis_ph)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN11QBasicTimerC2Ev()};
     let rsthis = QBasicTimer{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -194,7 +193,7 @@ impl<'a> /*trait*/ QBasicTimer_start<()> for (i32, &'a QObject) {
     // unsafe{_ZN11QBasicTimer5startEiP7QObject()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN11QBasicTimer5startEiP7QObject(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN11QBasicTimer5startEiP7QObject(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }

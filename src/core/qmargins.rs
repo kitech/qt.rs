@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtCore/qmargins.h
 // dst-file: /src/core/qmargins.rs
 //
@@ -31,54 +31,54 @@ use std::ops::Deref;
 extern {
   fn QMarginsF_Class_Size() -> c_int;
   // proto:  QMargins QMarginsF::toMargins();
-  fn _ZNK9QMarginsF9toMarginsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK9QMarginsF9toMarginsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  qreal QMarginsF::right();
-  fn _ZNK9QMarginsF5rightEv(qthis: u64 /* *mut c_void*/) -> c_double;
+  fn C_ZNK9QMarginsF5rightEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  bool QMarginsF::isNull();
-  fn _ZNK9QMarginsF6isNullEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK9QMarginsF6isNullEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QMarginsF::setRight(qreal right);
-  fn _ZN9QMarginsF8setRightEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
+  fn C_ZN9QMarginsF8setRightEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QMarginsF::setTop(qreal top);
-  fn _ZN9QMarginsF6setTopEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
+  fn C_ZN9QMarginsF6setTopEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  qreal QMarginsF::left();
-  fn _ZNK9QMarginsF4leftEv(qthis: u64 /* *mut c_void*/) -> c_double;
+  fn C_ZNK9QMarginsF4leftEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QMarginsF::QMarginsF();
-  fn _ZN9QMarginsFC2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN9QMarginsFC2Ev() -> u64;
   // proto:  void QMarginsF::QMarginsF(qreal left, qreal top, qreal right, qreal bottom);
-  fn _ZN9QMarginsFC2Edddd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
+  fn C_ZN9QMarginsFC2Edddd(arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double) -> u64;
   // proto:  qreal QMarginsF::bottom();
-  fn _ZNK9QMarginsF6bottomEv(qthis: u64 /* *mut c_void*/) -> c_double;
+  fn C_ZNK9QMarginsF6bottomEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QMarginsF::QMarginsF(const QMargins & margins);
-  fn _ZN9QMarginsFC2ERK8QMargins(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QMarginsFC2ERK8QMargins(arg0: *mut c_void) -> u64;
   // proto:  void QMarginsF::setBottom(qreal bottom);
-  fn _ZN9QMarginsF9setBottomEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
+  fn C_ZN9QMarginsF9setBottomEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  qreal QMarginsF::top();
-  fn _ZNK9QMarginsF3topEv(qthis: u64 /* *mut c_void*/) -> c_double;
+  fn C_ZNK9QMarginsF3topEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QMarginsF::setLeft(qreal left);
-  fn _ZN9QMarginsF7setLeftEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
+  fn C_ZN9QMarginsF7setLeftEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   fn QMargins_Class_Size() -> c_int;
   // proto:  void QMargins::setLeft(int left);
-  fn _ZN8QMargins7setLeftEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN8QMargins7setLeftEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QMargins::setRight(int right);
-  fn _ZN8QMargins8setRightEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN8QMargins8setRightEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QMargins::left();
-  fn _ZNK8QMargins4leftEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK8QMargins4leftEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QMargins::top();
-  fn _ZNK8QMargins3topEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK8QMargins3topEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QMargins::setTop(int top);
-  fn _ZN8QMargins6setTopEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN8QMargins6setTopEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QMargins::setBottom(int bottom);
-  fn _ZN8QMargins9setBottomEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN8QMargins9setBottomEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QMargins::right();
-  fn _ZNK8QMargins5rightEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK8QMargins5rightEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QMargins::bottom();
-  fn _ZNK8QMargins6bottomEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK8QMargins6bottomEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QMargins::isNull();
-  fn _ZNK8QMargins6isNullEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK8QMargins6isNullEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QMargins::QMargins();
-  fn _ZN8QMarginsC2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN8QMarginsC2Ev() -> u64;
   // proto:  void QMargins::QMargins(int left, int top, int right, int bottom);
-  fn _ZN8QMarginsC2Eiiii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
+  fn C_ZN8QMarginsC2Eiiii(arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int) -> u64;
 } // <= ext block end
 
 // body block begin =>
@@ -118,7 +118,7 @@ impl<'a> /*trait*/ QMarginsF_toMargins<QMargins> for () {
   fn toMargins(self , rsthis: & QMarginsF) -> QMargins {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMarginsF9toMarginsEv()};
-    let mut ret = unsafe {_ZNK9QMarginsF9toMarginsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QMarginsF9toMarginsEv(rsthis.qclsinst)};
     let mut ret1 = QMargins::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -142,7 +142,7 @@ impl<'a> /*trait*/ QMarginsF_right<f64> for () {
   fn right(self , rsthis: & QMarginsF) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMarginsF5rightEv()};
-    let mut ret = unsafe {_ZNK9QMarginsF5rightEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QMarginsF5rightEv(rsthis.qclsinst)};
     return ret as f64;
     // return 1;
   }
@@ -165,7 +165,7 @@ impl<'a> /*trait*/ QMarginsF_isNull<i8> for () {
   fn isNull(self , rsthis: & QMarginsF) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMarginsF6isNullEv()};
-    let mut ret = unsafe {_ZNK9QMarginsF6isNullEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QMarginsF6isNullEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -189,7 +189,7 @@ impl<'a> /*trait*/ QMarginsF_setRight<()> for (f64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QMarginsF8setRightEd()};
     let arg0 = self  as c_double;
-     unsafe {_ZN9QMarginsF8setRightEd(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QMarginsF8setRightEd(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -212,7 +212,7 @@ impl<'a> /*trait*/ QMarginsF_setTop<()> for (f64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QMarginsF6setTopEd()};
     let arg0 = self  as c_double;
-     unsafe {_ZN9QMarginsF6setTopEd(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QMarginsF6setTopEd(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -234,7 +234,7 @@ impl<'a> /*trait*/ QMarginsF_left<f64> for () {
   fn left(self , rsthis: & QMarginsF) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMarginsF4leftEv()};
-    let mut ret = unsafe {_ZNK9QMarginsF4leftEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QMarginsF4leftEv(rsthis.qclsinst)};
     return ret as f64;
     // return 1;
   }
@@ -260,8 +260,7 @@ impl<'a> /*trait*/ QMarginsF_new for () {
     // unsafe{_ZN9QMarginsFC2Ev()};
     let ctysz: c_int = unsafe{QMarginsF_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    unsafe {_ZN9QMarginsFC2Ev(qthis_ph)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN9QMarginsFC2Ev()};
     let rsthis = QMarginsF{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -279,8 +278,7 @@ impl<'a> /*trait*/ QMarginsF_new for (f64, f64, f64, f64) {
     let arg1 = self.1  as c_double;
     let arg2 = self.2  as c_double;
     let arg3 = self.3  as c_double;
-    unsafe {_ZN9QMarginsFC2Edddd(qthis_ph, arg0, arg1, arg2, arg3)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN9QMarginsFC2Edddd(arg0, arg1, arg2, arg3)};
     let rsthis = QMarginsF{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -304,7 +302,7 @@ impl<'a> /*trait*/ QMarginsF_bottom<f64> for () {
   fn bottom(self , rsthis: & QMarginsF) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMarginsF6bottomEv()};
-    let mut ret = unsafe {_ZNK9QMarginsF6bottomEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QMarginsF6bottomEv(rsthis.qclsinst)};
     return ret as f64;
     // return 1;
   }
@@ -318,8 +316,7 @@ impl<'a> /*trait*/ QMarginsF_new for (&'a QMargins) {
     let ctysz: c_int = unsafe{QMarginsF_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN9QMarginsFC2ERK8QMargins(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN9QMarginsFC2ERK8QMargins(arg0)};
     let rsthis = QMarginsF{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -344,7 +341,7 @@ impl<'a> /*trait*/ QMarginsF_setBottom<()> for (f64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QMarginsF9setBottomEd()};
     let arg0 = self  as c_double;
-     unsafe {_ZN9QMarginsF9setBottomEd(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QMarginsF9setBottomEd(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -366,7 +363,7 @@ impl<'a> /*trait*/ QMarginsF_top<f64> for () {
   fn top(self , rsthis: & QMarginsF) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMarginsF3topEv()};
-    let mut ret = unsafe {_ZNK9QMarginsF3topEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QMarginsF3topEv(rsthis.qclsinst)};
     return ret as f64;
     // return 1;
   }
@@ -390,7 +387,7 @@ impl<'a> /*trait*/ QMarginsF_setLeft<()> for (f64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QMarginsF7setLeftEd()};
     let arg0 = self  as c_double;
-     unsafe {_ZN9QMarginsF7setLeftEd(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QMarginsF7setLeftEd(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -418,7 +415,7 @@ impl<'a> /*trait*/ QMargins_setLeft<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMargins7setLeftEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN8QMargins7setLeftEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN8QMargins7setLeftEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -441,7 +438,7 @@ impl<'a> /*trait*/ QMargins_setRight<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMargins8setRightEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN8QMargins8setRightEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN8QMargins8setRightEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -463,7 +460,7 @@ impl<'a> /*trait*/ QMargins_left<i32> for () {
   fn left(self , rsthis: & QMargins) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMargins4leftEv()};
-    let mut ret = unsafe {_ZNK8QMargins4leftEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QMargins4leftEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -486,7 +483,7 @@ impl<'a> /*trait*/ QMargins_top<i32> for () {
   fn top(self , rsthis: & QMargins) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMargins3topEv()};
-    let mut ret = unsafe {_ZNK8QMargins3topEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QMargins3topEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -510,7 +507,7 @@ impl<'a> /*trait*/ QMargins_setTop<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMargins6setTopEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN8QMargins6setTopEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN8QMargins6setTopEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -533,7 +530,7 @@ impl<'a> /*trait*/ QMargins_setBottom<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMargins9setBottomEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN8QMargins9setBottomEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN8QMargins9setBottomEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -555,7 +552,7 @@ impl<'a> /*trait*/ QMargins_right<i32> for () {
   fn right(self , rsthis: & QMargins) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMargins5rightEv()};
-    let mut ret = unsafe {_ZNK8QMargins5rightEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QMargins5rightEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -578,7 +575,7 @@ impl<'a> /*trait*/ QMargins_bottom<i32> for () {
   fn bottom(self , rsthis: & QMargins) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMargins6bottomEv()};
-    let mut ret = unsafe {_ZNK8QMargins6bottomEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QMargins6bottomEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -601,7 +598,7 @@ impl<'a> /*trait*/ QMargins_isNull<i8> for () {
   fn isNull(self , rsthis: & QMargins) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMargins6isNullEv()};
-    let mut ret = unsafe {_ZNK8QMargins6isNullEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QMargins6isNullEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -627,8 +624,7 @@ impl<'a> /*trait*/ QMargins_new for () {
     // unsafe{_ZN8QMarginsC2Ev()};
     let ctysz: c_int = unsafe{QMargins_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    unsafe {_ZN8QMarginsC2Ev(qthis_ph)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN8QMarginsC2Ev()};
     let rsthis = QMargins{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -646,8 +642,7 @@ impl<'a> /*trait*/ QMargins_new for (i32, i32, i32, i32) {
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as c_int;
     let arg3 = self.3  as c_int;
-    unsafe {_ZN8QMarginsC2Eiiii(qthis_ph, arg0, arg1, arg2, arg3)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN8QMarginsC2Eiiii(arg0, arg1, arg2, arg3)};
     let rsthis = QMargins{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtCore/qhistorystate.h
 // dst-file: /src/core/qhistorystate.rs
 //
@@ -20,6 +20,7 @@ use self::libc::*;
 // use block begin =>
 use super::qabstractstate::QAbstractState; // 773
 use std::ops::Deref;
+use super::qobjectdefs::QMetaObject; // 773
 use super::qstate::QState; // 773
 // <= use block end
 
@@ -32,17 +33,15 @@ use super::qstate::QState; // 773
 extern {
   fn QHistoryState_Class_Size() -> c_int;
   // proto:  const QMetaObject * QHistoryState::metaObject();
-  fn _ZNK13QHistoryState10metaObjectEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QHistoryState::QHistoryState(const QHistoryState & );
-  fn _ZN13QHistoryStateC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK13QHistoryState10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QHistoryState::setDefaultState(QAbstractState * state);
-  fn _ZN13QHistoryState15setDefaultStateEP14QAbstractState(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN13QHistoryState15setDefaultStateEP14QAbstractState(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QHistoryState::QHistoryState(QState * parent);
-  fn _ZN13QHistoryStateC2EP6QState(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN13QHistoryStateC2EP6QState(arg0: *mut c_void) -> u64;
   // proto:  QAbstractState * QHistoryState::defaultState();
-  fn _ZNK13QHistoryState12defaultStateEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK13QHistoryState12defaultStateEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QHistoryState::~QHistoryState();
-  fn _ZN13QHistoryStateD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN13QHistoryStateD2Ev(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
@@ -85,40 +84,13 @@ pub trait QHistoryState_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QHistoryState::metaObject();
-impl<'a> /*trait*/ QHistoryState_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QHistoryState) -> () {
+impl<'a> /*trait*/ QHistoryState_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QHistoryState) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QHistoryState10metaObjectEv()};
-     unsafe {_ZNK13QHistoryState10metaObjectEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QHistoryState::QHistoryState(const QHistoryState & );
-impl /*struct*/ QHistoryState {
-  pub fn new<T: QHistoryState_new>(value: T) -> QHistoryState {
-    let rsthis = value.new();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QHistoryState_new {
-  fn new(self) -> QHistoryState;
-}
-
-  // proto:  void QHistoryState::QHistoryState(const QHistoryState & );
-impl<'a> /*trait*/ QHistoryState_new for (&'a QHistoryState) {
-  fn new(self) -> QHistoryState {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QHistoryStateC2ERKS_()};
-    let ctysz: c_int = unsafe{QHistoryState_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN13QHistoryStateC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QHistoryState{qbase: QAbstractState::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
+    let mut ret = unsafe {C_ZNK13QHistoryState10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -141,9 +113,22 @@ impl<'a> /*trait*/ QHistoryState_setDefaultState<()> for (&'a QAbstractState) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QHistoryState15setDefaultStateEP14QAbstractState()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN13QHistoryState15setDefaultStateEP14QAbstractState(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN13QHistoryState15setDefaultStateEP14QAbstractState(rsthis.qclsinst, arg0)};
     // return 1;
   }
+}
+
+  // proto:  void QHistoryState::QHistoryState(QState * parent);
+impl /*struct*/ QHistoryState {
+  pub fn new<T: QHistoryState_new>(value: T) -> QHistoryState {
+    let rsthis = value.new();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QHistoryState_new {
+  fn new(self) -> QHistoryState;
 }
 
   // proto:  void QHistoryState::QHistoryState(QState * parent);
@@ -154,8 +139,7 @@ impl<'a> /*trait*/ QHistoryState_new for (&'a QState) {
     let ctysz: c_int = unsafe{QHistoryState_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN13QHistoryStateC2EP6QState(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN13QHistoryStateC2EP6QState(arg0)};
     let rsthis = QHistoryState{qbase: QAbstractState::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -175,11 +159,13 @@ pub trait QHistoryState_defaultState<RetType> {
 }
 
   // proto:  QAbstractState * QHistoryState::defaultState();
-impl<'a> /*trait*/ QHistoryState_defaultState<()> for () {
-  fn defaultState(self , rsthis: & QHistoryState) -> () {
+impl<'a> /*trait*/ QHistoryState_defaultState<QAbstractState> for () {
+  fn defaultState(self , rsthis: & QHistoryState) -> QAbstractState {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QHistoryState12defaultStateEv()};
-     unsafe {_ZNK13QHistoryState12defaultStateEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QHistoryState12defaultStateEv(rsthis.qclsinst)};
+    let mut ret1 = QAbstractState::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -201,7 +187,7 @@ impl<'a> /*trait*/ QHistoryState_free<()> for () {
   fn free(self , rsthis: & QHistoryState) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QHistoryStateD2Ev()};
-     unsafe {_ZN13QHistoryStateD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN13QHistoryStateD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

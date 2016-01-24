@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtCore/qmimedatabase.h
 // dst-file: /src/core/qmimedatabase.rs
 //
@@ -36,29 +36,27 @@ use super::qiodevice::QIODevice; // 773
 extern {
   fn QMimeDatabase_Class_Size() -> c_int;
   // proto:  QMimeType QMimeDatabase::mimeTypeForUrl(const QUrl & url);
-  fn _ZNK13QMimeDatabase14mimeTypeForUrlERK4QUrl(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZNK13QMimeDatabase14mimeTypeForUrlERK4QUrl(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QMimeDatabase::QMimeDatabase();
-  fn _ZN13QMimeDatabaseC2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN13QMimeDatabaseC2Ev() -> u64;
   // proto:  QMimeType QMimeDatabase::mimeTypeForData(const QByteArray & data);
-  fn _ZNK13QMimeDatabase15mimeTypeForDataERK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZNK13QMimeDatabase15mimeTypeForDataERK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QMimeType QMimeDatabase::mimeTypeForName(const QString & nameOrAlias);
-  fn _ZNK13QMimeDatabase15mimeTypeForNameERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZNK13QMimeDatabase15mimeTypeForNameERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QString QMimeDatabase::suffixForFileName(const QString & fileName);
-  fn _ZNK13QMimeDatabase17suffixForFileNameERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZNK13QMimeDatabase17suffixForFileNameERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QList<QMimeType> QMimeDatabase::mimeTypesForFileName(const QString & fileName);
-  fn _ZNK13QMimeDatabase20mimeTypesForFileNameERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK13QMimeDatabase20mimeTypesForFileNameERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QMimeType QMimeDatabase::mimeTypeForFileNameAndData(const QString & fileName, QIODevice * device);
-  fn _ZNK13QMimeDatabase26mimeTypeForFileNameAndDataERK7QStringP9QIODevice(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
+  fn C_ZNK13QMimeDatabase26mimeTypeForFileNameAndDataERK7QStringP9QIODevice(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  QMimeType QMimeDatabase::mimeTypeForData(QIODevice * device);
-  fn _ZNK13QMimeDatabase15mimeTypeForDataEP9QIODevice(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZNK13QMimeDatabase15mimeTypeForDataEP9QIODevice(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QMimeDatabase::~QMimeDatabase();
-  fn _ZN13QMimeDatabaseD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN13QMimeDatabaseD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QMimeType QMimeDatabase::mimeTypeForFileNameAndData(const QString & fileName, const QByteArray & data);
-  fn _ZNK13QMimeDatabase26mimeTypeForFileNameAndDataERK7QStringRK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
+  fn C_ZNK13QMimeDatabase26mimeTypeForFileNameAndDataERK7QStringRK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  QList<QMimeType> QMimeDatabase::allMimeTypes();
-  fn _ZNK13QMimeDatabase12allMimeTypesEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QMimeDatabase::QMimeDatabase(const QMimeDatabase & );
-  fn _ZN13QMimeDatabaseC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK13QMimeDatabase12allMimeTypesEv(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
@@ -92,7 +90,7 @@ impl<'a> /*trait*/ QMimeDatabase_mimeTypeForUrl<QMimeType> for (&'a QUrl) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMimeDatabase14mimeTypeForUrlERK4QUrl()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK13QMimeDatabase14mimeTypeForUrlERK4QUrl(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK13QMimeDatabase14mimeTypeForUrlERK4QUrl(rsthis.qclsinst, arg0)};
     let mut ret1 = QMimeType::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -119,8 +117,7 @@ impl<'a> /*trait*/ QMimeDatabase_new for () {
     // unsafe{_ZN13QMimeDatabaseC2Ev()};
     let ctysz: c_int = unsafe{QMimeDatabase_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    unsafe {_ZN13QMimeDatabaseC2Ev(qthis_ph)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN13QMimeDatabaseC2Ev()};
     let rsthis = QMimeDatabase{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -145,7 +142,7 @@ impl<'a> /*trait*/ QMimeDatabase_mimeTypeForData<QMimeType> for (&'a QByteArray)
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMimeDatabase15mimeTypeForDataERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK13QMimeDatabase15mimeTypeForDataERK10QByteArray(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK13QMimeDatabase15mimeTypeForDataERK10QByteArray(rsthis.qclsinst, arg0)};
     let mut ret1 = QMimeType::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -170,7 +167,7 @@ impl<'a> /*trait*/ QMimeDatabase_mimeTypeForName<QMimeType> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMimeDatabase15mimeTypeForNameERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK13QMimeDatabase15mimeTypeForNameERK7QString(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK13QMimeDatabase15mimeTypeForNameERK7QString(rsthis.qclsinst, arg0)};
     let mut ret1 = QMimeType::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -195,7 +192,7 @@ impl<'a> /*trait*/ QMimeDatabase_suffixForFileName<QString> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMimeDatabase17suffixForFileNameERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK13QMimeDatabase17suffixForFileNameERK7QString(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK13QMimeDatabase17suffixForFileNameERK7QString(rsthis.qclsinst, arg0)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -220,7 +217,7 @@ impl<'a> /*trait*/ QMimeDatabase_mimeTypesForFileName<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMimeDatabase20mimeTypesForFileNameERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZNK13QMimeDatabase20mimeTypesForFileNameERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZNK13QMimeDatabase20mimeTypesForFileNameERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -244,7 +241,7 @@ impl<'a> /*trait*/ QMimeDatabase_mimeTypeForFileNameAndData<QMimeType> for (&'a 
     // unsafe{_ZNK13QMimeDatabase26mimeTypeForFileNameAndDataERK7QStringP9QIODevice()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK13QMimeDatabase26mimeTypeForFileNameAndDataERK7QStringP9QIODevice(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {C_ZNK13QMimeDatabase26mimeTypeForFileNameAndDataERK7QStringP9QIODevice(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QMimeType::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -257,7 +254,7 @@ impl<'a> /*trait*/ QMimeDatabase_mimeTypeForData<QMimeType> for (&'a QIODevice) 
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMimeDatabase15mimeTypeForDataEP9QIODevice()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK13QMimeDatabase15mimeTypeForDataEP9QIODevice(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK13QMimeDatabase15mimeTypeForDataEP9QIODevice(rsthis.qclsinst, arg0)};
     let mut ret1 = QMimeType::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -281,7 +278,7 @@ impl<'a> /*trait*/ QMimeDatabase_free<()> for () {
   fn free(self , rsthis: & QMimeDatabase) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QMimeDatabaseD2Ev()};
-     unsafe {_ZN13QMimeDatabaseD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN13QMimeDatabaseD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -293,7 +290,7 @@ impl<'a> /*trait*/ QMimeDatabase_mimeTypeForFileNameAndData<QMimeType> for (&'a 
     // unsafe{_ZNK13QMimeDatabase26mimeTypeForFileNameAndDataERK7QStringRK10QByteArray()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK13QMimeDatabase26mimeTypeForFileNameAndDataERK7QStringRK10QByteArray(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {C_ZNK13QMimeDatabase26mimeTypeForFileNameAndDataERK7QStringRK10QByteArray(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QMimeType::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -317,23 +314,7 @@ impl<'a> /*trait*/ QMimeDatabase_allMimeTypes<()> for () {
   fn allMimeTypes(self , rsthis: & QMimeDatabase) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMimeDatabase12allMimeTypesEv()};
-     unsafe {_ZNK13QMimeDatabase12allMimeTypesEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QMimeDatabase::QMimeDatabase(const QMimeDatabase & );
-impl<'a> /*trait*/ QMimeDatabase_new for (&'a QMimeDatabase) {
-  fn new(self) -> QMimeDatabase {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QMimeDatabaseC2ERKS_()};
-    let ctysz: c_int = unsafe{QMimeDatabase_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN13QMimeDatabaseC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QMimeDatabase{qclsinst: qthis, ..Default::default()};
-    return rsthis;
+     unsafe {C_ZNK13QMimeDatabase12allMimeTypesEv(rsthis.qclsinst)};
     // return 1;
   }
 }

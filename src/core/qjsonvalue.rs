@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtCore/qjsonvalue.h
 // dst-file: /src/core/qjsonvalue.rs
 //
@@ -19,7 +19,9 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
+use super::qjsonobject::QJsonObject; // 773
 use super::qstring::QString; // 773
+use super::qjsonarray::QJsonArray; // 773
 use super::qvariant::QVariant; // 773
 // <= use block end
 
@@ -34,88 +36,86 @@ extern {
   fn QJsonValuePtr_Class_Size() -> c_int;
   fn QJsonValue_Class_Size() -> c_int;
   // proto:  QJsonObject QJsonValue::toObject();
-  fn _ZNK10QJsonValue8toObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK10QJsonValue8toObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QJsonValue::isDouble();
-  fn _ZNK10QJsonValue8isDoubleEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK10QJsonValue8isDoubleEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QJsonValue::QJsonValue(const QString & s);
-  fn _ZN10QJsonValueC2ERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN10QJsonValueC2ERK7QString(arg0: *mut c_void) -> u64;
   // proto:  int QJsonValue::toInt(int defaultValue);
-  fn _ZNK10QJsonValue5toIntEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
-  // proto:  void QJsonValue::QJsonValue(const void * );
-  fn _ZN10QJsonValueC2EPKv(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK10QJsonValue5toIntEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
   // proto:  QJsonArray QJsonValue::toArray();
-  fn _ZNK10QJsonValue7toArrayEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK10QJsonValue7toArrayEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QJsonValue::isArray();
-  fn _ZNK10QJsonValue7isArrayEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK10QJsonValue7isArrayEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QJsonValue::QJsonValue(const char * s);
-  fn _ZN10QJsonValueC2EPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_char);
+  fn C_ZN10QJsonValueC2EPKc(arg0: *mut c_char) -> u64;
   // proto:  QString QJsonValue::toString(const QString & defaultValue);
-  fn _ZNK10QJsonValue8toStringERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZNK10QJsonValue8toStringERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  double QJsonValue::toDouble(double defaultValue);
-  fn _ZNK10QJsonValue8toDoubleEd(qthis: u64 /* *mut c_void*/, arg0: c_double) -> c_double;
+  fn C_ZNK10QJsonValue8toDoubleEd(qthis: u64 /* *mut c_void*/, arg0: c_double) -> c_double;
   // proto:  void QJsonValue::~QJsonValue();
-  fn _ZN10QJsonValueD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN10QJsonValueD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QVariant QJsonValue::toVariant();
-  fn _ZNK10QJsonValue9toVariantEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK10QJsonValue9toVariantEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QJsonValue::isObject();
-  fn _ZNK10QJsonValue8isObjectEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK10QJsonValue8isObjectEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto: static QJsonValue QJsonValue::fromVariant(const QVariant & variant);
-  fn _ZN10QJsonValue11fromVariantERK8QVariant(arg0: *mut c_void);
+  fn C_ZN10QJsonValue11fromVariantERK8QVariant(arg0: *mut c_void) -> *mut c_void;
   // proto:  bool QJsonValue::toBool(bool defaultValue);
-  fn _ZNK10QJsonValue6toBoolEb(qthis: u64 /* *mut c_void*/, arg0: c_char) -> c_char;
+  fn C_ZNK10QJsonValue6toBoolEb(qthis: u64 /* *mut c_void*/, arg0: c_char) -> c_char;
   // proto:  void QJsonValue::QJsonValue(double n);
-  fn _ZN10QJsonValueC2Ed(qthis: u64 /* *mut c_void*/, arg0: c_double);
+  fn C_ZN10QJsonValueC2Ed(arg0: c_double) -> u64;
   // proto:  bool QJsonValue::isBool();
-  fn _ZNK10QJsonValue6isBoolEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK10QJsonValue6isBoolEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QJsonValue::QJsonValue(bool b);
-  fn _ZN10QJsonValueC2Eb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN10QJsonValueC2Eb(arg0: c_char) -> u64;
   // proto:  bool QJsonValue::isUndefined();
-  fn _ZNK10QJsonValue11isUndefinedEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK10QJsonValue11isUndefinedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QJsonValue::isNull();
-  fn _ZNK10QJsonValue6isNullEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK10QJsonValue6isNullEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QJsonValue::isString();
-  fn _ZNK10QJsonValue8isStringEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK10QJsonValue8isStringEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QJsonValue::QJsonValue(int n);
-  fn _ZN10QJsonValueC2Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN10QJsonValueC2Ei(arg0: c_int) -> u64;
   // proto:  void QJsonValue::QJsonValue(qint64 n);
-  fn _ZN10QJsonValueC2Ex(qthis: u64 /* *mut c_void*/, arg0: c_longlong);
+  fn C_ZN10QJsonValueC2Ex(arg0: c_longlong) -> u64;
   fn QJsonValueRef_Class_Size() -> c_int;
   // proto:  QJsonArray QJsonValueRef::toArray();
-  fn _ZNK13QJsonValueRef7toArrayEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK13QJsonValueRef7toArrayEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QJsonObject QJsonValueRef::toObject();
-  fn _ZNK13QJsonValueRef8toObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK13QJsonValueRef8toObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QJsonValueRef::isBool();
-  fn _ZNK13QJsonValueRef6isBoolEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK13QJsonValueRef6isBoolEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QJsonValueRef::isDouble();
-  fn _ZNK13QJsonValueRef8isDoubleEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK13QJsonValueRef8isDoubleEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  double QJsonValueRef::toDouble();
-  fn _ZNK13QJsonValueRef8toDoubleEv(qthis: u64 /* *mut c_void*/) -> c_double;
+  fn C_ZNK13QJsonValueRef8toDoubleEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  bool QJsonValueRef::toBool(bool defaultValue);
-  fn _ZNK13QJsonValueRef6toBoolEb(qthis: u64 /* *mut c_void*/, arg0: c_char) -> c_char;
+  fn C_ZNK13QJsonValueRef6toBoolEb(qthis: u64 /* *mut c_void*/, arg0: c_char) -> c_char;
   // proto:  double QJsonValueRef::toDouble(double defaultValue);
-  fn _ZNK13QJsonValueRef8toDoubleEd(qthis: u64 /* *mut c_void*/, arg0: c_double) -> c_double;
+  fn C_ZNK13QJsonValueRef8toDoubleEd(qthis: u64 /* *mut c_void*/, arg0: c_double) -> c_double;
   // proto:  bool QJsonValueRef::toBool();
-  fn _ZNK13QJsonValueRef6toBoolEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK13QJsonValueRef6toBoolEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QVariant QJsonValueRef::toVariant();
-  fn _ZNK13QJsonValueRef9toVariantEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK13QJsonValueRef9toVariantEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QJsonValueRef::toString(const QString & defaultValue);
-  fn _ZNK13QJsonValueRef8toStringERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZNK13QJsonValueRef8toStringERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  bool QJsonValueRef::isObject();
-  fn _ZNK13QJsonValueRef8isObjectEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK13QJsonValueRef8isObjectEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QJsonValueRef::isString();
-  fn _ZNK13QJsonValueRef8isStringEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK13QJsonValueRef8isStringEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QString QJsonValueRef::toString();
-  fn _ZNK13QJsonValueRef8toStringEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK13QJsonValueRef8toStringEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QJsonValueRef::toInt(int defaultValue);
-  fn _ZNK13QJsonValueRef5toIntEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
+  fn C_ZNK13QJsonValueRef5toIntEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
   // proto:  bool QJsonValueRef::isArray();
-  fn _ZNK13QJsonValueRef7isArrayEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK13QJsonValueRef7isArrayEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QJsonValueRef::isNull();
-  fn _ZNK13QJsonValueRef6isNullEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK13QJsonValueRef6isNullEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  int QJsonValueRef::toInt();
-  fn _ZNK13QJsonValueRef5toIntEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK13QJsonValueRef5toIntEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QJsonValueRef::isUndefined();
-  fn _ZNK13QJsonValueRef11isUndefinedEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK13QJsonValueRef11isUndefinedEv(qthis: u64 /* *mut c_void*/) -> c_char;
 } // <= ext block end
 
 // body block begin =>
@@ -175,11 +175,13 @@ pub trait QJsonValue_toObject<RetType> {
 }
 
   // proto:  QJsonObject QJsonValue::toObject();
-impl<'a> /*trait*/ QJsonValue_toObject<()> for () {
-  fn toObject(self , rsthis: & QJsonValue) -> () {
+impl<'a> /*trait*/ QJsonValue_toObject<QJsonObject> for () {
+  fn toObject(self , rsthis: & QJsonValue) -> QJsonObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QJsonValue8toObjectEv()};
-     unsafe {_ZNK10QJsonValue8toObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QJsonValue8toObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QJsonObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -201,7 +203,7 @@ impl<'a> /*trait*/ QJsonValue_isDouble<i8> for () {
   fn isDouble(self , rsthis: & QJsonValue) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QJsonValue8isDoubleEv()};
-    let mut ret = unsafe {_ZNK10QJsonValue8isDoubleEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QJsonValue8isDoubleEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -228,8 +230,7 @@ impl<'a> /*trait*/ QJsonValue_new for (&'a QString) {
     let ctysz: c_int = unsafe{QJsonValue_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN10QJsonValueC2ERK7QString(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN10QJsonValueC2ERK7QString(arg0)};
     let rsthis = QJsonValue{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -254,24 +255,8 @@ impl<'a> /*trait*/ QJsonValue_toInt<i32> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QJsonValue5toIntEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZNK10QJsonValue5toIntEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK10QJsonValue5toIntEi(rsthis.qclsinst, arg0)};
     return ret as i32;
-    // return 1;
-  }
-}
-
-  // proto:  void QJsonValue::QJsonValue(const void * );
-impl<'a> /*trait*/ QJsonValue_new for (*mut c_void) {
-  fn new(self) -> QJsonValue {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QJsonValueC2EPKv()};
-    let ctysz: c_int = unsafe{QJsonValue_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self  as *mut c_void;
-    unsafe {_ZN10QJsonValueC2EPKv(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QJsonValue{qclsinst: qthis, ..Default::default()};
-    return rsthis;
     // return 1;
   }
 }
@@ -289,11 +274,13 @@ pub trait QJsonValue_toArray<RetType> {
 }
 
   // proto:  QJsonArray QJsonValue::toArray();
-impl<'a> /*trait*/ QJsonValue_toArray<()> for () {
-  fn toArray(self , rsthis: & QJsonValue) -> () {
+impl<'a> /*trait*/ QJsonValue_toArray<QJsonArray> for () {
+  fn toArray(self , rsthis: & QJsonValue) -> QJsonArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QJsonValue7toArrayEv()};
-     unsafe {_ZNK10QJsonValue7toArrayEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QJsonValue7toArrayEv(rsthis.qclsinst)};
+    let mut ret1 = QJsonArray::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -315,7 +302,7 @@ impl<'a> /*trait*/ QJsonValue_isArray<i8> for () {
   fn isArray(self , rsthis: & QJsonValue) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QJsonValue7isArrayEv()};
-    let mut ret = unsafe {_ZNK10QJsonValue7isArrayEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QJsonValue7isArrayEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -329,8 +316,7 @@ impl<'a> /*trait*/ QJsonValue_new for (&'a  String) {
     let ctysz: c_int = unsafe{QJsonValue_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.as_ptr()  as *mut c_char;
-    unsafe {_ZN10QJsonValueC2EPKc(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN10QJsonValueC2EPKc(arg0)};
     let rsthis = QJsonValue{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -355,7 +341,7 @@ impl<'a> /*trait*/ QJsonValue_toString<QString> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QJsonValue8toStringERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK10QJsonValue8toStringERK7QString(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK10QJsonValue8toStringERK7QString(rsthis.qclsinst, arg0)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -380,7 +366,7 @@ impl<'a> /*trait*/ QJsonValue_toDouble<f64> for (f64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QJsonValue8toDoubleEd()};
     let arg0 = self  as c_double;
-    let mut ret = unsafe {_ZNK10QJsonValue8toDoubleEd(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK10QJsonValue8toDoubleEd(rsthis.qclsinst, arg0)};
     return ret as f64;
     // return 1;
   }
@@ -403,7 +389,7 @@ impl<'a> /*trait*/ QJsonValue_free<()> for () {
   fn free(self , rsthis: & QJsonValue) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QJsonValueD2Ev()};
-     unsafe {_ZN10QJsonValueD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN10QJsonValueD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -425,7 +411,7 @@ impl<'a> /*trait*/ QJsonValue_toVariant<QVariant> for () {
   fn toVariant(self , rsthis: & QJsonValue) -> QVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QJsonValue9toVariantEv()};
-    let mut ret = unsafe {_ZNK10QJsonValue9toVariantEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QJsonValue9toVariantEv(rsthis.qclsinst)};
     let mut ret1 = QVariant::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -449,7 +435,7 @@ impl<'a> /*trait*/ QJsonValue_isObject<i8> for () {
   fn isObject(self , rsthis: & QJsonValue) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QJsonValue8isObjectEv()};
-    let mut ret = unsafe {_ZNK10QJsonValue8isObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QJsonValue8isObjectEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -468,12 +454,14 @@ pub trait QJsonValue_fromVariant_s<RetType> {
 }
 
   // proto: static QJsonValue QJsonValue::fromVariant(const QVariant & variant);
-impl<'a> /*trait*/ QJsonValue_fromVariant_s<()> for (&'a QVariant) {
-  fn fromVariant_s(self ) -> () {
+impl<'a> /*trait*/ QJsonValue_fromVariant_s<QJsonValue> for (&'a QVariant) {
+  fn fromVariant_s(self ) -> QJsonValue {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QJsonValue11fromVariantERK8QVariant()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN10QJsonValue11fromVariantERK8QVariant(arg0)};
+    let mut ret = unsafe {C_ZN10QJsonValue11fromVariantERK8QVariant(arg0)};
+    let mut ret1 = QJsonValue::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -496,7 +484,7 @@ impl<'a> /*trait*/ QJsonValue_toBool<i8> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QJsonValue6toBoolEb()};
     let arg0 = self  as c_char;
-    let mut ret = unsafe {_ZNK10QJsonValue6toBoolEb(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK10QJsonValue6toBoolEb(rsthis.qclsinst, arg0)};
     return ret as i8;
     // return 1;
   }
@@ -510,8 +498,7 @@ impl<'a> /*trait*/ QJsonValue_new for (f64) {
     let ctysz: c_int = unsafe{QJsonValue_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_double;
-    unsafe {_ZN10QJsonValueC2Ed(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN10QJsonValueC2Ed(arg0)};
     let rsthis = QJsonValue{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -535,7 +522,7 @@ impl<'a> /*trait*/ QJsonValue_isBool<i8> for () {
   fn isBool(self , rsthis: & QJsonValue) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QJsonValue6isBoolEv()};
-    let mut ret = unsafe {_ZNK10QJsonValue6isBoolEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QJsonValue6isBoolEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -549,8 +536,7 @@ impl<'a> /*trait*/ QJsonValue_new for (i8) {
     let ctysz: c_int = unsafe{QJsonValue_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_char;
-    unsafe {_ZN10QJsonValueC2Eb(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN10QJsonValueC2Eb(arg0)};
     let rsthis = QJsonValue{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -574,7 +560,7 @@ impl<'a> /*trait*/ QJsonValue_isUndefined<i8> for () {
   fn isUndefined(self , rsthis: & QJsonValue) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QJsonValue11isUndefinedEv()};
-    let mut ret = unsafe {_ZNK10QJsonValue11isUndefinedEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QJsonValue11isUndefinedEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -597,7 +583,7 @@ impl<'a> /*trait*/ QJsonValue_isNull<i8> for () {
   fn isNull(self , rsthis: & QJsonValue) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QJsonValue6isNullEv()};
-    let mut ret = unsafe {_ZNK10QJsonValue6isNullEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QJsonValue6isNullEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -620,7 +606,7 @@ impl<'a> /*trait*/ QJsonValue_isString<i8> for () {
   fn isString(self , rsthis: & QJsonValue) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QJsonValue8isStringEv()};
-    let mut ret = unsafe {_ZNK10QJsonValue8isStringEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QJsonValue8isStringEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -634,8 +620,7 @@ impl<'a> /*trait*/ QJsonValue_new for (i32) {
     let ctysz: c_int = unsafe{QJsonValue_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
-    unsafe {_ZN10QJsonValueC2Ei(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN10QJsonValueC2Ei(arg0)};
     let rsthis = QJsonValue{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -650,8 +635,7 @@ impl<'a> /*trait*/ QJsonValue_new for (i64) {
     let ctysz: c_int = unsafe{QJsonValue_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_longlong;
-    unsafe {_ZN10QJsonValueC2Ex(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN10QJsonValueC2Ex(arg0)};
     let rsthis = QJsonValue{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -676,11 +660,13 @@ pub trait QJsonValueRef_toArray<RetType> {
 }
 
   // proto:  QJsonArray QJsonValueRef::toArray();
-impl<'a> /*trait*/ QJsonValueRef_toArray<()> for () {
-  fn toArray(self , rsthis: & QJsonValueRef) -> () {
+impl<'a> /*trait*/ QJsonValueRef_toArray<QJsonArray> for () {
+  fn toArray(self , rsthis: & QJsonValueRef) -> QJsonArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QJsonValueRef7toArrayEv()};
-     unsafe {_ZNK13QJsonValueRef7toArrayEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QJsonValueRef7toArrayEv(rsthis.qclsinst)};
+    let mut ret1 = QJsonArray::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -698,11 +684,13 @@ pub trait QJsonValueRef_toObject<RetType> {
 }
 
   // proto:  QJsonObject QJsonValueRef::toObject();
-impl<'a> /*trait*/ QJsonValueRef_toObject<()> for () {
-  fn toObject(self , rsthis: & QJsonValueRef) -> () {
+impl<'a> /*trait*/ QJsonValueRef_toObject<QJsonObject> for () {
+  fn toObject(self , rsthis: & QJsonValueRef) -> QJsonObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QJsonValueRef8toObjectEv()};
-     unsafe {_ZNK13QJsonValueRef8toObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QJsonValueRef8toObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QJsonObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -724,7 +712,7 @@ impl<'a> /*trait*/ QJsonValueRef_isBool<i8> for () {
   fn isBool(self , rsthis: & QJsonValueRef) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QJsonValueRef6isBoolEv()};
-    let mut ret = unsafe {_ZNK13QJsonValueRef6isBoolEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QJsonValueRef6isBoolEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -747,7 +735,7 @@ impl<'a> /*trait*/ QJsonValueRef_isDouble<i8> for () {
   fn isDouble(self , rsthis: & QJsonValueRef) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QJsonValueRef8isDoubleEv()};
-    let mut ret = unsafe {_ZNK13QJsonValueRef8isDoubleEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QJsonValueRef8isDoubleEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -770,7 +758,7 @@ impl<'a> /*trait*/ QJsonValueRef_toDouble<f64> for () {
   fn toDouble(self , rsthis: & QJsonValueRef) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QJsonValueRef8toDoubleEv()};
-    let mut ret = unsafe {_ZNK13QJsonValueRef8toDoubleEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QJsonValueRef8toDoubleEv(rsthis.qclsinst)};
     return ret as f64;
     // return 1;
   }
@@ -794,7 +782,7 @@ impl<'a> /*trait*/ QJsonValueRef_toBool<i8> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QJsonValueRef6toBoolEb()};
     let arg0 = self  as c_char;
-    let mut ret = unsafe {_ZNK13QJsonValueRef6toBoolEb(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK13QJsonValueRef6toBoolEb(rsthis.qclsinst, arg0)};
     return ret as i8;
     // return 1;
   }
@@ -806,7 +794,7 @@ impl<'a> /*trait*/ QJsonValueRef_toDouble<f64> for (f64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QJsonValueRef8toDoubleEd()};
     let arg0 = self  as c_double;
-    let mut ret = unsafe {_ZNK13QJsonValueRef8toDoubleEd(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK13QJsonValueRef8toDoubleEd(rsthis.qclsinst, arg0)};
     return ret as f64;
     // return 1;
   }
@@ -817,7 +805,7 @@ impl<'a> /*trait*/ QJsonValueRef_toBool<i8> for () {
   fn toBool(self , rsthis: & QJsonValueRef) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QJsonValueRef6toBoolEv()};
-    let mut ret = unsafe {_ZNK13QJsonValueRef6toBoolEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QJsonValueRef6toBoolEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -840,7 +828,7 @@ impl<'a> /*trait*/ QJsonValueRef_toVariant<QVariant> for () {
   fn toVariant(self , rsthis: & QJsonValueRef) -> QVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QJsonValueRef9toVariantEv()};
-    let mut ret = unsafe {_ZNK13QJsonValueRef9toVariantEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QJsonValueRef9toVariantEv(rsthis.qclsinst)};
     let mut ret1 = QVariant::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -865,7 +853,7 @@ impl<'a> /*trait*/ QJsonValueRef_toString<QString> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QJsonValueRef8toStringERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK13QJsonValueRef8toStringERK7QString(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK13QJsonValueRef8toStringERK7QString(rsthis.qclsinst, arg0)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -889,7 +877,7 @@ impl<'a> /*trait*/ QJsonValueRef_isObject<i8> for () {
   fn isObject(self , rsthis: & QJsonValueRef) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QJsonValueRef8isObjectEv()};
-    let mut ret = unsafe {_ZNK13QJsonValueRef8isObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QJsonValueRef8isObjectEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -912,7 +900,7 @@ impl<'a> /*trait*/ QJsonValueRef_isString<i8> for () {
   fn isString(self , rsthis: & QJsonValueRef) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QJsonValueRef8isStringEv()};
-    let mut ret = unsafe {_ZNK13QJsonValueRef8isStringEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QJsonValueRef8isStringEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -923,7 +911,7 @@ impl<'a> /*trait*/ QJsonValueRef_toString<QString> for () {
   fn toString(self , rsthis: & QJsonValueRef) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QJsonValueRef8toStringEv()};
-    let mut ret = unsafe {_ZNK13QJsonValueRef8toStringEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QJsonValueRef8toStringEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -948,7 +936,7 @@ impl<'a> /*trait*/ QJsonValueRef_toInt<i32> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QJsonValueRef5toIntEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZNK13QJsonValueRef5toIntEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK13QJsonValueRef5toIntEi(rsthis.qclsinst, arg0)};
     return ret as i32;
     // return 1;
   }
@@ -971,7 +959,7 @@ impl<'a> /*trait*/ QJsonValueRef_isArray<i8> for () {
   fn isArray(self , rsthis: & QJsonValueRef) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QJsonValueRef7isArrayEv()};
-    let mut ret = unsafe {_ZNK13QJsonValueRef7isArrayEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QJsonValueRef7isArrayEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -994,7 +982,7 @@ impl<'a> /*trait*/ QJsonValueRef_isNull<i8> for () {
   fn isNull(self , rsthis: & QJsonValueRef) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QJsonValueRef6isNullEv()};
-    let mut ret = unsafe {_ZNK13QJsonValueRef6isNullEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QJsonValueRef6isNullEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -1005,7 +993,7 @@ impl<'a> /*trait*/ QJsonValueRef_toInt<i32> for () {
   fn toInt(self , rsthis: & QJsonValueRef) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QJsonValueRef5toIntEv()};
-    let mut ret = unsafe {_ZNK13QJsonValueRef5toIntEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QJsonValueRef5toIntEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -1028,7 +1016,7 @@ impl<'a> /*trait*/ QJsonValueRef_isUndefined<i8> for () {
   fn isUndefined(self , rsthis: & QJsonValueRef) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QJsonValueRef11isUndefinedEv()};
-    let mut ret = unsafe {_ZNK13QJsonValueRef11isUndefinedEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QJsonValueRef11isUndefinedEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }

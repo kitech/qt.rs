@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtCore/qelapsedtimer.h
 // dst-file: /src/core/qelapsedtimer.rs
 //
@@ -30,29 +30,29 @@ use std::ops::Deref;
 extern {
   fn QElapsedTimer_Class_Size() -> c_int;
   // proto:  void QElapsedTimer::start();
-  fn _ZN13QElapsedTimer5startEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN13QElapsedTimer5startEv(qthis: u64 /* *mut c_void*/);
   // proto:  qint64 QElapsedTimer::nsecsElapsed();
-  fn _ZNK13QElapsedTimer12nsecsElapsedEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
+  fn C_ZNK13QElapsedTimer12nsecsElapsedEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
   // proto:  void QElapsedTimer::invalidate();
-  fn _ZN13QElapsedTimer10invalidateEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN13QElapsedTimer10invalidateEv(qthis: u64 /* *mut c_void*/);
   // proto: static bool QElapsedTimer::isMonotonic();
-  fn _ZN13QElapsedTimer11isMonotonicEv() -> c_char;
+  fn C_ZN13QElapsedTimer11isMonotonicEv() -> c_char;
   // proto:  void QElapsedTimer::QElapsedTimer();
-  fn _ZN13QElapsedTimerC2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN13QElapsedTimerC2Ev() -> u64;
   // proto:  qint64 QElapsedTimer::msecsTo(const QElapsedTimer & other);
-  fn _ZNK13QElapsedTimer7msecsToERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_longlong;
+  fn C_ZNK13QElapsedTimer7msecsToERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_longlong;
   // proto:  qint64 QElapsedTimer::msecsSinceReference();
-  fn _ZNK13QElapsedTimer19msecsSinceReferenceEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
+  fn C_ZNK13QElapsedTimer19msecsSinceReferenceEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
   // proto:  bool QElapsedTimer::hasExpired(qint64 timeout);
-  fn _ZNK13QElapsedTimer10hasExpiredEx(qthis: u64 /* *mut c_void*/, arg0: c_longlong) -> c_char;
+  fn C_ZNK13QElapsedTimer10hasExpiredEx(qthis: u64 /* *mut c_void*/, arg0: c_longlong) -> c_char;
   // proto:  qint64 QElapsedTimer::restart();
-  fn _ZN13QElapsedTimer7restartEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
+  fn C_ZN13QElapsedTimer7restartEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
   // proto:  bool QElapsedTimer::isValid();
-  fn _ZNK13QElapsedTimer7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK13QElapsedTimer7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  qint64 QElapsedTimer::secsTo(const QElapsedTimer & other);
-  fn _ZNK13QElapsedTimer6secsToERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_longlong;
+  fn C_ZNK13QElapsedTimer6secsToERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_longlong;
   // proto:  qint64 QElapsedTimer::elapsed();
-  fn _ZNK13QElapsedTimer7elapsedEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
+  fn C_ZNK13QElapsedTimer7elapsedEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
 } // <= ext block end
 
 // body block begin =>
@@ -85,7 +85,7 @@ impl<'a> /*trait*/ QElapsedTimer_start<()> for () {
   fn start(self , rsthis: & QElapsedTimer) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QElapsedTimer5startEv()};
-     unsafe {_ZN13QElapsedTimer5startEv(rsthis.qclsinst)};
+     unsafe {C_ZN13QElapsedTimer5startEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -107,7 +107,7 @@ impl<'a> /*trait*/ QElapsedTimer_nsecsElapsed<i64> for () {
   fn nsecsElapsed(self , rsthis: & QElapsedTimer) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QElapsedTimer12nsecsElapsedEv()};
-    let mut ret = unsafe {_ZNK13QElapsedTimer12nsecsElapsedEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QElapsedTimer12nsecsElapsedEv(rsthis.qclsinst)};
     return ret as i64;
     // return 1;
   }
@@ -130,7 +130,7 @@ impl<'a> /*trait*/ QElapsedTimer_invalidate<()> for () {
   fn invalidate(self , rsthis: & QElapsedTimer) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QElapsedTimer10invalidateEv()};
-     unsafe {_ZN13QElapsedTimer10invalidateEv(rsthis.qclsinst)};
+     unsafe {C_ZN13QElapsedTimer10invalidateEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -152,7 +152,7 @@ impl<'a> /*trait*/ QElapsedTimer_isMonotonic_s<i8> for () {
   fn isMonotonic_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QElapsedTimer11isMonotonicEv()};
-    let mut ret = unsafe {_ZN13QElapsedTimer11isMonotonicEv()};
+    let mut ret = unsafe {C_ZN13QElapsedTimer11isMonotonicEv()};
     return ret as i8;
     // return 1;
   }
@@ -178,8 +178,7 @@ impl<'a> /*trait*/ QElapsedTimer_new for () {
     // unsafe{_ZN13QElapsedTimerC2Ev()};
     let ctysz: c_int = unsafe{QElapsedTimer_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    unsafe {_ZN13QElapsedTimerC2Ev(qthis_ph)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN13QElapsedTimerC2Ev()};
     let rsthis = QElapsedTimer{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -204,7 +203,7 @@ impl<'a> /*trait*/ QElapsedTimer_msecsTo<i64> for (&'a QElapsedTimer) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QElapsedTimer7msecsToERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK13QElapsedTimer7msecsToERKS_(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK13QElapsedTimer7msecsToERKS_(rsthis.qclsinst, arg0)};
     return ret as i64;
     // return 1;
   }
@@ -227,7 +226,7 @@ impl<'a> /*trait*/ QElapsedTimer_msecsSinceReference<i64> for () {
   fn msecsSinceReference(self , rsthis: & QElapsedTimer) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QElapsedTimer19msecsSinceReferenceEv()};
-    let mut ret = unsafe {_ZNK13QElapsedTimer19msecsSinceReferenceEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QElapsedTimer19msecsSinceReferenceEv(rsthis.qclsinst)};
     return ret as i64;
     // return 1;
   }
@@ -251,7 +250,7 @@ impl<'a> /*trait*/ QElapsedTimer_hasExpired<i8> for (i64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QElapsedTimer10hasExpiredEx()};
     let arg0 = self  as c_longlong;
-    let mut ret = unsafe {_ZNK13QElapsedTimer10hasExpiredEx(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK13QElapsedTimer10hasExpiredEx(rsthis.qclsinst, arg0)};
     return ret as i8;
     // return 1;
   }
@@ -274,7 +273,7 @@ impl<'a> /*trait*/ QElapsedTimer_restart<i64> for () {
   fn restart(self , rsthis: & QElapsedTimer) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QElapsedTimer7restartEv()};
-    let mut ret = unsafe {_ZN13QElapsedTimer7restartEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZN13QElapsedTimer7restartEv(rsthis.qclsinst)};
     return ret as i64;
     // return 1;
   }
@@ -297,7 +296,7 @@ impl<'a> /*trait*/ QElapsedTimer_isValid<i8> for () {
   fn isValid(self , rsthis: & QElapsedTimer) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QElapsedTimer7isValidEv()};
-    let mut ret = unsafe {_ZNK13QElapsedTimer7isValidEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QElapsedTimer7isValidEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -321,7 +320,7 @@ impl<'a> /*trait*/ QElapsedTimer_secsTo<i64> for (&'a QElapsedTimer) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QElapsedTimer6secsToERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK13QElapsedTimer6secsToERKS_(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK13QElapsedTimer6secsToERKS_(rsthis.qclsinst, arg0)};
     return ret as i64;
     // return 1;
   }
@@ -344,7 +343,7 @@ impl<'a> /*trait*/ QElapsedTimer_elapsed<i64> for () {
   fn elapsed(self , rsthis: & QElapsedTimer) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QElapsedTimer7elapsedEv()};
-    let mut ret = unsafe {_ZNK13QElapsedTimer7elapsedEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QElapsedTimer7elapsedEv(rsthis.qclsinst)};
     return ret as i64;
     // return 1;
   }

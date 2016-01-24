@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtCore/qflags.h
 // dst-file: /src/core/qflags.rs
 //
@@ -30,16 +30,16 @@ use std::ops::Deref;
 extern {
   fn QIncompatibleFlag_Class_Size() -> c_int;
   // proto:  void QIncompatibleFlag::QIncompatibleFlag(int i);
-  fn _ZN17QIncompatibleFlagC2Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN17QIncompatibleFlagC2Ei(arg0: c_int) -> u64;
   fn QFlag_Class_Size() -> c_int;
   // proto:  void QFlag::QFlag(ushort ai);
-  fn _ZN5QFlagC2Et(qthis: u64 /* *mut c_void*/, arg0: c_ushort);
+  fn C_ZN5QFlagC2Et(arg0: c_ushort) -> u64;
   // proto:  void QFlag::QFlag(int ai);
-  fn _ZN5QFlagC2Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN5QFlagC2Ei(arg0: c_int) -> u64;
   // proto:  void QFlag::QFlag(short ai);
-  fn _ZN5QFlagC2Es(qthis: u64 /* *mut c_void*/, arg0: c_short);
+  fn C_ZN5QFlagC2Es(arg0: c_short) -> u64;
   // proto:  void QFlag::QFlag(uint ai);
-  fn _ZN5QFlagC2Ej(qthis: u64 /* *mut c_void*/, arg0: c_uint);
+  fn C_ZN5QFlagC2Ej(arg0: c_uint) -> u64;
 } // <= ext block end
 
 // body block begin =>
@@ -83,8 +83,7 @@ impl<'a> /*trait*/ QIncompatibleFlag_new for (i32) {
     let ctysz: c_int = unsafe{QIncompatibleFlag_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
-    unsafe {_ZN17QIncompatibleFlagC2Ei(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN17QIncompatibleFlagC2Ei(arg0)};
     let rsthis = QIncompatibleFlag{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -117,8 +116,7 @@ impl<'a> /*trait*/ QFlag_new for (u16) {
     let ctysz: c_int = unsafe{QFlag_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_ushort;
-    unsafe {_ZN5QFlagC2Et(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN5QFlagC2Et(arg0)};
     let rsthis = QFlag{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -133,8 +131,7 @@ impl<'a> /*trait*/ QFlag_new for (i32) {
     let ctysz: c_int = unsafe{QFlag_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
-    unsafe {_ZN5QFlagC2Ei(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN5QFlagC2Ei(arg0)};
     let rsthis = QFlag{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -149,8 +146,7 @@ impl<'a> /*trait*/ QFlag_new for (i16) {
     let ctysz: c_int = unsafe{QFlag_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_short;
-    unsafe {_ZN5QFlagC2Es(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN5QFlagC2Es(arg0)};
     let rsthis = QFlag{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -165,8 +161,7 @@ impl<'a> /*trait*/ QFlag_new for (u32) {
     let ctysz: c_int = unsafe{QFlag_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_uint;
-    unsafe {_ZN5QFlagC2Ej(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN5QFlagC2Ej(arg0)};
     let rsthis = QFlag{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

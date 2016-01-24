@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtCore/qresource.h
 // dst-file: /src/core/qresource.rs
 //
@@ -32,39 +32,39 @@ use super::qlocale::QLocale; // 773
 extern {
   fn QResource_Class_Size() -> c_int;
   // proto:  void QResource::QResource(const QString & file, const QLocale & locale);
-  fn _ZN9QResourceC2ERK7QStringRK7QLocale(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN9QResourceC2ERK7QStringRK7QLocale(arg0: *mut c_void, arg1: *mut c_void) -> u64;
   // proto:  QLocale QResource::locale();
-  fn _ZNK9QResource6localeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK9QResource6localeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QResource::setLocale(const QLocale & locale);
-  fn _ZN9QResource9setLocaleERK7QLocale(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QResource9setLocaleERK7QLocale(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static bool QResource::registerResource(const uchar * rccData, const QString & resourceRoot);
-  fn _ZN9QResource16registerResourceEPKhRK7QString(arg0: *mut c_uchar, arg1: *mut c_void) -> c_char;
+  fn C_ZN9QResource16registerResourceEPKhRK7QString(arg0: *mut c_uchar, arg1: *mut c_void) -> c_char;
   // proto:  const uchar * QResource::data();
-  fn _ZNK9QResource4dataEv(qthis: u64 /* *mut c_void*/) -> *mut c_uchar;
+  fn C_ZNK9QResource4dataEv(qthis: u64 /* *mut c_void*/) -> *mut c_uchar;
   // proto: static QStringList QResource::searchPaths();
-  fn _ZN9QResource11searchPathsEv();
+  fn C_ZN9QResource11searchPathsEv();
   // proto:  QString QResource::fileName();
-  fn _ZNK9QResource8fileNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK9QResource8fileNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QResource::absoluteFilePath();
-  fn _ZNK9QResource16absoluteFilePathEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK9QResource16absoluteFilePathEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto: static bool QResource::unregisterResource(const uchar * rccData, const QString & resourceRoot);
-  fn _ZN9QResource18unregisterResourceEPKhRK7QString(arg0: *mut c_uchar, arg1: *mut c_void) -> c_char;
+  fn C_ZN9QResource18unregisterResourceEPKhRK7QString(arg0: *mut c_uchar, arg1: *mut c_void) -> c_char;
   // proto: static bool QResource::registerResource(const QString & rccFilename, const QString & resourceRoot);
-  fn _ZN9QResource16registerResourceERK7QStringS2_(arg0: *mut c_void, arg1: *mut c_void) -> c_char;
+  fn C_ZN9QResource16registerResourceERK7QStringS2_(arg0: *mut c_void, arg1: *mut c_void) -> c_char;
   // proto: static void QResource::addSearchPath(const QString & path);
-  fn _ZN9QResource13addSearchPathERK7QString(arg0: *mut c_void);
+  fn C_ZN9QResource13addSearchPathERK7QString(arg0: *mut c_void);
   // proto:  qint64 QResource::size();
-  fn _ZNK9QResource4sizeEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
+  fn C_ZNK9QResource4sizeEv(qthis: u64 /* *mut c_void*/) -> c_longlong;
   // proto:  void QResource::~QResource();
-  fn _ZN9QResourceD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN9QResourceD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QResource::isValid();
-  fn _ZNK9QResource7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK9QResource7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QResource::setFileName(const QString & file);
-  fn _ZN9QResource11setFileNameERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QResource11setFileNameERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static bool QResource::unregisterResource(const QString & rccFilename, const QString & resourceRoot);
-  fn _ZN9QResource18unregisterResourceERK7QStringS2_(arg0: *mut c_void, arg1: *mut c_void) -> c_char;
+  fn C_ZN9QResource18unregisterResourceERK7QStringS2_(arg0: *mut c_void, arg1: *mut c_void) -> c_char;
   // proto:  bool QResource::isCompressed();
-  fn _ZNK9QResource12isCompressedEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK9QResource12isCompressedEv(qthis: u64 /* *mut c_void*/) -> c_char;
 } // <= ext block end
 
 // body block begin =>
@@ -102,8 +102,7 @@ impl<'a> /*trait*/ QResource_new for (&'a QString, &'a QLocale) {
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    unsafe {_ZN9QResourceC2ERK7QStringRK7QLocale(qthis_ph, arg0, arg1)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN9QResourceC2ERK7QStringRK7QLocale(arg0, arg1)};
     let rsthis = QResource{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -127,7 +126,7 @@ impl<'a> /*trait*/ QResource_locale<QLocale> for () {
   fn locale(self , rsthis: & QResource) -> QLocale {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QResource6localeEv()};
-    let mut ret = unsafe {_ZNK9QResource6localeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QResource6localeEv(rsthis.qclsinst)};
     let mut ret1 = QLocale::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -152,7 +151,7 @@ impl<'a> /*trait*/ QResource_setLocale<()> for (&'a QLocale) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QResource9setLocaleERK7QLocale()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN9QResource9setLocaleERK7QLocale(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QResource9setLocaleERK7QLocale(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -176,7 +175,7 @@ impl<'a> /*trait*/ QResource_registerResource_s<i8> for (&'a  String, &'a QStrin
     // unsafe{_ZN9QResource16registerResourceEPKhRK7QString()};
     let arg0 = self.0.as_ptr()  as *mut c_uchar;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN9QResource16registerResourceEPKhRK7QString(arg0, arg1)};
+    let mut ret = unsafe {C_ZN9QResource16registerResourceEPKhRK7QString(arg0, arg1)};
     return ret as i8;
     // return 1;
   }
@@ -199,7 +198,7 @@ impl<'a> /*trait*/ QResource_data<String> for () {
   fn data(self , rsthis: & QResource) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QResource4dataEv()};
-    let mut ret = unsafe {_ZNK9QResource4dataEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QResource4dataEv(rsthis.qclsinst)};
     let slen = unsafe {strlen(ret as *const i8)} as usize;
     return unsafe{String::from_raw_parts(ret as *mut u8, slen, slen+1)};
     // return 1;
@@ -223,7 +222,7 @@ impl<'a> /*trait*/ QResource_searchPaths_s<()> for () {
   fn searchPaths_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QResource11searchPathsEv()};
-     unsafe {_ZN9QResource11searchPathsEv()};
+     unsafe {C_ZN9QResource11searchPathsEv()};
     // return 1;
   }
 }
@@ -245,7 +244,7 @@ impl<'a> /*trait*/ QResource_fileName<QString> for () {
   fn fileName(self , rsthis: & QResource) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QResource8fileNameEv()};
-    let mut ret = unsafe {_ZNK9QResource8fileNameEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QResource8fileNameEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -269,7 +268,7 @@ impl<'a> /*trait*/ QResource_absoluteFilePath<QString> for () {
   fn absoluteFilePath(self , rsthis: & QResource) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QResource16absoluteFilePathEv()};
-    let mut ret = unsafe {_ZNK9QResource16absoluteFilePathEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QResource16absoluteFilePathEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -295,7 +294,7 @@ impl<'a> /*trait*/ QResource_unregisterResource_s<i8> for (&'a  String, &'a QStr
     // unsafe{_ZN9QResource18unregisterResourceEPKhRK7QString()};
     let arg0 = self.0.as_ptr()  as *mut c_uchar;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN9QResource18unregisterResourceEPKhRK7QString(arg0, arg1)};
+    let mut ret = unsafe {C_ZN9QResource18unregisterResourceEPKhRK7QString(arg0, arg1)};
     return ret as i8;
     // return 1;
   }
@@ -308,7 +307,7 @@ impl<'a> /*trait*/ QResource_registerResource_s<i8> for (&'a QString, &'a QStrin
     // unsafe{_ZN9QResource16registerResourceERK7QStringS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN9QResource16registerResourceERK7QStringS2_(arg0, arg1)};
+    let mut ret = unsafe {C_ZN9QResource16registerResourceERK7QStringS2_(arg0, arg1)};
     return ret as i8;
     // return 1;
   }
@@ -332,7 +331,7 @@ impl<'a> /*trait*/ QResource_addSearchPath_s<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QResource13addSearchPathERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN9QResource13addSearchPathERK7QString(arg0)};
+     unsafe {C_ZN9QResource13addSearchPathERK7QString(arg0)};
     // return 1;
   }
 }
@@ -354,7 +353,7 @@ impl<'a> /*trait*/ QResource_size<i64> for () {
   fn size(self , rsthis: & QResource) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QResource4sizeEv()};
-    let mut ret = unsafe {_ZNK9QResource4sizeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QResource4sizeEv(rsthis.qclsinst)};
     return ret as i64;
     // return 1;
   }
@@ -377,7 +376,7 @@ impl<'a> /*trait*/ QResource_free<()> for () {
   fn free(self , rsthis: & QResource) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QResourceD2Ev()};
-     unsafe {_ZN9QResourceD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN9QResourceD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -399,7 +398,7 @@ impl<'a> /*trait*/ QResource_isValid<i8> for () {
   fn isValid(self , rsthis: & QResource) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QResource7isValidEv()};
-    let mut ret = unsafe {_ZNK9QResource7isValidEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QResource7isValidEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -423,7 +422,7 @@ impl<'a> /*trait*/ QResource_setFileName<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QResource11setFileNameERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN9QResource11setFileNameERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QResource11setFileNameERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -435,7 +434,7 @@ impl<'a> /*trait*/ QResource_unregisterResource_s<i8> for (&'a QString, &'a QStr
     // unsafe{_ZN9QResource18unregisterResourceERK7QStringS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN9QResource18unregisterResourceERK7QStringS2_(arg0, arg1)};
+    let mut ret = unsafe {C_ZN9QResource18unregisterResourceERK7QStringS2_(arg0, arg1)};
     return ret as i8;
     // return 1;
   }
@@ -458,7 +457,7 @@ impl<'a> /*trait*/ QResource_isCompressed<i8> for () {
   fn isCompressed(self , rsthis: & QResource) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QResource12isCompressedEv()};
-    let mut ret = unsafe {_ZNK9QResource12isCompressedEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QResource12isCompressedEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }

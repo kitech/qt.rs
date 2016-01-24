@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtCore/qtemporarydir.h
 // dst-file: /src/core/qtemporarydir.rs
 //
@@ -31,23 +31,21 @@ use super::qstring::QString; // 773
 extern {
   fn QTemporaryDir_Class_Size() -> c_int;
   // proto:  bool QTemporaryDir::remove();
-  fn _ZN13QTemporaryDir6removeEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZN13QTemporaryDir6removeEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QTemporaryDir::autoRemove();
-  fn _ZNK13QTemporaryDir10autoRemoveEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK13QTemporaryDir10autoRemoveEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QTemporaryDir::isValid();
-  fn _ZNK13QTemporaryDir7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK13QTemporaryDir7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QTemporaryDir::setAutoRemove(bool b);
-  fn _ZN13QTemporaryDir13setAutoRemoveEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN13QTemporaryDir13setAutoRemoveEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QTemporaryDir::~QTemporaryDir();
-  fn _ZN13QTemporaryDirD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN13QTemporaryDirD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QTemporaryDir::QTemporaryDir();
-  fn _ZN13QTemporaryDirC2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN13QTemporaryDirC2Ev() -> u64;
   // proto:  void QTemporaryDir::QTemporaryDir(const QString & templateName);
-  fn _ZN13QTemporaryDirC2ERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN13QTemporaryDirC2ERK7QString(arg0: *mut c_void) -> u64;
   // proto:  QString QTemporaryDir::path();
-  fn _ZNK13QTemporaryDir4pathEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QTemporaryDir::QTemporaryDir(const QTemporaryDir & );
-  fn _ZN13QTemporaryDirC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK13QTemporaryDir4pathEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
 } // <= ext block end
 
 // body block begin =>
@@ -80,7 +78,7 @@ impl<'a> /*trait*/ QTemporaryDir_remove<i8> for () {
   fn remove(self , rsthis: & QTemporaryDir) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTemporaryDir6removeEv()};
-    let mut ret = unsafe {_ZN13QTemporaryDir6removeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZN13QTemporaryDir6removeEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -103,7 +101,7 @@ impl<'a> /*trait*/ QTemporaryDir_autoRemove<i8> for () {
   fn autoRemove(self , rsthis: & QTemporaryDir) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTemporaryDir10autoRemoveEv()};
-    let mut ret = unsafe {_ZNK13QTemporaryDir10autoRemoveEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QTemporaryDir10autoRemoveEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -126,7 +124,7 @@ impl<'a> /*trait*/ QTemporaryDir_isValid<i8> for () {
   fn isValid(self , rsthis: & QTemporaryDir) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTemporaryDir7isValidEv()};
-    let mut ret = unsafe {_ZNK13QTemporaryDir7isValidEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QTemporaryDir7isValidEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -150,7 +148,7 @@ impl<'a> /*trait*/ QTemporaryDir_setAutoRemove<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTemporaryDir13setAutoRemoveEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN13QTemporaryDir13setAutoRemoveEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN13QTemporaryDir13setAutoRemoveEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -172,7 +170,7 @@ impl<'a> /*trait*/ QTemporaryDir_free<()> for () {
   fn free(self , rsthis: & QTemporaryDir) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTemporaryDirD2Ev()};
-     unsafe {_ZN13QTemporaryDirD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN13QTemporaryDirD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -197,8 +195,7 @@ impl<'a> /*trait*/ QTemporaryDir_new for () {
     // unsafe{_ZN13QTemporaryDirC2Ev()};
     let ctysz: c_int = unsafe{QTemporaryDir_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    unsafe {_ZN13QTemporaryDirC2Ev(qthis_ph)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN13QTemporaryDirC2Ev()};
     let rsthis = QTemporaryDir{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -213,8 +210,7 @@ impl<'a> /*trait*/ QTemporaryDir_new for (&'a QString) {
     let ctysz: c_int = unsafe{QTemporaryDir_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN13QTemporaryDirC2ERK7QString(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN13QTemporaryDirC2ERK7QString(arg0)};
     let rsthis = QTemporaryDir{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -238,25 +234,9 @@ impl<'a> /*trait*/ QTemporaryDir_path<QString> for () {
   fn path(self , rsthis: & QTemporaryDir) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTemporaryDir4pathEv()};
-    let mut ret = unsafe {_ZNK13QTemporaryDir4pathEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QTemporaryDir4pathEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QTemporaryDir::QTemporaryDir(const QTemporaryDir & );
-impl<'a> /*trait*/ QTemporaryDir_new for (&'a QTemporaryDir) {
-  fn new(self) -> QTemporaryDir {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QTemporaryDirC2ERKS_()};
-    let ctysz: c_int = unsafe{QTemporaryDir_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN13QTemporaryDirC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QTemporaryDir{qclsinst: qthis, ..Default::default()};
-    return rsthis;
     // return 1;
   }
 }

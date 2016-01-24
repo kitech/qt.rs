@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtCore/qvariant.h
 // dst-file: /src/core/qvariant.rs
 //
@@ -29,13 +29,16 @@ use super::qlocale::QLocale; // 773
 use super::qurl::QUrl; // 773
 use super::qline::QLine; // 773
 use super::qline::QLineF; // 773
+use super::qjsonarray::QJsonArray; // 773
 use super::quuid::QUuid; // 773
 use super::qabstractitemmodel::QPersistentModelIndex; // 773
+use super::qjsondocument::QJsonDocument; // 773
 use super::qdatastream::QDataStream; // 773
 use super::qregexp::QRegExp; // 773
 use super::qabstractitemmodel::QModelIndex; // 773
 use super::qrect::QRectF; // 773
 use super::qrect::QRect; // 773
+use super::qjsonobject::QJsonObject; // 773
 use super::qsize::QSizeF; // 773
 use super::qchar::QChar; // 773
 use super::qdatetime::QDate; // 773
@@ -43,6 +46,7 @@ use super::qbitarray::QBitArray; // 773
 use super::qdatetime::QTime; // 773
 use super::qdatetime::QDateTime; // 773
 use super::qeasingcurve::QEasingCurve; // 773
+use super::qjsonvalue::QJsonValue; // 773
 use super::qregularexpression::QRegularExpression; // 773
 use super::qstringlist::QStringList; // 773
 // <= use block end
@@ -56,206 +60,204 @@ use super::qstringlist::QStringList; // 773
 extern {
   fn QVariantComparisonHelper_Class_Size() -> c_int;
   // proto:  void QVariantComparisonHelper::QVariantComparisonHelper(const QVariant & var);
-  fn _ZN24QVariantComparisonHelperC2ERK8QVariant(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN24QVariantComparisonHelperC2ERK8QVariant(arg0: *mut c_void) -> u64;
   fn QVariant_Class_Size() -> c_int;
   // proto:  double QVariant::toDouble(bool * ok);
-  fn _ZNK8QVariant8toDoubleEPb(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> c_double;
+  fn C_ZNK8QVariant8toDoubleEPb(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> c_double;
   // proto:  void QVariant::QVariant(const char * str);
-  fn _ZN8QVariantC2EPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_char);
+  fn C_ZN8QVariantC2EPKc(arg0: *mut c_char) -> u64;
   // proto:  qlonglong QVariant::toLongLong(bool * ok);
-  fn _ZNK8QVariant10toLongLongEPb(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> c_longlong;
+  fn C_ZNK8QVariant10toLongLongEPb(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> c_longlong;
   // proto:  void QVariant::QVariant(const QPointF & pt);
-  fn _ZN8QVariantC2ERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN8QVariantC2ERK7QPointF(arg0: *mut c_void) -> u64;
   // proto:  void QVariant::QVariant(const QPoint & pt);
-  fn _ZN8QVariantC2ERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN8QVariantC2ERK6QPoint(arg0: *mut c_void) -> u64;
   // proto:  QSize QVariant::toSize();
-  fn _ZNK8QVariant6toSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK8QVariant6toSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QVariant::toString();
-  fn _ZNK8QVariant8toStringEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK8QVariant8toStringEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  qreal QVariant::toReal(bool * ok);
-  fn _ZNK8QVariant6toRealEPb(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> c_double;
+  fn C_ZNK8QVariant6toRealEPb(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> c_double;
   // proto:  float QVariant::toFloat(bool * ok);
-  fn _ZNK8QVariant7toFloatEPb(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> c_float;
+  fn C_ZNK8QVariant7toFloatEPb(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> c_float;
   // proto:  void QVariant::QVariant(const QString & string);
-  fn _ZN8QVariantC2ERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN8QVariantC2ERK7QString(arg0: *mut c_void) -> u64;
   // proto:  QByteArray QVariant::toByteArray();
-  fn _ZNK8QVariant11toByteArrayEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK8QVariant11toByteArrayEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QLocale QVariant::toLocale();
-  fn _ZNK8QVariant8toLocaleEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK8QVariant8toLocaleEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QUrl QVariant::toUrl();
-  fn _ZNK8QVariant5toUrlEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK8QVariant5toUrlEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QLine QVariant::toLine();
-  fn _ZNK8QVariant6toLineEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK8QVariant6toLineEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QVariant::QVariant(const QSize & size);
-  fn _ZN8QVariantC2ERK5QSize(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN8QVariantC2ERK5QSize(arg0: *mut c_void) -> u64;
   // proto:  void QVariant::QVariant(const QLineF & line);
-  fn _ZN8QVariantC2ERK6QLineF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN8QVariantC2ERK6QLineF(arg0: *mut c_void) -> u64;
   // proto:  const char * QVariant::typeName();
-  fn _ZNK8QVariant8typeNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_char;
+  fn C_ZNK8QVariant8typeNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_char;
   // proto:  QJsonArray QVariant::toJsonArray();
-  fn _ZNK8QVariant11toJsonArrayEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK8QVariant11toJsonArrayEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QVariant::QVariant(const QLocale & locale);
-  fn _ZN8QVariantC2ERK7QLocale(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN8QVariantC2ERK7QLocale(arg0: *mut c_void) -> u64;
   // proto:  QStringList QVariant::toStringList();
-  fn _ZNK8QVariant12toStringListEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK8QVariant12toStringListEv(qthis: u64 /* *mut c_void*/);
   // proto:  QList<QVariant> QVariant::toList();
-  fn _ZNK8QVariant6toListEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK8QVariant6toListEv(qthis: u64 /* *mut c_void*/);
   // proto:  uint QVariant::toUInt(bool * ok);
-  fn _ZNK8QVariant6toUIntEPb(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> c_uint;
+  fn C_ZNK8QVariant6toUIntEPb(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> c_uint;
   // proto:  QUuid QVariant::toUuid();
-  fn _ZNK8QVariant6toUuidEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK8QVariant6toUuidEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QVariant::QVariant(const QPersistentModelIndex & modelIndex);
-  fn _ZN8QVariantC2ERK21QPersistentModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN8QVariantC2ERK21QPersistentModelIndex(arg0: *mut c_void) -> u64;
   // proto:  QJsonDocument QVariant::toJsonDocument();
-  fn _ZNK8QVariant14toJsonDocumentEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK8QVariant14toJsonDocumentEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QVariant::QVariant(QDataStream & s);
-  fn _ZN8QVariantC2ER11QDataStream(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN8QVariantC2ER11QDataStream(arg0: *mut c_void) -> u64;
   // proto:  QPoint QVariant::toPoint();
-  fn _ZNK8QVariant7toPointEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK8QVariant7toPointEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QVariant::toInt(bool * ok);
-  fn _ZNK8QVariant5toIntEPb(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> c_int;
+  fn C_ZNK8QVariant5toIntEPb(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> c_int;
   // proto:  bool QVariant::isValid();
-  fn _ZNK8QVariant7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK8QVariant7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QVariant::QVariant(const QUuid & uuid);
-  fn _ZN8QVariantC2ERK5QUuid(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN8QVariantC2ERK5QUuid(arg0: *mut c_void) -> u64;
   // proto:  void QVariant::detach();
-  fn _ZN8QVariant6detachEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN8QVariant6detachEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QVariant::QVariant(const QRegExp & regExp);
-  fn _ZN8QVariantC2ERK7QRegExp(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN8QVariantC2ERK7QRegExp(arg0: *mut c_void) -> u64;
   // proto:  QModelIndex QVariant::toModelIndex();
-  fn _ZNK8QVariant12toModelIndexEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK8QVariant12toModelIndexEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QHash<QString, QVariant> QVariant::toHash();
-  fn _ZNK8QVariant6toHashEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK8QVariant6toHashEv(qthis: u64 /* *mut c_void*/);
   // proto:  QMap<QString, QVariant> QVariant::toMap();
-  fn _ZNK8QVariant5toMapEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK8QVariant5toMapEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QVariant::canConvert(int targetTypeId);
-  fn _ZNK8QVariant10canConvertEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
+  fn C_ZNK8QVariant10canConvertEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
   // proto:  void QVariant::QVariant(const QRectF & rect);
-  fn _ZN8QVariantC2ERK6QRectF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN8QVariantC2ERK6QRectF(arg0: *mut c_void) -> u64;
   // proto:  void QVariant::QVariant(const QRect & rect);
-  fn _ZN8QVariantC2ERK5QRect(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN8QVariantC2ERK5QRect(arg0: *mut c_void) -> u64;
   // proto:  int QVariant::userType();
-  fn _ZNK8QVariant8userTypeEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK8QVariant8userTypeEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  const void * QVariant::constData();
-  fn _ZNK8QVariant9constDataEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QVariant::QVariant(void * );
-  fn _ZN8QVariantC2EPv(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK8QVariant9constDataEv(qthis: u64 /* *mut c_void*/);
   // proto:  QPersistentModelIndex QVariant::toPersistentModelIndex();
-  fn _ZNK8QVariant22toPersistentModelIndexEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK8QVariant22toPersistentModelIndexEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QVariant::QVariant(int typeId, const void * copy, uint flags);
-  fn _ZN8QVariantC2EiPKvj(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void, arg2: c_uint);
+  fn C_ZN8QVariantC2EiPKvj(arg0: c_int, arg1: *mut c_void, arg2: c_uint) -> u64;
   // proto:  QLineF QVariant::toLineF();
-  fn _ZNK8QVariant7toLineFEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK8QVariant7toLineFEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QJsonObject QVariant::toJsonObject();
-  fn _ZNK8QVariant12toJsonObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK8QVariant12toJsonObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QVariant::load(QDataStream & ds);
-  fn _ZN8QVariant4loadER11QDataStream(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN8QVariant4loadER11QDataStream(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QVariant::QVariant(const QSizeF & size);
-  fn _ZN8QVariantC2ERK6QSizeF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN8QVariantC2ERK6QSizeF(arg0: *mut c_void) -> u64;
   // proto:  QChar QVariant::toChar();
-  fn _ZNK8QVariant6toCharEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK8QVariant6toCharEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QVariant::isNull();
-  fn _ZNK8QVariant6isNullEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK8QVariant6isNullEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QVariant::QVariant(const QDate & date);
-  fn _ZN8QVariantC2ERK5QDate(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN8QVariantC2ERK5QDate(arg0: *mut c_void) -> u64;
   // proto:  QRectF QVariant::toRectF();
-  fn _ZNK8QVariant7toRectFEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK8QVariant7toRectFEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QVariant::QVariant(const QBitArray & bitarray);
-  fn _ZN8QVariantC2ERK9QBitArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN8QVariantC2ERK9QBitArray(arg0: *mut c_void) -> u64;
   // proto:  QDate QVariant::toDate();
-  fn _ZNK8QVariant6toDateEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK8QVariant6toDateEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QVariant::QVariant(const QModelIndex & modelIndex);
-  fn _ZN8QVariantC2ERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN8QVariantC2ERK11QModelIndex(arg0: *mut c_void) -> u64;
   // proto:  void QVariant::~QVariant();
-  fn _ZN8QVariantD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN8QVariantD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QVariant::save(QDataStream & ds);
-  fn _ZNK8QVariant4saveER11QDataStream(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK8QVariant4saveER11QDataStream(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QTime QVariant::toTime();
-  fn _ZNK8QVariant6toTimeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK8QVariant6toTimeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QVariant::QVariant(const QLine & line);
-  fn _ZN8QVariantC2ERK5QLine(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN8QVariantC2ERK5QLine(arg0: *mut c_void) -> u64;
   // proto:  void * QVariant::data();
-  fn _ZN8QVariant4dataEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN8QVariant4dataEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QVariant::QVariant(const QTime & time);
-  fn _ZN8QVariantC2ERK5QTime(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN8QVariantC2ERK5QTime(arg0: *mut c_void) -> u64;
   // proto:  void QVariant::QVariant(const QDateTime & datetime);
-  fn _ZN8QVariantC2ERK9QDateTime(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN8QVariantC2ERK9QDateTime(arg0: *mut c_void) -> u64;
   // proto:  bool QVariant::convert(int targetTypeId);
-  fn _ZN8QVariant7convertEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
+  fn C_ZN8QVariant7convertEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
   // proto:  QRegExp QVariant::toRegExp();
-  fn _ZNK8QVariant8toRegExpEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK8QVariant8toRegExpEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QPointF QVariant::toPointF();
-  fn _ZNK8QVariant8toPointFEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK8QVariant8toPointFEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QVariant::QVariant(QChar qchar);
-  fn _ZN8QVariantC2E5QChar(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN8QVariantC2E5QChar(arg0: *mut c_void) -> u64;
   // proto: static const char * QVariant::typeToName(int typeId);
-  fn _ZN8QVariant10typeToNameEi(arg0: c_int) -> *mut c_char;
+  fn C_ZN8QVariant10typeToNameEi(arg0: c_int) -> *mut c_char;
   // proto:  QSizeF QVariant::toSizeF();
-  fn _ZNK8QVariant7toSizeFEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK8QVariant7toSizeFEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QVariant::swap(QVariant & other);
-  fn _ZN8QVariant4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN8QVariant4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QVariant::QVariant(int typeId, const void * copy);
-  fn _ZN8QVariantC2EiPKv(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
+  fn C_ZN8QVariantC2EiPKv(arg0: c_int, arg1: *mut c_void) -> u64;
   // proto:  void QVariant::QVariant(const QEasingCurve & easing);
-  fn _ZN8QVariantC2ERK12QEasingCurve(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN8QVariantC2ERK12QEasingCurve(arg0: *mut c_void) -> u64;
   // proto:  void QVariant::clear();
-  fn _ZN8QVariant5clearEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN8QVariant5clearEv(qthis: u64 /* *mut c_void*/);
   // proto:  QRect QVariant::toRect();
-  fn _ZNK8QVariant6toRectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK8QVariant6toRectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QVariant::QVariant(const QByteArray & bytearray);
-  fn _ZN8QVariantC2ERK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN8QVariantC2ERK10QByteArray(arg0: *mut c_void) -> u64;
   // proto:  void QVariant::QVariant(qlonglong ll);
-  fn _ZN8QVariantC2Ex(qthis: u64 /* *mut c_void*/, arg0: c_longlong);
+  fn C_ZN8QVariantC2Ex(arg0: c_longlong) -> u64;
   // proto:  void QVariant::QVariant(qulonglong ull);
-  fn _ZN8QVariantC2Ey(qthis: u64 /* *mut c_void*/, arg0: c_ulonglong);
+  fn C_ZN8QVariantC2Ey(arg0: c_ulonglong) -> u64;
   // proto:  void QVariant::QVariant();
-  fn _ZN8QVariantC2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN8QVariantC2Ev() -> u64;
   // proto:  bool QVariant::toBool();
-  fn _ZNK8QVariant6toBoolEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK8QVariant6toBoolEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QVariant::QVariant(uint ui);
-  fn _ZN8QVariantC2Ej(qthis: u64 /* *mut c_void*/, arg0: c_uint);
+  fn C_ZN8QVariantC2Ej(arg0: c_uint) -> u64;
   // proto:  void QVariant::QVariant(int i);
-  fn _ZN8QVariantC2Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN8QVariantC2Ei(arg0: c_int) -> u64;
   // proto:  void QVariant::QVariant(float f);
-  fn _ZN8QVariantC2Ef(qthis: u64 /* *mut c_void*/, arg0: c_float);
+  fn C_ZN8QVariantC2Ef(arg0: c_float) -> u64;
   // proto:  void QVariant::QVariant(double d);
-  fn _ZN8QVariantC2Ed(qthis: u64 /* *mut c_void*/, arg0: c_double);
+  fn C_ZN8QVariantC2Ed(arg0: c_double) -> u64;
   // proto:  void QVariant::QVariant(bool b);
-  fn _ZN8QVariantC2Eb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN8QVariantC2Eb(arg0: c_char) -> u64;
   // proto:  qulonglong QVariant::toULongLong(bool * ok);
-  fn _ZNK8QVariant11toULongLongEPb(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> c_ulonglong;
+  fn C_ZNK8QVariant11toULongLongEPb(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> c_ulonglong;
   // proto:  QJsonValue QVariant::toJsonValue();
-  fn _ZNK8QVariant11toJsonValueEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK8QVariant11toJsonValueEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QDateTime QVariant::toDateTime();
-  fn _ZNK8QVariant10toDateTimeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK8QVariant10toDateTimeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QVariant::isDetached();
-  fn _ZNK8QVariant10isDetachedEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK8QVariant10isDetachedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QEasingCurve QVariant::toEasingCurve();
-  fn _ZNK8QVariant13toEasingCurveEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK8QVariant13toEasingCurveEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QVariant::QVariant(const QUrl & url);
-  fn _ZN8QVariantC2ERK4QUrl(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN8QVariantC2ERK4QUrl(arg0: *mut c_void) -> u64;
   // proto:  void QVariant::QVariant(const QVariant & other);
-  fn _ZN8QVariantC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN8QVariantC2ERKS_(arg0: *mut c_void) -> u64;
   // proto:  QBitArray QVariant::toBitArray();
-  fn _ZNK8QVariant10toBitArrayEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK8QVariant10toBitArrayEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QRegularExpression QVariant::toRegularExpression();
-  fn _ZNK8QVariant19toRegularExpressionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK8QVariant19toRegularExpressionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QVariant::QVariant(const QRegularExpression & re);
-  fn _ZN8QVariantC2ERK18QRegularExpression(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN8QVariantC2ERK18QRegularExpression(arg0: *mut c_void) -> u64;
   // proto:  void QVariant::QVariant(const QStringList & stringlist);
-  fn _ZN8QVariantC2ERK11QStringList(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN8QVariantC2ERK11QStringList(arg0: *mut c_void) -> u64;
   fn QSequentialIterable_Class_Size() -> c_int;
   // proto:  int QSequentialIterable::size();
-  fn _ZNK19QSequentialIterable4sizeEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK19QSequentialIterable4sizeEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QSequentialIterable::canReverseIterate();
-  fn _ZNK19QSequentialIterable17canReverseIterateEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK19QSequentialIterable17canReverseIterateEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QVariant QSequentialIterable::at(int idx);
-  fn _ZNK19QSequentialIterable2atEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
+  fn C_ZNK19QSequentialIterable2atEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   fn QAssociativeIterable_Class_Size() -> c_int;
   // proto:  int QAssociativeIterable::size();
-  fn _ZNK20QAssociativeIterable4sizeEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK20QAssociativeIterable4sizeEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  QVariant QAssociativeIterable::value(const QVariant & key);
-  fn _ZNK20QAssociativeIterable5valueERK8QVariant(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZNK20QAssociativeIterable5valueERK8QVariant(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
 } // <= ext block end
 
 // body block begin =>
@@ -313,8 +315,7 @@ impl<'a> /*trait*/ QVariantComparisonHelper_new for (&'a QVariant) {
     let ctysz: c_int = unsafe{QVariantComparisonHelper_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN24QVariantComparisonHelperC2ERK8QVariant(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN24QVariantComparisonHelperC2ERK8QVariant(arg0)};
     let rsthis = QVariantComparisonHelper{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -344,7 +345,7 @@ impl<'a> /*trait*/ QVariant_toDouble<f64> for (&'a mut Vec<i8>) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant8toDoubleEPb()};
     let arg0 = self.as_ptr()  as *mut c_char;
-    let mut ret = unsafe {_ZNK8QVariant8toDoubleEPb(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK8QVariant8toDoubleEPb(rsthis.qclsinst, arg0)};
     return ret as f64;
     // return 1;
   }
@@ -371,8 +372,7 @@ impl<'a> /*trait*/ QVariant_new for (&'a  String) {
     let ctysz: c_int = unsafe{QVariant_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.as_ptr()  as *mut c_char;
-    unsafe {_ZN8QVariantC2EPKc(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN8QVariantC2EPKc(arg0)};
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -397,7 +397,7 @@ impl<'a> /*trait*/ QVariant_toLongLong<i64> for (&'a mut Vec<i8>) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant10toLongLongEPb()};
     let arg0 = self.as_ptr()  as *mut c_char;
-    let mut ret = unsafe {_ZNK8QVariant10toLongLongEPb(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK8QVariant10toLongLongEPb(rsthis.qclsinst, arg0)};
     return ret as i64;
     // return 1;
   }
@@ -411,8 +411,7 @@ impl<'a> /*trait*/ QVariant_new for (&'a QPointF) {
     let ctysz: c_int = unsafe{QVariant_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN8QVariantC2ERK7QPointF(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK7QPointF(arg0)};
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -427,8 +426,7 @@ impl<'a> /*trait*/ QVariant_new for (&'a QPoint) {
     let ctysz: c_int = unsafe{QVariant_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN8QVariantC2ERK6QPoint(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK6QPoint(arg0)};
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -452,7 +450,7 @@ impl<'a> /*trait*/ QVariant_toSize<QSize> for () {
   fn toSize(self , rsthis: & QVariant) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant6toSizeEv()};
-    let mut ret = unsafe {_ZNK8QVariant6toSizeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QVariant6toSizeEv(rsthis.qclsinst)};
     let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -476,7 +474,7 @@ impl<'a> /*trait*/ QVariant_toString<QString> for () {
   fn toString(self , rsthis: & QVariant) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant8toStringEv()};
-    let mut ret = unsafe {_ZNK8QVariant8toStringEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QVariant8toStringEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -501,7 +499,7 @@ impl<'a> /*trait*/ QVariant_toReal<f64> for (&'a mut Vec<i8>) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant6toRealEPb()};
     let arg0 = self.as_ptr()  as *mut c_char;
-    let mut ret = unsafe {_ZNK8QVariant6toRealEPb(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK8QVariant6toRealEPb(rsthis.qclsinst, arg0)};
     return ret as f64;
     // return 1;
   }
@@ -525,7 +523,7 @@ impl<'a> /*trait*/ QVariant_toFloat<f32> for (&'a mut Vec<i8>) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant7toFloatEPb()};
     let arg0 = self.as_ptr()  as *mut c_char;
-    let mut ret = unsafe {_ZNK8QVariant7toFloatEPb(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK8QVariant7toFloatEPb(rsthis.qclsinst, arg0)};
     return ret as f32;
     // return 1;
   }
@@ -539,8 +537,7 @@ impl<'a> /*trait*/ QVariant_new for (&'a QString) {
     let ctysz: c_int = unsafe{QVariant_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN8QVariantC2ERK7QString(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK7QString(arg0)};
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -564,7 +561,7 @@ impl<'a> /*trait*/ QVariant_toByteArray<QByteArray> for () {
   fn toByteArray(self , rsthis: & QVariant) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant11toByteArrayEv()};
-    let mut ret = unsafe {_ZNK8QVariant11toByteArrayEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QVariant11toByteArrayEv(rsthis.qclsinst)};
     let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -588,7 +585,7 @@ impl<'a> /*trait*/ QVariant_toLocale<QLocale> for () {
   fn toLocale(self , rsthis: & QVariant) -> QLocale {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant8toLocaleEv()};
-    let mut ret = unsafe {_ZNK8QVariant8toLocaleEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QVariant8toLocaleEv(rsthis.qclsinst)};
     let mut ret1 = QLocale::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -612,7 +609,7 @@ impl<'a> /*trait*/ QVariant_toUrl<QUrl> for () {
   fn toUrl(self , rsthis: & QVariant) -> QUrl {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant5toUrlEv()};
-    let mut ret = unsafe {_ZNK8QVariant5toUrlEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QVariant5toUrlEv(rsthis.qclsinst)};
     let mut ret1 = QUrl::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -636,7 +633,7 @@ impl<'a> /*trait*/ QVariant_toLine<QLine> for () {
   fn toLine(self , rsthis: & QVariant) -> QLine {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant6toLineEv()};
-    let mut ret = unsafe {_ZNK8QVariant6toLineEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QVariant6toLineEv(rsthis.qclsinst)};
     let mut ret1 = QLine::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -651,8 +648,7 @@ impl<'a> /*trait*/ QVariant_new for (&'a QSize) {
     let ctysz: c_int = unsafe{QVariant_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN8QVariantC2ERK5QSize(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK5QSize(arg0)};
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -667,8 +663,7 @@ impl<'a> /*trait*/ QVariant_new for (&'a QLineF) {
     let ctysz: c_int = unsafe{QVariant_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN8QVariantC2ERK6QLineF(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK6QLineF(arg0)};
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -692,7 +687,7 @@ impl<'a> /*trait*/ QVariant_typeName<String> for () {
   fn typeName(self , rsthis: & QVariant) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant8typeNameEv()};
-    let mut ret = unsafe {_ZNK8QVariant8typeNameEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QVariant8typeNameEv(rsthis.qclsinst)};
     let slen = unsafe {strlen(ret as *const i8)} as usize;
     return unsafe{String::from_raw_parts(ret as *mut u8, slen, slen+1)};
     // return 1;
@@ -712,11 +707,13 @@ pub trait QVariant_toJsonArray<RetType> {
 }
 
   // proto:  QJsonArray QVariant::toJsonArray();
-impl<'a> /*trait*/ QVariant_toJsonArray<()> for () {
-  fn toJsonArray(self , rsthis: & QVariant) -> () {
+impl<'a> /*trait*/ QVariant_toJsonArray<QJsonArray> for () {
+  fn toJsonArray(self , rsthis: & QVariant) -> QJsonArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant11toJsonArrayEv()};
-     unsafe {_ZNK8QVariant11toJsonArrayEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QVariant11toJsonArrayEv(rsthis.qclsinst)};
+    let mut ret1 = QJsonArray::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -729,8 +726,7 @@ impl<'a> /*trait*/ QVariant_new for (&'a QLocale) {
     let ctysz: c_int = unsafe{QVariant_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN8QVariantC2ERK7QLocale(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK7QLocale(arg0)};
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -754,7 +750,7 @@ impl<'a> /*trait*/ QVariant_toStringList<()> for () {
   fn toStringList(self , rsthis: & QVariant) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant12toStringListEv()};
-     unsafe {_ZNK8QVariant12toStringListEv(rsthis.qclsinst)};
+     unsafe {C_ZNK8QVariant12toStringListEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -776,7 +772,7 @@ impl<'a> /*trait*/ QVariant_toList<()> for () {
   fn toList(self , rsthis: & QVariant) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant6toListEv()};
-     unsafe {_ZNK8QVariant6toListEv(rsthis.qclsinst)};
+     unsafe {C_ZNK8QVariant6toListEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -799,7 +795,7 @@ impl<'a> /*trait*/ QVariant_toUInt<u32> for (&'a mut Vec<i8>) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant6toUIntEPb()};
     let arg0 = self.as_ptr()  as *mut c_char;
-    let mut ret = unsafe {_ZNK8QVariant6toUIntEPb(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK8QVariant6toUIntEPb(rsthis.qclsinst, arg0)};
     return ret as u32;
     // return 1;
   }
@@ -822,7 +818,7 @@ impl<'a> /*trait*/ QVariant_toUuid<QUuid> for () {
   fn toUuid(self , rsthis: & QVariant) -> QUuid {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant6toUuidEv()};
-    let mut ret = unsafe {_ZNK8QVariant6toUuidEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QVariant6toUuidEv(rsthis.qclsinst)};
     let mut ret1 = QUuid::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -837,8 +833,7 @@ impl<'a> /*trait*/ QVariant_new for (&'a QPersistentModelIndex) {
     let ctysz: c_int = unsafe{QVariant_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN8QVariantC2ERK21QPersistentModelIndex(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK21QPersistentModelIndex(arg0)};
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -858,11 +853,13 @@ pub trait QVariant_toJsonDocument<RetType> {
 }
 
   // proto:  QJsonDocument QVariant::toJsonDocument();
-impl<'a> /*trait*/ QVariant_toJsonDocument<()> for () {
-  fn toJsonDocument(self , rsthis: & QVariant) -> () {
+impl<'a> /*trait*/ QVariant_toJsonDocument<QJsonDocument> for () {
+  fn toJsonDocument(self , rsthis: & QVariant) -> QJsonDocument {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant14toJsonDocumentEv()};
-     unsafe {_ZNK8QVariant14toJsonDocumentEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QVariant14toJsonDocumentEv(rsthis.qclsinst)};
+    let mut ret1 = QJsonDocument::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -875,8 +872,7 @@ impl<'a> /*trait*/ QVariant_new for (&'a QDataStream) {
     let ctysz: c_int = unsafe{QVariant_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN8QVariantC2ER11QDataStream(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN8QVariantC2ER11QDataStream(arg0)};
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -900,7 +896,7 @@ impl<'a> /*trait*/ QVariant_toPoint<QPoint> for () {
   fn toPoint(self , rsthis: & QVariant) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant7toPointEv()};
-    let mut ret = unsafe {_ZNK8QVariant7toPointEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QVariant7toPointEv(rsthis.qclsinst)};
     let mut ret1 = QPoint::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -925,7 +921,7 @@ impl<'a> /*trait*/ QVariant_toInt<i32> for (&'a mut Vec<i8>) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant5toIntEPb()};
     let arg0 = self.as_ptr()  as *mut c_char;
-    let mut ret = unsafe {_ZNK8QVariant5toIntEPb(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK8QVariant5toIntEPb(rsthis.qclsinst, arg0)};
     return ret as i32;
     // return 1;
   }
@@ -948,7 +944,7 @@ impl<'a> /*trait*/ QVariant_isValid<i8> for () {
   fn isValid(self , rsthis: & QVariant) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant7isValidEv()};
-    let mut ret = unsafe {_ZNK8QVariant7isValidEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QVariant7isValidEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -962,8 +958,7 @@ impl<'a> /*trait*/ QVariant_new for (&'a QUuid) {
     let ctysz: c_int = unsafe{QVariant_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN8QVariantC2ERK5QUuid(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK5QUuid(arg0)};
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -987,7 +982,7 @@ impl<'a> /*trait*/ QVariant_detach<()> for () {
   fn detach(self , rsthis: & QVariant) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariant6detachEv()};
-     unsafe {_ZN8QVariant6detachEv(rsthis.qclsinst)};
+     unsafe {C_ZN8QVariant6detachEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1000,8 +995,7 @@ impl<'a> /*trait*/ QVariant_new for (&'a QRegExp) {
     let ctysz: c_int = unsafe{QVariant_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN8QVariantC2ERK7QRegExp(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK7QRegExp(arg0)};
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1025,7 +1019,7 @@ impl<'a> /*trait*/ QVariant_toModelIndex<QModelIndex> for () {
   fn toModelIndex(self , rsthis: & QVariant) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant12toModelIndexEv()};
-    let mut ret = unsafe {_ZNK8QVariant12toModelIndexEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QVariant12toModelIndexEv(rsthis.qclsinst)};
     let mut ret1 = QModelIndex::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1049,7 +1043,7 @@ impl<'a> /*trait*/ QVariant_toHash<()> for () {
   fn toHash(self , rsthis: & QVariant) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant6toHashEv()};
-     unsafe {_ZNK8QVariant6toHashEv(rsthis.qclsinst)};
+     unsafe {C_ZNK8QVariant6toHashEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1071,7 +1065,7 @@ impl<'a> /*trait*/ QVariant_toMap<()> for () {
   fn toMap(self , rsthis: & QVariant) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant5toMapEv()};
-     unsafe {_ZNK8QVariant5toMapEv(rsthis.qclsinst)};
+     unsafe {C_ZNK8QVariant5toMapEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1094,7 +1088,7 @@ impl<'a> /*trait*/ QVariant_canConvert<i8> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant10canConvertEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZNK8QVariant10canConvertEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK8QVariant10canConvertEi(rsthis.qclsinst, arg0)};
     return ret as i8;
     // return 1;
   }
@@ -1108,8 +1102,7 @@ impl<'a> /*trait*/ QVariant_new for (&'a QRectF) {
     let ctysz: c_int = unsafe{QVariant_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN8QVariantC2ERK6QRectF(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK6QRectF(arg0)};
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1124,8 +1117,7 @@ impl<'a> /*trait*/ QVariant_new for (&'a QRect) {
     let ctysz: c_int = unsafe{QVariant_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN8QVariantC2ERK5QRect(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK5QRect(arg0)};
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1149,7 +1141,7 @@ impl<'a> /*trait*/ QVariant_userType<i32> for () {
   fn userType(self , rsthis: & QVariant) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant8userTypeEv()};
-    let mut ret = unsafe {_ZNK8QVariant8userTypeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QVariant8userTypeEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -1172,23 +1164,7 @@ impl<'a> /*trait*/ QVariant_constData<()> for () {
   fn constData(self , rsthis: & QVariant) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant9constDataEv()};
-     unsafe {_ZNK8QVariant9constDataEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QVariant::QVariant(void * );
-impl<'a> /*trait*/ QVariant_new for (*mut c_void) {
-  fn new(self) -> QVariant {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QVariantC2EPv()};
-    let ctysz: c_int = unsafe{QVariant_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self  as *mut c_void;
-    unsafe {_ZN8QVariantC2EPv(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
-    return rsthis;
+     unsafe {C_ZNK8QVariant9constDataEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1210,7 +1186,7 @@ impl<'a> /*trait*/ QVariant_toPersistentModelIndex<QPersistentModelIndex> for ()
   fn toPersistentModelIndex(self , rsthis: & QVariant) -> QPersistentModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant22toPersistentModelIndexEv()};
-    let mut ret = unsafe {_ZNK8QVariant22toPersistentModelIndexEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QVariant22toPersistentModelIndexEv(rsthis.qclsinst)};
     let mut ret1 = QPersistentModelIndex::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1227,8 +1203,7 @@ impl<'a> /*trait*/ QVariant_new for (i32, *mut c_void, u32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as *mut c_void;
     let arg2 = self.2  as c_uint;
-    unsafe {_ZN8QVariantC2EiPKvj(qthis_ph, arg0, arg1, arg2)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN8QVariantC2EiPKvj(arg0, arg1, arg2)};
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1252,7 +1227,7 @@ impl<'a> /*trait*/ QVariant_toLineF<QLineF> for () {
   fn toLineF(self , rsthis: & QVariant) -> QLineF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant7toLineFEv()};
-    let mut ret = unsafe {_ZNK8QVariant7toLineFEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QVariant7toLineFEv(rsthis.qclsinst)};
     let mut ret1 = QLineF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1272,11 +1247,13 @@ pub trait QVariant_toJsonObject<RetType> {
 }
 
   // proto:  QJsonObject QVariant::toJsonObject();
-impl<'a> /*trait*/ QVariant_toJsonObject<()> for () {
-  fn toJsonObject(self , rsthis: & QVariant) -> () {
+impl<'a> /*trait*/ QVariant_toJsonObject<QJsonObject> for () {
+  fn toJsonObject(self , rsthis: & QVariant) -> QJsonObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant12toJsonObjectEv()};
-     unsafe {_ZNK8QVariant12toJsonObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QVariant12toJsonObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QJsonObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -1299,7 +1276,7 @@ impl<'a> /*trait*/ QVariant_load<()> for (&'a QDataStream) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariant4loadER11QDataStream()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN8QVariant4loadER11QDataStream(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN8QVariant4loadER11QDataStream(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1312,8 +1289,7 @@ impl<'a> /*trait*/ QVariant_new for (&'a QSizeF) {
     let ctysz: c_int = unsafe{QVariant_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN8QVariantC2ERK6QSizeF(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK6QSizeF(arg0)};
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1337,7 +1313,7 @@ impl<'a> /*trait*/ QVariant_toChar<QChar> for () {
   fn toChar(self , rsthis: & QVariant) -> QChar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant6toCharEv()};
-    let mut ret = unsafe {_ZNK8QVariant6toCharEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QVariant6toCharEv(rsthis.qclsinst)};
     let mut ret1 = QChar::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1361,7 +1337,7 @@ impl<'a> /*trait*/ QVariant_isNull<i8> for () {
   fn isNull(self , rsthis: & QVariant) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant6isNullEv()};
-    let mut ret = unsafe {_ZNK8QVariant6isNullEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QVariant6isNullEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -1375,8 +1351,7 @@ impl<'a> /*trait*/ QVariant_new for (&'a QDate) {
     let ctysz: c_int = unsafe{QVariant_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN8QVariantC2ERK5QDate(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK5QDate(arg0)};
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1400,7 +1375,7 @@ impl<'a> /*trait*/ QVariant_toRectF<QRectF> for () {
   fn toRectF(self , rsthis: & QVariant) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant7toRectFEv()};
-    let mut ret = unsafe {_ZNK8QVariant7toRectFEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QVariant7toRectFEv(rsthis.qclsinst)};
     let mut ret1 = QRectF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1415,8 +1390,7 @@ impl<'a> /*trait*/ QVariant_new for (&'a QBitArray) {
     let ctysz: c_int = unsafe{QVariant_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN8QVariantC2ERK9QBitArray(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK9QBitArray(arg0)};
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1440,7 +1414,7 @@ impl<'a> /*trait*/ QVariant_toDate<QDate> for () {
   fn toDate(self , rsthis: & QVariant) -> QDate {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant6toDateEv()};
-    let mut ret = unsafe {_ZNK8QVariant6toDateEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QVariant6toDateEv(rsthis.qclsinst)};
     let mut ret1 = QDate::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1455,8 +1429,7 @@ impl<'a> /*trait*/ QVariant_new for (&'a QModelIndex) {
     let ctysz: c_int = unsafe{QVariant_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN8QVariantC2ERK11QModelIndex(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK11QModelIndex(arg0)};
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1480,7 +1453,7 @@ impl<'a> /*trait*/ QVariant_free<()> for () {
   fn free(self , rsthis: & QVariant) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariantD2Ev()};
-     unsafe {_ZN8QVariantD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN8QVariantD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1503,7 +1476,7 @@ impl<'a> /*trait*/ QVariant_save<()> for (&'a QDataStream) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant4saveER11QDataStream()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZNK8QVariant4saveER11QDataStream(rsthis.qclsinst, arg0)};
+     unsafe {C_ZNK8QVariant4saveER11QDataStream(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1525,7 +1498,7 @@ impl<'a> /*trait*/ QVariant_toTime<QTime> for () {
   fn toTime(self , rsthis: & QVariant) -> QTime {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant6toTimeEv()};
-    let mut ret = unsafe {_ZNK8QVariant6toTimeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QVariant6toTimeEv(rsthis.qclsinst)};
     let mut ret1 = QTime::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1540,8 +1513,7 @@ impl<'a> /*trait*/ QVariant_new for (&'a QLine) {
     let ctysz: c_int = unsafe{QVariant_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN8QVariantC2ERK5QLine(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK5QLine(arg0)};
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1565,7 +1537,7 @@ impl<'a> /*trait*/ QVariant_data<()> for () {
   fn data(self , rsthis: & QVariant) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariant4dataEv()};
-     unsafe {_ZN8QVariant4dataEv(rsthis.qclsinst)};
+     unsafe {C_ZN8QVariant4dataEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1578,8 +1550,7 @@ impl<'a> /*trait*/ QVariant_new for (&'a QTime) {
     let ctysz: c_int = unsafe{QVariant_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN8QVariantC2ERK5QTime(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK5QTime(arg0)};
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1594,8 +1565,7 @@ impl<'a> /*trait*/ QVariant_new for (&'a QDateTime) {
     let ctysz: c_int = unsafe{QVariant_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN8QVariantC2ERK9QDateTime(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK9QDateTime(arg0)};
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1620,7 +1590,7 @@ impl<'a> /*trait*/ QVariant_convert<i8> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariant7convertEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZN8QVariant7convertEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN8QVariant7convertEi(rsthis.qclsinst, arg0)};
     return ret as i8;
     // return 1;
   }
@@ -1643,7 +1613,7 @@ impl<'a> /*trait*/ QVariant_toRegExp<QRegExp> for () {
   fn toRegExp(self , rsthis: & QVariant) -> QRegExp {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant8toRegExpEv()};
-    let mut ret = unsafe {_ZNK8QVariant8toRegExpEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QVariant8toRegExpEv(rsthis.qclsinst)};
     let mut ret1 = QRegExp::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1667,7 +1637,7 @@ impl<'a> /*trait*/ QVariant_toPointF<QPointF> for () {
   fn toPointF(self , rsthis: & QVariant) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant8toPointFEv()};
-    let mut ret = unsafe {_ZNK8QVariant8toPointFEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QVariant8toPointFEv(rsthis.qclsinst)};
     let mut ret1 = QPointF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1682,8 +1652,7 @@ impl<'a> /*trait*/ QVariant_new for (QChar) {
     let ctysz: c_int = unsafe{QVariant_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN8QVariantC2E5QChar(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN8QVariantC2E5QChar(arg0)};
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1708,7 +1677,7 @@ impl<'a> /*trait*/ QVariant_typeToName_s<String> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariant10typeToNameEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZN8QVariant10typeToNameEi(arg0)};
+    let mut ret = unsafe {C_ZN8QVariant10typeToNameEi(arg0)};
     let slen = unsafe {strlen(ret as *const i8)} as usize;
     return unsafe{String::from_raw_parts(ret as *mut u8, slen, slen+1)};
     // return 1;
@@ -1732,7 +1701,7 @@ impl<'a> /*trait*/ QVariant_toSizeF<QSizeF> for () {
   fn toSizeF(self , rsthis: & QVariant) -> QSizeF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant7toSizeFEv()};
-    let mut ret = unsafe {_ZNK8QVariant7toSizeFEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QVariant7toSizeFEv(rsthis.qclsinst)};
     let mut ret1 = QSizeF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1757,7 +1726,7 @@ impl<'a> /*trait*/ QVariant_swap<()> for (&'a QVariant) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariant4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN8QVariant4swapERS_(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN8QVariant4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1771,8 +1740,7 @@ impl<'a> /*trait*/ QVariant_new for (i32, *mut c_void) {
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as *mut c_void;
-    unsafe {_ZN8QVariantC2EiPKv(qthis_ph, arg0, arg1)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN8QVariantC2EiPKv(arg0, arg1)};
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1787,8 +1755,7 @@ impl<'a> /*trait*/ QVariant_new for (&'a QEasingCurve) {
     let ctysz: c_int = unsafe{QVariant_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN8QVariantC2ERK12QEasingCurve(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK12QEasingCurve(arg0)};
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1812,7 +1779,7 @@ impl<'a> /*trait*/ QVariant_clear<()> for () {
   fn clear(self , rsthis: & QVariant) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariant5clearEv()};
-     unsafe {_ZN8QVariant5clearEv(rsthis.qclsinst)};
+     unsafe {C_ZN8QVariant5clearEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1834,7 +1801,7 @@ impl<'a> /*trait*/ QVariant_toRect<QRect> for () {
   fn toRect(self , rsthis: & QVariant) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant6toRectEv()};
-    let mut ret = unsafe {_ZNK8QVariant6toRectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QVariant6toRectEv(rsthis.qclsinst)};
     let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1849,8 +1816,7 @@ impl<'a> /*trait*/ QVariant_new for (&'a QByteArray) {
     let ctysz: c_int = unsafe{QVariant_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN8QVariantC2ERK10QByteArray(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK10QByteArray(arg0)};
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1865,8 +1831,7 @@ impl<'a> /*trait*/ QVariant_new for (i64) {
     let ctysz: c_int = unsafe{QVariant_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_longlong;
-    unsafe {_ZN8QVariantC2Ex(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN8QVariantC2Ex(arg0)};
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1881,8 +1846,7 @@ impl<'a> /*trait*/ QVariant_new for (u64) {
     let ctysz: c_int = unsafe{QVariant_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_ulonglong;
-    unsafe {_ZN8QVariantC2Ey(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN8QVariantC2Ey(arg0)};
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1896,8 +1860,7 @@ impl<'a> /*trait*/ QVariant_new for () {
     // unsafe{_ZN8QVariantC2Ev()};
     let ctysz: c_int = unsafe{QVariant_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    unsafe {_ZN8QVariantC2Ev(qthis_ph)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN8QVariantC2Ev()};
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1921,7 +1884,7 @@ impl<'a> /*trait*/ QVariant_toBool<i8> for () {
   fn toBool(self , rsthis: & QVariant) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant6toBoolEv()};
-    let mut ret = unsafe {_ZNK8QVariant6toBoolEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QVariant6toBoolEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -1935,8 +1898,7 @@ impl<'a> /*trait*/ QVariant_new for (u32) {
     let ctysz: c_int = unsafe{QVariant_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_uint;
-    unsafe {_ZN8QVariantC2Ej(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN8QVariantC2Ej(arg0)};
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1951,8 +1913,7 @@ impl<'a> /*trait*/ QVariant_new for (i32) {
     let ctysz: c_int = unsafe{QVariant_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
-    unsafe {_ZN8QVariantC2Ei(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN8QVariantC2Ei(arg0)};
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1967,8 +1928,7 @@ impl<'a> /*trait*/ QVariant_new for (f32) {
     let ctysz: c_int = unsafe{QVariant_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_float;
-    unsafe {_ZN8QVariantC2Ef(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN8QVariantC2Ef(arg0)};
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1983,8 +1943,7 @@ impl<'a> /*trait*/ QVariant_new for (f64) {
     let ctysz: c_int = unsafe{QVariant_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_double;
-    unsafe {_ZN8QVariantC2Ed(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN8QVariantC2Ed(arg0)};
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1999,8 +1958,7 @@ impl<'a> /*trait*/ QVariant_new for (i8) {
     let ctysz: c_int = unsafe{QVariant_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_char;
-    unsafe {_ZN8QVariantC2Eb(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN8QVariantC2Eb(arg0)};
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -2025,7 +1983,7 @@ impl<'a> /*trait*/ QVariant_toULongLong<u64> for (&'a mut Vec<i8>) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant11toULongLongEPb()};
     let arg0 = self.as_ptr()  as *mut c_char;
-    let mut ret = unsafe {_ZNK8QVariant11toULongLongEPb(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK8QVariant11toULongLongEPb(rsthis.qclsinst, arg0)};
     return ret as u64;
     // return 1;
   }
@@ -2044,11 +2002,13 @@ pub trait QVariant_toJsonValue<RetType> {
 }
 
   // proto:  QJsonValue QVariant::toJsonValue();
-impl<'a> /*trait*/ QVariant_toJsonValue<()> for () {
-  fn toJsonValue(self , rsthis: & QVariant) -> () {
+impl<'a> /*trait*/ QVariant_toJsonValue<QJsonValue> for () {
+  fn toJsonValue(self , rsthis: & QVariant) -> QJsonValue {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant11toJsonValueEv()};
-     unsafe {_ZNK8QVariant11toJsonValueEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QVariant11toJsonValueEv(rsthis.qclsinst)};
+    let mut ret1 = QJsonValue::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -2070,7 +2030,7 @@ impl<'a> /*trait*/ QVariant_toDateTime<QDateTime> for () {
   fn toDateTime(self , rsthis: & QVariant) -> QDateTime {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant10toDateTimeEv()};
-    let mut ret = unsafe {_ZNK8QVariant10toDateTimeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QVariant10toDateTimeEv(rsthis.qclsinst)};
     let mut ret1 = QDateTime::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -2094,7 +2054,7 @@ impl<'a> /*trait*/ QVariant_isDetached<i8> for () {
   fn isDetached(self , rsthis: & QVariant) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant10isDetachedEv()};
-    let mut ret = unsafe {_ZNK8QVariant10isDetachedEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QVariant10isDetachedEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -2117,7 +2077,7 @@ impl<'a> /*trait*/ QVariant_toEasingCurve<QEasingCurve> for () {
   fn toEasingCurve(self , rsthis: & QVariant) -> QEasingCurve {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant13toEasingCurveEv()};
-    let mut ret = unsafe {_ZNK8QVariant13toEasingCurveEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QVariant13toEasingCurveEv(rsthis.qclsinst)};
     let mut ret1 = QEasingCurve::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -2132,8 +2092,7 @@ impl<'a> /*trait*/ QVariant_new for (&'a QUrl) {
     let ctysz: c_int = unsafe{QVariant_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN8QVariantC2ERK4QUrl(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK4QUrl(arg0)};
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -2148,8 +2107,7 @@ impl<'a> /*trait*/ QVariant_new for (&'a QVariant) {
     let ctysz: c_int = unsafe{QVariant_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN8QVariantC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN8QVariantC2ERKS_(arg0)};
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -2173,7 +2131,7 @@ impl<'a> /*trait*/ QVariant_toBitArray<QBitArray> for () {
   fn toBitArray(self , rsthis: & QVariant) -> QBitArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant10toBitArrayEv()};
-    let mut ret = unsafe {_ZNK8QVariant10toBitArrayEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QVariant10toBitArrayEv(rsthis.qclsinst)};
     let mut ret1 = QBitArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -2197,7 +2155,7 @@ impl<'a> /*trait*/ QVariant_toRegularExpression<QRegularExpression> for () {
   fn toRegularExpression(self , rsthis: & QVariant) -> QRegularExpression {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant19toRegularExpressionEv()};
-    let mut ret = unsafe {_ZNK8QVariant19toRegularExpressionEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QVariant19toRegularExpressionEv(rsthis.qclsinst)};
     let mut ret1 = QRegularExpression::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -2212,8 +2170,7 @@ impl<'a> /*trait*/ QVariant_new for (&'a QRegularExpression) {
     let ctysz: c_int = unsafe{QVariant_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN8QVariantC2ERK18QRegularExpression(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK18QRegularExpression(arg0)};
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -2228,8 +2185,7 @@ impl<'a> /*trait*/ QVariant_new for (&'a QStringList) {
     let ctysz: c_int = unsafe{QVariant_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN8QVariantC2ERK11QStringList(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN8QVariantC2ERK11QStringList(arg0)};
     let rsthis = QVariant{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -2258,7 +2214,7 @@ impl<'a> /*trait*/ QSequentialIterable_size<i32> for () {
   fn size(self , rsthis: & QSequentialIterable) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 104)};
     // unsafe{_ZNK19QSequentialIterable4sizeEv()};
-    let mut ret = unsafe {_ZNK19QSequentialIterable4sizeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK19QSequentialIterable4sizeEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -2281,7 +2237,7 @@ impl<'a> /*trait*/ QSequentialIterable_canReverseIterate<i8> for () {
   fn canReverseIterate(self , rsthis: & QSequentialIterable) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 104)};
     // unsafe{_ZNK19QSequentialIterable17canReverseIterateEv()};
-    let mut ret = unsafe {_ZNK19QSequentialIterable17canReverseIterateEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK19QSequentialIterable17canReverseIterateEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -2305,7 +2261,7 @@ impl<'a> /*trait*/ QSequentialIterable_at<QVariant> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 104)};
     // unsafe{_ZNK19QSequentialIterable2atEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZNK19QSequentialIterable2atEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK19QSequentialIterable2atEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QVariant::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -2334,7 +2290,7 @@ impl<'a> /*trait*/ QAssociativeIterable_size<i32> for () {
   fn size(self , rsthis: & QAssociativeIterable) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 112)};
     // unsafe{_ZNK20QAssociativeIterable4sizeEv()};
-    let mut ret = unsafe {_ZNK20QAssociativeIterable4sizeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK20QAssociativeIterable4sizeEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -2358,7 +2314,7 @@ impl<'a> /*trait*/ QAssociativeIterable_value<QVariant> for (&'a QVariant) {
     // let qthis: *mut c_void = unsafe{calloc(1, 112)};
     // unsafe{_ZNK20QAssociativeIterable5valueERK8QVariant()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK20QAssociativeIterable5valueERK8QVariant(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK20QAssociativeIterable5valueERK8QVariant(rsthis.qclsinst, arg0)};
     let mut ret1 = QVariant::inheritFrom(ret as u64);
     return ret1;
     // return 1;

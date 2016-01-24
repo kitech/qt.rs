@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtCore/qarraydata.h
 // dst-file: /src/core/qarraydata.rs
 //
@@ -30,15 +30,15 @@ use std::ops::Deref;
 extern {
   fn QArrayData_Class_Size() -> c_int;
   // proto: static QArrayData * QArrayData::sharedNull();
-  fn _ZN10QArrayData10sharedNullEv() -> *mut c_void;
+  fn C_ZN10QArrayData10sharedNullEv() -> *mut c_void;
   // proto:  void * QArrayData::data();
-  fn _ZN10QArrayData4dataEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZN10QArrayData4dataEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto: static void QArrayData::deallocate(QArrayData * data, int objectSize, int alignment);
-  fn _ZN10QArrayData10deallocateEPS_ii(arg0: *mut c_void, arg1: c_int, arg2: c_int);
+  fn C_ZN10QArrayData10deallocateEPS_ii(arg0: *mut c_void, arg1: c_int, arg2: c_int);
   // proto:  bool QArrayData::isMutable();
-  fn _ZNK10QArrayData9isMutableEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK10QArrayData9isMutableEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  int QArrayData::detachCapacity(int newSize);
-  fn _ZNK10QArrayData14detachCapacityEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
+  fn C_ZNK10QArrayData14detachCapacityEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
 } // <= ext block end
 
 // body block begin =>
@@ -71,7 +71,7 @@ impl<'a> /*trait*/ QArrayData_sharedNull_s<QArrayData> for () {
   fn sharedNull_s(self ) -> QArrayData {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QArrayData10sharedNullEv()};
-    let mut ret = unsafe {_ZN10QArrayData10sharedNullEv()};
+    let mut ret = unsafe {C_ZN10QArrayData10sharedNullEv()};
     let mut ret1 = QArrayData::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -95,7 +95,7 @@ impl<'a> /*trait*/ QArrayData_data<*mut c_void> for () {
   fn data(self , rsthis: & QArrayData) -> *mut c_void {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QArrayData4dataEv()};
-    let mut ret = unsafe {_ZN10QArrayData4dataEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZN10QArrayData4dataEv(rsthis.qclsinst)};
     return ret as *mut c_void;
     // return 1;
   }
@@ -121,7 +121,7 @@ impl<'a> /*trait*/ QArrayData_deallocate_s<()> for (&'a QArrayData, i32, i32) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as c_int;
-     unsafe {_ZN10QArrayData10deallocateEPS_ii(arg0, arg1, arg2)};
+     unsafe {C_ZN10QArrayData10deallocateEPS_ii(arg0, arg1, arg2)};
     // return 1;
   }
 }
@@ -143,7 +143,7 @@ impl<'a> /*trait*/ QArrayData_isMutable<i8> for () {
   fn isMutable(self , rsthis: & QArrayData) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QArrayData9isMutableEv()};
-    let mut ret = unsafe {_ZNK10QArrayData9isMutableEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QArrayData9isMutableEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -167,7 +167,7 @@ impl<'a> /*trait*/ QArrayData_detachCapacity<i32> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QArrayData14detachCapacityEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZNK10QArrayData14detachCapacityEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK10QArrayData14detachCapacityEi(rsthis.qclsinst, arg0)};
     return ret as i32;
     // return 1;
   }

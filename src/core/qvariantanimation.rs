@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtCore/qvariantanimation.h
 // dst-file: /src/core/qvariantanimation.rs
 //
@@ -21,8 +21,9 @@ use self::libc::*;
 use super::qabstractanimation::QAbstractAnimation; // 773
 use std::ops::Deref;
 use super::qvariant::QVariant; // 773
-use super::qobject::QObject; // 773
+use super::qobjectdefs::QMetaObject; // 773
 use super::qeasingcurve::QEasingCurve; // 773
+use super::qobject::QObject; // 773
 // <= use block end
 
 // ext block begin =>
@@ -34,37 +35,35 @@ use super::qeasingcurve::QEasingCurve; // 773
 extern {
   fn QVariantAnimation_Class_Size() -> c_int;
   // proto:  void QVariantAnimation::setDuration(int msecs);
-  fn _ZN17QVariantAnimation11setDurationEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN17QVariantAnimation11setDurationEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QVariantAnimation::setKeyValueAt(qreal step, const QVariant & value);
-  fn _ZN17QVariantAnimation13setKeyValueAtEdRK8QVariant(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: *mut c_void);
+  fn C_ZN17QVariantAnimation13setKeyValueAtEdRK8QVariant(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: *mut c_void);
   // proto:  QVariant QVariantAnimation::endValue();
-  fn _ZNK17QVariantAnimation8endValueEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK17QVariantAnimation8endValueEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QVariant QVariantAnimation::keyValueAt(qreal step);
-  fn _ZNK17QVariantAnimation10keyValueAtEd(qthis: u64 /* *mut c_void*/, arg0: c_double) -> *mut c_void;
+  fn C_ZNK17QVariantAnimation10keyValueAtEd(qthis: u64 /* *mut c_void*/, arg0: c_double) -> *mut c_void;
   // proto:  void QVariantAnimation::~QVariantAnimation();
-  fn _ZN17QVariantAnimationD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN17QVariantAnimationD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QVariant QVariantAnimation::currentValue();
-  fn _ZNK17QVariantAnimation12currentValueEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK17QVariantAnimation12currentValueEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QVariantAnimation::duration();
-  fn _ZNK17QVariantAnimation8durationEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK17QVariantAnimation8durationEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  KeyValues QVariantAnimation::keyValues();
-  fn _ZNK17QVariantAnimation9keyValuesEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK17QVariantAnimation9keyValuesEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QVariantAnimation::setStartValue(const QVariant & value);
-  fn _ZN17QVariantAnimation13setStartValueERK8QVariant(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN17QVariantAnimation13setStartValueERK8QVariant(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QVariant QVariantAnimation::startValue();
-  fn _ZNK17QVariantAnimation10startValueEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK17QVariantAnimation10startValueEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  const QMetaObject * QVariantAnimation::metaObject();
-  fn _ZNK17QVariantAnimation10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK17QVariantAnimation10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QVariantAnimation::setEndValue(const QVariant & value);
-  fn _ZN17QVariantAnimation11setEndValueERK8QVariant(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN17QVariantAnimation11setEndValueERK8QVariant(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QEasingCurve QVariantAnimation::easingCurve();
-  fn _ZNK17QVariantAnimation11easingCurveEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QVariantAnimation::QVariantAnimation(const QVariantAnimation & );
-  fn _ZN17QVariantAnimationC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK17QVariantAnimation11easingCurveEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QVariantAnimation::QVariantAnimation(QObject * parent);
-  fn _ZN17QVariantAnimationC2EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN17QVariantAnimationC2EP7QObject(arg0: *mut c_void) -> u64;
   // proto:  void QVariantAnimation::setEasingCurve(const QEasingCurve & easing);
-  fn _ZN17QVariantAnimation14setEasingCurveERK12QEasingCurve(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN17QVariantAnimation14setEasingCurveERK12QEasingCurve(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QVariantAnimation_SlotProxy_connect__ZN17QVariantAnimation12valueChangedERK8QVariant(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
@@ -112,7 +111,7 @@ impl<'a> /*trait*/ QVariantAnimation_setDuration<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QVariantAnimation11setDurationEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN17QVariantAnimation11setDurationEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN17QVariantAnimation11setDurationEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -136,7 +135,7 @@ impl<'a> /*trait*/ QVariantAnimation_setKeyValueAt<()> for (f64, &'a QVariant) {
     // unsafe{_ZN17QVariantAnimation13setKeyValueAtEdRK8QVariant()};
     let arg0 = self.0  as c_double;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN17QVariantAnimation13setKeyValueAtEdRK8QVariant(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN17QVariantAnimation13setKeyValueAtEdRK8QVariant(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -158,7 +157,7 @@ impl<'a> /*trait*/ QVariantAnimation_endValue<QVariant> for () {
   fn endValue(self , rsthis: & QVariantAnimation) -> QVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QVariantAnimation8endValueEv()};
-    let mut ret = unsafe {_ZNK17QVariantAnimation8endValueEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK17QVariantAnimation8endValueEv(rsthis.qclsinst)};
     let mut ret1 = QVariant::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -183,7 +182,7 @@ impl<'a> /*trait*/ QVariantAnimation_keyValueAt<QVariant> for (f64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QVariantAnimation10keyValueAtEd()};
     let arg0 = self  as c_double;
-    let mut ret = unsafe {_ZNK17QVariantAnimation10keyValueAtEd(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK17QVariantAnimation10keyValueAtEd(rsthis.qclsinst, arg0)};
     let mut ret1 = QVariant::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -207,7 +206,7 @@ impl<'a> /*trait*/ QVariantAnimation_free<()> for () {
   fn free(self , rsthis: & QVariantAnimation) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QVariantAnimationD2Ev()};
-     unsafe {_ZN17QVariantAnimationD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN17QVariantAnimationD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -229,7 +228,7 @@ impl<'a> /*trait*/ QVariantAnimation_currentValue<QVariant> for () {
   fn currentValue(self , rsthis: & QVariantAnimation) -> QVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QVariantAnimation12currentValueEv()};
-    let mut ret = unsafe {_ZNK17QVariantAnimation12currentValueEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK17QVariantAnimation12currentValueEv(rsthis.qclsinst)};
     let mut ret1 = QVariant::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -253,7 +252,7 @@ impl<'a> /*trait*/ QVariantAnimation_duration<i32> for () {
   fn duration(self , rsthis: & QVariantAnimation) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QVariantAnimation8durationEv()};
-    let mut ret = unsafe {_ZNK17QVariantAnimation8durationEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK17QVariantAnimation8durationEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -276,7 +275,7 @@ impl<'a> /*trait*/ QVariantAnimation_keyValues<()> for () {
   fn keyValues(self , rsthis: & QVariantAnimation) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QVariantAnimation9keyValuesEv()};
-     unsafe {_ZNK17QVariantAnimation9keyValuesEv(rsthis.qclsinst)};
+     unsafe {C_ZNK17QVariantAnimation9keyValuesEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -299,7 +298,7 @@ impl<'a> /*trait*/ QVariantAnimation_setStartValue<()> for (&'a QVariant) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QVariantAnimation13setStartValueERK8QVariant()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN17QVariantAnimation13setStartValueERK8QVariant(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN17QVariantAnimation13setStartValueERK8QVariant(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -321,7 +320,7 @@ impl<'a> /*trait*/ QVariantAnimation_startValue<QVariant> for () {
   fn startValue(self , rsthis: & QVariantAnimation) -> QVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QVariantAnimation10startValueEv()};
-    let mut ret = unsafe {_ZNK17QVariantAnimation10startValueEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK17QVariantAnimation10startValueEv(rsthis.qclsinst)};
     let mut ret1 = QVariant::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -341,11 +340,13 @@ pub trait QVariantAnimation_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QVariantAnimation::metaObject();
-impl<'a> /*trait*/ QVariantAnimation_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QVariantAnimation) -> () {
+impl<'a> /*trait*/ QVariantAnimation_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QVariantAnimation) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QVariantAnimation10metaObjectEv()};
-     unsafe {_ZNK17QVariantAnimation10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK17QVariantAnimation10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -368,7 +369,7 @@ impl<'a> /*trait*/ QVariantAnimation_setEndValue<()> for (&'a QVariant) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QVariantAnimation11setEndValueERK8QVariant()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN17QVariantAnimation11setEndValueERK8QVariant(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN17QVariantAnimation11setEndValueERK8QVariant(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -390,14 +391,14 @@ impl<'a> /*trait*/ QVariantAnimation_easingCurve<QEasingCurve> for () {
   fn easingCurve(self , rsthis: & QVariantAnimation) -> QEasingCurve {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QVariantAnimation11easingCurveEv()};
-    let mut ret = unsafe {_ZNK17QVariantAnimation11easingCurveEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK17QVariantAnimation11easingCurveEv(rsthis.qclsinst)};
     let mut ret1 = QEasingCurve::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
 }
 
-  // proto:  void QVariantAnimation::QVariantAnimation(const QVariantAnimation & );
+  // proto:  void QVariantAnimation::QVariantAnimation(QObject * parent);
 impl /*struct*/ QVariantAnimation {
   pub fn new<T: QVariantAnimation_new>(value: T) -> QVariantAnimation {
     let rsthis = value.new();
@@ -410,22 +411,6 @@ pub trait QVariantAnimation_new {
   fn new(self) -> QVariantAnimation;
 }
 
-  // proto:  void QVariantAnimation::QVariantAnimation(const QVariantAnimation & );
-impl<'a> /*trait*/ QVariantAnimation_new for (&'a QVariantAnimation) {
-  fn new(self) -> QVariantAnimation {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QVariantAnimationC2ERKS_()};
-    let ctysz: c_int = unsafe{QVariantAnimation_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN17QVariantAnimationC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QVariantAnimation{qbase: QAbstractAnimation::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
   // proto:  void QVariantAnimation::QVariantAnimation(QObject * parent);
 impl<'a> /*trait*/ QVariantAnimation_new for (&'a QObject) {
   fn new(self) -> QVariantAnimation {
@@ -434,8 +419,7 @@ impl<'a> /*trait*/ QVariantAnimation_new for (&'a QObject) {
     let ctysz: c_int = unsafe{QVariantAnimation_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN17QVariantAnimationC2EP7QObject(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN17QVariantAnimationC2EP7QObject(arg0)};
     let rsthis = QVariantAnimation{qbase: QAbstractAnimation::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -460,7 +444,7 @@ impl<'a> /*trait*/ QVariantAnimation_setEasingCurve<()> for (&'a QEasingCurve) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QVariantAnimation14setEasingCurveERK12QEasingCurve()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN17QVariantAnimation14setEasingCurveERK12QEasingCurve(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN17QVariantAnimation14setEasingCurveERK12QEasingCurve(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

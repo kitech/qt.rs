@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtCore/qsemaphore.h
 // dst-file: /src/core/qsemaphore.rs
 //
@@ -30,21 +30,19 @@ use std::ops::Deref;
 extern {
   fn QSemaphore_Class_Size() -> c_int;
   // proto:  void QSemaphore::acquire(int n);
-  fn _ZN10QSemaphore7acquireEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN10QSemaphore7acquireEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QSemaphore::release(int n);
-  fn _ZN10QSemaphore7releaseEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN10QSemaphore7releaseEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QSemaphore::available();
-  fn _ZNK10QSemaphore9availableEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK10QSemaphore9availableEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QSemaphore::tryAcquire(int n, int timeout);
-  fn _ZN10QSemaphore10tryAcquireEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> c_char;
-  // proto:  void QSemaphore::QSemaphore(const QSemaphore & );
-  fn _ZN10QSemaphoreC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN10QSemaphore10tryAcquireEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> c_char;
   // proto:  bool QSemaphore::tryAcquire(int n);
-  fn _ZN10QSemaphore10tryAcquireEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
+  fn C_ZN10QSemaphore10tryAcquireEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
   // proto:  void QSemaphore::QSemaphore(int n);
-  fn _ZN10QSemaphoreC2Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN10QSemaphoreC2Ei(arg0: c_int) -> u64;
   // proto:  void QSemaphore::~QSemaphore();
-  fn _ZN10QSemaphoreD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN10QSemaphoreD2Ev(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
@@ -78,7 +76,7 @@ impl<'a> /*trait*/ QSemaphore_acquire<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QSemaphore7acquireEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN10QSemaphore7acquireEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN10QSemaphore7acquireEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -101,7 +99,7 @@ impl<'a> /*trait*/ QSemaphore_release<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QSemaphore7releaseEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN10QSemaphore7releaseEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN10QSemaphore7releaseEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -123,7 +121,7 @@ impl<'a> /*trait*/ QSemaphore_available<i32> for () {
   fn available(self , rsthis: & QSemaphore) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QSemaphore9availableEv()};
-    let mut ret = unsafe {_ZNK10QSemaphore9availableEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QSemaphore9availableEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -148,13 +146,25 @@ impl<'a> /*trait*/ QSemaphore_tryAcquire<i8> for (i32, i32) {
     // unsafe{_ZN10QSemaphore10tryAcquireEii()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-    let mut ret = unsafe {_ZN10QSemaphore10tryAcquireEii(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {C_ZN10QSemaphore10tryAcquireEii(rsthis.qclsinst, arg0, arg1)};
     return ret as i8;
     // return 1;
   }
 }
 
-  // proto:  void QSemaphore::QSemaphore(const QSemaphore & );
+  // proto:  bool QSemaphore::tryAcquire(int n);
+impl<'a> /*trait*/ QSemaphore_tryAcquire<i8> for (i32) {
+  fn tryAcquire(self , rsthis: & QSemaphore) -> i8 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN10QSemaphore10tryAcquireEi()};
+    let arg0 = self  as c_int;
+    let mut ret = unsafe {C_ZN10QSemaphore10tryAcquireEi(rsthis.qclsinst, arg0)};
+    return ret as i8;
+    // return 1;
+  }
+}
+
+  // proto:  void QSemaphore::QSemaphore(int n);
 impl /*struct*/ QSemaphore {
   pub fn new<T: QSemaphore_new>(value: T) -> QSemaphore {
     let rsthis = value.new();
@@ -167,34 +177,6 @@ pub trait QSemaphore_new {
   fn new(self) -> QSemaphore;
 }
 
-  // proto:  void QSemaphore::QSemaphore(const QSemaphore & );
-impl<'a> /*trait*/ QSemaphore_new for (&'a QSemaphore) {
-  fn new(self) -> QSemaphore {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QSemaphoreC2ERKS_()};
-    let ctysz: c_int = unsafe{QSemaphore_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN10QSemaphoreC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QSemaphore{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  bool QSemaphore::tryAcquire(int n);
-impl<'a> /*trait*/ QSemaphore_tryAcquire<i8> for (i32) {
-  fn tryAcquire(self , rsthis: & QSemaphore) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QSemaphore10tryAcquireEi()};
-    let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZN10QSemaphore10tryAcquireEi(rsthis.qclsinst, arg0)};
-    return ret as i8;
-    // return 1;
-  }
-}
-
   // proto:  void QSemaphore::QSemaphore(int n);
 impl<'a> /*trait*/ QSemaphore_new for (i32) {
   fn new(self) -> QSemaphore {
@@ -203,8 +185,7 @@ impl<'a> /*trait*/ QSemaphore_new for (i32) {
     let ctysz: c_int = unsafe{QSemaphore_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
-    unsafe {_ZN10QSemaphoreC2Ei(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN10QSemaphoreC2Ei(arg0)};
     let rsthis = QSemaphore{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -228,7 +209,7 @@ impl<'a> /*trait*/ QSemaphore_free<()> for () {
   fn free(self , rsthis: & QSemaphore) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QSemaphoreD2Ev()};
-     unsafe {_ZN10QSemaphoreD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN10QSemaphoreD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

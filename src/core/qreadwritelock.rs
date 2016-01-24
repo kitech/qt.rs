@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtCore/qreadwritelock.h
 // dst-file: /src/core/qreadwritelock.rs
 //
@@ -31,49 +31,43 @@ use std::ops::Deref;
 extern {
   fn QWriteLocker_Class_Size() -> c_int;
   // proto:  QReadWriteLock * QWriteLocker::readWriteLock();
-  fn _ZNK12QWriteLocker13readWriteLockEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK12QWriteLocker13readWriteLockEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QWriteLocker::QWriteLocker(QReadWriteLock * readWriteLock);
-  fn _ZN12QWriteLockerC2EP14QReadWriteLock(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN12QWriteLockerC2EP14QReadWriteLock(arg0: *mut c_void) -> u64;
   // proto:  void QWriteLocker::unlock();
-  fn _ZN12QWriteLocker6unlockEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN12QWriteLocker6unlockEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QWriteLocker::~QWriteLocker();
-  fn _ZN12QWriteLockerD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN12QWriteLockerD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QWriteLocker::relock();
-  fn _ZN12QWriteLocker6relockEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QWriteLocker::QWriteLocker(const QWriteLocker & );
-  fn _ZN12QWriteLockerC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN12QWriteLocker6relockEv(qthis: u64 /* *mut c_void*/);
   fn QReadWriteLock_Class_Size() -> c_int;
   // proto:  void QReadWriteLock::~QReadWriteLock();
-  fn _ZN14QReadWriteLockD2Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  void QReadWriteLock::QReadWriteLock(const QReadWriteLock & );
-  fn _ZN14QReadWriteLockC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN14QReadWriteLockD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QReadWriteLock::tryLockForRead();
-  fn _ZN14QReadWriteLock14tryLockForReadEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZN14QReadWriteLock14tryLockForReadEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QReadWriteLock::lockForWrite();
-  fn _ZN14QReadWriteLock12lockForWriteEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN14QReadWriteLock12lockForWriteEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QReadWriteLock::tryLockForWrite();
-  fn _ZN14QReadWriteLock15tryLockForWriteEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZN14QReadWriteLock15tryLockForWriteEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QReadWriteLock::unlock();
-  fn _ZN14QReadWriteLock6unlockEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN14QReadWriteLock6unlockEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QReadWriteLock::tryLockForRead(int timeout);
-  fn _ZN14QReadWriteLock14tryLockForReadEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
+  fn C_ZN14QReadWriteLock14tryLockForReadEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
   // proto:  void QReadWriteLock::lockForRead();
-  fn _ZN14QReadWriteLock11lockForReadEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN14QReadWriteLock11lockForReadEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QReadWriteLock::tryLockForWrite(int timeout);
-  fn _ZN14QReadWriteLock15tryLockForWriteEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
+  fn C_ZN14QReadWriteLock15tryLockForWriteEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
   fn QReadLocker_Class_Size() -> c_int;
   // proto:  QReadWriteLock * QReadLocker::readWriteLock();
-  fn _ZNK11QReadLocker13readWriteLockEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK11QReadLocker13readWriteLockEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QReadLocker::~QReadLocker();
-  fn _ZN11QReadLockerD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN11QReadLockerD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QReadLocker::QReadLocker(QReadWriteLock * readWriteLock);
-  fn _ZN11QReadLockerC2EP14QReadWriteLock(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QReadLocker::QReadLocker(const QReadLocker & );
-  fn _ZN11QReadLockerC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QReadLockerC2EP14QReadWriteLock(arg0: *mut c_void) -> u64;
   // proto:  void QReadLocker::relock();
-  fn _ZN11QReadLocker6relockEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN11QReadLocker6relockEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QReadLocker::unlock();
-  fn _ZN11QReadLocker6unlockEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN11QReadLocker6unlockEv(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
@@ -120,7 +114,7 @@ impl<'a> /*trait*/ QWriteLocker_readWriteLock<QReadWriteLock> for () {
   fn readWriteLock(self , rsthis: & QWriteLocker) -> QReadWriteLock {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QWriteLocker13readWriteLockEv()};
-    let mut ret = unsafe {_ZNK12QWriteLocker13readWriteLockEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QWriteLocker13readWriteLockEv(rsthis.qclsinst)};
     let mut ret1 = QReadWriteLock::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -148,8 +142,7 @@ impl<'a> /*trait*/ QWriteLocker_new for (&'a QReadWriteLock) {
     let ctysz: c_int = unsafe{QWriteLocker_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN12QWriteLockerC2EP14QReadWriteLock(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN12QWriteLockerC2EP14QReadWriteLock(arg0)};
     let rsthis = QWriteLocker{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -173,7 +166,7 @@ impl<'a> /*trait*/ QWriteLocker_unlock<()> for () {
   fn unlock(self , rsthis: & QWriteLocker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QWriteLocker6unlockEv()};
-     unsafe {_ZN12QWriteLocker6unlockEv(rsthis.qclsinst)};
+     unsafe {C_ZN12QWriteLocker6unlockEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -195,7 +188,7 @@ impl<'a> /*trait*/ QWriteLocker_free<()> for () {
   fn free(self , rsthis: & QWriteLocker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QWriteLockerD2Ev()};
-     unsafe {_ZN12QWriteLockerD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN12QWriteLockerD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -217,23 +210,7 @@ impl<'a> /*trait*/ QWriteLocker_relock<()> for () {
   fn relock(self , rsthis: & QWriteLocker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QWriteLocker6relockEv()};
-     unsafe {_ZN12QWriteLocker6relockEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QWriteLocker::QWriteLocker(const QWriteLocker & );
-impl<'a> /*trait*/ QWriteLocker_new for (&'a QWriteLocker) {
-  fn new(self) -> QWriteLocker {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QWriteLockerC2ERKS_()};
-    let ctysz: c_int = unsafe{QWriteLocker_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN12QWriteLockerC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QWriteLocker{qclsinst: qthis, ..Default::default()};
-    return rsthis;
+     unsafe {C_ZN12QWriteLocker6relockEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -260,36 +237,7 @@ impl<'a> /*trait*/ QReadWriteLock_free<()> for () {
   fn free(self , rsthis: & QReadWriteLock) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QReadWriteLockD2Ev()};
-     unsafe {_ZN14QReadWriteLockD2Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QReadWriteLock::QReadWriteLock(const QReadWriteLock & );
-impl /*struct*/ QReadWriteLock {
-  pub fn new<T: QReadWriteLock_new>(value: T) -> QReadWriteLock {
-    let rsthis = value.new();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QReadWriteLock_new {
-  fn new(self) -> QReadWriteLock;
-}
-
-  // proto:  void QReadWriteLock::QReadWriteLock(const QReadWriteLock & );
-impl<'a> /*trait*/ QReadWriteLock_new for (&'a QReadWriteLock) {
-  fn new(self) -> QReadWriteLock {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QReadWriteLockC2ERKS_()};
-    let ctysz: c_int = unsafe{QReadWriteLock_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN14QReadWriteLockC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QReadWriteLock{qclsinst: qthis, ..Default::default()};
-    return rsthis;
+     unsafe {C_ZN14QReadWriteLockD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -311,7 +259,7 @@ impl<'a> /*trait*/ QReadWriteLock_tryLockForRead<i8> for () {
   fn tryLockForRead(self , rsthis: & QReadWriteLock) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QReadWriteLock14tryLockForReadEv()};
-    let mut ret = unsafe {_ZN14QReadWriteLock14tryLockForReadEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZN14QReadWriteLock14tryLockForReadEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -334,7 +282,7 @@ impl<'a> /*trait*/ QReadWriteLock_lockForWrite<()> for () {
   fn lockForWrite(self , rsthis: & QReadWriteLock) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QReadWriteLock12lockForWriteEv()};
-     unsafe {_ZN14QReadWriteLock12lockForWriteEv(rsthis.qclsinst)};
+     unsafe {C_ZN14QReadWriteLock12lockForWriteEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -356,7 +304,7 @@ impl<'a> /*trait*/ QReadWriteLock_tryLockForWrite<i8> for () {
   fn tryLockForWrite(self , rsthis: & QReadWriteLock) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QReadWriteLock15tryLockForWriteEv()};
-    let mut ret = unsafe {_ZN14QReadWriteLock15tryLockForWriteEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZN14QReadWriteLock15tryLockForWriteEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -379,7 +327,7 @@ impl<'a> /*trait*/ QReadWriteLock_unlock<()> for () {
   fn unlock(self , rsthis: & QReadWriteLock) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QReadWriteLock6unlockEv()};
-     unsafe {_ZN14QReadWriteLock6unlockEv(rsthis.qclsinst)};
+     unsafe {C_ZN14QReadWriteLock6unlockEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -390,7 +338,7 @@ impl<'a> /*trait*/ QReadWriteLock_tryLockForRead<i8> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QReadWriteLock14tryLockForReadEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZN14QReadWriteLock14tryLockForReadEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN14QReadWriteLock14tryLockForReadEi(rsthis.qclsinst, arg0)};
     return ret as i8;
     // return 1;
   }
@@ -413,7 +361,7 @@ impl<'a> /*trait*/ QReadWriteLock_lockForRead<()> for () {
   fn lockForRead(self , rsthis: & QReadWriteLock) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QReadWriteLock11lockForReadEv()};
-     unsafe {_ZN14QReadWriteLock11lockForReadEv(rsthis.qclsinst)};
+     unsafe {C_ZN14QReadWriteLock11lockForReadEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -424,7 +372,7 @@ impl<'a> /*trait*/ QReadWriteLock_tryLockForWrite<i8> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QReadWriteLock15tryLockForWriteEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZN14QReadWriteLock15tryLockForWriteEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN14QReadWriteLock15tryLockForWriteEi(rsthis.qclsinst, arg0)};
     return ret as i8;
     // return 1;
   }
@@ -452,7 +400,7 @@ impl<'a> /*trait*/ QReadLocker_readWriteLock<QReadWriteLock> for () {
   fn readWriteLock(self , rsthis: & QReadLocker) -> QReadWriteLock {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QReadLocker13readWriteLockEv()};
-    let mut ret = unsafe {_ZNK11QReadLocker13readWriteLockEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QReadLocker13readWriteLockEv(rsthis.qclsinst)};
     let mut ret1 = QReadWriteLock::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -476,7 +424,7 @@ impl<'a> /*trait*/ QReadLocker_free<()> for () {
   fn free(self , rsthis: & QReadLocker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QReadLockerD2Ev()};
-     unsafe {_ZN11QReadLockerD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN11QReadLockerD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -502,24 +450,7 @@ impl<'a> /*trait*/ QReadLocker_new for (&'a QReadWriteLock) {
     let ctysz: c_int = unsafe{QReadLocker_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QReadLockerC2EP14QReadWriteLock(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QReadLocker{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  void QReadLocker::QReadLocker(const QReadLocker & );
-impl<'a> /*trait*/ QReadLocker_new for (&'a QReadLocker) {
-  fn new(self) -> QReadLocker {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QReadLockerC2ERKS_()};
-    let ctysz: c_int = unsafe{QReadLocker_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QReadLockerC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN11QReadLockerC2EP14QReadWriteLock(arg0)};
     let rsthis = QReadLocker{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -543,7 +474,7 @@ impl<'a> /*trait*/ QReadLocker_relock<()> for () {
   fn relock(self , rsthis: & QReadLocker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QReadLocker6relockEv()};
-     unsafe {_ZN11QReadLocker6relockEv(rsthis.qclsinst)};
+     unsafe {C_ZN11QReadLocker6relockEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -565,7 +496,7 @@ impl<'a> /*trait*/ QReadLocker_unlock<()> for () {
   fn unlock(self , rsthis: & QReadLocker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QReadLocker6unlockEv()};
-     unsafe {_ZN11QReadLocker6unlockEv(rsthis.qclsinst)};
+     unsafe {C_ZN11QReadLocker6unlockEv(rsthis.qclsinst)};
     // return 1;
   }
 }

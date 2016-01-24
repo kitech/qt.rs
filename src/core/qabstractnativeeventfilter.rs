@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtCore/qabstractnativeeventfilter.h
 // dst-file: /src/core/qabstractnativeeventfilter.rs
 //
@@ -31,13 +31,11 @@ use super::qbytearray::QByteArray; // 773
 extern {
   fn QAbstractNativeEventFilter_Class_Size() -> c_int;
   // proto:  bool QAbstractNativeEventFilter::nativeEventFilter(const QByteArray & eventType, void * message, long * result);
-  fn _ZN26QAbstractNativeEventFilter17nativeEventFilterERK10QByteArrayPvPl(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_long) -> c_char;
+  fn C_ZN26QAbstractNativeEventFilter17nativeEventFilterERK10QByteArrayPvPl(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_long) -> c_char;
   // proto:  void QAbstractNativeEventFilter::QAbstractNativeEventFilter();
-  fn _ZN26QAbstractNativeEventFilterC2Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  void QAbstractNativeEventFilter::QAbstractNativeEventFilter(const QAbstractNativeEventFilter & );
-  fn _ZN26QAbstractNativeEventFilterC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN26QAbstractNativeEventFilterC2Ev() -> u64;
   // proto:  void QAbstractNativeEventFilter::~QAbstractNativeEventFilter();
-  fn _ZN26QAbstractNativeEventFilterD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN26QAbstractNativeEventFilterD2Ev(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
@@ -73,7 +71,7 @@ impl<'a> /*trait*/ QAbstractNativeEventFilter_nativeEventFilter<i8> for (&'a QBy
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as *mut c_void;
     let arg2 = self.2.as_ptr()  as *mut c_long;
-    let mut ret = unsafe {_ZN26QAbstractNativeEventFilter17nativeEventFilterERK10QByteArrayPvPl(rsthis.qclsinst, arg0, arg1, arg2)};
+    let mut ret = unsafe {C_ZN26QAbstractNativeEventFilter17nativeEventFilterERK10QByteArrayPvPl(rsthis.qclsinst, arg0, arg1, arg2)};
     return ret as i8;
     // return 1;
   }
@@ -99,24 +97,7 @@ impl<'a> /*trait*/ QAbstractNativeEventFilter_new for () {
     // unsafe{_ZN26QAbstractNativeEventFilterC2Ev()};
     let ctysz: c_int = unsafe{QAbstractNativeEventFilter_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    unsafe {_ZN26QAbstractNativeEventFilterC2Ev(qthis_ph)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QAbstractNativeEventFilter{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  void QAbstractNativeEventFilter::QAbstractNativeEventFilter(const QAbstractNativeEventFilter & );
-impl<'a> /*trait*/ QAbstractNativeEventFilter_new for (&'a QAbstractNativeEventFilter) {
-  fn new(self) -> QAbstractNativeEventFilter {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN26QAbstractNativeEventFilterC2ERKS_()};
-    let ctysz: c_int = unsafe{QAbstractNativeEventFilter_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN26QAbstractNativeEventFilterC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN26QAbstractNativeEventFilterC2Ev()};
     let rsthis = QAbstractNativeEventFilter{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -140,7 +121,7 @@ impl<'a> /*trait*/ QAbstractNativeEventFilter_free<()> for () {
   fn free(self , rsthis: & QAbstractNativeEventFilter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QAbstractNativeEventFilterD2Ev()};
-     unsafe {_ZN26QAbstractNativeEventFilterD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN26QAbstractNativeEventFilterD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

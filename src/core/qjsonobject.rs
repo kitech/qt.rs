@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtCore/qjsonobject.h
 // dst-file: /src/core/qjsonobject.rs
 //
@@ -20,6 +20,7 @@ use self::libc::*;
 // use block begin =>
 use std::ops::Deref;
 use super::qstring::QString; // 773
+use super::qjsonvalue::QJsonValue; // 773
 // <= use block end
 
 // ext block begin =>
@@ -31,33 +32,33 @@ use super::qstring::QString; // 773
 extern {
   fn QJsonObject_Class_Size() -> c_int;
   // proto:  bool QJsonObject::isEmpty();
-  fn _ZNK11QJsonObject7isEmptyEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK11QJsonObject7isEmptyEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  int QJsonObject::length();
-  fn _ZNK11QJsonObject6lengthEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK11QJsonObject6lengthEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QJsonObject::remove(const QString & key);
-  fn _ZN11QJsonObject6removeERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QJsonObject6removeERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QJsonObject::~QJsonObject();
-  fn _ZN11QJsonObjectD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN11QJsonObjectD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QJsonValue QJsonObject::value(const QString & key);
-  fn _ZNK11QJsonObject5valueERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK11QJsonObject5valueERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  int QJsonObject::size();
-  fn _ZNK11QJsonObject4sizeEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK11QJsonObject4sizeEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QJsonObject::count();
-  fn _ZNK11QJsonObject5countEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK11QJsonObject5countEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QJsonObject::empty();
-  fn _ZNK11QJsonObject5emptyEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK11QJsonObject5emptyEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QJsonValue QJsonObject::take(const QString & key);
-  fn _ZN11QJsonObject4takeERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QJsonObject4takeERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QVariantHash QJsonObject::toVariantHash();
-  fn _ZNK11QJsonObject13toVariantHashEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK11QJsonObject13toVariantHashEv(qthis: u64 /* *mut c_void*/);
   // proto:  QStringList QJsonObject::keys();
-  fn _ZNK11QJsonObject4keysEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK11QJsonObject4keysEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QJsonObject::contains(const QString & key);
-  fn _ZNK11QJsonObject8containsERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
+  fn C_ZNK11QJsonObject8containsERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  void QJsonObject::QJsonObject();
-  fn _ZN11QJsonObjectC2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN11QJsonObjectC2Ev() -> u64;
   // proto:  QVariantMap QJsonObject::toVariantMap();
-  fn _ZNK11QJsonObject12toVariantMapEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK11QJsonObject12toVariantMapEv(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
@@ -90,7 +91,7 @@ impl<'a> /*trait*/ QJsonObject_isEmpty<i8> for () {
   fn isEmpty(self , rsthis: & QJsonObject) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QJsonObject7isEmptyEv()};
-    let mut ret = unsafe {_ZNK11QJsonObject7isEmptyEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QJsonObject7isEmptyEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -113,7 +114,7 @@ impl<'a> /*trait*/ QJsonObject_length<i32> for () {
   fn length(self , rsthis: & QJsonObject) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QJsonObject6lengthEv()};
-    let mut ret = unsafe {_ZNK11QJsonObject6lengthEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QJsonObject6lengthEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -137,7 +138,7 @@ impl<'a> /*trait*/ QJsonObject_remove<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QJsonObject6removeERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QJsonObject6removeERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QJsonObject6removeERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -159,7 +160,7 @@ impl<'a> /*trait*/ QJsonObject_free<()> for () {
   fn free(self , rsthis: & QJsonObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QJsonObjectD2Ev()};
-     unsafe {_ZN11QJsonObjectD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN11QJsonObjectD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -177,12 +178,14 @@ pub trait QJsonObject_value<RetType> {
 }
 
   // proto:  QJsonValue QJsonObject::value(const QString & key);
-impl<'a> /*trait*/ QJsonObject_value<()> for (&'a QString) {
-  fn value(self , rsthis: & QJsonObject) -> () {
+impl<'a> /*trait*/ QJsonObject_value<QJsonValue> for (&'a QString) {
+  fn value(self , rsthis: & QJsonObject) -> QJsonValue {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QJsonObject5valueERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZNK11QJsonObject5valueERK7QString(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK11QJsonObject5valueERK7QString(rsthis.qclsinst, arg0)};
+    let mut ret1 = QJsonValue::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -204,7 +207,7 @@ impl<'a> /*trait*/ QJsonObject_size<i32> for () {
   fn size(self , rsthis: & QJsonObject) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QJsonObject4sizeEv()};
-    let mut ret = unsafe {_ZNK11QJsonObject4sizeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QJsonObject4sizeEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -227,7 +230,7 @@ impl<'a> /*trait*/ QJsonObject_count<i32> for () {
   fn count(self , rsthis: & QJsonObject) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QJsonObject5countEv()};
-    let mut ret = unsafe {_ZNK11QJsonObject5countEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QJsonObject5countEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -250,7 +253,7 @@ impl<'a> /*trait*/ QJsonObject_empty<i8> for () {
   fn empty(self , rsthis: & QJsonObject) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QJsonObject5emptyEv()};
-    let mut ret = unsafe {_ZNK11QJsonObject5emptyEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QJsonObject5emptyEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -269,12 +272,14 @@ pub trait QJsonObject_take<RetType> {
 }
 
   // proto:  QJsonValue QJsonObject::take(const QString & key);
-impl<'a> /*trait*/ QJsonObject_take<()> for (&'a QString) {
-  fn take(self , rsthis: & QJsonObject) -> () {
+impl<'a> /*trait*/ QJsonObject_take<QJsonValue> for (&'a QString) {
+  fn take(self , rsthis: & QJsonObject) -> QJsonValue {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QJsonObject4takeERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QJsonObject4takeERK7QString(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN11QJsonObject4takeERK7QString(rsthis.qclsinst, arg0)};
+    let mut ret1 = QJsonValue::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -296,7 +301,7 @@ impl<'a> /*trait*/ QJsonObject_toVariantHash<()> for () {
   fn toVariantHash(self , rsthis: & QJsonObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QJsonObject13toVariantHashEv()};
-     unsafe {_ZNK11QJsonObject13toVariantHashEv(rsthis.qclsinst)};
+     unsafe {C_ZNK11QJsonObject13toVariantHashEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -318,7 +323,7 @@ impl<'a> /*trait*/ QJsonObject_keys<()> for () {
   fn keys(self , rsthis: & QJsonObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QJsonObject4keysEv()};
-     unsafe {_ZNK11QJsonObject4keysEv(rsthis.qclsinst)};
+     unsafe {C_ZNK11QJsonObject4keysEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -341,7 +346,7 @@ impl<'a> /*trait*/ QJsonObject_contains<i8> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QJsonObject8containsERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK11QJsonObject8containsERK7QString(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK11QJsonObject8containsERK7QString(rsthis.qclsinst, arg0)};
     return ret as i8;
     // return 1;
   }
@@ -367,8 +372,7 @@ impl<'a> /*trait*/ QJsonObject_new for () {
     // unsafe{_ZN11QJsonObjectC2Ev()};
     let ctysz: c_int = unsafe{QJsonObject_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    unsafe {_ZN11QJsonObjectC2Ev(qthis_ph)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN11QJsonObjectC2Ev()};
     let rsthis = QJsonObject{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -392,7 +396,7 @@ impl<'a> /*trait*/ QJsonObject_toVariantMap<()> for () {
   fn toVariantMap(self , rsthis: & QJsonObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QJsonObject12toVariantMapEv()};
-     unsafe {_ZNK11QJsonObject12toVariantMapEv(rsthis.qclsinst)};
+     unsafe {C_ZNK11QJsonObject12toVariantMapEv(rsthis.qclsinst)};
     // return 1;
   }
 }

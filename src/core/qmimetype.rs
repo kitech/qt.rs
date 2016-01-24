@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtCore/qmimetype.h
 // dst-file: /src/core/qmimetype.rs
 //
@@ -31,41 +31,41 @@ use super::qstring::QString; // 773
 extern {
   fn QMimeType_Class_Size() -> c_int;
   // proto:  void QMimeType::~QMimeType();
-  fn _ZN9QMimeTypeD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN9QMimeTypeD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QString QMimeType::comment();
-  fn _ZNK9QMimeType7commentEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK9QMimeType7commentEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QStringList QMimeType::aliases();
-  fn _ZNK9QMimeType7aliasesEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK9QMimeType7aliasesEv(qthis: u64 /* *mut c_void*/);
   // proto:  QString QMimeType::filterString();
-  fn _ZNK9QMimeType12filterStringEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK9QMimeType12filterStringEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QStringList QMimeType::parentMimeTypes();
-  fn _ZNK9QMimeType15parentMimeTypesEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK9QMimeType15parentMimeTypesEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QMimeType::QMimeType(const QMimeType & other);
-  fn _ZN9QMimeTypeC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QMimeTypeC2ERKS_(arg0: *mut c_void) -> u64;
   // proto:  bool QMimeType::inherits(const QString & mimeTypeName);
-  fn _ZNK9QMimeType8inheritsERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
+  fn C_ZNK9QMimeType8inheritsERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  bool QMimeType::isDefault();
-  fn _ZNK9QMimeType9isDefaultEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK9QMimeType9isDefaultEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QMimeType::isValid();
-  fn _ZNK9QMimeType7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK9QMimeType7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QMimeType::QMimeType();
-  fn _ZN9QMimeTypeC2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN9QMimeTypeC2Ev() -> u64;
   // proto:  void QMimeType::swap(QMimeType & other);
-  fn _ZN9QMimeType4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QMimeType4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QStringList QMimeType::suffixes();
-  fn _ZNK9QMimeType8suffixesEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK9QMimeType8suffixesEv(qthis: u64 /* *mut c_void*/);
   // proto:  QString QMimeType::genericIconName();
-  fn _ZNK9QMimeType15genericIconNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK9QMimeType15genericIconNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QMimeType::iconName();
-  fn _ZNK9QMimeType8iconNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK9QMimeType8iconNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QStringList QMimeType::allAncestors();
-  fn _ZNK9QMimeType12allAncestorsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK9QMimeType12allAncestorsEv(qthis: u64 /* *mut c_void*/);
   // proto:  QStringList QMimeType::globPatterns();
-  fn _ZNK9QMimeType12globPatternsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK9QMimeType12globPatternsEv(qthis: u64 /* *mut c_void*/);
   // proto:  QString QMimeType::name();
-  fn _ZNK9QMimeType4nameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK9QMimeType4nameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QMimeType::preferredSuffix();
-  fn _ZNK9QMimeType15preferredSuffixEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK9QMimeType15preferredSuffixEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
 } // <= ext block end
 
 // body block begin =>
@@ -98,7 +98,7 @@ impl<'a> /*trait*/ QMimeType_free<()> for () {
   fn free(self , rsthis: & QMimeType) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QMimeTypeD2Ev()};
-     unsafe {_ZN9QMimeTypeD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN9QMimeTypeD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -120,7 +120,7 @@ impl<'a> /*trait*/ QMimeType_comment<QString> for () {
   fn comment(self , rsthis: & QMimeType) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeType7commentEv()};
-    let mut ret = unsafe {_ZNK9QMimeType7commentEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QMimeType7commentEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -144,7 +144,7 @@ impl<'a> /*trait*/ QMimeType_aliases<()> for () {
   fn aliases(self , rsthis: & QMimeType) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeType7aliasesEv()};
-     unsafe {_ZNK9QMimeType7aliasesEv(rsthis.qclsinst)};
+     unsafe {C_ZNK9QMimeType7aliasesEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -166,7 +166,7 @@ impl<'a> /*trait*/ QMimeType_filterString<QString> for () {
   fn filterString(self , rsthis: & QMimeType) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeType12filterStringEv()};
-    let mut ret = unsafe {_ZNK9QMimeType12filterStringEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QMimeType12filterStringEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -190,7 +190,7 @@ impl<'a> /*trait*/ QMimeType_parentMimeTypes<()> for () {
   fn parentMimeTypes(self , rsthis: & QMimeType) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeType15parentMimeTypesEv()};
-     unsafe {_ZNK9QMimeType15parentMimeTypesEv(rsthis.qclsinst)};
+     unsafe {C_ZNK9QMimeType15parentMimeTypesEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -216,8 +216,7 @@ impl<'a> /*trait*/ QMimeType_new for (&'a QMimeType) {
     let ctysz: c_int = unsafe{QMimeType_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN9QMimeTypeC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN9QMimeTypeC2ERKS_(arg0)};
     let rsthis = QMimeType{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -242,7 +241,7 @@ impl<'a> /*trait*/ QMimeType_inherits<i8> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeType8inheritsERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK9QMimeType8inheritsERK7QString(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK9QMimeType8inheritsERK7QString(rsthis.qclsinst, arg0)};
     return ret as i8;
     // return 1;
   }
@@ -265,7 +264,7 @@ impl<'a> /*trait*/ QMimeType_isDefault<i8> for () {
   fn isDefault(self , rsthis: & QMimeType) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeType9isDefaultEv()};
-    let mut ret = unsafe {_ZNK9QMimeType9isDefaultEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QMimeType9isDefaultEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -288,7 +287,7 @@ impl<'a> /*trait*/ QMimeType_isValid<i8> for () {
   fn isValid(self , rsthis: & QMimeType) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeType7isValidEv()};
-    let mut ret = unsafe {_ZNK9QMimeType7isValidEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QMimeType7isValidEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -301,8 +300,7 @@ impl<'a> /*trait*/ QMimeType_new for () {
     // unsafe{_ZN9QMimeTypeC2Ev()};
     let ctysz: c_int = unsafe{QMimeType_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    unsafe {_ZN9QMimeTypeC2Ev(qthis_ph)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN9QMimeTypeC2Ev()};
     let rsthis = QMimeType{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -327,7 +325,7 @@ impl<'a> /*trait*/ QMimeType_swap<()> for (&'a QMimeType) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QMimeType4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN9QMimeType4swapERS_(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QMimeType4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -349,7 +347,7 @@ impl<'a> /*trait*/ QMimeType_suffixes<()> for () {
   fn suffixes(self , rsthis: & QMimeType) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeType8suffixesEv()};
-     unsafe {_ZNK9QMimeType8suffixesEv(rsthis.qclsinst)};
+     unsafe {C_ZNK9QMimeType8suffixesEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -371,7 +369,7 @@ impl<'a> /*trait*/ QMimeType_genericIconName<QString> for () {
   fn genericIconName(self , rsthis: & QMimeType) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeType15genericIconNameEv()};
-    let mut ret = unsafe {_ZNK9QMimeType15genericIconNameEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QMimeType15genericIconNameEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -395,7 +393,7 @@ impl<'a> /*trait*/ QMimeType_iconName<QString> for () {
   fn iconName(self , rsthis: & QMimeType) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeType8iconNameEv()};
-    let mut ret = unsafe {_ZNK9QMimeType8iconNameEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QMimeType8iconNameEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -419,7 +417,7 @@ impl<'a> /*trait*/ QMimeType_allAncestors<()> for () {
   fn allAncestors(self , rsthis: & QMimeType) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeType12allAncestorsEv()};
-     unsafe {_ZNK9QMimeType12allAncestorsEv(rsthis.qclsinst)};
+     unsafe {C_ZNK9QMimeType12allAncestorsEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -441,7 +439,7 @@ impl<'a> /*trait*/ QMimeType_globPatterns<()> for () {
   fn globPatterns(self , rsthis: & QMimeType) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeType12globPatternsEv()};
-     unsafe {_ZNK9QMimeType12globPatternsEv(rsthis.qclsinst)};
+     unsafe {C_ZNK9QMimeType12globPatternsEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -463,7 +461,7 @@ impl<'a> /*trait*/ QMimeType_name<QString> for () {
   fn name(self , rsthis: & QMimeType) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeType4nameEv()};
-    let mut ret = unsafe {_ZNK9QMimeType4nameEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QMimeType4nameEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -487,7 +485,7 @@ impl<'a> /*trait*/ QMimeType_preferredSuffix<QString> for () {
   fn preferredSuffix(self , rsthis: & QMimeType) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeType15preferredSuffixEv()};
-    let mut ret = unsafe {_ZNK9QMimeType15preferredSuffixEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QMimeType15preferredSuffixEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;

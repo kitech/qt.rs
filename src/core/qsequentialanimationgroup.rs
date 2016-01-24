@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtCore/qsequentialanimationgroup.h
 // dst-file: /src/core/qsequentialanimationgroup.rs
 //
@@ -22,6 +22,7 @@ use super::qanimationgroup::QAnimationGroup; // 773
 use std::ops::Deref;
 use super::qpauseanimation::QPauseAnimation; // 773
 use super::qobject::QObject; // 773
+use super::qobjectdefs::QMetaObject; // 773
 use super::qabstractanimation::QAbstractAnimation; // 773
 // <= use block end
 
@@ -34,21 +35,19 @@ use super::qabstractanimation::QAbstractAnimation; // 773
 extern {
   fn QSequentialAnimationGroup_Class_Size() -> c_int;
   // proto:  QPauseAnimation * QSequentialAnimationGroup::insertPause(int index, int msecs);
-  fn _ZN25QSequentialAnimationGroup11insertPauseEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> *mut c_void;
+  fn C_ZN25QSequentialAnimationGroup11insertPauseEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> *mut c_void;
   // proto:  void QSequentialAnimationGroup::QSequentialAnimationGroup(QObject * parent);
-  fn _ZN25QSequentialAnimationGroupC2EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN25QSequentialAnimationGroupC2EP7QObject(arg0: *mut c_void) -> u64;
   // proto:  QPauseAnimation * QSequentialAnimationGroup::addPause(int msecs);
-  fn _ZN25QSequentialAnimationGroup8addPauseEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
+  fn C_ZN25QSequentialAnimationGroup8addPauseEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  void QSequentialAnimationGroup::~QSequentialAnimationGroup();
-  fn _ZN25QSequentialAnimationGroupD2Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  void QSequentialAnimationGroup::QSequentialAnimationGroup(const QSequentialAnimationGroup & );
-  fn _ZN25QSequentialAnimationGroupC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN25QSequentialAnimationGroupD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  const QMetaObject * QSequentialAnimationGroup::metaObject();
-  fn _ZNK25QSequentialAnimationGroup10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK25QSequentialAnimationGroup10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QAbstractAnimation * QSequentialAnimationGroup::currentAnimation();
-  fn _ZNK25QSequentialAnimationGroup16currentAnimationEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK25QSequentialAnimationGroup16currentAnimationEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QSequentialAnimationGroup::duration();
-  fn _ZNK25QSequentialAnimationGroup8durationEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK25QSequentialAnimationGroup8durationEv(qthis: u64 /* *mut c_void*/) -> c_int;
   fn QSequentialAnimationGroup_SlotProxy_connect__ZN25QSequentialAnimationGroup23currentAnimationChangedEP18QAbstractAnimation(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
@@ -97,7 +96,7 @@ impl<'a> /*trait*/ QSequentialAnimationGroup_insertPause<QPauseAnimation> for (i
     // unsafe{_ZN25QSequentialAnimationGroup11insertPauseEii()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-    let mut ret = unsafe {_ZN25QSequentialAnimationGroup11insertPauseEii(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {C_ZN25QSequentialAnimationGroup11insertPauseEii(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QPauseAnimation::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -125,8 +124,7 @@ impl<'a> /*trait*/ QSequentialAnimationGroup_new for (&'a QObject) {
     let ctysz: c_int = unsafe{QSequentialAnimationGroup_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN25QSequentialAnimationGroupC2EP7QObject(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN25QSequentialAnimationGroupC2EP7QObject(arg0)};
     let rsthis = QSequentialAnimationGroup{qbase: QAnimationGroup::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -151,7 +149,7 @@ impl<'a> /*trait*/ QSequentialAnimationGroup_addPause<QPauseAnimation> for (i32)
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN25QSequentialAnimationGroup8addPauseEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZN25QSequentialAnimationGroup8addPauseEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN25QSequentialAnimationGroup8addPauseEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QPauseAnimation::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -175,23 +173,7 @@ impl<'a> /*trait*/ QSequentialAnimationGroup_free<()> for () {
   fn free(self , rsthis: & QSequentialAnimationGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN25QSequentialAnimationGroupD2Ev()};
-     unsafe {_ZN25QSequentialAnimationGroupD2Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QSequentialAnimationGroup::QSequentialAnimationGroup(const QSequentialAnimationGroup & );
-impl<'a> /*trait*/ QSequentialAnimationGroup_new for (&'a QSequentialAnimationGroup) {
-  fn new(self) -> QSequentialAnimationGroup {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN25QSequentialAnimationGroupC2ERKS_()};
-    let ctysz: c_int = unsafe{QSequentialAnimationGroup_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN25QSequentialAnimationGroupC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QSequentialAnimationGroup{qbase: QAnimationGroup::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
+     unsafe {C_ZN25QSequentialAnimationGroupD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -209,11 +191,13 @@ pub trait QSequentialAnimationGroup_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QSequentialAnimationGroup::metaObject();
-impl<'a> /*trait*/ QSequentialAnimationGroup_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QSequentialAnimationGroup) -> () {
+impl<'a> /*trait*/ QSequentialAnimationGroup_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QSequentialAnimationGroup) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK25QSequentialAnimationGroup10metaObjectEv()};
-     unsafe {_ZNK25QSequentialAnimationGroup10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK25QSequentialAnimationGroup10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -231,11 +215,13 @@ pub trait QSequentialAnimationGroup_currentAnimation<RetType> {
 }
 
   // proto:  QAbstractAnimation * QSequentialAnimationGroup::currentAnimation();
-impl<'a> /*trait*/ QSequentialAnimationGroup_currentAnimation<()> for () {
-  fn currentAnimation(self , rsthis: & QSequentialAnimationGroup) -> () {
+impl<'a> /*trait*/ QSequentialAnimationGroup_currentAnimation<QAbstractAnimation> for () {
+  fn currentAnimation(self , rsthis: & QSequentialAnimationGroup) -> QAbstractAnimation {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK25QSequentialAnimationGroup16currentAnimationEv()};
-     unsafe {_ZNK25QSequentialAnimationGroup16currentAnimationEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK25QSequentialAnimationGroup16currentAnimationEv(rsthis.qclsinst)};
+    let mut ret1 = QAbstractAnimation::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -257,7 +243,7 @@ impl<'a> /*trait*/ QSequentialAnimationGroup_duration<i32> for () {
   fn duration(self , rsthis: & QSequentialAnimationGroup) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK25QSequentialAnimationGroup8durationEv()};
-    let mut ret = unsafe {_ZNK25QSequentialAnimationGroup8durationEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK25QSequentialAnimationGroup8durationEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }

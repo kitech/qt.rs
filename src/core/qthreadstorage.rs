@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtCore/qthreadstorage.h
 // dst-file: /src/core/qthreadstorage.rs
 //
@@ -30,13 +30,13 @@ use std::ops::Deref;
 extern {
   fn QThreadStorageData_Class_Size() -> c_int;
   // proto:  void ** QThreadStorageData::set(void * p);
-  fn _ZN18QThreadStorageData3setEPv(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN18QThreadStorageData3setEPv(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void ** QThreadStorageData::get();
-  fn _ZNK18QThreadStorageData3getEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK18QThreadStorageData3getEv(qthis: u64 /* *mut c_void*/);
   // proto: static void QThreadStorageData::finish(void ** );
-  fn _ZN18QThreadStorageData6finishEPPv(arg0: *mut c_void);
+  fn C_ZN18QThreadStorageData6finishEPPv(arg0: *mut c_void);
   // proto:  void QThreadStorageData::~QThreadStorageData();
-  fn _ZN18QThreadStorageDataD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN18QThreadStorageDataD2Ev(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
@@ -70,7 +70,7 @@ impl<'a> /*trait*/ QThreadStorageData_set<()> for (*mut c_void) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QThreadStorageData3setEPv()};
     let arg0 = self  as *mut c_void;
-     unsafe {_ZN18QThreadStorageData3setEPv(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN18QThreadStorageData3setEPv(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -92,7 +92,7 @@ impl<'a> /*trait*/ QThreadStorageData_get<()> for () {
   fn get(self , rsthis: & QThreadStorageData) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QThreadStorageData3getEv()};
-     unsafe {_ZNK18QThreadStorageData3getEv(rsthis.qclsinst)};
+     unsafe {C_ZNK18QThreadStorageData3getEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -115,7 +115,7 @@ impl<'a> /*trait*/ QThreadStorageData_finish_s<()> for (*mut c_void) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QThreadStorageData6finishEPPv()};
     let arg0 = self  as *mut c_void;
-     unsafe {_ZN18QThreadStorageData6finishEPPv(arg0)};
+     unsafe {C_ZN18QThreadStorageData6finishEPPv(arg0)};
     // return 1;
   }
 }
@@ -137,7 +137,7 @@ impl<'a> /*trait*/ QThreadStorageData_free<()> for () {
   fn free(self , rsthis: & QThreadStorageData) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QThreadStorageDataD2Ev()};
-     unsafe {_ZN18QThreadStorageDataD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN18QThreadStorageDataD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

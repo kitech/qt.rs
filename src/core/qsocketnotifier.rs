@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtCore/qsocketnotifier.h
 // dst-file: /src/core/qsocketnotifier.rs
 //
@@ -20,6 +20,7 @@ use self::libc::*;
 // use block begin =>
 use super::qobject::QObject; // 773
 use std::ops::Deref;
+use super::qobjectdefs::QMetaObject; // 773
 // <= use block end
 
 // ext block begin =>
@@ -30,18 +31,16 @@ use std::ops::Deref;
 
 extern {
   fn QSocketNotifier_Class_Size() -> c_int;
-  // proto:  void QSocketNotifier::QSocketNotifier(const QSocketNotifier & );
-  fn _ZN15QSocketNotifierC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  qintptr QSocketNotifier::socket();
-  fn _ZNK15QSocketNotifier6socketEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK15QSocketNotifier6socketEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QSocketNotifier::isEnabled();
-  fn _ZNK15QSocketNotifier9isEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK15QSocketNotifier9isEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QSocketNotifier::setEnabled(bool );
-  fn _ZN15QSocketNotifier10setEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN15QSocketNotifier10setEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  const QMetaObject * QSocketNotifier::metaObject();
-  fn _ZNK15QSocketNotifier10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK15QSocketNotifier10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QSocketNotifier::~QSocketNotifier();
-  fn _ZN15QSocketNotifierD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN15QSocketNotifierD2Ev(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
@@ -70,35 +69,6 @@ impl AsRef<QObject> for QSocketNotifier {
     return & self.qbase;
   }
 }
-  // proto:  void QSocketNotifier::QSocketNotifier(const QSocketNotifier & );
-impl /*struct*/ QSocketNotifier {
-  pub fn new<T: QSocketNotifier_new>(value: T) -> QSocketNotifier {
-    let rsthis = value.new();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QSocketNotifier_new {
-  fn new(self) -> QSocketNotifier;
-}
-
-  // proto:  void QSocketNotifier::QSocketNotifier(const QSocketNotifier & );
-impl<'a> /*trait*/ QSocketNotifier_new for (&'a QSocketNotifier) {
-  fn new(self) -> QSocketNotifier {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QSocketNotifierC2ERKS_()};
-    let ctysz: c_int = unsafe{QSocketNotifier_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN15QSocketNotifierC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QSocketNotifier{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
   // proto:  qintptr QSocketNotifier::socket();
 impl /*struct*/ QSocketNotifier {
   pub fn socket<RetType, T: QSocketNotifier_socket<RetType>>(& self,  overload_args: T) -> RetType {
@@ -116,7 +86,7 @@ impl<'a> /*trait*/ QSocketNotifier_socket<i32> for () {
   fn socket(self , rsthis: & QSocketNotifier) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSocketNotifier6socketEv()};
-    let mut ret = unsafe {_ZNK15QSocketNotifier6socketEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QSocketNotifier6socketEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -139,7 +109,7 @@ impl<'a> /*trait*/ QSocketNotifier_isEnabled<i8> for () {
   fn isEnabled(self , rsthis: & QSocketNotifier) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSocketNotifier9isEnabledEv()};
-    let mut ret = unsafe {_ZNK15QSocketNotifier9isEnabledEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QSocketNotifier9isEnabledEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -163,7 +133,7 @@ impl<'a> /*trait*/ QSocketNotifier_setEnabled<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSocketNotifier10setEnabledEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN15QSocketNotifier10setEnabledEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QSocketNotifier10setEnabledEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -181,11 +151,13 @@ pub trait QSocketNotifier_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QSocketNotifier::metaObject();
-impl<'a> /*trait*/ QSocketNotifier_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QSocketNotifier) -> () {
+impl<'a> /*trait*/ QSocketNotifier_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QSocketNotifier) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSocketNotifier10metaObjectEv()};
-     unsafe {_ZNK15QSocketNotifier10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QSocketNotifier10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -207,7 +179,7 @@ impl<'a> /*trait*/ QSocketNotifier_free<()> for () {
   fn free(self , rsthis: & QSocketNotifier) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSocketNotifierD2Ev()};
-     unsafe {_ZN15QSocketNotifierD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN15QSocketNotifierD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

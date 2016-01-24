@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtCore/qthreadpool.h
 // dst-file: /src/core/qthreadpool.rs
 //
@@ -20,6 +20,7 @@ use self::libc::*;
 // use block begin =>
 use super::qobject::QObject; // 773
 use std::ops::Deref;
+use super::qobjectdefs::QMetaObject; // 773
 use super::qrunnable::QRunnable; // 773
 // <= use block end
 
@@ -32,37 +33,37 @@ use super::qrunnable::QRunnable; // 773
 extern {
   fn QThreadPool_Class_Size() -> c_int;
   // proto:  void QThreadPool::~QThreadPool();
-  fn _ZN11QThreadPoolD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN11QThreadPoolD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  int QThreadPool::expiryTimeout();
-  fn _ZNK11QThreadPool13expiryTimeoutEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK11QThreadPool13expiryTimeoutEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QThreadPool::waitForDone(int msecs);
-  fn _ZN11QThreadPool11waitForDoneEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
+  fn C_ZN11QThreadPool11waitForDoneEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
   // proto:  const QMetaObject * QThreadPool::metaObject();
-  fn _ZNK11QThreadPool10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK11QThreadPool10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QThreadPool::cancel(QRunnable * runnable);
-  fn _ZN11QThreadPool6cancelEP9QRunnable(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QThreadPool6cancelEP9QRunnable(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QThreadPool::tryStart(QRunnable * runnable);
-  fn _ZN11QThreadPool8tryStartEP9QRunnable(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
+  fn C_ZN11QThreadPool8tryStartEP9QRunnable(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto: static QThreadPool * QThreadPool::globalInstance();
-  fn _ZN11QThreadPool14globalInstanceEv() -> *mut c_void;
+  fn C_ZN11QThreadPool14globalInstanceEv() -> *mut c_void;
   // proto:  void QThreadPool::setMaxThreadCount(int maxThreadCount);
-  fn _ZN11QThreadPool17setMaxThreadCountEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN11QThreadPool17setMaxThreadCountEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QThreadPool::setExpiryTimeout(int expiryTimeout);
-  fn _ZN11QThreadPool16setExpiryTimeoutEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN11QThreadPool16setExpiryTimeoutEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QThreadPool::reserveThread();
-  fn _ZN11QThreadPool13reserveThreadEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN11QThreadPool13reserveThreadEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QThreadPool::clear();
-  fn _ZN11QThreadPool5clearEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN11QThreadPool5clearEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QThreadPool::QThreadPool(QObject * parent);
-  fn _ZN11QThreadPoolC2EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QThreadPoolC2EP7QObject(arg0: *mut c_void) -> u64;
   // proto:  void QThreadPool::start(QRunnable * runnable, int priority);
-  fn _ZN11QThreadPool5startEP9QRunnablei(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
+  fn C_ZN11QThreadPool5startEP9QRunnablei(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
   // proto:  int QThreadPool::maxThreadCount();
-  fn _ZNK11QThreadPool14maxThreadCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK11QThreadPool14maxThreadCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QThreadPool::releaseThread();
-  fn _ZN11QThreadPool13releaseThreadEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN11QThreadPool13releaseThreadEv(qthis: u64 /* *mut c_void*/);
   // proto:  int QThreadPool::activeThreadCount();
-  fn _ZNK11QThreadPool17activeThreadCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK11QThreadPool17activeThreadCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
 } // <= ext block end
 
 // body block begin =>
@@ -107,7 +108,7 @@ impl<'a> /*trait*/ QThreadPool_free<()> for () {
   fn free(self , rsthis: & QThreadPool) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QThreadPoolD2Ev()};
-     unsafe {_ZN11QThreadPoolD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN11QThreadPoolD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -129,7 +130,7 @@ impl<'a> /*trait*/ QThreadPool_expiryTimeout<i32> for () {
   fn expiryTimeout(self , rsthis: & QThreadPool) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QThreadPool13expiryTimeoutEv()};
-    let mut ret = unsafe {_ZNK11QThreadPool13expiryTimeoutEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QThreadPool13expiryTimeoutEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -153,7 +154,7 @@ impl<'a> /*trait*/ QThreadPool_waitForDone<i8> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QThreadPool11waitForDoneEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZN11QThreadPool11waitForDoneEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN11QThreadPool11waitForDoneEi(rsthis.qclsinst, arg0)};
     return ret as i8;
     // return 1;
   }
@@ -172,11 +173,13 @@ pub trait QThreadPool_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QThreadPool::metaObject();
-impl<'a> /*trait*/ QThreadPool_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QThreadPool) -> () {
+impl<'a> /*trait*/ QThreadPool_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QThreadPool) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QThreadPool10metaObjectEv()};
-     unsafe {_ZNK11QThreadPool10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QThreadPool10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -199,7 +202,7 @@ impl<'a> /*trait*/ QThreadPool_cancel<()> for (&'a QRunnable) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QThreadPool6cancelEP9QRunnable()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QThreadPool6cancelEP9QRunnable(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QThreadPool6cancelEP9QRunnable(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -222,7 +225,7 @@ impl<'a> /*trait*/ QThreadPool_tryStart<i8> for (&'a QRunnable) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QThreadPool8tryStartEP9QRunnable()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN11QThreadPool8tryStartEP9QRunnable(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN11QThreadPool8tryStartEP9QRunnable(rsthis.qclsinst, arg0)};
     return ret as i8;
     // return 1;
   }
@@ -245,7 +248,7 @@ impl<'a> /*trait*/ QThreadPool_globalInstance_s<QThreadPool> for () {
   fn globalInstance_s(self ) -> QThreadPool {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QThreadPool14globalInstanceEv()};
-    let mut ret = unsafe {_ZN11QThreadPool14globalInstanceEv()};
+    let mut ret = unsafe {C_ZN11QThreadPool14globalInstanceEv()};
     let mut ret1 = QThreadPool::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -270,7 +273,7 @@ impl<'a> /*trait*/ QThreadPool_setMaxThreadCount<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QThreadPool17setMaxThreadCountEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN11QThreadPool17setMaxThreadCountEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QThreadPool17setMaxThreadCountEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -293,7 +296,7 @@ impl<'a> /*trait*/ QThreadPool_setExpiryTimeout<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QThreadPool16setExpiryTimeoutEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN11QThreadPool16setExpiryTimeoutEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QThreadPool16setExpiryTimeoutEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -315,7 +318,7 @@ impl<'a> /*trait*/ QThreadPool_reserveThread<()> for () {
   fn reserveThread(self , rsthis: & QThreadPool) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QThreadPool13reserveThreadEv()};
-     unsafe {_ZN11QThreadPool13reserveThreadEv(rsthis.qclsinst)};
+     unsafe {C_ZN11QThreadPool13reserveThreadEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -337,7 +340,7 @@ impl<'a> /*trait*/ QThreadPool_clear<()> for () {
   fn clear(self , rsthis: & QThreadPool) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QThreadPool5clearEv()};
-     unsafe {_ZN11QThreadPool5clearEv(rsthis.qclsinst)};
+     unsafe {C_ZN11QThreadPool5clearEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -363,8 +366,7 @@ impl<'a> /*trait*/ QThreadPool_new for (&'a QObject) {
     let ctysz: c_int = unsafe{QThreadPool_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QThreadPoolC2EP7QObject(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN11QThreadPoolC2EP7QObject(arg0)};
     let rsthis = QThreadPool{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -390,7 +392,7 @@ impl<'a> /*trait*/ QThreadPool_start<()> for (&'a QRunnable, i32) {
     // unsafe{_ZN11QThreadPool5startEP9QRunnablei()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
-     unsafe {_ZN11QThreadPool5startEP9QRunnablei(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN11QThreadPool5startEP9QRunnablei(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -412,7 +414,7 @@ impl<'a> /*trait*/ QThreadPool_maxThreadCount<i32> for () {
   fn maxThreadCount(self , rsthis: & QThreadPool) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QThreadPool14maxThreadCountEv()};
-    let mut ret = unsafe {_ZNK11QThreadPool14maxThreadCountEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QThreadPool14maxThreadCountEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -435,7 +437,7 @@ impl<'a> /*trait*/ QThreadPool_releaseThread<()> for () {
   fn releaseThread(self , rsthis: & QThreadPool) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QThreadPool13releaseThreadEv()};
-     unsafe {_ZN11QThreadPool13releaseThreadEv(rsthis.qclsinst)};
+     unsafe {C_ZN11QThreadPool13releaseThreadEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -457,7 +459,7 @@ impl<'a> /*trait*/ QThreadPool_activeThreadCount<i32> for () {
   fn activeThreadCount(self , rsthis: & QThreadPool) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QThreadPool17activeThreadCountEv()};
-    let mut ret = unsafe {_ZNK11QThreadPool17activeThreadCountEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QThreadPool17activeThreadCountEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtCore/qanimationgroup.h
 // dst-file: /src/core/qanimationgroup.rs
 //
@@ -21,6 +21,7 @@ use self::libc::*;
 use super::qabstractanimation::QAbstractAnimation; // 773
 use std::ops::Deref;
 use super::qobject::QObject; // 773
+use super::qobjectdefs::QMetaObject; // 773
 // <= use block end
 
 // ext block begin =>
@@ -32,29 +33,27 @@ use super::qobject::QObject; // 773
 extern {
   fn QAnimationGroup_Class_Size() -> c_int;
   // proto:  QAbstractAnimation * QAnimationGroup::animationAt(int index);
-  fn _ZNK15QAnimationGroup11animationAtEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZNK15QAnimationGroup11animationAtEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  void QAnimationGroup::~QAnimationGroup();
-  fn _ZN15QAnimationGroupD2Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  void QAnimationGroup::QAnimationGroup(const QAnimationGroup & );
-  fn _ZN15QAnimationGroupC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN15QAnimationGroupD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QAnimationGroup::removeAnimation(QAbstractAnimation * animation);
-  fn _ZN15QAnimationGroup15removeAnimationEP18QAbstractAnimation(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN15QAnimationGroup15removeAnimationEP18QAbstractAnimation(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAnimationGroup::QAnimationGroup(QObject * parent);
-  fn _ZN15QAnimationGroupC2EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN15QAnimationGroupC2EP7QObject(arg0: *mut c_void) -> u64;
   // proto:  int QAnimationGroup::animationCount();
-  fn _ZNK15QAnimationGroup14animationCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK15QAnimationGroup14animationCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QAnimationGroup::addAnimation(QAbstractAnimation * animation);
-  fn _ZN15QAnimationGroup12addAnimationEP18QAbstractAnimation(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN15QAnimationGroup12addAnimationEP18QAbstractAnimation(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAnimationGroup::clear();
-  fn _ZN15QAnimationGroup5clearEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN15QAnimationGroup5clearEv(qthis: u64 /* *mut c_void*/);
   // proto:  QAbstractAnimation * QAnimationGroup::takeAnimation(int index);
-  fn _ZN15QAnimationGroup13takeAnimationEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN15QAnimationGroup13takeAnimationEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  void QAnimationGroup::insertAnimation(int index, QAbstractAnimation * animation);
-  fn _ZN15QAnimationGroup15insertAnimationEiP18QAbstractAnimation(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
+  fn C_ZN15QAnimationGroup15insertAnimationEiP18QAbstractAnimation(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  const QMetaObject * QAnimationGroup::metaObject();
-  fn _ZNK15QAnimationGroup10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK15QAnimationGroup10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QAnimationGroup::indexOfAnimation(QAbstractAnimation * animation);
-  fn _ZNK15QAnimationGroup16indexOfAnimationEP18QAbstractAnimation(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
+  fn C_ZNK15QAnimationGroup16indexOfAnimationEP18QAbstractAnimation(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
 } // <= ext block end
 
 // body block begin =>
@@ -95,12 +94,14 @@ pub trait QAnimationGroup_animationAt<RetType> {
 }
 
   // proto:  QAbstractAnimation * QAnimationGroup::animationAt(int index);
-impl<'a> /*trait*/ QAnimationGroup_animationAt<()> for (i32) {
-  fn animationAt(self , rsthis: & QAnimationGroup) -> () {
+impl<'a> /*trait*/ QAnimationGroup_animationAt<QAbstractAnimation> for (i32) {
+  fn animationAt(self , rsthis: & QAnimationGroup) -> QAbstractAnimation {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAnimationGroup11animationAtEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZNK15QAnimationGroup11animationAtEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK15QAnimationGroup11animationAtEi(rsthis.qclsinst, arg0)};
+    let mut ret1 = QAbstractAnimation::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -122,36 +123,7 @@ impl<'a> /*trait*/ QAnimationGroup_free<()> for () {
   fn free(self , rsthis: & QAnimationGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QAnimationGroupD2Ev()};
-     unsafe {_ZN15QAnimationGroupD2Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QAnimationGroup::QAnimationGroup(const QAnimationGroup & );
-impl /*struct*/ QAnimationGroup {
-  pub fn new<T: QAnimationGroup_new>(value: T) -> QAnimationGroup {
-    let rsthis = value.new();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QAnimationGroup_new {
-  fn new(self) -> QAnimationGroup;
-}
-
-  // proto:  void QAnimationGroup::QAnimationGroup(const QAnimationGroup & );
-impl<'a> /*trait*/ QAnimationGroup_new for (&'a QAnimationGroup) {
-  fn new(self) -> QAnimationGroup {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QAnimationGroupC2ERKS_()};
-    let ctysz: c_int = unsafe{QAnimationGroup_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN15QAnimationGroupC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QAnimationGroup{qbase: QAbstractAnimation::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
+     unsafe {C_ZN15QAnimationGroupD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -174,9 +146,22 @@ impl<'a> /*trait*/ QAnimationGroup_removeAnimation<()> for (&'a QAbstractAnimati
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QAnimationGroup15removeAnimationEP18QAbstractAnimation()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN15QAnimationGroup15removeAnimationEP18QAbstractAnimation(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QAnimationGroup15removeAnimationEP18QAbstractAnimation(rsthis.qclsinst, arg0)};
     // return 1;
   }
+}
+
+  // proto:  void QAnimationGroup::QAnimationGroup(QObject * parent);
+impl /*struct*/ QAnimationGroup {
+  pub fn new<T: QAnimationGroup_new>(value: T) -> QAnimationGroup {
+    let rsthis = value.new();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QAnimationGroup_new {
+  fn new(self) -> QAnimationGroup;
 }
 
   // proto:  void QAnimationGroup::QAnimationGroup(QObject * parent);
@@ -187,8 +172,7 @@ impl<'a> /*trait*/ QAnimationGroup_new for (&'a QObject) {
     let ctysz: c_int = unsafe{QAnimationGroup_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN15QAnimationGroupC2EP7QObject(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN15QAnimationGroupC2EP7QObject(arg0)};
     let rsthis = QAnimationGroup{qbase: QAbstractAnimation::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -212,7 +196,7 @@ impl<'a> /*trait*/ QAnimationGroup_animationCount<i32> for () {
   fn animationCount(self , rsthis: & QAnimationGroup) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAnimationGroup14animationCountEv()};
-    let mut ret = unsafe {_ZNK15QAnimationGroup14animationCountEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QAnimationGroup14animationCountEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -236,7 +220,7 @@ impl<'a> /*trait*/ QAnimationGroup_addAnimation<()> for (&'a QAbstractAnimation)
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QAnimationGroup12addAnimationEP18QAbstractAnimation()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN15QAnimationGroup12addAnimationEP18QAbstractAnimation(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QAnimationGroup12addAnimationEP18QAbstractAnimation(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -258,7 +242,7 @@ impl<'a> /*trait*/ QAnimationGroup_clear<()> for () {
   fn clear(self , rsthis: & QAnimationGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QAnimationGroup5clearEv()};
-     unsafe {_ZN15QAnimationGroup5clearEv(rsthis.qclsinst)};
+     unsafe {C_ZN15QAnimationGroup5clearEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -276,12 +260,14 @@ pub trait QAnimationGroup_takeAnimation<RetType> {
 }
 
   // proto:  QAbstractAnimation * QAnimationGroup::takeAnimation(int index);
-impl<'a> /*trait*/ QAnimationGroup_takeAnimation<()> for (i32) {
-  fn takeAnimation(self , rsthis: & QAnimationGroup) -> () {
+impl<'a> /*trait*/ QAnimationGroup_takeAnimation<QAbstractAnimation> for (i32) {
+  fn takeAnimation(self , rsthis: & QAnimationGroup) -> QAbstractAnimation {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QAnimationGroup13takeAnimationEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN15QAnimationGroup13takeAnimationEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN15QAnimationGroup13takeAnimationEi(rsthis.qclsinst, arg0)};
+    let mut ret1 = QAbstractAnimation::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -305,7 +291,7 @@ impl<'a> /*trait*/ QAnimationGroup_insertAnimation<()> for (i32, &'a QAbstractAn
     // unsafe{_ZN15QAnimationGroup15insertAnimationEiP18QAbstractAnimation()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN15QAnimationGroup15insertAnimationEiP18QAbstractAnimation(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN15QAnimationGroup15insertAnimationEiP18QAbstractAnimation(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -323,11 +309,13 @@ pub trait QAnimationGroup_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QAnimationGroup::metaObject();
-impl<'a> /*trait*/ QAnimationGroup_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QAnimationGroup) -> () {
+impl<'a> /*trait*/ QAnimationGroup_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QAnimationGroup) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAnimationGroup10metaObjectEv()};
-     unsafe {_ZNK15QAnimationGroup10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QAnimationGroup10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -350,7 +338,7 @@ impl<'a> /*trait*/ QAnimationGroup_indexOfAnimation<i32> for (&'a QAbstractAnima
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAnimationGroup16indexOfAnimationEP18QAbstractAnimation()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK15QAnimationGroup16indexOfAnimationEP18QAbstractAnimation(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK15QAnimationGroup16indexOfAnimationEP18QAbstractAnimation(rsthis.qclsinst, arg0)};
     return ret as i32;
     // return 1;
   }

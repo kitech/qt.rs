@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtCore/qatomic.h
 // dst-file: /src/core/qatomic.rs
 //
@@ -30,7 +30,7 @@ use std::ops::Deref;
 extern {
   fn QAtomicInt_Class_Size() -> c_int;
   // proto:  void QAtomicInt::QAtomicInt(int value);
-  fn _ZN10QAtomicIntC2Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN10QAtomicIntC2Ei(arg0: c_int) -> u64;
 } // <= ext block end
 
 // body block begin =>
@@ -67,8 +67,7 @@ impl<'a> /*trait*/ QAtomicInt_new for (i32) {
     let ctysz: c_int = unsafe{QAtomicInt_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
-    unsafe {_ZN10QAtomicIntC2Ei(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN10QAtomicIntC2Ei(arg0)};
     let rsthis = QAtomicInt{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

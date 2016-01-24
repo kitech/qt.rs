@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtCore/qshareddata.h
 // dst-file: /src/core/qshareddata.rs
 //
@@ -30,9 +30,9 @@ use std::ops::Deref;
 extern {
   fn QSharedData_Class_Size() -> c_int;
   // proto:  void QSharedData::QSharedData();
-  fn _ZN11QSharedDataC2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN11QSharedDataC2Ev() -> u64;
   // proto:  void QSharedData::QSharedData(const QSharedData & );
-  fn _ZN11QSharedDataC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QSharedDataC2ERKS_(arg0: *mut c_void) -> u64;
 } // <= ext block end
 
 // body block begin =>
@@ -68,8 +68,7 @@ impl<'a> /*trait*/ QSharedData_new for () {
     // unsafe{_ZN11QSharedDataC2Ev()};
     let ctysz: c_int = unsafe{QSharedData_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    unsafe {_ZN11QSharedDataC2Ev(qthis_ph)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN11QSharedDataC2Ev()};
     let rsthis = QSharedData{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -84,8 +83,7 @@ impl<'a> /*trait*/ QSharedData_new for (&'a QSharedData) {
     let ctysz: c_int = unsafe{QSharedData_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QSharedDataC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN11QSharedDataC2ERKS_(arg0)};
     let rsthis = QSharedData{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

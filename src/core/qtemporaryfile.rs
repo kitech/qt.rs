@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtCore/qtemporaryfile.h
 // dst-file: /src/core/qtemporaryfile.rs
 //
@@ -22,6 +22,7 @@ use super::qfile::QFile; // 773
 use std::ops::Deref;
 use super::qstring::QString; // 773
 use super::qobject::QObject; // 773
+use super::qobjectdefs::QMetaObject; // 773
 // <= use block end
 
 // ext block begin =>
@@ -33,39 +34,37 @@ use super::qobject::QObject; // 773
 extern {
   fn QTemporaryFile_Class_Size() -> c_int;
   // proto:  bool QTemporaryFile::autoRemove();
-  fn _ZNK14QTemporaryFile10autoRemoveEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK14QTemporaryFile10autoRemoveEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto: static QTemporaryFile * QTemporaryFile::createLocalFile(QFile & file);
-  fn _ZN14QTemporaryFile15createLocalFileER5QFile(arg0: *mut c_void) -> *mut c_void;
+  fn C_ZN14QTemporaryFile15createLocalFileER5QFile(arg0: *mut c_void) -> *mut c_void;
   // proto:  void QTemporaryFile::QTemporaryFile(const QString & templateName);
-  fn _ZN14QTemporaryFileC2ERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN14QTemporaryFileC2ERK7QString(arg0: *mut c_void) -> u64;
   // proto:  void QTemporaryFile::QTemporaryFile();
-  fn _ZN14QTemporaryFileC2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN14QTemporaryFileC2Ev() -> u64;
   // proto:  void QTemporaryFile::QTemporaryFile(QObject * parent);
-  fn _ZN14QTemporaryFileC2EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN14QTemporaryFileC2EP7QObject(arg0: *mut c_void) -> u64;
   // proto:  void QTemporaryFile::~QTemporaryFile();
-  fn _ZN14QTemporaryFileD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN14QTemporaryFileD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  const QMetaObject * QTemporaryFile::metaObject();
-  fn _ZNK14QTemporaryFile10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK14QTemporaryFile10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QTemporaryFile::setAutoRemove(bool b);
-  fn _ZN14QTemporaryFile13setAutoRemoveEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN14QTemporaryFile13setAutoRemoveEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QString QTemporaryFile::fileName();
-  fn _ZNK14QTemporaryFile8fileNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK14QTemporaryFile8fileNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QTemporaryFile::fileTemplate();
-  fn _ZNK14QTemporaryFile12fileTemplateEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK14QTemporaryFile12fileTemplateEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto: static QTemporaryFile * QTemporaryFile::createNativeFile(const QString & fileName);
-  fn _ZN14QTemporaryFile16createNativeFileERK7QString(arg0: *mut c_void) -> *mut c_void;
+  fn C_ZN14QTemporaryFile16createNativeFileERK7QString(arg0: *mut c_void) -> *mut c_void;
   // proto:  bool QTemporaryFile::open();
-  fn _ZN14QTemporaryFile4openEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZN14QTemporaryFile4openEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto: static QTemporaryFile * QTemporaryFile::createLocalFile(const QString & fileName);
-  fn _ZN14QTemporaryFile15createLocalFileERK7QString(arg0: *mut c_void) -> *mut c_void;
+  fn C_ZN14QTemporaryFile15createLocalFileERK7QString(arg0: *mut c_void) -> *mut c_void;
   // proto: static QTemporaryFile * QTemporaryFile::createNativeFile(QFile & file);
-  fn _ZN14QTemporaryFile16createNativeFileER5QFile(arg0: *mut c_void) -> *mut c_void;
+  fn C_ZN14QTemporaryFile16createNativeFileER5QFile(arg0: *mut c_void) -> *mut c_void;
   // proto:  void QTemporaryFile::setFileTemplate(const QString & name);
-  fn _ZN14QTemporaryFile15setFileTemplateERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QTemporaryFile::QTemporaryFile(const QTemporaryFile & );
-  fn _ZN14QTemporaryFileC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN14QTemporaryFile15setFileTemplateERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTemporaryFile::QTemporaryFile(const QString & templateName, QObject * parent);
-  fn _ZN14QTemporaryFileC2ERK7QStringP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN14QTemporaryFileC2ERK7QStringP7QObject(arg0: *mut c_void, arg1: *mut c_void) -> u64;
 } // <= ext block end
 
 // body block begin =>
@@ -110,7 +109,7 @@ impl<'a> /*trait*/ QTemporaryFile_autoRemove<i8> for () {
   fn autoRemove(self , rsthis: & QTemporaryFile) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QTemporaryFile10autoRemoveEv()};
-    let mut ret = unsafe {_ZNK14QTemporaryFile10autoRemoveEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QTemporaryFile10autoRemoveEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -134,7 +133,7 @@ impl<'a> /*trait*/ QTemporaryFile_createLocalFile_s<QTemporaryFile> for (&'a QFi
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QTemporaryFile15createLocalFileER5QFile()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN14QTemporaryFile15createLocalFileER5QFile(arg0)};
+    let mut ret = unsafe {C_ZN14QTemporaryFile15createLocalFileER5QFile(arg0)};
     let mut ret1 = QTemporaryFile::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -162,8 +161,7 @@ impl<'a> /*trait*/ QTemporaryFile_new for (&'a QString) {
     let ctysz: c_int = unsafe{QTemporaryFile_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN14QTemporaryFileC2ERK7QString(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN14QTemporaryFileC2ERK7QString(arg0)};
     let rsthis = QTemporaryFile{qbase: QFile::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -177,8 +175,7 @@ impl<'a> /*trait*/ QTemporaryFile_new for () {
     // unsafe{_ZN14QTemporaryFileC2Ev()};
     let ctysz: c_int = unsafe{QTemporaryFile_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    unsafe {_ZN14QTemporaryFileC2Ev(qthis_ph)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN14QTemporaryFileC2Ev()};
     let rsthis = QTemporaryFile{qbase: QFile::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -193,8 +190,7 @@ impl<'a> /*trait*/ QTemporaryFile_new for (&'a QObject) {
     let ctysz: c_int = unsafe{QTemporaryFile_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN14QTemporaryFileC2EP7QObject(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN14QTemporaryFileC2EP7QObject(arg0)};
     let rsthis = QTemporaryFile{qbase: QFile::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -218,7 +214,7 @@ impl<'a> /*trait*/ QTemporaryFile_free<()> for () {
   fn free(self , rsthis: & QTemporaryFile) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QTemporaryFileD2Ev()};
-     unsafe {_ZN14QTemporaryFileD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN14QTemporaryFileD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -236,11 +232,13 @@ pub trait QTemporaryFile_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QTemporaryFile::metaObject();
-impl<'a> /*trait*/ QTemporaryFile_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QTemporaryFile) -> () {
+impl<'a> /*trait*/ QTemporaryFile_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QTemporaryFile) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QTemporaryFile10metaObjectEv()};
-     unsafe {_ZNK14QTemporaryFile10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QTemporaryFile10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -263,7 +261,7 @@ impl<'a> /*trait*/ QTemporaryFile_setAutoRemove<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QTemporaryFile13setAutoRemoveEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN14QTemporaryFile13setAutoRemoveEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN14QTemporaryFile13setAutoRemoveEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -285,7 +283,7 @@ impl<'a> /*trait*/ QTemporaryFile_fileName<QString> for () {
   fn fileName(self , rsthis: & QTemporaryFile) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QTemporaryFile8fileNameEv()};
-    let mut ret = unsafe {_ZNK14QTemporaryFile8fileNameEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QTemporaryFile8fileNameEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -309,7 +307,7 @@ impl<'a> /*trait*/ QTemporaryFile_fileTemplate<QString> for () {
   fn fileTemplate(self , rsthis: & QTemporaryFile) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QTemporaryFile12fileTemplateEv()};
-    let mut ret = unsafe {_ZNK14QTemporaryFile12fileTemplateEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QTemporaryFile12fileTemplateEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -334,7 +332,7 @@ impl<'a> /*trait*/ QTemporaryFile_createNativeFile_s<QTemporaryFile> for (&'a QS
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QTemporaryFile16createNativeFileERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN14QTemporaryFile16createNativeFileERK7QString(arg0)};
+    let mut ret = unsafe {C_ZN14QTemporaryFile16createNativeFileERK7QString(arg0)};
     let mut ret1 = QTemporaryFile::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -358,7 +356,7 @@ impl<'a> /*trait*/ QTemporaryFile_open<i8> for () {
   fn open(self , rsthis: & QTemporaryFile) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QTemporaryFile4openEv()};
-    let mut ret = unsafe {_ZN14QTemporaryFile4openEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZN14QTemporaryFile4openEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -370,7 +368,7 @@ impl<'a> /*trait*/ QTemporaryFile_createLocalFile_s<QTemporaryFile> for (&'a QSt
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QTemporaryFile15createLocalFileERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN14QTemporaryFile15createLocalFileERK7QString(arg0)};
+    let mut ret = unsafe {C_ZN14QTemporaryFile15createLocalFileERK7QString(arg0)};
     let mut ret1 = QTemporaryFile::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -383,7 +381,7 @@ impl<'a> /*trait*/ QTemporaryFile_createNativeFile_s<QTemporaryFile> for (&'a QF
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QTemporaryFile16createNativeFileER5QFile()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN14QTemporaryFile16createNativeFileER5QFile(arg0)};
+    let mut ret = unsafe {C_ZN14QTemporaryFile16createNativeFileER5QFile(arg0)};
     let mut ret1 = QTemporaryFile::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -408,23 +406,7 @@ impl<'a> /*trait*/ QTemporaryFile_setFileTemplate<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QTemporaryFile15setFileTemplateERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN14QTemporaryFile15setFileTemplateERK7QString(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QTemporaryFile::QTemporaryFile(const QTemporaryFile & );
-impl<'a> /*trait*/ QTemporaryFile_new for (&'a QTemporaryFile) {
-  fn new(self) -> QTemporaryFile {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QTemporaryFileC2ERKS_()};
-    let ctysz: c_int = unsafe{QTemporaryFile_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN14QTemporaryFileC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QTemporaryFile{qbase: QFile::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
+     unsafe {C_ZN14QTemporaryFile15setFileTemplateERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -438,8 +420,7 @@ impl<'a> /*trait*/ QTemporaryFile_new for (&'a QString, &'a QObject) {
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    unsafe {_ZN14QTemporaryFileC2ERK7QStringP7QObject(qthis_ph, arg0, arg1)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN14QTemporaryFileC2ERK7QStringP7QObject(arg0, arg1)};
     let rsthis = QTemporaryFile{qbase: QFile::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

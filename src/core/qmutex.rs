@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtCore/qmutex.h
 // dst-file: /src/core/qmutex.rs
 //
@@ -32,37 +32,33 @@ use std::ops::Deref;
 extern {
   fn QMutexLocker_Class_Size() -> c_int;
   // proto:  void QMutexLocker::QMutexLocker(QBasicMutex * m);
-  fn _ZN12QMutexLockerC2EP11QBasicMutex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN12QMutexLockerC2EP11QBasicMutex(arg0: *mut c_void) -> u64;
   // proto:  QMutex * QMutexLocker::mutex();
-  fn _ZNK12QMutexLocker5mutexEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QMutexLocker::QMutexLocker(const QMutexLocker & );
-  fn _ZN12QMutexLockerC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK12QMutexLocker5mutexEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QMutexLocker::relock();
-  fn _ZN12QMutexLocker6relockEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN12QMutexLocker6relockEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QMutexLocker::unlock();
-  fn _ZN12QMutexLocker6unlockEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN12QMutexLocker6unlockEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QMutexLocker::~QMutexLocker();
-  fn _ZN12QMutexLockerD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN12QMutexLockerD2Ev(qthis: u64 /* *mut c_void*/);
   fn QBasicMutex_Class_Size() -> c_int;
   // proto:  void QBasicMutex::lock();
-  fn _ZN11QBasicMutex4lockEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN11QBasicMutex4lockEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QBasicMutex::tryLock();
-  fn _ZN11QBasicMutex7tryLockEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZN11QBasicMutex7tryLockEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QBasicMutex::isRecursive();
-  fn _ZN11QBasicMutex11isRecursiveEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZN11QBasicMutex11isRecursiveEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QBasicMutex::unlock();
-  fn _ZN11QBasicMutex6unlockEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN11QBasicMutex6unlockEv(qthis: u64 /* *mut c_void*/);
   fn QMutex_Class_Size() -> c_int;
   // proto:  void QMutex::~QMutex();
-  fn _ZN6QMutexD2Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN6QMutexD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QMutex::tryLock(int timeout);
-  fn _ZN6QMutex7tryLockEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
-  // proto:  void QMutex::QMutex(const QMutex & );
-  fn _ZN6QMutexC2ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN6QMutex7tryLockEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
   // proto:  void QMutex::lock();
-  fn _ZN6QMutex4lockEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN6QMutex4lockEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QMutex::unlock();
-  fn _ZN6QMutex6unlockEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN6QMutex6unlockEv(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
@@ -113,8 +109,7 @@ impl<'a> /*trait*/ QMutexLocker_new for (&'a QBasicMutex) {
     let ctysz: c_int = unsafe{QMutexLocker_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN12QMutexLockerC2EP11QBasicMutex(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
+    let qthis: u64 = unsafe {C_ZN12QMutexLockerC2EP11QBasicMutex(arg0)};
     let rsthis = QMutexLocker{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -138,25 +133,9 @@ impl<'a> /*trait*/ QMutexLocker_mutex<QMutex> for () {
   fn mutex(self , rsthis: & QMutexLocker) -> QMutex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QMutexLocker5mutexEv()};
-    let mut ret = unsafe {_ZNK12QMutexLocker5mutexEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QMutexLocker5mutexEv(rsthis.qclsinst)};
     let mut ret1 = QMutex::inheritFrom(ret as u64);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QMutexLocker::QMutexLocker(const QMutexLocker & );
-impl<'a> /*trait*/ QMutexLocker_new for (&'a QMutexLocker) {
-  fn new(self) -> QMutexLocker {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QMutexLockerC2ERKS_()};
-    let ctysz: c_int = unsafe{QMutexLocker_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN12QMutexLockerC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QMutexLocker{qclsinst: qthis, ..Default::default()};
-    return rsthis;
     // return 1;
   }
 }
@@ -178,7 +157,7 @@ impl<'a> /*trait*/ QMutexLocker_relock<()> for () {
   fn relock(self , rsthis: & QMutexLocker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QMutexLocker6relockEv()};
-     unsafe {_ZN12QMutexLocker6relockEv(rsthis.qclsinst)};
+     unsafe {C_ZN12QMutexLocker6relockEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -200,7 +179,7 @@ impl<'a> /*trait*/ QMutexLocker_unlock<()> for () {
   fn unlock(self , rsthis: & QMutexLocker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QMutexLocker6unlockEv()};
-     unsafe {_ZN12QMutexLocker6unlockEv(rsthis.qclsinst)};
+     unsafe {C_ZN12QMutexLocker6unlockEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -222,7 +201,7 @@ impl<'a> /*trait*/ QMutexLocker_free<()> for () {
   fn free(self , rsthis: & QMutexLocker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QMutexLockerD2Ev()};
-     unsafe {_ZN12QMutexLockerD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN12QMutexLockerD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -249,7 +228,7 @@ impl<'a> /*trait*/ QBasicMutex_lock<()> for () {
   fn lock(self , rsthis: & QBasicMutex) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QBasicMutex4lockEv()};
-     unsafe {_ZN11QBasicMutex4lockEv(rsthis.qclsinst)};
+     unsafe {C_ZN11QBasicMutex4lockEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -271,7 +250,7 @@ impl<'a> /*trait*/ QBasicMutex_tryLock<i8> for () {
   fn tryLock(self , rsthis: & QBasicMutex) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QBasicMutex7tryLockEv()};
-    let mut ret = unsafe {_ZN11QBasicMutex7tryLockEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZN11QBasicMutex7tryLockEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -294,7 +273,7 @@ impl<'a> /*trait*/ QBasicMutex_isRecursive<i8> for () {
   fn isRecursive(self , rsthis: & QBasicMutex) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QBasicMutex11isRecursiveEv()};
-    let mut ret = unsafe {_ZN11QBasicMutex11isRecursiveEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZN11QBasicMutex11isRecursiveEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -317,7 +296,7 @@ impl<'a> /*trait*/ QBasicMutex_unlock<()> for () {
   fn unlock(self , rsthis: & QBasicMutex) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QBasicMutex6unlockEv()};
-     unsafe {_ZN11QBasicMutex6unlockEv(rsthis.qclsinst)};
+     unsafe {C_ZN11QBasicMutex6unlockEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -356,7 +335,7 @@ impl<'a> /*trait*/ QMutex_free<()> for () {
   fn free(self , rsthis: & QMutex) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMutexD2Ev()};
-     unsafe {_ZN6QMutexD2Ev(rsthis.qclsinst)};
+     unsafe {C_ZN6QMutexD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -379,37 +358,8 @@ impl<'a> /*trait*/ QMutex_tryLock<i8> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMutex7tryLockEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZN6QMutex7tryLockEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN6QMutex7tryLockEi(rsthis.qclsinst, arg0)};
     return ret as i8;
-    // return 1;
-  }
-}
-
-  // proto:  void QMutex::QMutex(const QMutex & );
-impl /*struct*/ QMutex {
-  pub fn new<T: QMutex_new>(value: T) -> QMutex {
-    let rsthis = value.new();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QMutex_new {
-  fn new(self) -> QMutex;
-}
-
-  // proto:  void QMutex::QMutex(const QMutex & );
-impl<'a> /*trait*/ QMutex_new for (&'a QMutex) {
-  fn new(self) -> QMutex {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN6QMutexC2ERKS_()};
-    let ctysz: c_int = unsafe{QMutex_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN6QMutexC2ERKS_(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QMutex{qbase: QBasicMutex::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
     // return 1;
   }
 }
@@ -431,7 +381,7 @@ impl<'a> /*trait*/ QMutex_lock<()> for () {
   fn lock(self , rsthis: & QMutex) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMutex4lockEv()};
-     unsafe {_ZN6QMutex4lockEv(rsthis.qclsinst)};
+     unsafe {C_ZN6QMutex4lockEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -453,7 +403,7 @@ impl<'a> /*trait*/ QMutex_unlock<()> for () {
   fn unlock(self , rsthis: & QMutex) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMutex6unlockEv()};
-     unsafe {_ZN6QMutex6unlockEv(rsthis.qclsinst)};
+     unsafe {C_ZN6QMutex6unlockEv(rsthis.qclsinst)};
     // return 1;
   }
 }

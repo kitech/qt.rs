@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 17 17:37:11 2016
+// created: Sun Jan 24 17:41:38 2016
 // src-file: /QtCore/qplugin.h
 // dst-file: /src/core/qplugin.rs
 //
@@ -19,6 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
+use super::qjsonobject::QJsonObject; // 773
 // <= use block end
 
 // ext block begin =>
@@ -30,7 +31,7 @@ use std::ops::Deref;
 extern {
   fn QStaticPlugin_Class_Size() -> c_int;
   // proto:  QJsonObject QStaticPlugin::metaData();
-  fn _ZNK13QStaticPlugin8metaDataEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK13QStaticPlugin8metaDataEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
 } // <= ext block end
 
 // body block begin =>
@@ -59,11 +60,13 @@ pub trait QStaticPlugin_metaData<RetType> {
 }
 
   // proto:  QJsonObject QStaticPlugin::metaData();
-impl<'a> /*trait*/ QStaticPlugin_metaData<()> for () {
-  fn metaData(self , rsthis: & QStaticPlugin) -> () {
+impl<'a> /*trait*/ QStaticPlugin_metaData<QJsonObject> for () {
+  fn metaData(self , rsthis: & QStaticPlugin) -> QJsonObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStaticPlugin8metaDataEv()};
-     unsafe {_ZNK13QStaticPlugin8metaDataEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QStaticPlugin8metaDataEv(rsthis.qclsinst)};
+    let mut ret1 = QJsonObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
