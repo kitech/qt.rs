@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qtemporaryfile.h
 // dst-file: /src/core/qtemporaryfile.rs
 //
@@ -18,11 +18,11 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qfile::QFile; // 773
+use super::qfile::*; // 773
 use std::ops::Deref;
-use super::qstring::QString; // 773
-use super::qobject::QObject; // 773
-use super::qobjectdefs::QMetaObject; // 773
+use super::qstring::*; // 773
+use super::qobject::*; // 773
+use super::qobjectdefs::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -110,7 +110,7 @@ impl<'a> /*trait*/ QTemporaryFile_autoRemove<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QTemporaryFile10autoRemoveEv()};
     let mut ret = unsafe {C_ZNK14QTemporaryFile10autoRemoveEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -357,7 +357,7 @@ impl<'a> /*trait*/ QTemporaryFile_open<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QTemporaryFile4openEv()};
     let mut ret = unsafe {C_ZN14QTemporaryFile4openEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

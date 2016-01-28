@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qfile.h
 // dst-file: /src/core/qfile.rs
 //
@@ -18,12 +18,12 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qfiledevice::QFileDevice; // 773
+use super::qfiledevice::*; // 773
 use std::ops::Deref;
-use super::qstring::QString; // 773
-use super::qobject::QObject; // 773
-use super::qbytearray::QByteArray; // 773
-use super::qobjectdefs::QMetaObject; // 773
+use super::qstring::*; // 773
+use super::qobject::*; // 773
+use super::qbytearray::*; // 773
+use super::qobjectdefs::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -203,7 +203,7 @@ impl<'a> /*trait*/ QFile_link_s<i8> for (&'a QString, &'a QString) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN5QFile4linkERK7QStringS2_(arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -228,7 +228,7 @@ impl<'a> /*trait*/ QFile_rename_s<i8> for (&'a QString, &'a QString) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN5QFile6renameERK7QStringS2_(arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -252,7 +252,7 @@ impl<'a> /*trait*/ QFile_link<i8> for (&'a QString) {
     // unsafe{_ZN5QFile4linkERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN5QFile4linkERK7QString(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -277,7 +277,7 @@ impl<'a> /*trait*/ QFile_resize_s<i8> for (&'a QString, i64) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_longlong;
     let mut ret = unsafe {C_ZN5QFile6resizeERK7QStringx(arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -301,7 +301,7 @@ impl<'a> /*trait*/ QFile_exists_s<i8> for (&'a QString) {
     // unsafe{_ZN5QFile6existsERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN5QFile6existsERK7QString(arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -348,7 +348,7 @@ impl<'a> /*trait*/ QFile_copy_s<i8> for (&'a QString, &'a QString) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN5QFile4copyERK7QStringS2_(arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -396,7 +396,7 @@ impl<'a> /*trait*/ QFile_exists<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFile6existsEv()};
     let mut ret = unsafe {C_ZNK5QFile6existsEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -419,7 +419,7 @@ impl<'a> /*trait*/ QFile_size<i64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFile4sizeEv()};
     let mut ret = unsafe {C_ZNK5QFile4sizeEv(rsthis.qclsinst)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -443,7 +443,7 @@ impl<'a> /*trait*/ QFile_resize<i8> for (i64) {
     // unsafe{_ZN5QFile6resizeEx()};
     let arg0 = self  as c_longlong;
     let mut ret = unsafe {C_ZN5QFile6resizeEx(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -489,7 +489,7 @@ impl<'a> /*trait*/ QFile_remove<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFile6removeEv()};
     let mut ret = unsafe {C_ZN5QFile6removeEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -513,7 +513,7 @@ impl<'a> /*trait*/ QFile_copy<i8> for (&'a QString) {
     // unsafe{_ZN5QFile4copyERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN5QFile4copyERK7QString(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -587,7 +587,7 @@ impl<'a> /*trait*/ QFile_rename<i8> for (&'a QString) {
     // unsafe{_ZN5QFile6renameERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN5QFile6renameERK7QString(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -713,7 +713,7 @@ impl<'a> /*trait*/ QFile_remove_s<i8> for (&'a QString) {
     // unsafe{_ZN5QFile6removeERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN5QFile6removeERK7QString(arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

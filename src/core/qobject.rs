@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qobject.h
 // dst-file: /src/core/qobject.rs
 //
@@ -20,13 +20,14 @@ use self::libc::*;
 // use block begin =>
 use std::ops::Deref;
 // use super::qobject::QObject; // 773
-use super::qobjectdefs::QMetaObject; // 773
-use super::qthread::QThread; // 773
-use super::qcoreevent::QEvent; // 773
+use super::qobjectdefs::*; // 773
+use super::qthread::*; // 773
+use super::qcoreevent::*; // 773
 // use super::qobject::QObjectUserData; // 773
-use super::qmetaobject::QMetaMethod; // 773
-use super::qvariant::QVariant; // 773
-use super::qstring::QString; // 773
+use super::qmetaobject::*; // 773
+// use super::qlist::*; // 775
+use super::qvariant::*; // 773
+use super::qstring::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -73,7 +74,7 @@ extern {
   // proto:  bool QObject::event(QEvent * );
   fn C_ZN7QObject5eventEP6QEvent(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  QList<QByteArray> QObject::dynamicPropertyNames();
-  fn C_ZNK7QObject20dynamicPropertyNamesEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK7QObject20dynamicPropertyNamesEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QObject::isWidgetType();
   fn C_ZNK7QObject12isWidgetTypeEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QVariant QObject::property(const char * name);
@@ -87,7 +88,7 @@ extern {
   // proto:  bool QObject::disconnect(const QObject * receiver, const char * member);
   fn C_ZNK7QObject10disconnectEPKS_PKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_char) -> c_char;
   // proto:  const QObjectList & QObject::children();
-  fn C_ZNK7QObject8childrenEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK7QObject8childrenEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QObject::isWindowType();
   fn C_ZNK7QObject12isWindowTypeEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QObject::disconnect(const char * signal, const QObject * receiver, const char * member);
@@ -357,7 +358,7 @@ impl<'a> /*trait*/ QObject_inherits<i8> for (&'a  String) {
     // unsafe{_ZNK7QObject8inheritsEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
     let mut ret = unsafe {C_ZNK7QObject8inheritsEPKc(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -450,7 +451,7 @@ impl<'a> /*trait*/ QObject_eventFilter<i8> for (&'a QObject, &'a QEvent) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN7QObject11eventFilterEPS_P6QEvent(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -501,7 +502,7 @@ impl<'a> /*trait*/ QObject_disconnect_s<i8> for (&'a QObject, &'a QMetaMethod, &
     let arg2 = self.2.qclsinst  as *mut c_void;
     let arg3 = self.3.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN7QObject10disconnectEPKS_RK11QMetaMethodS1_S4_(arg0, arg1, arg2, arg3)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -525,7 +526,7 @@ impl<'a> /*trait*/ QObject_event<i8> for (&'a QEvent) {
     // unsafe{_ZN7QObject5eventEP6QEvent()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN7QObject5eventEP6QEvent(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -543,11 +544,12 @@ pub trait QObject_dynamicPropertyNames<RetType> {
 }
 
   // proto:  QList<QByteArray> QObject::dynamicPropertyNames();
-impl<'a> /*trait*/ QObject_dynamicPropertyNames<()> for () {
-  fn dynamicPropertyNames(self , rsthis: & QObject) -> () {
+impl<'a> /*trait*/ QObject_dynamicPropertyNames<u64> for () {
+  fn dynamicPropertyNames(self , rsthis: & QObject) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QObject20dynamicPropertyNamesEv()};
-     unsafe {C_ZNK7QObject20dynamicPropertyNamesEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QObject20dynamicPropertyNamesEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -570,7 +572,7 @@ impl<'a> /*trait*/ QObject_isWidgetType<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QObject12isWidgetTypeEv()};
     let mut ret = unsafe {C_ZNK7QObject12isWidgetTypeEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -691,7 +693,7 @@ impl<'a> /*trait*/ QObject_disconnect<i8> for (&'a QObject, &'a  String) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let mut ret = unsafe {C_ZNK7QObject10disconnectEPKS_PKc(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -709,11 +711,12 @@ pub trait QObject_children<RetType> {
 }
 
   // proto:  const QObjectList & QObject::children();
-impl<'a> /*trait*/ QObject_children<()> for () {
-  fn children(self , rsthis: & QObject) -> () {
+impl<'a> /*trait*/ QObject_children<u64> for () {
+  fn children(self , rsthis: & QObject) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QObject8childrenEv()};
-     unsafe {C_ZNK7QObject8childrenEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QObject8childrenEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -736,7 +739,7 @@ impl<'a> /*trait*/ QObject_isWindowType<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QObject12isWindowTypeEv()};
     let mut ret = unsafe {C_ZNK7QObject12isWindowTypeEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -750,7 +753,7 @@ impl<'a> /*trait*/ QObject_disconnect<i8> for (&'a  String, &'a QObject, &'a  St
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.as_ptr()  as *mut c_char;
     let mut ret = unsafe {C_ZNK7QObject10disconnectEPKcPKS_S1_(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -871,7 +874,7 @@ impl<'a> /*trait*/ QObject_setProperty<i8> for (&'a  String, &'a QVariant) {
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN7QObject11setPropertyEPKcRK8QVariant(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -886,7 +889,7 @@ impl<'a> /*trait*/ QObject_disconnect_s<i8> for (&'a QObject, &'a  String, &'a Q
     let arg2 = self.2.qclsinst  as *mut c_void;
     let arg3 = self.3.as_ptr()  as *mut c_char;
     let mut ret = unsafe {C_ZN7QObject10disconnectEPKS_PKcS1_S3_(arg0, arg1, arg2, arg3)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -909,7 +912,7 @@ impl<'a> /*trait*/ QObject_signalsBlocked<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QObject14signalsBlockedEv()};
     let mut ret = unsafe {C_ZNK7QObject14signalsBlockedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -932,7 +935,7 @@ impl<'a> /*trait*/ QObject_registerUserData_s<u32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QObject16registerUserDataEv()};
     let mut ret = unsafe {C_ZN7QObject16registerUserDataEv()};
-    return ret as u32;
+    return ret as u32; // 1
     // return 1;
   }
 }
@@ -1028,7 +1031,7 @@ impl<'a> /*trait*/ QObject_blockSignals<i8> for (i8) {
     // unsafe{_ZN7QObject12blockSignalsEb()};
     let arg0 = self  as c_char;
     let mut ret = unsafe {C_ZN7QObject12blockSignalsEb(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

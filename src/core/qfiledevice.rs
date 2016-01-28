@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qfiledevice.h
 // dst-file: /src/core/qfiledevice.rs
 //
@@ -18,10 +18,10 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qiodevice::QIODevice; // 773
+use super::qiodevice::*; // 773
 use std::ops::Deref;
-use super::qstring::QString; // 773
-use super::qobjectdefs::QMetaObject; // 773
+use super::qstring::*; // 773
+use super::qobjectdefs::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -105,7 +105,7 @@ impl<'a> /*trait*/ QFileDevice_size<i64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDevice4sizeEv()};
     let mut ret = unsafe {C_ZNK11QFileDevice4sizeEv(rsthis.qclsinst)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -129,7 +129,7 @@ impl<'a> /*trait*/ QFileDevice_seek<i8> for (i64) {
     // unsafe{_ZN11QFileDevice4seekEx()};
     let arg0 = self  as c_longlong;
     let mut ret = unsafe {C_ZN11QFileDevice4seekEx(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -153,7 +153,7 @@ impl<'a> /*trait*/ QFileDevice_unmap<i8> for (&'a mut String) {
     // unsafe{_ZN11QFileDevice5unmapEPh()};
     let arg0 = self.as_ptr()  as *mut c_uchar;
     let mut ret = unsafe {C_ZN11QFileDevice5unmapEPh(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -198,7 +198,7 @@ impl<'a> /*trait*/ QFileDevice_pos<i64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDevice3posEv()};
     let mut ret = unsafe {C_ZNK11QFileDevice3posEv(rsthis.qclsinst)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -221,7 +221,7 @@ impl<'a> /*trait*/ QFileDevice_handle<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDevice6handleEv()};
     let mut ret = unsafe {C_ZNK11QFileDevice6handleEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -290,7 +290,7 @@ impl<'a> /*trait*/ QFileDevice_atEnd<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDevice5atEndEv()};
     let mut ret = unsafe {C_ZNK11QFileDevice5atEndEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -313,7 +313,7 @@ impl<'a> /*trait*/ QFileDevice_isSequential<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDevice12isSequentialEv()};
     let mut ret = unsafe {C_ZNK11QFileDevice12isSequentialEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -336,7 +336,7 @@ impl<'a> /*trait*/ QFileDevice_flush<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDevice5flushEv()};
     let mut ret = unsafe {C_ZN11QFileDevice5flushEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -406,7 +406,7 @@ impl<'a> /*trait*/ QFileDevice_resize<i8> for (i64) {
     // unsafe{_ZN11QFileDevice6resizeEx()};
     let arg0 = self  as c_longlong;
     let mut ret = unsafe {C_ZN11QFileDevice6resizeEx(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

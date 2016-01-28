@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qmimedata.h
 // dst-file: /src/core/qmimedata.rs
 //
@@ -18,12 +18,14 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qobject::QObject; // 773
+use super::qobject::*; // 773
 use std::ops::Deref;
-use super::qstring::QString; // 773
-use super::qbytearray::QByteArray; // 773
-use super::qvariant::QVariant; // 773
-use super::qobjectdefs::QMetaObject; // 773
+use super::qstring::*; // 773
+use super::qbytearray::*; // 773
+use super::qvariant::*; // 773
+// use super::qlist::*; // 775
+use super::qobjectdefs::*; // 773
+use super::qstringlist::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -67,7 +69,7 @@ extern {
   // proto:  void QMimeData::QMimeData();
   fn C_ZN9QMimeDataC2Ev() -> u64;
   // proto:  QList<QUrl> QMimeData::urls();
-  fn C_ZNK9QMimeData4urlsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK9QMimeData4urlsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QMimeData::setColorData(const QVariant & color);
   fn C_ZN9QMimeData12setColorDataERK8QVariant(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QMimeData::hasText();
@@ -77,7 +79,7 @@ extern {
   // proto:  QByteArray QMimeData::data(const QString & mimetype);
   fn C_ZNK9QMimeData4dataERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QStringList QMimeData::formats();
-  fn C_ZNK9QMimeData7formatsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK9QMimeData7formatsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QMimeData::hasImage();
   fn C_ZNK9QMimeData8hasImageEv(qthis: u64 /* *mut c_void*/) -> c_char;
 } // <= ext block end
@@ -195,7 +197,7 @@ impl<'a> /*trait*/ QMimeData_hasHtml<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeData7hasHtmlEv()};
     let mut ret = unsafe {C_ZNK9QMimeData7hasHtmlEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -243,7 +245,7 @@ impl<'a> /*trait*/ QMimeData_hasFormat<i8> for (&'a QString) {
     // unsafe{_ZNK9QMimeData9hasFormatERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK9QMimeData9hasFormatERK7QString(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -381,7 +383,7 @@ impl<'a> /*trait*/ QMimeData_hasUrls<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeData7hasUrlsEv()};
     let mut ret = unsafe {C_ZNK9QMimeData7hasUrlsEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -404,7 +406,7 @@ impl<'a> /*trait*/ QMimeData_hasColor<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeData8hasColorEv()};
     let mut ret = unsafe {C_ZNK9QMimeData8hasColorEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -496,11 +498,12 @@ pub trait QMimeData_urls<RetType> {
 }
 
   // proto:  QList<QUrl> QMimeData::urls();
-impl<'a> /*trait*/ QMimeData_urls<()> for () {
-  fn urls(self , rsthis: & QMimeData) -> () {
+impl<'a> /*trait*/ QMimeData_urls<u64> for () {
+  fn urls(self , rsthis: & QMimeData) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeData4urlsEv()};
-     unsafe {C_ZNK9QMimeData4urlsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QMimeData4urlsEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -546,7 +549,7 @@ impl<'a> /*trait*/ QMimeData_hasText<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeData7hasTextEv()};
     let mut ret = unsafe {C_ZNK9QMimeData7hasTextEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -613,11 +616,13 @@ pub trait QMimeData_formats<RetType> {
 }
 
   // proto:  QStringList QMimeData::formats();
-impl<'a> /*trait*/ QMimeData_formats<()> for () {
-  fn formats(self , rsthis: & QMimeData) -> () {
+impl<'a> /*trait*/ QMimeData_formats<QStringList> for () {
+  fn formats(self , rsthis: & QMimeData) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeData7formatsEv()};
-     unsafe {C_ZNK9QMimeData7formatsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QMimeData7formatsEv(rsthis.qclsinst)};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -640,7 +645,7 @@ impl<'a> /*trait*/ QMimeData_hasImage<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeData8hasImageEv()};
     let mut ret = unsafe {C_ZNK9QMimeData8hasImageEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qfileinfo.h
 // dst-file: /src/core/qfileinfo.rs
 //
@@ -19,10 +19,10 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qstring::QString; // 773
-use super::qfile::QFile; // 773
-use super::qdatetime::QDateTime; // 773
-use super::qdir::QDir; // 773
+use super::qstring::*; // 773
+use super::qfile::*; // 773
+use super::qdatetime::*; // 773
+use super::qdir::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -170,7 +170,7 @@ impl<'a> /*trait*/ QFileInfo_isHidden<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo8isHiddenEv()};
     let mut ret = unsafe {C_ZNK9QFileInfo8isHiddenEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -269,7 +269,7 @@ impl<'a> /*trait*/ QFileInfo_exists_s<i8> for (&'a QString) {
     // unsafe{_ZN9QFileInfo6existsERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN9QFileInfo6existsERK7QString(arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -292,7 +292,7 @@ impl<'a> /*trait*/ QFileInfo_makeAbsolute<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QFileInfo12makeAbsoluteEv()};
     let mut ret = unsafe {C_ZN9QFileInfo12makeAbsoluteEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -315,7 +315,7 @@ impl<'a> /*trait*/ QFileInfo_isRoot<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo6isRootEv()};
     let mut ret = unsafe {C_ZNK9QFileInfo6isRootEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -362,7 +362,7 @@ impl<'a> /*trait*/ QFileInfo_isDir<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo5isDirEv()};
     let mut ret = unsafe {C_ZNK9QFileInfo5isDirEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -447,7 +447,7 @@ impl<'a> /*trait*/ QFileInfo_isFile<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo6isFileEv()};
     let mut ret = unsafe {C_ZNK9QFileInfo6isFileEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -496,7 +496,7 @@ impl<'a> /*trait*/ QFileInfo_ownerId<u32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo7ownerIdEv()};
     let mut ret = unsafe {C_ZNK9QFileInfo7ownerIdEv(rsthis.qclsinst)};
-    return ret as u32;
+    return ret as u32; // 1
     // return 1;
   }
 }
@@ -582,7 +582,7 @@ impl<'a> /*trait*/ QFileInfo_isSymLink<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo9isSymLinkEv()};
     let mut ret = unsafe {C_ZNK9QFileInfo9isSymLinkEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -715,7 +715,7 @@ impl<'a> /*trait*/ QFileInfo_isBundle<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo8isBundleEv()};
     let mut ret = unsafe {C_ZNK9QFileInfo8isBundleEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -750,7 +750,7 @@ impl<'a> /*trait*/ QFileInfo_isRelative<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo10isRelativeEv()};
     let mut ret = unsafe {C_ZNK9QFileInfo10isRelativeEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -820,7 +820,7 @@ impl<'a> /*trait*/ QFileInfo_caching<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo7cachingEv()};
     let mut ret = unsafe {C_ZNK9QFileInfo7cachingEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -913,7 +913,7 @@ impl<'a> /*trait*/ QFileInfo_isExecutable<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo12isExecutableEv()};
     let mut ret = unsafe {C_ZNK9QFileInfo12isExecutableEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -960,7 +960,7 @@ impl<'a> /*trait*/ QFileInfo_groupId<u32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo7groupIdEv()};
     let mut ret = unsafe {C_ZNK9QFileInfo7groupIdEv(rsthis.qclsinst)};
-    return ret as u32;
+    return ret as u32; // 1
     // return 1;
   }
 }
@@ -1007,7 +1007,7 @@ impl<'a> /*trait*/ QFileInfo_size<i64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo4sizeEv()};
     let mut ret = unsafe {C_ZNK9QFileInfo4sizeEv(rsthis.qclsinst)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -1102,7 +1102,7 @@ impl<'a> /*trait*/ QFileInfo_isAbsolute<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo10isAbsoluteEv()};
     let mut ret = unsafe {C_ZNK9QFileInfo10isAbsoluteEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1125,7 +1125,7 @@ impl<'a> /*trait*/ QFileInfo_isNativePath<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo12isNativePathEv()};
     let mut ret = unsafe {C_ZNK9QFileInfo12isNativePathEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1148,7 +1148,7 @@ impl<'a> /*trait*/ QFileInfo_isWritable<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo10isWritableEv()};
     let mut ret = unsafe {C_ZNK9QFileInfo10isWritableEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1195,7 +1195,7 @@ impl<'a> /*trait*/ QFileInfo_isReadable<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo10isReadableEv()};
     let mut ret = unsafe {C_ZNK9QFileInfo10isReadableEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1265,7 +1265,7 @@ impl<'a> /*trait*/ QFileInfo_exists<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo6existsEv()};
     let mut ret = unsafe {C_ZNK9QFileInfo6existsEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

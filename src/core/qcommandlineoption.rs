@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qcommandlineoption.h
 // dst-file: /src/core/qcommandlineoption.rs
 //
@@ -19,8 +19,8 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qstring::QString; // 773
-use super::qstringlist::QStringList; // 773
+use super::qstring::*; // 773
+use super::qstringlist::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -34,7 +34,7 @@ extern {
   // proto:  void QCommandLineOption::setValueName(const QString & name);
   fn C_ZN18QCommandLineOption12setValueNameERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QStringList QCommandLineOption::names();
-  fn C_ZNK18QCommandLineOption5namesEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK18QCommandLineOption5namesEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QCommandLineOption::QCommandLineOption(const QCommandLineOption & other);
   fn C_ZN18QCommandLineOptionC2ERKS_(arg0: *mut c_void) -> u64;
   // proto:  void QCommandLineOption::setDescription(const QString & description);
@@ -60,7 +60,7 @@ extern {
   // proto:  void QCommandLineOption::QCommandLineOption(const QString & name);
   fn C_ZN18QCommandLineOptionC2ERK7QString(arg0: *mut c_void) -> u64;
   // proto:  QStringList QCommandLineOption::defaultValues();
-  fn C_ZNK18QCommandLineOption13defaultValuesEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK18QCommandLineOption13defaultValuesEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
 } // <= ext block end
 
 // body block begin =>
@@ -112,11 +112,13 @@ pub trait QCommandLineOption_names<RetType> {
 }
 
   // proto:  QStringList QCommandLineOption::names();
-impl<'a> /*trait*/ QCommandLineOption_names<()> for () {
-  fn names(self , rsthis: & QCommandLineOption) -> () {
+impl<'a> /*trait*/ QCommandLineOption_names<QStringList> for () {
+  fn names(self , rsthis: & QCommandLineOption) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QCommandLineOption5namesEv()};
-     unsafe {C_ZNK18QCommandLineOption5namesEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK18QCommandLineOption5namesEv(rsthis.qclsinst)};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -390,11 +392,13 @@ pub trait QCommandLineOption_defaultValues<RetType> {
 }
 
   // proto:  QStringList QCommandLineOption::defaultValues();
-impl<'a> /*trait*/ QCommandLineOption_defaultValues<()> for () {
-  fn defaultValues(self , rsthis: & QCommandLineOption) -> () {
+impl<'a> /*trait*/ QCommandLineOption_defaultValues<QStringList> for () {
+  fn defaultValues(self , rsthis: & QCommandLineOption) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QCommandLineOption13defaultValuesEv()};
-     unsafe {C_ZNK18QCommandLineOption13defaultValuesEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK18QCommandLineOption13defaultValuesEv(rsthis.qclsinst)};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }

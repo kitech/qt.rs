@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qtranslator.h
 // dst-file: /src/core/qtranslator.rs
 //
@@ -18,11 +18,11 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qobject::QObject; // 773
+use super::qobject::*; // 773
 use std::ops::Deref;
-use super::qobjectdefs::QMetaObject; // 773
-use super::qstring::QString; // 773
-use super::qlocale::QLocale; // 773
+use super::qobjectdefs::*; // 773
+use super::qstring::*; // 773
+use super::qlocale::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -146,7 +146,7 @@ impl<'a> /*trait*/ QTranslator_isEmpty<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTranslator7isEmptyEv()};
     let mut ret = unsafe {C_ZNK11QTranslator7isEmptyEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -195,7 +195,7 @@ impl<'a> /*trait*/ QTranslator_load<i8> for (&'a QString, &'a QString, &'a QStri
     let arg2 = self.2.qclsinst  as *mut c_void;
     let arg3 = self.3.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN11QTranslator4loadERK7QStringS2_S2_S2_(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -237,7 +237,7 @@ impl<'a> /*trait*/ QTranslator_load<i8> for (&'a  String, i32, &'a QString) {
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN11QTranslator4loadEPKhiRK7QString(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -253,7 +253,7 @@ impl<'a> /*trait*/ QTranslator_load<i8> for (&'a QLocale, &'a QString, &'a QStri
     let arg3 = self.3.qclsinst  as *mut c_void;
     let arg4 = self.4.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN11QTranslator4loadERK7QLocaleRK7QStringS5_S5_S5_(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

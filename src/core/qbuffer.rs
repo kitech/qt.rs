@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qbuffer.h
 // dst-file: /src/core/qbuffer.rs
 //
@@ -18,11 +18,11 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qiodevice::QIODevice; // 773
+use super::qiodevice::*; // 773
 use std::ops::Deref;
-use super::qbytearray::QByteArray; // 773
-use super::qobject::QObject; // 773
-use super::qobjectdefs::QMetaObject; // 773
+use super::qbytearray::*; // 773
+use super::qobject::*; // 773
+use super::qobjectdefs::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -109,7 +109,7 @@ impl<'a> /*trait*/ QBuffer_seek<i8> for (i64) {
     // unsafe{_ZN7QBuffer4seekEx()};
     let arg0 = self  as c_longlong;
     let mut ret = unsafe {C_ZN7QBuffer4seekEx(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -132,7 +132,7 @@ impl<'a> /*trait*/ QBuffer_canReadLine<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QBuffer11canReadLineEv()};
     let mut ret = unsafe {C_ZNK7QBuffer11canReadLineEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -299,7 +299,7 @@ impl<'a> /*trait*/ QBuffer_pos<i64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QBuffer3posEv()};
     let mut ret = unsafe {C_ZNK7QBuffer3posEv(rsthis.qclsinst)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -368,7 +368,7 @@ impl<'a> /*trait*/ QBuffer_size<i64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QBuffer4sizeEv()};
     let mut ret = unsafe {C_ZNK7QBuffer4sizeEv(rsthis.qclsinst)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -407,7 +407,7 @@ impl<'a> /*trait*/ QBuffer_atEnd<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QBuffer5atEndEv()};
     let mut ret = unsafe {C_ZNK7QBuffer5atEndEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

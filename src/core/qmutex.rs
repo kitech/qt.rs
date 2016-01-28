@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qmutex.h
 // dst-file: /src/core/qmutex.rs
 //
@@ -251,7 +251,7 @@ impl<'a> /*trait*/ QBasicMutex_tryLock<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QBasicMutex7tryLockEv()};
     let mut ret = unsafe {C_ZN11QBasicMutex7tryLockEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -274,7 +274,7 @@ impl<'a> /*trait*/ QBasicMutex_isRecursive<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QBasicMutex11isRecursiveEv()};
     let mut ret = unsafe {C_ZN11QBasicMutex11isRecursiveEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -359,7 +359,7 @@ impl<'a> /*trait*/ QMutex_tryLock<i8> for (i32) {
     // unsafe{_ZN6QMutex7tryLockEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZN6QMutex7tryLockEi(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

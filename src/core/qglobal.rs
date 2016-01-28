@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qglobal.h
 // dst-file: /src/core/qglobal.rs
 //
@@ -28,59 +28,59 @@ use std::ops::Deref;
 // #[link(name = "QtInline")]
 
 extern {
-  fn QIntegerForSize_4__Class_Size() -> c_int;
-  fn QIntegerForSize_8__Class_Size() -> c_int;
-  fn QIntegerForSize_2__Class_Size() -> c_int;
-  fn QIntegerForSize_1__Class_Size() -> c_int;
+  fn QIntegerForSizeL4G_Class_Size() -> c_int;
+  fn QIntegerForSizeL8G_Class_Size() -> c_int;
+  fn QIntegerForSizeL2G_Class_Size() -> c_int;
+  fn QIntegerForSizeL1G_Class_Size() -> c_int;
 } // <= ext block end
 
 // body block begin =>
-// class sizeof(QIntegerForSize_4_)=1
+// class sizeof(QIntegerForSizeL4G)=1
 #[derive(Default)]
-pub struct QIntegerForSize_4_ {
+pub struct QIntegerForSizeL4G {
   // qbase: None,
   pub qclsinst: u64 /* *mut c_void*/,
 }
 
-// class sizeof(QIntegerForSize_8_)=1
+// class sizeof(QIntegerForSizeL8G)=1
 #[derive(Default)]
-pub struct QIntegerForSize_8_ {
+pub struct QIntegerForSizeL8G {
   // qbase: None,
   pub qclsinst: u64 /* *mut c_void*/,
 }
 
-// class sizeof(QIntegerForSize_2_)=1
+// class sizeof(QIntegerForSizeL2G)=1
 #[derive(Default)]
-pub struct QIntegerForSize_2_ {
+pub struct QIntegerForSizeL2G {
   // qbase: None,
   pub qclsinst: u64 /* *mut c_void*/,
 }
 
-// class sizeof(QIntegerForSize_1_)=1
+// class sizeof(QIntegerForSizeL1G)=1
 #[derive(Default)]
-pub struct QIntegerForSize_1_ {
+pub struct QIntegerForSizeL1G {
   // qbase: None,
   pub qclsinst: u64 /* *mut c_void*/,
 }
 
-impl /*struct*/ QIntegerForSize_4_ {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QIntegerForSize_4_ {
-    return QIntegerForSize_4_{qclsinst: qthis, ..Default::default()};
+impl /*struct*/ QIntegerForSizeL4G {
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QIntegerForSizeL4G {
+    return QIntegerForSizeL4G{qclsinst: qthis, ..Default::default()};
   }
 }
-impl /*struct*/ QIntegerForSize_8_ {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QIntegerForSize_8_ {
-    return QIntegerForSize_8_{qclsinst: qthis, ..Default::default()};
+impl /*struct*/ QIntegerForSizeL8G {
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QIntegerForSizeL8G {
+    return QIntegerForSizeL8G{qclsinst: qthis, ..Default::default()};
   }
 }
-impl /*struct*/ QIntegerForSize_2_ {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QIntegerForSize_2_ {
-    return QIntegerForSize_2_{qclsinst: qthis, ..Default::default()};
+impl /*struct*/ QIntegerForSizeL2G {
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QIntegerForSizeL2G {
+    return QIntegerForSizeL2G{qclsinst: qthis, ..Default::default()};
   }
 }
-impl /*struct*/ QIntegerForSize_1_ {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QIntegerForSize_1_ {
-    return QIntegerForSize_1_{qclsinst: qthis, ..Default::default()};
+impl /*struct*/ QIntegerForSizeL1G {
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QIntegerForSizeL1G {
+    return QIntegerForSizeL1G{qclsinst: qthis, ..Default::default()};
   }
 }
 // <= body block end

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qfutureinterface.h
 // dst-file: /src/core/qfutureinterface.rs
 //
@@ -19,11 +19,15 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qmutex::QMutex; // 773
-use super::qrunnable::QRunnable; // 773
-use super::qstring::QString; // 773
-use super::qthreadpool::QThreadPool; // 773
+use super::qmutex::*; // 773
+use super::qrunnable::*; // 773
+use super::qstring::*; // 773
+use super::qthreadpool::*; // 773
 // use super::qfutureinterface::QFutureInterfaceBase; // 773
+// use super::qfutureinterface::*; // 775
+// use super::qfutureinterface::QFutureInterface; // 773
+// use super::qfuture::*; // 775
+use super::qfuture::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -106,11 +110,11 @@ extern {
   fn C_ZN20QFutureInterfaceBase16setProgressValueEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  bool QFutureInterfaceBase::isFinished();
   fn C_ZNK20QFutureInterfaceBase10isFinishedEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  fn QFutureInterface_void__Class_Size() -> c_int;
+  fn QFutureInterfaceLvoidG_Class_Size() -> c_int;
   // proto: static QFutureInterface<void> QFutureInterface<void>::canceledResult();
-  fn C_ZN16QFutureInterfaceIvE14canceledResultEv();
+  fn C_ZN16QFutureInterfaceIvE14canceledResultEv() -> *mut c_void;
   // proto:  QFuture<void> QFutureInterface<void>::future();
-  fn C_ZN16QFutureInterfaceIvE6futureEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN16QFutureInterfaceIvE6futureEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QFutureInterface<void>::reportResult(const void * , int );
   fn C_ZN16QFutureInterfaceIvE12reportResultEPKvi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
   // proto:  void QFutureInterface<void>::reportFinished(const void * );
@@ -125,9 +129,9 @@ pub struct QFutureInterfaceBase {
   pub qclsinst: u64 /* *mut c_void*/,
 }
 
-// class sizeof(QFutureInterface_void_)=16
+// class sizeof(QFutureInterfaceLvoidG)=16
 #[derive(Default)]
-pub struct QFutureInterface_void_ {
+pub struct QFutureInterfaceLvoidG {
   qbase: QFutureInterfaceBase,
   pub qclsinst: u64 /* *mut c_void*/,
 }
@@ -155,7 +159,7 @@ impl<'a> /*trait*/ QFutureInterfaceBase_progressMinimum<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QFutureInterfaceBase15progressMinimumEv()};
     let mut ret = unsafe {C_ZNK20QFutureInterfaceBase15progressMinimumEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -178,7 +182,7 @@ impl<'a> /*trait*/ QFutureInterfaceBase_isStarted<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QFutureInterfaceBase9isStartedEv()};
     let mut ret = unsafe {C_ZNK20QFutureInterfaceBase9isStartedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -226,7 +230,7 @@ impl<'a> /*trait*/ QFutureInterfaceBase_isResultReadyAt<i8> for (i32) {
     // unsafe{_ZNK20QFutureInterfaceBase15isResultReadyAtEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK20QFutureInterfaceBase15isResultReadyAtEi(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -272,7 +276,7 @@ impl<'a> /*trait*/ QFutureInterfaceBase_expectedResultCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QFutureInterfaceBase19expectedResultCountEv()};
     let mut ret = unsafe {C_ZN20QFutureInterfaceBase19expectedResultCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -317,7 +321,7 @@ impl<'a> /*trait*/ QFutureInterfaceBase_isRunning<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QFutureInterfaceBase9isRunningEv()};
     let mut ret = unsafe {C_ZNK20QFutureInterfaceBase9isRunningEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -429,7 +433,7 @@ impl<'a> /*trait*/ QFutureInterfaceBase_isCanceled<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QFutureInterfaceBase10isCanceledEv()};
     let mut ret = unsafe {C_ZNK20QFutureInterfaceBase10isCanceledEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -476,7 +480,7 @@ impl<'a> /*trait*/ QFutureInterfaceBase_isProgressUpdateNeeded<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QFutureInterfaceBase22isProgressUpdateNeededEv()};
     let mut ret = unsafe {C_ZNK20QFutureInterfaceBase22isProgressUpdateNeededEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -568,7 +572,7 @@ impl<'a> /*trait*/ QFutureInterfaceBase_resultCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QFutureInterfaceBase11resultCountEv()};
     let mut ret = unsafe {C_ZNK20QFutureInterfaceBase11resultCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -619,7 +623,7 @@ impl<'a> /*trait*/ QFutureInterfaceBase_progressValue<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QFutureInterfaceBase13progressValueEv()};
     let mut ret = unsafe {C_ZNK20QFutureInterfaceBase13progressValueEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -642,7 +646,7 @@ impl<'a> /*trait*/ QFutureInterfaceBase_isThrottled<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QFutureInterfaceBase11isThrottledEv()};
     let mut ret = unsafe {C_ZNK20QFutureInterfaceBase11isThrottledEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -781,7 +785,7 @@ impl<'a> /*trait*/ QFutureInterfaceBase_isPaused<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QFutureInterfaceBase8isPausedEv()};
     let mut ret = unsafe {C_ZNK20QFutureInterfaceBase8isPausedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -804,7 +808,7 @@ impl<'a> /*trait*/ QFutureInterfaceBase_waitForNextResult<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QFutureInterfaceBase17waitForNextResultEv()};
     let mut ret = unsafe {C_ZN20QFutureInterfaceBase17waitForNextResultEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -872,7 +876,7 @@ impl<'a> /*trait*/ QFutureInterfaceBase_progressMaximum<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QFutureInterfaceBase15progressMaximumEv()};
     let mut ret = unsafe {C_ZNK20QFutureInterfaceBase15progressMaximumEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -963,87 +967,91 @@ impl<'a> /*trait*/ QFutureInterfaceBase_isFinished<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QFutureInterfaceBase10isFinishedEv()};
     let mut ret = unsafe {C_ZNK20QFutureInterfaceBase10isFinishedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
 
-impl /*struct*/ QFutureInterface_void_ {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QFutureInterface_void_ {
-    return QFutureInterface_void_{qbase: QFutureInterfaceBase::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+impl /*struct*/ QFutureInterfaceLvoidG {
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QFutureInterfaceLvoidG {
+    return QFutureInterfaceLvoidG{qbase: QFutureInterfaceBase::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
-impl Deref for QFutureInterface_void_ {
+impl Deref for QFutureInterfaceLvoidG {
   type Target = QFutureInterfaceBase;
 
   fn deref(&self) -> &QFutureInterfaceBase {
     return & self.qbase;
   }
 }
-impl AsRef<QFutureInterfaceBase> for QFutureInterface_void_ {
+impl AsRef<QFutureInterfaceBase> for QFutureInterfaceLvoidG {
   fn as_ref(& self) -> & QFutureInterfaceBase {
     return & self.qbase;
   }
 }
   // proto: static QFutureInterface<void> QFutureInterface<void>::canceledResult();
-impl /*struct*/ QFutureInterface_void_ {
-  pub fn canceledResult_s<RetType, T: QFutureInterface_void__canceledResult_s<RetType>>( overload_args: T) -> RetType {
+impl /*struct*/ QFutureInterfaceLvoidG {
+  pub fn canceledResult_s<RetType, T: QFutureInterfaceLvoidG_canceledResult_s<RetType>>( overload_args: T) -> RetType {
     return overload_args.canceledResult_s();
     // return 1;
   }
 }
 
-pub trait QFutureInterface_void__canceledResult_s<RetType> {
+pub trait QFutureInterfaceLvoidG_canceledResult_s<RetType> {
   fn canceledResult_s(self ) -> RetType;
 }
 
   // proto: static QFutureInterface<void> QFutureInterface<void>::canceledResult();
-impl<'a> /*trait*/ QFutureInterface_void__canceledResult_s<()> for () {
-  fn canceledResult_s(self ) -> () {
+impl<'a> /*trait*/ QFutureInterfaceLvoidG_canceledResult_s<QFutureInterfaceLvoidG> for () {
+  fn canceledResult_s(self ) -> QFutureInterfaceLvoidG {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QFutureInterfaceIvE14canceledResultEv()};
-     unsafe {C_ZN16QFutureInterfaceIvE14canceledResultEv()};
+    let mut ret = unsafe {C_ZN16QFutureInterfaceIvE14canceledResultEv()};
+    let mut ret1 = QFutureInterfaceLvoidG::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
 
   // proto:  QFuture<void> QFutureInterface<void>::future();
-impl /*struct*/ QFutureInterface_void_ {
-  pub fn future<RetType, T: QFutureInterface_void__future<RetType>>(& self,  overload_args: T) -> RetType {
+impl /*struct*/ QFutureInterfaceLvoidG {
+  pub fn future<RetType, T: QFutureInterfaceLvoidG_future<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.future(self);
     // return 1;
   }
 }
 
-pub trait QFutureInterface_void__future<RetType> {
-  fn future(self , rsthis: & QFutureInterface_void_) -> RetType;
+pub trait QFutureInterfaceLvoidG_future<RetType> {
+  fn future(self , rsthis: & QFutureInterfaceLvoidG) -> RetType;
 }
 
   // proto:  QFuture<void> QFutureInterface<void>::future();
-impl<'a> /*trait*/ QFutureInterface_void__future<()> for () {
-  fn future(self , rsthis: & QFutureInterface_void_) -> () {
+impl<'a> /*trait*/ QFutureInterfaceLvoidG_future<QFutureLvoidG> for () {
+  fn future(self , rsthis: & QFutureInterfaceLvoidG) -> QFutureLvoidG {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QFutureInterfaceIvE6futureEv()};
-     unsafe {C_ZN16QFutureInterfaceIvE6futureEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZN16QFutureInterfaceIvE6futureEv(rsthis.qclsinst)};
+    let mut ret1 = QFutureLvoidG::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
 
   // proto:  void QFutureInterface<void>::reportResult(const void * , int );
-impl /*struct*/ QFutureInterface_void_ {
-  pub fn reportResult<RetType, T: QFutureInterface_void__reportResult<RetType>>(& self,  overload_args: T) -> RetType {
+impl /*struct*/ QFutureInterfaceLvoidG {
+  pub fn reportResult<RetType, T: QFutureInterfaceLvoidG_reportResult<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.reportResult(self);
     // return 1;
   }
 }
 
-pub trait QFutureInterface_void__reportResult<RetType> {
-  fn reportResult(self , rsthis: & QFutureInterface_void_) -> RetType;
+pub trait QFutureInterfaceLvoidG_reportResult<RetType> {
+  fn reportResult(self , rsthis: & QFutureInterfaceLvoidG) -> RetType;
 }
 
   // proto:  void QFutureInterface<void>::reportResult(const void * , int );
-impl<'a> /*trait*/ QFutureInterface_void__reportResult<()> for (*mut c_void, i32) {
-  fn reportResult(self , rsthis: & QFutureInterface_void_) -> () {
+impl<'a> /*trait*/ QFutureInterfaceLvoidG_reportResult<()> for (*mut c_void, i32) {
+  fn reportResult(self , rsthis: & QFutureInterfaceLvoidG) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QFutureInterfaceIvE12reportResultEPKvi()};
     let arg0 = self.0  as *mut c_void;
@@ -1054,20 +1062,20 @@ impl<'a> /*trait*/ QFutureInterface_void__reportResult<()> for (*mut c_void, i32
 }
 
   // proto:  void QFutureInterface<void>::reportFinished(const void * );
-impl /*struct*/ QFutureInterface_void_ {
-  pub fn reportFinished<RetType, T: QFutureInterface_void__reportFinished<RetType>>(& self,  overload_args: T) -> RetType {
+impl /*struct*/ QFutureInterfaceLvoidG {
+  pub fn reportFinished<RetType, T: QFutureInterfaceLvoidG_reportFinished<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.reportFinished(self);
     // return 1;
   }
 }
 
-pub trait QFutureInterface_void__reportFinished<RetType> {
-  fn reportFinished(self , rsthis: & QFutureInterface_void_) -> RetType;
+pub trait QFutureInterfaceLvoidG_reportFinished<RetType> {
+  fn reportFinished(self , rsthis: & QFutureInterfaceLvoidG) -> RetType;
 }
 
   // proto:  void QFutureInterface<void>::reportFinished(const void * );
-impl<'a> /*trait*/ QFutureInterface_void__reportFinished<()> for (*mut c_void) {
-  fn reportFinished(self , rsthis: & QFutureInterface_void_) -> () {
+impl<'a> /*trait*/ QFutureInterfaceLvoidG_reportFinished<()> for (*mut c_void) {
+  fn reportFinished(self , rsthis: & QFutureInterfaceLvoidG) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QFutureInterfaceIvE14reportFinishedEPKv()};
     let arg0 = self  as *mut c_void;

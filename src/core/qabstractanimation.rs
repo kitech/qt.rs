@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qabstractanimation.h
 // dst-file: /src/core/qabstractanimation.rs
 //
@@ -18,10 +18,10 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qobject::QObject; // 773
+use super::qobject::*; // 773
 use std::ops::Deref;
-use super::qanimationgroup::QAnimationGroup; // 773
-use super::qobjectdefs::QMetaObject; // 773
+use super::qanimationgroup::*; // 773
+use super::qobjectdefs::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -264,7 +264,7 @@ impl<'a> /*trait*/ QAbstractAnimation_currentLoop<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QAbstractAnimation11currentLoopEv()};
     let mut ret = unsafe {C_ZNK18QAbstractAnimation11currentLoopEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -334,7 +334,7 @@ impl<'a> /*trait*/ QAbstractAnimation_totalDuration<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QAbstractAnimation13totalDurationEv()};
     let mut ret = unsafe {C_ZNK18QAbstractAnimation13totalDurationEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -357,7 +357,7 @@ impl<'a> /*trait*/ QAbstractAnimation_duration<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QAbstractAnimation8durationEv()};
     let mut ret = unsafe {C_ZNK18QAbstractAnimation8durationEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -404,7 +404,7 @@ impl<'a> /*trait*/ QAbstractAnimation_currentLoopTime<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QAbstractAnimation15currentLoopTimeEv()};
     let mut ret = unsafe {C_ZNK18QAbstractAnimation15currentLoopTimeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -427,7 +427,7 @@ impl<'a> /*trait*/ QAbstractAnimation_currentTime<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QAbstractAnimation11currentTimeEv()};
     let mut ret = unsafe {C_ZNK18QAbstractAnimation11currentTimeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -495,7 +495,7 @@ impl<'a> /*trait*/ QAbstractAnimation_loopCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QAbstractAnimation9loopCountEv()};
     let mut ret = unsafe {C_ZNK18QAbstractAnimation9loopCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -607,7 +607,7 @@ impl<'a> /*trait*/ QAnimationDriver_elapsed<i64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAnimationDriver7elapsedEv()};
     let mut ret = unsafe {C_ZNK16QAnimationDriver7elapsedEv(rsthis.qclsinst)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -698,7 +698,7 @@ impl<'a> /*trait*/ QAnimationDriver_isRunning<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAnimationDriver9isRunningEv()};
     let mut ret = unsafe {C_ZNK16QAnimationDriver9isRunningEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -721,7 +721,7 @@ impl<'a> /*trait*/ QAnimationDriver_startTime<i64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAnimationDriver9startTimeEv()};
     let mut ret = unsafe {C_ZNK16QAnimationDriver9startTimeEv(rsthis.qclsinst)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }

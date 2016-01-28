@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qcommandlineparser.h
 // dst-file: /src/core/qcommandlineparser.rs
 //
@@ -19,10 +19,10 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qstringlist::QStringList; // 773
-use super::qstring::QString; // 773
-use super::qcommandlineoption::QCommandLineOption; // 773
-use super::qcoreapplication::QCoreApplication; // 773
+use super::qstringlist::*; // 773
+use super::qstring::*; // 773
+use super::qcommandlineoption::*; // 773
+use super::qcoreapplication::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -42,7 +42,7 @@ extern {
   // proto:  void QCommandLineParser::clearPositionalArguments();
   fn C_ZN18QCommandLineParser24clearPositionalArgumentsEv(qthis: u64 /* *mut c_void*/);
   // proto:  QStringList QCommandLineParser::values(const QCommandLineOption & option);
-  fn C_ZNK18QCommandLineParser6valuesERK18QCommandLineOption(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK18QCommandLineParser6valuesERK18QCommandLineOption(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  bool QCommandLineParser::isSet(const QString & name);
   fn C_ZNK18QCommandLineParser5isSetERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  void QCommandLineParser::showHelp(int exitCode);
@@ -54,7 +54,7 @@ extern {
   // proto:  QCommandLineOption QCommandLineParser::addHelpOption();
   fn C_ZN18QCommandLineParser13addHelpOptionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QStringList QCommandLineParser::optionNames();
-  fn C_ZNK18QCommandLineParser11optionNamesEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK18QCommandLineParser11optionNamesEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QCommandLineParser::isSet(const QCommandLineOption & option);
   fn C_ZNK18QCommandLineParser5isSetERK18QCommandLineOption(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  void QCommandLineParser::addPositionalArgument(const QString & name, const QString & description, const QString & syntax);
@@ -66,7 +66,7 @@ extern {
   // proto:  QString QCommandLineParser::helpText();
   fn C_ZNK18QCommandLineParser8helpTextEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QStringList QCommandLineParser::values(const QString & name);
-  fn C_ZNK18QCommandLineParser6valuesERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK18QCommandLineParser6valuesERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QString QCommandLineParser::applicationDescription();
   fn C_ZNK18QCommandLineParser22applicationDescriptionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QCommandLineParser::value(const QCommandLineOption & option);
@@ -74,7 +74,7 @@ extern {
   // proto:  QCommandLineOption QCommandLineParser::addVersionOption();
   fn C_ZN18QCommandLineParser16addVersionOptionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QStringList QCommandLineParser::positionalArguments();
-  fn C_ZNK18QCommandLineParser19positionalArgumentsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK18QCommandLineParser19positionalArgumentsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QCommandLineParser::setApplicationDescription(const QString & description);
   fn C_ZN18QCommandLineParser25setApplicationDescriptionERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QCommandLineParser::QCommandLineParser();
@@ -82,7 +82,7 @@ extern {
   // proto:  bool QCommandLineParser::parse(const QStringList & arguments);
   fn C_ZN18QCommandLineParser5parseERK11QStringList(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  QStringList QCommandLineParser::unknownOptionNames();
-  fn C_ZNK18QCommandLineParser18unknownOptionNamesEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK18QCommandLineParser18unknownOptionNamesEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
 } // <= ext block end
 
 // body block begin =>
@@ -205,12 +205,14 @@ pub trait QCommandLineParser_values<RetType> {
 }
 
   // proto:  QStringList QCommandLineParser::values(const QCommandLineOption & option);
-impl<'a> /*trait*/ QCommandLineParser_values<()> for (&'a QCommandLineOption) {
-  fn values(self , rsthis: & QCommandLineParser) -> () {
+impl<'a> /*trait*/ QCommandLineParser_values<QStringList> for (&'a QCommandLineOption) {
+  fn values(self , rsthis: & QCommandLineParser) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QCommandLineParser6valuesERK18QCommandLineOption()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZNK18QCommandLineParser6valuesERK18QCommandLineOption(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK18QCommandLineParser6valuesERK18QCommandLineOption(rsthis.qclsinst, arg0)};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -234,7 +236,7 @@ impl<'a> /*trait*/ QCommandLineParser_isSet<i8> for (&'a QString) {
     // unsafe{_ZNK18QCommandLineParser5isSetERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK18QCommandLineParser5isSetERK7QString(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -281,7 +283,7 @@ impl<'a> /*trait*/ QCommandLineParser_addOption<i8> for (&'a QCommandLineOption)
     // unsafe{_ZN18QCommandLineParser9addOptionERK18QCommandLineOption()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN18QCommandLineParser9addOptionERK18QCommandLineOption(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -345,11 +347,13 @@ pub trait QCommandLineParser_optionNames<RetType> {
 }
 
   // proto:  QStringList QCommandLineParser::optionNames();
-impl<'a> /*trait*/ QCommandLineParser_optionNames<()> for () {
-  fn optionNames(self , rsthis: & QCommandLineParser) -> () {
+impl<'a> /*trait*/ QCommandLineParser_optionNames<QStringList> for () {
+  fn optionNames(self , rsthis: & QCommandLineParser) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QCommandLineParser11optionNamesEv()};
-     unsafe {C_ZNK18QCommandLineParser11optionNamesEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK18QCommandLineParser11optionNamesEv(rsthis.qclsinst)};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -361,7 +365,7 @@ impl<'a> /*trait*/ QCommandLineParser_isSet<i8> for (&'a QCommandLineOption) {
     // unsafe{_ZNK18QCommandLineParser5isSetERK18QCommandLineOption()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK18QCommandLineParser5isSetERK18QCommandLineOption(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -449,12 +453,14 @@ impl<'a> /*trait*/ QCommandLineParser_helpText<QString> for () {
 }
 
   // proto:  QStringList QCommandLineParser::values(const QString & name);
-impl<'a> /*trait*/ QCommandLineParser_values<()> for (&'a QString) {
-  fn values(self , rsthis: & QCommandLineParser) -> () {
+impl<'a> /*trait*/ QCommandLineParser_values<QStringList> for (&'a QString) {
+  fn values(self , rsthis: & QCommandLineParser) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QCommandLineParser6valuesERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZNK18QCommandLineParser6valuesERK7QString(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK18QCommandLineParser6valuesERK7QString(rsthis.qclsinst, arg0)};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -533,11 +539,13 @@ pub trait QCommandLineParser_positionalArguments<RetType> {
 }
 
   // proto:  QStringList QCommandLineParser::positionalArguments();
-impl<'a> /*trait*/ QCommandLineParser_positionalArguments<()> for () {
-  fn positionalArguments(self , rsthis: & QCommandLineParser) -> () {
+impl<'a> /*trait*/ QCommandLineParser_positionalArguments<QStringList> for () {
+  fn positionalArguments(self , rsthis: & QCommandLineParser) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QCommandLineParser19positionalArgumentsEv()};
-     unsafe {C_ZNK18QCommandLineParser19positionalArgumentsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK18QCommandLineParser19positionalArgumentsEv(rsthis.qclsinst)};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -611,7 +619,7 @@ impl<'a> /*trait*/ QCommandLineParser_parse<i8> for (&'a QStringList) {
     // unsafe{_ZN18QCommandLineParser5parseERK11QStringList()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN18QCommandLineParser5parseERK11QStringList(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -629,11 +637,13 @@ pub trait QCommandLineParser_unknownOptionNames<RetType> {
 }
 
   // proto:  QStringList QCommandLineParser::unknownOptionNames();
-impl<'a> /*trait*/ QCommandLineParser_unknownOptionNames<()> for () {
-  fn unknownOptionNames(self , rsthis: & QCommandLineParser) -> () {
+impl<'a> /*trait*/ QCommandLineParser_unknownOptionNames<QStringList> for () {
+  fn unknownOptionNames(self , rsthis: & QCommandLineParser) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QCommandLineParser18unknownOptionNamesEv()};
-     unsafe {C_ZNK18QCommandLineParser18unknownOptionNamesEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK18QCommandLineParser18unknownOptionNamesEv(rsthis.qclsinst)};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }

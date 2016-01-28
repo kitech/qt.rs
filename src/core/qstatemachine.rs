@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qstatemachine.h
 // dst-file: /src/core/qstatemachine.rs
 //
@@ -18,14 +18,16 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qstate::QState; // 773
+use super::qstate::*; // 773
 use std::ops::Deref;
-use super::qobject::QObject; // 773
-use super::qcoreevent::QEvent; // 773
-use super::qabstractanimation::QAbstractAnimation; // 773
-use super::qstring::QString; // 773
-use super::qobjectdefs::QMetaObject; // 773
-use super::qabstractstate::QAbstractState; // 773
+use super::qobject::*; // 773
+// use super::qlist::*; // 775
+use super::qcoreevent::*; // 773
+// use super::qset::*; // 775
+use super::qabstractanimation::*; // 773
+use super::qstring::*; // 773
+use super::qobjectdefs::*; // 773
+use super::qabstractstate::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -37,11 +39,11 @@ use super::qabstractstate::QAbstractState; // 773
 extern {
   fn QStateMachine_Class_Size() -> c_int;
   // proto:  QList<QAbstractAnimation *> QStateMachine::defaultAnimations();
-  fn C_ZNK13QStateMachine17defaultAnimationsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK13QStateMachine17defaultAnimationsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QStateMachine::postDelayedEvent(QEvent * event, int delay);
   fn C_ZN13QStateMachine16postDelayedEventEP6QEventi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> c_int;
   // proto:  QSet<QAbstractState *> QStateMachine::configuration();
-  fn C_ZNK13QStateMachine13configurationEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK13QStateMachine13configurationEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QStateMachine::setRunning(bool running);
   fn C_ZN13QStateMachine10setRunningEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QStateMachine::addDefaultAnimation(QAbstractAnimation * animation);
@@ -120,11 +122,12 @@ pub trait QStateMachine_defaultAnimations<RetType> {
 }
 
   // proto:  QList<QAbstractAnimation *> QStateMachine::defaultAnimations();
-impl<'a> /*trait*/ QStateMachine_defaultAnimations<()> for () {
-  fn defaultAnimations(self , rsthis: & QStateMachine) -> () {
+impl<'a> /*trait*/ QStateMachine_defaultAnimations<u64> for () {
+  fn defaultAnimations(self , rsthis: & QStateMachine) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStateMachine17defaultAnimationsEv()};
-     unsafe {C_ZNK13QStateMachine17defaultAnimationsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QStateMachine17defaultAnimationsEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -149,7 +152,7 @@ impl<'a> /*trait*/ QStateMachine_postDelayedEvent<i32> for (&'a QEvent, i32) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZN13QStateMachine16postDelayedEventEP6QEventi(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -167,11 +170,12 @@ pub trait QStateMachine_configuration<RetType> {
 }
 
   // proto:  QSet<QAbstractState *> QStateMachine::configuration();
-impl<'a> /*trait*/ QStateMachine_configuration<()> for () {
-  fn configuration(self , rsthis: & QStateMachine) -> () {
+impl<'a> /*trait*/ QStateMachine_configuration<u64> for () {
+  fn configuration(self , rsthis: & QStateMachine) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStateMachine13configurationEv()};
-     unsafe {C_ZNK13QStateMachine13configurationEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QStateMachine13configurationEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -338,7 +342,7 @@ impl<'a> /*trait*/ QStateMachine_isRunning<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStateMachine9isRunningEv()};
     let mut ret = unsafe {C_ZNK13QStateMachine9isRunningEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -362,7 +366,7 @@ impl<'a> /*trait*/ QStateMachine_cancelDelayedEvent<i8> for (i32) {
     // unsafe{_ZN13QStateMachine18cancelDelayedEventEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZN13QStateMachine18cancelDelayedEventEi(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -521,7 +525,7 @@ impl<'a> /*trait*/ QStateMachine_isAnimated<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStateMachine10isAnimatedEv()};
     let mut ret = unsafe {C_ZNK13QStateMachine10isAnimatedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -568,7 +572,7 @@ impl<'a> /*trait*/ QStateMachine_eventFilter<i8> for (&'a QObject, &'a QEvent) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN13QStateMachine11eventFilterEP7QObjectP6QEvent(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

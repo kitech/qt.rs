@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qsequentialanimationgroup.h
 // dst-file: /src/core/qsequentialanimationgroup.rs
 //
@@ -18,12 +18,12 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qanimationgroup::QAnimationGroup; // 773
+use super::qanimationgroup::*; // 773
 use std::ops::Deref;
-use super::qpauseanimation::QPauseAnimation; // 773
-use super::qobject::QObject; // 773
-use super::qobjectdefs::QMetaObject; // 773
-use super::qabstractanimation::QAbstractAnimation; // 773
+use super::qpauseanimation::*; // 773
+use super::qobject::*; // 773
+use super::qobjectdefs::*; // 773
+use super::qabstractanimation::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -244,7 +244,7 @@ impl<'a> /*trait*/ QSequentialAnimationGroup_duration<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK25QSequentialAnimationGroup8durationEv()};
     let mut ret = unsafe {C_ZNK25QSequentialAnimationGroup8durationEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

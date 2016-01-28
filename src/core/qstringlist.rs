@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qstringlist.h
 // dst-file: /src/core/qstringlist.rs
 //
@@ -19,10 +19,11 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qregularexpression::QRegularExpression; // 773
-use super::qstring::QString; // 773
-use super::qregexp::QRegExp; // 773
-use super::qchar::QChar; // 773
+use super::qregularexpression::*; // 773
+use super::qstring::*; // 773
+use super::qregexp::*; // 773
+// use super::qstringlist::QStringList; // 773
+use super::qchar::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -49,19 +50,19 @@ extern {
   fn C_ZNK11QStringList11lastIndexOfER7QRegExpi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> c_int;
   // proto:  void QStringList::QStringList(const QString & i);
   fn C_ZN11QStringListC2ERK7QString(arg0: *mut c_void) -> u64;
-  fn QListSpecialMethods_QString__Class_Size() -> c_int;
+  fn QListSpecialMethodsLQStringG_Class_Size() -> c_int;
   // proto:  QStringList & QListSpecialMethods<QString>::replaceInStrings(const QRegularExpression & re, const QString & after);
-  fn C_ZN19QListSpecialMethodsI7QStringE16replaceInStringsERK18QRegularExpressionRKS0_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN19QListSpecialMethodsI7QStringE16replaceInStringsERK18QRegularExpressionRKS0_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  QString QListSpecialMethods<QString>::join(const QString & sep);
   fn C_ZNK19QListSpecialMethodsI7QStringE4joinERKS0_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QStringList QListSpecialMethods<QString>::filter(const QRegularExpression & re);
-  fn C_ZNK19QListSpecialMethodsI7QStringE6filterERK18QRegularExpression(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK19QListSpecialMethodsI7QStringE6filterERK18QRegularExpression(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  int QListSpecialMethods<QString>::removeDuplicates();
   fn C_ZN19QListSpecialMethodsI7QStringE16removeDuplicatesEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  QStringList & QListSpecialMethods<QString>::replaceInStrings(const QRegExp & rx, const QString & after);
-  fn C_ZN19QListSpecialMethodsI7QStringE16replaceInStringsERK7QRegExpRKS0_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN19QListSpecialMethodsI7QStringE16replaceInStringsERK7QRegExpRKS0_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  QStringList QListSpecialMethods<QString>::filter(const QRegExp & rx);
-  fn C_ZNK19QListSpecialMethodsI7QStringE6filterERK7QRegExp(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK19QListSpecialMethodsI7QStringE6filterERK7QRegExp(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QString QListSpecialMethods<QString>::join(QChar sep);
   fn C_ZNK19QListSpecialMethodsI7QStringE4joinE5QChar(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
 } // <= ext block end
@@ -74,9 +75,9 @@ pub struct QStringList {
   pub qclsinst: u64 /* *mut c_void*/,
 }
 
-// class sizeof(QListSpecialMethods_QString_)=1
+// class sizeof(QListSpecialMethodsLQStringG)=1
 #[derive(Default)]
-pub struct QListSpecialMethods_QString_ {
+pub struct QListSpecialMethodsLQStringG {
   // qbase: None,
   pub qclsinst: u64 /* *mut c_void*/,
 }
@@ -106,7 +107,7 @@ impl<'a> /*trait*/ QStringList_lastIndexOf<i32> for (&'a QRegularExpression, i32
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZNK11QStringList11lastIndexOfERK18QRegularExpressioni(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -158,7 +159,7 @@ impl<'a> /*trait*/ QStringList_indexOf<i32> for (&'a QRegExp, i32) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZNK11QStringList7indexOfERK7QRegExpi(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -171,7 +172,7 @@ impl<'a> /*trait*/ QStringList_indexOf<i32> for (&'a QRegularExpression, i32) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZNK11QStringList7indexOfERK18QRegularExpressioni(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -184,7 +185,7 @@ impl<'a> /*trait*/ QStringList_lastIndexOf<i32> for (&'a QRegExp, i32) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZNK11QStringList11lastIndexOfERK7QRegExpi(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -204,50 +205,52 @@ impl<'a> /*trait*/ QStringList_new for (&'a QString) {
   }
 }
 
-impl /*struct*/ QListSpecialMethods_QString_ {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QListSpecialMethods_QString_ {
-    return QListSpecialMethods_QString_{qclsinst: qthis, ..Default::default()};
+impl /*struct*/ QListSpecialMethodsLQStringG {
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QListSpecialMethodsLQStringG {
+    return QListSpecialMethodsLQStringG{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  QStringList & QListSpecialMethods<QString>::replaceInStrings(const QRegularExpression & re, const QString & after);
-impl /*struct*/ QListSpecialMethods_QString_ {
-  pub fn replaceInStrings<RetType, T: QListSpecialMethods_QString__replaceInStrings<RetType>>(& self,  overload_args: T) -> RetType {
+impl /*struct*/ QListSpecialMethodsLQStringG {
+  pub fn replaceInStrings<RetType, T: QListSpecialMethodsLQStringG_replaceInStrings<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.replaceInStrings(self);
     // return 1;
   }
 }
 
-pub trait QListSpecialMethods_QString__replaceInStrings<RetType> {
-  fn replaceInStrings(self , rsthis: & QListSpecialMethods_QString_) -> RetType;
+pub trait QListSpecialMethodsLQStringG_replaceInStrings<RetType> {
+  fn replaceInStrings(self , rsthis: & QListSpecialMethodsLQStringG) -> RetType;
 }
 
   // proto:  QStringList & QListSpecialMethods<QString>::replaceInStrings(const QRegularExpression & re, const QString & after);
-impl<'a> /*trait*/ QListSpecialMethods_QString__replaceInStrings<()> for (&'a QRegularExpression, &'a QString) {
-  fn replaceInStrings(self , rsthis: & QListSpecialMethods_QString_) -> () {
+impl<'a> /*trait*/ QListSpecialMethodsLQStringG_replaceInStrings<QStringList> for (&'a QRegularExpression, &'a QString) {
+  fn replaceInStrings(self , rsthis: & QListSpecialMethodsLQStringG) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QListSpecialMethodsI7QStringE16replaceInStringsERK18QRegularExpressionRKS0_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {C_ZN19QListSpecialMethodsI7QStringE16replaceInStringsERK18QRegularExpressionRKS0_(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {C_ZN19QListSpecialMethodsI7QStringE16replaceInStringsERK18QRegularExpressionRKS0_(rsthis.qclsinst, arg0, arg1)};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
 
   // proto:  QString QListSpecialMethods<QString>::join(const QString & sep);
-impl /*struct*/ QListSpecialMethods_QString_ {
-  pub fn join<RetType, T: QListSpecialMethods_QString__join<RetType>>(& self,  overload_args: T) -> RetType {
+impl /*struct*/ QListSpecialMethodsLQStringG {
+  pub fn join<RetType, T: QListSpecialMethodsLQStringG_join<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.join(self);
     // return 1;
   }
 }
 
-pub trait QListSpecialMethods_QString__join<RetType> {
-  fn join(self , rsthis: & QListSpecialMethods_QString_) -> RetType;
+pub trait QListSpecialMethodsLQStringG_join<RetType> {
+  fn join(self , rsthis: & QListSpecialMethodsLQStringG) -> RetType;
 }
 
   // proto:  QString QListSpecialMethods<QString>::join(const QString & sep);
-impl<'a> /*trait*/ QListSpecialMethods_QString__join<QString> for (&'a QString) {
-  fn join(self , rsthis: & QListSpecialMethods_QString_) -> QString {
+impl<'a> /*trait*/ QListSpecialMethodsLQStringG_join<QString> for (&'a QString) {
+  fn join(self , rsthis: & QListSpecialMethodsLQStringG) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QListSpecialMethodsI7QStringE4joinERKS0_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -259,77 +262,83 @@ impl<'a> /*trait*/ QListSpecialMethods_QString__join<QString> for (&'a QString) 
 }
 
   // proto:  QStringList QListSpecialMethods<QString>::filter(const QRegularExpression & re);
-impl /*struct*/ QListSpecialMethods_QString_ {
-  pub fn filter<RetType, T: QListSpecialMethods_QString__filter<RetType>>(& self,  overload_args: T) -> RetType {
+impl /*struct*/ QListSpecialMethodsLQStringG {
+  pub fn filter<RetType, T: QListSpecialMethodsLQStringG_filter<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.filter(self);
     // return 1;
   }
 }
 
-pub trait QListSpecialMethods_QString__filter<RetType> {
-  fn filter(self , rsthis: & QListSpecialMethods_QString_) -> RetType;
+pub trait QListSpecialMethodsLQStringG_filter<RetType> {
+  fn filter(self , rsthis: & QListSpecialMethodsLQStringG) -> RetType;
 }
 
   // proto:  QStringList QListSpecialMethods<QString>::filter(const QRegularExpression & re);
-impl<'a> /*trait*/ QListSpecialMethods_QString__filter<()> for (&'a QRegularExpression) {
-  fn filter(self , rsthis: & QListSpecialMethods_QString_) -> () {
+impl<'a> /*trait*/ QListSpecialMethodsLQStringG_filter<QStringList> for (&'a QRegularExpression) {
+  fn filter(self , rsthis: & QListSpecialMethodsLQStringG) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QListSpecialMethodsI7QStringE6filterERK18QRegularExpression()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZNK19QListSpecialMethodsI7QStringE6filterERK18QRegularExpression(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK19QListSpecialMethodsI7QStringE6filterERK18QRegularExpression(rsthis.qclsinst, arg0)};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
 
   // proto:  int QListSpecialMethods<QString>::removeDuplicates();
-impl /*struct*/ QListSpecialMethods_QString_ {
-  pub fn removeDuplicates<RetType, T: QListSpecialMethods_QString__removeDuplicates<RetType>>(& self,  overload_args: T) -> RetType {
+impl /*struct*/ QListSpecialMethodsLQStringG {
+  pub fn removeDuplicates<RetType, T: QListSpecialMethodsLQStringG_removeDuplicates<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.removeDuplicates(self);
     // return 1;
   }
 }
 
-pub trait QListSpecialMethods_QString__removeDuplicates<RetType> {
-  fn removeDuplicates(self , rsthis: & QListSpecialMethods_QString_) -> RetType;
+pub trait QListSpecialMethodsLQStringG_removeDuplicates<RetType> {
+  fn removeDuplicates(self , rsthis: & QListSpecialMethodsLQStringG) -> RetType;
 }
 
   // proto:  int QListSpecialMethods<QString>::removeDuplicates();
-impl<'a> /*trait*/ QListSpecialMethods_QString__removeDuplicates<i32> for () {
-  fn removeDuplicates(self , rsthis: & QListSpecialMethods_QString_) -> i32 {
+impl<'a> /*trait*/ QListSpecialMethodsLQStringG_removeDuplicates<i32> for () {
+  fn removeDuplicates(self , rsthis: & QListSpecialMethodsLQStringG) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QListSpecialMethodsI7QStringE16removeDuplicatesEv()};
     let mut ret = unsafe {C_ZN19QListSpecialMethodsI7QStringE16removeDuplicatesEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
 
   // proto:  QStringList & QListSpecialMethods<QString>::replaceInStrings(const QRegExp & rx, const QString & after);
-impl<'a> /*trait*/ QListSpecialMethods_QString__replaceInStrings<()> for (&'a QRegExp, &'a QString) {
-  fn replaceInStrings(self , rsthis: & QListSpecialMethods_QString_) -> () {
+impl<'a> /*trait*/ QListSpecialMethodsLQStringG_replaceInStrings<QStringList> for (&'a QRegExp, &'a QString) {
+  fn replaceInStrings(self , rsthis: & QListSpecialMethodsLQStringG) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QListSpecialMethodsI7QStringE16replaceInStringsERK7QRegExpRKS0_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {C_ZN19QListSpecialMethodsI7QStringE16replaceInStringsERK7QRegExpRKS0_(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {C_ZN19QListSpecialMethodsI7QStringE16replaceInStringsERK7QRegExpRKS0_(rsthis.qclsinst, arg0, arg1)};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
 
   // proto:  QStringList QListSpecialMethods<QString>::filter(const QRegExp & rx);
-impl<'a> /*trait*/ QListSpecialMethods_QString__filter<()> for (&'a QRegExp) {
-  fn filter(self , rsthis: & QListSpecialMethods_QString_) -> () {
+impl<'a> /*trait*/ QListSpecialMethodsLQStringG_filter<QStringList> for (&'a QRegExp) {
+  fn filter(self , rsthis: & QListSpecialMethodsLQStringG) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QListSpecialMethodsI7QStringE6filterERK7QRegExp()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZNK19QListSpecialMethodsI7QStringE6filterERK7QRegExp(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK19QListSpecialMethodsI7QStringE6filterERK7QRegExp(rsthis.qclsinst, arg0)};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
 
   // proto:  QString QListSpecialMethods<QString>::join(QChar sep);
-impl<'a> /*trait*/ QListSpecialMethods_QString__join<QString> for (QChar) {
-  fn join(self , rsthis: & QListSpecialMethods_QString_) -> QString {
+impl<'a> /*trait*/ QListSpecialMethodsLQStringG_join<QString> for (QChar) {
+  fn join(self , rsthis: & QListSpecialMethodsLQStringG) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QListSpecialMethodsI7QStringE4joinE5QChar()};
     let arg0 = self.qclsinst  as *mut c_void;

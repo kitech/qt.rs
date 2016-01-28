@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qgenericatomic.h
 // dst-file: /src/core/qgenericatomic.rs
 //
@@ -28,20 +28,20 @@ use std::ops::Deref;
 // #[link(name = "QtInline")]
 
 extern {
-  fn QAtomicOpsSupport_4__Class_Size() -> c_int;
+  fn QAtomicOpsSupportL4G_Class_Size() -> c_int;
 } // <= ext block end
 
 // body block begin =>
-// class sizeof(QAtomicOpsSupport_4_)=1
+// class sizeof(QAtomicOpsSupportL4G)=1
 #[derive(Default)]
-pub struct QAtomicOpsSupport_4_ {
+pub struct QAtomicOpsSupportL4G {
   // qbase: None,
   pub qclsinst: u64 /* *mut c_void*/,
 }
 
-impl /*struct*/ QAtomicOpsSupport_4_ {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QAtomicOpsSupport_4_ {
-    return QAtomicOpsSupport_4_{qclsinst: qthis, ..Default::default()};
+impl /*struct*/ QAtomicOpsSupportL4G {
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QAtomicOpsSupportL4G {
+    return QAtomicOpsSupportL4G{qclsinst: qthis, ..Default::default()};
   }
 }
 // <= body block end

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qthreadstorage.h
 // dst-file: /src/core/qthreadstorage.rs
 //
@@ -30,9 +30,9 @@ use std::ops::Deref;
 extern {
   fn QThreadStorageData_Class_Size() -> c_int;
   // proto:  void ** QThreadStorageData::set(void * p);
-  fn C_ZN18QThreadStorageData3setEPv(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN18QThreadStorageData3setEPv(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void ** QThreadStorageData::get();
-  fn C_ZNK18QThreadStorageData3getEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK18QThreadStorageData3getEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto: static void QThreadStorageData::finish(void ** );
   fn C_ZN18QThreadStorageData6finishEPPv(arg0: *mut c_void);
   // proto:  void QThreadStorageData::~QThreadStorageData();
@@ -65,12 +65,13 @@ pub trait QThreadStorageData_set<RetType> {
 }
 
   // proto:  void ** QThreadStorageData::set(void * p);
-impl<'a> /*trait*/ QThreadStorageData_set<()> for (*mut c_void) {
-  fn set(self , rsthis: & QThreadStorageData) -> () {
+impl<'a> /*trait*/ QThreadStorageData_set<*mut c_void> for (*mut c_void) {
+  fn set(self , rsthis: & QThreadStorageData) -> *mut c_void {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QThreadStorageData3setEPv()};
     let arg0 = self  as *mut c_void;
-     unsafe {C_ZN18QThreadStorageData3setEPv(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN18QThreadStorageData3setEPv(rsthis.qclsinst, arg0)};
+    return ret as *mut c_void; // 1
     // return 1;
   }
 }
@@ -88,11 +89,12 @@ pub trait QThreadStorageData_get<RetType> {
 }
 
   // proto:  void ** QThreadStorageData::get();
-impl<'a> /*trait*/ QThreadStorageData_get<()> for () {
-  fn get(self , rsthis: & QThreadStorageData) -> () {
+impl<'a> /*trait*/ QThreadStorageData_get<*mut c_void> for () {
+  fn get(self , rsthis: & QThreadStorageData) -> *mut c_void {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QThreadStorageData3getEv()};
-     unsafe {C_ZNK18QThreadStorageData3getEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK18QThreadStorageData3getEv(rsthis.qclsinst)};
+    return ret as *mut c_void; // 1
     // return 1;
   }
 }

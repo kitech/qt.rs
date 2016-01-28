@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qpluginloader.h
 // dst-file: /src/core/qpluginloader.rs
 //
@@ -18,11 +18,13 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qobject::QObject; // 773
+use super::qobject::*; // 773
 use std::ops::Deref;
-use super::qstring::QString; // 773
-use super::qobjectdefs::QMetaObject; // 773
-use super::qjsonobject::QJsonObject; // 773
+use super::qstring::*; // 773
+use super::qobjectdefs::*; // 773
+// use super::qvector::*; // 775
+// use super::qlist::*; // 775
+use super::qjsonobject::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -46,9 +48,9 @@ extern {
   // proto:  QObject * QPluginLoader::instance();
   fn C_ZN13QPluginLoader8instanceEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto: static QVector<QStaticPlugin> QPluginLoader::staticPlugins();
-  fn C_ZN13QPluginLoader13staticPluginsEv();
+  fn C_ZN13QPluginLoader13staticPluginsEv() -> *mut c_void;
   // proto: static QObjectList QPluginLoader::staticInstances();
-  fn C_ZN13QPluginLoader15staticInstancesEv();
+  fn C_ZN13QPluginLoader15staticInstancesEv() -> *mut c_void;
   // proto:  QJsonObject QPluginLoader::metaData();
   fn C_ZNK13QPluginLoader8metaDataEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QPluginLoader::errorString();
@@ -106,7 +108,7 @@ impl<'a> /*trait*/ QPluginLoader_isLoaded<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QPluginLoader8isLoadedEv()};
     let mut ret = unsafe {C_ZNK13QPluginLoader8isLoadedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -129,7 +131,7 @@ impl<'a> /*trait*/ QPluginLoader_unload<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QPluginLoader6unloadEv()};
     let mut ret = unsafe {C_ZN13QPluginLoader6unloadEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -181,7 +183,7 @@ impl<'a> /*trait*/ QPluginLoader_load<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QPluginLoader4loadEv()};
     let mut ret = unsafe {C_ZN13QPluginLoader4loadEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -247,11 +249,12 @@ pub trait QPluginLoader_staticPlugins_s<RetType> {
 }
 
   // proto: static QVector<QStaticPlugin> QPluginLoader::staticPlugins();
-impl<'a> /*trait*/ QPluginLoader_staticPlugins_s<()> for () {
-  fn staticPlugins_s(self ) -> () {
+impl<'a> /*trait*/ QPluginLoader_staticPlugins_s<u64> for () {
+  fn staticPlugins_s(self ) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QPluginLoader13staticPluginsEv()};
-     unsafe {C_ZN13QPluginLoader13staticPluginsEv()};
+    let mut ret = unsafe {C_ZN13QPluginLoader13staticPluginsEv()};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -269,11 +272,12 @@ pub trait QPluginLoader_staticInstances_s<RetType> {
 }
 
   // proto: static QObjectList QPluginLoader::staticInstances();
-impl<'a> /*trait*/ QPluginLoader_staticInstances_s<()> for () {
-  fn staticInstances_s(self ) -> () {
+impl<'a> /*trait*/ QPluginLoader_staticInstances_s<u64> for () {
+  fn staticInstances_s(self ) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QPluginLoader15staticInstancesEv()};
-     unsafe {C_ZN13QPluginLoader15staticInstancesEv()};
+    let mut ret = unsafe {C_ZN13QPluginLoader15staticInstancesEv()};
+    return ret as u64; // 5
     // return 1;
   }
 }

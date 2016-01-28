@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qreadwritelock.h
 // dst-file: /src/core/qreadwritelock.rs
 //
@@ -260,7 +260,7 @@ impl<'a> /*trait*/ QReadWriteLock_tryLockForRead<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QReadWriteLock14tryLockForReadEv()};
     let mut ret = unsafe {C_ZN14QReadWriteLock14tryLockForReadEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -305,7 +305,7 @@ impl<'a> /*trait*/ QReadWriteLock_tryLockForWrite<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QReadWriteLock15tryLockForWriteEv()};
     let mut ret = unsafe {C_ZN14QReadWriteLock15tryLockForWriteEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -339,7 +339,7 @@ impl<'a> /*trait*/ QReadWriteLock_tryLockForRead<i8> for (i32) {
     // unsafe{_ZN14QReadWriteLock14tryLockForReadEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZN14QReadWriteLock14tryLockForReadEi(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -373,7 +373,7 @@ impl<'a> /*trait*/ QReadWriteLock_tryLockForWrite<i8> for (i32) {
     // unsafe{_ZN14QReadWriteLock15tryLockForWriteEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZN14QReadWriteLock15tryLockForWriteEi(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

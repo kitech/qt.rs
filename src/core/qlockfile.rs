@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qlockfile.h
 // dst-file: /src/core/qlockfile.rs
 //
@@ -19,7 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qstring::QString; // 773
+use super::qstring::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -83,7 +83,7 @@ impl<'a> /*trait*/ QLockFile_removeStaleLockFile<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QLockFile19removeStaleLockFileEv()};
     let mut ret = unsafe {C_ZN9QLockFile19removeStaleLockFileEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -106,7 +106,7 @@ impl<'a> /*trait*/ QLockFile_staleLockTime<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QLockFile13staleLockTimeEv()};
     let mut ret = unsafe {C_ZNK9QLockFile13staleLockTimeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -129,7 +129,7 @@ impl<'a> /*trait*/ QLockFile_isLocked<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QLockFile8isLockedEv()};
     let mut ret = unsafe {C_ZNK9QLockFile8isLockedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -197,7 +197,7 @@ impl<'a> /*trait*/ QLockFile_tryLock<i8> for (i32) {
     // unsafe{_ZN9QLockFile7tryLockEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZN9QLockFile7tryLockEi(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -220,7 +220,7 @@ impl<'a> /*trait*/ QLockFile_lock<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QLockFile4lockEv()};
     let mut ret = unsafe {C_ZN9QLockFile4lockEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -269,7 +269,7 @@ impl<'a> /*trait*/ QLockFile_getLockInfo<i8> for (&'a mut Vec<i64>, &'a QString,
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK9QLockFile11getLockInfoEPxP7QStringS2_(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

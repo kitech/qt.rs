@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qmetatype.h
 // dst-file: /src/core/qmetatype.rs
 //
@@ -19,10 +19,10 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qobjectdefs::QMetaObject; // 773
-use super::qbytearray::QByteArray; // 773
-use super::qdatastream::QDataStream; // 773
-use super::qdebug::QDebug; // 773
+use super::qobjectdefs::*; // 773
+use super::qbytearray::*; // 773
+use super::qdatastream::*; // 773
+use super::qdebug::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -156,7 +156,7 @@ impl<'a> /*trait*/ QMetaType_hasRegisteredConverterFunction_s<i8> for (i32, i32)
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZN9QMetaType30hasRegisteredConverterFunctionEii(arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -204,7 +204,7 @@ impl<'a> /*trait*/ QMetaType_hasRegisteredDebugStreamOperator_s<i8> for (i32) {
     // unsafe{_ZN9QMetaType32hasRegisteredDebugStreamOperatorEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZN9QMetaType32hasRegisteredDebugStreamOperatorEi(arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -229,7 +229,7 @@ impl<'a> /*trait*/ QMetaType_create_s<*mut c_void> for (i32, *mut c_void) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as *mut c_void;
     let mut ret = unsafe {C_ZN9QMetaType6createEiPKv(arg0, arg1)};
-    return ret as *mut c_void;
+    return ret as *mut c_void; // 1
     // return 1;
   }
 }
@@ -277,7 +277,7 @@ impl<'a> /*trait*/ QMetaType_registerTypedef_s<i32> for (&'a  String, i32) {
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZN9QMetaType15registerTypedefEPKci(arg0, arg1)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -324,7 +324,7 @@ impl<'a> /*trait*/ QMetaType_isValid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZNK9QMetaType7isValidEv()};
     let mut ret = unsafe {C_ZNK9QMetaType7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -350,7 +350,7 @@ impl<'a> /*trait*/ QMetaType_construct_s<*mut c_void> for (i32, *mut c_void, *mu
     let arg1 = self.1  as *mut c_void;
     let arg2 = self.2  as *mut c_void;
     let mut ret = unsafe {C_ZN9QMetaType9constructEiPvPKv(arg0, arg1, arg2)};
-    return ret as *mut c_void;
+    return ret as *mut c_void; // 1
     // return 1;
   }
 }
@@ -377,7 +377,7 @@ impl<'a> /*trait*/ QMetaType_equals_s<i8> for (*mut c_void, *mut c_void, i32, &'
     let arg2 = self.2  as c_int;
     let arg3 = self.3.as_ptr()  as *mut c_int;
     let mut ret = unsafe {C_ZN9QMetaType6equalsEPKvS1_iPi(arg0, arg1, arg2, arg3)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -402,7 +402,7 @@ impl<'a> /*trait*/ QMetaType_construct<*mut c_void> for (*mut c_void, *mut c_voi
     let arg0 = self.0  as *mut c_void;
     let arg1 = self.1  as *mut c_void;
     let mut ret = unsafe {C_ZNK9QMetaType9constructEPvPKv(rsthis.qclsinst, arg0, arg1)};
-    return ret as *mut c_void;
+    return ret as *mut c_void; // 1
     // return 1;
   }
 }
@@ -426,7 +426,7 @@ impl<'a> /*trait*/ QMetaType_isRegistered_s<i8> for (i32) {
     // unsafe{_ZN9QMetaType12isRegisteredEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZN9QMetaType12isRegisteredEi(arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -450,7 +450,7 @@ impl<'a> /*trait*/ QMetaType_unregisterType_s<i8> for (i32) {
     // unsafe{_ZN9QMetaType14unregisterTypeEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZN9QMetaType14unregisterTypeEi(arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -501,7 +501,7 @@ impl<'a> /*trait*/ QMetaType_load_s<i8> for (&'a QDataStream, i32, *mut c_void) 
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as *mut c_void;
     let mut ret = unsafe {C_ZN9QMetaType4loadER11QDataStreamiPv(arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -525,7 +525,7 @@ impl<'a> /*trait*/ QMetaType_create<*mut c_void> for (*mut c_void) {
     // unsafe{_ZNK9QMetaType6createEPKv()};
     let arg0 = self  as *mut c_void;
     let mut ret = unsafe {C_ZNK9QMetaType6createEPKv(rsthis.qclsinst, arg0)};
-    return ret as *mut c_void;
+    return ret as *mut c_void; // 1
     // return 1;
   }
 }
@@ -549,7 +549,7 @@ impl<'a> /*trait*/ QMetaType_sizeOf_s<i32> for (i32) {
     // unsafe{_ZN9QMetaType6sizeOfEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZN9QMetaType6sizeOfEi(arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -573,7 +573,7 @@ impl<'a> /*trait*/ QMetaType_hasRegisteredComparators_s<i8> for (i32) {
     // unsafe{_ZN9QMetaType24hasRegisteredComparatorsEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZN9QMetaType24hasRegisteredComparatorsEi(arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -599,7 +599,7 @@ impl<'a> /*trait*/ QMetaType_save_s<i8> for (&'a QDataStream, i32, *mut c_void) 
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as *mut c_void;
     let mut ret = unsafe {C_ZN9QMetaType4saveER11QDataStreamiPKv(arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -668,7 +668,7 @@ impl<'a> /*trait*/ QMetaType_type_s<i32> for (&'a  String) {
     // unsafe{_ZN9QMetaType4typeEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
     let mut ret = unsafe {C_ZN9QMetaType4typeEPKc(arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -680,7 +680,7 @@ impl<'a> /*trait*/ QMetaType_type_s<i32> for (&'a QByteArray) {
     // unsafe{_ZN9QMetaType4typeERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN9QMetaType4typeERK10QByteArray(arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -706,7 +706,7 @@ impl<'a> /*trait*/ QMetaType_debugStream_s<i8> for (&'a QDebug, *mut c_void, i32
     let arg1 = self.1  as *mut c_void;
     let arg2 = self.2  as c_int;
     let mut ret = unsafe {C_ZN9QMetaType11debugStreamER6QDebugPKvi(arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -729,7 +729,7 @@ impl<'a> /*trait*/ QMetaType_sizeOf<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZNK9QMetaType6sizeOfEv()};
     let mut ret = unsafe {C_ZNK9QMetaType6sizeOfEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -781,7 +781,7 @@ impl<'a> /*trait*/ QMetaType_convert_s<i8> for (*mut c_void, i32, *mut c_void, i
     let arg2 = self.2  as *mut c_void;
     let arg3 = self.3  as c_int;
     let mut ret = unsafe {C_ZN9QMetaType7convertEPKviPvi(arg0, arg1, arg2, arg3)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -834,7 +834,7 @@ impl<'a> /*trait*/ QMetaType_registerNormalizedTypedef_s<i32> for (&'a QByteArra
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZN9QMetaType25registerNormalizedTypedefERK10QByteArrayi(arg0, arg1)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -861,7 +861,7 @@ impl<'a> /*trait*/ QMetaType_compare_s<i8> for (*mut c_void, *mut c_void, i32, &
     let arg2 = self.2  as c_int;
     let arg3 = self.3.as_ptr()  as *mut c_int;
     let mut ret = unsafe {C_ZN9QMetaType7compareEPKvS1_iPi(arg0, arg1, arg2, arg3)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -884,7 +884,7 @@ impl<'a> /*trait*/ QMetaType_isRegistered<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZNK9QMetaType12isRegisteredEv()};
     let mut ret = unsafe {C_ZNK9QMetaType12isRegisteredEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

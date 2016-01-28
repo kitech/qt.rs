@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qtimer.h
 // dst-file: /src/core/qtimer.rs
 //
@@ -18,9 +18,9 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qobject::QObject; // 773
+use super::qobject::*; // 773
 use std::ops::Deref;
-use super::qobjectdefs::QMetaObject; // 773
+use super::qobjectdefs::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -149,7 +149,7 @@ impl<'a> /*trait*/ QTimer_timerId<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QTimer7timerIdEv()};
     let mut ret = unsafe {C_ZNK6QTimer7timerIdEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -242,7 +242,7 @@ impl<'a> /*trait*/ QTimer_interval<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QTimer8intervalEv()};
     let mut ret = unsafe {C_ZNK6QTimer8intervalEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -299,7 +299,7 @@ impl<'a> /*trait*/ QTimer_remainingTime<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QTimer13remainingTimeEv()};
     let mut ret = unsafe {C_ZNK6QTimer13remainingTimeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -322,7 +322,7 @@ impl<'a> /*trait*/ QTimer_isSingleShot<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QTimer12isSingleShotEv()};
     let mut ret = unsafe {C_ZNK6QTimer12isSingleShotEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -345,7 +345,7 @@ impl<'a> /*trait*/ QTimer_isActive<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QTimer8isActiveEv()};
     let mut ret = unsafe {C_ZNK6QTimer8isActiveEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

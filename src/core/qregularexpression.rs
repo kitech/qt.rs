@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qregularexpression.h
 // dst-file: /src/core/qregularexpression.rs
 //
@@ -21,8 +21,8 @@ use self::libc::*;
 use std::ops::Deref;
 // use super::qregularexpression::QRegularExpressionMatch; // 773
 // use super::qregularexpression::QRegularExpression; // 773
-use super::qstring::QString; // 773
-use super::qstring::QStringRef; // 773
+use super::qstring::*; // 773
+use super::qstringlist::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -73,7 +73,7 @@ extern {
   // proto:  void QRegularExpression::QRegularExpression(const QRegularExpression & re);
   fn C_ZN18QRegularExpressionC2ERKS_(arg0: *mut c_void) -> u64;
   // proto:  QStringList QRegularExpression::namedCaptureGroups();
-  fn C_ZNK18QRegularExpression18namedCaptureGroupsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK18QRegularExpression18namedCaptureGroupsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QRegularExpression::captureCount();
   fn C_ZNK18QRegularExpression12captureCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QRegularExpression::setPattern(const QString & pattern);
@@ -96,7 +96,7 @@ extern {
   // proto:  QString QRegularExpressionMatch::captured(const QString & name);
   fn C_ZNK23QRegularExpressionMatch8capturedERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QStringList QRegularExpressionMatch::capturedTexts();
-  fn C_ZNK23QRegularExpressionMatch13capturedTextsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK23QRegularExpressionMatch13capturedTextsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QRegularExpressionMatch::QRegularExpressionMatch(const QRegularExpressionMatch & match);
   fn C_ZN23QRegularExpressionMatchC2ERKS_(arg0: *mut c_void) -> u64;
   // proto:  void QRegularExpressionMatch::swap(QRegularExpressionMatch & other);
@@ -166,7 +166,7 @@ impl<'a> /*trait*/ QRegularExpressionMatchIterator_hasNext<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK31QRegularExpressionMatchIterator7hasNextEv()};
     let mut ret = unsafe {C_ZNK31QRegularExpressionMatchIterator7hasNextEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -189,7 +189,7 @@ impl<'a> /*trait*/ QRegularExpressionMatchIterator_isValid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK31QRegularExpressionMatchIterator7isValidEv()};
     let mut ret = unsafe {C_ZNK31QRegularExpressionMatchIterator7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -376,7 +376,7 @@ impl<'a> /*trait*/ QRegularExpression_patternErrorOffset<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QRegularExpression18patternErrorOffsetEv()};
     let mut ret = unsafe {C_ZNK18QRegularExpression18patternErrorOffsetEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -566,7 +566,7 @@ impl<'a> /*trait*/ QRegularExpression_isValid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QRegularExpression7isValidEv()};
     let mut ret = unsafe {C_ZNK18QRegularExpression7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -599,11 +599,13 @@ pub trait QRegularExpression_namedCaptureGroups<RetType> {
 }
 
   // proto:  QStringList QRegularExpression::namedCaptureGroups();
-impl<'a> /*trait*/ QRegularExpression_namedCaptureGroups<()> for () {
-  fn namedCaptureGroups(self , rsthis: & QRegularExpression) -> () {
+impl<'a> /*trait*/ QRegularExpression_namedCaptureGroups<QStringList> for () {
+  fn namedCaptureGroups(self , rsthis: & QRegularExpression) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QRegularExpression18namedCaptureGroupsEv()};
-     unsafe {C_ZNK18QRegularExpression18namedCaptureGroupsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK18QRegularExpression18namedCaptureGroupsEv(rsthis.qclsinst)};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -626,7 +628,7 @@ impl<'a> /*trait*/ QRegularExpression_captureCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QRegularExpression12captureCountEv()};
     let mut ret = unsafe {C_ZNK18QRegularExpression12captureCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -677,7 +679,7 @@ impl<'a> /*trait*/ QRegularExpressionMatch_lastCapturedIndex<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK23QRegularExpressionMatch17lastCapturedIndexEv()};
     let mut ret = unsafe {C_ZNK23QRegularExpressionMatch17lastCapturedIndexEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -727,7 +729,7 @@ impl<'a> /*trait*/ QRegularExpressionMatch_isValid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK23QRegularExpressionMatch7isValidEv()};
     let mut ret = unsafe {C_ZNK23QRegularExpressionMatch7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -751,7 +753,7 @@ impl<'a> /*trait*/ QRegularExpressionMatch_capturedLength<i32> for (i32) {
     // unsafe{_ZNK23QRegularExpressionMatch14capturedLengthEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK23QRegularExpressionMatch14capturedLengthEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -763,7 +765,7 @@ impl<'a> /*trait*/ QRegularExpressionMatch_capturedLength<i32> for (&'a QString)
     // unsafe{_ZNK23QRegularExpressionMatch14capturedLengthERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK23QRegularExpressionMatch14capturedLengthERK7QString(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -812,7 +814,7 @@ impl<'a> /*trait*/ QRegularExpressionMatch_capturedEnd<i32> for (&'a QString) {
     // unsafe{_ZNK23QRegularExpressionMatch11capturedEndERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK23QRegularExpressionMatch11capturedEndERK7QString(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -855,11 +857,13 @@ pub trait QRegularExpressionMatch_capturedTexts<RetType> {
 }
 
   // proto:  QStringList QRegularExpressionMatch::capturedTexts();
-impl<'a> /*trait*/ QRegularExpressionMatch_capturedTexts<()> for () {
-  fn capturedTexts(self , rsthis: & QRegularExpressionMatch) -> () {
+impl<'a> /*trait*/ QRegularExpressionMatch_capturedTexts<QStringList> for () {
+  fn capturedTexts(self , rsthis: & QRegularExpressionMatch) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK23QRegularExpressionMatch13capturedTextsEv()};
-     unsafe {C_ZNK23QRegularExpressionMatch13capturedTextsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK23QRegularExpressionMatch13capturedTextsEv(rsthis.qclsinst)};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -931,7 +935,7 @@ impl<'a> /*trait*/ QRegularExpressionMatch_capturedEnd<i32> for (i32) {
     // unsafe{_ZNK23QRegularExpressionMatch11capturedEndEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK23QRegularExpressionMatch11capturedEndEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -967,7 +971,7 @@ impl<'a> /*trait*/ QRegularExpressionMatch_hasMatch<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK23QRegularExpressionMatch8hasMatchEv()};
     let mut ret = unsafe {C_ZNK23QRegularExpressionMatch8hasMatchEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -991,7 +995,7 @@ impl<'a> /*trait*/ QRegularExpressionMatch_capturedStart<i32> for (&'a QString) 
     // unsafe{_ZNK23QRegularExpressionMatch13capturedStartERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK23QRegularExpressionMatch13capturedStartERK7QString(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1040,7 +1044,7 @@ impl<'a> /*trait*/ QRegularExpressionMatch_capturedStart<i32> for (i32) {
     // unsafe{_ZNK23QRegularExpressionMatch13capturedStartEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK23QRegularExpressionMatch13capturedStartEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1063,7 +1067,7 @@ impl<'a> /*trait*/ QRegularExpressionMatch_hasPartialMatch<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK23QRegularExpressionMatch15hasPartialMatchEv()};
     let mut ret = unsafe {C_ZNK23QRegularExpressionMatch15hasPartialMatchEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

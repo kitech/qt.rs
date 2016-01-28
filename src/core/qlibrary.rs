@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qlibrary.h
 // dst-file: /src/core/qlibrary.rs
 //
@@ -18,10 +18,11 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qobject::QObject; // 773
+use super::qobject::*; // 773
 use std::ops::Deref;
-use super::qstring::QString; // 773
-use super::qobjectdefs::QMetaObject; // 773
+use super::qstring::*; // 773
+// use super::qfunctionpointer::*; // 775
+use super::qobjectdefs::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -33,13 +34,13 @@ use super::qobjectdefs::QMetaObject; // 773
 extern {
   fn QLibrary_Class_Size() -> c_int;
   // proto: static QFunctionPointer QLibrary::resolve(const QString & fileName, const QString & version, const char * symbol);
-  fn C_ZN8QLibrary7resolveERK7QStringS2_PKc(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_char);
+  fn C_ZN8QLibrary7resolveERK7QStringS2_PKc(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_char) -> *mut c_void;
   // proto:  void QLibrary::QLibrary(const QString & fileName, const QString & version, QObject * parent);
   fn C_ZN8QLibraryC2ERK7QStringS2_P7QObject(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> u64;
   // proto:  const QMetaObject * QLibrary::metaObject();
   fn C_ZNK8QLibrary10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto: static QFunctionPointer QLibrary::resolve(const QString & fileName, const char * symbol);
-  fn C_ZN8QLibrary7resolveERK7QStringPKc(arg0: *mut c_void, arg1: *mut c_char);
+  fn C_ZN8QLibrary7resolveERK7QStringPKc(arg0: *mut c_void, arg1: *mut c_char) -> *mut c_void;
   // proto:  void QLibrary::QLibrary(QObject * parent);
   fn C_ZN8QLibraryC2EP7QObject(arg0: *mut c_void) -> u64;
   // proto:  bool QLibrary::isLoaded();
@@ -57,7 +58,7 @@ extern {
   // proto:  bool QLibrary::unload();
   fn C_ZN8QLibrary6unloadEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QFunctionPointer QLibrary::resolve(const char * symbol);
-  fn C_ZN8QLibrary7resolveEPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_char);
+  fn C_ZN8QLibrary7resolveEPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_char) -> *mut c_void;
   // proto:  void QLibrary::setFileNameAndVersion(const QString & fileName, const QString & version);
   fn C_ZN8QLibrary21setFileNameAndVersionERK7QStringS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QLibrary::setFileNameAndVersion(const QString & fileName, int verNum);
@@ -69,7 +70,7 @@ extern {
   // proto:  QString QLibrary::errorString();
   fn C_ZNK8QLibrary11errorStringEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto: static QFunctionPointer QLibrary::resolve(const QString & fileName, int verNum, const char * symbol);
-  fn C_ZN8QLibrary7resolveERK7QStringiPKc(arg0: *mut c_void, arg1: c_int, arg2: *mut c_char);
+  fn C_ZN8QLibrary7resolveERK7QStringiPKc(arg0: *mut c_void, arg1: c_int, arg2: *mut c_char) -> *mut c_void;
 } // <= ext block end
 
 // body block begin =>
@@ -110,14 +111,15 @@ pub trait QLibrary_resolve_s<RetType> {
 }
 
   // proto: static QFunctionPointer QLibrary::resolve(const QString & fileName, const QString & version, const char * symbol);
-impl<'a> /*trait*/ QLibrary_resolve_s<()> for (&'a QString, &'a QString, &'a  String) {
-  fn resolve_s(self ) -> () {
+impl<'a> /*trait*/ QLibrary_resolve_s<u64> for (&'a QString, &'a QString, &'a  String) {
+  fn resolve_s(self ) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QLibrary7resolveERK7QStringS2_PKc()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.as_ptr()  as *mut c_char;
-     unsafe {C_ZN8QLibrary7resolveERK7QStringS2_PKc(arg0, arg1, arg2)};
+    let mut ret = unsafe {C_ZN8QLibrary7resolveERK7QStringS2_PKc(arg0, arg1, arg2)};
+    return ret as u64; // 3
     // return 1;
   }
 }
@@ -177,13 +179,14 @@ impl<'a> /*trait*/ QLibrary_metaObject<QMetaObject> for () {
 }
 
   // proto: static QFunctionPointer QLibrary::resolve(const QString & fileName, const char * symbol);
-impl<'a> /*trait*/ QLibrary_resolve_s<()> for (&'a QString, &'a  String) {
-  fn resolve_s(self ) -> () {
+impl<'a> /*trait*/ QLibrary_resolve_s<u64> for (&'a QString, &'a  String) {
+  fn resolve_s(self ) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QLibrary7resolveERK7QStringPKc()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.as_ptr()  as *mut c_char;
-     unsafe {C_ZN8QLibrary7resolveERK7QStringPKc(arg0, arg1)};
+    let mut ret = unsafe {C_ZN8QLibrary7resolveERK7QStringPKc(arg0, arg1)};
+    return ret as u64; // 3
     // return 1;
   }
 }
@@ -221,7 +224,7 @@ impl<'a> /*trait*/ QLibrary_isLoaded<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QLibrary8isLoadedEv()};
     let mut ret = unsafe {C_ZNK8QLibrary8isLoadedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -244,7 +247,7 @@ impl<'a> /*trait*/ QLibrary_load<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QLibrary4loadEv()};
     let mut ret = unsafe {C_ZN8QLibrary4loadEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -331,7 +334,7 @@ impl<'a> /*trait*/ QLibrary_isLibrary_s<i8> for (&'a QString) {
     // unsafe{_ZN8QLibrary9isLibraryERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN8QLibrary9isLibraryERK7QString(arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -354,7 +357,7 @@ impl<'a> /*trait*/ QLibrary_unload<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QLibrary6unloadEv()};
     let mut ret = unsafe {C_ZN8QLibrary6unloadEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -372,12 +375,13 @@ pub trait QLibrary_resolve<RetType> {
 }
 
   // proto:  QFunctionPointer QLibrary::resolve(const char * symbol);
-impl<'a> /*trait*/ QLibrary_resolve<()> for (&'a  String) {
-  fn resolve(self , rsthis: & QLibrary) -> () {
+impl<'a> /*trait*/ QLibrary_resolve<u64> for (&'a  String) {
+  fn resolve(self , rsthis: & QLibrary) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QLibrary7resolveEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
-     unsafe {C_ZN8QLibrary7resolveEPKc(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN8QLibrary7resolveEPKc(rsthis.qclsinst, arg0)};
+    return ret as u64; // 3
     // return 1;
   }
 }
@@ -482,14 +486,15 @@ impl<'a> /*trait*/ QLibrary_errorString<QString> for () {
 }
 
   // proto: static QFunctionPointer QLibrary::resolve(const QString & fileName, int verNum, const char * symbol);
-impl<'a> /*trait*/ QLibrary_resolve_s<()> for (&'a QString, i32, &'a  String) {
-  fn resolve_s(self ) -> () {
+impl<'a> /*trait*/ QLibrary_resolve_s<u64> for (&'a QString, i32, &'a  String) {
+  fn resolve_s(self ) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QLibrary7resolveERK7QStringiPKc()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     let arg2 = self.2.as_ptr()  as *mut c_char;
-     unsafe {C_ZN8QLibrary7resolveERK7QStringiPKc(arg0, arg1, arg2)};
+    let mut ret = unsafe {C_ZN8QLibrary7resolveERK7QStringiPKc(arg0, arg1, arg2)};
+    return ret as u64; // 3
     // return 1;
   }
 }

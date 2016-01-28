@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qregexp.h
 // dst-file: /src/core/qregexp.rs
 //
@@ -19,7 +19,8 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qstring::QString; // 773
+use super::qstringlist::*; // 773
+use super::qstring::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -33,7 +34,7 @@ extern {
   // proto:  void QRegExp::QRegExp(const QRegExp & rx);
   fn C_ZN7QRegExpC2ERKS_(arg0: *mut c_void) -> u64;
   // proto:  QStringList QRegExp::capturedTexts();
-  fn C_ZN7QRegExp13capturedTextsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN7QRegExp13capturedTextsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QRegExp::captureCount();
   fn C_ZNK7QRegExp12captureCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto: static QString QRegExp::escape(const QString & str);
@@ -122,11 +123,13 @@ pub trait QRegExp_capturedTexts<RetType> {
 }
 
   // proto:  QStringList QRegExp::capturedTexts();
-impl<'a> /*trait*/ QRegExp_capturedTexts<()> for () {
-  fn capturedTexts(self , rsthis: & QRegExp) -> () {
+impl<'a> /*trait*/ QRegExp_capturedTexts<QStringList> for () {
+  fn capturedTexts(self , rsthis: & QRegExp) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QRegExp13capturedTextsEv()};
-     unsafe {C_ZN7QRegExp13capturedTextsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZN7QRegExp13capturedTextsEv(rsthis.qclsinst)};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -149,7 +152,7 @@ impl<'a> /*trait*/ QRegExp_captureCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QRegExp12captureCountEv()};
     let mut ret = unsafe {C_ZNK7QRegExp12captureCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -197,7 +200,7 @@ impl<'a> /*trait*/ QRegExp_isEmpty<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QRegExp7isEmptyEv()};
     let mut ret = unsafe {C_ZNK7QRegExp7isEmptyEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -220,7 +223,7 @@ impl<'a> /*trait*/ QRegExp_isMinimal<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QRegExp9isMinimalEv()};
     let mut ret = unsafe {C_ZNK7QRegExp9isMinimalEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -243,7 +246,7 @@ impl<'a> /*trait*/ QRegExp_matchedLength<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QRegExp13matchedLengthEv()};
     let mut ret = unsafe {C_ZNK7QRegExp13matchedLengthEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -313,7 +316,7 @@ impl<'a> /*trait*/ QRegExp_isValid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QRegExp7isValidEv()};
     let mut ret = unsafe {C_ZNK7QRegExp7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -359,7 +362,7 @@ impl<'a> /*trait*/ QRegExp_exactMatch<i8> for (&'a QString) {
     // unsafe{_ZNK7QRegExp10exactMatchERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK7QRegExp10exactMatchERK7QString(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -406,7 +409,7 @@ impl<'a> /*trait*/ QRegExp_pos<i32> for (i32) {
     // unsafe{_ZN7QRegExp3posEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZN7QRegExp3posEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

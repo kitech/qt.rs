@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qwaitcondition.h
 // dst-file: /src/core/qwaitcondition.rs
 //
@@ -19,8 +19,8 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qreadwritelock::QReadWriteLock; // 773
-use super::qmutex::QMutex; // 773
+use super::qreadwritelock::*; // 773
+use super::qmutex::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -78,7 +78,7 @@ impl<'a> /*trait*/ QWaitCondition_wait<i8> for (&'a QReadWriteLock, u64) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_ulong;
     let mut ret = unsafe {C_ZN14QWaitCondition4waitEP14QReadWriteLockm(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -91,7 +91,7 @@ impl<'a> /*trait*/ QWaitCondition_wait<i8> for (&'a QMutex, u64) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_ulong;
     let mut ret = unsafe {C_ZN14QWaitCondition4waitEP6QMutexm(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

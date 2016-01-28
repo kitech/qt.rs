@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qabstractstate.h
 // dst-file: /src/core/qabstractstate.rs
 //
@@ -18,11 +18,11 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qobject::QObject; // 773
+use super::qobject::*; // 773
 use std::ops::Deref;
-use super::qobjectdefs::QMetaObject; // 773
-use super::qstate::QState; // 773
-use super::qstatemachine::QStateMachine; // 773
+use super::qobjectdefs::*; // 773
+use super::qstate::*; // 773
+use super::qstatemachine::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -186,7 +186,7 @@ impl<'a> /*trait*/ QAbstractState_active<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QAbstractState6activeEv()};
     let mut ret = unsafe {C_ZNK14QAbstractState6activeEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

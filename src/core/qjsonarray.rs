@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qjsonarray.h
 // dst-file: /src/core/qjsonarray.rs
 //
@@ -19,8 +19,9 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qjsonvalue::QJsonValue; // 773
-use super::qstringlist::QStringList; // 773
+use super::qjsonvalue::*; // 773
+// use super::qlist::*; // 775
+use super::qstringlist::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -42,7 +43,7 @@ extern {
   // proto:  void QJsonArray::pop_front();
   fn C_ZN10QJsonArray9pop_frontEv(qthis: u64 /* *mut c_void*/);
   // proto:  QVariantList QJsonArray::toVariantList();
-  fn C_ZNK10QJsonArray13toVariantListEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK10QJsonArray13toVariantListEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QJsonArray::~QJsonArray();
   fn C_ZN10QJsonArrayD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  int QJsonArray::size();
@@ -122,7 +123,7 @@ impl<'a> /*trait*/ QJsonArray_empty<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QJsonArray5emptyEv()};
     let mut ret = unsafe {C_ZNK10QJsonArray5emptyEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -209,11 +210,12 @@ pub trait QJsonArray_toVariantList<RetType> {
 }
 
   // proto:  QVariantList QJsonArray::toVariantList();
-impl<'a> /*trait*/ QJsonArray_toVariantList<()> for () {
-  fn toVariantList(self , rsthis: & QJsonArray) -> () {
+impl<'a> /*trait*/ QJsonArray_toVariantList<u64> for () {
+  fn toVariantList(self , rsthis: & QJsonArray) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QJsonArray13toVariantListEv()};
-     unsafe {C_ZNK10QJsonArray13toVariantListEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QJsonArray13toVariantListEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -258,7 +260,7 @@ impl<'a> /*trait*/ QJsonArray_size<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QJsonArray4sizeEv()};
     let mut ret = unsafe {C_ZNK10QJsonArray4sizeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -281,7 +283,7 @@ impl<'a> /*trait*/ QJsonArray_count<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QJsonArray5countEv()};
     let mut ret = unsafe {C_ZNK10QJsonArray5countEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -378,7 +380,7 @@ impl<'a> /*trait*/ QJsonArray_isEmpty<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QJsonArray7isEmptyEv()};
     let mut ret = unsafe {C_ZNK10QJsonArray7isEmptyEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

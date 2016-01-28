@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qstate.h
 // dst-file: /src/core/qstate.rs
 //
@@ -18,13 +18,14 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qabstractstate::QAbstractState; // 773
+use super::qabstractstate::*; // 773
 use std::ops::Deref;
-use super::qobject::QObject; // 773
-use super::qvariant::QVariant; // 773
-use super::qobjectdefs::QMetaObject; // 773
-use super::qabstracttransition::QAbstractTransition; // 773
-use super::qsignaltransition::QSignalTransition; // 773
+use super::qobject::*; // 773
+use super::qvariant::*; // 773
+use super::qobjectdefs::*; // 773
+use super::qabstracttransition::*; // 773
+use super::qsignaltransition::*; // 773
+// use super::qlist::*; // 775
 // <= use block end
 
 // ext block begin =>
@@ -58,7 +59,7 @@ extern {
   // proto:  QAbstractTransition * QState::addTransition(QAbstractState * target);
   fn C_ZN6QState13addTransitionEP14QAbstractState(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QList<QAbstractTransition *> QState::transitions();
-  fn C_ZNK6QState11transitionsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK6QState11transitionsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QState::setInitialState(QAbstractState * state);
   fn C_ZN6QState15setInitialStateEP14QAbstractState(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
 } // <= ext block end
@@ -350,11 +351,12 @@ pub trait QState_transitions<RetType> {
 }
 
   // proto:  QList<QAbstractTransition *> QState::transitions();
-impl<'a> /*trait*/ QState_transitions<()> for () {
-  fn transitions(self , rsthis: & QState) -> () {
+impl<'a> /*trait*/ QState_transitions<u64> for () {
+  fn transitions(self , rsthis: & QState) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QState11transitionsEv()};
-     unsafe {C_ZNK6QState11transitionsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK6QState11transitionsEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }

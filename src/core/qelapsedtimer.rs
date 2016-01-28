@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qelapsedtimer.h
 // dst-file: /src/core/qelapsedtimer.rs
 //
@@ -108,7 +108,7 @@ impl<'a> /*trait*/ QElapsedTimer_nsecsElapsed<i64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QElapsedTimer12nsecsElapsedEv()};
     let mut ret = unsafe {C_ZNK13QElapsedTimer12nsecsElapsedEv(rsthis.qclsinst)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -153,7 +153,7 @@ impl<'a> /*trait*/ QElapsedTimer_isMonotonic_s<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QElapsedTimer11isMonotonicEv()};
     let mut ret = unsafe {C_ZN13QElapsedTimer11isMonotonicEv()};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -204,7 +204,7 @@ impl<'a> /*trait*/ QElapsedTimer_msecsTo<i64> for (&'a QElapsedTimer) {
     // unsafe{_ZNK13QElapsedTimer7msecsToERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK13QElapsedTimer7msecsToERKS_(rsthis.qclsinst, arg0)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -227,7 +227,7 @@ impl<'a> /*trait*/ QElapsedTimer_msecsSinceReference<i64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QElapsedTimer19msecsSinceReferenceEv()};
     let mut ret = unsafe {C_ZNK13QElapsedTimer19msecsSinceReferenceEv(rsthis.qclsinst)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -251,7 +251,7 @@ impl<'a> /*trait*/ QElapsedTimer_hasExpired<i8> for (i64) {
     // unsafe{_ZNK13QElapsedTimer10hasExpiredEx()};
     let arg0 = self  as c_longlong;
     let mut ret = unsafe {C_ZNK13QElapsedTimer10hasExpiredEx(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -274,7 +274,7 @@ impl<'a> /*trait*/ QElapsedTimer_restart<i64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QElapsedTimer7restartEv()};
     let mut ret = unsafe {C_ZN13QElapsedTimer7restartEv(rsthis.qclsinst)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -297,7 +297,7 @@ impl<'a> /*trait*/ QElapsedTimer_isValid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QElapsedTimer7isValidEv()};
     let mut ret = unsafe {C_ZNK13QElapsedTimer7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -321,7 +321,7 @@ impl<'a> /*trait*/ QElapsedTimer_secsTo<i64> for (&'a QElapsedTimer) {
     // unsafe{_ZNK13QElapsedTimer6secsToERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK13QElapsedTimer6secsToERKS_(rsthis.qclsinst, arg0)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -344,7 +344,7 @@ impl<'a> /*trait*/ QElapsedTimer_elapsed<i64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QElapsedTimer7elapsedEv()};
     let mut ret = unsafe {C_ZNK13QElapsedTimer7elapsedEv(rsthis.qclsinst)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }

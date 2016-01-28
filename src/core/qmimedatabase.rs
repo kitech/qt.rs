@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qmimedatabase.h
 // dst-file: /src/core/qmimedatabase.rs
 //
@@ -19,12 +19,13 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qurl::QUrl; // 773
-use super::qmimetype::QMimeType; // 773
-use super::qfileinfo::QFileInfo; // 773
-use super::qbytearray::QByteArray; // 773
-use super::qstring::QString; // 773
-use super::qiodevice::QIODevice; // 773
+use super::qurl::*; // 773
+use super::qmimetype::*; // 773
+use super::qfileinfo::*; // 773
+use super::qbytearray::*; // 773
+use super::qstring::*; // 773
+// use super::qlist::*; // 775
+use super::qiodevice::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -46,7 +47,7 @@ extern {
   // proto:  QString QMimeDatabase::suffixForFileName(const QString & fileName);
   fn C_ZNK13QMimeDatabase17suffixForFileNameERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QList<QMimeType> QMimeDatabase::mimeTypesForFileName(const QString & fileName);
-  fn C_ZNK13QMimeDatabase20mimeTypesForFileNameERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK13QMimeDatabase20mimeTypesForFileNameERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QMimeType QMimeDatabase::mimeTypeForFileNameAndData(const QString & fileName, QIODevice * device);
   fn C_ZNK13QMimeDatabase26mimeTypeForFileNameAndDataERK7QStringP9QIODevice(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  QMimeType QMimeDatabase::mimeTypeForData(QIODevice * device);
@@ -56,7 +57,7 @@ extern {
   // proto:  QMimeType QMimeDatabase::mimeTypeForFileNameAndData(const QString & fileName, const QByteArray & data);
   fn C_ZNK13QMimeDatabase26mimeTypeForFileNameAndDataERK7QStringRK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  QList<QMimeType> QMimeDatabase::allMimeTypes();
-  fn C_ZNK13QMimeDatabase12allMimeTypesEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK13QMimeDatabase12allMimeTypesEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
 } // <= ext block end
 
 // body block begin =>
@@ -212,12 +213,13 @@ pub trait QMimeDatabase_mimeTypesForFileName<RetType> {
 }
 
   // proto:  QList<QMimeType> QMimeDatabase::mimeTypesForFileName(const QString & fileName);
-impl<'a> /*trait*/ QMimeDatabase_mimeTypesForFileName<()> for (&'a QString) {
-  fn mimeTypesForFileName(self , rsthis: & QMimeDatabase) -> () {
+impl<'a> /*trait*/ QMimeDatabase_mimeTypesForFileName<u64> for (&'a QString) {
+  fn mimeTypesForFileName(self , rsthis: & QMimeDatabase) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMimeDatabase20mimeTypesForFileNameERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZNK13QMimeDatabase20mimeTypesForFileNameERK7QString(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK13QMimeDatabase20mimeTypesForFileNameERK7QString(rsthis.qclsinst, arg0)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -310,11 +312,12 @@ pub trait QMimeDatabase_allMimeTypes<RetType> {
 }
 
   // proto:  QList<QMimeType> QMimeDatabase::allMimeTypes();
-impl<'a> /*trait*/ QMimeDatabase_allMimeTypes<()> for () {
-  fn allMimeTypes(self , rsthis: & QMimeDatabase) -> () {
+impl<'a> /*trait*/ QMimeDatabase_allMimeTypes<u64> for () {
+  fn allMimeTypes(self , rsthis: & QMimeDatabase) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMimeDatabase12allMimeTypesEv()};
-     unsafe {C_ZNK13QMimeDatabase12allMimeTypesEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QMimeDatabase12allMimeTypesEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qmetaobject.h
 // dst-file: /src/core/qmetaobject.rs
 //
@@ -19,11 +19,11 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qobjectdefs::QMetaObject; // 773
-use super::qbytearray::QByteArray; // 773
-use super::qobjectdefs::QGenericReturnArgument; // 773
-use super::qobject::QObject; // 773
-use super::qvariant::QVariant; // 773
+use super::qobjectdefs::*; // 773
+use super::qbytearray::*; // 773
+// use super::qlist::*; // 775
+use super::qobject::*; // 773
+use super::qvariant::*; // 773
 // use super::qmetaobject::QMetaEnum; // 773
 // use super::qmetaobject::QMetaMethod; // 773
 // <= use block end
@@ -73,9 +73,9 @@ extern {
   fn C_ZNK14QMetaClassInfo5valueEv(qthis: u64 /* *mut c_void*/) -> *mut c_char;
   fn QMetaMethod_Class_Size() -> c_int;
   // proto:  QList<QByteArray> QMetaMethod::parameterTypes();
-  fn C_ZNK11QMetaMethod14parameterTypesEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK11QMetaMethod14parameterTypesEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QList<QByteArray> QMetaMethod::parameterNames();
-  fn C_ZNK11QMetaMethod14parameterNamesEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK11QMetaMethod14parameterNamesEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QByteArray QMetaMethod::methodSignature();
   fn C_ZNK11QMetaMethod15methodSignatureEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  const char * QMetaMethod::typeName();
@@ -222,7 +222,7 @@ impl<'a> /*trait*/ QMetaEnum_value<i32> for (i32) {
     // unsafe{_ZNK9QMetaEnum5valueEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK9QMetaEnum5valueEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -269,7 +269,7 @@ impl<'a> /*trait*/ QMetaEnum_isFlag<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMetaEnum6isFlagEv()};
     let mut ret = unsafe {C_ZNK9QMetaEnum6isFlagEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -318,7 +318,7 @@ impl<'a> /*trait*/ QMetaEnum_keyToValue<i32> for (&'a  String, &'a mut Vec<i8>) 
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let mut ret = unsafe {C_ZNK9QMetaEnum10keyToValueEPKcPb(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -419,7 +419,7 @@ impl<'a> /*trait*/ QMetaEnum_keysToValue<i32> for (&'a  String, &'a mut Vec<i8>)
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let mut ret = unsafe {C_ZNK9QMetaEnum11keysToValueEPKcPb(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -492,7 +492,7 @@ impl<'a> /*trait*/ QMetaEnum_keyCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMetaEnum8keyCountEv()};
     let mut ret = unsafe {C_ZNK9QMetaEnum8keyCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -515,7 +515,7 @@ impl<'a> /*trait*/ QMetaEnum_isValid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMetaEnum7isValidEv()};
     let mut ret = unsafe {C_ZNK9QMetaEnum7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -642,11 +642,12 @@ pub trait QMetaMethod_parameterTypes<RetType> {
 }
 
   // proto:  QList<QByteArray> QMetaMethod::parameterTypes();
-impl<'a> /*trait*/ QMetaMethod_parameterTypes<()> for () {
-  fn parameterTypes(self , rsthis: & QMetaMethod) -> () {
+impl<'a> /*trait*/ QMetaMethod_parameterTypes<u64> for () {
+  fn parameterTypes(self , rsthis: & QMetaMethod) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMetaMethod14parameterTypesEv()};
-     unsafe {C_ZNK11QMetaMethod14parameterTypesEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QMetaMethod14parameterTypesEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -664,11 +665,12 @@ pub trait QMetaMethod_parameterNames<RetType> {
 }
 
   // proto:  QList<QByteArray> QMetaMethod::parameterNames();
-impl<'a> /*trait*/ QMetaMethod_parameterNames<()> for () {
-  fn parameterNames(self , rsthis: & QMetaMethod) -> () {
+impl<'a> /*trait*/ QMetaMethod_parameterNames<u64> for () {
+  fn parameterNames(self , rsthis: & QMetaMethod) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMetaMethod14parameterNamesEv()};
-     unsafe {C_ZNK11QMetaMethod14parameterNamesEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QMetaMethod14parameterNamesEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -739,7 +741,7 @@ impl<'a> /*trait*/ QMetaMethod_attributes<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMetaMethod10attributesEv()};
     let mut ret = unsafe {C_ZNK11QMetaMethod10attributesEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -813,7 +815,7 @@ impl<'a> /*trait*/ QMetaMethod_parameterType<i32> for (i32) {
     // unsafe{_ZNK11QMetaMethod13parameterTypeEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK11QMetaMethod13parameterTypeEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -860,7 +862,7 @@ impl<'a> /*trait*/ QMetaMethod_returnType<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMetaMethod10returnTypeEv()};
     let mut ret = unsafe {C_ZNK11QMetaMethod10returnTypeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -883,7 +885,7 @@ impl<'a> /*trait*/ QMetaMethod_methodIndex<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMetaMethod11methodIndexEv()};
     let mut ret = unsafe {C_ZNK11QMetaMethod11methodIndexEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -906,7 +908,7 @@ impl<'a> /*trait*/ QMetaMethod_parameterCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMetaMethod14parameterCountEv()};
     let mut ret = unsafe {C_ZNK11QMetaMethod14parameterCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -953,7 +955,7 @@ impl<'a> /*trait*/ QMetaMethod_revision<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMetaMethod8revisionEv()};
     let mut ret = unsafe {C_ZNK11QMetaMethod8revisionEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1000,7 +1002,7 @@ impl<'a> /*trait*/ QMetaMethod_isValid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMetaMethod7isValidEv()};
     let mut ret = unsafe {C_ZNK11QMetaMethod7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1028,7 +1030,7 @@ impl<'a> /*trait*/ QMetaProperty_isEnumType<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMetaProperty10isEnumTypeEv()};
     let mut ret = unsafe {C_ZNK13QMetaProperty10isEnumTypeEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1078,7 +1080,7 @@ impl<'a> /*trait*/ QMetaProperty_isValid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMetaProperty7isValidEv()};
     let mut ret = unsafe {C_ZNK13QMetaProperty7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1151,7 +1153,7 @@ impl<'a> /*trait*/ QMetaProperty_resetOnGadget<i8> for (*mut c_void) {
     // unsafe{_ZNK13QMetaProperty13resetOnGadgetEPv()};
     let arg0 = self  as *mut c_void;
     let mut ret = unsafe {C_ZNK13QMetaProperty13resetOnGadgetEPv(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1174,7 +1176,7 @@ impl<'a> /*trait*/ QMetaProperty_propertyIndex<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMetaProperty13propertyIndexEv()};
     let mut ret = unsafe {C_ZNK13QMetaProperty13propertyIndexEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1198,7 +1200,7 @@ impl<'a> /*trait*/ QMetaProperty_isStored<i8> for (&'a QObject) {
     // unsafe{_ZNK13QMetaProperty8isStoredEPK7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK13QMetaProperty8isStoredEPK7QObject(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1247,7 +1249,7 @@ impl<'a> /*trait*/ QMetaProperty_write<i8> for (&'a QObject, &'a QVariant) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK13QMetaProperty5writeEP7QObjectRK8QVariant(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1270,7 +1272,7 @@ impl<'a> /*trait*/ QMetaProperty_isResettable<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMetaProperty12isResettableEv()};
     let mut ret = unsafe {C_ZNK13QMetaProperty12isResettableEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1294,7 +1296,7 @@ impl<'a> /*trait*/ QMetaProperty_isEditable<i8> for (&'a QObject) {
     // unsafe{_ZNK13QMetaProperty10isEditableEPK7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK13QMetaProperty10isEditableEPK7QObject(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1317,7 +1319,7 @@ impl<'a> /*trait*/ QMetaProperty_hasStdCppSet<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMetaProperty12hasStdCppSetEv()};
     let mut ret = unsafe {C_ZNK13QMetaProperty12hasStdCppSetEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1340,7 +1342,7 @@ impl<'a> /*trait*/ QMetaProperty_hasNotifySignal<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMetaProperty15hasNotifySignalEv()};
     let mut ret = unsafe {C_ZNK13QMetaProperty15hasNotifySignalEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1363,7 +1365,7 @@ impl<'a> /*trait*/ QMetaProperty_isConstant<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMetaProperty10isConstantEv()};
     let mut ret = unsafe {C_ZNK13QMetaProperty10isConstantEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1410,7 +1412,7 @@ impl<'a> /*trait*/ QMetaProperty_isReadable<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMetaProperty10isReadableEv()};
     let mut ret = unsafe {C_ZNK13QMetaProperty10isReadableEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1433,7 +1435,7 @@ impl<'a> /*trait*/ QMetaProperty_userType<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMetaProperty8userTypeEv()};
     let mut ret = unsafe {C_ZNK13QMetaProperty8userTypeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1456,7 +1458,7 @@ impl<'a> /*trait*/ QMetaProperty_isWritable<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMetaProperty10isWritableEv()};
     let mut ret = unsafe {C_ZNK13QMetaProperty10isWritableEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1481,7 +1483,7 @@ impl<'a> /*trait*/ QMetaProperty_writeOnGadget<i8> for (*mut c_void, &'a QVarian
     let arg0 = self.0  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK13QMetaProperty13writeOnGadgetEPvRK8QVariant(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1504,7 +1506,7 @@ impl<'a> /*trait*/ QMetaProperty_notifySignalIndex<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMetaProperty17notifySignalIndexEv()};
     let mut ret = unsafe {C_ZNK13QMetaProperty17notifySignalIndexEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1528,7 +1530,7 @@ impl<'a> /*trait*/ QMetaProperty_isUser<i8> for (&'a QObject) {
     // unsafe{_ZNK13QMetaProperty6isUserEPK7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK13QMetaProperty6isUserEPK7QObject(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1551,7 +1553,7 @@ impl<'a> /*trait*/ QMetaProperty_isFlagType<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMetaProperty10isFlagTypeEv()};
     let mut ret = unsafe {C_ZNK13QMetaProperty10isFlagTypeEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1574,7 +1576,7 @@ impl<'a> /*trait*/ QMetaProperty_isFinal<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMetaProperty7isFinalEv()};
     let mut ret = unsafe {C_ZNK13QMetaProperty7isFinalEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1622,7 +1624,7 @@ impl<'a> /*trait*/ QMetaProperty_reset<i8> for (&'a QObject) {
     // unsafe{_ZNK13QMetaProperty5resetEP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK13QMetaProperty5resetEP7QObject(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1645,7 +1647,7 @@ impl<'a> /*trait*/ QMetaProperty_revision<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMetaProperty8revisionEv()};
     let mut ret = unsafe {C_ZNK13QMetaProperty8revisionEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1669,7 +1671,7 @@ impl<'a> /*trait*/ QMetaProperty_isScriptable<i8> for (&'a QObject) {
     // unsafe{_ZNK13QMetaProperty12isScriptableEPK7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK13QMetaProperty12isScriptableEPK7QObject(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1742,7 +1744,7 @@ impl<'a> /*trait*/ QMetaProperty_isDesignable<i8> for (&'a QObject) {
     // unsafe{_ZNK13QMetaProperty12isDesignableEPK7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK13QMetaProperty12isDesignableEPK7QObject(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qabstracteventdispatcher.h
 // dst-file: /src/core/qabstracteventdispatcher.rs
 //
@@ -18,13 +18,13 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qobject::QObject; // 773
+use super::qobject::*; // 773
 use std::ops::Deref;
-use super::qthread::QThread; // 773
-use super::qbytearray::QByteArray; // 773
-use super::qsocketnotifier::QSocketNotifier; // 773
-use super::qabstractnativeeventfilter::QAbstractNativeEventFilter; // 773
-use super::qobjectdefs::QMetaObject; // 773
+use super::qthread::*; // 773
+use super::qbytearray::*; // 773
+use super::qsocketnotifier::*; // 773
+use super::qabstractnativeeventfilter::*; // 773
+use super::qobjectdefs::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -120,7 +120,7 @@ impl<'a> /*trait*/ QAbstractEventDispatcher_hasPendingEvents<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QAbstractEventDispatcher16hasPendingEventsEv()};
     let mut ret = unsafe {C_ZN24QAbstractEventDispatcher16hasPendingEventsEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -199,7 +199,7 @@ impl<'a> /*trait*/ QAbstractEventDispatcher_filterNativeEvent<i8> for (&'a QByte
     let arg1 = self.1  as *mut c_void;
     let arg2 = self.2.as_ptr()  as *mut c_long;
     let mut ret = unsafe {C_ZN24QAbstractEventDispatcher17filterNativeEventERK10QByteArrayPvPl(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -427,7 +427,7 @@ impl<'a> /*trait*/ QAbstractEventDispatcher_unregisterTimers<i8> for (&'a QObjec
     // unsafe{_ZN24QAbstractEventDispatcher16unregisterTimersEP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN24QAbstractEventDispatcher16unregisterTimersEP7QObject(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -451,7 +451,7 @@ impl<'a> /*trait*/ QAbstractEventDispatcher_remainingTime<i32> for (i32) {
     // unsafe{_ZN24QAbstractEventDispatcher13remainingTimeEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZN24QAbstractEventDispatcher13remainingTimeEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -519,7 +519,7 @@ impl<'a> /*trait*/ QAbstractEventDispatcher_unregisterTimer<i8> for (i32) {
     // unsafe{_ZN24QAbstractEventDispatcher15unregisterTimerEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZN24QAbstractEventDispatcher15unregisterTimerEi(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

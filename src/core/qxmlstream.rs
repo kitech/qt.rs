@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qxmlstream.h
 // dst-file: /src/core/qxmlstream.rs
 //
@@ -19,14 +19,14 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qstring::QString; // 773
-use super::qstring::QStringRef; // 773
+use super::qstring::*; // 773
 // use super::qxmlstream::QXmlStreamEntityResolver; // 773
 // use super::qxmlstream::QXmlStreamAttributes; // 773
 // use super::qxmlstream::QXmlStreamNamespaceDeclaration; // 773
-use super::qbytearray::QByteArray; // 773
-use super::qiodevice::QIODevice; // 773
-use super::qtextcodec::QTextCodec; // 773
+use super::qbytearray::*; // 773
+use super::qiodevice::*; // 773
+// use super::qvector::*; // 775
+use super::qtextcodec::*; // 773
 // use super::qxmlstream::QXmlStreamAttribute; // 773
 // use super::qxmlstream::QXmlStreamReader; // 773
 // <= use block end
@@ -117,7 +117,7 @@ extern {
   // proto:  void QXmlStreamReader::QXmlStreamReader(const QString & data);
   fn C_ZN16QXmlStreamReaderC2ERK7QString(arg0: *mut c_void) -> u64;
   // proto:  QXmlStreamEntityDeclarations QXmlStreamReader::entityDeclarations();
-  fn C_ZNK16QXmlStreamReader18entityDeclarationsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK16QXmlStreamReader18entityDeclarationsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QXmlStreamReader::isWhitespace();
   fn C_ZNK16QXmlStreamReader12isWhitespaceEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  qint64 QXmlStreamReader::columnNumber();
@@ -139,9 +139,9 @@ extern {
   // proto:  bool QXmlStreamReader::isEndElement();
   fn C_ZNK16QXmlStreamReader12isEndElementEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QXmlStreamNotationDeclarations QXmlStreamReader::notationDeclarations();
-  fn C_ZNK16QXmlStreamReader20notationDeclarationsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK16QXmlStreamReader20notationDeclarationsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QXmlStreamNamespaceDeclarations QXmlStreamReader::namespaceDeclarations();
-  fn C_ZNK16QXmlStreamReader21namespaceDeclarationsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK16QXmlStreamReader21namespaceDeclarationsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QXmlStreamReader::setNamespaceProcessing(bool );
   fn C_ZN16QXmlStreamReader22setNamespaceProcessingEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QXmlStreamReader::raiseError(const QString & message);
@@ -420,7 +420,7 @@ impl<'a> /*trait*/ QXmlStreamStringRef_size<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QXmlStreamStringRef4sizeEv()};
     let mut ret = unsafe {C_ZNK19QXmlStreamStringRef4sizeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -553,7 +553,7 @@ impl<'a> /*trait*/ QXmlStreamStringRef_position<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QXmlStreamStringRef8positionEv()};
     let mut ret = unsafe {C_ZNK19QXmlStreamStringRef8positionEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -629,7 +629,7 @@ impl<'a> /*trait*/ QXmlStreamReader_namespaceProcessing<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QXmlStreamReader19namespaceProcessingEv()};
     let mut ret = unsafe {C_ZNK16QXmlStreamReader19namespaceProcessingEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -652,7 +652,7 @@ impl<'a> /*trait*/ QXmlStreamReader_isStartElement<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QXmlStreamReader14isStartElementEv()};
     let mut ret = unsafe {C_ZNK16QXmlStreamReader14isStartElementEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -675,7 +675,7 @@ impl<'a> /*trait*/ QXmlStreamReader_isStandaloneDocument<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QXmlStreamReader20isStandaloneDocumentEv()};
     let mut ret = unsafe {C_ZNK16QXmlStreamReader20isStandaloneDocumentEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -698,7 +698,7 @@ impl<'a> /*trait*/ QXmlStreamReader_lineNumber<i64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QXmlStreamReader10lineNumberEv()};
     let mut ret = unsafe {C_ZNK16QXmlStreamReader10lineNumberEv(rsthis.qclsinst)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -838,7 +838,7 @@ impl<'a> /*trait*/ QXmlStreamReader_characterOffset<i64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QXmlStreamReader15characterOffsetEv()};
     let mut ret = unsafe {C_ZNK16QXmlStreamReader15characterOffsetEv(rsthis.qclsinst)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -1118,7 +1118,7 @@ impl<'a> /*trait*/ QXmlStreamReader_isDTD<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QXmlStreamReader5isDTDEv()};
     let mut ret = unsafe {C_ZNK16QXmlStreamReader5isDTDEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1141,7 +1141,7 @@ impl<'a> /*trait*/ QXmlStreamReader_isStartDocument<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QXmlStreamReader15isStartDocumentEv()};
     let mut ret = unsafe {C_ZNK16QXmlStreamReader15isStartDocumentEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1188,7 +1188,7 @@ impl<'a> /*trait*/ QXmlStreamReader_isProcessingInstruction<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QXmlStreamReader23isProcessingInstructionEv()};
     let mut ret = unsafe {C_ZNK16QXmlStreamReader23isProcessingInstructionEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1234,7 +1234,7 @@ impl<'a> /*trait*/ QXmlStreamReader_isCharacters<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QXmlStreamReader12isCharactersEv()};
     let mut ret = unsafe {C_ZNK16QXmlStreamReader12isCharactersEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1281,11 +1281,12 @@ pub trait QXmlStreamReader_entityDeclarations<RetType> {
 }
 
   // proto:  QXmlStreamEntityDeclarations QXmlStreamReader::entityDeclarations();
-impl<'a> /*trait*/ QXmlStreamReader_entityDeclarations<()> for () {
-  fn entityDeclarations(self , rsthis: & QXmlStreamReader) -> () {
+impl<'a> /*trait*/ QXmlStreamReader_entityDeclarations<u64> for () {
+  fn entityDeclarations(self , rsthis: & QXmlStreamReader) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QXmlStreamReader18entityDeclarationsEv()};
-     unsafe {C_ZNK16QXmlStreamReader18entityDeclarationsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QXmlStreamReader18entityDeclarationsEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -1308,7 +1309,7 @@ impl<'a> /*trait*/ QXmlStreamReader_isWhitespace<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QXmlStreamReader12isWhitespaceEv()};
     let mut ret = unsafe {C_ZNK16QXmlStreamReader12isWhitespaceEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1331,7 +1332,7 @@ impl<'a> /*trait*/ QXmlStreamReader_columnNumber<i64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QXmlStreamReader12columnNumberEv()};
     let mut ret = unsafe {C_ZNK16QXmlStreamReader12columnNumberEv(rsthis.qclsinst)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -1354,7 +1355,7 @@ impl<'a> /*trait*/ QXmlStreamReader_hasError<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QXmlStreamReader8hasErrorEv()};
     let mut ret = unsafe {C_ZNK16QXmlStreamReader8hasErrorEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1377,7 +1378,7 @@ impl<'a> /*trait*/ QXmlStreamReader_isCDATA<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QXmlStreamReader7isCDATAEv()};
     let mut ret = unsafe {C_ZNK16QXmlStreamReader7isCDATAEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1505,7 +1506,7 @@ impl<'a> /*trait*/ QXmlStreamReader_isEndElement<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QXmlStreamReader12isEndElementEv()};
     let mut ret = unsafe {C_ZNK16QXmlStreamReader12isEndElementEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1523,11 +1524,12 @@ pub trait QXmlStreamReader_notationDeclarations<RetType> {
 }
 
   // proto:  QXmlStreamNotationDeclarations QXmlStreamReader::notationDeclarations();
-impl<'a> /*trait*/ QXmlStreamReader_notationDeclarations<()> for () {
-  fn notationDeclarations(self , rsthis: & QXmlStreamReader) -> () {
+impl<'a> /*trait*/ QXmlStreamReader_notationDeclarations<u64> for () {
+  fn notationDeclarations(self , rsthis: & QXmlStreamReader) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QXmlStreamReader20notationDeclarationsEv()};
-     unsafe {C_ZNK16QXmlStreamReader20notationDeclarationsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QXmlStreamReader20notationDeclarationsEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -1545,11 +1547,12 @@ pub trait QXmlStreamReader_namespaceDeclarations<RetType> {
 }
 
   // proto:  QXmlStreamNamespaceDeclarations QXmlStreamReader::namespaceDeclarations();
-impl<'a> /*trait*/ QXmlStreamReader_namespaceDeclarations<()> for () {
-  fn namespaceDeclarations(self , rsthis: & QXmlStreamReader) -> () {
+impl<'a> /*trait*/ QXmlStreamReader_namespaceDeclarations<u64> for () {
+  fn namespaceDeclarations(self , rsthis: & QXmlStreamReader) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QXmlStreamReader21namespaceDeclarationsEv()};
-     unsafe {C_ZNK16QXmlStreamReader21namespaceDeclarationsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QXmlStreamReader21namespaceDeclarationsEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -1642,7 +1645,7 @@ impl<'a> /*trait*/ QXmlStreamReader_isEndDocument<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QXmlStreamReader13isEndDocumentEv()};
     let mut ret = unsafe {C_ZNK16QXmlStreamReader13isEndDocumentEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1665,7 +1668,7 @@ impl<'a> /*trait*/ QXmlStreamReader_readNextStartElement<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamReader20readNextStartElementEv()};
     let mut ret = unsafe {C_ZN16QXmlStreamReader20readNextStartElementEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1688,7 +1691,7 @@ impl<'a> /*trait*/ QXmlStreamReader_isComment<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QXmlStreamReader9isCommentEv()};
     let mut ret = unsafe {C_ZNK16QXmlStreamReader9isCommentEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1748,7 +1751,7 @@ impl<'a> /*trait*/ QXmlStreamReader_isEntityReference<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QXmlStreamReader17isEntityReferenceEv()};
     let mut ret = unsafe {C_ZNK16QXmlStreamReader17isEntityReferenceEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1782,7 +1785,7 @@ impl<'a> /*trait*/ QXmlStreamReader_atEnd<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QXmlStreamReader5atEndEv()};
     let mut ret = unsafe {C_ZNK16QXmlStreamReader5atEndEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -2263,7 +2266,7 @@ impl<'a> /*trait*/ QXmlStreamAttributes_hasAttribute<i8> for (&'a QString) {
     // unsafe{_ZNK20QXmlStreamAttributes12hasAttributeERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK20QXmlStreamAttributes12hasAttributeERK7QString(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -2276,7 +2279,7 @@ impl<'a> /*trait*/ QXmlStreamAttributes_hasAttribute<i8> for (&'a QString, &'a Q
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK20QXmlStreamAttributes12hasAttributeERK7QStringS2_(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -2426,7 +2429,7 @@ impl<'a> /*trait*/ QXmlStreamWriter_autoFormatting<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QXmlStreamWriter14autoFormattingEv()};
     let mut ret = unsafe {C_ZNK16QXmlStreamWriter14autoFormattingEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -2829,7 +2832,7 @@ impl<'a> /*trait*/ QXmlStreamWriter_hasError<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QXmlStreamWriter8hasErrorEv()};
     let mut ret = unsafe {C_ZNK16QXmlStreamWriter8hasErrorEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -2942,7 +2945,7 @@ impl<'a> /*trait*/ QXmlStreamWriter_autoFormattingIndent<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QXmlStreamWriter20autoFormattingIndentEv()};
     let mut ret = unsafe {C_ZNK16QXmlStreamWriter20autoFormattingIndentEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -3460,7 +3463,7 @@ impl<'a> /*trait*/ QXmlStreamAttribute_isDefault<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZNK19QXmlStreamAttribute9isDefaultEv()};
     let mut ret = unsafe {C_ZNK19QXmlStreamAttribute9isDefaultEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

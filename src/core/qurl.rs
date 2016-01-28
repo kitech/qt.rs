@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qurl.h
 // dst-file: /src/core/qurl.rs
 //
@@ -19,10 +19,10 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qurlquery::QUrlQuery; // 773
-use super::qstring::QString; // 773
-use super::qbytearray::QByteArray; // 773
-use super::qstringlist::QStringList; // 773
+use super::qurlquery::*; // 773
+use super::qstringlist::*; // 773
+use super::qstring::*; // 773
+use super::qbytearray::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -40,7 +40,7 @@ extern {
   // proto:  void QUrl::setQuery(const QUrlQuery & query);
   fn C_ZN4QUrl8setQueryERK9QUrlQuery(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static QStringList QUrl::idnWhitelist();
-  fn C_ZN4QUrl12idnWhitelistEv();
+  fn C_ZN4QUrl12idnWhitelistEv() -> *mut c_void;
   // proto:  void QUrl::~QUrl();
   fn C_ZN4QUrlD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QUrl::setScheme(const QString & scheme);
@@ -126,7 +126,7 @@ impl<'a> /*trait*/ QUrl_isLocalFile<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QUrl11isLocalFileEv()};
     let mut ret = unsafe {C_ZNK4QUrl11isLocalFileEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -149,7 +149,7 @@ impl<'a> /*trait*/ QUrl_isEmpty<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QUrl7isEmptyEv()};
     let mut ret = unsafe {C_ZNK4QUrl7isEmptyEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -190,11 +190,13 @@ pub trait QUrl_idnWhitelist_s<RetType> {
 }
 
   // proto: static QStringList QUrl::idnWhitelist();
-impl<'a> /*trait*/ QUrl_idnWhitelist_s<()> for () {
-  fn idnWhitelist_s(self ) -> () {
+impl<'a> /*trait*/ QUrl_idnWhitelist_s<QStringList> for () {
+  fn idnWhitelist_s(self ) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QUrl12idnWhitelistEv()};
-     unsafe {C_ZN4QUrl12idnWhitelistEv()};
+    let mut ret = unsafe {C_ZN4QUrl12idnWhitelistEv()};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -263,7 +265,7 @@ impl<'a> /*trait*/ QUrl_isParentOf<i8> for (&'a QUrl) {
     // unsafe{_ZNK4QUrl10isParentOfERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK4QUrl10isParentOfERKS_(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -311,7 +313,7 @@ impl<'a> /*trait*/ QUrl_port<i32> for (i32) {
     // unsafe{_ZNK4QUrl4portEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK4QUrl4portEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -481,7 +483,7 @@ impl<'a> /*trait*/ QUrl_hasFragment<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QUrl11hasFragmentEv()};
     let mut ret = unsafe {C_ZNK4QUrl11hasFragmentEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -529,7 +531,7 @@ impl<'a> /*trait*/ QUrl_hasQuery<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QUrl8hasQueryEv()};
     let mut ret = unsafe {C_ZNK4QUrl8hasQueryEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -577,7 +579,7 @@ impl<'a> /*trait*/ QUrl_isValid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QUrl7isValidEv()};
     let mut ret = unsafe {C_ZNK4QUrl7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -614,7 +616,7 @@ impl<'a> /*trait*/ QUrl_isDetached<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QUrl10isDetachedEv()};
     let mut ret = unsafe {C_ZNK4QUrl10isDetachedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -637,7 +639,7 @@ impl<'a> /*trait*/ QUrl_isRelative<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QUrl10isRelativeEv()};
     let mut ret = unsafe {C_ZNK4QUrl10isRelativeEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qsignalmapper.h
 // dst-file: /src/core/qsignalmapper.rs
 //
@@ -18,11 +18,11 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qobject::QObject; // 773
+use super::qobject::*; // 773
 use std::ops::Deref;
-use super::qobjectdefs::QMetaObject; // 773
-use super::qstring::QString; // 773
-use super::super::widgets::qwidget::QWidget; // 771
+use super::qobjectdefs::*; // 773
+use super::qstring::*; // 773
+use super::super::widgets::qwidget::*; // 771
 // <= use block end
 
 // ext block begin =>

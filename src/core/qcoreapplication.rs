@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qcoreapplication.h
 // dst-file: /src/core/qcoreapplication.rs
 //
@@ -18,15 +18,15 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qobject::QObject; // 773
+use super::qobject::*; // 773
 use std::ops::Deref;
-use super::qstring::QString; // 773
-use super::qabstractnativeeventfilter::QAbstractNativeEventFilter; // 773
-use super::qcoreevent::QEvent; // 773
-use super::qtranslator::QTranslator; // 773
-use super::qstringlist::QStringList; // 773
-use super::qabstracteventdispatcher::QAbstractEventDispatcher; // 773
-use super::qobjectdefs::QMetaObject; // 773
+use super::qstring::*; // 773
+use super::qabstractnativeeventfilter::*; // 773
+use super::qcoreevent::*; // 773
+use super::qstringlist::*; // 773
+use super::qtranslator::*; // 773
+use super::qabstracteventdispatcher::*; // 773
+use super::qobjectdefs::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -60,7 +60,7 @@ extern {
   // proto: static void QCoreApplication::postEvent(QObject * receiver, QEvent * event, int priority);
   fn C_ZN16QCoreApplication9postEventEP7QObjectP6QEventi(arg0: *mut c_void, arg1: *mut c_void, arg2: c_int);
   // proto: static QStringList QCoreApplication::libraryPaths();
-  fn C_ZN16QCoreApplication12libraryPathsEv();
+  fn C_ZN16QCoreApplication12libraryPathsEv() -> *mut c_void;
   // proto: static void QCoreApplication::removeLibraryPath(const QString & );
   fn C_ZN16QCoreApplication17removeLibraryPathERK7QString(arg0: *mut c_void);
   // proto: static QString QCoreApplication::translate(const char * context, const char * key, const char * disambiguation, int n);
@@ -100,7 +100,7 @@ extern {
   // proto: static int QCoreApplication::exec();
   fn C_ZN16QCoreApplication4execEv() -> c_int;
   // proto: static QStringList QCoreApplication::arguments();
-  fn C_ZN16QCoreApplication9argumentsEv();
+  fn C_ZN16QCoreApplication9argumentsEv() -> *mut c_void;
   // proto: static void QCoreApplication::setLibraryPaths(const QStringList & );
   fn C_ZN16QCoreApplication15setLibraryPathsERK11QStringList(arg0: *mut c_void);
   // proto: static QAbstractEventDispatcher * QCoreApplication::eventDispatcher();
@@ -224,7 +224,7 @@ impl<'a> /*trait*/ QCoreApplication_applicationPid_s<i64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QCoreApplication14applicationPidEv()};
     let mut ret = unsafe {C_ZN16QCoreApplication14applicationPidEv()};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -341,7 +341,7 @@ impl<'a> /*trait*/ QCoreApplication_isSetuidAllowed_s<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QCoreApplication15isSetuidAllowedEv()};
     let mut ret = unsafe {C_ZN16QCoreApplication15isSetuidAllowedEv()};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -431,11 +431,13 @@ pub trait QCoreApplication_libraryPaths_s<RetType> {
 }
 
   // proto: static QStringList QCoreApplication::libraryPaths();
-impl<'a> /*trait*/ QCoreApplication_libraryPaths_s<()> for () {
-  fn libraryPaths_s(self ) -> () {
+impl<'a> /*trait*/ QCoreApplication_libraryPaths_s<QStringList> for () {
+  fn libraryPaths_s(self ) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QCoreApplication12libraryPathsEv()};
-     unsafe {C_ZN16QCoreApplication12libraryPathsEv()};
+    let mut ret = unsafe {C_ZN16QCoreApplication12libraryPathsEv()};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -534,7 +536,7 @@ impl<'a> /*trait*/ QCoreApplication_removeTranslator_s<i8> for (&'a QTranslator)
     // unsafe{_ZN16QCoreApplication16removeTranslatorEP11QTranslator()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN16QCoreApplication16removeTranslatorEP11QTranslator(arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -649,7 +651,7 @@ impl<'a> /*trait*/ QCoreApplication_closingDown_s<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QCoreApplication11closingDownEv()};
     let mut ret = unsafe {C_ZN16QCoreApplication11closingDownEv()};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -695,7 +697,7 @@ impl<'a> /*trait*/ QCoreApplication_hasPendingEvents_s<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QCoreApplication16hasPendingEventsEv()};
     let mut ret = unsafe {C_ZN16QCoreApplication16hasPendingEventsEv()};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -811,7 +813,7 @@ impl<'a> /*trait*/ QCoreApplication_installTranslator_s<i8> for (&'a QTranslator
     // unsafe{_ZN16QCoreApplication17installTranslatorEP11QTranslator()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN16QCoreApplication17installTranslatorEP11QTranslator(arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -880,7 +882,7 @@ impl<'a> /*trait*/ QCoreApplication_exec_s<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QCoreApplication4execEv()};
     let mut ret = unsafe {C_ZN16QCoreApplication4execEv()};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -898,11 +900,13 @@ pub trait QCoreApplication_arguments_s<RetType> {
 }
 
   // proto: static QStringList QCoreApplication::arguments();
-impl<'a> /*trait*/ QCoreApplication_arguments_s<()> for () {
-  fn arguments_s(self ) -> () {
+impl<'a> /*trait*/ QCoreApplication_arguments_s<QStringList> for () {
+  fn arguments_s(self ) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QCoreApplication9argumentsEv()};
-     unsafe {C_ZN16QCoreApplication9argumentsEv()};
+    let mut ret = unsafe {C_ZN16QCoreApplication9argumentsEv()};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -972,7 +976,7 @@ impl<'a> /*trait*/ QCoreApplication_startingUp_s<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QCoreApplication10startingUpEv()};
     let mut ret = unsafe {C_ZN16QCoreApplication10startingUpEv()};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -997,7 +1001,7 @@ impl<'a> /*trait*/ QCoreApplication_sendEvent_s<i8> for (&'a QObject, &'a QEvent
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN16QCoreApplication9sendEventEP7QObjectP6QEvent(arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1022,7 +1026,7 @@ impl<'a> /*trait*/ QCoreApplication_notify<i8> for (&'a QObject, &'a QEvent) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN16QCoreApplication6notifyEP7QObjectP6QEvent(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1045,7 +1049,7 @@ impl<'a> /*trait*/ QCoreApplication_isQuitLockEnabled_s<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QCoreApplication17isQuitLockEnabledEv()};
     let mut ret = unsafe {C_ZN16QCoreApplication17isQuitLockEnabledEv()};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

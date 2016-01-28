@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qatomic_x86.h
 // dst-file: /src/core/qatomic_x86.rs
 //
@@ -28,46 +28,46 @@ use std::ops::Deref;
 // #[link(name = "QtInline")]
 
 extern {
-  fn QAtomicOpsSupport_2__Class_Size() -> c_int;
-  fn QAtomicOpsSupport_1__Class_Size() -> c_int;
-  fn QAtomicOpsSupport_8__Class_Size() -> c_int;
+  fn QAtomicOpsSupportL2G_Class_Size() -> c_int;
+  fn QAtomicOpsSupportL1G_Class_Size() -> c_int;
+  fn QAtomicOpsSupportL8G_Class_Size() -> c_int;
 } // <= ext block end
 
 // body block begin =>
-// class sizeof(QAtomicOpsSupport_2_)=1
+// class sizeof(QAtomicOpsSupportL2G)=1
 #[derive(Default)]
-pub struct QAtomicOpsSupport_2_ {
+pub struct QAtomicOpsSupportL2G {
   // qbase: None,
   pub qclsinst: u64 /* *mut c_void*/,
 }
 
-// class sizeof(QAtomicOpsSupport_1_)=1
+// class sizeof(QAtomicOpsSupportL1G)=1
 #[derive(Default)]
-pub struct QAtomicOpsSupport_1_ {
+pub struct QAtomicOpsSupportL1G {
   // qbase: None,
   pub qclsinst: u64 /* *mut c_void*/,
 }
 
-// class sizeof(QAtomicOpsSupport_8_)=1
+// class sizeof(QAtomicOpsSupportL8G)=1
 #[derive(Default)]
-pub struct QAtomicOpsSupport_8_ {
+pub struct QAtomicOpsSupportL8G {
   // qbase: None,
   pub qclsinst: u64 /* *mut c_void*/,
 }
 
-impl /*struct*/ QAtomicOpsSupport_2_ {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QAtomicOpsSupport_2_ {
-    return QAtomicOpsSupport_2_{qclsinst: qthis, ..Default::default()};
+impl /*struct*/ QAtomicOpsSupportL2G {
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QAtomicOpsSupportL2G {
+    return QAtomicOpsSupportL2G{qclsinst: qthis, ..Default::default()};
   }
 }
-impl /*struct*/ QAtomicOpsSupport_1_ {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QAtomicOpsSupport_1_ {
-    return QAtomicOpsSupport_1_{qclsinst: qthis, ..Default::default()};
+impl /*struct*/ QAtomicOpsSupportL1G {
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QAtomicOpsSupportL1G {
+    return QAtomicOpsSupportL1G{qclsinst: qthis, ..Default::default()};
   }
 }
-impl /*struct*/ QAtomicOpsSupport_8_ {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QAtomicOpsSupport_8_ {
-    return QAtomicOpsSupport_8_{qclsinst: qthis, ..Default::default()};
+impl /*struct*/ QAtomicOpsSupportL8G {
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QAtomicOpsSupportL8G {
+    return QAtomicOpsSupportL8G{qclsinst: qthis, ..Default::default()};
   }
 }
 // <= body block end

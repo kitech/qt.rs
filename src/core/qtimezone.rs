@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qtimezone.h
 // dst-file: /src/core/qtimezone.rs
 //
@@ -19,10 +19,11 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qdatetime::QDateTime; // 773
-use super::qbytearray::QByteArray; // 773
-use super::qstring::QString; // 773
-use super::qlocale::QLocale; // 773
+// use super::qlist::*; // 775
+use super::qdatetime::*; // 773
+use super::qbytearray::*; // 773
+use super::qstring::*; // 773
+use super::qlocale::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -34,7 +35,7 @@ use super::qlocale::QLocale; // 773
 extern {
   fn QTimeZone_Class_Size() -> c_int;
   // proto: static QList<QByteArray> QTimeZone::availableTimeZoneIds();
-  fn C_ZN9QTimeZone20availableTimeZoneIdsEv();
+  fn C_ZN9QTimeZone20availableTimeZoneIdsEv() -> *mut c_void;
   // proto:  void QTimeZone::swap(QTimeZone & other);
   fn C_ZN9QTimeZone4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QTimeZone::isValid();
@@ -44,7 +45,7 @@ extern {
   // proto: static QTimeZone QTimeZone::utc();
   fn C_ZN9QTimeZone3utcEv() -> *mut c_void;
   // proto: static QList<QByteArray> QTimeZone::availableTimeZoneIds(int offsetSeconds);
-  fn C_ZN9QTimeZone20availableTimeZoneIdsEi(arg0: c_int);
+  fn C_ZN9QTimeZone20availableTimeZoneIdsEi(arg0: c_int) -> *mut c_void;
   // proto:  void QTimeZone::QTimeZone(int offsetSeconds);
   fn C_ZN9QTimeZoneC2Ei(arg0: c_int) -> u64;
   // proto:  QString QTimeZone::abbreviation(const QDateTime & atDateTime);
@@ -82,7 +83,7 @@ extern {
   // proto:  int QTimeZone::offsetFromUtc(const QDateTime & atDateTime);
   fn C_ZNK9QTimeZone13offsetFromUtcERK9QDateTime(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
   // proto: static QList<QByteArray> QTimeZone::windowsIdToIanaIds(const QByteArray & windowsId);
-  fn C_ZN9QTimeZone18windowsIdToIanaIdsERK10QByteArray(arg0: *mut c_void);
+  fn C_ZN9QTimeZone18windowsIdToIanaIdsERK10QByteArray(arg0: *mut c_void) -> *mut c_void;
 } // <= ext block end
 
 // body block begin =>
@@ -111,11 +112,12 @@ pub trait QTimeZone_availableTimeZoneIds_s<RetType> {
 }
 
   // proto: static QList<QByteArray> QTimeZone::availableTimeZoneIds();
-impl<'a> /*trait*/ QTimeZone_availableTimeZoneIds_s<()> for () {
-  fn availableTimeZoneIds_s(self ) -> () {
+impl<'a> /*trait*/ QTimeZone_availableTimeZoneIds_s<u64> for () {
+  fn availableTimeZoneIds_s(self ) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeZone20availableTimeZoneIdsEv()};
-     unsafe {C_ZN9QTimeZone20availableTimeZoneIdsEv()};
+    let mut ret = unsafe {C_ZN9QTimeZone20availableTimeZoneIdsEv()};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -161,7 +163,7 @@ impl<'a> /*trait*/ QTimeZone_isValid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTimeZone7isValidEv()};
     let mut ret = unsafe {C_ZNK9QTimeZone7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -184,7 +186,7 @@ impl<'a> /*trait*/ QTimeZone_hasDaylightTime<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTimeZone15hasDaylightTimeEv()};
     let mut ret = unsafe {C_ZNK9QTimeZone15hasDaylightTimeEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -214,12 +216,13 @@ impl<'a> /*trait*/ QTimeZone_utc_s<QTimeZone> for () {
 }
 
   // proto: static QList<QByteArray> QTimeZone::availableTimeZoneIds(int offsetSeconds);
-impl<'a> /*trait*/ QTimeZone_availableTimeZoneIds_s<()> for (i32) {
-  fn availableTimeZoneIds_s(self ) -> () {
+impl<'a> /*trait*/ QTimeZone_availableTimeZoneIds_s<u64> for (i32) {
+  fn availableTimeZoneIds_s(self ) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeZone20availableTimeZoneIdsEi()};
     let arg0 = self  as c_int;
-     unsafe {C_ZN9QTimeZone20availableTimeZoneIdsEi(arg0)};
+    let mut ret = unsafe {C_ZN9QTimeZone20availableTimeZoneIdsEi(arg0)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -359,7 +362,7 @@ impl<'a> /*trait*/ QTimeZone_isDaylightTime<i8> for (&'a QDateTime) {
     // unsafe{_ZNK9QTimeZone14isDaylightTimeERK9QDateTime()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK9QTimeZone14isDaylightTimeERK9QDateTime(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -383,7 +386,7 @@ impl<'a> /*trait*/ QTimeZone_isTimeZoneIdAvailable_s<i8> for (&'a QByteArray) {
     // unsafe{_ZN9QTimeZone21isTimeZoneIdAvailableERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN9QTimeZone21isTimeZoneIdAvailableERK10QByteArray(arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -455,7 +458,7 @@ impl<'a> /*trait*/ QTimeZone_hasTransitions<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTimeZone14hasTransitionsEv()};
     let mut ret = unsafe {C_ZNK9QTimeZone14hasTransitionsEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -479,7 +482,7 @@ impl<'a> /*trait*/ QTimeZone_daylightTimeOffset<i32> for (&'a QDateTime) {
     // unsafe{_ZNK9QTimeZone18daylightTimeOffsetERK9QDateTime()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK9QTimeZone18daylightTimeOffsetERK9QDateTime(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -579,7 +582,7 @@ impl<'a> /*trait*/ QTimeZone_standardTimeOffset<i32> for (&'a QDateTime) {
     // unsafe{_ZNK9QTimeZone18standardTimeOffsetERK9QDateTime()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK9QTimeZone18standardTimeOffsetERK9QDateTime(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -627,7 +630,7 @@ impl<'a> /*trait*/ QTimeZone_offsetFromUtc<i32> for (&'a QDateTime) {
     // unsafe{_ZNK9QTimeZone13offsetFromUtcERK9QDateTime()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK9QTimeZone13offsetFromUtcERK9QDateTime(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -645,12 +648,13 @@ pub trait QTimeZone_windowsIdToIanaIds_s<RetType> {
 }
 
   // proto: static QList<QByteArray> QTimeZone::windowsIdToIanaIds(const QByteArray & windowsId);
-impl<'a> /*trait*/ QTimeZone_windowsIdToIanaIds_s<()> for (&'a QByteArray) {
-  fn windowsIdToIanaIds_s(self ) -> () {
+impl<'a> /*trait*/ QTimeZone_windowsIdToIanaIds_s<u64> for (&'a QByteArray) {
+  fn windowsIdToIanaIds_s(self ) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeZone18windowsIdToIanaIdsERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN9QTimeZone18windowsIdToIanaIdsERK10QByteArray(arg0)};
+    let mut ret = unsafe {C_ZN9QTimeZone18windowsIdToIanaIdsERK10QByteArray(arg0)};
+    return ret as u64; // 5
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qtextboundaryfinder.h
 // dst-file: /src/core/qtextboundaryfinder.rs
 //
@@ -19,8 +19,8 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qchar::QChar; // 773
-use super::qstring::QString; // 773
+use super::qchar::*; // 773
+use super::qstring::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -88,7 +88,7 @@ impl<'a> /*trait*/ QTextBoundaryFinder_isAtBoundary<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK19QTextBoundaryFinder12isAtBoundaryEv()};
     let mut ret = unsafe {C_ZNK19QTextBoundaryFinder12isAtBoundaryEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -111,7 +111,7 @@ impl<'a> /*trait*/ QTextBoundaryFinder_toNextBoundary<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZN19QTextBoundaryFinder14toNextBoundaryEv()};
     let mut ret = unsafe {C_ZN19QTextBoundaryFinder14toNextBoundaryEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -221,7 +221,7 @@ impl<'a> /*trait*/ QTextBoundaryFinder_toPreviousBoundary<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZN19QTextBoundaryFinder18toPreviousBoundaryEv()};
     let mut ret = unsafe {C_ZN19QTextBoundaryFinder18toPreviousBoundaryEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -244,7 +244,7 @@ impl<'a> /*trait*/ QTextBoundaryFinder_isValid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK19QTextBoundaryFinder7isValidEv()};
     let mut ret = unsafe {C_ZNK19QTextBoundaryFinder7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -335,7 +335,7 @@ impl<'a> /*trait*/ QTextBoundaryFinder_position<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK19QTextBoundaryFinder8positionEv()};
     let mut ret = unsafe {C_ZNK19QTextBoundaryFinder8positionEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

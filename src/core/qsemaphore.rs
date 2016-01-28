@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qsemaphore.h
 // dst-file: /src/core/qsemaphore.rs
 //
@@ -122,7 +122,7 @@ impl<'a> /*trait*/ QSemaphore_available<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QSemaphore9availableEv()};
     let mut ret = unsafe {C_ZNK10QSemaphore9availableEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -147,7 +147,7 @@ impl<'a> /*trait*/ QSemaphore_tryAcquire<i8> for (i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZN10QSemaphore10tryAcquireEii(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -159,7 +159,7 @@ impl<'a> /*trait*/ QSemaphore_tryAcquire<i8> for (i32) {
     // unsafe{_ZN10QSemaphore10tryAcquireEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZN10QSemaphore10tryAcquireEi(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

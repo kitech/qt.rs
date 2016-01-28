@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qlocale.h
 // dst-file: /src/core/qlocale.rs
 //
@@ -19,12 +19,10 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qstring::QString; // 773
-use super::qchar::QChar; // 773
-use super::qdatetime::QTime; // 773
-use super::qstringlist::QStringList; // 773
-use super::qdatetime::QDateTime; // 773
-use super::qdatetime::QDate; // 773
+use super::qstring::*; // 773
+use super::qchar::*; // 773
+use super::qdatetime::*; // 773
+use super::qstringlist::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -104,7 +102,7 @@ extern {
   // proto:  QString QLocale::toString(double i, char f, int prec);
   fn C_ZNK7QLocale8toStringEdci(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_char, arg2: c_int) -> *mut c_void;
   // proto:  QStringList QLocale::uiLanguages();
-  fn C_ZNK7QLocale11uiLanguagesEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK7QLocale11uiLanguagesEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QLocale::bcp47Name();
   fn C_ZNK7QLocale9bcp47NameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QTime QLocale::toTime(const QString & string, const QString & format);
@@ -325,7 +323,7 @@ impl<'a> /*trait*/ QLocale_toFloat<f32> for (&'a QString, &'a mut Vec<i8>) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let mut ret = unsafe {C_ZNK7QLocale7toFloatERK7QStringPb(rsthis.qclsinst, arg0, arg1)};
-    return ret as f32;
+    return ret as f32; // 1
     // return 1;
   }
 }
@@ -413,7 +411,7 @@ impl<'a> /*trait*/ QLocale_toUInt<u32> for (&'a QString, &'a mut Vec<i8>) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let mut ret = unsafe {C_ZNK7QLocale6toUIntERK7QStringPb(rsthis.qclsinst, arg0, arg1)};
-    return ret as u32;
+    return ret as u32; // 1
     // return 1;
   }
 }
@@ -486,7 +484,7 @@ impl<'a> /*trait*/ QLocale_toLongLong<i64> for (&'a QString, &'a mut Vec<i8>) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let mut ret = unsafe {C_ZNK7QLocale10toLongLongERK7QStringPb(rsthis.qclsinst, arg0, arg1)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -511,7 +509,7 @@ impl<'a> /*trait*/ QLocale_toShort<i16> for (&'a QString, &'a mut Vec<i8>) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let mut ret = unsafe {C_ZNK7QLocale7toShortERK7QStringPb(rsthis.qclsinst, arg0, arg1)};
-    return ret as i16;
+    return ret as i16; // 1
     // return 1;
   }
 }
@@ -885,7 +883,7 @@ impl<'a> /*trait*/ QLocale_toULongLong<u64> for (&'a QString, &'a mut Vec<i8>) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let mut ret = unsafe {C_ZNK7QLocale11toULongLongERK7QStringPb(rsthis.qclsinst, arg0, arg1)};
-    return ret as u64;
+    return ret as u64; // 1
     // return 1;
   }
 }
@@ -918,11 +916,13 @@ pub trait QLocale_uiLanguages<RetType> {
 }
 
   // proto:  QStringList QLocale::uiLanguages();
-impl<'a> /*trait*/ QLocale_uiLanguages<()> for () {
-  fn uiLanguages(self , rsthis: & QLocale) -> () {
+impl<'a> /*trait*/ QLocale_uiLanguages<QStringList> for () {
+  fn uiLanguages(self , rsthis: & QLocale) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QLocale11uiLanguagesEv()};
-     unsafe {C_ZNK7QLocale11uiLanguagesEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QLocale11uiLanguagesEv(rsthis.qclsinst)};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -997,7 +997,7 @@ impl<'a> /*trait*/ QLocale_toUShort<u16> for (&'a QString, &'a mut Vec<i8>) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let mut ret = unsafe {C_ZNK7QLocale8toUShortERK7QStringPb(rsthis.qclsinst, arg0, arg1)};
-    return ret as u16;
+    return ret as u16; // 1
     // return 1;
   }
 }
@@ -1036,7 +1036,7 @@ impl<'a> /*trait*/ QLocale_toDouble<f64> for (&'a QString, &'a mut Vec<i8>) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let mut ret = unsafe {C_ZNK7QLocale8toDoubleERK7QStringPb(rsthis.qclsinst, arg0, arg1)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1276,7 +1276,7 @@ impl<'a> /*trait*/ QLocale_toInt<i32> for (&'a QString, &'a mut Vec<i8>) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let mut ret = unsafe {C_ZNK7QLocale5toIntERK7QStringPb(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

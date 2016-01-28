@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qstringlistmodel.h
 // dst-file: /src/core/qstringlistmodel.rs
 //
@@ -18,13 +18,12 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qabstractitemmodel::QAbstractListModel; // 773
+use super::qabstractitemmodel::*; // 773
 use std::ops::Deref;
-use super::qstringlist::QStringList; // 773
-use super::qobject::QObject; // 773
-use super::qabstractitemmodel::QModelIndex; // 773
-use super::qvariant::QVariant; // 773
-use super::qobjectdefs::QMetaObject; // 773
+use super::qstringlist::*; // 773
+use super::qobject::*; // 773
+use super::qvariant::*; // 773
+use super::qobjectdefs::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -42,7 +41,7 @@ extern {
   // proto:  QVariant QStringListModel::data(const QModelIndex & index, int role);
   fn C_ZNK16QStringListModel4dataERK11QModelIndexi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> *mut c_void;
   // proto:  QStringList QStringListModel::stringList();
-  fn C_ZNK16QStringListModel10stringListEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK16QStringListModel10stringListEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  const QMetaObject * QStringListModel::metaObject();
   fn C_ZNK16QStringListModel10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QStringListModel::removeRows(int row, int count, const QModelIndex & parent);
@@ -134,7 +133,7 @@ impl<'a> /*trait*/ QStringListModel_insertRows<i8> for (i32, i32, &'a QModelInde
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN16QStringListModel10insertRowsEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -178,11 +177,13 @@ pub trait QStringListModel_stringList<RetType> {
 }
 
   // proto:  QStringList QStringListModel::stringList();
-impl<'a> /*trait*/ QStringListModel_stringList<()> for () {
-  fn stringList(self , rsthis: & QStringListModel) -> () {
+impl<'a> /*trait*/ QStringListModel_stringList<QStringList> for () {
+  fn stringList(self , rsthis: & QStringListModel) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QStringListModel10stringListEv()};
-     unsafe {C_ZNK16QStringListModel10stringListEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QStringListModel10stringListEv(rsthis.qclsinst)};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -232,7 +233,7 @@ impl<'a> /*trait*/ QStringListModel_removeRows<i8> for (i32, i32, &'a QModelInde
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN16QStringListModel10removeRowsEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -273,7 +274,7 @@ impl<'a> /*trait*/ QStringListModel_setData<i8> for (&'a QModelIndex, &'a QVaria
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2  as c_int;
     let mut ret = unsafe {C_ZN16QStringListModel7setDataERK11QModelIndexRK8QVarianti(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -297,7 +298,7 @@ impl<'a> /*trait*/ QStringListModel_rowCount<i32> for (&'a QModelIndex) {
     // unsafe{_ZNK16QStringListModel8rowCountERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK16QStringListModel8rowCountERK11QModelIndex(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qdatetime.h
 // dst-file: /src/core/qdatetime.rs
 //
@@ -19,10 +19,10 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qstring::QString; // 773
+use super::qstring::*; // 773
 // use super::qdatetime::QDate; // 773
 // use super::qdatetime::QTime; // 773
-use super::qtimezone::QTimeZone; // 773
+use super::qtimezone::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -340,7 +340,7 @@ impl<'a> /*trait*/ QTime_second<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QTime6secondEv()};
     let mut ret = unsafe {C_ZNK5QTime6secondEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -363,7 +363,7 @@ impl<'a> /*trait*/ QTime_restart<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QTime7restartEv()};
     let mut ret = unsafe {C_ZN5QTime7restartEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -408,7 +408,7 @@ impl<'a> /*trait*/ QTime_isNull<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QTime6isNullEv()};
     let mut ret = unsafe {C_ZNK5QTime6isNullEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -431,7 +431,7 @@ impl<'a> /*trait*/ QTime_msecsSinceStartOfDay<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QTime20msecsSinceStartOfDayEv()};
     let mut ret = unsafe {C_ZNK5QTime20msecsSinceStartOfDayEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -454,7 +454,7 @@ impl<'a> /*trait*/ QTime_hour<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QTime4hourEv()};
     let mut ret = unsafe {C_ZNK5QTime4hourEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -477,7 +477,7 @@ impl<'a> /*trait*/ QTime_elapsed<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QTime7elapsedEv()};
     let mut ret = unsafe {C_ZNK5QTime7elapsedEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -525,7 +525,7 @@ impl<'a> /*trait*/ QTime_isValid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QTime7isValidEv()};
     let mut ret = unsafe {C_ZNK5QTime7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -548,7 +548,7 @@ impl<'a> /*trait*/ QTime_msec<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QTime4msecEv()};
     let mut ret = unsafe {C_ZNK5QTime4msecEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -603,7 +603,7 @@ impl<'a> /*trait*/ QTime_secsTo<i32> for (&'a QTime) {
     // unsafe{_ZNK5QTime6secsToERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK5QTime6secsToERKS_(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -644,7 +644,7 @@ impl<'a> /*trait*/ QTime_setHMS<i8> for (i32, i32, i32, i32) {
     let arg2 = self.2  as c_int;
     let arg3 = self.3  as c_int;
     let mut ret = unsafe {C_ZN5QTime6setHMSEiiii(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -693,7 +693,7 @@ impl<'a> /*trait*/ QTime_msecsTo<i32> for (&'a QTime) {
     // unsafe{_ZNK5QTime7msecsToERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK5QTime7msecsToERKS_(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -716,7 +716,7 @@ impl<'a> /*trait*/ QTime_minute<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QTime6minuteEv()};
     let mut ret = unsafe {C_ZNK5QTime6minuteEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -743,7 +743,7 @@ impl<'a> /*trait*/ QTime_isValid_s<i8> for (i32, i32, i32, i32) {
     let arg2 = self.2  as c_int;
     let arg3 = self.3  as c_int;
     let mut ret = unsafe {C_ZN5QTime7isValidEiiii(arg0, arg1, arg2, arg3)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -891,7 +891,7 @@ impl<'a> /*trait*/ QDateTime_toMSecsSinceEpoch<i64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDateTime17toMSecsSinceEpochEv()};
     let mut ret = unsafe {C_ZNK9QDateTime17toMSecsSinceEpochEv(rsthis.qclsinst)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -979,7 +979,7 @@ impl<'a> /*trait*/ QDateTime_isDaylightTime<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDateTime14isDaylightTimeEv()};
     let mut ret = unsafe {C_ZNK9QDateTime14isDaylightTimeEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1002,7 +1002,7 @@ impl<'a> /*trait*/ QDateTime_isValid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDateTime7isValidEv()};
     let mut ret = unsafe {C_ZNK9QDateTime7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1262,7 +1262,7 @@ impl<'a> /*trait*/ QDateTime_toTime_t<u32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDateTime8toTime_tEv()};
     let mut ret = unsafe {C_ZNK9QDateTime8toTime_tEv(rsthis.qclsinst)};
-    return ret as u32;
+    return ret as u32; // 1
     // return 1;
   }
 }
@@ -1357,7 +1357,7 @@ impl<'a> /*trait*/ QDateTime_isNull<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDateTime6isNullEv()};
     let mut ret = unsafe {C_ZNK9QDateTime6isNullEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1380,7 +1380,7 @@ impl<'a> /*trait*/ QDateTime_currentMSecsSinceEpoch_s<i64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QDateTime22currentMSecsSinceEpochEv()};
     let mut ret = unsafe {C_ZN9QDateTime22currentMSecsSinceEpochEv()};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -1403,7 +1403,7 @@ impl<'a> /*trait*/ QDateTime_offsetFromUtc<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDateTime13offsetFromUtcEv()};
     let mut ret = unsafe {C_ZNK9QDateTime13offsetFromUtcEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1467,7 +1467,7 @@ impl<'a> /*trait*/ QDateTime_secsTo<i64> for (&'a QDateTime) {
     // unsafe{_ZNK9QDateTime6secsToERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK9QDateTime6secsToERKS_(rsthis.qclsinst, arg0)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -1587,7 +1587,7 @@ impl<'a> /*trait*/ QDateTime_msecsTo<i64> for (&'a QDateTime) {
     // unsafe{_ZNK9QDateTime7msecsToERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK9QDateTime7msecsToERKS_(rsthis.qclsinst, arg0)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -1672,7 +1672,7 @@ impl<'a> /*trait*/ QDateTime_utcOffset<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDateTime9utcOffsetEv()};
     let mut ret = unsafe {C_ZNK9QDateTime9utcOffsetEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1734,7 +1734,7 @@ impl<'a> /*trait*/ QDateTime_daysTo<i64> for (&'a QDateTime) {
     // unsafe{_ZNK9QDateTime6daysToERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK9QDateTime6daysToERKS_(rsthis.qclsinst, arg0)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -1835,7 +1835,7 @@ impl<'a> /*trait*/ QDate_daysTo<i64> for (&'a QDate) {
     // unsafe{_ZNK5QDate6daysToERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK5QDate6daysToERKS_(rsthis.qclsinst, arg0)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -1883,7 +1883,7 @@ impl<'a> /*trait*/ QDate_month<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDate5monthEv()};
     let mut ret = unsafe {C_ZNK5QDate5monthEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1906,7 +1906,7 @@ impl<'a> /*trait*/ QDate_toJulianDay<i64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDate11toJulianDayEv()};
     let mut ret = unsafe {C_ZNK5QDate11toJulianDayEv(rsthis.qclsinst)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -2023,7 +2023,7 @@ impl<'a> /*trait*/ QDate_weekNumber<i32> for (&'a mut Vec<i32>) {
     // unsafe{_ZNK5QDate10weekNumberEPi()};
     let arg0 = self.as_ptr()  as *mut c_int;
     let mut ret = unsafe {C_ZNK5QDate10weekNumberEPi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -2071,7 +2071,7 @@ impl<'a> /*trait*/ QDate_dayOfYear<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDate9dayOfYearEv()};
     let mut ret = unsafe {C_ZNK5QDate9dayOfYearEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -2094,7 +2094,7 @@ impl<'a> /*trait*/ QDate_day<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDate3dayEv()};
     let mut ret = unsafe {C_ZNK5QDate3dayEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -2120,7 +2120,7 @@ impl<'a> /*trait*/ QDate_setDate<i8> for (i32, i32, i32) {
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as c_int;
     let mut ret = unsafe {C_ZN5QDate7setDateEiii(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -2143,7 +2143,7 @@ impl<'a> /*trait*/ QDate_isNull<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDate6isNullEv()};
     let mut ret = unsafe {C_ZNK5QDate6isNullEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -2191,7 +2191,7 @@ impl<'a> /*trait*/ QDate_isValid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDate7isValidEv()};
     let mut ret = unsafe {C_ZNK5QDate7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -2242,7 +2242,7 @@ impl<'a> /*trait*/ QDate_isValid_s<i8> for (i32, i32, i32) {
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as c_int;
     let mut ret = unsafe {C_ZN5QDate7isValidEiii(arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -2265,7 +2265,7 @@ impl<'a> /*trait*/ QDate_daysInMonth<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDate11daysInMonthEv()};
     let mut ret = unsafe {C_ZNK5QDate11daysInMonthEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -2315,7 +2315,7 @@ impl<'a> /*trait*/ QDate_isLeapYear_s<i8> for (i32) {
     // unsafe{_ZN5QDate10isLeapYearEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZN5QDate10isLeapYearEi(arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -2338,7 +2338,7 @@ impl<'a> /*trait*/ QDate_daysInYear<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDate10daysInYearEv()};
     let mut ret = unsafe {C_ZNK5QDate10daysInYearEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -2361,7 +2361,7 @@ impl<'a> /*trait*/ QDate_dayOfWeek<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDate9dayOfWeekEv()};
     let mut ret = unsafe {C_ZNK5QDate9dayOfWeekEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -2409,7 +2409,7 @@ impl<'a> /*trait*/ QDate_year<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDate4yearEv()};
     let mut ret = unsafe {C_ZNK5QDate4yearEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

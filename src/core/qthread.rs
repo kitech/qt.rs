@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qthread.h
 // dst-file: /src/core/qthread.rs
 //
@@ -18,11 +18,11 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qobject::QObject; // 773
+use super::qobject::*; // 773
 use std::ops::Deref;
-use super::qabstracteventdispatcher::QAbstractEventDispatcher; // 773
-use super::qobjectdefs::QMetaObject; // 773
-use super::qcoreevent::QEvent; // 773
+use super::qabstracteventdispatcher::*; // 773
+use super::qobjectdefs::*; // 773
+use super::qcoreevent::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -223,7 +223,7 @@ impl<'a> /*trait*/ QThread_isInterruptionRequested<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QThread23isInterruptionRequestedEv()};
     let mut ret = unsafe {C_ZNK7QThread23isInterruptionRequestedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -315,7 +315,7 @@ impl<'a> /*trait*/ QThread_event<i8> for (&'a QEvent) {
     // unsafe{_ZN7QThread5eventEP6QEvent()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN7QThread5eventEP6QEvent(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -338,7 +338,7 @@ impl<'a> /*trait*/ QThread_stackSize<u32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QThread9stackSizeEv()};
     let mut ret = unsafe {C_ZNK7QThread9stackSizeEv(rsthis.qclsinst)};
-    return ret as u32;
+    return ret as u32; // 1
     // return 1;
   }
 }
@@ -408,7 +408,7 @@ impl<'a> /*trait*/ QThread_isFinished<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QThread10isFinishedEv()};
     let mut ret = unsafe {C_ZNK7QThread10isFinishedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -477,7 +477,7 @@ impl<'a> /*trait*/ QThread_idealThreadCount_s<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QThread16idealThreadCountEv()};
     let mut ret = unsafe {C_ZN7QThread16idealThreadCountEv()};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -501,7 +501,7 @@ impl<'a> /*trait*/ QThread_wait<i8> for (u64) {
     // unsafe{_ZN7QThread4waitEm()};
     let arg0 = self  as c_ulong;
     let mut ret = unsafe {C_ZN7QThread4waitEm(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -548,7 +548,7 @@ impl<'a> /*trait*/ QThread_isRunning<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QThread9isRunningEv()};
     let mut ret = unsafe {C_ZNK7QThread9isRunningEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -637,7 +637,7 @@ impl<'a> /*trait*/ QThread_loopLevel<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QThread9loopLevelEv()};
     let mut ret = unsafe {C_ZNK7QThread9loopLevelEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

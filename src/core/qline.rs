@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qline.h
 // dst-file: /src/core/qline.rs
 //
@@ -19,8 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qpoint::QPoint; // 773
-use super::qpoint::QPointF; // 773
+use super::qpoint::*; // 773
 // use super::qline::QLine; // 773
 // <= use block end
 
@@ -177,7 +176,7 @@ impl<'a> /*trait*/ QLine_isNull<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QLine6isNullEv()};
     let mut ret = unsafe {C_ZNK5QLine6isNullEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -248,7 +247,7 @@ impl<'a> /*trait*/ QLine_x2<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QLine2x2Ev()};
     let mut ret = unsafe {C_ZNK5QLine2x2Ev(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -346,7 +345,7 @@ impl<'a> /*trait*/ QLine_dx<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QLine2dxEv()};
     let mut ret = unsafe {C_ZNK5QLine2dxEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -369,7 +368,7 @@ impl<'a> /*trait*/ QLine_y2<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QLine2y2Ev()};
     let mut ret = unsafe {C_ZNK5QLine2y2Ev(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -392,7 +391,7 @@ impl<'a> /*trait*/ QLine_dy<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QLine2dyEv()};
     let mut ret = unsafe {C_ZNK5QLine2dyEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -415,7 +414,7 @@ impl<'a> /*trait*/ QLine_y1<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QLine2y1Ev()};
     let mut ret = unsafe {C_ZNK5QLine2y1Ev(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -580,7 +579,7 @@ impl<'a> /*trait*/ QLine_x1<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QLine2x1Ev()};
     let mut ret = unsafe {C_ZNK5QLine2x1Ev(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -742,7 +741,7 @@ impl<'a> /*trait*/ QLineF_x1<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLineF2x1Ev()};
     let mut ret = unsafe {C_ZNK6QLineF2x1Ev(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -765,7 +764,7 @@ impl<'a> /*trait*/ QLineF_angle<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLineF5angleEv()};
     let mut ret = unsafe {C_ZNK6QLineF5angleEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -817,7 +816,7 @@ impl<'a> /*trait*/ QLineF_length<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLineF6lengthEv()};
     let mut ret = unsafe {C_ZNK6QLineF6lengthEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -878,7 +877,7 @@ impl<'a> /*trait*/ QLineF_x2<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLineF2x2Ev()};
     let mut ret = unsafe {C_ZNK6QLineF2x2Ev(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -912,7 +911,7 @@ impl<'a> /*trait*/ QLineF_dx<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLineF2dxEv()};
     let mut ret = unsafe {C_ZNK6QLineF2dxEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1070,7 +1069,7 @@ impl<'a> /*trait*/ QLineF_y2<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLineF2y2Ev()};
     let mut ret = unsafe {C_ZNK6QLineF2y2Ev(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1111,7 +1110,7 @@ impl<'a> /*trait*/ QLineF_dy<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLineF2dyEv()};
     let mut ret = unsafe {C_ZNK6QLineF2dyEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1158,7 +1157,7 @@ impl<'a> /*trait*/ QLineF_isNull<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLineF6isNullEv()};
     let mut ret = unsafe {C_ZNK6QLineF6isNullEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1181,7 +1180,7 @@ impl<'a> /*trait*/ QLineF_y1<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLineF2y1Ev()};
     let mut ret = unsafe {C_ZNK6QLineF2y1Ev(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1205,7 +1204,7 @@ impl<'a> /*trait*/ QLineF_angleTo<f64> for (&'a QLineF) {
     // unsafe{_ZNK6QLineF7angleToERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK6QLineF7angleToERKS_(rsthis.qclsinst, arg0)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1305,7 +1304,7 @@ impl<'a> /*trait*/ QLineF_angle<f64> for (&'a QLineF) {
     // unsafe{_ZNK6QLineF5angleERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK6QLineF5angleERKS_(rsthis.qclsinst, arg0)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }

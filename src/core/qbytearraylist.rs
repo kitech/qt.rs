@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qbytearraylist.h
 // dst-file: /src/core/qbytearraylist.rs
 //
@@ -19,7 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qbytearray::QByteArray; // 773
+use super::qbytearray::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -29,7 +29,7 @@ use super::qbytearray::QByteArray; // 773
 // #[link(name = "QtInline")]
 
 extern {
-  fn QListSpecialMethods_QByteArray__Class_Size() -> c_int;
+  fn QListSpecialMethodsLQByteArrayG_Class_Size() -> c_int;
   // proto:  QByteArray QListSpecialMethods<QByteArray>::join(char sep);
   fn C_ZNK19QListSpecialMethodsI10QByteArrayE4joinEc(qthis: u64 /* *mut c_void*/, arg0: c_char) -> *mut c_void;
   // proto:  QByteArray QListSpecialMethods<QByteArray>::join();
@@ -39,33 +39,33 @@ extern {
 } // <= ext block end
 
 // body block begin =>
-// class sizeof(QListSpecialMethods_QByteArray_)=1
+// class sizeof(QListSpecialMethodsLQByteArrayG)=1
 #[derive(Default)]
-pub struct QListSpecialMethods_QByteArray_ {
+pub struct QListSpecialMethodsLQByteArrayG {
   // qbase: None,
   pub qclsinst: u64 /* *mut c_void*/,
 }
 
-impl /*struct*/ QListSpecialMethods_QByteArray_ {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QListSpecialMethods_QByteArray_ {
-    return QListSpecialMethods_QByteArray_{qclsinst: qthis, ..Default::default()};
+impl /*struct*/ QListSpecialMethodsLQByteArrayG {
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QListSpecialMethodsLQByteArrayG {
+    return QListSpecialMethodsLQByteArrayG{qclsinst: qthis, ..Default::default()};
   }
 }
   // proto:  QByteArray QListSpecialMethods<QByteArray>::join(char sep);
-impl /*struct*/ QListSpecialMethods_QByteArray_ {
-  pub fn join<RetType, T: QListSpecialMethods_QByteArray__join<RetType>>(& self,  overload_args: T) -> RetType {
+impl /*struct*/ QListSpecialMethodsLQByteArrayG {
+  pub fn join<RetType, T: QListSpecialMethodsLQByteArrayG_join<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.join(self);
     // return 1;
   }
 }
 
-pub trait QListSpecialMethods_QByteArray__join<RetType> {
-  fn join(self , rsthis: & QListSpecialMethods_QByteArray_) -> RetType;
+pub trait QListSpecialMethodsLQByteArrayG_join<RetType> {
+  fn join(self , rsthis: & QListSpecialMethodsLQByteArrayG) -> RetType;
 }
 
   // proto:  QByteArray QListSpecialMethods<QByteArray>::join(char sep);
-impl<'a> /*trait*/ QListSpecialMethods_QByteArray__join<QByteArray> for (i8) {
-  fn join(self , rsthis: & QListSpecialMethods_QByteArray_) -> QByteArray {
+impl<'a> /*trait*/ QListSpecialMethodsLQByteArrayG_join<QByteArray> for (i8) {
+  fn join(self , rsthis: & QListSpecialMethodsLQByteArrayG) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QListSpecialMethodsI10QByteArrayE4joinEc()};
     let arg0 = self  as c_char;
@@ -77,8 +77,8 @@ impl<'a> /*trait*/ QListSpecialMethods_QByteArray__join<QByteArray> for (i8) {
 }
 
   // proto:  QByteArray QListSpecialMethods<QByteArray>::join();
-impl<'a> /*trait*/ QListSpecialMethods_QByteArray__join<QByteArray> for () {
-  fn join(self , rsthis: & QListSpecialMethods_QByteArray_) -> QByteArray {
+impl<'a> /*trait*/ QListSpecialMethodsLQByteArrayG_join<QByteArray> for () {
+  fn join(self , rsthis: & QListSpecialMethodsLQByteArrayG) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QListSpecialMethodsI10QByteArrayE4joinEv()};
     let mut ret = unsafe {C_ZNK19QListSpecialMethodsI10QByteArrayE4joinEv(rsthis.qclsinst)};
@@ -89,8 +89,8 @@ impl<'a> /*trait*/ QListSpecialMethods_QByteArray__join<QByteArray> for () {
 }
 
   // proto:  QByteArray QListSpecialMethods<QByteArray>::join(const QByteArray & sep);
-impl<'a> /*trait*/ QListSpecialMethods_QByteArray__join<QByteArray> for (&'a QByteArray) {
-  fn join(self , rsthis: & QListSpecialMethods_QByteArray_) -> QByteArray {
+impl<'a> /*trait*/ QListSpecialMethodsLQByteArrayG_join<QByteArray> for (&'a QByteArray) {
+  fn join(self , rsthis: & QListSpecialMethodsLQByteArrayG) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QListSpecialMethodsI10QByteArrayE4joinERKS0_()};
     let arg0 = self.qclsinst  as *mut c_void;

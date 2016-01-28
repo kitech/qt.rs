@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qvariantanimation.h
 // dst-file: /src/core/qvariantanimation.rs
 //
@@ -18,12 +18,13 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qabstractanimation::QAbstractAnimation; // 773
+use super::qabstractanimation::*; // 773
 use std::ops::Deref;
-use super::qvariant::QVariant; // 773
-use super::qobjectdefs::QMetaObject; // 773
-use super::qeasingcurve::QEasingCurve; // 773
-use super::qobject::QObject; // 773
+use super::qvariant::*; // 773
+// use super::qvector::*; // 775
+use super::qobjectdefs::*; // 773
+use super::qeasingcurve::*; // 773
+use super::qobject::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -49,7 +50,7 @@ extern {
   // proto:  int QVariantAnimation::duration();
   fn C_ZNK17QVariantAnimation8durationEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  KeyValues QVariantAnimation::keyValues();
-  fn C_ZNK17QVariantAnimation9keyValuesEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK17QVariantAnimation9keyValuesEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QVariantAnimation::setStartValue(const QVariant & value);
   fn C_ZN17QVariantAnimation13setStartValueERK8QVariant(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QVariant QVariantAnimation::startValue();
@@ -253,7 +254,7 @@ impl<'a> /*trait*/ QVariantAnimation_duration<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QVariantAnimation8durationEv()};
     let mut ret = unsafe {C_ZNK17QVariantAnimation8durationEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -271,11 +272,12 @@ pub trait QVariantAnimation_keyValues<RetType> {
 }
 
   // proto:  KeyValues QVariantAnimation::keyValues();
-impl<'a> /*trait*/ QVariantAnimation_keyValues<()> for () {
-  fn keyValues(self , rsthis: & QVariantAnimation) -> () {
+impl<'a> /*trait*/ QVariantAnimation_keyValues<u64> for () {
+  fn keyValues(self , rsthis: & QVariantAnimation) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QVariantAnimation9keyValuesEv()};
-     unsafe {C_ZNK17QVariantAnimation9keyValuesEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK17QVariantAnimation9keyValuesEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }

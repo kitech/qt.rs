@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qjsondocument.h
 // dst-file: /src/core/qjsondocument.rs
 //
@@ -19,11 +19,11 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qjsonobject::QJsonObject; // 773
-use super::qvariant::QVariant; // 773
-use super::qjsonarray::QJsonArray; // 773
-use super::qbytearray::QByteArray; // 773
-use super::qstring::QString; // 773
+use super::qjsonobject::*; // 773
+use super::qvariant::*; // 773
+use super::qjsonarray::*; // 773
+use super::qbytearray::*; // 773
+use super::qstring::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -200,7 +200,7 @@ impl<'a> /*trait*/ QJsonDocument_isNull<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QJsonDocument6isNullEv()};
     let mut ret = unsafe {C_ZNK13QJsonDocument6isNullEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -274,7 +274,7 @@ impl<'a> /*trait*/ QJsonDocument_isEmpty<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QJsonDocument7isEmptyEv()};
     let mut ret = unsafe {C_ZNK13QJsonDocument7isEmptyEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -322,7 +322,7 @@ impl<'a> /*trait*/ QJsonDocument_isObject<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QJsonDocument8isObjectEv()};
     let mut ret = unsafe {C_ZNK13QJsonDocument8isObjectEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -367,7 +367,7 @@ impl<'a> /*trait*/ QJsonDocument_isArray<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QJsonDocument7isArrayEv()};
     let mut ret = unsafe {C_ZNK13QJsonDocument7isArrayEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

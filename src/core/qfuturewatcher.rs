@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qfuturewatcher.h
 // dst-file: /src/core/qfuturewatcher.rs
 //
@@ -18,12 +18,14 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qobject::QObject; // 773
+use super::qobject::*; // 773
 use std::ops::Deref;
-use super::qobjectdefs::QMetaObject; // 773
-use super::qcoreevent::QEvent; // 773
-use super::qstring::QString; // 773
+use super::qobjectdefs::*; // 773
+use super::qcoreevent::*; // 773
+use super::qstring::*; // 773
 // use super::qfuturewatcher::QFutureWatcherBase; // 773
+// use super::qfuture::*; // 775
+use super::qfuture::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -72,11 +74,11 @@ extern {
   fn C_ZN18QFutureWatcherBase12togglePausedEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QFutureWatcherBase::waitForFinished();
   fn C_ZN18QFutureWatcherBase15waitForFinishedEv(qthis: u64 /* *mut c_void*/);
-  fn QFutureWatcher_void__Class_Size() -> c_int;
+  fn QFutureWatcherLvoidG_Class_Size() -> c_int;
   // proto:  void QFutureWatcher<void>::QFutureWatcher(QObject * _parent);
   fn C_ZN14QFutureWatcherIvEC2EP7QObject(arg0: *mut c_void) -> u64;
   // proto:  QFuture<void> QFutureWatcher<void>::future();
-  fn C_ZNK14QFutureWatcherIvE6futureEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK14QFutureWatcherIvE6futureEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QFutureWatcher<void>::~QFutureWatcher();
   fn C_ZN14QFutureWatcherIvED2Ev(qthis: u64 /* *mut c_void*/);
   fn QFutureWatcherBase_SlotProxy_connect__ZN18QFutureWatcherBase8finishedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
@@ -109,9 +111,9 @@ pub struct QFutureWatcherBase {
   pub _progressTextChanged: QFutureWatcherBase_progressTextChanged_signal,
 }
 
-// class sizeof(QFutureWatcher_void_)=1
+// class sizeof(QFutureWatcherLvoidG)=1
 #[derive(Default)]
-pub struct QFutureWatcher_void_ {
+pub struct QFutureWatcherLvoidG {
   qbase: QFutureWatcherBase,
   pub qclsinst: u64 /* *mut c_void*/,
 }
@@ -151,7 +153,7 @@ impl<'a> /*trait*/ QFutureWatcherBase_isRunning<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QFutureWatcherBase9isRunningEv()};
     let mut ret = unsafe {C_ZNK18QFutureWatcherBase9isRunningEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -197,7 +199,7 @@ impl<'a> /*trait*/ QFutureWatcherBase_progressMinimum<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QFutureWatcherBase15progressMinimumEv()};
     let mut ret = unsafe {C_ZNK18QFutureWatcherBase15progressMinimumEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -266,7 +268,7 @@ impl<'a> /*trait*/ QFutureWatcherBase_isFinished<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QFutureWatcherBase10isFinishedEv()};
     let mut ret = unsafe {C_ZNK18QFutureWatcherBase10isFinishedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -289,7 +291,7 @@ impl<'a> /*trait*/ QFutureWatcherBase_progressMaximum<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QFutureWatcherBase15progressMaximumEv()};
     let mut ret = unsafe {C_ZNK18QFutureWatcherBase15progressMaximumEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -313,7 +315,7 @@ impl<'a> /*trait*/ QFutureWatcherBase_event<i8> for (&'a QEvent) {
     // unsafe{_ZN18QFutureWatcherBase5eventEP6QEvent()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN18QFutureWatcherBase5eventEP6QEvent(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -336,7 +338,7 @@ impl<'a> /*trait*/ QFutureWatcherBase_isCanceled<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QFutureWatcherBase10isCanceledEv()};
     let mut ret = unsafe {C_ZNK18QFutureWatcherBase10isCanceledEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -359,7 +361,7 @@ impl<'a> /*trait*/ QFutureWatcherBase_progressValue<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QFutureWatcherBase13progressValueEv()};
     let mut ret = unsafe {C_ZNK18QFutureWatcherBase13progressValueEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -382,7 +384,7 @@ impl<'a> /*trait*/ QFutureWatcherBase_isStarted<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QFutureWatcherBase9isStartedEv()};
     let mut ret = unsafe {C_ZNK18QFutureWatcherBase9isStartedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -450,7 +452,7 @@ impl<'a> /*trait*/ QFutureWatcherBase_isPaused<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QFutureWatcherBase8isPausedEv()};
     let mut ret = unsafe {C_ZNK18QFutureWatcherBase8isPausedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -573,88 +575,90 @@ impl<'a> /*trait*/ QFutureWatcherBase_waitForFinished<()> for () {
   }
 }
 
-impl /*struct*/ QFutureWatcher_void_ {
-  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QFutureWatcher_void_ {
-    return QFutureWatcher_void_{qbase: QFutureWatcherBase::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+impl /*struct*/ QFutureWatcherLvoidG {
+  pub fn inheritFrom(qthis: u64 /* *mut c_void*/) -> QFutureWatcherLvoidG {
+    return QFutureWatcherLvoidG{qbase: QFutureWatcherBase::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
   }
 }
-impl Deref for QFutureWatcher_void_ {
+impl Deref for QFutureWatcherLvoidG {
   type Target = QFutureWatcherBase;
 
   fn deref(&self) -> &QFutureWatcherBase {
     return & self.qbase;
   }
 }
-impl AsRef<QFutureWatcherBase> for QFutureWatcher_void_ {
+impl AsRef<QFutureWatcherBase> for QFutureWatcherLvoidG {
   fn as_ref(& self) -> & QFutureWatcherBase {
     return & self.qbase;
   }
 }
   // proto:  void QFutureWatcher<void>::QFutureWatcher(QObject * _parent);
-impl /*struct*/ QFutureWatcher_void_ {
-  pub fn new<T: QFutureWatcher_void__new>(value: T) -> QFutureWatcher_void_ {
+impl /*struct*/ QFutureWatcherLvoidG {
+  pub fn new<T: QFutureWatcherLvoidG_new>(value: T) -> QFutureWatcherLvoidG {
     let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QFutureWatcher_void__new {
-  fn new(self) -> QFutureWatcher_void_;
+pub trait QFutureWatcherLvoidG_new {
+  fn new(self) -> QFutureWatcherLvoidG;
 }
 
   // proto:  void QFutureWatcher<void>::QFutureWatcher(QObject * _parent);
-impl<'a> /*trait*/ QFutureWatcher_void__new for (&'a QObject) {
-  fn new(self) -> QFutureWatcher_void_ {
+impl<'a> /*trait*/ QFutureWatcherLvoidG_new for (&'a QObject) {
+  fn new(self) -> QFutureWatcherLvoidG {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QFutureWatcherIvEC2EP7QObject()};
-    let ctysz: c_int = unsafe{QFutureWatcher_void__Class_Size()};
+    let ctysz: c_int = unsafe{QFutureWatcherLvoidG_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN14QFutureWatcherIvEC2EP7QObject(arg0)};
-    let rsthis = QFutureWatcher_void_{qbase: QFutureWatcherBase::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+    let rsthis = QFutureWatcherLvoidG{qbase: QFutureWatcherBase::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
   }
 }
 
   // proto:  QFuture<void> QFutureWatcher<void>::future();
-impl /*struct*/ QFutureWatcher_void_ {
-  pub fn future<RetType, T: QFutureWatcher_void__future<RetType>>(& self,  overload_args: T) -> RetType {
+impl /*struct*/ QFutureWatcherLvoidG {
+  pub fn future<RetType, T: QFutureWatcherLvoidG_future<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.future(self);
     // return 1;
   }
 }
 
-pub trait QFutureWatcher_void__future<RetType> {
-  fn future(self , rsthis: & QFutureWatcher_void_) -> RetType;
+pub trait QFutureWatcherLvoidG_future<RetType> {
+  fn future(self , rsthis: & QFutureWatcherLvoidG) -> RetType;
 }
 
   // proto:  QFuture<void> QFutureWatcher<void>::future();
-impl<'a> /*trait*/ QFutureWatcher_void__future<()> for () {
-  fn future(self , rsthis: & QFutureWatcher_void_) -> () {
+impl<'a> /*trait*/ QFutureWatcherLvoidG_future<QFutureLvoidG> for () {
+  fn future(self , rsthis: & QFutureWatcherLvoidG) -> QFutureLvoidG {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QFutureWatcherIvE6futureEv()};
-     unsafe {C_ZNK14QFutureWatcherIvE6futureEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QFutureWatcherIvE6futureEv(rsthis.qclsinst)};
+    let mut ret1 = QFutureLvoidG::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
 
   // proto:  void QFutureWatcher<void>::~QFutureWatcher();
-impl /*struct*/ QFutureWatcher_void_ {
-  pub fn free<RetType, T: QFutureWatcher_void__free<RetType>>(& self,  overload_args: T) -> RetType {
+impl /*struct*/ QFutureWatcherLvoidG {
+  pub fn free<RetType, T: QFutureWatcherLvoidG_free<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QFutureWatcher_void__free<RetType> {
-  fn free(self , rsthis: & QFutureWatcher_void_) -> RetType;
+pub trait QFutureWatcherLvoidG_free<RetType> {
+  fn free(self , rsthis: & QFutureWatcherLvoidG) -> RetType;
 }
 
   // proto:  void QFutureWatcher<void>::~QFutureWatcher();
-impl<'a> /*trait*/ QFutureWatcher_void__free<()> for () {
-  fn free(self , rsthis: & QFutureWatcher_void_) -> () {
+impl<'a> /*trait*/ QFutureWatcherLvoidG_free<()> for () {
+  fn free(self , rsthis: & QFutureWatcherLvoidG) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QFutureWatcherIvED2Ev()};
      unsafe {C_ZN14QFutureWatcherIvED2Ev(rsthis.qclsinst)};

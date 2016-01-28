@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qabstractitemmodel.h
 // dst-file: /src/core/qabstractitemmodel.rs
 //
@@ -20,12 +20,15 @@ use self::libc::*;
 // use block begin =>
 use std::ops::Deref;
 // use super::qabstractitemmodel::QAbstractItemModel; // 773
-use super::qvariant::QVariant; // 773
+use super::qvariant::*; // 773
 // use super::qabstractitemmodel::QModelIndex; // 773
-use super::qobject::QObject; // 773
-use super::qobjectdefs::QMetaObject; // 773
-use super::qmimedata::QMimeData; // 773
-use super::qsize::QSize; // 773
+use super::qobject::*; // 773
+use super::qobjectdefs::*; // 773
+use super::qmimedata::*; // 773
+// use super::qhash::*; // 775
+use super::qsize::*; // 773
+// use super::qmap::*; // 775
+use super::qstringlist::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -45,7 +48,7 @@ extern {
   // proto:  QModelIndex QModelIndex::child(int row, int column);
   fn C_ZNK11QModelIndex5childEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> *mut c_void;
   // proto:  void * QModelIndex::internalPointer();
-  fn C_ZNK11QModelIndex15internalPointerEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK11QModelIndex15internalPointerEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QModelIndex::isValid();
   fn C_ZNK11QModelIndex7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QModelIndex QModelIndex::parent();
@@ -68,7 +71,7 @@ extern {
   // proto:  void QPersistentModelIndex::QPersistentModelIndex(const QPersistentModelIndex & other);
   fn C_ZN21QPersistentModelIndexC2ERKS_(arg0: *mut c_void) -> u64;
   // proto:  void * QPersistentModelIndex::internalPointer();
-  fn C_ZNK21QPersistentModelIndex15internalPointerEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK21QPersistentModelIndex15internalPointerEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QPersistentModelIndex::row();
   fn C_ZNK21QPersistentModelIndex3rowEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  quintptr QPersistentModelIndex::internalId();
@@ -112,7 +115,7 @@ extern {
   // proto:  bool QAbstractItemModel::hasIndex(int row, int column, const QModelIndex & parent);
   fn C_ZNK18QAbstractItemModel8hasIndexEiiRK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: *mut c_void) -> c_char;
   // proto:  QHash<int, QByteArray> QAbstractItemModel::roleNames();
-  fn C_ZNK18QAbstractItemModel9roleNamesEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK18QAbstractItemModel9roleNamesEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QAbstractItemModel::moveColumn(const QModelIndex & sourceParent, int sourceColumn, const QModelIndex & destinationParent, int destinationChild);
   fn C_ZN18QAbstractItemModel10moveColumnERK11QModelIndexiS2_i(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void, arg3: c_int) -> c_char;
   // proto:  void QAbstractItemModel::fetchMore(const QModelIndex & parent);
@@ -152,9 +155,9 @@ extern {
   // proto:  bool QAbstractItemModel::moveColumns(const QModelIndex & sourceParent, int sourceColumn, int count, const QModelIndex & destinationParent, int destinationChild);
   fn C_ZN18QAbstractItemModel11moveColumnsERK11QModelIndexiiS2_i(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int, arg2: c_int, arg3: *mut c_void, arg4: c_int) -> c_char;
   // proto:  QMap<int, QVariant> QAbstractItemModel::itemData(const QModelIndex & index);
-  fn C_ZNK18QAbstractItemModel8itemDataERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK18QAbstractItemModel8itemDataERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QStringList QAbstractItemModel::mimeTypes();
-  fn C_ZNK18QAbstractItemModel9mimeTypesEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK18QAbstractItemModel9mimeTypesEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QModelIndex QAbstractItemModel::parent(const QModelIndex & child);
   fn C_ZNK18QAbstractItemModel6parentERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QModelIndex QAbstractItemModel::buddy(const QModelIndex & index);
@@ -284,7 +287,7 @@ impl<'a> /*trait*/ QModelIndex_column<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QModelIndex6columnEv()};
     let mut ret = unsafe {C_ZNK11QModelIndex6columnEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -307,7 +310,7 @@ impl<'a> /*trait*/ QModelIndex_internalId<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QModelIndex10internalIdEv()};
     let mut ret = unsafe {C_ZNK11QModelIndex10internalIdEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -351,11 +354,12 @@ pub trait QModelIndex_internalPointer<RetType> {
 }
 
   // proto:  void * QModelIndex::internalPointer();
-impl<'a> /*trait*/ QModelIndex_internalPointer<()> for () {
-  fn internalPointer(self , rsthis: & QModelIndex) -> () {
+impl<'a> /*trait*/ QModelIndex_internalPointer<*mut c_void> for () {
+  fn internalPointer(self , rsthis: & QModelIndex) -> *mut c_void {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QModelIndex15internalPointerEv()};
-     unsafe {C_ZNK11QModelIndex15internalPointerEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QModelIndex15internalPointerEv(rsthis.qclsinst)};
+    return ret as *mut c_void; // 1
     // return 1;
   }
 }
@@ -378,7 +382,7 @@ impl<'a> /*trait*/ QModelIndex_isValid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QModelIndex7isValidEv()};
     let mut ret = unsafe {C_ZNK11QModelIndex7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -500,7 +504,7 @@ impl<'a> /*trait*/ QModelIndex_row<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QModelIndex3rowEv()};
     let mut ret = unsafe {C_ZNK11QModelIndex3rowEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -626,11 +630,12 @@ pub trait QPersistentModelIndex_internalPointer<RetType> {
 }
 
   // proto:  void * QPersistentModelIndex::internalPointer();
-impl<'a> /*trait*/ QPersistentModelIndex_internalPointer<()> for () {
-  fn internalPointer(self , rsthis: & QPersistentModelIndex) -> () {
+impl<'a> /*trait*/ QPersistentModelIndex_internalPointer<*mut c_void> for () {
+  fn internalPointer(self , rsthis: & QPersistentModelIndex) -> *mut c_void {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QPersistentModelIndex15internalPointerEv()};
-     unsafe {C_ZNK21QPersistentModelIndex15internalPointerEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK21QPersistentModelIndex15internalPointerEv(rsthis.qclsinst)};
+    return ret as *mut c_void; // 1
     // return 1;
   }
 }
@@ -653,7 +658,7 @@ impl<'a> /*trait*/ QPersistentModelIndex_row<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QPersistentModelIndex3rowEv()};
     let mut ret = unsafe {C_ZNK21QPersistentModelIndex3rowEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -676,7 +681,7 @@ impl<'a> /*trait*/ QPersistentModelIndex_internalId<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QPersistentModelIndex10internalIdEv()};
     let mut ret = unsafe {C_ZNK21QPersistentModelIndex10internalIdEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -774,7 +779,7 @@ impl<'a> /*trait*/ QPersistentModelIndex_column<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QPersistentModelIndex6columnEv()};
     let mut ret = unsafe {C_ZNK21QPersistentModelIndex6columnEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -846,7 +851,7 @@ impl<'a> /*trait*/ QPersistentModelIndex_isValid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QPersistentModelIndex7isValidEv()};
     let mut ret = unsafe {C_ZNK21QPersistentModelIndex7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1034,7 +1039,7 @@ impl<'a> /*trait*/ QAbstractItemModel_removeColumns<i8> for (i32, i32, &'a QMode
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN18QAbstractItemModel13removeColumnsEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1080,7 +1085,7 @@ impl<'a> /*trait*/ QAbstractItemModel_canFetchMore<i8> for (&'a QModelIndex) {
     // unsafe{_ZNK18QAbstractItemModel12canFetchMoreERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK18QAbstractItemModel12canFetchMoreERK11QModelIndex(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1103,7 +1108,7 @@ impl<'a> /*trait*/ QAbstractItemModel_submit<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QAbstractItemModel6submitEv()};
     let mut ret = unsafe {C_ZN18QAbstractItemModel6submitEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1129,7 +1134,7 @@ impl<'a> /*trait*/ QAbstractItemModel_hasIndex<i8> for (i32, i32, &'a QModelInde
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK18QAbstractItemModel8hasIndexEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1147,11 +1152,12 @@ pub trait QAbstractItemModel_roleNames<RetType> {
 }
 
   // proto:  QHash<int, QByteArray> QAbstractItemModel::roleNames();
-impl<'a> /*trait*/ QAbstractItemModel_roleNames<()> for () {
-  fn roleNames(self , rsthis: & QAbstractItemModel) -> () {
+impl<'a> /*trait*/ QAbstractItemModel_roleNames<u64> for () {
+  fn roleNames(self , rsthis: & QAbstractItemModel) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QAbstractItemModel9roleNamesEv()};
-     unsafe {C_ZNK18QAbstractItemModel9roleNamesEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK18QAbstractItemModel9roleNamesEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -1178,7 +1184,7 @@ impl<'a> /*trait*/ QAbstractItemModel_moveColumn<i8> for (&'a QModelIndex, i32, 
     let arg2 = self.2.qclsinst  as *mut c_void;
     let arg3 = self.3  as c_int;
     let mut ret = unsafe {C_ZN18QAbstractItemModel10moveColumnERK11QModelIndexiS2_i(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1227,7 +1233,7 @@ impl<'a> /*trait*/ QAbstractItemModel_insertRows<i8> for (i32, i32, &'a QModelIn
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN18QAbstractItemModel10insertRowsEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1332,7 +1338,7 @@ impl<'a> /*trait*/ QAbstractItemModel_insertRow<i8> for (i32, &'a QModelIndex) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN18QAbstractItemModel9insertRowEiRK11QModelIndex(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1381,7 +1387,7 @@ impl<'a> /*trait*/ QAbstractItemModel_removeRow<i8> for (i32, &'a QModelIndex) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN18QAbstractItemModel9removeRowEiRK11QModelIndex(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1407,7 +1413,7 @@ impl<'a> /*trait*/ QAbstractItemModel_setData<i8> for (&'a QModelIndex, &'a QVar
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2  as c_int;
     let mut ret = unsafe {C_ZN18QAbstractItemModel7setDataERK11QModelIndexRK8QVarianti(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1431,7 +1437,7 @@ impl<'a> /*trait*/ QAbstractItemModel_rowCount<i32> for (&'a QModelIndex) {
     // unsafe{_ZNK18QAbstractItemModel8rowCountERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK18QAbstractItemModel8rowCountERK11QModelIndex(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1457,7 +1463,7 @@ impl<'a> /*trait*/ QAbstractItemModel_removeRows<i8> for (i32, i32, &'a QModelIn
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN18QAbstractItemModel10removeRowsEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1481,7 +1487,7 @@ impl<'a> /*trait*/ QAbstractItemModel_hasChildren<i8> for (&'a QModelIndex) {
     // unsafe{_ZNK18QAbstractItemModel11hasChildrenERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK18QAbstractItemModel11hasChildrenERK11QModelIndex(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1508,7 +1514,7 @@ impl<'a> /*trait*/ QAbstractItemModel_moveRow<i8> for (&'a QModelIndex, i32, &'a
     let arg2 = self.2.qclsinst  as *mut c_void;
     let arg3 = self.3  as c_int;
     let mut ret = unsafe {C_ZN18QAbstractItemModel7moveRowERK11QModelIndexiS2_i(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1555,7 +1561,7 @@ impl<'a> /*trait*/ QAbstractItemModel_removeColumn<i8> for (i32, &'a QModelIndex
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN18QAbstractItemModel12removeColumnEiRK11QModelIndex(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1581,7 +1587,7 @@ impl<'a> /*trait*/ QAbstractItemModel_insertColumns<i8> for (i32, i32, &'a QMode
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN18QAbstractItemModel13insertColumnsEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1606,7 +1612,7 @@ impl<'a> /*trait*/ QAbstractItemModel_insertColumn<i8> for (i32, &'a QModelIndex
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN18QAbstractItemModel12insertColumnEiRK11QModelIndex(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1634,7 +1640,7 @@ impl<'a> /*trait*/ QAbstractItemModel_moveColumns<i8> for (&'a QModelIndex, i32,
     let arg3 = self.3.qclsinst  as *mut c_void;
     let arg4 = self.4  as c_int;
     let mut ret = unsafe {C_ZN18QAbstractItemModel11moveColumnsERK11QModelIndexiiS2_i(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1652,12 +1658,13 @@ pub trait QAbstractItemModel_itemData<RetType> {
 }
 
   // proto:  QMap<int, QVariant> QAbstractItemModel::itemData(const QModelIndex & index);
-impl<'a> /*trait*/ QAbstractItemModel_itemData<()> for (&'a QModelIndex) {
-  fn itemData(self , rsthis: & QAbstractItemModel) -> () {
+impl<'a> /*trait*/ QAbstractItemModel_itemData<u64> for (&'a QModelIndex) {
+  fn itemData(self , rsthis: & QAbstractItemModel) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QAbstractItemModel8itemDataERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZNK18QAbstractItemModel8itemDataERK11QModelIndex(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK18QAbstractItemModel8itemDataERK11QModelIndex(rsthis.qclsinst, arg0)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -1675,11 +1682,13 @@ pub trait QAbstractItemModel_mimeTypes<RetType> {
 }
 
   // proto:  QStringList QAbstractItemModel::mimeTypes();
-impl<'a> /*trait*/ QAbstractItemModel_mimeTypes<()> for () {
-  fn mimeTypes(self , rsthis: & QAbstractItemModel) -> () {
+impl<'a> /*trait*/ QAbstractItemModel_mimeTypes<QStringList> for () {
+  fn mimeTypes(self , rsthis: & QAbstractItemModel) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QAbstractItemModel9mimeTypesEv()};
-     unsafe {C_ZNK18QAbstractItemModel9mimeTypesEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK18QAbstractItemModel9mimeTypesEv(rsthis.qclsinst)};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -1753,7 +1762,7 @@ impl<'a> /*trait*/ QAbstractItemModel_columnCount<i32> for (&'a QModelIndex) {
     // unsafe{_ZNK18QAbstractItemModel11columnCountERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK18QAbstractItemModel11columnCountERK11QModelIndex(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1834,7 +1843,7 @@ impl<'a> /*trait*/ QAbstractItemModel_moveRows<i8> for (&'a QModelIndex, i32, i3
     let arg3 = self.3.qclsinst  as *mut c_void;
     let arg4 = self.4  as c_int;
     let mut ret = unsafe {C_ZN18QAbstractItemModel8moveRowsERK11QModelIndexiiS2_i(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

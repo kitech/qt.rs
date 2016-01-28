@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qtimeline.h
 // dst-file: /src/core/qtimeline.rs
 //
@@ -18,10 +18,10 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qobject::QObject; // 773
+use super::qobject::*; // 773
 use std::ops::Deref;
-use super::qobjectdefs::QMetaObject; // 773
-use super::qeasingcurve::QEasingCurve; // 773
+use super::qobjectdefs::*; // 773
+use super::qeasingcurve::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -157,7 +157,7 @@ impl<'a> /*trait*/ QTimeLine_duration<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTimeLine8durationEv()};
     let mut ret = unsafe {C_ZNK9QTimeLine8durationEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -180,7 +180,7 @@ impl<'a> /*trait*/ QTimeLine_currentFrame<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTimeLine12currentFrameEv()};
     let mut ret = unsafe {C_ZNK9QTimeLine12currentFrameEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -318,7 +318,7 @@ impl<'a> /*trait*/ QTimeLine_loopCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTimeLine9loopCountEv()};
     let mut ret = unsafe {C_ZNK9QTimeLine9loopCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -438,7 +438,7 @@ impl<'a> /*trait*/ QTimeLine_startFrame<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTimeLine10startFrameEv()};
     let mut ret = unsafe {C_ZNK9QTimeLine10startFrameEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -484,7 +484,7 @@ impl<'a> /*trait*/ QTimeLine_updateInterval<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTimeLine14updateIntervalEv()};
     let mut ret = unsafe {C_ZNK9QTimeLine14updateIntervalEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -553,7 +553,7 @@ impl<'a> /*trait*/ QTimeLine_currentTime<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTimeLine11currentTimeEv()};
     let mut ret = unsafe {C_ZNK9QTimeLine11currentTimeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -621,7 +621,7 @@ impl<'a> /*trait*/ QTimeLine_endFrame<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTimeLine8endFrameEv()};
     let mut ret = unsafe {C_ZNK9QTimeLine8endFrameEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -668,7 +668,7 @@ impl<'a> /*trait*/ QTimeLine_frameForTime<i32> for (i32) {
     // unsafe{_ZNK9QTimeLine12frameForTimeEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK9QTimeLine12frameForTimeEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -716,7 +716,7 @@ impl<'a> /*trait*/ QTimeLine_valueForTime<f64> for (i32) {
     // unsafe{_ZNK9QTimeLine12valueForTimeEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK9QTimeLine12valueForTimeEi(rsthis.qclsinst, arg0)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -739,7 +739,7 @@ impl<'a> /*trait*/ QTimeLine_currentValue<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTimeLine12currentValueEv()};
     let mut ret = unsafe {C_ZNK9QTimeLine12currentValueEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }

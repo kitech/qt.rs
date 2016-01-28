@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qiodevice.h
 // dst-file: /src/core/qiodevice.rs
 //
@@ -18,11 +18,11 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qobject::QObject; // 773
+use super::qobject::*; // 773
 use std::ops::Deref;
-use super::qstring::QString; // 773
-use super::qbytearray::QByteArray; // 773
-use super::qobjectdefs::QMetaObject; // 773
+use super::qstring::*; // 773
+use super::qbytearray::*; // 773
+use super::qobjectdefs::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -204,7 +204,7 @@ impl<'a> /*trait*/ QIODevice_write<i64> for (&'a QByteArray) {
     // unsafe{_ZN9QIODevice5writeERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN9QIODevice5writeERK10QByteArray(rsthis.qclsinst, arg0)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -216,7 +216,7 @@ impl<'a> /*trait*/ QIODevice_write<i64> for (&'a  String) {
     // unsafe{_ZN9QIODevice5writeEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
     let mut ret = unsafe {C_ZN9QIODevice5writeEPKc(rsthis.qclsinst, arg0)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -239,7 +239,7 @@ impl<'a> /*trait*/ QIODevice_isReadable<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QIODevice10isReadableEv()};
     let mut ret = unsafe {C_ZNK9QIODevice10isReadableEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -264,7 +264,7 @@ impl<'a> /*trait*/ QIODevice_readLine<i64> for (&'a mut String, i64) {
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as c_longlong;
     let mut ret = unsafe {C_ZN9QIODevice8readLineEPcx(rsthis.qclsinst, arg0, arg1)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -301,7 +301,7 @@ impl<'a> /*trait*/ QIODevice_waitForReadyRead<i8> for (i32) {
     // unsafe{_ZN9QIODevice16waitForReadyReadEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZN9QIODevice16waitForReadyReadEi(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -324,7 +324,7 @@ impl<'a> /*trait*/ QIODevice_size<i64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QIODevice4sizeEv()};
     let mut ret = unsafe {C_ZNK9QIODevice4sizeEv(rsthis.qclsinst)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -348,7 +348,7 @@ impl<'a> /*trait*/ QIODevice_getChar<i8> for (&'a mut String) {
     // unsafe{_ZN9QIODevice7getCharEPc()};
     let arg0 = self.as_ptr()  as *mut c_char;
     let mut ret = unsafe {C_ZN9QIODevice7getCharEPc(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -372,7 +372,7 @@ impl<'a> /*trait*/ QIODevice_putChar<i8> for (i8) {
     // unsafe{_ZN9QIODevice7putCharEc()};
     let arg0 = self  as c_char;
     let mut ret = unsafe {C_ZN9QIODevice7putCharEc(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -395,7 +395,7 @@ impl<'a> /*trait*/ QIODevice_isTextModeEnabled<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QIODevice17isTextModeEnabledEv()};
     let mut ret = unsafe {C_ZNK9QIODevice17isTextModeEnabledEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -418,7 +418,7 @@ impl<'a> /*trait*/ QIODevice_isSequential<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QIODevice12isSequentialEv()};
     let mut ret = unsafe {C_ZNK9QIODevice12isSequentialEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -441,7 +441,7 @@ impl<'a> /*trait*/ QIODevice_bytesAvailable<i64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QIODevice14bytesAvailableEv()};
     let mut ret = unsafe {C_ZNK9QIODevice14bytesAvailableEv(rsthis.qclsinst)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -454,7 +454,7 @@ impl<'a> /*trait*/ QIODevice_write<i64> for (&'a  String, i64) {
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as c_longlong;
     let mut ret = unsafe {C_ZN9QIODevice5writeEPKcx(rsthis.qclsinst, arg0, arg1)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -523,7 +523,7 @@ impl<'a> /*trait*/ QIODevice_atEnd<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QIODevice5atEndEv()};
     let mut ret = unsafe {C_ZNK9QIODevice5atEndEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -547,7 +547,7 @@ impl<'a> /*trait*/ QIODevice_seek<i8> for (i64) {
     // unsafe{_ZN9QIODevice4seekEx()};
     let arg0 = self  as c_longlong;
     let mut ret = unsafe {C_ZN9QIODevice4seekEx(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -570,7 +570,7 @@ impl<'a> /*trait*/ QIODevice_pos<i64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QIODevice3posEv()};
     let mut ret = unsafe {C_ZNK9QIODevice3posEv(rsthis.qclsinst)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -620,7 +620,7 @@ impl<'a> /*trait*/ QIODevice_peek<i64> for (&'a mut String, i64) {
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as c_longlong;
     let mut ret = unsafe {C_ZN9QIODevice4peekEPcx(rsthis.qclsinst, arg0, arg1)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -633,7 +633,7 @@ impl<'a> /*trait*/ QIODevice_read<i64> for (&'a mut String, i64) {
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as c_longlong;
     let mut ret = unsafe {C_ZN9QIODevice4readEPcx(rsthis.qclsinst, arg0, arg1)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -657,7 +657,7 @@ impl<'a> /*trait*/ QIODevice_waitForBytesWritten<i8> for (i32) {
     // unsafe{_ZN9QIODevice19waitForBytesWrittenEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZN9QIODevice19waitForBytesWrittenEi(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -680,7 +680,7 @@ impl<'a> /*trait*/ QIODevice_bytesToWrite<i64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QIODevice12bytesToWriteEv()};
     let mut ret = unsafe {C_ZNK9QIODevice12bytesToWriteEv(rsthis.qclsinst)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -703,7 +703,7 @@ impl<'a> /*trait*/ QIODevice_reset<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QIODevice5resetEv()};
     let mut ret = unsafe {C_ZN9QIODevice5resetEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -726,7 +726,7 @@ impl<'a> /*trait*/ QIODevice_isWritable<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QIODevice10isWritableEv()};
     let mut ret = unsafe {C_ZNK9QIODevice10isWritableEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -851,7 +851,7 @@ impl<'a> /*trait*/ QIODevice_isOpen<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QIODevice6isOpenEv()};
     let mut ret = unsafe {C_ZNK9QIODevice6isOpenEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -874,7 +874,7 @@ impl<'a> /*trait*/ QIODevice_canReadLine<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QIODevice11canReadLineEv()};
     let mut ret = unsafe {C_ZNK9QIODevice11canReadLineEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qfactoryinterface.h
 // dst-file: /src/core/qfactoryinterface.rs
 //
@@ -19,6 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
+use super::qstringlist::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -32,7 +33,7 @@ extern {
   // proto:  void QFactoryInterface::~QFactoryInterface();
   fn C_ZN17QFactoryInterfaceD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QStringList QFactoryInterface::keys();
-  fn C_ZNK17QFactoryInterface4keysEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK17QFactoryInterface4keysEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
 } // <= ext block end
 
 // body block begin =>
@@ -83,11 +84,13 @@ pub trait QFactoryInterface_keys<RetType> {
 }
 
   // proto:  QStringList QFactoryInterface::keys();
-impl<'a> /*trait*/ QFactoryInterface_keys<()> for () {
-  fn keys(self , rsthis: & QFactoryInterface) -> () {
+impl<'a> /*trait*/ QFactoryInterface_keys<QStringList> for () {
+  fn keys(self , rsthis: & QFactoryInterface) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QFactoryInterface4keysEv()};
-     unsafe {C_ZNK17QFactoryInterface4keysEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK17QFactoryInterface4keysEv(rsthis.qclsinst)};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }

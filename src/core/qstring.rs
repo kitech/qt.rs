@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qstring.h
 // dst-file: /src/core/qstring.rs
 //
@@ -19,12 +19,12 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qchar::QChar; // 773
-use super::qregularexpression::QRegularExpression; // 773
+use super::qchar::*; // 773
+use super::qregularexpression::*; // 773
 // use super::qstring::QStringRef; // 773
-use super::qregexp::QRegExp; // 773
-use super::qbytearray::QByteArray; // 773
-use super::qregularexpression::QRegularExpressionMatch; // 773
+use super::qregexp::*; // 773
+use super::qbytearray::*; // 773
+// use super::qvector::*; // 775
 // use super::qstring::QString; // 773
 // <= use block end
 
@@ -148,7 +148,7 @@ extern {
   // proto:  QString QString::arg(const QString & a1, const QString & a2, const QString & a3);
   fn C_ZNK7QString3argERKS_S1_S1_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> *mut c_void;
   // proto:  const ushort * QString::utf16();
-  fn C_ZNK7QString5utf16Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK7QString5utf16Ev(qthis: u64 /* *mut c_void*/) -> *mut c_ushort;
   // proto:  int QString::toInt(bool * ok, int base);
   fn C_ZNK7QString5toIntEPbi(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_int) -> c_int;
   // proto:  QByteArray QString::toUtf8();
@@ -346,7 +346,7 @@ extern {
   // proto:  QString QString::arg(char a, int fieldWidth, QChar fillChar);
   fn C_ZNK7QString3argEci5QChar(qthis: u64 /* *mut c_void*/, arg0: c_char, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
   // proto:  QVector<uint> QString::toUcs4();
-  fn C_ZNK7QString6toUcs4Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK7QString6toUcs4Ev(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString & QString::remove(int i, int len);
   fn C_ZN7QString6removeEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> *mut c_void;
   // proto:  bool QString::isEmpty();
@@ -410,7 +410,7 @@ extern {
   // proto:  uchar QCharRef::row();
   fn C_ZNK8QCharRef3rowEv(qthis: u64 /* *mut c_void*/) -> c_uchar;
   // proto:  ushort & QCharRef::unicode();
-  fn C_ZN8QCharRef7unicodeEv(qthis: u64 /* *mut c_void*/) -> *mut c_ushort;
+  fn C_ZN8QCharRef7unicodeEv(qthis: u64 /* *mut c_void*/) -> c_ushort;
   // proto:  bool QCharRef::isTitleCase();
   fn C_ZNK8QCharRef11isTitleCaseEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QCharRef::isUpper();
@@ -463,7 +463,7 @@ extern {
   // proto:  QStringRef QStringRef::left(int n);
   fn C_ZNK10QStringRef4leftEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  QVector<uint> QStringRef::toUcs4();
-  fn C_ZNK10QStringRef6toUcs4Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK10QStringRef6toUcs4Ev(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QStringRef::count();
   fn C_ZNK10QStringRef5countEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QStringRef::QStringRef(const QString * string, int position, int size);
@@ -582,7 +582,7 @@ impl<'a> /*trait*/ QString_toLongLong<i64> for (&'a mut Vec<i8>, i32) {
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZNK7QString10toLongLongEPbi(rsthis.qclsinst, arg0, arg1)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -605,7 +605,7 @@ impl<'a> /*trait*/ QString_isNull<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QString6isNullEv()};
     let mut ret = unsafe {C_ZNK7QString6isNullEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -773,7 +773,7 @@ impl<'a> /*trait*/ QString_lastIndexOf<i32> for (&'a QRegularExpression, i32) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZNK7QString11lastIndexOfERK18QRegularExpressioni(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -883,7 +883,7 @@ impl<'a> /*trait*/ QString_toDouble<f64> for (&'a mut Vec<i8>) {
     // unsafe{_ZNK7QString8toDoubleEPb()};
     let arg0 = self.as_ptr()  as *mut c_char;
     let mut ret = unsafe {C_ZNK7QString8toDoubleEPb(rsthis.qclsinst, arg0)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1006,7 +1006,7 @@ impl<'a> /*trait*/ QString_toFloat<f32> for (&'a mut Vec<i8>) {
     // unsafe{_ZNK7QString7toFloatEPb()};
     let arg0 = self.as_ptr()  as *mut c_char;
     let mut ret = unsafe {C_ZNK7QString7toFloatEPb(rsthis.qclsinst, arg0)};
-    return ret as f32;
+    return ret as f32; // 1
     // return 1;
   }
 }
@@ -1030,7 +1030,7 @@ impl<'a> /*trait*/ QString_count<i32> for (&'a QRegularExpression) {
     // unsafe{_ZNK7QString5countERK18QRegularExpression()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK7QString5countERK18QRegularExpression(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1121,7 +1121,7 @@ impl<'a> /*trait*/ QString_count<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QString5countEv()};
     let mut ret = unsafe {C_ZNK7QString5countEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1185,7 +1185,7 @@ impl<'a> /*trait*/ QString_count<i32> for (&'a QRegExp) {
     // unsafe{_ZNK7QString5countERK7QRegExp()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK7QString5countERK7QRegExp(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1208,7 +1208,7 @@ impl<'a> /*trait*/ QString_size<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QString4sizeEv()};
     let mut ret = unsafe {C_ZNK7QString4sizeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1421,7 +1421,7 @@ impl<'a> /*trait*/ QString_toULong<u64> for (&'a mut Vec<i8>, i32) {
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZNK7QString7toULongEPbi(rsthis.qclsinst, arg0, arg1)};
-    return ret as u64;
+    return ret as u64; // 1
     // return 1;
   }
 }
@@ -1493,7 +1493,7 @@ impl<'a> /*trait*/ QString_isDetached<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QString10isDetachedEv()};
     let mut ret = unsafe {C_ZNK7QString10isDetachedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1711,7 +1711,7 @@ impl<'a> /*trait*/ QString_indexOf<i32> for (&'a QRegExp, i32) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZNK7QString7indexOfERK7QRegExpi(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1735,7 +1735,7 @@ impl<'a> /*trait*/ QString_lastIndexOf<i32> for (&'a QRegExp, i32) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZNK7QString11lastIndexOfER7QRegExpi(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1768,11 +1768,12 @@ pub trait QString_utf16<RetType> {
 }
 
   // proto:  const ushort * QString::utf16();
-impl<'a> /*trait*/ QString_utf16<()> for () {
-  fn utf16(self , rsthis: & QString) -> () {
+impl<'a> /*trait*/ QString_utf16<*mut u16> for () {
+  fn utf16(self , rsthis: & QString) -> *mut u16 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QString5utf16Ev()};
-     unsafe {C_ZNK7QString5utf16Ev(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QString5utf16Ev(rsthis.qclsinst)};
+    return ret as *mut u16; // 1
     // return 1;
   }
 }
@@ -1797,7 +1798,7 @@ impl<'a> /*trait*/ QString_toInt<i32> for (&'a mut Vec<i8>, i32) {
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZNK7QString5toIntEPbi(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1925,7 +1926,7 @@ impl<'a> /*trait*/ QString_localeAwareCompare_s<i32> for (&'a QString, &'a QStri
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN7QString18localeAwareCompareERKS_S1_(arg0, arg1)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -2089,7 +2090,7 @@ impl<'a> /*trait*/ QString_contains<i8> for (&'a QRegExp) {
     // unsafe{_ZNK7QString8containsERK7QRegExp()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK7QString8containsERK7QRegExp(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -2113,7 +2114,7 @@ impl<'a> /*trait*/ QString_isSharedWith<i8> for (&'a QString) {
     // unsafe{_ZNK7QString12isSharedWithERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK7QString12isSharedWithERKS_(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -2261,7 +2262,7 @@ impl<'a> /*trait*/ QString_lastIndexOf<i32> for (&'a QRegularExpression, i32, &'
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK7QString11lastIndexOfERK18QRegularExpressioniP23QRegularExpressionMatch(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -2301,7 +2302,7 @@ impl<'a> /*trait*/ QString_contains<i8> for (&'a QRegularExpression, &'a QRegula
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK7QString8containsERK18QRegularExpressionP23QRegularExpressionMatch(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -2315,7 +2316,7 @@ impl<'a> /*trait*/ QString_indexOf<i32> for (&'a QRegularExpression, i32, &'a QR
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK7QString7indexOfERK18QRegularExpressioniP23QRegularExpressionMatch(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -2339,7 +2340,7 @@ impl<'a> /*trait*/ QString_toWCharArray<i32> for (&'a  String) {
     // unsafe{_ZNK7QString12toWCharArrayEPw()};
     let arg0 = self.as_ptr()  as *mut wchar_t;
     let mut ret = unsafe {C_ZNK7QString12toWCharArrayEPw(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -2525,7 +2526,7 @@ impl<'a> /*trait*/ QString_toLong<i64> for (&'a mut Vec<i8>, i32) {
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZNK7QString6toLongEPbi(rsthis.qclsinst, arg0, arg1)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -2596,7 +2597,7 @@ impl<'a> /*trait*/ QString_length<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QString6lengthEv()};
     let mut ret = unsafe {C_ZNK7QString6lengthEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -2710,7 +2711,7 @@ impl<'a> /*trait*/ QString_isSimpleText<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QString12isSimpleTextEv()};
     let mut ret = unsafe {C_ZNK7QString12isSimpleTextEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -2832,7 +2833,7 @@ impl<'a> /*trait*/ QString_indexOf<i32> for (&'a QRegularExpression, i32) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZNK7QString7indexOfERK18QRegularExpressioni(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -3079,7 +3080,7 @@ impl<'a> /*trait*/ QString_toUInt<u32> for (&'a mut Vec<i8>, i32) {
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZNK7QString6toUIntEPbi(rsthis.qclsinst, arg0, arg1)};
-    return ret as u32;
+    return ret as u32; // 1
     // return 1;
   }
 }
@@ -3117,7 +3118,7 @@ impl<'a> /*trait*/ QString_toUShort<u16> for (&'a mut Vec<i8>, i32) {
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZNK7QString8toUShortEPbi(rsthis.qclsinst, arg0, arg1)};
-    return ret as u16;
+    return ret as u16; // 1
     // return 1;
   }
 }
@@ -3313,7 +3314,7 @@ impl<'a> /*trait*/ QString_toULongLong<u64> for (&'a mut Vec<i8>, i32) {
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZNK7QString11toULongLongEPbi(rsthis.qclsinst, arg0, arg1)};
-    return ret as u64;
+    return ret as u64; // 1
     // return 1;
   }
 }
@@ -3349,7 +3350,7 @@ impl<'a> /*trait*/ QString_capacity<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QString8capacityEv()};
     let mut ret = unsafe {C_ZNK7QString8capacityEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -3449,7 +3450,7 @@ impl<'a> /*trait*/ QString_localeAwareCompare<i32> for (&'a QString) {
     // unsafe{_ZNK7QString18localeAwareCompareERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK7QString18localeAwareCompareERKS_(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -3474,7 +3475,7 @@ impl<'a> /*trait*/ QString_contains<i8> for (&'a QRegularExpression) {
     // unsafe{_ZNK7QString8containsERK18QRegularExpression()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK7QString8containsERK18QRegularExpression(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -3512,7 +3513,7 @@ impl<'a> /*trait*/ QString_isRightToLeft<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QString13isRightToLeftEv()};
     let mut ret = unsafe {C_ZNK7QString13isRightToLeftEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -3545,11 +3546,12 @@ pub trait QString_toUcs4<RetType> {
 }
 
   // proto:  QVector<uint> QString::toUcs4();
-impl<'a> /*trait*/ QString_toUcs4<()> for () {
-  fn toUcs4(self , rsthis: & QString) -> () {
+impl<'a> /*trait*/ QString_toUcs4<u64> for () {
+  fn toUcs4(self , rsthis: & QString) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QString6toUcs4Ev()};
-     unsafe {C_ZNK7QString6toUcs4Ev(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QString6toUcs4Ev(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -3586,7 +3588,7 @@ impl<'a> /*trait*/ QString_isEmpty<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QString7isEmptyEv()};
     let mut ret = unsafe {C_ZNK7QString7isEmptyEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -3717,7 +3719,7 @@ impl<'a> /*trait*/ QString_toShort<i16> for (&'a mut Vec<i8>, i32) {
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZNK7QString7toShortEPbi(rsthis.qclsinst, arg0, arg1)};
-    return ret as i16;
+    return ret as i16; // 1
     // return 1;
   }
 }
@@ -3797,7 +3799,7 @@ impl<'a> /*trait*/ QLatin1String_size<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QLatin1String4sizeEv()};
     let mut ret = unsafe {C_ZNK13QLatin1String4sizeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -3880,7 +3882,7 @@ impl<'a> /*trait*/ QCharRef_isLetterOrNumber<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QCharRef16isLetterOrNumberEv()};
     let mut ret = unsafe {C_ZN8QCharRef16isLetterOrNumberEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -3903,7 +3905,7 @@ impl<'a> /*trait*/ QCharRef_isDigit<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QCharRef7isDigitEv()};
     let mut ret = unsafe {C_ZNK8QCharRef7isDigitEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -3926,7 +3928,7 @@ impl<'a> /*trait*/ QCharRef_toLatin1<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QCharRef8toLatin1Ev()};
     let mut ret = unsafe {C_ZNK8QCharRef8toLatin1Ev(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -3972,7 +3974,7 @@ impl<'a> /*trait*/ QCharRef_isMark<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QCharRef6isMarkEv()};
     let mut ret = unsafe {C_ZNK8QCharRef6isMarkEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -3995,7 +3997,7 @@ impl<'a> /*trait*/ QCharRef_digitValue<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QCharRef10digitValueEv()};
     let mut ret = unsafe {C_ZNK8QCharRef10digitValueEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -4018,7 +4020,7 @@ impl<'a> /*trait*/ QCharRef_isLetter<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QCharRef8isLetterEv()};
     let mut ret = unsafe {C_ZNK8QCharRef8isLetterEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -4041,7 +4043,7 @@ impl<'a> /*trait*/ QCharRef_isNumber<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QCharRef8isNumberEv()};
     let mut ret = unsafe {C_ZNK8QCharRef8isNumberEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -4064,7 +4066,7 @@ impl<'a> /*trait*/ QCharRef_isPrint<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QCharRef7isPrintEv()};
     let mut ret = unsafe {C_ZNK8QCharRef7isPrintEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -4134,7 +4136,7 @@ impl<'a> /*trait*/ QCharRef_isNull<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QCharRef6isNullEv()};
     let mut ret = unsafe {C_ZNK8QCharRef6isNullEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -4181,7 +4183,7 @@ impl<'a> /*trait*/ QCharRef_hasMirrored<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QCharRef11hasMirroredEv()};
     let mut ret = unsafe {C_ZNK8QCharRef11hasMirroredEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -4204,7 +4206,7 @@ impl<'a> /*trait*/ QCharRef_row<u8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QCharRef3rowEv()};
     let mut ret = unsafe {C_ZNK8QCharRef3rowEv(rsthis.qclsinst)};
-    return ret as u8;
+    return ret as u8; // 1
     // return 1;
   }
 }
@@ -4227,7 +4229,7 @@ impl<'a> /*trait*/ QCharRef_unicode<u16> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QCharRef7unicodeEv()};
     let mut ret = unsafe {C_ZN8QCharRef7unicodeEv(rsthis.qclsinst)};
-    return ret as u16;
+    return ret as u16; // 1
     // return 1;
   }
 }
@@ -4250,7 +4252,7 @@ impl<'a> /*trait*/ QCharRef_isTitleCase<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QCharRef11isTitleCaseEv()};
     let mut ret = unsafe {C_ZNK8QCharRef11isTitleCaseEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -4273,7 +4275,7 @@ impl<'a> /*trait*/ QCharRef_isUpper<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QCharRef7isUpperEv()};
     let mut ret = unsafe {C_ZNK8QCharRef7isUpperEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -4296,7 +4298,7 @@ impl<'a> /*trait*/ QCharRef_cell<u8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QCharRef4cellEv()};
     let mut ret = unsafe {C_ZNK8QCharRef4cellEv(rsthis.qclsinst)};
-    return ret as u8;
+    return ret as u8; // 1
     // return 1;
   }
 }
@@ -4343,7 +4345,7 @@ impl<'a> /*trait*/ QCharRef_combiningClass<u8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QCharRef14combiningClassEv()};
     let mut ret = unsafe {C_ZNK8QCharRef14combiningClassEv(rsthis.qclsinst)};
-    return ret as u8;
+    return ret as u8; // 1
     // return 1;
   }
 }
@@ -4390,7 +4392,7 @@ impl<'a> /*trait*/ QCharRef_isSpace<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QCharRef7isSpaceEv()};
     let mut ret = unsafe {C_ZNK8QCharRef7isSpaceEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -4413,7 +4415,7 @@ impl<'a> /*trait*/ QCharRef_isPunct<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QCharRef7isPunctEv()};
     let mut ret = unsafe {C_ZNK8QCharRef7isPunctEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -4460,7 +4462,7 @@ impl<'a> /*trait*/ QCharRef_isLower<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QCharRef7isLowerEv()};
     let mut ret = unsafe {C_ZNK8QCharRef7isLowerEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -4490,7 +4492,7 @@ impl<'a> /*trait*/ QStringRef_toShort<i16> for (&'a mut Vec<i8>, i32) {
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZNK10QStringRef7toShortEPbi(rsthis.qclsinst, arg0, arg1)};
-    return ret as i16;
+    return ret as i16; // 1
     // return 1;
   }
 }
@@ -4543,7 +4545,7 @@ impl<'a> /*trait*/ QStringRef_toULongLong<u64> for (&'a mut Vec<i8>, i32) {
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZNK10QStringRef11toULongLongEPbi(rsthis.qclsinst, arg0, arg1)};
-    return ret as u64;
+    return ret as u64; // 1
     // return 1;
   }
 }
@@ -4588,7 +4590,7 @@ impl<'a> /*trait*/ QStringRef_position<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QStringRef8positionEv()};
     let mut ret = unsafe {C_ZNK10QStringRef8positionEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -4613,7 +4615,7 @@ impl<'a> /*trait*/ QStringRef_toLong<i64> for (&'a mut Vec<i8>, i32) {
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZNK10QStringRef6toLongEPbi(rsthis.qclsinst, arg0, arg1)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -4662,7 +4664,7 @@ impl<'a> /*trait*/ QStringRef_toUShort<u16> for (&'a mut Vec<i8>, i32) {
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZNK10QStringRef8toUShortEPbi(rsthis.qclsinst, arg0, arg1)};
-    return ret as u16;
+    return ret as u16; // 1
     // return 1;
   }
 }
@@ -4687,7 +4689,7 @@ impl<'a> /*trait*/ QStringRef_toUInt<u32> for (&'a mut Vec<i8>, i32) {
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZNK10QStringRef6toUIntEPbi(rsthis.qclsinst, arg0, arg1)};
-    return ret as u32;
+    return ret as u32; // 1
     // return 1;
   }
 }
@@ -4710,7 +4712,7 @@ impl<'a> /*trait*/ QStringRef_isEmpty<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QStringRef7isEmptyEv()};
     let mut ret = unsafe {C_ZNK10QStringRef7isEmptyEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -4734,7 +4736,7 @@ impl<'a> /*trait*/ QStringRef_localeAwareCompare<i32> for (&'a QString) {
     // unsafe{_ZNK10QStringRef18localeAwareCompareERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK10QStringRef18localeAwareCompareERK7QString(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -4781,7 +4783,7 @@ impl<'a> /*trait*/ QStringRef_size<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QStringRef4sizeEv()};
     let mut ret = unsafe {C_ZNK10QStringRef4sizeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -4848,11 +4850,12 @@ pub trait QStringRef_toUcs4<RetType> {
 }
 
   // proto:  QVector<uint> QStringRef::toUcs4();
-impl<'a> /*trait*/ QStringRef_toUcs4<()> for () {
-  fn toUcs4(self , rsthis: & QStringRef) -> () {
+impl<'a> /*trait*/ QStringRef_toUcs4<u64> for () {
+  fn toUcs4(self , rsthis: & QStringRef) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QStringRef6toUcs4Ev()};
-     unsafe {C_ZNK10QStringRef6toUcs4Ev(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QStringRef6toUcs4Ev(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -4875,7 +4878,7 @@ impl<'a> /*trait*/ QStringRef_count<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QStringRef5countEv()};
     let mut ret = unsafe {C_ZNK10QStringRef5countEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -4980,7 +4983,7 @@ impl<'a> /*trait*/ QStringRef_toDouble<f64> for (&'a mut Vec<i8>) {
     // unsafe{_ZNK10QStringRef8toDoubleEPb()};
     let arg0 = self.as_ptr()  as *mut c_char;
     let mut ret = unsafe {C_ZNK10QStringRef8toDoubleEPb(rsthis.qclsinst, arg0)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -5003,7 +5006,7 @@ impl<'a> /*trait*/ QStringRef_isNull<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QStringRef6isNullEv()};
     let mut ret = unsafe {C_ZNK10QStringRef6isNullEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -5052,7 +5055,7 @@ impl<'a> /*trait*/ QStringRef_toLongLong<i64> for (&'a mut Vec<i8>, i32) {
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZNK10QStringRef10toLongLongEPbi(rsthis.qclsinst, arg0, arg1)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -5174,7 +5177,7 @@ impl<'a> /*trait*/ QStringRef_toFloat<f32> for (&'a mut Vec<i8>) {
     // unsafe{_ZNK10QStringRef7toFloatEPb()};
     let arg0 = self.as_ptr()  as *mut c_char;
     let mut ret = unsafe {C_ZNK10QStringRef7toFloatEPb(rsthis.qclsinst, arg0)};
-    return ret as f32;
+    return ret as f32; // 1
     // return 1;
   }
 }
@@ -5271,7 +5274,7 @@ impl<'a> /*trait*/ QStringRef_toInt<i32> for (&'a mut Vec<i8>, i32) {
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZNK10QStringRef5toIntEPbi(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -5343,7 +5346,7 @@ impl<'a> /*trait*/ QStringRef_length<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QStringRef6lengthEv()};
     let mut ret = unsafe {C_ZNK10QStringRef6lengthEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -5414,7 +5417,7 @@ impl<'a> /*trait*/ QStringRef_toULong<u64> for (&'a mut Vec<i8>, i32) {
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZNK10QStringRef7toULongEPbi(rsthis.qclsinst, arg0, arg1)};
-    return ret as u64;
+    return ret as u64; // 1
     // return 1;
   }
 }

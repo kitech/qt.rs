@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qidentityproxymodel.h
 // dst-file: /src/core/qidentityproxymodel.rs
 //
@@ -18,15 +18,14 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qabstractproxymodel::QAbstractProxyModel; // 773
+use super::qabstractproxymodel::*; // 773
 use std::ops::Deref;
-use super::qabstractitemmodel::QModelIndex; // 773
-use super::qitemselectionmodel::QItemSelection; // 773
-use super::qvariant::QVariant; // 773
-use super::qobjectdefs::QMetaObject; // 773
-use super::qabstractitemmodel::QAbstractItemModel; // 773
-use super::qmimedata::QMimeData; // 773
-use super::qobject::QObject; // 773
+use super::qabstractitemmodel::*; // 773
+use super::qitemselectionmodel::*; // 773
+use super::qvariant::*; // 773
+use super::qobjectdefs::*; // 773
+use super::qmimedata::*; // 773
+use super::qobject::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -119,7 +118,7 @@ impl<'a> /*trait*/ QIdentityProxyModel_removeRows<i8> for (i32, i32, &'a QModelI
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN19QIdentityProxyModel10removeRowsEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -145,7 +144,7 @@ impl<'a> /*trait*/ QIdentityProxyModel_removeColumns<i8> for (i32, i32, &'a QMod
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN19QIdentityProxyModel13removeColumnsEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -223,7 +222,7 @@ impl<'a> /*trait*/ QIdentityProxyModel_insertRows<i8> for (i32, i32, &'a QModelI
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN19QIdentityProxyModel10insertRowsEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -249,7 +248,7 @@ impl<'a> /*trait*/ QIdentityProxyModel_insertColumns<i8> for (i32, i32, &'a QMod
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN19QIdentityProxyModel13insertColumnsEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -472,7 +471,7 @@ impl<'a> /*trait*/ QIdentityProxyModel_columnCount<i32> for (&'a QModelIndex) {
     // unsafe{_ZNK19QIdentityProxyModel11columnCountERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK19QIdentityProxyModel11columnCountERK11QModelIndex(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -521,7 +520,7 @@ impl<'a> /*trait*/ QIdentityProxyModel_rowCount<i32> for (&'a QModelIndex) {
     // unsafe{_ZNK19QIdentityProxyModel8rowCountERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK19QIdentityProxyModel8rowCountERK11QModelIndex(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

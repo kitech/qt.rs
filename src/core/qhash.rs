@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qhash.h
 // dst-file: /src/core/qhash.rs
 //
@@ -108,7 +108,7 @@ impl<'a> /*trait*/ QHashData_allocateNode<*mut c_void> for (i32) {
     // unsafe{_ZN9QHashData12allocateNodeEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZN9QHashData12allocateNodeEi(rsthis.qclsinst, arg0)};
-    return ret as *mut c_void;
+    return ret as *mut c_void; // 1
     // return 1;
   }
 }
@@ -131,7 +131,7 @@ impl<'a> /*trait*/ QHashData_willGrow<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QHashData8willGrowEv()};
     let mut ret = unsafe {C_ZN9QHashData8willGrowEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

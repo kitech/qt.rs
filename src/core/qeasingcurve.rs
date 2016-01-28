@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qeasingcurve.h
 // dst-file: /src/core/qeasingcurve.rs
 //
@@ -19,7 +19,8 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qpoint::QPointF; // 773
+use super::qpoint::*; // 773
+// use super::qvector::*; // 775
 // <= use block end
 
 // ext block begin =>
@@ -35,7 +36,7 @@ extern {
   // proto:  void QEasingCurve::~QEasingCurve();
   fn C_ZN12QEasingCurveD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  EasingFunction QEasingCurve::customType();
-  fn C_ZNK12QEasingCurve10customTypeEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK12QEasingCurve10customTypeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  qreal QEasingCurve::overshoot();
   fn C_ZNK12QEasingCurve9overshootEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QEasingCurve::setPeriod(qreal period);
@@ -55,7 +56,7 @@ extern {
   // proto:  void QEasingCurve::setOvershoot(qreal overshoot);
   fn C_ZN12QEasingCurve12setOvershootEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  QVector<QPointF> QEasingCurve::toCubicSpline();
-  fn C_ZNK12QEasingCurve13toCubicSplineEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK12QEasingCurve13toCubicSplineEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  qreal QEasingCurve::amplitude();
   fn C_ZNK12QEasingCurve9amplitudeEv(qthis: u64 /* *mut c_void*/) -> c_double;
 } // <= ext block end
@@ -136,11 +137,12 @@ pub trait QEasingCurve_customType<RetType> {
 }
 
   // proto:  EasingFunction QEasingCurve::customType();
-impl<'a> /*trait*/ QEasingCurve_customType<()> for () {
-  fn customType(self , rsthis: & QEasingCurve) -> () {
+impl<'a> /*trait*/ QEasingCurve_customType<u64> for () {
+  fn customType(self , rsthis: & QEasingCurve) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QEasingCurve10customTypeEv()};
-     unsafe {C_ZNK12QEasingCurve10customTypeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QEasingCurve10customTypeEv(rsthis.qclsinst)};
+    return ret as u64; // 3
     // return 1;
   }
 }
@@ -163,7 +165,7 @@ impl<'a> /*trait*/ QEasingCurve_overshoot<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QEasingCurve9overshootEv()};
     let mut ret = unsafe {C_ZNK12QEasingCurve9overshootEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -260,7 +262,7 @@ impl<'a> /*trait*/ QEasingCurve_period<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QEasingCurve6periodEv()};
     let mut ret = unsafe {C_ZNK12QEasingCurve6periodEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -284,7 +286,7 @@ impl<'a> /*trait*/ QEasingCurve_valueForProgress<f64> for (f64) {
     // unsafe{_ZNK12QEasingCurve16valueForProgressEd()};
     let arg0 = self  as c_double;
     let mut ret = unsafe {C_ZNK12QEasingCurve16valueForProgressEd(rsthis.qclsinst, arg0)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -371,11 +373,12 @@ pub trait QEasingCurve_toCubicSpline<RetType> {
 }
 
   // proto:  QVector<QPointF> QEasingCurve::toCubicSpline();
-impl<'a> /*trait*/ QEasingCurve_toCubicSpline<()> for () {
-  fn toCubicSpline(self , rsthis: & QEasingCurve) -> () {
+impl<'a> /*trait*/ QEasingCurve_toCubicSpline<u64> for () {
+  fn toCubicSpline(self , rsthis: & QEasingCurve) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QEasingCurve13toCubicSplineEv()};
-     unsafe {C_ZNK12QEasingCurve13toCubicSplineEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QEasingCurve13toCubicSplineEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -398,7 +401,7 @@ impl<'a> /*trait*/ QEasingCurve_amplitude<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QEasingCurve9amplitudeEv()};
     let mut ret = unsafe {C_ZNK12QEasingCurve9amplitudeEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qfinalstate.h
 // dst-file: /src/core/qfinalstate.rs
 //
@@ -18,10 +18,10 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qabstractstate::QAbstractState; // 773
+use super::qabstractstate::*; // 773
 use std::ops::Deref;
-use super::qstate::QState; // 773
-use super::qobjectdefs::QMetaObject; // 773
+use super::qstate::*; // 773
+use super::qobjectdefs::*; // 773
 // <= use block end
 
 // ext block begin =>

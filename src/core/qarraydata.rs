@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qarraydata.h
 // dst-file: /src/core/qarraydata.rs
 //
@@ -96,7 +96,7 @@ impl<'a> /*trait*/ QArrayData_data<*mut c_void> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QArrayData4dataEv()};
     let mut ret = unsafe {C_ZN10QArrayData4dataEv(rsthis.qclsinst)};
-    return ret as *mut c_void;
+    return ret as *mut c_void; // 1
     // return 1;
   }
 }
@@ -144,7 +144,7 @@ impl<'a> /*trait*/ QArrayData_isMutable<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QArrayData9isMutableEv()};
     let mut ret = unsafe {C_ZNK10QArrayData9isMutableEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -168,7 +168,7 @@ impl<'a> /*trait*/ QArrayData_detachCapacity<i32> for (i32) {
     // unsafe{_ZNK10QArrayData14detachCapacityEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK10QArrayData14detachCapacityEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

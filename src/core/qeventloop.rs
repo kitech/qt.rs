@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qeventloop.h
 // dst-file: /src/core/qeventloop.rs
 //
@@ -18,11 +18,11 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qobject::QObject; // 773
+use super::qobject::*; // 773
 use std::ops::Deref;
-use super::qobjectdefs::QMetaObject; // 773
-use super::qcoreevent::QEvent; // 773
-use super::qthread::QThread; // 773
+use super::qobjectdefs::*; // 773
+use super::qcoreevent::*; // 773
+use super::qthread::*; // 773
 // use super::qeventloop::QEventLoop; // 773
 // <= use block end
 
@@ -184,7 +184,7 @@ impl<'a> /*trait*/ QEventLoop_isRunning<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QEventLoop9isRunningEv()};
     let mut ret = unsafe {C_ZNK10QEventLoop9isRunningEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -276,7 +276,7 @@ impl<'a> /*trait*/ QEventLoop_event<i8> for (&'a QEvent) {
     // unsafe{_ZN10QEventLoop5eventEP6QEvent()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN10QEventLoop5eventEP6QEvent(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

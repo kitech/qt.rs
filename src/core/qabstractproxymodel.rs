@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qabstractproxymodel.h
 // dst-file: /src/core/qabstractproxymodel.rs
 //
@@ -18,15 +18,16 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qabstractitemmodel::QAbstractItemModel; // 773
+use super::qabstractitemmodel::*; // 773
 use std::ops::Deref;
-use super::qmimedata::QMimeData; // 773
-use super::qabstractitemmodel::QModelIndex; // 773
-use super::qitemselectionmodel::QItemSelection; // 773
-use super::qvariant::QVariant; // 773
-use super::qsize::QSize; // 773
-use super::qobjectdefs::QMetaObject; // 773
-use super::qobject::QObject; // 773
+use super::qstringlist::*; // 773
+use super::qmimedata::*; // 773
+use super::qitemselectionmodel::*; // 773
+use super::qvariant::*; // 773
+use super::qsize::*; // 773
+use super::qobjectdefs::*; // 773
+// use super::qmap::*; // 775
+use super::qobject::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -38,7 +39,7 @@ use super::qobject::QObject; // 773
 extern {
   fn QAbstractProxyModel_Class_Size() -> c_int;
   // proto:  QStringList QAbstractProxyModel::mimeTypes();
-  fn C_ZNK19QAbstractProxyModel9mimeTypesEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK19QAbstractProxyModel9mimeTypesEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAbstractProxyModel::revert();
   fn C_ZN19QAbstractProxyModel6revertEv(qthis: u64 /* *mut c_void*/);
   // proto:  QItemSelection QAbstractProxyModel::mapSelectionToSource(const QItemSelection & selection);
@@ -60,7 +61,7 @@ extern {
   // proto:  QModelIndex QAbstractProxyModel::mapFromSource(const QModelIndex & sourceIndex);
   fn C_ZNK19QAbstractProxyModel13mapFromSourceERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QMap<int, QVariant> QAbstractProxyModel::itemData(const QModelIndex & index);
-  fn C_ZNK19QAbstractProxyModel8itemDataERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK19QAbstractProxyModel8itemDataERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QModelIndex QAbstractProxyModel::buddy(const QModelIndex & index);
   fn C_ZNK19QAbstractProxyModel5buddyERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QAbstractProxyModel::setSourceModel(QAbstractItemModel * sourceModel);
@@ -120,11 +121,13 @@ pub trait QAbstractProxyModel_mimeTypes<RetType> {
 }
 
   // proto:  QStringList QAbstractProxyModel::mimeTypes();
-impl<'a> /*trait*/ QAbstractProxyModel_mimeTypes<()> for () {
-  fn mimeTypes(self , rsthis: & QAbstractProxyModel) -> () {
+impl<'a> /*trait*/ QAbstractProxyModel_mimeTypes<QStringList> for () {
+  fn mimeTypes(self , rsthis: & QAbstractProxyModel) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QAbstractProxyModel9mimeTypesEv()};
-     unsafe {C_ZNK19QAbstractProxyModel9mimeTypesEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK19QAbstractProxyModel9mimeTypesEv(rsthis.qclsinst)};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -245,7 +248,7 @@ impl<'a> /*trait*/ QAbstractProxyModel_submit<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QAbstractProxyModel6submitEv()};
     let mut ret = unsafe {C_ZN19QAbstractProxyModel6submitEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -294,7 +297,7 @@ impl<'a> /*trait*/ QAbstractProxyModel_canFetchMore<i8> for (&'a QModelIndex) {
     // unsafe{_ZNK19QAbstractProxyModel12canFetchMoreERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK19QAbstractProxyModel12canFetchMoreERK11QModelIndex(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -386,12 +389,13 @@ pub trait QAbstractProxyModel_itemData<RetType> {
 }
 
   // proto:  QMap<int, QVariant> QAbstractProxyModel::itemData(const QModelIndex & index);
-impl<'a> /*trait*/ QAbstractProxyModel_itemData<()> for (&'a QModelIndex) {
-  fn itemData(self , rsthis: & QAbstractProxyModel) -> () {
+impl<'a> /*trait*/ QAbstractProxyModel_itemData<u64> for (&'a QModelIndex) {
+  fn itemData(self , rsthis: & QAbstractProxyModel) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QAbstractProxyModel8itemDataERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZNK19QAbstractProxyModel8itemDataERK11QModelIndex(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK19QAbstractProxyModel8itemDataERK11QModelIndex(rsthis.qclsinst, arg0)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -492,7 +496,7 @@ impl<'a> /*trait*/ QAbstractProxyModel_setData<i8> for (&'a QModelIndex, &'a QVa
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2  as c_int;
     let mut ret = unsafe {C_ZN19QAbstractProxyModel7setDataERK11QModelIndexRK8QVarianti(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -589,7 +593,7 @@ impl<'a> /*trait*/ QAbstractProxyModel_hasChildren<i8> for (&'a QModelIndex) {
     // unsafe{_ZNK19QAbstractProxyModel11hasChildrenERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK19QAbstractProxyModel11hasChildrenERK11QModelIndex(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

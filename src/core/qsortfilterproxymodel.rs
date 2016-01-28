@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qsortfilterproxymodel.h
 // dst-file: /src/core/qsortfilterproxymodel.rs
 //
@@ -18,18 +18,18 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qabstractproxymodel::QAbstractProxyModel; // 773
+use super::qabstractproxymodel::*; // 773
 use std::ops::Deref;
-use super::qstring::QString; // 773
-use super::qabstractitemmodel::QModelIndex; // 773
-use super::qsize::QSize; // 773
-use super::qvariant::QVariant; // 773
-use super::qitemselectionmodel::QItemSelection; // 773
-use super::qobjectdefs::QMetaObject; // 773
-use super::qabstractitemmodel::QAbstractItemModel; // 773
-use super::qmimedata::QMimeData; // 773
-use super::qregexp::QRegExp; // 773
-use super::qobject::QObject; // 773
+use super::qstring::*; // 773
+use super::qabstractitemmodel::*; // 773
+use super::qsize::*; // 773
+use super::qvariant::*; // 773
+use super::qitemselectionmodel::*; // 773
+use super::qstringlist::*; // 773
+use super::qobjectdefs::*; // 773
+use super::qmimedata::*; // 773
+use super::qregexp::*; // 773
+use super::qobject::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -81,7 +81,7 @@ extern {
   // proto:  QItemSelection QSortFilterProxyModel::mapSelectionToSource(const QItemSelection & proxySelection);
   fn C_ZNK21QSortFilterProxyModel20mapSelectionToSourceERK14QItemSelection(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QStringList QSortFilterProxyModel::mimeTypes();
-  fn C_ZNK21QSortFilterProxyModel9mimeTypesEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK21QSortFilterProxyModel9mimeTypesEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QModelIndex QSortFilterProxyModel::buddy(const QModelIndex & index);
   fn C_ZNK21QSortFilterProxyModel5buddyERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  int QSortFilterProxyModel::filterRole();
@@ -195,7 +195,7 @@ impl<'a> /*trait*/ QSortFilterProxyModel_rowCount<i32> for (&'a QModelIndex) {
     // unsafe{_ZNK21QSortFilterProxyModel8rowCountERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK21QSortFilterProxyModel8rowCountERK11QModelIndex(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -319,7 +319,7 @@ impl<'a> /*trait*/ QSortFilterProxyModel_hasChildren<i8> for (&'a QModelIndex) {
     // unsafe{_ZNK21QSortFilterProxyModel11hasChildrenERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK21QSortFilterProxyModel11hasChildrenERK11QModelIndex(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -368,7 +368,7 @@ impl<'a> /*trait*/ QSortFilterProxyModel_setData<i8> for (&'a QModelIndex, &'a Q
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2  as c_int;
     let mut ret = unsafe {C_ZN21QSortFilterProxyModel7setDataERK11QModelIndexRK8QVarianti(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -462,7 +462,7 @@ impl<'a> /*trait*/ QSortFilterProxyModel_sortColumn<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QSortFilterProxyModel10sortColumnEv()};
     let mut ret = unsafe {C_ZNK21QSortFilterProxyModel10sortColumnEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -488,7 +488,7 @@ impl<'a> /*trait*/ QSortFilterProxyModel_insertRows<i8> for (i32, i32, &'a QMode
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN21QSortFilterProxyModel10insertRowsEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -511,7 +511,7 @@ impl<'a> /*trait*/ QSortFilterProxyModel_filterKeyColumn<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QSortFilterProxyModel15filterKeyColumnEv()};
     let mut ret = unsafe {C_ZNK21QSortFilterProxyModel15filterKeyColumnEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -535,7 +535,7 @@ impl<'a> /*trait*/ QSortFilterProxyModel_canFetchMore<i8> for (&'a QModelIndex) 
     // unsafe{_ZNK21QSortFilterProxyModel12canFetchMoreERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK21QSortFilterProxyModel12canFetchMoreERK11QModelIndex(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -558,7 +558,7 @@ impl<'a> /*trait*/ QSortFilterProxyModel_isSortLocaleAware<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QSortFilterProxyModel17isSortLocaleAwareEv()};
     let mut ret = unsafe {C_ZNK21QSortFilterProxyModel17isSortLocaleAwareEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -649,11 +649,13 @@ pub trait QSortFilterProxyModel_mimeTypes<RetType> {
 }
 
   // proto:  QStringList QSortFilterProxyModel::mimeTypes();
-impl<'a> /*trait*/ QSortFilterProxyModel_mimeTypes<()> for () {
-  fn mimeTypes(self , rsthis: & QSortFilterProxyModel) -> () {
+impl<'a> /*trait*/ QSortFilterProxyModel_mimeTypes<QStringList> for () {
+  fn mimeTypes(self , rsthis: & QSortFilterProxyModel) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QSortFilterProxyModel9mimeTypesEv()};
-     unsafe {C_ZNK21QSortFilterProxyModel9mimeTypesEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK21QSortFilterProxyModel9mimeTypesEv(rsthis.qclsinst)};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -701,7 +703,7 @@ impl<'a> /*trait*/ QSortFilterProxyModel_filterRole<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QSortFilterProxyModel10filterRoleEv()};
     let mut ret = unsafe {C_ZNK21QSortFilterProxyModel10filterRoleEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -793,7 +795,7 @@ impl<'a> /*trait*/ QSortFilterProxyModel_sortRole<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QSortFilterProxyModel8sortRoleEv()};
     let mut ret = unsafe {C_ZNK21QSortFilterProxyModel8sortRoleEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -890,7 +892,7 @@ impl<'a> /*trait*/ QSortFilterProxyModel_removeColumns<i8> for (i32, i32, &'a QM
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN21QSortFilterProxyModel13removeColumnsEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -935,7 +937,7 @@ impl<'a> /*trait*/ QSortFilterProxyModel_dynamicSortFilter<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QSortFilterProxyModel17dynamicSortFilterEv()};
     let mut ret = unsafe {C_ZNK21QSortFilterProxyModel17dynamicSortFilterEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -961,7 +963,7 @@ impl<'a> /*trait*/ QSortFilterProxyModel_insertColumns<i8> for (i32, i32, &'a QM
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN21QSortFilterProxyModel13insertColumnsEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -985,7 +987,7 @@ impl<'a> /*trait*/ QSortFilterProxyModel_columnCount<i32> for (&'a QModelIndex) 
     // unsafe{_ZNK21QSortFilterProxyModel11columnCountERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK21QSortFilterProxyModel11columnCountERK11QModelIndex(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1122,7 +1124,7 @@ impl<'a> /*trait*/ QSortFilterProxyModel_removeRows<i8> for (i32, i32, &'a QMode
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN21QSortFilterProxyModel10removeRowsEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

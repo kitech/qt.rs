@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qbitarray.h
 // dst-file: /src/core/qbitarray.rs
 //
@@ -148,7 +148,7 @@ impl<'a> /*trait*/ QBitArray_isEmpty<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QBitArray7isEmptyEv()};
     let mut ret = unsafe {C_ZNK9QBitArray7isEmptyEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -194,7 +194,7 @@ impl<'a> /*trait*/ QBitArray_size<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QBitArray4sizeEv()};
     let mut ret = unsafe {C_ZNK9QBitArray4sizeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -240,7 +240,7 @@ impl<'a> /*trait*/ QBitArray_count<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QBitArray5countEv()};
     let mut ret = unsafe {C_ZNK9QBitArray5countEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -252,7 +252,7 @@ impl<'a> /*trait*/ QBitArray_count<i32> for (i8) {
     // unsafe{_ZNK9QBitArray5countEb()};
     let arg0 = self  as c_char;
     let mut ret = unsafe {C_ZNK9QBitArray5countEb(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -312,7 +312,7 @@ impl<'a> /*trait*/ QBitArray_at<i8> for (i32) {
     // unsafe{_ZNK9QBitArray2atEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK9QBitArray2atEi(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -381,7 +381,7 @@ impl<'a> /*trait*/ QBitArray_testBit<i8> for (i32) {
     // unsafe{_ZNK9QBitArray7testBitEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK9QBitArray7testBitEi(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -428,7 +428,7 @@ impl<'a> /*trait*/ QBitArray_toggleBit<i8> for (i32) {
     // unsafe{_ZN9QBitArray9toggleBitEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZN9QBitArray9toggleBitEi(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -491,7 +491,7 @@ impl<'a> /*trait*/ QBitArray_isNull<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QBitArray6isNullEv()};
     let mut ret = unsafe {C_ZNK9QBitArray6isNullEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -549,7 +549,7 @@ impl<'a> /*trait*/ QBitArray_isDetached<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QBitArray10isDetachedEv()};
     let mut ret = unsafe {C_ZNK9QBitArray10isDetachedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -562,7 +562,7 @@ impl<'a> /*trait*/ QBitArray_fill<i8> for (i8, i32) {
     let arg0 = self.0  as c_char;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZN9QBitArray4fillEbi(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

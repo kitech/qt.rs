@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qcollator.h
 // dst-file: /src/core/qcollator.rs
 //
@@ -19,9 +19,9 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qlocale::QLocale; // 773
-use super::qchar::QChar; // 773
-use super::qstring::QString; // 773
+use super::qlocale::*; // 773
+use super::qchar::*; // 773
+use super::qstring::*; // 773
 // use super::qcollator::QCollatorSortKey; // 773
 // <= use block end
 
@@ -108,7 +108,7 @@ impl<'a> /*trait*/ QCollator_numericMode<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QCollator11numericModeEv()};
     let mut ret = unsafe {C_ZNK9QCollator11numericModeEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -209,7 +209,7 @@ impl<'a> /*trait*/ QCollator_compare<i32> for (&'a QChar, i32, &'a QChar, i32) {
     let arg2 = self.2.qclsinst  as *mut c_void;
     let arg3 = self.3  as c_int;
     let mut ret = unsafe {C_ZNK9QCollator7compareEPK5QChariS2_i(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -247,7 +247,7 @@ impl<'a> /*trait*/ QCollator_compare<i32> for (&'a QString, &'a QString) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK9QCollator7compareERK7QStringS2_(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -292,7 +292,7 @@ impl<'a> /*trait*/ QCollator_ignorePunctuation<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QCollator17ignorePunctuationEv()};
     let mut ret = unsafe {C_ZNK9QCollator17ignorePunctuationEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -451,7 +451,7 @@ impl<'a> /*trait*/ QCollatorSortKey_compare<i32> for (&'a QCollatorSortKey) {
     // unsafe{_ZNK16QCollatorSortKey7compareERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK16QCollatorSortKey7compareERKS_(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

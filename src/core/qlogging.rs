@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qlogging.h
 // dst-file: /src/core/qlogging.rs
 //
@@ -19,9 +19,8 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qloggingcategory::QLoggingCategory; // 773
-use super::qdebug::QDebug; // 773
-use super::qdebug::QNoDebug; // 773
+use super::qloggingcategory::*; // 773
+use super::qdebug::*; // 773
 // <= use block end
 
 // ext block begin =>

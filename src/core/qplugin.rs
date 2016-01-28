@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qplugin.h
 // dst-file: /src/core/qplugin.rs
 //
@@ -19,7 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qjsonobject::QJsonObject; // 773
+use super::qjsonobject::*; // 773
 // <= use block end
 
 // ext block begin =>

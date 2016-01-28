@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qchar.h
 // dst-file: /src/core/qchar.rs
 //
@@ -19,7 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qstring::QString; // 773
+use super::qstring::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -154,7 +154,7 @@ extern {
   // proto:  bool QChar::isLetterOrNumber();
   fn C_ZNK5QChar16isLetterOrNumberEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  ushort & QChar::unicode();
-  fn C_ZN5QChar7unicodeEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN5QChar7unicodeEv(qthis: u64 /* *mut c_void*/) -> c_ushort;
   // proto: static bool QChar::isLowSurrogate(uint ucs4);
   fn C_ZN5QChar14isLowSurrogateEj(arg0: c_uint) -> c_char;
   // proto: static bool QChar::isNumber(uint ucs4);
@@ -219,7 +219,7 @@ impl<'a> /*trait*/ QLatin1Char_unicode<u16> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QLatin1Char7unicodeEv()};
     let mut ret = unsafe {C_ZNK11QLatin1Char7unicodeEv(rsthis.qclsinst)};
-    return ret as u16;
+    return ret as u16; // 1
     // return 1;
   }
 }
@@ -270,7 +270,7 @@ impl<'a> /*trait*/ QLatin1Char_toLatin1<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QLatin1Char8toLatin1Ev()};
     let mut ret = unsafe {C_ZNK11QLatin1Char8toLatin1Ev(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -299,7 +299,7 @@ impl<'a> /*trait*/ QChar_toUpper_s<u32> for (u32) {
     // unsafe{_ZN5QChar7toUpperEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {C_ZN5QChar7toUpperEj(arg0)};
-    return ret as u32;
+    return ret as u32; // 1
     // return 1;
   }
 }
@@ -322,7 +322,7 @@ impl<'a> /*trait*/ QChar_hasMirrored<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar11hasMirroredEv()};
     let mut ret = unsafe {C_ZNK5QChar11hasMirroredEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -346,7 +346,7 @@ impl<'a> /*trait*/ QChar_lowSurrogate_s<u16> for (u32) {
     // unsafe{_ZN5QChar12lowSurrogateEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {C_ZN5QChar12lowSurrogateEj(arg0)};
-    return ret as u16;
+    return ret as u16; // 1
     // return 1;
   }
 }
@@ -370,7 +370,7 @@ impl<'a> /*trait*/ QChar_isSymbol_s<i8> for (u32) {
     // unsafe{_ZN5QChar8isSymbolEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {C_ZN5QChar8isSymbolEj(arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -393,7 +393,7 @@ impl<'a> /*trait*/ QChar_cell<u8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar4cellEv()};
     let mut ret = unsafe {C_ZNK5QChar4cellEv(rsthis.qclsinst)};
-    return ret as u8;
+    return ret as u8; // 1
     // return 1;
   }
 }
@@ -418,7 +418,7 @@ impl<'a> /*trait*/ QChar_surrogateToUcs4_s<u32> for (QChar, QChar) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN5QChar15surrogateToUcs4ES_S_(arg0, arg1)};
-    return ret as u32;
+    return ret as u32; // 1
     // return 1;
   }
 }
@@ -442,7 +442,7 @@ impl<'a> /*trait*/ QChar_isTitleCase_s<i8> for (u32) {
     // unsafe{_ZN5QChar11isTitleCaseEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {C_ZN5QChar11isTitleCaseEj(arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -465,7 +465,7 @@ impl<'a> /*trait*/ QChar_isNull<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar6isNullEv()};
     let mut ret = unsafe {C_ZNK5QChar6isNullEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -488,7 +488,7 @@ impl<'a> /*trait*/ QChar_digitValue<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar10digitValueEv()};
     let mut ret = unsafe {C_ZNK5QChar10digitValueEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -536,7 +536,7 @@ impl<'a> /*trait*/ QChar_isLower_s<i8> for (u32) {
     // unsafe{_ZN5QChar7isLowerEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {C_ZN5QChar7isLowerEj(arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -559,7 +559,7 @@ impl<'a> /*trait*/ QChar_isLowSurrogate<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar14isLowSurrogateEv()};
     let mut ret = unsafe {C_ZNK5QChar14isLowSurrogateEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -583,7 +583,7 @@ impl<'a> /*trait*/ QChar_isPrint_s<i8> for (u32) {
     // unsafe{_ZN5QChar7isPrintEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {C_ZN5QChar7isPrintEj(arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -606,7 +606,7 @@ impl<'a> /*trait*/ QChar_isSymbol<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar8isSymbolEv()};
     let mut ret = unsafe {C_ZNK5QChar8isSymbolEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -629,7 +629,7 @@ impl<'a> /*trait*/ QChar_isLower<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar7isLowerEv()};
     let mut ret = unsafe {C_ZNK5QChar7isLowerEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -676,7 +676,7 @@ impl<'a> /*trait*/ QChar_row<u8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar3rowEv()};
     let mut ret = unsafe {C_ZNK5QChar3rowEv(rsthis.qclsinst)};
-    return ret as u8;
+    return ret as u8; // 1
     // return 1;
   }
 }
@@ -699,7 +699,7 @@ impl<'a> /*trait*/ QChar_isDigit<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar7isDigitEv()};
     let mut ret = unsafe {C_ZNK5QChar7isDigitEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -723,7 +723,7 @@ impl<'a> /*trait*/ QChar_toTitleCase_s<u32> for (u32) {
     // unsafe{_ZN5QChar11toTitleCaseEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {C_ZN5QChar11toTitleCaseEj(arg0)};
-    return ret as u32;
+    return ret as u32; // 1
     // return 1;
   }
 }
@@ -746,7 +746,7 @@ impl<'a> /*trait*/ QChar_isSurrogate<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar11isSurrogateEv()};
     let mut ret = unsafe {C_ZNK5QChar11isSurrogateEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -770,7 +770,7 @@ impl<'a> /*trait*/ QChar_hasMirrored_s<i8> for (u32) {
     // unsafe{_ZN5QChar11hasMirroredEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {C_ZN5QChar11hasMirroredEj(arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -793,7 +793,7 @@ impl<'a> /*trait*/ QChar_isNumber<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar8isNumberEv()};
     let mut ret = unsafe {C_ZNK5QChar8isNumberEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -817,7 +817,7 @@ impl<'a> /*trait*/ QChar_isHighSurrogate_s<i8> for (u32) {
     // unsafe{_ZN5QChar15isHighSurrogateEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {C_ZN5QChar15isHighSurrogateEj(arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -841,7 +841,7 @@ impl<'a> /*trait*/ QChar_toCaseFolded_s<u32> for (u32) {
     // unsafe{_ZN5QChar12toCaseFoldedEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {C_ZN5QChar12toCaseFoldedEj(arg0)};
-    return ret as u32;
+    return ret as u32; // 1
     // return 1;
   }
 }
@@ -864,7 +864,7 @@ impl<'a> /*trait*/ QChar_isMark<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar6isMarkEv()};
     let mut ret = unsafe {C_ZNK5QChar6isMarkEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -877,7 +877,7 @@ impl<'a> /*trait*/ QChar_surrogateToUcs4_s<u32> for (u16, u16) {
     let arg0 = self.0  as c_ushort;
     let arg1 = self.1  as c_ushort;
     let mut ret = unsafe {C_ZN5QChar15surrogateToUcs4Ett(arg0, arg1)};
-    return ret as u32;
+    return ret as u32; // 1
     // return 1;
   }
 }
@@ -901,7 +901,7 @@ impl<'a> /*trait*/ QChar_toLower_s<u32> for (u32) {
     // unsafe{_ZN5QChar7toLowerEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {C_ZN5QChar7toLowerEj(arg0)};
-    return ret as u32;
+    return ret as u32; // 1
     // return 1;
   }
 }
@@ -925,7 +925,7 @@ impl<'a> /*trait*/ QChar_mirroredChar_s<u32> for (u32) {
     // unsafe{_ZN5QChar12mirroredCharEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {C_ZN5QChar12mirroredCharEj(arg0)};
-    return ret as u32;
+    return ret as u32; // 1
     // return 1;
   }
 }
@@ -997,7 +997,7 @@ impl<'a> /*trait*/ QChar_digitValue_s<i32> for (u32) {
     // unsafe{_ZN5QChar10digitValueEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {C_ZN5QChar10digitValueEj(arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1044,7 +1044,7 @@ impl<'a> /*trait*/ QChar_isUpper_s<i8> for (u32) {
     // unsafe{_ZN5QChar7isUpperEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {C_ZN5QChar7isUpperEj(arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1120,7 +1120,7 @@ impl<'a> /*trait*/ QChar_isPrint<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar7isPrintEv()};
     let mut ret = unsafe {C_ZNK5QChar7isPrintEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1158,7 +1158,7 @@ impl<'a> /*trait*/ QChar_isPunct<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar7isPunctEv()};
     let mut ret = unsafe {C_ZNK5QChar7isPunctEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1235,7 +1235,7 @@ impl<'a> /*trait*/ QChar_isSpace<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar7isSpaceEv()};
     let mut ret = unsafe {C_ZNK5QChar7isSpaceEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1302,7 +1302,7 @@ impl<'a> /*trait*/ QChar_isUpper<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar7isUpperEv()};
     let mut ret = unsafe {C_ZNK5QChar7isUpperEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1326,7 +1326,7 @@ impl<'a> /*trait*/ QChar_combiningClass_s<u8> for (u32) {
     // unsafe{_ZN5QChar14combiningClassEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {C_ZN5QChar14combiningClassEj(arg0)};
-    return ret as u8;
+    return ret as u8; // 1
     // return 1;
   }
 }
@@ -1349,7 +1349,7 @@ impl<'a> /*trait*/ QChar_isNonCharacter<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar14isNonCharacterEv()};
     let mut ret = unsafe {C_ZNK5QChar14isNonCharacterEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1373,7 +1373,7 @@ impl<'a> /*trait*/ QChar_isLetterOrNumber_s<i8> for (u32) {
     // unsafe{_ZN5QChar16isLetterOrNumberEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {C_ZN5QChar16isLetterOrNumberEj(arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1397,7 +1397,7 @@ impl<'a> /*trait*/ QChar_isDigit_s<i8> for (u32) {
     // unsafe{_ZN5QChar7isDigitEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {C_ZN5QChar7isDigitEj(arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1421,7 +1421,7 @@ impl<'a> /*trait*/ QChar_isPunct_s<i8> for (u32) {
     // unsafe{_ZN5QChar7isPunctEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {C_ZN5QChar7isPunctEj(arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1444,7 +1444,7 @@ impl<'a> /*trait*/ QChar_isTitleCase<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar11isTitleCaseEv()};
     let mut ret = unsafe {C_ZNK5QChar11isTitleCaseEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1467,7 +1467,7 @@ impl<'a> /*trait*/ QChar_isLetter<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar8isLetterEv()};
     let mut ret = unsafe {C_ZNK5QChar8isLetterEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1490,7 +1490,7 @@ impl<'a> /*trait*/ QChar_combiningClass<u8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar14combiningClassEv()};
     let mut ret = unsafe {C_ZNK5QChar14combiningClassEv(rsthis.qclsinst)};
-    return ret as u8;
+    return ret as u8; // 1
     // return 1;
   }
 }
@@ -1513,7 +1513,7 @@ impl<'a> /*trait*/ QChar_isHighSurrogate<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar15isHighSurrogateEv()};
     let mut ret = unsafe {C_ZNK5QChar15isHighSurrogateEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1537,7 +1537,7 @@ impl<'a> /*trait*/ QChar_highSurrogate_s<u16> for (u32) {
     // unsafe{_ZN5QChar13highSurrogateEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {C_ZN5QChar13highSurrogateEj(arg0)};
-    return ret as u16;
+    return ret as u16; // 1
     // return 1;
   }
 }
@@ -1561,7 +1561,7 @@ impl<'a> /*trait*/ QChar_requiresSurrogates_s<i8> for (u32) {
     // unsafe{_ZN5QChar18requiresSurrogatesEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {C_ZN5QChar18requiresSurrogatesEj(arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1584,7 +1584,7 @@ impl<'a> /*trait*/ QChar_isLetterOrNumber<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar16isLetterOrNumberEv()};
     let mut ret = unsafe {C_ZNK5QChar16isLetterOrNumberEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1602,11 +1602,12 @@ pub trait QChar_unicode<RetType> {
 }
 
   // proto:  ushort & QChar::unicode();
-impl<'a> /*trait*/ QChar_unicode<()> for () {
-  fn unicode(self , rsthis: & QChar) -> () {
+impl<'a> /*trait*/ QChar_unicode<u16> for () {
+  fn unicode(self , rsthis: & QChar) -> u16 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QChar7unicodeEv()};
-     unsafe {C_ZN5QChar7unicodeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZN5QChar7unicodeEv(rsthis.qclsinst)};
+    return ret as u16; // 1
     // return 1;
   }
 }
@@ -1630,7 +1631,7 @@ impl<'a> /*trait*/ QChar_isLowSurrogate_s<i8> for (u32) {
     // unsafe{_ZN5QChar14isLowSurrogateEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {C_ZN5QChar14isLowSurrogateEj(arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1654,7 +1655,7 @@ impl<'a> /*trait*/ QChar_isNumber_s<i8> for (u32) {
     // unsafe{_ZN5QChar8isNumberEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {C_ZN5QChar8isNumberEj(arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1717,7 +1718,7 @@ impl<'a> /*trait*/ QChar_isLetter_s<i8> for (u32) {
     // unsafe{_ZN5QChar8isLetterEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {C_ZN5QChar8isLetterEj(arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1765,7 +1766,7 @@ impl<'a> /*trait*/ QChar_isSpace_s<i8> for (u32) {
     // unsafe{_ZN5QChar7isSpaceEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {C_ZN5QChar7isSpaceEj(arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1814,7 +1815,7 @@ impl<'a> /*trait*/ QChar_isSurrogate_s<i8> for (u32) {
     // unsafe{_ZN5QChar11isSurrogateEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {C_ZN5QChar11isSurrogateEj(arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1838,7 +1839,7 @@ impl<'a> /*trait*/ QChar_isMark_s<i8> for (u32) {
     // unsafe{_ZN5QChar6isMarkEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {C_ZN5QChar6isMarkEj(arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1862,7 +1863,7 @@ impl<'a> /*trait*/ QChar_isNonCharacter_s<i8> for (u32) {
     // unsafe{_ZN5QChar14isNonCharacterEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {C_ZN5QChar14isNonCharacterEj(arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1885,7 +1886,7 @@ impl<'a> /*trait*/ QChar_toLatin1<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar8toLatin1Ev()};
     let mut ret = unsafe {C_ZNK5QChar8toLatin1Ev(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

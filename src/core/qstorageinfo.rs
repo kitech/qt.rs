@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qstorageinfo.h
 // dst-file: /src/core/qstorageinfo.rs
 //
@@ -19,9 +19,10 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qbytearray::QByteArray; // 773
-use super::qstring::QString; // 773
-use super::qdir::QDir; // 773
+use super::qbytearray::*; // 773
+use super::qstring::*; // 773
+// use super::qlist::*; // 775
+use super::qdir::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -45,7 +46,7 @@ extern {
   // proto:  void QStorageInfo::setPath(const QString & path);
   fn C_ZN12QStorageInfo7setPathERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static QList<QStorageInfo> QStorageInfo::mountedVolumes();
-  fn C_ZN12QStorageInfo14mountedVolumesEv();
+  fn C_ZN12QStorageInfo14mountedVolumesEv() -> *mut c_void;
   // proto:  QString QStorageInfo::name();
   fn C_ZNK12QStorageInfo4nameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QStorageInfo::refresh();
@@ -109,7 +110,7 @@ impl<'a> /*trait*/ QStorageInfo_bytesFree<i64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QStorageInfo9bytesFreeEv()};
     let mut ret = unsafe {C_ZNK12QStorageInfo9bytesFreeEv(rsthis.qclsinst)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -160,7 +161,7 @@ impl<'a> /*trait*/ QStorageInfo_isRoot<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QStorageInfo6isRootEv()};
     let mut ret = unsafe {C_ZNK12QStorageInfo6isRootEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -183,7 +184,7 @@ impl<'a> /*trait*/ QStorageInfo_isReadOnly<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QStorageInfo10isReadOnlyEv()};
     let mut ret = unsafe {C_ZNK12QStorageInfo10isReadOnlyEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -248,11 +249,12 @@ pub trait QStorageInfo_mountedVolumes_s<RetType> {
 }
 
   // proto: static QList<QStorageInfo> QStorageInfo::mountedVolumes();
-impl<'a> /*trait*/ QStorageInfo_mountedVolumes_s<()> for () {
-  fn mountedVolumes_s(self ) -> () {
+impl<'a> /*trait*/ QStorageInfo_mountedVolumes_s<u64> for () {
+  fn mountedVolumes_s(self ) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QStorageInfo14mountedVolumesEv()};
-     unsafe {C_ZN12QStorageInfo14mountedVolumesEv()};
+    let mut ret = unsafe {C_ZN12QStorageInfo14mountedVolumesEv()};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -321,7 +323,7 @@ impl<'a> /*trait*/ QStorageInfo_isValid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QStorageInfo7isValidEv()};
     let mut ret = unsafe {C_ZNK12QStorageInfo7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -344,7 +346,7 @@ impl<'a> /*trait*/ QStorageInfo_isReady<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QStorageInfo7isReadyEv()};
     let mut ret = unsafe {C_ZNK12QStorageInfo7isReadyEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -367,7 +369,7 @@ impl<'a> /*trait*/ QStorageInfo_bytesTotal<i64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QStorageInfo10bytesTotalEv()};
     let mut ret = unsafe {C_ZNK12QStorageInfo10bytesTotalEv(rsthis.qclsinst)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -436,7 +438,7 @@ impl<'a> /*trait*/ QStorageInfo_bytesAvailable<i64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QStorageInfo14bytesAvailableEv()};
     let mut ret = unsafe {C_ZNK12QStorageInfo14bytesAvailableEv(rsthis.qclsinst)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }

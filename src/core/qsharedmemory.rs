@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qsharedmemory.h
 // dst-file: /src/core/qsharedmemory.rs
 //
@@ -18,10 +18,10 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qobject::QObject; // 773
+use super::qobject::*; // 773
 use std::ops::Deref;
-use super::qstring::QString; // 773
-use super::qobjectdefs::QMetaObject; // 773
+use super::qstring::*; // 773
+use super::qobjectdefs::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -45,9 +45,9 @@ extern {
   // proto:  QString QSharedMemory::key();
   fn C_ZNK13QSharedMemory3keyEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  const void * QSharedMemory::constData();
-  fn C_ZNK13QSharedMemory9constDataEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK13QSharedMemory9constDataEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void * QSharedMemory::data();
-  fn C_ZN13QSharedMemory4dataEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN13QSharedMemory4dataEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QSharedMemory::isAttached();
   fn C_ZNK13QSharedMemory10isAttachedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QSharedMemory::lock();
@@ -109,7 +109,7 @@ impl<'a> /*trait*/ QSharedMemory_size<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QSharedMemory4sizeEv()};
     let mut ret = unsafe {C_ZNK13QSharedMemory4sizeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -250,11 +250,12 @@ pub trait QSharedMemory_constData<RetType> {
 }
 
   // proto:  const void * QSharedMemory::constData();
-impl<'a> /*trait*/ QSharedMemory_constData<()> for () {
-  fn constData(self , rsthis: & QSharedMemory) -> () {
+impl<'a> /*trait*/ QSharedMemory_constData<*mut c_void> for () {
+  fn constData(self , rsthis: & QSharedMemory) -> *mut c_void {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QSharedMemory9constDataEv()};
-     unsafe {C_ZNK13QSharedMemory9constDataEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QSharedMemory9constDataEv(rsthis.qclsinst)};
+    return ret as *mut c_void; // 1
     // return 1;
   }
 }
@@ -272,11 +273,12 @@ pub trait QSharedMemory_data<RetType> {
 }
 
   // proto:  void * QSharedMemory::data();
-impl<'a> /*trait*/ QSharedMemory_data<()> for () {
-  fn data(self , rsthis: & QSharedMemory) -> () {
+impl<'a> /*trait*/ QSharedMemory_data<*mut c_void> for () {
+  fn data(self , rsthis: & QSharedMemory) -> *mut c_void {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QSharedMemory4dataEv()};
-     unsafe {C_ZN13QSharedMemory4dataEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZN13QSharedMemory4dataEv(rsthis.qclsinst)};
+    return ret as *mut c_void; // 1
     // return 1;
   }
 }
@@ -299,7 +301,7 @@ impl<'a> /*trait*/ QSharedMemory_isAttached<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QSharedMemory10isAttachedEv()};
     let mut ret = unsafe {C_ZNK13QSharedMemory10isAttachedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -322,7 +324,7 @@ impl<'a> /*trait*/ QSharedMemory_lock<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QSharedMemory4lockEv()};
     let mut ret = unsafe {C_ZN13QSharedMemory4lockEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -367,7 +369,7 @@ impl<'a> /*trait*/ QSharedMemory_unlock<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QSharedMemory6unlockEv()};
     let mut ret = unsafe {C_ZN13QSharedMemory6unlockEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -390,7 +392,7 @@ impl<'a> /*trait*/ QSharedMemory_detach<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QSharedMemory6detachEv()};
     let mut ret = unsafe {C_ZN13QSharedMemory6detachEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

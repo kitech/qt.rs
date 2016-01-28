@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qrunnable.h
 // dst-file: /src/core/qrunnable.rs
 //
@@ -166,7 +166,7 @@ impl<'a> /*trait*/ QRunnable_autoDelete<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QRunnable10autoDeleteEv()};
     let mut ret = unsafe {C_ZNK9QRunnable10autoDeleteEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

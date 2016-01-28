@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qtextcodec.h
 // dst-file: /src/core/qtextcodec.rs
 //
@@ -19,10 +19,11 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qstring::QString; // 773
-use super::qbytearray::QByteArray; // 773
+use super::qstring::*; // 773
+use super::qbytearray::*; // 773
 // use super::qtextcodec::QTextCodec; // 773
-use super::qchar::QChar; // 773
+use super::qchar::*; // 773
+// use super::qlist::*; // 775
 // <= use block end
 
 // ext block begin =>
@@ -53,7 +54,7 @@ extern {
   // proto: static QTextCodec * QTextCodec::codecForLocale();
   fn C_ZN10QTextCodec14codecForLocaleEv() -> *mut c_void;
   // proto: static QList<int> QTextCodec::availableMibs();
-  fn C_ZN10QTextCodec13availableMibsEv();
+  fn C_ZN10QTextCodec13availableMibsEv() -> *mut c_void;
   // proto: static QTextCodec * QTextCodec::codecForHtml(const QByteArray & ba);
   fn C_ZN10QTextCodec12codecForHtmlERK10QByteArray(arg0: *mut c_void) -> *mut c_void;
   // proto: static void QTextCodec::setCodecForLocale(QTextCodec * c);
@@ -69,11 +70,11 @@ extern {
   // proto:  bool QTextCodec::canEncode(const QString & );
   fn C_ZNK10QTextCodec9canEncodeERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  QList<QByteArray> QTextCodec::aliases();
-  fn C_ZNK10QTextCodec7aliasesEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK10QTextCodec7aliasesEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto: static QTextCodec * QTextCodec::codecForName(const QByteArray & name);
   fn C_ZN10QTextCodec12codecForNameERK10QByteArray(arg0: *mut c_void) -> *mut c_void;
   // proto: static QList<QByteArray> QTextCodec::availableCodecs();
-  fn C_ZN10QTextCodec15availableCodecsEv();
+  fn C_ZN10QTextCodec15availableCodecsEv() -> *mut c_void;
   // proto: static QTextCodec * QTextCodec::codecForHtml(const QByteArray & ba, QTextCodec * defaultCodec);
   fn C_ZN10QTextCodec12codecForHtmlERK10QByteArrayPS_(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto: static QTextCodec * QTextCodec::codecForMib(int mib);
@@ -189,7 +190,7 @@ impl<'a> /*trait*/ QTextEncoder_hasFailure<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTextEncoder10hasFailureEv()};
     let mut ret = unsafe {C_ZNK12QTextEncoder10hasFailureEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -352,11 +353,12 @@ pub trait QTextCodec_availableMibs_s<RetType> {
 }
 
   // proto: static QList<int> QTextCodec::availableMibs();
-impl<'a> /*trait*/ QTextCodec_availableMibs_s<()> for () {
-  fn availableMibs_s(self ) -> () {
+impl<'a> /*trait*/ QTextCodec_availableMibs_s<u64> for () {
+  fn availableMibs_s(self ) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextCodec13availableMibsEv()};
-     unsafe {C_ZN10QTextCodec13availableMibsEv()};
+    let mut ret = unsafe {C_ZN10QTextCodec13availableMibsEv()};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -465,7 +467,7 @@ impl<'a> /*trait*/ QTextCodec_mibEnum<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextCodec7mibEnumEv()};
     let mut ret = unsafe {C_ZNK10QTextCodec7mibEnumEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -514,7 +516,7 @@ impl<'a> /*trait*/ QTextCodec_canEncode<i8> for (&'a QString) {
     // unsafe{_ZNK10QTextCodec9canEncodeERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK10QTextCodec9canEncodeERK7QString(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -532,11 +534,12 @@ pub trait QTextCodec_aliases<RetType> {
 }
 
   // proto:  QList<QByteArray> QTextCodec::aliases();
-impl<'a> /*trait*/ QTextCodec_aliases<()> for () {
-  fn aliases(self , rsthis: & QTextCodec) -> () {
+impl<'a> /*trait*/ QTextCodec_aliases<u64> for () {
+  fn aliases(self , rsthis: & QTextCodec) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextCodec7aliasesEv()};
-     unsafe {C_ZNK10QTextCodec7aliasesEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QTextCodec7aliasesEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -567,11 +570,12 @@ pub trait QTextCodec_availableCodecs_s<RetType> {
 }
 
   // proto: static QList<QByteArray> QTextCodec::availableCodecs();
-impl<'a> /*trait*/ QTextCodec_availableCodecs_s<()> for () {
-  fn availableCodecs_s(self ) -> () {
+impl<'a> /*trait*/ QTextCodec_availableCodecs_s<u64> for () {
+  fn availableCodecs_s(self ) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextCodec15availableCodecsEv()};
-     unsafe {C_ZN10QTextCodec15availableCodecsEv()};
+    let mut ret = unsafe {C_ZN10QTextCodec15availableCodecsEv()};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -636,7 +640,7 @@ impl<'a> /*trait*/ QTextCodec_canEncode<i8> for (QChar) {
     // unsafe{_ZNK10QTextCodec9canEncodeE5QChar()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK10QTextCodec9canEncodeE5QChar(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -718,7 +722,7 @@ impl<'a> /*trait*/ QTextDecoder_hasFailure<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTextDecoder10hasFailureEv()};
     let mut ret = unsafe {C_ZNK12QTextDecoder10hasFailureEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

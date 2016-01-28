@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qurlquery.h
 // dst-file: /src/core/qurlquery.rs
 //
@@ -19,9 +19,9 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qstring::QString; // 773
-use super::qchar::QChar; // 773
-use super::qurl::QUrl; // 773
+use super::qstring::*; // 773
+use super::qchar::*; // 773
+use super::qurl::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -271,7 +271,7 @@ impl<'a> /*trait*/ QUrlQuery_isDetached<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QUrlQuery10isDetachedEv()};
     let mut ret = unsafe {C_ZNK9QUrlQuery10isDetachedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -377,7 +377,7 @@ impl<'a> /*trait*/ QUrlQuery_isEmpty<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QUrlQuery7isEmptyEv()};
     let mut ret = unsafe {C_ZNK9QUrlQuery7isEmptyEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -502,7 +502,7 @@ impl<'a> /*trait*/ QUrlQuery_hasQueryItem<i8> for (&'a QString) {
     // unsafe{_ZNK9QUrlQuery12hasQueryItemERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK9QUrlQuery12hasQueryItemERK7QString(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
