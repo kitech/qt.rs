@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qtextlist.h
 // dst-file: /src/gui/qtextlist.rs
 //
@@ -18,13 +18,12 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qtextobject::QTextBlockGroup; // 773
+use super::qtextobject::*; // 773
 use std::ops::Deref;
-use super::qtextobject::QTextBlock; // 773
-use super::qtextformat::QTextListFormat; // 773
-use super::qtextdocument::QTextDocument; // 773
-use super::super::core::qstring::QString; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
+use super::qtextformat::*; // 773
+use super::qtextdocument::*; // 773
+use super::super::core::qstring::*; // 771
+use super::super::core::qobjectdefs::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -277,7 +276,7 @@ impl<'a> /*trait*/ QTextList_itemNumber<i32> for (&'a QTextBlock) {
     // unsafe{_ZNK9QTextList10itemNumberERK10QTextBlock()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK9QTextList10itemNumberERK10QTextBlock(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -300,7 +299,7 @@ impl<'a> /*trait*/ QTextList_count<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextList5countEv()};
     let mut ret = unsafe {C_ZNK9QTextList5countEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -369,7 +368,7 @@ impl<'a> /*trait*/ QTextList_isEmpty<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextList7isEmptyEv()};
     let mut ret = unsafe {C_ZNK9QTextList7isEmptyEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

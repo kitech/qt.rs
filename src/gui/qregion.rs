@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qregion.h
 // dst-file: /src/gui/qregion.rs
 //
@@ -19,10 +19,11 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::super::core::qrect::QRect; // 771
-use super::super::core::qpoint::QPoint; // 771
-use super::qbitmap::QBitmap; // 773
-use super::qpolygon::QPolygon; // 773
+use super::super::core::qrect::*; // 771
+use super::super::core::qpoint::*; // 771
+use super::qbitmap::*; // 773
+use super::qpolygon::*; // 773
+// use super::qvector::*; // 775
 // <= use block end
 
 // ext block begin =>
@@ -66,7 +67,7 @@ extern {
   // proto:  void QRegion::setRects(const QRect * rect, int num);
   fn C_ZN7QRegion8setRectsEPK5QRecti(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
   // proto:  QVector<QRect> QRegion::rects();
-  fn C_ZNK7QRegion5rectsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK7QRegion5rectsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QRegion QRegion::subtracted(const QRegion & r);
   fn C_ZNK7QRegion10subtractedERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  bool QRegion::intersects(const QRect & r);
@@ -116,7 +117,7 @@ impl<'a> /*trait*/ QRegion_isNull<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QRegion6isNullEv()};
     let mut ret = unsafe {C_ZNK7QRegion6isNullEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -191,7 +192,7 @@ impl<'a> /*trait*/ QRegion_rectCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QRegion9rectCountEv()};
     let mut ret = unsafe {C_ZNK7QRegion9rectCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -374,7 +375,7 @@ impl<'a> /*trait*/ QRegion_contains<i8> for (&'a QRect) {
     // unsafe{_ZNK7QRegion8containsERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK7QRegion8containsERK5QRect(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -397,7 +398,7 @@ impl<'a> /*trait*/ QRegion_isEmpty<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QRegion7isEmptyEv()};
     let mut ret = unsafe {C_ZNK7QRegion7isEmptyEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -464,11 +465,12 @@ pub trait QRegion_rects<RetType> {
 }
 
   // proto:  QVector<QRect> QRegion::rects();
-impl<'a> /*trait*/ QRegion_rects<()> for () {
-  fn rects(self , rsthis: & QRegion) -> () {
+impl<'a> /*trait*/ QRegion_rects<u64> for () {
+  fn rects(self , rsthis: & QRegion) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QRegion5rectsEv()};
-     unsafe {C_ZNK7QRegion5rectsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QRegion5rectsEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -517,7 +519,7 @@ impl<'a> /*trait*/ QRegion_intersects<i8> for (&'a QRect) {
     // unsafe{_ZNK7QRegion10intersectsERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK7QRegion10intersectsERK5QRect(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -594,7 +596,7 @@ impl<'a> /*trait*/ QRegion_intersects<i8> for (&'a QRegion) {
     // unsafe{_ZNK7QRegion10intersectsERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK7QRegion10intersectsERKS_(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -606,7 +608,7 @@ impl<'a> /*trait*/ QRegion_contains<i8> for (&'a QPoint) {
     // unsafe{_ZNK7QRegion8containsERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK7QRegion8containsERK6QPoint(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

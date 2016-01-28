@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qdesktopservices.h
 // dst-file: /src/gui/qdesktopservices.rs
 //
@@ -19,9 +19,9 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
-use super::super::core::qurl::QUrl; // 771
-use super::super::core::qobject::QObject; // 771
+use super::super::core::qstring::*; // 771
+use super::super::core::qurl::*; // 771
+use super::super::core::qobject::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -95,7 +95,7 @@ impl<'a> /*trait*/ QDesktopServices_openUrl_s<i8> for (&'a QUrl) {
     // unsafe{_ZN16QDesktopServices7openUrlERK4QUrl()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN16QDesktopServices7openUrlERK4QUrl(arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

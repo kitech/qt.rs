@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qcursor.h
 // dst-file: /src/gui/qcursor.rs
 //
@@ -19,10 +19,10 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qscreen::QScreen; // 773
-use super::qpixmap::QPixmap; // 773
-use super::qbitmap::QBitmap; // 773
-use super::super::core::qpoint::QPoint; // 771
+use super::qscreen::*; // 773
+use super::qpixmap::*; // 773
+use super::qbitmap::*; // 773
+use super::super::core::qpoint::*; // 771
 // <= use block end
 
 // ext block begin =>

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qpalette.h
 // dst-file: /src/gui/qpalette.rs
 //
@@ -19,8 +19,8 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qcolor::QColor; // 773
-use super::qbrush::QBrush; // 773
+use super::qcolor::*; // 773
+use super::qbrush::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -313,7 +313,7 @@ impl<'a> /*trait*/ QPalette_isCopyOf<i8> for (&'a QPalette) {
     // unsafe{_ZNK8QPalette8isCopyOfERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK8QPalette8isCopyOfERKS_(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -347,7 +347,7 @@ impl<'a> /*trait*/ QPalette_resolve<u32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette7resolveEv()};
     let mut ret = unsafe {C_ZNK8QPalette7resolveEv(rsthis.qclsinst)};
-    return ret as u32;
+    return ret as u32; // 1
     // return 1;
   }
 }
@@ -519,7 +519,7 @@ impl<'a> /*trait*/ QPalette_cacheKey<i64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette8cacheKeyEv()};
     let mut ret = unsafe {C_ZNK8QPalette8cacheKeyEv(rsthis.qclsinst)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }

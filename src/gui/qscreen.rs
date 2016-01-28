@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qscreen.h
 // dst-file: /src/gui/qscreen.rs
 //
@@ -18,14 +18,15 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qobject::QObject; // 771
+use super::super::core::qobject::*; // 771
 use std::ops::Deref;
-use super::super::core::qrect::QRect; // 771
-use super::qpixmap::QPixmap; // 773
-use super::super::core::qsize::QSize; // 771
-use super::super::core::qsize::QSizeF; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::core::qstring::QString; // 771
+use super::super::core::qrect::*; // 771
+use super::qpixmap::*; // 773
+use super::super::core::qsize::*; // 771
+// use super::qplatformscreen::*; // 775
+// use super::qlist::*; // 775
+use super::super::core::qobjectdefs::*; // 771
+use super::super::core::qstring::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -47,7 +48,7 @@ extern {
   // proto:  QSizeF QScreen::physicalSize();
   fn C_ZNK7QScreen12physicalSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QPlatformScreen * QScreen::handle();
-  fn C_ZNK7QScreen6handleEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK7QScreen6handleEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QRect QScreen::availableVirtualGeometry();
   fn C_ZNK7QScreen24availableVirtualGeometryEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QScreen::~QScreen();
@@ -57,7 +58,7 @@ extern {
   // proto:  qreal QScreen::devicePixelRatio();
   fn C_ZNK7QScreen16devicePixelRatioEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  QList<QScreen *> QScreen::virtualSiblings();
-  fn C_ZNK7QScreen15virtualSiblingsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK7QScreen15virtualSiblingsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QRect QScreen::virtualGeometry();
   fn C_ZNK7QScreen15virtualGeometryEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  qreal QScreen::logicalDotsPerInch();
@@ -145,7 +146,7 @@ impl<'a> /*trait*/ QScreen_logicalDotsPerInchY<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen19logicalDotsPerInchYEv()};
     let mut ret = unsafe {C_ZNK7QScreen19logicalDotsPerInchYEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -264,11 +265,12 @@ pub trait QScreen_handle<RetType> {
 }
 
   // proto:  QPlatformScreen * QScreen::handle();
-impl<'a> /*trait*/ QScreen_handle<()> for () {
-  fn handle(self , rsthis: & QScreen) -> () {
+impl<'a> /*trait*/ QScreen_handle<u64> for () {
+  fn handle(self , rsthis: & QScreen) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen6handleEv()};
-     unsafe {C_ZNK7QScreen6handleEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QScreen6handleEv(rsthis.qclsinst)};
+    return ret as u64; // 4
     // return 1;
   }
 }
@@ -361,7 +363,7 @@ impl<'a> /*trait*/ QScreen_devicePixelRatio<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen16devicePixelRatioEv()};
     let mut ret = unsafe {C_ZNK7QScreen16devicePixelRatioEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -379,11 +381,12 @@ pub trait QScreen_virtualSiblings<RetType> {
 }
 
   // proto:  QList<QScreen *> QScreen::virtualSiblings();
-impl<'a> /*trait*/ QScreen_virtualSiblings<()> for () {
-  fn virtualSiblings(self , rsthis: & QScreen) -> () {
+impl<'a> /*trait*/ QScreen_virtualSiblings<u64> for () {
+  fn virtualSiblings(self , rsthis: & QScreen) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen15virtualSiblingsEv()};
-     unsafe {C_ZNK7QScreen15virtualSiblingsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QScreen15virtualSiblingsEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -430,7 +433,7 @@ impl<'a> /*trait*/ QScreen_logicalDotsPerInch<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen18logicalDotsPerInchEv()};
     let mut ret = unsafe {C_ZNK7QScreen18logicalDotsPerInchEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -453,7 +456,7 @@ impl<'a> /*trait*/ QScreen_physicalDotsPerInch<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen19physicalDotsPerInchEv()};
     let mut ret = unsafe {C_ZNK7QScreen19physicalDotsPerInchEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -476,7 +479,7 @@ impl<'a> /*trait*/ QScreen_refreshRate<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen11refreshRateEv()};
     let mut ret = unsafe {C_ZNK7QScreen11refreshRateEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -595,7 +598,7 @@ impl<'a> /*trait*/ QScreen_logicalDotsPerInchX<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen19logicalDotsPerInchXEv()};
     let mut ret = unsafe {C_ZNK7QScreen19logicalDotsPerInchXEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -642,7 +645,7 @@ impl<'a> /*trait*/ QScreen_physicalDotsPerInchX<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen20physicalDotsPerInchXEv()};
     let mut ret = unsafe {C_ZNK7QScreen20physicalDotsPerInchXEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -665,7 +668,7 @@ impl<'a> /*trait*/ QScreen_physicalDotsPerInchY<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen20physicalDotsPerInchYEv()};
     let mut ret = unsafe {C_ZNK7QScreen20physicalDotsPerInchYEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -688,7 +691,7 @@ impl<'a> /*trait*/ QScreen_depth<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen5depthEv()};
     let mut ret = unsafe {C_ZNK7QScreen5depthEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

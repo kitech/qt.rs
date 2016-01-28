@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qtextcursor.h
 // dst-file: /src/gui/qtextcursor.rs
 //
@@ -19,20 +19,14 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qtextformat::QTextCharFormat; // 773
-use super::qtextdocumentfragment::QTextDocumentFragment; // 773
-use super::qtextobject::QTextBlock; // 773
-use super::qtextformat::QTextListFormat; // 773
-use super::qtextlist::QTextList; // 773
-use super::qtextformat::QTextImageFormat; // 773
-use super::super::core::qstring::QString; // 771
-use super::qtextformat::QTextFrameFormat; // 773
-use super::qtextobject::QTextFrame; // 773
-use super::qtexttable::QTextTable; // 773
-use super::qtextformat::QTextBlockFormat; // 773
-use super::qtextdocument::QTextDocument; // 773
-use super::qimage::QImage; // 773
-use super::qtextformat::QTextTableFormat; // 773
+use super::qtextformat::*; // 773
+use super::qtextdocumentfragment::*; // 773
+use super::qtextobject::*; // 773
+use super::qtextlist::*; // 773
+use super::super::core::qstring::*; // 771
+use super::qtexttable::*; // 773
+use super::qtextdocument::*; // 773
+use super::qimage::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -210,7 +204,7 @@ impl<'a> /*trait*/ QTextCursor_columnNumber<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor12columnNumberEv()};
     let mut ret = unsafe {C_ZNK11QTextCursor12columnNumberEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -303,7 +297,7 @@ impl<'a> /*trait*/ QTextCursor_hasComplexSelection<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor19hasComplexSelectionEv()};
     let mut ret = unsafe {C_ZNK11QTextCursor19hasComplexSelectionEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -421,7 +415,7 @@ impl<'a> /*trait*/ QTextCursor_keepPositionOnInsert<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor20keepPositionOnInsertEv()};
     let mut ret = unsafe {C_ZNK11QTextCursor20keepPositionOnInsertEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -444,7 +438,7 @@ impl<'a> /*trait*/ QTextCursor_position<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor8positionEv()};
     let mut ret = unsafe {C_ZNK11QTextCursor8positionEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -467,7 +461,7 @@ impl<'a> /*trait*/ QTextCursor_isNull<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor6isNullEv()};
     let mut ret = unsafe {C_ZNK11QTextCursor6isNullEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -536,7 +530,7 @@ impl<'a> /*trait*/ QTextCursor_isCopyOf<i8> for (&'a QTextCursor) {
     // unsafe{_ZNK11QTextCursor8isCopyOfERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK11QTextCursor8isCopyOfERKS_(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -735,7 +729,7 @@ impl<'a> /*trait*/ QTextCursor_atStart<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor7atStartEv()};
     let mut ret = unsafe {C_ZNK11QTextCursor7atStartEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -758,7 +752,7 @@ impl<'a> /*trait*/ QTextCursor_selectionStart<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor14selectionStartEv()};
     let mut ret = unsafe {C_ZNK11QTextCursor14selectionStartEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -853,7 +847,7 @@ impl<'a> /*trait*/ QTextCursor_positionInBlock<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor15positionInBlockEv()};
     let mut ret = unsafe {C_ZNK11QTextCursor15positionInBlockEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -876,7 +870,7 @@ impl<'a> /*trait*/ QTextCursor_hasSelection<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor12hasSelectionEv()};
     let mut ret = unsafe {C_ZNK11QTextCursor12hasSelectionEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -899,7 +893,7 @@ impl<'a> /*trait*/ QTextCursor_atEnd<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor5atEndEv()};
     let mut ret = unsafe {C_ZNK11QTextCursor5atEndEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -933,7 +927,7 @@ impl<'a> /*trait*/ QTextCursor_atBlockStart<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor12atBlockStartEv()};
     let mut ret = unsafe {C_ZNK11QTextCursor12atBlockStartEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -979,7 +973,7 @@ impl<'a> /*trait*/ QTextCursor_visualNavigation<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor16visualNavigationEv()};
     let mut ret = unsafe {C_ZNK11QTextCursor16visualNavigationEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1002,7 +996,7 @@ impl<'a> /*trait*/ QTextCursor_atBlockEnd<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor10atBlockEndEv()};
     let mut ret = unsafe {C_ZNK11QTextCursor10atBlockEndEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1118,7 +1112,7 @@ impl<'a> /*trait*/ QTextCursor_verticalMovementX<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor17verticalMovementXEv()};
     let mut ret = unsafe {C_ZNK11QTextCursor17verticalMovementXEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1141,7 +1135,7 @@ impl<'a> /*trait*/ QTextCursor_blockNumber<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor11blockNumberEv()};
     let mut ret = unsafe {C_ZNK11QTextCursor11blockNumberEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1294,7 +1288,7 @@ impl<'a> /*trait*/ QTextCursor_anchor<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor6anchorEv()};
     let mut ret = unsafe {C_ZNK11QTextCursor6anchorEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1577,7 +1571,7 @@ impl<'a> /*trait*/ QTextCursor_selectionEnd<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor12selectionEndEv()};
     let mut ret = unsafe {C_ZNK11QTextCursor12selectionEndEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

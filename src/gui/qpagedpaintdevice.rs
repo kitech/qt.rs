@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qpagedpaintdevice.h
 // dst-file: /src/gui/qpagedpaintdevice.rs
 //
@@ -18,12 +18,12 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qpaintdevice::QPaintDevice; // 773
+use super::qpaintdevice::*; // 773
 use std::ops::Deref;
-use super::super::core::qsize::QSizeF; // 771
-use super::super::core::qmargins::QMarginsF; // 771
-use super::qpagelayout::QPageLayout; // 773
-use super::qpagesize::QPageSize; // 773
+use super::super::core::qsize::*; // 771
+use super::super::core::qmargins::*; // 771
+use super::qpagelayout::*; // 773
+use super::qpagesize::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -144,7 +144,7 @@ impl<'a> /*trait*/ QPagedPaintDevice_setPageMargins<i8> for (&'a QMarginsF) {
     // unsafe{_ZN17QPagedPaintDevice14setPageMarginsERK9QMarginsF()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN17QPagedPaintDevice14setPageMarginsERK9QMarginsF(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -192,7 +192,7 @@ impl<'a> /*trait*/ QPagedPaintDevice_setPageSize<i8> for (&'a QPageSize) {
     // unsafe{_ZN17QPagedPaintDevice11setPageSizeERK9QPageSize()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN17QPagedPaintDevice11setPageSizeERK9QPageSize(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -266,7 +266,7 @@ impl<'a> /*trait*/ QPagedPaintDevice_setPageLayout<i8> for (&'a QPageLayout) {
     // unsafe{_ZN17QPagedPaintDevice13setPageLayoutERK11QPageLayout()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN17QPagedPaintDevice13setPageLayoutERK11QPageLayout(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -289,7 +289,7 @@ impl<'a> /*trait*/ QPagedPaintDevice_newPage<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QPagedPaintDevice7newPageEv()};
     let mut ret = unsafe {C_ZN17QPagedPaintDevice7newPageEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

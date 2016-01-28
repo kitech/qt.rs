@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qopengltimerquery.h
 // dst-file: /src/gui/qopengltimerquery.rs
 //
@@ -18,9 +18,10 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qobject::QObject; // 771
+use super::super::core::qobject::*; // 771
 use std::ops::Deref;
-use super::super::core::qobjectdefs::QMetaObject; // 771
+use super::super::core::qobjectdefs::*; // 771
+// use super::qvector::*; // 775
 // <= use block end
 
 // ext block begin =>
@@ -71,9 +72,9 @@ extern {
   // proto:  bool QOpenGLTimeMonitor::isResultAvailable();
   fn C_ZNK18QOpenGLTimeMonitor17isResultAvailableEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QVector<GLuint64> QOpenGLTimeMonitor::waitForIntervals();
-  fn C_ZNK18QOpenGLTimeMonitor16waitForIntervalsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK18QOpenGLTimeMonitor16waitForIntervalsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QVector<GLuint> QOpenGLTimeMonitor::objectIds();
-  fn C_ZNK18QOpenGLTimeMonitor9objectIdsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK18QOpenGLTimeMonitor9objectIdsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QOpenGLTimeMonitor::recordSample();
   fn C_ZN18QOpenGLTimeMonitor12recordSampleEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QOpenGLTimeMonitor::reset();
@@ -81,7 +82,7 @@ extern {
   // proto:  void QOpenGLTimeMonitor::QOpenGLTimeMonitor(QObject * parent);
   fn C_ZN18QOpenGLTimeMonitorC2EP7QObject(arg0: *mut c_void) -> u64;
   // proto:  QVector<GLuint64> QOpenGLTimeMonitor::waitForSamples();
-  fn C_ZNK18QOpenGLTimeMonitor14waitForSamplesEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK18QOpenGLTimeMonitor14waitForSamplesEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QOpenGLTimeMonitor::isCreated();
   fn C_ZNK18QOpenGLTimeMonitor9isCreatedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  const QMetaObject * QOpenGLTimeMonitor::metaObject();
@@ -138,7 +139,7 @@ impl<'a> /*trait*/ QOpenGLTimerQuery_create<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QOpenGLTimerQuery6createEv()};
     let mut ret = unsafe {C_ZN17QOpenGLTimerQuery6createEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -161,7 +162,7 @@ impl<'a> /*trait*/ QOpenGLTimerQuery_isCreated<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QOpenGLTimerQuery9isCreatedEv()};
     let mut ret = unsafe {C_ZNK17QOpenGLTimerQuery9isCreatedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -300,7 +301,7 @@ impl<'a> /*trait*/ QOpenGLTimerQuery_waitForResult<u64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QOpenGLTimerQuery13waitForResultEv()};
     let mut ret = unsafe {C_ZNK17QOpenGLTimerQuery13waitForResultEv(rsthis.qclsinst)};
-    return ret as u64;
+    return ret as u64; // 1
     // return 1;
   }
 }
@@ -323,7 +324,7 @@ impl<'a> /*trait*/ QOpenGLTimerQuery_objectId<u32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QOpenGLTimerQuery8objectIdEv()};
     let mut ret = unsafe {C_ZNK17QOpenGLTimerQuery8objectIdEv(rsthis.qclsinst)};
-    return ret as u32;
+    return ret as u32; // 1
     // return 1;
   }
 }
@@ -346,7 +347,7 @@ impl<'a> /*trait*/ QOpenGLTimerQuery_waitForTimestamp<u64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QOpenGLTimerQuery16waitForTimestampEv()};
     let mut ret = unsafe {C_ZNK17QOpenGLTimerQuery16waitForTimestampEv(rsthis.qclsinst)};
-    return ret as u64;
+    return ret as u64; // 1
     // return 1;
   }
 }
@@ -415,7 +416,7 @@ impl<'a> /*trait*/ QOpenGLTimerQuery_isResultAvailable<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QOpenGLTimerQuery17isResultAvailableEv()};
     let mut ret = unsafe {C_ZNK17QOpenGLTimerQuery17isResultAvailableEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -478,7 +479,7 @@ impl<'a> /*trait*/ QOpenGLTimeMonitor_sampleCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QOpenGLTimeMonitor11sampleCountEv()};
     let mut ret = unsafe {C_ZNK18QOpenGLTimeMonitor11sampleCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -523,7 +524,7 @@ impl<'a> /*trait*/ QOpenGLTimeMonitor_create<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QOpenGLTimeMonitor6createEv()};
     let mut ret = unsafe {C_ZN18QOpenGLTimeMonitor6createEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -568,7 +569,7 @@ impl<'a> /*trait*/ QOpenGLTimeMonitor_isResultAvailable<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QOpenGLTimeMonitor17isResultAvailableEv()};
     let mut ret = unsafe {C_ZNK18QOpenGLTimeMonitor17isResultAvailableEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -586,11 +587,12 @@ pub trait QOpenGLTimeMonitor_waitForIntervals<RetType> {
 }
 
   // proto:  QVector<GLuint64> QOpenGLTimeMonitor::waitForIntervals();
-impl<'a> /*trait*/ QOpenGLTimeMonitor_waitForIntervals<()> for () {
-  fn waitForIntervals(self , rsthis: & QOpenGLTimeMonitor) -> () {
+impl<'a> /*trait*/ QOpenGLTimeMonitor_waitForIntervals<u64> for () {
+  fn waitForIntervals(self , rsthis: & QOpenGLTimeMonitor) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QOpenGLTimeMonitor16waitForIntervalsEv()};
-     unsafe {C_ZNK18QOpenGLTimeMonitor16waitForIntervalsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK18QOpenGLTimeMonitor16waitForIntervalsEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -608,11 +610,12 @@ pub trait QOpenGLTimeMonitor_objectIds<RetType> {
 }
 
   // proto:  QVector<GLuint> QOpenGLTimeMonitor::objectIds();
-impl<'a> /*trait*/ QOpenGLTimeMonitor_objectIds<()> for () {
-  fn objectIds(self , rsthis: & QOpenGLTimeMonitor) -> () {
+impl<'a> /*trait*/ QOpenGLTimeMonitor_objectIds<u64> for () {
+  fn objectIds(self , rsthis: & QOpenGLTimeMonitor) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QOpenGLTimeMonitor9objectIdsEv()};
-     unsafe {C_ZNK18QOpenGLTimeMonitor9objectIdsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK18QOpenGLTimeMonitor9objectIdsEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -635,7 +638,7 @@ impl<'a> /*trait*/ QOpenGLTimeMonitor_recordSample<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QOpenGLTimeMonitor12recordSampleEv()};
     let mut ret = unsafe {C_ZN18QOpenGLTimeMonitor12recordSampleEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -703,11 +706,12 @@ pub trait QOpenGLTimeMonitor_waitForSamples<RetType> {
 }
 
   // proto:  QVector<GLuint64> QOpenGLTimeMonitor::waitForSamples();
-impl<'a> /*trait*/ QOpenGLTimeMonitor_waitForSamples<()> for () {
-  fn waitForSamples(self , rsthis: & QOpenGLTimeMonitor) -> () {
+impl<'a> /*trait*/ QOpenGLTimeMonitor_waitForSamples<u64> for () {
+  fn waitForSamples(self , rsthis: & QOpenGLTimeMonitor) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QOpenGLTimeMonitor14waitForSamplesEv()};
-     unsafe {C_ZNK18QOpenGLTimeMonitor14waitForSamplesEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK18QOpenGLTimeMonitor14waitForSamplesEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -730,7 +734,7 @@ impl<'a> /*trait*/ QOpenGLTimeMonitor_isCreated<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QOpenGLTimeMonitor9isCreatedEv()};
     let mut ret = unsafe {C_ZNK18QOpenGLTimeMonitor9isCreatedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

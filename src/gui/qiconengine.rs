@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qiconengine.h
 // dst-file: /src/gui/qiconengine.rs
 //
@@ -19,12 +19,12 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
-use super::super::core::qsize::QSize; // 771
-use super::super::core::qdatastream::QDataStream; // 771
-use super::qpainter::QPainter; // 773
-use super::super::core::qrect::QRect; // 771
-use super::qpixmap::QPixmap; // 773
+use super::super::core::qstring::*; // 771
+use super::super::core::qsize::*; // 771
+use super::super::core::qdatastream::*; // 771
+use super::qpainter::*; // 773
+use super::super::core::qrect::*; // 771
+use super::qpixmap::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -83,7 +83,7 @@ impl<'a> /*trait*/ QIconEngine_read<i8> for (&'a QDataStream) {
     // unsafe{_ZN11QIconEngine4readER11QDataStream()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN11QIconEngine4readER11QDataStream(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -131,7 +131,7 @@ impl<'a> /*trait*/ QIconEngine_write<i8> for (&'a QDataStream) {
     // unsafe{_ZNK11QIconEngine5writeER11QDataStream()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK11QIconEngine5writeER11QDataStream(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

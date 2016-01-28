@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qopenglvertexarrayobject.h
 // dst-file: /src/gui/qopenglvertexarrayobject.rs
 //
@@ -18,9 +18,9 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qobject::QObject; // 771
+use super::super::core::qobject::*; // 771
 use std::ops::Deref;
-use super::super::core::qobjectdefs::QMetaObject; // 771
+use super::super::core::qobjectdefs::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -94,7 +94,7 @@ impl<'a> /*trait*/ QOpenGLVertexArrayObject_objectId<u32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QOpenGLVertexArrayObject8objectIdEv()};
     let mut ret = unsafe {C_ZNK24QOpenGLVertexArrayObject8objectIdEv(rsthis.qclsinst)};
-    return ret as u32;
+    return ret as u32; // 1
     // return 1;
   }
 }
@@ -213,7 +213,7 @@ impl<'a> /*trait*/ QOpenGLVertexArrayObject_isCreated<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QOpenGLVertexArrayObject9isCreatedEv()};
     let mut ret = unsafe {C_ZNK24QOpenGLVertexArrayObject9isCreatedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -258,7 +258,7 @@ impl<'a> /*trait*/ QOpenGLVertexArrayObject_create<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QOpenGLVertexArrayObject6createEv()};
     let mut ret = unsafe {C_ZN24QOpenGLVertexArrayObject6createEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

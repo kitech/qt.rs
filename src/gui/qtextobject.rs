@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qtextobject.h
 // dst-file: /src/gui/qtextobject.rs
 //
@@ -18,21 +18,20 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qobject::QObject; // 771
+use super::super::core::qobject::*; // 771
 use std::ops::Deref;
-use super::qtextformat::QTextFormat; // 773
-use super::qtextdocument::QTextDocument; // 773
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::core::qstring::QString; // 771
-use super::qtextformat::QTextCharFormat; // 773
+// use super::qtextdocumentprivate::*; // 775
+use super::qtextformat::*; // 773
+use super::qtextdocument::*; // 773
+use super::super::core::qobjectdefs::*; // 771
+use super::super::core::qstring::*; // 771
+// use super::qlist::*; // 775
 // use super::qtextobject::QTextBlockUserData; // 773
-use super::qtextlist::QTextList; // 773
-use super::qtextlayout::QTextLayout; // 773
-use super::qtextformat::QTextBlockFormat; // 773
+use super::qtextlist::*; // 773
+use super::qtextlayout::*; // 773
 // use super::qtextobject::QTextObject; // 773
-use super::qtextformat::QTextFrameFormat; // 773
 // use super::qtextobject::QTextFrameLayoutData; // 773
-use super::qtextcursor::QTextCursor; // 773
+use super::qtextcursor::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -44,7 +43,7 @@ use super::qtextcursor::QTextCursor; // 773
 extern {
   fn QTextObject_Class_Size() -> c_int;
   // proto:  QTextDocumentPrivate * QTextObject::docHandle();
-  fn C_ZNK11QTextObject9docHandleEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK11QTextObject9docHandleEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QTextFormat QTextObject::format();
   fn C_ZNK11QTextObject6formatEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QTextObject::formatIndex();
@@ -72,7 +71,7 @@ extern {
   // proto:  QString QTextFragment::text();
   fn C_ZNK13QTextFragment4textEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QList<QGlyphRun> QTextFragment::glyphRuns(int from, int length);
-  fn C_ZNK13QTextFragment9glyphRunsEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
+  fn C_ZNK13QTextFragment9glyphRunsEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> *mut c_void;
   // proto:  bool QTextFragment::isValid();
   fn C_ZNK13QTextFragment7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QTextCharFormat QTextFragment::charFormat();
@@ -108,7 +107,7 @@ extern {
   // proto:  void QTextBlock::clearLayout();
   fn C_ZN10QTextBlock11clearLayoutEv(qthis: u64 /* *mut c_void*/);
   // proto:  QTextDocumentPrivate * QTextBlock::docHandle();
-  fn C_ZNK10QTextBlock9docHandleEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK10QTextBlock9docHandleEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QTextBlock::userState();
   fn C_ZNK10QTextBlock9userStateEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QTextBlock::charFormatIndex();
@@ -164,7 +163,7 @@ extern {
   // proto:  int QTextFrame::firstPosition();
   fn C_ZNK10QTextFrame13firstPositionEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  QList<QTextFrame *> QTextFrame::childFrames();
-  fn C_ZNK10QTextFrame11childFramesEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK10QTextFrame11childFramesEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QTextFrame::~QTextFrame();
   fn C_ZN10QTextFrameD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QTextCursor QTextFrame::lastCursorPosition();
@@ -257,11 +256,12 @@ pub trait QTextObject_docHandle<RetType> {
 }
 
   // proto:  QTextDocumentPrivate * QTextObject::docHandle();
-impl<'a> /*trait*/ QTextObject_docHandle<()> for () {
-  fn docHandle(self , rsthis: & QTextObject) -> () {
+impl<'a> /*trait*/ QTextObject_docHandle<u64> for () {
+  fn docHandle(self , rsthis: & QTextObject) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextObject9docHandleEv()};
-     unsafe {C_ZNK11QTextObject9docHandleEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QTextObject9docHandleEv(rsthis.qclsinst)};
+    return ret as u64; // 4
     // return 1;
   }
 }
@@ -308,7 +308,7 @@ impl<'a> /*trait*/ QTextObject_formatIndex<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextObject11formatIndexEv()};
     let mut ret = unsafe {C_ZNK11QTextObject11formatIndexEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -355,7 +355,7 @@ impl<'a> /*trait*/ QTextObject_objectIndex<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextObject11objectIndexEv()};
     let mut ret = unsafe {C_ZNK11QTextObject11objectIndexEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -434,7 +434,7 @@ impl<'a> /*trait*/ QTextFragment_charFormatIndex<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextFragment15charFormatIndexEv()};
     let mut ret = unsafe {C_ZNK13QTextFragment15charFormatIndexEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -457,7 +457,7 @@ impl<'a> /*trait*/ QTextFragment_position<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextFragment8positionEv()};
     let mut ret = unsafe {C_ZNK13QTextFragment8positionEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -509,7 +509,7 @@ impl<'a> /*trait*/ QTextFragment_contains<i8> for (i32) {
     // unsafe{_ZNK13QTextFragment8containsEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK13QTextFragment8containsEi(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -565,13 +565,14 @@ pub trait QTextFragment_glyphRuns<RetType> {
 }
 
   // proto:  QList<QGlyphRun> QTextFragment::glyphRuns(int from, int length);
-impl<'a> /*trait*/ QTextFragment_glyphRuns<()> for (i32, i32) {
-  fn glyphRuns(self , rsthis: & QTextFragment) -> () {
+impl<'a> /*trait*/ QTextFragment_glyphRuns<u64> for (i32, i32) {
+  fn glyphRuns(self , rsthis: & QTextFragment) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextFragment9glyphRunsEii()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-     unsafe {C_ZNK13QTextFragment9glyphRunsEii(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {C_ZNK13QTextFragment9glyphRunsEii(rsthis.qclsinst, arg0, arg1)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -594,7 +595,7 @@ impl<'a> /*trait*/ QTextFragment_isValid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextFragment7isValidEv()};
     let mut ret = unsafe {C_ZNK13QTextFragment7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -641,7 +642,7 @@ impl<'a> /*trait*/ QTextFragment_length<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextFragment6lengthEv()};
     let mut ret = unsafe {C_ZNK13QTextFragment6lengthEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -744,7 +745,7 @@ impl<'a> /*trait*/ QTextBlock_length<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock6lengthEv()};
     let mut ret = unsafe {C_ZNK10QTextBlock6lengthEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -843,7 +844,7 @@ impl<'a> /*trait*/ QTextBlock_lineCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock9lineCountEv()};
     let mut ret = unsafe {C_ZNK10QTextBlock9lineCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -867,7 +868,7 @@ impl<'a> /*trait*/ QTextBlock_contains<i8> for (i32) {
     // unsafe{_ZNK10QTextBlock8containsEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK10QTextBlock8containsEi(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -890,7 +891,7 @@ impl<'a> /*trait*/ QTextBlock_blockNumber<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock11blockNumberEv()};
     let mut ret = unsafe {C_ZNK10QTextBlock11blockNumberEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -976,11 +977,12 @@ pub trait QTextBlock_docHandle<RetType> {
 }
 
   // proto:  QTextDocumentPrivate * QTextBlock::docHandle();
-impl<'a> /*trait*/ QTextBlock_docHandle<()> for () {
-  fn docHandle(self , rsthis: & QTextBlock) -> () {
+impl<'a> /*trait*/ QTextBlock_docHandle<u64> for () {
+  fn docHandle(self , rsthis: & QTextBlock) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock9docHandleEv()};
-     unsafe {C_ZNK10QTextBlock9docHandleEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QTextBlock9docHandleEv(rsthis.qclsinst)};
+    return ret as u64; // 4
     // return 1;
   }
 }
@@ -1003,7 +1005,7 @@ impl<'a> /*trait*/ QTextBlock_userState<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock9userStateEv()};
     let mut ret = unsafe {C_ZNK10QTextBlock9userStateEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1026,7 +1028,7 @@ impl<'a> /*trait*/ QTextBlock_charFormatIndex<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock15charFormatIndexEv()};
     let mut ret = unsafe {C_ZNK10QTextBlock15charFormatIndexEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1049,7 +1051,7 @@ impl<'a> /*trait*/ QTextBlock_revision<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock8revisionEv()};
     let mut ret = unsafe {C_ZNK10QTextBlock8revisionEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1072,7 +1074,7 @@ impl<'a> /*trait*/ QTextBlock_position<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock8positionEv()};
     let mut ret = unsafe {C_ZNK10QTextBlock8positionEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1095,7 +1097,7 @@ impl<'a> /*trait*/ QTextBlock_isValid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock7isValidEv()};
     let mut ret = unsafe {C_ZNK10QTextBlock7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1189,7 +1191,7 @@ impl<'a> /*trait*/ QTextBlock_blockFormatIndex<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock16blockFormatIndexEv()};
     let mut ret = unsafe {C_ZNK10QTextBlock16blockFormatIndexEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1235,7 +1237,7 @@ impl<'a> /*trait*/ QTextBlock_fragmentIndex<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock13fragmentIndexEv()};
     let mut ret = unsafe {C_ZNK10QTextBlock13fragmentIndexEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1258,7 +1260,7 @@ impl<'a> /*trait*/ QTextBlock_isVisible<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock9isVisibleEv()};
     let mut ret = unsafe {C_ZNK10QTextBlock9isVisibleEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1366,7 +1368,7 @@ impl<'a> /*trait*/ QTextBlock_firstLineNumber<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock15firstLineNumberEv()};
     let mut ret = unsafe {C_ZNK10QTextBlock15firstLineNumberEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1613,7 +1615,7 @@ impl<'a> /*trait*/ QTextFrame_firstPosition<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextFrame13firstPositionEv()};
     let mut ret = unsafe {C_ZNK10QTextFrame13firstPositionEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1631,11 +1633,12 @@ pub trait QTextFrame_childFrames<RetType> {
 }
 
   // proto:  QList<QTextFrame *> QTextFrame::childFrames();
-impl<'a> /*trait*/ QTextFrame_childFrames<()> for () {
-  fn childFrames(self , rsthis: & QTextFrame) -> () {
+impl<'a> /*trait*/ QTextFrame_childFrames<u64> for () {
+  fn childFrames(self , rsthis: & QTextFrame) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextFrame11childFramesEv()};
-     unsafe {C_ZNK10QTextFrame11childFramesEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QTextFrame11childFramesEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -1732,7 +1735,7 @@ impl<'a> /*trait*/ QTextFrame_lastPosition<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextFrame12lastPositionEv()};
     let mut ret = unsafe {C_ZNK10QTextFrame12lastPositionEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

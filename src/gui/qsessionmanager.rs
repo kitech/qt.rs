@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qsessionmanager.h
 // dst-file: /src/gui/qsessionmanager.rs
 //
@@ -18,11 +18,11 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qobject::QObject; // 771
+use super::super::core::qobject::*; // 771
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
-use super::super::core::qstringlist::QStringList; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
+use super::super::core::qstring::*; // 771
+use super::super::core::qstringlist::*; // 771
+use super::super::core::qobjectdefs::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -44,7 +44,7 @@ extern {
   // proto:  bool QSessionManager::allowsErrorInteraction();
   fn C_ZN15QSessionManager22allowsErrorInteractionEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QStringList QSessionManager::restartCommand();
-  fn C_ZNK15QSessionManager14restartCommandEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK15QSessionManager14restartCommandEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QSessionManager::requestPhase2();
   fn C_ZN15QSessionManager13requestPhase2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QSessionManager::isPhase2();
@@ -56,7 +56,7 @@ extern {
   // proto:  void QSessionManager::setManagerProperty(const QString & name, const QStringList & value);
   fn C_ZN15QSessionManager18setManagerPropertyERK7QStringRK11QStringList(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  QStringList QSessionManager::discardCommand();
-  fn C_ZNK15QSessionManager14discardCommandEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK15QSessionManager14discardCommandEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QSessionManager::cancel();
   fn C_ZN15QSessionManager6cancelEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QSessionManager::setDiscardCommand(const QStringList & );
@@ -203,7 +203,7 @@ impl<'a> /*trait*/ QSessionManager_allowsErrorInteraction<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSessionManager22allowsErrorInteractionEv()};
     let mut ret = unsafe {C_ZN15QSessionManager22allowsErrorInteractionEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -221,11 +221,13 @@ pub trait QSessionManager_restartCommand<RetType> {
 }
 
   // proto:  QStringList QSessionManager::restartCommand();
-impl<'a> /*trait*/ QSessionManager_restartCommand<()> for () {
-  fn restartCommand(self , rsthis: & QSessionManager) -> () {
+impl<'a> /*trait*/ QSessionManager_restartCommand<QStringList> for () {
+  fn restartCommand(self , rsthis: & QSessionManager) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSessionManager14restartCommandEv()};
-     unsafe {C_ZNK15QSessionManager14restartCommandEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QSessionManager14restartCommandEv(rsthis.qclsinst)};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -270,7 +272,7 @@ impl<'a> /*trait*/ QSessionManager_isPhase2<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSessionManager8isPhase2Ev()};
     let mut ret = unsafe {C_ZNK15QSessionManager8isPhase2Ev(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -346,11 +348,13 @@ pub trait QSessionManager_discardCommand<RetType> {
 }
 
   // proto:  QStringList QSessionManager::discardCommand();
-impl<'a> /*trait*/ QSessionManager_discardCommand<()> for () {
-  fn discardCommand(self , rsthis: & QSessionManager) -> () {
+impl<'a> /*trait*/ QSessionManager_discardCommand<QStringList> for () {
+  fn discardCommand(self , rsthis: & QSessionManager) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSessionManager14discardCommandEv()};
-     unsafe {C_ZNK15QSessionManager14discardCommandEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QSessionManager14discardCommandEv(rsthis.qclsinst)};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -418,7 +422,7 @@ impl<'a> /*trait*/ QSessionManager_allowsInteraction<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSessionManager17allowsInteractionEv()};
     let mut ret = unsafe {C_ZN15QSessionManager17allowsInteractionEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

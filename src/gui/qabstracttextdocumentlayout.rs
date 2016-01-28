@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qabstracttextdocumentlayout.h
 // dst-file: /src/gui/qabstracttextdocumentlayout.rs
 //
@@ -19,19 +19,18 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qtextdocument::QTextDocument; // 773
-use super::qtextformat::QTextFormat; // 773
-use super::super::core::qsize::QSizeF; // 771
-use super::qpainter::QPainter; // 773
-use super::super::core::qrect::QRectF; // 771
-use super::super::core::qobject::QObject; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::core::qpoint::QPointF; // 771
-use super::qpaintdevice::QPaintDevice; // 773
-use super::super::core::qstring::QString; // 771
+use super::qtextdocument::*; // 773
+use super::qtextformat::*; // 773
+use super::super::core::qsize::*; // 771
+use super::qpainter::*; // 773
+use super::super::core::qrect::*; // 771
+use super::super::core::qobject::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::super::core::qpoint::*; // 771
+use super::qpaintdevice::*; // 773
+use super::super::core::qstring::*; // 771
 // use super::qabstracttextdocumentlayout::QTextObjectInterface; // 773
-use super::qtextobject::QTextFrame; // 773
-use super::qtextobject::QTextBlock; // 773
+use super::qtextobject::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -266,7 +265,7 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_pageCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QAbstractTextDocumentLayout9pageCountEv()};
     let mut ret = unsafe {C_ZNK27QAbstractTextDocumentLayout9pageCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

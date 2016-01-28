@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qpaintdevice.h
 // dst-file: /src/gui/qpaintdevice.rs
 //
@@ -19,7 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qpaintengine::QPaintEngine; // 773
+use super::qpaintengine::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -93,7 +93,7 @@ impl<'a> /*trait*/ QPaintDevice_physicalDpiY<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintDevice12physicalDpiYEv()};
     let mut ret = unsafe {C_ZNK12QPaintDevice12physicalDpiYEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -116,7 +116,7 @@ impl<'a> /*trait*/ QPaintDevice_heightMM<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintDevice8heightMMEv()};
     let mut ret = unsafe {C_ZNK12QPaintDevice8heightMMEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -139,7 +139,7 @@ impl<'a> /*trait*/ QPaintDevice_colorCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintDevice10colorCountEv()};
     let mut ret = unsafe {C_ZNK12QPaintDevice10colorCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -162,7 +162,7 @@ impl<'a> /*trait*/ QPaintDevice_physicalDpiX<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintDevice12physicalDpiXEv()};
     let mut ret = unsafe {C_ZNK12QPaintDevice12physicalDpiXEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -185,7 +185,7 @@ impl<'a> /*trait*/ QPaintDevice_widthMM<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintDevice7widthMMEv()};
     let mut ret = unsafe {C_ZNK12QPaintDevice7widthMMEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -208,7 +208,7 @@ impl<'a> /*trait*/ QPaintDevice_devType<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintDevice7devTypeEv()};
     let mut ret = unsafe {C_ZNK12QPaintDevice7devTypeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -231,7 +231,7 @@ impl<'a> /*trait*/ QPaintDevice_paintingActive<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintDevice14paintingActiveEv()};
     let mut ret = unsafe {C_ZNK12QPaintDevice14paintingActiveEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -254,7 +254,7 @@ impl<'a> /*trait*/ QPaintDevice_width<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintDevice5widthEv()};
     let mut ret = unsafe {C_ZNK12QPaintDevice5widthEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -277,7 +277,7 @@ impl<'a> /*trait*/ QPaintDevice_devicePixelRatio<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintDevice16devicePixelRatioEv()};
     let mut ret = unsafe {C_ZNK12QPaintDevice16devicePixelRatioEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -300,7 +300,7 @@ impl<'a> /*trait*/ QPaintDevice_height<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintDevice6heightEv()};
     let mut ret = unsafe {C_ZNK12QPaintDevice6heightEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -323,7 +323,7 @@ impl<'a> /*trait*/ QPaintDevice_depth<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintDevice5depthEv()};
     let mut ret = unsafe {C_ZNK12QPaintDevice5depthEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -370,7 +370,7 @@ impl<'a> /*trait*/ QPaintDevice_logicalDpiY<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintDevice11logicalDpiYEv()};
     let mut ret = unsafe {C_ZNK12QPaintDevice11logicalDpiYEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -415,7 +415,7 @@ impl<'a> /*trait*/ QPaintDevice_logicalDpiX<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintDevice11logicalDpiXEv()};
     let mut ret = unsafe {C_ZNK12QPaintDevice11logicalDpiXEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

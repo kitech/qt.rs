@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qimageiohandler.h
 // dst-file: /src/gui/qimageiohandler.rs
 //
@@ -19,13 +19,13 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::super::core::qrect::QRect; // 771
-use super::super::core::qbytearray::QByteArray; // 771
-use super::qimage::QImage; // 773
-use super::super::core::qvariant::QVariant; // 771
-use super::super::core::qiodevice::QIODevice; // 771
-use super::super::core::qobject::QObject; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
+use super::super::core::qrect::*; // 771
+use super::super::core::qbytearray::*; // 771
+use super::qimage::*; // 773
+use super::super::core::qvariant::*; // 771
+use super::super::core::qiodevice::*; // 771
+use super::super::core::qobject::*; // 771
+use super::super::core::qobjectdefs::*; // 771
 // use super::qimageiohandler::QImageIOHandler; // 773
 // <= use block end
 
@@ -120,7 +120,7 @@ impl<'a> /*trait*/ QImageIOHandler_imageCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QImageIOHandler10imageCountEv()};
     let mut ret = unsafe {C_ZNK15QImageIOHandler10imageCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -168,7 +168,7 @@ impl<'a> /*trait*/ QImageIOHandler_jumpToImage<i8> for (i32) {
     // unsafe{_ZN15QImageIOHandler11jumpToImageEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZN15QImageIOHandler11jumpToImageEi(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -191,7 +191,7 @@ impl<'a> /*trait*/ QImageIOHandler_currentImageNumber<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QImageIOHandler18currentImageNumberEv()};
     let mut ret = unsafe {C_ZNK15QImageIOHandler18currentImageNumberEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -237,7 +237,7 @@ impl<'a> /*trait*/ QImageIOHandler_jumpToNextImage<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QImageIOHandler15jumpToNextImageEv()};
     let mut ret = unsafe {C_ZN15QImageIOHandler15jumpToNextImageEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -282,7 +282,7 @@ impl<'a> /*trait*/ QImageIOHandler_loopCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QImageIOHandler9loopCountEv()};
     let mut ret = unsafe {C_ZNK15QImageIOHandler9loopCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -333,7 +333,7 @@ impl<'a> /*trait*/ QImageIOHandler_read<i8> for (&'a QImage) {
     // unsafe{_ZN15QImageIOHandler4readEP6QImage()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN15QImageIOHandler4readEP6QImage(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -404,7 +404,7 @@ impl<'a> /*trait*/ QImageIOHandler_nextImageDelay<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QImageIOHandler14nextImageDelayEv()};
     let mut ret = unsafe {C_ZNK15QImageIOHandler14nextImageDelayEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -450,7 +450,7 @@ impl<'a> /*trait*/ QImageIOHandler_canRead<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QImageIOHandler7canReadEv()};
     let mut ret = unsafe {C_ZNK15QImageIOHandler7canReadEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -498,7 +498,7 @@ impl<'a> /*trait*/ QImageIOHandler_write<i8> for (&'a QImage) {
     // unsafe{_ZN15QImageIOHandler5writeERK6QImage()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN15QImageIOHandler5writeERK6QImage(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

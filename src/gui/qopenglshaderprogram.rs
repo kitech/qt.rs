@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qopenglshaderprogram.h
 // dst-file: /src/gui/qopenglshaderprogram.rs
 //
@@ -18,23 +18,23 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qobject::QObject; // 771
+use super::super::core::qobject::*; // 771
 use std::ops::Deref;
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::core::qstring::QString; // 771
-use super::super::core::qbytearray::QByteArray; // 771
-use super::qopenglcontext::QOpenGLContext; // 773
-use super::qvector3d::QVector3D; // 773
-use super::super::core::qpoint::QPoint; // 771
-use super::qtransform::QTransform; // 773
-use super::qvector2d::QVector2D; // 773
-use super::qcolor::QColor; // 773
-use super::super::core::qsize::QSize; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::super::core::qstring::*; // 771
+use super::super::core::qbytearray::*; // 771
+use super::qopenglcontext::*; // 773
+use super::qvector3d::*; // 773
+use super::super::core::qpoint::*; // 771
+use super::qtransform::*; // 773
+use super::qvector2d::*; // 773
+use super::qcolor::*; // 773
+use super::super::core::qsize::*; // 771
 // use super::qopenglshaderprogram::QOpenGLShader; // 773
-use super::qmatrix4x4::QMatrix4x4; // 773
-use super::qvector4d::QVector4D; // 773
-use super::super::core::qpoint::QPointF; // 771
-use super::super::core::qsize::QSizeF; // 771
+use super::qmatrix4x4::*; // 773
+use super::qvector4d::*; // 773
+// use super::qvector::*; // 775
+// use super::qlist::*; // 775
 // <= use block end
 
 // ext block begin =>
@@ -177,19 +177,19 @@ extern {
   // proto:  void QOpenGLShaderProgram::~QOpenGLShaderProgram();
   fn C_ZN20QOpenGLShaderProgramD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QVector<float> QOpenGLShaderProgram::defaultInnerTessellationLevels();
-  fn C_ZNK20QOpenGLShaderProgram30defaultInnerTessellationLevelsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK20QOpenGLShaderProgram30defaultInnerTessellationLevelsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QOpenGLShaderProgram::link();
   fn C_ZN20QOpenGLShaderProgram4linkEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QOpenGLShaderProgram::setUniformValueArray(const char * name, const QVector4D * values, int count);
   fn C_ZN20QOpenGLShaderProgram20setUniformValueArrayEPKcPK9QVector4Di(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: *mut c_void, arg2: c_int);
   // proto:  QList<QOpenGLShader *> QOpenGLShaderProgram::shaders();
-  fn C_ZNK20QOpenGLShaderProgram7shadersEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK20QOpenGLShaderProgram7shadersEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QOpenGLShaderProgram::setAttributeValue(const char * name, GLfloat value);
   fn C_ZN20QOpenGLShaderProgram17setAttributeValueEPKcf(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_float);
   // proto:  void QOpenGLShaderProgram::setAttributeValue(int location, const QVector3D & value);
   fn C_ZN20QOpenGLShaderProgram17setAttributeValueEiRK9QVector3D(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  QVector<float> QOpenGLShaderProgram::defaultOuterTessellationLevels();
-  fn C_ZNK20QOpenGLShaderProgram30defaultOuterTessellationLevelsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK20QOpenGLShaderProgram30defaultOuterTessellationLevelsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QOpenGLShaderProgram::setUniformValue(int location, const QColor & color);
   fn C_ZN20QOpenGLShaderProgram15setUniformValueEiRK6QColor(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  void QOpenGLShaderProgram::setUniformValueArray(const char * name, const QVector2D * values, int count);
@@ -348,7 +348,7 @@ impl<'a> /*trait*/ QOpenGLShader_isCompiled<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QOpenGLShader10isCompiledEv()};
     let mut ret = unsafe {C_ZNK13QOpenGLShader10isCompiledEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -420,7 +420,7 @@ impl<'a> /*trait*/ QOpenGLShader_compileSourceCode<i8> for (&'a QString) {
     // unsafe{_ZN13QOpenGLShader17compileSourceCodeERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN13QOpenGLShader17compileSourceCodeERK7QString(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -444,7 +444,7 @@ impl<'a> /*trait*/ QOpenGLShader_compileSourceFile<i8> for (&'a QString) {
     // unsafe{_ZN13QOpenGLShader17compileSourceFileERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN13QOpenGLShader17compileSourceFileERK7QString(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -502,7 +502,7 @@ impl<'a> /*trait*/ QOpenGLShader_compileSourceCode<i8> for (&'a QByteArray) {
     // unsafe{_ZN13QOpenGLShader17compileSourceCodeERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN13QOpenGLShader17compileSourceCodeERK10QByteArray(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -525,7 +525,7 @@ impl<'a> /*trait*/ QOpenGLShader_shaderId<u32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QOpenGLShader8shaderIdEv()};
     let mut ret = unsafe {C_ZNK13QOpenGLShader8shaderIdEv(rsthis.qclsinst)};
-    return ret as u32;
+    return ret as u32; // 1
     // return 1;
   }
 }
@@ -537,7 +537,7 @@ impl<'a> /*trait*/ QOpenGLShader_compileSourceCode<i8> for (&'a  String) {
     // unsafe{_ZN13QOpenGLShader17compileSourceCodeEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
     let mut ret = unsafe {C_ZN13QOpenGLShader17compileSourceCodeEPKc(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -577,7 +577,7 @@ impl<'a> /*trait*/ QOpenGLShaderProgram_isLinked<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QOpenGLShaderProgram8isLinkedEv()};
     let mut ret = unsafe {C_ZNK20QOpenGLShaderProgram8isLinkedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -740,7 +740,7 @@ impl<'a> /*trait*/ QOpenGLShaderProgram_hasOpenGLShaderPrograms_s<i8> for (&'a Q
     // unsafe{_ZN20QOpenGLShaderProgram23hasOpenGLShaderProgramsEP14QOpenGLContext()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN20QOpenGLShaderProgram23hasOpenGLShaderProgramsEP14QOpenGLContext(arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -938,7 +938,7 @@ impl<'a> /*trait*/ QOpenGLShaderProgram_bind<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QOpenGLShaderProgram4bindEv()};
     let mut ret = unsafe {C_ZN20QOpenGLShaderProgram4bindEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1033,7 +1033,7 @@ impl<'a> /*trait*/ QOpenGLShaderProgram_addShader<i8> for (&'a QOpenGLShader) {
     // unsafe{_ZN20QOpenGLShaderProgram9addShaderEP13QOpenGLShader()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN20QOpenGLShaderProgram9addShaderEP13QOpenGLShader(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1057,7 +1057,7 @@ impl<'a> /*trait*/ QOpenGLShaderProgram_attributeLocation<i32> for (&'a QString)
     // unsafe{_ZNK20QOpenGLShaderProgram17attributeLocationERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK20QOpenGLShaderProgram17attributeLocationERK7QString(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1186,7 +1186,7 @@ impl<'a> /*trait*/ QOpenGLShaderProgram_programId<u32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QOpenGLShaderProgram9programIdEv()};
     let mut ret = unsafe {C_ZNK20QOpenGLShaderProgram9programIdEv(rsthis.qclsinst)};
-    return ret as u32;
+    return ret as u32; // 1
     // return 1;
   }
 }
@@ -1340,7 +1340,7 @@ impl<'a> /*trait*/ QOpenGLShaderProgram_attributeLocation<i32> for (&'a  String)
     // unsafe{_ZNK20QOpenGLShaderProgram17attributeLocationEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
     let mut ret = unsafe {C_ZNK20QOpenGLShaderProgram17attributeLocationEPKc(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1364,7 +1364,7 @@ impl<'a> /*trait*/ QOpenGLShaderProgram_uniformLocation<i32> for (&'a QString) {
     // unsafe{_ZNK20QOpenGLShaderProgram15uniformLocationERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK20QOpenGLShaderProgram15uniformLocationERK7QString(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1413,7 +1413,7 @@ impl<'a> /*trait*/ QOpenGLShaderProgram_uniformLocation<i32> for (&'a  String) {
     // unsafe{_ZNK20QOpenGLShaderProgram15uniformLocationEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
     let mut ret = unsafe {C_ZNK20QOpenGLShaderProgram15uniformLocationEPKc(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1453,11 +1453,12 @@ pub trait QOpenGLShaderProgram_defaultInnerTessellationLevels<RetType> {
 }
 
   // proto:  QVector<float> QOpenGLShaderProgram::defaultInnerTessellationLevels();
-impl<'a> /*trait*/ QOpenGLShaderProgram_defaultInnerTessellationLevels<()> for () {
-  fn defaultInnerTessellationLevels(self , rsthis: & QOpenGLShaderProgram) -> () {
+impl<'a> /*trait*/ QOpenGLShaderProgram_defaultInnerTessellationLevels<u64> for () {
+  fn defaultInnerTessellationLevels(self , rsthis: & QOpenGLShaderProgram) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QOpenGLShaderProgram30defaultInnerTessellationLevelsEv()};
-     unsafe {C_ZNK20QOpenGLShaderProgram30defaultInnerTessellationLevelsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK20QOpenGLShaderProgram30defaultInnerTessellationLevelsEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -1480,7 +1481,7 @@ impl<'a> /*trait*/ QOpenGLShaderProgram_link<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QOpenGLShaderProgram4linkEv()};
     let mut ret = unsafe {C_ZN20QOpenGLShaderProgram4linkEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1511,11 +1512,12 @@ pub trait QOpenGLShaderProgram_shaders<RetType> {
 }
 
   // proto:  QList<QOpenGLShader *> QOpenGLShaderProgram::shaders();
-impl<'a> /*trait*/ QOpenGLShaderProgram_shaders<()> for () {
-  fn shaders(self , rsthis: & QOpenGLShaderProgram) -> () {
+impl<'a> /*trait*/ QOpenGLShaderProgram_shaders<u64> for () {
+  fn shaders(self , rsthis: & QOpenGLShaderProgram) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QOpenGLShaderProgram7shadersEv()};
-     unsafe {C_ZNK20QOpenGLShaderProgram7shadersEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK20QOpenGLShaderProgram7shadersEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -1557,11 +1559,12 @@ pub trait QOpenGLShaderProgram_defaultOuterTessellationLevels<RetType> {
 }
 
   // proto:  QVector<float> QOpenGLShaderProgram::defaultOuterTessellationLevels();
-impl<'a> /*trait*/ QOpenGLShaderProgram_defaultOuterTessellationLevels<()> for () {
-  fn defaultOuterTessellationLevels(self , rsthis: & QOpenGLShaderProgram) -> () {
+impl<'a> /*trait*/ QOpenGLShaderProgram_defaultOuterTessellationLevels<u64> for () {
+  fn defaultOuterTessellationLevels(self , rsthis: & QOpenGLShaderProgram) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QOpenGLShaderProgram30defaultOuterTessellationLevelsEv()};
-     unsafe {C_ZNK20QOpenGLShaderProgram30defaultOuterTessellationLevelsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK20QOpenGLShaderProgram30defaultOuterTessellationLevelsEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -1671,7 +1674,7 @@ impl<'a> /*trait*/ QOpenGLShaderProgram_patchVertexCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QOpenGLShaderProgram16patchVertexCountEv()};
     let mut ret = unsafe {C_ZNK20QOpenGLShaderProgram16patchVertexCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1730,7 +1733,7 @@ impl<'a> /*trait*/ QOpenGLShaderProgram_create<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QOpenGLShaderProgram6createEv()};
     let mut ret = unsafe {C_ZN20QOpenGLShaderProgram6createEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1940,7 +1943,7 @@ impl<'a> /*trait*/ QOpenGLShaderProgram_attributeLocation<i32> for (&'a QByteArr
     // unsafe{_ZNK20QOpenGLShaderProgram17attributeLocationERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK20QOpenGLShaderProgram17attributeLocationERK10QByteArray(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -2181,7 +2184,7 @@ impl<'a> /*trait*/ QOpenGLShaderProgram_maxGeometryOutputVertices<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QOpenGLShaderProgram25maxGeometryOutputVerticesEv()};
     let mut ret = unsafe {C_ZNK20QOpenGLShaderProgram25maxGeometryOutputVerticesEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -2252,7 +2255,7 @@ impl<'a> /*trait*/ QOpenGLShaderProgram_uniformLocation<i32> for (&'a QByteArray
     // unsafe{_ZNK20QOpenGLShaderProgram15uniformLocationERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK20QOpenGLShaderProgram15uniformLocationERK10QByteArray(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

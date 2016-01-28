@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qtouchdevice.h
 // dst-file: /src/gui/qtouchdevice.rs
 //
@@ -19,7 +19,8 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
+use super::super::core::qstring::*; // 771
+// use super::qlist::*; // 775
 // <= use block end
 
 // ext block begin =>
@@ -37,7 +38,7 @@ extern {
   // proto:  void QTouchDevice::setMaximumTouchPoints(int max);
   fn C_ZN12QTouchDevice21setMaximumTouchPointsEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto: static QList<const QTouchDevice *> QTouchDevice::devices();
-  fn C_ZN12QTouchDevice7devicesEv();
+  fn C_ZN12QTouchDevice7devicesEv() -> *mut c_void;
   // proto:  void QTouchDevice::QTouchDevice();
   fn C_ZN12QTouchDeviceC2Ev() -> u64;
   // proto:  void QTouchDevice::~QTouchDevice();
@@ -142,11 +143,12 @@ pub trait QTouchDevice_devices_s<RetType> {
 }
 
   // proto: static QList<const QTouchDevice *> QTouchDevice::devices();
-impl<'a> /*trait*/ QTouchDevice_devices_s<()> for () {
-  fn devices_s(self ) -> () {
+impl<'a> /*trait*/ QTouchDevice_devices_s<u64> for () {
+  fn devices_s(self ) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTouchDevice7devicesEv()};
-     unsafe {C_ZN12QTouchDevice7devicesEv()};
+    let mut ret = unsafe {C_ZN12QTouchDevice7devicesEv()};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -218,7 +220,7 @@ impl<'a> /*trait*/ QTouchDevice_maximumTouchPoints<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTouchDevice18maximumTouchPointsEv()};
     let mut ret = unsafe {C_ZNK12QTouchDevice18maximumTouchPointsEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

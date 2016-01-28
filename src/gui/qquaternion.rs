@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qquaternion.h
 // dst-file: /src/gui/qquaternion.rs
 //
@@ -19,8 +19,9 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qvector3d::QVector3D; // 773
-use super::qvector4d::QVector4D; // 773
+use super::qvector3d::*; // 773
+use super::qvector4d::*; // 773
+// use super::qgenericmatrix::*; // 775
 // <= use block end
 
 // ext block begin =>
@@ -80,7 +81,7 @@ extern {
   // proto:  void QQuaternion::getAxisAndAngle(QVector3D * axis, float * angle);
   fn C_ZNK11QQuaternion15getAxisAndAngleEP9QVector3DPf(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_float);
   // proto:  QMatrix3x3 QQuaternion::toRotationMatrix();
-  fn C_ZNK11QQuaternion16toRotationMatrixEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK11QQuaternion16toRotationMatrixEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto: static QQuaternion QQuaternion::fromEulerAngles(const QVector3D & eulerAngles);
   fn C_ZN11QQuaternion15fromEulerAnglesERK9QVector3D(arg0: *mut c_void) -> *mut c_void;
   // proto:  QVector3D QQuaternion::rotatedVector(const QVector3D & vector);
@@ -90,7 +91,7 @@ extern {
   // proto:  void QQuaternion::setScalar(float scalar);
   fn C_ZN11QQuaternion9setScalarEf(qthis: u64 /* *mut c_void*/, arg0: c_float);
   // proto:  float QQuaternion::y();
-  fn C_ZNK11QQuaternion1yEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK11QQuaternion1yEv(qthis: u64 /* *mut c_void*/) -> c_float;
   // proto:  QVector3D QQuaternion::vector();
   fn C_ZNK11QQuaternion6vectorEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto: static float QQuaternion::dotProduct(const QQuaternion & q1, const QQuaternion & q2);
@@ -112,7 +113,7 @@ extern {
   // proto: static QQuaternion QQuaternion::fromAxisAndAngle(float x, float y, float z, float angle);
   fn C_ZN11QQuaternion16fromAxisAndAngleEffff(arg0: c_float, arg1: c_float, arg2: c_float, arg3: c_float) -> *mut c_void;
   // proto:  float QQuaternion::x();
-  fn C_ZNK11QQuaternion1xEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK11QQuaternion1xEv(qthis: u64 /* *mut c_void*/) -> c_float;
   // proto:  float QQuaternion::z();
   fn C_ZNK11QQuaternion1zEv(qthis: u64 /* *mut c_void*/) -> c_float;
 } // <= ext block end
@@ -174,7 +175,7 @@ impl<'a> /*trait*/ QQuaternion_scalar<f32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QQuaternion6scalarEv()};
     let mut ret = unsafe {C_ZNK11QQuaternion6scalarEv(rsthis.qclsinst)};
-    return ret as f32;
+    return ret as f32; // 1
     // return 1;
   }
 }
@@ -468,7 +469,7 @@ impl<'a> /*trait*/ QQuaternion_isIdentity<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QQuaternion10isIdentityEv()};
     let mut ret = unsafe {C_ZNK11QQuaternion10isIdentityEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -684,7 +685,7 @@ impl<'a> /*trait*/ QQuaternion_isNull<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QQuaternion6isNullEv()};
     let mut ret = unsafe {C_ZNK11QQuaternion6isNullEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -714,11 +715,12 @@ pub trait QQuaternion_toRotationMatrix<RetType> {
 }
 
   // proto:  QMatrix3x3 QQuaternion::toRotationMatrix();
-impl<'a> /*trait*/ QQuaternion_toRotationMatrix<()> for () {
-  fn toRotationMatrix(self , rsthis: & QQuaternion) -> () {
+impl<'a> /*trait*/ QQuaternion_toRotationMatrix<u64> for () {
+  fn toRotationMatrix(self , rsthis: & QQuaternion) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QQuaternion16toRotationMatrixEv()};
-     unsafe {C_ZNK11QQuaternion16toRotationMatrixEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QQuaternion16toRotationMatrixEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -779,7 +781,7 @@ impl<'a> /*trait*/ QQuaternion_lengthSquared<f32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QQuaternion13lengthSquaredEv()};
     let mut ret = unsafe {C_ZNK11QQuaternion13lengthSquaredEv(rsthis.qclsinst)};
-    return ret as f32;
+    return ret as f32; // 1
     // return 1;
   }
 }
@@ -820,11 +822,12 @@ pub trait QQuaternion_y<RetType> {
 }
 
   // proto:  float QQuaternion::y();
-impl<'a> /*trait*/ QQuaternion_y<()> for () {
-  fn y(self , rsthis: & QQuaternion) -> () {
+impl<'a> /*trait*/ QQuaternion_y<f32> for () {
+  fn y(self , rsthis: & QQuaternion) -> f32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QQuaternion1yEv()};
-     unsafe {C_ZNK11QQuaternion1yEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QQuaternion1yEv(rsthis.qclsinst)};
+    return ret as f32; // 1
     // return 1;
   }
 }
@@ -873,7 +876,7 @@ impl<'a> /*trait*/ QQuaternion_dotProduct_s<f32> for (&'a QQuaternion, &'a QQuat
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN11QQuaternion10dotProductERKS_S1_(arg0, arg1)};
-    return ret as f32;
+    return ret as f32; // 1
     // return 1;
   }
 }
@@ -969,7 +972,7 @@ impl<'a> /*trait*/ QQuaternion_length<f32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QQuaternion6lengthEv()};
     let mut ret = unsafe {C_ZNK11QQuaternion6lengthEv(rsthis.qclsinst)};
-    return ret as f32;
+    return ret as f32; // 1
     // return 1;
   }
 }
@@ -1049,11 +1052,12 @@ pub trait QQuaternion_x<RetType> {
 }
 
   // proto:  float QQuaternion::x();
-impl<'a> /*trait*/ QQuaternion_x<()> for () {
-  fn x(self , rsthis: & QQuaternion) -> () {
+impl<'a> /*trait*/ QQuaternion_x<f32> for () {
+  fn x(self , rsthis: & QQuaternion) -> f32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QQuaternion1xEv()};
-     unsafe {C_ZNK11QQuaternion1xEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QQuaternion1xEv(rsthis.qclsinst)};
+    return ret as f32; // 1
     // return 1;
   }
 }
@@ -1076,7 +1080,7 @@ impl<'a> /*trait*/ QQuaternion_z<f32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QQuaternion1zEv()};
     let mut ret = unsafe {C_ZNK11QQuaternion1zEv(rsthis.qclsinst)};
-    return ret as f32;
+    return ret as f32; // 1
     // return 1;
   }
 }

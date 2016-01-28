@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qpixelformat.h
 // dst-file: /src/gui/qpixelformat.rs
 //
@@ -94,7 +94,7 @@ impl<'a> /*trait*/ QPixelFormat_blackSize<u8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPixelFormat9blackSizeEv()};
     let mut ret = unsafe {C_ZNK12QPixelFormat9blackSizeEv(rsthis.qclsinst)};
-    return ret as u8;
+    return ret as u8; // 1
     // return 1;
   }
 }
@@ -144,7 +144,7 @@ impl<'a> /*trait*/ QPixelFormat_subEnum<u8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPixelFormat7subEnumEv()};
     let mut ret = unsafe {C_ZNK12QPixelFormat7subEnumEv(rsthis.qclsinst)};
-    return ret as u8;
+    return ret as u8; // 1
     // return 1;
   }
 }
@@ -167,7 +167,7 @@ impl<'a> /*trait*/ QPixelFormat_greenSize<u8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPixelFormat9greenSizeEv()};
     let mut ret = unsafe {C_ZNK12QPixelFormat9greenSizeEv(rsthis.qclsinst)};
-    return ret as u8;
+    return ret as u8; // 1
     // return 1;
   }
 }
@@ -190,7 +190,7 @@ impl<'a> /*trait*/ QPixelFormat_lightnessSize<u8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPixelFormat13lightnessSizeEv()};
     let mut ret = unsafe {C_ZNK12QPixelFormat13lightnessSizeEv(rsthis.qclsinst)};
-    return ret as u8;
+    return ret as u8; // 1
     // return 1;
   }
 }
@@ -213,7 +213,7 @@ impl<'a> /*trait*/ QPixelFormat_bitsPerPixel<u8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPixelFormat12bitsPerPixelEv()};
     let mut ret = unsafe {C_ZNK12QPixelFormat12bitsPerPixelEv(rsthis.qclsinst)};
-    return ret as u8;
+    return ret as u8; // 1
     // return 1;
   }
 }
@@ -236,7 +236,7 @@ impl<'a> /*trait*/ QPixelFormat_alphaSize<u8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPixelFormat9alphaSizeEv()};
     let mut ret = unsafe {C_ZNK12QPixelFormat9alphaSizeEv(rsthis.qclsinst)};
-    return ret as u8;
+    return ret as u8; // 1
     // return 1;
   }
 }
@@ -259,7 +259,7 @@ impl<'a> /*trait*/ QPixelFormat_magentaSize<u8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPixelFormat11magentaSizeEv()};
     let mut ret = unsafe {C_ZNK12QPixelFormat11magentaSizeEv(rsthis.qclsinst)};
-    return ret as u8;
+    return ret as u8; // 1
     // return 1;
   }
 }
@@ -282,7 +282,7 @@ impl<'a> /*trait*/ QPixelFormat_hueSize<u8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPixelFormat7hueSizeEv()};
     let mut ret = unsafe {C_ZNK12QPixelFormat7hueSizeEv(rsthis.qclsinst)};
-    return ret as u8;
+    return ret as u8; // 1
     // return 1;
   }
 }
@@ -305,7 +305,7 @@ impl<'a> /*trait*/ QPixelFormat_saturationSize<u8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPixelFormat14saturationSizeEv()};
     let mut ret = unsafe {C_ZNK12QPixelFormat14saturationSizeEv(rsthis.qclsinst)};
-    return ret as u8;
+    return ret as u8; // 1
     // return 1;
   }
 }
@@ -328,7 +328,7 @@ impl<'a> /*trait*/ QPixelFormat_brightnessSize<u8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPixelFormat14brightnessSizeEv()};
     let mut ret = unsafe {C_ZNK12QPixelFormat14brightnessSizeEv(rsthis.qclsinst)};
-    return ret as u8;
+    return ret as u8; // 1
     // return 1;
   }
 }
@@ -351,7 +351,7 @@ impl<'a> /*trait*/ QPixelFormat_yellowSize<u8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPixelFormat10yellowSizeEv()};
     let mut ret = unsafe {C_ZNK12QPixelFormat10yellowSizeEv(rsthis.qclsinst)};
-    return ret as u8;
+    return ret as u8; // 1
     // return 1;
   }
 }
@@ -374,7 +374,7 @@ impl<'a> /*trait*/ QPixelFormat_redSize<u8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPixelFormat7redSizeEv()};
     let mut ret = unsafe {C_ZNK12QPixelFormat7redSizeEv(rsthis.qclsinst)};
-    return ret as u8;
+    return ret as u8; // 1
     // return 1;
   }
 }
@@ -397,7 +397,7 @@ impl<'a> /*trait*/ QPixelFormat_blueSize<u8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPixelFormat8blueSizeEv()};
     let mut ret = unsafe {C_ZNK12QPixelFormat8blueSizeEv(rsthis.qclsinst)};
-    return ret as u8;
+    return ret as u8; // 1
     // return 1;
   }
 }
@@ -420,7 +420,7 @@ impl<'a> /*trait*/ QPixelFormat_cyanSize<u8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPixelFormat8cyanSizeEv()};
     let mut ret = unsafe {C_ZNK12QPixelFormat8cyanSizeEv(rsthis.qclsinst)};
-    return ret as u8;
+    return ret as u8; // 1
     // return 1;
   }
 }
@@ -443,7 +443,7 @@ impl<'a> /*trait*/ QPixelFormat_channelCount<u8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPixelFormat12channelCountEv()};
     let mut ret = unsafe {C_ZNK12QPixelFormat12channelCountEv(rsthis.qclsinst)};
-    return ret as u8;
+    return ret as u8; // 1
     // return 1;
   }
 }

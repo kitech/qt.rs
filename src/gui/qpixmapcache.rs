@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qpixmapcache.h
 // dst-file: /src/gui/qpixmapcache.rs
 //
@@ -19,8 +19,8 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
-use super::qpixmap::QPixmap; // 773
+use super::super::core::qstring::*; // 771
+use super::qpixmap::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -80,7 +80,7 @@ impl<'a> /*trait*/ QPixmapCache_cacheLimit_s<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPixmapCache10cacheLimitEv()};
     let mut ret = unsafe {C_ZN12QPixmapCache10cacheLimitEv()};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -127,7 +127,7 @@ impl<'a> /*trait*/ QPixmapCache_insert_s<i8> for (&'a QString, &'a QPixmap) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN12QPixmapCache6insertERK7QStringRK7QPixmap(arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -152,7 +152,7 @@ impl<'a> /*trait*/ QPixmapCache_find_s<i8> for (&'a QString, &'a QPixmap) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN12QPixmapCache4findERK7QStringR7QPixmap(arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

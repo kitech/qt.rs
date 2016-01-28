@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qimagereader.h
 // dst-file: /src/gui/qimagereader.rs
 //
@@ -19,13 +19,15 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
-use super::super::core::qsize::QSize; // 771
-use super::qimage::QImage; // 773
-use super::super::core::qrect::QRect; // 771
-use super::super::core::qiodevice::QIODevice; // 771
-use super::super::core::qbytearray::QByteArray; // 771
-use super::qcolor::QColor; // 773
+use super::super::core::qstring::*; // 771
+use super::super::core::qsize::*; // 771
+use super::qimage::*; // 773
+use super::super::core::qrect::*; // 771
+use super::super::core::qstringlist::*; // 771
+use super::super::core::qiodevice::*; // 771
+use super::super::core::qbytearray::*; // 771
+// use super::qlist::*; // 775
+use super::qcolor::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -51,7 +53,7 @@ extern {
   // proto:  int QImageReader::imageCount();
   fn C_ZNK12QImageReader10imageCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  QStringList QImageReader::textKeys();
-  fn C_ZNK12QImageReader8textKeysEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK12QImageReader8textKeysEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QImageReader::decideFormatFromContent();
   fn C_ZNK12QImageReader23decideFormatFromContentEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QIODevice * QImageReader::device();
@@ -63,7 +65,7 @@ extern {
   // proto: static QByteArray QImageReader::imageFormat(const QString & fileName);
   fn C_ZN12QImageReader11imageFormatERK7QString(arg0: *mut c_void) -> *mut c_void;
   // proto:  QList<QByteArray> QImageReader::supportedSubTypes();
-  fn C_ZNK12QImageReader17supportedSubTypesEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK12QImageReader17supportedSubTypesEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QSize QImageReader::size();
   fn C_ZNK12QImageReader4sizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QColor QImageReader::backgroundColor();
@@ -73,7 +75,7 @@ extern {
   // proto:  int QImageReader::currentImageNumber();
   fn C_ZNK12QImageReader18currentImageNumberEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto: static QList<QByteArray> QImageReader::supportedImageFormats();
-  fn C_ZN12QImageReader21supportedImageFormatsEv();
+  fn C_ZN12QImageReader21supportedImageFormatsEv() -> *mut c_void;
   // proto:  int QImageReader::loopCount();
   fn C_ZNK12QImageReader9loopCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QImageReader::setDecideFormatFromContent(bool ignored);
@@ -81,7 +83,7 @@ extern {
   // proto:  QRect QImageReader::scaledClipRect();
   fn C_ZNK12QImageReader14scaledClipRectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto: static QList<QByteArray> QImageReader::supportedMimeTypes();
-  fn C_ZN12QImageReader18supportedMimeTypesEv();
+  fn C_ZN12QImageReader18supportedMimeTypesEv() -> *mut c_void;
   // proto:  QString QImageReader::text(const QString & key);
   fn C_ZNK12QImageReader4textERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  int QImageReader::nextImageDelay();
@@ -187,7 +189,7 @@ impl<'a> /*trait*/ QImageReader_canRead<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageReader7canReadEv()};
     let mut ret = unsafe {C_ZNK12QImageReader7canReadEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -256,7 +258,7 @@ impl<'a> /*trait*/ QImageReader_read<i8> for (&'a QImage) {
     // unsafe{_ZN12QImageReader4readEP6QImage()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN12QImageReader4readEP6QImage(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -302,7 +304,7 @@ impl<'a> /*trait*/ QImageReader_imageCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageReader10imageCountEv()};
     let mut ret = unsafe {C_ZNK12QImageReader10imageCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -320,11 +322,13 @@ pub trait QImageReader_textKeys<RetType> {
 }
 
   // proto:  QStringList QImageReader::textKeys();
-impl<'a> /*trait*/ QImageReader_textKeys<()> for () {
-  fn textKeys(self , rsthis: & QImageReader) -> () {
+impl<'a> /*trait*/ QImageReader_textKeys<QStringList> for () {
+  fn textKeys(self , rsthis: & QImageReader) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageReader8textKeysEv()};
-     unsafe {C_ZNK12QImageReader8textKeysEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QImageReader8textKeysEv(rsthis.qclsinst)};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -347,7 +351,7 @@ impl<'a> /*trait*/ QImageReader_decideFormatFromContent<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageReader23decideFormatFromContentEv()};
     let mut ret = unsafe {C_ZNK12QImageReader23decideFormatFromContentEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -394,7 +398,7 @@ impl<'a> /*trait*/ QImageReader_autoTransform<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageReader13autoTransformEv()};
     let mut ret = unsafe {C_ZNK12QImageReader13autoTransformEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -417,7 +421,7 @@ impl<'a> /*trait*/ QImageReader_jumpToNextImage<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageReader15jumpToNextImageEv()};
     let mut ret = unsafe {C_ZN12QImageReader15jumpToNextImageEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -460,11 +464,12 @@ pub trait QImageReader_supportedSubTypes<RetType> {
 }
 
   // proto:  QList<QByteArray> QImageReader::supportedSubTypes();
-impl<'a> /*trait*/ QImageReader_supportedSubTypes<()> for () {
-  fn supportedSubTypes(self , rsthis: & QImageReader) -> () {
+impl<'a> /*trait*/ QImageReader_supportedSubTypes<u64> for () {
+  fn supportedSubTypes(self , rsthis: & QImageReader) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageReader17supportedSubTypesEv()};
-     unsafe {C_ZNK12QImageReader17supportedSubTypesEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QImageReader17supportedSubTypesEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -559,7 +564,7 @@ impl<'a> /*trait*/ QImageReader_currentImageNumber<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageReader18currentImageNumberEv()};
     let mut ret = unsafe {C_ZNK12QImageReader18currentImageNumberEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -577,11 +582,12 @@ pub trait QImageReader_supportedImageFormats_s<RetType> {
 }
 
   // proto: static QList<QByteArray> QImageReader::supportedImageFormats();
-impl<'a> /*trait*/ QImageReader_supportedImageFormats_s<()> for () {
-  fn supportedImageFormats_s(self ) -> () {
+impl<'a> /*trait*/ QImageReader_supportedImageFormats_s<u64> for () {
+  fn supportedImageFormats_s(self ) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageReader21supportedImageFormatsEv()};
-     unsafe {C_ZN12QImageReader21supportedImageFormatsEv()};
+    let mut ret = unsafe {C_ZN12QImageReader21supportedImageFormatsEv()};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -604,7 +610,7 @@ impl<'a> /*trait*/ QImageReader_loopCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageReader9loopCountEv()};
     let mut ret = unsafe {C_ZNK12QImageReader9loopCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -669,11 +675,12 @@ pub trait QImageReader_supportedMimeTypes_s<RetType> {
 }
 
   // proto: static QList<QByteArray> QImageReader::supportedMimeTypes();
-impl<'a> /*trait*/ QImageReader_supportedMimeTypes_s<()> for () {
-  fn supportedMimeTypes_s(self ) -> () {
+impl<'a> /*trait*/ QImageReader_supportedMimeTypes_s<u64> for () {
+  fn supportedMimeTypes_s(self ) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageReader18supportedMimeTypesEv()};
-     unsafe {C_ZN12QImageReader18supportedMimeTypesEv()};
+    let mut ret = unsafe {C_ZN12QImageReader18supportedMimeTypesEv()};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -721,7 +728,7 @@ impl<'a> /*trait*/ QImageReader_nextImageDelay<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageReader14nextImageDelayEv()};
     let mut ret = unsafe {C_ZNK12QImageReader14nextImageDelayEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -756,7 +763,7 @@ impl<'a> /*trait*/ QImageReader_supportsAnimation<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageReader17supportsAnimationEv()};
     let mut ret = unsafe {C_ZNK12QImageReader17supportsAnimationEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -780,7 +787,7 @@ impl<'a> /*trait*/ QImageReader_jumpToImage<i8> for (i32) {
     // unsafe{_ZN12QImageReader11jumpToImageEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZN12QImageReader11jumpToImageEi(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -896,7 +903,7 @@ impl<'a> /*trait*/ QImageReader_autoDetectImageFormat<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageReader21autoDetectImageFormatEv()};
     let mut ret = unsafe {C_ZNK12QImageReader21autoDetectImageFormatEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -985,7 +992,7 @@ impl<'a> /*trait*/ QImageReader_quality<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageReader7qualityEv()};
     let mut ret = unsafe {C_ZNK12QImageReader7qualityEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

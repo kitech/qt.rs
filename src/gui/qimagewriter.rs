@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qimagewriter.h
 // dst-file: /src/gui/qimagewriter.rs
 //
@@ -19,10 +19,11 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
-use super::super::core::qiodevice::QIODevice; // 771
-use super::super::core::qbytearray::QByteArray; // 771
-use super::qimage::QImage; // 773
+use super::super::core::qstring::*; // 771
+use super::super::core::qiodevice::*; // 771
+use super::super::core::qbytearray::*; // 771
+// use super::qlist::*; // 775
+use super::qimage::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -48,7 +49,7 @@ extern {
   // proto:  QByteArray QImageWriter::subType();
   fn C_ZNK12QImageWriter7subTypeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto: static QList<QByteArray> QImageWriter::supportedMimeTypes();
-  fn C_ZN12QImageWriter18supportedMimeTypesEv();
+  fn C_ZN12QImageWriter18supportedMimeTypesEv() -> *mut c_void;
   // proto:  int QImageWriter::quality();
   fn C_ZNK12QImageWriter7qualityEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QImageWriter::write(const QImage & image);
@@ -56,7 +57,7 @@ extern {
   // proto:  void QImageWriter::setCompression(int compression);
   fn C_ZN12QImageWriter14setCompressionEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto: static QList<QByteArray> QImageWriter::supportedImageFormats();
-  fn C_ZN12QImageWriter21supportedImageFormatsEv();
+  fn C_ZN12QImageWriter21supportedImageFormatsEv() -> *mut c_void;
   // proto:  QString QImageWriter::fileName();
   fn C_ZNK12QImageWriter8fileNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QImageWriter::setOptimizedWrite(bool optimize);
@@ -84,7 +85,7 @@ extern {
   // proto:  QByteArray QImageWriter::format();
   fn C_ZNK12QImageWriter6formatEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QList<QByteArray> QImageWriter::supportedSubTypes();
-  fn C_ZNK12QImageWriter17supportedSubTypesEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK12QImageWriter17supportedSubTypesEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QImageWriter::canWrite();
   fn C_ZNK12QImageWriter8canWriteEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QImageWriter::QImageWriter(QIODevice * device, const QByteArray & format);
@@ -198,7 +199,7 @@ impl<'a> /*trait*/ QImageWriter_optimizedWrite<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageWriter14optimizedWriteEv()};
     let mut ret = unsafe {C_ZNK12QImageWriter14optimizedWriteEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -286,11 +287,12 @@ pub trait QImageWriter_supportedMimeTypes_s<RetType> {
 }
 
   // proto: static QList<QByteArray> QImageWriter::supportedMimeTypes();
-impl<'a> /*trait*/ QImageWriter_supportedMimeTypes_s<()> for () {
-  fn supportedMimeTypes_s(self ) -> () {
+impl<'a> /*trait*/ QImageWriter_supportedMimeTypes_s<u64> for () {
+  fn supportedMimeTypes_s(self ) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageWriter18supportedMimeTypesEv()};
-     unsafe {C_ZN12QImageWriter18supportedMimeTypesEv()};
+    let mut ret = unsafe {C_ZN12QImageWriter18supportedMimeTypesEv()};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -313,7 +315,7 @@ impl<'a> /*trait*/ QImageWriter_quality<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageWriter7qualityEv()};
     let mut ret = unsafe {C_ZNK12QImageWriter7qualityEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -337,7 +339,7 @@ impl<'a> /*trait*/ QImageWriter_write<i8> for (&'a QImage) {
     // unsafe{_ZN12QImageWriter5writeERK6QImage()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN12QImageWriter5writeERK6QImage(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -378,11 +380,12 @@ pub trait QImageWriter_supportedImageFormats_s<RetType> {
 }
 
   // proto: static QList<QByteArray> QImageWriter::supportedImageFormats();
-impl<'a> /*trait*/ QImageWriter_supportedImageFormats_s<()> for () {
-  fn supportedImageFormats_s(self ) -> () {
+impl<'a> /*trait*/ QImageWriter_supportedImageFormats_s<u64> for () {
+  fn supportedImageFormats_s(self ) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageWriter21supportedImageFormatsEv()};
-     unsafe {C_ZN12QImageWriter21supportedImageFormatsEv()};
+    let mut ret = unsafe {C_ZN12QImageWriter21supportedImageFormatsEv()};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -499,7 +502,7 @@ impl<'a> /*trait*/ QImageWriter_gamma<f32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageWriter5gammaEv()};
     let mut ret = unsafe {C_ZNK12QImageWriter5gammaEv(rsthis.qclsinst)};
-    return ret as f32;
+    return ret as f32; // 1
     // return 1;
   }
 }
@@ -658,7 +661,7 @@ impl<'a> /*trait*/ QImageWriter_progressiveScanWrite<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageWriter20progressiveScanWriteEv()};
     let mut ret = unsafe {C_ZNK12QImageWriter20progressiveScanWriteEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -700,11 +703,12 @@ pub trait QImageWriter_supportedSubTypes<RetType> {
 }
 
   // proto:  QList<QByteArray> QImageWriter::supportedSubTypes();
-impl<'a> /*trait*/ QImageWriter_supportedSubTypes<()> for () {
-  fn supportedSubTypes(self , rsthis: & QImageWriter) -> () {
+impl<'a> /*trait*/ QImageWriter_supportedSubTypes<u64> for () {
+  fn supportedSubTypes(self , rsthis: & QImageWriter) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageWriter17supportedSubTypesEv()};
-     unsafe {C_ZNK12QImageWriter17supportedSubTypesEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QImageWriter17supportedSubTypesEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -727,7 +731,7 @@ impl<'a> /*trait*/ QImageWriter_canWrite<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageWriter8canWriteEv()};
     let mut ret = unsafe {C_ZNK12QImageWriter8canWriteEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -766,7 +770,7 @@ impl<'a> /*trait*/ QImageWriter_compression<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageWriter11compressionEv()};
     let mut ret = unsafe {C_ZNK12QImageWriter11compressionEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

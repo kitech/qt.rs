@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qfontmetrics.h
 // dst-file: /src/gui/qfontmetrics.rs
 //
@@ -19,14 +19,12 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::super::core::qrect::QRect; // 771
-use super::super::core::qstring::QString; // 771
-use super::super::core::qchar::QChar; // 771
-use super::super::core::qsize::QSize; // 771
-use super::qfont::QFont; // 773
-use super::qpaintdevice::QPaintDevice; // 773
-use super::super::core::qsize::QSizeF; // 771
-use super::super::core::qrect::QRectF; // 771
+use super::super::core::qrect::*; // 771
+use super::super::core::qstring::*; // 771
+use super::super::core::qchar::*; // 771
+use super::super::core::qsize::*; // 771
+use super::qfont::*; // 773
+use super::qpaintdevice::*; // 773
 // use super::qfontmetrics::QFontMetrics; // 773
 // <= use block end
 
@@ -207,7 +205,7 @@ impl<'a> /*trait*/ QFontMetrics_maxWidth<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics8maxWidthEv()};
     let mut ret = unsafe {C_ZNK12QFontMetrics8maxWidthEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -252,7 +250,7 @@ impl<'a> /*trait*/ QFontMetrics_lineWidth<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics9lineWidthEv()};
     let mut ret = unsafe {C_ZNK12QFontMetrics9lineWidthEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -304,7 +302,7 @@ impl<'a> /*trait*/ QFontMetrics_minLeftBearing<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics14minLeftBearingEv()};
     let mut ret = unsafe {C_ZNK12QFontMetrics14minLeftBearingEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -328,7 +326,7 @@ impl<'a> /*trait*/ QFontMetrics_rightBearing<i32> for (QChar) {
     // unsafe{_ZNK12QFontMetrics12rightBearingE5QChar()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK12QFontMetrics12rightBearingE5QChar(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -351,7 +349,7 @@ impl<'a> /*trait*/ QFontMetrics_ascent<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics6ascentEv()};
     let mut ret = unsafe {C_ZNK12QFontMetrics6ascentEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -402,7 +400,7 @@ impl<'a> /*trait*/ QFontMetrics_overlinePos<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics11overlinePosEv()};
     let mut ret = unsafe {C_ZNK12QFontMetrics11overlinePosEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -425,7 +423,7 @@ impl<'a> /*trait*/ QFontMetrics_leading<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics7leadingEv()};
     let mut ret = unsafe {C_ZNK12QFontMetrics7leadingEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -473,7 +471,7 @@ impl<'a> /*trait*/ QFontMetrics_averageCharWidth<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics16averageCharWidthEv()};
     let mut ret = unsafe {C_ZNK12QFontMetrics16averageCharWidthEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -496,7 +494,7 @@ impl<'a> /*trait*/ QFontMetrics_underlinePos<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics12underlinePosEv()};
     let mut ret = unsafe {C_ZNK12QFontMetrics12underlinePosEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -520,7 +518,7 @@ impl<'a> /*trait*/ QFontMetrics_inFont<i8> for (QChar) {
     // unsafe{_ZNK12QFontMetrics6inFontE5QChar()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK12QFontMetrics6inFontE5QChar(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -543,7 +541,7 @@ impl<'a> /*trait*/ QFontMetrics_height<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics6heightEv()};
     let mut ret = unsafe {C_ZNK12QFontMetrics6heightEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -567,7 +565,7 @@ impl<'a> /*trait*/ QFontMetrics_width<i32> for (QChar) {
     // unsafe{_ZNK12QFontMetrics5widthE5QChar()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK12QFontMetrics5widthE5QChar(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -603,7 +601,7 @@ impl<'a> /*trait*/ QFontMetrics_xHeight<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics7xHeightEv()};
     let mut ret = unsafe {C_ZNK12QFontMetrics7xHeightEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -617,7 +615,7 @@ impl<'a> /*trait*/ QFontMetrics_width<i32> for (&'a QString, i32, i32) {
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as c_int;
     let mut ret = unsafe {C_ZNK12QFontMetrics5widthERK7QStringii(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -640,7 +638,7 @@ impl<'a> /*trait*/ QFontMetrics_strikeOutPos<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics12strikeOutPosEv()};
     let mut ret = unsafe {C_ZNK12QFontMetrics12strikeOutPosEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -663,7 +661,7 @@ impl<'a> /*trait*/ QFontMetrics_lineSpacing<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics11lineSpacingEv()};
     let mut ret = unsafe {C_ZNK12QFontMetrics11lineSpacingEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -730,7 +728,7 @@ impl<'a> /*trait*/ QFontMetrics_minRightBearing<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics15minRightBearingEv()};
     let mut ret = unsafe {C_ZNK12QFontMetrics15minRightBearingEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -794,7 +792,7 @@ impl<'a> /*trait*/ QFontMetrics_width<i32> for (&'a QString, i32) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZNK12QFontMetrics5widthERK7QStringi(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -839,7 +837,7 @@ impl<'a> /*trait*/ QFontMetrics_charWidth<i32> for (&'a QString, i32) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZNK12QFontMetrics9charWidthERK7QStringi(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -863,7 +861,7 @@ impl<'a> /*trait*/ QFontMetrics_leftBearing<i32> for (QChar) {
     // unsafe{_ZNK12QFontMetrics11leftBearingE5QChar()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK12QFontMetrics11leftBearingE5QChar(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -887,7 +885,7 @@ impl<'a> /*trait*/ QFontMetrics_inFontUcs4<i8> for (u32) {
     // unsafe{_ZNK12QFontMetrics10inFontUcs4Ej()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {C_ZNK12QFontMetrics10inFontUcs4Ej(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -910,7 +908,7 @@ impl<'a> /*trait*/ QFontMetrics_descent<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics7descentEv()};
     let mut ret = unsafe {C_ZNK12QFontMetrics7descentEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -939,7 +937,7 @@ impl<'a> /*trait*/ QFontMetricsF_inFont<i8> for (QChar) {
     // unsafe{_ZNK13QFontMetricsF6inFontE5QChar()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK13QFontMetricsF6inFontE5QChar(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -990,7 +988,7 @@ impl<'a> /*trait*/ QFontMetricsF_minRightBearing<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF15minRightBearingEv()};
     let mut ret = unsafe {C_ZNK13QFontMetricsF15minRightBearingEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1041,7 +1039,7 @@ impl<'a> /*trait*/ QFontMetricsF_xHeight<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF7xHeightEv()};
     let mut ret = unsafe {C_ZNK13QFontMetricsF7xHeightEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1065,7 +1063,7 @@ impl<'a> /*trait*/ QFontMetricsF_width<f64> for (QChar) {
     // unsafe{_ZNK13QFontMetricsF5widthE5QChar()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK13QFontMetricsF5widthE5QChar(rsthis.qclsinst, arg0)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1188,7 +1186,7 @@ impl<'a> /*trait*/ QFontMetricsF_leftBearing<f64> for (QChar) {
     // unsafe{_ZNK13QFontMetricsF11leftBearingE5QChar()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK13QFontMetricsF11leftBearingE5QChar(rsthis.qclsinst, arg0)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1212,7 +1210,7 @@ impl<'a> /*trait*/ QFontMetricsF_rightBearing<f64> for (QChar) {
     // unsafe{_ZNK13QFontMetricsF12rightBearingE5QChar()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK13QFontMetricsF12rightBearingE5QChar(rsthis.qclsinst, arg0)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1235,7 +1233,7 @@ impl<'a> /*trait*/ QFontMetricsF_overlinePos<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF11overlinePosEv()};
     let mut ret = unsafe {C_ZNK13QFontMetricsF11overlinePosEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1258,7 +1256,7 @@ impl<'a> /*trait*/ QFontMetricsF_height<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF6heightEv()};
     let mut ret = unsafe {C_ZNK13QFontMetricsF6heightEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1281,7 +1279,7 @@ impl<'a> /*trait*/ QFontMetricsF_descent<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF7descentEv()};
     let mut ret = unsafe {C_ZNK13QFontMetricsF7descentEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1317,7 +1315,7 @@ impl<'a> /*trait*/ QFontMetricsF_lineWidth<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF9lineWidthEv()};
     let mut ret = unsafe {C_ZNK13QFontMetricsF9lineWidthEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1344,7 +1342,7 @@ impl<'a> /*trait*/ QFontMetricsF_width<f64> for (&'a QString) {
     // unsafe{_ZNK13QFontMetricsF5widthERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK13QFontMetricsF5widthERK7QString(rsthis.qclsinst, arg0)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1367,7 +1365,7 @@ impl<'a> /*trait*/ QFontMetricsF_strikeOutPos<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF12strikeOutPosEv()};
     let mut ret = unsafe {C_ZNK13QFontMetricsF12strikeOutPosEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1390,7 +1388,7 @@ impl<'a> /*trait*/ QFontMetricsF_lineSpacing<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF11lineSpacingEv()};
     let mut ret = unsafe {C_ZNK13QFontMetricsF11lineSpacingEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1413,7 +1411,7 @@ impl<'a> /*trait*/ QFontMetricsF_averageCharWidth<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF16averageCharWidthEv()};
     let mut ret = unsafe {C_ZNK13QFontMetricsF16averageCharWidthEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1452,7 +1450,7 @@ impl<'a> /*trait*/ QFontMetricsF_leading<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF7leadingEv()};
     let mut ret = unsafe {C_ZNK13QFontMetricsF7leadingEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1504,7 +1502,7 @@ impl<'a> /*trait*/ QFontMetricsF_inFontUcs4<i8> for (u32) {
     // unsafe{_ZNK13QFontMetricsF10inFontUcs4Ej()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {C_ZNK13QFontMetricsF10inFontUcs4Ej(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1527,7 +1525,7 @@ impl<'a> /*trait*/ QFontMetricsF_minLeftBearing<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF14minLeftBearingEv()};
     let mut ret = unsafe {C_ZNK13QFontMetricsF14minLeftBearingEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1550,7 +1548,7 @@ impl<'a> /*trait*/ QFontMetricsF_ascent<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF6ascentEv()};
     let mut ret = unsafe {C_ZNK13QFontMetricsF6ascentEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1573,7 +1571,7 @@ impl<'a> /*trait*/ QFontMetricsF_maxWidth<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF8maxWidthEv()};
     let mut ret = unsafe {C_ZNK13QFontMetricsF8maxWidthEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1596,7 +1594,7 @@ impl<'a> /*trait*/ QFontMetricsF_underlinePos<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF12underlinePosEv()};
     let mut ret = unsafe {C_ZNK13QFontMetricsF12underlinePosEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }

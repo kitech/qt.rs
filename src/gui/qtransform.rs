@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qtransform.h
 // dst-file: /src/gui/qtransform.rs
 //
@@ -19,17 +19,13 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::super::core::qpoint::QPoint; // 771
-use super::qpainterpath::QPainterPath; // 773
-use super::qmatrix::QMatrix; // 773
-use super::super::core::qrect::QRect; // 771
-use super::qpolygon::QPolygon; // 773
-use super::super::core::qline::QLineF; // 771
-use super::super::core::qrect::QRectF; // 771
-use super::super::core::qline::QLine; // 771
-use super::qpolygon::QPolygonF; // 773
-use super::super::core::qpoint::QPointF; // 771
-use super::qregion::QRegion; // 773
+use super::super::core::qpoint::*; // 771
+use super::qpainterpath::*; // 773
+use super::qmatrix::*; // 773
+use super::super::core::qrect::*; // 771
+use super::qpolygon::*; // 773
+use super::super::core::qline::*; // 771
+use super::qregion::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -211,7 +207,7 @@ impl<'a> /*trait*/ QTransform_det<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform3detEv()};
     let mut ret = unsafe {C_ZNK10QTransform3detEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -325,7 +321,7 @@ impl<'a> /*trait*/ QTransform_determinant<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform11determinantEv()};
     let mut ret = unsafe {C_ZNK10QTransform11determinantEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -374,7 +370,7 @@ impl<'a> /*trait*/ QTransform_isTranslating<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform13isTranslatingEv()};
     let mut ret = unsafe {C_ZNK10QTransform13isTranslatingEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -422,7 +418,7 @@ impl<'a> /*trait*/ QTransform_m22<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform3m22Ev()};
     let mut ret = unsafe {C_ZNK10QTransform3m22Ev(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -497,7 +493,7 @@ impl<'a> /*trait*/ QTransform_m32<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform3m32Ev()};
     let mut ret = unsafe {C_ZNK10QTransform3m32Ev(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -734,7 +730,7 @@ impl<'a> /*trait*/ QTransform_isInvertible<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform12isInvertibleEv()};
     let mut ret = unsafe {C_ZNK10QTransform12isInvertibleEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -760,7 +756,7 @@ impl<'a> /*trait*/ QTransform_quadToQuad_s<i8> for (&'a QPolygonF, &'a QPolygonF
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN10QTransform10quadToQuadERK9QPolygonFS2_RS_(arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -785,7 +781,7 @@ impl<'a> /*trait*/ QTransform_squareToQuad_s<i8> for (&'a QPolygonF, &'a QTransf
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN10QTransform12squareToQuadERK9QPolygonFRS_(arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -834,7 +830,7 @@ impl<'a> /*trait*/ QTransform_m31<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform3m31Ev()};
     let mut ret = unsafe {C_ZNK10QTransform3m31Ev(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -908,7 +904,7 @@ impl<'a> /*trait*/ QTransform_isRotating<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform10isRotatingEv()};
     let mut ret = unsafe {C_ZNK10QTransform10isRotatingEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -931,7 +927,7 @@ impl<'a> /*trait*/ QTransform_m33<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform3m33Ev()};
     let mut ret = unsafe {C_ZNK10QTransform3m33Ev(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -954,7 +950,7 @@ impl<'a> /*trait*/ QTransform_m13<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform3m13Ev()};
     let mut ret = unsafe {C_ZNK10QTransform3m13Ev(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -977,7 +973,7 @@ impl<'a> /*trait*/ QTransform_m21<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform3m21Ev()};
     let mut ret = unsafe {C_ZNK10QTransform3m21Ev(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1000,7 +996,7 @@ impl<'a> /*trait*/ QTransform_isScaling<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform9isScalingEv()};
     let mut ret = unsafe {C_ZNK10QTransform9isScalingEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1048,7 +1044,7 @@ impl<'a> /*trait*/ QTransform_isAffine<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform8isAffineEv()};
     let mut ret = unsafe {C_ZNK10QTransform8isAffineEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1071,7 +1067,7 @@ impl<'a> /*trait*/ QTransform_m11<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform3m11Ev()};
     let mut ret = unsafe {C_ZNK10QTransform3m11Ev(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1094,7 +1090,7 @@ impl<'a> /*trait*/ QTransform_isIdentity<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform10isIdentityEv()};
     let mut ret = unsafe {C_ZNK10QTransform10isIdentityEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1119,7 +1115,7 @@ impl<'a> /*trait*/ QTransform_quadToSquare_s<i8> for (&'a QPolygonF, &'a QTransf
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN10QTransform12quadToSquareERK9QPolygonFRS_(arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1166,7 +1162,7 @@ impl<'a> /*trait*/ QTransform_dx<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform2dxEv()};
     let mut ret = unsafe {C_ZNK10QTransform2dxEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1189,7 +1185,7 @@ impl<'a> /*trait*/ QTransform_m23<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform3m23Ev()};
     let mut ret = unsafe {C_ZNK10QTransform3m23Ev(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1212,7 +1208,7 @@ impl<'a> /*trait*/ QTransform_dy<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform2dyEv()};
     let mut ret = unsafe {C_ZNK10QTransform2dyEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1235,7 +1231,7 @@ impl<'a> /*trait*/ QTransform_m12<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform3m12Ev()};
     let mut ret = unsafe {C_ZNK10QTransform3m12Ev(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }

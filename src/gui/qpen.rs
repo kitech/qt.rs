@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qpen.h
 // dst-file: /src/gui/qpen.rs
 //
@@ -19,8 +19,9 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qcolor::QColor; // 773
-use super::qbrush::QBrush; // 773
+use super::qcolor::*; // 773
+use super::qbrush::*; // 773
+// use super::qvector::*; // 775
 // <= use block end
 
 // ext block begin =>
@@ -56,7 +57,7 @@ extern {
   // proto:  void QPen::setColor(const QColor & color);
   fn C_ZN4QPen8setColorERK6QColor(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QVector<qreal> QPen::dashPattern();
-  fn C_ZNK4QPen11dashPatternEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK4QPen11dashPatternEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QPen::isDetached();
   fn C_ZN4QPen10isDetachedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QPen::QPen(const QPen & pen);
@@ -130,7 +131,7 @@ impl<'a> /*trait*/ QPen_dashOffset<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QPen10dashOffsetEv()};
     let mut ret = unsafe {C_ZNK4QPen10dashOffsetEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -181,7 +182,7 @@ impl<'a> /*trait*/ QPen_miterLimit<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QPen10miterLimitEv()};
     let mut ret = unsafe {C_ZNK4QPen10miterLimitEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -297,7 +298,7 @@ impl<'a> /*trait*/ QPen_widthF<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QPen6widthFEv()};
     let mut ret = unsafe {C_ZNK4QPen6widthFEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -343,7 +344,7 @@ impl<'a> /*trait*/ QPen_isSolid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QPen7isSolidEv()};
     let mut ret = unsafe {C_ZNK4QPen7isSolidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -384,11 +385,12 @@ pub trait QPen_dashPattern<RetType> {
 }
 
   // proto:  QVector<qreal> QPen::dashPattern();
-impl<'a> /*trait*/ QPen_dashPattern<()> for () {
-  fn dashPattern(self , rsthis: & QPen) -> () {
+impl<'a> /*trait*/ QPen_dashPattern<u64> for () {
+  fn dashPattern(self , rsthis: & QPen) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QPen11dashPatternEv()};
-     unsafe {C_ZNK4QPen11dashPatternEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK4QPen11dashPatternEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -411,7 +413,7 @@ impl<'a> /*trait*/ QPen_isDetached<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QPen10isDetachedEv()};
     let mut ret = unsafe {C_ZN4QPen10isDetachedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -486,7 +488,7 @@ impl<'a> /*trait*/ QPen_width<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QPen5widthEv()};
     let mut ret = unsafe {C_ZNK4QPen5widthEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -556,7 +558,7 @@ impl<'a> /*trait*/ QPen_isCosmetic<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QPen10isCosmeticEv()};
     let mut ret = unsafe {C_ZNK4QPen10isCosmeticEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

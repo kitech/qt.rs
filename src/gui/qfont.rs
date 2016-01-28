@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qfont.h
 // dst-file: /src/gui/qfont.rs
 //
@@ -19,9 +19,9 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
-use super::super::core::qstringlist::QStringList; // 771
-use super::qpaintdevice::QPaintDevice; // 773
+use super::super::core::qstring::*; // 771
+use super::super::core::qstringlist::*; // 771
+use super::qpaintdevice::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -55,7 +55,7 @@ extern {
   // proto:  bool QFont::kerning();
   fn C_ZNK5QFont7kerningEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto: static QStringList QFont::substitutions();
-  fn C_ZN5QFont13substitutionsEv();
+  fn C_ZN5QFont13substitutionsEv() -> *mut c_void;
   // proto:  bool QFont::italic();
   fn C_ZNK5QFont6italicEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QFont::setUnderline(bool );
@@ -91,7 +91,7 @@ extern {
   // proto:  void QFont::setPointSizeF(qreal );
   fn C_ZN5QFont13setPointSizeFEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto: static QStringList QFont::substitutes(const QString & );
-  fn C_ZN5QFont11substitutesERK7QString(arg0: *mut c_void);
+  fn C_ZN5QFont11substitutesERK7QString(arg0: *mut c_void) -> *mut c_void;
   // proto:  qreal QFont::wordSpacing();
   fn C_ZNK5QFont11wordSpacingEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  QString QFont::toString();
@@ -305,7 +305,7 @@ impl<'a> /*trait*/ QFont_strikeOut<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont9strikeOutEv()};
     let mut ret = unsafe {C_ZNK5QFont9strikeOutEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -328,7 +328,7 @@ impl<'a> /*trait*/ QFont_pixelSize<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont9pixelSizeEv()};
     let mut ret = unsafe {C_ZNK5QFont9pixelSizeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -374,7 +374,7 @@ impl<'a> /*trait*/ QFont_weight<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont6weightEv()};
     let mut ret = unsafe {C_ZNK5QFont6weightEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -421,7 +421,7 @@ impl<'a> /*trait*/ QFont_kerning<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont7kerningEv()};
     let mut ret = unsafe {C_ZNK5QFont7kerningEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -439,11 +439,13 @@ pub trait QFont_substitutions_s<RetType> {
 }
 
   // proto: static QStringList QFont::substitutions();
-impl<'a> /*trait*/ QFont_substitutions_s<()> for () {
-  fn substitutions_s(self ) -> () {
+impl<'a> /*trait*/ QFont_substitutions_s<QStringList> for () {
+  fn substitutions_s(self ) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFont13substitutionsEv()};
-     unsafe {C_ZN5QFont13substitutionsEv()};
+    let mut ret = unsafe {C_ZN5QFont13substitutionsEv()};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -466,7 +468,7 @@ impl<'a> /*trait*/ QFont_italic<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont6italicEv()};
     let mut ret = unsafe {C_ZNK5QFont6italicEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -512,7 +514,7 @@ impl<'a> /*trait*/ QFont_letterSpacing<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont13letterSpacingEv()};
     let mut ret = unsafe {C_ZNK5QFont13letterSpacingEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -721,7 +723,7 @@ impl<'a> /*trait*/ QFont_overline<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont8overlineEv()};
     let mut ret = unsafe {C_ZNK5QFont8overlineEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -840,12 +842,14 @@ pub trait QFont_substitutes_s<RetType> {
 }
 
   // proto: static QStringList QFont::substitutes(const QString & );
-impl<'a> /*trait*/ QFont_substitutes_s<()> for (&'a QString) {
-  fn substitutes_s(self ) -> () {
+impl<'a> /*trait*/ QFont_substitutes_s<QStringList> for (&'a QString) {
+  fn substitutes_s(self ) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFont11substitutesERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN5QFont11substitutesERK7QString(arg0)};
+    let mut ret = unsafe {C_ZN5QFont11substitutesERK7QString(arg0)};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -868,7 +872,7 @@ impl<'a> /*trait*/ QFont_wordSpacing<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont11wordSpacingEv()};
     let mut ret = unsafe {C_ZNK5QFont11wordSpacingEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -915,7 +919,7 @@ impl<'a> /*trait*/ QFont_pointSizeF<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont10pointSizeFEv()};
     let mut ret = unsafe {C_ZNK5QFont10pointSizeFEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1023,7 +1027,7 @@ impl<'a> /*trait*/ QFont_rawMode<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont7rawModeEv()};
     let mut ret = unsafe {C_ZNK5QFont7rawModeEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1047,7 +1051,7 @@ impl<'a> /*trait*/ QFont_fromString<i8> for (&'a QString) {
     // unsafe{_ZN5QFont10fromStringERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN5QFont10fromStringERK7QString(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1070,7 +1074,7 @@ impl<'a> /*trait*/ QFont_underline<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont9underlineEv()};
     let mut ret = unsafe {C_ZNK5QFont9underlineEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1094,7 +1098,7 @@ impl<'a> /*trait*/ QFont_isCopyOf<i8> for (&'a QFont) {
     // unsafe{_ZNK5QFont8isCopyOfERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK5QFont8isCopyOfERKS_(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1117,7 +1121,7 @@ impl<'a> /*trait*/ QFont_pointSize<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont9pointSizeEv()};
     let mut ret = unsafe {C_ZNK5QFont9pointSizeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1163,7 +1167,7 @@ impl<'a> /*trait*/ QFont_bold<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont4boldEv()};
     let mut ret = unsafe {C_ZNK5QFont4boldEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1186,7 +1190,7 @@ impl<'a> /*trait*/ QFont_fixedPitch<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont10fixedPitchEv()};
     let mut ret = unsafe {C_ZNK5QFont10fixedPitchEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1447,7 +1451,7 @@ impl<'a> /*trait*/ QFont_resolve<u32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont7resolveEv()};
     let mut ret = unsafe {C_ZNK5QFont7resolveEv(rsthis.qclsinst)};
-    return ret as u32;
+    return ret as u32; // 1
     // return 1;
   }
 }
@@ -1492,7 +1496,7 @@ impl<'a> /*trait*/ QFont_exactMatch<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont10exactMatchEv()};
     let mut ret = unsafe {C_ZNK5QFont10exactMatchEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1515,7 +1519,7 @@ impl<'a> /*trait*/ QFont_stretch<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont7stretchEv()};
     let mut ret = unsafe {C_ZNK5QFont7stretchEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

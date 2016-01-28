@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qaccessibleobject.h
 // dst-file: /src/gui/qaccessibleobject.rs
 //
@@ -20,11 +20,11 @@ use self::libc::*;
 // use block begin =>
 // use super::qaccessibleobject::QAccessibleObject; // 773
 use std::ops::Deref;
-use super::qwindow::QWindow; // 773
-use super::qaccessible::QAccessibleInterface; // 773
-use super::super::core::qstring::QString; // 771
-use super::super::core::qobject::QObject; // 771
-use super::super::core::qrect::QRect; // 771
+use super::qwindow::*; // 773
+use super::qaccessible::*; // 773
+use super::super::core::qstring::*; // 771
+use super::super::core::qobject::*; // 771
+use super::super::core::qrect::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -188,7 +188,7 @@ impl<'a> /*trait*/ QAccessibleApplication_childCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QAccessibleApplication10childCountEv()};
     let mut ret = unsafe {C_ZNK22QAccessibleApplication10childCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -260,7 +260,7 @@ impl<'a> /*trait*/ QAccessibleApplication_indexOfChild<i32> for (&'a QAccessible
     // unsafe{_ZNK22QAccessibleApplication12indexOfChildEPK20QAccessibleInterface()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK22QAccessibleApplication12indexOfChildEPK20QAccessibleInterface(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -402,7 +402,7 @@ impl<'a> /*trait*/ QAccessibleObject_isValid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAccessibleObject7isValidEv()};
     let mut ret = unsafe {C_ZNK17QAccessibleObject7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

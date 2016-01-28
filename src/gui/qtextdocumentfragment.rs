@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qtextdocumentfragment.h
 // dst-file: /src/gui/qtextdocumentfragment.rs
 //
@@ -19,10 +19,10 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
-use super::qtextdocument::QTextDocument; // 773
-use super::super::core::qbytearray::QByteArray; // 771
-use super::qtextcursor::QTextCursor; // 773
+use super::super::core::qstring::*; // 771
+use super::qtextdocument::*; // 773
+use super::super::core::qbytearray::*; // 771
+use super::qtextcursor::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -295,7 +295,7 @@ impl<'a> /*trait*/ QTextDocumentFragment_isEmpty<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QTextDocumentFragment7isEmptyEv()};
     let mut ret = unsafe {C_ZNK21QTextDocumentFragment7isEmptyEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

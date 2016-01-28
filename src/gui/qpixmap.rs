@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qpixmap.h
 // dst-file: /src/gui/qpixmap.rs
 //
@@ -18,23 +18,24 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qpaintdevice::QPaintDevice; // 773
+use super::qpaintdevice::*; // 773
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
-use super::super::core::qsize::QSize; // 771
-use super::qtransform::QTransform; // 773
-use super::qcolor::QColor; // 773
-use super::qmatrix::QMatrix; // 773
-use super::qregion::QRegion; // 773
-use super::super::core::qrect::QRect; // 771
-use super::super::core::qpoint::QPoint; // 771
-use super::qbitmap::QBitmap; // 773
-use super::super::core::qobject::QObject; // 771
-use super::super::core::qbytearray::QByteArray; // 771
-use super::qimage::QImage; // 773
-use super::qimagereader::QImageReader; // 773
-use super::qpaintengine::QPaintEngine; // 773
-use super::super::core::qiodevice::QIODevice; // 771
+use super::super::core::qstring::*; // 771
+use super::super::core::qsize::*; // 771
+use super::qtransform::*; // 773
+use super::qcolor::*; // 773
+use super::qmatrix::*; // 773
+use super::qregion::*; // 773
+use super::super::core::qrect::*; // 771
+use super::super::core::qpoint::*; // 771
+use super::qbitmap::*; // 773
+use super::super::core::qobject::*; // 771
+use super::super::core::qbytearray::*; // 771
+use super::qimage::*; // 773
+use super::qimagereader::*; // 773
+// use super::qplatformpixmap::*; // 775
+use super::qpaintengine::*; // 773
+use super::super::core::qiodevice::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -108,7 +109,7 @@ extern {
   // proto: static QPixmap QPixmap::grabWidget(QObject * widget, int x, int y, int w, int h);
   fn C_ZN7QPixmap10grabWidgetEP7QObjectiiii(arg0: *mut c_void, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_int) -> *mut c_void;
   // proto:  QPlatformPixmap * QPixmap::handle();
-  fn C_ZNK7QPixmap6handleEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK7QPixmap6handleEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QPixmap::hasAlphaChannel();
   fn C_ZNK7QPixmap15hasAlphaChannelEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QRect QPixmap::rect();
@@ -179,7 +180,7 @@ impl<'a> /*trait*/ QPixmap_save<i8> for (&'a QString, &'a  String, i32) {
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let arg2 = self.2  as c_int;
     let mut ret = unsafe {C_ZNK7QPixmap4saveERK7QStringPKci(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -225,7 +226,7 @@ impl<'a> /*trait*/ QPixmap_isQBitmap<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPixmap9isQBitmapEv()};
     let mut ret = unsafe {C_ZNK7QPixmap9isQBitmapEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -248,7 +249,7 @@ impl<'a> /*trait*/ QPixmap_devicePixelRatio<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPixmap16devicePixelRatioEv()};
     let mut ret = unsafe {C_ZNK7QPixmap16devicePixelRatioEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -335,7 +336,7 @@ impl<'a> /*trait*/ QPixmap_devType<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPixmap7devTypeEv()};
     let mut ret = unsafe {C_ZNK7QPixmap7devTypeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -496,7 +497,7 @@ impl<'a> /*trait*/ QPixmap_isDetached<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPixmap10isDetachedEv()};
     let mut ret = unsafe {C_ZNK7QPixmap10isDetachedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -519,7 +520,7 @@ impl<'a> /*trait*/ QPixmap_isNull<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPixmap6isNullEv()};
     let mut ret = unsafe {C_ZNK7QPixmap6isNullEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -558,7 +559,7 @@ impl<'a> /*trait*/ QPixmap_defaultDepth_s<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPixmap12defaultDepthEv()};
     let mut ret = unsafe {C_ZN7QPixmap12defaultDepthEv()};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -733,7 +734,7 @@ impl<'a> /*trait*/ QPixmap_cacheKey<i64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPixmap8cacheKeyEv()};
     let mut ret = unsafe {C_ZNK7QPixmap8cacheKeyEv(rsthis.qclsinst)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -781,7 +782,7 @@ impl<'a> /*trait*/ QPixmap_depth<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPixmap5depthEv()};
     let mut ret = unsafe {C_ZNK7QPixmap5depthEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -840,11 +841,12 @@ pub trait QPixmap_handle<RetType> {
 }
 
   // proto:  QPlatformPixmap * QPixmap::handle();
-impl<'a> /*trait*/ QPixmap_handle<()> for () {
-  fn handle(self , rsthis: & QPixmap) -> () {
+impl<'a> /*trait*/ QPixmap_handle<u64> for () {
+  fn handle(self , rsthis: & QPixmap) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPixmap6handleEv()};
-     unsafe {C_ZNK7QPixmap6handleEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QPixmap6handleEv(rsthis.qclsinst)};
+    return ret as u64; // 4
     // return 1;
   }
 }
@@ -867,7 +869,7 @@ impl<'a> /*trait*/ QPixmap_hasAlphaChannel<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPixmap15hasAlphaChannelEv()};
     let mut ret = unsafe {C_ZNK7QPixmap15hasAlphaChannelEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -953,7 +955,7 @@ impl<'a> /*trait*/ QPixmap_width<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPixmap5widthEv()};
     let mut ret = unsafe {C_ZNK7QPixmap5widthEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1022,7 +1024,7 @@ impl<'a> /*trait*/ QPixmap_height<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPixmap6heightEv()};
     let mut ret = unsafe {C_ZNK7QPixmap6heightEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1036,7 +1038,7 @@ impl<'a> /*trait*/ QPixmap_save<i8> for (&'a QIODevice, &'a  String, i32) {
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let arg2 = self.2  as c_int;
     let mut ret = unsafe {C_ZNK7QPixmap4saveEP9QIODevicePKci(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1083,7 +1085,7 @@ impl<'a> /*trait*/ QPixmap_hasAlpha<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPixmap8hasAlphaEv()};
     let mut ret = unsafe {C_ZNK7QPixmap8hasAlphaEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

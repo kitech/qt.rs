@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qtextformat.h
 // dst-file: /src/gui/qtextformat.rs
 //
@@ -20,21 +20,23 @@ use self::libc::*;
 // use block begin =>
 use std::ops::Deref;
 // use super::qtextformat::QTextCharFormat; // 773
-use super::super::core::qstring::QString; // 771
+use super::super::core::qstring::*; // 771
 // use super::qtextformat::QTextBlockFormat; // 773
+// use super::qvector::*; // 775
 // use super::qtextformat::QTextLength; // 773
-use super::qcolor::QColor; // 773
-use super::qbrush::QBrush; // 773
+use super::qcolor::*; // 773
+use super::qbrush::*; // 773
 // use super::qtextformat::QTextFrameFormat; // 773
-use super::qpen::QPen; // 773
-use super::super::core::qvariant::QVariant; // 771
+use super::qpen::*; // 773
+use super::super::core::qvariant::*; // 771
 // use super::qtextformat::QTextImageFormat; // 773
 // use super::qtextformat::QTextTableFormat; // 773
 // use super::qtextformat::QTextTableCellFormat; // 773
 // use super::qtextformat::QTextListFormat; // 773
+// use super::qmap::*; // 775
 // use super::qtextformat::QTextFormat; // 773
-use super::qfont::QFont; // 773
-use super::super::core::qstringlist::QStringList; // 771
+use super::qfont::*; // 773
+use super::super::core::qstringlist::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -74,7 +76,7 @@ extern {
   // proto:  QString QTextFormat::stringProperty(int propertyId);
   fn C_ZNK11QTextFormat14stringPropertyEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  QVector<QTextLength> QTextFormat::lengthVectorProperty(int propertyId);
-  fn C_ZNK11QTextFormat20lengthVectorPropertyEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZNK11QTextFormat20lengthVectorPropertyEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  int QTextFormat::objectIndex();
   fn C_ZNK11QTextFormat11objectIndexEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QTextFormat::setObjectIndex(int object);
@@ -164,7 +166,7 @@ extern {
   // proto:  QTextListFormat QTextFormat::toListFormat();
   fn C_ZNK11QTextFormat12toListFormatEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QMap<int, QVariant> QTextFormat::properties();
-  fn C_ZNK11QTextFormat10propertiesEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK11QTextFormat10propertiesEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   fn QTextBlockFormat_Class_Size() -> c_int;
   // proto:  int QTextBlockFormat::indent();
   fn C_ZNK16QTextBlockFormat6indentEv(qthis: u64 /* *mut c_void*/) -> c_int;
@@ -252,7 +254,7 @@ extern {
   // proto:  void QTextCharFormat::setAnchorNames(const QStringList & names);
   fn C_ZN15QTextCharFormat14setAnchorNamesERK11QStringList(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QStringList QTextCharFormat::anchorNames();
-  fn C_ZNK15QTextCharFormat11anchorNamesEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK15QTextCharFormat11anchorNamesEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QTextCharFormat::setFontFixedPitch(bool fixedPitch);
   fn C_ZN15QTextCharFormat17setFontFixedPitchEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QTextCharFormat::setFontItalic(bool italic);
@@ -309,7 +311,7 @@ extern {
   // proto:  int QTextTableFormat::columns();
   fn C_ZNK16QTextTableFormat7columnsEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  QVector<QTextLength> QTextTableFormat::columnWidthConstraints();
-  fn C_ZNK16QTextTableFormat22columnWidthConstraintsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK16QTextTableFormat22columnWidthConstraintsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QTextTableFormat::setCellPadding(qreal padding);
   fn C_ZN16QTextTableFormat14setCellPaddingEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  qreal QTextTableFormat::cellPadding();
@@ -503,7 +505,7 @@ impl<'a> /*trait*/ QTextLength_value<f64> for (f64) {
     // unsafe{_ZNK11QTextLength5valueEd()};
     let arg0 = self  as c_double;
     let mut ret = unsafe {C_ZNK11QTextLength5valueEd(rsthis.qclsinst, arg0)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -553,7 +555,7 @@ impl<'a> /*trait*/ QTextLength_rawValue<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextLength8rawValueEv()};
     let mut ret = unsafe {C_ZNK11QTextLength8rawValueEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -620,7 +622,7 @@ impl<'a> /*trait*/ QTextImageFormat_isValid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextImageFormat7isValidEv()};
     let mut ret = unsafe {C_ZNK16QTextImageFormat7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -643,7 +645,7 @@ impl<'a> /*trait*/ QTextImageFormat_width<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextImageFormat5widthEv()};
     let mut ret = unsafe {C_ZNK16QTextImageFormat5widthEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -759,7 +761,7 @@ impl<'a> /*trait*/ QTextImageFormat_height<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextImageFormat6heightEv()};
     let mut ret = unsafe {C_ZNK16QTextImageFormat6heightEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -831,12 +833,13 @@ pub trait QTextFormat_lengthVectorProperty<RetType> {
 }
 
   // proto:  QVector<QTextLength> QTextFormat::lengthVectorProperty(int propertyId);
-impl<'a> /*trait*/ QTextFormat_lengthVectorProperty<()> for (i32) {
-  fn lengthVectorProperty(self , rsthis: & QTextFormat) -> () {
+impl<'a> /*trait*/ QTextFormat_lengthVectorProperty<u64> for (i32) {
+  fn lengthVectorProperty(self , rsthis: & QTextFormat) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat20lengthVectorPropertyEi()};
     let arg0 = self  as c_int;
-     unsafe {C_ZNK11QTextFormat20lengthVectorPropertyEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK11QTextFormat20lengthVectorPropertyEi(rsthis.qclsinst, arg0)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -859,7 +862,7 @@ impl<'a> /*trait*/ QTextFormat_objectIndex<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat11objectIndexEv()};
     let mut ret = unsafe {C_ZNK11QTextFormat11objectIndexEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -927,7 +930,7 @@ impl<'a> /*trait*/ QTextFormat_isTableCellFormat<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat17isTableCellFormatEv()};
     let mut ret = unsafe {C_ZNK11QTextFormat17isTableCellFormatEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -972,7 +975,7 @@ impl<'a> /*trait*/ QTextFormat_isValid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat7isValidEv()};
     let mut ret = unsafe {C_ZNK11QTextFormat7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1134,7 +1137,7 @@ impl<'a> /*trait*/ QTextFormat_boolProperty<i8> for (i32) {
     // unsafe{_ZNK11QTextFormat12boolPropertyEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK11QTextFormat12boolPropertyEi(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1157,7 +1160,7 @@ impl<'a> /*trait*/ QTextFormat_isListFormat<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat12isListFormatEv()};
     let mut ret = unsafe {C_ZNK11QTextFormat12isListFormatEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1195,7 +1198,7 @@ impl<'a> /*trait*/ QTextFormat_isImageFormat<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat13isImageFormatEv()};
     let mut ret = unsafe {C_ZNK11QTextFormat13isImageFormatEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1290,7 +1293,7 @@ impl<'a> /*trait*/ QTextFormat_propertyCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat13propertyCountEv()};
     let mut ret = unsafe {C_ZNK11QTextFormat13propertyCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1363,7 +1366,7 @@ impl<'a> /*trait*/ QTextFormat_isTableFormat<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat13isTableFormatEv()};
     let mut ret = unsafe {C_ZNK11QTextFormat13isTableFormatEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1410,7 +1413,7 @@ impl<'a> /*trait*/ QTextFormat_type_<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat4typeEv()};
     let mut ret = unsafe {C_ZNK11QTextFormat4typeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1433,7 +1436,7 @@ impl<'a> /*trait*/ QTextFormat_isCharFormat<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat12isCharFormatEv()};
     let mut ret = unsafe {C_ZNK11QTextFormat12isCharFormatEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1478,7 +1481,7 @@ impl<'a> /*trait*/ QTextFormat_isBlockFormat<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat13isBlockFormatEv()};
     let mut ret = unsafe {C_ZNK11QTextFormat13isBlockFormatEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1526,7 +1529,7 @@ impl<'a> /*trait*/ QTextFormat_doubleProperty<f64> for (i32) {
     // unsafe{_ZNK11QTextFormat14doublePropertyEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK11QTextFormat14doublePropertyEi(rsthis.qclsinst, arg0)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1597,7 +1600,7 @@ impl<'a> /*trait*/ QTextFormat_hasProperty<i8> for (i32) {
     // unsafe{_ZNK11QTextFormat11hasPropertyEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK11QTextFormat11hasPropertyEi(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1714,7 +1717,7 @@ impl<'a> /*trait*/ QTextFormat_isFrameFormat<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat13isFrameFormatEv()};
     let mut ret = unsafe {C_ZNK11QTextFormat13isFrameFormatEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1738,7 +1741,7 @@ impl<'a> /*trait*/ QTextFormat_intProperty<i32> for (i32) {
     // unsafe{_ZNK11QTextFormat11intPropertyEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK11QTextFormat11intPropertyEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1785,7 +1788,7 @@ impl<'a> /*trait*/ QTextFormat_isEmpty<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat7isEmptyEv()};
     let mut ret = unsafe {C_ZNK11QTextFormat7isEmptyEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1832,7 +1835,7 @@ impl<'a> /*trait*/ QTextFormat_objectType<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat10objectTypeEv()};
     let mut ret = unsafe {C_ZNK11QTextFormat10objectTypeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1874,11 +1877,12 @@ pub trait QTextFormat_properties<RetType> {
 }
 
   // proto:  QMap<int, QVariant> QTextFormat::properties();
-impl<'a> /*trait*/ QTextFormat_properties<()> for () {
-  fn properties(self , rsthis: & QTextFormat) -> () {
+impl<'a> /*trait*/ QTextFormat_properties<u64> for () {
+  fn properties(self , rsthis: & QTextFormat) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat10propertiesEv()};
-     unsafe {C_ZNK11QTextFormat10propertiesEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QTextFormat10propertiesEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -1918,7 +1922,7 @@ impl<'a> /*trait*/ QTextBlockFormat_indent<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextBlockFormat6indentEv()};
     let mut ret = unsafe {C_ZNK16QTextBlockFormat6indentEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -2010,7 +2014,7 @@ impl<'a> /*trait*/ QTextBlockFormat_textIndent<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextBlockFormat10textIndentEv()};
     let mut ret = unsafe {C_ZNK16QTextBlockFormat10textIndentEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -2033,7 +2037,7 @@ impl<'a> /*trait*/ QTextBlockFormat_lineHeight<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextBlockFormat10lineHeightEv()};
     let mut ret = unsafe {C_ZNK16QTextBlockFormat10lineHeightEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -2046,7 +2050,7 @@ impl<'a> /*trait*/ QTextBlockFormat_lineHeight<f64> for (f64, f64) {
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
     let mut ret = unsafe {C_ZNK16QTextBlockFormat10lineHeightEdd(rsthis.qclsinst, arg0, arg1)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -2092,7 +2096,7 @@ impl<'a> /*trait*/ QTextBlockFormat_topMargin<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextBlockFormat9topMarginEv()};
     let mut ret = unsafe {C_ZNK16QTextBlockFormat9topMarginEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -2142,7 +2146,7 @@ impl<'a> /*trait*/ QTextBlockFormat_rightMargin<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextBlockFormat11rightMarginEv()};
     let mut ret = unsafe {C_ZNK16QTextBlockFormat11rightMarginEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -2165,7 +2169,7 @@ impl<'a> /*trait*/ QTextBlockFormat_bottomMargin<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextBlockFormat12bottomMarginEv()};
     let mut ret = unsafe {C_ZNK16QTextBlockFormat12bottomMarginEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -2211,7 +2215,7 @@ impl<'a> /*trait*/ QTextBlockFormat_leftMargin<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextBlockFormat10leftMarginEv()};
     let mut ret = unsafe {C_ZNK16QTextBlockFormat10leftMarginEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -2281,7 +2285,7 @@ impl<'a> /*trait*/ QTextBlockFormat_lineHeightType<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextBlockFormat14lineHeightTypeEv()};
     let mut ret = unsafe {C_ZNK16QTextBlockFormat14lineHeightTypeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -2327,7 +2331,7 @@ impl<'a> /*trait*/ QTextBlockFormat_isValid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextBlockFormat7isValidEv()};
     let mut ret = unsafe {C_ZNK16QTextBlockFormat7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -2350,7 +2354,7 @@ impl<'a> /*trait*/ QTextBlockFormat_nonBreakableLines<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextBlockFormat17nonBreakableLinesEv()};
     let mut ret = unsafe {C_ZNK16QTextBlockFormat17nonBreakableLinesEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -2413,7 +2417,7 @@ impl<'a> /*trait*/ QTextCharFormat_isAnchor<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextCharFormat8isAnchorEv()};
     let mut ret = unsafe {C_ZNK15QTextCharFormat8isAnchorEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -2459,7 +2463,7 @@ impl<'a> /*trait*/ QTextCharFormat_fontOverline<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextCharFormat12fontOverlineEv()};
     let mut ret = unsafe {C_ZNK15QTextCharFormat12fontOverlineEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -2530,7 +2534,7 @@ impl<'a> /*trait*/ QTextCharFormat_fontStrikeOut<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextCharFormat13fontStrikeOutEv()};
     let mut ret = unsafe {C_ZNK15QTextCharFormat13fontStrikeOutEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -2599,7 +2603,7 @@ impl<'a> /*trait*/ QTextCharFormat_tableCellRowSpan<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextCharFormat16tableCellRowSpanEv()};
     let mut ret = unsafe {C_ZNK15QTextCharFormat16tableCellRowSpanEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -2645,7 +2649,7 @@ impl<'a> /*trait*/ QTextCharFormat_isValid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextCharFormat7isValidEv()};
     let mut ret = unsafe {C_ZNK15QTextCharFormat7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -2668,7 +2672,7 @@ impl<'a> /*trait*/ QTextCharFormat_fontItalic<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextCharFormat10fontItalicEv()};
     let mut ret = unsafe {C_ZNK15QTextCharFormat10fontItalicEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -2783,7 +2787,7 @@ impl<'a> /*trait*/ QTextCharFormat_fontPointSize<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextCharFormat13fontPointSizeEv()};
     let mut ret = unsafe {C_ZNK15QTextCharFormat13fontPointSizeEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -2829,7 +2833,7 @@ impl<'a> /*trait*/ QTextCharFormat_fontWordSpacing<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextCharFormat15fontWordSpacingEv()};
     let mut ret = unsafe {C_ZNK15QTextCharFormat15fontWordSpacingEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -2894,11 +2898,13 @@ pub trait QTextCharFormat_anchorNames<RetType> {
 }
 
   // proto:  QStringList QTextCharFormat::anchorNames();
-impl<'a> /*trait*/ QTextCharFormat_anchorNames<()> for () {
-  fn anchorNames(self , rsthis: & QTextCharFormat) -> () {
+impl<'a> /*trait*/ QTextCharFormat_anchorNames<QStringList> for () {
+  fn anchorNames(self , rsthis: & QTextCharFormat) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextCharFormat11anchorNamesEv()};
-     unsafe {C_ZNK15QTextCharFormat11anchorNamesEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QTextCharFormat11anchorNamesEv(rsthis.qclsinst)};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -2990,7 +2996,7 @@ impl<'a> /*trait*/ QTextCharFormat_fontFixedPitch<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextCharFormat14fontFixedPitchEv()};
     let mut ret = unsafe {C_ZNK15QTextCharFormat14fontFixedPitchEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -3036,7 +3042,7 @@ impl<'a> /*trait*/ QTextCharFormat_fontStretch<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextCharFormat11fontStretchEv()};
     let mut ret = unsafe {C_ZNK15QTextCharFormat11fontStretchEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -3082,7 +3088,7 @@ impl<'a> /*trait*/ QTextCharFormat_tableCellColumnSpan<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextCharFormat19tableCellColumnSpanEv()};
     let mut ret = unsafe {C_ZNK15QTextCharFormat19tableCellColumnSpanEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -3132,7 +3138,7 @@ impl<'a> /*trait*/ QTextCharFormat_fontLetterSpacing<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextCharFormat17fontLetterSpacingEv()};
     let mut ret = unsafe {C_ZNK15QTextCharFormat17fontLetterSpacingEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -3249,7 +3255,7 @@ impl<'a> /*trait*/ QTextCharFormat_fontKerning<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextCharFormat11fontKerningEv()};
     let mut ret = unsafe {C_ZNK15QTextCharFormat11fontKerningEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -3295,7 +3301,7 @@ impl<'a> /*trait*/ QTextCharFormat_fontUnderline<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextCharFormat13fontUnderlineEv()};
     let mut ret = unsafe {C_ZNK15QTextCharFormat13fontUnderlineEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -3365,7 +3371,7 @@ impl<'a> /*trait*/ QTextCharFormat_fontWeight<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextCharFormat10fontWeightEv()};
     let mut ret = unsafe {C_ZNK15QTextCharFormat10fontWeightEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -3502,7 +3508,7 @@ impl<'a> /*trait*/ QTextTableFormat_isValid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextTableFormat7isValidEv()};
     let mut ret = unsafe {C_ZNK16QTextTableFormat7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -3525,7 +3531,7 @@ impl<'a> /*trait*/ QTextTableFormat_headerRowCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextTableFormat14headerRowCountEv()};
     let mut ret = unsafe {C_ZNK16QTextTableFormat14headerRowCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -3548,7 +3554,7 @@ impl<'a> /*trait*/ QTextTableFormat_columns<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextTableFormat7columnsEv()};
     let mut ret = unsafe {C_ZNK16QTextTableFormat7columnsEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -3566,11 +3572,12 @@ pub trait QTextTableFormat_columnWidthConstraints<RetType> {
 }
 
   // proto:  QVector<QTextLength> QTextTableFormat::columnWidthConstraints();
-impl<'a> /*trait*/ QTextTableFormat_columnWidthConstraints<()> for () {
-  fn columnWidthConstraints(self , rsthis: & QTextTableFormat) -> () {
+impl<'a> /*trait*/ QTextTableFormat_columnWidthConstraints<u64> for () {
+  fn columnWidthConstraints(self , rsthis: & QTextTableFormat) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextTableFormat22columnWidthConstraintsEv()};
-     unsafe {C_ZNK16QTextTableFormat22columnWidthConstraintsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QTextTableFormat22columnWidthConstraintsEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -3616,7 +3623,7 @@ impl<'a> /*trait*/ QTextTableFormat_cellPadding<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextTableFormat11cellPaddingEv()};
     let mut ret = unsafe {C_ZNK16QTextTableFormat11cellPaddingEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -3730,7 +3737,7 @@ impl<'a> /*trait*/ QTextTableFormat_cellSpacing<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextTableFormat11cellSpacingEv()};
     let mut ret = unsafe {C_ZNK16QTextTableFormat11cellSpacingEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -3820,7 +3827,7 @@ impl<'a> /*trait*/ QTextTableCellFormat_isValid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QTextTableCellFormat7isValidEv()};
     let mut ret = unsafe {C_ZNK20QTextTableCellFormat7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -3866,7 +3873,7 @@ impl<'a> /*trait*/ QTextTableCellFormat_leftPadding<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QTextTableCellFormat11leftPaddingEv()};
     let mut ret = unsafe {C_ZNK20QTextTableCellFormat11leftPaddingEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -3912,7 +3919,7 @@ impl<'a> /*trait*/ QTextTableCellFormat_topPadding<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QTextTableCellFormat10topPaddingEv()};
     let mut ret = unsafe {C_ZNK20QTextTableCellFormat10topPaddingEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -3935,7 +3942,7 @@ impl<'a> /*trait*/ QTextTableCellFormat_rightPadding<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QTextTableCellFormat12rightPaddingEv()};
     let mut ret = unsafe {C_ZNK20QTextTableCellFormat12rightPaddingEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -3958,7 +3965,7 @@ impl<'a> /*trait*/ QTextTableCellFormat_bottomPadding<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QTextTableCellFormat13bottomPaddingEv()};
     let mut ret = unsafe {C_ZNK20QTextTableCellFormat13bottomPaddingEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -4044,7 +4051,7 @@ impl<'a> /*trait*/ QTextListFormat_indent<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextListFormat6indentEv()};
     let mut ret = unsafe {C_ZNK15QTextListFormat6indentEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -4165,7 +4172,7 @@ impl<'a> /*trait*/ QTextListFormat_isValid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextListFormat7isValidEv()};
     let mut ret = unsafe {C_ZNK15QTextListFormat7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -4251,7 +4258,7 @@ impl<'a> /*trait*/ QTextFrameFormat_isValid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextFrameFormat7isValidEv()};
     let mut ret = unsafe {C_ZNK16QTextFrameFormat7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -4320,7 +4327,7 @@ impl<'a> /*trait*/ QTextFrameFormat_margin<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextFrameFormat6marginEv()};
     let mut ret = unsafe {C_ZNK16QTextFrameFormat6marginEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -4470,7 +4477,7 @@ impl<'a> /*trait*/ QTextFrameFormat_bottomMargin<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextFrameFormat12bottomMarginEv()};
     let mut ret = unsafe {C_ZNK16QTextFrameFormat12bottomMarginEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -4551,7 +4558,7 @@ impl<'a> /*trait*/ QTextFrameFormat_rightMargin<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextFrameFormat11rightMarginEv()};
     let mut ret = unsafe {C_ZNK16QTextFrameFormat11rightMarginEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -4620,7 +4627,7 @@ impl<'a> /*trait*/ QTextFrameFormat_topMargin<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextFrameFormat9topMarginEv()};
     let mut ret = unsafe {C_ZNK16QTextFrameFormat9topMarginEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -4667,7 +4674,7 @@ impl<'a> /*trait*/ QTextFrameFormat_padding<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextFrameFormat7paddingEv()};
     let mut ret = unsafe {C_ZNK16QTextFrameFormat7paddingEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -4713,7 +4720,7 @@ impl<'a> /*trait*/ QTextFrameFormat_border<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextFrameFormat6borderEv()};
     let mut ret = unsafe {C_ZNK16QTextFrameFormat6borderEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -4763,7 +4770,7 @@ impl<'a> /*trait*/ QTextFrameFormat_leftMargin<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextFrameFormat10leftMarginEv()};
     let mut ret = unsafe {C_ZNK16QTextFrameFormat10leftMarginEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }

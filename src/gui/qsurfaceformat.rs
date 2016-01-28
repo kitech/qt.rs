@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qsurfaceformat.h
 // dst-file: /src/gui/qsurfaceformat.rs
 //
@@ -19,6 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
+// use super::qpair::*; // 775
 // <= use block end
 
 // ext block begin =>
@@ -64,7 +65,7 @@ extern {
   // proto:  void QSurfaceFormat::QSurfaceFormat(const QSurfaceFormat & other);
   fn C_ZN14QSurfaceFormatC2ERKS_(arg0: *mut c_void) -> u64;
   // proto:  QPair<int, int> QSurfaceFormat::version();
-  fn C_ZNK14QSurfaceFormat7versionEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK14QSurfaceFormat7versionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QSurfaceFormat::blueBufferSize();
   fn C_ZNK14QSurfaceFormat14blueBufferSizeEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QSurfaceFormat::QSurfaceFormat();
@@ -192,7 +193,7 @@ impl<'a> /*trait*/ QSurfaceFormat_stencilBufferSize<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QSurfaceFormat17stencilBufferSizeEv()};
     let mut ret = unsafe {C_ZNK14QSurfaceFormat17stencilBufferSizeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -261,7 +262,7 @@ impl<'a> /*trait*/ QSurfaceFormat_majorVersion<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QSurfaceFormat12majorVersionEv()};
     let mut ret = unsafe {C_ZNK14QSurfaceFormat12majorVersionEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -353,7 +354,7 @@ impl<'a> /*trait*/ QSurfaceFormat_greenBufferSize<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QSurfaceFormat15greenBufferSizeEv()};
     let mut ret = unsafe {C_ZNK14QSurfaceFormat15greenBufferSizeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -376,7 +377,7 @@ impl<'a> /*trait*/ QSurfaceFormat_minorVersion<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QSurfaceFormat12minorVersionEv()};
     let mut ret = unsafe {C_ZNK14QSurfaceFormat12minorVersionEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -422,7 +423,7 @@ impl<'a> /*trait*/ QSurfaceFormat_swapInterval<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QSurfaceFormat12swapIntervalEv()};
     let mut ret = unsafe {C_ZNK14QSurfaceFormat12swapIntervalEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -469,7 +470,7 @@ impl<'a> /*trait*/ QSurfaceFormat_hasAlpha<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QSurfaceFormat8hasAlphaEv()};
     let mut ret = unsafe {C_ZNK14QSurfaceFormat8hasAlphaEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -515,11 +516,12 @@ pub trait QSurfaceFormat_version<RetType> {
 }
 
   // proto:  QPair<int, int> QSurfaceFormat::version();
-impl<'a> /*trait*/ QSurfaceFormat_version<()> for () {
-  fn version(self , rsthis: & QSurfaceFormat) -> () {
+impl<'a> /*trait*/ QSurfaceFormat_version<u64> for () {
+  fn version(self , rsthis: & QSurfaceFormat) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QSurfaceFormat7versionEv()};
-     unsafe {C_ZNK14QSurfaceFormat7versionEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QSurfaceFormat7versionEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -542,7 +544,7 @@ impl<'a> /*trait*/ QSurfaceFormat_blueBufferSize<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QSurfaceFormat14blueBufferSizeEv()};
     let mut ret = unsafe {C_ZNK14QSurfaceFormat14blueBufferSizeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -579,7 +581,7 @@ impl<'a> /*trait*/ QSurfaceFormat_redBufferSize<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QSurfaceFormat13redBufferSizeEv()};
     let mut ret = unsafe {C_ZNK14QSurfaceFormat13redBufferSizeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -647,7 +649,7 @@ impl<'a> /*trait*/ QSurfaceFormat_samples<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QSurfaceFormat7samplesEv()};
     let mut ret = unsafe {C_ZNK14QSurfaceFormat7samplesEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -670,7 +672,7 @@ impl<'a> /*trait*/ QSurfaceFormat_depthBufferSize<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QSurfaceFormat15depthBufferSizeEv()};
     let mut ret = unsafe {C_ZNK14QSurfaceFormat15depthBufferSizeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -716,7 +718,7 @@ impl<'a> /*trait*/ QSurfaceFormat_alphaBufferSize<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QSurfaceFormat15alphaBufferSizeEv()};
     let mut ret = unsafe {C_ZNK14QSurfaceFormat15alphaBufferSizeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -739,7 +741,7 @@ impl<'a> /*trait*/ QSurfaceFormat_stereo<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QSurfaceFormat6stereoEv()};
     let mut ret = unsafe {C_ZNK14QSurfaceFormat6stereoEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qmovie.h
 // dst-file: /src/gui/qmovie.rs
 //
@@ -18,17 +18,18 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qobject::QObject; // 771
+use super::super::core::qobject::*; // 771
 use std::ops::Deref;
-use super::super::core::qsize::QSize; // 771
-use super::super::core::qiodevice::QIODevice; // 771
-use super::qimage::QImage; // 773
-use super::super::core::qstring::QString; // 771
-use super::super::core::qbytearray::QByteArray; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::core::qrect::QRect; // 771
-use super::qcolor::QColor; // 773
-use super::qpixmap::QPixmap; // 773
+use super::super::core::qsize::*; // 771
+use super::super::core::qiodevice::*; // 771
+use super::qimage::*; // 773
+use super::super::core::qstring::*; // 771
+use super::super::core::qbytearray::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+// use super::qlist::*; // 775
+use super::super::core::qrect::*; // 771
+use super::qcolor::*; // 773
+use super::qpixmap::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -70,7 +71,7 @@ extern {
   // proto:  void QMovie::setFormat(const QByteArray & format);
   fn C_ZN6QMovie9setFormatERK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static QList<QByteArray> QMovie::supportedFormats();
-  fn C_ZN6QMovie16supportedFormatsEv();
+  fn C_ZN6QMovie16supportedFormatsEv() -> *mut c_void;
   // proto:  QRect QMovie::frameRect();
   fn C_ZNK6QMovie9frameRectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QMovie::setPaused(bool paused);
@@ -186,7 +187,7 @@ impl<'a> /*trait*/ QMovie_speed<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QMovie5speedEv()};
     let mut ret = unsafe {C_ZNK6QMovie5speedEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -209,7 +210,7 @@ impl<'a> /*trait*/ QMovie_jumpToNextFrame<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMovie15jumpToNextFrameEv()};
     let mut ret = unsafe {C_ZN6QMovie15jumpToNextFrameEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -232,7 +233,7 @@ impl<'a> /*trait*/ QMovie_frameCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QMovie10frameCountEv()};
     let mut ret = unsafe {C_ZNK6QMovie10frameCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -326,7 +327,7 @@ impl<'a> /*trait*/ QMovie_jumpToFrame<i8> for (i32) {
     // unsafe{_ZN6QMovie11jumpToFrameEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZN6QMovie11jumpToFrameEi(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -434,7 +435,7 @@ impl<'a> /*trait*/ QMovie_loopCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QMovie9loopCountEv()};
     let mut ret = unsafe {C_ZNK6QMovie9loopCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -492,11 +493,12 @@ pub trait QMovie_supportedFormats_s<RetType> {
 }
 
   // proto: static QList<QByteArray> QMovie::supportedFormats();
-impl<'a> /*trait*/ QMovie_supportedFormats_s<()> for () {
-  fn supportedFormats_s(self ) -> () {
+impl<'a> /*trait*/ QMovie_supportedFormats_s<u64> for () {
+  fn supportedFormats_s(self ) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMovie16supportedFormatsEv()};
-     unsafe {C_ZN6QMovie16supportedFormatsEv()};
+    let mut ret = unsafe {C_ZN6QMovie16supportedFormatsEv()};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -637,7 +639,7 @@ impl<'a> /*trait*/ QMovie_isValid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QMovie7isValidEv()};
     let mut ret = unsafe {C_ZNK6QMovie7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -705,7 +707,7 @@ impl<'a> /*trait*/ QMovie_currentFrameNumber<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QMovie18currentFrameNumberEv()};
     let mut ret = unsafe {C_ZNK6QMovie18currentFrameNumberEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -728,7 +730,7 @@ impl<'a> /*trait*/ QMovie_nextFrameDelay<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QMovie14nextFrameDelayEv()};
     let mut ret = unsafe {C_ZNK6QMovie14nextFrameDelayEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

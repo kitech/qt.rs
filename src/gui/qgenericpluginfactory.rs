@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qgenericpluginfactory.h
 // dst-file: /src/gui/qgenericpluginfactory.rs
 //
@@ -19,8 +19,9 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
-use super::super::core::qobject::QObject; // 771
+use super::super::core::qstring::*; // 771
+use super::super::core::qobject::*; // 771
+use super::super::core::qstringlist::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -34,7 +35,7 @@ extern {
   // proto: static QObject * QGenericPluginFactory::create(const QString & , const QString & );
   fn C_ZN21QGenericPluginFactory6createERK7QStringS2_(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto: static QStringList QGenericPluginFactory::keys();
-  fn C_ZN21QGenericPluginFactory4keysEv();
+  fn C_ZN21QGenericPluginFactory4keysEv() -> *mut c_void;
 } // <= ext block end
 
 // body block begin =>
@@ -89,11 +90,13 @@ pub trait QGenericPluginFactory_keys_s<RetType> {
 }
 
   // proto: static QStringList QGenericPluginFactory::keys();
-impl<'a> /*trait*/ QGenericPluginFactory_keys_s<()> for () {
-  fn keys_s(self ) -> () {
+impl<'a> /*trait*/ QGenericPluginFactory_keys_s<QStringList> for () {
+  fn keys_s(self ) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QGenericPluginFactory4keysEv()};
-     unsafe {C_ZN21QGenericPluginFactory4keysEv()};
+    let mut ret = unsafe {C_ZN21QGenericPluginFactory4keysEv()};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }

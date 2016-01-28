@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qmatrix.h
 // dst-file: /src/gui/qmatrix.rs
 //
@@ -19,16 +19,12 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::super::core::qpoint::QPointF; // 771
-use super::qpolygon::QPolygonF; // 773
-use super::qregion::QRegion; // 773
-use super::super::core::qline::QLineF; // 771
-use super::qpainterpath::QPainterPath; // 773
-use super::super::core::qrect::QRect; // 771
-use super::qpolygon::QPolygon; // 773
-use super::super::core::qpoint::QPoint; // 771
-use super::super::core::qline::QLine; // 771
-use super::super::core::qrect::QRectF; // 771
+use super::super::core::qpoint::*; // 771
+use super::qpolygon::*; // 773
+use super::qregion::*; // 773
+use super::super::core::qline::*; // 771
+use super::qpainterpath::*; // 773
+use super::super::core::qrect::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -136,7 +132,7 @@ impl<'a> /*trait*/ QMatrix_dx<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK7QMatrix2dxEv()};
     let mut ret = unsafe {C_ZNK7QMatrix2dxEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -159,7 +155,7 @@ impl<'a> /*trait*/ QMatrix_dy<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK7QMatrix2dyEv()};
     let mut ret = unsafe {C_ZNK7QMatrix2dyEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -234,7 +230,7 @@ impl<'a> /*trait*/ QMatrix_determinant<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK7QMatrix11determinantEv()};
     let mut ret = unsafe {C_ZNK7QMatrix11determinantEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -310,7 +306,7 @@ impl<'a> /*trait*/ QMatrix_m21<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK7QMatrix3m21Ev()};
     let mut ret = unsafe {C_ZNK7QMatrix3m21Ev(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -514,7 +510,7 @@ impl<'a> /*trait*/ QMatrix_m11<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK7QMatrix3m11Ev()};
     let mut ret = unsafe {C_ZNK7QMatrix3m11Ev(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -652,7 +648,7 @@ impl<'a> /*trait*/ QMatrix_isIdentity<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK7QMatrix10isIdentityEv()};
     let mut ret = unsafe {C_ZNK7QMatrix10isIdentityEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -675,7 +671,7 @@ impl<'a> /*trait*/ QMatrix_m12<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK7QMatrix3m12Ev()};
     let mut ret = unsafe {C_ZNK7QMatrix3m12Ev(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -698,7 +694,7 @@ impl<'a> /*trait*/ QMatrix_isInvertible<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK7QMatrix12isInvertibleEv()};
     let mut ret = unsafe {C_ZNK7QMatrix12isInvertibleEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -754,7 +750,7 @@ impl<'a> /*trait*/ QMatrix_m22<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK7QMatrix3m22Ev()};
     let mut ret = unsafe {C_ZNK7QMatrix3m22Ev(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }

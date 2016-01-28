@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qpolygon.h
 // dst-file: /src/gui/qpolygon.rs
 //
@@ -19,11 +19,9 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::super::core::qrect::QRect; // 771
-use super::super::core::qpoint::QPoint; // 771
-use super::super::core::qrect::QRectF; // 771
+use super::super::core::qrect::*; // 771
+use super::super::core::qpoint::*; // 771
 // use super::qpolygon::QPolygon; // 773
-use super::super::core::qpoint::QPointF; // 771
 // <= use block end
 
 // ext block begin =>
@@ -938,7 +936,7 @@ impl<'a> /*trait*/ QPolygonF_isClosed<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QPolygonF8isClosedEv()};
     let mut ret = unsafe {C_ZNK9QPolygonF8isClosedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

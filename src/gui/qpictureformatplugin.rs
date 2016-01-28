@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qpictureformatplugin.h
 // dst-file: /src/gui/qpictureformatplugin.rs
 //
@@ -18,11 +18,11 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qobject::QObject; // 771
+use super::super::core::qobject::*; // 771
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
-use super::qpicture::QPicture; // 773
-use super::super::core::qobjectdefs::QMetaObject; // 771
+use super::super::core::qstring::*; // 771
+use super::qpicture::*; // 773
+use super::super::core::qobjectdefs::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -93,7 +93,7 @@ impl<'a> /*trait*/ QPictureFormatPlugin_loadPicture<i8> for (&'a QString, &'a QS
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN20QPictureFormatPlugin11loadPictureERK7QStringS2_P8QPicture(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -119,7 +119,7 @@ impl<'a> /*trait*/ QPictureFormatPlugin_savePicture<i8> for (&'a QString, &'a QS
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN20QPictureFormatPlugin11savePictureERK7QStringS2_RK8QPicture(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -193,7 +193,7 @@ impl<'a> /*trait*/ QPictureFormatPlugin_installIOHandler<i8> for (&'a QString) {
     // unsafe{_ZN20QPictureFormatPlugin16installIOHandlerERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN20QPictureFormatPlugin16installIOHandlerERK7QString(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

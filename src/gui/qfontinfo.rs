@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qfontinfo.h
 // dst-file: /src/gui/qfontinfo.rs
 //
@@ -19,8 +19,8 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
-use super::qfont::QFont; // 773
+use super::super::core::qstring::*; // 771
+use super::qfont::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -100,7 +100,7 @@ impl<'a> /*trait*/ QFontInfo_rawMode<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo7rawModeEv()};
     let mut ret = unsafe {C_ZNK9QFontInfo7rawModeEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -123,7 +123,7 @@ impl<'a> /*trait*/ QFontInfo_exactMatch<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo10exactMatchEv()};
     let mut ret = unsafe {C_ZNK9QFontInfo10exactMatchEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -146,7 +146,7 @@ impl<'a> /*trait*/ QFontInfo_pointSize<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo9pointSizeEv()};
     let mut ret = unsafe {C_ZNK9QFontInfo9pointSizeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -221,7 +221,7 @@ impl<'a> /*trait*/ QFontInfo_bold<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo4boldEv()};
     let mut ret = unsafe {C_ZNK9QFontInfo4boldEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -244,7 +244,7 @@ impl<'a> /*trait*/ QFontInfo_pointSizeF<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo10pointSizeFEv()};
     let mut ret = unsafe {C_ZNK9QFontInfo10pointSizeFEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -267,7 +267,7 @@ impl<'a> /*trait*/ QFontInfo_fixedPitch<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo10fixedPitchEv()};
     let mut ret = unsafe {C_ZNK9QFontInfo10fixedPitchEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -290,7 +290,7 @@ impl<'a> /*trait*/ QFontInfo_overline<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo8overlineEv()};
     let mut ret = unsafe {C_ZNK9QFontInfo8overlineEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -351,7 +351,7 @@ impl<'a> /*trait*/ QFontInfo_pixelSize<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo9pixelSizeEv()};
     let mut ret = unsafe {C_ZNK9QFontInfo9pixelSizeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -374,7 +374,7 @@ impl<'a> /*trait*/ QFontInfo_strikeOut<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo9strikeOutEv()};
     let mut ret = unsafe {C_ZNK9QFontInfo9strikeOutEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -419,7 +419,7 @@ impl<'a> /*trait*/ QFontInfo_italic<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo6italicEv()};
     let mut ret = unsafe {C_ZNK9QFontInfo6italicEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -442,7 +442,7 @@ impl<'a> /*trait*/ QFontInfo_underline<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo9underlineEv()};
     let mut ret = unsafe {C_ZNK9QFontInfo9underlineEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -489,7 +489,7 @@ impl<'a> /*trait*/ QFontInfo_weight<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo6weightEv()};
     let mut ret = unsafe {C_ZNK9QFontInfo6weightEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

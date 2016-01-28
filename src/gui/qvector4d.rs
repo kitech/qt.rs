@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qvector4d.h
 // dst-file: /src/gui/qvector4d.rs
 //
@@ -19,10 +19,9 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qvector2d::QVector2D; // 773
-use super::super::core::qpoint::QPointF; // 771
-use super::qvector3d::QVector3D; // 773
-use super::super::core::qpoint::QPoint; // 771
+use super::qvector2d::*; // 773
+use super::super::core::qpoint::*; // 771
+use super::qvector3d::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -42,7 +41,7 @@ extern {
   // proto:  QPointF QVector4D::toPointF();
   fn C_ZNK9QVector4D8toPointFEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  float QVector4D::y();
-  fn C_ZNK9QVector4D1yEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK9QVector4D1yEv(qthis: u64 /* *mut c_void*/) -> c_float;
   // proto:  QVector2D QVector4D::toVector2D();
   fn C_ZNK9QVector4D10toVector2DEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QVector4D::setZ(float z);
@@ -70,7 +69,7 @@ extern {
   // proto:  QVector3D QVector4D::toVector3D();
   fn C_ZNK9QVector4D10toVector3DEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  float QVector4D::x();
-  fn C_ZNK9QVector4D1xEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK9QVector4D1xEv(qthis: u64 /* *mut c_void*/) -> c_float;
   // proto:  QVector2D QVector4D::toVector2DAffine();
   fn C_ZNK9QVector4D16toVector2DAffineEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  float QVector4D::length();
@@ -218,11 +217,12 @@ pub trait QVector4D_y<RetType> {
 }
 
   // proto:  float QVector4D::y();
-impl<'a> /*trait*/ QVector4D_y<()> for () {
-  fn y(self , rsthis: & QVector4D) -> () {
+impl<'a> /*trait*/ QVector4D_y<f32> for () {
+  fn y(self , rsthis: & QVector4D) -> f32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector4D1yEv()};
-     unsafe {C_ZNK9QVector4D1yEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QVector4D1yEv(rsthis.qclsinst)};
+    return ret as f32; // 1
     // return 1;
   }
 }
@@ -378,7 +378,7 @@ impl<'a> /*trait*/ QVector4D_z<f32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector4D1zEv()};
     let mut ret = unsafe {C_ZNK9QVector4D1zEv(rsthis.qclsinst)};
-    return ret as f32;
+    return ret as f32; // 1
     // return 1;
   }
 }
@@ -495,11 +495,12 @@ pub trait QVector4D_x<RetType> {
 }
 
   // proto:  float QVector4D::x();
-impl<'a> /*trait*/ QVector4D_x<()> for () {
-  fn x(self , rsthis: & QVector4D) -> () {
+impl<'a> /*trait*/ QVector4D_x<f32> for () {
+  fn x(self , rsthis: & QVector4D) -> f32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector4D1xEv()};
-     unsafe {C_ZNK9QVector4D1xEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QVector4D1xEv(rsthis.qclsinst)};
+    return ret as f32; // 1
     // return 1;
   }
 }
@@ -546,7 +547,7 @@ impl<'a> /*trait*/ QVector4D_length<f32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector4D6lengthEv()};
     let mut ret = unsafe {C_ZNK9QVector4D6lengthEv(rsthis.qclsinst)};
-    return ret as f32;
+    return ret as f32; // 1
     // return 1;
   }
 }
@@ -586,7 +587,7 @@ impl<'a> /*trait*/ QVector4D_dotProduct_s<f32> for (&'a QVector4D, &'a QVector4D
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN9QVector4D10dotProductERKS_S1_(arg0, arg1)};
-    return ret as f32;
+    return ret as f32; // 1
     // return 1;
   }
 }
@@ -609,7 +610,7 @@ impl<'a> /*trait*/ QVector4D_isNull<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector4D6isNullEv()};
     let mut ret = unsafe {C_ZNK9QVector4D6isNullEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -632,7 +633,7 @@ impl<'a> /*trait*/ QVector4D_lengthSquared<f32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector4D13lengthSquaredEv()};
     let mut ret = unsafe {C_ZNK9QVector4D13lengthSquaredEv(rsthis.qclsinst)};
-    return ret as f32;
+    return ret as f32; // 1
     // return 1;
   }
 }
@@ -703,7 +704,7 @@ impl<'a> /*trait*/ QVector4D_w<f32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector4D1wEv()};
     let mut ret = unsafe {C_ZNK9QVector4D1wEv(rsthis.qclsinst)};
-    return ret as f32;
+    return ret as f32; // 1
     // return 1;
   }
 }

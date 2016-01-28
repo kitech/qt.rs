@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qclipboard.h
 // dst-file: /src/gui/qclipboard.rs
 //
@@ -18,13 +18,13 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qobject::QObject; // 771
+use super::super::core::qobject::*; // 771
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
-use super::qpixmap::QPixmap; // 773
-use super::super::core::qmimedata::QMimeData; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::qimage::QImage; // 773
+use super::super::core::qstring::*; // 771
+use super::qpixmap::*; // 773
+use super::super::core::qmimedata::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::qimage::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -99,7 +99,7 @@ impl<'a> /*trait*/ QClipboard_supportsFindBuffer<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QClipboard18supportsFindBufferEv()};
     let mut ret = unsafe {C_ZNK10QClipboard18supportsFindBufferEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -122,7 +122,7 @@ impl<'a> /*trait*/ QClipboard_ownsFindBuffer<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QClipboard14ownsFindBufferEv()};
     let mut ret = unsafe {C_ZNK10QClipboard14ownsFindBufferEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -145,7 +145,7 @@ impl<'a> /*trait*/ QClipboard_ownsClipboard<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QClipboard13ownsClipboardEv()};
     let mut ret = unsafe {C_ZNK10QClipboard13ownsClipboardEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -192,7 +192,7 @@ impl<'a> /*trait*/ QClipboard_supportsSelection<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QClipboard17supportsSelectionEv()};
     let mut ret = unsafe {C_ZNK10QClipboard17supportsSelectionEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -215,7 +215,7 @@ impl<'a> /*trait*/ QClipboard_ownsSelection<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QClipboard13ownsSelectionEv()};
     let mut ret = unsafe {C_ZNK10QClipboard13ownsSelectionEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

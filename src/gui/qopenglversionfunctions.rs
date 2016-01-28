@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qopenglversionfunctions.h
 // dst-file: /src/gui/qopenglversionfunctions.rs
 //
@@ -19,7 +19,8 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qopenglcontext::QOpenGLContext; // 773
+use super::qopenglcontext::*; // 773
+// use super::qopenglversionfunctions::QAbstractOpenGLFunctionsPrivate; // 773
 // <= use block end
 
 // ext block begin =>
@@ -36,7 +37,7 @@ extern {
   // proto:  bool QAbstractOpenGLFunctions::initializeOpenGLFunctions();
   fn C_ZN24QAbstractOpenGLFunctions25initializeOpenGLFunctionsEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QAbstractOpenGLFunctionsPrivate * QAbstractOpenGLFunctions::d_func();
-  fn C_ZN24QAbstractOpenGLFunctions6d_funcEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN24QAbstractOpenGLFunctions6d_funcEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAbstractOpenGLFunctions::~QAbstractOpenGLFunctions();
   fn C_ZN24QAbstractOpenGLFunctionsD2Ev(qthis: u64 /* *mut c_void*/);
   fn QOpenGLVersionStatus_Class_Size() -> c_int;
@@ -122,7 +123,7 @@ impl<'a> /*trait*/ QAbstractOpenGLFunctions_initializeOpenGLFunctions<i8> for ()
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QAbstractOpenGLFunctions25initializeOpenGLFunctionsEv()};
     let mut ret = unsafe {C_ZN24QAbstractOpenGLFunctions25initializeOpenGLFunctionsEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -140,11 +141,12 @@ pub trait QAbstractOpenGLFunctions_d_func<RetType> {
 }
 
   // proto:  QAbstractOpenGLFunctionsPrivate * QAbstractOpenGLFunctions::d_func();
-impl<'a> /*trait*/ QAbstractOpenGLFunctions_d_func<()> for () {
-  fn d_func(self , rsthis: & QAbstractOpenGLFunctions) -> () {
+impl<'a> /*trait*/ QAbstractOpenGLFunctions_d_func<u64> for () {
+  fn d_func(self , rsthis: & QAbstractOpenGLFunctions) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QAbstractOpenGLFunctions6d_funcEv()};
-     unsafe {C_ZN24QAbstractOpenGLFunctions6d_funcEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZN24QAbstractOpenGLFunctions6d_funcEv(rsthis.qclsinst)};
+    return ret as u64; // 2
     // return 1;
   }
 }

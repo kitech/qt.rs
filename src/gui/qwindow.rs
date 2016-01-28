@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qwindow.h
 // dst-file: /src/gui/qwindow.rs
 //
@@ -18,20 +18,21 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qobject::QObject; // 771
+use super::super::core::qobject::*; // 771
 use std::ops::Deref;
-use super::qscreen::QScreen; // 773
-use super::super::core::qsize::QSize; // 771
-use super::qsurfaceformat::QSurfaceFormat; // 773
-use super::qicon::QIcon; // 773
-use super::super::core::qstring::QString; // 771
-use super::super::core::qpoint::QPoint; // 771
-use super::super::core::qmargins::QMargins; // 771
-use super::super::core::qrect::QRect; // 771
-use super::qcursor::QCursor; // 773
-use super::qregion::QRegion; // 773
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::qaccessible::QAccessibleInterface; // 773
+use super::qscreen::*; // 773
+use super::super::core::qsize::*; // 771
+use super::qsurfaceformat::*; // 773
+use super::qicon::*; // 773
+use super::super::core::qstring::*; // 771
+use super::super::core::qpoint::*; // 771
+use super::super::core::qmargins::*; // 771
+use super::super::core::qrect::*; // 771
+use super::qcursor::*; // 773
+use super::qregion::*; // 773
+use super::super::core::qobjectdefs::*; // 771
+// use super::qplatformwindow::*; // 775
+use super::qaccessible::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -101,7 +102,7 @@ extern {
   // proto:  QPoint QWindow::mapFromGlobal(const QPoint & pos);
   fn C_ZNK7QWindow13mapFromGlobalERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  int QWindow::y();
-  fn C_ZNK7QWindow1yEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK7QWindow1yEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QWindow::width();
   fn C_ZNK7QWindow5widthEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QWindow::setFilePath(const QString & filePath);
@@ -123,7 +124,7 @@ extern {
   // proto:  bool QWindow::close();
   fn C_ZN7QWindow5closeEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  int QWindow::x();
-  fn C_ZNK7QWindow1xEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK7QWindow1xEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QWindow::setMinimumWidth(int w);
   fn C_ZN7QWindow15setMinimumWidthEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  QRegion QWindow::mask();
@@ -153,7 +154,7 @@ extern {
   // proto:  void QWindow::alert(int msec);
   fn C_ZN7QWindow5alertEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  QPlatformWindow * QWindow::handle();
-  fn C_ZNK7QWindow6handleEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK7QWindow6handleEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QWindow::destroy();
   fn C_ZN7QWindow7destroyEv(qthis: u64 /* *mut c_void*/);
   // proto:  QWindow * QWindow::transientParent();
@@ -325,7 +326,7 @@ impl<'a> /*trait*/ QWindow_isVisible<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWindow9isVisibleEv()};
     let mut ret = unsafe {C_ZNK7QWindow9isVisibleEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -442,7 +443,7 @@ impl<'a> /*trait*/ QWindow_isTopLevel<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWindow10isTopLevelEv()};
     let mut ret = unsafe {C_ZNK7QWindow10isTopLevelEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -488,7 +489,7 @@ impl<'a> /*trait*/ QWindow_opacity<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWindow7opacityEv()};
     let mut ret = unsafe {C_ZNK7QWindow7opacityEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -534,7 +535,7 @@ impl<'a> /*trait*/ QWindow_minimumHeight<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWindow13minimumHeightEv()};
     let mut ret = unsafe {C_ZNK7QWindow13minimumHeightEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -770,7 +771,7 @@ impl<'a> /*trait*/ QWindow_maximumHeight<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWindow13maximumHeightEv()};
     let mut ret = unsafe {C_ZNK7QWindow13maximumHeightEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -793,7 +794,7 @@ impl<'a> /*trait*/ QWindow_isModal<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWindow7isModalEv()};
     let mut ret = unsafe {C_ZNK7QWindow7isModalEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -976,11 +977,12 @@ pub trait QWindow_y<RetType> {
 }
 
   // proto:  int QWindow::y();
-impl<'a> /*trait*/ QWindow_y<()> for () {
-  fn y(self , rsthis: & QWindow) -> () {
+impl<'a> /*trait*/ QWindow_y<i32> for () {
+  fn y(self , rsthis: & QWindow) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWindow1yEv()};
-     unsafe {C_ZNK7QWindow1yEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QWindow1yEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1003,7 +1005,7 @@ impl<'a> /*trait*/ QWindow_width<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWindow5widthEv()};
     let mut ret = unsafe {C_ZNK7QWindow5widthEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1118,7 +1120,7 @@ impl<'a> /*trait*/ QWindow_setMouseGrabEnabled<i8> for (i8) {
     // unsafe{_ZN7QWindow19setMouseGrabEnabledEb()};
     let arg0 = self  as c_char;
     let mut ret = unsafe {C_ZN7QWindow19setMouseGrabEnabledEb(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1141,7 +1143,7 @@ impl<'a> /*trait*/ QWindow_isExposed<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWindow9isExposedEv()};
     let mut ret = unsafe {C_ZNK7QWindow9isExposedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1164,7 +1166,7 @@ impl<'a> /*trait*/ QWindow_minimumWidth<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWindow12minimumWidthEv()};
     let mut ret = unsafe {C_ZNK7QWindow12minimumWidthEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1210,7 +1212,7 @@ impl<'a> /*trait*/ QWindow_close<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWindow5closeEv()};
     let mut ret = unsafe {C_ZN7QWindow5closeEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1228,11 +1230,12 @@ pub trait QWindow_x<RetType> {
 }
 
   // proto:  int QWindow::x();
-impl<'a> /*trait*/ QWindow_x<()> for () {
-  fn x(self , rsthis: & QWindow) -> () {
+impl<'a> /*trait*/ QWindow_x<i32> for () {
+  fn x(self , rsthis: & QWindow) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWindow1xEv()};
-     unsafe {C_ZNK7QWindow1xEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QWindow1xEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1404,7 +1407,7 @@ impl<'a> /*trait*/ QWindow_setKeyboardGrabEnabled<i8> for (i8) {
     // unsafe{_ZN7QWindow22setKeyboardGrabEnabledEb()};
     let arg0 = self  as c_char;
     let mut ret = unsafe {C_ZN7QWindow22setKeyboardGrabEnabledEb(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1512,7 +1515,7 @@ impl<'a> /*trait*/ QWindow_devicePixelRatio<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWindow16devicePixelRatioEv()};
     let mut ret = unsafe {C_ZNK7QWindow16devicePixelRatioEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1576,11 +1579,12 @@ pub trait QWindow_handle<RetType> {
 }
 
   // proto:  QPlatformWindow * QWindow::handle();
-impl<'a> /*trait*/ QWindow_handle<()> for () {
-  fn handle(self , rsthis: & QWindow) -> () {
+impl<'a> /*trait*/ QWindow_handle<u64> for () {
+  fn handle(self , rsthis: & QWindow) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWindow6handleEv()};
-     unsafe {C_ZNK7QWindow6handleEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QWindow6handleEv(rsthis.qclsinst)};
+    return ret as u64; // 4
     // return 1;
   }
 }
@@ -1937,7 +1941,7 @@ impl<'a> /*trait*/ QWindow_isActive<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWindow8isActiveEv()};
     let mut ret = unsafe {C_ZNK7QWindow8isActiveEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -2188,7 +2192,7 @@ impl<'a> /*trait*/ QWindow_height<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWindow6heightEv()};
     let mut ret = unsafe {C_ZNK7QWindow6heightEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -2235,7 +2239,7 @@ impl<'a> /*trait*/ QWindow_maximumWidth<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWindow12maximumWidthEv()};
     let mut ret = unsafe {C_ZNK7QWindow12maximumWidthEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qopenglpaintdevice.h
 // dst-file: /src/gui/qopenglpaintdevice.rs
 //
@@ -18,11 +18,11 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qpaintdevice::QPaintDevice; // 773
+use super::qpaintdevice::*; // 773
 use std::ops::Deref;
-use super::qpaintengine::QPaintEngine; // 773
-use super::super::core::qsize::QSize; // 771
-use super::qopenglcontext::QOpenGLContext; // 773
+use super::qpaintengine::*; // 773
+use super::super::core::qsize::*; // 771
+use super::qopenglcontext::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -295,7 +295,7 @@ impl<'a> /*trait*/ QOpenGLPaintDevice_devType<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QOpenGLPaintDevice7devTypeEv()};
     let mut ret = unsafe {C_ZNK18QOpenGLPaintDevice7devTypeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -318,7 +318,7 @@ impl<'a> /*trait*/ QOpenGLPaintDevice_dotsPerMeterX<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QOpenGLPaintDevice13dotsPerMeterXEv()};
     let mut ret = unsafe {C_ZNK18QOpenGLPaintDevice13dotsPerMeterXEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -364,7 +364,7 @@ impl<'a> /*trait*/ QOpenGLPaintDevice_dotsPerMeterY<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QOpenGLPaintDevice13dotsPerMeterYEv()};
     let mut ret = unsafe {C_ZNK18QOpenGLPaintDevice13dotsPerMeterYEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -410,7 +410,7 @@ impl<'a> /*trait*/ QOpenGLPaintDevice_paintFlipped<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QOpenGLPaintDevice12paintFlippedEv()};
     let mut ret = unsafe {C_ZNK18QOpenGLPaintDevice12paintFlippedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

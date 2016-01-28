@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qimage.h
 // dst-file: /src/gui/qimage.rs
 //
@@ -18,19 +18,21 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qpaintdevice::QPaintDevice; // 773
+use super::qpaintdevice::*; // 773
 use std::ops::Deref;
-use super::super::core::qrect::QRect; // 771
-use super::qtransform::QTransform; // 773
-use super::super::core::qsize::QSize; // 771
-use super::super::core::qstring::QString; // 771
-use super::super::core::qbytearray::QByteArray; // 771
-use super::super::core::qpoint::QPoint; // 771
-use super::qmatrix::QMatrix; // 773
-use super::super::core::qiodevice::QIODevice; // 771
-use super::qpixelformat::QPixelFormat; // 773
-use super::qcolor::QColor; // 773
-use super::qpaintengine::QPaintEngine; // 773
+use super::super::core::qrect::*; // 771
+use super::qtransform::*; // 773
+use super::super::core::qsize::*; // 771
+use super::super::core::qstring::*; // 771
+use super::super::core::qbytearray::*; // 771
+use super::super::core::qpoint::*; // 771
+use super::qmatrix::*; // 773
+use super::super::core::qiodevice::*; // 771
+use super::super::core::qstringlist::*; // 771
+use super::qpixelformat::*; // 773
+use super::qcolor::*; // 773
+use super::qpaintengine::*; // 773
+// use super::qvector::*; // 775
 // <= use block end
 
 // ext block begin =>
@@ -108,7 +110,7 @@ extern {
   // proto:  const uchar * QImage::constScanLine(int );
   fn C_ZNK6QImage13constScanLineEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_uchar;
   // proto:  QStringList QImage::textKeys();
-  fn C_ZNK6QImage8textKeysEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK6QImage8textKeysEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QImage::dotsPerMeterY();
   fn C_ZNK6QImage13dotsPerMeterYEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QImage::fill(uint pixel);
@@ -150,7 +152,7 @@ extern {
   // proto:  bool QImage::load(const QString & fileName, const char * format);
   fn C_ZN6QImage4loadERK7QStringPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_char) -> c_char;
   // proto:  QVector<QRgb> QImage::colorTable();
-  fn C_ZNK6QImage10colorTableEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK6QImage10colorTableEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QSize QImage::size();
   fn C_ZNK6QImage4sizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QImage::height();
@@ -520,7 +522,7 @@ impl<'a> /*trait*/ QImage_isDetached<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QImage10isDetachedEv()};
     let mut ret = unsafe {C_ZNK6QImage10isDetachedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -581,7 +583,7 @@ impl<'a> /*trait*/ QImage_isGrayscale<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QImage11isGrayscaleEv()};
     let mut ret = unsafe {C_ZNK6QImage11isGrayscaleEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -607,7 +609,7 @@ impl<'a> /*trait*/ QImage_save<i8> for (&'a QIODevice, &'a  String, i32) {
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let arg2 = self.2  as c_int;
     let mut ret = unsafe {C_ZNK6QImage4saveEP9QIODevicePKci(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -630,7 +632,7 @@ impl<'a> /*trait*/ QImage_depth<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QImage5depthEv()};
     let mut ret = unsafe {C_ZNK6QImage5depthEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -677,7 +679,7 @@ impl<'a> /*trait*/ QImage_hasAlphaChannel<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QImage15hasAlphaChannelEv()};
     let mut ret = unsafe {C_ZNK6QImage15hasAlphaChannelEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -703,7 +705,7 @@ impl<'a> /*trait*/ QImage_loadFromData<i8> for (&'a  String, i32, &'a  String) {
     let arg1 = self.1  as c_int;
     let arg2 = self.2.as_ptr()  as *mut c_char;
     let mut ret = unsafe {C_ZN6QImage12loadFromDataEPKhiPKc(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -750,7 +752,7 @@ impl<'a> /*trait*/ QImage_colorCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QImage10colorCountEv()};
     let mut ret = unsafe {C_ZNK6QImage10colorCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -773,7 +775,7 @@ impl<'a> /*trait*/ QImage_allGray<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QImage7allGrayEv()};
     let mut ret = unsafe {C_ZNK6QImage7allGrayEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -820,7 +822,7 @@ impl<'a> /*trait*/ QImage_pixel<u32> for (&'a QPoint) {
     // unsafe{_ZNK6QImage5pixelERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK6QImage5pixelERK6QPoint(rsthis.qclsinst, arg0)};
-    return ret as u32;
+    return ret as u32; // 1
     // return 1;
   }
 }
@@ -907,7 +909,7 @@ impl<'a> /*trait*/ QImage_color<u32> for (i32) {
     // unsafe{_ZNK6QImage5colorEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK6QImage5colorEi(rsthis.qclsinst, arg0)};
-    return ret as u32;
+    return ret as u32; // 1
     // return 1;
   }
 }
@@ -998,11 +1000,13 @@ pub trait QImage_textKeys<RetType> {
 }
 
   // proto:  QStringList QImage::textKeys();
-impl<'a> /*trait*/ QImage_textKeys<()> for () {
-  fn textKeys(self , rsthis: & QImage) -> () {
+impl<'a> /*trait*/ QImage_textKeys<QStringList> for () {
+  fn textKeys(self , rsthis: & QImage) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QImage8textKeysEv()};
-     unsafe {C_ZNK6QImage8textKeysEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK6QImage8textKeysEv(rsthis.qclsinst)};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -1025,7 +1029,7 @@ impl<'a> /*trait*/ QImage_dotsPerMeterY<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QImage13dotsPerMeterYEv()};
     let mut ret = unsafe {C_ZNK6QImage13dotsPerMeterYEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1095,7 +1099,7 @@ impl<'a> /*trait*/ QImage_dotsPerMeterX<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QImage13dotsPerMeterXEv()};
     let mut ret = unsafe {C_ZNK6QImage13dotsPerMeterXEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1141,7 +1145,7 @@ impl<'a> /*trait*/ QImage_bitPlaneCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QImage13bitPlaneCountEv()};
     let mut ret = unsafe {C_ZNK6QImage13bitPlaneCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1187,7 +1191,7 @@ impl<'a> /*trait*/ QImage_loadFromData<i8> for (&'a QByteArray, &'a  String) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let mut ret = unsafe {C_ZN6QImage12loadFromDataERK10QByteArrayPKc(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1288,7 +1292,7 @@ impl<'a> /*trait*/ QImage_devicePixelRatio<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QImage16devicePixelRatioEv()};
     let mut ret = unsafe {C_ZNK6QImage16devicePixelRatioEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1311,7 +1315,7 @@ impl<'a> /*trait*/ QImage_devType<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QImage7devTypeEv()};
     let mut ret = unsafe {C_ZNK6QImage7devTypeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1335,7 +1339,7 @@ impl<'a> /*trait*/ QImage_valid<i8> for (&'a QPoint) {
     // unsafe{_ZNK6QImage5validERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK6QImage5validERK6QPoint(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1359,7 +1363,7 @@ impl<'a> /*trait*/ QImage_pixelIndex<i32> for (&'a QPoint) {
     // unsafe{_ZNK6QImage10pixelIndexERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK6QImage10pixelIndexERK6QPoint(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1420,7 +1424,7 @@ impl<'a> /*trait*/ QImage_load<i8> for (&'a QString, &'a  String) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let mut ret = unsafe {C_ZN6QImage4loadERK7QStringPKc(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1438,11 +1442,12 @@ pub trait QImage_colorTable<RetType> {
 }
 
   // proto:  QVector<QRgb> QImage::colorTable();
-impl<'a> /*trait*/ QImage_colorTable<()> for () {
-  fn colorTable(self , rsthis: & QImage) -> () {
+impl<'a> /*trait*/ QImage_colorTable<u64> for () {
+  fn colorTable(self , rsthis: & QImage) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QImage10colorTableEv()};
-     unsafe {C_ZNK6QImage10colorTableEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK6QImage10colorTableEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -1489,7 +1494,7 @@ impl<'a> /*trait*/ QImage_height<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QImage6heightEv()};
     let mut ret = unsafe {C_ZNK6QImage6heightEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1502,7 +1507,7 @@ impl<'a> /*trait*/ QImage_pixelIndex<i32> for (i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZNK6QImage10pixelIndexEii(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1525,7 +1530,7 @@ impl<'a> /*trait*/ QImage_width<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QImage5widthEv()};
     let mut ret = unsafe {C_ZNK6QImage5widthEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1538,7 +1543,7 @@ impl<'a> /*trait*/ QImage_load<i8> for (&'a QIODevice, &'a  String) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let mut ret = unsafe {C_ZN6QImage4loadEP9QIODevicePKc(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1600,7 +1605,7 @@ impl<'a> /*trait*/ QImage_bytesPerLine<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QImage12bytesPerLineEv()};
     let mut ret = unsafe {C_ZNK6QImage12bytesPerLineEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1623,7 +1628,7 @@ impl<'a> /*trait*/ QImage_cacheKey<i64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QImage8cacheKeyEv()};
     let mut ret = unsafe {C_ZNK6QImage8cacheKeyEv(rsthis.qclsinst)};
-    return ret as i64;
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -1636,7 +1641,7 @@ impl<'a> /*trait*/ QImage_pixel<u32> for (i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZNK6QImage5pixelEii(rsthis.qclsinst, arg0, arg1)};
-    return ret as u32;
+    return ret as u32; // 1
     // return 1;
   }
 }
@@ -1672,7 +1677,7 @@ impl<'a> /*trait*/ QImage_save<i8> for (&'a QString, &'a  String, i32) {
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let arg2 = self.2  as c_int;
     let mut ret = unsafe {C_ZNK6QImage4saveERK7QStringPKci(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1719,7 +1724,7 @@ impl<'a> /*trait*/ QImage_isNull<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QImage6isNullEv()};
     let mut ret = unsafe {C_ZNK6QImage6isNullEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1742,7 +1747,7 @@ impl<'a> /*trait*/ QImage_byteCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QImage9byteCountEv()};
     let mut ret = unsafe {C_ZNK6QImage9byteCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1755,7 +1760,7 @@ impl<'a> /*trait*/ QImage_valid<i8> for (i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZNK6QImage5validEii(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

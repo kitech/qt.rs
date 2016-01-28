@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qtextdocument.h
 // dst-file: /src/gui/qtextdocument.rs
 //
@@ -18,29 +18,29 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qobject::QObject; // 771
+use super::super::core::qobject::*; // 771
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
-use super::qabstracttextdocumentlayout::QAbstractTextDocumentLayout; // 773
-use super::super::core::qsize::QSizeF; // 771
-use super::qtextcursor::QTextCursor; // 773
-use super::qpagedpaintdevice::QPagedPaintDevice; // 773
-use super::super::core::qbytearray::QByteArray; // 771
-use super::super::core::qurl::QUrl; // 771
-use super::super::core::qvariant::QVariant; // 771
-use super::qtextobject::QTextObject; // 773
-use super::qtextobject::QTextFrame; // 773
-use super::qtextobject::QTextBlock; // 773
-use super::super::core::qregexp::QRegExp; // 771
-use super::super::core::qregularexpression::QRegularExpression; // 771
-use super::qtextoption::QTextOption; // 773
-use super::qfont::QFont; // 773
+use super::super::core::qstring::*; // 771
+use super::qabstracttextdocumentlayout::*; // 773
+use super::super::core::qsize::*; // 771
+use super::qtextcursor::*; // 773
+use super::qpagedpaintdevice::*; // 773
+// use super::qtextdocumentprivate::*; // 775
+use super::super::core::qbytearray::*; // 771
+use super::super::core::qurl::*; // 771
+use super::super::core::qvariant::*; // 771
+use super::qtextobject::*; // 773
+// use super::qvector::*; // 775
+use super::super::core::qregexp::*; // 771
+use super::super::core::qregularexpression::*; // 771
+use super::qtextoption::*; // 773
+use super::qfont::*; // 773
 // use super::qtextdocument::QAbstractUndoItem; // 773
-use super::qpainter::QPainter; // 773
-use super::super::core::qrect::QRectF; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::core::qchar::QChar; // 771
-use super::qtextformat::QTextFormat; // 773
+use super::qpainter::*; // 773
+use super::super::core::qrect::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::super::core::qchar::*; // 771
+use super::qtextformat::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -68,7 +68,7 @@ extern {
   // proto:  void QTextDocument::print(QPagedPaintDevice * printer);
   fn C_ZNK13QTextDocument5printEP17QPagedPaintDevice(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QTextDocumentPrivate * QTextDocument::docHandle();
-  fn C_ZNK13QTextDocument9docHandleEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK13QTextDocument9docHandleEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QTextDocument::toHtml(const QByteArray & encoding);
   fn C_ZNK13QTextDocument6toHtmlERK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  int QTextDocument::availableUndoSteps();
@@ -106,7 +106,7 @@ extern {
   // proto:  bool QTextDocument::isRedoAvailable();
   fn C_ZNK13QTextDocument15isRedoAvailableEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QVector<QTextFormat> QTextDocument::allFormats();
-  fn C_ZNK13QTextDocument10allFormatsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK13QTextDocument10allFormatsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QTextDocument::defaultStyleSheet();
   fn C_ZNK13QTextDocument17defaultStyleSheetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QTextBlock QTextDocument::lastBlock();
@@ -323,7 +323,7 @@ impl<'a> /*trait*/ QTextDocument_isModified<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument10isModifiedEv()};
     let mut ret = unsafe {C_ZNK13QTextDocument10isModifiedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -346,7 +346,7 @@ impl<'a> /*trait*/ QTextDocument_revision<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument8revisionEv()};
     let mut ret = unsafe {C_ZNK13QTextDocument8revisionEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -416,7 +416,7 @@ impl<'a> /*trait*/ QTextDocument_lineCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument9lineCountEv()};
     let mut ret = unsafe {C_ZNK13QTextDocument9lineCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -457,11 +457,12 @@ pub trait QTextDocument_docHandle<RetType> {
 }
 
   // proto:  QTextDocumentPrivate * QTextDocument::docHandle();
-impl<'a> /*trait*/ QTextDocument_docHandle<()> for () {
-  fn docHandle(self , rsthis: & QTextDocument) -> () {
+impl<'a> /*trait*/ QTextDocument_docHandle<u64> for () {
+  fn docHandle(self , rsthis: & QTextDocument) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument9docHandleEv()};
-     unsafe {C_ZNK13QTextDocument9docHandleEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QTextDocument9docHandleEv(rsthis.qclsinst)};
+    return ret as u64; // 4
     // return 1;
   }
 }
@@ -509,7 +510,7 @@ impl<'a> /*trait*/ QTextDocument_availableUndoSteps<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument18availableUndoStepsEv()};
     let mut ret = unsafe {C_ZNK13QTextDocument18availableUndoStepsEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -753,7 +754,7 @@ impl<'a> /*trait*/ QTextDocument_characterCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument14characterCountEv()};
     let mut ret = unsafe {C_ZNK13QTextDocument14characterCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -824,7 +825,7 @@ impl<'a> /*trait*/ QTextDocument_blockCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument10blockCountEv()};
     let mut ret = unsafe {C_ZNK13QTextDocument10blockCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -847,7 +848,7 @@ impl<'a> /*trait*/ QTextDocument_idealWidth<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument10idealWidthEv()};
     let mut ret = unsafe {C_ZNK13QTextDocument10idealWidthEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -892,7 +893,7 @@ impl<'a> /*trait*/ QTextDocument_isRedoAvailable<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument15isRedoAvailableEv()};
     let mut ret = unsafe {C_ZNK13QTextDocument15isRedoAvailableEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -910,11 +911,12 @@ pub trait QTextDocument_allFormats<RetType> {
 }
 
   // proto:  QVector<QTextFormat> QTextDocument::allFormats();
-impl<'a> /*trait*/ QTextDocument_allFormats<()> for () {
-  fn allFormats(self , rsthis: & QTextDocument) -> () {
+impl<'a> /*trait*/ QTextDocument_allFormats<u64> for () {
+  fn allFormats(self , rsthis: & QTextDocument) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument10allFormatsEv()};
-     unsafe {C_ZNK13QTextDocument10allFormatsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QTextDocument10allFormatsEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -1001,7 +1003,7 @@ impl<'a> /*trait*/ QTextDocument_useDesignMetrics<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument16useDesignMetricsEv()};
     let mut ret = unsafe {C_ZNK13QTextDocument16useDesignMetricsEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1024,7 +1026,7 @@ impl<'a> /*trait*/ QTextDocument_pageCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument9pageCountEv()};
     let mut ret = unsafe {C_ZNK13QTextDocument9pageCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1093,7 +1095,7 @@ impl<'a> /*trait*/ QTextDocument_isUndoAvailable<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument15isUndoAvailableEv()};
     let mut ret = unsafe {C_ZNK13QTextDocument15isUndoAvailableEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1116,7 +1118,7 @@ impl<'a> /*trait*/ QTextDocument_indentWidth<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument11indentWidthEv()};
     let mut ret = unsafe {C_ZNK13QTextDocument11indentWidthEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1493,7 +1495,7 @@ impl<'a> /*trait*/ QTextDocument_textWidth<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument9textWidthEv()};
     let mut ret = unsafe {C_ZNK13QTextDocument9textWidthEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1540,7 +1542,7 @@ impl<'a> /*trait*/ QTextDocument_availableRedoSteps<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument18availableRedoStepsEv()};
     let mut ret = unsafe {C_ZNK13QTextDocument18availableRedoStepsEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1636,7 +1638,7 @@ impl<'a> /*trait*/ QTextDocument_isEmpty<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument7isEmptyEv()};
     let mut ret = unsafe {C_ZNK13QTextDocument7isEmptyEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1659,7 +1661,7 @@ impl<'a> /*trait*/ QTextDocument_isUndoRedoEnabled<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument17isUndoRedoEnabledEv()};
     let mut ret = unsafe {C_ZNK13QTextDocument17isUndoRedoEnabledEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1704,7 +1706,7 @@ impl<'a> /*trait*/ QTextDocument_documentMargin<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument14documentMarginEv()};
     let mut ret = unsafe {C_ZNK13QTextDocument14documentMarginEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1797,7 +1799,7 @@ impl<'a> /*trait*/ QTextDocument_maximumBlockCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument17maximumBlockCountEv()};
     let mut ret = unsafe {C_ZNK13QTextDocument17maximumBlockCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

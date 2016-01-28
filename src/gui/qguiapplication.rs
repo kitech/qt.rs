@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qguiapplication.h
 // dst-file: /src/gui/qguiapplication.rs
 //
@@ -18,24 +18,27 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qcoreapplication::QCoreApplication; // 771
+use super::super::core::qcoreapplication::*; // 771
 use std::ops::Deref;
-use super::qfont::QFont; // 773
-use super::super::core::qstring::QString; // 771
-use super::qpalette::QPalette; // 773
-use super::qinputmethod::QInputMethod; // 773
-use super::qscreen::QScreen; // 773
-use super::qcursor::QCursor; // 773
-use super::qicon::QIcon; // 773
-use super::qstylehints::QStyleHints; // 773
-use super::qclipboard::QClipboard; // 773
-use super::super::core::qobject::QObject; // 771
-use super::super::core::qcoreevent::QEvent; // 771
-use super::super::core::qpoint::QPoint; // 771
-use super::qwindow::QWindow; // 773
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::core::qbytearray::QByteArray; // 771
-use super::qsessionmanager::QSessionManager; // 773
+use super::qfont::*; // 773
+use super::super::core::qstring::*; // 771
+// use super::qlist::*; // 775
+use super::qpalette::*; // 773
+use super::qinputmethod::*; // 773
+use super::qscreen::*; // 773
+use super::qcursor::*; // 773
+use super::qicon::*; // 773
+use super::qstylehints::*; // 773
+use super::qclipboard::*; // 773
+use super::super::core::qobject::*; // 771
+use super::super::core::qcoreevent::*; // 771
+use super::super::core::qpoint::*; // 771
+use super::qwindow::*; // 773
+// use super::qplatformnativeinterface::*; // 775
+use super::super::core::qobjectdefs::*; // 771
+use super::super::core::qbytearray::*; // 771
+// use super::qfunctionpointer::*; // 775
+use super::qsessionmanager::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -53,7 +56,7 @@ extern {
   // proto: static QString QGuiApplication::platformName();
   fn C_ZN15QGuiApplication12platformNameEv() -> *mut c_void;
   // proto: static QList<QScreen *> QGuiApplication::screens();
-  fn C_ZN15QGuiApplication7screensEv();
+  fn C_ZN15QGuiApplication7screensEv() -> *mut c_void;
   // proto: static void QGuiApplication::setPalette(const QPalette & pal);
   fn C_ZN15QGuiApplication10setPaletteERK8QPalette(arg0: *mut c_void);
   // proto: static QInputMethod * QGuiApplication::inputMethod();
@@ -87,13 +90,13 @@ extern {
   // proto:  bool QGuiApplication::notify(QObject * , QEvent * );
   fn C_ZN15QGuiApplication6notifyEP7QObjectP6QEvent(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> c_char;
   // proto: static QWindowList QGuiApplication::topLevelWindows();
-  fn C_ZN15QGuiApplication15topLevelWindowsEv();
+  fn C_ZN15QGuiApplication15topLevelWindowsEv() -> *mut c_void;
   // proto: static bool QGuiApplication::isRightToLeft();
   fn C_ZN15QGuiApplication13isRightToLeftEv() -> c_char;
   // proto: static void QGuiApplication::changeOverrideCursor(const QCursor & );
   fn C_ZN15QGuiApplication20changeOverrideCursorERK7QCursor(arg0: *mut c_void);
   // proto: static QWindowList QGuiApplication::allWindows();
-  fn C_ZN15QGuiApplication10allWindowsEv();
+  fn C_ZN15QGuiApplication10allWindowsEv() -> *mut c_void;
   // proto: static void QGuiApplication::setOverrideCursor(const QCursor & );
   fn C_ZN15QGuiApplication17setOverrideCursorERK7QCursor(arg0: *mut c_void);
   // proto: static void QGuiApplication::setWindowIcon(const QIcon & icon);
@@ -121,7 +124,7 @@ extern {
   // proto: static void QGuiApplication::restoreOverrideCursor();
   fn C_ZN15QGuiApplication21restoreOverrideCursorEv();
   // proto: static QPlatformNativeInterface * QGuiApplication::platformNativeInterface();
-  fn C_ZN15QGuiApplication23platformNativeInterfaceEv();
+  fn C_ZN15QGuiApplication23platformNativeInterfaceEv() -> *mut c_void;
   // proto:  const QMetaObject * QGuiApplication::metaObject();
   fn C_ZNK15QGuiApplication10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto: static QObject * QGuiApplication::focusObject();
@@ -131,7 +134,7 @@ extern {
   // proto:  qreal QGuiApplication::devicePixelRatio();
   fn C_ZNK15QGuiApplication16devicePixelRatioEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto: static QFunctionPointer QGuiApplication::platformFunction(const QByteArray & function);
-  fn C_ZN15QGuiApplication16platformFunctionERK10QByteArray(arg0: *mut c_void);
+  fn C_ZN15QGuiApplication16platformFunctionERK10QByteArray(arg0: *mut c_void) -> *mut c_void;
   fn QGuiApplication_SlotProxy_connect__ZN15QGuiApplication18focusObjectChangedEP7QObject(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QGuiApplication_SlotProxy_connect__ZN15QGuiApplication19fontDatabaseChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QGuiApplication_SlotProxy_connect__ZN15QGuiApplication17commitDataRequestER15QSessionManager(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
@@ -261,11 +264,12 @@ pub trait QGuiApplication_screens_s<RetType> {
 }
 
   // proto: static QList<QScreen *> QGuiApplication::screens();
-impl<'a> /*trait*/ QGuiApplication_screens_s<()> for () {
-  fn screens_s(self ) -> () {
+impl<'a> /*trait*/ QGuiApplication_screens_s<u64> for () {
+  fn screens_s(self ) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication7screensEv()};
-     unsafe {C_ZN15QGuiApplication7screensEv()};
+    let mut ret = unsafe {C_ZN15QGuiApplication7screensEv()};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -335,7 +339,7 @@ impl<'a> /*trait*/ QGuiApplication_isSavingSession<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGuiApplication15isSavingSessionEv()};
     let mut ret = unsafe {C_ZNK15QGuiApplication15isSavingSessionEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -382,7 +386,7 @@ impl<'a> /*trait*/ QGuiApplication_isSessionRestored<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGuiApplication17isSessionRestoredEv()};
     let mut ret = unsafe {C_ZNK15QGuiApplication17isSessionRestoredEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -429,7 +433,7 @@ impl<'a> /*trait*/ QGuiApplication_desktopSettingsAware_s<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication20desktopSettingsAwareEv()};
     let mut ret = unsafe {C_ZN15QGuiApplication20desktopSettingsAwareEv()};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -643,7 +647,7 @@ impl<'a> /*trait*/ QGuiApplication_notify<i8> for (&'a QObject, &'a QEvent) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN15QGuiApplication6notifyEP7QObjectP6QEvent(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -661,11 +665,12 @@ pub trait QGuiApplication_topLevelWindows_s<RetType> {
 }
 
   // proto: static QWindowList QGuiApplication::topLevelWindows();
-impl<'a> /*trait*/ QGuiApplication_topLevelWindows_s<()> for () {
-  fn topLevelWindows_s(self ) -> () {
+impl<'a> /*trait*/ QGuiApplication_topLevelWindows_s<u64> for () {
+  fn topLevelWindows_s(self ) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication15topLevelWindowsEv()};
-     unsafe {C_ZN15QGuiApplication15topLevelWindowsEv()};
+    let mut ret = unsafe {C_ZN15QGuiApplication15topLevelWindowsEv()};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -688,7 +693,7 @@ impl<'a> /*trait*/ QGuiApplication_isRightToLeft_s<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication13isRightToLeftEv()};
     let mut ret = unsafe {C_ZN15QGuiApplication13isRightToLeftEv()};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -729,11 +734,12 @@ pub trait QGuiApplication_allWindows_s<RetType> {
 }
 
   // proto: static QWindowList QGuiApplication::allWindows();
-impl<'a> /*trait*/ QGuiApplication_allWindows_s<()> for () {
-  fn allWindows_s(self ) -> () {
+impl<'a> /*trait*/ QGuiApplication_allWindows_s<u64> for () {
+  fn allWindows_s(self ) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication10allWindowsEv()};
-     unsafe {C_ZN15QGuiApplication10allWindowsEv()};
+    let mut ret = unsafe {C_ZN15QGuiApplication10allWindowsEv()};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -849,7 +855,7 @@ impl<'a> /*trait*/ QGuiApplication_isLeftToRight_s<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication13isLeftToRightEv()};
     let mut ret = unsafe {C_ZN15QGuiApplication13isLeftToRightEv()};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -998,7 +1004,7 @@ impl<'a> /*trait*/ QGuiApplication_exec_s<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication4execEv()};
     let mut ret = unsafe {C_ZN15QGuiApplication4execEv()};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1021,7 +1027,7 @@ impl<'a> /*trait*/ QGuiApplication_quitOnLastWindowClosed_s<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication22quitOnLastWindowClosedEv()};
     let mut ret = unsafe {C_ZN15QGuiApplication22quitOnLastWindowClosedEv()};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1061,11 +1067,12 @@ pub trait QGuiApplication_platformNativeInterface_s<RetType> {
 }
 
   // proto: static QPlatformNativeInterface * QGuiApplication::platformNativeInterface();
-impl<'a> /*trait*/ QGuiApplication_platformNativeInterface_s<()> for () {
-  fn platformNativeInterface_s(self ) -> () {
+impl<'a> /*trait*/ QGuiApplication_platformNativeInterface_s<u64> for () {
+  fn platformNativeInterface_s(self ) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication23platformNativeInterfaceEv()};
-     unsafe {C_ZN15QGuiApplication23platformNativeInterfaceEv()};
+    let mut ret = unsafe {C_ZN15QGuiApplication23platformNativeInterfaceEv()};
+    return ret as u64; // 4
     // return 1;
   }
 }
@@ -1160,7 +1167,7 @@ impl<'a> /*trait*/ QGuiApplication_devicePixelRatio<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGuiApplication16devicePixelRatioEv()};
     let mut ret = unsafe {C_ZNK15QGuiApplication16devicePixelRatioEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1178,12 +1185,13 @@ pub trait QGuiApplication_platformFunction_s<RetType> {
 }
 
   // proto: static QFunctionPointer QGuiApplication::platformFunction(const QByteArray & function);
-impl<'a> /*trait*/ QGuiApplication_platformFunction_s<()> for (&'a QByteArray) {
-  fn platformFunction_s(self ) -> () {
+impl<'a> /*trait*/ QGuiApplication_platformFunction_s<u64> for (&'a QByteArray) {
+  fn platformFunction_s(self ) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication16platformFunctionERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZN15QGuiApplication16platformFunctionERK10QByteArray(arg0)};
+    let mut ret = unsafe {C_ZN15QGuiApplication16platformFunctionERK10QByteArray(arg0)};
+    return ret as u64; // 3
     // return 1;
   }
 }

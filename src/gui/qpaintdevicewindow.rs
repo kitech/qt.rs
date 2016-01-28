@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qpaintdevicewindow.h
 // dst-file: /src/gui/qpaintdevicewindow.rs
 //
@@ -18,11 +18,11 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qwindow::QWindow; // 773
+use super::qwindow::*; // 773
 use std::ops::Deref;
-use super::qregion::QRegion; // 773
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::core::qrect::QRect; // 771
+use super::qregion::*; // 773
+use super::super::core::qobjectdefs::*; // 771
+use super::super::core::qrect::*; // 771
 // <= use block end
 
 // ext block begin =>

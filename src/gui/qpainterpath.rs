@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qpainterpath.h
 // dst-file: /src/gui/qpainterpath.rs
 //
@@ -19,15 +19,17 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qmatrix::QMatrix; // 773
-use super::qpolygon::QPolygonF; // 773
-use super::qtransform::QTransform; // 773
-use super::super::core::qrect::QRectF; // 771
-use super::super::core::qpoint::QPointF; // 771
-use super::qfont::QFont; // 773
-use super::super::core::qstring::QString; // 771
-use super::qregion::QRegion; // 773
-use super::qpen::QPen; // 773
+use super::qmatrix::*; // 773
+use super::qpolygon::*; // 773
+use super::qtransform::*; // 773
+// use super::qlist::*; // 775
+use super::super::core::qrect::*; // 771
+use super::super::core::qpoint::*; // 771
+use super::qfont::*; // 773
+use super::super::core::qstring::*; // 771
+use super::qregion::*; // 773
+use super::qpen::*; // 773
+// use super::qvector::*; // 775
 // use super::qpainterpath::QPainterPath; // 773
 // <= use block end
 
@@ -48,17 +50,17 @@ extern {
   // proto:  void QPainterPath::~QPainterPath();
   fn C_ZN12QPainterPathD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QList<QPolygonF> QPainterPath::toSubpathPolygons(const QTransform & matrix);
-  fn C_ZNK12QPainterPath17toSubpathPolygonsERK10QTransform(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK12QPainterPath17toSubpathPolygonsERK10QTransform(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QRectF QPainterPath::controlPointRect();
   fn C_ZNK12QPainterPath16controlPointRectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QList<QPolygonF> QPainterPath::toFillPolygons(const QMatrix & matrix);
-  fn C_ZNK12QPainterPath14toFillPolygonsERK7QMatrix(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK12QPainterPath14toFillPolygonsERK7QMatrix(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QPainterPath QPainterPath::translated(const QPointF & offset);
   fn C_ZNK12QPainterPath10translatedERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QPainterPath::quadTo(const QPointF & ctrlPt, const QPointF & endPt);
   fn C_ZN12QPainterPath6quadToERK7QPointFS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  QList<QPolygonF> QPainterPath::toFillPolygons(const QTransform & matrix);
-  fn C_ZNK12QPainterPath14toFillPolygonsERK10QTransform(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK12QPainterPath14toFillPolygonsERK10QTransform(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QPainterPath::arcTo(qreal x, qreal y, qreal w, qreal h, qreal startAngle, qreal arcLength);
   fn C_ZN12QPainterPath5arcToEdddddd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double, arg5: c_double);
   // proto:  void QPainterPath::addRect(const QRectF & rect);
@@ -158,7 +160,7 @@ extern {
   // proto:  void QPainterPath::arcMoveTo(const QRectF & rect, qreal angle);
   fn C_ZN12QPainterPath9arcMoveToERK6QRectFd(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_double);
   // proto:  QList<QPolygonF> QPainterPath::toSubpathPolygons(const QMatrix & matrix);
-  fn C_ZNK12QPainterPath17toSubpathPolygonsERK7QMatrix(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK12QPainterPath17toSubpathPolygonsERK7QMatrix(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QPainterPath QPainterPath::united(const QPainterPath & r);
   fn C_ZNK12QPainterPath6unitedERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QPainterPath::addEllipse(const QRectF & rect);
@@ -183,7 +185,7 @@ extern {
   // proto:  void QPainterPathStroker::setCurveThreshold(qreal threshold);
   fn C_ZN19QPainterPathStroker17setCurveThresholdEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  QVector<qreal> QPainterPathStroker::dashPattern();
-  fn C_ZNK19QPainterPathStroker11dashPatternEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK19QPainterPathStroker11dashPatternEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  qreal QPainterPathStroker::dashOffset();
   fn C_ZNK19QPainterPathStroker10dashOffsetEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QPainterPathStroker::QPainterPathStroker();
@@ -329,12 +331,13 @@ pub trait QPainterPath_toSubpathPolygons<RetType> {
 }
 
   // proto:  QList<QPolygonF> QPainterPath::toSubpathPolygons(const QTransform & matrix);
-impl<'a> /*trait*/ QPainterPath_toSubpathPolygons<()> for (&'a QTransform) {
-  fn toSubpathPolygons(self , rsthis: & QPainterPath) -> () {
+impl<'a> /*trait*/ QPainterPath_toSubpathPolygons<u64> for (&'a QTransform) {
+  fn toSubpathPolygons(self , rsthis: & QPainterPath) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath17toSubpathPolygonsERK10QTransform()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZNK12QPainterPath17toSubpathPolygonsERK10QTransform(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK12QPainterPath17toSubpathPolygonsERK10QTransform(rsthis.qclsinst, arg0)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -376,12 +379,13 @@ pub trait QPainterPath_toFillPolygons<RetType> {
 }
 
   // proto:  QList<QPolygonF> QPainterPath::toFillPolygons(const QMatrix & matrix);
-impl<'a> /*trait*/ QPainterPath_toFillPolygons<()> for (&'a QMatrix) {
-  fn toFillPolygons(self , rsthis: & QPainterPath) -> () {
+impl<'a> /*trait*/ QPainterPath_toFillPolygons<u64> for (&'a QMatrix) {
+  fn toFillPolygons(self , rsthis: & QPainterPath) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath14toFillPolygonsERK7QMatrix()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZNK12QPainterPath14toFillPolygonsERK7QMatrix(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK12QPainterPath14toFillPolygonsERK7QMatrix(rsthis.qclsinst, arg0)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -424,12 +428,13 @@ impl<'a> /*trait*/ QPainterPath_quadTo<()> for (&'a QPointF, &'a QPointF) {
 }
 
   // proto:  QList<QPolygonF> QPainterPath::toFillPolygons(const QTransform & matrix);
-impl<'a> /*trait*/ QPainterPath_toFillPolygons<()> for (&'a QTransform) {
-  fn toFillPolygons(self , rsthis: & QPainterPath) -> () {
+impl<'a> /*trait*/ QPainterPath_toFillPolygons<u64> for (&'a QTransform) {
+  fn toFillPolygons(self , rsthis: & QPainterPath) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath14toFillPolygonsERK10QTransform()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZNK12QPainterPath14toFillPolygonsERK10QTransform(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK12QPainterPath14toFillPolygonsERK10QTransform(rsthis.qclsinst, arg0)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -555,7 +560,7 @@ impl<'a> /*trait*/ QPainterPath_intersects<i8> for (&'a QRectF) {
     // unsafe{_ZNK12QPainterPath10intersectsERK6QRectF()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK12QPainterPath10intersectsERK6QRectF(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -579,7 +584,7 @@ impl<'a> /*trait*/ QPainterPath_contains<i8> for (&'a QPointF) {
     // unsafe{_ZNK12QPainterPath8containsERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK12QPainterPath8containsERK7QPointF(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -702,7 +707,7 @@ impl<'a> /*trait*/ QPainterPath_slopeAtPercent<f64> for (f64) {
     // unsafe{_ZNK12QPainterPath14slopeAtPercentEd()};
     let arg0 = self  as c_double;
     let mut ret = unsafe {C_ZNK12QPainterPath14slopeAtPercentEd(rsthis.qclsinst, arg0)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -728,7 +733,7 @@ impl<'a> /*trait*/ QPainterPath_intersects<i8> for (&'a QPainterPath) {
     // unsafe{_ZNK12QPainterPath10intersectsERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK12QPainterPath10intersectsERKS_(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -927,7 +932,7 @@ impl<'a> /*trait*/ QPainterPath_elementCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath12elementCountEv()};
     let mut ret = unsafe {C_ZNK12QPainterPath12elementCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -963,7 +968,7 @@ impl<'a> /*trait*/ QPainterPath_contains<i8> for (&'a QRectF) {
     // unsafe{_ZNK12QPainterPath8containsERK6QRectF()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK12QPainterPath8containsERK6QRectF(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -986,7 +991,7 @@ impl<'a> /*trait*/ QPainterPath_length<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath6lengthEv()};
     let mut ret = unsafe {C_ZNK12QPainterPath6lengthEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1155,7 +1160,7 @@ impl<'a> /*trait*/ QPainterPath_contains<i8> for (&'a QPainterPath) {
     // unsafe{_ZNK12QPainterPath8containsERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK12QPainterPath8containsERKS_(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1295,7 +1300,7 @@ impl<'a> /*trait*/ QPainterPath_percentAtLength<f64> for (f64) {
     // unsafe{_ZNK12QPainterPath15percentAtLengthEd()};
     let arg0 = self  as c_double;
     let mut ret = unsafe {C_ZNK12QPainterPath15percentAtLengthEd(rsthis.qclsinst, arg0)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1397,7 +1402,7 @@ impl<'a> /*trait*/ QPainterPath_isEmpty<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath7isEmptyEv()};
     let mut ret = unsafe {C_ZNK12QPainterPath7isEmptyEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1429,12 +1434,13 @@ impl<'a> /*trait*/ QPainterPath_arcMoveTo<()> for (&'a QRectF, f64) {
 }
 
   // proto:  QList<QPolygonF> QPainterPath::toSubpathPolygons(const QMatrix & matrix);
-impl<'a> /*trait*/ QPainterPath_toSubpathPolygons<()> for (&'a QMatrix) {
-  fn toSubpathPolygons(self , rsthis: & QPainterPath) -> () {
+impl<'a> /*trait*/ QPainterPath_toSubpathPolygons<u64> for (&'a QMatrix) {
+  fn toSubpathPolygons(self , rsthis: & QPainterPath) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath17toSubpathPolygonsERK7QMatrix()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZNK12QPainterPath17toSubpathPolygonsERK7QMatrix(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK12QPainterPath17toSubpathPolygonsERK7QMatrix(rsthis.qclsinst, arg0)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -1505,7 +1511,7 @@ impl<'a> /*trait*/ QPainterPath_angleAtPercent<f64> for (f64) {
     // unsafe{_ZNK12QPainterPath14angleAtPercentEd()};
     let arg0 = self  as c_double;
     let mut ret = unsafe {C_ZNK12QPainterPath14angleAtPercentEd(rsthis.qclsinst, arg0)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1555,7 +1561,7 @@ impl<'a> /*trait*/ QPainterPathStroker_curveThreshold<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QPainterPathStroker14curveThresholdEv()};
     let mut ret = unsafe {C_ZNK19QPainterPathStroker14curveThresholdEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1692,11 +1698,12 @@ pub trait QPainterPathStroker_dashPattern<RetType> {
 }
 
   // proto:  QVector<qreal> QPainterPathStroker::dashPattern();
-impl<'a> /*trait*/ QPainterPathStroker_dashPattern<()> for () {
-  fn dashPattern(self , rsthis: & QPainterPathStroker) -> () {
+impl<'a> /*trait*/ QPainterPathStroker_dashPattern<u64> for () {
+  fn dashPattern(self , rsthis: & QPainterPathStroker) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QPainterPathStroker11dashPatternEv()};
-     unsafe {C_ZNK19QPainterPathStroker11dashPatternEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK19QPainterPathStroker11dashPatternEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -1719,7 +1726,7 @@ impl<'a> /*trait*/ QPainterPathStroker_dashOffset<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QPainterPathStroker10dashOffsetEv()};
     let mut ret = unsafe {C_ZNK19QPainterPathStroker10dashOffsetEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1804,7 +1811,7 @@ impl<'a> /*trait*/ QPainterPathStroker_width<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QPainterPathStroker5widthEv()};
     let mut ret = unsafe {C_ZNK19QPainterPathStroker5widthEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1827,7 +1834,7 @@ impl<'a> /*trait*/ QPainterPathStroker_miterLimit<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QPainterPathStroker10miterLimitEv()};
     let mut ret = unsafe {C_ZNK19QPainterPathStroker10miterLimitEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }

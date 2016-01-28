@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qpagesize.h
 // dst-file: /src/gui/qpagesize.rs
 //
@@ -19,10 +19,9 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::super::core::qsize::QSizeF; // 771
-use super::super::core::qstring::QString; // 771
-use super::super::core::qsize::QSize; // 771
-use super::super::core::qrect::QRect; // 771
+use super::super::core::qsize::*; // 771
+use super::super::core::qstring::*; // 771
+use super::super::core::qrect::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -238,7 +237,7 @@ impl<'a> /*trait*/ QPageSize_windowsId<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QPageSize9windowsIdEv()};
     let mut ret = unsafe {C_ZNK9QPageSize9windowsIdEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -301,7 +300,7 @@ impl<'a> /*trait*/ QPageSize_isValid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QPageSize7isValidEv()};
     let mut ret = unsafe {C_ZNK9QPageSize7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -374,7 +373,7 @@ impl<'a> /*trait*/ QPageSize_isEquivalentTo<i8> for (&'a QPageSize) {
     // unsafe{_ZNK9QPageSize14isEquivalentToERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK9QPageSize14isEquivalentToERKS_(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

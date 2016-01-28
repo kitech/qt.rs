@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qpaintengine.h
 // dst-file: /src/gui/qpaintengine.rs
 //
@@ -19,24 +19,21 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qfont::QFont; // 773
-use super::super::core::qstring::QString; // 771
-use super::qmatrix::QMatrix; // 773
-use super::qpainter::QPainter; // 773
-use super::qtransform::QTransform; // 773
-use super::super::core::qpoint::QPointF; // 771
-use super::qregion::QRegion; // 773
-use super::qpainterpath::QPainterPath; // 773
-use super::qbrush::QBrush; // 773
-use super::qpen::QPen; // 773
-use super::super::core::qrect::QRect; // 771
-use super::super::core::qpoint::QPoint; // 771
-use super::qpaintdevice::QPaintDevice; // 773
-use super::super::core::qrect::QRectF; // 771
-use super::qimage::QImage; // 773
-use super::qpixmap::QPixmap; // 773
-use super::super::core::qline::QLine; // 771
-use super::super::core::qline::QLineF; // 771
+use super::qfont::*; // 773
+use super::super::core::qstring::*; // 771
+use super::qmatrix::*; // 773
+use super::qpainter::*; // 773
+use super::qtransform::*; // 773
+use super::super::core::qpoint::*; // 771
+use super::qregion::*; // 773
+use super::qpainterpath::*; // 773
+use super::qbrush::*; // 773
+use super::qpen::*; // 773
+use super::super::core::qrect::*; // 771
+use super::qpaintdevice::*; // 773
+use super::qimage::*; // 773
+use super::qpixmap::*; // 773
+use super::super::core::qline::*; // 771
 // use super::qpaintengine::QPaintEngineState; // 773
 // use super::qpaintengine::QTextItem; // 773
 // <= use block end
@@ -194,7 +191,7 @@ impl<'a> /*trait*/ QTextItem_descent<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextItem7descentEv()};
     let mut ret = unsafe {C_ZNK9QTextItem7descentEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -217,7 +214,7 @@ impl<'a> /*trait*/ QTextItem_width<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextItem5widthEv()};
     let mut ret = unsafe {C_ZNK9QTextItem5widthEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -264,7 +261,7 @@ impl<'a> /*trait*/ QTextItem_ascent<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextItem6ascentEv()};
     let mut ret = unsafe {C_ZNK9QTextItem6ascentEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -316,7 +313,7 @@ impl<'a> /*trait*/ QPaintEngineState_opacity<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QPaintEngineState7opacityEv()};
     let mut ret = unsafe {C_ZNK17QPaintEngineState7opacityEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -435,7 +432,7 @@ impl<'a> /*trait*/ QPaintEngineState_penNeedsResolving<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QPaintEngineState17penNeedsResolvingEv()};
     let mut ret = unsafe {C_ZNK17QPaintEngineState17penNeedsResolvingEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -458,7 +455,7 @@ impl<'a> /*trait*/ QPaintEngineState_isClipEnabled<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QPaintEngineState13isClipEnabledEv()};
     let mut ret = unsafe {C_ZNK17QPaintEngineState13isClipEnabledEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -505,7 +502,7 @@ impl<'a> /*trait*/ QPaintEngineState_brushNeedsResolving<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QPaintEngineState19brushNeedsResolvingEv()};
     let mut ret = unsafe {C_ZNK17QPaintEngineState19brushNeedsResolvingEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -676,7 +673,7 @@ impl<'a> /*trait*/ QPaintEngine_isActive<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintEngine8isActiveEv()};
     let mut ret = unsafe {C_ZNK12QPaintEngine8isActiveEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -815,7 +812,7 @@ impl<'a> /*trait*/ QPaintEngine_end<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPaintEngine3endEv()};
     let mut ret = unsafe {C_ZN12QPaintEngine3endEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -994,7 +991,7 @@ impl<'a> /*trait*/ QPaintEngine_begin<i8> for (&'a QPaintDevice) {
     // unsafe{_ZN12QPaintEngine5beginEP12QPaintDevice()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN12QPaintEngine5beginEP12QPaintDevice(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1243,7 +1240,7 @@ impl<'a> /*trait*/ QPaintEngine_isExtended<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintEngine10isExtendedEv()};
     let mut ret = unsafe {C_ZNK12QPaintEngine10isExtendedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

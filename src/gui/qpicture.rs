@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qpicture.h
 // dst-file: /src/gui/qpicture.rs
 //
@@ -19,14 +19,16 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
-use super::super::core::qiodevice::QIODevice; // 771
-use super::super::core::qbytearray::QByteArray; // 771
+use super::super::core::qstring::*; // 771
+// use super::qlist::*; // 775
+use super::super::core::qiodevice::*; // 771
+use super::super::core::qbytearray::*; // 771
 // use super::qpicture::QPicture; // 773
-use super::qpaintdevice::QPaintDevice; // 773
-use super::super::core::qrect::QRect; // 771
-use super::qpainter::QPainter; // 773
-use super::qpaintengine::QPaintEngine; // 773
+use super::qpaintdevice::*; // 773
+use super::super::core::qstringlist::*; // 771
+use super::super::core::qrect::*; // 771
+use super::qpainter::*; // 773
+use super::qpaintengine::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -42,7 +44,7 @@ extern {
   // proto:  QString QPictureIO::description();
   fn C_ZNK10QPictureIO11descriptionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto: static QList<QByteArray> QPictureIO::inputFormats();
-  fn C_ZN10QPictureIO12inputFormatsEv();
+  fn C_ZN10QPictureIO12inputFormatsEv() -> *mut c_void;
   // proto:  void QPictureIO::setGamma(float );
   fn C_ZN10QPictureIO8setGammaEf(qthis: u64 /* *mut c_void*/, arg0: c_float);
   // proto:  int QPictureIO::status();
@@ -86,7 +88,7 @@ extern {
   // proto:  float QPictureIO::gamma();
   fn C_ZNK10QPictureIO5gammaEv(qthis: u64 /* *mut c_void*/) -> c_float;
   // proto: static QList<QByteArray> QPictureIO::outputFormats();
-  fn C_ZN10QPictureIO13outputFormatsEv();
+  fn C_ZN10QPictureIO13outputFormatsEv() -> *mut c_void;
   // proto:  void QPictureIO::setPicture(const QPicture & );
   fn C_ZN10QPictureIO10setPictureERK8QPicture(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QPictureIO::setParameters(const char * );
@@ -97,7 +99,7 @@ extern {
   // proto:  const char * QPicture::data();
   fn C_ZNK8QPicture4dataEv(qthis: u64 /* *mut c_void*/) -> *mut c_char;
   // proto: static QStringList QPicture::inputFormatList();
-  fn C_ZN8QPicture15inputFormatListEv();
+  fn C_ZN8QPicture15inputFormatListEv() -> *mut c_void;
   // proto:  void QPicture::swap(QPicture & other);
   fn C_ZN8QPicture4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  uint QPicture::size();
@@ -109,7 +111,7 @@ extern {
   // proto:  void QPicture::detach();
   fn C_ZN8QPicture6detachEv(qthis: u64 /* *mut c_void*/);
   // proto: static QList<QByteArray> QPicture::inputFormats();
-  fn C_ZN8QPicture12inputFormatsEv();
+  fn C_ZN8QPicture12inputFormatsEv() -> *mut c_void;
   // proto:  void QPicture::QPicture(int formatVersion);
   fn C_ZN8QPictureC2Ei(arg0: c_int) -> u64;
   // proto:  void QPicture::QPicture(const QPicture & );
@@ -117,11 +119,11 @@ extern {
   // proto:  bool QPicture::isDetached();
   fn C_ZNK8QPicture10isDetachedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto: static QStringList QPicture::outputFormatList();
-  fn C_ZN8QPicture16outputFormatListEv();
+  fn C_ZN8QPicture16outputFormatListEv() -> *mut c_void;
   // proto:  void QPicture::setData(const char * data, uint size);
   fn C_ZN8QPicture7setDataEPKcj(qthis: u64 /* *mut c_void*/, arg0: *mut c_char, arg1: c_uint);
   // proto: static QList<QByteArray> QPicture::outputFormats();
-  fn C_ZN8QPicture13outputFormatsEv();
+  fn C_ZN8QPicture13outputFormatsEv() -> *mut c_void;
   // proto:  int QPicture::devType();
   fn C_ZNK8QPicture7devTypeEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto: static const char * QPicture::pictureFormat(const QString & fileName);
@@ -230,11 +232,12 @@ pub trait QPictureIO_inputFormats_s<RetType> {
 }
 
   // proto: static QList<QByteArray> QPictureIO::inputFormats();
-impl<'a> /*trait*/ QPictureIO_inputFormats_s<()> for () {
-  fn inputFormats_s(self ) -> () {
+impl<'a> /*trait*/ QPictureIO_inputFormats_s<u64> for () {
+  fn inputFormats_s(self ) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QPictureIO12inputFormatsEv()};
-     unsafe {C_ZN10QPictureIO12inputFormatsEv()};
+    let mut ret = unsafe {C_ZN10QPictureIO12inputFormatsEv()};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -280,7 +283,7 @@ impl<'a> /*trait*/ QPictureIO_status<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QPictureIO6statusEv()};
     let mut ret = unsafe {C_ZNK10QPictureIO6statusEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -303,7 +306,7 @@ impl<'a> /*trait*/ QPictureIO_quality<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QPictureIO7qualityEv()};
     let mut ret = unsafe {C_ZNK10QPictureIO7qualityEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -326,7 +329,7 @@ impl<'a> /*trait*/ QPictureIO_write<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QPictureIO5writeEv()};
     let mut ret = unsafe {C_ZN10QPictureIO5writeEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -443,7 +446,7 @@ impl<'a> /*trait*/ QPictureIO_read<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QPictureIO4readEv()};
     let mut ret = unsafe {C_ZN10QPictureIO4readEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -706,7 +709,7 @@ impl<'a> /*trait*/ QPictureIO_gamma<f32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QPictureIO5gammaEv()};
     let mut ret = unsafe {C_ZNK10QPictureIO5gammaEv(rsthis.qclsinst)};
-    return ret as f32;
+    return ret as f32; // 1
     // return 1;
   }
 }
@@ -724,11 +727,12 @@ pub trait QPictureIO_outputFormats_s<RetType> {
 }
 
   // proto: static QList<QByteArray> QPictureIO::outputFormats();
-impl<'a> /*trait*/ QPictureIO_outputFormats_s<()> for () {
-  fn outputFormats_s(self ) -> () {
+impl<'a> /*trait*/ QPictureIO_outputFormats_s<u64> for () {
+  fn outputFormats_s(self ) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QPictureIO13outputFormatsEv()};
-     unsafe {C_ZN10QPictureIO13outputFormatsEv()};
+    let mut ret = unsafe {C_ZN10QPictureIO13outputFormatsEv()};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -847,11 +851,13 @@ pub trait QPicture_inputFormatList_s<RetType> {
 }
 
   // proto: static QStringList QPicture::inputFormatList();
-impl<'a> /*trait*/ QPicture_inputFormatList_s<()> for () {
-  fn inputFormatList_s(self ) -> () {
+impl<'a> /*trait*/ QPicture_inputFormatList_s<QStringList> for () {
+  fn inputFormatList_s(self ) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPicture15inputFormatListEv()};
-     unsafe {C_ZN8QPicture15inputFormatListEv()};
+    let mut ret = unsafe {C_ZN8QPicture15inputFormatListEv()};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -897,7 +903,7 @@ impl<'a> /*trait*/ QPicture_size<u32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPicture4sizeEv()};
     let mut ret = unsafe {C_ZNK8QPicture4sizeEv(rsthis.qclsinst)};
-    return ret as u32;
+    return ret as u32; // 1
     // return 1;
   }
 }
@@ -920,7 +926,7 @@ impl<'a> /*trait*/ QPicture_isNull<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPicture6isNullEv()};
     let mut ret = unsafe {C_ZNK8QPicture6isNullEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -945,7 +951,7 @@ impl<'a> /*trait*/ QPicture_save<i8> for (&'a QIODevice, &'a  String) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let mut ret = unsafe {C_ZN8QPicture4saveEP9QIODevicePKc(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -985,11 +991,12 @@ pub trait QPicture_inputFormats_s<RetType> {
 }
 
   // proto: static QList<QByteArray> QPicture::inputFormats();
-impl<'a> /*trait*/ QPicture_inputFormats_s<()> for () {
-  fn inputFormats_s(self ) -> () {
+impl<'a> /*trait*/ QPicture_inputFormats_s<u64> for () {
+  fn inputFormats_s(self ) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPicture12inputFormatsEv()};
-     unsafe {C_ZN8QPicture12inputFormatsEv()};
+    let mut ret = unsafe {C_ZN8QPicture12inputFormatsEv()};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -1055,7 +1062,7 @@ impl<'a> /*trait*/ QPicture_isDetached<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPicture10isDetachedEv()};
     let mut ret = unsafe {C_ZNK8QPicture10isDetachedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1073,11 +1080,13 @@ pub trait QPicture_outputFormatList_s<RetType> {
 }
 
   // proto: static QStringList QPicture::outputFormatList();
-impl<'a> /*trait*/ QPicture_outputFormatList_s<()> for () {
-  fn outputFormatList_s(self ) -> () {
+impl<'a> /*trait*/ QPicture_outputFormatList_s<QStringList> for () {
+  fn outputFormatList_s(self ) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPicture16outputFormatListEv()};
-     unsafe {C_ZN8QPicture16outputFormatListEv()};
+    let mut ret = unsafe {C_ZN8QPicture16outputFormatListEv()};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -1119,11 +1128,12 @@ pub trait QPicture_outputFormats_s<RetType> {
 }
 
   // proto: static QList<QByteArray> QPicture::outputFormats();
-impl<'a> /*trait*/ QPicture_outputFormats_s<()> for () {
-  fn outputFormats_s(self ) -> () {
+impl<'a> /*trait*/ QPicture_outputFormats_s<u64> for () {
+  fn outputFormats_s(self ) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPicture13outputFormatsEv()};
-     unsafe {C_ZN8QPicture13outputFormatsEv()};
+    let mut ret = unsafe {C_ZN8QPicture13outputFormatsEv()};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -1146,7 +1156,7 @@ impl<'a> /*trait*/ QPicture_devType<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPicture7devTypeEv()};
     let mut ret = unsafe {C_ZNK8QPicture7devTypeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1184,7 +1194,7 @@ impl<'a> /*trait*/ QPicture_save<i8> for (&'a QString, &'a  String) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let mut ret = unsafe {C_ZN8QPicture4saveERK7QStringPKc(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1209,7 +1219,7 @@ impl<'a> /*trait*/ QPicture_load<i8> for (&'a QString, &'a  String) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let mut ret = unsafe {C_ZN8QPicture4loadERK7QStringPKc(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1267,7 +1277,7 @@ impl<'a> /*trait*/ QPicture_load<i8> for (&'a QIODevice, &'a  String) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let mut ret = unsafe {C_ZN8QPicture4loadEP9QIODevicePKc(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1315,7 +1325,7 @@ impl<'a> /*trait*/ QPicture_play<i8> for (&'a QPainter) {
     // unsafe{_ZN8QPicture4playEP8QPainter()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN8QPicture4playEP8QPainter(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

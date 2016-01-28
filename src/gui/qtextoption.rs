@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qtextoption.h
 // dst-file: /src/gui/qtextoption.rs
 //
@@ -19,6 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
+// use super::qlist::*; // 775
 // <= use block end
 
 // ext block begin =>
@@ -42,7 +43,7 @@ extern {
   // proto:  void QTextOption::QTextOption();
   fn C_ZN11QTextOptionC2Ev() -> u64;
   // proto:  QList<qreal> QTextOption::tabArray();
-  fn C_ZNK11QTextOption8tabArrayEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK11QTextOption8tabArrayEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QTextOption::~QTextOption();
   fn C_ZN11QTextOptionD2Ev(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
@@ -106,7 +107,7 @@ impl<'a> /*trait*/ QTextOption_tabStop<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextOption7tabStopEv()};
     let mut ret = unsafe {C_ZNK11QTextOption7tabStopEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -175,7 +176,7 @@ impl<'a> /*trait*/ QTextOption_useDesignMetrics<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextOption16useDesignMetricsEv()};
     let mut ret = unsafe {C_ZNK11QTextOption16useDesignMetricsEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -207,11 +208,12 @@ pub trait QTextOption_tabArray<RetType> {
 }
 
   // proto:  QList<qreal> QTextOption::tabArray();
-impl<'a> /*trait*/ QTextOption_tabArray<()> for () {
-  fn tabArray(self , rsthis: & QTextOption) -> () {
+impl<'a> /*trait*/ QTextOption_tabArray<u64> for () {
+  fn tabArray(self , rsthis: & QTextOption) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextOption8tabArrayEv()};
-     unsafe {C_ZNK11QTextOption8tabArrayEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QTextOption8tabArrayEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }

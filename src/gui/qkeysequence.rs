@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qkeysequence.h
 // dst-file: /src/gui/qkeysequence.rs
 //
@@ -19,7 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
+use super::super::core::qstring::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -81,7 +81,7 @@ impl<'a> /*trait*/ QKeySequence_isDetached<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QKeySequence10isDetachedEv()};
     let mut ret = unsafe {C_ZNK12QKeySequence10isDetachedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -104,7 +104,7 @@ impl<'a> /*trait*/ QKeySequence_isEmpty<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QKeySequence7isEmptyEv()};
     let mut ret = unsafe {C_ZNK12QKeySequence7isEmptyEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -173,7 +173,7 @@ impl<'a> /*trait*/ QKeySequence_count<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QKeySequence5countEv()};
     let mut ret = unsafe {C_ZNK12QKeySequence5countEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

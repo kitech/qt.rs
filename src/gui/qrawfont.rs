@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qrawfont.h
 // dst-file: /src/gui/qrawfont.rs
 //
@@ -19,14 +19,15 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
-use super::super::core::qrect::QRectF; // 771
-use super::super::core::qbytearray::QByteArray; // 771
-use super::super::core::qchar::QChar; // 771
-use super::qtransform::QTransform; // 773
-use super::super::core::qpoint::QPointF; // 771
-use super::qpainterpath::QPainterPath; // 773
-use super::qfont::QFont; // 773
+use super::super::core::qstring::*; // 771
+use super::super::core::qrect::*; // 771
+use super::super::core::qbytearray::*; // 771
+use super::super::core::qchar::*; // 771
+use super::qtransform::*; // 773
+use super::super::core::qpoint::*; // 771
+use super::qpainterpath::*; // 773
+use super::qfont::*; // 773
+// use super::qvector::*; // 775
 // <= use block end
 
 // ext block begin =>
@@ -90,7 +91,7 @@ extern {
   // proto:  qreal QRawFont::maxCharWidth();
   fn C_ZNK8QRawFont12maxCharWidthEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  QVector<quint32> QRawFont::glyphIndexesForString(const QString & text);
-  fn C_ZNK8QRawFont21glyphIndexesForStringERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK8QRawFont21glyphIndexesForStringERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
 } // <= ext block end
 
 // body block begin =>
@@ -124,7 +125,7 @@ impl<'a> /*trait*/ QRawFont_averageCharWidth<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QRawFont16averageCharWidthEv()};
     let mut ret = unsafe {C_ZNK8QRawFont16averageCharWidthEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -147,7 +148,7 @@ impl<'a> /*trait*/ QRawFont_ascent<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QRawFont6ascentEv()};
     let mut ret = unsafe {C_ZNK8QRawFont6ascentEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -170,7 +171,7 @@ impl<'a> /*trait*/ QRawFont_leading<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QRawFont7leadingEv()};
     let mut ret = unsafe {C_ZNK8QRawFont7leadingEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -193,7 +194,7 @@ impl<'a> /*trait*/ QRawFont_lineThickness<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QRawFont13lineThicknessEv()};
     let mut ret = unsafe {C_ZNK8QRawFont13lineThicknessEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -216,7 +217,7 @@ impl<'a> /*trait*/ QRawFont_isValid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QRawFont7isValidEv()};
     let mut ret = unsafe {C_ZNK8QRawFont7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -265,7 +266,7 @@ impl<'a> /*trait*/ QRawFont_supportsCharacter<i8> for (u32) {
     // unsafe{_ZNK8QRawFont17supportsCharacterEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {C_ZNK8QRawFont17supportsCharacterEj(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -311,7 +312,7 @@ impl<'a> /*trait*/ QRawFont_descent<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QRawFont7descentEv()};
     let mut ret = unsafe {C_ZNK8QRawFont7descentEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -388,7 +389,7 @@ impl<'a> /*trait*/ QRawFont_glyphIndexesForChars<i8> for (&'a QChar, i32, &'a mu
     let arg2 = self.2.as_ptr()  as *mut c_uint;
     let arg3 = self.3.as_ptr()  as *mut c_int;
     let mut ret = unsafe {C_ZNK8QRawFont20glyphIndexesForCharsEPK5QChariPjPi(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -435,7 +436,7 @@ impl<'a> /*trait*/ QRawFont_underlinePosition<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QRawFont17underlinePositionEv()};
     let mut ret = unsafe {C_ZNK8QRawFont17underlinePositionEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -458,7 +459,7 @@ impl<'a> /*trait*/ QRawFont_unitsPerEm<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QRawFont10unitsPerEmEv()};
     let mut ret = unsafe {C_ZNK8QRawFont10unitsPerEmEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -470,7 +471,7 @@ impl<'a> /*trait*/ QRawFont_supportsCharacter<i8> for (QChar) {
     // unsafe{_ZNK8QRawFont17supportsCharacterE5QChar()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK8QRawFont17supportsCharacterE5QChar(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -520,7 +521,7 @@ impl<'a> /*trait*/ QRawFont_advancesForGlyphIndexes<i8> for (&'a  Vec<u32>, &'a 
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2  as c_int;
     let mut ret = unsafe {C_ZNK8QRawFont23advancesForGlyphIndexesEPKjP7QPointFi(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -543,7 +544,7 @@ impl<'a> /*trait*/ QRawFont_pixelSize<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QRawFont9pixelSizeEv()};
     let mut ret = unsafe {C_ZNK8QRawFont9pixelSizeEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -566,7 +567,7 @@ impl<'a> /*trait*/ QRawFont_weight<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QRawFont6weightEv()};
     let mut ret = unsafe {C_ZNK8QRawFont6weightEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -604,7 +605,7 @@ impl<'a> /*trait*/ QRawFont_xHeight<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QRawFont7xHeightEv()};
     let mut ret = unsafe {C_ZNK8QRawFont7xHeightEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -699,7 +700,7 @@ impl<'a> /*trait*/ QRawFont_maxCharWidth<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QRawFont12maxCharWidthEv()};
     let mut ret = unsafe {C_ZNK8QRawFont12maxCharWidthEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -717,12 +718,13 @@ pub trait QRawFont_glyphIndexesForString<RetType> {
 }
 
   // proto:  QVector<quint32> QRawFont::glyphIndexesForString(const QString & text);
-impl<'a> /*trait*/ QRawFont_glyphIndexesForString<()> for (&'a QString) {
-  fn glyphIndexesForString(self , rsthis: & QRawFont) -> () {
+impl<'a> /*trait*/ QRawFont_glyphIndexesForString<u64> for (&'a QString) {
+  fn glyphIndexesForString(self , rsthis: & QRawFont) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QRawFont21glyphIndexesForStringERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZNK8QRawFont21glyphIndexesForStringERK7QString(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK8QRawFont21glyphIndexesForStringERK7QString(rsthis.qclsinst, arg0)};
+    return ret as u64; // 5
     // return 1;
   }
 }

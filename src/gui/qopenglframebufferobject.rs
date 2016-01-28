@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qopenglframebufferobject.h
 // dst-file: /src/gui/qopenglframebufferobject.rs
 //
@@ -19,10 +19,10 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::super::core::qsize::QSize; // 771
+use super::super::core::qsize::*; // 771
 // use super::qopenglframebufferobject::QOpenGLFramebufferObjectFormat; // 773
-use super::qimage::QImage; // 773
-use super::super::core::qrect::QRect; // 771
+use super::qimage::*; // 773
+use super::super::core::qrect::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -238,7 +238,7 @@ impl<'a> /*trait*/ QOpenGLFramebufferObjectFormat_mipmap<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK30QOpenGLFramebufferObjectFormat6mipmapEv()};
     let mut ret = unsafe {C_ZNK30QOpenGLFramebufferObjectFormat6mipmapEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -261,7 +261,7 @@ impl<'a> /*trait*/ QOpenGLFramebufferObjectFormat_textureTarget<u32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK30QOpenGLFramebufferObjectFormat13textureTargetEv()};
     let mut ret = unsafe {C_ZNK30QOpenGLFramebufferObjectFormat13textureTargetEv(rsthis.qclsinst)};
-    return ret as u32;
+    return ret as u32; // 1
     // return 1;
   }
 }
@@ -344,7 +344,7 @@ impl<'a> /*trait*/ QOpenGLFramebufferObjectFormat_internalTextureFormat<u32> for
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK30QOpenGLFramebufferObjectFormat21internalTextureFormatEv()};
     let mut ret = unsafe {C_ZNK30QOpenGLFramebufferObjectFormat21internalTextureFormatEv(rsthis.qclsinst)};
-    return ret as u32;
+    return ret as u32; // 1
     // return 1;
   }
 }
@@ -367,7 +367,7 @@ impl<'a> /*trait*/ QOpenGLFramebufferObjectFormat_samples<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK30QOpenGLFramebufferObjectFormat7samplesEv()};
     let mut ret = unsafe {C_ZNK30QOpenGLFramebufferObjectFormat7samplesEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -395,7 +395,7 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_isValid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QOpenGLFramebufferObject7isValidEv()};
     let mut ret = unsafe {C_ZNK24QOpenGLFramebufferObject7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -418,7 +418,7 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_takeTexture<u32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QOpenGLFramebufferObject11takeTextureEv()};
     let mut ret = unsafe {C_ZN24QOpenGLFramebufferObject11takeTextureEv(rsthis.qclsinst)};
-    return ret as u32;
+    return ret as u32; // 1
     // return 1;
   }
 }
@@ -470,7 +470,7 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_bindDefault_s<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QOpenGLFramebufferObject11bindDefaultEv()};
     let mut ret = unsafe {C_ZN24QOpenGLFramebufferObject11bindDefaultEv()};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -493,7 +493,7 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_hasOpenGLFramebufferBlit_s<i8> for (
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QOpenGLFramebufferObject24hasOpenGLFramebufferBlitEv()};
     let mut ret = unsafe {C_ZN24QOpenGLFramebufferObject24hasOpenGLFramebufferBlitEv()};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -516,7 +516,7 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_texture<u32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QOpenGLFramebufferObject7textureEv()};
     let mut ret = unsafe {C_ZNK24QOpenGLFramebufferObject7textureEv(rsthis.qclsinst)};
-    return ret as u32;
+    return ret as u32; // 1
     // return 1;
   }
 }
@@ -555,7 +555,7 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_release<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QOpenGLFramebufferObject7releaseEv()};
     let mut ret = unsafe {C_ZN24QOpenGLFramebufferObject7releaseEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -578,7 +578,7 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_hasOpenGLFramebufferObjects_s<i8> fo
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QOpenGLFramebufferObject27hasOpenGLFramebufferObjectsEv()};
     let mut ret = unsafe {C_ZN24QOpenGLFramebufferObject27hasOpenGLFramebufferObjectsEv()};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -626,7 +626,7 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_handle<u32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QOpenGLFramebufferObject6handleEv()};
     let mut ret = unsafe {C_ZNK24QOpenGLFramebufferObject6handleEv(rsthis.qclsinst)};
-    return ret as u32;
+    return ret as u32; // 1
     // return 1;
   }
 }
@@ -649,7 +649,7 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_height<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QOpenGLFramebufferObject6heightEv()};
     let mut ret = unsafe {C_ZNK24QOpenGLFramebufferObject6heightEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -813,7 +813,7 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_bind<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QOpenGLFramebufferObject4bindEv()};
     let mut ret = unsafe {C_ZN24QOpenGLFramebufferObject4bindEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -836,7 +836,7 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_isBound<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QOpenGLFramebufferObject7isBoundEv()};
     let mut ret = unsafe {C_ZNK24QOpenGLFramebufferObject7isBoundEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -859,7 +859,7 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_width<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QOpenGLFramebufferObject5widthEv()};
     let mut ret = unsafe {C_ZNK24QOpenGLFramebufferObject5widthEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

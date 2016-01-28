@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qbackingstore.h
 // dst-file: /src/gui/qbackingstore.rs
 //
@@ -19,11 +19,12 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qpaintdevice::QPaintDevice; // 773
-use super::qwindow::QWindow; // 773
-use super::super::core::qsize::QSize; // 771
-use super::qregion::QRegion; // 773
-use super::super::core::qpoint::QPoint; // 771
+use super::qpaintdevice::*; // 773
+use super::qwindow::*; // 773
+use super::super::core::qsize::*; // 771
+use super::qregion::*; // 773
+use super::super::core::qpoint::*; // 771
+// use super::qplatformbackingstore::*; // 775
 // <= use block end
 
 // ext block begin =>
@@ -59,7 +60,7 @@ extern {
   // proto:  bool QBackingStore::scroll(const QRegion & area, int dx, int dy);
   fn C_ZN13QBackingStore6scrollERK7QRegionii(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int, arg2: c_int) -> c_char;
   // proto:  QPlatformBackingStore * QBackingStore::handle();
-  fn C_ZNK13QBackingStore6handleEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK13QBackingStore6handleEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QBackingStore::QBackingStore(QWindow * window);
   fn C_ZN13QBackingStoreC2EP7QWindow(arg0: *mut c_void) -> u64;
 } // <= ext block end
@@ -307,7 +308,7 @@ impl<'a> /*trait*/ QBackingStore_hasStaticContents<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QBackingStore17hasStaticContentsEv()};
     let mut ret = unsafe {C_ZNK13QBackingStore17hasStaticContentsEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -355,7 +356,7 @@ impl<'a> /*trait*/ QBackingStore_scroll<i8> for (&'a QRegion, i32, i32) {
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as c_int;
     let mut ret = unsafe {C_ZN13QBackingStore6scrollERK7QRegionii(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -373,11 +374,12 @@ pub trait QBackingStore_handle<RetType> {
 }
 
   // proto:  QPlatformBackingStore * QBackingStore::handle();
-impl<'a> /*trait*/ QBackingStore_handle<()> for () {
-  fn handle(self , rsthis: & QBackingStore) -> () {
+impl<'a> /*trait*/ QBackingStore_handle<u64> for () {
+  fn handle(self , rsthis: & QBackingStore) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QBackingStore6handleEv()};
-     unsafe {C_ZNK13QBackingStore6handleEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QBackingStore6handleEv(rsthis.qclsinst)};
+    return ret as u64; // 4
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qdrag.h
 // dst-file: /src/gui/qdrag.rs
 //
@@ -18,12 +18,12 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qobject::QObject; // 771
+use super::super::core::qobject::*; // 771
 use std::ops::Deref;
-use super::super::core::qmimedata::QMimeData; // 771
-use super::qpixmap::QPixmap; // 773
-use super::super::core::qpoint::QPoint; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
+use super::super::core::qmimedata::*; // 771
+use super::qpixmap::*; // 773
+use super::super::core::qpoint::*; // 771
+use super::super::core::qobjectdefs::*; // 771
 // <= use block end
 
 // ext block begin =>

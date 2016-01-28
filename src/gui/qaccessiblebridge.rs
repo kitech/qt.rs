@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qaccessiblebridge.h
 // dst-file: /src/gui/qaccessiblebridge.rs
 //
@@ -18,13 +18,12 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qobject::QObject; // 771
+use super::super::core::qobject::*; // 771
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
+use super::super::core::qstring::*; // 771
 // use super::qaccessiblebridge::QAccessibleBridge; // 773
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::qaccessible::QAccessibleEvent; // 773
-use super::qaccessible::QAccessibleInterface; // 773
+use super::super::core::qobjectdefs::*; // 771
+use super::qaccessible::*; // 773
 // <= use block end
 
 // ext block begin =>

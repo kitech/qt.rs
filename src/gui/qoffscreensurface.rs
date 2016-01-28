@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qoffscreensurface.h
 // dst-file: /src/gui/qoffscreensurface.rs
 //
@@ -18,12 +18,13 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qobject::QObject; // 771
+use super::super::core::qobject::*; // 771
 use std::ops::Deref;
-use super::qscreen::QScreen; // 773
-use super::qsurfaceformat::QSurfaceFormat; // 773
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::core::qsize::QSize; // 771
+use super::qscreen::*; // 773
+use super::qsurfaceformat::*; // 773
+// use super::qplatformoffscreensurface::*; // 775
+use super::super::core::qobjectdefs::*; // 771
+use super::super::core::qsize::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -49,7 +50,7 @@ extern {
   // proto:  QSurfaceFormat QOffscreenSurface::format();
   fn C_ZNK17QOffscreenSurface6formatEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QPlatformOffscreenSurface * QOffscreenSurface::handle();
-  fn C_ZNK17QOffscreenSurface6handleEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK17QOffscreenSurface6handleEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  const QMetaObject * QOffscreenSurface::metaObject();
   fn C_ZNK17QOffscreenSurface10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QOffscreenSurface::destroy();
@@ -270,11 +271,12 @@ pub trait QOffscreenSurface_handle<RetType> {
 }
 
   // proto:  QPlatformOffscreenSurface * QOffscreenSurface::handle();
-impl<'a> /*trait*/ QOffscreenSurface_handle<()> for () {
-  fn handle(self , rsthis: & QOffscreenSurface) -> () {
+impl<'a> /*trait*/ QOffscreenSurface_handle<u64> for () {
+  fn handle(self , rsthis: & QOffscreenSurface) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QOffscreenSurface6handleEv()};
-     unsafe {C_ZNK17QOffscreenSurface6handleEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK17QOffscreenSurface6handleEv(rsthis.qclsinst)};
+    return ret as u64; // 4
     // return 1;
   }
 }
@@ -343,7 +345,7 @@ impl<'a> /*trait*/ QOffscreenSurface_isValid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QOffscreenSurface7isValidEv()};
     let mut ret = unsafe {C_ZNK17QOffscreenSurface7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

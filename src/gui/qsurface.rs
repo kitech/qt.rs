@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qsurface.h
 // dst-file: /src/gui/qsurface.rs
 //
@@ -19,8 +19,9 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qsurfaceformat::QSurfaceFormat; // 773
-use super::super::core::qsize::QSize; // 771
+use super::qsurfaceformat::*; // 773
+// use super::qplatformsurface::*; // 775
+use super::super::core::qsize::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -36,7 +37,7 @@ extern {
   // proto:  QSurfaceFormat QSurface::format();
   fn C_ZNK8QSurface6formatEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QPlatformSurface * QSurface::surfaceHandle();
-  fn C_ZNK8QSurface13surfaceHandleEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK8QSurface13surfaceHandleEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QSize QSurface::size();
   fn C_ZNK8QSurface4sizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QSurface::~QSurface();
@@ -74,7 +75,7 @@ impl<'a> /*trait*/ QSurface_supportsOpenGL<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QSurface14supportsOpenGLEv()};
     let mut ret = unsafe {C_ZNK8QSurface14supportsOpenGLEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -116,11 +117,12 @@ pub trait QSurface_surfaceHandle<RetType> {
 }
 
   // proto:  QPlatformSurface * QSurface::surfaceHandle();
-impl<'a> /*trait*/ QSurface_surfaceHandle<()> for () {
-  fn surfaceHandle(self , rsthis: & QSurface) -> () {
+impl<'a> /*trait*/ QSurface_surfaceHandle<u64> for () {
+  fn surfaceHandle(self , rsthis: & QSurface) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QSurface13surfaceHandleEv()};
-     unsafe {C_ZNK8QSurface13surfaceHandleEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QSurface13surfaceHandleEv(rsthis.qclsinst)};
+    return ret as u64; // 4
     // return 1;
   }
 }

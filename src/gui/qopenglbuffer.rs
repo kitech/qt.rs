@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qopenglbuffer.h
 // dst-file: /src/gui/qopenglbuffer.rs
 //
@@ -95,7 +95,7 @@ impl<'a> /*trait*/ QOpenGLBuffer_read<i8> for (i32, *mut c_void, i32) {
     let arg1 = self.1  as *mut c_void;
     let arg2 = self.2  as c_int;
     let mut ret = unsafe {C_ZN13QOpenGLBuffer4readEiPvi(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -118,7 +118,7 @@ impl<'a> /*trait*/ QOpenGLBuffer_bind<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLBuffer4bindEv()};
     let mut ret = unsafe {C_ZN13QOpenGLBuffer4bindEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -186,7 +186,7 @@ impl<'a> /*trait*/ QOpenGLBuffer_unmap<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLBuffer5unmapEv()};
     let mut ret = unsafe {C_ZN13QOpenGLBuffer5unmapEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -237,7 +237,7 @@ impl<'a> /*trait*/ QOpenGLBuffer_size<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QOpenGLBuffer4sizeEv()};
     let mut ret = unsafe {C_ZNK13QOpenGLBuffer4sizeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -272,7 +272,7 @@ impl<'a> /*trait*/ QOpenGLBuffer_bufferId<u32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QOpenGLBuffer8bufferIdEv()};
     let mut ret = unsafe {C_ZNK13QOpenGLBuffer8bufferIdEv(rsthis.qclsinst)};
-    return ret as u32;
+    return ret as u32; // 1
     // return 1;
   }
 }
@@ -309,7 +309,7 @@ impl<'a> /*trait*/ QOpenGLBuffer_create<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLBuffer6createEv()};
     let mut ret = unsafe {C_ZN13QOpenGLBuffer6createEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -376,7 +376,7 @@ impl<'a> /*trait*/ QOpenGLBuffer_isCreated<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QOpenGLBuffer9isCreatedEv()};
     let mut ret = unsafe {C_ZNK13QOpenGLBuffer9isCreatedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

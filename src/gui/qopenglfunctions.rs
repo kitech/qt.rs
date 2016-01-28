@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qopenglfunctions.h
 // dst-file: /src/gui/qopenglfunctions.rs
 //
@@ -19,7 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qopenglcontext::QOpenGLContext; // 773
+use super::qopenglcontext::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -454,7 +454,7 @@ impl<'a> /*trait*/ QOpenGLFunctions_glIsBuffer<u8> for (u32) {
     // unsafe{_ZN16QOpenGLFunctions10glIsBufferEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {C_ZN16QOpenGLFunctions10glIsBufferEj(rsthis.qclsinst, arg0)};
-    return ret as u8;
+    return ret as u8; // 1
     // return 1;
   }
 }
@@ -1356,7 +1356,7 @@ impl<'a> /*trait*/ QOpenGLFunctions_glIsRenderbuffer<u8> for (u32) {
     // unsafe{_ZN16QOpenGLFunctions16glIsRenderbufferEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {C_ZN16QOpenGLFunctions16glIsRenderbufferEj(rsthis.qclsinst, arg0)};
-    return ret as u8;
+    return ret as u8; // 1
     // return 1;
   }
 }
@@ -1564,7 +1564,7 @@ impl<'a> /*trait*/ QOpenGLFunctions_glGetUniformLocation<i32> for (u32, &'a  Str
     let arg0 = self.0  as c_uint;
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let mut ret = unsafe {C_ZN16QOpenGLFunctions20glGetUniformLocationEjPKc(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1588,7 +1588,7 @@ impl<'a> /*trait*/ QOpenGLFunctions_glIsFramebuffer<u8> for (u32) {
     // unsafe{_ZN16QOpenGLFunctions15glIsFramebufferEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {C_ZN16QOpenGLFunctions15glIsFramebufferEj(rsthis.qclsinst, arg0)};
-    return ret as u8;
+    return ret as u8; // 1
     // return 1;
   }
 }
@@ -1992,7 +1992,7 @@ impl<'a> /*trait*/ QOpenGLFunctions_glIsProgram<u8> for (u32) {
     // unsafe{_ZN16QOpenGLFunctions11glIsProgramEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {C_ZN16QOpenGLFunctions11glIsProgramEj(rsthis.qclsinst, arg0)};
-    return ret as u8;
+    return ret as u8; // 1
     // return 1;
   }
 }
@@ -2191,7 +2191,7 @@ impl<'a> /*trait*/ QOpenGLFunctions_glCreateProgram<u32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions15glCreateProgramEv()};
     let mut ret = unsafe {C_ZN16QOpenGLFunctions15glCreateProgramEv(rsthis.qclsinst)};
-    return ret as u32;
+    return ret as u32; // 1
     // return 1;
   }
 }
@@ -2441,7 +2441,7 @@ impl<'a> /*trait*/ QOpenGLFunctions_glCreateShader<u32> for (u32) {
     // unsafe{_ZN16QOpenGLFunctions14glCreateShaderEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {C_ZN16QOpenGLFunctions14glCreateShaderEj(rsthis.qclsinst, arg0)};
-    return ret as u32;
+    return ret as u32; // 1
     // return 1;
   }
 }
@@ -2491,7 +2491,7 @@ impl<'a> /*trait*/ QOpenGLFunctions_glIsTexture<u8> for (u32) {
     // unsafe{_ZN16QOpenGLFunctions11glIsTextureEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {C_ZN16QOpenGLFunctions11glIsTextureEj(rsthis.qclsinst, arg0)};
-    return ret as u8;
+    return ret as u8; // 1
     // return 1;
   }
 }
@@ -2634,7 +2634,7 @@ impl<'a> /*trait*/ QOpenGLFunctions_glGetError<u32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions10glGetErrorEv()};
     let mut ret = unsafe {C_ZN16QOpenGLFunctions10glGetErrorEv(rsthis.qclsinst)};
-    return ret as u32;
+    return ret as u32; // 1
     // return 1;
   }
 }
@@ -3143,7 +3143,7 @@ impl<'a> /*trait*/ QOpenGLFunctions_glIsEnabled<u8> for (u32) {
     // unsafe{_ZN16QOpenGLFunctions11glIsEnabledEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {C_ZN16QOpenGLFunctions11glIsEnabledEj(rsthis.qclsinst, arg0)};
-    return ret as u8;
+    return ret as u8; // 1
     // return 1;
   }
 }
@@ -3293,7 +3293,7 @@ impl<'a> /*trait*/ QOpenGLFunctions_glGetAttribLocation<i32> for (u32, &'a  Stri
     let arg0 = self.0  as c_uint;
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let mut ret = unsafe {C_ZN16QOpenGLFunctions19glGetAttribLocationEjPKc(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -3622,7 +3622,7 @@ impl<'a> /*trait*/ QOpenGLFunctions_glIsShader<u8> for (u32) {
     // unsafe{_ZN16QOpenGLFunctions10glIsShaderEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {C_ZN16QOpenGLFunctions10glIsShaderEj(rsthis.qclsinst, arg0)};
-    return ret as u8;
+    return ret as u8; // 1
     // return 1;
   }
 }
@@ -3828,7 +3828,7 @@ impl<'a> /*trait*/ QOpenGLFunctions_glCheckFramebufferStatus<u32> for (u32) {
     // unsafe{_ZN16QOpenGLFunctions24glCheckFramebufferStatusEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {C_ZN16QOpenGLFunctions24glCheckFramebufferStatusEj(rsthis.qclsinst, arg0)};
-    return ret as u32;
+    return ret as u32; // 1
     // return 1;
   }
 }

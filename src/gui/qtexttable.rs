@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qtexttable.h
 // dst-file: /src/gui/qtexttable.rs
 //
@@ -19,13 +19,12 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qtextformat::QTextCharFormat; // 773
-use super::qtextcursor::QTextCursor; // 773
-use super::qtextobject::QTextFrame; // 773
+use super::qtextformat::*; // 773
+use super::qtextcursor::*; // 773
+use super::qtextobject::*; // 773
 // use super::qtexttable::QTextTableCell; // 773
-use super::qtextformat::QTextTableFormat; // 773
-use super::qtextdocument::QTextDocument; // 773
-use super::super::core::qobjectdefs::QMetaObject; // 771
+use super::qtextdocument::*; // 773
+use super::super::core::qobjectdefs::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -202,7 +201,7 @@ impl<'a> /*trait*/ QTextTableCell_lastPosition<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QTextTableCell12lastPositionEv()};
     let mut ret = unsafe {C_ZNK14QTextTableCell12lastPositionEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -247,7 +246,7 @@ impl<'a> /*trait*/ QTextTableCell_rowSpan<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QTextTableCell7rowSpanEv()};
     let mut ret = unsafe {C_ZNK14QTextTableCell7rowSpanEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -270,7 +269,7 @@ impl<'a> /*trait*/ QTextTableCell_firstPosition<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QTextTableCell13firstPositionEv()};
     let mut ret = unsafe {C_ZNK14QTextTableCell13firstPositionEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -293,7 +292,7 @@ impl<'a> /*trait*/ QTextTableCell_tableCellFormatIndex<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QTextTableCell20tableCellFormatIndexEv()};
     let mut ret = unsafe {C_ZNK14QTextTableCell20tableCellFormatIndexEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -316,7 +315,7 @@ impl<'a> /*trait*/ QTextTableCell_columnSpan<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QTextTableCell10columnSpanEv()};
     let mut ret = unsafe {C_ZNK14QTextTableCell10columnSpanEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -363,7 +362,7 @@ impl<'a> /*trait*/ QTextTableCell_row<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QTextTableCell3rowEv()};
     let mut ret = unsafe {C_ZNK14QTextTableCell3rowEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -386,7 +385,7 @@ impl<'a> /*trait*/ QTextTableCell_isValid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QTextTableCell7isValidEv()};
     let mut ret = unsafe {C_ZNK14QTextTableCell7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -433,7 +432,7 @@ impl<'a> /*trait*/ QTextTableCell_column<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QTextTableCell6columnEv()};
     let mut ret = unsafe {C_ZNK14QTextTableCell6columnEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -537,7 +536,7 @@ impl<'a> /*trait*/ QTextTable_rows<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextTable4rowsEv()};
     let mut ret = unsafe {C_ZNK10QTextTable4rowsEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -584,7 +583,7 @@ impl<'a> /*trait*/ QTextTable_columns<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextTable7columnsEv()};
     let mut ret = unsafe {C_ZNK10QTextTable7columnsEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

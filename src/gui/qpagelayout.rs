@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qpagelayout.h
 // dst-file: /src/gui/qpagelayout.rs
 //
@@ -19,11 +19,9 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::super::core::qmargins::QMargins; // 771
-use super::super::core::qrect::QRectF; // 771
-use super::super::core::qmargins::QMarginsF; // 771
-use super::super::core::qrect::QRect; // 771
-use super::qpagesize::QPageSize; // 773
+use super::super::core::qmargins::*; // 771
+use super::super::core::qrect::*; // 771
+use super::qpagesize::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -118,7 +116,7 @@ impl<'a> /*trait*/ QPageLayout_setRightMargin<i8> for (f64) {
     // unsafe{_ZN11QPageLayout14setRightMarginEd()};
     let arg0 = self  as c_double;
     let mut ret = unsafe {C_ZN11QPageLayout14setRightMarginEd(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -213,7 +211,7 @@ impl<'a> /*trait*/ QPageLayout_isValid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPageLayout7isValidEv()};
     let mut ret = unsafe {C_ZNK11QPageLayout7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -308,7 +306,7 @@ impl<'a> /*trait*/ QPageLayout_setLeftMargin<i8> for (f64) {
     // unsafe{_ZN11QPageLayout13setLeftMarginEd()};
     let arg0 = self  as c_double;
     let mut ret = unsafe {C_ZN11QPageLayout13setLeftMarginEd(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -332,7 +330,7 @@ impl<'a> /*trait*/ QPageLayout_setBottomMargin<i8> for (f64) {
     // unsafe{_ZN11QPageLayout15setBottomMarginEd()};
     let arg0 = self  as c_double;
     let mut ret = unsafe {C_ZN11QPageLayout15setBottomMarginEd(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -428,7 +426,7 @@ impl<'a> /*trait*/ QPageLayout_setTopMargin<i8> for (f64) {
     // unsafe{_ZN11QPageLayout12setTopMarginEd()};
     let arg0 = self  as c_double;
     let mut ret = unsafe {C_ZN11QPageLayout12setTopMarginEd(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -662,7 +660,7 @@ impl<'a> /*trait*/ QPageLayout_isEquivalentTo<i8> for (&'a QPageLayout) {
     // unsafe{_ZNK11QPageLayout14isEquivalentToERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK11QPageLayout14isEquivalentToERKS_(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -686,7 +684,7 @@ impl<'a> /*trait*/ QPageLayout_setMargins<i8> for (&'a QMarginsF) {
     // unsafe{_ZN11QPageLayout10setMarginsERK9QMarginsF()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN11QPageLayout10setMarginsERK9QMarginsF(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

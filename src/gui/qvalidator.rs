@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qvalidator.h
 // dst-file: /src/gui/qvalidator.rs
 //
@@ -20,12 +20,12 @@ use self::libc::*;
 // use block begin =>
 // use super::qvalidator::QValidator; // 773
 use std::ops::Deref;
-use super::super::core::qregularexpression::QRegularExpression; // 771
-use super::super::core::qobject::QObject; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::core::qstring::QString; // 771
-use super::super::core::qlocale::QLocale; // 771
-use super::super::core::qregexp::QRegExp; // 771
+use super::super::core::qregularexpression::*; // 771
+use super::super::core::qobject::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::super::core::qstring::*; // 771
+use super::super::core::qlocale::*; // 771
+use super::super::core::qregexp::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -362,7 +362,7 @@ impl<'a> /*trait*/ QDoubleValidator_decimals<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QDoubleValidator8decimalsEv()};
     let mut ret = unsafe {C_ZNK16QDoubleValidator8decimalsEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -407,7 +407,7 @@ impl<'a> /*trait*/ QDoubleValidator_top<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QDoubleValidator3topEv()};
     let mut ret = unsafe {C_ZNK16QDoubleValidator3topEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -430,7 +430,7 @@ impl<'a> /*trait*/ QDoubleValidator_bottom<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QDoubleValidator6bottomEv()};
     let mut ret = unsafe {C_ZNK16QDoubleValidator6bottomEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -733,7 +733,7 @@ impl<'a> /*trait*/ QIntValidator_top<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QIntValidator3topEv()};
     let mut ret = unsafe {C_ZNK13QIntValidator3topEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -824,7 +824,7 @@ impl<'a> /*trait*/ QIntValidator_bottom<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QIntValidator6bottomEv()};
     let mut ret = unsafe {C_ZNK13QIntValidator6bottomEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

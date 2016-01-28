@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qopenglpixeltransferoptions.h
 // dst-file: /src/gui/qopenglpixeltransferoptions.rs
 //
@@ -151,7 +151,7 @@ impl<'a> /*trait*/ QOpenGLPixelTransferOptions_isSwapBytesEnabled<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QOpenGLPixelTransferOptions18isSwapBytesEnabledEv()};
     let mut ret = unsafe {C_ZNK27QOpenGLPixelTransferOptions18isSwapBytesEnabledEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -212,7 +212,7 @@ impl<'a> /*trait*/ QOpenGLPixelTransferOptions_skipImages<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QOpenGLPixelTransferOptions10skipImagesEv()};
     let mut ret = unsafe {C_ZNK27QOpenGLPixelTransferOptions10skipImagesEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -258,7 +258,7 @@ impl<'a> /*trait*/ QOpenGLPixelTransferOptions_skipPixels<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QOpenGLPixelTransferOptions10skipPixelsEv()};
     let mut ret = unsafe {C_ZNK27QOpenGLPixelTransferOptions10skipPixelsEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -304,7 +304,7 @@ impl<'a> /*trait*/ QOpenGLPixelTransferOptions_imageHeight<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QOpenGLPixelTransferOptions11imageHeightEv()};
     let mut ret = unsafe {C_ZNK27QOpenGLPixelTransferOptions11imageHeightEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -350,7 +350,7 @@ impl<'a> /*trait*/ QOpenGLPixelTransferOptions_skipRows<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QOpenGLPixelTransferOptions8skipRowsEv()};
     let mut ret = unsafe {C_ZNK27QOpenGLPixelTransferOptions8skipRowsEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -419,7 +419,7 @@ impl<'a> /*trait*/ QOpenGLPixelTransferOptions_alignment<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QOpenGLPixelTransferOptions9alignmentEv()};
     let mut ret = unsafe {C_ZNK27QOpenGLPixelTransferOptions9alignmentEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -511,7 +511,7 @@ impl<'a> /*trait*/ QOpenGLPixelTransferOptions_isLeastSignificantBitFirst<i8> fo
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QOpenGLPixelTransferOptions26isLeastSignificantBitFirstEv()};
     let mut ret = unsafe {C_ZNK27QOpenGLPixelTransferOptions26isLeastSignificantBitFirstEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -534,7 +534,7 @@ impl<'a> /*trait*/ QOpenGLPixelTransferOptions_rowLength<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QOpenGLPixelTransferOptions9rowLengthEv()};
     let mut ret = unsafe {C_ZNK27QOpenGLPixelTransferOptions9rowLengthEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qpdfwriter.h
 // dst-file: /src/gui/qpdfwriter.rs
 //
@@ -18,12 +18,12 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qobject::QObject; // 771
+use super::super::core::qobject::*; // 771
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
-use super::super::core::qsize::QSizeF; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::core::qiodevice::QIODevice; // 771
+use super::super::core::qstring::*; // 771
+use super::super::core::qsize::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::super::core::qiodevice::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -194,7 +194,7 @@ impl<'a> /*trait*/ QPdfWriter_newPage<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QPdfWriter7newPageEv()};
     let mut ret = unsafe {C_ZN10QPdfWriter7newPageEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -265,7 +265,7 @@ impl<'a> /*trait*/ QPdfWriter_resolution<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QPdfWriter10resolutionEv()};
     let mut ret = unsafe {C_ZNK10QPdfWriter10resolutionEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

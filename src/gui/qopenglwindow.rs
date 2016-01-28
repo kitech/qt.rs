@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qopenglwindow.h
 // dst-file: /src/gui/qopenglwindow.rs
 //
@@ -18,12 +18,12 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qpaintdevicewindow::QPaintDeviceWindow; // 773
+use super::qpaintdevicewindow::*; // 773
 use std::ops::Deref;
-use super::qwindow::QWindow; // 773
-use super::qimage::QImage; // 773
-use super::qopenglcontext::QOpenGLContext; // 773
-use super::super::core::qobjectdefs::QMetaObject; // 771
+use super::qwindow::*; // 773
+use super::qimage::*; // 773
+use super::qopenglcontext::*; // 773
+use super::super::core::qobjectdefs::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -99,7 +99,7 @@ impl<'a> /*trait*/ QOpenGLWindow_isValid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QOpenGLWindow7isValidEv()};
     let mut ret = unsafe {C_ZNK13QOpenGLWindow7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -238,7 +238,7 @@ impl<'a> /*trait*/ QOpenGLWindow_defaultFramebufferObject<u32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QOpenGLWindow24defaultFramebufferObjectEv()};
     let mut ret = unsafe {C_ZNK13QOpenGLWindow24defaultFramebufferObjectEv(rsthis.qclsinst)};
-    return ret as u32;
+    return ret as u32; // 1
     // return 1;
   }
 }
