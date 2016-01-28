@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qabstractitemdelegate.h
 // dst-file: /src/widgets/qabstractitemdelegate.rs
 //
@@ -18,20 +18,20 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qobject::QObject; // 771
+use super::super::core::qobject::*; // 771
 use std::ops::Deref;
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::qwidget::QWidget; // 773
-use super::qstyleoption::QStyleOptionViewItem; // 773
-use super::super::core::qabstractitemmodel::QModelIndex; // 771
-use super::super::gui::qfontmetrics::QFontMetrics; // 771
-use super::super::core::qstring::QString; // 771
-use super::super::gui::qpainter::QPainter; // 771
-use super::super::core::qsize::QSize; // 771
-use super::super::core::qcoreevent::QEvent; // 771
-use super::super::core::qabstractitemmodel::QAbstractItemModel; // 771
-use super::super::gui::qevent::QHelpEvent; // 771
-use super::qabstractitemview::QAbstractItemView; // 773
+// use super::qvector::*; // 775
+use super::super::core::qobjectdefs::*; // 771
+use super::qwidget::*; // 773
+use super::qstyleoption::*; // 773
+use super::super::core::qabstractitemmodel::*; // 771
+use super::super::gui::qfontmetrics::*; // 771
+use super::super::core::qstring::*; // 771
+use super::super::gui::qpainter::*; // 771
+use super::super::core::qsize::*; // 771
+use super::super::core::qcoreevent::*; // 771
+use super::super::gui::qevent::*; // 771
+use super::qabstractitemview::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -43,7 +43,7 @@ use super::qabstractitemview::QAbstractItemView; // 773
 extern {
   fn QAbstractItemDelegate_Class_Size() -> c_int;
   // proto:  QVector<int> QAbstractItemDelegate::paintingRoles();
-  fn C_ZNK21QAbstractItemDelegate13paintingRolesEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK21QAbstractItemDelegate13paintingRolesEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  const QMetaObject * QAbstractItemDelegate::metaObject();
   fn C_ZNK21QAbstractItemDelegate10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAbstractItemDelegate::updateEditorGeometry(QWidget * editor, const QStyleOptionViewItem & option, const QModelIndex & index);
@@ -113,11 +113,12 @@ pub trait QAbstractItemDelegate_paintingRoles<RetType> {
 }
 
   // proto:  QVector<int> QAbstractItemDelegate::paintingRoles();
-impl<'a> /*trait*/ QAbstractItemDelegate_paintingRoles<()> for () {
-  fn paintingRoles(self , rsthis: & QAbstractItemDelegate) -> () {
+impl<'a> /*trait*/ QAbstractItemDelegate_paintingRoles<u64> for () {
+  fn paintingRoles(self , rsthis: & QAbstractItemDelegate) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QAbstractItemDelegate13paintingRolesEv()};
-     unsafe {C_ZNK21QAbstractItemDelegate13paintingRolesEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK21QAbstractItemDelegate13paintingRolesEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -323,7 +324,7 @@ impl<'a> /*trait*/ QAbstractItemDelegate_editorEvent<i8> for (&'a QEvent, &'a QA
     let arg2 = self.2.qclsinst  as *mut c_void;
     let arg3 = self.3.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN21QAbstractItemDelegate11editorEventEP6QEventP18QAbstractItemModelRK20QStyleOptionViewItemRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -350,7 +351,7 @@ impl<'a> /*trait*/ QAbstractItemDelegate_helpEvent<i8> for (&'a QHelpEvent, &'a 
     let arg2 = self.2.qclsinst  as *mut c_void;
     let arg3 = self.3.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN21QAbstractItemDelegate9helpEventEP10QHelpEventP17QAbstractItemViewRK20QStyleOptionViewItemRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

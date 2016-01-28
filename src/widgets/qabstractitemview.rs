@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qabstractitemview.h
 // dst-file: /src/widgets/qabstractitemview.rs
 //
@@ -18,18 +18,17 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qabstractscrollarea::QAbstractScrollArea; // 773
+use super::qabstractscrollarea::*; // 773
 use std::ops::Deref;
-use super::super::core::qabstractitemmodel::QModelIndex; // 771
-use super::qwidget::QWidget; // 773
-use super::super::core::qsize::QSize; // 771
-use super::qabstractitemdelegate::QAbstractItemDelegate; // 773
-use super::super::core::qstring::QString; // 771
-use super::super::core::qitemselectionmodel::QItemSelectionModel; // 771
-use super::super::core::qrect::QRect; // 771
-use super::super::core::qabstractitemmodel::QAbstractItemModel; // 771
-use super::super::core::qpoint::QPoint; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
+use super::super::core::qabstractitemmodel::*; // 771
+use super::qwidget::*; // 773
+use super::super::core::qsize::*; // 771
+use super::qabstractitemdelegate::*; // 773
+use super::super::core::qstring::*; // 771
+use super::super::core::qitemselectionmodel::*; // 771
+use super::super::core::qrect::*; // 771
+use super::super::core::qpoint::*; // 771
+use super::super::core::qobjectdefs::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -322,7 +321,7 @@ impl<'a> /*trait*/ QAbstractItemView_dragEnabled<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAbstractItemView11dragEnabledEv()};
     let mut ret = unsafe {C_ZNK17QAbstractItemView11dragEnabledEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -746,7 +745,7 @@ impl<'a> /*trait*/ QAbstractItemView_sizeHintForRow<i32> for (i32) {
     // unsafe{_ZNK17QAbstractItemView14sizeHintForRowEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK17QAbstractItemView14sizeHintForRowEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -797,7 +796,7 @@ impl<'a> /*trait*/ QAbstractItemView_showDropIndicator<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAbstractItemView17showDropIndicatorEv()};
     let mut ret = unsafe {C_ZNK17QAbstractItemView17showDropIndicatorEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -820,7 +819,7 @@ impl<'a> /*trait*/ QAbstractItemView_hasAutoScroll<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAbstractItemView13hasAutoScrollEv()};
     let mut ret = unsafe {C_ZNK17QAbstractItemView13hasAutoScrollEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -924,7 +923,7 @@ impl<'a> /*trait*/ QAbstractItemView_sizeHintForColumn<i32> for (i32) {
     // unsafe{_ZNK17QAbstractItemView17sizeHintForColumnEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK17QAbstractItemView17sizeHintForColumnEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1319,7 +1318,7 @@ impl<'a> /*trait*/ QAbstractItemView_dragDropOverwriteMode<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAbstractItemView21dragDropOverwriteModeEv()};
     let mut ret = unsafe {C_ZNK17QAbstractItemView21dragDropOverwriteModeEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1342,7 +1341,7 @@ impl<'a> /*trait*/ QAbstractItemView_tabKeyNavigation<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAbstractItemView16tabKeyNavigationEv()};
     let mut ret = unsafe {C_ZNK17QAbstractItemView16tabKeyNavigationEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1365,7 +1364,7 @@ impl<'a> /*trait*/ QAbstractItemView_autoScrollMargin<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAbstractItemView16autoScrollMarginEv()};
     let mut ret = unsafe {C_ZNK17QAbstractItemView16autoScrollMarginEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1388,7 +1387,7 @@ impl<'a> /*trait*/ QAbstractItemView_alternatingRowColors<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAbstractItemView20alternatingRowColorsEv()};
     let mut ret = unsafe {C_ZNK17QAbstractItemView20alternatingRowColorsEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

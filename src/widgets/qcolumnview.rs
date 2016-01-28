@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qcolumnview.h
 // dst-file: /src/widgets/qcolumnview.rs
 //
@@ -18,16 +18,16 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qabstractitemview::QAbstractItemView; // 773
+use super::qabstractitemview::*; // 773
 use std::ops::Deref;
-use super::qwidget::QWidget; // 773
-use super::super::core::qpoint::QPoint; // 771
-use super::super::core::qabstractitemmodel::QModelIndex; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::core::qsize::QSize; // 771
-use super::super::core::qabstractitemmodel::QAbstractItemModel; // 771
-use super::super::core::qitemselectionmodel::QItemSelectionModel; // 771
-use super::super::core::qrect::QRect; // 771
+use super::qwidget::*; // 773
+use super::super::core::qpoint::*; // 771
+use super::super::core::qabstractitemmodel::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::super::core::qsize::*; // 771
+// use super::qlist::*; // 775
+use super::super::core::qitemselectionmodel::*; // 771
+use super::super::core::qrect::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -51,7 +51,7 @@ extern {
   // proto:  QSize QColumnView::sizeHint();
   fn C_ZNK11QColumnView8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QList<int> QColumnView::columnWidths();
-  fn C_ZNK11QColumnView12columnWidthsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK11QColumnView12columnWidthsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QColumnView::setResizeGripsVisible(bool visible);
   fn C_ZN11QColumnView21setResizeGripsVisibleEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  bool QColumnView::resizeGripsVisible();
@@ -256,11 +256,12 @@ pub trait QColumnView_columnWidths<RetType> {
 }
 
   // proto:  QList<int> QColumnView::columnWidths();
-impl<'a> /*trait*/ QColumnView_columnWidths<()> for () {
-  fn columnWidths(self , rsthis: & QColumnView) -> () {
+impl<'a> /*trait*/ QColumnView_columnWidths<u64> for () {
+  fn columnWidths(self , rsthis: & QColumnView) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QColumnView12columnWidthsEv()};
-     unsafe {C_ZNK11QColumnView12columnWidthsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QColumnView12columnWidthsEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -306,7 +307,7 @@ impl<'a> /*trait*/ QColumnView_resizeGripsVisible<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QColumnView18resizeGripsVisibleEv()};
     let mut ret = unsafe {C_ZNK11QColumnView18resizeGripsVisibleEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

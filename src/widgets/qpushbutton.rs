@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qpushbutton.h
 // dst-file: /src/widgets/qpushbutton.rs
 //
@@ -18,14 +18,14 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qabstractbutton::QAbstractButton; // 773
+use super::qabstractbutton::*; // 773
 use std::ops::Deref;
-use super::qmenu::QMenu; // 773
-use super::super::core::qsize::QSize; // 771
-use super::super::gui::qicon::QIcon; // 771
-use super::super::core::qstring::QString; // 771
-use super::qwidget::QWidget; // 773
-use super::super::core::qobjectdefs::QMetaObject; // 771
+use super::qmenu::*; // 773
+use super::super::core::qsize::*; // 771
+use super::super::gui::qicon::*; // 771
+use super::super::core::qstring::*; // 771
+use super::qwidget::*; // 773
+use super::super::core::qobjectdefs::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -251,7 +251,7 @@ impl<'a> /*trait*/ QPushButton_isDefault<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPushButton9isDefaultEv()};
     let mut ret = unsafe {C_ZNK11QPushButton9isDefaultEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -304,7 +304,7 @@ impl<'a> /*trait*/ QPushButton_autoDefault<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPushButton11autoDefaultEv()};
     let mut ret = unsafe {C_ZNK11QPushButton11autoDefaultEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -452,7 +452,7 @@ impl<'a> /*trait*/ QPushButton_isFlat<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPushButton6isFlatEv()};
     let mut ret = unsafe {C_ZNK11QPushButton6isFlatEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

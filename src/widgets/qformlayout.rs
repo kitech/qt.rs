@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qformlayout.h
 // dst-file: /src/widgets/qformlayout.rs
 //
@@ -18,14 +18,14 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qlayout::QLayout; // 773
+use super::qlayout::*; // 773
 use std::ops::Deref;
-use super::qlayoutitem::QLayoutItem; // 773
-use super::qwidget::QWidget; // 773
-use super::super::core::qstring::QString; // 771
-use super::super::core::qrect::QRect; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::core::qsize::QSize; // 771
+use super::qlayoutitem::*; // 773
+use super::qwidget::*; // 773
+use super::super::core::qstring::*; // 771
+use super::super::core::qrect::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::super::core::qsize::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -149,7 +149,7 @@ impl<'a> /*trait*/ QFormLayout_horizontalSpacing<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFormLayout17horizontalSpacingEv()};
     let mut ret = unsafe {C_ZNK11QFormLayout17horizontalSpacingEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -172,7 +172,7 @@ impl<'a> /*trait*/ QFormLayout_rowCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFormLayout8rowCountEv()};
     let mut ret = unsafe {C_ZNK11QFormLayout8rowCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -295,7 +295,7 @@ impl<'a> /*trait*/ QFormLayout_count<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFormLayout5countEv()};
     let mut ret = unsafe {C_ZNK11QFormLayout5countEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -318,7 +318,7 @@ impl<'a> /*trait*/ QFormLayout_spacing<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFormLayout7spacingEv()};
     let mut ret = unsafe {C_ZNK11QFormLayout7spacingEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -711,7 +711,7 @@ impl<'a> /*trait*/ QFormLayout_verticalSpacing<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFormLayout15verticalSpacingEv()};
     let mut ret = unsafe {C_ZNK11QFormLayout15verticalSpacingEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -735,7 +735,7 @@ impl<'a> /*trait*/ QFormLayout_heightForWidth<i32> for (i32) {
     // unsafe{_ZNK11QFormLayout14heightForWidthEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK11QFormLayout14heightForWidthEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -781,7 +781,7 @@ impl<'a> /*trait*/ QFormLayout_hasHeightForWidth<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFormLayout17hasHeightForWidthEv()};
     let mut ret = unsafe {C_ZNK11QFormLayout17hasHeightForWidthEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

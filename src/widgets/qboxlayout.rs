@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qboxlayout.h
 // dst-file: /src/widgets/qboxlayout.rs
 //
@@ -20,13 +20,12 @@ use self::libc::*;
 // use block begin =>
 // use super::qboxlayout::QBoxLayout; // 773
 use std::ops::Deref;
-use super::qwidget::QWidget; // 773
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::qlayout::QLayout; // 773
-use super::qlayoutitem::QLayoutItem; // 773
-use super::super::core::qsize::QSize; // 771
-use super::super::core::qrect::QRect; // 771
-use super::qlayoutitem::QSpacerItem; // 773
+use super::qwidget::*; // 773
+use super::super::core::qobjectdefs::*; // 771
+use super::qlayout::*; // 773
+use super::qlayoutitem::*; // 773
+use super::super::core::qsize::*; // 771
+use super::super::core::qrect::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -279,7 +278,7 @@ impl<'a> /*trait*/ QBoxLayout_spacing<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QBoxLayout7spacingEv()};
     let mut ret = unsafe {C_ZNK10QBoxLayout7spacingEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -302,7 +301,7 @@ impl<'a> /*trait*/ QBoxLayout_hasHeightForWidth<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QBoxLayout17hasHeightForWidthEv()};
     let mut ret = unsafe {C_ZNK10QBoxLayout17hasHeightForWidthEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -492,7 +491,7 @@ impl<'a> /*trait*/ QBoxLayout_setStretchFactor<i8> for (&'a QWidget, i32) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZN10QBoxLayout16setStretchFactorEP7QWidgeti(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -598,7 +597,7 @@ impl<'a> /*trait*/ QBoxLayout_setStretchFactor<i8> for (&'a QLayout, i32) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZN10QBoxLayout16setStretchFactorEP7QLayouti(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -621,7 +620,7 @@ impl<'a> /*trait*/ QBoxLayout_count<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QBoxLayout5countEv()};
     let mut ret = unsafe {C_ZNK10QBoxLayout5countEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -718,7 +717,7 @@ impl<'a> /*trait*/ QBoxLayout_heightForWidth<i32> for (i32) {
     // unsafe{_ZNK10QBoxLayout14heightForWidthEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK10QBoxLayout14heightForWidthEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -789,7 +788,7 @@ impl<'a> /*trait*/ QBoxLayout_stretch<i32> for (i32) {
     // unsafe{_ZNK10QBoxLayout7stretchEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK10QBoxLayout7stretchEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -836,7 +835,7 @@ impl<'a> /*trait*/ QBoxLayout_minimumHeightForWidth<i32> for (i32) {
     // unsafe{_ZNK10QBoxLayout21minimumHeightForWidthEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK10QBoxLayout21minimumHeightForWidthEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

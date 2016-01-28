@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qstackedwidget.h
 // dst-file: /src/widgets/qstackedwidget.rs
 //
@@ -18,10 +18,10 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qframe::QFrame; // 773
+use super::qframe::*; // 773
 use std::ops::Deref;
-use super::qwidget::QWidget; // 773
-use super::super::core::qobjectdefs::QMetaObject; // 771
+use super::qwidget::*; // 773
+use super::super::core::qobjectdefs::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -184,7 +184,7 @@ impl<'a> /*trait*/ QStackedWidget_insertWidget<i32> for (i32, &'a QWidget) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN14QStackedWidget12insertWidgetEiP7QWidget(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -208,7 +208,7 @@ impl<'a> /*trait*/ QStackedWidget_indexOf<i32> for (&'a QWidget) {
     // unsafe{_ZNK14QStackedWidget7indexOfEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK14QStackedWidget7indexOfEP7QWidget(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -280,7 +280,7 @@ impl<'a> /*trait*/ QStackedWidget_addWidget<i32> for (&'a QWidget) {
     // unsafe{_ZN14QStackedWidget9addWidgetEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN14QStackedWidget9addWidgetEP7QWidget(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -303,7 +303,7 @@ impl<'a> /*trait*/ QStackedWidget_currentIndex<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QStackedWidget12currentIndexEv()};
     let mut ret = unsafe {C_ZNK14QStackedWidget12currentIndexEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -326,7 +326,7 @@ impl<'a> /*trait*/ QStackedWidget_count<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QStackedWidget5countEv()};
     let mut ret = unsafe {C_ZNK14QStackedWidget5countEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

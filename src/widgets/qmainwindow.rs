@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qmainwindow.h
 // dst-file: /src/widgets/qmainwindow.rs
 //
@@ -18,18 +18,19 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qwidget::QWidget; // 773
+use super::qwidget::*; // 773
 use std::ops::Deref;
-use super::qstatusbar::QStatusBar; // 773
-use super::qtoolbar::QToolBar; // 773
-use super::qdockwidget::QDockWidget; // 773
-use super::super::core::qstring::QString; // 771
-use super::super::core::qsize::QSize; // 771
-use super::super::core::qbytearray::QByteArray; // 771
-use super::qmenu::QMenu; // 773
-use super::qmenubar::QMenuBar; // 773
-use super::super::core::qpoint::QPoint; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
+use super::qstatusbar::*; // 773
+use super::qtoolbar::*; // 773
+use super::qdockwidget::*; // 773
+use super::super::core::qstring::*; // 771
+use super::super::core::qsize::*; // 771
+use super::super::core::qbytearray::*; // 771
+use super::qmenu::*; // 773
+use super::qmenubar::*; // 773
+use super::super::core::qpoint::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+// use super::qlist::*; // 775
 // <= use block end
 
 // ext block begin =>
@@ -111,7 +112,7 @@ extern {
   // proto:  void QMainWindow::setMenuBar(QMenuBar * menubar);
   fn C_ZN11QMainWindow10setMenuBarEP8QMenuBar(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QList<QDockWidget *> QMainWindow::tabifiedDockWidgets(QDockWidget * dockwidget);
-  fn C_ZNK11QMainWindow19tabifiedDockWidgetsEP11QDockWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK11QMainWindow19tabifiedDockWidgetsEP11QDockWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   fn QMainWindow_SlotProxy_connect__ZN11QMainWindow15iconSizeChangedERK5QSize(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
@@ -230,7 +231,7 @@ impl<'a> /*trait*/ QMainWindow_unifiedTitleAndToolBarOnMac<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMainWindow27unifiedTitleAndToolBarOnMacEv()};
     let mut ret = unsafe {C_ZNK11QMainWindow27unifiedTitleAndToolBarOnMacEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -371,7 +372,7 @@ impl<'a> /*trait*/ QMainWindow_isAnimated<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMainWindow10isAnimatedEv()};
     let mut ret = unsafe {C_ZNK11QMainWindow10isAnimatedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -469,7 +470,7 @@ impl<'a> /*trait*/ QMainWindow_restoreState<i8> for (&'a QByteArray, i32) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZN11QMainWindow12restoreStateERK10QByteArrayi(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -598,7 +599,7 @@ impl<'a> /*trait*/ QMainWindow_toolBarBreak<i8> for (&'a QToolBar) {
     // unsafe{_ZNK11QMainWindow12toolBarBreakEP8QToolBar()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK11QMainWindow12toolBarBreakEP8QToolBar(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -622,7 +623,7 @@ impl<'a> /*trait*/ QMainWindow_restoreDockWidget<i8> for (&'a QDockWidget) {
     // unsafe{_ZN11QMainWindow17restoreDockWidgetEP11QDockWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN11QMainWindow17restoreDockWidgetEP11QDockWidget(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -715,7 +716,7 @@ impl<'a> /*trait*/ QMainWindow_isSeparator<i8> for (&'a QPoint) {
     // unsafe{_ZNK11QMainWindow11isSeparatorERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK11QMainWindow11isSeparatorERK6QPoint(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -833,7 +834,7 @@ impl<'a> /*trait*/ QMainWindow_isDockNestingEnabled<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMainWindow20isDockNestingEnabledEv()};
     let mut ret = unsafe {C_ZNK11QMainWindow20isDockNestingEnabledEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -856,7 +857,7 @@ impl<'a> /*trait*/ QMainWindow_documentMode<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMainWindow12documentModeEv()};
     let mut ret = unsafe {C_ZNK11QMainWindow12documentModeEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -966,12 +967,13 @@ pub trait QMainWindow_tabifiedDockWidgets<RetType> {
 }
 
   // proto:  QList<QDockWidget *> QMainWindow::tabifiedDockWidgets(QDockWidget * dockwidget);
-impl<'a> /*trait*/ QMainWindow_tabifiedDockWidgets<()> for (&'a QDockWidget) {
-  fn tabifiedDockWidgets(self , rsthis: & QMainWindow) -> () {
+impl<'a> /*trait*/ QMainWindow_tabifiedDockWidgets<u64> for (&'a QDockWidget) {
+  fn tabifiedDockWidgets(self , rsthis: & QMainWindow) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMainWindow19tabifiedDockWidgetsEP11QDockWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZNK11QMainWindow19tabifiedDockWidgetsEP11QDockWidget(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK11QMainWindow19tabifiedDockWidgetsEP11QDockWidget(rsthis.qclsinst, arg0)};
+    return ret as u64; // 5
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qgesture.h
 // dst-file: /src/widgets/qgesture.rs
 //
@@ -20,11 +20,12 @@ use self::libc::*;
 // use block begin =>
 // use super::qgesture::QGesture; // 773
 use std::ops::Deref;
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::core::qobject::QObject; // 771
-use super::super::core::qpoint::QPointF; // 771
-use super::super::core::qcoreevent::QEvent; // 771
-use super::qwidget::QWidget; // 773
+use super::super::core::qobjectdefs::*; // 771
+use super::super::core::qobject::*; // 771
+use super::super::core::qpoint::*; // 771
+use super::super::core::qcoreevent::*; // 771
+use super::qwidget::*; // 773
+// use super::qlist::*; // 775
 // <= use block end
 
 // ext block begin =>
@@ -70,9 +71,9 @@ extern {
   // proto:  void QGestureEvent::accept(QGesture * );
   fn C_ZN13QGestureEvent6acceptEP8QGesture(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QList<QGesture *> QGestureEvent::activeGestures();
-  fn C_ZNK13QGestureEvent14activeGesturesEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK13QGestureEvent14activeGesturesEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QList<QGesture *> QGestureEvent::gestures();
-  fn C_ZNK13QGestureEvent8gesturesEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK13QGestureEvent8gesturesEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QGestureEvent::setAccepted(QGesture * , bool );
   fn C_ZN13QGestureEvent11setAcceptedEP8QGestureb(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_char);
   // proto:  void QGestureEvent::setWidget(QWidget * widget);
@@ -80,7 +81,7 @@ extern {
   // proto:  void QGestureEvent::~QGestureEvent();
   fn C_ZN13QGestureEventD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QList<QGesture *> QGestureEvent::canceledGestures();
-  fn C_ZNK13QGestureEvent16canceledGesturesEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK13QGestureEvent16canceledGesturesEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QPointF QGestureEvent::mapToGraphicsScene(const QPointF & gesturePoint);
   fn C_ZNK13QGestureEvent18mapToGraphicsSceneERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   fn QPanGesture_Class_Size() -> c_int;
@@ -357,7 +358,7 @@ impl<'a> /*trait*/ QSwipeGesture_swipeAngle<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QSwipeGesture10swipeAngleEv()};
     let mut ret = unsafe {C_ZNK13QSwipeGesture10swipeAngleEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -421,7 +422,7 @@ impl<'a> /*trait*/ QGesture_hasHotSpot<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QGesture10hasHotSpotEv()};
     let mut ret = unsafe {C_ZNK8QGesture10hasHotSpotEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -581,7 +582,7 @@ impl<'a> /*trait*/ QGestureEvent_isAccepted<i8> for (&'a QGesture) {
     // unsafe{_ZNK13QGestureEvent10isAcceptedEP8QGesture()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK13QGestureEvent10isAcceptedEP8QGesture(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -669,11 +670,12 @@ pub trait QGestureEvent_activeGestures<RetType> {
 }
 
   // proto:  QList<QGesture *> QGestureEvent::activeGestures();
-impl<'a> /*trait*/ QGestureEvent_activeGestures<()> for () {
-  fn activeGestures(self , rsthis: & QGestureEvent) -> () {
+impl<'a> /*trait*/ QGestureEvent_activeGestures<u64> for () {
+  fn activeGestures(self , rsthis: & QGestureEvent) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QGestureEvent14activeGesturesEv()};
-     unsafe {C_ZNK13QGestureEvent14activeGesturesEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QGestureEvent14activeGesturesEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -691,11 +693,12 @@ pub trait QGestureEvent_gestures<RetType> {
 }
 
   // proto:  QList<QGesture *> QGestureEvent::gestures();
-impl<'a> /*trait*/ QGestureEvent_gestures<()> for () {
-  fn gestures(self , rsthis: & QGestureEvent) -> () {
+impl<'a> /*trait*/ QGestureEvent_gestures<u64> for () {
+  fn gestures(self , rsthis: & QGestureEvent) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QGestureEvent8gesturesEv()};
-     unsafe {C_ZNK13QGestureEvent8gesturesEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QGestureEvent8gesturesEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -782,11 +785,12 @@ pub trait QGestureEvent_canceledGestures<RetType> {
 }
 
   // proto:  QList<QGesture *> QGestureEvent::canceledGestures();
-impl<'a> /*trait*/ QGestureEvent_canceledGestures<()> for () {
-  fn canceledGestures(self , rsthis: & QGestureEvent) -> () {
+impl<'a> /*trait*/ QGestureEvent_canceledGestures<u64> for () {
+  fn canceledGestures(self , rsthis: & QGestureEvent) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QGestureEvent16canceledGesturesEv()};
-     unsafe {C_ZNK13QGestureEvent16canceledGesturesEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QGestureEvent16canceledGesturesEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -922,7 +926,7 @@ impl<'a> /*trait*/ QPanGesture_acceleration<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPanGesture12accelerationEv()};
     let mut ret = unsafe {C_ZNK11QPanGesture12accelerationEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1203,7 +1207,7 @@ impl<'a> /*trait*/ QTapAndHoldGesture_timeout_s<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QTapAndHoldGesture7timeoutEv()};
     let mut ret = unsafe {C_ZN18QTapAndHoldGesture7timeoutEv()};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1451,7 +1455,7 @@ impl<'a> /*trait*/ QPinchGesture_lastScaleFactor<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QPinchGesture15lastScaleFactorEv()};
     let mut ret = unsafe {C_ZNK13QPinchGesture15lastScaleFactorEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1474,7 +1478,7 @@ impl<'a> /*trait*/ QPinchGesture_lastRotationAngle<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QPinchGesture17lastRotationAngleEv()};
     let mut ret = unsafe {C_ZNK13QPinchGesture17lastRotationAngleEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1521,7 +1525,7 @@ impl<'a> /*trait*/ QPinchGesture_rotationAngle<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QPinchGesture13rotationAngleEv()};
     let mut ret = unsafe {C_ZNK13QPinchGesture13rotationAngleEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1596,7 +1600,7 @@ impl<'a> /*trait*/ QPinchGesture_totalScaleFactor<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QPinchGesture16totalScaleFactorEv()};
     let mut ret = unsafe {C_ZNK13QPinchGesture16totalScaleFactorEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1642,7 +1646,7 @@ impl<'a> /*trait*/ QPinchGesture_totalRotationAngle<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QPinchGesture18totalRotationAngleEv()};
     let mut ret = unsafe {C_ZNK13QPinchGesture18totalRotationAngleEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1896,7 +1900,7 @@ impl<'a> /*trait*/ QPinchGesture_scaleFactor<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QPinchGesture11scaleFactorEv()};
     let mut ret = unsafe {C_ZNK13QPinchGesture11scaleFactorEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qabstractslider.h
 // dst-file: /src/widgets/qabstractslider.rs
 //
@@ -18,9 +18,9 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qwidget::QWidget; // 773
+use super::qwidget::*; // 773
 use std::ops::Deref;
-use super::super::core::qobjectdefs::QMetaObject; // 771
+use super::super::core::qobjectdefs::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -159,7 +159,7 @@ impl<'a> /*trait*/ QAbstractSlider_isSliderDown<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAbstractSlider12isSliderDownEv()};
     let mut ret = unsafe {C_ZNK15QAbstractSlider12isSliderDownEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -182,7 +182,7 @@ impl<'a> /*trait*/ QAbstractSlider_value<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAbstractSlider5valueEv()};
     let mut ret = unsafe {C_ZNK15QAbstractSlider5valueEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -228,7 +228,7 @@ impl<'a> /*trait*/ QAbstractSlider_minimum<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAbstractSlider7minimumEv()};
     let mut ret = unsafe {C_ZNK15QAbstractSlider7minimumEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -251,7 +251,7 @@ impl<'a> /*trait*/ QAbstractSlider_singleStep<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAbstractSlider10singleStepEv()};
     let mut ret = unsafe {C_ZNK15QAbstractSlider10singleStepEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -274,7 +274,7 @@ impl<'a> /*trait*/ QAbstractSlider_pageStep<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAbstractSlider8pageStepEv()};
     let mut ret = unsafe {C_ZNK15QAbstractSlider8pageStepEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -320,7 +320,7 @@ impl<'a> /*trait*/ QAbstractSlider_invertedControls<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAbstractSlider16invertedControlsEv()};
     let mut ret = unsafe {C_ZNK15QAbstractSlider16invertedControlsEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -434,7 +434,7 @@ impl<'a> /*trait*/ QAbstractSlider_maximum<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAbstractSlider7maximumEv()};
     let mut ret = unsafe {C_ZNK15QAbstractSlider7maximumEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -527,7 +527,7 @@ impl<'a> /*trait*/ QAbstractSlider_hasTracking<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAbstractSlider11hasTrackingEv()};
     let mut ret = unsafe {C_ZNK15QAbstractSlider11hasTrackingEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -550,7 +550,7 @@ impl<'a> /*trait*/ QAbstractSlider_invertedAppearance<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAbstractSlider18invertedAppearanceEv()};
     let mut ret = unsafe {C_ZNK15QAbstractSlider18invertedAppearanceEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -573,7 +573,7 @@ impl<'a> /*trait*/ QAbstractSlider_sliderPosition<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAbstractSlider14sliderPositionEv()};
     let mut ret = unsafe {C_ZNK15QAbstractSlider14sliderPositionEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

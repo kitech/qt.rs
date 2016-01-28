@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qscrollarea.h
 // dst-file: /src/widgets/qscrollarea.rs
 //
@@ -18,11 +18,11 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qabstractscrollarea::QAbstractScrollArea; // 773
+use super::qabstractscrollarea::*; // 773
 use std::ops::Deref;
-use super::qwidget::QWidget; // 773
-use super::super::core::qsize::QSize; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
+use super::qwidget::*; // 773
+use super::super::core::qsize::*; // 771
+use super::super::core::qobjectdefs::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -299,7 +299,7 @@ impl<'a> /*trait*/ QScrollArea_widgetResizable<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QScrollArea15widgetResizableEv()};
     let mut ret = unsafe {C_ZNK11QScrollArea15widgetResizableEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -345,7 +345,7 @@ impl<'a> /*trait*/ QScrollArea_focusNextPrevChild<i8> for (i8) {
     // unsafe{_ZN11QScrollArea18focusNextPrevChildEb()};
     let arg0 = self  as c_char;
     let mut ret = unsafe {C_ZN11QScrollArea18focusNextPrevChildEb(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

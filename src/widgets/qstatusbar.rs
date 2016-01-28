@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qstatusbar.h
 // dst-file: /src/widgets/qstatusbar.rs
 //
@@ -18,10 +18,10 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qwidget::QWidget; // 773
+use super::qwidget::*; // 773
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
+use super::super::core::qstring::*; // 771
+use super::super::core::qobjectdefs::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -130,7 +130,7 @@ impl<'a> /*trait*/ QStatusBar_insertPermanentWidget<i32> for (i32, &'a QWidget, 
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2  as c_int;
     let mut ret = unsafe {C_ZN10QStatusBar21insertPermanentWidgetEiP7QWidgeti(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -223,7 +223,7 @@ impl<'a> /*trait*/ QStatusBar_isSizeGripEnabled<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QStatusBar17isSizeGripEnabledEv()};
     let mut ret = unsafe {C_ZNK10QStatusBar17isSizeGripEnabledEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -343,7 +343,7 @@ impl<'a> /*trait*/ QStatusBar_insertWidget<i32> for (i32, &'a QWidget, i32) {
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2  as c_int;
     let mut ret = unsafe {C_ZN10QStatusBar12insertWidgetEiP7QWidgeti(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

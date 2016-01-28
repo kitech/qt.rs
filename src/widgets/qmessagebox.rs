@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qmessagebox.h
 // dst-file: /src/widgets/qmessagebox.rs
 //
@@ -18,16 +18,17 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qdialog::QDialog; // 773
+use super::qdialog::*; // 773
 use std::ops::Deref;
-use super::qwidget::QWidget; // 773
-use super::super::core::qstring::QString; // 771
-use super::qabstractbutton::QAbstractButton; // 773
-use super::super::gui::qpixmap::QPixmap; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::qpushbutton::QPushButton; // 773
-use super::super::core::qobject::QObject; // 771
-use super::qcheckbox::QCheckBox; // 773
+use super::qwidget::*; // 773
+use super::super::core::qstring::*; // 771
+use super::qabstractbutton::*; // 773
+use super::super::gui::qpixmap::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::qpushbutton::*; // 773
+use super::super::core::qobject::*; // 771
+// use super::qlist::*; // 775
+use super::qcheckbox::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -65,7 +66,7 @@ extern {
   // proto:  void QMessageBox::open(QObject * receiver, const char * member);
   fn C_ZN11QMessageBox4openEP7QObjectPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_char);
   // proto:  QList<QAbstractButton *> QMessageBox::buttons();
-  fn C_ZNK11QMessageBox7buttonsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK11QMessageBox7buttonsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto: static void QMessageBox::aboutQt(QWidget * parent, const QString & title);
   fn C_ZN11QMessageBox7aboutQtEP7QWidgetRK7QString(arg0: *mut c_void, arg1: *mut c_void);
   // proto:  QString QMessageBox::informativeText();
@@ -159,7 +160,7 @@ impl<'a> /*trait*/ QMessageBox_critical_s<i32> for (&'a QWidget, &'a QString, &'
     let arg4 = self.4  as c_int;
     let arg5 = self.5  as c_int;
     let mut ret = unsafe {C_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -331,7 +332,7 @@ impl<'a> /*trait*/ QMessageBox_question_s<i32> for (&'a QWidget, &'a QString, &'
     let arg6 = self.6  as c_int;
     let arg7 = self.7  as c_int;
     let mut ret = unsafe {C_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -360,7 +361,7 @@ impl<'a> /*trait*/ QMessageBox_warning_s<i32> for (&'a QWidget, &'a QString, &'a
     let arg4 = self.4  as c_int;
     let arg5 = self.5  as c_int;
     let mut ret = unsafe {C_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -401,7 +402,7 @@ impl<'a> /*trait*/ QMessageBox_question_s<i32> for (&'a QWidget, &'a QString, &'
     let arg4 = self.4  as c_int;
     let arg5 = self.5  as c_int;
     let mut ret = unsafe {C_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -467,11 +468,12 @@ pub trait QMessageBox_buttons<RetType> {
 }
 
   // proto:  QList<QAbstractButton *> QMessageBox::buttons();
-impl<'a> /*trait*/ QMessageBox_buttons<()> for () {
-  fn buttons(self , rsthis: & QMessageBox) -> () {
+impl<'a> /*trait*/ QMessageBox_buttons<u64> for () {
+  fn buttons(self , rsthis: & QMessageBox) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMessageBox7buttonsEv()};
-     unsafe {C_ZNK11QMessageBox7buttonsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QMessageBox7buttonsEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -612,7 +614,7 @@ impl<'a> /*trait*/ QMessageBox_critical_s<i32> for (&'a QWidget, &'a QString, &'
     let arg6 = self.6  as c_int;
     let arg7 = self.7  as c_int;
     let mut ret = unsafe {C_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -678,7 +680,7 @@ impl<'a> /*trait*/ QMessageBox_warning_s<i32> for (&'a QWidget, &'a QString, &'a
     let arg6 = self.6  as c_int;
     let arg7 = self.7  as c_int;
     let mut ret = unsafe {C_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -730,7 +732,7 @@ impl<'a> /*trait*/ QMessageBox_information_s<i32> for (&'a QWidget, &'a QString,
     let arg4 = self.4  as c_int;
     let arg5 = self.5  as c_int;
     let mut ret = unsafe {C_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -939,7 +941,7 @@ impl<'a> /*trait*/ QMessageBox_information_s<i32> for (&'a QWidget, &'a QString,
     let arg6 = self.6  as c_int;
     let arg7 = self.7  as c_int;
     let mut ret = unsafe {C_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

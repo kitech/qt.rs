@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qabstractspinbox.h
 // dst-file: /src/widgets/qabstractspinbox.rs
 //
@@ -18,12 +18,12 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qwidget::QWidget; // 773
+use super::qwidget::*; // 773
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
-use super::super::core::qcoreevent::QEvent; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::core::qsize::QSize; // 771
+use super::super::core::qstring::*; // 771
+use super::super::core::qcoreevent::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::super::core::qsize::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -277,7 +277,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_event<i8> for (&'a QEvent) {
     // unsafe{_ZN16QAbstractSpinBox5eventEP6QEvent()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN16QAbstractSpinBox5eventEP6QEvent(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -300,7 +300,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_keyboardTracking<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAbstractSpinBox16keyboardTrackingEv()};
     let mut ret = unsafe {C_ZNK16QAbstractSpinBox16keyboardTrackingEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -554,7 +554,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_wrapping<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAbstractSpinBox8wrappingEv()};
     let mut ret = unsafe {C_ZNK16QAbstractSpinBox8wrappingEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -673,7 +673,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_isAccelerated<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAbstractSpinBox13isAcceleratedEv()};
     let mut ret = unsafe {C_ZNK16QAbstractSpinBox13isAcceleratedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -719,7 +719,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_isReadOnly<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAbstractSpinBox10isReadOnlyEv()};
     let mut ret = unsafe {C_ZNK16QAbstractSpinBox10isReadOnlyEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -742,7 +742,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_hasAcceptableInput<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAbstractSpinBox18hasAcceptableInputEv()};
     let mut ret = unsafe {C_ZNK16QAbstractSpinBox18hasAcceptableInputEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -765,7 +765,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_isGroupSeparatorShown<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAbstractSpinBox21isGroupSeparatorShownEv()};
     let mut ret = unsafe {C_ZNK16QAbstractSpinBox21isGroupSeparatorShownEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -788,7 +788,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_hasFrame<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAbstractSpinBox8hasFrameEv()};
     let mut ret = unsafe {C_ZNK16QAbstractSpinBox8hasFrameEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

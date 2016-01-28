@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qprogressdialog.h
 // dst-file: /src/widgets/qprogressdialog.rs
 //
@@ -18,16 +18,16 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qdialog::QDialog; // 773
+use super::qdialog::*; // 773
 use std::ops::Deref;
-use super::super::core::qobject::QObject; // 771
-use super::super::core::qstring::QString; // 771
-use super::qwidget::QWidget; // 773
-use super::qprogressbar::QProgressBar; // 773
-use super::super::core::qsize::QSize; // 771
-use super::qlabel::QLabel; // 773
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::qpushbutton::QPushButton; // 773
+use super::super::core::qobject::*; // 771
+use super::super::core::qstring::*; // 771
+use super::qwidget::*; // 773
+use super::qprogressbar::*; // 773
+use super::super::core::qsize::*; // 771
+use super::qlabel::*; // 773
+use super::super::core::qobjectdefs::*; // 771
+use super::qpushbutton::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -253,7 +253,7 @@ impl<'a> /*trait*/ QProgressDialog_wasCanceled<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QProgressDialog11wasCanceledEv()};
     let mut ret = unsafe {C_ZNK15QProgressDialog11wasCanceledEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -298,7 +298,7 @@ impl<'a> /*trait*/ QProgressDialog_minimumDuration<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QProgressDialog15minimumDurationEv()};
     let mut ret = unsafe {C_ZNK15QProgressDialog15minimumDurationEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -344,7 +344,7 @@ impl<'a> /*trait*/ QProgressDialog_maximum<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QProgressDialog7maximumEv()};
     let mut ret = unsafe {C_ZNK15QProgressDialog7maximumEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -412,7 +412,7 @@ impl<'a> /*trait*/ QProgressDialog_autoClose<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QProgressDialog9autoCloseEv()};
     let mut ret = unsafe {C_ZNK15QProgressDialog9autoCloseEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -435,7 +435,7 @@ impl<'a> /*trait*/ QProgressDialog_minimum<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QProgressDialog7minimumEv()};
     let mut ret = unsafe {C_ZNK15QProgressDialog7minimumEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -458,7 +458,7 @@ impl<'a> /*trait*/ QProgressDialog_autoReset<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QProgressDialog9autoResetEv()};
     let mut ret = unsafe {C_ZNK15QProgressDialog9autoResetEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -668,7 +668,7 @@ impl<'a> /*trait*/ QProgressDialog_value<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QProgressDialog5valueEv()};
     let mut ret = unsafe {C_ZNK15QProgressDialog5valueEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

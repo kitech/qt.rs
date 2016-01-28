@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qstyle.h
 // dst-file: /src/widgets/qstyle.rs
 //
@@ -18,22 +18,20 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qobject::QObject; // 771
+use super::super::core::qobject::*; // 771
 use std::ops::Deref;
-use super::super::gui::qpixmap::QPixmap; // 771
-use super::qstyleoption::QStyleOption; // 773
-use super::qwidget::QWidget; // 773
-use super::qstyleoption::QStyleOptionComplex; // 773
-use super::super::gui::qpainter::QPainter; // 771
-use super::super::core::qpoint::QPoint; // 771
-use super::super::core::qrect::QRect; // 771
-use super::super::gui::qpalette::QPalette; // 771
-use super::super::gui::qfontmetrics::QFontMetrics; // 771
-use super::super::core::qstring::QString; // 771
-use super::qstyleoption::QStyleHintReturn; // 773
-use super::super::core::qsize::QSize; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::qapplication::QApplication; // 773
+use super::super::gui::qpixmap::*; // 771
+use super::qstyleoption::*; // 773
+use super::qwidget::*; // 773
+use super::super::gui::qpainter::*; // 771
+use super::super::core::qpoint::*; // 771
+use super::super::core::qrect::*; // 771
+use super::super::gui::qpalette::*; // 771
+use super::super::gui::qfontmetrics::*; // 771
+use super::super::core::qstring::*; // 771
+use super::super::core::qsize::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::qapplication::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -395,7 +393,7 @@ impl<'a> /*trait*/ QStyle_sliderPositionFromValue_s<i32> for (i32, i32, i32, i32
     let arg3 = self.3  as c_int;
     let arg4 = self.4  as c_char;
     let mut ret = unsafe {C_ZN6QStyle23sliderPositionFromValueEiiiib(arg0, arg1, arg2, arg3, arg4)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -423,7 +421,7 @@ impl<'a> /*trait*/ QStyle_sliderValueFromPosition_s<i32> for (i32, i32, i32, i32
     let arg3 = self.3  as c_int;
     let arg4 = self.4  as c_char;
     let mut ret = unsafe {C_ZN6QStyle23sliderValueFromPositionEiiiib(arg0, arg1, arg2, arg3, arg4)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

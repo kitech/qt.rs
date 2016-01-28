@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qdatetimeedit.h
 // dst-file: /src/widgets/qdatetimeedit.rs
 //
@@ -20,16 +20,14 @@ use self::libc::*;
 // use block begin =>
 // use super::qdatetimeedit::QDateTimeEdit; // 773
 use std::ops::Deref;
-use super::qwidget::QWidget; // 773
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::core::qdatetime::QTime; // 771
-use super::super::core::qdatetime::QDate; // 771
-use super::qabstractspinbox::QAbstractSpinBox; // 773
-use super::super::core::qdatetime::QDateTime; // 771
-use super::super::core::qcoreevent::QEvent; // 771
-use super::qcalendarwidget::QCalendarWidget; // 773
-use super::super::core::qstring::QString; // 771
-use super::super::core::qsize::QSize; // 771
+use super::qwidget::*; // 773
+use super::super::core::qobjectdefs::*; // 771
+use super::super::core::qdatetime::*; // 771
+use super::qabstractspinbox::*; // 773
+use super::super::core::qcoreevent::*; // 771
+use super::qcalendarwidget::*; // 773
+use super::super::core::qstring::*; // 771
+use super::super::core::qsize::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -802,7 +800,7 @@ impl<'a> /*trait*/ QDateTimeEdit_currentSectionIndex<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QDateTimeEdit19currentSectionIndexEv()};
     let mut ret = unsafe {C_ZNK13QDateTimeEdit19currentSectionIndexEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -826,7 +824,7 @@ impl<'a> /*trait*/ QDateTimeEdit_event<i8> for (&'a QEvent) {
     // unsafe{_ZN13QDateTimeEdit5eventEP6QEvent()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN13QDateTimeEdit5eventEP6QEvent(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1034,7 +1032,7 @@ impl<'a> /*trait*/ QDateTimeEdit_calendarPopup<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QDateTimeEdit13calendarPopupEv()};
     let mut ret = unsafe {C_ZNK13QDateTimeEdit13calendarPopupEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1344,7 +1342,7 @@ impl<'a> /*trait*/ QDateTimeEdit_sectionCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QDateTimeEdit12sectionCountEv()};
     let mut ret = unsafe {C_ZNK13QDateTimeEdit12sectionCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

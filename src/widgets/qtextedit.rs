@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qtextedit.h
 // dst-file: /src/widgets/qtextedit.rs
 //
@@ -18,23 +18,23 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qabstractscrollarea::QAbstractScrollArea; // 773
+use super::qabstractscrollarea::*; // 773
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
-use super::qmenu::QMenu; // 773
-use super::super::gui::qtextdocument::QTextDocument; // 771
-use super::super::core::qvariant::QVariant; // 771
-use super::super::core::qrect::QRect; // 771
-use super::super::gui::qcolor::QColor; // 771
-use super::super::core::qpoint::QPoint; // 771
-use super::super::gui::qtextcursor::QTextCursor; // 771
-use super::super::gui::qtextformat::QTextCharFormat; // 771
-use super::super::core::qregexp::QRegExp; // 771
-use super::super::gui::qfont::QFont; // 771
-use super::super::core::qurl::QUrl; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::qwidget::QWidget; // 773
-use super::super::gui::qpagedpaintdevice::QPagedPaintDevice; // 771
+use super::super::core::qstring::*; // 771
+use super::qmenu::*; // 773
+use super::super::gui::qtextdocument::*; // 771
+use super::super::core::qvariant::*; // 771
+use super::super::core::qrect::*; // 771
+use super::super::gui::qcolor::*; // 771
+use super::super::core::qpoint::*; // 771
+use super::super::gui::qtextcursor::*; // 771
+use super::super::gui::qtextformat::*; // 771
+use super::super::core::qregexp::*; // 771
+use super::super::gui::qfont::*; // 771
+use super::super::core::qurl::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::qwidget::*; // 773
+use super::super::gui::qpagedpaintdevice::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -254,7 +254,7 @@ impl<'a> /*trait*/ QTextEdit_lineWrapColumnOrWidth<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit21lineWrapColumnOrWidthEv()};
     let mut ret = unsafe {C_ZNK9QTextEdit21lineWrapColumnOrWidthEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -442,7 +442,7 @@ impl<'a> /*trait*/ QTextEdit_acceptRichText<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit14acceptRichTextEv()};
     let mut ret = unsafe {C_ZNK9QTextEdit14acceptRichTextEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -604,7 +604,7 @@ impl<'a> /*trait*/ QTextEdit_cursorWidth<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit11cursorWidthEv()};
     let mut ret = unsafe {C_ZNK9QTextEdit11cursorWidthEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -650,7 +650,7 @@ impl<'a> /*trait*/ QTextEdit_tabStopWidth<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit12tabStopWidthEv()};
     let mut ret = unsafe {C_ZNK9QTextEdit12tabStopWidthEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -786,7 +786,7 @@ impl<'a> /*trait*/ QTextEdit_overwriteMode<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit13overwriteModeEv()};
     let mut ret = unsafe {C_ZNK9QTextEdit13overwriteModeEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -925,7 +925,7 @@ impl<'a> /*trait*/ QTextEdit_fontItalic<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit10fontItalicEv()};
     let mut ret = unsafe {C_ZNK9QTextEdit10fontItalicEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -970,7 +970,7 @@ impl<'a> /*trait*/ QTextEdit_fontPointSize<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit13fontPointSizeEv()};
     let mut ret = unsafe {C_ZNK9QTextEdit13fontPointSizeEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1107,7 +1107,7 @@ impl<'a> /*trait*/ QTextEdit_canPaste<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit8canPasteEv()};
     let mut ret = unsafe {C_ZNK9QTextEdit8canPasteEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1214,7 +1214,7 @@ impl<'a> /*trait*/ QTextEdit_isUndoRedoEnabled<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit17isUndoRedoEnabledEv()};
     let mut ret = unsafe {C_ZNK9QTextEdit17isUndoRedoEnabledEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1328,7 +1328,7 @@ impl<'a> /*trait*/ QTextEdit_isReadOnly<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit10isReadOnlyEv()};
     let mut ret = unsafe {C_ZNK9QTextEdit10isReadOnlyEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1716,7 +1716,7 @@ impl<'a> /*trait*/ QTextEdit_tabChangesFocus<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit15tabChangesFocusEv()};
     let mut ret = unsafe {C_ZNK9QTextEdit15tabChangesFocusEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1815,7 +1815,7 @@ impl<'a> /*trait*/ QTextEdit_fontUnderline<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit13fontUnderlineEv()};
     let mut ret = unsafe {C_ZNK9QTextEdit13fontUnderlineEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1861,7 +1861,7 @@ impl<'a> /*trait*/ QTextEdit_fontWeight<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit10fontWeightEv()};
     let mut ret = unsafe {C_ZNK9QTextEdit10fontWeightEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

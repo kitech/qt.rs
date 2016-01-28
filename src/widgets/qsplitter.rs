@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qsplitter.h
 // dst-file: /src/widgets/qsplitter.rs
 //
@@ -18,12 +18,13 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qframe::QFrame; // 773
+use super::qframe::*; // 773
 use std::ops::Deref;
-use super::qwidget::QWidget; // 773
-use super::super::core::qbytearray::QByteArray; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::core::qsize::QSize; // 771
+use super::qwidget::*; // 773
+use super::super::core::qbytearray::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::super::core::qsize::*; // 771
+// use super::qlist::*; // 775
 // use super::qsplitter::QSplitterHandle; // 773
 // use super::qsplitter::QSplitter; // 773
 // <= use block end
@@ -63,7 +64,7 @@ extern {
   // proto:  QWidget * QSplitter::widget(int index);
   fn C_ZNK9QSplitter6widgetEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  QList<int> QSplitter::sizes();
-  fn C_ZNK9QSplitter5sizesEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK9QSplitter5sizesEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QSplitter::isCollapsible(int index);
   fn C_ZNK9QSplitter13isCollapsibleEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
   // proto:  void QSplitter::setCollapsible(int index, bool );
@@ -175,7 +176,7 @@ impl<'a> /*trait*/ QSplitter_childrenCollapsible<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QSplitter19childrenCollapsibleEv()};
     let mut ret = unsafe {C_ZNK9QSplitter19childrenCollapsibleEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -198,7 +199,7 @@ impl<'a> /*trait*/ QSplitter_count<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QSplitter5countEv()};
     let mut ret = unsafe {C_ZNK9QSplitter5countEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -269,7 +270,7 @@ impl<'a> /*trait*/ QSplitter_opaqueResize<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QSplitter12opaqueResizeEv()};
     let mut ret = unsafe {C_ZNK9QSplitter12opaqueResizeEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -457,11 +458,12 @@ pub trait QSplitter_sizes<RetType> {
 }
 
   // proto:  QList<int> QSplitter::sizes();
-impl<'a> /*trait*/ QSplitter_sizes<()> for () {
-  fn sizes(self , rsthis: & QSplitter) -> () {
+impl<'a> /*trait*/ QSplitter_sizes<u64> for () {
+  fn sizes(self , rsthis: & QSplitter) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QSplitter5sizesEv()};
-     unsafe {C_ZNK9QSplitter5sizesEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QSplitter5sizesEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -485,7 +487,7 @@ impl<'a> /*trait*/ QSplitter_isCollapsible<i8> for (i32) {
     // unsafe{_ZNK9QSplitter13isCollapsibleEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK9QSplitter13isCollapsibleEi(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -533,7 +535,7 @@ impl<'a> /*trait*/ QSplitter_restoreState<i8> for (&'a QByteArray) {
     // unsafe{_ZN9QSplitter12restoreStateERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN9QSplitter12restoreStateERK10QByteArray(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -601,7 +603,7 @@ impl<'a> /*trait*/ QSplitter_handleWidth<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QSplitter11handleWidthEv()};
     let mut ret = unsafe {C_ZNK9QSplitter11handleWidthEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -671,7 +673,7 @@ impl<'a> /*trait*/ QSplitter_indexOf<i32> for (&'a QWidget) {
     // unsafe{_ZNK9QSplitter7indexOfEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK9QSplitter7indexOfEP7QWidget(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -807,7 +809,7 @@ impl<'a> /*trait*/ QSplitterHandle_opaqueResize<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSplitterHandle12opaqueResizeEv()};
     let mut ret = unsafe {C_ZNK15QSplitterHandle12opaqueResizeEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

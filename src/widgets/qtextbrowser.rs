@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qtextbrowser.h
 // dst-file: /src/widgets/qtextbrowser.rs
 //
@@ -18,14 +18,14 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qtextedit::QTextEdit; // 773
+use super::qtextedit::*; // 773
 use std::ops::Deref;
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::core::qurl::QUrl; // 771
-use super::qwidget::QWidget; // 773
-use super::super::core::qstring::QString; // 771
-use super::super::core::qstringlist::QStringList; // 771
-use super::super::core::qvariant::QVariant; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::super::core::qurl::*; // 771
+use super::qwidget::*; // 773
+use super::super::core::qstring::*; // 771
+use super::super::core::qstringlist::*; // 771
+use super::super::core::qvariant::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -77,7 +77,7 @@ extern {
   // proto:  void QTextBrowser::setSource(const QUrl & name);
   fn C_ZN12QTextBrowser9setSourceERK4QUrl(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QStringList QTextBrowser::searchPaths();
-  fn C_ZNK12QTextBrowser11searchPathsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK12QTextBrowser11searchPathsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QTextBrowser::backward();
   fn C_ZN12QTextBrowser8backwardEv(qthis: u64 /* *mut c_void*/);
   // proto:  int QTextBrowser::forwardHistoryCount();
@@ -140,7 +140,7 @@ impl<'a> /*trait*/ QTextBrowser_isBackwardAvailable<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTextBrowser19isBackwardAvailableEv()};
     let mut ret = unsafe {C_ZNK12QTextBrowser19isBackwardAvailableEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -185,7 +185,7 @@ impl<'a> /*trait*/ QTextBrowser_openLinks<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTextBrowser9openLinksEv()};
     let mut ret = unsafe {C_ZNK12QTextBrowser9openLinksEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -279,7 +279,7 @@ impl<'a> /*trait*/ QTextBrowser_isForwardAvailable<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTextBrowser18isForwardAvailableEv()};
     let mut ret = unsafe {C_ZNK12QTextBrowser18isForwardAvailableEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -302,7 +302,7 @@ impl<'a> /*trait*/ QTextBrowser_openExternalLinks<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTextBrowser17openExternalLinksEv()};
     let mut ret = unsafe {C_ZNK12QTextBrowser17openExternalLinksEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -353,7 +353,7 @@ impl<'a> /*trait*/ QTextBrowser_backwardHistoryCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTextBrowser20backwardHistoryCountEv()};
     let mut ret = unsafe {C_ZNK12QTextBrowser20backwardHistoryCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -604,11 +604,13 @@ pub trait QTextBrowser_searchPaths<RetType> {
 }
 
   // proto:  QStringList QTextBrowser::searchPaths();
-impl<'a> /*trait*/ QTextBrowser_searchPaths<()> for () {
-  fn searchPaths(self , rsthis: & QTextBrowser) -> () {
+impl<'a> /*trait*/ QTextBrowser_searchPaths<QStringList> for () {
+  fn searchPaths(self , rsthis: & QTextBrowser) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTextBrowser11searchPathsEv()};
-     unsafe {C_ZNK12QTextBrowser11searchPathsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QTextBrowser11searchPathsEv(rsthis.qclsinst)};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -653,7 +655,7 @@ impl<'a> /*trait*/ QTextBrowser_forwardHistoryCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTextBrowser19forwardHistoryCountEv()};
     let mut ret = unsafe {C_ZNK12QTextBrowser19forwardHistoryCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

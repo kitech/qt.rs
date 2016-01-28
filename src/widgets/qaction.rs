@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qaction.h
 // dst-file: /src/widgets/qaction.rs
 //
@@ -18,17 +18,18 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qobject::QObject; // 771
+use super::super::core::qobject::*; // 771
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
-use super::super::gui::qfont::QFont; // 771
-use super::super::core::qvariant::QVariant; // 771
-use super::super::gui::qicon::QIcon; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::qwidget::QWidget; // 773
-use super::qmenu::QMenu; // 773
-use super::super::gui::qkeysequence::QKeySequence; // 771
-use super::qactiongroup::QActionGroup; // 773
+// use super::qlist::*; // 775
+use super::super::core::qstring::*; // 771
+use super::super::gui::qfont::*; // 771
+use super::super::core::qvariant::*; // 771
+use super::super::gui::qicon::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::qwidget::*; // 773
+use super::qmenu::*; // 773
+use super::super::gui::qkeysequence::*; // 771
+use super::qactiongroup::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -40,7 +41,7 @@ use super::qactiongroup::QActionGroup; // 773
 extern {
   fn QAction_Class_Size() -> c_int;
   // proto:  QList<QWidget *> QAction::associatedWidgets();
-  fn C_ZNK7QAction17associatedWidgetsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK7QAction17associatedWidgetsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAction::setAutoRepeat(bool );
   fn C_ZN7QAction13setAutoRepeatEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QString QAction::whatsThis();
@@ -100,7 +101,7 @@ extern {
   // proto:  void QAction::setMenu(QMenu * menu);
   fn C_ZN7QAction7setMenuEP5QMenu(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QList<QKeySequence> QAction::shortcuts();
-  fn C_ZNK7QAction9shortcutsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK7QAction9shortcutsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAction::setCheckable(bool );
   fn C_ZN7QAction12setCheckableEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QString QAction::toolTip();
@@ -110,7 +111,7 @@ extern {
   // proto:  void QAction::setSeparator(bool b);
   fn C_ZN7QAction12setSeparatorEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QList<QGraphicsWidget *> QAction::associatedGraphicsWidgets();
-  fn C_ZNK7QAction25associatedGraphicsWidgetsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK7QAction25associatedGraphicsWidgetsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAction::setVisible(bool );
   fn C_ZN7QAction10setVisibleEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  bool QAction::isSeparator();
@@ -187,11 +188,12 @@ pub trait QAction_associatedWidgets<RetType> {
 }
 
   // proto:  QList<QWidget *> QAction::associatedWidgets();
-impl<'a> /*trait*/ QAction_associatedWidgets<()> for () {
-  fn associatedWidgets(self , rsthis: & QAction) -> () {
+impl<'a> /*trait*/ QAction_associatedWidgets<u64> for () {
+  fn associatedWidgets(self , rsthis: & QAction) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction17associatedWidgetsEv()};
-     unsafe {C_ZNK7QAction17associatedWidgetsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QAction17associatedWidgetsEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -312,7 +314,7 @@ impl<'a> /*trait*/ QAction_isVisible<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction9isVisibleEv()};
     let mut ret = unsafe {C_ZNK7QAction9isVisibleEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -467,7 +469,7 @@ impl<'a> /*trait*/ QAction_showStatusText<i8> for (&'a QWidget) {
     // unsafe{_ZN7QAction14showStatusTextEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN7QAction14showStatusTextEP7QWidget(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -561,7 +563,7 @@ impl<'a> /*trait*/ QAction_isCheckable<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction11isCheckableEv()};
     let mut ret = unsafe {C_ZNK7QAction11isCheckableEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -874,11 +876,12 @@ pub trait QAction_shortcuts<RetType> {
 }
 
   // proto:  QList<QKeySequence> QAction::shortcuts();
-impl<'a> /*trait*/ QAction_shortcuts<()> for () {
-  fn shortcuts(self , rsthis: & QAction) -> () {
+impl<'a> /*trait*/ QAction_shortcuts<u64> for () {
+  fn shortcuts(self , rsthis: & QAction) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction9shortcutsEv()};
-     unsafe {C_ZNK7QAction9shortcutsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QAction9shortcutsEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -990,11 +993,12 @@ pub trait QAction_associatedGraphicsWidgets<RetType> {
 }
 
   // proto:  QList<QGraphicsWidget *> QAction::associatedGraphicsWidgets();
-impl<'a> /*trait*/ QAction_associatedGraphicsWidgets<()> for () {
-  fn associatedGraphicsWidgets(self , rsthis: & QAction) -> () {
+impl<'a> /*trait*/ QAction_associatedGraphicsWidgets<u64> for () {
+  fn associatedGraphicsWidgets(self , rsthis: & QAction) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction25associatedGraphicsWidgetsEv()};
-     unsafe {C_ZNK7QAction25associatedGraphicsWidgetsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QAction25associatedGraphicsWidgetsEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -1040,7 +1044,7 @@ impl<'a> /*trait*/ QAction_isSeparator<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction11isSeparatorEv()};
     let mut ret = unsafe {C_ZNK7QAction11isSeparatorEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1157,7 +1161,7 @@ impl<'a> /*trait*/ QAction_isChecked<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction9isCheckedEv()};
     let mut ret = unsafe {C_ZNK7QAction9isCheckedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1180,7 +1184,7 @@ impl<'a> /*trait*/ QAction_autoRepeat<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction10autoRepeatEv()};
     let mut ret = unsafe {C_ZNK7QAction10autoRepeatEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1203,7 +1207,7 @@ impl<'a> /*trait*/ QAction_isEnabled<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction9isEnabledEv()};
     let mut ret = unsafe {C_ZNK7QAction9isEnabledEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1272,7 +1276,7 @@ impl<'a> /*trait*/ QAction_isIconVisibleInMenu<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction19isIconVisibleInMenuEv()};
     let mut ret = unsafe {C_ZNK7QAction19isIconVisibleInMenuEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

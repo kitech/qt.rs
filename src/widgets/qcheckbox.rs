@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qcheckbox.h
 // dst-file: /src/widgets/qcheckbox.rs
 //
@@ -18,12 +18,12 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qabstractbutton::QAbstractButton; // 773
+use super::qabstractbutton::*; // 773
 use std::ops::Deref;
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::core::qsize::QSize; // 771
-use super::qwidget::QWidget; // 773
-use super::super::core::qstring::QString; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::super::core::qsize::*; // 771
+use super::qwidget::*; // 773
+use super::super::core::qstring::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -242,7 +242,7 @@ impl<'a> /*trait*/ QCheckBox_isTristate<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QCheckBox10isTristateEv()};
     let mut ret = unsafe {C_ZNK9QCheckBox10isTristateEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

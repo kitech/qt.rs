@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qtoolbar.h
 // dst-file: /src/widgets/qtoolbar.rs
 //
@@ -18,16 +18,16 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qwidget::QWidget; // 773
+use super::qwidget::*; // 773
 use std::ops::Deref;
-use super::super::gui::qicon::QIcon; // 771
-use super::super::core::qstring::QString; // 771
-use super::super::core::qobject::QObject; // 771
-use super::qaction::QAction; // 773
-use super::super::core::qsize::QSize; // 771
-use super::super::core::qrect::QRect; // 771
-use super::super::core::qpoint::QPoint; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
+use super::super::gui::qicon::*; // 771
+use super::super::core::qstring::*; // 771
+use super::super::core::qobject::*; // 771
+use super::qaction::*; // 773
+use super::super::core::qsize::*; // 771
+use super::super::core::qrect::*; // 771
+use super::super::core::qpoint::*; // 771
+use super::super::core::qobjectdefs::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -174,7 +174,7 @@ impl<'a> /*trait*/ QToolBar_isFloatable<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QToolBar11isFloatableEv()};
     let mut ret = unsafe {C_ZNK8QToolBar11isFloatableEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -345,7 +345,7 @@ impl<'a> /*trait*/ QToolBar_isMovable<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QToolBar9isMovableEv()};
     let mut ret = unsafe {C_ZNK8QToolBar9isMovableEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -519,7 +519,7 @@ impl<'a> /*trait*/ QToolBar_isFloating<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QToolBar10isFloatingEv()};
     let mut ret = unsafe {C_ZNK8QToolBar10isFloatingEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qgraphicsitemanimation.h
 // dst-file: /src/widgets/qgraphicsitemanimation.rs
 //
@@ -18,13 +18,14 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qobject::QObject; // 771
+use super::super::core::qobject::*; // 771
 use std::ops::Deref;
-use super::super::core::qpoint::QPointF; // 771
-use super::super::gui::qmatrix::QMatrix; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::core::qtimeline::QTimeLine; // 771
-use super::qgraphicsitem::QGraphicsItem; // 773
+use super::super::core::qpoint::*; // 771
+// use super::qlist::*; // 775
+use super::super::gui::qmatrix::*; // 771
+use super::qgraphicsitem::*; // 773
+use super::super::core::qobjectdefs::*; // 771
+use super::super::core::qtimeline::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -42,7 +43,7 @@ extern {
   // proto:  void QGraphicsItemAnimation::setRotationAt(qreal step, qreal angle);
   fn C_ZN22QGraphicsItemAnimation13setRotationAtEdd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double);
   // proto:  QList<QPair<qreal, QPointF> > QGraphicsItemAnimation::posList();
-  fn C_ZNK22QGraphicsItemAnimation7posListEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK22QGraphicsItemAnimation7posListEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  qreal QGraphicsItemAnimation::verticalScaleAt(qreal step);
   fn C_ZNK22QGraphicsItemAnimation15verticalScaleAtEd(qthis: u64 /* *mut c_void*/, arg0: c_double) -> c_double;
   // proto:  QPointF QGraphicsItemAnimation::posAt(qreal step);
@@ -54,7 +55,7 @@ extern {
   // proto:  QMatrix QGraphicsItemAnimation::matrixAt(qreal step);
   fn C_ZNK22QGraphicsItemAnimation8matrixAtEd(qthis: u64 /* *mut c_void*/, arg0: c_double) -> *mut c_void;
   // proto:  QGraphicsItem * QGraphicsItemAnimation::item();
-  fn C_ZNK22QGraphicsItemAnimation4itemEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK22QGraphicsItemAnimation4itemEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QGraphicsItemAnimation::QGraphicsItemAnimation(QObject * parent);
   fn C_ZN22QGraphicsItemAnimationC2EP7QObject(arg0: *mut c_void) -> u64;
   // proto:  void QGraphicsItemAnimation::~QGraphicsItemAnimation();
@@ -70,19 +71,19 @@ extern {
   // proto:  const QMetaObject * QGraphicsItemAnimation::metaObject();
   fn C_ZNK22QGraphicsItemAnimation10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QList<QPair<qreal, QPointF> > QGraphicsItemAnimation::scaleList();
-  fn C_ZNK22QGraphicsItemAnimation9scaleListEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK22QGraphicsItemAnimation9scaleListEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QList<QPair<qreal, qreal> > QGraphicsItemAnimation::rotationList();
-  fn C_ZNK22QGraphicsItemAnimation12rotationListEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK22QGraphicsItemAnimation12rotationListEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QGraphicsItemAnimation::reset();
   fn C_ZN22QGraphicsItemAnimation5resetEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QGraphicsItemAnimation::setTimeLine(QTimeLine * timeLine);
   fn C_ZN22QGraphicsItemAnimation11setTimeLineEP9QTimeLine(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QList<QPair<qreal, QPointF> > QGraphicsItemAnimation::shearList();
-  fn C_ZNK22QGraphicsItemAnimation9shearListEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK22QGraphicsItemAnimation9shearListEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QGraphicsItemAnimation::clear();
   fn C_ZN22QGraphicsItemAnimation5clearEv(qthis: u64 /* *mut c_void*/);
   // proto:  QList<QPair<qreal, QPointF> > QGraphicsItemAnimation::translationList();
-  fn C_ZNK22QGraphicsItemAnimation15translationListEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK22QGraphicsItemAnimation15translationListEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QGraphicsItemAnimation::setItem(QGraphicsItem * item);
   fn C_ZN22QGraphicsItemAnimation7setItemEP13QGraphicsItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsItemAnimation::setStep(qreal x);
@@ -163,7 +164,7 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_xTranslationAt<f64> for (f64) {
     // unsafe{_ZNK22QGraphicsItemAnimation14xTranslationAtEd()};
     let arg0 = self  as c_double;
     let mut ret = unsafe {C_ZNK22QGraphicsItemAnimation14xTranslationAtEd(rsthis.qclsinst, arg0)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -205,11 +206,12 @@ pub trait QGraphicsItemAnimation_posList<RetType> {
 }
 
   // proto:  QList<QPair<qreal, QPointF> > QGraphicsItemAnimation::posList();
-impl<'a> /*trait*/ QGraphicsItemAnimation_posList<()> for () {
-  fn posList(self , rsthis: & QGraphicsItemAnimation) -> () {
+impl<'a> /*trait*/ QGraphicsItemAnimation_posList<u64> for () {
+  fn posList(self , rsthis: & QGraphicsItemAnimation) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QGraphicsItemAnimation7posListEv()};
-     unsafe {C_ZNK22QGraphicsItemAnimation7posListEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK22QGraphicsItemAnimation7posListEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -233,7 +235,7 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_verticalScaleAt<f64> for (f64) {
     // unsafe{_ZNK22QGraphicsItemAnimation15verticalScaleAtEd()};
     let arg0 = self  as c_double;
     let mut ret = unsafe {C_ZNK22QGraphicsItemAnimation15verticalScaleAtEd(rsthis.qclsinst, arg0)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -282,7 +284,7 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_horizontalShearAt<f64> for (f64) {
     // unsafe{_ZNK22QGraphicsItemAnimation17horizontalShearAtEd()};
     let arg0 = self  as c_double;
     let mut ret = unsafe {C_ZNK22QGraphicsItemAnimation17horizontalShearAtEd(rsthis.qclsinst, arg0)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -306,7 +308,7 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_yTranslationAt<f64> for (f64) {
     // unsafe{_ZNK22QGraphicsItemAnimation14yTranslationAtEd()};
     let arg0 = self  as c_double;
     let mut ret = unsafe {C_ZNK22QGraphicsItemAnimation14yTranslationAtEd(rsthis.qclsinst, arg0)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -349,11 +351,13 @@ pub trait QGraphicsItemAnimation_item<RetType> {
 }
 
   // proto:  QGraphicsItem * QGraphicsItemAnimation::item();
-impl<'a> /*trait*/ QGraphicsItemAnimation_item<()> for () {
-  fn item(self , rsthis: & QGraphicsItemAnimation) -> () {
+impl<'a> /*trait*/ QGraphicsItemAnimation_item<QGraphicsItem> for () {
+  fn item(self , rsthis: & QGraphicsItemAnimation) -> QGraphicsItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QGraphicsItemAnimation4itemEv()};
-     unsafe {C_ZNK22QGraphicsItemAnimation4itemEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK22QGraphicsItemAnimation4itemEv(rsthis.qclsinst)};
+    let mut ret1 = QGraphicsItem::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -502,7 +506,7 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_rotationAt<f64> for (f64) {
     // unsafe{_ZNK22QGraphicsItemAnimation10rotationAtEd()};
     let arg0 = self  as c_double;
     let mut ret = unsafe {C_ZNK22QGraphicsItemAnimation10rotationAtEd(rsthis.qclsinst, arg0)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -544,11 +548,12 @@ pub trait QGraphicsItemAnimation_scaleList<RetType> {
 }
 
   // proto:  QList<QPair<qreal, QPointF> > QGraphicsItemAnimation::scaleList();
-impl<'a> /*trait*/ QGraphicsItemAnimation_scaleList<()> for () {
-  fn scaleList(self , rsthis: & QGraphicsItemAnimation) -> () {
+impl<'a> /*trait*/ QGraphicsItemAnimation_scaleList<u64> for () {
+  fn scaleList(self , rsthis: & QGraphicsItemAnimation) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QGraphicsItemAnimation9scaleListEv()};
-     unsafe {C_ZNK22QGraphicsItemAnimation9scaleListEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK22QGraphicsItemAnimation9scaleListEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -566,11 +571,12 @@ pub trait QGraphicsItemAnimation_rotationList<RetType> {
 }
 
   // proto:  QList<QPair<qreal, qreal> > QGraphicsItemAnimation::rotationList();
-impl<'a> /*trait*/ QGraphicsItemAnimation_rotationList<()> for () {
-  fn rotationList(self , rsthis: & QGraphicsItemAnimation) -> () {
+impl<'a> /*trait*/ QGraphicsItemAnimation_rotationList<u64> for () {
+  fn rotationList(self , rsthis: & QGraphicsItemAnimation) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QGraphicsItemAnimation12rotationListEv()};
-     unsafe {C_ZNK22QGraphicsItemAnimation12rotationListEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK22QGraphicsItemAnimation12rotationListEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -633,11 +639,12 @@ pub trait QGraphicsItemAnimation_shearList<RetType> {
 }
 
   // proto:  QList<QPair<qreal, QPointF> > QGraphicsItemAnimation::shearList();
-impl<'a> /*trait*/ QGraphicsItemAnimation_shearList<()> for () {
-  fn shearList(self , rsthis: & QGraphicsItemAnimation) -> () {
+impl<'a> /*trait*/ QGraphicsItemAnimation_shearList<u64> for () {
+  fn shearList(self , rsthis: & QGraphicsItemAnimation) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QGraphicsItemAnimation9shearListEv()};
-     unsafe {C_ZNK22QGraphicsItemAnimation9shearListEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK22QGraphicsItemAnimation9shearListEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -677,11 +684,12 @@ pub trait QGraphicsItemAnimation_translationList<RetType> {
 }
 
   // proto:  QList<QPair<qreal, QPointF> > QGraphicsItemAnimation::translationList();
-impl<'a> /*trait*/ QGraphicsItemAnimation_translationList<()> for () {
-  fn translationList(self , rsthis: & QGraphicsItemAnimation) -> () {
+impl<'a> /*trait*/ QGraphicsItemAnimation_translationList<u64> for () {
+  fn translationList(self , rsthis: & QGraphicsItemAnimation) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QGraphicsItemAnimation15translationListEv()};
-     unsafe {C_ZNK22QGraphicsItemAnimation15translationListEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK22QGraphicsItemAnimation15translationListEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -775,7 +783,7 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_horizontalScaleAt<f64> for (f64) {
     // unsafe{_ZNK22QGraphicsItemAnimation17horizontalScaleAtEd()};
     let arg0 = self  as c_double;
     let mut ret = unsafe {C_ZNK22QGraphicsItemAnimation17horizontalScaleAtEd(rsthis.qclsinst, arg0)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -799,7 +807,7 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_verticalShearAt<f64> for (f64) {
     // unsafe{_ZNK22QGraphicsItemAnimation15verticalShearAtEd()};
     let arg0 = self  as c_double;
     let mut ret = unsafe {C_ZNK22QGraphicsItemAnimation15verticalShearAtEd(rsthis.qclsinst, arg0)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qtabwidget.h
 // dst-file: /src/widgets/qtabwidget.rs
 //
@@ -18,13 +18,13 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qwidget::QWidget; // 773
+use super::qwidget::*; // 773
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
-use super::qtabbar::QTabBar; // 773
-use super::super::gui::qicon::QIcon; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::core::qsize::QSize; // 771
+use super::super::core::qstring::*; // 771
+use super::qtabbar::*; // 773
+use super::super::gui::qicon::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::super::core::qsize::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -197,7 +197,7 @@ impl<'a> /*trait*/ QTabWidget_count<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTabWidget5countEv()};
     let mut ret = unsafe {C_ZNK10QTabWidget5countEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -244,7 +244,7 @@ impl<'a> /*trait*/ QTabWidget_heightForWidth<i32> for (i32) {
     // unsafe{_ZNK10QTabWidget14heightForWidthEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK10QTabWidget14heightForWidthEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -269,7 +269,7 @@ impl<'a> /*trait*/ QTabWidget_addTab<i32> for (&'a QWidget, &'a QString) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN10QTabWidget6addTabEP7QWidgetRK7QString(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -339,7 +339,7 @@ impl<'a> /*trait*/ QTabWidget_hasHeightForWidth<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTabWidget17hasHeightForWidthEv()};
     let mut ret = unsafe {C_ZNK10QTabWidget17hasHeightForWidthEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -386,7 +386,7 @@ impl<'a> /*trait*/ QTabWidget_tabsClosable<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTabWidget12tabsClosableEv()};
     let mut ret = unsafe {C_ZNK10QTabWidget12tabsClosableEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -413,7 +413,7 @@ impl<'a> /*trait*/ QTabWidget_insertTab<i32> for (i32, &'a QWidget, &'a QIcon, &
     let arg2 = self.2.qclsinst  as *mut c_void;
     let arg3 = self.3.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN10QTabWidget9insertTabEiP7QWidgetRK5QIconRK7QString(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -427,7 +427,7 @@ impl<'a> /*trait*/ QTabWidget_addTab<i32> for (&'a QWidget, &'a QIcon, &'a QStri
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN10QTabWidget6addTabEP7QWidgetRK5QIconRK7QString(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -617,7 +617,7 @@ impl<'a> /*trait*/ QTabWidget_documentMode<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTabWidget12documentModeEv()};
     let mut ret = unsafe {C_ZNK10QTabWidget12documentModeEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -717,7 +717,7 @@ impl<'a> /*trait*/ QTabWidget_tabBarAutoHide<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTabWidget14tabBarAutoHideEv()};
     let mut ret = unsafe {C_ZNK10QTabWidget14tabBarAutoHideEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -790,7 +790,7 @@ impl<'a> /*trait*/ QTabWidget_isTabEnabled<i8> for (i32) {
     // unsafe{_ZNK10QTabWidget12isTabEnabledEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK10QTabWidget12isTabEnabledEi(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1001,7 +1001,7 @@ impl<'a> /*trait*/ QTabWidget_indexOf<i32> for (&'a QWidget) {
     // unsafe{_ZNK10QTabWidget7indexOfEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK10QTabWidget7indexOfEP7QWidget(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1071,7 +1071,7 @@ impl<'a> /*trait*/ QTabWidget_isMovable<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTabWidget9isMovableEv()};
     let mut ret = unsafe {C_ZNK10QTabWidget9isMovableEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1094,7 +1094,7 @@ impl<'a> /*trait*/ QTabWidget_usesScrollButtons<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTabWidget17usesScrollButtonsEv()};
     let mut ret = unsafe {C_ZNK10QTabWidget17usesScrollButtonsEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1117,7 +1117,7 @@ impl<'a> /*trait*/ QTabWidget_currentIndex<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTabWidget12currentIndexEv()};
     let mut ret = unsafe {C_ZNK10QTabWidget12currentIndexEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1131,7 +1131,7 @@ impl<'a> /*trait*/ QTabWidget_insertTab<i32> for (i32, &'a QWidget, &'a QString)
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN10QTabWidget9insertTabEiP7QWidgetRK7QString(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

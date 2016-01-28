@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qbuttongroup.h
 // dst-file: /src/widgets/qbuttongroup.rs
 //
@@ -18,10 +18,11 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qobject::QObject; // 771
+use super::super::core::qobject::*; // 771
 use std::ops::Deref;
-use super::qabstractbutton::QAbstractButton; // 773
-use super::super::core::qobjectdefs::QMetaObject; // 771
+use super::qabstractbutton::*; // 773
+// use super::qlist::*; // 775
+use super::super::core::qobjectdefs::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -35,7 +36,7 @@ extern {
   // proto:  void QButtonGroup::addButton(QAbstractButton * , int id);
   fn C_ZN12QButtonGroup9addButtonEP15QAbstractButtoni(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
   // proto:  QList<QAbstractButton *> QButtonGroup::buttons();
-  fn C_ZNK12QButtonGroup7buttonsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK12QButtonGroup7buttonsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QButtonGroup::~QButtonGroup();
   fn C_ZN12QButtonGroupD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  int QButtonGroup::id(QAbstractButton * button);
@@ -134,11 +135,12 @@ pub trait QButtonGroup_buttons<RetType> {
 }
 
   // proto:  QList<QAbstractButton *> QButtonGroup::buttons();
-impl<'a> /*trait*/ QButtonGroup_buttons<()> for () {
-  fn buttons(self , rsthis: & QButtonGroup) -> () {
+impl<'a> /*trait*/ QButtonGroup_buttons<u64> for () {
+  fn buttons(self , rsthis: & QButtonGroup) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QButtonGroup7buttonsEv()};
-     unsafe {C_ZNK12QButtonGroup7buttonsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QButtonGroup7buttonsEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -184,7 +186,7 @@ impl<'a> /*trait*/ QButtonGroup_id<i32> for (&'a QAbstractButton) {
     // unsafe{_ZNK12QButtonGroup2idEP15QAbstractButton()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK12QButtonGroup2idEP15QAbstractButton(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -307,7 +309,7 @@ impl<'a> /*trait*/ QButtonGroup_checkedId<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QButtonGroup9checkedIdEv()};
     let mut ret = unsafe {C_ZNK12QButtonGroup9checkedIdEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -401,7 +403,7 @@ impl<'a> /*trait*/ QButtonGroup_exclusive<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QButtonGroup9exclusiveEv()};
     let mut ret = unsafe {C_ZNK12QButtonGroup9exclusiveEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

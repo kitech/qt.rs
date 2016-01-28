@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qtooltip.h
 // dst-file: /src/widgets/qtooltip.rs
 //
@@ -19,12 +19,12 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::super::gui::qfont::QFont; // 771
-use super::super::gui::qpalette::QPalette; // 771
-use super::super::core::qpoint::QPoint; // 771
-use super::super::core::qstring::QString; // 771
-use super::qwidget::QWidget; // 773
-use super::super::core::qrect::QRect; // 771
+use super::super::gui::qfont::*; // 771
+use super::super::gui::qpalette::*; // 771
+use super::super::core::qpoint::*; // 771
+use super::super::core::qstring::*; // 771
+use super::qwidget::*; // 773
+use super::super::core::qrect::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -282,7 +282,7 @@ impl<'a> /*trait*/ QToolTip_isVisible_s<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolTip9isVisibleEv()};
     let mut ret = unsafe {C_ZN8QToolTip9isVisibleEv()};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

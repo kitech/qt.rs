@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qgraphicsanchorlayout.h
 // dst-file: /src/widgets/qgraphicsanchorlayout.rs
 //
@@ -18,12 +18,12 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qgraphicslayout::QGraphicsLayout; // 773
+use super::qgraphicslayout::*; // 773
 use std::ops::Deref;
-use super::qgraphicslayoutitem::QGraphicsLayoutItem; // 773
-use super::super::core::qrect::QRectF; // 771
-use super::super::core::qobject::QObject; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
+use super::qgraphicslayoutitem::*; // 773
+use super::super::core::qrect::*; // 771
+use super::super::core::qobject::*; // 771
+use super::super::core::qobjectdefs::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -47,7 +47,7 @@ extern {
   // proto:  void QGraphicsAnchorLayout::invalidate();
   fn C_ZN21QGraphicsAnchorLayout10invalidateEv(qthis: u64 /* *mut c_void*/);
   // proto:  QGraphicsLayoutItem * QGraphicsAnchorLayout::itemAt(int index);
-  fn C_ZNK21QGraphicsAnchorLayout6itemAtEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZNK21QGraphicsAnchorLayout6itemAtEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  void QGraphicsAnchorLayout::setVerticalSpacing(qreal spacing);
   fn C_ZN21QGraphicsAnchorLayout18setVerticalSpacingEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QGraphicsAnchorLayout::setGeometry(const QRectF & rect);
@@ -149,7 +149,7 @@ impl<'a> /*trait*/ QGraphicsAnchorLayout_verticalSpacing<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QGraphicsAnchorLayout15verticalSpacingEv()};
     let mut ret = unsafe {C_ZNK21QGraphicsAnchorLayout15verticalSpacingEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -195,7 +195,7 @@ impl<'a> /*trait*/ QGraphicsAnchorLayout_count<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QGraphicsAnchorLayout5countEv()};
     let mut ret = unsafe {C_ZNK21QGraphicsAnchorLayout5countEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -218,7 +218,7 @@ impl<'a> /*trait*/ QGraphicsAnchorLayout_horizontalSpacing<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QGraphicsAnchorLayout17horizontalSpacingEv()};
     let mut ret = unsafe {C_ZNK21QGraphicsAnchorLayout17horizontalSpacingEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -258,12 +258,14 @@ pub trait QGraphicsAnchorLayout_itemAt<RetType> {
 }
 
   // proto:  QGraphicsLayoutItem * QGraphicsAnchorLayout::itemAt(int index);
-impl<'a> /*trait*/ QGraphicsAnchorLayout_itemAt<()> for (i32) {
-  fn itemAt(self , rsthis: & QGraphicsAnchorLayout) -> () {
+impl<'a> /*trait*/ QGraphicsAnchorLayout_itemAt<QGraphicsLayoutItem> for (i32) {
+  fn itemAt(self , rsthis: & QGraphicsAnchorLayout) -> QGraphicsLayoutItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QGraphicsAnchorLayout6itemAtEi()};
     let arg0 = self  as c_int;
-     unsafe {C_ZNK21QGraphicsAnchorLayout6itemAtEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK21QGraphicsAnchorLayout6itemAtEi(rsthis.qclsinst, arg0)};
+    let mut ret1 = QGraphicsLayoutItem::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -508,7 +510,7 @@ impl<'a> /*trait*/ QGraphicsAnchor_spacing<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGraphicsAnchor7spacingEv()};
     let mut ret = unsafe {C_ZNK15QGraphicsAnchor7spacingEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }

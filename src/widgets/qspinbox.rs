@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qspinbox.h
 // dst-file: /src/widgets/qspinbox.rs
 //
@@ -18,11 +18,11 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qabstractspinbox::QAbstractSpinBox; // 773
+use super::qabstractspinbox::*; // 773
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
-use super::qwidget::QWidget; // 773
-use super::super::core::qobjectdefs::QMetaObject; // 771
+use super::super::core::qstring::*; // 771
+use super::qwidget::*; // 773
+use super::super::core::qobjectdefs::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -221,7 +221,7 @@ impl<'a> /*trait*/ QSpinBox_value<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QSpinBox5valueEv()};
     let mut ret = unsafe {C_ZNK8QSpinBox5valueEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -363,7 +363,7 @@ impl<'a> /*trait*/ QSpinBox_singleStep<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QSpinBox10singleStepEv()};
     let mut ret = unsafe {C_ZNK8QSpinBox10singleStepEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -386,7 +386,7 @@ impl<'a> /*trait*/ QSpinBox_displayIntegerBase<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QSpinBox18displayIntegerBaseEv()};
     let mut ret = unsafe {C_ZNK8QSpinBox18displayIntegerBaseEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -432,7 +432,7 @@ impl<'a> /*trait*/ QSpinBox_maximum<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QSpinBox7maximumEv()};
     let mut ret = unsafe {C_ZNK8QSpinBox7maximumEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -550,7 +550,7 @@ impl<'a> /*trait*/ QSpinBox_minimum<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QSpinBox7minimumEv()};
     let mut ret = unsafe {C_ZNK8QSpinBox7minimumEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -685,7 +685,7 @@ impl<'a> /*trait*/ QDoubleSpinBox_minimum<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDoubleSpinBox7minimumEv()};
     let mut ret = unsafe {C_ZNK14QDoubleSpinBox7minimumEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -709,7 +709,7 @@ impl<'a> /*trait*/ QDoubleSpinBox_valueFromText<f64> for (&'a QString) {
     // unsafe{_ZNK14QDoubleSpinBox13valueFromTextERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK14QDoubleSpinBox13valueFromTextERK7QString(rsthis.qclsinst, arg0)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -802,7 +802,7 @@ impl<'a> /*trait*/ QDoubleSpinBox_decimals<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDoubleSpinBox8decimalsEv()};
     let mut ret = unsafe {C_ZNK14QDoubleSpinBox8decimalsEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -849,7 +849,7 @@ impl<'a> /*trait*/ QDoubleSpinBox_singleStep<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDoubleSpinBox10singleStepEv()};
     let mut ret = unsafe {C_ZNK14QDoubleSpinBox10singleStepEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1033,7 +1033,7 @@ impl<'a> /*trait*/ QDoubleSpinBox_value<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDoubleSpinBox5valueEv()};
     let mut ret = unsafe {C_ZNK14QDoubleSpinBox5valueEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -1108,7 +1108,7 @@ impl<'a> /*trait*/ QDoubleSpinBox_maximum<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDoubleSpinBox7maximumEv()};
     let mut ret = unsafe {C_ZNK14QDoubleSpinBox7maximumEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }

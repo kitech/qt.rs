@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qmouseeventtransition.h
 // dst-file: /src/widgets/qmouseeventtransition.rs
 //
@@ -18,12 +18,12 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qeventtransition::QEventTransition; // 771
+use super::super::core::qeventtransition::*; // 771
 use std::ops::Deref;
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::core::qstate::QState; // 771
-use super::super::core::qobject::QObject; // 771
-use super::super::gui::qpainterpath::QPainterPath; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::super::core::qstate::*; // 771
+use super::super::core::qobject::*; // 771
+use super::super::gui::qpainterpath::*; // 771
 // <= use block end
 
 // ext block begin =>

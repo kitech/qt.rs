@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qundostack.h
 // dst-file: /src/widgets/qundostack.rs
 //
@@ -18,12 +18,12 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qobject::QObject; // 771
+use super::super::core::qobject::*; // 771
 use std::ops::Deref;
 // use super::qundostack::QUndoCommand; // 773
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::core::qstring::QString; // 771
-use super::qaction::QAction; // 773
+use super::super::core::qobjectdefs::*; // 771
+use super::super::core::qstring::*; // 771
+use super::qaction::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -177,7 +177,7 @@ impl<'a> /*trait*/ QUndoStack_undoLimit<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QUndoStack9undoLimitEv()};
     let mut ret = unsafe {C_ZNK10QUndoStack9undoLimitEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -225,7 +225,7 @@ impl<'a> /*trait*/ QUndoStack_canRedo<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QUndoStack7canRedoEv()};
     let mut ret = unsafe {C_ZNK10QUndoStack7canRedoEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -322,7 +322,7 @@ impl<'a> /*trait*/ QUndoStack_count<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QUndoStack5countEv()};
     let mut ret = unsafe {C_ZNK10QUndoStack5countEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -371,7 +371,7 @@ impl<'a> /*trait*/ QUndoStack_index<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QUndoStack5indexEv()};
     let mut ret = unsafe {C_ZNK10QUndoStack5indexEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -438,7 +438,7 @@ impl<'a> /*trait*/ QUndoStack_canUndo<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QUndoStack7canUndoEv()};
     let mut ret = unsafe {C_ZNK10QUndoStack7canUndoEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -461,7 +461,7 @@ impl<'a> /*trait*/ QUndoStack_isActive<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QUndoStack8isActiveEv()};
     let mut ret = unsafe {C_ZNK10QUndoStack8isActiveEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -534,7 +534,7 @@ impl<'a> /*trait*/ QUndoStack_isClean<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QUndoStack7isCleanEv()};
     let mut ret = unsafe {C_ZNK10QUndoStack7isCleanEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -649,7 +649,7 @@ impl<'a> /*trait*/ QUndoStack_cleanIndex<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QUndoStack10cleanIndexEv()};
     let mut ret = unsafe {C_ZNK10QUndoStack10cleanIndexEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -815,7 +815,7 @@ impl<'a> /*trait*/ QUndoCommand_id<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QUndoCommand2idEv()};
     let mut ret = unsafe {C_ZNK12QUndoCommand2idEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -927,7 +927,7 @@ impl<'a> /*trait*/ QUndoCommand_mergeWith<i8> for (&'a QUndoCommand) {
     // unsafe{_ZN12QUndoCommand9mergeWithEPKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN12QUndoCommand9mergeWithEPKS_(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -974,7 +974,7 @@ impl<'a> /*trait*/ QUndoCommand_childCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QUndoCommand10childCountEv()};
     let mut ret = unsafe {C_ZNK12QUndoCommand10childCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

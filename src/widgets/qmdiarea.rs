@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qmdiarea.h
 // dst-file: /src/widgets/qmdiarea.rs
 //
@@ -18,13 +18,13 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qabstractscrollarea::QAbstractScrollArea; // 773
+use super::qabstractscrollarea::*; // 773
 use std::ops::Deref;
-use super::super::gui::qbrush::QBrush; // 771
-use super::qwidget::QWidget; // 773
-use super::qmdisubwindow::QMdiSubWindow; // 773
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::core::qsize::QSize; // 771
+use super::super::gui::qbrush::*; // 771
+use super::qwidget::*; // 773
+use super::qmdisubwindow::*; // 773
+use super::super::core::qobjectdefs::*; // 771
+use super::super::core::qsize::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -265,7 +265,7 @@ impl<'a> /*trait*/ QMdiArea_tabsMovable<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMdiArea11tabsMovableEv()};
     let mut ret = unsafe {C_ZNK8QMdiArea11tabsMovableEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -333,7 +333,7 @@ impl<'a> /*trait*/ QMdiArea_documentMode<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMdiArea12documentModeEv()};
     let mut ret = unsafe {C_ZNK8QMdiArea12documentModeEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -614,7 +614,7 @@ impl<'a> /*trait*/ QMdiArea_tabsClosable<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMdiArea12tabsClosableEv()};
     let mut ret = unsafe {C_ZNK8QMdiArea12tabsClosableEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

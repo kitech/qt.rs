@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qmenu.h
 // dst-file: /src/widgets/qmenu.rs
 //
@@ -18,17 +18,18 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qwidget::QWidget; // 773
+use super::qwidget::*; // 773
 use std::ops::Deref;
-use super::qaction::QAction; // 773
-use super::super::gui::qicon::QIcon; // 771
-use super::super::core::qstring::QString; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::core::qpoint::QPoint; // 771
-use super::super::core::qobject::QObject; // 771
-use super::super::gui::qkeysequence::QKeySequence; // 771
-use super::super::core::qrect::QRect; // 771
-use super::super::core::qsize::QSize; // 771
+use super::qaction::*; // 773
+use super::super::gui::qicon::*; // 771
+use super::super::core::qstring::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+// use super::qplatformmenu::*; // 775
+use super::super::core::qpoint::*; // 771
+use super::super::core::qobject::*; // 771
+use super::super::gui::qkeysequence::*; // 771
+use super::super::core::qrect::*; // 771
+use super::super::core::qsize::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -62,7 +63,7 @@ extern {
   // proto:  QAction * QMenu::insertSection(QAction * before, const QString & text);
   fn C_ZN5QMenu13insertSectionEP7QActionRK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  QPlatformMenu * QMenu::platformMenu();
-  fn C_ZN5QMenu12platformMenuEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN5QMenu12platformMenuEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QMenu::setNoReplayFor(QWidget * widget);
   fn C_ZN5QMenu14setNoReplayForEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMenu::setIcon(const QIcon & icon);
@@ -182,7 +183,7 @@ impl<'a> /*trait*/ QMenu_isTearOffEnabled<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QMenu16isTearOffEnabledEv()};
     let mut ret = unsafe {C_ZNK5QMenu16isTearOffEnabledEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -205,7 +206,7 @@ impl<'a> /*trait*/ QMenu_toolTipsVisible<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QMenu15toolTipsVisibleEv()};
     let mut ret = unsafe {C_ZNK5QMenu15toolTipsVisibleEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -443,11 +444,12 @@ pub trait QMenu_platformMenu<RetType> {
 }
 
   // proto:  QPlatformMenu * QMenu::platformMenu();
-impl<'a> /*trait*/ QMenu_platformMenu<()> for () {
-  fn platformMenu(self , rsthis: & QMenu) -> () {
+impl<'a> /*trait*/ QMenu_platformMenu<u64> for () {
+  fn platformMenu(self , rsthis: & QMenu) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu12platformMenuEv()};
-     unsafe {C_ZN5QMenu12platformMenuEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZN5QMenu12platformMenuEv(rsthis.qclsinst)};
+    return ret as u64; // 4
     // return 1;
   }
 }
@@ -542,7 +544,7 @@ impl<'a> /*trait*/ QMenu_separatorsCollapsible<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QMenu21separatorsCollapsibleEv()};
     let mut ret = unsafe {C_ZNK5QMenu21separatorsCollapsibleEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -763,7 +765,7 @@ impl<'a> /*trait*/ QMenu_isEmpty<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QMenu7isEmptyEv()};
     let mut ret = unsafe {C_ZNK5QMenu7isEmptyEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -883,7 +885,7 @@ impl<'a> /*trait*/ QMenu_isTearOffMenuVisible<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QMenu20isTearOffMenuVisibleEv()};
     let mut ret = unsafe {C_ZNK5QMenu20isTearOffMenuVisibleEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

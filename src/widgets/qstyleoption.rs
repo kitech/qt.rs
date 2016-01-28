@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qstyleoption.h
 // dst-file: /src/widgets/qstyleoption.rs
 //
@@ -22,8 +22,8 @@ use self::libc::*;
 use std::ops::Deref;
 // use super::qstyleoption::QStyleOption; // 773
 // use super::qstyleoption::QStyleHintReturn; // 773
-use super::super::gui::qtransform::QTransform; // 771
-use super::qwidget::QWidget; // 773
+use super::super::gui::qtransform::*; // 771
+use super::qwidget::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -674,7 +674,7 @@ impl<'a> /*trait*/ QStyleOptionGraphicsItem_levelOfDetailFromTransform_s<f64> fo
     // unsafe{_ZN24QStyleOptionGraphicsItem26levelOfDetailFromTransformERK10QTransform()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN24QStyleOptionGraphicsItem26levelOfDetailFromTransformERK10QTransform(arg0)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }

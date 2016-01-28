@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qlistview.h
 // dst-file: /src/widgets/qlistview.rs
 //
@@ -18,14 +18,14 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qabstractitemview::QAbstractItemView; // 773
+use super::qabstractitemview::*; // 773
 use std::ops::Deref;
-use super::super::core::qabstractitemmodel::QModelIndex; // 771
-use super::qwidget::QWidget; // 773
-use super::super::core::qsize::QSize; // 771
-use super::super::core::qpoint::QPoint; // 771
-use super::super::core::qrect::QRect; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
+use super::super::core::qabstractitemmodel::*; // 771
+use super::qwidget::*; // 773
+use super::super::core::qsize::*; // 771
+use super::super::core::qpoint::*; // 771
+use super::super::core::qrect::*; // 771
+use super::super::core::qobjectdefs::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -209,7 +209,7 @@ impl<'a> /*trait*/ QListView_spacing<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QListView7spacingEv()};
     let mut ret = unsafe {C_ZNK9QListView7spacingEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -349,7 +349,7 @@ impl<'a> /*trait*/ QListView_uniformItemSizes<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QListView16uniformItemSizesEv()};
     let mut ret = unsafe {C_ZNK9QListView16uniformItemSizesEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -395,7 +395,7 @@ impl<'a> /*trait*/ QListView_isWrapping<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QListView10isWrappingEv()};
     let mut ret = unsafe {C_ZNK9QListView10isWrappingEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -536,7 +536,7 @@ impl<'a> /*trait*/ QListView_isRowHidden<i8> for (i32) {
     // unsafe{_ZNK9QListView11isRowHiddenEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK9QListView11isRowHiddenEi(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -605,7 +605,7 @@ impl<'a> /*trait*/ QListView_batchSize<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QListView9batchSizeEv()};
     let mut ret = unsafe {C_ZNK9QListView9batchSizeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -628,7 +628,7 @@ impl<'a> /*trait*/ QListView_isSelectionRectVisible<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QListView22isSelectionRectVisibleEv()};
     let mut ret = unsafe {C_ZNK9QListView22isSelectionRectVisibleEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -651,7 +651,7 @@ impl<'a> /*trait*/ QListView_wordWrap<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QListView8wordWrapEv()};
     let mut ret = unsafe {C_ZNK9QListView8wordWrapEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -720,7 +720,7 @@ impl<'a> /*trait*/ QListView_modelColumn<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QListView11modelColumnEv()};
     let mut ret = unsafe {C_ZNK9QListView11modelColumnEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

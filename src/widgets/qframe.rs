@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qframe.h
 // dst-file: /src/widgets/qframe.rs
 //
@@ -18,11 +18,11 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qwidget::QWidget; // 773
+use super::qwidget::*; // 773
 use std::ops::Deref;
-use super::super::core::qrect::QRect; // 771
-use super::super::core::qsize::QSize; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
+use super::super::core::qrect::*; // 771
+use super::super::core::qsize::*; // 771
+use super::super::core::qobjectdefs::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -125,7 +125,7 @@ impl<'a> /*trait*/ QFrame_lineWidth<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QFrame9lineWidthEv()};
     let mut ret = unsafe {C_ZNK6QFrame9lineWidthEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -219,7 +219,7 @@ impl<'a> /*trait*/ QFrame_frameStyle<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QFrame10frameStyleEv()};
     let mut ret = unsafe {C_ZNK6QFrame10frameStyleEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -242,7 +242,7 @@ impl<'a> /*trait*/ QFrame_midLineWidth<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QFrame12midLineWidthEv()};
     let mut ret = unsafe {C_ZNK6QFrame12midLineWidthEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -335,7 +335,7 @@ impl<'a> /*trait*/ QFrame_frameWidth<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QFrame10frameWidthEv()};
     let mut ret = unsafe {C_ZNK6QFrame10frameWidthEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

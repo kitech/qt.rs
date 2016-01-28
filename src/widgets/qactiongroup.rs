@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qactiongroup.h
 // dst-file: /src/widgets/qactiongroup.rs
 //
@@ -18,12 +18,13 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qobject::QObject; // 771
+use super::super::core::qobject::*; // 771
 use std::ops::Deref;
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::qaction::QAction; // 773
-use super::super::gui::qicon::QIcon; // 771
-use super::super::core::qstring::QString; // 771
+// use super::qlist::*; // 775
+use super::super::core::qobjectdefs::*; // 771
+use super::qaction::*; // 773
+use super::super::gui::qicon::*; // 771
+use super::super::core::qstring::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -37,7 +38,7 @@ extern {
   // proto:  void QActionGroup::QActionGroup(QObject * parent);
   fn C_ZN12QActionGroupC2EP7QObject(arg0: *mut c_void) -> u64;
   // proto:  QList<QAction *> QActionGroup::actions();
-  fn C_ZNK12QActionGroup7actionsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK12QActionGroup7actionsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QActionGroup::setDisabled(bool b);
   fn C_ZN12QActionGroup11setDisabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QActionGroup::setEnabled(bool );
@@ -138,11 +139,12 @@ pub trait QActionGroup_actions<RetType> {
 }
 
   // proto:  QList<QAction *> QActionGroup::actions();
-impl<'a> /*trait*/ QActionGroup_actions<()> for () {
-  fn actions(self , rsthis: & QActionGroup) -> () {
+impl<'a> /*trait*/ QActionGroup_actions<u64> for () {
+  fn actions(self , rsthis: & QActionGroup) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QActionGroup7actionsEv()};
-     unsafe {C_ZNK12QActionGroup7actionsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QActionGroup7actionsEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -343,7 +345,7 @@ impl<'a> /*trait*/ QActionGroup_isVisible<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QActionGroup9isVisibleEv()};
     let mut ret = unsafe {C_ZNK12QActionGroup9isVisibleEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -402,7 +404,7 @@ impl<'a> /*trait*/ QActionGroup_isEnabled<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QActionGroup9isEnabledEv()};
     let mut ret = unsafe {C_ZNK12QActionGroup9isEnabledEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -425,7 +427,7 @@ impl<'a> /*trait*/ QActionGroup_isExclusive<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QActionGroup11isExclusiveEv()};
     let mut ret = unsafe {C_ZNK12QActionGroup11isExclusiveEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

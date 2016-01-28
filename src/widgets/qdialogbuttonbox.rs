@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qdialogbuttonbox.h
 // dst-file: /src/widgets/qdialogbuttonbox.rs
 //
@@ -18,11 +18,12 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qwidget::QWidget; // 773
+use super::qwidget::*; // 773
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
-use super::qabstractbutton::QAbstractButton; // 773
-use super::super::core::qobjectdefs::QMetaObject; // 771
+// use super::qlist::*; // 775
+use super::super::core::qstring::*; // 771
+use super::qabstractbutton::*; // 773
+use super::super::core::qobjectdefs::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -34,7 +35,7 @@ use super::super::core::qobjectdefs::QMetaObject; // 771
 extern {
   fn QDialogButtonBox_Class_Size() -> c_int;
   // proto:  QList<QAbstractButton *> QDialogButtonBox::buttons();
-  fn C_ZNK16QDialogButtonBox7buttonsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK16QDialogButtonBox7buttonsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QDialogButtonBox::setCenterButtons(bool center);
   fn C_ZN16QDialogButtonBox16setCenterButtonsEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  bool QDialogButtonBox::centerButtons();
@@ -97,11 +98,12 @@ pub trait QDialogButtonBox_buttons<RetType> {
 }
 
   // proto:  QList<QAbstractButton *> QDialogButtonBox::buttons();
-impl<'a> /*trait*/ QDialogButtonBox_buttons<()> for () {
-  fn buttons(self , rsthis: & QDialogButtonBox) -> () {
+impl<'a> /*trait*/ QDialogButtonBox_buttons<u64> for () {
+  fn buttons(self , rsthis: & QDialogButtonBox) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QDialogButtonBox7buttonsEv()};
-     unsafe {C_ZNK16QDialogButtonBox7buttonsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QDialogButtonBox7buttonsEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -147,7 +149,7 @@ impl<'a> /*trait*/ QDialogButtonBox_centerButtons<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QDialogButtonBox13centerButtonsEv()};
     let mut ret = unsafe {C_ZNK16QDialogButtonBox13centerButtonsEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

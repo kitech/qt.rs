@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qdatawidgetmapper.h
 // dst-file: /src/widgets/qdatawidgetmapper.rs
 //
@@ -18,14 +18,13 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qobject::QObject; // 771
+use super::super::core::qobject::*; // 771
 use std::ops::Deref;
-use super::qwidget::QWidget; // 773
-use super::super::core::qbytearray::QByteArray; // 771
-use super::super::core::qabstractitemmodel::QModelIndex; // 771
-use super::super::core::qabstractitemmodel::QAbstractItemModel; // 771
-use super::qabstractitemdelegate::QAbstractItemDelegate; // 773
-use super::super::core::qobjectdefs::QMetaObject; // 771
+use super::qwidget::*; // 773
+use super::super::core::qbytearray::*; // 771
+use super::super::core::qabstractitemmodel::*; // 771
+use super::qabstractitemdelegate::*; // 773
+use super::super::core::qobjectdefs::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -133,7 +132,7 @@ impl<'a> /*trait*/ QDataWidgetMapper_currentIndex<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QDataWidgetMapper12currentIndexEv()};
     let mut ret = unsafe {C_ZNK17QDataWidgetMapper12currentIndexEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -411,7 +410,7 @@ impl<'a> /*trait*/ QDataWidgetMapper_mappedSection<i32> for (&'a QWidget) {
     // unsafe{_ZNK17QDataWidgetMapper13mappedSectionEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK17QDataWidgetMapper13mappedSectionEP7QWidget(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -661,7 +660,7 @@ impl<'a> /*trait*/ QDataWidgetMapper_submit<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QDataWidgetMapper6submitEv()};
     let mut ret = unsafe {C_ZN17QDataWidgetMapper6submitEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

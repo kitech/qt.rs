@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qtoolbox.h
 // dst-file: /src/widgets/qtoolbox.rs
 //
@@ -18,12 +18,12 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qframe::QFrame; // 773
+use super::qframe::*; // 773
 use std::ops::Deref;
-use super::qwidget::QWidget; // 773
-use super::super::core::qstring::QString; // 771
-use super::super::gui::qicon::QIcon; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
+use super::qwidget::*; // 773
+use super::super::core::qstring::*; // 771
+use super::super::gui::qicon::*; // 771
+use super::super::core::qobjectdefs::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -151,7 +151,7 @@ impl<'a> /*trait*/ QToolBox_insertItem<i32> for (i32, &'a QWidget, &'a QString) 
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN8QToolBox10insertItemEiP7QWidgetRK7QString(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -200,7 +200,7 @@ impl<'a> /*trait*/ QToolBox_indexOf<i32> for (&'a QWidget) {
     // unsafe{_ZNK8QToolBox7indexOfEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK8QToolBox7indexOfEP7QWidget(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -342,7 +342,7 @@ impl<'a> /*trait*/ QToolBox_count<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QToolBox5countEv()};
     let mut ret = unsafe {C_ZNK8QToolBox5countEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -438,7 +438,7 @@ impl<'a> /*trait*/ QToolBox_currentIndex<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QToolBox12currentIndexEv()};
     let mut ret = unsafe {C_ZNK8QToolBox12currentIndexEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -487,7 +487,7 @@ impl<'a> /*trait*/ QToolBox_addItem<i32> for (&'a QWidget, &'a QString) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN8QToolBox7addItemEP7QWidgetRK7QString(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -511,7 +511,7 @@ impl<'a> /*trait*/ QToolBox_isItemEnabled<i8> for (i32) {
     // unsafe{_ZNK8QToolBox13isItemEnabledEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK8QToolBox13isItemEnabledEi(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -596,7 +596,7 @@ impl<'a> /*trait*/ QToolBox_addItem<i32> for (&'a QWidget, &'a QIcon, &'a QStrin
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN8QToolBox7addItemEP7QWidgetRK5QIconRK7QString(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -611,7 +611,7 @@ impl<'a> /*trait*/ QToolBox_insertItem<i32> for (i32, &'a QWidget, &'a QIcon, &'
     let arg2 = self.2.qclsinst  as *mut c_void;
     let arg3 = self.3.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN8QToolBox10insertItemEiP7QWidgetRK5QIconRK7QString(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

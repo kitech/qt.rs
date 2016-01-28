@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qplaintextedit.h
 // dst-file: /src/widgets/qplaintextedit.rs
 //
@@ -18,28 +18,25 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::gui::qabstracttextdocumentlayout::QAbstractTextDocumentLayout; // 771
+use super::super::gui::qabstracttextdocumentlayout::*; // 771
 use std::ops::Deref;
-use super::super::gui::qpainter::QPainter; // 771
-use super::super::core::qpoint::QPointF; // 771
-use super::super::gui::qtextobject::QTextFrame; // 771
-use super::super::core::qrect::QRectF; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::gui::qtextobject::QTextBlock; // 771
-use super::super::gui::qtextdocument::QTextDocument; // 771
-use super::super::core::qsize::QSizeF; // 771
-use super::qabstractscrollarea::QAbstractScrollArea; // 773
-use super::super::core::qpoint::QPoint; // 771
-use super::qmenu::QMenu; // 773
-use super::super::core::qrect::QRect; // 771
-use super::super::core::qstring::QString; // 771
-use super::super::core::qurl::QUrl; // 771
-use super::super::core::qvariant::QVariant; // 771
-use super::super::gui::qtextcursor::QTextCursor; // 771
-use super::super::gui::qtextformat::QTextCharFormat; // 771
-use super::super::gui::qpagedpaintdevice::QPagedPaintDevice; // 771
-use super::qwidget::QWidget; // 773
-use super::super::core::qregexp::QRegExp; // 771
+use super::super::gui::qpainter::*; // 771
+use super::super::core::qpoint::*; // 771
+use super::super::gui::qtextobject::*; // 771
+use super::super::core::qrect::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::super::gui::qtextdocument::*; // 771
+use super::super::core::qsize::*; // 771
+use super::qabstractscrollarea::*; // 773
+use super::qmenu::*; // 773
+use super::super::core::qstring::*; // 771
+use super::super::core::qurl::*; // 771
+use super::super::core::qvariant::*; // 771
+use super::super::gui::qtextcursor::*; // 771
+use super::super::gui::qtextformat::*; // 771
+use super::super::gui::qpagedpaintdevice::*; // 771
+use super::qwidget::*; // 773
+use super::super::core::qregexp::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -331,7 +328,7 @@ impl<'a> /*trait*/ QPlainTextDocumentLayout_pageCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QPlainTextDocumentLayout9pageCountEv()};
     let mut ret = unsafe {C_ZNK24QPlainTextDocumentLayout9pageCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -448,7 +445,7 @@ impl<'a> /*trait*/ QPlainTextDocumentLayout_cursorWidth<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QPlainTextDocumentLayout11cursorWidthEv()};
     let mut ret = unsafe {C_ZNK24QPlainTextDocumentLayout11cursorWidthEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -708,7 +705,7 @@ impl<'a> /*trait*/ QPlainTextEdit_tabStopWidth<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QPlainTextEdit12tabStopWidthEv()};
     let mut ret = unsafe {C_ZNK14QPlainTextEdit12tabStopWidthEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -731,7 +728,7 @@ impl<'a> /*trait*/ QPlainTextEdit_isReadOnly<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QPlainTextEdit10isReadOnlyEv()};
     let mut ret = unsafe {C_ZNK14QPlainTextEdit10isReadOnlyEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -848,7 +845,7 @@ impl<'a> /*trait*/ QPlainTextEdit_blockCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QPlainTextEdit10blockCountEv()};
     let mut ret = unsafe {C_ZNK14QPlainTextEdit10blockCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -963,7 +960,7 @@ impl<'a> /*trait*/ QPlainTextEdit_backgroundVisible<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QPlainTextEdit17backgroundVisibleEv()};
     let mut ret = unsafe {C_ZNK14QPlainTextEdit17backgroundVisibleEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1060,7 +1057,7 @@ impl<'a> /*trait*/ QPlainTextEdit_tabChangesFocus<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QPlainTextEdit15tabChangesFocusEv()};
     let mut ret = unsafe {C_ZNK14QPlainTextEdit15tabChangesFocusEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1128,7 +1125,7 @@ impl<'a> /*trait*/ QPlainTextEdit_maximumBlockCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QPlainTextEdit17maximumBlockCountEv()};
     let mut ret = unsafe {C_ZNK14QPlainTextEdit17maximumBlockCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1427,7 +1424,7 @@ impl<'a> /*trait*/ QPlainTextEdit_overwriteMode<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QPlainTextEdit13overwriteModeEv()};
     let mut ret = unsafe {C_ZNK14QPlainTextEdit13overwriteModeEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1600,7 +1597,7 @@ impl<'a> /*trait*/ QPlainTextEdit_canPaste<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QPlainTextEdit8canPasteEv()};
     let mut ret = unsafe {C_ZNK14QPlainTextEdit8canPasteEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1683,7 +1680,7 @@ impl<'a> /*trait*/ QPlainTextEdit_isUndoRedoEnabled<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QPlainTextEdit17isUndoRedoEnabledEv()};
     let mut ret = unsafe {C_ZNK14QPlainTextEdit17isUndoRedoEnabledEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1799,7 +1796,7 @@ impl<'a> /*trait*/ QPlainTextEdit_centerOnScroll<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QPlainTextEdit14centerOnScrollEv()};
     let mut ret = unsafe {C_ZNK14QPlainTextEdit14centerOnScrollEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1845,7 +1842,7 @@ impl<'a> /*trait*/ QPlainTextEdit_cursorWidth<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QPlainTextEdit11cursorWidthEv()};
     let mut ret = unsafe {C_ZNK14QPlainTextEdit11cursorWidthEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

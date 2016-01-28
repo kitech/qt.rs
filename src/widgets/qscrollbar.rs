@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qscrollbar.h
 // dst-file: /src/widgets/qscrollbar.rs
 //
@@ -18,12 +18,12 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qabstractslider::QAbstractSlider; // 773
+use super::qabstractslider::*; // 773
 use std::ops::Deref;
-use super::super::core::qcoreevent::QEvent; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::core::qsize::QSize; // 771
-use super::qwidget::QWidget; // 773
+use super::super::core::qcoreevent::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::super::core::qsize::*; // 771
+use super::qwidget::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -90,7 +90,7 @@ impl<'a> /*trait*/ QScrollBar_event<i8> for (&'a QEvent) {
     // unsafe{_ZN10QScrollBar5eventEP6QEvent()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN10QScrollBar5eventEP6QEvent(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

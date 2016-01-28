@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qinputdialog.h
 // dst-file: /src/widgets/qinputdialog.rs
 //
@@ -18,14 +18,14 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qdialog::QDialog; // 773
+use super::qdialog::*; // 773
 use std::ops::Deref;
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::qwidget::QWidget; // 773
-use super::super::core::qstring::QString; // 771
-use super::super::core::qstringlist::QStringList; // 771
-use super::super::core::qobject::QObject; // 771
-use super::super::core::qsize::QSize; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::qwidget::*; // 773
+use super::super::core::qstring::*; // 771
+use super::super::core::qstringlist::*; // 771
+use super::super::core::qobject::*; // 771
+use super::super::core::qsize::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -67,7 +67,7 @@ extern {
   // proto:  void QInputDialog::setOkButtonText(const QString & text);
   fn C_ZN12QInputDialog15setOkButtonTextERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QStringList QInputDialog::comboBoxItems();
-  fn C_ZNK12QInputDialog13comboBoxItemsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK12QInputDialog13comboBoxItemsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QInputDialog::intMinimum();
   fn C_ZNK12QInputDialog10intMinimumEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QInputDialog::setComboBoxEditable(bool editable);
@@ -167,7 +167,7 @@ impl<'a> /*trait*/ QInputDialog_doubleMaximum<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QInputDialog13doubleMaximumEv()};
     let mut ret = unsafe {C_ZNK12QInputDialog13doubleMaximumEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -260,7 +260,7 @@ impl<'a> /*trait*/ QInputDialog_intMaximum<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QInputDialog10intMaximumEv()};
     let mut ret = unsafe {C_ZNK12QInputDialog10intMaximumEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -283,7 +283,7 @@ impl<'a> /*trait*/ QInputDialog_intStep<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QInputDialog7intStepEv()};
     let mut ret = unsafe {C_ZNK12QInputDialog7intStepEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -306,7 +306,7 @@ impl<'a> /*trait*/ QInputDialog_doubleDecimals<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QInputDialog14doubleDecimalsEv()};
     let mut ret = unsafe {C_ZNK12QInputDialog14doubleDecimalsEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -508,11 +508,13 @@ pub trait QInputDialog_comboBoxItems<RetType> {
 }
 
   // proto:  QStringList QInputDialog::comboBoxItems();
-impl<'a> /*trait*/ QInputDialog_comboBoxItems<()> for () {
-  fn comboBoxItems(self , rsthis: & QInputDialog) -> () {
+impl<'a> /*trait*/ QInputDialog_comboBoxItems<QStringList> for () {
+  fn comboBoxItems(self , rsthis: & QInputDialog) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QInputDialog13comboBoxItemsEv()};
-     unsafe {C_ZNK12QInputDialog13comboBoxItemsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QInputDialog13comboBoxItemsEv(rsthis.qclsinst)};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -535,7 +537,7 @@ impl<'a> /*trait*/ QInputDialog_intMinimum<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QInputDialog10intMinimumEv()};
     let mut ret = unsafe {C_ZNK12QInputDialog10intMinimumEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -627,7 +629,7 @@ impl<'a> /*trait*/ QInputDialog_doubleMinimum<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QInputDialog13doubleMinimumEv()};
     let mut ret = unsafe {C_ZNK12QInputDialog13doubleMinimumEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -697,7 +699,7 @@ impl<'a> /*trait*/ QInputDialog_isComboBoxEditable<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QInputDialog18isComboBoxEditableEv()};
     let mut ret = unsafe {C_ZNK12QInputDialog18isComboBoxEditableEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -886,7 +888,7 @@ impl<'a> /*trait*/ QInputDialog_doubleValue<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QInputDialog11doubleValueEv()};
     let mut ret = unsafe {C_ZNK12QInputDialog11doubleValueEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -979,7 +981,7 @@ impl<'a> /*trait*/ QInputDialog_intValue<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QInputDialog8intValueEv()};
     let mut ret = unsafe {C_ZNK12QInputDialog8intValueEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

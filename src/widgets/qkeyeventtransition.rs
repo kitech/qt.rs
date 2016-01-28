@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qkeyeventtransition.h
 // dst-file: /src/widgets/qkeyeventtransition.rs
 //
@@ -18,11 +18,11 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qeventtransition::QEventTransition; // 771
+use super::super::core::qeventtransition::*; // 771
 use std::ops::Deref;
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::core::qobject::QObject; // 771
-use super::super::core::qstate::QState; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::super::core::qobject::*; // 771
+use super::super::core::qstate::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -157,7 +157,7 @@ impl<'a> /*trait*/ QKeyEventTransition_key<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QKeyEventTransition3keyEv()};
     let mut ret = unsafe {C_ZNK19QKeyEventTransition3keyEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

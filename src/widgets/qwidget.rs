@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qwidget.h
 // dst-file: /src/widgets/qwidget.rs
 //
@@ -18,36 +18,38 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qobject::QObject; // 771
+use super::super::core::qobject::*; // 771
 use std::ops::Deref;
-use super::qgraphicseffect::QGraphicsEffect; // 773
-use super::super::core::qstring::QString; // 771
-use super::super::core::qsize::QSize; // 771
-use super::super::core::qrect::QRect; // 771
-use super::super::core::qpoint::QPoint; // 771
-use super::super::gui::qregion::QRegion; // 771
-use super::qaction::QAction; // 773
-use super::super::gui::qpalette::QPalette; // 771
-use super::qstyle::QStyle; // 773
-use super::super::gui::qpainter::QPainter; // 771
-use super::super::gui::qcursor::QCursor; // 771
-use super::super::gui::qpixmap::QPixmap; // 771
-use super::super::gui::qwindow::QWindow; // 771
-use super::super::core::qmargins::QMargins; // 771
-use super::super::core::qbytearray::QByteArray; // 771
-use super::super::gui::qpaintengine::QPaintEngine; // 771
-use super::super::gui::qfontinfo::QFontInfo; // 771
-use super::super::gui::qfontmetrics::QFontMetrics; // 771
-use super::super::gui::qkeysequence::QKeySequence; // 771
-use super::qsizepolicy::QSizePolicy; // 773
-use super::super::gui::qicon::QIcon; // 771
-use super::qlayout::QLayout; // 773
-use super::super::gui::qbackingstore::QBackingStore; // 771
-use super::super::gui::qfont::QFont; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::core::qlocale::QLocale; // 771
-use super::super::gui::qpaintdevice::QPaintDevice; // 771
-use super::super::gui::qbitmap::QBitmap; // 771
+use super::qgraphicseffect::*; // 773
+use super::super::core::qstring::*; // 771
+use super::super::core::qsize::*; // 771
+use super::super::core::qrect::*; // 771
+use super::super::core::qpoint::*; // 771
+use super::super::gui::qregion::*; // 771
+use super::qaction::*; // 773
+use super::super::gui::qpalette::*; // 771
+use super::qstyle::*; // 773
+use super::super::gui::qpainter::*; // 771
+use super::super::gui::qcursor::*; // 771
+use super::super::gui::qpixmap::*; // 771
+use super::super::gui::qwindow::*; // 771
+use super::super::core::qmargins::*; // 771
+use super::super::core::qbytearray::*; // 771
+use super::super::gui::qpaintengine::*; // 771
+// use super::qlist::*; // 775
+use super::super::gui::qfontinfo::*; // 771
+use super::super::gui::qfontmetrics::*; // 771
+use super::super::gui::qkeysequence::*; // 771
+use super::qsizepolicy::*; // 773
+use super::super::gui::qicon::*; // 771
+use super::qlayout::*; // 773
+use super::super::gui::qbackingstore::*; // 771
+use super::super::gui::qfont::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::super::core::qlocale::*; // 771
+use super::super::gui::qpaintdevice::*; // 771
+use super::super::gui::qbitmap::*; // 771
+use super::qgraphicsproxywidget::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -63,7 +65,7 @@ extern {
   // proto:  QString QWidget::accessibleDescription();
   fn C_ZNK7QWidget21accessibleDescriptionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QGraphicsEffect * QWidget::graphicsEffect();
-  fn C_ZNK7QWidget14graphicsEffectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK7QWidget14graphicsEffectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QWidget::isFullScreen();
   fn C_ZNK7QWidget12isFullScreenEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QSize QWidget::maximumSize();
@@ -195,7 +197,7 @@ extern {
   // proto:  void QWidget::showNormal();
   fn C_ZN7QWidget10showNormalEv(qthis: u64 /* *mut c_void*/);
   // proto:  int QWidget::y();
-  fn C_ZNK7QWidget1yEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK7QWidget1yEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QWidget::width();
   fn C_ZNK7QWidget5widthEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QWidget::isMaximized();
@@ -225,7 +227,7 @@ extern {
   // proto:  void QWidget::move(const QPoint & );
   fn C_ZN7QWidget4moveERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QList<QAction *> QWidget::actions();
-  fn C_ZNK7QWidget7actionsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK7QWidget7actionsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QWidget::show();
   fn C_ZN7QWidget4showEv(qthis: u64 /* *mut c_void*/);
   // proto: static QWidget * QWidget::keyboardGrabber();
@@ -255,7 +257,7 @@ extern {
   // proto:  QPoint QWidget::mapFrom(const QWidget * , const QPoint & );
   fn C_ZNK7QWidget7mapFromEPKS_RK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  int QWidget::x();
-  fn C_ZNK7QWidget1xEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK7QWidget1xEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QWidget::clearFocus();
   fn C_ZN7QWidget10clearFocusEv(qthis: u64 /* *mut c_void*/);
   // proto: static QWidget * QWidget::find(WId );
@@ -429,7 +431,7 @@ extern {
   // proto:  bool QWidget::hasHeightForWidth();
   fn C_ZNK7QWidget17hasHeightForWidthEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QGraphicsProxyWidget * QWidget::graphicsProxyWidget();
-  fn C_ZNK7QWidget19graphicsProxyWidgetEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK7QWidget19graphicsProxyWidgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QMargins QWidget::contentsMargins();
   fn C_ZNK7QWidget15contentsMarginsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QWidget * QWidget::topLevelWidget();
@@ -575,11 +577,13 @@ pub trait QWidget_graphicsEffect<RetType> {
 }
 
   // proto:  QGraphicsEffect * QWidget::graphicsEffect();
-impl<'a> /*trait*/ QWidget_graphicsEffect<()> for () {
-  fn graphicsEffect(self , rsthis: & QWidget) -> () {
+impl<'a> /*trait*/ QWidget_graphicsEffect<QGraphicsEffect> for () {
+  fn graphicsEffect(self , rsthis: & QWidget) -> QGraphicsEffect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget14graphicsEffectEv()};
-     unsafe {C_ZNK7QWidget14graphicsEffectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QWidget14graphicsEffectEv(rsthis.qclsinst)};
+    let mut ret1 = QGraphicsEffect::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -602,7 +606,7 @@ impl<'a> /*trait*/ QWidget_isFullScreen<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget12isFullScreenEv()};
     let mut ret = unsafe {C_ZNK7QWidget12isFullScreenEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -649,7 +653,7 @@ impl<'a> /*trait*/ QWidget_isEnabledToTLW<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget14isEnabledToTLWEv()};
     let mut ret = unsafe {C_ZNK7QWidget14isEnabledToTLWEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -742,7 +746,7 @@ impl<'a> /*trait*/ QWidget_isTopLevel<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget10isTopLevelEv()};
     let mut ret = unsafe {C_ZNK7QWidget10isTopLevelEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -765,7 +769,7 @@ impl<'a> /*trait*/ QWidget_acceptDrops<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget11acceptDropsEv()};
     let mut ret = unsafe {C_ZNK7QWidget11acceptDropsEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -788,7 +792,7 @@ impl<'a> /*trait*/ QWidget_isWindow<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget8isWindowEv()};
     let mut ret = unsafe {C_ZNK7QWidget8isWindowEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -834,7 +838,7 @@ impl<'a> /*trait*/ QWidget_isVisible<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget9isVisibleEv()};
     let mut ret = unsafe {C_ZNK7QWidget9isVisibleEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -857,7 +861,7 @@ impl<'a> /*trait*/ QWidget_minimumHeight<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget13minimumHeightEv()};
     let mut ret = unsafe {C_ZNK7QWidget13minimumHeightEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1093,7 +1097,7 @@ impl<'a> /*trait*/ QWidget_isActiveWindow<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget14isActiveWindowEv()};
     let mut ret = unsafe {C_ZNK7QWidget14isActiveWindowEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1289,7 +1293,7 @@ impl<'a> /*trait*/ QWidget_toolTipDuration<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget15toolTipDurationEv()};
     let mut ret = unsafe {C_ZNK7QWidget15toolTipDurationEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1404,7 +1408,7 @@ impl<'a> /*trait*/ QWidget_isModal<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget7isModalEv()};
     let mut ret = unsafe {C_ZNK7QWidget7isModalEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1484,7 +1488,7 @@ impl<'a> /*trait*/ QWidget_isWindowModified<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget16isWindowModifiedEv()};
     let mut ret = unsafe {C_ZNK7QWidget16isWindowModifiedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1674,7 +1678,7 @@ impl<'a> /*trait*/ QWidget_isVisibleTo<i8> for (&'a QWidget) {
     // unsafe{_ZNK7QWidget11isVisibleToEPKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK7QWidget11isVisibleToEPKS_(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1721,7 +1725,7 @@ impl<'a> /*trait*/ QWidget_hasMouseTracking<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget16hasMouseTrackingEv()};
     let mut ret = unsafe {C_ZNK7QWidget16hasMouseTrackingEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1755,7 +1759,7 @@ impl<'a> /*trait*/ QWidget_isHidden<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget8isHiddenEv()};
     let mut ret = unsafe {C_ZNK7QWidget8isHiddenEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1778,7 +1782,7 @@ impl<'a> /*trait*/ QWidget_devType<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget7devTypeEv()};
     let mut ret = unsafe {C_ZNK7QWidget7devTypeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1969,7 +1973,7 @@ impl<'a> /*trait*/ QWidget_isEnabledTo<i8> for (&'a QWidget) {
     // unsafe{_ZNK7QWidget11isEnabledToEPKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK7QWidget11isEnabledToEPKS_(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1992,7 +1996,7 @@ impl<'a> /*trait*/ QWidget_isLeftToRight<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget13isLeftToRightEv()};
     let mut ret = unsafe {C_ZNK7QWidget13isLeftToRightEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -2077,11 +2081,12 @@ pub trait QWidget_y<RetType> {
 }
 
   // proto:  int QWidget::y();
-impl<'a> /*trait*/ QWidget_y<()> for () {
-  fn y(self , rsthis: & QWidget) -> () {
+impl<'a> /*trait*/ QWidget_y<i32> for () {
+  fn y(self , rsthis: & QWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget1yEv()};
-     unsafe {C_ZNK7QWidget1yEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QWidget1yEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -2104,7 +2109,7 @@ impl<'a> /*trait*/ QWidget_width<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget5widthEv()};
     let mut ret = unsafe {C_ZNK7QWidget5widthEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -2127,7 +2132,7 @@ impl<'a> /*trait*/ QWidget_isMaximized<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget11isMaximizedEv()};
     let mut ret = unsafe {C_ZNK7QWidget11isMaximizedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -2268,7 +2273,7 @@ impl<'a> /*trait*/ QWidget_isEnabled<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget9isEnabledEv()};
     let mut ret = unsafe {C_ZNK7QWidget9isEnabledEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -2426,11 +2431,12 @@ pub trait QWidget_actions<RetType> {
 }
 
   // proto:  QList<QAction *> QWidget::actions();
-impl<'a> /*trait*/ QWidget_actions<()> for () {
-  fn actions(self , rsthis: & QWidget) -> () {
+impl<'a> /*trait*/ QWidget_actions<u64> for () {
+  fn actions(self , rsthis: & QWidget) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget7actionsEv()};
-     unsafe {C_ZNK7QWidget7actionsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QWidget7actionsEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -2525,7 +2531,7 @@ impl<'a> /*trait*/ QWidget_minimumWidth<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget12minimumWidthEv()};
     let mut ret = unsafe {C_ZNK7QWidget12minimumWidthEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -2572,7 +2578,7 @@ impl<'a> /*trait*/ QWidget_autoFillBackground<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget18autoFillBackgroundEv()};
     let mut ret = unsafe {C_ZNK7QWidget18autoFillBackgroundEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -2690,7 +2696,7 @@ impl<'a> /*trait*/ QWidget_updatesEnabled<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget14updatesEnabledEv()};
     let mut ret = unsafe {C_ZNK7QWidget14updatesEnabledEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -2779,11 +2785,12 @@ pub trait QWidget_x<RetType> {
 }
 
   // proto:  int QWidget::x();
-impl<'a> /*trait*/ QWidget_x<()> for () {
-  fn x(self , rsthis: & QWidget) -> () {
+impl<'a> /*trait*/ QWidget_x<i32> for () {
+  fn x(self , rsthis: & QWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget1xEv()};
-     unsafe {C_ZNK7QWidget1xEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QWidget1xEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -3088,7 +3095,7 @@ impl<'a> /*trait*/ QWidget_restoreGeometry<i8> for (&'a QByteArray) {
     // unsafe{_ZN7QWidget15restoreGeometryERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN7QWidget15restoreGeometryERK10QByteArray(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -3376,7 +3383,7 @@ impl<'a> /*trait*/ QWidget_windowOpacity<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget13windowOpacityEv()};
     let mut ret = unsafe {C_ZNK7QWidget13windowOpacityEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -4010,7 +4017,7 @@ impl<'a> /*trait*/ QWidget_hasFocus<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget8hasFocusEv()};
     let mut ret = unsafe {C_ZNK7QWidget8hasFocusEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -4368,7 +4375,7 @@ impl<'a> /*trait*/ QWidget_close<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget5closeEv()};
     let mut ret = unsafe {C_ZN7QWidget5closeEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -4472,7 +4479,7 @@ impl<'a> /*trait*/ QWidget_maximumHeight<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget13maximumHeightEv()};
     let mut ret = unsafe {C_ZNK7QWidget13maximumHeightEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -4508,7 +4515,7 @@ impl<'a> /*trait*/ QWidget_isAncestorOf<i8> for (&'a QWidget) {
     // unsafe{_ZNK7QWidget12isAncestorOfEPKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK7QWidget12isAncestorOfEPKS_(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -4627,7 +4634,7 @@ impl<'a> /*trait*/ QWidget_hasHeightForWidth<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget17hasHeightForWidthEv()};
     let mut ret = unsafe {C_ZNK7QWidget17hasHeightForWidthEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -4645,11 +4652,13 @@ pub trait QWidget_graphicsProxyWidget<RetType> {
 }
 
   // proto:  QGraphicsProxyWidget * QWidget::graphicsProxyWidget();
-impl<'a> /*trait*/ QWidget_graphicsProxyWidget<()> for () {
-  fn graphicsProxyWidget(self , rsthis: & QWidget) -> () {
+impl<'a> /*trait*/ QWidget_graphicsProxyWidget<QGraphicsProxyWidget> for () {
+  fn graphicsProxyWidget(self , rsthis: & QWidget) -> QGraphicsProxyWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget19graphicsProxyWidgetEv()};
-     unsafe {C_ZNK7QWidget19graphicsProxyWidgetEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QWidget19graphicsProxyWidgetEv(rsthis.qclsinst)};
+    let mut ret1 = QGraphicsProxyWidget::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -4743,7 +4752,7 @@ impl<'a> /*trait*/ QWidget_underMouse<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget10underMouseEv()};
     let mut ret = unsafe {C_ZNK7QWidget10underMouseEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -4767,7 +4776,7 @@ impl<'a> /*trait*/ QWidget_heightForWidth<i32> for (i32) {
     // unsafe{_ZNK7QWidget14heightForWidthEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK7QWidget14heightForWidthEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -4860,7 +4869,7 @@ impl<'a> /*trait*/ QWidget_height<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget6heightEv()};
     let mut ret = unsafe {C_ZNK7QWidget6heightEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -4930,7 +4939,7 @@ impl<'a> /*trait*/ QWidget_maximumWidth<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget12maximumWidthEv()};
     let mut ret = unsafe {C_ZNK7QWidget12maximumWidthEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -4953,7 +4962,7 @@ impl<'a> /*trait*/ QWidget_isMinimized<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget11isMinimizedEv()};
     let mut ret = unsafe {C_ZNK7QWidget11isMinimizedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -5078,7 +5087,7 @@ impl<'a> /*trait*/ QWidget_isRightToLeft<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget13isRightToLeftEv()};
     let mut ret = unsafe {C_ZNK7QWidget13isRightToLeftEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

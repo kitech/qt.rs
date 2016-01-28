@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qsystemtrayicon.h
 // dst-file: /src/widgets/qsystemtrayicon.rs
 //
@@ -18,13 +18,13 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qobject::QObject; // 771
+use super::super::core::qobject::*; // 771
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
-use super::super::gui::qicon::QIcon; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::qmenu::QMenu; // 773
-use super::super::core::qrect::QRect; // 771
+use super::super::core::qstring::*; // 771
+use super::super::gui::qicon::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::qmenu::*; // 773
+use super::super::core::qrect::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -284,7 +284,7 @@ impl<'a> /*trait*/ QSystemTrayIcon_isVisible<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSystemTrayIcon9isVisibleEv()};
     let mut ret = unsafe {C_ZNK15QSystemTrayIcon9isVisibleEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -344,7 +344,7 @@ impl<'a> /*trait*/ QSystemTrayIcon_supportsMessages_s<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSystemTrayIcon16supportsMessagesEv()};
     let mut ret = unsafe {C_ZN15QSystemTrayIcon16supportsMessagesEv()};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -485,7 +485,7 @@ impl<'a> /*trait*/ QSystemTrayIcon_isSystemTrayAvailable_s<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSystemTrayIcon21isSystemTrayAvailableEv()};
     let mut ret = unsafe {C_ZN15QSystemTrayIcon21isSystemTrayAvailableEv()};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

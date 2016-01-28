@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qcombobox.h
 // dst-file: /src/widgets/qcombobox.rs
 //
@@ -18,22 +18,21 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qwidget::QWidget; // 773
+use super::qwidget::*; // 773
 use std::ops::Deref;
-use super::super::core::qabstractitemmodel::QAbstractItemModel; // 771
-use super::super::core::qsize::QSize; // 771
-use super::qabstractitemview::QAbstractItemView; // 773
-use super::super::gui::qicon::QIcon; // 771
-use super::super::core::qstring::QString; // 771
-use super::super::core::qvariant::QVariant; // 771
-use super::super::core::qstringlist::QStringList; // 771
-use super::super::core::qabstractitemmodel::QModelIndex; // 771
-use super::super::gui::qvalidator::QValidator; // 771
-use super::qcompleter::QCompleter; // 773
-use super::qabstractitemdelegate::QAbstractItemDelegate; // 773
-use super::qlineedit::QLineEdit; // 773
-use super::super::core::qcoreevent::QEvent; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
+use super::super::core::qabstractitemmodel::*; // 771
+use super::super::core::qsize::*; // 771
+use super::qabstractitemview::*; // 773
+use super::super::gui::qicon::*; // 771
+use super::super::core::qstring::*; // 771
+use super::super::core::qvariant::*; // 771
+use super::super::core::qstringlist::*; // 771
+use super::super::gui::qvalidator::*; // 771
+use super::qcompleter::*; // 773
+use super::qabstractitemdelegate::*; // 773
+use super::qlineedit::*; // 773
+use super::super::core::qcoreevent::*; // 771
+use super::super::core::qobjectdefs::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -435,7 +434,7 @@ impl<'a> /*trait*/ QComboBox_maxCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox8maxCountEv()};
     let mut ret = unsafe {C_ZNK9QComboBox8maxCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -602,7 +601,7 @@ impl<'a> /*trait*/ QComboBox_autoCompletion<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox14autoCompletionEv()};
     let mut ret = unsafe {C_ZNK9QComboBox14autoCompletionEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -650,7 +649,7 @@ impl<'a> /*trait*/ QComboBox_hasFrame<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox8hasFrameEv()};
     let mut ret = unsafe {C_ZNK9QComboBox8hasFrameEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -818,7 +817,7 @@ impl<'a> /*trait*/ QComboBox_modelColumn<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox11modelColumnEv()};
     let mut ret = unsafe {C_ZNK9QComboBox11modelColumnEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -914,7 +913,7 @@ impl<'a> /*trait*/ QComboBox_maxVisibleItems<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox15maxVisibleItemsEv()};
     let mut ret = unsafe {C_ZNK9QComboBox15maxVisibleItemsEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1093,7 +1092,7 @@ impl<'a> /*trait*/ QComboBox_count<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox5countEv()};
     let mut ret = unsafe {C_ZNK9QComboBox5countEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1185,7 +1184,7 @@ impl<'a> /*trait*/ QComboBox_duplicatesEnabled<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox17duplicatesEnabledEv()};
     let mut ret = unsafe {C_ZNK9QComboBox17duplicatesEnabledEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1254,7 +1253,7 @@ impl<'a> /*trait*/ QComboBox_minimumContentsLength<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox21minimumContentsLengthEv()};
     let mut ret = unsafe {C_ZNK9QComboBox21minimumContentsLengthEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1277,7 +1276,7 @@ impl<'a> /*trait*/ QComboBox_isEditable<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox10isEditableEv()};
     let mut ret = unsafe {C_ZNK9QComboBox10isEditableEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1323,7 +1322,7 @@ impl<'a> /*trait*/ QComboBox_currentIndex<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox12currentIndexEv()};
     let mut ret = unsafe {C_ZNK9QComboBox12currentIndexEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1487,7 +1486,7 @@ impl<'a> /*trait*/ QComboBox_event<i8> for (&'a QEvent) {
     // unsafe{_ZN9QComboBox5eventEP6QEvent()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN9QComboBox5eventEP6QEvent(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

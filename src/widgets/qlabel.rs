@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qlabel.h
 // dst-file: /src/widgets/qlabel.rs
 //
@@ -18,15 +18,15 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qframe::QFrame; // 773
+use super::qframe::*; // 773
 use std::ops::Deref;
-use super::super::gui::qpicture::QPicture; // 771
-use super::super::core::qstring::QString; // 771
-use super::qwidget::QWidget; // 773
-use super::super::gui::qpixmap::QPixmap; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::core::qsize::QSize; // 771
-use super::super::gui::qmovie::QMovie; // 771
+use super::super::gui::qpicture::*; // 771
+use super::super::core::qstring::*; // 771
+use super::qwidget::*; // 773
+use super::super::gui::qpixmap::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::super::core::qsize::*; // 771
+use super::super::gui::qmovie::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -360,7 +360,7 @@ impl<'a> /*trait*/ QLabel_hasScaledContents<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel17hasScaledContentsEv()};
     let mut ret = unsafe {C_ZNK6QLabel17hasScaledContentsEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -408,7 +408,7 @@ impl<'a> /*trait*/ QLabel_heightForWidth<i32> for (i32) {
     // unsafe{_ZNK6QLabel14heightForWidthEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK6QLabel14heightForWidthEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -431,7 +431,7 @@ impl<'a> /*trait*/ QLabel_openExternalLinks<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel17openExternalLinksEv()};
     let mut ret = unsafe {C_ZNK6QLabel17openExternalLinksEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -535,7 +535,7 @@ impl<'a> /*trait*/ QLabel_wordWrap<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel8wordWrapEv()};
     let mut ret = unsafe {C_ZNK6QLabel8wordWrapEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -650,7 +650,7 @@ impl<'a> /*trait*/ QLabel_selectionStart<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel14selectionStartEv()};
     let mut ret = unsafe {C_ZNK6QLabel14selectionStartEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -673,7 +673,7 @@ impl<'a> /*trait*/ QLabel_hasSelectedText<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel15hasSelectedTextEv()};
     let mut ret = unsafe {C_ZNK6QLabel15hasSelectedTextEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -719,7 +719,7 @@ impl<'a> /*trait*/ QLabel_indent<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel6indentEv()};
     let mut ret = unsafe {C_ZNK6QLabel6indentEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -766,7 +766,7 @@ impl<'a> /*trait*/ QLabel_margin<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel6marginEv()};
     let mut ret = unsafe {C_ZNK6QLabel6marginEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

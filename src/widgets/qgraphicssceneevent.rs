@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qgraphicssceneevent.h
 // dst-file: /src/widgets/qgraphicssceneevent.rs
 //
@@ -20,12 +20,11 @@ use self::libc::*;
 // use block begin =>
 // use super::qgraphicssceneevent::QGraphicsSceneEvent; // 773
 use std::ops::Deref;
-use super::super::core::qpoint::QPointF; // 771
-use super::super::core::qpoint::QPoint; // 771
-use super::qwidget::QWidget; // 773
-use super::super::core::qmimedata::QMimeData; // 771
-use super::super::core::qcoreevent::QEvent; // 771
-use super::super::core::qsize::QSizeF; // 771
+use super::super::core::qpoint::*; // 771
+use super::qwidget::*; // 773
+use super::super::core::qmimedata::*; // 771
+use super::super::core::qcoreevent::*; // 771
+use super::super::core::qsize::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -1546,7 +1545,7 @@ impl<'a> /*trait*/ QGraphicsSceneWheelEvent_delta<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QGraphicsSceneWheelEvent5deltaEv()};
     let mut ret = unsafe {C_ZNK24QGraphicsSceneWheelEvent5deltaEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

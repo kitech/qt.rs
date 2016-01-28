@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qdesktopwidget.h
 // dst-file: /src/widgets/qdesktopwidget.rs
 //
@@ -18,11 +18,11 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qwidget::QWidget; // 773
+use super::qwidget::*; // 773
 use std::ops::Deref;
-use super::super::core::qpoint::QPoint; // 771
-use super::super::core::qrect::QRect; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
+use super::super::core::qpoint::*; // 771
+use super::super::core::qrect::*; // 771
+use super::super::core::qobjectdefs::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -179,7 +179,7 @@ impl<'a> /*trait*/ QDesktopWidget_numScreens<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDesktopWidget10numScreensEv()};
     let mut ret = unsafe {C_ZNK14QDesktopWidget10numScreensEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -263,7 +263,7 @@ impl<'a> /*trait*/ QDesktopWidget_screenNumber<i32> for (&'a QPoint) {
     // unsafe{_ZNK14QDesktopWidget12screenNumberERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK14QDesktopWidget12screenNumberERK6QPoint(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -286,7 +286,7 @@ impl<'a> /*trait*/ QDesktopWidget_screenCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDesktopWidget11screenCountEv()};
     let mut ret = unsafe {C_ZNK14QDesktopWidget11screenCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -309,7 +309,7 @@ impl<'a> /*trait*/ QDesktopWidget_isVirtualDesktop<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDesktopWidget16isVirtualDesktopEv()};
     let mut ret = unsafe {C_ZNK14QDesktopWidget16isVirtualDesktopEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -321,7 +321,7 @@ impl<'a> /*trait*/ QDesktopWidget_screenNumber<i32> for (&'a QWidget) {
     // unsafe{_ZNK14QDesktopWidget12screenNumberEPK7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK14QDesktopWidget12screenNumberEPK7QWidget(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -344,7 +344,7 @@ impl<'a> /*trait*/ QDesktopWidget_primaryScreen<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDesktopWidget13primaryScreenEv()};
     let mut ret = unsafe {C_ZNK14QDesktopWidget13primaryScreenEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

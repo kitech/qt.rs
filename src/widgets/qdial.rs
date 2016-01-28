@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qdial.h
 // dst-file: /src/widgets/qdial.rs
 //
@@ -18,11 +18,11 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qabstractslider::QAbstractSlider; // 773
+use super::qabstractslider::*; // 773
 use std::ops::Deref;
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::core::qsize::QSize; // 771
-use super::qwidget::QWidget; // 773
+use super::super::core::qobjectdefs::*; // 771
+use super::super::core::qsize::*; // 771
+use super::qwidget::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -102,7 +102,7 @@ impl<'a> /*trait*/ QDial_wrapping<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDial8wrappingEv()};
     let mut ret = unsafe {C_ZNK5QDial8wrappingEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -171,7 +171,7 @@ impl<'a> /*trait*/ QDial_notchesVisible<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDial14notchesVisibleEv()};
     let mut ret = unsafe {C_ZNK5QDial14notchesVisibleEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -240,7 +240,7 @@ impl<'a> /*trait*/ QDial_notchSize<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDial9notchSizeEv()};
     let mut ret = unsafe {C_ZNK5QDial9notchSizeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -310,7 +310,7 @@ impl<'a> /*trait*/ QDial_notchTarget<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDial11notchTargetEv()};
     let mut ret = unsafe {C_ZNK5QDial11notchTargetEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }

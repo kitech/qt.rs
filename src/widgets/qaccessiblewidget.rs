@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qaccessiblewidget.h
 // dst-file: /src/widgets/qaccessiblewidget.rs
 //
@@ -18,14 +18,15 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::gui::qaccessibleobject::QAccessibleObject; // 771
+use super::super::gui::qaccessibleobject::*; // 771
 use std::ops::Deref;
-use super::qwidget::QWidget; // 773
-use super::super::core::qstring::QString; // 771
-use super::super::gui::qaccessible::QAccessibleInterface; // 771
-use super::super::gui::qwindow::QWindow; // 771
-use super::super::core::qrect::QRect; // 771
-use super::super::gui::qcolor::QColor; // 771
+use super::qwidget::*; // 773
+use super::super::core::qstring::*; // 771
+use super::super::gui::qaccessible::*; // 771
+use super::super::gui::qwindow::*; // 771
+use super::super::core::qrect::*; // 771
+use super::super::gui::qcolor::*; // 771
+use super::super::core::qstringlist::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -53,13 +54,13 @@ extern {
   // proto:  QColor QAccessibleWidget::backgroundColor();
   fn C_ZNK17QAccessibleWidget15backgroundColorEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QStringList QAccessibleWidget::actionNames();
-  fn C_ZNK17QAccessibleWidget11actionNamesEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK17QAccessibleWidget11actionNamesEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QAccessibleInterface * QAccessibleWidget::parent();
   fn C_ZNK17QAccessibleWidget6parentEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAccessibleWidget::doAction(const QString & actionName);
   fn C_ZN17QAccessibleWidget8doActionERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QStringList QAccessibleWidget::keyBindingsForAction(const QString & actionName);
-  fn C_ZNK17QAccessibleWidget20keyBindingsForActionERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK17QAccessibleWidget20keyBindingsForActionERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  int QAccessibleWidget::indexOfChild(const QAccessibleInterface * child);
   fn C_ZNK17QAccessibleWidget12indexOfChildEPK20QAccessibleInterface(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
 } // <= ext block end
@@ -107,7 +108,7 @@ impl<'a> /*trait*/ QAccessibleWidget_childCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAccessibleWidget10childCountEv()};
     let mut ret = unsafe {C_ZNK17QAccessibleWidget10childCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -227,7 +228,7 @@ impl<'a> /*trait*/ QAccessibleWidget_isValid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAccessibleWidget7isValidEv()};
     let mut ret = unsafe {C_ZNK17QAccessibleWidget7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -293,11 +294,13 @@ pub trait QAccessibleWidget_actionNames<RetType> {
 }
 
   // proto:  QStringList QAccessibleWidget::actionNames();
-impl<'a> /*trait*/ QAccessibleWidget_actionNames<()> for () {
-  fn actionNames(self , rsthis: & QAccessibleWidget) -> () {
+impl<'a> /*trait*/ QAccessibleWidget_actionNames<QStringList> for () {
+  fn actionNames(self , rsthis: & QAccessibleWidget) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAccessibleWidget11actionNamesEv()};
-     unsafe {C_ZNK17QAccessibleWidget11actionNamesEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK17QAccessibleWidget11actionNamesEv(rsthis.qclsinst)};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -362,12 +365,14 @@ pub trait QAccessibleWidget_keyBindingsForAction<RetType> {
 }
 
   // proto:  QStringList QAccessibleWidget::keyBindingsForAction(const QString & actionName);
-impl<'a> /*trait*/ QAccessibleWidget_keyBindingsForAction<()> for (&'a QString) {
-  fn keyBindingsForAction(self , rsthis: & QAccessibleWidget) -> () {
+impl<'a> /*trait*/ QAccessibleWidget_keyBindingsForAction<QStringList> for (&'a QString) {
+  fn keyBindingsForAction(self , rsthis: & QAccessibleWidget) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAccessibleWidget20keyBindingsForActionERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZNK17QAccessibleWidget20keyBindingsForActionERK7QString(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK17QAccessibleWidget20keyBindingsForActionERK7QString(rsthis.qclsinst, arg0)};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -391,7 +396,7 @@ impl<'a> /*trait*/ QAccessibleWidget_indexOfChild<i32> for (&'a QAccessibleInter
     // unsafe{_ZNK17QAccessibleWidget12indexOfChildEPK20QAccessibleInterface()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK17QAccessibleWidget12indexOfChildEPK20QAccessibleInterface(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

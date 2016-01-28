@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qitemdelegate.h
 // dst-file: /src/widgets/qitemdelegate.rs
 //
@@ -18,17 +18,16 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qabstractitemdelegate::QAbstractItemDelegate; // 773
+use super::qabstractitemdelegate::*; // 773
 use std::ops::Deref;
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::qstyleoption::QStyleOptionViewItem; // 773
-use super::super::core::qabstractitemmodel::QModelIndex; // 771
-use super::super::core::qsize::QSize; // 771
-use super::qwidget::QWidget; // 773
-use super::super::core::qabstractitemmodel::QAbstractItemModel; // 771
-use super::qitemeditorfactory::QItemEditorFactory; // 773
-use super::super::core::qobject::QObject; // 771
-use super::super::gui::qpainter::QPainter; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::qstyleoption::*; // 773
+use super::super::core::qabstractitemmodel::*; // 771
+use super::super::core::qsize::*; // 771
+use super::qwidget::*; // 773
+use super::qitemeditorfactory::*; // 773
+use super::super::core::qobject::*; // 771
+use super::super::gui::qpainter::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -335,7 +334,7 @@ impl<'a> /*trait*/ QItemDelegate_hasClipping<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QItemDelegate11hasClippingEv()};
     let mut ret = unsafe {C_ZNK13QItemDelegate11hasClippingEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

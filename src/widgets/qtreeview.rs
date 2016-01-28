@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qtreeview.h
 // dst-file: /src/widgets/qtreeview.rs
 //
@@ -18,17 +18,16 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qabstractitemview::QAbstractItemView; // 773
+use super::qabstractitemview::*; // 773
 use std::ops::Deref;
-use super::qheaderview::QHeaderView; // 773
-use super::super::core::qabstractitemmodel::QModelIndex; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::qwidget::QWidget; // 773
-use super::super::core::qrect::QRect; // 771
-use super::super::core::qstring::QString; // 771
-use super::super::core::qitemselectionmodel::QItemSelectionModel; // 771
-use super::super::core::qabstractitemmodel::QAbstractItemModel; // 771
-use super::super::core::qpoint::QPoint; // 771
+use super::qheaderview::*; // 773
+use super::super::core::qabstractitemmodel::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::qwidget::*; // 773
+use super::super::core::qrect::*; // 771
+use super::super::core::qstring::*; // 771
+use super::super::core::qitemselectionmodel::*; // 771
+use super::super::core::qpoint::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -235,7 +234,7 @@ impl<'a> /*trait*/ QTreeView_isAnimated<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTreeView10isAnimatedEv()};
     let mut ret = unsafe {C_ZNK9QTreeView10isAnimatedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -259,7 +258,7 @@ impl<'a> /*trait*/ QTreeView_isExpanded<i8> for (&'a QModelIndex) {
     // unsafe{_ZNK9QTreeView10isExpandedERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK9QTreeView10isExpandedERK11QModelIndex(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -494,7 +493,7 @@ impl<'a> /*trait*/ QTreeView_autoExpandDelay<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTreeView15autoExpandDelayEv()};
     let mut ret = unsafe {C_ZNK9QTreeView15autoExpandDelayEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -567,7 +566,7 @@ impl<'a> /*trait*/ QTreeView_indentation<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTreeView11indentationEv()};
     let mut ret = unsafe {C_ZNK9QTreeView11indentationEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -591,7 +590,7 @@ impl<'a> /*trait*/ QTreeView_columnViewportPosition<i32> for (i32) {
     // unsafe{_ZNK9QTreeView22columnViewportPositionEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK9QTreeView22columnViewportPositionEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -614,7 +613,7 @@ impl<'a> /*trait*/ QTreeView_expandsOnDoubleClick<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTreeView20expandsOnDoubleClickEv()};
     let mut ret = unsafe {C_ZNK9QTreeView20expandsOnDoubleClickEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -637,7 +636,7 @@ impl<'a> /*trait*/ QTreeView_isSortingEnabled<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTreeView16isSortingEnabledEv()};
     let mut ret = unsafe {C_ZNK9QTreeView16isSortingEnabledEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -779,7 +778,7 @@ impl<'a> /*trait*/ QTreeView_rootIsDecorated<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTreeView15rootIsDecoratedEv()};
     let mut ret = unsafe {C_ZNK9QTreeView15rootIsDecoratedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -847,7 +846,7 @@ impl<'a> /*trait*/ QTreeView_allColumnsShowFocus<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTreeView19allColumnsShowFocusEv()};
     let mut ret = unsafe {C_ZNK9QTreeView19allColumnsShowFocusEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -871,7 +870,7 @@ impl<'a> /*trait*/ QTreeView_columnWidth<i32> for (i32) {
     // unsafe{_ZNK9QTreeView11columnWidthEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK9QTreeView11columnWidthEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -965,7 +964,7 @@ impl<'a> /*trait*/ QTreeView_isFirstColumnSpanned<i8> for (i32, &'a QModelIndex)
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK9QTreeView20isFirstColumnSpannedEiRK11QModelIndex(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1011,7 +1010,7 @@ impl<'a> /*trait*/ QTreeView_treePosition<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTreeView12treePositionEv()};
     let mut ret = unsafe {C_ZNK9QTreeView12treePositionEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1082,7 +1081,7 @@ impl<'a> /*trait*/ QTreeView_isRowHidden<i8> for (i32, &'a QModelIndex) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK9QTreeView11isRowHiddenEiRK11QModelIndex(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1127,7 +1126,7 @@ impl<'a> /*trait*/ QTreeView_wordWrap<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTreeView8wordWrapEv()};
     let mut ret = unsafe {C_ZNK9QTreeView8wordWrapEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1357,7 +1356,7 @@ impl<'a> /*trait*/ QTreeView_itemsExpandable<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTreeView15itemsExpandableEv()};
     let mut ret = unsafe {C_ZNK9QTreeView15itemsExpandableEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1403,7 +1402,7 @@ impl<'a> /*trait*/ QTreeView_isHeaderHidden<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTreeView14isHeaderHiddenEv()};
     let mut ret = unsafe {C_ZNK9QTreeView14isHeaderHiddenEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1427,7 +1426,7 @@ impl<'a> /*trait*/ QTreeView_columnAt<i32> for (i32) {
     // unsafe{_ZNK9QTreeView8columnAtEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK9QTreeView8columnAtEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1474,7 +1473,7 @@ impl<'a> /*trait*/ QTreeView_isColumnHidden<i8> for (i32) {
     // unsafe{_ZNK9QTreeView14isColumnHiddenEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK9QTreeView14isColumnHiddenEi(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1497,7 +1496,7 @@ impl<'a> /*trait*/ QTreeView_uniformRowHeights<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTreeView17uniformRowHeightsEv()};
     let mut ret = unsafe {C_ZNK9QTreeView17uniformRowHeightsEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

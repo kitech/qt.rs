@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qabstractbutton.h
 // dst-file: /src/widgets/qabstractbutton.rs
 //
@@ -18,14 +18,14 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qwidget::QWidget; // 773
+use super::qwidget::*; // 773
 use std::ops::Deref;
-use super::super::core::qsize::QSize; // 771
-use super::super::gui::qkeysequence::QKeySequence; // 771
-use super::qbuttongroup::QButtonGroup; // 773
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::gui::qicon::QIcon; // 771
-use super::super::core::qstring::QString; // 771
+use super::super::core::qsize::*; // 771
+use super::super::gui::qkeysequence::*; // 771
+use super::qbuttongroup::*; // 773
+use super::super::core::qobjectdefs::*; // 771
+use super::super::gui::qicon::*; // 771
+use super::super::core::qstring::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -286,7 +286,7 @@ impl<'a> /*trait*/ QAbstractButton_isCheckable<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAbstractButton11isCheckableEv()};
     let mut ret = unsafe {C_ZNK15QAbstractButton11isCheckableEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -337,7 +337,7 @@ impl<'a> /*trait*/ QAbstractButton_isDown<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAbstractButton6isDownEv()};
     let mut ret = unsafe {C_ZNK15QAbstractButton6isDownEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -407,7 +407,7 @@ impl<'a> /*trait*/ QAbstractButton_isChecked<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAbstractButton9isCheckedEv()};
     let mut ret = unsafe {C_ZNK15QAbstractButton9isCheckedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -453,7 +453,7 @@ impl<'a> /*trait*/ QAbstractButton_autoRepeatDelay<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAbstractButton15autoRepeatDelayEv()};
     let mut ret = unsafe {C_ZNK15QAbstractButton15autoRepeatDelayEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -476,7 +476,7 @@ impl<'a> /*trait*/ QAbstractButton_autoExclusive<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAbstractButton13autoExclusiveEv()};
     let mut ret = unsafe {C_ZNK15QAbstractButton13autoExclusiveEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -753,7 +753,7 @@ impl<'a> /*trait*/ QAbstractButton_autoRepeatInterval<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAbstractButton18autoRepeatIntervalEv()};
     let mut ret = unsafe {C_ZNK15QAbstractButton18autoRepeatIntervalEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -776,7 +776,7 @@ impl<'a> /*trait*/ QAbstractButton_autoRepeat<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAbstractButton10autoRepeatEv()};
     let mut ret = unsafe {C_ZNK15QAbstractButton10autoRepeatEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

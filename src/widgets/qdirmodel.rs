@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qdirmodel.h
 // dst-file: /src/widgets/qdirmodel.rs
 //
@@ -18,18 +18,17 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qabstractitemmodel::QAbstractItemModel; // 771
+use super::super::core::qabstractitemmodel::*; // 771
 use std::ops::Deref;
-use super::qfileiconprovider::QFileIconProvider; // 773
-use super::super::core::qabstractitemmodel::QModelIndex; // 771
-use super::super::core::qvariant::QVariant; // 771
-use super::super::core::qstringlist::QStringList; // 771
-use super::super::core::qobject::QObject; // 771
-use super::super::core::qstring::QString; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::core::qmimedata::QMimeData; // 771
-use super::super::gui::qicon::QIcon; // 771
-use super::super::core::qfileinfo::QFileInfo; // 771
+use super::qfileiconprovider::*; // 773
+use super::super::core::qvariant::*; // 771
+use super::super::core::qstringlist::*; // 771
+use super::super::core::qobject::*; // 771
+use super::super::core::qstring::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::super::core::qmimedata::*; // 771
+use super::super::gui::qicon::*; // 771
+use super::super::core::qfileinfo::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -47,13 +46,13 @@ extern {
   // proto:  QVariant QDirModel::data(const QModelIndex & index, int role);
   fn C_ZNK9QDirModel4dataERK11QModelIndexi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> *mut c_void;
   // proto:  QStringList QDirModel::nameFilters();
-  fn C_ZNK9QDirModel11nameFiltersEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK9QDirModel11nameFiltersEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QDirModel::isReadOnly();
   fn C_ZNK9QDirModel10isReadOnlyEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  int QDirModel::columnCount(const QModelIndex & parent);
   fn C_ZNK9QDirModel11columnCountERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
   // proto:  QStringList QDirModel::mimeTypes();
-  fn C_ZNK9QDirModel9mimeTypesEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK9QDirModel9mimeTypesEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QDirModel::~QDirModel();
   fn C_ZN9QDirModelD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QDirModel::remove(const QModelIndex & index);
@@ -217,11 +216,13 @@ pub trait QDirModel_nameFilters<RetType> {
 }
 
   // proto:  QStringList QDirModel::nameFilters();
-impl<'a> /*trait*/ QDirModel_nameFilters<()> for () {
-  fn nameFilters(self , rsthis: & QDirModel) -> () {
+impl<'a> /*trait*/ QDirModel_nameFilters<QStringList> for () {
+  fn nameFilters(self , rsthis: & QDirModel) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDirModel11nameFiltersEv()};
-     unsafe {C_ZNK9QDirModel11nameFiltersEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QDirModel11nameFiltersEv(rsthis.qclsinst)};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -244,7 +245,7 @@ impl<'a> /*trait*/ QDirModel_isReadOnly<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDirModel10isReadOnlyEv()};
     let mut ret = unsafe {C_ZNK9QDirModel10isReadOnlyEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -268,7 +269,7 @@ impl<'a> /*trait*/ QDirModel_columnCount<i32> for (&'a QModelIndex) {
     // unsafe{_ZNK9QDirModel11columnCountERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK9QDirModel11columnCountERK11QModelIndex(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -286,11 +287,13 @@ pub trait QDirModel_mimeTypes<RetType> {
 }
 
   // proto:  QStringList QDirModel::mimeTypes();
-impl<'a> /*trait*/ QDirModel_mimeTypes<()> for () {
-  fn mimeTypes(self , rsthis: & QDirModel) -> () {
+impl<'a> /*trait*/ QDirModel_mimeTypes<QStringList> for () {
+  fn mimeTypes(self , rsthis: & QDirModel) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDirModel9mimeTypesEv()};
-     unsafe {C_ZNK9QDirModel9mimeTypesEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QDirModel9mimeTypesEv(rsthis.qclsinst)};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -336,7 +339,7 @@ impl<'a> /*trait*/ QDirModel_remove<i8> for (&'a QModelIndex) {
     // unsafe{_ZN9QDirModel6removeERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN9QDirModel6removeERK11QModelIndex(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -408,7 +411,7 @@ impl<'a> /*trait*/ QDirModel_resolveSymlinks<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDirModel15resolveSymlinksEv()};
     let mut ret = unsafe {C_ZNK9QDirModel15resolveSymlinksEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -572,7 +575,7 @@ impl<'a> /*trait*/ QDirModel_setData<i8> for (&'a QModelIndex, &'a QVariant, i32
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2  as c_int;
     let mut ret = unsafe {C_ZN9QDirModel7setDataERK11QModelIndexRK8QVarianti(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -644,7 +647,7 @@ impl<'a> /*trait*/ QDirModel_hasChildren<i8> for (&'a QModelIndex) {
     // unsafe{_ZNK9QDirModel11hasChildrenERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK9QDirModel11hasChildrenERK11QModelIndex(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -668,7 +671,7 @@ impl<'a> /*trait*/ QDirModel_isDir<i8> for (&'a QModelIndex) {
     // unsafe{_ZNK9QDirModel5isDirERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK9QDirModel5isDirERK11QModelIndex(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -718,7 +721,7 @@ impl<'a> /*trait*/ QDirModel_rmdir<i8> for (&'a QModelIndex) {
     // unsafe{_ZN9QDirModel5rmdirERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN9QDirModel5rmdirERK11QModelIndex(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -767,7 +770,7 @@ impl<'a> /*trait*/ QDirModel_rowCount<i32> for (&'a QModelIndex) {
     // unsafe{_ZNK9QDirModel8rowCountERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK9QDirModel8rowCountERK11QModelIndex(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -836,7 +839,7 @@ impl<'a> /*trait*/ QDirModel_lazyChildCount<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDirModel14lazyChildCountEv()};
     let mut ret = unsafe {C_ZNK9QDirModel14lazyChildCountEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

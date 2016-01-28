@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qcalendarwidget.h
 // dst-file: /src/widgets/qcalendarwidget.rs
 //
@@ -18,12 +18,13 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qwidget::QWidget; // 773
+use super::qwidget::*; // 773
 use std::ops::Deref;
-use super::super::core::qdatetime::QDate; // 771
-use super::super::core::qsize::QSize; // 771
-use super::super::gui::qtextformat::QTextCharFormat; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
+use super::super::core::qdatetime::*; // 771
+use super::super::core::qsize::*; // 771
+use super::super::gui::qtextformat::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+// use super::qmap::*; // 775
 // <= use block end
 
 // ext block begin =>
@@ -75,7 +76,7 @@ extern {
   // proto:  bool QCalendarWidget::isDateEditEnabled();
   fn C_ZNK15QCalendarWidget17isDateEditEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QMap<QDate, QTextCharFormat> QCalendarWidget::dateTextFormat();
-  fn C_ZNK15QCalendarWidget14dateTextFormatEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK15QCalendarWidget14dateTextFormatEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QCalendarWidget::setDateEditEnabled(bool enable);
   fn C_ZN15QCalendarWidget18setDateEditEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QCalendarWidget::setDateTextFormat(const QDate & date, const QTextCharFormat & format);
@@ -361,7 +362,7 @@ impl<'a> /*trait*/ QCalendarWidget_monthShown<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QCalendarWidget10monthShownEv()};
     let mut ret = unsafe {C_ZNK15QCalendarWidget10monthShownEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -482,7 +483,7 @@ impl<'a> /*trait*/ QCalendarWidget_isNavigationBarVisible<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QCalendarWidget22isNavigationBarVisibleEv()};
     let mut ret = unsafe {C_ZNK15QCalendarWidget22isNavigationBarVisibleEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -553,7 +554,7 @@ impl<'a> /*trait*/ QCalendarWidget_dateEditAcceptDelay<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QCalendarWidget19dateEditAcceptDelayEv()};
     let mut ret = unsafe {C_ZNK15QCalendarWidget19dateEditAcceptDelayEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -600,17 +601,18 @@ impl<'a> /*trait*/ QCalendarWidget_isDateEditEnabled<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QCalendarWidget17isDateEditEnabledEv()};
     let mut ret = unsafe {C_ZNK15QCalendarWidget17isDateEditEnabledEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
 
   // proto:  QMap<QDate, QTextCharFormat> QCalendarWidget::dateTextFormat();
-impl<'a> /*trait*/ QCalendarWidget_dateTextFormat<()> for () {
-  fn dateTextFormat(self , rsthis: & QCalendarWidget) -> () {
+impl<'a> /*trait*/ QCalendarWidget_dateTextFormat<u64> for () {
+  fn dateTextFormat(self , rsthis: & QCalendarWidget) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QCalendarWidget14dateTextFormatEv()};
-     unsafe {C_ZNK15QCalendarWidget14dateTextFormatEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QCalendarWidget14dateTextFormatEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -773,7 +775,7 @@ impl<'a> /*trait*/ QCalendarWidget_isGridVisible<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QCalendarWidget13isGridVisibleEv()};
     let mut ret = unsafe {C_ZNK15QCalendarWidget13isGridVisibleEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -796,7 +798,7 @@ impl<'a> /*trait*/ QCalendarWidget_yearShown<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QCalendarWidget9yearShownEv()};
     let mut ret = unsafe {C_ZNK15QCalendarWidget9yearShownEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

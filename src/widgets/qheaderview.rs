@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qheaderview.h
 // dst-file: /src/widgets/qheaderview.rs
 //
@@ -18,14 +18,14 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qabstractitemview::QAbstractItemView; // 773
+use super::qabstractitemview::*; // 773
 use std::ops::Deref;
-use super::super::core::qsize::QSize; // 771
-use super::super::core::qbytearray::QByteArray; // 771
-use super::super::core::qpoint::QPoint; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::qwidget::QWidget; // 773
-use super::super::core::qabstractitemmodel::QAbstractItemModel; // 771
+use super::super::core::qsize::*; // 771
+use super::super::core::qbytearray::*; // 771
+use super::super::core::qpoint::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::qwidget::*; // 773
+use super::super::core::qabstractitemmodel::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -216,7 +216,7 @@ impl<'a> /*trait*/ QHeaderView_maximumSectionSize<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView18maximumSectionSizeEv()};
     let mut ret = unsafe {C_ZNK11QHeaderView18maximumSectionSizeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -264,7 +264,7 @@ impl<'a> /*trait*/ QHeaderView_sectionPosition<i32> for (i32) {
     // unsafe{_ZNK11QHeaderView15sectionPositionEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK11QHeaderView15sectionPositionEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -288,7 +288,7 @@ impl<'a> /*trait*/ QHeaderView_sectionSize<i32> for (i32) {
     // unsafe{_ZNK11QHeaderView11sectionSizeEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK11QHeaderView11sectionSizeEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -402,7 +402,7 @@ impl<'a> /*trait*/ QHeaderView_sectionsClickable<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView17sectionsClickableEv()};
     let mut ret = unsafe {C_ZNK11QHeaderView17sectionsClickableEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -425,7 +425,7 @@ impl<'a> /*trait*/ QHeaderView_resizeContentsPrecision<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView23resizeContentsPrecisionEv()};
     let mut ret = unsafe {C_ZNK11QHeaderView23resizeContentsPrecisionEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -471,7 +471,7 @@ impl<'a> /*trait*/ QHeaderView_length<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView6lengthEv()};
     let mut ret = unsafe {C_ZNK11QHeaderView6lengthEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -517,7 +517,7 @@ impl<'a> /*trait*/ QHeaderView_sortIndicatorSection<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView20sortIndicatorSectionEv()};
     let mut ret = unsafe {C_ZNK11QHeaderView20sortIndicatorSectionEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -540,7 +540,7 @@ impl<'a> /*trait*/ QHeaderView_cascadingSectionResizes<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView23cascadingSectionResizesEv()};
     let mut ret = unsafe {C_ZNK11QHeaderView23cascadingSectionResizesEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -587,7 +587,7 @@ impl<'a> /*trait*/ QHeaderView_visualIndexAt<i32> for (i32) {
     // unsafe{_ZNK11QHeaderView13visualIndexAtEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK11QHeaderView13visualIndexAtEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -634,7 +634,7 @@ impl<'a> /*trait*/ QHeaderView_logicalIndexAt<i32> for (&'a QPoint) {
     // unsafe{_ZNK11QHeaderView14logicalIndexAtERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK11QHeaderView14logicalIndexAtERK6QPoint(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -680,7 +680,7 @@ impl<'a> /*trait*/ QHeaderView_sectionViewportPosition<i32> for (i32) {
     // unsafe{_ZNK11QHeaderView23sectionViewportPositionEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK11QHeaderView23sectionViewportPositionEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -703,7 +703,7 @@ impl<'a> /*trait*/ QHeaderView_highlightSections<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView17highlightSectionsEv()};
     let mut ret = unsafe {C_ZNK11QHeaderView17highlightSectionsEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -726,7 +726,7 @@ impl<'a> /*trait*/ QHeaderView_offset<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView6offsetEv()};
     let mut ret = unsafe {C_ZNK11QHeaderView6offsetEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -842,7 +842,7 @@ impl<'a> /*trait*/ QHeaderView_hiddenSectionCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView18hiddenSectionCountEv()};
     let mut ret = unsafe {C_ZNK11QHeaderView18hiddenSectionCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -911,7 +911,7 @@ impl<'a> /*trait*/ QHeaderView_defaultSectionSize<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView18defaultSectionSizeEv()};
     let mut ret = unsafe {C_ZNK11QHeaderView18defaultSectionSizeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -980,7 +980,7 @@ impl<'a> /*trait*/ QHeaderView_count<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView5countEv()};
     let mut ret = unsafe {C_ZNK11QHeaderView5countEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1004,7 +1004,7 @@ impl<'a> /*trait*/ QHeaderView_visualIndex<i32> for (i32) {
     // unsafe{_ZNK11QHeaderView11visualIndexEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK11QHeaderView11visualIndexEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1027,7 +1027,7 @@ impl<'a> /*trait*/ QHeaderView_sectionsMoved<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView13sectionsMovedEv()};
     let mut ret = unsafe {C_ZNK11QHeaderView13sectionsMovedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1050,7 +1050,7 @@ impl<'a> /*trait*/ QHeaderView_stretchSectionCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView19stretchSectionCountEv()};
     let mut ret = unsafe {C_ZNK11QHeaderView19stretchSectionCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1118,7 +1118,7 @@ impl<'a> /*trait*/ QHeaderView_sectionsHidden<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView14sectionsHiddenEv()};
     let mut ret = unsafe {C_ZNK11QHeaderView14sectionsHiddenEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1141,7 +1141,7 @@ impl<'a> /*trait*/ QHeaderView_minimumSectionSize<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView18minimumSectionSizeEv()};
     let mut ret = unsafe {C_ZNK11QHeaderView18minimumSectionSizeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1234,7 +1234,7 @@ impl<'a> /*trait*/ QHeaderView_stretchLastSection<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView18stretchLastSectionEv()};
     let mut ret = unsafe {C_ZNK11QHeaderView18stretchLastSectionEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1258,7 +1258,7 @@ impl<'a> /*trait*/ QHeaderView_sectionSizeHint<i32> for (i32) {
     // unsafe{_ZNK11QHeaderView15sectionSizeHintEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK11QHeaderView15sectionSizeHintEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1281,7 +1281,7 @@ impl<'a> /*trait*/ QHeaderView_sectionsMovable<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView15sectionsMovableEv()};
     let mut ret = unsafe {C_ZNK11QHeaderView15sectionsMovableEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1305,7 +1305,7 @@ impl<'a> /*trait*/ QHeaderView_isSectionHidden<i8> for (i32) {
     // unsafe{_ZNK11QHeaderView15isSectionHiddenEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK11QHeaderView15isSectionHiddenEi(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1318,7 +1318,7 @@ impl<'a> /*trait*/ QHeaderView_logicalIndexAt<i32> for (i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZNK11QHeaderView14logicalIndexAtEii(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1330,7 +1330,7 @@ impl<'a> /*trait*/ QHeaderView_logicalIndexAt<i32> for (i32) {
     // unsafe{_ZNK11QHeaderView14logicalIndexAtEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK11QHeaderView14logicalIndexAtEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1354,7 +1354,7 @@ impl<'a> /*trait*/ QHeaderView_logicalIndex<i32> for (i32) {
     // unsafe{_ZNK11QHeaderView12logicalIndexEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK11QHeaderView12logicalIndexEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1472,7 +1472,7 @@ impl<'a> /*trait*/ QHeaderView_restoreState<i8> for (&'a QByteArray) {
     // unsafe{_ZN11QHeaderView12restoreStateERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN11QHeaderView12restoreStateERK10QByteArray(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1518,7 +1518,7 @@ impl<'a> /*trait*/ QHeaderView_isSortIndicatorShown<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView20isSortIndicatorShownEv()};
     let mut ret = unsafe {C_ZNK11QHeaderView20isSortIndicatorShownEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

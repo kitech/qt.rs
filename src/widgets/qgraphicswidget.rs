@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qgraphicswidget.h
 // dst-file: /src/widgets/qgraphicswidget.rs
 //
@@ -18,23 +18,23 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qgraphicsitem::QGraphicsObject; // 773
+use super::qgraphicsitem::*; // 773
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
-use super::qgraphicslayout::QGraphicsLayout; // 773
-use super::super::core::qrect::QRectF; // 771
-use super::super::core::qsize::QSizeF; // 771
-use super::qgraphicsitem::QGraphicsItem; // 773
-use super::super::gui::qpainter::QPainter; // 771
-use super::qstyleoption::QStyleOptionGraphicsItem; // 773
-use super::qwidget::QWidget; // 773
-use super::super::gui::qpalette::QPalette; // 771
-use super::qstyle::QStyle; // 773
-use super::super::gui::qpainterpath::QPainterPath; // 771
-use super::qaction::QAction; // 773
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::gui::qfont::QFont; // 771
-use super::super::gui::qkeysequence::QKeySequence; // 771
+use super::super::core::qstring::*; // 771
+use super::qgraphicslayout::*; // 773
+use super::super::core::qrect::*; // 771
+use super::super::core::qsize::*; // 771
+use super::super::gui::qpainter::*; // 771
+use super::qstyleoption::*; // 773
+use super::qwidget::*; // 773
+use super::super::gui::qpalette::*; // 771
+use super::qstyle::*; // 773
+use super::super::gui::qpainterpath::*; // 771
+use super::qaction::*; // 773
+use super::super::core::qobjectdefs::*; // 771
+use super::super::gui::qfont::*; // 771
+use super::super::gui::qkeysequence::*; // 771
+// use super::qlist::*; // 775
 // <= use block end
 
 // ext block begin =>
@@ -110,17 +110,17 @@ extern {
   // proto:  QString QGraphicsWidget::windowTitle();
   fn C_ZNK15QGraphicsWidget11windowTitleEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QGraphicsLayout * QGraphicsWidget::layout();
-  fn C_ZNK15QGraphicsWidget6layoutEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK15QGraphicsWidget6layoutEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QGraphicsWidget::~QGraphicsWidget();
   fn C_ZN15QGraphicsWidgetD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QGraphicsWidget * QGraphicsWidget::focusWidget();
-  fn C_ZNK15QGraphicsWidget11focusWidgetEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK15QGraphicsWidget11focusWidgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QGraphicsWidget::addAction(QAction * action);
   fn C_ZN15QGraphicsWidget9addActionEP7QAction(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QFont QGraphicsWidget::font();
   fn C_ZNK15QGraphicsWidget4fontEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QList<QAction *> QGraphicsWidget::actions();
-  fn C_ZNK15QGraphicsWidget7actionsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK15QGraphicsWidget7actionsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QGraphicsWidget::setShortcutAutoRepeat(int id, bool enabled);
   fn C_ZN15QGraphicsWidget21setShortcutAutoRepeatEib(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_char);
   // proto: static void QGraphicsWidget::setTabOrder(QGraphicsWidget * first, QGraphicsWidget * second);
@@ -373,7 +373,7 @@ impl<'a> /*trait*/ QGraphicsWidget_type_<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGraphicsWidget4typeEv()};
     let mut ret = unsafe {C_ZNK15QGraphicsWidget4typeEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -642,7 +642,7 @@ impl<'a> /*trait*/ QGraphicsWidget_autoFillBackground<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGraphicsWidget18autoFillBackgroundEv()};
     let mut ret = unsafe {C_ZNK15QGraphicsWidget18autoFillBackgroundEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -784,7 +784,7 @@ impl<'a> /*trait*/ QGraphicsWidget_close<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsWidget5closeEv()};
     let mut ret = unsafe {C_ZN15QGraphicsWidget5closeEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -923,11 +923,13 @@ pub trait QGraphicsWidget_layout<RetType> {
 }
 
   // proto:  QGraphicsLayout * QGraphicsWidget::layout();
-impl<'a> /*trait*/ QGraphicsWidget_layout<()> for () {
-  fn layout(self , rsthis: & QGraphicsWidget) -> () {
+impl<'a> /*trait*/ QGraphicsWidget_layout<QGraphicsLayout> for () {
+  fn layout(self , rsthis: & QGraphicsWidget) -> QGraphicsLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGraphicsWidget6layoutEv()};
-     unsafe {C_ZNK15QGraphicsWidget6layoutEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QGraphicsWidget6layoutEv(rsthis.qclsinst)};
+    let mut ret1 = QGraphicsLayout::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -967,11 +969,13 @@ pub trait QGraphicsWidget_focusWidget<RetType> {
 }
 
   // proto:  QGraphicsWidget * QGraphicsWidget::focusWidget();
-impl<'a> /*trait*/ QGraphicsWidget_focusWidget<()> for () {
-  fn focusWidget(self , rsthis: & QGraphicsWidget) -> () {
+impl<'a> /*trait*/ QGraphicsWidget_focusWidget<QGraphicsWidget> for () {
+  fn focusWidget(self , rsthis: & QGraphicsWidget) -> QGraphicsWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGraphicsWidget11focusWidgetEv()};
-     unsafe {C_ZNK15QGraphicsWidget11focusWidgetEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QGraphicsWidget11focusWidgetEv(rsthis.qclsinst)};
+    let mut ret1 = QGraphicsWidget::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -1036,11 +1040,12 @@ pub trait QGraphicsWidget_actions<RetType> {
 }
 
   // proto:  QList<QAction *> QGraphicsWidget::actions();
-impl<'a> /*trait*/ QGraphicsWidget_actions<()> for () {
-  fn actions(self , rsthis: & QGraphicsWidget) -> () {
+impl<'a> /*trait*/ QGraphicsWidget_actions<u64> for () {
+  fn actions(self , rsthis: & QGraphicsWidget) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGraphicsWidget7actionsEv()};
-     unsafe {C_ZNK15QGraphicsWidget7actionsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QGraphicsWidget7actionsEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -1186,7 +1191,7 @@ impl<'a> /*trait*/ QGraphicsWidget_isActiveWindow<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGraphicsWidget14isActiveWindowEv()};
     let mut ret = unsafe {C_ZNK15QGraphicsWidget14isActiveWindowEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

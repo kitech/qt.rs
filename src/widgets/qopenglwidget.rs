@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qopenglwidget.h
 // dst-file: /src/widgets/qopenglwidget.rs
 //
@@ -18,12 +18,12 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qwidget::QWidget; // 773
+use super::qwidget::*; // 773
 use std::ops::Deref;
-use super::super::gui::qopenglcontext::QOpenGLContext; // 771
-use super::super::gui::qimage::QImage; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::gui::qsurfaceformat::QSurfaceFormat; // 771
+use super::super::gui::qopenglcontext::*; // 771
+use super::super::gui::qimage::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::super::gui::qsurfaceformat::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -129,7 +129,7 @@ impl<'a> /*trait*/ QOpenGLWidget_defaultFramebufferObject<u32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QOpenGLWidget24defaultFramebufferObjectEv()};
     let mut ret = unsafe {C_ZNK13QOpenGLWidget24defaultFramebufferObjectEv(rsthis.qclsinst)};
-    return ret as u32;
+    return ret as u32; // 1
     // return 1;
   }
 }
@@ -152,7 +152,7 @@ impl<'a> /*trait*/ QOpenGLWidget_isValid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QOpenGLWidget7isValidEv()};
     let mut ret = unsafe {C_ZNK13QOpenGLWidget7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

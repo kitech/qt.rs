@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qsizepolicy.h
 // dst-file: /src/widgets/qsizepolicy.rs
 //
@@ -86,7 +86,7 @@ impl<'a> /*trait*/ QSizePolicy_hasHeightForWidth<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QSizePolicy17hasHeightForWidthEv()};
     let mut ret = unsafe {C_ZNK11QSizePolicy17hasHeightForWidthEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -109,7 +109,7 @@ impl<'a> /*trait*/ QSizePolicy_retainSizeWhenHidden<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QSizePolicy20retainSizeWhenHiddenEv()};
     let mut ret = unsafe {C_ZNK11QSizePolicy20retainSizeWhenHiddenEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -132,7 +132,7 @@ impl<'a> /*trait*/ QSizePolicy_hasWidthForHeight<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QSizePolicy17hasWidthForHeightEv()};
     let mut ret = unsafe {C_ZNK11QSizePolicy17hasWidthForHeightEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -269,7 +269,7 @@ impl<'a> /*trait*/ QSizePolicy_horizontalStretch<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QSizePolicy17horizontalStretchEv()};
     let mut ret = unsafe {C_ZNK11QSizePolicy17horizontalStretchEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -342,7 +342,7 @@ impl<'a> /*trait*/ QSizePolicy_verticalStretch<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QSizePolicy15verticalStretchEv()};
     let mut ret = unsafe {C_ZNK11QSizePolicy15verticalStretchEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

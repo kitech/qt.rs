@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qscroller.h
 // dst-file: /src/widgets/qscroller.rs
 //
@@ -18,12 +18,13 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qobject::QObject; // 771
+use super::super::core::qobject::*; // 771
 use std::ops::Deref;
-use super::super::core::qpoint::QPointF; // 771
-use super::qscrollerproperties::QScrollerProperties; // 773
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::core::qrect::QRectF; // 771
+use super::super::core::qpoint::*; // 771
+// use super::qlist::*; // 775
+use super::qscrollerproperties::*; // 773
+use super::super::core::qobjectdefs::*; // 771
+use super::super::core::qrect::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -39,7 +40,7 @@ extern {
   // proto:  QPointF QScroller::finalPosition();
   fn C_ZNK9QScroller13finalPositionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto: static QList<QScroller *> QScroller::activeScrollers();
-  fn C_ZN9QScroller15activeScrollersEv();
+  fn C_ZN9QScroller15activeScrollersEv() -> *mut c_void;
   // proto:  void QScroller::setScrollerProperties(const QScrollerProperties & prop);
   fn C_ZN9QScroller21setScrollerPropertiesERK19QScrollerProperties(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QScroller::metaObject();
@@ -165,11 +166,12 @@ pub trait QScroller_activeScrollers_s<RetType> {
 }
 
   // proto: static QList<QScroller *> QScroller::activeScrollers();
-impl<'a> /*trait*/ QScroller_activeScrollers_s<()> for () {
-  fn activeScrollers_s(self ) -> () {
+impl<'a> /*trait*/ QScroller_activeScrollers_s<u64> for () {
+  fn activeScrollers_s(self ) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QScroller15activeScrollersEv()};
-     unsafe {C_ZN9QScroller15activeScrollersEv()};
+    let mut ret = unsafe {C_ZN9QScroller15activeScrollersEv()};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -335,7 +337,7 @@ impl<'a> /*trait*/ QScroller_hasScroller_s<i8> for (&'a QObject) {
     // unsafe{_ZN9QScroller11hasScrollerEP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN9QScroller11hasScrollerEP7QObject(arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

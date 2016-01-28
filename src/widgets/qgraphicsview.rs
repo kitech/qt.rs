@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qgraphicsview.h
 // dst-file: /src/widgets/qgraphicsview.rs
 //
@@ -18,24 +18,22 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qabstractscrollarea::QAbstractScrollArea; // 773
+use super::qabstractscrollarea::*; // 773
 use std::ops::Deref;
-use super::super::core::qrect::QRect; // 771
-use super::super::gui::qpolygon::QPolygonF; // 771
-use super::super::core::qrect::QRectF; // 771
-use super::super::gui::qpolygon::QPolygon; // 771
-use super::super::core::qpoint::QPointF; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::gui::qmatrix::QMatrix; // 771
-use super::super::gui::qbrush::QBrush; // 771
-use super::super::core::qpoint::QPoint; // 771
-use super::qgraphicsscene::QGraphicsScene; // 773
-use super::qwidget::QWidget; // 773
-use super::qgraphicsitem::QGraphicsItem; // 773
-use super::super::gui::qtransform::QTransform; // 771
-use super::super::core::qsize::QSize; // 771
-use super::super::gui::qpainterpath::QPainterPath; // 771
-use super::super::gui::qpainter::QPainter; // 771
+use super::super::core::qrect::*; // 771
+use super::super::gui::qpolygon::*; // 771
+use super::super::core::qpoint::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::super::gui::qmatrix::*; // 771
+use super::super::gui::qbrush::*; // 771
+use super::qgraphicsitem::*; // 773
+use super::qgraphicsscene::*; // 773
+use super::qwidget::*; // 773
+use super::super::gui::qtransform::*; // 771
+use super::super::core::qsize::*; // 771
+// use super::qlist::*; // 775
+use super::super::gui::qpainterpath::*; // 771
+use super::super::gui::qpainter::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -71,7 +69,7 @@ extern {
   // proto:  bool QGraphicsView::isTransformed();
   fn C_ZNK13QGraphicsView13isTransformedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QGraphicsItem * QGraphicsView::itemAt(int x, int y);
-  fn C_ZNK13QGraphicsView6itemAtEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
+  fn C_ZNK13QGraphicsView6itemAtEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> *mut c_void;
   // proto:  void QGraphicsView::centerOn(const QPointF & pos);
   fn C_ZN13QGraphicsView8centerOnERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QGraphicsView::setForegroundBrush(const QBrush & brush);
@@ -81,7 +79,7 @@ extern {
   // proto:  QBrush QGraphicsView::foregroundBrush();
   fn C_ZNK13QGraphicsView15foregroundBrushEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QGraphicsItem * QGraphicsView::itemAt(const QPoint & pos);
-  fn C_ZNK13QGraphicsView6itemAtERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK13QGraphicsView6itemAtERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsView::updateSceneRect(const QRectF & rect);
   fn C_ZN13QGraphicsView15updateSceneRectERK6QRectF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QPointF QGraphicsView::mapToScene(const QPoint & point);
@@ -109,7 +107,7 @@ extern {
   // proto:  QRectF QGraphicsView::sceneRect();
   fn C_ZNK13QGraphicsView9sceneRectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QGraphicsScene * QGraphicsView::scene();
-  fn C_ZNK13QGraphicsView5sceneEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK13QGraphicsView5sceneEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QSize QGraphicsView::sizeHint();
   fn C_ZNK13QGraphicsView8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QBrush QGraphicsView::backgroundBrush();
@@ -119,11 +117,11 @@ extern {
   // proto:  void QGraphicsView::ensureVisible(const QRectF & rect, int xmargin, int ymargin);
   fn C_ZN13QGraphicsView13ensureVisibleERK6QRectFii(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int, arg2: c_int);
   // proto:  QList<QGraphicsItem *> QGraphicsView::items();
-  fn C_ZNK13QGraphicsView5itemsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK13QGraphicsView5itemsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QTransform QGraphicsView::transform();
   fn C_ZNK13QGraphicsView9transformEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QList<QGraphicsItem *> QGraphicsView::items(int x, int y);
-  fn C_ZNK13QGraphicsView5itemsEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
+  fn C_ZNK13QGraphicsView5itemsEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> *mut c_void;
   // proto:  void QGraphicsView::centerOn(qreal x, qreal y);
   fn C_ZN13QGraphicsView8centerOnEdd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double);
   // proto:  void QGraphicsView::ensureVisible(qreal x, qreal y, qreal w, qreal h, int xmargin, int ymargin);
@@ -145,7 +143,7 @@ extern {
   // proto:  void QGraphicsView::~QGraphicsView();
   fn C_ZN13QGraphicsViewD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QList<QGraphicsItem *> QGraphicsView::items(const QPoint & pos);
-  fn C_ZNK13QGraphicsView5itemsERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK13QGraphicsView5itemsERK6QPoint(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsView::resetMatrix();
   fn C_ZN13QGraphicsView11resetMatrixEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QGraphicsView::resetTransform();
@@ -411,7 +409,7 @@ impl<'a> /*trait*/ QGraphicsView_isInteractive<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QGraphicsView13isInteractiveEv()};
     let mut ret = unsafe {C_ZNK13QGraphicsView13isInteractiveEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -457,7 +455,7 @@ impl<'a> /*trait*/ QGraphicsView_isTransformed<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QGraphicsView13isTransformedEv()};
     let mut ret = unsafe {C_ZNK13QGraphicsView13isTransformedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -475,13 +473,15 @@ pub trait QGraphicsView_itemAt<RetType> {
 }
 
   // proto:  QGraphicsItem * QGraphicsView::itemAt(int x, int y);
-impl<'a> /*trait*/ QGraphicsView_itemAt<()> for (i32, i32) {
-  fn itemAt(self , rsthis: & QGraphicsView) -> () {
+impl<'a> /*trait*/ QGraphicsView_itemAt<QGraphicsItem> for (i32, i32) {
+  fn itemAt(self , rsthis: & QGraphicsView) -> QGraphicsItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QGraphicsView6itemAtEii()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-     unsafe {C_ZNK13QGraphicsView6itemAtEii(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {C_ZNK13QGraphicsView6itemAtEii(rsthis.qclsinst, arg0, arg1)};
+    let mut ret1 = QGraphicsItem::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -581,12 +581,14 @@ impl<'a> /*trait*/ QGraphicsView_foregroundBrush<QBrush> for () {
 }
 
   // proto:  QGraphicsItem * QGraphicsView::itemAt(const QPoint & pos);
-impl<'a> /*trait*/ QGraphicsView_itemAt<()> for (&'a QPoint) {
-  fn itemAt(self , rsthis: & QGraphicsView) -> () {
+impl<'a> /*trait*/ QGraphicsView_itemAt<QGraphicsItem> for (&'a QPoint) {
+  fn itemAt(self , rsthis: & QGraphicsView) -> QGraphicsItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QGraphicsView6itemAtERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZNK13QGraphicsView6itemAtERK6QPoint(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK13QGraphicsView6itemAtERK6QPoint(rsthis.qclsinst, arg0)};
+    let mut ret1 = QGraphicsItem::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -866,11 +868,13 @@ pub trait QGraphicsView_scene<RetType> {
 }
 
   // proto:  QGraphicsScene * QGraphicsView::scene();
-impl<'a> /*trait*/ QGraphicsView_scene<()> for () {
-  fn scene(self , rsthis: & QGraphicsView) -> () {
+impl<'a> /*trait*/ QGraphicsView_scene<QGraphicsScene> for () {
+  fn scene(self , rsthis: & QGraphicsView) -> QGraphicsScene {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QGraphicsView5sceneEv()};
-     unsafe {C_ZNK13QGraphicsView5sceneEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QGraphicsView5sceneEv(rsthis.qclsinst)};
+    let mut ret1 = QGraphicsScene::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -963,11 +967,12 @@ pub trait QGraphicsView_items<RetType> {
 }
 
   // proto:  QList<QGraphicsItem *> QGraphicsView::items();
-impl<'a> /*trait*/ QGraphicsView_items<()> for () {
-  fn items(self , rsthis: & QGraphicsView) -> () {
+impl<'a> /*trait*/ QGraphicsView_items<u64> for () {
+  fn items(self , rsthis: & QGraphicsView) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QGraphicsView5itemsEv()};
-     unsafe {C_ZNK13QGraphicsView5itemsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QGraphicsView5itemsEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -997,13 +1002,14 @@ impl<'a> /*trait*/ QGraphicsView_transform<QTransform> for () {
 }
 
   // proto:  QList<QGraphicsItem *> QGraphicsView::items(int x, int y);
-impl<'a> /*trait*/ QGraphicsView_items<()> for (i32, i32) {
-  fn items(self , rsthis: & QGraphicsView) -> () {
+impl<'a> /*trait*/ QGraphicsView_items<u64> for (i32, i32) {
+  fn items(self , rsthis: & QGraphicsView) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QGraphicsView5itemsEii()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-     unsafe {C_ZNK13QGraphicsView5itemsEii(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {C_ZNK13QGraphicsView5itemsEii(rsthis.qclsinst, arg0, arg1)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -1172,12 +1178,13 @@ impl<'a> /*trait*/ QGraphicsView_free<()> for () {
 }
 
   // proto:  QList<QGraphicsItem *> QGraphicsView::items(const QPoint & pos);
-impl<'a> /*trait*/ QGraphicsView_items<()> for (&'a QPoint) {
-  fn items(self , rsthis: & QGraphicsView) -> () {
+impl<'a> /*trait*/ QGraphicsView_items<u64> for (&'a QPoint) {
+  fn items(self , rsthis: & QGraphicsView) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QGraphicsView5itemsERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZNK13QGraphicsView5itemsERK6QPoint(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK13QGraphicsView5itemsERK6QPoint(rsthis.qclsinst, arg0)};
+    return ret as u64; // 5
     // return 1;
   }
 }

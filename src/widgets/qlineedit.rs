@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qlineedit.h
 // dst-file: /src/widgets/qlineedit.rs
 //
@@ -18,19 +18,19 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qwidget::QWidget; // 773
+use super::qwidget::*; // 773
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
-use super::super::core::qcoreevent::QEvent; // 771
-use super::qmenu::QMenu; // 773
-use super::super::core::qmargins::QMargins; // 771
-use super::super::core::qpoint::QPoint; // 771
-use super::super::core::qsize::QSize; // 771
-use super::super::gui::qvalidator::QValidator; // 771
-use super::qaction::QAction; // 773
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::qcompleter::QCompleter; // 773
-use super::super::gui::qicon::QIcon; // 771
+use super::super::core::qstring::*; // 771
+use super::super::core::qcoreevent::*; // 771
+use super::qmenu::*; // 773
+use super::super::core::qmargins::*; // 771
+use super::super::core::qpoint::*; // 771
+use super::super::core::qsize::*; // 771
+use super::super::gui::qvalidator::*; // 771
+use super::qaction::*; // 773
+use super::super::core::qobjectdefs::*; // 771
+use super::qcompleter::*; // 773
+use super::super::gui::qicon::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -269,7 +269,7 @@ impl<'a> /*trait*/ QLineEdit_selectionStart<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QLineEdit14selectionStartEv()};
     let mut ret = unsafe {C_ZNK9QLineEdit14selectionStartEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -315,7 +315,7 @@ impl<'a> /*trait*/ QLineEdit_isRedoAvailable<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QLineEdit15isRedoAvailableEv()};
     let mut ret = unsafe {C_ZNK9QLineEdit15isRedoAvailableEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -391,7 +391,7 @@ impl<'a> /*trait*/ QLineEdit_event<i8> for (&'a QEvent) {
     // unsafe{_ZN9QLineEdit5eventEP6QEvent()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN9QLineEdit5eventEP6QEvent(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -414,7 +414,7 @@ impl<'a> /*trait*/ QLineEdit_maxLength<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QLineEdit9maxLengthEv()};
     let mut ret = unsafe {C_ZNK9QLineEdit9maxLengthEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -485,7 +485,7 @@ impl<'a> /*trait*/ QLineEdit_cursorPositionAt<i32> for (&'a QPoint) {
     // unsafe{_ZN9QLineEdit16cursorPositionAtERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN9QLineEdit16cursorPositionAtERK6QPoint(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -508,7 +508,7 @@ impl<'a> /*trait*/ QLineEdit_hasSelectedText<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QLineEdit15hasSelectedTextEv()};
     let mut ret = unsafe {C_ZNK9QLineEdit15hasSelectedTextEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -834,7 +834,7 @@ impl<'a> /*trait*/ QLineEdit_isModified<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QLineEdit10isModifiedEv()};
     let mut ret = unsafe {C_ZNK9QLineEdit10isModifiedEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1064,7 +1064,7 @@ impl<'a> /*trait*/ QLineEdit_hasAcceptableInput<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QLineEdit18hasAcceptableInputEv()};
     let mut ret = unsafe {C_ZNK9QLineEdit18hasAcceptableInputEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1087,7 +1087,7 @@ impl<'a> /*trait*/ QLineEdit_hasFrame<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QLineEdit8hasFrameEv()};
     let mut ret = unsafe {C_ZNK9QLineEdit8hasFrameEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1110,7 +1110,7 @@ impl<'a> /*trait*/ QLineEdit_cursorPosition<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QLineEdit14cursorPositionEv()};
     let mut ret = unsafe {C_ZNK9QLineEdit14cursorPositionEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1156,7 +1156,7 @@ impl<'a> /*trait*/ QLineEdit_dragEnabled<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QLineEdit11dragEnabledEv()};
     let mut ret = unsafe {C_ZNK9QLineEdit11dragEnabledEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1402,7 +1402,7 @@ impl<'a> /*trait*/ QLineEdit_isUndoAvailable<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QLineEdit15isUndoAvailableEv()};
     let mut ret = unsafe {C_ZNK9QLineEdit15isUndoAvailableEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1447,7 +1447,7 @@ impl<'a> /*trait*/ QLineEdit_isClearButtonEnabled<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QLineEdit20isClearButtonEnabledEv()};
     let mut ret = unsafe {C_ZNK9QLineEdit20isClearButtonEnabledEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1623,7 +1623,7 @@ impl<'a> /*trait*/ QLineEdit_isReadOnly<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QLineEdit10isReadOnlyEv()};
     let mut ret = unsafe {C_ZNK9QLineEdit10isReadOnlyEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

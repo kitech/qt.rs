@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qfileiconprovider.h
 // dst-file: /src/widgets/qfileiconprovider.rs
 //
@@ -19,9 +19,9 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::super::core::qfileinfo::QFileInfo; // 771
-use super::super::core::qstring::QString; // 771
-use super::super::gui::qicon::QIcon; // 771
+use super::super::core::qfileinfo::*; // 771
+use super::super::core::qstring::*; // 771
+use super::super::gui::qicon::*; // 771
 // <= use block end
 
 // ext block begin =>

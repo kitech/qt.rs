@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qprogressbar.h
 // dst-file: /src/widgets/qprogressbar.rs
 //
@@ -18,11 +18,11 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qwidget::QWidget; // 773
+use super::qwidget::*; // 773
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::core::qsize::QSize; // 771
+use super::super::core::qstring::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::super::core::qsize::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -192,7 +192,7 @@ impl<'a> /*trait*/ QProgressBar_maximum<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QProgressBar7maximumEv()};
     let mut ret = unsafe {C_ZNK12QProgressBar7maximumEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -238,7 +238,7 @@ impl<'a> /*trait*/ QProgressBar_invertedAppearance<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QProgressBar18invertedAppearanceEv()};
     let mut ret = unsafe {C_ZNK12QProgressBar18invertedAppearanceEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -359,7 +359,7 @@ impl<'a> /*trait*/ QProgressBar_value<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QProgressBar5valueEv()};
     let mut ret = unsafe {C_ZNK12QProgressBar5valueEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -429,7 +429,7 @@ impl<'a> /*trait*/ QProgressBar_minimum<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QProgressBar7minimumEv()};
     let mut ret = unsafe {C_ZNK12QProgressBar7minimumEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -522,7 +522,7 @@ impl<'a> /*trait*/ QProgressBar_isTextVisible<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QProgressBar13isTextVisibleEv()};
     let mut ret = unsafe {C_ZNK12QProgressBar13isTextVisibleEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

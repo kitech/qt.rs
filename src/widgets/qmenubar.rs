@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qmenubar.h
 // dst-file: /src/widgets/qmenubar.rs
 //
@@ -18,17 +18,18 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qwidget::QWidget; // 773
+use super::qwidget::*; // 773
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
-use super::qaction::QAction; // 773
-use super::qmenu::QMenu; // 773
-use super::super::core::qsize::QSize; // 771
-use super::super::core::qpoint::QPoint; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::gui::qicon::QIcon; // 771
-use super::super::core::qrect::QRect; // 771
-use super::super::core::qobject::QObject; // 771
+use super::super::core::qstring::*; // 771
+use super::qaction::*; // 773
+// use super::qplatformmenubar::*; // 775
+use super::qmenu::*; // 773
+use super::super::core::qsize::*; // 771
+use super::super::core::qpoint::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::super::gui::qicon::*; // 771
+use super::super::core::qrect::*; // 771
+use super::super::core::qobject::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -42,7 +43,7 @@ extern {
   // proto:  QAction * QMenuBar::addAction(const QString & text);
   fn C_ZN8QMenuBar9addActionERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QPlatformMenuBar * QMenuBar::platformMenuBar();
-  fn C_ZN8QMenuBar15platformMenuBarEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN8QMenuBar15platformMenuBarEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QMenuBar::setNativeMenuBar(bool nativeMenuBar);
   fn C_ZN8QMenuBar16setNativeMenuBarEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QMenuBar::~QMenuBar();
@@ -158,11 +159,12 @@ pub trait QMenuBar_platformMenuBar<RetType> {
 }
 
   // proto:  QPlatformMenuBar * QMenuBar::platformMenuBar();
-impl<'a> /*trait*/ QMenuBar_platformMenuBar<()> for () {
-  fn platformMenuBar(self , rsthis: & QMenuBar) -> () {
+impl<'a> /*trait*/ QMenuBar_platformMenuBar<u64> for () {
+  fn platformMenuBar(self , rsthis: & QMenuBar) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMenuBar15platformMenuBarEv()};
-     unsafe {C_ZN8QMenuBar15platformMenuBarEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZN8QMenuBar15platformMenuBarEv(rsthis.qclsinst)};
+    return ret as u64; // 4
     // return 1;
   }
 }
@@ -328,7 +330,7 @@ impl<'a> /*trait*/ QMenuBar_isNativeMenuBar<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMenuBar15isNativeMenuBarEv()};
     let mut ret = unsafe {C_ZNK8QMenuBar15isNativeMenuBarEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -424,7 +426,7 @@ impl<'a> /*trait*/ QMenuBar_isDefaultUp<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMenuBar11isDefaultUpEv()};
     let mut ret = unsafe {C_ZNK8QMenuBar11isDefaultUpEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -684,7 +686,7 @@ impl<'a> /*trait*/ QMenuBar_heightForWidth<i32> for (i32) {
     // unsafe{_ZNK8QMenuBar14heightForWidthEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK8QMenuBar14heightForWidthEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

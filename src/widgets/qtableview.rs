@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qtableview.h
 // dst-file: /src/widgets/qtableview.rs
 //
@@ -18,16 +18,15 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qabstractitemview::QAbstractItemView; // 773
+use super::qabstractitemview::*; // 773
 use std::ops::Deref;
-use super::qheaderview::QHeaderView; // 773
-use super::super::core::qabstractitemmodel::QModelIndex; // 771
-use super::super::core::qitemselectionmodel::QItemSelectionModel; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::qwidget::QWidget; // 773
-use super::super::core::qrect::QRect; // 771
-use super::super::core::qpoint::QPoint; // 771
-use super::super::core::qabstractitemmodel::QAbstractItemModel; // 771
+use super::qheaderview::*; // 773
+use super::super::core::qabstractitemmodel::*; // 771
+use super::super::core::qitemselectionmodel::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::qwidget::*; // 773
+use super::super::core::qrect::*; // 771
+use super::super::core::qpoint::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -438,7 +437,7 @@ impl<'a> /*trait*/ QTableView_rowViewportPosition<i32> for (i32) {
     // unsafe{_ZNK10QTableView19rowViewportPositionEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK10QTableView19rowViewportPositionEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -462,7 +461,7 @@ impl<'a> /*trait*/ QTableView_columnAt<i32> for (i32) {
     // unsafe{_ZNK10QTableView8columnAtEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK10QTableView8columnAtEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -486,7 +485,7 @@ impl<'a> /*trait*/ QTableView_isRowHidden<i8> for (i32) {
     // unsafe{_ZNK10QTableView11isRowHiddenEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK10QTableView11isRowHiddenEi(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -647,7 +646,7 @@ impl<'a> /*trait*/ QTableView_wordWrap<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTableView8wordWrapEv()};
     let mut ret = unsafe {C_ZNK10QTableView8wordWrapEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -694,7 +693,7 @@ impl<'a> /*trait*/ QTableView_isColumnHidden<i8> for (i32) {
     // unsafe{_ZNK10QTableView14isColumnHiddenEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK10QTableView14isColumnHiddenEi(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -764,7 +763,7 @@ impl<'a> /*trait*/ QTableView_isCornerButtonEnabled<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTableView21isCornerButtonEnabledEv()};
     let mut ret = unsafe {C_ZNK10QTableView21isCornerButtonEnabledEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -908,7 +907,7 @@ impl<'a> /*trait*/ QTableView_columnSpan<i32> for (i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZNK10QTableView10columnSpanEii(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -932,7 +931,7 @@ impl<'a> /*trait*/ QTableView_columnWidth<i32> for (i32) {
     // unsafe{_ZNK10QTableView11columnWidthEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK10QTableView11columnWidthEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -956,7 +955,7 @@ impl<'a> /*trait*/ QTableView_columnViewportPosition<i32> for (i32) {
     // unsafe{_ZNK10QTableView22columnViewportPositionEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK10QTableView22columnViewportPositionEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -980,7 +979,7 @@ impl<'a> /*trait*/ QTableView_rowHeight<i32> for (i32) {
     // unsafe{_ZNK10QTableView9rowHeightEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK10QTableView9rowHeightEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1004,7 +1003,7 @@ impl<'a> /*trait*/ QTableView_rowAt<i32> for (i32) {
     // unsafe{_ZNK10QTableView5rowAtEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK10QTableView5rowAtEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1029,7 +1028,7 @@ impl<'a> /*trait*/ QTableView_rowSpan<i32> for (i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {C_ZNK10QTableView7rowSpanEii(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1172,7 +1171,7 @@ impl<'a> /*trait*/ QTableView_isSortingEnabled<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTableView16isSortingEnabledEv()};
     let mut ret = unsafe {C_ZNK10QTableView16isSortingEnabledEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1240,7 +1239,7 @@ impl<'a> /*trait*/ QTableView_showGrid<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTableView8showGridEv()};
     let mut ret = unsafe {C_ZNK10QTableView8showGridEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

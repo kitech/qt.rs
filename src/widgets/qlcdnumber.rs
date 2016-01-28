@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qlcdnumber.h
 // dst-file: /src/widgets/qlcdnumber.rs
 //
@@ -18,12 +18,12 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qframe::QFrame; // 773
+use super::qframe::*; // 773
 use std::ops::Deref;
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::qwidget::QWidget; // 773
-use super::super::core::qsize::QSize; // 771
-use super::super::core::qstring::QString; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::qwidget::*; // 773
+use super::super::core::qsize::*; // 771
+use super::super::core::qstring::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -201,7 +201,7 @@ impl<'a> /*trait*/ QLCDNumber_digitCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QLCDNumber10digitCountEv()};
     let mut ret = unsafe {C_ZNK10QLCDNumber10digitCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -247,7 +247,7 @@ impl<'a> /*trait*/ QLCDNumber_checkOverflow<i8> for (i32) {
     // unsafe{_ZNK10QLCDNumber13checkOverflowEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK10QLCDNumber13checkOverflowEi(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -310,7 +310,7 @@ impl<'a> /*trait*/ QLCDNumber_checkOverflow<i8> for (f64) {
     // unsafe{_ZNK10QLCDNumber13checkOverflowEd()};
     let arg0 = self  as c_double;
     let mut ret = unsafe {C_ZNK10QLCDNumber13checkOverflowEd(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -383,7 +383,7 @@ impl<'a> /*trait*/ QLCDNumber_value<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QLCDNumber5valueEv()};
     let mut ret = unsafe {C_ZNK10QLCDNumber5valueEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -428,7 +428,7 @@ impl<'a> /*trait*/ QLCDNumber_intValue<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QLCDNumber8intValueEv()};
     let mut ret = unsafe {C_ZNK10QLCDNumber8intValueEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -497,7 +497,7 @@ impl<'a> /*trait*/ QLCDNumber_smallDecimalPoint<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QLCDNumber17smallDecimalPointEv()};
     let mut ret = unsafe {C_ZNK10QLCDNumber17smallDecimalPointEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

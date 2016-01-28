@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qwizard.h
 // dst-file: /src/widgets/qwizard.rs
 //
@@ -18,16 +18,17 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qwidget::QWidget; // 773
+use super::qwidget::*; // 773
 use std::ops::Deref;
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::core::qstring::QString; // 771
-use super::super::gui::qpixmap::QPixmap; // 771
-use super::qdialog::QDialog; // 773
+use super::super::core::qobjectdefs::*; // 771
+use super::super::core::qstring::*; // 771
+use super::super::gui::qpixmap::*; // 771
+use super::qdialog::*; // 773
 // use super::qwizard::QWizardPage; // 773
-use super::super::core::qvariant::QVariant; // 771
-use super::super::core::qsize::QSize; // 771
-use super::qabstractbutton::QAbstractButton; // 773
+use super::super::core::qvariant::*; // 771
+use super::super::core::qsize::*; // 771
+use super::qabstractbutton::*; // 773
+// use super::qlist::*; // 775
 // <= use block end
 
 // ext block begin =>
@@ -98,7 +99,7 @@ extern {
   // proto:  void QWizard::~QWizard();
   fn C_ZN7QWizardD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QList<int> QWizard::visitedPages();
-  fn C_ZNK7QWizard12visitedPagesEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK7QWizard12visitedPagesEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QWizard::nextId();
   fn C_ZNK7QWizard6nextIdEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QWizard::startId();
@@ -108,7 +109,7 @@ extern {
   // proto:  void QWizard::removePage(int id);
   fn C_ZN7QWizard10removePageEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  QList<int> QWizard::pageIds();
-  fn C_ZNK7QWizard7pageIdsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK7QWizard7pageIdsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QWizard::currentId();
   fn C_ZNK7QWizard9currentIdEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QWizard::setVisible(bool visible);
@@ -257,7 +258,7 @@ impl<'a> /*trait*/ QWizardPage_isFinalPage<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWizardPage11isFinalPageEv()};
     let mut ret = unsafe {C_ZNK11QWizardPage11isFinalPageEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -280,7 +281,7 @@ impl<'a> /*trait*/ QWizardPage_validatePage<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QWizardPage12validatePageEv()};
     let mut ret = unsafe {C_ZN11QWizardPage12validatePageEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -303,7 +304,7 @@ impl<'a> /*trait*/ QWizardPage_nextId<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWizardPage6nextIdEv()};
     let mut ret = unsafe {C_ZNK11QWizardPage6nextIdEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -348,7 +349,7 @@ impl<'a> /*trait*/ QWizardPage_isComplete<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWizardPage10isCompleteEv()};
     let mut ret = unsafe {C_ZNK11QWizardPage10isCompleteEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -371,7 +372,7 @@ impl<'a> /*trait*/ QWizardPage_isCommitPage<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWizardPage12isCommitPageEv()};
     let mut ret = unsafe {C_ZNK11QWizardPage12isCommitPageEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -874,11 +875,12 @@ pub trait QWizard_visitedPages<RetType> {
 }
 
   // proto:  QList<int> QWizard::visitedPages();
-impl<'a> /*trait*/ QWizard_visitedPages<()> for () {
-  fn visitedPages(self , rsthis: & QWizard) -> () {
+impl<'a> /*trait*/ QWizard_visitedPages<u64> for () {
+  fn visitedPages(self , rsthis: & QWizard) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWizard12visitedPagesEv()};
-     unsafe {C_ZNK7QWizard12visitedPagesEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QWizard12visitedPagesEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -901,7 +903,7 @@ impl<'a> /*trait*/ QWizard_nextId<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWizard6nextIdEv()};
     let mut ret = unsafe {C_ZNK7QWizard6nextIdEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -924,7 +926,7 @@ impl<'a> /*trait*/ QWizard_startId<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWizard7startIdEv()};
     let mut ret = unsafe {C_ZNK7QWizard7startIdEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -948,7 +950,7 @@ impl<'a> /*trait*/ QWizard_addPage<i32> for (&'a QWizardPage) {
     // unsafe{_ZN7QWizard7addPageEP11QWizardPage()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN7QWizard7addPageEP11QWizardPage(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -989,11 +991,12 @@ pub trait QWizard_pageIds<RetType> {
 }
 
   // proto:  QList<int> QWizard::pageIds();
-impl<'a> /*trait*/ QWizard_pageIds<()> for () {
-  fn pageIds(self , rsthis: & QWizard) -> () {
+impl<'a> /*trait*/ QWizard_pageIds<u64> for () {
+  fn pageIds(self , rsthis: & QWizard) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWizard7pageIdsEv()};
-     unsafe {C_ZNK7QWizard7pageIdsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QWizard7pageIdsEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -1016,7 +1019,7 @@ impl<'a> /*trait*/ QWizard_currentId<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWizard9currentIdEv()};
     let mut ret = unsafe {C_ZNK7QWizard9currentIdEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1063,7 +1066,7 @@ impl<'a> /*trait*/ QWizard_hasVisitedPage<i8> for (i32) {
     // unsafe{_ZNK7QWizard14hasVisitedPageEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK7QWizard14hasVisitedPageEi(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1111,7 +1114,7 @@ impl<'a> /*trait*/ QWizard_validateCurrentPage<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWizard19validateCurrentPageEv()};
     let mut ret = unsafe {C_ZN7QWizard19validateCurrentPageEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qcompleter.h
 // dst-file: /src/widgets/qcompleter.rs
 //
@@ -18,16 +18,15 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qobject::QObject; // 771
+use super::super::core::qobject::*; // 771
 use std::ops::Deref;
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::qabstractitemview::QAbstractItemView; // 773
-use super::super::core::qrect::QRect; // 771
-use super::super::core::qstringlist::QStringList; // 771
-use super::super::core::qabstractitemmodel::QModelIndex; // 771
-use super::super::core::qstring::QString; // 771
-use super::super::core::qabstractitemmodel::QAbstractItemModel; // 771
-use super::qwidget::QWidget; // 773
+use super::super::core::qobjectdefs::*; // 771
+use super::qabstractitemview::*; // 773
+use super::super::core::qrect::*; // 771
+use super::super::core::qstringlist::*; // 771
+use super::super::core::qabstractitemmodel::*; // 771
+use super::super::core::qstring::*; // 771
+use super::qwidget::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -67,7 +66,7 @@ extern {
   // proto:  void QCompleter::setWrapAround(bool wrap);
   fn C_ZN10QCompleter13setWrapAroundEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QStringList QCompleter::splitPath(const QString & path);
-  fn C_ZNK10QCompleter9splitPathERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK10QCompleter9splitPathERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QAbstractItemModel * QCompleter::model();
   fn C_ZNK10QCompleter5modelEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QCompleter::currentCompletion();
@@ -271,7 +270,7 @@ impl<'a> /*trait*/ QCompleter_completionCount<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter15completionCountEv()};
     let mut ret = unsafe {C_ZNK10QCompleter15completionCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -382,7 +381,7 @@ impl<'a> /*trait*/ QCompleter_completionColumn<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter16completionColumnEv()};
     let mut ret = unsafe {C_ZNK10QCompleter16completionColumnEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -405,7 +404,7 @@ impl<'a> /*trait*/ QCompleter_maxVisibleItems<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter15maxVisibleItemsEv()};
     let mut ret = unsafe {C_ZNK10QCompleter15maxVisibleItemsEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -468,12 +467,14 @@ pub trait QCompleter_splitPath<RetType> {
 }
 
   // proto:  QStringList QCompleter::splitPath(const QString & path);
-impl<'a> /*trait*/ QCompleter_splitPath<()> for (&'a QString) {
-  fn splitPath(self , rsthis: & QCompleter) -> () {
+impl<'a> /*trait*/ QCompleter_splitPath<QStringList> for (&'a QString) {
+  fn splitPath(self , rsthis: & QCompleter) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter9splitPathERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {C_ZNK10QCompleter9splitPathERK7QString(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK10QCompleter9splitPathERK7QString(rsthis.qclsinst, arg0)};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -615,7 +616,7 @@ impl<'a> /*trait*/ QCompleter_setCurrentRow<i8> for (i32) {
     // unsafe{_ZN10QCompleter13setCurrentRowEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZN10QCompleter13setCurrentRowEi(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -638,7 +639,7 @@ impl<'a> /*trait*/ QCompleter_currentRow<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter10currentRowEv()};
     let mut ret = unsafe {C_ZNK10QCompleter10currentRowEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -684,7 +685,7 @@ impl<'a> /*trait*/ QCompleter_wrapAround<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter10wrapAroundEv()};
     let mut ret = unsafe {C_ZNK10QCompleter10wrapAroundEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -770,7 +771,7 @@ impl<'a> /*trait*/ QCompleter_completionRole<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter14completionRoleEv()};
     let mut ret = unsafe {C_ZNK10QCompleter14completionRoleEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }

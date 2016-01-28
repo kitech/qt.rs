@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qgraphicstransform.h
 // dst-file: /src/widgets/qgraphicstransform.rs
 //
@@ -20,10 +20,10 @@ use self::libc::*;
 // use block begin =>
 // use super::qgraphicstransform::QGraphicsTransform; // 773
 use std::ops::Deref;
-use super::super::gui::qvector3d::QVector3D; // 771
-use super::super::core::qobject::QObject; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::gui::qmatrix4x4::QMatrix4x4; // 771
+use super::super::gui::qvector3d::*; // 771
+use super::super::core::qobject::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::super::gui::qmatrix4x4::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -377,7 +377,7 @@ impl<'a> /*trait*/ QGraphicsRotation_angle<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsRotation5angleEv()};
     let mut ret = unsafe {C_ZNK17QGraphicsRotation5angleEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -440,7 +440,7 @@ impl<'a> /*trait*/ QGraphicsScale_zScale<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScale6zScaleEv()};
     let mut ret = unsafe {C_ZNK14QGraphicsScale6zScaleEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -463,7 +463,7 @@ impl<'a> /*trait*/ QGraphicsScale_xScale<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScale6xScaleEv()};
     let mut ret = unsafe {C_ZNK14QGraphicsScale6xScaleEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -486,7 +486,7 @@ impl<'a> /*trait*/ QGraphicsScale_yScale<f64> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScale6yScaleEv()};
     let mut ret = unsafe {C_ZNK14QGraphicsScale6yScaleEv(rsthis.qclsinst)};
-    return ret as f64;
+    return ret as f64; // 1
     // return 1;
   }
 }

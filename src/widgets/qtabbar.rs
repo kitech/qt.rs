@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sun Jan 24 17:41:38 2016
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qtabbar.h
 // dst-file: /src/widgets/qtabbar.rs
 //
@@ -18,16 +18,16 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qwidget::QWidget; // 773
+use super::qwidget::*; // 773
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
-use super::super::gui::qicon::QIcon; // 771
-use super::super::core::qsize::QSize; // 771
-use super::super::core::qobjectdefs::QMetaObject; // 771
-use super::super::core::qrect::QRect; // 771
-use super::super::core::qpoint::QPoint; // 771
-use super::super::core::qvariant::QVariant; // 771
-use super::super::gui::qcolor::QColor; // 771
+use super::super::core::qstring::*; // 771
+use super::super::gui::qicon::*; // 771
+use super::super::core::qsize::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::super::core::qrect::*; // 771
+use super::super::core::qpoint::*; // 771
+use super::super::core::qvariant::*; // 771
+use super::super::gui::qcolor::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -189,7 +189,7 @@ impl<'a> /*trait*/ QTabBar_usesScrollButtons<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QTabBar17usesScrollButtonsEv()};
     let mut ret = unsafe {C_ZNK7QTabBar17usesScrollButtonsEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -212,7 +212,7 @@ impl<'a> /*trait*/ QTabBar_autoHide<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QTabBar8autoHideEv()};
     let mut ret = unsafe {C_ZNK7QTabBar8autoHideEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -260,7 +260,7 @@ impl<'a> /*trait*/ QTabBar_expanding<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QTabBar9expandingEv()};
     let mut ret = unsafe {C_ZNK7QTabBar9expandingEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -306,7 +306,7 @@ impl<'a> /*trait*/ QTabBar_count<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QTabBar5countEv()};
     let mut ret = unsafe {C_ZNK7QTabBar5countEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -424,7 +424,7 @@ impl<'a> /*trait*/ QTabBar_changeCurrentOnDrag<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QTabBar19changeCurrentOnDragEv()};
     let mut ret = unsafe {C_ZNK7QTabBar19changeCurrentOnDragEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -498,7 +498,7 @@ impl<'a> /*trait*/ QTabBar_insertTab<i32> for (i32, &'a QIcon, &'a QString) {
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN7QTabBar9insertTabEiRK5QIconRK7QString(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -545,7 +545,7 @@ impl<'a> /*trait*/ QTabBar_isMovable<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QTabBar9isMovableEv()};
     let mut ret = unsafe {C_ZNK7QTabBar9isMovableEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -639,7 +639,7 @@ impl<'a> /*trait*/ QTabBar_isTabEnabled<i8> for (i32) {
     // unsafe{_ZNK7QTabBar12isTabEnabledEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {C_ZNK7QTabBar12isTabEnabledEi(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -710,7 +710,7 @@ impl<'a> /*trait*/ QTabBar_tabsClosable<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QTabBar12tabsClosableEv()};
     let mut ret = unsafe {C_ZNK7QTabBar12tabsClosableEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -853,7 +853,7 @@ impl<'a> /*trait*/ QTabBar_documentMode<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QTabBar12documentModeEv()};
     let mut ret = unsafe {C_ZNK7QTabBar12documentModeEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -877,7 +877,7 @@ impl<'a> /*trait*/ QTabBar_tabAt<i32> for (&'a QPoint) {
     // unsafe{_ZNK7QTabBar5tabAtERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZNK7QTabBar5tabAtERK6QPoint(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -989,7 +989,7 @@ impl<'a> /*trait*/ QTabBar_insertTab<i32> for (i32, &'a QString) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN7QTabBar9insertTabEiRK7QString(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1013,7 +1013,7 @@ impl<'a> /*trait*/ QTabBar_addTab<i32> for (&'a QString) {
     // unsafe{_ZN7QTabBar6addTabERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN7QTabBar6addTabERK7QString(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1026,7 +1026,7 @@ impl<'a> /*trait*/ QTabBar_addTab<i32> for (&'a QIcon, &'a QString) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {C_ZN7QTabBar6addTabERK5QIconRK7QString(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1146,7 +1146,7 @@ impl<'a> /*trait*/ QTabBar_drawBase<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QTabBar8drawBaseEv()};
     let mut ret = unsafe {C_ZNK7QTabBar8drawBaseEv(rsthis.qclsinst)};
-    return ret as i8;
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1169,7 +1169,7 @@ impl<'a> /*trait*/ QTabBar_currentIndex<i32> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QTabBar12currentIndexEv()};
     let mut ret = unsafe {C_ZNK7QTabBar12currentIndexEv(rsthis.qclsinst)};
-    return ret as i32;
+    return ret as i32; // 1
     // return 1;
   }
 }
