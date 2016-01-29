@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qprogressbar.h
 // dst-file: /src/widgets/qprogressbar.rs
 //
@@ -18,10 +18,11 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qwidget::QWidget; // 773
+use super::qwidget::*; // 773
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
-use super::super::core::qsize::QSize; // 771
+use super::super::core::qstring::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::super::core::qsize::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -33,55 +34,48 @@ use super::super::core::qsize::QSize; // 771
 extern {
   fn QProgressBar_Class_Size() -> c_int;
   // proto:  QString QProgressBar::format();
-  fn _ZNK12QProgressBar6formatEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK12QProgressBar6formatEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QProgressBar::reset();
-  fn _ZN12QProgressBar5resetEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN12QProgressBar5resetEv(qthis: u64 /* *mut c_void*/);
   // proto:  const QMetaObject * QProgressBar::metaObject();
-  fn _ZNK12QProgressBar10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK12QProgressBar10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QProgressBar::maximum();
-  fn _ZNK12QProgressBar7maximumEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK12QProgressBar7maximumEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QProgressBar::setFormat(const QString & format);
-  fn _ZN12QProgressBar9setFormatERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN12QProgressBar9setFormatERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QProgressBar::invertedAppearance();
-  fn _ZNK12QProgressBar18invertedAppearanceEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK12QProgressBar18invertedAppearanceEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QString QProgressBar::text();
-  fn _ZNK12QProgressBar4textEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK12QProgressBar4textEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QProgressBar::setMinimum(int minimum);
-  fn _ZN12QProgressBar10setMinimumEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
-  // proto:  void QProgressBar::QProgressBar(const QProgressBar & );
-  fn dector_ZN12QProgressBarC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN12QProgressBarC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QProgressBar::valueChanged(int value);
-  fn _ZN12QProgressBar12valueChangedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN12QProgressBar10setMinimumEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QProgressBar::QProgressBar(QWidget * parent);
-  fn dector_ZN12QProgressBarC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN12QProgressBarC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN12QProgressBarC2EP7QWidget(arg0: *mut c_void) -> u64;
   // proto:  void QProgressBar::setTextVisible(bool visible);
-  fn _ZN12QProgressBar14setTextVisibleEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN12QProgressBar14setTextVisibleEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  int QProgressBar::value();
-  fn _ZNK12QProgressBar5valueEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK12QProgressBar5valueEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QProgressBar::setValue(int value);
-  fn _ZN12QProgressBar8setValueEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN12QProgressBar8setValueEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  QSize QProgressBar::minimumSizeHint();
-  fn _ZNK12QProgressBar15minimumSizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK12QProgressBar15minimumSizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QProgressBar::minimum();
-  fn _ZNK12QProgressBar7minimumEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK12QProgressBar7minimumEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QProgressBar::setRange(int minimum, int maximum);
-  fn _ZN12QProgressBar8setRangeEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
+  fn C_ZN12QProgressBar8setRangeEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  QSize QProgressBar::sizeHint();
-  fn _ZNK12QProgressBar8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK12QProgressBar8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QProgressBar::resetFormat();
-  fn _ZN12QProgressBar11resetFormatEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN12QProgressBar11resetFormatEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QProgressBar::isTextVisible();
-  fn _ZNK12QProgressBar13isTextVisibleEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK12QProgressBar13isTextVisibleEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QProgressBar::setInvertedAppearance(bool invert);
-  fn _ZN12QProgressBar21setInvertedAppearanceEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN12QProgressBar21setInvertedAppearanceEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QProgressBar::~QProgressBar();
-  fn _ZN12QProgressBarD0Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN12QProgressBarD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QProgressBar::setMaximum(int maximum);
-  fn _ZN12QProgressBar10setMaximumEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN12QProgressBar10setMaximumEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   fn QProgressBar_SlotProxy_connect__ZN12QProgressBar12valueChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QProgressBar_SlotProxy_connect_box__ZN12QProgressBar12valueChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -90,7 +84,7 @@ extern {
 pub struct QProgressBar {
   qbase: QWidget,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _valueChanged_1: QProgressBar_valueChanged_signal,
+  pub _valueChanged: QProgressBar_valueChanged_signal,
 }
 
 impl /*struct*/ QProgressBar {
@@ -127,7 +121,7 @@ impl<'a> /*trait*/ QProgressBar_format<QString> for () {
   fn format(self , rsthis: & QProgressBar) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QProgressBar6formatEv()};
-    let mut ret = unsafe {_ZNK12QProgressBar6formatEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QProgressBar6formatEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -151,7 +145,7 @@ impl<'a> /*trait*/ QProgressBar_reset<()> for () {
   fn reset(self , rsthis: & QProgressBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QProgressBar5resetEv()};
-     unsafe {_ZN12QProgressBar5resetEv(rsthis.qclsinst)};
+     unsafe {C_ZN12QProgressBar5resetEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -169,11 +163,13 @@ pub trait QProgressBar_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QProgressBar::metaObject();
-impl<'a> /*trait*/ QProgressBar_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QProgressBar) -> () {
+impl<'a> /*trait*/ QProgressBar_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QProgressBar) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QProgressBar10metaObjectEv()};
-     unsafe {_ZNK12QProgressBar10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QProgressBar10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -195,8 +191,8 @@ impl<'a> /*trait*/ QProgressBar_maximum<i32> for () {
   fn maximum(self , rsthis: & QProgressBar) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QProgressBar7maximumEv()};
-    let mut ret = unsafe {_ZNK12QProgressBar7maximumEv(rsthis.qclsinst)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK12QProgressBar7maximumEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -219,7 +215,7 @@ impl<'a> /*trait*/ QProgressBar_setFormat<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QProgressBar9setFormatERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN12QProgressBar9setFormatERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN12QProgressBar9setFormatERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -241,8 +237,8 @@ impl<'a> /*trait*/ QProgressBar_invertedAppearance<i8> for () {
   fn invertedAppearance(self , rsthis: & QProgressBar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QProgressBar18invertedAppearanceEv()};
-    let mut ret = unsafe {_ZNK12QProgressBar18invertedAppearanceEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK12QProgressBar18invertedAppearanceEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -264,7 +260,7 @@ impl<'a> /*trait*/ QProgressBar_text<QString> for () {
   fn text(self , rsthis: & QProgressBar) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QProgressBar4textEv()};
-    let mut ret = unsafe {_ZNK12QProgressBar4textEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QProgressBar4textEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -289,73 +285,33 @@ impl<'a> /*trait*/ QProgressBar_setMinimum<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QProgressBar10setMinimumEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN12QProgressBar10setMinimumEi(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QProgressBar::QProgressBar(const QProgressBar & );
-impl /*struct*/ QProgressBar {
-  pub fn New<T: QProgressBar_New>(value: T) -> QProgressBar {
-    let rsthis = value.New();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QProgressBar_New {
-  fn New(self) -> QProgressBar;
-}
-
-  // proto:  void QProgressBar::QProgressBar(const QProgressBar & );
-impl<'a> /*trait*/ QProgressBar_New for (&'a QProgressBar) {
-  fn New(self) -> QProgressBar {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QProgressBarC1ERKS_()};
-    let ctysz: c_int = unsafe{QProgressBar_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN12QProgressBarC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN12QProgressBarC1ERKS_(arg0)} as u64;
-    let rsthis = QProgressBar{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  void QProgressBar::valueChanged(int value);
-impl /*struct*/ QProgressBar {
-  pub fn valueChanged<RetType, T: QProgressBar_valueChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.valueChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QProgressBar_valueChanged<RetType> {
-  fn valueChanged(self , rsthis: & QProgressBar) -> RetType;
-}
-
-  // proto:  void QProgressBar::valueChanged(int value);
-impl<'a> /*trait*/ QProgressBar_valueChanged<()> for (i32) {
-  fn valueChanged(self , rsthis: & QProgressBar) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QProgressBar12valueChangedEi()};
-    let arg0 = self  as c_int;
-     unsafe {_ZN12QProgressBar12valueChangedEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN12QProgressBar10setMinimumEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
 
   // proto:  void QProgressBar::QProgressBar(QWidget * parent);
-impl<'a> /*trait*/ QProgressBar_New for (&'a QWidget) {
-  fn New(self) -> QProgressBar {
+impl /*struct*/ QProgressBar {
+  pub fn new<T: QProgressBar_new>(value: T) -> QProgressBar {
+    let rsthis = value.new();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QProgressBar_new {
+  fn new(self) -> QProgressBar;
+}
+
+  // proto:  void QProgressBar::QProgressBar(QWidget * parent);
+impl<'a> /*trait*/ QProgressBar_new for (&'a QWidget) {
+  fn new(self) -> QProgressBar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QProgressBarC1EP7QWidget()};
+    // unsafe{_ZN12QProgressBarC2EP7QWidget()};
     let ctysz: c_int = unsafe{QProgressBar_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN12QProgressBarC1EP7QWidget(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN12QProgressBarC1EP7QWidget(arg0)} as u64;
+    let qthis: u64 = unsafe {C_ZN12QProgressBarC2EP7QWidget(arg0)};
     let rsthis = QProgressBar{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -380,7 +336,7 @@ impl<'a> /*trait*/ QProgressBar_setTextVisible<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QProgressBar14setTextVisibleEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN12QProgressBar14setTextVisibleEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN12QProgressBar14setTextVisibleEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -402,8 +358,8 @@ impl<'a> /*trait*/ QProgressBar_value<i32> for () {
   fn value(self , rsthis: & QProgressBar) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QProgressBar5valueEv()};
-    let mut ret = unsafe {_ZNK12QProgressBar5valueEv(rsthis.qclsinst)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK12QProgressBar5valueEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -426,7 +382,7 @@ impl<'a> /*trait*/ QProgressBar_setValue<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QProgressBar8setValueEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN12QProgressBar8setValueEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN12QProgressBar8setValueEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -448,7 +404,7 @@ impl<'a> /*trait*/ QProgressBar_minimumSizeHint<QSize> for () {
   fn minimumSizeHint(self , rsthis: & QProgressBar) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QProgressBar15minimumSizeHintEv()};
-    let mut ret = unsafe {_ZNK12QProgressBar15minimumSizeHintEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QProgressBar15minimumSizeHintEv(rsthis.qclsinst)};
     let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -472,8 +428,8 @@ impl<'a> /*trait*/ QProgressBar_minimum<i32> for () {
   fn minimum(self , rsthis: & QProgressBar) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QProgressBar7minimumEv()};
-    let mut ret = unsafe {_ZNK12QProgressBar7minimumEv(rsthis.qclsinst)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK12QProgressBar7minimumEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -497,7 +453,7 @@ impl<'a> /*trait*/ QProgressBar_setRange<()> for (i32, i32) {
     // unsafe{_ZN12QProgressBar8setRangeEii()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-     unsafe {_ZN12QProgressBar8setRangeEii(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN12QProgressBar8setRangeEii(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -519,7 +475,7 @@ impl<'a> /*trait*/ QProgressBar_sizeHint<QSize> for () {
   fn sizeHint(self , rsthis: & QProgressBar) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QProgressBar8sizeHintEv()};
-    let mut ret = unsafe {_ZNK12QProgressBar8sizeHintEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QProgressBar8sizeHintEv(rsthis.qclsinst)};
     let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -543,7 +499,7 @@ impl<'a> /*trait*/ QProgressBar_resetFormat<()> for () {
   fn resetFormat(self , rsthis: & QProgressBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QProgressBar11resetFormatEv()};
-     unsafe {_ZN12QProgressBar11resetFormatEv(rsthis.qclsinst)};
+     unsafe {C_ZN12QProgressBar11resetFormatEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -565,8 +521,8 @@ impl<'a> /*trait*/ QProgressBar_isTextVisible<i8> for () {
   fn isTextVisible(self , rsthis: & QProgressBar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QProgressBar13isTextVisibleEv()};
-    let mut ret = unsafe {_ZNK12QProgressBar13isTextVisibleEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK12QProgressBar13isTextVisibleEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -589,29 +545,29 @@ impl<'a> /*trait*/ QProgressBar_setInvertedAppearance<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QProgressBar21setInvertedAppearanceEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN12QProgressBar21setInvertedAppearanceEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN12QProgressBar21setInvertedAppearanceEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
 
   // proto:  void QProgressBar::~QProgressBar();
 impl /*struct*/ QProgressBar {
-  pub fn Free<RetType, T: QProgressBar_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QProgressBar_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QProgressBar_Free<RetType> {
-  fn Free(self , rsthis: & QProgressBar) -> RetType;
+pub trait QProgressBar_free<RetType> {
+  fn free(self , rsthis: & QProgressBar) -> RetType;
 }
 
   // proto:  void QProgressBar::~QProgressBar();
-impl<'a> /*trait*/ QProgressBar_Free<()> for () {
-  fn Free(self , rsthis: & QProgressBar) -> () {
+impl<'a> /*trait*/ QProgressBar_free<()> for () {
+  fn free(self , rsthis: & QProgressBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QProgressBarD0Ev()};
-     unsafe {_ZN12QProgressBarD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN12QProgressBarD2Ev()};
+     unsafe {C_ZN12QProgressBarD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -634,7 +590,7 @@ impl<'a> /*trait*/ QProgressBar_setMaximum<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QProgressBar10setMaximumEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN12QProgressBar10setMaximumEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN12QProgressBar10setMaximumEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -642,7 +598,7 @@ impl<'a> /*trait*/ QProgressBar_setMaximum<()> for (i32) {
 #[derive(Default)] // for QProgressBar_valueChanged
 pub struct QProgressBar_valueChanged_signal{poi:u64}
 impl /* struct */ QProgressBar {
-  pub fn valueChanged_1(&self) -> QProgressBar_valueChanged_signal {
+  pub fn valueChanged(&self) -> QProgressBar_valueChanged_signal {
      return QProgressBar_valueChanged_signal{poi:self.qclsinst};
   }
 }
@@ -658,15 +614,21 @@ pub trait QProgressBar_valueChanged_signal_connect {
 // valueChanged(int)
 extern fn QProgressBar_valueChanged_signal_connect_cb_0(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QProgressBar_valueChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QProgressBar_valueChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QProgressBar_valueChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QProgressBar_valueChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QProgressBar_valueChanged_signal_connect_cb_0 as *mut c_void;
@@ -674,14 +636,14 @@ impl /* trait */ QProgressBar_valueChanged_signal_connect for fn(i32) {
     unsafe {QProgressBar_SlotProxy_connect__ZN12QProgressBar12valueChangedEi(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QProgressBar_valueChanged_signal_connect for Box<fn(i32)> {
+impl /* trait */ QProgressBar_valueChanged_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QProgressBar_valueChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QProgressBar_valueChanged_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QProgressBar_SlotProxy_connect__ZN12QProgressBar12valueChangedEi(arg0, arg1, arg2)};
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qsplashscreen.h
 // dst-file: /src/widgets/qsplashscreen.rs
 //
@@ -18,11 +18,12 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qwidget::QWidget; // 773
+use super::qwidget::*; // 773
 use std::ops::Deref;
-use super::super::gui::qpixmap::QPixmap; // 771
-use super::super::core::qstring::QString; // 771
-use super::super::gui::qcolor::QColor; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::super::gui::qpixmap::*; // 771
+use super::super::core::qstring::*; // 771
+use super::super::gui::qcolor::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -34,30 +35,24 @@ use super::super::gui::qcolor::QColor; // 771
 extern {
   fn QSplashScreen_Class_Size() -> c_int;
   // proto:  const QMetaObject * QSplashScreen::metaObject();
-  fn _ZNK13QSplashScreen10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK13QSplashScreen10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QSplashScreen::~QSplashScreen();
-  fn _ZN13QSplashScreenD0Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN13QSplashScreenD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QSplashScreen::clearMessage();
-  fn _ZN13QSplashScreen12clearMessageEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QSplashScreen::QSplashScreen(const QSplashScreen & );
-  fn dector_ZN13QSplashScreenC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN13QSplashScreenC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN13QSplashScreen12clearMessageEv(qthis: u64 /* *mut c_void*/);
   // proto:  const QPixmap QSplashScreen::pixmap();
-  fn _ZNK13QSplashScreen6pixmapEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QSplashScreen::messageChanged(const QString & message);
-  fn _ZN13QSplashScreen14messageChangedERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK13QSplashScreen6pixmapEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QSplashScreen::showMessage(const QString & message, int alignment, const QColor & color);
-  fn _ZN13QSplashScreen11showMessageERK7QStringiRK6QColor(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void);
+  fn C_ZN13QSplashScreen11showMessageERK7QStringiRK6QColor(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void);
   // proto:  void QSplashScreen::setPixmap(const QPixmap & pixmap);
-  fn _ZN13QSplashScreen9setPixmapERK7QPixmap(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN13QSplashScreen9setPixmapERK7QPixmap(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QString QSplashScreen::message();
-  fn _ZNK13QSplashScreen7messageEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK13QSplashScreen7messageEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QSplashScreen::repaint();
-  fn _ZN13QSplashScreen7repaintEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN13QSplashScreen7repaintEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QSplashScreen::finish(QWidget * w);
-  fn _ZN13QSplashScreen6finishEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN13QSplashScreen6finishEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QSplashScreen_SlotProxy_connect__ZN13QSplashScreen14messageChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QSplashScreen_SlotProxy_connect_box__ZN13QSplashScreen14messageChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -66,7 +61,7 @@ extern {
 pub struct QSplashScreen {
   qbase: QWidget,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _messageChanged_1: QSplashScreen_messageChanged_signal,
+  pub _messageChanged: QSplashScreen_messageChanged_signal,
 }
 
 impl /*struct*/ QSplashScreen {
@@ -99,33 +94,35 @@ pub trait QSplashScreen_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QSplashScreen::metaObject();
-impl<'a> /*trait*/ QSplashScreen_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QSplashScreen) -> () {
+impl<'a> /*trait*/ QSplashScreen_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QSplashScreen) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QSplashScreen10metaObjectEv()};
-     unsafe {_ZNK13QSplashScreen10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QSplashScreen10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
 
   // proto:  void QSplashScreen::~QSplashScreen();
 impl /*struct*/ QSplashScreen {
-  pub fn Free<RetType, T: QSplashScreen_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QSplashScreen_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QSplashScreen_Free<RetType> {
-  fn Free(self , rsthis: & QSplashScreen) -> RetType;
+pub trait QSplashScreen_free<RetType> {
+  fn free(self , rsthis: & QSplashScreen) -> RetType;
 }
 
   // proto:  void QSplashScreen::~QSplashScreen();
-impl<'a> /*trait*/ QSplashScreen_Free<()> for () {
-  fn Free(self , rsthis: & QSplashScreen) -> () {
+impl<'a> /*trait*/ QSplashScreen_free<()> for () {
+  fn free(self , rsthis: & QSplashScreen) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QSplashScreenD0Ev()};
-     unsafe {_ZN13QSplashScreenD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN13QSplashScreenD2Ev()};
+     unsafe {C_ZN13QSplashScreenD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -147,36 +144,7 @@ impl<'a> /*trait*/ QSplashScreen_clearMessage<()> for () {
   fn clearMessage(self , rsthis: & QSplashScreen) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QSplashScreen12clearMessageEv()};
-     unsafe {_ZN13QSplashScreen12clearMessageEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QSplashScreen::QSplashScreen(const QSplashScreen & );
-impl /*struct*/ QSplashScreen {
-  pub fn New<T: QSplashScreen_New>(value: T) -> QSplashScreen {
-    let rsthis = value.New();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QSplashScreen_New {
-  fn New(self) -> QSplashScreen;
-}
-
-  // proto:  void QSplashScreen::QSplashScreen(const QSplashScreen & );
-impl<'a> /*trait*/ QSplashScreen_New for (&'a QSplashScreen) {
-  fn New(self) -> QSplashScreen {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QSplashScreenC1ERKS_()};
-    let ctysz: c_int = unsafe{QSplashScreen_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN13QSplashScreenC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN13QSplashScreenC1ERKS_(arg0)} as u64;
-    let rsthis = QSplashScreen{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
+     unsafe {C_ZN13QSplashScreen12clearMessageEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -198,32 +166,9 @@ impl<'a> /*trait*/ QSplashScreen_pixmap<QPixmap> for () {
   fn pixmap(self , rsthis: & QSplashScreen) -> QPixmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QSplashScreen6pixmapEv()};
-    let mut ret = unsafe {_ZNK13QSplashScreen6pixmapEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QSplashScreen6pixmapEv(rsthis.qclsinst)};
     let mut ret1 = QPixmap::inheritFrom(ret as u64);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QSplashScreen::messageChanged(const QString & message);
-impl /*struct*/ QSplashScreen {
-  pub fn messageChanged<RetType, T: QSplashScreen_messageChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.messageChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QSplashScreen_messageChanged<RetType> {
-  fn messageChanged(self , rsthis: & QSplashScreen) -> RetType;
-}
-
-  // proto:  void QSplashScreen::messageChanged(const QString & message);
-impl<'a> /*trait*/ QSplashScreen_messageChanged<()> for (&'a QString) {
-  fn messageChanged(self , rsthis: & QSplashScreen) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QSplashScreen14messageChangedERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN13QSplashScreen14messageChangedERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -248,7 +193,7 @@ impl<'a> /*trait*/ QSplashScreen_showMessage<()> for (&'a QString, i32, &'a QCol
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
-     unsafe {_ZN13QSplashScreen11showMessageERK7QStringiRK6QColor(rsthis.qclsinst, arg0, arg1, arg2)};
+     unsafe {C_ZN13QSplashScreen11showMessageERK7QStringiRK6QColor(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
 }
@@ -271,7 +216,7 @@ impl<'a> /*trait*/ QSplashScreen_setPixmap<()> for (&'a QPixmap) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QSplashScreen9setPixmapERK7QPixmap()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN13QSplashScreen9setPixmapERK7QPixmap(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN13QSplashScreen9setPixmapERK7QPixmap(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -293,7 +238,7 @@ impl<'a> /*trait*/ QSplashScreen_message<QString> for () {
   fn message(self , rsthis: & QSplashScreen) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QSplashScreen7messageEv()};
-    let mut ret = unsafe {_ZNK13QSplashScreen7messageEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QSplashScreen7messageEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -317,7 +262,7 @@ impl<'a> /*trait*/ QSplashScreen_repaint<()> for () {
   fn repaint(self , rsthis: & QSplashScreen) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QSplashScreen7repaintEv()};
-     unsafe {_ZN13QSplashScreen7repaintEv(rsthis.qclsinst)};
+     unsafe {C_ZN13QSplashScreen7repaintEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -340,7 +285,7 @@ impl<'a> /*trait*/ QSplashScreen_finish<()> for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QSplashScreen6finishEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN13QSplashScreen6finishEP7QWidget(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN13QSplashScreen6finishEP7QWidget(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -348,7 +293,7 @@ impl<'a> /*trait*/ QSplashScreen_finish<()> for (&'a QWidget) {
 #[derive(Default)] // for QSplashScreen_messageChanged
 pub struct QSplashScreen_messageChanged_signal{poi:u64}
 impl /* struct */ QSplashScreen {
-  pub fn messageChanged_1(&self) -> QSplashScreen_messageChanged_signal {
+  pub fn messageChanged(&self) -> QSplashScreen_messageChanged_signal {
      return QSplashScreen_messageChanged_signal{poi:self.qclsinst};
   }
 }
@@ -364,15 +309,21 @@ pub trait QSplashScreen_messageChanged_signal_connect {
 // messageChanged(const class QString &)
 extern fn QSplashScreen_messageChanged_signal_connect_cb_0(rsfptr:fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QSplashScreen_messageChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QSplashScreen_messageChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(QString)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QSplashScreen_messageChanged_signal_connect for fn(QString) {
   fn connect(self, sigthis: QSplashScreen_messageChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QSplashScreen_messageChanged_signal_connect_cb_0 as *mut c_void;
@@ -380,14 +331,14 @@ impl /* trait */ QSplashScreen_messageChanged_signal_connect for fn(QString) {
     unsafe {QSplashScreen_SlotProxy_connect__ZN13QSplashScreen14messageChangedERK7QString(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QSplashScreen_messageChanged_signal_connect for Box<fn(QString)> {
+impl /* trait */ QSplashScreen_messageChanged_signal_connect for Box<Fn(QString)> {
   fn connect(self, sigthis: QSplashScreen_messageChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QSplashScreen_messageChanged_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QSplashScreen_SlotProxy_connect__ZN13QSplashScreen14messageChangedERK7QString(arg0, arg1, arg2)};
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qapplication.h
 // dst-file: /src/widgets/qapplication.rs
 //
@@ -18,20 +18,22 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::gui::qguiapplication::QGuiApplication; // 771
+use super::super::gui::qguiapplication::*; // 771
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
-use super::super::gui::qpalette::QPalette; // 771
-use super::qwidget::QWidget; // 773
-use super::super::gui::qfontmetrics::QFontMetrics; // 771
-use super::super::gui::qfont::QFont; // 771
-use super::qstyle::QStyle; // 773
-use super::super::core::qpoint::QPoint; // 771
-use super::qdesktopwidget::QDesktopWidget; // 773
-use super::super::core::qsize::QSize; // 771
-use super::super::gui::qicon::QIcon; // 771
-use super::super::core::qobject::QObject; // 771
-use super::super::core::qcoreevent::QEvent; // 771
+use super::super::core::qstring::*; // 771
+use super::super::gui::qpalette::*; // 771
+use super::qwidget::*; // 773
+use super::super::gui::qfontmetrics::*; // 771
+use super::super::gui::qfont::*; // 771
+use super::qstyle::*; // 773
+use super::super::core::qpoint::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::qdesktopwidget::*; // 773
+use super::super::core::qsize::*; // 771
+// use super::qlist::*; // 775
+use super::super::gui::qicon::*; // 771
+use super::super::core::qobject::*; // 771
+use super::super::core::qcoreevent::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -43,121 +45,114 @@ use super::super::core::qcoreevent::QEvent; // 771
 extern {
   fn QApplication_Class_Size() -> c_int;
   // proto:  QString QApplication::styleSheet();
-  fn _ZNK12QApplication10styleSheetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK12QApplication10styleSheetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto: static QPalette QApplication::palette(const char * className);
-  fn _ZN12QApplication7paletteEPKc(arg0: *mut c_char) -> *mut c_void;
+  fn C_ZN12QApplication7paletteEPKc(arg0: *mut c_char) -> *mut c_void;
   // proto: static QWidget * QApplication::activeWindow();
-  fn _ZN12QApplication12activeWindowEv() -> *mut c_void;
+  fn C_ZN12QApplication12activeWindowEv() -> *mut c_void;
   // proto: static void QApplication::setKeyboardInputInterval(int );
-  fn _ZN12QApplication24setKeyboardInputIntervalEi(arg0: c_int);
+  fn C_ZN12QApplication24setKeyboardInputIntervalEi(arg0: c_int);
   // proto: static QWidget * QApplication::focusWidget();
-  fn _ZN12QApplication11focusWidgetEv() -> *mut c_void;
+  fn C_ZN12QApplication11focusWidgetEv() -> *mut c_void;
   // proto: static QFontMetrics QApplication::fontMetrics();
-  fn _ZN12QApplication11fontMetricsEv() -> *mut c_void;
+  fn C_ZN12QApplication11fontMetricsEv() -> *mut c_void;
   // proto: static QFont QApplication::font(const char * className);
-  fn _ZN12QApplication4fontEPKc(arg0: *mut c_char) -> *mut c_void;
+  fn C_ZN12QApplication4fontEPKc(arg0: *mut c_char) -> *mut c_void;
   // proto: static QStyle * QApplication::style();
-  fn _ZN12QApplication5styleEv() -> *mut c_void;
+  fn C_ZN12QApplication5styleEv() -> *mut c_void;
   // proto: static QWidget * QApplication::widgetAt(const QPoint & p);
-  fn _ZN12QApplication8widgetAtERK6QPoint(arg0: *mut c_void) -> *mut c_void;
+  fn C_ZN12QApplication8widgetAtERK6QPoint(arg0: *mut c_void) -> *mut c_void;
   // proto: static void QApplication::setActiveWindow(QWidget * act);
-  fn _ZN12QApplication15setActiveWindowEP7QWidget(arg0: *mut c_void);
+  fn C_ZN12QApplication15setActiveWindowEP7QWidget(arg0: *mut c_void);
   // proto: static QFont QApplication::font();
-  fn _ZN12QApplication4fontEv() -> *mut c_void;
+  fn C_ZN12QApplication4fontEv() -> *mut c_void;
   // proto: static void QApplication::setWheelScrollLines(int );
-  fn _ZN12QApplication19setWheelScrollLinesEi(arg0: c_int);
+  fn C_ZN12QApplication19setWheelScrollLinesEi(arg0: c_int);
   // proto:  void QApplication::setStyleSheet(const QString & sheet);
-  fn _ZN12QApplication13setStyleSheetERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN12QApplication13setStyleSheetERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QApplication::setAutoSipEnabled(const bool enabled);
-  fn _ZN12QApplication17setAutoSipEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN12QApplication17setAutoSipEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  const QMetaObject * QApplication::metaObject();
-  fn _ZNK12QApplication10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK12QApplication10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto: static int QApplication::keyboardInputInterval();
-  fn _ZN12QApplication21keyboardInputIntervalEv() -> c_int;
+  fn C_ZN12QApplication21keyboardInputIntervalEv() -> c_int;
   // proto: static int QApplication::cursorFlashTime();
-  fn _ZN12QApplication15cursorFlashTimeEv() -> c_int;
+  fn C_ZN12QApplication15cursorFlashTimeEv() -> c_int;
   // proto: static int QApplication::startDragDistance();
-  fn _ZN12QApplication17startDragDistanceEv() -> c_int;
+  fn C_ZN12QApplication17startDragDistanceEv() -> c_int;
   // proto: static QDesktopWidget * QApplication::desktop();
-  fn _ZN12QApplication7desktopEv() -> *mut c_void;
+  fn C_ZN12QApplication7desktopEv() -> *mut c_void;
   // proto: static void QApplication::setStartDragDistance(int l);
-  fn _ZN12QApplication20setStartDragDistanceEi(arg0: c_int);
+  fn C_ZN12QApplication20setStartDragDistanceEi(arg0: c_int);
   // proto: static QFont QApplication::font(const QWidget * );
-  fn _ZN12QApplication4fontEPK7QWidget(arg0: *mut c_void) -> *mut c_void;
+  fn C_ZN12QApplication4fontEPK7QWidget(arg0: *mut c_void) -> *mut c_void;
   // proto: static int QApplication::colorSpec();
-  fn _ZN12QApplication9colorSpecEv() -> c_int;
+  fn C_ZN12QApplication9colorSpecEv() -> c_int;
   // proto: static void QApplication::setFont(const QFont & , const char * className);
-  fn _ZN12QApplication7setFontERK5QFontPKc(arg0: *mut c_void, arg1: *mut c_char);
+  fn C_ZN12QApplication7setFontERK5QFontPKc(arg0: *mut c_void, arg1: *mut c_char);
   // proto: static void QApplication::closeAllWindows();
-  fn _ZN12QApplication15closeAllWindowsEv();
+  fn C_ZN12QApplication15closeAllWindowsEv();
   // proto: static void QApplication::setCursorFlashTime(int );
-  fn _ZN12QApplication18setCursorFlashTimeEi(arg0: c_int);
+  fn C_ZN12QApplication18setCursorFlashTimeEi(arg0: c_int);
   // proto: static QWidget * QApplication::widgetAt(int x, int y);
-  fn demth_ZN12QApplication8widgetAtEii(arg0: c_int, arg1: c_int) -> *mut c_void;
+  fn C_ZN12QApplication8widgetAtEii(arg0: c_int, arg1: c_int) -> *mut c_void;
   // proto: static void QApplication::alert(QWidget * widget, int duration);
-  fn _ZN12QApplication5alertEP7QWidgeti(arg0: *mut c_void, arg1: c_int);
+  fn C_ZN12QApplication5alertEP7QWidgeti(arg0: *mut c_void, arg1: c_int);
   // proto: static QPalette QApplication::palette(const QWidget * );
-  fn _ZN12QApplication7paletteEPK7QWidget(arg0: *mut c_void) -> *mut c_void;
+  fn C_ZN12QApplication7paletteEPK7QWidget(arg0: *mut c_void) -> *mut c_void;
   // proto: static int QApplication::wheelScrollLines();
-  fn _ZN12QApplication16wheelScrollLinesEv() -> c_int;
-  // proto:  void QApplication::QApplication(const QApplication & );
-  fn dector_ZN12QApplicationC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN12QApplicationC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN12QApplication16wheelScrollLinesEv() -> c_int;
   // proto: static void QApplication::aboutQt();
-  fn _ZN12QApplication7aboutQtEv();
+  fn C_ZN12QApplication7aboutQtEv();
   // proto: static QWidget * QApplication::activeModalWidget();
-  fn _ZN12QApplication17activeModalWidgetEv() -> *mut c_void;
+  fn C_ZN12QApplication17activeModalWidgetEv() -> *mut c_void;
   // proto: static QWidget * QApplication::activePopupWidget();
-  fn _ZN12QApplication17activePopupWidgetEv() -> *mut c_void;
+  fn C_ZN12QApplication17activePopupWidgetEv() -> *mut c_void;
   // proto:  void QApplication::QApplication(int & argc, char ** argv, int );
-  fn dector_ZN12QApplicationC1ERiPPci(arg0: *mut c_int, arg1: *mut c_char, arg2: c_int) -> *mut c_void;
-  fn _ZN12QApplicationC1ERiPPci(qthis: u64 /* *mut c_void*/, arg0: *mut c_int, arg1: *mut c_char, arg2: c_int);
-  // proto:  void QApplication::focusChanged(QWidget * old, QWidget * now);
-  fn _ZN12QApplication12focusChangedEP7QWidgetS1_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN12QApplicationC2ERiPPci(arg0: *mut c_int, arg1: *mut c_char, arg2: c_int) -> u64;
   // proto: static void QApplication::setStartDragTime(int ms);
-  fn _ZN12QApplication16setStartDragTimeEi(arg0: c_int);
+  fn C_ZN12QApplication16setStartDragTimeEi(arg0: c_int);
   // proto: static QWidget * QApplication::topLevelAt(int x, int y);
-  fn demth_ZN12QApplication10topLevelAtEii(arg0: c_int, arg1: c_int) -> *mut c_void;
+  fn C_ZN12QApplication10topLevelAtEii(arg0: c_int, arg1: c_int) -> *mut c_void;
   // proto: static void QApplication::setStyle(QStyle * );
-  fn _ZN12QApplication8setStyleEP6QStyle(arg0: *mut c_void);
+  fn C_ZN12QApplication8setStyleEP6QStyle(arg0: *mut c_void);
   // proto:  void QApplication::~QApplication();
-  fn _ZN12QApplicationD0Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN12QApplicationD2Ev(qthis: u64 /* *mut c_void*/);
   // proto: static void QApplication::setDoubleClickInterval(int );
-  fn _ZN12QApplication22setDoubleClickIntervalEi(arg0: c_int);
+  fn C_ZN12QApplication22setDoubleClickIntervalEi(arg0: c_int);
   // proto: static void QApplication::setGlobalStrut(const QSize & );
-  fn _ZN12QApplication14setGlobalStrutERK5QSize(arg0: *mut c_void);
+  fn C_ZN12QApplication14setGlobalStrutERK5QSize(arg0: *mut c_void);
   // proto: static void QApplication::setColorSpec(int );
-  fn _ZN12QApplication12setColorSpecEi(arg0: c_int);
+  fn C_ZN12QApplication12setColorSpecEi(arg0: c_int);
   // proto: static QWidgetList QApplication::allWidgets();
-  fn _ZN12QApplication10allWidgetsEv();
+  fn C_ZN12QApplication10allWidgetsEv() -> *mut c_void;
   // proto: static QSize QApplication::globalStrut();
-  fn _ZN12QApplication11globalStrutEv() -> *mut c_void;
+  fn C_ZN12QApplication11globalStrutEv() -> *mut c_void;
   // proto: static void QApplication::setPalette(const QPalette & , const char * className);
-  fn _ZN12QApplication10setPaletteERK8QPalettePKc(arg0: *mut c_void, arg1: *mut c_char);
+  fn C_ZN12QApplication10setPaletteERK8QPalettePKc(arg0: *mut c_void, arg1: *mut c_char);
   // proto: static QStyle * QApplication::setStyle(const QString & );
-  fn _ZN12QApplication8setStyleERK7QString(arg0: *mut c_void) -> *mut c_void;
+  fn C_ZN12QApplication8setStyleERK7QString(arg0: *mut c_void) -> *mut c_void;
   // proto: static QWidgetList QApplication::topLevelWidgets();
-  fn _ZN12QApplication15topLevelWidgetsEv();
+  fn C_ZN12QApplication15topLevelWidgetsEv() -> *mut c_void;
   // proto: static int QApplication::exec();
-  fn _ZN12QApplication4execEv() -> c_int;
+  fn C_ZN12QApplication4execEv() -> c_int;
   // proto: static void QApplication::setWindowIcon(const QIcon & icon);
-  fn _ZN12QApplication13setWindowIconERK5QIcon(arg0: *mut c_void);
+  fn C_ZN12QApplication13setWindowIconERK5QIcon(arg0: *mut c_void);
   // proto: static void QApplication::beep();
-  fn _ZN12QApplication4beepEv();
+  fn C_ZN12QApplication4beepEv();
   // proto:  bool QApplication::notify(QObject * , QEvent * );
-  fn _ZN12QApplication6notifyEP7QObjectP6QEvent(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> c_char;
+  fn C_ZN12QApplication6notifyEP7QObjectP6QEvent(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> c_char;
   // proto:  bool QApplication::autoSipEnabled();
-  fn _ZNK12QApplication14autoSipEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK12QApplication14autoSipEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto: static QWidget * QApplication::topLevelAt(const QPoint & p);
-  fn _ZN12QApplication10topLevelAtERK6QPoint(arg0: *mut c_void) -> *mut c_void;
+  fn C_ZN12QApplication10topLevelAtERK6QPoint(arg0: *mut c_void) -> *mut c_void;
   // proto: static int QApplication::startDragTime();
-  fn _ZN12QApplication13startDragTimeEv() -> c_int;
+  fn C_ZN12QApplication13startDragTimeEv() -> c_int;
   // proto: static int QApplication::doubleClickInterval();
-  fn _ZN12QApplication19doubleClickIntervalEv() -> c_int;
+  fn C_ZN12QApplication19doubleClickIntervalEv() -> c_int;
   // proto: static QIcon QApplication::windowIcon();
-  fn _ZN12QApplication10windowIconEv() -> *mut c_void;
+  fn C_ZN12QApplication10windowIconEv() -> *mut c_void;
   fn QApplication_SlotProxy_connect__ZN12QApplication12focusChangedEP7QWidgetS1_(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QApplication_SlotProxy_connect_box__ZN12QApplication12focusChangedEP7QWidgetS1_(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -166,7 +161,7 @@ extern {
 pub struct QApplication {
   qbase: QGuiApplication,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _focusChanged_1: QApplication_focusChanged_signal,
+  pub _focusChanged: QApplication_focusChanged_signal,
 }
 
 impl /*struct*/ QApplication {
@@ -203,7 +198,7 @@ impl<'a> /*trait*/ QApplication_styleSheet<QString> for () {
   fn styleSheet(self , rsthis: & QApplication) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QApplication10styleSheetEv()};
-    let mut ret = unsafe {_ZNK12QApplication10styleSheetEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QApplication10styleSheetEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -228,7 +223,7 @@ impl<'a> /*trait*/ QApplication_palette_s<QPalette> for (&'a  String) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication7paletteEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
-    let mut ret = unsafe {_ZN12QApplication7paletteEPKc(arg0)};
+    let mut ret = unsafe {C_ZN12QApplication7paletteEPKc(arg0)};
     let mut ret1 = QPalette::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -252,7 +247,7 @@ impl<'a> /*trait*/ QApplication_activeWindow_s<QWidget> for () {
   fn activeWindow_s(self ) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication12activeWindowEv()};
-    let mut ret = unsafe {_ZN12QApplication12activeWindowEv()};
+    let mut ret = unsafe {C_ZN12QApplication12activeWindowEv()};
     let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -277,7 +272,7 @@ impl<'a> /*trait*/ QApplication_setKeyboardInputInterval_s<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication24setKeyboardInputIntervalEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN12QApplication24setKeyboardInputIntervalEi(arg0)};
+     unsafe {C_ZN12QApplication24setKeyboardInputIntervalEi(arg0)};
     // return 1;
   }
 }
@@ -299,7 +294,7 @@ impl<'a> /*trait*/ QApplication_focusWidget_s<QWidget> for () {
   fn focusWidget_s(self ) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication11focusWidgetEv()};
-    let mut ret = unsafe {_ZN12QApplication11focusWidgetEv()};
+    let mut ret = unsafe {C_ZN12QApplication11focusWidgetEv()};
     let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -323,7 +318,7 @@ impl<'a> /*trait*/ QApplication_fontMetrics_s<QFontMetrics> for () {
   fn fontMetrics_s(self ) -> QFontMetrics {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication11fontMetricsEv()};
-    let mut ret = unsafe {_ZN12QApplication11fontMetricsEv()};
+    let mut ret = unsafe {C_ZN12QApplication11fontMetricsEv()};
     let mut ret1 = QFontMetrics::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -348,7 +343,7 @@ impl<'a> /*trait*/ QApplication_font_s<QFont> for (&'a  String) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication4fontEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
-    let mut ret = unsafe {_ZN12QApplication4fontEPKc(arg0)};
+    let mut ret = unsafe {C_ZN12QApplication4fontEPKc(arg0)};
     let mut ret1 = QFont::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -372,7 +367,7 @@ impl<'a> /*trait*/ QApplication_style_s<QStyle> for () {
   fn style_s(self ) -> QStyle {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication5styleEv()};
-    let mut ret = unsafe {_ZN12QApplication5styleEv()};
+    let mut ret = unsafe {C_ZN12QApplication5styleEv()};
     let mut ret1 = QStyle::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -397,7 +392,7 @@ impl<'a> /*trait*/ QApplication_widgetAt_s<QWidget> for (&'a QPoint) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication8widgetAtERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN12QApplication8widgetAtERK6QPoint(arg0)};
+    let mut ret = unsafe {C_ZN12QApplication8widgetAtERK6QPoint(arg0)};
     let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -422,7 +417,7 @@ impl<'a> /*trait*/ QApplication_setActiveWindow_s<()> for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication15setActiveWindowEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN12QApplication15setActiveWindowEP7QWidget(arg0)};
+     unsafe {C_ZN12QApplication15setActiveWindowEP7QWidget(arg0)};
     // return 1;
   }
 }
@@ -432,7 +427,7 @@ impl<'a> /*trait*/ QApplication_font_s<QFont> for () {
   fn font_s(self ) -> QFont {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication4fontEv()};
-    let mut ret = unsafe {_ZN12QApplication4fontEv()};
+    let mut ret = unsafe {C_ZN12QApplication4fontEv()};
     let mut ret1 = QFont::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -457,7 +452,7 @@ impl<'a> /*trait*/ QApplication_setWheelScrollLines_s<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication19setWheelScrollLinesEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN12QApplication19setWheelScrollLinesEi(arg0)};
+     unsafe {C_ZN12QApplication19setWheelScrollLinesEi(arg0)};
     // return 1;
   }
 }
@@ -480,7 +475,7 @@ impl<'a> /*trait*/ QApplication_setStyleSheet<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication13setStyleSheetERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN12QApplication13setStyleSheetERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN12QApplication13setStyleSheetERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -503,7 +498,7 @@ impl<'a> /*trait*/ QApplication_setAutoSipEnabled<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication17setAutoSipEnabledEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN12QApplication17setAutoSipEnabledEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN12QApplication17setAutoSipEnabledEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -521,11 +516,13 @@ pub trait QApplication_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QApplication::metaObject();
-impl<'a> /*trait*/ QApplication_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QApplication) -> () {
+impl<'a> /*trait*/ QApplication_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QApplication) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QApplication10metaObjectEv()};
-     unsafe {_ZNK12QApplication10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QApplication10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -547,8 +544,8 @@ impl<'a> /*trait*/ QApplication_keyboardInputInterval_s<i32> for () {
   fn keyboardInputInterval_s(self ) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication21keyboardInputIntervalEv()};
-    let mut ret = unsafe {_ZN12QApplication21keyboardInputIntervalEv()};
-    return ret as i32;
+    let mut ret = unsafe {C_ZN12QApplication21keyboardInputIntervalEv()};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -570,8 +567,8 @@ impl<'a> /*trait*/ QApplication_cursorFlashTime_s<i32> for () {
   fn cursorFlashTime_s(self ) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication15cursorFlashTimeEv()};
-    let mut ret = unsafe {_ZN12QApplication15cursorFlashTimeEv()};
-    return ret as i32;
+    let mut ret = unsafe {C_ZN12QApplication15cursorFlashTimeEv()};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -593,8 +590,8 @@ impl<'a> /*trait*/ QApplication_startDragDistance_s<i32> for () {
   fn startDragDistance_s(self ) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication17startDragDistanceEv()};
-    let mut ret = unsafe {_ZN12QApplication17startDragDistanceEv()};
-    return ret as i32;
+    let mut ret = unsafe {C_ZN12QApplication17startDragDistanceEv()};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -616,7 +613,7 @@ impl<'a> /*trait*/ QApplication_desktop_s<QDesktopWidget> for () {
   fn desktop_s(self ) -> QDesktopWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication7desktopEv()};
-    let mut ret = unsafe {_ZN12QApplication7desktopEv()};
+    let mut ret = unsafe {C_ZN12QApplication7desktopEv()};
     let mut ret1 = QDesktopWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -641,7 +638,7 @@ impl<'a> /*trait*/ QApplication_setStartDragDistance_s<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication20setStartDragDistanceEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN12QApplication20setStartDragDistanceEi(arg0)};
+     unsafe {C_ZN12QApplication20setStartDragDistanceEi(arg0)};
     // return 1;
   }
 }
@@ -652,7 +649,7 @@ impl<'a> /*trait*/ QApplication_font_s<QFont> for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication4fontEPK7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN12QApplication4fontEPK7QWidget(arg0)};
+    let mut ret = unsafe {C_ZN12QApplication4fontEPK7QWidget(arg0)};
     let mut ret1 = QFont::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -676,8 +673,8 @@ impl<'a> /*trait*/ QApplication_colorSpec_s<i32> for () {
   fn colorSpec_s(self ) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication9colorSpecEv()};
-    let mut ret = unsafe {_ZN12QApplication9colorSpecEv()};
-    return ret as i32;
+    let mut ret = unsafe {C_ZN12QApplication9colorSpecEv()};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -701,7 +698,7 @@ impl<'a> /*trait*/ QApplication_setFont_s<()> for (&'a QFont, &'a  String) {
     // unsafe{_ZN12QApplication7setFontERK5QFontPKc()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.as_ptr()  as *mut c_char;
-     unsafe {_ZN12QApplication7setFontERK5QFontPKc(arg0, arg1)};
+     unsafe {C_ZN12QApplication7setFontERK5QFontPKc(arg0, arg1)};
     // return 1;
   }
 }
@@ -723,7 +720,7 @@ impl<'a> /*trait*/ QApplication_closeAllWindows_s<()> for () {
   fn closeAllWindows_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication15closeAllWindowsEv()};
-     unsafe {_ZN12QApplication15closeAllWindowsEv()};
+     unsafe {C_ZN12QApplication15closeAllWindowsEv()};
     // return 1;
   }
 }
@@ -746,7 +743,7 @@ impl<'a> /*trait*/ QApplication_setCursorFlashTime_s<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication18setCursorFlashTimeEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN12QApplication18setCursorFlashTimeEi(arg0)};
+     unsafe {C_ZN12QApplication18setCursorFlashTimeEi(arg0)};
     // return 1;
   }
 }
@@ -758,7 +755,7 @@ impl<'a> /*trait*/ QApplication_widgetAt_s<QWidget> for (i32, i32) {
     // unsafe{_ZN12QApplication8widgetAtEii()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-    let mut ret = unsafe {demth_ZN12QApplication8widgetAtEii(arg0, arg1)};
+    let mut ret = unsafe {C_ZN12QApplication8widgetAtEii(arg0, arg1)};
     let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -784,7 +781,7 @@ impl<'a> /*trait*/ QApplication_alert_s<()> for (&'a QWidget, i32) {
     // unsafe{_ZN12QApplication5alertEP7QWidgeti()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
-     unsafe {_ZN12QApplication5alertEP7QWidgeti(arg0, arg1)};
+     unsafe {C_ZN12QApplication5alertEP7QWidgeti(arg0, arg1)};
     // return 1;
   }
 }
@@ -795,7 +792,7 @@ impl<'a> /*trait*/ QApplication_palette_s<QPalette> for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication7paletteEPK7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN12QApplication7paletteEPK7QWidget(arg0)};
+    let mut ret = unsafe {C_ZN12QApplication7paletteEPK7QWidget(arg0)};
     let mut ret1 = QPalette::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -819,37 +816,8 @@ impl<'a> /*trait*/ QApplication_wheelScrollLines_s<i32> for () {
   fn wheelScrollLines_s(self ) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication16wheelScrollLinesEv()};
-    let mut ret = unsafe {_ZN12QApplication16wheelScrollLinesEv()};
-    return ret as i32;
-    // return 1;
-  }
-}
-
-  // proto:  void QApplication::QApplication(const QApplication & );
-impl /*struct*/ QApplication {
-  pub fn New<T: QApplication_New>(value: T) -> QApplication {
-    let rsthis = value.New();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QApplication_New {
-  fn New(self) -> QApplication;
-}
-
-  // proto:  void QApplication::QApplication(const QApplication & );
-impl<'a> /*trait*/ QApplication_New for (&'a QApplication) {
-  fn New(self) -> QApplication {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QApplicationC1ERKS_()};
-    let ctysz: c_int = unsafe{QApplication_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN12QApplicationC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN12QApplicationC1ERKS_(arg0)} as u64;
-    let rsthis = QApplication{qbase: QGuiApplication::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
+    let mut ret = unsafe {C_ZN12QApplication16wheelScrollLinesEv()};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -871,7 +839,7 @@ impl<'a> /*trait*/ QApplication_aboutQt_s<()> for () {
   fn aboutQt_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication7aboutQtEv()};
-     unsafe {_ZN12QApplication7aboutQtEv()};
+     unsafe {C_ZN12QApplication7aboutQtEv()};
     // return 1;
   }
 }
@@ -893,7 +861,7 @@ impl<'a> /*trait*/ QApplication_activeModalWidget_s<QWidget> for () {
   fn activeModalWidget_s(self ) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication17activeModalWidgetEv()};
-    let mut ret = unsafe {_ZN12QApplication17activeModalWidgetEv()};
+    let mut ret = unsafe {C_ZN12QApplication17activeModalWidgetEv()};
     let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -917,7 +885,7 @@ impl<'a> /*trait*/ QApplication_activePopupWidget_s<QWidget> for () {
   fn activePopupWidget_s(self ) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication17activePopupWidgetEv()};
-    let mut ret = unsafe {_ZN12QApplication17activePopupWidgetEv()};
+    let mut ret = unsafe {C_ZN12QApplication17activePopupWidgetEv()};
     let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -925,43 +893,31 @@ impl<'a> /*trait*/ QApplication_activePopupWidget_s<QWidget> for () {
 }
 
   // proto:  void QApplication::QApplication(int & argc, char ** argv, int );
-impl<'a> /*trait*/ QApplication_New for (&'a mut i32, &'a mut String, i32) {
-  fn New(self) -> QApplication {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QApplicationC1ERiPPci()};
-    let ctysz: c_int = unsafe{QApplication_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.0  as *mut c_int;
-    let arg1 = self.1.as_ptr()  as *mut c_char;
-    let arg2 = self.2  as c_int;
-    // unsafe {_ZN12QApplicationC1ERiPPci(qthis, arg0, arg1, arg2)};
-    let qthis: u64 = unsafe {dector_ZN12QApplicationC1ERiPPci(arg0, arg1, arg2)} as u64;
-    let rsthis = QApplication{qbase: QGuiApplication::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+impl /*struct*/ QApplication {
+  pub fn new<T: QApplication_new>(value: T) -> QApplication {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  void QApplication::focusChanged(QWidget * old, QWidget * now);
-impl /*struct*/ QApplication {
-  pub fn focusChanged<RetType, T: QApplication_focusChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.focusChanged(self);
-    // return 1;
-  }
+pub trait QApplication_new {
+  fn new(self) -> QApplication;
 }
 
-pub trait QApplication_focusChanged<RetType> {
-  fn focusChanged(self , rsthis: & QApplication) -> RetType;
-}
-
-  // proto:  void QApplication::focusChanged(QWidget * old, QWidget * now);
-impl<'a> /*trait*/ QApplication_focusChanged<()> for (&'a QWidget, &'a QWidget) {
-  fn focusChanged(self , rsthis: & QApplication) -> () {
+  // proto:  void QApplication::QApplication(int & argc, char ** argv, int );
+impl<'a> /*trait*/ QApplication_new for (&'a mut i32, &'a mut String, i32) {
+  fn new(self) -> QApplication {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QApplication12focusChangedEP7QWidgetS1_()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN12QApplication12focusChangedEP7QWidgetS1_(rsthis.qclsinst, arg0, arg1)};
+    // unsafe{_ZN12QApplicationC2ERiPPci()};
+    let ctysz: c_int = unsafe{QApplication_Class_Size()};
+    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
+    let arg0 = self.0  as *mut c_int;
+    let arg1 = self.1.as_ptr()  as *mut c_char;
+    let arg2 = self.2  as c_int;
+    let qthis: u64 = unsafe {C_ZN12QApplicationC2ERiPPci(arg0, arg1, arg2)};
+    let rsthis = QApplication{qbase: QGuiApplication::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
+    return rsthis;
     // return 1;
   }
 }
@@ -984,7 +940,7 @@ impl<'a> /*trait*/ QApplication_setStartDragTime_s<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication16setStartDragTimeEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN12QApplication16setStartDragTimeEi(arg0)};
+     unsafe {C_ZN12QApplication16setStartDragTimeEi(arg0)};
     // return 1;
   }
 }
@@ -1008,7 +964,7 @@ impl<'a> /*trait*/ QApplication_topLevelAt_s<QWidget> for (i32, i32) {
     // unsafe{_ZN12QApplication10topLevelAtEii()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-    let mut ret = unsafe {demth_ZN12QApplication10topLevelAtEii(arg0, arg1)};
+    let mut ret = unsafe {C_ZN12QApplication10topLevelAtEii(arg0, arg1)};
     let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1033,29 +989,29 @@ impl<'a> /*trait*/ QApplication_setStyle_s<()> for (&'a QStyle) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication8setStyleEP6QStyle()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN12QApplication8setStyleEP6QStyle(arg0)};
+     unsafe {C_ZN12QApplication8setStyleEP6QStyle(arg0)};
     // return 1;
   }
 }
 
   // proto:  void QApplication::~QApplication();
 impl /*struct*/ QApplication {
-  pub fn Free<RetType, T: QApplication_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QApplication_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QApplication_Free<RetType> {
-  fn Free(self , rsthis: & QApplication) -> RetType;
+pub trait QApplication_free<RetType> {
+  fn free(self , rsthis: & QApplication) -> RetType;
 }
 
   // proto:  void QApplication::~QApplication();
-impl<'a> /*trait*/ QApplication_Free<()> for () {
-  fn Free(self , rsthis: & QApplication) -> () {
+impl<'a> /*trait*/ QApplication_free<()> for () {
+  fn free(self , rsthis: & QApplication) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QApplicationD0Ev()};
-     unsafe {_ZN12QApplicationD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN12QApplicationD2Ev()};
+     unsafe {C_ZN12QApplicationD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1078,7 +1034,7 @@ impl<'a> /*trait*/ QApplication_setDoubleClickInterval_s<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication22setDoubleClickIntervalEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN12QApplication22setDoubleClickIntervalEi(arg0)};
+     unsafe {C_ZN12QApplication22setDoubleClickIntervalEi(arg0)};
     // return 1;
   }
 }
@@ -1101,7 +1057,7 @@ impl<'a> /*trait*/ QApplication_setGlobalStrut_s<()> for (&'a QSize) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication14setGlobalStrutERK5QSize()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN12QApplication14setGlobalStrutERK5QSize(arg0)};
+     unsafe {C_ZN12QApplication14setGlobalStrutERK5QSize(arg0)};
     // return 1;
   }
 }
@@ -1124,7 +1080,7 @@ impl<'a> /*trait*/ QApplication_setColorSpec_s<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication12setColorSpecEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN12QApplication12setColorSpecEi(arg0)};
+     unsafe {C_ZN12QApplication12setColorSpecEi(arg0)};
     // return 1;
   }
 }
@@ -1142,11 +1098,12 @@ pub trait QApplication_allWidgets_s<RetType> {
 }
 
   // proto: static QWidgetList QApplication::allWidgets();
-impl<'a> /*trait*/ QApplication_allWidgets_s<()> for () {
-  fn allWidgets_s(self ) -> () {
+impl<'a> /*trait*/ QApplication_allWidgets_s<u64> for () {
+  fn allWidgets_s(self ) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication10allWidgetsEv()};
-     unsafe {_ZN12QApplication10allWidgetsEv()};
+    let mut ret = unsafe {C_ZN12QApplication10allWidgetsEv()};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -1168,7 +1125,7 @@ impl<'a> /*trait*/ QApplication_globalStrut_s<QSize> for () {
   fn globalStrut_s(self ) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication11globalStrutEv()};
-    let mut ret = unsafe {_ZN12QApplication11globalStrutEv()};
+    let mut ret = unsafe {C_ZN12QApplication11globalStrutEv()};
     let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1194,7 +1151,7 @@ impl<'a> /*trait*/ QApplication_setPalette_s<()> for (&'a QPalette, &'a  String)
     // unsafe{_ZN12QApplication10setPaletteERK8QPalettePKc()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.as_ptr()  as *mut c_char;
-     unsafe {_ZN12QApplication10setPaletteERK8QPalettePKc(arg0, arg1)};
+     unsafe {C_ZN12QApplication10setPaletteERK8QPalettePKc(arg0, arg1)};
     // return 1;
   }
 }
@@ -1205,7 +1162,7 @@ impl<'a> /*trait*/ QApplication_setStyle_s<QStyle> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication8setStyleERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN12QApplication8setStyleERK7QString(arg0)};
+    let mut ret = unsafe {C_ZN12QApplication8setStyleERK7QString(arg0)};
     let mut ret1 = QStyle::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1225,11 +1182,12 @@ pub trait QApplication_topLevelWidgets_s<RetType> {
 }
 
   // proto: static QWidgetList QApplication::topLevelWidgets();
-impl<'a> /*trait*/ QApplication_topLevelWidgets_s<()> for () {
-  fn topLevelWidgets_s(self ) -> () {
+impl<'a> /*trait*/ QApplication_topLevelWidgets_s<u64> for () {
+  fn topLevelWidgets_s(self ) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication15topLevelWidgetsEv()};
-     unsafe {_ZN12QApplication15topLevelWidgetsEv()};
+    let mut ret = unsafe {C_ZN12QApplication15topLevelWidgetsEv()};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -1251,8 +1209,8 @@ impl<'a> /*trait*/ QApplication_exec_s<i32> for () {
   fn exec_s(self ) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication4execEv()};
-    let mut ret = unsafe {_ZN12QApplication4execEv()};
-    return ret as i32;
+    let mut ret = unsafe {C_ZN12QApplication4execEv()};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1275,7 +1233,7 @@ impl<'a> /*trait*/ QApplication_setWindowIcon_s<()> for (&'a QIcon) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication13setWindowIconERK5QIcon()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN12QApplication13setWindowIconERK5QIcon(arg0)};
+     unsafe {C_ZN12QApplication13setWindowIconERK5QIcon(arg0)};
     // return 1;
   }
 }
@@ -1297,7 +1255,7 @@ impl<'a> /*trait*/ QApplication_beep_s<()> for () {
   fn beep_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication4beepEv()};
-     unsafe {_ZN12QApplication4beepEv()};
+     unsafe {C_ZN12QApplication4beepEv()};
     // return 1;
   }
 }
@@ -1321,8 +1279,8 @@ impl<'a> /*trait*/ QApplication_notify<i8> for (&'a QObject, &'a QEvent) {
     // unsafe{_ZN12QApplication6notifyEP7QObjectP6QEvent()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN12QApplication6notifyEP7QObjectP6QEvent(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZN12QApplication6notifyEP7QObjectP6QEvent(rsthis.qclsinst, arg0, arg1)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1344,8 +1302,8 @@ impl<'a> /*trait*/ QApplication_autoSipEnabled<i8> for () {
   fn autoSipEnabled(self , rsthis: & QApplication) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QApplication14autoSipEnabledEv()};
-    let mut ret = unsafe {_ZNK12QApplication14autoSipEnabledEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK12QApplication14autoSipEnabledEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1356,7 +1314,7 @@ impl<'a> /*trait*/ QApplication_topLevelAt_s<QWidget> for (&'a QPoint) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication10topLevelAtERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN12QApplication10topLevelAtERK6QPoint(arg0)};
+    let mut ret = unsafe {C_ZN12QApplication10topLevelAtERK6QPoint(arg0)};
     let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1380,8 +1338,8 @@ impl<'a> /*trait*/ QApplication_startDragTime_s<i32> for () {
   fn startDragTime_s(self ) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication13startDragTimeEv()};
-    let mut ret = unsafe {_ZN12QApplication13startDragTimeEv()};
-    return ret as i32;
+    let mut ret = unsafe {C_ZN12QApplication13startDragTimeEv()};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1403,8 +1361,8 @@ impl<'a> /*trait*/ QApplication_doubleClickInterval_s<i32> for () {
   fn doubleClickInterval_s(self ) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication19doubleClickIntervalEv()};
-    let mut ret = unsafe {_ZN12QApplication19doubleClickIntervalEv()};
-    return ret as i32;
+    let mut ret = unsafe {C_ZN12QApplication19doubleClickIntervalEv()};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1426,7 +1384,7 @@ impl<'a> /*trait*/ QApplication_windowIcon_s<QIcon> for () {
   fn windowIcon_s(self ) -> QIcon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication10windowIconEv()};
-    let mut ret = unsafe {_ZN12QApplication10windowIconEv()};
+    let mut ret = unsafe {C_ZN12QApplication10windowIconEv()};
     let mut ret1 = QIcon::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1436,7 +1394,7 @@ impl<'a> /*trait*/ QApplication_windowIcon_s<QIcon> for () {
 #[derive(Default)] // for QApplication_focusChanged
 pub struct QApplication_focusChanged_signal{poi:u64}
 impl /* struct */ QApplication {
-  pub fn focusChanged_1(&self) -> QApplication_focusChanged_signal {
+  pub fn focusChanged(&self) -> QApplication_focusChanged_signal {
      return QApplication_focusChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1452,15 +1410,23 @@ pub trait QApplication_focusChanged_signal_connect {
 // focusChanged(class QWidget *, class QWidget *)
 extern fn QApplication_focusChanged_signal_connect_cb_0(rsfptr:fn(QWidget, QWidget), arg0: *mut c_void, arg1: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QWidget::inheritFrom(arg0 as u64);
+  let rsarg1 = QWidget::inheritFrom(arg1 as u64);
+  rsfptr(rsarg0,rsarg1);
 }
-extern fn QApplication_focusChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void, arg1: *mut c_void) {
+extern fn QApplication_focusChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(QWidget, QWidget)>, arg0: *mut c_void, arg1: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QWidget::inheritFrom(arg0 as u64);
+  let rsarg1 = QWidget::inheritFrom(arg1 as u64);
+  // rsfptr(rsarg0,rsarg1);
+  unsafe{(*rsfptr_raw)(rsarg0,rsarg1)};
 }
 impl /* trait */ QApplication_focusChanged_signal_connect for fn(QWidget, QWidget) {
   fn connect(self, sigthis: QApplication_focusChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QApplication_focusChanged_signal_connect_cb_0 as *mut c_void;
@@ -1468,14 +1434,14 @@ impl /* trait */ QApplication_focusChanged_signal_connect for fn(QWidget, QWidge
     unsafe {QApplication_SlotProxy_connect__ZN12QApplication12focusChangedEP7QWidgetS1_(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QApplication_focusChanged_signal_connect for Box<fn(QWidget, QWidget)> {
+impl /* trait */ QApplication_focusChanged_signal_connect for Box<Fn(QWidget, QWidget)> {
   fn connect(self, sigthis: QApplication_focusChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QApplication_focusChanged_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QApplication_SlotProxy_connect__ZN12QApplication12focusChangedEP7QWidgetS1_(arg0, arg1, arg2)};
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qfilesystemmodel.h
 // dst-file: /src/widgets/qfilesystemmodel.rs
 //
@@ -18,19 +18,19 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qabstractitemmodel::QAbstractItemModel; // 771
+use super::super::core::qabstractitemmodel::*; // 771
 use std::ops::Deref;
-use super::super::core::qabstractitemmodel::QModelIndex; // 771
-use super::super::core::qstring::QString; // 771
-use super::super::gui::qicon::QIcon; // 771
-use super::qfileiconprovider::QFileIconProvider; // 773
-use super::super::core::qstringlist::QStringList; // 771
-use super::super::core::qvariant::QVariant; // 771
-use super::super::core::qdir::QDir; // 771
-use super::super::core::qobject::QObject; // 771
-use super::super::core::qfileinfo::QFileInfo; // 771
-use super::super::core::qmimedata::QMimeData; // 771
-use super::super::core::qdatetime::QDateTime; // 771
+use super::super::core::qstring::*; // 771
+use super::super::core::qstringlist::*; // 771
+use super::super::gui::qicon::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::qfileiconprovider::*; // 773
+use super::super::core::qvariant::*; // 771
+use super::super::core::qdir::*; // 771
+use super::super::core::qobject::*; // 771
+use super::super::core::qfileinfo::*; // 771
+use super::super::core::qmimedata::*; // 771
+use super::super::core::qdatetime::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -42,99 +42,86 @@ use super::super::core::qdatetime::QDateTime; // 771
 extern {
   fn QFileSystemModel_Class_Size() -> c_int;
   // proto:  QString QFileSystemModel::fileName(const QModelIndex & index);
-  fn demth_ZNK16QFileSystemModel8fileNameERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZNK16QFileSystemModel8fileNameERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  bool QFileSystemModel::hasChildren(const QModelIndex & parent);
-  fn _ZNK16QFileSystemModel11hasChildrenERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
+  fn C_ZNK16QFileSystemModel11hasChildrenERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  QStringList QFileSystemModel::mimeTypes();
-  fn _ZNK16QFileSystemModel9mimeTypesEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK16QFileSystemModel9mimeTypesEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QFileSystemModel::~QFileSystemModel();
-  fn _ZN16QFileSystemModelD0Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN16QFileSystemModelD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QModelIndex QFileSystemModel::index(const QString & path, int column);
-  fn _ZNK16QFileSystemModel5indexERK7QStringi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> *mut c_void;
+  fn C_ZNK16QFileSystemModel5indexERK7QStringi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> *mut c_void;
   // proto:  void QFileSystemModel::setNameFilterDisables(bool enable);
-  fn _ZN16QFileSystemModel21setNameFilterDisablesEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN16QFileSystemModel21setNameFilterDisablesEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QIcon QFileSystemModel::fileIcon(const QModelIndex & index);
-  fn demth_ZNK16QFileSystemModel8fileIconERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZNK16QFileSystemModel8fileIconERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  bool QFileSystemModel::resolveSymlinks();
-  fn _ZNK16QFileSystemModel15resolveSymlinksEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK16QFileSystemModel15resolveSymlinksEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QString QFileSystemModel::filePath(const QModelIndex & index);
-  fn _ZNK16QFileSystemModel8filePathERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZNK16QFileSystemModel8filePathERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QModelIndex QFileSystemModel::parent(const QModelIndex & child);
-  fn _ZNK16QFileSystemModel6parentERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZNK16QFileSystemModel6parentERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  bool QFileSystemModel::nameFilterDisables();
-  fn _ZNK16QFileSystemModel18nameFilterDisablesEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK16QFileSystemModel18nameFilterDisablesEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  const QMetaObject * QFileSystemModel::metaObject();
-  fn _ZNK16QFileSystemModel10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK16QFileSystemModel10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QFileSystemModel::fetchMore(const QModelIndex & parent);
-  fn _ZN16QFileSystemModel9fetchMoreERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QFileSystemModel::QFileSystemModel(const QFileSystemModel & );
-  fn dector_ZN16QFileSystemModelC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN16QFileSystemModelC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN16QFileSystemModel9fetchMoreERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  qint64 QFileSystemModel::size(const QModelIndex & index);
-  fn _ZNK16QFileSystemModel4sizeERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_longlong;
+  fn C_ZNK16QFileSystemModel4sizeERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_longlong;
   // proto:  QFileIconProvider * QFileSystemModel::iconProvider();
-  fn _ZNK16QFileSystemModel12iconProviderEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK16QFileSystemModel12iconProviderEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QFileSystemModel::setNameFilters(const QStringList & filters);
-  fn _ZN16QFileSystemModel14setNameFiltersERK11QStringList(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN16QFileSystemModel14setNameFiltersERK11QStringList(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QVariant QFileSystemModel::data(const QModelIndex & index, int role);
-  fn _ZNK16QFileSystemModel4dataERK11QModelIndexi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> *mut c_void;
+  fn C_ZNK16QFileSystemModel4dataERK11QModelIndexi(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int) -> *mut c_void;
   // proto:  QDir QFileSystemModel::rootDirectory();
-  fn _ZNK16QFileSystemModel13rootDirectoryEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK16QFileSystemModel13rootDirectoryEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QModelIndex QFileSystemModel::mkdir(const QModelIndex & parent, const QString & name);
-  fn _ZN16QFileSystemModel5mkdirERK11QModelIndexRK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
+  fn C_ZN16QFileSystemModel5mkdirERK11QModelIndexRK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  int QFileSystemModel::rowCount(const QModelIndex & parent);
-  fn _ZNK16QFileSystemModel8rowCountERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
+  fn C_ZNK16QFileSystemModel8rowCountERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
   // proto:  bool QFileSystemModel::setData(const QModelIndex & index, const QVariant & value, int role);
-  fn _ZN16QFileSystemModel7setDataERK11QModelIndexRK8QVarianti(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: c_int) -> c_char;
+  fn C_ZN16QFileSystemModel7setDataERK11QModelIndexRK8QVarianti(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: c_int) -> c_char;
   // proto:  int QFileSystemModel::columnCount(const QModelIndex & parent);
-  fn _ZNK16QFileSystemModel11columnCountERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
+  fn C_ZNK16QFileSystemModel11columnCountERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
   // proto:  QModelIndex QFileSystemModel::index(int row, int column, const QModelIndex & parent);
-  fn _ZNK16QFileSystemModel5indexEiiRK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
+  fn C_ZNK16QFileSystemModel5indexEiiRK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
   // proto:  bool QFileSystemModel::canFetchMore(const QModelIndex & parent);
-  fn _ZNK16QFileSystemModel12canFetchMoreERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
+  fn C_ZNK16QFileSystemModel12canFetchMoreERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  bool QFileSystemModel::remove(const QModelIndex & index);
-  fn _ZN16QFileSystemModel6removeERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
-  // proto:  void QFileSystemModel::rootPathChanged(const QString & newPath);
-  fn _ZN16QFileSystemModel15rootPathChangedERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN16QFileSystemModel6removeERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  QModelIndex QFileSystemModel::setRootPath(const QString & path);
-  fn _ZN16QFileSystemModel11setRootPathERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-  // proto:  void QFileSystemModel::directoryLoaded(const QString & path);
-  fn _ZN16QFileSystemModel15directoryLoadedERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN16QFileSystemModel11setRootPathERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QFileSystemModel::setResolveSymlinks(bool enable);
-  fn _ZN16QFileSystemModel18setResolveSymlinksEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN16QFileSystemModel18setResolveSymlinksEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QFileSystemModel::setReadOnly(bool enable);
-  fn _ZN16QFileSystemModel11setReadOnlyEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN16QFileSystemModel11setReadOnlyEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QStringList QFileSystemModel::nameFilters();
-  fn _ZNK16QFileSystemModel11nameFiltersEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK16QFileSystemModel11nameFiltersEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QFileSystemModel::QFileSystemModel(QObject * parent);
-  fn dector_ZN16QFileSystemModelC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN16QFileSystemModelC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN16QFileSystemModelC2EP7QObject(arg0: *mut c_void) -> u64;
   // proto:  QFileInfo QFileSystemModel::fileInfo(const QModelIndex & index);
-  fn demth_ZNK16QFileSystemModel8fileInfoERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZNK16QFileSystemModel8fileInfoERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QVariant QFileSystemModel::myComputer(int role);
-  fn _ZNK16QFileSystemModel10myComputerEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
+  fn C_ZNK16QFileSystemModel10myComputerEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  bool QFileSystemModel::isReadOnly();
-  fn _ZNK16QFileSystemModel10isReadOnlyEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK16QFileSystemModel10isReadOnlyEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QString QFileSystemModel::type(const QModelIndex & index);
-  fn _ZNK16QFileSystemModel4typeERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZNK16QFileSystemModel4typeERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QString QFileSystemModel::rootPath();
-  fn _ZNK16QFileSystemModel8rootPathEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK16QFileSystemModel8rootPathEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QDateTime QFileSystemModel::lastModified(const QModelIndex & index);
-  fn _ZNK16QFileSystemModel12lastModifiedERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-  // proto:  void QFileSystemModel::fileRenamed(const QString & path, const QString & oldName, const QString & newName);
-  fn _ZN16QFileSystemModel11fileRenamedERK7QStringS2_S2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
+  fn C_ZNK16QFileSystemModel12lastModifiedERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  bool QFileSystemModel::isDir(const QModelIndex & index);
-  fn _ZNK16QFileSystemModel5isDirERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
+  fn C_ZNK16QFileSystemModel5isDirERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  bool QFileSystemModel::rmdir(const QModelIndex & index);
-  fn _ZN16QFileSystemModel5rmdirERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
+  fn C_ZN16QFileSystemModel5rmdirERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  void QFileSystemModel::setIconProvider(QFileIconProvider * provider);
-  fn _ZN16QFileSystemModel15setIconProviderEP17QFileIconProvider(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN16QFileSystemModel15setIconProviderEP17QFileIconProvider(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QFileSystemModel_SlotProxy_connect__ZN16QFileSystemModel15directoryLoadedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QFileSystemModel_SlotProxy_connect_box__ZN16QFileSystemModel15directoryLoadedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QFileSystemModel_SlotProxy_connect__ZN16QFileSystemModel15rootPathChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QFileSystemModel_SlotProxy_connect_box__ZN16QFileSystemModel15rootPathChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QFileSystemModel_SlotProxy_connect__ZN16QFileSystemModel11fileRenamedERK7QStringS2_S2_(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QFileSystemModel_SlotProxy_connect_box__ZN16QFileSystemModel11fileRenamedERK7QStringS2_S2_(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -143,9 +130,9 @@ extern {
 pub struct QFileSystemModel {
   qbase: QAbstractItemModel,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _rootPathChanged_1: QFileSystemModel_rootPathChanged_signal,
-  pub _directoryLoaded_1: QFileSystemModel_directoryLoaded_signal,
-  pub _fileRenamed_1: QFileSystemModel_fileRenamed_signal,
+  pub _rootPathChanged: QFileSystemModel_rootPathChanged_signal,
+  pub _directoryLoaded: QFileSystemModel_directoryLoaded_signal,
+  pub _fileRenamed: QFileSystemModel_fileRenamed_signal,
 }
 
 impl /*struct*/ QFileSystemModel {
@@ -183,7 +170,7 @@ impl<'a> /*trait*/ QFileSystemModel_fileName<QString> for (&'a QModelIndex) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel8fileNameERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {demth_ZNK16QFileSystemModel8fileNameERK11QModelIndex(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK16QFileSystemModel8fileNameERK11QModelIndex(rsthis.qclsinst, arg0)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -208,8 +195,8 @@ impl<'a> /*trait*/ QFileSystemModel_hasChildren<i8> for (&'a QModelIndex) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel11hasChildrenERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK16QFileSystemModel11hasChildrenERK11QModelIndex(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK16QFileSystemModel11hasChildrenERK11QModelIndex(rsthis.qclsinst, arg0)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -227,33 +214,35 @@ pub trait QFileSystemModel_mimeTypes<RetType> {
 }
 
   // proto:  QStringList QFileSystemModel::mimeTypes();
-impl<'a> /*trait*/ QFileSystemModel_mimeTypes<()> for () {
-  fn mimeTypes(self , rsthis: & QFileSystemModel) -> () {
+impl<'a> /*trait*/ QFileSystemModel_mimeTypes<QStringList> for () {
+  fn mimeTypes(self , rsthis: & QFileSystemModel) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel9mimeTypesEv()};
-     unsafe {_ZNK16QFileSystemModel9mimeTypesEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QFileSystemModel9mimeTypesEv(rsthis.qclsinst)};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
 
   // proto:  void QFileSystemModel::~QFileSystemModel();
 impl /*struct*/ QFileSystemModel {
-  pub fn Free<RetType, T: QFileSystemModel_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QFileSystemModel_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_Free<RetType> {
-  fn Free(self , rsthis: & QFileSystemModel) -> RetType;
+pub trait QFileSystemModel_free<RetType> {
+  fn free(self , rsthis: & QFileSystemModel) -> RetType;
 }
 
   // proto:  void QFileSystemModel::~QFileSystemModel();
-impl<'a> /*trait*/ QFileSystemModel_Free<()> for () {
-  fn Free(self , rsthis: & QFileSystemModel) -> () {
+impl<'a> /*trait*/ QFileSystemModel_free<()> for () {
+  fn free(self , rsthis: & QFileSystemModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QFileSystemModelD0Ev()};
-     unsafe {_ZN16QFileSystemModelD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN16QFileSystemModelD2Ev()};
+     unsafe {C_ZN16QFileSystemModelD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -277,7 +266,7 @@ impl<'a> /*trait*/ QFileSystemModel_index<QModelIndex> for (&'a QString, i32) {
     // unsafe{_ZNK16QFileSystemModel5indexERK7QStringi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
-    let mut ret = unsafe {_ZNK16QFileSystemModel5indexERK7QStringi(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {C_ZNK16QFileSystemModel5indexERK7QStringi(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QModelIndex::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -302,7 +291,7 @@ impl<'a> /*trait*/ QFileSystemModel_setNameFilterDisables<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QFileSystemModel21setNameFilterDisablesEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN16QFileSystemModel21setNameFilterDisablesEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN16QFileSystemModel21setNameFilterDisablesEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -325,7 +314,7 @@ impl<'a> /*trait*/ QFileSystemModel_fileIcon<QIcon> for (&'a QModelIndex) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel8fileIconERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {demth_ZNK16QFileSystemModel8fileIconERK11QModelIndex(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK16QFileSystemModel8fileIconERK11QModelIndex(rsthis.qclsinst, arg0)};
     let mut ret1 = QIcon::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -349,8 +338,8 @@ impl<'a> /*trait*/ QFileSystemModel_resolveSymlinks<i8> for () {
   fn resolveSymlinks(self , rsthis: & QFileSystemModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel15resolveSymlinksEv()};
-    let mut ret = unsafe {_ZNK16QFileSystemModel15resolveSymlinksEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK16QFileSystemModel15resolveSymlinksEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -373,7 +362,7 @@ impl<'a> /*trait*/ QFileSystemModel_filePath<QString> for (&'a QModelIndex) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel8filePathERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK16QFileSystemModel8filePathERK11QModelIndex(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK16QFileSystemModel8filePathERK11QModelIndex(rsthis.qclsinst, arg0)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -398,7 +387,7 @@ impl<'a> /*trait*/ QFileSystemModel_parent<QModelIndex> for (&'a QModelIndex) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel6parentERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK16QFileSystemModel6parentERK11QModelIndex(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK16QFileSystemModel6parentERK11QModelIndex(rsthis.qclsinst, arg0)};
     let mut ret1 = QModelIndex::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -422,8 +411,8 @@ impl<'a> /*trait*/ QFileSystemModel_nameFilterDisables<i8> for () {
   fn nameFilterDisables(self , rsthis: & QFileSystemModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel18nameFilterDisablesEv()};
-    let mut ret = unsafe {_ZNK16QFileSystemModel18nameFilterDisablesEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK16QFileSystemModel18nameFilterDisablesEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -441,11 +430,13 @@ pub trait QFileSystemModel_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QFileSystemModel::metaObject();
-impl<'a> /*trait*/ QFileSystemModel_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QFileSystemModel) -> () {
+impl<'a> /*trait*/ QFileSystemModel_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QFileSystemModel) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel10metaObjectEv()};
-     unsafe {_ZNK16QFileSystemModel10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QFileSystemModel10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -468,36 +459,7 @@ impl<'a> /*trait*/ QFileSystemModel_fetchMore<()> for (&'a QModelIndex) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QFileSystemModel9fetchMoreERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN16QFileSystemModel9fetchMoreERK11QModelIndex(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QFileSystemModel::QFileSystemModel(const QFileSystemModel & );
-impl /*struct*/ QFileSystemModel {
-  pub fn New<T: QFileSystemModel_New>(value: T) -> QFileSystemModel {
-    let rsthis = value.New();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QFileSystemModel_New {
-  fn New(self) -> QFileSystemModel;
-}
-
-  // proto:  void QFileSystemModel::QFileSystemModel(const QFileSystemModel & );
-impl<'a> /*trait*/ QFileSystemModel_New for (&'a QFileSystemModel) {
-  fn New(self) -> QFileSystemModel {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QFileSystemModelC1ERKS_()};
-    let ctysz: c_int = unsafe{QFileSystemModel_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN16QFileSystemModelC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN16QFileSystemModelC1ERKS_(arg0)} as u64;
-    let rsthis = QFileSystemModel{qbase: QAbstractItemModel::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
+     unsafe {C_ZN16QFileSystemModel9fetchMoreERK11QModelIndex(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -520,8 +482,8 @@ impl<'a> /*trait*/ QFileSystemModel_size<i64> for (&'a QModelIndex) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel4sizeERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK16QFileSystemModel4sizeERK11QModelIndex(rsthis.qclsinst, arg0)};
-    return ret as i64;
+    let mut ret = unsafe {C_ZNK16QFileSystemModel4sizeERK11QModelIndex(rsthis.qclsinst, arg0)};
+    return ret as i64; // 1
     // return 1;
   }
 }
@@ -543,7 +505,7 @@ impl<'a> /*trait*/ QFileSystemModel_iconProvider<QFileIconProvider> for () {
   fn iconProvider(self , rsthis: & QFileSystemModel) -> QFileIconProvider {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel12iconProviderEv()};
-    let mut ret = unsafe {_ZNK16QFileSystemModel12iconProviderEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QFileSystemModel12iconProviderEv(rsthis.qclsinst)};
     let mut ret1 = QFileIconProvider::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -568,7 +530,7 @@ impl<'a> /*trait*/ QFileSystemModel_setNameFilters<()> for (&'a QStringList) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QFileSystemModel14setNameFiltersERK11QStringList()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN16QFileSystemModel14setNameFiltersERK11QStringList(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN16QFileSystemModel14setNameFiltersERK11QStringList(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -592,7 +554,7 @@ impl<'a> /*trait*/ QFileSystemModel_data<QVariant> for (&'a QModelIndex, i32) {
     // unsafe{_ZNK16QFileSystemModel4dataERK11QModelIndexi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
-    let mut ret = unsafe {_ZNK16QFileSystemModel4dataERK11QModelIndexi(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {C_ZNK16QFileSystemModel4dataERK11QModelIndexi(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QVariant::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -616,7 +578,7 @@ impl<'a> /*trait*/ QFileSystemModel_rootDirectory<QDir> for () {
   fn rootDirectory(self , rsthis: & QFileSystemModel) -> QDir {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel13rootDirectoryEv()};
-    let mut ret = unsafe {_ZNK16QFileSystemModel13rootDirectoryEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QFileSystemModel13rootDirectoryEv(rsthis.qclsinst)};
     let mut ret1 = QDir::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -642,7 +604,7 @@ impl<'a> /*trait*/ QFileSystemModel_mkdir<QModelIndex> for (&'a QModelIndex, &'a
     // unsafe{_ZN16QFileSystemModel5mkdirERK11QModelIndexRK7QString()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN16QFileSystemModel5mkdirERK11QModelIndexRK7QString(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {C_ZN16QFileSystemModel5mkdirERK11QModelIndexRK7QString(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QModelIndex::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -667,8 +629,8 @@ impl<'a> /*trait*/ QFileSystemModel_rowCount<i32> for (&'a QModelIndex) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel8rowCountERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK16QFileSystemModel8rowCountERK11QModelIndex(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK16QFileSystemModel8rowCountERK11QModelIndex(rsthis.qclsinst, arg0)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -693,8 +655,8 @@ impl<'a> /*trait*/ QFileSystemModel_setData<i8> for (&'a QModelIndex, &'a QVaria
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2  as c_int;
-    let mut ret = unsafe {_ZN16QFileSystemModel7setDataERK11QModelIndexRK8QVarianti(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZN16QFileSystemModel7setDataERK11QModelIndexRK8QVarianti(rsthis.qclsinst, arg0, arg1, arg2)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -717,8 +679,8 @@ impl<'a> /*trait*/ QFileSystemModel_columnCount<i32> for (&'a QModelIndex) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel11columnCountERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK16QFileSystemModel11columnCountERK11QModelIndex(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK16QFileSystemModel11columnCountERK11QModelIndex(rsthis.qclsinst, arg0)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -731,7 +693,7 @@ impl<'a> /*trait*/ QFileSystemModel_index<QModelIndex> for (i32, i32, &'a QModel
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK16QFileSystemModel5indexEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
+    let mut ret = unsafe {C_ZNK16QFileSystemModel5indexEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
     let mut ret1 = QModelIndex::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -756,8 +718,8 @@ impl<'a> /*trait*/ QFileSystemModel_canFetchMore<i8> for (&'a QModelIndex) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel12canFetchMoreERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK16QFileSystemModel12canFetchMoreERK11QModelIndex(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK16QFileSystemModel12canFetchMoreERK11QModelIndex(rsthis.qclsinst, arg0)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -780,31 +742,8 @@ impl<'a> /*trait*/ QFileSystemModel_remove<i8> for (&'a QModelIndex) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QFileSystemModel6removeERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN16QFileSystemModel6removeERK11QModelIndex(rsthis.qclsinst, arg0)};
-    return ret as i8;
-    // return 1;
-  }
-}
-
-  // proto:  void QFileSystemModel::rootPathChanged(const QString & newPath);
-impl /*struct*/ QFileSystemModel {
-  pub fn rootPathChanged<RetType, T: QFileSystemModel_rootPathChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.rootPathChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QFileSystemModel_rootPathChanged<RetType> {
-  fn rootPathChanged(self , rsthis: & QFileSystemModel) -> RetType;
-}
-
-  // proto:  void QFileSystemModel::rootPathChanged(const QString & newPath);
-impl<'a> /*trait*/ QFileSystemModel_rootPathChanged<()> for (&'a QString) {
-  fn rootPathChanged(self , rsthis: & QFileSystemModel) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QFileSystemModel15rootPathChangedERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN16QFileSystemModel15rootPathChangedERK7QString(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN16QFileSystemModel6removeERK11QModelIndex(rsthis.qclsinst, arg0)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -827,32 +766,9 @@ impl<'a> /*trait*/ QFileSystemModel_setRootPath<QModelIndex> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QFileSystemModel11setRootPathERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN16QFileSystemModel11setRootPathERK7QString(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN16QFileSystemModel11setRootPathERK7QString(rsthis.qclsinst, arg0)};
     let mut ret1 = QModelIndex::inheritFrom(ret as u64);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QFileSystemModel::directoryLoaded(const QString & path);
-impl /*struct*/ QFileSystemModel {
-  pub fn directoryLoaded<RetType, T: QFileSystemModel_directoryLoaded<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.directoryLoaded(self);
-    // return 1;
-  }
-}
-
-pub trait QFileSystemModel_directoryLoaded<RetType> {
-  fn directoryLoaded(self , rsthis: & QFileSystemModel) -> RetType;
-}
-
-  // proto:  void QFileSystemModel::directoryLoaded(const QString & path);
-impl<'a> /*trait*/ QFileSystemModel_directoryLoaded<()> for (&'a QString) {
-  fn directoryLoaded(self , rsthis: & QFileSystemModel) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QFileSystemModel15directoryLoadedERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN16QFileSystemModel15directoryLoadedERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -875,7 +791,7 @@ impl<'a> /*trait*/ QFileSystemModel_setResolveSymlinks<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QFileSystemModel18setResolveSymlinksEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN16QFileSystemModel18setResolveSymlinksEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN16QFileSystemModel18setResolveSymlinksEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -898,7 +814,7 @@ impl<'a> /*trait*/ QFileSystemModel_setReadOnly<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QFileSystemModel11setReadOnlyEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN16QFileSystemModel11setReadOnlyEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN16QFileSystemModel11setReadOnlyEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -916,25 +832,39 @@ pub trait QFileSystemModel_nameFilters<RetType> {
 }
 
   // proto:  QStringList QFileSystemModel::nameFilters();
-impl<'a> /*trait*/ QFileSystemModel_nameFilters<()> for () {
-  fn nameFilters(self , rsthis: & QFileSystemModel) -> () {
+impl<'a> /*trait*/ QFileSystemModel_nameFilters<QStringList> for () {
+  fn nameFilters(self , rsthis: & QFileSystemModel) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel11nameFiltersEv()};
-     unsafe {_ZNK16QFileSystemModel11nameFiltersEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QFileSystemModel11nameFiltersEv(rsthis.qclsinst)};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
 
   // proto:  void QFileSystemModel::QFileSystemModel(QObject * parent);
-impl<'a> /*trait*/ QFileSystemModel_New for (&'a QObject) {
-  fn New(self) -> QFileSystemModel {
+impl /*struct*/ QFileSystemModel {
+  pub fn new<T: QFileSystemModel_new>(value: T) -> QFileSystemModel {
+    let rsthis = value.new();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QFileSystemModel_new {
+  fn new(self) -> QFileSystemModel;
+}
+
+  // proto:  void QFileSystemModel::QFileSystemModel(QObject * parent);
+impl<'a> /*trait*/ QFileSystemModel_new for (&'a QObject) {
+  fn new(self) -> QFileSystemModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QFileSystemModelC1EP7QObject()};
+    // unsafe{_ZN16QFileSystemModelC2EP7QObject()};
     let ctysz: c_int = unsafe{QFileSystemModel_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN16QFileSystemModelC1EP7QObject(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN16QFileSystemModelC1EP7QObject(arg0)} as u64;
+    let qthis: u64 = unsafe {C_ZN16QFileSystemModelC2EP7QObject(arg0)};
     let rsthis = QFileSystemModel{qbase: QAbstractItemModel::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -959,7 +889,7 @@ impl<'a> /*trait*/ QFileSystemModel_fileInfo<QFileInfo> for (&'a QModelIndex) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel8fileInfoERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {demth_ZNK16QFileSystemModel8fileInfoERK11QModelIndex(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK16QFileSystemModel8fileInfoERK11QModelIndex(rsthis.qclsinst, arg0)};
     let mut ret1 = QFileInfo::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -984,7 +914,7 @@ impl<'a> /*trait*/ QFileSystemModel_myComputer<QVariant> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel10myComputerEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZNK16QFileSystemModel10myComputerEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK16QFileSystemModel10myComputerEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QVariant::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1008,8 +938,8 @@ impl<'a> /*trait*/ QFileSystemModel_isReadOnly<i8> for () {
   fn isReadOnly(self , rsthis: & QFileSystemModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel10isReadOnlyEv()};
-    let mut ret = unsafe {_ZNK16QFileSystemModel10isReadOnlyEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK16QFileSystemModel10isReadOnlyEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1032,7 +962,7 @@ impl<'a> /*trait*/ QFileSystemModel_type_<QString> for (&'a QModelIndex) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel4typeERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK16QFileSystemModel4typeERK11QModelIndex(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK16QFileSystemModel4typeERK11QModelIndex(rsthis.qclsinst, arg0)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1056,7 +986,7 @@ impl<'a> /*trait*/ QFileSystemModel_rootPath<QString> for () {
   fn rootPath(self , rsthis: & QFileSystemModel) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel8rootPathEv()};
-    let mut ret = unsafe {_ZNK16QFileSystemModel8rootPathEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QFileSystemModel8rootPathEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1081,34 +1011,9 @@ impl<'a> /*trait*/ QFileSystemModel_lastModified<QDateTime> for (&'a QModelIndex
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel12lastModifiedERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK16QFileSystemModel12lastModifiedERK11QModelIndex(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK16QFileSystemModel12lastModifiedERK11QModelIndex(rsthis.qclsinst, arg0)};
     let mut ret1 = QDateTime::inheritFrom(ret as u64);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QFileSystemModel::fileRenamed(const QString & path, const QString & oldName, const QString & newName);
-impl /*struct*/ QFileSystemModel {
-  pub fn fileRenamed<RetType, T: QFileSystemModel_fileRenamed<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.fileRenamed(self);
-    // return 1;
-  }
-}
-
-pub trait QFileSystemModel_fileRenamed<RetType> {
-  fn fileRenamed(self , rsthis: & QFileSystemModel) -> RetType;
-}
-
-  // proto:  void QFileSystemModel::fileRenamed(const QString & path, const QString & oldName, const QString & newName);
-impl<'a> /*trait*/ QFileSystemModel_fileRenamed<()> for (&'a QString, &'a QString, &'a QString) {
-  fn fileRenamed(self , rsthis: & QFileSystemModel) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QFileSystemModel11fileRenamedERK7QStringS2_S2_()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2.qclsinst  as *mut c_void;
-     unsafe {_ZN16QFileSystemModel11fileRenamedERK7QStringS2_S2_(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
 }
@@ -1131,8 +1036,8 @@ impl<'a> /*trait*/ QFileSystemModel_isDir<i8> for (&'a QModelIndex) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel5isDirERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK16QFileSystemModel5isDirERK11QModelIndex(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK16QFileSystemModel5isDirERK11QModelIndex(rsthis.qclsinst, arg0)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1155,8 +1060,8 @@ impl<'a> /*trait*/ QFileSystemModel_rmdir<i8> for (&'a QModelIndex) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QFileSystemModel5rmdirERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN16QFileSystemModel5rmdirERK11QModelIndex(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZN16QFileSystemModel5rmdirERK11QModelIndex(rsthis.qclsinst, arg0)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1179,7 +1084,7 @@ impl<'a> /*trait*/ QFileSystemModel_setIconProvider<()> for (&'a QFileIconProvid
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QFileSystemModel15setIconProviderEP17QFileIconProvider()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN16QFileSystemModel15setIconProviderEP17QFileIconProvider(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN16QFileSystemModel15setIconProviderEP17QFileIconProvider(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1187,7 +1092,7 @@ impl<'a> /*trait*/ QFileSystemModel_setIconProvider<()> for (&'a QFileIconProvid
 #[derive(Default)] // for QFileSystemModel_rootPathChanged
 pub struct QFileSystemModel_rootPathChanged_signal{poi:u64}
 impl /* struct */ QFileSystemModel {
-  pub fn rootPathChanged_1(&self) -> QFileSystemModel_rootPathChanged_signal {
+  pub fn rootPathChanged(&self) -> QFileSystemModel_rootPathChanged_signal {
      return QFileSystemModel_rootPathChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1203,7 +1108,7 @@ pub trait QFileSystemModel_rootPathChanged_signal_connect {
 #[derive(Default)] // for QFileSystemModel_directoryLoaded
 pub struct QFileSystemModel_directoryLoaded_signal{poi:u64}
 impl /* struct */ QFileSystemModel {
-  pub fn directoryLoaded_1(&self) -> QFileSystemModel_directoryLoaded_signal {
+  pub fn directoryLoaded(&self) -> QFileSystemModel_directoryLoaded_signal {
      return QFileSystemModel_directoryLoaded_signal{poi:self.qclsinst};
   }
 }
@@ -1219,7 +1124,7 @@ pub trait QFileSystemModel_directoryLoaded_signal_connect {
 #[derive(Default)] // for QFileSystemModel_fileRenamed
 pub struct QFileSystemModel_fileRenamed_signal{poi:u64}
 impl /* struct */ QFileSystemModel {
-  pub fn fileRenamed_1(&self) -> QFileSystemModel_fileRenamed_signal {
+  pub fn fileRenamed(&self) -> QFileSystemModel_fileRenamed_signal {
      return QFileSystemModel_fileRenamed_signal{poi:self.qclsinst};
   }
 }
@@ -1235,15 +1140,21 @@ pub trait QFileSystemModel_fileRenamed_signal_connect {
 // directoryLoaded(const class QString &)
 extern fn QFileSystemModel_directoryLoaded_signal_connect_cb_0(rsfptr:fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QFileSystemModel_directoryLoaded_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QFileSystemModel_directoryLoaded_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(QString)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QFileSystemModel_directoryLoaded_signal_connect for fn(QString) {
   fn connect(self, sigthis: QFileSystemModel_directoryLoaded_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QFileSystemModel_directoryLoaded_signal_connect_cb_0 as *mut c_void;
@@ -1251,29 +1162,35 @@ impl /* trait */ QFileSystemModel_directoryLoaded_signal_connect for fn(QString)
     unsafe {QFileSystemModel_SlotProxy_connect__ZN16QFileSystemModel15directoryLoadedERK7QString(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QFileSystemModel_directoryLoaded_signal_connect for Box<fn(QString)> {
+impl /* trait */ QFileSystemModel_directoryLoaded_signal_connect for Box<Fn(QString)> {
   fn connect(self, sigthis: QFileSystemModel_directoryLoaded_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QFileSystemModel_directoryLoaded_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QFileSystemModel_SlotProxy_connect__ZN16QFileSystemModel15directoryLoadedERK7QString(arg0, arg1, arg2)};
   }
 }
 // rootPathChanged(const class QString &)
 extern fn QFileSystemModel_rootPathChanged_signal_connect_cb_1(rsfptr:fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QFileSystemModel_rootPathChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QFileSystemModel_rootPathChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn(QString)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QFileSystemModel_rootPathChanged_signal_connect for fn(QString) {
   fn connect(self, sigthis: QFileSystemModel_rootPathChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QFileSystemModel_rootPathChanged_signal_connect_cb_1 as *mut c_void;
@@ -1281,29 +1198,39 @@ impl /* trait */ QFileSystemModel_rootPathChanged_signal_connect for fn(QString)
     unsafe {QFileSystemModel_SlotProxy_connect__ZN16QFileSystemModel15rootPathChangedERK7QString(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QFileSystemModel_rootPathChanged_signal_connect for Box<fn(QString)> {
+impl /* trait */ QFileSystemModel_rootPathChanged_signal_connect for Box<Fn(QString)> {
   fn connect(self, sigthis: QFileSystemModel_rootPathChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QFileSystemModel_rootPathChanged_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QFileSystemModel_SlotProxy_connect__ZN16QFileSystemModel15rootPathChangedERK7QString(arg0, arg1, arg2)};
   }
 }
 // fileRenamed(const class QString &, const class QString &, const class QString &)
 extern fn QFileSystemModel_fileRenamed_signal_connect_cb_2(rsfptr:fn(QString, QString, QString), arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  let rsarg1 = QString::inheritFrom(arg1 as u64);
+  let rsarg2 = QString::inheritFrom(arg2 as u64);
+  rsfptr(rsarg0,rsarg1,rsarg2);
 }
-extern fn QFileSystemModel_fileRenamed_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) {
+extern fn QFileSystemModel_fileRenamed_signal_connect_cb_box_2(rsfptr_raw:*mut Box<Fn(QString, QString, QString)>, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  let rsarg1 = QString::inheritFrom(arg1 as u64);
+  let rsarg2 = QString::inheritFrom(arg2 as u64);
+  // rsfptr(rsarg0,rsarg1,rsarg2);
+  unsafe{(*rsfptr_raw)(rsarg0,rsarg1,rsarg2)};
 }
 impl /* trait */ QFileSystemModel_fileRenamed_signal_connect for fn(QString, QString, QString) {
   fn connect(self, sigthis: QFileSystemModel_fileRenamed_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QFileSystemModel_fileRenamed_signal_connect_cb_2 as *mut c_void;
@@ -1311,14 +1238,14 @@ impl /* trait */ QFileSystemModel_fileRenamed_signal_connect for fn(QString, QSt
     unsafe {QFileSystemModel_SlotProxy_connect__ZN16QFileSystemModel11fileRenamedERK7QStringS2_S2_(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QFileSystemModel_fileRenamed_signal_connect for Box<fn(QString, QString, QString)> {
+impl /* trait */ QFileSystemModel_fileRenamed_signal_connect for Box<Fn(QString, QString, QString)> {
   fn connect(self, sigthis: QFileSystemModel_fileRenamed_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QFileSystemModel_fileRenamed_signal_connect_cb_box_2 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QFileSystemModel_SlotProxy_connect__ZN16QFileSystemModel11fileRenamedERK7QStringS2_S2_(arg0, arg1, arg2)};
   }
 }

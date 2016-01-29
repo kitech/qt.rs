@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qcoreevent.h
 // dst-file: /src/core/qcoreevent.rs
 //
@@ -20,8 +20,8 @@ use self::libc::*;
 // use block begin =>
 // use super::qcoreevent::QEvent; // 773
 use std::ops::Deref;
-use super::qbytearray::QByteArray; // 773
-use super::qobject::QObject; // 773
+use super::qbytearray::*; // 773
+use super::qobject::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -33,57 +33,53 @@ use super::qobject::QObject; // 773
 extern {
   fn QDeferredDeleteEvent_Class_Size() -> c_int;
   // proto:  int QDeferredDeleteEvent::loopLevel();
-  fn _ZNK20QDeferredDeleteEvent9loopLevelEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK20QDeferredDeleteEvent9loopLevelEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QDeferredDeleteEvent::~QDeferredDeleteEvent();
-  fn _ZN20QDeferredDeleteEventD0Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN20QDeferredDeleteEventD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QDeferredDeleteEvent::QDeferredDeleteEvent();
-  fn dector_ZN20QDeferredDeleteEventC1Ev() -> *mut c_void;
-  fn _ZN20QDeferredDeleteEventC1Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN20QDeferredDeleteEventC2Ev() -> u64;
   fn QDynamicPropertyChangeEvent_Class_Size() -> c_int;
   // proto:  void QDynamicPropertyChangeEvent::~QDynamicPropertyChangeEvent();
-  fn _ZN27QDynamicPropertyChangeEventD0Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN27QDynamicPropertyChangeEventD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QDynamicPropertyChangeEvent::QDynamicPropertyChangeEvent(const QByteArray & name);
-  fn dector_ZN27QDynamicPropertyChangeEventC1ERK10QByteArray(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN27QDynamicPropertyChangeEventC1ERK10QByteArray(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN27QDynamicPropertyChangeEventC2ERK10QByteArray(arg0: *mut c_void) -> u64;
   // proto:  QByteArray QDynamicPropertyChangeEvent::propertyName();
-  fn demth_ZNK27QDynamicPropertyChangeEvent12propertyNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK27QDynamicPropertyChangeEvent12propertyNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   fn QTimerEvent_Class_Size() -> c_int;
   // proto:  void QTimerEvent::QTimerEvent(int timerId);
-  fn dector_ZN11QTimerEventC1Ei(arg0: c_int) -> *mut c_void;
-  fn _ZN11QTimerEventC1Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN11QTimerEventC2Ei(arg0: c_int) -> u64;
   // proto:  void QTimerEvent::~QTimerEvent();
-  fn _ZN11QTimerEventD0Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN11QTimerEventD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  int QTimerEvent::timerId();
-  fn _ZNK11QTimerEvent7timerIdEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK11QTimerEvent7timerIdEv(qthis: u64 /* *mut c_void*/) -> c_int;
   fn QChildEvent_Class_Size() -> c_int;
   // proto:  bool QChildEvent::added();
-  fn _ZNK11QChildEvent5addedEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK11QChildEvent5addedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QChildEvent::polished();
-  fn _ZNK11QChildEvent8polishedEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK11QChildEvent8polishedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QChildEvent::~QChildEvent();
-  fn _ZN11QChildEventD0Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN11QChildEventD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QChildEvent::removed();
-  fn _ZNK11QChildEvent7removedEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK11QChildEvent7removedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QObject * QChildEvent::child();
-  fn _ZNK11QChildEvent5childEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK11QChildEvent5childEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   fn QEvent_Class_Size() -> c_int;
   // proto:  void QEvent::setAccepted(bool accepted);
-  fn demth_ZN6QEvent11setAcceptedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN6QEvent11setAcceptedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QEvent::ignore();
-  fn demth_ZN6QEvent6ignoreEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN6QEvent6ignoreEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QEvent::isAccepted();
-  fn demth_ZNK6QEvent10isAcceptedEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK6QEvent10isAcceptedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QEvent::~QEvent();
-  fn _ZN6QEventD0Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN6QEventD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QEvent::QEvent(const QEvent & other);
-  fn dector_ZN6QEventC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN6QEventC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN6QEventC2ERKS_(arg0: *mut c_void) -> u64;
   // proto:  void QEvent::accept();
-  fn demth_ZN6QEvent6acceptEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN6QEvent6acceptEv(qthis: u64 /* *mut c_void*/);
   // proto: static int QEvent::registerEventType(int hint);
-  fn _ZN6QEvent17registerEventTypeEi(arg0: c_int) -> c_int;
+  fn C_ZN6QEvent17registerEventTypeEi(arg0: c_int) -> c_int;
   // proto:  bool QEvent::spontaneous();
-  fn demth_ZNK6QEvent11spontaneousEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK6QEvent11spontaneousEv(qthis: u64 /* *mut c_void*/) -> c_char;
 } // <= ext block end
 
 // body block begin =>
@@ -156,56 +152,55 @@ impl<'a> /*trait*/ QDeferredDeleteEvent_loopLevel<i32> for () {
   fn loopLevel(self , rsthis: & QDeferredDeleteEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QDeferredDeleteEvent9loopLevelEv()};
-    let mut ret = unsafe {_ZNK20QDeferredDeleteEvent9loopLevelEv(rsthis.qclsinst)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK20QDeferredDeleteEvent9loopLevelEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
 
   // proto:  void QDeferredDeleteEvent::~QDeferredDeleteEvent();
 impl /*struct*/ QDeferredDeleteEvent {
-  pub fn Free<RetType, T: QDeferredDeleteEvent_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QDeferredDeleteEvent_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QDeferredDeleteEvent_Free<RetType> {
-  fn Free(self , rsthis: & QDeferredDeleteEvent) -> RetType;
+pub trait QDeferredDeleteEvent_free<RetType> {
+  fn free(self , rsthis: & QDeferredDeleteEvent) -> RetType;
 }
 
   // proto:  void QDeferredDeleteEvent::~QDeferredDeleteEvent();
-impl<'a> /*trait*/ QDeferredDeleteEvent_Free<()> for () {
-  fn Free(self , rsthis: & QDeferredDeleteEvent) -> () {
+impl<'a> /*trait*/ QDeferredDeleteEvent_free<()> for () {
+  fn free(self , rsthis: & QDeferredDeleteEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN20QDeferredDeleteEventD0Ev()};
-     unsafe {_ZN20QDeferredDeleteEventD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN20QDeferredDeleteEventD2Ev()};
+     unsafe {C_ZN20QDeferredDeleteEventD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
 
   // proto:  void QDeferredDeleteEvent::QDeferredDeleteEvent();
 impl /*struct*/ QDeferredDeleteEvent {
-  pub fn New<T: QDeferredDeleteEvent_New>(value: T) -> QDeferredDeleteEvent {
-    let rsthis = value.New();
+  pub fn new<T: QDeferredDeleteEvent_new>(value: T) -> QDeferredDeleteEvent {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QDeferredDeleteEvent_New {
-  fn New(self) -> QDeferredDeleteEvent;
+pub trait QDeferredDeleteEvent_new {
+  fn new(self) -> QDeferredDeleteEvent;
 }
 
   // proto:  void QDeferredDeleteEvent::QDeferredDeleteEvent();
-impl<'a> /*trait*/ QDeferredDeleteEvent_New for () {
-  fn New(self) -> QDeferredDeleteEvent {
+impl<'a> /*trait*/ QDeferredDeleteEvent_new for () {
+  fn new(self) -> QDeferredDeleteEvent {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN20QDeferredDeleteEventC1Ev()};
+    // unsafe{_ZN20QDeferredDeleteEventC2Ev()};
     let ctysz: c_int = unsafe{QDeferredDeleteEvent_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN20QDeferredDeleteEventC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN20QDeferredDeleteEventC1Ev()} as u64;
+    let qthis: u64 = unsafe {C_ZN20QDeferredDeleteEventC2Ev()};
     let rsthis = QDeferredDeleteEvent{qbase: QEvent::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -231,49 +226,48 @@ impl AsRef<QEvent> for QDynamicPropertyChangeEvent {
 }
   // proto:  void QDynamicPropertyChangeEvent::~QDynamicPropertyChangeEvent();
 impl /*struct*/ QDynamicPropertyChangeEvent {
-  pub fn Free<RetType, T: QDynamicPropertyChangeEvent_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QDynamicPropertyChangeEvent_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QDynamicPropertyChangeEvent_Free<RetType> {
-  fn Free(self , rsthis: & QDynamicPropertyChangeEvent) -> RetType;
+pub trait QDynamicPropertyChangeEvent_free<RetType> {
+  fn free(self , rsthis: & QDynamicPropertyChangeEvent) -> RetType;
 }
 
   // proto:  void QDynamicPropertyChangeEvent::~QDynamicPropertyChangeEvent();
-impl<'a> /*trait*/ QDynamicPropertyChangeEvent_Free<()> for () {
-  fn Free(self , rsthis: & QDynamicPropertyChangeEvent) -> () {
+impl<'a> /*trait*/ QDynamicPropertyChangeEvent_free<()> for () {
+  fn free(self , rsthis: & QDynamicPropertyChangeEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN27QDynamicPropertyChangeEventD0Ev()};
-     unsafe {_ZN27QDynamicPropertyChangeEventD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN27QDynamicPropertyChangeEventD2Ev()};
+     unsafe {C_ZN27QDynamicPropertyChangeEventD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
 
   // proto:  void QDynamicPropertyChangeEvent::QDynamicPropertyChangeEvent(const QByteArray & name);
 impl /*struct*/ QDynamicPropertyChangeEvent {
-  pub fn New<T: QDynamicPropertyChangeEvent_New>(value: T) -> QDynamicPropertyChangeEvent {
-    let rsthis = value.New();
+  pub fn new<T: QDynamicPropertyChangeEvent_new>(value: T) -> QDynamicPropertyChangeEvent {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QDynamicPropertyChangeEvent_New {
-  fn New(self) -> QDynamicPropertyChangeEvent;
+pub trait QDynamicPropertyChangeEvent_new {
+  fn new(self) -> QDynamicPropertyChangeEvent;
 }
 
   // proto:  void QDynamicPropertyChangeEvent::QDynamicPropertyChangeEvent(const QByteArray & name);
-impl<'a> /*trait*/ QDynamicPropertyChangeEvent_New for (&'a QByteArray) {
-  fn New(self) -> QDynamicPropertyChangeEvent {
+impl<'a> /*trait*/ QDynamicPropertyChangeEvent_new for (&'a QByteArray) {
+  fn new(self) -> QDynamicPropertyChangeEvent {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN27QDynamicPropertyChangeEventC1ERK10QByteArray()};
+    // unsafe{_ZN27QDynamicPropertyChangeEventC2ERK10QByteArray()};
     let ctysz: c_int = unsafe{QDynamicPropertyChangeEvent_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN27QDynamicPropertyChangeEventC1ERK10QByteArray(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN27QDynamicPropertyChangeEventC1ERK10QByteArray(arg0)} as u64;
+    let qthis: u64 = unsafe {C_ZN27QDynamicPropertyChangeEventC2ERK10QByteArray(arg0)};
     let rsthis = QDynamicPropertyChangeEvent{qbase: QEvent::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -297,7 +291,7 @@ impl<'a> /*trait*/ QDynamicPropertyChangeEvent_propertyName<QByteArray> for () {
   fn propertyName(self , rsthis: & QDynamicPropertyChangeEvent) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QDynamicPropertyChangeEvent12propertyNameEv()};
-    let mut ret = unsafe {demth_ZNK27QDynamicPropertyChangeEvent12propertyNameEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK27QDynamicPropertyChangeEvent12propertyNameEv(rsthis.qclsinst)};
     let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -323,27 +317,26 @@ impl AsRef<QEvent> for QTimerEvent {
 }
   // proto:  void QTimerEvent::QTimerEvent(int timerId);
 impl /*struct*/ QTimerEvent {
-  pub fn New<T: QTimerEvent_New>(value: T) -> QTimerEvent {
-    let rsthis = value.New();
+  pub fn new<T: QTimerEvent_new>(value: T) -> QTimerEvent {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTimerEvent_New {
-  fn New(self) -> QTimerEvent;
+pub trait QTimerEvent_new {
+  fn new(self) -> QTimerEvent;
 }
 
   // proto:  void QTimerEvent::QTimerEvent(int timerId);
-impl<'a> /*trait*/ QTimerEvent_New for (i32) {
-  fn New(self) -> QTimerEvent {
+impl<'a> /*trait*/ QTimerEvent_new for (i32) {
+  fn new(self) -> QTimerEvent {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QTimerEventC1Ei()};
+    // unsafe{_ZN11QTimerEventC2Ei()};
     let ctysz: c_int = unsafe{QTimerEvent_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
-    // unsafe {_ZN11QTimerEventC1Ei(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN11QTimerEventC1Ei(arg0)} as u64;
+    let qthis: u64 = unsafe {C_ZN11QTimerEventC2Ei(arg0)};
     let rsthis = QTimerEvent{qbase: QEvent::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -352,22 +345,22 @@ impl<'a> /*trait*/ QTimerEvent_New for (i32) {
 
   // proto:  void QTimerEvent::~QTimerEvent();
 impl /*struct*/ QTimerEvent {
-  pub fn Free<RetType, T: QTimerEvent_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QTimerEvent_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QTimerEvent_Free<RetType> {
-  fn Free(self , rsthis: & QTimerEvent) -> RetType;
+pub trait QTimerEvent_free<RetType> {
+  fn free(self , rsthis: & QTimerEvent) -> RetType;
 }
 
   // proto:  void QTimerEvent::~QTimerEvent();
-impl<'a> /*trait*/ QTimerEvent_Free<()> for () {
-  fn Free(self , rsthis: & QTimerEvent) -> () {
+impl<'a> /*trait*/ QTimerEvent_free<()> for () {
+  fn free(self , rsthis: & QTimerEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QTimerEventD0Ev()};
-     unsafe {_ZN11QTimerEventD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN11QTimerEventD2Ev()};
+     unsafe {C_ZN11QTimerEventD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -389,8 +382,8 @@ impl<'a> /*trait*/ QTimerEvent_timerId<i32> for () {
   fn timerId(self , rsthis: & QTimerEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTimerEvent7timerIdEv()};
-    let mut ret = unsafe {_ZNK11QTimerEvent7timerIdEv(rsthis.qclsinst)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK11QTimerEvent7timerIdEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -429,8 +422,8 @@ impl<'a> /*trait*/ QChildEvent_added<i8> for () {
   fn added(self , rsthis: & QChildEvent) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QChildEvent5addedEv()};
-    let mut ret = unsafe {_ZNK11QChildEvent5addedEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK11QChildEvent5addedEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -452,30 +445,30 @@ impl<'a> /*trait*/ QChildEvent_polished<i8> for () {
   fn polished(self , rsthis: & QChildEvent) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QChildEvent8polishedEv()};
-    let mut ret = unsafe {_ZNK11QChildEvent8polishedEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK11QChildEvent8polishedEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
 
   // proto:  void QChildEvent::~QChildEvent();
 impl /*struct*/ QChildEvent {
-  pub fn Free<RetType, T: QChildEvent_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QChildEvent_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QChildEvent_Free<RetType> {
-  fn Free(self , rsthis: & QChildEvent) -> RetType;
+pub trait QChildEvent_free<RetType> {
+  fn free(self , rsthis: & QChildEvent) -> RetType;
 }
 
   // proto:  void QChildEvent::~QChildEvent();
-impl<'a> /*trait*/ QChildEvent_Free<()> for () {
-  fn Free(self , rsthis: & QChildEvent) -> () {
+impl<'a> /*trait*/ QChildEvent_free<()> for () {
+  fn free(self , rsthis: & QChildEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QChildEventD0Ev()};
-     unsafe {_ZN11QChildEventD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN11QChildEventD2Ev()};
+     unsafe {C_ZN11QChildEventD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -497,8 +490,8 @@ impl<'a> /*trait*/ QChildEvent_removed<i8> for () {
   fn removed(self , rsthis: & QChildEvent) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QChildEvent7removedEv()};
-    let mut ret = unsafe {_ZNK11QChildEvent7removedEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK11QChildEvent7removedEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -520,7 +513,7 @@ impl<'a> /*trait*/ QChildEvent_child<QObject> for () {
   fn child(self , rsthis: & QChildEvent) -> QObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QChildEvent5childEv()};
-    let mut ret = unsafe {_ZNK11QChildEvent5childEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QChildEvent5childEv(rsthis.qclsinst)};
     let mut ret1 = QObject::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -550,7 +543,7 @@ impl<'a> /*trait*/ QEvent_setAccepted<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QEvent11setAcceptedEb()};
     let arg0 = self  as c_char;
-     unsafe {demth_ZN6QEvent11setAcceptedEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN6QEvent11setAcceptedEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -572,7 +565,7 @@ impl<'a> /*trait*/ QEvent_ignore<()> for () {
   fn ignore(self , rsthis: & QEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QEvent6ignoreEv()};
-     unsafe {demth_ZN6QEvent6ignoreEv(rsthis.qclsinst)};
+     unsafe {C_ZN6QEvent6ignoreEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -594,57 +587,56 @@ impl<'a> /*trait*/ QEvent_isAccepted<i8> for () {
   fn isAccepted(self , rsthis: & QEvent) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QEvent10isAcceptedEv()};
-    let mut ret = unsafe {demth_ZNK6QEvent10isAcceptedEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK6QEvent10isAcceptedEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
 
   // proto:  void QEvent::~QEvent();
 impl /*struct*/ QEvent {
-  pub fn Free<RetType, T: QEvent_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QEvent_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QEvent_Free<RetType> {
-  fn Free(self , rsthis: & QEvent) -> RetType;
+pub trait QEvent_free<RetType> {
+  fn free(self , rsthis: & QEvent) -> RetType;
 }
 
   // proto:  void QEvent::~QEvent();
-impl<'a> /*trait*/ QEvent_Free<()> for () {
-  fn Free(self , rsthis: & QEvent) -> () {
+impl<'a> /*trait*/ QEvent_free<()> for () {
+  fn free(self , rsthis: & QEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN6QEventD0Ev()};
-     unsafe {_ZN6QEventD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN6QEventD2Ev()};
+     unsafe {C_ZN6QEventD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
 
   // proto:  void QEvent::QEvent(const QEvent & other);
 impl /*struct*/ QEvent {
-  pub fn New<T: QEvent_New>(value: T) -> QEvent {
-    let rsthis = value.New();
+  pub fn new<T: QEvent_new>(value: T) -> QEvent {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QEvent_New {
-  fn New(self) -> QEvent;
+pub trait QEvent_new {
+  fn new(self) -> QEvent;
 }
 
   // proto:  void QEvent::QEvent(const QEvent & other);
-impl<'a> /*trait*/ QEvent_New for (&'a QEvent) {
-  fn New(self) -> QEvent {
+impl<'a> /*trait*/ QEvent_new for (&'a QEvent) {
+  fn new(self) -> QEvent {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN6QEventC1ERKS_()};
+    // unsafe{_ZN6QEventC2ERKS_()};
     let ctysz: c_int = unsafe{QEvent_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN6QEventC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN6QEventC1ERKS_(arg0)} as u64;
+    let qthis: u64 = unsafe {C_ZN6QEventC2ERKS_(arg0)};
     let rsthis = QEvent{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -668,7 +660,7 @@ impl<'a> /*trait*/ QEvent_accept<()> for () {
   fn accept(self , rsthis: & QEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QEvent6acceptEv()};
-     unsafe {demth_ZN6QEvent6acceptEv(rsthis.qclsinst)};
+     unsafe {C_ZN6QEvent6acceptEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -691,8 +683,8 @@ impl<'a> /*trait*/ QEvent_registerEventType_s<i32> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QEvent17registerEventTypeEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZN6QEvent17registerEventTypeEi(arg0)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZN6QEvent17registerEventTypeEi(arg0)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -714,8 +706,8 @@ impl<'a> /*trait*/ QEvent_spontaneous<i8> for () {
   fn spontaneous(self , rsthis: & QEvent) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QEvent11spontaneousEv()};
-    let mut ret = unsafe {demth_ZNK6QEvent11spontaneousEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK6QEvent11spontaneousEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }

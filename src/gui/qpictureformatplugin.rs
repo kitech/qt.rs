@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qpictureformatplugin.h
 // dst-file: /src/gui/qpictureformatplugin.rs
 //
@@ -18,10 +18,11 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qobject::QObject; // 771
+use super::super::core::qobject::*; // 771
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
-use super::qpicture::QPicture; // 773
+use super::super::core::qstring::*; // 771
+use super::qpicture::*; // 773
+use super::super::core::qobjectdefs::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -33,18 +34,17 @@ use super::qpicture::QPicture; // 773
 extern {
   fn QPictureFormatPlugin_Class_Size() -> c_int;
   // proto:  bool QPictureFormatPlugin::loadPicture(const QString & format, const QString & filename, QPicture * pic);
-  fn _ZN20QPictureFormatPlugin11loadPictureERK7QStringS2_P8QPicture(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> c_char;
+  fn C_ZN20QPictureFormatPlugin11loadPictureERK7QStringS2_P8QPicture(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> c_char;
   // proto:  bool QPictureFormatPlugin::savePicture(const QString & format, const QString & filename, const QPicture & pic);
-  fn _ZN20QPictureFormatPlugin11savePictureERK7QStringS2_RK8QPicture(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> c_char;
+  fn C_ZN20QPictureFormatPlugin11savePictureERK7QStringS2_RK8QPicture(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> c_char;
   // proto:  void QPictureFormatPlugin::~QPictureFormatPlugin();
-  fn _ZN20QPictureFormatPluginD0Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN20QPictureFormatPluginD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QPictureFormatPlugin::QPictureFormatPlugin(QObject * parent);
-  fn dector_ZN20QPictureFormatPluginC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN20QPictureFormatPluginC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN20QPictureFormatPluginC2EP7QObject(arg0: *mut c_void) -> u64;
   // proto:  bool QPictureFormatPlugin::installIOHandler(const QString & format);
-  fn _ZN20QPictureFormatPlugin16installIOHandlerERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
+  fn C_ZN20QPictureFormatPlugin16installIOHandlerERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  const QMetaObject * QPictureFormatPlugin::metaObject();
-  fn _ZNK20QPictureFormatPlugin10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK20QPictureFormatPlugin10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
 } // <= ext block end
 
 // body block begin =>
@@ -92,8 +92,8 @@ impl<'a> /*trait*/ QPictureFormatPlugin_loadPicture<i8> for (&'a QString, &'a QS
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN20QPictureFormatPlugin11loadPictureERK7QStringS2_P8QPicture(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZN20QPictureFormatPlugin11loadPictureERK7QStringS2_P8QPicture(rsthis.qclsinst, arg0, arg1, arg2)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -118,57 +118,56 @@ impl<'a> /*trait*/ QPictureFormatPlugin_savePicture<i8> for (&'a QString, &'a QS
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN20QPictureFormatPlugin11savePictureERK7QStringS2_RK8QPicture(rsthis.qclsinst, arg0, arg1, arg2)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZN20QPictureFormatPlugin11savePictureERK7QStringS2_RK8QPicture(rsthis.qclsinst, arg0, arg1, arg2)};
+    return ret as i8; // 1
     // return 1;
   }
 }
 
   // proto:  void QPictureFormatPlugin::~QPictureFormatPlugin();
 impl /*struct*/ QPictureFormatPlugin {
-  pub fn Free<RetType, T: QPictureFormatPlugin_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QPictureFormatPlugin_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QPictureFormatPlugin_Free<RetType> {
-  fn Free(self , rsthis: & QPictureFormatPlugin) -> RetType;
+pub trait QPictureFormatPlugin_free<RetType> {
+  fn free(self , rsthis: & QPictureFormatPlugin) -> RetType;
 }
 
   // proto:  void QPictureFormatPlugin::~QPictureFormatPlugin();
-impl<'a> /*trait*/ QPictureFormatPlugin_Free<()> for () {
-  fn Free(self , rsthis: & QPictureFormatPlugin) -> () {
+impl<'a> /*trait*/ QPictureFormatPlugin_free<()> for () {
+  fn free(self , rsthis: & QPictureFormatPlugin) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN20QPictureFormatPluginD0Ev()};
-     unsafe {_ZN20QPictureFormatPluginD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN20QPictureFormatPluginD2Ev()};
+     unsafe {C_ZN20QPictureFormatPluginD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
 
   // proto:  void QPictureFormatPlugin::QPictureFormatPlugin(QObject * parent);
 impl /*struct*/ QPictureFormatPlugin {
-  pub fn New<T: QPictureFormatPlugin_New>(value: T) -> QPictureFormatPlugin {
-    let rsthis = value.New();
+  pub fn new<T: QPictureFormatPlugin_new>(value: T) -> QPictureFormatPlugin {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QPictureFormatPlugin_New {
-  fn New(self) -> QPictureFormatPlugin;
+pub trait QPictureFormatPlugin_new {
+  fn new(self) -> QPictureFormatPlugin;
 }
 
   // proto:  void QPictureFormatPlugin::QPictureFormatPlugin(QObject * parent);
-impl<'a> /*trait*/ QPictureFormatPlugin_New for (&'a QObject) {
-  fn New(self) -> QPictureFormatPlugin {
+impl<'a> /*trait*/ QPictureFormatPlugin_new for (&'a QObject) {
+  fn new(self) -> QPictureFormatPlugin {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN20QPictureFormatPluginC1EP7QObject()};
+    // unsafe{_ZN20QPictureFormatPluginC2EP7QObject()};
     let ctysz: c_int = unsafe{QPictureFormatPlugin_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN20QPictureFormatPluginC1EP7QObject(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN20QPictureFormatPluginC1EP7QObject(arg0)} as u64;
+    let qthis: u64 = unsafe {C_ZN20QPictureFormatPluginC2EP7QObject(arg0)};
     let rsthis = QPictureFormatPlugin{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -193,8 +192,8 @@ impl<'a> /*trait*/ QPictureFormatPlugin_installIOHandler<i8> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QPictureFormatPlugin16installIOHandlerERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN20QPictureFormatPlugin16installIOHandlerERK7QString(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZN20QPictureFormatPlugin16installIOHandlerERK7QString(rsthis.qclsinst, arg0)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -212,11 +211,13 @@ pub trait QPictureFormatPlugin_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QPictureFormatPlugin::metaObject();
-impl<'a> /*trait*/ QPictureFormatPlugin_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QPictureFormatPlugin) -> () {
+impl<'a> /*trait*/ QPictureFormatPlugin_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QPictureFormatPlugin) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QPictureFormatPlugin10metaObjectEv()};
-     unsafe {_ZNK20QPictureFormatPlugin10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK20QPictureFormatPlugin10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }

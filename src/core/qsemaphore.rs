@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qsemaphore.h
 // dst-file: /src/core/qsemaphore.rs
 //
@@ -30,23 +30,19 @@ use std::ops::Deref;
 extern {
   fn QSemaphore_Class_Size() -> c_int;
   // proto:  void QSemaphore::acquire(int n);
-  fn _ZN10QSemaphore7acquireEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN10QSemaphore7acquireEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QSemaphore::release(int n);
-  fn _ZN10QSemaphore7releaseEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN10QSemaphore7releaseEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QSemaphore::available();
-  fn _ZNK10QSemaphore9availableEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK10QSemaphore9availableEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QSemaphore::tryAcquire(int n, int timeout);
-  fn _ZN10QSemaphore10tryAcquireEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> c_char;
-  // proto:  void QSemaphore::QSemaphore(const QSemaphore & );
-  fn dector_ZN10QSemaphoreC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN10QSemaphoreC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN10QSemaphore10tryAcquireEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> c_char;
   // proto:  bool QSemaphore::tryAcquire(int n);
-  fn _ZN10QSemaphore10tryAcquireEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
+  fn C_ZN10QSemaphore10tryAcquireEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
   // proto:  void QSemaphore::QSemaphore(int n);
-  fn dector_ZN10QSemaphoreC1Ei(arg0: c_int) -> *mut c_void;
-  fn _ZN10QSemaphoreC1Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN10QSemaphoreC2Ei(arg0: c_int) -> u64;
   // proto:  void QSemaphore::~QSemaphore();
-  fn _ZN10QSemaphoreD0Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN10QSemaphoreD2Ev(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
@@ -80,7 +76,7 @@ impl<'a> /*trait*/ QSemaphore_acquire<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QSemaphore7acquireEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN10QSemaphore7acquireEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN10QSemaphore7acquireEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -103,7 +99,7 @@ impl<'a> /*trait*/ QSemaphore_release<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QSemaphore7releaseEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN10QSemaphore7releaseEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN10QSemaphore7releaseEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -125,8 +121,8 @@ impl<'a> /*trait*/ QSemaphore_available<i32> for () {
   fn available(self , rsthis: & QSemaphore) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QSemaphore9availableEv()};
-    let mut ret = unsafe {_ZNK10QSemaphore9availableEv(rsthis.qclsinst)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK10QSemaphore9availableEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -150,37 +146,8 @@ impl<'a> /*trait*/ QSemaphore_tryAcquire<i8> for (i32, i32) {
     // unsafe{_ZN10QSemaphore10tryAcquireEii()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-    let mut ret = unsafe {_ZN10QSemaphore10tryAcquireEii(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8;
-    // return 1;
-  }
-}
-
-  // proto:  void QSemaphore::QSemaphore(const QSemaphore & );
-impl /*struct*/ QSemaphore {
-  pub fn New<T: QSemaphore_New>(value: T) -> QSemaphore {
-    let rsthis = value.New();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QSemaphore_New {
-  fn New(self) -> QSemaphore;
-}
-
-  // proto:  void QSemaphore::QSemaphore(const QSemaphore & );
-impl<'a> /*trait*/ QSemaphore_New for (&'a QSemaphore) {
-  fn New(self) -> QSemaphore {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QSemaphoreC1ERKS_()};
-    let ctysz: c_int = unsafe{QSemaphore_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN10QSemaphoreC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN10QSemaphoreC1ERKS_(arg0)} as u64;
-    let rsthis = QSemaphore{qclsinst: qthis, ..Default::default()};
-    return rsthis;
+    let mut ret = unsafe {C_ZN10QSemaphore10tryAcquireEii(rsthis.qclsinst, arg0, arg1)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -191,22 +158,34 @@ impl<'a> /*trait*/ QSemaphore_tryAcquire<i8> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QSemaphore10tryAcquireEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZN10QSemaphore10tryAcquireEi(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZN10QSemaphore10tryAcquireEi(rsthis.qclsinst, arg0)};
+    return ret as i8; // 1
     // return 1;
   }
 }
 
   // proto:  void QSemaphore::QSemaphore(int n);
-impl<'a> /*trait*/ QSemaphore_New for (i32) {
-  fn New(self) -> QSemaphore {
+impl /*struct*/ QSemaphore {
+  pub fn new<T: QSemaphore_new>(value: T) -> QSemaphore {
+    let rsthis = value.new();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QSemaphore_new {
+  fn new(self) -> QSemaphore;
+}
+
+  // proto:  void QSemaphore::QSemaphore(int n);
+impl<'a> /*trait*/ QSemaphore_new for (i32) {
+  fn new(self) -> QSemaphore {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QSemaphoreC1Ei()};
+    // unsafe{_ZN10QSemaphoreC2Ei()};
     let ctysz: c_int = unsafe{QSemaphore_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
-    // unsafe {_ZN10QSemaphoreC1Ei(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN10QSemaphoreC1Ei(arg0)} as u64;
+    let qthis: u64 = unsafe {C_ZN10QSemaphoreC2Ei(arg0)};
     let rsthis = QSemaphore{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -215,22 +194,22 @@ impl<'a> /*trait*/ QSemaphore_New for (i32) {
 
   // proto:  void QSemaphore::~QSemaphore();
 impl /*struct*/ QSemaphore {
-  pub fn Free<RetType, T: QSemaphore_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QSemaphore_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QSemaphore_Free<RetType> {
-  fn Free(self , rsthis: & QSemaphore) -> RetType;
+pub trait QSemaphore_free<RetType> {
+  fn free(self , rsthis: & QSemaphore) -> RetType;
 }
 
   // proto:  void QSemaphore::~QSemaphore();
-impl<'a> /*trait*/ QSemaphore_Free<()> for () {
-  fn Free(self , rsthis: & QSemaphore) -> () {
+impl<'a> /*trait*/ QSemaphore_free<()> for () {
+  fn free(self , rsthis: & QSemaphore) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QSemaphoreD0Ev()};
-     unsafe {_ZN10QSemaphoreD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN10QSemaphoreD2Ev()};
+     unsafe {C_ZN10QSemaphoreD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

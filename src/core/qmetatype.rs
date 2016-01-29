@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qmetatype.h
 // dst-file: /src/core/qmetatype.rs
 //
@@ -19,11 +19,10 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qobjectdefs::QMetaObject; // 773
-use super::qbytearray::QByteArray; // 773
-// use super::qmetatypeinterface::QMetaTypeInterface; // 775
-use super::qdatastream::QDataStream; // 773
-use super::qdebug::QDebug; // 773
+use super::qobjectdefs::*; // 773
+use super::qbytearray::*; // 773
+use super::qdatastream::*; // 773
+use super::qdebug::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -35,73 +34,69 @@ use super::qdebug::QDebug; // 773
 extern {
   fn QMetaType_Class_Size() -> c_int;
   // proto: static void QMetaType::destroy(int type, void * data);
-  fn _ZN9QMetaType7destroyEiPv(arg0: c_int, arg1: *mut c_void);
+  fn C_ZN9QMetaType7destroyEiPv(arg0: c_int, arg1: *mut c_void);
   // proto: static bool QMetaType::hasRegisteredConverterFunction(int fromTypeId, int toTypeId);
-  fn _ZN9QMetaType30hasRegisteredConverterFunctionEii(arg0: c_int, arg1: c_int) -> c_char;
+  fn C_ZN9QMetaType30hasRegisteredConverterFunctionEii(arg0: c_int, arg1: c_int) -> c_char;
   // proto:  const QMetaObject * QMetaType::metaObject();
-  fn demth_ZNK9QMetaType10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK9QMetaType10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto: static bool QMetaType::hasRegisteredDebugStreamOperator(int typeId);
-  fn _ZN9QMetaType32hasRegisteredDebugStreamOperatorEi(arg0: c_int) -> c_char;
+  fn C_ZN9QMetaType32hasRegisteredDebugStreamOperatorEi(arg0: c_int) -> c_char;
   // proto: static void * QMetaType::create(int type, const void * copy);
-  fn _ZN9QMetaType6createEiPKv(arg0: c_int, arg1: *mut c_void) -> *mut c_void;
+  fn C_ZN9QMetaType6createEiPKv(arg0: c_int, arg1: *mut c_void) -> *mut c_void;
   // proto:  void QMetaType::destroy(void * data);
-  fn demth_ZNK9QMetaType7destroyEPv(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK9QMetaType7destroyEPv(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static int QMetaType::registerTypedef(const char * typeName, int aliasId);
-  fn _ZN9QMetaType15registerTypedefEPKci(arg0: *mut c_char, arg1: c_int) -> c_int;
+  fn C_ZN9QMetaType15registerTypedefEPKci(arg0: *mut c_char, arg1: c_int) -> c_int;
   // proto: static void QMetaType::destruct(int type, void * where);
-  fn _ZN9QMetaType8destructEiPv(arg0: c_int, arg1: *mut c_void);
+  fn C_ZN9QMetaType8destructEiPv(arg0: c_int, arg1: *mut c_void);
   // proto:  bool QMetaType::isValid();
-  fn demth_ZNK9QMetaType7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK9QMetaType7isValidEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto: static void * QMetaType::construct(int type, void * where, const void * copy);
-  fn _ZN9QMetaType9constructEiPvPKv(arg0: c_int, arg1: *mut c_void, arg2: *mut c_void) -> *mut c_void;
+  fn C_ZN9QMetaType9constructEiPvPKv(arg0: c_int, arg1: *mut c_void, arg2: *mut c_void) -> *mut c_void;
   // proto: static bool QMetaType::equals(const void * lhs, const void * rhs, int typeId, int * result);
-  fn _ZN9QMetaType6equalsEPKvS1_iPi(arg0: *mut c_void, arg1: *mut c_void, arg2: c_int, arg3: *mut c_int) -> c_char;
+  fn C_ZN9QMetaType6equalsEPKvS1_iPi(arg0: *mut c_void, arg1: *mut c_void, arg2: c_int, arg3: *mut c_int) -> c_char;
   // proto:  void * QMetaType::construct(void * where, const void * copy);
-  fn demth_ZNK9QMetaType9constructEPvPKv(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
+  fn C_ZNK9QMetaType9constructEPvPKv(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto: static bool QMetaType::isRegistered(int type);
-  fn _ZN9QMetaType12isRegisteredEi(arg0: c_int) -> c_char;
+  fn C_ZN9QMetaType12isRegisteredEi(arg0: c_int) -> c_char;
   // proto: static bool QMetaType::unregisterType(int type);
-  fn _ZN9QMetaType14unregisterTypeEi(arg0: c_int) -> c_char;
-  // proto:  void QMetaType::QMetaType(const QMetaType & other);
-  fn dector_ZN9QMetaTypeC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QMetaTypeC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QMetaType14unregisterTypeEi(arg0: c_int) -> c_char;
   // proto: static const QMetaObject * QMetaType::metaObjectForType(int type);
-  fn _ZN9QMetaType17metaObjectForTypeEi(arg0: c_int);
+  fn C_ZN9QMetaType17metaObjectForTypeEi(arg0: c_int) -> *mut c_void;
   // proto: static bool QMetaType::load(QDataStream & stream, int type, void * data);
-  fn _ZN9QMetaType4loadER11QDataStreamiPv(arg0: *mut c_void, arg1: c_int, arg2: *mut c_void) -> c_char;
+  fn C_ZN9QMetaType4loadER11QDataStreamiPv(arg0: *mut c_void, arg1: c_int, arg2: *mut c_void) -> c_char;
   // proto:  void * QMetaType::create(const void * copy);
-  fn demth_ZNK9QMetaType6createEPKv(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZNK9QMetaType6createEPKv(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto: static int QMetaType::sizeOf(int type);
-  fn _ZN9QMetaType6sizeOfEi(arg0: c_int) -> c_int;
+  fn C_ZN9QMetaType6sizeOfEi(arg0: c_int) -> c_int;
   // proto: static bool QMetaType::hasRegisteredComparators(int typeId);
-  fn _ZN9QMetaType24hasRegisteredComparatorsEi(arg0: c_int) -> c_char;
+  fn C_ZN9QMetaType24hasRegisteredComparatorsEi(arg0: c_int) -> c_char;
   // proto: static bool QMetaType::save(QDataStream & stream, int type, const void * data);
-  fn _ZN9QMetaType4saveER11QDataStreamiPKv(arg0: *mut c_void, arg1: c_int, arg2: *mut c_void) -> c_char;
+  fn C_ZN9QMetaType4saveER11QDataStreamiPKv(arg0: *mut c_void, arg1: c_int, arg2: *mut c_void) -> c_char;
   // proto:  void QMetaType::destruct(void * data);
-  fn demth_ZNK9QMetaType8destructEPv(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK9QMetaType8destructEPv(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMetaType::~QMetaType();
-  fn demth_ZN9QMetaTypeD0Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN9QMetaTypeD2Ev(qthis: u64 /* *mut c_void*/);
   // proto: static int QMetaType::type(const char * typeName);
-  fn _ZN9QMetaType4typeEPKc(arg0: *mut c_char) -> c_int;
+  fn C_ZN9QMetaType4typeEPKc(arg0: *mut c_char) -> c_int;
   // proto: static int QMetaType::type(const ::QByteArray & typeName);
-  fn _ZN9QMetaType4typeERK10QByteArray(arg0: *mut c_void) -> c_int;
+  fn C_ZN9QMetaType4typeERK10QByteArray(arg0: *mut c_void) -> c_int;
   // proto: static bool QMetaType::debugStream(QDebug & dbg, const void * rhs, int typeId);
-  fn _ZN9QMetaType11debugStreamER6QDebugPKvi(arg0: *mut c_void, arg1: *mut c_void, arg2: c_int) -> c_char;
+  fn C_ZN9QMetaType11debugStreamER6QDebugPKvi(arg0: *mut c_void, arg1: *mut c_void, arg2: c_int) -> c_char;
   // proto:  int QMetaType::sizeOf();
-  fn demth_ZNK9QMetaType6sizeOfEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK9QMetaType6sizeOfEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto: static const char * QMetaType::typeName(int type);
-  fn _ZN9QMetaType8typeNameEi(arg0: c_int) -> *mut c_char;
+  fn C_ZN9QMetaType8typeNameEi(arg0: c_int) -> *mut c_char;
   // proto: static bool QMetaType::convert(const void * from, int fromTypeId, void * to, int toTypeId);
-  fn _ZN9QMetaType7convertEPKviPvi(arg0: *mut c_void, arg1: c_int, arg2: *mut c_void, arg3: c_int) -> c_char;
+  fn C_ZN9QMetaType7convertEPKviPvi(arg0: *mut c_void, arg1: c_int, arg2: *mut c_void, arg3: c_int) -> c_char;
   // proto:  void QMetaType::QMetaType(const int type);
-  fn dector_ZN9QMetaTypeC1Ei(arg0: c_int) -> *mut c_void;
-  fn _ZN9QMetaTypeC1Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN9QMetaTypeC2Ei(arg0: c_int) -> u64;
   // proto: static int QMetaType::registerNormalizedTypedef(const ::QByteArray & normalizedTypeName, int aliasId);
-  fn _ZN9QMetaType25registerNormalizedTypedefERK10QByteArrayi(arg0: *mut c_void, arg1: c_int) -> c_int;
+  fn C_ZN9QMetaType25registerNormalizedTypedefERK10QByteArrayi(arg0: *mut c_void, arg1: c_int) -> c_int;
   // proto: static bool QMetaType::compare(const void * lhs, const void * rhs, int typeId, int * result);
-  fn _ZN9QMetaType7compareEPKvS1_iPi(arg0: *mut c_void, arg1: *mut c_void, arg2: c_int, arg3: *mut c_int) -> c_char;
+  fn C_ZN9QMetaType7compareEPKvS1_iPi(arg0: *mut c_void, arg1: *mut c_void, arg2: c_int, arg3: *mut c_int) -> c_char;
   // proto:  bool QMetaType::isRegistered();
-  fn demth_ZNK9QMetaType12isRegisteredEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK9QMetaType12isRegisteredEv(qthis: u64 /* *mut c_void*/) -> c_char;
 } // <= ext block end
 
 // body block begin =>
@@ -136,7 +131,7 @@ impl<'a> /*trait*/ QMetaType_destroy_s<()> for (i32, *mut c_void) {
     // unsafe{_ZN9QMetaType7destroyEiPv()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as *mut c_void;
-     unsafe {_ZN9QMetaType7destroyEiPv(arg0, arg1)};
+     unsafe {C_ZN9QMetaType7destroyEiPv(arg0, arg1)};
     // return 1;
   }
 }
@@ -160,8 +155,8 @@ impl<'a> /*trait*/ QMetaType_hasRegisteredConverterFunction_s<i8> for (i32, i32)
     // unsafe{_ZN9QMetaType30hasRegisteredConverterFunctionEii()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-    let mut ret = unsafe {_ZN9QMetaType30hasRegisteredConverterFunctionEii(arg0, arg1)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZN9QMetaType30hasRegisteredConverterFunctionEii(arg0, arg1)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -179,11 +174,13 @@ pub trait QMetaType_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QMetaType::metaObject();
-impl<'a> /*trait*/ QMetaType_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QMetaType) -> () {
+impl<'a> /*trait*/ QMetaType_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QMetaType) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZNK9QMetaType10metaObjectEv()};
-     unsafe {demth_ZNK9QMetaType10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QMetaType10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -206,8 +203,8 @@ impl<'a> /*trait*/ QMetaType_hasRegisteredDebugStreamOperator_s<i8> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZN9QMetaType32hasRegisteredDebugStreamOperatorEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZN9QMetaType32hasRegisteredDebugStreamOperatorEi(arg0)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZN9QMetaType32hasRegisteredDebugStreamOperatorEi(arg0)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -231,8 +228,8 @@ impl<'a> /*trait*/ QMetaType_create_s<*mut c_void> for (i32, *mut c_void) {
     // unsafe{_ZN9QMetaType6createEiPKv()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as *mut c_void;
-    let mut ret = unsafe {_ZN9QMetaType6createEiPKv(arg0, arg1)};
-    return ret as *mut c_void;
+    let mut ret = unsafe {C_ZN9QMetaType6createEiPKv(arg0, arg1)};
+    return ret as *mut c_void; // 1
     // return 1;
   }
 }
@@ -255,7 +252,7 @@ impl<'a> /*trait*/ QMetaType_destroy<()> for (*mut c_void) {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZNK9QMetaType7destroyEPv()};
     let arg0 = self  as *mut c_void;
-     unsafe {demth_ZNK9QMetaType7destroyEPv(rsthis.qclsinst, arg0)};
+     unsafe {C_ZNK9QMetaType7destroyEPv(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -279,8 +276,8 @@ impl<'a> /*trait*/ QMetaType_registerTypedef_s<i32> for (&'a  String, i32) {
     // unsafe{_ZN9QMetaType15registerTypedefEPKci()};
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as c_int;
-    let mut ret = unsafe {_ZN9QMetaType15registerTypedefEPKci(arg0, arg1)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZN9QMetaType15registerTypedefEPKci(arg0, arg1)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -304,7 +301,7 @@ impl<'a> /*trait*/ QMetaType_destruct_s<()> for (i32, *mut c_void) {
     // unsafe{_ZN9QMetaType8destructEiPv()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as *mut c_void;
-     unsafe {_ZN9QMetaType8destructEiPv(arg0, arg1)};
+     unsafe {C_ZN9QMetaType8destructEiPv(arg0, arg1)};
     // return 1;
   }
 }
@@ -326,8 +323,8 @@ impl<'a> /*trait*/ QMetaType_isValid<i8> for () {
   fn isValid(self , rsthis: & QMetaType) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZNK9QMetaType7isValidEv()};
-    let mut ret = unsafe {demth_ZNK9QMetaType7isValidEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK9QMetaType7isValidEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -352,8 +349,8 @@ impl<'a> /*trait*/ QMetaType_construct_s<*mut c_void> for (i32, *mut c_void, *mu
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as *mut c_void;
     let arg2 = self.2  as *mut c_void;
-    let mut ret = unsafe {_ZN9QMetaType9constructEiPvPKv(arg0, arg1, arg2)};
-    return ret as *mut c_void;
+    let mut ret = unsafe {C_ZN9QMetaType9constructEiPvPKv(arg0, arg1, arg2)};
+    return ret as *mut c_void; // 1
     // return 1;
   }
 }
@@ -379,8 +376,8 @@ impl<'a> /*trait*/ QMetaType_equals_s<i8> for (*mut c_void, *mut c_void, i32, &'
     let arg1 = self.1  as *mut c_void;
     let arg2 = self.2  as c_int;
     let arg3 = self.3.as_ptr()  as *mut c_int;
-    let mut ret = unsafe {_ZN9QMetaType6equalsEPKvS1_iPi(arg0, arg1, arg2, arg3)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZN9QMetaType6equalsEPKvS1_iPi(arg0, arg1, arg2, arg3)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -404,8 +401,8 @@ impl<'a> /*trait*/ QMetaType_construct<*mut c_void> for (*mut c_void, *mut c_voi
     // unsafe{_ZNK9QMetaType9constructEPvPKv()};
     let arg0 = self.0  as *mut c_void;
     let arg1 = self.1  as *mut c_void;
-    let mut ret = unsafe {demth_ZNK9QMetaType9constructEPvPKv(rsthis.qclsinst, arg0, arg1)};
-    return ret as *mut c_void;
+    let mut ret = unsafe {C_ZNK9QMetaType9constructEPvPKv(rsthis.qclsinst, arg0, arg1)};
+    return ret as *mut c_void; // 1
     // return 1;
   }
 }
@@ -428,8 +425,8 @@ impl<'a> /*trait*/ QMetaType_isRegistered_s<i8> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZN9QMetaType12isRegisteredEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZN9QMetaType12isRegisteredEi(arg0)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZN9QMetaType12isRegisteredEi(arg0)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -452,37 +449,8 @@ impl<'a> /*trait*/ QMetaType_unregisterType_s<i8> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZN9QMetaType14unregisterTypeEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZN9QMetaType14unregisterTypeEi(arg0)};
-    return ret as i8;
-    // return 1;
-  }
-}
-
-  // proto:  void QMetaType::QMetaType(const QMetaType & other);
-impl /*struct*/ QMetaType {
-  pub fn New<T: QMetaType_New>(value: T) -> QMetaType {
-    let rsthis = value.New();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QMetaType_New {
-  fn New(self) -> QMetaType;
-}
-
-  // proto:  void QMetaType::QMetaType(const QMetaType & other);
-impl<'a> /*trait*/ QMetaType_New for (&'a QMetaType) {
-  fn New(self) -> QMetaType {
-    // let qthis: *mut c_void = unsafe{calloc(1, 80)};
-    // unsafe{_ZN9QMetaTypeC1ERKS_()};
-    let ctysz: c_int = unsafe{QMetaType_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN9QMetaTypeC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN9QMetaTypeC1ERKS_(arg0)} as u64;
-    let rsthis = QMetaType{qclsinst: qthis, ..Default::default()};
-    return rsthis;
+    let mut ret = unsafe {C_ZN9QMetaType14unregisterTypeEi(arg0)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -500,12 +468,14 @@ pub trait QMetaType_metaObjectForType_s<RetType> {
 }
 
   // proto: static const QMetaObject * QMetaType::metaObjectForType(int type);
-impl<'a> /*trait*/ QMetaType_metaObjectForType_s<()> for (i32) {
-  fn metaObjectForType_s(self ) -> () {
+impl<'a> /*trait*/ QMetaType_metaObjectForType_s<QMetaObject> for (i32) {
+  fn metaObjectForType_s(self ) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZN9QMetaType17metaObjectForTypeEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN9QMetaType17metaObjectForTypeEi(arg0)};
+    let mut ret = unsafe {C_ZN9QMetaType17metaObjectForTypeEi(arg0)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -530,8 +500,8 @@ impl<'a> /*trait*/ QMetaType_load_s<i8> for (&'a QDataStream, i32, *mut c_void) 
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as *mut c_void;
-    let mut ret = unsafe {_ZN9QMetaType4loadER11QDataStreamiPv(arg0, arg1, arg2)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZN9QMetaType4loadER11QDataStreamiPv(arg0, arg1, arg2)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -554,8 +524,8 @@ impl<'a> /*trait*/ QMetaType_create<*mut c_void> for (*mut c_void) {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZNK9QMetaType6createEPKv()};
     let arg0 = self  as *mut c_void;
-    let mut ret = unsafe {demth_ZNK9QMetaType6createEPKv(rsthis.qclsinst, arg0)};
-    return ret as *mut c_void;
+    let mut ret = unsafe {C_ZNK9QMetaType6createEPKv(rsthis.qclsinst, arg0)};
+    return ret as *mut c_void; // 1
     // return 1;
   }
 }
@@ -578,8 +548,8 @@ impl<'a> /*trait*/ QMetaType_sizeOf_s<i32> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZN9QMetaType6sizeOfEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZN9QMetaType6sizeOfEi(arg0)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZN9QMetaType6sizeOfEi(arg0)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -602,8 +572,8 @@ impl<'a> /*trait*/ QMetaType_hasRegisteredComparators_s<i8> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZN9QMetaType24hasRegisteredComparatorsEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZN9QMetaType24hasRegisteredComparatorsEi(arg0)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZN9QMetaType24hasRegisteredComparatorsEi(arg0)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -628,8 +598,8 @@ impl<'a> /*trait*/ QMetaType_save_s<i8> for (&'a QDataStream, i32, *mut c_void) 
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as *mut c_void;
-    let mut ret = unsafe {_ZN9QMetaType4saveER11QDataStreamiPKv(arg0, arg1, arg2)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZN9QMetaType4saveER11QDataStreamiPKv(arg0, arg1, arg2)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -652,29 +622,29 @@ impl<'a> /*trait*/ QMetaType_destruct<()> for (*mut c_void) {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZNK9QMetaType8destructEPv()};
     let arg0 = self  as *mut c_void;
-     unsafe {demth_ZNK9QMetaType8destructEPv(rsthis.qclsinst, arg0)};
+     unsafe {C_ZNK9QMetaType8destructEPv(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
 
   // proto:  void QMetaType::~QMetaType();
 impl /*struct*/ QMetaType {
-  pub fn Free<RetType, T: QMetaType_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QMetaType_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QMetaType_Free<RetType> {
-  fn Free(self , rsthis: & QMetaType) -> RetType;
+pub trait QMetaType_free<RetType> {
+  fn free(self , rsthis: & QMetaType) -> RetType;
 }
 
   // proto:  void QMetaType::~QMetaType();
-impl<'a> /*trait*/ QMetaType_Free<()> for () {
-  fn Free(self , rsthis: & QMetaType) -> () {
+impl<'a> /*trait*/ QMetaType_free<()> for () {
+  fn free(self , rsthis: & QMetaType) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
-    // unsafe{_ZN9QMetaTypeD0Ev()};
-     unsafe {demth_ZN9QMetaTypeD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN9QMetaTypeD2Ev()};
+     unsafe {C_ZN9QMetaTypeD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -697,8 +667,8 @@ impl<'a> /*trait*/ QMetaType_type_s<i32> for (&'a  String) {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZN9QMetaType4typeEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
-    let mut ret = unsafe {_ZN9QMetaType4typeEPKc(arg0)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZN9QMetaType4typeEPKc(arg0)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -709,8 +679,8 @@ impl<'a> /*trait*/ QMetaType_type_s<i32> for (&'a QByteArray) {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZN9QMetaType4typeERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN9QMetaType4typeERK10QByteArray(arg0)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZN9QMetaType4typeERK10QByteArray(arg0)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -735,8 +705,8 @@ impl<'a> /*trait*/ QMetaType_debugStream_s<i8> for (&'a QDebug, *mut c_void, i32
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as *mut c_void;
     let arg2 = self.2  as c_int;
-    let mut ret = unsafe {_ZN9QMetaType11debugStreamER6QDebugPKvi(arg0, arg1, arg2)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZN9QMetaType11debugStreamER6QDebugPKvi(arg0, arg1, arg2)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -758,8 +728,8 @@ impl<'a> /*trait*/ QMetaType_sizeOf<i32> for () {
   fn sizeOf(self , rsthis: & QMetaType) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZNK9QMetaType6sizeOfEv()};
-    let mut ret = unsafe {demth_ZNK9QMetaType6sizeOfEv(rsthis.qclsinst)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK9QMetaType6sizeOfEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -782,7 +752,7 @@ impl<'a> /*trait*/ QMetaType_typeName_s<String> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZN9QMetaType8typeNameEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZN9QMetaType8typeNameEi(arg0)};
+    let mut ret = unsafe {C_ZN9QMetaType8typeNameEi(arg0)};
     let slen = unsafe {strlen(ret as *const i8)} as usize;
     return unsafe{String::from_raw_parts(ret as *mut u8, slen, slen+1)};
     // return 1;
@@ -810,22 +780,34 @@ impl<'a> /*trait*/ QMetaType_convert_s<i8> for (*mut c_void, i32, *mut c_void, i
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as *mut c_void;
     let arg3 = self.3  as c_int;
-    let mut ret = unsafe {_ZN9QMetaType7convertEPKviPvi(arg0, arg1, arg2, arg3)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZN9QMetaType7convertEPKviPvi(arg0, arg1, arg2, arg3)};
+    return ret as i8; // 1
     // return 1;
   }
 }
 
   // proto:  void QMetaType::QMetaType(const int type);
-impl<'a> /*trait*/ QMetaType_New for (i32) {
-  fn New(self) -> QMetaType {
+impl /*struct*/ QMetaType {
+  pub fn new<T: QMetaType_new>(value: T) -> QMetaType {
+    let rsthis = value.new();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QMetaType_new {
+  fn new(self) -> QMetaType;
+}
+
+  // proto:  void QMetaType::QMetaType(const int type);
+impl<'a> /*trait*/ QMetaType_new for (i32) {
+  fn new(self) -> QMetaType {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
-    // unsafe{_ZN9QMetaTypeC1Ei()};
+    // unsafe{_ZN9QMetaTypeC2Ei()};
     let ctysz: c_int = unsafe{QMetaType_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
-    // unsafe {_ZN9QMetaTypeC1Ei(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN9QMetaTypeC1Ei(arg0)} as u64;
+    let qthis: u64 = unsafe {C_ZN9QMetaTypeC2Ei(arg0)};
     let rsthis = QMetaType{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -851,8 +833,8 @@ impl<'a> /*trait*/ QMetaType_registerNormalizedTypedef_s<i32> for (&'a QByteArra
     // unsafe{_ZN9QMetaType25registerNormalizedTypedefERK10QByteArrayi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
-    let mut ret = unsafe {_ZN9QMetaType25registerNormalizedTypedefERK10QByteArrayi(arg0, arg1)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZN9QMetaType25registerNormalizedTypedefERK10QByteArrayi(arg0, arg1)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -878,8 +860,8 @@ impl<'a> /*trait*/ QMetaType_compare_s<i8> for (*mut c_void, *mut c_void, i32, &
     let arg1 = self.1  as *mut c_void;
     let arg2 = self.2  as c_int;
     let arg3 = self.3.as_ptr()  as *mut c_int;
-    let mut ret = unsafe {_ZN9QMetaType7compareEPKvS1_iPi(arg0, arg1, arg2, arg3)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZN9QMetaType7compareEPKvS1_iPi(arg0, arg1, arg2, arg3)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -901,8 +883,8 @@ impl<'a> /*trait*/ QMetaType_isRegistered<i8> for () {
   fn isRegistered(self , rsthis: & QMetaType) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZNK9QMetaType12isRegisteredEv()};
-    let mut ret = unsafe {demth_ZNK9QMetaType12isRegisteredEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK9QMetaType12isRegisteredEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }

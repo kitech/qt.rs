@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qopenglpaintdevice.h
 // dst-file: /src/gui/qopenglpaintdevice.rs
 //
@@ -18,10 +18,11 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qpaintdevice::QPaintDevice; // 773
+use super::qpaintdevice::*; // 773
 use std::ops::Deref;
-use super::qpaintengine::QPaintEngine; // 773
-use super::super::core::qsize::QSize; // 771
+use super::qpaintengine::*; // 773
+use super::super::core::qsize::*; // 771
+use super::qopenglcontext::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -33,45 +34,39 @@ use super::super::core::qsize::QSize; // 771
 extern {
   fn QOpenGLPaintDevice_Class_Size() -> c_int;
   // proto:  QPaintEngine * QOpenGLPaintDevice::paintEngine();
-  fn _ZNK18QOpenGLPaintDevice11paintEngineEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK18QOpenGLPaintDevice11paintEngineEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QSize QOpenGLPaintDevice::size();
-  fn _ZNK18QOpenGLPaintDevice4sizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK18QOpenGLPaintDevice4sizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QOpenGLPaintDevice::setPaintFlipped(bool flipped);
-  fn _ZN18QOpenGLPaintDevice15setPaintFlippedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN18QOpenGLPaintDevice15setPaintFlippedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QOpenGLPaintDevice::~QOpenGLPaintDevice();
-  fn _ZN18QOpenGLPaintDeviceD0Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN18QOpenGLPaintDeviceD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QOpenGLPaintDevice::QOpenGLPaintDevice(int width, int height);
-  fn dector_ZN18QOpenGLPaintDeviceC1Eii(arg0: c_int, arg1: c_int) -> *mut c_void;
-  fn _ZN18QOpenGLPaintDeviceC1Eii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
-  // proto:  void QOpenGLPaintDevice::QOpenGLPaintDevice(const QOpenGLPaintDevice & );
-  fn dector_ZN18QOpenGLPaintDeviceC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN18QOpenGLPaintDeviceC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN18QOpenGLPaintDeviceC2Eii(arg0: c_int, arg1: c_int) -> u64;
   // proto:  QOpenGLContext * QOpenGLPaintDevice::context();
-  fn _ZNK18QOpenGLPaintDevice7contextEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK18QOpenGLPaintDevice7contextEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QOpenGLPaintDevice::setDevicePixelRatio(qreal devicePixelRatio);
-  fn _ZN18QOpenGLPaintDevice19setDevicePixelRatioEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
+  fn C_ZN18QOpenGLPaintDevice19setDevicePixelRatioEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QOpenGLPaintDevice::QOpenGLPaintDevice();
-  fn dector_ZN18QOpenGLPaintDeviceC1Ev() -> *mut c_void;
-  fn _ZN18QOpenGLPaintDeviceC1Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN18QOpenGLPaintDeviceC2Ev() -> u64;
   // proto:  int QOpenGLPaintDevice::devType();
-  fn _ZNK18QOpenGLPaintDevice7devTypeEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK18QOpenGLPaintDevice7devTypeEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  qreal QOpenGLPaintDevice::dotsPerMeterX();
-  fn _ZNK18QOpenGLPaintDevice13dotsPerMeterXEv(qthis: u64 /* *mut c_void*/) -> c_double;
+  fn C_ZNK18QOpenGLPaintDevice13dotsPerMeterXEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QOpenGLPaintDevice::setDotsPerMeterX(qreal );
-  fn _ZN18QOpenGLPaintDevice16setDotsPerMeterXEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
+  fn C_ZN18QOpenGLPaintDevice16setDotsPerMeterXEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  qreal QOpenGLPaintDevice::dotsPerMeterY();
-  fn _ZNK18QOpenGLPaintDevice13dotsPerMeterYEv(qthis: u64 /* *mut c_void*/) -> c_double;
+  fn C_ZNK18QOpenGLPaintDevice13dotsPerMeterYEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QOpenGLPaintDevice::setDotsPerMeterY(qreal );
-  fn _ZN18QOpenGLPaintDevice16setDotsPerMeterYEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
+  fn C_ZN18QOpenGLPaintDevice16setDotsPerMeterYEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  bool QOpenGLPaintDevice::paintFlipped();
-  fn _ZNK18QOpenGLPaintDevice12paintFlippedEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK18QOpenGLPaintDevice12paintFlippedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QOpenGLPaintDevice::setSize(const QSize & size);
-  fn _ZN18QOpenGLPaintDevice7setSizeERK5QSize(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN18QOpenGLPaintDevice7setSizeERK5QSize(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QOpenGLPaintDevice::ensureActiveTarget();
-  fn _ZN18QOpenGLPaintDevice18ensureActiveTargetEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN18QOpenGLPaintDevice18ensureActiveTargetEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QOpenGLPaintDevice::QOpenGLPaintDevice(const QSize & size);
-  fn dector_ZN18QOpenGLPaintDeviceC1ERK5QSize(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN18QOpenGLPaintDeviceC1ERK5QSize(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN18QOpenGLPaintDeviceC2ERK5QSize(arg0: *mut c_void) -> u64;
 } // <= ext block end
 
 // body block begin =>
@@ -116,7 +111,7 @@ impl<'a> /*trait*/ QOpenGLPaintDevice_paintEngine<QPaintEngine> for () {
   fn paintEngine(self , rsthis: & QOpenGLPaintDevice) -> QPaintEngine {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QOpenGLPaintDevice11paintEngineEv()};
-    let mut ret = unsafe {_ZNK18QOpenGLPaintDevice11paintEngineEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK18QOpenGLPaintDevice11paintEngineEv(rsthis.qclsinst)};
     let mut ret1 = QPaintEngine::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -140,7 +135,7 @@ impl<'a> /*trait*/ QOpenGLPaintDevice_size<QSize> for () {
   fn size(self , rsthis: & QOpenGLPaintDevice) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QOpenGLPaintDevice4sizeEv()};
-    let mut ret = unsafe {_ZNK18QOpenGLPaintDevice4sizeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK18QOpenGLPaintDevice4sizeEv(rsthis.qclsinst)};
     let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -165,73 +160,56 @@ impl<'a> /*trait*/ QOpenGLPaintDevice_setPaintFlipped<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QOpenGLPaintDevice15setPaintFlippedEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN18QOpenGLPaintDevice15setPaintFlippedEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN18QOpenGLPaintDevice15setPaintFlippedEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
 
   // proto:  void QOpenGLPaintDevice::~QOpenGLPaintDevice();
 impl /*struct*/ QOpenGLPaintDevice {
-  pub fn Free<RetType, T: QOpenGLPaintDevice_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QOpenGLPaintDevice_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLPaintDevice_Free<RetType> {
-  fn Free(self , rsthis: & QOpenGLPaintDevice) -> RetType;
+pub trait QOpenGLPaintDevice_free<RetType> {
+  fn free(self , rsthis: & QOpenGLPaintDevice) -> RetType;
 }
 
   // proto:  void QOpenGLPaintDevice::~QOpenGLPaintDevice();
-impl<'a> /*trait*/ QOpenGLPaintDevice_Free<()> for () {
-  fn Free(self , rsthis: & QOpenGLPaintDevice) -> () {
+impl<'a> /*trait*/ QOpenGLPaintDevice_free<()> for () {
+  fn free(self , rsthis: & QOpenGLPaintDevice) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QOpenGLPaintDeviceD0Ev()};
-     unsafe {_ZN18QOpenGLPaintDeviceD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN18QOpenGLPaintDeviceD2Ev()};
+     unsafe {C_ZN18QOpenGLPaintDeviceD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
 
   // proto:  void QOpenGLPaintDevice::QOpenGLPaintDevice(int width, int height);
 impl /*struct*/ QOpenGLPaintDevice {
-  pub fn New<T: QOpenGLPaintDevice_New>(value: T) -> QOpenGLPaintDevice {
-    let rsthis = value.New();
+  pub fn new<T: QOpenGLPaintDevice_new>(value: T) -> QOpenGLPaintDevice {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QOpenGLPaintDevice_New {
-  fn New(self) -> QOpenGLPaintDevice;
+pub trait QOpenGLPaintDevice_new {
+  fn new(self) -> QOpenGLPaintDevice;
 }
 
   // proto:  void QOpenGLPaintDevice::QOpenGLPaintDevice(int width, int height);
-impl<'a> /*trait*/ QOpenGLPaintDevice_New for (i32, i32) {
-  fn New(self) -> QOpenGLPaintDevice {
+impl<'a> /*trait*/ QOpenGLPaintDevice_new for (i32, i32) {
+  fn new(self) -> QOpenGLPaintDevice {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QOpenGLPaintDeviceC1Eii()};
+    // unsafe{_ZN18QOpenGLPaintDeviceC2Eii()};
     let ctysz: c_int = unsafe{QOpenGLPaintDevice_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-    // unsafe {_ZN18QOpenGLPaintDeviceC1Eii(qthis, arg0, arg1)};
-    let qthis: u64 = unsafe {dector_ZN18QOpenGLPaintDeviceC1Eii(arg0, arg1)} as u64;
-    let rsthis = QOpenGLPaintDevice{qbase: QPaintDevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  void QOpenGLPaintDevice::QOpenGLPaintDevice(const QOpenGLPaintDevice & );
-impl<'a> /*trait*/ QOpenGLPaintDevice_New for (&'a QOpenGLPaintDevice) {
-  fn New(self) -> QOpenGLPaintDevice {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QOpenGLPaintDeviceC1ERKS_()};
-    let ctysz: c_int = unsafe{QOpenGLPaintDevice_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN18QOpenGLPaintDeviceC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN18QOpenGLPaintDeviceC1ERKS_(arg0)} as u64;
+    let qthis: u64 = unsafe {C_ZN18QOpenGLPaintDeviceC2Eii(arg0, arg1)};
     let rsthis = QOpenGLPaintDevice{qbase: QPaintDevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -251,11 +229,13 @@ pub trait QOpenGLPaintDevice_context<RetType> {
 }
 
   // proto:  QOpenGLContext * QOpenGLPaintDevice::context();
-impl<'a> /*trait*/ QOpenGLPaintDevice_context<()> for () {
-  fn context(self , rsthis: & QOpenGLPaintDevice) -> () {
+impl<'a> /*trait*/ QOpenGLPaintDevice_context<QOpenGLContext> for () {
+  fn context(self , rsthis: & QOpenGLPaintDevice) -> QOpenGLContext {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QOpenGLPaintDevice7contextEv()};
-     unsafe {_ZNK18QOpenGLPaintDevice7contextEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK18QOpenGLPaintDevice7contextEv(rsthis.qclsinst)};
+    let mut ret1 = QOpenGLContext::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -278,20 +258,19 @@ impl<'a> /*trait*/ QOpenGLPaintDevice_setDevicePixelRatio<()> for (f64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QOpenGLPaintDevice19setDevicePixelRatioEd()};
     let arg0 = self  as c_double;
-     unsafe {_ZN18QOpenGLPaintDevice19setDevicePixelRatioEd(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN18QOpenGLPaintDevice19setDevicePixelRatioEd(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
 
   // proto:  void QOpenGLPaintDevice::QOpenGLPaintDevice();
-impl<'a> /*trait*/ QOpenGLPaintDevice_New for () {
-  fn New(self) -> QOpenGLPaintDevice {
+impl<'a> /*trait*/ QOpenGLPaintDevice_new for () {
+  fn new(self) -> QOpenGLPaintDevice {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QOpenGLPaintDeviceC1Ev()};
+    // unsafe{_ZN18QOpenGLPaintDeviceC2Ev()};
     let ctysz: c_int = unsafe{QOpenGLPaintDevice_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN18QOpenGLPaintDeviceC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN18QOpenGLPaintDeviceC1Ev()} as u64;
+    let qthis: u64 = unsafe {C_ZN18QOpenGLPaintDeviceC2Ev()};
     let rsthis = QOpenGLPaintDevice{qbase: QPaintDevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -315,8 +294,8 @@ impl<'a> /*trait*/ QOpenGLPaintDevice_devType<i32> for () {
   fn devType(self , rsthis: & QOpenGLPaintDevice) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QOpenGLPaintDevice7devTypeEv()};
-    let mut ret = unsafe {_ZNK18QOpenGLPaintDevice7devTypeEv(rsthis.qclsinst)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK18QOpenGLPaintDevice7devTypeEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -338,8 +317,8 @@ impl<'a> /*trait*/ QOpenGLPaintDevice_dotsPerMeterX<f64> for () {
   fn dotsPerMeterX(self , rsthis: & QOpenGLPaintDevice) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QOpenGLPaintDevice13dotsPerMeterXEv()};
-    let mut ret = unsafe {_ZNK18QOpenGLPaintDevice13dotsPerMeterXEv(rsthis.qclsinst)};
-    return ret as f64;
+    let mut ret = unsafe {C_ZNK18QOpenGLPaintDevice13dotsPerMeterXEv(rsthis.qclsinst)};
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -362,7 +341,7 @@ impl<'a> /*trait*/ QOpenGLPaintDevice_setDotsPerMeterX<()> for (f64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QOpenGLPaintDevice16setDotsPerMeterXEd()};
     let arg0 = self  as c_double;
-     unsafe {_ZN18QOpenGLPaintDevice16setDotsPerMeterXEd(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN18QOpenGLPaintDevice16setDotsPerMeterXEd(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -384,8 +363,8 @@ impl<'a> /*trait*/ QOpenGLPaintDevice_dotsPerMeterY<f64> for () {
   fn dotsPerMeterY(self , rsthis: & QOpenGLPaintDevice) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QOpenGLPaintDevice13dotsPerMeterYEv()};
-    let mut ret = unsafe {_ZNK18QOpenGLPaintDevice13dotsPerMeterYEv(rsthis.qclsinst)};
-    return ret as f64;
+    let mut ret = unsafe {C_ZNK18QOpenGLPaintDevice13dotsPerMeterYEv(rsthis.qclsinst)};
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -408,7 +387,7 @@ impl<'a> /*trait*/ QOpenGLPaintDevice_setDotsPerMeterY<()> for (f64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QOpenGLPaintDevice16setDotsPerMeterYEd()};
     let arg0 = self  as c_double;
-     unsafe {_ZN18QOpenGLPaintDevice16setDotsPerMeterYEd(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN18QOpenGLPaintDevice16setDotsPerMeterYEd(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -430,8 +409,8 @@ impl<'a> /*trait*/ QOpenGLPaintDevice_paintFlipped<i8> for () {
   fn paintFlipped(self , rsthis: & QOpenGLPaintDevice) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QOpenGLPaintDevice12paintFlippedEv()};
-    let mut ret = unsafe {_ZNK18QOpenGLPaintDevice12paintFlippedEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK18QOpenGLPaintDevice12paintFlippedEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -454,7 +433,7 @@ impl<'a> /*trait*/ QOpenGLPaintDevice_setSize<()> for (&'a QSize) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QOpenGLPaintDevice7setSizeERK5QSize()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN18QOpenGLPaintDevice7setSizeERK5QSize(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN18QOpenGLPaintDevice7setSizeERK5QSize(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -476,21 +455,20 @@ impl<'a> /*trait*/ QOpenGLPaintDevice_ensureActiveTarget<()> for () {
   fn ensureActiveTarget(self , rsthis: & QOpenGLPaintDevice) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QOpenGLPaintDevice18ensureActiveTargetEv()};
-     unsafe {_ZN18QOpenGLPaintDevice18ensureActiveTargetEv(rsthis.qclsinst)};
+     unsafe {C_ZN18QOpenGLPaintDevice18ensureActiveTargetEv(rsthis.qclsinst)};
     // return 1;
   }
 }
 
   // proto:  void QOpenGLPaintDevice::QOpenGLPaintDevice(const QSize & size);
-impl<'a> /*trait*/ QOpenGLPaintDevice_New for (&'a QSize) {
-  fn New(self) -> QOpenGLPaintDevice {
+impl<'a> /*trait*/ QOpenGLPaintDevice_new for (&'a QSize) {
+  fn new(self) -> QOpenGLPaintDevice {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QOpenGLPaintDeviceC1ERK5QSize()};
+    // unsafe{_ZN18QOpenGLPaintDeviceC2ERK5QSize()};
     let ctysz: c_int = unsafe{QOpenGLPaintDevice_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN18QOpenGLPaintDeviceC1ERK5QSize(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN18QOpenGLPaintDeviceC1ERK5QSize(arg0)} as u64;
+    let qthis: u64 = unsafe {C_ZN18QOpenGLPaintDeviceC2ERK5QSize(arg0)};
     let rsthis = QOpenGLPaintDevice{qbase: QPaintDevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

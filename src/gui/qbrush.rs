@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qbrush.h
 // dst-file: /src/gui/qbrush.rs
 //
@@ -20,12 +20,13 @@ use self::libc::*;
 // use block begin =>
 // use super::qbrush::QGradient; // 773
 use std::ops::Deref;
-use super::super::core::qpoint::QPointF; // 771
-use super::qpixmap::QPixmap; // 773
-use super::qimage::QImage; // 773
-use super::qcolor::QColor; // 773
-use super::qtransform::QTransform; // 773
-use super::qmatrix::QMatrix; // 773
+use super::super::core::qpoint::*; // 771
+use super::qpixmap::*; // 773
+use super::qimage::*; // 773
+use super::qcolor::*; // 773
+use super::qtransform::*; // 773
+use super::qmatrix::*; // 773
+// use super::qvector::*; // 775
 // <= use block end
 
 // ext block begin =>
@@ -37,150 +38,130 @@ use super::qmatrix::QMatrix; // 773
 extern {
   fn QRadialGradient_Class_Size() -> c_int;
   // proto:  void QRadialGradient::QRadialGradient(qreal cx, qreal cy, qreal radius, qreal fx, qreal fy);
-  fn dector_ZN15QRadialGradientC1Eddddd(arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double) -> *mut c_void;
-  fn _ZN15QRadialGradientC1Eddddd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double);
+  fn C_ZN15QRadialGradientC2Eddddd(arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double) -> u64;
   // proto:  void QRadialGradient::setFocalPoint(qreal x, qreal y);
-  fn demth_ZN15QRadialGradient13setFocalPointEdd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double);
+  fn C_ZN15QRadialGradient13setFocalPointEdd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double);
   // proto:  void QRadialGradient::QRadialGradient();
-  fn dector_ZN15QRadialGradientC1Ev() -> *mut c_void;
-  fn _ZN15QRadialGradientC1Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN15QRadialGradientC2Ev() -> u64;
   // proto:  void QRadialGradient::QRadialGradient(const QPointF & center, qreal radius, const QPointF & focalPoint);
-  fn dector_ZN15QRadialGradientC1ERK7QPointFdS2_(arg0: *mut c_void, arg1: c_double, arg2: *mut c_void) -> *mut c_void;
-  fn _ZN15QRadialGradientC1ERK7QPointFdS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_double, arg2: *mut c_void);
+  fn C_ZN15QRadialGradientC2ERK7QPointFdS2_(arg0: *mut c_void, arg1: c_double, arg2: *mut c_void) -> u64;
   // proto:  qreal QRadialGradient::radius();
-  fn _ZNK15QRadialGradient6radiusEv(qthis: u64 /* *mut c_void*/) -> c_double;
+  fn C_ZNK15QRadialGradient6radiusEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QRadialGradient::setFocalPoint(const QPointF & focalPoint);
-  fn _ZN15QRadialGradient13setFocalPointERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN15QRadialGradient13setFocalPointERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QRadialGradient::QRadialGradient(const QPointF & center, qreal centerRadius, const QPointF & focalPoint, qreal focalRadius);
-  fn dector_ZN15QRadialGradientC1ERK7QPointFdS2_d(arg0: *mut c_void, arg1: c_double, arg2: *mut c_void, arg3: c_double) -> *mut c_void;
-  fn _ZN15QRadialGradientC1ERK7QPointFdS2_d(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_double, arg2: *mut c_void, arg3: c_double);
+  fn C_ZN15QRadialGradientC2ERK7QPointFdS2_d(arg0: *mut c_void, arg1: c_double, arg2: *mut c_void, arg3: c_double) -> u64;
   // proto:  void QRadialGradient::QRadialGradient(qreal cx, qreal cy, qreal centerRadius, qreal fx, qreal fy, qreal focalRadius);
-  fn dector_ZN15QRadialGradientC1Edddddd(arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double, arg5: c_double) -> *mut c_void;
-  fn _ZN15QRadialGradientC1Edddddd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double, arg5: c_double);
+  fn C_ZN15QRadialGradientC2Edddddd(arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double, arg5: c_double) -> u64;
   // proto:  qreal QRadialGradient::centerRadius();
-  fn _ZNK15QRadialGradient12centerRadiusEv(qthis: u64 /* *mut c_void*/) -> c_double;
+  fn C_ZNK15QRadialGradient12centerRadiusEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  QPointF QRadialGradient::focalPoint();
-  fn _ZNK15QRadialGradient10focalPointEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK15QRadialGradient10focalPointEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  qreal QRadialGradient::focalRadius();
-  fn _ZNK15QRadialGradient11focalRadiusEv(qthis: u64 /* *mut c_void*/) -> c_double;
+  fn C_ZNK15QRadialGradient11focalRadiusEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  QPointF QRadialGradient::center();
-  fn _ZNK15QRadialGradient6centerEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK15QRadialGradient6centerEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QRadialGradient::setCenter(const QPointF & center);
-  fn _ZN15QRadialGradient9setCenterERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN15QRadialGradient9setCenterERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QRadialGradient::QRadialGradient(const QPointF & center, qreal radius);
-  fn dector_ZN15QRadialGradientC1ERK7QPointFd(arg0: *mut c_void, arg1: c_double) -> *mut c_void;
-  fn _ZN15QRadialGradientC1ERK7QPointFd(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_double);
+  fn C_ZN15QRadialGradientC2ERK7QPointFd(arg0: *mut c_void, arg1: c_double) -> u64;
   // proto:  void QRadialGradient::setCenterRadius(qreal radius);
-  fn _ZN15QRadialGradient15setCenterRadiusEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
+  fn C_ZN15QRadialGradient15setCenterRadiusEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QRadialGradient::setFocalRadius(qreal radius);
-  fn _ZN15QRadialGradient14setFocalRadiusEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
+  fn C_ZN15QRadialGradient14setFocalRadiusEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QRadialGradient::setRadius(qreal radius);
-  fn _ZN15QRadialGradient9setRadiusEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
+  fn C_ZN15QRadialGradient9setRadiusEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QRadialGradient::QRadialGradient(qreal cx, qreal cy, qreal radius);
-  fn dector_ZN15QRadialGradientC1Eddd(arg0: c_double, arg1: c_double, arg2: c_double) -> *mut c_void;
-  fn _ZN15QRadialGradientC1Eddd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double);
+  fn C_ZN15QRadialGradientC2Eddd(arg0: c_double, arg1: c_double, arg2: c_double) -> u64;
   // proto:  void QRadialGradient::setCenter(qreal x, qreal y);
-  fn demth_ZN15QRadialGradient9setCenterEdd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double);
+  fn C_ZN15QRadialGradient9setCenterEdd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double);
   fn QConicalGradient_Class_Size() -> c_int;
   // proto:  qreal QConicalGradient::angle();
-  fn _ZNK16QConicalGradient5angleEv(qthis: u64 /* *mut c_void*/) -> c_double;
+  fn C_ZNK16QConicalGradient5angleEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  QPointF QConicalGradient::center();
-  fn _ZNK16QConicalGradient6centerEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK16QConicalGradient6centerEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QConicalGradient::QConicalGradient(const QPointF & center, qreal startAngle);
-  fn dector_ZN16QConicalGradientC1ERK7QPointFd(arg0: *mut c_void, arg1: c_double) -> *mut c_void;
-  fn _ZN16QConicalGradientC1ERK7QPointFd(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_double);
+  fn C_ZN16QConicalGradientC2ERK7QPointFd(arg0: *mut c_void, arg1: c_double) -> u64;
   // proto:  void QConicalGradient::QConicalGradient();
-  fn dector_ZN16QConicalGradientC1Ev() -> *mut c_void;
-  fn _ZN16QConicalGradientC1Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN16QConicalGradientC2Ev() -> u64;
   // proto:  void QConicalGradient::setAngle(qreal angle);
-  fn _ZN16QConicalGradient8setAngleEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
+  fn C_ZN16QConicalGradient8setAngleEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QConicalGradient::setCenter(qreal x, qreal y);
-  fn demth_ZN16QConicalGradient9setCenterEdd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double);
+  fn C_ZN16QConicalGradient9setCenterEdd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double);
   // proto:  void QConicalGradient::setCenter(const QPointF & center);
-  fn _ZN16QConicalGradient9setCenterERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN16QConicalGradient9setCenterERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QConicalGradient::QConicalGradient(qreal cx, qreal cy, qreal startAngle);
-  fn dector_ZN16QConicalGradientC1Eddd(arg0: c_double, arg1: c_double, arg2: c_double) -> *mut c_void;
-  fn _ZN16QConicalGradientC1Eddd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double);
+  fn C_ZN16QConicalGradientC2Eddd(arg0: c_double, arg1: c_double, arg2: c_double) -> u64;
   fn QBrush_Class_Size() -> c_int;
   // proto:  void QBrush::QBrush();
-  fn dector_ZN6QBrushC1Ev() -> *mut c_void;
-  fn _ZN6QBrushC1Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN6QBrushC2Ev() -> u64;
   // proto:  void QBrush::QBrush(const QPixmap & pixmap);
-  fn dector_ZN6QBrushC1ERK7QPixmap(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN6QBrushC1ERK7QPixmap(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN6QBrushC2ERK7QPixmap(arg0: *mut c_void) -> u64;
   // proto:  void QBrush::setTexture(const QPixmap & pixmap);
-  fn _ZN6QBrush10setTextureERK7QPixmap(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN6QBrush10setTextureERK7QPixmap(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QBrush::setTextureImage(const QImage & image);
-  fn _ZN6QBrush15setTextureImageERK6QImage(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN6QBrush15setTextureImageERK6QImage(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QBrush::QBrush(const QColor & color, const QPixmap & pixmap);
-  fn dector_ZN6QBrushC1ERK6QColorRK7QPixmap(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN6QBrushC1ERK6QColorRK7QPixmap(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN6QBrushC2ERK6QColorRK7QPixmap(arg0: *mut c_void, arg1: *mut c_void) -> u64;
   // proto:  QPixmap QBrush::texture();
-  fn _ZNK6QBrush7textureEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK6QBrush7textureEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QBrush::QBrush(const QGradient & gradient);
-  fn dector_ZN6QBrushC1ERK9QGradient(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN6QBrushC1ERK9QGradient(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN6QBrushC2ERK9QGradient(arg0: *mut c_void) -> u64;
   // proto:  QTransform QBrush::transform();
-  fn demth_ZNK6QBrush9transformEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK6QBrush9transformEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QBrush::setTransform(const QTransform & );
-  fn _ZN6QBrush12setTransformERK10QTransform(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN6QBrush12setTransformERK10QTransform(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QBrush::isOpaque();
-  fn _ZNK6QBrush8isOpaqueEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK6QBrush8isOpaqueEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  const QGradient * QBrush::gradient();
-  fn _ZNK6QBrush8gradientEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK6QBrush8gradientEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QBrush::~QBrush();
-  fn _ZN6QBrushD0Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN6QBrushD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QBrush::setMatrix(const QMatrix & mat);
-  fn _ZN6QBrush9setMatrixERK7QMatrix(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN6QBrush9setMatrixERK7QMatrix(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QBrush::setColor(const QColor & color);
-  fn _ZN6QBrush8setColorERK6QColor(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN6QBrush8setColorERK6QColor(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QBrush::QBrush(const QBrush & brush);
-  fn dector_ZN6QBrushC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN6QBrushC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN6QBrushC2ERKS_(arg0: *mut c_void) -> u64;
   // proto:  const QMatrix & QBrush::matrix();
-  fn demth_ZNK6QBrush6matrixEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK6QBrush6matrixEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QImage QBrush::textureImage();
-  fn _ZNK6QBrush12textureImageEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK6QBrush12textureImageEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QBrush::isDetached();
-  fn demth_ZNK6QBrush10isDetachedEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK6QBrush10isDetachedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QBrush::swap(QBrush & other);
-  fn demth_ZN6QBrush4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN6QBrush4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QColor & QBrush::color();
-  fn demth_ZNK6QBrush5colorEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK6QBrush5colorEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QBrush::QBrush(const QImage & image);
-  fn dector_ZN6QBrushC1ERK6QImage(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN6QBrushC1ERK6QImage(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN6QBrushC2ERK6QImage(arg0: *mut c_void) -> u64;
   fn QGradient_Class_Size() -> c_int;
   // proto:  void QGradient::setColorAt(qreal pos, const QColor & color);
-  fn _ZN9QGradient10setColorAtEdRK6QColor(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: *mut c_void);
+  fn C_ZN9QGradient10setColorAtEdRK6QColor(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: *mut c_void);
   // proto:  QGradientStops QGradient::stops();
-  fn _ZNK9QGradient5stopsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK9QGradient5stopsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QGradient::QGradient();
-  fn dector_ZN9QGradientC1Ev() -> *mut c_void;
-  fn _ZN9QGradientC1Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN9QGradientC2Ev() -> u64;
   fn QBrushData_Class_Size() -> c_int;
   fn QLinearGradient_Class_Size() -> c_int;
   // proto:  void QLinearGradient::setFinalStop(qreal x, qreal y);
-  fn demth_ZN15QLinearGradient12setFinalStopEdd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double);
+  fn C_ZN15QLinearGradient12setFinalStopEdd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double);
   // proto:  QPointF QLinearGradient::start();
-  fn _ZNK15QLinearGradient5startEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK15QLinearGradient5startEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QLinearGradient::QLinearGradient(qreal xStart, qreal yStart, qreal xFinalStop, qreal yFinalStop);
-  fn dector_ZN15QLinearGradientC1Edddd(arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double) -> *mut c_void;
-  fn _ZN15QLinearGradientC1Edddd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
+  fn C_ZN15QLinearGradientC2Edddd(arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double) -> u64;
   // proto:  void QLinearGradient::QLinearGradient(const QPointF & start, const QPointF & finalStop);
-  fn dector_ZN15QLinearGradientC1ERK7QPointFS2_(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN15QLinearGradientC1ERK7QPointFS2_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN15QLinearGradientC2ERK7QPointFS2_(arg0: *mut c_void, arg1: *mut c_void) -> u64;
   // proto:  void QLinearGradient::setStart(qreal x, qreal y);
-  fn demth_ZN15QLinearGradient8setStartEdd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double);
+  fn C_ZN15QLinearGradient8setStartEdd(qthis: u64 /* *mut c_void*/, arg0: c_double, arg1: c_double);
   // proto:  void QLinearGradient::setStart(const QPointF & start);
-  fn _ZN15QLinearGradient8setStartERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN15QLinearGradient8setStartERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QLinearGradient::QLinearGradient();
-  fn dector_ZN15QLinearGradientC1Ev() -> *mut c_void;
-  fn _ZN15QLinearGradientC1Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN15QLinearGradientC2Ev() -> u64;
   // proto:  QPointF QLinearGradient::finalStop();
-  fn _ZNK15QLinearGradient9finalStopEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK15QLinearGradient9finalStopEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QLinearGradient::setFinalStop(const QPointF & stop);
-  fn _ZN15QLinearGradient12setFinalStopERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN15QLinearGradient12setFinalStopERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -245,22 +226,22 @@ impl AsRef<QGradient> for QRadialGradient {
 }
   // proto:  void QRadialGradient::QRadialGradient(qreal cx, qreal cy, qreal radius, qreal fx, qreal fy);
 impl /*struct*/ QRadialGradient {
-  pub fn New<T: QRadialGradient_New>(value: T) -> QRadialGradient {
-    let rsthis = value.New();
+  pub fn new<T: QRadialGradient_new>(value: T) -> QRadialGradient {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QRadialGradient_New {
-  fn New(self) -> QRadialGradient;
+pub trait QRadialGradient_new {
+  fn new(self) -> QRadialGradient;
 }
 
   // proto:  void QRadialGradient::QRadialGradient(qreal cx, qreal cy, qreal radius, qreal fx, qreal fy);
-impl<'a> /*trait*/ QRadialGradient_New for (f64, f64, f64, f64, f64) {
-  fn New(self) -> QRadialGradient {
+impl<'a> /*trait*/ QRadialGradient_new for (f64, f64, f64, f64, f64) {
+  fn new(self) -> QRadialGradient {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QRadialGradientC1Eddddd()};
+    // unsafe{_ZN15QRadialGradientC2Eddddd()};
     let ctysz: c_int = unsafe{QRadialGradient_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_double;
@@ -268,8 +249,7 @@ impl<'a> /*trait*/ QRadialGradient_New for (f64, f64, f64, f64, f64) {
     let arg2 = self.2  as c_double;
     let arg3 = self.3  as c_double;
     let arg4 = self.4  as c_double;
-    // unsafe {_ZN15QRadialGradientC1Eddddd(qthis, arg0, arg1, arg2, arg3, arg4)};
-    let qthis: u64 = unsafe {dector_ZN15QRadialGradientC1Eddddd(arg0, arg1, arg2, arg3, arg4)} as u64;
+    let qthis: u64 = unsafe {C_ZN15QRadialGradientC2Eddddd(arg0, arg1, arg2, arg3, arg4)};
     let rsthis = QRadialGradient{qbase: QGradient::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -295,20 +275,19 @@ impl<'a> /*trait*/ QRadialGradient_setFocalPoint<()> for (f64, f64) {
     // unsafe{_ZN15QRadialGradient13setFocalPointEdd()};
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
-     unsafe {demth_ZN15QRadialGradient13setFocalPointEdd(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN15QRadialGradient13setFocalPointEdd(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
 
   // proto:  void QRadialGradient::QRadialGradient();
-impl<'a> /*trait*/ QRadialGradient_New for () {
-  fn New(self) -> QRadialGradient {
+impl<'a> /*trait*/ QRadialGradient_new for () {
+  fn new(self) -> QRadialGradient {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QRadialGradientC1Ev()};
+    // unsafe{_ZN15QRadialGradientC2Ev()};
     let ctysz: c_int = unsafe{QRadialGradient_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN15QRadialGradientC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN15QRadialGradientC1Ev()} as u64;
+    let qthis: u64 = unsafe {C_ZN15QRadialGradientC2Ev()};
     let rsthis = QRadialGradient{qbase: QGradient::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -316,17 +295,16 @@ impl<'a> /*trait*/ QRadialGradient_New for () {
 }
 
   // proto:  void QRadialGradient::QRadialGradient(const QPointF & center, qreal radius, const QPointF & focalPoint);
-impl<'a> /*trait*/ QRadialGradient_New for (&'a QPointF, f64, &'a QPointF) {
-  fn New(self) -> QRadialGradient {
+impl<'a> /*trait*/ QRadialGradient_new for (&'a QPointF, f64, &'a QPointF) {
+  fn new(self) -> QRadialGradient {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QRadialGradientC1ERK7QPointFdS2_()};
+    // unsafe{_ZN15QRadialGradientC2ERK7QPointFdS2_()};
     let ctysz: c_int = unsafe{QRadialGradient_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_double;
     let arg2 = self.2.qclsinst  as *mut c_void;
-    // unsafe {_ZN15QRadialGradientC1ERK7QPointFdS2_(qthis, arg0, arg1, arg2)};
-    let qthis: u64 = unsafe {dector_ZN15QRadialGradientC1ERK7QPointFdS2_(arg0, arg1, arg2)} as u64;
+    let qthis: u64 = unsafe {C_ZN15QRadialGradientC2ERK7QPointFdS2_(arg0, arg1, arg2)};
     let rsthis = QRadialGradient{qbase: QGradient::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -350,8 +328,8 @@ impl<'a> /*trait*/ QRadialGradient_radius<f64> for () {
   fn radius(self , rsthis: & QRadialGradient) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QRadialGradient6radiusEv()};
-    let mut ret = unsafe {_ZNK15QRadialGradient6radiusEv(rsthis.qclsinst)};
-    return ret as f64;
+    let mut ret = unsafe {C_ZNK15QRadialGradient6radiusEv(rsthis.qclsinst)};
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -362,24 +340,23 @@ impl<'a> /*trait*/ QRadialGradient_setFocalPoint<()> for (&'a QPointF) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QRadialGradient13setFocalPointERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN15QRadialGradient13setFocalPointERK7QPointF(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QRadialGradient13setFocalPointERK7QPointF(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
 
   // proto:  void QRadialGradient::QRadialGradient(const QPointF & center, qreal centerRadius, const QPointF & focalPoint, qreal focalRadius);
-impl<'a> /*trait*/ QRadialGradient_New for (&'a QPointF, f64, &'a QPointF, f64) {
-  fn New(self) -> QRadialGradient {
+impl<'a> /*trait*/ QRadialGradient_new for (&'a QPointF, f64, &'a QPointF, f64) {
+  fn new(self) -> QRadialGradient {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QRadialGradientC1ERK7QPointFdS2_d()};
+    // unsafe{_ZN15QRadialGradientC2ERK7QPointFdS2_d()};
     let ctysz: c_int = unsafe{QRadialGradient_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_double;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let arg3 = self.3  as c_double;
-    // unsafe {_ZN15QRadialGradientC1ERK7QPointFdS2_d(qthis, arg0, arg1, arg2, arg3)};
-    let qthis: u64 = unsafe {dector_ZN15QRadialGradientC1ERK7QPointFdS2_d(arg0, arg1, arg2, arg3)} as u64;
+    let qthis: u64 = unsafe {C_ZN15QRadialGradientC2ERK7QPointFdS2_d(arg0, arg1, arg2, arg3)};
     let rsthis = QRadialGradient{qbase: QGradient::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -387,10 +364,10 @@ impl<'a> /*trait*/ QRadialGradient_New for (&'a QPointF, f64, &'a QPointF, f64) 
 }
 
   // proto:  void QRadialGradient::QRadialGradient(qreal cx, qreal cy, qreal centerRadius, qreal fx, qreal fy, qreal focalRadius);
-impl<'a> /*trait*/ QRadialGradient_New for (f64, f64, f64, f64, f64, f64) {
-  fn New(self) -> QRadialGradient {
+impl<'a> /*trait*/ QRadialGradient_new for (f64, f64, f64, f64, f64, f64) {
+  fn new(self) -> QRadialGradient {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QRadialGradientC1Edddddd()};
+    // unsafe{_ZN15QRadialGradientC2Edddddd()};
     let ctysz: c_int = unsafe{QRadialGradient_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_double;
@@ -399,8 +376,7 @@ impl<'a> /*trait*/ QRadialGradient_New for (f64, f64, f64, f64, f64, f64) {
     let arg3 = self.3  as c_double;
     let arg4 = self.4  as c_double;
     let arg5 = self.5  as c_double;
-    // unsafe {_ZN15QRadialGradientC1Edddddd(qthis, arg0, arg1, arg2, arg3, arg4, arg5)};
-    let qthis: u64 = unsafe {dector_ZN15QRadialGradientC1Edddddd(arg0, arg1, arg2, arg3, arg4, arg5)} as u64;
+    let qthis: u64 = unsafe {C_ZN15QRadialGradientC2Edddddd(arg0, arg1, arg2, arg3, arg4, arg5)};
     let rsthis = QRadialGradient{qbase: QGradient::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -424,8 +400,8 @@ impl<'a> /*trait*/ QRadialGradient_centerRadius<f64> for () {
   fn centerRadius(self , rsthis: & QRadialGradient) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QRadialGradient12centerRadiusEv()};
-    let mut ret = unsafe {_ZNK15QRadialGradient12centerRadiusEv(rsthis.qclsinst)};
-    return ret as f64;
+    let mut ret = unsafe {C_ZNK15QRadialGradient12centerRadiusEv(rsthis.qclsinst)};
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -447,7 +423,7 @@ impl<'a> /*trait*/ QRadialGradient_focalPoint<QPointF> for () {
   fn focalPoint(self , rsthis: & QRadialGradient) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QRadialGradient10focalPointEv()};
-    let mut ret = unsafe {_ZNK15QRadialGradient10focalPointEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QRadialGradient10focalPointEv(rsthis.qclsinst)};
     let mut ret1 = QPointF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -471,8 +447,8 @@ impl<'a> /*trait*/ QRadialGradient_focalRadius<f64> for () {
   fn focalRadius(self , rsthis: & QRadialGradient) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QRadialGradient11focalRadiusEv()};
-    let mut ret = unsafe {_ZNK15QRadialGradient11focalRadiusEv(rsthis.qclsinst)};
-    return ret as f64;
+    let mut ret = unsafe {C_ZNK15QRadialGradient11focalRadiusEv(rsthis.qclsinst)};
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -494,7 +470,7 @@ impl<'a> /*trait*/ QRadialGradient_center<QPointF> for () {
   fn center(self , rsthis: & QRadialGradient) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QRadialGradient6centerEv()};
-    let mut ret = unsafe {_ZNK15QRadialGradient6centerEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QRadialGradient6centerEv(rsthis.qclsinst)};
     let mut ret1 = QPointF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -519,22 +495,21 @@ impl<'a> /*trait*/ QRadialGradient_setCenter<()> for (&'a QPointF) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QRadialGradient9setCenterERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN15QRadialGradient9setCenterERK7QPointF(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QRadialGradient9setCenterERK7QPointF(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
 
   // proto:  void QRadialGradient::QRadialGradient(const QPointF & center, qreal radius);
-impl<'a> /*trait*/ QRadialGradient_New for (&'a QPointF, f64) {
-  fn New(self) -> QRadialGradient {
+impl<'a> /*trait*/ QRadialGradient_new for (&'a QPointF, f64) {
+  fn new(self) -> QRadialGradient {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QRadialGradientC1ERK7QPointFd()};
+    // unsafe{_ZN15QRadialGradientC2ERK7QPointFd()};
     let ctysz: c_int = unsafe{QRadialGradient_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_double;
-    // unsafe {_ZN15QRadialGradientC1ERK7QPointFd(qthis, arg0, arg1)};
-    let qthis: u64 = unsafe {dector_ZN15QRadialGradientC1ERK7QPointFd(arg0, arg1)} as u64;
+    let qthis: u64 = unsafe {C_ZN15QRadialGradientC2ERK7QPointFd(arg0, arg1)};
     let rsthis = QRadialGradient{qbase: QGradient::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -559,7 +534,7 @@ impl<'a> /*trait*/ QRadialGradient_setCenterRadius<()> for (f64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QRadialGradient15setCenterRadiusEd()};
     let arg0 = self  as c_double;
-     unsafe {_ZN15QRadialGradient15setCenterRadiusEd(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QRadialGradient15setCenterRadiusEd(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -582,7 +557,7 @@ impl<'a> /*trait*/ QRadialGradient_setFocalRadius<()> for (f64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QRadialGradient14setFocalRadiusEd()};
     let arg0 = self  as c_double;
-     unsafe {_ZN15QRadialGradient14setFocalRadiusEd(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QRadialGradient14setFocalRadiusEd(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -605,23 +580,22 @@ impl<'a> /*trait*/ QRadialGradient_setRadius<()> for (f64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QRadialGradient9setRadiusEd()};
     let arg0 = self  as c_double;
-     unsafe {_ZN15QRadialGradient9setRadiusEd(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QRadialGradient9setRadiusEd(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
 
   // proto:  void QRadialGradient::QRadialGradient(qreal cx, qreal cy, qreal radius);
-impl<'a> /*trait*/ QRadialGradient_New for (f64, f64, f64) {
-  fn New(self) -> QRadialGradient {
+impl<'a> /*trait*/ QRadialGradient_new for (f64, f64, f64) {
+  fn new(self) -> QRadialGradient {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QRadialGradientC1Eddd()};
+    // unsafe{_ZN15QRadialGradientC2Eddd()};
     let ctysz: c_int = unsafe{QRadialGradient_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
     let arg2 = self.2  as c_double;
-    // unsafe {_ZN15QRadialGradientC1Eddd(qthis, arg0, arg1, arg2)};
-    let qthis: u64 = unsafe {dector_ZN15QRadialGradientC1Eddd(arg0, arg1, arg2)} as u64;
+    let qthis: u64 = unsafe {C_ZN15QRadialGradientC2Eddd(arg0, arg1, arg2)};
     let rsthis = QRadialGradient{qbase: QGradient::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -635,7 +609,7 @@ impl<'a> /*trait*/ QRadialGradient_setCenter<()> for (f64, f64) {
     // unsafe{_ZN15QRadialGradient9setCenterEdd()};
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
-     unsafe {demth_ZN15QRadialGradient9setCenterEdd(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN15QRadialGradient9setCenterEdd(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -674,8 +648,8 @@ impl<'a> /*trait*/ QConicalGradient_angle<f64> for () {
   fn angle(self , rsthis: & QConicalGradient) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QConicalGradient5angleEv()};
-    let mut ret = unsafe {_ZNK16QConicalGradient5angleEv(rsthis.qclsinst)};
-    return ret as f64;
+    let mut ret = unsafe {C_ZNK16QConicalGradient5angleEv(rsthis.qclsinst)};
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -697,7 +671,7 @@ impl<'a> /*trait*/ QConicalGradient_center<QPointF> for () {
   fn center(self , rsthis: & QConicalGradient) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QConicalGradient6centerEv()};
-    let mut ret = unsafe {_ZNK16QConicalGradient6centerEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK16QConicalGradient6centerEv(rsthis.qclsinst)};
     let mut ret1 = QPointF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -706,28 +680,27 @@ impl<'a> /*trait*/ QConicalGradient_center<QPointF> for () {
 
   // proto:  void QConicalGradient::QConicalGradient(const QPointF & center, qreal startAngle);
 impl /*struct*/ QConicalGradient {
-  pub fn New<T: QConicalGradient_New>(value: T) -> QConicalGradient {
-    let rsthis = value.New();
+  pub fn new<T: QConicalGradient_new>(value: T) -> QConicalGradient {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QConicalGradient_New {
-  fn New(self) -> QConicalGradient;
+pub trait QConicalGradient_new {
+  fn new(self) -> QConicalGradient;
 }
 
   // proto:  void QConicalGradient::QConicalGradient(const QPointF & center, qreal startAngle);
-impl<'a> /*trait*/ QConicalGradient_New for (&'a QPointF, f64) {
-  fn New(self) -> QConicalGradient {
+impl<'a> /*trait*/ QConicalGradient_new for (&'a QPointF, f64) {
+  fn new(self) -> QConicalGradient {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QConicalGradientC1ERK7QPointFd()};
+    // unsafe{_ZN16QConicalGradientC2ERK7QPointFd()};
     let ctysz: c_int = unsafe{QConicalGradient_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_double;
-    // unsafe {_ZN16QConicalGradientC1ERK7QPointFd(qthis, arg0, arg1)};
-    let qthis: u64 = unsafe {dector_ZN16QConicalGradientC1ERK7QPointFd(arg0, arg1)} as u64;
+    let qthis: u64 = unsafe {C_ZN16QConicalGradientC2ERK7QPointFd(arg0, arg1)};
     let rsthis = QConicalGradient{qbase: QGradient::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -735,14 +708,13 @@ impl<'a> /*trait*/ QConicalGradient_New for (&'a QPointF, f64) {
 }
 
   // proto:  void QConicalGradient::QConicalGradient();
-impl<'a> /*trait*/ QConicalGradient_New for () {
-  fn New(self) -> QConicalGradient {
+impl<'a> /*trait*/ QConicalGradient_new for () {
+  fn new(self) -> QConicalGradient {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QConicalGradientC1Ev()};
+    // unsafe{_ZN16QConicalGradientC2Ev()};
     let ctysz: c_int = unsafe{QConicalGradient_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN16QConicalGradientC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN16QConicalGradientC1Ev()} as u64;
+    let qthis: u64 = unsafe {C_ZN16QConicalGradientC2Ev()};
     let rsthis = QConicalGradient{qbase: QGradient::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -767,7 +739,7 @@ impl<'a> /*trait*/ QConicalGradient_setAngle<()> for (f64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QConicalGradient8setAngleEd()};
     let arg0 = self  as c_double;
-     unsafe {_ZN16QConicalGradient8setAngleEd(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN16QConicalGradient8setAngleEd(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -791,7 +763,7 @@ impl<'a> /*trait*/ QConicalGradient_setCenter<()> for (f64, f64) {
     // unsafe{_ZN16QConicalGradient9setCenterEdd()};
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
-     unsafe {demth_ZN16QConicalGradient9setCenterEdd(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN16QConicalGradient9setCenterEdd(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -802,23 +774,22 @@ impl<'a> /*trait*/ QConicalGradient_setCenter<()> for (&'a QPointF) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QConicalGradient9setCenterERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN16QConicalGradient9setCenterERK7QPointF(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN16QConicalGradient9setCenterERK7QPointF(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
 
   // proto:  void QConicalGradient::QConicalGradient(qreal cx, qreal cy, qreal startAngle);
-impl<'a> /*trait*/ QConicalGradient_New for (f64, f64, f64) {
-  fn New(self) -> QConicalGradient {
+impl<'a> /*trait*/ QConicalGradient_new for (f64, f64, f64) {
+  fn new(self) -> QConicalGradient {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QConicalGradientC1Eddd()};
+    // unsafe{_ZN16QConicalGradientC2Eddd()};
     let ctysz: c_int = unsafe{QConicalGradient_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
     let arg2 = self.2  as c_double;
-    // unsafe {_ZN16QConicalGradientC1Eddd(qthis, arg0, arg1, arg2)};
-    let qthis: u64 = unsafe {dector_ZN16QConicalGradientC1Eddd(arg0, arg1, arg2)} as u64;
+    let qthis: u64 = unsafe {C_ZN16QConicalGradientC2Eddd(arg0, arg1, arg2)};
     let rsthis = QConicalGradient{qbase: QGradient::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -832,26 +803,25 @@ impl /*struct*/ QBrush {
 }
   // proto:  void QBrush::QBrush();
 impl /*struct*/ QBrush {
-  pub fn New<T: QBrush_New>(value: T) -> QBrush {
-    let rsthis = value.New();
+  pub fn new<T: QBrush_new>(value: T) -> QBrush {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QBrush_New {
-  fn New(self) -> QBrush;
+pub trait QBrush_new {
+  fn new(self) -> QBrush;
 }
 
   // proto:  void QBrush::QBrush();
-impl<'a> /*trait*/ QBrush_New for () {
-  fn New(self) -> QBrush {
+impl<'a> /*trait*/ QBrush_new for () {
+  fn new(self) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN6QBrushC1Ev()};
+    // unsafe{_ZN6QBrushC2Ev()};
     let ctysz: c_int = unsafe{QBrush_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN6QBrushC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN6QBrushC1Ev()} as u64;
+    let qthis: u64 = unsafe {C_ZN6QBrushC2Ev()};
     let rsthis = QBrush{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -859,15 +829,14 @@ impl<'a> /*trait*/ QBrush_New for () {
 }
 
   // proto:  void QBrush::QBrush(const QPixmap & pixmap);
-impl<'a> /*trait*/ QBrush_New for (&'a QPixmap) {
-  fn New(self) -> QBrush {
+impl<'a> /*trait*/ QBrush_new for (&'a QPixmap) {
+  fn new(self) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN6QBrushC1ERK7QPixmap()};
+    // unsafe{_ZN6QBrushC2ERK7QPixmap()};
     let ctysz: c_int = unsafe{QBrush_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN6QBrushC1ERK7QPixmap(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN6QBrushC1ERK7QPixmap(arg0)} as u64;
+    let qthis: u64 = unsafe {C_ZN6QBrushC2ERK7QPixmap(arg0)};
     let rsthis = QBrush{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -892,7 +861,7 @@ impl<'a> /*trait*/ QBrush_setTexture<()> for (&'a QPixmap) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QBrush10setTextureERK7QPixmap()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN6QBrush10setTextureERK7QPixmap(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN6QBrush10setTextureERK7QPixmap(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -915,22 +884,21 @@ impl<'a> /*trait*/ QBrush_setTextureImage<()> for (&'a QImage) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QBrush15setTextureImageERK6QImage()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN6QBrush15setTextureImageERK6QImage(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN6QBrush15setTextureImageERK6QImage(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
 
   // proto:  void QBrush::QBrush(const QColor & color, const QPixmap & pixmap);
-impl<'a> /*trait*/ QBrush_New for (&'a QColor, &'a QPixmap) {
-  fn New(self) -> QBrush {
+impl<'a> /*trait*/ QBrush_new for (&'a QColor, &'a QPixmap) {
+  fn new(self) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN6QBrushC1ERK6QColorRK7QPixmap()};
+    // unsafe{_ZN6QBrushC2ERK6QColorRK7QPixmap()};
     let ctysz: c_int = unsafe{QBrush_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    // unsafe {_ZN6QBrushC1ERK6QColorRK7QPixmap(qthis, arg0, arg1)};
-    let qthis: u64 = unsafe {dector_ZN6QBrushC1ERK6QColorRK7QPixmap(arg0, arg1)} as u64;
+    let qthis: u64 = unsafe {C_ZN6QBrushC2ERK6QColorRK7QPixmap(arg0, arg1)};
     let rsthis = QBrush{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -954,7 +922,7 @@ impl<'a> /*trait*/ QBrush_texture<QPixmap> for () {
   fn texture(self , rsthis: & QBrush) -> QPixmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QBrush7textureEv()};
-    let mut ret = unsafe {_ZNK6QBrush7textureEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK6QBrush7textureEv(rsthis.qclsinst)};
     let mut ret1 = QPixmap::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -962,15 +930,14 @@ impl<'a> /*trait*/ QBrush_texture<QPixmap> for () {
 }
 
   // proto:  void QBrush::QBrush(const QGradient & gradient);
-impl<'a> /*trait*/ QBrush_New for (&'a QGradient) {
-  fn New(self) -> QBrush {
+impl<'a> /*trait*/ QBrush_new for (&'a QGradient) {
+  fn new(self) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN6QBrushC1ERK9QGradient()};
+    // unsafe{_ZN6QBrushC2ERK9QGradient()};
     let ctysz: c_int = unsafe{QBrush_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN6QBrushC1ERK9QGradient(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN6QBrushC1ERK9QGradient(arg0)} as u64;
+    let qthis: u64 = unsafe {C_ZN6QBrushC2ERK9QGradient(arg0)};
     let rsthis = QBrush{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -994,7 +961,7 @@ impl<'a> /*trait*/ QBrush_transform<QTransform> for () {
   fn transform(self , rsthis: & QBrush) -> QTransform {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QBrush9transformEv()};
-    let mut ret = unsafe {demth_ZNK6QBrush9transformEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK6QBrush9transformEv(rsthis.qclsinst)};
     let mut ret1 = QTransform::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1019,7 +986,7 @@ impl<'a> /*trait*/ QBrush_setTransform<()> for (&'a QTransform) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QBrush12setTransformERK10QTransform()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN6QBrush12setTransformERK10QTransform(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN6QBrush12setTransformERK10QTransform(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1041,8 +1008,8 @@ impl<'a> /*trait*/ QBrush_isOpaque<i8> for () {
   fn isOpaque(self , rsthis: & QBrush) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QBrush8isOpaqueEv()};
-    let mut ret = unsafe {_ZNK6QBrush8isOpaqueEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK6QBrush8isOpaqueEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1064,7 +1031,7 @@ impl<'a> /*trait*/ QBrush_gradient<QGradient> for () {
   fn gradient(self , rsthis: & QBrush) -> QGradient {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QBrush8gradientEv()};
-    let mut ret = unsafe {_ZNK6QBrush8gradientEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK6QBrush8gradientEv(rsthis.qclsinst)};
     let mut ret1 = QGradient::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1073,22 +1040,22 @@ impl<'a> /*trait*/ QBrush_gradient<QGradient> for () {
 
   // proto:  void QBrush::~QBrush();
 impl /*struct*/ QBrush {
-  pub fn Free<RetType, T: QBrush_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QBrush_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QBrush_Free<RetType> {
-  fn Free(self , rsthis: & QBrush) -> RetType;
+pub trait QBrush_free<RetType> {
+  fn free(self , rsthis: & QBrush) -> RetType;
 }
 
   // proto:  void QBrush::~QBrush();
-impl<'a> /*trait*/ QBrush_Free<()> for () {
-  fn Free(self , rsthis: & QBrush) -> () {
+impl<'a> /*trait*/ QBrush_free<()> for () {
+  fn free(self , rsthis: & QBrush) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN6QBrushD0Ev()};
-     unsafe {_ZN6QBrushD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN6QBrushD2Ev()};
+     unsafe {C_ZN6QBrushD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1111,7 +1078,7 @@ impl<'a> /*trait*/ QBrush_setMatrix<()> for (&'a QMatrix) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QBrush9setMatrixERK7QMatrix()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN6QBrush9setMatrixERK7QMatrix(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN6QBrush9setMatrixERK7QMatrix(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1134,21 +1101,20 @@ impl<'a> /*trait*/ QBrush_setColor<()> for (&'a QColor) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QBrush8setColorERK6QColor()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN6QBrush8setColorERK6QColor(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN6QBrush8setColorERK6QColor(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
 
   // proto:  void QBrush::QBrush(const QBrush & brush);
-impl<'a> /*trait*/ QBrush_New for (&'a QBrush) {
-  fn New(self) -> QBrush {
+impl<'a> /*trait*/ QBrush_new for (&'a QBrush) {
+  fn new(self) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN6QBrushC1ERKS_()};
+    // unsafe{_ZN6QBrushC2ERKS_()};
     let ctysz: c_int = unsafe{QBrush_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN6QBrushC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN6QBrushC1ERKS_(arg0)} as u64;
+    let qthis: u64 = unsafe {C_ZN6QBrushC2ERKS_(arg0)};
     let rsthis = QBrush{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1172,7 +1138,7 @@ impl<'a> /*trait*/ QBrush_matrix<QMatrix> for () {
   fn matrix(self , rsthis: & QBrush) -> QMatrix {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QBrush6matrixEv()};
-    let mut ret = unsafe {demth_ZNK6QBrush6matrixEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK6QBrush6matrixEv(rsthis.qclsinst)};
     let mut ret1 = QMatrix::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1196,7 +1162,7 @@ impl<'a> /*trait*/ QBrush_textureImage<QImage> for () {
   fn textureImage(self , rsthis: & QBrush) -> QImage {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QBrush12textureImageEv()};
-    let mut ret = unsafe {_ZNK6QBrush12textureImageEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK6QBrush12textureImageEv(rsthis.qclsinst)};
     let mut ret1 = QImage::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1220,8 +1186,8 @@ impl<'a> /*trait*/ QBrush_isDetached<i8> for () {
   fn isDetached(self , rsthis: & QBrush) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QBrush10isDetachedEv()};
-    let mut ret = unsafe {demth_ZNK6QBrush10isDetachedEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK6QBrush10isDetachedEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1244,7 +1210,7 @@ impl<'a> /*trait*/ QBrush_swap<()> for (&'a QBrush) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QBrush4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {demth_ZN6QBrush4swapERS_(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN6QBrush4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1266,7 +1232,7 @@ impl<'a> /*trait*/ QBrush_color<QColor> for () {
   fn color(self , rsthis: & QBrush) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QBrush5colorEv()};
-    let mut ret = unsafe {demth_ZNK6QBrush5colorEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK6QBrush5colorEv(rsthis.qclsinst)};
     let mut ret1 = QColor::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1274,15 +1240,14 @@ impl<'a> /*trait*/ QBrush_color<QColor> for () {
 }
 
   // proto:  void QBrush::QBrush(const QImage & image);
-impl<'a> /*trait*/ QBrush_New for (&'a QImage) {
-  fn New(self) -> QBrush {
+impl<'a> /*trait*/ QBrush_new for (&'a QImage) {
+  fn new(self) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN6QBrushC1ERK6QImage()};
+    // unsafe{_ZN6QBrushC2ERK6QImage()};
     let ctysz: c_int = unsafe{QBrush_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN6QBrushC1ERK6QImage(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN6QBrushC1ERK6QImage(arg0)} as u64;
+    let qthis: u64 = unsafe {C_ZN6QBrushC2ERK6QImage(arg0)};
     let rsthis = QBrush{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1313,7 +1278,7 @@ impl<'a> /*trait*/ QGradient_setColorAt<()> for (f64, &'a QColor) {
     // unsafe{_ZN9QGradient10setColorAtEdRK6QColor()};
     let arg0 = self.0  as c_double;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN9QGradient10setColorAtEdRK6QColor(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN9QGradient10setColorAtEdRK6QColor(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -1331,37 +1296,37 @@ pub trait QGradient_stops<RetType> {
 }
 
   // proto:  QGradientStops QGradient::stops();
-impl<'a> /*trait*/ QGradient_stops<()> for () {
-  fn stops(self , rsthis: & QGradient) -> () {
+impl<'a> /*trait*/ QGradient_stops<u64> for () {
+  fn stops(self , rsthis: & QGradient) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QGradient5stopsEv()};
-     unsafe {_ZNK9QGradient5stopsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QGradient5stopsEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
 
   // proto:  void QGradient::QGradient();
 impl /*struct*/ QGradient {
-  pub fn New<T: QGradient_New>(value: T) -> QGradient {
-    let rsthis = value.New();
+  pub fn new<T: QGradient_new>(value: T) -> QGradient {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QGradient_New {
-  fn New(self) -> QGradient;
+pub trait QGradient_new {
+  fn new(self) -> QGradient;
 }
 
   // proto:  void QGradient::QGradient();
-impl<'a> /*trait*/ QGradient_New for () {
-  fn New(self) -> QGradient {
+impl<'a> /*trait*/ QGradient_new for () {
+  fn new(self) -> QGradient {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QGradientC1Ev()};
+    // unsafe{_ZN9QGradientC2Ev()};
     let ctysz: c_int = unsafe{QGradient_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN9QGradientC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN9QGradientC1Ev()} as u64;
+    let qthis: u64 = unsafe {C_ZN9QGradientC2Ev()};
     let rsthis = QGradient{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1409,7 +1374,7 @@ impl<'a> /*trait*/ QLinearGradient_setFinalStop<()> for (f64, f64) {
     // unsafe{_ZN15QLinearGradient12setFinalStopEdd()};
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
-     unsafe {demth_ZN15QLinearGradient12setFinalStopEdd(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN15QLinearGradient12setFinalStopEdd(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -1431,7 +1396,7 @@ impl<'a> /*trait*/ QLinearGradient_start<QPointF> for () {
   fn start(self , rsthis: & QLinearGradient) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QLinearGradient5startEv()};
-    let mut ret = unsafe {_ZNK15QLinearGradient5startEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QLinearGradient5startEv(rsthis.qclsinst)};
     let mut ret1 = QPointF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1440,30 +1405,29 @@ impl<'a> /*trait*/ QLinearGradient_start<QPointF> for () {
 
   // proto:  void QLinearGradient::QLinearGradient(qreal xStart, qreal yStart, qreal xFinalStop, qreal yFinalStop);
 impl /*struct*/ QLinearGradient {
-  pub fn New<T: QLinearGradient_New>(value: T) -> QLinearGradient {
-    let rsthis = value.New();
+  pub fn new<T: QLinearGradient_new>(value: T) -> QLinearGradient {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QLinearGradient_New {
-  fn New(self) -> QLinearGradient;
+pub trait QLinearGradient_new {
+  fn new(self) -> QLinearGradient;
 }
 
   // proto:  void QLinearGradient::QLinearGradient(qreal xStart, qreal yStart, qreal xFinalStop, qreal yFinalStop);
-impl<'a> /*trait*/ QLinearGradient_New for (f64, f64, f64, f64) {
-  fn New(self) -> QLinearGradient {
+impl<'a> /*trait*/ QLinearGradient_new for (f64, f64, f64, f64) {
+  fn new(self) -> QLinearGradient {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QLinearGradientC1Edddd()};
+    // unsafe{_ZN15QLinearGradientC2Edddd()};
     let ctysz: c_int = unsafe{QLinearGradient_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
     let arg2 = self.2  as c_double;
     let arg3 = self.3  as c_double;
-    // unsafe {_ZN15QLinearGradientC1Edddd(qthis, arg0, arg1, arg2, arg3)};
-    let qthis: u64 = unsafe {dector_ZN15QLinearGradientC1Edddd(arg0, arg1, arg2, arg3)} as u64;
+    let qthis: u64 = unsafe {C_ZN15QLinearGradientC2Edddd(arg0, arg1, arg2, arg3)};
     let rsthis = QLinearGradient{qbase: QGradient::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1471,16 +1435,15 @@ impl<'a> /*trait*/ QLinearGradient_New for (f64, f64, f64, f64) {
 }
 
   // proto:  void QLinearGradient::QLinearGradient(const QPointF & start, const QPointF & finalStop);
-impl<'a> /*trait*/ QLinearGradient_New for (&'a QPointF, &'a QPointF) {
-  fn New(self) -> QLinearGradient {
+impl<'a> /*trait*/ QLinearGradient_new for (&'a QPointF, &'a QPointF) {
+  fn new(self) -> QLinearGradient {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QLinearGradientC1ERK7QPointFS2_()};
+    // unsafe{_ZN15QLinearGradientC2ERK7QPointFS2_()};
     let ctysz: c_int = unsafe{QLinearGradient_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    // unsafe {_ZN15QLinearGradientC1ERK7QPointFS2_(qthis, arg0, arg1)};
-    let qthis: u64 = unsafe {dector_ZN15QLinearGradientC1ERK7QPointFS2_(arg0, arg1)} as u64;
+    let qthis: u64 = unsafe {C_ZN15QLinearGradientC2ERK7QPointFS2_(arg0, arg1)};
     let rsthis = QLinearGradient{qbase: QGradient::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1506,7 +1469,7 @@ impl<'a> /*trait*/ QLinearGradient_setStart<()> for (f64, f64) {
     // unsafe{_ZN15QLinearGradient8setStartEdd()};
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
-     unsafe {demth_ZN15QLinearGradient8setStartEdd(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN15QLinearGradient8setStartEdd(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -1517,20 +1480,19 @@ impl<'a> /*trait*/ QLinearGradient_setStart<()> for (&'a QPointF) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QLinearGradient8setStartERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN15QLinearGradient8setStartERK7QPointF(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QLinearGradient8setStartERK7QPointF(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
 
   // proto:  void QLinearGradient::QLinearGradient();
-impl<'a> /*trait*/ QLinearGradient_New for () {
-  fn New(self) -> QLinearGradient {
+impl<'a> /*trait*/ QLinearGradient_new for () {
+  fn new(self) -> QLinearGradient {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QLinearGradientC1Ev()};
+    // unsafe{_ZN15QLinearGradientC2Ev()};
     let ctysz: c_int = unsafe{QLinearGradient_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN15QLinearGradientC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN15QLinearGradientC1Ev()} as u64;
+    let qthis: u64 = unsafe {C_ZN15QLinearGradientC2Ev()};
     let rsthis = QLinearGradient{qbase: QGradient::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -1554,7 +1516,7 @@ impl<'a> /*trait*/ QLinearGradient_finalStop<QPointF> for () {
   fn finalStop(self , rsthis: & QLinearGradient) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QLinearGradient9finalStopEv()};
-    let mut ret = unsafe {_ZNK15QLinearGradient9finalStopEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QLinearGradient9finalStopEv(rsthis.qclsinst)};
     let mut ret1 = QPointF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1567,7 +1529,7 @@ impl<'a> /*trait*/ QLinearGradient_setFinalStop<()> for (&'a QPointF) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QLinearGradient12setFinalStopERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN15QLinearGradient12setFinalStopERK7QPointF(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QLinearGradient12setFinalStopERK7QPointF(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qdockwidget.h
 // dst-file: /src/widgets/qdockwidget.rs
 //
@@ -18,10 +18,11 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qwidget::QWidget; // 773
+use super::qwidget::*; // 773
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
-use super::qaction::QAction; // 773
+use super::super::core::qstring::*; // 771
+use super::qaction::*; // 773
+use super::super::core::qobjectdefs::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -33,40 +34,25 @@ use super::qaction::QAction; // 773
 extern {
   fn QDockWidget_Class_Size() -> c_int;
   // proto:  QWidget * QDockWidget::widget();
-  fn _ZNK11QDockWidget6widgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK11QDockWidget6widgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QDockWidget::setFloating(bool floating);
-  fn _ZN11QDockWidget11setFloatingEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN11QDockWidget11setFloatingEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QWidget * QDockWidget::titleBarWidget();
-  fn _ZNK11QDockWidget14titleBarWidgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QDockWidget::topLevelChanged(bool topLevel);
-  fn _ZN11QDockWidget15topLevelChangedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZNK11QDockWidget14titleBarWidgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QDockWidget::~QDockWidget();
-  fn _ZN11QDockWidgetD0Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN11QDockWidgetD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QDockWidget::setWidget(QWidget * widget);
-  fn _ZN11QDockWidget9setWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QDockWidget9setWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QDockWidget::isFloating();
-  fn demth_ZNK11QDockWidget10isFloatingEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK11QDockWidget10isFloatingEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QAction * QDockWidget::toggleViewAction();
-  fn _ZNK11QDockWidget16toggleViewActionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QDockWidget::QDockWidget(const QDockWidget & );
-  fn dector_ZN11QDockWidgetC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QDockWidgetC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK11QDockWidget16toggleViewActionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QDockWidget::setTitleBarWidget(QWidget * widget);
-  fn _ZN11QDockWidget17setTitleBarWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QDockWidget17setTitleBarWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QDockWidget::metaObject();
-  fn _ZNK11QDockWidget10metaObjectEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QDockWidget::visibilityChanged(bool visible);
-  fn _ZN11QDockWidget17visibilityChangedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
-  fn QDockWidget_SlotProxy_connect__ZN11QDockWidget19dockLocationChangedEN2Qt14DockWidgetAreaE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QDockWidget_SlotProxy_connect_box__ZN11QDockWidget19dockLocationChangedEN2Qt14DockWidgetAreaE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QDockWidget_SlotProxy_connect__ZN11QDockWidget15featuresChangedE6QFlagsINS_17DockWidgetFeatureEE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QDockWidget_SlotProxy_connect_box__ZN11QDockWidget15featuresChangedE6QFlagsINS_17DockWidgetFeatureEE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn C_ZNK11QDockWidget10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   fn QDockWidget_SlotProxy_connect__ZN11QDockWidget17visibilityChangedEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QDockWidget_SlotProxy_connect_box__ZN11QDockWidget17visibilityChangedEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QDockWidget_SlotProxy_connect__ZN11QDockWidget15topLevelChangedEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QDockWidget_SlotProxy_connect_box__ZN11QDockWidget15topLevelChangedEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QDockWidget_SlotProxy_connect__ZN11QDockWidget19allowedAreasChangedE6QFlagsIN2Qt14DockWidgetAreaEE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QDockWidget_SlotProxy_connect_box__ZN11QDockWidget19allowedAreasChangedE6QFlagsIN2Qt14DockWidgetAreaEE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -75,11 +61,11 @@ extern {
 pub struct QDockWidget {
   qbase: QWidget,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _featuresChanged_1: QDockWidget_featuresChanged_signal,
-  pub _visibilityChanged_1: QDockWidget_visibilityChanged_signal,
-  pub _topLevelChanged_1: QDockWidget_topLevelChanged_signal,
-  pub _allowedAreasChanged_1: QDockWidget_allowedAreasChanged_signal,
-  pub _dockLocationChanged_1: QDockWidget_dockLocationChanged_signal,
+  pub _featuresChanged: QDockWidget_featuresChanged_signal,
+  pub _visibilityChanged: QDockWidget_visibilityChanged_signal,
+  pub _topLevelChanged: QDockWidget_topLevelChanged_signal,
+  pub _allowedAreasChanged: QDockWidget_allowedAreasChanged_signal,
+  pub _dockLocationChanged: QDockWidget_dockLocationChanged_signal,
 }
 
 impl /*struct*/ QDockWidget {
@@ -116,7 +102,7 @@ impl<'a> /*trait*/ QDockWidget_widget<QWidget> for () {
   fn widget(self , rsthis: & QDockWidget) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QDockWidget6widgetEv()};
-    let mut ret = unsafe {_ZNK11QDockWidget6widgetEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QDockWidget6widgetEv(rsthis.qclsinst)};
     let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -141,7 +127,7 @@ impl<'a> /*trait*/ QDockWidget_setFloating<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QDockWidget11setFloatingEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN11QDockWidget11setFloatingEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QDockWidget11setFloatingEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -163,54 +149,31 @@ impl<'a> /*trait*/ QDockWidget_titleBarWidget<QWidget> for () {
   fn titleBarWidget(self , rsthis: & QDockWidget) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QDockWidget14titleBarWidgetEv()};
-    let mut ret = unsafe {_ZNK11QDockWidget14titleBarWidgetEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QDockWidget14titleBarWidgetEv(rsthis.qclsinst)};
     let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
   }
 }
 
-  // proto:  void QDockWidget::topLevelChanged(bool topLevel);
+  // proto:  void QDockWidget::~QDockWidget();
 impl /*struct*/ QDockWidget {
-  pub fn topLevelChanged<RetType, T: QDockWidget_topLevelChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.topLevelChanged(self);
+  pub fn free<RetType, T: QDockWidget_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QDockWidget_topLevelChanged<RetType> {
-  fn topLevelChanged(self , rsthis: & QDockWidget) -> RetType;
-}
-
-  // proto:  void QDockWidget::topLevelChanged(bool topLevel);
-impl<'a> /*trait*/ QDockWidget_topLevelChanged<()> for (i8) {
-  fn topLevelChanged(self , rsthis: & QDockWidget) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QDockWidget15topLevelChangedEb()};
-    let arg0 = self  as c_char;
-     unsafe {_ZN11QDockWidget15topLevelChangedEb(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
+pub trait QDockWidget_free<RetType> {
+  fn free(self , rsthis: & QDockWidget) -> RetType;
 }
 
   // proto:  void QDockWidget::~QDockWidget();
-impl /*struct*/ QDockWidget {
-  pub fn Free<RetType, T: QDockWidget_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
-    // return 1;
-  }
-}
-
-pub trait QDockWidget_Free<RetType> {
-  fn Free(self , rsthis: & QDockWidget) -> RetType;
-}
-
-  // proto:  void QDockWidget::~QDockWidget();
-impl<'a> /*trait*/ QDockWidget_Free<()> for () {
-  fn Free(self , rsthis: & QDockWidget) -> () {
+impl<'a> /*trait*/ QDockWidget_free<()> for () {
+  fn free(self , rsthis: & QDockWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QDockWidgetD0Ev()};
-     unsafe {_ZN11QDockWidgetD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN11QDockWidgetD2Ev()};
+     unsafe {C_ZN11QDockWidgetD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -233,7 +196,7 @@ impl<'a> /*trait*/ QDockWidget_setWidget<()> for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QDockWidget9setWidgetEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QDockWidget9setWidgetEP7QWidget(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QDockWidget9setWidgetEP7QWidget(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -255,8 +218,8 @@ impl<'a> /*trait*/ QDockWidget_isFloating<i8> for () {
   fn isFloating(self , rsthis: & QDockWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QDockWidget10isFloatingEv()};
-    let mut ret = unsafe {demth_ZNK11QDockWidget10isFloatingEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK11QDockWidget10isFloatingEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -278,38 +241,9 @@ impl<'a> /*trait*/ QDockWidget_toggleViewAction<QAction> for () {
   fn toggleViewAction(self , rsthis: & QDockWidget) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QDockWidget16toggleViewActionEv()};
-    let mut ret = unsafe {_ZNK11QDockWidget16toggleViewActionEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QDockWidget16toggleViewActionEv(rsthis.qclsinst)};
     let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QDockWidget::QDockWidget(const QDockWidget & );
-impl /*struct*/ QDockWidget {
-  pub fn New<T: QDockWidget_New>(value: T) -> QDockWidget {
-    let rsthis = value.New();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QDockWidget_New {
-  fn New(self) -> QDockWidget;
-}
-
-  // proto:  void QDockWidget::QDockWidget(const QDockWidget & );
-impl<'a> /*trait*/ QDockWidget_New for (&'a QDockWidget) {
-  fn New(self) -> QDockWidget {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QDockWidgetC1ERKS_()};
-    let ctysz: c_int = unsafe{QDockWidget_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN11QDockWidgetC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN11QDockWidgetC1ERKS_(arg0)} as u64;
-    let rsthis = QDockWidget{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
     // return 1;
   }
 }
@@ -332,7 +266,7 @@ impl<'a> /*trait*/ QDockWidget_setTitleBarWidget<()> for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QDockWidget17setTitleBarWidgetEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QDockWidget17setTitleBarWidgetEP7QWidget(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QDockWidget17setTitleBarWidgetEP7QWidget(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -350,34 +284,13 @@ pub trait QDockWidget_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QDockWidget::metaObject();
-impl<'a> /*trait*/ QDockWidget_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QDockWidget) -> () {
+impl<'a> /*trait*/ QDockWidget_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QDockWidget) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QDockWidget10metaObjectEv()};
-     unsafe {_ZNK11QDockWidget10metaObjectEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QDockWidget::visibilityChanged(bool visible);
-impl /*struct*/ QDockWidget {
-  pub fn visibilityChanged<RetType, T: QDockWidget_visibilityChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.visibilityChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QDockWidget_visibilityChanged<RetType> {
-  fn visibilityChanged(self , rsthis: & QDockWidget) -> RetType;
-}
-
-  // proto:  void QDockWidget::visibilityChanged(bool visible);
-impl<'a> /*trait*/ QDockWidget_visibilityChanged<()> for (i8) {
-  fn visibilityChanged(self , rsthis: & QDockWidget) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QDockWidget17visibilityChangedEb()};
-    let arg0 = self  as c_char;
-     unsafe {_ZN11QDockWidget17visibilityChangedEb(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK11QDockWidget10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -385,7 +298,7 @@ impl<'a> /*trait*/ QDockWidget_visibilityChanged<()> for (i8) {
 #[derive(Default)] // for QDockWidget_featuresChanged
 pub struct QDockWidget_featuresChanged_signal{poi:u64}
 impl /* struct */ QDockWidget {
-  pub fn featuresChanged_1(&self) -> QDockWidget_featuresChanged_signal {
+  pub fn featuresChanged(&self) -> QDockWidget_featuresChanged_signal {
      return QDockWidget_featuresChanged_signal{poi:self.qclsinst};
   }
 }
@@ -401,7 +314,7 @@ pub trait QDockWidget_featuresChanged_signal_connect {
 #[derive(Default)] // for QDockWidget_visibilityChanged
 pub struct QDockWidget_visibilityChanged_signal{poi:u64}
 impl /* struct */ QDockWidget {
-  pub fn visibilityChanged_1(&self) -> QDockWidget_visibilityChanged_signal {
+  pub fn visibilityChanged(&self) -> QDockWidget_visibilityChanged_signal {
      return QDockWidget_visibilityChanged_signal{poi:self.qclsinst};
   }
 }
@@ -417,7 +330,7 @@ pub trait QDockWidget_visibilityChanged_signal_connect {
 #[derive(Default)] // for QDockWidget_topLevelChanged
 pub struct QDockWidget_topLevelChanged_signal{poi:u64}
 impl /* struct */ QDockWidget {
-  pub fn topLevelChanged_1(&self) -> QDockWidget_topLevelChanged_signal {
+  pub fn topLevelChanged(&self) -> QDockWidget_topLevelChanged_signal {
      return QDockWidget_topLevelChanged_signal{poi:self.qclsinst};
   }
 }
@@ -433,7 +346,7 @@ pub trait QDockWidget_topLevelChanged_signal_connect {
 #[derive(Default)] // for QDockWidget_allowedAreasChanged
 pub struct QDockWidget_allowedAreasChanged_signal{poi:u64}
 impl /* struct */ QDockWidget {
-  pub fn allowedAreasChanged_1(&self) -> QDockWidget_allowedAreasChanged_signal {
+  pub fn allowedAreasChanged(&self) -> QDockWidget_allowedAreasChanged_signal {
      return QDockWidget_allowedAreasChanged_signal{poi:self.qclsinst};
   }
 }
@@ -449,7 +362,7 @@ pub trait QDockWidget_allowedAreasChanged_signal_connect {
 #[derive(Default)] // for QDockWidget_dockLocationChanged
 pub struct QDockWidget_dockLocationChanged_signal{poi:u64}
 impl /* struct */ QDockWidget {
-  pub fn dockLocationChanged_1(&self) -> QDockWidget_dockLocationChanged_signal {
+  pub fn dockLocationChanged(&self) -> QDockWidget_dockLocationChanged_signal {
      return QDockWidget_dockLocationChanged_signal{poi:self.qclsinst};
   }
 }
@@ -462,154 +375,76 @@ pub trait QDockWidget_dockLocationChanged_signal_connect {
   fn connect(self, sigthis: QDockWidget_dockLocationChanged_signal);
 }
 
-// dockLocationChanged(Qt::DockWidgetArea)
-extern fn QDockWidget_dockLocationChanged_signal_connect_cb_0(rsfptr:fn(i32), arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-}
-extern fn QDockWidget_dockLocationChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-}
-impl /* trait */ QDockWidget_dockLocationChanged_signal_connect for fn(i32) {
-  fn connect(self, sigthis: QDockWidget_dockLocationChanged_signal) {
-    // do smth...
-    self as u64;
-    self as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QDockWidget_dockLocationChanged_signal_connect_cb_0 as *mut c_void;
-    let arg2 = self as *mut c_void;
-    unsafe {QDockWidget_SlotProxy_connect__ZN11QDockWidget19dockLocationChangedEN2Qt14DockWidgetAreaE(arg0, arg1, arg2)};
-  }
-}
-impl /* trait */ QDockWidget_dockLocationChanged_signal_connect for Box<fn(i32)> {
-  fn connect(self, sigthis: QDockWidget_dockLocationChanged_signal) {
-    // do smth...
-    // Box::into_raw(self) as u64;
-    // Box::into_raw(self) as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QDockWidget_dockLocationChanged_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
-    unsafe {QDockWidget_SlotProxy_connect__ZN11QDockWidget19dockLocationChangedEN2Qt14DockWidgetAreaE(arg0, arg1, arg2)};
-  }
-}
-// featuresChanged(class QDockWidget::DockWidgetFeatures)
-extern fn QDockWidget_featuresChanged_signal_connect_cb_1(rsfptr:fn(i32), arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-}
-extern fn QDockWidget_featuresChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-}
-impl /* trait */ QDockWidget_featuresChanged_signal_connect for fn(i32) {
-  fn connect(self, sigthis: QDockWidget_featuresChanged_signal) {
-    // do smth...
-    self as u64;
-    self as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QDockWidget_featuresChanged_signal_connect_cb_1 as *mut c_void;
-    let arg2 = self as *mut c_void;
-    unsafe {QDockWidget_SlotProxy_connect__ZN11QDockWidget15featuresChangedE6QFlagsINS_17DockWidgetFeatureEE(arg0, arg1, arg2)};
-  }
-}
-impl /* trait */ QDockWidget_featuresChanged_signal_connect for Box<fn(i32)> {
-  fn connect(self, sigthis: QDockWidget_featuresChanged_signal) {
-    // do smth...
-    // Box::into_raw(self) as u64;
-    // Box::into_raw(self) as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QDockWidget_featuresChanged_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
-    unsafe {QDockWidget_SlotProxy_connect__ZN11QDockWidget15featuresChangedE6QFlagsINS_17DockWidgetFeatureEE(arg0, arg1, arg2)};
-  }
-}
 // visibilityChanged(_Bool)
-extern fn QDockWidget_visibilityChanged_signal_connect_cb_2(rsfptr:fn(i8), arg0: c_char) {
+extern fn QDockWidget_visibilityChanged_signal_connect_cb_0(rsfptr:fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i8;
+  rsfptr(rsarg0);
 }
-extern fn QDockWidget_visibilityChanged_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, arg0: c_char) {
+extern fn QDockWidget_visibilityChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(i8)>, arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i8;
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QDockWidget_visibilityChanged_signal_connect for fn(i8) {
   fn connect(self, sigthis: QDockWidget_visibilityChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QDockWidget_visibilityChanged_signal_connect_cb_2 as *mut c_void;
+    let arg1 = QDockWidget_visibilityChanged_signal_connect_cb_0 as *mut c_void;
     let arg2 = self as *mut c_void;
     unsafe {QDockWidget_SlotProxy_connect__ZN11QDockWidget17visibilityChangedEb(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QDockWidget_visibilityChanged_signal_connect for Box<fn(i8)> {
+impl /* trait */ QDockWidget_visibilityChanged_signal_connect for Box<Fn(i8)> {
   fn connect(self, sigthis: QDockWidget_visibilityChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QDockWidget_visibilityChanged_signal_connect_cb_box_2 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg1 = QDockWidget_visibilityChanged_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QDockWidget_SlotProxy_connect__ZN11QDockWidget17visibilityChangedEb(arg0, arg1, arg2)};
   }
 }
 // topLevelChanged(_Bool)
-extern fn QDockWidget_topLevelChanged_signal_connect_cb_3(rsfptr:fn(i8), arg0: c_char) {
+extern fn QDockWidget_topLevelChanged_signal_connect_cb_1(rsfptr:fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i8;
+  rsfptr(rsarg0);
 }
-extern fn QDockWidget_topLevelChanged_signal_connect_cb_box_3(rsfptr_raw:*mut c_void, arg0: c_char) {
+extern fn QDockWidget_topLevelChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn(i8)>, arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i8;
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QDockWidget_topLevelChanged_signal_connect for fn(i8) {
   fn connect(self, sigthis: QDockWidget_topLevelChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QDockWidget_topLevelChanged_signal_connect_cb_3 as *mut c_void;
+    let arg1 = QDockWidget_topLevelChanged_signal_connect_cb_1 as *mut c_void;
     let arg2 = self as *mut c_void;
     unsafe {QDockWidget_SlotProxy_connect__ZN11QDockWidget15topLevelChangedEb(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QDockWidget_topLevelChanged_signal_connect for Box<fn(i8)> {
+impl /* trait */ QDockWidget_topLevelChanged_signal_connect for Box<Fn(i8)> {
   fn connect(self, sigthis: QDockWidget_topLevelChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QDockWidget_topLevelChanged_signal_connect_cb_box_3 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg1 = QDockWidget_topLevelChanged_signal_connect_cb_box_1 as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QDockWidget_SlotProxy_connect__ZN11QDockWidget15topLevelChangedEb(arg0, arg1, arg2)};
-  }
-}
-// allowedAreasChanged(Qt::DockWidgetAreas)
-extern fn QDockWidget_allowedAreasChanged_signal_connect_cb_4(rsfptr:fn(i32), arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-}
-extern fn QDockWidget_allowedAreasChanged_signal_connect_cb_box_4(rsfptr_raw:*mut c_void, arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-}
-impl /* trait */ QDockWidget_allowedAreasChanged_signal_connect for fn(i32) {
-  fn connect(self, sigthis: QDockWidget_allowedAreasChanged_signal) {
-    // do smth...
-    self as u64;
-    self as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QDockWidget_allowedAreasChanged_signal_connect_cb_4 as *mut c_void;
-    let arg2 = self as *mut c_void;
-    unsafe {QDockWidget_SlotProxy_connect__ZN11QDockWidget19allowedAreasChangedE6QFlagsIN2Qt14DockWidgetAreaEE(arg0, arg1, arg2)};
-  }
-}
-impl /* trait */ QDockWidget_allowedAreasChanged_signal_connect for Box<fn(i32)> {
-  fn connect(self, sigthis: QDockWidget_allowedAreasChanged_signal) {
-    // do smth...
-    // Box::into_raw(self) as u64;
-    // Box::into_raw(self) as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QDockWidget_allowedAreasChanged_signal_connect_cb_box_4 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
-    unsafe {QDockWidget_SlotProxy_connect__ZN11QDockWidget19allowedAreasChangedE6QFlagsIN2Qt14DockWidgetAreaEE(arg0, arg1, arg2)};
   }
 }
 // <= body block end

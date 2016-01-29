@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qmap.h
 // dst-file: /src/core/qmap.rs
 //
@@ -31,32 +31,32 @@ use std::ops::Deref;
 extern {
   fn QMapDataBase_Class_Size() -> c_int;
   // proto:  void QMapDataBase::rebalance(QMapNodeBase * x);
-  fn _ZN12QMapDataBase9rebalanceEP12QMapNodeBase(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN12QMapDataBase9rebalanceEP12QMapNodeBase(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static QMapDataBase * QMapDataBase::createData();
-  fn _ZN12QMapDataBase10createDataEv() -> *mut c_void;
+  fn C_ZN12QMapDataBase10createDataEv() -> *mut c_void;
   // proto:  void QMapDataBase::rotateRight(QMapNodeBase * x);
-  fn _ZN12QMapDataBase11rotateRightEP12QMapNodeBase(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN12QMapDataBase11rotateRightEP12QMapNodeBase(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMapDataBase::freeTree(QMapNodeBase * root, int alignment);
-  fn _ZN12QMapDataBase8freeTreeEP12QMapNodeBasei(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
+  fn C_ZN12QMapDataBase8freeTreeEP12QMapNodeBasei(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int);
   // proto: static void QMapDataBase::freeData(QMapDataBase * d);
-  fn _ZN12QMapDataBase8freeDataEPS_(arg0: *mut c_void);
+  fn C_ZN12QMapDataBase8freeDataEPS_(arg0: *mut c_void);
   // proto:  void QMapDataBase::rotateLeft(QMapNodeBase * x);
-  fn _ZN12QMapDataBase10rotateLeftEP12QMapNodeBase(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN12QMapDataBase10rotateLeftEP12QMapNodeBase(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMapDataBase::recalcMostLeftNode();
-  fn _ZN12QMapDataBase18recalcMostLeftNodeEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN12QMapDataBase18recalcMostLeftNodeEv(qthis: u64 /* *mut c_void*/);
   // proto:  QMapNodeBase * QMapDataBase::createNode(int size, int alignment, QMapNodeBase * parent, bool left);
-  fn _ZN12QMapDataBase10createNodeEiiP12QMapNodeBaseb(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: *mut c_void, arg3: c_char) -> *mut c_void;
+  fn C_ZN12QMapDataBase10createNodeEiiP12QMapNodeBaseb(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int, arg2: *mut c_void, arg3: c_char) -> *mut c_void;
   // proto:  void QMapDataBase::freeNodeAndRebalance(QMapNodeBase * z);
-  fn _ZN12QMapDataBase20freeNodeAndRebalanceEP12QMapNodeBase(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN12QMapDataBase20freeNodeAndRebalanceEP12QMapNodeBase(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QMapNodeBase_Class_Size() -> c_int;
   // proto:  void QMapNodeBase::setParent(QMapNodeBase * pp);
-  fn _ZN12QMapNodeBase9setParentEPS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN12QMapNodeBase9setParentEPS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QMapNodeBase * QMapNodeBase::previousNode();
-  fn _ZN12QMapNodeBase12previousNodeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZN12QMapNodeBase12previousNodeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QMapNodeBase * QMapNodeBase::nextNode();
-  fn _ZN12QMapNodeBase8nextNodeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZN12QMapNodeBase8nextNodeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QMapNodeBase * QMapNodeBase::parent();
-  fn _ZNK12QMapNodeBase6parentEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK12QMapNodeBase6parentEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
 } // <= ext block end
 
 // body block begin =>
@@ -97,7 +97,7 @@ impl<'a> /*trait*/ QMapDataBase_rebalance<()> for (&'a QMapNodeBase) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QMapDataBase9rebalanceEP12QMapNodeBase()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN12QMapDataBase9rebalanceEP12QMapNodeBase(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN12QMapDataBase9rebalanceEP12QMapNodeBase(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -119,7 +119,7 @@ impl<'a> /*trait*/ QMapDataBase_createData_s<QMapDataBase> for () {
   fn createData_s(self ) -> QMapDataBase {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QMapDataBase10createDataEv()};
-    let mut ret = unsafe {_ZN12QMapDataBase10createDataEv()};
+    let mut ret = unsafe {C_ZN12QMapDataBase10createDataEv()};
     let mut ret1 = QMapDataBase::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -144,7 +144,7 @@ impl<'a> /*trait*/ QMapDataBase_rotateRight<()> for (&'a QMapNodeBase) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QMapDataBase11rotateRightEP12QMapNodeBase()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN12QMapDataBase11rotateRightEP12QMapNodeBase(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN12QMapDataBase11rotateRightEP12QMapNodeBase(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -168,7 +168,7 @@ impl<'a> /*trait*/ QMapDataBase_freeTree<()> for (&'a QMapNodeBase, i32) {
     // unsafe{_ZN12QMapDataBase8freeTreeEP12QMapNodeBasei()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
-     unsafe {_ZN12QMapDataBase8freeTreeEP12QMapNodeBasei(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN12QMapDataBase8freeTreeEP12QMapNodeBasei(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -191,7 +191,7 @@ impl<'a> /*trait*/ QMapDataBase_freeData_s<()> for (&'a QMapDataBase) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QMapDataBase8freeDataEPS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN12QMapDataBase8freeDataEPS_(arg0)};
+     unsafe {C_ZN12QMapDataBase8freeDataEPS_(arg0)};
     // return 1;
   }
 }
@@ -214,7 +214,7 @@ impl<'a> /*trait*/ QMapDataBase_rotateLeft<()> for (&'a QMapNodeBase) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QMapDataBase10rotateLeftEP12QMapNodeBase()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN12QMapDataBase10rotateLeftEP12QMapNodeBase(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN12QMapDataBase10rotateLeftEP12QMapNodeBase(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -236,7 +236,7 @@ impl<'a> /*trait*/ QMapDataBase_recalcMostLeftNode<()> for () {
   fn recalcMostLeftNode(self , rsthis: & QMapDataBase) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QMapDataBase18recalcMostLeftNodeEv()};
-     unsafe {_ZN12QMapDataBase18recalcMostLeftNodeEv(rsthis.qclsinst)};
+     unsafe {C_ZN12QMapDataBase18recalcMostLeftNodeEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -262,7 +262,7 @@ impl<'a> /*trait*/ QMapDataBase_createNode<QMapNodeBase> for (i32, i32, &'a QMap
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let arg3 = self.3  as c_char;
-    let mut ret = unsafe {_ZN12QMapDataBase10createNodeEiiP12QMapNodeBaseb(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
+    let mut ret = unsafe {C_ZN12QMapDataBase10createNodeEiiP12QMapNodeBaseb(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
     let mut ret1 = QMapNodeBase::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -287,7 +287,7 @@ impl<'a> /*trait*/ QMapDataBase_freeNodeAndRebalance<()> for (&'a QMapNodeBase) 
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QMapDataBase20freeNodeAndRebalanceEP12QMapNodeBase()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN12QMapDataBase20freeNodeAndRebalanceEP12QMapNodeBase(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN12QMapDataBase20freeNodeAndRebalanceEP12QMapNodeBase(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -315,7 +315,7 @@ impl<'a> /*trait*/ QMapNodeBase_setParent<()> for (&'a QMapNodeBase) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QMapNodeBase9setParentEPS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN12QMapNodeBase9setParentEPS_(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN12QMapNodeBase9setParentEPS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -337,7 +337,7 @@ impl<'a> /*trait*/ QMapNodeBase_previousNode<QMapNodeBase> for () {
   fn previousNode(self , rsthis: & QMapNodeBase) -> QMapNodeBase {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QMapNodeBase12previousNodeEv()};
-    let mut ret = unsafe {_ZN12QMapNodeBase12previousNodeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZN12QMapNodeBase12previousNodeEv(rsthis.qclsinst)};
     let mut ret1 = QMapNodeBase::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -361,7 +361,7 @@ impl<'a> /*trait*/ QMapNodeBase_nextNode<QMapNodeBase> for () {
   fn nextNode(self , rsthis: & QMapNodeBase) -> QMapNodeBase {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QMapNodeBase8nextNodeEv()};
-    let mut ret = unsafe {_ZN12QMapNodeBase8nextNodeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZN12QMapNodeBase8nextNodeEv(rsthis.qclsinst)};
     let mut ret1 = QMapNodeBase::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -385,7 +385,7 @@ impl<'a> /*trait*/ QMapNodeBase_parent<QMapNodeBase> for () {
   fn parent(self , rsthis: & QMapNodeBase) -> QMapNodeBase {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QMapNodeBase6parentEv()};
-    let mut ret = unsafe {_ZNK12QMapNodeBase6parentEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QMapNodeBase6parentEv(rsthis.qclsinst)};
     let mut ret1 = QMapNodeBase::inheritFrom(ret as u64);
     return ret1;
     // return 1;

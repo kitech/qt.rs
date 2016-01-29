@@ -1,3 +1,6 @@
+pub mod qfuture;
+pub use self::qfuture::QFutureLvoidG;
+
 pub mod qstringlistmodel;
 pub use self::qstringlistmodel::QStringListModel;
 
@@ -18,6 +21,9 @@ pub use self::qabstractitemmodel::QModelIndex;
 
 pub mod qlocale;
 pub use self::qlocale::QLocale;
+
+pub mod qstringbuilder;
+pub use self::qstringbuilder::QConcatenableLQLatin1StringG;
 
 pub mod qmutex;
 pub use self::qmutex::QMutexLocker;
@@ -42,6 +48,8 @@ pub use self::qflags::QIncompatibleFlag;
 
 pub mod qfactoryinterface;
 pub use self::qfactoryinterface::QFactoryInterface;
+
+pub use self::qstringbuilder::QConcatenableLQCharRefG;
 
 pub mod qmetaobject;
 pub use self::qmetaobject::QMetaEnum;
@@ -97,7 +105,7 @@ pub use self::qcommandlineoption::QCommandLineOption;
 pub use self::qabstractitemmodel::QPersistentModelIndex;
 
 pub mod qobjectdefs;
-pub use self::qobjectdefs::Connection;
+pub use self::qobjectdefs::QMetaObject__Connection;
 
 pub mod qstandardpaths;
 pub use self::qstandardpaths::QStandardPaths;
@@ -107,6 +115,8 @@ pub use self::qtimer::QTimer;
 
 pub mod qfuturewatcher;
 pub use self::qfuturewatcher::QFutureWatcherBase;
+
+pub use self::qstringbuilder::QConcatenableLQStringRefG;
 
 pub mod qjsonvalue;
 pub use self::qjsonvalue::QJsonValueRefPtr;
@@ -142,8 +152,12 @@ pub use self::qrect::QRect;
 pub mod qsavefile;
 pub use self::qsavefile::QSaveFile;
 
-pub mod qstringbuilder;
+pub mod qatomic_x86;
+pub use self::qatomic_x86::QAtomicOpsSupportL2G;
+
 pub use self::qstringbuilder::QAbstractConcatenable;
+
+pub use self::qfutureinterface::QFutureInterfaceLvoidG;
 
 pub mod qchar;
 pub use self::qchar::QLatin1Char;
@@ -161,6 +175,9 @@ pub use self::qcommandlineparser::QCommandLineParser;
 
 pub mod qfiledevice;
 pub use self::qfiledevice::QFileDevice;
+
+pub mod qglobal;
+pub use self::qglobal::QIntegerForSizeL4G;
 
 pub mod qmessageauthenticationcode;
 pub use self::qmessageauthenticationcode::QMessageAuthenticationCode;
@@ -200,6 +217,8 @@ pub use self::qcryptographichash::QCryptographicHash;
 
 pub use self::qobject::QObjectData;
 
+pub use self::qstringbuilder::QConcatenableLQStringG;
+
 pub mod qmimetype;
 pub use self::qmimetype::QMimeType;
 
@@ -229,6 +248,8 @@ pub use self::qatomic::QAtomicInt;
 
 pub use self::qstring::QLatin1String;
 
+pub use self::qglobal::QIntegerForSizeL8G;
+
 pub use self::qstring::QCharRef;
 
 pub use self::qstring::QStringRef;
@@ -242,6 +263,8 @@ pub mod qregexp;
 pub use self::qregexp::QRegExp;
 
 pub use self::qobjectdefs::QGenericReturnArgument;
+
+pub use self::qstringbuilder::QConcatenableLQLatin1CharG;
 
 pub use self::qabstractanimation::QAnimationDriver;
 
@@ -289,7 +312,11 @@ pub use self::qtimeline::QTimeLine;
 pub mod qmap;
 pub use self::qmap::QMapDataBase;
 
+pub use self::qstringbuilder::QConcatenableLcharG;
+
 pub use self::qxmlstream::QXmlStreamEntityDeclaration;
+
+pub use self::qatomic_x86::QAtomicOpsSupportL1G;
 
 pub use self::qmutex::QBasicMutex;
 
@@ -317,6 +344,10 @@ pub use self::qvariantanimation::QVariantAnimation;
 
 pub mod qtimezone;
 pub use self::qtimezone::QTimeZone;
+
+pub use self::qstringbuilder::QConcatenableLQByteArrayG;
+
+pub use self::qatomic_x86::QAtomicOpsSupportL8G;
 
 pub use self::qmutex::QMutex;
 
@@ -354,6 +385,8 @@ pub use self::qdatetime::QDateTime;
 
 pub use self::qrect::QRectF;
 
+pub use self::qstringbuilder::QConcatenableLQChar__SpecialCharacterG;
+
 pub mod qabstracteventdispatcher;
 pub use self::qabstracteventdispatcher::QAbstractEventDispatcher;
 
@@ -363,11 +396,16 @@ pub use self::qelapsedtimer::QElapsedTimer;
 pub mod qpluginloader;
 pub use self::qpluginloader::QPluginLoader;
 
+pub use self::qstringbuilder::QConcatenableLQCharG;
+
 pub mod qsignaltransition;
 pub use self::qsignaltransition::QSignalTransition;
 
 pub mod qdatastream;
 pub use self::qdatastream::QDataStream;
+
+pub mod qgenericatomic;
+pub use self::qgenericatomic::QAtomicOpsSupportL4G;
 
 pub use self::qitemselectionmodel::QItemSelectionRange;
 
@@ -382,6 +420,8 @@ pub use self::qjsonvalue::QJsonValuePtr;
 pub mod qsocketnotifier;
 pub use self::qsocketnotifier::QSocketNotifier;
 
+pub use self::qglobal::QIntegerForSizeL2G;
+
 pub mod qlibrary;
 pub use self::qlibrary::QLibrary;
 
@@ -394,6 +434,8 @@ pub use self::qtextcodec::QTextEncoder;
 
 pub mod qshareddata;
 pub use self::qshareddata::QSharedData;
+
+pub use self::qstringbuilder::QStringBuilderLQByteArray_EQByteArrayG;
 
 pub use self::qbytearray::QByteArrayDataPtr;
 
@@ -415,8 +457,12 @@ pub use self::qtextboundaryfinder::QTextBoundaryFinder;
 
 pub use self::qjsonvalue::QJsonValue;
 
+pub use self::qstringbuilder::QConcatenableLconstEcharEPG;
+
 pub mod qfileinfo;
 pub use self::qfileinfo::QFileInfo;
+
+pub use self::qfuturewatcher::QFutureWatcherLvoidG;
 
 pub use self::qvariant::QVariant;
 
@@ -451,6 +497,8 @@ pub use self::qobjectdefs::QGenericArgument;
 pub mod qjsonarray;
 pub use self::qjsonarray::QJsonArray;
 
+pub use self::qglobal::QIntegerForSizeL1G;
+
 pub use self::qmargins::QMargins;
 
 pub use self::qdebug::QDebug;
@@ -469,10 +517,15 @@ pub use self::qitemselectionmodel::QItemSelectionModel;
 
 pub use self::qxmlstream::QXmlStreamNotationDeclaration;
 
+pub mod qbytearraylist;
+pub use self::qbytearraylist::QListSpecialMethodsLQByteArrayG;
+
 pub use self::qxmlstream::QXmlStreamAttribute;
 
 pub mod qloggingcategory;
 pub use self::qloggingcategory::QLoggingCategory;
+
+pub use self::qstringbuilder::QStringBuilderLQString_EQStringG;
 
 pub mod qfinalstate;
 pub use self::qfinalstate::QFinalState;
@@ -501,6 +554,8 @@ pub use self::qabstractproxymodel::QAbstractProxyModel;
 
 pub mod qtranslator;
 pub use self::qtranslator::QTranslator;
+
+pub use self::qstringlist::QListSpecialMethodsLQStringG;
 
 pub use self::qvariant::QAssociativeIterable;
 

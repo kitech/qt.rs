@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qcombobox.h
 // dst-file: /src/widgets/qcombobox.rs
 //
@@ -18,21 +18,21 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qwidget::QWidget; // 773
+use super::qwidget::*; // 773
 use std::ops::Deref;
-use super::super::core::qabstractitemmodel::QAbstractItemModel; // 771
-use super::super::core::qsize::QSize; // 771
-use super::qabstractitemview::QAbstractItemView; // 773
-use super::super::gui::qicon::QIcon; // 771
-use super::super::core::qstring::QString; // 771
-use super::super::core::qvariant::QVariant; // 771
-use super::super::core::qstringlist::QStringList; // 771
-use super::super::core::qabstractitemmodel::QModelIndex; // 771
-use super::super::gui::qvalidator::QValidator; // 771
-use super::qcompleter::QCompleter; // 773
-use super::qabstractitemdelegate::QAbstractItemDelegate; // 773
-use super::qlineedit::QLineEdit; // 773
-use super::super::core::qcoreevent::QEvent; // 771
+use super::super::core::qabstractitemmodel::*; // 771
+use super::super::core::qsize::*; // 771
+use super::qabstractitemview::*; // 773
+use super::super::gui::qicon::*; // 771
+use super::super::core::qstring::*; // 771
+use super::super::core::qvariant::*; // 771
+use super::super::core::qstringlist::*; // 771
+use super::super::gui::qvalidator::*; // 771
+use super::qcompleter::*; // 773
+use super::qabstractitemdelegate::*; // 773
+use super::qlineedit::*; // 773
+use super::super::core::qcoreevent::*; // 771
+use super::super::core::qobjectdefs::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -44,167 +44,139 @@ use super::super::core::qcoreevent::QEvent; // 771
 extern {
   fn QComboBox_Class_Size() -> c_int;
   // proto:  void QComboBox::setModel(QAbstractItemModel * model);
-  fn _ZN9QComboBox8setModelEP18QAbstractItemModel(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QComboBox8setModelEP18QAbstractItemModel(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QComboBox::clearEditText();
-  fn _ZN9QComboBox13clearEditTextEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN9QComboBox13clearEditTextEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QComboBox::setAutoCompletion(bool enable);
-  fn _ZN9QComboBox17setAutoCompletionEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN9QComboBox17setAutoCompletionEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QComboBox::setFrame(bool );
-  fn _ZN9QComboBox8setFrameEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN9QComboBox8setFrameEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QComboBox::setIconSize(const QSize & size);
-  fn _ZN9QComboBox11setIconSizeERK5QSize(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QComboBox11setIconSizeERK5QSize(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QComboBox::setView(QAbstractItemView * itemView);
-  fn _ZN9QComboBox7setViewEP17QAbstractItemView(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QComboBox7setViewEP17QAbstractItemView(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QAbstractItemView * QComboBox::view();
-  fn _ZNK9QComboBox4viewEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK9QComboBox4viewEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QSize QComboBox::minimumSizeHint();
-  fn _ZNK9QComboBox15minimumSizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK9QComboBox15minimumSizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QComboBox::clear();
-  fn _ZN9QComboBox5clearEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN9QComboBox5clearEv(qthis: u64 /* *mut c_void*/);
   // proto:  int QComboBox::maxCount();
-  fn _ZNK9QComboBox8maxCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK9QComboBox8maxCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QComboBox::addItem(const QIcon & icon, const QString & text, const QVariant & userData);
-  fn demth_ZN9QComboBox7addItemERK5QIconRK7QStringRK8QVariant(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
+  fn C_ZN9QComboBox7addItemERK5QIconRK7QStringRK8QVariant(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  void QComboBox::insertItems(int index, const QStringList & texts);
-  fn _ZN9QComboBox11insertItemsEiRK11QStringList(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
+  fn C_ZN9QComboBox11insertItemsEiRK11QStringList(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  QSize QComboBox::iconSize();
-  fn _ZNK9QComboBox8iconSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK9QComboBox8iconSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QModelIndex QComboBox::rootModelIndex();
-  fn _ZNK9QComboBox14rootModelIndexEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK9QComboBox14rootModelIndexEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QComboBox::setEditable(bool editable);
-  fn _ZN9QComboBox11setEditableEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN9QComboBox11setEditableEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QComboBox::setItemIcon(int index, const QIcon & icon);
-  fn _ZN9QComboBox11setItemIconEiRK5QIcon(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
-  // proto:  void QComboBox::currentTextChanged(const QString & );
-  fn _ZN9QComboBox18currentTextChangedERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QComboBox11setItemIconEiRK5QIcon(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  bool QComboBox::autoCompletion();
-  fn _ZNK9QComboBox14autoCompletionEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK9QComboBox14autoCompletionEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QVariant QComboBox::currentData(int role);
-  fn _ZNK9QComboBox11currentDataEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
+  fn C_ZNK9QComboBox11currentDataEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  bool QComboBox::hasFrame();
-  fn _ZNK9QComboBox8hasFrameEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK9QComboBox8hasFrameEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  const QValidator * QComboBox::validator();
-  fn _ZNK9QComboBox9validatorEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK9QComboBox9validatorEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QComboBox::itemText(int index);
-  fn _ZNK9QComboBox8itemTextEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
+  fn C_ZNK9QComboBox8itemTextEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  void QComboBox::setItemData(int index, const QVariant & value, int role);
-  fn _ZN9QComboBox11setItemDataEiRK8QVarianti(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void, arg2: c_int);
-  // proto:  void QComboBox::highlighted(int index);
-  fn _ZN9QComboBox11highlightedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN9QComboBox11setItemDataEiRK8QVarianti(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void, arg2: c_int);
   // proto:  void QComboBox::hidePopup();
-  fn _ZN9QComboBox9hidePopupEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN9QComboBox9hidePopupEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QComboBox::insertItem(int index, const QIcon & icon, const QString & text, const QVariant & userData);
-  fn _ZN9QComboBox10insertItemEiRK5QIconRK7QStringRK8QVariant(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void);
+  fn C_ZN9QComboBox10insertItemEiRK5QIconRK7QStringRK8QVariant(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void);
   // proto:  void QComboBox::setCurrentText(const QString & text);
-  fn _ZN9QComboBox14setCurrentTextERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QComboBox::highlighted(const QString & );
-  fn _ZN9QComboBox11highlightedERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QComboBox::editTextChanged(const QString & );
-  fn _ZN9QComboBox15editTextChangedERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QComboBox14setCurrentTextERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QComboBox::modelColumn();
-  fn _ZNK9QComboBox11modelColumnEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK9QComboBox11modelColumnEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  QSize QComboBox::sizeHint();
-  fn _ZNK9QComboBox8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK9QComboBox8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QVariant QComboBox::itemData(int index, int role);
-  fn _ZNK9QComboBox8itemDataEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> *mut c_void;
-  // proto:  void QComboBox::activated(int index);
-  fn _ZN9QComboBox9activatedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZNK9QComboBox8itemDataEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int) -> *mut c_void;
   // proto:  void QComboBox::setCompleter(QCompleter * c);
-  fn _ZN9QComboBox12setCompleterEP10QCompleter(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QComboBox::activated(const QString & );
-  fn _ZN9QComboBox9activatedERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QComboBox12setCompleterEP10QCompleter(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QComboBox::maxVisibleItems();
-  fn _ZNK9QComboBox15maxVisibleItemsEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK9QComboBox15maxVisibleItemsEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QComboBox::QComboBox(QWidget * parent);
-  fn dector_ZN9QComboBoxC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QComboBoxC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QComboBox::currentIndexChanged(const QString & );
-  fn _ZN9QComboBox19currentIndexChangedERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QComboBoxC2EP7QWidget(arg0: *mut c_void) -> u64;
   // proto:  void QComboBox::setCurrentIndex(int index);
-  fn _ZN9QComboBox15setCurrentIndexEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
-  // proto:  void QComboBox::QComboBox(const QComboBox & );
-  fn dector_ZN9QComboBoxC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QComboBoxC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QComboBox15setCurrentIndexEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QComboBox::setRootModelIndex(const QModelIndex & index);
-  fn _ZN9QComboBox17setRootModelIndexERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QComboBox17setRootModelIndexERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QComboBox::setEditText(const QString & text);
-  fn _ZN9QComboBox11setEditTextERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QComboBox11setEditTextERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QComboBox::addItem(const QString & text, const QVariant & userData);
-  fn demth_ZN9QComboBox7addItemERK7QStringRK8QVariant(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN9QComboBox7addItemERK7QStringRK8QVariant(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  QCompleter * QComboBox::completer();
-  fn _ZNK9QComboBox9completerEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK9QComboBox9completerEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QComboBox::removeItem(int index);
-  fn _ZN9QComboBox10removeItemEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN9QComboBox10removeItemEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QComboBox::count();
-  fn _ZNK9QComboBox5countEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK9QComboBox5countEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QComboBox::setItemDelegate(QAbstractItemDelegate * delegate);
-  fn _ZN9QComboBox15setItemDelegateEP21QAbstractItemDelegate(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QComboBox15setItemDelegateEP21QAbstractItemDelegate(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QComboBox::addItems(const QStringList & texts);
-  fn demth_ZN9QComboBox8addItemsERK11QStringList(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QComboBox8addItemsERK11QStringList(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QComboBox::setMinimumContentsLength(int characters);
-  fn _ZN9QComboBox24setMinimumContentsLengthEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN9QComboBox24setMinimumContentsLengthEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  bool QComboBox::duplicatesEnabled();
-  fn _ZNK9QComboBox17duplicatesEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK9QComboBox17duplicatesEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QComboBox::~QComboBox();
-  fn _ZN9QComboBoxD0Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN9QComboBoxD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QAbstractItemModel * QComboBox::model();
-  fn _ZNK9QComboBox5modelEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK9QComboBox5modelEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QComboBox::minimumContentsLength();
-  fn _ZNK9QComboBox21minimumContentsLengthEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK9QComboBox21minimumContentsLengthEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QComboBox::isEditable();
-  fn _ZNK9QComboBox10isEditableEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK9QComboBox10isEditableEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QComboBox::setMaxCount(int max);
-  fn _ZN9QComboBox11setMaxCountEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN9QComboBox11setMaxCountEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QComboBox::currentIndex();
-  fn _ZNK9QComboBox12currentIndexEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK9QComboBox12currentIndexEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QComboBox::setDuplicatesEnabled(bool enable);
-  fn _ZN9QComboBox20setDuplicatesEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN9QComboBox20setDuplicatesEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QString QComboBox::currentText();
-  fn _ZNK9QComboBox11currentTextEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK9QComboBox11currentTextEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QComboBox::showPopup();
-  fn _ZN9QComboBox9showPopupEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN9QComboBox9showPopupEv(qthis: u64 /* *mut c_void*/);
   // proto:  QLineEdit * QComboBox::lineEdit();
-  fn _ZNK9QComboBox8lineEditEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK9QComboBox8lineEditEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QAbstractItemDelegate * QComboBox::itemDelegate();
-  fn _ZNK9QComboBox12itemDelegateEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QComboBox::currentIndexChanged(int index);
-  fn _ZN9QComboBox19currentIndexChangedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZNK9QComboBox12itemDelegateEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QComboBox::setMaxVisibleItems(int maxItems);
-  fn _ZN9QComboBox18setMaxVisibleItemsEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN9QComboBox18setMaxVisibleItemsEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  bool QComboBox::event(QEvent * event);
-  fn _ZN9QComboBox5eventEP6QEvent(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
+  fn C_ZN9QComboBox5eventEP6QEvent(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  void QComboBox::setModelColumn(int visibleColumn);
-  fn _ZN9QComboBox14setModelColumnEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN9QComboBox14setModelColumnEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QComboBox::setItemText(int index, const QString & text);
-  fn _ZN9QComboBox11setItemTextEiRK7QString(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
+  fn C_ZN9QComboBox11setItemTextEiRK7QString(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  void QComboBox::setLineEdit(QLineEdit * edit);
-  fn _ZN9QComboBox11setLineEditEP9QLineEdit(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QComboBox11setLineEditEP9QLineEdit(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QIcon QComboBox::itemIcon(int index);
-  fn _ZNK9QComboBox8itemIconEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
+  fn C_ZNK9QComboBox8itemIconEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  void QComboBox::insertItem(int index, const QString & text, const QVariant & userData);
-  fn demth_ZN9QComboBox10insertItemEiRK7QStringRK8QVariant(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void, arg2: *mut c_void);
+  fn C_ZN9QComboBox10insertItemEiRK7QStringRK8QVariant(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  void QComboBox::setValidator(const QValidator * v);
-  fn _ZN9QComboBox12setValidatorEPK10QValidator(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QComboBox12setValidatorEPK10QValidator(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QComboBox::insertSeparator(int index);
-  fn _ZN9QComboBox15insertSeparatorEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN9QComboBox15insertSeparatorEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  const QMetaObject * QComboBox::metaObject();
-  fn _ZNK9QComboBox10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK9QComboBox10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   fn QComboBox_SlotProxy_connect__ZN9QComboBox9activatedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QComboBox_SlotProxy_connect_box__ZN9QComboBox9activatedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QComboBox_SlotProxy_connect__ZN9QComboBox19currentIndexChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QComboBox_SlotProxy_connect_box__ZN9QComboBox19currentIndexChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QComboBox_SlotProxy_connect__ZN9QComboBox18currentTextChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QComboBox_SlotProxy_connect_box__ZN9QComboBox18currentTextChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QComboBox_SlotProxy_connect__ZN9QComboBox11highlightedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QComboBox_SlotProxy_connect_box__ZN9QComboBox11highlightedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QComboBox_SlotProxy_connect__ZN9QComboBox15editTextChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QComboBox_SlotProxy_connect_box__ZN9QComboBox15editTextChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QComboBox_SlotProxy_connect__ZN9QComboBox11highlightedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QComboBox_SlotProxy_connect_box__ZN9QComboBox11highlightedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QComboBox_SlotProxy_connect__ZN9QComboBox9activatedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QComboBox_SlotProxy_connect_box__ZN9QComboBox9activatedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QComboBox_SlotProxy_connect__ZN9QComboBox19currentIndexChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QComboBox_SlotProxy_connect_box__ZN9QComboBox19currentIndexChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -213,11 +185,11 @@ extern {
 pub struct QComboBox {
   qbase: QWidget,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _currentIndexChanged_1: QComboBox_currentIndexChanged_signal,
-  pub _currentTextChanged_1: QComboBox_currentTextChanged_signal,
-  pub _highlighted_1: QComboBox_highlighted_signal,
-  pub _activated_1: QComboBox_activated_signal,
-  pub _editTextChanged_1: QComboBox_editTextChanged_signal,
+  pub _currentIndexChanged: QComboBox_currentIndexChanged_signal,
+  pub _currentTextChanged: QComboBox_currentTextChanged_signal,
+  pub _highlighted: QComboBox_highlighted_signal,
+  pub _activated: QComboBox_activated_signal,
+  pub _editTextChanged: QComboBox_editTextChanged_signal,
 }
 
 impl /*struct*/ QComboBox {
@@ -255,7 +227,7 @@ impl<'a> /*trait*/ QComboBox_setModel<()> for (&'a QAbstractItemModel) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QComboBox8setModelEP18QAbstractItemModel()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN9QComboBox8setModelEP18QAbstractItemModel(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QComboBox8setModelEP18QAbstractItemModel(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -277,7 +249,7 @@ impl<'a> /*trait*/ QComboBox_clearEditText<()> for () {
   fn clearEditText(self , rsthis: & QComboBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QComboBox13clearEditTextEv()};
-     unsafe {_ZN9QComboBox13clearEditTextEv(rsthis.qclsinst)};
+     unsafe {C_ZN9QComboBox13clearEditTextEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -300,7 +272,7 @@ impl<'a> /*trait*/ QComboBox_setAutoCompletion<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QComboBox17setAutoCompletionEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN9QComboBox17setAutoCompletionEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QComboBox17setAutoCompletionEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -323,7 +295,7 @@ impl<'a> /*trait*/ QComboBox_setFrame<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QComboBox8setFrameEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN9QComboBox8setFrameEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QComboBox8setFrameEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -346,7 +318,7 @@ impl<'a> /*trait*/ QComboBox_setIconSize<()> for (&'a QSize) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QComboBox11setIconSizeERK5QSize()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN9QComboBox11setIconSizeERK5QSize(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QComboBox11setIconSizeERK5QSize(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -369,7 +341,7 @@ impl<'a> /*trait*/ QComboBox_setView<()> for (&'a QAbstractItemView) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QComboBox7setViewEP17QAbstractItemView()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN9QComboBox7setViewEP17QAbstractItemView(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QComboBox7setViewEP17QAbstractItemView(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -387,11 +359,13 @@ pub trait QComboBox_view<RetType> {
 }
 
   // proto:  QAbstractItemView * QComboBox::view();
-impl<'a> /*trait*/ QComboBox_view<()> for () {
-  fn view(self , rsthis: & QComboBox) -> () {
+impl<'a> /*trait*/ QComboBox_view<QAbstractItemView> for () {
+  fn view(self , rsthis: & QComboBox) -> QAbstractItemView {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox4viewEv()};
-     unsafe {_ZNK9QComboBox4viewEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QComboBox4viewEv(rsthis.qclsinst)};
+    let mut ret1 = QAbstractItemView::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -413,7 +387,7 @@ impl<'a> /*trait*/ QComboBox_minimumSizeHint<QSize> for () {
   fn minimumSizeHint(self , rsthis: & QComboBox) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox15minimumSizeHintEv()};
-    let mut ret = unsafe {_ZNK9QComboBox15minimumSizeHintEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QComboBox15minimumSizeHintEv(rsthis.qclsinst)};
     let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -437,7 +411,7 @@ impl<'a> /*trait*/ QComboBox_clear<()> for () {
   fn clear(self , rsthis: & QComboBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QComboBox5clearEv()};
-     unsafe {_ZN9QComboBox5clearEv(rsthis.qclsinst)};
+     unsafe {C_ZN9QComboBox5clearEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -459,8 +433,8 @@ impl<'a> /*trait*/ QComboBox_maxCount<i32> for () {
   fn maxCount(self , rsthis: & QComboBox) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox8maxCountEv()};
-    let mut ret = unsafe {_ZNK9QComboBox8maxCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK9QComboBox8maxCountEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -485,7 +459,7 @@ impl<'a> /*trait*/ QComboBox_addItem<()> for (&'a QIcon, &'a QString, &'a QVaria
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
-     unsafe {demth_ZN9QComboBox7addItemERK5QIconRK7QStringRK8QVariant(rsthis.qclsinst, arg0, arg1, arg2)};
+     unsafe {C_ZN9QComboBox7addItemERK5QIconRK7QStringRK8QVariant(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
 }
@@ -509,7 +483,7 @@ impl<'a> /*trait*/ QComboBox_insertItems<()> for (i32, &'a QStringList) {
     // unsafe{_ZN9QComboBox11insertItemsEiRK11QStringList()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN9QComboBox11insertItemsEiRK11QStringList(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN9QComboBox11insertItemsEiRK11QStringList(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -531,7 +505,7 @@ impl<'a> /*trait*/ QComboBox_iconSize<QSize> for () {
   fn iconSize(self , rsthis: & QComboBox) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox8iconSizeEv()};
-    let mut ret = unsafe {_ZNK9QComboBox8iconSizeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QComboBox8iconSizeEv(rsthis.qclsinst)};
     let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -555,7 +529,7 @@ impl<'a> /*trait*/ QComboBox_rootModelIndex<QModelIndex> for () {
   fn rootModelIndex(self , rsthis: & QComboBox) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox14rootModelIndexEv()};
-    let mut ret = unsafe {_ZNK9QComboBox14rootModelIndexEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QComboBox14rootModelIndexEv(rsthis.qclsinst)};
     let mut ret1 = QModelIndex::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -580,7 +554,7 @@ impl<'a> /*trait*/ QComboBox_setEditable<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QComboBox11setEditableEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN9QComboBox11setEditableEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QComboBox11setEditableEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -604,30 +578,7 @@ impl<'a> /*trait*/ QComboBox_setItemIcon<()> for (i32, &'a QIcon) {
     // unsafe{_ZN9QComboBox11setItemIconEiRK5QIcon()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN9QComboBox11setItemIconEiRK5QIcon(rsthis.qclsinst, arg0, arg1)};
-    // return 1;
-  }
-}
-
-  // proto:  void QComboBox::currentTextChanged(const QString & );
-impl /*struct*/ QComboBox {
-  pub fn currentTextChanged<RetType, T: QComboBox_currentTextChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.currentTextChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QComboBox_currentTextChanged<RetType> {
-  fn currentTextChanged(self , rsthis: & QComboBox) -> RetType;
-}
-
-  // proto:  void QComboBox::currentTextChanged(const QString & );
-impl<'a> /*trait*/ QComboBox_currentTextChanged<()> for (&'a QString) {
-  fn currentTextChanged(self , rsthis: & QComboBox) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QComboBox18currentTextChangedERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN9QComboBox18currentTextChangedERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QComboBox11setItemIconEiRK5QIcon(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -649,8 +600,8 @@ impl<'a> /*trait*/ QComboBox_autoCompletion<i8> for () {
   fn autoCompletion(self , rsthis: & QComboBox) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox14autoCompletionEv()};
-    let mut ret = unsafe {_ZNK9QComboBox14autoCompletionEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK9QComboBox14autoCompletionEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -673,7 +624,7 @@ impl<'a> /*trait*/ QComboBox_currentData<QVariant> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox11currentDataEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZNK9QComboBox11currentDataEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK9QComboBox11currentDataEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QVariant::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -697,8 +648,8 @@ impl<'a> /*trait*/ QComboBox_hasFrame<i8> for () {
   fn hasFrame(self , rsthis: & QComboBox) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox8hasFrameEv()};
-    let mut ret = unsafe {_ZNK9QComboBox8hasFrameEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK9QComboBox8hasFrameEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -720,7 +671,7 @@ impl<'a> /*trait*/ QComboBox_validator<QValidator> for () {
   fn validator(self , rsthis: & QComboBox) -> QValidator {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox9validatorEv()};
-    let mut ret = unsafe {_ZNK9QComboBox9validatorEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QComboBox9validatorEv(rsthis.qclsinst)};
     let mut ret1 = QValidator::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -745,7 +696,7 @@ impl<'a> /*trait*/ QComboBox_itemText<QString> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox8itemTextEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZNK9QComboBox8itemTextEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK9QComboBox8itemTextEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -772,30 +723,7 @@ impl<'a> /*trait*/ QComboBox_setItemData<()> for (i32, &'a QVariant, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2  as c_int;
-     unsafe {_ZN9QComboBox11setItemDataEiRK8QVarianti(rsthis.qclsinst, arg0, arg1, arg2)};
-    // return 1;
-  }
-}
-
-  // proto:  void QComboBox::highlighted(int index);
-impl /*struct*/ QComboBox {
-  pub fn highlighted<RetType, T: QComboBox_highlighted<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.highlighted(self);
-    // return 1;
-  }
-}
-
-pub trait QComboBox_highlighted<RetType> {
-  fn highlighted(self , rsthis: & QComboBox) -> RetType;
-}
-
-  // proto:  void QComboBox::highlighted(int index);
-impl<'a> /*trait*/ QComboBox_highlighted<()> for (i32) {
-  fn highlighted(self , rsthis: & QComboBox) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QComboBox11highlightedEi()};
-    let arg0 = self  as c_int;
-     unsafe {_ZN9QComboBox11highlightedEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QComboBox11setItemDataEiRK8QVarianti(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
 }
@@ -817,7 +745,7 @@ impl<'a> /*trait*/ QComboBox_hidePopup<()> for () {
   fn hidePopup(self , rsthis: & QComboBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QComboBox9hidePopupEv()};
-     unsafe {_ZN9QComboBox9hidePopupEv(rsthis.qclsinst)};
+     unsafe {C_ZN9QComboBox9hidePopupEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -843,7 +771,7 @@ impl<'a> /*trait*/ QComboBox_insertItem<()> for (i32, &'a QIcon, &'a QString, &'
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let arg3 = self.3.qclsinst  as *mut c_void;
-     unsafe {_ZN9QComboBox10insertItemEiRK5QIconRK7QStringRK8QVariant(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
+     unsafe {C_ZN9QComboBox10insertItemEiRK5QIconRK7QStringRK8QVariant(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
     // return 1;
   }
 }
@@ -866,41 +794,7 @@ impl<'a> /*trait*/ QComboBox_setCurrentText<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QComboBox14setCurrentTextERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN9QComboBox14setCurrentTextERK7QString(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QComboBox::highlighted(const QString & );
-impl<'a> /*trait*/ QComboBox_highlighted<()> for (&'a QString) {
-  fn highlighted(self , rsthis: & QComboBox) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QComboBox11highlightedERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN9QComboBox11highlightedERK7QString(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QComboBox::editTextChanged(const QString & );
-impl /*struct*/ QComboBox {
-  pub fn editTextChanged<RetType, T: QComboBox_editTextChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.editTextChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QComboBox_editTextChanged<RetType> {
-  fn editTextChanged(self , rsthis: & QComboBox) -> RetType;
-}
-
-  // proto:  void QComboBox::editTextChanged(const QString & );
-impl<'a> /*trait*/ QComboBox_editTextChanged<()> for (&'a QString) {
-  fn editTextChanged(self , rsthis: & QComboBox) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QComboBox15editTextChangedERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN9QComboBox15editTextChangedERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QComboBox14setCurrentTextERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -922,8 +816,8 @@ impl<'a> /*trait*/ QComboBox_modelColumn<i32> for () {
   fn modelColumn(self , rsthis: & QComboBox) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox11modelColumnEv()};
-    let mut ret = unsafe {_ZNK9QComboBox11modelColumnEv(rsthis.qclsinst)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK9QComboBox11modelColumnEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -945,7 +839,7 @@ impl<'a> /*trait*/ QComboBox_sizeHint<QSize> for () {
   fn sizeHint(self , rsthis: & QComboBox) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox8sizeHintEv()};
-    let mut ret = unsafe {_ZNK9QComboBox8sizeHintEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QComboBox8sizeHintEv(rsthis.qclsinst)};
     let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -971,32 +865,9 @@ impl<'a> /*trait*/ QComboBox_itemData<QVariant> for (i32, i32) {
     // unsafe{_ZNK9QComboBox8itemDataEii()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-    let mut ret = unsafe {_ZNK9QComboBox8itemDataEii(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {C_ZNK9QComboBox8itemDataEii(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QVariant::inheritFrom(ret as u64);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QComboBox::activated(int index);
-impl /*struct*/ QComboBox {
-  pub fn activated<RetType, T: QComboBox_activated<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.activated(self);
-    // return 1;
-  }
-}
-
-pub trait QComboBox_activated<RetType> {
-  fn activated(self , rsthis: & QComboBox) -> RetType;
-}
-
-  // proto:  void QComboBox::activated(int index);
-impl<'a> /*trait*/ QComboBox_activated<()> for (i32) {
-  fn activated(self , rsthis: & QComboBox) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QComboBox9activatedEi()};
-    let arg0 = self  as c_int;
-     unsafe {_ZN9QComboBox9activatedEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1019,18 +890,7 @@ impl<'a> /*trait*/ QComboBox_setCompleter<()> for (&'a QCompleter) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QComboBox12setCompleterEP10QCompleter()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN9QComboBox12setCompleterEP10QCompleter(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QComboBox::activated(const QString & );
-impl<'a> /*trait*/ QComboBox_activated<()> for (&'a QString) {
-  fn activated(self , rsthis: & QComboBox) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QComboBox9activatedERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN9QComboBox9activatedERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QComboBox12setCompleterEP10QCompleter(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1052,60 +912,36 @@ impl<'a> /*trait*/ QComboBox_maxVisibleItems<i32> for () {
   fn maxVisibleItems(self , rsthis: & QComboBox) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox15maxVisibleItemsEv()};
-    let mut ret = unsafe {_ZNK9QComboBox15maxVisibleItemsEv(rsthis.qclsinst)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK9QComboBox15maxVisibleItemsEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
 
   // proto:  void QComboBox::QComboBox(QWidget * parent);
 impl /*struct*/ QComboBox {
-  pub fn New<T: QComboBox_New>(value: T) -> QComboBox {
-    let rsthis = value.New();
+  pub fn new<T: QComboBox_new>(value: T) -> QComboBox {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QComboBox_New {
-  fn New(self) -> QComboBox;
+pub trait QComboBox_new {
+  fn new(self) -> QComboBox;
 }
 
   // proto:  void QComboBox::QComboBox(QWidget * parent);
-impl<'a> /*trait*/ QComboBox_New for (&'a QWidget) {
-  fn New(self) -> QComboBox {
+impl<'a> /*trait*/ QComboBox_new for (&'a QWidget) {
+  fn new(self) -> QComboBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QComboBoxC1EP7QWidget()};
+    // unsafe{_ZN9QComboBoxC2EP7QWidget()};
     let ctysz: c_int = unsafe{QComboBox_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN9QComboBoxC1EP7QWidget(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN9QComboBoxC1EP7QWidget(arg0)} as u64;
+    let qthis: u64 = unsafe {C_ZN9QComboBoxC2EP7QWidget(arg0)};
     let rsthis = QComboBox{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  void QComboBox::currentIndexChanged(const QString & );
-impl /*struct*/ QComboBox {
-  pub fn currentIndexChanged<RetType, T: QComboBox_currentIndexChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.currentIndexChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QComboBox_currentIndexChanged<RetType> {
-  fn currentIndexChanged(self , rsthis: & QComboBox) -> RetType;
-}
-
-  // proto:  void QComboBox::currentIndexChanged(const QString & );
-impl<'a> /*trait*/ QComboBox_currentIndexChanged<()> for (&'a QString) {
-  fn currentIndexChanged(self , rsthis: & QComboBox) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QComboBox19currentIndexChangedERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN9QComboBox19currentIndexChangedERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1128,23 +964,7 @@ impl<'a> /*trait*/ QComboBox_setCurrentIndex<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QComboBox15setCurrentIndexEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN9QComboBox15setCurrentIndexEi(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QComboBox::QComboBox(const QComboBox & );
-impl<'a> /*trait*/ QComboBox_New for (&'a QComboBox) {
-  fn New(self) -> QComboBox {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QComboBoxC1ERKS_()};
-    let ctysz: c_int = unsafe{QComboBox_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN9QComboBoxC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN9QComboBoxC1ERKS_(arg0)} as u64;
-    let rsthis = QComboBox{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
+     unsafe {C_ZN9QComboBox15setCurrentIndexEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1167,7 +987,7 @@ impl<'a> /*trait*/ QComboBox_setRootModelIndex<()> for (&'a QModelIndex) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QComboBox17setRootModelIndexERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN9QComboBox17setRootModelIndexERK11QModelIndex(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QComboBox17setRootModelIndexERK11QModelIndex(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1190,7 +1010,7 @@ impl<'a> /*trait*/ QComboBox_setEditText<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QComboBox11setEditTextERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN9QComboBox11setEditTextERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QComboBox11setEditTextERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1202,7 +1022,7 @@ impl<'a> /*trait*/ QComboBox_addItem<()> for (&'a QString, &'a QVariant) {
     // unsafe{_ZN9QComboBox7addItemERK7QStringRK8QVariant()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {demth_ZN9QComboBox7addItemERK7QStringRK8QVariant(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN9QComboBox7addItemERK7QStringRK8QVariant(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -1224,7 +1044,7 @@ impl<'a> /*trait*/ QComboBox_completer<QCompleter> for () {
   fn completer(self , rsthis: & QComboBox) -> QCompleter {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox9completerEv()};
-    let mut ret = unsafe {_ZNK9QComboBox9completerEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QComboBox9completerEv(rsthis.qclsinst)};
     let mut ret1 = QCompleter::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1249,7 +1069,7 @@ impl<'a> /*trait*/ QComboBox_removeItem<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QComboBox10removeItemEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN9QComboBox10removeItemEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QComboBox10removeItemEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1271,8 +1091,8 @@ impl<'a> /*trait*/ QComboBox_count<i32> for () {
   fn count(self , rsthis: & QComboBox) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox5countEv()};
-    let mut ret = unsafe {_ZNK9QComboBox5countEv(rsthis.qclsinst)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK9QComboBox5countEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1295,7 +1115,7 @@ impl<'a> /*trait*/ QComboBox_setItemDelegate<()> for (&'a QAbstractItemDelegate)
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QComboBox15setItemDelegateEP21QAbstractItemDelegate()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN9QComboBox15setItemDelegateEP21QAbstractItemDelegate(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QComboBox15setItemDelegateEP21QAbstractItemDelegate(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1318,7 +1138,7 @@ impl<'a> /*trait*/ QComboBox_addItems<()> for (&'a QStringList) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QComboBox8addItemsERK11QStringList()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {demth_ZN9QComboBox8addItemsERK11QStringList(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QComboBox8addItemsERK11QStringList(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1341,7 +1161,7 @@ impl<'a> /*trait*/ QComboBox_setMinimumContentsLength<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QComboBox24setMinimumContentsLengthEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN9QComboBox24setMinimumContentsLengthEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QComboBox24setMinimumContentsLengthEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1363,30 +1183,30 @@ impl<'a> /*trait*/ QComboBox_duplicatesEnabled<i8> for () {
   fn duplicatesEnabled(self , rsthis: & QComboBox) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox17duplicatesEnabledEv()};
-    let mut ret = unsafe {_ZNK9QComboBox17duplicatesEnabledEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK9QComboBox17duplicatesEnabledEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
 
   // proto:  void QComboBox::~QComboBox();
 impl /*struct*/ QComboBox {
-  pub fn Free<RetType, T: QComboBox_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QComboBox_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QComboBox_Free<RetType> {
-  fn Free(self , rsthis: & QComboBox) -> RetType;
+pub trait QComboBox_free<RetType> {
+  fn free(self , rsthis: & QComboBox) -> RetType;
 }
 
   // proto:  void QComboBox::~QComboBox();
-impl<'a> /*trait*/ QComboBox_Free<()> for () {
-  fn Free(self , rsthis: & QComboBox) -> () {
+impl<'a> /*trait*/ QComboBox_free<()> for () {
+  fn free(self , rsthis: & QComboBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QComboBoxD0Ev()};
-     unsafe {_ZN9QComboBoxD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN9QComboBoxD2Ev()};
+     unsafe {C_ZN9QComboBoxD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1404,11 +1224,13 @@ pub trait QComboBox_model<RetType> {
 }
 
   // proto:  QAbstractItemModel * QComboBox::model();
-impl<'a> /*trait*/ QComboBox_model<()> for () {
-  fn model(self , rsthis: & QComboBox) -> () {
+impl<'a> /*trait*/ QComboBox_model<QAbstractItemModel> for () {
+  fn model(self , rsthis: & QComboBox) -> QAbstractItemModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox5modelEv()};
-     unsafe {_ZNK9QComboBox5modelEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QComboBox5modelEv(rsthis.qclsinst)};
+    let mut ret1 = QAbstractItemModel::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -1430,8 +1252,8 @@ impl<'a> /*trait*/ QComboBox_minimumContentsLength<i32> for () {
   fn minimumContentsLength(self , rsthis: & QComboBox) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox21minimumContentsLengthEv()};
-    let mut ret = unsafe {_ZNK9QComboBox21minimumContentsLengthEv(rsthis.qclsinst)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK9QComboBox21minimumContentsLengthEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1453,8 +1275,8 @@ impl<'a> /*trait*/ QComboBox_isEditable<i8> for () {
   fn isEditable(self , rsthis: & QComboBox) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox10isEditableEv()};
-    let mut ret = unsafe {_ZNK9QComboBox10isEditableEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK9QComboBox10isEditableEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1477,7 +1299,7 @@ impl<'a> /*trait*/ QComboBox_setMaxCount<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QComboBox11setMaxCountEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN9QComboBox11setMaxCountEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QComboBox11setMaxCountEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1499,8 +1321,8 @@ impl<'a> /*trait*/ QComboBox_currentIndex<i32> for () {
   fn currentIndex(self , rsthis: & QComboBox) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox12currentIndexEv()};
-    let mut ret = unsafe {_ZNK9QComboBox12currentIndexEv(rsthis.qclsinst)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK9QComboBox12currentIndexEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -1523,7 +1345,7 @@ impl<'a> /*trait*/ QComboBox_setDuplicatesEnabled<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QComboBox20setDuplicatesEnabledEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN9QComboBox20setDuplicatesEnabledEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QComboBox20setDuplicatesEnabledEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1545,7 +1367,7 @@ impl<'a> /*trait*/ QComboBox_currentText<QString> for () {
   fn currentText(self , rsthis: & QComboBox) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox11currentTextEv()};
-    let mut ret = unsafe {_ZNK9QComboBox11currentTextEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QComboBox11currentTextEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1569,7 +1391,7 @@ impl<'a> /*trait*/ QComboBox_showPopup<()> for () {
   fn showPopup(self , rsthis: & QComboBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QComboBox9showPopupEv()};
-     unsafe {_ZN9QComboBox9showPopupEv(rsthis.qclsinst)};
+     unsafe {C_ZN9QComboBox9showPopupEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1591,7 +1413,7 @@ impl<'a> /*trait*/ QComboBox_lineEdit<QLineEdit> for () {
   fn lineEdit(self , rsthis: & QComboBox) -> QLineEdit {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox8lineEditEv()};
-    let mut ret = unsafe {_ZNK9QComboBox8lineEditEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QComboBox8lineEditEv(rsthis.qclsinst)};
     let mut ret1 = QLineEdit::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1611,22 +1433,13 @@ pub trait QComboBox_itemDelegate<RetType> {
 }
 
   // proto:  QAbstractItemDelegate * QComboBox::itemDelegate();
-impl<'a> /*trait*/ QComboBox_itemDelegate<()> for () {
-  fn itemDelegate(self , rsthis: & QComboBox) -> () {
+impl<'a> /*trait*/ QComboBox_itemDelegate<QAbstractItemDelegate> for () {
+  fn itemDelegate(self , rsthis: & QComboBox) -> QAbstractItemDelegate {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox12itemDelegateEv()};
-     unsafe {_ZNK9QComboBox12itemDelegateEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QComboBox::currentIndexChanged(int index);
-impl<'a> /*trait*/ QComboBox_currentIndexChanged<()> for (i32) {
-  fn currentIndexChanged(self , rsthis: & QComboBox) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QComboBox19currentIndexChangedEi()};
-    let arg0 = self  as c_int;
-     unsafe {_ZN9QComboBox19currentIndexChangedEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK9QComboBox12itemDelegateEv(rsthis.qclsinst)};
+    let mut ret1 = QAbstractItemDelegate::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -1649,7 +1462,7 @@ impl<'a> /*trait*/ QComboBox_setMaxVisibleItems<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QComboBox18setMaxVisibleItemsEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN9QComboBox18setMaxVisibleItemsEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QComboBox18setMaxVisibleItemsEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1672,8 +1485,8 @@ impl<'a> /*trait*/ QComboBox_event<i8> for (&'a QEvent) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QComboBox5eventEP6QEvent()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN9QComboBox5eventEP6QEvent(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZN9QComboBox5eventEP6QEvent(rsthis.qclsinst, arg0)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1696,7 +1509,7 @@ impl<'a> /*trait*/ QComboBox_setModelColumn<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QComboBox14setModelColumnEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN9QComboBox14setModelColumnEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QComboBox14setModelColumnEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1720,7 +1533,7 @@ impl<'a> /*trait*/ QComboBox_setItemText<()> for (i32, &'a QString) {
     // unsafe{_ZN9QComboBox11setItemTextEiRK7QString()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN9QComboBox11setItemTextEiRK7QString(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN9QComboBox11setItemTextEiRK7QString(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -1743,7 +1556,7 @@ impl<'a> /*trait*/ QComboBox_setLineEdit<()> for (&'a QLineEdit) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QComboBox11setLineEditEP9QLineEdit()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN9QComboBox11setLineEditEP9QLineEdit(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QComboBox11setLineEditEP9QLineEdit(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1766,7 +1579,7 @@ impl<'a> /*trait*/ QComboBox_itemIcon<QIcon> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox8itemIconEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZNK9QComboBox8itemIconEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK9QComboBox8itemIconEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QIcon::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1781,7 +1594,7 @@ impl<'a> /*trait*/ QComboBox_insertItem<()> for (i32, &'a QString, &'a QVariant)
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
-     unsafe {demth_ZN9QComboBox10insertItemEiRK7QStringRK8QVariant(rsthis.qclsinst, arg0, arg1, arg2)};
+     unsafe {C_ZN9QComboBox10insertItemEiRK7QStringRK8QVariant(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
 }
@@ -1804,7 +1617,7 @@ impl<'a> /*trait*/ QComboBox_setValidator<()> for (&'a QValidator) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QComboBox12setValidatorEPK10QValidator()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN9QComboBox12setValidatorEPK10QValidator(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QComboBox12setValidatorEPK10QValidator(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1827,7 +1640,7 @@ impl<'a> /*trait*/ QComboBox_insertSeparator<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QComboBox15insertSeparatorEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN9QComboBox15insertSeparatorEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QComboBox15insertSeparatorEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1845,11 +1658,13 @@ pub trait QComboBox_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QComboBox::metaObject();
-impl<'a> /*trait*/ QComboBox_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QComboBox) -> () {
+impl<'a> /*trait*/ QComboBox_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QComboBox) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox10metaObjectEv()};
-     unsafe {_ZNK9QComboBox10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QComboBox10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -1857,7 +1672,7 @@ impl<'a> /*trait*/ QComboBox_metaObject<()> for () {
 #[derive(Default)] // for QComboBox_currentIndexChanged
 pub struct QComboBox_currentIndexChanged_signal{poi:u64}
 impl /* struct */ QComboBox {
-  pub fn currentIndexChanged_1(&self) -> QComboBox_currentIndexChanged_signal {
+  pub fn currentIndexChanged(&self) -> QComboBox_currentIndexChanged_signal {
      return QComboBox_currentIndexChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1873,7 +1688,7 @@ pub trait QComboBox_currentIndexChanged_signal_connect {
 #[derive(Default)] // for QComboBox_currentTextChanged
 pub struct QComboBox_currentTextChanged_signal{poi:u64}
 impl /* struct */ QComboBox {
-  pub fn currentTextChanged_1(&self) -> QComboBox_currentTextChanged_signal {
+  pub fn currentTextChanged(&self) -> QComboBox_currentTextChanged_signal {
      return QComboBox_currentTextChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1889,7 +1704,7 @@ pub trait QComboBox_currentTextChanged_signal_connect {
 #[derive(Default)] // for QComboBox_highlighted
 pub struct QComboBox_highlighted_signal{poi:u64}
 impl /* struct */ QComboBox {
-  pub fn highlighted_1(&self) -> QComboBox_highlighted_signal {
+  pub fn highlighted(&self) -> QComboBox_highlighted_signal {
      return QComboBox_highlighted_signal{poi:self.qclsinst};
   }
 }
@@ -1905,7 +1720,7 @@ pub trait QComboBox_highlighted_signal_connect {
 #[derive(Default)] // for QComboBox_activated
 pub struct QComboBox_activated_signal{poi:u64}
 impl /* struct */ QComboBox {
-  pub fn activated_1(&self) -> QComboBox_activated_signal {
+  pub fn activated(&self) -> QComboBox_activated_signal {
      return QComboBox_activated_signal{poi:self.qclsinst};
   }
 }
@@ -1921,7 +1736,7 @@ pub trait QComboBox_activated_signal_connect {
 #[derive(Default)] // for QComboBox_editTextChanged
 pub struct QComboBox_editTextChanged_signal{poi:u64}
 impl /* struct */ QComboBox {
-  pub fn editTextChanged_1(&self) -> QComboBox_editTextChanged_signal {
+  pub fn editTextChanged(&self) -> QComboBox_editTextChanged_signal {
      return QComboBox_editTextChanged_signal{poi:self.qclsinst};
   }
 }
@@ -1937,15 +1752,21 @@ pub trait QComboBox_editTextChanged_signal_connect {
 // activated(const class QString &)
 extern fn QComboBox_activated_signal_connect_cb_0(rsfptr:fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QComboBox_activated_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QComboBox_activated_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(QString)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QComboBox_activated_signal_connect for fn(QString) {
   fn connect(self, sigthis: QComboBox_activated_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QComboBox_activated_signal_connect_cb_0 as *mut c_void;
@@ -1953,29 +1774,35 @@ impl /* trait */ QComboBox_activated_signal_connect for fn(QString) {
     unsafe {QComboBox_SlotProxy_connect__ZN9QComboBox9activatedERK7QString(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QComboBox_activated_signal_connect for Box<fn(QString)> {
+impl /* trait */ QComboBox_activated_signal_connect for Box<Fn(QString)> {
   fn connect(self, sigthis: QComboBox_activated_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QComboBox_activated_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QComboBox_SlotProxy_connect__ZN9QComboBox9activatedERK7QString(arg0, arg1, arg2)};
   }
 }
 // currentIndexChanged(const class QString &)
 extern fn QComboBox_currentIndexChanged_signal_connect_cb_1(rsfptr:fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QComboBox_currentIndexChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QComboBox_currentIndexChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn(QString)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QComboBox_currentIndexChanged_signal_connect for fn(QString) {
   fn connect(self, sigthis: QComboBox_currentIndexChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QComboBox_currentIndexChanged_signal_connect_cb_1 as *mut c_void;
@@ -1983,29 +1810,35 @@ impl /* trait */ QComboBox_currentIndexChanged_signal_connect for fn(QString) {
     unsafe {QComboBox_SlotProxy_connect__ZN9QComboBox19currentIndexChangedERK7QString(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QComboBox_currentIndexChanged_signal_connect for Box<fn(QString)> {
+impl /* trait */ QComboBox_currentIndexChanged_signal_connect for Box<Fn(QString)> {
   fn connect(self, sigthis: QComboBox_currentIndexChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QComboBox_currentIndexChanged_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QComboBox_SlotProxy_connect__ZN9QComboBox19currentIndexChangedERK7QString(arg0, arg1, arg2)};
   }
 }
 // currentTextChanged(const class QString &)
 extern fn QComboBox_currentTextChanged_signal_connect_cb_2(rsfptr:fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QComboBox_currentTextChanged_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QComboBox_currentTextChanged_signal_connect_cb_box_2(rsfptr_raw:*mut Box<Fn(QString)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QComboBox_currentTextChanged_signal_connect for fn(QString) {
   fn connect(self, sigthis: QComboBox_currentTextChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QComboBox_currentTextChanged_signal_connect_cb_2 as *mut c_void;
@@ -2013,29 +1846,35 @@ impl /* trait */ QComboBox_currentTextChanged_signal_connect for fn(QString) {
     unsafe {QComboBox_SlotProxy_connect__ZN9QComboBox18currentTextChangedERK7QString(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QComboBox_currentTextChanged_signal_connect for Box<fn(QString)> {
+impl /* trait */ QComboBox_currentTextChanged_signal_connect for Box<Fn(QString)> {
   fn connect(self, sigthis: QComboBox_currentTextChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QComboBox_currentTextChanged_signal_connect_cb_box_2 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QComboBox_SlotProxy_connect__ZN9QComboBox18currentTextChangedERK7QString(arg0, arg1, arg2)};
   }
 }
 // highlighted(const class QString &)
 extern fn QComboBox_highlighted_signal_connect_cb_3(rsfptr:fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QComboBox_highlighted_signal_connect_cb_box_3(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QComboBox_highlighted_signal_connect_cb_box_3(rsfptr_raw:*mut Box<Fn(QString)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QComboBox_highlighted_signal_connect for fn(QString) {
   fn connect(self, sigthis: QComboBox_highlighted_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QComboBox_highlighted_signal_connect_cb_3 as *mut c_void;
@@ -2043,29 +1882,35 @@ impl /* trait */ QComboBox_highlighted_signal_connect for fn(QString) {
     unsafe {QComboBox_SlotProxy_connect__ZN9QComboBox11highlightedERK7QString(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QComboBox_highlighted_signal_connect for Box<fn(QString)> {
+impl /* trait */ QComboBox_highlighted_signal_connect for Box<Fn(QString)> {
   fn connect(self, sigthis: QComboBox_highlighted_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QComboBox_highlighted_signal_connect_cb_box_3 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QComboBox_SlotProxy_connect__ZN9QComboBox11highlightedERK7QString(arg0, arg1, arg2)};
   }
 }
 // editTextChanged(const class QString &)
 extern fn QComboBox_editTextChanged_signal_connect_cb_4(rsfptr:fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QComboBox_editTextChanged_signal_connect_cb_box_4(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QComboBox_editTextChanged_signal_connect_cb_box_4(rsfptr_raw:*mut Box<Fn(QString)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QComboBox_editTextChanged_signal_connect for fn(QString) {
   fn connect(self, sigthis: QComboBox_editTextChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QComboBox_editTextChanged_signal_connect_cb_4 as *mut c_void;
@@ -2073,29 +1918,35 @@ impl /* trait */ QComboBox_editTextChanged_signal_connect for fn(QString) {
     unsafe {QComboBox_SlotProxy_connect__ZN9QComboBox15editTextChangedERK7QString(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QComboBox_editTextChanged_signal_connect for Box<fn(QString)> {
+impl /* trait */ QComboBox_editTextChanged_signal_connect for Box<Fn(QString)> {
   fn connect(self, sigthis: QComboBox_editTextChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QComboBox_editTextChanged_signal_connect_cb_box_4 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QComboBox_SlotProxy_connect__ZN9QComboBox15editTextChangedERK7QString(arg0, arg1, arg2)};
   }
 }
 // highlighted(int)
 extern fn QComboBox_highlighted_signal_connect_cb_5(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QComboBox_highlighted_signal_connect_cb_box_5(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QComboBox_highlighted_signal_connect_cb_box_5(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QComboBox_highlighted_signal_connect for fn(i32) {
   fn connect(self, sigthis: QComboBox_highlighted_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QComboBox_highlighted_signal_connect_cb_5 as *mut c_void;
@@ -2103,29 +1954,35 @@ impl /* trait */ QComboBox_highlighted_signal_connect for fn(i32) {
     unsafe {QComboBox_SlotProxy_connect__ZN9QComboBox11highlightedEi(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QComboBox_highlighted_signal_connect for Box<fn(i32)> {
+impl /* trait */ QComboBox_highlighted_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QComboBox_highlighted_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QComboBox_highlighted_signal_connect_cb_box_5 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QComboBox_SlotProxy_connect__ZN9QComboBox11highlightedEi(arg0, arg1, arg2)};
   }
 }
 // activated(int)
 extern fn QComboBox_activated_signal_connect_cb_6(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QComboBox_activated_signal_connect_cb_box_6(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QComboBox_activated_signal_connect_cb_box_6(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QComboBox_activated_signal_connect for fn(i32) {
   fn connect(self, sigthis: QComboBox_activated_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QComboBox_activated_signal_connect_cb_6 as *mut c_void;
@@ -2133,29 +1990,35 @@ impl /* trait */ QComboBox_activated_signal_connect for fn(i32) {
     unsafe {QComboBox_SlotProxy_connect__ZN9QComboBox9activatedEi(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QComboBox_activated_signal_connect for Box<fn(i32)> {
+impl /* trait */ QComboBox_activated_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QComboBox_activated_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QComboBox_activated_signal_connect_cb_box_6 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QComboBox_SlotProxy_connect__ZN9QComboBox9activatedEi(arg0, arg1, arg2)};
   }
 }
 // currentIndexChanged(int)
 extern fn QComboBox_currentIndexChanged_signal_connect_cb_7(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QComboBox_currentIndexChanged_signal_connect_cb_box_7(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QComboBox_currentIndexChanged_signal_connect_cb_box_7(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QComboBox_currentIndexChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QComboBox_currentIndexChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QComboBox_currentIndexChanged_signal_connect_cb_7 as *mut c_void;
@@ -2163,14 +2026,14 @@ impl /* trait */ QComboBox_currentIndexChanged_signal_connect for fn(i32) {
     unsafe {QComboBox_SlotProxy_connect__ZN9QComboBox19currentIndexChangedEi(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QComboBox_currentIndexChanged_signal_connect for Box<fn(i32)> {
+impl /* trait */ QComboBox_currentIndexChanged_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QComboBox_currentIndexChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QComboBox_currentIndexChanged_signal_connect_cb_box_7 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QComboBox_SlotProxy_connect__ZN9QComboBox19currentIndexChangedEi(arg0, arg1, arg2)};
   }
 }

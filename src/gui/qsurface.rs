@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qsurface.h
 // dst-file: /src/gui/qsurface.rs
 //
@@ -19,8 +19,9 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qsurfaceformat::QSurfaceFormat; // 773
-use super::super::core::qsize::QSize; // 771
+use super::qsurfaceformat::*; // 773
+// use super::qplatformsurface::*; // 775
+use super::super::core::qsize::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -32,15 +33,15 @@ use super::super::core::qsize::QSize; // 771
 extern {
   fn QSurface_Class_Size() -> c_int;
   // proto:  bool QSurface::supportsOpenGL();
-  fn _ZNK8QSurface14supportsOpenGLEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK8QSurface14supportsOpenGLEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QSurfaceFormat QSurface::format();
-  fn _ZNK8QSurface6formatEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK8QSurface6formatEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QPlatformSurface * QSurface::surfaceHandle();
-  fn _ZNK8QSurface13surfaceHandleEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK8QSurface13surfaceHandleEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QSize QSurface::size();
-  fn _ZNK8QSurface4sizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK8QSurface4sizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QSurface::~QSurface();
-  fn _ZN8QSurfaceD0Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN8QSurfaceD2Ev(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
@@ -73,8 +74,8 @@ impl<'a> /*trait*/ QSurface_supportsOpenGL<i8> for () {
   fn supportsOpenGL(self , rsthis: & QSurface) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QSurface14supportsOpenGLEv()};
-    let mut ret = unsafe {_ZNK8QSurface14supportsOpenGLEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK8QSurface14supportsOpenGLEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -96,7 +97,7 @@ impl<'a> /*trait*/ QSurface_format<QSurfaceFormat> for () {
   fn format(self , rsthis: & QSurface) -> QSurfaceFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QSurface6formatEv()};
-    let mut ret = unsafe {_ZNK8QSurface6formatEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QSurface6formatEv(rsthis.qclsinst)};
     let mut ret1 = QSurfaceFormat::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -116,11 +117,12 @@ pub trait QSurface_surfaceHandle<RetType> {
 }
 
   // proto:  QPlatformSurface * QSurface::surfaceHandle();
-impl<'a> /*trait*/ QSurface_surfaceHandle<()> for () {
-  fn surfaceHandle(self , rsthis: & QSurface) -> () {
+impl<'a> /*trait*/ QSurface_surfaceHandle<u64> for () {
+  fn surfaceHandle(self , rsthis: & QSurface) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QSurface13surfaceHandleEv()};
-     unsafe {_ZNK8QSurface13surfaceHandleEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QSurface13surfaceHandleEv(rsthis.qclsinst)};
+    return ret as u64; // 4
     // return 1;
   }
 }
@@ -142,7 +144,7 @@ impl<'a> /*trait*/ QSurface_size<QSize> for () {
   fn size(self , rsthis: & QSurface) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QSurface4sizeEv()};
-    let mut ret = unsafe {_ZNK8QSurface4sizeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK8QSurface4sizeEv(rsthis.qclsinst)};
     let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -151,22 +153,22 @@ impl<'a> /*trait*/ QSurface_size<QSize> for () {
 
   // proto:  void QSurface::~QSurface();
 impl /*struct*/ QSurface {
-  pub fn Free<RetType, T: QSurface_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QSurface_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QSurface_Free<RetType> {
-  fn Free(self , rsthis: & QSurface) -> RetType;
+pub trait QSurface_free<RetType> {
+  fn free(self , rsthis: & QSurface) -> RetType;
 }
 
   // proto:  void QSurface::~QSurface();
-impl<'a> /*trait*/ QSurface_Free<()> for () {
-  fn Free(self , rsthis: & QSurface) -> () {
+impl<'a> /*trait*/ QSurface_free<()> for () {
+  fn free(self , rsthis: & QSurface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QSurfaceD0Ev()};
-     unsafe {_ZN8QSurfaceD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN8QSurfaceD2Ev()};
+     unsafe {C_ZN8QSurfaceD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

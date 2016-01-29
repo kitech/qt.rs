@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qtextlist.h
 // dst-file: /src/gui/qtextlist.rs
 //
@@ -18,12 +18,12 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qtextobject::QTextBlockGroup; // 773
+use super::qtextobject::*; // 773
 use std::ops::Deref;
-use super::qtextobject::QTextBlock; // 773
-use super::qtextformat::QTextListFormat; // 773
-use super::qtextdocument::QTextDocument; // 773
-use super::super::core::qstring::QString; // 771
+use super::qtextformat::*; // 773
+use super::qtextdocument::*; // 773
+use super::super::core::qstring::*; // 771
+use super::super::core::qobjectdefs::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -35,35 +35,31 @@ use super::super::core::qstring::QString; // 771
 extern {
   fn QTextList_Class_Size() -> c_int;
   // proto:  QTextBlock QTextList::item(int i);
-  fn _ZNK9QTextList4itemEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
+  fn C_ZNK9QTextList4itemEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  void QTextList::remove(const QTextBlock & );
-  fn _ZN9QTextList6removeERK10QTextBlock(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QTextList6removeERK10QTextBlock(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTextList::setFormat(const QTextListFormat & format);
-  fn demth_ZN9QTextList9setFormatERK15QTextListFormat(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QTextList9setFormatERK15QTextListFormat(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QTextList::QTextList(QTextDocument * doc);
-  fn dector_ZN9QTextListC1EP13QTextDocument(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QTextListC1EP13QTextDocument(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QTextList::QTextList(const QTextList & );
-  fn dector_ZN9QTextListC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN9QTextListC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QTextListC2EP13QTextDocument(arg0: *mut c_void) -> u64;
   // proto:  void QTextList::add(const QTextBlock & block);
-  fn _ZN9QTextList3addERK10QTextBlock(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QTextList3addERK10QTextBlock(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QString QTextList::itemText(const QTextBlock & );
-  fn _ZNK9QTextList8itemTextERK10QTextBlock(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZNK9QTextList8itemTextERK10QTextBlock(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QTextList::removeItem(int i);
-  fn _ZN9QTextList10removeItemEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN9QTextList10removeItemEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QTextList::itemNumber(const QTextBlock & );
-  fn _ZNK9QTextList10itemNumberERK10QTextBlock(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
+  fn C_ZNK9QTextList10itemNumberERK10QTextBlock(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
   // proto:  int QTextList::count();
-  fn _ZNK9QTextList5countEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK9QTextList5countEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  QTextListFormat QTextList::format();
-  fn _ZNK9QTextList6formatEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK9QTextList6formatEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QTextList::~QTextList();
-  fn _ZN9QTextListD0Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN9QTextListD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QTextList::isEmpty();
-  fn demth_ZNK9QTextList7isEmptyEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK9QTextList7isEmptyEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  const QMetaObject * QTextList::metaObject();
-  fn _ZNK9QTextList10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK9QTextList10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
 } // <= ext block end
 
 // body block begin =>
@@ -109,7 +105,7 @@ impl<'a> /*trait*/ QTextList_item<QTextBlock> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextList4itemEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZNK9QTextList4itemEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK9QTextList4itemEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QTextBlock::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -134,7 +130,7 @@ impl<'a> /*trait*/ QTextList_remove<()> for (&'a QTextBlock) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextList6removeERK10QTextBlock()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN9QTextList6removeERK10QTextBlock(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QTextList6removeERK10QTextBlock(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -157,50 +153,33 @@ impl<'a> /*trait*/ QTextList_setFormat<()> for (&'a QTextListFormat) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextList9setFormatERK15QTextListFormat()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {demth_ZN9QTextList9setFormatERK15QTextListFormat(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QTextList9setFormatERK15QTextListFormat(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
 
   // proto:  void QTextList::QTextList(QTextDocument * doc);
 impl /*struct*/ QTextList {
-  pub fn New<T: QTextList_New>(value: T) -> QTextList {
-    let rsthis = value.New();
+  pub fn new<T: QTextList_new>(value: T) -> QTextList {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTextList_New {
-  fn New(self) -> QTextList;
+pub trait QTextList_new {
+  fn new(self) -> QTextList;
 }
 
   // proto:  void QTextList::QTextList(QTextDocument * doc);
-impl<'a> /*trait*/ QTextList_New for (&'a QTextDocument) {
-  fn New(self) -> QTextList {
+impl<'a> /*trait*/ QTextList_new for (&'a QTextDocument) {
+  fn new(self) -> QTextList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QTextListC1EP13QTextDocument()};
+    // unsafe{_ZN9QTextListC2EP13QTextDocument()};
     let ctysz: c_int = unsafe{QTextList_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN9QTextListC1EP13QTextDocument(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN9QTextListC1EP13QTextDocument(arg0)} as u64;
-    let rsthis = QTextList{qbase: QTextBlockGroup::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  void QTextList::QTextList(const QTextList & );
-impl<'a> /*trait*/ QTextList_New for (&'a QTextList) {
-  fn New(self) -> QTextList {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QTextListC1ERKS_()};
-    let ctysz: c_int = unsafe{QTextList_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN9QTextListC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN9QTextListC1ERKS_(arg0)} as u64;
+    let qthis: u64 = unsafe {C_ZN9QTextListC2EP13QTextDocument(arg0)};
     let rsthis = QTextList{qbase: QTextBlockGroup::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -225,7 +204,7 @@ impl<'a> /*trait*/ QTextList_add<()> for (&'a QTextBlock) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextList3addERK10QTextBlock()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN9QTextList3addERK10QTextBlock(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QTextList3addERK10QTextBlock(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -248,7 +227,7 @@ impl<'a> /*trait*/ QTextList_itemText<QString> for (&'a QTextBlock) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextList8itemTextERK10QTextBlock()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK9QTextList8itemTextERK10QTextBlock(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK9QTextList8itemTextERK10QTextBlock(rsthis.qclsinst, arg0)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -273,7 +252,7 @@ impl<'a> /*trait*/ QTextList_removeItem<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextList10removeItemEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN9QTextList10removeItemEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QTextList10removeItemEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -296,8 +275,8 @@ impl<'a> /*trait*/ QTextList_itemNumber<i32> for (&'a QTextBlock) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextList10itemNumberERK10QTextBlock()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK9QTextList10itemNumberERK10QTextBlock(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK9QTextList10itemNumberERK10QTextBlock(rsthis.qclsinst, arg0)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -319,8 +298,8 @@ impl<'a> /*trait*/ QTextList_count<i32> for () {
   fn count(self , rsthis: & QTextList) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextList5countEv()};
-    let mut ret = unsafe {_ZNK9QTextList5countEv(rsthis.qclsinst)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK9QTextList5countEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -342,7 +321,7 @@ impl<'a> /*trait*/ QTextList_format<QTextListFormat> for () {
   fn format(self , rsthis: & QTextList) -> QTextListFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextList6formatEv()};
-    let mut ret = unsafe {_ZNK9QTextList6formatEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QTextList6formatEv(rsthis.qclsinst)};
     let mut ret1 = QTextListFormat::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -351,22 +330,22 @@ impl<'a> /*trait*/ QTextList_format<QTextListFormat> for () {
 
   // proto:  void QTextList::~QTextList();
 impl /*struct*/ QTextList {
-  pub fn Free<RetType, T: QTextList_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QTextList_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QTextList_Free<RetType> {
-  fn Free(self , rsthis: & QTextList) -> RetType;
+pub trait QTextList_free<RetType> {
+  fn free(self , rsthis: & QTextList) -> RetType;
 }
 
   // proto:  void QTextList::~QTextList();
-impl<'a> /*trait*/ QTextList_Free<()> for () {
-  fn Free(self , rsthis: & QTextList) -> () {
+impl<'a> /*trait*/ QTextList_free<()> for () {
+  fn free(self , rsthis: & QTextList) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QTextListD0Ev()};
-     unsafe {_ZN9QTextListD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN9QTextListD2Ev()};
+     unsafe {C_ZN9QTextListD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -388,8 +367,8 @@ impl<'a> /*trait*/ QTextList_isEmpty<i8> for () {
   fn isEmpty(self , rsthis: & QTextList) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextList7isEmptyEv()};
-    let mut ret = unsafe {demth_ZNK9QTextList7isEmptyEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK9QTextList7isEmptyEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -407,11 +386,13 @@ pub trait QTextList_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QTextList::metaObject();
-impl<'a> /*trait*/ QTextList_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QTextList) -> () {
+impl<'a> /*trait*/ QTextList_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QTextList) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextList10metaObjectEv()};
-     unsafe {_ZNK9QTextList10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK9QTextList10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }

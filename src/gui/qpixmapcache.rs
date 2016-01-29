@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qpixmapcache.h
 // dst-file: /src/gui/qpixmapcache.rs
 //
@@ -19,8 +19,8 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
-use super::qpixmap::QPixmap; // 773
+use super::super::core::qstring::*; // 771
+use super::qpixmap::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -32,21 +32,21 @@ use super::qpixmap::QPixmap; // 773
 extern {
   fn QPixmapCache_Class_Size() -> c_int;
   // proto: static int QPixmapCache::cacheLimit();
-  fn _ZN12QPixmapCache10cacheLimitEv() -> c_int;
+  fn C_ZN12QPixmapCache10cacheLimitEv() -> c_int;
   // proto: static void QPixmapCache::clear();
-  fn _ZN12QPixmapCache5clearEv();
+  fn C_ZN12QPixmapCache5clearEv();
   // proto: static bool QPixmapCache::insert(const QString & key, const QPixmap & pixmap);
-  fn _ZN12QPixmapCache6insertERK7QStringRK7QPixmap(arg0: *mut c_void, arg1: *mut c_void) -> c_char;
+  fn C_ZN12QPixmapCache6insertERK7QStringRK7QPixmap(arg0: *mut c_void, arg1: *mut c_void) -> c_char;
   // proto: static bool QPixmapCache::find(const QString & key, QPixmap & pixmap);
-  fn _ZN12QPixmapCache4findERK7QStringR7QPixmap(arg0: *mut c_void, arg1: *mut c_void) -> c_char;
+  fn C_ZN12QPixmapCache4findERK7QStringR7QPixmap(arg0: *mut c_void, arg1: *mut c_void) -> c_char;
   // proto: static QPixmap * QPixmapCache::find(const QString & key);
-  fn _ZN12QPixmapCache4findERK7QString(arg0: *mut c_void) -> *mut c_void;
+  fn C_ZN12QPixmapCache4findERK7QString(arg0: *mut c_void) -> *mut c_void;
   // proto: static bool QPixmapCache::find(const QString & key, QPixmap * pixmap);
-  fn _ZN12QPixmapCache4findERK7QStringP7QPixmap(arg0: *mut c_void, arg1: *mut c_void) -> c_char;
+  fn C_ZN12QPixmapCache4findERK7QStringP7QPixmap(arg0: *mut c_void, arg1: *mut c_void) -> c_char;
   // proto: static void QPixmapCache::remove(const QString & key);
-  fn _ZN12QPixmapCache6removeERK7QString(arg0: *mut c_void);
+  fn C_ZN12QPixmapCache6removeERK7QString(arg0: *mut c_void);
   // proto: static void QPixmapCache::setCacheLimit(int );
-  fn _ZN12QPixmapCache13setCacheLimitEi(arg0: c_int);
+  fn C_ZN12QPixmapCache13setCacheLimitEi(arg0: c_int);
 } // <= ext block end
 
 // body block begin =>
@@ -79,8 +79,8 @@ impl<'a> /*trait*/ QPixmapCache_cacheLimit_s<i32> for () {
   fn cacheLimit_s(self ) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPixmapCache10cacheLimitEv()};
-    let mut ret = unsafe {_ZN12QPixmapCache10cacheLimitEv()};
-    return ret as i32;
+    let mut ret = unsafe {C_ZN12QPixmapCache10cacheLimitEv()};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -102,7 +102,7 @@ impl<'a> /*trait*/ QPixmapCache_clear_s<()> for () {
   fn clear_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPixmapCache5clearEv()};
-     unsafe {_ZN12QPixmapCache5clearEv()};
+     unsafe {C_ZN12QPixmapCache5clearEv()};
     // return 1;
   }
 }
@@ -126,8 +126,8 @@ impl<'a> /*trait*/ QPixmapCache_insert_s<i8> for (&'a QString, &'a QPixmap) {
     // unsafe{_ZN12QPixmapCache6insertERK7QStringRK7QPixmap()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN12QPixmapCache6insertERK7QStringRK7QPixmap(arg0, arg1)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZN12QPixmapCache6insertERK7QStringRK7QPixmap(arg0, arg1)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -151,8 +151,8 @@ impl<'a> /*trait*/ QPixmapCache_find_s<i8> for (&'a QString, &'a QPixmap) {
     // unsafe{_ZN12QPixmapCache4findERK7QStringR7QPixmap()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN12QPixmapCache4findERK7QStringR7QPixmap(arg0, arg1)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZN12QPixmapCache4findERK7QStringR7QPixmap(arg0, arg1)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -163,7 +163,7 @@ impl<'a> /*trait*/ QPixmapCache_find_s<QPixmap> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPixmapCache4findERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN12QPixmapCache4findERK7QString(arg0)};
+    let mut ret = unsafe {C_ZN12QPixmapCache4findERK7QString(arg0)};
     let mut ret1 = QPixmap::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -188,7 +188,7 @@ impl<'a> /*trait*/ QPixmapCache_remove_s<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPixmapCache6removeERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN12QPixmapCache6removeERK7QString(arg0)};
+     unsafe {C_ZN12QPixmapCache6removeERK7QString(arg0)};
     // return 1;
   }
 }
@@ -211,7 +211,7 @@ impl<'a> /*trait*/ QPixmapCache_setCacheLimit_s<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPixmapCache13setCacheLimitEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN12QPixmapCache13setCacheLimitEi(arg0)};
+     unsafe {C_ZN12QPixmapCache13setCacheLimitEi(arg0)};
     // return 1;
   }
 }

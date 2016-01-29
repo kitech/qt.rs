@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qatomic.h
 // dst-file: /src/core/qatomic.rs
 //
@@ -30,8 +30,7 @@ use std::ops::Deref;
 extern {
   fn QAtomicInt_Class_Size() -> c_int;
   // proto:  void QAtomicInt::QAtomicInt(int value);
-  fn dector_ZN10QAtomicIntC1Ei(arg0: c_int) -> *mut c_void;
-  fn _ZN10QAtomicIntC1Ei(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN10QAtomicIntC2Ei(arg0: c_int) -> u64;
 } // <= ext block end
 
 // body block begin =>
@@ -49,27 +48,26 @@ impl /*struct*/ QAtomicInt {
 }
   // proto:  void QAtomicInt::QAtomicInt(int value);
 impl /*struct*/ QAtomicInt {
-  pub fn New<T: QAtomicInt_New>(value: T) -> QAtomicInt {
-    let rsthis = value.New();
+  pub fn new<T: QAtomicInt_new>(value: T) -> QAtomicInt {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QAtomicInt_New {
-  fn New(self) -> QAtomicInt;
+pub trait QAtomicInt_new {
+  fn new(self) -> QAtomicInt;
 }
 
   // proto:  void QAtomicInt::QAtomicInt(int value);
-impl<'a> /*trait*/ QAtomicInt_New for (i32) {
-  fn New(self) -> QAtomicInt {
+impl<'a> /*trait*/ QAtomicInt_new for (i32) {
+  fn new(self) -> QAtomicInt {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QAtomicIntC1Ei()};
+    // unsafe{_ZN10QAtomicIntC2Ei()};
     let ctysz: c_int = unsafe{QAtomicInt_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self  as c_int;
-    // unsafe {_ZN10QAtomicIntC1Ei(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN10QAtomicIntC1Ei(arg0)} as u64;
+    let qthis: u64 = unsafe {C_ZN10QAtomicIntC2Ei(arg0)};
     let rsthis = QAtomicInt{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qdiriterator.h
 // dst-file: /src/core/qdiriterator.rs
 //
@@ -19,10 +19,10 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qstring::QString; // 773
-use super::qdir::QDir; // 773
-use super::qstringlist::QStringList; // 773
-use super::qfileinfo::QFileInfo; // 773
+use super::qstring::*; // 773
+use super::qdir::*; // 773
+use super::qstringlist::*; // 773
+use super::qfileinfo::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -34,22 +34,19 @@ use super::qfileinfo::QFileInfo; // 773
 extern {
   fn QDirIterator_Class_Size() -> c_int;
   // proto:  QString QDirIterator::fileName();
-  fn _ZNK12QDirIterator8fileNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK12QDirIterator8fileNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QDirIterator::path();
-  fn _ZNK12QDirIterator4pathEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QDirIterator::QDirIterator(const QDirIterator & );
-  fn dector_ZN12QDirIteratorC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN12QDirIteratorC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK12QDirIterator4pathEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QDirIterator::next();
-  fn _ZN12QDirIterator4nextEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZN12QDirIterator4nextEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QDirIterator::filePath();
-  fn _ZNK12QDirIterator8filePathEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK12QDirIterator8filePathEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QDirIterator::~QDirIterator();
-  fn _ZN12QDirIteratorD0Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN12QDirIteratorD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QFileInfo QDirIterator::fileInfo();
-  fn _ZNK12QDirIterator8fileInfoEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK12QDirIterator8fileInfoEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QDirIterator::hasNext();
-  fn _ZNK12QDirIterator7hasNextEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK12QDirIterator7hasNextEv(qthis: u64 /* *mut c_void*/) -> c_char;
 } // <= ext block end
 
 // body block begin =>
@@ -82,7 +79,7 @@ impl<'a> /*trait*/ QDirIterator_fileName<QString> for () {
   fn fileName(self , rsthis: & QDirIterator) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QDirIterator8fileNameEv()};
-    let mut ret = unsafe {_ZNK12QDirIterator8fileNameEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QDirIterator8fileNameEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -106,38 +103,9 @@ impl<'a> /*trait*/ QDirIterator_path<QString> for () {
   fn path(self , rsthis: & QDirIterator) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QDirIterator4pathEv()};
-    let mut ret = unsafe {_ZNK12QDirIterator4pathEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QDirIterator4pathEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QDirIterator::QDirIterator(const QDirIterator & );
-impl /*struct*/ QDirIterator {
-  pub fn New<T: QDirIterator_New>(value: T) -> QDirIterator {
-    let rsthis = value.New();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QDirIterator_New {
-  fn New(self) -> QDirIterator;
-}
-
-  // proto:  void QDirIterator::QDirIterator(const QDirIterator & );
-impl<'a> /*trait*/ QDirIterator_New for (&'a QDirIterator) {
-  fn New(self) -> QDirIterator {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QDirIteratorC1ERKS_()};
-    let ctysz: c_int = unsafe{QDirIterator_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN12QDirIteratorC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN12QDirIteratorC1ERKS_(arg0)} as u64;
-    let rsthis = QDirIterator{qclsinst: qthis, ..Default::default()};
-    return rsthis;
     // return 1;
   }
 }
@@ -159,7 +127,7 @@ impl<'a> /*trait*/ QDirIterator_next<QString> for () {
   fn next(self , rsthis: & QDirIterator) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QDirIterator4nextEv()};
-    let mut ret = unsafe {_ZN12QDirIterator4nextEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZN12QDirIterator4nextEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -183,7 +151,7 @@ impl<'a> /*trait*/ QDirIterator_filePath<QString> for () {
   fn filePath(self , rsthis: & QDirIterator) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QDirIterator8filePathEv()};
-    let mut ret = unsafe {_ZNK12QDirIterator8filePathEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QDirIterator8filePathEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -192,22 +160,22 @@ impl<'a> /*trait*/ QDirIterator_filePath<QString> for () {
 
   // proto:  void QDirIterator::~QDirIterator();
 impl /*struct*/ QDirIterator {
-  pub fn Free<RetType, T: QDirIterator_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QDirIterator_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QDirIterator_Free<RetType> {
-  fn Free(self , rsthis: & QDirIterator) -> RetType;
+pub trait QDirIterator_free<RetType> {
+  fn free(self , rsthis: & QDirIterator) -> RetType;
 }
 
   // proto:  void QDirIterator::~QDirIterator();
-impl<'a> /*trait*/ QDirIterator_Free<()> for () {
-  fn Free(self , rsthis: & QDirIterator) -> () {
+impl<'a> /*trait*/ QDirIterator_free<()> for () {
+  fn free(self , rsthis: & QDirIterator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QDirIteratorD0Ev()};
-     unsafe {_ZN12QDirIteratorD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN12QDirIteratorD2Ev()};
+     unsafe {C_ZN12QDirIteratorD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -229,7 +197,7 @@ impl<'a> /*trait*/ QDirIterator_fileInfo<QFileInfo> for () {
   fn fileInfo(self , rsthis: & QDirIterator) -> QFileInfo {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QDirIterator8fileInfoEv()};
-    let mut ret = unsafe {_ZNK12QDirIterator8fileInfoEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QDirIterator8fileInfoEv(rsthis.qclsinst)};
     let mut ret1 = QFileInfo::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -253,8 +221,8 @@ impl<'a> /*trait*/ QDirIterator_hasNext<i8> for () {
   fn hasNext(self , rsthis: & QDirIterator) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QDirIterator7hasNextEv()};
-    let mut ret = unsafe {_ZNK12QDirIterator7hasNextEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK12QDirIterator7hasNextEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }

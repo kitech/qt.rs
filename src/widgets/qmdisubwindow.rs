@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qmdisubwindow.h
 // dst-file: /src/widgets/qmdisubwindow.rs
 //
@@ -18,11 +18,12 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qwidget::QWidget; // 773
+use super::qwidget::*; // 773
 use std::ops::Deref;
-use super::super::core::qsize::QSize; // 771
-use super::qmenu::QMenu; // 773
-use super::qmdiarea::QMdiArea; // 773
+use super::super::core::qobjectdefs::*; // 771
+use super::super::core::qsize::*; // 771
+use super::qmenu::*; // 773
+use super::qmdiarea::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -34,50 +35,42 @@ use super::qmdiarea::QMdiArea; // 773
 extern {
   fn QMdiSubWindow_Class_Size() -> c_int;
   // proto:  int QMdiSubWindow::keyboardSingleStep();
-  fn _ZNK13QMdiSubWindow18keyboardSingleStepEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK13QMdiSubWindow18keyboardSingleStepEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QMdiSubWindow::keyboardPageStep();
-  fn _ZNK13QMdiSubWindow16keyboardPageStepEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK13QMdiSubWindow16keyboardPageStepEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  const QMetaObject * QMdiSubWindow::metaObject();
-  fn _ZNK13QMdiSubWindow10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK13QMdiSubWindow10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QSize QMdiSubWindow::sizeHint();
-  fn _ZNK13QMdiSubWindow8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK13QMdiSubWindow8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QWidget * QMdiSubWindow::maximizedSystemMenuIconWidget();
-  fn _ZNK13QMdiSubWindow29maximizedSystemMenuIconWidgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK13QMdiSubWindow29maximizedSystemMenuIconWidgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QMdiSubWindow::setSystemMenu(QMenu * systemMenu);
-  fn _ZN13QMdiSubWindow13setSystemMenuEP5QMenu(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN13QMdiSubWindow13setSystemMenuEP5QMenu(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMdiSubWindow::~QMdiSubWindow();
-  fn _ZN13QMdiSubWindowD0Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN13QMdiSubWindowD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QMdiSubWindow::setKeyboardSingleStep(int step);
-  fn _ZN13QMdiSubWindow21setKeyboardSingleStepEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN13QMdiSubWindow21setKeyboardSingleStepEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  QWidget * QMdiSubWindow::widget();
-  fn _ZNK13QMdiSubWindow6widgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK13QMdiSubWindow6widgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QMdiSubWindow::showShaded();
-  fn _ZN13QMdiSubWindow10showShadedEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN13QMdiSubWindow10showShadedEv(qthis: u64 /* *mut c_void*/);
   // proto:  QWidget * QMdiSubWindow::maximizedButtonsWidget();
-  fn _ZNK13QMdiSubWindow22maximizedButtonsWidgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK13QMdiSubWindow22maximizedButtonsWidgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QSize QMdiSubWindow::minimumSizeHint();
-  fn _ZNK13QMdiSubWindow15minimumSizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QMdiSubWindow::aboutToActivate();
-  fn _ZN13QMdiSubWindow15aboutToActivateEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK13QMdiSubWindow15minimumSizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QMdiSubWindow::showSystemMenu();
-  fn _ZN13QMdiSubWindow14showSystemMenuEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN13QMdiSubWindow14showSystemMenuEv(qthis: u64 /* *mut c_void*/);
   // proto:  QMenu * QMdiSubWindow::systemMenu();
-  fn _ZNK13QMdiSubWindow10systemMenuEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QMdiSubWindow::QMdiSubWindow(const QMdiSubWindow & );
-  fn dector_ZN13QMdiSubWindowC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN13QMdiSubWindowC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK13QMdiSubWindow10systemMenuEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QMdiSubWindow::setWidget(QWidget * widget);
-  fn _ZN13QMdiSubWindow9setWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN13QMdiSubWindow9setWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QMdiSubWindow::isShaded();
-  fn _ZNK13QMdiSubWindow8isShadedEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK13QMdiSubWindow8isShadedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QMdiArea * QMdiSubWindow::mdiArea();
-  fn _ZNK13QMdiSubWindow7mdiAreaEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK13QMdiSubWindow7mdiAreaEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QMdiSubWindow::setKeyboardPageStep(int step);
-  fn _ZN13QMdiSubWindow19setKeyboardPageStepEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
-  fn QMdiSubWindow_SlotProxy_connect__ZN13QMdiSubWindow18windowStateChangedE6QFlagsIN2Qt11WindowStateEES3_(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QMdiSubWindow_SlotProxy_connect_box__ZN13QMdiSubWindow18windowStateChangedE6QFlagsIN2Qt11WindowStateEES3_(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
+  fn C_ZN13QMdiSubWindow19setKeyboardPageStepEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   fn QMdiSubWindow_SlotProxy_connect__ZN13QMdiSubWindow15aboutToActivateEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QMdiSubWindow_SlotProxy_connect_box__ZN13QMdiSubWindow15aboutToActivateEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -86,8 +79,8 @@ extern {
 pub struct QMdiSubWindow {
   qbase: QWidget,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _aboutToActivate_1: QMdiSubWindow_aboutToActivate_signal,
-  pub _windowStateChanged_1: QMdiSubWindow_windowStateChanged_signal,
+  pub _aboutToActivate: QMdiSubWindow_aboutToActivate_signal,
+  pub _windowStateChanged: QMdiSubWindow_windowStateChanged_signal,
 }
 
 impl /*struct*/ QMdiSubWindow {
@@ -124,8 +117,8 @@ impl<'a> /*trait*/ QMdiSubWindow_keyboardSingleStep<i32> for () {
   fn keyboardSingleStep(self , rsthis: & QMdiSubWindow) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMdiSubWindow18keyboardSingleStepEv()};
-    let mut ret = unsafe {_ZNK13QMdiSubWindow18keyboardSingleStepEv(rsthis.qclsinst)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK13QMdiSubWindow18keyboardSingleStepEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -147,8 +140,8 @@ impl<'a> /*trait*/ QMdiSubWindow_keyboardPageStep<i32> for () {
   fn keyboardPageStep(self , rsthis: & QMdiSubWindow) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMdiSubWindow16keyboardPageStepEv()};
-    let mut ret = unsafe {_ZNK13QMdiSubWindow16keyboardPageStepEv(rsthis.qclsinst)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK13QMdiSubWindow16keyboardPageStepEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -166,11 +159,13 @@ pub trait QMdiSubWindow_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QMdiSubWindow::metaObject();
-impl<'a> /*trait*/ QMdiSubWindow_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QMdiSubWindow) -> () {
+impl<'a> /*trait*/ QMdiSubWindow_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QMdiSubWindow) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMdiSubWindow10metaObjectEv()};
-     unsafe {_ZNK13QMdiSubWindow10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QMdiSubWindow10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -192,7 +187,7 @@ impl<'a> /*trait*/ QMdiSubWindow_sizeHint<QSize> for () {
   fn sizeHint(self , rsthis: & QMdiSubWindow) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMdiSubWindow8sizeHintEv()};
-    let mut ret = unsafe {_ZNK13QMdiSubWindow8sizeHintEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QMdiSubWindow8sizeHintEv(rsthis.qclsinst)};
     let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -216,7 +211,7 @@ impl<'a> /*trait*/ QMdiSubWindow_maximizedSystemMenuIconWidget<QWidget> for () {
   fn maximizedSystemMenuIconWidget(self , rsthis: & QMdiSubWindow) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMdiSubWindow29maximizedSystemMenuIconWidgetEv()};
-    let mut ret = unsafe {_ZNK13QMdiSubWindow29maximizedSystemMenuIconWidgetEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QMdiSubWindow29maximizedSystemMenuIconWidgetEv(rsthis.qclsinst)};
     let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -241,29 +236,29 @@ impl<'a> /*trait*/ QMdiSubWindow_setSystemMenu<()> for (&'a QMenu) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QMdiSubWindow13setSystemMenuEP5QMenu()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN13QMdiSubWindow13setSystemMenuEP5QMenu(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN13QMdiSubWindow13setSystemMenuEP5QMenu(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
 
   // proto:  void QMdiSubWindow::~QMdiSubWindow();
 impl /*struct*/ QMdiSubWindow {
-  pub fn Free<RetType, T: QMdiSubWindow_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QMdiSubWindow_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QMdiSubWindow_Free<RetType> {
-  fn Free(self , rsthis: & QMdiSubWindow) -> RetType;
+pub trait QMdiSubWindow_free<RetType> {
+  fn free(self , rsthis: & QMdiSubWindow) -> RetType;
 }
 
   // proto:  void QMdiSubWindow::~QMdiSubWindow();
-impl<'a> /*trait*/ QMdiSubWindow_Free<()> for () {
-  fn Free(self , rsthis: & QMdiSubWindow) -> () {
+impl<'a> /*trait*/ QMdiSubWindow_free<()> for () {
+  fn free(self , rsthis: & QMdiSubWindow) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QMdiSubWindowD0Ev()};
-     unsafe {_ZN13QMdiSubWindowD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN13QMdiSubWindowD2Ev()};
+     unsafe {C_ZN13QMdiSubWindowD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -286,7 +281,7 @@ impl<'a> /*trait*/ QMdiSubWindow_setKeyboardSingleStep<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QMdiSubWindow21setKeyboardSingleStepEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN13QMdiSubWindow21setKeyboardSingleStepEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN13QMdiSubWindow21setKeyboardSingleStepEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -308,7 +303,7 @@ impl<'a> /*trait*/ QMdiSubWindow_widget<QWidget> for () {
   fn widget(self , rsthis: & QMdiSubWindow) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMdiSubWindow6widgetEv()};
-    let mut ret = unsafe {_ZNK13QMdiSubWindow6widgetEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QMdiSubWindow6widgetEv(rsthis.qclsinst)};
     let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -332,7 +327,7 @@ impl<'a> /*trait*/ QMdiSubWindow_showShaded<()> for () {
   fn showShaded(self , rsthis: & QMdiSubWindow) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QMdiSubWindow10showShadedEv()};
-     unsafe {_ZN13QMdiSubWindow10showShadedEv(rsthis.qclsinst)};
+     unsafe {C_ZN13QMdiSubWindow10showShadedEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -354,7 +349,7 @@ impl<'a> /*trait*/ QMdiSubWindow_maximizedButtonsWidget<QWidget> for () {
   fn maximizedButtonsWidget(self , rsthis: & QMdiSubWindow) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMdiSubWindow22maximizedButtonsWidgetEv()};
-    let mut ret = unsafe {_ZNK13QMdiSubWindow22maximizedButtonsWidgetEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QMdiSubWindow22maximizedButtonsWidgetEv(rsthis.qclsinst)};
     let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -378,31 +373,9 @@ impl<'a> /*trait*/ QMdiSubWindow_minimumSizeHint<QSize> for () {
   fn minimumSizeHint(self , rsthis: & QMdiSubWindow) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMdiSubWindow15minimumSizeHintEv()};
-    let mut ret = unsafe {_ZNK13QMdiSubWindow15minimumSizeHintEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QMdiSubWindow15minimumSizeHintEv(rsthis.qclsinst)};
     let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QMdiSubWindow::aboutToActivate();
-impl /*struct*/ QMdiSubWindow {
-  pub fn aboutToActivate<RetType, T: QMdiSubWindow_aboutToActivate<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.aboutToActivate(self);
-    // return 1;
-  }
-}
-
-pub trait QMdiSubWindow_aboutToActivate<RetType> {
-  fn aboutToActivate(self , rsthis: & QMdiSubWindow) -> RetType;
-}
-
-  // proto:  void QMdiSubWindow::aboutToActivate();
-impl<'a> /*trait*/ QMdiSubWindow_aboutToActivate<()> for () {
-  fn aboutToActivate(self , rsthis: & QMdiSubWindow) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QMdiSubWindow15aboutToActivateEv()};
-     unsafe {_ZN13QMdiSubWindow15aboutToActivateEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -424,7 +397,7 @@ impl<'a> /*trait*/ QMdiSubWindow_showSystemMenu<()> for () {
   fn showSystemMenu(self , rsthis: & QMdiSubWindow) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QMdiSubWindow14showSystemMenuEv()};
-     unsafe {_ZN13QMdiSubWindow14showSystemMenuEv(rsthis.qclsinst)};
+     unsafe {C_ZN13QMdiSubWindow14showSystemMenuEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -446,38 +419,9 @@ impl<'a> /*trait*/ QMdiSubWindow_systemMenu<QMenu> for () {
   fn systemMenu(self , rsthis: & QMdiSubWindow) -> QMenu {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMdiSubWindow10systemMenuEv()};
-    let mut ret = unsafe {_ZNK13QMdiSubWindow10systemMenuEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QMdiSubWindow10systemMenuEv(rsthis.qclsinst)};
     let mut ret1 = QMenu::inheritFrom(ret as u64);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QMdiSubWindow::QMdiSubWindow(const QMdiSubWindow & );
-impl /*struct*/ QMdiSubWindow {
-  pub fn New<T: QMdiSubWindow_New>(value: T) -> QMdiSubWindow {
-    let rsthis = value.New();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QMdiSubWindow_New {
-  fn New(self) -> QMdiSubWindow;
-}
-
-  // proto:  void QMdiSubWindow::QMdiSubWindow(const QMdiSubWindow & );
-impl<'a> /*trait*/ QMdiSubWindow_New for (&'a QMdiSubWindow) {
-  fn New(self) -> QMdiSubWindow {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QMdiSubWindowC1ERKS_()};
-    let ctysz: c_int = unsafe{QMdiSubWindow_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN13QMdiSubWindowC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN13QMdiSubWindowC1ERKS_(arg0)} as u64;
-    let rsthis = QMdiSubWindow{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
     // return 1;
   }
 }
@@ -500,7 +444,7 @@ impl<'a> /*trait*/ QMdiSubWindow_setWidget<()> for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QMdiSubWindow9setWidgetEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN13QMdiSubWindow9setWidgetEP7QWidget(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN13QMdiSubWindow9setWidgetEP7QWidget(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -522,8 +466,8 @@ impl<'a> /*trait*/ QMdiSubWindow_isShaded<i8> for () {
   fn isShaded(self , rsthis: & QMdiSubWindow) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMdiSubWindow8isShadedEv()};
-    let mut ret = unsafe {_ZNK13QMdiSubWindow8isShadedEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK13QMdiSubWindow8isShadedEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -545,7 +489,7 @@ impl<'a> /*trait*/ QMdiSubWindow_mdiArea<QMdiArea> for () {
   fn mdiArea(self , rsthis: & QMdiSubWindow) -> QMdiArea {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMdiSubWindow7mdiAreaEv()};
-    let mut ret = unsafe {_ZNK13QMdiSubWindow7mdiAreaEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK13QMdiSubWindow7mdiAreaEv(rsthis.qclsinst)};
     let mut ret1 = QMdiArea::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -570,7 +514,7 @@ impl<'a> /*trait*/ QMdiSubWindow_setKeyboardPageStep<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QMdiSubWindow19setKeyboardPageStepEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN13QMdiSubWindow19setKeyboardPageStepEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN13QMdiSubWindow19setKeyboardPageStepEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -578,7 +522,7 @@ impl<'a> /*trait*/ QMdiSubWindow_setKeyboardPageStep<()> for (i32) {
 #[derive(Default)] // for QMdiSubWindow_aboutToActivate
 pub struct QMdiSubWindow_aboutToActivate_signal{poi:u64}
 impl /* struct */ QMdiSubWindow {
-  pub fn aboutToActivate_1(&self) -> QMdiSubWindow_aboutToActivate_signal {
+  pub fn aboutToActivate(&self) -> QMdiSubWindow_aboutToActivate_signal {
      return QMdiSubWindow_aboutToActivate_signal{poi:self.qclsinst};
   }
 }
@@ -594,7 +538,7 @@ pub trait QMdiSubWindow_aboutToActivate_signal_connect {
 #[derive(Default)] // for QMdiSubWindow_windowStateChanged
 pub struct QMdiSubWindow_windowStateChanged_signal{poi:u64}
 impl /* struct */ QMdiSubWindow {
-  pub fn windowStateChanged_1(&self) -> QMdiSubWindow_windowStateChanged_signal {
+  pub fn windowStateChanged(&self) -> QMdiSubWindow_windowStateChanged_signal {
      return QMdiSubWindow_windowStateChanged_signal{poi:self.qclsinst};
   }
 }
@@ -607,63 +551,37 @@ pub trait QMdiSubWindow_windowStateChanged_signal_connect {
   fn connect(self, sigthis: QMdiSubWindow_windowStateChanged_signal);
 }
 
-// windowStateChanged(Qt::WindowStates, Qt::WindowStates)
-extern fn QMdiSubWindow_windowStateChanged_signal_connect_cb_0(rsfptr:fn(i32, i32), arg0: c_int, arg1: c_int) {
-  println!("{}:{}", file!(), line!());
-}
-extern fn QMdiSubWindow_windowStateChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_int, arg1: c_int) {
-  println!("{}:{}", file!(), line!());
-  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-}
-impl /* trait */ QMdiSubWindow_windowStateChanged_signal_connect for fn(i32, i32) {
-  fn connect(self, sigthis: QMdiSubWindow_windowStateChanged_signal) {
-    // do smth...
-    self as u64;
-    self as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QMdiSubWindow_windowStateChanged_signal_connect_cb_0 as *mut c_void;
-    let arg2 = self as *mut c_void;
-    unsafe {QMdiSubWindow_SlotProxy_connect__ZN13QMdiSubWindow18windowStateChangedE6QFlagsIN2Qt11WindowStateEES3_(arg0, arg1, arg2)};
-  }
-}
-impl /* trait */ QMdiSubWindow_windowStateChanged_signal_connect for Box<fn(i32, i32)> {
-  fn connect(self, sigthis: QMdiSubWindow_windowStateChanged_signal) {
-    // do smth...
-    // Box::into_raw(self) as u64;
-    // Box::into_raw(self) as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QMdiSubWindow_windowStateChanged_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
-    unsafe {QMdiSubWindow_SlotProxy_connect__ZN13QMdiSubWindow18windowStateChangedE6QFlagsIN2Qt11WindowStateEES3_(arg0, arg1, arg2)};
-  }
-}
 // aboutToActivate()
-extern fn QMdiSubWindow_aboutToActivate_signal_connect_cb_1(rsfptr:fn(), ) {
+extern fn QMdiSubWindow_aboutToActivate_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QMdiSubWindow_aboutToActivate_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, ) {
+extern fn QMdiSubWindow_aboutToActivate_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QMdiSubWindow_aboutToActivate_signal_connect for fn() {
   fn connect(self, sigthis: QMdiSubWindow_aboutToActivate_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QMdiSubWindow_aboutToActivate_signal_connect_cb_1 as *mut c_void;
+    let arg1 = QMdiSubWindow_aboutToActivate_signal_connect_cb_0 as *mut c_void;
     let arg2 = self as *mut c_void;
     unsafe {QMdiSubWindow_SlotProxy_connect__ZN13QMdiSubWindow15aboutToActivateEv(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QMdiSubWindow_aboutToActivate_signal_connect for Box<fn()> {
+impl /* trait */ QMdiSubWindow_aboutToActivate_signal_connect for Box<Fn()> {
   fn connect(self, sigthis: QMdiSubWindow_aboutToActivate_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QMdiSubWindow_aboutToActivate_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg1 = QMdiSubWindow_aboutToActivate_signal_connect_cb_box_0 as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QMdiSubWindow_SlotProxy_connect__ZN13QMdiSubWindow15aboutToActivateEv(arg0, arg1, arg2)};
   }
 }

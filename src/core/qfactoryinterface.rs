@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qfactoryinterface.h
 // dst-file: /src/core/qfactoryinterface.rs
 //
@@ -19,6 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
+use super::qstringlist::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -30,9 +31,9 @@ use std::ops::Deref;
 extern {
   fn QFactoryInterface_Class_Size() -> c_int;
   // proto:  void QFactoryInterface::~QFactoryInterface();
-  fn _ZN17QFactoryInterfaceD0Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN17QFactoryInterfaceD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QStringList QFactoryInterface::keys();
-  fn _ZNK17QFactoryInterface4keysEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK17QFactoryInterface4keysEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
 } // <= ext block end
 
 // body block begin =>
@@ -50,22 +51,22 @@ impl /*struct*/ QFactoryInterface {
 }
   // proto:  void QFactoryInterface::~QFactoryInterface();
 impl /*struct*/ QFactoryInterface {
-  pub fn Free<RetType, T: QFactoryInterface_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QFactoryInterface_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QFactoryInterface_Free<RetType> {
-  fn Free(self , rsthis: & QFactoryInterface) -> RetType;
+pub trait QFactoryInterface_free<RetType> {
+  fn free(self , rsthis: & QFactoryInterface) -> RetType;
 }
 
   // proto:  void QFactoryInterface::~QFactoryInterface();
-impl<'a> /*trait*/ QFactoryInterface_Free<()> for () {
-  fn Free(self , rsthis: & QFactoryInterface) -> () {
+impl<'a> /*trait*/ QFactoryInterface_free<()> for () {
+  fn free(self , rsthis: & QFactoryInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QFactoryInterfaceD0Ev()};
-     unsafe {_ZN17QFactoryInterfaceD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN17QFactoryInterfaceD2Ev()};
+     unsafe {C_ZN17QFactoryInterfaceD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -83,11 +84,13 @@ pub trait QFactoryInterface_keys<RetType> {
 }
 
   // proto:  QStringList QFactoryInterface::keys();
-impl<'a> /*trait*/ QFactoryInterface_keys<()> for () {
-  fn keys(self , rsthis: & QFactoryInterface) -> () {
+impl<'a> /*trait*/ QFactoryInterface_keys<QStringList> for () {
+  fn keys(self , rsthis: & QFactoryInterface) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QFactoryInterface4keysEv()};
-     unsafe {_ZNK17QFactoryInterface4keysEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK17QFactoryInterface4keysEv(rsthis.qclsinst)};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }

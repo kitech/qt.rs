@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qpen.h
 // dst-file: /src/gui/qpen.rs
 //
@@ -19,8 +19,9 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qcolor::QColor; // 773
-use super::qbrush::QBrush; // 773
+use super::qcolor::*; // 773
+use super::qbrush::*; // 773
+// use super::qvector::*; // 775
 // <= use block end
 
 // ext block begin =>
@@ -32,52 +33,49 @@ use super::qbrush::QBrush; // 773
 extern {
   fn QPen_Class_Size() -> c_int;
   // proto:  void QPen::~QPen();
-  fn _ZN4QPenD0Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN4QPenD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  qreal QPen::dashOffset();
-  fn _ZNK4QPen10dashOffsetEv(qthis: u64 /* *mut c_void*/) -> c_double;
+  fn C_ZNK4QPen10dashOffsetEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QPen::QPen(const QColor & color);
-  fn dector_ZN4QPenC1ERK6QColor(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN4QPenC1ERK6QColor(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN4QPenC2ERK6QColor(arg0: *mut c_void) -> u64;
   // proto:  qreal QPen::miterLimit();
-  fn _ZNK4QPen10miterLimitEv(qthis: u64 /* *mut c_void*/) -> c_double;
+  fn C_ZNK4QPen10miterLimitEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QPen::setWidthF(qreal width);
-  fn _ZN4QPen9setWidthFEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
+  fn C_ZN4QPen9setWidthFEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QPen::setBrush(const QBrush & brush);
-  fn _ZN4QPen8setBrushERK6QBrush(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN4QPen8setBrushERK6QBrush(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QColor QPen::color();
-  fn _ZNK4QPen5colorEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK4QPen5colorEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QPen::setWidth(int width);
-  fn _ZN4QPen8setWidthEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN4QPen8setWidthEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  qreal QPen::widthF();
-  fn _ZNK4QPen6widthFEv(qthis: u64 /* *mut c_void*/) -> c_double;
+  fn C_ZNK4QPen6widthFEv(qthis: u64 /* *mut c_void*/) -> c_double;
   // proto:  void QPen::setCosmetic(bool cosmetic);
-  fn _ZN4QPen11setCosmeticEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN4QPen11setCosmeticEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  bool QPen::isSolid();
-  fn _ZNK4QPen7isSolidEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK4QPen7isSolidEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QPen::setColor(const QColor & color);
-  fn _ZN4QPen8setColorERK6QColor(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN4QPen8setColorERK6QColor(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QVector<qreal> QPen::dashPattern();
-  fn _ZNK4QPen11dashPatternEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK4QPen11dashPatternEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QPen::isDetached();
-  fn _ZN4QPen10isDetachedEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZN4QPen10isDetachedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QPen::QPen(const QPen & pen);
-  fn dector_ZN4QPenC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN4QPenC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN4QPenC2ERKS_(arg0: *mut c_void) -> u64;
   // proto:  void QPen::setMiterLimit(qreal limit);
-  fn _ZN4QPen13setMiterLimitEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
+  fn C_ZN4QPen13setMiterLimitEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
   // proto:  void QPen::QPen();
-  fn dector_ZN4QPenC1Ev() -> *mut c_void;
-  fn _ZN4QPenC1Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN4QPenC2Ev() -> u64;
   // proto:  int QPen::width();
-  fn _ZNK4QPen5widthEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK4QPen5widthEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QPen::swap(QPen & other);
-  fn _ZN4QPen4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN4QPen4swapERS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QBrush QPen::brush();
-  fn _ZNK4QPen5brushEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK4QPen5brushEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QPen::isCosmetic();
-  fn _ZNK4QPen10isCosmeticEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK4QPen10isCosmeticEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QPen::setDashOffset(qreal doffset);
-  fn _ZN4QPen13setDashOffsetEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
+  fn C_ZN4QPen13setDashOffsetEd(qthis: u64 /* *mut c_void*/, arg0: c_double);
 } // <= ext block end
 
 // body block begin =>
@@ -95,22 +93,22 @@ impl /*struct*/ QPen {
 }
   // proto:  void QPen::~QPen();
 impl /*struct*/ QPen {
-  pub fn Free<RetType, T: QPen_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QPen_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QPen_Free<RetType> {
-  fn Free(self , rsthis: & QPen) -> RetType;
+pub trait QPen_free<RetType> {
+  fn free(self , rsthis: & QPen) -> RetType;
 }
 
   // proto:  void QPen::~QPen();
-impl<'a> /*trait*/ QPen_Free<()> for () {
-  fn Free(self , rsthis: & QPen) -> () {
+impl<'a> /*trait*/ QPen_free<()> for () {
+  fn free(self , rsthis: & QPen) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN4QPenD0Ev()};
-     unsafe {_ZN4QPenD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN4QPenD2Ev()};
+     unsafe {C_ZN4QPenD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -132,35 +130,34 @@ impl<'a> /*trait*/ QPen_dashOffset<f64> for () {
   fn dashOffset(self , rsthis: & QPen) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QPen10dashOffsetEv()};
-    let mut ret = unsafe {_ZNK4QPen10dashOffsetEv(rsthis.qclsinst)};
-    return ret as f64;
+    let mut ret = unsafe {C_ZNK4QPen10dashOffsetEv(rsthis.qclsinst)};
+    return ret as f64; // 1
     // return 1;
   }
 }
 
   // proto:  void QPen::QPen(const QColor & color);
 impl /*struct*/ QPen {
-  pub fn New<T: QPen_New>(value: T) -> QPen {
-    let rsthis = value.New();
+  pub fn new<T: QPen_new>(value: T) -> QPen {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QPen_New {
-  fn New(self) -> QPen;
+pub trait QPen_new {
+  fn new(self) -> QPen;
 }
 
   // proto:  void QPen::QPen(const QColor & color);
-impl<'a> /*trait*/ QPen_New for (&'a QColor) {
-  fn New(self) -> QPen {
+impl<'a> /*trait*/ QPen_new for (&'a QColor) {
+  fn new(self) -> QPen {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN4QPenC1ERK6QColor()};
+    // unsafe{_ZN4QPenC2ERK6QColor()};
     let ctysz: c_int = unsafe{QPen_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN4QPenC1ERK6QColor(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN4QPenC1ERK6QColor(arg0)} as u64;
+    let qthis: u64 = unsafe {C_ZN4QPenC2ERK6QColor(arg0)};
     let rsthis = QPen{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -184,8 +181,8 @@ impl<'a> /*trait*/ QPen_miterLimit<f64> for () {
   fn miterLimit(self , rsthis: & QPen) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QPen10miterLimitEv()};
-    let mut ret = unsafe {_ZNK4QPen10miterLimitEv(rsthis.qclsinst)};
-    return ret as f64;
+    let mut ret = unsafe {C_ZNK4QPen10miterLimitEv(rsthis.qclsinst)};
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -208,7 +205,7 @@ impl<'a> /*trait*/ QPen_setWidthF<()> for (f64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QPen9setWidthFEd()};
     let arg0 = self  as c_double;
-     unsafe {_ZN4QPen9setWidthFEd(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN4QPen9setWidthFEd(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -231,7 +228,7 @@ impl<'a> /*trait*/ QPen_setBrush<()> for (&'a QBrush) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QPen8setBrushERK6QBrush()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN4QPen8setBrushERK6QBrush(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN4QPen8setBrushERK6QBrush(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -253,7 +250,7 @@ impl<'a> /*trait*/ QPen_color<QColor> for () {
   fn color(self , rsthis: & QPen) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QPen5colorEv()};
-    let mut ret = unsafe {_ZNK4QPen5colorEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK4QPen5colorEv(rsthis.qclsinst)};
     let mut ret1 = QColor::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -278,7 +275,7 @@ impl<'a> /*trait*/ QPen_setWidth<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QPen8setWidthEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN4QPen8setWidthEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN4QPen8setWidthEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -300,8 +297,8 @@ impl<'a> /*trait*/ QPen_widthF<f64> for () {
   fn widthF(self , rsthis: & QPen) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QPen6widthFEv()};
-    let mut ret = unsafe {_ZNK4QPen6widthFEv(rsthis.qclsinst)};
-    return ret as f64;
+    let mut ret = unsafe {C_ZNK4QPen6widthFEv(rsthis.qclsinst)};
+    return ret as f64; // 1
     // return 1;
   }
 }
@@ -324,7 +321,7 @@ impl<'a> /*trait*/ QPen_setCosmetic<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QPen11setCosmeticEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN4QPen11setCosmeticEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN4QPen11setCosmeticEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -346,8 +343,8 @@ impl<'a> /*trait*/ QPen_isSolid<i8> for () {
   fn isSolid(self , rsthis: & QPen) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QPen7isSolidEv()};
-    let mut ret = unsafe {_ZNK4QPen7isSolidEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK4QPen7isSolidEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -370,7 +367,7 @@ impl<'a> /*trait*/ QPen_setColor<()> for (&'a QColor) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QPen8setColorERK6QColor()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN4QPen8setColorERK6QColor(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN4QPen8setColorERK6QColor(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -388,11 +385,12 @@ pub trait QPen_dashPattern<RetType> {
 }
 
   // proto:  QVector<qreal> QPen::dashPattern();
-impl<'a> /*trait*/ QPen_dashPattern<()> for () {
-  fn dashPattern(self , rsthis: & QPen) -> () {
+impl<'a> /*trait*/ QPen_dashPattern<u64> for () {
+  fn dashPattern(self , rsthis: & QPen) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QPen11dashPatternEv()};
-     unsafe {_ZNK4QPen11dashPatternEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK4QPen11dashPatternEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -414,22 +412,21 @@ impl<'a> /*trait*/ QPen_isDetached<i8> for () {
   fn isDetached(self , rsthis: & QPen) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QPen10isDetachedEv()};
-    let mut ret = unsafe {_ZN4QPen10isDetachedEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZN4QPen10isDetachedEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
 
   // proto:  void QPen::QPen(const QPen & pen);
-impl<'a> /*trait*/ QPen_New for (&'a QPen) {
-  fn New(self) -> QPen {
+impl<'a> /*trait*/ QPen_new for (&'a QPen) {
+  fn new(self) -> QPen {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN4QPenC1ERKS_()};
+    // unsafe{_ZN4QPenC2ERKS_()};
     let ctysz: c_int = unsafe{QPen_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN4QPenC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN4QPenC1ERKS_(arg0)} as u64;
+    let qthis: u64 = unsafe {C_ZN4QPenC2ERKS_(arg0)};
     let rsthis = QPen{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -454,20 +451,19 @@ impl<'a> /*trait*/ QPen_setMiterLimit<()> for (f64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QPen13setMiterLimitEd()};
     let arg0 = self  as c_double;
-     unsafe {_ZN4QPen13setMiterLimitEd(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN4QPen13setMiterLimitEd(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
 
   // proto:  void QPen::QPen();
-impl<'a> /*trait*/ QPen_New for () {
-  fn New(self) -> QPen {
+impl<'a> /*trait*/ QPen_new for () {
+  fn new(self) -> QPen {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN4QPenC1Ev()};
+    // unsafe{_ZN4QPenC2Ev()};
     let ctysz: c_int = unsafe{QPen_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN4QPenC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN4QPenC1Ev()} as u64;
+    let qthis: u64 = unsafe {C_ZN4QPenC2Ev()};
     let rsthis = QPen{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -491,8 +487,8 @@ impl<'a> /*trait*/ QPen_width<i32> for () {
   fn width(self , rsthis: & QPen) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QPen5widthEv()};
-    let mut ret = unsafe {_ZNK4QPen5widthEv(rsthis.qclsinst)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK4QPen5widthEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -515,7 +511,7 @@ impl<'a> /*trait*/ QPen_swap<()> for (&'a QPen) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QPen4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN4QPen4swapERS_(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN4QPen4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -537,7 +533,7 @@ impl<'a> /*trait*/ QPen_brush<QBrush> for () {
   fn brush(self , rsthis: & QPen) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QPen5brushEv()};
-    let mut ret = unsafe {_ZNK4QPen5brushEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK4QPen5brushEv(rsthis.qclsinst)};
     let mut ret1 = QBrush::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -561,8 +557,8 @@ impl<'a> /*trait*/ QPen_isCosmetic<i8> for () {
   fn isCosmetic(self , rsthis: & QPen) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QPen10isCosmeticEv()};
-    let mut ret = unsafe {_ZNK4QPen10isCosmeticEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK4QPen10isCosmeticEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -585,7 +581,7 @@ impl<'a> /*trait*/ QPen_setDashOffset<()> for (f64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QPen13setDashOffsetEd()};
     let arg0 = self  as c_double;
-     unsafe {_ZN4QPen13setDashOffsetEd(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN4QPen13setDashOffsetEd(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qdialog.h
 // dst-file: /src/widgets/qdialog.rs
 //
@@ -18,9 +18,10 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qwidget::QWidget; // 773
+use super::qwidget::*; // 773
 use std::ops::Deref;
-use super::super::core::qsize::QSize; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::super::core::qsize::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -32,56 +33,44 @@ use super::super::core::qsize::QSize; // 771
 extern {
   fn QDialog_Class_Size() -> c_int;
   // proto:  void QDialog::setExtension(QWidget * extension);
-  fn _ZN7QDialog12setExtensionEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN7QDialog12setExtensionEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QDialog::result();
-  fn _ZNK7QDialog6resultEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  void QDialog::finished(int result);
-  fn _ZN7QDialog8finishedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZNK7QDialog6resultEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QDialog::done(int );
-  fn _ZN7QDialog4doneEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN7QDialog4doneEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QDialog::open();
-  fn _ZN7QDialog4openEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN7QDialog4openEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QDialog::~QDialog();
-  fn _ZN7QDialogD0Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN7QDialogD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QDialog::setResult(int r);
-  fn _ZN7QDialog9setResultEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN7QDialog9setResultEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QDialog::setSizeGripEnabled(bool );
-  fn _ZN7QDialog18setSizeGripEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN7QDialog18setSizeGripEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QDialog::showExtension(bool );
-  fn _ZN7QDialog13showExtensionEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN7QDialog13showExtensionEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  const QMetaObject * QDialog::metaObject();
-  fn _ZNK7QDialog10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK7QDialog10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QSize QDialog::minimumSizeHint();
-  fn _ZNK7QDialog15minimumSizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK7QDialog15minimumSizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QSize QDialog::sizeHint();
-  fn _ZNK7QDialog8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK7QDialog8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QDialog::accept();
-  fn _ZN7QDialog6acceptEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN7QDialog6acceptEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QDialog::setVisible(bool visible);
-  fn _ZN7QDialog10setVisibleEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN7QDialog10setVisibleEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QWidget * QDialog::extension();
-  fn _ZNK7QDialog9extensionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK7QDialog9extensionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QDialog::exec();
-  fn _ZN7QDialog4execEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZN7QDialog4execEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QDialog::reject();
-  fn _ZN7QDialog6rejectEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QDialog::accepted();
-  fn _ZN7QDialog8acceptedEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QDialog::QDialog(const QDialog & );
-  fn dector_ZN7QDialogC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN7QDialogC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN7QDialog6rejectEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QDialog::isSizeGripEnabled();
-  fn _ZNK7QDialog17isSizeGripEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QDialog::rejected();
-  fn _ZN7QDialog8rejectedEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK7QDialog17isSizeGripEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QDialog::setModal(bool modal);
-  fn _ZN7QDialog8setModalEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN7QDialog8setModalEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   fn QDialog_SlotProxy_connect__ZN7QDialog8rejectedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QDialog_SlotProxy_connect_box__ZN7QDialog8rejectedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QDialog_SlotProxy_connect__ZN7QDialog8finishedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QDialog_SlotProxy_connect_box__ZN7QDialog8finishedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QDialog_SlotProxy_connect__ZN7QDialog8acceptedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QDialog_SlotProxy_connect_box__ZN7QDialog8acceptedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -90,9 +79,9 @@ extern {
 pub struct QDialog {
   qbase: QWidget,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _finished_1: QDialog_finished_signal,
-  pub _accepted_1: QDialog_accepted_signal,
-  pub _rejected_1: QDialog_rejected_signal,
+  pub _finished: QDialog_finished_signal,
+  pub _accepted: QDialog_accepted_signal,
+  pub _rejected: QDialog_rejected_signal,
 }
 
 impl /*struct*/ QDialog {
@@ -130,7 +119,7 @@ impl<'a> /*trait*/ QDialog_setExtension<()> for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QDialog12setExtensionEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN7QDialog12setExtensionEP7QWidget(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN7QDialog12setExtensionEP7QWidget(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -152,31 +141,8 @@ impl<'a> /*trait*/ QDialog_result<i32> for () {
   fn result(self , rsthis: & QDialog) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QDialog6resultEv()};
-    let mut ret = unsafe {_ZNK7QDialog6resultEv(rsthis.qclsinst)};
-    return ret as i32;
-    // return 1;
-  }
-}
-
-  // proto:  void QDialog::finished(int result);
-impl /*struct*/ QDialog {
-  pub fn finished<RetType, T: QDialog_finished<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.finished(self);
-    // return 1;
-  }
-}
-
-pub trait QDialog_finished<RetType> {
-  fn finished(self , rsthis: & QDialog) -> RetType;
-}
-
-  // proto:  void QDialog::finished(int result);
-impl<'a> /*trait*/ QDialog_finished<()> for (i32) {
-  fn finished(self , rsthis: & QDialog) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QDialog8finishedEi()};
-    let arg0 = self  as c_int;
-     unsafe {_ZN7QDialog8finishedEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK7QDialog6resultEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -199,7 +165,7 @@ impl<'a> /*trait*/ QDialog_done<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QDialog4doneEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN7QDialog4doneEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN7QDialog4doneEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -221,29 +187,29 @@ impl<'a> /*trait*/ QDialog_open<()> for () {
   fn open(self , rsthis: & QDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QDialog4openEv()};
-     unsafe {_ZN7QDialog4openEv(rsthis.qclsinst)};
+     unsafe {C_ZN7QDialog4openEv(rsthis.qclsinst)};
     // return 1;
   }
 }
 
   // proto:  void QDialog::~QDialog();
 impl /*struct*/ QDialog {
-  pub fn Free<RetType, T: QDialog_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QDialog_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QDialog_Free<RetType> {
-  fn Free(self , rsthis: & QDialog) -> RetType;
+pub trait QDialog_free<RetType> {
+  fn free(self , rsthis: & QDialog) -> RetType;
 }
 
   // proto:  void QDialog::~QDialog();
-impl<'a> /*trait*/ QDialog_Free<()> for () {
-  fn Free(self , rsthis: & QDialog) -> () {
+impl<'a> /*trait*/ QDialog_free<()> for () {
+  fn free(self , rsthis: & QDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QDialogD0Ev()};
-     unsafe {_ZN7QDialogD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN7QDialogD2Ev()};
+     unsafe {C_ZN7QDialogD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -266,7 +232,7 @@ impl<'a> /*trait*/ QDialog_setResult<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QDialog9setResultEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN7QDialog9setResultEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN7QDialog9setResultEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -289,7 +255,7 @@ impl<'a> /*trait*/ QDialog_setSizeGripEnabled<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QDialog18setSizeGripEnabledEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN7QDialog18setSizeGripEnabledEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN7QDialog18setSizeGripEnabledEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -312,7 +278,7 @@ impl<'a> /*trait*/ QDialog_showExtension<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QDialog13showExtensionEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN7QDialog13showExtensionEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN7QDialog13showExtensionEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -330,11 +296,13 @@ pub trait QDialog_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QDialog::metaObject();
-impl<'a> /*trait*/ QDialog_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QDialog) -> () {
+impl<'a> /*trait*/ QDialog_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QDialog) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QDialog10metaObjectEv()};
-     unsafe {_ZNK7QDialog10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QDialog10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -356,7 +324,7 @@ impl<'a> /*trait*/ QDialog_minimumSizeHint<QSize> for () {
   fn minimumSizeHint(self , rsthis: & QDialog) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QDialog15minimumSizeHintEv()};
-    let mut ret = unsafe {_ZNK7QDialog15minimumSizeHintEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QDialog15minimumSizeHintEv(rsthis.qclsinst)};
     let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -380,7 +348,7 @@ impl<'a> /*trait*/ QDialog_sizeHint<QSize> for () {
   fn sizeHint(self , rsthis: & QDialog) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QDialog8sizeHintEv()};
-    let mut ret = unsafe {_ZNK7QDialog8sizeHintEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QDialog8sizeHintEv(rsthis.qclsinst)};
     let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -404,7 +372,7 @@ impl<'a> /*trait*/ QDialog_accept<()> for () {
   fn accept(self , rsthis: & QDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QDialog6acceptEv()};
-     unsafe {_ZN7QDialog6acceptEv(rsthis.qclsinst)};
+     unsafe {C_ZN7QDialog6acceptEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -427,7 +395,7 @@ impl<'a> /*trait*/ QDialog_setVisible<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QDialog10setVisibleEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN7QDialog10setVisibleEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN7QDialog10setVisibleEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -449,7 +417,7 @@ impl<'a> /*trait*/ QDialog_extension<QWidget> for () {
   fn extension(self , rsthis: & QDialog) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QDialog9extensionEv()};
-    let mut ret = unsafe {_ZNK7QDialog9extensionEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QDialog9extensionEv(rsthis.qclsinst)};
     let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -473,8 +441,8 @@ impl<'a> /*trait*/ QDialog_exec<i32> for () {
   fn exec(self , rsthis: & QDialog) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QDialog4execEv()};
-    let mut ret = unsafe {_ZN7QDialog4execEv(rsthis.qclsinst)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZN7QDialog4execEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -496,58 +464,7 @@ impl<'a> /*trait*/ QDialog_reject<()> for () {
   fn reject(self , rsthis: & QDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QDialog6rejectEv()};
-     unsafe {_ZN7QDialog6rejectEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QDialog::accepted();
-impl /*struct*/ QDialog {
-  pub fn accepted<RetType, T: QDialog_accepted<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.accepted(self);
-    // return 1;
-  }
-}
-
-pub trait QDialog_accepted<RetType> {
-  fn accepted(self , rsthis: & QDialog) -> RetType;
-}
-
-  // proto:  void QDialog::accepted();
-impl<'a> /*trait*/ QDialog_accepted<()> for () {
-  fn accepted(self , rsthis: & QDialog) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QDialog8acceptedEv()};
-     unsafe {_ZN7QDialog8acceptedEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QDialog::QDialog(const QDialog & );
-impl /*struct*/ QDialog {
-  pub fn New<T: QDialog_New>(value: T) -> QDialog {
-    let rsthis = value.New();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QDialog_New {
-  fn New(self) -> QDialog;
-}
-
-  // proto:  void QDialog::QDialog(const QDialog & );
-impl<'a> /*trait*/ QDialog_New for (&'a QDialog) {
-  fn New(self) -> QDialog {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QDialogC1ERKS_()};
-    let ctysz: c_int = unsafe{QDialog_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN7QDialogC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN7QDialogC1ERKS_(arg0)} as u64;
-    let rsthis = QDialog{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
+     unsafe {C_ZN7QDialog6rejectEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -569,30 +486,8 @@ impl<'a> /*trait*/ QDialog_isSizeGripEnabled<i8> for () {
   fn isSizeGripEnabled(self , rsthis: & QDialog) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QDialog17isSizeGripEnabledEv()};
-    let mut ret = unsafe {_ZNK7QDialog17isSizeGripEnabledEv(rsthis.qclsinst)};
-    return ret as i8;
-    // return 1;
-  }
-}
-
-  // proto:  void QDialog::rejected();
-impl /*struct*/ QDialog {
-  pub fn rejected<RetType, T: QDialog_rejected<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.rejected(self);
-    // return 1;
-  }
-}
-
-pub trait QDialog_rejected<RetType> {
-  fn rejected(self , rsthis: & QDialog) -> RetType;
-}
-
-  // proto:  void QDialog::rejected();
-impl<'a> /*trait*/ QDialog_rejected<()> for () {
-  fn rejected(self , rsthis: & QDialog) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QDialog8rejectedEv()};
-     unsafe {_ZN7QDialog8rejectedEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QDialog17isSizeGripEnabledEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -615,7 +510,7 @@ impl<'a> /*trait*/ QDialog_setModal<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QDialog8setModalEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN7QDialog8setModalEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN7QDialog8setModalEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -623,7 +518,7 @@ impl<'a> /*trait*/ QDialog_setModal<()> for (i8) {
 #[derive(Default)] // for QDialog_finished
 pub struct QDialog_finished_signal{poi:u64}
 impl /* struct */ QDialog {
-  pub fn finished_1(&self) -> QDialog_finished_signal {
+  pub fn finished(&self) -> QDialog_finished_signal {
      return QDialog_finished_signal{poi:self.qclsinst};
   }
 }
@@ -639,7 +534,7 @@ pub trait QDialog_finished_signal_connect {
 #[derive(Default)] // for QDialog_accepted
 pub struct QDialog_accepted_signal{poi:u64}
 impl /* struct */ QDialog {
-  pub fn accepted_1(&self) -> QDialog_accepted_signal {
+  pub fn accepted(&self) -> QDialog_accepted_signal {
      return QDialog_accepted_signal{poi:self.qclsinst};
   }
 }
@@ -655,7 +550,7 @@ pub trait QDialog_accepted_signal_connect {
 #[derive(Default)] // for QDialog_rejected
 pub struct QDialog_rejected_signal{poi:u64}
 impl /* struct */ QDialog {
-  pub fn rejected_1(&self) -> QDialog_rejected_signal {
+  pub fn rejected(&self) -> QDialog_rejected_signal {
      return QDialog_rejected_signal{poi:self.qclsinst};
   }
 }
@@ -671,15 +566,19 @@ pub trait QDialog_rejected_signal_connect {
 // rejected()
 extern fn QDialog_rejected_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QDialog_rejected_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, ) {
+extern fn QDialog_rejected_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QDialog_rejected_signal_connect for fn() {
   fn connect(self, sigthis: QDialog_rejected_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QDialog_rejected_signal_connect_cb_0 as *mut c_void;
@@ -687,29 +586,35 @@ impl /* trait */ QDialog_rejected_signal_connect for fn() {
     unsafe {QDialog_SlotProxy_connect__ZN7QDialog8rejectedEv(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QDialog_rejected_signal_connect for Box<fn()> {
+impl /* trait */ QDialog_rejected_signal_connect for Box<Fn()> {
   fn connect(self, sigthis: QDialog_rejected_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QDialog_rejected_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QDialog_SlotProxy_connect__ZN7QDialog8rejectedEv(arg0, arg1, arg2)};
   }
 }
 // finished(int)
 extern fn QDialog_finished_signal_connect_cb_1(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QDialog_finished_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QDialog_finished_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QDialog_finished_signal_connect for fn(i32) {
   fn connect(self, sigthis: QDialog_finished_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QDialog_finished_signal_connect_cb_1 as *mut c_void;
@@ -717,29 +622,33 @@ impl /* trait */ QDialog_finished_signal_connect for fn(i32) {
     unsafe {QDialog_SlotProxy_connect__ZN7QDialog8finishedEi(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QDialog_finished_signal_connect for Box<fn(i32)> {
+impl /* trait */ QDialog_finished_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QDialog_finished_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QDialog_finished_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QDialog_SlotProxy_connect__ZN7QDialog8finishedEi(arg0, arg1, arg2)};
   }
 }
 // accepted()
 extern fn QDialog_accepted_signal_connect_cb_2(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QDialog_accepted_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, ) {
+extern fn QDialog_accepted_signal_connect_cb_box_2(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QDialog_accepted_signal_connect for fn() {
   fn connect(self, sigthis: QDialog_accepted_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QDialog_accepted_signal_connect_cb_2 as *mut c_void;
@@ -747,14 +656,14 @@ impl /* trait */ QDialog_accepted_signal_connect for fn() {
     unsafe {QDialog_SlotProxy_connect__ZN7QDialog8acceptedEv(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QDialog_accepted_signal_connect for Box<fn()> {
+impl /* trait */ QDialog_accepted_signal_connect for Box<Fn()> {
   fn connect(self, sigthis: QDialog_accepted_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QDialog_accepted_signal_connect_cb_box_2 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QDialog_SlotProxy_connect__ZN7QDialog8acceptedEv(arg0, arg1, arg2)};
   }
 }

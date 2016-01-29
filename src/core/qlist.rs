@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qlist.h
 // dst-file: /src/core/qlist.rs
 //
@@ -30,37 +30,37 @@ use std::ops::Deref;
 extern {
   fn QListData_Class_Size() -> c_int;
   // proto:  void ** QListData::prepend();
-  fn _ZN9QListData7prependEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZN9QListData7prependEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QListData::realloc(int alloc);
-  fn _ZN9QListData7reallocEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN9QListData7reallocEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void ** QListData::end();
-  fn demth_ZNK9QListData3endEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK9QListData3endEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QListData::remove(int i, int n);
-  fn _ZN9QListData6removeEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
+  fn C_ZN9QListData6removeEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  void ** QListData::append(const QListData & l);
-  fn _ZN9QListData6appendERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZN9QListData6appendERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QListData::remove(int i);
-  fn _ZN9QListData6removeEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN9QListData6removeEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void ** QListData::append();
-  fn _ZN9QListData6appendEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZN9QListData6appendEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QListData::dispose();
-  fn demth_ZN9QListData7disposeEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN9QListData7disposeEv(qthis: u64 /* *mut c_void*/);
   // proto:  int QListData::size();
-  fn demth_ZNK9QListData4sizeEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK9QListData4sizeEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  bool QListData::isEmpty();
-  fn demth_ZNK9QListData7isEmptyEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK9QListData7isEmptyEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void ** QListData::at(int i);
-  fn demth_ZNK9QListData2atEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
+  fn C_ZNK9QListData2atEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  void ** QListData::erase(void ** xi);
-  fn _ZN9QListData5eraseEPPv(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZN9QListData5eraseEPPv(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void ** QListData::append(int n);
-  fn _ZN9QListData6appendEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
+  fn C_ZN9QListData6appendEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  void QListData::move(int from, int to);
-  fn _ZN9QListData4moveEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
+  fn C_ZN9QListData4moveEii(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: c_int);
   // proto:  void ** QListData::begin();
-  fn demth_ZNK9QListData5beginEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK9QListData5beginEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void ** QListData::insert(int i);
-  fn _ZN9QListData6insertEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
+  fn C_ZN9QListData6insertEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
 } // <= ext block end
 
 // body block begin =>
@@ -93,8 +93,8 @@ impl<'a> /*trait*/ QListData_prepend<*mut c_void> for () {
   fn prepend(self , rsthis: & QListData) -> *mut c_void {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QListData7prependEv()};
-    let mut ret = unsafe {_ZN9QListData7prependEv(rsthis.qclsinst)};
-    return ret as *mut c_void;
+    let mut ret = unsafe {C_ZN9QListData7prependEv(rsthis.qclsinst)};
+    return ret as *mut c_void; // 1
     // return 1;
   }
 }
@@ -117,7 +117,7 @@ impl<'a> /*trait*/ QListData_realloc<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QListData7reallocEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN9QListData7reallocEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QListData7reallocEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -139,8 +139,8 @@ impl<'a> /*trait*/ QListData_end<*mut c_void> for () {
   fn end(self , rsthis: & QListData) -> *mut c_void {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QListData3endEv()};
-    let mut ret = unsafe {demth_ZNK9QListData3endEv(rsthis.qclsinst)};
-    return ret as *mut c_void;
+    let mut ret = unsafe {C_ZNK9QListData3endEv(rsthis.qclsinst)};
+    return ret as *mut c_void; // 1
     // return 1;
   }
 }
@@ -164,7 +164,7 @@ impl<'a> /*trait*/ QListData_remove<()> for (i32, i32) {
     // unsafe{_ZN9QListData6removeEii()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-     unsafe {_ZN9QListData6removeEii(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN9QListData6removeEii(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -187,8 +187,8 @@ impl<'a> /*trait*/ QListData_append<*mut c_void> for (&'a QListData) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QListData6appendERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN9QListData6appendERKS_(rsthis.qclsinst, arg0)};
-    return ret as *mut c_void;
+    let mut ret = unsafe {C_ZN9QListData6appendERKS_(rsthis.qclsinst, arg0)};
+    return ret as *mut c_void; // 1
     // return 1;
   }
 }
@@ -199,7 +199,7 @@ impl<'a> /*trait*/ QListData_remove<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QListData6removeEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN9QListData6removeEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QListData6removeEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -209,8 +209,8 @@ impl<'a> /*trait*/ QListData_append<*mut c_void> for () {
   fn append(self , rsthis: & QListData) -> *mut c_void {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QListData6appendEv()};
-    let mut ret = unsafe {_ZN9QListData6appendEv(rsthis.qclsinst)};
-    return ret as *mut c_void;
+    let mut ret = unsafe {C_ZN9QListData6appendEv(rsthis.qclsinst)};
+    return ret as *mut c_void; // 1
     // return 1;
   }
 }
@@ -232,7 +232,7 @@ impl<'a> /*trait*/ QListData_dispose<()> for () {
   fn dispose(self , rsthis: & QListData) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QListData7disposeEv()};
-     unsafe {demth_ZN9QListData7disposeEv(rsthis.qclsinst)};
+     unsafe {C_ZN9QListData7disposeEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -254,8 +254,8 @@ impl<'a> /*trait*/ QListData_size<i32> for () {
   fn size(self , rsthis: & QListData) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QListData4sizeEv()};
-    let mut ret = unsafe {demth_ZNK9QListData4sizeEv(rsthis.qclsinst)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK9QListData4sizeEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -277,8 +277,8 @@ impl<'a> /*trait*/ QListData_isEmpty<i8> for () {
   fn isEmpty(self , rsthis: & QListData) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QListData7isEmptyEv()};
-    let mut ret = unsafe {demth_ZNK9QListData7isEmptyEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK9QListData7isEmptyEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -301,8 +301,8 @@ impl<'a> /*trait*/ QListData_at<*mut c_void> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QListData2atEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {demth_ZNK9QListData2atEi(rsthis.qclsinst, arg0)};
-    return ret as *mut c_void;
+    let mut ret = unsafe {C_ZNK9QListData2atEi(rsthis.qclsinst, arg0)};
+    return ret as *mut c_void; // 1
     // return 1;
   }
 }
@@ -325,8 +325,8 @@ impl<'a> /*trait*/ QListData_erase<*mut c_void> for (*mut c_void) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QListData5eraseEPPv()};
     let arg0 = self  as *mut c_void;
-    let mut ret = unsafe {_ZN9QListData5eraseEPPv(rsthis.qclsinst, arg0)};
-    return ret as *mut c_void;
+    let mut ret = unsafe {C_ZN9QListData5eraseEPPv(rsthis.qclsinst, arg0)};
+    return ret as *mut c_void; // 1
     // return 1;
   }
 }
@@ -337,8 +337,8 @@ impl<'a> /*trait*/ QListData_append<*mut c_void> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QListData6appendEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZN9QListData6appendEi(rsthis.qclsinst, arg0)};
-    return ret as *mut c_void;
+    let mut ret = unsafe {C_ZN9QListData6appendEi(rsthis.qclsinst, arg0)};
+    return ret as *mut c_void; // 1
     // return 1;
   }
 }
@@ -362,7 +362,7 @@ impl<'a> /*trait*/ QListData_move_<()> for (i32, i32) {
     // unsafe{_ZN9QListData4moveEii()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-     unsafe {_ZN9QListData4moveEii(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN9QListData4moveEii(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -384,8 +384,8 @@ impl<'a> /*trait*/ QListData_begin<*mut c_void> for () {
   fn begin(self , rsthis: & QListData) -> *mut c_void {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QListData5beginEv()};
-    let mut ret = unsafe {demth_ZNK9QListData5beginEv(rsthis.qclsinst)};
-    return ret as *mut c_void;
+    let mut ret = unsafe {C_ZNK9QListData5beginEv(rsthis.qclsinst)};
+    return ret as *mut c_void; // 1
     // return 1;
   }
 }
@@ -408,8 +408,8 @@ impl<'a> /*trait*/ QListData_insert<*mut c_void> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QListData6insertEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZN9QListData6insertEi(rsthis.qclsinst, arg0)};
-    return ret as *mut c_void;
+    let mut ret = unsafe {C_ZN9QListData6insertEi(rsthis.qclsinst, arg0)};
+    return ret as *mut c_void; // 1
     // return 1;
   }
 }

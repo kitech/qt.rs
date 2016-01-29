@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qdesktopservices.h
 // dst-file: /src/gui/qdesktopservices.rs
 //
@@ -19,9 +19,9 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
-use super::super::core::qurl::QUrl; // 771
-use super::super::core::qobject::QObject; // 771
+use super::super::core::qstring::*; // 771
+use super::super::core::qurl::*; // 771
+use super::super::core::qobject::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -33,11 +33,11 @@ use super::super::core::qobject::QObject; // 771
 extern {
   fn QDesktopServices_Class_Size() -> c_int;
   // proto: static void QDesktopServices::unsetUrlHandler(const QString & scheme);
-  fn _ZN16QDesktopServices15unsetUrlHandlerERK7QString(arg0: *mut c_void);
+  fn C_ZN16QDesktopServices15unsetUrlHandlerERK7QString(arg0: *mut c_void);
   // proto: static bool QDesktopServices::openUrl(const QUrl & url);
-  fn _ZN16QDesktopServices7openUrlERK4QUrl(arg0: *mut c_void) -> c_char;
+  fn C_ZN16QDesktopServices7openUrlERK4QUrl(arg0: *mut c_void) -> c_char;
   // proto: static void QDesktopServices::setUrlHandler(const QString & scheme, QObject * receiver, const char * method);
-  fn _ZN16QDesktopServices13setUrlHandlerERK7QStringP7QObjectPKc(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_char);
+  fn C_ZN16QDesktopServices13setUrlHandlerERK7QStringP7QObjectPKc(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_char);
 } // <= ext block end
 
 // body block begin =>
@@ -71,7 +71,7 @@ impl<'a> /*trait*/ QDesktopServices_unsetUrlHandler_s<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QDesktopServices15unsetUrlHandlerERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN16QDesktopServices15unsetUrlHandlerERK7QString(arg0)};
+     unsafe {C_ZN16QDesktopServices15unsetUrlHandlerERK7QString(arg0)};
     // return 1;
   }
 }
@@ -94,8 +94,8 @@ impl<'a> /*trait*/ QDesktopServices_openUrl_s<i8> for (&'a QUrl) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QDesktopServices7openUrlERK4QUrl()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN16QDesktopServices7openUrlERK4QUrl(arg0)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZN16QDesktopServices7openUrlERK4QUrl(arg0)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -120,7 +120,7 @@ impl<'a> /*trait*/ QDesktopServices_setUrlHandler_s<()> for (&'a QString, &'a QO
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.as_ptr()  as *mut c_char;
-     unsafe {_ZN16QDesktopServices13setUrlHandlerERK7QStringP7QObjectPKc(arg0, arg1, arg2)};
+     unsafe {C_ZN16QDesktopServices13setUrlHandlerERK7QStringP7QObjectPKc(arg0, arg1, arg2)};
     // return 1;
   }
 }

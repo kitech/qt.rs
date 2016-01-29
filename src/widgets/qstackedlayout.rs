@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qstackedlayout.h
 // dst-file: /src/widgets/qstackedlayout.rs
 //
@@ -18,12 +18,13 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qlayout::QLayout; // 773
+use super::qlayout::*; // 773
 use std::ops::Deref;
-use super::qwidget::QWidget; // 773
-use super::super::core::qrect::QRect; // 771
-use super::qlayoutitem::QLayoutItem; // 773
-use super::super::core::qsize::QSize; // 771
+use super::qwidget::*; // 773
+use super::super::core::qrect::*; // 771
+use super::qlayoutitem::*; // 773
+use super::super::core::qsize::*; // 771
+use super::super::core::qobjectdefs::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -34,62 +35,50 @@ use super::super::core::qsize::QSize; // 771
 
 extern {
   fn QStackedLayout_Class_Size() -> c_int;
-  // proto:  void QStackedLayout::currentChanged(int index);
-  fn _ZN14QStackedLayout14currentChangedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QStackedLayout::insertWidget(int index, QWidget * w);
-  fn _ZN14QStackedLayout12insertWidgetEiP7QWidget(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void) -> c_int;
+  fn C_ZN14QStackedLayout12insertWidgetEiP7QWidget(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void) -> c_int;
   // proto:  void QStackedLayout::QStackedLayout(QLayout * parentLayout);
-  fn dector_ZN14QStackedLayoutC1EP7QLayout(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN14QStackedLayoutC1EP7QLayout(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN14QStackedLayoutC2EP7QLayout(arg0: *mut c_void) -> u64;
   // proto:  void QStackedLayout::QStackedLayout(QWidget * parent);
-  fn dector_ZN14QStackedLayoutC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN14QStackedLayoutC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN14QStackedLayoutC2EP7QWidget(arg0: *mut c_void) -> u64;
   // proto:  void QStackedLayout::setGeometry(const QRect & rect);
-  fn _ZN14QStackedLayout11setGeometryERK5QRect(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN14QStackedLayout11setGeometryERK5QRect(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QWidget * QStackedLayout::currentWidget();
-  fn _ZNK14QStackedLayout13currentWidgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK14QStackedLayout13currentWidgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QLayoutItem * QStackedLayout::takeAt(int );
-  fn _ZN14QStackedLayout6takeAtEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
+  fn C_ZN14QStackedLayout6takeAtEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  QSize QStackedLayout::minimumSize();
-  fn _ZNK14QStackedLayout11minimumSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK14QStackedLayout11minimumSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QSize QStackedLayout::sizeHint();
-  fn _ZNK14QStackedLayout8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QStackedLayout::QStackedLayout(const QStackedLayout & );
-  fn dector_ZN14QStackedLayoutC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN14QStackedLayoutC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK14QStackedLayout8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QStackedLayout::currentIndex();
-  fn _ZNK14QStackedLayout12currentIndexEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK14QStackedLayout12currentIndexEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QStackedLayout::count();
-  fn _ZNK14QStackedLayout5countEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK14QStackedLayout5countEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QStackedLayout::addItem(QLayoutItem * item);
-  fn _ZN14QStackedLayout7addItemEP11QLayoutItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN14QStackedLayout7addItemEP11QLayoutItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QStackedLayout::setCurrentWidget(QWidget * w);
-  fn _ZN14QStackedLayout16setCurrentWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN14QStackedLayout16setCurrentWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  const QMetaObject * QStackedLayout::metaObject();
-  fn _ZNK14QStackedLayout10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK14QStackedLayout10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QStackedLayout::setCurrentIndex(int index);
-  fn _ZN14QStackedLayout15setCurrentIndexEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
-  // proto:  void QStackedLayout::widgetRemoved(int index);
-  fn _ZN14QStackedLayout13widgetRemovedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN14QStackedLayout15setCurrentIndexEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  QLayoutItem * QStackedLayout::itemAt(int );
-  fn _ZNK14QStackedLayout6itemAtEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
+  fn C_ZNK14QStackedLayout6itemAtEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  void QStackedLayout::~QStackedLayout();
-  fn _ZN14QStackedLayoutD0Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN14QStackedLayoutD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  int QStackedLayout::addWidget(QWidget * w);
-  fn _ZN14QStackedLayout9addWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
+  fn C_ZN14QStackedLayout9addWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_int;
   // proto:  int QStackedLayout::heightForWidth(int width);
-  fn _ZNK14QStackedLayout14heightForWidthEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
+  fn C_ZNK14QStackedLayout14heightForWidthEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
   // proto:  bool QStackedLayout::hasHeightForWidth();
-  fn _ZNK14QStackedLayout17hasHeightForWidthEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK14QStackedLayout17hasHeightForWidthEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QStackedLayout::QStackedLayout();
-  fn dector_ZN14QStackedLayoutC1Ev() -> *mut c_void;
-  fn _ZN14QStackedLayoutC1Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN14QStackedLayoutC2Ev() -> u64;
   // proto:  QWidget * QStackedLayout::widget(int );
-  fn _ZNK14QStackedLayout6widgetEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
+  fn C_ZNK14QStackedLayout6widgetEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   fn QStackedLayout_SlotProxy_connect__ZN14QStackedLayout13widgetRemovedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QStackedLayout_SlotProxy_connect_box__ZN14QStackedLayout13widgetRemovedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QStackedLayout_SlotProxy_connect__ZN14QStackedLayout14currentChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QStackedLayout_SlotProxy_connect_box__ZN14QStackedLayout14currentChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -98,8 +87,8 @@ extern {
 pub struct QStackedLayout {
   qbase: QLayout,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _widgetRemoved_1: QStackedLayout_widgetRemoved_signal,
-  pub _currentChanged_1: QStackedLayout_currentChanged_signal,
+  pub _widgetRemoved: QStackedLayout_widgetRemoved_signal,
+  pub _currentChanged: QStackedLayout_currentChanged_signal,
 }
 
 impl /*struct*/ QStackedLayout {
@@ -119,29 +108,6 @@ impl AsRef<QLayout> for QStackedLayout {
     return & self.qbase;
   }
 }
-  // proto:  void QStackedLayout::currentChanged(int index);
-impl /*struct*/ QStackedLayout {
-  pub fn currentChanged<RetType, T: QStackedLayout_currentChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.currentChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QStackedLayout_currentChanged<RetType> {
-  fn currentChanged(self , rsthis: & QStackedLayout) -> RetType;
-}
-
-  // proto:  void QStackedLayout::currentChanged(int index);
-impl<'a> /*trait*/ QStackedLayout_currentChanged<()> for (i32) {
-  fn currentChanged(self , rsthis: & QStackedLayout) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QStackedLayout14currentChangedEi()};
-    let arg0 = self  as c_int;
-     unsafe {_ZN14QStackedLayout14currentChangedEi(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  int QStackedLayout::insertWidget(int index, QWidget * w);
 impl /*struct*/ QStackedLayout {
   pub fn insertWidget<RetType, T: QStackedLayout_insertWidget<RetType>>(& self,  overload_args: T) -> RetType {
@@ -161,35 +127,34 @@ impl<'a> /*trait*/ QStackedLayout_insertWidget<i32> for (i32, &'a QWidget) {
     // unsafe{_ZN14QStackedLayout12insertWidgetEiP7QWidget()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN14QStackedLayout12insertWidgetEiP7QWidget(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZN14QStackedLayout12insertWidgetEiP7QWidget(rsthis.qclsinst, arg0, arg1)};
+    return ret as i32; // 1
     // return 1;
   }
 }
 
   // proto:  void QStackedLayout::QStackedLayout(QLayout * parentLayout);
 impl /*struct*/ QStackedLayout {
-  pub fn New<T: QStackedLayout_New>(value: T) -> QStackedLayout {
-    let rsthis = value.New();
+  pub fn new<T: QStackedLayout_new>(value: T) -> QStackedLayout {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QStackedLayout_New {
-  fn New(self) -> QStackedLayout;
+pub trait QStackedLayout_new {
+  fn new(self) -> QStackedLayout;
 }
 
   // proto:  void QStackedLayout::QStackedLayout(QLayout * parentLayout);
-impl<'a> /*trait*/ QStackedLayout_New for (&'a QLayout) {
-  fn New(self) -> QStackedLayout {
+impl<'a> /*trait*/ QStackedLayout_new for (&'a QLayout) {
+  fn new(self) -> QStackedLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QStackedLayoutC1EP7QLayout()};
+    // unsafe{_ZN14QStackedLayoutC2EP7QLayout()};
     let ctysz: c_int = unsafe{QStackedLayout_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN14QStackedLayoutC1EP7QLayout(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN14QStackedLayoutC1EP7QLayout(arg0)} as u64;
+    let qthis: u64 = unsafe {C_ZN14QStackedLayoutC2EP7QLayout(arg0)};
     let rsthis = QStackedLayout{qbase: QLayout::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -197,15 +162,14 @@ impl<'a> /*trait*/ QStackedLayout_New for (&'a QLayout) {
 }
 
   // proto:  void QStackedLayout::QStackedLayout(QWidget * parent);
-impl<'a> /*trait*/ QStackedLayout_New for (&'a QWidget) {
-  fn New(self) -> QStackedLayout {
+impl<'a> /*trait*/ QStackedLayout_new for (&'a QWidget) {
+  fn new(self) -> QStackedLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QStackedLayoutC1EP7QWidget()};
+    // unsafe{_ZN14QStackedLayoutC2EP7QWidget()};
     let ctysz: c_int = unsafe{QStackedLayout_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN14QStackedLayoutC1EP7QWidget(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN14QStackedLayoutC1EP7QWidget(arg0)} as u64;
+    let qthis: u64 = unsafe {C_ZN14QStackedLayoutC2EP7QWidget(arg0)};
     let rsthis = QStackedLayout{qbase: QLayout::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -230,7 +194,7 @@ impl<'a> /*trait*/ QStackedLayout_setGeometry<()> for (&'a QRect) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QStackedLayout11setGeometryERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN14QStackedLayout11setGeometryERK5QRect(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN14QStackedLayout11setGeometryERK5QRect(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -252,7 +216,7 @@ impl<'a> /*trait*/ QStackedLayout_currentWidget<QWidget> for () {
   fn currentWidget(self , rsthis: & QStackedLayout) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QStackedLayout13currentWidgetEv()};
-    let mut ret = unsafe {_ZNK14QStackedLayout13currentWidgetEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QStackedLayout13currentWidgetEv(rsthis.qclsinst)};
     let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -277,7 +241,7 @@ impl<'a> /*trait*/ QStackedLayout_takeAt<QLayoutItem> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QStackedLayout6takeAtEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZN14QStackedLayout6takeAtEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN14QStackedLayout6takeAtEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QLayoutItem::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -301,7 +265,7 @@ impl<'a> /*trait*/ QStackedLayout_minimumSize<QSize> for () {
   fn minimumSize(self , rsthis: & QStackedLayout) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QStackedLayout11minimumSizeEv()};
-    let mut ret = unsafe {_ZNK14QStackedLayout11minimumSizeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QStackedLayout11minimumSizeEv(rsthis.qclsinst)};
     let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -325,25 +289,9 @@ impl<'a> /*trait*/ QStackedLayout_sizeHint<QSize> for () {
   fn sizeHint(self , rsthis: & QStackedLayout) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QStackedLayout8sizeHintEv()};
-    let mut ret = unsafe {_ZNK14QStackedLayout8sizeHintEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QStackedLayout8sizeHintEv(rsthis.qclsinst)};
     let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QStackedLayout::QStackedLayout(const QStackedLayout & );
-impl<'a> /*trait*/ QStackedLayout_New for (&'a QStackedLayout) {
-  fn New(self) -> QStackedLayout {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QStackedLayoutC1ERKS_()};
-    let ctysz: c_int = unsafe{QStackedLayout_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN14QStackedLayoutC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN14QStackedLayoutC1ERKS_(arg0)} as u64;
-    let rsthis = QStackedLayout{qbase: QLayout::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
     // return 1;
   }
 }
@@ -365,8 +313,8 @@ impl<'a> /*trait*/ QStackedLayout_currentIndex<i32> for () {
   fn currentIndex(self , rsthis: & QStackedLayout) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QStackedLayout12currentIndexEv()};
-    let mut ret = unsafe {_ZNK14QStackedLayout12currentIndexEv(rsthis.qclsinst)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK14QStackedLayout12currentIndexEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -388,8 +336,8 @@ impl<'a> /*trait*/ QStackedLayout_count<i32> for () {
   fn count(self , rsthis: & QStackedLayout) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QStackedLayout5countEv()};
-    let mut ret = unsafe {_ZNK14QStackedLayout5countEv(rsthis.qclsinst)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK14QStackedLayout5countEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -412,7 +360,7 @@ impl<'a> /*trait*/ QStackedLayout_addItem<()> for (&'a QLayoutItem) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QStackedLayout7addItemEP11QLayoutItem()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN14QStackedLayout7addItemEP11QLayoutItem(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN14QStackedLayout7addItemEP11QLayoutItem(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -435,7 +383,7 @@ impl<'a> /*trait*/ QStackedLayout_setCurrentWidget<()> for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QStackedLayout16setCurrentWidgetEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN14QStackedLayout16setCurrentWidgetEP7QWidget(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN14QStackedLayout16setCurrentWidgetEP7QWidget(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -453,11 +401,13 @@ pub trait QStackedLayout_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QStackedLayout::metaObject();
-impl<'a> /*trait*/ QStackedLayout_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QStackedLayout) -> () {
+impl<'a> /*trait*/ QStackedLayout_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QStackedLayout) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QStackedLayout10metaObjectEv()};
-     unsafe {_ZNK14QStackedLayout10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK14QStackedLayout10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -480,30 +430,7 @@ impl<'a> /*trait*/ QStackedLayout_setCurrentIndex<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QStackedLayout15setCurrentIndexEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN14QStackedLayout15setCurrentIndexEi(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QStackedLayout::widgetRemoved(int index);
-impl /*struct*/ QStackedLayout {
-  pub fn widgetRemoved<RetType, T: QStackedLayout_widgetRemoved<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.widgetRemoved(self);
-    // return 1;
-  }
-}
-
-pub trait QStackedLayout_widgetRemoved<RetType> {
-  fn widgetRemoved(self , rsthis: & QStackedLayout) -> RetType;
-}
-
-  // proto:  void QStackedLayout::widgetRemoved(int index);
-impl<'a> /*trait*/ QStackedLayout_widgetRemoved<()> for (i32) {
-  fn widgetRemoved(self , rsthis: & QStackedLayout) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QStackedLayout13widgetRemovedEi()};
-    let arg0 = self  as c_int;
-     unsafe {_ZN14QStackedLayout13widgetRemovedEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN14QStackedLayout15setCurrentIndexEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -526,7 +453,7 @@ impl<'a> /*trait*/ QStackedLayout_itemAt<QLayoutItem> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QStackedLayout6itemAtEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZNK14QStackedLayout6itemAtEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK14QStackedLayout6itemAtEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QLayoutItem::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -535,22 +462,22 @@ impl<'a> /*trait*/ QStackedLayout_itemAt<QLayoutItem> for (i32) {
 
   // proto:  void QStackedLayout::~QStackedLayout();
 impl /*struct*/ QStackedLayout {
-  pub fn Free<RetType, T: QStackedLayout_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QStackedLayout_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QStackedLayout_Free<RetType> {
-  fn Free(self , rsthis: & QStackedLayout) -> RetType;
+pub trait QStackedLayout_free<RetType> {
+  fn free(self , rsthis: & QStackedLayout) -> RetType;
 }
 
   // proto:  void QStackedLayout::~QStackedLayout();
-impl<'a> /*trait*/ QStackedLayout_Free<()> for () {
-  fn Free(self , rsthis: & QStackedLayout) -> () {
+impl<'a> /*trait*/ QStackedLayout_free<()> for () {
+  fn free(self , rsthis: & QStackedLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QStackedLayoutD0Ev()};
-     unsafe {_ZN14QStackedLayoutD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN14QStackedLayoutD2Ev()};
+     unsafe {C_ZN14QStackedLayoutD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -573,8 +500,8 @@ impl<'a> /*trait*/ QStackedLayout_addWidget<i32> for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QStackedLayout9addWidgetEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN14QStackedLayout9addWidgetEP7QWidget(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZN14QStackedLayout9addWidgetEP7QWidget(rsthis.qclsinst, arg0)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -597,8 +524,8 @@ impl<'a> /*trait*/ QStackedLayout_heightForWidth<i32> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QStackedLayout14heightForWidthEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZNK14QStackedLayout14heightForWidthEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK14QStackedLayout14heightForWidthEi(rsthis.qclsinst, arg0)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -620,21 +547,20 @@ impl<'a> /*trait*/ QStackedLayout_hasHeightForWidth<i8> for () {
   fn hasHeightForWidth(self , rsthis: & QStackedLayout) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QStackedLayout17hasHeightForWidthEv()};
-    let mut ret = unsafe {_ZNK14QStackedLayout17hasHeightForWidthEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK14QStackedLayout17hasHeightForWidthEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
 
   // proto:  void QStackedLayout::QStackedLayout();
-impl<'a> /*trait*/ QStackedLayout_New for () {
-  fn New(self) -> QStackedLayout {
+impl<'a> /*trait*/ QStackedLayout_new for () {
+  fn new(self) -> QStackedLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QStackedLayoutC1Ev()};
+    // unsafe{_ZN14QStackedLayoutC2Ev()};
     let ctysz: c_int = unsafe{QStackedLayout_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN14QStackedLayoutC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN14QStackedLayoutC1Ev()} as u64;
+    let qthis: u64 = unsafe {C_ZN14QStackedLayoutC2Ev()};
     let rsthis = QStackedLayout{qbase: QLayout::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -659,7 +585,7 @@ impl<'a> /*trait*/ QStackedLayout_widget<QWidget> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QStackedLayout6widgetEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZNK14QStackedLayout6widgetEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK14QStackedLayout6widgetEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -669,7 +595,7 @@ impl<'a> /*trait*/ QStackedLayout_widget<QWidget> for (i32) {
 #[derive(Default)] // for QStackedLayout_widgetRemoved
 pub struct QStackedLayout_widgetRemoved_signal{poi:u64}
 impl /* struct */ QStackedLayout {
-  pub fn widgetRemoved_1(&self) -> QStackedLayout_widgetRemoved_signal {
+  pub fn widgetRemoved(&self) -> QStackedLayout_widgetRemoved_signal {
      return QStackedLayout_widgetRemoved_signal{poi:self.qclsinst};
   }
 }
@@ -685,7 +611,7 @@ pub trait QStackedLayout_widgetRemoved_signal_connect {
 #[derive(Default)] // for QStackedLayout_currentChanged
 pub struct QStackedLayout_currentChanged_signal{poi:u64}
 impl /* struct */ QStackedLayout {
-  pub fn currentChanged_1(&self) -> QStackedLayout_currentChanged_signal {
+  pub fn currentChanged(&self) -> QStackedLayout_currentChanged_signal {
      return QStackedLayout_currentChanged_signal{poi:self.qclsinst};
   }
 }
@@ -701,15 +627,21 @@ pub trait QStackedLayout_currentChanged_signal_connect {
 // widgetRemoved(int)
 extern fn QStackedLayout_widgetRemoved_signal_connect_cb_0(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QStackedLayout_widgetRemoved_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QStackedLayout_widgetRemoved_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QStackedLayout_widgetRemoved_signal_connect for fn(i32) {
   fn connect(self, sigthis: QStackedLayout_widgetRemoved_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QStackedLayout_widgetRemoved_signal_connect_cb_0 as *mut c_void;
@@ -717,29 +649,35 @@ impl /* trait */ QStackedLayout_widgetRemoved_signal_connect for fn(i32) {
     unsafe {QStackedLayout_SlotProxy_connect__ZN14QStackedLayout13widgetRemovedEi(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QStackedLayout_widgetRemoved_signal_connect for Box<fn(i32)> {
+impl /* trait */ QStackedLayout_widgetRemoved_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QStackedLayout_widgetRemoved_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QStackedLayout_widgetRemoved_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QStackedLayout_SlotProxy_connect__ZN14QStackedLayout13widgetRemovedEi(arg0, arg1, arg2)};
   }
 }
 // currentChanged(int)
 extern fn QStackedLayout_currentChanged_signal_connect_cb_1(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QStackedLayout_currentChanged_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QStackedLayout_currentChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QStackedLayout_currentChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QStackedLayout_currentChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QStackedLayout_currentChanged_signal_connect_cb_1 as *mut c_void;
@@ -747,14 +685,14 @@ impl /* trait */ QStackedLayout_currentChanged_signal_connect for fn(i32) {
     unsafe {QStackedLayout_SlotProxy_connect__ZN14QStackedLayout14currentChangedEi(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QStackedLayout_currentChanged_signal_connect for Box<fn(i32)> {
+impl /* trait */ QStackedLayout_currentChanged_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QStackedLayout_currentChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QStackedLayout_currentChanged_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QStackedLayout_SlotProxy_connect__ZN14QStackedLayout14currentChangedEi(arg0, arg1, arg2)};
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qaction.h
 // dst-file: /src/widgets/qaction.rs
 //
@@ -18,16 +18,18 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qobject::QObject; // 771
+use super::super::core::qobject::*; // 771
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
-use super::super::gui::qfont::QFont; // 771
-use super::super::core::qvariant::QVariant; // 771
-use super::super::gui::qicon::QIcon; // 771
-use super::qwidget::QWidget; // 773
-use super::qmenu::QMenu; // 773
-use super::super::gui::qkeysequence::QKeySequence; // 771
-use super::qactiongroup::QActionGroup; // 773
+// use super::qlist::*; // 775
+use super::super::core::qstring::*; // 771
+use super::super::gui::qfont::*; // 771
+use super::super::core::qvariant::*; // 771
+use super::super::gui::qicon::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::qwidget::*; // 773
+use super::qmenu::*; // 773
+use super::super::gui::qkeysequence::*; // 771
+use super::qactiongroup::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -39,127 +41,109 @@ use super::qactiongroup::QActionGroup; // 773
 extern {
   fn QAction_Class_Size() -> c_int;
   // proto:  QList<QWidget *> QAction::associatedWidgets();
-  fn _ZNK7QAction17associatedWidgetsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK7QAction17associatedWidgetsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAction::setAutoRepeat(bool );
-  fn _ZN7QAction13setAutoRepeatEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN7QAction13setAutoRepeatEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QString QAction::whatsThis();
-  fn _ZNK7QAction9whatsThisEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK7QAction9whatsThisEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAction::QAction(const QString & text, QObject * parent);
-  fn dector_ZN7QActionC1ERK7QStringP7QObject(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN7QActionC1ERK7QStringP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN7QActionC2ERK7QStringP7QObject(arg0: *mut c_void, arg1: *mut c_void) -> u64;
   // proto:  void QAction::~QAction();
-  fn _ZN7QActionD0Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN7QActionD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  bool QAction::isVisible();
-  fn _ZNK7QAction9isVisibleEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK7QAction9isVisibleEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QAction::setFont(const QFont & font);
-  fn _ZN7QAction7setFontERK5QFont(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN7QAction7setFontERK5QFont(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAction::setData(const QVariant & var);
-  fn _ZN7QAction7setDataERK8QVariant(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN7QAction7setDataERK8QVariant(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAction::setIcon(const QIcon & icon);
-  fn _ZN7QAction7setIconERK5QIcon(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN7QAction7setIconERK5QIcon(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAction::QAction(QObject * parent);
-  fn dector_ZN7QActionC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN7QActionC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN7QActionC2EP7QObject(arg0: *mut c_void) -> u64;
   // proto:  const QMetaObject * QAction::metaObject();
-  fn _ZNK7QAction10metaObjectEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QAction::triggered(bool checked);
-  fn _ZN7QAction9triggeredEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
-  // proto:  void QAction::toggled(bool );
-  fn _ZN7QAction7toggledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZNK7QAction10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAction::setText(const QString & text);
-  fn _ZN7QAction7setTextERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN7QAction7setTextERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QAction::showStatusText(QWidget * widget);
-  fn _ZN7QAction14showStatusTextEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
+  fn C_ZN7QAction14showStatusTextEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> c_char;
   // proto:  QString QAction::iconText();
-  fn _ZNK7QAction8iconTextEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK7QAction8iconTextEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAction::setIconVisibleInMenu(bool visible);
-  fn _ZN7QAction20setIconVisibleInMenuEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN7QAction20setIconVisibleInMenuEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QString QAction::statusTip();
-  fn _ZNK7QAction9statusTipEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK7QAction9statusTipEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QAction::isCheckable();
-  fn _ZNK7QAction11isCheckableEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK7QAction11isCheckableEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QAction::setWhatsThis(const QString & what);
-  fn _ZN7QAction12setWhatsThisERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN7QAction12setWhatsThisERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QMenu * QAction::menu();
-  fn _ZNK7QAction4menuEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK7QAction4menuEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAction::trigger();
-  fn _ZN7QAction7triggerEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QAction::changed();
-  fn _ZN7QAction7changedEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN7QAction7triggerEv(qthis: u64 /* *mut c_void*/);
   // proto:  QFont QAction::font();
-  fn _ZNK7QAction4fontEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK7QAction4fontEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAction::QAction(const QIcon & icon, const QString & text, QObject * parent);
-  fn dector_ZN7QActionC1ERK5QIconRK7QStringP7QObject(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> *mut c_void;
-  fn _ZN7QActionC1ERK5QIconRK7QStringP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
+  fn C_ZN7QActionC2ERK5QIconRK7QStringP7QObject(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> u64;
   // proto:  void QAction::setChecked(bool );
-  fn _ZN7QAction10setCheckedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN7QAction10setCheckedEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QAction::setDisabled(bool b);
-  fn demth_ZN7QAction11setDisabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN7QAction11setDisabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QAction::setShortcut(const QKeySequence & shortcut);
-  fn _ZN7QAction11setShortcutERK12QKeySequence(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN7QAction11setShortcutERK12QKeySequence(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAction::toggle();
-  fn _ZN7QAction6toggleEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN7QAction6toggleEv(qthis: u64 /* *mut c_void*/);
   // proto:  QKeySequence QAction::shortcut();
-  fn _ZNK7QAction8shortcutEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK7QAction8shortcutEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QIcon QAction::icon();
-  fn _ZNK7QAction4iconEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK7QAction4iconEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAction::setActionGroup(QActionGroup * group);
-  fn _ZN7QAction14setActionGroupEP12QActionGroup(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN7QAction14setActionGroupEP12QActionGroup(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAction::setMenu(QMenu * menu);
-  fn _ZN7QAction7setMenuEP5QMenu(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN7QAction7setMenuEP5QMenu(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QList<QKeySequence> QAction::shortcuts();
-  fn _ZNK7QAction9shortcutsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK7QAction9shortcutsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAction::setCheckable(bool );
-  fn _ZN7QAction12setCheckableEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN7QAction12setCheckableEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QString QAction::toolTip();
-  fn _ZNK7QAction7toolTipEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK7QAction7toolTipEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QWidget * QAction::parentWidget();
-  fn _ZNK7QAction12parentWidgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK7QAction12parentWidgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAction::setSeparator(bool b);
-  fn _ZN7QAction12setSeparatorEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN7QAction12setSeparatorEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QList<QGraphicsWidget *> QAction::associatedGraphicsWidgets();
-  fn _ZNK7QAction25associatedGraphicsWidgetsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK7QAction25associatedGraphicsWidgetsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAction::setVisible(bool );
-  fn _ZN7QAction10setVisibleEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN7QAction10setVisibleEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  bool QAction::isSeparator();
-  fn _ZNK7QAction11isSeparatorEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK7QAction11isSeparatorEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QAction::setIconText(const QString & text);
-  fn _ZN7QAction11setIconTextERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN7QAction11setIconTextERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QActionGroup * QAction::actionGroup();
-  fn _ZNK7QAction11actionGroupEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK7QAction11actionGroupEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAction::setStatusTip(const QString & statusTip);
-  fn _ZN7QAction12setStatusTipERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QAction::hovered();
-  fn _ZN7QAction7hoveredEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN7QAction12setStatusTipERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QVariant QAction::data();
-  fn _ZNK7QAction4dataEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QAction::QAction(const QAction & );
-  fn dector_ZN7QActionC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN7QActionC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK7QAction4dataEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QAction::isChecked();
-  fn _ZNK7QAction9isCheckedEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK7QAction9isCheckedEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QAction::autoRepeat();
-  fn _ZNK7QAction10autoRepeatEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK7QAction10autoRepeatEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QAction::isEnabled();
-  fn _ZNK7QAction9isEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK7QAction9isEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  QString QAction::text();
-  fn _ZNK7QAction4textEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK7QAction4textEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAction::hover();
-  fn _ZN7QAction5hoverEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN7QAction5hoverEv(qthis: u64 /* *mut c_void*/);
   // proto:  bool QAction::isIconVisibleInMenu();
-  fn _ZNK7QAction19isIconVisibleInMenuEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK7QAction19isIconVisibleInMenuEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QAction::setToolTip(const QString & tip);
-  fn _ZN7QAction10setToolTipERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN7QAction10setToolTipERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QAction::setEnabled(bool );
-  fn _ZN7QAction10setEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN7QAction10setEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   fn QAction_SlotProxy_connect__ZN7QAction7toggledEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QAction_SlotProxy_connect_box__ZN7QAction7toggledEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QAction_SlotProxy_connect__ZN7QAction9triggeredEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QAction_SlotProxy_connect_box__ZN7QAction9triggeredEb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QAction_SlotProxy_connect__ZN7QAction7changedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QAction_SlotProxy_connect_box__ZN7QAction7changedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QAction_SlotProxy_connect__ZN7QAction7hoveredEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QAction_SlotProxy_connect_box__ZN7QAction7hoveredEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -168,10 +152,10 @@ extern {
 pub struct QAction {
   qbase: QObject,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _changed_1: QAction_changed_signal,
-  pub _hovered_1: QAction_hovered_signal,
-  pub _triggered_1: QAction_triggered_signal,
-  pub _toggled_1: QAction_toggled_signal,
+  pub _changed: QAction_changed_signal,
+  pub _hovered: QAction_hovered_signal,
+  pub _triggered: QAction_triggered_signal,
+  pub _toggled: QAction_toggled_signal,
 }
 
 impl /*struct*/ QAction {
@@ -204,11 +188,12 @@ pub trait QAction_associatedWidgets<RetType> {
 }
 
   // proto:  QList<QWidget *> QAction::associatedWidgets();
-impl<'a> /*trait*/ QAction_associatedWidgets<()> for () {
-  fn associatedWidgets(self , rsthis: & QAction) -> () {
+impl<'a> /*trait*/ QAction_associatedWidgets<u64> for () {
+  fn associatedWidgets(self , rsthis: & QAction) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction17associatedWidgetsEv()};
-     unsafe {_ZNK7QAction17associatedWidgetsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QAction17associatedWidgetsEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -231,7 +216,7 @@ impl<'a> /*trait*/ QAction_setAutoRepeat<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QAction13setAutoRepeatEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN7QAction13setAutoRepeatEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN7QAction13setAutoRepeatEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -253,7 +238,7 @@ impl<'a> /*trait*/ QAction_whatsThis<QString> for () {
   fn whatsThis(self , rsthis: & QAction) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction9whatsThisEv()};
-    let mut ret = unsafe {_ZNK7QAction9whatsThisEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QAction9whatsThisEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -262,28 +247,27 @@ impl<'a> /*trait*/ QAction_whatsThis<QString> for () {
 
   // proto:  void QAction::QAction(const QString & text, QObject * parent);
 impl /*struct*/ QAction {
-  pub fn New<T: QAction_New>(value: T) -> QAction {
-    let rsthis = value.New();
+  pub fn new<T: QAction_new>(value: T) -> QAction {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QAction_New {
-  fn New(self) -> QAction;
+pub trait QAction_new {
+  fn new(self) -> QAction;
 }
 
   // proto:  void QAction::QAction(const QString & text, QObject * parent);
-impl<'a> /*trait*/ QAction_New for (&'a QString, &'a QObject) {
-  fn New(self) -> QAction {
+impl<'a> /*trait*/ QAction_new for (&'a QString, &'a QObject) {
+  fn new(self) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QActionC1ERK7QStringP7QObject()};
+    // unsafe{_ZN7QActionC2ERK7QStringP7QObject()};
     let ctysz: c_int = unsafe{QAction_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    // unsafe {_ZN7QActionC1ERK7QStringP7QObject(qthis, arg0, arg1)};
-    let qthis: u64 = unsafe {dector_ZN7QActionC1ERK7QStringP7QObject(arg0, arg1)} as u64;
+    let qthis: u64 = unsafe {C_ZN7QActionC2ERK7QStringP7QObject(arg0, arg1)};
     let rsthis = QAction{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -292,22 +276,22 @@ impl<'a> /*trait*/ QAction_New for (&'a QString, &'a QObject) {
 
   // proto:  void QAction::~QAction();
 impl /*struct*/ QAction {
-  pub fn Free<RetType, T: QAction_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QAction_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QAction_Free<RetType> {
-  fn Free(self , rsthis: & QAction) -> RetType;
+pub trait QAction_free<RetType> {
+  fn free(self , rsthis: & QAction) -> RetType;
 }
 
   // proto:  void QAction::~QAction();
-impl<'a> /*trait*/ QAction_Free<()> for () {
-  fn Free(self , rsthis: & QAction) -> () {
+impl<'a> /*trait*/ QAction_free<()> for () {
+  fn free(self , rsthis: & QAction) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QActionD0Ev()};
-     unsafe {_ZN7QActionD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN7QActionD2Ev()};
+     unsafe {C_ZN7QActionD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -329,8 +313,8 @@ impl<'a> /*trait*/ QAction_isVisible<i8> for () {
   fn isVisible(self , rsthis: & QAction) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction9isVisibleEv()};
-    let mut ret = unsafe {_ZNK7QAction9isVisibleEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK7QAction9isVisibleEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -353,7 +337,7 @@ impl<'a> /*trait*/ QAction_setFont<()> for (&'a QFont) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QAction7setFontERK5QFont()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN7QAction7setFontERK5QFont(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN7QAction7setFontERK5QFont(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -376,7 +360,7 @@ impl<'a> /*trait*/ QAction_setData<()> for (&'a QVariant) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QAction7setDataERK8QVariant()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN7QAction7setDataERK8QVariant(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN7QAction7setDataERK8QVariant(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -399,21 +383,20 @@ impl<'a> /*trait*/ QAction_setIcon<()> for (&'a QIcon) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QAction7setIconERK5QIcon()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN7QAction7setIconERK5QIcon(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN7QAction7setIconERK5QIcon(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
 
   // proto:  void QAction::QAction(QObject * parent);
-impl<'a> /*trait*/ QAction_New for (&'a QObject) {
-  fn New(self) -> QAction {
+impl<'a> /*trait*/ QAction_new for (&'a QObject) {
+  fn new(self) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QActionC1EP7QObject()};
+    // unsafe{_ZN7QActionC2EP7QObject()};
     let ctysz: c_int = unsafe{QAction_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN7QActionC1EP7QObject(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN7QActionC1EP7QObject(arg0)} as u64;
+    let qthis: u64 = unsafe {C_ZN7QActionC2EP7QObject(arg0)};
     let rsthis = QAction{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -433,57 +416,13 @@ pub trait QAction_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QAction::metaObject();
-impl<'a> /*trait*/ QAction_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QAction) -> () {
+impl<'a> /*trait*/ QAction_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QAction) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction10metaObjectEv()};
-     unsafe {_ZNK7QAction10metaObjectEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QAction::triggered(bool checked);
-impl /*struct*/ QAction {
-  pub fn triggered<RetType, T: QAction_triggered<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.triggered(self);
-    // return 1;
-  }
-}
-
-pub trait QAction_triggered<RetType> {
-  fn triggered(self , rsthis: & QAction) -> RetType;
-}
-
-  // proto:  void QAction::triggered(bool checked);
-impl<'a> /*trait*/ QAction_triggered<()> for (i8) {
-  fn triggered(self , rsthis: & QAction) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QAction9triggeredEb()};
-    let arg0 = self  as c_char;
-     unsafe {_ZN7QAction9triggeredEb(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QAction::toggled(bool );
-impl /*struct*/ QAction {
-  pub fn toggled<RetType, T: QAction_toggled<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.toggled(self);
-    // return 1;
-  }
-}
-
-pub trait QAction_toggled<RetType> {
-  fn toggled(self , rsthis: & QAction) -> RetType;
-}
-
-  // proto:  void QAction::toggled(bool );
-impl<'a> /*trait*/ QAction_toggled<()> for (i8) {
-  fn toggled(self , rsthis: & QAction) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QAction7toggledEb()};
-    let arg0 = self  as c_char;
-     unsafe {_ZN7QAction7toggledEb(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK7QAction10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -506,7 +445,7 @@ impl<'a> /*trait*/ QAction_setText<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QAction7setTextERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN7QAction7setTextERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN7QAction7setTextERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -529,8 +468,8 @@ impl<'a> /*trait*/ QAction_showStatusText<i8> for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QAction14showStatusTextEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN7QAction14showStatusTextEP7QWidget(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZN7QAction14showStatusTextEP7QWidget(rsthis.qclsinst, arg0)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -552,7 +491,7 @@ impl<'a> /*trait*/ QAction_iconText<QString> for () {
   fn iconText(self , rsthis: & QAction) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction8iconTextEv()};
-    let mut ret = unsafe {_ZNK7QAction8iconTextEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QAction8iconTextEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -577,7 +516,7 @@ impl<'a> /*trait*/ QAction_setIconVisibleInMenu<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QAction20setIconVisibleInMenuEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN7QAction20setIconVisibleInMenuEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN7QAction20setIconVisibleInMenuEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -599,7 +538,7 @@ impl<'a> /*trait*/ QAction_statusTip<QString> for () {
   fn statusTip(self , rsthis: & QAction) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction9statusTipEv()};
-    let mut ret = unsafe {_ZNK7QAction9statusTipEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QAction9statusTipEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -623,8 +562,8 @@ impl<'a> /*trait*/ QAction_isCheckable<i8> for () {
   fn isCheckable(self , rsthis: & QAction) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction11isCheckableEv()};
-    let mut ret = unsafe {_ZNK7QAction11isCheckableEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK7QAction11isCheckableEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -647,7 +586,7 @@ impl<'a> /*trait*/ QAction_setWhatsThis<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QAction12setWhatsThisERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN7QAction12setWhatsThisERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN7QAction12setWhatsThisERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -669,7 +608,7 @@ impl<'a> /*trait*/ QAction_menu<QMenu> for () {
   fn menu(self , rsthis: & QAction) -> QMenu {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction4menuEv()};
-    let mut ret = unsafe {_ZNK7QAction4menuEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QAction4menuEv(rsthis.qclsinst)};
     let mut ret1 = QMenu::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -693,29 +632,7 @@ impl<'a> /*trait*/ QAction_trigger<()> for () {
   fn trigger(self , rsthis: & QAction) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QAction7triggerEv()};
-     unsafe {_ZN7QAction7triggerEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QAction::changed();
-impl /*struct*/ QAction {
-  pub fn changed<RetType, T: QAction_changed<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.changed(self);
-    // return 1;
-  }
-}
-
-pub trait QAction_changed<RetType> {
-  fn changed(self , rsthis: & QAction) -> RetType;
-}
-
-  // proto:  void QAction::changed();
-impl<'a> /*trait*/ QAction_changed<()> for () {
-  fn changed(self , rsthis: & QAction) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QAction7changedEv()};
-     unsafe {_ZN7QAction7changedEv(rsthis.qclsinst)};
+     unsafe {C_ZN7QAction7triggerEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -737,7 +654,7 @@ impl<'a> /*trait*/ QAction_font<QFont> for () {
   fn font(self , rsthis: & QAction) -> QFont {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction4fontEv()};
-    let mut ret = unsafe {_ZNK7QAction4fontEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QAction4fontEv(rsthis.qclsinst)};
     let mut ret1 = QFont::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -745,17 +662,16 @@ impl<'a> /*trait*/ QAction_font<QFont> for () {
 }
 
   // proto:  void QAction::QAction(const QIcon & icon, const QString & text, QObject * parent);
-impl<'a> /*trait*/ QAction_New for (&'a QIcon, &'a QString, &'a QObject) {
-  fn New(self) -> QAction {
+impl<'a> /*trait*/ QAction_new for (&'a QIcon, &'a QString, &'a QObject) {
+  fn new(self) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QActionC1ERK5QIconRK7QStringP7QObject()};
+    // unsafe{_ZN7QActionC2ERK5QIconRK7QStringP7QObject()};
     let ctysz: c_int = unsafe{QAction_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
-    // unsafe {_ZN7QActionC1ERK5QIconRK7QStringP7QObject(qthis, arg0, arg1, arg2)};
-    let qthis: u64 = unsafe {dector_ZN7QActionC1ERK5QIconRK7QStringP7QObject(arg0, arg1, arg2)} as u64;
+    let qthis: u64 = unsafe {C_ZN7QActionC2ERK5QIconRK7QStringP7QObject(arg0, arg1, arg2)};
     let rsthis = QAction{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -780,7 +696,7 @@ impl<'a> /*trait*/ QAction_setChecked<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QAction10setCheckedEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN7QAction10setCheckedEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN7QAction10setCheckedEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -803,7 +719,7 @@ impl<'a> /*trait*/ QAction_setDisabled<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QAction11setDisabledEb()};
     let arg0 = self  as c_char;
-     unsafe {demth_ZN7QAction11setDisabledEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN7QAction11setDisabledEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -826,7 +742,7 @@ impl<'a> /*trait*/ QAction_setShortcut<()> for (&'a QKeySequence) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QAction11setShortcutERK12QKeySequence()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN7QAction11setShortcutERK12QKeySequence(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN7QAction11setShortcutERK12QKeySequence(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -848,7 +764,7 @@ impl<'a> /*trait*/ QAction_toggle<()> for () {
   fn toggle(self , rsthis: & QAction) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QAction6toggleEv()};
-     unsafe {_ZN7QAction6toggleEv(rsthis.qclsinst)};
+     unsafe {C_ZN7QAction6toggleEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -870,7 +786,7 @@ impl<'a> /*trait*/ QAction_shortcut<QKeySequence> for () {
   fn shortcut(self , rsthis: & QAction) -> QKeySequence {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction8shortcutEv()};
-    let mut ret = unsafe {_ZNK7QAction8shortcutEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QAction8shortcutEv(rsthis.qclsinst)};
     let mut ret1 = QKeySequence::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -894,7 +810,7 @@ impl<'a> /*trait*/ QAction_icon<QIcon> for () {
   fn icon(self , rsthis: & QAction) -> QIcon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction4iconEv()};
-    let mut ret = unsafe {_ZNK7QAction4iconEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QAction4iconEv(rsthis.qclsinst)};
     let mut ret1 = QIcon::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -919,7 +835,7 @@ impl<'a> /*trait*/ QAction_setActionGroup<()> for (&'a QActionGroup) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QAction14setActionGroupEP12QActionGroup()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN7QAction14setActionGroupEP12QActionGroup(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN7QAction14setActionGroupEP12QActionGroup(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -942,7 +858,7 @@ impl<'a> /*trait*/ QAction_setMenu<()> for (&'a QMenu) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QAction7setMenuEP5QMenu()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN7QAction7setMenuEP5QMenu(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN7QAction7setMenuEP5QMenu(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -960,11 +876,12 @@ pub trait QAction_shortcuts<RetType> {
 }
 
   // proto:  QList<QKeySequence> QAction::shortcuts();
-impl<'a> /*trait*/ QAction_shortcuts<()> for () {
-  fn shortcuts(self , rsthis: & QAction) -> () {
+impl<'a> /*trait*/ QAction_shortcuts<u64> for () {
+  fn shortcuts(self , rsthis: & QAction) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction9shortcutsEv()};
-     unsafe {_ZNK7QAction9shortcutsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QAction9shortcutsEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -987,7 +904,7 @@ impl<'a> /*trait*/ QAction_setCheckable<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QAction12setCheckableEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN7QAction12setCheckableEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN7QAction12setCheckableEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1009,7 +926,7 @@ impl<'a> /*trait*/ QAction_toolTip<QString> for () {
   fn toolTip(self , rsthis: & QAction) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction7toolTipEv()};
-    let mut ret = unsafe {_ZNK7QAction7toolTipEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QAction7toolTipEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1033,7 +950,7 @@ impl<'a> /*trait*/ QAction_parentWidget<QWidget> for () {
   fn parentWidget(self , rsthis: & QAction) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction12parentWidgetEv()};
-    let mut ret = unsafe {_ZNK7QAction12parentWidgetEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QAction12parentWidgetEv(rsthis.qclsinst)};
     let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1058,7 +975,7 @@ impl<'a> /*trait*/ QAction_setSeparator<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QAction12setSeparatorEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN7QAction12setSeparatorEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN7QAction12setSeparatorEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1076,11 +993,12 @@ pub trait QAction_associatedGraphicsWidgets<RetType> {
 }
 
   // proto:  QList<QGraphicsWidget *> QAction::associatedGraphicsWidgets();
-impl<'a> /*trait*/ QAction_associatedGraphicsWidgets<()> for () {
-  fn associatedGraphicsWidgets(self , rsthis: & QAction) -> () {
+impl<'a> /*trait*/ QAction_associatedGraphicsWidgets<u64> for () {
+  fn associatedGraphicsWidgets(self , rsthis: & QAction) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction25associatedGraphicsWidgetsEv()};
-     unsafe {_ZNK7QAction25associatedGraphicsWidgetsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QAction25associatedGraphicsWidgetsEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -1103,7 +1021,7 @@ impl<'a> /*trait*/ QAction_setVisible<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QAction10setVisibleEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN7QAction10setVisibleEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN7QAction10setVisibleEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1125,8 +1043,8 @@ impl<'a> /*trait*/ QAction_isSeparator<i8> for () {
   fn isSeparator(self , rsthis: & QAction) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction11isSeparatorEv()};
-    let mut ret = unsafe {_ZNK7QAction11isSeparatorEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK7QAction11isSeparatorEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1149,7 +1067,7 @@ impl<'a> /*trait*/ QAction_setIconText<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QAction11setIconTextERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN7QAction11setIconTextERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN7QAction11setIconTextERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1171,7 +1089,7 @@ impl<'a> /*trait*/ QAction_actionGroup<QActionGroup> for () {
   fn actionGroup(self , rsthis: & QAction) -> QActionGroup {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction11actionGroupEv()};
-    let mut ret = unsafe {_ZNK7QAction11actionGroupEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QAction11actionGroupEv(rsthis.qclsinst)};
     let mut ret1 = QActionGroup::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1196,29 +1114,7 @@ impl<'a> /*trait*/ QAction_setStatusTip<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QAction12setStatusTipERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN7QAction12setStatusTipERK7QString(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QAction::hovered();
-impl /*struct*/ QAction {
-  pub fn hovered<RetType, T: QAction_hovered<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.hovered(self);
-    // return 1;
-  }
-}
-
-pub trait QAction_hovered<RetType> {
-  fn hovered(self , rsthis: & QAction) -> RetType;
-}
-
-  // proto:  void QAction::hovered();
-impl<'a> /*trait*/ QAction_hovered<()> for () {
-  fn hovered(self , rsthis: & QAction) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QAction7hoveredEv()};
-     unsafe {_ZN7QAction7hoveredEv(rsthis.qclsinst)};
+     unsafe {C_ZN7QAction12setStatusTipERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1240,25 +1136,9 @@ impl<'a> /*trait*/ QAction_data<QVariant> for () {
   fn data(self , rsthis: & QAction) -> QVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction4dataEv()};
-    let mut ret = unsafe {_ZNK7QAction4dataEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QAction4dataEv(rsthis.qclsinst)};
     let mut ret1 = QVariant::inheritFrom(ret as u64);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QAction::QAction(const QAction & );
-impl<'a> /*trait*/ QAction_New for (&'a QAction) {
-  fn New(self) -> QAction {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QActionC1ERKS_()};
-    let ctysz: c_int = unsafe{QAction_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN7QActionC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN7QActionC1ERKS_(arg0)} as u64;
-    let rsthis = QAction{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
     // return 1;
   }
 }
@@ -1280,8 +1160,8 @@ impl<'a> /*trait*/ QAction_isChecked<i8> for () {
   fn isChecked(self , rsthis: & QAction) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction9isCheckedEv()};
-    let mut ret = unsafe {_ZNK7QAction9isCheckedEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK7QAction9isCheckedEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1303,8 +1183,8 @@ impl<'a> /*trait*/ QAction_autoRepeat<i8> for () {
   fn autoRepeat(self , rsthis: & QAction) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction10autoRepeatEv()};
-    let mut ret = unsafe {_ZNK7QAction10autoRepeatEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK7QAction10autoRepeatEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1326,8 +1206,8 @@ impl<'a> /*trait*/ QAction_isEnabled<i8> for () {
   fn isEnabled(self , rsthis: & QAction) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction9isEnabledEv()};
-    let mut ret = unsafe {_ZNK7QAction9isEnabledEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK7QAction9isEnabledEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1349,7 +1229,7 @@ impl<'a> /*trait*/ QAction_text<QString> for () {
   fn text(self , rsthis: & QAction) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction4textEv()};
-    let mut ret = unsafe {_ZNK7QAction4textEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK7QAction4textEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -1373,7 +1253,7 @@ impl<'a> /*trait*/ QAction_hover<()> for () {
   fn hover(self , rsthis: & QAction) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QAction5hoverEv()};
-     unsafe {_ZN7QAction5hoverEv(rsthis.qclsinst)};
+     unsafe {C_ZN7QAction5hoverEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1395,8 +1275,8 @@ impl<'a> /*trait*/ QAction_isIconVisibleInMenu<i8> for () {
   fn isIconVisibleInMenu(self , rsthis: & QAction) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction19isIconVisibleInMenuEv()};
-    let mut ret = unsafe {_ZNK7QAction19isIconVisibleInMenuEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK7QAction19isIconVisibleInMenuEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -1419,7 +1299,7 @@ impl<'a> /*trait*/ QAction_setToolTip<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QAction10setToolTipERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN7QAction10setToolTipERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN7QAction10setToolTipERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1442,7 +1322,7 @@ impl<'a> /*trait*/ QAction_setEnabled<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QAction10setEnabledEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN7QAction10setEnabledEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN7QAction10setEnabledEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1450,7 +1330,7 @@ impl<'a> /*trait*/ QAction_setEnabled<()> for (i8) {
 #[derive(Default)] // for QAction_changed
 pub struct QAction_changed_signal{poi:u64}
 impl /* struct */ QAction {
-  pub fn changed_1(&self) -> QAction_changed_signal {
+  pub fn changed(&self) -> QAction_changed_signal {
      return QAction_changed_signal{poi:self.qclsinst};
   }
 }
@@ -1466,7 +1346,7 @@ pub trait QAction_changed_signal_connect {
 #[derive(Default)] // for QAction_hovered
 pub struct QAction_hovered_signal{poi:u64}
 impl /* struct */ QAction {
-  pub fn hovered_1(&self) -> QAction_hovered_signal {
+  pub fn hovered(&self) -> QAction_hovered_signal {
      return QAction_hovered_signal{poi:self.qclsinst};
   }
 }
@@ -1482,7 +1362,7 @@ pub trait QAction_hovered_signal_connect {
 #[derive(Default)] // for QAction_triggered
 pub struct QAction_triggered_signal{poi:u64}
 impl /* struct */ QAction {
-  pub fn triggered_1(&self) -> QAction_triggered_signal {
+  pub fn triggered(&self) -> QAction_triggered_signal {
      return QAction_triggered_signal{poi:self.qclsinst};
   }
 }
@@ -1498,7 +1378,7 @@ pub trait QAction_triggered_signal_connect {
 #[derive(Default)] // for QAction_toggled
 pub struct QAction_toggled_signal{poi:u64}
 impl /* struct */ QAction {
-  pub fn toggled_1(&self) -> QAction_toggled_signal {
+  pub fn toggled(&self) -> QAction_toggled_signal {
      return QAction_toggled_signal{poi:self.qclsinst};
   }
 }
@@ -1514,15 +1394,21 @@ pub trait QAction_toggled_signal_connect {
 // toggled(_Bool)
 extern fn QAction_toggled_signal_connect_cb_0(rsfptr:fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i8;
+  rsfptr(rsarg0);
 }
-extern fn QAction_toggled_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_char) {
+extern fn QAction_toggled_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(i8)>, arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i8;
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QAction_toggled_signal_connect for fn(i8) {
   fn connect(self, sigthis: QAction_toggled_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAction_toggled_signal_connect_cb_0 as *mut c_void;
@@ -1530,29 +1416,35 @@ impl /* trait */ QAction_toggled_signal_connect for fn(i8) {
     unsafe {QAction_SlotProxy_connect__ZN7QAction7toggledEb(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QAction_toggled_signal_connect for Box<fn(i8)> {
+impl /* trait */ QAction_toggled_signal_connect for Box<Fn(i8)> {
   fn connect(self, sigthis: QAction_toggled_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAction_toggled_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QAction_SlotProxy_connect__ZN7QAction7toggledEb(arg0, arg1, arg2)};
   }
 }
 // triggered(_Bool)
 extern fn QAction_triggered_signal_connect_cb_1(rsfptr:fn(i8), arg0: c_char) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i8;
+  rsfptr(rsarg0);
 }
-extern fn QAction_triggered_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: c_char) {
+extern fn QAction_triggered_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn(i8)>, arg0: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i8;
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QAction_triggered_signal_connect for fn(i8) {
   fn connect(self, sigthis: QAction_triggered_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAction_triggered_signal_connect_cb_1 as *mut c_void;
@@ -1560,29 +1452,33 @@ impl /* trait */ QAction_triggered_signal_connect for fn(i8) {
     unsafe {QAction_SlotProxy_connect__ZN7QAction9triggeredEb(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QAction_triggered_signal_connect for Box<fn(i8)> {
+impl /* trait */ QAction_triggered_signal_connect for Box<Fn(i8)> {
   fn connect(self, sigthis: QAction_triggered_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAction_triggered_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QAction_SlotProxy_connect__ZN7QAction9triggeredEb(arg0, arg1, arg2)};
   }
 }
 // changed()
 extern fn QAction_changed_signal_connect_cb_2(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QAction_changed_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, ) {
+extern fn QAction_changed_signal_connect_cb_box_2(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QAction_changed_signal_connect for fn() {
   fn connect(self, sigthis: QAction_changed_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAction_changed_signal_connect_cb_2 as *mut c_void;
@@ -1590,29 +1486,33 @@ impl /* trait */ QAction_changed_signal_connect for fn() {
     unsafe {QAction_SlotProxy_connect__ZN7QAction7changedEv(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QAction_changed_signal_connect for Box<fn()> {
+impl /* trait */ QAction_changed_signal_connect for Box<Fn()> {
   fn connect(self, sigthis: QAction_changed_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAction_changed_signal_connect_cb_box_2 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QAction_SlotProxy_connect__ZN7QAction7changedEv(arg0, arg1, arg2)};
   }
 }
 // hovered()
 extern fn QAction_hovered_signal_connect_cb_3(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QAction_hovered_signal_connect_cb_box_3(rsfptr_raw:*mut c_void, ) {
+extern fn QAction_hovered_signal_connect_cb_box_3(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QAction_hovered_signal_connect for fn() {
   fn connect(self, sigthis: QAction_hovered_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAction_hovered_signal_connect_cb_3 as *mut c_void;
@@ -1620,14 +1520,14 @@ impl /* trait */ QAction_hovered_signal_connect for fn() {
     unsafe {QAction_SlotProxy_connect__ZN7QAction7hoveredEv(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QAction_hovered_signal_connect for Box<fn()> {
+impl /* trait */ QAction_hovered_signal_connect for Box<Fn()> {
   fn connect(self, sigthis: QAction_hovered_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAction_hovered_signal_connect_cb_box_3 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QAction_SlotProxy_connect__ZN7QAction7hoveredEv(arg0, arg1, arg2)};
   }
 }

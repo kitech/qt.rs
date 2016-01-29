@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qstandardpaths.h
 // dst-file: /src/core/qstandardpaths.rs
 //
@@ -19,8 +19,8 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qstring::QString; // 773
-use super::qstringlist::QStringList; // 773
+use super::qstring::*; // 773
+use super::qstringlist::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -31,19 +31,14 @@ use super::qstringlist::QStringList; // 773
 
 extern {
   fn QStandardPaths_Class_Size() -> c_int;
-  // proto:  void QStandardPaths::QStandardPaths();
-  fn dector_ZN14QStandardPathsC1Ev() -> *mut c_void;
-  fn _ZN14QStandardPathsC1Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  void QStandardPaths::~QStandardPaths();
-  fn _ZN14QStandardPathsD0Ev(qthis: u64 /* *mut c_void*/);
   // proto: static void QStandardPaths::setTestModeEnabled(bool testMode);
-  fn _ZN14QStandardPaths18setTestModeEnabledEb(arg0: c_char);
+  fn C_ZN14QStandardPaths18setTestModeEnabledEb(arg0: c_char);
   // proto: static QString QStandardPaths::findExecutable(const QString & executableName, const QStringList & paths);
-  fn _ZN14QStandardPaths14findExecutableERK7QStringRK11QStringList(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
+  fn C_ZN14QStandardPaths14findExecutableERK7QStringRK11QStringList(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto: static void QStandardPaths::enableTestMode(bool testMode);
-  fn _ZN14QStandardPaths14enableTestModeEb(arg0: c_char);
+  fn C_ZN14QStandardPaths14enableTestModeEb(arg0: c_char);
   // proto: static bool QStandardPaths::isTestModeEnabled();
-  fn _ZN14QStandardPaths17isTestModeEnabledEv() -> c_char;
+  fn C_ZN14QStandardPaths17isTestModeEnabledEv() -> c_char;
 } // <= ext block end
 
 // body block begin =>
@@ -59,56 +54,6 @@ impl /*struct*/ QStandardPaths {
     return QStandardPaths{qclsinst: qthis, ..Default::default()};
   }
 }
-  // proto:  void QStandardPaths::QStandardPaths();
-impl /*struct*/ QStandardPaths {
-  pub fn New<T: QStandardPaths_New>(value: T) -> QStandardPaths {
-    let rsthis = value.New();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QStandardPaths_New {
-  fn New(self) -> QStandardPaths;
-}
-
-  // proto:  void QStandardPaths::QStandardPaths();
-impl<'a> /*trait*/ QStandardPaths_New for () {
-  fn New(self) -> QStandardPaths {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QStandardPathsC1Ev()};
-    let ctysz: c_int = unsafe{QStandardPaths_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN14QStandardPathsC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN14QStandardPathsC1Ev()} as u64;
-    let rsthis = QStandardPaths{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  void QStandardPaths::~QStandardPaths();
-impl /*struct*/ QStandardPaths {
-  pub fn Free<RetType, T: QStandardPaths_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
-    // return 1;
-  }
-}
-
-pub trait QStandardPaths_Free<RetType> {
-  fn Free(self , rsthis: & QStandardPaths) -> RetType;
-}
-
-  // proto:  void QStandardPaths::~QStandardPaths();
-impl<'a> /*trait*/ QStandardPaths_Free<()> for () {
-  fn Free(self , rsthis: & QStandardPaths) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QStandardPathsD0Ev()};
-     unsafe {_ZN14QStandardPathsD0Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto: static void QStandardPaths::setTestModeEnabled(bool testMode);
 impl /*struct*/ QStandardPaths {
   pub fn setTestModeEnabled_s<RetType, T: QStandardPaths_setTestModeEnabled_s<RetType>>( overload_args: T) -> RetType {
@@ -127,7 +72,7 @@ impl<'a> /*trait*/ QStandardPaths_setTestModeEnabled_s<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QStandardPaths18setTestModeEnabledEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN14QStandardPaths18setTestModeEnabledEb(arg0)};
+     unsafe {C_ZN14QStandardPaths18setTestModeEnabledEb(arg0)};
     // return 1;
   }
 }
@@ -151,7 +96,7 @@ impl<'a> /*trait*/ QStandardPaths_findExecutable_s<QString> for (&'a QString, &'
     // unsafe{_ZN14QStandardPaths14findExecutableERK7QStringRK11QStringList()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN14QStandardPaths14findExecutableERK7QStringRK11QStringList(arg0, arg1)};
+    let mut ret = unsafe {C_ZN14QStandardPaths14findExecutableERK7QStringRK11QStringList(arg0, arg1)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -176,7 +121,7 @@ impl<'a> /*trait*/ QStandardPaths_enableTestMode_s<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QStandardPaths14enableTestModeEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN14QStandardPaths14enableTestModeEb(arg0)};
+     unsafe {C_ZN14QStandardPaths14enableTestModeEb(arg0)};
     // return 1;
   }
 }
@@ -198,8 +143,8 @@ impl<'a> /*trait*/ QStandardPaths_isTestModeEnabled_s<i8> for () {
   fn isTestModeEnabled_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QStandardPaths17isTestModeEnabledEv()};
-    let mut ret = unsafe {_ZN14QStandardPaths17isTestModeEnabledEv()};
-    return ret as i8;
+    let mut ret = unsafe {C_ZN14QStandardPaths17isTestModeEnabledEv()};
+    return ret as i8; // 1
     // return 1;
   }
 }

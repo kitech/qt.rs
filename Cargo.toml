@@ -8,7 +8,6 @@ libc = "0.2"
 
 [features]
 default = [ "widgets" ]
-gui = []
 widgets = []
 network = []
 qml = []

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qhash.h
 // dst-file: /src/core/qhash.rs
 //
@@ -31,15 +31,15 @@ extern {
   fn QHashDummyValue_Class_Size() -> c_int;
   fn QHashData_Class_Size() -> c_int;
   // proto:  void QHashData::hasShrunk();
-  fn _ZN9QHashData9hasShrunkEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN9QHashData9hasShrunkEv(qthis: u64 /* *mut c_void*/);
   // proto:  void * QHashData::allocateNode(int nodeAlign);
-  fn _ZN9QHashData12allocateNodeEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
+  fn C_ZN9QHashData12allocateNodeEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  bool QHashData::willGrow();
-  fn _ZN9QHashData8willGrowEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZN9QHashData8willGrowEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QHashData::rehash(int hint);
-  fn _ZN9QHashData6rehashEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN9QHashData6rehashEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QHashData::freeNode(void * node);
-  fn _ZN9QHashData8freeNodeEPv(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN9QHashData8freeNodeEPv(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -84,7 +84,7 @@ impl<'a> /*trait*/ QHashData_hasShrunk<()> for () {
   fn hasShrunk(self , rsthis: & QHashData) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QHashData9hasShrunkEv()};
-     unsafe {_ZN9QHashData9hasShrunkEv(rsthis.qclsinst)};
+     unsafe {C_ZN9QHashData9hasShrunkEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -107,8 +107,8 @@ impl<'a> /*trait*/ QHashData_allocateNode<*mut c_void> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QHashData12allocateNodeEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZN9QHashData12allocateNodeEi(rsthis.qclsinst, arg0)};
-    return ret as *mut c_void;
+    let mut ret = unsafe {C_ZN9QHashData12allocateNodeEi(rsthis.qclsinst, arg0)};
+    return ret as *mut c_void; // 1
     // return 1;
   }
 }
@@ -130,8 +130,8 @@ impl<'a> /*trait*/ QHashData_willGrow<i8> for () {
   fn willGrow(self , rsthis: & QHashData) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QHashData8willGrowEv()};
-    let mut ret = unsafe {_ZN9QHashData8willGrowEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZN9QHashData8willGrowEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -154,7 +154,7 @@ impl<'a> /*trait*/ QHashData_rehash<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QHashData6rehashEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN9QHashData6rehashEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QHashData6rehashEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -177,7 +177,7 @@ impl<'a> /*trait*/ QHashData_freeNode<()> for (*mut c_void) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QHashData8freeNodeEPv()};
     let arg0 = self  as *mut c_void;
-     unsafe {_ZN9QHashData8freeNodeEPv(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN9QHashData8freeNodeEPv(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

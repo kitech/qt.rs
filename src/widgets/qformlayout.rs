@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qformlayout.h
 // dst-file: /src/widgets/qformlayout.rs
 //
@@ -18,13 +18,14 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qlayout::QLayout; // 773
+use super::qlayout::*; // 773
 use std::ops::Deref;
-use super::qlayoutitem::QLayoutItem; // 773
-use super::qwidget::QWidget; // 773
-use super::super::core::qstring::QString; // 771
-use super::super::core::qrect::QRect; // 771
-use super::super::core::qsize::QSize; // 771
+use super::qlayoutitem::*; // 773
+use super::qwidget::*; // 773
+use super::super::core::qstring::*; // 771
+use super::super::core::qrect::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::super::core::qsize::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -36,74 +37,73 @@ use super::super::core::qsize::QSize; // 771
 extern {
   fn QFormLayout_Class_Size() -> c_int;
   // proto:  int QFormLayout::horizontalSpacing();
-  fn _ZNK11QFormLayout17horizontalSpacingEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK11QFormLayout17horizontalSpacingEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QFormLayout::rowCount();
-  fn _ZNK11QFormLayout8rowCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK11QFormLayout8rowCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  QWidget * QFormLayout::labelForField(QLayout * field);
-  fn _ZNK11QFormLayout13labelForFieldEP7QLayout(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZNK11QFormLayout13labelForFieldEP7QLayout(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QFormLayout::addRow(const QString & labelText, QLayout * field);
-  fn _ZN11QFormLayout6addRowERK7QStringP7QLayout(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN11QFormLayout6addRowERK7QStringP7QLayout(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QFormLayout::insertRow(int row, const QString & labelText, QLayout * field);
-  fn _ZN11QFormLayout9insertRowEiRK7QStringP7QLayout(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void, arg2: *mut c_void);
+  fn C_ZN11QFormLayout9insertRowEiRK7QStringP7QLayout(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  QWidget * QFormLayout::labelForField(QWidget * field);
-  fn _ZNK11QFormLayout13labelForFieldEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZNK11QFormLayout13labelForFieldEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QFormLayout::insertRow(int row, QWidget * label, QLayout * field);
-  fn _ZN11QFormLayout9insertRowEiP7QWidgetP7QLayout(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void, arg2: *mut c_void);
+  fn C_ZN11QFormLayout9insertRowEiP7QWidgetP7QLayout(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  int QFormLayout::count();
-  fn _ZNK11QFormLayout5countEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK11QFormLayout5countEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QFormLayout::spacing();
-  fn _ZNK11QFormLayout7spacingEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK11QFormLayout7spacingEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QFormLayout::QFormLayout(QWidget * parent);
-  fn dector_ZN11QFormLayoutC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QFormLayoutC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QFormLayoutC2EP7QWidget(arg0: *mut c_void) -> u64;
   // proto:  void QFormLayout::insertRow(int row, QLayout * layout);
-  fn _ZN11QFormLayout9insertRowEiP7QLayout(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
+  fn C_ZN11QFormLayout9insertRowEiP7QLayout(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  void QFormLayout::setGeometry(const QRect & rect);
-  fn _ZN11QFormLayout11setGeometryERK5QRect(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QFormLayout11setGeometryERK5QRect(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QFormLayout::setVerticalSpacing(int spacing);
-  fn _ZN11QFormLayout18setVerticalSpacingEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN11QFormLayout18setVerticalSpacingEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QFormLayout::setHorizontalSpacing(int spacing);
-  fn _ZN11QFormLayout20setHorizontalSpacingEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN11QFormLayout20setHorizontalSpacingEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QFormLayout::insertRow(int row, const QString & labelText, QWidget * field);
-  fn _ZN11QFormLayout9insertRowEiRK7QStringP7QWidget(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void, arg2: *mut c_void);
+  fn C_ZN11QFormLayout9insertRowEiRK7QStringP7QWidget(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  const QMetaObject * QFormLayout::metaObject();
-  fn _ZNK11QFormLayout10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK11QFormLayout10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QFormLayout::insertRow(int row, QWidget * label, QWidget * field);
-  fn _ZN11QFormLayout9insertRowEiP7QWidgetS1_(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void, arg2: *mut c_void);
+  fn C_ZN11QFormLayout9insertRowEiP7QWidgetS1_(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  void QFormLayout::setSpacing(int );
-  fn _ZN11QFormLayout10setSpacingEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN11QFormLayout10setSpacingEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QFormLayout::~QFormLayout();
-  fn _ZN11QFormLayoutD0Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN11QFormLayoutD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QFormLayout::addRow(QLayout * layout);
-  fn _ZN11QFormLayout6addRowEP7QLayout(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QFormLayout6addRowEP7QLayout(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QSize QFormLayout::sizeHint();
-  fn _ZNK11QFormLayout8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK11QFormLayout8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QFormLayout::invalidate();
-  fn _ZN11QFormLayout10invalidateEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN11QFormLayout10invalidateEv(qthis: u64 /* *mut c_void*/);
   // proto:  QLayoutItem * QFormLayout::itemAt(int index);
-  fn _ZNK11QFormLayout6itemAtEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
+  fn C_ZNK11QFormLayout6itemAtEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  QLayoutItem * QFormLayout::takeAt(int index);
-  fn _ZN11QFormLayout6takeAtEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
+  fn C_ZN11QFormLayout6takeAtEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  void QFormLayout::addRow(const QString & labelText, QWidget * field);
-  fn _ZN11QFormLayout6addRowERK7QStringP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN11QFormLayout6addRowERK7QStringP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  QSize QFormLayout::minimumSize();
-  fn _ZNK11QFormLayout11minimumSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK11QFormLayout11minimumSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QFormLayout::addRow(QWidget * widget);
-  fn _ZN11QFormLayout6addRowEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QFormLayout6addRowEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QFormLayout::addRow(QWidget * label, QLayout * field);
-  fn _ZN11QFormLayout6addRowEP7QWidgetP7QLayout(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN11QFormLayout6addRowEP7QWidgetP7QLayout(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  int QFormLayout::verticalSpacing();
-  fn _ZNK11QFormLayout15verticalSpacingEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK11QFormLayout15verticalSpacingEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QFormLayout::heightForWidth(int width);
-  fn _ZNK11QFormLayout14heightForWidthEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
+  fn C_ZNK11QFormLayout14heightForWidthEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_int;
   // proto:  void QFormLayout::addItem(QLayoutItem * item);
-  fn _ZN11QFormLayout7addItemEP11QLayoutItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QFormLayout7addItemEP11QLayoutItem(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QFormLayout::hasHeightForWidth();
-  fn _ZNK11QFormLayout17hasHeightForWidthEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK11QFormLayout17hasHeightForWidthEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QFormLayout::insertRow(int row, QWidget * widget);
-  fn _ZN11QFormLayout9insertRowEiP7QWidget(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
+  fn C_ZN11QFormLayout9insertRowEiP7QWidget(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  void QFormLayout::addRow(QWidget * label, QWidget * field);
-  fn _ZN11QFormLayout6addRowEP7QWidgetS1_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN11QFormLayout6addRowEP7QWidgetS1_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -148,8 +148,8 @@ impl<'a> /*trait*/ QFormLayout_horizontalSpacing<i32> for () {
   fn horizontalSpacing(self , rsthis: & QFormLayout) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFormLayout17horizontalSpacingEv()};
-    let mut ret = unsafe {_ZNK11QFormLayout17horizontalSpacingEv(rsthis.qclsinst)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK11QFormLayout17horizontalSpacingEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -171,8 +171,8 @@ impl<'a> /*trait*/ QFormLayout_rowCount<i32> for () {
   fn rowCount(self , rsthis: & QFormLayout) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFormLayout8rowCountEv()};
-    let mut ret = unsafe {_ZNK11QFormLayout8rowCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK11QFormLayout8rowCountEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -195,7 +195,7 @@ impl<'a> /*trait*/ QFormLayout_labelForField<QWidget> for (&'a QLayout) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFormLayout13labelForFieldEP7QLayout()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK11QFormLayout13labelForFieldEP7QLayout(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK11QFormLayout13labelForFieldEP7QLayout(rsthis.qclsinst, arg0)};
     let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -221,7 +221,7 @@ impl<'a> /*trait*/ QFormLayout_addRow<()> for (&'a QString, &'a QLayout) {
     // unsafe{_ZN11QFormLayout6addRowERK7QStringP7QLayout()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN11QFormLayout6addRowERK7QStringP7QLayout(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN11QFormLayout6addRowERK7QStringP7QLayout(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -246,7 +246,7 @@ impl<'a> /*trait*/ QFormLayout_insertRow<()> for (i32, &'a QString, &'a QLayout)
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
-     unsafe {_ZN11QFormLayout9insertRowEiRK7QStringP7QLayout(rsthis.qclsinst, arg0, arg1, arg2)};
+     unsafe {C_ZN11QFormLayout9insertRowEiRK7QStringP7QLayout(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
 }
@@ -257,7 +257,7 @@ impl<'a> /*trait*/ QFormLayout_labelForField<QWidget> for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFormLayout13labelForFieldEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK11QFormLayout13labelForFieldEP7QWidget(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK11QFormLayout13labelForFieldEP7QWidget(rsthis.qclsinst, arg0)};
     let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -272,7 +272,7 @@ impl<'a> /*trait*/ QFormLayout_insertRow<()> for (i32, &'a QWidget, &'a QLayout)
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
-     unsafe {_ZN11QFormLayout9insertRowEiP7QWidgetP7QLayout(rsthis.qclsinst, arg0, arg1, arg2)};
+     unsafe {C_ZN11QFormLayout9insertRowEiP7QWidgetP7QLayout(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
 }
@@ -294,8 +294,8 @@ impl<'a> /*trait*/ QFormLayout_count<i32> for () {
   fn count(self , rsthis: & QFormLayout) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFormLayout5countEv()};
-    let mut ret = unsafe {_ZNK11QFormLayout5countEv(rsthis.qclsinst)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK11QFormLayout5countEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -317,35 +317,34 @@ impl<'a> /*trait*/ QFormLayout_spacing<i32> for () {
   fn spacing(self , rsthis: & QFormLayout) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFormLayout7spacingEv()};
-    let mut ret = unsafe {_ZNK11QFormLayout7spacingEv(rsthis.qclsinst)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK11QFormLayout7spacingEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
 
   // proto:  void QFormLayout::QFormLayout(QWidget * parent);
 impl /*struct*/ QFormLayout {
-  pub fn New<T: QFormLayout_New>(value: T) -> QFormLayout {
-    let rsthis = value.New();
+  pub fn new<T: QFormLayout_new>(value: T) -> QFormLayout {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QFormLayout_New {
-  fn New(self) -> QFormLayout;
+pub trait QFormLayout_new {
+  fn new(self) -> QFormLayout;
 }
 
   // proto:  void QFormLayout::QFormLayout(QWidget * parent);
-impl<'a> /*trait*/ QFormLayout_New for (&'a QWidget) {
-  fn New(self) -> QFormLayout {
+impl<'a> /*trait*/ QFormLayout_new for (&'a QWidget) {
+  fn new(self) -> QFormLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QFormLayoutC1EP7QWidget()};
+    // unsafe{_ZN11QFormLayoutC2EP7QWidget()};
     let ctysz: c_int = unsafe{QFormLayout_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN11QFormLayoutC1EP7QWidget(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN11QFormLayoutC1EP7QWidget(arg0)} as u64;
+    let qthis: u64 = unsafe {C_ZN11QFormLayoutC2EP7QWidget(arg0)};
     let rsthis = QFormLayout{qbase: QLayout::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -359,7 +358,7 @@ impl<'a> /*trait*/ QFormLayout_insertRow<()> for (i32, &'a QLayout) {
     // unsafe{_ZN11QFormLayout9insertRowEiP7QLayout()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN11QFormLayout9insertRowEiP7QLayout(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN11QFormLayout9insertRowEiP7QLayout(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -382,7 +381,7 @@ impl<'a> /*trait*/ QFormLayout_setGeometry<()> for (&'a QRect) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFormLayout11setGeometryERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QFormLayout11setGeometryERK5QRect(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QFormLayout11setGeometryERK5QRect(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -405,7 +404,7 @@ impl<'a> /*trait*/ QFormLayout_setVerticalSpacing<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFormLayout18setVerticalSpacingEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN11QFormLayout18setVerticalSpacingEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QFormLayout18setVerticalSpacingEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -428,7 +427,7 @@ impl<'a> /*trait*/ QFormLayout_setHorizontalSpacing<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFormLayout20setHorizontalSpacingEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN11QFormLayout20setHorizontalSpacingEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QFormLayout20setHorizontalSpacingEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -441,7 +440,7 @@ impl<'a> /*trait*/ QFormLayout_insertRow<()> for (i32, &'a QString, &'a QWidget)
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
-     unsafe {_ZN11QFormLayout9insertRowEiRK7QStringP7QWidget(rsthis.qclsinst, arg0, arg1, arg2)};
+     unsafe {C_ZN11QFormLayout9insertRowEiRK7QStringP7QWidget(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
 }
@@ -459,11 +458,13 @@ pub trait QFormLayout_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QFormLayout::metaObject();
-impl<'a> /*trait*/ QFormLayout_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QFormLayout) -> () {
+impl<'a> /*trait*/ QFormLayout_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QFormLayout) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFormLayout10metaObjectEv()};
-     unsafe {_ZNK11QFormLayout10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QFormLayout10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -476,7 +477,7 @@ impl<'a> /*trait*/ QFormLayout_insertRow<()> for (i32, &'a QWidget, &'a QWidget)
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
-     unsafe {_ZN11QFormLayout9insertRowEiP7QWidgetS1_(rsthis.qclsinst, arg0, arg1, arg2)};
+     unsafe {C_ZN11QFormLayout9insertRowEiP7QWidgetS1_(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
 }
@@ -499,29 +500,29 @@ impl<'a> /*trait*/ QFormLayout_setSpacing<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFormLayout10setSpacingEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN11QFormLayout10setSpacingEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QFormLayout10setSpacingEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
 
   // proto:  void QFormLayout::~QFormLayout();
 impl /*struct*/ QFormLayout {
-  pub fn Free<RetType, T: QFormLayout_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QFormLayout_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QFormLayout_Free<RetType> {
-  fn Free(self , rsthis: & QFormLayout) -> RetType;
+pub trait QFormLayout_free<RetType> {
+  fn free(self , rsthis: & QFormLayout) -> RetType;
 }
 
   // proto:  void QFormLayout::~QFormLayout();
-impl<'a> /*trait*/ QFormLayout_Free<()> for () {
-  fn Free(self , rsthis: & QFormLayout) -> () {
+impl<'a> /*trait*/ QFormLayout_free<()> for () {
+  fn free(self , rsthis: & QFormLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QFormLayoutD0Ev()};
-     unsafe {_ZN11QFormLayoutD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN11QFormLayoutD2Ev()};
+     unsafe {C_ZN11QFormLayoutD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -532,7 +533,7 @@ impl<'a> /*trait*/ QFormLayout_addRow<()> for (&'a QLayout) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFormLayout6addRowEP7QLayout()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QFormLayout6addRowEP7QLayout(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QFormLayout6addRowEP7QLayout(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -554,7 +555,7 @@ impl<'a> /*trait*/ QFormLayout_sizeHint<QSize> for () {
   fn sizeHint(self , rsthis: & QFormLayout) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFormLayout8sizeHintEv()};
-    let mut ret = unsafe {_ZNK11QFormLayout8sizeHintEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QFormLayout8sizeHintEv(rsthis.qclsinst)};
     let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -578,7 +579,7 @@ impl<'a> /*trait*/ QFormLayout_invalidate<()> for () {
   fn invalidate(self , rsthis: & QFormLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFormLayout10invalidateEv()};
-     unsafe {_ZN11QFormLayout10invalidateEv(rsthis.qclsinst)};
+     unsafe {C_ZN11QFormLayout10invalidateEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -601,7 +602,7 @@ impl<'a> /*trait*/ QFormLayout_itemAt<QLayoutItem> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFormLayout6itemAtEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZNK11QFormLayout6itemAtEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK11QFormLayout6itemAtEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QLayoutItem::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -626,7 +627,7 @@ impl<'a> /*trait*/ QFormLayout_takeAt<QLayoutItem> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFormLayout6takeAtEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZN11QFormLayout6takeAtEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN11QFormLayout6takeAtEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QLayoutItem::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -640,7 +641,7 @@ impl<'a> /*trait*/ QFormLayout_addRow<()> for (&'a QString, &'a QWidget) {
     // unsafe{_ZN11QFormLayout6addRowERK7QStringP7QWidget()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN11QFormLayout6addRowERK7QStringP7QWidget(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN11QFormLayout6addRowERK7QStringP7QWidget(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -662,7 +663,7 @@ impl<'a> /*trait*/ QFormLayout_minimumSize<QSize> for () {
   fn minimumSize(self , rsthis: & QFormLayout) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFormLayout11minimumSizeEv()};
-    let mut ret = unsafe {_ZNK11QFormLayout11minimumSizeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QFormLayout11minimumSizeEv(rsthis.qclsinst)};
     let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -675,7 +676,7 @@ impl<'a> /*trait*/ QFormLayout_addRow<()> for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFormLayout6addRowEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QFormLayout6addRowEP7QWidget(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QFormLayout6addRowEP7QWidget(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -687,7 +688,7 @@ impl<'a> /*trait*/ QFormLayout_addRow<()> for (&'a QWidget, &'a QLayout) {
     // unsafe{_ZN11QFormLayout6addRowEP7QWidgetP7QLayout()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN11QFormLayout6addRowEP7QWidgetP7QLayout(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN11QFormLayout6addRowEP7QWidgetP7QLayout(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -709,8 +710,8 @@ impl<'a> /*trait*/ QFormLayout_verticalSpacing<i32> for () {
   fn verticalSpacing(self , rsthis: & QFormLayout) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFormLayout15verticalSpacingEv()};
-    let mut ret = unsafe {_ZNK11QFormLayout15verticalSpacingEv(rsthis.qclsinst)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK11QFormLayout15verticalSpacingEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -733,8 +734,8 @@ impl<'a> /*trait*/ QFormLayout_heightForWidth<i32> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFormLayout14heightForWidthEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZNK11QFormLayout14heightForWidthEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK11QFormLayout14heightForWidthEi(rsthis.qclsinst, arg0)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -757,7 +758,7 @@ impl<'a> /*trait*/ QFormLayout_addItem<()> for (&'a QLayoutItem) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFormLayout7addItemEP11QLayoutItem()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QFormLayout7addItemEP11QLayoutItem(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QFormLayout7addItemEP11QLayoutItem(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -779,8 +780,8 @@ impl<'a> /*trait*/ QFormLayout_hasHeightForWidth<i8> for () {
   fn hasHeightForWidth(self , rsthis: & QFormLayout) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFormLayout17hasHeightForWidthEv()};
-    let mut ret = unsafe {_ZNK11QFormLayout17hasHeightForWidthEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK11QFormLayout17hasHeightForWidthEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -792,7 +793,7 @@ impl<'a> /*trait*/ QFormLayout_insertRow<()> for (i32, &'a QWidget) {
     // unsafe{_ZN11QFormLayout9insertRowEiP7QWidget()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN11QFormLayout9insertRowEiP7QWidget(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN11QFormLayout9insertRowEiP7QWidget(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -804,7 +805,7 @@ impl<'a> /*trait*/ QFormLayout_addRow<()> for (&'a QWidget, &'a QWidget) {
     // unsafe{_ZN11QFormLayout6addRowEP7QWidgetS1_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN11QFormLayout6addRowEP7QWidgetS1_(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN11QFormLayout6addRowEP7QWidgetS1_(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }

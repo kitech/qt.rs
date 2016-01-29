@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qcontiguouscache.h
 // dst-file: /src/core/qcontiguouscache.rs
 //
@@ -30,9 +30,9 @@ use std::ops::Deref;
 extern {
   fn QContiguousCacheData_Class_Size() -> c_int;
   // proto: static QContiguousCacheData * QContiguousCacheData::allocateData(int size, int alignment);
-  fn _ZN20QContiguousCacheData12allocateDataEii(arg0: c_int, arg1: c_int) -> *mut c_void;
+  fn C_ZN20QContiguousCacheData12allocateDataEii(arg0: c_int, arg1: c_int) -> *mut c_void;
   // proto: static void QContiguousCacheData::freeData(QContiguousCacheData * data);
-  fn _ZN20QContiguousCacheData8freeDataEPS_(arg0: *mut c_void);
+  fn C_ZN20QContiguousCacheData8freeDataEPS_(arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -67,7 +67,7 @@ impl<'a> /*trait*/ QContiguousCacheData_allocateData_s<QContiguousCacheData> for
     // unsafe{_ZN20QContiguousCacheData12allocateDataEii()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-    let mut ret = unsafe {_ZN20QContiguousCacheData12allocateDataEii(arg0, arg1)};
+    let mut ret = unsafe {C_ZN20QContiguousCacheData12allocateDataEii(arg0, arg1)};
     let mut ret1 = QContiguousCacheData::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -92,7 +92,7 @@ impl<'a> /*trait*/ QContiguousCacheData_freeData_s<()> for (&'a QContiguousCache
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QContiguousCacheData8freeDataEPS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN20QContiguousCacheData8freeDataEPS_(arg0)};
+     unsafe {C_ZN20QContiguousCacheData8freeDataEPS_(arg0)};
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qactiongroup.h
 // dst-file: /src/widgets/qactiongroup.rs
 //
@@ -18,11 +18,13 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qobject::QObject; // 771
+use super::super::core::qobject::*; // 771
 use std::ops::Deref;
-use super::qaction::QAction; // 773
-use super::super::gui::qicon::QIcon; // 771
-use super::super::core::qstring::QString; // 771
+// use super::qlist::*; // 775
+use super::super::core::qobjectdefs::*; // 771
+use super::qaction::*; // 773
+use super::super::gui::qicon::*; // 771
+use super::super::core::qstring::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -34,49 +36,39 @@ use super::super::core::qstring::QString; // 771
 extern {
   fn QActionGroup_Class_Size() -> c_int;
   // proto:  void QActionGroup::QActionGroup(QObject * parent);
-  fn dector_ZN12QActionGroupC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN12QActionGroupC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN12QActionGroupC2EP7QObject(arg0: *mut c_void) -> u64;
   // proto:  QList<QAction *> QActionGroup::actions();
-  fn _ZNK12QActionGroup7actionsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK12QActionGroup7actionsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QActionGroup::setDisabled(bool b);
-  fn demth_ZN12QActionGroup11setDisabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN12QActionGroup11setDisabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  void QActionGroup::setEnabled(bool );
-  fn _ZN12QActionGroup10setEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN12QActionGroup10setEnabledEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  const QMetaObject * QActionGroup::metaObject();
-  fn _ZNK12QActionGroup10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK12QActionGroup10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QAction * QActionGroup::addAction(QAction * a);
-  fn _ZN12QActionGroup9addActionEP7QAction(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZN12QActionGroup9addActionEP7QAction(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QActionGroup::~QActionGroup();
-  fn _ZN12QActionGroupD0Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN12QActionGroupD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QAction * QActionGroup::checkedAction();
-  fn _ZNK12QActionGroup13checkedActionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK12QActionGroup13checkedActionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QAction * QActionGroup::addAction(const QIcon & icon, const QString & text);
-  fn _ZN12QActionGroup9addActionERK5QIconRK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
+  fn C_ZN12QActionGroup9addActionERK5QIconRK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  void QActionGroup::setVisible(bool );
-  fn _ZN12QActionGroup10setVisibleEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN12QActionGroup10setVisibleEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  bool QActionGroup::isVisible();
-  fn _ZNK12QActionGroup9isVisibleEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK12QActionGroup9isVisibleEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QActionGroup::setExclusive(bool );
-  fn _ZN12QActionGroup12setExclusiveEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN12QActionGroup12setExclusiveEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QAction * QActionGroup::addAction(const QString & text);
-  fn _ZN12QActionGroup9addActionERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-  // proto:  void QActionGroup::triggered(QAction * );
-  fn _ZN12QActionGroup9triggeredEP7QAction(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN12QActionGroup9addActionERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  bool QActionGroup::isEnabled();
-  fn _ZNK12QActionGroup9isEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK12QActionGroup9isEnabledEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  bool QActionGroup::isExclusive();
-  fn _ZNK12QActionGroup11isExclusiveEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK12QActionGroup11isExclusiveEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QActionGroup::removeAction(QAction * a);
-  fn _ZN12QActionGroup12removeActionEP7QAction(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QActionGroup::QActionGroup(const QActionGroup & );
-  fn dector_ZN12QActionGroupC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN12QActionGroupC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QActionGroup::hovered(QAction * );
-  fn _ZN12QActionGroup7hoveredEP7QAction(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN12QActionGroup12removeActionEP7QAction(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QActionGroup_SlotProxy_connect__ZN12QActionGroup7hoveredEP7QAction(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QActionGroup_SlotProxy_connect_box__ZN12QActionGroup7hoveredEP7QAction(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QActionGroup_SlotProxy_connect__ZN12QActionGroup9triggeredEP7QAction(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QActionGroup_SlotProxy_connect_box__ZN12QActionGroup9triggeredEP7QAction(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -85,8 +77,8 @@ extern {
 pub struct QActionGroup {
   qbase: QObject,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _triggered_1: QActionGroup_triggered_signal,
-  pub _hovered_1: QActionGroup_hovered_signal,
+  pub _triggered: QActionGroup_triggered_signal,
+  pub _hovered: QActionGroup_hovered_signal,
 }
 
 impl /*struct*/ QActionGroup {
@@ -108,27 +100,26 @@ impl AsRef<QObject> for QActionGroup {
 }
   // proto:  void QActionGroup::QActionGroup(QObject * parent);
 impl /*struct*/ QActionGroup {
-  pub fn New<T: QActionGroup_New>(value: T) -> QActionGroup {
-    let rsthis = value.New();
+  pub fn new<T: QActionGroup_new>(value: T) -> QActionGroup {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QActionGroup_New {
-  fn New(self) -> QActionGroup;
+pub trait QActionGroup_new {
+  fn new(self) -> QActionGroup;
 }
 
   // proto:  void QActionGroup::QActionGroup(QObject * parent);
-impl<'a> /*trait*/ QActionGroup_New for (&'a QObject) {
-  fn New(self) -> QActionGroup {
+impl<'a> /*trait*/ QActionGroup_new for (&'a QObject) {
+  fn new(self) -> QActionGroup {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QActionGroupC1EP7QObject()};
+    // unsafe{_ZN12QActionGroupC2EP7QObject()};
     let ctysz: c_int = unsafe{QActionGroup_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN12QActionGroupC1EP7QObject(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN12QActionGroupC1EP7QObject(arg0)} as u64;
+    let qthis: u64 = unsafe {C_ZN12QActionGroupC2EP7QObject(arg0)};
     let rsthis = QActionGroup{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -148,11 +139,12 @@ pub trait QActionGroup_actions<RetType> {
 }
 
   // proto:  QList<QAction *> QActionGroup::actions();
-impl<'a> /*trait*/ QActionGroup_actions<()> for () {
-  fn actions(self , rsthis: & QActionGroup) -> () {
+impl<'a> /*trait*/ QActionGroup_actions<u64> for () {
+  fn actions(self , rsthis: & QActionGroup) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QActionGroup7actionsEv()};
-     unsafe {_ZNK12QActionGroup7actionsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QActionGroup7actionsEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -175,7 +167,7 @@ impl<'a> /*trait*/ QActionGroup_setDisabled<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QActionGroup11setDisabledEb()};
     let arg0 = self  as c_char;
-     unsafe {demth_ZN12QActionGroup11setDisabledEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN12QActionGroup11setDisabledEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -198,7 +190,7 @@ impl<'a> /*trait*/ QActionGroup_setEnabled<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QActionGroup10setEnabledEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN12QActionGroup10setEnabledEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN12QActionGroup10setEnabledEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -216,11 +208,13 @@ pub trait QActionGroup_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QActionGroup::metaObject();
-impl<'a> /*trait*/ QActionGroup_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QActionGroup) -> () {
+impl<'a> /*trait*/ QActionGroup_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QActionGroup) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QActionGroup10metaObjectEv()};
-     unsafe {_ZNK12QActionGroup10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QActionGroup10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -243,7 +237,7 @@ impl<'a> /*trait*/ QActionGroup_addAction<QAction> for (&'a QAction) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QActionGroup9addActionEP7QAction()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN12QActionGroup9addActionEP7QAction(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN12QActionGroup9addActionEP7QAction(rsthis.qclsinst, arg0)};
     let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -252,22 +246,22 @@ impl<'a> /*trait*/ QActionGroup_addAction<QAction> for (&'a QAction) {
 
   // proto:  void QActionGroup::~QActionGroup();
 impl /*struct*/ QActionGroup {
-  pub fn Free<RetType, T: QActionGroup_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QActionGroup_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QActionGroup_Free<RetType> {
-  fn Free(self , rsthis: & QActionGroup) -> RetType;
+pub trait QActionGroup_free<RetType> {
+  fn free(self , rsthis: & QActionGroup) -> RetType;
 }
 
   // proto:  void QActionGroup::~QActionGroup();
-impl<'a> /*trait*/ QActionGroup_Free<()> for () {
-  fn Free(self , rsthis: & QActionGroup) -> () {
+impl<'a> /*trait*/ QActionGroup_free<()> for () {
+  fn free(self , rsthis: & QActionGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QActionGroupD0Ev()};
-     unsafe {_ZN12QActionGroupD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN12QActionGroupD2Ev()};
+     unsafe {C_ZN12QActionGroupD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -289,7 +283,7 @@ impl<'a> /*trait*/ QActionGroup_checkedAction<QAction> for () {
   fn checkedAction(self , rsthis: & QActionGroup) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QActionGroup13checkedActionEv()};
-    let mut ret = unsafe {_ZNK12QActionGroup13checkedActionEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK12QActionGroup13checkedActionEv(rsthis.qclsinst)};
     let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -303,7 +297,7 @@ impl<'a> /*trait*/ QActionGroup_addAction<QAction> for (&'a QIcon, &'a QString) 
     // unsafe{_ZN12QActionGroup9addActionERK5QIconRK7QString()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN12QActionGroup9addActionERK5QIconRK7QString(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {C_ZN12QActionGroup9addActionERK5QIconRK7QString(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -328,7 +322,7 @@ impl<'a> /*trait*/ QActionGroup_setVisible<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QActionGroup10setVisibleEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN12QActionGroup10setVisibleEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN12QActionGroup10setVisibleEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -350,8 +344,8 @@ impl<'a> /*trait*/ QActionGroup_isVisible<i8> for () {
   fn isVisible(self , rsthis: & QActionGroup) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QActionGroup9isVisibleEv()};
-    let mut ret = unsafe {_ZNK12QActionGroup9isVisibleEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK12QActionGroup9isVisibleEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -374,7 +368,7 @@ impl<'a> /*trait*/ QActionGroup_setExclusive<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QActionGroup12setExclusiveEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN12QActionGroup12setExclusiveEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN12QActionGroup12setExclusiveEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -385,32 +379,9 @@ impl<'a> /*trait*/ QActionGroup_addAction<QAction> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QActionGroup9addActionERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN12QActionGroup9addActionERK7QString(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN12QActionGroup9addActionERK7QString(rsthis.qclsinst, arg0)};
     let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QActionGroup::triggered(QAction * );
-impl /*struct*/ QActionGroup {
-  pub fn triggered<RetType, T: QActionGroup_triggered<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.triggered(self);
-    // return 1;
-  }
-}
-
-pub trait QActionGroup_triggered<RetType> {
-  fn triggered(self , rsthis: & QActionGroup) -> RetType;
-}
-
-  // proto:  void QActionGroup::triggered(QAction * );
-impl<'a> /*trait*/ QActionGroup_triggered<()> for (&'a QAction) {
-  fn triggered(self , rsthis: & QActionGroup) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QActionGroup9triggeredEP7QAction()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN12QActionGroup9triggeredEP7QAction(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -432,8 +403,8 @@ impl<'a> /*trait*/ QActionGroup_isEnabled<i8> for () {
   fn isEnabled(self , rsthis: & QActionGroup) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QActionGroup9isEnabledEv()};
-    let mut ret = unsafe {_ZNK12QActionGroup9isEnabledEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK12QActionGroup9isEnabledEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -455,8 +426,8 @@ impl<'a> /*trait*/ QActionGroup_isExclusive<i8> for () {
   fn isExclusive(self , rsthis: & QActionGroup) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QActionGroup11isExclusiveEv()};
-    let mut ret = unsafe {_ZNK12QActionGroup11isExclusiveEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK12QActionGroup11isExclusiveEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -479,46 +450,7 @@ impl<'a> /*trait*/ QActionGroup_removeAction<()> for (&'a QAction) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QActionGroup12removeActionEP7QAction()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN12QActionGroup12removeActionEP7QAction(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QActionGroup::QActionGroup(const QActionGroup & );
-impl<'a> /*trait*/ QActionGroup_New for (&'a QActionGroup) {
-  fn New(self) -> QActionGroup {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QActionGroupC1ERKS_()};
-    let ctysz: c_int = unsafe{QActionGroup_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN12QActionGroupC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN12QActionGroupC1ERKS_(arg0)} as u64;
-    let rsthis = QActionGroup{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  void QActionGroup::hovered(QAction * );
-impl /*struct*/ QActionGroup {
-  pub fn hovered<RetType, T: QActionGroup_hovered<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.hovered(self);
-    // return 1;
-  }
-}
-
-pub trait QActionGroup_hovered<RetType> {
-  fn hovered(self , rsthis: & QActionGroup) -> RetType;
-}
-
-  // proto:  void QActionGroup::hovered(QAction * );
-impl<'a> /*trait*/ QActionGroup_hovered<()> for (&'a QAction) {
-  fn hovered(self , rsthis: & QActionGroup) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QActionGroup7hoveredEP7QAction()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN12QActionGroup7hoveredEP7QAction(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN12QActionGroup12removeActionEP7QAction(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -526,7 +458,7 @@ impl<'a> /*trait*/ QActionGroup_hovered<()> for (&'a QAction) {
 #[derive(Default)] // for QActionGroup_triggered
 pub struct QActionGroup_triggered_signal{poi:u64}
 impl /* struct */ QActionGroup {
-  pub fn triggered_1(&self) -> QActionGroup_triggered_signal {
+  pub fn triggered(&self) -> QActionGroup_triggered_signal {
      return QActionGroup_triggered_signal{poi:self.qclsinst};
   }
 }
@@ -542,7 +474,7 @@ pub trait QActionGroup_triggered_signal_connect {
 #[derive(Default)] // for QActionGroup_hovered
 pub struct QActionGroup_hovered_signal{poi:u64}
 impl /* struct */ QActionGroup {
-  pub fn hovered_1(&self) -> QActionGroup_hovered_signal {
+  pub fn hovered(&self) -> QActionGroup_hovered_signal {
      return QActionGroup_hovered_signal{poi:self.qclsinst};
   }
 }
@@ -558,15 +490,21 @@ pub trait QActionGroup_hovered_signal_connect {
 // hovered(class QAction *)
 extern fn QActionGroup_hovered_signal_connect_cb_0(rsfptr:fn(QAction), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QAction::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QActionGroup_hovered_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QActionGroup_hovered_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(QAction)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QAction::inheritFrom(arg0 as u64);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QActionGroup_hovered_signal_connect for fn(QAction) {
   fn connect(self, sigthis: QActionGroup_hovered_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QActionGroup_hovered_signal_connect_cb_0 as *mut c_void;
@@ -574,29 +512,35 @@ impl /* trait */ QActionGroup_hovered_signal_connect for fn(QAction) {
     unsafe {QActionGroup_SlotProxy_connect__ZN12QActionGroup7hoveredEP7QAction(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QActionGroup_hovered_signal_connect for Box<fn(QAction)> {
+impl /* trait */ QActionGroup_hovered_signal_connect for Box<Fn(QAction)> {
   fn connect(self, sigthis: QActionGroup_hovered_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QActionGroup_hovered_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QActionGroup_SlotProxy_connect__ZN12QActionGroup7hoveredEP7QAction(arg0, arg1, arg2)};
   }
 }
 // triggered(class QAction *)
 extern fn QActionGroup_triggered_signal_connect_cb_1(rsfptr:fn(QAction), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QAction::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QActionGroup_triggered_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QActionGroup_triggered_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn(QAction)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QAction::inheritFrom(arg0 as u64);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QActionGroup_triggered_signal_connect for fn(QAction) {
   fn connect(self, sigthis: QActionGroup_triggered_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QActionGroup_triggered_signal_connect_cb_1 as *mut c_void;
@@ -604,14 +548,14 @@ impl /* trait */ QActionGroup_triggered_signal_connect for fn(QAction) {
     unsafe {QActionGroup_SlotProxy_connect__ZN12QActionGroup9triggeredEP7QAction(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QActionGroup_triggered_signal_connect for Box<fn(QAction)> {
+impl /* trait */ QActionGroup_triggered_signal_connect for Box<Fn(QAction)> {
   fn connect(self, sigthis: QActionGroup_triggered_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QActionGroup_triggered_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QActionGroup_SlotProxy_connect__ZN12QActionGroup9triggeredEP7QAction(arg0, arg1, arg2)};
   }
 }

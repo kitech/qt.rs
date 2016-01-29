@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qlibraryinfo.h
 // dst-file: /src/core/qlibraryinfo.rs
 //
@@ -19,8 +19,9 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qstring::QString; // 773
-use super::qdatetime::QDate; // 773
+use super::qstring::*; // 773
+use super::qstringlist::*; // 773
+use super::qdatetime::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -31,21 +32,18 @@ use super::qdatetime::QDate; // 773
 
 extern {
   fn QLibraryInfo_Class_Size() -> c_int;
-  // proto:  void QLibraryInfo::QLibraryInfo();
-  fn dector_ZN12QLibraryInfoC1Ev() -> *mut c_void;
-  fn _ZN12QLibraryInfoC1Ev(qthis: u64 /* *mut c_void*/);
   // proto: static QStringList QLibraryInfo::platformPluginArguments(const QString & platformName);
-  fn _ZN12QLibraryInfo23platformPluginArgumentsERK7QString(arg0: *mut c_void);
+  fn C_ZN12QLibraryInfo23platformPluginArgumentsERK7QString(arg0: *mut c_void) -> *mut c_void;
   // proto: static QString QLibraryInfo::licensee();
-  fn _ZN12QLibraryInfo8licenseeEv() -> *mut c_void;
+  fn C_ZN12QLibraryInfo8licenseeEv() -> *mut c_void;
   // proto: static QString QLibraryInfo::licensedProducts();
-  fn _ZN12QLibraryInfo16licensedProductsEv() -> *mut c_void;
+  fn C_ZN12QLibraryInfo16licensedProductsEv() -> *mut c_void;
   // proto: static bool QLibraryInfo::isDebugBuild();
-  fn _ZN12QLibraryInfo12isDebugBuildEv() -> c_char;
+  fn C_ZN12QLibraryInfo12isDebugBuildEv() -> c_char;
   // proto: static const char * QLibraryInfo::build();
-  fn _ZN12QLibraryInfo5buildEv() -> *mut c_char;
+  fn C_ZN12QLibraryInfo5buildEv() -> *mut c_char;
   // proto: static QDate QLibraryInfo::buildDate();
-  fn _ZN12QLibraryInfo9buildDateEv() -> *mut c_void;
+  fn C_ZN12QLibraryInfo9buildDateEv() -> *mut c_void;
 } // <= ext block end
 
 // body block begin =>
@@ -61,34 +59,6 @@ impl /*struct*/ QLibraryInfo {
     return QLibraryInfo{qclsinst: qthis, ..Default::default()};
   }
 }
-  // proto:  void QLibraryInfo::QLibraryInfo();
-impl /*struct*/ QLibraryInfo {
-  pub fn New<T: QLibraryInfo_New>(value: T) -> QLibraryInfo {
-    let rsthis = value.New();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QLibraryInfo_New {
-  fn New(self) -> QLibraryInfo;
-}
-
-  // proto:  void QLibraryInfo::QLibraryInfo();
-impl<'a> /*trait*/ QLibraryInfo_New for () {
-  fn New(self) -> QLibraryInfo {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QLibraryInfoC1Ev()};
-    let ctysz: c_int = unsafe{QLibraryInfo_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN12QLibraryInfoC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN12QLibraryInfoC1Ev()} as u64;
-    let rsthis = QLibraryInfo{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-
   // proto: static QStringList QLibraryInfo::platformPluginArguments(const QString & platformName);
 impl /*struct*/ QLibraryInfo {
   pub fn platformPluginArguments_s<RetType, T: QLibraryInfo_platformPluginArguments_s<RetType>>( overload_args: T) -> RetType {
@@ -102,12 +72,14 @@ pub trait QLibraryInfo_platformPluginArguments_s<RetType> {
 }
 
   // proto: static QStringList QLibraryInfo::platformPluginArguments(const QString & platformName);
-impl<'a> /*trait*/ QLibraryInfo_platformPluginArguments_s<()> for (&'a QString) {
-  fn platformPluginArguments_s(self ) -> () {
+impl<'a> /*trait*/ QLibraryInfo_platformPluginArguments_s<QStringList> for (&'a QString) {
+  fn platformPluginArguments_s(self ) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QLibraryInfo23platformPluginArgumentsERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN12QLibraryInfo23platformPluginArgumentsERK7QString(arg0)};
+    let mut ret = unsafe {C_ZN12QLibraryInfo23platformPluginArgumentsERK7QString(arg0)};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -129,7 +101,7 @@ impl<'a> /*trait*/ QLibraryInfo_licensee_s<QString> for () {
   fn licensee_s(self ) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QLibraryInfo8licenseeEv()};
-    let mut ret = unsafe {_ZN12QLibraryInfo8licenseeEv()};
+    let mut ret = unsafe {C_ZN12QLibraryInfo8licenseeEv()};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -153,7 +125,7 @@ impl<'a> /*trait*/ QLibraryInfo_licensedProducts_s<QString> for () {
   fn licensedProducts_s(self ) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QLibraryInfo16licensedProductsEv()};
-    let mut ret = unsafe {_ZN12QLibraryInfo16licensedProductsEv()};
+    let mut ret = unsafe {C_ZN12QLibraryInfo16licensedProductsEv()};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -177,8 +149,8 @@ impl<'a> /*trait*/ QLibraryInfo_isDebugBuild_s<i8> for () {
   fn isDebugBuild_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QLibraryInfo12isDebugBuildEv()};
-    let mut ret = unsafe {_ZN12QLibraryInfo12isDebugBuildEv()};
-    return ret as i8;
+    let mut ret = unsafe {C_ZN12QLibraryInfo12isDebugBuildEv()};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -200,7 +172,7 @@ impl<'a> /*trait*/ QLibraryInfo_build_s<String> for () {
   fn build_s(self ) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QLibraryInfo5buildEv()};
-    let mut ret = unsafe {_ZN12QLibraryInfo5buildEv()};
+    let mut ret = unsafe {C_ZN12QLibraryInfo5buildEv()};
     let slen = unsafe {strlen(ret as *const i8)} as usize;
     return unsafe{String::from_raw_parts(ret as *mut u8, slen, slen+1)};
     // return 1;
@@ -224,7 +196,7 @@ impl<'a> /*trait*/ QLibraryInfo_buildDate_s<QDate> for () {
   fn buildDate_s(self ) -> QDate {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QLibraryInfo9buildDateEv()};
-    let mut ret = unsafe {_ZN12QLibraryInfo9buildDateEv()};
+    let mut ret = unsafe {C_ZN12QLibraryInfo9buildDateEv()};
     let mut ret1 = QDate::inheritFrom(ret as u64);
     return ret1;
     // return 1;

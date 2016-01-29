@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qcompleter.h
 // dst-file: /src/widgets/qcompleter.rs
 //
@@ -18,15 +18,15 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qobject::QObject; // 771
+use super::super::core::qobject::*; // 771
 use std::ops::Deref;
-use super::super::core::qrect::QRect; // 771
-use super::super::core::qabstractitemmodel::QModelIndex; // 771
-use super::super::core::qstringlist::QStringList; // 771
-use super::super::core::qstring::QString; // 771
-use super::super::core::qabstractitemmodel::QAbstractItemModel; // 771
-use super::qabstractitemview::QAbstractItemView; // 773
-use super::qwidget::QWidget; // 773
+use super::super::core::qobjectdefs::*; // 771
+use super::qabstractitemview::*; // 773
+use super::super::core::qrect::*; // 771
+use super::super::core::qstringlist::*; // 771
+use super::super::core::qabstractitemmodel::*; // 771
+use super::super::core::qstring::*; // 771
+use super::qwidget::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -38,87 +38,69 @@ use super::qwidget::QWidget; // 773
 extern {
   fn QCompleter_Class_Size() -> c_int;
   // proto:  void QCompleter::QCompleter(QObject * parent);
-  fn dector_ZN10QCompleterC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN10QCompleterC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN10QCompleterC2EP7QObject(arg0: *mut c_void) -> u64;
   // proto:  const QMetaObject * QCompleter::metaObject();
-  fn _ZNK10QCompleter10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK10QCompleter10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QAbstractItemView * QCompleter::popup();
-  fn _ZNK10QCompleter5popupEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK10QCompleter5popupEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QCompleter::complete(const QRect & rect);
-  fn _ZN10QCompleter8completeERK5QRect(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QCompleter::activated(const QModelIndex & index);
-  fn _ZN10QCompleter9activatedERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN10QCompleter8completeERK5QRect(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QCompleter::setCompletionRole(int role);
-  fn _ZN10QCompleter17setCompletionRoleEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN10QCompleter17setCompletionRoleEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QCompleter::completionCount();
-  fn _ZNK10QCompleter15completionCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK10QCompleter15completionCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QCompleter::QCompleter(const QStringList & completions, QObject * parent);
-  fn dector_ZN10QCompleterC1ERK11QStringListP7QObject(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN10QCompleterC1ERK11QStringListP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN10QCompleterC2ERK11QStringListP7QObject(arg0: *mut c_void, arg1: *mut c_void) -> u64;
   // proto:  QModelIndex QCompleter::currentIndex();
-  fn _ZNK10QCompleter12currentIndexEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK10QCompleter12currentIndexEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QCompleter::pathFromIndex(const QModelIndex & index);
-  fn _ZNK10QCompleter13pathFromIndexERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-  // proto:  void QCompleter::highlighted(const QModelIndex & index);
-  fn _ZN10QCompleter11highlightedERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK10QCompleter13pathFromIndexERK11QModelIndex(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QCompleter::setMaxVisibleItems(int maxItems);
-  fn _ZN10QCompleter18setMaxVisibleItemsEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN10QCompleter18setMaxVisibleItemsEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  int QCompleter::completionColumn();
-  fn _ZNK10QCompleter16completionColumnEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK10QCompleter16completionColumnEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QCompleter::maxVisibleItems();
-  fn _ZNK10QCompleter15maxVisibleItemsEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK10QCompleter15maxVisibleItemsEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QCompleter::~QCompleter();
-  fn _ZN10QCompleterD0Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN10QCompleterD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QCompleter::setWrapAround(bool wrap);
-  fn _ZN10QCompleter13setWrapAroundEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN10QCompleter13setWrapAroundEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QStringList QCompleter::splitPath(const QString & path);
-  fn _ZNK10QCompleter9splitPathERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK10QCompleter9splitPathERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QAbstractItemModel * QCompleter::model();
-  fn _ZNK10QCompleter5modelEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK10QCompleter5modelEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QCompleter::currentCompletion();
-  fn _ZNK10QCompleter17currentCompletionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK10QCompleter17currentCompletionEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QCompleter::setCompletionColumn(int column);
-  fn _ZN10QCompleter19setCompletionColumnEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
-  // proto:  void QCompleter::highlighted(const QString & text);
-  fn _ZN10QCompleter11highlightedERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN10QCompleter19setCompletionColumnEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QCompleter::setCompletionPrefix(const QString & prefix);
-  fn _ZN10QCompleter19setCompletionPrefixERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN10QCompleter19setCompletionPrefixERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QAbstractItemModel * QCompleter::completionModel();
-  fn _ZNK10QCompleter15completionModelEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK10QCompleter15completionModelEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QCompleter::setCurrentRow(int row);
-  fn _ZN10QCompleter13setCurrentRowEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
+  fn C_ZN10QCompleter13setCurrentRowEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> c_char;
   // proto:  int QCompleter::currentRow();
-  fn _ZNK10QCompleter10currentRowEv(qthis: u64 /* *mut c_void*/) -> c_int;
-  // proto:  void QCompleter::activated(const QString & text);
-  fn _ZN10QCompleter9activatedERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK10QCompleter10currentRowEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QCompleter::setModel(QAbstractItemModel * c);
-  fn _ZN10QCompleter8setModelEP18QAbstractItemModel(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN10QCompleter8setModelEP18QAbstractItemModel(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QCompleter::wrapAround();
-  fn _ZNK10QCompleter10wrapAroundEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK10QCompleter10wrapAroundEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QCompleter::QCompleter(QAbstractItemModel * model, QObject * parent);
-  fn dector_ZN10QCompleterC1EP18QAbstractItemModelP7QObject(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN10QCompleterC1EP18QAbstractItemModelP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN10QCompleterC2EP18QAbstractItemModelP7QObject(arg0: *mut c_void, arg1: *mut c_void) -> u64;
   // proto:  void QCompleter::setPopup(QAbstractItemView * popup);
-  fn _ZN10QCompleter8setPopupEP17QAbstractItemView(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QCompleter::QCompleter(const QCompleter & );
-  fn dector_ZN10QCompleterC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN10QCompleterC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN10QCompleter8setPopupEP17QAbstractItemView(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QWidget * QCompleter::widget();
-  fn _ZNK10QCompleter6widgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK10QCompleter6widgetEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QCompleter::completionRole();
-  fn _ZNK10QCompleter14completionRoleEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK10QCompleter14completionRoleEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  QString QCompleter::completionPrefix();
-  fn _ZNK10QCompleter16completionPrefixEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK10QCompleter16completionPrefixEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QCompleter::setWidget(QWidget * widget);
-  fn _ZN10QCompleter9setWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN10QCompleter9setWidgetEP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   fn QCompleter_SlotProxy_connect__ZN10QCompleter11highlightedERK11QModelIndex(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QCompleter_SlotProxy_connect_box__ZN10QCompleter11highlightedERK11QModelIndex(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QCompleter_SlotProxy_connect__ZN10QCompleter9activatedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QCompleter_SlotProxy_connect_box__ZN10QCompleter9activatedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QCompleter_SlotProxy_connect__ZN10QCompleter9activatedERK11QModelIndex(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QCompleter_SlotProxy_connect_box__ZN10QCompleter9activatedERK11QModelIndex(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QCompleter_SlotProxy_connect__ZN10QCompleter11highlightedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QCompleter_SlotProxy_connect_box__ZN10QCompleter11highlightedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -127,8 +109,8 @@ extern {
 pub struct QCompleter {
   qbase: QObject,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _highlighted_1: QCompleter_highlighted_signal,
-  pub _activated_1: QCompleter_activated_signal,
+  pub _highlighted: QCompleter_highlighted_signal,
+  pub _activated: QCompleter_activated_signal,
 }
 
 impl /*struct*/ QCompleter {
@@ -150,27 +132,26 @@ impl AsRef<QObject> for QCompleter {
 }
   // proto:  void QCompleter::QCompleter(QObject * parent);
 impl /*struct*/ QCompleter {
-  pub fn New<T: QCompleter_New>(value: T) -> QCompleter {
-    let rsthis = value.New();
+  pub fn new<T: QCompleter_new>(value: T) -> QCompleter {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QCompleter_New {
-  fn New(self) -> QCompleter;
+pub trait QCompleter_new {
+  fn new(self) -> QCompleter;
 }
 
   // proto:  void QCompleter::QCompleter(QObject * parent);
-impl<'a> /*trait*/ QCompleter_New for (&'a QObject) {
-  fn New(self) -> QCompleter {
+impl<'a> /*trait*/ QCompleter_new for (&'a QObject) {
+  fn new(self) -> QCompleter {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QCompleterC1EP7QObject()};
+    // unsafe{_ZN10QCompleterC2EP7QObject()};
     let ctysz: c_int = unsafe{QCompleter_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN10QCompleterC1EP7QObject(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN10QCompleterC1EP7QObject(arg0)} as u64;
+    let qthis: u64 = unsafe {C_ZN10QCompleterC2EP7QObject(arg0)};
     let rsthis = QCompleter{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -190,11 +171,13 @@ pub trait QCompleter_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QCompleter::metaObject();
-impl<'a> /*trait*/ QCompleter_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QCompleter) -> () {
+impl<'a> /*trait*/ QCompleter_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QCompleter) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter10metaObjectEv()};
-     unsafe {_ZNK10QCompleter10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QCompleter10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -212,11 +195,13 @@ pub trait QCompleter_popup<RetType> {
 }
 
   // proto:  QAbstractItemView * QCompleter::popup();
-impl<'a> /*trait*/ QCompleter_popup<()> for () {
-  fn popup(self , rsthis: & QCompleter) -> () {
+impl<'a> /*trait*/ QCompleter_popup<QAbstractItemView> for () {
+  fn popup(self , rsthis: & QCompleter) -> QAbstractItemView {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter5popupEv()};
-     unsafe {_ZNK10QCompleter5popupEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QCompleter5popupEv(rsthis.qclsinst)};
+    let mut ret1 = QAbstractItemView::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -239,30 +224,7 @@ impl<'a> /*trait*/ QCompleter_complete<()> for (&'a QRect) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QCompleter8completeERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN10QCompleter8completeERK5QRect(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QCompleter::activated(const QModelIndex & index);
-impl /*struct*/ QCompleter {
-  pub fn activated<RetType, T: QCompleter_activated<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.activated(self);
-    // return 1;
-  }
-}
-
-pub trait QCompleter_activated<RetType> {
-  fn activated(self , rsthis: & QCompleter) -> RetType;
-}
-
-  // proto:  void QCompleter::activated(const QModelIndex & index);
-impl<'a> /*trait*/ QCompleter_activated<()> for (&'a QModelIndex) {
-  fn activated(self , rsthis: & QCompleter) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QCompleter9activatedERK11QModelIndex()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN10QCompleter9activatedERK11QModelIndex(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN10QCompleter8completeERK5QRect(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -285,7 +247,7 @@ impl<'a> /*trait*/ QCompleter_setCompletionRole<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QCompleter17setCompletionRoleEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN10QCompleter17setCompletionRoleEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN10QCompleter17setCompletionRoleEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -307,23 +269,22 @@ impl<'a> /*trait*/ QCompleter_completionCount<i32> for () {
   fn completionCount(self , rsthis: & QCompleter) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter15completionCountEv()};
-    let mut ret = unsafe {_ZNK10QCompleter15completionCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK10QCompleter15completionCountEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
 
   // proto:  void QCompleter::QCompleter(const QStringList & completions, QObject * parent);
-impl<'a> /*trait*/ QCompleter_New for (&'a QStringList, &'a QObject) {
-  fn New(self) -> QCompleter {
+impl<'a> /*trait*/ QCompleter_new for (&'a QStringList, &'a QObject) {
+  fn new(self) -> QCompleter {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QCompleterC1ERK11QStringListP7QObject()};
+    // unsafe{_ZN10QCompleterC2ERK11QStringListP7QObject()};
     let ctysz: c_int = unsafe{QCompleter_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    // unsafe {_ZN10QCompleterC1ERK11QStringListP7QObject(qthis, arg0, arg1)};
-    let qthis: u64 = unsafe {dector_ZN10QCompleterC1ERK11QStringListP7QObject(arg0, arg1)} as u64;
+    let qthis: u64 = unsafe {C_ZN10QCompleterC2ERK11QStringListP7QObject(arg0, arg1)};
     let rsthis = QCompleter{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -347,7 +308,7 @@ impl<'a> /*trait*/ QCompleter_currentIndex<QModelIndex> for () {
   fn currentIndex(self , rsthis: & QCompleter) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter12currentIndexEv()};
-    let mut ret = unsafe {_ZNK10QCompleter12currentIndexEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QCompleter12currentIndexEv(rsthis.qclsinst)};
     let mut ret1 = QModelIndex::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -372,32 +333,9 @@ impl<'a> /*trait*/ QCompleter_pathFromIndex<QString> for (&'a QModelIndex) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter13pathFromIndexERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK10QCompleter13pathFromIndexERK11QModelIndex(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK10QCompleter13pathFromIndexERK11QModelIndex(rsthis.qclsinst, arg0)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QCompleter::highlighted(const QModelIndex & index);
-impl /*struct*/ QCompleter {
-  pub fn highlighted<RetType, T: QCompleter_highlighted<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.highlighted(self);
-    // return 1;
-  }
-}
-
-pub trait QCompleter_highlighted<RetType> {
-  fn highlighted(self , rsthis: & QCompleter) -> RetType;
-}
-
-  // proto:  void QCompleter::highlighted(const QModelIndex & index);
-impl<'a> /*trait*/ QCompleter_highlighted<()> for (&'a QModelIndex) {
-  fn highlighted(self , rsthis: & QCompleter) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QCompleter11highlightedERK11QModelIndex()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN10QCompleter11highlightedERK11QModelIndex(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -420,7 +358,7 @@ impl<'a> /*trait*/ QCompleter_setMaxVisibleItems<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QCompleter18setMaxVisibleItemsEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN10QCompleter18setMaxVisibleItemsEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN10QCompleter18setMaxVisibleItemsEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -442,8 +380,8 @@ impl<'a> /*trait*/ QCompleter_completionColumn<i32> for () {
   fn completionColumn(self , rsthis: & QCompleter) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter16completionColumnEv()};
-    let mut ret = unsafe {_ZNK10QCompleter16completionColumnEv(rsthis.qclsinst)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK10QCompleter16completionColumnEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -465,30 +403,30 @@ impl<'a> /*trait*/ QCompleter_maxVisibleItems<i32> for () {
   fn maxVisibleItems(self , rsthis: & QCompleter) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter15maxVisibleItemsEv()};
-    let mut ret = unsafe {_ZNK10QCompleter15maxVisibleItemsEv(rsthis.qclsinst)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK10QCompleter15maxVisibleItemsEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
 
   // proto:  void QCompleter::~QCompleter();
 impl /*struct*/ QCompleter {
-  pub fn Free<RetType, T: QCompleter_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QCompleter_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QCompleter_Free<RetType> {
-  fn Free(self , rsthis: & QCompleter) -> RetType;
+pub trait QCompleter_free<RetType> {
+  fn free(self , rsthis: & QCompleter) -> RetType;
 }
 
   // proto:  void QCompleter::~QCompleter();
-impl<'a> /*trait*/ QCompleter_Free<()> for () {
-  fn Free(self , rsthis: & QCompleter) -> () {
+impl<'a> /*trait*/ QCompleter_free<()> for () {
+  fn free(self , rsthis: & QCompleter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QCompleterD0Ev()};
-     unsafe {_ZN10QCompleterD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN10QCompleterD2Ev()};
+     unsafe {C_ZN10QCompleterD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -511,7 +449,7 @@ impl<'a> /*trait*/ QCompleter_setWrapAround<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QCompleter13setWrapAroundEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN10QCompleter13setWrapAroundEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN10QCompleter13setWrapAroundEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -529,12 +467,14 @@ pub trait QCompleter_splitPath<RetType> {
 }
 
   // proto:  QStringList QCompleter::splitPath(const QString & path);
-impl<'a> /*trait*/ QCompleter_splitPath<()> for (&'a QString) {
-  fn splitPath(self , rsthis: & QCompleter) -> () {
+impl<'a> /*trait*/ QCompleter_splitPath<QStringList> for (&'a QString) {
+  fn splitPath(self , rsthis: & QCompleter) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter9splitPathERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZNK10QCompleter9splitPathERK7QString(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK10QCompleter9splitPathERK7QString(rsthis.qclsinst, arg0)};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -552,11 +492,13 @@ pub trait QCompleter_model<RetType> {
 }
 
   // proto:  QAbstractItemModel * QCompleter::model();
-impl<'a> /*trait*/ QCompleter_model<()> for () {
-  fn model(self , rsthis: & QCompleter) -> () {
+impl<'a> /*trait*/ QCompleter_model<QAbstractItemModel> for () {
+  fn model(self , rsthis: & QCompleter) -> QAbstractItemModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter5modelEv()};
-     unsafe {_ZNK10QCompleter5modelEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QCompleter5modelEv(rsthis.qclsinst)};
+    let mut ret1 = QAbstractItemModel::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -578,7 +520,7 @@ impl<'a> /*trait*/ QCompleter_currentCompletion<QString> for () {
   fn currentCompletion(self , rsthis: & QCompleter) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter17currentCompletionEv()};
-    let mut ret = unsafe {_ZNK10QCompleter17currentCompletionEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QCompleter17currentCompletionEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -603,18 +545,7 @@ impl<'a> /*trait*/ QCompleter_setCompletionColumn<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QCompleter19setCompletionColumnEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN10QCompleter19setCompletionColumnEi(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QCompleter::highlighted(const QString & text);
-impl<'a> /*trait*/ QCompleter_highlighted<()> for (&'a QString) {
-  fn highlighted(self , rsthis: & QCompleter) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QCompleter11highlightedERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN10QCompleter11highlightedERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN10QCompleter19setCompletionColumnEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -637,7 +568,7 @@ impl<'a> /*trait*/ QCompleter_setCompletionPrefix<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QCompleter19setCompletionPrefixERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN10QCompleter19setCompletionPrefixERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN10QCompleter19setCompletionPrefixERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -655,11 +586,13 @@ pub trait QCompleter_completionModel<RetType> {
 }
 
   // proto:  QAbstractItemModel * QCompleter::completionModel();
-impl<'a> /*trait*/ QCompleter_completionModel<()> for () {
-  fn completionModel(self , rsthis: & QCompleter) -> () {
+impl<'a> /*trait*/ QCompleter_completionModel<QAbstractItemModel> for () {
+  fn completionModel(self , rsthis: & QCompleter) -> QAbstractItemModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter15completionModelEv()};
-     unsafe {_ZNK10QCompleter15completionModelEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QCompleter15completionModelEv(rsthis.qclsinst)};
+    let mut ret1 = QAbstractItemModel::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -682,8 +615,8 @@ impl<'a> /*trait*/ QCompleter_setCurrentRow<i8> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QCompleter13setCurrentRowEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZN10QCompleter13setCurrentRowEi(rsthis.qclsinst, arg0)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZN10QCompleter13setCurrentRowEi(rsthis.qclsinst, arg0)};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -705,19 +638,8 @@ impl<'a> /*trait*/ QCompleter_currentRow<i32> for () {
   fn currentRow(self , rsthis: & QCompleter) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter10currentRowEv()};
-    let mut ret = unsafe {_ZNK10QCompleter10currentRowEv(rsthis.qclsinst)};
-    return ret as i32;
-    // return 1;
-  }
-}
-
-  // proto:  void QCompleter::activated(const QString & text);
-impl<'a> /*trait*/ QCompleter_activated<()> for (&'a QString) {
-  fn activated(self , rsthis: & QCompleter) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QCompleter9activatedERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN10QCompleter9activatedERK7QString(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK10QCompleter10currentRowEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -740,7 +662,7 @@ impl<'a> /*trait*/ QCompleter_setModel<()> for (&'a QAbstractItemModel) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QCompleter8setModelEP18QAbstractItemModel()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN10QCompleter8setModelEP18QAbstractItemModel(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN10QCompleter8setModelEP18QAbstractItemModel(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -762,23 +684,22 @@ impl<'a> /*trait*/ QCompleter_wrapAround<i8> for () {
   fn wrapAround(self , rsthis: & QCompleter) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter10wrapAroundEv()};
-    let mut ret = unsafe {_ZNK10QCompleter10wrapAroundEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK10QCompleter10wrapAroundEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
 
   // proto:  void QCompleter::QCompleter(QAbstractItemModel * model, QObject * parent);
-impl<'a> /*trait*/ QCompleter_New for (&'a QAbstractItemModel, &'a QObject) {
-  fn New(self) -> QCompleter {
+impl<'a> /*trait*/ QCompleter_new for (&'a QAbstractItemModel, &'a QObject) {
+  fn new(self) -> QCompleter {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QCompleterC1EP18QAbstractItemModelP7QObject()};
+    // unsafe{_ZN10QCompleterC2EP18QAbstractItemModelP7QObject()};
     let ctysz: c_int = unsafe{QCompleter_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    // unsafe {_ZN10QCompleterC1EP18QAbstractItemModelP7QObject(qthis, arg0, arg1)};
-    let qthis: u64 = unsafe {dector_ZN10QCompleterC1EP18QAbstractItemModelP7QObject(arg0, arg1)} as u64;
+    let qthis: u64 = unsafe {C_ZN10QCompleterC2EP18QAbstractItemModelP7QObject(arg0, arg1)};
     let rsthis = QCompleter{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -803,23 +724,7 @@ impl<'a> /*trait*/ QCompleter_setPopup<()> for (&'a QAbstractItemView) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QCompleter8setPopupEP17QAbstractItemView()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN10QCompleter8setPopupEP17QAbstractItemView(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QCompleter::QCompleter(const QCompleter & );
-impl<'a> /*trait*/ QCompleter_New for (&'a QCompleter) {
-  fn New(self) -> QCompleter {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QCompleterC1ERKS_()};
-    let ctysz: c_int = unsafe{QCompleter_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN10QCompleterC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN10QCompleterC1ERKS_(arg0)} as u64;
-    let rsthis = QCompleter{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
+     unsafe {C_ZN10QCompleter8setPopupEP17QAbstractItemView(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -841,7 +746,7 @@ impl<'a> /*trait*/ QCompleter_widget<QWidget> for () {
   fn widget(self , rsthis: & QCompleter) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter6widgetEv()};
-    let mut ret = unsafe {_ZNK10QCompleter6widgetEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QCompleter6widgetEv(rsthis.qclsinst)};
     let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -865,8 +770,8 @@ impl<'a> /*trait*/ QCompleter_completionRole<i32> for () {
   fn completionRole(self , rsthis: & QCompleter) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter14completionRoleEv()};
-    let mut ret = unsafe {_ZNK10QCompleter14completionRoleEv(rsthis.qclsinst)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK10QCompleter14completionRoleEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -888,7 +793,7 @@ impl<'a> /*trait*/ QCompleter_completionPrefix<QString> for () {
   fn completionPrefix(self , rsthis: & QCompleter) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter16completionPrefixEv()};
-    let mut ret = unsafe {_ZNK10QCompleter16completionPrefixEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK10QCompleter16completionPrefixEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -913,7 +818,7 @@ impl<'a> /*trait*/ QCompleter_setWidget<()> for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QCompleter9setWidgetEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN10QCompleter9setWidgetEP7QWidget(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN10QCompleter9setWidgetEP7QWidget(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -921,7 +826,7 @@ impl<'a> /*trait*/ QCompleter_setWidget<()> for (&'a QWidget) {
 #[derive(Default)] // for QCompleter_highlighted
 pub struct QCompleter_highlighted_signal{poi:u64}
 impl /* struct */ QCompleter {
-  pub fn highlighted_1(&self) -> QCompleter_highlighted_signal {
+  pub fn highlighted(&self) -> QCompleter_highlighted_signal {
      return QCompleter_highlighted_signal{poi:self.qclsinst};
   }
 }
@@ -937,7 +842,7 @@ pub trait QCompleter_highlighted_signal_connect {
 #[derive(Default)] // for QCompleter_activated
 pub struct QCompleter_activated_signal{poi:u64}
 impl /* struct */ QCompleter {
-  pub fn activated_1(&self) -> QCompleter_activated_signal {
+  pub fn activated(&self) -> QCompleter_activated_signal {
      return QCompleter_activated_signal{poi:self.qclsinst};
   }
 }
@@ -953,15 +858,21 @@ pub trait QCompleter_activated_signal_connect {
 // highlighted(const class QModelIndex &)
 extern fn QCompleter_highlighted_signal_connect_cb_0(rsfptr:fn(QModelIndex), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QModelIndex::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QCompleter_highlighted_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QCompleter_highlighted_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(QModelIndex)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QModelIndex::inheritFrom(arg0 as u64);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QCompleter_highlighted_signal_connect for fn(QModelIndex) {
   fn connect(self, sigthis: QCompleter_highlighted_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QCompleter_highlighted_signal_connect_cb_0 as *mut c_void;
@@ -969,29 +880,35 @@ impl /* trait */ QCompleter_highlighted_signal_connect for fn(QModelIndex) {
     unsafe {QCompleter_SlotProxy_connect__ZN10QCompleter11highlightedERK11QModelIndex(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QCompleter_highlighted_signal_connect for Box<fn(QModelIndex)> {
+impl /* trait */ QCompleter_highlighted_signal_connect for Box<Fn(QModelIndex)> {
   fn connect(self, sigthis: QCompleter_highlighted_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QCompleter_highlighted_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QCompleter_SlotProxy_connect__ZN10QCompleter11highlightedERK11QModelIndex(arg0, arg1, arg2)};
   }
 }
 // activated(const class QString &)
 extern fn QCompleter_activated_signal_connect_cb_1(rsfptr:fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QCompleter_activated_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QCompleter_activated_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn(QString)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QCompleter_activated_signal_connect for fn(QString) {
   fn connect(self, sigthis: QCompleter_activated_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QCompleter_activated_signal_connect_cb_1 as *mut c_void;
@@ -999,29 +916,35 @@ impl /* trait */ QCompleter_activated_signal_connect for fn(QString) {
     unsafe {QCompleter_SlotProxy_connect__ZN10QCompleter9activatedERK7QString(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QCompleter_activated_signal_connect for Box<fn(QString)> {
+impl /* trait */ QCompleter_activated_signal_connect for Box<Fn(QString)> {
   fn connect(self, sigthis: QCompleter_activated_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QCompleter_activated_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QCompleter_SlotProxy_connect__ZN10QCompleter9activatedERK7QString(arg0, arg1, arg2)};
   }
 }
 // activated(const class QModelIndex &)
 extern fn QCompleter_activated_signal_connect_cb_2(rsfptr:fn(QModelIndex), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QModelIndex::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QCompleter_activated_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QCompleter_activated_signal_connect_cb_box_2(rsfptr_raw:*mut Box<Fn(QModelIndex)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QModelIndex::inheritFrom(arg0 as u64);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QCompleter_activated_signal_connect for fn(QModelIndex) {
   fn connect(self, sigthis: QCompleter_activated_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QCompleter_activated_signal_connect_cb_2 as *mut c_void;
@@ -1029,29 +952,35 @@ impl /* trait */ QCompleter_activated_signal_connect for fn(QModelIndex) {
     unsafe {QCompleter_SlotProxy_connect__ZN10QCompleter9activatedERK11QModelIndex(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QCompleter_activated_signal_connect for Box<fn(QModelIndex)> {
+impl /* trait */ QCompleter_activated_signal_connect for Box<Fn(QModelIndex)> {
   fn connect(self, sigthis: QCompleter_activated_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QCompleter_activated_signal_connect_cb_box_2 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QCompleter_SlotProxy_connect__ZN10QCompleter9activatedERK11QModelIndex(arg0, arg1, arg2)};
   }
 }
 // highlighted(const class QString &)
 extern fn QCompleter_highlighted_signal_connect_cb_3(rsfptr:fn(QString), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QCompleter_highlighted_signal_connect_cb_box_3(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QCompleter_highlighted_signal_connect_cb_box_3(rsfptr_raw:*mut Box<Fn(QString)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QString::inheritFrom(arg0 as u64);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QCompleter_highlighted_signal_connect for fn(QString) {
   fn connect(self, sigthis: QCompleter_highlighted_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QCompleter_highlighted_signal_connect_cb_3 as *mut c_void;
@@ -1059,14 +988,14 @@ impl /* trait */ QCompleter_highlighted_signal_connect for fn(QString) {
     unsafe {QCompleter_SlotProxy_connect__ZN10QCompleter11highlightedERK7QString(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QCompleter_highlighted_signal_connect for Box<fn(QString)> {
+impl /* trait */ QCompleter_highlighted_signal_connect for Box<Fn(QString)> {
   fn connect(self, sigthis: QCompleter_highlighted_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QCompleter_highlighted_signal_connect_cb_box_3 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QCompleter_SlotProxy_connect__ZN10QCompleter11highlightedERK7QString(arg0, arg1, arg2)};
   }
 }

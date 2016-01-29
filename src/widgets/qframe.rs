@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qframe.h
 // dst-file: /src/widgets/qframe.rs
 //
@@ -18,10 +18,11 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qwidget::QWidget; // 773
+use super::qwidget::*; // 773
 use std::ops::Deref;
-use super::super::core::qrect::QRect; // 771
-use super::super::core::qsize::QSize; // 771
+use super::super::core::qrect::*; // 771
+use super::super::core::qsize::*; // 771
+use super::super::core::qobjectdefs::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -33,32 +34,29 @@ use super::super::core::qsize::QSize; // 771
 extern {
   fn QFrame_Class_Size() -> c_int;
   // proto:  void QFrame::setFrameRect(const QRect & );
-  fn _ZN6QFrame12setFrameRectERK5QRect(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN6QFrame12setFrameRectERK5QRect(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  int QFrame::lineWidth();
-  fn _ZNK6QFrame9lineWidthEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK6QFrame9lineWidthEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QFrame::setFrameStyle(int );
-  fn _ZN6QFrame13setFrameStyleEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN6QFrame13setFrameStyleEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  QRect QFrame::frameRect();
-  fn _ZNK6QFrame9frameRectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK6QFrame9frameRectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QSize QFrame::sizeHint();
-  fn _ZNK6QFrame8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QFrame::QFrame(const QFrame & );
-  fn dector_ZN6QFrameC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN6QFrameC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK6QFrame8sizeHintEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QFrame::frameStyle();
-  fn _ZNK6QFrame10frameStyleEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK6QFrame10frameStyleEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  int QFrame::midLineWidth();
-  fn _ZNK6QFrame12midLineWidthEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK6QFrame12midLineWidthEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QFrame::setLineWidth(int );
-  fn _ZN6QFrame12setLineWidthEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN6QFrame12setLineWidthEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  void QFrame::setMidLineWidth(int );
-  fn _ZN6QFrame15setMidLineWidthEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN6QFrame15setMidLineWidthEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
   // proto:  const QMetaObject * QFrame::metaObject();
-  fn _ZNK6QFrame10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK6QFrame10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  int QFrame::frameWidth();
-  fn _ZNK6QFrame10frameWidthEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK6QFrame10frameWidthEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QFrame::~QFrame();
-  fn _ZN6QFrameD0Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN6QFrameD2Ev(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
@@ -104,7 +102,7 @@ impl<'a> /*trait*/ QFrame_setFrameRect<()> for (&'a QRect) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QFrame12setFrameRectERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN6QFrame12setFrameRectERK5QRect(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN6QFrame12setFrameRectERK5QRect(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -126,8 +124,8 @@ impl<'a> /*trait*/ QFrame_lineWidth<i32> for () {
   fn lineWidth(self , rsthis: & QFrame) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QFrame9lineWidthEv()};
-    let mut ret = unsafe {_ZNK6QFrame9lineWidthEv(rsthis.qclsinst)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK6QFrame9lineWidthEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -150,7 +148,7 @@ impl<'a> /*trait*/ QFrame_setFrameStyle<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QFrame13setFrameStyleEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN6QFrame13setFrameStyleEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN6QFrame13setFrameStyleEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -172,7 +170,7 @@ impl<'a> /*trait*/ QFrame_frameRect<QRect> for () {
   fn frameRect(self , rsthis: & QFrame) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QFrame9frameRectEv()};
-    let mut ret = unsafe {_ZNK6QFrame9frameRectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK6QFrame9frameRectEv(rsthis.qclsinst)};
     let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -196,38 +194,9 @@ impl<'a> /*trait*/ QFrame_sizeHint<QSize> for () {
   fn sizeHint(self , rsthis: & QFrame) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QFrame8sizeHintEv()};
-    let mut ret = unsafe {_ZNK6QFrame8sizeHintEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK6QFrame8sizeHintEv(rsthis.qclsinst)};
     let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QFrame::QFrame(const QFrame & );
-impl /*struct*/ QFrame {
-  pub fn New<T: QFrame_New>(value: T) -> QFrame {
-    let rsthis = value.New();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QFrame_New {
-  fn New(self) -> QFrame;
-}
-
-  // proto:  void QFrame::QFrame(const QFrame & );
-impl<'a> /*trait*/ QFrame_New for (&'a QFrame) {
-  fn New(self) -> QFrame {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN6QFrameC1ERKS_()};
-    let ctysz: c_int = unsafe{QFrame_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN6QFrameC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN6QFrameC1ERKS_(arg0)} as u64;
-    let rsthis = QFrame{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
     // return 1;
   }
 }
@@ -249,8 +218,8 @@ impl<'a> /*trait*/ QFrame_frameStyle<i32> for () {
   fn frameStyle(self , rsthis: & QFrame) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QFrame10frameStyleEv()};
-    let mut ret = unsafe {_ZNK6QFrame10frameStyleEv(rsthis.qclsinst)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK6QFrame10frameStyleEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -272,8 +241,8 @@ impl<'a> /*trait*/ QFrame_midLineWidth<i32> for () {
   fn midLineWidth(self , rsthis: & QFrame) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QFrame12midLineWidthEv()};
-    let mut ret = unsafe {_ZNK6QFrame12midLineWidthEv(rsthis.qclsinst)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK6QFrame12midLineWidthEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -296,7 +265,7 @@ impl<'a> /*trait*/ QFrame_setLineWidth<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QFrame12setLineWidthEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN6QFrame12setLineWidthEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN6QFrame12setLineWidthEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -319,7 +288,7 @@ impl<'a> /*trait*/ QFrame_setMidLineWidth<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QFrame15setMidLineWidthEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN6QFrame15setMidLineWidthEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN6QFrame15setMidLineWidthEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -337,11 +306,13 @@ pub trait QFrame_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QFrame::metaObject();
-impl<'a> /*trait*/ QFrame_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QFrame) -> () {
+impl<'a> /*trait*/ QFrame_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QFrame) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QFrame10metaObjectEv()};
-     unsafe {_ZNK6QFrame10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK6QFrame10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -363,30 +334,30 @@ impl<'a> /*trait*/ QFrame_frameWidth<i32> for () {
   fn frameWidth(self , rsthis: & QFrame) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QFrame10frameWidthEv()};
-    let mut ret = unsafe {_ZNK6QFrame10frameWidthEv(rsthis.qclsinst)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK6QFrame10frameWidthEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
 
   // proto:  void QFrame::~QFrame();
 impl /*struct*/ QFrame {
-  pub fn Free<RetType, T: QFrame_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QFrame_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QFrame_Free<RetType> {
-  fn Free(self , rsthis: & QFrame) -> RetType;
+pub trait QFrame_free<RetType> {
+  fn free(self , rsthis: & QFrame) -> RetType;
 }
 
   // proto:  void QFrame::~QFrame();
-impl<'a> /*trait*/ QFrame_Free<()> for () {
-  fn Free(self , rsthis: & QFrame) -> () {
+impl<'a> /*trait*/ QFrame_free<()> for () {
+  fn free(self , rsthis: & QFrame) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN6QFrameD0Ev()};
-     unsafe {_ZN6QFrameD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN6QFrameD2Ev()};
+     unsafe {C_ZN6QFrameD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

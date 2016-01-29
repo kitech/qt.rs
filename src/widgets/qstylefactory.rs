@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qstylefactory.h
 // dst-file: /src/widgets/qstylefactory.rs
 //
@@ -19,8 +19,9 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
-use super::qstyle::QStyle; // 773
+use super::super::core::qstring::*; // 771
+use super::qstyle::*; // 773
+use super::super::core::qstringlist::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -32,9 +33,9 @@ use super::qstyle::QStyle; // 773
 extern {
   fn QStyleFactory_Class_Size() -> c_int;
   // proto: static QStyle * QStyleFactory::create(const QString & );
-  fn _ZN13QStyleFactory6createERK7QString(arg0: *mut c_void) -> *mut c_void;
+  fn C_ZN13QStyleFactory6createERK7QString(arg0: *mut c_void) -> *mut c_void;
   // proto: static QStringList QStyleFactory::keys();
-  fn _ZN13QStyleFactory4keysEv();
+  fn C_ZN13QStyleFactory4keysEv() -> *mut c_void;
 } // <= ext block end
 
 // body block begin =>
@@ -68,7 +69,7 @@ impl<'a> /*trait*/ QStyleFactory_create_s<QStyle> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStyleFactory6createERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN13QStyleFactory6createERK7QString(arg0)};
+    let mut ret = unsafe {C_ZN13QStyleFactory6createERK7QString(arg0)};
     let mut ret1 = QStyle::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -88,11 +89,13 @@ pub trait QStyleFactory_keys_s<RetType> {
 }
 
   // proto: static QStringList QStyleFactory::keys();
-impl<'a> /*trait*/ QStyleFactory_keys_s<()> for () {
-  fn keys_s(self ) -> () {
+impl<'a> /*trait*/ QStyleFactory_keys_s<QStringList> for () {
+  fn keys_s(self ) -> QStringList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStyleFactory4keysEv()};
-     unsafe {_ZN13QStyleFactory4keysEv()};
+    let mut ret = unsafe {C_ZN13QStyleFactory4keysEv()};
+    let mut ret1 = QStringList::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }

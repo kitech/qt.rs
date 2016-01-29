@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtCore/qthreadstorage.h
 // dst-file: /src/core/qthreadstorage.rs
 //
@@ -30,13 +30,13 @@ use std::ops::Deref;
 extern {
   fn QThreadStorageData_Class_Size() -> c_int;
   // proto:  void ** QThreadStorageData::set(void * p);
-  fn _ZN18QThreadStorageData3setEPv(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN18QThreadStorageData3setEPv(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  void ** QThreadStorageData::get();
-  fn _ZNK18QThreadStorageData3getEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK18QThreadStorageData3getEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto: static void QThreadStorageData::finish(void ** );
-  fn _ZN18QThreadStorageData6finishEPPv(arg0: *mut c_void);
+  fn C_ZN18QThreadStorageData6finishEPPv(arg0: *mut c_void);
   // proto:  void QThreadStorageData::~QThreadStorageData();
-  fn _ZN18QThreadStorageDataD0Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN18QThreadStorageDataD2Ev(qthis: u64 /* *mut c_void*/);
 } // <= ext block end
 
 // body block begin =>
@@ -65,12 +65,13 @@ pub trait QThreadStorageData_set<RetType> {
 }
 
   // proto:  void ** QThreadStorageData::set(void * p);
-impl<'a> /*trait*/ QThreadStorageData_set<()> for (*mut c_void) {
-  fn set(self , rsthis: & QThreadStorageData) -> () {
+impl<'a> /*trait*/ QThreadStorageData_set<*mut c_void> for (*mut c_void) {
+  fn set(self , rsthis: & QThreadStorageData) -> *mut c_void {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QThreadStorageData3setEPv()};
     let arg0 = self  as *mut c_void;
-     unsafe {_ZN18QThreadStorageData3setEPv(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN18QThreadStorageData3setEPv(rsthis.qclsinst, arg0)};
+    return ret as *mut c_void; // 1
     // return 1;
   }
 }
@@ -88,11 +89,12 @@ pub trait QThreadStorageData_get<RetType> {
 }
 
   // proto:  void ** QThreadStorageData::get();
-impl<'a> /*trait*/ QThreadStorageData_get<()> for () {
-  fn get(self , rsthis: & QThreadStorageData) -> () {
+impl<'a> /*trait*/ QThreadStorageData_get<*mut c_void> for () {
+  fn get(self , rsthis: & QThreadStorageData) -> *mut c_void {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QThreadStorageData3getEv()};
-     unsafe {_ZNK18QThreadStorageData3getEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK18QThreadStorageData3getEv(rsthis.qclsinst)};
+    return ret as *mut c_void; // 1
     // return 1;
   }
 }
@@ -115,29 +117,29 @@ impl<'a> /*trait*/ QThreadStorageData_finish_s<()> for (*mut c_void) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QThreadStorageData6finishEPPv()};
     let arg0 = self  as *mut c_void;
-     unsafe {_ZN18QThreadStorageData6finishEPPv(arg0)};
+     unsafe {C_ZN18QThreadStorageData6finishEPPv(arg0)};
     // return 1;
   }
 }
 
   // proto:  void QThreadStorageData::~QThreadStorageData();
 impl /*struct*/ QThreadStorageData {
-  pub fn Free<RetType, T: QThreadStorageData_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QThreadStorageData_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QThreadStorageData_Free<RetType> {
-  fn Free(self , rsthis: & QThreadStorageData) -> RetType;
+pub trait QThreadStorageData_free<RetType> {
+  fn free(self , rsthis: & QThreadStorageData) -> RetType;
 }
 
   // proto:  void QThreadStorageData::~QThreadStorageData();
-impl<'a> /*trait*/ QThreadStorageData_Free<()> for () {
-  fn Free(self , rsthis: & QThreadStorageData) -> () {
+impl<'a> /*trait*/ QThreadStorageData_free<()> for () {
+  fn free(self , rsthis: & QThreadStorageData) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QThreadStorageDataD0Ev()};
-     unsafe {_ZN18QThreadStorageDataD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN18QThreadStorageDataD2Ev()};
+     unsafe {C_ZN18QThreadStorageDataD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

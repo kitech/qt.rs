@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtGui/qabstracttextdocumentlayout.h
 // dst-file: /src/gui/qabstracttextdocumentlayout.rs
 //
@@ -19,18 +19,18 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::qtextdocument::QTextDocument; // 773
-use super::qtextformat::QTextFormat; // 773
-use super::super::core::qsize::QSizeF; // 771
-use super::qpainter::QPainter; // 773
-use super::super::core::qrect::QRectF; // 771
-use super::super::core::qobject::QObject; // 771
-use super::super::core::qpoint::QPointF; // 771
-use super::qpaintdevice::QPaintDevice; // 773
-use super::qtextobject::QTextBlock; // 773
-use super::super::core::qstring::QString; // 771
+use super::qtextdocument::*; // 773
+use super::qtextformat::*; // 773
+use super::super::core::qsize::*; // 771
+use super::qpainter::*; // 773
+use super::super::core::qrect::*; // 771
+use super::super::core::qobject::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::super::core::qpoint::*; // 771
+use super::qpaintdevice::*; // 773
+use super::super::core::qstring::*; // 771
 // use super::qabstracttextdocumentlayout::QTextObjectInterface; // 773
-use super::qtextobject::QTextFrame; // 773
+use super::qtextobject::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -42,57 +42,44 @@ use super::qtextobject::QTextFrame; // 773
 extern {
   fn QTextObjectInterface_Class_Size() -> c_int;
   // proto:  void QTextObjectInterface::~QTextObjectInterface();
-  fn _ZN20QTextObjectInterfaceD0Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN20QTextObjectInterfaceD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  QSizeF QTextObjectInterface::intrinsicSize(QTextDocument * doc, int posInDocument, const QTextFormat & format);
-  fn _ZN20QTextObjectInterface13intrinsicSizeEP13QTextDocumentiRK11QTextFormat(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
+  fn C_ZN20QTextObjectInterface13intrinsicSizeEP13QTextDocumentiRK11QTextFormat(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
   // proto:  void QTextObjectInterface::drawObject(QPainter * painter, const QRectF & rect, QTextDocument * doc, int posInDocument, const QTextFormat & format);
-  fn _ZN20QTextObjectInterface10drawObjectEP8QPainterRK6QRectFP13QTextDocumentiRK11QTextFormat(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: c_int, arg4: *mut c_void);
+  fn C_ZN20QTextObjectInterface10drawObjectEP8QPainterRK6QRectFP13QTextDocumentiRK11QTextFormat(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: c_int, arg4: *mut c_void);
   fn QAbstractTextDocumentLayout_Class_Size() -> c_int;
   // proto:  const QMetaObject * QAbstractTextDocumentLayout::metaObject();
-  fn _ZNK27QAbstractTextDocumentLayout10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK27QAbstractTextDocumentLayout10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAbstractTextDocumentLayout::registerHandler(int objectType, QObject * component);
-  fn _ZN27QAbstractTextDocumentLayout15registerHandlerEiP7QObject(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
+  fn C_ZN27QAbstractTextDocumentLayout15registerHandlerEiP7QObject(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  int QAbstractTextDocumentLayout::pageCount();
-  fn _ZNK27QAbstractTextDocumentLayout9pageCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
+  fn C_ZNK27QAbstractTextDocumentLayout9pageCountEv(qthis: u64 /* *mut c_void*/) -> c_int;
   // proto:  void QAbstractTextDocumentLayout::~QAbstractTextDocumentLayout();
-  fn _ZN27QAbstractTextDocumentLayoutD0Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN27QAbstractTextDocumentLayoutD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QAbstractTextDocumentLayout::setPaintDevice(QPaintDevice * device);
-  fn _ZN27QAbstractTextDocumentLayout14setPaintDeviceEP12QPaintDevice(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QAbstractTextDocumentLayout::pageCountChanged(int newPages);
-  fn _ZN27QAbstractTextDocumentLayout16pageCountChangedEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
+  fn C_ZN27QAbstractTextDocumentLayout14setPaintDeviceEP12QPaintDevice(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QTextDocument * QAbstractTextDocumentLayout::document();
-  fn _ZNK27QAbstractTextDocumentLayout8documentEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
-  // proto:  void QAbstractTextDocumentLayout::update(const QRectF & );
-  fn _ZN27QAbstractTextDocumentLayout6updateERK6QRectF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  // proto:  void QAbstractTextDocumentLayout::updateBlock(const QTextBlock & block);
-  fn _ZN27QAbstractTextDocumentLayout11updateBlockERK10QTextBlock(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK27QAbstractTextDocumentLayout8documentEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QAbstractTextDocumentLayout::unregisterHandler(int objectType, QObject * component);
-  fn _ZN27QAbstractTextDocumentLayout17unregisterHandlerEiP7QObject(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
+  fn C_ZN27QAbstractTextDocumentLayout17unregisterHandlerEiP7QObject(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  void QAbstractTextDocumentLayout::QAbstractTextDocumentLayout(QTextDocument * doc);
-  fn dector_ZN27QAbstractTextDocumentLayoutC1EP13QTextDocument(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN27QAbstractTextDocumentLayoutC1EP13QTextDocument(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN27QAbstractTextDocumentLayoutC2EP13QTextDocument(arg0: *mut c_void) -> u64;
   // proto:  QSizeF QAbstractTextDocumentLayout::documentSize();
-  fn _ZNK27QAbstractTextDocumentLayout12documentSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK27QAbstractTextDocumentLayout12documentSizeEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QPaintDevice * QAbstractTextDocumentLayout::paintDevice();
-  fn _ZNK27QAbstractTextDocumentLayout11paintDeviceEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK27QAbstractTextDocumentLayout11paintDeviceEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QAbstractTextDocumentLayout::anchorAt(const QPointF & pos);
-  fn _ZNK27QAbstractTextDocumentLayout8anchorAtERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZNK27QAbstractTextDocumentLayout8anchorAtERK7QPointF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QTextObjectInterface * QAbstractTextDocumentLayout::handlerForObject(int objectType);
-  fn _ZNK27QAbstractTextDocumentLayout16handlerForObjectEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
+  fn C_ZNK27QAbstractTextDocumentLayout16handlerForObjectEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto:  QRectF QAbstractTextDocumentLayout::frameBoundingRect(QTextFrame * frame);
-  fn _ZNK27QAbstractTextDocumentLayout17frameBoundingRectEP10QTextFrame(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
-  // proto:  void QAbstractTextDocumentLayout::documentSizeChanged(const QSizeF & newSize);
-  fn _ZN27QAbstractTextDocumentLayout19documentSizeChangedERK6QSizeF(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK27QAbstractTextDocumentLayout17frameBoundingRectEP10QTextFrame(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   // proto:  QRectF QAbstractTextDocumentLayout::blockBoundingRect(const QTextBlock & block);
-  fn _ZNK27QAbstractTextDocumentLayout17blockBoundingRectERK10QTextBlock(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
+  fn C_ZNK27QAbstractTextDocumentLayout17blockBoundingRectERK10QTextBlock(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   fn QAbstractTextDocumentLayout_SlotProxy_connect__ZN27QAbstractTextDocumentLayout16pageCountChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QAbstractTextDocumentLayout_SlotProxy_connect_box__ZN27QAbstractTextDocumentLayout16pageCountChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QAbstractTextDocumentLayout_SlotProxy_connect__ZN27QAbstractTextDocumentLayout6updateERK6QRectF(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QAbstractTextDocumentLayout_SlotProxy_connect_box__ZN27QAbstractTextDocumentLayout6updateERK6QRectF(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QAbstractTextDocumentLayout_SlotProxy_connect__ZN27QAbstractTextDocumentLayout19documentSizeChangedERK6QSizeF(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QAbstractTextDocumentLayout_SlotProxy_connect_box__ZN27QAbstractTextDocumentLayout19documentSizeChangedERK6QSizeF(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QAbstractTextDocumentLayout_SlotProxy_connect__ZN27QAbstractTextDocumentLayout11updateBlockERK10QTextBlock(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QAbstractTextDocumentLayout_SlotProxy_connect_box__ZN27QAbstractTextDocumentLayout11updateBlockERK10QTextBlock(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -108,10 +95,10 @@ pub struct QTextObjectInterface {
 pub struct QAbstractTextDocumentLayout {
   qbase: QObject,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _updateBlock_1: QAbstractTextDocumentLayout_updateBlock_signal,
-  pub _pageCountChanged_1: QAbstractTextDocumentLayout_pageCountChanged_signal,
-  pub _update_1: QAbstractTextDocumentLayout_update_signal,
-  pub _documentSizeChanged_1: QAbstractTextDocumentLayout_documentSizeChanged_signal,
+  pub _updateBlock: QAbstractTextDocumentLayout_updateBlock_signal,
+  pub _pageCountChanged: QAbstractTextDocumentLayout_pageCountChanged_signal,
+  pub _update: QAbstractTextDocumentLayout_update_signal,
+  pub _documentSizeChanged: QAbstractTextDocumentLayout_documentSizeChanged_signal,
 }
 
 impl /*struct*/ QTextObjectInterface {
@@ -121,22 +108,22 @@ impl /*struct*/ QTextObjectInterface {
 }
   // proto:  void QTextObjectInterface::~QTextObjectInterface();
 impl /*struct*/ QTextObjectInterface {
-  pub fn Free<RetType, T: QTextObjectInterface_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QTextObjectInterface_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QTextObjectInterface_Free<RetType> {
-  fn Free(self , rsthis: & QTextObjectInterface) -> RetType;
+pub trait QTextObjectInterface_free<RetType> {
+  fn free(self , rsthis: & QTextObjectInterface) -> RetType;
 }
 
   // proto:  void QTextObjectInterface::~QTextObjectInterface();
-impl<'a> /*trait*/ QTextObjectInterface_Free<()> for () {
-  fn Free(self , rsthis: & QTextObjectInterface) -> () {
+impl<'a> /*trait*/ QTextObjectInterface_free<()> for () {
+  fn free(self , rsthis: & QTextObjectInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN20QTextObjectInterfaceD0Ev()};
-     unsafe {_ZN20QTextObjectInterfaceD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN20QTextObjectInterfaceD2Ev()};
+     unsafe {C_ZN20QTextObjectInterfaceD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -161,7 +148,7 @@ impl<'a> /*trait*/ QTextObjectInterface_intrinsicSize<QSizeF> for (&'a QTextDocu
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN20QTextObjectInterface13intrinsicSizeEP13QTextDocumentiRK11QTextFormat(rsthis.qclsinst, arg0, arg1, arg2)};
+    let mut ret = unsafe {C_ZN20QTextObjectInterface13intrinsicSizeEP13QTextDocumentiRK11QTextFormat(rsthis.qclsinst, arg0, arg1, arg2)};
     let mut ret1 = QSizeF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -190,7 +177,7 @@ impl<'a> /*trait*/ QTextObjectInterface_drawObject<()> for (&'a QPainter, &'a QR
     let arg2 = self.2.qclsinst  as *mut c_void;
     let arg3 = self.3  as c_int;
     let arg4 = self.4.qclsinst  as *mut c_void;
-     unsafe {_ZN20QTextObjectInterface10drawObjectEP8QPainterRK6QRectFP13QTextDocumentiRK11QTextFormat(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4)};
+     unsafe {C_ZN20QTextObjectInterface10drawObjectEP8QPainterRK6QRectFP13QTextDocumentiRK11QTextFormat(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4)};
     // return 1;
   }
 }
@@ -225,11 +212,13 @@ pub trait QAbstractTextDocumentLayout_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QAbstractTextDocumentLayout::metaObject();
-impl<'a> /*trait*/ QAbstractTextDocumentLayout_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QAbstractTextDocumentLayout) -> () {
+impl<'a> /*trait*/ QAbstractTextDocumentLayout_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QAbstractTextDocumentLayout) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QAbstractTextDocumentLayout10metaObjectEv()};
-     unsafe {_ZNK27QAbstractTextDocumentLayout10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK27QAbstractTextDocumentLayout10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -253,7 +242,7 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_registerHandler<()> for (i32, &'a
     // unsafe{_ZN27QAbstractTextDocumentLayout15registerHandlerEiP7QObject()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN27QAbstractTextDocumentLayout15registerHandlerEiP7QObject(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN27QAbstractTextDocumentLayout15registerHandlerEiP7QObject(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -275,30 +264,30 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_pageCount<i32> for () {
   fn pageCount(self , rsthis: & QAbstractTextDocumentLayout) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QAbstractTextDocumentLayout9pageCountEv()};
-    let mut ret = unsafe {_ZNK27QAbstractTextDocumentLayout9pageCountEv(rsthis.qclsinst)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZNK27QAbstractTextDocumentLayout9pageCountEv(rsthis.qclsinst)};
+    return ret as i32; // 1
     // return 1;
   }
 }
 
   // proto:  void QAbstractTextDocumentLayout::~QAbstractTextDocumentLayout();
 impl /*struct*/ QAbstractTextDocumentLayout {
-  pub fn Free<RetType, T: QAbstractTextDocumentLayout_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QAbstractTextDocumentLayout_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QAbstractTextDocumentLayout_Free<RetType> {
-  fn Free(self , rsthis: & QAbstractTextDocumentLayout) -> RetType;
+pub trait QAbstractTextDocumentLayout_free<RetType> {
+  fn free(self , rsthis: & QAbstractTextDocumentLayout) -> RetType;
 }
 
   // proto:  void QAbstractTextDocumentLayout::~QAbstractTextDocumentLayout();
-impl<'a> /*trait*/ QAbstractTextDocumentLayout_Free<()> for () {
-  fn Free(self , rsthis: & QAbstractTextDocumentLayout) -> () {
+impl<'a> /*trait*/ QAbstractTextDocumentLayout_free<()> for () {
+  fn free(self , rsthis: & QAbstractTextDocumentLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN27QAbstractTextDocumentLayoutD0Ev()};
-     unsafe {_ZN27QAbstractTextDocumentLayoutD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN27QAbstractTextDocumentLayoutD2Ev()};
+     unsafe {C_ZN27QAbstractTextDocumentLayoutD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -321,30 +310,7 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_setPaintDevice<()> for (&'a QPain
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QAbstractTextDocumentLayout14setPaintDeviceEP12QPaintDevice()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN27QAbstractTextDocumentLayout14setPaintDeviceEP12QPaintDevice(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QAbstractTextDocumentLayout::pageCountChanged(int newPages);
-impl /*struct*/ QAbstractTextDocumentLayout {
-  pub fn pageCountChanged<RetType, T: QAbstractTextDocumentLayout_pageCountChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.pageCountChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QAbstractTextDocumentLayout_pageCountChanged<RetType> {
-  fn pageCountChanged(self , rsthis: & QAbstractTextDocumentLayout) -> RetType;
-}
-
-  // proto:  void QAbstractTextDocumentLayout::pageCountChanged(int newPages);
-impl<'a> /*trait*/ QAbstractTextDocumentLayout_pageCountChanged<()> for (i32) {
-  fn pageCountChanged(self , rsthis: & QAbstractTextDocumentLayout) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN27QAbstractTextDocumentLayout16pageCountChangedEi()};
-    let arg0 = self  as c_int;
-     unsafe {_ZN27QAbstractTextDocumentLayout16pageCountChangedEi(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN27QAbstractTextDocumentLayout14setPaintDeviceEP12QPaintDevice(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -366,55 +332,9 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_document<QTextDocument> for () {
   fn document(self , rsthis: & QAbstractTextDocumentLayout) -> QTextDocument {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QAbstractTextDocumentLayout8documentEv()};
-    let mut ret = unsafe {_ZNK27QAbstractTextDocumentLayout8documentEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK27QAbstractTextDocumentLayout8documentEv(rsthis.qclsinst)};
     let mut ret1 = QTextDocument::inheritFrom(ret as u64);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QAbstractTextDocumentLayout::update(const QRectF & );
-impl /*struct*/ QAbstractTextDocumentLayout {
-  pub fn update<RetType, T: QAbstractTextDocumentLayout_update<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.update(self);
-    // return 1;
-  }
-}
-
-pub trait QAbstractTextDocumentLayout_update<RetType> {
-  fn update(self , rsthis: & QAbstractTextDocumentLayout) -> RetType;
-}
-
-  // proto:  void QAbstractTextDocumentLayout::update(const QRectF & );
-impl<'a> /*trait*/ QAbstractTextDocumentLayout_update<()> for (&'a QRectF) {
-  fn update(self , rsthis: & QAbstractTextDocumentLayout) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN27QAbstractTextDocumentLayout6updateERK6QRectF()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN27QAbstractTextDocumentLayout6updateERK6QRectF(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QAbstractTextDocumentLayout::updateBlock(const QTextBlock & block);
-impl /*struct*/ QAbstractTextDocumentLayout {
-  pub fn updateBlock<RetType, T: QAbstractTextDocumentLayout_updateBlock<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.updateBlock(self);
-    // return 1;
-  }
-}
-
-pub trait QAbstractTextDocumentLayout_updateBlock<RetType> {
-  fn updateBlock(self , rsthis: & QAbstractTextDocumentLayout) -> RetType;
-}
-
-  // proto:  void QAbstractTextDocumentLayout::updateBlock(const QTextBlock & block);
-impl<'a> /*trait*/ QAbstractTextDocumentLayout_updateBlock<()> for (&'a QTextBlock) {
-  fn updateBlock(self , rsthis: & QAbstractTextDocumentLayout) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN27QAbstractTextDocumentLayout11updateBlockERK10QTextBlock()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN27QAbstractTextDocumentLayout11updateBlockERK10QTextBlock(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -438,34 +358,33 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_unregisterHandler<()> for (i32, &
     // unsafe{_ZN27QAbstractTextDocumentLayout17unregisterHandlerEiP7QObject()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN27QAbstractTextDocumentLayout17unregisterHandlerEiP7QObject(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN27QAbstractTextDocumentLayout17unregisterHandlerEiP7QObject(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
 
   // proto:  void QAbstractTextDocumentLayout::QAbstractTextDocumentLayout(QTextDocument * doc);
 impl /*struct*/ QAbstractTextDocumentLayout {
-  pub fn New<T: QAbstractTextDocumentLayout_New>(value: T) -> QAbstractTextDocumentLayout {
-    let rsthis = value.New();
+  pub fn new<T: QAbstractTextDocumentLayout_new>(value: T) -> QAbstractTextDocumentLayout {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QAbstractTextDocumentLayout_New {
-  fn New(self) -> QAbstractTextDocumentLayout;
+pub trait QAbstractTextDocumentLayout_new {
+  fn new(self) -> QAbstractTextDocumentLayout;
 }
 
   // proto:  void QAbstractTextDocumentLayout::QAbstractTextDocumentLayout(QTextDocument * doc);
-impl<'a> /*trait*/ QAbstractTextDocumentLayout_New for (&'a QTextDocument) {
-  fn New(self) -> QAbstractTextDocumentLayout {
+impl<'a> /*trait*/ QAbstractTextDocumentLayout_new for (&'a QTextDocument) {
+  fn new(self) -> QAbstractTextDocumentLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN27QAbstractTextDocumentLayoutC1EP13QTextDocument()};
+    // unsafe{_ZN27QAbstractTextDocumentLayoutC2EP13QTextDocument()};
     let ctysz: c_int = unsafe{QAbstractTextDocumentLayout_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN27QAbstractTextDocumentLayoutC1EP13QTextDocument(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN27QAbstractTextDocumentLayoutC1EP13QTextDocument(arg0)} as u64;
+    let qthis: u64 = unsafe {C_ZN27QAbstractTextDocumentLayoutC2EP13QTextDocument(arg0)};
     let rsthis = QAbstractTextDocumentLayout{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -489,7 +408,7 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_documentSize<QSizeF> for () {
   fn documentSize(self , rsthis: & QAbstractTextDocumentLayout) -> QSizeF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QAbstractTextDocumentLayout12documentSizeEv()};
-    let mut ret = unsafe {_ZNK27QAbstractTextDocumentLayout12documentSizeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK27QAbstractTextDocumentLayout12documentSizeEv(rsthis.qclsinst)};
     let mut ret1 = QSizeF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -513,7 +432,7 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_paintDevice<QPaintDevice> for () 
   fn paintDevice(self , rsthis: & QAbstractTextDocumentLayout) -> QPaintDevice {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QAbstractTextDocumentLayout11paintDeviceEv()};
-    let mut ret = unsafe {_ZNK27QAbstractTextDocumentLayout11paintDeviceEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK27QAbstractTextDocumentLayout11paintDeviceEv(rsthis.qclsinst)};
     let mut ret1 = QPaintDevice::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -538,7 +457,7 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_anchorAt<QString> for (&'a QPoint
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QAbstractTextDocumentLayout8anchorAtERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK27QAbstractTextDocumentLayout8anchorAtERK7QPointF(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK27QAbstractTextDocumentLayout8anchorAtERK7QPointF(rsthis.qclsinst, arg0)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -563,7 +482,7 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_handlerForObject<QTextObjectInter
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QAbstractTextDocumentLayout16handlerForObjectEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZNK27QAbstractTextDocumentLayout16handlerForObjectEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK27QAbstractTextDocumentLayout16handlerForObjectEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QTextObjectInterface::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -588,32 +507,9 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_frameBoundingRect<QRectF> for (&'
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QAbstractTextDocumentLayout17frameBoundingRectEP10QTextFrame()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK27QAbstractTextDocumentLayout17frameBoundingRectEP10QTextFrame(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK27QAbstractTextDocumentLayout17frameBoundingRectEP10QTextFrame(rsthis.qclsinst, arg0)};
     let mut ret1 = QRectF::inheritFrom(ret as u64);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QAbstractTextDocumentLayout::documentSizeChanged(const QSizeF & newSize);
-impl /*struct*/ QAbstractTextDocumentLayout {
-  pub fn documentSizeChanged<RetType, T: QAbstractTextDocumentLayout_documentSizeChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.documentSizeChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QAbstractTextDocumentLayout_documentSizeChanged<RetType> {
-  fn documentSizeChanged(self , rsthis: & QAbstractTextDocumentLayout) -> RetType;
-}
-
-  // proto:  void QAbstractTextDocumentLayout::documentSizeChanged(const QSizeF & newSize);
-impl<'a> /*trait*/ QAbstractTextDocumentLayout_documentSizeChanged<()> for (&'a QSizeF) {
-  fn documentSizeChanged(self , rsthis: & QAbstractTextDocumentLayout) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN27QAbstractTextDocumentLayout19documentSizeChangedERK6QSizeF()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN27QAbstractTextDocumentLayout19documentSizeChangedERK6QSizeF(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -636,7 +532,7 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_blockBoundingRect<QRectF> for (&'
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QAbstractTextDocumentLayout17blockBoundingRectERK10QTextBlock()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK27QAbstractTextDocumentLayout17blockBoundingRectERK10QTextBlock(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK27QAbstractTextDocumentLayout17blockBoundingRectERK10QTextBlock(rsthis.qclsinst, arg0)};
     let mut ret1 = QRectF::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -646,7 +542,7 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_blockBoundingRect<QRectF> for (&'
 #[derive(Default)] // for QAbstractTextDocumentLayout_updateBlock
 pub struct QAbstractTextDocumentLayout_updateBlock_signal{poi:u64}
 impl /* struct */ QAbstractTextDocumentLayout {
-  pub fn updateBlock_1(&self) -> QAbstractTextDocumentLayout_updateBlock_signal {
+  pub fn updateBlock(&self) -> QAbstractTextDocumentLayout_updateBlock_signal {
      return QAbstractTextDocumentLayout_updateBlock_signal{poi:self.qclsinst};
   }
 }
@@ -662,7 +558,7 @@ pub trait QAbstractTextDocumentLayout_updateBlock_signal_connect {
 #[derive(Default)] // for QAbstractTextDocumentLayout_pageCountChanged
 pub struct QAbstractTextDocumentLayout_pageCountChanged_signal{poi:u64}
 impl /* struct */ QAbstractTextDocumentLayout {
-  pub fn pageCountChanged_1(&self) -> QAbstractTextDocumentLayout_pageCountChanged_signal {
+  pub fn pageCountChanged(&self) -> QAbstractTextDocumentLayout_pageCountChanged_signal {
      return QAbstractTextDocumentLayout_pageCountChanged_signal{poi:self.qclsinst};
   }
 }
@@ -678,7 +574,7 @@ pub trait QAbstractTextDocumentLayout_pageCountChanged_signal_connect {
 #[derive(Default)] // for QAbstractTextDocumentLayout_update
 pub struct QAbstractTextDocumentLayout_update_signal{poi:u64}
 impl /* struct */ QAbstractTextDocumentLayout {
-  pub fn update_1(&self) -> QAbstractTextDocumentLayout_update_signal {
+  pub fn update(&self) -> QAbstractTextDocumentLayout_update_signal {
      return QAbstractTextDocumentLayout_update_signal{poi:self.qclsinst};
   }
 }
@@ -694,7 +590,7 @@ pub trait QAbstractTextDocumentLayout_update_signal_connect {
 #[derive(Default)] // for QAbstractTextDocumentLayout_documentSizeChanged
 pub struct QAbstractTextDocumentLayout_documentSizeChanged_signal{poi:u64}
 impl /* struct */ QAbstractTextDocumentLayout {
-  pub fn documentSizeChanged_1(&self) -> QAbstractTextDocumentLayout_documentSizeChanged_signal {
+  pub fn documentSizeChanged(&self) -> QAbstractTextDocumentLayout_documentSizeChanged_signal {
      return QAbstractTextDocumentLayout_documentSizeChanged_signal{poi:self.qclsinst};
   }
 }
@@ -710,15 +606,21 @@ pub trait QAbstractTextDocumentLayout_documentSizeChanged_signal_connect {
 // pageCountChanged(int)
 extern fn QAbstractTextDocumentLayout_pageCountChanged_signal_connect_cb_0(rsfptr:fn(i32), arg0: c_int) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = arg0 as i32;
+  rsfptr(rsarg0);
 }
-extern fn QAbstractTextDocumentLayout_pageCountChanged_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: c_int) {
+extern fn QAbstractTextDocumentLayout_pageCountChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = arg0 as i32;
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QAbstractTextDocumentLayout_pageCountChanged_signal_connect for fn(i32) {
   fn connect(self, sigthis: QAbstractTextDocumentLayout_pageCountChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAbstractTextDocumentLayout_pageCountChanged_signal_connect_cb_0 as *mut c_void;
@@ -726,29 +628,35 @@ impl /* trait */ QAbstractTextDocumentLayout_pageCountChanged_signal_connect for
     unsafe {QAbstractTextDocumentLayout_SlotProxy_connect__ZN27QAbstractTextDocumentLayout16pageCountChangedEi(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QAbstractTextDocumentLayout_pageCountChanged_signal_connect for Box<fn(i32)> {
+impl /* trait */ QAbstractTextDocumentLayout_pageCountChanged_signal_connect for Box<Fn(i32)> {
   fn connect(self, sigthis: QAbstractTextDocumentLayout_pageCountChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAbstractTextDocumentLayout_pageCountChanged_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QAbstractTextDocumentLayout_SlotProxy_connect__ZN27QAbstractTextDocumentLayout16pageCountChangedEi(arg0, arg1, arg2)};
   }
 }
 // update(const class QRectF &)
 extern fn QAbstractTextDocumentLayout_update_signal_connect_cb_1(rsfptr:fn(QRectF), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QRectF::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QAbstractTextDocumentLayout_update_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QAbstractTextDocumentLayout_update_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn(QRectF)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QRectF::inheritFrom(arg0 as u64);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QAbstractTextDocumentLayout_update_signal_connect for fn(QRectF) {
   fn connect(self, sigthis: QAbstractTextDocumentLayout_update_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAbstractTextDocumentLayout_update_signal_connect_cb_1 as *mut c_void;
@@ -756,29 +664,35 @@ impl /* trait */ QAbstractTextDocumentLayout_update_signal_connect for fn(QRectF
     unsafe {QAbstractTextDocumentLayout_SlotProxy_connect__ZN27QAbstractTextDocumentLayout6updateERK6QRectF(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QAbstractTextDocumentLayout_update_signal_connect for Box<fn(QRectF)> {
+impl /* trait */ QAbstractTextDocumentLayout_update_signal_connect for Box<Fn(QRectF)> {
   fn connect(self, sigthis: QAbstractTextDocumentLayout_update_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAbstractTextDocumentLayout_update_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QAbstractTextDocumentLayout_SlotProxy_connect__ZN27QAbstractTextDocumentLayout6updateERK6QRectF(arg0, arg1, arg2)};
   }
 }
 // documentSizeChanged(const class QSizeF &)
 extern fn QAbstractTextDocumentLayout_documentSizeChanged_signal_connect_cb_2(rsfptr:fn(QSizeF), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QSizeF::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QAbstractTextDocumentLayout_documentSizeChanged_signal_connect_cb_box_2(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QAbstractTextDocumentLayout_documentSizeChanged_signal_connect_cb_box_2(rsfptr_raw:*mut Box<Fn(QSizeF)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QSizeF::inheritFrom(arg0 as u64);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QAbstractTextDocumentLayout_documentSizeChanged_signal_connect for fn(QSizeF) {
   fn connect(self, sigthis: QAbstractTextDocumentLayout_documentSizeChanged_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAbstractTextDocumentLayout_documentSizeChanged_signal_connect_cb_2 as *mut c_void;
@@ -786,29 +700,35 @@ impl /* trait */ QAbstractTextDocumentLayout_documentSizeChanged_signal_connect 
     unsafe {QAbstractTextDocumentLayout_SlotProxy_connect__ZN27QAbstractTextDocumentLayout19documentSizeChangedERK6QSizeF(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QAbstractTextDocumentLayout_documentSizeChanged_signal_connect for Box<fn(QSizeF)> {
+impl /* trait */ QAbstractTextDocumentLayout_documentSizeChanged_signal_connect for Box<Fn(QSizeF)> {
   fn connect(self, sigthis: QAbstractTextDocumentLayout_documentSizeChanged_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAbstractTextDocumentLayout_documentSizeChanged_signal_connect_cb_box_2 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QAbstractTextDocumentLayout_SlotProxy_connect__ZN27QAbstractTextDocumentLayout19documentSizeChangedERK6QSizeF(arg0, arg1, arg2)};
   }
 }
 // updateBlock(const class QTextBlock &)
 extern fn QAbstractTextDocumentLayout_updateBlock_signal_connect_cb_3(rsfptr:fn(QTextBlock), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QTextBlock::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QAbstractTextDocumentLayout_updateBlock_signal_connect_cb_box_3(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QAbstractTextDocumentLayout_updateBlock_signal_connect_cb_box_3(rsfptr_raw:*mut Box<Fn(QTextBlock)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QTextBlock::inheritFrom(arg0 as u64);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QAbstractTextDocumentLayout_updateBlock_signal_connect for fn(QTextBlock) {
   fn connect(self, sigthis: QAbstractTextDocumentLayout_updateBlock_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAbstractTextDocumentLayout_updateBlock_signal_connect_cb_3 as *mut c_void;
@@ -816,14 +736,14 @@ impl /* trait */ QAbstractTextDocumentLayout_updateBlock_signal_connect for fn(Q
     unsafe {QAbstractTextDocumentLayout_SlotProxy_connect__ZN27QAbstractTextDocumentLayout11updateBlockERK10QTextBlock(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QAbstractTextDocumentLayout_updateBlock_signal_connect for Box<fn(QTextBlock)> {
+impl /* trait */ QAbstractTextDocumentLayout_updateBlock_signal_connect for Box<Fn(QTextBlock)> {
   fn connect(self, sigthis: QAbstractTextDocumentLayout_updateBlock_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QAbstractTextDocumentLayout_updateBlock_signal_connect_cb_box_3 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QAbstractTextDocumentLayout_SlotProxy_connect__ZN27QAbstractTextDocumentLayout11updateBlockERK10QTextBlock(arg0, arg1, arg2)};
   }
 }

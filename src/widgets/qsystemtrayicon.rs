@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qsystemtrayicon.h
 // dst-file: /src/widgets/qsystemtrayicon.rs
 //
@@ -18,12 +18,13 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qobject::QObject; // 771
+use super::super::core::qobject::*; // 771
 use std::ops::Deref;
-use super::super::core::qstring::QString; // 771
-use super::super::gui::qicon::QIcon; // 771
-use super::qmenu::QMenu; // 773
-use super::super::core::qrect::QRect; // 771
+use super::super::core::qstring::*; // 771
+use super::super::gui::qicon::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::qmenu::*; // 773
+use super::super::core::qrect::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -35,50 +36,40 @@ use super::super::core::qrect::QRect; // 771
 extern {
   fn QSystemTrayIcon_Class_Size() -> c_int;
   // proto:  void QSystemTrayIcon::~QSystemTrayIcon();
-  fn _ZN15QSystemTrayIconD0Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN15QSystemTrayIconD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QSystemTrayIcon::setVisible(bool visible);
-  fn _ZN15QSystemTrayIcon10setVisibleEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
+  fn C_ZN15QSystemTrayIcon10setVisibleEb(qthis: u64 /* *mut c_void*/, arg0: c_char);
   // proto:  QString QSystemTrayIcon::toolTip();
-  fn _ZNK15QSystemTrayIcon7toolTipEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK15QSystemTrayIcon7toolTipEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QSystemTrayIcon::QSystemTrayIcon(const QIcon & icon, QObject * parent);
-  fn dector_ZN15QSystemTrayIconC1ERK5QIconP7QObject(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN15QSystemTrayIconC1ERK5QIconP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN15QSystemTrayIconC2ERK5QIconP7QObject(arg0: *mut c_void, arg1: *mut c_void) -> u64;
   // proto:  void QSystemTrayIcon::hide();
-  fn demth_ZN15QSystemTrayIcon4hideEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN15QSystemTrayIcon4hideEv(qthis: u64 /* *mut c_void*/);
   // proto:  const QMetaObject * QSystemTrayIcon::metaObject();
-  fn _ZNK15QSystemTrayIcon10metaObjectEv(qthis: u64 /* *mut c_void*/);
-  // proto:  void QSystemTrayIcon::QSystemTrayIcon(const QSystemTrayIcon & );
-  fn dector_ZN15QSystemTrayIconC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN15QSystemTrayIconC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZNK15QSystemTrayIcon10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QSystemTrayIcon::setIcon(const QIcon & icon);
-  fn _ZN15QSystemTrayIcon7setIconERK5QIcon(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN15QSystemTrayIcon7setIconERK5QIcon(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  bool QSystemTrayIcon::isVisible();
-  fn _ZNK15QSystemTrayIcon9isVisibleEv(qthis: u64 /* *mut c_void*/) -> c_char;
+  fn C_ZNK15QSystemTrayIcon9isVisibleEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QSystemTrayIcon::QSystemTrayIcon(QObject * parent);
-  fn dector_ZN15QSystemTrayIconC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN15QSystemTrayIconC1EP7QObject(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN15QSystemTrayIconC2EP7QObject(arg0: *mut c_void) -> u64;
   // proto:  void QSystemTrayIcon::show();
-  fn demth_ZN15QSystemTrayIcon4showEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN15QSystemTrayIcon4showEv(qthis: u64 /* *mut c_void*/);
   // proto: static bool QSystemTrayIcon::supportsMessages();
-  fn _ZN15QSystemTrayIcon16supportsMessagesEv() -> c_char;
-  // proto:  void QSystemTrayIcon::messageClicked();
-  fn _ZN15QSystemTrayIcon14messageClickedEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZN15QSystemTrayIcon16supportsMessagesEv() -> c_char;
   // proto:  void QSystemTrayIcon::setContextMenu(QMenu * menu);
-  fn _ZN15QSystemTrayIcon14setContextMenuEP5QMenu(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN15QSystemTrayIcon14setContextMenuEP5QMenu(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QRect QSystemTrayIcon::geometry();
-  fn _ZNK15QSystemTrayIcon8geometryEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK15QSystemTrayIcon8geometryEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QSystemTrayIcon::setToolTip(const QString & tip);
-  fn _ZN15QSystemTrayIcon10setToolTipERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN15QSystemTrayIcon10setToolTipERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QIcon QSystemTrayIcon::icon();
-  fn _ZNK15QSystemTrayIcon4iconEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK15QSystemTrayIcon4iconEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QMenu * QSystemTrayIcon::contextMenu();
-  fn _ZNK15QSystemTrayIcon11contextMenuEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK15QSystemTrayIcon11contextMenuEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto: static bool QSystemTrayIcon::isSystemTrayAvailable();
-  fn _ZN15QSystemTrayIcon21isSystemTrayAvailableEv() -> c_char;
+  fn C_ZN15QSystemTrayIcon21isSystemTrayAvailableEv() -> c_char;
   fn QSystemTrayIcon_SlotProxy_connect__ZN15QSystemTrayIcon14messageClickedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QSystemTrayIcon_SlotProxy_connect_box__ZN15QSystemTrayIcon14messageClickedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QSystemTrayIcon_SlotProxy_connect__ZN15QSystemTrayIcon9activatedENS_16ActivationReasonE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QSystemTrayIcon_SlotProxy_connect_box__ZN15QSystemTrayIcon9activatedENS_16ActivationReasonE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -87,8 +78,8 @@ extern {
 pub struct QSystemTrayIcon {
   qbase: QObject,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _activated_1: QSystemTrayIcon_activated_signal,
-  pub _messageClicked_1: QSystemTrayIcon_messageClicked_signal,
+  pub _activated: QSystemTrayIcon_activated_signal,
+  pub _messageClicked: QSystemTrayIcon_messageClicked_signal,
 }
 
 impl /*struct*/ QSystemTrayIcon {
@@ -110,22 +101,22 @@ impl AsRef<QObject> for QSystemTrayIcon {
 }
   // proto:  void QSystemTrayIcon::~QSystemTrayIcon();
 impl /*struct*/ QSystemTrayIcon {
-  pub fn Free<RetType, T: QSystemTrayIcon_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QSystemTrayIcon_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QSystemTrayIcon_Free<RetType> {
-  fn Free(self , rsthis: & QSystemTrayIcon) -> RetType;
+pub trait QSystemTrayIcon_free<RetType> {
+  fn free(self , rsthis: & QSystemTrayIcon) -> RetType;
 }
 
   // proto:  void QSystemTrayIcon::~QSystemTrayIcon();
-impl<'a> /*trait*/ QSystemTrayIcon_Free<()> for () {
-  fn Free(self , rsthis: & QSystemTrayIcon) -> () {
+impl<'a> /*trait*/ QSystemTrayIcon_free<()> for () {
+  fn free(self , rsthis: & QSystemTrayIcon) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QSystemTrayIconD0Ev()};
-     unsafe {_ZN15QSystemTrayIconD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN15QSystemTrayIconD2Ev()};
+     unsafe {C_ZN15QSystemTrayIconD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -148,7 +139,7 @@ impl<'a> /*trait*/ QSystemTrayIcon_setVisible<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSystemTrayIcon10setVisibleEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN15QSystemTrayIcon10setVisibleEb(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QSystemTrayIcon10setVisibleEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -170,7 +161,7 @@ impl<'a> /*trait*/ QSystemTrayIcon_toolTip<QString> for () {
   fn toolTip(self , rsthis: & QSystemTrayIcon) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSystemTrayIcon7toolTipEv()};
-    let mut ret = unsafe {_ZNK15QSystemTrayIcon7toolTipEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QSystemTrayIcon7toolTipEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -179,28 +170,27 @@ impl<'a> /*trait*/ QSystemTrayIcon_toolTip<QString> for () {
 
   // proto:  void QSystemTrayIcon::QSystemTrayIcon(const QIcon & icon, QObject * parent);
 impl /*struct*/ QSystemTrayIcon {
-  pub fn New<T: QSystemTrayIcon_New>(value: T) -> QSystemTrayIcon {
-    let rsthis = value.New();
+  pub fn new<T: QSystemTrayIcon_new>(value: T) -> QSystemTrayIcon {
+    let rsthis = value.new();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QSystemTrayIcon_New {
-  fn New(self) -> QSystemTrayIcon;
+pub trait QSystemTrayIcon_new {
+  fn new(self) -> QSystemTrayIcon;
 }
 
   // proto:  void QSystemTrayIcon::QSystemTrayIcon(const QIcon & icon, QObject * parent);
-impl<'a> /*trait*/ QSystemTrayIcon_New for (&'a QIcon, &'a QObject) {
-  fn New(self) -> QSystemTrayIcon {
+impl<'a> /*trait*/ QSystemTrayIcon_new for (&'a QIcon, &'a QObject) {
+  fn new(self) -> QSystemTrayIcon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QSystemTrayIconC1ERK5QIconP7QObject()};
+    // unsafe{_ZN15QSystemTrayIconC2ERK5QIconP7QObject()};
     let ctysz: c_int = unsafe{QSystemTrayIcon_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    // unsafe {_ZN15QSystemTrayIconC1ERK5QIconP7QObject(qthis, arg0, arg1)};
-    let qthis: u64 = unsafe {dector_ZN15QSystemTrayIconC1ERK5QIconP7QObject(arg0, arg1)} as u64;
+    let qthis: u64 = unsafe {C_ZN15QSystemTrayIconC2ERK5QIconP7QObject(arg0, arg1)};
     let rsthis = QSystemTrayIcon{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -224,7 +214,7 @@ impl<'a> /*trait*/ QSystemTrayIcon_hide<()> for () {
   fn hide(self , rsthis: & QSystemTrayIcon) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSystemTrayIcon4hideEv()};
-     unsafe {demth_ZN15QSystemTrayIcon4hideEv(rsthis.qclsinst)};
+     unsafe {C_ZN15QSystemTrayIcon4hideEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -242,27 +232,13 @@ pub trait QSystemTrayIcon_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QSystemTrayIcon::metaObject();
-impl<'a> /*trait*/ QSystemTrayIcon_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QSystemTrayIcon) -> () {
+impl<'a> /*trait*/ QSystemTrayIcon_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QSystemTrayIcon) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSystemTrayIcon10metaObjectEv()};
-     unsafe {_ZNK15QSystemTrayIcon10metaObjectEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QSystemTrayIcon::QSystemTrayIcon(const QSystemTrayIcon & );
-impl<'a> /*trait*/ QSystemTrayIcon_New for (&'a QSystemTrayIcon) {
-  fn New(self) -> QSystemTrayIcon {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QSystemTrayIconC1ERKS_()};
-    let ctysz: c_int = unsafe{QSystemTrayIcon_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN15QSystemTrayIconC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN15QSystemTrayIconC1ERKS_(arg0)} as u64;
-    let rsthis = QSystemTrayIcon{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
+    let mut ret = unsafe {C_ZNK15QSystemTrayIcon10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -285,7 +261,7 @@ impl<'a> /*trait*/ QSystemTrayIcon_setIcon<()> for (&'a QIcon) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSystemTrayIcon7setIconERK5QIcon()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN15QSystemTrayIcon7setIconERK5QIcon(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QSystemTrayIcon7setIconERK5QIcon(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -307,22 +283,21 @@ impl<'a> /*trait*/ QSystemTrayIcon_isVisible<i8> for () {
   fn isVisible(self , rsthis: & QSystemTrayIcon) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSystemTrayIcon9isVisibleEv()};
-    let mut ret = unsafe {_ZNK15QSystemTrayIcon9isVisibleEv(rsthis.qclsinst)};
-    return ret as i8;
+    let mut ret = unsafe {C_ZNK15QSystemTrayIcon9isVisibleEv(rsthis.qclsinst)};
+    return ret as i8; // 1
     // return 1;
   }
 }
 
   // proto:  void QSystemTrayIcon::QSystemTrayIcon(QObject * parent);
-impl<'a> /*trait*/ QSystemTrayIcon_New for (&'a QObject) {
-  fn New(self) -> QSystemTrayIcon {
+impl<'a> /*trait*/ QSystemTrayIcon_new for (&'a QObject) {
+  fn new(self) -> QSystemTrayIcon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QSystemTrayIconC1EP7QObject()};
+    // unsafe{_ZN15QSystemTrayIconC2EP7QObject()};
     let ctysz: c_int = unsafe{QSystemTrayIcon_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN15QSystemTrayIconC1EP7QObject(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN15QSystemTrayIconC1EP7QObject(arg0)} as u64;
+    let qthis: u64 = unsafe {C_ZN15QSystemTrayIconC2EP7QObject(arg0)};
     let rsthis = QSystemTrayIcon{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -346,7 +321,7 @@ impl<'a> /*trait*/ QSystemTrayIcon_show<()> for () {
   fn show(self , rsthis: & QSystemTrayIcon) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSystemTrayIcon4showEv()};
-     unsafe {demth_ZN15QSystemTrayIcon4showEv(rsthis.qclsinst)};
+     unsafe {C_ZN15QSystemTrayIcon4showEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -368,30 +343,8 @@ impl<'a> /*trait*/ QSystemTrayIcon_supportsMessages_s<i8> for () {
   fn supportsMessages_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSystemTrayIcon16supportsMessagesEv()};
-    let mut ret = unsafe {_ZN15QSystemTrayIcon16supportsMessagesEv()};
-    return ret as i8;
-    // return 1;
-  }
-}
-
-  // proto:  void QSystemTrayIcon::messageClicked();
-impl /*struct*/ QSystemTrayIcon {
-  pub fn messageClicked<RetType, T: QSystemTrayIcon_messageClicked<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.messageClicked(self);
-    // return 1;
-  }
-}
-
-pub trait QSystemTrayIcon_messageClicked<RetType> {
-  fn messageClicked(self , rsthis: & QSystemTrayIcon) -> RetType;
-}
-
-  // proto:  void QSystemTrayIcon::messageClicked();
-impl<'a> /*trait*/ QSystemTrayIcon_messageClicked<()> for () {
-  fn messageClicked(self , rsthis: & QSystemTrayIcon) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QSystemTrayIcon14messageClickedEv()};
-     unsafe {_ZN15QSystemTrayIcon14messageClickedEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZN15QSystemTrayIcon16supportsMessagesEv()};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -414,7 +367,7 @@ impl<'a> /*trait*/ QSystemTrayIcon_setContextMenu<()> for (&'a QMenu) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSystemTrayIcon14setContextMenuEP5QMenu()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN15QSystemTrayIcon14setContextMenuEP5QMenu(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QSystemTrayIcon14setContextMenuEP5QMenu(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -436,7 +389,7 @@ impl<'a> /*trait*/ QSystemTrayIcon_geometry<QRect> for () {
   fn geometry(self , rsthis: & QSystemTrayIcon) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSystemTrayIcon8geometryEv()};
-    let mut ret = unsafe {_ZNK15QSystemTrayIcon8geometryEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QSystemTrayIcon8geometryEv(rsthis.qclsinst)};
     let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -461,7 +414,7 @@ impl<'a> /*trait*/ QSystemTrayIcon_setToolTip<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSystemTrayIcon10setToolTipERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN15QSystemTrayIcon10setToolTipERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN15QSystemTrayIcon10setToolTipERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -483,7 +436,7 @@ impl<'a> /*trait*/ QSystemTrayIcon_icon<QIcon> for () {
   fn icon(self , rsthis: & QSystemTrayIcon) -> QIcon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSystemTrayIcon4iconEv()};
-    let mut ret = unsafe {_ZNK15QSystemTrayIcon4iconEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QSystemTrayIcon4iconEv(rsthis.qclsinst)};
     let mut ret1 = QIcon::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -507,7 +460,7 @@ impl<'a> /*trait*/ QSystemTrayIcon_contextMenu<QMenu> for () {
   fn contextMenu(self , rsthis: & QSystemTrayIcon) -> QMenu {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSystemTrayIcon11contextMenuEv()};
-    let mut ret = unsafe {_ZNK15QSystemTrayIcon11contextMenuEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK15QSystemTrayIcon11contextMenuEv(rsthis.qclsinst)};
     let mut ret1 = QMenu::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -531,8 +484,8 @@ impl<'a> /*trait*/ QSystemTrayIcon_isSystemTrayAvailable_s<i8> for () {
   fn isSystemTrayAvailable_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSystemTrayIcon21isSystemTrayAvailableEv()};
-    let mut ret = unsafe {_ZN15QSystemTrayIcon21isSystemTrayAvailableEv()};
-    return ret as i8;
+    let mut ret = unsafe {C_ZN15QSystemTrayIcon21isSystemTrayAvailableEv()};
+    return ret as i8; // 1
     // return 1;
   }
 }
@@ -540,7 +493,7 @@ impl<'a> /*trait*/ QSystemTrayIcon_isSystemTrayAvailable_s<i8> for () {
 #[derive(Default)] // for QSystemTrayIcon_activated
 pub struct QSystemTrayIcon_activated_signal{poi:u64}
 impl /* struct */ QSystemTrayIcon {
-  pub fn activated_1(&self) -> QSystemTrayIcon_activated_signal {
+  pub fn activated(&self) -> QSystemTrayIcon_activated_signal {
      return QSystemTrayIcon_activated_signal{poi:self.qclsinst};
   }
 }
@@ -556,7 +509,7 @@ pub trait QSystemTrayIcon_activated_signal_connect {
 #[derive(Default)] // for QSystemTrayIcon_messageClicked
 pub struct QSystemTrayIcon_messageClicked_signal{poi:u64}
 impl /* struct */ QSystemTrayIcon {
-  pub fn messageClicked_1(&self) -> QSystemTrayIcon_messageClicked_signal {
+  pub fn messageClicked(&self) -> QSystemTrayIcon_messageClicked_signal {
      return QSystemTrayIcon_messageClicked_signal{poi:self.qclsinst};
   }
 }
@@ -572,15 +525,19 @@ pub trait QSystemTrayIcon_messageClicked_signal_connect {
 // messageClicked()
 extern fn QSystemTrayIcon_messageClicked_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
+  rsfptr();
 }
-extern fn QSystemTrayIcon_messageClicked_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, ) {
+extern fn QSystemTrayIcon_messageClicked_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  // rsfptr();
+  unsafe{(*rsfptr_raw)()};
 }
 impl /* trait */ QSystemTrayIcon_messageClicked_signal_connect for fn() {
   fn connect(self, sigthis: QSystemTrayIcon_messageClicked_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QSystemTrayIcon_messageClicked_signal_connect_cb_0 as *mut c_void;
@@ -588,45 +545,15 @@ impl /* trait */ QSystemTrayIcon_messageClicked_signal_connect for fn() {
     unsafe {QSystemTrayIcon_SlotProxy_connect__ZN15QSystemTrayIcon14messageClickedEv(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QSystemTrayIcon_messageClicked_signal_connect for Box<fn()> {
+impl /* trait */ QSystemTrayIcon_messageClicked_signal_connect for Box<Fn()> {
   fn connect(self, sigthis: QSystemTrayIcon_messageClicked_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QSystemTrayIcon_messageClicked_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QSystemTrayIcon_SlotProxy_connect__ZN15QSystemTrayIcon14messageClickedEv(arg0, arg1, arg2)};
-  }
-}
-// activated(class QSystemTrayIcon::ActivationReason)
-extern fn QSystemTrayIcon_activated_signal_connect_cb_1(rsfptr:fn(i32), arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-}
-extern fn QSystemTrayIcon_activated_signal_connect_cb_box_1(rsfptr_raw:*mut c_void, arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-}
-impl /* trait */ QSystemTrayIcon_activated_signal_connect for fn(i32) {
-  fn connect(self, sigthis: QSystemTrayIcon_activated_signal) {
-    // do smth...
-    self as u64;
-    self as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QSystemTrayIcon_activated_signal_connect_cb_1 as *mut c_void;
-    let arg2 = self as *mut c_void;
-    unsafe {QSystemTrayIcon_SlotProxy_connect__ZN15QSystemTrayIcon9activatedENS_16ActivationReasonE(arg0, arg1, arg2)};
-  }
-}
-impl /* trait */ QSystemTrayIcon_activated_signal_connect for Box<fn(i32)> {
-  fn connect(self, sigthis: QSystemTrayIcon_activated_signal) {
-    // do smth...
-    // Box::into_raw(self) as u64;
-    // Box::into_raw(self) as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QSystemTrayIcon_activated_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
-    unsafe {QSystemTrayIcon_SlotProxy_connect__ZN15QSystemTrayIcon9activatedENS_16ActivationReasonE(arg0, arg1, arg2)};
   }
 }
 // <= body block end

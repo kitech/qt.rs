@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qmessagebox.h
 // dst-file: /src/widgets/qmessagebox.rs
 //
@@ -18,15 +18,17 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qdialog::QDialog; // 773
+use super::qdialog::*; // 773
 use std::ops::Deref;
-use super::qwidget::QWidget; // 773
-use super::super::core::qstring::QString; // 771
-use super::qabstractbutton::QAbstractButton; // 773
-use super::super::gui::qpixmap::QPixmap; // 771
-use super::qpushbutton::QPushButton; // 773
-use super::super::core::qobject::QObject; // 771
-use super::qcheckbox::QCheckBox; // 773
+use super::qwidget::*; // 773
+use super::super::core::qstring::*; // 771
+use super::qabstractbutton::*; // 773
+use super::super::gui::qpixmap::*; // 771
+use super::super::core::qobjectdefs::*; // 771
+use super::qpushbutton::*; // 773
+use super::super::core::qobject::*; // 771
+// use super::qlist::*; // 775
+use super::qcheckbox::*; // 773
 // <= use block end
 
 // ext block begin =>
@@ -38,81 +40,74 @@ use super::qcheckbox::QCheckBox; // 773
 extern {
   fn QMessageBox_Class_Size() -> c_int;
   // proto: static int QMessageBox::critical(QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2);
-  fn _ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_iii(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: c_int, arg4: c_int, arg5: c_int) -> c_int;
-  // proto:  void QMessageBox::buttonClicked(QAbstractButton * button);
-  fn _ZN11QMessageBox13buttonClickedEP15QAbstractButton(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_iii(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: c_int, arg4: c_int, arg5: c_int) -> c_int;
   // proto:  void QMessageBox::setButtonText(int button, const QString & text);
-  fn _ZN11QMessageBox13setButtonTextEiRK7QString(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
+  fn C_ZN11QMessageBox13setButtonTextEiRK7QString(qthis: u64 /* *mut c_void*/, arg0: c_int, arg1: *mut c_void);
   // proto:  void QMessageBox::~QMessageBox();
-  fn _ZN11QMessageBoxD0Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN11QMessageBoxD2Ev(qthis: u64 /* *mut c_void*/);
   // proto:  void QMessageBox::setText(const QString & text);
-  fn _ZN11QMessageBox7setTextERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QMessageBox7setTextERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMessageBox::setIconPixmap(const QPixmap & pixmap);
-  fn _ZN11QMessageBox13setIconPixmapERK7QPixmap(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QMessageBox13setIconPixmapERK7QPixmap(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static void QMessageBox::about(QWidget * parent, const QString & title, const QString & text);
-  fn _ZN11QMessageBox5aboutEP7QWidgetRK7QStringS4_(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
+  fn C_ZN11QMessageBox5aboutEP7QWidgetRK7QStringS4_(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  QString QMessageBox::text();
-  fn _ZNK11QMessageBox4textEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK11QMessageBox4textEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto: static int QMessageBox::question(QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text, const QString & button2Text, int defaultButtonNumber, int escapeButtonNumber);
-  fn _ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void, arg4: *mut c_void, arg5: *mut c_void, arg6: c_int, arg7: c_int) -> c_int;
+  fn C_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void, arg4: *mut c_void, arg5: *mut c_void, arg6: c_int, arg7: c_int) -> c_int;
   // proto: static int QMessageBox::warning(QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2);
-  fn _ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_iii(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: c_int, arg4: c_int, arg5: c_int) -> c_int;
-  // proto:  void QMessageBox::QMessageBox(const QMessageBox & );
-  fn dector_ZN11QMessageBoxC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QMessageBoxC1ERKS_(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_iii(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: c_int, arg4: c_int, arg5: c_int) -> c_int;
   // proto:  const QMetaObject * QMessageBox::metaObject();
-  fn _ZNK11QMessageBox10metaObjectEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK11QMessageBox10metaObjectEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto: static int QMessageBox::question(QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2);
-  fn _ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_iii(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: c_int, arg4: c_int, arg5: c_int) -> c_int;
+  fn C_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_iii(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: c_int, arg4: c_int, arg5: c_int) -> c_int;
   // proto:  QPushButton * QMessageBox::defaultButton();
-  fn _ZNK11QMessageBox13defaultButtonEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK11QMessageBox13defaultButtonEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QMessageBox::open(QObject * receiver, const char * member);
-  fn _ZN11QMessageBox4openEP7QObjectPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_char);
+  fn C_ZN11QMessageBox4openEP7QObjectPKc(qthis: u64 /* *mut c_void*/, arg0: *mut c_void, arg1: *mut c_char);
   // proto:  QList<QAbstractButton *> QMessageBox::buttons();
-  fn _ZNK11QMessageBox7buttonsEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK11QMessageBox7buttonsEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto: static void QMessageBox::aboutQt(QWidget * parent, const QString & title);
-  fn _ZN11QMessageBox7aboutQtEP7QWidgetRK7QString(arg0: *mut c_void, arg1: *mut c_void);
+  fn C_ZN11QMessageBox7aboutQtEP7QWidgetRK7QString(arg0: *mut c_void, arg1: *mut c_void);
   // proto:  QString QMessageBox::informativeText();
-  fn _ZNK11QMessageBox15informativeTextEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK11QMessageBox15informativeTextEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QMessageBox::setInformativeText(const QString & text);
-  fn _ZN11QMessageBox18setInformativeTextERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QMessageBox18setInformativeTextERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMessageBox::setDetailedText(const QString & text);
-  fn _ZN11QMessageBox15setDetailedTextERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QMessageBox15setDetailedTextERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMessageBox::QMessageBox(QWidget * parent);
-  fn dector_ZN11QMessageBoxC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QMessageBoxC1EP7QWidget(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QMessageBoxC2EP7QWidget(arg0: *mut c_void) -> u64;
   // proto: static int QMessageBox::critical(QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text, const QString & button2Text, int defaultButtonNumber, int escapeButtonNumber);
-  fn _ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void, arg4: *mut c_void, arg5: *mut c_void, arg6: c_int, arg7: c_int) -> c_int;
+  fn C_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void, arg4: *mut c_void, arg5: *mut c_void, arg6: c_int, arg7: c_int) -> c_int;
   // proto:  QAbstractButton * QMessageBox::clickedButton();
-  fn _ZNK11QMessageBox13clickedButtonEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK11QMessageBox13clickedButtonEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QMessageBox::setDefaultButton(QPushButton * button);
-  fn _ZN11QMessageBox16setDefaultButtonEP11QPushButton(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QMessageBox16setDefaultButtonEP11QPushButton(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static int QMessageBox::warning(QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text, const QString & button2Text, int defaultButtonNumber, int escapeButtonNumber);
-  fn _ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void, arg4: *mut c_void, arg5: *mut c_void, arg6: c_int, arg7: c_int) -> c_int;
+  fn C_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void, arg4: *mut c_void, arg5: *mut c_void, arg6: c_int, arg7: c_int) -> c_int;
   // proto:  void QMessageBox::setEscapeButton(QAbstractButton * button);
-  fn _ZN11QMessageBox15setEscapeButtonEP15QAbstractButton(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QMessageBox15setEscapeButtonEP15QAbstractButton(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto: static int QMessageBox::information(QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2);
-  fn _ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_iii(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: c_int, arg4: c_int, arg5: c_int) -> c_int;
+  fn C_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_iii(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: c_int, arg4: c_int, arg5: c_int) -> c_int;
   // proto:  void QMessageBox::setCheckBox(QCheckBox * cb);
-  fn _ZN11QMessageBox11setCheckBoxEP9QCheckBox(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QMessageBox11setCheckBoxEP9QCheckBox(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QMessageBox::setWindowTitle(const QString & title);
-  fn _ZN11QMessageBox14setWindowTitleERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QMessageBox14setWindowTitleERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QAbstractButton * QMessageBox::escapeButton();
-  fn _ZNK11QMessageBox12escapeButtonEv(qthis: u64 /* *mut c_void*/);
+  fn C_ZNK11QMessageBox12escapeButtonEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QPixmap QMessageBox::iconPixmap();
-  fn _ZNK11QMessageBox10iconPixmapEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK11QMessageBox10iconPixmapEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QMessageBox::removeButton(QAbstractButton * button);
-  fn _ZN11QMessageBox12removeButtonEP15QAbstractButton(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
+  fn C_ZN11QMessageBox12removeButtonEP15QAbstractButton(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QString QMessageBox::detailedText();
-  fn _ZNK11QMessageBox12detailedTextEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK11QMessageBox12detailedTextEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QCheckBox * QMessageBox::checkBox();
-  fn _ZNK11QMessageBox8checkBoxEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
+  fn C_ZNK11QMessageBox8checkBoxEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  QString QMessageBox::buttonText(int button);
-  fn _ZNK11QMessageBox10buttonTextEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
+  fn C_ZNK11QMessageBox10buttonTextEi(qthis: u64 /* *mut c_void*/, arg0: c_int) -> *mut c_void;
   // proto: static int QMessageBox::information(QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text, const QString & button2Text, int defaultButtonNumber, int escapeButtonNumber);
-  fn _ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void, arg4: *mut c_void, arg5: *mut c_void, arg6: c_int, arg7: c_int) -> c_int;
+  fn C_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void, arg4: *mut c_void, arg5: *mut c_void, arg6: c_int, arg7: c_int) -> c_int;
   fn QMessageBox_SlotProxy_connect__ZN11QMessageBox13buttonClickedEP15QAbstractButton(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QMessageBox_SlotProxy_connect_box__ZN11QMessageBox13buttonClickedEP15QAbstractButton(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -121,7 +116,7 @@ extern {
 pub struct QMessageBox {
   qbase: QDialog,
   pub qclsinst: u64 /* *mut c_void*/,
-  pub _buttonClicked_1: QMessageBox_buttonClicked_signal,
+  pub _buttonClicked: QMessageBox_buttonClicked_signal,
 }
 
 impl /*struct*/ QMessageBox {
@@ -164,31 +159,8 @@ impl<'a> /*trait*/ QMessageBox_critical_s<i32> for (&'a QWidget, &'a QString, &'
     let arg3 = self.3  as c_int;
     let arg4 = self.4  as c_int;
     let arg5 = self.5  as c_int;
-    let mut ret = unsafe {_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)};
-    return ret as i32;
-    // return 1;
-  }
-}
-
-  // proto:  void QMessageBox::buttonClicked(QAbstractButton * button);
-impl /*struct*/ QMessageBox {
-  pub fn buttonClicked<RetType, T: QMessageBox_buttonClicked<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.buttonClicked(self);
-    // return 1;
-  }
-}
-
-pub trait QMessageBox_buttonClicked<RetType> {
-  fn buttonClicked(self , rsthis: & QMessageBox) -> RetType;
-}
-
-  // proto:  void QMessageBox::buttonClicked(QAbstractButton * button);
-impl<'a> /*trait*/ QMessageBox_buttonClicked<()> for (&'a QAbstractButton) {
-  fn buttonClicked(self , rsthis: & QMessageBox) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QMessageBox13buttonClickedEP15QAbstractButton()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QMessageBox13buttonClickedEP15QAbstractButton(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -212,29 +184,29 @@ impl<'a> /*trait*/ QMessageBox_setButtonText<()> for (i32, &'a QString) {
     // unsafe{_ZN11QMessageBox13setButtonTextEiRK7QString()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN11QMessageBox13setButtonTextEiRK7QString(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN11QMessageBox13setButtonTextEiRK7QString(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
 
   // proto:  void QMessageBox::~QMessageBox();
 impl /*struct*/ QMessageBox {
-  pub fn Free<RetType, T: QMessageBox_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
+  pub fn free<RetType, T: QMessageBox_free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.free(self);
     // return 1;
   }
 }
 
-pub trait QMessageBox_Free<RetType> {
-  fn Free(self , rsthis: & QMessageBox) -> RetType;
+pub trait QMessageBox_free<RetType> {
+  fn free(self , rsthis: & QMessageBox) -> RetType;
 }
 
   // proto:  void QMessageBox::~QMessageBox();
-impl<'a> /*trait*/ QMessageBox_Free<()> for () {
-  fn Free(self , rsthis: & QMessageBox) -> () {
+impl<'a> /*trait*/ QMessageBox_free<()> for () {
+  fn free(self , rsthis: & QMessageBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QMessageBoxD0Ev()};
-     unsafe {_ZN11QMessageBoxD0Ev(rsthis.qclsinst)};
+    // unsafe{_ZN11QMessageBoxD2Ev()};
+     unsafe {C_ZN11QMessageBoxD2Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -257,7 +229,7 @@ impl<'a> /*trait*/ QMessageBox_setText<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBox7setTextERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QMessageBox7setTextERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QMessageBox7setTextERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -280,7 +252,7 @@ impl<'a> /*trait*/ QMessageBox_setIconPixmap<()> for (&'a QPixmap) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBox13setIconPixmapERK7QPixmap()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QMessageBox13setIconPixmapERK7QPixmap(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QMessageBox13setIconPixmapERK7QPixmap(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -305,7 +277,7 @@ impl<'a> /*trait*/ QMessageBox_about_s<()> for (&'a QWidget, &'a QString, &'a QS
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
-     unsafe {_ZN11QMessageBox5aboutEP7QWidgetRK7QStringS4_(arg0, arg1, arg2)};
+     unsafe {C_ZN11QMessageBox5aboutEP7QWidgetRK7QStringS4_(arg0, arg1, arg2)};
     // return 1;
   }
 }
@@ -327,7 +299,7 @@ impl<'a> /*trait*/ QMessageBox_text<QString> for () {
   fn text(self , rsthis: & QMessageBox) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMessageBox4textEv()};
-    let mut ret = unsafe {_ZNK11QMessageBox4textEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QMessageBox4textEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -359,8 +331,8 @@ impl<'a> /*trait*/ QMessageBox_question_s<i32> for (&'a QWidget, &'a QString, &'
     let arg5 = self.5.qclsinst  as *mut c_void;
     let arg6 = self.6  as c_int;
     let arg7 = self.7  as c_int;
-    let mut ret = unsafe {_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -388,37 +360,8 @@ impl<'a> /*trait*/ QMessageBox_warning_s<i32> for (&'a QWidget, &'a QString, &'a
     let arg3 = self.3  as c_int;
     let arg4 = self.4  as c_int;
     let arg5 = self.5  as c_int;
-    let mut ret = unsafe {_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)};
-    return ret as i32;
-    // return 1;
-  }
-}
-
-  // proto:  void QMessageBox::QMessageBox(const QMessageBox & );
-impl /*struct*/ QMessageBox {
-  pub fn New<T: QMessageBox_New>(value: T) -> QMessageBox {
-    let rsthis = value.New();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QMessageBox_New {
-  fn New(self) -> QMessageBox;
-}
-
-  // proto:  void QMessageBox::QMessageBox(const QMessageBox & );
-impl<'a> /*trait*/ QMessageBox_New for (&'a QMessageBox) {
-  fn New(self) -> QMessageBox {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QMessageBoxC1ERKS_()};
-    let ctysz: c_int = unsafe{QMessageBox_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN11QMessageBoxC1ERKS_(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN11QMessageBoxC1ERKS_(arg0)} as u64;
-    let rsthis = QMessageBox{qbase: QDialog::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
-    return rsthis;
+    let mut ret = unsafe {C_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -436,11 +379,13 @@ pub trait QMessageBox_metaObject<RetType> {
 }
 
   // proto:  const QMetaObject * QMessageBox::metaObject();
-impl<'a> /*trait*/ QMessageBox_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QMessageBox) -> () {
+impl<'a> /*trait*/ QMessageBox_metaObject<QMetaObject> for () {
+  fn metaObject(self , rsthis: & QMessageBox) -> QMetaObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMessageBox10metaObjectEv()};
-     unsafe {_ZNK11QMessageBox10metaObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QMessageBox10metaObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QMetaObject::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -456,8 +401,8 @@ impl<'a> /*trait*/ QMessageBox_question_s<i32> for (&'a QWidget, &'a QString, &'
     let arg3 = self.3  as c_int;
     let arg4 = self.4  as c_int;
     let arg5 = self.5  as c_int;
-    let mut ret = unsafe {_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -479,7 +424,7 @@ impl<'a> /*trait*/ QMessageBox_defaultButton<QPushButton> for () {
   fn defaultButton(self , rsthis: & QMessageBox) -> QPushButton {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMessageBox13defaultButtonEv()};
-    let mut ret = unsafe {_ZNK11QMessageBox13defaultButtonEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QMessageBox13defaultButtonEv(rsthis.qclsinst)};
     let mut ret1 = QPushButton::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -505,7 +450,7 @@ impl<'a> /*trait*/ QMessageBox_open<()> for (&'a QObject, &'a  String) {
     // unsafe{_ZN11QMessageBox4openEP7QObjectPKc()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.as_ptr()  as *mut c_char;
-     unsafe {_ZN11QMessageBox4openEP7QObjectPKc(rsthis.qclsinst, arg0, arg1)};
+     unsafe {C_ZN11QMessageBox4openEP7QObjectPKc(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -523,11 +468,12 @@ pub trait QMessageBox_buttons<RetType> {
 }
 
   // proto:  QList<QAbstractButton *> QMessageBox::buttons();
-impl<'a> /*trait*/ QMessageBox_buttons<()> for () {
-  fn buttons(self , rsthis: & QMessageBox) -> () {
+impl<'a> /*trait*/ QMessageBox_buttons<u64> for () {
+  fn buttons(self , rsthis: & QMessageBox) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMessageBox7buttonsEv()};
-     unsafe {_ZNK11QMessageBox7buttonsEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QMessageBox7buttonsEv(rsthis.qclsinst)};
+    return ret as u64; // 5
     // return 1;
   }
 }
@@ -551,7 +497,7 @@ impl<'a> /*trait*/ QMessageBox_aboutQt_s<()> for (&'a QWidget, &'a QString) {
     // unsafe{_ZN11QMessageBox7aboutQtEP7QWidgetRK7QString()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN11QMessageBox7aboutQtEP7QWidgetRK7QString(arg0, arg1)};
+     unsafe {C_ZN11QMessageBox7aboutQtEP7QWidgetRK7QString(arg0, arg1)};
     // return 1;
   }
 }
@@ -573,7 +519,7 @@ impl<'a> /*trait*/ QMessageBox_informativeText<QString> for () {
   fn informativeText(self , rsthis: & QMessageBox) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMessageBox15informativeTextEv()};
-    let mut ret = unsafe {_ZNK11QMessageBox15informativeTextEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QMessageBox15informativeTextEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -598,7 +544,7 @@ impl<'a> /*trait*/ QMessageBox_setInformativeText<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBox18setInformativeTextERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QMessageBox18setInformativeTextERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QMessageBox18setInformativeTextERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -621,21 +567,33 @@ impl<'a> /*trait*/ QMessageBox_setDetailedText<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBox15setDetailedTextERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QMessageBox15setDetailedTextERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QMessageBox15setDetailedTextERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
 
   // proto:  void QMessageBox::QMessageBox(QWidget * parent);
-impl<'a> /*trait*/ QMessageBox_New for (&'a QWidget) {
-  fn New(self) -> QMessageBox {
+impl /*struct*/ QMessageBox {
+  pub fn new<T: QMessageBox_new>(value: T) -> QMessageBox {
+    let rsthis = value.new();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QMessageBox_new {
+  fn new(self) -> QMessageBox;
+}
+
+  // proto:  void QMessageBox::QMessageBox(QWidget * parent);
+impl<'a> /*trait*/ QMessageBox_new for (&'a QWidget) {
+  fn new(self) -> QMessageBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QMessageBoxC1EP7QWidget()};
+    // unsafe{_ZN11QMessageBoxC2EP7QWidget()};
     let ctysz: c_int = unsafe{QMessageBox_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN11QMessageBoxC1EP7QWidget(qthis, arg0)};
-    let qthis: u64 = unsafe {dector_ZN11QMessageBoxC1EP7QWidget(arg0)} as u64;
+    let qthis: u64 = unsafe {C_ZN11QMessageBoxC2EP7QWidget(arg0)};
     let rsthis = QMessageBox{qbase: QDialog::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -655,8 +613,8 @@ impl<'a> /*trait*/ QMessageBox_critical_s<i32> for (&'a QWidget, &'a QString, &'
     let arg5 = self.5.qclsinst  as *mut c_void;
     let arg6 = self.6  as c_int;
     let arg7 = self.7  as c_int;
-    let mut ret = unsafe {_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -674,11 +632,13 @@ pub trait QMessageBox_clickedButton<RetType> {
 }
 
   // proto:  QAbstractButton * QMessageBox::clickedButton();
-impl<'a> /*trait*/ QMessageBox_clickedButton<()> for () {
-  fn clickedButton(self , rsthis: & QMessageBox) -> () {
+impl<'a> /*trait*/ QMessageBox_clickedButton<QAbstractButton> for () {
+  fn clickedButton(self , rsthis: & QMessageBox) -> QAbstractButton {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMessageBox13clickedButtonEv()};
-     unsafe {_ZNK11QMessageBox13clickedButtonEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QMessageBox13clickedButtonEv(rsthis.qclsinst)};
+    let mut ret1 = QAbstractButton::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -701,7 +661,7 @@ impl<'a> /*trait*/ QMessageBox_setDefaultButton<()> for (&'a QPushButton) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBox16setDefaultButtonEP11QPushButton()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QMessageBox16setDefaultButtonEP11QPushButton(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QMessageBox16setDefaultButtonEP11QPushButton(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -719,8 +679,8 @@ impl<'a> /*trait*/ QMessageBox_warning_s<i32> for (&'a QWidget, &'a QString, &'a
     let arg5 = self.5.qclsinst  as *mut c_void;
     let arg6 = self.6  as c_int;
     let arg7 = self.7  as c_int;
-    let mut ret = unsafe {_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -743,7 +703,7 @@ impl<'a> /*trait*/ QMessageBox_setEscapeButton<()> for (&'a QAbstractButton) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBox15setEscapeButtonEP15QAbstractButton()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QMessageBox15setEscapeButtonEP15QAbstractButton(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QMessageBox15setEscapeButtonEP15QAbstractButton(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -771,8 +731,8 @@ impl<'a> /*trait*/ QMessageBox_information_s<i32> for (&'a QWidget, &'a QString,
     let arg3 = self.3  as c_int;
     let arg4 = self.4  as c_int;
     let arg5 = self.5  as c_int;
-    let mut ret = unsafe {_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -795,7 +755,7 @@ impl<'a> /*trait*/ QMessageBox_setCheckBox<()> for (&'a QCheckBox) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBox11setCheckBoxEP9QCheckBox()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QMessageBox11setCheckBoxEP9QCheckBox(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QMessageBox11setCheckBoxEP9QCheckBox(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -818,7 +778,7 @@ impl<'a> /*trait*/ QMessageBox_setWindowTitle<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBox14setWindowTitleERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QMessageBox14setWindowTitleERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QMessageBox14setWindowTitleERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -836,11 +796,13 @@ pub trait QMessageBox_escapeButton<RetType> {
 }
 
   // proto:  QAbstractButton * QMessageBox::escapeButton();
-impl<'a> /*trait*/ QMessageBox_escapeButton<()> for () {
-  fn escapeButton(self , rsthis: & QMessageBox) -> () {
+impl<'a> /*trait*/ QMessageBox_escapeButton<QAbstractButton> for () {
+  fn escapeButton(self , rsthis: & QMessageBox) -> QAbstractButton {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMessageBox12escapeButtonEv()};
-     unsafe {_ZNK11QMessageBox12escapeButtonEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QMessageBox12escapeButtonEv(rsthis.qclsinst)};
+    let mut ret1 = QAbstractButton::inheritFrom(ret as u64);
+    return ret1;
     // return 1;
   }
 }
@@ -862,7 +824,7 @@ impl<'a> /*trait*/ QMessageBox_iconPixmap<QPixmap> for () {
   fn iconPixmap(self , rsthis: & QMessageBox) -> QPixmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMessageBox10iconPixmapEv()};
-    let mut ret = unsafe {_ZNK11QMessageBox10iconPixmapEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QMessageBox10iconPixmapEv(rsthis.qclsinst)};
     let mut ret1 = QPixmap::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -887,7 +849,7 @@ impl<'a> /*trait*/ QMessageBox_removeButton<()> for (&'a QAbstractButton) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBox12removeButtonEP15QAbstractButton()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QMessageBox12removeButtonEP15QAbstractButton(rsthis.qclsinst, arg0)};
+     unsafe {C_ZN11QMessageBox12removeButtonEP15QAbstractButton(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -909,7 +871,7 @@ impl<'a> /*trait*/ QMessageBox_detailedText<QString> for () {
   fn detailedText(self , rsthis: & QMessageBox) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMessageBox12detailedTextEv()};
-    let mut ret = unsafe {_ZNK11QMessageBox12detailedTextEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QMessageBox12detailedTextEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -933,7 +895,7 @@ impl<'a> /*trait*/ QMessageBox_checkBox<QCheckBox> for () {
   fn checkBox(self , rsthis: & QMessageBox) -> QCheckBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMessageBox8checkBoxEv()};
-    let mut ret = unsafe {_ZNK11QMessageBox8checkBoxEv(rsthis.qclsinst)};
+    let mut ret = unsafe {C_ZNK11QMessageBox8checkBoxEv(rsthis.qclsinst)};
     let mut ret1 = QCheckBox::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -958,7 +920,7 @@ impl<'a> /*trait*/ QMessageBox_buttonText<QString> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMessageBox10buttonTextEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZNK11QMessageBox10buttonTextEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {C_ZNK11QMessageBox10buttonTextEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -978,8 +940,8 @@ impl<'a> /*trait*/ QMessageBox_information_s<i32> for (&'a QWidget, &'a QString,
     let arg5 = self.5.qclsinst  as *mut c_void;
     let arg6 = self.6  as c_int;
     let arg7 = self.7  as c_int;
-    let mut ret = unsafe {_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)};
-    return ret as i32;
+    let mut ret = unsafe {C_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)};
+    return ret as i32; // 1
     // return 1;
   }
 }
@@ -987,7 +949,7 @@ impl<'a> /*trait*/ QMessageBox_information_s<i32> for (&'a QWidget, &'a QString,
 #[derive(Default)] // for QMessageBox_buttonClicked
 pub struct QMessageBox_buttonClicked_signal{poi:u64}
 impl /* struct */ QMessageBox {
-  pub fn buttonClicked_1(&self) -> QMessageBox_buttonClicked_signal {
+  pub fn buttonClicked(&self) -> QMessageBox_buttonClicked_signal {
      return QMessageBox_buttonClicked_signal{poi:self.qclsinst};
   }
 }
@@ -1003,15 +965,21 @@ pub trait QMessageBox_buttonClicked_signal_connect {
 // buttonClicked(class QAbstractButton *)
 extern fn QMessageBox_buttonClicked_signal_connect_cb_0(rsfptr:fn(QAbstractButton), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
+  let rsarg0 = QAbstractButton::inheritFrom(arg0 as u64);
+  rsfptr(rsarg0);
 }
-extern fn QMessageBox_buttonClicked_signal_connect_cb_box_0(rsfptr_raw:*mut c_void, arg0: *mut c_void) {
+extern fn QMessageBox_buttonClicked_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(QAbstractButton)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
+  let rsarg0 = QAbstractButton::inheritFrom(arg0 as u64);
+  // rsfptr(rsarg0);
+  unsafe{(*rsfptr_raw)(rsarg0)};
 }
 impl /* trait */ QMessageBox_buttonClicked_signal_connect for fn(QAbstractButton) {
   fn connect(self, sigthis: QMessageBox_buttonClicked_signal) {
     // do smth...
-    self as u64;
+    // self as u64; // error for Fn, Ok for fn
+    self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QMessageBox_buttonClicked_signal_connect_cb_0 as *mut c_void;
@@ -1019,14 +987,14 @@ impl /* trait */ QMessageBox_buttonClicked_signal_connect for fn(QAbstractButton
     unsafe {QMessageBox_SlotProxy_connect__ZN11QMessageBox13buttonClickedEP15QAbstractButton(arg0, arg1, arg2)};
   }
 }
-impl /* trait */ QMessageBox_buttonClicked_signal_connect for Box<fn(QAbstractButton)> {
+impl /* trait */ QMessageBox_buttonClicked_signal_connect for Box<Fn(QAbstractButton)> {
   fn connect(self, sigthis: QMessageBox_buttonClicked_signal) {
     // do smth...
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
     let arg1 = QMessageBox_buttonClicked_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(self) as *mut c_void;
+    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QMessageBox_SlotProxy_connect__ZN11QMessageBox13buttonClickedEP15QAbstractButton(arg0, arg1, arg2)};
   }
 }

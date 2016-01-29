@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 29 22:57:40 2015
+// created: Thu Jan 28 22:38:45 2016
 // src-file: /QtWidgets/qtooltip.h
 // dst-file: /src/widgets/qtooltip.rs
 //
@@ -19,12 +19,12 @@ use self::libc::*;
 
 // use block begin =>
 use std::ops::Deref;
-use super::super::gui::qfont::QFont; // 771
-use super::super::gui::qpalette::QPalette; // 771
-use super::super::core::qpoint::QPoint; // 771
-use super::super::core::qstring::QString; // 771
-use super::qwidget::QWidget; // 773
-use super::super::core::qrect::QRect; // 771
+use super::super::gui::qfont::*; // 771
+use super::super::gui::qpalette::*; // 771
+use super::super::core::qpoint::*; // 771
+use super::super::core::qstring::*; // 771
+use super::qwidget::*; // 773
+use super::super::core::qrect::*; // 771
 // <= use block end
 
 // ext block begin =>
@@ -36,28 +36,25 @@ use super::super::core::qrect::QRect; // 771
 extern {
   fn QToolTip_Class_Size() -> c_int;
   // proto: static void QToolTip::setFont(const QFont & );
-  fn _ZN8QToolTip7setFontERK5QFont(arg0: *mut c_void);
+  fn C_ZN8QToolTip7setFontERK5QFont(arg0: *mut c_void);
   // proto: static QPalette QToolTip::palette();
-  fn _ZN8QToolTip7paletteEv() -> *mut c_void;
+  fn C_ZN8QToolTip7paletteEv() -> *mut c_void;
   // proto: static void QToolTip::hideText();
-  fn demth_ZN8QToolTip8hideTextEv();
+  fn C_ZN8QToolTip8hideTextEv();
   // proto: static void QToolTip::showText(const QPoint & pos, const QString & text, QWidget * w, const QRect & rect);
-  fn _ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRect(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void);
-  // proto:  void QToolTip::QToolTip();
-  fn dector_ZN8QToolTipC1Ev() -> *mut c_void;
-  fn _ZN8QToolTipC1Ev(qthis: u64 /* *mut c_void*/);
+  fn C_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRect(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void);
   // proto: static void QToolTip::showText(const QPoint & pos, const QString & text, QWidget * w, const QRect & rect, int msecShowTime);
-  fn _ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRecti(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void, arg4: c_int);
+  fn C_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRecti(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void, arg4: c_int);
   // proto: static QString QToolTip::text();
-  fn _ZN8QToolTip4textEv() -> *mut c_void;
+  fn C_ZN8QToolTip4textEv() -> *mut c_void;
   // proto: static QFont QToolTip::font();
-  fn _ZN8QToolTip4fontEv() -> *mut c_void;
+  fn C_ZN8QToolTip4fontEv() -> *mut c_void;
   // proto: static void QToolTip::setPalette(const QPalette & );
-  fn _ZN8QToolTip10setPaletteERK8QPalette(arg0: *mut c_void);
+  fn C_ZN8QToolTip10setPaletteERK8QPalette(arg0: *mut c_void);
   // proto: static void QToolTip::showText(const QPoint & pos, const QString & text, QWidget * w);
-  fn _ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidget(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
+  fn C_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidget(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto: static bool QToolTip::isVisible();
-  fn _ZN8QToolTip9isVisibleEv() -> c_char;
+  fn C_ZN8QToolTip9isVisibleEv() -> c_char;
 } // <= ext block end
 
 // body block begin =>
@@ -91,7 +88,7 @@ impl<'a> /*trait*/ QToolTip_setFont_s<()> for (&'a QFont) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolTip7setFontERK5QFont()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN8QToolTip7setFontERK5QFont(arg0)};
+     unsafe {C_ZN8QToolTip7setFontERK5QFont(arg0)};
     // return 1;
   }
 }
@@ -113,7 +110,7 @@ impl<'a> /*trait*/ QToolTip_palette_s<QPalette> for () {
   fn palette_s(self ) -> QPalette {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolTip7paletteEv()};
-    let mut ret = unsafe {_ZN8QToolTip7paletteEv()};
+    let mut ret = unsafe {C_ZN8QToolTip7paletteEv()};
     let mut ret1 = QPalette::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -137,7 +134,7 @@ impl<'a> /*trait*/ QToolTip_hideText_s<()> for () {
   fn hideText_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolTip8hideTextEv()};
-     unsafe {demth_ZN8QToolTip8hideTextEv()};
+     unsafe {C_ZN8QToolTip8hideTextEv()};
     // return 1;
   }
 }
@@ -163,35 +160,7 @@ impl<'a> /*trait*/ QToolTip_showText_s<()> for (&'a QPoint, &'a QString, &'a QWi
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let arg3 = self.3.qclsinst  as *mut c_void;
-     unsafe {_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRect(arg0, arg1, arg2, arg3)};
-    // return 1;
-  }
-}
-
-  // proto:  void QToolTip::QToolTip();
-impl /*struct*/ QToolTip {
-  pub fn New<T: QToolTip_New>(value: T) -> QToolTip {
-    let rsthis = value.New();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QToolTip_New {
-  fn New(self) -> QToolTip;
-}
-
-  // proto:  void QToolTip::QToolTip();
-impl<'a> /*trait*/ QToolTip_New for () {
-  fn New(self) -> QToolTip {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QToolTipC1Ev()};
-    let ctysz: c_int = unsafe{QToolTip_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    // unsafe {_ZN8QToolTipC1Ev(qthis)};
-    let qthis: u64 = unsafe {dector_ZN8QToolTipC1Ev()} as u64;
-    let rsthis = QToolTip{qclsinst: qthis, ..Default::default()};
-    return rsthis;
+     unsafe {C_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRect(arg0, arg1, arg2, arg3)};
     // return 1;
   }
 }
@@ -206,7 +175,7 @@ impl<'a> /*trait*/ QToolTip_showText_s<()> for (&'a QPoint, &'a QString, &'a QWi
     let arg2 = self.2.qclsinst  as *mut c_void;
     let arg3 = self.3.qclsinst  as *mut c_void;
     let arg4 = self.4  as c_int;
-     unsafe {_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRecti(arg0, arg1, arg2, arg3, arg4)};
+     unsafe {C_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRecti(arg0, arg1, arg2, arg3, arg4)};
     // return 1;
   }
 }
@@ -228,7 +197,7 @@ impl<'a> /*trait*/ QToolTip_text_s<QString> for () {
   fn text_s(self ) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolTip4textEv()};
-    let mut ret = unsafe {_ZN8QToolTip4textEv()};
+    let mut ret = unsafe {C_ZN8QToolTip4textEv()};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -252,7 +221,7 @@ impl<'a> /*trait*/ QToolTip_font_s<QFont> for () {
   fn font_s(self ) -> QFont {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolTip4fontEv()};
-    let mut ret = unsafe {_ZN8QToolTip4fontEv()};
+    let mut ret = unsafe {C_ZN8QToolTip4fontEv()};
     let mut ret1 = QFont::inheritFrom(ret as u64);
     return ret1;
     // return 1;
@@ -277,7 +246,7 @@ impl<'a> /*trait*/ QToolTip_setPalette_s<()> for (&'a QPalette) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolTip10setPaletteERK8QPalette()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN8QToolTip10setPaletteERK8QPalette(arg0)};
+     unsafe {C_ZN8QToolTip10setPaletteERK8QPalette(arg0)};
     // return 1;
   }
 }
@@ -290,7 +259,7 @@ impl<'a> /*trait*/ QToolTip_showText_s<()> for (&'a QPoint, &'a QString, &'a QWi
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
-     unsafe {_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidget(arg0, arg1, arg2)};
+     unsafe {C_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidget(arg0, arg1, arg2)};
     // return 1;
   }
 }
@@ -312,8 +281,8 @@ impl<'a> /*trait*/ QToolTip_isVisible_s<i8> for () {
   fn isVisible_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolTip9isVisibleEv()};
-    let mut ret = unsafe {_ZN8QToolTip9isVisibleEv()};
-    return ret as i8;
+    let mut ret = unsafe {C_ZN8QToolTip9isVisibleEv()};
+    return ret as i8; // 1
     // return 1;
   }
 }
