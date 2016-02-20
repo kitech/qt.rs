@@ -21,8 +21,16 @@
 extern {}  // 这行还是需要的
 
 pub mod core;
+
+#[cfg(feature = "widgets")]
 pub mod gui;
+#[cfg(feature = "widgets")]
 pub mod widgets;
+
+#[cfg(feature = "network")]
 pub mod network;
+
+#[cfg(feature = "qml")]
 pub mod qml;
+#[cfg(feature = "qml")]
 pub mod quick;

@@ -5,3 +5,9 @@ authors = ["gzleo"]
 
 [dependencies]
 libc = "0.2"
+
+[features]
+default = [ "widgets" ]
+widgets = []
+network = []
+qml = []
