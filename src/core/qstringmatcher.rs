@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qstringmatcher.h
 // dst-file: /src/core/qstringmatcher.rs
 //
@@ -115,13 +115,13 @@ pub trait QStringMatcher_indexIn<RetType> {
 }
 
   // proto:  int QStringMatcher::indexIn(const QChar * str, int length, int from);
-impl<'a> /*trait*/ QStringMatcher_indexIn<i32> for (&'a QChar, i32, i32) {
+impl<'a> /*trait*/ QStringMatcher_indexIn<i32> for (&'a QChar, i32, Option<i32>) {
   fn indexIn(self , rsthis: & QStringMatcher) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 1048)};
     // unsafe{_ZNK14QStringMatcher7indexInEPK5QCharii()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
-    let arg2 = self.2  as c_int;
+    let arg2 = (if self.2.is_none() {0} else {self.2.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK14QStringMatcher7indexInEPK5QCharii(rsthis.qclsinst, arg0, arg1, arg2)};
     return ret as i32; // 1
     // return 1;
@@ -198,12 +198,12 @@ impl<'a> /*trait*/ QStringMatcher_free<()> for () {
 }
 
   // proto:  int QStringMatcher::indexIn(const QString & str, int from);
-impl<'a> /*trait*/ QStringMatcher_indexIn<i32> for (&'a QString, i32) {
+impl<'a> /*trait*/ QStringMatcher_indexIn<i32> for (&'a QString, Option<i32>) {
   fn indexIn(self , rsthis: & QStringMatcher) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 1048)};
     // unsafe{_ZNK14QStringMatcher7indexInERK7QStringi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK14QStringMatcher7indexInERK7QStringi(rsthis.qclsinst, arg0, arg1)};
     return ret as i32; // 1
     // return 1;

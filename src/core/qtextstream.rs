@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qtextstream.h
 // dst-file: /src/core/qtextstream.rs
 //
@@ -331,12 +331,12 @@ pub trait QTextStream_readLineInto<RetType> {
 }
 
   // proto:  bool QTextStream::readLineInto(QString * line, qint64 maxlen);
-impl<'a> /*trait*/ QTextStream_readLineInto<i8> for (&'a QString, i64) {
+impl<'a> /*trait*/ QTextStream_readLineInto<i8> for (&'a QString, Option<i64>) {
   fn readLineInto(self , rsthis: & QTextStream) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream12readLineIntoEP7QStringx()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_longlong;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_longlong;
     let mut ret = unsafe {C_ZN11QTextStream12readLineIntoEP7QStringx(rsthis.qclsinst, arg0, arg1)};
     return ret as i8; // 1
     // return 1;
@@ -968,11 +968,11 @@ pub trait QTextStream_readLine<RetType> {
 }
 
   // proto:  QString QTextStream::readLine(qint64 maxlen);
-impl<'a> /*trait*/ QTextStream_readLine<QString> for (i64) {
+impl<'a> /*trait*/ QTextStream_readLine<QString> for (Option<i64>) {
   fn readLine(self , rsthis: & QTextStream) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream8readLineEx()};
-    let arg0 = self  as c_longlong;
+    let arg0 = (if self.is_none() {0} else {self.unwrap()})  as c_longlong;
     let mut ret = unsafe {C_ZN11QTextStream8readLineEx(rsthis.qclsinst, arg0)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;

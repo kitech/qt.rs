@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qsystemtrayicon.h
 // dst-file: /src/widgets/qsystemtrayicon.rs
 //
@@ -182,14 +182,14 @@ pub trait QSystemTrayIcon_new {
 }
 
   // proto:  void QSystemTrayIcon::QSystemTrayIcon(const QIcon & icon, QObject * parent);
-impl<'a> /*trait*/ QSystemTrayIcon_new for (&'a QIcon, &'a QObject) {
+impl<'a> /*trait*/ QSystemTrayIcon_new for (&'a QIcon, Option<&'a QObject>) {
   fn new(self) -> QSystemTrayIcon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSystemTrayIconC2ERK5QIconP7QObject()};
     let ctysz: c_int = unsafe{QSystemTrayIcon_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN15QSystemTrayIconC2ERK5QIconP7QObject(arg0, arg1)};
     let rsthis = QSystemTrayIcon{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -290,13 +290,13 @@ impl<'a> /*trait*/ QSystemTrayIcon_isVisible<i8> for () {
 }
 
   // proto:  void QSystemTrayIcon::QSystemTrayIcon(QObject * parent);
-impl<'a> /*trait*/ QSystemTrayIcon_new for (&'a QObject) {
+impl<'a> /*trait*/ QSystemTrayIcon_new for (Option<&'a QObject>) {
   fn new(self) -> QSystemTrayIcon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSystemTrayIconC2EP7QObject()};
     let ctysz: c_int = unsafe{QSystemTrayIcon_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN15QSystemTrayIconC2EP7QObject(arg0)};
     let rsthis = QSystemTrayIcon{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;

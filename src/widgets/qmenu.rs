@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qmenu.h
 // dst-file: /src/widgets/qmenu.rs
 //
@@ -513,12 +513,12 @@ pub trait QMenu_exec<RetType> {
 }
 
   // proto:  QAction * QMenu::exec(const QPoint & pos, QAction * at);
-impl<'a> /*trait*/ QMenu_exec<QAction> for (&'a QPoint, &'a QAction) {
+impl<'a> /*trait*/ QMenu_exec<QAction> for (&'a QPoint, Option<&'a QAction>) {
   fn exec(self , rsthis: & QMenu) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu4execERK6QPointP7QAction()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZN5QMenu4execERK6QPointP7QAction(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
@@ -621,14 +621,14 @@ impl<'a> /*trait*/ QMenu_hideTearOffMenu<()> for () {
 }
 
   // proto:  QAction * QMenu::addAction(const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut);
-impl<'a> /*trait*/ QMenu_addAction<QAction> for (&'a QString, &'a QObject, &'a  String, &'a QKeySequence) {
+impl<'a> /*trait*/ QMenu_addAction<QAction> for (&'a QString, &'a QObject, &'a  String, Option<&'a QKeySequence>) {
   fn addAction(self , rsthis: & QMenu) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu9addActionERK7QStringPK7QObjectPKcRK12QKeySequence()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.as_ptr()  as *mut c_char;
-    let arg3 = self.3.qclsinst  as *mut c_void;
+    let arg3 = (if self.3.is_none() {0} else {self.3.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZN5QMenu9addActionERK7QStringPK7QObjectPKcRK12QKeySequence(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
     let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
@@ -650,13 +650,13 @@ pub trait QMenu_new {
 }
 
   // proto:  void QMenu::QMenu(QWidget * parent);
-impl<'a> /*trait*/ QMenu_new for (&'a QWidget) {
+impl<'a> /*trait*/ QMenu_new for (Option<&'a QWidget>) {
   fn new(self) -> QMenu {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenuC2EP7QWidget()};
     let ctysz: c_int = unsafe{QMenu_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN5QMenuC2EP7QWidget(arg0)};
     let rsthis = QMenu{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -771,7 +771,7 @@ impl<'a> /*trait*/ QMenu_isEmpty<i8> for () {
 }
 
   // proto:  QAction * QMenu::addAction(const QIcon & icon, const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut);
-impl<'a> /*trait*/ QMenu_addAction<QAction> for (&'a QIcon, &'a QString, &'a QObject, &'a  String, &'a QKeySequence) {
+impl<'a> /*trait*/ QMenu_addAction<QAction> for (&'a QIcon, &'a QString, &'a QObject, &'a  String, Option<&'a QKeySequence>) {
   fn addAction(self , rsthis: & QMenu) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu9addActionERK5QIconRK7QStringPK7QObjectPKcRK12QKeySequence()};
@@ -779,7 +779,7 @@ impl<'a> /*trait*/ QMenu_addAction<QAction> for (&'a QIcon, &'a QString, &'a QOb
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let arg3 = self.3.as_ptr()  as *mut c_char;
-    let arg4 = self.4.qclsinst  as *mut c_void;
+    let arg4 = (if self.4.is_none() {0} else {self.4.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZN5QMenu9addActionERK5QIconRK7QStringPK7QObjectPKcRK12QKeySequence(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4)};
     let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
@@ -813,14 +813,14 @@ impl<'a> /*trait*/ QMenu_actionGeometry<QRect> for (&'a QAction) {
 }
 
   // proto:  void QMenu::QMenu(const QString & title, QWidget * parent);
-impl<'a> /*trait*/ QMenu_new for (&'a QString, &'a QWidget) {
+impl<'a> /*trait*/ QMenu_new for (&'a QString, Option<&'a QWidget>) {
   fn new(self) -> QMenu {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenuC2ERK7QStringP7QWidget()};
     let ctysz: c_int = unsafe{QMenu_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN5QMenuC2ERK7QStringP7QWidget(arg0, arg1)};
     let rsthis = QMenu{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -1073,12 +1073,12 @@ pub trait QMenu_popup<RetType> {
 }
 
   // proto:  void QMenu::popup(const QPoint & pos, QAction * at);
-impl<'a> /*trait*/ QMenu_popup<()> for (&'a QPoint, &'a QAction) {
+impl<'a> /*trait*/ QMenu_popup<()> for (&'a QPoint, Option<&'a QAction>) {
   fn popup(self , rsthis: & QMenu) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu5popupERK6QPointP7QAction()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap().qclsinst})  as *mut c_void;
      unsafe {C_ZN5QMenu5popupERK6QPointP7QAction(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }

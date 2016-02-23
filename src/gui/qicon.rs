@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtGui/qicon.h
 // dst-file: /src/gui/qicon.rs
 //
@@ -260,12 +260,12 @@ pub trait QIcon_fromTheme_s<RetType> {
 }
 
   // proto: static QIcon QIcon::fromTheme(const QString & name, const QIcon & fallback);
-impl<'a> /*trait*/ QIcon_fromTheme_s<QIcon> for (&'a QString, &'a QIcon) {
+impl<'a> /*trait*/ QIcon_fromTheme_s<QIcon> for (&'a QString, Option<&'a QIcon>) {
   fn fromTheme_s(self ) -> QIcon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QIcon9fromThemeERK7QStringRKS_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {QIcon::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZN5QIcon9fromThemeERK7QStringRKS_(arg0, arg1)};
     let mut ret1 = QIcon::inheritFrom(ret as u64);
     return ret1;

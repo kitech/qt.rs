@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qlcdnumber.h
 // dst-file: /src/widgets/qlcdnumber.rs
 //
@@ -288,14 +288,14 @@ pub trait QLCDNumber_new {
 }
 
   // proto:  void QLCDNumber::QLCDNumber(uint numDigits, QWidget * parent);
-impl<'a> /*trait*/ QLCDNumber_new for (u32, &'a QWidget) {
+impl<'a> /*trait*/ QLCDNumber_new for (u32, Option<&'a QWidget>) {
   fn new(self) -> QLCDNumber {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QLCDNumberC2EjP7QWidget()};
     let ctysz: c_int = unsafe{QLCDNumber_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_uint;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN10QLCDNumberC2EjP7QWidget(arg0, arg1)};
     let rsthis = QLCDNumber{qbase: QFrame::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -351,13 +351,13 @@ impl<'a> /*trait*/ QLCDNumber_display<()> for (&'a QString) {
 }
 
   // proto:  void QLCDNumber::QLCDNumber(QWidget * parent);
-impl<'a> /*trait*/ QLCDNumber_new for (&'a QWidget) {
+impl<'a> /*trait*/ QLCDNumber_new for (Option<&'a QWidget>) {
   fn new(self) -> QLCDNumber {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QLCDNumberC2EP7QWidget()};
     let ctysz: c_int = unsafe{QLCDNumber_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN10QLCDNumberC2EP7QWidget(arg0)};
     let rsthis = QLCDNumber{qbase: QFrame::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtGui/qimagereader.h
 // dst-file: /src/gui/qimagereader.rs
 //
@@ -946,14 +946,14 @@ pub trait QImageReader_new {
 }
 
   // proto:  void QImageReader::QImageReader(const QString & fileName, const QByteArray & format);
-impl<'a> /*trait*/ QImageReader_new for (&'a QString, &'a QByteArray) {
+impl<'a> /*trait*/ QImageReader_new for (&'a QString, Option<&'a QByteArray>) {
   fn new(self) -> QImageReader {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageReaderC2ERK7QStringRK10QByteArray()};
     let ctysz: c_int = unsafe{QImageReader_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {QByteArray::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN12QImageReaderC2ERK7QStringRK10QByteArray(arg0, arg1)};
     let rsthis = QImageReader{qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -1067,14 +1067,14 @@ impl<'a> /*trait*/ QImageReader_setQuality<()> for (i32) {
 }
 
   // proto:  void QImageReader::QImageReader(QIODevice * device, const QByteArray & format);
-impl<'a> /*trait*/ QImageReader_new for (&'a QIODevice, &'a QByteArray) {
+impl<'a> /*trait*/ QImageReader_new for (&'a QIODevice, Option<&'a QByteArray>) {
   fn new(self) -> QImageReader {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageReaderC2EP9QIODeviceRK10QByteArray()};
     let ctysz: c_int = unsafe{QImageReader_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {QByteArray::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN12QImageReaderC2EP9QIODeviceRK10QByteArray(arg0, arg1)};
     let rsthis = QImageReader{qclsinst: qthis, ..Default::default()};
     return rsthis;

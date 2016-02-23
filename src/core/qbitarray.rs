@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qbitarray.h
 // dst-file: /src/core/qbitarray.rs
 //
@@ -115,14 +115,14 @@ pub trait QBitArray_new {
 }
 
   // proto:  void QBitArray::QBitArray(int size, bool val);
-impl<'a> /*trait*/ QBitArray_new for (i32, i8) {
+impl<'a> /*trait*/ QBitArray_new for (i32, Option<i8>) {
   fn new(self) -> QBitArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QBitArrayC2Eib()};
     let ctysz: c_int = unsafe{QBitArray_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_int;
-    let arg1 = self.1  as c_char;
+    let arg1 = (if self.1.is_none() {false as i8} else {self.1.unwrap()})  as c_char;
     let qthis: u64 = unsafe {C_ZN9QBitArrayC2Eib(arg0, arg1)};
     let rsthis = QBitArray{qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -555,12 +555,12 @@ impl<'a> /*trait*/ QBitArray_isDetached<i8> for () {
 }
 
   // proto:  bool QBitArray::fill(bool val, int size);
-impl<'a> /*trait*/ QBitArray_fill<i8> for (i8, i32) {
+impl<'a> /*trait*/ QBitArray_fill<i8> for (i8, Option<i32>) {
   fn fill(self , rsthis: & QBitArray) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QBitArray4fillEbi()};
     let arg0 = self.0  as c_char;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {-1} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN9QBitArray4fillEbi(rsthis.qclsinst, arg0, arg1)};
     return ret as i8; // 1
     // return 1;

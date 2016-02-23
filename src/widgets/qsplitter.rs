@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qsplitter.h
 // dst-file: /src/widgets/qsplitter.rs
 //
@@ -312,13 +312,13 @@ pub trait QSplitter_new {
 }
 
   // proto:  void QSplitter::QSplitter(QWidget * parent);
-impl<'a> /*trait*/ QSplitter_new for (&'a QWidget) {
+impl<'a> /*trait*/ QSplitter_new for (Option<&'a QWidget>) {
   fn new(self) -> QSplitter {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QSplitterC2EP7QWidget()};
     let ctysz: c_int = unsafe{QSplitter_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN9QSplitterC2EP7QWidget(arg0)};
     let rsthis = QSplitter{qbase: QFrame::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -410,11 +410,11 @@ pub trait QSplitter_setOpaqueResize<RetType> {
 }
 
   // proto:  void QSplitter::setOpaqueResize(bool opaque);
-impl<'a> /*trait*/ QSplitter_setOpaqueResize<()> for (i8) {
+impl<'a> /*trait*/ QSplitter_setOpaqueResize<()> for (Option<i8>) {
   fn setOpaqueResize(self , rsthis: & QSplitter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QSplitter15setOpaqueResizeEb()};
-    let arg0 = self  as c_char;
+    let arg0 = (if self.is_none() {true as i8} else {self.unwrap()})  as c_char;
      unsafe {C_ZN9QSplitter15setOpaqueResizeEb(rsthis.qclsinst, arg0)};
     // return 1;
   }

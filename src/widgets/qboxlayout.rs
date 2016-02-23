@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qboxlayout.h
 // dst-file: /src/widgets/qboxlayout.rs
 //
@@ -436,12 +436,12 @@ pub trait QBoxLayout_insertStretch<RetType> {
 }
 
   // proto:  void QBoxLayout::insertStretch(int index, int stretch);
-impl<'a> /*trait*/ QBoxLayout_insertStretch<()> for (i32, i32) {
+impl<'a> /*trait*/ QBoxLayout_insertStretch<()> for (i32, Option<i32>) {
   fn insertStretch(self , rsthis: & QBoxLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QBoxLayout13insertStretchEii()};
     let arg0 = self.0  as c_int;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_int;
      unsafe {C_ZN10QBoxLayout13insertStretchEii(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
@@ -460,12 +460,12 @@ pub trait QBoxLayout_addLayout<RetType> {
 }
 
   // proto:  void QBoxLayout::addLayout(QLayout * layout, int stretch);
-impl<'a> /*trait*/ QBoxLayout_addLayout<()> for (&'a QLayout, i32) {
+impl<'a> /*trait*/ QBoxLayout_addLayout<()> for (&'a QLayout, Option<i32>) {
   fn addLayout(self , rsthis: & QBoxLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QBoxLayout9addLayoutEP7QLayouti()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_int;
      unsafe {C_ZN10QBoxLayout9addLayoutEP7QLayouti(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
@@ -554,11 +554,11 @@ pub trait QBoxLayout_addStretch<RetType> {
 }
 
   // proto:  void QBoxLayout::addStretch(int stretch);
-impl<'a> /*trait*/ QBoxLayout_addStretch<()> for (i32) {
+impl<'a> /*trait*/ QBoxLayout_addStretch<()> for (Option<i32>) {
   fn addStretch(self , rsthis: & QBoxLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QBoxLayout10addStretchEi()};
-    let arg0 = self  as c_int;
+    let arg0 = (if self.is_none() {0} else {self.unwrap()})  as c_int;
      unsafe {C_ZN10QBoxLayout10addStretchEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
@@ -577,13 +577,13 @@ pub trait QBoxLayout_insertLayout<RetType> {
 }
 
   // proto:  void QBoxLayout::insertLayout(int index, QLayout * layout, int stretch);
-impl<'a> /*trait*/ QBoxLayout_insertLayout<()> for (i32, &'a QLayout, i32) {
+impl<'a> /*trait*/ QBoxLayout_insertLayout<()> for (i32, &'a QLayout, Option<i32>) {
   fn insertLayout(self , rsthis: & QBoxLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QBoxLayout12insertLayoutEiP7QLayouti()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2  as c_int;
+    let arg2 = (if self.2.is_none() {0} else {self.2.unwrap()})  as c_int;
      unsafe {C_ZN10QBoxLayout12insertLayoutEiP7QLayouti(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qmetaobject.h
 // dst-file: /src/core/qmetaobject.rs
 //
@@ -311,12 +311,12 @@ pub trait QMetaEnum_keyToValue<RetType> {
 }
 
   // proto:  int QMetaEnum::keyToValue(const char * key, bool * ok);
-impl<'a> /*trait*/ QMetaEnum_keyToValue<i32> for (&'a  String, &'a mut Vec<i8>) {
+impl<'a> /*trait*/ QMetaEnum_keyToValue<i32> for (&'a  String, Option<&'a mut Vec<i8>>) {
   fn keyToValue(self , rsthis: & QMetaEnum) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMetaEnum10keyToValueEPKcPb()};
     let arg0 = self.0.as_ptr()  as *mut c_char;
-    let arg1 = self.1.as_ptr()  as *mut c_char;
+    let arg1 = (if self.1.is_none() {0 as *const i8} else {self.1.unwrap().as_ptr()})  as *mut c_char;
     let mut ret = unsafe {C_ZNK9QMetaEnum10keyToValueEPKcPb(rsthis.qclsinst, arg0, arg1)};
     return ret as i32; // 1
     // return 1;
@@ -412,12 +412,12 @@ pub trait QMetaEnum_keysToValue<RetType> {
 }
 
   // proto:  int QMetaEnum::keysToValue(const char * keys, bool * ok);
-impl<'a> /*trait*/ QMetaEnum_keysToValue<i32> for (&'a  String, &'a mut Vec<i8>) {
+impl<'a> /*trait*/ QMetaEnum_keysToValue<i32> for (&'a  String, Option<&'a mut Vec<i8>>) {
   fn keysToValue(self , rsthis: & QMetaEnum) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMetaEnum11keysToValueEPKcPb()};
     let arg0 = self.0.as_ptr()  as *mut c_char;
-    let arg1 = self.1.as_ptr()  as *mut c_char;
+    let arg1 = (if self.1.is_none() {0 as *const i8} else {self.1.unwrap().as_ptr()})  as *mut c_char;
     let mut ret = unsafe {C_ZNK9QMetaEnum11keysToValueEPKcPb(rsthis.qclsinst, arg0, arg1)};
     return ret as i32; // 1
     // return 1;
@@ -1194,11 +1194,11 @@ pub trait QMetaProperty_isStored<RetType> {
 }
 
   // proto:  bool QMetaProperty::isStored(const QObject * obj);
-impl<'a> /*trait*/ QMetaProperty_isStored<i8> for (&'a QObject) {
+impl<'a> /*trait*/ QMetaProperty_isStored<i8> for (Option<&'a QObject>) {
   fn isStored(self , rsthis: & QMetaProperty) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMetaProperty8isStoredEPK7QObject()};
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZNK13QMetaProperty8isStoredEPK7QObject(rsthis.qclsinst, arg0)};
     return ret as i8; // 1
     // return 1;
@@ -1290,11 +1290,11 @@ pub trait QMetaProperty_isEditable<RetType> {
 }
 
   // proto:  bool QMetaProperty::isEditable(const QObject * obj);
-impl<'a> /*trait*/ QMetaProperty_isEditable<i8> for (&'a QObject) {
+impl<'a> /*trait*/ QMetaProperty_isEditable<i8> for (Option<&'a QObject>) {
   fn isEditable(self , rsthis: & QMetaProperty) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMetaProperty10isEditableEPK7QObject()};
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZNK13QMetaProperty10isEditableEPK7QObject(rsthis.qclsinst, arg0)};
     return ret as i8; // 1
     // return 1;
@@ -1524,11 +1524,11 @@ pub trait QMetaProperty_isUser<RetType> {
 }
 
   // proto:  bool QMetaProperty::isUser(const QObject * obj);
-impl<'a> /*trait*/ QMetaProperty_isUser<i8> for (&'a QObject) {
+impl<'a> /*trait*/ QMetaProperty_isUser<i8> for (Option<&'a QObject>) {
   fn isUser(self , rsthis: & QMetaProperty) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMetaProperty6isUserEPK7QObject()};
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZNK13QMetaProperty6isUserEPK7QObject(rsthis.qclsinst, arg0)};
     return ret as i8; // 1
     // return 1;
@@ -1665,11 +1665,11 @@ pub trait QMetaProperty_isScriptable<RetType> {
 }
 
   // proto:  bool QMetaProperty::isScriptable(const QObject * obj);
-impl<'a> /*trait*/ QMetaProperty_isScriptable<i8> for (&'a QObject) {
+impl<'a> /*trait*/ QMetaProperty_isScriptable<i8> for (Option<&'a QObject>) {
   fn isScriptable(self , rsthis: & QMetaProperty) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMetaProperty12isScriptableEPK7QObject()};
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZNK13QMetaProperty12isScriptableEPK7QObject(rsthis.qclsinst, arg0)};
     return ret as i8; // 1
     // return 1;
@@ -1738,11 +1738,11 @@ pub trait QMetaProperty_isDesignable<RetType> {
 }
 
   // proto:  bool QMetaProperty::isDesignable(const QObject * obj);
-impl<'a> /*trait*/ QMetaProperty_isDesignable<i8> for (&'a QObject) {
+impl<'a> /*trait*/ QMetaProperty_isDesignable<i8> for (Option<&'a QObject>) {
   fn isDesignable(self , rsthis: & QMetaProperty) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMetaProperty12isDesignableEPK7QObject()};
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZNK13QMetaProperty12isDesignableEPK7QObject(rsthis.qclsinst, arg0)};
     return ret as i8; // 1
     // return 1;

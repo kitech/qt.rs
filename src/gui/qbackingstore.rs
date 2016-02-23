@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtGui/qbackingstore.h
 // dst-file: /src/gui/qbackingstore.rs
 //
@@ -255,13 +255,13 @@ pub trait QBackingStore_flush<RetType> {
 }
 
   // proto:  void QBackingStore::flush(const QRegion & region, QWindow * window, const QPoint & offset);
-impl<'a> /*trait*/ QBackingStore_flush<()> for (&'a QRegion, &'a QWindow, &'a QPoint) {
+impl<'a> /*trait*/ QBackingStore_flush<()> for (&'a QRegion, Option<&'a QWindow>, Option<&'a QPoint>) {
   fn flush(self , rsthis: & QBackingStore) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QBackingStore5flushERK7QRegionP7QWindowRK6QPoint()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap().qclsinst})  as *mut c_void;
+    let arg2 = (if self.2.is_none() {QPoint::new(()).qclsinst} else {self.2.unwrap().qclsinst})  as *mut c_void;
      unsafe {C_ZN13QBackingStore5flushERK7QRegionP7QWindowRK6QPoint(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }

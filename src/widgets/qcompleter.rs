@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qcompleter.h
 // dst-file: /src/widgets/qcompleter.rs
 //
@@ -144,13 +144,13 @@ pub trait QCompleter_new {
 }
 
   // proto:  void QCompleter::QCompleter(QObject * parent);
-impl<'a> /*trait*/ QCompleter_new for (&'a QObject) {
+impl<'a> /*trait*/ QCompleter_new for (Option<&'a QObject>) {
   fn new(self) -> QCompleter {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QCompleterC2EP7QObject()};
     let ctysz: c_int = unsafe{QCompleter_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN10QCompleterC2EP7QObject(arg0)};
     let rsthis = QCompleter{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -219,11 +219,11 @@ pub trait QCompleter_complete<RetType> {
 }
 
   // proto:  void QCompleter::complete(const QRect & rect);
-impl<'a> /*trait*/ QCompleter_complete<()> for (&'a QRect) {
+impl<'a> /*trait*/ QCompleter_complete<()> for (Option<&'a QRect>) {
   fn complete(self , rsthis: & QCompleter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QCompleter8completeERK5QRect()};
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {QRect::new(()).qclsinst} else {self.unwrap().qclsinst})  as *mut c_void;
      unsafe {C_ZN10QCompleter8completeERK5QRect(rsthis.qclsinst, arg0)};
     // return 1;
   }
@@ -276,14 +276,14 @@ impl<'a> /*trait*/ QCompleter_completionCount<i32> for () {
 }
 
   // proto:  void QCompleter::QCompleter(const QStringList & completions, QObject * parent);
-impl<'a> /*trait*/ QCompleter_new for (&'a QStringList, &'a QObject) {
+impl<'a> /*trait*/ QCompleter_new for (&'a QStringList, Option<&'a QObject>) {
   fn new(self) -> QCompleter {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QCompleterC2ERK11QStringListP7QObject()};
     let ctysz: c_int = unsafe{QCompleter_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN10QCompleterC2ERK11QStringListP7QObject(arg0, arg1)};
     let rsthis = QCompleter{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -691,14 +691,14 @@ impl<'a> /*trait*/ QCompleter_wrapAround<i8> for () {
 }
 
   // proto:  void QCompleter::QCompleter(QAbstractItemModel * model, QObject * parent);
-impl<'a> /*trait*/ QCompleter_new for (&'a QAbstractItemModel, &'a QObject) {
+impl<'a> /*trait*/ QCompleter_new for (&'a QAbstractItemModel, Option<&'a QObject>) {
   fn new(self) -> QCompleter {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QCompleterC2EP18QAbstractItemModelP7QObject()};
     let ctysz: c_int = unsafe{QCompleter_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN10QCompleterC2EP18QAbstractItemModelP7QObject(arg0, arg1)};
     let rsthis = QCompleter{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;

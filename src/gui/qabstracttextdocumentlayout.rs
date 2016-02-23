@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtGui/qabstracttextdocumentlayout.h
 // dst-file: /src/gui/qabstracttextdocumentlayout.rs
 //
@@ -77,7 +77,6 @@ extern {
   // proto:  QRectF QAbstractTextDocumentLayout::blockBoundingRect(const QTextBlock & block);
   fn C_ZNK27QAbstractTextDocumentLayout17blockBoundingRectERK10QTextBlock(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   fn QAbstractTextDocumentLayout_SlotProxy_connect__ZN27QAbstractTextDocumentLayout16pageCountChangedEi(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QAbstractTextDocumentLayout_SlotProxy_connect__ZN27QAbstractTextDocumentLayout6updateERK6QRectF(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QAbstractTextDocumentLayout_SlotProxy_connect__ZN27QAbstractTextDocumentLayout19documentSizeChangedERK6QSizeF(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QAbstractTextDocumentLayout_SlotProxy_connect__ZN27QAbstractTextDocumentLayout11updateBlockERK10QTextBlock(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
@@ -352,12 +351,12 @@ pub trait QAbstractTextDocumentLayout_unregisterHandler<RetType> {
 }
 
   // proto:  void QAbstractTextDocumentLayout::unregisterHandler(int objectType, QObject * component);
-impl<'a> /*trait*/ QAbstractTextDocumentLayout_unregisterHandler<()> for (i32, &'a QObject) {
+impl<'a> /*trait*/ QAbstractTextDocumentLayout_unregisterHandler<()> for (i32, Option<&'a QObject>) {
   fn unregisterHandler(self , rsthis: & QAbstractTextDocumentLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QAbstractTextDocumentLayout17unregisterHandlerEiP7QObject()};
     let arg0 = self.0  as c_int;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap().qclsinst})  as *mut c_void;
      unsafe {C_ZN27QAbstractTextDocumentLayout17unregisterHandlerEiP7QObject(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
@@ -639,49 +638,13 @@ impl /* trait */ QAbstractTextDocumentLayout_pageCountChanged_signal_connect for
     unsafe {QAbstractTextDocumentLayout_SlotProxy_connect__ZN27QAbstractTextDocumentLayout16pageCountChangedEi(arg0, arg1, arg2)};
   }
 }
-// update(const class QRectF &)
-extern fn QAbstractTextDocumentLayout_update_signal_connect_cb_1(rsfptr:fn(QRectF), arg0: *mut c_void) {
-  println!("{}:{}", file!(), line!());
-  let rsarg0 = QRectF::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
-}
-extern fn QAbstractTextDocumentLayout_update_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn(QRectF)>, arg0: *mut c_void) {
-  println!("{}:{}", file!(), line!());
-  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  let rsarg0 = QRectF::inheritFrom(arg0 as u64);
-  // rsfptr(rsarg0);
-  unsafe{(*rsfptr_raw)(rsarg0)};
-}
-impl /* trait */ QAbstractTextDocumentLayout_update_signal_connect for fn(QRectF) {
-  fn connect(self, sigthis: QAbstractTextDocumentLayout_update_signal) {
-    // do smth...
-    // self as u64; // error for Fn, Ok for fn
-    self as *mut c_void as u64;
-    self as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QAbstractTextDocumentLayout_update_signal_connect_cb_1 as *mut c_void;
-    let arg2 = self as *mut c_void;
-    unsafe {QAbstractTextDocumentLayout_SlotProxy_connect__ZN27QAbstractTextDocumentLayout6updateERK6QRectF(arg0, arg1, arg2)};
-  }
-}
-impl /* trait */ QAbstractTextDocumentLayout_update_signal_connect for Box<Fn(QRectF)> {
-  fn connect(self, sigthis: QAbstractTextDocumentLayout_update_signal) {
-    // do smth...
-    // Box::into_raw(self) as u64;
-    // Box::into_raw(self) as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QAbstractTextDocumentLayout_update_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
-    unsafe {QAbstractTextDocumentLayout_SlotProxy_connect__ZN27QAbstractTextDocumentLayout6updateERK6QRectF(arg0, arg1, arg2)};
-  }
-}
 // documentSizeChanged(const class QSizeF &)
-extern fn QAbstractTextDocumentLayout_documentSizeChanged_signal_connect_cb_2(rsfptr:fn(QSizeF), arg0: *mut c_void) {
+extern fn QAbstractTextDocumentLayout_documentSizeChanged_signal_connect_cb_1(rsfptr:fn(QSizeF), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsarg0 = QSizeF::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QAbstractTextDocumentLayout_documentSizeChanged_signal_connect_cb_box_2(rsfptr_raw:*mut Box<Fn(QSizeF)>, arg0: *mut c_void) {
+extern fn QAbstractTextDocumentLayout_documentSizeChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn(QSizeF)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QSizeF::inheritFrom(arg0 as u64);
@@ -695,7 +658,7 @@ impl /* trait */ QAbstractTextDocumentLayout_documentSizeChanged_signal_connect 
     self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QAbstractTextDocumentLayout_documentSizeChanged_signal_connect_cb_2 as *mut c_void;
+    let arg1 = QAbstractTextDocumentLayout_documentSizeChanged_signal_connect_cb_1 as *mut c_void;
     let arg2 = self as *mut c_void;
     unsafe {QAbstractTextDocumentLayout_SlotProxy_connect__ZN27QAbstractTextDocumentLayout19documentSizeChangedERK6QSizeF(arg0, arg1, arg2)};
   }
@@ -706,18 +669,18 @@ impl /* trait */ QAbstractTextDocumentLayout_documentSizeChanged_signal_connect 
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QAbstractTextDocumentLayout_documentSizeChanged_signal_connect_cb_box_2 as *mut c_void;
+    let arg1 = QAbstractTextDocumentLayout_documentSizeChanged_signal_connect_cb_box_1 as *mut c_void;
     let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QAbstractTextDocumentLayout_SlotProxy_connect__ZN27QAbstractTextDocumentLayout19documentSizeChangedERK6QSizeF(arg0, arg1, arg2)};
   }
 }
 // updateBlock(const class QTextBlock &)
-extern fn QAbstractTextDocumentLayout_updateBlock_signal_connect_cb_3(rsfptr:fn(QTextBlock), arg0: *mut c_void) {
+extern fn QAbstractTextDocumentLayout_updateBlock_signal_connect_cb_2(rsfptr:fn(QTextBlock), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsarg0 = QTextBlock::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QAbstractTextDocumentLayout_updateBlock_signal_connect_cb_box_3(rsfptr_raw:*mut Box<Fn(QTextBlock)>, arg0: *mut c_void) {
+extern fn QAbstractTextDocumentLayout_updateBlock_signal_connect_cb_box_2(rsfptr_raw:*mut Box<Fn(QTextBlock)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QTextBlock::inheritFrom(arg0 as u64);
@@ -731,7 +694,7 @@ impl /* trait */ QAbstractTextDocumentLayout_updateBlock_signal_connect for fn(Q
     self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QAbstractTextDocumentLayout_updateBlock_signal_connect_cb_3 as *mut c_void;
+    let arg1 = QAbstractTextDocumentLayout_updateBlock_signal_connect_cb_2 as *mut c_void;
     let arg2 = self as *mut c_void;
     unsafe {QAbstractTextDocumentLayout_SlotProxy_connect__ZN27QAbstractTextDocumentLayout11updateBlockERK10QTextBlock(arg0, arg1, arg2)};
   }
@@ -742,7 +705,7 @@ impl /* trait */ QAbstractTextDocumentLayout_updateBlock_signal_connect for Box<
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QAbstractTextDocumentLayout_updateBlock_signal_connect_cb_box_3 as *mut c_void;
+    let arg1 = QAbstractTextDocumentLayout_updateBlock_signal_connect_cb_box_2 as *mut c_void;
     let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QAbstractTextDocumentLayout_SlotProxy_connect__ZN27QAbstractTextDocumentLayout11updateBlockERK10QTextBlock(arg0, arg1, arg2)};
   }

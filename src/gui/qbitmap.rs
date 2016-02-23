@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtGui/qbitmap.h
 // dst-file: /src/gui/qbitmap.rs
 //
@@ -234,14 +234,14 @@ impl<'a> /*trait*/ QBitmap_clear<()> for () {
 }
 
   // proto:  void QBitmap::QBitmap(const QString & fileName, const char * format);
-impl<'a> /*trait*/ QBitmap_new for (&'a QString, &'a  String) {
+impl<'a> /*trait*/ QBitmap_new for (&'a QString, Option<&'a  String>) {
   fn new(self) -> QBitmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QBitmapC2ERK7QStringPKc()};
     let ctysz: c_int = unsafe{QBitmap_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.as_ptr()  as *mut c_char;
+    let arg1 = (if self.1.is_none() {0 as *const u8} else {self.1.unwrap().as_ptr()})  as *mut c_char;
     let qthis: u64 = unsafe {C_ZN7QBitmapC2ERK7QStringPKc(arg0, arg1)};
     let rsthis = QBitmap{qbase: QPixmap::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;

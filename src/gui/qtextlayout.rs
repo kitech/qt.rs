@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtGui/qtextlayout.h
 // dst-file: /src/gui/qtextlayout.rs
 //
@@ -669,12 +669,12 @@ pub trait QTextLine_glyphRuns<RetType> {
 }
 
   // proto:  QList<QGlyphRun> QTextLine::glyphRuns(int from, int length);
-impl<'a> /*trait*/ QTextLine_glyphRuns<u64> for (i32, i32) {
+impl<'a> /*trait*/ QTextLine_glyphRuns<u64> for (Option<i32>, Option<i32>) {
   fn glyphRuns(self , rsthis: & QTextLine) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextLine9glyphRunsEii()};
-    let arg0 = self.0  as c_int;
-    let arg1 = self.1  as c_int;
+    let arg0 = (if self.0.is_none() {-1} else {self.0.unwrap()})  as c_int;
+    let arg1 = (if self.1.is_none() {-1} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK9QTextLine9glyphRunsEii(rsthis.qclsinst, arg0, arg1)};
     return ret as u64; // 5
     // return 1;
@@ -932,7 +932,7 @@ pub trait QTextLayout_new {
 }
 
   // proto:  void QTextLayout::QTextLayout(const QString & text, const QFont & font, QPaintDevice * paintdevice);
-impl<'a> /*trait*/ QTextLayout_new for (&'a QString, &'a QFont, &'a QPaintDevice) {
+impl<'a> /*trait*/ QTextLayout_new for (&'a QString, &'a QFont, Option<&'a QPaintDevice>) {
   fn new(self) -> QTextLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextLayoutC2ERK7QStringRK5QFontP12QPaintDevice()};
@@ -940,7 +940,7 @@ impl<'a> /*trait*/ QTextLayout_new for (&'a QString, &'a QFont, &'a QPaintDevice
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2.qclsinst  as *mut c_void;
+    let arg2 = (if self.2.is_none() {0} else {self.2.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN11QTextLayoutC2ERK7QStringRK5QFontP12QPaintDevice(arg0, arg1, arg2)};
     let rsthis = QTextLayout{qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -1627,12 +1627,12 @@ pub trait QTextLayout_glyphRuns<RetType> {
 }
 
   // proto:  QList<QGlyphRun> QTextLayout::glyphRuns(int from, int length);
-impl<'a> /*trait*/ QTextLayout_glyphRuns<u64> for (i32, i32) {
+impl<'a> /*trait*/ QTextLayout_glyphRuns<u64> for (Option<i32>, Option<i32>) {
   fn glyphRuns(self , rsthis: & QTextLayout) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextLayout9glyphRunsEii()};
-    let arg0 = self.0  as c_int;
-    let arg1 = self.1  as c_int;
+    let arg0 = (if self.0.is_none() {-1} else {self.0.unwrap()})  as c_int;
+    let arg1 = (if self.1.is_none() {-1} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK11QTextLayout9glyphRunsEii(rsthis.qclsinst, arg0, arg1)};
     return ret as u64; // 5
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qfontdialog.h
 // dst-file: /src/widgets/qfontdialog.rs
 //
@@ -100,13 +100,13 @@ pub trait QFontDialog_new {
 }
 
   // proto:  void QFontDialog::QFontDialog(QWidget * parent);
-impl<'a> /*trait*/ QFontDialog_new for (&'a QWidget) {
+impl<'a> /*trait*/ QFontDialog_new for (Option<&'a QWidget>) {
   fn new(self) -> QFontDialog {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFontDialogC2EP7QWidget()};
     let ctysz: c_int = unsafe{QFontDialog_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN11QFontDialogC2EP7QWidget(arg0)};
     let rsthis = QFontDialog{qbase: QDialog::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -139,14 +139,14 @@ impl<'a> /*trait*/ QFontDialog_open<()> for (&'a QObject, &'a  String) {
 }
 
   // proto:  void QFontDialog::QFontDialog(const QFont & initial, QWidget * parent);
-impl<'a> /*trait*/ QFontDialog_new for (&'a QFont, &'a QWidget) {
+impl<'a> /*trait*/ QFontDialog_new for (&'a QFont, Option<&'a QWidget>) {
   fn new(self) -> QFontDialog {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFontDialogC2ERK5QFontP7QWidget()};
     let ctysz: c_int = unsafe{QFontDialog_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN11QFontDialogC2ERK5QFontP7QWidget(arg0, arg1)};
     let rsthis = QFontDialog{qbase: QDialog::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -236,12 +236,12 @@ pub trait QFontDialog_getFont_s<RetType> {
 }
 
   // proto: static QFont QFontDialog::getFont(bool * ok, QWidget * parent);
-impl<'a> /*trait*/ QFontDialog_getFont_s<QFont> for (&'a mut Vec<i8>, &'a QWidget) {
+impl<'a> /*trait*/ QFontDialog_getFont_s<QFont> for (&'a mut Vec<i8>, Option<&'a QWidget>) {
   fn getFont_s(self ) -> QFont {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFontDialog7getFontEPbP7QWidget()};
     let arg0 = self.0.as_ptr()  as *mut c_char;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZN11QFontDialog7getFontEPbP7QWidget(arg0, arg1)};
     let mut ret1 = QFont::inheritFrom(ret as u64);
     return ret1;

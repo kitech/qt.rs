@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qprocess.h
 // dst-file: /src/core/qprocess.rs
 //
@@ -453,14 +453,14 @@ impl<'a> /*trait*/ QProcess_closeWriteChannel<()> for () {
 }
 
   // proto: static bool QProcess::startDetached(const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid);
-impl<'a> /*trait*/ QProcess_startDetached_s<i8> for (&'a QString, &'a QStringList, &'a QString, &'a mut Vec<i64>) {
+impl<'a> /*trait*/ QProcess_startDetached_s<i8> for (&'a QString, &'a QStringList, &'a QString, Option<&'a mut Vec<i64>>) {
   fn startDetached_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcess13startDetachedERK7QStringRK11QStringListS2_Px()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
-    let arg3 = self.3.as_ptr()  as *mut c_longlong;
+    let arg3 = (if self.3.is_none() {0 as *const i64} else {self.3.unwrap().as_ptr()})  as *mut c_longlong;
     let mut ret = unsafe {C_ZN8QProcess13startDetachedERK7QStringRK11QStringListS2_Px(arg0, arg1, arg2, arg3)};
     return ret as i8; // 1
     // return 1;
@@ -565,11 +565,11 @@ pub trait QProcess_waitForBytesWritten<RetType> {
 }
 
   // proto:  bool QProcess::waitForBytesWritten(int msecs);
-impl<'a> /*trait*/ QProcess_waitForBytesWritten<i8> for (i32) {
+impl<'a> /*trait*/ QProcess_waitForBytesWritten<i8> for (Option<i32>) {
   fn waitForBytesWritten(self , rsthis: & QProcess) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcess19waitForBytesWrittenEi()};
-    let arg0 = self  as c_int;
+    let arg0 = (if self.is_none() {30000} else {self.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN8QProcess19waitForBytesWrittenEi(rsthis.qclsinst, arg0)};
     return ret as i8; // 1
     // return 1;
@@ -590,13 +590,13 @@ pub trait QProcess_new {
 }
 
   // proto:  void QProcess::QProcess(QObject * parent);
-impl<'a> /*trait*/ QProcess_new for (&'a QObject) {
+impl<'a> /*trait*/ QProcess_new for (Option<&'a QObject>) {
   fn new(self) -> QProcess {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcessC2EP7QObject()};
     let ctysz: c_int = unsafe{QProcess_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN8QProcessC2EP7QObject(arg0)};
     let rsthis = QProcess{qbase: QIODevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -711,11 +711,11 @@ pub trait QProcess_waitForReadyRead<RetType> {
 }
 
   // proto:  bool QProcess::waitForReadyRead(int msecs);
-impl<'a> /*trait*/ QProcess_waitForReadyRead<i8> for (i32) {
+impl<'a> /*trait*/ QProcess_waitForReadyRead<i8> for (Option<i32>) {
   fn waitForReadyRead(self , rsthis: & QProcess) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcess16waitForReadyReadEi()};
-    let arg0 = self  as c_int;
+    let arg0 = (if self.is_none() {30000} else {self.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN8QProcess16waitForReadyReadEi(rsthis.qclsinst, arg0)};
     return ret as i8; // 1
     // return 1;
@@ -849,11 +849,11 @@ pub trait QProcess_waitForStarted<RetType> {
 }
 
   // proto:  bool QProcess::waitForStarted(int msecs);
-impl<'a> /*trait*/ QProcess_waitForStarted<i8> for (i32) {
+impl<'a> /*trait*/ QProcess_waitForStarted<i8> for (Option<i32>) {
   fn waitForStarted(self , rsthis: & QProcess) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcess14waitForStartedEi()};
-    let arg0 = self  as c_int;
+    let arg0 = (if self.is_none() {30000} else {self.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN8QProcess14waitForStartedEi(rsthis.qclsinst, arg0)};
     return ret as i8; // 1
     // return 1;
@@ -990,11 +990,11 @@ pub trait QProcess_waitForFinished<RetType> {
 }
 
   // proto:  bool QProcess::waitForFinished(int msecs);
-impl<'a> /*trait*/ QProcess_waitForFinished<i8> for (i32) {
+impl<'a> /*trait*/ QProcess_waitForFinished<i8> for (Option<i32>) {
   fn waitForFinished(self , rsthis: & QProcess) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcess15waitForFinishedEi()};
-    let arg0 = self  as c_int;
+    let arg0 = (if self.is_none() {30000} else {self.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN8QProcess15waitForFinishedEi(rsthis.qclsinst, arg0)};
     return ret as i8; // 1
     // return 1;
@@ -1205,12 +1205,12 @@ pub trait QProcessEnvironment_value<RetType> {
 }
 
   // proto:  QString QProcessEnvironment::value(const QString & name, const QString & defaultValue);
-impl<'a> /*trait*/ QProcessEnvironment_value<QString> for (&'a QString, &'a QString) {
+impl<'a> /*trait*/ QProcessEnvironment_value<QString> for (&'a QString, Option<&'a QString>) {
   fn value(self , rsthis: & QProcessEnvironment) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QProcessEnvironment5valueERK7QStringS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {QString::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZNK19QProcessEnvironment5valueERK7QStringS2_(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;

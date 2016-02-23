@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtGui/qguiapplication.h
 // dst-file: /src/gui/qguiapplication.rs
 //
@@ -899,7 +899,7 @@ pub trait QGuiApplication_new {
 }
 
   // proto:  void QGuiApplication::QGuiApplication(int & argc, char ** argv, int );
-impl<'a> /*trait*/ QGuiApplication_new for (&'a mut i32, &'a mut String, i32) {
+impl<'a> /*trait*/ QGuiApplication_new for (&'a mut i32, &'a mut String, Option<i32>) {
   fn new(self) -> QGuiApplication {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplicationC2ERiPPci()};
@@ -907,7 +907,7 @@ impl<'a> /*trait*/ QGuiApplication_new for (&'a mut i32, &'a mut String, i32) {
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as *mut c_int;
     let arg1 = self.1.as_ptr()  as *mut c_char;
-    let arg2 = self.2  as c_int;
+    let arg2 = (if self.2.is_none() {0 as i32} else {self.2.unwrap()})  as c_int;
     let qthis: u64 = unsafe {C_ZN15QGuiApplicationC2ERiPPci(arg0, arg1, arg2)};
     let rsthis = QGuiApplication{qbase: QCoreApplication::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;

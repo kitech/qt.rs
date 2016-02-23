@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtGui/qtextcursor.h
 // dst-file: /src/gui/qtextcursor.rs
 //
@@ -1237,12 +1237,12 @@ impl<'a> /*trait*/ QTextCursor_blockFormat<QTextBlockFormat> for () {
 }
 
   // proto:  void QTextCursor::insertImage(const QImage & image, const QString & name);
-impl<'a> /*trait*/ QTextCursor_insertImage<()> for (&'a QImage, &'a QString) {
+impl<'a> /*trait*/ QTextCursor_insertImage<()> for (&'a QImage, Option<&'a QString>) {
   fn insertImage(self , rsthis: & QTextCursor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursor11insertImageERK6QImageRK7QString()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {QString::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
      unsafe {C_ZN11QTextCursor11insertImageERK6QImageRK7QString(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qcheckbox.h
 // dst-file: /src/widgets/qcheckbox.rs
 //
@@ -186,11 +186,11 @@ pub trait QCheckBox_setTristate<RetType> {
 }
 
   // proto:  void QCheckBox::setTristate(bool y);
-impl<'a> /*trait*/ QCheckBox_setTristate<()> for (i8) {
+impl<'a> /*trait*/ QCheckBox_setTristate<()> for (Option<i8>) {
   fn setTristate(self , rsthis: & QCheckBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QCheckBox11setTristateEb()};
-    let arg0 = self  as c_char;
+    let arg0 = (if self.is_none() {true as i8} else {self.unwrap()})  as c_char;
      unsafe {C_ZN9QCheckBox11setTristateEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
@@ -210,13 +210,13 @@ pub trait QCheckBox_new {
 }
 
   // proto:  void QCheckBox::QCheckBox(QWidget * parent);
-impl<'a> /*trait*/ QCheckBox_new for (&'a QWidget) {
+impl<'a> /*trait*/ QCheckBox_new for (Option<&'a QWidget>) {
   fn new(self) -> QCheckBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QCheckBoxC2EP7QWidget()};
     let ctysz: c_int = unsafe{QCheckBox_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN9QCheckBoxC2EP7QWidget(arg0)};
     let rsthis = QCheckBox{qbase: QAbstractButton::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -248,14 +248,14 @@ impl<'a> /*trait*/ QCheckBox_isTristate<i8> for () {
 }
 
   // proto:  void QCheckBox::QCheckBox(const QString & text, QWidget * parent);
-impl<'a> /*trait*/ QCheckBox_new for (&'a QString, &'a QWidget) {
+impl<'a> /*trait*/ QCheckBox_new for (&'a QString, Option<&'a QWidget>) {
   fn new(self) -> QCheckBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QCheckBoxC2ERK7QStringP7QWidget()};
     let ctysz: c_int = unsafe{QCheckBox_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN9QCheckBoxC2ERK7QStringP7QWidget(arg0, arg1)};
     let rsthis = QCheckBox{qbase: QAbstractButton::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;

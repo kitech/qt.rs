@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qobjectdefs.h
 // dst-file: /src/core/qobjectdefs.rs
 //
@@ -237,14 +237,14 @@ pub trait QGenericReturnArgument_new {
 }
 
   // proto:  void QGenericReturnArgument::QGenericReturnArgument(const char * aName, void * aData);
-impl<'a> /*trait*/ QGenericReturnArgument_new for (&'a  String, *mut c_void) {
+impl<'a> /*trait*/ QGenericReturnArgument_new for (Option<&'a  String>, Option<*mut c_void>) {
   fn new(self) -> QGenericReturnArgument {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN22QGenericReturnArgumentC2EPKcPv()};
     let ctysz: c_int = unsafe{QGenericReturnArgument_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.0.as_ptr()  as *mut c_char;
-    let arg1 = self.1  as *mut c_void;
+    let arg0 = (if self.0.is_none() {0 as *const u8} else {self.0.unwrap().as_ptr()})  as *mut c_char;
+    let arg1 = (if self.1.is_none() {0 as *mut c_void} else {self.1.unwrap()})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN22QGenericReturnArgumentC2EPKcPv(arg0, arg1)};
     let rsthis = QGenericReturnArgument{qbase: QGenericArgument::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -1138,14 +1138,14 @@ pub trait QGenericArgument_new {
 }
 
   // proto:  void QGenericArgument::QGenericArgument(const char * aName, const void * aData);
-impl<'a> /*trait*/ QGenericArgument_new for (&'a  String, *mut c_void) {
+impl<'a> /*trait*/ QGenericArgument_new for (Option<&'a  String>, Option<*mut c_void>) {
   fn new(self) -> QGenericArgument {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QGenericArgumentC2EPKcPKv()};
     let ctysz: c_int = unsafe{QGenericArgument_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.0.as_ptr()  as *mut c_char;
-    let arg1 = self.1  as *mut c_void;
+    let arg0 = (if self.0.is_none() {0 as *const u8} else {self.0.unwrap().as_ptr()})  as *mut c_char;
+    let arg1 = (if self.1.is_none() {0 as *mut c_void} else {self.1.unwrap()})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN16QGenericArgumentC2EPKcPKv(arg0, arg1)};
     let rsthis = QGenericArgument{qclsinst: qthis, ..Default::default()};
     return rsthis;

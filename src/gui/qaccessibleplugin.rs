@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtGui/qaccessibleplugin.h
 // dst-file: /src/gui/qaccessibleplugin.rs
 //
@@ -82,13 +82,13 @@ pub trait QAccessiblePlugin_new {
 }
 
   // proto:  void QAccessiblePlugin::QAccessiblePlugin(QObject * parent);
-impl<'a> /*trait*/ QAccessiblePlugin_new for (&'a QObject) {
+impl<'a> /*trait*/ QAccessiblePlugin_new for (Option<&'a QObject>) {
   fn new(self) -> QAccessiblePlugin {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAccessiblePluginC2EP7QObject()};
     let ctysz: c_int = unsafe{QAccessiblePlugin_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN17QAccessiblePluginC2EP7QObject(arg0)};
     let rsthis = QAccessiblePlugin{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;

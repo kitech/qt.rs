@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qlistwidget.h
 // dst-file: /src/widgets/qlistwidget.rs
 //
@@ -416,14 +416,14 @@ pub trait QListWidgetItem_new {
 }
 
   // proto:  void QListWidgetItem::QListWidgetItem(QListWidget * view, int type);
-impl<'a> /*trait*/ QListWidgetItem_new for (&'a QListWidget, i32) {
+impl<'a> /*trait*/ QListWidgetItem_new for (Option<&'a QListWidget>, Option<i32>) {
   fn new(self) -> QListWidgetItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QListWidgetItemC2EP11QListWidgeti()};
     let ctysz: c_int = unsafe{QListWidgetItem_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
+    let arg0 = (if self.0.is_none() {0} else {self.0.unwrap().qclsinst})  as *mut c_void;
+    let arg1 = (if self.1.is_none() {0 as i32} else {self.1.unwrap()})  as c_int;
     let qthis: u64 = unsafe {C_ZN15QListWidgetItemC2EP11QListWidgeti(arg0, arg1)};
     let rsthis = QListWidgetItem{qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -502,7 +502,7 @@ impl<'a> /*trait*/ QListWidgetItem_type_<i32> for () {
 }
 
   // proto:  void QListWidgetItem::QListWidgetItem(const QIcon & icon, const QString & text, QListWidget * view, int type);
-impl<'a> /*trait*/ QListWidgetItem_new for (&'a QIcon, &'a QString, &'a QListWidget, i32) {
+impl<'a> /*trait*/ QListWidgetItem_new for (&'a QIcon, &'a QString, Option<&'a QListWidget>, Option<i32>) {
   fn new(self) -> QListWidgetItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QListWidgetItemC2ERK5QIconRK7QStringP11QListWidgeti()};
@@ -510,8 +510,8 @@ impl<'a> /*trait*/ QListWidgetItem_new for (&'a QIcon, &'a QString, &'a QListWid
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2.qclsinst  as *mut c_void;
-    let arg3 = self.3  as c_int;
+    let arg2 = (if self.2.is_none() {0} else {self.2.unwrap().qclsinst})  as *mut c_void;
+    let arg3 = (if self.3.is_none() {0 as i32} else {self.3.unwrap()})  as c_int;
     let qthis: u64 = unsafe {C_ZN15QListWidgetItemC2ERK5QIconRK7QStringP11QListWidgeti(arg0, arg1, arg2, arg3)};
     let rsthis = QListWidgetItem{qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -756,15 +756,15 @@ impl<'a> /*trait*/ QListWidgetItem_setText<()> for (&'a QString) {
 }
 
   // proto:  void QListWidgetItem::QListWidgetItem(const QString & text, QListWidget * view, int type);
-impl<'a> /*trait*/ QListWidgetItem_new for (&'a QString, &'a QListWidget, i32) {
+impl<'a> /*trait*/ QListWidgetItem_new for (&'a QString, Option<&'a QListWidget>, Option<i32>) {
   fn new(self) -> QListWidgetItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QListWidgetItemC2ERK7QStringP11QListWidgeti()};
     let ctysz: c_int = unsafe{QListWidgetItem_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2  as c_int;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap().qclsinst})  as *mut c_void;
+    let arg2 = (if self.2.is_none() {0 as i32} else {self.2.unwrap()})  as c_int;
     let qthis: u64 = unsafe {C_ZN15QListWidgetItemC2ERK7QStringP11QListWidgeti(arg0, arg1, arg2)};
     let rsthis = QListWidgetItem{qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -1241,13 +1241,13 @@ pub trait QListWidget_new {
 }
 
   // proto:  void QListWidget::QListWidget(QWidget * parent);
-impl<'a> /*trait*/ QListWidget_new for (&'a QWidget) {
+impl<'a> /*trait*/ QListWidget_new for (Option<&'a QWidget>) {
   fn new(self) -> QListWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QListWidgetC2EP7QWidget()};
     let ctysz: c_int = unsafe{QListWidget_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN11QListWidgetC2EP7QWidget(arg0)};
     let rsthis = QListWidget{qbase: QListView::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;

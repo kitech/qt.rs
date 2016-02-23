@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qcoreapplication.h
 // dst-file: /src/core/qcoreapplication.rs
 //
@@ -172,12 +172,12 @@ pub trait QCoreApplication_sendPostedEvents_s<RetType> {
 }
 
   // proto: static void QCoreApplication::sendPostedEvents(QObject * receiver, int event_type);
-impl<'a> /*trait*/ QCoreApplication_sendPostedEvents_s<()> for (&'a QObject, i32) {
+impl<'a> /*trait*/ QCoreApplication_sendPostedEvents_s<()> for (Option<&'a QObject>, Option<i32>) {
   fn sendPostedEvents_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QCoreApplication16sendPostedEventsEP7QObjecti()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
+    let arg0 = (if self.0.is_none() {0} else {self.0.unwrap().qclsinst})  as *mut c_void;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_int;
      unsafe {C_ZN16QCoreApplication16sendPostedEventsEP7QObjecti(arg0, arg1)};
     // return 1;
   }
@@ -406,13 +406,13 @@ pub trait QCoreApplication_postEvent_s<RetType> {
 }
 
   // proto: static void QCoreApplication::postEvent(QObject * receiver, QEvent * event, int priority);
-impl<'a> /*trait*/ QCoreApplication_postEvent_s<()> for (&'a QObject, &'a QEvent, i32) {
+impl<'a> /*trait*/ QCoreApplication_postEvent_s<()> for (&'a QObject, &'a QEvent, Option<i32>) {
   fn postEvent_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QCoreApplication9postEventEP7QObjectP6QEventi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2  as c_int;
+    let arg2 = (if self.2.is_none() {0 as i32} else {self.2.unwrap()})  as c_int;
      unsafe {C_ZN16QCoreApplication9postEventEP7QObjectP6QEventi(arg0, arg1, arg2)};
     // return 1;
   }
@@ -478,14 +478,14 @@ pub trait QCoreApplication_translate_s<RetType> {
 }
 
   // proto: static QString QCoreApplication::translate(const char * context, const char * key, const char * disambiguation, int n);
-impl<'a> /*trait*/ QCoreApplication_translate_s<QString> for (&'a  String, &'a  String, &'a  String, i32) {
+impl<'a> /*trait*/ QCoreApplication_translate_s<QString> for (&'a  String, &'a  String, Option<&'a  String>, Option<i32>) {
   fn translate_s(self ) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QCoreApplication9translateEPKcS1_S1_i()};
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1.as_ptr()  as *mut c_char;
-    let arg2 = self.2.as_ptr()  as *mut c_char;
-    let arg3 = self.3  as c_int;
+    let arg2 = (if self.2.is_none() {0 as *const u8} else {self.2.unwrap().as_ptr()})  as *mut c_char;
+    let arg3 = (if self.3.is_none() {-1} else {self.3.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN16QCoreApplication9translateEPKcS1_S1_i(arg0, arg1, arg2, arg3)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
@@ -577,11 +577,11 @@ pub trait QCoreApplication_exit_s<RetType> {
 }
 
   // proto: static void QCoreApplication::exit(int retcode);
-impl<'a> /*trait*/ QCoreApplication_exit_s<()> for (i32) {
+impl<'a> /*trait*/ QCoreApplication_exit_s<()> for (Option<i32>) {
   fn exit_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QCoreApplication4exitEi()};
-    let arg0 = self  as c_int;
+    let arg0 = (if self.is_none() {0} else {self.unwrap()})  as c_int;
      unsafe {C_ZN16QCoreApplication4exitEi(arg0)};
     // return 1;
   }
@@ -1067,12 +1067,12 @@ pub trait QCoreApplication_removePostedEvents_s<RetType> {
 }
 
   // proto: static void QCoreApplication::removePostedEvents(QObject * receiver, int eventType);
-impl<'a> /*trait*/ QCoreApplication_removePostedEvents_s<()> for (&'a QObject, i32) {
+impl<'a> /*trait*/ QCoreApplication_removePostedEvents_s<()> for (&'a QObject, Option<i32>) {
   fn removePostedEvents_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QCoreApplication18removePostedEventsEP7QObjecti()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_int;
      unsafe {C_ZN16QCoreApplication18removePostedEventsEP7QObjecti(arg0, arg1)};
     // return 1;
   }
@@ -1116,7 +1116,7 @@ pub trait QCoreApplication_new {
 }
 
   // proto:  void QCoreApplication::QCoreApplication(int & argc, char ** argv, int );
-impl<'a> /*trait*/ QCoreApplication_new for (&'a mut i32, &'a mut String, i32) {
+impl<'a> /*trait*/ QCoreApplication_new for (&'a mut i32, &'a mut String, Option<i32>) {
   fn new(self) -> QCoreApplication {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QCoreApplicationC2ERiPPci()};
@@ -1124,7 +1124,7 @@ impl<'a> /*trait*/ QCoreApplication_new for (&'a mut i32, &'a mut String, i32) {
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as *mut c_int;
     let arg1 = self.1.as_ptr()  as *mut c_char;
-    let arg2 = self.2  as c_int;
+    let arg2 = (if self.2.is_none() {0 as i32} else {self.2.unwrap()})  as c_int;
     let qthis: u64 = unsafe {C_ZN16QCoreApplicationC2ERiPPci(arg0, arg1, arg2)};
     let rsthis = QCoreApplication{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;

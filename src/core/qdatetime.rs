@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qdatetime.h
 // dst-file: /src/core/qdatetime.rs
 //
@@ -567,7 +567,7 @@ pub trait QTime_new {
 }
 
   // proto:  void QTime::QTime(int h, int m, int s, int ms);
-impl<'a> /*trait*/ QTime_new for (i32, i32, i32, i32) {
+impl<'a> /*trait*/ QTime_new for (i32, i32, Option<i32>, Option<i32>) {
   fn new(self) -> QTime {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QTimeC2Eiiii()};
@@ -575,8 +575,8 @@ impl<'a> /*trait*/ QTime_new for (i32, i32, i32, i32) {
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-    let arg2 = self.2  as c_int;
-    let arg3 = self.3  as c_int;
+    let arg2 = (if self.2.is_none() {0} else {self.2.unwrap()})  as c_int;
+    let arg3 = (if self.3.is_none() {0} else {self.3.unwrap()})  as c_int;
     let qthis: u64 = unsafe {C_ZN5QTimeC2Eiiii(arg0, arg1, arg2, arg3)};
     let rsthis = QTime{qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -635,14 +635,14 @@ pub trait QTime_setHMS<RetType> {
 }
 
   // proto:  bool QTime::setHMS(int h, int m, int s, int ms);
-impl<'a> /*trait*/ QTime_setHMS<i8> for (i32, i32, i32, i32) {
+impl<'a> /*trait*/ QTime_setHMS<i8> for (i32, i32, i32, Option<i32>) {
   fn setHMS(self , rsthis: & QTime) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QTime6setHMSEiiii()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as c_int;
-    let arg3 = self.3  as c_int;
+    let arg3 = (if self.3.is_none() {0} else {self.3.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN5QTime6setHMSEiiii(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
     return ret as i8; // 1
     // return 1;
@@ -734,14 +734,14 @@ pub trait QTime_isValid_s<RetType> {
 }
 
   // proto: static bool QTime::isValid(int h, int m, int s, int ms);
-impl<'a> /*trait*/ QTime_isValid_s<i8> for (i32, i32, i32, i32) {
+impl<'a> /*trait*/ QTime_isValid_s<i8> for (i32, i32, i32, Option<i32>) {
   fn isValid_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QTime7isValidEiiii()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as c_int;
-    let arg3 = self.3  as c_int;
+    let arg3 = (if self.3.is_none() {0} else {self.3.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN5QTime7isValidEiiii(arg0, arg1, arg2, arg3)};
     return ret as i8; // 1
     // return 1;
@@ -2017,11 +2017,11 @@ pub trait QDate_weekNumber<RetType> {
 }
 
   // proto:  int QDate::weekNumber(int * yearNum);
-impl<'a> /*trait*/ QDate_weekNumber<i32> for (&'a mut Vec<i32>) {
+impl<'a> /*trait*/ QDate_weekNumber<i32> for (Option<&'a mut Vec<i32>>) {
   fn weekNumber(self , rsthis: & QDate) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDate10weekNumberEPi()};
-    let arg0 = self.as_ptr()  as *mut c_int;
+    let arg0 = (if self.is_none() {0 as *const i32} else {self.unwrap().as_ptr()})  as *mut c_int;
     let mut ret = unsafe {C_ZNK5QDate10weekNumberEPi(rsthis.qclsinst, arg0)};
     return ret as i32; // 1
     // return 1;

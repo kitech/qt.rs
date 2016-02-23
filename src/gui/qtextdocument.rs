@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtGui/qtextdocument.h
 // dst-file: /src/gui/qtextdocument.rs
 //
@@ -480,11 +480,11 @@ pub trait QTextDocument_toHtml<RetType> {
 }
 
   // proto:  QString QTextDocument::toHtml(const QByteArray & encoding);
-impl<'a> /*trait*/ QTextDocument_toHtml<QString> for (&'a QByteArray) {
+impl<'a> /*trait*/ QTextDocument_toHtml<QString> for (Option<&'a QByteArray>) {
   fn toHtml(self , rsthis: & QTextDocument) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument6toHtmlERK10QByteArray()};
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {QByteArray::new(()).qclsinst} else {self.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZNK13QTextDocument6toHtmlERK10QByteArray(rsthis.qclsinst, arg0)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
@@ -672,11 +672,11 @@ pub trait QTextDocument_clone<RetType> {
 }
 
   // proto:  QTextDocument * QTextDocument::clone(QObject * parent);
-impl<'a> /*trait*/ QTextDocument_clone<QTextDocument> for (&'a QObject) {
+impl<'a> /*trait*/ QTextDocument_clone<QTextDocument> for (Option<&'a QObject>) {
   fn clone(self , rsthis: & QTextDocument) -> QTextDocument {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument5cloneEP7QObject()};
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZNK13QTextDocument5cloneEP7QObject(rsthis.qclsinst, arg0)};
     let mut ret1 = QTextDocument::inheritFrom(ret as u64);
     return ret1;
@@ -722,13 +722,13 @@ pub trait QTextDocument_new {
 }
 
   // proto:  void QTextDocument::QTextDocument(QObject * parent);
-impl<'a> /*trait*/ QTextDocument_new for (&'a QObject) {
+impl<'a> /*trait*/ QTextDocument_new for (Option<&'a QObject>) {
   fn new(self) -> QTextDocument {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocumentC2EP7QObject()};
     let ctysz: c_int = unsafe{QTextDocument_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN13QTextDocumentC2EP7QObject(arg0)};
     let rsthis = QTextDocument{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -970,14 +970,14 @@ impl<'a> /*trait*/ QTextDocument_lastBlock<QTextBlock> for () {
 }
 
   // proto:  void QTextDocument::QTextDocument(const QString & text, QObject * parent);
-impl<'a> /*trait*/ QTextDocument_new for (&'a QString, &'a QObject) {
+impl<'a> /*trait*/ QTextDocument_new for (&'a QString, Option<&'a QObject>) {
   fn new(self) -> QTextDocument {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocumentC2ERK7QStringP7QObject()};
     let ctysz: c_int = unsafe{QTextDocument_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN13QTextDocumentC2ERK7QStringP7QObject(arg0, arg1)};
     let rsthis = QTextDocument{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -1431,12 +1431,12 @@ pub trait QTextDocument_drawContents<RetType> {
 }
 
   // proto:  void QTextDocument::drawContents(QPainter * painter, const QRectF & rect);
-impl<'a> /*trait*/ QTextDocument_drawContents<()> for (&'a QPainter, &'a QRectF) {
+impl<'a> /*trait*/ QTextDocument_drawContents<()> for (&'a QPainter, Option<&'a QRectF>) {
   fn drawContents(self , rsthis: & QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocument12drawContentsEP8QPainterRK6QRectF()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {QRectF::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
      unsafe {C_ZN13QTextDocument12drawContentsEP8QPainterRK6QRectF(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
@@ -1935,11 +1935,11 @@ pub trait QTextDocument_setModified<RetType> {
 }
 
   // proto:  void QTextDocument::setModified(bool m);
-impl<'a> /*trait*/ QTextDocument_setModified<()> for (i8) {
+impl<'a> /*trait*/ QTextDocument_setModified<()> for (Option<i8>) {
   fn setModified(self , rsthis: & QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocument11setModifiedEb()};
-    let arg0 = self  as c_char;
+    let arg0 = (if self.is_none() {true as i8} else {self.unwrap()})  as c_char;
      unsafe {C_ZN13QTextDocument11setModifiedEb(rsthis.qclsinst, arg0)};
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtGui/qpolygon.h
 // dst-file: /src/gui/qpolygon.rs
 //
@@ -221,14 +221,14 @@ pub trait QPolygon_putPoints<RetType> {
 }
 
   // proto:  void QPolygon::putPoints(int index, int nPoints, const QPolygon & from, int fromIndex);
-impl<'a> /*trait*/ QPolygon_putPoints<()> for (i32, i32, &'a QPolygon, i32) {
+impl<'a> /*trait*/ QPolygon_putPoints<()> for (i32, i32, &'a QPolygon, Option<i32>) {
   fn putPoints(self , rsthis: & QPolygon) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPolygon9putPointsEiiRKS_i()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
-    let arg3 = self.3  as c_int;
+    let arg3 = (if self.3.is_none() {0} else {self.3.unwrap()})  as c_int;
      unsafe {C_ZN8QPolygon9putPointsEiiRKS_i(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
     // return 1;
   }
@@ -594,14 +594,14 @@ impl<'a> /*trait*/ QPolygon_new for () {
 }
 
   // proto:  void QPolygon::QPolygon(const QRect & r, bool closed);
-impl<'a> /*trait*/ QPolygon_new for (&'a QRect, i8) {
+impl<'a> /*trait*/ QPolygon_new for (&'a QRect, Option<i8>) {
   fn new(self) -> QPolygon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPolygonC2ERK5QRectb()};
     let ctysz: c_int = unsafe{QPolygon_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_char;
+    let arg1 = (if self.1.is_none() {false as i8} else {self.1.unwrap()})  as c_char;
     let qthis: u64 = unsafe {C_ZN8QPolygonC2ERK5QRectb(arg0, arg1)};
     let rsthis = QPolygon{qclsinst: qthis, ..Default::default()};
     return rsthis;

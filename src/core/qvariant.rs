@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qvariant.h
 // dst-file: /src/core/qvariant.rs
 //
@@ -336,11 +336,11 @@ pub trait QVariant_toDouble<RetType> {
 }
 
   // proto:  double QVariant::toDouble(bool * ok);
-impl<'a> /*trait*/ QVariant_toDouble<f64> for (&'a mut Vec<i8>) {
+impl<'a> /*trait*/ QVariant_toDouble<f64> for (Option<&'a mut Vec<i8>>) {
   fn toDouble(self , rsthis: & QVariant) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant8toDoubleEPb()};
-    let arg0 = self.as_ptr()  as *mut c_char;
+    let arg0 = (if self.is_none() {0 as *const i8} else {self.unwrap().as_ptr()})  as *mut c_char;
     let mut ret = unsafe {C_ZNK8QVariant8toDoubleEPb(rsthis.qclsinst, arg0)};
     return ret as f64; // 1
     // return 1;
@@ -388,11 +388,11 @@ pub trait QVariant_toLongLong<RetType> {
 }
 
   // proto:  qlonglong QVariant::toLongLong(bool * ok);
-impl<'a> /*trait*/ QVariant_toLongLong<i64> for (&'a mut Vec<i8>) {
+impl<'a> /*trait*/ QVariant_toLongLong<i64> for (Option<&'a mut Vec<i8>>) {
   fn toLongLong(self , rsthis: & QVariant) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant10toLongLongEPb()};
-    let arg0 = self.as_ptr()  as *mut c_char;
+    let arg0 = (if self.is_none() {0 as *const i8} else {self.unwrap().as_ptr()})  as *mut c_char;
     let mut ret = unsafe {C_ZNK8QVariant10toLongLongEPb(rsthis.qclsinst, arg0)};
     return ret as i64; // 1
     // return 1;
@@ -490,11 +490,11 @@ pub trait QVariant_toReal<RetType> {
 }
 
   // proto:  qreal QVariant::toReal(bool * ok);
-impl<'a> /*trait*/ QVariant_toReal<f64> for (&'a mut Vec<i8>) {
+impl<'a> /*trait*/ QVariant_toReal<f64> for (Option<&'a mut Vec<i8>>) {
   fn toReal(self , rsthis: & QVariant) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant6toRealEPb()};
-    let arg0 = self.as_ptr()  as *mut c_char;
+    let arg0 = (if self.is_none() {0 as *const i8} else {self.unwrap().as_ptr()})  as *mut c_char;
     let mut ret = unsafe {C_ZNK8QVariant6toRealEPb(rsthis.qclsinst, arg0)};
     return ret as f64; // 1
     // return 1;
@@ -514,11 +514,11 @@ pub trait QVariant_toFloat<RetType> {
 }
 
   // proto:  float QVariant::toFloat(bool * ok);
-impl<'a> /*trait*/ QVariant_toFloat<f32> for (&'a mut Vec<i8>) {
+impl<'a> /*trait*/ QVariant_toFloat<f32> for (Option<&'a mut Vec<i8>>) {
   fn toFloat(self , rsthis: & QVariant) -> f32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant7toFloatEPb()};
-    let arg0 = self.as_ptr()  as *mut c_char;
+    let arg0 = (if self.is_none() {0 as *const i8} else {self.unwrap().as_ptr()})  as *mut c_char;
     let mut ret = unsafe {C_ZNK8QVariant7toFloatEPb(rsthis.qclsinst, arg0)};
     return ret as f32; // 1
     // return 1;
@@ -789,11 +789,11 @@ pub trait QVariant_toUInt<RetType> {
 }
 
   // proto:  uint QVariant::toUInt(bool * ok);
-impl<'a> /*trait*/ QVariant_toUInt<u32> for (&'a mut Vec<i8>) {
+impl<'a> /*trait*/ QVariant_toUInt<u32> for (Option<&'a mut Vec<i8>>) {
   fn toUInt(self , rsthis: & QVariant) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant6toUIntEPb()};
-    let arg0 = self.as_ptr()  as *mut c_char;
+    let arg0 = (if self.is_none() {0 as *const i8} else {self.unwrap().as_ptr()})  as *mut c_char;
     let mut ret = unsafe {C_ZNK8QVariant6toUIntEPb(rsthis.qclsinst, arg0)};
     return ret as u32; // 1
     // return 1;
@@ -915,11 +915,11 @@ pub trait QVariant_toInt<RetType> {
 }
 
   // proto:  int QVariant::toInt(bool * ok);
-impl<'a> /*trait*/ QVariant_toInt<i32> for (&'a mut Vec<i8>) {
+impl<'a> /*trait*/ QVariant_toInt<i32> for (Option<&'a mut Vec<i8>>) {
   fn toInt(self , rsthis: & QVariant) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant5toIntEPb()};
-    let arg0 = self.as_ptr()  as *mut c_char;
+    let arg0 = (if self.is_none() {0 as *const i8} else {self.unwrap().as_ptr()})  as *mut c_char;
     let mut ret = unsafe {C_ZNK8QVariant5toIntEPb(rsthis.qclsinst, arg0)};
     return ret as i32; // 1
     // return 1;
@@ -1981,11 +1981,11 @@ pub trait QVariant_toULongLong<RetType> {
 }
 
   // proto:  qulonglong QVariant::toULongLong(bool * ok);
-impl<'a> /*trait*/ QVariant_toULongLong<u64> for (&'a mut Vec<i8>) {
+impl<'a> /*trait*/ QVariant_toULongLong<u64> for (Option<&'a mut Vec<i8>>) {
   fn toULongLong(self , rsthis: & QVariant) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant11toULongLongEPb()};
-    let arg0 = self.as_ptr()  as *mut c_char;
+    let arg0 = (if self.is_none() {0 as *const i8} else {self.unwrap().as_ptr()})  as *mut c_char;
     let mut ret = unsafe {C_ZNK8QVariant11toULongLongEPb(rsthis.qclsinst, arg0)};
     return ret as u64; // 1
     // return 1;

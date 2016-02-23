@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qrect.h
 // dst-file: /src/core/qrect.rs
 //
@@ -1018,12 +1018,12 @@ impl<'a> /*trait*/ QRect_getRect<()> for (&'a mut Vec<i32>, &'a mut Vec<i32>, &'
 }
 
   // proto:  bool QRect::contains(const QRect & r, bool proper);
-impl<'a> /*trait*/ QRect_contains<i8> for (&'a QRect, i8) {
+impl<'a> /*trait*/ QRect_contains<i8> for (&'a QRect, Option<i8>) {
   fn contains(self , rsthis: & QRect) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect8containsERKS_b()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_char;
+    let arg1 = (if self.1.is_none() {false as i8} else {self.1.unwrap()})  as c_char;
     let mut ret = unsafe {C_ZNK5QRect8containsERKS_b(rsthis.qclsinst, arg0, arg1)};
     return ret as i8; // 1
     // return 1;
@@ -1104,12 +1104,12 @@ impl<'a> /*trait*/ QRect_topLeft<QPoint> for () {
 }
 
   // proto:  bool QRect::contains(const QPoint & p, bool proper);
-impl<'a> /*trait*/ QRect_contains<i8> for (&'a QPoint, i8) {
+impl<'a> /*trait*/ QRect_contains<i8> for (&'a QPoint, Option<i8>) {
   fn contains(self , rsthis: & QRect) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect8containsERK6QPointb()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_char;
+    let arg1 = (if self.1.is_none() {false as i8} else {self.1.unwrap()})  as c_char;
     let mut ret = unsafe {C_ZNK5QRect8containsERK6QPointb(rsthis.qclsinst, arg0, arg1)};
     return ret as i8; // 1
     // return 1;

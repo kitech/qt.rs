@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qgraphicslinearlayout.h
 // dst-file: /src/widgets/qgraphicslinearlayout.rs
 //
@@ -135,13 +135,13 @@ pub trait QGraphicsLinearLayout_new {
 }
 
   // proto:  void QGraphicsLinearLayout::QGraphicsLinearLayout(QGraphicsLayoutItem * parent);
-impl<'a> /*trait*/ QGraphicsLinearLayout_new for (&'a QGraphicsLayoutItem) {
+impl<'a> /*trait*/ QGraphicsLinearLayout_new for (Option<&'a QGraphicsLayoutItem>) {
   fn new(self) -> QGraphicsLinearLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QGraphicsLinearLayoutC2EP19QGraphicsLayoutItem()};
     let ctysz: c_int = unsafe{QGraphicsLinearLayout_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN21QGraphicsLinearLayoutC2EP19QGraphicsLayoutItem(arg0)};
     let rsthis = QGraphicsLinearLayout{qbase: QGraphicsLayout::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -232,11 +232,11 @@ pub trait QGraphicsLinearLayout_addStretch<RetType> {
 }
 
   // proto:  void QGraphicsLinearLayout::addStretch(int stretch);
-impl<'a> /*trait*/ QGraphicsLinearLayout_addStretch<()> for (i32) {
+impl<'a> /*trait*/ QGraphicsLinearLayout_addStretch<()> for (Option<i32>) {
   fn addStretch(self , rsthis: & QGraphicsLinearLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QGraphicsLinearLayout10addStretchEi()};
-    let arg0 = self  as c_int;
+    let arg0 = (if self.is_none() {1} else {self.unwrap()})  as c_int;
      unsafe {C_ZN21QGraphicsLinearLayout10addStretchEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
@@ -347,11 +347,11 @@ pub trait QGraphicsLinearLayout_dump<RetType> {
 }
 
   // proto:  void QGraphicsLinearLayout::dump(int indent);
-impl<'a> /*trait*/ QGraphicsLinearLayout_dump<()> for (i32) {
+impl<'a> /*trait*/ QGraphicsLinearLayout_dump<()> for (Option<i32>) {
   fn dump(self , rsthis: & QGraphicsLinearLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QGraphicsLinearLayout4dumpEi()};
-    let arg0 = self  as c_int;
+    let arg0 = (if self.is_none() {0} else {self.unwrap()})  as c_int;
      unsafe {C_ZNK21QGraphicsLinearLayout4dumpEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
@@ -464,12 +464,12 @@ pub trait QGraphicsLinearLayout_insertStretch<RetType> {
 }
 
   // proto:  void QGraphicsLinearLayout::insertStretch(int index, int stretch);
-impl<'a> /*trait*/ QGraphicsLinearLayout_insertStretch<()> for (i32, i32) {
+impl<'a> /*trait*/ QGraphicsLinearLayout_insertStretch<()> for (i32, Option<i32>) {
   fn insertStretch(self , rsthis: & QGraphicsLinearLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QGraphicsLinearLayout13insertStretchEii()};
     let arg0 = self.0  as c_int;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {1} else {self.1.unwrap()})  as c_int;
      unsafe {C_ZN21QGraphicsLinearLayout13insertStretchEii(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }

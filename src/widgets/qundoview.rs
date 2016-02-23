@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qundoview.h
 // dst-file: /src/widgets/qundoview.rs
 //
@@ -103,14 +103,14 @@ pub trait QUndoView_new {
 }
 
   // proto:  void QUndoView::QUndoView(QUndoGroup * group, QWidget * parent);
-impl<'a> /*trait*/ QUndoView_new for (&'a QUndoGroup, &'a QWidget) {
+impl<'a> /*trait*/ QUndoView_new for (&'a QUndoGroup, Option<&'a QWidget>) {
   fn new(self) -> QUndoView {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUndoViewC2EP10QUndoGroupP7QWidget()};
     let ctysz: c_int = unsafe{QUndoView_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN9QUndoViewC2EP10QUndoGroupP7QWidget(arg0, arg1)};
     let rsthis = QUndoView{qbase: QListView::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -331,13 +331,13 @@ impl<'a> /*trait*/ QUndoView_emptyLabel<QString> for () {
 }
 
   // proto:  void QUndoView::QUndoView(QWidget * parent);
-impl<'a> /*trait*/ QUndoView_new for (&'a QWidget) {
+impl<'a> /*trait*/ QUndoView_new for (Option<&'a QWidget>) {
   fn new(self) -> QUndoView {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUndoViewC2EP7QWidget()};
     let ctysz: c_int = unsafe{QUndoView_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN9QUndoViewC2EP7QWidget(arg0)};
     let rsthis = QUndoView{qbase: QListView::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -368,14 +368,14 @@ impl<'a> /*trait*/ QUndoView_free<()> for () {
 }
 
   // proto:  void QUndoView::QUndoView(QUndoStack * stack, QWidget * parent);
-impl<'a> /*trait*/ QUndoView_new for (&'a QUndoStack, &'a QWidget) {
+impl<'a> /*trait*/ QUndoView_new for (&'a QUndoStack, Option<&'a QWidget>) {
   fn new(self) -> QUndoView {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUndoViewC2EP10QUndoStackP7QWidget()};
     let ctysz: c_int = unsafe{QUndoView_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN9QUndoViewC2EP10QUndoStackP7QWidget(arg0, arg1)};
     let rsthis = QUndoView{qbase: QListView::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qstandardpaths.h
 // dst-file: /src/core/qstandardpaths.rs
 //
@@ -90,12 +90,12 @@ pub trait QStandardPaths_findExecutable_s<RetType> {
 }
 
   // proto: static QString QStandardPaths::findExecutable(const QString & executableName, const QStringList & paths);
-impl<'a> /*trait*/ QStandardPaths_findExecutable_s<QString> for (&'a QString, &'a QStringList) {
+impl<'a> /*trait*/ QStandardPaths_findExecutable_s<QString> for (&'a QString, Option<&'a QStringList>) {
   fn findExecutable_s(self ) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QStandardPaths14findExecutableERK7QStringRK11QStringList()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {QStringList::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZN14QStandardPaths14findExecutableERK7QStringRK11QStringList(arg0, arg1)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtGui/qimage.h
 // dst-file: /src/gui/qimage.rs
 //
@@ -225,11 +225,11 @@ pub trait QImage_copy<RetType> {
 }
 
   // proto:  QImage QImage::copy(const QRect & rect);
-impl<'a> /*trait*/ QImage_copy<QImage> for (&'a QRect) {
+impl<'a> /*trait*/ QImage_copy<QImage> for (Option<&'a QRect>) {
   fn copy(self , rsthis: & QImage) -> QImage {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QImage4copyERK5QRect()};
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {QRect::new(()).qclsinst} else {self.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZNK6QImage4copyERK5QRect(rsthis.qclsinst, arg0)};
     let mut ret1 = QImage::inheritFrom(ret as u64);
     return ret1;
@@ -324,11 +324,11 @@ pub trait QImage_text<RetType> {
 }
 
   // proto:  QString QImage::text(const QString & key);
-impl<'a> /*trait*/ QImage_text<QString> for (&'a QString) {
+impl<'a> /*trait*/ QImage_text<QString> for (Option<&'a QString>) {
   fn text(self , rsthis: & QImage) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QImage4textERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {QString::new(()).qclsinst} else {self.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZNK6QImage4textERK7QString(rsthis.qclsinst, arg0)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
@@ -401,11 +401,11 @@ pub trait QImage_createHeuristicMask<RetType> {
 }
 
   // proto:  QImage QImage::createHeuristicMask(bool clipTight);
-impl<'a> /*trait*/ QImage_createHeuristicMask<QImage> for (i8) {
+impl<'a> /*trait*/ QImage_createHeuristicMask<QImage> for (Option<i8>) {
   fn createHeuristicMask(self , rsthis: & QImage) -> QImage {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QImage19createHeuristicMaskEb()};
-    let arg0 = self  as c_char;
+    let arg0 = (if self.is_none() {true as i8} else {self.unwrap()})  as c_char;
     let mut ret = unsafe {C_ZNK6QImage19createHeuristicMaskEb(rsthis.qclsinst, arg0)};
     let mut ret1 = QImage::inheritFrom(ret as u64);
     return ret1;
@@ -450,12 +450,12 @@ pub trait QImage_mirrored<RetType> {
 }
 
   // proto:  QImage && QImage::mirrored(bool horizontally, bool vertically);
-impl<'a> /*trait*/ QImage_mirrored<QImage> for (i8, i8) {
+impl<'a> /*trait*/ QImage_mirrored<QImage> for (Option<i8>, Option<i8>) {
   fn mirrored(self , rsthis: & QImage) -> QImage {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNO6QImage8mirroredEbb()};
-    let arg0 = self.0  as c_char;
-    let arg1 = self.1  as c_char;
+    let arg0 = (if self.0.is_none() {false as i8} else {self.0.unwrap()})  as c_char;
+    let arg1 = (if self.1.is_none() {true as i8} else {self.1.unwrap()})  as c_char;
     let mut ret = unsafe {C_ZNO6QImage8mirroredEbb(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QImage::inheritFrom(ret as u64);
     return ret1;
@@ -476,12 +476,12 @@ pub trait QImage_fromData_s<RetType> {
 }
 
   // proto: static QImage QImage::fromData(const QByteArray & data, const char * format);
-impl<'a> /*trait*/ QImage_fromData_s<QImage> for (&'a QByteArray, &'a  String) {
+impl<'a> /*trait*/ QImage_fromData_s<QImage> for (&'a QByteArray, Option<&'a  String>) {
   fn fromData_s(self ) -> QImage {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QImage8fromDataERK10QByteArrayPKc()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.as_ptr()  as *mut c_char;
+    let arg1 = (if self.1.is_none() {0 as *const u8} else {self.1.unwrap().as_ptr()})  as *mut c_char;
     let mut ret = unsafe {C_ZN6QImage8fromDataERK10QByteArrayPKc(arg0, arg1)};
     let mut ret1 = QImage::inheritFrom(ret as u64);
     return ret1;
@@ -490,13 +490,13 @@ impl<'a> /*trait*/ QImage_fromData_s<QImage> for (&'a QByteArray, &'a  String) {
 }
 
   // proto: static QImage QImage::fromData(const uchar * data, int size, const char * format);
-impl<'a> /*trait*/ QImage_fromData_s<QImage> for (&'a  String, i32, &'a  String) {
+impl<'a> /*trait*/ QImage_fromData_s<QImage> for (&'a  String, i32, Option<&'a  String>) {
   fn fromData_s(self ) -> QImage {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QImage8fromDataEPKhiPKc()};
     let arg0 = self.0.as_ptr()  as *mut c_uchar;
     let arg1 = self.1  as c_int;
-    let arg2 = self.2.as_ptr()  as *mut c_char;
+    let arg2 = (if self.2.is_none() {0 as *const u8} else {self.2.unwrap().as_ptr()})  as *mut c_char;
     let mut ret = unsafe {C_ZN6QImage8fromDataEPKhiPKc(arg0, arg1, arg2)};
     let mut ret1 = QImage::inheritFrom(ret as u64);
     return ret1;
@@ -601,13 +601,13 @@ pub trait QImage_save<RetType> {
 }
 
   // proto:  bool QImage::save(QIODevice * device, const char * format, int quality);
-impl<'a> /*trait*/ QImage_save<i8> for (&'a QIODevice, &'a  String, i32) {
+impl<'a> /*trait*/ QImage_save<i8> for (&'a QIODevice, Option<&'a  String>, Option<i32>) {
   fn save(self , rsthis: & QImage) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QImage4saveEP9QIODevicePKci()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.as_ptr()  as *mut c_char;
-    let arg2 = self.2  as c_int;
+    let arg1 = (if self.1.is_none() {0 as *const u8} else {self.1.unwrap().as_ptr()})  as *mut c_char;
+    let arg2 = (if self.2.is_none() {-1} else {self.2.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK6QImage4saveEP9QIODevicePKci(rsthis.qclsinst, arg0, arg1, arg2)};
     return ret as i8; // 1
     // return 1;
@@ -697,13 +697,13 @@ pub trait QImage_loadFromData<RetType> {
 }
 
   // proto:  bool QImage::loadFromData(const uchar * buf, int len, const char * format);
-impl<'a> /*trait*/ QImage_loadFromData<i8> for (&'a  String, i32, &'a  String) {
+impl<'a> /*trait*/ QImage_loadFromData<i8> for (&'a  String, i32, Option<&'a  String>) {
   fn loadFromData(self , rsthis: & QImage) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QImage12loadFromDataEPKhiPKc()};
     let arg0 = self.0.as_ptr()  as *mut c_uchar;
     let arg1 = self.1  as c_int;
-    let arg2 = self.2.as_ptr()  as *mut c_char;
+    let arg2 = (if self.2.is_none() {0 as *const u8} else {self.2.unwrap().as_ptr()})  as *mut c_char;
     let mut ret = unsafe {C_ZN6QImage12loadFromDataEPKhiPKc(rsthis.qclsinst, arg0, arg1, arg2)};
     return ret as i8; // 1
     // return 1;
@@ -1184,12 +1184,12 @@ impl<'a> /*trait*/ QImage_detach<()> for () {
 }
 
   // proto:  bool QImage::loadFromData(const QByteArray & data, const char * aformat);
-impl<'a> /*trait*/ QImage_loadFromData<i8> for (&'a QByteArray, &'a  String) {
+impl<'a> /*trait*/ QImage_loadFromData<i8> for (&'a QByteArray, Option<&'a  String>) {
   fn loadFromData(self , rsthis: & QImage) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QImage12loadFromDataERK10QByteArrayPKc()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.as_ptr()  as *mut c_char;
+    let arg1 = (if self.1.is_none() {0 as *const u8} else {self.1.unwrap().as_ptr()})  as *mut c_char;
     let mut ret = unsafe {C_ZN6QImage12loadFromDataERK10QByteArrayPKc(rsthis.qclsinst, arg0, arg1)};
     return ret as i8; // 1
     // return 1;
@@ -1197,14 +1197,14 @@ impl<'a> /*trait*/ QImage_loadFromData<i8> for (&'a QByteArray, &'a  String) {
 }
 
   // proto:  void QImage::QImage(const QString & fileName, const char * format);
-impl<'a> /*trait*/ QImage_new for (&'a QString, &'a  String) {
+impl<'a> /*trait*/ QImage_new for (&'a QString, Option<&'a  String>) {
   fn new(self) -> QImage {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QImageC2ERK7QStringPKc()};
     let ctysz: c_int = unsafe{QImage_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.as_ptr()  as *mut c_char;
+    let arg1 = (if self.1.is_none() {0 as *const u8} else {self.1.unwrap().as_ptr()})  as *mut c_char;
     let qthis: u64 = unsafe {C_ZN6QImageC2ERK7QStringPKc(arg0, arg1)};
     let rsthis = QImage{qbase: QPaintDevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -1417,12 +1417,12 @@ pub trait QImage_load<RetType> {
 }
 
   // proto:  bool QImage::load(const QString & fileName, const char * format);
-impl<'a> /*trait*/ QImage_load<i8> for (&'a QString, &'a  String) {
+impl<'a> /*trait*/ QImage_load<i8> for (&'a QString, Option<&'a  String>) {
   fn load(self , rsthis: & QImage) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QImage4loadERK7QStringPKc()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.as_ptr()  as *mut c_char;
+    let arg1 = (if self.1.is_none() {0 as *const u8} else {self.1.unwrap().as_ptr()})  as *mut c_char;
     let mut ret = unsafe {C_ZN6QImage4loadERK7QStringPKc(rsthis.qclsinst, arg0, arg1)};
     return ret as i8; // 1
     // return 1;
@@ -1669,13 +1669,13 @@ impl<'a> /*trait*/ QImage_free<()> for () {
 }
 
   // proto:  bool QImage::save(const QString & fileName, const char * format, int quality);
-impl<'a> /*trait*/ QImage_save<i8> for (&'a QString, &'a  String, i32) {
+impl<'a> /*trait*/ QImage_save<i8> for (&'a QString, Option<&'a  String>, Option<i32>) {
   fn save(self , rsthis: & QImage) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QImage4saveERK7QStringPKci()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.as_ptr()  as *mut c_char;
-    let arg2 = self.2  as c_int;
+    let arg1 = (if self.1.is_none() {0 as *const u8} else {self.1.unwrap().as_ptr()})  as *mut c_char;
+    let arg2 = (if self.2.is_none() {-1} else {self.2.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK6QImage4saveERK7QStringPKci(rsthis.qclsinst, arg0, arg1, arg2)};
     return ret as i8; // 1
     // return 1;

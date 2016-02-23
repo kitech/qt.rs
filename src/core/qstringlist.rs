@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qstringlist.h
 // dst-file: /src/core/qstringlist.rs
 //
@@ -100,12 +100,12 @@ pub trait QStringList_lastIndexOf<RetType> {
 }
 
   // proto:  int QStringList::lastIndexOf(const QRegularExpression & re, int from);
-impl<'a> /*trait*/ QStringList_lastIndexOf<i32> for (&'a QRegularExpression, i32) {
+impl<'a> /*trait*/ QStringList_lastIndexOf<i32> for (&'a QRegularExpression, Option<i32>) {
   fn lastIndexOf(self , rsthis: & QStringList) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QStringList11lastIndexOfERK18QRegularExpressioni()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {-1} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK11QStringList11lastIndexOfERK18QRegularExpressioni(rsthis.qclsinst, arg0, arg1)};
     return ret as i32; // 1
     // return 1;
@@ -152,12 +152,12 @@ pub trait QStringList_indexOf<RetType> {
 }
 
   // proto:  int QStringList::indexOf(const QRegExp & rx, int from);
-impl<'a> /*trait*/ QStringList_indexOf<i32> for (&'a QRegExp, i32) {
+impl<'a> /*trait*/ QStringList_indexOf<i32> for (&'a QRegExp, Option<i32>) {
   fn indexOf(self , rsthis: & QStringList) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QStringList7indexOfERK7QRegExpi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK11QStringList7indexOfERK7QRegExpi(rsthis.qclsinst, arg0, arg1)};
     return ret as i32; // 1
     // return 1;
@@ -165,12 +165,12 @@ impl<'a> /*trait*/ QStringList_indexOf<i32> for (&'a QRegExp, i32) {
 }
 
   // proto:  int QStringList::indexOf(const QRegularExpression & re, int from);
-impl<'a> /*trait*/ QStringList_indexOf<i32> for (&'a QRegularExpression, i32) {
+impl<'a> /*trait*/ QStringList_indexOf<i32> for (&'a QRegularExpression, Option<i32>) {
   fn indexOf(self , rsthis: & QStringList) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QStringList7indexOfERK18QRegularExpressioni()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK11QStringList7indexOfERK18QRegularExpressioni(rsthis.qclsinst, arg0, arg1)};
     return ret as i32; // 1
     // return 1;
@@ -178,12 +178,12 @@ impl<'a> /*trait*/ QStringList_indexOf<i32> for (&'a QRegularExpression, i32) {
 }
 
   // proto:  int QStringList::lastIndexOf(const QRegExp & rx, int from);
-impl<'a> /*trait*/ QStringList_lastIndexOf<i32> for (&'a QRegExp, i32) {
+impl<'a> /*trait*/ QStringList_lastIndexOf<i32> for (&'a QRegExp, Option<i32>) {
   fn lastIndexOf(self , rsthis: & QStringList) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QStringList11lastIndexOfERK7QRegExpi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {-1} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK11QStringList11lastIndexOfERK7QRegExpi(rsthis.qclsinst, arg0, arg1)};
     return ret as i32; // 1
     // return 1;

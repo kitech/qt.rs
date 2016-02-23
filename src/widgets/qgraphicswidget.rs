@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qgraphicswidget.h
 // dst-file: /src/widgets/qgraphicswidget.rs
 //
@@ -485,13 +485,13 @@ pub trait QGraphicsWidget_paint<RetType> {
 }
 
   // proto:  void QGraphicsWidget::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
-impl<'a> /*trait*/ QGraphicsWidget_paint<()> for (&'a QPainter, &'a QStyleOptionGraphicsItem, &'a QWidget) {
+impl<'a> /*trait*/ QGraphicsWidget_paint<()> for (&'a QPainter, &'a QStyleOptionGraphicsItem, Option<&'a QWidget>) {
   fn paint(self , rsthis: & QGraphicsWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsWidget5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2.qclsinst  as *mut c_void;
+    let arg2 = (if self.2.is_none() {0} else {self.2.unwrap().qclsinst})  as *mut c_void;
      unsafe {C_ZN15QGraphicsWidget5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
@@ -532,13 +532,13 @@ pub trait QGraphicsWidget_paintWindowFrame<RetType> {
 }
 
   // proto:  void QGraphicsWidget::paintWindowFrame(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
-impl<'a> /*trait*/ QGraphicsWidget_paintWindowFrame<()> for (&'a QPainter, &'a QStyleOptionGraphicsItem, &'a QWidget) {
+impl<'a> /*trait*/ QGraphicsWidget_paintWindowFrame<()> for (&'a QPainter, &'a QStyleOptionGraphicsItem, Option<&'a QWidget>) {
   fn paintWindowFrame(self , rsthis: & QGraphicsWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsWidget16paintWindowFrameEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2.qclsinst  as *mut c_void;
+    let arg2 = (if self.2.is_none() {0} else {self.2.unwrap().qclsinst})  as *mut c_void;
      unsafe {C_ZN15QGraphicsWidget16paintWindowFrameEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
@@ -708,12 +708,12 @@ pub trait QGraphicsWidget_setShortcutEnabled<RetType> {
 }
 
   // proto:  void QGraphicsWidget::setShortcutEnabled(int id, bool enabled);
-impl<'a> /*trait*/ QGraphicsWidget_setShortcutEnabled<()> for (i32, i8) {
+impl<'a> /*trait*/ QGraphicsWidget_setShortcutEnabled<()> for (i32, Option<i8>) {
   fn setShortcutEnabled(self , rsthis: & QGraphicsWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsWidget18setShortcutEnabledEib()};
     let arg0 = self.0  as c_int;
-    let arg1 = self.1  as c_char;
+    let arg1 = (if self.1.is_none() {true as i8} else {self.1.unwrap()})  as c_char;
      unsafe {C_ZN15QGraphicsWidget18setShortcutEnabledEib(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
@@ -1063,12 +1063,12 @@ pub trait QGraphicsWidget_setShortcutAutoRepeat<RetType> {
 }
 
   // proto:  void QGraphicsWidget::setShortcutAutoRepeat(int id, bool enabled);
-impl<'a> /*trait*/ QGraphicsWidget_setShortcutAutoRepeat<()> for (i32, i8) {
+impl<'a> /*trait*/ QGraphicsWidget_setShortcutAutoRepeat<()> for (i32, Option<i8>) {
   fn setShortcutAutoRepeat(self , rsthis: & QGraphicsWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsWidget21setShortcutAutoRepeatEib()};
     let arg0 = self.0  as c_int;
-    let arg1 = self.1  as c_char;
+    let arg1 = (if self.1.is_none() {true as i8} else {self.1.unwrap()})  as c_char;
      unsafe {C_ZN15QGraphicsWidget21setShortcutAutoRepeatEib(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }

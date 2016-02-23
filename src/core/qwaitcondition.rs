@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qwaitcondition.h
 // dst-file: /src/core/qwaitcondition.rs
 //
@@ -71,12 +71,12 @@ pub trait QWaitCondition_wait<RetType> {
 }
 
   // proto:  bool QWaitCondition::wait(QReadWriteLock * lockedReadWriteLock, unsigned long time);
-impl<'a> /*trait*/ QWaitCondition_wait<i8> for (&'a QReadWriteLock, u64) {
+impl<'a> /*trait*/ QWaitCondition_wait<i8> for (&'a QReadWriteLock, Option<u64>) {
   fn wait(self , rsthis: & QWaitCondition) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QWaitCondition4waitEP14QReadWriteLockm()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_ulong;
+    let arg1 = (if self.1.is_none() {i32::max_value() as u64} else {self.1.unwrap()})  as c_ulong;
     let mut ret = unsafe {C_ZN14QWaitCondition4waitEP14QReadWriteLockm(rsthis.qclsinst, arg0, arg1)};
     return ret as i8; // 1
     // return 1;
@@ -84,12 +84,12 @@ impl<'a> /*trait*/ QWaitCondition_wait<i8> for (&'a QReadWriteLock, u64) {
 }
 
   // proto:  bool QWaitCondition::wait(QMutex * lockedMutex, unsigned long time);
-impl<'a> /*trait*/ QWaitCondition_wait<i8> for (&'a QMutex, u64) {
+impl<'a> /*trait*/ QWaitCondition_wait<i8> for (&'a QMutex, Option<u64>) {
   fn wait(self , rsthis: & QWaitCondition) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QWaitCondition4waitEP6QMutexm()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_ulong;
+    let arg1 = (if self.1.is_none() {i32::max_value() as u64} else {self.1.unwrap()})  as c_ulong;
     let mut ret = unsafe {C_ZN14QWaitCondition4waitEP6QMutexm(rsthis.qclsinst, arg0, arg1)};
     return ret as i8; // 1
     // return 1;

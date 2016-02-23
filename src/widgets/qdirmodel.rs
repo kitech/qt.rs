@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qdirmodel.h
 // dst-file: /src/widgets/qdirmodel.rs
 //
@@ -190,12 +190,12 @@ pub trait QDirModel_data<RetType> {
 }
 
   // proto:  QVariant QDirModel::data(const QModelIndex & index, int role);
-impl<'a> /*trait*/ QDirModel_data<QVariant> for (&'a QModelIndex, i32) {
+impl<'a> /*trait*/ QDirModel_data<QVariant> for (&'a QModelIndex, Option<i32>) {
   fn data(self , rsthis: & QDirModel) -> QVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDirModel4dataERK11QModelIndexi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {0 as i32} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK9QDirModel4dataERK11QModelIndexi(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QVariant::inheritFrom(ret as u64);
     return ret1;
@@ -263,11 +263,11 @@ pub trait QDirModel_columnCount<RetType> {
 }
 
   // proto:  int QDirModel::columnCount(const QModelIndex & parent);
-impl<'a> /*trait*/ QDirModel_columnCount<i32> for (&'a QModelIndex) {
+impl<'a> /*trait*/ QDirModel_columnCount<i32> for (Option<&'a QModelIndex>) {
   fn columnCount(self , rsthis: & QDirModel) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDirModel11columnCountERK11QModelIndex()};
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {QModelIndex::new(()).qclsinst} else {self.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZNK9QDirModel11columnCountERK11QModelIndex(rsthis.qclsinst, arg0)};
     return ret as i32; // 1
     // return 1;
@@ -429,11 +429,11 @@ pub trait QDirModel_refresh<RetType> {
 }
 
   // proto:  void QDirModel::refresh(const QModelIndex & parent);
-impl<'a> /*trait*/ QDirModel_refresh<()> for (&'a QModelIndex) {
+impl<'a> /*trait*/ QDirModel_refresh<()> for (Option<&'a QModelIndex>) {
   fn refresh(self , rsthis: & QDirModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QDirModel7refreshERK11QModelIndex()};
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {QModelIndex::new(()).qclsinst} else {self.unwrap().qclsinst})  as *mut c_void;
      unsafe {C_ZN9QDirModel7refreshERK11QModelIndex(rsthis.qclsinst, arg0)};
     // return 1;
   }
@@ -498,13 +498,13 @@ pub trait QDirModel_index<RetType> {
 }
 
   // proto:  QModelIndex QDirModel::index(int row, int column, const QModelIndex & parent);
-impl<'a> /*trait*/ QDirModel_index<QModelIndex> for (i32, i32, &'a QModelIndex) {
+impl<'a> /*trait*/ QDirModel_index<QModelIndex> for (i32, i32, Option<&'a QModelIndex>) {
   fn index(self , rsthis: & QDirModel) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDirModel5indexEiiRK11QModelIndex()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-    let arg2 = self.2.qclsinst  as *mut c_void;
+    let arg2 = (if self.2.is_none() {QModelIndex::new(()).qclsinst} else {self.2.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZNK9QDirModel5indexEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
     let mut ret1 = QModelIndex::inheritFrom(ret as u64);
     return ret1;
@@ -526,13 +526,13 @@ pub trait QDirModel_new {
 }
 
   // proto:  void QDirModel::QDirModel(QObject * parent);
-impl<'a> /*trait*/ QDirModel_new for (&'a QObject) {
+impl<'a> /*trait*/ QDirModel_new for (Option<&'a QObject>) {
   fn new(self) -> QDirModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QDirModelC2EP7QObject()};
     let ctysz: c_int = unsafe{QDirModel_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN9QDirModelC2EP7QObject(arg0)};
     let rsthis = QDirModel{qbase: QAbstractItemModel::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -541,12 +541,12 @@ impl<'a> /*trait*/ QDirModel_new for (&'a QObject) {
 }
 
   // proto:  QModelIndex QDirModel::index(const QString & path, int column);
-impl<'a> /*trait*/ QDirModel_index<QModelIndex> for (&'a QString, i32) {
+impl<'a> /*trait*/ QDirModel_index<QModelIndex> for (&'a QString, Option<i32>) {
   fn index(self , rsthis: & QDirModel) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDirModel5indexERK7QStringi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK9QDirModel5indexERK7QStringi(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QModelIndex::inheritFrom(ret as u64);
     return ret1;
@@ -567,13 +567,13 @@ pub trait QDirModel_setData<RetType> {
 }
 
   // proto:  bool QDirModel::setData(const QModelIndex & index, const QVariant & value, int role);
-impl<'a> /*trait*/ QDirModel_setData<i8> for (&'a QModelIndex, &'a QVariant, i32) {
+impl<'a> /*trait*/ QDirModel_setData<i8> for (&'a QModelIndex, &'a QVariant, Option<i32>) {
   fn setData(self , rsthis: & QDirModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QDirModel7setDataERK11QModelIndexRK8QVarianti()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2  as c_int;
+    let arg2 = (if self.2.is_none() {0 as i32} else {self.2.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN9QDirModel7setDataERK11QModelIndexRK8QVarianti(rsthis.qclsinst, arg0, arg1, arg2)};
     return ret as i8; // 1
     // return 1;
@@ -641,11 +641,11 @@ pub trait QDirModel_hasChildren<RetType> {
 }
 
   // proto:  bool QDirModel::hasChildren(const QModelIndex & index);
-impl<'a> /*trait*/ QDirModel_hasChildren<i8> for (&'a QModelIndex) {
+impl<'a> /*trait*/ QDirModel_hasChildren<i8> for (Option<&'a QModelIndex>) {
   fn hasChildren(self , rsthis: & QDirModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDirModel11hasChildrenERK11QModelIndex()};
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {QModelIndex::new(()).qclsinst} else {self.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZNK9QDirModel11hasChildrenERK11QModelIndex(rsthis.qclsinst, arg0)};
     return ret as i8; // 1
     // return 1;
@@ -764,11 +764,11 @@ pub trait QDirModel_rowCount<RetType> {
 }
 
   // proto:  int QDirModel::rowCount(const QModelIndex & parent);
-impl<'a> /*trait*/ QDirModel_rowCount<i32> for (&'a QModelIndex) {
+impl<'a> /*trait*/ QDirModel_rowCount<i32> for (Option<&'a QModelIndex>) {
   fn rowCount(self , rsthis: & QDirModel) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDirModel8rowCountERK11QModelIndex()};
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {QModelIndex::new(()).qclsinst} else {self.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZNK9QDirModel8rowCountERK11QModelIndex(rsthis.qclsinst, arg0)};
     return ret as i32; // 1
     // return 1;

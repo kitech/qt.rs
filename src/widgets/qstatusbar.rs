@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qstatusbar.h
 // dst-file: /src/widgets/qstatusbar.rs
 //
@@ -122,13 +122,13 @@ pub trait QStatusBar_insertPermanentWidget<RetType> {
 }
 
   // proto:  int QStatusBar::insertPermanentWidget(int index, QWidget * widget, int stretch);
-impl<'a> /*trait*/ QStatusBar_insertPermanentWidget<i32> for (i32, &'a QWidget, i32) {
+impl<'a> /*trait*/ QStatusBar_insertPermanentWidget<i32> for (i32, &'a QWidget, Option<i32>) {
   fn insertPermanentWidget(self , rsthis: & QStatusBar) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QStatusBar21insertPermanentWidgetEiP7QWidgeti()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2  as c_int;
+    let arg2 = (if self.2.is_none() {0} else {self.2.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN10QStatusBar21insertPermanentWidgetEiP7QWidgeti(rsthis.qclsinst, arg0, arg1, arg2)};
     return ret as i32; // 1
     // return 1;
@@ -194,12 +194,12 @@ pub trait QStatusBar_addPermanentWidget<RetType> {
 }
 
   // proto:  void QStatusBar::addPermanentWidget(QWidget * widget, int stretch);
-impl<'a> /*trait*/ QStatusBar_addPermanentWidget<()> for (&'a QWidget, i32) {
+impl<'a> /*trait*/ QStatusBar_addPermanentWidget<()> for (&'a QWidget, Option<i32>) {
   fn addPermanentWidget(self , rsthis: & QStatusBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QStatusBar18addPermanentWidgetEP7QWidgeti()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_int;
      unsafe {C_ZN10QStatusBar18addPermanentWidgetEP7QWidgeti(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
@@ -311,12 +311,12 @@ pub trait QStatusBar_showMessage<RetType> {
 }
 
   // proto:  void QStatusBar::showMessage(const QString & text, int timeout);
-impl<'a> /*trait*/ QStatusBar_showMessage<()> for (&'a QString, i32) {
+impl<'a> /*trait*/ QStatusBar_showMessage<()> for (&'a QString, Option<i32>) {
   fn showMessage(self , rsthis: & QStatusBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QStatusBar11showMessageERK7QStringi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_int;
      unsafe {C_ZN10QStatusBar11showMessageERK7QStringi(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
@@ -335,13 +335,13 @@ pub trait QStatusBar_insertWidget<RetType> {
 }
 
   // proto:  int QStatusBar::insertWidget(int index, QWidget * widget, int stretch);
-impl<'a> /*trait*/ QStatusBar_insertWidget<i32> for (i32, &'a QWidget, i32) {
+impl<'a> /*trait*/ QStatusBar_insertWidget<i32> for (i32, &'a QWidget, Option<i32>) {
   fn insertWidget(self , rsthis: & QStatusBar) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QStatusBar12insertWidgetEiP7QWidgeti()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2  as c_int;
+    let arg2 = (if self.2.is_none() {0} else {self.2.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN10QStatusBar12insertWidgetEiP7QWidgeti(rsthis.qclsinst, arg0, arg1, arg2)};
     return ret as i32; // 1
     // return 1;
@@ -361,12 +361,12 @@ pub trait QStatusBar_addWidget<RetType> {
 }
 
   // proto:  void QStatusBar::addWidget(QWidget * widget, int stretch);
-impl<'a> /*trait*/ QStatusBar_addWidget<()> for (&'a QWidget, i32) {
+impl<'a> /*trait*/ QStatusBar_addWidget<()> for (&'a QWidget, Option<i32>) {
   fn addWidget(self , rsthis: & QStatusBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QStatusBar9addWidgetEP7QWidgeti()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_int;
      unsafe {C_ZN10QStatusBar9addWidgetEP7QWidgeti(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
@@ -386,13 +386,13 @@ pub trait QStatusBar_new {
 }
 
   // proto:  void QStatusBar::QStatusBar(QWidget * parent);
-impl<'a> /*trait*/ QStatusBar_new for (&'a QWidget) {
+impl<'a> /*trait*/ QStatusBar_new for (Option<&'a QWidget>) {
   fn new(self) -> QStatusBar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QStatusBarC2EP7QWidget()};
     let ctysz: c_int = unsafe{QStatusBar_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN10QStatusBarC2EP7QWidget(arg0)};
     let rsthis = QStatusBar{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;

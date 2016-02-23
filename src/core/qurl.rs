@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qurl.h
 // dst-file: /src/core/qurl.rs
 //
@@ -307,11 +307,11 @@ pub trait QUrl_port<RetType> {
 }
 
   // proto:  int QUrl::port(int defaultPort);
-impl<'a> /*trait*/ QUrl_port<i32> for (i32) {
+impl<'a> /*trait*/ QUrl_port<i32> for (Option<i32>) {
   fn port(self , rsthis: & QUrl) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QUrl4portEi()};
-    let arg0 = self  as c_int;
+    let arg0 = (if self.is_none() {-1} else {self.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK4QUrl4portEi(rsthis.qclsinst, arg0)};
     return ret as i32; // 1
     // return 1;
@@ -681,13 +681,13 @@ pub trait QUrl_toPercentEncoding_s<RetType> {
 }
 
   // proto: static QByteArray QUrl::toPercentEncoding(const QString & , const QByteArray & exclude, const QByteArray & include);
-impl<'a> /*trait*/ QUrl_toPercentEncoding_s<QByteArray> for (&'a QString, &'a QByteArray, &'a QByteArray) {
+impl<'a> /*trait*/ QUrl_toPercentEncoding_s<QByteArray> for (&'a QString, Option<&'a QByteArray>, Option<&'a QByteArray>) {
   fn toPercentEncoding_s(self ) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QUrl17toPercentEncodingERK7QStringRK10QByteArrayS5_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {QByteArray::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
+    let arg2 = (if self.2.is_none() {QByteArray::new(()).qclsinst} else {self.2.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZN4QUrl17toPercentEncodingERK7QStringRK10QByteArrayS5_(arg0, arg1, arg2)};
     let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;

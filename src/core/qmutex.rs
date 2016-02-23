@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qmutex.h
 // dst-file: /src/core/qmutex.rs
 //
@@ -353,11 +353,11 @@ pub trait QMutex_tryLock<RetType> {
 }
 
   // proto:  bool QMutex::tryLock(int timeout);
-impl<'a> /*trait*/ QMutex_tryLock<i8> for (i32) {
+impl<'a> /*trait*/ QMutex_tryLock<i8> for (Option<i32>) {
   fn tryLock(self , rsthis: & QMutex) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMutex7tryLockEi()};
-    let arg0 = self  as c_int;
+    let arg0 = (if self.is_none() {0} else {self.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN6QMutex7tryLockEi(rsthis.qclsinst, arg0)};
     return ret as i8; // 1
     // return 1;

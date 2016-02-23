@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qmetatype.h
 // dst-file: /src/core/qmetatype.rs
 //
@@ -222,12 +222,12 @@ pub trait QMetaType_create_s<RetType> {
 }
 
   // proto: static void * QMetaType::create(int type, const void * copy);
-impl<'a> /*trait*/ QMetaType_create_s<*mut c_void> for (i32, *mut c_void) {
+impl<'a> /*trait*/ QMetaType_create_s<*mut c_void> for (i32, Option<*mut c_void>) {
   fn create_s(self ) -> *mut c_void {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZN9QMetaType6createEiPKv()};
     let arg0 = self.0  as c_int;
-    let arg1 = self.1  as *mut c_void;
+    let arg1 = (if self.1.is_none() {0 as *mut c_void} else {self.1.unwrap()})  as *mut c_void;
     let mut ret = unsafe {C_ZN9QMetaType6createEiPKv(arg0, arg1)};
     return ret as *mut c_void; // 1
     // return 1;
@@ -395,12 +395,12 @@ pub trait QMetaType_construct<RetType> {
 }
 
   // proto:  void * QMetaType::construct(void * where, const void * copy);
-impl<'a> /*trait*/ QMetaType_construct<*mut c_void> for (*mut c_void, *mut c_void) {
+impl<'a> /*trait*/ QMetaType_construct<*mut c_void> for (*mut c_void, Option<*mut c_void>) {
   fn construct(self , rsthis: & QMetaType) -> *mut c_void {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZNK9QMetaType9constructEPvPKv()};
     let arg0 = self.0  as *mut c_void;
-    let arg1 = self.1  as *mut c_void;
+    let arg1 = (if self.1.is_none() {0 as *mut c_void} else {self.1.unwrap()})  as *mut c_void;
     let mut ret = unsafe {C_ZNK9QMetaType9constructEPvPKv(rsthis.qclsinst, arg0, arg1)};
     return ret as *mut c_void; // 1
     // return 1;
@@ -519,11 +519,11 @@ pub trait QMetaType_create<RetType> {
 }
 
   // proto:  void * QMetaType::create(const void * copy);
-impl<'a> /*trait*/ QMetaType_create<*mut c_void> for (*mut c_void) {
+impl<'a> /*trait*/ QMetaType_create<*mut c_void> for (Option<*mut c_void>) {
   fn create(self , rsthis: & QMetaType) -> *mut c_void {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZNK9QMetaType6createEPKv()};
-    let arg0 = self  as *mut c_void;
+    let arg0 = (if self.is_none() {0 as *mut c_void} else {self.unwrap()})  as *mut c_void;
     let mut ret = unsafe {C_ZNK9QMetaType6createEPKv(rsthis.qclsinst, arg0)};
     return ret as *mut c_void; // 1
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtGui/qtextobject.h
 // dst-file: /src/gui/qtextobject.rs
 //
@@ -565,12 +565,12 @@ pub trait QTextFragment_glyphRuns<RetType> {
 }
 
   // proto:  QList<QGlyphRun> QTextFragment::glyphRuns(int from, int length);
-impl<'a> /*trait*/ QTextFragment_glyphRuns<u64> for (i32, i32) {
+impl<'a> /*trait*/ QTextFragment_glyphRuns<u64> for (Option<i32>, Option<i32>) {
   fn glyphRuns(self , rsthis: & QTextFragment) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextFragment9glyphRunsEii()};
-    let arg0 = self.0  as c_int;
-    let arg1 = self.1  as c_int;
+    let arg0 = (if self.0.is_none() {-1} else {self.0.unwrap()})  as c_int;
+    let arg1 = (if self.1.is_none() {-1} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK13QTextFragment9glyphRunsEii(rsthis.qclsinst, arg0, arg1)};
     return ret as u64; // 5
     // return 1;

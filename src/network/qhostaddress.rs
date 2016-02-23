@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Jan 19 21:53:37 2016
+// created: Wed Jan 20 00:44:03 2016
 // src-file: /QtNetwork/qhostaddress.h
 // dst-file: /src/network/qhostaddress.rs
 //
@@ -53,8 +53,6 @@ extern {
   fn _ZN12QHostAddressC2EPh(qthis: u64 /* *mut c_void*/, arg0: *mut c_uchar);
   // proto:  void QHostAddress::QHostAddress();
   fn _ZN12QHostAddressC2Ev(qthis: u64 /* *mut c_void*/);
-  // proto:  void QHostAddress::setAddress(const sockaddr * address);
-  fn _ZN12QHostAddress10setAddressEPK8sockaddr(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  void QHostAddress::QHostAddress(quint32 ip4Addr);
   fn _ZN12QHostAddressC2Ej(qthis: u64 /* *mut c_void*/, arg0: c_uint);
   // proto:  void QHostAddress::QHostAddress(const QHostAddress & copy);
@@ -65,8 +63,6 @@ extern {
   fn _ZNK12QHostAddress8toStringEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  bool QHostAddress::isLoopback();
   fn _ZNK12QHostAddress10isLoopbackEv(qthis: u64 /* *mut c_void*/) -> c_char;
-  // proto:  void QHostAddress::QHostAddress(const sockaddr * address);
-  fn _ZN12QHostAddressC2EPK8sockaddr(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
   // proto:  QString QHostAddress::scopeId();
   fn _ZNK12QHostAddress7scopeIdEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  void QHostAddress::setAddress(const quint8 * ip6Addr);
@@ -312,18 +308,6 @@ impl<'a> /*trait*/ QHostAddress_new for () {
   }
 }
 
-// proto:  void QHostAddress::setAddress(const sockaddr * address);
-/*
-impl<'a> /*trait*/ QHostAddress_setAddress<()> for (&'a sockaddr) {
-  fn setAddress(self , rsthis: & QHostAddress) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QHostAddress10setAddressEPK8sockaddr()};
-    let arg0 = self  as *mut c_void;
-     unsafe {_ZN12QHostAddress10setAddressEPK8sockaddr(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-*/
   // proto:  void QHostAddress::QHostAddress(quint32 ip4Addr);
 impl<'a> /*trait*/ QHostAddress_new for (u32) {
   fn new(self) -> QHostAddress {
@@ -428,23 +412,6 @@ impl<'a> /*trait*/ QHostAddress_isLoopback<i8> for () {
   }
 }
 
-// proto:  void QHostAddress::QHostAddress(const sockaddr * address);
-/*
-impl<'a> /*trait*/ QHostAddress_new for (&'a sockaddr) {
-  fn new(self) -> QHostAddress {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QHostAddressC2EPK8sockaddr()};
-    let ctysz: c_int = unsafe{QHostAddress_Class_Size()};
-    let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self  as *mut c_void;
-    unsafe {_ZN12QHostAddressC2EPK8sockaddr(qthis_ph, arg0)};
-    let qthis: u64 = qthis_ph;
-    let rsthis = QHostAddress{qclsinst: qthis, ..Default::default()};
-    return rsthis;
-    // return 1;
-  }
-}
-*/
   // proto:  QString QHostAddress::scopeId();
 impl /*struct*/ QHostAddress {
   pub fn scopeId<RetType, T: QHostAddress_scopeId<RetType>>(& self,  overload_args: T) -> RetType {

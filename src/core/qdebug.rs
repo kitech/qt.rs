@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qdebug.h
 // dst-file: /src/core/qdebug.rs
 //
@@ -122,11 +122,11 @@ pub trait QNoDebug_maybeQuote<RetType> {
 }
 
   // proto:  QNoDebug & QNoDebug::maybeQuote(const char );
-impl<'a> /*trait*/ QNoDebug_maybeQuote<QNoDebug> for (i8) {
+impl<'a> /*trait*/ QNoDebug_maybeQuote<QNoDebug> for (Option<i8>) {
   fn maybeQuote(self , rsthis: & QNoDebug) -> QNoDebug {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QNoDebug10maybeQuoteEc()};
-    let arg0 = self  as c_char;
+    let arg0 = (if self.is_none() {'"' as i8} else {self.unwrap()})  as c_char;
     let mut ret = unsafe {C_ZN8QNoDebug10maybeQuoteEc(rsthis.qclsinst, arg0)};
     let mut ret1 = QNoDebug::inheritFrom(ret as u64);
     return ret1;
@@ -635,11 +635,11 @@ pub trait QDebug_maybeQuote<RetType> {
 }
 
   // proto:  QDebug & QDebug::maybeQuote(char c);
-impl<'a> /*trait*/ QDebug_maybeQuote<QDebug> for (i8) {
+impl<'a> /*trait*/ QDebug_maybeQuote<QDebug> for (Option<i8>) {
   fn maybeQuote(self , rsthis: & QDebug) -> QDebug {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QDebug10maybeQuoteEc()};
-    let arg0 = self  as c_char;
+    let arg0 = (if self.is_none() {'"' as i8} else {self.unwrap()})  as c_char;
     let mut ret = unsafe {C_ZN6QDebug10maybeQuoteEc(rsthis.qclsinst, arg0)};
     let mut ret1 = QDebug::inheritFrom(ret as u64);
     return ret1;

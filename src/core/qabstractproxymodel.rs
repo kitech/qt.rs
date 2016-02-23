@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qabstractproxymodel.h
 // dst-file: /src/core/qabstractproxymodel.rs
 //
@@ -217,12 +217,12 @@ pub trait QAbstractProxyModel_data<RetType> {
 }
 
   // proto:  QVariant QAbstractProxyModel::data(const QModelIndex & proxyIndex, int role);
-impl<'a> /*trait*/ QAbstractProxyModel_data<QVariant> for (&'a QModelIndex, i32) {
+impl<'a> /*trait*/ QAbstractProxyModel_data<QVariant> for (&'a QModelIndex, Option<i32>) {
   fn data(self , rsthis: & QAbstractProxyModel) -> QVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QAbstractProxyModel4dataERK11QModelIndexi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {0 as i32} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK19QAbstractProxyModel4dataERK11QModelIndexi(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QVariant::inheritFrom(ret as u64);
     return ret1;
@@ -488,13 +488,13 @@ pub trait QAbstractProxyModel_setData<RetType> {
 }
 
   // proto:  bool QAbstractProxyModel::setData(const QModelIndex & index, const QVariant & value, int role);
-impl<'a> /*trait*/ QAbstractProxyModel_setData<i8> for (&'a QModelIndex, &'a QVariant, i32) {
+impl<'a> /*trait*/ QAbstractProxyModel_setData<i8> for (&'a QModelIndex, &'a QVariant, Option<i32>) {
   fn setData(self , rsthis: & QAbstractProxyModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QAbstractProxyModel7setDataERK11QModelIndexRK8QVarianti()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2  as c_int;
+    let arg2 = (if self.2.is_none() {0 as i32} else {self.2.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN19QAbstractProxyModel7setDataERK11QModelIndexRK8QVarianti(rsthis.qclsinst, arg0, arg1, arg2)};
     return ret as i8; // 1
     // return 1;
@@ -560,13 +560,13 @@ pub trait QAbstractProxyModel_new {
 }
 
   // proto:  void QAbstractProxyModel::QAbstractProxyModel(QObject * parent);
-impl<'a> /*trait*/ QAbstractProxyModel_new for (&'a QObject) {
+impl<'a> /*trait*/ QAbstractProxyModel_new for (Option<&'a QObject>) {
   fn new(self) -> QAbstractProxyModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QAbstractProxyModelC2EP7QObject()};
     let ctysz: c_int = unsafe{QAbstractProxyModel_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN19QAbstractProxyModelC2EP7QObject(arg0)};
     let rsthis = QAbstractProxyModel{qbase: QAbstractItemModel::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -587,11 +587,11 @@ pub trait QAbstractProxyModel_hasChildren<RetType> {
 }
 
   // proto:  bool QAbstractProxyModel::hasChildren(const QModelIndex & parent);
-impl<'a> /*trait*/ QAbstractProxyModel_hasChildren<i8> for (&'a QModelIndex) {
+impl<'a> /*trait*/ QAbstractProxyModel_hasChildren<i8> for (Option<&'a QModelIndex>) {
   fn hasChildren(self , rsthis: & QAbstractProxyModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QAbstractProxyModel11hasChildrenERK11QModelIndex()};
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {QModelIndex::new(()).qclsinst} else {self.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZNK19QAbstractProxyModel11hasChildrenERK11QModelIndex(rsthis.qclsinst, arg0)};
     return ret as i8; // 1
     // return 1;

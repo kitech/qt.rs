@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtGui/qtransform.h
 // dst-file: /src/gui/qtransform.rs
 //
@@ -851,7 +851,7 @@ impl<'a> /*trait*/ QTransform_new for (&'a QMatrix) {
 }
 
   // proto:  void QTransform::QTransform(qreal h11, qreal h12, qreal h13, qreal h21, qreal h22, qreal h23, qreal h31, qreal h32, qreal h33);
-impl<'a> /*trait*/ QTransform_new for (f64, f64, f64, f64, f64, f64, f64, f64, f64) {
+impl<'a> /*trait*/ QTransform_new for (f64, f64, f64, f64, f64, f64, f64, f64, Option<f64>) {
   fn new(self) -> QTransform {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZN10QTransformC2Eddddddddd()};
@@ -865,7 +865,7 @@ impl<'a> /*trait*/ QTransform_new for (f64, f64, f64, f64, f64, f64, f64, f64, f
     let arg5 = self.5  as c_double;
     let arg6 = self.6  as c_double;
     let arg7 = self.7  as c_double;
-    let arg8 = self.8  as c_double;
+    let arg8 = (if self.8.is_none() {1.0} else {self.8.unwrap()})  as c_double;
     let qthis: u64 = unsafe {C_ZN10QTransformC2Eddddddddd(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)};
     let rsthis = QTransform{qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -1014,11 +1014,11 @@ pub trait QTransform_inverted<RetType> {
 }
 
   // proto:  QTransform QTransform::inverted(bool * invertible);
-impl<'a> /*trait*/ QTransform_inverted<QTransform> for (&'a mut Vec<i8>) {
+impl<'a> /*trait*/ QTransform_inverted<QTransform> for (Option<&'a mut Vec<i8>>) {
   fn inverted(self , rsthis: & QTransform) -> QTransform {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform8invertedEPb()};
-    let arg0 = self.as_ptr()  as *mut c_char;
+    let arg0 = (if self.is_none() {0 as *const i8} else {self.unwrap().as_ptr()})  as *mut c_char;
     let mut ret = unsafe {C_ZNK10QTransform8invertedEPb(rsthis.qclsinst, arg0)};
     let mut ret1 = QTransform::inheritFrom(ret as u64);
     return ret1;

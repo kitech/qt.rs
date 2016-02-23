@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtGui/qpictureformatplugin.h
 // dst-file: /src/gui/qpictureformatplugin.rs
 //
@@ -160,13 +160,13 @@ pub trait QPictureFormatPlugin_new {
 }
 
   // proto:  void QPictureFormatPlugin::QPictureFormatPlugin(QObject * parent);
-impl<'a> /*trait*/ QPictureFormatPlugin_new for (&'a QObject) {
+impl<'a> /*trait*/ QPictureFormatPlugin_new for (Option<&'a QObject>) {
   fn new(self) -> QPictureFormatPlugin {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QPictureFormatPluginC2EP7QObject()};
     let ctysz: c_int = unsafe{QPictureFormatPlugin_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN20QPictureFormatPluginC2EP7QObject(arg0)};
     let rsthis = QPictureFormatPlugin{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;

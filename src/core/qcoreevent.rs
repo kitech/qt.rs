@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qcoreevent.h
 // dst-file: /src/core/qcoreevent.rs
 //
@@ -678,11 +678,11 @@ pub trait QEvent_registerEventType_s<RetType> {
 }
 
   // proto: static int QEvent::registerEventType(int hint);
-impl<'a> /*trait*/ QEvent_registerEventType_s<i32> for (i32) {
+impl<'a> /*trait*/ QEvent_registerEventType_s<i32> for (Option<i32>) {
   fn registerEventType_s(self ) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QEvent17registerEventTypeEi()};
-    let arg0 = self  as c_int;
+    let arg0 = (if self.is_none() {-1} else {self.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN6QEvent17registerEventTypeEi(arg0)};
     return ret as i32; // 1
     // return 1;

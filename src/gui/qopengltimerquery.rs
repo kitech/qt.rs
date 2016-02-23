@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtGui/qopengltimerquery.h
 // dst-file: /src/gui/qopengltimerquery.rs
 //
@@ -247,13 +247,13 @@ pub trait QOpenGLTimerQuery_new {
 }
 
   // proto:  void QOpenGLTimerQuery::QOpenGLTimerQuery(QObject * parent);
-impl<'a> /*trait*/ QOpenGLTimerQuery_new for (&'a QObject) {
+impl<'a> /*trait*/ QOpenGLTimerQuery_new for (Option<&'a QObject>) {
   fn new(self) -> QOpenGLTimerQuery {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QOpenGLTimerQueryC2EP7QObject()};
     let ctysz: c_int = unsafe{QOpenGLTimerQuery_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN17QOpenGLTimerQueryC2EP7QObject(arg0)};
     let rsthis = QOpenGLTimerQuery{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -679,13 +679,13 @@ pub trait QOpenGLTimeMonitor_new {
 }
 
   // proto:  void QOpenGLTimeMonitor::QOpenGLTimeMonitor(QObject * parent);
-impl<'a> /*trait*/ QOpenGLTimeMonitor_new for (&'a QObject) {
+impl<'a> /*trait*/ QOpenGLTimeMonitor_new for (Option<&'a QObject>) {
   fn new(self) -> QOpenGLTimeMonitor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QOpenGLTimeMonitorC2EP7QObject()};
     let ctysz: c_int = unsafe{QOpenGLTimeMonitor_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN18QOpenGLTimeMonitorC2EP7QObject(arg0)};
     let rsthis = QOpenGLTimeMonitor{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;

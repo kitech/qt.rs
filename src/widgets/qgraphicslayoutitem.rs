@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qgraphicslayoutitem.h
 // dst-file: /src/widgets/qgraphicslayoutitem.rs
 //
@@ -320,14 +320,14 @@ pub trait QGraphicsLayoutItem_new {
 }
 
   // proto:  void QGraphicsLayoutItem::QGraphicsLayoutItem(QGraphicsLayoutItem * parent, bool isLayout);
-impl<'a> /*trait*/ QGraphicsLayoutItem_new for (&'a QGraphicsLayoutItem, i8) {
+impl<'a> /*trait*/ QGraphicsLayoutItem_new for (Option<&'a QGraphicsLayoutItem>, Option<i8>) {
   fn new(self) -> QGraphicsLayoutItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsLayoutItemC2EPS_b()};
     let ctysz: c_int = unsafe{QGraphicsLayoutItem_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_char;
+    let arg0 = (if self.0.is_none() {0} else {self.0.unwrap().qclsinst})  as *mut c_void;
+    let arg1 = (if self.1.is_none() {false as i8} else {self.1.unwrap()})  as c_char;
     let qthis: u64 = unsafe {C_ZN19QGraphicsLayoutItemC2EPS_b(arg0, arg1)};
     let rsthis = QGraphicsLayoutItem{qclsinst: qthis, ..Default::default()};
     return rsthis;

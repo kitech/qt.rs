@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qwidget.h
 // dst-file: /src/widgets/qwidget.rs
 //
@@ -1919,11 +1919,11 @@ pub trait QWidget_grab<RetType> {
 }
 
   // proto:  QPixmap QWidget::grab(const QRect & rectangle);
-impl<'a> /*trait*/ QWidget_grab<QPixmap> for (&'a QRect) {
+impl<'a> /*trait*/ QWidget_grab<QPixmap> for (Option<&'a QRect>) {
   fn grab(self , rsthis: & QWidget) -> QPixmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget4grabERK5QRect()};
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {QRect::new(()).qclsinst} else {self.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZN7QWidget4grabERK5QRect(rsthis.qclsinst, arg0)};
     let mut ret1 = QPixmap::inheritFrom(ret as u64);
     return ret1;
@@ -3448,12 +3448,12 @@ pub trait QWidget_setShortcutEnabled<RetType> {
 }
 
   // proto:  void QWidget::setShortcutEnabled(int id, bool enable);
-impl<'a> /*trait*/ QWidget_setShortcutEnabled<()> for (i32, i8) {
+impl<'a> /*trait*/ QWidget_setShortcutEnabled<()> for (i32, Option<i8>) {
   fn setShortcutEnabled(self , rsthis: & QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget18setShortcutEnabledEib()};
     let arg0 = self.0  as c_int;
-    let arg1 = self.1  as c_char;
+    let arg1 = (if self.1.is_none() {true as i8} else {self.1.unwrap()})  as c_char;
      unsafe {C_ZN7QWidget18setShortcutEnabledEib(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
@@ -3790,12 +3790,12 @@ pub trait QWidget_setShortcutAutoRepeat<RetType> {
 }
 
   // proto:  void QWidget::setShortcutAutoRepeat(int id, bool enable);
-impl<'a> /*trait*/ QWidget_setShortcutAutoRepeat<()> for (i32, i8) {
+impl<'a> /*trait*/ QWidget_setShortcutAutoRepeat<()> for (i32, Option<i8>) {
   fn setShortcutAutoRepeat(self , rsthis: & QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget21setShortcutAutoRepeatEib()};
     let arg0 = self.0  as c_int;
-    let arg1 = self.1  as c_char;
+    let arg1 = (if self.1.is_none() {true as i8} else {self.1.unwrap()})  as c_char;
      unsafe {C_ZN7QWidget21setShortcutAutoRepeatEib(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }

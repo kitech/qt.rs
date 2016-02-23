@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qradiobutton.h
 // dst-file: /src/widgets/qradiobutton.rs
 //
@@ -111,13 +111,13 @@ pub trait QRadioButton_new {
 }
 
   // proto:  void QRadioButton::QRadioButton(QWidget * parent);
-impl<'a> /*trait*/ QRadioButton_new for (&'a QWidget) {
+impl<'a> /*trait*/ QRadioButton_new for (Option<&'a QWidget>) {
   fn new(self) -> QRadioButton {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QRadioButtonC2EP7QWidget()};
     let ctysz: c_int = unsafe{QRadioButton_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN12QRadioButtonC2EP7QWidget(arg0)};
     let rsthis = QRadioButton{qbase: QAbstractButton::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -196,14 +196,14 @@ impl<'a> /*trait*/ QRadioButton_free<()> for () {
 }
 
   // proto:  void QRadioButton::QRadioButton(const QString & text, QWidget * parent);
-impl<'a> /*trait*/ QRadioButton_new for (&'a QString, &'a QWidget) {
+impl<'a> /*trait*/ QRadioButton_new for (&'a QString, Option<&'a QWidget>) {
   fn new(self) -> QRadioButton {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QRadioButtonC2ERK7QStringP7QWidget()};
     let ctysz: c_int = unsafe{QRadioButton_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN12QRadioButtonC2ERK7QStringP7QWidget(arg0, arg1)};
     let rsthis = QRadioButton{qbase: QAbstractButton::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;

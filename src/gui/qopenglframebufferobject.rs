@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtGui/qopenglframebufferobject.h
 // dst-file: /src/gui/qopenglframebufferobject.rs
 //
@@ -522,14 +522,14 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_texture<u32> for () {
 }
 
   // proto:  void QOpenGLFramebufferObject::QOpenGLFramebufferObject(const QSize & size, GLenum target);
-impl<'a> /*trait*/ QOpenGLFramebufferObject_new for (&'a QSize, u32) {
+impl<'a> /*trait*/ QOpenGLFramebufferObject_new for (&'a QSize, Option<u32>) {
   fn new(self) -> QOpenGLFramebufferObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QOpenGLFramebufferObjectC2ERK5QSizej()};
     let ctysz: c_int = unsafe{QOpenGLFramebufferObject_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_uint;
+    let arg1 = (if self.1.is_none() {0 as u32} else {self.1.unwrap()})  as c_uint;
     let qthis: u64 = unsafe {C_ZN24QOpenGLFramebufferObjectC2ERK5QSizej(arg0, arg1)};
     let rsthis = QOpenGLFramebufferObject{qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -667,14 +667,14 @@ pub trait QOpenGLFramebufferObject_blitFramebuffer_s<RetType> {
 }
 
   // proto: static void QOpenGLFramebufferObject::blitFramebuffer(QOpenGLFramebufferObject * target, QOpenGLFramebufferObject * source, GLbitfield buffers, GLenum filter);
-impl<'a> /*trait*/ QOpenGLFramebufferObject_blitFramebuffer_s<()> for (&'a QOpenGLFramebufferObject, &'a QOpenGLFramebufferObject, u32, u32) {
+impl<'a> /*trait*/ QOpenGLFramebufferObject_blitFramebuffer_s<()> for (&'a QOpenGLFramebufferObject, &'a QOpenGLFramebufferObject, Option<u32>, Option<u32>) {
   fn blitFramebuffer_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QOpenGLFramebufferObject15blitFramebufferEPS_S0_jj()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2  as c_uint;
-    let arg3 = self.3  as c_uint;
+    let arg2 = (if self.2.is_none() {0 as u32} else {self.2.unwrap()})  as c_uint;
+    let arg3 = (if self.3.is_none() {0 as u32} else {self.3.unwrap()})  as c_uint;
      unsafe {C_ZN24QOpenGLFramebufferObject15blitFramebufferEPS_S0_jj(arg0, arg1, arg2, arg3)};
     // return 1;
   }
@@ -698,7 +698,7 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_new for (i32, i32, &'a QOpenGLFrameb
 }
 
   // proto: static void QOpenGLFramebufferObject::blitFramebuffer(QOpenGLFramebufferObject * target, const QRect & targetRect, QOpenGLFramebufferObject * source, const QRect & sourceRect, GLbitfield buffers, GLenum filter);
-impl<'a> /*trait*/ QOpenGLFramebufferObject_blitFramebuffer_s<()> for (&'a QOpenGLFramebufferObject, &'a QRect, &'a QOpenGLFramebufferObject, &'a QRect, u32, u32) {
+impl<'a> /*trait*/ QOpenGLFramebufferObject_blitFramebuffer_s<()> for (&'a QOpenGLFramebufferObject, &'a QRect, &'a QOpenGLFramebufferObject, &'a QRect, Option<u32>, Option<u32>) {
   fn blitFramebuffer_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QOpenGLFramebufferObject15blitFramebufferEPS_RK5QRectS0_S3_jj()};
@@ -706,8 +706,8 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_blitFramebuffer_s<()> for (&'a QOpen
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let arg3 = self.3.qclsinst  as *mut c_void;
-    let arg4 = self.4  as c_uint;
-    let arg5 = self.5  as c_uint;
+    let arg4 = (if self.4.is_none() {0 as u32} else {self.4.unwrap()})  as c_uint;
+    let arg5 = (if self.5.is_none() {0 as u32} else {self.5.unwrap()})  as c_uint;
      unsafe {C_ZN24QOpenGLFramebufferObject15blitFramebufferEPS_RK5QRectS0_S3_jj(arg0, arg1, arg2, arg3, arg4, arg5)};
     // return 1;
   }
@@ -865,7 +865,7 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_width<i32> for () {
 }
 
   // proto:  void QOpenGLFramebufferObject::QOpenGLFramebufferObject(int width, int height, GLenum target);
-impl<'a> /*trait*/ QOpenGLFramebufferObject_new for (i32, i32, u32) {
+impl<'a> /*trait*/ QOpenGLFramebufferObject_new for (i32, i32, Option<u32>) {
   fn new(self) -> QOpenGLFramebufferObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QOpenGLFramebufferObjectC2Eiij()};
@@ -873,7 +873,7 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_new for (i32, i32, u32) {
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-    let arg2 = self.2  as c_uint;
+    let arg2 = (if self.2.is_none() {0 as u32} else {self.2.unwrap()})  as c_uint;
     let qthis: u64 = unsafe {C_ZN24QOpenGLFramebufferObjectC2Eiij(arg0, arg1, arg2)};
     let rsthis = QOpenGLFramebufferObject{qclsinst: qthis, ..Default::default()};
     return rsthis;

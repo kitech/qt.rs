@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qfutureinterface.h
 // dst-file: /src/core/qfutureinterface.rs
 //
@@ -1074,11 +1074,11 @@ pub trait QFutureInterfaceLvoidG_reportFinished<RetType> {
 }
 
   // proto:  void QFutureInterface<void>::reportFinished(const void * );
-impl<'a> /*trait*/ QFutureInterfaceLvoidG_reportFinished<()> for (*mut c_void) {
+impl<'a> /*trait*/ QFutureInterfaceLvoidG_reportFinished<()> for (Option<*mut c_void>) {
   fn reportFinished(self , rsthis: & QFutureInterfaceLvoidG) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QFutureInterfaceIvE14reportFinishedEPKv()};
-    let arg0 = self  as *mut c_void;
+    let arg0 = (if self.is_none() {0 as *mut c_void} else {self.unwrap()})  as *mut c_void;
      unsafe {C_ZN16QFutureInterfaceIvE14reportFinishedEPKv(rsthis.qclsinst, arg0)};
     // return 1;
   }

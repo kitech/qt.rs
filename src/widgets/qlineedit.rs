@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qlineedit.h
 // dst-file: /src/widgets/qlineedit.rs
 //
@@ -217,12 +217,12 @@ pub trait QLineEdit_cursorBackward<RetType> {
 }
 
   // proto:  void QLineEdit::cursorBackward(bool mark, int steps);
-impl<'a> /*trait*/ QLineEdit_cursorBackward<()> for (i8, i32) {
+impl<'a> /*trait*/ QLineEdit_cursorBackward<()> for (i8, Option<i32>) {
   fn cursorBackward(self , rsthis: & QLineEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QLineEdit14cursorBackwardEbi()};
     let arg0 = self.0  as c_char;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {1} else {self.1.unwrap()})  as c_int;
      unsafe {C_ZN9QLineEdit14cursorBackwardEbi(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
@@ -357,14 +357,14 @@ pub trait QLineEdit_new {
 }
 
   // proto:  void QLineEdit::QLineEdit(const QString & , QWidget * parent);
-impl<'a> /*trait*/ QLineEdit_new for (&'a QString, &'a QWidget) {
+impl<'a> /*trait*/ QLineEdit_new for (&'a QString, Option<&'a QWidget>) {
   fn new(self) -> QLineEdit {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QLineEditC2ERK7QStringP7QWidget()};
     let ctysz: c_int = unsafe{QLineEdit_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN9QLineEditC2ERK7QStringP7QWidget(arg0, arg1)};
     let rsthis = QLineEdit{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -573,12 +573,12 @@ pub trait QLineEdit_cursorForward<RetType> {
 }
 
   // proto:  void QLineEdit::cursorForward(bool mark, int steps);
-impl<'a> /*trait*/ QLineEdit_cursorForward<()> for (i8, i32) {
+impl<'a> /*trait*/ QLineEdit_cursorForward<()> for (i8, Option<i32>) {
   fn cursorForward(self , rsthis: & QLineEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QLineEdit13cursorForwardEbi()};
     let arg0 = self.0  as c_char;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {1} else {self.1.unwrap()})  as c_int;
      unsafe {C_ZN9QLineEdit13cursorForwardEbi(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
@@ -1231,13 +1231,13 @@ impl<'a> /*trait*/ QLineEdit_setValidator<()> for (&'a QValidator) {
 }
 
   // proto:  void QLineEdit::QLineEdit(QWidget * parent);
-impl<'a> /*trait*/ QLineEdit_new for (&'a QWidget) {
+impl<'a> /*trait*/ QLineEdit_new for (Option<&'a QWidget>) {
   fn new(self) -> QLineEdit {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QLineEditC2EP7QWidget()};
     let ctysz: c_int = unsafe{QLineEdit_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN9QLineEditC2EP7QWidget(arg0)};
     let rsthis = QLineEdit{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;

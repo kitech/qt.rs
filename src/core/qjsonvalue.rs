@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qjsonvalue.h
 // dst-file: /src/core/qjsonvalue.rs
 //
@@ -250,11 +250,11 @@ pub trait QJsonValue_toInt<RetType> {
 }
 
   // proto:  int QJsonValue::toInt(int defaultValue);
-impl<'a> /*trait*/ QJsonValue_toInt<i32> for (i32) {
+impl<'a> /*trait*/ QJsonValue_toInt<i32> for (Option<i32>) {
   fn toInt(self , rsthis: & QJsonValue) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QJsonValue5toIntEi()};
-    let arg0 = self  as c_int;
+    let arg0 = (if self.is_none() {0} else {self.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK10QJsonValue5toIntEi(rsthis.qclsinst, arg0)};
     return ret as i32; // 1
     // return 1;
@@ -336,11 +336,11 @@ pub trait QJsonValue_toString<RetType> {
 }
 
   // proto:  QString QJsonValue::toString(const QString & defaultValue);
-impl<'a> /*trait*/ QJsonValue_toString<QString> for (&'a QString) {
+impl<'a> /*trait*/ QJsonValue_toString<QString> for (Option<&'a QString>) {
   fn toString(self , rsthis: & QJsonValue) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QJsonValue8toStringERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {QString::new(()).qclsinst} else {self.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZNK10QJsonValue8toStringERK7QString(rsthis.qclsinst, arg0)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
@@ -361,11 +361,11 @@ pub trait QJsonValue_toDouble<RetType> {
 }
 
   // proto:  double QJsonValue::toDouble(double defaultValue);
-impl<'a> /*trait*/ QJsonValue_toDouble<f64> for (f64) {
+impl<'a> /*trait*/ QJsonValue_toDouble<f64> for (Option<f64>) {
   fn toDouble(self , rsthis: & QJsonValue) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QJsonValue8toDoubleEd()};
-    let arg0 = self  as c_double;
+    let arg0 = (if self.is_none() {0 as f64} else {self.unwrap()})  as c_double;
     let mut ret = unsafe {C_ZNK10QJsonValue8toDoubleEd(rsthis.qclsinst, arg0)};
     return ret as f64; // 1
     // return 1;
@@ -479,11 +479,11 @@ pub trait QJsonValue_toBool<RetType> {
 }
 
   // proto:  bool QJsonValue::toBool(bool defaultValue);
-impl<'a> /*trait*/ QJsonValue_toBool<i8> for (i8) {
+impl<'a> /*trait*/ QJsonValue_toBool<i8> for (Option<i8>) {
   fn toBool(self , rsthis: & QJsonValue) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QJsonValue6toBoolEb()};
-    let arg0 = self  as c_char;
+    let arg0 = (if self.is_none() {false as i8} else {self.unwrap()})  as c_char;
     let mut ret = unsafe {C_ZNK10QJsonValue6toBoolEb(rsthis.qclsinst, arg0)};
     return ret as i8; // 1
     // return 1;

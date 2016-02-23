@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qproxystyle.h
 // dst-file: /src/widgets/qproxystyle.rs
 //
@@ -407,13 +407,13 @@ impl<'a> /*trait*/ QProxyStyle_metaObject<QMetaObject> for () {
 }
 
   // proto:  void QProxyStyle::QProxyStyle(QStyle * style);
-impl<'a> /*trait*/ QProxyStyle_new for (&'a QStyle) {
+impl<'a> /*trait*/ QProxyStyle_new for (Option<&'a QStyle>) {
   fn new(self) -> QProxyStyle {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QProxyStyleC2EP6QStyle()};
     let ctysz: c_int = unsafe{QProxyStyle_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN11QProxyStyleC2EP6QStyle(arg0)};
     let rsthis = QProxyStyle{qbase: QCommonStyle::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;

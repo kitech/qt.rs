@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qsortfilterproxymodel.h
 // dst-file: /src/core/qsortfilterproxymodel.rs
 //
@@ -189,11 +189,11 @@ pub trait QSortFilterProxyModel_rowCount<RetType> {
 }
 
   // proto:  int QSortFilterProxyModel::rowCount(const QModelIndex & parent);
-impl<'a> /*trait*/ QSortFilterProxyModel_rowCount<i32> for (&'a QModelIndex) {
+impl<'a> /*trait*/ QSortFilterProxyModel_rowCount<i32> for (Option<&'a QModelIndex>) {
   fn rowCount(self , rsthis: & QSortFilterProxyModel) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QSortFilterProxyModel8rowCountERK11QModelIndex()};
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {QModelIndex::new(()).qclsinst} else {self.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZNK21QSortFilterProxyModel8rowCountERK11QModelIndex(rsthis.qclsinst, arg0)};
     return ret as i32; // 1
     // return 1;
@@ -313,11 +313,11 @@ pub trait QSortFilterProxyModel_hasChildren<RetType> {
 }
 
   // proto:  bool QSortFilterProxyModel::hasChildren(const QModelIndex & parent);
-impl<'a> /*trait*/ QSortFilterProxyModel_hasChildren<i8> for (&'a QModelIndex) {
+impl<'a> /*trait*/ QSortFilterProxyModel_hasChildren<i8> for (Option<&'a QModelIndex>) {
   fn hasChildren(self , rsthis: & QSortFilterProxyModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QSortFilterProxyModel11hasChildrenERK11QModelIndex()};
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {QModelIndex::new(()).qclsinst} else {self.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZNK21QSortFilterProxyModel11hasChildrenERK11QModelIndex(rsthis.qclsinst, arg0)};
     return ret as i8; // 1
     // return 1;
@@ -360,13 +360,13 @@ pub trait QSortFilterProxyModel_setData<RetType> {
 }
 
   // proto:  bool QSortFilterProxyModel::setData(const QModelIndex & index, const QVariant & value, int role);
-impl<'a> /*trait*/ QSortFilterProxyModel_setData<i8> for (&'a QModelIndex, &'a QVariant, i32) {
+impl<'a> /*trait*/ QSortFilterProxyModel_setData<i8> for (&'a QModelIndex, &'a QVariant, Option<i32>) {
   fn setData(self , rsthis: & QSortFilterProxyModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QSortFilterProxyModel7setDataERK11QModelIndexRK8QVarianti()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2  as c_int;
+    let arg2 = (if self.2.is_none() {0 as i32} else {self.2.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN21QSortFilterProxyModel7setDataERK11QModelIndexRK8QVarianti(rsthis.qclsinst, arg0, arg1, arg2)};
     return ret as i8; // 1
     // return 1;
@@ -409,12 +409,12 @@ pub trait QSortFilterProxyModel_data<RetType> {
 }
 
   // proto:  QVariant QSortFilterProxyModel::data(const QModelIndex & index, int role);
-impl<'a> /*trait*/ QSortFilterProxyModel_data<QVariant> for (&'a QModelIndex, i32) {
+impl<'a> /*trait*/ QSortFilterProxyModel_data<QVariant> for (&'a QModelIndex, Option<i32>) {
   fn data(self , rsthis: & QSortFilterProxyModel) -> QVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QSortFilterProxyModel4dataERK11QModelIndexi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {0 as i32} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK21QSortFilterProxyModel4dataERK11QModelIndexi(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QVariant::inheritFrom(ret as u64);
     return ret1;
@@ -480,13 +480,13 @@ pub trait QSortFilterProxyModel_insertRows<RetType> {
 }
 
   // proto:  bool QSortFilterProxyModel::insertRows(int row, int count, const QModelIndex & parent);
-impl<'a> /*trait*/ QSortFilterProxyModel_insertRows<i8> for (i32, i32, &'a QModelIndex) {
+impl<'a> /*trait*/ QSortFilterProxyModel_insertRows<i8> for (i32, i32, Option<&'a QModelIndex>) {
   fn insertRows(self , rsthis: & QSortFilterProxyModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QSortFilterProxyModel10insertRowsEiiRK11QModelIndex()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-    let arg2 = self.2.qclsinst  as *mut c_void;
+    let arg2 = (if self.2.is_none() {QModelIndex::new(()).qclsinst} else {self.2.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZN21QSortFilterProxyModel10insertRowsEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
     return ret as i8; // 1
     // return 1;
@@ -884,13 +884,13 @@ pub trait QSortFilterProxyModel_removeColumns<RetType> {
 }
 
   // proto:  bool QSortFilterProxyModel::removeColumns(int column, int count, const QModelIndex & parent);
-impl<'a> /*trait*/ QSortFilterProxyModel_removeColumns<i8> for (i32, i32, &'a QModelIndex) {
+impl<'a> /*trait*/ QSortFilterProxyModel_removeColumns<i8> for (i32, i32, Option<&'a QModelIndex>) {
   fn removeColumns(self , rsthis: & QSortFilterProxyModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QSortFilterProxyModel13removeColumnsEiiRK11QModelIndex()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-    let arg2 = self.2.qclsinst  as *mut c_void;
+    let arg2 = (if self.2.is_none() {QModelIndex::new(()).qclsinst} else {self.2.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZN21QSortFilterProxyModel13removeColumnsEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
     return ret as i8; // 1
     // return 1;
@@ -955,13 +955,13 @@ pub trait QSortFilterProxyModel_insertColumns<RetType> {
 }
 
   // proto:  bool QSortFilterProxyModel::insertColumns(int column, int count, const QModelIndex & parent);
-impl<'a> /*trait*/ QSortFilterProxyModel_insertColumns<i8> for (i32, i32, &'a QModelIndex) {
+impl<'a> /*trait*/ QSortFilterProxyModel_insertColumns<i8> for (i32, i32, Option<&'a QModelIndex>) {
   fn insertColumns(self , rsthis: & QSortFilterProxyModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QSortFilterProxyModel13insertColumnsEiiRK11QModelIndex()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-    let arg2 = self.2.qclsinst  as *mut c_void;
+    let arg2 = (if self.2.is_none() {QModelIndex::new(()).qclsinst} else {self.2.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZN21QSortFilterProxyModel13insertColumnsEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
     return ret as i8; // 1
     // return 1;
@@ -981,11 +981,11 @@ pub trait QSortFilterProxyModel_columnCount<RetType> {
 }
 
   // proto:  int QSortFilterProxyModel::columnCount(const QModelIndex & parent);
-impl<'a> /*trait*/ QSortFilterProxyModel_columnCount<i32> for (&'a QModelIndex) {
+impl<'a> /*trait*/ QSortFilterProxyModel_columnCount<i32> for (Option<&'a QModelIndex>) {
   fn columnCount(self , rsthis: & QSortFilterProxyModel) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QSortFilterProxyModel11columnCountERK11QModelIndex()};
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {QModelIndex::new(()).qclsinst} else {self.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZNK21QSortFilterProxyModel11columnCountERK11QModelIndex(rsthis.qclsinst, arg0)};
     return ret as i32; // 1
     // return 1;
@@ -1089,13 +1089,13 @@ pub trait QSortFilterProxyModel_new {
 }
 
   // proto:  void QSortFilterProxyModel::QSortFilterProxyModel(QObject * parent);
-impl<'a> /*trait*/ QSortFilterProxyModel_new for (&'a QObject) {
+impl<'a> /*trait*/ QSortFilterProxyModel_new for (Option<&'a QObject>) {
   fn new(self) -> QSortFilterProxyModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QSortFilterProxyModelC2EP7QObject()};
     let ctysz: c_int = unsafe{QSortFilterProxyModel_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN21QSortFilterProxyModelC2EP7QObject(arg0)};
     let rsthis = QSortFilterProxyModel{qbase: QAbstractProxyModel::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -1116,13 +1116,13 @@ pub trait QSortFilterProxyModel_removeRows<RetType> {
 }
 
   // proto:  bool QSortFilterProxyModel::removeRows(int row, int count, const QModelIndex & parent);
-impl<'a> /*trait*/ QSortFilterProxyModel_removeRows<i8> for (i32, i32, &'a QModelIndex) {
+impl<'a> /*trait*/ QSortFilterProxyModel_removeRows<i8> for (i32, i32, Option<&'a QModelIndex>) {
   fn removeRows(self , rsthis: & QSortFilterProxyModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QSortFilterProxyModel10removeRowsEiiRK11QModelIndex()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-    let arg2 = self.2.qclsinst  as *mut c_void;
+    let arg2 = (if self.2.is_none() {QModelIndex::new(()).qclsinst} else {self.2.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZN21QSortFilterProxyModel10removeRowsEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
     return ret as i8; // 1
     // return 1;
@@ -1142,13 +1142,13 @@ pub trait QSortFilterProxyModel_index<RetType> {
 }
 
   // proto:  QModelIndex QSortFilterProxyModel::index(int row, int column, const QModelIndex & parent);
-impl<'a> /*trait*/ QSortFilterProxyModel_index<QModelIndex> for (i32, i32, &'a QModelIndex) {
+impl<'a> /*trait*/ QSortFilterProxyModel_index<QModelIndex> for (i32, i32, Option<&'a QModelIndex>) {
   fn index(self , rsthis: & QSortFilterProxyModel) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QSortFilterProxyModel5indexEiiRK11QModelIndex()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-    let arg2 = self.2.qclsinst  as *mut c_void;
+    let arg2 = (if self.2.is_none() {QModelIndex::new(()).qclsinst} else {self.2.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZNK21QSortFilterProxyModel5indexEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
     let mut ret1 = QModelIndex::inheritFrom(ret as u64);
     return ret1;

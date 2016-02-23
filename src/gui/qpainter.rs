@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtGui/qpainter.h
 // dst-file: /src/gui/qpainter.rs
 //
@@ -416,13 +416,13 @@ pub trait QPainter_boundingRect<RetType> {
 }
 
   // proto:  QRectF QPainter::boundingRect(const QRectF & rect, const QString & text, const QTextOption & o);
-impl<'a> /*trait*/ QPainter_boundingRect<QRectF> for (&'a QRectF, &'a QString, &'a QTextOption) {
+impl<'a> /*trait*/ QPainter_boundingRect<QRectF> for (&'a QRectF, &'a QString, Option<&'a QTextOption>) {
   fn boundingRect(self , rsthis: & QPainter) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPainter12boundingRectERK6QRectFRK7QStringRK11QTextOption()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2.qclsinst  as *mut c_void;
+    let arg2 = (if self.2.is_none() {QTextOption::new(()).qclsinst} else {self.2.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZN8QPainter12boundingRectERK6QRectFRK7QStringRK11QTextOption(rsthis.qclsinst, arg0, arg1, arg2)};
     let mut ret1 = QRectF::inheritFrom(ret as u64);
     return ret1;
@@ -604,13 +604,13 @@ pub trait QPainter_drawTiledPixmap<RetType> {
 }
 
   // proto:  void QPainter::drawTiledPixmap(const QRectF & rect, const QPixmap & pm, const QPointF & offset);
-impl<'a> /*trait*/ QPainter_drawTiledPixmap<()> for (&'a QRectF, &'a QPixmap, &'a QPointF) {
+impl<'a> /*trait*/ QPainter_drawTiledPixmap<()> for (&'a QRectF, &'a QPixmap, Option<&'a QPointF>) {
   fn drawTiledPixmap(self , rsthis: & QPainter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPainter15drawTiledPixmapERK6QRectFRK7QPixmapRK7QPointF()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2.qclsinst  as *mut c_void;
+    let arg2 = (if self.2.is_none() {QPointF::new(()).qclsinst} else {self.2.unwrap().qclsinst})  as *mut c_void;
      unsafe {C_ZN8QPainter15drawTiledPixmapERK6QRectFRK7QPixmapRK7QPointF(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
@@ -762,12 +762,12 @@ pub trait QPainter_setMatrix<RetType> {
 }
 
   // proto:  void QPainter::setMatrix(const QMatrix & matrix, bool combine);
-impl<'a> /*trait*/ QPainter_setMatrix<()> for (&'a QMatrix, i8) {
+impl<'a> /*trait*/ QPainter_setMatrix<()> for (&'a QMatrix, Option<i8>) {
   fn setMatrix(self , rsthis: & QPainter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPainter9setMatrixERK7QMatrixb()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_char;
+    let arg1 = (if self.1.is_none() {false as i8} else {self.1.unwrap()})  as c_char;
      unsafe {C_ZN8QPainter9setMatrixERK7QMatrixb(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
@@ -1295,13 +1295,13 @@ impl<'a> /*trait*/ QPainter_drawPolyline<()> for (&'a QPolygon) {
 }
 
   // proto:  void QPainter::drawTiledPixmap(const QRect & , const QPixmap & , const QPoint & );
-impl<'a> /*trait*/ QPainter_drawTiledPixmap<()> for (&'a QRect, &'a QPixmap, &'a QPoint) {
+impl<'a> /*trait*/ QPainter_drawTiledPixmap<()> for (&'a QRect, &'a QPixmap, Option<&'a QPoint>) {
   fn drawTiledPixmap(self , rsthis: & QPainter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPainter15drawTiledPixmapERK5QRectRK7QPixmapRK6QPoint()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2.qclsinst  as *mut c_void;
+    let arg2 = (if self.2.is_none() {QPoint::new(()).qclsinst} else {self.2.unwrap().qclsinst})  as *mut c_void;
      unsafe {C_ZN8QPainter15drawTiledPixmapERK5QRectRK7QPixmapRK6QPoint(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
@@ -1658,14 +1658,14 @@ impl<'a> /*trait*/ QPainter_clipRegion<QRegion> for () {
 }
 
   // proto:  void QPainter::drawText(const QRectF & r, int flags, const QString & text, QRectF * br);
-impl<'a> /*trait*/ QPainter_drawText<()> for (&'a QRectF, i32, &'a QString, &'a QRectF) {
+impl<'a> /*trait*/ QPainter_drawText<()> for (&'a QRectF, i32, &'a QString, Option<&'a QRectF>) {
   fn drawText(self , rsthis: & QPainter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPainter8drawTextERK6QRectFiRK7QStringPS0_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
-    let arg3 = self.3.qclsinst  as *mut c_void;
+    let arg3 = (if self.3.is_none() {0} else {self.3.unwrap().qclsinst})  as *mut c_void;
      unsafe {C_ZN8QPainter8drawTextERK6QRectFiRK7QStringPS0_(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
     // return 1;
   }
@@ -1719,7 +1719,7 @@ impl<'a> /*trait*/ QPainter_drawPixmap<()> for (&'a QRect, &'a QPixmap) {
 }
 
   // proto:  void QPainter::drawTiledPixmap(int x, int y, int w, int h, const QPixmap & , int sx, int sy);
-impl<'a> /*trait*/ QPainter_drawTiledPixmap<()> for (i32, i32, i32, i32, &'a QPixmap, i32, i32) {
+impl<'a> /*trait*/ QPainter_drawTiledPixmap<()> for (i32, i32, i32, i32, &'a QPixmap, Option<i32>, Option<i32>) {
   fn drawTiledPixmap(self , rsthis: & QPainter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPainter15drawTiledPixmapEiiiiRK7QPixmapii()};
@@ -1728,8 +1728,8 @@ impl<'a> /*trait*/ QPainter_drawTiledPixmap<()> for (i32, i32, i32, i32, &'a QPi
     let arg2 = self.2  as c_int;
     let arg3 = self.3  as c_int;
     let arg4 = self.4.qclsinst  as *mut c_void;
-    let arg5 = self.5  as c_int;
-    let arg6 = self.6  as c_int;
+    let arg5 = (if self.5.is_none() {0} else {self.5.unwrap()})  as c_int;
+    let arg6 = (if self.6.is_none() {0} else {self.6.unwrap()})  as c_int;
      unsafe {C_ZN8QPainter15drawTiledPixmapEiiiiRK7QPixmapii(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5, arg6)};
     // return 1;
   }
@@ -2047,13 +2047,13 @@ pub trait QPainter_drawRoundRect<RetType> {
 }
 
   // proto:  void QPainter::drawRoundRect(const QRect & r, int xround, int yround);
-impl<'a> /*trait*/ QPainter_drawRoundRect<()> for (&'a QRect, i32, i32) {
+impl<'a> /*trait*/ QPainter_drawRoundRect<()> for (&'a QRect, Option<i32>, Option<i32>) {
   fn drawRoundRect(self , rsthis: & QPainter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPainter13drawRoundRectERK5QRectii()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
-    let arg2 = self.2  as c_int;
+    let arg1 = (if self.1.is_none() {25} else {self.1.unwrap()})  as c_int;
+    let arg2 = (if self.2.is_none() {25} else {self.2.unwrap()})  as c_int;
      unsafe {C_ZN8QPainter13drawRoundRectERK5QRectii(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
@@ -2072,12 +2072,12 @@ pub trait QPainter_setWorldTransform<RetType> {
 }
 
   // proto:  void QPainter::setWorldTransform(const QTransform & matrix, bool combine);
-impl<'a> /*trait*/ QPainter_setWorldTransform<()> for (&'a QTransform, i8) {
+impl<'a> /*trait*/ QPainter_setWorldTransform<()> for (&'a QTransform, Option<i8>) {
   fn setWorldTransform(self , rsthis: & QPainter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPainter17setWorldTransformERK10QTransformb()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_char;
+    let arg1 = (if self.1.is_none() {false as i8} else {self.1.unwrap()})  as c_char;
      unsafe {C_ZN8QPainter17setWorldTransformERK10QTransformb(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
@@ -2159,13 +2159,13 @@ impl<'a> /*trait*/ QPainter_fillRect<()> for (i32, i32, i32, i32, &'a QBrush) {
 }
 
   // proto:  void QPainter::drawRoundRect(const QRectF & r, int xround, int yround);
-impl<'a> /*trait*/ QPainter_drawRoundRect<()> for (&'a QRectF, i32, i32) {
+impl<'a> /*trait*/ QPainter_drawRoundRect<()> for (&'a QRectF, Option<i32>, Option<i32>) {
   fn drawRoundRect(self , rsthis: & QPainter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPainter13drawRoundRectERK6QRectFii()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
-    let arg2 = self.2  as c_int;
+    let arg1 = (if self.1.is_none() {25} else {self.1.unwrap()})  as c_int;
+    let arg2 = (if self.2.is_none() {25} else {self.2.unwrap()})  as c_int;
      unsafe {C_ZN8QPainter13drawRoundRectERK6QRectFii(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
@@ -2207,12 +2207,12 @@ pub trait QPainter_redirected_s<RetType> {
 }
 
   // proto: static QPaintDevice * QPainter::redirected(const QPaintDevice * device, QPoint * offset);
-impl<'a> /*trait*/ QPainter_redirected_s<QPaintDevice> for (&'a QPaintDevice, &'a QPoint) {
+impl<'a> /*trait*/ QPainter_redirected_s<QPaintDevice> for (&'a QPaintDevice, Option<&'a QPoint>) {
   fn redirected_s(self ) -> QPaintDevice {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPainter10redirectedEPK12QPaintDeviceP6QPoint()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZN8QPainter10redirectedEPK12QPaintDeviceP6QPoint(arg0, arg1)};
     let mut ret1 = QPaintDevice::inheritFrom(ret as u64);
     return ret1;
@@ -2245,14 +2245,14 @@ impl<'a> /*trait*/ QPainter_shear<()> for (f64, f64) {
 }
 
   // proto:  void QPainter::drawText(const QRect & r, int flags, const QString & text, QRect * br);
-impl<'a> /*trait*/ QPainter_drawText<()> for (&'a QRect, i32, &'a QString, &'a QRect) {
+impl<'a> /*trait*/ QPainter_drawText<()> for (&'a QRect, i32, &'a QString, Option<&'a QRect>) {
   fn drawText(self , rsthis: & QPainter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPainter8drawTextERK5QRectiRK7QStringPS0_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
-    let arg3 = self.3.qclsinst  as *mut c_void;
+    let arg3 = (if self.3.is_none() {0} else {self.3.unwrap().qclsinst})  as *mut c_void;
      unsafe {C_ZN8QPainter8drawTextERK5QRectiRK7QStringPS0_(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
     // return 1;
   }
@@ -2509,13 +2509,13 @@ impl<'a> /*trait*/ QPainter_setBrushOrigin<()> for (&'a QPoint) {
 }
 
   // proto:  void QPainter::drawText(const QRectF & r, const QString & text, const QTextOption & o);
-impl<'a> /*trait*/ QPainter_drawText<()> for (&'a QRectF, &'a QString, &'a QTextOption) {
+impl<'a> /*trait*/ QPainter_drawText<()> for (&'a QRectF, &'a QString, Option<&'a QTextOption>) {
   fn drawText(self , rsthis: & QPainter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPainter8drawTextERK6QRectFRK7QStringRK11QTextOption()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2.qclsinst  as *mut c_void;
+    let arg2 = (if self.2.is_none() {QTextOption::new(()).qclsinst} else {self.2.unwrap().qclsinst})  as *mut c_void;
      unsafe {C_ZN8QPainter8drawTextERK6QRectFRK7QStringRK11QTextOption(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
@@ -2619,13 +2619,13 @@ pub trait QPainter_setRedirected_s<RetType> {
 }
 
   // proto: static void QPainter::setRedirected(const QPaintDevice * device, QPaintDevice * replacement, const QPoint & offset);
-impl<'a> /*trait*/ QPainter_setRedirected_s<()> for (&'a QPaintDevice, &'a QPaintDevice, &'a QPoint) {
+impl<'a> /*trait*/ QPainter_setRedirected_s<()> for (&'a QPaintDevice, &'a QPaintDevice, Option<&'a QPoint>) {
   fn setRedirected_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPainter13setRedirectedEPK12QPaintDevicePS0_RK6QPoint()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2.qclsinst  as *mut c_void;
+    let arg2 = (if self.2.is_none() {QPoint::new(()).qclsinst} else {self.2.unwrap().qclsinst})  as *mut c_void;
      unsafe {C_ZN8QPainter13setRedirectedEPK12QPaintDevicePS0_RK6QPoint(arg0, arg1, arg2)};
     // return 1;
   }
@@ -2868,12 +2868,12 @@ pub trait QPainter_setWorldMatrix<RetType> {
 }
 
   // proto:  void QPainter::setWorldMatrix(const QMatrix & matrix, bool combine);
-impl<'a> /*trait*/ QPainter_setWorldMatrix<()> for (&'a QMatrix, i8) {
+impl<'a> /*trait*/ QPainter_setWorldMatrix<()> for (&'a QMatrix, Option<i8>) {
   fn setWorldMatrix(self , rsthis: & QPainter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPainter14setWorldMatrixERK7QMatrixb()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_char;
+    let arg1 = (if self.1.is_none() {false as i8} else {self.1.unwrap()})  as c_char;
      unsafe {C_ZN8QPainter14setWorldMatrixERK7QMatrixb(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
@@ -3000,7 +3000,7 @@ impl<'a> /*trait*/ QPainter_background<QBrush> for () {
 }
 
   // proto:  void QPainter::drawRoundRect(int x, int y, int w, int h, int , int );
-impl<'a> /*trait*/ QPainter_drawRoundRect<()> for (i32, i32, i32, i32, i32, i32) {
+impl<'a> /*trait*/ QPainter_drawRoundRect<()> for (i32, i32, i32, i32, Option<i32>, Option<i32>) {
   fn drawRoundRect(self , rsthis: & QPainter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPainter13drawRoundRectEiiiiii()};
@@ -3008,8 +3008,8 @@ impl<'a> /*trait*/ QPainter_drawRoundRect<()> for (i32, i32, i32, i32, i32, i32)
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as c_int;
     let arg3 = self.3  as c_int;
-    let arg4 = self.4  as c_int;
-    let arg5 = self.5  as c_int;
+    let arg4 = (if self.4.is_none() {25} else {self.4.unwrap()})  as c_int;
+    let arg5 = (if self.5.is_none() {25} else {self.5.unwrap()})  as c_int;
      unsafe {C_ZN8QPainter13drawRoundRectEiiiiii(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)};
     // return 1;
   }
@@ -3077,7 +3077,7 @@ impl<'a> /*trait*/ QPainter_fillPath<()> for (&'a QPainterPath, &'a QBrush) {
 }
 
   // proto:  void QPainter::drawText(int x, int y, int w, int h, int flags, const QString & text, QRect * br);
-impl<'a> /*trait*/ QPainter_drawText<()> for (i32, i32, i32, i32, i32, &'a QString, &'a QRect) {
+impl<'a> /*trait*/ QPainter_drawText<()> for (i32, i32, i32, i32, i32, &'a QString, Option<&'a QRect>) {
   fn drawText(self , rsthis: & QPainter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPainter8drawTextEiiiiiRK7QStringP5QRect()};
@@ -3087,7 +3087,7 @@ impl<'a> /*trait*/ QPainter_drawText<()> for (i32, i32, i32, i32, i32, &'a QStri
     let arg3 = self.3  as c_int;
     let arg4 = self.4  as c_int;
     let arg5 = self.5.qclsinst  as *mut c_void;
-    let arg6 = self.6.qclsinst  as *mut c_void;
+    let arg6 = (if self.6.is_none() {0} else {self.6.unwrap().qclsinst})  as *mut c_void;
      unsafe {C_ZN8QPainter8drawTextEiiiiiRK7QStringP5QRect(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5, arg6)};
     // return 1;
   }
@@ -3141,12 +3141,12 @@ pub trait QPainter_setTransform<RetType> {
 }
 
   // proto:  void QPainter::setTransform(const QTransform & transform, bool combine);
-impl<'a> /*trait*/ QPainter_setTransform<()> for (&'a QTransform, i8) {
+impl<'a> /*trait*/ QPainter_setTransform<()> for (&'a QTransform, Option<i8>) {
   fn setTransform(self , rsthis: & QPainter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPainter12setTransformERK10QTransformb()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_char;
+    let arg1 = (if self.1.is_none() {false as i8} else {self.1.unwrap()})  as c_char;
      unsafe {C_ZN8QPainter12setTransformERK10QTransformb(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }

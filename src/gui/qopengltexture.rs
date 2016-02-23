@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtGui/qopengltexture.h
 // dst-file: /src/gui/qopengltexture.rs
 //
@@ -272,13 +272,13 @@ pub trait QOpenGLTexture_setCompressedData<RetType> {
 }
 
   // proto:  void QOpenGLTexture::setCompressedData(int dataSize, const void * data, const QOpenGLPixelTransferOptions *const options);
-impl<'a> /*trait*/ QOpenGLTexture_setCompressedData<()> for (i32, *mut c_void, &'a QOpenGLPixelTransferOptions) {
+impl<'a> /*trait*/ QOpenGLTexture_setCompressedData<()> for (i32, *mut c_void, Option<&'a QOpenGLPixelTransferOptions>) {
   fn setCompressedData(self , rsthis: & QOpenGLTexture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QOpenGLTexture17setCompressedDataEiPKvPK27QOpenGLPixelTransferOptions()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as *mut c_void;
-    let arg2 = self.2.qclsinst  as *mut c_void;
+    let arg2 = (if self.2.is_none() {0} else {self.2.unwrap().qclsinst})  as *mut c_void;
      unsafe {C_ZN14QOpenGLTexture17setCompressedDataEiPKvPK27QOpenGLPixelTransferOptions(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
@@ -366,26 +366,26 @@ pub trait QOpenGLTexture_generateMipMaps<RetType> {
 }
 
   // proto:  void QOpenGLTexture::generateMipMaps(int baseLevel, bool resetBaseLevel);
-impl<'a> /*trait*/ QOpenGLTexture_generateMipMaps<()> for (i32, i8) {
+impl<'a> /*trait*/ QOpenGLTexture_generateMipMaps<()> for (i32, Option<i8>) {
   fn generateMipMaps(self , rsthis: & QOpenGLTexture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QOpenGLTexture15generateMipMapsEib()};
     let arg0 = self.0  as c_int;
-    let arg1 = self.1  as c_char;
+    let arg1 = (if self.1.is_none() {true as i8} else {self.1.unwrap()})  as c_char;
      unsafe {C_ZN14QOpenGLTexture15generateMipMapsEib(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
 
   // proto:  void QOpenGLTexture::setCompressedData(int mipLevel, int dataSize, const void * data, const QOpenGLPixelTransferOptions *const options);
-impl<'a> /*trait*/ QOpenGLTexture_setCompressedData<()> for (i32, i32, *mut c_void, &'a QOpenGLPixelTransferOptions) {
+impl<'a> /*trait*/ QOpenGLTexture_setCompressedData<()> for (i32, i32, *mut c_void, Option<&'a QOpenGLPixelTransferOptions>) {
   fn setCompressedData(self , rsthis: & QOpenGLTexture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QOpenGLTexture17setCompressedDataEiiPKvPK27QOpenGLPixelTransferOptions()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as *mut c_void;
-    let arg3 = self.3.qclsinst  as *mut c_void;
+    let arg3 = (if self.3.is_none() {0} else {self.3.unwrap().qclsinst})  as *mut c_void;
      unsafe {C_ZN14QOpenGLTexture17setCompressedDataEiiPKvPK27QOpenGLPixelTransferOptions(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
     // return 1;
   }
@@ -461,7 +461,7 @@ impl<'a> /*trait*/ QOpenGLTexture_create<i8> for () {
 }
 
   // proto:  void QOpenGLTexture::setCompressedData(int mipLevel, int layer, int dataSize, const void * data, const QOpenGLPixelTransferOptions *const options);
-impl<'a> /*trait*/ QOpenGLTexture_setCompressedData<()> for (i32, i32, i32, *mut c_void, &'a QOpenGLPixelTransferOptions) {
+impl<'a> /*trait*/ QOpenGLTexture_setCompressedData<()> for (i32, i32, i32, *mut c_void, Option<&'a QOpenGLPixelTransferOptions>) {
   fn setCompressedData(self , rsthis: & QOpenGLTexture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QOpenGLTexture17setCompressedDataEiiiPKvPK27QOpenGLPixelTransferOptions()};
@@ -469,7 +469,7 @@ impl<'a> /*trait*/ QOpenGLTexture_setCompressedData<()> for (i32, i32, i32, *mut
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as c_int;
     let arg3 = self.3  as *mut c_void;
-    let arg4 = self.4.qclsinst  as *mut c_void;
+    let arg4 = (if self.4.is_none() {0} else {self.4.unwrap().qclsinst})  as *mut c_void;
      unsafe {C_ZN14QOpenGLTexture17setCompressedDataEiiiPKvPK27QOpenGLPixelTransferOptions(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4)};
     // return 1;
   }
@@ -1260,13 +1260,13 @@ pub trait QOpenGLTexture_setSize<RetType> {
 }
 
   // proto:  void QOpenGLTexture::setSize(int width, int height, int depth);
-impl<'a> /*trait*/ QOpenGLTexture_setSize<()> for (i32, i32, i32) {
+impl<'a> /*trait*/ QOpenGLTexture_setSize<()> for (i32, Option<i32>, Option<i32>) {
   fn setSize(self , rsthis: & QOpenGLTexture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QOpenGLTexture7setSizeEiii()};
     let arg0 = self.0  as c_int;
-    let arg1 = self.1  as c_int;
-    let arg2 = self.2  as c_int;
+    let arg1 = (if self.1.is_none() {1} else {self.1.unwrap()})  as c_int;
+    let arg2 = (if self.2.is_none() {1} else {self.2.unwrap()})  as c_int;
      unsafe {C_ZN14QOpenGLTexture7setSizeEiii(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }

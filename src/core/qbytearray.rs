@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qbytearray.h
 // dst-file: /src/core/qbytearray.rs
 //
@@ -386,12 +386,12 @@ pub trait QByteArray_lastIndexOf<RetType> {
 }
 
   // proto:  int QByteArray::lastIndexOf(const QByteArray & a, int from);
-impl<'a> /*trait*/ QByteArray_lastIndexOf<i32> for (&'a QByteArray, i32) {
+impl<'a> /*trait*/ QByteArray_lastIndexOf<i32> for (&'a QByteArray, Option<i32>) {
   fn lastIndexOf(self , rsthis: & QByteArray) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray11lastIndexOfERKS_i()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {-1} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK10QByteArray11lastIndexOfERKS_i(rsthis.qclsinst, arg0, arg1)};
     return ret as i32; // 1
     // return 1;
@@ -434,12 +434,12 @@ pub trait QByteArray_toULong<RetType> {
 }
 
   // proto:  ulong QByteArray::toULong(bool * ok, int base);
-impl<'a> /*trait*/ QByteArray_toULong<u64> for (&'a mut Vec<i8>, i32) {
+impl<'a> /*trait*/ QByteArray_toULong<u64> for (Option<&'a mut Vec<i8>>, Option<i32>) {
   fn toULong(self , rsthis: & QByteArray) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray7toULongEPbi()};
-    let arg0 = self.0.as_ptr()  as *mut c_char;
-    let arg1 = self.1  as c_int;
+    let arg0 = (if self.0.is_none() {0 as *const i8} else {self.0.unwrap().as_ptr()})  as *mut c_char;
+    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK10QByteArray7toULongEPbi(rsthis.qclsinst, arg0, arg1)};
     return ret as u64; // 1
     // return 1;
@@ -660,11 +660,11 @@ pub trait QByteArray_toFloat<RetType> {
 }
 
   // proto:  float QByteArray::toFloat(bool * ok);
-impl<'a> /*trait*/ QByteArray_toFloat<f32> for (&'a mut Vec<i8>) {
+impl<'a> /*trait*/ QByteArray_toFloat<f32> for (Option<&'a mut Vec<i8>>) {
   fn toFloat(self , rsthis: & QByteArray) -> f32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray7toFloatEPb()};
-    let arg0 = self.as_ptr()  as *mut c_char;
+    let arg0 = (if self.is_none() {0 as *const i8} else {self.unwrap().as_ptr()})  as *mut c_char;
     let mut ret = unsafe {C_ZNK10QByteArray7toFloatEPb(rsthis.qclsinst, arg0)};
     return ret as f32; // 1
     // return 1;
@@ -810,12 +810,12 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (i32, i32, &'a  String, i3
 }
 
   // proto:  int QByteArray::lastIndexOf(const QString & s, int from);
-impl<'a> /*trait*/ QByteArray_lastIndexOf<i32> for (&'a QString, i32) {
+impl<'a> /*trait*/ QByteArray_lastIndexOf<i32> for (&'a QString, Option<i32>) {
   fn lastIndexOf(self , rsthis: & QByteArray) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray11lastIndexOfERK7QStringi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {-1} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK10QByteArray11lastIndexOfERK7QStringi(rsthis.qclsinst, arg0, arg1)};
     return ret as i32; // 1
     // return 1;
@@ -859,12 +859,12 @@ pub trait QByteArray_indexOf<RetType> {
 }
 
   // proto:  int QByteArray::indexOf(const char * c, int from);
-impl<'a> /*trait*/ QByteArray_indexOf<i32> for (&'a  String, i32) {
+impl<'a> /*trait*/ QByteArray_indexOf<i32> for (&'a  String, Option<i32>) {
   fn indexOf(self , rsthis: & QByteArray) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray7indexOfEPKci()};
     let arg0 = self.0.as_ptr()  as *mut c_char;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK10QByteArray7indexOfEPKci(rsthis.qclsinst, arg0, arg1)};
     return ret as i32; // 1
     // return 1;
@@ -898,12 +898,12 @@ pub trait QByteArray_toUInt<RetType> {
 }
 
   // proto:  uint QByteArray::toUInt(bool * ok, int base);
-impl<'a> /*trait*/ QByteArray_toUInt<u32> for (&'a mut Vec<i8>, i32) {
+impl<'a> /*trait*/ QByteArray_toUInt<u32> for (Option<&'a mut Vec<i8>>, Option<i32>) {
   fn toUInt(self , rsthis: & QByteArray) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray6toUIntEPbi()};
-    let arg0 = self.0.as_ptr()  as *mut c_char;
-    let arg1 = self.1  as c_int;
+    let arg0 = (if self.0.is_none() {0 as *const i8} else {self.0.unwrap().as_ptr()})  as *mut c_char;
+    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK10QByteArray6toUIntEPbi(rsthis.qclsinst, arg0, arg1)};
     return ret as u32; // 1
     // return 1;
@@ -1071,12 +1071,12 @@ impl<'a> /*trait*/ QByteArray_new for (i32, i8) {
 }
 
   // proto:  int QByteArray::indexOf(const QByteArray & a, int from);
-impl<'a> /*trait*/ QByteArray_indexOf<i32> for (&'a QByteArray, i32) {
+impl<'a> /*trait*/ QByteArray_indexOf<i32> for (&'a QByteArray, Option<i32>) {
   fn indexOf(self , rsthis: & QByteArray) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray7indexOfERKS_i()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK10QByteArray7indexOfERKS_i(rsthis.qclsinst, arg0, arg1)};
     return ret as i32; // 1
     // return 1;
@@ -1096,12 +1096,12 @@ pub trait QByteArray_toLong<RetType> {
 }
 
   // proto:  long QByteArray::toLong(bool * ok, int base);
-impl<'a> /*trait*/ QByteArray_toLong<i64> for (&'a mut Vec<i8>, i32) {
+impl<'a> /*trait*/ QByteArray_toLong<i64> for (Option<&'a mut Vec<i8>>, Option<i32>) {
   fn toLong(self , rsthis: & QByteArray) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray6toLongEPbi()};
-    let arg0 = self.0.as_ptr()  as *mut c_char;
-    let arg1 = self.1  as c_int;
+    let arg0 = (if self.0.is_none() {0 as *const i8} else {self.0.unwrap().as_ptr()})  as *mut c_char;
+    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK10QByteArray6toLongEPbi(rsthis.qclsinst, arg0, arg1)};
     return ret as i64; // 1
     // return 1;
@@ -1109,12 +1109,12 @@ impl<'a> /*trait*/ QByteArray_toLong<i64> for (&'a mut Vec<i8>, i32) {
 }
 
   // proto:  int QByteArray::indexOf(char c, int from);
-impl<'a> /*trait*/ QByteArray_indexOf<i32> for (i8, i32) {
+impl<'a> /*trait*/ QByteArray_indexOf<i32> for (i8, Option<i32>) {
   fn indexOf(self , rsthis: & QByteArray) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray7indexOfEci()};
     let arg0 = self.0  as c_char;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK10QByteArray7indexOfEci(rsthis.qclsinst, arg0, arg1)};
     return ret as i32; // 1
     // return 1;
@@ -1158,13 +1158,13 @@ pub trait QByteArray_number_s<RetType> {
 }
 
   // proto: static QByteArray QByteArray::number(double , char f, int prec);
-impl<'a> /*trait*/ QByteArray_number_s<QByteArray> for (f64, i8, i32) {
+impl<'a> /*trait*/ QByteArray_number_s<QByteArray> for (f64, Option<i8>, Option<i32>) {
   fn number_s(self ) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray6numberEdci()};
     let arg0 = self.0  as c_double;
-    let arg1 = self.1  as c_char;
-    let arg2 = self.2  as c_int;
+    let arg1 = (if self.1.is_none() {'g' as i8} else {self.1.unwrap()})  as c_char;
+    let arg2 = (if self.2.is_none() {6} else {self.2.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN10QByteArray6numberEdci(arg0, arg1, arg2)};
     let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
@@ -1346,12 +1346,12 @@ impl<'a> /*trait*/ QByteArray_remove<QByteArray> for (i32, i32) {
 }
 
   // proto:  int QByteArray::lastIndexOf(char c, int from);
-impl<'a> /*trait*/ QByteArray_lastIndexOf<i32> for (i8, i32) {
+impl<'a> /*trait*/ QByteArray_lastIndexOf<i32> for (i8, Option<i32>) {
   fn lastIndexOf(self , rsthis: & QByteArray) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray11lastIndexOfEci()};
     let arg0 = self.0  as c_char;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {-1} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK10QByteArray11lastIndexOfEci(rsthis.qclsinst, arg0, arg1)};
     return ret as i32; // 1
     // return 1;
@@ -1453,14 +1453,14 @@ impl<'a> /*trait*/ QByteArray_squeeze<()> for () {
 }
 
   // proto:  void QByteArray::QByteArray(const char * , int size);
-impl<'a> /*trait*/ QByteArray_new for (&'a  String, i32) {
+impl<'a> /*trait*/ QByteArray_new for (&'a  String, Option<i32>) {
   fn new(self) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArrayC2EPKci()};
     let ctysz: c_int = unsafe{QByteArray_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.as_ptr()  as *mut c_char;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {-1} else {self.1.unwrap()})  as c_int;
     let qthis: u64 = unsafe {C_ZN10QByteArrayC2EPKci(arg0, arg1)};
     let rsthis = QByteArray{qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -1469,12 +1469,12 @@ impl<'a> /*trait*/ QByteArray_new for (&'a  String, i32) {
 }
 
   // proto:  int QByteArray::indexOf(const QString & s, int from);
-impl<'a> /*trait*/ QByteArray_indexOf<i32> for (&'a QString, i32) {
+impl<'a> /*trait*/ QByteArray_indexOf<i32> for (&'a QString, Option<i32>) {
   fn indexOf(self , rsthis: & QByteArray) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray7indexOfERK7QStringi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK10QByteArray7indexOfERK7QStringi(rsthis.qclsinst, arg0, arg1)};
     return ret as i32; // 1
     // return 1;
@@ -1541,13 +1541,13 @@ pub trait QByteArray_setNum<RetType> {
 }
 
   // proto:  QByteArray & QByteArray::setNum(float , char f, int prec);
-impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (f32, i8, i32) {
+impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (f32, Option<i8>, Option<i32>) {
   fn setNum(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray6setNumEfci()};
     let arg0 = self.0  as c_float;
-    let arg1 = self.1  as c_char;
-    let arg2 = self.2  as c_int;
+    let arg1 = (if self.1.is_none() {'g' as i8} else {self.1.unwrap()})  as c_char;
+    let arg2 = (if self.2.is_none() {6} else {self.2.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN10QByteArray6setNumEfci(rsthis.qclsinst, arg0, arg1, arg2)};
     let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
@@ -1568,12 +1568,12 @@ pub trait QByteArray_toShort<RetType> {
 }
 
   // proto:  short QByteArray::toShort(bool * ok, int base);
-impl<'a> /*trait*/ QByteArray_toShort<i16> for (&'a mut Vec<i8>, i32) {
+impl<'a> /*trait*/ QByteArray_toShort<i16> for (Option<&'a mut Vec<i8>>, Option<i32>) {
   fn toShort(self , rsthis: & QByteArray) -> i16 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray7toShortEPbi()};
-    let arg0 = self.0.as_ptr()  as *mut c_char;
-    let arg1 = self.1  as c_int;
+    let arg0 = (if self.0.is_none() {0 as *const i8} else {self.0.unwrap().as_ptr()})  as *mut c_char;
+    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK10QByteArray7toShortEPbi(rsthis.qclsinst, arg0, arg1)};
     return ret as i16; // 1
     // return 1;
@@ -1606,12 +1606,12 @@ pub trait QByteArray_toInt<RetType> {
 }
 
   // proto:  int QByteArray::toInt(bool * ok, int base);
-impl<'a> /*trait*/ QByteArray_toInt<i32> for (&'a mut Vec<i8>, i32) {
+impl<'a> /*trait*/ QByteArray_toInt<i32> for (Option<&'a mut Vec<i8>>, Option<i32>) {
   fn toInt(self , rsthis: & QByteArray) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray5toIntEPbi()};
-    let arg0 = self.0.as_ptr()  as *mut c_char;
-    let arg1 = self.1  as c_int;
+    let arg0 = (if self.0.is_none() {0 as *const i8} else {self.0.unwrap().as_ptr()})  as *mut c_char;
+    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK10QByteArray5toIntEPbi(rsthis.qclsinst, arg0, arg1)};
     return ret as i32; // 1
     // return 1;
@@ -1725,12 +1725,12 @@ impl<'a> /*trait*/ QByteArray_endsWith<i8> for (i8) {
 }
 
   // proto: static QByteArray QByteArray::number(uint , int base);
-impl<'a> /*trait*/ QByteArray_number_s<QByteArray> for (u32, i32) {
+impl<'a> /*trait*/ QByteArray_number_s<QByteArray> for (u32, Option<i32>) {
   fn number_s(self ) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray6numberEji()};
     let arg0 = self.0  as c_uint;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN10QByteArray6numberEji(arg0, arg1)};
     let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
@@ -1762,13 +1762,13 @@ pub trait QByteArray_leftJustified<RetType> {
 }
 
   // proto:  QByteArray QByteArray::leftJustified(int width, char fill, bool truncate);
-impl<'a> /*trait*/ QByteArray_leftJustified<QByteArray> for (i32, i8, i8) {
+impl<'a> /*trait*/ QByteArray_leftJustified<QByteArray> for (i32, Option<i8>, Option<i8>) {
   fn leftJustified(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray13leftJustifiedEicb()};
     let arg0 = self.0  as c_int;
-    let arg1 = self.1  as c_char;
-    let arg2 = self.2  as c_char;
+    let arg1 = (if self.1.is_none() {' ' as i8} else {self.1.unwrap()})  as c_char;
+    let arg2 = (if self.2.is_none() {false as i8} else {self.2.unwrap()})  as c_char;
     let mut ret = unsafe {C_ZNK10QByteArray13leftJustifiedEicb(rsthis.qclsinst, arg0, arg1, arg2)};
     let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
@@ -1825,12 +1825,12 @@ impl<'a> /*trait*/ QByteArray_begin<String> for () {
 }
 
   // proto: static QByteArray QByteArray::number(qulonglong , int base);
-impl<'a> /*trait*/ QByteArray_number_s<QByteArray> for (u64, i32) {
+impl<'a> /*trait*/ QByteArray_number_s<QByteArray> for (u64, Option<i32>) {
   fn number_s(self ) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray6numberEyi()};
     let arg0 = self.0  as c_ulonglong;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN10QByteArray6numberEyi(arg0, arg1)};
     let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
@@ -1863,11 +1863,11 @@ pub trait QByteArray_toDouble<RetType> {
 }
 
   // proto:  double QByteArray::toDouble(bool * ok);
-impl<'a> /*trait*/ QByteArray_toDouble<f64> for (&'a mut Vec<i8>) {
+impl<'a> /*trait*/ QByteArray_toDouble<f64> for (Option<&'a mut Vec<i8>>) {
   fn toDouble(self , rsthis: & QByteArray) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray8toDoubleEPb()};
-    let arg0 = self.as_ptr()  as *mut c_char;
+    let arg0 = (if self.is_none() {0 as *const i8} else {self.unwrap().as_ptr()})  as *mut c_char;
     let mut ret = unsafe {C_ZNK10QByteArray8toDoubleEPb(rsthis.qclsinst, arg0)};
     return ret as f64; // 1
     // return 1;
@@ -1890,12 +1890,12 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (i32, i32, &'a QByteArray)
 }
 
   // proto:  QByteArray & QByteArray::setNum(short , int base);
-impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (i16, i32) {
+impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (i16, Option<i32>) {
   fn setNum(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray6setNumEsi()};
     let arg0 = self.0  as c_short;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN10QByteArray6setNumEsi(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
@@ -1929,12 +1929,12 @@ pub trait QByteArray_toULongLong<RetType> {
 }
 
   // proto:  qulonglong QByteArray::toULongLong(bool * ok, int base);
-impl<'a> /*trait*/ QByteArray_toULongLong<u64> for (&'a mut Vec<i8>, i32) {
+impl<'a> /*trait*/ QByteArray_toULongLong<u64> for (Option<&'a mut Vec<i8>>, Option<i32>) {
   fn toULongLong(self , rsthis: & QByteArray) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray11toULongLongEPbi()};
-    let arg0 = self.0.as_ptr()  as *mut c_char;
-    let arg1 = self.1  as c_int;
+    let arg0 = (if self.0.is_none() {0 as *const i8} else {self.0.unwrap().as_ptr()})  as *mut c_char;
+    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK10QByteArray11toULongLongEPbi(rsthis.qclsinst, arg0, arg1)};
     return ret as u64; // 1
     // return 1;
@@ -1968,12 +1968,12 @@ pub trait QByteArray_fromPercentEncoding_s<RetType> {
 }
 
   // proto: static QByteArray QByteArray::fromPercentEncoding(const QByteArray & pctEncoded, char percent);
-impl<'a> /*trait*/ QByteArray_fromPercentEncoding_s<QByteArray> for (&'a QByteArray, i8) {
+impl<'a> /*trait*/ QByteArray_fromPercentEncoding_s<QByteArray> for (&'a QByteArray, Option<i8>) {
   fn fromPercentEncoding_s(self ) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray19fromPercentEncodingERKS_c()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_char;
+    let arg1 = (if self.1.is_none() {'%' as i8} else {self.1.unwrap()})  as c_char;
     let mut ret = unsafe {C_ZN10QByteArray19fromPercentEncodingERKS_c(arg0, arg1)};
     let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
@@ -2027,12 +2027,12 @@ pub trait QByteArray_toLongLong<RetType> {
 }
 
   // proto:  qlonglong QByteArray::toLongLong(bool * ok, int base);
-impl<'a> /*trait*/ QByteArray_toLongLong<i64> for (&'a mut Vec<i8>, i32) {
+impl<'a> /*trait*/ QByteArray_toLongLong<i64> for (Option<&'a mut Vec<i8>>, Option<i32>) {
   fn toLongLong(self , rsthis: & QByteArray) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray10toLongLongEPbi()};
-    let arg0 = self.0.as_ptr()  as *mut c_char;
-    let arg1 = self.1  as c_int;
+    let arg0 = (if self.0.is_none() {0 as *const i8} else {self.0.unwrap().as_ptr()})  as *mut c_char;
+    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK10QByteArray10toLongLongEPbi(rsthis.qclsinst, arg0, arg1)};
     return ret as i64; // 1
     // return 1;
@@ -2116,12 +2116,12 @@ impl<'a> /*trait*/ QByteArray_length<i32> for () {
 }
 
   // proto: static QByteArray QByteArray::number(int , int base);
-impl<'a> /*trait*/ QByteArray_number_s<QByteArray> for (i32, i32) {
+impl<'a> /*trait*/ QByteArray_number_s<QByteArray> for (i32, Option<i32>) {
   fn number_s(self ) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray6numberEii()};
     let arg0 = self.0  as c_int;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN10QByteArray6numberEii(arg0, arg1)};
     let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
@@ -2142,13 +2142,13 @@ impl<'a> /*trait*/ QByteArray_startsWith<i8> for (i8) {
 }
 
   // proto:  QByteArray & QByteArray::setNum(double , char f, int prec);
-impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (f64, i8, i32) {
+impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (f64, Option<i8>, Option<i32>) {
   fn setNum(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray6setNumEdci()};
     let arg0 = self.0  as c_double;
-    let arg1 = self.1  as c_char;
-    let arg2 = self.2  as c_int;
+    let arg1 = (if self.1.is_none() {'g' as i8} else {self.1.unwrap()})  as c_char;
+    let arg2 = (if self.2.is_none() {6} else {self.2.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN10QByteArray6setNumEdci(rsthis.qclsinst, arg0, arg1, arg2)};
     let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
@@ -2157,12 +2157,12 @@ impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (f64, i8, i32) {
 }
 
   // proto: static QByteArray QByteArray::number(qlonglong , int base);
-impl<'a> /*trait*/ QByteArray_number_s<QByteArray> for (i64, i32) {
+impl<'a> /*trait*/ QByteArray_number_s<QByteArray> for (i64, Option<i32>) {
   fn number_s(self ) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray6numberExi()};
     let arg0 = self.0  as c_longlong;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN10QByteArray6numberExi(arg0, arg1)};
     let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
@@ -2195,12 +2195,12 @@ impl<'a> /*trait*/ QByteArray_at<i8> for (i32) {
 }
 
   // proto:  QByteArray & QByteArray::setNum(ushort , int base);
-impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (u16, i32) {
+impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (u16, Option<i32>) {
   fn setNum(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray6setNumEti()};
     let arg0 = self.0  as c_ushort;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN10QByteArray6setNumEti(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
@@ -2323,12 +2323,12 @@ impl<'a> /*trait*/ QByteArray_split<u64> for (i8) {
 }
 
   // proto:  QByteArray & QByteArray::setNum(qlonglong , int base);
-impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (i64, i32) {
+impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (i64, Option<i32>) {
   fn setNum(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray6setNumExi()};
     let arg0 = self.0  as c_longlong;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN10QByteArray6setNumExi(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
@@ -2425,12 +2425,12 @@ impl<'a> /*trait*/ QByteArray_chop<()> for (i32) {
 }
 
   // proto:  int QByteArray::lastIndexOf(const char * c, int from);
-impl<'a> /*trait*/ QByteArray_lastIndexOf<i32> for (&'a  String, i32) {
+impl<'a> /*trait*/ QByteArray_lastIndexOf<i32> for (&'a  String, Option<i32>) {
   fn lastIndexOf(self , rsthis: & QByteArray) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray11lastIndexOfEPKci()};
     let arg0 = self.0.as_ptr()  as *mut c_char;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {-1} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK10QByteArray11lastIndexOfEPKci(rsthis.qclsinst, arg0, arg1)};
     return ret as i32; // 1
     // return 1;
@@ -2476,13 +2476,13 @@ pub trait QByteArray_toPercentEncoding<RetType> {
 }
 
   // proto:  QByteArray QByteArray::toPercentEncoding(const QByteArray & exclude, const QByteArray & include, char percent);
-impl<'a> /*trait*/ QByteArray_toPercentEncoding<QByteArray> for (&'a QByteArray, &'a QByteArray, i8) {
+impl<'a> /*trait*/ QByteArray_toPercentEncoding<QByteArray> for (Option<&'a QByteArray>, Option<&'a QByteArray>, Option<i8>) {
   fn toPercentEncoding(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray17toPercentEncodingERKS_S1_c()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2  as c_char;
+    let arg0 = (if self.0.is_none() {QByteArray::new(()).qclsinst} else {self.0.unwrap().qclsinst})  as *mut c_void;
+    let arg1 = (if self.1.is_none() {QByteArray::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
+    let arg2 = (if self.2.is_none() {'%' as i8} else {self.2.unwrap()})  as c_char;
     let mut ret = unsafe {C_ZNK10QByteArray17toPercentEncodingERKS_S1_c(rsthis.qclsinst, arg0, arg1, arg2)};
     let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
@@ -2566,12 +2566,12 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (&'a QByteArray, &'a  Stri
 }
 
   // proto:  QByteArray & QByteArray::setNum(qulonglong , int base);
-impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (u64, i32) {
+impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (u64, Option<i32>) {
   fn setNum(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray6setNumEyi()};
     let arg0 = self.0  as c_ulonglong;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN10QByteArray6setNumEyi(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
@@ -2620,12 +2620,12 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (&'a QString, &'a QByteArr
 }
 
   // proto:  QByteArray & QByteArray::setNum(uint , int base);
-impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (u32, i32) {
+impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (u32, Option<i32>) {
   fn setNum(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray6setNumEji()};
     let arg0 = self.0  as c_uint;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN10QByteArray6setNumEji(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
@@ -2646,12 +2646,12 @@ pub trait QByteArray_mid<RetType> {
 }
 
   // proto:  QByteArray QByteArray::mid(int index, int len);
-impl<'a> /*trait*/ QByteArray_mid<QByteArray> for (i32, i32) {
+impl<'a> /*trait*/ QByteArray_mid<QByteArray> for (i32, Option<i32>) {
   fn mid(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray3midEii()};
     let arg0 = self.0  as c_int;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {-1} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK10QByteArray3midEii(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
@@ -2660,12 +2660,12 @@ impl<'a> /*trait*/ QByteArray_mid<QByteArray> for (i32, i32) {
 }
 
   // proto:  QByteArray & QByteArray::setNum(int , int base);
-impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (i32, i32) {
+impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (i32, Option<i32>) {
   fn setNum(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray6setNumEii()};
     let arg0 = self.0  as c_int;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN10QByteArray6setNumEii(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
@@ -2714,12 +2714,12 @@ pub trait QByteArray_fill<RetType> {
 }
 
   // proto:  QByteArray & QByteArray::fill(char c, int size);
-impl<'a> /*trait*/ QByteArray_fill<QByteArray> for (i8, i32) {
+impl<'a> /*trait*/ QByteArray_fill<QByteArray> for (i8, Option<i32>) {
   fn fill(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray4fillEci()};
     let arg0 = self.0  as c_char;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {-1} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN10QByteArray4fillEci(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
@@ -2740,12 +2740,12 @@ pub trait QByteArray_toUShort<RetType> {
 }
 
   // proto:  ushort QByteArray::toUShort(bool * ok, int base);
-impl<'a> /*trait*/ QByteArray_toUShort<u16> for (&'a mut Vec<i8>, i32) {
+impl<'a> /*trait*/ QByteArray_toUShort<u16> for (Option<&'a mut Vec<i8>>, Option<i32>) {
   fn toUShort(self , rsthis: & QByteArray) -> u16 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray8toUShortEPbi()};
-    let arg0 = self.0.as_ptr()  as *mut c_char;
-    let arg1 = self.1  as c_int;
+    let arg0 = (if self.0.is_none() {0 as *const i8} else {self.0.unwrap().as_ptr()})  as *mut c_char;
+    let arg1 = (if self.1.is_none() {10} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK10QByteArray8toUShortEPbi(rsthis.qclsinst, arg0, arg1)};
     return ret as u16; // 1
     // return 1;
@@ -2800,13 +2800,13 @@ pub trait QByteArray_rightJustified<RetType> {
 }
 
   // proto:  QByteArray QByteArray::rightJustified(int width, char fill, bool truncate);
-impl<'a> /*trait*/ QByteArray_rightJustified<QByteArray> for (i32, i8, i8) {
+impl<'a> /*trait*/ QByteArray_rightJustified<QByteArray> for (i32, Option<i8>, Option<i8>) {
   fn rightJustified(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray14rightJustifiedEicb()};
     let arg0 = self.0  as c_int;
-    let arg1 = self.1  as c_char;
-    let arg2 = self.2  as c_char;
+    let arg1 = (if self.1.is_none() {' ' as i8} else {self.1.unwrap()})  as c_char;
+    let arg2 = (if self.2.is_none() {false as i8} else {self.2.unwrap()})  as c_char;
     let mut ret = unsafe {C_ZNK10QByteArray14rightJustifiedEicb(rsthis.qclsinst, arg0, arg1, arg2)};
     let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;

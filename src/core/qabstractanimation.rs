@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qabstractanimation.h
 // dst-file: /src/core/qabstractanimation.rs
 //
@@ -165,13 +165,13 @@ pub trait QAbstractAnimation_new {
 }
 
   // proto:  void QAbstractAnimation::QAbstractAnimation(QObject * parent);
-impl<'a> /*trait*/ QAbstractAnimation_new for (&'a QObject) {
+impl<'a> /*trait*/ QAbstractAnimation_new for (Option<&'a QObject>) {
   fn new(self) -> QAbstractAnimation {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QAbstractAnimationC2EP7QObject()};
     let ctysz: c_int = unsafe{QAbstractAnimation_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN18QAbstractAnimationC2EP7QObject(arg0)};
     let rsthis = QAbstractAnimation{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -575,13 +575,13 @@ pub trait QAnimationDriver_new {
 }
 
   // proto:  void QAnimationDriver::QAnimationDriver(QObject * parent);
-impl<'a> /*trait*/ QAnimationDriver_new for (&'a QObject) {
+impl<'a> /*trait*/ QAnimationDriver_new for (Option<&'a QObject>) {
   fn new(self) -> QAnimationDriver {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAnimationDriverC2EP7QObject()};
     let ctysz: c_int = unsafe{QAnimationDriver_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN16QAnimationDriverC2EP7QObject(arg0)};
     let rsthis = QAnimationDriver{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;

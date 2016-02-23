@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qobject.h
 // dst-file: /src/core/qobject.rs
 //
@@ -123,7 +123,6 @@ extern {
   fn C_ZN7QObject14dumpObjectInfoEv(qthis: u64 /* *mut c_void*/);
   // proto:  void QObject::killTimer(int id);
   fn C_ZN7QObject9killTimerEi(qthis: u64 /* *mut c_void*/, arg0: c_int);
-  fn QObject_SlotProxy_connect__ZN7QObject9destroyedEPS_(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -686,12 +685,12 @@ pub trait QObject_disconnect<RetType> {
 }
 
   // proto:  bool QObject::disconnect(const QObject * receiver, const char * member);
-impl<'a> /*trait*/ QObject_disconnect<i8> for (&'a QObject, &'a  String) {
+impl<'a> /*trait*/ QObject_disconnect<i8> for (&'a QObject, Option<&'a  String>) {
   fn disconnect(self , rsthis: & QObject) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QObject10disconnectEPKS_PKc()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.as_ptr()  as *mut c_char;
+    let arg1 = (if self.1.is_none() {0 as *const u8} else {self.1.unwrap().as_ptr()})  as *mut c_char;
     let mut ret = unsafe {C_ZNK7QObject10disconnectEPKS_PKc(rsthis.qclsinst, arg0, arg1)};
     return ret as i8; // 1
     // return 1;
@@ -745,13 +744,13 @@ impl<'a> /*trait*/ QObject_isWindowType<i8> for () {
 }
 
   // proto:  bool QObject::disconnect(const char * signal, const QObject * receiver, const char * member);
-impl<'a> /*trait*/ QObject_disconnect<i8> for (&'a  String, &'a QObject, &'a  String) {
+impl<'a> /*trait*/ QObject_disconnect<i8> for (Option<&'a  String>, Option<&'a QObject>, Option<&'a  String>) {
   fn disconnect(self , rsthis: & QObject) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QObject10disconnectEPKcPKS_S1_()};
-    let arg0 = self.0.as_ptr()  as *mut c_char;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2.as_ptr()  as *mut c_char;
+    let arg0 = (if self.0.is_none() {0 as *const u8} else {self.0.unwrap().as_ptr()})  as *mut c_char;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap().qclsinst})  as *mut c_void;
+    let arg2 = (if self.2.is_none() {0 as *const u8} else {self.2.unwrap().as_ptr()})  as *mut c_char;
     let mut ret = unsafe {C_ZNK7QObject10disconnectEPKcPKS_S1_(rsthis.qclsinst, arg0, arg1, arg2)};
     return ret as i8; // 1
     // return 1;
@@ -816,13 +815,13 @@ pub trait QObject_new {
 }
 
   // proto:  void QObject::QObject(QObject * parent);
-impl<'a> /*trait*/ QObject_new for (&'a QObject) {
+impl<'a> /*trait*/ QObject_new for (Option<&'a QObject>) {
   fn new(self) -> QObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QObjectC2EPS_()};
     let ctysz: c_int = unsafe{QObject_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN7QObjectC2EPS_(arg0)};
     let rsthis = QObject{qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -1136,41 +1135,5 @@ pub trait QObject_objectNameChanged_signal_connect {
   fn connect(self, sigthis: QObject_objectNameChanged_signal);
 }
 
-// destroyed(class QObject *)
-extern fn QObject_destroyed_signal_connect_cb_0(rsfptr:fn(QObject), arg0: *mut c_void) {
-  println!("{}:{}", file!(), line!());
-  let rsarg0 = QObject::inheritFrom(arg0 as u64);
-  rsfptr(rsarg0);
-}
-extern fn QObject_destroyed_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(QObject)>, arg0: *mut c_void) {
-  println!("{}:{}", file!(), line!());
-  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  let rsarg0 = QObject::inheritFrom(arg0 as u64);
-  // rsfptr(rsarg0);
-  unsafe{(*rsfptr_raw)(rsarg0)};
-}
-impl /* trait */ QObject_destroyed_signal_connect for fn(QObject) {
-  fn connect(self, sigthis: QObject_destroyed_signal) {
-    // do smth...
-    // self as u64; // error for Fn, Ok for fn
-    self as *mut c_void as u64;
-    self as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QObject_destroyed_signal_connect_cb_0 as *mut c_void;
-    let arg2 = self as *mut c_void;
-    unsafe {QObject_SlotProxy_connect__ZN7QObject9destroyedEPS_(arg0, arg1, arg2)};
-  }
-}
-impl /* trait */ QObject_destroyed_signal_connect for Box<Fn(QObject)> {
-  fn connect(self, sigthis: QObject_destroyed_signal) {
-    // do smth...
-    // Box::into_raw(self) as u64;
-    // Box::into_raw(self) as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QObject_destroyed_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
-    unsafe {QObject_SlotProxy_connect__ZN7QObject9destroyedEPS_(arg0, arg1, arg2)};
-  }
-}
 // <= body block end
 

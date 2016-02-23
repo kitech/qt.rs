@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qparallelanimationgroup.h
 // dst-file: /src/core/qparallelanimationgroup.rs
 //
@@ -126,13 +126,13 @@ pub trait QParallelAnimationGroup_new {
 }
 
   // proto:  void QParallelAnimationGroup::QParallelAnimationGroup(QObject * parent);
-impl<'a> /*trait*/ QParallelAnimationGroup_new for (&'a QObject) {
+impl<'a> /*trait*/ QParallelAnimationGroup_new for (Option<&'a QObject>) {
   fn new(self) -> QParallelAnimationGroup {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QParallelAnimationGroupC2EP7QObject()};
     let ctysz: c_int = unsafe{QParallelAnimationGroup_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN23QParallelAnimationGroupC2EP7QObject(arg0)};
     let rsthis = QParallelAnimationGroup{qbase: QAnimationGroup::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;

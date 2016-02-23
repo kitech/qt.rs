@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Jan 19 21:53:37 2016
+// created: Wed Jan 20 00:44:03 2016
 // src-file: /QtNetwork/qnetworkreply.h
 // dst-file: /src/network/qnetworkreply.rs
 //
@@ -79,7 +79,6 @@ extern {
   fn _ZN13QNetworkReplyD2Ev(qthis: u64 /* *mut c_void*/);
   fn QNetworkReply_SlotProxy_connect__ZN13QNetworkReply16downloadProgressExx(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QNetworkReply_SlotProxy_connect__ZN13QNetworkReply8finishedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QNetworkReply_SlotProxy_connect__ZN13QNetworkReply5errorENS_12NetworkErrorE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QNetworkReply_SlotProxy_connect__ZN13QNetworkReply15metaDataChangedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QNetworkReply_SlotProxy_connect__ZN13QNetworkReply14uploadProgressExx(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QNetworkReply_SlotProxy_connect__ZN13QNetworkReply9encryptedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
@@ -785,48 +784,12 @@ impl /* trait */ QNetworkReply_finished_signal_connect for Box<Fn()> {
     unsafe {QNetworkReply_SlotProxy_connect__ZN13QNetworkReply8finishedEv(arg0, arg1, arg2)};
   }
 }
-// error(class QNetworkReply::NetworkError)
-extern fn QNetworkReply_error_signal_connect_cb_2(rsfptr:fn(i32), arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-  let rsarg0 = arg0 as i32;
-  rsfptr(rsarg0);
-}
-extern fn QNetworkReply_error_signal_connect_cb_box_2(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  let rsarg0 = arg0 as i32;
-  // rsfptr(rsarg0);
-  unsafe{(*rsfptr_raw)(rsarg0)};
-}
-impl /* trait */ QNetworkReply_error_signal_connect for fn(i32) {
-  fn connect(self, sigthis: QNetworkReply_error_signal) {
-    // do smth...
-    // self as u64; // error for Fn, Ok for fn
-    self as *mut c_void as u64;
-    self as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QNetworkReply_error_signal_connect_cb_2 as *mut c_void;
-    let arg2 = self as *mut c_void;
-    unsafe {QNetworkReply_SlotProxy_connect__ZN13QNetworkReply5errorENS_12NetworkErrorE(arg0, arg1, arg2)};
-  }
-}
-impl /* trait */ QNetworkReply_error_signal_connect for Box<Fn(i32)> {
-  fn connect(self, sigthis: QNetworkReply_error_signal) {
-    // do smth...
-    // Box::into_raw(self) as u64;
-    // Box::into_raw(self) as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QNetworkReply_error_signal_connect_cb_box_2 as *mut c_void;
-    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
-    unsafe {QNetworkReply_SlotProxy_connect__ZN13QNetworkReply5errorENS_12NetworkErrorE(arg0, arg1, arg2)};
-  }
-}
 // metaDataChanged()
-extern fn QNetworkReply_metaDataChanged_signal_connect_cb_3(rsfptr:fn(), ) {
+extern fn QNetworkReply_metaDataChanged_signal_connect_cb_2(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QNetworkReply_metaDataChanged_signal_connect_cb_box_3(rsfptr_raw:*mut Box<Fn()>, ) {
+extern fn QNetworkReply_metaDataChanged_signal_connect_cb_box_2(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   // rsfptr();
@@ -839,7 +802,7 @@ impl /* trait */ QNetworkReply_metaDataChanged_signal_connect for fn() {
     self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QNetworkReply_metaDataChanged_signal_connect_cb_3 as *mut c_void;
+    let arg1 = QNetworkReply_metaDataChanged_signal_connect_cb_2 as *mut c_void;
     let arg2 = self as *mut c_void;
     unsafe {QNetworkReply_SlotProxy_connect__ZN13QNetworkReply15metaDataChangedEv(arg0, arg1, arg2)};
   }
@@ -850,19 +813,19 @@ impl /* trait */ QNetworkReply_metaDataChanged_signal_connect for Box<Fn()> {
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QNetworkReply_metaDataChanged_signal_connect_cb_box_3 as *mut c_void;
+    let arg1 = QNetworkReply_metaDataChanged_signal_connect_cb_box_2 as *mut c_void;
     let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QNetworkReply_SlotProxy_connect__ZN13QNetworkReply15metaDataChangedEv(arg0, arg1, arg2)};
   }
 }
 // uploadProgress(qint64, qint64)
-extern fn QNetworkReply_uploadProgress_signal_connect_cb_4(rsfptr:fn(i64, i64), arg0: c_longlong, arg1: c_longlong) {
+extern fn QNetworkReply_uploadProgress_signal_connect_cb_3(rsfptr:fn(i64, i64), arg0: c_longlong, arg1: c_longlong) {
   println!("{}:{}", file!(), line!());
   let rsarg0 = arg0 as i64;
   let rsarg1 = arg1 as i64;
   rsfptr(rsarg0,rsarg1);
 }
-extern fn QNetworkReply_uploadProgress_signal_connect_cb_box_4(rsfptr_raw:*mut Box<Fn(i64, i64)>, arg0: c_longlong, arg1: c_longlong) {
+extern fn QNetworkReply_uploadProgress_signal_connect_cb_box_3(rsfptr_raw:*mut Box<Fn(i64, i64)>, arg0: c_longlong, arg1: c_longlong) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i64;
@@ -877,7 +840,7 @@ impl /* trait */ QNetworkReply_uploadProgress_signal_connect for fn(i64, i64) {
     self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QNetworkReply_uploadProgress_signal_connect_cb_4 as *mut c_void;
+    let arg1 = QNetworkReply_uploadProgress_signal_connect_cb_3 as *mut c_void;
     let arg2 = self as *mut c_void;
     unsafe {QNetworkReply_SlotProxy_connect__ZN13QNetworkReply14uploadProgressExx(arg0, arg1, arg2)};
   }
@@ -888,17 +851,17 @@ impl /* trait */ QNetworkReply_uploadProgress_signal_connect for Box<Fn(i64, i64
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QNetworkReply_uploadProgress_signal_connect_cb_box_4 as *mut c_void;
+    let arg1 = QNetworkReply_uploadProgress_signal_connect_cb_box_3 as *mut c_void;
     let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QNetworkReply_SlotProxy_connect__ZN13QNetworkReply14uploadProgressExx(arg0, arg1, arg2)};
   }
 }
 // encrypted()
-extern fn QNetworkReply_encrypted_signal_connect_cb_5(rsfptr:fn(), ) {
+extern fn QNetworkReply_encrypted_signal_connect_cb_4(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QNetworkReply_encrypted_signal_connect_cb_box_5(rsfptr_raw:*mut Box<Fn()>, ) {
+extern fn QNetworkReply_encrypted_signal_connect_cb_box_4(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   // rsfptr();
@@ -911,7 +874,7 @@ impl /* trait */ QNetworkReply_encrypted_signal_connect for fn() {
     self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QNetworkReply_encrypted_signal_connect_cb_5 as *mut c_void;
+    let arg1 = QNetworkReply_encrypted_signal_connect_cb_4 as *mut c_void;
     let arg2 = self as *mut c_void;
     unsafe {QNetworkReply_SlotProxy_connect__ZN13QNetworkReply9encryptedEv(arg0, arg1, arg2)};
   }
@@ -922,18 +885,18 @@ impl /* trait */ QNetworkReply_encrypted_signal_connect for Box<Fn()> {
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QNetworkReply_encrypted_signal_connect_cb_box_5 as *mut c_void;
+    let arg1 = QNetworkReply_encrypted_signal_connect_cb_box_4 as *mut c_void;
     let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QNetworkReply_SlotProxy_connect__ZN13QNetworkReply9encryptedEv(arg0, arg1, arg2)};
   }
 }
 // preSharedKeyAuthenticationRequired(class QSslPreSharedKeyAuthenticator *)
-extern fn QNetworkReply_preSharedKeyAuthenticationRequired_signal_connect_cb_6(rsfptr:fn(QSslPreSharedKeyAuthenticator), arg0: *mut c_void) {
+extern fn QNetworkReply_preSharedKeyAuthenticationRequired_signal_connect_cb_5(rsfptr:fn(QSslPreSharedKeyAuthenticator), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsarg0 = QSslPreSharedKeyAuthenticator::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QNetworkReply_preSharedKeyAuthenticationRequired_signal_connect_cb_box_6(rsfptr_raw:*mut Box<Fn(QSslPreSharedKeyAuthenticator)>, arg0: *mut c_void) {
+extern fn QNetworkReply_preSharedKeyAuthenticationRequired_signal_connect_cb_box_5(rsfptr_raw:*mut Box<Fn(QSslPreSharedKeyAuthenticator)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QSslPreSharedKeyAuthenticator::inheritFrom(arg0 as u64);
@@ -947,7 +910,7 @@ impl /* trait */ QNetworkReply_preSharedKeyAuthenticationRequired_signal_connect
     self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QNetworkReply_preSharedKeyAuthenticationRequired_signal_connect_cb_6 as *mut c_void;
+    let arg1 = QNetworkReply_preSharedKeyAuthenticationRequired_signal_connect_cb_5 as *mut c_void;
     let arg2 = self as *mut c_void;
     unsafe {QNetworkReply_SlotProxy_connect__ZN13QNetworkReply34preSharedKeyAuthenticationRequiredEP29QSslPreSharedKeyAuthenticator(arg0, arg1, arg2)};
   }
@@ -958,7 +921,7 @@ impl /* trait */ QNetworkReply_preSharedKeyAuthenticationRequired_signal_connect
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QNetworkReply_preSharedKeyAuthenticationRequired_signal_connect_cb_box_6 as *mut c_void;
+    let arg1 = QNetworkReply_preSharedKeyAuthenticationRequired_signal_connect_cb_box_5 as *mut c_void;
     let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QNetworkReply_SlotProxy_connect__ZN13QNetworkReply34preSharedKeyAuthenticationRequiredEP29QSslPreSharedKeyAuthenticator(arg0, arg1, arg2)};
   }

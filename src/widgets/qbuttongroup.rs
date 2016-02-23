@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qbuttongroup.h
 // dst-file: /src/widgets/qbuttongroup.rs
 //
@@ -111,12 +111,12 @@ pub trait QButtonGroup_addButton<RetType> {
 }
 
   // proto:  void QButtonGroup::addButton(QAbstractButton * , int id);
-impl<'a> /*trait*/ QButtonGroup_addButton<()> for (&'a QAbstractButton, i32) {
+impl<'a> /*trait*/ QButtonGroup_addButton<()> for (&'a QAbstractButton, Option<i32>) {
   fn addButton(self , rsthis: & QButtonGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QButtonGroup9addButtonEP15QAbstractButtoni()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {-1} else {self.1.unwrap()})  as c_int;
      unsafe {C_ZN12QButtonGroup9addButtonEP15QAbstractButtoni(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
@@ -252,13 +252,13 @@ pub trait QButtonGroup_new {
 }
 
   // proto:  void QButtonGroup::QButtonGroup(QObject * parent);
-impl<'a> /*trait*/ QButtonGroup_new for (&'a QObject) {
+impl<'a> /*trait*/ QButtonGroup_new for (Option<&'a QObject>) {
   fn new(self) -> QButtonGroup {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QButtonGroupC2EP7QObject()};
     let ctysz: c_int = unsafe{QButtonGroup_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN12QButtonGroupC2EP7QObject(arg0)};
     let rsthis = QButtonGroup{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtGui/qopenglshaderprogram.h
 // dst-file: /src/gui/qopenglshaderprogram.rs
 //
@@ -707,7 +707,7 @@ pub trait QOpenGLShaderProgram_setAttributeBuffer<RetType> {
 }
 
   // proto:  void QOpenGLShaderProgram::setAttributeBuffer(int location, GLenum type, int offset, int tupleSize, int stride);
-impl<'a> /*trait*/ QOpenGLShaderProgram_setAttributeBuffer<()> for (i32, u32, i32, i32, i32) {
+impl<'a> /*trait*/ QOpenGLShaderProgram_setAttributeBuffer<()> for (i32, u32, i32, i32, Option<i32>) {
   fn setAttributeBuffer(self , rsthis: & QOpenGLShaderProgram) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QOpenGLShaderProgram18setAttributeBufferEijiii()};
@@ -715,7 +715,7 @@ impl<'a> /*trait*/ QOpenGLShaderProgram_setAttributeBuffer<()> for (i32, u32, i3
     let arg1 = self.1  as c_uint;
     let arg2 = self.2  as c_int;
     let arg3 = self.3  as c_int;
-    let arg4 = self.4  as c_int;
+    let arg4 = (if self.4.is_none() {0} else {self.4.unwrap()})  as c_int;
      unsafe {C_ZN20QOpenGLShaderProgram18setAttributeBufferEijiii(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4)};
     // return 1;
   }
@@ -734,11 +734,11 @@ pub trait QOpenGLShaderProgram_hasOpenGLShaderPrograms_s<RetType> {
 }
 
   // proto: static bool QOpenGLShaderProgram::hasOpenGLShaderPrograms(QOpenGLContext * context);
-impl<'a> /*trait*/ QOpenGLShaderProgram_hasOpenGLShaderPrograms_s<i8> for (&'a QOpenGLContext) {
+impl<'a> /*trait*/ QOpenGLShaderProgram_hasOpenGLShaderPrograms_s<i8> for (Option<&'a QOpenGLContext>) {
   fn hasOpenGLShaderPrograms_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QOpenGLShaderProgram23hasOpenGLShaderProgramsEP14QOpenGLContext()};
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZN20QOpenGLShaderProgram23hasOpenGLShaderProgramsEP14QOpenGLContext(arg0)};
     return ret as i8; // 1
     // return 1;
@@ -793,14 +793,14 @@ pub trait QOpenGLShaderProgram_setAttributeArray<RetType> {
 }
 
   // proto:  void QOpenGLShaderProgram::setAttributeArray(const char * name, const GLfloat * values, int tupleSize, int stride);
-impl<'a> /*trait*/ QOpenGLShaderProgram_setAttributeArray<()> for (&'a  String, &'a  Vec<f32>, i32, i32) {
+impl<'a> /*trait*/ QOpenGLShaderProgram_setAttributeArray<()> for (&'a  String, &'a  Vec<f32>, i32, Option<i32>) {
   fn setAttributeArray(self , rsthis: & QOpenGLShaderProgram) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QOpenGLShaderProgram17setAttributeArrayEPKcPKfii()};
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1.as_ptr()  as *mut c_float;
     let arg2 = self.2  as c_int;
-    let arg3 = self.3  as c_int;
+    let arg3 = (if self.3.is_none() {0} else {self.3.unwrap()})  as c_int;
      unsafe {C_ZN20QOpenGLShaderProgram17setAttributeArrayEPKcPKfii(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
     // return 1;
   }
@@ -1063,7 +1063,7 @@ impl<'a> /*trait*/ QOpenGLShaderProgram_attributeLocation<i32> for (&'a QString)
 }
 
   // proto:  void QOpenGLShaderProgram::setAttributeArray(int location, GLenum type, const void * values, int tupleSize, int stride);
-impl<'a> /*trait*/ QOpenGLShaderProgram_setAttributeArray<()> for (i32, u32, *mut c_void, i32, i32) {
+impl<'a> /*trait*/ QOpenGLShaderProgram_setAttributeArray<()> for (i32, u32, *mut c_void, i32, Option<i32>) {
   fn setAttributeArray(self , rsthis: & QOpenGLShaderProgram) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QOpenGLShaderProgram17setAttributeArrayEijPKvii()};
@@ -1071,7 +1071,7 @@ impl<'a> /*trait*/ QOpenGLShaderProgram_setAttributeArray<()> for (i32, u32, *mu
     let arg1 = self.1  as c_uint;
     let arg2 = self.2  as *mut c_void;
     let arg3 = self.3  as c_int;
-    let arg4 = self.4  as c_int;
+    let arg4 = (if self.4.is_none() {0} else {self.4.unwrap()})  as c_int;
      unsafe {C_ZN20QOpenGLShaderProgram17setAttributeArrayEijPKvii(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4)};
     // return 1;
   }
@@ -1103,13 +1103,13 @@ impl<'a> /*trait*/ QOpenGLShaderProgram_setUniformValueArray<()> for (i32, &'a Q
 }
 
   // proto:  void QOpenGLShaderProgram::setAttributeArray(int location, const QVector2D * values, int stride);
-impl<'a> /*trait*/ QOpenGLShaderProgram_setAttributeArray<()> for (i32, &'a QVector2D, i32) {
+impl<'a> /*trait*/ QOpenGLShaderProgram_setAttributeArray<()> for (i32, &'a QVector2D, Option<i32>) {
   fn setAttributeArray(self , rsthis: & QOpenGLShaderProgram) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QOpenGLShaderProgram17setAttributeArrayEiPK9QVector2Di()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2  as c_int;
+    let arg2 = (if self.2.is_none() {0} else {self.2.unwrap()})  as c_int;
      unsafe {C_ZN20QOpenGLShaderProgram17setAttributeArrayEiPK9QVector2Di(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
@@ -1268,13 +1268,13 @@ impl<'a> /*trait*/ QOpenGLShaderProgram_setAttributeValue<()> for (&'a  String, 
 }
 
   // proto:  void QOpenGLShaderProgram::setAttributeArray(const char * name, const QVector4D * values, int stride);
-impl<'a> /*trait*/ QOpenGLShaderProgram_setAttributeArray<()> for (&'a  String, &'a QVector4D, i32) {
+impl<'a> /*trait*/ QOpenGLShaderProgram_setAttributeArray<()> for (&'a  String, &'a QVector4D, Option<i32>) {
   fn setAttributeArray(self , rsthis: & QOpenGLShaderProgram) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QOpenGLShaderProgram17setAttributeArrayEPKcPK9QVector4Di()};
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2  as c_int;
+    let arg2 = (if self.2.is_none() {0} else {self.2.unwrap()})  as c_int;
      unsafe {C_ZN20QOpenGLShaderProgram17setAttributeArrayEPKcPK9QVector4Di(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
@@ -1799,7 +1799,7 @@ impl<'a> /*trait*/ QOpenGLShaderProgram_setUniformValue<()> for (&'a  String, f3
 }
 
   // proto:  void QOpenGLShaderProgram::setAttributeBuffer(const char * name, GLenum type, int offset, int tupleSize, int stride);
-impl<'a> /*trait*/ QOpenGLShaderProgram_setAttributeBuffer<()> for (&'a  String, u32, i32, i32, i32) {
+impl<'a> /*trait*/ QOpenGLShaderProgram_setAttributeBuffer<()> for (&'a  String, u32, i32, i32, Option<i32>) {
   fn setAttributeBuffer(self , rsthis: & QOpenGLShaderProgram) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QOpenGLShaderProgram18setAttributeBufferEPKcjiii()};
@@ -1807,7 +1807,7 @@ impl<'a> /*trait*/ QOpenGLShaderProgram_setAttributeBuffer<()> for (&'a  String,
     let arg1 = self.1  as c_uint;
     let arg2 = self.2  as c_int;
     let arg3 = self.3  as c_int;
-    let arg4 = self.4  as c_int;
+    let arg4 = (if self.4.is_none() {0} else {self.4.unwrap()})  as c_int;
      unsafe {C_ZN20QOpenGLShaderProgram18setAttributeBufferEPKcjiii(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4)};
     // return 1;
   }
@@ -1875,13 +1875,13 @@ impl<'a> /*trait*/ QOpenGLShaderProgram_bindAttributeLocation<()> for (&'a QStri
 }
 
   // proto:  void QOpenGLShaderProgram::setAttributeArray(int location, const QVector3D * values, int stride);
-impl<'a> /*trait*/ QOpenGLShaderProgram_setAttributeArray<()> for (i32, &'a QVector3D, i32) {
+impl<'a> /*trait*/ QOpenGLShaderProgram_setAttributeArray<()> for (i32, &'a QVector3D, Option<i32>) {
   fn setAttributeArray(self , rsthis: & QOpenGLShaderProgram) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QOpenGLShaderProgram17setAttributeArrayEiPK9QVector3Di()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2  as c_int;
+    let arg2 = (if self.2.is_none() {0} else {self.2.unwrap()})  as c_int;
      unsafe {C_ZN20QOpenGLShaderProgram17setAttributeArrayEiPK9QVector3Di(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
@@ -1963,13 +1963,13 @@ impl<'a> /*trait*/ QOpenGLShaderProgram_setUniformValue<()> for (&'a  String, f3
 }
 
   // proto:  void QOpenGLShaderProgram::setAttributeArray(int location, const QVector4D * values, int stride);
-impl<'a> /*trait*/ QOpenGLShaderProgram_setAttributeArray<()> for (i32, &'a QVector4D, i32) {
+impl<'a> /*trait*/ QOpenGLShaderProgram_setAttributeArray<()> for (i32, &'a QVector4D, Option<i32>) {
   fn setAttributeArray(self , rsthis: & QOpenGLShaderProgram) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QOpenGLShaderProgram17setAttributeArrayEiPK9QVector4Di()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2  as c_int;
+    let arg2 = (if self.2.is_none() {0} else {self.2.unwrap()})  as c_int;
      unsafe {C_ZN20QOpenGLShaderProgram17setAttributeArrayEiPK9QVector4Di(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
@@ -1990,7 +1990,7 @@ impl<'a> /*trait*/ QOpenGLShaderProgram_setAttributeValue<()> for (&'a  String, 
 }
 
   // proto:  void QOpenGLShaderProgram::setAttributeArray(const char * name, GLenum type, const void * values, int tupleSize, int stride);
-impl<'a> /*trait*/ QOpenGLShaderProgram_setAttributeArray<()> for (&'a  String, u32, *mut c_void, i32, i32) {
+impl<'a> /*trait*/ QOpenGLShaderProgram_setAttributeArray<()> for (&'a  String, u32, *mut c_void, i32, Option<i32>) {
   fn setAttributeArray(self , rsthis: & QOpenGLShaderProgram) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QOpenGLShaderProgram17setAttributeArrayEPKcjPKvii()};
@@ -1998,7 +1998,7 @@ impl<'a> /*trait*/ QOpenGLShaderProgram_setAttributeArray<()> for (&'a  String, 
     let arg1 = self.1  as c_uint;
     let arg2 = self.2  as *mut c_void;
     let arg3 = self.3  as c_int;
-    let arg4 = self.4  as c_int;
+    let arg4 = (if self.4.is_none() {0} else {self.4.unwrap()})  as c_int;
      unsafe {C_ZN20QOpenGLShaderProgram17setAttributeArrayEPKcjPKvii(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4)};
     // return 1;
   }
@@ -2042,13 +2042,13 @@ pub trait QOpenGLShaderProgram_new {
 }
 
   // proto:  void QOpenGLShaderProgram::QOpenGLShaderProgram(QObject * parent);
-impl<'a> /*trait*/ QOpenGLShaderProgram_new for (&'a QObject) {
+impl<'a> /*trait*/ QOpenGLShaderProgram_new for (Option<&'a QObject>) {
   fn new(self) -> QOpenGLShaderProgram {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QOpenGLShaderProgramC2EP7QObject()};
     let ctysz: c_int = unsafe{QOpenGLShaderProgram_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN20QOpenGLShaderProgramC2EP7QObject(arg0)};
     let rsthis = QOpenGLShaderProgram{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -2104,14 +2104,14 @@ impl<'a> /*trait*/ QOpenGLShaderProgram_setUniformValue<()> for (i32, &'a QVecto
 }
 
   // proto:  void QOpenGLShaderProgram::setAttributeArray(int location, const GLfloat * values, int tupleSize, int stride);
-impl<'a> /*trait*/ QOpenGLShaderProgram_setAttributeArray<()> for (i32, &'a  Vec<f32>, i32, i32) {
+impl<'a> /*trait*/ QOpenGLShaderProgram_setAttributeArray<()> for (i32, &'a  Vec<f32>, i32, Option<i32>) {
   fn setAttributeArray(self , rsthis: & QOpenGLShaderProgram) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QOpenGLShaderProgram17setAttributeArrayEiPKfii()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.as_ptr()  as *mut c_float;
     let arg2 = self.2  as c_int;
-    let arg3 = self.3  as c_int;
+    let arg3 = (if self.3.is_none() {0} else {self.3.unwrap()})  as c_int;
      unsafe {C_ZN20QOpenGLShaderProgram17setAttributeArrayEiPKfii(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
     // return 1;
   }
@@ -2190,13 +2190,13 @@ impl<'a> /*trait*/ QOpenGLShaderProgram_maxGeometryOutputVertices<i32> for () {
 }
 
   // proto:  void QOpenGLShaderProgram::setAttributeArray(const char * name, const QVector3D * values, int stride);
-impl<'a> /*trait*/ QOpenGLShaderProgram_setAttributeArray<()> for (&'a  String, &'a QVector3D, i32) {
+impl<'a> /*trait*/ QOpenGLShaderProgram_setAttributeArray<()> for (&'a  String, &'a QVector3D, Option<i32>) {
   fn setAttributeArray(self , rsthis: & QOpenGLShaderProgram) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QOpenGLShaderProgram17setAttributeArrayEPKcPK9QVector3Di()};
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2  as c_int;
+    let arg2 = (if self.2.is_none() {0} else {self.2.unwrap()})  as c_int;
      unsafe {C_ZN20QOpenGLShaderProgram17setAttributeArrayEPKcPK9QVector3Di(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
@@ -2273,13 +2273,13 @@ impl<'a> /*trait*/ QOpenGLShaderProgram_setUniformValue<()> for (&'a  String, &'
 }
 
   // proto:  void QOpenGLShaderProgram::setAttributeArray(const char * name, const QVector2D * values, int stride);
-impl<'a> /*trait*/ QOpenGLShaderProgram_setAttributeArray<()> for (&'a  String, &'a QVector2D, i32) {
+impl<'a> /*trait*/ QOpenGLShaderProgram_setAttributeArray<()> for (&'a  String, &'a QVector2D, Option<i32>) {
   fn setAttributeArray(self , rsthis: & QOpenGLShaderProgram) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QOpenGLShaderProgram17setAttributeArrayEPKcPK9QVector2Di()};
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2  as c_int;
+    let arg2 = (if self.2.is_none() {0} else {self.2.unwrap()})  as c_int;
      unsafe {C_ZN20QOpenGLShaderProgram17setAttributeArrayEPKcPK9QVector2Di(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }

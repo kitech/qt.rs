@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qgraphicsscene.h
 // dst-file: /src/widgets/qgraphicsscene.rs
 //
@@ -412,11 +412,11 @@ pub trait QGraphicsScene_update<RetType> {
 }
 
   // proto:  void QGraphicsScene::update(const QRectF & rect);
-impl<'a> /*trait*/ QGraphicsScene_update<()> for (&'a QRectF) {
+impl<'a> /*trait*/ QGraphicsScene_update<()> for (Option<&'a QRectF>) {
   fn update(self , rsthis: & QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene6updateERK6QRectF()};
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {QRectF::new(()).qclsinst} else {self.unwrap().qclsinst})  as *mut c_void;
      unsafe {C_ZN14QGraphicsScene6updateERK6QRectF(rsthis.qclsinst, arg0)};
     // return 1;
   }
@@ -435,13 +435,13 @@ pub trait QGraphicsScene_addPolygon<RetType> {
 }
 
   // proto:  QGraphicsPolygonItem * QGraphicsScene::addPolygon(const QPolygonF & polygon, const QPen & pen, const QBrush & brush);
-impl<'a> /*trait*/ QGraphicsScene_addPolygon<QGraphicsPolygonItem> for (&'a QPolygonF, &'a QPen, &'a QBrush) {
+impl<'a> /*trait*/ QGraphicsScene_addPolygon<QGraphicsPolygonItem> for (&'a QPolygonF, Option<&'a QPen>, Option<&'a QBrush>) {
   fn addPolygon(self , rsthis: & QGraphicsScene) -> QGraphicsPolygonItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene10addPolygonERK9QPolygonFRK4QPenRK6QBrush()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {QPen::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
+    let arg2 = (if self.2.is_none() {QBrush::new(()).qclsinst} else {self.2.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZN14QGraphicsScene10addPolygonERK9QPolygonFRK4QPenRK6QBrush(rsthis.qclsinst, arg0, arg1, arg2)};
     let mut ret1 = QGraphicsPolygonItem::inheritFrom(ret as u64);
     return ret1;
@@ -462,12 +462,12 @@ pub trait QGraphicsScene_addLine<RetType> {
 }
 
   // proto:  QGraphicsLineItem * QGraphicsScene::addLine(const QLineF & line, const QPen & pen);
-impl<'a> /*trait*/ QGraphicsScene_addLine<QGraphicsLineItem> for (&'a QLineF, &'a QPen) {
+impl<'a> /*trait*/ QGraphicsScene_addLine<QGraphicsLineItem> for (&'a QLineF, Option<&'a QPen>) {
   fn addLine(self , rsthis: & QGraphicsScene) -> QGraphicsLineItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene7addLineERK6QLineFRK4QPen()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {QPen::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZN14QGraphicsScene7addLineERK6QLineFRK4QPen(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QGraphicsLineItem::inheritFrom(ret as u64);
     return ret1;
@@ -536,14 +536,14 @@ pub trait QGraphicsScene_new {
 }
 
   // proto:  void QGraphicsScene::QGraphicsScene(const QRectF & sceneRect, QObject * parent);
-impl<'a> /*trait*/ QGraphicsScene_new for (&'a QRectF, &'a QObject) {
+impl<'a> /*trait*/ QGraphicsScene_new for (&'a QRectF, Option<&'a QObject>) {
   fn new(self) -> QGraphicsScene {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsSceneC2ERK6QRectFP7QObject()};
     let ctysz: c_int = unsafe{QGraphicsScene_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN14QGraphicsSceneC2ERK6QRectFP7QObject(arg0, arg1)};
     let rsthis = QGraphicsScene{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -552,13 +552,13 @@ impl<'a> /*trait*/ QGraphicsScene_new for (&'a QRectF, &'a QObject) {
 }
 
   // proto:  void QGraphicsScene::QGraphicsScene(QObject * parent);
-impl<'a> /*trait*/ QGraphicsScene_new for (&'a QObject) {
+impl<'a> /*trait*/ QGraphicsScene_new for (Option<&'a QObject>) {
   fn new(self) -> QGraphicsScene {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsSceneC2EP7QObject()};
     let ctysz: c_int = unsafe{QGraphicsScene_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN14QGraphicsSceneC2EP7QObject(arg0)};
     let rsthis = QGraphicsScene{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -625,12 +625,12 @@ pub trait QGraphicsScene_addSimpleText<RetType> {
 }
 
   // proto:  QGraphicsSimpleTextItem * QGraphicsScene::addSimpleText(const QString & text, const QFont & font);
-impl<'a> /*trait*/ QGraphicsScene_addSimpleText<QGraphicsSimpleTextItem> for (&'a QString, &'a QFont) {
+impl<'a> /*trait*/ QGraphicsScene_addSimpleText<QGraphicsSimpleTextItem> for (&'a QString, Option<&'a QFont>) {
   fn addSimpleText(self , rsthis: & QGraphicsScene) -> QGraphicsSimpleTextItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene13addSimpleTextERK7QStringRK5QFont()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {QFont::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZN14QGraphicsScene13addSimpleTextERK7QStringRK5QFont(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QGraphicsSimpleTextItem::inheritFrom(ret as u64);
     return ret1;
@@ -639,7 +639,7 @@ impl<'a> /*trait*/ QGraphicsScene_addSimpleText<QGraphicsSimpleTextItem> for (&'
 }
 
   // proto:  QGraphicsLineItem * QGraphicsScene::addLine(qreal x1, qreal y1, qreal x2, qreal y2, const QPen & pen);
-impl<'a> /*trait*/ QGraphicsScene_addLine<QGraphicsLineItem> for (f64, f64, f64, f64, &'a QPen) {
+impl<'a> /*trait*/ QGraphicsScene_addLine<QGraphicsLineItem> for (f64, f64, f64, f64, Option<&'a QPen>) {
   fn addLine(self , rsthis: & QGraphicsScene) -> QGraphicsLineItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene7addLineEddddRK4QPen()};
@@ -647,7 +647,7 @@ impl<'a> /*trait*/ QGraphicsScene_addLine<QGraphicsLineItem> for (f64, f64, f64,
     let arg1 = self.1  as c_double;
     let arg2 = self.2  as c_double;
     let arg3 = self.3  as c_double;
-    let arg4 = self.4.qclsinst  as *mut c_void;
+    let arg4 = (if self.4.is_none() {QPen::new(()).qclsinst} else {self.4.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZN14QGraphicsScene7addLineEddddRK4QPen(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4)};
     let mut ret1 = QGraphicsLineItem::inheritFrom(ret as u64);
     return ret1;
@@ -997,7 +997,7 @@ pub trait QGraphicsScene_addRect<RetType> {
 }
 
   // proto:  QGraphicsRectItem * QGraphicsScene::addRect(qreal x, qreal y, qreal w, qreal h, const QPen & pen, const QBrush & brush);
-impl<'a> /*trait*/ QGraphicsScene_addRect<QGraphicsRectItem> for (f64, f64, f64, f64, &'a QPen, &'a QBrush) {
+impl<'a> /*trait*/ QGraphicsScene_addRect<QGraphicsRectItem> for (f64, f64, f64, f64, Option<&'a QPen>, Option<&'a QBrush>) {
   fn addRect(self , rsthis: & QGraphicsScene) -> QGraphicsRectItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene7addRectEddddRK4QPenRK6QBrush()};
@@ -1005,8 +1005,8 @@ impl<'a> /*trait*/ QGraphicsScene_addRect<QGraphicsRectItem> for (f64, f64, f64,
     let arg1 = self.1  as c_double;
     let arg2 = self.2  as c_double;
     let arg3 = self.3  as c_double;
-    let arg4 = self.4.qclsinst  as *mut c_void;
-    let arg5 = self.5.qclsinst  as *mut c_void;
+    let arg4 = (if self.4.is_none() {QPen::new(()).qclsinst} else {self.4.unwrap().qclsinst})  as *mut c_void;
+    let arg5 = (if self.5.is_none() {QBrush::new(()).qclsinst} else {self.5.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZN14QGraphicsScene7addRectEddddRK4QPenRK6QBrush(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)};
     let mut ret1 = QGraphicsRectItem::inheritFrom(ret as u64);
     return ret1;
@@ -1121,7 +1121,7 @@ impl<'a> /*trait*/ QGraphicsScene_setMinimumRenderSize<()> for (f64) {
 }
 
   // proto:  void QGraphicsScene::QGraphicsScene(qreal x, qreal y, qreal width, qreal height, QObject * parent);
-impl<'a> /*trait*/ QGraphicsScene_new for (f64, f64, f64, f64, &'a QObject) {
+impl<'a> /*trait*/ QGraphicsScene_new for (f64, f64, f64, f64, Option<&'a QObject>) {
   fn new(self) -> QGraphicsScene {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsSceneC2EddddP7QObject()};
@@ -1131,7 +1131,7 @@ impl<'a> /*trait*/ QGraphicsScene_new for (f64, f64, f64, f64, &'a QObject) {
     let arg1 = self.1  as c_double;
     let arg2 = self.2  as c_double;
     let arg3 = self.3  as c_double;
-    let arg4 = self.4.qclsinst  as *mut c_void;
+    let arg4 = (if self.4.is_none() {0} else {self.4.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN14QGraphicsSceneC2EddddP7QObject(arg0, arg1, arg2, arg3, arg4)};
     let rsthis = QGraphicsScene{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -1164,13 +1164,13 @@ impl<'a> /*trait*/ QGraphicsScene_mouseGrabberItem<QGraphicsItem> for () {
 }
 
   // proto:  QGraphicsRectItem * QGraphicsScene::addRect(const QRectF & rect, const QPen & pen, const QBrush & brush);
-impl<'a> /*trait*/ QGraphicsScene_addRect<QGraphicsRectItem> for (&'a QRectF, &'a QPen, &'a QBrush) {
+impl<'a> /*trait*/ QGraphicsScene_addRect<QGraphicsRectItem> for (&'a QRectF, Option<&'a QPen>, Option<&'a QBrush>) {
   fn addRect(self , rsthis: & QGraphicsScene) -> QGraphicsRectItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene7addRectERK6QRectFRK4QPenRK6QBrush()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {QPen::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
+    let arg2 = (if self.2.is_none() {QBrush::new(()).qclsinst} else {self.2.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZN14QGraphicsScene7addRectERK6QRectFRK4QPenRK6QBrush(rsthis.qclsinst, arg0, arg1, arg2)};
     let mut ret1 = QGraphicsRectItem::inheritFrom(ret as u64);
     return ret1;
@@ -1191,13 +1191,13 @@ pub trait QGraphicsScene_addEllipse<RetType> {
 }
 
   // proto:  QGraphicsEllipseItem * QGraphicsScene::addEllipse(const QRectF & rect, const QPen & pen, const QBrush & brush);
-impl<'a> /*trait*/ QGraphicsScene_addEllipse<QGraphicsEllipseItem> for (&'a QRectF, &'a QPen, &'a QBrush) {
+impl<'a> /*trait*/ QGraphicsScene_addEllipse<QGraphicsEllipseItem> for (&'a QRectF, Option<&'a QPen>, Option<&'a QBrush>) {
   fn addEllipse(self , rsthis: & QGraphicsScene) -> QGraphicsEllipseItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene10addEllipseERK6QRectFRK4QPenRK6QBrush()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {QPen::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
+    let arg2 = (if self.2.is_none() {QBrush::new(()).qclsinst} else {self.2.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZN14QGraphicsScene10addEllipseERK6QRectFRK4QPenRK6QBrush(rsthis.qclsinst, arg0, arg1, arg2)};
     let mut ret1 = QGraphicsEllipseItem::inheritFrom(ret as u64);
     return ret1;
@@ -1322,7 +1322,7 @@ impl<'a> /*trait*/ QGraphicsScene_removeItem<()> for (&'a QGraphicsItem) {
 }
 
   // proto:  QGraphicsEllipseItem * QGraphicsScene::addEllipse(qreal x, qreal y, qreal w, qreal h, const QPen & pen, const QBrush & brush);
-impl<'a> /*trait*/ QGraphicsScene_addEllipse<QGraphicsEllipseItem> for (f64, f64, f64, f64, &'a QPen, &'a QBrush) {
+impl<'a> /*trait*/ QGraphicsScene_addEllipse<QGraphicsEllipseItem> for (f64, f64, f64, f64, Option<&'a QPen>, Option<&'a QBrush>) {
   fn addEllipse(self , rsthis: & QGraphicsScene) -> QGraphicsEllipseItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene10addEllipseEddddRK4QPenRK6QBrush()};
@@ -1330,8 +1330,8 @@ impl<'a> /*trait*/ QGraphicsScene_addEllipse<QGraphicsEllipseItem> for (f64, f64
     let arg1 = self.1  as c_double;
     let arg2 = self.2  as c_double;
     let arg3 = self.3  as c_double;
-    let arg4 = self.4.qclsinst  as *mut c_void;
-    let arg5 = self.5.qclsinst  as *mut c_void;
+    let arg4 = (if self.4.is_none() {QPen::new(()).qclsinst} else {self.4.unwrap().qclsinst})  as *mut c_void;
+    let arg5 = (if self.5.is_none() {QBrush::new(()).qclsinst} else {self.5.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZN14QGraphicsScene10addEllipseEddddRK4QPenRK6QBrush(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)};
     let mut ret1 = QGraphicsEllipseItem::inheritFrom(ret as u64);
     return ret1;
@@ -1399,12 +1399,12 @@ pub trait QGraphicsScene_addText<RetType> {
 }
 
   // proto:  QGraphicsTextItem * QGraphicsScene::addText(const QString & text, const QFont & font);
-impl<'a> /*trait*/ QGraphicsScene_addText<QGraphicsTextItem> for (&'a QString, &'a QFont) {
+impl<'a> /*trait*/ QGraphicsScene_addText<QGraphicsTextItem> for (&'a QString, Option<&'a QFont>) {
   fn addText(self , rsthis: & QGraphicsScene) -> QGraphicsTextItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene7addTextERK7QStringRK5QFont()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {QFont::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZN14QGraphicsScene7addTextERK7QStringRK5QFont(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QGraphicsTextItem::inheritFrom(ret as u64);
     return ret1;
@@ -1639,13 +1639,13 @@ pub trait QGraphicsScene_addPath<RetType> {
 }
 
   // proto:  QGraphicsPathItem * QGraphicsScene::addPath(const QPainterPath & path, const QPen & pen, const QBrush & brush);
-impl<'a> /*trait*/ QGraphicsScene_addPath<QGraphicsPathItem> for (&'a QPainterPath, &'a QPen, &'a QBrush) {
+impl<'a> /*trait*/ QGraphicsScene_addPath<QGraphicsPathItem> for (&'a QPainterPath, Option<&'a QPen>, Option<&'a QBrush>) {
   fn addPath(self , rsthis: & QGraphicsScene) -> QGraphicsPathItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene7addPathERK12QPainterPathRK4QPenRK6QBrush()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {QPen::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
+    let arg2 = (if self.2.is_none() {QBrush::new(()).qclsinst} else {self.2.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZN14QGraphicsScene7addPathERK12QPainterPathRK4QPenRK6QBrush(rsthis.qclsinst, arg0, arg1, arg2)};
     let mut ret1 = QGraphicsPathItem::inheritFrom(ret as u64);
     return ret1;

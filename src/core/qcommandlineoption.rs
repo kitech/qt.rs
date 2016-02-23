@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qcommandlineoption.h
 // dst-file: /src/core/qcommandlineoption.rs
 //
@@ -175,7 +175,7 @@ impl<'a> /*trait*/ QCommandLineOption_setDescription<()> for (&'a QString) {
 }
 
   // proto:  void QCommandLineOption::QCommandLineOption(const QString & name, const QString & description, const QString & valueName, const QString & defaultValue);
-impl<'a> /*trait*/ QCommandLineOption_new for (&'a QString, &'a QString, &'a QString, &'a QString) {
+impl<'a> /*trait*/ QCommandLineOption_new for (&'a QString, &'a QString, Option<&'a QString>, Option<&'a QString>) {
   fn new(self) -> QCommandLineOption {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLineOptionC2ERK7QStringS2_S2_S2_()};
@@ -183,8 +183,8 @@ impl<'a> /*trait*/ QCommandLineOption_new for (&'a QString, &'a QString, &'a QSt
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2.qclsinst  as *mut c_void;
-    let arg3 = self.3.qclsinst  as *mut c_void;
+    let arg2 = (if self.2.is_none() {QString::new(()).qclsinst} else {self.2.unwrap().qclsinst})  as *mut c_void;
+    let arg3 = (if self.3.is_none() {QString::new(()).qclsinst} else {self.3.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN18QCommandLineOptionC2ERK7QStringS2_S2_S2_(arg0, arg1, arg2, arg3)};
     let rsthis = QCommandLineOption{qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -217,7 +217,7 @@ impl<'a> /*trait*/ QCommandLineOption_valueName<QString> for () {
 }
 
   // proto:  void QCommandLineOption::QCommandLineOption(const QStringList & names, const QString & description, const QString & valueName, const QString & defaultValue);
-impl<'a> /*trait*/ QCommandLineOption_new for (&'a QStringList, &'a QString, &'a QString, &'a QString) {
+impl<'a> /*trait*/ QCommandLineOption_new for (&'a QStringList, &'a QString, Option<&'a QString>, Option<&'a QString>) {
   fn new(self) -> QCommandLineOption {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLineOptionC2ERK11QStringListRK7QStringS5_S5_()};
@@ -225,8 +225,8 @@ impl<'a> /*trait*/ QCommandLineOption_new for (&'a QStringList, &'a QString, &'a
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2.qclsinst  as *mut c_void;
-    let arg3 = self.3.qclsinst  as *mut c_void;
+    let arg2 = (if self.2.is_none() {QString::new(()).qclsinst} else {self.2.unwrap().qclsinst})  as *mut c_void;
+    let arg3 = (if self.3.is_none() {QString::new(()).qclsinst} else {self.3.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN18QCommandLineOptionC2ERK11QStringListRK7QStringS5_S5_(arg0, arg1, arg2, arg3)};
     let rsthis = QCommandLineOption{qclsinst: qthis, ..Default::default()};
     return rsthis;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qiodevice.h
 // dst-file: /src/core/qiodevice.rs
 //
@@ -270,11 +270,11 @@ impl<'a> /*trait*/ QIODevice_readLine<i64> for (&'a mut String, i64) {
 }
 
   // proto:  QByteArray QIODevice::readLine(qint64 maxlen);
-impl<'a> /*trait*/ QIODevice_readLine<QByteArray> for (i64) {
+impl<'a> /*trait*/ QIODevice_readLine<QByteArray> for (Option<i64>) {
   fn readLine(self , rsthis: & QIODevice) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QIODevice8readLineEx()};
-    let arg0 = self  as c_longlong;
+    let arg0 = (if self.is_none() {0} else {self.unwrap()})  as c_longlong;
     let mut ret = unsafe {C_ZN9QIODevice8readLineEx(rsthis.qclsinst, arg0)};
     let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;

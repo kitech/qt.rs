@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Jan 19 21:53:37 2016
+// created: Wed Jan 20 00:44:03 2016
 // src-file: /QtNetwork/qdnslookup.h
 // dst-file: /src/network/qdnslookup.rs
 //
@@ -153,7 +153,6 @@ extern {
   fn _ZN10QDnsLookupD2Ev(qthis: u64 /* *mut c_void*/);
   fn QDnsLookup_SlotProxy_connect__ZN10QDnsLookup11nameChangedERK7QString(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QDnsLookup_SlotProxy_connect__ZN10QDnsLookup8finishedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QDnsLookup_SlotProxy_connect__ZN10QDnsLookup11typeChangedENS_4TypeE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QDnsLookup_SlotProxy_connect__ZN10QDnsLookup17nameserverChangedERK12QHostAddress(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
@@ -1682,49 +1681,13 @@ impl /* trait */ QDnsLookup_finished_signal_connect for Box<Fn()> {
     unsafe {QDnsLookup_SlotProxy_connect__ZN10QDnsLookup8finishedEv(arg0, arg1, arg2)};
   }
 }
-// typeChanged(enum QDnsLookup::Type)
-extern fn QDnsLookup_typeChanged_signal_connect_cb_2(rsfptr:fn(i32), arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-  let rsarg0 = arg0 as i32;
-  rsfptr(rsarg0);
-}
-extern fn QDnsLookup_typeChanged_signal_connect_cb_box_2(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  let rsarg0 = arg0 as i32;
-  // rsfptr(rsarg0);
-  unsafe{(*rsfptr_raw)(rsarg0)};
-}
-impl /* trait */ QDnsLookup_typeChanged_signal_connect for fn(i32) {
-  fn connect(self, sigthis: QDnsLookup_typeChanged_signal) {
-    // do smth...
-    // self as u64; // error for Fn, Ok for fn
-    self as *mut c_void as u64;
-    self as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QDnsLookup_typeChanged_signal_connect_cb_2 as *mut c_void;
-    let arg2 = self as *mut c_void;
-    unsafe {QDnsLookup_SlotProxy_connect__ZN10QDnsLookup11typeChangedENS_4TypeE(arg0, arg1, arg2)};
-  }
-}
-impl /* trait */ QDnsLookup_typeChanged_signal_connect for Box<Fn(i32)> {
-  fn connect(self, sigthis: QDnsLookup_typeChanged_signal) {
-    // do smth...
-    // Box::into_raw(self) as u64;
-    // Box::into_raw(self) as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QDnsLookup_typeChanged_signal_connect_cb_box_2 as *mut c_void;
-    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
-    unsafe {QDnsLookup_SlotProxy_connect__ZN10QDnsLookup11typeChangedENS_4TypeE(arg0, arg1, arg2)};
-  }
-}
 // nameserverChanged(const class QHostAddress &)
-extern fn QDnsLookup_nameserverChanged_signal_connect_cb_3(rsfptr:fn(QHostAddress), arg0: *mut c_void) {
+extern fn QDnsLookup_nameserverChanged_signal_connect_cb_2(rsfptr:fn(QHostAddress), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsarg0 = QHostAddress::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QDnsLookup_nameserverChanged_signal_connect_cb_box_3(rsfptr_raw:*mut Box<Fn(QHostAddress)>, arg0: *mut c_void) {
+extern fn QDnsLookup_nameserverChanged_signal_connect_cb_box_2(rsfptr_raw:*mut Box<Fn(QHostAddress)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QHostAddress::inheritFrom(arg0 as u64);
@@ -1738,7 +1701,7 @@ impl /* trait */ QDnsLookup_nameserverChanged_signal_connect for fn(QHostAddress
     self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QDnsLookup_nameserverChanged_signal_connect_cb_3 as *mut c_void;
+    let arg1 = QDnsLookup_nameserverChanged_signal_connect_cb_2 as *mut c_void;
     let arg2 = self as *mut c_void;
     unsafe {QDnsLookup_SlotProxy_connect__ZN10QDnsLookup17nameserverChangedERK12QHostAddress(arg0, arg1, arg2)};
   }
@@ -1749,7 +1712,7 @@ impl /* trait */ QDnsLookup_nameserverChanged_signal_connect for Box<Fn(QHostAdd
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QDnsLookup_nameserverChanged_signal_connect_cb_box_3 as *mut c_void;
+    let arg1 = QDnsLookup_nameserverChanged_signal_connect_cb_box_2 as *mut c_void;
     let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QDnsLookup_SlotProxy_connect__ZN10QDnsLookup17nameserverChangedERK12QHostAddress(arg0, arg1, arg2)};
   }

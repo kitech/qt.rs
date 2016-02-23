@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qcolormap.h
 // dst-file: /src/widgets/qcolormap.rs
 //
@@ -173,11 +173,11 @@ pub trait QColormap_instance_s<RetType> {
 }
 
   // proto: static QColormap QColormap::instance(int screen);
-impl<'a> /*trait*/ QColormap_instance_s<QColormap> for (i32) {
+impl<'a> /*trait*/ QColormap_instance_s<QColormap> for (Option<i32>) {
   fn instance_s(self ) -> QColormap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QColormap8instanceEi()};
-    let arg0 = self  as c_int;
+    let arg0 = (if self.is_none() {-1} else {self.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN9QColormap8instanceEi(arg0)};
     let mut ret1 = QColormap::inheritFrom(ret as u64);
     return ret1;

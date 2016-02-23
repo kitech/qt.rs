@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qdir.h
 // dst-file: /src/core/qdir.rs
 //
@@ -268,13 +268,13 @@ pub trait QDir_new {
 }
 
   // proto:  void QDir::QDir(const QString & path);
-impl<'a> /*trait*/ QDir_new for (&'a QString) {
+impl<'a> /*trait*/ QDir_new for (Option<&'a QString>) {
   fn new(self) -> QDir {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QDirC2ERK7QString()};
     let ctysz: c_int = unsafe{QDir_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {QString::new(()).qclsinst} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN4QDirC2ERK7QString(arg0)};
     let rsthis = QDir{qclsinst: qthis, ..Default::default()};
     return rsthis;

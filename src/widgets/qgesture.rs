@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qgesture.h
 // dst-file: /src/widgets/qgesture.rs
 //
@@ -326,13 +326,13 @@ pub trait QSwipeGesture_new {
 }
 
   // proto:  void QSwipeGesture::QSwipeGesture(QObject * parent);
-impl<'a> /*trait*/ QSwipeGesture_new for (&'a QObject) {
+impl<'a> /*trait*/ QSwipeGesture_new for (Option<&'a QObject>) {
   fn new(self) -> QSwipeGesture {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QSwipeGestureC2EP7QObject()};
     let ctysz: c_int = unsafe{QSwipeGesture_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN13QSwipeGestureC2EP7QObject(arg0)};
     let rsthis = QSwipeGesture{qbase: QGesture::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -487,13 +487,13 @@ pub trait QGesture_new {
 }
 
   // proto:  void QGesture::QGesture(QObject * parent);
-impl<'a> /*trait*/ QGesture_new for (&'a QObject) {
+impl<'a> /*trait*/ QGesture_new for (Option<&'a QObject>) {
   fn new(self) -> QGesture {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QGestureC2EP7QObject()};
     let ctysz: c_int = unsafe{QGesture_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN8QGestureC2EP7QObject(arg0)};
     let rsthis = QGesture{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -967,13 +967,13 @@ pub trait QPanGesture_new {
 }
 
   // proto:  void QPanGesture::QPanGesture(QObject * parent);
-impl<'a> /*trait*/ QPanGesture_new for (&'a QObject) {
+impl<'a> /*trait*/ QPanGesture_new for (Option<&'a QObject>) {
   fn new(self) -> QPanGesture {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPanGestureC2EP7QObject()};
     let ctysz: c_int = unsafe{QPanGesture_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN11QPanGestureC2EP7QObject(arg0)};
     let rsthis = QPanGesture{qbase: QGesture::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -1106,13 +1106,13 @@ pub trait QTapAndHoldGesture_new {
 }
 
   // proto:  void QTapAndHoldGesture::QTapAndHoldGesture(QObject * parent);
-impl<'a> /*trait*/ QTapAndHoldGesture_new for (&'a QObject) {
+impl<'a> /*trait*/ QTapAndHoldGesture_new for (Option<&'a QObject>) {
   fn new(self) -> QTapAndHoldGesture {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QTapAndHoldGestureC2EP7QObject()};
     let ctysz: c_int = unsafe{QTapAndHoldGesture_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN18QTapAndHoldGestureC2EP7QObject(arg0)};
     let rsthis = QTapAndHoldGesture{qbase: QGesture::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -1337,13 +1337,13 @@ pub trait QTapGesture_new {
 }
 
   // proto:  void QTapGesture::QTapGesture(QObject * parent);
-impl<'a> /*trait*/ QTapGesture_new for (&'a QObject) {
+impl<'a> /*trait*/ QTapGesture_new for (Option<&'a QObject>) {
   fn new(self) -> QTapGesture {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTapGestureC2EP7QObject()};
     let ctysz: c_int = unsafe{QTapGesture_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN11QTapGestureC2EP7QObject(arg0)};
     let rsthis = QTapGesture{qbase: QGesture::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -1568,13 +1568,13 @@ pub trait QPinchGesture_new {
 }
 
   // proto:  void QPinchGesture::QPinchGesture(QObject * parent);
-impl<'a> /*trait*/ QPinchGesture_new for (&'a QObject) {
+impl<'a> /*trait*/ QPinchGesture_new for (Option<&'a QObject>) {
   fn new(self) -> QPinchGesture {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QPinchGestureC2EP7QObject()};
     let ctysz: c_int = unsafe{QPinchGesture_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN13QPinchGestureC2EP7QObject(arg0)};
     let rsthis = QPinchGesture{qbase: QGesture::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;

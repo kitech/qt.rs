@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtGui/qstatictext.h
 // dst-file: /src/gui/qstatictext.rs
 //
@@ -223,12 +223,12 @@ pub trait QStaticText_prepare<RetType> {
 }
 
   // proto:  void QStaticText::prepare(const QTransform & matrix, const QFont & font);
-impl<'a> /*trait*/ QStaticText_prepare<()> for (&'a QTransform, &'a QFont) {
+impl<'a> /*trait*/ QStaticText_prepare<()> for (Option<&'a QTransform>, Option<&'a QFont>) {
   fn prepare(self , rsthis: & QStaticText) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QStaticText7prepareERK10QTransformRK5QFont()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg0 = (if self.0.is_none() {QTransform::new(()).qclsinst} else {self.0.unwrap().qclsinst})  as *mut c_void;
+    let arg1 = (if self.1.is_none() {QFont::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
      unsafe {C_ZN11QStaticText7prepareERK10QTransformRK5QFont(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }

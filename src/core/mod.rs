@@ -165,9 +165,6 @@ pub use self::qchar::QLatin1Char;
 pub mod qdir;
 pub use self::qdir::QDir;
 
-pub mod qsignalmapper;
-pub use self::qsignalmapper::QSignalMapper;
-
 pub use self::qhash::QHashData;
 
 pub mod qcommandlineparser;

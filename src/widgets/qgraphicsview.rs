@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qgraphicsview.h
 // dst-file: /src/widgets/qgraphicsview.rs
 //
@@ -380,12 +380,12 @@ pub trait QGraphicsView_setMatrix<RetType> {
 }
 
   // proto:  void QGraphicsView::setMatrix(const QMatrix & matrix, bool combine);
-impl<'a> /*trait*/ QGraphicsView_setMatrix<()> for (&'a QMatrix, i8) {
+impl<'a> /*trait*/ QGraphicsView_setMatrix<()> for (&'a QMatrix, Option<i8>) {
   fn setMatrix(self , rsthis: & QGraphicsView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QGraphicsView9setMatrixERK7QMatrixb()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_char;
+    let arg1 = (if self.1.is_none() {false as i8} else {self.1.unwrap()})  as c_char;
      unsafe {C_ZN13QGraphicsView9setMatrixERK7QMatrixb(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
@@ -706,14 +706,14 @@ pub trait QGraphicsView_new {
 }
 
   // proto:  void QGraphicsView::QGraphicsView(QGraphicsScene * scene, QWidget * parent);
-impl<'a> /*trait*/ QGraphicsView_new for (&'a QGraphicsScene, &'a QWidget) {
+impl<'a> /*trait*/ QGraphicsView_new for (&'a QGraphicsScene, Option<&'a QWidget>) {
   fn new(self) -> QGraphicsView {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QGraphicsViewC2EP14QGraphicsSceneP7QWidget()};
     let ctysz: c_int = unsafe{QGraphicsView_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN13QGraphicsViewC2EP14QGraphicsSceneP7QWidget(arg0, arg1)};
     let rsthis = QGraphicsView{qbase: QAbstractScrollArea::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -722,13 +722,13 @@ impl<'a> /*trait*/ QGraphicsView_new for (&'a QGraphicsScene, &'a QWidget) {
 }
 
   // proto:  void QGraphicsView::QGraphicsView(QWidget * parent);
-impl<'a> /*trait*/ QGraphicsView_new for (&'a QWidget) {
+impl<'a> /*trait*/ QGraphicsView_new for (Option<&'a QWidget>) {
   fn new(self) -> QGraphicsView {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QGraphicsViewC2EP7QWidget()};
     let ctysz: c_int = unsafe{QGraphicsView_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN13QGraphicsViewC2EP7QWidget(arg0)};
     let rsthis = QGraphicsView{qbase: QAbstractScrollArea::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -819,13 +819,13 @@ pub trait QGraphicsView_ensureVisible<RetType> {
 }
 
   // proto:  void QGraphicsView::ensureVisible(const QGraphicsItem * item, int xmargin, int ymargin);
-impl<'a> /*trait*/ QGraphicsView_ensureVisible<()> for (&'a QGraphicsItem, i32, i32) {
+impl<'a> /*trait*/ QGraphicsView_ensureVisible<()> for (&'a QGraphicsItem, Option<i32>, Option<i32>) {
   fn ensureVisible(self , rsthis: & QGraphicsView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QGraphicsView13ensureVisibleEPK13QGraphicsItemii()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
-    let arg2 = self.2  as c_int;
+    let arg1 = (if self.1.is_none() {50} else {self.1.unwrap()})  as c_int;
+    let arg2 = (if self.2.is_none() {50} else {self.2.unwrap()})  as c_int;
      unsafe {C_ZN13QGraphicsView13ensureVisibleEPK13QGraphicsItemii(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
@@ -942,13 +942,13 @@ impl<'a> /*trait*/ QGraphicsView_mapFromScene<QPoint> for (f64, f64) {
 }
 
   // proto:  void QGraphicsView::ensureVisible(const QRectF & rect, int xmargin, int ymargin);
-impl<'a> /*trait*/ QGraphicsView_ensureVisible<()> for (&'a QRectF, i32, i32) {
+impl<'a> /*trait*/ QGraphicsView_ensureVisible<()> for (&'a QRectF, Option<i32>, Option<i32>) {
   fn ensureVisible(self , rsthis: & QGraphicsView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QGraphicsView13ensureVisibleERK6QRectFii()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
-    let arg2 = self.2  as c_int;
+    let arg1 = (if self.1.is_none() {50} else {self.1.unwrap()})  as c_int;
+    let arg2 = (if self.2.is_none() {50} else {self.2.unwrap()})  as c_int;
      unsafe {C_ZN13QGraphicsView13ensureVisibleERK6QRectFii(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
@@ -1027,7 +1027,7 @@ impl<'a> /*trait*/ QGraphicsView_centerOn<()> for (f64, f64) {
 }
 
   // proto:  void QGraphicsView::ensureVisible(qreal x, qreal y, qreal w, qreal h, int xmargin, int ymargin);
-impl<'a> /*trait*/ QGraphicsView_ensureVisible<()> for (f64, f64, f64, f64, i32, i32) {
+impl<'a> /*trait*/ QGraphicsView_ensureVisible<()> for (f64, f64, f64, f64, Option<i32>, Option<i32>) {
   fn ensureVisible(self , rsthis: & QGraphicsView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QGraphicsView13ensureVisibleEddddii()};
@@ -1035,8 +1035,8 @@ impl<'a> /*trait*/ QGraphicsView_ensureVisible<()> for (f64, f64, f64, f64, i32,
     let arg1 = self.1  as c_double;
     let arg2 = self.2  as c_double;
     let arg3 = self.3  as c_double;
-    let arg4 = self.4  as c_int;
-    let arg5 = self.5  as c_int;
+    let arg4 = (if self.4.is_none() {50} else {self.4.unwrap()})  as c_int;
+    let arg5 = (if self.5.is_none() {50} else {self.5.unwrap()})  as c_int;
      unsafe {C_ZN13QGraphicsView13ensureVisibleEddddii(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)};
     // return 1;
   }
@@ -1094,12 +1094,12 @@ pub trait QGraphicsView_setTransform<RetType> {
 }
 
   // proto:  void QGraphicsView::setTransform(const QTransform & matrix, bool combine);
-impl<'a> /*trait*/ QGraphicsView_setTransform<()> for (&'a QTransform, i8) {
+impl<'a> /*trait*/ QGraphicsView_setTransform<()> for (&'a QTransform, Option<i8>) {
   fn setTransform(self , rsthis: & QGraphicsView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QGraphicsView12setTransformERK10QTransformb()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_char;
+    let arg1 = (if self.1.is_none() {false as i8} else {self.1.unwrap()})  as c_char;
      unsafe {C_ZN13QGraphicsView12setTransformERK10QTransformb(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }

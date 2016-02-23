@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Jan 19 21:53:37 2016
+// created: Wed Jan 20 00:44:03 2016
 // src-file: /QtNetwork/qnetworksession.h
 // dst-file: /src/network/qnetworksession.rs
 //
@@ -77,12 +77,9 @@ extern {
   // proto:  QVariant QNetworkSession::sessionProperty(const QString & key);
   fn _ZNK15QNetworkSession15sessionPropertyERK7QString(qthis: u64 /* *mut c_void*/, arg0: *mut c_void) -> *mut c_void;
   fn QNetworkSession_SlotProxy_connect__ZN15QNetworkSession25newConfigurationActivatedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QNetworkSession_SlotProxy_connect__ZN15QNetworkSession20usagePoliciesChangedE6QFlagsINS_11UsagePolicyEE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QNetworkSession_SlotProxy_connect__ZN15QNetworkSession29preferredConfigurationChangedERK21QNetworkConfigurationb(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QNetworkSession_SlotProxy_connect__ZN15QNetworkSession6closedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QNetworkSession_SlotProxy_connect__ZN15QNetworkSession12stateChangedENS_5StateE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QNetworkSession_SlotProxy_connect__ZN15QNetworkSession6openedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QNetworkSession_SlotProxy_connect__ZN15QNetworkSession5errorENS_12SessionErrorE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -744,50 +741,14 @@ impl /* trait */ QNetworkSession_newConfigurationActivated_signal_connect for Bo
     unsafe {QNetworkSession_SlotProxy_connect__ZN15QNetworkSession25newConfigurationActivatedEv(arg0, arg1, arg2)};
   }
 }
-// usagePoliciesChanged(class QNetworkSession::UsagePolicies)
-extern fn QNetworkSession_usagePoliciesChanged_signal_connect_cb_1(rsfptr:fn(i32), arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-  let rsarg0 = arg0 as i32;
-  rsfptr(rsarg0);
-}
-extern fn QNetworkSession_usagePoliciesChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  let rsarg0 = arg0 as i32;
-  // rsfptr(rsarg0);
-  unsafe{(*rsfptr_raw)(rsarg0)};
-}
-impl /* trait */ QNetworkSession_usagePoliciesChanged_signal_connect for fn(i32) {
-  fn connect(self, sigthis: QNetworkSession_usagePoliciesChanged_signal) {
-    // do smth...
-    // self as u64; // error for Fn, Ok for fn
-    self as *mut c_void as u64;
-    self as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QNetworkSession_usagePoliciesChanged_signal_connect_cb_1 as *mut c_void;
-    let arg2 = self as *mut c_void;
-    unsafe {QNetworkSession_SlotProxy_connect__ZN15QNetworkSession20usagePoliciesChangedE6QFlagsINS_11UsagePolicyEE(arg0, arg1, arg2)};
-  }
-}
-impl /* trait */ QNetworkSession_usagePoliciesChanged_signal_connect for Box<Fn(i32)> {
-  fn connect(self, sigthis: QNetworkSession_usagePoliciesChanged_signal) {
-    // do smth...
-    // Box::into_raw(self) as u64;
-    // Box::into_raw(self) as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QNetworkSession_usagePoliciesChanged_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
-    unsafe {QNetworkSession_SlotProxy_connect__ZN15QNetworkSession20usagePoliciesChangedE6QFlagsINS_11UsagePolicyEE(arg0, arg1, arg2)};
-  }
-}
 // preferredConfigurationChanged(const class QNetworkConfiguration &, _Bool)
-extern fn QNetworkSession_preferredConfigurationChanged_signal_connect_cb_2(rsfptr:fn(QNetworkConfiguration, i8), arg0: *mut c_void, arg1: c_char) {
+extern fn QNetworkSession_preferredConfigurationChanged_signal_connect_cb_1(rsfptr:fn(QNetworkConfiguration, i8), arg0: *mut c_void, arg1: c_char) {
   println!("{}:{}", file!(), line!());
   let rsarg0 = QNetworkConfiguration::inheritFrom(arg0 as u64);
   let rsarg1 = arg1 as i8;
   rsfptr(rsarg0,rsarg1);
 }
-extern fn QNetworkSession_preferredConfigurationChanged_signal_connect_cb_box_2(rsfptr_raw:*mut Box<Fn(QNetworkConfiguration, i8)>, arg0: *mut c_void, arg1: c_char) {
+extern fn QNetworkSession_preferredConfigurationChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn(QNetworkConfiguration, i8)>, arg0: *mut c_void, arg1: c_char) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QNetworkConfiguration::inheritFrom(arg0 as u64);
@@ -802,7 +763,7 @@ impl /* trait */ QNetworkSession_preferredConfigurationChanged_signal_connect fo
     self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QNetworkSession_preferredConfigurationChanged_signal_connect_cb_2 as *mut c_void;
+    let arg1 = QNetworkSession_preferredConfigurationChanged_signal_connect_cb_1 as *mut c_void;
     let arg2 = self as *mut c_void;
     unsafe {QNetworkSession_SlotProxy_connect__ZN15QNetworkSession29preferredConfigurationChangedERK21QNetworkConfigurationb(arg0, arg1, arg2)};
   }
@@ -813,17 +774,17 @@ impl /* trait */ QNetworkSession_preferredConfigurationChanged_signal_connect fo
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QNetworkSession_preferredConfigurationChanged_signal_connect_cb_box_2 as *mut c_void;
+    let arg1 = QNetworkSession_preferredConfigurationChanged_signal_connect_cb_box_1 as *mut c_void;
     let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QNetworkSession_SlotProxy_connect__ZN15QNetworkSession29preferredConfigurationChangedERK21QNetworkConfigurationb(arg0, arg1, arg2)};
   }
 }
 // closed()
-extern fn QNetworkSession_closed_signal_connect_cb_3(rsfptr:fn(), ) {
+extern fn QNetworkSession_closed_signal_connect_cb_2(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QNetworkSession_closed_signal_connect_cb_box_3(rsfptr_raw:*mut Box<Fn()>, ) {
+extern fn QNetworkSession_closed_signal_connect_cb_box_2(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   // rsfptr();
@@ -836,7 +797,7 @@ impl /* trait */ QNetworkSession_closed_signal_connect for fn() {
     self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QNetworkSession_closed_signal_connect_cb_3 as *mut c_void;
+    let arg1 = QNetworkSession_closed_signal_connect_cb_2 as *mut c_void;
     let arg2 = self as *mut c_void;
     unsafe {QNetworkSession_SlotProxy_connect__ZN15QNetworkSession6closedEv(arg0, arg1, arg2)};
   }
@@ -847,53 +808,17 @@ impl /* trait */ QNetworkSession_closed_signal_connect for Box<Fn()> {
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QNetworkSession_closed_signal_connect_cb_box_3 as *mut c_void;
+    let arg1 = QNetworkSession_closed_signal_connect_cb_box_2 as *mut c_void;
     let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QNetworkSession_SlotProxy_connect__ZN15QNetworkSession6closedEv(arg0, arg1, arg2)};
   }
 }
-// stateChanged(class QNetworkSession::State)
-extern fn QNetworkSession_stateChanged_signal_connect_cb_4(rsfptr:fn(i32), arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-  let rsarg0 = arg0 as i32;
-  rsfptr(rsarg0);
-}
-extern fn QNetworkSession_stateChanged_signal_connect_cb_box_4(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  let rsarg0 = arg0 as i32;
-  // rsfptr(rsarg0);
-  unsafe{(*rsfptr_raw)(rsarg0)};
-}
-impl /* trait */ QNetworkSession_stateChanged_signal_connect for fn(i32) {
-  fn connect(self, sigthis: QNetworkSession_stateChanged_signal) {
-    // do smth...
-    // self as u64; // error for Fn, Ok for fn
-    self as *mut c_void as u64;
-    self as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QNetworkSession_stateChanged_signal_connect_cb_4 as *mut c_void;
-    let arg2 = self as *mut c_void;
-    unsafe {QNetworkSession_SlotProxy_connect__ZN15QNetworkSession12stateChangedENS_5StateE(arg0, arg1, arg2)};
-  }
-}
-impl /* trait */ QNetworkSession_stateChanged_signal_connect for Box<Fn(i32)> {
-  fn connect(self, sigthis: QNetworkSession_stateChanged_signal) {
-    // do smth...
-    // Box::into_raw(self) as u64;
-    // Box::into_raw(self) as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QNetworkSession_stateChanged_signal_connect_cb_box_4 as *mut c_void;
-    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
-    unsafe {QNetworkSession_SlotProxy_connect__ZN15QNetworkSession12stateChangedENS_5StateE(arg0, arg1, arg2)};
-  }
-}
 // opened()
-extern fn QNetworkSession_opened_signal_connect_cb_5(rsfptr:fn(), ) {
+extern fn QNetworkSession_opened_signal_connect_cb_3(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QNetworkSession_opened_signal_connect_cb_box_5(rsfptr_raw:*mut Box<Fn()>, ) {
+extern fn QNetworkSession_opened_signal_connect_cb_box_3(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   // rsfptr();
@@ -906,7 +831,7 @@ impl /* trait */ QNetworkSession_opened_signal_connect for fn() {
     self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QNetworkSession_opened_signal_connect_cb_5 as *mut c_void;
+    let arg1 = QNetworkSession_opened_signal_connect_cb_3 as *mut c_void;
     let arg2 = self as *mut c_void;
     unsafe {QNetworkSession_SlotProxy_connect__ZN15QNetworkSession6openedEv(arg0, arg1, arg2)};
   }
@@ -917,45 +842,9 @@ impl /* trait */ QNetworkSession_opened_signal_connect for Box<Fn()> {
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QNetworkSession_opened_signal_connect_cb_box_5 as *mut c_void;
+    let arg1 = QNetworkSession_opened_signal_connect_cb_box_3 as *mut c_void;
     let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QNetworkSession_SlotProxy_connect__ZN15QNetworkSession6openedEv(arg0, arg1, arg2)};
-  }
-}
-// error(class QNetworkSession::SessionError)
-extern fn QNetworkSession_error_signal_connect_cb_6(rsfptr:fn(i32), arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-  let rsarg0 = arg0 as i32;
-  rsfptr(rsarg0);
-}
-extern fn QNetworkSession_error_signal_connect_cb_box_6(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  let rsarg0 = arg0 as i32;
-  // rsfptr(rsarg0);
-  unsafe{(*rsfptr_raw)(rsarg0)};
-}
-impl /* trait */ QNetworkSession_error_signal_connect for fn(i32) {
-  fn connect(self, sigthis: QNetworkSession_error_signal) {
-    // do smth...
-    // self as u64; // error for Fn, Ok for fn
-    self as *mut c_void as u64;
-    self as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QNetworkSession_error_signal_connect_cb_6 as *mut c_void;
-    let arg2 = self as *mut c_void;
-    unsafe {QNetworkSession_SlotProxy_connect__ZN15QNetworkSession5errorENS_12SessionErrorE(arg0, arg1, arg2)};
-  }
-}
-impl /* trait */ QNetworkSession_error_signal_connect for Box<Fn(i32)> {
-  fn connect(self, sigthis: QNetworkSession_error_signal) {
-    // do smth...
-    // Box::into_raw(self) as u64;
-    // Box::into_raw(self) as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QNetworkSession_error_signal_connect_cb_box_6 as *mut c_void;
-    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
-    unsafe {QNetworkSession_SlotProxy_connect__ZN15QNetworkSession5errorENS_12SessionErrorE(arg0, arg1, arg2)};
   }
 }
 // <= body block end

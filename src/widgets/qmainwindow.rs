@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qmainwindow.h
 // dst-file: /src/widgets/qmainwindow.rs
 //
@@ -438,11 +438,11 @@ pub trait QMainWindow_saveState<RetType> {
 }
 
   // proto:  QByteArray QMainWindow::saveState(int version);
-impl<'a> /*trait*/ QMainWindow_saveState<QByteArray> for (i32) {
+impl<'a> /*trait*/ QMainWindow_saveState<QByteArray> for (Option<i32>) {
   fn saveState(self , rsthis: & QMainWindow) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMainWindow9saveStateEi()};
-    let arg0 = self  as c_int;
+    let arg0 = (if self.is_none() {0} else {self.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK11QMainWindow9saveStateEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QByteArray::inheritFrom(ret as u64);
     return ret1;
@@ -463,12 +463,12 @@ pub trait QMainWindow_restoreState<RetType> {
 }
 
   // proto:  bool QMainWindow::restoreState(const QByteArray & state, int version);
-impl<'a> /*trait*/ QMainWindow_restoreState<i8> for (&'a QByteArray, i32) {
+impl<'a> /*trait*/ QMainWindow_restoreState<i8> for (&'a QByteArray, Option<i32>) {
   fn restoreState(self , rsthis: & QMainWindow) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMainWindow12restoreStateERK10QByteArrayi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN11QMainWindow12restoreStateERK10QByteArrayi(rsthis.qclsinst, arg0, arg1)};
     return ret as i8; // 1
     // return 1;

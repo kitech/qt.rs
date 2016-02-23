@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtGui/qevent.h
 // dst-file: /src/gui/qevent.rs
 //
@@ -1047,13 +1047,13 @@ pub trait QInputMethodEvent_setCommitString<RetType> {
 }
 
   // proto:  void QInputMethodEvent::setCommitString(const QString & commitString, int replaceFrom, int replaceLength);
-impl<'a> /*trait*/ QInputMethodEvent_setCommitString<()> for (&'a QString, i32, i32) {
+impl<'a> /*trait*/ QInputMethodEvent_setCommitString<()> for (&'a QString, Option<i32>, Option<i32>) {
   fn setCommitString(self , rsthis: & QInputMethodEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QInputMethodEvent15setCommitStringERK7QStringii()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
-    let arg2 = self.2  as c_int;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_int;
+    let arg2 = (if self.2.is_none() {0} else {self.2.unwrap()})  as c_int;
      unsafe {C_ZN17QInputMethodEvent15setCommitStringERK7QStringii(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
@@ -1292,7 +1292,7 @@ pub trait QActionEvent_new {
 }
 
   // proto:  void QActionEvent::QActionEvent(int type, QAction * action, QAction * before);
-impl<'a> /*trait*/ QActionEvent_new for (i32, &'a QAction, &'a QAction) {
+impl<'a> /*trait*/ QActionEvent_new for (i32, &'a QAction, Option<&'a QAction>) {
   fn new(self) -> QActionEvent {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZN12QActionEventC2EiP7QActionS1_()};
@@ -1300,7 +1300,7 @@ impl<'a> /*trait*/ QActionEvent_new for (i32, &'a QAction, &'a QAction) {
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2.qclsinst  as *mut c_void;
+    let arg2 = (if self.2.is_none() {0} else {self.2.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN12QActionEventC2EiP7QActionS1_(arg0, arg1, arg2)};
     let rsthis = QActionEvent{qbase: QEvent::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -5533,7 +5533,7 @@ pub trait QShortcutEvent_new {
 }
 
   // proto:  void QShortcutEvent::QShortcutEvent(const QKeySequence & key, int id, bool ambiguous);
-impl<'a> /*trait*/ QShortcutEvent_new for (&'a QKeySequence, i32, i8) {
+impl<'a> /*trait*/ QShortcutEvent_new for (&'a QKeySequence, i32, Option<i8>) {
   fn new(self) -> QShortcutEvent {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZN14QShortcutEventC2ERK12QKeySequenceib()};
@@ -5541,7 +5541,7 @@ impl<'a> /*trait*/ QShortcutEvent_new for (&'a QKeySequence, i32, i8) {
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
-    let arg2 = self.2  as c_char;
+    let arg2 = (if self.2.is_none() {false as i8} else {self.2.unwrap()})  as c_char;
     let qthis: u64 = unsafe {C_ZN14QShortcutEventC2ERK12QKeySequenceib(arg0, arg1, arg2)};
     let rsthis = QShortcutEvent{qbase: QEvent::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;

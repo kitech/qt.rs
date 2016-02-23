@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Feb 20 16:39:24 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qsignalmapper.h
 // dst-file: /src/core/qsignalmapper.rs
 //

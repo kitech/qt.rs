@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Jan 19 21:53:37 2016
+// created: Wed Jan 20 00:44:03 2016
 // src-file: /QtNetwork/qlocalsocket.h
 // dst-file: /src/network/qlocalsocket.rs
 //
@@ -80,8 +80,6 @@ extern {
   fn _ZNK12QLocalSocket10serverNameEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   fn QLocalSocket_SlotProxy_connect__ZN12QLocalSocket12disconnectedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QLocalSocket_SlotProxy_connect__ZN12QLocalSocket9connectedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QLocalSocket_SlotProxy_connect__ZN12QLocalSocket12stateChangedENS_16LocalSocketStateE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QLocalSocket_SlotProxy_connect__ZN12QLocalSocket5errorENS_16LocalSocketErrorE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -772,78 +770,6 @@ impl /* trait */ QLocalSocket_connected_signal_connect for Box<Fn()> {
     let arg1 = QLocalSocket_connected_signal_connect_cb_box_1 as *mut c_void;
     let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QLocalSocket_SlotProxy_connect__ZN12QLocalSocket9connectedEv(arg0, arg1, arg2)};
-  }
-}
-// stateChanged(class QLocalSocket::LocalSocketState)
-extern fn QLocalSocket_stateChanged_signal_connect_cb_2(rsfptr:fn(i32), arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-  let rsarg0 = arg0 as i32;
-  rsfptr(rsarg0);
-}
-extern fn QLocalSocket_stateChanged_signal_connect_cb_box_2(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  let rsarg0 = arg0 as i32;
-  // rsfptr(rsarg0);
-  unsafe{(*rsfptr_raw)(rsarg0)};
-}
-impl /* trait */ QLocalSocket_stateChanged_signal_connect for fn(i32) {
-  fn connect(self, sigthis: QLocalSocket_stateChanged_signal) {
-    // do smth...
-    // self as u64; // error for Fn, Ok for fn
-    self as *mut c_void as u64;
-    self as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QLocalSocket_stateChanged_signal_connect_cb_2 as *mut c_void;
-    let arg2 = self as *mut c_void;
-    unsafe {QLocalSocket_SlotProxy_connect__ZN12QLocalSocket12stateChangedENS_16LocalSocketStateE(arg0, arg1, arg2)};
-  }
-}
-impl /* trait */ QLocalSocket_stateChanged_signal_connect for Box<Fn(i32)> {
-  fn connect(self, sigthis: QLocalSocket_stateChanged_signal) {
-    // do smth...
-    // Box::into_raw(self) as u64;
-    // Box::into_raw(self) as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QLocalSocket_stateChanged_signal_connect_cb_box_2 as *mut c_void;
-    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
-    unsafe {QLocalSocket_SlotProxy_connect__ZN12QLocalSocket12stateChangedENS_16LocalSocketStateE(arg0, arg1, arg2)};
-  }
-}
-// error(class QLocalSocket::LocalSocketError)
-extern fn QLocalSocket_error_signal_connect_cb_3(rsfptr:fn(i32), arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-  let rsarg0 = arg0 as i32;
-  rsfptr(rsarg0);
-}
-extern fn QLocalSocket_error_signal_connect_cb_box_3(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  let rsarg0 = arg0 as i32;
-  // rsfptr(rsarg0);
-  unsafe{(*rsfptr_raw)(rsarg0)};
-}
-impl /* trait */ QLocalSocket_error_signal_connect for fn(i32) {
-  fn connect(self, sigthis: QLocalSocket_error_signal) {
-    // do smth...
-    // self as u64; // error for Fn, Ok for fn
-    self as *mut c_void as u64;
-    self as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QLocalSocket_error_signal_connect_cb_3 as *mut c_void;
-    let arg2 = self as *mut c_void;
-    unsafe {QLocalSocket_SlotProxy_connect__ZN12QLocalSocket5errorENS_16LocalSocketErrorE(arg0, arg1, arg2)};
-  }
-}
-impl /* trait */ QLocalSocket_error_signal_connect for Box<Fn(i32)> {
-  fn connect(self, sigthis: QLocalSocket_error_signal) {
-    // do smth...
-    // Box::into_raw(self) as u64;
-    // Box::into_raw(self) as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QLocalSocket_error_signal_connect_cb_box_3 as *mut c_void;
-    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
-    unsafe {QLocalSocket_SlotProxy_connect__ZN12QLocalSocket5errorENS_16LocalSocketErrorE(arg0, arg1, arg2)};
   }
 }
 // <= body block end

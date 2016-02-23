@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Jan 19 21:53:37 2016
+// created: Wed Jan 20 00:44:03 2016
 // src-file: /QtNetwork/qtcpserver.h
 // dst-file: /src/network/qtcpserver.rs
 //
@@ -76,7 +76,6 @@ extern {
   fn _ZNK10QTcpServer13serverAddressEv(qthis: u64 /* *mut c_void*/) -> *mut c_void;
   // proto:  quint16 QTcpServer::serverPort();
   fn _ZNK10QTcpServer10serverPortEv(qthis: u64 /* *mut c_void*/) -> c_ushort;
-  fn QTcpServer_SlotProxy_connect__ZN10QTcpServer11acceptErrorEN15QAbstractSocket11SocketErrorE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QTcpServer_SlotProxy_connect__ZN10QTcpServer13newConnectionEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
 
@@ -625,48 +624,12 @@ pub trait QTcpServer_newConnection_signal_connect {
   fn connect(self, sigthis: QTcpServer_newConnection_signal);
 }
 
-// acceptError(class QAbstractSocket::SocketError)
-extern fn QTcpServer_acceptError_signal_connect_cb_0(rsfptr:fn(i32), arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-  let rsarg0 = arg0 as i32;
-  rsfptr(rsarg0);
-}
-extern fn QTcpServer_acceptError_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  let rsarg0 = arg0 as i32;
-  // rsfptr(rsarg0);
-  unsafe{(*rsfptr_raw)(rsarg0)};
-}
-impl /* trait */ QTcpServer_acceptError_signal_connect for fn(i32) {
-  fn connect(self, sigthis: QTcpServer_acceptError_signal) {
-    // do smth...
-    // self as u64; // error for Fn, Ok for fn
-    self as *mut c_void as u64;
-    self as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QTcpServer_acceptError_signal_connect_cb_0 as *mut c_void;
-    let arg2 = self as *mut c_void;
-    unsafe {QTcpServer_SlotProxy_connect__ZN10QTcpServer11acceptErrorEN15QAbstractSocket11SocketErrorE(arg0, arg1, arg2)};
-  }
-}
-impl /* trait */ QTcpServer_acceptError_signal_connect for Box<Fn(i32)> {
-  fn connect(self, sigthis: QTcpServer_acceptError_signal) {
-    // do smth...
-    // Box::into_raw(self) as u64;
-    // Box::into_raw(self) as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QTcpServer_acceptError_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
-    unsafe {QTcpServer_SlotProxy_connect__ZN10QTcpServer11acceptErrorEN15QAbstractSocket11SocketErrorE(arg0, arg1, arg2)};
-  }
-}
 // newConnection()
-extern fn QTcpServer_newConnection_signal_connect_cb_1(rsfptr:fn(), ) {
+extern fn QTcpServer_newConnection_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QTcpServer_newConnection_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn()>, ) {
+extern fn QTcpServer_newConnection_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   // rsfptr();
@@ -679,7 +642,7 @@ impl /* trait */ QTcpServer_newConnection_signal_connect for fn() {
     self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QTcpServer_newConnection_signal_connect_cb_1 as *mut c_void;
+    let arg1 = QTcpServer_newConnection_signal_connect_cb_0 as *mut c_void;
     let arg2 = self as *mut c_void;
     unsafe {QTcpServer_SlotProxy_connect__ZN10QTcpServer13newConnectionEv(arg0, arg1, arg2)};
   }
@@ -690,7 +653,7 @@ impl /* trait */ QTcpServer_newConnection_signal_connect for Box<Fn()> {
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QTcpServer_newConnection_signal_connect_cb_box_1 as *mut c_void;
+    let arg1 = QTcpServer_newConnection_signal_connect_cb_box_0 as *mut c_void;
     let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QTcpServer_SlotProxy_connect__ZN10QTcpServer13newConnectionEv(arg0, arg1, arg2)};
   }

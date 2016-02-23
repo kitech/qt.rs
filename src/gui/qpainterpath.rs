@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtGui/qpainterpath.h
 // dst-file: /src/gui/qpainterpath.rs
 //
@@ -258,11 +258,11 @@ pub trait QPainterPath_toFillPolygon<RetType> {
 }
 
   // proto:  QPolygonF QPainterPath::toFillPolygon(const QMatrix & matrix);
-impl<'a> /*trait*/ QPainterPath_toFillPolygon<QPolygonF> for (&'a QMatrix) {
+impl<'a> /*trait*/ QPainterPath_toFillPolygon<QPolygonF> for (Option<&'a QMatrix>) {
   fn toFillPolygon(self , rsthis: & QPainterPath) -> QPolygonF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath13toFillPolygonERK7QMatrix()};
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {QMatrix::new(()).qclsinst} else {self.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZNK12QPainterPath13toFillPolygonERK7QMatrix(rsthis.qclsinst, arg0)};
     let mut ret1 = QPolygonF::inheritFrom(ret as u64);
     return ret1;
@@ -379,11 +379,11 @@ pub trait QPainterPath_toFillPolygons<RetType> {
 }
 
   // proto:  QList<QPolygonF> QPainterPath::toFillPolygons(const QMatrix & matrix);
-impl<'a> /*trait*/ QPainterPath_toFillPolygons<u64> for (&'a QMatrix) {
+impl<'a> /*trait*/ QPainterPath_toFillPolygons<u64> for (Option<&'a QMatrix>) {
   fn toFillPolygons(self , rsthis: & QPainterPath) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath14toFillPolygonsERK7QMatrix()};
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {QMatrix::new(()).qclsinst} else {self.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZNK12QPainterPath14toFillPolygonsERK7QMatrix(rsthis.qclsinst, arg0)};
     return ret as u64; // 5
     // return 1;
@@ -1434,11 +1434,11 @@ impl<'a> /*trait*/ QPainterPath_arcMoveTo<()> for (&'a QRectF, f64) {
 }
 
   // proto:  QList<QPolygonF> QPainterPath::toSubpathPolygons(const QMatrix & matrix);
-impl<'a> /*trait*/ QPainterPath_toSubpathPolygons<u64> for (&'a QMatrix) {
+impl<'a> /*trait*/ QPainterPath_toSubpathPolygons<u64> for (Option<&'a QMatrix>) {
   fn toSubpathPolygons(self , rsthis: & QPainterPath) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath17toSubpathPolygonsERK7QMatrix()};
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {QMatrix::new(()).qclsinst} else {self.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZNK12QPainterPath17toSubpathPolygonsERK7QMatrix(rsthis.qclsinst, arg0)};
     return ret as u64; // 5
     // return 1;

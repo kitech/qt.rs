@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qsystemsemaphore.h
 // dst-file: /src/core/qsystemsemaphore.rs
 //
@@ -92,11 +92,11 @@ pub trait QSystemSemaphore_release<RetType> {
 }
 
   // proto:  bool QSystemSemaphore::release(int n);
-impl<'a> /*trait*/ QSystemSemaphore_release<i8> for (i32) {
+impl<'a> /*trait*/ QSystemSemaphore_release<i8> for (Option<i32>) {
   fn release(self , rsthis: & QSystemSemaphore) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QSystemSemaphore7releaseEi()};
-    let arg0 = self  as c_int;
+    let arg0 = (if self.is_none() {1} else {self.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN16QSystemSemaphore7releaseEi(rsthis.qclsinst, arg0)};
     return ret as i8; // 1
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qfilesystemmodel.h
 // dst-file: /src/widgets/qfilesystemmodel.rs
 //
@@ -190,11 +190,11 @@ pub trait QFileSystemModel_hasChildren<RetType> {
 }
 
   // proto:  bool QFileSystemModel::hasChildren(const QModelIndex & parent);
-impl<'a> /*trait*/ QFileSystemModel_hasChildren<i8> for (&'a QModelIndex) {
+impl<'a> /*trait*/ QFileSystemModel_hasChildren<i8> for (Option<&'a QModelIndex>) {
   fn hasChildren(self , rsthis: & QFileSystemModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel11hasChildrenERK11QModelIndex()};
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {QModelIndex::new(()).qclsinst} else {self.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZNK16QFileSystemModel11hasChildrenERK11QModelIndex(rsthis.qclsinst, arg0)};
     return ret as i8; // 1
     // return 1;
@@ -260,12 +260,12 @@ pub trait QFileSystemModel_index<RetType> {
 }
 
   // proto:  QModelIndex QFileSystemModel::index(const QString & path, int column);
-impl<'a> /*trait*/ QFileSystemModel_index<QModelIndex> for (&'a QString, i32) {
+impl<'a> /*trait*/ QFileSystemModel_index<QModelIndex> for (&'a QString, Option<i32>) {
   fn index(self , rsthis: & QFileSystemModel) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel5indexERK7QStringi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK16QFileSystemModel5indexERK7QStringi(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QModelIndex::inheritFrom(ret as u64);
     return ret1;
@@ -548,12 +548,12 @@ pub trait QFileSystemModel_data<RetType> {
 }
 
   // proto:  QVariant QFileSystemModel::data(const QModelIndex & index, int role);
-impl<'a> /*trait*/ QFileSystemModel_data<QVariant> for (&'a QModelIndex, i32) {
+impl<'a> /*trait*/ QFileSystemModel_data<QVariant> for (&'a QModelIndex, Option<i32>) {
   fn data(self , rsthis: & QFileSystemModel) -> QVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel4dataERK11QModelIndexi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {0 as i32} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK16QFileSystemModel4dataERK11QModelIndexi(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QVariant::inheritFrom(ret as u64);
     return ret1;
@@ -624,11 +624,11 @@ pub trait QFileSystemModel_rowCount<RetType> {
 }
 
   // proto:  int QFileSystemModel::rowCount(const QModelIndex & parent);
-impl<'a> /*trait*/ QFileSystemModel_rowCount<i32> for (&'a QModelIndex) {
+impl<'a> /*trait*/ QFileSystemModel_rowCount<i32> for (Option<&'a QModelIndex>) {
   fn rowCount(self , rsthis: & QFileSystemModel) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel8rowCountERK11QModelIndex()};
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {QModelIndex::new(()).qclsinst} else {self.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZNK16QFileSystemModel8rowCountERK11QModelIndex(rsthis.qclsinst, arg0)};
     return ret as i32; // 1
     // return 1;
@@ -648,13 +648,13 @@ pub trait QFileSystemModel_setData<RetType> {
 }
 
   // proto:  bool QFileSystemModel::setData(const QModelIndex & index, const QVariant & value, int role);
-impl<'a> /*trait*/ QFileSystemModel_setData<i8> for (&'a QModelIndex, &'a QVariant, i32) {
+impl<'a> /*trait*/ QFileSystemModel_setData<i8> for (&'a QModelIndex, &'a QVariant, Option<i32>) {
   fn setData(self , rsthis: & QFileSystemModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QFileSystemModel7setDataERK11QModelIndexRK8QVarianti()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2  as c_int;
+    let arg2 = (if self.2.is_none() {0 as i32} else {self.2.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN16QFileSystemModel7setDataERK11QModelIndexRK8QVarianti(rsthis.qclsinst, arg0, arg1, arg2)};
     return ret as i8; // 1
     // return 1;
@@ -674,11 +674,11 @@ pub trait QFileSystemModel_columnCount<RetType> {
 }
 
   // proto:  int QFileSystemModel::columnCount(const QModelIndex & parent);
-impl<'a> /*trait*/ QFileSystemModel_columnCount<i32> for (&'a QModelIndex) {
+impl<'a> /*trait*/ QFileSystemModel_columnCount<i32> for (Option<&'a QModelIndex>) {
   fn columnCount(self , rsthis: & QFileSystemModel) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel11columnCountERK11QModelIndex()};
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {QModelIndex::new(()).qclsinst} else {self.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZNK16QFileSystemModel11columnCountERK11QModelIndex(rsthis.qclsinst, arg0)};
     return ret as i32; // 1
     // return 1;
@@ -686,13 +686,13 @@ impl<'a> /*trait*/ QFileSystemModel_columnCount<i32> for (&'a QModelIndex) {
 }
 
   // proto:  QModelIndex QFileSystemModel::index(int row, int column, const QModelIndex & parent);
-impl<'a> /*trait*/ QFileSystemModel_index<QModelIndex> for (i32, i32, &'a QModelIndex) {
+impl<'a> /*trait*/ QFileSystemModel_index<QModelIndex> for (i32, i32, Option<&'a QModelIndex>) {
   fn index(self , rsthis: & QFileSystemModel) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel5indexEiiRK11QModelIndex()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-    let arg2 = self.2.qclsinst  as *mut c_void;
+    let arg2 = (if self.2.is_none() {QModelIndex::new(()).qclsinst} else {self.2.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZNK16QFileSystemModel5indexEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
     let mut ret1 = QModelIndex::inheritFrom(ret as u64);
     return ret1;
@@ -857,13 +857,13 @@ pub trait QFileSystemModel_new {
 }
 
   // proto:  void QFileSystemModel::QFileSystemModel(QObject * parent);
-impl<'a> /*trait*/ QFileSystemModel_new for (&'a QObject) {
+impl<'a> /*trait*/ QFileSystemModel_new for (Option<&'a QObject>) {
   fn new(self) -> QFileSystemModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QFileSystemModelC2EP7QObject()};
     let ctysz: c_int = unsafe{QFileSystemModel_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN16QFileSystemModelC2EP7QObject(arg0)};
     let rsthis = QFileSystemModel{qbase: QAbstractItemModel::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -909,11 +909,11 @@ pub trait QFileSystemModel_myComputer<RetType> {
 }
 
   // proto:  QVariant QFileSystemModel::myComputer(int role);
-impl<'a> /*trait*/ QFileSystemModel_myComputer<QVariant> for (i32) {
+impl<'a> /*trait*/ QFileSystemModel_myComputer<QVariant> for (Option<i32>) {
   fn myComputer(self , rsthis: & QFileSystemModel) -> QVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel10myComputerEi()};
-    let arg0 = self  as c_int;
+    let arg0 = (if self.is_none() {0 as i32} else {self.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK16QFileSystemModel10myComputerEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QVariant::inheritFrom(ret as u64);
     return ret1;

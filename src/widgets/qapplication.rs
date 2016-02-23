@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qapplication.h
 // dst-file: /src/widgets/qapplication.rs
 //
@@ -692,12 +692,12 @@ pub trait QApplication_setFont_s<RetType> {
 }
 
   // proto: static void QApplication::setFont(const QFont & , const char * className);
-impl<'a> /*trait*/ QApplication_setFont_s<()> for (&'a QFont, &'a  String) {
+impl<'a> /*trait*/ QApplication_setFont_s<()> for (&'a QFont, Option<&'a  String>) {
   fn setFont_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication7setFontERK5QFontPKc()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.as_ptr()  as *mut c_char;
+    let arg1 = (if self.1.is_none() {0 as *const u8} else {self.1.unwrap().as_ptr()})  as *mut c_char;
      unsafe {C_ZN12QApplication7setFontERK5QFontPKc(arg0, arg1)};
     // return 1;
   }
@@ -775,12 +775,12 @@ pub trait QApplication_alert_s<RetType> {
 }
 
   // proto: static void QApplication::alert(QWidget * widget, int duration);
-impl<'a> /*trait*/ QApplication_alert_s<()> for (&'a QWidget, i32) {
+impl<'a> /*trait*/ QApplication_alert_s<()> for (&'a QWidget, Option<i32>) {
   fn alert_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication5alertEP7QWidgeti()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_int;
      unsafe {C_ZN12QApplication5alertEP7QWidgeti(arg0, arg1)};
     // return 1;
   }
@@ -906,7 +906,7 @@ pub trait QApplication_new {
 }
 
   // proto:  void QApplication::QApplication(int & argc, char ** argv, int );
-impl<'a> /*trait*/ QApplication_new for (&'a mut i32, &'a mut String, i32) {
+impl<'a> /*trait*/ QApplication_new for (&'a mut i32, &'a mut String, Option<i32>) {
   fn new(self) -> QApplication {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplicationC2ERiPPci()};
@@ -914,7 +914,7 @@ impl<'a> /*trait*/ QApplication_new for (&'a mut i32, &'a mut String, i32) {
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as *mut c_int;
     let arg1 = self.1.as_ptr()  as *mut c_char;
-    let arg2 = self.2  as c_int;
+    let arg2 = (if self.2.is_none() {0 as i32} else {self.2.unwrap()})  as c_int;
     let qthis: u64 = unsafe {C_ZN12QApplicationC2ERiPPci(arg0, arg1, arg2)};
     let rsthis = QApplication{qbase: QGuiApplication::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -1145,12 +1145,12 @@ pub trait QApplication_setPalette_s<RetType> {
 }
 
   // proto: static void QApplication::setPalette(const QPalette & , const char * className);
-impl<'a> /*trait*/ QApplication_setPalette_s<()> for (&'a QPalette, &'a  String) {
+impl<'a> /*trait*/ QApplication_setPalette_s<()> for (&'a QPalette, Option<&'a  String>) {
   fn setPalette_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication10setPaletteERK8QPalettePKc()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.as_ptr()  as *mut c_char;
+    let arg1 = (if self.1.is_none() {0 as *const u8} else {self.1.unwrap().as_ptr()})  as *mut c_char;
      unsafe {C_ZN12QApplication10setPaletteERK8QPalettePKc(arg0, arg1)};
     // return 1;
   }

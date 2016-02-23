@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qlibrary.h
 // dst-file: /src/core/qlibrary.rs
 //
@@ -138,7 +138,7 @@ pub trait QLibrary_new {
 }
 
   // proto:  void QLibrary::QLibrary(const QString & fileName, const QString & version, QObject * parent);
-impl<'a> /*trait*/ QLibrary_new for (&'a QString, &'a QString, &'a QObject) {
+impl<'a> /*trait*/ QLibrary_new for (&'a QString, &'a QString, Option<&'a QObject>) {
   fn new(self) -> QLibrary {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QLibraryC2ERK7QStringS2_P7QObject()};
@@ -146,7 +146,7 @@ impl<'a> /*trait*/ QLibrary_new for (&'a QString, &'a QString, &'a QObject) {
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2.qclsinst  as *mut c_void;
+    let arg2 = (if self.2.is_none() {0} else {self.2.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN8QLibraryC2ERK7QStringS2_P7QObject(arg0, arg1, arg2)};
     let rsthis = QLibrary{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -192,13 +192,13 @@ impl<'a> /*trait*/ QLibrary_resolve_s<u64> for (&'a QString, &'a  String) {
 }
 
   // proto:  void QLibrary::QLibrary(QObject * parent);
-impl<'a> /*trait*/ QLibrary_new for (&'a QObject) {
+impl<'a> /*trait*/ QLibrary_new for (Option<&'a QObject>) {
   fn new(self) -> QLibrary {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QLibraryC2EP7QObject()};
     let ctysz: c_int = unsafe{QLibrary_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN8QLibraryC2EP7QObject(arg0)};
     let rsthis = QLibrary{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -253,14 +253,14 @@ impl<'a> /*trait*/ QLibrary_load<i8> for () {
 }
 
   // proto:  void QLibrary::QLibrary(const QString & fileName, QObject * parent);
-impl<'a> /*trait*/ QLibrary_new for (&'a QString, &'a QObject) {
+impl<'a> /*trait*/ QLibrary_new for (&'a QString, Option<&'a QObject>) {
   fn new(self) -> QLibrary {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QLibraryC2ERK7QStringP7QObject()};
     let ctysz: c_int = unsafe{QLibrary_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN8QLibraryC2ERK7QStringP7QObject(arg0, arg1)};
     let rsthis = QLibrary{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -423,7 +423,7 @@ impl<'a> /*trait*/ QLibrary_setFileNameAndVersion<()> for (&'a QString, i32) {
 }
 
   // proto:  void QLibrary::QLibrary(const QString & fileName, int verNum, QObject * parent);
-impl<'a> /*trait*/ QLibrary_new for (&'a QString, i32, &'a QObject) {
+impl<'a> /*trait*/ QLibrary_new for (&'a QString, i32, Option<&'a QObject>) {
   fn new(self) -> QLibrary {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QLibraryC2ERK7QStringiP7QObject()};
@@ -431,7 +431,7 @@ impl<'a> /*trait*/ QLibrary_new for (&'a QString, i32, &'a QObject) {
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
-    let arg2 = self.2.qclsinst  as *mut c_void;
+    let arg2 = (if self.2.is_none() {0} else {self.2.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN8QLibraryC2ERK7QStringiP7QObject(arg0, arg1, arg2)};
     let rsthis = QLibrary{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;

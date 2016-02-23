@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qcommandlineparser.h
 // dst-file: /src/core/qcommandlineparser.rs
 //
@@ -254,11 +254,11 @@ pub trait QCommandLineParser_showHelp<RetType> {
 }
 
   // proto:  void QCommandLineParser::showHelp(int exitCode);
-impl<'a> /*trait*/ QCommandLineParser_showHelp<()> for (i32) {
+impl<'a> /*trait*/ QCommandLineParser_showHelp<()> for (Option<i32>) {
   fn showHelp(self , rsthis: & QCommandLineParser) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLineParser8showHelpEi()};
-    let arg0 = self  as c_int;
+    let arg0 = (if self.is_none() {0} else {self.unwrap()})  as c_int;
      unsafe {C_ZN18QCommandLineParser8showHelpEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
@@ -383,13 +383,13 @@ pub trait QCommandLineParser_addPositionalArgument<RetType> {
 }
 
   // proto:  void QCommandLineParser::addPositionalArgument(const QString & name, const QString & description, const QString & syntax);
-impl<'a> /*trait*/ QCommandLineParser_addPositionalArgument<()> for (&'a QString, &'a QString, &'a QString) {
+impl<'a> /*trait*/ QCommandLineParser_addPositionalArgument<()> for (&'a QString, &'a QString, Option<&'a QString>) {
   fn addPositionalArgument(self , rsthis: & QCommandLineParser) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLineParser21addPositionalArgumentERK7QStringS2_S2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2.qclsinst  as *mut c_void;
+    let arg2 = (if self.2.is_none() {QString::new(()).qclsinst} else {self.2.unwrap().qclsinst})  as *mut c_void;
      unsafe {C_ZN18QCommandLineParser21addPositionalArgumentERK7QStringS2_S2_(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }

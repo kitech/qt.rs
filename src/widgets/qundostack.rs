@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qundostack.h
 // dst-file: /src/widgets/qundostack.rs
 //
@@ -291,12 +291,12 @@ pub trait QUndoStack_createUndoAction<RetType> {
 }
 
   // proto:  QAction * QUndoStack::createUndoAction(QObject * parent, const QString & prefix);
-impl<'a> /*trait*/ QUndoStack_createUndoAction<QAction> for (&'a QObject, &'a QString) {
+impl<'a> /*trait*/ QUndoStack_createUndoAction<QAction> for (&'a QObject, Option<&'a QString>) {
   fn createUndoAction(self , rsthis: & QUndoStack) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QUndoStack16createUndoActionEP7QObjectRK7QString()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {QString::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZNK10QUndoStack16createUndoActionEP7QObjectRK7QString(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
@@ -340,12 +340,12 @@ pub trait QUndoStack_createRedoAction<RetType> {
 }
 
   // proto:  QAction * QUndoStack::createRedoAction(QObject * parent, const QString & prefix);
-impl<'a> /*trait*/ QUndoStack_createRedoAction<QAction> for (&'a QObject, &'a QString) {
+impl<'a> /*trait*/ QUndoStack_createRedoAction<QAction> for (&'a QObject, Option<&'a QString>) {
   fn createRedoAction(self , rsthis: & QUndoStack) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QUndoStack16createRedoActionEP7QObjectRK7QString()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {QString::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZNK10QUndoStack16createRedoActionEP7QObjectRK7QString(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
@@ -502,13 +502,13 @@ pub trait QUndoStack_new {
 }
 
   // proto:  void QUndoStack::QUndoStack(QObject * parent);
-impl<'a> /*trait*/ QUndoStack_new for (&'a QObject) {
+impl<'a> /*trait*/ QUndoStack_new for (Option<&'a QObject>) {
   fn new(self) -> QUndoStack {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QUndoStackC2EP7QObject()};
     let ctysz: c_int = unsafe{QUndoStack_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN10QUndoStackC2EP7QObject(arg0)};
     let rsthis = QUndoStack{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -597,11 +597,11 @@ pub trait QUndoStack_setActive<RetType> {
 }
 
   // proto:  void QUndoStack::setActive(bool active);
-impl<'a> /*trait*/ QUndoStack_setActive<()> for (i8) {
+impl<'a> /*trait*/ QUndoStack_setActive<()> for (Option<i8>) {
   fn setActive(self , rsthis: & QUndoStack) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QUndoStack9setActiveEb()};
-    let arg0 = self  as c_char;
+    let arg0 = (if self.is_none() {true as i8} else {self.unwrap()})  as c_char;
      unsafe {C_ZN10QUndoStack9setActiveEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
@@ -856,13 +856,13 @@ pub trait QUndoCommand_new {
 }
 
   // proto:  void QUndoCommand::QUndoCommand(QUndoCommand * parent);
-impl<'a> /*trait*/ QUndoCommand_new for (&'a QUndoCommand) {
+impl<'a> /*trait*/ QUndoCommand_new for (Option<&'a QUndoCommand>) {
   fn new(self) -> QUndoCommand {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QUndoCommandC2EPS_()};
     let ctysz: c_int = unsafe{QUndoCommand_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN12QUndoCommandC2EPS_(arg0)};
     let rsthis = QUndoCommand{qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -893,14 +893,14 @@ impl<'a> /*trait*/ QUndoCommand_undo<()> for () {
 }
 
   // proto:  void QUndoCommand::QUndoCommand(const QString & text, QUndoCommand * parent);
-impl<'a> /*trait*/ QUndoCommand_new for (&'a QString, &'a QUndoCommand) {
+impl<'a> /*trait*/ QUndoCommand_new for (&'a QString, Option<&'a QUndoCommand>) {
   fn new(self) -> QUndoCommand {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QUndoCommandC2ERK7QStringPS_()};
     let ctysz: c_int = unsafe{QUndoCommand_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN12QUndoCommandC2ERK7QStringPS_(arg0, arg1)};
     let rsthis = QUndoCommand{qclsinst: qthis, ..Default::default()};
     return rsthis;

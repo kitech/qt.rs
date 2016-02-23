@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qstyle.h
 // dst-file: /src/widgets/qstyle.rs
 //
@@ -383,7 +383,7 @@ pub trait QStyle_sliderPositionFromValue_s<RetType> {
 }
 
   // proto: static int QStyle::sliderPositionFromValue(int min, int max, int val, int space, bool upsideDown);
-impl<'a> /*trait*/ QStyle_sliderPositionFromValue_s<i32> for (i32, i32, i32, i32, i8) {
+impl<'a> /*trait*/ QStyle_sliderPositionFromValue_s<i32> for (i32, i32, i32, i32, Option<i8>) {
   fn sliderPositionFromValue_s(self ) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QStyle23sliderPositionFromValueEiiiib()};
@@ -391,7 +391,7 @@ impl<'a> /*trait*/ QStyle_sliderPositionFromValue_s<i32> for (i32, i32, i32, i32
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as c_int;
     let arg3 = self.3  as c_int;
-    let arg4 = self.4  as c_char;
+    let arg4 = (if self.4.is_none() {false as i8} else {self.4.unwrap()})  as c_char;
     let mut ret = unsafe {C_ZN6QStyle23sliderPositionFromValueEiiiib(arg0, arg1, arg2, arg3, arg4)};
     return ret as i32; // 1
     // return 1;
@@ -411,7 +411,7 @@ pub trait QStyle_sliderValueFromPosition_s<RetType> {
 }
 
   // proto: static int QStyle::sliderValueFromPosition(int min, int max, int pos, int space, bool upsideDown);
-impl<'a> /*trait*/ QStyle_sliderValueFromPosition_s<i32> for (i32, i32, i32, i32, i8) {
+impl<'a> /*trait*/ QStyle_sliderValueFromPosition_s<i32> for (i32, i32, i32, i32, Option<i8>) {
   fn sliderValueFromPosition_s(self ) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QStyle23sliderValueFromPositionEiiiib()};
@@ -419,7 +419,7 @@ impl<'a> /*trait*/ QStyle_sliderValueFromPosition_s<i32> for (i32, i32, i32, i32
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as c_int;
     let arg3 = self.3  as c_int;
-    let arg4 = self.4  as c_char;
+    let arg4 = (if self.4.is_none() {false as i8} else {self.4.unwrap()})  as c_char;
     let mut ret = unsafe {C_ZN6QStyle23sliderValueFromPositionEiiiib(arg0, arg1, arg2, arg3, arg4)};
     return ret as i32; // 1
     // return 1;

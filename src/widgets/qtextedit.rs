@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qtextedit.h
 // dst-file: /src/widgets/qtextedit.rs
 //
@@ -713,11 +713,11 @@ pub trait QTextEdit_zoomOut<RetType> {
 }
 
   // proto:  void QTextEdit::zoomOut(int range);
-impl<'a> /*trait*/ QTextEdit_zoomOut<()> for (i32) {
+impl<'a> /*trait*/ QTextEdit_zoomOut<()> for (Option<i32>) {
   fn zoomOut(self , rsthis: & QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit7zoomOutEi()};
-    let arg0 = self  as c_int;
+    let arg0 = (if self.is_none() {1} else {self.unwrap()})  as c_int;
      unsafe {C_ZN9QTextEdit7zoomOutEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
@@ -1056,11 +1056,11 @@ pub trait QTextEdit_zoomIn<RetType> {
 }
 
   // proto:  void QTextEdit::zoomIn(int range);
-impl<'a> /*trait*/ QTextEdit_zoomIn<()> for (i32) {
+impl<'a> /*trait*/ QTextEdit_zoomIn<()> for (Option<i32>) {
   fn zoomIn(self , rsthis: & QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit6zoomInEi()};
-    let arg0 = self  as c_int;
+    let arg0 = (if self.is_none() {1} else {self.unwrap()})  as c_int;
      unsafe {C_ZN9QTextEdit6zoomInEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
@@ -1759,14 +1759,14 @@ pub trait QTextEdit_new {
 }
 
   // proto:  void QTextEdit::QTextEdit(const QString & text, QWidget * parent);
-impl<'a> /*trait*/ QTextEdit_new for (&'a QString, &'a QWidget) {
+impl<'a> /*trait*/ QTextEdit_new for (&'a QString, Option<&'a QWidget>) {
   fn new(self) -> QTextEdit {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEditC2ERK7QStringP7QWidget()};
     let ctysz: c_int = unsafe{QTextEdit_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN9QTextEditC2ERK7QStringP7QWidget(arg0, arg1)};
     let rsthis = QTextEdit{qbase: QAbstractScrollArea::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -1914,13 +1914,13 @@ impl<'a> /*trait*/ QTextEdit_append<()> for (&'a QString) {
 }
 
   // proto:  void QTextEdit::QTextEdit(QWidget * parent);
-impl<'a> /*trait*/ QTextEdit_new for (&'a QWidget) {
+impl<'a> /*trait*/ QTextEdit_new for (Option<&'a QWidget>) {
   fn new(self) -> QTextEdit {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEditC2EP7QWidget()};
     let ctysz: c_int = unsafe{QTextEdit_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN9QTextEditC2EP7QWidget(arg0)};
     let rsthis = QTextEdit{qbase: QAbstractScrollArea::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;

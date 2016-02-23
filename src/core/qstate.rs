@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qstate.h
 // dst-file: /src/core/qstate.rs
 //
@@ -203,13 +203,13 @@ pub trait QState_new {
 }
 
   // proto:  void QState::QState(QState * parent);
-impl<'a> /*trait*/ QState_new for (&'a QState) {
+impl<'a> /*trait*/ QState_new for (Option<&'a QState>) {
   fn new(self) -> QState {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QStateC2EPS_()};
     let ctysz: c_int = unsafe{QState_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN6QStateC2EPS_(arg0)};
     let rsthis = QState{qbase: QAbstractState::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;

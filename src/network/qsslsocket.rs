@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Jan 19 21:53:37 2016
+// created: Wed Jan 20 00:44:03 2016
 // src-file: /QtNetwork/qsslsocket.h
 // dst-file: /src/network/qsslsocket.rs
 //
@@ -149,7 +149,6 @@ extern {
   // proto:  QList<QSslError> QSslSocket::sslErrors();
   fn _ZNK10QSslSocket9sslErrorsEv(qthis: u64 /* *mut c_void*/);
   fn QSslSocket_SlotProxy_connect__ZN10QSslSocket15peerVerifyErrorERK9QSslError(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QSslSocket_SlotProxy_connect__ZN10QSslSocket11modeChangedENS_7SslModeE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QSslSocket_SlotProxy_connect__ZN10QSslSocket9encryptedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QSslSocket_SlotProxy_connect__ZN10QSslSocket34preSharedKeyAuthenticationRequiredEP29QSslPreSharedKeyAuthenticator(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QSslSocket_SlotProxy_connect__ZN10QSslSocket21encryptedBytesWrittenEx(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
@@ -1554,48 +1553,12 @@ impl /* trait */ QSslSocket_peerVerifyError_signal_connect for Box<Fn(QSslError)
     unsafe {QSslSocket_SlotProxy_connect__ZN10QSslSocket15peerVerifyErrorERK9QSslError(arg0, arg1, arg2)};
   }
 }
-// modeChanged(class QSslSocket::SslMode)
-extern fn QSslSocket_modeChanged_signal_connect_cb_1(rsfptr:fn(i32), arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-  let rsarg0 = arg0 as i32;
-  rsfptr(rsarg0);
-}
-extern fn QSslSocket_modeChanged_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  let rsarg0 = arg0 as i32;
-  // rsfptr(rsarg0);
-  unsafe{(*rsfptr_raw)(rsarg0)};
-}
-impl /* trait */ QSslSocket_modeChanged_signal_connect for fn(i32) {
-  fn connect(self, sigthis: QSslSocket_modeChanged_signal) {
-    // do smth...
-    // self as u64; // error for Fn, Ok for fn
-    self as *mut c_void as u64;
-    self as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QSslSocket_modeChanged_signal_connect_cb_1 as *mut c_void;
-    let arg2 = self as *mut c_void;
-    unsafe {QSslSocket_SlotProxy_connect__ZN10QSslSocket11modeChangedENS_7SslModeE(arg0, arg1, arg2)};
-  }
-}
-impl /* trait */ QSslSocket_modeChanged_signal_connect for Box<Fn(i32)> {
-  fn connect(self, sigthis: QSslSocket_modeChanged_signal) {
-    // do smth...
-    // Box::into_raw(self) as u64;
-    // Box::into_raw(self) as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QSslSocket_modeChanged_signal_connect_cb_box_1 as *mut c_void;
-    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
-    unsafe {QSslSocket_SlotProxy_connect__ZN10QSslSocket11modeChangedENS_7SslModeE(arg0, arg1, arg2)};
-  }
-}
 // encrypted()
-extern fn QSslSocket_encrypted_signal_connect_cb_2(rsfptr:fn(), ) {
+extern fn QSslSocket_encrypted_signal_connect_cb_1(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QSslSocket_encrypted_signal_connect_cb_box_2(rsfptr_raw:*mut Box<Fn()>, ) {
+extern fn QSslSocket_encrypted_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   // rsfptr();
@@ -1608,7 +1571,7 @@ impl /* trait */ QSslSocket_encrypted_signal_connect for fn() {
     self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QSslSocket_encrypted_signal_connect_cb_2 as *mut c_void;
+    let arg1 = QSslSocket_encrypted_signal_connect_cb_1 as *mut c_void;
     let arg2 = self as *mut c_void;
     unsafe {QSslSocket_SlotProxy_connect__ZN10QSslSocket9encryptedEv(arg0, arg1, arg2)};
   }
@@ -1619,18 +1582,18 @@ impl /* trait */ QSslSocket_encrypted_signal_connect for Box<Fn()> {
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QSslSocket_encrypted_signal_connect_cb_box_2 as *mut c_void;
+    let arg1 = QSslSocket_encrypted_signal_connect_cb_box_1 as *mut c_void;
     let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QSslSocket_SlotProxy_connect__ZN10QSslSocket9encryptedEv(arg0, arg1, arg2)};
   }
 }
 // preSharedKeyAuthenticationRequired(class QSslPreSharedKeyAuthenticator *)
-extern fn QSslSocket_preSharedKeyAuthenticationRequired_signal_connect_cb_3(rsfptr:fn(QSslPreSharedKeyAuthenticator), arg0: *mut c_void) {
+extern fn QSslSocket_preSharedKeyAuthenticationRequired_signal_connect_cb_2(rsfptr:fn(QSslPreSharedKeyAuthenticator), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsarg0 = QSslPreSharedKeyAuthenticator::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QSslSocket_preSharedKeyAuthenticationRequired_signal_connect_cb_box_3(rsfptr_raw:*mut Box<Fn(QSslPreSharedKeyAuthenticator)>, arg0: *mut c_void) {
+extern fn QSslSocket_preSharedKeyAuthenticationRequired_signal_connect_cb_box_2(rsfptr_raw:*mut Box<Fn(QSslPreSharedKeyAuthenticator)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QSslPreSharedKeyAuthenticator::inheritFrom(arg0 as u64);
@@ -1644,7 +1607,7 @@ impl /* trait */ QSslSocket_preSharedKeyAuthenticationRequired_signal_connect fo
     self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QSslSocket_preSharedKeyAuthenticationRequired_signal_connect_cb_3 as *mut c_void;
+    let arg1 = QSslSocket_preSharedKeyAuthenticationRequired_signal_connect_cb_2 as *mut c_void;
     let arg2 = self as *mut c_void;
     unsafe {QSslSocket_SlotProxy_connect__ZN10QSslSocket34preSharedKeyAuthenticationRequiredEP29QSslPreSharedKeyAuthenticator(arg0, arg1, arg2)};
   }
@@ -1655,18 +1618,18 @@ impl /* trait */ QSslSocket_preSharedKeyAuthenticationRequired_signal_connect fo
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QSslSocket_preSharedKeyAuthenticationRequired_signal_connect_cb_box_3 as *mut c_void;
+    let arg1 = QSslSocket_preSharedKeyAuthenticationRequired_signal_connect_cb_box_2 as *mut c_void;
     let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QSslSocket_SlotProxy_connect__ZN10QSslSocket34preSharedKeyAuthenticationRequiredEP29QSslPreSharedKeyAuthenticator(arg0, arg1, arg2)};
   }
 }
 // encryptedBytesWritten(qint64)
-extern fn QSslSocket_encryptedBytesWritten_signal_connect_cb_4(rsfptr:fn(i64), arg0: c_longlong) {
+extern fn QSslSocket_encryptedBytesWritten_signal_connect_cb_3(rsfptr:fn(i64), arg0: c_longlong) {
   println!("{}:{}", file!(), line!());
   let rsarg0 = arg0 as i64;
   rsfptr(rsarg0);
 }
-extern fn QSslSocket_encryptedBytesWritten_signal_connect_cb_box_4(rsfptr_raw:*mut Box<Fn(i64)>, arg0: c_longlong) {
+extern fn QSslSocket_encryptedBytesWritten_signal_connect_cb_box_3(rsfptr_raw:*mut Box<Fn(i64)>, arg0: c_longlong) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = arg0 as i64;
@@ -1680,7 +1643,7 @@ impl /* trait */ QSslSocket_encryptedBytesWritten_signal_connect for fn(i64) {
     self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QSslSocket_encryptedBytesWritten_signal_connect_cb_4 as *mut c_void;
+    let arg1 = QSslSocket_encryptedBytesWritten_signal_connect_cb_3 as *mut c_void;
     let arg2 = self as *mut c_void;
     unsafe {QSslSocket_SlotProxy_connect__ZN10QSslSocket21encryptedBytesWrittenEx(arg0, arg1, arg2)};
   }
@@ -1691,7 +1654,7 @@ impl /* trait */ QSslSocket_encryptedBytesWritten_signal_connect for Box<Fn(i64)
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QSslSocket_encryptedBytesWritten_signal_connect_cb_box_4 as *mut c_void;
+    let arg1 = QSslSocket_encryptedBytesWritten_signal_connect_cb_box_3 as *mut c_void;
     let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QSslSocket_SlotProxy_connect__ZN10QSslSocket21encryptedBytesWrittenEx(arg0, arg1, arg2)};
   }

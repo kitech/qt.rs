@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qregularexpression.h
 // dst-file: /src/core/qregularexpression.rs
 //
@@ -747,11 +747,11 @@ pub trait QRegularExpressionMatch_capturedLength<RetType> {
 }
 
   // proto:  int QRegularExpressionMatch::capturedLength(int nth);
-impl<'a> /*trait*/ QRegularExpressionMatch_capturedLength<i32> for (i32) {
+impl<'a> /*trait*/ QRegularExpressionMatch_capturedLength<i32> for (Option<i32>) {
   fn capturedLength(self , rsthis: & QRegularExpressionMatch) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK23QRegularExpressionMatch14capturedLengthEi()};
-    let arg0 = self  as c_int;
+    let arg0 = (if self.is_none() {0} else {self.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK23QRegularExpressionMatch14capturedLengthEi(rsthis.qclsinst, arg0)};
     return ret as i32; // 1
     // return 1;
@@ -783,11 +783,11 @@ pub trait QRegularExpressionMatch_capturedRef<RetType> {
 }
 
   // proto:  QStringRef QRegularExpressionMatch::capturedRef(int nth);
-impl<'a> /*trait*/ QRegularExpressionMatch_capturedRef<QStringRef> for (i32) {
+impl<'a> /*trait*/ QRegularExpressionMatch_capturedRef<QStringRef> for (Option<i32>) {
   fn capturedRef(self , rsthis: & QRegularExpressionMatch) -> QStringRef {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK23QRegularExpressionMatch11capturedRefEi()};
-    let arg0 = self  as c_int;
+    let arg0 = (if self.is_none() {0} else {self.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK23QRegularExpressionMatch11capturedRefEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QStringRef::inheritFrom(ret as u64);
     return ret1;
@@ -929,11 +929,11 @@ impl<'a> /*trait*/ QRegularExpressionMatch_free<()> for () {
 }
 
   // proto:  int QRegularExpressionMatch::capturedEnd(int nth);
-impl<'a> /*trait*/ QRegularExpressionMatch_capturedEnd<i32> for (i32) {
+impl<'a> /*trait*/ QRegularExpressionMatch_capturedEnd<i32> for (Option<i32>) {
   fn capturedEnd(self , rsthis: & QRegularExpressionMatch) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK23QRegularExpressionMatch11capturedEndEi()};
-    let arg0 = self  as c_int;
+    let arg0 = (if self.is_none() {0} else {self.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK23QRegularExpressionMatch11capturedEndEi(rsthis.qclsinst, arg0)};
     return ret as i32; // 1
     // return 1;
@@ -1025,11 +1025,11 @@ impl<'a> /*trait*/ QRegularExpressionMatch_regularExpression<QRegularExpression>
 }
 
   // proto:  QString QRegularExpressionMatch::captured(int nth);
-impl<'a> /*trait*/ QRegularExpressionMatch_captured<QString> for (i32) {
+impl<'a> /*trait*/ QRegularExpressionMatch_captured<QString> for (Option<i32>) {
   fn captured(self , rsthis: & QRegularExpressionMatch) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK23QRegularExpressionMatch8capturedEi()};
-    let arg0 = self  as c_int;
+    let arg0 = (if self.is_none() {0} else {self.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK23QRegularExpressionMatch8capturedEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;
@@ -1038,11 +1038,11 @@ impl<'a> /*trait*/ QRegularExpressionMatch_captured<QString> for (i32) {
 }
 
   // proto:  int QRegularExpressionMatch::capturedStart(int nth);
-impl<'a> /*trait*/ QRegularExpressionMatch_capturedStart<i32> for (i32) {
+impl<'a> /*trait*/ QRegularExpressionMatch_capturedStart<i32> for (Option<i32>) {
   fn capturedStart(self , rsthis: & QRegularExpressionMatch) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK23QRegularExpressionMatch13capturedStartEi()};
-    let arg0 = self  as c_int;
+    let arg0 = (if self.is_none() {0} else {self.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK23QRegularExpressionMatch13capturedStartEi(rsthis.qclsinst, arg0)};
     return ret as i32; // 1
     // return 1;

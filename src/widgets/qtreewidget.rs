@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qtreewidget.h
 // dst-file: /src/widgets/qtreewidget.rs
 //
@@ -1080,12 +1080,12 @@ pub trait QTreeWidget_editItem<RetType> {
 }
 
   // proto:  void QTreeWidget::editItem(QTreeWidgetItem * item, int column);
-impl<'a> /*trait*/ QTreeWidget_editItem<()> for (&'a QTreeWidgetItem, i32) {
+impl<'a> /*trait*/ QTreeWidget_editItem<()> for (&'a QTreeWidgetItem, Option<i32>) {
   fn editItem(self , rsthis: & QTreeWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTreeWidget8editItemEP15QTreeWidgetItemi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_int;
      unsafe {C_ZN11QTreeWidget8editItemEP15QTreeWidgetItemi(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
@@ -1151,12 +1151,12 @@ pub trait QTreeWidget_closePersistentEditor<RetType> {
 }
 
   // proto:  void QTreeWidget::closePersistentEditor(QTreeWidgetItem * item, int column);
-impl<'a> /*trait*/ QTreeWidget_closePersistentEditor<()> for (&'a QTreeWidgetItem, i32) {
+impl<'a> /*trait*/ QTreeWidget_closePersistentEditor<()> for (&'a QTreeWidgetItem, Option<i32>) {
   fn closePersistentEditor(self , rsthis: & QTreeWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTreeWidget21closePersistentEditorEP15QTreeWidgetItemi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_int;
      unsafe {C_ZN11QTreeWidget21closePersistentEditorEP15QTreeWidgetItemi(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
@@ -1176,13 +1176,13 @@ pub trait QTreeWidget_new {
 }
 
   // proto:  void QTreeWidget::QTreeWidget(QWidget * parent);
-impl<'a> /*trait*/ QTreeWidget_new for (&'a QWidget) {
+impl<'a> /*trait*/ QTreeWidget_new for (Option<&'a QWidget>) {
   fn new(self) -> QTreeWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTreeWidgetC2EP7QWidget()};
     let ctysz: c_int = unsafe{QTreeWidget_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN11QTreeWidgetC2EP7QWidget(arg0)};
     let rsthis = QTreeWidget{qbase: QTreeView::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -1298,12 +1298,12 @@ pub trait QTreeWidget_openPersistentEditor<RetType> {
 }
 
   // proto:  void QTreeWidget::openPersistentEditor(QTreeWidgetItem * item, int column);
-impl<'a> /*trait*/ QTreeWidget_openPersistentEditor<()> for (&'a QTreeWidgetItem, i32) {
+impl<'a> /*trait*/ QTreeWidget_openPersistentEditor<()> for (&'a QTreeWidgetItem, Option<i32>) {
   fn openPersistentEditor(self , rsthis: & QTreeWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTreeWidget20openPersistentEditorEP15QTreeWidgetItemi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_int;
      unsafe {C_ZN11QTreeWidget20openPersistentEditorEP15QTreeWidgetItemi(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
@@ -1673,14 +1673,14 @@ pub trait QTreeWidgetItem_new {
 }
 
   // proto:  void QTreeWidgetItem::QTreeWidgetItem(QTreeWidgetItem * parent, int type);
-impl<'a> /*trait*/ QTreeWidgetItem_new for (&'a QTreeWidgetItem, i32) {
+impl<'a> /*trait*/ QTreeWidgetItem_new for (&'a QTreeWidgetItem, Option<i32>) {
   fn new(self) -> QTreeWidgetItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTreeWidgetItemC2EPS_i()};
     let ctysz: c_int = unsafe{QTreeWidgetItem_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {0 as i32} else {self.1.unwrap()})  as c_int;
     let qthis: u64 = unsafe {C_ZN15QTreeWidgetItemC2EPS_i(arg0, arg1)};
     let rsthis = QTreeWidgetItem{qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -1713,7 +1713,7 @@ impl<'a> /*trait*/ QTreeWidgetItem_setIcon<()> for (i32, &'a QIcon) {
 }
 
   // proto:  void QTreeWidgetItem::QTreeWidgetItem(QTreeWidgetItem * parent, QTreeWidgetItem * after, int type);
-impl<'a> /*trait*/ QTreeWidgetItem_new for (&'a QTreeWidgetItem, &'a QTreeWidgetItem, i32) {
+impl<'a> /*trait*/ QTreeWidgetItem_new for (&'a QTreeWidgetItem, &'a QTreeWidgetItem, Option<i32>) {
   fn new(self) -> QTreeWidgetItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTreeWidgetItemC2EPS_S0_i()};
@@ -1721,7 +1721,7 @@ impl<'a> /*trait*/ QTreeWidgetItem_new for (&'a QTreeWidgetItem, &'a QTreeWidget
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2  as c_int;
+    let arg2 = (if self.2.is_none() {0 as i32} else {self.2.unwrap()})  as c_int;
     let qthis: u64 = unsafe {C_ZN15QTreeWidgetItemC2EPS_S0_i(arg0, arg1, arg2)};
     let rsthis = QTreeWidgetItem{qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -1828,7 +1828,7 @@ impl<'a> /*trait*/ QTreeWidgetItem_isHidden<i8> for () {
 }
 
   // proto:  void QTreeWidgetItem::QTreeWidgetItem(QTreeWidget * view, QTreeWidgetItem * after, int type);
-impl<'a> /*trait*/ QTreeWidgetItem_new for (&'a QTreeWidget, &'a QTreeWidgetItem, i32) {
+impl<'a> /*trait*/ QTreeWidgetItem_new for (&'a QTreeWidget, &'a QTreeWidgetItem, Option<i32>) {
   fn new(self) -> QTreeWidgetItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTreeWidgetItemC2EP11QTreeWidgetPS_i()};
@@ -1836,7 +1836,7 @@ impl<'a> /*trait*/ QTreeWidgetItem_new for (&'a QTreeWidget, &'a QTreeWidgetItem
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2  as c_int;
+    let arg2 = (if self.2.is_none() {0 as i32} else {self.2.unwrap()})  as c_int;
     let qthis: u64 = unsafe {C_ZN15QTreeWidgetItemC2EP11QTreeWidgetPS_i(arg0, arg1, arg2)};
     let rsthis = QTreeWidgetItem{qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -2053,13 +2053,13 @@ impl<'a> /*trait*/ QTreeWidgetItem_setWhatsThis<()> for (i32, &'a QString) {
 }
 
   // proto:  void QTreeWidgetItem::QTreeWidgetItem(int type);
-impl<'a> /*trait*/ QTreeWidgetItem_new for (i32) {
+impl<'a> /*trait*/ QTreeWidgetItem_new for (Option<i32>) {
   fn new(self) -> QTreeWidgetItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTreeWidgetItemC2Ei()};
     let ctysz: c_int = unsafe{QTreeWidgetItem_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self  as c_int;
+    let arg0 = (if self.is_none() {0 as i32} else {self.unwrap()})  as c_int;
     let qthis: u64 = unsafe {C_ZN15QTreeWidgetItemC2Ei(arg0)};
     let rsthis = QTreeWidgetItem{qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -2142,7 +2142,7 @@ impl<'a> /*trait*/ QTreeWidgetItem_setToolTip<()> for (i32, &'a QString) {
 }
 
   // proto:  void QTreeWidgetItem::QTreeWidgetItem(QTreeWidget * view, const QStringList & strings, int type);
-impl<'a> /*trait*/ QTreeWidgetItem_new for (&'a QTreeWidget, &'a QStringList, i32) {
+impl<'a> /*trait*/ QTreeWidgetItem_new for (&'a QTreeWidget, &'a QStringList, Option<i32>) {
   fn new(self) -> QTreeWidgetItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTreeWidgetItemC2EP11QTreeWidgetRK11QStringListi()};
@@ -2150,7 +2150,7 @@ impl<'a> /*trait*/ QTreeWidgetItem_new for (&'a QTreeWidget, &'a QStringList, i3
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2  as c_int;
+    let arg2 = (if self.2.is_none() {0 as i32} else {self.2.unwrap()})  as c_int;
     let qthis: u64 = unsafe {C_ZN15QTreeWidgetItemC2EP11QTreeWidgetRK11QStringListi(arg0, arg1, arg2)};
     let rsthis = QTreeWidgetItem{qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -2231,14 +2231,14 @@ impl<'a> /*trait*/ QTreeWidgetItem_child<QTreeWidgetItem> for (i32) {
 }
 
   // proto:  void QTreeWidgetItem::QTreeWidgetItem(const QStringList & strings, int type);
-impl<'a> /*trait*/ QTreeWidgetItem_new for (&'a QStringList, i32) {
+impl<'a> /*trait*/ QTreeWidgetItem_new for (&'a QStringList, Option<i32>) {
   fn new(self) -> QTreeWidgetItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTreeWidgetItemC2ERK11QStringListi()};
     let ctysz: c_int = unsafe{QTreeWidgetItem_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {0 as i32} else {self.1.unwrap()})  as c_int;
     let qthis: u64 = unsafe {C_ZN15QTreeWidgetItemC2ERK11QStringListi(arg0, arg1)};
     let rsthis = QTreeWidgetItem{qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -2363,7 +2363,7 @@ impl<'a> /*trait*/ QTreeWidgetItem_takeChild<QTreeWidgetItem> for (i32) {
 }
 
   // proto:  void QTreeWidgetItem::QTreeWidgetItem(QTreeWidgetItem * parent, const QStringList & strings, int type);
-impl<'a> /*trait*/ QTreeWidgetItem_new for (&'a QTreeWidgetItem, &'a QStringList, i32) {
+impl<'a> /*trait*/ QTreeWidgetItem_new for (&'a QTreeWidgetItem, &'a QStringList, Option<i32>) {
   fn new(self) -> QTreeWidgetItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTreeWidgetItemC2EPS_RK11QStringListi()};
@@ -2371,7 +2371,7 @@ impl<'a> /*trait*/ QTreeWidgetItem_new for (&'a QTreeWidgetItem, &'a QStringList
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2  as c_int;
+    let arg2 = (if self.2.is_none() {0 as i32} else {self.2.unwrap()})  as c_int;
     let qthis: u64 = unsafe {C_ZN15QTreeWidgetItemC2EPS_RK11QStringListi(arg0, arg1, arg2)};
     let rsthis = QTreeWidgetItem{qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -2497,14 +2497,14 @@ impl<'a> /*trait*/ QTreeWidgetItem_clone<QTreeWidgetItem> for () {
 }
 
   // proto:  void QTreeWidgetItem::QTreeWidgetItem(QTreeWidget * view, int type);
-impl<'a> /*trait*/ QTreeWidgetItem_new for (&'a QTreeWidget, i32) {
+impl<'a> /*trait*/ QTreeWidgetItem_new for (&'a QTreeWidget, Option<i32>) {
   fn new(self) -> QTreeWidgetItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTreeWidgetItemC2EP11QTreeWidgeti()};
     let ctysz: c_int = unsafe{QTreeWidgetItem_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {0 as i32} else {self.1.unwrap()})  as c_int;
     let qthis: u64 = unsafe {C_ZN15QTreeWidgetItemC2EP11QTreeWidgeti(arg0, arg1)};
     let rsthis = QTreeWidgetItem{qclsinst: qthis, ..Default::default()};
     return rsthis;

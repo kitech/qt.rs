@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtGui/qmatrix4x4.h
 // dst-file: /src/gui/qmatrix4x4.rs
 //
@@ -285,11 +285,11 @@ pub trait QMatrix4x4_inverted<RetType> {
 }
 
   // proto:  QMatrix4x4 QMatrix4x4::inverted(bool * invertible);
-impl<'a> /*trait*/ QMatrix4x4_inverted<QMatrix4x4> for (&'a mut Vec<i8>) {
+impl<'a> /*trait*/ QMatrix4x4_inverted<QMatrix4x4> for (Option<&'a mut Vec<i8>>) {
   fn inverted(self , rsthis: & QMatrix4x4) -> QMatrix4x4 {
     // let qthis: *mut c_void = unsafe{calloc(1, 68)};
     // unsafe{_ZNK10QMatrix4x48invertedEPb()};
-    let arg0 = self.as_ptr()  as *mut c_char;
+    let arg0 = (if self.is_none() {0 as *const i8} else {self.unwrap().as_ptr()})  as *mut c_char;
     let mut ret = unsafe {C_ZNK10QMatrix4x48invertedEPb(rsthis.qclsinst, arg0)};
     let mut ret1 = QMatrix4x4::inheritFrom(ret as u64);
     return ret1;
@@ -580,7 +580,7 @@ pub trait QMatrix4x4_viewport<RetType> {
 }
 
   // proto:  void QMatrix4x4::viewport(float left, float bottom, float width, float height, float nearPlane, float farPlane);
-impl<'a> /*trait*/ QMatrix4x4_viewport<()> for (f32, f32, f32, f32, f32, f32) {
+impl<'a> /*trait*/ QMatrix4x4_viewport<()> for (f32, f32, f32, f32, Option<f32>, Option<f32>) {
   fn viewport(self , rsthis: & QMatrix4x4) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 68)};
     // unsafe{_ZN10QMatrix4x48viewportEffffff()};
@@ -588,8 +588,8 @@ impl<'a> /*trait*/ QMatrix4x4_viewport<()> for (f32, f32, f32, f32, f32, f32) {
     let arg1 = self.1  as c_float;
     let arg2 = self.2  as c_float;
     let arg3 = self.3  as c_float;
-    let arg4 = self.4  as c_float;
-    let arg5 = self.5  as c_float;
+    let arg4 = (if self.4.is_none() {0.0} else {self.4.unwrap()})  as c_float;
+    let arg5 = (if self.5.is_none() {1.0} else {self.5.unwrap()})  as c_float;
      unsafe {C_ZN10QMatrix4x48viewportEffffff(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)};
     // return 1;
   }
@@ -1018,14 +1018,14 @@ impl<'a> /*trait*/ QMatrix4x4_viewport<()> for (&'a QRectF) {
 }
 
   // proto:  void QMatrix4x4::rotate(float angle, float x, float y, float z);
-impl<'a> /*trait*/ QMatrix4x4_rotate<()> for (f32, f32, f32, f32) {
+impl<'a> /*trait*/ QMatrix4x4_rotate<()> for (f32, f32, f32, Option<f32>) {
   fn rotate(self , rsthis: & QMatrix4x4) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 68)};
     // unsafe{_ZN10QMatrix4x46rotateEffff()};
     let arg0 = self.0  as c_float;
     let arg1 = self.1  as c_float;
     let arg2 = self.2  as c_float;
-    let arg3 = self.3  as c_float;
+    let arg3 = (if self.3.is_none() {0.0} else {self.3.unwrap()})  as c_float;
      unsafe {C_ZN10QMatrix4x46rotateEffff(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
     // return 1;
   }

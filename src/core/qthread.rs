@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qthread.h
 // dst-file: /src/core/qthread.rs
 //
@@ -122,13 +122,13 @@ pub trait QThread_new {
 }
 
   // proto:  void QThread::QThread(QObject * parent);
-impl<'a> /*trait*/ QThread_new for (&'a QObject) {
+impl<'a> /*trait*/ QThread_new for (Option<&'a QObject>) {
   fn new(self) -> QThread {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QThreadC2EP7QObject()};
     let ctysz: c_int = unsafe{QThread_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN7QThreadC2EP7QObject(arg0)};
     let rsthis = QThread{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -286,11 +286,11 @@ pub trait QThread_exit<RetType> {
 }
 
   // proto:  void QThread::exit(int retcode);
-impl<'a> /*trait*/ QThread_exit<()> for (i32) {
+impl<'a> /*trait*/ QThread_exit<()> for (Option<i32>) {
   fn exit(self , rsthis: & QThread) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QThread4exitEi()};
-    let arg0 = self  as c_int;
+    let arg0 = (if self.is_none() {0} else {self.unwrap()})  as c_int;
      unsafe {C_ZN7QThread4exitEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
@@ -495,11 +495,11 @@ pub trait QThread_wait<RetType> {
 }
 
   // proto:  bool QThread::wait(unsigned long time);
-impl<'a> /*trait*/ QThread_wait<i8> for (u64) {
+impl<'a> /*trait*/ QThread_wait<i8> for (Option<u64>) {
   fn wait(self , rsthis: & QThread) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QThread4waitEm()};
-    let arg0 = self  as c_ulong;
+    let arg0 = (if self.is_none() {i32::max_value() as u64} else {self.unwrap()})  as c_ulong;
     let mut ret = unsafe {C_ZN7QThread4waitEm(rsthis.qclsinst, arg0)};
     return ret as i8; // 1
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qundogroup.h
 // dst-file: /src/widgets/qundogroup.rs
 //
@@ -214,13 +214,13 @@ pub trait QUndoGroup_new {
 }
 
   // proto:  void QUndoGroup::QUndoGroup(QObject * parent);
-impl<'a> /*trait*/ QUndoGroup_new for (&'a QObject) {
+impl<'a> /*trait*/ QUndoGroup_new for (Option<&'a QObject>) {
   fn new(self) -> QUndoGroup {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QUndoGroupC2EP7QObject()};
     let ctysz: c_int = unsafe{QUndoGroup_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN10QUndoGroupC2EP7QObject(arg0)};
     let rsthis = QUndoGroup{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -264,12 +264,12 @@ pub trait QUndoGroup_createRedoAction<RetType> {
 }
 
   // proto:  QAction * QUndoGroup::createRedoAction(QObject * parent, const QString & prefix);
-impl<'a> /*trait*/ QUndoGroup_createRedoAction<QAction> for (&'a QObject, &'a QString) {
+impl<'a> /*trait*/ QUndoGroup_createRedoAction<QAction> for (&'a QObject, Option<&'a QString>) {
   fn createRedoAction(self , rsthis: & QUndoGroup) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QUndoGroup16createRedoActionEP7QObjectRK7QString()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {QString::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZNK10QUndoGroup16createRedoActionEP7QObjectRK7QString(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;
@@ -477,12 +477,12 @@ pub trait QUndoGroup_createUndoAction<RetType> {
 }
 
   // proto:  QAction * QUndoGroup::createUndoAction(QObject * parent, const QString & prefix);
-impl<'a> /*trait*/ QUndoGroup_createUndoAction<QAction> for (&'a QObject, &'a QString) {
+impl<'a> /*trait*/ QUndoGroup_createUndoAction<QAction> for (&'a QObject, Option<&'a QString>) {
   fn createUndoAction(self , rsthis: & QUndoGroup) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QUndoGroup16createUndoActionEP7QObjectRK7QString()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {QString::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZNK10QUndoGroup16createUndoActionEP7QObjectRK7QString(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;

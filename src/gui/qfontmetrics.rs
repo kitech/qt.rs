@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtGui/qfontmetrics.h
 // dst-file: /src/gui/qfontmetrics.rs
 //
@@ -268,15 +268,15 @@ pub trait QFontMetrics_boundingRect<RetType> {
 }
 
   // proto:  QRect QFontMetrics::boundingRect(const QRect & r, int flags, const QString & text, int tabstops, int * tabarray);
-impl<'a> /*trait*/ QFontMetrics_boundingRect<QRect> for (&'a QRect, i32, &'a QString, i32, &'a mut Vec<i32>) {
+impl<'a> /*trait*/ QFontMetrics_boundingRect<QRect> for (&'a QRect, i32, &'a QString, Option<i32>, Option<&'a mut Vec<i32>>) {
   fn boundingRect(self , rsthis: & QFontMetrics) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics12boundingRectERK5QRectiRK7QStringiPi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
-    let arg3 = self.3  as c_int;
-    let arg4 = self.4.as_ptr()  as *mut c_int;
+    let arg3 = (if self.3.is_none() {0} else {self.3.unwrap()})  as c_int;
+    let arg4 = (if self.4.is_none() {0 as *const i32} else {self.4.unwrap().as_ptr()})  as *mut c_int;
     let mut ret = unsafe {C_ZNK12QFontMetrics12boundingRectERK5QRectiRK7QStringiPi(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4)};
     let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
@@ -367,14 +367,14 @@ pub trait QFontMetrics_size<RetType> {
 }
 
   // proto:  QSize QFontMetrics::size(int flags, const QString & str, int tabstops, int * tabarray);
-impl<'a> /*trait*/ QFontMetrics_size<QSize> for (i32, &'a QString, i32, &'a mut Vec<i32>) {
+impl<'a> /*trait*/ QFontMetrics_size<QSize> for (i32, &'a QString, Option<i32>, Option<&'a mut Vec<i32>>) {
   fn size(self , rsthis: & QFontMetrics) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics4sizeEiRK7QStringiPi()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2  as c_int;
-    let arg3 = self.3.as_ptr()  as *mut c_int;
+    let arg2 = (if self.2.is_none() {0} else {self.2.unwrap()})  as c_int;
+    let arg3 = (if self.3.is_none() {0 as *const i32} else {self.3.unwrap().as_ptr()})  as *mut c_int;
     let mut ret = unsafe {C_ZNK12QFontMetrics4sizeEiRK7QStringiPi(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
     let mut ret1 = QSize::inheritFrom(ret as u64);
     return ret1;
@@ -785,12 +785,12 @@ impl<'a> /*trait*/ QFontMetrics_new for (&'a QFont) {
 }
 
   // proto:  int QFontMetrics::width(const QString & , int len);
-impl<'a> /*trait*/ QFontMetrics_width<i32> for (&'a QString, i32) {
+impl<'a> /*trait*/ QFontMetrics_width<i32> for (&'a QString, Option<i32>) {
   fn width(self , rsthis: & QFontMetrics) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics5widthERK7QStringi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {-1} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK12QFontMetrics5widthERK7QStringi(rsthis.qclsinst, arg0, arg1)};
     return ret as i32; // 1
     // return 1;
@@ -798,7 +798,7 @@ impl<'a> /*trait*/ QFontMetrics_width<i32> for (&'a QString, i32) {
 }
 
   // proto:  QRect QFontMetrics::boundingRect(int x, int y, int w, int h, int flags, const QString & text, int tabstops, int * tabarray);
-impl<'a> /*trait*/ QFontMetrics_boundingRect<QRect> for (i32, i32, i32, i32, i32, &'a QString, i32, &'a mut Vec<i32>) {
+impl<'a> /*trait*/ QFontMetrics_boundingRect<QRect> for (i32, i32, i32, i32, i32, &'a QString, Option<i32>, Option<&'a mut Vec<i32>>) {
   fn boundingRect(self , rsthis: & QFontMetrics) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics12boundingRectEiiiiiRK7QStringiPi()};
@@ -808,8 +808,8 @@ impl<'a> /*trait*/ QFontMetrics_boundingRect<QRect> for (i32, i32, i32, i32, i32
     let arg3 = self.3  as c_int;
     let arg4 = self.4  as c_int;
     let arg5 = self.5.qclsinst  as *mut c_void;
-    let arg6 = self.6  as c_int;
-    let arg7 = self.7.as_ptr()  as *mut c_int;
+    let arg6 = (if self.6.is_none() {0} else {self.6.unwrap()})  as c_int;
+    let arg7 = (if self.7.is_none() {0 as *const i32} else {self.7.unwrap().as_ptr()})  as *mut c_int;
     let mut ret = unsafe {C_ZNK12QFontMetrics12boundingRectEiiiiiRK7QStringiPi(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)};
     let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
@@ -955,14 +955,14 @@ pub trait QFontMetricsF_size<RetType> {
 }
 
   // proto:  QSizeF QFontMetricsF::size(int flags, const QString & str, int tabstops, int * tabarray);
-impl<'a> /*trait*/ QFontMetricsF_size<QSizeF> for (i32, &'a QString, i32, &'a mut Vec<i32>) {
+impl<'a> /*trait*/ QFontMetricsF_size<QSizeF> for (i32, &'a QString, Option<i32>, Option<&'a mut Vec<i32>>) {
   fn size(self , rsthis: & QFontMetricsF) -> QSizeF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF4sizeEiRK7QStringiPi()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2  as c_int;
-    let arg3 = self.3.as_ptr()  as *mut c_int;
+    let arg2 = (if self.2.is_none() {0} else {self.2.unwrap()})  as c_int;
+    let arg3 = (if self.3.is_none() {0 as *const i32} else {self.3.unwrap().as_ptr()})  as *mut c_int;
     let mut ret = unsafe {C_ZNK13QFontMetricsF4sizeEiRK7QStringiPi(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
     let mut ret1 = QSizeF::inheritFrom(ret as u64);
     return ret1;
@@ -1103,15 +1103,15 @@ pub trait QFontMetricsF_boundingRect<RetType> {
 }
 
   // proto:  QRectF QFontMetricsF::boundingRect(const QRectF & r, int flags, const QString & string, int tabstops, int * tabarray);
-impl<'a> /*trait*/ QFontMetricsF_boundingRect<QRectF> for (&'a QRectF, i32, &'a QString, i32, &'a mut Vec<i32>) {
+impl<'a> /*trait*/ QFontMetricsF_boundingRect<QRectF> for (&'a QRectF, i32, &'a QString, Option<i32>, Option<&'a mut Vec<i32>>) {
   fn boundingRect(self , rsthis: & QFontMetricsF) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF12boundingRectERK6QRectFiRK7QStringiPi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
-    let arg3 = self.3  as c_int;
-    let arg4 = self.4.as_ptr()  as *mut c_int;
+    let arg3 = (if self.3.is_none() {0} else {self.3.unwrap()})  as c_int;
+    let arg4 = (if self.4.is_none() {0 as *const i32} else {self.4.unwrap().as_ptr()})  as *mut c_int;
     let mut ret = unsafe {C_ZNK13QFontMetricsF12boundingRectERK6QRectFiRK7QStringiPi(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4)};
     let mut ret1 = QRectF::inheritFrom(ret as u64);
     return ret1;

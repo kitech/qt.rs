@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qcombobox.h
 // dst-file: /src/widgets/qcombobox.rs
 //
@@ -452,13 +452,13 @@ pub trait QComboBox_addItem<RetType> {
 }
 
   // proto:  void QComboBox::addItem(const QIcon & icon, const QString & text, const QVariant & userData);
-impl<'a> /*trait*/ QComboBox_addItem<()> for (&'a QIcon, &'a QString, &'a QVariant) {
+impl<'a> /*trait*/ QComboBox_addItem<()> for (&'a QIcon, &'a QString, Option<&'a QVariant>) {
   fn addItem(self , rsthis: & QComboBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QComboBox7addItemERK5QIconRK7QStringRK8QVariant()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2.qclsinst  as *mut c_void;
+    let arg2 = (if self.2.is_none() {QVariant::new(()).qclsinst} else {self.2.unwrap().qclsinst})  as *mut c_void;
      unsafe {C_ZN9QComboBox7addItemERK5QIconRK7QStringRK8QVariant(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
@@ -619,11 +619,11 @@ pub trait QComboBox_currentData<RetType> {
 }
 
   // proto:  QVariant QComboBox::currentData(int role);
-impl<'a> /*trait*/ QComboBox_currentData<QVariant> for (i32) {
+impl<'a> /*trait*/ QComboBox_currentData<QVariant> for (Option<i32>) {
   fn currentData(self , rsthis: & QComboBox) -> QVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox11currentDataEi()};
-    let arg0 = self  as c_int;
+    let arg0 = (if self.is_none() {0 as i32} else {self.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK9QComboBox11currentDataEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QVariant::inheritFrom(ret as u64);
     return ret1;
@@ -716,13 +716,13 @@ pub trait QComboBox_setItemData<RetType> {
 }
 
   // proto:  void QComboBox::setItemData(int index, const QVariant & value, int role);
-impl<'a> /*trait*/ QComboBox_setItemData<()> for (i32, &'a QVariant, i32) {
+impl<'a> /*trait*/ QComboBox_setItemData<()> for (i32, &'a QVariant, Option<i32>) {
   fn setItemData(self , rsthis: & QComboBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QComboBox11setItemDataEiRK8QVarianti()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2  as c_int;
+    let arg2 = (if self.2.is_none() {0 as i32} else {self.2.unwrap()})  as c_int;
      unsafe {C_ZN9QComboBox11setItemDataEiRK8QVarianti(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
@@ -763,14 +763,14 @@ pub trait QComboBox_insertItem<RetType> {
 }
 
   // proto:  void QComboBox::insertItem(int index, const QIcon & icon, const QString & text, const QVariant & userData);
-impl<'a> /*trait*/ QComboBox_insertItem<()> for (i32, &'a QIcon, &'a QString, &'a QVariant) {
+impl<'a> /*trait*/ QComboBox_insertItem<()> for (i32, &'a QIcon, &'a QString, Option<&'a QVariant>) {
   fn insertItem(self , rsthis: & QComboBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QComboBox10insertItemEiRK5QIconRK7QStringRK8QVariant()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
-    let arg3 = self.3.qclsinst  as *mut c_void;
+    let arg3 = (if self.3.is_none() {QVariant::new(()).qclsinst} else {self.3.unwrap().qclsinst})  as *mut c_void;
      unsafe {C_ZN9QComboBox10insertItemEiRK5QIconRK7QStringRK8QVariant(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
     // return 1;
   }
@@ -859,12 +859,12 @@ pub trait QComboBox_itemData<RetType> {
 }
 
   // proto:  QVariant QComboBox::itemData(int index, int role);
-impl<'a> /*trait*/ QComboBox_itemData<QVariant> for (i32, i32) {
+impl<'a> /*trait*/ QComboBox_itemData<QVariant> for (i32, Option<i32>) {
   fn itemData(self , rsthis: & QComboBox) -> QVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox8itemDataEii()};
     let arg0 = self.0  as c_int;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {0 as i32} else {self.1.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK9QComboBox8itemDataEii(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QVariant::inheritFrom(ret as u64);
     return ret1;
@@ -932,13 +932,13 @@ pub trait QComboBox_new {
 }
 
   // proto:  void QComboBox::QComboBox(QWidget * parent);
-impl<'a> /*trait*/ QComboBox_new for (&'a QWidget) {
+impl<'a> /*trait*/ QComboBox_new for (Option<&'a QWidget>) {
   fn new(self) -> QComboBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QComboBoxC2EP7QWidget()};
     let ctysz: c_int = unsafe{QComboBox_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN9QComboBoxC2EP7QWidget(arg0)};
     let rsthis = QComboBox{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -1016,12 +1016,12 @@ impl<'a> /*trait*/ QComboBox_setEditText<()> for (&'a QString) {
 }
 
   // proto:  void QComboBox::addItem(const QString & text, const QVariant & userData);
-impl<'a> /*trait*/ QComboBox_addItem<()> for (&'a QString, &'a QVariant) {
+impl<'a> /*trait*/ QComboBox_addItem<()> for (&'a QString, Option<&'a QVariant>) {
   fn addItem(self , rsthis: & QComboBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QComboBox7addItemERK7QStringRK8QVariant()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {QVariant::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
      unsafe {C_ZN9QComboBox7addItemERK7QStringRK8QVariant(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
@@ -1587,13 +1587,13 @@ impl<'a> /*trait*/ QComboBox_itemIcon<QIcon> for (i32) {
 }
 
   // proto:  void QComboBox::insertItem(int index, const QString & text, const QVariant & userData);
-impl<'a> /*trait*/ QComboBox_insertItem<()> for (i32, &'a QString, &'a QVariant) {
+impl<'a> /*trait*/ QComboBox_insertItem<()> for (i32, &'a QString, Option<&'a QVariant>) {
   fn insertItem(self , rsthis: & QComboBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QComboBox10insertItemEiRK7QStringRK8QVariant()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2.qclsinst  as *mut c_void;
+    let arg2 = (if self.2.is_none() {QVariant::new(()).qclsinst} else {self.2.unwrap().qclsinst})  as *mut c_void;
      unsafe {C_ZN9QComboBox10insertItemEiRK7QStringRK8QVariant(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }

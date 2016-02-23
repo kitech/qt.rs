@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtGui/qscreen.h
 // dst-file: /src/gui/qscreen.rs
 //
@@ -188,15 +188,15 @@ pub trait QScreen_grabWindow<RetType> {
 }
 
   // proto:  QPixmap QScreen::grabWindow(WId window, int x, int y, int w, int h);
-impl<'a> /*trait*/ QScreen_grabWindow<QPixmap> for (*mut i32, i32, i32, i32, i32) {
+impl<'a> /*trait*/ QScreen_grabWindow<QPixmap> for (*mut i32, Option<i32>, Option<i32>, Option<i32>, Option<i32>) {
   fn grabWindow(self , rsthis: & QScreen) -> QPixmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QScreen10grabWindowEiiiii()};
     let arg0 = self.0  as c_int;
-    let arg1 = self.1  as c_int;
-    let arg2 = self.2  as c_int;
-    let arg3 = self.3  as c_int;
-    let arg4 = self.4  as c_int;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_int;
+    let arg2 = (if self.2.is_none() {0} else {self.2.unwrap()})  as c_int;
+    let arg3 = (if self.3.is_none() {-1} else {self.3.unwrap()})  as c_int;
+    let arg4 = (if self.4.is_none() {-1} else {self.4.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN7QScreen10grabWindowEiiiii(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4)};
     let mut ret1 = QPixmap::inheritFrom(ret as u64);
     return ret1;

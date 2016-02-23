@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qtablewidget.h
 // dst-file: /src/widgets/qtablewidget.rs
 //
@@ -941,7 +941,7 @@ pub trait QTableWidget_new {
 }
 
   // proto:  void QTableWidget::QTableWidget(int rows, int columns, QWidget * parent);
-impl<'a> /*trait*/ QTableWidget_new for (i32, i32, &'a QWidget) {
+impl<'a> /*trait*/ QTableWidget_new for (i32, i32, Option<&'a QWidget>) {
   fn new(self) -> QTableWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidgetC2EiiP7QWidget()};
@@ -949,7 +949,7 @@ impl<'a> /*trait*/ QTableWidget_new for (i32, i32, &'a QWidget) {
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-    let arg2 = self.2.qclsinst  as *mut c_void;
+    let arg2 = (if self.2.is_none() {0} else {self.2.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN12QTableWidgetC2EiiP7QWidget(arg0, arg1, arg2)};
     let rsthis = QTableWidget{qbase: QTableView::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -1459,13 +1459,13 @@ impl<'a> /*trait*/ QTableWidget_item<QTableWidgetItem> for (i32, i32) {
 }
 
   // proto:  void QTableWidget::QTableWidget(QWidget * parent);
-impl<'a> /*trait*/ QTableWidget_new for (&'a QWidget) {
+impl<'a> /*trait*/ QTableWidget_new for (Option<&'a QWidget>) {
   fn new(self) -> QTableWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidgetC2EP7QWidget()};
     let ctysz: c_int = unsafe{QTableWidget_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN12QTableWidgetC2EP7QWidget(arg0)};
     let rsthis = QTableWidget{qbase: QTableView::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -2204,14 +2204,14 @@ impl<'a> /*trait*/ QTableWidgetItem_setIcon<()> for (&'a QIcon) {
 }
 
   // proto:  void QTableWidgetItem::QTableWidgetItem(const QString & text, int type);
-impl<'a> /*trait*/ QTableWidgetItem_new for (&'a QString, i32) {
+impl<'a> /*trait*/ QTableWidgetItem_new for (&'a QString, Option<i32>) {
   fn new(self) -> QTableWidgetItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItemC2ERK7QStringi()};
     let ctysz: c_int = unsafe{QTableWidgetItem_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {0 as i32} else {self.1.unwrap()})  as c_int;
     let qthis: u64 = unsafe {C_ZN16QTableWidgetItemC2ERK7QStringi(arg0, arg1)};
     let rsthis = QTableWidgetItem{qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -2268,13 +2268,13 @@ impl<'a> /*trait*/ QTableWidgetItem_clone<QTableWidgetItem> for () {
 }
 
   // proto:  void QTableWidgetItem::QTableWidgetItem(int type);
-impl<'a> /*trait*/ QTableWidgetItem_new for (i32) {
+impl<'a> /*trait*/ QTableWidgetItem_new for (Option<i32>) {
   fn new(self) -> QTableWidgetItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItemC2Ei()};
     let ctysz: c_int = unsafe{QTableWidgetItem_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self  as c_int;
+    let arg0 = (if self.is_none() {0 as i32} else {self.unwrap()})  as c_int;
     let qthis: u64 = unsafe {C_ZN16QTableWidgetItemC2Ei(arg0)};
     let rsthis = QTableWidgetItem{qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -2424,7 +2424,7 @@ impl<'a> /*trait*/ QTableWidgetItem_tableWidget<QTableWidget> for () {
 }
 
   // proto:  void QTableWidgetItem::QTableWidgetItem(const QIcon & icon, const QString & text, int type);
-impl<'a> /*trait*/ QTableWidgetItem_new for (&'a QIcon, &'a QString, i32) {
+impl<'a> /*trait*/ QTableWidgetItem_new for (&'a QIcon, &'a QString, Option<i32>) {
   fn new(self) -> QTableWidgetItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItemC2ERK5QIconRK7QStringi()};
@@ -2432,7 +2432,7 @@ impl<'a> /*trait*/ QTableWidgetItem_new for (&'a QIcon, &'a QString, i32) {
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2  as c_int;
+    let arg2 = (if self.2.is_none() {0 as i32} else {self.2.unwrap()})  as c_int;
     let qthis: u64 = unsafe {C_ZN16QTableWidgetItemC2ERK5QIconRK7QStringi(arg0, arg1, arg2)};
     let rsthis = QTableWidgetItem{qclsinst: qthis, ..Default::default()};
     return rsthis;

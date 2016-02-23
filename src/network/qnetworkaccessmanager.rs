@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Jan 19 21:53:37 2016
+// created: Wed Jan 20 00:44:03 2016
 // src-file: /QtNetwork/qnetworkaccessmanager.h
 // dst-file: /src/network/qnetworkaccessmanager.rs
 //
@@ -103,7 +103,6 @@ extern {
   fn QNetworkAccessManager_SlotProxy_connect__ZN21QNetworkAccessManager23networkSessionConnectedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QNetworkAccessManager_SlotProxy_connect__ZN21QNetworkAccessManager27proxyAuthenticationRequiredERK13QNetworkProxyP14QAuthenticator(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QNetworkAccessManager_SlotProxy_connect__ZN21QNetworkAccessManager34preSharedKeyAuthenticationRequiredEP13QNetworkReplyP29QSslPreSharedKeyAuthenticator(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QNetworkAccessManager_SlotProxy_connect__ZN21QNetworkAccessManager24networkAccessibleChangedENS_20NetworkAccessibilityE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QNetworkAccessManager_SlotProxy_connect__ZN21QNetworkAccessManager8finishedEP13QNetworkReply(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QNetworkAccessManager_SlotProxy_connect__ZN21QNetworkAccessManager9encryptedEP13QNetworkReply(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QNetworkAccessManager_SlotProxy_connect__ZN21QNetworkAccessManager22authenticationRequiredEP13QNetworkReplyP14QAuthenticator(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
@@ -1013,49 +1012,13 @@ impl /* trait */ QNetworkAccessManager_preSharedKeyAuthenticationRequired_signal
     unsafe {QNetworkAccessManager_SlotProxy_connect__ZN21QNetworkAccessManager34preSharedKeyAuthenticationRequiredEP13QNetworkReplyP29QSslPreSharedKeyAuthenticator(arg0, arg1, arg2)};
   }
 }
-// networkAccessibleChanged(class QNetworkAccessManager::NetworkAccessibility)
-extern fn QNetworkAccessManager_networkAccessibleChanged_signal_connect_cb_3(rsfptr:fn(i32), arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-  let rsarg0 = arg0 as i32;
-  rsfptr(rsarg0);
-}
-extern fn QNetworkAccessManager_networkAccessibleChanged_signal_connect_cb_box_3(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  let rsarg0 = arg0 as i32;
-  // rsfptr(rsarg0);
-  unsafe{(*rsfptr_raw)(rsarg0)};
-}
-impl /* trait */ QNetworkAccessManager_networkAccessibleChanged_signal_connect for fn(i32) {
-  fn connect(self, sigthis: QNetworkAccessManager_networkAccessibleChanged_signal) {
-    // do smth...
-    // self as u64; // error for Fn, Ok for fn
-    self as *mut c_void as u64;
-    self as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QNetworkAccessManager_networkAccessibleChanged_signal_connect_cb_3 as *mut c_void;
-    let arg2 = self as *mut c_void;
-    unsafe {QNetworkAccessManager_SlotProxy_connect__ZN21QNetworkAccessManager24networkAccessibleChangedENS_20NetworkAccessibilityE(arg0, arg1, arg2)};
-  }
-}
-impl /* trait */ QNetworkAccessManager_networkAccessibleChanged_signal_connect for Box<Fn(i32)> {
-  fn connect(self, sigthis: QNetworkAccessManager_networkAccessibleChanged_signal) {
-    // do smth...
-    // Box::into_raw(self) as u64;
-    // Box::into_raw(self) as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QNetworkAccessManager_networkAccessibleChanged_signal_connect_cb_box_3 as *mut c_void;
-    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
-    unsafe {QNetworkAccessManager_SlotProxy_connect__ZN21QNetworkAccessManager24networkAccessibleChangedENS_20NetworkAccessibilityE(arg0, arg1, arg2)};
-  }
-}
 // finished(class QNetworkReply *)
-extern fn QNetworkAccessManager_finished_signal_connect_cb_4(rsfptr:fn(QNetworkReply), arg0: *mut c_void) {
+extern fn QNetworkAccessManager_finished_signal_connect_cb_3(rsfptr:fn(QNetworkReply), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsarg0 = QNetworkReply::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QNetworkAccessManager_finished_signal_connect_cb_box_4(rsfptr_raw:*mut Box<Fn(QNetworkReply)>, arg0: *mut c_void) {
+extern fn QNetworkAccessManager_finished_signal_connect_cb_box_3(rsfptr_raw:*mut Box<Fn(QNetworkReply)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QNetworkReply::inheritFrom(arg0 as u64);
@@ -1069,7 +1032,7 @@ impl /* trait */ QNetworkAccessManager_finished_signal_connect for fn(QNetworkRe
     self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QNetworkAccessManager_finished_signal_connect_cb_4 as *mut c_void;
+    let arg1 = QNetworkAccessManager_finished_signal_connect_cb_3 as *mut c_void;
     let arg2 = self as *mut c_void;
     unsafe {QNetworkAccessManager_SlotProxy_connect__ZN21QNetworkAccessManager8finishedEP13QNetworkReply(arg0, arg1, arg2)};
   }
@@ -1080,18 +1043,18 @@ impl /* trait */ QNetworkAccessManager_finished_signal_connect for Box<Fn(QNetwo
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QNetworkAccessManager_finished_signal_connect_cb_box_4 as *mut c_void;
+    let arg1 = QNetworkAccessManager_finished_signal_connect_cb_box_3 as *mut c_void;
     let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QNetworkAccessManager_SlotProxy_connect__ZN21QNetworkAccessManager8finishedEP13QNetworkReply(arg0, arg1, arg2)};
   }
 }
 // encrypted(class QNetworkReply *)
-extern fn QNetworkAccessManager_encrypted_signal_connect_cb_5(rsfptr:fn(QNetworkReply), arg0: *mut c_void) {
+extern fn QNetworkAccessManager_encrypted_signal_connect_cb_4(rsfptr:fn(QNetworkReply), arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsarg0 = QNetworkReply::inheritFrom(arg0 as u64);
   rsfptr(rsarg0);
 }
-extern fn QNetworkAccessManager_encrypted_signal_connect_cb_box_5(rsfptr_raw:*mut Box<Fn(QNetworkReply)>, arg0: *mut c_void) {
+extern fn QNetworkAccessManager_encrypted_signal_connect_cb_box_4(rsfptr_raw:*mut Box<Fn(QNetworkReply)>, arg0: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QNetworkReply::inheritFrom(arg0 as u64);
@@ -1105,7 +1068,7 @@ impl /* trait */ QNetworkAccessManager_encrypted_signal_connect for fn(QNetworkR
     self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QNetworkAccessManager_encrypted_signal_connect_cb_5 as *mut c_void;
+    let arg1 = QNetworkAccessManager_encrypted_signal_connect_cb_4 as *mut c_void;
     let arg2 = self as *mut c_void;
     unsafe {QNetworkAccessManager_SlotProxy_connect__ZN21QNetworkAccessManager9encryptedEP13QNetworkReply(arg0, arg1, arg2)};
   }
@@ -1116,19 +1079,19 @@ impl /* trait */ QNetworkAccessManager_encrypted_signal_connect for Box<Fn(QNetw
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QNetworkAccessManager_encrypted_signal_connect_cb_box_5 as *mut c_void;
+    let arg1 = QNetworkAccessManager_encrypted_signal_connect_cb_box_4 as *mut c_void;
     let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QNetworkAccessManager_SlotProxy_connect__ZN21QNetworkAccessManager9encryptedEP13QNetworkReply(arg0, arg1, arg2)};
   }
 }
 // authenticationRequired(class QNetworkReply *, class QAuthenticator *)
-extern fn QNetworkAccessManager_authenticationRequired_signal_connect_cb_6(rsfptr:fn(QNetworkReply, QAuthenticator), arg0: *mut c_void, arg1: *mut c_void) {
+extern fn QNetworkAccessManager_authenticationRequired_signal_connect_cb_5(rsfptr:fn(QNetworkReply, QAuthenticator), arg0: *mut c_void, arg1: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsarg0 = QNetworkReply::inheritFrom(arg0 as u64);
   let rsarg1 = QAuthenticator::inheritFrom(arg1 as u64);
   rsfptr(rsarg0,rsarg1);
 }
-extern fn QNetworkAccessManager_authenticationRequired_signal_connect_cb_box_6(rsfptr_raw:*mut Box<Fn(QNetworkReply, QAuthenticator)>, arg0: *mut c_void, arg1: *mut c_void) {
+extern fn QNetworkAccessManager_authenticationRequired_signal_connect_cb_box_5(rsfptr_raw:*mut Box<Fn(QNetworkReply, QAuthenticator)>, arg0: *mut c_void, arg1: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QNetworkReply::inheritFrom(arg0 as u64);
@@ -1143,7 +1106,7 @@ impl /* trait */ QNetworkAccessManager_authenticationRequired_signal_connect for
     self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QNetworkAccessManager_authenticationRequired_signal_connect_cb_6 as *mut c_void;
+    let arg1 = QNetworkAccessManager_authenticationRequired_signal_connect_cb_5 as *mut c_void;
     let arg2 = self as *mut c_void;
     unsafe {QNetworkAccessManager_SlotProxy_connect__ZN21QNetworkAccessManager22authenticationRequiredEP13QNetworkReplyP14QAuthenticator(arg0, arg1, arg2)};
   }
@@ -1154,7 +1117,7 @@ impl /* trait */ QNetworkAccessManager_authenticationRequired_signal_connect for
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QNetworkAccessManager_authenticationRequired_signal_connect_cb_box_6 as *mut c_void;
+    let arg1 = QNetworkAccessManager_authenticationRequired_signal_connect_cb_box_5 as *mut c_void;
     let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QNetworkAccessManager_SlotProxy_connect__ZN21QNetworkAccessManager22authenticationRequiredEP13QNetworkReplyP14QAuthenticator(arg0, arg1, arg2)};
   }

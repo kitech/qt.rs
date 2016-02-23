@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qsettings.h
 // dst-file: /src/core/qsettings.rs
 //
@@ -138,13 +138,13 @@ pub trait QSettings_new {
 }
 
   // proto:  void QSettings::QSettings(QObject * parent);
-impl<'a> /*trait*/ QSettings_new for (&'a QObject) {
+impl<'a> /*trait*/ QSettings_new for (Option<&'a QObject>) {
   fn new(self) -> QSettings {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QSettingsC2EP7QObject()};
     let ctysz: c_int = unsafe{QSettings_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN9QSettingsC2EP7QObject(arg0)};
     let rsthis = QSettings{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -316,15 +316,15 @@ impl<'a> /*trait*/ QSettings_setArrayIndex<()> for (i32) {
 }
 
   // proto:  void QSettings::QSettings(const QString & organization, const QString & application, QObject * parent);
-impl<'a> /*trait*/ QSettings_new for (&'a QString, &'a QString, &'a QObject) {
+impl<'a> /*trait*/ QSettings_new for (&'a QString, Option<&'a QString>, Option<&'a QObject>) {
   fn new(self) -> QSettings {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QSettingsC2ERK7QStringS2_P7QObject()};
     let ctysz: c_int = unsafe{QSettings_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {QString::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
+    let arg2 = (if self.2.is_none() {0} else {self.2.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN9QSettingsC2ERK7QStringS2_P7QObject(arg0, arg1, arg2)};
     let rsthis = QSettings{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -518,12 +518,12 @@ pub trait QSettings_value<RetType> {
 }
 
   // proto:  QVariant QSettings::value(const QString & key, const QVariant & defaultValue);
-impl<'a> /*trait*/ QSettings_value<QVariant> for (&'a QString, &'a QVariant) {
+impl<'a> /*trait*/ QSettings_value<QVariant> for (&'a QString, Option<&'a QVariant>) {
   fn value(self , rsthis: & QSettings) -> QVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QSettings5valueERK7QStringRK8QVariant()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {QVariant::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZNK9QSettings5valueERK7QStringRK8QVariant(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QVariant::inheritFrom(ret as u64);
     return ret1;
@@ -684,12 +684,12 @@ pub trait QSettings_beginWriteArray<RetType> {
 }
 
   // proto:  void QSettings::beginWriteArray(const QString & prefix, int size);
-impl<'a> /*trait*/ QSettings_beginWriteArray<()> for (&'a QString, i32) {
+impl<'a> /*trait*/ QSettings_beginWriteArray<()> for (&'a QString, Option<i32>) {
   fn beginWriteArray(self , rsthis: & QSettings) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QSettings15beginWriteArrayERK7QStringi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
+    let arg1 = (if self.1.is_none() {-1} else {self.1.unwrap()})  as c_int;
      unsafe {C_ZN9QSettings15beginWriteArrayERK7QStringi(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }

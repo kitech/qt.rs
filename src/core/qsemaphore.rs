@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qsemaphore.h
 // dst-file: /src/core/qsemaphore.rs
 //
@@ -71,11 +71,11 @@ pub trait QSemaphore_acquire<RetType> {
 }
 
   // proto:  void QSemaphore::acquire(int n);
-impl<'a> /*trait*/ QSemaphore_acquire<()> for (i32) {
+impl<'a> /*trait*/ QSemaphore_acquire<()> for (Option<i32>) {
   fn acquire(self , rsthis: & QSemaphore) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QSemaphore7acquireEi()};
-    let arg0 = self  as c_int;
+    let arg0 = (if self.is_none() {1} else {self.unwrap()})  as c_int;
      unsafe {C_ZN10QSemaphore7acquireEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
@@ -94,11 +94,11 @@ pub trait QSemaphore_release<RetType> {
 }
 
   // proto:  void QSemaphore::release(int n);
-impl<'a> /*trait*/ QSemaphore_release<()> for (i32) {
+impl<'a> /*trait*/ QSemaphore_release<()> for (Option<i32>) {
   fn release(self , rsthis: & QSemaphore) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QSemaphore7releaseEi()};
-    let arg0 = self  as c_int;
+    let arg0 = (if self.is_none() {1} else {self.unwrap()})  as c_int;
      unsafe {C_ZN10QSemaphore7releaseEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
@@ -153,11 +153,11 @@ impl<'a> /*trait*/ QSemaphore_tryAcquire<i8> for (i32, i32) {
 }
 
   // proto:  bool QSemaphore::tryAcquire(int n);
-impl<'a> /*trait*/ QSemaphore_tryAcquire<i8> for (i32) {
+impl<'a> /*trait*/ QSemaphore_tryAcquire<i8> for (Option<i32>) {
   fn tryAcquire(self , rsthis: & QSemaphore) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QSemaphore10tryAcquireEi()};
-    let arg0 = self  as c_int;
+    let arg0 = (if self.is_none() {1} else {self.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN10QSemaphore10tryAcquireEi(rsthis.qclsinst, arg0)};
     return ret as i8; // 1
     // return 1;
@@ -178,13 +178,13 @@ pub trait QSemaphore_new {
 }
 
   // proto:  void QSemaphore::QSemaphore(int n);
-impl<'a> /*trait*/ QSemaphore_new for (i32) {
+impl<'a> /*trait*/ QSemaphore_new for (Option<i32>) {
   fn new(self) -> QSemaphore {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QSemaphoreC2Ei()};
     let ctysz: c_int = unsafe{QSemaphore_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self  as c_int;
+    let arg0 = (if self.is_none() {0} else {self.unwrap()})  as c_int;
     let qthis: u64 = unsafe {C_ZN10QSemaphoreC2Ei(arg0)};
     let rsthis = QSemaphore{qclsinst: qthis, ..Default::default()};
     return rsthis;

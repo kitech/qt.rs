@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qstyleoption.h
 // dst-file: /src/widgets/qstyleoption.rs
 //
@@ -773,14 +773,14 @@ impl<'a> /*trait*/ QStyleOption_new for (&'a QStyleOption) {
 }
 
   // proto:  void QStyleOption::QStyleOption(int version, int type);
-impl<'a> /*trait*/ QStyleOption_new for (i32, i32) {
+impl<'a> /*trait*/ QStyleOption_new for (Option<i32>, Option<i32>) {
   fn new(self) -> QStyleOption {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QStyleOptionC2Eii()};
     let ctysz: c_int = unsafe{QStyleOption_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.0  as c_int;
-    let arg1 = self.1  as c_int;
+    let arg0 = (if self.0.is_none() {0 as i32} else {self.0.unwrap()})  as c_int;
+    let arg1 = (if self.1.is_none() {0 as i32} else {self.1.unwrap()})  as c_int;
     let qthis: u64 = unsafe {C_ZN12QStyleOptionC2Eii(arg0, arg1)};
     let rsthis = QStyleOption{qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -1078,14 +1078,14 @@ pub trait QStyleOptionComplex_new {
 }
 
   // proto:  void QStyleOptionComplex::QStyleOptionComplex(int version, int type);
-impl<'a> /*trait*/ QStyleOptionComplex_new for (i32, i32) {
+impl<'a> /*trait*/ QStyleOptionComplex_new for (Option<i32>, Option<i32>) {
   fn new(self) -> QStyleOptionComplex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QStyleOptionComplexC2Eii()};
     let ctysz: c_int = unsafe{QStyleOptionComplex_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.0  as c_int;
-    let arg1 = self.1  as c_int;
+    let arg0 = (if self.0.is_none() {0 as i32} else {self.0.unwrap()})  as c_int;
+    let arg1 = (if self.1.is_none() {0 as i32} else {self.1.unwrap()})  as c_int;
     let qthis: u64 = unsafe {C_ZN19QStyleOptionComplexC2Eii(arg0, arg1)};
     let rsthis = QStyleOptionComplex{qbase: QStyleOption::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -1149,14 +1149,14 @@ pub trait QStyleHintReturn_new {
 }
 
   // proto:  void QStyleHintReturn::QStyleHintReturn(int version, int type);
-impl<'a> /*trait*/ QStyleHintReturn_new for (i32, i32) {
+impl<'a> /*trait*/ QStyleHintReturn_new for (Option<i32>, Option<i32>) {
   fn new(self) -> QStyleHintReturn {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QStyleHintReturnC2Eii()};
     let ctysz: c_int = unsafe{QStyleHintReturn_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.0  as c_int;
-    let arg1 = self.1  as c_int;
+    let arg0 = (if self.0.is_none() {0 as i32} else {self.0.unwrap()})  as c_int;
+    let arg1 = (if self.1.is_none() {0 as i32} else {self.1.unwrap()})  as c_int;
     let qthis: u64 = unsafe {C_ZN16QStyleHintReturnC2Eii(arg0, arg1)};
     let rsthis = QStyleHintReturn{qclsinst: qthis, ..Default::default()};
     return rsthis;

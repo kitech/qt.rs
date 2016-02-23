@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qregexp.h
 // dst-file: /src/core/qregexp.rs
 //
@@ -403,11 +403,11 @@ pub trait QRegExp_pos<RetType> {
 }
 
   // proto:  int QRegExp::pos(int nth);
-impl<'a> /*trait*/ QRegExp_pos<i32> for (i32) {
+impl<'a> /*trait*/ QRegExp_pos<i32> for (Option<i32>) {
   fn pos(self , rsthis: & QRegExp) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QRegExp3posEi()};
-    let arg0 = self  as c_int;
+    let arg0 = (if self.is_none() {0} else {self.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN7QRegExp3posEi(rsthis.qclsinst, arg0)};
     return ret as i32; // 1
     // return 1;
@@ -441,11 +441,11 @@ pub trait QRegExp_cap<RetType> {
 }
 
   // proto:  QString QRegExp::cap(int nth);
-impl<'a> /*trait*/ QRegExp_cap<QString> for (i32) {
+impl<'a> /*trait*/ QRegExp_cap<QString> for (Option<i32>) {
   fn cap(self , rsthis: & QRegExp) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QRegExp3capEi()};
-    let arg0 = self  as c_int;
+    let arg0 = (if self.is_none() {0} else {self.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN7QRegExp3capEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QString::inheritFrom(ret as u64);
     return ret1;

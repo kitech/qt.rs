@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qxmlstream.h
 // dst-file: /src/core/qxmlstream.rs
 //
@@ -1593,11 +1593,11 @@ pub trait QXmlStreamReader_raiseError<RetType> {
 }
 
   // proto:  void QXmlStreamReader::raiseError(const QString & message);
-impl<'a> /*trait*/ QXmlStreamReader_raiseError<()> for (&'a QString) {
+impl<'a> /*trait*/ QXmlStreamReader_raiseError<()> for (Option<&'a QString>) {
   fn raiseError(self , rsthis: & QXmlStreamReader) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamReader10raiseErrorERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {QString::new(()).qclsinst} else {self.unwrap().qclsinst})  as *mut c_void;
      unsafe {C_ZN16QXmlStreamReader10raiseErrorERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
@@ -2494,12 +2494,12 @@ pub trait QXmlStreamWriter_writeProcessingInstruction<RetType> {
 }
 
   // proto:  void QXmlStreamWriter::writeProcessingInstruction(const QString & target, const QString & data);
-impl<'a> /*trait*/ QXmlStreamWriter_writeProcessingInstruction<()> for (&'a QString, &'a QString) {
+impl<'a> /*trait*/ QXmlStreamWriter_writeProcessingInstruction<()> for (&'a QString, Option<&'a QString>) {
   fn writeProcessingInstruction(self , rsthis: & QXmlStreamWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriter26writeProcessingInstructionERK7QStringS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {QString::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
      unsafe {C_ZN16QXmlStreamWriter26writeProcessingInstructionERK7QStringS2_(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
@@ -2803,12 +2803,12 @@ pub trait QXmlStreamWriter_writeNamespace<RetType> {
 }
 
   // proto:  void QXmlStreamWriter::writeNamespace(const QString & namespaceUri, const QString & prefix);
-impl<'a> /*trait*/ QXmlStreamWriter_writeNamespace<()> for (&'a QString, &'a QString) {
+impl<'a> /*trait*/ QXmlStreamWriter_writeNamespace<()> for (&'a QString, Option<&'a QString>) {
   fn writeNamespace(self , rsthis: & QXmlStreamWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriter14writeNamespaceERK7QStringS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {QString::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
      unsafe {C_ZN16QXmlStreamWriter14writeNamespaceERK7QStringS2_(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }

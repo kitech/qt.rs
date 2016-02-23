@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qdesktopwidget.h
 // dst-file: /src/widgets/qdesktopwidget.rs
 //
@@ -136,11 +136,11 @@ pub trait QDesktopWidget_screen<RetType> {
 }
 
   // proto:  QWidget * QDesktopWidget::screen(int screen);
-impl<'a> /*trait*/ QDesktopWidget_screen<QWidget> for (i32) {
+impl<'a> /*trait*/ QDesktopWidget_screen<QWidget> for (Option<i32>) {
   fn screen(self , rsthis: & QDesktopWidget) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QDesktopWidget6screenEi()};
-    let arg0 = self  as c_int;
+    let arg0 = (if self.is_none() {-1} else {self.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN14QDesktopWidget6screenEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QWidget::inheritFrom(ret as u64);
     return ret1;
@@ -207,11 +207,11 @@ impl<'a> /*trait*/ QDesktopWidget_free<()> for () {
 }
 
   // proto:  const QRect QDesktopWidget::screenGeometry(int screen);
-impl<'a> /*trait*/ QDesktopWidget_screenGeometry<QRect> for (i32) {
+impl<'a> /*trait*/ QDesktopWidget_screenGeometry<QRect> for (Option<i32>) {
   fn screenGeometry(self , rsthis: & QDesktopWidget) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDesktopWidget14screenGeometryEi()};
-    let arg0 = self  as c_int;
+    let arg0 = (if self.is_none() {-1} else {self.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK14QDesktopWidget14screenGeometryEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;
@@ -315,11 +315,11 @@ impl<'a> /*trait*/ QDesktopWidget_isVirtualDesktop<i8> for () {
 }
 
   // proto:  int QDesktopWidget::screenNumber(const QWidget * widget);
-impl<'a> /*trait*/ QDesktopWidget_screenNumber<i32> for (&'a QWidget) {
+impl<'a> /*trait*/ QDesktopWidget_screenNumber<i32> for (Option<&'a QWidget>) {
   fn screenNumber(self , rsthis: & QDesktopWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDesktopWidget12screenNumberEPK7QWidget()};
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZNK14QDesktopWidget12screenNumberEPK7QWidget(rsthis.qclsinst, arg0)};
     return ret as i32; // 1
     // return 1;
@@ -390,11 +390,11 @@ impl<'a> /*trait*/ QDesktopWidget_availableGeometry<QRect> for (&'a QPoint) {
 }
 
   // proto:  const QRect QDesktopWidget::availableGeometry(int screen);
-impl<'a> /*trait*/ QDesktopWidget_availableGeometry<QRect> for (i32) {
+impl<'a> /*trait*/ QDesktopWidget_availableGeometry<QRect> for (Option<i32>) {
   fn availableGeometry(self , rsthis: & QDesktopWidget) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDesktopWidget17availableGeometryEi()};
-    let arg0 = self  as c_int;
+    let arg0 = (if self.is_none() {-1} else {self.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK14QDesktopWidget17availableGeometryEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QRect::inheritFrom(ret as u64);
     return ret1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qtextbrowser.h
 // dst-file: /src/widgets/qtextbrowser.rs
 //
@@ -321,13 +321,13 @@ pub trait QTextBrowser_new {
 }
 
   // proto:  void QTextBrowser::QTextBrowser(QWidget * parent);
-impl<'a> /*trait*/ QTextBrowser_new for (&'a QWidget) {
+impl<'a> /*trait*/ QTextBrowser_new for (Option<&'a QWidget>) {
   fn new(self) -> QTextBrowser {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTextBrowserC2EP7QWidget()};
     let ctysz: c_int = unsafe{QTextBrowser_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN12QTextBrowserC2EP7QWidget(arg0)};
     let rsthis = QTextBrowser{qbase: QTextEdit::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;

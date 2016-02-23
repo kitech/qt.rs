@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qsavefile.h
 // dst-file: /src/core/qsavefile.rs
 //
@@ -118,13 +118,13 @@ pub trait QSaveFile_new {
 }
 
   // proto:  void QSaveFile::QSaveFile(QObject * parent);
-impl<'a> /*trait*/ QSaveFile_new for (&'a QObject) {
+impl<'a> /*trait*/ QSaveFile_new for (Option<&'a QObject>) {
   fn new(self) -> QSaveFile {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QSaveFileC2EP7QObject()};
     let ctysz: c_int = unsafe{QSaveFile_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN9QSaveFileC2EP7QObject(arg0)};
     let rsthis = QSaveFile{qbase: QFileDevice::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;

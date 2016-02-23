@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtGui/qiconengineplugin.h
 // dst-file: /src/gui/qiconengineplugin.rs
 //
@@ -106,13 +106,13 @@ pub trait QIconEnginePlugin_new {
 }
 
   // proto:  void QIconEnginePlugin::QIconEnginePlugin(QObject * parent);
-impl<'a> /*trait*/ QIconEnginePlugin_new for (&'a QObject) {
+impl<'a> /*trait*/ QIconEnginePlugin_new for (Option<&'a QObject>) {
   fn new(self) -> QIconEnginePlugin {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QIconEnginePluginC2EP7QObject()};
     let ctysz: c_int = unsafe{QIconEnginePlugin_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN17QIconEnginePluginC2EP7QObject(arg0)};
     let rsthis = QIconEnginePlugin{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -133,11 +133,11 @@ pub trait QIconEnginePlugin_create<RetType> {
 }
 
   // proto:  QIconEngine * QIconEnginePlugin::create(const QString & filename);
-impl<'a> /*trait*/ QIconEnginePlugin_create<QIconEngine> for (&'a QString) {
+impl<'a> /*trait*/ QIconEnginePlugin_create<QIconEngine> for (Option<&'a QString>) {
   fn create(self , rsthis: & QIconEnginePlugin) -> QIconEngine {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QIconEnginePlugin6createERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {QString::new(()).qclsinst} else {self.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZN17QIconEnginePlugin6createERK7QString(rsthis.qclsinst, arg0)};
     let mut ret1 = QIconEngine::inheritFrom(ret as u64);
     return ret1;

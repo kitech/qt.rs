@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qgraphicslayout.h
 // dst-file: /src/widgets/qgraphicslayout.rs
 //
@@ -403,13 +403,13 @@ pub trait QGraphicsLayout_new {
 }
 
   // proto:  void QGraphicsLayout::QGraphicsLayout(QGraphicsLayoutItem * parent);
-impl<'a> /*trait*/ QGraphicsLayout_new for (&'a QGraphicsLayoutItem) {
+impl<'a> /*trait*/ QGraphicsLayout_new for (Option<&'a QGraphicsLayoutItem>) {
   fn new(self) -> QGraphicsLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsLayoutC2EP19QGraphicsLayoutItem()};
     let ctysz: c_int = unsafe{QGraphicsLayout_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN15QGraphicsLayoutC2EP19QGraphicsLayoutItem(arg0)};
     let rsthis = QGraphicsLayout{qbase: QGraphicsLayoutItem::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;

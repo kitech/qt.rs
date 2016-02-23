@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtGui/qpixmap.h
 // dst-file: /src/gui/qpixmap.rs
 //
@@ -172,13 +172,13 @@ pub trait QPixmap_save<RetType> {
 }
 
   // proto:  bool QPixmap::save(const QString & fileName, const char * format, int quality);
-impl<'a> /*trait*/ QPixmap_save<i8> for (&'a QString, &'a  String, i32) {
+impl<'a> /*trait*/ QPixmap_save<i8> for (&'a QString, Option<&'a  String>, Option<i32>) {
   fn save(self , rsthis: & QPixmap) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPixmap4saveERK7QStringPKci()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.as_ptr()  as *mut c_char;
-    let arg2 = self.2  as c_int;
+    let arg1 = (if self.1.is_none() {0 as *const u8} else {self.1.unwrap().as_ptr()})  as *mut c_char;
+    let arg2 = (if self.2.is_none() {-1} else {self.2.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK7QPixmap4saveERK7QStringPKci(rsthis.qclsinst, arg0, arg1, arg2)};
     return ret as i8; // 1
     // return 1;
@@ -308,11 +308,11 @@ impl<'a> /*trait*/ QPixmap_fill<()> for (&'a QPaintDevice, i32, i32) {
 }
 
   // proto:  void QPixmap::fill(const QColor & fillColor);
-impl<'a> /*trait*/ QPixmap_fill<()> for (&'a QColor) {
+impl<'a> /*trait*/ QPixmap_fill<()> for (Option<&'a QColor>) {
   fn fill(self , rsthis: & QPixmap) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPixmap4fillERK6QColor()};
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {QColor::new(()).qclsinst} else {self.unwrap().qclsinst})  as *mut c_void;
      unsafe {C_ZN7QPixmap4fillERK6QColor(rsthis.qclsinst, arg0)};
     // return 1;
   }
@@ -354,7 +354,7 @@ pub trait QPixmap_scroll<RetType> {
 }
 
   // proto:  void QPixmap::scroll(int dx, int dy, int x, int y, int width, int height, QRegion * exposed);
-impl<'a> /*trait*/ QPixmap_scroll<()> for (i32, i32, i32, i32, i32, i32, &'a QRegion) {
+impl<'a> /*trait*/ QPixmap_scroll<()> for (i32, i32, i32, i32, i32, i32, Option<&'a QRegion>) {
   fn scroll(self , rsthis: & QPixmap) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPixmap6scrollEiiiiiiP7QRegion()};
@@ -364,7 +364,7 @@ impl<'a> /*trait*/ QPixmap_scroll<()> for (i32, i32, i32, i32, i32, i32, &'a QRe
     let arg3 = self.3  as c_int;
     let arg4 = self.4  as c_int;
     let arg5 = self.5  as c_int;
-    let arg6 = self.6.qclsinst  as *mut c_void;
+    let arg6 = (if self.6.is_none() {0} else {self.6.unwrap().qclsinst})  as *mut c_void;
      unsafe {C_ZN7QPixmap6scrollEiiiiiiP7QRegion(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5, arg6)};
     // return 1;
   }
@@ -383,11 +383,11 @@ pub trait QPixmap_copy<RetType> {
 }
 
   // proto:  QPixmap QPixmap::copy(const QRect & rect);
-impl<'a> /*trait*/ QPixmap_copy<QPixmap> for (&'a QRect) {
+impl<'a> /*trait*/ QPixmap_copy<QPixmap> for (Option<&'a QRect>) {
   fn copy(self , rsthis: & QPixmap) -> QPixmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPixmap4copyERK5QRect()};
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {QRect::new(()).qclsinst} else {self.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZNK7QPixmap4copyERK5QRect(rsthis.qclsinst, arg0)};
     let mut ret1 = QPixmap::inheritFrom(ret as u64);
     return ret1;
@@ -451,15 +451,15 @@ pub trait QPixmap_grabWindow_s<RetType> {
 }
 
   // proto: static QPixmap QPixmap::grabWindow(WId , int x, int y, int w, int h);
-impl<'a> /*trait*/ QPixmap_grabWindow_s<QPixmap> for (*mut i32, i32, i32, i32, i32) {
+impl<'a> /*trait*/ QPixmap_grabWindow_s<QPixmap> for (*mut i32, Option<i32>, Option<i32>, Option<i32>, Option<i32>) {
   fn grabWindow_s(self ) -> QPixmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPixmap10grabWindowEiiiii()};
     let arg0 = self.0  as c_int;
-    let arg1 = self.1  as c_int;
-    let arg2 = self.2  as c_int;
-    let arg3 = self.3  as c_int;
-    let arg4 = self.4  as c_int;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_int;
+    let arg2 = (if self.2.is_none() {0} else {self.2.unwrap()})  as c_int;
+    let arg3 = (if self.3.is_none() {-1} else {self.3.unwrap()})  as c_int;
+    let arg4 = (if self.4.is_none() {-1} else {self.4.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN7QPixmap10grabWindowEiiiii(arg0, arg1, arg2, arg3, arg4)};
     let mut ret1 = QPixmap::inheritFrom(ret as u64);
     return ret1;
@@ -587,14 +587,14 @@ impl<'a> /*trait*/ QPixmap_detach<()> for () {
 }
 
   // proto:  void QPixmap::scroll(int dx, int dy, const QRect & rect, QRegion * exposed);
-impl<'a> /*trait*/ QPixmap_scroll<()> for (i32, i32, &'a QRect, &'a QRegion) {
+impl<'a> /*trait*/ QPixmap_scroll<()> for (i32, i32, &'a QRect, Option<&'a QRegion>) {
   fn scroll(self , rsthis: & QPixmap) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPixmap6scrollEiiRK5QRectP7QRegion()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
-    let arg3 = self.3.qclsinst  as *mut c_void;
+    let arg3 = (if self.3.is_none() {0} else {self.3.unwrap().qclsinst})  as *mut c_void;
      unsafe {C_ZN7QPixmap6scrollEiiRK5QRectP7QRegion(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
     // return 1;
   }
@@ -752,11 +752,11 @@ pub trait QPixmap_createHeuristicMask<RetType> {
 }
 
   // proto:  QBitmap QPixmap::createHeuristicMask(bool clipTight);
-impl<'a> /*trait*/ QPixmap_createHeuristicMask<QBitmap> for (i8) {
+impl<'a> /*trait*/ QPixmap_createHeuristicMask<QBitmap> for (Option<i8>) {
   fn createHeuristicMask(self , rsthis: & QPixmap) -> QBitmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPixmap19createHeuristicMaskEb()};
-    let arg0 = self  as c_char;
+    let arg0 = (if self.is_none() {true as i8} else {self.unwrap()})  as c_char;
     let mut ret = unsafe {C_ZNK7QPixmap19createHeuristicMaskEb(rsthis.qclsinst, arg0)};
     let mut ret1 = QBitmap::inheritFrom(ret as u64);
     return ret1;
@@ -812,15 +812,15 @@ impl<'a> /*trait*/ QPixmap_toImage<QImage> for () {
 }
 
   // proto: static QPixmap QPixmap::grabWidget(QObject * widget, int x, int y, int w, int h);
-impl<'a> /*trait*/ QPixmap_grabWidget_s<QPixmap> for (&'a QObject, i32, i32, i32, i32) {
+impl<'a> /*trait*/ QPixmap_grabWidget_s<QPixmap> for (&'a QObject, Option<i32>, Option<i32>, Option<i32>, Option<i32>) {
   fn grabWidget_s(self ) -> QPixmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPixmap10grabWidgetEP7QObjectiiii()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
-    let arg2 = self.2  as c_int;
-    let arg3 = self.3  as c_int;
-    let arg4 = self.4  as c_int;
+    let arg1 = (if self.1.is_none() {0} else {self.1.unwrap()})  as c_int;
+    let arg2 = (if self.2.is_none() {0} else {self.2.unwrap()})  as c_int;
+    let arg3 = (if self.3.is_none() {-1} else {self.3.unwrap()})  as c_int;
+    let arg4 = (if self.4.is_none() {-1} else {self.4.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN7QPixmap10grabWidgetEP7QObjectiiii(arg0, arg1, arg2, arg3, arg4)};
     let mut ret1 = QPixmap::inheritFrom(ret as u64);
     return ret1;
@@ -1030,13 +1030,13 @@ impl<'a> /*trait*/ QPixmap_height<i32> for () {
 }
 
   // proto:  bool QPixmap::save(QIODevice * device, const char * format, int quality);
-impl<'a> /*trait*/ QPixmap_save<i8> for (&'a QIODevice, &'a  String, i32) {
+impl<'a> /*trait*/ QPixmap_save<i8> for (&'a QIODevice, Option<&'a  String>, Option<i32>) {
   fn save(self , rsthis: & QPixmap) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPixmap4saveEP9QIODevicePKci()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.as_ptr()  as *mut c_char;
-    let arg2 = self.2  as c_int;
+    let arg1 = (if self.1.is_none() {0 as *const u8} else {self.1.unwrap().as_ptr()})  as *mut c_char;
+    let arg2 = (if self.2.is_none() {-1} else {self.2.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK7QPixmap4saveEP9QIODevicePKci(rsthis.qclsinst, arg0, arg1, arg2)};
     return ret as i8; // 1
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qmessagebox.h
 // dst-file: /src/widgets/qmessagebox.rs
 //
@@ -149,7 +149,7 @@ pub trait QMessageBox_critical_s<RetType> {
 }
 
   // proto: static int QMessageBox::critical(QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2);
-impl<'a> /*trait*/ QMessageBox_critical_s<i32> for (&'a QWidget, &'a QString, &'a QString, i32, i32, i32) {
+impl<'a> /*trait*/ QMessageBox_critical_s<i32> for (&'a QWidget, &'a QString, &'a QString, i32, i32, Option<i32>) {
   fn critical_s(self ) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_iii()};
@@ -158,7 +158,7 @@ impl<'a> /*trait*/ QMessageBox_critical_s<i32> for (&'a QWidget, &'a QString, &'
     let arg2 = self.2.qclsinst  as *mut c_void;
     let arg3 = self.3  as c_int;
     let arg4 = self.4  as c_int;
-    let arg5 = self.5  as c_int;
+    let arg5 = (if self.5.is_none() {0} else {self.5.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)};
     return ret as i32; // 1
     // return 1;
@@ -319,7 +319,7 @@ pub trait QMessageBox_question_s<RetType> {
 }
 
   // proto: static int QMessageBox::question(QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text, const QString & button2Text, int defaultButtonNumber, int escapeButtonNumber);
-impl<'a> /*trait*/ QMessageBox_question_s<i32> for (&'a QWidget, &'a QString, &'a QString, &'a QString, &'a QString, &'a QString, i32, i32) {
+impl<'a> /*trait*/ QMessageBox_question_s<i32> for (&'a QWidget, &'a QString, &'a QString, &'a QString, Option<&'a QString>, Option<&'a QString>, Option<i32>, Option<i32>) {
   fn question_s(self ) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_S4_S4_S4_ii()};
@@ -327,10 +327,10 @@ impl<'a> /*trait*/ QMessageBox_question_s<i32> for (&'a QWidget, &'a QString, &'
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let arg3 = self.3.qclsinst  as *mut c_void;
-    let arg4 = self.4.qclsinst  as *mut c_void;
-    let arg5 = self.5.qclsinst  as *mut c_void;
-    let arg6 = self.6  as c_int;
-    let arg7 = self.7  as c_int;
+    let arg4 = (if self.4.is_none() {QString::new(()).qclsinst} else {self.4.unwrap().qclsinst})  as *mut c_void;
+    let arg5 = (if self.5.is_none() {QString::new(()).qclsinst} else {self.5.unwrap().qclsinst})  as *mut c_void;
+    let arg6 = (if self.6.is_none() {0} else {self.6.unwrap()})  as c_int;
+    let arg7 = (if self.7.is_none() {-1} else {self.7.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)};
     return ret as i32; // 1
     // return 1;
@@ -350,7 +350,7 @@ pub trait QMessageBox_warning_s<RetType> {
 }
 
   // proto: static int QMessageBox::warning(QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2);
-impl<'a> /*trait*/ QMessageBox_warning_s<i32> for (&'a QWidget, &'a QString, &'a QString, i32, i32, i32) {
+impl<'a> /*trait*/ QMessageBox_warning_s<i32> for (&'a QWidget, &'a QString, &'a QString, i32, i32, Option<i32>) {
   fn warning_s(self ) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_iii()};
@@ -359,7 +359,7 @@ impl<'a> /*trait*/ QMessageBox_warning_s<i32> for (&'a QWidget, &'a QString, &'a
     let arg2 = self.2.qclsinst  as *mut c_void;
     let arg3 = self.3  as c_int;
     let arg4 = self.4  as c_int;
-    let arg5 = self.5  as c_int;
+    let arg5 = (if self.5.is_none() {0} else {self.5.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)};
     return ret as i32; // 1
     // return 1;
@@ -391,7 +391,7 @@ impl<'a> /*trait*/ QMessageBox_metaObject<QMetaObject> for () {
 }
 
   // proto: static int QMessageBox::question(QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2);
-impl<'a> /*trait*/ QMessageBox_question_s<i32> for (&'a QWidget, &'a QString, &'a QString, i32, i32, i32) {
+impl<'a> /*trait*/ QMessageBox_question_s<i32> for (&'a QWidget, &'a QString, &'a QString, i32, Option<i32>, Option<i32>) {
   fn question_s(self ) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_iii()};
@@ -399,8 +399,8 @@ impl<'a> /*trait*/ QMessageBox_question_s<i32> for (&'a QWidget, &'a QString, &'
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let arg3 = self.3  as c_int;
-    let arg4 = self.4  as c_int;
-    let arg5 = self.5  as c_int;
+    let arg4 = (if self.4.is_none() {0} else {self.4.unwrap()})  as c_int;
+    let arg5 = (if self.5.is_none() {0} else {self.5.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)};
     return ret as i32; // 1
     // return 1;
@@ -491,12 +491,12 @@ pub trait QMessageBox_aboutQt_s<RetType> {
 }
 
   // proto: static void QMessageBox::aboutQt(QWidget * parent, const QString & title);
-impl<'a> /*trait*/ QMessageBox_aboutQt_s<()> for (&'a QWidget, &'a QString) {
+impl<'a> /*trait*/ QMessageBox_aboutQt_s<()> for (&'a QWidget, Option<&'a QString>) {
   fn aboutQt_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBox7aboutQtEP7QWidgetRK7QString()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {QString::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
      unsafe {C_ZN11QMessageBox7aboutQtEP7QWidgetRK7QString(arg0, arg1)};
     // return 1;
   }
@@ -586,13 +586,13 @@ pub trait QMessageBox_new {
 }
 
   // proto:  void QMessageBox::QMessageBox(QWidget * parent);
-impl<'a> /*trait*/ QMessageBox_new for (&'a QWidget) {
+impl<'a> /*trait*/ QMessageBox_new for (Option<&'a QWidget>) {
   fn new(self) -> QMessageBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBoxC2EP7QWidget()};
     let ctysz: c_int = unsafe{QMessageBox_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN11QMessageBoxC2EP7QWidget(arg0)};
     let rsthis = QMessageBox{qbase: QDialog::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -601,7 +601,7 @@ impl<'a> /*trait*/ QMessageBox_new for (&'a QWidget) {
 }
 
   // proto: static int QMessageBox::critical(QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text, const QString & button2Text, int defaultButtonNumber, int escapeButtonNumber);
-impl<'a> /*trait*/ QMessageBox_critical_s<i32> for (&'a QWidget, &'a QString, &'a QString, &'a QString, &'a QString, &'a QString, i32, i32) {
+impl<'a> /*trait*/ QMessageBox_critical_s<i32> for (&'a QWidget, &'a QString, &'a QString, &'a QString, Option<&'a QString>, Option<&'a QString>, Option<i32>, Option<i32>) {
   fn critical_s(self ) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_S4_S4_S4_ii()};
@@ -609,10 +609,10 @@ impl<'a> /*trait*/ QMessageBox_critical_s<i32> for (&'a QWidget, &'a QString, &'
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let arg3 = self.3.qclsinst  as *mut c_void;
-    let arg4 = self.4.qclsinst  as *mut c_void;
-    let arg5 = self.5.qclsinst  as *mut c_void;
-    let arg6 = self.6  as c_int;
-    let arg7 = self.7  as c_int;
+    let arg4 = (if self.4.is_none() {QString::new(()).qclsinst} else {self.4.unwrap().qclsinst})  as *mut c_void;
+    let arg5 = (if self.5.is_none() {QString::new(()).qclsinst} else {self.5.unwrap().qclsinst})  as *mut c_void;
+    let arg6 = (if self.6.is_none() {0} else {self.6.unwrap()})  as c_int;
+    let arg7 = (if self.7.is_none() {-1} else {self.7.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)};
     return ret as i32; // 1
     // return 1;
@@ -667,7 +667,7 @@ impl<'a> /*trait*/ QMessageBox_setDefaultButton<()> for (&'a QPushButton) {
 }
 
   // proto: static int QMessageBox::warning(QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text, const QString & button2Text, int defaultButtonNumber, int escapeButtonNumber);
-impl<'a> /*trait*/ QMessageBox_warning_s<i32> for (&'a QWidget, &'a QString, &'a QString, &'a QString, &'a QString, &'a QString, i32, i32) {
+impl<'a> /*trait*/ QMessageBox_warning_s<i32> for (&'a QWidget, &'a QString, &'a QString, &'a QString, Option<&'a QString>, Option<&'a QString>, Option<i32>, Option<i32>) {
   fn warning_s(self ) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_S4_S4_S4_ii()};
@@ -675,10 +675,10 @@ impl<'a> /*trait*/ QMessageBox_warning_s<i32> for (&'a QWidget, &'a QString, &'a
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let arg3 = self.3.qclsinst  as *mut c_void;
-    let arg4 = self.4.qclsinst  as *mut c_void;
-    let arg5 = self.5.qclsinst  as *mut c_void;
-    let arg6 = self.6  as c_int;
-    let arg7 = self.7  as c_int;
+    let arg4 = (if self.4.is_none() {QString::new(()).qclsinst} else {self.4.unwrap().qclsinst})  as *mut c_void;
+    let arg5 = (if self.5.is_none() {QString::new(()).qclsinst} else {self.5.unwrap().qclsinst})  as *mut c_void;
+    let arg6 = (if self.6.is_none() {0} else {self.6.unwrap()})  as c_int;
+    let arg7 = (if self.7.is_none() {-1} else {self.7.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)};
     return ret as i32; // 1
     // return 1;
@@ -721,7 +721,7 @@ pub trait QMessageBox_information_s<RetType> {
 }
 
   // proto: static int QMessageBox::information(QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2);
-impl<'a> /*trait*/ QMessageBox_information_s<i32> for (&'a QWidget, &'a QString, &'a QString, i32, i32, i32) {
+impl<'a> /*trait*/ QMessageBox_information_s<i32> for (&'a QWidget, &'a QString, &'a QString, i32, Option<i32>, Option<i32>) {
   fn information_s(self ) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_iii()};
@@ -729,8 +729,8 @@ impl<'a> /*trait*/ QMessageBox_information_s<i32> for (&'a QWidget, &'a QString,
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let arg3 = self.3  as c_int;
-    let arg4 = self.4  as c_int;
-    let arg5 = self.5  as c_int;
+    let arg4 = (if self.4.is_none() {0} else {self.4.unwrap()})  as c_int;
+    let arg5 = (if self.5.is_none() {0} else {self.5.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)};
     return ret as i32; // 1
     // return 1;
@@ -928,7 +928,7 @@ impl<'a> /*trait*/ QMessageBox_buttonText<QString> for (i32) {
 }
 
   // proto: static int QMessageBox::information(QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text, const QString & button2Text, int defaultButtonNumber, int escapeButtonNumber);
-impl<'a> /*trait*/ QMessageBox_information_s<i32> for (&'a QWidget, &'a QString, &'a QString, &'a QString, &'a QString, &'a QString, i32, i32) {
+impl<'a> /*trait*/ QMessageBox_information_s<i32> for (&'a QWidget, &'a QString, &'a QString, &'a QString, Option<&'a QString>, Option<&'a QString>, Option<i32>, Option<i32>) {
   fn information_s(self ) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii()};
@@ -936,10 +936,10 @@ impl<'a> /*trait*/ QMessageBox_information_s<i32> for (&'a QWidget, &'a QString,
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let arg3 = self.3.qclsinst  as *mut c_void;
-    let arg4 = self.4.qclsinst  as *mut c_void;
-    let arg5 = self.5.qclsinst  as *mut c_void;
-    let arg6 = self.6  as c_int;
-    let arg7 = self.7  as c_int;
+    let arg4 = (if self.4.is_none() {QString::new(()).qclsinst} else {self.4.unwrap().qclsinst})  as *mut c_void;
+    let arg5 = (if self.5.is_none() {QString::new(()).qclsinst} else {self.5.unwrap().qclsinst})  as *mut c_void;
+    let arg6 = (if self.6.is_none() {0} else {self.6.unwrap()})  as c_int;
+    let arg7 = (if self.7.is_none() {-1} else {self.7.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)};
     return ret as i32; // 1
     // return 1;

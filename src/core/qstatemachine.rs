@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qstatemachine.h
 // dst-file: /src/core/qstatemachine.rs
 //
@@ -286,13 +286,13 @@ pub trait QStateMachine_new {
 }
 
   // proto:  void QStateMachine::QStateMachine(QObject * parent);
-impl<'a> /*trait*/ QStateMachine_new for (&'a QObject) {
+impl<'a> /*trait*/ QStateMachine_new for (Option<&'a QObject>) {
   fn new(self) -> QStateMachine {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStateMachineC2EP7QObject()};
     let ctysz: c_int = unsafe{QStateMachine_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN13QStateMachineC2EP7QObject(arg0)};
     let rsthis = QStateMachine{qbase: QState::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;

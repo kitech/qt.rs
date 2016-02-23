@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qresource.h
 // dst-file: /src/core/qresource.rs
 //
@@ -95,14 +95,14 @@ pub trait QResource_new {
 }
 
   // proto:  void QResource::QResource(const QString & file, const QLocale & locale);
-impl<'a> /*trait*/ QResource_new for (&'a QString, &'a QLocale) {
+impl<'a> /*trait*/ QResource_new for (Option<&'a QString>, Option<&'a QLocale>) {
   fn new(self) -> QResource {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QResourceC2ERK7QStringRK7QLocale()};
     let ctysz: c_int = unsafe{QResource_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg0 = (if self.0.is_none() {QString::new(()).qclsinst} else {self.0.unwrap().qclsinst})  as *mut c_void;
+    let arg1 = (if self.1.is_none() {QLocale::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN9QResourceC2ERK7QStringRK7QLocale(arg0, arg1)};
     let rsthis = QResource{qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -170,12 +170,12 @@ pub trait QResource_registerResource_s<RetType> {
 }
 
   // proto: static bool QResource::registerResource(const uchar * rccData, const QString & resourceRoot);
-impl<'a> /*trait*/ QResource_registerResource_s<i8> for (&'a  String, &'a QString) {
+impl<'a> /*trait*/ QResource_registerResource_s<i8> for (&'a  String, Option<&'a QString>) {
   fn registerResource_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QResource16registerResourceEPKhRK7QString()};
     let arg0 = self.0.as_ptr()  as *mut c_uchar;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {QString::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZN9QResource16registerResourceEPKhRK7QString(arg0, arg1)};
     return ret as i8; // 1
     // return 1;
@@ -291,12 +291,12 @@ pub trait QResource_unregisterResource_s<RetType> {
 }
 
   // proto: static bool QResource::unregisterResource(const uchar * rccData, const QString & resourceRoot);
-impl<'a> /*trait*/ QResource_unregisterResource_s<i8> for (&'a  String, &'a QString) {
+impl<'a> /*trait*/ QResource_unregisterResource_s<i8> for (&'a  String, Option<&'a QString>) {
   fn unregisterResource_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QResource18unregisterResourceEPKhRK7QString()};
     let arg0 = self.0.as_ptr()  as *mut c_uchar;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {QString::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZN9QResource18unregisterResourceEPKhRK7QString(arg0, arg1)};
     return ret as i8; // 1
     // return 1;
@@ -304,12 +304,12 @@ impl<'a> /*trait*/ QResource_unregisterResource_s<i8> for (&'a  String, &'a QStr
 }
 
   // proto: static bool QResource::registerResource(const QString & rccFilename, const QString & resourceRoot);
-impl<'a> /*trait*/ QResource_registerResource_s<i8> for (&'a QString, &'a QString) {
+impl<'a> /*trait*/ QResource_registerResource_s<i8> for (&'a QString, Option<&'a QString>) {
   fn registerResource_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QResource16registerResourceERK7QStringS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {QString::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZN9QResource16registerResourceERK7QStringS2_(arg0, arg1)};
     return ret as i8; // 1
     // return 1;
@@ -431,12 +431,12 @@ impl<'a> /*trait*/ QResource_setFileName<()> for (&'a QString) {
 }
 
   // proto: static bool QResource::unregisterResource(const QString & rccFilename, const QString & resourceRoot);
-impl<'a> /*trait*/ QResource_unregisterResource_s<i8> for (&'a QString, &'a QString) {
+impl<'a> /*trait*/ QResource_unregisterResource_s<i8> for (&'a QString, Option<&'a QString>) {
   fn unregisterResource_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QResource18unregisterResourceERK7QStringS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {QString::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZN9QResource18unregisterResourceERK7QStringS2_(arg0, arg1)};
     return ret as i8; // 1
     // return 1;

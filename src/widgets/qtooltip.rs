@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qtooltip.h
 // dst-file: /src/widgets/qtooltip.rs
 //
@@ -252,13 +252,13 @@ impl<'a> /*trait*/ QToolTip_setPalette_s<()> for (&'a QPalette) {
 }
 
   // proto: static void QToolTip::showText(const QPoint & pos, const QString & text, QWidget * w);
-impl<'a> /*trait*/ QToolTip_showText_s<()> for (&'a QPoint, &'a QString, &'a QWidget) {
+impl<'a> /*trait*/ QToolTip_showText_s<()> for (&'a QPoint, &'a QString, Option<&'a QWidget>) {
   fn showText_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidget()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2.qclsinst  as *mut c_void;
+    let arg2 = (if self.2.is_none() {0} else {self.2.unwrap().qclsinst})  as *mut c_void;
      unsafe {C_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidget(arg0, arg1, arg2)};
     // return 1;
   }

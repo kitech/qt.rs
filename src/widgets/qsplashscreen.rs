@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qsplashscreen.h
 // dst-file: /src/widgets/qsplashscreen.rs
 //
@@ -186,13 +186,13 @@ pub trait QSplashScreen_showMessage<RetType> {
 }
 
   // proto:  void QSplashScreen::showMessage(const QString & message, int alignment, const QColor & color);
-impl<'a> /*trait*/ QSplashScreen_showMessage<()> for (&'a QString, i32, &'a QColor) {
+impl<'a> /*trait*/ QSplashScreen_showMessage<()> for (&'a QString, Option<i32>, Option<&'a QColor>) {
   fn showMessage(self , rsthis: & QSplashScreen) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QSplashScreen11showMessageERK7QStringiRK6QColor()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
-    let arg2 = self.2.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {0 as i32} else {self.1.unwrap()})  as c_int;
+    let arg2 = (if self.2.is_none() {QColor::new(()).qclsinst} else {self.2.unwrap().qclsinst})  as *mut c_void;
      unsafe {C_ZN13QSplashScreen11showMessageERK7QStringiRK6QColor(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtGui/qrasterwindow.h
 // dst-file: /src/gui/qrasterwindow.rs
 //
@@ -77,13 +77,13 @@ pub trait QRasterWindow_new {
 }
 
   // proto:  void QRasterWindow::QRasterWindow(QWindow * parent);
-impl<'a> /*trait*/ QRasterWindow_new for (&'a QWindow) {
+impl<'a> /*trait*/ QRasterWindow_new for (Option<&'a QWindow>) {
   fn new(self) -> QRasterWindow {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QRasterWindowC2EP7QWindow()};
     let ctysz: c_int = unsafe{QRasterWindow_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN13QRasterWindowC2EP7QWindow(arg0)};
     let rsthis = QRasterWindow{qbase: QPaintDeviceWindow::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;

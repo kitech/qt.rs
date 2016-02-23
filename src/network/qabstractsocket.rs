@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Jan 19 21:53:37 2016
+// created: Wed Jan 20 00:44:03 2016
 // src-file: /QtNetwork/qabstractsocket.h
 // dst-file: /src/network/qabstractsocket.rs
 //
@@ -92,10 +92,8 @@ extern {
   fn _ZNK15QAbstractSocket5atEndEv(qthis: u64 /* *mut c_void*/) -> c_char;
   // proto:  void QAbstractSocket::setProxy(const QNetworkProxy & networkProxy);
   fn _ZN15QAbstractSocket8setProxyERK13QNetworkProxy(qthis: u64 /* *mut c_void*/, arg0: *mut c_void);
-  fn QAbstractSocket_SlotProxy_connect__ZN15QAbstractSocket12stateChangedENS_11SocketStateE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QAbstractSocket_SlotProxy_connect__ZN15QAbstractSocket9connectedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QAbstractSocket_SlotProxy_connect__ZN15QAbstractSocket9hostFoundEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
-  fn QAbstractSocket_SlotProxy_connect__ZN15QAbstractSocket5errorENS_11SocketErrorE(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QAbstractSocket_SlotProxy_connect__ZN15QAbstractSocket12disconnectedEv(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
   fn QAbstractSocket_SlotProxy_connect__ZN15QAbstractSocket27proxyAuthenticationRequiredERK13QNetworkProxyP14QAuthenticator(qthis: *mut c_void, ffifptr: *mut c_void, rsfptr: *mut c_void);
 } // <= ext block end
@@ -879,48 +877,12 @@ pub trait QAbstractSocket_disconnected_signal_connect {
   fn connect(self, sigthis: QAbstractSocket_disconnected_signal);
 }
 
-// stateChanged(class QAbstractSocket::SocketState)
-extern fn QAbstractSocket_stateChanged_signal_connect_cb_0(rsfptr:fn(i32), arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-  let rsarg0 = arg0 as i32;
-  rsfptr(rsarg0);
-}
-extern fn QAbstractSocket_stateChanged_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  let rsarg0 = arg0 as i32;
-  // rsfptr(rsarg0);
-  unsafe{(*rsfptr_raw)(rsarg0)};
-}
-impl /* trait */ QAbstractSocket_stateChanged_signal_connect for fn(i32) {
-  fn connect(self, sigthis: QAbstractSocket_stateChanged_signal) {
-    // do smth...
-    // self as u64; // error for Fn, Ok for fn
-    self as *mut c_void as u64;
-    self as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QAbstractSocket_stateChanged_signal_connect_cb_0 as *mut c_void;
-    let arg2 = self as *mut c_void;
-    unsafe {QAbstractSocket_SlotProxy_connect__ZN15QAbstractSocket12stateChangedENS_11SocketStateE(arg0, arg1, arg2)};
-  }
-}
-impl /* trait */ QAbstractSocket_stateChanged_signal_connect for Box<Fn(i32)> {
-  fn connect(self, sigthis: QAbstractSocket_stateChanged_signal) {
-    // do smth...
-    // Box::into_raw(self) as u64;
-    // Box::into_raw(self) as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QAbstractSocket_stateChanged_signal_connect_cb_box_0 as *mut c_void;
-    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
-    unsafe {QAbstractSocket_SlotProxy_connect__ZN15QAbstractSocket12stateChangedENS_11SocketStateE(arg0, arg1, arg2)};
-  }
-}
 // connected()
-extern fn QAbstractSocket_connected_signal_connect_cb_1(rsfptr:fn(), ) {
+extern fn QAbstractSocket_connected_signal_connect_cb_0(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QAbstractSocket_connected_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn()>, ) {
+extern fn QAbstractSocket_connected_signal_connect_cb_box_0(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   // rsfptr();
@@ -933,7 +895,7 @@ impl /* trait */ QAbstractSocket_connected_signal_connect for fn() {
     self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QAbstractSocket_connected_signal_connect_cb_1 as *mut c_void;
+    let arg1 = QAbstractSocket_connected_signal_connect_cb_0 as *mut c_void;
     let arg2 = self as *mut c_void;
     unsafe {QAbstractSocket_SlotProxy_connect__ZN15QAbstractSocket9connectedEv(arg0, arg1, arg2)};
   }
@@ -944,17 +906,17 @@ impl /* trait */ QAbstractSocket_connected_signal_connect for Box<Fn()> {
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QAbstractSocket_connected_signal_connect_cb_box_1 as *mut c_void;
+    let arg1 = QAbstractSocket_connected_signal_connect_cb_box_0 as *mut c_void;
     let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QAbstractSocket_SlotProxy_connect__ZN15QAbstractSocket9connectedEv(arg0, arg1, arg2)};
   }
 }
 // hostFound()
-extern fn QAbstractSocket_hostFound_signal_connect_cb_2(rsfptr:fn(), ) {
+extern fn QAbstractSocket_hostFound_signal_connect_cb_1(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QAbstractSocket_hostFound_signal_connect_cb_box_2(rsfptr_raw:*mut Box<Fn()>, ) {
+extern fn QAbstractSocket_hostFound_signal_connect_cb_box_1(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   // rsfptr();
@@ -967,7 +929,7 @@ impl /* trait */ QAbstractSocket_hostFound_signal_connect for fn() {
     self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QAbstractSocket_hostFound_signal_connect_cb_2 as *mut c_void;
+    let arg1 = QAbstractSocket_hostFound_signal_connect_cb_1 as *mut c_void;
     let arg2 = self as *mut c_void;
     unsafe {QAbstractSocket_SlotProxy_connect__ZN15QAbstractSocket9hostFoundEv(arg0, arg1, arg2)};
   }
@@ -978,53 +940,17 @@ impl /* trait */ QAbstractSocket_hostFound_signal_connect for Box<Fn()> {
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QAbstractSocket_hostFound_signal_connect_cb_box_2 as *mut c_void;
+    let arg1 = QAbstractSocket_hostFound_signal_connect_cb_box_1 as *mut c_void;
     let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QAbstractSocket_SlotProxy_connect__ZN15QAbstractSocket9hostFoundEv(arg0, arg1, arg2)};
   }
 }
-// error(class QAbstractSocket::SocketError)
-extern fn QAbstractSocket_error_signal_connect_cb_3(rsfptr:fn(i32), arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-  let rsarg0 = arg0 as i32;
-  rsfptr(rsarg0);
-}
-extern fn QAbstractSocket_error_signal_connect_cb_box_3(rsfptr_raw:*mut Box<Fn(i32)>, arg0: c_int) {
-  println!("{}:{}", file!(), line!());
-  let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
-  let rsarg0 = arg0 as i32;
-  // rsfptr(rsarg0);
-  unsafe{(*rsfptr_raw)(rsarg0)};
-}
-impl /* trait */ QAbstractSocket_error_signal_connect for fn(i32) {
-  fn connect(self, sigthis: QAbstractSocket_error_signal) {
-    // do smth...
-    // self as u64; // error for Fn, Ok for fn
-    self as *mut c_void as u64;
-    self as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QAbstractSocket_error_signal_connect_cb_3 as *mut c_void;
-    let arg2 = self as *mut c_void;
-    unsafe {QAbstractSocket_SlotProxy_connect__ZN15QAbstractSocket5errorENS_11SocketErrorE(arg0, arg1, arg2)};
-  }
-}
-impl /* trait */ QAbstractSocket_error_signal_connect for Box<Fn(i32)> {
-  fn connect(self, sigthis: QAbstractSocket_error_signal) {
-    // do smth...
-    // Box::into_raw(self) as u64;
-    // Box::into_raw(self) as *mut c_void;
-    let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QAbstractSocket_error_signal_connect_cb_box_3 as *mut c_void;
-    let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
-    unsafe {QAbstractSocket_SlotProxy_connect__ZN15QAbstractSocket5errorENS_11SocketErrorE(arg0, arg1, arg2)};
-  }
-}
 // disconnected()
-extern fn QAbstractSocket_disconnected_signal_connect_cb_4(rsfptr:fn(), ) {
+extern fn QAbstractSocket_disconnected_signal_connect_cb_2(rsfptr:fn(), ) {
   println!("{}:{}", file!(), line!());
   rsfptr();
 }
-extern fn QAbstractSocket_disconnected_signal_connect_cb_box_4(rsfptr_raw:*mut Box<Fn()>, ) {
+extern fn QAbstractSocket_disconnected_signal_connect_cb_box_2(rsfptr_raw:*mut Box<Fn()>, ) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   // rsfptr();
@@ -1037,7 +963,7 @@ impl /* trait */ QAbstractSocket_disconnected_signal_connect for fn() {
     self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QAbstractSocket_disconnected_signal_connect_cb_4 as *mut c_void;
+    let arg1 = QAbstractSocket_disconnected_signal_connect_cb_2 as *mut c_void;
     let arg2 = self as *mut c_void;
     unsafe {QAbstractSocket_SlotProxy_connect__ZN15QAbstractSocket12disconnectedEv(arg0, arg1, arg2)};
   }
@@ -1048,19 +974,19 @@ impl /* trait */ QAbstractSocket_disconnected_signal_connect for Box<Fn()> {
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QAbstractSocket_disconnected_signal_connect_cb_box_4 as *mut c_void;
+    let arg1 = QAbstractSocket_disconnected_signal_connect_cb_box_2 as *mut c_void;
     let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QAbstractSocket_SlotProxy_connect__ZN15QAbstractSocket12disconnectedEv(arg0, arg1, arg2)};
   }
 }
 // proxyAuthenticationRequired(const class QNetworkProxy &, class QAuthenticator *)
-extern fn QAbstractSocket_proxyAuthenticationRequired_signal_connect_cb_5(rsfptr:fn(QNetworkProxy, QAuthenticator), arg0: *mut c_void, arg1: *mut c_void) {
+extern fn QAbstractSocket_proxyAuthenticationRequired_signal_connect_cb_3(rsfptr:fn(QNetworkProxy, QAuthenticator), arg0: *mut c_void, arg1: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsarg0 = QNetworkProxy::inheritFrom(arg0 as u64);
   let rsarg1 = QAuthenticator::inheritFrom(arg1 as u64);
   rsfptr(rsarg0,rsarg1);
 }
-extern fn QAbstractSocket_proxyAuthenticationRequired_signal_connect_cb_box_5(rsfptr_raw:*mut Box<Fn(QNetworkProxy, QAuthenticator)>, arg0: *mut c_void, arg1: *mut c_void) {
+extern fn QAbstractSocket_proxyAuthenticationRequired_signal_connect_cb_box_3(rsfptr_raw:*mut Box<Fn(QNetworkProxy, QAuthenticator)>, arg0: *mut c_void, arg1: *mut c_void) {
   println!("{}:{}", file!(), line!());
   let rsfptr = unsafe{Box::from_raw(rsfptr_raw)};
   let rsarg0 = QNetworkProxy::inheritFrom(arg0 as u64);
@@ -1075,7 +1001,7 @@ impl /* trait */ QAbstractSocket_proxyAuthenticationRequired_signal_connect for 
     self as *mut c_void as u64;
     self as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QAbstractSocket_proxyAuthenticationRequired_signal_connect_cb_5 as *mut c_void;
+    let arg1 = QAbstractSocket_proxyAuthenticationRequired_signal_connect_cb_3 as *mut c_void;
     let arg2 = self as *mut c_void;
     unsafe {QAbstractSocket_SlotProxy_connect__ZN15QAbstractSocket27proxyAuthenticationRequiredERK13QNetworkProxyP14QAuthenticator(arg0, arg1, arg2)};
   }
@@ -1086,7 +1012,7 @@ impl /* trait */ QAbstractSocket_proxyAuthenticationRequired_signal_connect for 
     // Box::into_raw(self) as u64;
     // Box::into_raw(self) as *mut c_void;
     let arg0 = sigthis.poi as *mut c_void;
-    let arg1 = QAbstractSocket_proxyAuthenticationRequired_signal_connect_cb_box_5 as *mut c_void;
+    let arg1 = QAbstractSocket_proxyAuthenticationRequired_signal_connect_cb_box_3 as *mut c_void;
     let arg2 = Box::into_raw(Box::new(self)) as *mut c_void;
     unsafe {QAbstractSocket_SlotProxy_connect__ZN15QAbstractSocket27proxyAuthenticationRequiredERK13QNetworkProxyP14QAuthenticator(arg0, arg1, arg2)};
   }

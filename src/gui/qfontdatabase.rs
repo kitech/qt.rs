@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtGui/qfontdatabase.h
 // dst-file: /src/gui/qfontdatabase.rs
 //
@@ -109,12 +109,12 @@ pub trait QFontDatabase_pointSizes<RetType> {
 }
 
   // proto:  QList<int> QFontDatabase::pointSizes(const QString & family, const QString & style);
-impl<'a> /*trait*/ QFontDatabase_pointSizes<u64> for (&'a QString, &'a QString) {
+impl<'a> /*trait*/ QFontDatabase_pointSizes<u64> for (&'a QString, Option<&'a QString>) {
   fn pointSizes(self , rsthis: & QFontDatabase) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QFontDatabase10pointSizesERK7QStringS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {QString::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZN13QFontDatabase10pointSizesERK7QStringS2_(rsthis.qclsinst, arg0, arg1)};
     return ret as u64; // 5
     // return 1;
@@ -310,12 +310,12 @@ pub trait QFontDatabase_isFixedPitch<RetType> {
 }
 
   // proto:  bool QFontDatabase::isFixedPitch(const QString & family, const QString & style);
-impl<'a> /*trait*/ QFontDatabase_isFixedPitch<i8> for (&'a QString, &'a QString) {
+impl<'a> /*trait*/ QFontDatabase_isFixedPitch<i8> for (&'a QString, Option<&'a QString>) {
   fn isFixedPitch(self , rsthis: & QFontDatabase) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontDatabase12isFixedPitchERK7QStringS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {QString::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZNK13QFontDatabase12isFixedPitchERK7QStringS2_(rsthis.qclsinst, arg0, arg1)};
     return ret as i8; // 1
     // return 1;
@@ -481,12 +481,12 @@ pub trait QFontDatabase_isScalable<RetType> {
 }
 
   // proto:  bool QFontDatabase::isScalable(const QString & family, const QString & style);
-impl<'a> /*trait*/ QFontDatabase_isScalable<i8> for (&'a QString, &'a QString) {
+impl<'a> /*trait*/ QFontDatabase_isScalable<i8> for (&'a QString, Option<&'a QString>) {
   fn isScalable(self , rsthis: & QFontDatabase) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontDatabase10isScalableERK7QStringS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {QString::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZNK13QFontDatabase10isScalableERK7QStringS2_(rsthis.qclsinst, arg0, arg1)};
     return ret as i8; // 1
     // return 1;
@@ -543,12 +543,12 @@ pub trait QFontDatabase_isBitmapScalable<RetType> {
 }
 
   // proto:  bool QFontDatabase::isBitmapScalable(const QString & family, const QString & style);
-impl<'a> /*trait*/ QFontDatabase_isBitmapScalable<i8> for (&'a QString, &'a QString) {
+impl<'a> /*trait*/ QFontDatabase_isBitmapScalable<i8> for (&'a QString, Option<&'a QString>) {
   fn isBitmapScalable(self , rsthis: & QFontDatabase) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontDatabase16isBitmapScalableERK7QStringS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {QString::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZNK13QFontDatabase16isBitmapScalableERK7QStringS2_(rsthis.qclsinst, arg0, arg1)};
     return ret as i8; // 1
     // return 1;
@@ -568,12 +568,12 @@ pub trait QFontDatabase_isSmoothlyScalable<RetType> {
 }
 
   // proto:  bool QFontDatabase::isSmoothlyScalable(const QString & family, const QString & style);
-impl<'a> /*trait*/ QFontDatabase_isSmoothlyScalable<i8> for (&'a QString, &'a QString) {
+impl<'a> /*trait*/ QFontDatabase_isSmoothlyScalable<i8> for (&'a QString, Option<&'a QString>) {
   fn isSmoothlyScalable(self , rsthis: & QFontDatabase) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontDatabase18isSmoothlyScalableERK7QStringS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {QString::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZNK13QFontDatabase18isSmoothlyScalableERK7QStringS2_(rsthis.qclsinst, arg0, arg1)};
     return ret as i8; // 1
     // return 1;

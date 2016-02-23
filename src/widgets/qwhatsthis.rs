@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtWidgets/qwhatsthis.h
 // dst-file: /src/widgets/qwhatsthis.rs
 //
@@ -163,13 +163,13 @@ pub trait QWhatsThis_showText_s<RetType> {
 }
 
   // proto: static void QWhatsThis::showText(const QPoint & pos, const QString & text, QWidget * w);
-impl<'a> /*trait*/ QWhatsThis_showText_s<()> for (&'a QPoint, &'a QString, &'a QWidget) {
+impl<'a> /*trait*/ QWhatsThis_showText_s<()> for (&'a QPoint, &'a QString, Option<&'a QWidget>) {
   fn showText_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QWhatsThis8showTextERK6QPointRK7QStringP7QWidget()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2.qclsinst  as *mut c_void;
+    let arg2 = (if self.2.is_none() {0} else {self.2.unwrap().qclsinst})  as *mut c_void;
      unsafe {C_ZN10QWhatsThis8showTextERK6QPointRK7QStringP7QWidget(arg0, arg1, arg2)};
     // return 1;
   }
@@ -188,11 +188,11 @@ pub trait QWhatsThis_createAction_s<RetType> {
 }
 
   // proto: static QAction * QWhatsThis::createAction(QObject * parent);
-impl<'a> /*trait*/ QWhatsThis_createAction_s<QAction> for (&'a QObject) {
+impl<'a> /*trait*/ QWhatsThis_createAction_s<QAction> for (Option<&'a QObject>) {
   fn createAction_s(self ) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QWhatsThis12createActionEP7QObject()};
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let mut ret = unsafe {C_ZN10QWhatsThis12createActionEP7QObject(arg0)};
     let mut ret1 = QAction::inheritFrom(ret as u64);
     return ret1;

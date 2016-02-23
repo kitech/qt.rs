@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtGui/qpagelayout.h
 // dst-file: /src/gui/qpagelayout.rs
 //
@@ -606,12 +606,12 @@ pub trait QPageLayout_setPageSize<RetType> {
 }
 
   // proto:  void QPageLayout::setPageSize(const QPageSize & pageSize, const QMarginsF & minMargins);
-impl<'a> /*trait*/ QPageLayout_setPageSize<()> for (&'a QPageSize, &'a QMarginsF) {
+impl<'a> /*trait*/ QPageLayout_setPageSize<()> for (&'a QPageSize, Option<&'a QMarginsF>) {
   fn setPageSize(self , rsthis: & QPageLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPageLayout11setPageSizeERK9QPageSizeRK9QMarginsF()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg1 = (if self.1.is_none() {QMarginsF::new(()).qclsinst} else {self.1.unwrap().qclsinst})  as *mut c_void;
      unsafe {C_ZN11QPageLayout11setPageSizeERK9QPageSizeRK9QMarginsF(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtCore/qitemselectionmodel.h
 // dst-file: /src/core/qitemselectionmodel.rs
 //
@@ -976,13 +976,13 @@ pub trait QItemSelectionModel_new {
 }
 
   // proto:  void QItemSelectionModel::QItemSelectionModel(QAbstractItemModel * model);
-impl<'a> /*trait*/ QItemSelectionModel_new for (&'a QAbstractItemModel) {
+impl<'a> /*trait*/ QItemSelectionModel_new for (Option<&'a QAbstractItemModel>) {
   fn new(self) -> QItemSelectionModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QItemSelectionModelC2EP18QAbstractItemModel()};
     let ctysz: c_int = unsafe{QItemSelectionModel_Class_Size()};
     let qthis_ph: u64 = unsafe{calloc(1, ctysz as usize)} as u64;
-    let arg0 = self.qclsinst  as *mut c_void;
+    let arg0 = (if self.is_none() {0} else {self.unwrap().qclsinst})  as *mut c_void;
     let qthis: u64 = unsafe {C_ZN19QItemSelectionModelC2EP18QAbstractItemModel(arg0)};
     let rsthis = QItemSelectionModel{qbase: QObject::inheritFrom(qthis), qclsinst: qthis, ..Default::default()};
     return rsthis;
@@ -1070,11 +1070,11 @@ pub trait QItemSelectionModel_selectedColumns<RetType> {
 }
 
   // proto:  QModelIndexList QItemSelectionModel::selectedColumns(int row);
-impl<'a> /*trait*/ QItemSelectionModel_selectedColumns<u64> for (i32) {
+impl<'a> /*trait*/ QItemSelectionModel_selectedColumns<u64> for (Option<i32>) {
   fn selectedColumns(self , rsthis: & QItemSelectionModel) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionModel15selectedColumnsEi()};
-    let arg0 = self  as c_int;
+    let arg0 = (if self.is_none() {0} else {self.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK19QItemSelectionModel15selectedColumnsEi(rsthis.qclsinst, arg0)};
     return ret as u64; // 5
     // return 1;
@@ -1276,11 +1276,11 @@ pub trait QItemSelectionModel_selectedRows<RetType> {
 }
 
   // proto:  QModelIndexList QItemSelectionModel::selectedRows(int column);
-impl<'a> /*trait*/ QItemSelectionModel_selectedRows<u64> for (i32) {
+impl<'a> /*trait*/ QItemSelectionModel_selectedRows<u64> for (Option<i32>) {
   fn selectedRows(self , rsthis: & QItemSelectionModel) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionModel12selectedRowsEi()};
-    let arg0 = self  as c_int;
+    let arg0 = (if self.is_none() {0} else {self.unwrap()})  as c_int;
     let mut ret = unsafe {C_ZNK19QItemSelectionModel12selectedRowsEi(rsthis.qclsinst, arg0)};
     return ret as u64; // 5
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Jan 28 22:38:45 2016
+// created: Mon Feb 22 23:57:02 2016
 // src-file: /QtGui/qmatrix.h
 // dst-file: /src/gui/qmatrix.rs
 //
@@ -553,11 +553,11 @@ pub trait QMatrix_inverted<RetType> {
 }
 
   // proto:  QMatrix QMatrix::inverted(bool * invertible);
-impl<'a> /*trait*/ QMatrix_inverted<QMatrix> for (&'a mut Vec<i8>) {
+impl<'a> /*trait*/ QMatrix_inverted<QMatrix> for (Option<&'a mut Vec<i8>>) {
   fn inverted(self , rsthis: & QMatrix) -> QMatrix {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK7QMatrix8invertedEPb()};
-    let arg0 = self.as_ptr()  as *mut c_char;
+    let arg0 = (if self.is_none() {0 as *const i8} else {self.unwrap().as_ptr()})  as *mut c_char;
     let mut ret = unsafe {C_ZNK7QMatrix8invertedEPb(rsthis.qclsinst, arg0)};
     let mut ret1 = QMatrix::inheritFrom(ret as u64);
     return ret1;
