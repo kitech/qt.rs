@@ -7,7 +7,7 @@ This project provides bindings that allow the QT Gui toolkit to be used from the
 
 #### depends
 
-    git clone https://github.com/kitech/qt.inlien.git
+    git clone https://github.com/kitech/qt.inline.git
     mkdir qt.inline/build
     cd qt.inline/build
     cmake -DCMAKE_INSTALL_PREFIX=/usr ..
@@ -22,7 +22,7 @@ This project provides bindings that allow the QT Gui toolkit to be used from the
 
 ## Examples
 
-    cargo build --examle button
+    cargo build --example button
 
 ## Supported Qt5 modules
 
