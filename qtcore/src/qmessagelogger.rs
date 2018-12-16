@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -93,7 +93,7 @@ pub trait QMessageLogger_QMessageLogger_0 {
 impl<'a> /*trait*/ QMessageLogger_QMessageLogger_0 for () {
   fn QMessageLogger_0(self) -> QMessageLogger {
     // unsafe{_ZN14QMessageLoggerC2Ev()};
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN14QMessageLoggerC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN14QMessageLoggerC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QMessageLogger{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -127,7 +127,7 @@ impl<'a> /*trait*/ QMessageLogger_QMessageLogger_1 for (usize,i32,usize) {
     let arg0 = (self.0) as *const usize as usize;
     let arg1 = (&self.1) as *const i32 as usize;
     let arg2 = (self.2) as *const usize as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN14QMessageLoggerC2EPKciS1_", 3,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN14QMessageLoggerC2EPKciS1_", 3,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QMessageLogger{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -162,7 +162,7 @@ impl<'a> /*trait*/ QMessageLogger_QMessageLogger_2 for (usize,i32,usize,usize) {
     let arg1 = (&self.1) as *const i32 as usize;
     let arg2 = (self.2) as *const usize as usize;
     let arg3 = (self.3) as *const usize as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN14QMessageLoggerC2EPKciS1_S1_", 4,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN14QMessageLoggerC2EPKciS1_S1_", 4,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QMessageLogger{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

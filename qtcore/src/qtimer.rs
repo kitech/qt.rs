@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -95,7 +95,7 @@ pub trait QTimer_metaObject_0<RetType> {
 impl<'a> /*trait*/ QTimer_metaObject_0<usize> for () {
   fn metaObject_0(self , rsthis: & QTimer) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK6QTimer10metaObjectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK6QTimer10metaObjectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -126,7 +126,7 @@ impl<'a> /*trait*/ QTimer_QTimer_0 for (usize) {
   fn QTimer_0(self) -> QTimer {
     // unsafe{_ZN6QTimerC2EP7QObject()};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN6QTimerC2EP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN6QTimerC2EP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QTimer{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -169,7 +169,7 @@ pub trait QTimer_isActive_0<RetType> {
 impl<'a> /*trait*/ QTimer_isActive_0<bool> for () {
   fn isActive_0(self , rsthis: & QTimer) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK6QTimer8isActiveEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK6QTimer8isActiveEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -195,7 +195,7 @@ pub trait QTimer_timerId_0<RetType> {
 impl<'a> /*trait*/ QTimer_timerId_0<i32> for () {
   fn timerId_0(self , rsthis: & QTimer) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK6QTimer7timerIdEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK6QTimer7timerIdEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -222,7 +222,7 @@ impl<'a> /*trait*/ QTimer_setInterval_0<(/*void*/)> for (i32) {
   fn setInterval_0(self , rsthis: & QTimer) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-     qtrt::InvokeQtFunc6("_ZN6QTimer11setIntervalEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN6QTimer11setIntervalEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -247,7 +247,7 @@ pub trait QTimer_interval_0<RetType> {
 impl<'a> /*trait*/ QTimer_interval_0<i32> for () {
   fn interval_0(self , rsthis: & QTimer) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK6QTimer8intervalEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK6QTimer8intervalEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -273,7 +273,7 @@ pub trait QTimer_remainingTime_0<RetType> {
 impl<'a> /*trait*/ QTimer_remainingTime_0<i32> for () {
   fn remainingTime_0(self , rsthis: & QTimer) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK6QTimer13remainingTimeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK6QTimer13remainingTimeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -300,7 +300,7 @@ impl<'a> /*trait*/ QTimer_setTimerType_0<(/*void*/)> for (i32) {
   fn setTimerType_0(self , rsthis: & QTimer) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-     qtrt::InvokeQtFunc6("_ZN6QTimer12setTimerTypeEN2Qt9TimerTypeE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN6QTimer12setTimerTypeEN2Qt9TimerTypeE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -325,7 +325,7 @@ pub trait QTimer_timerType_0<RetType> {
 impl<'a> /*trait*/ QTimer_timerType_0<i32> for () {
   fn timerType_0(self , rsthis: & QTimer) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK6QTimer9timerTypeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK6QTimer9timerTypeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -352,7 +352,7 @@ impl<'a> /*trait*/ QTimer_setSingleShot_0<(/*void*/)> for (bool) {
   fn setSingleShot_0(self , rsthis: & QTimer) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const bool as usize;
-     qtrt::InvokeQtFunc6("_ZN6QTimer13setSingleShotEb", 1,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN6QTimer13setSingleShotEb", 1,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -377,7 +377,7 @@ pub trait QTimer_isSingleShot_0<RetType> {
 impl<'a> /*trait*/ QTimer_isSingleShot_0<bool> for () {
   fn isSingleShot_0(self , rsthis: & QTimer) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK6QTimer12isSingleShotEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK6QTimer12isSingleShotEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -432,7 +432,7 @@ impl<'a> /*trait*/ QTimer_singleShot_0<(/*void*/)> for (i32,usize,usize) {
     let arg0 = (&self.0) as *const i32 as usize;
     let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
     let arg2 = (self.2) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN6QTimer10singleShotEiPK7QObjectPKc", 3,qtrt::FFITY_INT,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN6QTimer10singleShotEiPK7QObjectPKc", 3,qtrt::FFITY_INT,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -487,7 +487,7 @@ impl<'a> /*trait*/ QTimer_singleShot_1<(/*void*/)> for (i32,i32,usize,usize) {
     let arg1 = (&self.1) as *const i32 as usize;
     let arg2 = (&self.2/*.qclsinst*/) as *const usize as usize;
     let arg3 = (self.3) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN6QTimer10singleShotEiN2Qt9TimerTypeEPK7QObjectPKc", 4,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN6QTimer10singleShotEiN2Qt9TimerTypeEPK7QObjectPKc", 4,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -517,7 +517,7 @@ impl<'a> /*trait*/ QTimer_start_0<(/*void*/)> for (i32) {
   fn start_0(self , rsthis: & QTimer) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-     qtrt::InvokeQtFunc6("_ZN6QTimer5startEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN6QTimer5startEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -546,7 +546,7 @@ pub trait QTimer_start_1<RetType> {
 impl<'a> /*trait*/ QTimer_start_1<(/*void*/)> for () {
   fn start_1(self , rsthis: & QTimer) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN6QTimer5startEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN6QTimer5startEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -573,7 +573,7 @@ pub trait QTimer_stop_0<RetType> {
 impl<'a> /*trait*/ QTimer_stop_0<(/*void*/)> for () {
   fn stop_0(self , rsthis: & QTimer) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN6QTimer4stopEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN6QTimer4stopEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -602,7 +602,7 @@ pub trait QTimer_intervalAsDuration_0<RetType> {
 impl<'a> /*trait*/ QTimer_intervalAsDuration_0<i32> for () {
   fn intervalAsDuration_0(self , rsthis: & QTimer) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK6QTimer18intervalAsDurationEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK6QTimer18intervalAsDurationEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -632,7 +632,7 @@ pub trait QTimer_remainingTimeAsDuration_0<RetType> {
 impl<'a> /*trait*/ QTimer_remainingTimeAsDuration_0<i32> for () {
   fn remainingTimeAsDuration_0(self , rsthis: & QTimer) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK6QTimer23remainingTimeAsDurationEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK6QTimer23remainingTimeAsDurationEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -659,7 +659,7 @@ impl<'a> /*trait*/ QTimer_timerEvent_0<(/*void*/)> for (usize) {
   fn timerEvent_0(self , rsthis: & QTimer) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN6QTimer10timerEventEP11QTimerEvent", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN6QTimer10timerEventEP11QTimerEvent", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }

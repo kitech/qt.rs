@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -93,7 +93,7 @@ pub trait QMetaMethod_QMetaMethod_0 {
 impl<'a> /*trait*/ QMetaMethod_QMetaMethod_0 for () {
   fn QMetaMethod_0(self) -> QMetaMethod {
     // unsafe{_ZN11QMetaMethodC2Ev()};
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN11QMetaMethodC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN11QMetaMethodC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QMetaMethod{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -120,7 +120,7 @@ pub trait QMetaMethod_methodSignature_0<RetType> {
 impl<'a> /*trait*/ QMetaMethod_methodSignature_0<usize> for () {
   fn methodSignature_0(self , rsthis: & QMetaMethod) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod15methodSignatureEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod15methodSignatureEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -146,7 +146,7 @@ pub trait QMetaMethod_name_0<RetType> {
 impl<'a> /*trait*/ QMetaMethod_name_0<usize> for () {
   fn name_0(self , rsthis: & QMetaMethod) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod4nameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod4nameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -172,7 +172,7 @@ pub trait QMetaMethod_typeName_0<RetType> {
 impl<'a> /*trait*/ QMetaMethod_typeName_0<usize> for () {
   fn typeName_0(self , rsthis: & QMetaMethod) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod8typeNameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod8typeNameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -198,7 +198,7 @@ pub trait QMetaMethod_returnType_0<RetType> {
 impl<'a> /*trait*/ QMetaMethod_returnType_0<i32> for () {
   fn returnType_0(self , rsthis: & QMetaMethod) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod10returnTypeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod10returnTypeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -224,7 +224,7 @@ pub trait QMetaMethod_parameterCount_0<RetType> {
 impl<'a> /*trait*/ QMetaMethod_parameterCount_0<i32> for () {
   fn parameterCount_0(self , rsthis: & QMetaMethod) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod14parameterCountEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod14parameterCountEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -251,7 +251,7 @@ impl<'a> /*trait*/ QMetaMethod_parameterType_0<i32> for (i32) {
   fn parameterType_0(self , rsthis: & QMetaMethod) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod13parameterTypeEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod13parameterTypeEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -278,7 +278,7 @@ impl<'a> /*trait*/ QMetaMethod_getParameterTypes_0<(/*void*/)> for (usize) {
   fn getParameterTypes_0(self , rsthis: & QMetaMethod) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZNK11QMetaMethod17getParameterTypesEPi", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZNK11QMetaMethod17getParameterTypesEPi", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -303,7 +303,7 @@ pub trait QMetaMethod_tag_0<RetType> {
 impl<'a> /*trait*/ QMetaMethod_tag_0<usize> for () {
   fn tag_0(self , rsthis: & QMetaMethod) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod3tagEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod3tagEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -329,7 +329,7 @@ pub trait QMetaMethod_access_0<RetType> {
 impl<'a> /*trait*/ QMetaMethod_access_0<i32> for () {
   fn access_0(self , rsthis: & QMetaMethod) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod6accessEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod6accessEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -355,7 +355,7 @@ pub trait QMetaMethod_methodType_0<RetType> {
 impl<'a> /*trait*/ QMetaMethod_methodType_0<i32> for () {
   fn methodType_0(self , rsthis: & QMetaMethod) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod10methodTypeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod10methodTypeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -381,7 +381,7 @@ pub trait QMetaMethod_attributes_0<RetType> {
 impl<'a> /*trait*/ QMetaMethod_attributes_0<i32> for () {
   fn attributes_0(self , rsthis: & QMetaMethod) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod10attributesEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod10attributesEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -407,7 +407,7 @@ pub trait QMetaMethod_methodIndex_0<RetType> {
 impl<'a> /*trait*/ QMetaMethod_methodIndex_0<i32> for () {
   fn methodIndex_0(self , rsthis: & QMetaMethod) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod11methodIndexEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod11methodIndexEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -433,7 +433,7 @@ pub trait QMetaMethod_revision_0<RetType> {
 impl<'a> /*trait*/ QMetaMethod_revision_0<i32> for () {
   fn revision_0(self , rsthis: & QMetaMethod) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod8revisionEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod8revisionEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -459,7 +459,7 @@ pub trait QMetaMethod_enclosingMetaObject_0<RetType> {
 impl<'a> /*trait*/ QMetaMethod_enclosingMetaObject_0<usize> for () {
   fn enclosingMetaObject_0(self , rsthis: & QMetaMethod) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod19enclosingMetaObjectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod19enclosingMetaObjectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -498,7 +498,7 @@ impl<'a> /*trait*/ QMetaMethod_invoke_0<bool> for (usize,i32,usize,usize,usize,u
     let arg10 = (&self.10/*.qclsinst*/) as *const usize as usize;
     let arg11 = (&self.11/*.qclsinst*/) as *const usize as usize;
     let arg12 = (&self.12/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod6invokeEP7QObjectN2Qt14ConnectionTypeE22QGenericReturnArgument16QGenericArgumentS5_S5_S5_S5_S5_S5_S5_S5_S5_", 13,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,arg0,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9,arg10,arg11,arg12,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod6invokeEP7QObjectN2Qt14ConnectionTypeE22QGenericReturnArgument16QGenericArgumentS5_S5_S5_S5_S5_S5_S5_S5_S5_", 13,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,arg0,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9,arg10,arg11,arg12,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -536,7 +536,7 @@ impl<'a> /*trait*/ QMetaMethod_invoke_1<bool> for (usize,usize,usize,usize,usize
     let arg9 = (&self.9/*.qclsinst*/) as *const usize as usize;
     let arg10 = (&self.10/*.qclsinst*/) as *const usize as usize;
     let arg11 = (&self.11/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod6invokeEP7QObject22QGenericReturnArgument16QGenericArgumentS3_S3_S3_S3_S3_S3_S3_S3_S3_", 12,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,arg0,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9,arg10,arg11,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod6invokeEP7QObject22QGenericReturnArgument16QGenericArgumentS3_S3_S3_S3_S3_S3_S3_S3_S3_", 12,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,arg0,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9,arg10,arg11,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -574,7 +574,7 @@ impl<'a> /*trait*/ QMetaMethod_invoke_2<bool> for (usize,i32,usize,usize,usize,u
     let arg9 = (&self.9/*.qclsinst*/) as *const usize as usize;
     let arg10 = (&self.10/*.qclsinst*/) as *const usize as usize;
     let arg11 = (&self.11/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod6invokeEP7QObjectN2Qt14ConnectionTypeE16QGenericArgumentS4_S4_S4_S4_S4_S4_S4_S4_S4_", 12,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,arg0,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9,arg10,arg11,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod6invokeEP7QObjectN2Qt14ConnectionTypeE16QGenericArgumentS4_S4_S4_S4_S4_S4_S4_S4_S4_", 12,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,arg0,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9,arg10,arg11,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -611,7 +611,7 @@ impl<'a> /*trait*/ QMetaMethod_invoke_3<bool> for (usize,usize,usize,usize,usize
     let arg8 = (&self.8/*.qclsinst*/) as *const usize as usize;
     let arg9 = (&self.9/*.qclsinst*/) as *const usize as usize;
     let arg10 = (&self.10/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod6invokeEP7QObject16QGenericArgumentS2_S2_S2_S2_S2_S2_S2_S2_S2_", 11,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,arg0,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9,arg10,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod6invokeEP7QObject16QGenericArgumentS2_S2_S2_S2_S2_S2_S2_S2_S2_", 11,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,arg0,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9,arg10,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -649,7 +649,7 @@ impl<'a> /*trait*/ QMetaMethod_invokeOnGadget_0<bool> for (usize,usize,usize,usi
     let arg9 = (&self.9/*.qclsinst*/) as *const usize as usize;
     let arg10 = (&self.10/*.qclsinst*/) as *const usize as usize;
     let arg11 = (&self.11/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod14invokeOnGadgetEPv22QGenericReturnArgument16QGenericArgumentS2_S2_S2_S2_S2_S2_S2_S2_S2_", 12,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,arg0,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9,arg10,arg11,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod14invokeOnGadgetEPv22QGenericReturnArgument16QGenericArgumentS2_S2_S2_S2_S2_S2_S2_S2_S2_", 12,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,arg0,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9,arg10,arg11,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -686,7 +686,7 @@ impl<'a> /*trait*/ QMetaMethod_invokeOnGadget_1<bool> for (usize,usize,usize,usi
     let arg8 = (&self.8/*.qclsinst*/) as *const usize as usize;
     let arg9 = (&self.9/*.qclsinst*/) as *const usize as usize;
     let arg10 = (&self.10/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod14invokeOnGadgetEPv16QGenericArgumentS1_S1_S1_S1_S1_S1_S1_S1_S1_", 11,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,arg0,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9,arg10,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod14invokeOnGadgetEPv16QGenericArgumentS1_S1_S1_S1_S1_S1_S1_S1_S1_", 11,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,arg0,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9,arg10,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -712,7 +712,7 @@ pub trait QMetaMethod_isValid_0<RetType> {
 impl<'a> /*trait*/ QMetaMethod_isValid_0<bool> for () {
   fn isValid_0(self , rsthis: & QMetaMethod) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod7isValidEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QMetaMethod7isValidEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }

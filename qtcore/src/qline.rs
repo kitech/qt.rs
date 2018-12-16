@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -93,7 +93,7 @@ pub trait QLine_QLine_0 {
 impl<'a> /*trait*/ QLine_QLine_0 for () {
   fn QLine_0(self) -> QLine {
     // unsafe{_ZN5QLineC2Ev()};
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN5QLineC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN5QLineC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QLine{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -126,7 +126,7 @@ impl<'a> /*trait*/ QLine_QLine_1 for (usize,usize) {
     // unsafe{_ZN5QLineC2ERK6QPointS2_()};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN5QLineC2ERK6QPointS2_", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN5QLineC2ERK6QPointS2_", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QLine{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -161,7 +161,7 @@ impl<'a> /*trait*/ QLine_QLine_2 for (i32,i32,i32,i32) {
     let arg1 = (&self.1) as *const i32 as usize;
     let arg2 = (&self.2) as *const i32 as usize;
     let arg3 = (&self.3) as *const i32 as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN5QLineC2Eiiii", 4,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN5QLineC2Eiiii", 4,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QLine{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -188,7 +188,7 @@ pub trait QLine_isNull_0<RetType> {
 impl<'a> /*trait*/ QLine_isNull_0<bool> for () {
   fn isNull_0(self , rsthis: & QLine) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK5QLine6isNullEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK5QLine6isNullEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -216,7 +216,7 @@ pub trait QLine_p1_0<RetType> {
 impl<'a> /*trait*/ QLine_p1_0<usize> for () {
   fn p1_0(self , rsthis: & QLine) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK5QLine2p1Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK5QLine2p1Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -244,7 +244,7 @@ pub trait QLine_p2_0<RetType> {
 impl<'a> /*trait*/ QLine_p2_0<usize> for () {
   fn p2_0(self , rsthis: & QLine) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK5QLine2p2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK5QLine2p2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -272,7 +272,7 @@ pub trait QLine_x1_0<RetType> {
 impl<'a> /*trait*/ QLine_x1_0<i32> for () {
   fn x1_0(self , rsthis: & QLine) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK5QLine2x1Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK5QLine2x1Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -300,7 +300,7 @@ pub trait QLine_y1_0<RetType> {
 impl<'a> /*trait*/ QLine_y1_0<i32> for () {
   fn y1_0(self , rsthis: & QLine) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK5QLine2y1Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK5QLine2y1Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -328,7 +328,7 @@ pub trait QLine_x2_0<RetType> {
 impl<'a> /*trait*/ QLine_x2_0<i32> for () {
   fn x2_0(self , rsthis: & QLine) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK5QLine2x2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK5QLine2x2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -356,7 +356,7 @@ pub trait QLine_y2_0<RetType> {
 impl<'a> /*trait*/ QLine_y2_0<i32> for () {
   fn y2_0(self , rsthis: & QLine) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK5QLine2y2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK5QLine2y2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -384,7 +384,7 @@ pub trait QLine_dx_0<RetType> {
 impl<'a> /*trait*/ QLine_dx_0<i32> for () {
   fn dx_0(self , rsthis: & QLine) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK5QLine2dxEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK5QLine2dxEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -412,7 +412,7 @@ pub trait QLine_dy_0<RetType> {
 impl<'a> /*trait*/ QLine_dy_0<i32> for () {
   fn dy_0(self , rsthis: & QLine) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK5QLine2dyEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK5QLine2dyEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -439,7 +439,7 @@ impl<'a> /*trait*/ QLine_translate_0<(/*void*/)> for (usize) {
   fn translate_0(self , rsthis: & QLine) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN5QLine9translateERK6QPoint", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN5QLine9translateERK6QPoint", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -466,7 +466,7 @@ impl<'a> /*trait*/ QLine_translate_1<(/*void*/)> for (i32,i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0) as *const i32 as usize;
     let arg1 = (&self.1) as *const i32 as usize;
-     qtrt::InvokeQtFunc6("_ZN5QLine9translateEii", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN5QLine9translateEii", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -494,7 +494,7 @@ impl<'a> /*trait*/ QLine_translated_0<usize> for (usize) {
   fn translated_0(self , rsthis: & QLine) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK5QLine10translatedERK6QPoint", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK5QLine10translatedERK6QPoint", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -524,7 +524,7 @@ impl<'a> /*trait*/ QLine_translated_1<usize> for (i32,i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0) as *const i32 as usize;
     let arg1 = (&self.1) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK5QLine10translatedEii", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK5QLine10translatedEii", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -552,7 +552,7 @@ pub trait QLine_center_0<RetType> {
 impl<'a> /*trait*/ QLine_center_0<usize> for () {
   fn center_0(self , rsthis: & QLine) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK5QLine6centerEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK5QLine6centerEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -583,7 +583,7 @@ impl<'a> /*trait*/ QLine_setP1_0<(/*void*/)> for (usize) {
   fn setP1_0(self , rsthis: & QLine) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN5QLine5setP1ERK6QPoint", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN5QLine5setP1ERK6QPoint", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -613,7 +613,7 @@ impl<'a> /*trait*/ QLine_setP2_0<(/*void*/)> for (usize) {
   fn setP2_0(self , rsthis: & QLine) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN5QLine5setP2ERK6QPoint", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN5QLine5setP2ERK6QPoint", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -644,7 +644,7 @@ impl<'a> /*trait*/ QLine_setPoints_0<(/*void*/)> for (usize,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN5QLine9setPointsERK6QPointS2_", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN5QLine9setPointsERK6QPointS2_", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -677,7 +677,7 @@ impl<'a> /*trait*/ QLine_setLine_0<(/*void*/)> for (i32,i32,i32,i32) {
     let arg1 = (&self.1) as *const i32 as usize;
     let arg2 = (&self.2) as *const i32 as usize;
     let arg3 = (&self.3) as *const i32 as usize;
-     qtrt::InvokeQtFunc6("_ZN5QLine7setLineEiiii", 4,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN5QLine7setLineEiiii", 4,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -703,7 +703,7 @@ impl<'a> /*trait*/ QLine_operator_equal_equal_0<bool> for (usize) {
   fn operator_equal_equal_0(self , rsthis: & QLine) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK5QLineeqERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK5QLineeqERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -730,7 +730,7 @@ impl<'a> /*trait*/ QLine_operator_not_equal_0<bool> for (usize) {
   fn operator_not_equal_0(self , rsthis: & QLine) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK5QLineneERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK5QLineneERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }

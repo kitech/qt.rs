@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -93,7 +93,7 @@ pub trait QLatin1String_QLatin1String_0 {
 impl<'a> /*trait*/ QLatin1String_QLatin1String_0 for () {
   fn QLatin1String_0(self) -> QLatin1String {
     // unsafe{_ZN13QLatin1StringC2Ev()};
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN13QLatin1StringC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN13QLatin1StringC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QLatin1String{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -125,7 +125,7 @@ impl<'a> /*trait*/ QLatin1String_QLatin1String_1 for (usize) {
   fn QLatin1String_1(self) -> QLatin1String {
     // unsafe{_ZN13QLatin1StringC2EPKc()};
     let arg0 = (self) as *const usize as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN13QLatin1StringC2EPKc", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN13QLatin1StringC2EPKc", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QLatin1String{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -158,7 +158,7 @@ impl<'a> /*trait*/ QLatin1String_QLatin1String_2 for (usize,usize) {
     // unsafe{_ZN13QLatin1StringC2EPKcS1_()};
     let arg0 = (self.0) as *const usize as usize;
     let arg1 = (self.1) as *const usize as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN13QLatin1StringC2EPKcS1_", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN13QLatin1StringC2EPKcS1_", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QLatin1String{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -191,7 +191,7 @@ impl<'a> /*trait*/ QLatin1String_QLatin1String_3 for (usize,i32) {
     // unsafe{_ZN13QLatin1StringC2EPKci()};
     let arg0 = (self.0) as *const usize as usize;
     let arg1 = (&self.1) as *const i32 as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN13QLatin1StringC2EPKci", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN13QLatin1StringC2EPKci", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QLatin1String{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -223,7 +223,7 @@ impl<'a> /*trait*/ QLatin1String_QLatin1String_4 for (usize) {
   fn QLatin1String_4(self) -> QLatin1String {
     // unsafe{_ZN13QLatin1StringC2ERK10QByteArray()};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN13QLatin1StringC2ERK10QByteArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN13QLatin1StringC2ERK10QByteArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QLatin1String{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -250,7 +250,7 @@ pub trait QLatin1String_latin1_0<RetType> {
 impl<'a> /*trait*/ QLatin1String_latin1_0<usize> for () {
   fn latin1_0(self , rsthis: & QLatin1String) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String6latin1Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String6latin1Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -290,7 +290,7 @@ pub trait QLatin1String_size_0<RetType> {
 impl<'a> /*trait*/ QLatin1String_size_0<i32> for () {
   fn size_0(self , rsthis: & QLatin1String) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String4sizeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String4sizeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -334,7 +334,7 @@ pub trait QLatin1String_data_0<RetType> {
 impl<'a> /*trait*/ QLatin1String_data_0<usize> for () {
   fn data_0(self , rsthis: & QLatin1String) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String4dataEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String4dataEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -373,7 +373,7 @@ pub trait QLatin1String_isNull_0<RetType> {
 impl<'a> /*trait*/ QLatin1String_isNull_0<bool> for () {
   fn isNull_0(self , rsthis: & QLatin1String) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String6isNullEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String6isNullEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -411,7 +411,7 @@ pub trait QLatin1String_isEmpty_0<RetType> {
 impl<'a> /*trait*/ QLatin1String_isEmpty_0<bool> for () {
   fn isEmpty_0(self , rsthis: & QLatin1String) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String7isEmptyEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String7isEmptyEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -442,7 +442,7 @@ impl<'a> /*trait*/ QLatin1String_at_0<usize> for (i32) {
   fn at_0(self , rsthis: & QLatin1String) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String2atEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String2atEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -469,7 +469,7 @@ impl<'a> /*trait*/ QLatin1String_operator_get_index_0<usize> for (i32) {
   fn operator_get_index_0(self , rsthis: & QLatin1String) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1StringixEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1StringixEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -503,7 +503,7 @@ pub trait QLatin1String_front_0<RetType> {
 impl<'a> /*trait*/ QLatin1String_front_0<usize> for () {
   fn front_0(self , rsthis: & QLatin1String) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String5frontEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String5frontEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -537,7 +537,7 @@ pub trait QLatin1String_back_0<RetType> {
 impl<'a> /*trait*/ QLatin1String_back_0<usize> for () {
   fn back_0(self , rsthis: & QLatin1String) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String4backEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String4backEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -576,7 +576,7 @@ impl<'a> /*trait*/ QLatin1String_startsWith_0<bool> for (usize,i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String10startsWithE11QStringViewN2Qt15CaseSensitivityE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String10startsWithE11QStringViewN2Qt15CaseSensitivityE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -615,7 +615,7 @@ impl<'a> /*trait*/ QLatin1String_startsWith_1<bool> for (usize,i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String10startsWithES_N2Qt15CaseSensitivityE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String10startsWithES_N2Qt15CaseSensitivityE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -653,7 +653,7 @@ impl<'a> /*trait*/ QLatin1String_startsWith_2<bool> for (usize) {
   fn startsWith_2(self , rsthis: & QLatin1String) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String10startsWithE5QChar", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String10startsWithE5QChar", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -692,7 +692,7 @@ impl<'a> /*trait*/ QLatin1String_startsWith_3<bool> for (usize,i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String10startsWithE5QCharN2Qt15CaseSensitivityE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String10startsWithE5QCharN2Qt15CaseSensitivityE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -731,7 +731,7 @@ impl<'a> /*trait*/ QLatin1String_endsWith_0<bool> for (usize,i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String8endsWithE11QStringViewN2Qt15CaseSensitivityE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String8endsWithE11QStringViewN2Qt15CaseSensitivityE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -770,7 +770,7 @@ impl<'a> /*trait*/ QLatin1String_endsWith_1<bool> for (usize,i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String8endsWithES_N2Qt15CaseSensitivityE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String8endsWithES_N2Qt15CaseSensitivityE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -808,7 +808,7 @@ impl<'a> /*trait*/ QLatin1String_endsWith_2<bool> for (usize) {
   fn endsWith_2(self , rsthis: & QLatin1String) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String8endsWithE5QChar", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String8endsWithE5QChar", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -847,7 +847,7 @@ impl<'a> /*trait*/ QLatin1String_endsWith_3<bool> for (usize,i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String8endsWithE5QCharN2Qt15CaseSensitivityE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String8endsWithE5QCharN2Qt15CaseSensitivityE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -875,7 +875,7 @@ pub trait QLatin1String_begin_0<RetType> {
 impl<'a> /*trait*/ QLatin1String_begin_0<usize> for () {
   fn begin_0(self , rsthis: & QLatin1String) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String5beginEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String5beginEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -905,7 +905,7 @@ pub trait QLatin1String_cbegin_0<RetType> {
 impl<'a> /*trait*/ QLatin1String_cbegin_0<usize> for () {
   fn cbegin_0(self , rsthis: & QLatin1String) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String6cbeginEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String6cbeginEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -933,7 +933,7 @@ pub trait QLatin1String_end_0<RetType> {
 impl<'a> /*trait*/ QLatin1String_end_0<usize> for () {
   fn end_0(self , rsthis: & QLatin1String) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String3endEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String3endEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -963,7 +963,7 @@ pub trait QLatin1String_cend_0<RetType> {
 impl<'a> /*trait*/ QLatin1String_cend_0<usize> for () {
   fn cend_0(self , rsthis: & QLatin1String) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String4cendEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String4cendEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1003,7 +1003,7 @@ impl<'a> /*trait*/ QLatin1String_mid_0<usize> for (i32) {
   fn mid_0(self , rsthis: & QLatin1String) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String3midEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String3midEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1044,7 +1044,7 @@ impl<'a> /*trait*/ QLatin1String_mid_1<usize> for (i32,i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0) as *const i32 as usize;
     let arg1 = (&self.1) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String3midEii", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String3midEii", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1081,7 +1081,7 @@ impl<'a> /*trait*/ QLatin1String_left_0<usize> for (i32) {
   fn left_0(self , rsthis: & QLatin1String) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String4leftEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String4leftEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1118,7 +1118,7 @@ impl<'a> /*trait*/ QLatin1String_right_0<usize> for (i32) {
   fn right_0(self , rsthis: & QLatin1String) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String5rightEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String5rightEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1151,7 +1151,7 @@ impl<'a> /*trait*/ QLatin1String_chopped_0<usize> for (i32) {
   fn chopped_0(self , rsthis: & QLatin1String) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String7choppedEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String7choppedEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1193,7 +1193,7 @@ impl<'a> /*trait*/ QLatin1String_chop_0<(/*void*/)> for (i32) {
   fn chop_0(self , rsthis: & QLatin1String) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-     qtrt::InvokeQtFunc6("_ZN13QLatin1String4chopEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN13QLatin1String4chopEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -1234,7 +1234,7 @@ impl<'a> /*trait*/ QLatin1String_truncate_0<(/*void*/)> for (i32) {
   fn truncate_0(self , rsthis: & QLatin1String) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-     qtrt::InvokeQtFunc6("_ZN13QLatin1String8truncateEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN13QLatin1String8truncateEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -1274,7 +1274,7 @@ pub trait QLatin1String_trimmed_0<RetType> {
 impl<'a> /*trait*/ QLatin1String_trimmed_0<usize> for () {
   fn trimmed_0(self , rsthis: & QLatin1String) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String7trimmedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1String7trimmedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1301,7 +1301,7 @@ impl<'a> /*trait*/ QLatin1String_operator_equal_equal_0<bool> for (usize) {
   fn operator_equal_equal_0(self , rsthis: & QLatin1String) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1StringeqERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1StringeqERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -1328,7 +1328,7 @@ impl<'a> /*trait*/ QLatin1String_operator_equal_equal_1<bool> for (usize) {
   fn operator_equal_equal_1(self , rsthis: & QLatin1String) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (self) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1StringeqEPKc", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1StringeqEPKc", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -1355,7 +1355,7 @@ impl<'a> /*trait*/ QLatin1String_operator_equal_equal_2<bool> for (usize) {
   fn operator_equal_equal_2(self , rsthis: & QLatin1String) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1StringeqERK10QByteArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1StringeqERK10QByteArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -1382,7 +1382,7 @@ impl<'a> /*trait*/ QLatin1String_operator_not_equal_0<bool> for (usize) {
   fn operator_not_equal_0(self , rsthis: & QLatin1String) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1StringneERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1StringneERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -1409,7 +1409,7 @@ impl<'a> /*trait*/ QLatin1String_operator_not_equal_1<bool> for (usize) {
   fn operator_not_equal_1(self , rsthis: & QLatin1String) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (self) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1StringneEPKc", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1StringneEPKc", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -1436,7 +1436,7 @@ impl<'a> /*trait*/ QLatin1String_operator_not_equal_2<bool> for (usize) {
   fn operator_not_equal_2(self , rsthis: & QLatin1String) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1StringneERK10QByteArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1StringneERK10QByteArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -1463,7 +1463,7 @@ impl<'a> /*trait*/ QLatin1String_operator_greater_than_0<bool> for (usize) {
   fn operator_greater_than_0(self , rsthis: & QLatin1String) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1StringgtERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1StringgtERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -1490,7 +1490,7 @@ impl<'a> /*trait*/ QLatin1String_operator_greater_than_1<bool> for (usize) {
   fn operator_greater_than_1(self , rsthis: & QLatin1String) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (self) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1StringgtEPKc", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1StringgtEPKc", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -1517,7 +1517,7 @@ impl<'a> /*trait*/ QLatin1String_operator_greater_than_2<bool> for (usize) {
   fn operator_greater_than_2(self , rsthis: & QLatin1String) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1StringgtERK10QByteArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1StringgtERK10QByteArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -1544,7 +1544,7 @@ impl<'a> /*trait*/ QLatin1String_operator_less_than_0<bool> for (usize) {
   fn operator_less_than_0(self , rsthis: & QLatin1String) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1StringltERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1StringltERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -1571,7 +1571,7 @@ impl<'a> /*trait*/ QLatin1String_operator_less_than_1<bool> for (usize) {
   fn operator_less_than_1(self , rsthis: & QLatin1String) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (self) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1StringltEPKc", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1StringltEPKc", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -1598,7 +1598,7 @@ impl<'a> /*trait*/ QLatin1String_operator_less_than_2<bool> for (usize) {
   fn operator_less_than_2(self , rsthis: & QLatin1String) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1StringltERK10QByteArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1StringltERK10QByteArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -1625,7 +1625,7 @@ impl<'a> /*trait*/ QLatin1String_operator_greater_than_equal_0<bool> for (usize)
   fn operator_greater_than_equal_0(self , rsthis: & QLatin1String) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1StringgeERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1StringgeERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -1652,7 +1652,7 @@ impl<'a> /*trait*/ QLatin1String_operator_greater_than_equal_1<bool> for (usize)
   fn operator_greater_than_equal_1(self , rsthis: & QLatin1String) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (self) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1StringgeEPKc", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1StringgeEPKc", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -1679,7 +1679,7 @@ impl<'a> /*trait*/ QLatin1String_operator_greater_than_equal_2<bool> for (usize)
   fn operator_greater_than_equal_2(self , rsthis: & QLatin1String) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1StringgeERK10QByteArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1StringgeERK10QByteArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -1706,7 +1706,7 @@ impl<'a> /*trait*/ QLatin1String_operator_less_than_equal_0<bool> for (usize) {
   fn operator_less_than_equal_0(self , rsthis: & QLatin1String) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1StringleERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1StringleERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -1733,7 +1733,7 @@ impl<'a> /*trait*/ QLatin1String_operator_less_than_equal_1<bool> for (usize) {
   fn operator_less_than_equal_1(self , rsthis: & QLatin1String) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (self) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1StringleEPKc", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1StringleEPKc", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -1760,7 +1760,7 @@ impl<'a> /*trait*/ QLatin1String_operator_less_than_equal_2<bool> for (usize) {
   fn operator_less_than_equal_2(self , rsthis: & QLatin1String) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1StringleERK10QByteArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QLatin1StringleERK10QByteArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }

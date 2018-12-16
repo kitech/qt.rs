@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -95,7 +95,7 @@ pub trait QLocale_QLocale_0 {
 impl<'a> /*trait*/ QLocale_QLocale_0 for () {
   fn QLocale_0(self) -> QLocale {
     // unsafe{_ZN7QLocaleC2Ev()};
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN7QLocaleC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN7QLocaleC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QLocale{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -129,7 +129,7 @@ impl<'a> /*trait*/ QLocale_QLocale_1 for (usize) {
   fn QLocale_1(self) -> QLocale {
     // unsafe{_ZN7QLocaleC2ERK7QString()};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN7QLocaleC2ERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN7QLocaleC2ERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QLocale{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -164,7 +164,7 @@ impl<'a> /*trait*/ QLocale_QLocale_2 for (i32,i32) {
     // unsafe{_ZN7QLocaleC2ENS_8LanguageENS_7CountryE()};
     let arg0 = (&self.0) as *const i32 as usize;
     let arg1 = (&self.1) as *const i32 as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN7QLocaleC2ENS_8LanguageENS_7CountryE", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN7QLocaleC2ENS_8LanguageENS_7CountryE", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QLocale{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -200,7 +200,7 @@ impl<'a> /*trait*/ QLocale_QLocale_3 for (i32,i32,i32) {
     let arg0 = (&self.0) as *const i32 as usize;
     let arg1 = (&self.1) as *const i32 as usize;
     let arg2 = (&self.2) as *const i32 as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN7QLocaleC2ENS_8LanguageENS_6ScriptENS_7CountryE", 3,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN7QLocaleC2ENS_8LanguageENS_6ScriptENS_7CountryE", 3,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QLocale{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -228,7 +228,7 @@ impl<'a> /*trait*/ QLocale_operator_equal_0<usize> for (usize) {
   fn operator_equal_0(self , rsthis: & QLocale) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN7QLocaleaSEOS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QLocaleaSEOS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -255,7 +255,7 @@ impl<'a> /*trait*/ QLocale_operator_equal_1<usize> for (usize) {
   fn operator_equal_1(self , rsthis: & QLocale) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN7QLocaleaSERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QLocaleaSERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -298,7 +298,7 @@ impl<'a> /*trait*/ QLocale_swap_0<(/*void*/)> for (usize) {
   fn swap_0(self , rsthis: & QLocale) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN7QLocale4swapERS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN7QLocale4swapERS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -325,7 +325,7 @@ pub trait QLocale_language_0<RetType> {
 impl<'a> /*trait*/ QLocale_language_0<i32> for () {
   fn language_0(self , rsthis: & QLocale) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8languageEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8languageEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -355,7 +355,7 @@ pub trait QLocale_script_0<RetType> {
 impl<'a> /*trait*/ QLocale_script_0<i32> for () {
   fn script_0(self , rsthis: & QLocale) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale6scriptEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale6scriptEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -383,7 +383,7 @@ pub trait QLocale_country_0<RetType> {
 impl<'a> /*trait*/ QLocale_country_0<i32> for () {
   fn country_0(self , rsthis: & QLocale) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale7countryEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale7countryEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -413,7 +413,7 @@ pub trait QLocale_name_0<RetType> {
 impl<'a> /*trait*/ QLocale_name_0<usize> for () {
   fn name_0(self , rsthis: & QLocale) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale4nameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale4nameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -447,7 +447,7 @@ pub trait QLocale_bcp47Name_0<RetType> {
 impl<'a> /*trait*/ QLocale_bcp47Name_0<usize> for () {
   fn bcp47Name_0(self , rsthis: & QLocale) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale9bcp47NameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale9bcp47NameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -477,7 +477,7 @@ pub trait QLocale_nativeLanguageName_0<RetType> {
 impl<'a> /*trait*/ QLocale_nativeLanguageName_0<usize> for () {
   fn nativeLanguageName_0(self , rsthis: & QLocale) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale18nativeLanguageNameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale18nativeLanguageNameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -507,7 +507,7 @@ pub trait QLocale_nativeCountryName_0<RetType> {
 impl<'a> /*trait*/ QLocale_nativeCountryName_0<usize> for () {
   fn nativeCountryName_0(self , rsthis: & QLocale) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale17nativeCountryNameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale17nativeCountryNameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -543,7 +543,7 @@ impl<'a> /*trait*/ QLocale_toShort_0<i16> for (usize,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale7toShortERK7QStringPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale7toShortERK7QStringPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i16 = Default::default(); return dret;
   }
@@ -579,7 +579,7 @@ impl<'a> /*trait*/ QLocale_toShort_1<i16> for (usize,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale7toShortERK10QStringRefPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale7toShortERK10QStringRefPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i16 = Default::default(); return dret;
   }
@@ -615,7 +615,7 @@ impl<'a> /*trait*/ QLocale_toShort_2<i16> for (usize,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale7toShortE11QStringViewPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale7toShortE11QStringViewPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i16 = Default::default(); return dret;
   }
@@ -651,7 +651,7 @@ impl<'a> /*trait*/ QLocale_toUShort_0<u16> for (usize,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toUShortERK7QStringPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toUShortERK7QStringPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: u16 = Default::default(); return dret;
   }
@@ -687,7 +687,7 @@ impl<'a> /*trait*/ QLocale_toUShort_1<u16> for (usize,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toUShortERK10QStringRefPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toUShortERK10QStringRefPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: u16 = Default::default(); return dret;
   }
@@ -723,7 +723,7 @@ impl<'a> /*trait*/ QLocale_toUShort_2<u16> for (usize,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toUShortE11QStringViewPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toUShortE11QStringViewPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: u16 = Default::default(); return dret;
   }
@@ -759,7 +759,7 @@ impl<'a> /*trait*/ QLocale_toInt_0<i32> for (usize,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale5toIntERK7QStringPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale5toIntERK7QStringPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -795,7 +795,7 @@ impl<'a> /*trait*/ QLocale_toInt_1<i32> for (usize,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale5toIntERK10QStringRefPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale5toIntERK10QStringRefPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -831,7 +831,7 @@ impl<'a> /*trait*/ QLocale_toInt_2<i32> for (usize,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale5toIntE11QStringViewPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale5toIntE11QStringViewPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -867,7 +867,7 @@ impl<'a> /*trait*/ QLocale_toUInt_0<u32> for (usize,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale6toUIntERK7QStringPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale6toUIntERK7QStringPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: u32 = Default::default(); return dret;
   }
@@ -903,7 +903,7 @@ impl<'a> /*trait*/ QLocale_toUInt_1<u32> for (usize,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale6toUIntERK10QStringRefPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale6toUIntERK10QStringRefPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: u32 = Default::default(); return dret;
   }
@@ -939,7 +939,7 @@ impl<'a> /*trait*/ QLocale_toUInt_2<u32> for (usize,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale6toUIntE11QStringViewPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale6toUIntE11QStringViewPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: u32 = Default::default(); return dret;
   }
@@ -975,7 +975,7 @@ impl<'a> /*trait*/ QLocale_toLongLong_0<i64> for (usize,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale10toLongLongERK7QStringPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale10toLongLongERK7QStringPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i64 = Default::default(); return dret;
   }
@@ -1011,7 +1011,7 @@ impl<'a> /*trait*/ QLocale_toLongLong_1<i64> for (usize,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale10toLongLongERK10QStringRefPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale10toLongLongERK10QStringRefPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i64 = Default::default(); return dret;
   }
@@ -1047,7 +1047,7 @@ impl<'a> /*trait*/ QLocale_toLongLong_2<i64> for (usize,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale10toLongLongE11QStringViewPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale10toLongLongE11QStringViewPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i64 = Default::default(); return dret;
   }
@@ -1083,7 +1083,7 @@ impl<'a> /*trait*/ QLocale_toULongLong_0<u64> for (usize,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale11toULongLongERK7QStringPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale11toULongLongERK7QStringPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: u64 = Default::default(); return dret;
   }
@@ -1119,7 +1119,7 @@ impl<'a> /*trait*/ QLocale_toULongLong_1<u64> for (usize,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale11toULongLongERK10QStringRefPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale11toULongLongERK10QStringRefPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: u64 = Default::default(); return dret;
   }
@@ -1155,7 +1155,7 @@ impl<'a> /*trait*/ QLocale_toULongLong_2<u64> for (usize,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale11toULongLongE11QStringViewPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale11toULongLongE11QStringViewPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: u64 = Default::default(); return dret;
   }
@@ -1189,7 +1189,7 @@ impl<'a> /*trait*/ QLocale_toFloat_0<f32> for (usize,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale7toFloatERK7QStringPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale7toFloatERK7QStringPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: f32 = Default::default(); return dret;
   }
@@ -1223,7 +1223,7 @@ impl<'a> /*trait*/ QLocale_toFloat_1<f32> for (usize,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale7toFloatERK10QStringRefPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale7toFloatERK10QStringRefPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: f32 = Default::default(); return dret;
   }
@@ -1257,7 +1257,7 @@ impl<'a> /*trait*/ QLocale_toFloat_2<f32> for (usize,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale7toFloatE11QStringViewPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale7toFloatE11QStringViewPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: f32 = Default::default(); return dret;
   }
@@ -1313,7 +1313,7 @@ impl<'a> /*trait*/ QLocale_toDouble_0<f64> for (usize,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toDoubleERK7QStringPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toDoubleERK7QStringPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: f64 = Default::default(); return dret;
   }
@@ -1369,7 +1369,7 @@ impl<'a> /*trait*/ QLocale_toDouble_1<f64> for (usize,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toDoubleERK10QStringRefPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toDoubleERK10QStringRefPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: f64 = Default::default(); return dret;
   }
@@ -1425,7 +1425,7 @@ impl<'a> /*trait*/ QLocale_toDouble_2<f64> for (usize,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toDoubleE11QStringViewPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toDoubleE11QStringViewPb", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: f64 = Default::default(); return dret;
   }
@@ -1454,7 +1454,7 @@ impl<'a> /*trait*/ QLocale_toString_0<usize> for (i64) {
   fn toString_0(self , rsthis: & QLocale) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i64 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toStringEx", 1,qtrt::FFITY_SINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toStringEx", 1,qtrt::FFITY_SINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1483,7 +1483,7 @@ impl<'a> /*trait*/ QLocale_toString_1<usize> for (u64) {
   fn toString_1(self , rsthis: & QLocale) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const u64 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toStringEy", 1,qtrt::FFITY_UINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toStringEy", 1,qtrt::FFITY_UINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1512,7 +1512,7 @@ impl<'a> /*trait*/ QLocale_toString_2<usize> for (i16) {
   fn toString_2(self , rsthis: & QLocale) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i16 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toStringEs", 1,qtrt::FFITY_SINT16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toStringEs", 1,qtrt::FFITY_SINT16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1541,7 +1541,7 @@ impl<'a> /*trait*/ QLocale_toString_3<usize> for (u16) {
   fn toString_3(self , rsthis: & QLocale) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const u16 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toStringEt", 1,qtrt::FFITY_UINT16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toStringEt", 1,qtrt::FFITY_UINT16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1570,7 +1570,7 @@ impl<'a> /*trait*/ QLocale_toString_4<usize> for (i32) {
   fn toString_4(self , rsthis: & QLocale) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toStringEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toStringEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1599,7 +1599,7 @@ impl<'a> /*trait*/ QLocale_toString_5<usize> for (u32) {
   fn toString_5(self , rsthis: & QLocale) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const u32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toStringEj", 1,qtrt::FFITY_UINT32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toStringEj", 1,qtrt::FFITY_UINT32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1630,7 +1630,7 @@ impl<'a> /*trait*/ QLocale_toString_6<usize> for (f64,i8,i32) {
     let arg0 = (&self.0) as *const f64 as usize;
     let arg1 = (&self.1) as *const i8 as usize;
     let arg2 = (&self.2) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toStringEdci", 3,qtrt::FFITY_DOUBLE,qtrt::FFITY_SINT8,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toStringEdci", 3,qtrt::FFITY_DOUBLE,qtrt::FFITY_SINT8,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1661,7 +1661,7 @@ impl<'a> /*trait*/ QLocale_toString_7<usize> for (f32,i8,i32) {
     let arg0 = (&self.0) as *const f32 as usize;
     let arg1 = (&self.1) as *const i8 as usize;
     let arg2 = (&self.2) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toStringEfci", 3,qtrt::FFITY_FLOAT,qtrt::FFITY_SINT8,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toStringEfci", 3,qtrt::FFITY_FLOAT,qtrt::FFITY_SINT8,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1691,7 +1691,7 @@ impl<'a> /*trait*/ QLocale_toString_8<usize> for (usize,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toStringERK5QDateRK7QString", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toStringERK5QDateRK7QString", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1721,7 +1721,7 @@ impl<'a> /*trait*/ QLocale_toString_9<usize> for (usize,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toStringERK5QTimeRK7QString", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toStringERK5QTimeRK7QString", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1751,7 +1751,7 @@ impl<'a> /*trait*/ QLocale_toString_10<usize> for (usize,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toStringERK9QDateTimeRK7QString", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toStringERK9QDateTimeRK7QString", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1781,7 +1781,7 @@ impl<'a> /*trait*/ QLocale_toString_11<usize> for (usize,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toStringERK5QDate11QStringView", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toStringERK5QDate11QStringView", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1811,7 +1811,7 @@ impl<'a> /*trait*/ QLocale_toString_12<usize> for (usize,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toStringERK5QTime11QStringView", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toStringERK5QTime11QStringView", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1841,7 +1841,7 @@ impl<'a> /*trait*/ QLocale_toString_13<usize> for (usize,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toStringERK9QDateTime11QStringView", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toStringERK9QDateTime11QStringView", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1871,7 +1871,7 @@ impl<'a> /*trait*/ QLocale_toString_14<usize> for (usize,i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toStringERK5QDateNS_10FormatTypeE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toStringERK5QDateNS_10FormatTypeE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1901,7 +1901,7 @@ impl<'a> /*trait*/ QLocale_toString_15<usize> for (usize,i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toStringERK5QTimeNS_10FormatTypeE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toStringERK5QTimeNS_10FormatTypeE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1931,7 +1931,7 @@ impl<'a> /*trait*/ QLocale_toString_16<usize> for (usize,i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toStringERK9QDateTimeNS_10FormatTypeE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale8toStringERK9QDateTimeNS_10FormatTypeE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1964,7 +1964,7 @@ impl<'a> /*trait*/ QLocale_dateFormat_0<usize> for (i32) {
   fn dateFormat_0(self , rsthis: & QLocale) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale10dateFormatENS_10FormatTypeE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale10dateFormatENS_10FormatTypeE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1997,7 +1997,7 @@ impl<'a> /*trait*/ QLocale_timeFormat_0<usize> for (i32) {
   fn timeFormat_0(self , rsthis: & QLocale) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale10timeFormatENS_10FormatTypeE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale10timeFormatENS_10FormatTypeE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -2030,7 +2030,7 @@ impl<'a> /*trait*/ QLocale_dateTimeFormat_0<usize> for (i32) {
   fn dateTimeFormat_0(self , rsthis: & QLocale) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale14dateTimeFormatENS_10FormatTypeE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale14dateTimeFormatENS_10FormatTypeE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -2064,7 +2064,7 @@ impl<'a> /*trait*/ QLocale_toDate_0<usize> for (usize,i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale6toDateERK7QStringNS_10FormatTypeE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale6toDateERK7QStringNS_10FormatTypeE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -2098,7 +2098,7 @@ impl<'a> /*trait*/ QLocale_toDate_1<usize> for (usize,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale6toDateERK7QStringS2_", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale6toDateERK7QStringS2_", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -2132,7 +2132,7 @@ impl<'a> /*trait*/ QLocale_toTime_0<usize> for (usize,i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale6toTimeERK7QStringNS_10FormatTypeE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale6toTimeERK7QStringNS_10FormatTypeE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -2166,7 +2166,7 @@ impl<'a> /*trait*/ QLocale_toTime_1<usize> for (usize,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale6toTimeERK7QStringS2_", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale6toTimeERK7QStringS2_", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -2200,7 +2200,7 @@ impl<'a> /*trait*/ QLocale_toDateTime_0<usize> for (usize,i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale10toDateTimeERK7QStringNS_10FormatTypeE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale10toDateTimeERK7QStringNS_10FormatTypeE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -2234,7 +2234,7 @@ impl<'a> /*trait*/ QLocale_toDateTime_1<usize> for (usize,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale10toDateTimeERK7QStringS2_", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale10toDateTimeERK7QStringS2_", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -2262,7 +2262,7 @@ pub trait QLocale_decimalPoint_0<RetType> {
 impl<'a> /*trait*/ QLocale_decimalPoint_0<usize> for () {
   fn decimalPoint_0(self , rsthis: & QLocale) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale12decimalPointEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale12decimalPointEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -2290,7 +2290,7 @@ pub trait QLocale_groupSeparator_0<RetType> {
 impl<'a> /*trait*/ QLocale_groupSeparator_0<usize> for () {
   fn groupSeparator_0(self , rsthis: & QLocale) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale14groupSeparatorEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale14groupSeparatorEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -2318,7 +2318,7 @@ pub trait QLocale_percent_0<RetType> {
 impl<'a> /*trait*/ QLocale_percent_0<usize> for () {
   fn percent_0(self , rsthis: & QLocale) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale7percentEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale7percentEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -2346,7 +2346,7 @@ pub trait QLocale_zeroDigit_0<RetType> {
 impl<'a> /*trait*/ QLocale_zeroDigit_0<usize> for () {
   fn zeroDigit_0(self , rsthis: & QLocale) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale9zeroDigitEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale9zeroDigitEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -2374,7 +2374,7 @@ pub trait QLocale_negativeSign_0<RetType> {
 impl<'a> /*trait*/ QLocale_negativeSign_0<usize> for () {
   fn negativeSign_0(self , rsthis: & QLocale) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale12negativeSignEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale12negativeSignEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -2402,7 +2402,7 @@ pub trait QLocale_positiveSign_0<RetType> {
 impl<'a> /*trait*/ QLocale_positiveSign_0<usize> for () {
   fn positiveSign_0(self , rsthis: & QLocale) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale12positiveSignEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale12positiveSignEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -2430,7 +2430,7 @@ pub trait QLocale_exponential_0<RetType> {
 impl<'a> /*trait*/ QLocale_exponential_0<usize> for () {
   fn exponential_0(self , rsthis: & QLocale) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale11exponentialEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale11exponentialEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -2462,7 +2462,7 @@ impl<'a> /*trait*/ QLocale_monthName_0<usize> for (i32,i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0) as *const i32 as usize;
     let arg1 = (&self.1) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale9monthNameEiNS_10FormatTypeE", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale9monthNameEiNS_10FormatTypeE", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -2496,7 +2496,7 @@ impl<'a> /*trait*/ QLocale_standaloneMonthName_0<usize> for (i32,i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0) as *const i32 as usize;
     let arg1 = (&self.1) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale19standaloneMonthNameEiNS_10FormatTypeE", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale19standaloneMonthNameEiNS_10FormatTypeE", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -2528,7 +2528,7 @@ impl<'a> /*trait*/ QLocale_dayName_0<usize> for (i32,i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0) as *const i32 as usize;
     let arg1 = (&self.1) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale7dayNameEiNS_10FormatTypeE", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale7dayNameEiNS_10FormatTypeE", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -2562,7 +2562,7 @@ impl<'a> /*trait*/ QLocale_standaloneDayName_0<usize> for (i32,i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0) as *const i32 as usize;
     let arg1 = (&self.1) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale17standaloneDayNameEiNS_10FormatTypeE", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale17standaloneDayNameEiNS_10FormatTypeE", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -2590,7 +2590,7 @@ pub trait QLocale_firstDayOfWeek_0<RetType> {
 impl<'a> /*trait*/ QLocale_firstDayOfWeek_0<i32> for () {
   fn firstDayOfWeek_0(self , rsthis: & QLocale) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale14firstDayOfWeekEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale14firstDayOfWeekEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -2620,7 +2620,7 @@ pub trait QLocale_amText_0<RetType> {
 impl<'a> /*trait*/ QLocale_amText_0<usize> for () {
   fn amText_0(self , rsthis: & QLocale) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale6amTextEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale6amTextEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -2650,7 +2650,7 @@ pub trait QLocale_pmText_0<RetType> {
 impl<'a> /*trait*/ QLocale_pmText_0<usize> for () {
   fn pmText_0(self , rsthis: & QLocale) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale6pmTextEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale6pmTextEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -2678,7 +2678,7 @@ pub trait QLocale_measurementSystem_0<RetType> {
 impl<'a> /*trait*/ QLocale_measurementSystem_0<i32> for () {
   fn measurementSystem_0(self , rsthis: & QLocale) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale17measurementSystemEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale17measurementSystemEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -2706,7 +2706,7 @@ pub trait QLocale_textDirection_0<RetType> {
 impl<'a> /*trait*/ QLocale_textDirection_0<i32> for () {
   fn textDirection_0(self , rsthis: & QLocale) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale13textDirectionEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale13textDirectionEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -2739,7 +2739,7 @@ impl<'a> /*trait*/ QLocale_toUpper_0<usize> for (usize) {
   fn toUpper_0(self , rsthis: & QLocale) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale7toUpperERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale7toUpperERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -2772,7 +2772,7 @@ impl<'a> /*trait*/ QLocale_toLower_0<usize> for (usize) {
   fn toLower_0(self , rsthis: & QLocale) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale7toLowerERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale7toLowerERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -2801,7 +2801,7 @@ impl<'a> /*trait*/ QLocale_currencySymbol_0<usize> for (i32) {
   fn currencySymbol_0(self , rsthis: & QLocale) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale14currencySymbolENS_20CurrencySymbolFormatE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale14currencySymbolENS_20CurrencySymbolFormatE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -2833,7 +2833,7 @@ impl<'a> /*trait*/ QLocale_toCurrencyString_0<usize> for (i64,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0) as *const i64 as usize;
     let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringExRK7QString", 2,qtrt::FFITY_SINT64,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringExRK7QString", 2,qtrt::FFITY_SINT64,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -2865,7 +2865,7 @@ impl<'a> /*trait*/ QLocale_toCurrencyString_1<usize> for (u64,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0) as *const u64 as usize;
     let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEyRK7QString", 2,qtrt::FFITY_UINT64,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEyRK7QString", 2,qtrt::FFITY_UINT64,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -2897,7 +2897,7 @@ impl<'a> /*trait*/ QLocale_toCurrencyString_2<usize> for (i16,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0) as *const i16 as usize;
     let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEsRK7QString", 2,qtrt::FFITY_SINT16,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEsRK7QString", 2,qtrt::FFITY_SINT16,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -2929,7 +2929,7 @@ impl<'a> /*trait*/ QLocale_toCurrencyString_3<usize> for (u16,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0) as *const u16 as usize;
     let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEtRK7QString", 2,qtrt::FFITY_UINT16,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEtRK7QString", 2,qtrt::FFITY_UINT16,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -2961,7 +2961,7 @@ impl<'a> /*trait*/ QLocale_toCurrencyString_4<usize> for (i32,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0) as *const i32 as usize;
     let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEiRK7QString", 2,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEiRK7QString", 2,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -2993,7 +2993,7 @@ impl<'a> /*trait*/ QLocale_toCurrencyString_5<usize> for (u32,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0) as *const u32 as usize;
     let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEjRK7QString", 2,qtrt::FFITY_UINT32,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEjRK7QString", 2,qtrt::FFITY_UINT32,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -3025,7 +3025,7 @@ impl<'a> /*trait*/ QLocale_toCurrencyString_6<usize> for (f64,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0) as *const f64 as usize;
     let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEdRK7QString", 2,qtrt::FFITY_DOUBLE,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEdRK7QString", 2,qtrt::FFITY_DOUBLE,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -3058,7 +3058,7 @@ impl<'a> /*trait*/ QLocale_toCurrencyString_7<usize> for (f64,usize,i32) {
     let arg0 = (&self.0) as *const f64 as usize;
     let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
     let arg2 = (&self.2) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEdRK7QStringi", 3,qtrt::FFITY_DOUBLE,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEdRK7QStringi", 3,qtrt::FFITY_DOUBLE,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -3090,7 +3090,7 @@ impl<'a> /*trait*/ QLocale_toCurrencyString_8<usize> for (f32,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0) as *const f32 as usize;
     let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEfRK7QString", 2,qtrt::FFITY_FLOAT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEfRK7QString", 2,qtrt::FFITY_FLOAT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -3123,7 +3123,7 @@ impl<'a> /*trait*/ QLocale_toCurrencyString_9<usize> for (f32,usize,i32) {
     let arg0 = (&self.0) as *const f32 as usize;
     let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
     let arg2 = (&self.2) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEfRK7QStringi", 3,qtrt::FFITY_FLOAT,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale16toCurrencyStringEfRK7QStringi", 3,qtrt::FFITY_FLOAT,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -3154,7 +3154,7 @@ impl<'a> /*trait*/ QLocale_formattedDataSize_0<usize> for (i64,i32,i32) {
     let arg0 = (&self.0) as *const i64 as usize;
     let arg1 = (&self.1) as *const i32 as usize;
     let arg2 = (&self.2) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN7QLocale17formattedDataSizeExi6QFlagsINS_14DataSizeFormatEE", 3,qtrt::FFITY_SINT64,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QLocale17formattedDataSizeExi6QFlagsINS_14DataSizeFormatEE", 3,qtrt::FFITY_SINT64,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -3190,7 +3190,7 @@ pub trait QLocale_uiLanguages_0<RetType> {
 impl<'a> /*trait*/ QLocale_uiLanguages_0<usize> for () {
   fn uiLanguages_0(self , rsthis: & QLocale) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale11uiLanguagesEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale11uiLanguagesEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -3217,7 +3217,7 @@ impl<'a> /*trait*/ QLocale_operator_equal_equal_0<bool> for (usize) {
   fn operator_equal_equal_0(self , rsthis: & QLocale) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocaleeqERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocaleeqERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -3244,7 +3244,7 @@ impl<'a> /*trait*/ QLocale_operator_not_equal_0<bool> for (usize) {
   fn operator_not_equal_0(self , rsthis: & QLocale) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocaleneERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocaleneERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -3273,7 +3273,7 @@ impl<'a> /*trait*/ QLocale_languageToString_0<usize> for (i32) {
   fn languageToString_0(self ) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN7QLocale16languageToStringENS_8LanguageE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QLocale16languageToStringENS_8LanguageE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -3302,7 +3302,7 @@ impl<'a> /*trait*/ QLocale_countryToString_0<usize> for (i32) {
   fn countryToString_0(self ) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN7QLocale15countryToStringENS_7CountryE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QLocale15countryToStringENS_7CountryE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -3333,7 +3333,7 @@ impl<'a> /*trait*/ QLocale_scriptToString_0<usize> for (i32) {
   fn scriptToString_0(self ) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN7QLocale14scriptToStringENS_6ScriptE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QLocale14scriptToStringENS_6ScriptE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -3366,7 +3366,7 @@ impl<'a> /*trait*/ QLocale_setDefault_0<(/*void*/)> for (usize) {
   fn setDefault_0(self ) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN7QLocale10setDefaultERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN7QLocale10setDefaultERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -3393,7 +3393,7 @@ pub trait QLocale_c_0<RetType> {
 impl<'a> /*trait*/ QLocale_c_0<usize> for () {
   fn c_0(self ) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZN7QLocale1cEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QLocale1cEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -3423,7 +3423,7 @@ pub trait QLocale_system_0<RetType> {
 impl<'a> /*trait*/ QLocale_system_0<usize> for () {
   fn system_0(self ) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZN7QLocale6systemEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN7QLocale6systemEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -3454,7 +3454,7 @@ impl<'a> /*trait*/ QLocale_setNumberOptions_0<(/*void*/)> for (i32) {
   fn setNumberOptions_0(self , rsthis: & QLocale) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-     qtrt::InvokeQtFunc6("_ZN7QLocale16setNumberOptionsE6QFlagsINS_12NumberOptionEE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN7QLocale16setNumberOptionsE6QFlagsINS_12NumberOptionEE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -3485,7 +3485,7 @@ pub trait QLocale_numberOptions_0<RetType> {
 impl<'a> /*trait*/ QLocale_numberOptions_0<i32> for () {
   fn numberOptions_0(self , rsthis: & QLocale) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale13numberOptionsEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale13numberOptionsEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -3515,7 +3515,7 @@ impl<'a> /*trait*/ QLocale_quoteString_0<usize> for (usize,i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale11quoteStringERK7QStringNS_14QuotationStyleE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale11quoteStringERK7QStringNS_14QuotationStyleE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -3545,7 +3545,7 @@ impl<'a> /*trait*/ QLocale_quoteString_1<usize> for (usize,i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale11quoteStringERK10QStringRefNS_14QuotationStyleE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale11quoteStringERK10QStringRefNS_14QuotationStyleE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -3574,7 +3574,7 @@ impl<'a> /*trait*/ QLocale_createSeparatedList_0<usize> for (usize) {
   fn createSeparatedList_0(self , rsthis: & QLocale) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale19createSeparatedListERK11QStringList", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK7QLocale19createSeparatedListERK11QStringList", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }

@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -90,7 +90,7 @@ impl<'a> /*trait*/ QTextStreamManipulator_exec_0<(/*void*/)> for (usize) {
   fn exec_0(self , rsthis: & QTextStreamManipulator) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN22QTextStreamManipulator4execER11QTextStream", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN22QTextStreamManipulator4execER11QTextStream", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }

@@ -5,6 +5,7 @@ authors = ["egitop <egitop@abc.xyz>"]
 edition = "2018"
 
 [dependencies]
+qtrt = { path = "../qtrt" }
 qtcore = { path = "../qtcore" }
 qtgui = { path = "../qtgui" }
 

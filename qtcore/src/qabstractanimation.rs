@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -110,7 +110,7 @@ pub trait QAbstractAnimation_metaObject_0<RetType> {
 impl<'a> /*trait*/ QAbstractAnimation_metaObject_0<usize> for () {
   fn metaObject_0(self , rsthis: & QAbstractAnimation) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QAbstractAnimation10metaObjectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QAbstractAnimation10metaObjectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -143,7 +143,7 @@ impl<'a> /*trait*/ QAbstractAnimation_QAbstractAnimation_0 for (usize) {
   fn QAbstractAnimation_0(self) -> QAbstractAnimation {
     // unsafe{_ZN18QAbstractAnimationC2EP7QObject()};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN18QAbstractAnimationC2EP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN18QAbstractAnimationC2EP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QAbstractAnimation{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -184,7 +184,7 @@ pub trait QAbstractAnimation_state_0<RetType> {
 impl<'a> /*trait*/ QAbstractAnimation_state_0<i32> for () {
   fn state_0(self , rsthis: & QAbstractAnimation) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QAbstractAnimation5stateEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QAbstractAnimation5stateEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -212,7 +212,7 @@ pub trait QAbstractAnimation_group_0<RetType> {
 impl<'a> /*trait*/ QAbstractAnimation_group_0<usize> for () {
   fn group_0(self , rsthis: & QAbstractAnimation) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QAbstractAnimation5groupEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QAbstractAnimation5groupEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -238,7 +238,7 @@ pub trait QAbstractAnimation_direction_0<RetType> {
 impl<'a> /*trait*/ QAbstractAnimation_direction_0<i32> for () {
   fn direction_0(self , rsthis: & QAbstractAnimation) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QAbstractAnimation9directionEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QAbstractAnimation9directionEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -265,7 +265,7 @@ impl<'a> /*trait*/ QAbstractAnimation_setDirection_0<(/*void*/)> for (i32) {
   fn setDirection_0(self , rsthis: & QAbstractAnimation) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-     qtrt::InvokeQtFunc6("_ZN18QAbstractAnimation12setDirectionENS_9DirectionE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN18QAbstractAnimation12setDirectionENS_9DirectionE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -290,7 +290,7 @@ pub trait QAbstractAnimation_currentTime_0<RetType> {
 impl<'a> /*trait*/ QAbstractAnimation_currentTime_0<i32> for () {
   fn currentTime_0(self , rsthis: & QAbstractAnimation) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QAbstractAnimation11currentTimeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QAbstractAnimation11currentTimeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -318,7 +318,7 @@ pub trait QAbstractAnimation_currentLoopTime_0<RetType> {
 impl<'a> /*trait*/ QAbstractAnimation_currentLoopTime_0<i32> for () {
   fn currentLoopTime_0(self , rsthis: & QAbstractAnimation) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QAbstractAnimation15currentLoopTimeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QAbstractAnimation15currentLoopTimeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -344,7 +344,7 @@ pub trait QAbstractAnimation_loopCount_0<RetType> {
 impl<'a> /*trait*/ QAbstractAnimation_loopCount_0<i32> for () {
   fn loopCount_0(self , rsthis: & QAbstractAnimation) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QAbstractAnimation9loopCountEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QAbstractAnimation9loopCountEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -371,7 +371,7 @@ impl<'a> /*trait*/ QAbstractAnimation_setLoopCount_0<(/*void*/)> for (i32) {
   fn setLoopCount_0(self , rsthis: & QAbstractAnimation) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-     qtrt::InvokeQtFunc6("_ZN18QAbstractAnimation12setLoopCountEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN18QAbstractAnimation12setLoopCountEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -396,7 +396,7 @@ pub trait QAbstractAnimation_currentLoop_0<RetType> {
 impl<'a> /*trait*/ QAbstractAnimation_currentLoop_0<i32> for () {
   fn currentLoop_0(self , rsthis: & QAbstractAnimation) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QAbstractAnimation11currentLoopEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QAbstractAnimation11currentLoopEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -430,7 +430,7 @@ pub trait QAbstractAnimation_duration_0<RetType> {
 impl<'a> /*trait*/ QAbstractAnimation_duration_0<i32> for () {
   fn duration_0(self , rsthis: & QAbstractAnimation) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QAbstractAnimation8durationEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QAbstractAnimation8durationEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -458,7 +458,7 @@ pub trait QAbstractAnimation_totalDuration_0<RetType> {
 impl<'a> /*trait*/ QAbstractAnimation_totalDuration_0<i32> for () {
   fn totalDuration_0(self , rsthis: & QAbstractAnimation) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QAbstractAnimation13totalDurationEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QAbstractAnimation13totalDurationEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -488,7 +488,7 @@ pub trait QAbstractAnimation_finished_0<RetType> {
 impl<'a> /*trait*/ QAbstractAnimation_finished_0<(/*void*/)> for () {
   fn finished_0(self , rsthis: & QAbstractAnimation) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN18QAbstractAnimation8finishedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN18QAbstractAnimation8finishedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -519,7 +519,7 @@ impl<'a> /*trait*/ QAbstractAnimation_stateChanged_0<(/*void*/)> for (i32,i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0) as *const i32 as usize;
     let arg1 = (&self.1) as *const i32 as usize;
-     qtrt::InvokeQtFunc6("_ZN18QAbstractAnimation12stateChangedENS_5StateES0_", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN18QAbstractAnimation12stateChangedENS_5StateES0_", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -549,7 +549,7 @@ impl<'a> /*trait*/ QAbstractAnimation_currentLoopChanged_0<(/*void*/)> for (i32)
   fn currentLoopChanged_0(self , rsthis: & QAbstractAnimation) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-     qtrt::InvokeQtFunc6("_ZN18QAbstractAnimation18currentLoopChangedEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN18QAbstractAnimation18currentLoopChangedEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -579,7 +579,7 @@ impl<'a> /*trait*/ QAbstractAnimation_directionChanged_0<(/*void*/)> for (i32) {
   fn directionChanged_0(self , rsthis: & QAbstractAnimation) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-     qtrt::InvokeQtFunc6("_ZN18QAbstractAnimation16directionChangedENS_9DirectionE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN18QAbstractAnimation16directionChangedENS_9DirectionE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -611,7 +611,7 @@ impl<'a> /*trait*/ QAbstractAnimation_start_0<(/*void*/)> for (i32) {
   fn start_0(self , rsthis: & QAbstractAnimation) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-     qtrt::InvokeQtFunc6("_ZN18QAbstractAnimation5startENS_14DeletionPolicyE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN18QAbstractAnimation5startENS_14DeletionPolicyE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -638,7 +638,7 @@ pub trait QAbstractAnimation_pause_0<RetType> {
 impl<'a> /*trait*/ QAbstractAnimation_pause_0<(/*void*/)> for () {
   fn pause_0(self , rsthis: & QAbstractAnimation) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN18QAbstractAnimation5pauseEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN18QAbstractAnimation5pauseEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -665,7 +665,7 @@ pub trait QAbstractAnimation_resume_0<RetType> {
 impl<'a> /*trait*/ QAbstractAnimation_resume_0<(/*void*/)> for () {
   fn resume_0(self , rsthis: & QAbstractAnimation) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN18QAbstractAnimation6resumeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN18QAbstractAnimation6resumeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -693,7 +693,7 @@ impl<'a> /*trait*/ QAbstractAnimation_setPaused_0<(/*void*/)> for (bool) {
   fn setPaused_0(self , rsthis: & QAbstractAnimation) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const bool as usize;
-     qtrt::InvokeQtFunc6("_ZN18QAbstractAnimation9setPausedEb", 1,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN18QAbstractAnimation9setPausedEb", 1,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -722,7 +722,7 @@ pub trait QAbstractAnimation_stop_0<RetType> {
 impl<'a> /*trait*/ QAbstractAnimation_stop_0<(/*void*/)> for () {
   fn stop_0(self , rsthis: & QAbstractAnimation) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN18QAbstractAnimation4stopEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN18QAbstractAnimation4stopEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -748,7 +748,7 @@ impl<'a> /*trait*/ QAbstractAnimation_setCurrentTime_0<(/*void*/)> for (i32) {
   fn setCurrentTime_0(self , rsthis: & QAbstractAnimation) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-     qtrt::InvokeQtFunc6("_ZN18QAbstractAnimation14setCurrentTimeEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN18QAbstractAnimation14setCurrentTimeEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -774,7 +774,7 @@ impl<'a> /*trait*/ QAbstractAnimation_event_0<bool> for (usize) {
   fn event_0(self , rsthis: & QAbstractAnimation) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN18QAbstractAnimation5eventEP6QEvent", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN18QAbstractAnimation5eventEP6QEvent", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -803,7 +803,7 @@ impl<'a> /*trait*/ QAbstractAnimation_updateCurrentTime_0<(/*void*/)> for (i32) 
   fn updateCurrentTime_0(self , rsthis: & QAbstractAnimation) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-     qtrt::InvokeQtFunc6("_ZN18QAbstractAnimation17updateCurrentTimeEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN18QAbstractAnimation17updateCurrentTimeEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -832,7 +832,7 @@ impl<'a> /*trait*/ QAbstractAnimation_updateState_0<(/*void*/)> for (i32,i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0) as *const i32 as usize;
     let arg1 = (&self.1) as *const i32 as usize;
-     qtrt::InvokeQtFunc6("_ZN18QAbstractAnimation11updateStateENS_5StateES0_", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN18QAbstractAnimation11updateStateENS_5StateES0_", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -860,7 +860,7 @@ impl<'a> /*trait*/ QAbstractAnimation_updateDirection_0<(/*void*/)> for (i32) {
   fn updateDirection_0(self , rsthis: & QAbstractAnimation) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-     qtrt::InvokeQtFunc6("_ZN18QAbstractAnimation15updateDirectionENS_9DirectionE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN18QAbstractAnimation15updateDirectionENS_9DirectionE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }

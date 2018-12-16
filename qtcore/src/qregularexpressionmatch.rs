@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -93,7 +93,7 @@ pub trait QRegularExpressionMatch_QRegularExpressionMatch_0 {
 impl<'a> /*trait*/ QRegularExpressionMatch_QRegularExpressionMatch_0 for () {
   fn QRegularExpressionMatch_0(self) -> QRegularExpressionMatch {
     // unsafe{_ZN23QRegularExpressionMatchC2Ev()};
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN23QRegularExpressionMatchC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN23QRegularExpressionMatchC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QRegularExpressionMatch{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -135,7 +135,7 @@ impl<'a> /*trait*/ QRegularExpressionMatch_operator_equal_0<usize> for (usize) {
   fn operator_equal_0(self , rsthis: & QRegularExpressionMatch) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN23QRegularExpressionMatchaSERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN23QRegularExpressionMatchaSERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -162,7 +162,7 @@ impl<'a> /*trait*/ QRegularExpressionMatch_operator_equal_1<usize> for (usize) {
   fn operator_equal_1(self , rsthis: & QRegularExpressionMatch) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN23QRegularExpressionMatchaSEOS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN23QRegularExpressionMatchaSEOS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -189,7 +189,7 @@ impl<'a> /*trait*/ QRegularExpressionMatch_swap_0<(/*void*/)> for (usize) {
   fn swap_0(self , rsthis: & QRegularExpressionMatch) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN23QRegularExpressionMatch4swapERS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN23QRegularExpressionMatch4swapERS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -214,7 +214,7 @@ pub trait QRegularExpressionMatch_regularExpression_0<RetType> {
 impl<'a> /*trait*/ QRegularExpressionMatch_regularExpression_0<usize> for () {
   fn regularExpression_0(self , rsthis: & QRegularExpressionMatch) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch17regularExpressionEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch17regularExpressionEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -240,7 +240,7 @@ pub trait QRegularExpressionMatch_matchType_0<RetType> {
 impl<'a> /*trait*/ QRegularExpressionMatch_matchType_0<i32> for () {
   fn matchType_0(self , rsthis: & QRegularExpressionMatch) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch9matchTypeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch9matchTypeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -266,7 +266,7 @@ pub trait QRegularExpressionMatch_matchOptions_0<RetType> {
 impl<'a> /*trait*/ QRegularExpressionMatch_matchOptions_0<i32> for () {
   fn matchOptions_0(self , rsthis: & QRegularExpressionMatch) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch12matchOptionsEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch12matchOptionsEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -292,7 +292,7 @@ pub trait QRegularExpressionMatch_hasMatch_0<RetType> {
 impl<'a> /*trait*/ QRegularExpressionMatch_hasMatch_0<bool> for () {
   fn hasMatch_0(self , rsthis: & QRegularExpressionMatch) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch8hasMatchEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch8hasMatchEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -318,7 +318,7 @@ pub trait QRegularExpressionMatch_hasPartialMatch_0<RetType> {
 impl<'a> /*trait*/ QRegularExpressionMatch_hasPartialMatch_0<bool> for () {
   fn hasPartialMatch_0(self , rsthis: & QRegularExpressionMatch) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch15hasPartialMatchEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch15hasPartialMatchEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -346,7 +346,7 @@ pub trait QRegularExpressionMatch_isValid_0<RetType> {
 impl<'a> /*trait*/ QRegularExpressionMatch_isValid_0<bool> for () {
   fn isValid_0(self , rsthis: & QRegularExpressionMatch) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch7isValidEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch7isValidEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -372,7 +372,7 @@ pub trait QRegularExpressionMatch_lastCapturedIndex_0<RetType> {
 impl<'a> /*trait*/ QRegularExpressionMatch_lastCapturedIndex_0<i32> for () {
   fn lastCapturedIndex_0(self , rsthis: & QRegularExpressionMatch) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch17lastCapturedIndexEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch17lastCapturedIndexEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -399,7 +399,7 @@ impl<'a> /*trait*/ QRegularExpressionMatch_captured_0<usize> for (i32) {
   fn captured_0(self , rsthis: & QRegularExpressionMatch) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch8capturedEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch8capturedEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -426,7 +426,7 @@ impl<'a> /*trait*/ QRegularExpressionMatch_captured_1<usize> for (usize) {
   fn captured_1(self , rsthis: & QRegularExpressionMatch) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch8capturedERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch8capturedERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -453,7 +453,7 @@ impl<'a> /*trait*/ QRegularExpressionMatch_captured_2<usize> for (usize) {
   fn captured_2(self , rsthis: & QRegularExpressionMatch) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch8capturedE11QStringView", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch8capturedE11QStringView", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -480,7 +480,7 @@ impl<'a> /*trait*/ QRegularExpressionMatch_capturedRef_0<usize> for (i32) {
   fn capturedRef_0(self , rsthis: & QRegularExpressionMatch) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch11capturedRefEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch11capturedRefEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -507,7 +507,7 @@ impl<'a> /*trait*/ QRegularExpressionMatch_capturedRef_1<usize> for (usize) {
   fn capturedRef_1(self , rsthis: & QRegularExpressionMatch) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch11capturedRefERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch11capturedRefERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -534,7 +534,7 @@ impl<'a> /*trait*/ QRegularExpressionMatch_capturedRef_2<usize> for (usize) {
   fn capturedRef_2(self , rsthis: & QRegularExpressionMatch) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch11capturedRefE11QStringView", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch11capturedRefE11QStringView", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -561,7 +561,7 @@ impl<'a> /*trait*/ QRegularExpressionMatch_capturedView_0<usize> for (i32) {
   fn capturedView_0(self , rsthis: & QRegularExpressionMatch) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch12capturedViewEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch12capturedViewEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -588,7 +588,7 @@ impl<'a> /*trait*/ QRegularExpressionMatch_capturedView_1<usize> for (usize) {
   fn capturedView_1(self , rsthis: & QRegularExpressionMatch) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch12capturedViewE11QStringView", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch12capturedViewE11QStringView", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -614,7 +614,7 @@ pub trait QRegularExpressionMatch_capturedTexts_0<RetType> {
 impl<'a> /*trait*/ QRegularExpressionMatch_capturedTexts_0<usize> for () {
   fn capturedTexts_0(self , rsthis: & QRegularExpressionMatch) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch13capturedTextsEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch13capturedTextsEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -641,7 +641,7 @@ impl<'a> /*trait*/ QRegularExpressionMatch_capturedStart_0<i32> for (i32) {
   fn capturedStart_0(self , rsthis: & QRegularExpressionMatch) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch13capturedStartEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch13capturedStartEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -668,7 +668,7 @@ impl<'a> /*trait*/ QRegularExpressionMatch_capturedStart_1<i32> for (usize) {
   fn capturedStart_1(self , rsthis: & QRegularExpressionMatch) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch13capturedStartERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch13capturedStartERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -695,7 +695,7 @@ impl<'a> /*trait*/ QRegularExpressionMatch_capturedStart_2<i32> for (usize) {
   fn capturedStart_2(self , rsthis: & QRegularExpressionMatch) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch13capturedStartE11QStringView", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch13capturedStartE11QStringView", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -722,7 +722,7 @@ impl<'a> /*trait*/ QRegularExpressionMatch_capturedLength_0<i32> for (i32) {
   fn capturedLength_0(self , rsthis: & QRegularExpressionMatch) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch14capturedLengthEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch14capturedLengthEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -749,7 +749,7 @@ impl<'a> /*trait*/ QRegularExpressionMatch_capturedLength_1<i32> for (usize) {
   fn capturedLength_1(self , rsthis: & QRegularExpressionMatch) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch14capturedLengthERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch14capturedLengthERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -776,7 +776,7 @@ impl<'a> /*trait*/ QRegularExpressionMatch_capturedLength_2<i32> for (usize) {
   fn capturedLength_2(self , rsthis: & QRegularExpressionMatch) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch14capturedLengthE11QStringView", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch14capturedLengthE11QStringView", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -803,7 +803,7 @@ impl<'a> /*trait*/ QRegularExpressionMatch_capturedEnd_0<i32> for (i32) {
   fn capturedEnd_0(self , rsthis: & QRegularExpressionMatch) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch11capturedEndEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch11capturedEndEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -830,7 +830,7 @@ impl<'a> /*trait*/ QRegularExpressionMatch_capturedEnd_1<i32> for (usize) {
   fn capturedEnd_1(self , rsthis: & QRegularExpressionMatch) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch11capturedEndERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch11capturedEndERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -857,7 +857,7 @@ impl<'a> /*trait*/ QRegularExpressionMatch_capturedEnd_2<i32> for (usize) {
   fn capturedEnd_2(self , rsthis: & QRegularExpressionMatch) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch11capturedEndE11QStringView", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QRegularExpressionMatch11capturedEndE11QStringView", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }

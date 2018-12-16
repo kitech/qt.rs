@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -90,7 +90,7 @@ pub trait QAbstractEventDispatcher_metaObject_0<RetType> {
 impl<'a> /*trait*/ QAbstractEventDispatcher_metaObject_0<usize> for () {
   fn metaObject_0(self , rsthis: & QAbstractEventDispatcher) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK24QAbstractEventDispatcher10metaObjectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK24QAbstractEventDispatcher10metaObjectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -121,7 +121,7 @@ impl<'a> /*trait*/ QAbstractEventDispatcher_QAbstractEventDispatcher_0 for (usiz
   fn QAbstractEventDispatcher_0(self) -> QAbstractEventDispatcher {
     // unsafe{_ZN24QAbstractEventDispatcherC2EP7QObject()};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcherC2EP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcherC2EP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QAbstractEventDispatcher{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -165,7 +165,7 @@ impl<'a> /*trait*/ QAbstractEventDispatcher_instance_0<usize> for (usize) {
   fn instance_0(self ) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher8instanceEP7QThread", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher8instanceEP7QThread", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -207,7 +207,7 @@ impl<'a> /*trait*/ QAbstractEventDispatcher_processEvents_0<bool> for (i32) {
   fn processEvents_0(self , rsthis: & QAbstractEventDispatcher) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -233,7 +233,7 @@ pub trait QAbstractEventDispatcher_hasPendingEvents_0<RetType> {
 impl<'a> /*trait*/ QAbstractEventDispatcher_hasPendingEvents_0<bool> for () {
   fn hasPendingEvents_0(self , rsthis: & QAbstractEventDispatcher) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher16hasPendingEventsEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher16hasPendingEventsEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -260,7 +260,7 @@ impl<'a> /*trait*/ QAbstractEventDispatcher_registerSocketNotifier_0<(/*void*/)>
   fn registerSocketNotifier_0(self , rsthis: & QAbstractEventDispatcher) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher22registerSocketNotifierEP15QSocketNotifier", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher22registerSocketNotifierEP15QSocketNotifier", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -286,7 +286,7 @@ impl<'a> /*trait*/ QAbstractEventDispatcher_unregisterSocketNotifier_0<(/*void*/
   fn unregisterSocketNotifier_0(self , rsthis: & QAbstractEventDispatcher) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher24unregisterSocketNotifierEP15QSocketNotifier", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher24unregisterSocketNotifierEP15QSocketNotifier", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -314,7 +314,7 @@ impl<'a> /*trait*/ QAbstractEventDispatcher_registerTimer_0<i32> for (i32,i32,us
     let arg0 = (&self.0) as *const i32 as usize;
     let arg1 = (&self.1) as *const i32 as usize;
     let arg2 = (&self.2/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher13registerTimerEiN2Qt9TimerTypeEP7QObject", 3,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher13registerTimerEiN2Qt9TimerTypeEP7QObject", 3,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -344,7 +344,7 @@ impl<'a> /*trait*/ QAbstractEventDispatcher_registerTimer_1<(/*void*/)> for (i32
     let arg1 = (&self.1) as *const i32 as usize;
     let arg2 = (&self.2) as *const i32 as usize;
     let arg3 = (&self.3/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher13registerTimerEiiN2Qt9TimerTypeEP7QObject", 4,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher13registerTimerEiiN2Qt9TimerTypeEP7QObject", 4,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -372,7 +372,7 @@ impl<'a> /*trait*/ QAbstractEventDispatcher_unregisterTimer_0<bool> for (i32) {
   fn unregisterTimer_0(self , rsthis: & QAbstractEventDispatcher) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher15unregisterTimerEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher15unregisterTimerEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -401,7 +401,7 @@ impl<'a> /*trait*/ QAbstractEventDispatcher_unregisterTimers_0<bool> for (usize)
   fn unregisterTimers_0(self , rsthis: & QAbstractEventDispatcher) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher16unregisterTimersEP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher16unregisterTimersEP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -430,7 +430,7 @@ impl<'a> /*trait*/ QAbstractEventDispatcher_remainingTime_0<i32> for (i32) {
   fn remainingTime_0(self , rsthis: & QAbstractEventDispatcher) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher13remainingTimeEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher13remainingTimeEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -460,7 +460,7 @@ pub trait QAbstractEventDispatcher_wakeUp_0<RetType> {
 impl<'a> /*trait*/ QAbstractEventDispatcher_wakeUp_0<(/*void*/)> for () {
   fn wakeUp_0(self , rsthis: & QAbstractEventDispatcher) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher6wakeUpEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher6wakeUpEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -485,7 +485,7 @@ pub trait QAbstractEventDispatcher_interrupt_0<RetType> {
 impl<'a> /*trait*/ QAbstractEventDispatcher_interrupt_0<(/*void*/)> for () {
   fn interrupt_0(self , rsthis: & QAbstractEventDispatcher) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher9interruptEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher9interruptEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -510,7 +510,7 @@ pub trait QAbstractEventDispatcher_flush_0<RetType> {
 impl<'a> /*trait*/ QAbstractEventDispatcher_flush_0<(/*void*/)> for () {
   fn flush_0(self , rsthis: & QAbstractEventDispatcher) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher5flushEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher5flushEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -535,7 +535,7 @@ pub trait QAbstractEventDispatcher_startingUp_0<RetType> {
 impl<'a> /*trait*/ QAbstractEventDispatcher_startingUp_0<(/*void*/)> for () {
   fn startingUp_0(self , rsthis: & QAbstractEventDispatcher) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher10startingUpEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher10startingUpEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -560,7 +560,7 @@ pub trait QAbstractEventDispatcher_closingDown_0<RetType> {
 impl<'a> /*trait*/ QAbstractEventDispatcher_closingDown_0<(/*void*/)> for () {
   fn closingDown_0(self , rsthis: & QAbstractEventDispatcher) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher11closingDownEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher11closingDownEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -600,7 +600,7 @@ impl<'a> /*trait*/ QAbstractEventDispatcher_installNativeEventFilter_0<(/*void*/
   fn installNativeEventFilter_0(self , rsthis: & QAbstractEventDispatcher) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher24installNativeEventFilterEP26QAbstractNativeEventFilter", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher24installNativeEventFilterEP26QAbstractNativeEventFilter", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -634,7 +634,7 @@ impl<'a> /*trait*/ QAbstractEventDispatcher_removeNativeEventFilter_0<(/*void*/)
   fn removeNativeEventFilter_0(self , rsthis: & QAbstractEventDispatcher) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher23removeNativeEventFilterEP26QAbstractNativeEventFilter", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher23removeNativeEventFilterEP26QAbstractNativeEventFilter", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -670,7 +670,7 @@ impl<'a> /*trait*/ QAbstractEventDispatcher_filterNativeEvent_0<bool> for (usize
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const usize as usize;
     let arg2 = (&self.2) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher17filterNativeEventERK10QByteArrayPvPl", 3,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher17filterNativeEventERK10QByteArrayPvPl", 3,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -698,7 +698,7 @@ pub trait QAbstractEventDispatcher_aboutToBlock_0<RetType> {
 impl<'a> /*trait*/ QAbstractEventDispatcher_aboutToBlock_0<(/*void*/)> for () {
   fn aboutToBlock_0(self , rsthis: & QAbstractEventDispatcher) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher12aboutToBlockEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher12aboutToBlockEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -725,7 +725,7 @@ pub trait QAbstractEventDispatcher_awake_0<RetType> {
 impl<'a> /*trait*/ QAbstractEventDispatcher_awake_0<(/*void*/)> for () {
   fn awake_0(self , rsthis: & QAbstractEventDispatcher) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher5awakeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN24QAbstractEventDispatcher5awakeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }

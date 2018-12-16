@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -95,7 +95,7 @@ impl<'a> /*trait*/ QDynamicPropertyChangeEvent_QDynamicPropertyChangeEvent_0 for
   fn QDynamicPropertyChangeEvent_0(self) -> QDynamicPropertyChangeEvent {
     // unsafe{_ZN27QDynamicPropertyChangeEventC2ERK10QByteArray()};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN27QDynamicPropertyChangeEventC2ERK10QByteArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN27QDynamicPropertyChangeEventC2ERK10QByteArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QDynamicPropertyChangeEvent{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -136,7 +136,7 @@ pub trait QDynamicPropertyChangeEvent_propertyName_0<RetType> {
 impl<'a> /*trait*/ QDynamicPropertyChangeEvent_propertyName_0<usize> for () {
   fn propertyName_0(self , rsthis: & QDynamicPropertyChangeEvent) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK27QDynamicPropertyChangeEvent12propertyNameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK27QDynamicPropertyChangeEvent12propertyNameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }

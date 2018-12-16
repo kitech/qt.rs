@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -93,7 +93,7 @@ pub trait QSharedData_QSharedData_0 {
 impl<'a> /*trait*/ QSharedData_QSharedData_0 for () {
   fn QSharedData_0(self) -> QSharedData {
     // unsafe{_ZN11QSharedDataC2Ev()};
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN11QSharedDataC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN11QSharedDataC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QSharedData{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

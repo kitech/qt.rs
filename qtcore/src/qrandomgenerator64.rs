@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -90,7 +90,7 @@ pub trait QRandomGenerator64_generate_0<RetType> {
 impl<'a> /*trait*/ QRandomGenerator64_generate_0<u64> for () {
   fn generate_0(self , rsthis: & QRandomGenerator64) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZN18QRandomGenerator648generateEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN18QRandomGenerator648generateEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: u64 = Default::default(); return dret;
   }
@@ -116,7 +116,7 @@ pub trait QRandomGenerator64_operator_fncall_0<RetType> {
 impl<'a> /*trait*/ QRandomGenerator64_operator_fncall_0<u64> for () {
   fn operator_fncall_0(self , rsthis: & QRandomGenerator64) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZN18QRandomGenerator64clEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN18QRandomGenerator64clEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: u64 = Default::default(); return dret;
   }
@@ -147,7 +147,7 @@ impl<'a> /*trait*/ QRandomGenerator64_QRandomGenerator64_0 for (u32) {
   fn QRandomGenerator64_0(self) -> QRandomGenerator64 {
     // unsafe{_ZN18QRandomGenerator64C2Ej()};
     let arg0 = (&self) as *const u32 as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN18QRandomGenerator64C2Ej", 1,qtrt::FFITY_UINT32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN18QRandomGenerator64C2Ej", 1,qtrt::FFITY_UINT32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QRandomGenerator64{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -180,7 +180,7 @@ impl<'a> /*trait*/ QRandomGenerator64_QRandomGenerator64_1 for (usize,i64) {
     // unsafe{_ZN18QRandomGenerator64C2EPKjx()};
     let arg0 = (&self.0) as *const usize as usize;
     let arg1 = (&self.1) as *const i64 as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN18QRandomGenerator64C2EPKjx", 2,qtrt::FFITY_POINTER,qtrt::FFITY_SINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN18QRandomGenerator64C2EPKjx", 2,qtrt::FFITY_POINTER,qtrt::FFITY_SINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QRandomGenerator64{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -213,7 +213,7 @@ impl<'a> /*trait*/ QRandomGenerator64_QRandomGenerator64_2 for (usize,usize) {
     // unsafe{_ZN18QRandomGenerator64C2EPKjS1_()};
     let arg0 = (&self.0) as *const usize as usize;
     let arg1 = (&self.1) as *const usize as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN18QRandomGenerator64C2EPKjS1_", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN18QRandomGenerator64C2EPKjS1_", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QRandomGenerator64{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -245,7 +245,7 @@ impl<'a> /*trait*/ QRandomGenerator64_QRandomGenerator64_3 for (usize) {
   fn QRandomGenerator64_3(self) -> QRandomGenerator64 {
     // unsafe{_ZN18QRandomGenerator64C2ERK16QRandomGenerator()};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN18QRandomGenerator64C2ERK16QRandomGenerator", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN18QRandomGenerator64C2ERK16QRandomGenerator", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QRandomGenerator64{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -273,7 +273,7 @@ impl<'a> /*trait*/ QRandomGenerator64_discard_0<(/*void*/)> for (u64) {
   fn discard_0(self , rsthis: & QRandomGenerator64) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const u64 as usize;
-     qtrt::InvokeQtFunc6("_ZN18QRandomGenerator647discardEy", 1,qtrt::FFITY_UINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN18QRandomGenerator647discardEy", 1,qtrt::FFITY_UINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -298,7 +298,7 @@ pub trait QRandomGenerator64_min_0<RetType> {
 impl<'a> /*trait*/ QRandomGenerator64_min_0<u64> for () {
   fn min_0(self ) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZN18QRandomGenerator643minEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN18QRandomGenerator643minEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: u64 = Default::default(); return dret;
   }
@@ -324,7 +324,7 @@ pub trait QRandomGenerator64_max_0<RetType> {
 impl<'a> /*trait*/ QRandomGenerator64_max_0<u64> for () {
   fn max_0(self ) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZN18QRandomGenerator643maxEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN18QRandomGenerator643maxEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: u64 = Default::default(); return dret;
   }
@@ -350,7 +350,7 @@ pub trait QRandomGenerator64_system_0<RetType> {
 impl<'a> /*trait*/ QRandomGenerator64_system_0<usize> for () {
   fn system_0(self ) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZN18QRandomGenerator646systemEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN18QRandomGenerator646systemEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -376,7 +376,7 @@ pub trait QRandomGenerator64_global_0<RetType> {
 impl<'a> /*trait*/ QRandomGenerator64_global_0<usize> for () {
   fn global_0(self ) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZN18QRandomGenerator646globalEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN18QRandomGenerator646globalEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -402,7 +402,7 @@ pub trait QRandomGenerator64_securelySeeded_0<RetType> {
 impl<'a> /*trait*/ QRandomGenerator64_securelySeeded_0<usize> for () {
   fn securelySeeded_0(self ) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZN18QRandomGenerator6414securelySeededEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN18QRandomGenerator6414securelySeededEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }

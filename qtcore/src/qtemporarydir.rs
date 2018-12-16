@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -95,7 +95,7 @@ pub trait QTemporaryDir_QTemporaryDir_0 {
 impl<'a> /*trait*/ QTemporaryDir_QTemporaryDir_0 for () {
   fn QTemporaryDir_0(self) -> QTemporaryDir {
     // unsafe{_ZN13QTemporaryDirC2Ev()};
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN13QTemporaryDirC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN13QTemporaryDirC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QTemporaryDir{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -129,7 +129,7 @@ impl<'a> /*trait*/ QTemporaryDir_QTemporaryDir_1 for (usize) {
   fn QTemporaryDir_1(self) -> QTemporaryDir {
     // unsafe{_ZN13QTemporaryDirC2ERK7QString()};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN13QTemporaryDirC2ERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN13QTemporaryDirC2ERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QTemporaryDir{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -170,7 +170,7 @@ pub trait QTemporaryDir_isValid_0<RetType> {
 impl<'a> /*trait*/ QTemporaryDir_isValid_0<bool> for () {
   fn isValid_0(self , rsthis: & QTemporaryDir) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QTemporaryDir7isValidEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QTemporaryDir7isValidEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -198,7 +198,7 @@ pub trait QTemporaryDir_errorString_0<RetType> {
 impl<'a> /*trait*/ QTemporaryDir_errorString_0<usize> for () {
   fn errorString_0(self , rsthis: & QTemporaryDir) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QTemporaryDir11errorStringEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QTemporaryDir11errorStringEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -228,7 +228,7 @@ pub trait QTemporaryDir_autoRemove_0<RetType> {
 impl<'a> /*trait*/ QTemporaryDir_autoRemove_0<bool> for () {
   fn autoRemove_0(self , rsthis: & QTemporaryDir) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QTemporaryDir10autoRemoveEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QTemporaryDir10autoRemoveEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -259,7 +259,7 @@ impl<'a> /*trait*/ QTemporaryDir_setAutoRemove_0<(/*void*/)> for (bool) {
   fn setAutoRemove_0(self , rsthis: & QTemporaryDir) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const bool as usize;
-     qtrt::InvokeQtFunc6("_ZN13QTemporaryDir13setAutoRemoveEb", 1,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN13QTemporaryDir13setAutoRemoveEb", 1,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -286,7 +286,7 @@ pub trait QTemporaryDir_remove_0<RetType> {
 impl<'a> /*trait*/ QTemporaryDir_remove_0<bool> for () {
   fn remove_0(self , rsthis: & QTemporaryDir) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZN13QTemporaryDir6removeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN13QTemporaryDir6removeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -312,7 +312,7 @@ pub trait QTemporaryDir_path_0<RetType> {
 impl<'a> /*trait*/ QTemporaryDir_path_0<usize> for () {
   fn path_0(self , rsthis: & QTemporaryDir) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QTemporaryDir4pathEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QTemporaryDir4pathEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -341,7 +341,7 @@ impl<'a> /*trait*/ QTemporaryDir_filePath_0<usize> for (usize) {
   fn filePath_0(self , rsthis: & QTemporaryDir) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QTemporaryDir8filePathERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QTemporaryDir8filePathERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }

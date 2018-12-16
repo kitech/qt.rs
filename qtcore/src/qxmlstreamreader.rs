@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -93,7 +93,7 @@ pub trait QXmlStreamReader_QXmlStreamReader_0 {
 impl<'a> /*trait*/ QXmlStreamReader_QXmlStreamReader_0 for () {
   fn QXmlStreamReader_0(self) -> QXmlStreamReader {
     // unsafe{_ZN16QXmlStreamReaderC2Ev()};
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN16QXmlStreamReaderC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN16QXmlStreamReaderC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QXmlStreamReader{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -125,7 +125,7 @@ impl<'a> /*trait*/ QXmlStreamReader_QXmlStreamReader_1 for (usize) {
   fn QXmlStreamReader_1(self) -> QXmlStreamReader {
     // unsafe{_ZN16QXmlStreamReaderC2EP9QIODevice()};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN16QXmlStreamReaderC2EP9QIODevice", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN16QXmlStreamReaderC2EP9QIODevice", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QXmlStreamReader{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -157,7 +157,7 @@ impl<'a> /*trait*/ QXmlStreamReader_QXmlStreamReader_2 for (usize) {
   fn QXmlStreamReader_2(self) -> QXmlStreamReader {
     // unsafe{_ZN16QXmlStreamReaderC2ERK10QByteArray()};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN16QXmlStreamReaderC2ERK10QByteArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN16QXmlStreamReaderC2ERK10QByteArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QXmlStreamReader{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -189,7 +189,7 @@ impl<'a> /*trait*/ QXmlStreamReader_QXmlStreamReader_3 for (usize) {
   fn QXmlStreamReader_3(self) -> QXmlStreamReader {
     // unsafe{_ZN16QXmlStreamReaderC2ERK7QString()};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN16QXmlStreamReaderC2ERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN16QXmlStreamReaderC2ERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QXmlStreamReader{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -221,7 +221,7 @@ impl<'a> /*trait*/ QXmlStreamReader_QXmlStreamReader_4 for (usize) {
   fn QXmlStreamReader_4(self) -> QXmlStreamReader {
     // unsafe{_ZN16QXmlStreamReaderC2EPKc()};
     let arg0 = (self) as *const usize as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN16QXmlStreamReaderC2EPKc", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN16QXmlStreamReaderC2EPKc", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QXmlStreamReader{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -263,7 +263,7 @@ impl<'a> /*trait*/ QXmlStreamReader_setDevice_0<(/*void*/)> for (usize) {
   fn setDevice_0(self , rsthis: & QXmlStreamReader) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN16QXmlStreamReader9setDeviceEP9QIODevice", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN16QXmlStreamReader9setDeviceEP9QIODevice", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -288,7 +288,7 @@ pub trait QXmlStreamReader_device_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_device_0<usize> for () {
   fn device_0(self , rsthis: & QXmlStreamReader) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader6deviceEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader6deviceEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -315,7 +315,7 @@ impl<'a> /*trait*/ QXmlStreamReader_addData_0<(/*void*/)> for (usize) {
   fn addData_0(self , rsthis: & QXmlStreamReader) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN16QXmlStreamReader7addDataERK10QByteArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN16QXmlStreamReader7addDataERK10QByteArray", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -341,7 +341,7 @@ impl<'a> /*trait*/ QXmlStreamReader_addData_1<(/*void*/)> for (usize) {
   fn addData_1(self , rsthis: & QXmlStreamReader) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN16QXmlStreamReader7addDataERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN16QXmlStreamReader7addDataERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -367,7 +367,7 @@ impl<'a> /*trait*/ QXmlStreamReader_addData_2<(/*void*/)> for (usize) {
   fn addData_2(self , rsthis: & QXmlStreamReader) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (self) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN16QXmlStreamReader7addDataEPKc", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN16QXmlStreamReader7addDataEPKc", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -392,7 +392,7 @@ pub trait QXmlStreamReader_clear_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_clear_0<(/*void*/)> for () {
   fn clear_0(self , rsthis: & QXmlStreamReader) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN16QXmlStreamReader5clearEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN16QXmlStreamReader5clearEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -417,7 +417,7 @@ pub trait QXmlStreamReader_atEnd_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_atEnd_0<bool> for () {
   fn atEnd_0(self , rsthis: & QXmlStreamReader) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader5atEndEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader5atEndEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -443,7 +443,7 @@ pub trait QXmlStreamReader_readNext_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_readNext_0<i32> for () {
   fn readNext_0(self , rsthis: & QXmlStreamReader) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZN16QXmlStreamReader8readNextEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN16QXmlStreamReader8readNextEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -469,7 +469,7 @@ pub trait QXmlStreamReader_readNextStartElement_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_readNextStartElement_0<bool> for () {
   fn readNextStartElement_0(self , rsthis: & QXmlStreamReader) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZN16QXmlStreamReader20readNextStartElementEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN16QXmlStreamReader20readNextStartElementEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -495,7 +495,7 @@ pub trait QXmlStreamReader_skipCurrentElement_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_skipCurrentElement_0<(/*void*/)> for () {
   fn skipCurrentElement_0(self , rsthis: & QXmlStreamReader) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN16QXmlStreamReader18skipCurrentElementEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN16QXmlStreamReader18skipCurrentElementEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -520,7 +520,7 @@ pub trait QXmlStreamReader_tokenType_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_tokenType_0<i32> for () {
   fn tokenType_0(self , rsthis: & QXmlStreamReader) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader9tokenTypeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader9tokenTypeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -546,7 +546,7 @@ pub trait QXmlStreamReader_tokenString_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_tokenString_0<usize> for () {
   fn tokenString_0(self , rsthis: & QXmlStreamReader) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader11tokenStringEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader11tokenStringEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -573,7 +573,7 @@ impl<'a> /*trait*/ QXmlStreamReader_setNamespaceProcessing_0<(/*void*/)> for (bo
   fn setNamespaceProcessing_0(self , rsthis: & QXmlStreamReader) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const bool as usize;
-     qtrt::InvokeQtFunc6("_ZN16QXmlStreamReader22setNamespaceProcessingEb", 1,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN16QXmlStreamReader22setNamespaceProcessingEb", 1,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -598,7 +598,7 @@ pub trait QXmlStreamReader_namespaceProcessing_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_namespaceProcessing_0<bool> for () {
   fn namespaceProcessing_0(self , rsthis: & QXmlStreamReader) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader19namespaceProcessingEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader19namespaceProcessingEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -624,7 +624,7 @@ pub trait QXmlStreamReader_isStartDocument_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_isStartDocument_0<bool> for () {
   fn isStartDocument_0(self , rsthis: & QXmlStreamReader) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader15isStartDocumentEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader15isStartDocumentEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -650,7 +650,7 @@ pub trait QXmlStreamReader_isEndDocument_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_isEndDocument_0<bool> for () {
   fn isEndDocument_0(self , rsthis: & QXmlStreamReader) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader13isEndDocumentEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader13isEndDocumentEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -676,7 +676,7 @@ pub trait QXmlStreamReader_isStartElement_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_isStartElement_0<bool> for () {
   fn isStartElement_0(self , rsthis: & QXmlStreamReader) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader14isStartElementEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader14isStartElementEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -702,7 +702,7 @@ pub trait QXmlStreamReader_isEndElement_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_isEndElement_0<bool> for () {
   fn isEndElement_0(self , rsthis: & QXmlStreamReader) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader12isEndElementEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader12isEndElementEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -728,7 +728,7 @@ pub trait QXmlStreamReader_isCharacters_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_isCharacters_0<bool> for () {
   fn isCharacters_0(self , rsthis: & QXmlStreamReader) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader12isCharactersEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader12isCharactersEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -754,7 +754,7 @@ pub trait QXmlStreamReader_isWhitespace_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_isWhitespace_0<bool> for () {
   fn isWhitespace_0(self , rsthis: & QXmlStreamReader) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader12isWhitespaceEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader12isWhitespaceEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -780,7 +780,7 @@ pub trait QXmlStreamReader_isCDATA_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_isCDATA_0<bool> for () {
   fn isCDATA_0(self , rsthis: & QXmlStreamReader) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader7isCDATAEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader7isCDATAEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -806,7 +806,7 @@ pub trait QXmlStreamReader_isComment_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_isComment_0<bool> for () {
   fn isComment_0(self , rsthis: & QXmlStreamReader) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader9isCommentEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader9isCommentEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -832,7 +832,7 @@ pub trait QXmlStreamReader_isDTD_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_isDTD_0<bool> for () {
   fn isDTD_0(self , rsthis: & QXmlStreamReader) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader5isDTDEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader5isDTDEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -858,7 +858,7 @@ pub trait QXmlStreamReader_isEntityReference_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_isEntityReference_0<bool> for () {
   fn isEntityReference_0(self , rsthis: & QXmlStreamReader) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader17isEntityReferenceEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader17isEntityReferenceEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -884,7 +884,7 @@ pub trait QXmlStreamReader_isProcessingInstruction_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_isProcessingInstruction_0<bool> for () {
   fn isProcessingInstruction_0(self , rsthis: & QXmlStreamReader) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader23isProcessingInstructionEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader23isProcessingInstructionEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -910,7 +910,7 @@ pub trait QXmlStreamReader_isStandaloneDocument_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_isStandaloneDocument_0<bool> for () {
   fn isStandaloneDocument_0(self , rsthis: & QXmlStreamReader) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader20isStandaloneDocumentEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader20isStandaloneDocumentEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -936,7 +936,7 @@ pub trait QXmlStreamReader_documentVersion_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_documentVersion_0<usize> for () {
   fn documentVersion_0(self , rsthis: & QXmlStreamReader) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader15documentVersionEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader15documentVersionEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -962,7 +962,7 @@ pub trait QXmlStreamReader_documentEncoding_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_documentEncoding_0<usize> for () {
   fn documentEncoding_0(self , rsthis: & QXmlStreamReader) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader16documentEncodingEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader16documentEncodingEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -988,7 +988,7 @@ pub trait QXmlStreamReader_lineNumber_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_lineNumber_0<i64> for () {
   fn lineNumber_0(self , rsthis: & QXmlStreamReader) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader10lineNumberEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader10lineNumberEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i64 = Default::default(); return dret;
   }
@@ -1014,7 +1014,7 @@ pub trait QXmlStreamReader_columnNumber_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_columnNumber_0<i64> for () {
   fn columnNumber_0(self , rsthis: & QXmlStreamReader) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader12columnNumberEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader12columnNumberEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i64 = Default::default(); return dret;
   }
@@ -1040,7 +1040,7 @@ pub trait QXmlStreamReader_characterOffset_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_characterOffset_0<i64> for () {
   fn characterOffset_0(self , rsthis: & QXmlStreamReader) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader15characterOffsetEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader15characterOffsetEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i64 = Default::default(); return dret;
   }
@@ -1066,7 +1066,7 @@ pub trait QXmlStreamReader_attributes_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_attributes_0<usize> for () {
   fn attributes_0(self , rsthis: & QXmlStreamReader) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader10attributesEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader10attributesEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1093,7 +1093,7 @@ impl<'a> /*trait*/ QXmlStreamReader_readElementText_0<usize> for (i32) {
   fn readElementText_0(self , rsthis: & QXmlStreamReader) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN16QXmlStreamReader15readElementTextENS_24ReadElementTextBehaviourE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN16QXmlStreamReader15readElementTextENS_24ReadElementTextBehaviourE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1119,7 +1119,7 @@ pub trait QXmlStreamReader_name_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_name_0<usize> for () {
   fn name_0(self , rsthis: & QXmlStreamReader) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader4nameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader4nameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1145,7 +1145,7 @@ pub trait QXmlStreamReader_namespaceUri_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_namespaceUri_0<usize> for () {
   fn namespaceUri_0(self , rsthis: & QXmlStreamReader) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader12namespaceUriEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader12namespaceUriEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1171,7 +1171,7 @@ pub trait QXmlStreamReader_qualifiedName_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_qualifiedName_0<usize> for () {
   fn qualifiedName_0(self , rsthis: & QXmlStreamReader) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader13qualifiedNameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader13qualifiedNameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1197,7 +1197,7 @@ pub trait QXmlStreamReader_prefix_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_prefix_0<usize> for () {
   fn prefix_0(self , rsthis: & QXmlStreamReader) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader6prefixEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader6prefixEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1223,7 +1223,7 @@ pub trait QXmlStreamReader_processingInstructionTarget_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_processingInstructionTarget_0<usize> for () {
   fn processingInstructionTarget_0(self , rsthis: & QXmlStreamReader) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader27processingInstructionTargetEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader27processingInstructionTargetEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1249,7 +1249,7 @@ pub trait QXmlStreamReader_processingInstructionData_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_processingInstructionData_0<usize> for () {
   fn processingInstructionData_0(self , rsthis: & QXmlStreamReader) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader25processingInstructionDataEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader25processingInstructionDataEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1275,7 +1275,7 @@ pub trait QXmlStreamReader_text_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_text_0<usize> for () {
   fn text_0(self , rsthis: & QXmlStreamReader) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader4textEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader4textEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1302,7 +1302,7 @@ impl<'a> /*trait*/ QXmlStreamReader_addExtraNamespaceDeclaration_0<(/*void*/)> f
   fn addExtraNamespaceDeclaration_0(self , rsthis: & QXmlStreamReader) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN16QXmlStreamReader28addExtraNamespaceDeclarationERK30QXmlStreamNamespaceDeclaration", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN16QXmlStreamReader28addExtraNamespaceDeclarationERK30QXmlStreamNamespaceDeclaration", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -1327,7 +1327,7 @@ pub trait QXmlStreamReader_dtdName_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_dtdName_0<usize> for () {
   fn dtdName_0(self , rsthis: & QXmlStreamReader) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader7dtdNameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader7dtdNameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1353,7 +1353,7 @@ pub trait QXmlStreamReader_dtdPublicId_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_dtdPublicId_0<usize> for () {
   fn dtdPublicId_0(self , rsthis: & QXmlStreamReader) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader11dtdPublicIdEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader11dtdPublicIdEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1379,7 +1379,7 @@ pub trait QXmlStreamReader_dtdSystemId_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_dtdSystemId_0<usize> for () {
   fn dtdSystemId_0(self , rsthis: & QXmlStreamReader) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader11dtdSystemIdEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader11dtdSystemIdEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1406,7 +1406,7 @@ impl<'a> /*trait*/ QXmlStreamReader_raiseError_0<(/*void*/)> for (usize) {
   fn raiseError_0(self , rsthis: & QXmlStreamReader) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN16QXmlStreamReader10raiseErrorERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN16QXmlStreamReader10raiseErrorERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -1431,7 +1431,7 @@ pub trait QXmlStreamReader_errorString_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_errorString_0<usize> for () {
   fn errorString_0(self , rsthis: & QXmlStreamReader) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader11errorStringEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader11errorStringEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1457,7 +1457,7 @@ pub trait QXmlStreamReader_error_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_error_0<i32> for () {
   fn error_0(self , rsthis: & QXmlStreamReader) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader5errorEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader5errorEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -1483,7 +1483,7 @@ pub trait QXmlStreamReader_hasError_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_hasError_0<bool> for () {
   fn hasError_0(self , rsthis: & QXmlStreamReader) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader8hasErrorEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader8hasErrorEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -1510,7 +1510,7 @@ impl<'a> /*trait*/ QXmlStreamReader_setEntityResolver_0<(/*void*/)> for (usize) 
   fn setEntityResolver_0(self , rsthis: & QXmlStreamReader) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN16QXmlStreamReader17setEntityResolverEP24QXmlStreamEntityResolver", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN16QXmlStreamReader17setEntityResolverEP24QXmlStreamEntityResolver", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -1535,7 +1535,7 @@ pub trait QXmlStreamReader_entityResolver_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamReader_entityResolver_0<usize> for () {
   fn entityResolver_0(self , rsthis: & QXmlStreamReader) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader14entityResolverEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QXmlStreamReader14entityResolverEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }

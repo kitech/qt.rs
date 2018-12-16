@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -105,7 +105,7 @@ pub trait QFileDevice_metaObject_0<RetType> {
 impl<'a> /*trait*/ QFileDevice_metaObject_0<usize> for () {
   fn metaObject_0(self , rsthis: & QFileDevice) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QFileDevice10metaObjectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QFileDevice10metaObjectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -149,7 +149,7 @@ pub trait QFileDevice_error_0<RetType> {
 impl<'a> /*trait*/ QFileDevice_error_0<i32> for () {
   fn error_0(self , rsthis: & QFileDevice) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QFileDevice5errorEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QFileDevice5errorEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -177,7 +177,7 @@ pub trait QFileDevice_unsetError_0<RetType> {
 impl<'a> /*trait*/ QFileDevice_unsetError_0<(/*void*/)> for () {
   fn unsetError_0(self , rsthis: & QFileDevice) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN11QFileDevice10unsetErrorEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN11QFileDevice10unsetErrorEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -206,7 +206,7 @@ pub trait QFileDevice_close_0<RetType> {
 impl<'a> /*trait*/ QFileDevice_close_0<(/*void*/)> for () {
   fn close_0(self , rsthis: & QFileDevice) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN11QFileDevice5closeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN11QFileDevice5closeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -237,7 +237,7 @@ pub trait QFileDevice_isSequential_0<RetType> {
 impl<'a> /*trait*/ QFileDevice_isSequential_0<bool> for () {
   fn isSequential_0(self , rsthis: & QFileDevice) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QFileDevice12isSequentialEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QFileDevice12isSequentialEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -269,7 +269,7 @@ pub trait QFileDevice_handle_0<RetType> {
 impl<'a> /*trait*/ QFileDevice_handle_0<i32> for () {
   fn handle_0(self , rsthis: & QFileDevice) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QFileDevice6handleEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QFileDevice6handleEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -295,7 +295,7 @@ pub trait QFileDevice_fileName_0<RetType> {
 impl<'a> /*trait*/ QFileDevice_fileName_0<usize> for () {
   fn fileName_0(self , rsthis: & QFileDevice) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QFileDevice8fileNameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QFileDevice8fileNameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -321,7 +321,7 @@ pub trait QFileDevice_pos_0<RetType> {
 impl<'a> /*trait*/ QFileDevice_pos_0<i64> for () {
   fn pos_0(self , rsthis: & QFileDevice) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QFileDevice3posEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QFileDevice3posEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i64 = Default::default(); return dret;
   }
@@ -352,7 +352,7 @@ impl<'a> /*trait*/ QFileDevice_seek_0<bool> for (i64) {
   fn seek_0(self , rsthis: & QFileDevice) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i64 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN11QFileDevice4seekEx", 1,qtrt::FFITY_SINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN11QFileDevice4seekEx", 1,qtrt::FFITY_SINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -382,7 +382,7 @@ pub trait QFileDevice_atEnd_0<RetType> {
 impl<'a> /*trait*/ QFileDevice_atEnd_0<bool> for () {
   fn atEnd_0(self , rsthis: & QFileDevice) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QFileDevice5atEndEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QFileDevice5atEndEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -408,7 +408,7 @@ pub trait QFileDevice_flush_0<RetType> {
 impl<'a> /*trait*/ QFileDevice_flush_0<bool> for () {
   fn flush_0(self , rsthis: & QFileDevice) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZN11QFileDevice5flushEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN11QFileDevice5flushEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -438,7 +438,7 @@ pub trait QFileDevice_size_0<RetType> {
 impl<'a> /*trait*/ QFileDevice_size_0<i64> for () {
   fn size_0(self , rsthis: & QFileDevice) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QFileDevice4sizeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QFileDevice4sizeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i64 = Default::default(); return dret;
   }
@@ -469,7 +469,7 @@ impl<'a> /*trait*/ QFileDevice_resize_0<bool> for (i64) {
   fn resize_0(self , rsthis: & QFileDevice) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i64 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN11QFileDevice6resizeEx", 1,qtrt::FFITY_SINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN11QFileDevice6resizeEx", 1,qtrt::FFITY_SINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -497,7 +497,7 @@ pub trait QFileDevice_permissions_0<RetType> {
 impl<'a> /*trait*/ QFileDevice_permissions_0<i32> for () {
   fn permissions_0(self , rsthis: & QFileDevice) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QFileDevice11permissionsEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QFileDevice11permissionsEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -528,7 +528,7 @@ impl<'a> /*trait*/ QFileDevice_setPermissions_0<bool> for (i32) {
   fn setPermissions_0(self , rsthis: & QFileDevice) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN11QFileDevice14setPermissionsE6QFlagsINS_10PermissionEE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN11QFileDevice14setPermissionsE6QFlagsINS_10PermissionEE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -565,7 +565,7 @@ impl<'a> /*trait*/ QFileDevice_map__0<usize> for (i64,i64,i32) {
     let arg0 = (&self.0) as *const i64 as usize;
     let arg1 = (&self.1) as *const i64 as usize;
     let arg2 = (&self.2) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN11QFileDevice3mapExxNS_14MemoryMapFlagsE", 3,qtrt::FFITY_SINT64,qtrt::FFITY_SINT64,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN11QFileDevice3mapExxNS_14MemoryMapFlagsE", 3,qtrt::FFITY_SINT64,qtrt::FFITY_SINT64,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -596,7 +596,7 @@ impl<'a> /*trait*/ QFileDevice_unmap_0<bool> for (usize) {
   fn unmap_0(self , rsthis: & QFileDevice) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN11QFileDevice5unmapEPh", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN11QFileDevice5unmapEPh", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -627,7 +627,7 @@ impl<'a> /*trait*/ QFileDevice_fileTime_0<usize> for (i32) {
   fn fileTime_0(self , rsthis: & QFileDevice) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QFileDevice8fileTimeENS_8FileTimeE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QFileDevice8fileTimeENS_8FileTimeE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -661,7 +661,7 @@ impl<'a> /*trait*/ QFileDevice_setFileTime_0<bool> for (usize,i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN11QFileDevice11setFileTimeERK9QDateTimeNS_8FileTimeE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN11QFileDevice11setFileTimeERK9QDateTimeNS_8FileTimeE", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -691,7 +691,7 @@ pub trait QFileDevice_QFileDevice_0 {
 impl<'a> /*trait*/ QFileDevice_QFileDevice_0 for () {
   fn QFileDevice_0(self) -> QFileDevice {
     // unsafe{_ZN11QFileDeviceC2Ev()};
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN11QFileDeviceC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN11QFileDeviceC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QFileDevice{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -723,7 +723,7 @@ impl<'a> /*trait*/ QFileDevice_QFileDevice_1 for (usize) {
   fn QFileDevice_1(self) -> QFileDevice {
     // unsafe{_ZN11QFileDeviceC2EP7QObject()};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN11QFileDeviceC2EP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN11QFileDeviceC2EP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QFileDevice{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -752,7 +752,7 @@ impl<'a> /*trait*/ QFileDevice_readData_0<i64> for (usize,i64) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (self.0) as *const usize as usize;
     let arg1 = (&self.1) as *const i64 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN11QFileDevice8readDataEPcx", 2,qtrt::FFITY_POINTER,qtrt::FFITY_SINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN11QFileDevice8readDataEPcx", 2,qtrt::FFITY_POINTER,qtrt::FFITY_SINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i64 = Default::default(); return dret;
   }
@@ -780,7 +780,7 @@ impl<'a> /*trait*/ QFileDevice_writeData_0<i64> for (usize,i64) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (self.0) as *const usize as usize;
     let arg1 = (&self.1) as *const i64 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN11QFileDevice9writeDataEPKcx", 2,qtrt::FFITY_POINTER,qtrt::FFITY_SINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN11QFileDevice9writeDataEPKcx", 2,qtrt::FFITY_POINTER,qtrt::FFITY_SINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i64 = Default::default(); return dret;
   }
@@ -808,7 +808,7 @@ impl<'a> /*trait*/ QFileDevice_readLineData_0<i64> for (usize,i64) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (self.0) as *const usize as usize;
     let arg1 = (&self.1) as *const i64 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN11QFileDevice12readLineDataEPcx", 2,qtrt::FFITY_POINTER,qtrt::FFITY_SINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN11QFileDevice12readLineDataEPcx", 2,qtrt::FFITY_POINTER,qtrt::FFITY_SINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i64 = Default::default(); return dret;
   }

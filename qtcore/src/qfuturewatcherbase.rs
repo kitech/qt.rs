@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -110,7 +110,7 @@ pub trait QFutureWatcherBase_metaObject_0<RetType> {
 impl<'a> /*trait*/ QFutureWatcherBase_metaObject_0<usize> for () {
   fn metaObject_0(self , rsthis: & QFutureWatcherBase) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QFutureWatcherBase10metaObjectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QFutureWatcherBase10metaObjectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -141,7 +141,7 @@ impl<'a> /*trait*/ QFutureWatcherBase_QFutureWatcherBase_0 for (usize) {
   fn QFutureWatcherBase_0(self) -> QFutureWatcherBase {
     // unsafe{_ZN18QFutureWatcherBaseC2EP7QObject()};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBaseC2EP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBaseC2EP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QFutureWatcherBase{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -170,7 +170,7 @@ pub trait QFutureWatcherBase_progressValue_0<RetType> {
 impl<'a> /*trait*/ QFutureWatcherBase_progressValue_0<i32> for () {
   fn progressValue_0(self , rsthis: & QFutureWatcherBase) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QFutureWatcherBase13progressValueEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QFutureWatcherBase13progressValueEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -198,7 +198,7 @@ pub trait QFutureWatcherBase_progressMinimum_0<RetType> {
 impl<'a> /*trait*/ QFutureWatcherBase_progressMinimum_0<i32> for () {
   fn progressMinimum_0(self , rsthis: & QFutureWatcherBase) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QFutureWatcherBase15progressMinimumEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QFutureWatcherBase15progressMinimumEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -226,7 +226,7 @@ pub trait QFutureWatcherBase_progressMaximum_0<RetType> {
 impl<'a> /*trait*/ QFutureWatcherBase_progressMaximum_0<i32> for () {
   fn progressMaximum_0(self , rsthis: & QFutureWatcherBase) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QFutureWatcherBase15progressMaximumEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QFutureWatcherBase15progressMaximumEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -254,7 +254,7 @@ pub trait QFutureWatcherBase_progressText_0<RetType> {
 impl<'a> /*trait*/ QFutureWatcherBase_progressText_0<usize> for () {
   fn progressText_0(self , rsthis: & QFutureWatcherBase) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QFutureWatcherBase12progressTextEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QFutureWatcherBase12progressTextEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -280,7 +280,7 @@ pub trait QFutureWatcherBase_isStarted_0<RetType> {
 impl<'a> /*trait*/ QFutureWatcherBase_isStarted_0<bool> for () {
   fn isStarted_0(self , rsthis: & QFutureWatcherBase) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QFutureWatcherBase9isStartedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QFutureWatcherBase9isStartedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -306,7 +306,7 @@ pub trait QFutureWatcherBase_isFinished_0<RetType> {
 impl<'a> /*trait*/ QFutureWatcherBase_isFinished_0<bool> for () {
   fn isFinished_0(self , rsthis: & QFutureWatcherBase) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QFutureWatcherBase10isFinishedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QFutureWatcherBase10isFinishedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -332,7 +332,7 @@ pub trait QFutureWatcherBase_isRunning_0<RetType> {
 impl<'a> /*trait*/ QFutureWatcherBase_isRunning_0<bool> for () {
   fn isRunning_0(self , rsthis: & QFutureWatcherBase) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QFutureWatcherBase9isRunningEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QFutureWatcherBase9isRunningEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -360,7 +360,7 @@ pub trait QFutureWatcherBase_isCanceled_0<RetType> {
 impl<'a> /*trait*/ QFutureWatcherBase_isCanceled_0<bool> for () {
   fn isCanceled_0(self , rsthis: & QFutureWatcherBase) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QFutureWatcherBase10isCanceledEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QFutureWatcherBase10isCanceledEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -390,7 +390,7 @@ pub trait QFutureWatcherBase_isPaused_0<RetType> {
 impl<'a> /*trait*/ QFutureWatcherBase_isPaused_0<bool> for () {
   fn isPaused_0(self , rsthis: & QFutureWatcherBase) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QFutureWatcherBase8isPausedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QFutureWatcherBase8isPausedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -416,7 +416,7 @@ pub trait QFutureWatcherBase_waitForFinished_0<RetType> {
 impl<'a> /*trait*/ QFutureWatcherBase_waitForFinished_0<(/*void*/)> for () {
   fn waitForFinished_0(self , rsthis: & QFutureWatcherBase) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase15waitForFinishedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase15waitForFinishedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -442,7 +442,7 @@ impl<'a> /*trait*/ QFutureWatcherBase_setPendingResultsLimit_0<(/*void*/)> for (
   fn setPendingResultsLimit_0(self , rsthis: & QFutureWatcherBase) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase22setPendingResultsLimitEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase22setPendingResultsLimitEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -468,7 +468,7 @@ impl<'a> /*trait*/ QFutureWatcherBase_event_0<bool> for (usize) {
   fn event_0(self , rsthis: & QFutureWatcherBase) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase5eventEP6QEvent", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase5eventEP6QEvent", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -494,7 +494,7 @@ pub trait QFutureWatcherBase_started_0<RetType> {
 impl<'a> /*trait*/ QFutureWatcherBase_started_0<(/*void*/)> for () {
   fn started_0(self , rsthis: & QFutureWatcherBase) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase7startedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase7startedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -519,7 +519,7 @@ pub trait QFutureWatcherBase_finished_0<RetType> {
 impl<'a> /*trait*/ QFutureWatcherBase_finished_0<(/*void*/)> for () {
   fn finished_0(self , rsthis: & QFutureWatcherBase) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase8finishedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase8finishedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -544,7 +544,7 @@ pub trait QFutureWatcherBase_canceled_0<RetType> {
 impl<'a> /*trait*/ QFutureWatcherBase_canceled_0<(/*void*/)> for () {
   fn canceled_0(self , rsthis: & QFutureWatcherBase) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase8canceledEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase8canceledEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -571,7 +571,7 @@ pub trait QFutureWatcherBase_paused_0<RetType> {
 impl<'a> /*trait*/ QFutureWatcherBase_paused_0<(/*void*/)> for () {
   fn paused_0(self , rsthis: & QFutureWatcherBase) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase6pausedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase6pausedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -596,7 +596,7 @@ pub trait QFutureWatcherBase_resumed_0<RetType> {
 impl<'a> /*trait*/ QFutureWatcherBase_resumed_0<(/*void*/)> for () {
   fn resumed_0(self , rsthis: & QFutureWatcherBase) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase7resumedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase7resumedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -622,7 +622,7 @@ impl<'a> /*trait*/ QFutureWatcherBase_resultReadyAt_0<(/*void*/)> for (i32) {
   fn resultReadyAt_0(self , rsthis: & QFutureWatcherBase) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase13resultReadyAtEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase13resultReadyAtEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -649,7 +649,7 @@ impl<'a> /*trait*/ QFutureWatcherBase_resultsReadyAt_0<(/*void*/)> for (i32,i32)
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0) as *const i32 as usize;
     let arg1 = (&self.1) as *const i32 as usize;
-     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase14resultsReadyAtEii", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase14resultsReadyAtEii", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -676,7 +676,7 @@ impl<'a> /*trait*/ QFutureWatcherBase_progressRangeChanged_0<(/*void*/)> for (i3
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0) as *const i32 as usize;
     let arg1 = (&self.1) as *const i32 as usize;
-     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase20progressRangeChangedEii", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase20progressRangeChangedEii", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -702,7 +702,7 @@ impl<'a> /*trait*/ QFutureWatcherBase_progressValueChanged_0<(/*void*/)> for (i3
   fn progressValueChanged_0(self , rsthis: & QFutureWatcherBase) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase20progressValueChangedEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase20progressValueChangedEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -728,7 +728,7 @@ impl<'a> /*trait*/ QFutureWatcherBase_progressTextChanged_0<(/*void*/)> for (usi
   fn progressTextChanged_0(self , rsthis: & QFutureWatcherBase) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase19progressTextChangedERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase19progressTextChangedERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -757,7 +757,7 @@ pub trait QFutureWatcherBase_cancel_0<RetType> {
 impl<'a> /*trait*/ QFutureWatcherBase_cancel_0<(/*void*/)> for () {
   fn cancel_0(self , rsthis: & QFutureWatcherBase) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase6cancelEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase6cancelEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -789,7 +789,7 @@ impl<'a> /*trait*/ QFutureWatcherBase_setPaused_0<(/*void*/)> for (bool) {
   fn setPaused_0(self , rsthis: & QFutureWatcherBase) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const bool as usize;
-     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase9setPausedEb", 1,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase9setPausedEb", 1,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -816,7 +816,7 @@ pub trait QFutureWatcherBase_pause_0<RetType> {
 impl<'a> /*trait*/ QFutureWatcherBase_pause_0<(/*void*/)> for () {
   fn pause_0(self , rsthis: & QFutureWatcherBase) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase5pauseEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase5pauseEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -843,7 +843,7 @@ pub trait QFutureWatcherBase_resume_0<RetType> {
 impl<'a> /*trait*/ QFutureWatcherBase_resume_0<(/*void*/)> for () {
   fn resume_0(self , rsthis: & QFutureWatcherBase) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase6resumeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase6resumeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -870,7 +870,7 @@ pub trait QFutureWatcherBase_togglePaused_0<RetType> {
 impl<'a> /*trait*/ QFutureWatcherBase_togglePaused_0<(/*void*/)> for () {
   fn togglePaused_0(self , rsthis: & QFutureWatcherBase) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase12togglePausedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase12togglePausedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -896,7 +896,7 @@ impl<'a> /*trait*/ QFutureWatcherBase_connectNotify_0<(/*void*/)> for (usize) {
   fn connectNotify_0(self , rsthis: & QFutureWatcherBase) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase13connectNotifyERK11QMetaMethod", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase13connectNotifyERK11QMetaMethod", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -922,7 +922,7 @@ impl<'a> /*trait*/ QFutureWatcherBase_disconnectNotify_0<(/*void*/)> for (usize)
   fn disconnectNotify_0(self , rsthis: & QFutureWatcherBase) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase16disconnectNotifyERK11QMetaMethod", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase16disconnectNotifyERK11QMetaMethod", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -947,7 +947,7 @@ pub trait QFutureWatcherBase_connectOutputInterface_0<RetType> {
 impl<'a> /*trait*/ QFutureWatcherBase_connectOutputInterface_0<(/*void*/)> for () {
   fn connectOutputInterface_0(self , rsthis: & QFutureWatcherBase) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase22connectOutputInterfaceEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase22connectOutputInterfaceEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -973,7 +973,7 @@ impl<'a> /*trait*/ QFutureWatcherBase_disconnectOutputInterface_0<(/*void*/)> fo
   fn disconnectOutputInterface_0(self , rsthis: & QFutureWatcherBase) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const bool as usize;
-     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase25disconnectOutputInterfaceEb", 1,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN18QFutureWatcherBase25disconnectOutputInterfaceEb", 1,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }

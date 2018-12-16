@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -89,7 +89,7 @@ pub trait QRunnable_run_0<RetType> {
 impl<'a> /*trait*/ QRunnable_run_0<(/*void*/)> for () {
   fn run_0(self , rsthis: & QRunnable) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN9QRunnable3runEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN9QRunnable3runEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -120,7 +120,7 @@ pub trait QRunnable_QRunnable_0 {
 impl<'a> /*trait*/ QRunnable_QRunnable_0 for () {
   fn QRunnable_0(self) -> QRunnable {
     // unsafe{_ZN9QRunnableC2Ev()};
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN9QRunnableC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN9QRunnableC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QRunnable{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -165,7 +165,7 @@ pub trait QRunnable_autoDelete_0<RetType> {
 impl<'a> /*trait*/ QRunnable_autoDelete_0<bool> for () {
   fn autoDelete_0(self , rsthis: & QRunnable) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QRunnable10autoDeleteEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK9QRunnable10autoDeleteEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -198,7 +198,7 @@ impl<'a> /*trait*/ QRunnable_setAutoDelete_0<(/*void*/)> for (bool) {
   fn setAutoDelete_0(self , rsthis: & QRunnable) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const bool as usize;
-     qtrt::InvokeQtFunc6("_ZN9QRunnable13setAutoDeleteEb", 1,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN9QRunnable13setAutoDeleteEb", 1,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }

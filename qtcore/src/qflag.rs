@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -94,7 +94,7 @@ impl<'a> /*trait*/ QFlag_QFlag_0 for (i32) {
   fn QFlag_0(self) -> QFlag {
     // unsafe{_ZN5QFlagC2Ei()};
     let arg0 = (&self) as *const i32 as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN5QFlagC2Ei", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN5QFlagC2Ei", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QFlag{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -126,7 +126,7 @@ impl<'a> /*trait*/ QFlag_QFlag_1 for (u32) {
   fn QFlag_1(self) -> QFlag {
     // unsafe{_ZN5QFlagC2Ej()};
     let arg0 = (&self) as *const u32 as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN5QFlagC2Ej", 1,qtrt::FFITY_UINT32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN5QFlagC2Ej", 1,qtrt::FFITY_UINT32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QFlag{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -158,7 +158,7 @@ impl<'a> /*trait*/ QFlag_QFlag_2 for (i16) {
   fn QFlag_2(self) -> QFlag {
     // unsafe{_ZN5QFlagC2Es()};
     let arg0 = (&self) as *const i16 as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN5QFlagC2Es", 1,qtrt::FFITY_SINT16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN5QFlagC2Es", 1,qtrt::FFITY_SINT16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QFlag{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -190,7 +190,7 @@ impl<'a> /*trait*/ QFlag_QFlag_3 for (u16) {
   fn QFlag_3(self) -> QFlag {
     // unsafe{_ZN5QFlagC2Et()};
     let arg0 = (&self) as *const u16 as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN5QFlagC2Et", 1,qtrt::FFITY_UINT16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN5QFlagC2Et", 1,qtrt::FFITY_UINT16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QFlag{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

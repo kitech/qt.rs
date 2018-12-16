@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -93,7 +93,7 @@ pub trait QXmlStreamNotationDeclaration_QXmlStreamNotationDeclaration_0 {
 impl<'a> /*trait*/ QXmlStreamNotationDeclaration_QXmlStreamNotationDeclaration_0 for () {
   fn QXmlStreamNotationDeclaration_0(self) -> QXmlStreamNotationDeclaration {
     // unsafe{_ZN29QXmlStreamNotationDeclarationC2Ev()};
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN29QXmlStreamNotationDeclarationC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN29QXmlStreamNotationDeclarationC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QXmlStreamNotationDeclaration{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -135,7 +135,7 @@ impl<'a> /*trait*/ QXmlStreamNotationDeclaration_operator_equal_0<usize> for (us
   fn operator_equal_0(self , rsthis: & QXmlStreamNotationDeclaration) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN29QXmlStreamNotationDeclarationaSERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN29QXmlStreamNotationDeclarationaSERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -162,7 +162,7 @@ impl<'a> /*trait*/ QXmlStreamNotationDeclaration_operator_equal_1<usize> for (us
   fn operator_equal_1(self , rsthis: & QXmlStreamNotationDeclaration) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN29QXmlStreamNotationDeclarationaSEOS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN29QXmlStreamNotationDeclarationaSEOS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -188,7 +188,7 @@ pub trait QXmlStreamNotationDeclaration_name_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamNotationDeclaration_name_0<usize> for () {
   fn name_0(self , rsthis: & QXmlStreamNotationDeclaration) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration4nameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration4nameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -214,7 +214,7 @@ pub trait QXmlStreamNotationDeclaration_systemId_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamNotationDeclaration_systemId_0<usize> for () {
   fn systemId_0(self , rsthis: & QXmlStreamNotationDeclaration) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration8systemIdEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration8systemIdEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -240,7 +240,7 @@ pub trait QXmlStreamNotationDeclaration_publicId_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamNotationDeclaration_publicId_0<usize> for () {
   fn publicId_0(self , rsthis: & QXmlStreamNotationDeclaration) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration8publicIdEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclaration8publicIdEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -267,7 +267,7 @@ impl<'a> /*trait*/ QXmlStreamNotationDeclaration_operator_equal_equal_0<bool> fo
   fn operator_equal_equal_0(self , rsthis: & QXmlStreamNotationDeclaration) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclarationeqERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclarationeqERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -294,7 +294,7 @@ impl<'a> /*trait*/ QXmlStreamNotationDeclaration_operator_not_equal_0<bool> for 
   fn operator_not_equal_0(self , rsthis: & QXmlStreamNotationDeclaration) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclarationneERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK29QXmlStreamNotationDeclarationneERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }

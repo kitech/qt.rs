@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -90,7 +90,7 @@ pub trait QObjectCleanupHandler_metaObject_0<RetType> {
 impl<'a> /*trait*/ QObjectCleanupHandler_metaObject_0<usize> for () {
   fn metaObject_0(self , rsthis: & QObjectCleanupHandler) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK21QObjectCleanupHandler10metaObjectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK21QObjectCleanupHandler10metaObjectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -120,7 +120,7 @@ pub trait QObjectCleanupHandler_QObjectCleanupHandler_0 {
 impl<'a> /*trait*/ QObjectCleanupHandler_QObjectCleanupHandler_0 for () {
   fn QObjectCleanupHandler_0(self) -> QObjectCleanupHandler {
     // unsafe{_ZN21QObjectCleanupHandlerC2Ev()};
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN21QObjectCleanupHandlerC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN21QObjectCleanupHandlerC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QObjectCleanupHandler{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -164,7 +164,7 @@ impl<'a> /*trait*/ QObjectCleanupHandler_add_0<usize> for (usize) {
   fn add_0(self , rsthis: & QObjectCleanupHandler) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN21QObjectCleanupHandler3addEP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN21QObjectCleanupHandler3addEP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -193,7 +193,7 @@ impl<'a> /*trait*/ QObjectCleanupHandler_remove_0<(/*void*/)> for (usize) {
   fn remove_0(self , rsthis: & QObjectCleanupHandler) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN21QObjectCleanupHandler6removeEP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN21QObjectCleanupHandler6removeEP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -220,7 +220,7 @@ pub trait QObjectCleanupHandler_isEmpty_0<RetType> {
 impl<'a> /*trait*/ QObjectCleanupHandler_isEmpty_0<bool> for () {
   fn isEmpty_0(self , rsthis: & QObjectCleanupHandler) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK21QObjectCleanupHandler7isEmptyEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK21QObjectCleanupHandler7isEmptyEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -248,7 +248,7 @@ pub trait QObjectCleanupHandler_clear_0<RetType> {
 impl<'a> /*trait*/ QObjectCleanupHandler_clear_0<(/*void*/)> for () {
   fn clear_0(self , rsthis: & QObjectCleanupHandler) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN21QObjectCleanupHandler5clearEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN21QObjectCleanupHandler5clearEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }

@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -97,7 +97,7 @@ pub trait QStorageInfo_QStorageInfo_0 {
 impl<'a> /*trait*/ QStorageInfo_QStorageInfo_0 for () {
   fn QStorageInfo_0(self) -> QStorageInfo {
     // unsafe{_ZN12QStorageInfoC2Ev()};
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN12QStorageInfoC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN12QStorageInfoC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QStorageInfo{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -133,7 +133,7 @@ impl<'a> /*trait*/ QStorageInfo_QStorageInfo_1 for (usize) {
   fn QStorageInfo_1(self) -> QStorageInfo {
     // unsafe{_ZN12QStorageInfoC2ERK7QString()};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN12QStorageInfoC2ERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN12QStorageInfoC2ERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QStorageInfo{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -169,7 +169,7 @@ impl<'a> /*trait*/ QStorageInfo_QStorageInfo_2 for (usize) {
   fn QStorageInfo_2(self) -> QStorageInfo {
     // unsafe{_ZN12QStorageInfoC2ERK4QDir()};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN12QStorageInfoC2ERK4QDir", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN12QStorageInfoC2ERK4QDir", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QStorageInfo{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -211,7 +211,7 @@ impl<'a> /*trait*/ QStorageInfo_operator_equal_0<usize> for (usize) {
   fn operator_equal_0(self , rsthis: & QStorageInfo) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN12QStorageInfoaSERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN12QStorageInfoaSERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -238,7 +238,7 @@ impl<'a> /*trait*/ QStorageInfo_operator_equal_1<usize> for (usize) {
   fn operator_equal_1(self , rsthis: & QStorageInfo) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN12QStorageInfoaSEOS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN12QStorageInfoaSEOS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -265,7 +265,7 @@ impl<'a> /*trait*/ QStorageInfo_swap_0<(/*void*/)> for (usize) {
   fn swap_0(self , rsthis: & QStorageInfo) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN12QStorageInfo4swapERS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN12QStorageInfo4swapERS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -295,7 +295,7 @@ impl<'a> /*trait*/ QStorageInfo_setPath_0<(/*void*/)> for (usize) {
   fn setPath_0(self , rsthis: & QStorageInfo) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN12QStorageInfo7setPathERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN12QStorageInfo7setPathERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -326,7 +326,7 @@ pub trait QStorageInfo_rootPath_0<RetType> {
 impl<'a> /*trait*/ QStorageInfo_rootPath_0<usize> for () {
   fn rootPath_0(self , rsthis: & QStorageInfo) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK12QStorageInfo8rootPathEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK12QStorageInfo8rootPathEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -356,7 +356,7 @@ pub trait QStorageInfo_device_0<RetType> {
 impl<'a> /*trait*/ QStorageInfo_device_0<usize> for () {
   fn device_0(self , rsthis: & QStorageInfo) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK12QStorageInfo6deviceEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK12QStorageInfo6deviceEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -390,7 +390,7 @@ pub trait QStorageInfo_subvolume_0<RetType> {
 impl<'a> /*trait*/ QStorageInfo_subvolume_0<usize> for () {
   fn subvolume_0(self , rsthis: & QStorageInfo) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK12QStorageInfo9subvolumeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK12QStorageInfo9subvolumeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -420,7 +420,7 @@ pub trait QStorageInfo_fileSystemType_0<RetType> {
 impl<'a> /*trait*/ QStorageInfo_fileSystemType_0<usize> for () {
   fn fileSystemType_0(self , rsthis: & QStorageInfo) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK12QStorageInfo14fileSystemTypeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK12QStorageInfo14fileSystemTypeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -452,7 +452,7 @@ pub trait QStorageInfo_name_0<RetType> {
 impl<'a> /*trait*/ QStorageInfo_name_0<usize> for () {
   fn name_0(self , rsthis: & QStorageInfo) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK12QStorageInfo4nameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK12QStorageInfo4nameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -478,7 +478,7 @@ pub trait QStorageInfo_displayName_0<RetType> {
 impl<'a> /*trait*/ QStorageInfo_displayName_0<usize> for () {
   fn displayName_0(self , rsthis: & QStorageInfo) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK12QStorageInfo11displayNameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK12QStorageInfo11displayNameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -508,7 +508,7 @@ pub trait QStorageInfo_bytesTotal_0<RetType> {
 impl<'a> /*trait*/ QStorageInfo_bytesTotal_0<i64> for () {
   fn bytesTotal_0(self , rsthis: & QStorageInfo) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK12QStorageInfo10bytesTotalEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK12QStorageInfo10bytesTotalEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i64 = Default::default(); return dret;
   }
@@ -538,7 +538,7 @@ pub trait QStorageInfo_bytesFree_0<RetType> {
 impl<'a> /*trait*/ QStorageInfo_bytesFree_0<i64> for () {
   fn bytesFree_0(self , rsthis: & QStorageInfo) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK12QStorageInfo9bytesFreeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK12QStorageInfo9bytesFreeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i64 = Default::default(); return dret;
   }
@@ -570,7 +570,7 @@ pub trait QStorageInfo_bytesAvailable_0<RetType> {
 impl<'a> /*trait*/ QStorageInfo_bytesAvailable_0<i64> for () {
   fn bytesAvailable_0(self , rsthis: & QStorageInfo) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK12QStorageInfo14bytesAvailableEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK12QStorageInfo14bytesAvailableEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i64 = Default::default(); return dret;
   }
@@ -600,7 +600,7 @@ pub trait QStorageInfo_blockSize_0<RetType> {
 impl<'a> /*trait*/ QStorageInfo_blockSize_0<i32> for () {
   fn blockSize_0(self , rsthis: & QStorageInfo) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK12QStorageInfo9blockSizeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK12QStorageInfo9blockSizeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -630,7 +630,7 @@ pub trait QStorageInfo_isRoot_0<RetType> {
 impl<'a> /*trait*/ QStorageInfo_isRoot_0<bool> for () {
   fn isRoot_0(self , rsthis: & QStorageInfo) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK12QStorageInfo6isRootEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK12QStorageInfo6isRootEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -656,7 +656,7 @@ pub trait QStorageInfo_isReadOnly_0<RetType> {
 impl<'a> /*trait*/ QStorageInfo_isReadOnly_0<bool> for () {
   fn isReadOnly_0(self , rsthis: & QStorageInfo) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK12QStorageInfo10isReadOnlyEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK12QStorageInfo10isReadOnlyEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -686,7 +686,7 @@ pub trait QStorageInfo_isReady_0<RetType> {
 impl<'a> /*trait*/ QStorageInfo_isReady_0<bool> for () {
   fn isReady_0(self , rsthis: & QStorageInfo) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK12QStorageInfo7isReadyEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK12QStorageInfo7isReadyEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -714,7 +714,7 @@ pub trait QStorageInfo_isValid_0<RetType> {
 impl<'a> /*trait*/ QStorageInfo_isValid_0<bool> for () {
   fn isValid_0(self , rsthis: & QStorageInfo) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK12QStorageInfo7isValidEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK12QStorageInfo7isValidEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -742,7 +742,7 @@ pub trait QStorageInfo_refresh_0<RetType> {
 impl<'a> /*trait*/ QStorageInfo_refresh_0<(/*void*/)> for () {
   fn refresh_0(self , rsthis: & QStorageInfo) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN12QStorageInfo7refreshEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN12QStorageInfo7refreshEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -771,7 +771,7 @@ pub trait QStorageInfo_root_0<RetType> {
 impl<'a> /*trait*/ QStorageInfo_root_0<usize> for () {
   fn root_0(self ) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZN12QStorageInfo4rootEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN12QStorageInfo4rootEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }

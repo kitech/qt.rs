@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -93,7 +93,7 @@ pub trait QBasicMutex_QBasicMutex_0 {
 impl<'a> /*trait*/ QBasicMutex_QBasicMutex_0 for () {
   fn QBasicMutex_0(self) -> QBasicMutex {
     // unsafe{_ZN11QBasicMutexC2Ev()};
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN11QBasicMutexC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN11QBasicMutexC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QBasicMutex{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -124,7 +124,7 @@ pub trait QBasicMutex_lock_0<RetType> {
 impl<'a> /*trait*/ QBasicMutex_lock_0<(/*void*/)> for () {
   fn lock_0(self , rsthis: & QBasicMutex) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN11QBasicMutex4lockEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN11QBasicMutex4lockEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -151,7 +151,7 @@ pub trait QBasicMutex_unlock_0<RetType> {
 impl<'a> /*trait*/ QBasicMutex_unlock_0<(/*void*/)> for () {
   fn unlock_0(self , rsthis: & QBasicMutex) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN11QBasicMutex6unlockEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN11QBasicMutex6unlockEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -184,7 +184,7 @@ pub trait QBasicMutex_tryLock_0<RetType> {
 impl<'a> /*trait*/ QBasicMutex_tryLock_0<bool> for () {
   fn tryLock_0(self , rsthis: & QBasicMutex) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZN11QBasicMutex7tryLockEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN11QBasicMutex7tryLockEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -216,7 +216,7 @@ pub trait QBasicMutex_try_lock_0<RetType> {
 impl<'a> /*trait*/ QBasicMutex_try_lock_0<bool> for () {
   fn try_lock_0(self , rsthis: & QBasicMutex) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZN11QBasicMutex8try_lockEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN11QBasicMutex8try_lockEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -244,7 +244,7 @@ pub trait QBasicMutex_isRecursive_0<RetType> {
 impl<'a> /*trait*/ QBasicMutex_isRecursive_0<bool> for () {
   fn isRecursive_0(self , rsthis: & QBasicMutex) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZN11QBasicMutex11isRecursiveEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN11QBasicMutex11isRecursiveEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -272,7 +272,7 @@ pub trait QBasicMutex_isRecursive_1<RetType> {
 impl<'a> /*trait*/ QBasicMutex_isRecursive_1<bool> for () {
   fn isRecursive_1(self , rsthis: & QBasicMutex) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QBasicMutex11isRecursiveEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QBasicMutex11isRecursiveEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }

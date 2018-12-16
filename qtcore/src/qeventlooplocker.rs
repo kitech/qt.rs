@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -93,7 +93,7 @@ pub trait QEventLoopLocker_QEventLoopLocker_0 {
 impl<'a> /*trait*/ QEventLoopLocker_QEventLoopLocker_0 for () {
   fn QEventLoopLocker_0(self) -> QEventLoopLocker {
     // unsafe{_ZN16QEventLoopLockerC2Ev()};
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN16QEventLoopLockerC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN16QEventLoopLockerC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QEventLoopLocker{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -125,7 +125,7 @@ impl<'a> /*trait*/ QEventLoopLocker_QEventLoopLocker_1 for (usize) {
   fn QEventLoopLocker_1(self) -> QEventLoopLocker {
     // unsafe{_ZN16QEventLoopLockerC2EP10QEventLoop()};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN16QEventLoopLockerC2EP10QEventLoop", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN16QEventLoopLockerC2EP10QEventLoop", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QEventLoopLocker{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -157,7 +157,7 @@ impl<'a> /*trait*/ QEventLoopLocker_QEventLoopLocker_2 for (usize) {
   fn QEventLoopLocker_2(self) -> QEventLoopLocker {
     // unsafe{_ZN16QEventLoopLockerC2EP7QThread()};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN16QEventLoopLockerC2EP7QThread", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN16QEventLoopLockerC2EP7QThread", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QEventLoopLocker{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

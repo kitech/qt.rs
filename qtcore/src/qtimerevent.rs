@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -95,7 +95,7 @@ impl<'a> /*trait*/ QTimerEvent_QTimerEvent_0 for (i32) {
   fn QTimerEvent_0(self) -> QTimerEvent {
     // unsafe{_ZN11QTimerEventC2Ei()};
     let arg0 = (&self) as *const i32 as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN11QTimerEventC2Ei", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN11QTimerEventC2Ei", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QTimerEvent{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -136,7 +136,7 @@ pub trait QTimerEvent_timerId_0<RetType> {
 impl<'a> /*trait*/ QTimerEvent_timerId_0<i32> for () {
   fn timerId_0(self , rsthis: & QTimerEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QTimerEvent7timerIdEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK11QTimerEvent7timerIdEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }

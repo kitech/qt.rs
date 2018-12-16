@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -93,7 +93,7 @@ pub trait QXmlStreamNamespaceDeclaration_QXmlStreamNamespaceDeclaration_0 {
 impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_QXmlStreamNamespaceDeclaration_0 for () {
   fn QXmlStreamNamespaceDeclaration_0(self) -> QXmlStreamNamespaceDeclaration {
     // unsafe{_ZN30QXmlStreamNamespaceDeclarationC2Ev()};
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN30QXmlStreamNamespaceDeclarationC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN30QXmlStreamNamespaceDeclarationC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QXmlStreamNamespaceDeclaration{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -126,7 +126,7 @@ impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_QXmlStreamNamespaceDeclaration
     // unsafe{_ZN30QXmlStreamNamespaceDeclarationC2ERK7QStringS2_()};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN30QXmlStreamNamespaceDeclarationC2ERK7QStringS2_", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN30QXmlStreamNamespaceDeclarationC2ERK7QStringS2_", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QXmlStreamNamespaceDeclaration{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -154,7 +154,7 @@ impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_operator_equal_0<usize> for (u
   fn operator_equal_0(self , rsthis: & QXmlStreamNamespaceDeclaration) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN30QXmlStreamNamespaceDeclarationaSEOS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN30QXmlStreamNamespaceDeclarationaSEOS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -181,7 +181,7 @@ impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_operator_equal_1<usize> for (u
   fn operator_equal_1(self , rsthis: & QXmlStreamNamespaceDeclaration) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN30QXmlStreamNamespaceDeclarationaSERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN30QXmlStreamNamespaceDeclarationaSERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -221,7 +221,7 @@ pub trait QXmlStreamNamespaceDeclaration_prefix_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_prefix_0<usize> for () {
   fn prefix_0(self , rsthis: & QXmlStreamNamespaceDeclaration) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK30QXmlStreamNamespaceDeclaration6prefixEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK30QXmlStreamNamespaceDeclaration6prefixEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -247,7 +247,7 @@ pub trait QXmlStreamNamespaceDeclaration_namespaceUri_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_namespaceUri_0<usize> for () {
   fn namespaceUri_0(self , rsthis: & QXmlStreamNamespaceDeclaration) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK30QXmlStreamNamespaceDeclaration12namespaceUriEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK30QXmlStreamNamespaceDeclaration12namespaceUriEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -274,7 +274,7 @@ impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_operator_equal_equal_0<bool> f
   fn operator_equal_equal_0(self , rsthis: & QXmlStreamNamespaceDeclaration) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK30QXmlStreamNamespaceDeclarationeqERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK30QXmlStreamNamespaceDeclarationeqERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -301,7 +301,7 @@ impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_operator_not_equal_0<bool> for
   fn operator_not_equal_0(self , rsthis: & QXmlStreamNamespaceDeclaration) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK30QXmlStreamNamespaceDeclarationneERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK30QXmlStreamNamespaceDeclarationneERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }

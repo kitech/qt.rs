@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -104,7 +104,7 @@ impl<'a> /*trait*/ QFutureInterfaceBase_QFutureInterfaceBase_0 for (i32) {
   fn QFutureInterfaceBase_0(self) -> QFutureInterfaceBase {
     // unsafe{_ZN20QFutureInterfaceBaseC2ENS_5StateE()};
     let arg0 = (&self) as *const i32 as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBaseC2ENS_5StateE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBaseC2ENS_5StateE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QFutureInterfaceBase{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -145,7 +145,7 @@ pub trait QFutureInterfaceBase_reportStarted_0<RetType> {
 impl<'a> /*trait*/ QFutureInterfaceBase_reportStarted_0<(/*void*/)> for () {
   fn reportStarted_0(self , rsthis: & QFutureInterfaceBase) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase13reportStartedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase13reportStartedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -170,7 +170,7 @@ pub trait QFutureInterfaceBase_reportFinished_0<RetType> {
 impl<'a> /*trait*/ QFutureInterfaceBase_reportFinished_0<(/*void*/)> for () {
   fn reportFinished_0(self , rsthis: & QFutureInterfaceBase) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase14reportFinishedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase14reportFinishedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -195,7 +195,7 @@ pub trait QFutureInterfaceBase_reportCanceled_0<RetType> {
 impl<'a> /*trait*/ QFutureInterfaceBase_reportCanceled_0<(/*void*/)> for () {
   fn reportCanceled_0(self , rsthis: & QFutureInterfaceBase) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase14reportCanceledEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase14reportCanceledEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -222,7 +222,7 @@ impl<'a> /*trait*/ QFutureInterfaceBase_reportResultsReady_0<(/*void*/)> for (i3
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0) as *const i32 as usize;
     let arg1 = (&self.1) as *const i32 as usize;
-     qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase18reportResultsReadyEii", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase18reportResultsReadyEii", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -248,7 +248,7 @@ impl<'a> /*trait*/ QFutureInterfaceBase_setRunnable_0<(/*void*/)> for (usize) {
   fn setRunnable_0(self , rsthis: & QFutureInterfaceBase) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase11setRunnableEP9QRunnable", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase11setRunnableEP9QRunnable", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -274,7 +274,7 @@ impl<'a> /*trait*/ QFutureInterfaceBase_setThreadPool_0<(/*void*/)> for (usize) 
   fn setThreadPool_0(self , rsthis: & QFutureInterfaceBase) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase13setThreadPoolEP11QThreadPool", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase13setThreadPoolEP11QThreadPool", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -300,7 +300,7 @@ impl<'a> /*trait*/ QFutureInterfaceBase_setFilterMode_0<(/*void*/)> for (bool) {
   fn setFilterMode_0(self , rsthis: & QFutureInterfaceBase) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const bool as usize;
-     qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase13setFilterModeEb", 1,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase13setFilterModeEb", 1,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -327,7 +327,7 @@ impl<'a> /*trait*/ QFutureInterfaceBase_setProgressRange_0<(/*void*/)> for (i32,
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0) as *const i32 as usize;
     let arg1 = (&self.1) as *const i32 as usize;
-     qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase16setProgressRangeEii", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase16setProgressRangeEii", 2,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -352,7 +352,7 @@ pub trait QFutureInterfaceBase_progressMinimum_0<RetType> {
 impl<'a> /*trait*/ QFutureInterfaceBase_progressMinimum_0<i32> for () {
   fn progressMinimum_0(self , rsthis: & QFutureInterfaceBase) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBase15progressMinimumEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBase15progressMinimumEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -378,7 +378,7 @@ pub trait QFutureInterfaceBase_progressMaximum_0<RetType> {
 impl<'a> /*trait*/ QFutureInterfaceBase_progressMaximum_0<i32> for () {
   fn progressMaximum_0(self , rsthis: & QFutureInterfaceBase) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBase15progressMaximumEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBase15progressMaximumEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -404,7 +404,7 @@ pub trait QFutureInterfaceBase_isProgressUpdateNeeded_0<RetType> {
 impl<'a> /*trait*/ QFutureInterfaceBase_isProgressUpdateNeeded_0<bool> for () {
   fn isProgressUpdateNeeded_0(self , rsthis: & QFutureInterfaceBase) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBase22isProgressUpdateNeededEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBase22isProgressUpdateNeededEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -431,7 +431,7 @@ impl<'a> /*trait*/ QFutureInterfaceBase_setProgressValue_0<(/*void*/)> for (i32)
   fn setProgressValue_0(self , rsthis: & QFutureInterfaceBase) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-     qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase16setProgressValueEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase16setProgressValueEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -456,7 +456,7 @@ pub trait QFutureInterfaceBase_progressValue_0<RetType> {
 impl<'a> /*trait*/ QFutureInterfaceBase_progressValue_0<i32> for () {
   fn progressValue_0(self , rsthis: & QFutureInterfaceBase) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBase13progressValueEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBase13progressValueEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -484,7 +484,7 @@ impl<'a> /*trait*/ QFutureInterfaceBase_setProgressValueAndText_0<(/*void*/)> fo
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0) as *const i32 as usize;
     let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase23setProgressValueAndTextEiRK7QString", 2,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase23setProgressValueAndTextEiRK7QString", 2,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -509,7 +509,7 @@ pub trait QFutureInterfaceBase_progressText_0<RetType> {
 impl<'a> /*trait*/ QFutureInterfaceBase_progressText_0<usize> for () {
   fn progressText_0(self , rsthis: & QFutureInterfaceBase) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBase12progressTextEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBase12progressTextEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -536,7 +536,7 @@ impl<'a> /*trait*/ QFutureInterfaceBase_setExpectedResultCount_0<(/*void*/)> for
   fn setExpectedResultCount_0(self , rsthis: & QFutureInterfaceBase) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-     qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase22setExpectedResultCountEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase22setExpectedResultCountEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -561,7 +561,7 @@ pub trait QFutureInterfaceBase_expectedResultCount_0<RetType> {
 impl<'a> /*trait*/ QFutureInterfaceBase_expectedResultCount_0<i32> for () {
   fn expectedResultCount_0(self , rsthis: & QFutureInterfaceBase) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase19expectedResultCountEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase19expectedResultCountEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -587,7 +587,7 @@ pub trait QFutureInterfaceBase_resultCount_0<RetType> {
 impl<'a> /*trait*/ QFutureInterfaceBase_resultCount_0<i32> for () {
   fn resultCount_0(self , rsthis: & QFutureInterfaceBase) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBase11resultCountEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBase11resultCountEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -614,7 +614,7 @@ impl<'a> /*trait*/ QFutureInterfaceBase_queryState_0<bool> for (i32) {
   fn queryState_0(self , rsthis: & QFutureInterfaceBase) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBase10queryStateENS_5StateE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBase10queryStateENS_5StateE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -640,7 +640,7 @@ pub trait QFutureInterfaceBase_isRunning_0<RetType> {
 impl<'a> /*trait*/ QFutureInterfaceBase_isRunning_0<bool> for () {
   fn isRunning_0(self , rsthis: & QFutureInterfaceBase) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBase9isRunningEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBase9isRunningEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -666,7 +666,7 @@ pub trait QFutureInterfaceBase_isStarted_0<RetType> {
 impl<'a> /*trait*/ QFutureInterfaceBase_isStarted_0<bool> for () {
   fn isStarted_0(self , rsthis: & QFutureInterfaceBase) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBase9isStartedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBase9isStartedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -692,7 +692,7 @@ pub trait QFutureInterfaceBase_isCanceled_0<RetType> {
 impl<'a> /*trait*/ QFutureInterfaceBase_isCanceled_0<bool> for () {
   fn isCanceled_0(self , rsthis: & QFutureInterfaceBase) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBase10isCanceledEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBase10isCanceledEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -718,7 +718,7 @@ pub trait QFutureInterfaceBase_isFinished_0<RetType> {
 impl<'a> /*trait*/ QFutureInterfaceBase_isFinished_0<bool> for () {
   fn isFinished_0(self , rsthis: & QFutureInterfaceBase) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBase10isFinishedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBase10isFinishedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -744,7 +744,7 @@ pub trait QFutureInterfaceBase_isPaused_0<RetType> {
 impl<'a> /*trait*/ QFutureInterfaceBase_isPaused_0<bool> for () {
   fn isPaused_0(self , rsthis: & QFutureInterfaceBase) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBase8isPausedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBase8isPausedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -770,7 +770,7 @@ pub trait QFutureInterfaceBase_isThrottled_0<RetType> {
 impl<'a> /*trait*/ QFutureInterfaceBase_isThrottled_0<bool> for () {
   fn isThrottled_0(self , rsthis: & QFutureInterfaceBase) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBase11isThrottledEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBase11isThrottledEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -797,7 +797,7 @@ impl<'a> /*trait*/ QFutureInterfaceBase_isResultReadyAt_0<bool> for (i32) {
   fn isResultReadyAt_0(self , rsthis: & QFutureInterfaceBase) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBase15isResultReadyAtEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBase15isResultReadyAtEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -823,7 +823,7 @@ pub trait QFutureInterfaceBase_cancel_0<RetType> {
 impl<'a> /*trait*/ QFutureInterfaceBase_cancel_0<(/*void*/)> for () {
   fn cancel_0(self , rsthis: & QFutureInterfaceBase) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase6cancelEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase6cancelEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -849,7 +849,7 @@ impl<'a> /*trait*/ QFutureInterfaceBase_setPaused_0<(/*void*/)> for (bool) {
   fn setPaused_0(self , rsthis: & QFutureInterfaceBase) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const bool as usize;
-     qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase9setPausedEb", 1,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase9setPausedEb", 1,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -874,7 +874,7 @@ pub trait QFutureInterfaceBase_togglePaused_0<RetType> {
 impl<'a> /*trait*/ QFutureInterfaceBase_togglePaused_0<(/*void*/)> for () {
   fn togglePaused_0(self , rsthis: & QFutureInterfaceBase) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase12togglePausedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase12togglePausedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -900,7 +900,7 @@ impl<'a> /*trait*/ QFutureInterfaceBase_setThrottled_0<(/*void*/)> for (bool) {
   fn setThrottled_0(self , rsthis: & QFutureInterfaceBase) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const bool as usize;
-     qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase12setThrottledEb", 1,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase12setThrottledEb", 1,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -925,7 +925,7 @@ pub trait QFutureInterfaceBase_waitForFinished_0<RetType> {
 impl<'a> /*trait*/ QFutureInterfaceBase_waitForFinished_0<(/*void*/)> for () {
   fn waitForFinished_0(self , rsthis: & QFutureInterfaceBase) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase15waitForFinishedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase15waitForFinishedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -950,7 +950,7 @@ pub trait QFutureInterfaceBase_waitForNextResult_0<RetType> {
 impl<'a> /*trait*/ QFutureInterfaceBase_waitForNextResult_0<bool> for () {
   fn waitForNextResult_0(self , rsthis: & QFutureInterfaceBase) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase17waitForNextResultEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase17waitForNextResultEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -977,7 +977,7 @@ impl<'a> /*trait*/ QFutureInterfaceBase_waitForResult_0<(/*void*/)> for (i32) {
   fn waitForResult_0(self , rsthis: & QFutureInterfaceBase) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-     qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase13waitForResultEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase13waitForResultEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -1002,7 +1002,7 @@ pub trait QFutureInterfaceBase_waitForResume_0<RetType> {
 impl<'a> /*trait*/ QFutureInterfaceBase_waitForResume_0<(/*void*/)> for () {
   fn waitForResume_0(self , rsthis: & QFutureInterfaceBase) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase13waitForResumeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase13waitForResumeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -1027,7 +1027,7 @@ pub trait QFutureInterfaceBase_mutex_0<RetType> {
 impl<'a> /*trait*/ QFutureInterfaceBase_mutex_0<usize> for () {
   fn mutex_0(self , rsthis: & QFutureInterfaceBase) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBase5mutexEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBase5mutexEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1053,7 +1053,7 @@ pub trait QFutureInterfaceBase_exceptionStore_0<RetType> {
 impl<'a> /*trait*/ QFutureInterfaceBase_exceptionStore_0<usize> for () {
   fn exceptionStore_0(self , rsthis: & QFutureInterfaceBase) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase14exceptionStoreEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase14exceptionStoreEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1079,7 +1079,7 @@ pub trait QFutureInterfaceBase_resultStoreBase_0<RetType> {
 impl<'a> /*trait*/ QFutureInterfaceBase_resultStoreBase_0<usize> for () {
   fn resultStoreBase_0(self , rsthis: & QFutureInterfaceBase) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase15resultStoreBaseEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBase15resultStoreBaseEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1105,7 +1105,7 @@ pub trait QFutureInterfaceBase_resultStoreBase_1<RetType> {
 impl<'a> /*trait*/ QFutureInterfaceBase_resultStoreBase_1<usize> for () {
   fn resultStoreBase_1(self , rsthis: & QFutureInterfaceBase) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBase15resultStoreBaseEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBase15resultStoreBaseEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1132,7 +1132,7 @@ impl<'a> /*trait*/ QFutureInterfaceBase_operator_equal_equal_0<bool> for (usize)
   fn operator_equal_equal_0(self , rsthis: & QFutureInterfaceBase) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBaseeqERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBaseeqERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -1159,7 +1159,7 @@ impl<'a> /*trait*/ QFutureInterfaceBase_operator_not_equal_0<bool> for (usize) {
   fn operator_not_equal_0(self , rsthis: & QFutureInterfaceBase) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBaseneERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBaseneERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -1186,7 +1186,7 @@ impl<'a> /*trait*/ QFutureInterfaceBase_operator_equal_0<usize> for (usize) {
   fn operator_equal_0(self , rsthis: & QFutureInterfaceBase) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBaseaSERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN20QFutureInterfaceBaseaSERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -1212,7 +1212,7 @@ pub trait QFutureInterfaceBase_refT_0<RetType> {
 impl<'a> /*trait*/ QFutureInterfaceBase_refT_0<bool> for () {
   fn refT_0(self , rsthis: & QFutureInterfaceBase) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBase4refTEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBase4refTEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -1238,7 +1238,7 @@ pub trait QFutureInterfaceBase_derefT_0<RetType> {
 impl<'a> /*trait*/ QFutureInterfaceBase_derefT_0<bool> for () {
   fn derefT_0(self , rsthis: & QFutureInterfaceBase) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBase6derefTEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QFutureInterfaceBase6derefTEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }

@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -44,7 +44,7 @@ use super::*;
 */
 #[derive(Default)] // class sizeof(QMutex)=8
 pub struct QMutex {
-  // qbase: QBasicMutex,
+  qbase: QBasicMutex,
   pub qclsinst: usize /* *mut c_void*/,
 }
 // type QMutex_ITF interface {
@@ -101,7 +101,7 @@ impl<'a> /*trait*/ QMutex_QMutex_0 for (i32) {
   fn QMutex_0(self) -> QMutex {
     // unsafe{_ZN6QMutexC2ENS_13RecursionModeE()};
     let arg0 = (&self) as *const i32 as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN6QMutexC2ENS_13RecursionModeE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN6QMutexC2ENS_13RecursionModeE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QMutex{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -146,7 +146,7 @@ pub trait QMutex_lock_0<RetType> {
 impl<'a> /*trait*/ QMutex_lock_0<(/*void*/)> for () {
   fn lock_0(self , rsthis: & QMutex) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN6QMutex4lockEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN6QMutex4lockEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -180,7 +180,7 @@ impl<'a> /*trait*/ QMutex_tryLock_0<bool> for (i32) {
   fn tryLock_0(self , rsthis: & QMutex) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN6QMutex7tryLockEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN6QMutex7tryLockEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -208,7 +208,7 @@ pub trait QMutex_unlock_0<RetType> {
 impl<'a> /*trait*/ QMutex_unlock_0<(/*void*/)> for () {
   fn unlock_0(self , rsthis: & QMutex) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN6QMutex6unlockEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN6QMutex6unlockEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -239,7 +239,7 @@ pub trait QMutex_try_lock_0<RetType> {
 impl<'a> /*trait*/ QMutex_try_lock_0<bool> for () {
   fn try_lock_0(self , rsthis: & QMutex) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZN6QMutex8try_lockEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN6QMutex8try_lockEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -267,7 +267,7 @@ pub trait QMutex_isRecursive_0<RetType> {
 impl<'a> /*trait*/ QMutex_isRecursive_0<bool> for () {
   fn isRecursive_0(self , rsthis: & QMutex) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK6QMutex11isRecursiveEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK6QMutex11isRecursiveEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }

@@ -1,9 +1,9 @@
 
-// mod ::core::QKeySequence
-// package qtcore
-// /usr/include/qt/QtCore/qmetatype.h
-// #include <qmetatype.h>
-// #include <QtCore>
+// mod ::gui::QKeySequence
+// package qtgui
+// /usr/include/qt/QtGui/qkeysequence.h
+// #include <qkeysequence.h>
+// #include <QtGui>
 
 //  header block end
 
@@ -19,9 +19,11 @@
 // import "fmt"
 // import "log"
 // import "github.com/kitech/qt.go/qtrt"
+// import "github.com/kitech/qt.go/qtcore"
+use qtcore::*; // super::super::%!s(MISSING)::*;
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 

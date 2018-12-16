@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -96,7 +96,7 @@ impl<'a> /*trait*/ QLoggingCategory_QLoggingCategory_0 for (usize) {
   fn QLoggingCategory_0(self) -> QLoggingCategory {
     // unsafe{_ZN16QLoggingCategoryC2EPKc()};
     let arg0 = (self) as *const usize as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN16QLoggingCategoryC2EPKc", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN16QLoggingCategoryC2EPKc", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QLoggingCategory{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -131,7 +131,7 @@ impl<'a> /*trait*/ QLoggingCategory_QLoggingCategory_1 for (usize,i32) {
     // unsafe{_ZN16QLoggingCategoryC2EPKc9QtMsgType()};
     let arg0 = (self.0) as *const usize as usize;
     let arg1 = (&self.1) as *const i32 as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN16QLoggingCategoryC2EPKc9QtMsgType", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN16QLoggingCategoryC2EPKc9QtMsgType", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QLoggingCategory{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -173,7 +173,7 @@ impl<'a> /*trait*/ QLoggingCategory_isEnabled_0<bool> for (i32) {
   fn isEnabled_0(self , rsthis: & QLoggingCategory) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QLoggingCategory9isEnabledE9QtMsgType", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QLoggingCategory9isEnabledE9QtMsgType", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -207,7 +207,7 @@ impl<'a> /*trait*/ QLoggingCategory_setEnabled_0<(/*void*/)> for (i32,bool) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0) as *const i32 as usize;
     let arg1 = (&self.1) as *const bool as usize;
-     qtrt::InvokeQtFunc6("_ZN16QLoggingCategory10setEnabledE9QtMsgTypeb", 2,qtrt::FFITY_INT,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN16QLoggingCategory10setEnabledE9QtMsgTypeb", 2,qtrt::FFITY_INT,qtrt::FFITY_SINT8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -234,7 +234,7 @@ pub trait QLoggingCategory_isDebugEnabled_0<RetType> {
 impl<'a> /*trait*/ QLoggingCategory_isDebugEnabled_0<bool> for () {
   fn isDebugEnabled_0(self , rsthis: & QLoggingCategory) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QLoggingCategory14isDebugEnabledEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QLoggingCategory14isDebugEnabledEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -264,7 +264,7 @@ pub trait QLoggingCategory_isInfoEnabled_0<RetType> {
 impl<'a> /*trait*/ QLoggingCategory_isInfoEnabled_0<bool> for () {
   fn isInfoEnabled_0(self , rsthis: & QLoggingCategory) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QLoggingCategory13isInfoEnabledEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QLoggingCategory13isInfoEnabledEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -292,7 +292,7 @@ pub trait QLoggingCategory_isWarningEnabled_0<RetType> {
 impl<'a> /*trait*/ QLoggingCategory_isWarningEnabled_0<bool> for () {
   fn isWarningEnabled_0(self , rsthis: & QLoggingCategory) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QLoggingCategory16isWarningEnabledEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QLoggingCategory16isWarningEnabledEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -320,7 +320,7 @@ pub trait QLoggingCategory_isCriticalEnabled_0<RetType> {
 impl<'a> /*trait*/ QLoggingCategory_isCriticalEnabled_0<bool> for () {
   fn isCriticalEnabled_0(self , rsthis: & QLoggingCategory) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QLoggingCategory17isCriticalEnabledEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QLoggingCategory17isCriticalEnabledEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -346,7 +346,7 @@ pub trait QLoggingCategory_categoryName_0<RetType> {
 impl<'a> /*trait*/ QLoggingCategory_categoryName_0<usize> for () {
   fn categoryName_0(self , rsthis: & QLoggingCategory) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QLoggingCategory12categoryNameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QLoggingCategory12categoryNameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -376,7 +376,7 @@ pub trait QLoggingCategory_defaultCategory_0<RetType> {
 impl<'a> /*trait*/ QLoggingCategory_defaultCategory_0<usize> for () {
   fn defaultCategory_0(self ) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZN16QLoggingCategory15defaultCategoryEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN16QLoggingCategory15defaultCategoryEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -412,7 +412,7 @@ impl<'a> /*trait*/ QLoggingCategory_setFilterRules_0<(/*void*/)> for (usize) {
   fn setFilterRules_0(self ) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN16QLoggingCategory14setFilterRulesERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN16QLoggingCategory14setFilterRulesERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }

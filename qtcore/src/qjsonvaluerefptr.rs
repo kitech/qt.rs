@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -95,7 +95,7 @@ impl<'a> /*trait*/ QJsonValueRefPtr_QJsonValueRefPtr_0 for (usize,i32) {
     // unsafe{_ZN16QJsonValueRefPtrC2EP10QJsonArrayi()};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const i32 as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN16QJsonValueRefPtrC2EP10QJsonArrayi", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN16QJsonValueRefPtrC2EP10QJsonArrayi", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QJsonValueRefPtr{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -128,7 +128,7 @@ impl<'a> /*trait*/ QJsonValueRefPtr_QJsonValueRefPtr_1 for (usize,i32) {
     // unsafe{_ZN16QJsonValueRefPtrC2EP11QJsonObjecti()};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const i32 as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN16QJsonValueRefPtrC2EP11QJsonObjecti", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN16QJsonValueRefPtrC2EP11QJsonObjecti", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QJsonValueRefPtr{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -155,7 +155,7 @@ pub trait QJsonValueRefPtr_operator_mul_0<RetType> {
 impl<'a> /*trait*/ QJsonValueRefPtr_operator_mul_0<usize> for () {
   fn operator_mul_0(self , rsthis: & QJsonValueRefPtr) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZN16QJsonValueRefPtrdeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN16QJsonValueRefPtrdeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -181,7 +181,7 @@ pub trait QJsonValueRefPtr_operator_minus_greater_0<RetType> {
 impl<'a> /*trait*/ QJsonValueRefPtr_operator_minus_greater_0<usize> for () {
   fn operator_minus_greater_0(self , rsthis: & QJsonValueRefPtr) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZN16QJsonValueRefPtrptEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN16QJsonValueRefPtrptEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }

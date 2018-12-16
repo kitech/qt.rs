@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -97,7 +97,7 @@ impl<'a> /*trait*/ QOperatingSystemVersion_QOperatingSystemVersion_0 for (i32,i3
     let arg1 = (&self.1) as *const i32 as usize;
     let arg2 = (&self.2) as *const i32 as usize;
     let arg3 = (&self.3) as *const i32 as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN23QOperatingSystemVersionC2ENS_6OSTypeEiii", 4,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN23QOperatingSystemVersionC2ENS_6OSTypeEiii", 4,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QOperatingSystemVersion{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -126,7 +126,7 @@ pub trait QOperatingSystemVersion_current_0<RetType> {
 impl<'a> /*trait*/ QOperatingSystemVersion_current_0<usize> for () {
   fn current_0(self ) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZN23QOperatingSystemVersion7currentEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN23QOperatingSystemVersion7currentEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -154,7 +154,7 @@ pub trait QOperatingSystemVersion_currentType_0<RetType> {
 impl<'a> /*trait*/ QOperatingSystemVersion_currentType_0<i32> for () {
   fn currentType_0(self ) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZN23QOperatingSystemVersion11currentTypeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN23QOperatingSystemVersion11currentTypeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -186,7 +186,7 @@ pub trait QOperatingSystemVersion_majorVersion_0<RetType> {
 impl<'a> /*trait*/ QOperatingSystemVersion_majorVersion_0<i32> for () {
   fn majorVersion_0(self , rsthis: & QOperatingSystemVersion) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QOperatingSystemVersion12majorVersionEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QOperatingSystemVersion12majorVersionEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -218,7 +218,7 @@ pub trait QOperatingSystemVersion_minorVersion_0<RetType> {
 impl<'a> /*trait*/ QOperatingSystemVersion_minorVersion_0<i32> for () {
   fn minorVersion_0(self , rsthis: & QOperatingSystemVersion) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QOperatingSystemVersion12minorVersionEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QOperatingSystemVersion12minorVersionEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -250,7 +250,7 @@ pub trait QOperatingSystemVersion_microVersion_0<RetType> {
 impl<'a> /*trait*/ QOperatingSystemVersion_microVersion_0<i32> for () {
   fn microVersion_0(self , rsthis: & QOperatingSystemVersion) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QOperatingSystemVersion12microVersionEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QOperatingSystemVersion12microVersionEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -276,7 +276,7 @@ pub trait QOperatingSystemVersion_segmentCount_0<RetType> {
 impl<'a> /*trait*/ QOperatingSystemVersion_segmentCount_0<i32> for () {
   fn segmentCount_0(self , rsthis: & QOperatingSystemVersion) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QOperatingSystemVersion12segmentCountEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QOperatingSystemVersion12segmentCountEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -304,7 +304,7 @@ pub trait QOperatingSystemVersion_type__0<RetType> {
 impl<'a> /*trait*/ QOperatingSystemVersion_type__0<i32> for () {
   fn type__0(self , rsthis: & QOperatingSystemVersion) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QOperatingSystemVersion4typeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QOperatingSystemVersion4typeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -332,7 +332,7 @@ pub trait QOperatingSystemVersion_name_0<RetType> {
 impl<'a> /*trait*/ QOperatingSystemVersion_name_0<usize> for () {
   fn name_0(self , rsthis: & QOperatingSystemVersion) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QOperatingSystemVersion4nameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK23QOperatingSystemVersion4nameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }

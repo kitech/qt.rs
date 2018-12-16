@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -93,7 +93,7 @@ pub trait QMessageLogContext_QMessageLogContext_0 {
 impl<'a> /*trait*/ QMessageLogContext_QMessageLogContext_0 for () {
   fn QMessageLogContext_0(self) -> QMessageLogContext {
     // unsafe{_ZN18QMessageLogContextC2Ev()};
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN18QMessageLogContextC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN18QMessageLogContextC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QMessageLogContext{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -128,7 +128,7 @@ impl<'a> /*trait*/ QMessageLogContext_QMessageLogContext_1 for (usize,i32,usize,
     let arg1 = (&self.1) as *const i32 as usize;
     let arg2 = (self.2) as *const usize as usize;
     let arg3 = (self.3) as *const usize as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN18QMessageLogContextC2EPKciS1_S1_", 4,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN18QMessageLogContextC2EPKciS1_S1_", 4,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QMessageLogContext{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -156,7 +156,7 @@ impl<'a> /*trait*/ QMessageLogContext_copy_0<(/*void*/)> for (usize) {
   fn copy_0(self , rsthis: & QMessageLogContext) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN18QMessageLogContext4copyERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN18QMessageLogContext4copyERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }

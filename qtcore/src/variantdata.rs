@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -96,7 +96,7 @@ impl<'a> /*trait*/ VariantData_VariantData_0 for (i32,usize,u32) {
     let arg0 = (&self.0) as *const i32 as usize;
     let arg1 = (&self.1) as *const usize as usize;
     let arg2 = (&self.2) as *const u32 as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN17QtMetaTypePrivate11VariantDataC2EiPKvj", 3,qtrt::FFITY_INT,qtrt::FFITY_POINTER,qtrt::FFITY_UINT32,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN17QtMetaTypePrivate11VariantDataC2EiPKvj", 3,qtrt::FFITY_INT,qtrt::FFITY_POINTER,qtrt::FFITY_UINT32,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = VariantData{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

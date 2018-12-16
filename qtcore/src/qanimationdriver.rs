@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -105,7 +105,7 @@ pub trait QAnimationDriver_metaObject_0<RetType> {
 impl<'a> /*trait*/ QAnimationDriver_metaObject_0<usize> for () {
   fn metaObject_0(self , rsthis: & QAnimationDriver) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QAnimationDriver10metaObjectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QAnimationDriver10metaObjectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -136,7 +136,7 @@ impl<'a> /*trait*/ QAnimationDriver_QAnimationDriver_0 for (usize) {
   fn QAnimationDriver_0(self) -> QAnimationDriver {
     // unsafe{_ZN16QAnimationDriverC2EP7QObject()};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN16QAnimationDriverC2EP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN16QAnimationDriverC2EP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QAnimationDriver{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -177,7 +177,7 @@ pub trait QAnimationDriver_advance_0<RetType> {
 impl<'a> /*trait*/ QAnimationDriver_advance_0<(/*void*/)> for () {
   fn advance_0(self , rsthis: & QAnimationDriver) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN16QAnimationDriver7advanceEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN16QAnimationDriver7advanceEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -202,7 +202,7 @@ pub trait QAnimationDriver_install_0<RetType> {
 impl<'a> /*trait*/ QAnimationDriver_install_0<(/*void*/)> for () {
   fn install_0(self , rsthis: & QAnimationDriver) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN16QAnimationDriver7installEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN16QAnimationDriver7installEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -227,7 +227,7 @@ pub trait QAnimationDriver_uninstall_0<RetType> {
 impl<'a> /*trait*/ QAnimationDriver_uninstall_0<(/*void*/)> for () {
   fn uninstall_0(self , rsthis: & QAnimationDriver) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN16QAnimationDriver9uninstallEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN16QAnimationDriver9uninstallEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -252,7 +252,7 @@ pub trait QAnimationDriver_isRunning_0<RetType> {
 impl<'a> /*trait*/ QAnimationDriver_isRunning_0<bool> for () {
   fn isRunning_0(self , rsthis: & QAnimationDriver) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QAnimationDriver9isRunningEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QAnimationDriver9isRunningEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -278,7 +278,7 @@ pub trait QAnimationDriver_elapsed_0<RetType> {
 impl<'a> /*trait*/ QAnimationDriver_elapsed_0<i64> for () {
   fn elapsed_0(self , rsthis: & QAnimationDriver) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QAnimationDriver7elapsedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QAnimationDriver7elapsedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i64 = Default::default(); return dret;
   }
@@ -305,7 +305,7 @@ impl<'a> /*trait*/ QAnimationDriver_setStartTime_0<(/*void*/)> for (i64) {
   fn setStartTime_0(self , rsthis: & QAnimationDriver) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i64 as usize;
-     qtrt::InvokeQtFunc6("_ZN16QAnimationDriver12setStartTimeEx", 1,qtrt::FFITY_SINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN16QAnimationDriver12setStartTimeEx", 1,qtrt::FFITY_SINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -330,7 +330,7 @@ pub trait QAnimationDriver_startTime_0<RetType> {
 impl<'a> /*trait*/ QAnimationDriver_startTime_0<i64> for () {
   fn startTime_0(self , rsthis: & QAnimationDriver) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QAnimationDriver9startTimeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QAnimationDriver9startTimeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i64 = Default::default(); return dret;
   }
@@ -356,7 +356,7 @@ pub trait QAnimationDriver_started_0<RetType> {
 impl<'a> /*trait*/ QAnimationDriver_started_0<(/*void*/)> for () {
   fn started_0(self , rsthis: & QAnimationDriver) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN16QAnimationDriver7startedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN16QAnimationDriver7startedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -381,7 +381,7 @@ pub trait QAnimationDriver_stopped_0<RetType> {
 impl<'a> /*trait*/ QAnimationDriver_stopped_0<(/*void*/)> for () {
   fn stopped_0(self , rsthis: & QAnimationDriver) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN16QAnimationDriver7stoppedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN16QAnimationDriver7stoppedEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -407,7 +407,7 @@ impl<'a> /*trait*/ QAnimationDriver_advanceAnimation_0<(/*void*/)> for (i64) {
   fn advanceAnimation_0(self , rsthis: & QAnimationDriver) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i64 as usize;
-     qtrt::InvokeQtFunc6("_ZN16QAnimationDriver16advanceAnimationEx", 1,qtrt::FFITY_SINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN16QAnimationDriver16advanceAnimationEx", 1,qtrt::FFITY_SINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -438,7 +438,7 @@ pub trait QAnimationDriver_start_0<RetType> {
 impl<'a> /*trait*/ QAnimationDriver_start_0<(/*void*/)> for () {
   fn start_0(self , rsthis: & QAnimationDriver) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN16QAnimationDriver5startEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN16QAnimationDriver5startEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -467,7 +467,7 @@ pub trait QAnimationDriver_stop_0<RetType> {
 impl<'a> /*trait*/ QAnimationDriver_stop_0<(/*void*/)> for () {
   fn stop_0(self , rsthis: & QAnimationDriver) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN16QAnimationDriver4stopEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN16QAnimationDriver4stopEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }

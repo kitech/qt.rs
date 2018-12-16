@@ -158,7 +158,7 @@ func Operator+_6(c byte, s string) string {
   rv, err := qtrt.InvokeQtFunc6("_ZplcRK7QString", qtrt.FFI_TYPE_POINTER, c, convArg1)
   qtrt.ErrPrint(err, rv)
     rv2 := /*==*/NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-    rv3 := rv2.ToLocal8Bit().Data()
+    rv3 := rv2.ToUtf8().Data()
     /*==*/DeleteQString(rv2)
     return rv3
 }
@@ -333,7 +333,7 @@ func Operator+_14(s string, c byte) string {
   rv, err := qtrt.InvokeQtFunc6("_ZplRK7QStringc", qtrt.FFI_TYPE_POINTER, convArg0, c)
   qtrt.ErrPrint(err, rv)
     rv2 := /*==*/NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-    rv3 := rv2.ToLocal8Bit().Data()
+    rv3 := rv2.ToUtf8().Data()
     /*==*/DeleteQString(rv2)
     return rv3
 }
@@ -354,7 +354,7 @@ func Operator+_15(s1 string, s2 string) string {
   rv, err := qtrt.InvokeQtFunc6("_ZplRK7QStringS1_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
   qtrt.ErrPrint(err, rv)
     rv2 := /*==*/NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-    rv3 := rv2.ToLocal8Bit().Data()
+    rv3 := rv2.ToUtf8().Data()
     /*==*/DeleteQString(rv2)
     return rv3
 }
@@ -377,7 +377,7 @@ func Operator+_16(s1 string, s2 QStringRef_ITF) string {
   rv, err := qtrt.InvokeQtFunc6("_ZplRK7QStringRK10QStringRef", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
   qtrt.ErrPrint(err, rv)
     rv2 := /*==*/NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-    rv3 := rv2.ToLocal8Bit().Data()
+    rv3 := rv2.ToUtf8().Data()
     /*==*/DeleteQString(rv2)
     return rv3
 }
@@ -400,7 +400,7 @@ func Operator+_17(s string, ba QByteArray_ITF) string {
   rv, err := qtrt.InvokeQtFunc6("_ZplRK7QStringRK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
   qtrt.ErrPrint(err, rv)
     rv2 := /*==*/NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-    rv3 := rv2.ToLocal8Bit().Data()
+    rv3 := rv2.ToUtf8().Data()
     /*==*/DeleteQString(rv2)
     return rv3
 }
@@ -421,7 +421,7 @@ func Operator+_18(s1 string, s2 string) string {
   rv, err := qtrt.InvokeQtFunc6("_ZplRK7QStringPKc", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
   qtrt.ErrPrint(err, rv)
     rv2 := /*==*/NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-    rv3 := rv2.ToLocal8Bit().Data()
+    rv3 := rv2.ToUtf8().Data()
     /*==*/DeleteQString(rv2)
     return rv3
 }
@@ -444,7 +444,7 @@ func Operator+_19(s1 string, s2 QChar_ITF/*123*/) string {
   rv, err := qtrt.InvokeQtFunc6("_ZplRK7QString5QChar", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
   qtrt.ErrPrint(err, rv)
     rv2 := /*==*/NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-    rv3 := rv2.ToLocal8Bit().Data()
+    rv3 := rv2.ToUtf8().Data()
     /*==*/DeleteQString(rv2)
     return rv3
 }
@@ -613,7 +613,7 @@ func Operator+_26(s1 QStringRef_ITF, s2 QStringRef_ITF) string {
   rv, err := qtrt.InvokeQtFunc6("_ZplRK10QStringRefS1_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
   qtrt.ErrPrint(err, rv)
     rv2 := /*==*/NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-    rv3 := rv2.ToLocal8Bit().Data()
+    rv3 := rv2.ToUtf8().Data()
     /*==*/DeleteQString(rv2)
     return rv3
 }
@@ -636,7 +636,7 @@ func Operator+_27(s1 QStringRef_ITF, s2 string) string {
   rv, err := qtrt.InvokeQtFunc6("_ZplRK10QStringRefRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
   qtrt.ErrPrint(err, rv)
     rv2 := /*==*/NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-    rv3 := rv2.ToLocal8Bit().Data()
+    rv3 := rv2.ToUtf8().Data()
     /*==*/DeleteQString(rv2)
     return rv3
 }
@@ -661,7 +661,7 @@ func Operator+_28(s1 QStringRef_ITF, s2 QChar_ITF/*123*/) string {
   rv, err := qtrt.InvokeQtFunc6("_ZplRK10QStringRef5QChar", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
   qtrt.ErrPrint(err, rv)
     rv2 := /*==*/NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-    rv3 := rv2.ToLocal8Bit().Data()
+    rv3 := rv2.ToUtf8().Data()
     /*==*/DeleteQString(rv2)
     return rv3
 }
@@ -686,7 +686,7 @@ func Operator+_29(s1 QStringRef_ITF, s2 QLatin1String_ITF/*123*/) string {
   rv, err := qtrt.InvokeQtFunc6("_ZplRK10QStringRef13QLatin1String", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
   qtrt.ErrPrint(err, rv)
     rv2 := /*==*/NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-    rv3 := rv2.ToLocal8Bit().Data()
+    rv3 := rv2.ToUtf8().Data()
     /*==*/DeleteQString(rv2)
     return rv3
 }
@@ -753,7 +753,7 @@ func Operator+_32(ba QByteArray_ITF, s string) string {
   rv, err := qtrt.InvokeQtFunc6("_ZplRK10QByteArrayRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
   qtrt.ErrPrint(err, rv)
     rv2 := /*==*/NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-    rv3 := rv2.ToLocal8Bit().Data()
+    rv3 := rv2.ToUtf8().Data()
     /*==*/DeleteQString(rv2)
     return rv3
 }
@@ -796,7 +796,7 @@ func Operator+_34(s1 string, s2 string) string {
   rv, err := qtrt.InvokeQtFunc6("_ZplPKcRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
   qtrt.ErrPrint(err, rv)
     rv2 := /*==*/NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-    rv3 := rv2.ToLocal8Bit().Data()
+    rv3 := rv2.ToUtf8().Data()
     /*==*/DeleteQString(rv2)
     return rv3
 }
@@ -841,7 +841,7 @@ func Operator+_36(s1 QChar_ITF/*123*/, s2 string) string {
   rv, err := qtrt.InvokeQtFunc6("_Zpl5QCharRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
   qtrt.ErrPrint(err, rv)
     rv2 := /*==*/NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-    rv3 := rv2.ToLocal8Bit().Data()
+    rv3 := rv2.ToUtf8().Data()
     /*==*/DeleteQString(rv2)
     return rv3
 }
@@ -866,7 +866,7 @@ func Operator+_37(s1 QChar_ITF/*123*/, s2 QStringRef_ITF) string {
   rv, err := qtrt.InvokeQtFunc6("_Zpl5QCharRK10QStringRef", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
   qtrt.ErrPrint(err, rv)
     rv2 := /*==*/NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-    rv3 := rv2.ToLocal8Bit().Data()
+    rv3 := rv2.ToUtf8().Data()
     /*==*/DeleteQString(rv2)
     return rv3
 }
@@ -891,7 +891,7 @@ func Operator+_38(s1 QLatin1String_ITF/*123*/, s2 QStringRef_ITF) string {
   rv, err := qtrt.InvokeQtFunc6("_Zpl13QLatin1StringRK10QStringRef", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
   qtrt.ErrPrint(err, rv)
     rv2 := /*==*/NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-    rv3 := rv2.ToLocal8Bit().Data()
+    rv3 := rv2.ToUtf8().Data()
     /*==*/DeleteQString(rv2)
     return rv3
 }
@@ -1825,14 +1825,14 @@ func Operator-_3(p QPoint_ITF) *QPoint/*123*/ {
 }
 
 // /usr/include/qt/QtCore/qmargins.h:380
-// index:0
+// index:1
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QMarginsF &, const QMarginsF &)
 
 /*
 
 */
-func Operator!=(lhs QMarginsF_ITF, rhs QMarginsF_ITF) bool {
+func Operator!=_1(lhs QMarginsF_ITF, rhs QMarginsF_ITF) bool {
     var convArg0 unsafe.Pointer
     if lhs != nil && lhs.QMarginsF_PTR() != nil {
         convArg0 = lhs.QMarginsF_PTR().GetCthis()
@@ -1847,14 +1847,14 @@ func Operator!=(lhs QMarginsF_ITF, rhs QMarginsF_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qvariant.h:572
-// index:1
+// index:2
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QVariant &, const QVariantComparisonHelper &)
 
 /*
 
 */
-func Operator!=_1(v1 QVariant_ITF, v2 QVariantComparisonHelper_ITF) bool {
+func Operator!=_2(v1 QVariant_ITF, v2 QVariantComparisonHelper_ITF) bool {
     var convArg0 unsafe.Pointer
     if v1 != nil && v1.QVariant_PTR() != nil {
         convArg0 = v1.QVariant_PTR().GetCthis()
@@ -1869,14 +1869,14 @@ func Operator!=_1(v1 QVariant_ITF, v2 QVariantComparisonHelper_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qmargins.h:144
-// index:2
+// index:3
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QMargins &, const QMargins &)
 
 /*
 
 */
-func Operator!=_2(m1 QMargins_ITF, m2 QMargins_ITF) bool {
+func Operator!=_3(m1 QMargins_ITF, m2 QMargins_ITF) bool {
     var convArg0 unsafe.Pointer
     if m1 != nil && m1.QMargins_PTR() != nil {
         convArg0 = m1.QMargins_PTR().GetCthis()
@@ -1891,14 +1891,14 @@ func Operator!=_2(m1 QMargins_ITF, m2 QMargins_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1615
-// index:3
+// index:4
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QString &, const QStringRef &)
 
 /*
 
 */
-func Operator!=_3(lhs string, rhs QStringRef_ITF) bool {
+func Operator!=_4(lhs string, rhs QStringRef_ITF) bool {
     var tmpArg0 = NewQString_5(lhs)
     var convArg0 = tmpArg0.GetCthis()
     var convArg1 unsafe.Pointer
@@ -1911,14 +1911,14 @@ func Operator!=_3(lhs string, rhs QStringRef_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1187
-// index:4
+// index:5
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QString &, QString::Null)
 
 /*
 
 */
-func Operator!=_4(s string, arg1 int) bool {
+func Operator!=_5(s string, arg1 int) bool {
     var tmpArg0 = NewQString_5(s)
     var convArg0 = tmpArg0.GetCthis()
   rv, err := qtrt.InvokeQtFunc6("_ZneRK7QStringNS_4NullE", qtrt.FFI_TYPE_POINTER, convArg0, arg1)
@@ -1927,14 +1927,14 @@ func Operator!=_4(s string, arg1 int) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1673
-// index:5
+// index:6
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QString &, QChar)
 
 /*
 
 */
-func Operator!=_5(lhs string, rhs QChar_ITF/*123*/) bool {
+func Operator!=_6(lhs string, rhs QChar_ITF/*123*/) bool {
     var tmpArg0 = NewQString_5(lhs)
     var convArg0 = tmpArg0.GetCthis()
     var convArg1 unsafe.Pointer
@@ -1947,14 +1947,14 @@ func Operator!=_5(lhs string, rhs QChar_ITF/*123*/) bool {
 }
 
 // /usr/include/qt/QtCore/qpoint.h:353
-// index:6
+// index:7
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QPointF &, const QPointF &)
 
 /*
 
 */
-func Operator!=_6(p1 QPointF_ITF, p2 QPointF_ITF) bool {
+func Operator!=_7(p1 QPointF_ITF, p2 QPointF_ITF) bool {
     var convArg0 unsafe.Pointer
     if p1 != nil && p1.QPointF_PTR() != nil {
         convArg0 = p1.QPointF_PTR().GetCthis()
@@ -1969,14 +1969,14 @@ func Operator!=_6(p1 QPointF_ITF, p2 QPointF_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qsize.h:342
-// index:7
+// index:8
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QSizeF &, const QSizeF &)
 
 /*
 
 */
-func Operator!=_7(s1 QSizeF_ITF, s2 QSizeF_ITF) bool {
+func Operator!=_8(s1 QSizeF_ITF, s2 QSizeF_ITF) bool {
     var convArg0 unsafe.Pointer
     if s1 != nil && s1.QSizeF_PTR() != nil {
         convArg0 = s1.QSizeF_PTR().GetCthis()
@@ -1991,14 +1991,14 @@ func Operator!=_7(s1 QSizeF_ITF, s2 QSizeF_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qrect.h:865
-// index:8
+// index:9
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QRectF &, const QRectF &)
 
 /*
 
 */
-func Operator!=_8(r1 QRectF_ITF, r2 QRectF_ITF) bool {
+func Operator!=_9(r1 QRectF_ITF, r2 QRectF_ITF) bool {
     var convArg0 unsafe.Pointer
     if r1 != nil && r1.QRectF_PTR() != nil {
         convArg0 = r1.QRectF_PTR().GetCthis()
@@ -2013,14 +2013,14 @@ func Operator!=_8(r1 QRectF_ITF, r2 QRectF_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qpoint.h:166
-// index:9
+// index:10
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QPoint &, const QPoint &)
 
 /*
 
 */
-func Operator!=_9(p1 QPoint_ITF, p2 QPoint_ITF) bool {
+func Operator!=_10(p1 QPoint_ITF, p2 QPoint_ITF) bool {
     var convArg0 unsafe.Pointer
     if p1 != nil && p1.QPoint_PTR() != nil {
         convArg0 = p1.QPoint_PTR().GetCthis()
@@ -2035,14 +2035,14 @@ func Operator!=_9(p1 QPoint_ITF, p2 QPoint_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qsize.h:172
-// index:10
+// index:11
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QSize &, const QSize &)
 
 /*
 
 */
-func Operator!=_10(s1 QSize_ITF, s2 QSize_ITF) bool {
+func Operator!=_11(s1 QSize_ITF, s2 QSize_ITF) bool {
     var convArg0 unsafe.Pointer
     if s1 != nil && s1.QSize_PTR() != nil {
         convArg0 = s1.QSize_PTR().GetCthis()
@@ -2057,14 +2057,14 @@ func Operator!=_10(s1 QSize_ITF, s2 QSize_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qrect.h:459
-// index:11
+// index:12
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QRect &, const QRect &)
 
 /*
 
 */
-func Operator!=_11(r1 QRect_ITF, r2 QRect_ITF) bool {
+func Operator!=_12(r1 QRect_ITF, r2 QRect_ITF) bool {
     var convArg0 unsafe.Pointer
     if r1 != nil && r1.QRect_PTR() != nil {
         convArg0 = r1.QRect_PTR().GetCthis()
@@ -2079,14 +2079,14 @@ func Operator!=_11(r1 QRect_ITF, r2 QRect_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qversionnumber.h:317
-// index:12
+// index:13
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QVersionNumber &, const QVersionNumber &)
 
 /*
 
 */
-func Operator!=_12(lhs QVersionNumber_ITF, rhs QVersionNumber_ITF) bool {
+func Operator!=_13(lhs QVersionNumber_ITF, rhs QVersionNumber_ITF) bool {
     var convArg0 unsafe.Pointer
     if lhs != nil && lhs.QVersionNumber_PTR() != nil {
         convArg0 = lhs.QVersionNumber_PTR().GetCthis()
@@ -2101,14 +2101,14 @@ func Operator!=_12(lhs QVersionNumber_ITF, rhs QVersionNumber_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qstorageinfo.h:110
-// index:13
+// index:14
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QStorageInfo &, const QStorageInfo &)
 
 /*
 
 */
-func Operator!=_13(first QStorageInfo_ITF, second QStorageInfo_ITF) bool {
+func Operator!=_14(first QStorageInfo_ITF, second QStorageInfo_ITF) bool {
     var convArg0 unsafe.Pointer
     if first != nil && first.QStorageInfo_PTR() != nil {
         convArg0 = first.QStorageInfo_PTR().GetCthis()
@@ -2123,14 +2123,14 @@ func Operator!=_13(first QStorageInfo_ITF, second QStorageInfo_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:203
-// index:14
+// index:15
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QMetaMethod &, const QMetaMethod &)
 
 /*
 
 */
-func Operator!=_14(m1 QMetaMethod_ITF, m2 QMetaMethod_ITF) bool {
+func Operator!=_15(m1 QMetaMethod_ITF, m2 QMetaMethod_ITF) bool {
     var convArg0 unsafe.Pointer
     if m1 != nil && m1.QMetaMethod_PTR() != nil {
         convArg0 = m1.QMetaMethod_PTR().GetCthis()
@@ -2145,14 +2145,14 @@ func Operator!=_14(m1 QMetaMethod_ITF, m2 QMetaMethod_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1603
-// index:15
+// index:16
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QStringRef &, const QStringRef &)
 
 /*
 
 */
-func Operator!=_15(s1 QStringRef_ITF, s2 QStringRef_ITF) bool {
+func Operator!=_16(s1 QStringRef_ITF, s2 QStringRef_ITF) bool {
     var convArg0 unsafe.Pointer
     if s1 != nil && s1.QStringRef_PTR() != nil {
         convArg0 = s1.QStringRef_PTR().GetCthis()
@@ -2167,14 +2167,14 @@ func Operator!=_15(s1 QStringRef_ITF, s2 QStringRef_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1622
-// index:16
+// index:17
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QStringRef &, const QString &)
 
 /*
 
 */
-func Operator!=_16(lhs QStringRef_ITF, rhs string) bool {
+func Operator!=_17(lhs QStringRef_ITF, rhs string) bool {
     var convArg0 unsafe.Pointer
     if lhs != nil && lhs.QStringRef_PTR() != nil {
         convArg0 = lhs.QStringRef_PTR().GetCthis()
@@ -2187,14 +2187,14 @@ func Operator!=_16(lhs QStringRef_ITF, rhs string) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1758
-// index:17
+// index:18
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QStringRef &, const QByteArray &)
 
 /*
 
 */
-func Operator!=_17(lhs QStringRef_ITF, rhs QByteArray_ITF) bool {
+func Operator!=_18(lhs QStringRef_ITF, rhs QByteArray_ITF) bool {
     var convArg0 unsafe.Pointer
     if lhs != nil && lhs.QStringRef_PTR() != nil {
         convArg0 = lhs.QStringRef_PTR().GetCthis()
@@ -2209,14 +2209,14 @@ func Operator!=_17(lhs QStringRef_ITF, rhs QByteArray_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1692
-// index:18
+// index:19
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QStringRef &, QChar)
 
 /*
 
 */
-func Operator!=_18(lhs QStringRef_ITF, rhs QChar_ITF/*123*/) bool {
+func Operator!=_19(lhs QStringRef_ITF, rhs QChar_ITF/*123*/) bool {
     var convArg0 unsafe.Pointer
     if lhs != nil && lhs.QStringRef_PTR() != nil {
         convArg0 = lhs.QStringRef_PTR().GetCthis()
@@ -2231,14 +2231,14 @@ func Operator!=_18(lhs QStringRef_ITF, rhs QChar_ITF/*123*/) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1654
-// index:19
+// index:20
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QStringRef &, QLatin1String)
 
 /*
 
 */
-func Operator!=_19(lhs QStringRef_ITF, rhs QLatin1String_ITF/*123*/) bool {
+func Operator!=_20(lhs QStringRef_ITF, rhs QLatin1String_ITF/*123*/) bool {
     var convArg0 unsafe.Pointer
     if lhs != nil && lhs.QStringRef_PTR() != nil {
         convArg0 = lhs.QStringRef_PTR().GetCthis()
@@ -2253,14 +2253,14 @@ func Operator!=_19(lhs QStringRef_ITF, rhs QLatin1String_ITF/*123*/) bool {
 }
 
 // /usr/include/qt/QtCore/qbytearray.h:609
-// index:20
+// index:21
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QByteArray &, const QByteArray &)
 
 /*
 
 */
-func Operator!=_20(a1 QByteArray_ITF, a2 QByteArray_ITF) bool {
+func Operator!=_21(a1 QByteArray_ITF, a2 QByteArray_ITF) bool {
     var convArg0 unsafe.Pointer
     if a1 != nil && a1.QByteArray_PTR() != nil {
         convArg0 = a1.QByteArray_PTR().GetCthis()
@@ -2275,14 +2275,14 @@ func Operator!=_20(a1 QByteArray_ITF, a2 QByteArray_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1765
-// index:21
+// index:22
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QByteArray &, const QStringRef &)
 
 /*
 
 */
-func Operator!=_21(lhs QByteArray_ITF, rhs QStringRef_ITF) bool {
+func Operator!=_22(lhs QByteArray_ITF, rhs QStringRef_ITF) bool {
     var convArg0 unsafe.Pointer
     if lhs != nil && lhs.QByteArray_PTR() != nil {
         convArg0 = lhs.QByteArray_PTR().GetCthis()
@@ -2297,14 +2297,14 @@ func Operator!=_21(lhs QByteArray_ITF, rhs QStringRef_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qbytearray.h:611
-// index:22
+// index:23
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QByteArray &, const char *)
 
 /*
 
 */
-func Operator!=_22(a1 QByteArray_ITF, a2 string) bool {
+func Operator!=_23(a1 QByteArray_ITF, a2 string) bool {
     var convArg0 unsafe.Pointer
     if a1 != nil && a1.QByteArray_PTR() != nil {
         convArg0 = a1.QByteArray_PTR().GetCthis()
@@ -2317,14 +2317,14 @@ func Operator!=_22(a1 QByteArray_ITF, a2 string) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1236
-// index:23
+// index:24
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const char *, const QString &)
 
 /*
 
 */
-func Operator!=_23(s1 string, s2 string) bool {
+func Operator!=_24(s1 string, s2 string) bool {
     var convArg0 = qtrt.CString(s1)
     defer qtrt.FreeMem(convArg0)
     var tmpArg1 = NewQString_5(s2)
@@ -2335,14 +2335,14 @@ func Operator!=_23(s1 string, s2 string) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1787
-// index:24
+// index:25
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const char *, const QStringRef &)
 
 /*
 
 */
-func Operator!=_24(s1 string, s2 QStringRef_ITF) bool {
+func Operator!=_25(s1 string, s2 QStringRef_ITF) bool {
     var convArg0 = qtrt.CString(s1)
     defer qtrt.FreeMem(convArg0)
     var convArg1 unsafe.Pointer
@@ -2355,14 +2355,14 @@ func Operator!=_24(s1 string, s2 QStringRef_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qbytearray.h:613
-// index:25
+// index:26
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const char *, const QByteArray &)
 
 /*
 
 */
-func Operator!=_25(a1 string, a2 QByteArray_ITF) bool {
+func Operator!=_26(a1 string, a2 QByteArray_ITF) bool {
     var convArg0 = qtrt.CString(a1)
     defer qtrt.FreeMem(convArg0)
     var convArg1 unsafe.Pointer
@@ -2375,14 +2375,14 @@ func Operator!=_25(a1 string, a2 QByteArray_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1249
-// index:26
+// index:27
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const char *, QLatin1String)
 
 /*
 
 */
-func Operator!=_26(s1 string, s2 QLatin1String_ITF/*123*/) bool {
+func Operator!=_27(s1 string, s2 QLatin1String_ITF/*123*/) bool {
     var convArg0 = qtrt.CString(s1)
     defer qtrt.FreeMem(convArg0)
     var convArg1 unsafe.Pointer
@@ -2395,28 +2395,28 @@ func Operator!=_26(s1 string, s2 QLatin1String_ITF/*123*/) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1183
-// index:27
+// index:28
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(QString::Null, QString::Null)
 
 /*
 
 */
-func Operator!=_27(arg0 int, arg1 int) bool {
+func Operator!=_28(arg0 int, arg1 int) bool {
   rv, err := qtrt.InvokeQtFunc6("_ZneN7QString4NullES0_", qtrt.FFI_TYPE_POINTER, arg0, arg1)
   qtrt.ErrPrint(err, rv)
     return rv!=0
 }
 
 // /usr/include/qt/QtCore/qstring.h:1185
-// index:28
+// index:29
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(QString::Null, const QString &)
 
 /*
 
 */
-func Operator!=_28(arg0 int, s string) bool {
+func Operator!=_29(arg0 int, s string) bool {
     var tmpArg1 = NewQString_5(s)
     var convArg1 = tmpArg1.GetCthis()
   rv, err := qtrt.InvokeQtFunc6("_ZneN7QString4NullERKS_", qtrt.FFI_TYPE_POINTER, arg0, convArg1)
@@ -2425,14 +2425,14 @@ func Operator!=_28(arg0 int, s string) bool {
 }
 
 // /usr/include/qt/QtCore/qchar.h:599
-// index:29
+// index:30
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(std::nullptr_t, QChar)
 
 /*
 
 */
-func Operator!=_29(arg0 int, rhs QChar_ITF/*123*/) bool {
+func Operator!=_30(arg0 int, rhs QChar_ITF/*123*/) bool {
     var convArg1 unsafe.Pointer
     if rhs != nil && rhs.QChar_PTR() != nil {
         convArg1 = rhs.QChar_PTR().GetCthis()
@@ -2443,14 +2443,14 @@ func Operator!=_29(arg0 int, rhs QChar_ITF/*123*/) bool {
 }
 
 // /usr/include/qt/QtCore/qchar.h:583
-// index:30
+// index:31
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(QChar, QChar)
 
 /*
 
 */
-func Operator!=_30(c1 QChar_ITF/*123*/, c2 QChar_ITF/*123*/) bool {
+func Operator!=_31(c1 QChar_ITF/*123*/, c2 QChar_ITF/*123*/) bool {
     var convArg0 unsafe.Pointer
     if c1 != nil && c1.QChar_PTR() != nil {
         convArg0 = c1.QChar_PTR().GetCthis()
@@ -2465,14 +2465,14 @@ func Operator!=_30(c1 QChar_ITF/*123*/, c2 QChar_ITF/*123*/) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1668
-// index:31
+// index:32
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(QChar, const QString &)
 
 /*
 
 */
-func Operator!=_31(lhs QChar_ITF/*123*/, rhs string) bool {
+func Operator!=_32(lhs QChar_ITF/*123*/, rhs string) bool {
     var convArg0 unsafe.Pointer
     if lhs != nil && lhs.QChar_PTR() != nil {
         convArg0 = lhs.QChar_PTR().GetCthis()
@@ -2485,14 +2485,14 @@ func Operator!=_31(lhs QChar_ITF/*123*/, rhs string) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1687
-// index:32
+// index:33
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(QChar, const QStringRef &)
 
 /*
 
 */
-func Operator!=_32(lhs QChar_ITF/*123*/, rhs QStringRef_ITF) bool {
+func Operator!=_33(lhs QChar_ITF/*123*/, rhs QStringRef_ITF) bool {
     var convArg0 unsafe.Pointer
     if lhs != nil && lhs.QChar_PTR() != nil {
         convArg0 = lhs.QChar_PTR().GetCthis()
@@ -2507,14 +2507,14 @@ func Operator!=_32(lhs QChar_ITF/*123*/, rhs QStringRef_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qchar.h:594
-// index:33
+// index:34
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(QChar, std::nullptr_t)
 
 /*
 
 */
-func Operator!=_33(lhs QChar_ITF/*123*/, arg1 int) bool {
+func Operator!=_34(lhs QChar_ITF/*123*/, arg1 int) bool {
     var convArg0 unsafe.Pointer
     if lhs != nil && lhs.QChar_PTR() != nil {
         convArg0 = lhs.QChar_PTR().GetCthis()
@@ -2525,14 +2525,14 @@ func Operator!=_33(lhs QChar_ITF/*123*/, arg1 int) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1706
-// index:34
+// index:35
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(QChar, QLatin1String)
 
 /*
 
 */
-func Operator!=_34(lhs QChar_ITF/*123*/, rhs QLatin1String_ITF/*123*/) bool {
+func Operator!=_35(lhs QChar_ITF/*123*/, rhs QLatin1String_ITF/*123*/) bool {
     var convArg0 unsafe.Pointer
     if lhs != nil && lhs.QChar_PTR() != nil {
         convArg0 = lhs.QChar_PTR().GetCthis()
@@ -2547,14 +2547,14 @@ func Operator!=_34(lhs QChar_ITF/*123*/, rhs QLatin1String_ITF/*123*/) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1734
-// index:35
+// index:36
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(QChar, QStringView)
 
 /*
 
 */
-func Operator!=_35(lhs QChar_ITF/*123*/, rhs QStringView_ITF/*123*/) bool {
+func Operator!=_36(lhs QChar_ITF/*123*/, rhs QStringView_ITF/*123*/) bool {
     var convArg0 unsafe.Pointer
     if lhs != nil && lhs.QChar_PTR() != nil {
         convArg0 = lhs.QChar_PTR().GetCthis()
@@ -2569,14 +2569,14 @@ func Operator!=_35(lhs QChar_ITF/*123*/, rhs QStringView_ITF/*123*/) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1192
-// index:36
+// index:37
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(QLatin1String, QLatin1String)
 
 /*
 
 */
-func Operator!=_36(s1 QLatin1String_ITF/*123*/, s2 QLatin1String_ITF/*123*/) bool {
+func Operator!=_37(s1 QLatin1String_ITF/*123*/, s2 QLatin1String_ITF/*123*/) bool {
     var convArg0 unsafe.Pointer
     if s1 != nil && s1.QLatin1String_PTR() != nil {
         convArg0 = s1.QLatin1String_PTR().GetCthis()
@@ -2591,14 +2591,14 @@ func Operator!=_36(s1 QLatin1String_ITF/*123*/, s2 QLatin1String_ITF/*123*/) boo
 }
 
 // /usr/include/qt/QtCore/qstring.h:1647
-// index:37
+// index:38
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(QLatin1String, const QStringRef &)
 
 /*
 
 */
-func Operator!=_37(lhs QLatin1String_ITF/*123*/, rhs QStringRef_ITF) bool {
+func Operator!=_38(lhs QLatin1String_ITF/*123*/, rhs QStringRef_ITF) bool {
     var convArg0 unsafe.Pointer
     if lhs != nil && lhs.QLatin1String_PTR() != nil {
         convArg0 = lhs.QLatin1String_PTR().GetCthis()
@@ -2613,14 +2613,14 @@ func Operator!=_37(lhs QLatin1String_ITF/*123*/, rhs QStringRef_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1711
-// index:38
+// index:39
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(QLatin1String, QChar)
 
 /*
 
 */
-func Operator!=_38(lhs QLatin1String_ITF/*123*/, rhs QChar_ITF/*123*/) bool {
+func Operator!=_39(lhs QLatin1String_ITF/*123*/, rhs QChar_ITF/*123*/) bool {
     var convArg0 unsafe.Pointer
     if lhs != nil && lhs.QLatin1String_PTR() != nil {
         convArg0 = lhs.QLatin1String_PTR().GetCthis()
@@ -2635,14 +2635,14 @@ func Operator!=_38(lhs QLatin1String_ITF/*123*/, rhs QChar_ITF/*123*/) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1749
-// index:39
+// index:40
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(QLatin1String, QStringView)
 
 /*
 
 */
-func Operator!=_39(lhs QLatin1String_ITF/*123*/, rhs QStringView_ITF/*123*/) bool {
+func Operator!=_40(lhs QLatin1String_ITF/*123*/, rhs QStringView_ITF/*123*/) bool {
     var convArg0 unsafe.Pointer
     if lhs != nil && lhs.QLatin1String_PTR() != nil {
         convArg0 = lhs.QLatin1String_PTR().GetCthis()
@@ -2657,14 +2657,14 @@ func Operator!=_39(lhs QLatin1String_ITF/*123*/, rhs QStringView_ITF/*123*/) boo
 }
 
 // /usr/include/qt/QtCore/qstring.h:1719
-// index:40
+// index:41
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(QStringView, QStringView)
 
 /*
 
 */
-func Operator!=_40(lhs QStringView_ITF/*123*/, rhs QStringView_ITF/*123*/) bool {
+func Operator!=_41(lhs QStringView_ITF/*123*/, rhs QStringView_ITF/*123*/) bool {
     var convArg0 unsafe.Pointer
     if lhs != nil && lhs.QStringView_PTR() != nil {
         convArg0 = lhs.QStringView_PTR().GetCthis()
@@ -2679,14 +2679,14 @@ func Operator!=_40(lhs QStringView_ITF/*123*/, rhs QStringView_ITF/*123*/) bool 
 }
 
 // /usr/include/qt/QtCore/qstring.h:1727
-// index:41
+// index:42
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(QStringView, QChar)
 
 /*
 
 */
-func Operator!=_41(lhs QStringView_ITF/*123*/, rhs QChar_ITF/*123*/) bool {
+func Operator!=_42(lhs QStringView_ITF/*123*/, rhs QChar_ITF/*123*/) bool {
     var convArg0 unsafe.Pointer
     if lhs != nil && lhs.QStringView_PTR() != nil {
         convArg0 = lhs.QStringView_PTR().GetCthis()
@@ -2701,14 +2701,14 @@ func Operator!=_41(lhs QStringView_ITF/*123*/, rhs QChar_ITF/*123*/) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1742
-// index:42
+// index:43
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(QStringView, QLatin1String)
 
 /*
 
 */
-func Operator!=_42(lhs QStringView_ITF/*123*/, rhs QLatin1String_ITF/*123*/) bool {
+func Operator!=_43(lhs QStringView_ITF/*123*/, rhs QLatin1String_ITF/*123*/) bool {
     var convArg0 unsafe.Pointer
     if lhs != nil && lhs.QStringView_PTR() != nil {
         convArg0 = lhs.QStringView_PTR().GetCthis()
@@ -3339,14 +3339,14 @@ func Operator-_13(lhs QRect_ITF, rhs QMargins_ITF) *QRect/*123*/ {
 }
 
 // /usr/include/qt/QtCore/qmargins.h:372
-// index:0
+// index:1
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QMarginsF &, const QMarginsF &)
 
 /*
 
 */
-func Operator==(lhs QMarginsF_ITF, rhs QMarginsF_ITF) bool {
+func Operator==_1(lhs QMarginsF_ITF, rhs QMarginsF_ITF) bool {
     var convArg0 unsafe.Pointer
     if lhs != nil && lhs.QMarginsF_PTR() != nil {
         convArg0 = lhs.QMarginsF_PTR().GetCthis()
@@ -3361,14 +3361,14 @@ func Operator==(lhs QMarginsF_ITF, rhs QMarginsF_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qvariant.h:567
-// index:1
+// index:2
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QVariant &, const QVariantComparisonHelper &)
 
 /*
 
 */
-func Operator==_1(v1 QVariant_ITF, v2 QVariantComparisonHelper_ITF) bool {
+func Operator==_2(v1 QVariant_ITF, v2 QVariantComparisonHelper_ITF) bool {
     var convArg0 unsafe.Pointer
     if v1 != nil && v1.QVariant_PTR() != nil {
         convArg0 = v1.QVariant_PTR().GetCthis()
@@ -3383,14 +3383,14 @@ func Operator==_1(v1 QVariant_ITF, v2 QVariantComparisonHelper_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qmargins.h:135
-// index:2
+// index:3
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QMargins &, const QMargins &)
 
 /*
 
 */
-func Operator==_2(m1 QMargins_ITF, m2 QMargins_ITF) bool {
+func Operator==_3(m1 QMargins_ITF, m2 QMargins_ITF) bool {
     var convArg0 unsafe.Pointer
     if m1 != nil && m1.QMargins_PTR() != nil {
         convArg0 = m1.QMargins_PTR().GetCthis()
@@ -3405,14 +3405,14 @@ func Operator==_2(m1 QMargins_ITF, m2 QMargins_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1614
-// index:3
+// index:4
 // Invalid Visibility=Default Availability=Available
 // [1] bool operator==(const QString &, const QStringRef &)
 
 /*
 
 */
-func Operator==_3(lhs string, rhs QStringRef_ITF) bool {
+func Operator==_4(lhs string, rhs QStringRef_ITF) bool {
     var tmpArg0 = NewQString_5(lhs)
     var convArg0 = tmpArg0.GetCthis()
     var convArg1 unsafe.Pointer
@@ -3425,14 +3425,14 @@ func Operator==_3(lhs string, rhs QStringRef_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1182
-// index:4
+// index:5
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QString &, QString::Null)
 
 /*
 
 */
-func Operator==_4(s string, arg1 int) bool {
+func Operator==_5(s string, arg1 int) bool {
     var tmpArg0 = NewQString_5(s)
     var convArg0 = tmpArg0.GetCthis()
   rv, err := qtrt.InvokeQtFunc6("_ZeqRK7QStringNS_4NullE", qtrt.FFI_TYPE_POINTER, convArg0, arg1)
@@ -3441,14 +3441,14 @@ func Operator==_4(s string, arg1 int) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1672
-// index:5
+// index:6
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QString &, QChar)
 
 /*
 
 */
-func Operator==_5(lhs string, rhs QChar_ITF/*123*/) bool {
+func Operator==_6(lhs string, rhs QChar_ITF/*123*/) bool {
     var tmpArg0 = NewQString_5(lhs)
     var convArg0 = tmpArg0.GetCthis()
     var convArg1 unsafe.Pointer
@@ -3461,14 +3461,14 @@ func Operator==_5(lhs string, rhs QChar_ITF/*123*/) bool {
 }
 
 // /usr/include/qt/QtCore/qpoint.h:348
-// index:6
+// index:7
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QPointF &, const QPointF &)
 
 /*
 
 */
-func Operator==_6(p1 QPointF_ITF, p2 QPointF_ITF) bool {
+func Operator==_7(p1 QPointF_ITF, p2 QPointF_ITF) bool {
     var convArg0 unsafe.Pointer
     if p1 != nil && p1.QPointF_PTR() != nil {
         convArg0 = p1.QPointF_PTR().GetCthis()
@@ -3483,14 +3483,14 @@ func Operator==_6(p1 QPointF_ITF, p2 QPointF_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qsize.h:339
-// index:7
+// index:8
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QSizeF &, const QSizeF &)
 
 /*
 
 */
-func Operator==_7(s1 QSizeF_ITF, s2 QSizeF_ITF) bool {
+func Operator==_8(s1 QSizeF_ITF, s2 QSizeF_ITF) bool {
     var convArg0 unsafe.Pointer
     if s1 != nil && s1.QSizeF_PTR() != nil {
         convArg0 = s1.QSizeF_PTR().GetCthis()
@@ -3505,14 +3505,14 @@ func Operator==_7(s1 QSizeF_ITF, s2 QSizeF_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qrect.h:859
-// index:8
+// index:9
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QRectF &, const QRectF &)
 
 /*
 
 */
-func Operator==_8(r1 QRectF_ITF, r2 QRectF_ITF) bool {
+func Operator==_9(r1 QRectF_ITF, r2 QRectF_ITF) bool {
     var convArg0 unsafe.Pointer
     if r1 != nil && r1.QRectF_PTR() != nil {
         convArg0 = r1.QRectF_PTR().GetCthis()
@@ -3527,14 +3527,14 @@ func Operator==_8(r1 QRectF_ITF, r2 QRectF_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qpoint.h:163
-// index:9
+// index:10
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QPoint &, const QPoint &)
 
 /*
 
 */
-func Operator==_9(p1 QPoint_ITF, p2 QPoint_ITF) bool {
+func Operator==_10(p1 QPoint_ITF, p2 QPoint_ITF) bool {
     var convArg0 unsafe.Pointer
     if p1 != nil && p1.QPoint_PTR() != nil {
         convArg0 = p1.QPoint_PTR().GetCthis()
@@ -3549,14 +3549,14 @@ func Operator==_9(p1 QPoint_ITF, p2 QPoint_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qsize.h:169
-// index:10
+// index:11
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QSize &, const QSize &)
 
 /*
 
 */
-func Operator==_10(s1 QSize_ITF, s2 QSize_ITF) bool {
+func Operator==_11(s1 QSize_ITF, s2 QSize_ITF) bool {
     var convArg0 unsafe.Pointer
     if s1 != nil && s1.QSize_PTR() != nil {
         convArg0 = s1.QSize_PTR().GetCthis()
@@ -3571,14 +3571,14 @@ func Operator==_10(s1 QSize_ITF, s2 QSize_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qrect.h:454
-// index:11
+// index:12
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QRect &, const QRect &)
 
 /*
 
 */
-func Operator==_11(r1 QRect_ITF, r2 QRect_ITF) bool {
+func Operator==_12(r1 QRect_ITF, r2 QRect_ITF) bool {
     var convArg0 unsafe.Pointer
     if r1 != nil && r1.QRect_PTR() != nil {
         convArg0 = r1.QRect_PTR().GetCthis()
@@ -3593,14 +3593,14 @@ func Operator==_11(r1 QRect_ITF, r2 QRect_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qhash.h:141
-// index:12
+// index:13
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QHashDummyValue &, const QHashDummyValue &)
 
 /*
 
 */
-func Operator==_12(arg0 QHashDummyValue_ITF, arg1 QHashDummyValue_ITF) bool {
+func Operator==_13(arg0 QHashDummyValue_ITF, arg1 QHashDummyValue_ITF) bool {
     var convArg0 unsafe.Pointer
     if arg0 != nil && arg0.QHashDummyValue_PTR() != nil {
         convArg0 = arg0.QHashDummyValue_PTR().GetCthis()
@@ -3615,14 +3615,14 @@ func Operator==_12(arg0 QHashDummyValue_ITF, arg1 QHashDummyValue_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qversionnumber.h:314
-// index:13
+// index:14
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QVersionNumber &, const QVersionNumber &)
 
 /*
 
 */
-func Operator==_13(lhs QVersionNumber_ITF, rhs QVersionNumber_ITF) bool {
+func Operator==_14(lhs QVersionNumber_ITF, rhs QVersionNumber_ITF) bool {
     var convArg0 unsafe.Pointer
     if lhs != nil && lhs.QVersionNumber_PTR() != nil {
         convArg0 = lhs.QVersionNumber_PTR().GetCthis()
@@ -3637,14 +3637,14 @@ func Operator==_13(lhs QVersionNumber_ITF, rhs QVersionNumber_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qstorageinfo.h:103
-// index:14
+// index:15
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QStorageInfo &, const QStorageInfo &)
 
 /*
 
 */
-func Operator==_14(first QStorageInfo_ITF, second QStorageInfo_ITF) bool {
+func Operator==_15(first QStorageInfo_ITF, second QStorageInfo_ITF) bool {
     var convArg0 unsafe.Pointer
     if first != nil && first.QStorageInfo_PTR() != nil {
         convArg0 = first.QStorageInfo_PTR().GetCthis()
@@ -3659,14 +3659,14 @@ func Operator==_14(first QStorageInfo_ITF, second QStorageInfo_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:201
-// index:15
+// index:16
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QMetaMethod &, const QMetaMethod &)
 
 /*
 
 */
-func Operator==_15(m1 QMetaMethod_ITF, m2 QMetaMethod_ITF) bool {
+func Operator==_16(m1 QMetaMethod_ITF, m2 QMetaMethod_ITF) bool {
     var convArg0 unsafe.Pointer
     if m1 != nil && m1.QMetaMethod_PTR() != nil {
         convArg0 = m1.QMetaMethod_PTR().GetCthis()
@@ -3681,14 +3681,14 @@ func Operator==_15(m1 QMetaMethod_ITF, m2 QMetaMethod_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1602
-// index:16
+// index:17
 // Invalid Visibility=Default Availability=Available
 // [1] bool operator==(const QStringRef &, const QStringRef &)
 
 /*
 
 */
-func Operator==_16(s1 QStringRef_ITF, s2 QStringRef_ITF) bool {
+func Operator==_17(s1 QStringRef_ITF, s2 QStringRef_ITF) bool {
     var convArg0 unsafe.Pointer
     if s1 != nil && s1.QStringRef_PTR() != nil {
         convArg0 = s1.QStringRef_PTR().GetCthis()
@@ -3703,14 +3703,14 @@ func Operator==_16(s1 QStringRef_ITF, s2 QStringRef_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1621
-// index:17
+// index:18
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QStringRef &, const QString &)
 
 /*
 
 */
-func Operator==_17(lhs QStringRef_ITF, rhs string) bool {
+func Operator==_18(lhs QStringRef_ITF, rhs string) bool {
     var convArg0 unsafe.Pointer
     if lhs != nil && lhs.QStringRef_PTR() != nil {
         convArg0 = lhs.QStringRef_PTR().GetCthis()
@@ -3723,14 +3723,14 @@ func Operator==_17(lhs QStringRef_ITF, rhs string) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1757
-// index:18
+// index:19
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QStringRef &, const QByteArray &)
 
 /*
 
 */
-func Operator==_18(lhs QStringRef_ITF, rhs QByteArray_ITF) bool {
+func Operator==_19(lhs QStringRef_ITF, rhs QByteArray_ITF) bool {
     var convArg0 unsafe.Pointer
     if lhs != nil && lhs.QStringRef_PTR() != nil {
         convArg0 = lhs.QStringRef_PTR().GetCthis()
@@ -3745,14 +3745,14 @@ func Operator==_18(lhs QStringRef_ITF, rhs QByteArray_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1691
-// index:19
+// index:20
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QStringRef &, QChar)
 
 /*
 
 */
-func Operator==_19(lhs QStringRef_ITF, rhs QChar_ITF/*123*/) bool {
+func Operator==_20(lhs QStringRef_ITF, rhs QChar_ITF/*123*/) bool {
     var convArg0 unsafe.Pointer
     if lhs != nil && lhs.QStringRef_PTR() != nil {
         convArg0 = lhs.QStringRef_PTR().GetCthis()
@@ -3767,14 +3767,14 @@ func Operator==_19(lhs QStringRef_ITF, rhs QChar_ITF/*123*/) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1653
-// index:20
+// index:21
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QStringRef &, QLatin1String)
 
 /*
 
 */
-func Operator==_20(lhs QStringRef_ITF, rhs QLatin1String_ITF/*123*/) bool {
+func Operator==_21(lhs QStringRef_ITF, rhs QLatin1String_ITF/*123*/) bool {
     var convArg0 unsafe.Pointer
     if lhs != nil && lhs.QStringRef_PTR() != nil {
         convArg0 = lhs.QStringRef_PTR().GetCthis()
@@ -3789,14 +3789,14 @@ func Operator==_20(lhs QStringRef_ITF, rhs QLatin1String_ITF/*123*/) bool {
 }
 
 // /usr/include/qt/QtCore/qbytearray.h:603
-// index:21
+// index:22
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QByteArray &, const QByteArray &)
 
 /*
 
 */
-func Operator==_21(a1 QByteArray_ITF, a2 QByteArray_ITF) bool {
+func Operator==_22(a1 QByteArray_ITF, a2 QByteArray_ITF) bool {
     var convArg0 unsafe.Pointer
     if a1 != nil && a1.QByteArray_PTR() != nil {
         convArg0 = a1.QByteArray_PTR().GetCthis()
@@ -3811,14 +3811,14 @@ func Operator==_21(a1 QByteArray_ITF, a2 QByteArray_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1764
-// index:22
+// index:23
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QByteArray &, const QStringRef &)
 
 /*
 
 */
-func Operator==_22(lhs QByteArray_ITF, rhs QStringRef_ITF) bool {
+func Operator==_23(lhs QByteArray_ITF, rhs QStringRef_ITF) bool {
     var convArg0 unsafe.Pointer
     if lhs != nil && lhs.QByteArray_PTR() != nil {
         convArg0 = lhs.QByteArray_PTR().GetCthis()
@@ -3833,14 +3833,14 @@ func Operator==_22(lhs QByteArray_ITF, rhs QStringRef_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qbytearray.h:605
-// index:23
+// index:24
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QByteArray &, const char *)
 
 /*
 
 */
-func Operator==_23(a1 QByteArray_ITF, a2 string) bool {
+func Operator==_24(a1 QByteArray_ITF, a2 string) bool {
     var convArg0 unsafe.Pointer
     if a1 != nil && a1.QByteArray_PTR() != nil {
         convArg0 = a1.QByteArray_PTR().GetCthis()
@@ -3853,14 +3853,14 @@ func Operator==_23(a1 QByteArray_ITF, a2 string) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1234
-// index:24
+// index:25
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const char *, const QString &)
 
 /*
 
 */
-func Operator==_24(s1 string, s2 string) bool {
+func Operator==_25(s1 string, s2 string) bool {
     var convArg0 = qtrt.CString(s1)
     defer qtrt.FreeMem(convArg0)
     var tmpArg1 = NewQString_5(s2)
@@ -3871,14 +3871,14 @@ func Operator==_24(s1 string, s2 string) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1785
-// index:25
+// index:26
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const char *, const QStringRef &)
 
 /*
 
 */
-func Operator==_25(s1 string, s2 QStringRef_ITF) bool {
+func Operator==_26(s1 string, s2 QStringRef_ITF) bool {
     var convArg0 = qtrt.CString(s1)
     defer qtrt.FreeMem(convArg0)
     var convArg1 unsafe.Pointer
@@ -3891,14 +3891,14 @@ func Operator==_25(s1 string, s2 QStringRef_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qbytearray.h:607
-// index:26
+// index:27
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const char *, const QByteArray &)
 
 /*
 
 */
-func Operator==_26(a1 string, a2 QByteArray_ITF) bool {
+func Operator==_27(a1 string, a2 QByteArray_ITF) bool {
     var convArg0 = qtrt.CString(a1)
     defer qtrt.FreeMem(convArg0)
     var convArg1 unsafe.Pointer
@@ -3911,14 +3911,14 @@ func Operator==_26(a1 string, a2 QByteArray_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1247
-// index:27
+// index:28
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const char *, QLatin1String)
 
 /*
 
 */
-func Operator==_27(s1 string, s2 QLatin1String_ITF/*123*/) bool {
+func Operator==_28(s1 string, s2 QLatin1String_ITF/*123*/) bool {
     var convArg0 = qtrt.CString(s1)
     defer qtrt.FreeMem(convArg0)
     var convArg1 unsafe.Pointer
@@ -3931,28 +3931,28 @@ func Operator==_27(s1 string, s2 QLatin1String_ITF/*123*/) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1178
-// index:28
+// index:29
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(QString::Null, QString::Null)
 
 /*
 
 */
-func Operator==_28(arg0 int, arg1 int) bool {
+func Operator==_29(arg0 int, arg1 int) bool {
   rv, err := qtrt.InvokeQtFunc6("_ZeqN7QString4NullES0_", qtrt.FFI_TYPE_POINTER, arg0, arg1)
   qtrt.ErrPrint(err, rv)
     return rv!=0
 }
 
 // /usr/include/qt/QtCore/qstring.h:1180
-// index:29
+// index:30
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(QString::Null, const QString &)
 
 /*
 
 */
-func Operator==_29(arg0 int, s string) bool {
+func Operator==_30(arg0 int, s string) bool {
     var tmpArg1 = NewQString_5(s)
     var convArg1 = tmpArg1.GetCthis()
   rv, err := qtrt.InvokeQtFunc6("_ZeqN7QString4NullERKS_", qtrt.FFI_TYPE_POINTER, arg0, convArg1)
@@ -3961,14 +3961,14 @@ func Operator==_29(arg0 int, s string) bool {
 }
 
 // /usr/include/qt/QtCore/qchar.h:591
-// index:30
+// index:31
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(std::nullptr_t, QChar)
 
 /*
 
 */
-func Operator==_30(arg0 int, rhs QChar_ITF/*123*/) bool {
+func Operator==_31(arg0 int, rhs QChar_ITF/*123*/) bool {
     var convArg1 unsafe.Pointer
     if rhs != nil && rhs.QChar_PTR() != nil {
         convArg1 = rhs.QChar_PTR().GetCthis()
@@ -3979,14 +3979,14 @@ func Operator==_30(arg0 int, rhs QChar_ITF/*123*/) bool {
 }
 
 // /usr/include/qt/QtCore/qchar.h:580
-// index:31
+// index:32
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(QChar, QChar)
 
 /*
 
 */
-func Operator==_31(c1 QChar_ITF/*123*/, c2 QChar_ITF/*123*/) bool {
+func Operator==_32(c1 QChar_ITF/*123*/, c2 QChar_ITF/*123*/) bool {
     var convArg0 unsafe.Pointer
     if c1 != nil && c1.QChar_PTR() != nil {
         convArg0 = c1.QChar_PTR().GetCthis()
@@ -4001,14 +4001,14 @@ func Operator==_31(c1 QChar_ITF/*123*/, c2 QChar_ITF/*123*/) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1661
-// index:32
+// index:33
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(QChar, const QString &)
 
 /*
 
 */
-func Operator==_32(lhs QChar_ITF/*123*/, rhs string) bool {
+func Operator==_33(lhs QChar_ITF/*123*/, rhs string) bool {
     var convArg0 unsafe.Pointer
     if lhs != nil && lhs.QChar_PTR() != nil {
         convArg0 = lhs.QChar_PTR().GetCthis()
@@ -4021,14 +4021,14 @@ func Operator==_32(lhs QChar_ITF/*123*/, rhs string) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1680
-// index:33
+// index:34
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(QChar, const QStringRef &)
 
 /*
 
 */
-func Operator==_33(lhs QChar_ITF/*123*/, rhs QStringRef_ITF) bool {
+func Operator==_34(lhs QChar_ITF/*123*/, rhs QStringRef_ITF) bool {
     var convArg0 unsafe.Pointer
     if lhs != nil && lhs.QChar_PTR() != nil {
         convArg0 = lhs.QChar_PTR().GetCthis()
@@ -4043,14 +4043,14 @@ func Operator==_33(lhs QChar_ITF/*123*/, rhs QStringRef_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qchar.h:589
-// index:34
+// index:35
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(QChar, std::nullptr_t)
 
 /*
 
 */
-func Operator==_34(lhs QChar_ITF/*123*/, arg1 int) bool {
+func Operator==_35(lhs QChar_ITF/*123*/, arg1 int) bool {
     var convArg0 unsafe.Pointer
     if lhs != nil && lhs.QChar_PTR() != nil {
         convArg0 = lhs.QChar_PTR().GetCthis()
@@ -4061,14 +4061,14 @@ func Operator==_34(lhs QChar_ITF/*123*/, arg1 int) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1699
-// index:35
+// index:36
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(QChar, QLatin1String)
 
 /*
 
 */
-func Operator==_35(lhs QChar_ITF/*123*/, rhs QLatin1String_ITF/*123*/) bool {
+func Operator==_36(lhs QChar_ITF/*123*/, rhs QLatin1String_ITF/*123*/) bool {
     var convArg0 unsafe.Pointer
     if lhs != nil && lhs.QChar_PTR() != nil {
         convArg0 = lhs.QChar_PTR().GetCthis()
@@ -4083,14 +4083,14 @@ func Operator==_35(lhs QChar_ITF/*123*/, rhs QLatin1String_ITF/*123*/) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1733
-// index:36
+// index:37
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(QChar, QStringView)
 
 /*
 
 */
-func Operator==_36(lhs QChar_ITF/*123*/, rhs QStringView_ITF/*123*/) bool {
+func Operator==_37(lhs QChar_ITF/*123*/, rhs QStringView_ITF/*123*/) bool {
     var convArg0 unsafe.Pointer
     if lhs != nil && lhs.QChar_PTR() != nil {
         convArg0 = lhs.QChar_PTR().GetCthis()
@@ -4105,14 +4105,14 @@ func Operator==_36(lhs QChar_ITF/*123*/, rhs QStringView_ITF/*123*/) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1190
-// index:37
+// index:38
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(QLatin1String, QLatin1String)
 
 /*
 
 */
-func Operator==_37(s1 QLatin1String_ITF/*123*/, s2 QLatin1String_ITF/*123*/) bool {
+func Operator==_38(s1 QLatin1String_ITF/*123*/, s2 QLatin1String_ITF/*123*/) bool {
     var convArg0 unsafe.Pointer
     if s1 != nil && s1.QLatin1String_PTR() != nil {
         convArg0 = s1.QLatin1String_PTR().GetCthis()
@@ -4127,14 +4127,14 @@ func Operator==_37(s1 QLatin1String_ITF/*123*/, s2 QLatin1String_ITF/*123*/) boo
 }
 
 // /usr/include/qt/QtCore/qstring.h:1646
-// index:38
+// index:39
 // Invalid Visibility=Default Availability=Available
 // [1] bool operator==(QLatin1String, const QStringRef &)
 
 /*
 
 */
-func Operator==_38(lhs QLatin1String_ITF/*123*/, rhs QStringRef_ITF) bool {
+func Operator==_39(lhs QLatin1String_ITF/*123*/, rhs QStringRef_ITF) bool {
     var convArg0 unsafe.Pointer
     if lhs != nil && lhs.QLatin1String_PTR() != nil {
         convArg0 = lhs.QLatin1String_PTR().GetCthis()
@@ -4149,14 +4149,14 @@ func Operator==_38(lhs QLatin1String_ITF/*123*/, rhs QStringRef_ITF) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1710
-// index:39
+// index:40
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(QLatin1String, QChar)
 
 /*
 
 */
-func Operator==_39(lhs QLatin1String_ITF/*123*/, rhs QChar_ITF/*123*/) bool {
+func Operator==_40(lhs QLatin1String_ITF/*123*/, rhs QChar_ITF/*123*/) bool {
     var convArg0 unsafe.Pointer
     if lhs != nil && lhs.QLatin1String_PTR() != nil {
         convArg0 = lhs.QLatin1String_PTR().GetCthis()
@@ -4171,14 +4171,14 @@ func Operator==_39(lhs QLatin1String_ITF/*123*/, rhs QChar_ITF/*123*/) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1748
-// index:40
+// index:41
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(QLatin1String, QStringView)
 
 /*
 
 */
-func Operator==_40(lhs QLatin1String_ITF/*123*/, rhs QStringView_ITF/*123*/) bool {
+func Operator==_41(lhs QLatin1String_ITF/*123*/, rhs QStringView_ITF/*123*/) bool {
     var convArg0 unsafe.Pointer
     if lhs != nil && lhs.QLatin1String_PTR() != nil {
         convArg0 = lhs.QLatin1String_PTR().GetCthis()
@@ -4193,14 +4193,14 @@ func Operator==_40(lhs QLatin1String_ITF/*123*/, rhs QStringView_ITF/*123*/) boo
 }
 
 // /usr/include/qt/QtCore/qstring.h:1718
-// index:41
+// index:42
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(QStringView, QStringView)
 
 /*
 
 */
-func Operator==_41(lhs QStringView_ITF/*123*/, rhs QStringView_ITF/*123*/) bool {
+func Operator==_42(lhs QStringView_ITF/*123*/, rhs QStringView_ITF/*123*/) bool {
     var convArg0 unsafe.Pointer
     if lhs != nil && lhs.QStringView_PTR() != nil {
         convArg0 = lhs.QStringView_PTR().GetCthis()
@@ -4215,14 +4215,14 @@ func Operator==_41(lhs QStringView_ITF/*123*/, rhs QStringView_ITF/*123*/) bool 
 }
 
 // /usr/include/qt/QtCore/qstring.h:1726
-// index:42
+// index:43
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(QStringView, QChar)
 
 /*
 
 */
-func Operator==_42(lhs QStringView_ITF/*123*/, rhs QChar_ITF/*123*/) bool {
+func Operator==_43(lhs QStringView_ITF/*123*/, rhs QChar_ITF/*123*/) bool {
     var convArg0 unsafe.Pointer
     if lhs != nil && lhs.QStringView_PTR() != nil {
         convArg0 = lhs.QStringView_PTR().GetCthis()
@@ -4237,14 +4237,14 @@ func Operator==_42(lhs QStringView_ITF/*123*/, rhs QChar_ITF/*123*/) bool {
 }
 
 // /usr/include/qt/QtCore/qstring.h:1741
-// index:43
+// index:44
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(QStringView, QLatin1String)
 
 /*
 
 */
-func Operator==_43(lhs QStringView_ITF/*123*/, rhs QLatin1String_ITF/*123*/) bool {
+func Operator==_44(lhs QStringView_ITF/*123*/, rhs QLatin1String_ITF/*123*/) bool {
     var convArg0 unsafe.Pointer
     if lhs != nil && lhs.QStringView_PTR() != nil {
         convArg0 = lhs.QStringView_PTR().GetCthis()
@@ -5022,7 +5022,7 @@ func QStringList_join(list QStringList_ITF, sep QLatin1String_ITF/*123*/) string
   rv, err := qtrt.InvokeQtFunc6("_ZN9QtPrivate16QStringList_joinERK11QStringList13QLatin1String", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
   qtrt.ErrPrint(err, rv)
     rv2 := /*==*/NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-    rv3 := rv2.ToLocal8Bit().Data()
+    rv3 := rv2.ToUtf8().Data()
     /*==*/DeleteQString(rv2)
     return rv3
 }
@@ -5047,7 +5047,7 @@ func QStringList_join_1(that QStringList_ITF/*777 const QStringList **/, sep QCh
   rv, err := qtrt.InvokeQtFunc6("_ZN9QtPrivate16QStringList_joinEPK11QStringListPK5QChari", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, seplen)
   qtrt.ErrPrint(err, rv)
     rv2 := /*==*/NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-    rv3 := rv2.ToLocal8Bit().Data()
+    rv3 := rv2.ToUtf8().Data()
     /*==*/DeleteQString(rv2)
     return rv3
 }
@@ -8160,7 +8160,7 @@ func QAppName() string {
   rv, err := qtrt.InvokeQtFunc6("_Z8qAppNamev", qtrt.FFI_TYPE_POINTER, )
   qtrt.ErrPrint(err, rv)
     rv2 := /*==*/NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-    rv3 := rv2.ToLocal8Bit().Data()
+    rv3 := rv2.ToUtf8().Data()
     /*==*/DeleteQString(rv2)
     return rv3
 }
@@ -8394,7 +8394,7 @@ func QtTrId(id string, n int) string {
   rv, err := qtrt.InvokeQtFunc6("_Z6qtTrIdPKci", qtrt.FFI_TYPE_POINTER, convArg0, n)
   qtrt.ErrPrint(err, rv)
     rv2 := /*==*/NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-    rv3 := rv2.ToLocal8Bit().Data()
+    rv3 := rv2.ToUtf8().Data()
     /*==*/DeleteQString(rv2)
     return rv3
 }
@@ -10585,7 +10585,7 @@ func QEnvironmentVariable(varName string, defaultValue string) string {
   rv, err := qtrt.InvokeQtFunc6("_Z20qEnvironmentVariablePKcRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
   qtrt.ErrPrint(err, rv)
     rv2 := /*==*/NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-    rv3 := rv2.ToLocal8Bit().Data()
+    rv3 := rv2.ToUtf8().Data()
     /*==*/DeleteQString(rv2)
     return rv3
 }
@@ -10604,7 +10604,7 @@ func QEnvironmentVariable_1(varName string) string {
   rv, err := qtrt.InvokeQtFunc6("_Z20qEnvironmentVariablePKc", qtrt.FFI_TYPE_POINTER, convArg0)
   qtrt.ErrPrint(err, rv)
     rv2 := /*==*/NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-    rv3 := rv2.ToLocal8Bit().Data()
+    rv3 := rv2.ToUtf8().Data()
     /*==*/DeleteQString(rv2)
     return rv3
 }
@@ -10751,7 +10751,7 @@ func QFormatLogMessage(type_ int, context QMessageLogContext_ITF, buf string) st
   rv, err := qtrt.InvokeQtFunc6("_Z17qFormatLogMessage9QtMsgTypeRK18QMessageLogContextRK7QString", qtrt.FFI_TYPE_POINTER, type_, convArg1, convArg2)
   qtrt.ErrPrint(err, rv)
     rv2 := /*==*/NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-    rv3 := rv2.ToLocal8Bit().Data()
+    rv3 := rv2.ToUtf8().Data()
     /*==*/DeleteQString(rv2)
     return rv3
 }
@@ -10917,7 +10917,7 @@ func Qt_error_string(errorCode int) string {
   rv, err := qtrt.InvokeQtFunc6("_Z15qt_error_stringi", qtrt.FFI_TYPE_POINTER, errorCode)
   qtrt.ErrPrint(err, rv)
     rv2 := /*==*/NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-    rv3 := rv2.ToLocal8Bit().Data()
+    rv3 := rv2.ToUtf8().Data()
     /*==*/DeleteQString(rv2)
     return rv3
 }

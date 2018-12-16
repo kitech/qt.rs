@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -93,7 +93,7 @@ pub trait QSemaphoreReleaser_QSemaphoreReleaser_0 {
 impl<'a> /*trait*/ QSemaphoreReleaser_QSemaphoreReleaser_0 for () {
   fn QSemaphoreReleaser_0(self) -> QSemaphoreReleaser {
     // unsafe{_ZN18QSemaphoreReleaserC2Ev()};
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN18QSemaphoreReleaserC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN18QSemaphoreReleaserC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QSemaphoreReleaser{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -126,7 +126,7 @@ impl<'a> /*trait*/ QSemaphoreReleaser_QSemaphoreReleaser_1 for (usize,i32) {
     // unsafe{_ZN18QSemaphoreReleaserC2ER10QSemaphorei()};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const i32 as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN18QSemaphoreReleaserC2ER10QSemaphorei", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN18QSemaphoreReleaserC2ER10QSemaphorei", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QSemaphoreReleaser{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -159,7 +159,7 @@ impl<'a> /*trait*/ QSemaphoreReleaser_QSemaphoreReleaser_2 for (usize,i32) {
     // unsafe{_ZN18QSemaphoreReleaserC2EP10QSemaphorei()};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const i32 as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN18QSemaphoreReleaserC2EP10QSemaphorei", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN18QSemaphoreReleaserC2EP10QSemaphorei", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QSemaphoreReleaser{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -201,7 +201,7 @@ impl<'a> /*trait*/ QSemaphoreReleaser_swap_0<(/*void*/)> for (usize) {
   fn swap_0(self , rsthis: & QSemaphoreReleaser) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN18QSemaphoreReleaser4swapERS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN18QSemaphoreReleaser4swapERS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -226,7 +226,7 @@ pub trait QSemaphoreReleaser_semaphore_0<RetType> {
 impl<'a> /*trait*/ QSemaphoreReleaser_semaphore_0<usize> for () {
   fn semaphore_0(self , rsthis: & QSemaphoreReleaser) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QSemaphoreReleaser9semaphoreEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK18QSemaphoreReleaser9semaphoreEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -252,7 +252,7 @@ pub trait QSemaphoreReleaser_cancel_0<RetType> {
 impl<'a> /*trait*/ QSemaphoreReleaser_cancel_0<usize> for () {
   fn cancel_0(self , rsthis: & QSemaphoreReleaser) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZN18QSemaphoreReleaser6cancelEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN18QSemaphoreReleaser6cancelEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }

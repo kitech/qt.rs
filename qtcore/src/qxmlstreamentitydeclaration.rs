@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -93,7 +93,7 @@ pub trait QXmlStreamEntityDeclaration_QXmlStreamEntityDeclaration_0 {
 impl<'a> /*trait*/ QXmlStreamEntityDeclaration_QXmlStreamEntityDeclaration_0 for () {
   fn QXmlStreamEntityDeclaration_0(self) -> QXmlStreamEntityDeclaration {
     // unsafe{_ZN27QXmlStreamEntityDeclarationC2Ev()};
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN27QXmlStreamEntityDeclarationC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN27QXmlStreamEntityDeclarationC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QXmlStreamEntityDeclaration{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -135,7 +135,7 @@ impl<'a> /*trait*/ QXmlStreamEntityDeclaration_operator_equal_0<usize> for (usiz
   fn operator_equal_0(self , rsthis: & QXmlStreamEntityDeclaration) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN27QXmlStreamEntityDeclarationaSERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN27QXmlStreamEntityDeclarationaSERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -162,7 +162,7 @@ impl<'a> /*trait*/ QXmlStreamEntityDeclaration_operator_equal_1<usize> for (usiz
   fn operator_equal_1(self , rsthis: & QXmlStreamEntityDeclaration) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN27QXmlStreamEntityDeclarationaSEOS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN27QXmlStreamEntityDeclarationaSEOS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -188,7 +188,7 @@ pub trait QXmlStreamEntityDeclaration_name_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamEntityDeclaration_name_0<usize> for () {
   fn name_0(self , rsthis: & QXmlStreamEntityDeclaration) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK27QXmlStreamEntityDeclaration4nameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK27QXmlStreamEntityDeclaration4nameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -214,7 +214,7 @@ pub trait QXmlStreamEntityDeclaration_notationName_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamEntityDeclaration_notationName_0<usize> for () {
   fn notationName_0(self , rsthis: & QXmlStreamEntityDeclaration) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK27QXmlStreamEntityDeclaration12notationNameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK27QXmlStreamEntityDeclaration12notationNameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -240,7 +240,7 @@ pub trait QXmlStreamEntityDeclaration_systemId_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamEntityDeclaration_systemId_0<usize> for () {
   fn systemId_0(self , rsthis: & QXmlStreamEntityDeclaration) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK27QXmlStreamEntityDeclaration8systemIdEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK27QXmlStreamEntityDeclaration8systemIdEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -266,7 +266,7 @@ pub trait QXmlStreamEntityDeclaration_publicId_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamEntityDeclaration_publicId_0<usize> for () {
   fn publicId_0(self , rsthis: & QXmlStreamEntityDeclaration) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK27QXmlStreamEntityDeclaration8publicIdEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK27QXmlStreamEntityDeclaration8publicIdEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -292,7 +292,7 @@ pub trait QXmlStreamEntityDeclaration_value_0<RetType> {
 impl<'a> /*trait*/ QXmlStreamEntityDeclaration_value_0<usize> for () {
   fn value_0(self , rsthis: & QXmlStreamEntityDeclaration) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK27QXmlStreamEntityDeclaration5valueEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK27QXmlStreamEntityDeclaration5valueEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -319,7 +319,7 @@ impl<'a> /*trait*/ QXmlStreamEntityDeclaration_operator_equal_equal_0<bool> for 
   fn operator_equal_equal_0(self , rsthis: & QXmlStreamEntityDeclaration) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK27QXmlStreamEntityDeclarationeqERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK27QXmlStreamEntityDeclarationeqERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -346,7 +346,7 @@ impl<'a> /*trait*/ QXmlStreamEntityDeclaration_operator_not_equal_0<bool> for (u
   fn operator_not_equal_0(self , rsthis: & QXmlStreamEntityDeclaration) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK27QXmlStreamEntityDeclarationneERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK27QXmlStreamEntityDeclarationneERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }

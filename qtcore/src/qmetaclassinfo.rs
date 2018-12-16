@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -93,7 +93,7 @@ pub trait QMetaClassInfo_QMetaClassInfo_0 {
 impl<'a> /*trait*/ QMetaClassInfo_QMetaClassInfo_0 for () {
   fn QMetaClassInfo_0(self) -> QMetaClassInfo {
     // unsafe{_ZN14QMetaClassInfoC2Ev()};
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN14QMetaClassInfoC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN14QMetaClassInfoC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QMetaClassInfo{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -120,7 +120,7 @@ pub trait QMetaClassInfo_name_0<RetType> {
 impl<'a> /*trait*/ QMetaClassInfo_name_0<usize> for () {
   fn name_0(self , rsthis: & QMetaClassInfo) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK14QMetaClassInfo4nameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK14QMetaClassInfo4nameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -146,7 +146,7 @@ pub trait QMetaClassInfo_value_0<RetType> {
 impl<'a> /*trait*/ QMetaClassInfo_value_0<usize> for () {
   fn value_0(self , rsthis: & QMetaClassInfo) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK14QMetaClassInfo5valueEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK14QMetaClassInfo5valueEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -172,7 +172,7 @@ pub trait QMetaClassInfo_enclosingMetaObject_0<RetType> {
 impl<'a> /*trait*/ QMetaClassInfo_enclosingMetaObject_0<usize> for () {
   fn enclosingMetaObject_0(self , rsthis: & QMetaClassInfo) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK14QMetaClassInfo19enclosingMetaObjectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK14QMetaClassInfo19enclosingMetaObjectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }

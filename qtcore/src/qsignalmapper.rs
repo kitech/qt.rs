@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -90,7 +90,7 @@ pub trait QSignalMapper_metaObject_0<RetType> {
 impl<'a> /*trait*/ QSignalMapper_metaObject_0<usize> for () {
   fn metaObject_0(self , rsthis: & QSignalMapper) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QSignalMapper10metaObjectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QSignalMapper10metaObjectEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -123,7 +123,7 @@ impl<'a> /*trait*/ QSignalMapper_QSignalMapper_0 for (usize) {
   fn QSignalMapper_0(self) -> QSignalMapper {
     // unsafe{_ZN13QSignalMapperC2EP7QObject()};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN13QSignalMapperC2EP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN13QSignalMapperC2EP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QSignalMapper{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -170,7 +170,7 @@ impl<'a> /*trait*/ QSignalMapper_setMapping_0<(/*void*/)> for (usize,i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const i32 as usize;
-     qtrt::InvokeQtFunc6("_ZN13QSignalMapper10setMappingEP7QObjecti", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN13QSignalMapper10setMappingEP7QObjecti", 2,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -201,15 +201,15 @@ impl<'a> /*trait*/ QSignalMapper_setMapping_1<(/*void*/)> for (usize,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN13QSignalMapper10setMappingEP7QObjectRK7QString", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN13QSignalMapper10setMappingEP7QObjectRK7QString", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-// /usr/include/qt/QtCore/qsignalmapper.h:62
+// /usr/include/qt/QtCore/qsignalmapper.h:61
 // index:2
 // Public Visibility=Default Availability=Available
-// [-2] void setMapping(QObject *, QObject *)
+// [-2] void setMapping(QObject *, QWidget *)
 
 /*
 Adds a mapping so that when map() is signalled from the given sender, the signal mapped(id) is emitted.
@@ -232,7 +232,38 @@ impl<'a> /*trait*/ QSignalMapper_setMapping_2<(/*void*/)> for (usize,usize) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN13QSignalMapper10setMappingEP7QObjectS1_", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN13QSignalMapper10setMappingEP7QObjectP7QWidget", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qsignalmapper.h:62
+// index:3
+// Public Visibility=Default Availability=Available
+// [-2] void setMapping(QObject *, QObject *)
+
+/*
+Adds a mapping so that when map() is signalled from the given sender, the signal mapped(id) is emitted.
+
+There may be at most one integer ID for each sender.
+
+See also mapping().
+*/
+impl /*struct*/ QSignalMapper {
+  pub fn setMapping_3<RetType, T: QSignalMapper_setMapping_3<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.setMapping_3(self);
+    // return 1;
+  }
+}
+pub trait QSignalMapper_setMapping_3<RetType> {
+  fn setMapping_3(self , rsthis: & QSignalMapper) -> RetType;
+}
+impl<'a> /*trait*/ QSignalMapper_setMapping_3<(/*void*/)> for (usize,usize) {
+  fn setMapping_3(self , rsthis: & QSignalMapper) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
+    let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN13QSignalMapper10setMappingEP7QObjectS1_", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -262,7 +293,7 @@ impl<'a> /*trait*/ QSignalMapper_removeMappings_0<(/*void*/)> for (usize) {
   fn removeMappings_0(self , rsthis: & QSignalMapper) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN13QSignalMapper14removeMappingsEP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN13QSignalMapper14removeMappingsEP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -290,7 +321,7 @@ impl<'a> /*trait*/ QSignalMapper_mapping_0<usize> for (i32) {
   fn mapping_0(self , rsthis: & QSignalMapper) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QSignalMapper7mappingEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QSignalMapper7mappingEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -319,16 +350,16 @@ impl<'a> /*trait*/ QSignalMapper_mapping_1<usize> for (usize) {
   fn mapping_1(self , rsthis: & QSignalMapper) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QSignalMapper7mappingERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QSignalMapper7mappingERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
 }
 
-// /usr/include/qt/QtCore/qsignalmapper.h:68
+// /usr/include/qt/QtCore/qsignalmapper.h:67
 // index:2
 // Public Visibility=Default Availability=Available
-// [8] QObject * mapping(QObject *) const
+// [8] QObject * mapping(QWidget *) const
 
 /*
 Returns the sender QObject that is associated with the id.
@@ -348,7 +379,36 @@ impl<'a> /*trait*/ QSignalMapper_mapping_2<usize> for (usize) {
   fn mapping_2(self , rsthis: & QSignalMapper) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QSignalMapper7mappingEP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QSignalMapper7mappingEP7QWidget", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+    let dret: usize = Default::default(); return dret;
+  }
+}
+
+// /usr/include/qt/QtCore/qsignalmapper.h:68
+// index:3
+// Public Visibility=Default Availability=Available
+// [8] QObject * mapping(QObject *) const
+
+/*
+Returns the sender QObject that is associated with the id.
+
+See also setMapping().
+*/
+impl /*struct*/ QSignalMapper {
+  pub fn mapping_3<RetType, T: QSignalMapper_mapping_3<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.mapping_3(self);
+    // return 1;
+  }
+}
+pub trait QSignalMapper_mapping_3<RetType> {
+  fn mapping_3(self , rsthis: & QSignalMapper) -> RetType;
+}
+impl<'a> /*trait*/ QSignalMapper_mapping_3<usize> for (usize) {
+  fn mapping_3(self , rsthis: & QSignalMapper) -> usize {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK13QSignalMapper7mappingEP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -385,7 +445,7 @@ impl<'a> /*trait*/ QSignalMapper_mapped_0<(/*void*/)> for (i32) {
   fn mapped_0(self , rsthis: & QSignalMapper) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-     qtrt::InvokeQtFunc6("_ZN13QSignalMapper6mappedEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN13QSignalMapper6mappedEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -421,15 +481,15 @@ impl<'a> /*trait*/ QSignalMapper_mapped_1<(/*void*/)> for (usize) {
   fn mapped_1(self , rsthis: & QSignalMapper) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN13QSignalMapper6mappedERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN13QSignalMapper6mappedERK7QString", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
 
-// /usr/include/qt/QtCore/qsignalmapper.h:74
+// /usr/include/qt/QtCore/qsignalmapper.h:73
 // index:2
 // Public Visibility=Default Availability=Available
-// [-2] void mapped(QObject *)
+// [-2] void mapped(QWidget *)
 
 /*
 This signal is emitted when map() is signalled from an object that has an integer mapping set. The object's mapped integer is passed in i.
@@ -457,7 +517,43 @@ impl<'a> /*trait*/ QSignalMapper_mapped_2<(/*void*/)> for (usize) {
   fn mapped_2(self , rsthis: & QSignalMapper) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN13QSignalMapper6mappedEP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN13QSignalMapper6mappedEP7QWidget", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    // return 1;
+  }
+}
+
+// /usr/include/qt/QtCore/qsignalmapper.h:74
+// index:3
+// Public Visibility=Default Availability=Available
+// [-2] void mapped(QObject *)
+
+/*
+This signal is emitted when map() is signalled from an object that has an integer mapping set. The object's mapped integer is passed in i.
+
+Note: Signal mapped is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+
+
+  connect(signalMapper, QOverload<int>::of(&QSignalMapper::mapped),
+      [=](int i){ /-* ... *-/ });
+
+
+
+See also setMapping().
+*/
+impl /*struct*/ QSignalMapper {
+  pub fn mapped_3<RetType, T: QSignalMapper_mapped_3<RetType>>(&self,  overload_args: T) -> RetType {
+    return overload_args.mapped_3(self);
+    // return 1;
+  }
+}
+pub trait QSignalMapper_mapped_3<RetType> {
+  fn mapped_3(self , rsthis: & QSignalMapper) -> RetType;
+}
+impl<'a> /*trait*/ QSignalMapper_mapped_3<(/*void*/)> for (usize) {
+  fn mapped_3(self , rsthis: & QSignalMapper) -> (/*void*/) {
+    // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
+    let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
+     qtrt::InvokeQtFunc6("_ZN13QSignalMapper6mappedEP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -482,7 +578,7 @@ pub trait QSignalMapper_map__0<RetType> {
 impl<'a> /*trait*/ QSignalMapper_map__0<(/*void*/)> for () {
   fn map__0(self , rsthis: & QSignalMapper) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN13QSignalMapper3mapEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN13QSignalMapper3mapEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -508,7 +604,7 @@ impl<'a> /*trait*/ QSignalMapper_map__1<(/*void*/)> for (usize) {
   fn map__1(self , rsthis: & QSignalMapper) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN13QSignalMapper3mapEP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN13QSignalMapper3mapEP7QObject", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }

@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -100,7 +100,7 @@ impl<'a> /*trait*/ QStaticByteArrayMatcherBase_QStaticByteArrayMatcherBase_0 for
     // unsafe{_ZN27QStaticByteArrayMatcherBaseC2EPKcj()};
     let arg0 = (self.0) as *const usize as usize;
     let arg1 = (&self.1) as *const u32 as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN27QStaticByteArrayMatcherBaseC2EPKcj", 2,qtrt::FFITY_POINTER,qtrt::FFITY_UINT32,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN27QStaticByteArrayMatcherBaseC2EPKcj", 2,qtrt::FFITY_POINTER,qtrt::FFITY_UINT32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QStaticByteArrayMatcherBase{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -132,7 +132,7 @@ impl<'a> /*trait*/ QStaticByteArrayMatcherBase_indexOfIn_0<i32> for (usize,u32,u
     let arg2 = (self.2) as *const usize as usize;
     let arg3 = (&self.3) as *const i32 as usize;
     let arg4 = (&self.4) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK27QStaticByteArrayMatcherBase9indexOfInEPKcjS1_ii", 5,qtrt::FFITY_POINTER,qtrt::FFITY_UINT32,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,arg4,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK27QStaticByteArrayMatcherBase9indexOfInEPKcjS1_ii", 5,qtrt::FFITY_POINTER,qtrt::FFITY_UINT32,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,arg4,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }

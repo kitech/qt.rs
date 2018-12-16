@@ -31,19 +31,19 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
 //  body block begin
 
 // void convertFromAscii(const char *, int, QChar *&)
-// func (this *QAbstractConcatenable) InheritConvertFromAscii(f func(a string, len_ int, out *QChar) /*void*/) {
+// func (this *QAbstractConcatenable) InheritConvertFromAscii(f func(a string, len_ int, out_ *QChar) /*void*/) {
 //  qtrt.SetAllInheritCallback(this, "convertFromAscii", f)
 // }
 
 // void appendLatin1To(const char *, int, QChar *)
-// func (this *QAbstractConcatenable) InheritAppendLatin1To(f func(a string, len_ int, out *QChar/*777 QChar **/) /*void*/) {
+// func (this *QAbstractConcatenable) InheritAppendLatin1To(f func(a string, len_ int, out_ *QChar/*777 QChar **/) /*void*/) {
 //  qtrt.SetAllInheritCallback(this, "appendLatin1To", f)
 // }
 
@@ -102,7 +102,7 @@ impl<'a> /*trait*/ QAbstractConcatenable_convertFromAscii_0<(/*void*/)> for (usi
     let arg0 = (self.0) as *const usize as usize;
     let arg1 = (&self.1) as *const i32 as usize;
     let arg2 = (&self.2/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN21QAbstractConcatenable16convertFromAsciiEPKciRP5QChar", 3,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN21QAbstractConcatenable16convertFromAsciiEPKciRP5QChar", 3,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -129,7 +129,7 @@ impl<'a> /*trait*/ QAbstractConcatenable_convertFromAscii_1<(/*void*/)> for (i8,
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0) as *const i8 as usize;
     let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN21QAbstractConcatenable16convertFromAsciiEcRP5QChar", 2,qtrt::FFITY_SINT8,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN21QAbstractConcatenable16convertFromAsciiEcRP5QChar", 2,qtrt::FFITY_SINT8,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -157,7 +157,7 @@ impl<'a> /*trait*/ QAbstractConcatenable_appendLatin1To_0<(/*void*/)> for (usize
     let arg0 = (self.0) as *const usize as usize;
     let arg1 = (&self.1) as *const i32 as usize;
     let arg2 = (&self.2/*.qclsinst*/) as *const usize as usize;
-     qtrt::InvokeQtFunc6("_ZN21QAbstractConcatenable14appendLatin1ToEPKciP5QChar", 3,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN21QAbstractConcatenable14appendLatin1ToEPKciP5QChar", 3,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }

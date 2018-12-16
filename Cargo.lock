@@ -29,6 +29,7 @@ name = "qtgui"
 version = "0.1.0"
 dependencies = [
  "qtcore 0.1.0",
+ "qtrt 0.1.0",
 ]
 
 [[package]]
@@ -67,6 +68,7 @@ version = "0.1.0"
 dependencies = [
  "qtcore 0.1.0",
  "qtgui 0.1.0",
+ "qtrt 0.1.0",
 ]
 
 [metadata]

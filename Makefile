@@ -3,7 +3,7 @@ all:
 
 bdlib:
 	# use less memory?
-	cargo build -v -j 1 --release
+	cargo build -vv -j 1 --release
 
 pub:
 	cd qtcore && cargo publish

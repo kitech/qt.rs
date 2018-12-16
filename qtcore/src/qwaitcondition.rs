@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -93,7 +93,7 @@ pub trait QWaitCondition_QWaitCondition_0 {
 impl<'a> /*trait*/ QWaitCondition_QWaitCondition_0 for () {
   fn QWaitCondition_0(self) -> QWaitCondition {
     // unsafe{_ZN14QWaitConditionC2Ev()};
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN14QWaitConditionC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN14QWaitConditionC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QWaitCondition{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -145,7 +145,7 @@ impl<'a> /*trait*/ QWaitCondition_wait_0<bool> for (usize,u64) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const u64 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN14QWaitCondition4waitEP6QMutexm", 2,qtrt::FFITY_POINTER,qtrt::FFITY_UINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN14QWaitCondition4waitEP6QMutexm", 2,qtrt::FFITY_POINTER,qtrt::FFITY_UINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -182,7 +182,7 @@ impl<'a> /*trait*/ QWaitCondition_wait_1<bool> for (usize,u64) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const u64 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN14QWaitCondition4waitEP14QReadWriteLockm", 2,qtrt::FFITY_POINTER,qtrt::FFITY_UINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN14QWaitCondition4waitEP14QReadWriteLockm", 2,qtrt::FFITY_POINTER,qtrt::FFITY_UINT64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -212,7 +212,7 @@ pub trait QWaitCondition_wakeOne_0<RetType> {
 impl<'a> /*trait*/ QWaitCondition_wakeOne_0<(/*void*/)> for () {
   fn wakeOne_0(self , rsthis: & QWaitCondition) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN14QWaitCondition7wakeOneEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN14QWaitCondition7wakeOneEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -239,7 +239,7 @@ pub trait QWaitCondition_wakeAll_0<RetType> {
 impl<'a> /*trait*/ QWaitCondition_wakeAll_0<(/*void*/)> for () {
   fn wakeAll_0(self , rsthis: & QWaitCondition) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN14QWaitCondition7wakeAllEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN14QWaitCondition7wakeAllEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -266,7 +266,7 @@ pub trait QWaitCondition_notify_one_0<RetType> {
 impl<'a> /*trait*/ QWaitCondition_notify_one_0<(/*void*/)> for () {
   fn notify_one_0(self , rsthis: & QWaitCondition) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN14QWaitCondition10notify_oneEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN14QWaitCondition10notify_oneEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -293,7 +293,7 @@ pub trait QWaitCondition_notify_all_0<RetType> {
 impl<'a> /*trait*/ QWaitCondition_notify_all_0<(/*void*/)> for () {
   fn notify_all_0(self , rsthis: & QWaitCondition) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN14QWaitCondition10notify_allEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN14QWaitCondition10notify_allEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }

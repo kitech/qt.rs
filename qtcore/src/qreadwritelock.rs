@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -100,7 +100,7 @@ impl<'a> /*trait*/ QReadWriteLock_QReadWriteLock_0 for (i32) {
   fn QReadWriteLock_0(self) -> QReadWriteLock {
     // unsafe{_ZN14QReadWriteLockC2ENS_13RecursionModeE()};
     let arg0 = (&self) as *const i32 as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN14QReadWriteLockC2ENS_13RecursionModeE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN14QReadWriteLockC2ENS_13RecursionModeE", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QReadWriteLock{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -145,7 +145,7 @@ pub trait QReadWriteLock_lockForRead_0<RetType> {
 impl<'a> /*trait*/ QReadWriteLock_lockForRead_0<(/*void*/)> for () {
   fn lockForRead_0(self , rsthis: & QReadWriteLock) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN14QReadWriteLock11lockForReadEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN14QReadWriteLock11lockForReadEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -178,7 +178,7 @@ pub trait QReadWriteLock_tryLockForRead_0<RetType> {
 impl<'a> /*trait*/ QReadWriteLock_tryLockForRead_0<bool> for () {
   fn tryLockForRead_0(self , rsthis: & QReadWriteLock) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZN14QReadWriteLock14tryLockForReadEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN14QReadWriteLock14tryLockForReadEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -213,7 +213,7 @@ impl<'a> /*trait*/ QReadWriteLock_tryLockForRead_1<bool> for (i32) {
   fn tryLockForRead_1(self , rsthis: & QReadWriteLock) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN14QReadWriteLock14tryLockForReadEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN14QReadWriteLock14tryLockForReadEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -243,7 +243,7 @@ pub trait QReadWriteLock_lockForWrite_0<RetType> {
 impl<'a> /*trait*/ QReadWriteLock_lockForWrite_0<(/*void*/)> for () {
   fn lockForWrite_0(self , rsthis: & QReadWriteLock) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN14QReadWriteLock12lockForWriteEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN14QReadWriteLock12lockForWriteEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -276,7 +276,7 @@ pub trait QReadWriteLock_tryLockForWrite_0<RetType> {
 impl<'a> /*trait*/ QReadWriteLock_tryLockForWrite_0<bool> for () {
   fn tryLockForWrite_0(self , rsthis: & QReadWriteLock) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZN14QReadWriteLock15tryLockForWriteEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN14QReadWriteLock15tryLockForWriteEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -311,7 +311,7 @@ impl<'a> /*trait*/ QReadWriteLock_tryLockForWrite_1<bool> for (i32) {
   fn tryLockForWrite_1(self , rsthis: & QReadWriteLock) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN14QReadWriteLock15tryLockForWriteEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN14QReadWriteLock15tryLockForWriteEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -341,7 +341,7 @@ pub trait QReadWriteLock_unlock_0<RetType> {
 impl<'a> /*trait*/ QReadWriteLock_unlock_0<(/*void*/)> for () {
   fn unlock_0(self , rsthis: & QReadWriteLock) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN14QReadWriteLock6unlockEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN14QReadWriteLock6unlockEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }

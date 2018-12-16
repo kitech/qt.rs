@@ -1,9 +1,9 @@
 
-// mod ::core::QPolygonF
-// package qtcore
-// /usr/include/qt/QtCore/qmetatype.h
-// #include <qmetatype.h>
-// #include <QtCore>
+// mod ::gui::QPolygonF
+// package qtgui
+// /usr/include/qt/QtGui/qpolygon.h
+// #include <qpolygon.h>
+// #include <QtGui>
 
 //  header block end
 
@@ -19,9 +19,11 @@
 // import "fmt"
 // import "log"
 // import "github.com/kitech/qt.go/qtrt"
+// import "github.com/kitech/qt.go/qtcore"
+use qtcore::*; // super::super::%!s(MISSING)::*;
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 

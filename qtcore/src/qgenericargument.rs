@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -95,7 +95,7 @@ impl<'a> /*trait*/ QGenericArgument_QGenericArgument_0 for (usize,usize) {
     // unsafe{_ZN16QGenericArgumentC2EPKcPKv()};
     let arg0 = (self.0) as *const usize as usize;
     let arg1 = (&self.1) as *const usize as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN16QGenericArgumentC2EPKcPKv", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN16QGenericArgumentC2EPKcPKv", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QGenericArgument{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -122,7 +122,7 @@ pub trait QGenericArgument_data_0<RetType> {
 impl<'a> /*trait*/ QGenericArgument_data_0<usize> for () {
   fn data_0(self , rsthis: & QGenericArgument) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QGenericArgument4dataEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QGenericArgument4dataEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -148,7 +148,7 @@ pub trait QGenericArgument_name_0<RetType> {
 impl<'a> /*trait*/ QGenericArgument_name_0<usize> for () {
   fn name_0(self , rsthis: & QGenericArgument) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QGenericArgument4nameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK16QGenericArgument4nameEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }

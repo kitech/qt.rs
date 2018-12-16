@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -94,7 +94,7 @@ pub trait QDeferredDeleteEvent_QDeferredDeleteEvent_0 {
 impl<'a> /*trait*/ QDeferredDeleteEvent_QDeferredDeleteEvent_0 for () {
   fn QDeferredDeleteEvent_0(self) -> QDeferredDeleteEvent {
     // unsafe{_ZN20QDeferredDeleteEventC2Ev()};
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN20QDeferredDeleteEventC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN20QDeferredDeleteEventC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QDeferredDeleteEvent{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -135,7 +135,7 @@ pub trait QDeferredDeleteEvent_loopLevel_0<RetType> {
 impl<'a> /*trait*/ QDeferredDeleteEvent_loopLevel_0<i32> for () {
   fn loopLevel_0(self , rsthis: & QDeferredDeleteEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QDeferredDeleteEvent9loopLevelEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK20QDeferredDeleteEvent9loopLevelEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }

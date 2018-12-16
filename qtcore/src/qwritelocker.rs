@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -94,7 +94,7 @@ impl<'a> /*trait*/ QWriteLocker_QWriteLocker_0 for (usize) {
   fn QWriteLocker_0(self) -> QWriteLocker {
     // unsafe{_ZN12QWriteLockerC2EP14QReadWriteLock()};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN12QWriteLockerC2EP14QReadWriteLock", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN12QWriteLockerC2EP14QReadWriteLock", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QWriteLocker{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -139,7 +139,7 @@ pub trait QWriteLocker_unlock_0<RetType> {
 impl<'a> /*trait*/ QWriteLocker_unlock_0<(/*void*/)> for () {
   fn unlock_0(self , rsthis: & QWriteLocker) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN12QWriteLocker6unlockEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN12QWriteLocker6unlockEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -164,7 +164,7 @@ pub trait QWriteLocker_relock_0<RetType> {
 impl<'a> /*trait*/ QWriteLocker_relock_0<(/*void*/)> for () {
   fn relock_0(self , rsthis: & QWriteLocker) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN12QWriteLocker6relockEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN12QWriteLocker6relockEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -189,7 +189,7 @@ pub trait QWriteLocker_readWriteLock_0<RetType> {
 impl<'a> /*trait*/ QWriteLocker_readWriteLock_0<usize> for () {
   fn readWriteLock_0(self , rsthis: & QWriteLocker) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK12QWriteLocker13readWriteLockEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK12QWriteLocker13readWriteLockEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }

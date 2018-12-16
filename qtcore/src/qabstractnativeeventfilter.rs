@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -95,7 +95,7 @@ pub trait QAbstractNativeEventFilter_QAbstractNativeEventFilter_0 {
 impl<'a> /*trait*/ QAbstractNativeEventFilter_QAbstractNativeEventFilter_0 for () {
   fn QAbstractNativeEventFilter_0(self) -> QAbstractNativeEventFilter {
     // unsafe{_ZN26QAbstractNativeEventFilterC2Ev()};
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN26QAbstractNativeEventFilterC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN26QAbstractNativeEventFilterC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QAbstractNativeEventFilter{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -214,7 +214,7 @@ impl<'a> /*trait*/ QAbstractNativeEventFilter_nativeEventFilter_0<bool> for (usi
     let arg0 = (&self.0/*.qclsinst*/) as *const usize as usize;
     let arg1 = (&self.1) as *const usize as usize;
     let arg2 = (&self.2) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN26QAbstractNativeEventFilter17nativeEventFilterERK10QByteArrayPvPl", 3,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN26QAbstractNativeEventFilter17nativeEventFilterERK10QByteArrayPvPl", 3,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }

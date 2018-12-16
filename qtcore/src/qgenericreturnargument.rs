@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -96,7 +96,7 @@ impl<'a> /*trait*/ QGenericReturnArgument_QGenericReturnArgument_0 for (usize,us
     // unsafe{_ZN22QGenericReturnArgumentC2EPKcPv()};
     let arg0 = (self.0) as *const usize as usize;
     let arg1 = (&self.1) as *const usize as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN22QGenericReturnArgumentC2EPKcPv", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN22QGenericReturnArgumentC2EPKcPv", 2,qtrt::FFITY_POINTER,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QGenericReturnArgument{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;

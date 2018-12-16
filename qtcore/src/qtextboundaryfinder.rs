@@ -31,7 +31,7 @@
 // import "github.com/kitech/qt.go/qtrt"
 use std::default::Default;
 use std::ops::Deref;
-use super::super::qtrt;
+use qtrt; // super::super::qtrt;
 use super::*;
 //  ext block end
 
@@ -93,7 +93,7 @@ pub trait QTextBoundaryFinder_QTextBoundaryFinder_0 {
 impl<'a> /*trait*/ QTextBoundaryFinder_QTextBoundaryFinder_0 for () {
   fn QTextBoundaryFinder_0(self) -> QTextBoundaryFinder {
     // unsafe{_ZN19QTextBoundaryFinderC2Ev()};
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN19QTextBoundaryFinderC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN19QTextBoundaryFinderC2Ev", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QTextBoundaryFinder{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -126,7 +126,7 @@ impl<'a> /*trait*/ QTextBoundaryFinder_QTextBoundaryFinder_1 for (i32,usize) {
     // unsafe{_ZN19QTextBoundaryFinderC2ENS_12BoundaryTypeERK7QString()};
     let arg0 = (&self.0) as *const i32 as usize;
     let arg1 = (&self.1/*.qclsinst*/) as *const usize as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN19QTextBoundaryFinderC2ENS_12BoundaryTypeERK7QString", 2,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN19QTextBoundaryFinderC2ENS_12BoundaryTypeERK7QString", 2,qtrt::FFITY_INT,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QTextBoundaryFinder{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -162,7 +162,7 @@ impl<'a> /*trait*/ QTextBoundaryFinder_QTextBoundaryFinder_2 for (i32,usize,i32,
     let arg2 = (&self.2) as *const i32 as usize;
     let arg3 = (&self.3) as *const usize as usize;
     let arg4 = (&self.4) as *const i32 as usize;
-    let qthis: usize = qtrt::InvokeQtFunc6("_ZN19QTextBoundaryFinderC2ENS_12BoundaryTypeEPK5QChariPhi", 5,qtrt::FFITY_INT,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,arg4,0,0,0,0,0,0,0,0,0,0);
+    let qthis: usize = qtrt::InvokeQtFunc6("_ZN19QTextBoundaryFinderC2ENS_12BoundaryTypeEPK5QChariPhi", 5,qtrt::FFITY_INT,qtrt::FFITY_POINTER,qtrt::FFITY_INT,qtrt::FFITY_POINTER,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,arg0,arg1,arg2,arg3,arg4,0,0,0,0,0,0,0,0,0,0,0);
     let rsthis = QTextBoundaryFinder{qclsinst: qthis, ..Default::default()};
     return rsthis;
     // return 1;
@@ -190,7 +190,7 @@ impl<'a> /*trait*/ QTextBoundaryFinder_operator_equal_0<usize> for (usize) {
   fn operator_equal_0(self , rsthis: & QTextBoundaryFinder) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self/*.qclsinst*/) as *const usize as usize;
-    let mut ret = qtrt::InvokeQtFunc6("_ZN19QTextBoundaryFinderaSERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN19QTextBoundaryFinderaSERKS_", 1,qtrt::FFITY_POINTER,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -230,7 +230,7 @@ pub trait QTextBoundaryFinder_isValid_0<RetType> {
 impl<'a> /*trait*/ QTextBoundaryFinder_isValid_0<bool> for () {
   fn isValid_0(self , rsthis: & QTextBoundaryFinder) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK19QTextBoundaryFinder7isValidEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK19QTextBoundaryFinder7isValidEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -256,7 +256,7 @@ pub trait QTextBoundaryFinder_type__0<RetType> {
 impl<'a> /*trait*/ QTextBoundaryFinder_type__0<i32> for () {
   fn type__0(self , rsthis: & QTextBoundaryFinder) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK19QTextBoundaryFinder4typeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK19QTextBoundaryFinder4typeEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -282,7 +282,7 @@ pub trait QTextBoundaryFinder_string_0<RetType> {
 impl<'a> /*trait*/ QTextBoundaryFinder_string_0<usize> for () {
   fn string_0(self , rsthis: & QTextBoundaryFinder) -> usize {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK19QTextBoundaryFinder6stringEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK19QTextBoundaryFinder6stringEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: usize = Default::default(); return dret;
   }
@@ -310,7 +310,7 @@ pub trait QTextBoundaryFinder_toStart_0<RetType> {
 impl<'a> /*trait*/ QTextBoundaryFinder_toStart_0<(/*void*/)> for () {
   fn toStart_0(self , rsthis: & QTextBoundaryFinder) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN19QTextBoundaryFinder7toStartEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN19QTextBoundaryFinder7toStartEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -337,7 +337,7 @@ pub trait QTextBoundaryFinder_toEnd_0<RetType> {
 impl<'a> /*trait*/ QTextBoundaryFinder_toEnd_0<(/*void*/)> for () {
   fn toEnd_0(self , rsthis: & QTextBoundaryFinder) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-     qtrt::InvokeQtFunc6("_ZN19QTextBoundaryFinder5toEndEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN19QTextBoundaryFinder5toEndEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -366,7 +366,7 @@ pub trait QTextBoundaryFinder_position_0<RetType> {
 impl<'a> /*trait*/ QTextBoundaryFinder_position_0<i32> for () {
   fn position_0(self , rsthis: & QTextBoundaryFinder) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK19QTextBoundaryFinder8positionEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK19QTextBoundaryFinder8positionEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -397,7 +397,7 @@ impl<'a> /*trait*/ QTextBoundaryFinder_setPosition_0<(/*void*/)> for (i32) {
   fn setPosition_0(self , rsthis: & QTextBoundaryFinder) -> (/*void*/) {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
     let arg0 = (&self) as *const i32 as usize;
-     qtrt::InvokeQtFunc6("_ZN19QTextBoundaryFinder11setPositionEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+     qtrt::InvokeQtFunc6("_ZN19QTextBoundaryFinder11setPositionEi", 1,qtrt::FFITY_INT,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,arg0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
   }
 }
@@ -424,7 +424,7 @@ pub trait QTextBoundaryFinder_toNextBoundary_0<RetType> {
 impl<'a> /*trait*/ QTextBoundaryFinder_toNextBoundary_0<i32> for () {
   fn toNextBoundary_0(self , rsthis: & QTextBoundaryFinder) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZN19QTextBoundaryFinder14toNextBoundaryEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN19QTextBoundaryFinder14toNextBoundaryEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -452,7 +452,7 @@ pub trait QTextBoundaryFinder_toPreviousBoundary_0<RetType> {
 impl<'a> /*trait*/ QTextBoundaryFinder_toPreviousBoundary_0<i32> for () {
   fn toPreviousBoundary_0(self , rsthis: & QTextBoundaryFinder) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZN19QTextBoundaryFinder18toPreviousBoundaryEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZN19QTextBoundaryFinder18toPreviousBoundaryEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }
@@ -478,7 +478,7 @@ pub trait QTextBoundaryFinder_isAtBoundary_0<RetType> {
 impl<'a> /*trait*/ QTextBoundaryFinder_isAtBoundary_0<bool> for () {
   fn isAtBoundary_0(self , rsthis: & QTextBoundaryFinder) -> bool {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK19QTextBoundaryFinder12isAtBoundaryEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK19QTextBoundaryFinder12isAtBoundaryEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: bool = Default::default(); return dret;
   }
@@ -504,7 +504,7 @@ pub trait QTextBoundaryFinder_boundaryReasons_0<RetType> {
 impl<'a> /*trait*/ QTextBoundaryFinder_boundaryReasons_0<i32> for () {
   fn boundaryReasons_0(self , rsthis: & QTextBoundaryFinder) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, ctx.ctysz)};
-    let mut ret = qtrt::InvokeQtFunc6("_ZNK19QTextBoundaryFinder15boundaryReasonsEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+    let mut ret = qtrt::InvokeQtFunc6("_ZNK19QTextBoundaryFinder15boundaryReasonsEv", 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     // return 1;
     let dret: i32 = Default::default(); return dret;
   }

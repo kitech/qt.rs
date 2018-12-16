@@ -19,6 +19,11 @@ This project provides bindings that allow the QT Gui toolkit to be used from the
     cd qt.rs
     cargo build
 
+#### build memory usage
+
+* core 1.4G
+* gui 2.7G
+* widgets 5.0G
 
 ## Examples
 
