@@ -1,5 +1,5 @@
 [package]
-name = "qtdl"
+name = "hello"
 version = "0.1.0"
 authors = ["egitop <egitop@abc.xyz>"]
 edition = "2018"

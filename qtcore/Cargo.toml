@@ -1,7 +1,8 @@
 [package]
 name = "qtcore"
 version = "0.1.0"
-authors = ["egitop <egitop@uhole.xyz>"]
+authors = ["egitop <egitop@abc.xyz>"]
 edition = "2018"
 
 [dependencies]
+qtrt = { path = "../qtrt" }

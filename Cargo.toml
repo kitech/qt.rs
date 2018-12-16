@@ -1,0 +1,16 @@
+[workspace]
+
+members = [
+    "qtdl",
+    "qtrt",
+    "hello",
+    "qtcore",
+    "qtgui",
+    "qtwidgets",
+    "qtnetwork",
+    "qtqml",
+    "qtquick",
+]
+
+[dependencies]
+# libc = "0.2"

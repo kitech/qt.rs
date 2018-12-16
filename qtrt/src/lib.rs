@@ -7,7 +7,7 @@ extern {}
 
 mod safedl;
 
-fn aaa() {
+fn aaa123() {
     // safedl::dlopeni(); // usage
 }
 

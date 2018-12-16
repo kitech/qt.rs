@@ -1,0 +1,73 @@
+[[package]]
+name = "hello"
+version = "0.1.0"
+dependencies = [
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "libc"
+version = "0.2.45"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
+name = "qtcore"
+version = "0.1.0"
+dependencies = [
+ "qtrt 0.1.0",
+]
+
+[[package]]
+name = "qtdl"
+version = "0.1.0"
+dependencies = [
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "qtgui"
+version = "0.1.0"
+dependencies = [
+ "qtcore 0.1.0",
+]
+
+[[package]]
+name = "qtnetwork"
+version = "0.1.0"
+dependencies = [
+ "qtcore 0.1.0",
+]
+
+[[package]]
+name = "qtqml"
+version = "0.1.0"
+dependencies = [
+ "qtcore 0.1.0",
+]
+
+[[package]]
+name = "qtquick"
+version = "0.1.0"
+dependencies = [
+ "qtcore 0.1.0",
+ "qtqml 0.1.0",
+]
+
+[[package]]
+name = "qtrt"
+version = "0.1.0"
+dependencies = [
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
+ "qtdl 0.1.0",
+]
+
+[[package]]
+name = "qtwidgets"
+version = "0.1.0"
+dependencies = [
+ "qtcore 0.1.0",
+ "qtgui 0.1.0",
+]
+
+[metadata]
+"checksum libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)" = "2d2857ec59fadc0773853c664d2d18e7198e83883e7060b63c924cb077bd5c74"
